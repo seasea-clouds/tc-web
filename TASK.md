@@ -45,7 +45,7 @@
 ### P2 — 其他
 - [x] admin/ 占位目录
 - [x] 清理残留文件（useClientLocale 等）
-- [x] GitHub repo trade-web 推送
+- [x] GitHub repo 推送（seasea-clouds/trade-web）
 - [x] 项目文档写入
 
 ### QF — 快速修复
@@ -61,8 +61,8 @@
 ## 🟡 待执行
 
 ### P1 — 部署上线
-- [ ] CF Pages: 主站重新连接 trade-web repo (Root: `apps/site`)
-- [ ] CF Pages: Portal 重新连接 trade-web repo (Root: `apps/portal`)
+- [ ] CF Pages: 主站重新连接 repo (Root: `apps/site`)
+- [ ] CF Pages: Portal 重新连接 repo (Root: `apps/portal`)
 - [ ] CF Pages: Portal D1 绑定配置
 - [ ] CF Pages: Portal 环境变量（JWT_SECRET 等）
 - [ ] 归档原仓库 `sinotradecompliance` 和 `compli-service`

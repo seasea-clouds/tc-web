@@ -21,7 +21,6 @@
 import fs from 'fs';
 import path from 'path';
 
-
 const PROJECT_ROOT = process.cwd();
 const MESSAGES_DIR = path.join(PROJECT_ROOT, 'messages');
 const BLOG_DIR = path.join(PROJECT_ROOT, 'content', 'blog');
@@ -524,8 +523,6 @@ const jsonOut = args.includes('--json');
 
 const result = checkTranslations(targetLang, !short);
 const blogIssues = checkBlogMdx(targetLang, !short);
-  blogIssues = checkBlogMdx(targetLang, !short);
-}
 
 if (jsonOut && result) {
   console.log(JSON.stringify(result.issues_by_type, null, 2));

@@ -4,9 +4,10 @@ export const locales = [
   'en', 'zh', 'es', 'fr', 'de', 'ja', 'pt', 'ru',
   'ar', 'ko', 'it', 'nl', 'tr', 'vi', 'id', 'th',
   'hi', 'pl', 'sv', 'el', 'cs', 'ro', 'hu', 'fi',
-  'da', 'no', 'uk', 'bg', 'hr', 'sr', 'sk', 'sl',
+  'da', 'no', 'nb', 'uk', 'bg', 'hr', 'sr', 'sk', 'sl',
   'ms', 'ka', 'he', 'sw', 'bn', 'ca',
   'fa', 'ur', 'ta', 'af', 'sq', 'az', 'hy', 'be', 'ne', 'si',
+  'tl', 'te',
 ] as const;
 export type Locale = (typeof locales)[number];
 export const defaultLocale: Locale = 'en';
@@ -38,6 +39,7 @@ export const localeNames: Record<Locale, string> = {
   fi: '🇫🇮 Suomi',
   da: '🇩🇰 Dansk',
   no: '🇳🇴 Norsk',
+  nb: '🇳🇴 Norsk (Bokmål)',
   uk: '🇺🇦 Українська',
   bg: '🇧🇬 Български',
   hr: '🇭🇷 Hrvatski',
@@ -60,6 +62,8 @@ export const localeNames: Record<Locale, string> = {
   be: '🇧🇾 Беларуская',
   ne: '🇳🇵 नेपाली',
   si: '🇱🇰 සිංහල',
+  tl: '🇵🇭 Tagalog',
+  te: '🇮🇳 తెలుగు',
 };
 
 export const routing = defineRouting({

@@ -1,0 +1,20 @@
+{
+  "name": "trade-web",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo dev",
+    "dev:site": "turbo dev --filter=@trade/site",
+    "dev:portal": "turbo dev --filter=@trade/portal",
+    "build": "turbo build",
+    "build:site": "turbo build --filter=@trade/site",
+    "build:portal": "turbo build --filter=@trade/portal"
+  },
+  "devDependencies": {
+    "turbo": "^2"
+  }
+}

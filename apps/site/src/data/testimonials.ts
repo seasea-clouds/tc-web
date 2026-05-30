@@ -1,0 +1,42 @@
+export const testimonials = [
+  {
+    id: 1,
+    name: 'Schmidt Foods GmbH',
+    industry: 'Food & Beverage',
+    country: 'Germany',
+    rating: 5,
+    text: "SinoTrade handled our entire GACC registration process seamlessly. What we expected to take months was done in weeks. Their deep knowledge of Chinese food regulations saved us countless headaches.",
+  },
+  {
+    id: 2,
+    name: 'PureGlow Skincare Ltd',
+    industry: 'Cosmetics',
+    country: 'Australia',
+    rating: 5,
+    text: "The NMPA filing process was complex, but the team at SinoTrade guided us through every step. Their bilingual support and understanding of both markets was invaluable.",
+  },
+  {
+    id: 3,
+    name: 'TechVault Electronics',
+    industry: 'Electronics',
+    country: 'United States',
+    rating: 5,
+    text: "CCC certification for our product line seemed overwhelming until we partnered with SinoTrade. They managed testing, documentation, and factory audits — all under one roof.",
+  },
+  {
+    id: 4,
+    name: 'Nordic Organic Co',
+    industry: 'Food & Beverage',
+    country: 'Sweden',
+    rating: 5,
+    text: "From label compliance to GACC registration, SinoTrade was our single point of contact for everything China-related. Professional, responsive, and genuinely helpful.",
+  },
+  {
+    id: 5,
+    name: 'Sunrise Supplements Inc',
+    industry: 'Supplements',
+    country: 'Canada',
+    rating: 5,
+    text: "We launched our supplement brand in China thanks to SinoTrade's comprehensive compliance support. They handled everything from registration to customs clearance guidance.",
+  },
+] as const;

@@ -1,0 +1,68 @@
+import { defineRouting } from 'next-intl/routing';
+
+export const locales = [
+  'en', 'zh', 'es', 'fr', 'de', 'ja', 'pt', 'ru',
+  'ar', 'ko', 'it', 'nl', 'tr', 'vi', 'id', 'th',
+  'hi', 'pl', 'sv', 'el', 'cs', 'ro', 'hu', 'fi',
+  'da', 'no', 'uk', 'bg', 'hr', 'sr', 'sk', 'sl',
+  'ms', 'ka', 'he', 'sw', 'bn', 'ca',
+  'fa', 'ur', 'ta', 'af', 'sq', 'az', 'hy', 'be', 'ne', 'si',
+] as const;
+export type Locale = (typeof locales)[number];
+export const defaultLocale: Locale = 'en';
+
+export const localeNames: Record<Locale, string> = {
+  en: '🇬🇧 English',
+  zh: '🇨🇳 中文',
+  es: '🇪🇸 Español',
+  fr: '🇫🇷 Français',
+  de: '🇩🇪 Deutsch',
+  ja: '🇯🇵 日本語',
+  pt: '🇧🇷 Português',
+  ru: '🇷🇺 Русский',
+  ar: '🇸🇦 العربية',
+  ko: '🇰🇷 한국어',
+  it: '🇮🇹 Italiano',
+  nl: '🇳🇱 Nederlands',
+  tr: '🇹🇷 Türkçe',
+  vi: '🇻🇳 Tiếng Việt',
+  id: '🇮🇩 Bahasa Indonesia',
+  th: '🇹🇭 ไทย',
+  hi: '🇮🇳 हिन्दी',
+  pl: '🇵🇱 Polski',
+  sv: '🇸🇪 Svenska',
+  el: '🇬🇷 Ελληνικά',
+  cs: '🇨🇿 Čeština',
+  ro: '🇷🇴 Română',
+  hu: '🇭🇺 Magyar',
+  fi: '🇫🇮 Suomi',
+  da: '🇩🇰 Dansk',
+  no: '🇳🇴 Norsk',
+  uk: '🇺🇦 Українська',
+  bg: '🇧🇬 Български',
+  hr: '🇭🇷 Hrvatski',
+  sr: '🇷🇸 Srpski',
+  sk: '🇸🇰 Slovenčina',
+  sl: '🇸🇮 Slovenščina',
+  ms: '🇲🇾 Bahasa Melayu',
+  ka: '🇬🇪 ქართული',
+  he: '🇮🇱 עברית',
+  sw: '🇰🇪 Kiswahili',
+  bn: '🇧🇩 বাংলা',
+  ca: '🇦🇩 Català',
+  fa: '🇮🇷 فارسی',
+  ur: '🇵🇰 اردو',
+  ta: '🇱🇰 தமிழ்',
+  af: '🇿🇦 Afrikaans',
+  sq: '🇦🇱 Shqip',
+  az: '🇦🇿 Azərbaycan',
+  hy: '🇦🇲 Հայերեն',
+  be: '🇧🇾 Беларуская',
+  ne: '🇳🇵 नेपाली',
+  si: '🇱🇰 සිංහල',
+};
+
+export const routing = defineRouting({
+  locales: [...locales],
+  defaultLocale,
+});

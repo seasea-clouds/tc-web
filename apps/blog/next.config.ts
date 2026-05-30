@@ -1,14 +1,7 @@
-import type { NextConfig } from 'next';
-import createNextIntlPlugin from 'next-intl/plugin';
-
-const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
-
-const config: NextConfig = {
-  output: 'export',
+const config = {
+  output: 'export' as const,
   trailingSlash: true,
   images: { unoptimized: true },
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
+  transpilePackages: ['@trade/ui'],
 };
-
-export default withNextIntl(config);
+export default config;

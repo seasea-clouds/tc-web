@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/images/convert-webp.mjs && node scripts/images/build-sitemap-images.mjs && node scripts/build-search-index.mjs && next build && node scripts/check-translations.mjs --short ; node scripts/clean-rsc.js && node scripts/build-sitemap.mjs && node scripts/build-llms.js",
+    "build": "node ../../packages/scripts/images/convert-webp.mjs && next build && node ../../packages/scripts/build-all.mjs --base-url=https://sinotradecompliance.com --out-dir=out ; node ../../packages/scripts/clean-rsc.js && node ../../packages/scripts/check-translations.mjs --short",
     "start": "next start",
     "lint": "eslint"
   },

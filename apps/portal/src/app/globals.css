@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* Scan shared packages for Tailwind classes */
-@source "../../../packages";
+@source "../../../../packages";
 
 @theme {
   --color-primary-navy: #1B365D;

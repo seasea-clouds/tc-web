@@ -523,10 +523,7 @@ const short = args.includes('--short');
 const jsonOut = args.includes('--json');
 
 const result = checkTranslations(targetLang, !short);
-let blogIssues = 0;
-if (args.includes("--no-blog")) {
-  if (!short) console.log("  Skipping blog checks (--no-blog)");
-} else {
+const blogIssues = checkBlogMdx(targetLang, !short);
   blogIssues = checkBlogMdx(targetLang, !short);
 }
 

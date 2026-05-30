@@ -1,11 +1,38 @@
+/* Google Fonts Import - must be first */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap');
+
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 /* Scan shared packages for Tailwind classes */
 @source "../../../../packages";
 
-@theme {
+/* Custom Theme Colors */
+@theme inline {
   --color-primary-navy: #1B365D;
   --color-gold: #D4AF37;
   --color-bg-ice: #F4F6F9;
   --color-text-muted: #7F8C8D;
+  --color-accent-blue: #2563EB;
+  --color-text-charcoal: #333333;
+
+  --font-sans: 'Inter', 'Open Sans', system-ui, sans-serif;
+  --font-heading: 'Montserrat', system-ui, sans-serif;
+}
+
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #F4F6F9;
+  color: #333333;
+  font-family: 'Inter', 'Open Sans', system-ui, sans-serif;
+  line-height: 1.75;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-weight: 700;
 }

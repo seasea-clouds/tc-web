@@ -25,6 +25,9 @@
     "paths": {
       "@/*": [
         "./src/*"
+      ],
+      "@trade/ui": [
+        "../../packages/ui/src"
       ]
     }
   },

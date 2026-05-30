@@ -4,6 +4,9 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+/* Scan shared packages for Tailwind classes */
+@source "../../../packages";
+
 /* Custom Theme Colors */
 @theme inline {
   --color-primary-navy: #1B365D;

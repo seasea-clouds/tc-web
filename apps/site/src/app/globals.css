@@ -5,7 +5,7 @@
 @plugin "@tailwindcss/typography";
 
 /* Scan shared packages for Tailwind classes */
-@source "../../../packages";
+@source "../../../../packages";
 
 /* Custom Theme Colors */
 @theme inline {

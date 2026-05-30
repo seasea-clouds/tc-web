@@ -9,9 +9,10 @@ const SUPPORTED_LOCALES = [
   'en', 'zh', 'es', 'fr', 'de', 'ja', 'pt', 'ru',
   'ar', 'ko', 'it', 'nl', 'tr', 'vi', 'id', 'th',
   'hi', 'pl', 'sv', 'el', 'cs', 'ro', 'hu', 'fi',
-  'da', 'no', 'uk', 'bg', 'hr', 'sr', 'sk', 'sl',
+  'da', 'no', 'nb', 'uk', 'bg', 'hr', 'sr', 'sk', 'sl',
   'ms', 'ka', 'he', 'sw', 'bn', 'ca',
   'fa', 'ur', 'ta', 'af', 'sq', 'az', 'hy', 'be', 'ne', 'si',
+  'tl', 'te',
 ];
 const DEFAULT_LOCALE = 'en';
 const UPSTREAM = 'https://compli-service.pages.dev';
@@ -103,7 +104,9 @@ export async function onRequest(context: { request: Request; next: () => Promise
   }
 
   // ── Canonical host redirect ────────────────────────────────────
-  if (url.hostname !== CANONICAL_HOST) {
+  // Allow dev/test domains to bypass canonical redirect
+  const isDevDomain = url.hostname.endsWith('.pages.dev');
+  if (url.hostname !== CANONICAL_HOST && !isDevDomain) {
     return Response.redirect('https://' + CANONICAL_HOST + url.pathname + url.search, 301);
   }
 

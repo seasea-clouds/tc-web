@@ -16,6 +16,7 @@ const SUPPORTED_LOCALES = [
 ];
 const DEFAULT_LOCALE = 'en';
 const UPSTREAM = 'https://compli-service.pages.dev';
+const BLOG_UPSTREAM = 'https://trade-web-blog.pages.dev';
 const CANONICAL_HOST = 'sinotradecompliance.com';
 
 function matchBrowserLanguage(acceptLanguage: string | null): string {
@@ -101,6 +102,31 @@ export async function onRequest(context: { request: Request; next: () => Promise
   if (url.pathname === '/c' || url.pathname === '/c/' || url.pathname === '/api' || url.pathname === '/api/') {
     const locale = matchBrowserLanguage(request.headers.get('accept-language'));
     return Response.redirect(url.origin + '/' + locale + url.pathname + '/', 302);
+  }
+
+  // ── Blog proxy (/blog/) ─────────────────────────────────────────
+  // Strips /blog/ prefix when proxying to blog app
+  // /en/blog/gacc-registration-guide/ → blog.pages.dev/en/gacc-registration-guide/
+  const blogMatch = url.pathname.match(/^\/([a-z]{2})\/blog\/(.+)/);
+  if (blogMatch && SUPPORTED_LOCALES.includes(blogMatch[1])) {
+    const locale = blogMatch[1];
+    const blogPath = blogMatch[2];
+    const blogUrl = BLOG_UPSTREAM + '/' + locale + '/' + blogPath;
+    try {
+      const resp = await fetch(blogUrl);
+      return new Response(resp.body, {
+        status: resp.status,
+        statusText: resp.statusText,
+        headers: resp.headers,
+      });
+    } catch (err) {
+      return new Response('Blog proxy error: ' + err, { status: 502 });
+    }
+  }
+
+  if (url.pathname === '/blog' || url.pathname === '/blog/') {
+    const locale = matchBrowserLanguage(request.headers.get('accept-language'));
+    return Response.redirect(url.origin + '/' + locale + '/blog/', 302);
   }
 
   // ── Canonical host redirect ────────────────────────────────────

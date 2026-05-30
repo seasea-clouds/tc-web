@@ -1,5 +1,32 @@
 # trade-web 技术决策与踩坑记录
 
+## 翻译铁律
+
+### 禁止翻译词表（NO_TRANSLATE）
+
+| 类别 | 示例 |
+|------|------|
+| 品牌名 | SinoTrade Compliance, WhatsApp, WeChat, Tmall, LinkedIn |
+| 人名 | David Zhang, Sarah Chen, Mike Wang, Leo Liu, John Smith |
+| 机构缩写 | GACC, NMPA, CCC, CBEC, CIFER, MOA, CNCA, MEE |
+| 标准编号 | GB 7718-2025 |
+| 邮箱占位符 | you@company.com |
+
+### Google Translate 短词修正
+
+| 英文 | 中文 | 日文 |
+|------|------|------|
+| Home | 首页 | ホーム |
+| Contact | 联系我们 | お問い合わせ |
+| Services | 服务 | サービス |
+
+详见 `/root/projects/trade/sinotradecompliance/NOTES.md` 完整表格。
+
+### 翻译注意
+- blog title ≤ 55 Unicode 字符
+- 翻译后必须 `python3 scripts/check-translations.py` 验证
+- 48 语言不允许英文 fallback
+
 ## 技术决策
 
 ### Turbofack 不支持 `workspace:*` 协议
@@ -23,6 +50,19 @@ SSG (`output: 'export'`) 模式下，动态路由必须提供 `generateStaticPar
 ### `||` 和 `??` 混用
 `const locale = propLocale || params?.locale ?? 'en'` 在 Turbopack 中报语法错误。
 需要加括号：`propLocale || (params?.locale ?? 'en')`
+
+### 翻译引擎
+翻译调用 `/root/projects/translate-tool/` 双渠道 Google Translate。
+Quota 查看：`source /root/projects/.venv/bin/activate && python scripts/translate.py quota`
+
+### 环境变量
+所有秘密变量统一在 `~/.openclaw/.env`。
+
+CF Pages 已配置变量：
+- CREEM_API_KEY / CREEM_WEBHOOK_SECRET
+- CREEM_PRODUCT_ID_SINGLE / CREEM_PRODUCT_ID_SUBSCRIBE
+- RESEND_API_KEY / EMAIL_FROM
+- NODE_VERSION=22
 
 ## 踩坑记录
 

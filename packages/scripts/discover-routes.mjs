@@ -112,7 +112,7 @@ export function discoverAll() {
 
   const result = [];
   for (const appName of apps) {
-    if (appName === 'admin') continue;
+    if (appName === 'admin' || appName === 'blog') continue;
     const appDir = path.join(APPS_DIR, appName);
     const pages = scanPageTsx(appDir);
     const app = {

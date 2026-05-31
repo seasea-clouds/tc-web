@@ -1,11 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import { useTranslations } from 'next-intl';
-import { useParams } from 'next/navigation';
 import { MessageCircle, ChevronDown, Search } from 'lucide-react';
 import { WHATSAPP_URL } from './constants';
 import LanguageSwitcher from './LanguageSwitcher';
+import { useT, useTradeLocale } from './TranslationProvider';
 
 interface NavbarProps {
   onSearchOpen?: () => void;
@@ -40,9 +39,9 @@ const serviceLinks = [
 
 export default function Navbar(props: NavbarProps) {
   const { onSearchOpen = () => {}, freeCheckHref, industries = DEFAULT_INDUSTRIES } = props;
-  const t = useTranslations('Navbar');
-  const params = useParams<{ locale: string }>();
-  const locale = props.locale || (params?.locale ?? 'en');
+  const t = useT('Navbar');
+  const ctxLocale = useTradeLocale();
+  const locale = props.locale || ctxLocale || 'en';
   const [servicesOpen, setServicesOpen] = useState(false);
   const [industriesOpen, setIndustriesOpen] = useState(false);
 
@@ -159,7 +158,7 @@ export default function Navbar(props: NavbarProps) {
             <a href={href('/blog/')} className="inline-flex items-center text-white/80 hover:text-white transition-colors text-sm font-medium">
               {t('blog')}
             </a>
-            <LanguageSwitcher />
+            <LanguageSwitcher locale={locale} />
           </div>
 
           {/* 手机端：flex-wrap 允许换行 */}
@@ -182,7 +181,7 @@ export default function Navbar(props: NavbarProps) {
             <a href={href('/blog/')} className="inline-flex items-center text-white/80 hover:text-white transition-colors">
               {t('blog')}
             </a>
-            <LanguageSwitcher />
+            <LanguageSwitcher locale={locale} />
           </div>
         </div>
       </div>

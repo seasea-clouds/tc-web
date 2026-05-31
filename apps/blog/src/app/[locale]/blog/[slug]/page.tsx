@@ -126,6 +126,16 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
   const ct = (key: string, fb?: string) => (msgs?.CTA?.[key] ?? fb ?? key);
   const href = (p: string) => `/${locale}${p}`;
 
+  // Category → Service page mapping (matching old site)
+  const CATEGORY_SERVICE_MAP: Record<string, { href: string; serviceKey: string }> = {
+    'Food & Beverage': { href: '/services/gacc', serviceKey: 'gacc' },
+    'Label Compliance': { href: '/services/label', serviceKey: 'label' },
+    'Product Certification': { href: '/services/ccc', serviceKey: 'ccc' },
+    'Cosmetics': { href: '/services/cosmetics', serviceKey: 'cosmetics' },
+    'E-commerce': { href: '/services/ecommerce', serviceKey: 'ecommerce' },
+  };
+  const serviceInfo = CATEGORY_SERVICE_MAP[category];
+
   const articleJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
@@ -326,14 +336,20 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
               </div>
 
               {/* Related Service Card */}
-              {category && (
-                <div className="mt-10 p-6 bg-[#F4F6F9] rounded-xl border border-gray-200">
-                  <p className="text-sm text-[#5F6F7F] mb-2">{tb('relatedServiceLabel', 'Need Help With This?')}</p>
-                  <h3 className="text-xl font-bold text-[#1B365D] mb-2">{category}</h3>
-                  <a href={`${SITE_URL}/${locale}/services/ecommerce/`}
-                    className="inline-flex items-center gap-1 text-sm font-semibold text-[#B8960C] hover:text-[#1B365D] transition-colors">
-                    {tb('relatedServiceCta', 'Get Free Assessment')}
-                  </a>
+              {serviceInfo && (
+                <div className="mt-12 p-6 rounded-xl text-white" style={{ background: 'linear-gradient(to right, #1B365D, rgba(27,54,93,0.9))' }}>
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                    <div className="flex-1">
+                      <p className="text-sm mb-1 text-white/60">{tb('relatedServiceLabel', 'Need Help With This?')}</p>
+                      <h3 className="text-lg font-bold">{tb('service_' + serviceInfo.serviceKey, category)}</h3>
+                    </div>
+                    <a
+                      href={href(serviceInfo.href)}
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-[#B8960C] text-white font-semibold rounded-lg whitespace-nowrap transition-colors shadow-lg hover:bg-[#B8960C]/90"
+                    >
+                      {tb('relatedServiceCta', 'Get Free Assessment')}
+                    </a>
+                  </div>
                 </div>
               )}
 

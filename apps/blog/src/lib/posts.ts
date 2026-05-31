@@ -121,27 +121,11 @@ function processTableBlock(block: string): string {
   const dataLines = lines.filter((l, i) => i > 0 && !/^\|[\s:-]+\|[\s:-]+\|/.test(l));
 
   const parseRow = (line: string): string[] => {
-    const cells: string[] = [];
-    // Split by pipe, but handle escaped pipes
-    let current = '';
-    let inCell = false;
-    for (let i = 0; i < line.length; i++) {
-      const ch = line[i];
-      if (ch === '|') {
-        if (inCell) {
-          cells.push(current.trim());
-          current = '';
-          inCell = false;
-        } else {
-          inCell = true;
-        }
-      } else if (inCell) {
-        current += ch;
-      }
-    }
-    // Handle last cell
-    if (current.trim()) cells.push(current.trim());
-    return cells;
+    const parts = line.split('|');
+    // Remove empty first/last (from leading/trailing pipes)
+    if (parts.length > 0 && parts[0].trim() === '') parts.shift();
+    if (parts.length > 0 && parts[parts.length - 1].trim() === '') parts.pop();
+    return parts.map(p => p.trim());
   };
 
   const headers = parseRow(headerLine);

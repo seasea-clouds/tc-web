@@ -1,16 +1,2 @@
-/* 品牌色 — 主站和用户站共用 */
-@import "tailwindcss";
-
-@theme {
-  --color-primary-navy: #1B365D;
-  --color-gold: #D4AF37;
-  --color-accent-gold: #B8960C;
-  --color-accent-blue: #2563EB;
-  --color-bg-ice: #F4F6F9;
-  --color-text-charcoal: #333333;
-  --color-text-muted: #5F6F7F;
-  --color-accent-green: #10B981;
-
-  --font-sans: 'Inter', 'Open Sans', system-ui, sans-serif;
-  --font-heading: 'Montserrat', system-ui, sans-serif;
-}
+/* 品牌色 — 各 app globals.css 中已通过 @theme 定义，此文件仅作参考。
+   注意：不要加入 @import "tailwindcss"，否则 @source 扫描时会生成额外的 CSS chunk。 */

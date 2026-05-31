@@ -9,6 +9,7 @@ import { useT, useTradeLocale } from './TranslationProvider';
 interface NavbarProps {
   onSearchOpen?: () => void;
   freeCheckHref?: string;
+  blogHref?: string;
   locale?: string;
   industries?: { slug: string; emoji: string }[];
 }
@@ -46,7 +47,10 @@ export default function Navbar(props: NavbarProps) {
   const [industriesOpen, setIndustriesOpen] = useState(false);
 
   const href = (path: string) => `/${locale}${path}`;
-  const fcHref = freeCheckHref || href('/c/');
+  const resolveHref = (custom?: string, defaultPath?: string) =>
+    custom ? custom.replace('{locale}', locale) : (defaultPath ? href(defaultPath) : href('/'));
+  const fcHref = resolveHref(freeCheckHref, '/c/');
+  const blogHref = resolveHref(props.blogHref, '/blog/');
 
   return (
     <nav className="relative z-50 bg-primary-navy/95 backdrop-blur-sm shadow-md">
@@ -155,7 +159,7 @@ export default function Navbar(props: NavbarProps) {
             <a href={href('/faq/')} className="inline-flex items-center text-white/80 hover:text-white transition-colors text-sm font-medium">
               {t('faq')}
             </a>
-            <a href={href('/blog/')} className="inline-flex items-center text-white/80 hover:text-white transition-colors text-sm font-medium">
+            <a href={blogHref} className="inline-flex items-center text-white/80 hover:text-white transition-colors text-sm font-medium">
               {t('blog')}
             </a>
             <LanguageSwitcher locale={locale} />
@@ -178,7 +182,7 @@ export default function Navbar(props: NavbarProps) {
             <a href={href('/faq/')} className="inline-flex items-center text-white/80 hover:text-white transition-colors">
               {t('faq')}
             </a>
-            <a href={href('/blog/')} className="inline-flex items-center text-white/80 hover:text-white transition-colors">
+            <a href={blogHref} className="inline-flex items-center text-white/80 hover:text-white transition-colors">
               {t('blog')}
             </a>
             <LanguageSwitcher locale={locale} />

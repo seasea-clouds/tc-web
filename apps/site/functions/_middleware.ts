@@ -56,7 +56,29 @@ async function proxyToUserSite(url: URL, request: Request, stripPrefix: string):
 
   try {
     const resp = await fetch(upstreamReq);
-    const headers = new Headers(resp.headers);
+    // Follow internal redirects (portal may redirect /c/ → /c)
+    let finalResp = resp;
+    if (resp.status >= 300 && resp.status < 400) {
+      const location = resp.headers.get('location');
+      if (location) {
+        const locUrl = new URL(location, upstreamUrl);
+        if (locUrl.hostname === new URL(UPSTREAM).hostname) {
+          // Follow internal redirect by fetching the new path
+          const followUpstreamUrl = `${UPSTREAM}${locUrl.pathname}${locUrl.search}`;
+          finalResp = await fetch(followUpstreamUrl);
+        } else {
+          // External redirect: rewrite Location and pass to browser
+          const headers = new Headers(resp.headers);
+          headers.set('location', `${url.origin}${stripPrefix}${locUrl.pathname}${locUrl.search}`);
+          return new Response(resp.body, {
+            status: resp.status,
+            statusText: resp.statusText,
+            headers,
+          });
+        }
+      }
+    }
+    const headers = new Headers(finalResp.headers);
     const location = headers.get('location');
     if (location) {
       const locUrl = new URL(location, upstreamUrl);
@@ -65,23 +87,22 @@ async function proxyToUserSite(url: URL, request: Request, stripPrefix: string):
       }
     }
     // Rewrite _next/static paths to absolute URLs so CSS/JS load from portal domain
-    const contentType = resp.headers.get('content-type') || '';
+    const contentType = finalResp.headers.get('content-type') || '';
     if (contentType.includes('text/html')) {
-      // Simple check for HTML
-      const html = await resp.text();
+      const html = await finalResp.text();
       const rewritten = html.replace(
         /(href|src)="\/_next\/static\//g,
         '$1="' + UPSTREAM + '/_next/static/'
       );
       return new Response(rewritten, {
-        status: resp.status,
-        statusText: resp.statusText,
+        status: finalResp.status,
+        statusText: finalResp.statusText,
         headers,
       });
     }
-    return new Response(resp.body, {
-      status: resp.status,
-      statusText: resp.statusText,
+    return new Response(finalResp.body, {
+      status: finalResp.status,
+      statusText: finalResp.statusText,
       headers,
     });
   } catch (err) {
@@ -94,8 +115,16 @@ export async function onRequest(context: { request: Request; next: () => Promise
   const url = new URL(request.url);
 
   // ── Portal proxy (/c/) ─────────────────────────────────────────
-  const portalMatch = url.pathname.match(/^\/([a-z]{2})\/c\//);
+  const portalMatch = url.pathname.match(/^\/([a-z]{2})\/c\/?$/);
+  const portalSubPath = url.pathname.match(/^\/([a-z]{2})\/c\/.+/);
   if (portalMatch && SUPPORTED_LOCALES.includes(portalMatch[1])) {
+    // Ensure trailing slash for /{locale}/c → /{locale}/c/
+    if (!url.pathname.endsWith('/')) {
+      return Response.redirect(url.origin + url.pathname + '/', 308);
+    }
+    return proxyToUserSite(url, request, '');
+  }
+  if (portalSubPath && SUPPORTED_LOCALES.includes(portalSubPath[1])) {
     return proxyToUserSite(url, request, '');
   }
 

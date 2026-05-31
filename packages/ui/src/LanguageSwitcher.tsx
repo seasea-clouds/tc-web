@@ -39,6 +39,8 @@ export default function LanguageSwitcher({
     setRendered(true);
   }, []);
 
+  if (!rendered) return null;
+
   const handleChange = (newLocale: string) => {
     if (newLocale === locale) return;
 

@@ -2,6 +2,9 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { getPosts, parseHeadings, mdToHtml, type PostMeta } from '@/lib/posts';
+
+const SITE_URL = 'https://trade-web-site.pages.dev';
+const PORTAL_URL = 'https://trade-web-portal.pages.dev';
 import { getMessages } from '@/lib/messages';
 import CopyButton from '@/components/CopyButton';
 
@@ -48,7 +51,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-const SITE_URL = 'https://sinotradecompliance.com';
 
 function formatDate(dateStr: string, locale: string): string {
   if (!dateStr) return '';
@@ -92,7 +94,7 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
         <h1 className="text-3xl font-bold text-[#1B365D] mb-4">
           {B.postNotFound || 'Post Not Found'}
         </h1>
-        <a href={`/${locale}/`} className="text-[#2563EB] hover:underline">
+        <a href={`/${locale}/blog/`} className="text-[#2563EB] hover:underline">
           ← {B.backToBlog || 'Back to Insights'}
         </a>
       </div>
@@ -154,7 +156,7 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ol className="flex items-center h-12 text-sm text-gray-500">
             <li>
-              <a href={href('/')} className="hover:text-[#2563EB] transition-colors font-medium">
+              <a href={`${SITE_URL}/${locale}/`} className="hover:text-[#2563EB] transition-colors font-medium">
                 {btn('home', 'Home')}
               </a>
             </li>
@@ -365,7 +367,7 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
                     {tb('authorBio', 'Regulatory compliance expert specializing in China market entry.')}
                   </p>
                   <a
-                    href={href('/c/')}
+                    href={`${PORTAL_URL}/${locale}/c`}
                     className="inline-flex items-center gap-1 text-sm font-medium text-[#2563EB] hover:text-[#1d4ed8] mt-3 transition-colors"
                   >
                     {tb('relatedServiceCta', 'Get Free Assessment')} →
@@ -412,7 +414,7 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
                   {tb('ctaSubtitle', 'Get a free compliance assessment from our expert team.')}
                 </p>
                 <a
-                  href={href('/c/')}
+                  href={`${PORTAL_URL}/${locale}/c`}
                   className="block w-full text-center bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#1B365D] font-bold px-4 py-2.5 rounded-md transition-all text-sm"
                 >
                   {tb('ctaButton', 'Get Free Assessment')}
@@ -437,7 +439,7 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
               {relatedPosts.map((post) => (
                 <a
                   key={post.slug}
-                  href={`/${locale}/${post.slug}/`}
+                  href={`/${locale}/blog/${post.slug}/`}
                   className="group bg-[#F4F6F9] rounded-xl p-6 hover:shadow-md transition-all border border-gray-100"
                 >
                   <div className="flex items-center gap-2 mb-2">

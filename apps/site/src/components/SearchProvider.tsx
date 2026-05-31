@@ -17,7 +17,7 @@ export default function SearchProvider() {
         <Navbar
           onSearchOpen={() => setSearchOpen(true)}
           freeCheckHref={`${PORTAL_URL}/{locale}/c`}
-          blogHref={`${BLOG_URL}/{locale}/`}
+          blogHref={`${BLOG_URL}/{locale}/blog`}
         />
       </header>
       <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />

@@ -26,7 +26,9 @@ export default async function Layout({
     <html lang={locale}>
       <body className="bg-[#F4F6F9] min-h-screen flex flex-col">
         <TradeTranslationProvider messages={messages} locale={locale}>
-          <Navbar />
+          <Navbar
+            freeCheckHref={`https://trade-web-portal.pages.dev/{locale}/c`}
+          />
           <main className="flex-1">{children}</main>
           <Footer />
         </TradeTranslationProvider>

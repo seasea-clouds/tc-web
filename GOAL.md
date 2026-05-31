@@ -27,7 +27,7 @@
 ## 关键规则
 
 ### 目录原则
-- `web/` 是 monorepo 根，同级有 `crm/`、`lead-gen/`、`knowledge/`
+- `web/` 是 monorepo 根，同级有 `crm/`、`prospect/`、`knowledge/`
 - `apps/*` 各应用独立可部署
 - `packages/*` 共享代码包
 - 原始目录 `sinotradecompliance/`、`compli-service/` 保留未改动

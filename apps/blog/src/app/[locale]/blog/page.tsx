@@ -35,14 +35,7 @@ function getCategories(posts: { category: string }[]): string[] {
   for (const p of posts) {
     if (p.category) cats.add(p.category);
   }
-  // Preserve order of first appearance for stability
-  const ordered: string[] = [];
-  for (const p of posts) {
-    if (p.category && !ordered.includes(p.category)) {
-      ordered.push(p.category);
-    }
-  }
-  return ordered;
+  return [...cats].sort();
 }
 
 export default async function BlogHome({ params }: { params: Promise<{ locale: string }> }) {

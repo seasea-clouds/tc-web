@@ -24,7 +24,7 @@ export default function Expert() {
               src="/images/david-zhang.webp"
               alt={name}
               className="w-full h-full object-cover"
-              loading="eager"
+              loading="lazy"
               decoding="async"
             />
           </div>

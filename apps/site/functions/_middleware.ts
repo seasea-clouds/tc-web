@@ -64,6 +64,21 @@ async function proxyToUserSite(url: URL, request: Request, stripPrefix: string):
         headers.set('location', `${url.origin}${stripPrefix}${locUrl.pathname}${locUrl.search}`);
       }
     }
+    // Rewrite _next/static paths to absolute URLs so CSS/JS load from portal domain
+    const contentType = resp.headers.get('content-type') || '';
+    if (contentType.includes('text/html')) {
+      // Simple check for HTML
+      const html = await resp.text();
+      const rewritten = html.replace(
+        /(href|src)="\/_next\/static\//g,
+        '$1="' + UPSTREAM + '/_next/static/'
+      );
+      return new Response(rewritten, {
+        status: resp.status,
+        statusText: resp.statusText,
+        headers,
+      });
+    }
     return new Response(resp.body, {
       status: resp.status,
       statusText: resp.statusText,
@@ -106,6 +121,7 @@ export async function onRequest(context: { request: Request; next: () => Promise
 
   // ── Blog proxy (/blog/) ─────────────────────────────────────────
   // Preserves /blog/ prefix (blog app routes are at /{locale}/blog/)
+  // Also rewrites _next/static paths to absolute blog URLs so CSS/JS load correctly
   // /en/blog/gacc-registration-guide/ → blog.pages.dev/en/blog/gacc-registration-guide/
   const blogPathMatch = url.pathname.match(/^\/([a-z]{2})\/blog(\/.*)?$/);
   if (blogPathMatch && SUPPORTED_LOCALES.includes(blogPathMatch[1])) {
@@ -114,6 +130,22 @@ export async function onRequest(context: { request: Request; next: () => Promise
     const blogUrl = BLOG_UPSTREAM + '/' + locale + '/blog' + rest;
     try {
       const resp = await fetch(blogUrl);
+      // Rewrite _next/static paths to absolute blog URLs so browser fetches
+      // CSS/JS from the blog app domain instead of failing on main site
+      const contentType = resp.headers.get('content-type') || '';
+      if (contentType.includes('text/html')) {
+        let html = await resp.text();
+        html = html.replace(
+          /(href|src)="\/_next\/static\//g,
+          '$1="' + BLOG_UPSTREAM + '/_next/static/'
+        );
+        const newHeaders = new Headers(resp.headers);
+        return new Response(html, {
+          status: resp.status,
+          statusText: resp.statusText,
+          headers: newHeaders,
+        });
+      }
       return new Response(resp.body, {
         status: resp.status,
         statusText: resp.statusText,

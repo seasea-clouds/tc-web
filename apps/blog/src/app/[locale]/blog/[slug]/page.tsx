@@ -123,6 +123,7 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
   const tb = (key: string, fb?: string) => B[key] ?? fb ?? key;
   const nb = (key: string, fb?: string) => (msgs?.Navbar?.[key] ?? fb ?? key);
   const cf = (key: string, fb?: string) => (msgs?.ContactForm?.[key] ?? fb ?? key);
+  const ct = (key: string, fb?: string) => (msgs?.CTA?.[key] ?? fb ?? key);
   const href = (p: string) => `/${locale}${p}`;
 
   const articleJsonLd = {
@@ -425,10 +426,10 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
         {/* Need This Service? CTA */}
         <section className="py-16 bg-primary-navy">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Need This Service?</h2>
-            <p className="text-white/80 mb-2">Get a free compliance assessment tailored to your products.</p>
-            <p className="text-[#B8960C] text-sm font-medium mb-6">{tb('ctaResponse', 'Free consultation → 24h response')}</p>
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-block bg-gold hover:bg-gold/90 text-primary-navy font-semibold px-8 py-3 rounded-md transition-all hover:shadow-lg">{tb('ctaButton', 'Get Free Assessment')}</a>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">{ct('ctaTitle', 'Need This Service?')}</h2>
+            <p className="text-white/80 mb-2">{ct('ctaSubtitle', 'Get a free compliance assessment tailored to your products.')}</p>
+            <p className="text-[#B8960C] text-sm font-medium mb-6">{ct('ctaUrgency', 'Free consultation → 24h response')}</p>
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-block bg-gold hover:bg-gold/90 text-primary-navy font-semibold px-8 py-3 rounded-md transition-all hover:shadow-lg">{ct('ctaButton', 'Get Free Assessment')}</a>
           </div>
         </section>
       </main>

@@ -1,9 +1,8 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
-import { useParams } from 'next/navigation';
 import { WHATSAPP_URL } from './constants';
 import { Mail, MessageCircle, MapPin } from 'lucide-react';
+import { useT, useTradeLocale } from './TranslationProvider';
 
 const serviceLinks = [
   { key: 'gaccRegistration', href: '/services/gacc/' },
@@ -15,9 +14,9 @@ const serviceLinks = [
 ];
 
 export default function Footer({ locale: propLocale }: { locale?: string } = {}) {
-  const t = useTranslations('Footer');
-  const params = useParams<{ locale: string }>();
-  const locale = propLocale || (params?.locale ?? 'en');
+  const t = useT('Footer');
+  const ctxLocale = useTradeLocale();
+  const locale = propLocale || ctxLocale || 'en';
 
   const href = (path: string) => `/${locale}${path}`;
 

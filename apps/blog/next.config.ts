@@ -1,7 +1,2 @@
-const config = {
-  output: 'export' as const,
-  trailingSlash: true,
-  images: { unoptimized: true },
-  transpilePackages: ['@trade/ui'],
-};
+const config = { output: 'export' as const, trailingSlash: true, images: { unoptimized: true } };
 export default config;

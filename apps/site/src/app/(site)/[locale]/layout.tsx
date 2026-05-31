@@ -2,6 +2,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { locales, defaultLocale } from '@/i18n/routing';
 import { messagesMap } from '@/i18n/messages';
+import { TradeTranslationProvider } from '@trade/ui';
 import SearchProvider from '@/components/SearchProvider';
 import Footer from '@/components/Footer';
 import OrganizationJsonLd from '@/components/OrganizationJsonLd';
@@ -80,12 +81,14 @@ export default async function LocaleLayout({
         __html: JSON.stringify({ commit: buildTime, time: new Date().toISOString() })
       }} />
       <NextIntlClientProvider messages={messages} locale={locale}>
-        <OrganizationJsonLd locale={resolvedParams.locale} />
-        <SearchProvider />
-        {children}
-        <Footer />
-        <QuickActionDock />
-        <LocaleSync />
+        <TradeTranslationProvider messages={messages} locale={locale}>
+          <OrganizationJsonLd locale={resolvedParams.locale} />
+          <SearchProvider />
+          {children}
+          <Footer />
+          <QuickActionDock />
+          <LocaleSync />
+        </TradeTranslationProvider>
       </NextIntlClientProvider>
     </body>
     </html>

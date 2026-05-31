@@ -121,9 +121,9 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
   const msgs = getMessages(locale);
   const B = msgs?.Blog || {};
   const tb = (key: string, fb?: string) => B[key] ?? fb ?? key;
-  const nb = (key: string, fb?: string) => (msgs?.Navbar?.[key] ?? fb ?? key);
   const cf = (key: string, fb?: string) => (msgs?.ContactForm?.[key] ?? fb ?? key);
   const ct = (key: string, fb?: string) => (msgs?.CTA?.[key] ?? fb ?? key);
+  const bc = (key: string, fb?: string) => (msgs?.breadcrumb?.[key] ?? fb ?? key);
   const href = (p: string) => `/${locale}${p}`;
 
   // Category → Service page mapping (matching old site)
@@ -177,7 +177,7 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
           <ol className="flex items-center h-12 text-sm text-gray-500">
             <li>
               <a href={href('/')} className="hover:text-[#B8960C] transition-colors font-medium">
-                {nb('home', 'Home')}
+                {bc('home', 'Home')}
               </a>
             </li>
             <li className="flex items-center">
@@ -185,7 +185,7 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
               <a href={href('/blog/')} className="hover:text-[#B8960C] transition-colors font-medium">
-                {tb('backToBlog', 'Insights')}
+                {bc('blog', 'Blog')}
               </a>
             </li>
           </ol>

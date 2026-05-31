@@ -15,7 +15,7 @@ const SUPPORTED_LOCALES = [
   'tl', 'te',
 ];
 const DEFAULT_LOCALE = 'en';
-const UPSTREAM = 'https://compli-service.pages.dev';
+const UPSTREAM = 'https://trade-web-portal.pages.dev';
 const BLOG_UPSTREAM = 'https://trade-web-blog.pages.dev';
 const CANONICAL_HOST = 'sinotradecompliance.com';
 
@@ -105,13 +105,13 @@ export async function onRequest(context: { request: Request; next: () => Promise
   }
 
   // ── Blog proxy (/blog/) ─────────────────────────────────────────
-  // Strips /blog/ prefix when proxying to blog app
-  // /en/blog/gacc-registration-guide/ → blog.pages.dev/en/gacc-registration-guide/
-  const blogMatch = url.pathname.match(/^\/([a-z]{2})\/blog\/(.+)/);
-  if (blogMatch && SUPPORTED_LOCALES.includes(blogMatch[1])) {
-    const locale = blogMatch[1];
-    const blogPath = blogMatch[2];
-    const blogUrl = BLOG_UPSTREAM + '/' + locale + '/' + blogPath;
+  // Preserves /blog/ prefix (blog app routes are at /{locale}/blog/)
+  // /en/blog/gacc-registration-guide/ → blog.pages.dev/en/blog/gacc-registration-guide/
+  const blogPathMatch = url.pathname.match(/^\/([a-z]{2})\/blog(\/.*)?$/);
+  if (blogPathMatch && SUPPORTED_LOCALES.includes(blogPathMatch[1])) {
+    const locale = blogPathMatch[1];
+    const rest = blogPathMatch[2] || '/';
+    const blogUrl = BLOG_UPSTREAM + '/' + locale + '/blog' + rest;
     try {
       const resp = await fetch(blogUrl);
       return new Response(resp.body, {

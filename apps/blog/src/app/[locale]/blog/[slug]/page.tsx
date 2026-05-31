@@ -122,6 +122,7 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
   const B = msgs?.Blog || {};
   const tb = (key: string, fb?: string) => B[key] ?? fb ?? key;
   const nb = (key: string, fb?: string) => (msgs?.Navbar?.[key] ?? fb ?? key);
+  const cf = (key: string, fb?: string) => (msgs?.ContactForm?.[key] ?? fb ?? key);
   const href = (p: string) => `/${locale}${p}`;
 
   const articleJsonLd = {
@@ -158,6 +159,27 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
       <div className="fixed top-0 left-0 right-0 h-1 z-[60] bg-transparent">
         <div id="reading-progress" className="h-full bg-[#B8960C] transition-all duration-150" style={{ width: '0%' }} />
       </div>
+
+      {/* Breadcrumb */}
+      <nav className="bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ol className="flex items-center h-12 text-sm text-gray-500">
+            <li>
+              <a href={href('/')} className="hover:text-[#B8960C] transition-colors font-medium">
+                {nb('home', 'Home')}
+              </a>
+            </li>
+            <li className="flex items-center">
+              <svg className="w-4 h-4 mx-2 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+              <a href={href('/blog/')} className="hover:text-[#B8960C] transition-colors font-medium">
+                {tb('backToBlog', 'Insights')}
+              </a>
+            </li>
+          </ol>
+        </div>
+      </nav>
 
       <main>
         {/* Hero Section */}
@@ -307,9 +329,9 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
                 <div className="mt-10 p-6 bg-[#F4F6F9] rounded-xl border border-gray-200">
                   <p className="text-sm text-[#5F6F7F] mb-2">{tb('relatedServiceLabel', 'Need Help With This?')}</p>
                   <h3 className="text-xl font-bold text-[#1B365D] mb-2">{category}</h3>
-                  <a href={`${PORTAL_URL}/${locale}/c`}
+                  <a href={`${SITE_URL}/${locale}/services/ecommerce/`}
                     className="inline-flex items-center gap-1 text-sm font-semibold text-[#B8960C] hover:text-[#1B365D] transition-colors">
-                    {tb('relatedServiceCta', 'Get Free Assessment')} →
+                    {tb('relatedServiceCta', 'Get Free Assessment')}
                   </a>
                 </div>
               )}
@@ -378,8 +400,8 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
         {/* Contact Form */}
         <section className="py-16 bg-[#F4F6F9]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#333333] text-center mb-4">Free Compliance Assessment</h2>
-            <p className="text-[#5F6F7F] text-center mb-8">Tell us about your products and we&apos;ll provide a personalized compliance roadmap.</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#333333] text-center mb-4">{cf('title', 'Free Compliance Assessment')}</h2>
+            <p className="text-[#5F6F7F] text-center mb-8">{cf('subtitle', "Tell us about your products and we'll provide a personalized compliance roadmap.")}</p>
             <form className="w-full max-w-lg mx-auto bg-white rounded-xl border border-gray-200 p-6 sm:p-8 shadow-sm" action="https://api.web3forms.com/submit" method="POST">
               <input type="hidden" name="access_key" value="b1e6d34d-9fdc-4dc1-9bb2-6fc9090b361c" />
               <input type="hidden" name="subject" value="🔥 New Inquiry — SinoTrade Website" />
@@ -387,15 +409,15 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
               <input type="checkbox" className="hidden" style={{ display: 'none' }} name="botcheck" />
               <input type="hidden" name="redirect" value={`${SITE_URL}/${locale}/thank-you`} />
               <div className="mb-4 relative">
-                <label htmlFor="ct-email" className="block text-sm font-semibold text-[#333333] mb-1 text-left">Business Email</label>
-                <input type="email" id="ct-email" placeholder="you@company.com" required className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1B365D] focus:border-transparent text-[#333333]" name="email" />
+                <label htmlFor="ct-email" className="block text-sm font-semibold text-[#333333] mb-1 text-left">{cf('emailLabel', 'Business Email')}</label>
+                <input type="email" id="ct-email" placeholder={cf('emailPlaceholder', 'you@company.com')} required className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1B365D] focus:border-transparent text-[#333333]" name="email" />
               </div>
               <div className="mb-4 relative">
-                <label htmlFor="ct-message" className="block text-sm font-semibold text-[#333333] mb-1 text-left">Message (optional)</label>
-                <textarea name="message" id="ct-message" rows={3} placeholder="Describe your products or compliance needs..." className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1B365D] focus:border-transparent text-[#333333]" />
+                <label htmlFor="ct-message" className="block text-sm font-semibold text-[#333333] mb-1 text-left">{cf('messageLabel', 'Message (optional)')}</label>
+                <textarea name="message" id="ct-message" rows={3} placeholder={cf('messagePlaceholder', 'Describe your products or compliance needs...')} className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1B365D] focus:border-transparent text-[#333333]" />
               </div>
-              <button type="submit" className="w-full bg-gold hover:bg-gold/90 text-primary-navy font-bold py-3.5 px-4 rounded-lg transition-all shadow-md">Submit Free Assessment</button>
-              <p className="text-xs text-[#5F6F7F] text-center mt-3">We respect your privacy. No spam, ever.</p>
+              <button type="submit" className="w-full bg-gold hover:bg-gold/90 text-primary-navy font-bold py-3.5 px-4 rounded-lg transition-all shadow-md">{cf('button', 'Submit Free Assessment')}</button>
+              <p className="text-xs text-[#5F6F7F] text-center mt-3">{cf('privacy', 'We respect your privacy. No spam, ever.')}</p>
             </form>
           </div>
         </section>
@@ -403,8 +425,8 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
         {/* Need This Service? CTA */}
         <section className="py-16 bg-primary-navy">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">{tb('ctaTitle', 'Need This Service?')}</h2>
-            <p className="text-white/80 mb-2">{tb('ctaSubtitle', 'Get a free compliance assessment tailored to your products.')}</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Need This Service?</h2>
+            <p className="text-white/80 mb-2">Get a free compliance assessment tailored to your products.</p>
             <p className="text-[#B8960C] text-sm font-medium mb-6">{tb('ctaResponse', 'Free consultation → 24h response')}</p>
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-block bg-gold hover:bg-gold/90 text-primary-navy font-semibold px-8 py-3 rounded-md transition-all hover:shadow-lg">{tb('ctaButton', 'Get Free Assessment')}</a>
           </div>

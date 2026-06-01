@@ -12,6 +12,8 @@
  *   - Auto-derivation on .pages.dev: trade-web-site → trade-web-portal / trade-web-blog
  */
 
+// LanguageSwitcher updated for SSR-friendly <a> links
+// Force rebuild for LanguageSwitcher CSS-hover fix
 const SUPPORTED_LOCALES = [
   'en', 'zh', 'es', 'fr', 'de', 'ja', 'pt', 'ru',
   'ar', 'ko', 'it', 'nl', 'tr', 'vi', 'id', 'th',

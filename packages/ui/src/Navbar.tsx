@@ -15,18 +15,16 @@ interface NavbarProps {
 }
 
 const DEFAULT_INDUSTRIES = [
-  { slug: 'food-beverage', emoji: '🍷' },
-  { slug: 'cosmetics-personal-care', emoji: '💄' },
-  { slug: 'electronics-appliances', emoji: '🔌' },
-  { slug: 'toys-children-products', emoji: '🧸' },
-  { slug: 'textile-apparel', emoji: '👕' },
+  { slug: 'dairy-milk-products', emoji: '🥛' },
+  { slug: 'meat-seafood', emoji: '🥩' },
+  { slug: 'wine-spirits', emoji: '🍷' },
+  { slug: 'skincare-cosmetics', emoji: '💄' },
+  { slug: 'pet-food', emoji: '🐾' },
   { slug: 'health-supplements', emoji: '💊' },
-  { slug: 'machinery-equipment', emoji: '⚙️' },
-  { slug: 'chemical-products', emoji: '🧪' },
-  { slug: 'automotive-parts', emoji: '🚗' },
-  { slug: 'pet-products', emoji: '🐾' },
-  { slug: 'packaging-materials', emoji: '📦' },
-  { slug: 'sports-outdoor', emoji: '⚽' },
+  { slug: 'baby-maternal', emoji: '👶' },
+  { slug: 'consumer-electronics', emoji: '📱' },
+  { slug: 'medical-devices', emoji: '🏥' },
+  { slug: 'cross-border-ecommerce', emoji: '🛒' },
 ];
 
 const serviceLinks = [

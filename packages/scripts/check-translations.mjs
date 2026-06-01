@@ -208,12 +208,15 @@ function flattenKeys(obj, prefix = '') {
 // ============================================================
 function checkBlogMdx(targetLang = null, verbose = true) {
   const slugList = [];
+  // Graceful: blog content may not exist in this project root (e.g. blog app)
   const enDir = path.join(BLOG_DIR, 'en');
-  if (fs.existsSync(enDir)) {
+  if (!fs.existsSync(BLOG_DIR) || !fs.existsSync(enDir)) {
+    if (verbose) console.log(`\n📝 博客 MDX 检查: ⏭️ 跳过 (${BLOG_DIR} 不存在)`);
+    return 0;
+  }
     for (const f of fs.readdirSync(enDir).filter(f => f.endsWith('.mdx')).sort()) {
       slugList.push(path.basename(f, '.mdx'));
     }
-  }
 
   const allLangs = targetLang
     ? (fs.existsSync(path.join(BLOG_DIR, targetLang)) ? [targetLang] : [])
@@ -514,13 +517,50 @@ function checkTranslations(targetLang = null, verbose = true) {
 }
 
 // ============================================================
+// 语种一致性检查
+// 确保 messages/ 目录的 locale 文件与 canonical 48 种语言一致
+// ============================================================
+const CANONICAL_LOCALES = [
+  'af','ar','az','be','bg','bn','ca','cs','da','de','el','en','es','fa','fi',
+  'fr','he','hi','hr','hu','hy','id','it','ja','ka','ko','ms','ne','nl','no',
+  'pl','pt','ro','ru','si','sk','sl','sq','sr','sv','sw','ta','th','tr','uk',
+  'ur','vi','zh',
+];
+
+function checkLocaleConsistency(verbose = true) {
+  const files = fs.readdirSync(MESSAGES_DIR)
+    .filter(f => f.endsWith('.json') && f !== 'en.json')
+    .map(f => path.basename(f, '.json'))
+    .sort();
+
+  const actual = new Set(files);
+  const canonical = new Set(CANONICAL_LOCALES.filter(l => l !== 'en'));
+
+  const extra = [...actual].filter(l => !canonical.has(l)).sort();
+  const missing = [...canonical].filter(l => !actual.has(l)).sort();
+
+  if (verbose && (extra.length || missing.length)) {
+    console.log(`\n${'='.repeat(60)}`);
+    console.log('🔢 语种一致性检查:');
+    if (extra.length) console.log(`  ❌ 多余语言文件 (${extra.length}): ${extra.join(', ')}`);
+    if (missing.length) console.log(`  ❌ 缺少语言文件 (${missing.length}): ${missing.join(', ')}`);
+  } else if (verbose && !extra.length && !missing.length) {
+    console.log(`\n🔢 语种一致性检查: ✅ ${files.length}/47 语言匹配`);
+  }
+
+  return { total: extra.length + missing.length, extra, missing, actualCount: files.length };
+}
+
+// ============================================================
 // CLI
 // ============================================================
 const args = process.argv.slice(2);
 const targetLang = args.includes('--lang') ? args[args.indexOf('--lang') + 1] : null;
 const short = args.includes('--short');
 const jsonOut = args.includes('--json');
+const skipConsistency = args.includes('--skip-locale-check');
 
+const localeCheck = skipConsistency ? null : checkLocaleConsistency(!short);
 const result = checkTranslations(targetLang, !short);
 const blogIssues = checkBlogMdx(targetLang, !short);
 
@@ -528,9 +568,20 @@ if (jsonOut && result) {
   console.log(JSON.stringify(result.issues_by_type, null, 2));
 }
 
-if (result && result.total_issues === 0 && blogIssues === 0) {
+const totalIssues = (result?.total_issues ?? 0) + blogIssues + (localeCheck?.total ?? 0);
+
+if (totalIssues === 0) {
   console.log('\n✅ 全量核验通过！48 种语言无质量问题。');
-} else if (result) {
-  console.log(`\n⚠️ 发现 ${result.total_issues} 个问题（翻译）+ ${blogIssues} 个问题（博客），请修正后重新核验。`);
+} else {
+  console.log(`\n⚠️ 发现 ${totalIssues} 个问题`);
+  if (localeCheck && localeCheck.total > 0) {
+    console.log(`   - 语种一致性: ${localeCheck.total} 个问题 (多余: ${localeCheck.extra.length}, 缺少: ${localeCheck.missing.length})`);
+  }
+  if (result && result.total_issues > 0) {
+    console.log(`   - 翻译质量: ${result.total_issues} 个问题`);
+  }
+  if (blogIssues > 0) {
+    console.log(`   - 博客 MDX: ${blogIssues} 个问题`);
+  }
   process.exit(1);
 }

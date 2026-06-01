@@ -9,7 +9,7 @@ export default function LayoutHeader() {
     <Navbar
       onSearchOpen={() => {}}
       locale={locale}
-      blogHref={`https://trade-web-site.pages.dev/{locale}/blog/`}
+      blogHref={`/{locale}/blog/`}
     />
   );
 }

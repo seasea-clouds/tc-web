@@ -1,6 +1,5 @@
 'use client';
 
-import { useState, useLayoutEffect } from 'react';
 import { useTradeLocale } from './TranslationProvider';
 
 interface LanguageSwitcherProps {
@@ -33,13 +32,6 @@ export default function LanguageSwitcher({
 }: LanguageSwitcherProps) {
   const ctxLocale = useTradeLocale();
   const locale = propLocale || ctxLocale || 'en';
-  const [rendered, setRendered] = useState(false);
-
-  useLayoutEffect(() => {
-    setRendered(true);
-  }, []);
-
-  if (!rendered) return null;
 
   const handleChange = (newLocale: string) => {
     if (newLocale === locale) return;

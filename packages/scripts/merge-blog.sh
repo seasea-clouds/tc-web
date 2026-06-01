@@ -9,8 +9,13 @@ MONOREPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 BLOG_DIR="$MONOREPO_ROOT/apps/blog"
 SITE_DIR="$MONOREPO_ROOT/apps/site"
 
-echo "=== Building blog with assetPrefix: /blog ==="
+echo "=== Ensuring blog dependencies are installed ==="
 cd "$BLOG_DIR"
+# Cloudflare Pages may install deps only for the site workspace,
+# so run npm install explicitly for the blog workspace.
+npm install 2>&1 | tail -3
+
+echo "=== Building blog with assetPrefix: /blog ==="
 npm run build
 
 echo "=== Moving blog static assets to blog/_next/static/ ==="

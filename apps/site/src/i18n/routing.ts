@@ -38,7 +38,6 @@ export const localeNames: Record<Locale, string> = {
   fi: '🇫🇮 Suomi',
   da: '🇩🇰 Dansk',
   no: '🇳🇴 Norsk',
-  nb: '🇳🇴 Norsk (Bokmål)',
   uk: '🇺🇦 Українська',
   bg: '🇧🇬 Български',
   hr: '🇭🇷 Hrvatski',

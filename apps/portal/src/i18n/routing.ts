@@ -38,7 +38,6 @@ export const localeNames: Record<Locale, string> = {
   fi: '🇫🇮 Suomi',
   da: '🇩🇰 Dansk',
   no: '🇳🇴 Norsk',
-  nb: '🇳🇴 Norsk (Bokmål)',
   uk: '🇺🇦 Українська',
   bg: '🇧🇬 Български',
   hr: '🇭🇷 Hrvatski',
@@ -61,8 +60,6 @@ export const localeNames: Record<Locale, string> = {
   be: '🇧🇾 Беларуская',
   ne: '🇳🇵 नेपाली',
   si: '🇱🇰 සිංහල',
-  tl: '🇵🇭 Tagalog',
-  te: '🇮🇳 తెలుగు',
 };
 
 export const routing = defineRouting({

@@ -38,7 +38,6 @@ const DEFAULT_LOCALE_NAMES: Record<string, string> = {
   fi: '🇫🇮 Suomi',
   da: '🇩🇰 Dansk',
   no: '🇳🇴 Norsk',
-  nb: '🇳🇴 Norsk Bokmål',
   uk: '🇺🇦 Українська',
   bg: '🇧🇬 Български',
   hr: '🇭🇷 Hrvatski',
@@ -61,7 +60,6 @@ const DEFAULT_LOCALE_NAMES: Record<string, string> = {
   be: '🇧🇾 Беларуская',
   ne: '🇳🇵 नेपाली',
   si: '🇱🇰 සිංහල',
-  tl: '🇵🇭 Tagalog',
 
 };
 

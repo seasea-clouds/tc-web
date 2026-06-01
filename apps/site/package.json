@@ -5,10 +5,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run build:blog && node ../../packages/scripts/images/convert-webp.mjs && next build && node ../../packages/scripts/build-all.mjs --base-url=https://sinotradecompliance.com --out-dir=out && node ../../packages/scripts/clean-rsc.js && node ../../packages/scripts/check-translations.mjs --short",
+    "build": "node ../../packages/scripts/images/convert-webp.mjs && next build && node ../../packages/scripts/build-all.mjs --base-url=https://sinotradecompliance.com --out-dir=out ; node ../../packages/scripts/clean-rsc.js && node ../../packages/scripts/check-translations.mjs --short",
     "start": "next start",
-    "lint": "eslint",
-    "build:blog": "bash ../../packages/scripts/merge-blog.sh"
+    "lint": "eslint"
   },
   "dependencies": {
     "@trade/ui": "*",

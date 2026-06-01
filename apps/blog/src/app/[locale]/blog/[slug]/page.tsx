@@ -4,7 +4,6 @@ import matter from 'gray-matter';
 import { getPosts, parseHeadings, mdToHtml, type PostMeta } from '@/lib/posts';
 
 const SITE_URL = 'https://trade-web-site.pages.dev';
-const PORTAL_URL = 'https://trade-web-portal.pages.dev';
 const WHATSAPP_URL = 'https://wa.me/message/HPPZ5X6XZSMLM1';
 import { getMessages } from '@/lib/messages';
 import CopyButton from '@/components/CopyButton';

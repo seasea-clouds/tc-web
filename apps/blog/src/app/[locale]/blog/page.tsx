@@ -5,7 +5,6 @@ import { getMessages } from '@/lib/messages';
 import BlogClient from './BlogClient';
 
 const SITE_URL = 'https://trade-web-site.pages.dev';
-const PORTAL_URL = 'https://trade-web-portal.pages.dev';
 
 const LOCALES = [
   'en','zh','es','fr','de','ja','pt','ru','ar','ko','it','nl','tr','vi','id','th',

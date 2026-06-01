@@ -227,10 +227,19 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
   // Category → Service page mapping (matching old site)
   const CATEGORY_SERVICE_MAP: Record<string, { href: string; serviceKey: string; icon: string }> = {
     'Food & Beverage': { href: '/services/gacc', serviceKey: 'gacc', icon: 'truck' },
+    '食品及饮料': { href: '/services/gacc', serviceKey: 'gacc', icon: 'truck' },
     'Label Compliance': { href: '/services/label', serviceKey: 'label', icon: 'tag' },
+    '标签合规性': { href: '/services/label', serviceKey: 'label', icon: 'tag' },
     'Product Certification': { href: '/services/ccc', serviceKey: 'ccc', icon: 'shield' },
+    '产品认证': { href: '/services/ccc', serviceKey: 'ccc', icon: 'shield' },
     'Cosmetics': { href: '/services/cosmetics', serviceKey: 'cosmetics', icon: 'sparkles' },
+    '化妆品': { href: '/services/cosmetics', serviceKey: 'cosmetics', icon: 'sparkles' },
     'E-commerce': { href: '/services/ecommerce', serviceKey: 'ecommerce', icon: 'cart' },
+    '电子商务': { href: '/services/ecommerce', serviceKey: 'ecommerce', icon: 'cart' },
+    'Compliance Guide': { href: '/services/gacc', serviceKey: 'label', icon: 'tag' },
+    '合规指南': { href: '/services/gacc', serviceKey: 'label', icon: 'tag' },
+    'Brand Protection': { href: '/services/brand', serviceKey: 'brand', icon: 'shield' },
+    '品牌保护': { href: '/services/brand', serviceKey: 'brand', icon: 'shield' },
   };
   const serviceInfo = CATEGORY_SERVICE_MAP[category];
 

@@ -11,3 +11,16 @@ build/
 temp/
 __pycache__/
 *.pyc
+
+# Turbo build cache & logs
+.turbo/
+**/.turbo/
+turbo-build.log
+**/turbo-build.log
+
+# Blog files merged into site's public during build
+# Blog files merged during build - do not commit
+apps/site/public/*/blog/
+apps/site/public/blog/
+apps/site/public/404.html
+apps/site/public/404/

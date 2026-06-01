@@ -9,7 +9,7 @@ interface LanguageSwitcherProps {
   onLocaleChange?: (newLocale: string) => void;
 }
 
-const DEFAULT_LOCALES = ['en','zh','es','fr','de','ja','pt','ru','ar','ko','it','nl','tr','vi','id','th','hi','pl','sv','el','cs','ro','hu','fi','da','no','nb','uk','bg','hr','sr','sk','sl','ms','ka','he','sw','bn','ca','fa','ur','ta','af','sq','az','hy','be','ne','si','tl','te'];
+const DEFAULT_LOCALES = ['en','zh','es','fr','de','ja','pt','ru','ar','ko','it','nl','tr','vi','id','th','hi','pl','sv','el','cs','ro','hu','fi','da','no','uk','bg','hr','sr','sk','sl','ms','ka','he','sw','bn','ca','fa','ur','ta','af','sq','az','hy','be','ne','si'];
 
 const DEFAULT_LOCALE_NAMES: Record<string, string> = {
   en: '🇬🇧 English',
@@ -62,17 +62,7 @@ const DEFAULT_LOCALE_NAMES: Record<string, string> = {
   ne: '🇳🇵 नेपाली',
   si: '🇱🇰 සිංහල',
   tl: '🇵🇭 Tagalog',
-  te: '🇮🇳 తెలుగు',
-  lt: '🇱🇹 Lietuvių',
-  lv: '🇱🇻 Latviešu',
-  et: '🇪🇪 Eesti',
-  mk: '🇲🇰 Македонски',
-  mt: '🇲🇹 Malti',
-  is: '🇮🇸 Íslenska',
-  ga: '🇮🇪 Gaeilge',
-  cy: '🏴 Cymraeg',
-  eu: '🇪🇸 Euskara',
-  gl: '🇪🇸 Galego',
+
 };
 
 export default function LanguageSwitcher({

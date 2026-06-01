@@ -16,7 +16,7 @@ const SITE_URL = 'https://trade-web-site.pages.dev';
 const WHATSAPP_URL = 'https://wa.me/message/HPPZ5X6XZSMLM1';
 import { getMessages } from '@/lib/messages';
 import CopyButton from '@/components/CopyButton';
-import FloatingButtons from '@/components/FloatingButtons';
+import { ActionDock } from '@trade/ui';
 
 const LOCALES = [
   'en','zh','es','fr','de','ja','pt','ru','ar','ko','it','nl','tr','vi','id','th',
@@ -592,7 +592,7 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
         __html: `(function(){var b=document.getElementById('reading-progress');if(!b)return;window.addEventListener('scroll',function(){var h=document.documentElement,d=document.body;var p=((h.scrollTop||d.scrollTop)/((h.scrollHeight||d.scrollHeight)-h.clientHeight))*100;b.style.width=p+'%'})})();`,
       }} />
 
-      <FloatingButtons />
+      <ActionDock />
     </>
   );
 }

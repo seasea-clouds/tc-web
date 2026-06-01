@@ -4,6 +4,8 @@ import { getPosts } from '@/lib/posts';
 import { getMessages } from '@/lib/messages';
 import BlogClient from './BlogClient';
 
+import { ActionDock } from '@trade/ui';
+
 const SITE_URL = 'https://trade-web-site.pages.dev';
 
 const LOCALES = [
@@ -188,6 +190,7 @@ export default async function BlogHome({ params }: { params: Promise<{ locale: s
           </a>
         </div>
       </section>
+      <ActionDock />
     </>
   );
 }

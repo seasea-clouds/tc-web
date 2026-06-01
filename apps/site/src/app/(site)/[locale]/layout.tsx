@@ -5,7 +5,7 @@ import { messagesMap } from '@/i18n/messages';
 import { Footer, TradeTranslationProvider } from '@trade/ui';
 import SearchProvider from '@/components/SearchProvider';
 import OrganizationJsonLd from '@/components/OrganizationJsonLd';
-import QuickActionDock from '@/components/QuickActionDock';
+import { ActionDock } from '@trade/ui';
 import LocaleSync from '@/components/LocaleSync';
 import { BRAND_NAME, SITE_URL } from '@/config/metadata';
 import '../../globals.css';
@@ -85,7 +85,7 @@ export default async function LocaleLayout({
           <SearchProvider />
           {children}
           <Footer />
-          <QuickActionDock />
+          <ActionDock />
           <LocaleSync />
         </TradeTranslationProvider>
       </NextIntlClientProvider>

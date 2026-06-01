@@ -431,11 +431,21 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
               <input type="hidden" name="redirect" value={`${SITE_URL}/${locale}/thank-you`} />
               <div className="mb-4 relative">
                 <label htmlFor="ct-email" className="block text-sm font-semibold text-[#333333] mb-1 text-left">{cf('emailLabel', 'Business Email')}</label>
-                <input type="email" id="ct-email" placeholder={cf('emailPlaceholder', 'you@company.com')} required className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1B365D] focus:border-transparent text-[#333333]" name="email" />
+                <div className="relative">
+                  <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#5F6F7F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  <input type="email" id="ct-email" placeholder={cf('emailPlaceholder', 'you@company.com')} required className="w-full pl-10 pr-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1B365D] focus:border-transparent text-[#333333]" name="email" />
+                </div>
               </div>
               <div className="mb-4 relative">
                 <label htmlFor="ct-message" className="block text-sm font-semibold text-[#333333] mb-1 text-left">{cf('messageLabel', 'Message (optional)')}</label>
-                <textarea name="message" id="ct-message" rows={3} placeholder={cf('messagePlaceholder', 'Describe your products or compliance needs...')} className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1B365D] focus:border-transparent text-[#333333]" />
+                <div className="relative">
+                  <svg className="absolute left-3 top-3.5 w-5 h-5 text-[#5F6F7F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M22 17a2 2 0 01-2 2H6.828a2 2 0 00-1.414.586l-2.202 2.202A.71.71 0 012 21.286V5a2 2 0 012-2h16a2 2 0 012 2z" />
+                  </svg>
+                  <textarea name="message" id="ct-message" rows={3} placeholder={cf('messagePlaceholder', 'Describe your products or compliance needs...')} className="w-full pl-10 pr-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1B365D] focus:border-transparent text-[#333333]" />
+                </div>
               </div>
               <button type="submit" className="w-full bg-gold hover:bg-gold/90 text-primary-navy font-bold py-3.5 px-4 rounded-lg transition-all shadow-md">{cf('button', 'Submit Free Assessment')}</button>
               <p className="text-xs text-[#5F6F7F] text-center mt-3">{cf('privacy', 'We respect your privacy. No spam, ever.')}</p>

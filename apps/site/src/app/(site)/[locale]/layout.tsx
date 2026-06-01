@@ -4,7 +4,7 @@ import { locales, defaultLocale } from '@/i18n/routing';
 import { messagesMap } from '@/i18n/messages';
 import { TradeTranslationProvider } from '@trade/ui';
 import SearchProvider from '@/components/SearchProvider';
-import Footer from '@/components/Footer';
+import { Footer } from '@trade/ui';
 import OrganizationJsonLd from '@/components/OrganizationJsonLd';
 import QuickActionDock from '@/components/QuickActionDock';
 import LocaleSync from '@/components/LocaleSync';

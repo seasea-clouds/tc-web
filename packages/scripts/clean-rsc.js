@@ -12,7 +12,8 @@
 import { readdirSync, statSync, rmSync } from 'fs';
 import { join } from 'path';
 
-const OUT_DIR = new URL('../out', import.meta.url).pathname;
+// Use provided path argument, or default to <cwd>/out
+const OUT_DIR = process.argv[2] || join(process.cwd(), 'out');
 
 let deletedCount = 0;
 let totalSize = 0;

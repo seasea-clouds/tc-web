@@ -3,7 +3,7 @@ import { locales, defaultLocale } from '@/i18n/routing';
 import { messagesMap } from '@/i18n/messages';
 import { TradeTranslationProvider } from '@trade/ui';
 import Header from "@/components/LayoutHeader";
-import Footer from "@/components/Footer";
+import { Footer } from '@trade/ui';
 import { AuthProvider } from "@/components/AuthProvider";
 import CookieConsent from "@/components/CookieConsent";
 

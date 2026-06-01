@@ -225,12 +225,12 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
   const href = (p: string) => `/${locale}${p}`;
 
   // Category → Service page mapping (matching old site)
-  const CATEGORY_SERVICE_MAP: Record<string, { href: string; serviceKey: string }> = {
-    'Food & Beverage': { href: '/services/gacc', serviceKey: 'gacc' },
-    'Label Compliance': { href: '/services/label', serviceKey: 'label' },
-    'Product Certification': { href: '/services/ccc', serviceKey: 'ccc' },
-    'Cosmetics': { href: '/services/cosmetics', serviceKey: 'cosmetics' },
-    'E-commerce': { href: '/services/ecommerce', serviceKey: 'ecommerce' },
+  const CATEGORY_SERVICE_MAP: Record<string, { href: string; serviceKey: string; icon: string }> = {
+    'Food & Beverage': { href: '/services/gacc', serviceKey: 'gacc', icon: 'truck' },
+    'Label Compliance': { href: '/services/label', serviceKey: 'label', icon: 'tag' },
+    'Product Certification': { href: '/services/ccc', serviceKey: 'ccc', icon: 'shield' },
+    'Cosmetics': { href: '/services/cosmetics', serviceKey: 'cosmetics', icon: 'sparkles' },
+    'E-commerce': { href: '/services/ecommerce', serviceKey: 'ecommerce', icon: 'cart' },
   };
   const serviceInfo = CATEGORY_SERVICE_MAP[category];
 
@@ -305,6 +305,9 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
       <main>
         {/* Hero Section */}
         <section className="relative min-h-[400px] flex items-end overflow-hidden bg-primary-navy">
+          <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary-navy/60 to-primary-navy" />
+          </div>
           <div className="relative z-10 w-full">
             <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 sm:pt-20">
               <a href={href('/blog/')}
@@ -443,6 +446,13 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
               {serviceInfo && (
                 <div className="mt-12 p-6 rounded-xl text-white" style={{ background: 'linear-gradient(to right, #1B365D, rgba(27,54,93,0.9))' }}>
                   <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                    <div className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'rgba(184,150,12,0.2)' }}>
+                      {serviceInfo.icon === 'truck' && <svg className="w-6 h-6 text-[#B8960C]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" /></svg>}
+                      {serviceInfo.icon === 'tag' && <svg className="w-6 h-6 text-[#B8960C]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5a1.994 1.994 0 011.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A2 2 0 013 12V7a4 4 0 014-4z" /></svg>}
+                      {serviceInfo.icon === 'shield' && <svg className="w-6 h-6 text-[#B8960C]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>}
+                      {serviceInfo.icon === 'sparkles' && <svg className="w-6 h-6 text-[#B8960C]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>}
+                      {serviceInfo.icon === 'cart' && <svg className="w-6 h-6 text-[#B8960C]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z" /></svg>}
+                    </div>
                     <div className="flex-1">
                       <p className="text-sm mb-1 text-white/60">{tb('relatedServiceLabel', 'Need Help With This?')}</p>
                       <h3 className="text-lg font-bold">{tb('service_' + serviceInfo.serviceKey, category)}</h3>
@@ -461,11 +471,11 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
               {references.length > 0 && (
                 <div className="mt-12 pt-8 border-t border-gray-200">
                   <h2 className="text-xl font-bold text-[#1B365D] mb-4">{tb('referencesHeading', 'References')}</h2>
-                  <ul className="space-y-2">
+                  <ol className="space-y-2 list-decimal list-inside">
                     {references.map((ref, i) => (
-                      <li key={i}><a href={ref.url} target="_blank" rel="noopener noreferrer" className="text-sm text-[#2563EB] hover:underline">{ref.title}</a></li>
+                      <li key={i} className="text-sm"><a href={ref.url} target="_blank" rel="noopener noreferrer" className="text-[#2563EB] hover:underline">{ref.title}</a></li>
                     ))}
-                  </ul>
+                  </ol>
                 </div>
               )}
 

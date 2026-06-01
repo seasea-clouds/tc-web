@@ -1,7 +1,7 @@
 'use client';
 
 import { useLocale } from 'next-intl';
-import Navbar from '@/components/Header';
+import { Navbar } from '@trade/ui';
 
 export default function LayoutHeader() {
   const locale = useLocale();

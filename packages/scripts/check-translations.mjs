@@ -54,6 +54,7 @@ const IGNORE_FALLBACK_VALUES = new Set([
   'PIPL Data Compliance Assessment', 'GACC Food Registration',
   'China Import Compliance Services', 'Medical device compliance training and advisory',
   'Baby & Maternal',
+  'Free Check',
 ]);
 
 const NUMBER_KEYS = new Set([
@@ -181,6 +182,7 @@ const ENGLISH_RESIDUAL_ALLOW = new Set([
   'Class', 'FAQ',
   'com', 'http', 'https', 'www', 'API',
   'for', 'and', 'This', 'About',
+  'Telegram',
 ]);
 
 // ============================================================

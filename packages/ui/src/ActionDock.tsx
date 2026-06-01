@@ -1,13 +1,19 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
-import { WHATSAPP_URL } from '@/lib/constants';
+interface ActionDockProps {
+  whatsappAriaLabel?: string;
+  emailAriaLabel?: string;
+  backToTopAriaLabel?: string;
+}
 
-export default function QuickActionDock() {
-  const t = useTranslations('aria');
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+const WHATSAPP_URL = 'https://wa.me/message/HPPZ5X6XZSMLM1';
+
+export default function ActionDock({
+  whatsappAriaLabel = 'Contact us on WhatsApp',
+  emailAriaLabel = 'Send us an email',
+  backToTopAriaLabel = 'Back to top',
+}: ActionDockProps) {
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   return (
     <div
@@ -19,7 +25,7 @@ export default function QuickActionDock() {
         href={WHATSAPP_URL}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={t('whatsappLabel')}
+        aria-label={whatsappAriaLabel}
         className="flex items-center justify-center w-10 h-10 bg-[#25D366] border-2 border-white rounded-full shadow-lg hover:bg-[#25D366]/90 hover:shadow-xl transition-all hover:scale-110"
       >
         <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -30,7 +36,7 @@ export default function QuickActionDock() {
       {/* Email */}
       <a
         href="mailto:david@sinotradecompliance.com"
-        aria-label={t('emailLabel')}
+        aria-label={emailAriaLabel}
         className="flex items-center justify-center w-10 h-10 bg-gray-600 border-2 border-white rounded-full shadow-lg hover:bg-gray-700 hover:shadow-xl transition-all hover:scale-110"
       >
         <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -38,11 +44,11 @@ export default function QuickActionDock() {
         </svg>
       </a>
 
-      {/* Back to Top */}
+      {/* Back to top */}
       <button
         type="button"
+        aria-label={backToTopAriaLabel}
         onClick={scrollToTop}
-        aria-label={t('backToTopLabel')}
         className="flex items-center justify-center w-10 h-10 bg-primary-navy/90 border-2 border-white text-white rounded-full shadow-lg hover:bg-primary-navy hover:shadow-xl transition-all hover:scale-110"
       >
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

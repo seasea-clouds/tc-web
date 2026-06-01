@@ -1,0 +1,171 @@
+
+> @trade/site@2.0.0 build
+> node ../../packages/scripts/images/convert-webp.mjs && next build && node ../../packages/scripts/build-all.mjs --base-url=https://sinotradecompliance.com --out-dir=out ; node ../../packages/scripts/clean-rsc.js && node ../../packages/scripts/check-translations.mjs --short
+
+Converting 18 images to WebP...
+
+  ✓ david-zhang.jpg: 77K → 28K (63% saved)
+  ✓ leo-liu.jpg: 94K → 38K (59% saved)
+  ✓ mike-wang.jpg: 154K → 79K (49% saved)
+  ✓ partners/acre-africa.png: 83K → 47K (43% saved)
+  ✓ partners/agrosupply.png: 312K → 85K (73% saved)
+  ✓ partners/alpha-africa.png: 25K → 14K (45% saved)
+  ✓ partners/brazafric.png: 7K → 8K (-12% saved)
+  ✓ partners/brookside.png: 15K → 6K (58% saved)
+  ✓ partners/discovery-group.jpg: 3K → 2K (26% saved)
+  ✓ partners/eafoods.png: 5K → 2K (67% saved)
+  ✓ partners/eastern-produce.png: 23K → 32K (-41% saved)
+  ✓ partners/goldenpot.png: 38K → 14K (62% saved)
+  ✓ partners/mambo-coffee.png: 66K → 15K (77% saved)
+  ✓ partners/paniel.png: 6K → 5K (23% saved)
+  ✓ partners/tiger-tea.png: 53K → 18K (66% saved)
+  ✓ partners/truk.png: 69K → 35K (50% saved)
+  ✓ partners/ziweto.png: 11K → 5K (56% saved)
+  ✓ sarah-chen.jpg: 100K → 41K (59% saved)
+
+Component paths updated: 0
+
+==================================================
+Images: 18 converted
+Size: 1138K → 473K (58% saved)
+▲ Next.js 16.2.4 (Turbopack)
+
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+  Creating an optimized production build ...
+✓ Compiled successfully in 2.3s
+  Running TypeScript ...
+  Finished TypeScript in 5.5s ...
+  Collecting page data using 19 workers ...
+  Generating static pages using 19 workers (0/1253) ...
+  Generating static pages using 19 workers (313/1253) 
+  Generating static pages using 19 workers (626/1253) 
+  Generating static pages using 19 workers (939/1253) 
+✓ Generating static pages using 19 workers (1253/1253) in 4.2s
+  Finalizing page optimization ...
+⚠ Statically exporting a Next.js application via `next export` disables API routes and middleware.
+This command is meant for static-only hosts, and is not necessary to make your application static.
+Pages in your application without server-side data dependencies will be automatically statically exported by `next build`, including pages powered by `getStaticProps`.
+Learn more: https://nextjs.org/docs/messages/api-routes-static-export
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ● /[locale]
+│ ├ /en
+│ ├ /zh
+│ ├ /es
+│ └ [+45 more paths]
+├ ● /[locale]/about
+│ ├ /en/about
+│ ├ /zh/about
+│ ├ /es/about
+│ └ [+45 more paths]
+├ ● /[locale]/faq
+│ ├ /en/faq
+│ ├ /zh/faq
+│ ├ /es/faq
+│ └ [+45 more paths]
+├ ● /[locale]/industries
+│ ├ /en/industries
+│ ├ /zh/industries
+│ ├ /es/industries
+│ └ [+45 more paths]
+├ ● /[locale]/industries/[industry]
+│ ├ /en/industries/dairy-milk-products
+│ ├ /en/industries/meat-seafood
+│ ├ /en/industries/wine-spirits
+│ └ [+477 more paths]
+├ ● /[locale]/packages
+│ ├ /en/packages
+│ ├ /zh/packages
+│ ├ /es/packages
+│ └ [+45 more paths]
+├ ● /[locale]/quote
+│ ├ /en/quote
+│ ├ /zh/quote
+│ ├ /es/quote
+│ └ [+45 more paths]
+├ ● /[locale]/services
+│ ├ /en/services
+│ ├ /zh/services
+│ ├ /es/services
+│ └ [+45 more paths]
+├ ● /[locale]/services/brand
+│ ├ /en/services/brand
+│ ├ /zh/services/brand
+│ ├ /es/services/brand
+│ └ [+45 more paths]
+├ ● /[locale]/services/ccc
+│ ├ /en/services/ccc
+│ ├ /zh/services/ccc
+│ ├ /es/services/ccc
+│ └ [+45 more paths]
+├ ● /[locale]/services/cosmetics
+│ ├ /en/services/cosmetics
+│ ├ /zh/services/cosmetics
+│ ├ /es/services/cosmetics
+│ └ [+45 more paths]
+├ ● /[locale]/services/ecommerce
+│ ├ /en/services/ecommerce
+│ ├ /zh/services/ecommerce
+│ ├ /es/services/ecommerce
+│ └ [+45 more paths]
+├ ● /[locale]/services/gacc
+│ ├ /en/services/gacc
+│ ├ /zh/services/gacc
+│ ├ /es/services/gacc
+│ └ [+45 more paths]
+├ ● /[locale]/services/label
+│ ├ /en/services/label
+│ ├ /zh/services/label
+│ ├ /es/services/label
+│ └ [+45 more paths]
+├ ● /[locale]/sitemap
+│ ├ /en/sitemap
+│ ├ /zh/sitemap
+│ ├ /es/sitemap
+│ └ [+45 more paths]
+├ ● /[locale]/testimonials
+│ ├ /en/testimonials
+│ ├ /zh/testimonials
+│ ├ /es/testimonials
+│ └ [+45 more paths]
+├ ● /[locale]/thank-you
+│ ├ /en/thank-you
+│ ├ /zh/thank-you
+│ ├ /es/thank-you
+│ └ [+45 more paths]
+└ ○ /icon.png
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)
+
+=== build-all.mjs ===
+Base URL: https://sinotradecompliance.com
+Output:   /root/projects/trade/web/apps/site/out
+
+[1/5] Generating sitemaps...
+✅ 48 locale sitemaps generated
+✅ sitemap.xml index generated
+[2/5] Generating image sitemap...
+✅ sitemap-images.xml (39 images)
+[3/5] Generating LLM files...
+✅ llms.txt (6136KB)
+✅ 48 llms-{locale}.txt files
+[4/5] Generating search indexes...
+✅ 48 search-index-{locale}.json files
+[5/5] Generating robots.txt...
+✅ robots.txt generated
+
+✅ build-all.mjs complete
+🧹 Cleaning RSC .txt payload files from out/...
+✅ Deleted 11965 RSC payload files (714.8 MB freed)
+(node:780595) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/projects/trade/web/packages/scripts/clean-rsc.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /root/projects/trade/web/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+✅ 全量核验通过！48 种语言无质量问题。

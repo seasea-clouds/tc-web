@@ -1,11 +1,11 @@
 import { useTradeLocale } from './TranslationProvider';
+import { usePathname } from 'next/navigation';
 
 interface LanguageSwitcherProps {
   locale?: string;
   locales?: string[];
   localeNames?: Record<string, string>;
   onLocaleChange?: (newLocale: string) => void;
-  currentPathname?: string;
 }
 
 const DEFAULT_LOCALES = ['en','zh','es','fr','de','ja','pt','ru','ar','ko','it','nl','tr','vi','id','th','hi','pl','sv','el','cs','ro','hu','fi','da','no','uk','bg','hr','sr','sk','sl','ms','ka','he','sw','bn','ca','fa','ur','ta','af','sq','az','hy','be','ne','si'];
@@ -66,21 +66,20 @@ export default function LanguageSwitcher({
   locales = DEFAULT_LOCALES,
   localeNames = DEFAULT_LOCALE_NAMES,
   onLocaleChange,
-  currentPathname,
 }: LanguageSwitcherProps) {
   const ctxLocale = useTradeLocale();
   const locale = propLocale || ctxLocale || 'en';
+  const pathname = usePathname();
 
   const currentDisplayName = localeNames[locale]?.split(' ').slice(1).join(' ') || locale;
 
-  // Build locale → href map for SSR-friendly <a> links
-  // Falls back to window.location if currentPathname not provided (legacy case)
-  const pathname = typeof window !== 'undefined'
-    ? currentPathname || window.location.pathname
-    : currentPathname || '';
+  // Build locale → href map using Next.js pathname (works in SSR and client)
   const localeHrefs = locales.reduce<Record<string, string>>((acc, l) => {
-    if (pathname) {
-      acc[l] = pathname.replace(`/${locale}/`, `/${l}/`);
+    if (pathname && pathname.startsWith(`/${locale}`)) {
+      acc[l] = pathname.replace(`/${locale}`, `/${l}`);
+    } else if (pathname) {
+      // Fallback: try current path with just the locale segment replaced
+      acc[l] = pathname.replace(/^\/[a-z]{2}(?:-[A-Z]{2})?(?=\/|$)/, `/${l}`);
     }
     return acc;
   }, {});

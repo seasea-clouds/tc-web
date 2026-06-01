@@ -1,15 +1,15 @@
 /**
  * Cloudflare Pages Middleware:
  * 1. Route /{locale}/c/* → portal site (user compliance portal)
- * 2. Route /{locale}/blog/* → blog site
- * 3. Serve sub-site static assets at /blog/_next/static/* and /c/_next/static/*
+ * 2. Blog pages served directly from merged deployment (build-time merge)
+ * 3. Serve portal static assets at /c/_next/static/* via proxy
  *    (relative paths — no absolute domains in HTML)
  * 4. Accept-Language → redirect / to corresponding locale
  * 5. Canonical host redirect: www / pages.dev → main domain
  *
  * Upstream URLs (for server-side proxy) resolved via:
  *   - Environment variables: UPSTREAM_PORTAL, UPSTREAM_BLOG
- *   - Auto-derivation on .pages.dev: trade-web-site → trade-web-portal / trade-web-blog
+ *   - Auto-derivation on .pages.dev: trade-web-site → trade-web-portal
  */
 
 const SUPPORTED_LOCALES = [
@@ -32,7 +32,7 @@ function resolveUpstream(hostname: string, subProject: string, env?: Record<stri
   // Auto-derive for .pages.dev using naming convention
   if (hostname.endsWith('.pages.dev')) {
     const projectName = hostname.replace('.pages.dev', '');
-    // trade-web-site → trade-web-blog / trade-web-portal
+    // trade-web-site → trade-web-portal
     const derived = projectName.replace(/-site$/, `-${subProject}`);
     if (derived !== projectName) return `https://${derived}.pages.dev`;
     return `https://${projectName}-${subProject}.pages.dev`;
@@ -142,18 +142,8 @@ async function proxyToPortal(url: URL, request: Request, env?: Record<string, st
  * Returns a Response if matched, or null to continue normal routing.
  */
 async function proxySubSiteAsset(url: URL, request: Request, env?: Record<string, string>): Promise<Response | null> {
-  // Match /blog/_next/static/* → blog upstream
-  const blogMatch = url.pathname.match(/^\/blog\/_next\/static\/(.+)/);
-  if (blogMatch) {
-    const upstream = resolveUpstream(url.hostname, 'blog', env);
-    const assetUrl = `${upstream}/_next/static/${blogMatch[1]}`;
-    const resp = await fetch(assetUrl);
-    const h = sanitizeHeaders(resp.headers);
-    // Ensure proper content-type for JS/CSS
-    if (url.pathname.endsWith('.js')) h.set('content-type', 'application/javascript');
-    else if (url.pathname.endsWith('.css')) h.set('content-type', 'text/css');
-    return new Response(resp.body, { status: resp.status, statusText: resp.statusText, headers: h });
-  }
+  // Blog static assets are merged into the main site's deployment — no proxy needed.
+  // Portal static assets at /c/_next/static/* need proxying to portal upstream.
 
   // Match /c/_next/static/* → portal upstream
   const portalMatch = url.pathname.match(/^\/c\/_next\/static\/(.+)/);
@@ -225,42 +215,9 @@ export async function onRequest(context: { request: Request; next: () => Promise
     return Response.redirect(url.origin + '/' + locale + url.pathname + '/', 302);
   }
 
-  // ── Blog proxy ─────────────────────────────────────────────────
-  // Preserves /blog/ prefix. Static assets served at /blog/_next/static/*.
-  const blogPathMatch = url.pathname.match(/^\/([a-z]{2})\/blog(\/.*)?$/);
-  if (blogPathMatch && SUPPORTED_LOCALES.includes(blogPathMatch[1])) {
-    const locale = blogPathMatch[1];
-    const rest = blogPathMatch[2] || '/';
-    const upstream = resolveUpstream(url.hostname, 'blog', env);
-    const blogUrl = upstream + '/' + locale + '/blog' + rest;
-
-    try {
-      const resp = await fetch(blogUrl);
-      const contentType = resp.headers.get('content-type') || '';
-
-      if (contentType.includes('text/html')) {
-        let html = await resp.text();
-        // Rewrite /_next/static/ → /blog/_next/static/ (relative, no absolute domain)
-        html = rewriteNextStatic(html, 'blog');
-
-        const headers = sanitizeHeaders(resp.headers);
-        return new Response(html, {
-          status: resp.status,
-          statusText: resp.statusText,
-          headers,
-        });
-      }
-
-      return new Response(resp.body, {
-        status: resp.status,
-        statusText: resp.statusText,
-        headers: sanitizeHeaders(resp.headers),
-      });
-    } catch (err) {
-      return new Response('Blog proxy error: ' + err, { status: 502 });
-    }
-  }
-
+  // ── Blog language detection redirect ──────────────────────────
+  // Blog is now served directly from the main site's Pages deployment
+  // (output merged during build). No middleware proxy needed.
   if (url.pathname === '/blog' || url.pathname === '/blog/') {
     const locale = matchBrowserLanguage(request.headers.get('accept-language'));
     return Response.redirect(url.origin + '/' + locale + '/blog/', 302);

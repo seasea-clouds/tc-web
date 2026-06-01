@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import { MessageCircle, ChevronDown, Search } from 'lucide-react';
 import { WHATSAPP_URL } from './constants';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -41,8 +40,6 @@ export default function Navbar(props: NavbarProps) {
   const t = useT('Navbar');
   const ctxLocale = useTradeLocale();
   const locale = props.locale || ctxLocale || 'en';
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [industriesOpen, setIndustriesOpen] = useState(false);
 
   const href = (path: string) => `/${locale}${path}`;
   const resolveHref = (custom?: string, defaultPath?: string) =>
@@ -94,11 +91,7 @@ export default function Navbar(props: NavbarProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* 桌面端：单行 */}
           <div className="hidden md:flex items-center justify-center h-12 space-x-8">
-            <div
-              className="relative"
-              onMouseEnter={() => setServicesOpen(true)}
-              onMouseLeave={() => setServicesOpen(false)}
-            >
+            <div className="relative group">
               <button
                 type="button"
                 className="flex items-center gap-1 text-white/80 hover:text-white transition-colors text-sm font-medium"
@@ -106,26 +99,20 @@ export default function Navbar(props: NavbarProps) {
                 {t('services')}
                 <ChevronDown className="w-3 h-3" />
               </button>
-              {servicesOpen && (
-                <div className="absolute top-full left-0 w-56 bg-white rounded-md shadow-lg py-2 z-50 max-h-[32rem] overflow-y-auto" style={{ scrollbarWidth: 'thin', scrollbarColor: '#D4AF37 #f1f1f1' }}>
-                  {serviceLinks.map((s) => (
-                    <a
-                      key={s.key}
-                      href={href(s.href)}
-                      className="block px-4 py-2 text-sm text-text-charcoal hover:bg-bg-ice hover:text-primary-navy transition-colors"
-                    >
-                      {s.emoji} {t(`servicesDropdown.${s.key}`)}
-                    </a>
-                  ))}
-                </div>
-              )}
+              <div className="absolute top-full left-0 w-56 bg-white rounded-md shadow-lg py-2 z-50 max-h-[32rem] overflow-y-auto invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-150" style={{ scrollbarWidth: 'thin', scrollbarColor: '#D4AF37 #f1f1f1' }}>
+                {serviceLinks.map((s) => (
+                  <a
+                    key={s.key}
+                    href={href(s.href)}
+                    className="block px-4 py-2 text-sm text-text-charcoal hover:bg-bg-ice hover:text-primary-navy transition-colors"
+                  >
+                    {s.emoji} {t(`servicesDropdown.${s.key}`)}
+                  </a>
+                ))}
+              </div>
             </div>
 
-            <div
-              className="relative"
-              onMouseEnter={() => setIndustriesOpen(true)}
-              onMouseLeave={() => setIndustriesOpen(false)}
-            >
+            <div className="relative group">
               <button
                 type="button"
                 className="flex items-center gap-1 text-white/80 hover:text-white transition-colors text-sm font-medium"
@@ -133,19 +120,17 @@ export default function Navbar(props: NavbarProps) {
                 {t('industries')}
                 <ChevronDown className="w-3 h-3" />
               </button>
-              {industriesOpen && (
-                <div className="absolute top-full left-0 w-56 bg-white rounded-md shadow-lg py-2 z-50 max-h-[32rem] overflow-y-auto" style={{ scrollbarWidth: 'thin', scrollbarColor: '#D4AF37 #f1f1f1' }}>
-                  {industries.map((ind) => (
-                    <a
-                      key={ind.slug}
-                      href={href(`/industries/${ind.slug}/`)}
-                      className="block px-4 py-2 text-sm text-text-charcoal hover:bg-bg-ice hover:text-primary-navy transition-colors"
-                    >
-                      {ind.emoji} {t(`industriesDropdown.${ind.slug.replace(/-/g, '')}`)}
-                    </a>
-                  ))}
-                </div>
-              )}
+              <div className="absolute top-full left-0 w-56 bg-white rounded-md shadow-lg py-2 z-50 max-h-[32rem] overflow-y-auto invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-150" style={{ scrollbarWidth: 'thin', scrollbarColor: '#D4AF37 #f1f1f1' }}>
+                {industries.map((ind) => (
+                  <a
+                    key={ind.slug}
+                    href={href(`/industries/${ind.slug}/`)}
+                    className="block px-4 py-2 text-sm text-text-charcoal hover:bg-bg-ice hover:text-primary-navy transition-colors"
+                  >
+                    {ind.emoji} {t(`industriesDropdown.${ind.slug.replace(/-/g, '')}`)}
+                  </a>
+                ))}
+              </div>
             </div>
 
             <a href={href('/about/')} className="inline-flex items-center text-white/80 hover:text-white transition-colors text-sm font-medium">

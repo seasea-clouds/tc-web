@@ -1,8 +1,7 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { locales, defaultLocale } from '@/i18n/routing';
 import { messagesMap } from '@/i18n/messages';
-import { Footer, TradeTranslationProvider } from '@trade/ui';
-import Header from "@/components/LayoutHeader";
+import { Footer, Navbar, TradeTranslationProvider } from '@trade/ui';
 import { AuthProvider } from "@/components/AuthProvider";
 import CookieConsent from "@/components/CookieConsent";
 
@@ -25,7 +24,7 @@ export default async function LocaleLayout({
     <NextIntlClientProvider locale={validLocale} messages={messages} timeZone="UTC">
       <TradeTranslationProvider messages={messages} locale={validLocale}>
         <AuthProvider>
-          <Header />
+          <Navbar locale={validLocale} blogHref={`/${validLocale}/blog/`} />
           <main className="flex-1">{children}</main>
           <Footer />
           <CookieConsent />

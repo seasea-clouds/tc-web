@@ -3,6 +3,15 @@ import path from 'path';
 import matter from 'gray-matter';
 import { getPosts, parseHeadings, mdToHtml, type PostMeta } from '@/lib/posts';
 
+/** Map blog slug → FAQ translation namespace (from old site messages) */
+const FAQ_NS: Record<string, string> = {
+  'gacc-registration-guide': 'BlogFaqGaccRegistrationGuide',
+  'china-label-compliance': 'BlogFaqChinaLabelCompliance',
+  'ccc-certification-explained': 'BlogFaqCccCertificationExplained',
+  'cosmetics-nmpa-filing': 'BlogFaqCosmeticsNmpaFiling',
+  'cross-border-ecommerce-china': 'BlogFaqCrossBorderEcommerceChina',
+};
+
 const SITE_URL = 'https://trade-web-site.pages.dev';
 const WHATSAPP_URL = 'https://wa.me/message/HPPZ5X6XZSMLM1';
 import { getMessages } from '@/lib/messages';
@@ -62,6 +71,96 @@ function formatDate(dateStr: string, locale: string): string {
   } catch {
     return dateStr;
   }
+}
+
+/** DefinitionSchema — JSON-LD structured data for compliance terms */
+async function DefinitionSchema({ locale }: { locale: string }) {
+  const siteMsgPath = path.join(process.cwd(), '../../apps/site/messages', `${locale}.json`);
+  let definitions: { name: string; termCode: string; description: string }[] = [];
+  try {
+    if (fs.existsSync(siteMsgPath)) {
+      const ds = JSON.parse(fs.readFileSync(siteMsgPath, 'utf-8')).DefinitionSchema;
+      if (ds) {
+        const terms = [
+          { nameKey: 'gaccName', defKey: 'gaccDefinition' },
+          { nameKey: 'nmpaName', defKey: 'nmpaDefinition' },
+          { nameKey: 'cccName', defKey: 'cccDefinition' },
+          { nameKey: 'gb7718Name', defKey: 'gb7718Definition' },
+          { nameKey: 'cbecName', defKey: 'cbecDefinition' },
+          { nameKey: 'ciferName', defKey: 'ciferDefinition' },
+          { nameKey: 'csarName', defKey: 'csarDefinition' },
+          { nameKey: 'decree248Name', defKey: 'decree248Definition' },
+          { nameKey: 'decree243Name', defKey: 'decree243Definition' },
+          { nameKey: 'samrName', defKey: 'samrDefinition' },
+        ];
+        for (const { nameKey, defKey } of terms) {
+          if (ds[nameKey] && ds[defKey]) {
+            definitions.push({
+              name: ds[nameKey],
+              termCode: nameKey.replace('Name', '').toUpperCase(),
+              description: ds[defKey],
+            });
+          }
+        }
+      }
+    }
+  } catch { /* ignore */ }
+  if (definitions.length === 0) return null;
+  const glUrl = `https://sinotradecompliance.com/${locale}/faq/`;
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'DefinedTermSet',
+          name: 'China Trade Compliance Glossary',
+          url: glUrl,
+          hasDefinedTerm: definitions,
+        }),
+      }}
+    />
+  );
+}
+
+/** FaqPageSchema — FAQPage JSON-LD for posts with FAQ sections */
+async function FaqPageSchema({ locale, slug }: { locale: string; slug: string }) {
+  const faqNs = FAQ_NS[slug];
+  if (!faqNs) return null;
+  const siteMsgPath = path.join(process.cwd(), '../../apps/site/messages', `${locale}.json`);
+  let items: { question: string; answer: string }[] = [];
+  try {
+    if (fs.existsSync(siteMsgPath)) {
+      const data = JSON.parse(fs.readFileSync(siteMsgPath, 'utf-8'));
+      const faqData = data[faqNs];
+      if (faqData) {
+        for (let i = 1; i <= 10; i++) {
+          const q = faqData[`faqQ${i}`];
+          const a = faqData[`faqA${i}`];
+          if (q && a && !q.includes(`faqQ${i}`) && !a.includes(`faqA${i}`)) {
+            items.push({ question: q, answer: a });
+          }
+        }
+      }
+    }
+  } catch { /* ignore */ }
+  if (items.length === 0) return null;
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: items.map((item) => ({
+            '@type': 'Question',
+            name: item.question,
+            acceptedAnswer: { '@type': 'Answer', text: item.answer },
+          })),
+        }),
+      }}
+    />
+  );
 }
 
 export default async function Post({ params }: { params: Promise<{ locale: string; slug: string }> }) {
@@ -165,6 +264,12 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
           #article-content h3::before { content: counter(h2-counter) "." counter(h3-counter) " "; color: #B8960C; }
         `,
       }} />
+
+      {/* DefinitionSchema — structured data for compliance terms */}
+      <DefinitionSchema locale={locale} />
+
+      {/* FAQPage schema for posts with FAQs */}
+      <FaqPageSchema locale={locale} slug={slug} />
 
       <div className="fixed top-0 left-0 right-0 h-1 z-[60] bg-transparent">
         <div id="reading-progress" className="h-full bg-[#B8960C] transition-all duration-150" style={{ width: '0%' }} />

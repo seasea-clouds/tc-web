@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node ../../packages/scripts/check-translations.mjs --short ; node ../../packages/scripts/clean-rsc.js",
+    "build": "rm -rf .next/cache && next build && node ../../packages/scripts/check-translations.mjs --short ; node ../../packages/scripts/clean-rsc.js",
     "start": "next start",
     "lint": "next lint"
   },

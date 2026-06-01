@@ -45,6 +45,8 @@ export default async function BlogHome({ params }: { params: Promise<{ locale: s
   const B = msgs?.Blog || {};
   const tb = (key: string, fb?: string) => B[key] ?? fb ?? key;
   const N = msgs?.Navbar || {};
+  const Bc = msgs?.breadcrumb || {};
+  const bc = (key: string, fb?: string) => Bc[key] ?? fb ?? key;
 
   const href = (p: string) => `/${locale}${p}`;
   const readTimeText = tb('readTime', 'min read');
@@ -88,7 +90,7 @@ export default async function BlogHome({ params }: { params: Promise<{ locale: s
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
             <span className="text-text-charcoal font-medium truncate max-w-[200px] sm:max-w-none">
-              {tb('backToBlog', 'Insights')}
+              {bc('blog', 'Blog')}
             </span>
           </li>
         </ol>

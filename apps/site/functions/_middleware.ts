@@ -129,10 +129,10 @@ async function proxyToPortal(url: URL, request: Request, env?: Record<string, st
   // Rewrite static asset paths in HTML to relative /c/_next/static/
   const contentType = resp.headers.get('content-type') || '';
   if (contentType.includes('text/html')) {
-    const html = await resp.text();
-    const rewritten = rewriteNextStatic(html, 'c');
+    let html = await resp.text();
+    html = rewriteNextStatic(html, 'c');
         html = injectSearchWidget(html);
-    return new Response(rewritten, {
+    return new Response(html, {
       status: resp.status,
       statusText: resp.statusText,
       headers,

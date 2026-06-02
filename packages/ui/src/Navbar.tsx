@@ -36,7 +36,7 @@ const serviceLinks = [
 ];
 
 export default function Navbar(props: NavbarProps) {
-  const { onSearchOpen = () => {}, freeCheckHref, industries = DEFAULT_INDUSTRIES } = props;
+  const { onSearchOpen, freeCheckHref, industries = DEFAULT_INDUSTRIES } = props;
   const t = useT('Navbar');
   const ctxLocale = useTradeLocale();
   const locale = props.locale || ctxLocale || 'en';
@@ -56,14 +56,16 @@ export default function Navbar(props: NavbarProps) {
             {t('logo')}
           </a>
           <div className="flex items-center gap-2">
-            <button
-              type="button"
-              onClick={onSearchOpen}
-              className="p-2 text-white/80 hover:text-white transition-colors rounded-md hover:bg-white/10"
-              aria-label="Search"
-            >
-              <Search className="w-4 h-4" />
-            </button>
+            {onSearchOpen && (
+              <button
+                type="button"
+                onClick={onSearchOpen}
+                className="p-2 text-white/80 hover:text-white transition-colors rounded-md hover:bg-white/10"
+                aria-label="Search"
+              >
+                <Search className="w-4 h-4" />
+              </button>
+            )}
             <a
               href={WHATSAPP_URL}
               target="_blank"

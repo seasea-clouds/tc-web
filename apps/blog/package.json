@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "rm -rf .next/cache && next build && node ../../packages/scripts/check-hardcoded.mjs --ci && node ../../packages/scripts/check-translations.mjs --short ; node ../../packages/scripts/clean-rsc.js",
+    "build": "node ../../packages/scripts/build-search-index.mjs --out-dir=apps/blog/public && rm -rf .next/cache && next build && node ../../packages/scripts/check-hardcoded.mjs --ci && node ../../packages/scripts/check-translations.mjs --short ; node ../../packages/scripts/clean-rsc.js",
     "start": "next start",
     "lint": "next lint"
   },

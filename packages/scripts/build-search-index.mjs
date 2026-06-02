@@ -1,65 +1,134 @@
 #!/usr/bin/env node
 /**
- * build-search-index.mjs - 生成统一搜索索引
- * 
- * 输出: search-index-{locale}.json（各站 CDN 共享）
- * 内容来源: 各子站 messages/{locale}.json
+ * build-search-index.mjs — 生成统一搜索索引
+ *
+ * 读取 apps/site/messages/*.json + apps/site/content/blog/{locale}/*.mdx
+ * 输出 {services, blog, faq, generated} 格式的 search-index-{locale}.json
+ *
+ * 用法: node packages/scripts/build-search-index.mjs [--out-dir=<path>]
+ *   默认输出到 apps/site/public/
+ *   也可指定 --out-dir=apps/blog/public 或 apps/portal/public
  */
 
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { LOCALES } from './discover-routes.mjs';
+import matter from 'gray-matter';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '../..');
 
-function loadMessages(appDir, locale) {
-  const msgPath = path.join(appDir, 'messages', `${locale}.json`);
-  if (!fs.existsSync(msgPath)) return null;
-  return JSON.parse(fs.readFileSync(msgPath, 'utf-8'));
+// 服务列表 — keys 匹配 Navbar servicesDropdown + translation namespaces
+const services = [
+  { slug: 'gacc', ns: 'ServiceGacc', descNs: 'ServiceGacc' },
+  { slug: 'label', ns: 'ServiceLabel', descNs: 'ServiceLabel' },
+  { slug: 'ccc', ns: 'ServiceCcc', descNs: 'ServiceCcc' },
+  { slug: 'cosmetics', ns: 'ServiceCosmetics', descNs: 'ServiceCosmetics' },
+  { slug: 'ecommerce', ns: 'ServiceEcommerce', descNs: 'ServiceEcommerce' },
+  { slug: 'brand', ns: 'ServiceBrand', descNs: 'ServiceBrand' },
+];
+
+function getLocaleFiles(messagesDir) {
+  return fs.readdirSync(messagesDir).filter(f => f.endsWith('.json'));
 }
 
-function flattenForSearch(obj, prefix = '') {
+function loadMessages(messagesDir, locale) {
+  const file = path.join(messagesDir, locale);
+  const fullPath = fs.existsSync(`${file}.json`) ? `${file}.json` : file;
+  return JSON.parse(fs.readFileSync(fullPath, 'utf-8'));
+}
+
+function extractServices(msg) {
+  return services.map(s => {
+    const ns = msg[s.ns] || {};
+    const title = ns.heroTitle || ns.title || s.slug;
+    let desc = ns.heroSubtitle || ns.description || '';
+    if (desc.length > 200) desc = desc.slice(0, 200) + '…';
+    return {
+      type: 'service',
+      title,
+      desc,
+      href: `/services/${s.slug}/`,
+      searchable: `${title} ${desc} ${s.slug}`.toLowerCase(),
+    };
+  });
+}
+
+function extractBlog(blogDir, locale, msg) {
+  const localeBlogDir = path.join(blogDir, locale);
+  if (!fs.existsSync(localeBlogDir)) return [];
+
+  const blogT = msg.Blog || {};
+  const posts = [];
+
+  for (const file of fs.readdirSync(localeBlogDir).filter(f => f.endsWith('.mdx'))) {
+    const content = fs.readFileSync(path.join(localeBlogDir, file), 'utf-8');
+    const { data } = matter(content);
+    const slug = data.slug || file.replace('.mdx', '');
+    const title = data.title || '';
+    const excerpt = data.excerpt || '';
+    const category = data.category || '';
+    const categoryKey = blogT[category] || category;
+
+    if (!title) continue;
+
+    posts.push({
+      type: 'blog',
+      title,
+      desc: excerpt.slice(0, 200),
+      href: `/blog/${slug}/`,
+      category: categoryKey,
+      searchable: `${title} ${excerpt} ${category}`.toLowerCase(),
+    });
+  }
+  return posts;
+}
+
+function extractFAQ(msg) {
+  const faq = msg.Faq || {};
   const items = [];
-  for (const [k, v] of Object.entries(obj)) {
-    const p = prefix ? `${prefix}.${k}` : k;
-    if (v && typeof v === 'object' && !Array.isArray(v)) {
-      items.push(...flattenForSearch(v, p));
-    } else if (typeof v === 'string' && v.trim() && v.length > 5) {
-      items.push({ key: p, value: v });
+  const categories = ['general', 'gacc', 'label', 'ccc', 'cosmetics', 'ecommerce', 'brand'];
+
+  for (const cat of categories) {
+    const title = faq[`${cat}Title`] || '';
+    for (let i = 1; i <= 20; i++) {
+      const q = faq[`${cat}Q${i}`];
+      const a = faq[`${cat}A${i}`];
+      if (q && a) {
+        items.push({
+          type: 'faq',
+          title: q,
+          desc: a.slice(0, 200),
+          href: '/faq/',
+          category: title,
+          searchable: `${q} ${a} ${title}`.toLowerCase(),
+        });
+      }
+      const qa = faq[`${cat}Q${i}a`];
+      const aa = faq[`${cat}A${i}a`];
+      if (qa && aa) {
+        items.push({
+          type: 'faq',
+          title: qa,
+          desc: aa.slice(0, 200),
+          href: '/faq/',
+          category: title,
+          searchable: `${qa} ${aa} ${title}`.toLowerCase(),
+        });
+      }
     }
   }
   return items;
 }
 
-export function buildSearchIndexes(baseUrl, outDir) {
-  const appsDir = path.join(ROOT, 'apps');
-  const apps = [];
-
-  for (const app of fs.readdirSync(appsDir)) {
-    const appDir = path.join(appsDir, app);
-    if (!fs.existsSync(path.join(appDir, 'messages'))) continue;
-    apps.push({ name: app, dir: appDir, basePath: app === 'site' ? '/' : `/${app === 'portal' ? 'c' : app}/` });
-  }
-
-  for (const locale of LOCALES) {
-    const index = [];
-    for (const app of apps) {
-      const msgs = loadMessages(app.dir, locale);
-      if (!msgs) continue;
-      const flat = flattenForSearch(msgs);
-      for (const item of flat) {
-        index.push({
-          key: `${app.name}:${item.key}`,
-          text: item.value.slice(0, 500),
-        });
-      }
-    }
-    fs.writeFileSync(path.join(outDir, `search-index-${locale}.json`), JSON.stringify(index, null, 2), 'utf-8');
-  }
-
-  console.log(`✅ ${LOCALES.length} search-index-{locale}.json files`);
+function generateIndex(messagesDir, blogDir, locale) {
+  const msg = loadMessages(messagesDir, locale);
+  return {
+    services: extractServices(msg),
+    blog: extractBlog(blogDir, locale, msg),
+    faq: extractFAQ(msg),
+    generated: new Date().toISOString(),
+  };
 }
 
 function parseArgs() {
@@ -71,7 +140,34 @@ function parseArgs() {
   return args;
 }
 
+export function buildSearchIndexes(messagesDir, blogDir, outDir) {
+  const locales = getLocaleFiles(messagesDir).map(f => f.replace('.json', ''));
+  console.log(`Generating search index for ${locales.length} locales...`);
+
+  for (const locale of locales) {
+    try {
+      const index = generateIndex(messagesDir, blogDir, locale);
+      const outFile = path.join(outDir, `search-index-${locale}.json`);
+      fs.mkdirSync(outDir, { recursive: true });
+      fs.writeFileSync(outFile, JSON.stringify(index), 'utf-8');
+      const total = index.services.length + index.blog.length + index.faq.length;
+      console.log(`  ${locale}: ${total} items (${index.services.length}S + ${index.blog.length}B + ${index.faq.length}F)`);
+    } catch (err) {
+      console.error(`  ${locale}: FAILED — ${err.message}`);
+    }
+  }
+
+  console.log('Done.');
+}
+
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  const { 'base-url': baseUrl } = parseArgs();
-  buildSearchIndexes(baseUrl || 'https://sinotradecompliance.com', process.cwd());
+  const { 'out-dir': outDirArg } = parseArgs();
+  const messagesDir = path.join(ROOT, 'apps', 'site', 'messages');
+  const blogDir = path.join(ROOT, 'apps', 'site', 'content', 'blog');
+
+  // Default outDir: apps/site/public/
+  const defaultOutDir = path.join(ROOT, 'apps', 'site', 'public');
+  const outDir = outDirArg ? path.resolve(ROOT, outDirArg) : defaultOutDir;
+
+  buildSearchIndexes(messagesDir, blogDir, outDir);
 }

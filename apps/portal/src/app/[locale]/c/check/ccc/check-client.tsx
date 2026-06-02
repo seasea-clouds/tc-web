@@ -1,6 +1,6 @@
 "use client";
 
-import { WHATSAPP_URL } from '@trade/ui';
+import { useT, WHATSAPP_URL } from '@trade/ui';
 
 import { useState } from "react";
 import { checkCcc, CATEGORY_LABELS } from "../../../../../../modules/ccc/rules";
@@ -9,6 +9,7 @@ import { API_BASE } from "@/lib/constants";
 type Step = "form" | "free-result";
 
 export default function CccCheckClient() {
+  const t = useT('Check');
   const [step, setStep] = useState<Step>("form");
   const [input, setInput] = useState<Record<string, string>>({});
   const [email, setEmail] = useState("");
@@ -72,30 +73,30 @@ export default function CccCheckClient() {
       <div className="max-w-3xl mx-auto px-4 py-12">
         {/* Progress */}
         <div className="flex items-center justify-center gap-2 mb-8 text-sm text-gray-400">
-          <span className={step === "form" ? "text-[#D4AF37] font-semibold" : ""}>1. Product Info</span>
+          <span className={step === "form" ? "text-[#D4AF37] font-semibold" : ""}>{t('step1')}</span>
           <span>&rarr;</span>
-          <span className={step === "free-result" ? "text-[#D4AF37] font-semibold" : ""}>2. Free Result</span>
+          <span className={step === "free-result" ? "text-[#D4AF37] font-semibold" : ""}>{t('step2')}</span>
         </div>
 
         {step === "form" && (
           <form onSubmit={handleSubmit} className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sm:p-8 space-y-5">
-            <h1 className="text-2xl font-bold text-[#1B365D]">CCC Certification Check</h1>
+            <h1 className="text-2xl font-bold text-[#1B365D]">{t('reportModuleCcc')} Check</h1>
             <p className="text-sm text-gray-500">Find out if your product requires China Compulsory Certification (CCC) for import.</p>
 
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-1.5">Product Category</label>
+              <label className="block text-sm font-semibold text-gray-700 mb-1.5">{t('productCategory')}</label>
               <select
                 value={input.category || ""}
                 onChange={e => setVal("category", e.target.value)}
                 className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent"
                 required
               >
-                <option value="">Select category...</option>
+                <option value="">{t('selectCategory')}</option>
                 {catOptions.map(([v, l]) => (<option key={v} value={v}>{l}</option>))}
               </select>
             </div>
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-1.5">Product Name</label>
+              <label className="block text-sm font-semibold text-gray-700 mb-1.5">{t('productName')}</label>
               <input
                 type="text"
                 value={input["productName"] || ""}
@@ -107,7 +108,7 @@ export default function CccCheckClient() {
               />
             </div>
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-1.5">HS Code</label>
+              <label className="block text-sm font-semibold text-gray-700 mb-1.5">{t('hsCode')}</label>
               <input
                 type="text"
                 value={input["hsCode"] || ""}
@@ -118,7 +119,7 @@ export default function CccCheckClient() {
               />
             </div>
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-1.5">Intended Use</label>
+              <label className="block text-sm font-semibold text-gray-700 mb-1.5">{t('intendedUse')}</label>
               <input
                 type="text"
                 value={input["intendedUse"] || ""}
@@ -130,7 +131,7 @@ export default function CccCheckClient() {
               />
             </div>
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-1.5">Country of Origin</label>
+              <label className="block text-sm font-semibold text-gray-700 mb-1.5">{t('countryOfOrigin')}</label>
               <input
                 type="text"
                 value={input["originCountry"] || ""}
@@ -144,7 +145,7 @@ export default function CccCheckClient() {
 
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1.5">Manufacturer Country</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-1.5">{t('manufacturerCountry')}</label>
                 <input
                   type="text"
                   value={input["manufacturerCountry"] || ""}
@@ -154,7 +155,7 @@ export default function CccCheckClient() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1.5">Annual Volume (units)</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-1.5">{t('annualVolume')}</label>
                 <input
                   type="text"
                   value={input["annualVolume"] || ""}
@@ -173,10 +174,10 @@ export default function CccCheckClient() {
                   onChange={e => setVal("hasCBReport", e.target.value)}
                   className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent"
                 >
-                  <option value="">Select...</option>
-                  <option value="yes">Yes</option>
-                  <option value="no">No</option>
-                  <option value="in_progress">In Progress</option>
+                  <option value="">{t('selectOption')}</option>
+                  <option value="yes">{t('yes')}</option>
+                  <option value="no">{t('no')}</option>
+                  <option value="in_progress">{t('inProgress')}</option>
                 </select>
               </div>
               <div>
@@ -186,12 +187,12 @@ export default function CccCheckClient() {
                   onChange={e => setVal("hasCEorUL", e.target.value)}
                   className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent"
                 >
-                  <option value="">Select...</option>
+                  <option value="">{t('selectOption')}</option>
                   <option value="ce">CE</option>
                   <option value="ul">UL</option>
                   <option value="fcc">FCC</option>
                   <option value="other">Other</option>
-                  <option value="none">None</option>
+                  <option value="none">{t('none')}</option>
                 </select>
               </div>
             </div>
@@ -211,7 +212,7 @@ export default function CccCheckClient() {
               type="submit"
               className="w-full bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#1B365D] font-bold py-3 px-6 rounded-lg transition-all text-lg"
             >
-              Check My Product
+              {t('checkBtn')}
             </button>
           </form>
         )}
@@ -219,18 +220,18 @@ export default function CccCheckClient() {
         {step === "free-result" && freeData && (
           <div className="space-y-4">
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sm:p-8">
-              <h2 className="text-xl font-bold text-[#1B365D] mb-4">Free Assessment Result</h2>
+              <h2 className="text-xl font-bold text-[#1B365D] mb-4">{t('freeResult')}</h2>
               <p className="text-sm text-gray-700 mb-4">{freeData.summary}</p>
 
               <div className="grid grid-cols-2 gap-3 mb-4">
-                <div className="bg-gray-50 rounded-lg p-3"><p className="text-xs text-gray-500">Product</p><p className="text-sm font-semibold mt-0.5">{input["productName"]}</p></div>
-                <div className="bg-gray-50 rounded-lg p-3"><p className="text-xs text-gray-500">Category</p><p className="text-sm font-semibold mt-0.5">{CATEGORY_LABELS[input["category"] as keyof typeof CATEGORY_LABELS] || input["category"]}</p></div>
+                <div className="bg-gray-50 rounded-lg p-3"><p className="text-xs text-gray-500">{t('resultProduct')}</p><p className="text-sm font-semibold mt-0.5">{input["productName"]}</p></div>
+                <div className="bg-gray-50 rounded-lg p-3"><p className="text-xs text-gray-500">{t('resultCategory')}</p><p className="text-sm font-semibold mt-0.5">{CATEGORY_LABELS[input["category"] as keyof typeof CATEGORY_LABELS] || input["category"]}</p></div>
                 <div className="bg-gray-50 rounded-lg p-3"><p className="text-xs text-gray-500">CCC Required</p><p className="text-sm font-semibold mt-0.5">{freeData.requiresCcc ? '✅ Yes' : '❌ May not be required'}</p></div>
               </div>
 
               {freeData.requiredDocuments && freeData.requiredDocuments.length > 0 && (
                 <div>
-                  <h3 className="font-semibold text-sm mb-2 text-[#1B365D]">Documents Required</h3>
+                  <h3 className="font-semibold text-sm mb-2 text-[#1B365D]">{t('documentsTitle')}</h3>
                   <ul className="space-y-1">
                     {freeData.requiredDocuments.map((d: string, i: number) => (<li key={i} className="flex items-center gap-2 text-sm text-gray-600"><span className="w-1.5 h-1.5 bg-[#D4AF37] rounded-full"></span>{d}</li>))}
                   </ul>
@@ -240,7 +241,7 @@ export default function CccCheckClient() {
 
             {/* Payment Section */}
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sm:p-8 text-center space-y-4">
-              <p className="text-lg font-semibold text-[#1B365D]">Get the Full Compliance Report</p>
+              <p className="text-lg font-semibold text-[#1B365D]">{t('paymentTitle')}</p>
               <p className="text-sm text-gray-500">Complete report with all required documents, timeline, and next steps.</p>
 
               <div className="max-w-xs mx-auto">
@@ -261,15 +262,15 @@ export default function CccCheckClient() {
                   disabled={loading}
                   className="w-full max-w-xs bg-[#D4AF37] hover:bg-[#D4AF37]/90 disabled:bg-gray-300 text-[#1B365D] font-semibold py-3 px-6 rounded-md transition-all text-lg"
                 >
-                  {loading ? "Redirecting..." : "Full Report — $1"}
+                  {loading ? "{t('redirecting')}" : "{t('fullReport1')}"}
                 </button>
-                <p className="text-xs text-gray-400">One-time payment. Report delivered via web + email.</p>
+                <p className="text-xs text-gray-400">{t('oneTimePayment')}</p>
               </div>
             </div>
 
             {/* Expert CTA */}
             <div className="bg-[#1B365D] text-white rounded-lg p-8 text-center">
-              <h3 className="text-xl font-bold mb-2">💼 Need Professional Help?</h3>
+              <h3 className="text-xl font-bold mb-2">{t('expertCtaTitle')}</h3>
               <p className="text-white/80 mb-6 max-w-lg mx-auto">Our compliance experts can handle the entire process for you.</p>
               <a
                 href={WHATSAPP_URL}
@@ -277,9 +278,9 @@ export default function CccCheckClient() {
                 rel="noopener noreferrer"
                 className="inline-block bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#1B365D] font-semibold px-6 py-3 rounded-md transition-all"
               >
-                Get a Quote from Our Experts →
+                {t('expertCtaBtn')}
               </a>
-              <p className="text-white/60 text-sm mt-3">Professional services starting from $500</p>
+              <p className="text-white/60 text-sm mt-3">{t('expertCtaPrice')}</p>
             </div>
           </div>
         )}

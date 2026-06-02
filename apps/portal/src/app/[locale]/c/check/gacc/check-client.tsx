@@ -49,11 +49,13 @@ export default function GaccCheckClient() {
             ],
           }),
         });
-        if (!saveRes.ok) console.error('Save report failed');
+        const saveData = await saveRes.json();
+        if (!saveData.saved) {
+          console.warn('D1 save not available — will use localStorage fallback');
+        }
       }
 
-      // ⚡ 调试模式：跳过付款，直接跳报告
-            // Save to localStorage for report page fallback
+      // Save to localStorage for report page fallback
       try {
         localStorage.setItem('compli-report-input', JSON.stringify({
           ...input,

@@ -1,7 +1,7 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { locales, defaultLocale } from '@/i18n/routing';
 import { messagesMap } from '@/i18n/messages';
-import { Footer, Navbar, TradeTranslationProvider } from '@trade/ui';
+import { Footer, SearchProvider, ActionDock, TradeTranslationProvider } from '@trade/ui';
 import { AuthProvider } from "@/components/AuthProvider";
 import CookieConsent from "@/components/CookieConsent";
 
@@ -21,15 +21,23 @@ export default async function LocaleLayout({
   const messages = messagesMap[validLocale] ?? messagesMap[defaultLocale];
 
   return (
-    <NextIntlClientProvider locale={validLocale} messages={messages} timeZone="UTC">
-      <TradeTranslationProvider messages={messages} locale={validLocale}>
-        <AuthProvider>
-          <Navbar locale={validLocale} blogHref={`/${validLocale}/blog/`} />
-          <main className="flex-1">{children}</main>
-          <Footer />
-          <CookieConsent />
-        </AuthProvider>
-      </TradeTranslationProvider>
-    </NextIntlClientProvider>
+    <html lang={validLocale}>
+      <body className="min-h-screen flex flex-col pb-16 md:pb-0 antialiased">
+        <NextIntlClientProvider locale={validLocale} messages={messages} timeZone="UTC">
+          <TradeTranslationProvider messages={messages} locale={validLocale}>
+            <AuthProvider>
+              <SearchProvider
+                locale={validLocale}
+                blogHref={`/${validLocale}/blog/`}
+              />
+              <main className="flex-1">{children}</main>
+              <Footer />
+              <ActionDock />
+              <CookieConsent />
+            </AuthProvider>
+          </TradeTranslationProvider>
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }

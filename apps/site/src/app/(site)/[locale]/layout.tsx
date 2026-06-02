@@ -2,10 +2,9 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { locales, defaultLocale } from '@/i18n/routing';
 import { messagesMap } from '@/i18n/messages';
-import { Footer, TradeTranslationProvider } from '@trade/ui';
-import SearchProvider from '@/components/SearchProvider';
+import { Footer, SearchProvider, ActionDock, TradeTranslationProvider } from '@trade/ui';
 import OrganizationJsonLd from '@/components/OrganizationJsonLd';
-import { ActionDock } from '@trade/ui';
+
 import LocaleSync from '@/components/LocaleSync';
 import { BRAND_NAME, SITE_URL } from '@/config/metadata';
 import '../../globals.css';

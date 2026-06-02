@@ -28,7 +28,7 @@
     "hint": "Taip untuk mencari merentas perkhidmatan, artikel dan Soalan Lazim",
     "types": {
       "service": "Perkhidmatan",
-      "blog": "Blog",
+      "blog": "Insights",
       "faq": "FAQ"
     }
   },
@@ -92,7 +92,7 @@
   "breadcrumb": {
     "home": "Laman Utama",
     "services": "Perkhidmatan",
-    "blog": "Blog",
+    "blog": "Insights",
     "industries": "industri",
     "packages": "Pakej",
     "faq": "FAQ"

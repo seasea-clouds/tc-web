@@ -28,7 +28,7 @@
     "hint": "পরিষেবা, নিবন্ধ এবং FAQ জুড়ে অনুসন্ধান করতে টাইপ করুন",
     "types": {
       "service": "সেবাসমূহ",
-      "blog": "ব্লগ",
+      "blog": "Insights",
       "faq": "FAQ"
     }
   },
@@ -92,7 +92,7 @@
   "breadcrumb": {
     "home": "হোম",
     "services": "সেবাসমূহ",
-    "blog": "ব্লগ",
+    "blog": "Insights",
     "industries": "শিল্প",
     "packages": "প্যাকেজ",
     "faq": "FAQ"

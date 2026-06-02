@@ -28,7 +28,7 @@
     "hint": "Escriviu per cercar entre serveis, articles i preguntes freqüents",
     "types": {
       "service": "Serveis",
-      "blog": "Bloc",
+      "blog": "Insights",
       "faq": "FAQ"
     }
   },
@@ -92,7 +92,7 @@
   "breadcrumb": {
     "home": "Inici",
     "services": "Serveis",
-    "blog": "Bloc",
+    "blog": "Insights",
     "industries": "Indústries",
     "packages": "Paquets",
     "faq": "FAQ"

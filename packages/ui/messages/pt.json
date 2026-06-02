@@ -28,7 +28,7 @@
     "hint": "Digite para pesquisar serviços, artigos e perguntas frequentes",
     "types": {
       "service": "Serviços",
-      "blog": "Blogue",
+      "blog": "Insights",
       "faq": "FAQ"
     }
   },
@@ -92,7 +92,7 @@
   "breadcrumb": {
     "home": "Início",
     "services": "Serviços",
-    "blog": "Blogue",
+    "blog": "Insights",
     "industries": "Indústrias",
     "packages": "Pacotes",
     "faq": "FAQ"

@@ -28,7 +28,7 @@
     "hint": "Hae palveluista, artikkeleista ja usein kysytyistä kysymyksistä kirjoittamalla",
     "types": {
       "service": "Palvelut",
-      "blog": "Blogi",
+      "blog": "Insights",
       "faq": "FAQ"
     }
   },
@@ -92,7 +92,7 @@
   "breadcrumb": {
     "home": "Etusivu",
     "services": "Palvelut",
-    "blog": "Blogi",
+    "blog": "Insights",
     "industries": "Toimialat",
     "packages": "Paketit",
     "faq": "FAQ"

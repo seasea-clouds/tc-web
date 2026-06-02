@@ -28,7 +28,7 @@
     "hint": "Vnesite za iskanje po storitvah, člankih in pogostih vprašanjih",
     "types": {
       "service": "Storitve",
-      "blog": "Blog",
+      "blog": "Insights",
       "faq": "FAQ"
     }
   },
@@ -92,7 +92,7 @@
   "breadcrumb": {
     "home": "Domov",
     "services": "Storitve",
-    "blog": "Blog",
+    "blog": "Insights",
     "industries": "Industrije",
     "packages": "Paketi",
     "faq": "FAQ"

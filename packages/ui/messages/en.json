@@ -28,7 +28,7 @@
     "hint": "Type to search across services, articles and FAQs",
     "types": {
       "service": "Services",
-      "blog": "Blog",
+      "blog": "Insights",
       "faq": "FAQ"
     }
   },
@@ -92,7 +92,7 @@
   "breadcrumb": {
     "home": "Home",
     "services": "Services",
-    "blog": "Blog",
+    "blog": "Insights",
     "industries": "Industries",
     "packages": "Packages",
     "faq": "FAQ"

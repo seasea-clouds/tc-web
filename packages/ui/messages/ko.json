@@ -28,7 +28,7 @@
     "hint": "서비스, ​​기사, FAQ를 검색하려면 입력하세요.",
     "types": {
       "service": "서비스",
-      "blog": "블로그",
+      "blog": "Insights",
       "faq": "FAQ"
     }
   },
@@ -92,7 +92,7 @@
   "breadcrumb": {
     "home": "홈",
     "services": "서비스",
-    "blog": "블로그",
+    "blog": "Insights",
     "industries": "산업",
     "packages": "패키지",
     "faq": "FAQ"

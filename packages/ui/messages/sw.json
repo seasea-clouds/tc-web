@@ -28,7 +28,7 @@
     "hint": "Andika ili kutafuta katika huduma, makala na Maswali Yanayoulizwa Mara kwa Mara",
     "types": {
       "service": "Huduma",
-      "blog": "Blogu",
+      "blog": "Insights",
       "faq": "FAQ"
     }
   },
@@ -92,7 +92,7 @@
   "breadcrumb": {
     "home": "Nyumbani",
     "services": "Huduma",
-    "blog": "Blogu",
+    "blog": "Insights",
     "industries": "Viwanda",
     "packages": "Vifurushi",
     "faq": "FAQ"

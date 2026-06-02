@@ -28,7 +28,7 @@
     "hint": "تمام سروسز، مضامین اور عمومی سوالنامہ تلاش کرنے کے لیے ٹائپ کریں۔",
     "types": {
       "service": "خدمات",
-      "blog": "بلاگ",
+      "blog": "Insights",
       "faq": "FAQ"
     }
   },
@@ -92,7 +92,7 @@
   "breadcrumb": {
     "home": "ہوم",
     "services": "خدمات",
-    "blog": "بلاگ",
+    "blog": "Insights",
     "industries": "صنعتیں",
     "packages": "پیکجز",
     "faq": "FAQ"

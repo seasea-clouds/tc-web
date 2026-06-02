@@ -28,7 +28,7 @@
     "hint": "Shkruani për të kërkuar nëpër shërbime, artikuj dhe FAQ",
     "types": {
       "service": "Shërbime",
-      "blog": "Blog",
+      "blog": "Insights",
       "faq": "FAQ"
     }
   },
@@ -92,7 +92,7 @@
   "breadcrumb": {
     "home": "Ballina",
     "services": "Shërbime",
-    "blog": "Blog",
+    "blog": "Insights",
     "industries": "Industritë",
     "packages": "Paketat",
     "faq": "FAQ"

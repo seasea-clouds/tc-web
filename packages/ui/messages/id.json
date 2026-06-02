@@ -28,7 +28,7 @@
     "hint": "Ketik untuk mencari di seluruh layanan, artikel, dan FAQ",
     "types": {
       "service": "Layanan",
-      "blog": "blog",
+      "blog": "Insights",
       "faq": "FAQ"
     }
   },
@@ -92,7 +92,7 @@
   "breadcrumb": {
     "home": "Beranda",
     "services": "Layanan",
-    "blog": "Blog",
+    "blog": "Insights",
     "industries": "Industri",
     "packages": "Paket",
     "faq": "FAQ"

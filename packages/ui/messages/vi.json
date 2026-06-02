@@ -28,7 +28,7 @@
     "hint": "Nhập để tìm kiếm trên các dịch vụ, bài viết và Câu hỏi thường gặp",
     "types": {
       "service": "Dịch vụ",
-      "blog": "Blog",
+      "blog": "Insights",
       "faq": "FAQ"
     }
   },
@@ -92,7 +92,7 @@
   "breadcrumb": {
     "home": "Trang chủ",
     "services": "Dịch vụ",
-    "blog": "Blog",
+    "blog": "Insights",
     "industries": "ngành công nghiệp",
     "packages": "Gói",
     "faq": "FAQ"

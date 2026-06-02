@@ -28,7 +28,7 @@
     "hint": "พิมพ์เพื่อค้นหาบริการ บทความ และคำถามที่พบบ่อย",
     "types": {
       "service": "บริการ",
-      "blog": "บล็อก",
+      "blog": "Insights",
       "faq": "FAQ"
     }
   },
@@ -92,7 +92,7 @@
   "breadcrumb": {
     "home": "หน้าแรก",
     "services": "บริการ",
-    "blog": "บล็อก",
+    "blog": "Insights",
     "industries": "อุตสาหกรรม",
     "packages": "แพ็คเกจ",
     "faq": "FAQ"

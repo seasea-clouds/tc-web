@@ -28,7 +28,7 @@
     "hint": "Skriv for at søge på tværs af tjenester, artikler og ofte stillede spørgsmål",
     "types": {
       "service": "Tjenester",
-      "blog": "Blog",
+      "blog": "Insights",
       "faq": "FAQ"
     }
   },
@@ -92,7 +92,7 @@
   "breadcrumb": {
     "home": "Hjem",
     "services": "Tjenester",
-    "blog": "Blog",
+    "blog": "Insights",
     "industries": "Industrier",
     "packages": "Pakker",
     "faq": "FAQ"

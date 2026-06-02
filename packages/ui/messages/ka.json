@@ -28,7 +28,7 @@
     "hint": "ჩაწერეთ სერვისების, სტატიებისა და ხშირად დასმული კითხვების მოსაძებნად",
     "types": {
       "service": "სერვისები",
-      "blog": "ბლოგი",
+      "blog": "Insights",
       "faq": "FAQ"
     }
   },
@@ -92,7 +92,7 @@
   "breadcrumb": {
     "home": "მთავარი",
     "services": "სერვისები",
-    "blog": "ბლოგი",
+    "blog": "Insights",
     "industries": "ინდუსტრიები",
     "packages": "პაკეტები",
     "faq": "FAQ"

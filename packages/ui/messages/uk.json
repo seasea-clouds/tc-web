@@ -28,7 +28,7 @@
     "hint": "Введіть текст для пошуку в службах, статтях і поширених запитаннях",
     "types": {
       "service": "Послуги",
-      "blog": "Блог",
+      "blog": "Insights",
       "faq": "FAQ"
     }
   },
@@ -92,7 +92,7 @@
   "breadcrumb": {
     "home": "Головна",
     "services": "Послуги",
-    "blog": "Блог",
+    "blog": "Insights",
     "industries": "Галузі промисловості",
     "packages": "пакети",
     "faq": "FAQ"

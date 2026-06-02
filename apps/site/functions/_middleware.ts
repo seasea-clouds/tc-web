@@ -53,6 +53,15 @@ function rewriteNextStatic(html: string, prefix: string): string {
 
 // ─── Proxy request with header sanitation ────────────────────────
 
+// ─── Inject standalone search widget into proxied HTML ────────────
+
+const SEARCH_WIDGET_SCRIPT = '<script defer src="/search-widget.js"></script>';
+
+function injectSearchWidget(html: string): string {
+  return html.replace('</body>', `${SEARCH_WIDGET_SCRIPT}\n</body>`);
+}
+
+
 async function proxyFetch(upstreamUrl: string, request: Request): Promise<Response> {
   const bodyText = (request.method !== 'GET' && request.method !== 'HEAD')
     ? await request.clone().text()
@@ -122,6 +131,7 @@ async function proxyToPortal(url: URL, request: Request, env?: Record<string, st
   if (contentType.includes('text/html')) {
     const html = await resp.text();
     const rewritten = rewriteNextStatic(html, 'c');
+        html = injectSearchWidget(html);
     return new Response(rewritten, {
       status: resp.status,
       statusText: resp.statusText,
@@ -244,6 +254,8 @@ export async function onRequest(context: { request: Request; next: () => Promise
         let html = await resp.text();
         // Rewrite /_next/static/ → /blog/_next/static/ (relative, no absolute domain)
         html = rewriteNextStatic(html, 'blog');
+        // Inject standalone search widget for non-React pages
+        html = injectSearchWidget(html);
 
         const headers = sanitizeHeaders(resp.headers);
         return new Response(html, {

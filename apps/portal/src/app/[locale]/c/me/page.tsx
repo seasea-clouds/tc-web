@@ -52,17 +52,17 @@ export default function MePage() {
           <Link href="./me/reports" className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-all group">
             <div className="text-2xl mb-3">📄</div>
             <h3 className="font-semibold text-primary-navy group-hover:text-gold transition-colors">{t('myReports')}</h3>
-            <p className="text-sm text-gray-500 mt-1">View your compliance reports</p>
+            <p className="text-sm text-gray-500 mt-1">{t('viewReportsDesc')}</p>
           </Link>
           <Link href="./me/subscription" className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-all group">
             <div className="text-2xl mb-3">💳</div>
-            <h3 className="font-semibold text-primary-navy group-hover:text-gold transition-colors">Subscription</h3>
-            <p className="text-sm text-gray-500 mt-1">Manage your subscription</p>
+            <h3 className="font-semibold text-primary-navy group-hover:text-gold transition-colors">{t('subscription')}</h3>
+            <p className="text-sm text-gray-500 mt-1">{t('manageSubscriptionDesc')}</p>
           </Link>
           <Link href="./me/settings" className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-all group">
             <div className="text-2xl mb-3">⚙️</div>
-            <h3 className="font-semibold text-primary-navy group-hover:text-gold transition-colors">Settings</h3>
-            <p className="text-sm text-gray-500 mt-1">Account preferences</p>
+            <h3 className="font-semibold text-primary-navy group-hover:text-gold transition-colors">{t('settings')}</h3>
+            <p className="text-sm text-gray-500 mt-1">{t('accountPreferences')}</p>
           </Link>
         </div>
 

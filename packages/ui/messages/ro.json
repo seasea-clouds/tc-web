@@ -1,0 +1,35 @@
+{
+  "Footer": {
+    "contact": "Contact",
+    "services": "Servicii",
+    "gaccRegistration": "Înregistrare GACC",
+    "labelCompliance": "Conformitatea etichetei chinezești",
+    "cccCertification": "Certificare CCC",
+    "cosmeticsFiling": "Depunerea produselor cosmetice (NMPA)",
+    "crossBorderEcommerce": "Comerț electronic transfrontalier",
+    "brandProtection": "Protecția mărcii",
+    "packages": "Pachete",
+    "faq": "FAQ",
+    "about": "Despre noi",
+    "rights": "© 2012-2026 SinoTrade Compliance. Toate drepturile rezervate.",
+    "quickLinks": "Legături rapide",
+    "address": "Districtul Jing'an, Shanghai, China",
+    "disclaimer": "Declinare a răspunderii: Suntem o firmă independentă de consultanță în materie de reglementare și nu suntem afiliați cu Administrația Generală a Vămilor din China.",
+    "whatsapp": "WhatsApp",
+    "testimonials": "Mărturii",
+    "industries": "Industrii",
+    "blog": "Perspective"
+  },
+  "Search": {
+    "title": "Căutare",
+    "placeholder": "Servicii de căutare, articole, întrebări frecvente...",
+    "noResults": "Nu s-au găsit rezultate. Încercați diferite cuvinte cheie.",
+    "searching": "Se caută...",
+    "hint": "Tastați pentru a căuta în servicii, articole și întrebări frecvente",
+    "types": {
+      "service": "Servicii",
+      "blog": "Blog",
+      "faq": "FAQ"
+    }
+  }
+}

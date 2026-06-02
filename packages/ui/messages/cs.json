@@ -1,0 +1,35 @@
+{
+  "Footer": {
+    "contact": "Kontakt",
+    "services": "Služby",
+    "gaccRegistration": "Registrace GACC",
+    "labelCompliance": "Soulad s čínskými štítky",
+    "cccCertification": "Certifikace CCC",
+    "cosmeticsFiling": "Kosmetický pilník (NMPA)",
+    "crossBorderEcommerce": "Přeshraniční elektronický obchod",
+    "brandProtection": "Ochrana značky",
+    "packages": "Balíčky",
+    "faq": "FAQ",
+    "about": "O nás",
+    "rights": "© 2012-2026 Soulad se SinoTrade. Všechna práva vyhrazena.",
+    "quickLinks": "Rychlé odkazy",
+    "address": "Okres Jing'an, Šanghaj, Čína",
+    "disclaimer": "Prohlášení: Jsme nezávislá regulační poradenská firma a nejsme přidruženi k Generální celní správě Číny.",
+    "whatsapp": "WhatsApp",
+    "testimonials": "Posudky",
+    "industries": "Průmyslová odvětví",
+    "blog": "Postřehy"
+  },
+  "Search": {
+    "title": "Vyhledávání",
+    "placeholder": "Hledat služby, články, časté dotazy...",
+    "noResults": "Nebyly nalezeny žádné výsledky. Zkuste jiná klíčová slova.",
+    "searching": "Hledání...",
+    "hint": "Pište pro vyhledávání ve službách, článcích a často kladených dotazech",
+    "types": {
+      "service": "Služby",
+      "blog": "Blog",
+      "faq": "FAQ"
+    }
+  }
+}

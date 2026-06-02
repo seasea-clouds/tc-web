@@ -1,0 +1,35 @@
+{
+  "Footer": {
+    "contact": "Wasiliana",
+    "services": "Huduma",
+    "gaccRegistration": "Usajili wa GACC",
+    "labelCompliance": "Uzingatiaji wa Lebo ya Kichina",
+    "cccCertification": "Cheti cha CCC",
+    "cosmeticsFiling": "Ujazaji wa Vipodozi (NMPA)",
+    "crossBorderEcommerce": "Biashara ya kielektroniki ya mpakani",
+    "brandProtection": "Ulinzi wa Biashara",
+    "packages": "Vifurushi",
+    "faq": "FAQ",
+    "about": "Kuhusu Sisi",
+    "rights": "© 2012-2026 SinoTrade Compliance. Haki zote zimehifadhiwa.",
+    "quickLinks": "Viungo vya Haraka",
+    "address": "Wilaya ya Jing'an, Shanghai, Uchina",
+    "disclaimer": "Kanusho: Sisi ni kampuni huru ya ushauri ya udhibiti na hatushirikiani na Utawala Mkuu wa Forodha wa Uchina.",
+    "whatsapp": "WhatsApp",
+    "testimonials": "Ushuhuda",
+    "industries": "Viwanda",
+    "blog": "Maarifa"
+  },
+  "Search": {
+    "title": "Tafuta",
+    "placeholder": "Huduma za utafutaji, makala, Maswali Yanayoulizwa Mara kwa Mara...",
+    "noResults": "Hakuna matokeo yaliyopatikana. Jaribu maneno muhimu tofauti.",
+    "searching": "Inatafuta...",
+    "hint": "Andika ili kutafuta katika huduma, makala na Maswali Yanayoulizwa Mara kwa Mara",
+    "types": {
+      "service": "Huduma",
+      "blog": "Blogu",
+      "faq": "FAQ"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "Footer": {
+    "contact": "যোগাযোগ",
+    "services": "সেবাসমূহ",
+    "gaccRegistration": "GACC নিবন্ধন",
+    "labelCompliance": "চীনা লেবেল সম্মতি",
+    "cccCertification": "CCC সার্টিফিকেশন",
+    "cosmeticsFiling": "প্রসাধনী ফাইলিং (NMPA)",
+    "crossBorderEcommerce": "আন্তঃসীমান্ত ই-কমার্স",
+    "brandProtection": "ব্র্যান্ড সুরক্ষা",
+    "packages": "প্যাকেজ",
+    "faq": "FAQ",
+    "about": "আমাদের সম্পর্কে",
+    "rights": "© 2012-2026 SinoTrade কমপ্লায়েন্স। সর্বস্বত্ব সংরক্ষিত",
+    "quickLinks": "দ্রুত লিঙ্ক",
+    "address": "জিংআন জেলা, সাংহাই, চীন",
+    "disclaimer": "দাবিত্যাগ: আমরা একটি স্বাধীন নিয়ন্ত্রক পরামর্শদাতা সংস্থা এবং চীনের কাস্টমসের সাধারণ প্রশাসনের সাথে সংযুক্ত নই।",
+    "whatsapp": "WhatsApp",
+    "testimonials": "প্রশংসাপত্র",
+    "industries": "শিল্প",
+    "blog": "অন্তর্দৃষ্টি"
+  },
+  "Search": {
+    "title": "অনুসন্ধান করুন",
+    "placeholder": "অনুসন্ধান পরিষেবা, নিবন্ধ, FAQ...",
+    "noResults": "কোন ফলাফল পাওয়া যায়নি. বিভিন্ন কীওয়ার্ড চেষ্টা করুন।",
+    "searching": "অনুসন্ধান করা হচ্ছে...",
+    "hint": "পরিষেবা, নিবন্ধ এবং FAQ জুড়ে অনুসন্ধান করতে টাইপ করুন",
+    "types": {
+      "service": "সেবাসমূহ",
+      "blog": "ব্লগ",
+      "faq": "FAQ"
+    }
+  }
+}

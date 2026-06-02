@@ -1,19 +1,24 @@
 
 > @trade/blog@0.1.0 build
-> next build && node ../../packages/scripts/check-translations.mjs --short ; node ../../packages/scripts/clean-rsc.js
+> rm -rf .next/cache && next build && node ../../packages/scripts/check-translations.mjs --short ; node ../../packages/scripts/clean-rsc.js
+
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
 
 ▲ Next.js 16.2.6 (Turbopack)
 
   Creating an optimized production build ...
-✓ Compiled successfully in 1757ms
+✓ Compiled successfully in 2.1s
   Running TypeScript ...
-  Finished TypeScript in 2.4s ...
+  Finished TypeScript in 2.1s ...
   Collecting page data using 6 workers ...
   Generating static pages using 6 workers (0/434) ...
   Generating static pages using 6 workers (108/434) 
   Generating static pages using 6 workers (216/434) 
   Generating static pages using 6 workers (325/434) 
-✓ Generating static pages using 6 workers (434/434) in 1822ms
+✓ Generating static pages using 6 workers (434/434) in 2.2s
   Finalizing page optimization ...
 
 Route (app)
@@ -39,10 +44,11 @@ Route (app)
 ●  (SSG)     prerendered as static HTML (uses generateStaticParams)
 
 
-✅ 全量核验通过！48 种语言无质量问题。
+⚠️ 发现 39 个问题
+   - 翻译质量: 39 个问题
 🧹 Cleaning RSC .txt payload files from out/...
-✅ Deleted 3751 RSC payload files (78.4 MB freed)
-(node:779469) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/projects/trade/web/packages/scripts/clean-rsc.js is not specified and it doesn't parse as CommonJS.
+(node:952468) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/projects/trade/web/packages/scripts/clean-rsc.js is not specified and it doesn't parse as CommonJS.
+✅ Deleted 3751 RSC payload files (83.6 MB freed)
 Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
 To eliminate this warning, add "type": "module" to /root/projects/trade/web/package.json.
 (Use `node --trace-warnings ...` to show where the warning was created)

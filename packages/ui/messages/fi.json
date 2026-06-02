@@ -1,0 +1,35 @@
+{
+  "Footer": {
+    "contact": "Yhteystiedot",
+    "services": "Palvelut",
+    "gaccRegistration": "GACC rekisteröinti",
+    "labelCompliance": "Kiinan etikettien noudattaminen",
+    "cccCertification": "CCC-sertifiointi",
+    "cosmeticsFiling": "Kosmetiikkaviilaus (NMPA)",
+    "crossBorderEcommerce": "Rajat ylittävä sähköinen kaupankäynti",
+    "brandProtection": "Brändin suojaus",
+    "packages": "Paketit",
+    "faq": "FAQ",
+    "about": "Tietoja meistä",
+    "rights": "© 2012-2026 SinoTrade Compliance. Kaikki oikeudet pidätetään.",
+    "quickLinks": "Pikalinkit",
+    "address": "Jing'anin alue, Shanghai, Kiina",
+    "disclaimer": "Vastuuvapauslauseke: Olemme riippumaton sääntelyyn liittyvä konsulttiyritys, emmekä ole sidoksissa Kiinan tullin yleiseen hallintoon.",
+    "whatsapp": "WhatsApp",
+    "testimonials": "Mielipiteitä",
+    "industries": "Toimialat",
+    "blog": "Näkemyksiä"
+  },
+  "Search": {
+    "title": "Haku",
+    "placeholder": "Hae palveluita, artikkeleita, usein kysyttyjä kysymyksiä...",
+    "noResults": "Tuloksia ei löytynyt. Kokeile eri avainsanoja.",
+    "searching": "Haetaan...",
+    "hint": "Hae palveluista, artikkeleista ja usein kysytyistä kysymyksistä kirjoittamalla",
+    "types": {
+      "service": "Palvelut",
+      "blog": "Blogi",
+      "faq": "FAQ"
+    }
+  }
+}

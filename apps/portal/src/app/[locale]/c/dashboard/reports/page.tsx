@@ -42,7 +42,7 @@ function ReportsContent() {
 
       {!loading && reports.length === 0 && (
         <div className="text-center py-12 text-gray-400 bg-white rounded-lg border p-8">
-          <p className="text-lg mb-2">No reports yet</p>
+          <p className="text-lg mb-2">{t('noReportsYet')}</p>
           <p className="text-sm">{t('completeCheck')}</p>
         </div>
       )}

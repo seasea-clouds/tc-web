@@ -1,0 +1,35 @@
+{
+  "Footer": {
+    "contact": "اتصال",
+    "services": "خدمات",
+    "gaccRegistration": "تسجيل GACC",
+    "labelCompliance": "الامتثال للعلامة الصينية",
+    "cccCertification": "شهادة سي سي سي",
+    "cosmeticsFiling": "حفظ مستحضرات التجميل (NMPA)",
+    "crossBorderEcommerce": "التجارة الإلكترونية عبر الحدود",
+    "brandProtection": "حماية العلامة التجارية",
+    "packages": "الحزم",
+    "faq": "FAQ",
+    "about": "معلومات عنا",
+    "rights": "© 2012-2026 الامتثال لشركة SinoTrade. جميع الحقوق محفوظة.",
+    "quickLinks": "روابط سريعة",
+    "address": "منطقة جينغان، شنغهاي، الصين",
+    "disclaimer": "إخلاء المسؤولية: نحن شركة استشارية تنظيمية مستقلة ولسنا تابعين للإدارة العامة للجمارك في الصين.",
+    "whatsapp": "WhatsApp",
+    "testimonials": "الشهادات",
+    "industries": "الصناعات",
+    "blog": "رؤى"
+  },
+  "Search": {
+    "title": "يبحث",
+    "placeholder": "خدمات البحث، المقالات، الأسئلة الشائعة...",
+    "noResults": "لم يتم العثور على نتائج. جرب كلمات رئيسية مختلفة.",
+    "searching": "جارٍ البحث...",
+    "hint": "اكتب للبحث عبر الخدمات والمقالات والأسئلة الشائعة",
+    "types": {
+      "service": "خدمات",
+      "blog": "مدونة",
+      "faq": "FAQ"
+    }
+  }
+}

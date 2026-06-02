@@ -1,0 +1,35 @@
+{
+  "Footer": {
+    "contact": "Kontakt",
+    "services": "Dienstleistungen",
+    "gaccRegistration": "GACC-Registrierung",
+    "labelCompliance": "Einhaltung chinesischer Etiketten",
+    "cccCertification": "CCC-Zertifizierung",
+    "cosmeticsFiling": "Einreichung von Kosmetika (NMPA)",
+    "crossBorderEcommerce": "Grenzüberschreitender E-Commerce",
+    "brandProtection": "Markenschutz",
+    "packages": "Pakete",
+    "faq": "FAQ",
+    "about": "Über uns",
+    "rights": "© 2012-2026 SinoTrade Compliance. Alle Rechte vorbehalten.",
+    "quickLinks": "Quicklinks",
+    "address": "Bezirk Jing'an, Shanghai, China",
+    "disclaimer": "Haftungsausschluss: Wir sind ein unabhängiges Regulierungsberatungsunternehmen und nicht mit der Allgemeinen Zollverwaltung Chinas verbunden.",
+    "whatsapp": "WhatsApp",
+    "testimonials": "Erfahrungsberichte",
+    "industries": "Branchen",
+    "blog": "Einblicke"
+  },
+  "Search": {
+    "title": "Suchen",
+    "placeholder": "Suchdienste, Artikel, FAQs...",
+    "noResults": "Keine Ergebnisse gefunden. Probieren Sie verschiedene Schlüsselwörter aus.",
+    "searching": "Suche...",
+    "hint": "Geben Sie ein, um nach Diensten, Artikeln und FAQs zu suchen",
+    "types": {
+      "service": "Dienstleistungen",
+      "blog": "Blog",
+      "faq": "FAQ"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "Footer": {
+    "contact": "Kontakt",
+    "services": "Tjänster",
+    "gaccRegistration": "GACC-registrering",
+    "labelCompliance": "Efterlevnad av kinesiska etiketter",
+    "cccCertification": "CCC-certifiering",
+    "cosmeticsFiling": "Kosmetikaarkivering (NMPA)",
+    "crossBorderEcommerce": "Gränsöverskridande e-handel",
+    "brandProtection": "Varumärkesskydd",
+    "packages": "Paket",
+    "faq": "FAQ",
+    "about": "Om oss",
+    "rights": "© 2012-2026 SinoTrade Compliance. Alla rättigheter reserverade.",
+    "quickLinks": "Snabblänkar",
+    "address": "Jing'an-distriktet, Shanghai, Kina",
+    "disclaimer": "Ansvarsfriskrivning: Vi är ett oberoende tillsynskonsultföretag och är inte anslutna till General Administration of Customs of China.",
+    "whatsapp": "WhatsApp",
+    "testimonials": "Rekommendationer",
+    "industries": "industrier",
+    "blog": "Insikter"
+  },
+  "Search": {
+    "title": "Söka",
+    "placeholder": "Söktjänster, artiklar, vanliga frågor...",
+    "noResults": "Inga resultat hittades. Prova olika sökord.",
+    "searching": "Sökande...",
+    "hint": "Skriv för att söka bland tjänster, artiklar och vanliga frågor",
+    "types": {
+      "service": "Tjänster",
+      "blog": "Blogg",
+      "faq": "FAQ"
+    }
+  }
+}

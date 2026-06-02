@@ -1,0 +1,35 @@
+{
+  "Footer": {
+    "contact": "Kontak",
+    "services": "Dienste",
+    "gaccRegistration": "GACC registrasie",
+    "labelCompliance": "Chinese etiket nakoming",
+    "cccCertification": "CCC Sertifisering",
+    "cosmeticsFiling": "Skoonheidsmiddelliassering (NMPA)",
+    "crossBorderEcommerce": "Oorgrens e-handel",
+    "brandProtection": "Handelsmerkbeskerming",
+    "packages": "Pakkette",
+    "faq": "FAQ",
+    "about": "Oor ons",
+    "rights": "© 2012-2026 SinoTrade Voldoening. Alle regte voorbehou.",
+    "quickLinks": "Vinnige skakels",
+    "address": "Jing'an-distrik, Sjanghai, China",
+    "disclaimer": "Vrywaring: Ons is 'n onafhanklike regulatoriese konsultasiefirma en is nie geaffilieer met die Algemene Doeaneadministrasie van China nie.",
+    "whatsapp": "WhatsApp",
+    "testimonials": "Getuigskrifte",
+    "industries": "Nywerhede",
+    "blog": "Insigte"
+  },
+  "Search": {
+    "title": "Soek",
+    "placeholder": "Soek dienste, artikels, algemene vrae...",
+    "noResults": "Geen resultate gevind nie. Probeer verskillende sleutelwoorde.",
+    "searching": "Soek tans …",
+    "hint": "Tik om oor dienste, artikels en algemene vrae te soek",
+    "types": {
+      "service": "Dienste",
+      "blog": "Blog",
+      "faq": "FAQ"
+    }
+  }
+}

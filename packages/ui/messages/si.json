@@ -1,0 +1,35 @@
+{
+  "Footer": {
+    "contact": "සම්බන්ධ වන්න",
+    "services": "සේවා",
+    "gaccRegistration": "GACC ලියාපදිංචිය",
+    "labelCompliance": "චීන ලේබල් අනුකූලතාව",
+    "cccCertification": "CCC සහතිකය",
+    "cosmeticsFiling": "විලවුන් ගොනු කිරීම (NMPA)",
+    "crossBorderEcommerce": "දේශසීමා ඊ-වාණිජ්යය",
+    "brandProtection": "වෙළඳ නාම ආරක්ෂණය",
+    "packages": "පැකේජ",
+    "faq": "FAQ",
+    "about": "අපි ගැන",
+    "rights": "© 2012-2026 SinoTrade අනුකූලතාව. සියලු හිමිකම් ඇවිරිණි.",
+    "quickLinks": "ඉක්මන් සබැඳි",
+    "address": "ජිංගන් දිස්ත්‍රික්කය, ෂැංහයි, චීනය",
+    "disclaimer": "වියාචනය: අපි ස්වාධීන නියාමන උපදේශන සමාගමක් වන අතර චීනයේ රේගු සාමාන්‍ය පරිපාලනයට අනුබද්ධ නොවේ.",
+    "whatsapp": "WhatsApp",
+    "testimonials": "සහතික",
+    "industries": "කර්මාන්ත",
+    "blog": "තීක්ෂ්ණ බුද්ධිය"
+  },
+  "Search": {
+    "title": "සොයන්න",
+    "placeholder": "සෙවුම් සේවා, ලිපි, නිතර අසන පැන...",
+    "noResults": "ප්‍රතිඵල හමු නොවිණි. විවිධ මූල පද උත්සාහ කරන්න.",
+    "searching": "සොයමින්...",
+    "hint": "සේවා, ලිපි සහ නිතර අසන පැන හරහා සෙවීමට ටයිප් කරන්න",
+    "types": {
+      "service": "සේවා",
+      "blog": "බ්ලොගය",
+      "faq": "FAQ"
+    }
+  }
+}

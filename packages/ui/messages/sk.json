@@ -1,0 +1,35 @@
+{
+  "Footer": {
+    "contact": "Kontakt",
+    "services": "Služby",
+    "gaccRegistration": "Registrácia GACC",
+    "labelCompliance": "Súlad s čínskymi štítkami",
+    "cccCertification": "Certifikácia CCC",
+    "cosmeticsFiling": "Kozmetický pilník (NMPA)",
+    "crossBorderEcommerce": "Cezhraničný elektronický obchod",
+    "brandProtection": "Ochrana značky",
+    "packages": "Balíčky",
+    "faq": "FAQ",
+    "about": "O nás",
+    "rights": "© 2012-2026 Súlad SinoTrade. Všetky práva vyhradené.",
+    "quickLinks": "Rýchle odkazy",
+    "address": "Okres Jing'an, Šanghaj, Čína",
+    "disclaimer": "Vyhlásenie: Sme nezávislá regulačná poradenská firma a nie sme pridružení k Generálnej colnej správe Číny.",
+    "whatsapp": "WhatsApp",
+    "testimonials": "Posudky",
+    "industries": "Odvetvia",
+    "blog": "Insights"
+  },
+  "Search": {
+    "title": "Hľadať",
+    "placeholder": "Hľadať služby, články, často kladené otázky...",
+    "noResults": "Nenašli sa žiadne výsledky. Skúste iné kľúčové slová.",
+    "searching": "Hľadá sa...",
+    "hint": "Napíšte, ak chcete vyhľadávať v službách, článkoch a často kladených otázkach",
+    "types": {
+      "service": "Služby",
+      "blog": "Blog",
+      "faq": "FAQ"
+    }
+  }
+}

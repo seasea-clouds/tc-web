@@ -1,7 +1,14 @@
 
 > @trade/site@2.0.0 build
-> node ../../packages/scripts/images/convert-webp.mjs && next build && node ../../packages/scripts/build-all.mjs --base-url=https://sinotradecompliance.com --out-dir=out ; node ../../packages/scripts/clean-rsc.js && node ../../packages/scripts/check-translations.mjs --short
+> bash ../../packages/scripts/merge-blog.sh && node ../../packages/scripts/images/convert-webp.mjs && next build && cp -r ../../apps/blog/out/_next/static/chunks/* out/_next/static/chunks/ 2>/dev/null; cp -r ../../apps/blog/out/_next/static/css/* out/_next/static/css/ 2>/dev/null; cp -r ../../apps/blog/out/_next/static/media/* out/_next/static/media/ 2>/dev/null; true && node ../../packages/scripts/build-all.mjs --base-url=https://sinotradecompliance.com --out-dir=out && node ../../packages/scripts/clean-rsc.js && node ../../packages/scripts/check-translations.mjs --short
 
+=== Building blog (no assetPrefix) ===
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /root/projects/trade/web/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+=== Merging blog pages into site public/ ===
+=== Cleaning up blog artifacts from site public ===
+✅ Blog merge complete (pages only, chunks will merge post-build)
 Converting 18 images to WebP...
 
   ✓ david-zhang.jpg: 77K → 28K (63% saved)
@@ -32,15 +39,15 @@ Size: 1138K → 473K (58% saved)
 
 ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
   Creating an optimized production build ...
-✓ Compiled successfully in 2.3s
+✓ Compiled successfully in 2.7s
   Running TypeScript ...
-  Finished TypeScript in 5.5s ...
+  Finished TypeScript in 5.3s ...
   Collecting page data using 19 workers ...
   Generating static pages using 19 workers (0/1253) ...
   Generating static pages using 19 workers (313/1253) 
   Generating static pages using 19 workers (626/1253) 
   Generating static pages using 19 workers (939/1253) 
-✓ Generating static pages using 19 workers (1253/1253) in 4.2s
+✓ Generating static pages using 19 workers (1253/1253) in 4.3s
   Finalizing page optimization ...
 ⚠ Statically exporting a Next.js application via `next export` disables API routes and middleware.
 This command is meant for static-only hosts, and is not necessary to make your application static.
@@ -153,7 +160,7 @@ Output:   /root/projects/trade/web/apps/site/out
 [2/5] Generating image sitemap...
 ✅ sitemap-images.xml (39 images)
 [3/5] Generating LLM files...
-✅ llms.txt (6136KB)
+✅ llms.txt (6261KB)
 ✅ 48 llms-{locale}.txt files
 [4/5] Generating search indexes...
 ✅ 48 search-index-{locale}.json files
@@ -162,8 +169,8 @@ Output:   /root/projects/trade/web/apps/site/out
 
 ✅ build-all.mjs complete
 🧹 Cleaning RSC .txt payload files from out/...
-✅ Deleted 11965 RSC payload files (714.8 MB freed)
-(node:780595) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/projects/trade/web/packages/scripts/clean-rsc.js is not specified and it doesn't parse as CommonJS.
+✅ Deleted 11965 RSC payload files (714.0 MB freed)
+(node:953718) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/projects/trade/web/packages/scripts/clean-rsc.js is not specified and it doesn't parse as CommonJS.
 Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
 To eliminate this warning, add "type": "module" to /root/projects/trade/web/package.json.
 (Use `node --trace-warnings ...` to show where the warning was created)

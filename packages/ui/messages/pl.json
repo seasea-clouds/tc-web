@@ -1,0 +1,35 @@
+{
+  "Footer": {
+    "contact": "Kontakt",
+    "services": "Usługi",
+    "gaccRegistration": "Rejestracja GACC",
+    "labelCompliance": "Zgodność z chińską etykietą",
+    "cccCertification": "Certyfikat CCC",
+    "cosmeticsFiling": "Archiwizacja kosmetyków (NMPA)",
+    "crossBorderEcommerce": "Transgraniczny handel elektroniczny",
+    "brandProtection": "Ochrona marki",
+    "packages": "Pakiety",
+    "faq": "FAQ",
+    "about": "O nas",
+    "rights": "© 2012-2026 Zgodność z przepisami SinoTrade. Wszelkie prawa zastrzeżone.",
+    "quickLinks": "Szybkie linki",
+    "address": "Dystrykt Jing'an, Szanghaj, Chiny",
+    "disclaimer": "Zastrzeżenie: Jesteśmy niezależną firmą zajmującą się doradztwem regulacyjnym i nie jesteśmy powiązani z Generalną Administracją Celną Chin.",
+    "whatsapp": "WhatsApp",
+    "testimonials": "Referencje",
+    "industries": "Przemysły",
+    "blog": "Spostrzeżenia"
+  },
+  "Search": {
+    "title": "Szukaj",
+    "placeholder": "Wyszukaj usługi, artykuły, często zadawane pytania...",
+    "noResults": "Nie znaleziono żadnych wyników. Wypróbuj inne słowa kluczowe.",
+    "searching": "Badawczy...",
+    "hint": "Wpisz, aby przeszukać usługi, artykuły i często zadawane pytania",
+    "types": {
+      "service": "Usługi",
+      "blog": "Bloga",
+      "faq": "FAQ"
+    }
+  }
+}

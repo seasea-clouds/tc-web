@@ -1,0 +1,35 @@
+{
+  "Footer": {
+    "contact": "Contact",
+    "services": "Diensten",
+    "gaccRegistration": "GACC-registratie",
+    "labelCompliance": "Naleving van Chinese labels",
+    "cccCertification": "CCC-certificering",
+    "cosmeticsFiling": "Cosmetica-aanvraag (NMPA)",
+    "crossBorderEcommerce": "Grensoverschrijdende e-commerce",
+    "brandProtection": "Merkbescherming",
+    "packages": "Pakketten",
+    "faq": "FAQ",
+    "about": "Over ons",
+    "rights": "© 2012-2026 SinoTrade-naleving. Alle rechten voorbehouden.",
+    "quickLinks": "Snelle koppelingen",
+    "address": "Jing'an-district, Shanghai, China",
+    "disclaimer": "Disclaimer: Wij zijn een onafhankelijk regelgevend adviesbureau en zijn niet aangesloten bij de Algemene Administratie van de Douane van China.",
+    "whatsapp": "WhatsApp",
+    "testimonials": "Getuigenissen",
+    "industries": "Industrieën",
+    "blog": "Inzichten"
+  },
+  "Search": {
+    "title": "Zoekopdracht",
+    "placeholder": "Zoekdiensten, artikelen, veelgestelde vragen...",
+    "noResults": "Geen resultaten gevonden. Probeer verschillende zoekwoorden.",
+    "searching": "Zoeken...",
+    "hint": "Typ om te zoeken in services, artikelen en veelgestelde vragen",
+    "types": {
+      "service": "Diensten",
+      "blog": "Bloggen",
+      "faq": "FAQ"
+    }
+  }
+}

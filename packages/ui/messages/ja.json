@@ -1,0 +1,35 @@
+{
+  "Footer": {
+    "contact": "お問い合わせ",
+    "services": "サービス",
+    "gaccRegistration": "GACC登録",
+    "labelCompliance": "中国ラベルへの準拠",
+    "cccCertification": "CCC認証",
+    "cosmeticsFiling": "化粧品申請 (NMPA)",
+    "crossBorderEcommerce": "越境電子商取引",
+    "brandProtection": "ブランド保護",
+    "packages": "パッケージ",
+    "faq": "FAQ",
+    "about": "私たちについて",
+    "rights": "© 2012-2026 SinoTrade コンプライアンス。無断転載を禁じます。",
+    "quickLinks": "クイックリンク",
+    "address": "中国上海市静安区",
+    "disclaimer": "免責事項: 当社は独立した規制コンサルティング会社であり、中国税関総署とは提携していません。",
+    "whatsapp": "WhatsApp",
+    "testimonials": "お客様の声",
+    "industries": "産業",
+    "blog": "洞察"
+  },
+  "Search": {
+    "title": "検索",
+    "placeholder": "検索サービス、記事、FAQ...",
+    "noResults": "結果が見つかりませんでした。別のキーワードを試してください。",
+    "searching": "検索中...",
+    "hint": "サービス、記事、FAQ を検索するために入力します",
+    "types": {
+      "service": "サービス",
+      "blog": "ブログ",
+      "faq": "FAQ"
+    }
+  }
+}

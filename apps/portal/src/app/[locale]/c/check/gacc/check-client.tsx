@@ -1,11 +1,13 @@
 "use client";
 
+import { useT } from '@trade/ui';
 import { useState } from "react";
 import { checkGacc, CATEGORY_LABELS, type GaccCategory, type GaccInput } from "../../../../../../modules/gacc/rules";
 
 type Step = "form" | "free-result";
 
 export default function GaccCheckClient() {
+  const t = useT('Check');
   const [step, setStep] = useState<Step>("form");
   const [input, setInput] = useState<Partial<GaccInput>>({});
   const [email, setEmail] = useState("");
@@ -63,9 +65,9 @@ export default function GaccCheckClient() {
       <div className="max-w-3xl mx-auto px-4 py-12">
         {/* Progress */}
         <div className="flex items-center justify-center gap-2 mb-8 text-sm text-gray-400">
-          <span className={`${step === "form" ? "text-gold font-semibold" : ""}`}>1. Product Info</span>
+          <span className={`${step === "form" ? "text-gold font-semibold" : ""}`}>{t('step1')}</span>
           <span>&rarr;</span>
-          <span className={`${step === "free-result" ? "text-gold font-semibold" : ""}`}>2. Free Result</span>
+          <span className={`${step === "free-result" ? "text-gold font-semibold" : ""}`}>{t('step2')}</span>
         </div>
 
         {/* Form */}
@@ -75,7 +77,7 @@ export default function GaccCheckClient() {
             <p className="text-gray-500 text-sm">Find out if your product needs GACC registration for export to China.</p>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Product Category</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">{t('productCategory')}</label>
               <select
                 className="w-full border border-gray-300 rounded-md p-2.5 text-sm"
                 value={input.category ?? ""}
@@ -90,7 +92,7 @@ export default function GaccCheckClient() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Product Name</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">{t('productName')}</label>
               <input
                 type="text"
                 className="w-full border border-gray-300 rounded-md p-2.5 text-sm"
@@ -104,7 +106,7 @@ export default function GaccCheckClient() {
 
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Country of Origin</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">{t('countryOfOrigin')}</label>
                 <input
                   type="text"
                   className="w-full border border-gray-300 rounded-md p-2.5 text-sm"
@@ -173,10 +175,10 @@ export default function GaccCheckClient() {
                   value={input.hasLabelArtwork ?? ""}
                   onChange={(e) => setInput({ ...input, hasLabelArtwork: e.target.value })}
                 >
-                  <option value="">Select...</option>
-                  <option value="yes">Yes</option>
-                  <option value="no">No</option>
-                  <option value="in_progress">In Progress</option>
+                  <option value="">{t('selectOption')}</option>
+                  <option value="yes">{t('yes')}</option>
+                  <option value="no">{t('no')}</option>
+                  <option value="in_progress">{t('inProgress')}</option>
                 </select>
               </div>
             </div>
@@ -196,7 +198,7 @@ export default function GaccCheckClient() {
               type="submit"
               className="w-full bg-gold hover:bg-gold/90 text-primary-navy font-semibold py-3 px-6 rounded-md transition-all"
             >
-              Check My Product
+              {t('checkBtn')}
             </button>
           </form>
         )}
@@ -204,7 +206,7 @@ export default function GaccCheckClient() {
         {/* Free Result */}
         {step === "free-result" && freeData && (
           <div className="bg-white rounded-lg shadow-sm border p-8 space-y-6">
-            <h2 className="text-xl font-bold text-primary-navy">Free Assessment Result</h2>
+            <h2 className="text-xl font-bold text-primary-navy">{t('freeResult')}</h2>
 
             <div className={`rounded-lg p-4 ${freeData.requiresRegistration ? "bg-amber-50 border border-amber-200" : "bg-green-50 border border-green-200"}`}>
               <p className="font-semibold">
@@ -215,13 +217,13 @@ export default function GaccCheckClient() {
             </div>
 
             <div className="text-sm text-gray-600 space-y-2">
-              <p><strong>Product:</strong> {input.productName}</p>
-              <p><strong>Category:</strong> {CATEGORY_LABELS[input.category!]}</p>
-              <p><strong>Risk Level:</strong> {freeData.riskCategory === "high" ? "🔴 High" : "🟢 Low"}</p>
+              <p><strong>{t('resultProductLabel')}:</strong> {input.productName}</p>
+              <p><strong>{t('resultCategoryLabel')}:</strong> {CATEGORY_LABELS[input.category!]}</p>
+              <p><strong>{t('riskLevel')}:</strong> {freeData.riskCategory === "high" ? "🔴 High" : "🟢 Low"}</p>
             </div>
 
             <div className="bg-gray-50 rounded-lg p-4">
-              <h3 className="font-semibold text-sm mb-2">Documents Required</h3>
+              <h3 className="font-semibold text-sm mb-2">{t('documentsTitle')}</h3>
               <ul className="space-y-1">
                 {freeData.requiredDocuments.slice(0, 5).map((doc, i) => (
                   <li key={i} className="text-sm text-gray-600 flex items-start gap-2">
@@ -236,7 +238,7 @@ export default function GaccCheckClient() {
             </div>
 
             <div className="border-t pt-6 text-center space-y-4">
-              <p className="text-lg font-semibold text-primary-navy">Get the Full Compliance Report</p>
+              <p className="text-lg font-semibold text-primary-navy">{t('paymentTitle')}</p>
               <p className="text-sm text-gray-500">Complete report with all required documents, timeline, and next steps.</p>
 
               {/* Email input */}
@@ -260,7 +262,7 @@ export default function GaccCheckClient() {
                   disabled={loading}
                   className="w-full max-w-xs bg-gold hover:bg-gold/90 disabled:bg-gray-300 text-primary-navy font-semibold py-3 px-6 rounded-md transition-all text-lg"
                 >
-                  {loading ? "Redirecting to payment..." : "Full Report — $1"}
+                  {loading ? "Redirecting to payment..." : "{t('fullReport1')}"}
                 </button>
                 <p className="text-xs text-gray-400">
                   One-time payment. Report delivered via web + email.

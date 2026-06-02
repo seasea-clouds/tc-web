@@ -1,4 +1,4 @@
-import { Footer, SearchProvider, ActionDock, TradeTranslationProvider } from '@trade/ui';
+import { Footer, SearchProvider, ActionDock, TradeTranslationProvider, OrganizationJsonLd } from '@trade/ui';
 import { getMessages } from '@/lib/messages';
 import '../globals.css';
 
@@ -24,8 +24,13 @@ export default async function Layout({
 
   return (
     <html lang={locale}>
+      <head>
+        {/* Cloudflare Web Analytics */}
+        <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6639e56f244348cda996b883cecc51b7"}'></script>
+      </head>
       <body className="min-h-screen flex flex-col pb-16 md:pb-0 antialiased">
         <TradeTranslationProvider messages={messages} locale={locale}>
+          <OrganizationJsonLd />
           <SearchProvider
             freeCheckHref={`/${locale}/c/`}
           />

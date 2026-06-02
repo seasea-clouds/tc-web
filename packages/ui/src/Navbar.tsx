@@ -75,9 +75,7 @@ export default function Navbar(props: NavbarProps) {
               <MessageCircle className="w-4 h-4" />
               <span className="hidden sm:inline">{t('whatsapp')}</span>
             </a>
-            <a href={href('/quote/')} className="bg-accent-blue hover:bg-accent-blue/90 text-white font-semibold px-3 py-1.5 rounded-md text-sm transition-all hover:shadow-md">
-              {t('quote')}
-            </a>
+
             <a
               href={fcHref}
               className="bg-gold hover:bg-gold/90 text-primary-navy font-semibold px-3 py-1.5 rounded-md text-sm transition-all hover:shadow-md"

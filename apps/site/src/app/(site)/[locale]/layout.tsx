@@ -57,25 +57,15 @@ export default async function LocaleLayout({
   const resolvedParams = await params;
 
   const messages = messagesMap[locale] ?? messagesMap[defaultLocale];
-  const buildTime = process.env.VERCEL_DEPLOYMENT_ID
-    ? process.env.VERCEL_DEPLOYMENT_ID
-    : process.env.CF_PAGES_COMMIT_SHA
-      ? process.env.CF_PAGES_COMMIT_SHA.slice(0, 7)
-      : new Date().toISOString().slice(0, 16).replace(/[T:]/g, '-');
 
   return (
     <html lang={locale}>
     <head>
-      <meta name="build-commit" content={buildTime} />
-      <meta name="build-time" content={new Date().toISOString()} />
       {/* Cloudflare Web Analytics */}
       <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6639e56f244348cda996b883cecc51b7"}'></script>
     </head>
     <body className="min-h-screen flex flex-col pb-16 md:pb-0 antialiased">
-      <script type="application/json" id="build-info" dangerouslySetInnerHTML={{
-        __html: JSON.stringify({ commit: buildTime, time: new Date().toISOString() })
-      }} />
-      <NextIntlClientProvider messages={messages} locale={locale}>
+      <NextIntlClientProvider messages={messages} locale={locale} timeZone="Asia/Shanghai">
         <TradeTranslationProvider messages={messages} locale={locale}>
           <OrganizationJsonLd />
           <SearchProvider />

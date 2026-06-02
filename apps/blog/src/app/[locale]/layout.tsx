@@ -30,12 +30,10 @@ export default async function Layout({
         <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6639e56f244348cda996b883cecc51b7"}'></script>
       </head>
       <body className="min-h-screen flex flex-col pb-16 md:pb-0 antialiased">
-        <NextIntlClientProvider messages={messages} locale={locale}>
+        <NextIntlClientProvider messages={messages} locale={locale} timeZone="Asia/Shanghai">
           <TradeTranslationProvider messages={messages} locale={locale}>
             <OrganizationJsonLd />
-            <SearchProvider
-              freeCheckHref={`/${locale}/c/`}
-            />
+            <SearchProvider />
             <main className="flex-1">{children}</main>
             <Footer />
             <ActionDock />

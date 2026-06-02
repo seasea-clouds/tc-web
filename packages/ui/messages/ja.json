@@ -31,5 +31,70 @@
       "blog": "ブログ",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "ホーム",
+    "about": "について",
+    "services": "サービス",
+    "servicesDropdown": {
+      "gacc": "GACC食品登録",
+      "label": "中国ラベルへの準拠",
+      "ccc": "CCC認証",
+      "cosmetics": "化粧品申請 (NMPA)",
+      "ecommerce": "越境電子商取引",
+      "brand": "ブランド保護"
+    },
+    "packages": "パッケージ",
+    "faq": "よくある質問",
+    "blog": "洞察",
+    "contact": "お問い合わせ",
+    "whatsapp": "ワッツアップ",
+    "quote": "見積もりを取得する",
+    "industries": "産業",
+    "industriesDropdown": {
+      "dairymilkproducts": "乳製品および乳製品",
+      "meatseafood": "肉と魚介類",
+      "winespirits": "ワイン＆スピリッツ",
+      "skincarecosmetics": "スキンケア＆化粧品",
+      "petfood": "ペットフード",
+      "healthsupplements": "健康補助食品",
+      "babymaternal": "赤ちゃんと母親",
+      "consumerelectronics": "家電",
+      "medicaldevices": "医療機器",
+      "crossborderecommerce": "越境電子商取引"
+    },
+    "search": "検索",
+    "freeCheck": "無料小切手"
+  },
+  "MobileTab": {
+    "home": "ホーム",
+    "services": "サービス",
+    "blog": "ブログ",
+    "contact": "お問い合わせ"
+  },
+  "CTA": {
+    "ctaTitle": "このサービスが必要ですか?",
+    "ctaSubtitle": "貴社の製品に合わせた無料のコンプライアンス評価を受けてください。",
+    "ctaUrgency": "無料相談→24時間対応",
+    "ctaButton": "無料の評価を受ける"
+  },
+  "ContactForm": {
+    "title": "無料のコンプライアンス評価",
+    "subtitle": "御社の製品について教えていただければ、個別のコンプライアンス ロードマップを提供いたします。",
+    "emailLabel": "ビジネスメール",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "メッセージ (オプション)",
+    "messagePlaceholder": "製品またはコンプライアンスのニーズについて説明してください...",
+    "button": "無料評価を送信する",
+    "privacy": "私たちはあなたのプライバシーを尊重します。スパムは一切ありません。"
+  },
+  "breadcrumb": {
+    "home": "ホーム",
+    "services": "サービス",
+    "blog": "ブログ",
+    "industries": "産業",
+    "packages": "パッケージ",
+    "faq": "FAQ"
   }
 }

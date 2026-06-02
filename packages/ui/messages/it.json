@@ -31,5 +31,70 @@
       "blog": "Blog",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "Casa",
+    "about": "Chi siamo",
+    "services": "Servizi",
+    "servicesDropdown": {
+      "gacc": "Registrazione alimentare GACC",
+      "label": "Conformità dell'etichetta cinese",
+      "ccc": "Certificazione CCC",
+      "cosmetics": "Archiviazione di cosmetici (NMPA)",
+      "ecommerce": "Commercio elettronico transfrontaliero",
+      "brand": "Protezione del marchio"
+    },
+    "packages": "Pacchetti",
+    "faq": "Domande frequenti",
+    "blog": "Blog",
+    "contact": "Contattaci",
+    "whatsapp": "Whatsapp",
+    "quote": "Ottieni un preventivo",
+    "industries": "Industrie",
+    "industriesDropdown": {
+      "dairymilkproducts": "Latticini e prodotti lattiero-caseari",
+      "meatseafood": "Carne e frutti di mare",
+      "winespirits": "Vino e liquori",
+      "skincarecosmetics": "Cura della pelle e cosmetici",
+      "petfood": "Cibo per animali domestici",
+      "healthsupplements": "Supplementi per la salute",
+      "babymaternal": "Bambino e materno",
+      "consumerelectronics": "Elettronica di consumo",
+      "medicaldevices": "Dispositivi medici",
+      "crossborderecommerce": "Commercio elettronico transfrontaliero"
+    },
+    "search": "Ricerca",
+    "freeCheck": "Controllo gratuito"
+  },
+  "MobileTab": {
+    "home": "Casa",
+    "services": "Servizi",
+    "blog": "Blog",
+    "contact": "Contatti"
+  },
+  "CTA": {
+    "ctaTitle": "Hai bisogno di questo servizio?",
+    "ctaSubtitle": "Ottieni una valutazione di conformità gratuita su misura per i tuoi prodotti.",
+    "ctaUrgency": "Consulenza gratuita → risposta 24 ore su 24",
+    "ctaButton": "Ottieni una valutazione gratuita"
+  },
+  "ContactForm": {
+    "title": "Valutazione di conformità gratuita",
+    "subtitle": "Parlaci dei tuoi prodotti e ti forniremo una roadmap di conformità personalizzata.",
+    "emailLabel": "E-mail aziendale",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "Messaggio (facoltativo)",
+    "messagePlaceholder": "Descrivi i tuoi prodotti o le tue esigenze di conformità...",
+    "button": "Invia valutazione gratuita",
+    "privacy": "Rispettiamo la tua privacy. Niente spam, mai."
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "services": "Servizi",
+    "blog": "Blog",
+    "industries": "Industrie",
+    "packages": "Pacchetti",
+    "faq": "FAQ"
   }
 }

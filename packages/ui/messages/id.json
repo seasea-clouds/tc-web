@@ -31,5 +31,70 @@
       "blog": "blog",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "Rumah",
+    "about": "Tentang",
+    "services": "Layanan",
+    "servicesDropdown": {
+      "gacc": "Pendaftaran Makanan GACC",
+      "label": "Kepatuhan Label Tiongkok",
+      "ccc": "Sertifikasi CCC",
+      "cosmetics": "Pengarsipan Kosmetik (NMPA)",
+      "ecommerce": "E-niaga lintas batas",
+      "brand": "Perlindungan Merek"
+    },
+    "packages": "Paket",
+    "faq": "Pertanyaan Umum",
+    "blog": "Wawasan",
+    "contact": "Hubungi kami",
+    "whatsapp": "Ada apa",
+    "quote": "Dapatkan Penawaran",
+    "industries": "Industri",
+    "industriesDropdown": {
+      "dairymilkproducts": "Produk Susu & Susu",
+      "meatseafood": "Daging & Makanan Laut",
+      "winespirits": "Anggur & Roh",
+      "skincarecosmetics": "Perawatan Kulit & Kosmetik",
+      "petfood": "Makanan Hewan Peliharaan",
+      "healthsupplements": "Suplemen Kesehatan",
+      "babymaternal": "Bayi & Ibu",
+      "consumerelectronics": "Elektronik Konsumen",
+      "medicaldevices": "Alat kesehatan",
+      "crossborderecommerce": "E-niaga lintas batas"
+    },
+    "search": "Mencari",
+    "freeCheck": "Cek Gratis"
+  },
+  "MobileTab": {
+    "home": "Beranda",
+    "services": "Layanan",
+    "blog": "Blog",
+    "contact": "Kontak"
+  },
+  "CTA": {
+    "ctaTitle": "Butuh Layanan Ini?",
+    "ctaSubtitle": "Dapatkan penilaian kepatuhan gratis yang disesuaikan dengan produk Anda.",
+    "ctaUrgency": "Konsultasi gratis → Respon 24 jam",
+    "ctaButton": "Dapatkan Penilaian Gratis"
+  },
+  "ContactForm": {
+    "title": "Penilaian Kepatuhan Gratis",
+    "subtitle": "Beri tahu kami tentang produk Anda dan kami akan memberikan peta jalan kepatuhan yang dipersonalisasi.",
+    "emailLabel": "Email Bisnis",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "Pesan (opsional)",
+    "messagePlaceholder": "Jelaskan produk atau kebutuhan kepatuhan Anda...",
+    "button": "Kirim Penilaian Gratis",
+    "privacy": "Kami menghormati privasi Anda. Tidak pernah ada spam."
+  },
+  "breadcrumb": {
+    "home": "Beranda",
+    "services": "Layanan",
+    "blog": "Blog",
+    "industries": "Industri",
+    "packages": "Paket",
+    "faq": "FAQ"
   }
 }

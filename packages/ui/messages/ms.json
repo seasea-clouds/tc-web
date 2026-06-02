@@ -31,5 +31,70 @@
       "blog": "Blog",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "Rumah",
+    "about": "Tentang",
+    "services": "Perkhidmatan",
+    "servicesDropdown": {
+      "gacc": "Pendaftaran Makanan GACC",
+      "label": "Pematuhan Label Cina",
+      "ccc": "Pensijilan CCC",
+      "cosmetics": "Pemfailan Kosmetik (NMPA)",
+      "ecommerce": "E-dagang rentas sempadan",
+      "brand": "Perlindungan Jenama"
+    },
+    "packages": "Pakej",
+    "faq": "Soalan Lazim",
+    "blog": "Wawasan",
+    "contact": "Hubungi Kami",
+    "whatsapp": "WhatsApp",
+    "quote": "Dapatkan Sebut Harga",
+    "industries": "industri",
+    "industriesDropdown": {
+      "dairymilkproducts": "Produk tenusu & Susu",
+      "meatseafood": "Daging & Makanan Laut",
+      "winespirits": "Wain & Spirits",
+      "skincarecosmetics": "Penjagaan kulit & Kosmetik",
+      "petfood": "Makanan Haiwan Kesayangan",
+      "healthsupplements": "Makanan Tambahan Kesihatan",
+      "babymaternal": "Bayi & Ibu",
+      "consumerelectronics": "Elektronik Pengguna",
+      "medicaldevices": "Peranti Perubatan",
+      "crossborderecommerce": "E-dagang rentas sempadan"
+    },
+    "search": "Cari",
+    "freeCheck": "Cek Percuma"
+  },
+  "MobileTab": {
+    "home": "Laman Utama",
+    "services": "Perkhidmatan",
+    "blog": "Blog",
+    "contact": "Hubungi"
+  },
+  "CTA": {
+    "ctaTitle": "Perlukan Perkhidmatan Ini?",
+    "ctaSubtitle": "Dapatkan penilaian pematuhan percuma yang disesuaikan dengan produk anda.",
+    "ctaUrgency": "Konsultasi percuma → Respons 24 jam",
+    "ctaButton": "Dapatkan Penilaian Percuma"
+  },
+  "ContactForm": {
+    "title": "Penilaian Pematuhan Percuma",
+    "subtitle": "Beritahu kami tentang produk anda dan kami akan menyediakan peta jalan pematuhan yang diperibadikan.",
+    "emailLabel": "E-mel Perniagaan",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "Mesej (pilihan)",
+    "messagePlaceholder": "Terangkan produk atau keperluan pematuhan anda...",
+    "button": "Hantar Penilaian Percuma",
+    "privacy": "Kami menghormati privasi anda. Tiada spam, pernah."
+  },
+  "breadcrumb": {
+    "home": "Laman Utama",
+    "services": "Perkhidmatan",
+    "blog": "Blog",
+    "industries": "industri",
+    "packages": "Pakej",
+    "faq": "FAQ"
   }
 }

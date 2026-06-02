@@ -31,5 +31,70 @@
       "blog": "Blog",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "servicesDropdown": {
+      "gacc": "GACC Food Registration",
+      "label": "Chinese Label Compliance",
+      "ccc": "CCC Certification",
+      "cosmetics": "Cosmetics Filing (NMPA)",
+      "ecommerce": "Cross-border E-commerce",
+      "brand": "Brand Protection"
+    },
+    "packages": "Packages",
+    "faq": "FAQ",
+    "blog": "Insights",
+    "contact": "Contact Us",
+    "whatsapp": "WhatsApp",
+    "quote": "Get a Quote",
+    "industries": "Industries",
+    "industriesDropdown": {
+      "dairymilkproducts": "Dairy & Milk Products",
+      "meatseafood": "Meat & Seafood",
+      "winespirits": "Wine & Spirits",
+      "skincarecosmetics": "Skincare & Cosmetics",
+      "petfood": "Pet Food",
+      "healthsupplements": "Health Supplements",
+      "babymaternal": "Baby & Maternal",
+      "consumerelectronics": "Consumer Electronics",
+      "medicaldevices": "Medical Devices",
+      "crossborderecommerce": "Cross-border E-commerce"
+    },
+    "search": "Search",
+    "freeCheck": "Free Check"
+  },
+  "MobileTab": {
+    "home": "Home",
+    "services": "Services",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "CTA": {
+    "ctaTitle": "Need This Service?",
+    "ctaSubtitle": "Get a free compliance assessment tailored to your products.",
+    "ctaUrgency": "Free consultation → 24h response",
+    "ctaButton": "Get Free Assessment"
+  },
+  "ContactForm": {
+    "title": "Free Compliance Assessment",
+    "subtitle": "Tell us about your products and we'll provide a personalized compliance roadmap.",
+    "emailLabel": "Business Email",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "Message (optional)",
+    "messagePlaceholder": "Describe your products or compliance needs...",
+    "button": "Submit Free Assessment",
+    "privacy": "We respect your privacy. No spam, ever."
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "services": "Services",
+    "blog": "Blog",
+    "industries": "Industries",
+    "packages": "Packages",
+    "faq": "FAQ"
   }
 }

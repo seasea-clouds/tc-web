@@ -31,5 +31,70 @@
       "blog": "Blog",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "Domů",
+    "about": "O nás",
+    "services": "Služby",
+    "servicesDropdown": {
+      "gacc": "Registrace potravin GACC",
+      "label": "Soulad s čínskými štítky",
+      "ccc": "Certifikace CCC",
+      "cosmetics": "Kosmetický pilník (NMPA)",
+      "ecommerce": "Přeshraniční elektronický obchod",
+      "brand": "Ochrana značky"
+    },
+    "packages": "Balíčky",
+    "faq": "FAQ",
+    "blog": "Postřehy",
+    "contact": "Kontaktujte nás",
+    "whatsapp": "WhatsApp",
+    "quote": "Získejte cenovou nabídku",
+    "industries": "Průmyslová odvětví",
+    "industriesDropdown": {
+      "dairymilkproducts": "Mléčné a mléčné výrobky",
+      "meatseafood": "Maso a mořské plody",
+      "winespirits": "Víno a lihoviny",
+      "skincarecosmetics": "Péče o pleť a kosmetika",
+      "petfood": "Krmivo pro domácí mazlíčky",
+      "healthsupplements": "Zdravotní doplňky",
+      "babymaternal": "Dítě & Mateřská",
+      "consumerelectronics": "Spotřební elektronika",
+      "medicaldevices": "Lékařská zařízení",
+      "crossborderecommerce": "Přeshraniční elektronický obchod"
+    },
+    "search": "Vyhledávání",
+    "freeCheck": "Kontrola zdarma"
+  },
+  "MobileTab": {
+    "home": "Domů",
+    "services": "Služby",
+    "blog": "Blog",
+    "contact": "Kontakt"
+  },
+  "CTA": {
+    "ctaTitle": "Potřebujete tuto službu?",
+    "ctaSubtitle": "Získejte zdarma posouzení shody přizpůsobené vašim produktům.",
+    "ctaUrgency": "Konzultace zdarma → odpověď 24h",
+    "ctaButton": "Získejte bezplatné hodnocení"
+  },
+  "ContactForm": {
+    "title": "Bezplatné posouzení souladu",
+    "subtitle": "Řekněte nám o svých produktech a my vám poskytneme personalizovaný plán shody.",
+    "emailLabel": "Obchodní e-mail",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "Zpráva (volitelné)",
+    "messagePlaceholder": "Popište své produkty nebo potřeby shody...",
+    "button": "Odeslat bezplatné hodnocení",
+    "privacy": "Respektujeme vaše soukromí. Nikdy žádný spam."
+  },
+  "breadcrumb": {
+    "home": "Domovská stránka",
+    "services": "Služby",
+    "blog": "Blog",
+    "industries": "Průmyslová odvětví",
+    "packages": "Balíčky",
+    "faq": "FAQ"
   }
 }

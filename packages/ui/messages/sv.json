@@ -31,5 +31,70 @@
       "blog": "Blogg",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "Hem",
+    "about": "Om oss",
+    "services": "Tjänster",
+    "servicesDropdown": {
+      "gacc": "GACC Food Registration",
+      "label": "Efterlevnad av kinesiska etiketter",
+      "ccc": "CCC-certifiering",
+      "cosmetics": "Kosmetikaarkivering (NMPA)",
+      "ecommerce": "Gränsöverskridande e-handel",
+      "brand": "Varumärkesskydd"
+    },
+    "packages": "Paket",
+    "faq": "FAQ",
+    "blog": "Insikter",
+    "contact": "Kontakta oss",
+    "whatsapp": "WhatsApp",
+    "quote": "Få en offert",
+    "industries": "industrier",
+    "industriesDropdown": {
+      "dairymilkproducts": "Mejeri- och mjölkprodukter",
+      "meatseafood": "Kött & Skaldjur",
+      "winespirits": "Vin & Sprit",
+      "skincarecosmetics": "Hudvård & Kosmetika",
+      "petfood": "Djurmat",
+      "healthsupplements": "Hälsotillskott",
+      "babymaternal": "Baby & Maternal",
+      "consumerelectronics": "Konsumentelektronik",
+      "medicaldevices": "Medicinsk utrustning",
+      "crossborderecommerce": "Gränsöverskridande e-handel"
+    },
+    "search": "Söka",
+    "freeCheck": "Gratis check"
+  },
+  "MobileTab": {
+    "home": "Hem",
+    "services": "Tjänster",
+    "blog": "Blogg",
+    "contact": "Kontakt"
+  },
+  "CTA": {
+    "ctaTitle": "Behöver du den här tjänsten?",
+    "ctaSubtitle": "Få en kostnadsfri efterlevnadsbedömning skräddarsydd för dina produkter.",
+    "ctaUrgency": "Gratis konsultation → 24h svar",
+    "ctaButton": "Få gratis bedömning"
+  },
+  "ContactForm": {
+    "title": "Gratis efterlevnadsbedömning",
+    "subtitle": "Berätta för oss om dina produkter så tillhandahåller vi en personlig färdplan för efterlevnad.",
+    "emailLabel": "Företags e-post",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "Meddelande (valfritt)",
+    "messagePlaceholder": "Beskriv dina produkter eller efterlevnadsbehov...",
+    "button": "Skicka in gratis bedömning",
+    "privacy": "Vi respekterar din integritet. Ingen spam, någonsin."
+  },
+  "breadcrumb": {
+    "home": "Hem",
+    "services": "Tjänster",
+    "blog": "Blogg",
+    "industries": "industrier",
+    "packages": "Paket",
+    "faq": "FAQ"
   }
 }

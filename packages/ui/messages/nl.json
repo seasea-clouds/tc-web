@@ -31,5 +31,70 @@
       "blog": "Bloggen",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "Thuis",
+    "about": "Over",
+    "services": "Diensten",
+    "servicesDropdown": {
+      "gacc": "GACC-voedselregistratie",
+      "label": "Naleving van Chinese labels",
+      "ccc": "CCC-certificering",
+      "cosmetics": "Cosmetica-aanvraag (NMPA)",
+      "ecommerce": "Grensoverschrijdende e-commerce",
+      "brand": "Merkbescherming"
+    },
+    "packages": "Pakketten",
+    "faq": "Veelgestelde vragen",
+    "blog": "Blog",
+    "contact": "Neem contact met ons op",
+    "whatsapp": "WhatsAppen",
+    "quote": "Ontvang een offerte",
+    "industries": "Industrieën",
+    "industriesDropdown": {
+      "dairymilkproducts": "Zuivel- en melkproducten",
+      "meatseafood": "Vlees en zeevruchten",
+      "winespirits": "Wijn en sterke drank",
+      "skincarecosmetics": "Huidverzorging en cosmetica",
+      "petfood": "Voedsel voor huisdieren",
+      "healthsupplements": "Gezondheidssupplementen",
+      "babymaternal": "Baby en moeder",
+      "consumerelectronics": "Consumentenelektronica",
+      "medicaldevices": "Medische apparaten",
+      "crossborderecommerce": "Grensoverschrijdende e-commerce"
+    },
+    "search": "Zoekopdracht",
+    "freeCheck": "Gratis cheque"
+  },
+  "MobileTab": {
+    "home": "Thuis",
+    "services": "Diensten",
+    "blog": "Bloggen",
+    "contact": "Contact"
+  },
+  "CTA": {
+    "ctaTitle": "Deze dienst nodig?",
+    "ctaSubtitle": "Ontvang een gratis nalevingsbeoordeling op maat van uw producten.",
+    "ctaUrgency": "Gratis advies → 24-uurs reactie",
+    "ctaButton": "Ontvang een gratis beoordeling"
+  },
+  "ContactForm": {
+    "title": "Gratis nalevingsbeoordeling",
+    "subtitle": "Vertel ons over uw producten en wij zorgen voor een gepersonaliseerde compliance-roadmap.",
+    "emailLabel": "Zakelijke e-mail",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "Bericht (optioneel)",
+    "messagePlaceholder": "Beschrijf uw producten of nalevingsbehoeften...",
+    "button": "Dien een gratis beoordeling in",
+    "privacy": "Wij respecteren uw privacy. Geen spam, nooit."
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "services": "Diensten",
+    "blog": "Bloggen",
+    "industries": "Industrieën",
+    "packages": "Pakketten",
+    "faq": "FAQ"
   }
 }

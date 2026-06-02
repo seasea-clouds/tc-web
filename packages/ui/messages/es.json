@@ -31,5 +31,70 @@
       "blog": "Blog",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "Hogar",
+    "about": "Acerca de",
+    "services": "Servicios",
+    "servicesDropdown": {
+      "gacc": "Registro de Alimentos GACC",
+      "label": "Cumplimiento de la etiqueta china",
+      "ccc": "Certificación CCC",
+      "cosmetics": "Presentación de cosméticos (NMPA)",
+      "ecommerce": "Comercio electrónico transfronterizo",
+      "brand": "Protección de marca"
+    },
+    "packages": "Paquetes",
+    "faq": "Preguntas frecuentes",
+    "blog": "Perspectivas",
+    "contact": "Contáctenos",
+    "whatsapp": "WhatsApp",
+    "quote": "Obtenga una cotización",
+    "industries": "Industrias",
+    "industriesDropdown": {
+      "dairymilkproducts": "Productos lácteos y lácteos",
+      "meatseafood": "Carnes y Mariscos",
+      "winespirits": "Vinos y licores",
+      "skincarecosmetics": "Cuidado de la piel y cosméticos",
+      "petfood": "Comida para mascotas",
+      "healthsupplements": "Suplementos de salud",
+      "babymaternal": "Bebé y Materna",
+      "consumerelectronics": "Electrónica de Consumo",
+      "medicaldevices": "Dispositivos médicos",
+      "crossborderecommerce": "Comercio electrónico transfronterizo"
+    },
+    "search": "Buscar",
+    "freeCheck": "Cheque Gratis"
+  },
+  "MobileTab": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "blog": "Blog",
+    "contact": "Contacto"
+  },
+  "CTA": {
+    "ctaTitle": "¿Necesita este servicio?",
+    "ctaSubtitle": "Obtenga una evaluación de cumplimiento gratuita adaptada a sus productos.",
+    "ctaUrgency": "Consulta gratuita → Respuesta 24h",
+    "ctaButton": "Obtenga una evaluación gratuita"
+  },
+  "ContactForm": {
+    "title": "Evaluación de cumplimiento gratuita",
+    "subtitle": "Cuéntenos sobre sus productos y le proporcionaremos una hoja de ruta de cumplimiento personalizada.",
+    "emailLabel": "Correo electrónico empresarial",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "Mensaje (opcional)",
+    "messagePlaceholder": "Describa sus productos o necesidades de cumplimiento...",
+    "button": "Envíe una evaluación gratuita",
+    "privacy": "Respetamos su privacidad. Nada de spam, nunca."
+  },
+  "breadcrumb": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "blog": "Blog",
+    "industries": "Industrias",
+    "packages": "Paquetes",
+    "faq": "FAQ"
   }
 }

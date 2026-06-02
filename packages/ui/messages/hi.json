@@ -31,5 +31,70 @@
       "blog": "ब्लॉग",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "होम",
+    "about": "के बारे में",
+    "services": "सेवाएं",
+    "servicesDropdown": {
+      "gacc": "जीएसीसी खाद्य पंजीकरण",
+      "label": "चीनी लेबल अनुपालन",
+      "ccc": "सीसीसी प्रमाणीकरण",
+      "cosmetics": "कॉस्मेटिक्स फाइलिंग (एनएमपीए)",
+      "ecommerce": "सीमा पार ई-कॉमर्स",
+      "brand": "ब्रांड संरक्षण"
+    },
+    "packages": "संकुल",
+    "faq": "अक्सर पूछे जाने वाले प्रश्न",
+    "blog": "इनसाइट्स",
+    "contact": "हमसे संपर्क करें",
+    "whatsapp": "व्हाट्सएप",
+    "quote": "एक कहावत कहना",
+    "industries": "इंडस्ट्रीज",
+    "industriesDropdown": {
+      "dairymilkproducts": "डेयरी एवं दुग्ध उत्पाद",
+      "meatseafood": "मांस और समुद्री भोजन",
+      "winespirits": "शराब और स्प्रिट",
+      "skincarecosmetics": "त्वचा की देखभाल और सौंदर्य प्रसाधन",
+      "petfood": "पालतू भोजन",
+      "healthsupplements": "स्वास्थ्य अनुपूरक",
+      "babymaternal": "शिशु एवं मातृ",
+      "consumerelectronics": "उपभोक्ता इलेक्ट्रॉनिक्स",
+      "medicaldevices": "चिकित्सा उपकरण",
+      "crossborderecommerce": "सीमा पार ई-कॉमर्स"
+    },
+    "search": "खोज",
+    "freeCheck": "निःशुल्क जांच"
+  },
+  "MobileTab": {
+    "home": "होम",
+    "services": "सेवाएं",
+    "blog": "ब्लॉग",
+    "contact": "संपर्क"
+  },
+  "CTA": {
+    "ctaTitle": "इस सेवा की आवश्यकता है?",
+    "ctaSubtitle": "अपने उत्पादों के अनुरूप निःशुल्क अनुपालन मूल्यांकन प्राप्त करें।",
+    "ctaUrgency": "निःशुल्क परामर्श → 24 घंटे प्रतिक्रिया",
+    "ctaButton": "निःशुल्क मूल्यांकन प्राप्त करें"
+  },
+  "ContactForm": {
+    "title": "निःशुल्क अनुपालन मूल्यांकन",
+    "subtitle": "हमें अपने उत्पादों के बारे में बताएं और हम एक वैयक्तिकृत अनुपालन रोडमैप प्रदान करेंगे।",
+    "emailLabel": "बिजनेस ईमेल",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "संदेश (वैकल्पिक)",
+    "messagePlaceholder": "अपने उत्पादों या अनुपालन आवश्यकताओं का वर्णन करें...",
+    "button": "निःशुल्क मूल्यांकन जमा करें",
+    "privacy": "हम आपकी निजता का सम्मान करते हैं. कोई स्पैम, कभी नहीं."
+  },
+  "breadcrumb": {
+    "home": "होम",
+    "services": "सेवाएं",
+    "blog": "ब्लॉग",
+    "industries": "इंडस्ट्रीज",
+    "packages": "संकुल",
+    "faq": "FAQ"
   }
 }

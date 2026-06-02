@@ -31,5 +31,70 @@
       "blog": "Blog",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "Početna",
+    "about": "Oko",
+    "services": "Usluge",
+    "servicesDropdown": {
+      "gacc": "GACC Registracija hrane",
+      "label": "Sukladnost kineskih oznaka",
+      "ccc": "CCC certifikat",
+      "cosmetics": "Kozmetička dokumentacija (NMPA)",
+      "ecommerce": "Prekogranična e-trgovina",
+      "brand": "Zaštita marke"
+    },
+    "packages": "Paketi",
+    "faq": "FAQ",
+    "blog": "Uvidi",
+    "contact": "Kontaktirajte nas",
+    "whatsapp": "WhatsApp",
+    "quote": "Zatražite ponudu",
+    "industries": "Industrije",
+    "industriesDropdown": {
+      "dairymilkproducts": "Mliječni i mliječni proizvodi",
+      "meatseafood": "Meso i morski plodovi",
+      "winespirits": "Vino i alkoholna pića",
+      "skincarecosmetics": "Njega kože i kozmetika",
+      "petfood": "Hrana za kućne ljubimce",
+      "healthsupplements": "Zdravstveni dodaci",
+      "babymaternal": "Beba i majka",
+      "consumerelectronics": "Potrošačka elektronika",
+      "medicaldevices": "Medicinski uređaji",
+      "crossborderecommerce": "Prekogranična e-trgovina"
+    },
+    "search": "Pretraživanje",
+    "freeCheck": "Besplatni ček"
+  },
+  "MobileTab": {
+    "home": "Početna",
+    "services": "Usluge",
+    "blog": "Blog",
+    "contact": "Kontakt"
+  },
+  "CTA": {
+    "ctaTitle": "Trebate ovu uslugu?",
+    "ctaSubtitle": "Dobijte besplatnu procjenu usklađenosti prilagođenu vašim proizvodima.",
+    "ctaUrgency": "Besplatne konzultacije → odgovor 24h",
+    "ctaButton": "Dobijte besplatnu procjenu"
+  },
+  "ContactForm": {
+    "title": "Besplatna procjena usklađenosti",
+    "subtitle": "Recite nam nešto o svojim proizvodima i pružit ćemo vam personalizirani plan usklađenosti.",
+    "emailLabel": "Poslovna e-pošta",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "Poruka (nije obavezno)",
+    "messagePlaceholder": "Opišite svoje proizvode ili potrebe za usklađenošću...",
+    "button": "Predajte besplatnu procjenu",
+    "privacy": "Poštujemo Vašu privatnost. Nema spama, nikad."
+  },
+  "breadcrumb": {
+    "home": "Početna",
+    "services": "Usluge",
+    "blog": "Blog",
+    "industries": "Industrije",
+    "packages": "Paketi",
+    "faq": "FAQ"
   }
 }

@@ -31,5 +31,70 @@
       "blog": "Blog",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "Kezdőlap",
+    "about": "Körülbelül",
+    "services": "Szolgáltatások",
+    "servicesDropdown": {
+      "gacc": "GACC élelmiszer regisztráció",
+      "label": "A kínai címkék megfelelősége",
+      "ccc": "CCC tanúsítás",
+      "cosmetics": "Kozmetikai reszelő (NMPA)",
+      "ecommerce": "Határokon átnyúló e-kereskedelem",
+      "brand": "Márkavédelem"
+    },
+    "packages": "Csomagok",
+    "faq": "GYIK",
+    "blog": "Insights",
+    "contact": "Lépjen kapcsolatba velünk",
+    "whatsapp": "WhatsApp",
+    "quote": "Kérjen árajánlatot",
+    "industries": "Iparágak",
+    "industriesDropdown": {
+      "dairymilkproducts": "Tej- és tejtermékek",
+      "meatseafood": "Hús és tenger gyümölcsei",
+      "winespirits": "Bor és szeszes italok",
+      "skincarecosmetics": "Bőrápolás és kozmetika",
+      "petfood": "Állateledel",
+      "healthsupplements": "Egészség-kiegészítők",
+      "babymaternal": "Baba és anya",
+      "consumerelectronics": "Szórakoztató elektronika",
+      "medicaldevices": "Orvosi eszközök",
+      "crossborderecommerce": "Határokon átnyúló e-kereskedelem"
+    },
+    "search": "Keresés",
+    "freeCheck": "Ingyenes csekk"
+  },
+  "MobileTab": {
+    "home": "Kezdőlap",
+    "services": "Szolgáltatások",
+    "blog": "Blog",
+    "contact": "Kapcsolat"
+  },
+  "CTA": {
+    "ctaTitle": "Szüksége van erre a szolgáltatásra?",
+    "ctaSubtitle": "Kérjen ingyenes megfelelőségi értékelést a termékeire szabva.",
+    "ctaUrgency": "Ingyenes konzultáció → 24 órás válaszadás",
+    "ctaButton": "Kérjen ingyenes értékelést"
+  },
+  "ContactForm": {
+    "title": "Ingyenes megfelelőségi értékelés",
+    "subtitle": "Meséljen nekünk termékeiről, és mi személyre szabott megfelelőségi ütemtervet készítünk.",
+    "emailLabel": "Üzleti e-mail",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "Üzenet (nem kötelező)",
+    "messagePlaceholder": "Ismertesse termékeit vagy megfelelőségi igényeit...",
+    "button": "Ingyenes értékelés benyújtása",
+    "privacy": "Tiszteletben tartjuk a magánéletét. Semmi spam, soha."
+  },
+  "breadcrumb": {
+    "home": "Kezdőlap",
+    "services": "Szolgáltatások",
+    "blog": "Blog",
+    "industries": "Iparágak",
+    "packages": "Csomagok",
+    "faq": "FAQ"
   }
 }

@@ -31,5 +31,70 @@
       "blog": "Blogi",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "Kotiin",
+    "about": "Noin",
+    "services": "Palvelut",
+    "servicesDropdown": {
+      "gacc": "GACC-elintarvikkeiden rekisteröinti",
+      "label": "Kiinan etikettien noudattaminen",
+      "ccc": "CCC-sertifiointi",
+      "cosmetics": "Kosmetiikkaviilaus (NMPA)",
+      "ecommerce": "Rajat ylittävä sähköinen kaupankäynti",
+      "brand": "Brändin suojaus"
+    },
+    "packages": "Paketit",
+    "faq": "FAQ",
+    "blog": "Näkemyksiä",
+    "contact": "Ota yhteyttä",
+    "whatsapp": "WhatsApp",
+    "quote": "Pyydä tarjous",
+    "industries": "Toimialat",
+    "industriesDropdown": {
+      "dairymilkproducts": "Maito- ja maitotuotteet",
+      "meatseafood": "Liha ja äyriäiset",
+      "winespirits": "Viini & Väkevät alkoholijuomat",
+      "skincarecosmetics": "Ihonhoito & Kosmetiikka",
+      "petfood": "Lemmikkieläinten ruoka",
+      "healthsupplements": "Terveyslisät",
+      "babymaternal": "Vauva & Äiti",
+      "consumerelectronics": "Kuluttajaelektroniikka",
+      "medicaldevices": "Lääketieteelliset laitteet",
+      "crossborderecommerce": "Rajat ylittävä sähköinen kaupankäynti"
+    },
+    "search": "Haku",
+    "freeCheck": "Ilmainen sekki"
+  },
+  "MobileTab": {
+    "home": "Etusivu",
+    "services": "Palvelut",
+    "blog": "Blogi",
+    "contact": "Yhteystiedot"
+  },
+  "CTA": {
+    "ctaTitle": "Tarvitsetko tätä palvelua?",
+    "ctaSubtitle": "Hanki ilmainen vaatimustenmukaisuusarviointi, joka on räätälöity tuotteillesi.",
+    "ctaUrgency": "Ilmainen konsultaatio → 24h vastaus",
+    "ctaButton": "Hanki ilmainen arviointi"
+  },
+  "ContactForm": {
+    "title": "Ilmainen vaatimustenmukaisuuden arviointi",
+    "subtitle": "Kerro meille tuotteistasi, niin annamme sinulle henkilökohtaisen vaatimustenmukaisuussuunnitelman.",
+    "emailLabel": "Yrityksen sähköposti",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "Viesti (valinnainen)",
+    "messagePlaceholder": "Kuvaile tuotteesi tai vaatimustenmukaisuustarpeesi...",
+    "button": "Lähetä ilmainen arvio",
+    "privacy": "Kunnioitamme yksityisyyttäsi. Ei roskapostia, koskaan."
+  },
+  "breadcrumb": {
+    "home": "Etusivu",
+    "services": "Palvelut",
+    "blog": "Blogi",
+    "industries": "Toimialat",
+    "packages": "Paketit",
+    "faq": "FAQ"
   }
 }

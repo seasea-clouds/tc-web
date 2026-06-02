@@ -31,5 +31,70 @@
       "blog": "බ්ලොගය",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "මුල් පිටුව",
+    "about": "ගැන",
+    "services": "සේවා",
+    "servicesDropdown": {
+      "gacc": "GACC ආහාර ලියාපදිංචි කිරීම",
+      "label": "චීන ලේබල් අනුකූලතාව",
+      "ccc": "CCC සහතිකය",
+      "cosmetics": "විලවුන් ගොනු කිරීම (NMPA)",
+      "ecommerce": "දේශසීමා හරහා ඊ-වාණිජ්‍ය",
+      "brand": "වෙළඳ නාම ආරක්ෂණය"
+    },
+    "packages": "පැකේජ",
+    "faq": "නිතර අසන පැන",
+    "blog": "තීක්ෂ්ණ බුද්ධිය",
+    "contact": "අපව අමතන්න",
+    "whatsapp": "WhatsApp",
+    "quote": "උපුටා ගැනීමක් ලබා ගන්න",
+    "industries": "කර්මාන්ත",
+    "industriesDropdown": {
+      "dairymilkproducts": "කිරි සහ කිරි නිෂ්පාදන",
+      "meatseafood": "මස් සහ මුහුදු ආහාර",
+      "winespirits": "වයින් සහ ස්ප්රීතු",
+      "skincarecosmetics": "සම රැකවරණය සහ ආලේපන",
+      "petfood": "සුරතල් ආහාර",
+      "healthsupplements": "සෞඛ්ය අතිරේක",
+      "babymaternal": "ළදරු සහ මාතෘ",
+      "consumerelectronics": "පාරිභෝගික ඉලෙක්ට්රොනික උපකරණ",
+      "medicaldevices": "වෛද්ය උපකරණ",
+      "crossborderecommerce": "දේශසීමා හරහා ඊ-වාණිජ්‍ය"
+    },
+    "search": "සොයන්න",
+    "freeCheck": "නොමිලේ චෙක්පත"
+  },
+  "MobileTab": {
+    "home": "මුල් පිටුව",
+    "services": "සේවා",
+    "blog": "බ්ලොගය",
+    "contact": "සම්බන්ධ වන්න"
+  },
+  "CTA": {
+    "ctaTitle": "මෙම සේවාව අවශ්‍යද?",
+    "ctaSubtitle": "ඔබගේ නිෂ්පාදන වලට ගැලපෙන අනුකූලතා තක්සේරුවක් නොමිලේ ලබා ගන්න.",
+    "ctaUrgency": "නොමිලේ උපදේශනය → පැය 24 ප්‍රතිචාරය",
+    "ctaButton": "නොමිලේ තක්සේරුව ලබා ගන්න"
+  },
+  "ContactForm": {
+    "title": "නොමිලේ අනුකූලතා තක්සේරුව",
+    "subtitle": "ඔබේ නිෂ්පාදන ගැන අපට කියන්න, අපි පෞද්ගලීකරණය කළ අනුකූලතා මාර්ග සිතියමක් සපයන්නෙමු.",
+    "emailLabel": "ව්යාපාරික ඊමේල්",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "පණිවිඩය (විකල්ප)",
+    "messagePlaceholder": "ඔබේ නිෂ්පාදන හෝ අනුකූලතා අවශ්‍යතා විස්තර කරන්න...",
+    "button": "නොමිලේ තක්සේරුව ඉදිරිපත් කරන්න",
+    "privacy": "අපි ඔබගේ පෞද්ගලිකත්වයට ගරු කරමු. අයාචිත තැපැල් නැත, කිසිදා."
+  },
+  "breadcrumb": {
+    "home": "මුල් පිටුව",
+    "services": "සේවා",
+    "blog": "බ්ලොගය",
+    "industries": "කර්මාන්ත",
+    "packages": "පැකේජ",
+    "faq": "FAQ"
   }
 }

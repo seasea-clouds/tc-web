@@ -31,5 +31,70 @@
       "blog": "Blog",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "Kryefaqja",
+    "about": "Rreth",
+    "services": "Shërbimet",
+    "servicesDropdown": {
+      "gacc": "Regjistrimi i Ushqimit GACC",
+      "label": "Pajtueshmëria me etiketën kineze",
+      "ccc": "Certifikimi CCC",
+      "cosmetics": "Regjistrimi i kozmetikës (NMPA)",
+      "ecommerce": "E-commerce ndërkufitare",
+      "brand": "Mbrojtja e markës"
+    },
+    "packages": "Paketat",
+    "faq": "FAQ",
+    "blog": "Vështrime",
+    "contact": "Na kontaktoni",
+    "whatsapp": "WhatsApp",
+    "quote": "Merrni një kuotë",
+    "industries": "Industritë",
+    "industriesDropdown": {
+      "dairymilkproducts": "Qumësht dhe produkte qumështi",
+      "meatseafood": "Mish dhe fruta deti",
+      "winespirits": "Verë & Spirits",
+      "skincarecosmetics": "Kujdesi për lëkurën dhe Kozmetikën",
+      "petfood": "Ushqimi për kafshët shtëpiake",
+      "healthsupplements": "Suplemente Shëndetësore",
+      "babymaternal": "Foshnja & Nënë",
+      "consumerelectronics": "Elektronikë Konsumatore",
+      "medicaldevices": "Pajisjet Mjekësore",
+      "crossborderecommerce": "E-commerce ndërkufitare"
+    },
+    "search": "Kërko",
+    "freeCheck": "Kontroll falas"
+  },
+  "MobileTab": {
+    "home": "Kryefaqja",
+    "services": "Shërbime",
+    "blog": "Blog",
+    "contact": "Kontakt"
+  },
+  "CTA": {
+    "ctaTitle": "Keni nevojë për këtë shërbim?",
+    "ctaSubtitle": "Merrni një vlerësim të pajtueshmërisë falas të përshtatur për produktet tuaja.",
+    "ctaUrgency": "Konsultim falas → Përgjigje 24 orë",
+    "ctaButton": "Merrni vlerësim falas"
+  },
+  "ContactForm": {
+    "title": "Vlerësimi Falas i Përputhshmërisë",
+    "subtitle": "Na tregoni për produktet tuaja dhe ne do të ofrojmë një udhërrëfyes të personalizuar të pajtueshmërisë.",
+    "emailLabel": "Email biznesi",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "Mesazh (opsionale)",
+    "messagePlaceholder": "Përshkruani produktet tuaja ose nevojat e pajtueshmërisë...",
+    "button": "Paraqisni një vlerësim falas",
+    "privacy": "Ne e respektojmë privatësinë tuaj. Asnjë spam, kurrë."
+  },
+  "breadcrumb": {
+    "home": "Ballina",
+    "services": "Shërbime",
+    "blog": "Blog",
+    "industries": "Industritë",
+    "packages": "Paketat",
+    "faq": "FAQ"
   }
 }

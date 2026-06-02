@@ -31,5 +31,70 @@
       "blog": "Blogg",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "Hjem",
+    "about": "Om oss",
+    "services": "Tjenester",
+    "servicesDropdown": {
+      "gacc": "GACC matregistrering",
+      "label": "Overholdelse av kinesisk etikett",
+      "ccc": "CCC-sertifisering",
+      "cosmetics": "Kosmetikkarkivering (NMPA)",
+      "ecommerce": "E-handel på tvers av landegrensene",
+      "brand": "Merkebeskyttelse"
+    },
+    "packages": "Pakker",
+    "faq": "FAQ",
+    "blog": "Blogg",
+    "contact": "Kontakt oss",
+    "whatsapp": "WhatsApp",
+    "quote": "Få et tilbud",
+    "industries": "Industrier",
+    "industriesDropdown": {
+      "dairymilkproducts": "Meieri- og melkeprodukter",
+      "meatseafood": "Kjøtt og sjømat",
+      "winespirits": "Vin og brennevin",
+      "skincarecosmetics": "Hudpleie og kosmetikk",
+      "petfood": "Dyremat",
+      "healthsupplements": "Helse kosttilskudd",
+      "babymaternal": "Baby og mor",
+      "consumerelectronics": "Forbrukerelektronikk",
+      "medicaldevices": "Medisinsk utstyr",
+      "crossborderecommerce": "E-handel på tvers av landegrensene"
+    },
+    "search": "Søk",
+    "freeCheck": "Gratis sjekk"
+  },
+  "MobileTab": {
+    "home": "Hjem",
+    "services": "Tjenester",
+    "blog": "Blogg",
+    "contact": "Kontakt"
+  },
+  "CTA": {
+    "ctaTitle": "Trenger du denne tjenesten?",
+    "ctaSubtitle": "Få en gratis samsvarsvurdering skreddersydd for produktene dine.",
+    "ctaUrgency": "Gratis konsultasjon → 24 timers svar",
+    "ctaButton": "Få gratis vurdering"
+  },
+  "ContactForm": {
+    "title": "Gratis samsvarsvurdering",
+    "subtitle": "Fortell oss om produktene dine, så gir vi et personlig veikart for samsvar.",
+    "emailLabel": "Bedrifts-e-post",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "Melding (valgfritt)",
+    "messagePlaceholder": "Beskriv dine produkter eller samsvarsbehov...",
+    "button": "Send inn gratis vurdering",
+    "privacy": "Vi respekterer ditt privatliv. Ingen spam, aldri."
+  },
+  "breadcrumb": {
+    "home": "Hjem",
+    "services": "Tjenester",
+    "blog": "Blogg",
+    "industries": "Industrier",
+    "packages": "Pakker",
+    "faq": "FAQ"
   }
 }

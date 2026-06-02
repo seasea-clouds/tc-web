@@ -31,5 +31,70 @@
       "blog": "Blog",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "Tuis",
+    "about": "Oor",
+    "services": "Dienste",
+    "servicesDropdown": {
+      "gacc": "GACC-voedselregistrasie",
+      "label": "Chinese etiket nakoming",
+      "ccc": "CCC Sertifisering",
+      "cosmetics": "Skoonheidsmiddelliassering (NMPA)",
+      "ecommerce": "Oorgrens e-handel",
+      "brand": "Handelsmerkbeskerming"
+    },
+    "packages": "Pakkette",
+    "faq": "Gereelde vrae",
+    "blog": "Insigte",
+    "contact": "Kontak ons",
+    "whatsapp": "WhatsApp",
+    "quote": "Kry 'n kwotasie",
+    "industries": "Nywerhede",
+    "industriesDropdown": {
+      "dairymilkproducts": "Suiwel & Melkprodukte",
+      "meatseafood": "Vleis & Seekos",
+      "winespirits": "Wyn & Spiritualieë",
+      "skincarecosmetics": "Velsorg & Skoonheidsmiddels",
+      "petfood": "Troeteldierkos",
+      "healthsupplements": "Gesondheidsaanvullings",
+      "babymaternal": "Baba & Moeder",
+      "consumerelectronics": "Verbruikerselektronika",
+      "medicaldevices": "Mediese toestelle",
+      "crossborderecommerce": "Oorgrens e-handel"
+    },
+    "search": "Soek",
+    "freeCheck": "Gratis Tjek"
+  },
+  "MobileTab": {
+    "home": "Tuis",
+    "services": "Dienste",
+    "blog": "Blog",
+    "contact": "Kontak"
+  },
+  "CTA": {
+    "ctaTitle": "Benodig hierdie diens?",
+    "ctaSubtitle": "Kry 'n gratis voldoeningsbeoordeling wat vir u produkte aangepas is.",
+    "ctaUrgency": "Gratis konsultasie → 24 uur reaksie",
+    "ctaButton": "Kry gratis assessering"
+  },
+  "ContactForm": {
+    "title": "Gratis Voldoeningsbeoordeling",
+    "subtitle": "Vertel ons van jou produkte en ons sal 'n persoonlike nakomingspadkaart verskaf.",
+    "emailLabel": "Besigheid e-pos",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "Boodskap (opsioneel)",
+    "messagePlaceholder": "Beskryf jou produkte of voldoeningsbehoeftes...",
+    "button": "Dien gratis assessering in",
+    "privacy": "Ons respekteer jou privaatheid. Geen strooipos, ooit nie."
+  },
+  "breadcrumb": {
+    "home": "Tuis",
+    "services": "Dienste",
+    "blog": "Blog",
+    "industries": "Nywerhede",
+    "packages": "Pakkette",
+    "faq": "FAQ"
   }
 }

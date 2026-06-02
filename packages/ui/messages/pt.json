@@ -31,5 +31,70 @@
       "blog": "Blogue",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "Lar",
+    "about": "Sobre",
+    "services": "Serviços",
+    "servicesDropdown": {
+      "gacc": "Registro de Alimentos GACC",
+      "label": "Conformidade com rótulo chinês",
+      "ccc": "Certificação CCC",
+      "cosmetics": "Arquivamento de Cosméticos (NMPA)",
+      "ecommerce": "Comércio eletrônico transfronteiriço",
+      "brand": "Proteção da marca"
+    },
+    "packages": "Pacotes",
+    "faq": "Perguntas frequentes",
+    "blog": "Percepções",
+    "contact": "Contate-nos",
+    "whatsapp": "WhatsApp",
+    "quote": "Obtenha uma cotação",
+    "industries": "Indústrias",
+    "industriesDropdown": {
+      "dairymilkproducts": "Laticínios e produtos lácteos",
+      "meatseafood": "Carne e Frutos do Mar",
+      "winespirits": "Vinho e destilados",
+      "skincarecosmetics": "Cuidados com a pele e cosméticos",
+      "petfood": "Alimentos para animais de estimação",
+      "healthsupplements": "Suplementos de saúde",
+      "babymaternal": "Bebê e Materno",
+      "consumerelectronics": "Eletrônicos de consumo",
+      "medicaldevices": "Dispositivos Médicos",
+      "crossborderecommerce": "Comércio eletrônico transfronteiriço"
+    },
+    "search": "Procurar",
+    "freeCheck": "Cheque grátis"
+  },
+  "MobileTab": {
+    "home": "Início",
+    "services": "Serviços",
+    "blog": "Blogue",
+    "contact": "Contato"
+  },
+  "CTA": {
+    "ctaTitle": "Precisa deste serviço?",
+    "ctaSubtitle": "Obtenha uma avaliação de conformidade gratuita e personalizada para seus produtos.",
+    "ctaUrgency": "Consulta gratuita → Resposta 24h",
+    "ctaButton": "Obtenha avaliação gratuita"
+  },
+  "ContactForm": {
+    "title": "Avaliação de conformidade gratuita",
+    "subtitle": "Conte-nos sobre seus produtos e forneceremos um roteiro de conformidade personalizado.",
+    "emailLabel": "E-mail comercial",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "Mensagem (opcional)",
+    "messagePlaceholder": "Descreva seus produtos ou necessidades de conformidade...",
+    "button": "Enviar avaliação gratuita",
+    "privacy": "Respeitamos sua privacidade. Nada de spam, nunca."
+  },
+  "breadcrumb": {
+    "home": "Início",
+    "services": "Serviços",
+    "blog": "Blogue",
+    "industries": "Indústrias",
+    "packages": "Pacotes",
+    "faq": "FAQ"
   }
 }

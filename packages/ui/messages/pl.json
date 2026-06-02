@@ -31,5 +31,70 @@
       "blog": "Bloga",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "Strona główna",
+    "about": "O nas",
+    "services": "Usługi",
+    "servicesDropdown": {
+      "gacc": "Rejestracja żywności GACC",
+      "label": "Zgodność z chińską etykietą",
+      "ccc": "Certyfikat CCC",
+      "cosmetics": "Archiwizacja kosmetyków (NMPA)",
+      "ecommerce": "Transgraniczny handel elektroniczny",
+      "brand": "Ochrona marki"
+    },
+    "packages": "Pakiety",
+    "faq": "Często zadawane pytania",
+    "blog": "Spostrzeżenia",
+    "contact": "Skontaktuj się z nami",
+    "whatsapp": "WhatsApp",
+    "quote": "Uzyskaj wycenę",
+    "industries": "Przemysły",
+    "industriesDropdown": {
+      "dairymilkproducts": "Nabiał i produkty mleczne",
+      "meatseafood": "Mięso i owoce morza",
+      "winespirits": "Wino i alkohole",
+      "skincarecosmetics": "Pielęgnacja skóry i kosmetyki",
+      "petfood": "Jedzenie dla zwierząt",
+      "healthsupplements": "Suplementy zdrowotne",
+      "babymaternal": "Dziecko i matka",
+      "consumerelectronics": "Elektronika użytkowa",
+      "medicaldevices": "Urządzenia medyczne",
+      "crossborderecommerce": "Transgraniczny handel elektroniczny"
+    },
+    "search": "Szukaj",
+    "freeCheck": "Bezpłatne sprawdzenie"
+  },
+  "MobileTab": {
+    "home": "Strona główna",
+    "services": "Usługi",
+    "blog": "Bloga",
+    "contact": "Kontakt"
+  },
+  "CTA": {
+    "ctaTitle": "Potrzebujesz tej usługi?",
+    "ctaSubtitle": "Uzyskaj bezpłatną ocenę zgodności dostosowaną do Twoich produktów.",
+    "ctaUrgency": "Bezpłatna konsultacja → Odpowiedź 24h",
+    "ctaButton": "Uzyskaj bezpłatną ocenę"
+  },
+  "ContactForm": {
+    "title": "Bezpłatna ocena zgodności",
+    "subtitle": "Opowiedz nam o swoich produktach, a my przedstawimy spersonalizowany plan działania dotyczący zgodności.",
+    "emailLabel": "Biznesowy e-mail",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "Wiadomość (opcjonalnie)",
+    "messagePlaceholder": "Opisz swoje produkty lub potrzeby w zakresie zgodności...",
+    "button": "Prześlij bezpłatną ocenę",
+    "privacy": "Szanujemy Twoją prywatność. Żadnego spamu, nigdy."
+  },
+  "breadcrumb": {
+    "home": "Strona główna",
+    "services": "Usługi",
+    "blog": "Bloga",
+    "industries": "Przemysły",
+    "packages": "Pakiety",
+    "faq": "FAQ"
   }
 }

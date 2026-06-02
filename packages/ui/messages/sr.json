@@ -31,5 +31,70 @@
       "blog": "Блог",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "Хоме",
+    "about": "Абоут",
+    "services": "Услуге",
+    "servicesDropdown": {
+      "gacc": "ГАЦЦ регистрација хране",
+      "label": "Усклађеност са кинеским ознакама",
+      "ccc": "ЦЦЦ сертификат",
+      "cosmetics": "Пријава козметике (НМПА)",
+      "ecommerce": "Прекогранична е-трговина",
+      "brand": "Заштита бренда"
+    },
+    "packages": "Пакети",
+    "faq": "ФАК",
+    "blog": "Инсигхтс",
+    "contact": "Контактирајте нас",
+    "whatsapp": "ВхатсАпп",
+    "quote": "Затражите понуду",
+    "industries": "Индустриес",
+    "industriesDropdown": {
+      "dairymilkproducts": "Млечни и млечни производи",
+      "meatseafood": "Месо и морски плодови",
+      "winespirits": "Вино и алкохолна пића",
+      "skincarecosmetics": "Нега коже и козметика",
+      "petfood": "Храна за кућне љубимце",
+      "healthsupplements": "Здравствени додаци",
+      "babymaternal": "Баби & Матернал",
+      "consumerelectronics": "Цонсумер Елецтроницс",
+      "medicaldevices": "Медицински уређаји",
+      "crossborderecommerce": "Прекогранична е-трговина"
+    },
+    "search": "Тражи",
+    "freeCheck": "Бесплатна провера"
+  },
+  "MobileTab": {
+    "home": "Почетна",
+    "services": "Услуге",
+    "blog": "Блог",
+    "contact": "Контакт"
+  },
+  "CTA": {
+    "ctaTitle": "Треба вам ова услуга?",
+    "ctaSubtitle": "Добијте бесплатну процену усклађености прилагођену вашим производима.",
+    "ctaUrgency": "Бесплатне консултације → 24х одговор",
+    "ctaButton": "Добијте бесплатну процену"
+  },
+  "ContactForm": {
+    "title": "Бесплатна процена усклађености",
+    "subtitle": "Реците нам о својим производима и ми ћемо вам обезбедити персонализовани план усклађености.",
+    "emailLabel": "Пословна е-пошта",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "Порука (опционо)",
+    "messagePlaceholder": "Опишите своје производе или потребе за усклађеношћу...",
+    "button": "Пошаљите бесплатну процену",
+    "privacy": "Поштујемо вашу приватност. Без нежељене поште, никад."
+  },
+  "breadcrumb": {
+    "home": "Почетна",
+    "services": "Услуге",
+    "blog": "Блог",
+    "industries": "Индустриес",
+    "packages": "Пакети",
+    "faq": "FAQ"
   }
 }

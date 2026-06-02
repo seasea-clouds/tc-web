@@ -31,5 +31,70 @@
       "blog": "בלוג",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "בַּיִת",
+    "about": "אוֹדוֹת",
+    "services": "שירותים",
+    "servicesDropdown": {
+      "gacc": "רישום מזון GACC",
+      "label": "תאימות לתווית סינית",
+      "ccc": "אישור CCC",
+      "cosmetics": "הגשת קוסמטיקה (NMPA)",
+      "ecommerce": "מסחר אלקטרוני חוצה גבולות",
+      "brand": "הגנת מותג"
+    },
+    "packages": "חבילות",
+    "faq": "שאלות נפוצות",
+    "blog": "תובנות",
+    "contact": "צור קשר",
+    "whatsapp": "וואטסאפ",
+    "quote": "קבל הצעת מחיר",
+    "industries": "תעשיות",
+    "industriesDropdown": {
+      "dairymilkproducts": "מוצרי חלב וחלב",
+      "meatseafood": "בשר ופירות ים",
+      "winespirits": "יין ומשקאות חריפים",
+      "skincarecosmetics": "טיפוח עור וקוסמטיקה",
+      "petfood": "מזון לחיות מחמד",
+      "healthsupplements": "תוספי בריאות",
+      "babymaternal": "תינוק ואמהי",
+      "consumerelectronics": "מוצרי צריכה",
+      "medicaldevices": "מכשירים רפואיים",
+      "crossborderecommerce": "מסחר אלקטרוני חוצה גבולות"
+    },
+    "search": "לְחַפֵּשׂ",
+    "freeCheck": "צ'ק חינם"
+  },
+  "MobileTab": {
+    "home": "דף הבית",
+    "services": "שירותים",
+    "blog": "בלוג",
+    "contact": "צור קשר"
+  },
+  "CTA": {
+    "ctaTitle": "צריך שירות זה?",
+    "ctaSubtitle": "קבל הערכת תאימות בחינם המותאמת למוצרים שלך.",
+    "ctaUrgency": "ייעוץ חינם → מענה 24 שעות",
+    "ctaButton": "קבל הערכה בחינם"
+  },
+  "ContactForm": {
+    "title": "הערכת תאימות בחינם",
+    "subtitle": "ספר לנו על המוצרים שלך ואנו נספק מפת דרכים מותאמת אישית של תאימות.",
+    "emailLabel": "אימייל עסקי",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "הודעה (אופציונלי)",
+    "messagePlaceholder": "תאר את המוצרים או צרכי התאימות שלך...",
+    "button": "שלח הערכה בחינם",
+    "privacy": "אנו מכבדים את פרטיותך. אף פעם לא ספאם."
+  },
+  "breadcrumb": {
+    "home": "דף הבית",
+    "services": "שירותים",
+    "blog": "בלוג",
+    "industries": "תעשיות",
+    "packages": "חבילות",
+    "faq": "FAQ"
   }
 }

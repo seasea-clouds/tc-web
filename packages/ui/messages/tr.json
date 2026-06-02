@@ -31,5 +31,70 @@
       "blog": "Blog",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "Ana Sayfa",
+    "about": "Hakkında",
+    "services": "Hizmetler",
+    "servicesDropdown": {
+      "gacc": "GACC Gıda Kaydı",
+      "label": "Çin Etiket Uyumluluğu",
+      "ccc": "CCC Sertifikası",
+      "cosmetics": "Kozmetik Dosyalama (NMPA)",
+      "ecommerce": "Sınır ötesi E-ticaret",
+      "brand": "Marka Koruması"
+    },
+    "packages": "Paketler",
+    "faq": "SSS",
+    "blog": "Analizler",
+    "contact": "Bize Ulaşın",
+    "whatsapp": "WhatsApp",
+    "quote": "Teklif Al",
+    "industries": "Endüstriler",
+    "industriesDropdown": {
+      "dairymilkproducts": "Süt ve Süt Ürünleri",
+      "meatseafood": "Et ve Deniz Ürünleri",
+      "winespirits": "Şarap ve Alkollü İçkiler",
+      "skincarecosmetics": "Cilt Bakımı ve Kozmetik",
+      "petfood": "Evcil Hayvan Yemi",
+      "healthsupplements": "Sağlık Takviyeleri",
+      "babymaternal": "Bebek ve Anne",
+      "consumerelectronics": "Tüketici Elektroniği",
+      "medicaldevices": "Tıbbi Cihazlar",
+      "crossborderecommerce": "Sınır ötesi E-ticaret"
+    },
+    "search": "Aramak",
+    "freeCheck": "Ücretsiz Çek"
+  },
+  "MobileTab": {
+    "home": "Ana Sayfa",
+    "services": "Hizmetler",
+    "blog": "Blog",
+    "contact": "İletişim"
+  },
+  "CTA": {
+    "ctaTitle": "Bu Hizmete İhtiyacınız Var mı?",
+    "ctaSubtitle": "Ürünlerinize göre uyarlanmış ücretsiz bir uyumluluk değerlendirmesi alın.",
+    "ctaUrgency": "Ücretsiz danışmanlık → 24 saat yanıt",
+    "ctaButton": "Ücretsiz Değerlendirme Alın"
+  },
+  "ContactForm": {
+    "title": "Ücretsiz Uyumluluk Değerlendirmesi",
+    "subtitle": "Bize ürünleriniz hakkında bilgi verin, biz de kişiselleştirilmiş bir uyumluluk yol haritası sunalım.",
+    "emailLabel": "İş E-postası",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "Mesaj (isteğe bağlı)",
+    "messagePlaceholder": "Ürünlerinizi veya uyumluluk ihtiyaçlarınızı açıklayın...",
+    "button": "Ücretsiz Değerlendirme Gönder",
+    "privacy": "Gizliliğinize saygı duyuyoruz. Hiçbir zaman spam yok."
+  },
+  "breadcrumb": {
+    "home": "Ana Sayfa",
+    "services": "Hizmetler",
+    "blog": "Blog",
+    "industries": "Endüstriler",
+    "packages": "Paketler",
+    "faq": "FAQ"
   }
 }

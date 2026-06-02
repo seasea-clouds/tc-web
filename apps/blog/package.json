@@ -23,6 +23,7 @@
     "@types/react": "^19",
     "tailwindcss": "^4",
     "typescript": "^5",
-    "@tailwindcss/typography": "^0.5.19"
+    "@tailwindcss/typography": "^0.5.19",
+    "gray-matter": "^4.0.3"
   }
 }

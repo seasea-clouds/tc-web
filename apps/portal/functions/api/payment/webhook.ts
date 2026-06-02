@@ -4,12 +4,17 @@
  * POST /api/payment/webhook
  * On checkout.completed:
  *   1. Verify HMAC-SHA256 signature
- *   2. Generate compliance report (PDF)
- *   3. Upload PDF to R2
- *   4. Send confirmation email with PDF
- *   5. Save report to D1
- *   6. Create or update user subscription record
+ *   2. Generate PDF via /api/report/generate-pdf
+ *   3. Send email via /api/report/send-email
+ *   4. Create or update user subscription record
  */
+
+import {
+  MODULE_RESOLVERS,
+  getModuleLabel,
+  buildEmailHtml,
+  bufferToBase64,
+} from "../../lib/report-common";
 
 interface Env {
   RESEND_API_KEY: string;
@@ -46,45 +51,6 @@ async function verifySignature(
   }
 }
 
-// ─── Module resolver (dynamic imports, ESM-safe) ─────────────────────
-
-const MODULE_RESOLVERS: Record<string, () => Promise<{
-  checkFn: (input: any) => any;
-  reportFn: (input: any) => any;
-  moduleLabel: string;
-}>> = {
-  gacc: async () => {
-    const { checkGacc } = await import("../../../modules/gacc/rules");
-    const { generateGaccReport } = await import("../../../modules/gacc/report");
-    return { checkFn: checkGacc, reportFn: generateGaccReport, moduleLabel: "GACC Food Registration" };
-  },
-  label: async () => {
-    const { checkLabel } = await import("../../../modules/label/rules");
-    const { generateLabelReport } = await import("../../../modules/label/report");
-    return { checkFn: checkLabel, reportFn: generateLabelReport, moduleLabel: "Chinese Label Compliance" };
-  },
-  ccc: async () => {
-    const { checkCcc } = await import("../../../modules/ccc/rules");
-    const { generateCccReport } = await import("../../../modules/ccc/report");
-    return { checkFn: checkCcc, reportFn: generateCccReport, moduleLabel: "CCC Certification" };
-  },
-  nmpa: async () => {
-    const { checkCosmetics } = await import("../../../modules/nmpa/rules");
-    const { generateCosmeticsReport } = await import("../../../modules/nmpa/report");
-    return { checkFn: checkCosmetics, reportFn: generateCosmeticsReport, moduleLabel: "Cosmetics Filing (NMPA)" };
-  },
-  crossborder: async () => {
-    const { checkCrossborder } = await import("../../../modules/crossborder/rules");
-    const { generateCrossborderReport } = await import("../../../modules/crossborder/report");
-    return { checkFn: checkCrossborder, reportFn: generateCrossborderReport, moduleLabel: "Cross-Border E-commerce" };
-  },
-  trademark: async () => {
-    const { checkTrademark } = await import("../../../modules/trademark/rules");
-    const { generateTrademarkReport } = await import("../../../modules/trademark/report");
-    return { checkFn: checkTrademark, reportFn: generateTrademarkReport, moduleLabel: "Brand Protection" };
-  },
-};
-
 // ─── 主处理函数 ──────────────────────────────────────────────────────
 
 export async function onRequest(context: { request: Request; env: Env }) {
@@ -98,7 +64,6 @@ export async function onRequest(context: { request: Request; env: Env }) {
     const signature =
       context.request.headers.get("x-creem-signature") ?? "";
 
-    // Verify webhook signature
     if (context.env.CREEM_WEBHOOK_SECRET && signature) {
       const isValid = await verifySignature(
         bodyText,
@@ -118,7 +83,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
     console.log(`Creem webhook: ${type}`, { meta });
 
     if (type === "checkout.completed") {
-      await handleCheckoutCompleted(context.env, meta, data);
+      await handleCheckoutCompleted(context.request, context.env, meta, data);
     }
 
     return Response.json({ ok: true });
@@ -131,6 +96,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
 // ─── checkout.completed 处理 ─────────────────────────────────────────
 
 async function handleCheckoutCompleted(
+  request: Request,
   env: Env,
   meta: Record<string, string>,
   data: Record<string, unknown>
@@ -145,241 +111,81 @@ async function handleCheckoutCompleted(
     return;
   }
 
-  // Build input data from metadata (sent by CheckForm before redirect)
   const inputData = {
     productName: meta.productName ?? "",
     category: meta.category ?? "",
     originCountry: meta.originCountry ?? "",
     hsCode: meta.hsCode ?? "",
+    locale,
   };
 
-  // Try to generate report
-  const resolver = MODULE_RESOLVERS[moduleKey];
-  if (resolver) {
-    try {
-      const { checkFn, reportFn, moduleLabel } = await resolver();
+  // Derive base URL from the incoming request (avoids hardcoding domain)
+  const baseUrl = `${request.url.split('/').slice(0, 3).join('/')}`;
 
-      // Run check + generate report
-      checkFn(inputData);
-      const report = reportFn(inputData);
-
-      // Generate PDF (CF-compatible, pdf-lib)
-      let pdfBytes: Uint8Array | null = null;
-      try {
-        const { generateReportPdf } = await import("../../lib/pdf");
-        pdfBytes = await generateReportPdf({
-          reportId,
-          module: moduleLabel,
-          generatedAt: new Date().toISOString().split("T")[0],
-          productInfo: {
-            name: inputData.productName,
-            category: inputData.category,
-            hsCode: inputData.hsCode,
-            originCountry: inputData.originCountry,
-          },
-          result: report.result || {
-            requiresRegistration: false,
-            isHighRisk: false,
-            riskCategory: "",
-            summary: "Compliance assessment completed.",
-            requiredDocuments: [],
-          },
-          nextSteps: report.nextSteps || [],
-        });
-      } catch (pdfErr) {
-        console.error("PDF generation in webhook failed:", pdfErr);
-      }
-
-      // Upload PDF to R2
-      let pdfPath = "";
-      if (pdfBytes && env.R2) {
-        try {
-          const key = `reports/${reportId}.pdf`;
-          await env.R2.put(key, pdfBytes, {
-            httpMetadata: { contentType: "application/pdf" },
-          });
-          pdfPath = key;
-        } catch (r2Err) {
-          console.error("R2 upload failed:", r2Err);
-        }
-      }
-
-      // Send email with PDF
-      if (email && env.RESEND_API_KEY) {
-        try {
-          const reportUrl = `https://sinotradecompliance.com/${locale}/c/report/?id=${reportId}`;
-
-          const attachments = pdfBytes
-            ? [
-                {
-                  filename: `compliance-report-${reportId}.pdf`,
-                  content: bufferToBase64(pdfBytes),
-                  content_type: "application/pdf" as const,
-                },
-              ]
-            : [];
-
-          const emailRes = await fetch("https://api.resend.com/email", {
-            method: "POST",
-            headers: {
-              Authorization: `Bearer ${env.RESEND_API_KEY}`,
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              from: env.EMAIL_FROM || "send@sinotradecompliance.com",
-              to: email,
-              subject: `Your Compliance Report — ${moduleLabel} — SinoTrade Compliance`,
-              html: buildWebhookEmailHtml({
-                productName: inputData.productName || "your product",
-                reportId,
-                reportUrl,
-                module: moduleLabel,
-              }),
-              attachments,
-            }),
-          });
-
-          if (emailRes.ok) {
-            console.log(`Email sent to ${email} for report ${reportId}`);
-            meta._emailSent = 'true';
-          } else {
-            console.error(`Email failed: ${await emailRes.text()}`);
-          }
-        } catch (emailErr) {
-          console.error("Email send failed:", emailErr);
-        }
-      }
-
-      // Save/update report in D1
-      if (env.DB) {
-        try {
-          // Check if report exists
-          const existing = await env.DB.prepare(
-            "SELECT id FROM reports WHERE id = ?"
-          ).bind(reportId).first();
-
-          if (existing) {
-            await env.DB.prepare(
-              `UPDATE reports SET
-                result_data = ?,
-                pdf_path = ?,
-                payment_status = 'completed',
-                user_email = COALESCE(NULLIF(?, ''), user_email)
-              WHERE id = ?`
-            )
-              .bind(JSON.stringify(report), pdfPath, email, reportId)
-              .run();
-          } else {
-            await env.DB.prepare(
-              `INSERT INTO reports (id, module, product_name, hs_code, origin_country,
-                input_data, result_data, user_email, payment_status, pdf_path, locale)
-              VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'completed', ?, ?)`
-            )
-              .bind(
-                reportId,
-                moduleKey,
-                inputData.productName,
-                inputData.hsCode,
-                inputData.originCountry,
-                JSON.stringify(inputData),
-                JSON.stringify(report),
-                email,
-                pdfPath,
-                locale
-              )
-              .run();
-          }
-          console.log(`D1 saved report ${reportId}`);
-        } catch (dbErr) {
-          console.error("D1 save failed:", dbErr);
-        }
-      }
-    } catch (reportErr) {
-      console.error(`Report generation for ${moduleKey} failed:`, reportErr);
-    }
-  } else {
-    console.warn(`Unknown module: ${moduleKey}, sending basic email only`);
+  // ── 1. Generate PDF (delegate) ──────────────────────────────────
+  let pdfGenerated = false;
+  let pdfPath = "";
+  try {
+    const pdfRes = await fetch(`${baseUrl}/api/report/generate-pdf`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ reportId, module: moduleKey, inputData }),
+    });
+    const pdfResult = await pdfRes.json();
+    pdfGenerated = pdfResult.pdfGenerated ?? false;
+    pdfPath = pdfResult.pdfPath ?? "";
+    console.log(`generate-pdf result for ${reportId}: pdfGenerated=${pdfGenerated}`);
+  } catch (pdfErr) {
+    console.error("generate-pdf call failed:", pdfErr);
   }
 
-  // Fallback: always send basic confirmation email even if generation fails
-  if (email && env.RESEND_API_KEY && !meta._emailSent) {
+  // ── 2. Send email (if email provided) ────────────────────────────
+  let emailSent = false;
+  if (email && env.RESEND_API_KEY) {
     try {
-      const reportUrl = `https://sinotradecompliance.com/${locale}/c/report/?id=${reportId}`;
-      const moduleLabel = getModuleLabel(moduleKey);
-
-      const emailRes = await fetch("https://api.resend.com/email", {
+      // baseUrl already derived above
+      const emailRes = await fetch(`${baseUrl}/api/report/send-email`, {
         method: "POST",
-        headers: {
-          Authorization: `Bearer ${env.RESEND_API_KEY}`,
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          from: env.EMAIL_FROM || "send@sinotradecompliance.com",
-          to: email,
-          subject: `Your Compliance Report — ${moduleLabel} — SinoTrade Compliance`,
-          html: buildWebhookEmailHtml({
-            productName: (data.metadata as any)?.productName || "your product",
-            reportId,
-            reportUrl,
-            module: moduleLabel,
-          }),
+          reportId,
+          email,
+          module: moduleKey,
+          inputData,
+          locale,
         }),
       });
-
-      if (emailRes.ok) {
-        console.log(`Fallback email sent to ${email} for report ${reportId}`);
-      }
+      const emailResult = await emailRes.json();
+      emailSent = emailResult.emailSent ?? false;
+      console.log(`send-email result for ${reportId}: emailSent=${emailSent}`);
     } catch (emailErr) {
-      console.error("Fallback email failed:", emailErr);
+      console.error("send-email call failed:", emailErr);
     }
   }
-}
 
-// ─── Helpers ───────────────────────────────────────────────────────────
+  // ── 3. Ensure D1 record is updated ───────────────────────────────
+  if (env.DB && !pdfGenerated) {
+    // Minimal record if PDF gen failed
+    try {
+      const existing = await env.DB.prepare(
+        "SELECT id FROM reports WHERE id = ?"
+      ).bind(reportId).first();
 
-function getModuleLabel(module: string): string {
-  const labels: Record<string, string> = {
-    gacc: "GACC Food Registration",
-    label: "Chinese Label Compliance",
-    ccc: "CCC Certification",
-    nmpa: "Cosmetics Filing (NMPA)",
-    crossborder: "Cross-Border E-commerce",
-    trademark: "Brand Protection",
-  };
-  return labels[module] ?? "Compliance Report";
-}
-
-function buildWebhookEmailHtml(params: {
-  productName: string;
-  reportId: string;
-  reportUrl: string;
-  module: string;
-}) {
-  return `<!DOCTYPE html>
-<html><head><meta charset="utf-8"></head>
-<body style="font-family: Helvetica, Arial, sans-serif; max-width: 600px; margin:0 auto; padding:20px;">
-  <div style="background:#1B365D; color:#fff; padding:24px; border-radius:8px 8px 0 0; text-align:center;">
-    <h1 style="margin:0; font-size:20px;">Your Compliance Report</h1>
-    <p style="margin:8px 0 0; opacity:0.8;">${params.module}</p>
-  </div>
-  <div style="background:#fff; border:1px solid #e5e7eb; padding:24px; border-radius:0 0 8px 8px;">
-    <p>Hi,</p>
-    <p>Your compliance report for <strong>${params.productName}</strong> is ready.</p>
-    <p>Report ID: <strong>${params.reportId}</strong></p>
-    <p style="font-size:12px; color:#666;">A PDF copy is attached to this email.</p>
-    <div style="text-align:center; margin:24px 0;">
-      <a href="${params.reportUrl}" style="display:inline-block; background:#D4AF37; color:#1B365D; text-decoration:none; padding:12px 32px; border-radius:6px; font-weight:bold; font-size:14px;">View Full Report Online</a>
-    </div>
-    <hr style="border:none; border-top:1px solid #eee; margin:20px 0;">
-    <p style="font-size:12px; color:#999; text-align:center;">SinoTrade Compliance<br>david@sinotradecompliance.com | sinotradecompliance.com</p>
-  </div>
-</body></html>`;
-}
-
-function bufferToBase64(bytes: Uint8Array): string {
-  let binary = "";
-  for (let i = 0; i < bytes.length; i++) {
-    binary += String.fromCharCode(bytes[i]);
+      if (!existing) {
+        await env.DB.prepare(
+          `INSERT INTO reports
+            (id, module, product_name, origin_country, input_data, user_email, payment_status, locale)
+          VALUES (?, ?, ?, ?, ?, ?, 'completed', ?)`
+        )
+          .bind(
+            reportId, moduleKey, inputData.productName,
+            inputData.originCountry, JSON.stringify(inputData),
+            email, locale
+          )
+          .run();
+      }
+    } catch (dbErr) {
+      console.error("D1 fallback save failed:", dbErr);
+    }
   }
-  return btoa(binary);
 }

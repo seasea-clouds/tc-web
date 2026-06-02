@@ -28,8 +28,9 @@ export async function onRequest(context: {
       nextSteps: nextSteps || [],
     };
 
+    let saved = false;
     if (context.env.DB) {
-      await context.env.DB.prepare(
+      const result = await context.env.DB.prepare(
         `INSERT OR REPLACE INTO reports (id, module, product_name, hs_code, origin_country, input_data, result_data, payment_status, locale, created_at)
          VALUES (?, ?, ?, ?, ?, ?, ?, 'pending', ?, datetime('now'))`
       )
@@ -44,9 +45,11 @@ export async function onRequest(context: {
           locale || 'en'
         )
         .run();
+      saved = result?.success === true || result?.meta?.changes > 0;
     }
 
-    return Response.json({ ok: true, reportId });
+    console.log('Report save result:', { reportId, saved: saved || (context.env.DB ? 'hasDB' : 'noDB') });
+    return Response.json({ ok: true, reportId, saved: !!context.env.DB && saved });
   } catch (err) {
     console.error("Report save error:", err);
     return Response.json({ error: String(err) }, { status: 500 });

@@ -1,27 +1,22 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
-import { Footer, SearchProvider, ActionDock, TradeTranslationProvider, OrganizationJsonLd, BRAND_NAME, buildAlternates, sharedOpenGraph, sharedTwitter } from '@trade/ui';
+import { Footer, SearchProvider, ActionDock, TradeTranslationProvider, OrganizationJsonLd, buildAlternates, sharedOpenGraph, sharedTwitter } from '@trade/ui';
 import { getMessages } from '@/lib/messages';
+import { locales, defaultLocale } from '@/i18n/routing';
 import '../globals.css';
 
-const LOCALES = [
-  'en','zh','es','fr','de','ja','pt','ru','ar','ko','it','nl','tr','vi','id','th',
-  'hi','pl','sv','el','cs','ro','hu','fi','da','no','uk','bg','hr','sr','sk',
-  'sl','ms','ka','he','sw','bn','ca','fa','ur','ta','af','sq','az','hy','be','ne','si',
-];
-
 export async function generateStaticParams() {
-  return LOCALES.map(l => ({ locale: l }));
+  return locales.map(l => ({ locale: l }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Blog' });
 
-  const title = t('metaTitle');
-  const description = t('metaDescription');
+  const title = t('metaTitle') || t('title') || 'China Import Compliance Blog | SinoTrade Compliance';
+  const description = t('metaDescription') || t('subtitle') || 'Expert guides on China import compliance. GACC registration, CCC certification, NMPA cosmetics filing, and cross-border e-commerce.';
   const path = '/blog/';
-  const alternates = buildAlternates(locale, LOCALES, path);
+  const alternates = buildAlternates(locale, [...locales], path);
 
   return {
     title,

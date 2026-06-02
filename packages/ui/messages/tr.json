@@ -1,0 +1,35 @@
+{
+  "Footer": {
+    "contact": "İletişim",
+    "services": "Hizmetler",
+    "gaccRegistration": "GACC Kaydı",
+    "labelCompliance": "Çin Etiket Uyumluluğu",
+    "cccCertification": "CCC Sertifikası",
+    "cosmeticsFiling": "Kozmetik Dosyalama (NMPA)",
+    "crossBorderEcommerce": "Sınır ötesi E-ticaret",
+    "brandProtection": "Marka Koruması",
+    "packages": "Paketler",
+    "faq": "FAQ",
+    "about": "Hakkımızda",
+    "rights": "© 2012-2026 SinoTrade Uyumluluğu. Her hakkı saklıdır.",
+    "quickLinks": "Hızlı Bağlantılar",
+    "address": "Jing'an Bölgesi, Şangay, Çin",
+    "disclaimer": "Yasal Uyarı: Biz bağımsız bir düzenleyici danışmanlık firmasıyız ve Çin Gümrük Genel İdaresi'ne bağlı değiliz.",
+    "whatsapp": "WhatsApp",
+    "testimonials": "Görüşler",
+    "industries": "Endüstriler",
+    "blog": "Analizler"
+  },
+  "Search": {
+    "title": "Aramak",
+    "placeholder": "Hizmetleri, makaleleri, SSS'leri arayın...",
+    "noResults": "Sonuç bulunamadı. Farklı anahtar kelimeler deneyin.",
+    "searching": "Arama...",
+    "hint": "Hizmetler, makaleler ve SSS'ler arasında arama yapmak için yazın",
+    "types": {
+      "service": "Hizmetler",
+      "blog": "Blog",
+      "faq": "FAQ"
+    }
+  }
+}

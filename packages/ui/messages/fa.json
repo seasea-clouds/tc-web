@@ -1,0 +1,35 @@
+{
+  "Footer": {
+    "contact": "تماس",
+    "services": "خدمات",
+    "gaccRegistration": "ثبت GACC",
+    "labelCompliance": "مطابقت با برچسب چینی",
+    "cccCertification": "گواهی CCC",
+    "cosmeticsFiling": "بایگانی لوازم آرایشی و بهداشتی (NMPA)",
+    "crossBorderEcommerce": "تجارت الکترونیک فرامرزی",
+    "brandProtection": "حفاظت از برند",
+    "packages": "بسته ها",
+    "faq": "FAQ",
+    "about": "درباره ما",
+    "rights": "© 2012-2026 SinoTrade Compliance. تمامی حقوق محفوظ است.",
+    "quickLinks": "لینک های سریع",
+    "address": "منطقه جینگ آن، شانگهای، چین",
+    "disclaimer": "سلب مسئولیت: ما یک شرکت مشاوره نظارتی مستقل هستیم و به اداره کل گمرک چین وابسته نیستیم.",
+    "whatsapp": "WhatsApp",
+    "testimonials": "گواهینامه ها",
+    "industries": "صنایع",
+    "blog": "بینش ها"
+  },
+  "Search": {
+    "title": "جستجو کنید",
+    "placeholder": "خدمات جستجو، مقالات، سوالات متداول...",
+    "noResults": "هیچ نتیجه ای یافت نشد. کلمات کلیدی مختلف را امتحان کنید.",
+    "searching": "در حال جستجو...",
+    "hint": "برای جستجو در سرویس‌ها، مقالات و پرسش‌های متداول تایپ کنید",
+    "types": {
+      "service": "خدمات",
+      "blog": "بلاگ",
+      "faq": "FAQ"
+    }
+  }
+}

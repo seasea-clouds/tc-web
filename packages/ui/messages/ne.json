@@ -1,0 +1,35 @@
+{
+  "Footer": {
+    "contact": "सम्पर्क",
+    "services": "सेवाहरू",
+    "gaccRegistration": "GACC दर्ता",
+    "labelCompliance": "चिनियाँ लेबल अनुपालन",
+    "cccCertification": "CCC प्रमाणीकरण",
+    "cosmeticsFiling": "कस्मेटिक्स फाइलिङ (NMPA)",
+    "crossBorderEcommerce": "क्रस-बोर्डर ई-वाणिज्य",
+    "brandProtection": "ब्रान्ड संरक्षण",
+    "packages": "प्याकेजहरू",
+    "faq": "FAQ",
+    "about": "हाम्रो बारेमा",
+    "rights": "© 2012-2026 SinoTrade अनुपालन। सबै अधिकार सुरक्षित।",
+    "quickLinks": "द्रुत लिङ्कहरू",
+    "address": "Jing'an जिल्ला, शंघाई, चीन",
+    "disclaimer": "अस्वीकरण: हामी एक स्वतन्त्र नियामक परामर्श फर्म हौं र चीनको भन्सारको सामान्य प्रशासनसँग सम्बद्ध छैनौं।",
+    "whatsapp": "WhatsApp",
+    "testimonials": "प्रशंसापत्रहरू",
+    "industries": "उद्योगहरू",
+    "blog": "अन्तर्दृष्टिहरू"
+  },
+  "Search": {
+    "title": "खोज्नुहोस्",
+    "placeholder": "खोज सेवाहरू, लेखहरू, FAQs...",
+    "noResults": "कुनै परिणाम फेला परेन। फरक कुञ्जी शब्दहरू प्रयास गर्नुहोस्।",
+    "searching": "खोज्दै...",
+    "hint": "सेवाहरू, लेखहरू र सोधिने प्रश्नहरू खोज्न टाइप गर्नुहोस्",
+    "types": {
+      "service": "सेवाहरू",
+      "blog": "ब्लग",
+      "faq": "FAQ"
+    }
+  }
+}

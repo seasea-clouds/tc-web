@@ -1,0 +1,42 @@
+name: Auto-sync translations
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'apps/site/messages/en.json'
+      - 'apps/portal/messages/en.json'
+      - 'apps/blog/messages/en.json'
+      - 'packages/ui/messages/en.json'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Sync all message files
+        run: node scripts/sync-messages.mjs --all
+
+      - name: Check for changes
+        id: check
+        run: |
+          if [ -n "$(git status --porcelain -- 'apps/*/messages/')" ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git config user.name "trade-web-bot"
+          git config user.email "bot@sinotradecompliance.com"
+          git add apps/*/messages/ packages/ui/messages/
+          git commit -m "chore: auto-sync messages from en.json [skip ci]"
+          git push

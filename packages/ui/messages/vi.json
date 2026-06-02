@@ -1,0 +1,35 @@
+{
+  "Footer": {
+    "contact": "Liên hệ",
+    "services": "Dịch vụ",
+    "gaccRegistration": "Đăng ký GACC",
+    "labelCompliance": "Tuân thủ nhãn hiệu Trung Quốc",
+    "cccCertification": "Chứng nhận CCC",
+    "cosmeticsFiling": "Nộp hồ sơ mỹ phẩm (NMPA)",
+    "crossBorderEcommerce": "Thương mại điện tử xuyên biên giới",
+    "brandProtection": "Bảo vệ thương hiệu",
+    "packages": "Gói",
+    "faq": "FAQ",
+    "about": "Về chúng tôi",
+    "rights": "© 2012-2026 Tuân thủ SinoTrade. Mọi quyền được bảo lưu.",
+    "quickLinks": "Liên kết nhanh",
+    "address": "Quận Tĩnh An, Thượng Hải, Trung Quốc",
+    "disclaimer": "Tuyên bố miễn trừ trách nhiệm: Chúng tôi là một công ty tư vấn quy định độc lập và không liên kết với Tổng cục Hải quan Trung Quốc.",
+    "whatsapp": "WhatsApp",
+    "testimonials": "Lời chứng thực",
+    "industries": "ngành công nghiệp",
+    "blog": "Thông tin chi tiết"
+  },
+  "Search": {
+    "title": "Tìm kiếm",
+    "placeholder": "Tìm kiếm dịch vụ, bài viết, câu hỏi thường gặp...",
+    "noResults": "Không tìm thấy kết quả nào. Hãy thử các từ khóa khác nhau.",
+    "searching": "Đang tìm kiếm...",
+    "hint": "Nhập để tìm kiếm trên các dịch vụ, bài viết và Câu hỏi thường gặp",
+    "types": {
+      "service": "Dịch vụ",
+      "blog": "Blog",
+      "faq": "FAQ"
+    }
+  }
+}

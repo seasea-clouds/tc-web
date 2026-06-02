@@ -1,0 +1,35 @@
+{
+  "Footer": {
+    "contact": "Contact",
+    "services": "Services",
+    "gaccRegistration": "GACC Registration",
+    "labelCompliance": "Chinese Label Compliance",
+    "cccCertification": "CCC Certification",
+    "cosmeticsFiling": "Cosmetics Filing (NMPA)",
+    "crossBorderEcommerce": "Cross-border E-commerce",
+    "brandProtection": "Brand Protection",
+    "packages": "Packages",
+    "faq": "FAQ",
+    "about": "About Us",
+    "rights": "© 2012-2026 SinoTrade Compliance. All rights reserved.",
+    "quickLinks": "Quick Links",
+    "address": "Jing'an District, Shanghai, China",
+    "disclaimer": "Disclaimer: We are an independent regulatory consulting firm and are not affiliated with the General Administration of Customs of China.",
+    "whatsapp": "WhatsApp",
+    "testimonials": "Testimonials",
+    "industries": "Industries",
+    "blog": "Insights"
+  },
+  "Search": {
+    "title": "Search",
+    "placeholder": "Search services, articles, FAQs...",
+    "noResults": "No results found. Try different keywords.",
+    "searching": "Searching...",
+    "hint": "Type to search across services, articles and FAQs",
+    "types": {
+      "service": "Services",
+      "blog": "Blog",
+      "faq": "FAQ"
+    }
+  }
+}

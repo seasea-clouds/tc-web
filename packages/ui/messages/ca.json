@@ -1,0 +1,35 @@
+{
+  "Footer": {
+    "contact": "Contacte",
+    "services": "Serveis",
+    "gaccRegistration": "Registre GACC",
+    "labelCompliance": "Compliment de l'etiqueta xinesa",
+    "cccCertification": "Certificació CCC",
+    "cosmeticsFiling": "Presentació de cosmètics (NMPA)",
+    "crossBorderEcommerce": "Comerç electrònic transfronterer",
+    "brandProtection": "Protecció de marca",
+    "packages": "Paquets",
+    "faq": "FAQ",
+    "about": "Sobre Nosaltres",
+    "rights": "© 2012-2026 SinoTrade Compliance. Tots els drets reservats.",
+    "quickLinks": "Enllaços ràpids",
+    "address": "Districte de Jing'an, Xangai, Xina",
+    "disclaimer": "Exempció de responsabilitat: som una empresa de consultoria reguladora independent i no estem afiliats a l'Administració General de Duanes de la Xina.",
+    "whatsapp": "WhatsApp",
+    "testimonials": "Testimonis",
+    "industries": "Indústries",
+    "blog": "Insights"
+  },
+  "Search": {
+    "title": "Cerca",
+    "placeholder": "Cerca serveis, articles, preguntes freqüents...",
+    "noResults": "No s'han trobat resultats. Proveu paraules clau diferents.",
+    "searching": "S'està buscant...",
+    "hint": "Escriviu per cercar entre serveis, articles i preguntes freqüents",
+    "types": {
+      "service": "Serveis",
+      "blog": "Bloc",
+      "faq": "FAQ"
+    }
+  }
+}

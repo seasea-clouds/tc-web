@@ -178,11 +178,11 @@ export default function CrossborderCheckClient() {
                   <option value="">{t('selectOption')}</option>
                   <option value="yes">{t('yes')}</option>
                   <option value="no">{t('no')}</option>
-                  <option value="pending">Filing in progress</option>
+                  <option value="pending">{t('filingInProgress')}</option>
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1.5">Chinese Label Ready?</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-1.5">{t('chineseLabelReady')}</label>
                 <select
                   value={input["hasChineseLabel"] || ""}
                   onChange={e => setVal("hasChineseLabel", e.target.value)}

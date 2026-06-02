@@ -84,7 +84,7 @@ export default function GaccCheckClient() {
                 onChange={(e) => setInput({ ...input, category: e.target.value as GaccCategory })}
                 required
               >
-                <option value="">Select product category</option>
+                <option value="">{t('selectCategory')}</option>
                 {(Object.entries(CATEGORY_LABELS) as [GaccCategory, string][]).map(([key, label]) => (
                   <option key={key} value={key}>{label}</option>
                 ))}
@@ -159,12 +159,12 @@ export default function GaccCheckClient() {
                   value={input.packagingMaterial ?? ""}
                   onChange={(e) => setInput({ ...input, packagingMaterial: e.target.value })}
                 >
-                  <option value="">Select packaging type</option>
-                  <option value="glass">Glass Bottle</option>
-                  <option value="plastic">Plastic / PET</option>
-                  <option value="can">Can / Tin</option>
-                  <option value="pouch">Pouch / Bag</option>
-                  <option value="box">Box / Carton</option>
+                  <option value="">{t('selectPackaging')}</option>
+                  <option value="glass">{t('packagingGlass')}</option>
+                  <option value="plastic">{t('packagingPlastic')}</option>
+                  <option value="can">{t('packagingCan')}</option>
+                  <option value="pouch">{t('packagingPouch')}</option>
+                  <option value="box">{t('packagingBox')}</option>
                   <option value="other">Other</option>
                 </select>
               </div>

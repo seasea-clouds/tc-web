@@ -1,0 +1,35 @@
+{
+  "Footer": {
+    "contact": "رابطہ",
+    "services": "خدمات",
+    "gaccRegistration": "GACC رجسٹریشن",
+    "labelCompliance": "چینی لیبل کی تعمیل",
+    "cccCertification": "سی سی سی سرٹیفیکیشن",
+    "cosmeticsFiling": "کاسمیٹکس فائلنگ (NMPA)",
+    "crossBorderEcommerce": "سرحد پار ای کامرس",
+    "brandProtection": "برانڈ پروٹیکشن",
+    "packages": "پیکجز",
+    "faq": "FAQ",
+    "about": "ہمارے بارے میں",
+    "rights": "© 2012-2026 سائنو ٹریڈ کمپلائنس۔ جملہ حقوق محفوظ ہیں۔",
+    "quickLinks": "فوری لنکس",
+    "address": "Jing'an ڈسٹرکٹ، شنگھائی، چین",
+    "disclaimer": "دستبرداری: ہم ایک آزاد ریگولیٹری مشاورتی فرم ہیں اور چین کے کسٹمز کی جنرل ایڈمنسٹریشن سے وابستہ نہیں ہیں۔",
+    "whatsapp": "WhatsApp",
+    "testimonials": "تعریفیں",
+    "industries": "صنعتیں",
+    "blog": "بصیرت"
+  },
+  "Search": {
+    "title": "تلاش کریں۔",
+    "placeholder": "تلاش کی خدمات، مضامین، اکثر پوچھے گئے سوالات...",
+    "noResults": "کوئی نتیجہ نہیں ملا۔ مختلف کلیدی الفاظ آزمائیں۔",
+    "searching": "تلاش کر رہا ہے...",
+    "hint": "تمام سروسز، مضامین اور عمومی سوالنامہ تلاش کرنے کے لیے ٹائپ کریں۔",
+    "types": {
+      "service": "خدمات",
+      "blog": "بلاگ",
+      "faq": "FAQ"
+    }
+  }
+}

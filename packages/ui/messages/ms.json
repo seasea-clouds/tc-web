@@ -1,0 +1,35 @@
+{
+  "Footer": {
+    "contact": "Hubungi",
+    "services": "Perkhidmatan",
+    "gaccRegistration": "Pendaftaran GACC",
+    "labelCompliance": "Pematuhan Label Cina",
+    "cccCertification": "Pensijilan CCC",
+    "cosmeticsFiling": "Pemfailan Kosmetik (NMPA)",
+    "crossBorderEcommerce": "E-dagang rentas sempadan",
+    "brandProtection": "Perlindungan Jenama",
+    "packages": "Pakej",
+    "faq": "FAQ",
+    "about": "Tentang Kami",
+    "rights": "© 2012-2026 Pematuhan SinoTrade. Semua hak terpelihara.",
+    "quickLinks": "Pautan Pantas",
+    "address": "Daerah Jing'an, Shanghai, China",
+    "disclaimer": "Penafian: Kami adalah firma perunding kawal selia bebas dan tidak bergabung dengan Pentadbiran Am Kastam China.",
+    "whatsapp": "WhatsApp",
+    "testimonials": "Testimoni",
+    "industries": "industri",
+    "blog": "Wawasan"
+  },
+  "Search": {
+    "title": "Cari",
+    "placeholder": "Perkhidmatan carian, artikel, Soalan Lazim...",
+    "noResults": "Tiada hasil ditemui. Cuba kata kunci yang berbeza.",
+    "searching": "Mencari...",
+    "hint": "Taip untuk mencari merentas perkhidmatan, artikel dan Soalan Lazim",
+    "types": {
+      "service": "Perkhidmatan",
+      "blog": "Blog",
+      "faq": "FAQ"
+    }
+  }
+}

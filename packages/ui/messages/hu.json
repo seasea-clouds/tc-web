@@ -1,0 +1,35 @@
+{
+  "Footer": {
+    "contact": "Kapcsolat",
+    "services": "Szolgáltatások",
+    "gaccRegistration": "GACC regisztráció",
+    "labelCompliance": "A kínai címkék megfelelősége",
+    "cccCertification": "CCC tanúsítás",
+    "cosmeticsFiling": "Kozmetikai reszelő (NMPA)",
+    "crossBorderEcommerce": "Határokon átnyúló e-kereskedelem",
+    "brandProtection": "Márkavédelem",
+    "packages": "Csomagok",
+    "faq": "FAQ",
+    "about": "Rólunk",
+    "rights": "© 2012-2026 SinoTrade Compliance. Minden jog fenntartva.",
+    "quickLinks": "Gyors linkek",
+    "address": "Jing'an kerület, Sanghaj, Kína",
+    "disclaimer": "Jogi nyilatkozat: Független szabályozási tanácsadó cég vagyunk, és nem áll kapcsolatban a Kínai Általános Vámigazgatási Hivatallal.",
+    "whatsapp": "WhatsApp",
+    "testimonials": "Beszámolók",
+    "industries": "Iparágak",
+    "blog": "Insights"
+  },
+  "Search": {
+    "title": "Keresés",
+    "placeholder": "Szolgáltatások, cikkek, GYIK keresése...",
+    "noResults": "Nincs találat. Próbáljon ki különböző kulcsszavakat.",
+    "searching": "Keresés...",
+    "hint": "Gépelje be a keresést a szolgáltatások, cikkek és GYIK között",
+    "types": {
+      "service": "Szolgáltatások",
+      "blog": "Blog",
+      "faq": "FAQ"
+    }
+  }
+}

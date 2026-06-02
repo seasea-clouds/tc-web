@@ -1,0 +1,35 @@
+{
+  "Footer": {
+    "contact": "Əlaqə",
+    "services": "Xidmətlər",
+    "gaccRegistration": "GACC Qeydiyyatı",
+    "labelCompliance": "Çin etiketinə uyğunluq",
+    "cccCertification": "CCC Sertifikatı",
+    "cosmeticsFiling": "Kosmetika sənədləri (NMPA)",
+    "crossBorderEcommerce": "Transsərhəd e-ticarət",
+    "brandProtection": "Brend Mühafizəsi",
+    "packages": "Paketlər",
+    "faq": "FAQ",
+    "about": "Haqqımızda",
+    "rights": "© 2012-2026 SinoTrade Compliance. Bütün hüquqlar qorunur.",
+    "quickLinks": "Sürətli bağlantılar",
+    "address": "Jing'an District, Şanxay, Çin",
+    "disclaimer": "İmtina: Biz müstəqil tənzimləyici konsaltinq firmasıyıq və Çin Baş Gömrük İdarəsi ilə əlaqəli deyilik.",
+    "whatsapp": "WhatsApp",
+    "testimonials": "Rəylər",
+    "industries": "sənayelər",
+    "blog": "Anlayışlar"
+  },
+  "Search": {
+    "title": "Axtar",
+    "placeholder": "Axtarış xidmətləri, məqalələr, tez-tez verilən suallar...",
+    "noResults": "Heç bir nəticə tapılmadı. Fərqli açar sözlər sınayın.",
+    "searching": "Axtarılır...",
+    "hint": "Xidmətlər, məqalələr və tez-tez verilən suallar arasında axtarış etmək üçün yazın",
+    "types": {
+      "service": "Xidmətlər",
+      "blog": "Bloq",
+      "faq": "FAQ"
+    }
+  }
+}

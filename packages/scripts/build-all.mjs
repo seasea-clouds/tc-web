@@ -52,17 +52,15 @@ async function main() {
   const { buildLLMs } = await import(path.join(__dirname, 'build-llms.mjs'));
   buildLLMs(baseUrl, outDir);
 
-  // 4. Search indexes
-  console.log('[4/5] Generating search indexes...');
-  const { buildSearchIndexes } = await import(path.join(__dirname, 'build-search-index.mjs'));
-  buildSearchIndexes(baseUrl, outDir);
+  // 4. Search indexes — skipped, generated pre-build by apps/site/scripts/build-search-index.mjs
+  console.log('[4/5] Search indexes — skipped (pre-build)');
 
   // 5. robots.txt
   console.log('[5/5] Generating robots.txt...');
   const { generateRobots } = await import(path.join(__dirname, 'build-robots.mjs'));
   generateRobots(baseUrl, outDir);
 
-  // 6. Also copy to public/ for source control
+  // 5. Also copy to public/ for source control
   const publicDir = path.join(cwd, 'public');
   if (fs.existsSync(publicDir)) {
     for (const f of fs.readdirSync(outDir)) {

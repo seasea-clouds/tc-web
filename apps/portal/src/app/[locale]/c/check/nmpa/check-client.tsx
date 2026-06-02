@@ -55,7 +55,16 @@ export default function NmpaCheckClient() {
       }
 
       // ⚡ 调试模式：跳过付款，直接跳报告
-      window.location.href = "./report/?id=" + reportId;
+            // Save to localStorage for report page fallback
+      try {
+        localStorage.setItem('compli-report-input', JSON.stringify({
+          ...input,
+          productName: input.productName || input.brandName || 'Your Product',
+        }));
+      } catch {}
+      
+      // ⚡ 调试模式：跳过付款，直接跳报告
+      window.location.href = "/" + window.location.pathname.split('/')[1] + "/c/report/?id=" + reportId;
     } catch (err) {
       setError(String(err));
       setLoading(false);
@@ -250,7 +259,7 @@ export default function NmpaCheckClient() {
                   disabled={loading}
                   className="w-full max-w-xs bg-[#D4AF37] hover:bg-[#D4AF37]/90 disabled:bg-gray-300 text-[#1B365D] font-semibold py-3 px-6 rounded-md transition-all text-lg"
                 >
-                  {loading ? "{t('redirecting')}" : "{t('fullReport1')}"}
+                  {loading ? t('redirecting') : t('fullReport1')}
                 </button>
                 <p className="text-xs text-gray-400">{t('oneTimePayment')}</p>
               </div>

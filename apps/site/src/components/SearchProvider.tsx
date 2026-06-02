@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Navbar } from '@trade/ui';
 import SearchModal from './SearchModal';
-import MobileTabBar from './MobileTabBar';
+import { MobileTabBar } from '@trade/ui';
 
 export default function SearchProvider() {
   const [searchOpen, setSearchOpen] = useState(false);

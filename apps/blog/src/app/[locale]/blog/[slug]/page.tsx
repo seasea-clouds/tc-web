@@ -13,7 +13,7 @@ const FAQ_NS: Record<string, string> = {
 };
 
 const SITE_URL = 'https://trade-web-site.pages.dev';
-const WHATSAPP_URL = 'https://wa.me/message/HPPZ5X6XZSMLM1';
+import { WHATSAPP_URL } from '@trade/ui';
 import { getMessages } from '@/lib/messages';
 import CopyButton from '@/components/CopyButton';
 import { ActionDock } from '@trade/ui';

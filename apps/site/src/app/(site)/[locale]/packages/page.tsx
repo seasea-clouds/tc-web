@@ -5,7 +5,7 @@ import PackageCards from '@/components/PackageCards';
 import PackageComparisonTable from '@/components/PackageComparisonTable';
 import CTASection from '@/components/CTASection';
 import ContactForm from '@/components/ContactForm';
-import { WHATSAPP_URL } from '@/lib/constants';
+import { WHATSAPP_URL } from '@trade/ui';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {

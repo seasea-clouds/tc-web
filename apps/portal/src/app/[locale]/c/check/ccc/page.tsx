@@ -1,5 +1,7 @@
 "use client";
 
+import { WHATSAPP_URL } from '@trade/ui';
+
 import { useState } from "react";
 import { checkCcc, CATEGORY_LABELS } from "../../../../../../modules/ccc/rules";
 import { API_BASE } from "@/lib/constants";
@@ -270,7 +272,7 @@ export default function CccCheckPage() {
               <h3 className="text-xl font-bold mb-2">💼 Need Professional Help?</h3>
               <p className="text-white/80 mb-6 max-w-lg mx-auto">Our compliance experts can handle the entire process for you.</p>
               <a
-                href="https://wa.me/message/HPPZ5X6XZSMLM1"
+                href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#1B365D] font-semibold px-6 py-3 rounded-md transition-all"

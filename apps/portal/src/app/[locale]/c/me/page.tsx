@@ -22,7 +22,7 @@ export default function MePage() {
     return (
       <main className="min-h-screen bg-bg-ice py-16">
         <div className="max-w-md mx-auto px-4 text-center">
-          <h1 className="text-xl font-bold text-primary-navy mb-4">Please Log In</h1>
+          <h1 className="text-xl font-bold text-primary-navy mb-4">{t('pleaseLogIn')}</h1>
           <Link href="./login" className="inline-block bg-gold hover:bg-gold/90 text-primary-navy font-semibold px-6 py-2.5 rounded-md transition-all">
             Log In
           </Link>
@@ -34,7 +34,7 @@ export default function MePage() {
   return (
     <main className="min-h-screen bg-bg-ice py-12">
       <div className="max-w-4xl mx-auto px-4">
-        <h1 className="text-2xl font-bold text-primary-navy mb-8">My Account</h1>
+        <h1 className="text-2xl font-bold text-primary-navy mb-8">{t('myAccount')}</h1>
 
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">
           <div className="flex items-center gap-4">
@@ -51,7 +51,7 @@ export default function MePage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <Link href="./me/reports" className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-all group">
             <div className="text-2xl mb-3">📄</div>
-            <h3 className="font-semibold text-primary-navy group-hover:text-gold transition-colors">My Reports</h3>
+            <h3 className="font-semibold text-primary-navy group-hover:text-gold transition-colors">{t('myReports')}</h3>
             <p className="text-sm text-gray-500 mt-1">View your compliance reports</p>
           </Link>
           <Link href="./me/subscription" className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-all group">

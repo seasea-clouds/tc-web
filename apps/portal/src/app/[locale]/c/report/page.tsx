@@ -1,4 +1,5 @@
 'use client';
+import { useT } from '@trade/ui';
 
 import { useState, useEffect, useRef, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
@@ -61,6 +62,7 @@ function ReportContent() {
   const [report, setReport] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const t = useT('Report');
 
   useEffect(() => {
     if (!id) {
@@ -121,8 +123,8 @@ function ReportContent() {
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
               </svg>
             </div>
-            <h1 className="text-xl font-bold text-primary-navy mb-2">Loading Your Report</h1>
-            <p className="text-gray-500 text-sm">Fetching your compliance report...</p>
+            <h1 className="text-xl font-bold text-primary-navy mb-2">{t('loadingTitle')}</h1>
+            <p className="text-gray-500 text-sm">{t('loadingDesc')}</p>
           </div>
         </div>
       </main>
@@ -137,7 +139,7 @@ function ReportContent() {
             <div className="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">⚠️</span>
             </div>
-            <h1 className="text-xl font-bold text-primary-navy mb-2">Report Not Found</h1>
+            <h1 className="text-xl font-bold text-primary-navy mb-2">{t('notFoundTitle')}</h1>
             <p className="text-gray-500 text-sm mb-6">{error || 'Report not available.'}</p>
             <a href="./" className="inline-block bg-gold hover:bg-gold/90 text-primary-navy font-semibold px-6 py-2.5 rounded-md transition-all">
               &larr; Back

@@ -33,16 +33,16 @@ function BillingContent() {
       <h1 className="text-2xl font-bold text-[#1B365D] mb-8">{t('billing')}</h1>
 
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
-        <h2 className="font-semibold text-[#1B365D] mb-4">Current Plan</h2>
+        <h2 className="font-semibold text-[#1B365D] mb-4">{t('currentPlan')}</h2>
         {sub ? (
           <div className="space-y-2">
-            <p className="text-sm"><strong>Plan:</strong> {sub.plan}</p>
-            <p className="text-sm"><strong>Status:</strong> {sub.status}</p>
-            <p className="text-sm"><strong>Period ends:</strong> {sub.current_period_end}</p>
+            <p className="text-sm"><strong>{t('plan')}:</strong> {sub.plan}</p>
+            <p className="text-sm"><strong>{t('status')}:</strong> {sub.status}</p>
+            <p className="text-sm"><strong>{t('periodEnds')}:</strong> {sub.current_period_end}</p>
           </div>
         ) : (
           <>
-            <p className="text-sm text-gray-500 mb-4">You are currently on the Free plan.</p>
+            <p className="text-sm text-gray-500 mb-4">{t('youAreOnFreePlan')}</p>
             <Link
               href="/pricing"
               className="inline-block bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#1B365D] font-semibold px-4 py-2 rounded-md text-sm transition-all"
@@ -54,9 +54,9 @@ function BillingContent() {
       </div>
 
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-        <h2 className="font-semibold text-[#1B365D] mb-2">Account</h2>
+        <h2 className="font-semibold text-[#1B365D] mb-2">{t('account')}</h2>
         <p className="text-sm text-gray-500">{user?.email}</p>
-        <p className="text-xs text-gray-400 mt-1">Registered user</p>
+        <p className="text-xs text-gray-400 mt-1">{t('registeredUser')}</p>
       </div>
     </div>
   );

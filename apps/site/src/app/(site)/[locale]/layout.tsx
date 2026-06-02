@@ -74,7 +74,7 @@ export default async function LocaleLayout({
       {/* Cloudflare Web Analytics */}
       <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6639e56f244348cda996b883cecc51b7"}'></script>
     </head>
-    <body className="pb-16 md:pb-0 antialiased">
+    <body className="min-h-screen flex flex-col pb-16 md:pb-0 antialiased">
       <script type="application/json" id="build-info" dangerouslySetInnerHTML={{
         __html: JSON.stringify({ commit: buildTime, time: new Date().toISOString() })
       }} />
@@ -82,7 +82,7 @@ export default async function LocaleLayout({
         <TradeTranslationProvider messages={messages} locale={locale}>
           <OrganizationJsonLd locale={resolvedParams.locale} />
           <SearchProvider />
-          {children}
+          <main className="flex-1">{children}</main>
           <Footer />
           <ActionDock />
           <LocaleSync />

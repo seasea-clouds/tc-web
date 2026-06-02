@@ -61,7 +61,7 @@ export default async function ThankYouPage({ params }: { params: Promise<{ local
   ];
 
   return (
-    <main className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen">
 
       {/* Hero Section */}
       <section className="bg-primary-navy py-16 px-4 sm:px-6 lg:px-8">
@@ -184,6 +184,6 @@ export default async function ThankYouPage({ params }: { params: Promise<{ local
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-    </main>
+    </div>
   );
 }

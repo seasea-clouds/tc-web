@@ -44,7 +44,7 @@ export default async function TestimonialsPage({ params }: { params: Promise<{ l
   };
 
   return (
-    <main className="min-h-screen bg-[#F4F6F9]">
+    <div className="bg-[#F4F6F9]">
       {/* JSON-LD */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
@@ -112,6 +112,6 @@ export default async function TestimonialsPage({ params }: { params: Promise<{ l
 
       <ContactForm />
       <CTASection t={ctaT} />
-    </main>
+    </div>
   );
 }

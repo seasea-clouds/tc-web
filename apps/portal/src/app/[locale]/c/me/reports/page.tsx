@@ -1,10 +1,12 @@
 'use client';
+import { useT } from '@trade/ui';
 
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/components/AuthProvider';
 import Link from 'next/link';
 
 export default function MyReportsPage() {
+  const t = useT('Report');
   const { user, isLoading } = useAuth();
   const [reports, setReports] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
@@ -27,13 +29,13 @@ export default function MyReportsPage() {
     <main className="min-h-screen bg-bg-ice py-12">
       <div className="max-w-4xl mx-auto px-4">
         <Link href="./" className="text-sm text-gray-500 hover:text-primary-navy transition-colors">&larr; Back to Account</Link>
-        <h1 className="text-2xl font-bold text-primary-navy mt-4 mb-6">My Reports</h1>
+        <h1 className="text-2xl font-bold text-primary-navy mt-4 mb-6">{t('myReports')}</h1>
 
         {loading ? (
           <div className="text-center py-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gold mx-auto" /></div>
         ) : reports.length === 0 ? (
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 text-center">
-            <p className="text-gray-500">No reports yet.</p>
+            <p className="text-gray-500">{t('noReports')}.</p>
             <Link href="../check/gacc" className="inline-block mt-4 bg-gold hover:bg-gold/90 text-primary-navy font-semibold px-6 py-2.5 rounded-md transition-all">
               Run a Check
             </Link>
@@ -45,7 +47,7 @@ export default function MyReportsPage() {
                 <div className="flex justify-between items-center">
                   <div>
                     <p className="font-semibold text-primary-navy">{r.module || 'Report'}</p>
-                    <p className="text-sm text-gray-500 mt-1">ID: {r.id}</p>
+                    <p className="text-sm text-gray-500 mt-1">{t('reportId')}: {r.id}</p>
                   </div>
                   <div className="text-right text-xs text-gray-400">
                     <p>{r.created_at ? new Date(r.created_at).toLocaleDateString() : '—'}</p>
@@ -64,9 +66,11 @@ export default function MyReportsPage() {
 }
 
 function Loading() {
+  const t = useT('Report');
   return <main className="min-h-screen bg-bg-ice py-16"><div className="text-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gold mx-auto" /></div></main>;
 }
 
 function NotLoggedIn() {
-  return <main className="min-h-screen bg-bg-ice py-16"><div className="max-w-md mx-auto px-4 text-center"><h1 className="text-xl font-bold text-primary-navy mb-4">Please Log In</h1><Link href="../login" className="inline-block bg-gold hover:bg-gold/90 text-primary-navy font-semibold px-6 py-2.5 rounded-md transition-all">Log In</Link></div></main>;
+  const t = useT('Report');
+  return <main className="min-h-screen bg-bg-ice py-16"><div className="max-w-md mx-auto px-4 text-center"><h1 className="text-xl font-bold text-primary-navy mb-4">{t('pleaseLogIn')}</h1><Link href="../login" className="inline-block bg-gold hover:bg-gold/90 text-primary-navy font-semibold px-6 py-2.5 rounded-md transition-all">{t('logIn')}</Link></div></main>;
 }

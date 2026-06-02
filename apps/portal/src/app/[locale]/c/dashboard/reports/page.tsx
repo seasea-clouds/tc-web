@@ -37,13 +37,13 @@ function ReportsContent() {
       <h1 className="text-2xl font-bold text-[#1B365D] mb-8">{t('myReports')}</h1>
 
       {loading && (
-        <div className="text-center py-12 text-gray-400">Loading...</div>
+        <div className="text-center py-12 text-gray-400">{t('loading')}</div>
       )}
 
       {!loading && reports.length === 0 && (
         <div className="text-center py-12 text-gray-400 bg-white rounded-lg border p-8">
           <p className="text-lg mb-2">No reports yet</p>
-          <p className="text-sm">Complete a compliance check to see your reports here.</p>
+          <p className="text-sm">{t('completeCheck')}</p>
         </div>
       )}
 
@@ -82,7 +82,7 @@ function ReportsContent() {
               <button onClick={() => setSelectedReport(null)} className="text-gray-400 hover:text-gray-600 text-xl">&times;</button>
             </div>
             <p className="font-semibold text-gray-800">{selectedReport.product_name}</p>
-            <p className="text-xs text-gray-400 mt-1">ID: {selectedReport.id}</p>
+            <p className="text-xs text-gray-400 mt-1">{t('reportId')}: {selectedReport.id}</p>
             <p className="text-xs text-gray-400 mb-4">{selectedReport.created_at}</p>
             <span className={`inline-block text-xs px-2 py-1 rounded-full ${
               selectedReport.payment_status === 'paid' ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-500'

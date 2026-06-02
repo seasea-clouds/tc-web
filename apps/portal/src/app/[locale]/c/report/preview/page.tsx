@@ -1,4 +1,5 @@
 'use client';
+import { useT } from '@trade/ui';
 
 import { ReportTemplate } from '@/core/report/template';
 import type { GaccResult } from '../../../../../../modules/gacc/rules';
@@ -192,12 +193,13 @@ const labels = {
 };
 
 export default function ReportPreviewPage() {
+  const t = useT('Report');
   return (
     <div className="min-h-screen bg-bg-ice py-8">
       <div className="max-w-4xl mx-auto px-4 mb-4">
         <div className="bg-amber-50 border border-amber-300 rounded-lg p-4 text-center mb-6">
-          <p className="text-sm font-bold text-amber-800">🔬 Preview Mode — Sample: Stone Ground Dark Chocolate (USA)</p>
-          <p className="text-xs text-amber-600">This is a preview with sample data to demonstrate the new 18-module report layout.</p>
+          <p className="text-sm font-bold text-amber-800">{t('previewBanner')}</p>
+          <p className="text-xs text-amber-600">{t('previewBannerDesc')}</p>
         </div>
       </div>
       <ReportTemplate

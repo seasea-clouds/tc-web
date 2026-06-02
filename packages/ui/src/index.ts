@@ -4,6 +4,7 @@ export { default as LanguageSwitcher } from './LanguageSwitcher';
 export { default as ActionDock } from './ActionDock';
 export { default as MobileTabBar } from './MobileTabBar';
 export { default as SearchProvider } from './SearchProvider';
+export { default as OrganizationJsonLd } from './OrganizationJsonLd';
 export { default as SearchModal } from './SearchModal';
 export {
   TradeTranslationProvider,

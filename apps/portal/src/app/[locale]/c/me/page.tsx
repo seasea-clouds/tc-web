@@ -10,29 +10,29 @@ export default function MePage() {
 
   if (isLoading) {
     return (
-      <main className="min-h-screen bg-bg-ice py-16">
+      <div className="bg-bg-ice py-16">
         <div className="max-w-lg mx-auto px-4 text-center">
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gold mx-auto" />
         </div>
-      </main>
+      </div>
     );
   }
 
   if (!user) {
     return (
-      <main className="min-h-screen bg-bg-ice py-16">
+      <div className="bg-bg-ice py-16">
         <div className="max-w-md mx-auto px-4 text-center">
           <h1 className="text-xl font-bold text-primary-navy mb-4">{t('pleaseLogIn')}</h1>
           <Link href="./login" className="inline-block bg-gold hover:bg-gold/90 text-primary-navy font-semibold px-6 py-2.5 rounded-md transition-all">
             Log In
           </Link>
         </div>
-      </main>
+      </div>
     );
   }
 
   return (
-    <main className="min-h-screen bg-bg-ice py-12">
+    <div className="bg-bg-ice py-12">
       <div className="max-w-4xl mx-auto px-4">
         <h1 className="text-2xl font-bold text-primary-navy mb-8">{t('myAccount')}</h1>
 
@@ -72,6 +72,6 @@ export default function MePage() {
           </button>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

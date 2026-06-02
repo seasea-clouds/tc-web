@@ -8,7 +8,7 @@ export default function PricingPage() {
   const subsiteHref = useSubsiteHref();
 
   return (
-    <main className="min-h-screen bg-bg-ice py-16">
+    <div className="bg-bg-ice py-16">
       <div className="max-w-4xl mx-auto px-4 text-center">
         <h1 className="text-3xl font-bold text-primary-navy mb-4">{t('title')}</h1>
         <p className="text-gray-500 mb-12 max-w-2xl mx-auto">
@@ -91,6 +91,6 @@ export default function PricingPage() {
           {t('footnote')}
         </p>
       </div>
-    </main>
+    </div>
   );
 }

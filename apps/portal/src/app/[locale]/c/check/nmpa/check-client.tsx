@@ -69,7 +69,7 @@ export default function NmpaCheckClient() {
   const catOptions = Object.entries(CATEGORY_LABELS) as [string, string][];
 
   return (
-    <main className="min-h-screen bg-[#F4F6F9]">
+    <div className="bg-[#F4F6F9]">
       <div className="max-w-3xl mx-auto px-4 py-12">
         {/* Progress */}
         <div className="flex items-center justify-center gap-2 mb-8 text-sm text-gray-400">
@@ -273,6 +273,6 @@ export default function NmpaCheckClient() {
           </div>
         )}
       </div>
-    </main>
+    </div>
   );
 }

@@ -18,7 +18,7 @@ export default function HomePage() {
   const subsiteHref = useSubsiteHref();
 
   return (
-    <main className="min-h-screen bg-bg-ice">
+    <div className="bg-bg-ice">
       {/* Hero */}
       <section className="bg-primary-navy text-white py-16 text-center">
         <div className="max-w-4xl mx-auto px-4">
@@ -102,6 +102,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

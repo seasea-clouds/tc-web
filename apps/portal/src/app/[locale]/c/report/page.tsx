@@ -114,7 +114,7 @@ function ReportContent() {
 
   if (loading) {
     return (
-      <main className="min-h-screen bg-bg-ice py-16">
+      <div className="bg-bg-ice py-16">
         <div className="max-w-lg mx-auto px-4 text-center">
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
             <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -127,13 +127,13 @@ function ReportContent() {
             <p className="text-gray-500 text-sm">{t('loadingDesc')}</p>
           </div>
         </div>
-      </main>
+      </div>
     );
   }
 
   if (error || !report) {
     return (
-      <main className="min-h-screen bg-bg-ice py-16">
+      <div className="bg-bg-ice py-16">
         <div className="max-w-lg mx-auto px-4 text-center">
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
             <div className="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -146,7 +146,7 @@ function ReportContent() {
             </a>
           </div>
         </div>
-      </main>
+      </div>
     );
   }
 
@@ -154,9 +154,9 @@ function ReportContent() {
 }export default function ReportPage() {
   return (
     <Suspense fallback={
-      <main className="min-h-screen bg-bg-ice flex items-center justify-center">
+      <div className="bg-bg-ice flex items-center justify-center">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gold mx-auto mb-4" />
-      </main>
+      </div>
     }>
       <ReportContent />
     </Suspense>

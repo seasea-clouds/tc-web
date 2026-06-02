@@ -12,7 +12,7 @@ export default function SettingsPage() {
   if (!user) return <NotLoggedIn />;
 
   return (
-    <main className="min-h-screen bg-bg-ice py-12">
+    <div className="bg-bg-ice py-12">
       <div className="max-w-3xl mx-auto px-4">
         <Link href="./" className="text-sm text-gray-500 hover:text-primary-navy transition-colors">&larr; Back to Account</Link>
         <h1 className="text-2xl font-bold text-primary-navy mt-4 mb-6">{t('settings')}</h1>
@@ -28,16 +28,16 @@ export default function SettingsPage() {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 }
 
 function Loading() {
   const t = useT('Report');
-  return <main className="min-h-screen bg-bg-ice py-16"><div className="text-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gold mx-auto" /></div></main>;
+  return <div className="bg-bg-ice py-16"><div className="text-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gold mx-auto" /></div></div>;
 }
 
 function NotLoggedIn() {
   const t = useT('Report');
-  return <main className="min-h-screen bg-bg-ice py-16"><div className="max-w-md mx-auto px-4 text-center"><h1 className="text-xl font-bold text-primary-navy mb-4">{t('pleaseLogIn')}</h1><Link href="../login" className="inline-block bg-gold hover:bg-gold/90 text-primary-navy font-semibold px-6 py-2.5 rounded-md transition-all">{t('logIn')}</Link></div></main>;
+  return <div className="bg-bg-ice py-16"><div className="max-w-md mx-auto px-4 text-center"><h1 className="text-xl font-bold text-primary-navy mb-4">{t('pleaseLogIn')}</h1><Link href="../login" className="inline-block bg-gold hover:bg-gold/90 text-primary-navy font-semibold px-6 py-2.5 rounded-md transition-all">{t('logIn')}</Link></div></div>;
 }

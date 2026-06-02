@@ -3,7 +3,7 @@ import { getNumberedItems, splitByComma } from '@/lib/utils';
 import { locales } from '@/i18n/routing';
 import { sharedOpenGraph, sharedTwitter } from '@/lib/metadata';
 import ContactForm from '@/components/ContactForm';
-import { WHATSAPP_URL } from '@/lib/constants';
+import { WHATSAPP_URL } from '@trade/ui';
 import CTASection from '@/components/CTASection';
 import Breadcrumb from '@/components/Breadcrumb';
 

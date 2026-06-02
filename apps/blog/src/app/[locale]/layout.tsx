@@ -1,4 +1,4 @@
-import { Navbar, Footer, TradeTranslationProvider } from '@trade/ui';
+import { Navbar, Footer, TradeTranslationProvider, MobileTabBar } from '@trade/ui';
 import { getMessages } from '@/lib/messages';
 import '../globals.css';
 
@@ -29,8 +29,9 @@ export default async function Layout({
           <Navbar
             freeCheckHref={`/{locale}/c/`}
           />
-          <main className="flex-1">{children}</main>
+          <main className="flex-1 pb-16 md:pb-0">{children}</main>
           <Footer />
+          <MobileTabBar />
         </TradeTranslationProvider>
       </body>
     </html>

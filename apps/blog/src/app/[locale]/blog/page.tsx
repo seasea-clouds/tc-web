@@ -1,3 +1,4 @@
+import { WHATSAPP_URL } from '@trade/ui';
 import fs from 'fs';
 import path from 'path';
 import { getPosts } from '@/lib/posts';
@@ -181,7 +182,7 @@ export default async function BlogHome({ params }: { params: Promise<{ locale: s
             {tb('ctaResponse', 'Free consultation → 24h response')}
           </p>
           <a
-            href="https://wa.me/message/HPPZ5X6XZSMLM1"
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-accent-gold hover:bg-accent-gold/90 text-white font-semibold px-8 py-3 rounded-md transition-all hover:shadow-lg"

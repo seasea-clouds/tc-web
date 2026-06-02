@@ -31,5 +31,70 @@
       "blog": "بلاگ",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "گھر",
+    "about": "کے بارے میں",
+    "services": "خدمات",
+    "servicesDropdown": {
+      "gacc": "GACC فوڈ رجسٹریشن",
+      "label": "چینی لیبل کی تعمیل",
+      "ccc": "سی سی سی سرٹیفیکیشن",
+      "cosmetics": "کاسمیٹکس فائلنگ (NMPA)",
+      "ecommerce": "سرحد پار ای کامرس",
+      "brand": "برانڈ پروٹیکشن"
+    },
+    "packages": "پیکجز",
+    "faq": "اکثر پوچھے گئے سوالات",
+    "blog": "بصیرت",
+    "contact": "ہم سے رابطہ کریں۔",
+    "whatsapp": "واٹس ایپ",
+    "quote": "ایک اقتباس حاصل کریں۔",
+    "industries": "صنعتیں",
+    "industriesDropdown": {
+      "dairymilkproducts": "دودھ اور دودھ کی مصنوعات",
+      "meatseafood": "گوشت اور سمندری غذا",
+      "winespirits": "شراب اور اسپرٹ",
+      "skincarecosmetics": "جلد کی دیکھ بھال اور کاسمیٹکس",
+      "petfood": "پالتو جانوروں کی خوراک",
+      "healthsupplements": "ہیلتھ سپلیمنٹس",
+      "babymaternal": "بچہ اور زچگی",
+      "consumerelectronics": "کنزیومر الیکٹرانکس",
+      "medicaldevices": "طبی آلات",
+      "crossborderecommerce": "سرحد پار ای کامرس"
+    },
+    "search": "تلاش کریں۔",
+    "freeCheck": "مفت چیک"
+  },
+  "MobileTab": {
+    "home": "ہوم",
+    "services": "خدمات",
+    "blog": "بلاگ",
+    "contact": "رابطہ"
+  },
+  "CTA": {
+    "ctaTitle": "اس سروس کی ضرورت ہے؟",
+    "ctaSubtitle": "اپنی مصنوعات کے مطابق مفت تعمیل کی تشخیص حاصل کریں۔",
+    "ctaUrgency": "مفت مشاورت → 24 گھنٹے جواب",
+    "ctaButton": "مفت تشخیص حاصل کریں۔"
+  },
+  "ContactForm": {
+    "title": "مفت تعمیل کی تشخیص",
+    "subtitle": "ہمیں اپنی مصنوعات کے بارے میں بتائیں اور ہم ایک ذاتی تعمیل روڈ میپ فراہم کریں گے۔",
+    "emailLabel": "بزنس ای میل",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "پیغام (اختیاری)",
+    "messagePlaceholder": "اپنی مصنوعات یا تعمیل کی ضروریات کی وضاحت کریں...",
+    "button": "مفت تشخیص جمع کروائیں۔",
+    "privacy": "ہم آپ کی رازداری کا احترام کرتے ہیں۔ کوئی سپیم نہیں، کبھی۔"
+  },
+  "breadcrumb": {
+    "home": "ہوم",
+    "services": "خدمات",
+    "blog": "بلاگ",
+    "industries": "صنعتیں",
+    "packages": "پیکجز",
+    "faq": "FAQ"
   }
 }

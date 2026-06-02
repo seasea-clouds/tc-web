@@ -31,5 +31,70 @@
       "blog": "Ιστολόγιο",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "Σπίτι",
+    "about": "Για",
+    "services": "Υπηρεσίες",
+    "servicesDropdown": {
+      "gacc": "Εγγραφή Τροφίμων GACC",
+      "label": "Συμμόρφωση με την κινεζική ετικέτα",
+      "ccc": "Πιστοποίηση CCC",
+      "cosmetics": "Αρχειοθέτηση καλλυντικών (NMPA)",
+      "ecommerce": "Διασυνοριακό ηλεκτρονικό εμπόριο",
+      "brand": "Προστασία της επωνυμίας"
+    },
+    "packages": "Πακέτα",
+    "faq": "FAQ",
+    "blog": "Insights",
+    "contact": "Επικοινωνήστε μαζί μας",
+    "whatsapp": "WhatsApp",
+    "quote": "Λάβετε μια προσφορά",
+    "industries": "Βιομηχανίες",
+    "industriesDropdown": {
+      "dairymilkproducts": "Γαλακτοκομικά & Γαλακτοκομικά Προϊόντα",
+      "meatseafood": "Κρέας & Θαλασσινά",
+      "winespirits": "Οίνος και οινοπνευματώδη ποτά",
+      "skincarecosmetics": "Περιποίηση δέρματος & Καλλυντικά",
+      "petfood": "Τροφή για κατοικίδια",
+      "healthsupplements": "Συμπληρώματα Υγείας",
+      "babymaternal": "Μωρό & Μητρικό",
+      "consumerelectronics": "Καταναλωτικά Ηλεκτρονικά",
+      "medicaldevices": "Ιατρικές συσκευές",
+      "crossborderecommerce": "Διασυνοριακό ηλεκτρονικό εμπόριο"
+    },
+    "search": "Ερευνα",
+    "freeCheck": "Δωρεάν έλεγχος"
+  },
+  "MobileTab": {
+    "home": "Αρχική",
+    "services": "Υπηρεσίες",
+    "blog": "Ιστολόγιο",
+    "contact": "Επικοινωνία"
+  },
+  "CTA": {
+    "ctaTitle": "Χρειάζεστε αυτήν την υπηρεσία;",
+    "ctaSubtitle": "Λάβετε δωρεάν αξιολόγηση συμμόρφωσης προσαρμοσμένη στα προϊόντα σας.",
+    "ctaUrgency": "Δωρεάν διαβούλευση → 24ωρη απάντηση",
+    "ctaButton": "Λάβετε δωρεάν αξιολόγηση"
+  },
+  "ContactForm": {
+    "title": "Δωρεάν Αξιολόγηση Συμμόρφωσης",
+    "subtitle": "Πείτε μας για τα προϊόντα σας και θα παρέχουμε έναν εξατομικευμένο οδικό χάρτη συμμόρφωσης.",
+    "emailLabel": "Email επιχείρησης",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "Μήνυμα (προαιρετικό)",
+    "messagePlaceholder": "Περιγράψτε τα προϊόντα σας ή τις ανάγκες συμμόρφωσης...",
+    "button": "Υποβολή Δωρεάν Αξιολόγησης",
+    "privacy": "Σεβόμαστε το απόρρητό σας. Χωρίς spam, ποτέ."
+  },
+  "breadcrumb": {
+    "home": "Αρχική",
+    "services": "Υπηρεσίες",
+    "blog": "Ιστολόγιο",
+    "industries": "Βιομηχανίες",
+    "packages": "Πακέτα",
+    "faq": "FAQ"
   }
 }

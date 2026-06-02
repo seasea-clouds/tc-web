@@ -31,5 +31,70 @@
       "blog": "Blog",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "Domov",
+    "about": "O nás",
+    "services": "Služby",
+    "servicesDropdown": {
+      "gacc": "Registrácia potravín GACC",
+      "label": "Súlad s čínskymi štítkami",
+      "ccc": "Certifikácia CCC",
+      "cosmetics": "Kozmetický pilník (NMPA)",
+      "ecommerce": "Cezhraničný elektronický obchod",
+      "brand": "Ochrana značky"
+    },
+    "packages": "Balíčky",
+    "faq": "FAQ",
+    "blog": "Insights",
+    "contact": "Kontaktujte nás",
+    "whatsapp": "WhatsApp",
+    "quote": "Získajte cenovú ponuku",
+    "industries": "Odvetvia",
+    "industriesDropdown": {
+      "dairymilkproducts": "Mliečne a mliečne výrobky",
+      "meatseafood": "Mäso a morské plody",
+      "winespirits": "Víno a liehoviny",
+      "skincarecosmetics": "Starostlivosť o pleť a kozmetika",
+      "petfood": "Krmivo pre domáce zvieratá",
+      "healthsupplements": "Zdravotné doplnky",
+      "babymaternal": "Dieťa a matka",
+      "consumerelectronics": "Spotrebná elektronika",
+      "medicaldevices": "Lekárske pomôcky",
+      "crossborderecommerce": "Cezhraničný elektronický obchod"
+    },
+    "search": "Hľadať",
+    "freeCheck": "Bezplatná kontrola"
+  },
+  "MobileTab": {
+    "home": "Domov",
+    "services": "Služby",
+    "blog": "Blog",
+    "contact": "Kontakt"
+  },
+  "CTA": {
+    "ctaTitle": "Potrebujete túto službu?",
+    "ctaSubtitle": "Získajte bezplatné posúdenie súladu prispôsobené vašim produktom.",
+    "ctaUrgency": "Bezplatná konzultácia → 24h odpoveď",
+    "ctaButton": "Získajte bezplatné hodnotenie"
+  },
+  "ContactForm": {
+    "title": "Bezplatné posúdenie súladu",
+    "subtitle": "Povedzte nám o svojich produktoch a my vám poskytneme prispôsobený plán dodržiavania pravidiel.",
+    "emailLabel": "Obchodný e-mail",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "Správa (voliteľné)",
+    "messagePlaceholder": "Popíšte svoje produkty alebo potreby zhody...",
+    "button": "Odoslať bezplatné hodnotenie",
+    "privacy": "Rešpektujeme vaše súkromie. Žiadny spam, nikdy."
+  },
+  "breadcrumb": {
+    "home": "Domov",
+    "services": "Služby",
+    "blog": "Blog",
+    "industries": "Odvetvia",
+    "packages": "Balíčky",
+    "faq": "FAQ"
   }
 }

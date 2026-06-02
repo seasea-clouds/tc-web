@@ -31,5 +31,70 @@
       "blog": "블로그",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "홈",
+    "about": "에 대한",
+    "services": "서비스",
+    "servicesDropdown": {
+      "gacc": "GACC 식품 등록",
+      "label": "중국 라벨 규정 준수",
+      "ccc": "CCC 인증",
+      "cosmetics": "화장품 신고(NMPA)",
+      "ecommerce": "국경 간 전자상거래",
+      "brand": "브랜드 보호"
+    },
+    "packages": "패키지",
+    "faq": "FAQ",
+    "blog": "통찰력",
+    "contact": "문의하기",
+    "whatsapp": "왓츠앱",
+    "quote": "견적 받기",
+    "industries": "산업",
+    "industriesDropdown": {
+      "dairymilkproducts": "유제품 및 유제품",
+      "meatseafood": "고기 및 해산물",
+      "winespirits": "와인 및 증류주",
+      "skincarecosmetics": "스킨케어 및 화장품",
+      "petfood": "애완동물 사료",
+      "healthsupplements": "건강보조식품",
+      "babymaternal": "아기 및 산모",
+      "consumerelectronics": "가전제품",
+      "medicaldevices": "의료기기",
+      "crossborderecommerce": "국경 간 전자상거래"
+    },
+    "search": "찾다",
+    "freeCheck": "무료수표"
+  },
+  "MobileTab": {
+    "home": "홈",
+    "services": "서비스",
+    "blog": "블로그",
+    "contact": "연락처"
+  },
+  "CTA": {
+    "ctaTitle": "이 서비스가 필요하십니까?",
+    "ctaSubtitle": "귀하의 제품에 맞는 무료 규정 준수 평가를 받아보세요.",
+    "ctaUrgency": "무료 상담 → 24시간 응답",
+    "ctaButton": "무료 평가 받기"
+  },
+  "ContactForm": {
+    "title": "무료 규정 준수 평가",
+    "subtitle": "귀하의 제품에 대해 알려주시면 맞춤형 규정 준수 로드맵을 제공해 드리겠습니다.",
+    "emailLabel": "비즈니스 이메일",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "메시지(선택사항)",
+    "messagePlaceholder": "귀하의 제품 또는 규정 준수 요구 사항을 설명하십시오...",
+    "button": "무료 평가 제출",
+    "privacy": "우리는 귀하의 개인정보를 존중합니다. 스팸은 절대 없습니다."
+  },
+  "breadcrumb": {
+    "home": "홈",
+    "services": "서비스",
+    "blog": "블로그",
+    "industries": "산업",
+    "packages": "패키지",
+    "faq": "FAQ"
   }
 }

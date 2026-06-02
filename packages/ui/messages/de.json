@@ -31,5 +31,70 @@
       "blog": "Blog",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "Heim",
+    "about": "Über",
+    "services": "Dienstleistungen",
+    "servicesDropdown": {
+      "gacc": "GACC-Lebensmittelregistrierung",
+      "label": "Einhaltung chinesischer Etiketten",
+      "ccc": "CCC-Zertifizierung",
+      "cosmetics": "Einreichung von Kosmetika (NMPA)",
+      "ecommerce": "Grenzüberschreitender E-Commerce",
+      "brand": "Markenschutz"
+    },
+    "packages": "Pakete",
+    "faq": "FAQ",
+    "blog": "Einblicke",
+    "contact": "Kontaktieren Sie uns",
+    "whatsapp": "WhatsApp",
+    "quote": "Holen Sie sich ein Angebot",
+    "industries": "Branchen",
+    "industriesDropdown": {
+      "dairymilkproducts": "Milch- und Milchprodukte",
+      "meatseafood": "Fleisch und Meeresfrüchte",
+      "winespirits": "Wein und Spirituosen",
+      "skincarecosmetics": "Hautpflege und Kosmetik",
+      "petfood": "Tiernahrung",
+      "healthsupplements": "Gesundheitszusätze",
+      "babymaternal": "Baby & Mutter",
+      "consumerelectronics": "Unterhaltungselektronik",
+      "medicaldevices": "Medizinische Geräte",
+      "crossborderecommerce": "Grenzüberschreitender E-Commerce"
+    },
+    "search": "Suchen",
+    "freeCheck": "Kostenloser Scheck"
+  },
+  "MobileTab": {
+    "home": "Startseite",
+    "services": "Dienste",
+    "blog": "Blog",
+    "contact": "Kontakt"
+  },
+  "CTA": {
+    "ctaTitle": "Benötigen Sie diesen Service?",
+    "ctaSubtitle": "Erhalten Sie eine kostenlose, auf Ihre Produkte zugeschnittene Compliance-Bewertung.",
+    "ctaUrgency": "Kostenlose Beratung → 24h-Antwort",
+    "ctaButton": "Erhalten Sie eine kostenlose Bewertung"
+  },
+  "ContactForm": {
+    "title": "Kostenlose Compliance-Bewertung",
+    "subtitle": "Erzählen Sie uns von Ihren Produkten und wir erstellen Ihnen eine personalisierte Compliance-Roadmap.",
+    "emailLabel": "Geschäfts-E-Mail",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "Nachricht (optional)",
+    "messagePlaceholder": "Beschreiben Sie Ihre Produkte oder Compliance-Anforderungen ...",
+    "button": "Senden Sie eine kostenlose Bewertung",
+    "privacy": "Wir respektieren Ihre Privatsphäre. Kein Spam, niemals."
+  },
+  "breadcrumb": {
+    "home": "Startseite",
+    "services": "Dienstleistungen",
+    "blog": "Blog",
+    "industries": "Branchen",
+    "packages": "Pakete",
+    "faq": "FAQ"
   }
 }

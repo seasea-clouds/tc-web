@@ -31,5 +31,70 @@
       "blog": "ब्लग",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "गृहपृष्ठ",
+    "about": "हाम्रो बारेमा",
+    "services": "सेवाहरू",
+    "servicesDropdown": {
+      "gacc": "GACC खाद्य दर्ता",
+      "label": "चिनियाँ लेबल अनुपालन",
+      "ccc": "CCC प्रमाणीकरण",
+      "cosmetics": "कस्मेटिक्स फाइलिङ (NMPA)",
+      "ecommerce": "क्रस-बोर्डर ई-वाणिज्य",
+      "brand": "ब्रान्ड संरक्षण"
+    },
+    "packages": "प्याकेजहरू",
+    "faq": "FAQ",
+    "blog": "अन्तर्दृष्टिहरू",
+    "contact": "हामीलाई सम्पर्क गर्नुहोस्",
+    "whatsapp": "व्हाट्सएप",
+    "quote": "उद्धरण प्राप्त गर्नुहोस्",
+    "industries": "उद्योगहरू",
+    "industriesDropdown": {
+      "dairymilkproducts": "डेयरी र दूध उत्पादनहरू",
+      "meatseafood": "मासु र समुद्री खाना",
+      "winespirits": "वाइन र स्पिरिट्स",
+      "skincarecosmetics": "छाला हेरचाह र सौन्दर्य प्रसाधन",
+      "petfood": "घरपालुवा जनावर खाना",
+      "healthsupplements": "स्वास्थ्य पूरक",
+      "babymaternal": "बच्चा र मातृ",
+      "consumerelectronics": "उपभोक्ता इलेक्ट्रोनिक्स",
+      "medicaldevices": "चिकित्सा उपकरणहरू",
+      "crossborderecommerce": "क्रस-बोर्डर ई-वाणिज्य"
+    },
+    "search": "खोज्नुहोस्",
+    "freeCheck": "नि: शुल्क जाँच"
+  },
+  "MobileTab": {
+    "home": "होम",
+    "services": "सेवाहरू",
+    "blog": "ब्लग",
+    "contact": "सम्पर्क"
+  },
+  "CTA": {
+    "ctaTitle": "यो सेवा चाहिन्छ?",
+    "ctaSubtitle": "तपाइँको उत्पादनहरु को लागी एक नि: शुल्क अनुपालन मूल्याङ्कन प्राप्त गर्नुहोस्।",
+    "ctaUrgency": "नि:शुल्क परामर्श → २४ घन्टा प्रतिक्रिया",
+    "ctaButton": "नि: शुल्क मूल्याङ्कन प्राप्त गर्नुहोस्"
+  },
+  "ContactForm": {
+    "title": "नि: शुल्क अनुपालन मूल्याङ्कन",
+    "subtitle": "हामीलाई तपाईंको उत्पादनहरू बारे बताउनुहोस् र हामी एक व्यक्तिगत अनुपालन रोडम्याप प्रदान गर्नेछौं।",
+    "emailLabel": "व्यापार इमेल",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "सन्देश (वैकल्पिक)",
+    "messagePlaceholder": "आफ्नो उत्पादन वा अनुपालन आवश्यकताहरू वर्णन गर्नुहोस्...",
+    "button": "नि: शुल्क मूल्याङ्कन पेश गर्नुहोस्",
+    "privacy": "हामी तपाईंको गोपनीयताको सम्मान गर्छौं। कुनै स्प्याम, कहिल्यै।"
+  },
+  "breadcrumb": {
+    "home": "गृह पृष्ठ",
+    "services": "सेवाहरू",
+    "blog": "ब्लग",
+    "industries": "उद्योगहरू",
+    "packages": "प्याकेजहरू",
+    "faq": "FAQ"
   }
 }

@@ -31,5 +31,70 @@
       "blog": "Bloc",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "Casa",
+    "about": "Sobre",
+    "services": "Serveis",
+    "servicesDropdown": {
+      "gacc": "Registre d'Aliments GACC",
+      "label": "Compliment de l'etiqueta xinesa",
+      "ccc": "Certificació CCC",
+      "cosmetics": "Presentació de cosmètics (NMPA)",
+      "ecommerce": "Comerç electrònic transfronterer",
+      "brand": "Protecció de marca"
+    },
+    "packages": "Paquets",
+    "faq": "PMF",
+    "blog": "Insights",
+    "contact": "Contacta amb nosaltres",
+    "whatsapp": "WhatsApp",
+    "quote": "Obteniu un pressupost",
+    "industries": "Indústries",
+    "industriesDropdown": {
+      "dairymilkproducts": "Productes lactis i lactis",
+      "meatseafood": "Carn i marisc",
+      "winespirits": "Vi i licors",
+      "skincarecosmetics": "Cura de la pell i cosmètica",
+      "petfood": "Menjar per a mascotes",
+      "healthsupplements": "Suplements de salut",
+      "babymaternal": "Nadó i maternal",
+      "consumerelectronics": "Electrònica de consum",
+      "medicaldevices": "Dispositius mèdics",
+      "crossborderecommerce": "Comerç electrònic transfronterer"
+    },
+    "search": "Cerca",
+    "freeCheck": "Comprovació gratuïta"
+  },
+  "MobileTab": {
+    "home": "Inici",
+    "services": "Serveis",
+    "blog": "Bloc",
+    "contact": "Contacte"
+  },
+  "CTA": {
+    "ctaTitle": "Necessites aquest servei?",
+    "ctaSubtitle": "Obteniu una avaluació de compliment gratuïta adaptada als vostres productes.",
+    "ctaUrgency": "Consulta gratuïta → Resposta 24h",
+    "ctaButton": "Obteniu una avaluació gratuïta"
+  },
+  "ContactForm": {
+    "title": "Avaluació gratuïta del compliment",
+    "subtitle": "Parleu-nos dels vostres productes i us proporcionarem un full de ruta de compliment personalitzat.",
+    "emailLabel": "Correu electrònic empresarial",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "Missatge (opcional)",
+    "messagePlaceholder": "Descriu els teus productes o necessitats de compliment...",
+    "button": "Envieu l'avaluació gratuïta",
+    "privacy": "Respectem la teva privadesa. Sense correu brossa, mai."
+  },
+  "breadcrumb": {
+    "home": "Inici",
+    "services": "Serveis",
+    "blog": "Bloc",
+    "industries": "Indústries",
+    "packages": "Paquets",
+    "faq": "FAQ"
   }
 }

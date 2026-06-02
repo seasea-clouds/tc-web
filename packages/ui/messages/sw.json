@@ -31,5 +31,70 @@
       "blog": "Blogu",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "Nyumbani",
+    "about": "Kuhusu",
+    "services": "Huduma",
+    "servicesDropdown": {
+      "gacc": "Usajili wa Chakula wa GACC",
+      "label": "Uzingatiaji wa Lebo ya Kichina",
+      "ccc": "Cheti cha CCC",
+      "cosmetics": "Ujazaji wa Vipodozi (NMPA)",
+      "ecommerce": "Biashara ya kielektroniki ya mpakani",
+      "brand": "Ulinzi wa Biashara"
+    },
+    "packages": "Vifurushi",
+    "faq": "Maswali Yanayoulizwa Mara kwa Mara",
+    "blog": "Maarifa",
+    "contact": "Wasiliana Nasi",
+    "whatsapp": "WhatsApp",
+    "quote": "Pata Nukuu",
+    "industries": "Viwanda",
+    "industriesDropdown": {
+      "dairymilkproducts": "Bidhaa za Maziwa na Maziwa",
+      "meatseafood": "Nyama na Dagaa",
+      "winespirits": "Mvinyo na Viroho",
+      "skincarecosmetics": "Utunzaji wa Ngozi na Vipodozi",
+      "petfood": "Chakula cha Kipenzi",
+      "healthsupplements": "Virutubisho vya Afya",
+      "babymaternal": "Mtoto & Mama",
+      "consumerelectronics": "Elektroniki za Watumiaji",
+      "medicaldevices": "Vifaa vya Matibabu",
+      "crossborderecommerce": "Biashara ya kielektroniki ya mpakani"
+    },
+    "search": "Tafuta",
+    "freeCheck": "Angalia Bure"
+  },
+  "MobileTab": {
+    "home": "Nyumbani",
+    "services": "Huduma",
+    "blog": "Blogu",
+    "contact": "Wasiliana"
+  },
+  "CTA": {
+    "ctaTitle": "Je, unahitaji Huduma Hii?",
+    "ctaSubtitle": "Pata tathmini ya kufuata bila malipo iliyoundwa kulingana na bidhaa zako.",
+    "ctaUrgency": "Ushauri wa bila malipo → jibu la saa 24",
+    "ctaButton": "Pata Tathmini ya Bure"
+  },
+  "ContactForm": {
+    "title": "Tathmini ya Uzingatiaji Bila Malipo",
+    "subtitle": "Tuambie kuhusu bidhaa zako na tutatoa ramani ya kufuata iliyobinafsishwa.",
+    "emailLabel": "Barua pepe ya Biashara",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "Ujumbe (si lazima)",
+    "messagePlaceholder": "Eleza bidhaa zako au mahitaji ya kufuata...",
+    "button": "Peana Tathmini ya Bure",
+    "privacy": "Tunaheshimu faragha yako. Hakuna barua taka, milele."
+  },
+  "breadcrumb": {
+    "home": "Nyumbani",
+    "services": "Huduma",
+    "blog": "Blogu",
+    "industries": "Viwanda",
+    "packages": "Vifurushi",
+    "faq": "FAQ"
   }
 }

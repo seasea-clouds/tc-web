@@ -31,5 +31,70 @@
       "blog": "بلاگ",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "صفحه اصلی",
+    "about": "درباره",
+    "services": "خدمات",
+    "servicesDropdown": {
+      "gacc": "ثبت غذای GACC",
+      "label": "مطابقت با برچسب چینی",
+      "ccc": "گواهی CCC",
+      "cosmetics": "بایگانی لوازم آرایشی و بهداشتی (NMPA)",
+      "ecommerce": "تجارت الکترونیک فرامرزی",
+      "brand": "حفاظت از برند"
+    },
+    "packages": "بسته ها",
+    "faq": "سوالات متداول",
+    "blog": "بینش ها",
+    "contact": "تماس با ما",
+    "whatsapp": "واتس اپ",
+    "quote": "یک نقل قول دریافت کنید",
+    "industries": "صنایع",
+    "industriesDropdown": {
+      "dairymilkproducts": "لبنیات و لبنیات",
+      "meatseafood": "گوشت و غذاهای دریایی",
+      "winespirits": "شراب و ارواح",
+      "skincarecosmetics": "محصولات مراقبت از پوست و آرایشی",
+      "petfood": "غذای حیوانات خانگی",
+      "healthsupplements": "مکمل های بهداشتی",
+      "babymaternal": "نوزاد و مادر",
+      "consumerelectronics": "لوازم الکترونیکی مصرفی",
+      "medicaldevices": "تجهیزات پزشکی",
+      "crossborderecommerce": "تجارت الکترونیک فرامرزی"
+    },
+    "search": "جستجو کنید",
+    "freeCheck": "چک رایگان"
+  },
+  "MobileTab": {
+    "home": "خانه",
+    "services": "خدمات",
+    "blog": "بلاگ",
+    "contact": "تماس"
+  },
+  "CTA": {
+    "ctaTitle": "به این سرویس نیاز دارید؟",
+    "ctaSubtitle": "یک ارزیابی انطباق رایگان متناسب با محصولات خود دریافت کنید.",
+    "ctaUrgency": "مشاوره رایگان → پاسخگویی 24 ساعته",
+    "ctaButton": "ارزیابی رایگان دریافت کنید"
+  },
+  "ContactForm": {
+    "title": "ارزیابی انطباق رایگان",
+    "subtitle": "در مورد محصولات خود به ما بگویید و ما یک نقشه راه انطباق شخصی ارائه خواهیم کرد.",
+    "emailLabel": "ایمیل تجاری",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "پیام (اختیاری)",
+    "messagePlaceholder": "محصولات یا نیازهای مطابقت خود را شرح دهید...",
+    "button": "ارسال ارزیابی رایگان",
+    "privacy": "ما به حریم خصوصی شما احترام می گذاریم بدون هرزنامه، هرگز."
+  },
+  "breadcrumb": {
+    "home": "صفحه اصلی",
+    "services": "خدمات",
+    "blog": "بلاگ",
+    "industries": "صنایع",
+    "packages": "بسته ها",
+    "faq": "FAQ"
   }
 }

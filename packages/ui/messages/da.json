@@ -31,5 +31,70 @@
       "blog": "Blog",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "Hjem",
+    "about": "Om os",
+    "services": "Tjenester",
+    "servicesDropdown": {
+      "gacc": "GACC fødevareregistrering",
+      "label": "Overholdelse af kinesiske etiketter",
+      "ccc": "CCC certificering",
+      "cosmetics": "Kosmetikarkivering (NMPA)",
+      "ecommerce": "Grænseoverskridende e-handel",
+      "brand": "Brand beskyttelse"
+    },
+    "packages": "Pakker",
+    "faq": "FAQ",
+    "blog": "Indsigt",
+    "contact": "Kontakt os",
+    "whatsapp": "WhatsApp",
+    "quote": "Få et tilbud",
+    "industries": "Industrier",
+    "industriesDropdown": {
+      "dairymilkproducts": "Mejeri- og mælkeprodukter",
+      "meatseafood": "Kød & Fisk og skaldyr",
+      "winespirits": "Vin & Spiritus",
+      "skincarecosmetics": "Hudpleje & Kosmetik",
+      "petfood": "Foder til kæledyr",
+      "healthsupplements": "Sundhedstilskud",
+      "babymaternal": "Baby & Moder",
+      "consumerelectronics": "Forbrugerelektronik",
+      "medicaldevices": "Medicinsk udstyr",
+      "crossborderecommerce": "Grænseoverskridende e-handel"
+    },
+    "search": "Søge",
+    "freeCheck": "Gratis check"
+  },
+  "MobileTab": {
+    "home": "Forside",
+    "services": "Tjenester",
+    "blog": "Blog",
+    "contact": "Kontakt"
+  },
+  "CTA": {
+    "ctaTitle": "Har du brug for denne service?",
+    "ctaSubtitle": "Få en gratis overensstemmelsesvurdering skræddersyet til dine produkter.",
+    "ctaUrgency": "Gratis konsultation → 24 timers svar",
+    "ctaButton": "Få gratis vurdering"
+  },
+  "ContactForm": {
+    "title": "Gratis overensstemmelsesvurdering",
+    "subtitle": "Fortæl os om dine produkter, og vi vil levere en personlig køreplan for overholdelse.",
+    "emailLabel": "Business e-mail",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "Besked (valgfrit)",
+    "messagePlaceholder": "Beskriv dine produkter eller overholdelsesbehov...",
+    "button": "Indsend gratis vurdering",
+    "privacy": "Vi respekterer dit privatliv. Ingen spam, nogensinde."
+  },
+  "breadcrumb": {
+    "home": "Hjem",
+    "services": "Tjenester",
+    "blog": "Blog",
+    "industries": "Industrier",
+    "packages": "Pakker",
+    "faq": "FAQ"
   }
 }

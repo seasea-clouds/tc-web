@@ -31,5 +31,70 @@
       "blog": "ব্লগ",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "বাড়ি",
+    "about": "সম্পর্কে",
+    "services": "সেবা",
+    "servicesDropdown": {
+      "gacc": "GACC খাদ্য নিবন্ধন",
+      "label": "চীনা লেবেল সম্মতি",
+      "ccc": "CCC সার্টিফিকেশন",
+      "cosmetics": "প্রসাধনী ফাইলিং (NMPA)",
+      "ecommerce": "আন্তঃসীমান্ত ই-কমার্স",
+      "brand": "ব্র্যান্ড সুরক্ষা"
+    },
+    "packages": "প্যাকেজ",
+    "faq": "FAQ",
+    "blog": "অন্তর্দৃষ্টি",
+    "contact": "আমাদের সাথে যোগাযোগ করুন",
+    "whatsapp": "হোয়াটসঅ্যাপ",
+    "quote": "একটি উদ্ধৃতি পান",
+    "industries": "শিল্প",
+    "industriesDropdown": {
+      "dairymilkproducts": "দুগ্ধ ও দুগ্ধজাত পণ্য",
+      "meatseafood": "মাংস এবং সামুদ্রিক খাবার",
+      "winespirits": "ওয়াইন এবং স্পিরিটস",
+      "skincarecosmetics": "ত্বকের যত্ন এবং প্রসাধনী",
+      "petfood": "পোষা খাদ্য",
+      "healthsupplements": "স্বাস্থ্য সম্পূরক",
+      "babymaternal": "শিশু ও মাতৃত্ব",
+      "consumerelectronics": "কনজিউমার ইলেকট্রনিক্স",
+      "medicaldevices": "মেডিকেল ডিভাইস",
+      "crossborderecommerce": "আন্তঃসীমান্ত ই-কমার্স"
+    },
+    "search": "অনুসন্ধান করুন",
+    "freeCheck": "বিনামূল্যে চেক"
+  },
+  "MobileTab": {
+    "home": "হোম",
+    "services": "সেবাসমূহ",
+    "blog": "ব্লগ",
+    "contact": "যোগাযোগ"
+  },
+  "CTA": {
+    "ctaTitle": "এই পরিষেবা প্রয়োজন?",
+    "ctaSubtitle": "আপনার পণ্যের জন্য উপযুক্ত একটি বিনামূল্যে সম্মতি মূল্যায়ন পান।",
+    "ctaUrgency": "বিনামূল্যে পরামর্শ → 24 ঘন্টা প্রতিক্রিয়া",
+    "ctaButton": "বিনামূল্যে মূল্যায়ন পান"
+  },
+  "ContactForm": {
+    "title": "বিনামূল্যে সম্মতি মূল্যায়ন",
+    "subtitle": "আপনার পণ্য সম্পর্কে আমাদের বলুন এবং আমরা একটি ব্যক্তিগতকৃত কমপ্লায়েন্স রোডম্যাপ প্রদান করব।",
+    "emailLabel": "ব্যবসা ইমেল",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "বার্তা (ঐচ্ছিক)",
+    "messagePlaceholder": "আপনার পণ্য বা সম্মতির প্রয়োজনীয়তা বর্ণনা করুন...",
+    "button": "বিনামূল্যে মূল্যায়ন জমা দিন",
+    "privacy": "আমরা আপনার গোপনীয়তা সম্মান. কোন স্প্যাম, কখনও."
+  },
+  "breadcrumb": {
+    "home": "হোম",
+    "services": "সেবাসমূহ",
+    "blog": "ব্লগ",
+    "industries": "শিল্প",
+    "packages": "প্যাকেজ",
+    "faq": "FAQ"
   }
 }

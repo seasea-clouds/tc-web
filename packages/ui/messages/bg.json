@@ -31,5 +31,70 @@
       "blog": "Блог",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "Начало",
+    "about": "За нас",
+    "services": "Услуги",
+    "servicesDropdown": {
+      "gacc": "GACC регистрация на храни",
+      "label": "Съответствие на китайския етикет",
+      "ccc": "CCC Сертификация",
+      "cosmetics": "Картотека за козметика (NMPA)",
+      "ecommerce": "Трансгранична електронна търговия",
+      "brand": "Защита на марката"
+    },
+    "packages": "Пакети",
+    "faq": "ЧЗВ",
+    "blog": "Прозрения",
+    "contact": "Свържете се с нас",
+    "whatsapp": "WhatsApp",
+    "quote": "Получете оферта",
+    "industries": "Индустрии",
+    "industriesDropdown": {
+      "dairymilkproducts": "Млечни и млечни продукти",
+      "meatseafood": "Месо и морски дарове",
+      "winespirits": "Вино и спиртни напитки",
+      "skincarecosmetics": "Грижа за кожата и козметика",
+      "petfood": "Храна за домашни любимци",
+      "healthsupplements": "Здравни добавки",
+      "babymaternal": "Бебе и майка",
+      "consumerelectronics": "Потребителска електроника",
+      "medicaldevices": "Медицински изделия",
+      "crossborderecommerce": "Трансгранична електронна търговия"
+    },
+    "search": "Търсене",
+    "freeCheck": "Безплатна проверка"
+  },
+  "MobileTab": {
+    "home": "Начало",
+    "services": "Услуги",
+    "blog": "Блог",
+    "contact": "Контакт"
+  },
+  "CTA": {
+    "ctaTitle": "Нуждаете се от тази услуга?",
+    "ctaSubtitle": "Получете безплатна оценка за съответствие, съобразена с вашите продукти.",
+    "ctaUrgency": "Безплатна консултация → 24ч отговор",
+    "ctaButton": "Получете безплатна оценка"
+  },
+  "ContactForm": {
+    "title": "Безплатна оценка на съответствието",
+    "subtitle": "Разкажете ни за вашите продукти и ние ще предоставим персонализирана пътна карта за съответствие.",
+    "emailLabel": "Бизнес имейл",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "Съобщение (по избор)",
+    "messagePlaceholder": "Опишете вашите продукти или нужди за съответствие...",
+    "button": "Изпратете безплатна оценка",
+    "privacy": "Ние уважаваме вашата поверителност. Без спам, никога."
+  },
+  "breadcrumb": {
+    "home": "Начало",
+    "services": "Услуги",
+    "blog": "Блог",
+    "industries": "Индустрии",
+    "packages": "Пакети",
+    "faq": "FAQ"
   }
 }

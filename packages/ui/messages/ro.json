@@ -31,5 +31,70 @@
       "blog": "Blog",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "Acasă",
+    "about": "Despre",
+    "services": "Servicii",
+    "servicesDropdown": {
+      "gacc": "Înregistrarea alimentelor GACC",
+      "label": "Conformitatea etichetei chinezești",
+      "ccc": "Certificare CCC",
+      "cosmetics": "Depunerea produselor cosmetice (NMPA)",
+      "ecommerce": "Comerț electronic transfrontalier",
+      "brand": "Protecția mărcii"
+    },
+    "packages": "Pachete",
+    "faq": "Întrebări frecvente",
+    "blog": "Perspective",
+    "contact": "Contactaţi-ne",
+    "whatsapp": "WhatsApp",
+    "quote": "Obțineți o cotație",
+    "industries": "Industrii",
+    "industriesDropdown": {
+      "dairymilkproducts": "Lactate și produse din lapte",
+      "meatseafood": "Carne și fructe de mare",
+      "winespirits": "Vin și băuturi spirtoase",
+      "skincarecosmetics": "Îngrijirea pielii și cosmetice",
+      "petfood": "Hrana pentru animale de companie",
+      "healthsupplements": "Suplimente pentru sănătate",
+      "babymaternal": "Bebeluş și mamă",
+      "consumerelectronics": "Electronice de larg consum",
+      "medicaldevices": "Dispozitive medicale",
+      "crossborderecommerce": "Comerț electronic transfrontalier"
+    },
+    "search": "Căutare",
+    "freeCheck": "Cec gratuit"
+  },
+  "MobileTab": {
+    "home": "Acasă",
+    "services": "Servicii",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "CTA": {
+    "ctaTitle": "Aveți nevoie de acest serviciu?",
+    "ctaSubtitle": "Obțineți o evaluare gratuită a conformității, adaptată produselor dvs.",
+    "ctaUrgency": "Consultație gratuită → Răspuns 24 de ore",
+    "ctaButton": "Obțineți o evaluare gratuită"
+  },
+  "ContactForm": {
+    "title": "Evaluare gratuită a conformității",
+    "subtitle": "Spuneți-ne despre produsele dvs. și vă vom oferi o foaie de parcurs personalizată pentru conformitate.",
+    "emailLabel": "Email de afaceri",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "Mesaj (opțional)",
+    "messagePlaceholder": "Descrieți produsele sau nevoile dvs. de conformitate...",
+    "button": "Trimiteți evaluarea gratuită",
+    "privacy": "Vă respectăm intimitatea. Fără spam, niciodată."
+  },
+  "breadcrumb": {
+    "home": "Acasă",
+    "services": "Servicii",
+    "blog": "Blog",
+    "industries": "Industrii",
+    "packages": "Pachete",
+    "faq": "FAQ"
   }
 }

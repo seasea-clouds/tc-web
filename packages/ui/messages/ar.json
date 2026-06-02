@@ -31,5 +31,70 @@
       "blog": "مدونة",
       "faq": "FAQ"
     }
+  },
+  "Navbar": {
+    "logo": "SinoTrade Compliance",
+    "home": "بيت",
+    "about": "حول",
+    "services": "خدمات",
+    "servicesDropdown": {
+      "gacc": "تسجيل الأغذية GACC",
+      "label": "الامتثال للعلامة الصينية",
+      "ccc": "شهادة سي سي سي",
+      "cosmetics": "حفظ مستحضرات التجميل (NMPA)",
+      "ecommerce": "التجارة الإلكترونية عبر الحدود",
+      "brand": "حماية العلامة التجارية"
+    },
+    "packages": "الحزم",
+    "faq": "التعليمات",
+    "blog": "رؤى",
+    "contact": "اتصل بنا",
+    "whatsapp": "واتساب",
+    "quote": "احصل على عرض أسعار",
+    "industries": "الصناعات",
+    "industriesDropdown": {
+      "dairymilkproducts": "منتجات الألبان والحليب",
+      "meatseafood": "اللحوم والمأكولات البحرية",
+      "winespirits": "النبيذ والمشروبات الروحية",
+      "skincarecosmetics": "العناية بالبشرة ومستحضرات التجميل",
+      "petfood": "أغذية الحيوانات الأليفة",
+      "healthsupplements": "المكملات الصحية",
+      "babymaternal": "الطفل والأم",
+      "consumerelectronics": "الالكترونيات الاستهلاكية",
+      "medicaldevices": "الأجهزة الطبية",
+      "crossborderecommerce": "التجارة الإلكترونية عبر الحدود"
+    },
+    "search": "يبحث",
+    "freeCheck": "فحص مجاني"
+  },
+  "MobileTab": {
+    "home": "الرئيسية",
+    "services": "الخدمات",
+    "blog": "المدونة",
+    "contact": "اتصل بنا"
+  },
+  "CTA": {
+    "ctaTitle": "هل تحتاج إلى هذه الخدمة؟",
+    "ctaSubtitle": "احصل على تقييم امتثال مجاني مخصص لمنتجاتك.",
+    "ctaUrgency": "استشارة مجانية → استجابة 24 ساعة",
+    "ctaButton": "احصل على تقييم مجاني"
+  },
+  "ContactForm": {
+    "title": "تقييم الامتثال مجانا",
+    "subtitle": "أخبرنا عن منتجاتك وسنقدم لك خريطة طريق مخصصة للامتثال.",
+    "emailLabel": "البريد الإلكتروني للأعمال",
+    "emailPlaceholder": "you@company.com",
+    "messageLabel": "الرسالة (اختياري)",
+    "messagePlaceholder": "قم بوصف منتجاتك أو احتياجات الامتثال...",
+    "button": "تقديم التقييم المجاني",
+    "privacy": "نحن نحترم خصوصيتك. لا البريد المزعج، من أي وقت مضى."
+  },
+  "breadcrumb": {
+    "home": "الرئيسية",
+    "services": "خدمات",
+    "blog": "مدونة",
+    "industries": "الصناعات",
+    "packages": "الحزم",
+    "faq": "FAQ"
   }
 }

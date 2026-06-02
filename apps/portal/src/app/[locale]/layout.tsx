@@ -15,8 +15,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const validLocale = locales.includes(locale as any) ? locale : defaultLocale;
   const t = await getTranslations({ locale: validLocale, namespace: 'Home' });
 
-  const title = t('title');
-  const description = t('description');
+  const title = t('metaTitle') || t('title') || t('heroTitle') || 'China Compliance Self-Check | SinoTrade Compliance';
+  const description = t('metaDescription') || t('description') || t('heroSubtitle') || 'Check if your product needs GACC registration, CCC certification, or other compliance for the Chinese market.';
   const path = '/c/';
   const alternates = buildAlternates(validLocale, [...locales], path);
 

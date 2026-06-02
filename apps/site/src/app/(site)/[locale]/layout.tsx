@@ -2,8 +2,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { locales, defaultLocale } from '@/i18n/routing';
 import { messagesMap } from '@/i18n/messages';
-import { Footer, SearchProvider, ActionDock, TradeTranslationProvider, OrganizationJsonLd } from '@trade/ui';
-import { BRAND_NAME, SITE_URL } from '@/config/metadata';
+import { Footer, SearchProvider, ActionDock, TradeTranslationProvider, OrganizationJsonLd, buildAlternates, sharedOpenGraph, sharedTwitter } from '@trade/ui';
 import '../../globals.css';
 
 export function generateStaticParams() {
@@ -23,26 +22,17 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Home' });
 
-  // Default: homepage metadata
-  // Page-level generateMetadata will override this for specific pages
+  const title = t('metaTitle') || t('heroTitle') || 'SinoTrade Compliance | China Import Compliance Services';
+  const description = t('metaDescription') || t('heroSubtitle') || "One-stop China import compliance: GACC registration, CCC certification, NMPA cosmetics filing, label compliance, and cross-border e-commerce.";
+  const path = '/';
+  const alternates = buildAlternates(locale, [...locales], path);
+
   return {
-    title: t('metaTitle') || t('heroTitle'),
-    description: t('metaDescription') || t('heroSubtitle'),
-    alternates: {
-      canonical: `${SITE_URL}/${locale}/`,
-      languages: Object.fromEntries(
-        locales.map((l) => [l, `${SITE_URL}/${l}/`])
-      ),
-    },
-    openGraph: {
-      title: t('metaTitle') || t('heroTitle'),
-      description: t('metaDescription') || t('heroSubtitle'),
-      locale,
-      alternateLocale: locales.filter((l) => l !== locale),
-      siteName: BRAND_NAME,
-      url: `${SITE_URL}/${locale}/`,
-      type: 'website',
-    },
+    title,
+    description,
+    alternates,
+    openGraph: sharedOpenGraph({ title, description, locale, url: alternates.canonical }),
+    twitter: sharedTwitter({ title, description }),
   };
 }
 

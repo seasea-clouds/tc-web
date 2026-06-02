@@ -11,3 +11,9 @@ build/
 temp/
 __pycache__/
 *.pyc
+
+# Blog files merged during site build
+apps/site/public/*/blog/
+apps/site/public/blog/
+apps/site/public/404.html
+apps/site/public/404/

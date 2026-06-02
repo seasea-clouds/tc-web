@@ -1,4 +1,4 @@
-import { Navbar, Footer, TradeTranslationProvider, MobileTabBar } from '@trade/ui';
+import { Footer, SearchProvider, ActionDock, TradeTranslationProvider } from '@trade/ui';
 import { getMessages } from '@/lib/messages';
 import '../globals.css';
 
@@ -24,14 +24,14 @@ export default async function Layout({
 
   return (
     <html lang={locale}>
-      <body className="min-h-screen flex flex-col">
+      <body className="min-h-screen flex flex-col pb-16 md:pb-0 antialiased">
         <TradeTranslationProvider messages={messages} locale={locale}>
-          <Navbar
-            freeCheckHref={`/{locale}/c/`}
+          <SearchProvider
+            freeCheckHref={`/${locale}/c/`}
           />
-          <main className="flex-1 pb-16 md:pb-0">{children}</main>
+          <main className="flex-1">{children}</main>
           <Footer />
-          <MobileTabBar />
+          <ActionDock />
         </TradeTranslationProvider>
       </body>
     </html>

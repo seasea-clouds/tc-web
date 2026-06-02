@@ -28,7 +28,7 @@
     "hint": "برای جستجو در سرویس‌ها، مقالات و پرسش‌های متداول تایپ کنید",
     "types": {
       "service": "خدمات",
-      "blog": "بلاگ",
+      "blog": "Insights",
       "faq": "FAQ"
     }
   },
@@ -92,7 +92,7 @@
   "breadcrumb": {
     "home": "صفحه اصلی",
     "services": "خدمات",
-    "blog": "بلاگ",
+    "blog": "Insights",
     "industries": "صنایع",
     "packages": "بسته ها",
     "faq": "FAQ"

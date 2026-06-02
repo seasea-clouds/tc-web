@@ -28,7 +28,7 @@
     "hint": "Napíšte, ak chcete vyhľadávať v službách, článkoch a často kladených otázkach",
     "types": {
       "service": "Služby",
-      "blog": "Blog",
+      "blog": "Insights",
       "faq": "FAQ"
     }
   },
@@ -92,7 +92,7 @@
   "breadcrumb": {
     "home": "Domov",
     "services": "Služby",
-    "blog": "Blog",
+    "blog": "Insights",
     "industries": "Odvetvia",
     "packages": "Balíčky",
     "faq": "FAQ"

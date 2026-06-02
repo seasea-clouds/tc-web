@@ -28,7 +28,7 @@
     "hint": "Tastați pentru a căuta în servicii, articole și întrebări frecvente",
     "types": {
       "service": "Servicii",
-      "blog": "Blog",
+      "blog": "Insights",
       "faq": "FAQ"
     }
   },
@@ -92,7 +92,7 @@
   "breadcrumb": {
     "home": "Acasă",
     "services": "Servicii",
-    "blog": "Blog",
+    "blog": "Insights",
     "industries": "Industrii",
     "packages": "Pachete",
     "faq": "FAQ"

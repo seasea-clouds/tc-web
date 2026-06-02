@@ -28,7 +28,7 @@
     "hint": "Gépelje be a keresést a szolgáltatások, cikkek és GYIK között",
     "types": {
       "service": "Szolgáltatások",
-      "blog": "Blog",
+      "blog": "Insights",
       "faq": "FAQ"
     }
   },
@@ -92,7 +92,7 @@
   "breadcrumb": {
     "home": "Kezdőlap",
     "services": "Szolgáltatások",
-    "blog": "Blog",
+    "blog": "Insights",
     "industries": "Iparágak",
     "packages": "Csomagok",
     "faq": "FAQ"

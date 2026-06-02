@@ -28,7 +28,7 @@
     "hint": "Hizmetler, makaleler ve SSS'ler arasında arama yapmak için yazın",
     "types": {
       "service": "Hizmetler",
-      "blog": "Blog",
+      "blog": "Insights",
       "faq": "FAQ"
     }
   },
@@ -92,7 +92,7 @@
   "breadcrumb": {
     "home": "Ana Sayfa",
     "services": "Hizmetler",
-    "blog": "Blog",
+    "blog": "Insights",
     "industries": "Endüstriler",
     "packages": "Paketler",
     "faq": "FAQ"

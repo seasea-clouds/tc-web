@@ -28,7 +28,7 @@
     "hint": "サービス、記事、FAQ を検索するために入力します",
     "types": {
       "service": "サービス",
-      "blog": "ブログ",
+      "blog": "Insights",
       "faq": "FAQ"
     }
   },
@@ -92,7 +92,7 @@
   "breadcrumb": {
     "home": "ホーム",
     "services": "サービス",
-    "blog": "ブログ",
+    "blog": "Insights",
     "industries": "産業",
     "packages": "パッケージ",
     "faq": "FAQ"

@@ -28,7 +28,7 @@
     "hint": "Xidmətlər, məqalələr və tez-tez verilən suallar arasında axtarış etmək üçün yazın",
     "types": {
       "service": "Xidmətlər",
-      "blog": "Bloq",
+      "blog": "Insights",
       "faq": "FAQ"
     }
   },
@@ -92,7 +92,7 @@
   "breadcrumb": {
     "home": "Ana Səhifə",
     "services": "Xidmətlər",
-    "blog": "Bloq",
+    "blog": "Insights",
     "industries": "sənayelər",
     "packages": "Paketlər",
     "faq": "FAQ"

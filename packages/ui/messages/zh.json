@@ -28,7 +28,7 @@
     "hint": "输入内容以搜索服务、文章和常见问题解答",
     "types": {
       "service": "服务",
-      "blog": "博客",
+      "blog": "洞察",
       "faq": "FAQ"
     }
   },
@@ -92,7 +92,7 @@
   "breadcrumb": {
     "home": "首页",
     "services": "服务",
-    "blog": "博客",
+    "blog": "洞察",
     "industries": "行业",
     "packages": "套餐",
     "faq": "FAQ"

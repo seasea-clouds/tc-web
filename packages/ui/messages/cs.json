@@ -28,7 +28,7 @@
     "hint": "Pište pro vyhledávání ve službách, článcích a často kladených dotazech",
     "types": {
       "service": "Služby",
-      "blog": "Blog",
+      "blog": "Insights",
       "faq": "FAQ"
     }
   },
@@ -92,7 +92,7 @@
   "breadcrumb": {
     "home": "Domovská stránka",
     "services": "Služby",
-    "blog": "Blog",
+    "blog": "Insights",
     "industries": "Průmyslová odvětví",
     "packages": "Balíčky",
     "faq": "FAQ"

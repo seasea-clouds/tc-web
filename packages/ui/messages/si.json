@@ -28,7 +28,7 @@
     "hint": "සේවා, ලිපි සහ නිතර අසන පැන හරහා සෙවීමට ටයිප් කරන්න",
     "types": {
       "service": "සේවා",
-      "blog": "බ්ලොගය",
+      "blog": "Insights",
       "faq": "FAQ"
     }
   },
@@ -92,7 +92,7 @@
   "breadcrumb": {
     "home": "මුල් පිටුව",
     "services": "සේවා",
-    "blog": "බ්ලොගය",
+    "blog": "Insights",
     "industries": "කර්මාන්ත",
     "packages": "පැකේජ",
     "faq": "FAQ"

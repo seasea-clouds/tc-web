@@ -28,7 +28,7 @@
     "hint": "Typ om te zoeken in services, artikelen en veelgestelde vragen",
     "types": {
       "service": "Diensten",
-      "blog": "Bloggen",
+      "blog": "Insights",
       "faq": "FAQ"
     }
   },
@@ -92,7 +92,7 @@
   "breadcrumb": {
     "home": "Home",
     "services": "Diensten",
-    "blog": "Bloggen",
+    "blog": "Insights",
     "industries": "Industrieën",
     "packages": "Pakketten",
     "faq": "FAQ"

@@ -28,7 +28,7 @@
     "hint": "Tik om oor dienste, artikels en algemene vrae te soek",
     "types": {
       "service": "Dienste",
-      "blog": "Blog",
+      "blog": "Insights",
       "faq": "FAQ"
     }
   },
@@ -92,7 +92,7 @@
   "breadcrumb": {
     "home": "Tuis",
     "services": "Dienste",
-    "blog": "Blog",
+    "blog": "Insights",
     "industries": "Nywerhede",
     "packages": "Pakkette",
     "faq": "FAQ"

@@ -28,7 +28,7 @@
     "hint": "Skriv för att söka bland tjänster, artiklar och vanliga frågor",
     "types": {
       "service": "Tjänster",
-      "blog": "Blogg",
+      "blog": "Insights",
       "faq": "FAQ"
     }
   },
@@ -92,7 +92,7 @@
   "breadcrumb": {
     "home": "Hem",
     "services": "Tjänster",
-    "blog": "Blogg",
+    "blog": "Insights",
     "industries": "industrier",
     "packages": "Paket",
     "faq": "FAQ"

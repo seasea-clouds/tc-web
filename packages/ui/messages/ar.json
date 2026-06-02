@@ -28,7 +28,7 @@
     "hint": "اكتب للبحث عبر الخدمات والمقالات والأسئلة الشائعة",
     "types": {
       "service": "خدمات",
-      "blog": "مدونة",
+      "blog": "Insights",
       "faq": "FAQ"
     }
   },
@@ -92,7 +92,7 @@
   "breadcrumb": {
     "home": "الرئيسية",
     "services": "خدمات",
-    "blog": "مدونة",
+    "blog": "Insights",
     "industries": "الصناعات",
     "packages": "الحزم",
     "faq": "FAQ"

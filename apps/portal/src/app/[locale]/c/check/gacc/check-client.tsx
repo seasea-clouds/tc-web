@@ -57,7 +57,7 @@ export default function GaccCheckClient() {
       try {
         localStorage.setItem('compli-report-input', JSON.stringify({
           ...input,
-          productName: input.productName || input.brandName || 'Your Product',
+          productName: input.productName || 'Your Product',
         }));
       } catch {}
       

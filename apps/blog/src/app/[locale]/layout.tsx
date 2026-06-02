@@ -1,5 +1,6 @@
 import { NextIntlClientProvider } from 'next-intl';
-import { Footer, SearchProvider, ActionDock, TradeTranslationProvider, OrganizationJsonLd } from '@trade/ui';
+import { getTranslations } from 'next-intl/server';
+import { Footer, SearchProvider, ActionDock, TradeTranslationProvider, OrganizationJsonLd, BRAND_NAME, buildAlternates, sharedOpenGraph, sharedTwitter } from '@trade/ui';
 import { getMessages } from '@/lib/messages';
 import '../globals.css';
 
@@ -11,6 +12,24 @@ const LOCALES = [
 
 export async function generateStaticParams() {
   return LOCALES.map(l => ({ locale: l }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Blog' });
+
+  const title = t('metaTitle');
+  const description = t('metaDescription');
+  const path = '/blog/';
+  const alternates = buildAlternates(locale, LOCALES, path);
+
+  return {
+    title,
+    description,
+    alternates,
+    openGraph: sharedOpenGraph({ title, description, locale, url: alternates.canonical }),
+    twitter: sharedTwitter({ title, description }),
+  };
 }
 
 export default async function Layout({

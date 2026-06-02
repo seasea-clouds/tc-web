@@ -1,3 +1,7 @@
+import { BRAND_NAME, SITE_URL } from '@trade/ui';
+
+export { BRAND_NAME, SITE_URL };
+
 /**
  * Centralized metadata configuration for all page types.
  * Each page type has a Title/Description template with SEO keywords.
@@ -58,8 +62,7 @@ export const industryMetaMap: Record<string, { keywordKey: string }> = {
 };
 
 // Brand name used in all metadata titles
-export const BRAND_NAME = 'SinoTrade Compliance';
-export const SITE_URL = 'https://sinotradecompliance.com';
+// BRAND_NAME and SITE_URL now imported from @trade/ui
 
 /**
  * Generate metadata for the homepage.

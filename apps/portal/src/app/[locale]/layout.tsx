@@ -1,12 +1,32 @@
 import { NextIntlClientProvider } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { locales, defaultLocale } from '@/i18n/routing';
 import { messagesMap } from '@/i18n/messages';
-import { Footer, SearchProvider, ActionDock, TradeTranslationProvider, OrganizationJsonLd } from '@trade/ui';
+import { Footer, SearchProvider, ActionDock, TradeTranslationProvider, OrganizationJsonLd, buildAlternates, sharedOpenGraph, sharedTwitter } from '@trade/ui';
 import { AuthProvider } from "@/components/AuthProvider";
 import CookieConsent from "@/components/CookieConsent";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const validLocale = locales.includes(locale as any) ? locale : defaultLocale;
+  const t = await getTranslations({ locale: validLocale, namespace: 'Home' });
+
+  const title = t('title');
+  const description = t('description');
+  const path = '/c/';
+  const alternates = buildAlternates(validLocale, [...locales], path);
+
+  return {
+    title,
+    description,
+    alternates,
+    openGraph: sharedOpenGraph({ title, description, locale: validLocale, url: alternates.canonical }),
+    twitter: sharedTwitter({ title, description }),
+  };
 }
 
 export default async function LocaleLayout({

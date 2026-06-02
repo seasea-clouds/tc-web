@@ -2,6 +2,10 @@ name = "trade-web-portal"
 compatibility_date = "2026-05-23"
 pages_build_output_dir = "out"
 
+[[d1_databases]]
+binding = "DB"
+database_id = ""
+
 [[redirects]]
 from = "/"
 to = "/compli-service/"

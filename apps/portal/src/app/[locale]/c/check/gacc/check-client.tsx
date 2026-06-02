@@ -61,7 +61,7 @@ export default function GaccCheckClient() {
   };
 
   return (
-    <main className="min-h-screen bg-bg-ice">
+    <div className="bg-bg-ice">
       <div className="max-w-3xl mx-auto px-4 py-12">
         {/* Progress */}
         <div className="flex items-center justify-center gap-2 mb-8 text-sm text-gray-400">
@@ -272,6 +272,6 @@ export default function GaccCheckClient() {
           </div>
         )}
       </div>
-    </main>
+    </div>
   );
 }

@@ -26,7 +26,7 @@ export default async function QuotePage({ params }: { params: Promise<{ locale: 
   const ctaT = await getTranslations({ locale, namespace: 'CTA' });
 
   return (
-    <main className="min-h-screen bg-[#F4F6F9]">
+    <div className="bg-[#F4F6F9]">
       <Breadcrumb
         locale={locale}
         items={[
@@ -117,6 +117,6 @@ export default async function QuotePage({ params }: { params: Promise<{ locale: 
       </section>
 
       <CTASection t={ctaT} />
-    </main>
+    </div>
   );
 }

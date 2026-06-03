@@ -50,7 +50,7 @@ export default function HomePage() {
                 <p className="text-sm text-gray-500 mb-4">{tCheck(descKey)}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-gray-400">{t('startFree')}</span>
-                  <span className="font-bold text-gold">$1</span>
+                  <span className="font-bold text-gold">$1.99</span>
                 </div>
               </a>
             );
@@ -91,7 +91,7 @@ export default function HomePage() {
                 {t('popular')}
               </div>
               <h3 className="font-bold text-lg text-primary-navy">{t('single')}</h3>
-              <p className="text-3xl font-bold text-gold my-4">$1</p>
+              <p className="text-3xl font-bold text-gold my-4">$1.99</p>
               <p className="text-sm text-gray-500">{t('singleDesc')}</p>
             </div>
             <div className="bg-white rounded-lg shadow-sm border p-6">

@@ -4,6 +4,8 @@
  * Body: { reportId, module, inputData, resultData, nextSteps, locale? }
  */
 
+import { getSessionId, verifySession } from '../../lib/session';
+
 interface Env {
   DB: any; // D1Database
 }
@@ -23,6 +25,16 @@ export async function onRequest(context: {
       return Response.json({ error: "Missing required fields" }, { status: 400 });
     }
 
+    // ── Resolve user from session cookie ─────────────────────────────
+    let userEmail = '';
+    try {
+      const sessionId = getSessionId(context.request);
+      if (sessionId && context.env.DB) {
+        const user = await verifySession(context.env.DB, sessionId);
+        if (user) userEmail = user.email;
+      }
+    } catch {}
+
     const reportMeta = {
       result: resultData,
       nextSteps: nextSteps || [],
@@ -31,8 +43,8 @@ export async function onRequest(context: {
     let saved = false;
     if (context.env.DB) {
       const result = await context.env.DB.prepare(
-        `INSERT OR REPLACE INTO reports (id, module, product_name, hs_code, origin_country, input_data, result_data, payment_status, locale, created_at)
-         VALUES (?, ?, ?, ?, ?, ?, ?, 'pending', ?, datetime('now'))`
+        `INSERT OR REPLACE INTO reports (id, module, product_name, hs_code, origin_country, input_data, result_data, user_email, payment_status, locale, created_at)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'pending', ?, datetime('now'))`
       )
         .bind(
           reportId,
@@ -42,13 +54,13 @@ export async function onRequest(context: {
           inputData?.originCountry || '',
           JSON.stringify(inputData || {}),
           JSON.stringify(reportMeta),
+          userEmail || null,
           locale || 'en'
         )
         .run();
       saved = result?.success === true || result?.meta?.changes > 0;
     }
 
-    console.log('Report save result:', { reportId, saved: saved || (context.env.DB ? 'hasDB' : 'noDB') });
     return Response.json({ ok: true, reportId, saved: !!context.env.DB && saved });
   } catch (err) {
     console.error("Report save error:", err);

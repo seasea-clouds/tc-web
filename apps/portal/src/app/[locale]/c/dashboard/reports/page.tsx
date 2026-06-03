@@ -24,13 +24,13 @@ function ReportsContent() {
 
   useEffect(() => {
     fetch(`${API_BASE}/reports/list`, {
-      headers: { credentials: 'include' },
+      credentials: 'include',
     })
       .then((r) => r.json())
       .then((data) => setReports(data.reports || []))
       .catch(console.error)
       .finally(() => setLoading(false));
-  });
+  }, []);
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">

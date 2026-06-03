@@ -21,12 +21,12 @@ function BillingContent() {
 
   useEffect(() => {
     fetch(`${API_BASE}/subscription`, {
-      headers: { credentials: 'include' },
+      credentials: 'include',
     })
       .then((r) => r.json())
       .then((data) => setSub(data.subscription || null))
       .catch(() => {});
-  });
+  }, []);
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">

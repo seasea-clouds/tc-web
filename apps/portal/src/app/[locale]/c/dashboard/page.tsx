@@ -8,6 +8,7 @@ import Link from 'next/link';
 function DashboardContent() {
   const { user, logout } = useAuth();
   const t = useTranslations('Dashboard');
+  const auth = useTranslations('Auth');
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
@@ -17,7 +18,7 @@ function DashboardContent() {
           onClick={logout}
           className="text-sm text-gray-500 hover:text-red-600 transition-colors"
         >
-          {t('signOut')}
+          {auth('signOut')}
         </button>
       </div>
 
@@ -29,7 +30,7 @@ function DashboardContent() {
 
       <div className="grid md:grid-cols-2 gap-4">
         <Link
-          href="/dashboard/reports"
+          href="./reports"
           className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:border-[#D4AF37] transition-colors"
         >
           <h3 className="font-semibold text-[#1B365D] mb-1">{t('myReports')}</h3>
@@ -37,7 +38,7 @@ function DashboardContent() {
         </Link>
 
         <Link
-          href="/dashboard/billing"
+          href="./billing"
           className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:border-[#D4AF37] transition-colors"
         >
           <h3 className="font-semibold text-[#1B365D] mb-1">{t('billing')}</h3>

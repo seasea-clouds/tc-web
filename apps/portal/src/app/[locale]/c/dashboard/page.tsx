@@ -2,13 +2,14 @@
 
 import ProtectedRoute from '@/components/ProtectedRoute';
 import { useAuth } from '@/components/AuthProvider';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 
 function DashboardContent() {
   const { user, logout } = useAuth();
   const t = useTranslations('Dashboard');
   const auth = useTranslations('Auth');
+  const locale = useLocale();
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
@@ -30,7 +31,7 @@ function DashboardContent() {
 
       <div className="grid md:grid-cols-2 gap-4">
         <Link
-          href="./reports"
+          href={`/${locale}/c/dashboard/reports`}
           className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:border-[#D4AF37] transition-colors"
         >
           <h3 className="font-semibold text-[#1B365D] mb-1">{t('myReports')}</h3>
@@ -38,7 +39,7 @@ function DashboardContent() {
         </Link>
 
         <Link
-          href="./billing"
+          href={`/${locale}/c/dashboard/billing`}
           className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:border-[#D4AF37] transition-colors"
         >
           <h3 className="font-semibold text-[#1B365D] mb-1">{t('billing')}</h3>

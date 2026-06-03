@@ -84,7 +84,7 @@ export default function LoginPage() {
 
         <p className="text-center text-sm text-gray-500 mt-6">
           {t('noAccount')}{' '}
-          <Link href="/auth/register" className="text-[#D4AF37] hover:underline font-medium">
+          <Link href="./register" className="text-[#D4AF37] hover:underline font-medium">
             {t('register')}
           </Link>
         </p>

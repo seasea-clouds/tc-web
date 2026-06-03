@@ -57,7 +57,35 @@ export default function CrossborderCheckClient() {
         }
       }
 
-      // Save to localStorage for report page fallback
+
+      // 2. Generate PDF (runs full report, stores result_data, uploads PDF)
+      let fullResult = null;
+      try {
+        const pdfRes = await fetch('/api/report/generate-pdf', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ reportId, module: 'crossborder', inputData: input }),
+        });
+        const pdfData = await pdfRes.json();
+        if (pdfData.ok) fullResult = pdfData;
+      } catch (e) {
+        console.warn('PDF generation skipped (dev mode):', e);
+      }
+
+      // 3. Send email if provided
+      if (email) {
+        try {
+          await fetch('/api/report/send-email', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ reportId, email, module: 'crossborder', inputData: input }),
+          });
+        } catch (e) {
+          console.warn('Email send failed (dev mode):', e);
+        }
+      }
+
+      // 4. Save to localStorage for report page fallback
       try {
         localStorage.setItem('compli-report-input', JSON.stringify({
           ...input,
@@ -65,7 +93,7 @@ export default function CrossborderCheckClient() {
         }));
       } catch {}
       
-      // ⚡ 调试模式：跳过付款，直接跳报告
+      // 5. ⚡ 调试模式：跳过付款，直接跳报告
       window.location.href = "/" + window.location.pathname.split('/')[1] + "/c/report/?id=" + reportId;
     } catch (err) {
       setError(String(err));

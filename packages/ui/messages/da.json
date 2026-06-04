@@ -65,7 +65,9 @@
       "crossborderecommerce": "Grænseoverskridende e-handel"
     },
     "search": "Søge",
-    "freeCheck": "Gratis check"
+    "freeCheck": "Gratis check",
+    "signIn": "Log ind",
+    "signUp": "Registrer"
   },
   "MobileTab": {
     "home": "Forside",

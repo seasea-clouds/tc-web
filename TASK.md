@@ -60,6 +60,25 @@
 
 ## 🟡 待执行
 
+### 🆕 P0 — 四站统一 + 工具架构
+- [x] Navbar 加 loginHref / registerHref / userSlot props
+- [x] SearchProvider 透传 Navbar 新 props
+- [x] CookieConsent 迁移到 @trade/ui + 允许/拒绝双按钮
+- [x] @trade/ui/index.ts 导出 CookieConsent
+- [x] Portal 引入 SearchProvider（显示 Navbar）+ CookieConsent
+- [x] Site layout 引入 CookieConsent + 传 loginHref
+- [x] Blog layout 引入 CookieConsent + 传 loginHref
+- [x] PortalUserMenu 组件（auth-aware 下拉菜单）
+- [x] tools.ts 工具注册表 + ToolCard 组件
+- [x] Portal /c/ 首页重写（工具广场 + 漏斗文案）
+- [x] /c/pricing 定价页文案优化
+- [x] 6个 check-client 表单校验提示（缺失字段标红 + 红色横幅）
+- [x] 登录/注册页加 CF Turnstile
+- [x] register.ts 密码校验改为 ≥5 位
+- [x] 48 语言翻译补齐（Navbar signIn/signUp + Portal Home/Check）
+- [x] useSubsiteHref 链接尾随 ? 问题修复
+- [x] 三站构建全部通过
+
 ### P1 — 部署上线
 - [ ] CF Pages: 主站重新连接 repo (Root: `apps/site`)
 - [ ] CF Pages: Portal 重新连接 repo (Root: `apps/portal`)

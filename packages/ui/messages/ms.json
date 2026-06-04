@@ -65,7 +65,9 @@
       "crossborderecommerce": "E-dagang rentas sempadan"
     },
     "search": "Cari",
-    "freeCheck": "Cek Percuma"
+    "freeCheck": "Cek Percuma",
+    "signIn": "Log Masuk",
+    "signUp": "Daftar"
   },
   "MobileTab": {
     "home": "Laman Utama",

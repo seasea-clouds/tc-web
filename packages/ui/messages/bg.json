@@ -65,7 +65,9 @@
       "crossborderecommerce": "Трансгранична електронна търговия"
     },
     "search": "Търсене",
-    "freeCheck": "Безплатна проверка"
+    "freeCheck": "Безплатна проверка",
+    "signIn": "Вход",
+    "signUp": "Регистрация"
   },
   "MobileTab": {
     "home": "Начало",

@@ -65,7 +65,9 @@
       "crossborderecommerce": "Biashara ya kielektroniki ya mpakani"
     },
     "search": "Tafuta",
-    "freeCheck": "Angalia Bure"
+    "freeCheck": "Angalia Bure",
+    "signIn": "Ingia",
+    "signUp": "Jisajili"
   },
   "MobileTab": {
     "home": "Nyumbani",

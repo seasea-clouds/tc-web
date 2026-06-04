@@ -65,7 +65,9 @@
       "crossborderecommerce": "E-niaga lintas batas"
     },
     "search": "Mencari",
-    "freeCheck": "Cek Gratis"
+    "freeCheck": "Cek Gratis",
+    "signIn": "Masuk",
+    "signUp": "Daftar"
   },
   "MobileTab": {
     "home": "Beranda",

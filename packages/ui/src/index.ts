@@ -6,6 +6,7 @@ export { default as MobileTabBar } from './MobileTabBar';
 export { default as SearchProvider } from './SearchProvider';
 export { default as OrganizationJsonLd } from './OrganizationJsonLd';
 export { default as SearchModal } from './SearchModal';
+export { default as CookieConsent } from './CookieConsent';
 export {
   TradeTranslationProvider,
   useT,

@@ -65,7 +65,9 @@
       "crossborderecommerce": "อีคอมเมิร์ซข้ามพรมแดน"
     },
     "search": "ค้นหา",
-    "freeCheck": "เช็คฟรี"
+    "freeCheck": "เช็คฟรี",
+    "signIn": "เข้าสู่ระบบ",
+    "signUp": "สมัครสมาชิก"
   },
   "MobileTab": {
     "home": "หน้าแรก",

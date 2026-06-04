@@ -65,7 +65,9 @@
       "crossborderecommerce": "Транскордонна електронна комерція"
     },
     "search": "Пошук",
-    "freeCheck": "Безкоштовний чек"
+    "freeCheck": "Безкоштовний чек",
+    "signIn": "Увійти",
+    "signUp": "Реєстрація"
   },
   "MobileTab": {
     "home": "Головна",

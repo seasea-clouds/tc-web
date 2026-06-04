@@ -65,7 +65,9 @@
       "crossborderecommerce": "ტრანსსასაზღვრო ელექტრონული კომერცია"
     },
     "search": "ძიება",
-    "freeCheck": "უფასო შემოწმება"
+    "freeCheck": "უფასო შემოწმება",
+    "signIn": "შესვლა",
+    "signUp": "რეგისტრაცია"
   },
   "MobileTab": {
     "home": "მთავარი",

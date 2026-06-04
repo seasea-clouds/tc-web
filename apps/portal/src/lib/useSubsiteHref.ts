@@ -5,5 +5,9 @@ import { useLocale } from 'next-intl';
  */
 export default function useSubsiteHref() {
   const locale = useLocale();
-  return (path: string) => `/${locale}/c${path.startsWith('/') ? '' : '/'}${path}`;
+  return (path: string) => {
+    // strip leading/trailing noise
+    const cleanPath = path.replace(/\?+$/, '').replace(/^\/+/, '/');
+    return `/${locale}/c${cleanPath.startsWith('/') ? '' : '/'}${cleanPath}`;
+  };
 }

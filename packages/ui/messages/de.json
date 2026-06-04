@@ -65,7 +65,9 @@
       "crossborderecommerce": "Grenzüberschreitender E-Commerce"
     },
     "search": "Suchen",
-    "freeCheck": "Kostenloser Scheck"
+    "freeCheck": "Kostenloser Scheck",
+    "signIn": "Anmelden",
+    "signUp": "Registrieren"
   },
   "MobileTab": {
     "home": "Startseite",

@@ -3,6 +3,7 @@
 import { useT } from '@trade/ui';
 import { useState } from "react";
 import { checkGacc, CATEGORY_LABELS, type GaccCategory, type GaccInput } from "../../../../../../modules/gacc/rules";
+import { useFormValidation, inputClasses, selectClasses } from "@/lib/useFormValidation";
 
 type Step = "form" | "free-result";
 
@@ -14,10 +15,11 @@ export default function GaccCheckClient() {
   const [freeData, setFreeData] = useState<ReturnType<typeof checkGacc> | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const { fieldErrors, validate, clearFieldError } = useFormValidation();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!input.category || !input.productName || !input.originCountry) return;
+    if (!validate(input, ['category', 'productName', 'originCountry'])) return;
     const result = checkGacc(input as GaccInput);
     setFreeData(result);
     setStep("free-result");
@@ -111,6 +113,11 @@ export default function GaccCheckClient() {
         {/* Form */}
         {step === "form" && (
           <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-sm border p-8 space-y-6">
+            {Object.keys(fieldErrors).length > 0 && (
+              <div className="bg-red-50 border border-red-200 text-red-700 text-sm rounded-lg p-3 mb-2">
+                ⚠️ Please fill in all required fields highlighted in red.
+              </div>
+            )}
             <h1 className="text-2xl font-bold text-primary-navy">GACC Food Registration Check</h1>
             <p className="text-gray-500 text-sm">Find out if your product needs GACC registration for export to China.</p>
 

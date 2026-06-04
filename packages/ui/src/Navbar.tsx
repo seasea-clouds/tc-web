@@ -11,6 +11,12 @@ interface NavbarProps {
   blogHref?: string;
   locale?: string;
   industries?: { slug: string; emoji: string }[];
+  /** Login link for unauthenticated users (used by site/blog) */
+  loginHref?: string;
+  /** Register link for unauthenticated users (used by site/blog) */
+  registerHref?: string;
+  /** Auth-aware user menu slot — portal injects PortalUserMenu; if absent, shows login/register links */
+  userSlot?: React.ReactNode;
 }
 
 const DEFAULT_INDUSTRIES = [
@@ -77,6 +83,30 @@ export default function Navbar(props: NavbarProps) {
               </svg>
               <span className="hidden sm:inline">{t('whatsapp')}</span>
             </a>
+
+            {/* Login / User area */}
+            {props.userSlot ? (
+              <>{props.userSlot}</>
+            ) : (
+              <>
+                {props.loginHref && (
+                  <a
+                    href={props.loginHref}
+                    className="text-white/80 hover:text-white border border-white/30 hover:border-white/60 px-3 py-1.5 rounded-md text-sm font-medium transition-all"
+                  >
+                    {t('signIn') || 'Sign In'}
+                  </a>
+                )}
+                {props.registerHref && (
+                  <a
+                    href={props.registerHref}
+                    className="hidden sm:inline text-white/80 hover:text-white px-2 py-1.5 text-sm font-medium transition-colors"
+                  >
+                    {t('signUp') || 'Sign Up'}
+                  </a>
+                )}
+              </>
+            )}
 
             <a
               href={fcHref}

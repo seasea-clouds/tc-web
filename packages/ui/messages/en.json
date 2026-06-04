@@ -65,7 +65,9 @@
       "crossborderecommerce": "Cross-border E-commerce"
     },
     "search": "Search",
-    "freeCheck": "Free Check"
+    "freeCheck": "Free Check",
+    "signIn": "Sign In",
+    "signUp": "Sign Up"
   },
   "MobileTab": {
     "home": "Home",

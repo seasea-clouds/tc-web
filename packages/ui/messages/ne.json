@@ -65,7 +65,9 @@
       "crossborderecommerce": "क्रस-बोर्डर ई-वाणिज्य"
     },
     "search": "खोज्नुहोस्",
-    "freeCheck": "नि: शुल्क जाँच"
+    "freeCheck": "नि: शुल्क जाँच",
+    "signIn": "साइन इन",
+    "signUp": "साइन अप"
   },
   "MobileTab": {
     "home": "होम",

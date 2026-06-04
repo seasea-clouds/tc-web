@@ -65,7 +65,9 @@
       "crossborderecommerce": "Comerț electronic transfrontalier"
     },
     "search": "Căutare",
-    "freeCheck": "Cec gratuit"
+    "freeCheck": "Cec gratuit",
+    "signIn": "Autentificare",
+    "signUp": "Înregistrare"
   },
   "MobileTab": {
     "home": "Acasă",

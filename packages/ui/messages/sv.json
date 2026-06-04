@@ -65,7 +65,9 @@
       "crossborderecommerce": "Gränsöverskridande e-handel"
     },
     "search": "Söka",
-    "freeCheck": "Gratis check"
+    "freeCheck": "Gratis check",
+    "signIn": "Logga in",
+    "signUp": "Registrera"
   },
   "MobileTab": {
     "home": "Hem",

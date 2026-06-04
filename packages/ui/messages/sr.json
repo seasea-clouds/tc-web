@@ -65,7 +65,9 @@
       "crossborderecommerce": "Прекогранична е-трговина"
     },
     "search": "Тражи",
-    "freeCheck": "Бесплатна провера"
+    "freeCheck": "Бесплатна провера",
+    "signIn": "Пријава",
+    "signUp": "Регистрација"
   },
   "MobileTab": {
     "home": "Почетна",

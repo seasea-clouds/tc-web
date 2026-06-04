@@ -65,7 +65,9 @@
       "crossborderecommerce": "越境電子商取引"
     },
     "search": "検索",
-    "freeCheck": "無料小切手"
+    "freeCheck": "無料小切手",
+    "signIn": "ログイン",
+    "signUp": "新規登録"
   },
   "MobileTab": {
     "home": "ホーム",

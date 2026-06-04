@@ -2,9 +2,9 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { locales, defaultLocale } from '@/i18n/routing';
 import { messagesMap } from '@/i18n/messages';
-import { Footer, SearchProvider, ActionDock, TradeTranslationProvider, OrganizationJsonLd, buildAlternates, sharedOpenGraph, sharedTwitter } from '@trade/ui';
+import { Footer, SearchProvider, CookieConsent, ActionDock, TradeTranslationProvider, OrganizationJsonLd, buildAlternates, sharedOpenGraph, sharedTwitter } from '@trade/ui';
 import { AuthProvider } from "@/components/AuthProvider";
-import CookieConsent from "@/components/CookieConsent";
+import PortalUserMenu from "@/components/PortalUserMenu";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -51,7 +51,7 @@ export default async function LocaleLayout({
           <TradeTranslationProvider messages={messages} locale={validLocale}>
             <OrganizationJsonLd />
             <AuthProvider>
-              <SearchProvider />
+              <SearchProvider freeCheckHref="/c/" userSlot={<PortalUserMenu />} />
               <main className="flex-1">{children}</main>
               <Footer />
               <ActionDock />

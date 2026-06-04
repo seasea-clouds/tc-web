@@ -1,9 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useAuth } from '@/components/AuthProvider';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import TurnstileWidget from '@/components/TurnstileWidget';
 
 export default function RegisterPage() {
   const { register } = useAuth();
@@ -13,10 +14,18 @@ export default function RegisterPage() {
   const [name, setName] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const turnstileKey = useRef(0);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
+
+    if (!turnstileToken) {
+      setError('Please complete the security check.');
+      return;
+    }
+
     setLoading(true);
     try {
       await register(email, password, name || undefined);
@@ -66,7 +75,7 @@ export default function RegisterPage() {
             <input
               type="password"
               required
-              minLength={6}
+              minLength={5}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent"
@@ -76,11 +85,26 @@ export default function RegisterPage() {
 
           <button
             type="submit"
-            disabled={loading}
+            disabled={loading || !turnstileToken}
             className="w-full bg-[#1B365D] hover:bg-[#1B365D]/90 text-white font-semibold py-2.5 rounded-md transition-all disabled:opacity-50"
           >
             {loading ? t('creatingAccount') : t('registerBtn')}
           </button>
+
+          <div className="mt-3">
+            <TurnstileWidget
+              key={turnstileKey.current}
+              onVerify={(token) => setTurnstileToken(token)}
+              onError={() => {
+                setTurnstileToken(null);
+                setError('Security check failed. Please try again.');
+              }}
+              onExpire={() => {
+                setTurnstileToken(null);
+                turnstileKey.current++;
+              }}
+            />
+          </div>
         </form>
 
         <p className="text-center text-sm text-gray-500 mt-6">

@@ -65,7 +65,9 @@
       "crossborderecommerce": "التجارة الإلكترونية عبر الحدود"
     },
     "search": "يبحث",
-    "freeCheck": "فحص مجاني"
+    "freeCheck": "فحص مجاني",
+    "signIn": "تسجيل الدخول",
+    "signUp": "اشتراك"
   },
   "MobileTab": {
     "home": "الرئيسية",

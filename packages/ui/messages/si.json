@@ -65,7 +65,9 @@
       "crossborderecommerce": "දේශසීමා හරහා ඊ-වාණිජ්‍ය"
     },
     "search": "සොයන්න",
-    "freeCheck": "නොමිලේ චෙක්පත"
+    "freeCheck": "නොමිලේ චෙක්පත",
+    "signIn": "පිවිසෙන්න",
+    "signUp": "ලියාපදිංචි වන්න"
   },
   "MobileTab": {
     "home": "මුල් පිටුව",

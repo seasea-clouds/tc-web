@@ -2,7 +2,7 @@
 
 ## 核心目标
 
-将主站（sinotradecompliance.com）和用户站（Portal）整合到同一个 monorepo 中，共享 UI 组件，统一多语言路由，独立部署，互不干扰。
+将主站（sinotradecompliance.com）、用户站（Portal）、博客站（Blog）整合到同一个 monorepo 中，共享 UI 组件（页头/页脚/Cookie），统一多语言路由，独立部署，四站视觉一致让用户以为是一个网站。
 
 ## 品牌 VI（不可违反）
 
@@ -58,14 +58,35 @@
 
 ### 认证
 - httpOnly Cookie Session，不存 localStorage JWT
+- 注册/登录：Email + 密码（≥5 位，无复杂度要求）
 - Login/Register API 直接设置 `Set-Cookie`
 - `/api/auth/me` 验证 cookie 返回用户
 - `credentials: 'include'` 自动携带 cookie
+- 登录/注册页加 CF Turnstile 人机验证
+
+### 四站页头页脚统一
+- site / blog / portal / admin（未来）全部使用 `@trade/ui` 共享 Navbar + Footer
+- Navbar 新增登录/注册入口（`loginHref` / `registerHref` / `userSlot` props）
+- CookieConsent 提升为共享组件，放在 Footer 位置，提供「允许全部」「拒绝非必要」两个选项
+- 三站视觉完全一致，用户感觉不到跨站
+
+### 工具架构
+- Portal 工具注册表 `src/data/tools.ts`：按类别驱动，增删工具只改此文件
+- 每类工具独立页面目录，首页 Hub 自动渲染
+- 免费自查永远免登录；完整报告/Payment/历史记录需要登录
+- 工具卡片不标价格，统一写「免费自查」
+- 即将推出的工具不展示（tools.ts 里不放即为不展示）
 
 ### 部署
 - 三个独立 CF Pages 项目，各配 Root directory
 - 主站 `apps/site` + Portal `apps/portal` + Admin `apps/admin`
 - 改 `packages/ui/**` 触发两站自动部署
+
+### 统一 Cookie 横幅
+- 共享组件 `@trade/ui/CookieConsent`
+- 两个按钮：「允许全部」（金色主按钮）「拒绝非必要」（灰色边框）
+- localStorage 记忆选择，不再重复弹出
+- 四站 layout 统一引用
 
 ## SEO + GEO 要求
 

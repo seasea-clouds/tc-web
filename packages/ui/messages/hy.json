@@ -65,7 +65,9 @@
       "crossborderecommerce": "Անդրսահմանային էլեկտրոնային առևտուր"
     },
     "search": "Որոնում",
-    "freeCheck": "Անվճար ստուգում"
+    "freeCheck": "Անվճար ստուգում",
+    "signIn": "Մուտք",
+    "signUp": "Գրանցվել"
   },
   "MobileTab": {
     "home": "Գլխավոր",

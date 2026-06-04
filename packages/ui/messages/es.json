@@ -65,7 +65,9 @@
       "crossborderecommerce": "Comercio electrónico transfronterizo"
     },
     "search": "Buscar",
-    "freeCheck": "Cheque Gratis"
+    "freeCheck": "Cheque Gratis",
+    "signIn": "Iniciar sesión",
+    "signUp": "Registrarse"
   },
   "MobileTab": {
     "home": "Inicio",

@@ -65,7 +65,9 @@
       "crossborderecommerce": "Határokon átnyúló e-kereskedelem"
     },
     "search": "Keresés",
-    "freeCheck": "Ingyenes csekk"
+    "freeCheck": "Ingyenes csekk",
+    "signIn": "Bejelentkezés",
+    "signUp": "Regisztráció"
   },
   "MobileTab": {
     "home": "Kezdőlap",

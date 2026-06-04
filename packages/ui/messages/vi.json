@@ -65,7 +65,9 @@
       "crossborderecommerce": "Thương mại điện tử xuyên biên giới"
     },
     "search": "Tìm kiếm",
-    "freeCheck": "Kiểm tra miễn phí"
+    "freeCheck": "Kiểm tra miễn phí",
+    "signIn": "Đăng nhập",
+    "signUp": "Đăng ký"
   },
   "MobileTab": {
     "home": "Trang chủ",

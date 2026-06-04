@@ -65,7 +65,9 @@
       "crossborderecommerce": "Commercio elettronico transfrontaliero"
     },
     "search": "Ricerca",
-    "freeCheck": "Controllo gratuito"
+    "freeCheck": "Controllo gratuito",
+    "signIn": "Accedi",
+    "signUp": "Registrati"
   },
   "MobileTab": {
     "home": "Casa",

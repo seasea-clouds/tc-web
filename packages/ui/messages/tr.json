@@ -65,7 +65,9 @@
       "crossborderecommerce": "Sınır ötesi E-ticaret"
     },
     "search": "Aramak",
-    "freeCheck": "Ücretsiz Çek"
+    "freeCheck": "Ücretsiz Çek",
+    "signIn": "Giriş",
+    "signUp": "Kaydol"
   },
   "MobileTab": {
     "home": "Ana Sayfa",

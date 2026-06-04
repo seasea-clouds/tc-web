@@ -5,6 +5,7 @@ import { useT, WHATSAPP_URL } from '@trade/ui';
 import { useState } from "react";
 import { checkCosmetics, CATEGORY_LABELS } from "../../../../../../modules/nmpa/rules";
 import { API_BASE } from "@/lib/constants";
+import { useFormValidation, inputClasses, selectClasses } from "@/lib/useFormValidation";
 
 type Step = "form" | "free-result";
 
@@ -16,10 +17,11 @@ export default function NmpaCheckClient() {
   const [freeData, setFreeData] = useState<any>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const { fieldErrors, validate, clearFieldError } = useFormValidation();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!input.category || !input.productName) return;
+    if (!validate(input, ['category', 'productName'])) return;
     const result = checkCosmetics(input as any);
     setFreeData(result);
     setStep("free-result");
@@ -119,6 +121,11 @@ export default function NmpaCheckClient() {
 
         {step === "form" && (
           <form onSubmit={handleSubmit} className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sm:p-8 space-y-5">
+            {Object.keys(fieldErrors).length > 0 && (
+              <div className="bg-red-50 border border-red-200 text-red-700 text-sm rounded-lg p-3 mb-2">
+                ⚠️ Please fill in all required fields highlighted in red.
+              </div>
+            )}
             <h1 className="text-2xl font-bold text-[#1B365D]">{t('reportModuleNmpa')} Check</h1>
             <p className="text-sm text-gray-500">Determine if your cosmetics need NMPA registration or filing for the Chinese market.</p>
 
@@ -126,8 +133,8 @@ export default function NmpaCheckClient() {
               <label className="block text-sm font-semibold text-gray-700 mb-1.5">{t('productCategory')}</label>
               <select
                 value={input.category || ""}
-                onChange={e => setVal("category", e.target.value)}
-                className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent"
+                onChange={e => { setVal("category", e.target.value); clearFieldError("category"); }}
+                className={selectClasses(!!fieldErrors["category"])}
                 required
               >
                 <option value="">{t('selectCategory')}</option>
@@ -139,10 +146,10 @@ export default function NmpaCheckClient() {
               <input
                 type="text"
                 value={input["productName"] || ""}
-                onChange={e => setVal("productName", e.target.value)}
+                onChange={e => { setVal("productName", e.target.value); clearFieldError("productName"); }}
+                className={inputClasses(!!fieldErrors["productName"])}
                 minLength={2}
                 placeholder={"e.g., Vitamin C Brightening Serum"}
-                className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent"
                 required
               />
             </div>

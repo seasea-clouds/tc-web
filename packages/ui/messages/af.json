@@ -65,7 +65,9 @@
       "crossborderecommerce": "Oorgrens e-handel"
     },
     "search": "Soek",
-    "freeCheck": "Gratis Tjek"
+    "freeCheck": "Gratis Tjek",
+    "signIn": "Teken In",
+    "signUp": "Registreer"
   },
   "MobileTab": {
     "home": "Tuis",

@@ -65,7 +65,9 @@
       "crossborderecommerce": "E-commerce ndërkufitare"
     },
     "search": "Kërko",
-    "freeCheck": "Kontroll falas"
+    "freeCheck": "Kontroll falas",
+    "signIn": "Hyr",
+    "signUp": "Regjistrohu"
   },
   "MobileTab": {
     "home": "Kryefaqja",

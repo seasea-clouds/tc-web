@@ -65,7 +65,9 @@
       "crossborderecommerce": "Transsərhəd e-ticarət"
     },
     "search": "Axtar",
-    "freeCheck": "Pulsuz Çek"
+    "freeCheck": "Pulsuz Çek",
+    "signIn": "Daxil ol",
+    "signUp": "Qeydiyyat"
   },
   "MobileTab": {
     "home": "Ana səhifə",

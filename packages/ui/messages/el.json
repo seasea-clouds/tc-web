@@ -65,7 +65,9 @@
       "crossborderecommerce": "Διασυνοριακό ηλεκτρονικό εμπόριο"
     },
     "search": "Ερευνα",
-    "freeCheck": "Δωρεάν έλεγχος"
+    "freeCheck": "Δωρεάν έλεγχος",
+    "signIn": "Σύνδεση",
+    "signUp": "Εγγραφή"
   },
   "MobileTab": {
     "home": "Αρχική",

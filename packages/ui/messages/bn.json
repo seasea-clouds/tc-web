@@ -65,7 +65,9 @@
       "crossborderecommerce": "আন্তঃসীমান্ত ই-কমার্স"
     },
     "search": "অনুসন্ধান করুন",
-    "freeCheck": "বিনামূল্যে চেক"
+    "freeCheck": "বিনামূল্যে চেক",
+    "signIn": "সাইন ইন",
+    "signUp": "সাইন আপ"
   },
   "MobileTab": {
     "home": "হোম",

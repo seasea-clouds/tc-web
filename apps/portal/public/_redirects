@@ -1,6 +1,2 @@
-# Rewrite static assets: /compli-service/_next/* → /_next/*
-/compli-service/_next/*  /_next/:splat  200
-
-# Rewrite pages: /compli-service/* → /* (already handled by basePath)
-# CF Pages serves the out/ directory at root
-# Cloudflare Pages auto-build
+# Portal 部署在独立域名时，不要走 redirect，主站 Worker 处理路由。
+# 无特殊规则需要配置。

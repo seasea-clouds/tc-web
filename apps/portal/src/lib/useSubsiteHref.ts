@@ -11,3 +11,11 @@ export default function useSubsiteHref() {
     return `/${locale}/c${cleanPath.startsWith('/') ? '' : '/'}${cleanPath}`;
   };
 }
+
+/**
+ * Gets just the locale prefix for redirects: /{locale}
+ */
+export function usePathPrefix() {
+  const locale = useLocale();
+  return `/${locale}`;
+}

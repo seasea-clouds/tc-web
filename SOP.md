@@ -27,81 +27,47 @@ cd apps/blog   && npx next build   # 博客站
 
 ## 部署
 
-### 新建 CF Pages 项目（连接到 GitHub）
+### 三个独立 CF Pages 项目
 
-有两种方式创建 CF Pages 项目并连接到 GitHub 仓库：
+| 项目 | 项目名 | Root dir | 生产域名（未来）| dev 域名 |
+|------|--------|----------|----------------|----------|
+| 主站 | `trade-web-site` | `apps/site` | sinotradecompliance.com | trade-web-site.pages.dev |
+| Portal | `trade-web-portal` | `apps/portal` | — | trade-web-portal.pages.dev |
+| Blog | `trade-web-blog` | `apps/blog` | — | trade-web-blog.pages.dev |
 
-#### 方式 A：Cloudflare Dashboard（推荐首次）
-1. 登录 [Cloudflare Dashboard](https://dash.cloudflare.com) → **Workers & Pages** → **Create**
-2. 选 **Pages** → **连接到 Git** → 授权 GitHub 账号
-3. 选择 `seasea-clouds/trade-web` 仓库
-4. 项目名：`trade-web-{app}`
-5. 配置构建设置：
-   | 设置 | 值 |
-   |------|-----|
-   | 生产分支 | `main` |
-   | Root directory | `apps/{app}` |
-   | Build command | `npx next build` |
-   | Build output | `out` |
-6. 点击 **保存并部署**
+**当前阶段：** 开发模式，使用 CF 自带的 `.pages.dev` 域名。未来将 `sinotradecompliance.com` CNAME 到 `trade-web-site.pages.dev` 后手动切换。
 
-#### 方式 B：CF API（编程方式）
-```python
-import json, urllib.request
+### CF Pages 构建设置
 
-body = json.dumps({
-    "name": "trade-web-{app}",
-    "source": {
-        "type": "github",
-        "config": {
-            "owner": "seasea-clouds",
-            "repo_name": "trade-web",
-            "production_branch": "main",
-            "pr_comments_enabled": True,
-            "deploy_previews": True,
-        }
-    },
-    "build_config": {
-        "build_command": "npx next build",
-        "destination_dir": "out",
-        "root_dir": "apps/{app}"
-    }
-}).encode()
+| 设置 | 值 |
+|------|-----|
+| 生产分支 | `main` |
+| Build command | `npx next build` |
+| Build output | `out` |
+| Root directory | `apps/{site|portal|blog}` |
 
-req = urllib.request.Request(
-    f'https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/pages/projects',
-    data=body,
-    headers={'Authorization': f'Bearer {token}', 'Content-Type': 'application/json'},
-    method='POST'
-)
-resp = json.loads(urllib.request.urlopen(req).read())
-```
-> ⚠️ 关键：必须在创建时就传 `source` 字段。如果先创建（Direct Upload）再试图 PATCH 追加 git，API 会拒绝。
-
-#### 方式 C：Wrangler CLI（仅 Direct Upload，无 Git）
-```bash
-npx wrangler pages project create trade-web-{app} --production-branch main
-npx wrangler pages deploy apps/{app}/out --project-name trade-web-{app} --branch main
-```
-> ⚠️ Wrangler 创建的项目为 Direct Upload 模式，不支持 Git 自动部署。
-> 如需 Git 连接，请使用方式 A 或 B。
-
-### 现有 CF Pages 项目
-
-| 项目 | 域名 | Root dir | Git 连接 |
-|------|------|----------|:---------:|
-| `trade-web-site` | sinotradecompliance.com → trade-web-site.pages.dev | `apps/site` | ✅ |
-| `trade-web-portal` | compli-service.pages.dev → trade-web-portal.pages.dev | `apps/portal` | ✅ |
-| `trade-web-blog` | trade-web-blog.pages.dev | `apps/blog` | ✅ |
-| `trade-web-admin` | 占位 | `apps/admin` | ⏳ |
-
-### 默认触发部署
+### 自动触发
 - 推送到 `main` 分支 → 所有项目自动触发构建
 - 改 `apps/site/**` → 触发主站
 - 改 `apps/portal/**` → 触发 Portal
 - 改 `apps/blog/**` → 触发博客
 - 改 `packages/ui/**` → 触发所有站
 - 改 `packages/scripts/**` → 触发所有站
+
+### 主站代理转发
+
+主站 `functions/_middleware.ts`（CF Pages 边缘 Worker）处理子站代理：
+
+| 模式 | 操作 |
+|------|------|
+| `/{locale}/c/*` | Worker 转发到 portal（保留 locale 前缀）|
+| `/{locale}/blog/*` | Worker 转发到 blog（保留 locale 前缀）|
+| `/c/`（裸路径） | Worker 根据浏览器语言 302 → `/{locale}/c/` |
+| `/blog/`（裸路径） | Worker 根据浏览器语言 302 → `/{locale}/blog/` |
+| `/`（根路径） | Worker 根据浏览器语言 302 → `/{locale}/` |
+| `/c/_next/static/*` | Worker 直接 fetch portal 的静态资源 |
+| `/blog/_next/static/*` | Worker 直接 fetch blog 的静态资源 |
+| `/api/*` | Worker 转发到 portal 的 Pages Functions |
 
 ### Portal D1 配置
 1. CF Dashboard → Workers & Pages → trade-web-portal → Settings → Functions
@@ -113,7 +79,7 @@ npx wrangler pages deploy apps/{app}/out --project-name trade-web-{app} --branch
 ### Portal 环境变量
 | 变量 | 说明 |
 |------|------|
-| `JWT_SECRET` | JWT 签名密钥（旧兼容）|
+| `JWT_SECRET` | JWT 签名密钥 |
 | `CREEM_API_KEY` | Creem 支付密钥 |
 | `CREEM_PRODUCT_ID_SINGLE` | 单次报告产品 ID |
 | `CREEM_PRODUCT_ID_SUBSCRIBE` | 订阅产品 ID |
@@ -127,6 +93,7 @@ npx wrangler pages deploy apps/{app}/out --project-name trade-web-{app} --branch
 ```typescript
 import Navbar from '@trade/ui/Navbar';
 import Footer from '@trade/ui/Footer';
+import { SearchProvider } from '@trade/ui';
 ```
 
 组件位于 `packages/ui/src/`，所有 app 在 `tsconfig.json` 中配置路径映射：
@@ -143,7 +110,7 @@ import Footer from '@trade/ui/Footer';
 
 ## 共享编译脚本
 
-所有编译脚本位于 `packages/scripts/`，自动发现 `apps/*` 下所有子站：
+所有编译脚本位于 `packages/scripts/`：
 
 | 脚本 | 功能 |
 |------|------|
@@ -154,6 +121,7 @@ import Footer from '@trade/ui/Footer';
 | `build-robots.mjs` | 生成 robots.txt |
 | `build-all.mjs` | 总入口：运行以上所有脚本 |
 | `check-translations.mjs` | 翻译质量检查（全量核验）|
+| `check-hardcoded.mjs` | 检查 JSX 中硬编码英文 |
 | `convert-webp.mjs` | 图片格式转换 |
 | `clean-rsc.js` | 清理构建产物 |
 
@@ -168,10 +136,11 @@ node ../../packages/scripts/images/convert-webp.mjs \
   && node ../../packages/scripts/check-translations.mjs --short
 ```
 
-**用户站/博客站（简化）：**
+**用户站/博客站：**
 ```bash
 next build \
-  ; node ../../packages/scripts/check-translations.mjs --short \
+  && node ../../packages/scripts/check-hardcoded.mjs --ci \
+  && node ../../packages/scripts/check-translations.mjs --short \
   ; node ../../packages/scripts/clean-rsc.js
 ```
 
@@ -199,10 +168,7 @@ curl -sL -o /dev/null -w "%{http_code}\n" "http://localhost:3004/en/"
 
 # 线上验证
 curl -sL -o /dev/null -w "%{http_code}\n" https://trade-web-site.pages.dev/en/
-curl -sL -o /dev/null -w "%{http_code}\n" https://trade-web-portal.pages.dev/en/c/
-curl -sL -o /dev/null -w "%{http_code}\n" https://trade-web-blog.pages.dev/en/
-
-# 博客通过主站代理
+curl -sL -o /dev/null -w "%{http_code}\n" https://trade-web-site.pages.dev/en/c/
 curl -sL -o /dev/null -w "%{http_code}\n" https://trade-web-site.pages.dev/en/blog/
 
 # 浏览器对比（见 browser-automation skill）

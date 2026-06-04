@@ -23,7 +23,8 @@
     "getReport": "دریافت گزارش - 1 دلار",
     "subscribe": "اشتراک 9.9 دلار در ماه",
     "metaTitle": "China Compliance Self-Check | SinoTrade Compliance",
-    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China."
+    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China.",
+    "allFree": "۶ ماژول — همه رایگان، بدون ثبت نام"
   },
   "Auth": {
     "signIn": "وارد شوید",
@@ -46,11 +47,11 @@
     "emailPlaceholder": "you@example.com",
     "passwordPlaceholder": "رمز عبور خود را وارد کنید",
     "namePlaceholder": "نام شما",
-    "passwordMinHint": "حداقل 6 کاراکتر",
+    "passwordMinHint": "حداقل 5 کاراکتر",
     "errorRequired": "ایمیل و رمز عبور لازم است",
     "errorInvalid": "ایمیل یا رمز عبور نامعتبر است",
     "errorExists": "ایمیل قبلا ثبت شده است",
-    "errorLength": "رمز عبور باید حداقل 6 کاراکتر باشد"
+    "errorLength": "رمز عبور باید حداقل 5 کاراکتر باشد"
   },
   "Dashboard": {
     "title": "داشبورد",
@@ -209,7 +210,8 @@
     "packagingPlastic": "Plastic / PET",
     "packagingCan": "Can / Tin",
     "packagingPouch": "Pouch / Bag",
-    "packagingBox": "Box / Carton"
+    "packagingBox": "Box / Carton",
+    "categoryCheckTitle": "بررسی خودکار انطباق"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",

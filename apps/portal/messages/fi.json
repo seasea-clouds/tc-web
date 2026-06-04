@@ -23,7 +23,8 @@
     "getReport": "Hanki raportti – 1 dollari",
     "subscribe": "Tilaa 9,9 dollaria/kk",
     "metaTitle": "China Compliance Self-Check | SinoTrade Compliance",
-    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China."
+    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China.",
+    "allFree": "6 moduulia — kaikki ilmaisia, ei rekisteröitymistä"
   },
   "Auth": {
     "signIn": "Kirjaudu sisään",
@@ -46,11 +47,11 @@
     "emailPlaceholder": "sinä@esimerkki.fi",
     "passwordPlaceholder": "Kirjoita salasanasi",
     "namePlaceholder": "Sinun nimesi",
-    "passwordMinHint": "Vähintään 6 merkkiä",
+    "passwordMinHint": "Vähintään 5 merkkiä",
     "errorRequired": "Sähköposti ja salasana vaaditaan",
     "errorInvalid": "Virheellinen sähköpostiosoite tai salasana",
     "errorExists": "Sähköposti on jo rekisteröity",
-    "errorLength": "Salasanassa on oltava vähintään 6 merkkiä"
+    "errorLength": "Salasanassa on oltava vähintään 5 merkkiä"
   },
   "Dashboard": {
     "title": "Kojelauta",
@@ -209,7 +210,8 @@
     "packagingPlastic": "Plastic / PET",
     "packagingCan": "Can / Tin",
     "packagingPouch": "Pouch / Bag",
-    "packagingBox": "Box / Carton"
+    "packagingBox": "Box / Carton",
+    "categoryCheckTitle": "Vaatimustenmukaisuuden itsearviointi"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",

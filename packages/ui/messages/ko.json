@@ -65,7 +65,9 @@
       "crossborderecommerce": "국경 간 전자상거래"
     },
     "search": "찾다",
-    "freeCheck": "무료수표"
+    "freeCheck": "무료수표",
+    "signIn": "로그인",
+    "signUp": "회원가입"
   },
   "MobileTab": {
     "home": "홈",

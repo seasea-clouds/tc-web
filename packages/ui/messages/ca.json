@@ -65,7 +65,9 @@
       "crossborderecommerce": "Comerç electrònic transfronterer"
     },
     "search": "Cerca",
-    "freeCheck": "Comprovació gratuïta"
+    "freeCheck": "Comprovació gratuïta",
+    "signIn": "Iniciar sessió",
+    "signUp": "Registrar-se"
   },
   "MobileTab": {
     "home": "Inici",

@@ -23,7 +23,8 @@
     "getReport": "प्रतिवेदन प्राप्त गर्नुहोस् - $1.99",
     "subscribe": "$9.9/महिना सदस्यता लिनुहोस्",
     "metaTitle": "China Compliance Self-Check | SinoTrade Compliance",
-    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China."
+    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China.",
+    "allFree": "६ मोड्युल — सबै निःशुल्क, दर्ता आवश्यक छैन"
   },
   "Auth": {
     "signIn": "साइन इन गर्नुहोस्",
@@ -209,7 +210,8 @@
     "packagingPlastic": "Plastic / PET",
     "packagingCan": "Can / Tin",
     "packagingPouch": "Pouch / Bag",
-    "packagingBox": "Box / Carton"
+    "packagingBox": "Box / Carton",
+    "categoryCheckTitle": "अनुपालन स्व-जाँच"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",

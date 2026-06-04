@@ -23,7 +23,8 @@
     "getReport": "Λήψη αναφοράς — 1.99 $",
     "subscribe": "Εγγραφείτε 9,9 $/μήνα",
     "metaTitle": "China Compliance Self-Check | SinoTrade Compliance",
-    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China."
+    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China.",
+    "allFree": "6 ενότητες — όλες δωρεάν, χωρίς εγγραφή"
   },
   "Auth": {
     "signIn": "Είσοδος",
@@ -46,11 +47,11 @@
     "emailPlaceholder": "you@example.com",
     "passwordPlaceholder": "Εισαγάγετε τον κωδικό πρόσβασής σας",
     "namePlaceholder": "Το όνομά σου",
-    "passwordMinHint": "Τουλάχιστον 6 χαρακτήρες",
+    "passwordMinHint": "Τουλάχιστον 5 χαρακτήρες",
     "errorRequired": "Απαιτείται email και κωδικός πρόσβασης",
     "errorInvalid": "Μη έγκυρο email ή κωδικός πρόσβασης",
     "errorExists": "Το email έχει ήδη εγγραφεί",
-    "errorLength": "Ο κωδικός πρόσβασης πρέπει να αποτελείται από τουλάχιστον 6 χαρακτήρες"
+    "errorLength": "Ο κωδικός πρόσβασης πρέπει να αποτελείται από τουλάχιστον 5 χαρακτήρες"
   },
   "Dashboard": {
     "title": "Ταμπλό",
@@ -209,7 +210,8 @@
     "packagingPlastic": "Plastic / PET",
     "packagingCan": "Can / Tin",
     "packagingPouch": "Pouch / Bag",
-    "packagingBox": "Box / Carton"
+    "packagingBox": "Box / Carton",
+    "categoryCheckTitle": "Αυτοαξιολόγηση συμμόρφωσης"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",

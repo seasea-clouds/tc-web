@@ -23,7 +23,8 @@
     "getReport": "Merrni raportin - 1 dollarë",
     "subscribe": "Abonohu 9,9 dollarë në muaj",
     "metaTitle": "China Compliance Self-Check | SinoTrade Compliance",
-    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China."
+    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China.",
+    "allFree": "6 module — të gjitha falas, pa regjistrim"
   },
   "Auth": {
     "signIn": "Hyni",
@@ -46,11 +47,11 @@
     "emailPlaceholder": "you@example.com",
     "passwordPlaceholder": "Futni fjalëkalimin tuaj",
     "namePlaceholder": "Emri juaj",
-    "passwordMinHint": "Të paktën 6 karaktere",
+    "passwordMinHint": "Të paktën 5 karaktere",
     "errorRequired": "Kërkohet email dhe fjalëkalim",
     "errorInvalid": "Email ose fjalëkalim i pavlefshëm",
     "errorExists": "Email tashmë është regjistruar",
-    "errorLength": "Fjalëkalimi duhet të jetë së paku 6 karaktere"
+    "errorLength": "Fjalëkalimi duhet të jetë së paku 5 karaktere"
   },
   "Dashboard": {
     "title": "Paneli",
@@ -209,7 +210,8 @@
     "packagingPlastic": "Plastic / PET",
     "packagingCan": "Can / Tin",
     "packagingPouch": "Pouch / Bag",
-    "packagingBox": "Box / Carton"
+    "packagingBox": "Box / Carton",
+    "categoryCheckTitle": "Vetëkontrolli i pajtueshmërisë"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",

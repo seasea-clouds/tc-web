@@ -23,7 +23,8 @@
     "getReport": "Ստացեք հաշվետվություն — $1.99",
     "subscribe": "Բաժանորդագրվեք $9,9/ամսական",
     "metaTitle": "China Compliance Self-Check | SinoTrade Compliance",
-    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China."
+    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China.",
+    "allFree": "6 մոդուլ — բոլորը անվճար, գրանցում չի պահանջվում"
   },
   "Auth": {
     "signIn": "Մուտք գործեք",
@@ -46,11 +47,11 @@
     "emailPlaceholder": "you@example.com",
     "passwordPlaceholder": "Մուտքագրեք ձեր գաղտնաբառը",
     "namePlaceholder": "Ձեր անունը",
-    "passwordMinHint": "Առնվազն 6 նիշ",
+    "passwordMinHint": "Առնվազն 5 նիշ",
     "errorRequired": "Պահանջվում է էլ.փոստ և գաղտնաբառ",
     "errorInvalid": "Անվավեր էլփոստ կամ գաղտնաբառ",
     "errorExists": "Էլ.փոստն արդեն գրանցված է",
-    "errorLength": "Գաղտնաբառը պետք է լինի առնվազն 6 նիշ"
+    "errorLength": "Գաղտնաբառը պետք է լինի առնվազն 5 նիշ"
   },
   "Dashboard": {
     "title": "Վահանակ",
@@ -209,7 +210,8 @@
     "packagingPlastic": "Plastic / PET",
     "packagingCan": "Can / Tin",
     "packagingPouch": "Pouch / Bag",
-    "packagingBox": "Box / Carton"
+    "packagingBox": "Box / Carton",
+    "categoryCheckTitle": "Համապատասխանության ինքնաստուգում"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",

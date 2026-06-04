@@ -23,7 +23,9 @@
     "getReport": "Ottieni rapporto: $ 1.99",
     "subscribe": "Abbonati $ 9,9 / mese",
     "metaTitle": "China Compliance Self-Check | SinoTrade Compliance",
-    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China."
+    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China.",
+    "allFree": "6 moduli — tutti gratuiti, senza registrazione",
+    "howItWorksSub": "3 passi dalle info prodotto al report di conformità"
   },
   "Auth": {
     "signIn": "Accedi",
@@ -46,11 +48,11 @@
     "emailPlaceholder": "tu@esempio.com",
     "passwordPlaceholder": "Inserisci la tua password",
     "namePlaceholder": "Il tuo nome",
-    "passwordMinHint": "Almeno 6 caratteri",
+    "passwordMinHint": "Almeno 5 caratteri",
     "errorRequired": "E-mail e password richieste",
     "errorInvalid": "E-mail o password non valide",
     "errorExists": "E-mail già registrata",
-    "errorLength": "La password deve contenere almeno 6 caratteri"
+    "errorLength": "La password deve contenere almeno 5 caratteri"
   },
   "Dashboard": {
     "title": "Cruscotto",
@@ -209,7 +211,9 @@
     "packagingPlastic": "Plastic / PET",
     "packagingCan": "Can / Tin",
     "packagingPouch": "Pouch / Bag",
-    "packagingBox": "Box / Carton"
+    "packagingBox": "Box / Carton",
+    "categoryCheckTitle": "Autovalutazione di conformità",
+    "categoryCheckDesc": "Valutazione gratuita in 3 secondi dei requisiti di conformità per la Cina"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",

@@ -23,7 +23,8 @@
     "getReport": "रिपोर्ट प्राप्त करें - $1.99",
     "subscribe": "$9.9/माह की सदस्यता लें",
     "metaTitle": "China Compliance Self-Check | SinoTrade Compliance",
-    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China."
+    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China.",
+    "allFree": "6 मॉड्यूल — सभी मुफ्त, कोई साइन-अप नहीं"
   },
   "Auth": {
     "signIn": "साइन इन करें",
@@ -46,11 +47,11 @@
     "emailPlaceholder": "you@example.com",
     "passwordPlaceholder": "अपना पासवर्ड दर्ज करें",
     "namePlaceholder": "आपका नाम",
-    "passwordMinHint": "कम से कम 6 अक्षर",
+    "passwordMinHint": "कम से कम 5 अक्षर",
     "errorRequired": "ईमेल और पासवर्ड आवश्यक",
     "errorInvalid": "अमान्य ईमेल या पासवर्ड",
     "errorExists": "ईमेल पहले से ही पंजीकृत है",
-    "errorLength": "पासवर्ड कम से कम 6 अक्षर का होना चाहिए"
+    "errorLength": "पासवर्ड कम से कम 5 अक्षर का होना चाहिए"
   },
   "Dashboard": {
     "title": "डैशबोर्ड",
@@ -209,7 +210,8 @@
     "packagingPlastic": "Plastic / PET",
     "packagingCan": "Can / Tin",
     "packagingPouch": "Pouch / Bag",
-    "packagingBox": "Box / Carton"
+    "packagingBox": "Box / Carton",
+    "categoryCheckTitle": "अनुपालन स्व-जांच"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",

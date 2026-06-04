@@ -23,7 +23,9 @@
     "getReport": "보고서 받기 - $1.99",
     "subscribe": "구독 $9.9/월",
     "metaTitle": "China Compliance Self-Check | SinoTrade Compliance",
-    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China."
+    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China.",
+    "allFree": "6개 모듈 — 전부 무료, 가입 불필요",
+    "howItWorksSub": "제품 정보부터 규정 준수 보고서까지 3단계"
   },
   "Auth": {
     "signIn": "로그인",
@@ -46,11 +48,11 @@
     "emailPlaceholder": "you@example.com",
     "passwordPlaceholder": "비밀번호를 입력하세요",
     "namePlaceholder": "당신의 이름",
-    "passwordMinHint": "6자 이상",
+    "passwordMinHint": "5자 이상",
     "errorRequired": "이메일과 비밀번호가 필요합니다",
     "errorInvalid": "잘못된 이메일 또는 비밀번호",
     "errorExists": "이미 등록된 이메일",
-    "errorLength": "비밀번호는 6자 이상이어야 합니다."
+    "errorLength": "비밀번호는 5자 이상이어야 합니다."
   },
   "Dashboard": {
     "title": "대시보드",
@@ -209,7 +211,9 @@
     "packagingPlastic": "Plastic / PET",
     "packagingCan": "Can / Tin",
     "packagingPouch": "Pouch / Bag",
-    "packagingBox": "Box / Carton"
+    "packagingBox": "Box / Carton",
+    "categoryCheckTitle": "규정 준수 자가 진단",
+    "categoryCheckDesc": "3초 만에 중국 시장 규정 준수 요구사항 무료 평가"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",

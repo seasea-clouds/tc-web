@@ -23,7 +23,8 @@
     "getReport": "Kry verslag - $1.99",
     "subscribe": "Teken in $9,9/maand",
     "metaTitle": "China Compliance Self-Check | SinoTrade Compliance",
-    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China."
+    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China.",
+    "allFree": "6 modules — almal gratis, geen registrasie"
   },
   "Auth": {
     "signIn": "Meld aan",
@@ -46,11 +47,11 @@
     "emailPlaceholder": "jy@voorbeeld.com",
     "passwordPlaceholder": "Voer jou wagwoord in",
     "namePlaceholder": "Jou naam",
-    "passwordMinHint": "Ten minste 6 karakters",
+    "passwordMinHint": "Ten minste 5 karakters",
     "errorRequired": "E-pos en wagwoord vereis",
     "errorInvalid": "Ongeldige e-pos of wagwoord",
     "errorExists": "E-pos reeds geregistreer",
-    "errorLength": "Wagwoord moet ten minste 6 karakters wees"
+    "errorLength": "Wagwoord moet ten minste 5 karakters wees"
   },
   "Dashboard": {
     "title": "Dashboard",
@@ -209,7 +210,8 @@
     "packagingPlastic": "Plastic / PET",
     "packagingCan": "Can / Tin",
     "packagingPouch": "Pouch / Bag",
-    "packagingBox": "Box / Carton"
+    "packagingBox": "Box / Carton",
+    "categoryCheckTitle": "Voldoening self-ondersoek"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",

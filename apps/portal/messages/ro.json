@@ -23,7 +23,8 @@
     "getReport": "Obțineți raportul - 1.99 USD",
     "subscribe": "Abonați-vă 9,9 USD/lună",
     "metaTitle": "China Compliance Self-Check | SinoTrade Compliance",
-    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China."
+    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China.",
+    "allFree": "6 module — toate gratuite, fără înregistrare"
   },
   "Auth": {
     "signIn": "Conectați-vă",
@@ -46,11 +47,11 @@
     "emailPlaceholder": "tu@example.com",
     "passwordPlaceholder": "Introduceți parola",
     "namePlaceholder": "Numele tău",
-    "passwordMinHint": "Cel puțin 6 caractere",
+    "passwordMinHint": "Cel puțin 5 caractere",
     "errorRequired": "E-mail și parolă necesare",
     "errorInvalid": "E-mail sau parolă nevalidă",
     "errorExists": "E-mail deja înregistrat",
-    "errorLength": "Parola trebuie să aibă cel puțin 6 caractere"
+    "errorLength": "Parola trebuie să aibă cel puțin 5 caractere"
   },
   "Dashboard": {
     "title": "Tabloul de bord",
@@ -209,7 +210,8 @@
     "packagingPlastic": "Plastic / PET",
     "packagingCan": "Can / Tin",
     "packagingPouch": "Pouch / Bag",
-    "packagingBox": "Box / Carton"
+    "packagingBox": "Box / Carton",
+    "categoryCheckTitle": "Autoevaluare de conformitate"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",

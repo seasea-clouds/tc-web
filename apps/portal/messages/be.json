@@ -23,7 +23,8 @@
     "getReport": "Атрымаць справаздачу — $1.99",
     "subscribe": "Падпісацца за 9,9 долараў у месяц",
     "metaTitle": "China Compliance Self-Check | SinoTrade Compliance",
-    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China."
+    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China.",
+    "allFree": "6 модуляў — усе бясплатныя, без рэгістрацыі"
   },
   "Auth": {
     "signIn": "Увайдзіце",
@@ -46,11 +47,11 @@
     "emailPlaceholder": "you@example.com",
     "passwordPlaceholder": "Увядзіце ваш пароль",
     "namePlaceholder": "Ваша імя",
-    "passwordMinHint": "Мінімум 6 сімвалаў",
+    "passwordMinHint": "Мінімум 5 сімвалаў",
     "errorRequired": "Патрабуецца электронная пошта і пароль",
     "errorInvalid": "Няправільны адрас электроннай пошты ці пароль",
     "errorExists": "Адрас электроннай пошты ўжо зарэгістраваны",
-    "errorLength": "Пароль павінен быць не менш за 6 сімвалаў"
+    "errorLength": "Пароль павінен быць не менш за 5 сімвалаў"
   },
   "Dashboard": {
     "title": "Прыборная панэль",
@@ -209,7 +210,8 @@
     "packagingPlastic": "Plastic / PET",
     "packagingCan": "Can / Tin",
     "packagingPouch": "Pouch / Bag",
-    "packagingBox": "Box / Carton"
+    "packagingBox": "Box / Carton",
+    "categoryCheckTitle": "Самаправерка адпаведнасці"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",

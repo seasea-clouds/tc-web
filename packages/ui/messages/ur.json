@@ -65,7 +65,9 @@
       "crossborderecommerce": "سرحد پار ای کامرس"
     },
     "search": "تلاش کریں۔",
-    "freeCheck": "مفت چیک"
+    "freeCheck": "مفت چیک",
+    "signIn": "سائن ان",
+    "signUp": "سائن اپ"
   },
   "MobileTab": {
     "home": "ہوم",

@@ -23,7 +23,8 @@
     "getReport": "Добијте извештај — $1.99",
     "subscribe": "Претплатите се 9,9 УСД месечно",
     "metaTitle": "China Compliance Self-Check | SinoTrade Compliance",
-    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China."
+    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China.",
+    "allFree": "6 модула — сви бесплатни, без регистрације"
   },
   "Auth": {
     "signIn": "Пријавите се",
@@ -46,11 +47,11 @@
     "emailPlaceholder": "ви@екампле.цом",
     "passwordPlaceholder": "Унесите своју лозинку",
     "namePlaceholder": "Твоје име",
-    "passwordMinHint": "Најмање 6 знакова",
+    "passwordMinHint": "Најмање 5 знакова",
     "errorRequired": "Е-маил и лозинка су потребни",
     "errorInvalid": "Неважећа адреса е-поште или лозинка",
     "errorExists": "Е-пошта је већ регистрована",
-    "errorLength": "Лозинка мора имати најмање 6 знакова"
+    "errorLength": "Лозинка мора имати најмање 5 знакова"
   },
   "Dashboard": {
     "title": "Дасхбоард",
@@ -209,7 +210,8 @@
     "packagingPlastic": "Plastic / PET",
     "packagingCan": "Can / Tin",
     "packagingPouch": "Pouch / Bag",
-    "packagingBox": "Box / Carton"
+    "packagingBox": "Box / Carton",
+    "categoryCheckTitle": "Самопровера усклађености"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",

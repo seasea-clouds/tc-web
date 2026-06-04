@@ -65,7 +65,9 @@
       "crossborderecommerce": "Rajat ylittävä sähköinen kaupankäynti"
     },
     "search": "Haku",
-    "freeCheck": "Ilmainen sekki"
+    "freeCheck": "Ilmainen sekki",
+    "signIn": "Kirjaudu",
+    "signUp": "Rekisteröidy"
   },
   "MobileTab": {
     "home": "Etusivu",

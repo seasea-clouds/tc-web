@@ -1,9 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useAuth } from '@/components/AuthProvider';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import TurnstileWidget from '@/components/TurnstileWidget';
 
 export default function LoginPage() {
   const { login } = useAuth();
@@ -13,10 +14,18 @@ export default function LoginPage() {
   const [rememberMe, setRememberMe] = useState(false);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const turnstileKey = useRef(0);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
+
+    if (!turnstileToken) {
+      setError('Please complete the security check.');
+      return;
+    }
+
     setLoading(true);
     try {
       await login(email, password, rememberMe);
@@ -75,11 +84,26 @@ export default function LoginPage() {
 
           <button
             type="submit"
-            disabled={loading}
+            disabled={loading || !turnstileToken}
             className="w-full bg-[#1B365D] hover:bg-[#1B365D]/90 text-white font-semibold py-2.5 rounded-md transition-all disabled:opacity-50"
           >
             {loading ? t('signingIn') : t('signInBtn')}
           </button>
+
+          <div className="mt-3">
+            <TurnstileWidget
+              key={turnstileKey.current}
+              onVerify={(token) => setTurnstileToken(token)}
+              onError={() => {
+                setTurnstileToken(null);
+                setError('Security check failed. Please try again.');
+              }}
+              onExpire={() => {
+                setTurnstileToken(null);
+                turnstileKey.current++;
+              }}
+            />
+          </div>
         </form>
 
         <p className="text-center text-sm text-gray-500 mt-6">

@@ -65,7 +65,9 @@
       "crossborderecommerce": "Transgraniczny handel elektroniczny"
     },
     "search": "Szukaj",
-    "freeCheck": "Bezpłatne sprawdzenie"
+    "freeCheck": "Bezpłatne sprawdzenie",
+    "signIn": "Zaloguj",
+    "signUp": "Zarejestruj"
   },
   "MobileTab": {
     "home": "Strona główna",

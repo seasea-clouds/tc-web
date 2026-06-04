@@ -23,7 +23,8 @@
     "getReport": "Získat zprávu – 1.99 $",
     "subscribe": "Předplatné 9,9 $ měsíčně",
     "metaTitle": "China Compliance Self-Check | SinoTrade Compliance",
-    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China."
+    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China.",
+    "allFree": "6 modulů — vše zdarma, bez registrace"
   },
   "Auth": {
     "signIn": "Přihlaste se",
@@ -46,11 +47,11 @@
     "emailPlaceholder": "vy@example.com",
     "passwordPlaceholder": "Zadejte své heslo",
     "namePlaceholder": "Vaše jméno",
-    "passwordMinHint": "Minimálně 6 znaků",
+    "passwordMinHint": "Minimálně 5 znaků",
     "errorRequired": "Vyžaduje se e-mail a heslo",
     "errorInvalid": "Neplatný e-mail nebo heslo",
     "errorExists": "E-mail je již zaregistrován",
-    "errorLength": "Heslo musí mít alespoň 6 znaků"
+    "errorLength": "Heslo musí mít alespoň 5 znaků"
   },
   "Dashboard": {
     "title": "Dashboard",
@@ -209,7 +210,8 @@
     "packagingPlastic": "Plastic / PET",
     "packagingCan": "Can / Tin",
     "packagingPouch": "Pouch / Bag",
-    "packagingBox": "Box / Carton"
+    "packagingBox": "Box / Carton",
+    "categoryCheckTitle": "Samokontrola souladu"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",

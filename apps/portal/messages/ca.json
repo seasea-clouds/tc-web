@@ -23,7 +23,8 @@
     "getReport": "Obteniu l'informe: 1 $",
     "subscribe": "Subscriu-te 9,9 $/mes",
     "metaTitle": "China Compliance Self-Check | SinoTrade Compliance",
-    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China."
+    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China.",
+    "allFree": "6 mòduls — tots gratuïts, sense registre"
   },
   "Auth": {
     "signIn": "Inicieu la sessió",
@@ -46,11 +47,11 @@
     "emailPlaceholder": "tu@exemple.com",
     "passwordPlaceholder": "Introduïu la vostra contrasenya",
     "namePlaceholder": "El teu nom",
-    "passwordMinHint": "Com a mínim 6 caràcters",
+    "passwordMinHint": "Com a mínim 5 caràcters",
     "errorRequired": "Correu electrònic i contrasenya necessaris",
     "errorInvalid": "Correu electrònic o contrasenya no vàlids",
     "errorExists": "Correu electrònic ja registrat",
-    "errorLength": "La contrasenya ha de tenir almenys 6 caràcters"
+    "errorLength": "La contrasenya ha de tenir almenys 5 caràcters"
   },
   "Dashboard": {
     "title": "Tauler de control",
@@ -209,7 +210,8 @@
     "packagingPlastic": "Plastic / PET",
     "packagingCan": "Can / Tin",
     "packagingPouch": "Pouch / Bag",
-    "packagingBox": "Box / Carton"
+    "packagingBox": "Box / Carton",
+    "categoryCheckTitle": "Autoavaluació de compliment"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",

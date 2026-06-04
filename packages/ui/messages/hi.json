@@ -65,7 +65,9 @@
       "crossborderecommerce": "सीमा पार ई-कॉमर्स"
     },
     "search": "खोज",
-    "freeCheck": "निःशुल्क जांच"
+    "freeCheck": "निःशुल्क जांच",
+    "signIn": "साइन इन",
+    "signUp": "साइन अप"
   },
   "MobileTab": {
     "home": "होम",

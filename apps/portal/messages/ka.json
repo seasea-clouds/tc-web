@@ -23,7 +23,8 @@
     "getReport": "მიიღეთ ანგარიში - $1.99",
     "subscribe": "გამოიწერეთ $9,9/თვეში",
     "metaTitle": "China Compliance Self-Check | SinoTrade Compliance",
-    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China."
+    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China.",
+    "allFree": "6 მოდული — ყველა უფასო, რეგისტრაცია არ არის საჭირო"
   },
   "Auth": {
     "signIn": "შესვლა",
@@ -46,11 +47,11 @@
     "emailPlaceholder": "you@example.com",
     "passwordPlaceholder": "შეიყვანეთ თქვენი პაროლი",
     "namePlaceholder": "შენი სახელი",
-    "passwordMinHint": "მინიმუმ 6 სიმბოლო",
+    "passwordMinHint": "მინიმუმ 5 სიმბოლო",
     "errorRequired": "საჭიროა ელ.ფოსტა და პაროლი",
     "errorInvalid": "არასწორი ელფოსტა ან პაროლი",
     "errorExists": "ფოსტა უკვე დარეგისტრირებულია",
-    "errorLength": "პაროლი უნდა შედგებოდეს მინიმუმ 6 სიმბოლოსგან"
+    "errorLength": "პაროლი უნდა შედგებოდეს მინიმუმ 5 სიმბოლოსგან"
   },
   "Dashboard": {
     "title": "დაფა",
@@ -209,7 +210,8 @@
     "packagingPlastic": "Plastic / PET",
     "packagingCan": "Can / Tin",
     "packagingPouch": "Pouch / Bag",
-    "packagingBox": "Box / Carton"
+    "packagingBox": "Box / Carton",
+    "categoryCheckTitle": "შესაბამისობის თვითშემოწმება"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",

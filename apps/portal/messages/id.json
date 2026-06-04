@@ -23,7 +23,9 @@
     "getReport": "Dapatkan Laporan — $1.99",
     "subscribe": "Berlangganan $9,9/bln",
     "metaTitle": "China Compliance Self-Check | SinoTrade Compliance",
-    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China."
+    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China.",
+    "allFree": "6 modul — semua gratis, tanpa registrasi",
+    "howItWorksSub": "3 langkah dari info produk ke laporan kepatuhan"
   },
   "Auth": {
     "signIn": "Masuk",
@@ -46,11 +48,11 @@
     "emailPlaceholder": "kamu@example.com",
     "passwordPlaceholder": "Masukkan kata sandi Anda",
     "namePlaceholder": "Namamu",
-    "passwordMinHint": "Setidaknya 6 karakter",
+    "passwordMinHint": "Setidaknya 5 karakter",
     "errorRequired": "Diperlukan email dan kata sandi",
     "errorInvalid": "Email atau kata sandi tidak valid",
     "errorExists": "Email sudah terdaftar",
-    "errorLength": "Kata sandi minimal harus 6 karakter"
+    "errorLength": "Kata sandi minimal harus 5 karakter"
   },
   "Dashboard": {
     "title": "Dasbor",
@@ -209,7 +211,9 @@
     "packagingPlastic": "Plastic / PET",
     "packagingCan": "Can / Tin",
     "packagingPouch": "Pouch / Bag",
-    "packagingBox": "Box / Carton"
+    "packagingBox": "Box / Carton",
+    "categoryCheckTitle": "Cek Mandiri Kepatuhan",
+    "categoryCheckDesc": "Penilaian gratis 3 detik persyaratan kepatuhan pasar Tiongkok"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",

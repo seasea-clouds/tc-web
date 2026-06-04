@@ -23,7 +23,8 @@
     "getReport": "அறிக்கையைப் பெறுங்கள் - $1.99",
     "subscribe": "சந்தா செலுத்து $9.9/மா",
     "metaTitle": "China Compliance Self-Check | SinoTrade Compliance",
-    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China."
+    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China.",
+    "allFree": "6 தொகுதிகள் — அனைத்தும் இலவசம், பதிவு தேவையில்லை"
   },
   "Auth": {
     "signIn": "உள்நுழையவும்",
@@ -46,11 +47,11 @@
     "emailPlaceholder": "you@example.com",
     "passwordPlaceholder": "உங்கள் கடவுச்சொல்லை உள்ளிடவும்",
     "namePlaceholder": "உங்கள் பெயர்",
-    "passwordMinHint": "குறைந்தது 6 எழுத்துகள்",
+    "passwordMinHint": "குறைந்தது 5 எழுத்துகள்",
     "errorRequired": "மின்னஞ்சல் மற்றும் கடவுச்சொல் தேவை",
     "errorInvalid": "தவறான மின்னஞ்சல் அல்லது கடவுச்சொல்",
     "errorExists": "மின்னஞ்சல் ஏற்கனவே பதிவு செய்யப்பட்டுள்ளது",
-    "errorLength": "கடவுச்சொல் குறைந்தது 6 எழுத்துகளாக இருக்க வேண்டும்"
+    "errorLength": "கடவுச்சொல் குறைந்தது 5 எழுத்துகளாக இருக்க வேண்டும்"
   },
   "Dashboard": {
     "title": "டாஷ்போர்டு",
@@ -209,7 +210,8 @@
     "packagingPlastic": "Plastic / PET",
     "packagingCan": "Can / Tin",
     "packagingPouch": "Pouch / Bag",
-    "packagingBox": "Box / Carton"
+    "packagingBox": "Box / Carton",
+    "categoryCheckTitle": "இணக்க சுய சரிபார்ப்பு"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",

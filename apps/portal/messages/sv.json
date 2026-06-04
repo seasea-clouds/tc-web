@@ -23,7 +23,8 @@
     "getReport": "Få rapport - $1.99",
     "subscribe": "Prenumerera $9,9/månad",
     "metaTitle": "China Compliance Self-Check | SinoTrade Compliance",
-    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China."
+    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China.",
+    "allFree": "6 moduler — alla gratis, ingen registrering"
   },
   "Auth": {
     "signIn": "Logga in",
@@ -46,11 +47,11 @@
     "emailPlaceholder": "du@exempel.com",
     "passwordPlaceholder": "Ange ditt lösenord",
     "namePlaceholder": "Ditt namn",
-    "passwordMinHint": "Minst 6 tecken",
+    "passwordMinHint": "Minst 5 tecken",
     "errorRequired": "E-post och lösenord krävs",
     "errorInvalid": "Ogiltig e-postadress eller lösenord",
     "errorExists": "E-post redan registrerad",
-    "errorLength": "Lösenordet måste bestå av minst 6 tecken"
+    "errorLength": "Lösenordet måste bestå av minst 5 tecken"
   },
   "Dashboard": {
     "title": "Instrumentbräda",
@@ -209,7 +210,8 @@
     "packagingPlastic": "Plastic / PET",
     "packagingCan": "Can / Tin",
     "packagingPouch": "Pouch / Bag",
-    "packagingBox": "Box / Carton"
+    "packagingBox": "Box / Carton",
+    "categoryCheckTitle": "Egenkontroll av efterlevnad"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",

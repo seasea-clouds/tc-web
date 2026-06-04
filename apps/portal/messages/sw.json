@@ -23,7 +23,8 @@
     "getReport": "Pata Ripoti - $1.99",
     "subscribe": "Jisajili $9.9/mwezi",
     "metaTitle": "China Compliance Self-Check | SinoTrade Compliance",
-    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China."
+    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China.",
+    "allFree": "Moduli 6 — zote bure, hakuna usajili"
   },
   "Auth": {
     "signIn": "Ingia",
@@ -46,11 +47,11 @@
     "emailPlaceholder": "wewe@mfano.com",
     "passwordPlaceholder": "Weka nenosiri lako",
     "namePlaceholder": "Jina lako",
-    "passwordMinHint": "Angalau herufi 6",
+    "passwordMinHint": "Angalau herufi 5",
     "errorRequired": "Barua pepe na nenosiri zinahitajika",
     "errorInvalid": "Barua pepe au nenosiri batili",
     "errorExists": "Barua pepe tayari imesajiliwa",
-    "errorLength": "Nenosiri lazima liwe na angalau vibambo 6"
+    "errorLength": "Nenosiri lazima liwe na angalau vibambo 5"
   },
   "Dashboard": {
     "title": "Dashibodi",
@@ -209,7 +210,8 @@
     "packagingPlastic": "Plastic / PET",
     "packagingCan": "Can / Tin",
     "packagingPouch": "Pouch / Bag",
-    "packagingBox": "Box / Carton"
+    "packagingBox": "Box / Carton",
+    "categoryCheckTitle": "Kujichunguza kwa Uzingatiaji"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",

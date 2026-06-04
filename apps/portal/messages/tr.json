@@ -23,7 +23,9 @@
     "getReport": "Raporu Al — 1.99$",
     "subscribe": "Abone ol $9,9/ay",
     "metaTitle": "China Compliance Self-Check | SinoTrade Compliance",
-    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China."
+    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China.",
+    "allFree": "6 modül — hepsi ücretsiz, kayıt gerekmez",
+    "howItWorksSub": "Ürün bilgisinden uyumluluk raporuna 3 adım"
   },
   "Auth": {
     "signIn": "Oturum aç",
@@ -46,11 +48,11 @@
     "emailPlaceholder": "sen@example.com",
     "passwordPlaceholder": "Şifrenizi girin",
     "namePlaceholder": "Adınız",
-    "passwordMinHint": "En az 6 karakter",
+    "passwordMinHint": "En az 5 karakter",
     "errorRequired": "E-posta ve şifre gerekli",
     "errorInvalid": "Geçersiz e-posta veya şifre",
     "errorExists": "E-posta zaten kayıtlı",
-    "errorLength": "Şifre en az 6 karakter olmalıdır"
+    "errorLength": "Şifre en az 5 karakter olmalıdır"
   },
   "Dashboard": {
     "title": "Kontrol Paneli",
@@ -209,7 +211,9 @@
     "packagingPlastic": "Plastic / PET",
     "packagingCan": "Can / Tin",
     "packagingPouch": "Pouch / Bag",
-    "packagingBox": "Box / Carton"
+    "packagingBox": "Box / Carton",
+    "categoryCheckTitle": "Uyumluluk öz değerlendirme",
+    "categoryCheckDesc": "Çin pazarı uyumluluk gereksinimlerinin 3 saniyede ücretsiz değerlendirmesi"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",

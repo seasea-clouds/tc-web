@@ -23,7 +23,8 @@
     "getReport": "Jelentés beszerzése – 1.99 USD",
     "subscribe": "Előfizetés 9,9 USD/hó",
     "metaTitle": "China Compliance Self-Check | SinoTrade Compliance",
-    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China."
+    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China.",
+    "allFree": "6 modul — mind ingyenes, regisztráció nélkül"
   },
   "Auth": {
     "signIn": "Jelentkezzen be",
@@ -46,11 +47,11 @@
     "emailPlaceholder": "te@example.com",
     "passwordPlaceholder": "Adja meg jelszavát",
     "namePlaceholder": "A te neved",
-    "passwordMinHint": "Legalább 6 karakter",
+    "passwordMinHint": "Legalább 5 karakter",
     "errorRequired": "E-mail és jelszó szükséges",
     "errorInvalid": "Érvénytelen e-mail cím vagy jelszó",
     "errorExists": "Már regisztrált e-mail cím",
-    "errorLength": "A jelszónak legalább 6 karakterből kell állnia"
+    "errorLength": "A jelszónak legalább 5 karakterből kell állnia"
   },
   "Dashboard": {
     "title": "Irányítópult",
@@ -209,7 +210,8 @@
     "packagingPlastic": "Plastic / PET",
     "packagingCan": "Can / Tin",
     "packagingPouch": "Pouch / Bag",
-    "packagingBox": "Box / Carton"
+    "packagingBox": "Box / Carton",
+    "categoryCheckTitle": "Megfelelőségi önellenőrzés"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",

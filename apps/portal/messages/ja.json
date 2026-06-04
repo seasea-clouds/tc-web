@@ -23,7 +23,9 @@
     "getReport": "レポートを取得 — $1.99",
     "subscribe": "月額9.9ドルで購読",
     "metaTitle": "China Compliance Self-Check | SinoTrade Compliance",
-    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China."
+    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China.",
+    "allFree": "6つのモジュール — すべて無料、登録不要",
+    "howItWorksSub": "製品情報からコンプライアンスレポートまで3ステップ"
   },
   "Auth": {
     "signIn": "サインイン",
@@ -46,11 +48,11 @@
     "emailPlaceholder": "you@example.com",
     "passwordPlaceholder": "パスワードを入力してください",
     "namePlaceholder": "あなたの名前",
-    "passwordMinHint": "少なくとも6文字",
+    "passwordMinHint": "少なくとも5文字",
     "errorRequired": "メールアドレスとパスワードが必要です",
     "errorInvalid": "無効な電子メールまたはパスワード",
     "errorExists": "メールアドレスはすでに登録されています",
-    "errorLength": "パスワードは6文字以上である必要があります"
+    "errorLength": "パスワードは5文字以上である必要があります"
   },
   "Dashboard": {
     "title": "ダッシュボード",
@@ -209,7 +211,9 @@
     "packagingPlastic": "Plastic / PET",
     "packagingCan": "Can / Tin",
     "packagingPouch": "Pouch / Bag",
-    "packagingBox": "Box / Carton"
+    "packagingBox": "Box / Carton",
+    "categoryCheckTitle": "コンプライアンス自己チェック",
+    "categoryCheckDesc": "中国市場のコンプライアンス要件を3秒で無料評価"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",

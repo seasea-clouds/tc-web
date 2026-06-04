@@ -65,7 +65,9 @@
       "crossborderecommerce": "تجارت الکترونیک فرامرزی"
     },
     "search": "جستجو کنید",
-    "freeCheck": "چک رایگان"
+    "freeCheck": "چک رایگان",
+    "signIn": "ورود",
+    "signUp": "ثبت نام"
   },
   "MobileTab": {
     "home": "خانه",

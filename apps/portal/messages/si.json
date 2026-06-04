@@ -23,7 +23,8 @@
     "getReport": "වාර්තාව ලබා ගන්න - $1.99",
     "subscribe": "$9.9/මසකට දායක වන්න",
     "metaTitle": "China Compliance Self-Check | SinoTrade Compliance",
-    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China."
+    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China.",
+    "allFree": "මොඩියුල 6 — සියල්ල නොමිලේ, ලියාපදිංචිය අවශ්ය නොවේ"
   },
   "Auth": {
     "signIn": "පුරනය වන්න",
@@ -46,11 +47,11 @@
     "emailPlaceholder": "you@example.com",
     "passwordPlaceholder": "ඔබගේ මුරපදය ඇතුලත් කරන්න",
     "namePlaceholder": "ඔබේ නම",
-    "passwordMinHint": "අවම වශයෙන් අක්ෂර 6 ක්",
+    "passwordMinHint": "අවම වශයෙන් අක්ෂර 5 ක්",
     "errorRequired": "විද්‍යුත් තැපෑල සහ මුරපදය අවශ්‍යයි",
     "errorInvalid": "වලංගු නොවන ඊමේල් හෝ මුරපදය",
     "errorExists": "විද්‍යුත් තැපෑල දැනටමත් ලියාපදිංචි වී ඇත",
-    "errorLength": "මුරපදය අවම වශයෙන් අක්ෂර 6 ක් විය යුතුය"
+    "errorLength": "මුරපදය අවම වශයෙන් අක්ෂර 5 ක් විය යුතුය"
   },
   "Dashboard": {
     "title": "උපකරණ පුවරුව",
@@ -209,7 +210,8 @@
     "packagingPlastic": "Plastic / PET",
     "packagingCan": "Can / Tin",
     "packagingPouch": "Pouch / Bag",
-    "packagingBox": "Box / Carton"
+    "packagingBox": "Box / Carton",
+    "categoryCheckTitle": "අනුකූලතා ස්වයං පරීක්ෂාව"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",

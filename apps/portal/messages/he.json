@@ -23,7 +23,8 @@
     "getReport": "קבל דוח - $1.99",
     "subscribe": "הירשם $9.9 לחודש",
     "metaTitle": "China Compliance Self-Check | SinoTrade Compliance",
-    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China."
+    "metaDescription": "Check if your product needs GACC registration, CCC certification, or NMPA filing for export to China.",
+    "allFree": "6 מודולים — הכל בחינם, אין צורך בהרשמה"
   },
   "Auth": {
     "signIn": "היכנס",
@@ -46,11 +47,11 @@
     "emailPlaceholder": "you@example.com",
     "passwordPlaceholder": "הזן את הסיסמה שלך",
     "namePlaceholder": "השם שלך",
-    "passwordMinHint": "לפחות 6 תווים",
+    "passwordMinHint": "לפחות 5 תווים",
     "errorRequired": "דרושים דואר אלקטרוני וסיסמה",
     "errorInvalid": "אימייל או סיסמה לא חוקיים",
     "errorExists": "האימייל כבר רשום",
-    "errorLength": "הסיסמה חייבת להיות לפחות 6 תווים"
+    "errorLength": "הסיסמה חייבת להיות לפחות 5 תווים"
   },
   "Dashboard": {
     "title": "לוח מחוונים",
@@ -209,7 +210,8 @@
     "packagingPlastic": "Plastic / PET",
     "packagingCan": "Can / Tin",
     "packagingPouch": "Pouch / Bag",
-    "packagingBox": "Box / Carton"
+    "packagingBox": "Box / Carton",
+    "categoryCheckTitle": "בדיקה עצמית של תאימות"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",

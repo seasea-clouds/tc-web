@@ -65,7 +65,9 @@
       "crossborderecommerce": "Grensoverschrijdende e-commerce"
     },
     "search": "Zoekopdracht",
-    "freeCheck": "Gratis cheque"
+    "freeCheck": "Gratis cheque",
+    "signIn": "Inloggen",
+    "signUp": "Registreren"
   },
   "MobileTab": {
     "home": "Thuis",

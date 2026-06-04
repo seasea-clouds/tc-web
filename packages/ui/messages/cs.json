@@ -65,7 +65,9 @@
       "crossborderecommerce": "Přeshraniční elektronický obchod"
     },
     "search": "Vyhledávání",
-    "freeCheck": "Kontrola zdarma"
+    "freeCheck": "Kontrola zdarma",
+    "signIn": "Přihlásit",
+    "signUp": "Registrovat"
   },
   "MobileTab": {
     "home": "Domů",

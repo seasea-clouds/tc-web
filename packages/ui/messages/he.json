@@ -65,7 +65,9 @@
       "crossborderecommerce": "מסחר אלקטרוני חוצה גבולות"
     },
     "search": "לְחַפֵּשׂ",
-    "freeCheck": "צ'ק חינם"
+    "freeCheck": "צ'ק חינם",
+    "signIn": "התחברות",
+    "signUp": "הרשמה"
   },
   "MobileTab": {
     "home": "דף הבית",

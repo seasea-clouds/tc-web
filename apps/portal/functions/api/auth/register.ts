@@ -23,8 +23,8 @@ export async function onRequest(context: { request: Request; env: Env }) {
       return Response.json({ error: 'Email and password required' }, { status: 400 });
     }
 
-    if (password.length < 6) {
-      return Response.json({ error: 'Password must be at least 6 characters' }, { status: 400 });
+    if (password.length < 5) {
+      return Response.json({ error: 'Password must be at least 5 characters' }, { status: 400 });
     }
 
     // Check if user already exists

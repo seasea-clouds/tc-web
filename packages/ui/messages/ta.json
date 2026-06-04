@@ -65,7 +65,9 @@
       "crossborderecommerce": "எல்லை தாண்டிய மின் வணிகம்"
     },
     "search": "தேடு",
-    "freeCheck": "இலவச காசோலை"
+    "freeCheck": "இலவச காசோலை",
+    "signIn": "உள்நுழைய",
+    "signUp": "பதிவு"
   },
   "MobileTab": {
     "home": "முகப்பு",

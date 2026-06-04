@@ -6,6 +6,7 @@ import { useState } from "react";
 import { checkCcc, CATEGORY_LABELS } from "../../../../../../modules/ccc/rules";
 import { API_BASE } from "@/lib/constants";
 import { useFormValidation, inputClasses, selectClasses } from "@/lib/useFormValidation";
+import { usePathPrefix } from '@/lib/useSubsiteHref';
 
 type Step = "form" | "free-result";
 
@@ -27,16 +28,18 @@ export default function CccCheckClient() {
     setStep("free-result");
   };
 
-  const handlePayment = async () => {
-    setLoading(true);
-    setError("");
-
-    try {
+  const handlePayment = async () => { try {
       const reportId = `CCC-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
 
-      // Save report to D1 via API
+      try {
+        localStorage.setItem('compli-report-input', JSON.stringify({
+          ...input,
+          productName: input.productName || t('yourProduct'),
+        }));
+      } catch {}
+
       if (freeData) {
-        const saveRes = await fetch('/api/report/save', {
+        fetch('/api/report/save', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -52,62 +55,42 @@ export default function CccCheckClient() {
               'Maintain annual factory surveillance inspections',
             ],
           }),
-        });
-        const saveData = await saveRes.json();
-        if (!saveData.saved) {
-          console.warn('D1 save not available — will use localStorage fallback');
-        }
-      }
-
-
-      // 2. Generate PDF (runs full report, stores result_data, uploads PDF)
-      let fullResult = null;
-      try {
-        const pdfRes = await fetch('/api/report/generate-pdf', {
+        }).catch(e => console.warn('D1 save failed:', e));
+        
+        fetch('/api/report/generate-pdf', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ reportId, module: 'ccc', inputData: input }),
-        });
-        const pdfData = await pdfRes.json();
-        if (pdfData.ok) fullResult = pdfData;
-      } catch (e) {
-        console.warn('PDF generation skipped (dev mode):', e);
+        }).catch(e => console.warn('PDF generation skipped (dev mode):', e));
       }
 
-      // 3. Send email if provided
       if (email) {
-        try {
-          await fetch('/api/report/send-email', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ reportId, email, module: 'ccc', inputData: input }),
-          });
-        } catch (e) {
-          console.warn('Email send failed (dev mode):', e);
-        }
+        fetch('/api/report/send-email', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ reportId, email, module: 'ccc', inputData: input }),
+        }).catch(e => console.warn('Email send failed (dev mode):', e));
       }
 
-      // 4. Save to localStorage for report page fallback
+      window.location.href = usePathPrefix() + "/c/report/?id=" + reportId;
+    } catch (err) {
       try {
         localStorage.setItem('compli-report-input', JSON.stringify({
           ...input,
-          productName: input.productName || 'Your Product',
+          productName: input.productName || t('yourProduct'),
         }));
       } catch {}
-      
-      // 5. ⚡ 调试模式：跳过付款，直接跳报告
-      window.location.href = "/" + window.location.pathname.split('/')[1] + "/c/report/?id=" + reportId;
-    } catch (err) {
       setError(String(err));
       setLoading(false);
     }
-  };
+  }
 
   // Helper to set input values
-  const setVal = (name: string, val: string) => setInput(v => ({ ...v, [name]: val }));
-
   // Get category options
   const catOptions = Object.entries(CATEGORY_LABELS) as [string, string][];
+  
+  
+  const setVal = (name: string, val: string) => setInput(v => ({ ...v, [name]: val }));
 
   return (
     <div className="bg-[#F4F6F9]">
@@ -123,11 +106,11 @@ export default function CccCheckClient() {
           <form onSubmit={handleSubmit} className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sm:p-8 space-y-5">
             {Object.keys(fieldErrors).length > 0 && (
               <div className="bg-red-50 border border-red-200 text-red-700 text-sm rounded-lg p-3 mb-2">
-                ⚠️ Please fill in all required fields highlighted in red.
+                {t('requiredFieldsError')}
               </div>
             )}
-            <h1 className="text-2xl font-bold text-[#1B365D]">{t('reportModuleCcc')} Check</h1>
-            <p className="text-sm text-gray-500">Find out if your product requires China Compulsory Certification (CCC) for import.</p>
+            <h1 className="text-2xl font-bold text-[#1B365D]">{t('cccTitle')}</h1>
+            <p className="text-sm text-gray-500">{t('cccSubtitle')}</p>
 
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-1.5">{t('productCategory')}</label>
@@ -149,7 +132,7 @@ export default function CccCheckClient() {
                 onChange={e => { setVal("productName", e.target.value); clearFieldError("productName"); }}
                 className={inputClasses(!!fieldErrors["productName"])}
                 minLength={2}
-                placeholder={"e.g., Wireless Bluetooth Speaker"}
+                placeholder={t("productNamePlaceholder")}
                 required
               />
             </div>
@@ -160,7 +143,7 @@ export default function CccCheckClient() {
                 value={input["hsCode"] || ""}
                 onChange={e => setVal("hsCode", e.target.value)}
                 minLength={2}
-                placeholder={"e.g., 8518.22 (optional)"}
+                placeholder={t("hsCodePlaceholder")}
                 className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent"
               />
             </div>
@@ -171,7 +154,7 @@ export default function CccCheckClient() {
                 value={input["intendedUse"] || ""}
                 onChange={e => setVal("intendedUse", e.target.value)}
                 minLength={2}
-                placeholder={"e.g., Home use, industrial, medical"}
+                placeholder={t("intendedUsePlaceholder")}
                 className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent"
                 required
               />
@@ -183,7 +166,7 @@ export default function CccCheckClient() {
                 value={input["originCountry"] || ""}
                 onChange={e => setVal("originCountry", e.target.value)}
                 minLength={2}
-                placeholder={"e.g., China, Vietnam, Germany"}
+                placeholder={t("countryPlaceholder")}
                 className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent"
                 required
               />
@@ -196,7 +179,7 @@ export default function CccCheckClient() {
                   type="text"
                   value={input["manufacturerCountry"] || ""}
                   onChange={e => setVal("manufacturerCountry", e.target.value)}
-                  placeholder={"e.g., China, Vietnam"}
+                  placeholder={t("manufacturerPlaceholder")}
                   className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent"
                 />
               </div>
@@ -206,7 +189,7 @@ export default function CccCheckClient() {
                   type="text"
                   value={input["annualVolume"] || ""}
                   onChange={e => setVal("annualVolume", e.target.value)}
-                  placeholder={"e.g., 50,000 pcs/year"}
+                  placeholder={t("annualVolumePlaceholder")}
                   className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent"
                 />
               </div>
@@ -214,7 +197,7 @@ export default function CccCheckClient() {
 
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1.5">Has CB Test Report?</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-1.5">{t('hasCBReport')}</label>
                 <select
                   value={input["hasCBReport"] || ""}
                   onChange={e => setVal("hasCBReport", e.target.value)}
@@ -227,7 +210,7 @@ export default function CccCheckClient() {
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1.5">CE / UL / Other Certified?</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-1.5">{t('ceUlCertified')}</label>
                 <select
                   value={input["hasCEorUL"] || ""}
                   onChange={e => setVal("hasCEorUL", e.target.value)}
@@ -244,12 +227,12 @@ export default function CccCheckClient() {
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-1.5">Voltage / Power Specs (optional)</label>
+              <label className="block text-sm font-semibold text-gray-700 mb-1.5">{t('voltagePower')}</label>
               <input
                 type="text"
                 value={input["voltagePower"] || ""}
                 onChange={e => setVal("voltagePower", e.target.value)}
-                placeholder={"e.g., 100-240V, 50/60Hz, 50W"}
+                placeholder={t("voltagePowerPlaceholder")}
                 className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent"
               />
             </div>
@@ -272,7 +255,7 @@ export default function CccCheckClient() {
               <div className="grid grid-cols-2 gap-3 mb-4">
                 <div className="bg-gray-50 rounded-lg p-3"><p className="text-xs text-gray-500">{t('resultProduct')}</p><p className="text-sm font-semibold mt-0.5">{input["productName"]}</p></div>
                 <div className="bg-gray-50 rounded-lg p-3"><p className="text-xs text-gray-500">{t('resultCategory')}</p><p className="text-sm font-semibold mt-0.5">{CATEGORY_LABELS[input["category"] as keyof typeof CATEGORY_LABELS] || input["category"]}</p></div>
-                <div className="bg-gray-50 rounded-lg p-3"><p className="text-xs text-gray-500">CCC Required</p><p className="text-sm font-semibold mt-0.5">{freeData.requiresCcc ? '✅ Yes' : '❌ May not be required'}</p></div>
+                <div className="bg-gray-50 rounded-lg p-3"><p className="text-xs text-gray-500">{t('cccRequiredLabel')}</p><p className="text-sm font-semibold mt-0.5">{freeData.requiresCcc ? t('cccYes') : t('cccNotRequired')}</p></div>
               </div>
 
               {freeData.requiredDocuments && freeData.requiredDocuments.length > 0 && (
@@ -288,12 +271,12 @@ export default function CccCheckClient() {
             {/* Payment Section */}
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sm:p-8 text-center space-y-4">
               <p className="text-lg font-semibold text-[#1B365D]">{t('paymentTitle')}</p>
-              <p className="text-sm text-gray-500">Complete report with all required documents, timeline, and next steps.</p>
+              <p className="text-sm text-gray-500">{t('fullReportDesc')}</p>
 
               <div className="max-w-xs mx-auto">
                 <input
                   type="email"
-                  placeholder="Email (optional)"
+                  placeholder={t("emailForPdf")}
                   className="w-full border border-gray-300 rounded-md p-2.5 text-sm text-center"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -317,7 +300,7 @@ export default function CccCheckClient() {
             {/* Expert CTA */}
             <div className="bg-[#1B365D] text-white rounded-lg p-8 text-center">
               <h3 className="text-xl font-bold mb-2">{t('expertCtaTitle')}</h3>
-              <p className="text-white/80 mb-6 max-w-lg mx-auto">Our compliance experts can handle the entire process for you.</p>
+              <p className="text-white/80 mb-6 max-w-lg mx-auto">{t('expertCtaDesc')}</p>
               <a
                 href={WHATSAPP_URL}
                 target="_blank"

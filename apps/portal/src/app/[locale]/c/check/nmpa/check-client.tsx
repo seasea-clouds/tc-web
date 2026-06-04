@@ -6,6 +6,7 @@ import { useState } from "react";
 import { checkCosmetics, CATEGORY_LABELS } from "../../../../../../modules/nmpa/rules";
 import { API_BASE } from "@/lib/constants";
 import { useFormValidation, inputClasses, selectClasses } from "@/lib/useFormValidation";
+import { usePathPrefix } from '@/lib/useSubsiteHref';
 
 type Step = "form" | "free-result";
 
@@ -27,16 +28,20 @@ export default function NmpaCheckClient() {
     setStep("free-result");
   };
 
-  const handlePayment = async () => {
-    setLoading(true);
-    setError("");
-
-    try {
+  const handlePayment = async () => { try {
       const reportId = `NMPA-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
 
-      // Save report to D1 via API
+      // 1. Always save to localStorage first
+      try {
+        localStorage.setItem('compli-report-input', JSON.stringify({
+          ...input,
+          productName: input.productName || t('yourProduct'),
+        }));
+      } catch {}
+
+      // 2. Fire-and-forget API calls
       if (freeData) {
-        const saveRes = await fetch('/api/report/save', {
+        fetch('/api/report/save', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -52,62 +57,41 @@ export default function NmpaCheckClient() {
               'Set up post-market adverse event monitoring',
             ],
           }),
-        });
-        const saveData = await saveRes.json();
-        if (!saveData.saved) {
-          console.warn('D1 save not available — will use localStorage fallback');
-        }
-      }
-
-
-      // 2. Generate PDF (runs full report, stores result_data, uploads PDF)
-      let fullResult = null;
-      try {
-        const pdfRes = await fetch('/api/report/generate-pdf', {
+        }).catch(e => console.warn('D1 save failed:', e));
+        
+        fetch('/api/report/generate-pdf', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ reportId, module: 'nmpa', inputData: input }),
-        });
-        const pdfData = await pdfRes.json();
-        if (pdfData.ok) fullResult = pdfData;
-      } catch (e) {
-        console.warn('PDF generation skipped (dev mode):', e);
+        }).catch(e => console.warn('PDF generation skipped (dev mode):', e));
       }
 
-      // 3. Send email if provided
       if (email) {
-        try {
-          await fetch('/api/report/send-email', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ reportId, email, module: 'nmpa', inputData: input }),
-          });
-        } catch (e) {
-          console.warn('Email send failed (dev mode):', e);
-        }
+        fetch('/api/report/send-email', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ reportId, email, module: 'nmpa', inputData: input }),
+        }).catch(e => console.warn('Email send failed (dev mode):', e));
       }
 
-      // 4. Save to localStorage for report page fallback
+      window.location.href = usePathPrefix() + "/c/report/?id=" + reportId;
+    } catch (err) {
       try {
         localStorage.setItem('compli-report-input', JSON.stringify({
           ...input,
-          productName: input.productName || 'Your Product',
+          productName: input.productName || t('yourProduct'),
         }));
       } catch {}
-      
-      // 5. ⚡ 调试模式：跳过付款，直接跳报告
-      window.location.href = "/" + window.location.pathname.split('/')[1] + "/c/report/?id=" + reportId;
-    } catch (err) {
       setError(String(err));
       setLoading(false);
     }
-  };
+  }
 
   // Helper to set input values
-  const setVal = (name: string, val: string) => setInput(v => ({ ...v, [name]: val }));
-
   // Get category options
   const catOptions = Object.entries(CATEGORY_LABELS) as [string, string][];
+  
+  const setVal = (name: string, val: string) => setInput(v => ({ ...v, [name]: val }));
 
   return (
     <div className="bg-[#F4F6F9]">
@@ -123,11 +107,11 @@ export default function NmpaCheckClient() {
           <form onSubmit={handleSubmit} className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sm:p-8 space-y-5">
             {Object.keys(fieldErrors).length > 0 && (
               <div className="bg-red-50 border border-red-200 text-red-700 text-sm rounded-lg p-3 mb-2">
-                ⚠️ Please fill in all required fields highlighted in red.
+                {t('requiredFieldsError')}
               </div>
             )}
-            <h1 className="text-2xl font-bold text-[#1B365D]">{t('reportModuleNmpa')} Check</h1>
-            <p className="text-sm text-gray-500">Determine if your cosmetics need NMPA registration or filing for the Chinese market.</p>
+            <h1 className="text-2xl font-bold text-[#1B365D]">{t('nmpaTitle')}</h1>
+            <p className="text-sm text-gray-500">{t('nmpaSubtitle')}</p>
 
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-1.5">{t('productCategory')}</label>
@@ -149,7 +133,7 @@ export default function NmpaCheckClient() {
                 onChange={e => { setVal("productName", e.target.value); clearFieldError("productName"); }}
                 className={inputClasses(!!fieldErrors["productName"])}
                 minLength={2}
-                placeholder={"e.g., Vitamin C Brightening Serum"}
+                placeholder={t("productNamePlaceholder")}
                 required
               />
             </div>
@@ -160,13 +144,13 @@ export default function NmpaCheckClient() {
                 value={input["originCountry"] || ""}
                 onChange={e => setVal("originCountry", e.target.value)}
                 minLength={2}
-                placeholder={"e.g., South Korea, France"}
+                placeholder={t("countryPlaceholder")}
                 className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent"
                 required
               />
             </div>
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-1.5">Contains novel ingredient?</label>
+              <label className="block text-sm font-semibold text-gray-700 mb-1.5">{t('novelIngredient')}</label>
               <select
                 value={input["hasNewIngredient"] || ""}
                 onChange={e => setVal("hasNewIngredient", e.target.value)}
@@ -180,7 +164,7 @@ export default function NmpaCheckClient() {
 
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1.5">Contains Alcohol?</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-1.5">{t('containsAlcohol')}</label>
                 <select
                   value={input["hasAlcohol"] || ""}
                   onChange={e => setVal("hasAlcohol", e.target.value)}
@@ -192,14 +176,14 @@ export default function NmpaCheckClient() {
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1.5">Sunscreen / UV Claim?</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-1.5">{t('sunScreenClaim')}</label>
                 <select
                   value={input["hasSunscreenClaim"] || ""}
                   onChange={e => setVal("hasSunscreenClaim", e.target.value)}
                   className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent"
                 >
                   <option value="">{t('selectOption')}</option>
-                  <option value="true">Yes — SPECIAL cosmetics</option>
+                  <option value="true">{t('yes')} — SPECIAL cosmetics</option>
                   <option value="false">{t('no')}</option>
                 </select>
               </div>
@@ -207,29 +191,29 @@ export default function NmpaCheckClient() {
 
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1.5">Primary Product Function</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-1.5">{t('primaryProductFunction')}</label>
                 <input
                   type="text"
                   value={input["productFunction"] || ""}
                   onChange={e => setVal("productFunction", e.target.value)}
-                  placeholder={"e.g., Moisturizer, Anti-aging, Cleanse"}
+                  placeholder={t("productFunctionPlaceholder")}
                   className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent"
                 />
               </div>
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1.5">Net Volume / Weight</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-1.5">{t('netVolume')}</label>
                 <input
                   type="text"
                   value={input["packagingVolume"] || ""}
                   onChange={e => setVal("packagingVolume", e.target.value)}
-                  placeholder={"e.g., 50ml, 200g"}
+                  placeholder={t("netVolumePlaceholder")}
                   className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent"
                 />
               </div>
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-1.5">Have GMP / ISO 22716 Certificate?</label>
+              <label className="block text-sm font-semibold text-gray-700 mb-1.5">{t('gmpCert')}</label>
               <select
                 value={input["hasGMPCert"] || ""}
                 onChange={e => setVal("hasGMPCert", e.target.value)}
@@ -260,7 +244,7 @@ export default function NmpaCheckClient() {
               <div className="grid grid-cols-2 gap-3 mb-4">
                 <div className="bg-gray-50 rounded-lg p-3"><p className="text-xs text-gray-500">{t('resultProduct')}</p><p className="text-sm font-semibold mt-0.5">{input["productName"]}</p></div>
                 <div className="bg-gray-50 rounded-lg p-3"><p className="text-xs text-gray-500">{t('resultCategory')}</p><p className="text-sm font-semibold mt-0.5">{CATEGORY_LABELS[input["category"] as keyof typeof CATEGORY_LABELS] || input["category"]}</p></div>
-                <div className="bg-gray-50 rounded-lg p-3"><p className="text-xs text-gray-500">Filing Type</p><p className="text-sm font-semibold mt-0.5">{freeData.isSpecialCosmetics ? '🔴 Special Cosmetics' : '🟢 Ordinary Cosmetics'}</p></div>
+                <div className="bg-gray-50 rounded-lg p-3"><p className="text-xs text-gray-500">{t('filingType')}</p><p className="text-sm font-semibold mt-0.5">{freeData.isSpecialCosmetics ? t('specialCosmetics') : t('ordinaryCosmetics')}</p></div>
               </div>
 
               {freeData.requiredDocuments && freeData.requiredDocuments.length > 0 && (
@@ -276,12 +260,12 @@ export default function NmpaCheckClient() {
             {/* Payment Section */}
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sm:p-8 text-center space-y-4">
               <p className="text-lg font-semibold text-[#1B365D]">{t('paymentTitle')}</p>
-              <p className="text-sm text-gray-500">Complete report with all required documents, timeline, and next steps.</p>
+              <p className="text-sm text-gray-500">{t('fullReportDesc')}</p>
 
               <div className="max-w-xs mx-auto">
                 <input
                   type="email"
-                  placeholder="Email (optional)"
+                  placeholder={t("emailForPdf")}
                   className="w-full border border-gray-300 rounded-md p-2.5 text-sm text-center"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -305,7 +289,7 @@ export default function NmpaCheckClient() {
             {/* Expert CTA */}
             <div className="bg-[#1B365D] text-white rounded-lg p-8 text-center">
               <h3 className="text-xl font-bold mb-2">{t('expertCtaTitle')}</h3>
-              <p className="text-white/80 mb-6 max-w-lg mx-auto">Our compliance experts can handle the entire process for you.</p>
+              <p className="text-white/80 mb-6 max-w-lg mx-auto">{t('expertCtaDesc')}</p>
               <a
                 href={WHATSAPP_URL}
                 target="_blank"

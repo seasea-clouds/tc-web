@@ -4,6 +4,7 @@ import { useT } from '@trade/ui';
 import { useState } from "react";
 import { checkGacc, CATEGORY_LABELS, type GaccCategory, type GaccInput } from "../../../../../../modules/gacc/rules";
 import { useFormValidation, inputClasses, selectClasses } from "@/lib/useFormValidation";
+import { usePathPrefix } from '@/lib/useSubsiteHref';
 
 type Step = "form" | "free-result";
 
@@ -25,16 +26,20 @@ export default function GaccCheckClient() {
     setStep("free-result");
   };
 
-  const handlePayment = async () => {
-    setLoading(true);
-    setError("");
-
-    try {
+  const handlePayment = async () => { try {
       const reportId = `GACC-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
 
-      // 1. Save report to D1 via API
+      // 1. Always save to localStorage first (reliable, no API dependency)
+      try {
+        localStorage.setItem('compli-report-input', JSON.stringify({
+          ...input,
+          productName: input.productName || t('yourProduct'),
+        }));
+      } catch {}
+
+      // 2. Fire-and-forget API calls (don't block redirect)
       if (freeData) {
-        const saveRes = await fetch('/api/report/save', {
+        fetch('/api/report/save', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -50,55 +55,37 @@ export default function GaccCheckClient() {
               'Submit GACC registration application and track 3-6 month review',
             ],
           }),
-        });
-        const saveData = await saveRes.json();
-        if (!saveData.saved) {
-          console.warn('D1 save not available — will use localStorage fallback');
-        }
-      }
-
-      // 2. Generate PDF (runs full report, stores result_data, uploads PDF)
-      let fullResult = null;
-      try {
-        const pdfRes = await fetch('/api/report/generate-pdf', {
+        }).catch(e => console.warn('D1 save failed:', e));
+        
+        fetch('/api/report/generate-pdf', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ reportId, module: 'gacc', inputData: input }),
-        });
-        const pdfData = await pdfRes.json();
-        if (pdfData.ok) fullResult = pdfData;
-      } catch (e) {
-        console.warn('PDF generation skipped (dev mode):', e);
+        }).catch(e => console.warn('PDF generation skipped (dev mode):', e));
       }
 
-      // 3. Send email if provided
       if (email) {
-        try {
-          await fetch('/api/report/send-email', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ reportId, email, module: 'gacc', inputData: input }),
-          });
-        } catch (e) {
-          console.warn('Email send failed (dev mode):', e);
-        }
+        fetch('/api/report/send-email', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ reportId, email, module: 'gacc', inputData: input }),
+        }).catch(e => console.warn('Email send failed (dev mode):', e));
       }
 
-      // 4. Save to localStorage for report page fallback
+      // 3. Always redirect after saving to localStorage
+      window.location.href = usePathPrefix() + "/c/report/?id=" + reportId;
+    } catch (err) {
+      // Last resort: even if everything fails, try to get the user to the report page
       try {
         localStorage.setItem('compli-report-input', JSON.stringify({
           ...input,
-          productName: input.productName || 'Your Product',
+          productName: input.productName || t('yourProduct'),
         }));
       } catch {}
-      
-      // 5. ⚡ 调试模式：跳过付款，直接跳报告
-      window.location.href = "/" + window.location.pathname.split('/')[1] + "/c/report/?id=" + reportId;
-    } catch (err) {
       setError(String(err));
       setLoading(false);
     }
-  };
+  }
 
   return (
     <div className="bg-bg-ice">
@@ -115,11 +102,11 @@ export default function GaccCheckClient() {
           <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-sm border p-8 space-y-6">
             {Object.keys(fieldErrors).length > 0 && (
               <div className="bg-red-50 border border-red-200 text-red-700 text-sm rounded-lg p-3 mb-2">
-                ⚠️ Please fill in all required fields highlighted in red.
+                {t('requiredFieldsError')}
               </div>
             )}
-            <h1 className="text-2xl font-bold text-primary-navy">GACC Food Registration Check</h1>
-            <p className="text-gray-500 text-sm">Find out if your product needs GACC registration for export to China.</p>
+            <h1 className="text-2xl font-bold text-primary-navy">{t('gaccTitle')}</h1>
+            <p className="text-gray-500 text-sm">{t('gaccSubtitle')}</p>
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">{t('productCategory')}</label>
@@ -143,7 +130,7 @@ export default function GaccCheckClient() {
                 className="w-full border border-gray-300 rounded-md p-2.5 text-sm"
                 minLength={2}
                 required
-                placeholder="e.g., Cabernet Sauvignon Red Wine"
+                placeholder={t('productNamePlaceholder')}
                 value={input.productName ?? ""}
                 onChange={(e) => setInput({ ...input, productName: e.target.value })}
               />
@@ -156,17 +143,17 @@ export default function GaccCheckClient() {
                   type="text"
                   className="w-full border border-gray-300 rounded-md p-2.5 text-sm"
                   required
-                placeholder="e.g., France"
+                placeholder={t('countryPlaceholder')}
                   value={input.originCountry ?? ""}
                   onChange={(e) => setInput({ ...input, originCountry: e.target.value })}
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">HS Code (optional)</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">{t('hsCodeOptional')}</label>
                 <input
                   type="text"
                   className="w-full border border-gray-300 rounded-md p-2.5 text-sm"
-                  placeholder="e.g., 2204.10"
+                  placeholder={t('hsCodePlaceholder')}
                   value={input.hsCode ?? ""}
                   onChange={(e) => setInput({ ...input, hsCode: e.target.value })}
                 />
@@ -175,21 +162,21 @@ export default function GaccCheckClient() {
 
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Manufacturer / Exporter</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">{t('manufacturerExporter')}</label>
                 <input
                   type="text"
                   className="w-full border border-gray-300 rounded-md p-2.5 text-sm"
-                  placeholder="e.g., Bordeaux Wine Co."
+                  placeholder={t('manufacturerPlaceholder')}
                   value={input.manufacturerName ?? ""}
                   onChange={(e) => setInput({ ...input, manufacturerName: e.target.value })}
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Annual Export Volume</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">{t('annualExportVolume')}</label>
                 <input
                   type="text"
                   className="w-full border border-gray-300 rounded-md p-2.5 text-sm"
-                  placeholder="e.g., 10,000 bottles"
+                  placeholder={t('exportVolumePlaceholder')}
                   value={input.exportVolume ?? ""}
                   onChange={(e) => setInput({ ...input, exportVolume: e.target.value })}
                 />
@@ -198,7 +185,7 @@ export default function GaccCheckClient() {
 
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Packaging Material</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">{t('packagingMaterialLabel')}</label>
                 <select
                   className="w-full border border-gray-300 rounded-md p-2.5 text-sm"
                   value={input.packagingMaterial ?? ""}
@@ -210,11 +197,11 @@ export default function GaccCheckClient() {
                   <option value="can">{t('packagingCan')}</option>
                   <option value="pouch">{t('packagingPouch')}</option>
                   <option value="box">{t('packagingBox')}</option>
-                  <option value="other">Other</option>
+                  <option value="other">{t('other')}</option>
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Chinese Label Artwork Ready?</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">{t('chineseLabelArtworkReady')}</label>
                 <select
                   className="w-full border border-gray-300 rounded-md p-2.5 text-sm"
                   value={input.hasLabelArtwork ?? ""}
@@ -229,11 +216,11 @@ export default function GaccCheckClient() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Product Description (optional)</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">{t('productDescriptionLabel')}</label>
               <textarea
                 className="w-full border border-gray-300 rounded-md p-2.5 text-sm"
                 rows={2}
-                placeholder="e.g., Red wine, 13.5% ABV, Cabernet Sauvignon, aged in oak barrels"
+                placeholder={t('productDescPlaceholder')}
                 value={input.productDescription ?? ""}
                 onChange={(e) => setInput({ ...input, productDescription: e.target.value })}
               />
@@ -256,8 +243,8 @@ export default function GaccCheckClient() {
             <div className={`rounded-lg p-4 ${freeData.requiresRegistration ? "bg-amber-50 border border-amber-200" : "bg-green-50 border border-green-200"}`}>
               <p className="font-semibold">
                 {freeData.requiresRegistration
-                  ? "✅ Your product requires GACC registration"
-                  : "✅ No GACC registration needed"}
+                  ? t('requiresGaccReg')
+                  : t('notRequiresGaccReg')}
               </p>
             </div>
 
@@ -278,19 +265,19 @@ export default function GaccCheckClient() {
                 ))}
               </ul>
               {freeData.requiredDocuments.length > 5 && (
-                <p className="text-xs text-gray-400 mt-2">+ {freeData.requiredDocuments.length - 5} more in full report</p>
+                <p className="text-xs text-gray-400 mt-2">+ {freeData.requiredDocuments.length - 5} {t('moreInFullReport')}</p>
               )}
             </div>
 
             <div className="border-t pt-6 text-center space-y-4">
               <p className="text-lg font-semibold text-primary-navy">{t('paymentTitle')}</p>
-              <p className="text-sm text-gray-500">Complete report with all required documents, timeline, and next steps.</p>
+              <p className="text-sm text-gray-500">{t('fullReportDesc')}</p>
 
               {/* Email input */}
               <div className="max-w-xs mx-auto">
                 <input
                   type="email"
-                  placeholder="Email (optional — to receive PDF)"
+                  placeholder={t('emailForPdf')}
                   className="w-full border border-gray-300 rounded-md p-2.5 text-sm text-center"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -310,7 +297,7 @@ export default function GaccCheckClient() {
                   {loading ? t('redirecting') : t('fullReport1')}
                 </button>
                 <p className="text-xs text-gray-400">
-                  One-time payment. Report delivered via web + email.
+                  {t('oneTimePaymentDesc')}
                 </p>
               </div>
             </div>

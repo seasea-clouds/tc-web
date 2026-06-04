@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 /**
- * Check for hardcoded English text in JSX components.
+ * Check for hardcoded English text in JSX/TSX/TS components.
  * 
- * Scans source files for JSX text children that look like English prose
- * but aren't wrapped in a translation function (t(), getTranslations, etc.).
+ * Scans source files for JSX text children and attribute values that look like
+ * English prose but aren't wrapped in a translation function (t(), getTranslations, etc.).
  *
  * Usage:
  *   node packages/scripts/check-hardcoded.mjs [--fix]
@@ -25,13 +25,35 @@ const DIRS_TO_CHECK = [
   'packages/ui/src',
 ];
 
-// Patterns that look like English prose: starts with uppercase, more than 2 words
-// This catches things like: <Button>Check My Product</Button>
-const ENGLISH_PROSE_RE = /[>\s]([A-Z][a-z]+(?:\s+[a-z]+){2,})[<,]/g;
+// ─── Patterns ──────────────────────────────────────────────────────────
 
-// Skip patterns — these are legitimate
-const SKIP_TAGS = /<[A-Z][a-z]*\s/;  // JSX tags themselves
-const SKIP_ATTRS = /(placeholder|aria-label|alt|title)\s*=\s*["']/;
+// JSX text children: English prose inside <tag>text</tag> or <tag>text</
+// Allows: "GACC Food Registration Check", "✅ Your product requires GACC"
+// Catches: leading uppercase, 2+ words, may have emoji/✅ prefix, commas, parentheses
+const ENGLISH_PROSE_RE = /[>\s](✅?\s*[A-Z][A-Za-z]*(?:[,.]?\s+[A-Za-z][a-zA-Z]*?){2,})[<,]/g;
+
+// Attribute values: placeholder, aria-label, alt, title containing English
+// Catches: placeholder="e.g., France"  label="HS Code (optional)"
+const ENGLISH_ATTR_RE = /(placeholder|label|alt|title)\s*=\s*["']([A-Z][^"']{4,})["']/g;
+
+// English prose inside JSX expressions like {loading ? 'Processing...' : 'Done'}
+const ENGLISH_STRING_LITERAL_RE = /['"]([A-Z][a-zA-Z][^'"]{5,})['"]/g;
+
+// Skip patterns
+const SKIP_IMPORT_LIKE = /(import |from |require\(|interface |type |\.json['"]|messagesMap|\.ts['"])/;
+const SKIP_TRANSLATION_CALL = /\b(t|getTranslations|useTranslations|useT)\s*\(/;
+
+// Known legitimate English strings that don't need translation
+const LEGIT_ENGLISH = new Set([
+  'SinoTrade Compliance', 'GACC', 'NMPA', 'CCC', 'CBEC', 'CIFER',
+  'Free Check', 'Free Assessment', 'Home', 'Services', 'About', 'Contact',
+  'Packages', 'Blog', 'FAQ', 'WhatsApp', 'WeChat', 'Sign In', 'Sign Up',
+  'Sign Out', 'Next Steps', 'Get a Quote', 'Select category', 'Select',
+  'Yes', 'No', 'Other', 'None', 'In Progress', 'Loading', 'Products',
+  'Not', 'GACC Food Registration', 'Chinese Label Compliance',
+  'CCC Certification', 'Cosmetics Filing', 'NMPA Cosmetics Filing',
+  'Cross-border E-commerce', 'Brand Protection', 'Compliance Self-Check',
+]);
 
 function scanFile(filePath) {
   const content = fs.readFileSync(filePath, 'utf-8');
@@ -43,8 +65,8 @@ function scanFile(filePath) {
                         content.includes('getTranslations(') || content.includes("from 'next-intl'") ||
                         content.includes('t(`') || content.includes("t('") || content.includes('t("');
 
-  // If the file already uses translations, scan for untranslated strings
-  if (!hasI18nImport) return [];  // skip files that don't do i18n at all
+  // Skip files without i18n imports unless they're UI components
+  if (!hasI18nImport) return [];
 
   const lines = content.split('\n');
   const issues = [];
@@ -52,40 +74,56 @@ function scanFile(filePath) {
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
     const lineNum = i + 1;
-    
-    // Skip comment lines, import lines, and type definitions
-    if (line.trim().startsWith('//') || line.trim().startsWith('/*') || 
-        line.trim().startsWith('*') || line.includes('import ') ||
-        line.includes('interface ') || line.includes('type ') || line.includes(': ') ||
+
+    // Skip comments, imports, type defs
+    const trimmed = line.trim();
+    if (trimmed.startsWith('//') || trimmed.startsWith('/*') || trimmed.startsWith('*') ||
+        line.includes('import ') || line.includes('interface ') || line.includes('type ') ||
         line.includes('from ') || line.includes('require(')) continue;
-    
-    // Skip attribute-only lines
-    if (SKIP_ATTRS.test(line)) continue;
-    
-    // Check for English prose patterns
+
+    // Skip lines that already use translation function
+    if (SKIP_TRANSLATION_CALL.test(line)) continue;
+
+    // ── Check 1: JSX prose children ────────────────────────────────
     let match;
+    ENGLISH_PROSE_RE.lastIndex = 0;
     while ((match = ENGLISH_PROSE_RE.exec(line)) !== null) {
       const text = match[1].trim();
-      
-      // Skip known false positives
-      if (text.length < 10) continue;  // too short to be English prose
-      if (/^[A-Z][a-z]+$/.test(text)) continue;  // single word
-      if (/^\d/.test(text)) continue;  // starts with number
-      if (/[<>{}()]/.test(text)) continue;  // JSX syntax interspersed
-      if (text === text.toLowerCase()) continue;  // all lowercase
-      if (text.includes('{') || text.includes('}')) continue;  // contains JSX expression
-      
-      // Skip if it looks like a translation key reference
-      if (text.includes('.') || text.includes('_') || text === text.toUpperCase()) continue;
-      
-      // Check if this text is likely using t() function
-      if (line.includes(`>${text}<`)) {
-        issues.push({
-          file: path.relative(repoRoot, filePath),
-          line: lineNum,
-          text: text.trim().substring(0, 80),
-        });
-      }
+      if (text.length < 5) continue;
+      if (text.includes('{') || text.includes('}')) continue;
+      if (LEGIT_ENGLISH.has(text)) continue;
+      if (text.includes('.') || text.includes('_')) continue;
+      if (/^[A-Z][a-z]+$/.test(text)) continue;
+      if (text === text.toUpperCase()) continue;
+      if (text.startsWith('http') || text.startsWith('www')) continue;
+
+      issues.push({ file: path.relative(repoRoot, filePath), line: lineNum, type: 'JSX prose', text: text.substring(0, 100) });
+    }
+
+    // ── Check 2: Attribute values (placeholder/label/alt/title) ──
+    ENGLISH_ATTR_RE.lastIndex = 0;
+    while ((match = ENGLISH_ATTR_RE.exec(line)) !== null) {
+      const attr = match[1];
+      const val = match[2].trim();
+      if (val.length < 5) continue;
+      // Skip if it's already a t() call or template expression
+      if (val.includes('{') || val.includes('}') || val.includes('$')) continue;
+      if (LEGIT_ENGLISH.has(val)) continue;
+
+      issues.push({ file: path.relative(repoRoot, filePath), line: lineNum, type: `attr ${attr}`, text: val.substring(0, 100) });
+    }
+
+    // ── Check 3: String literals in JSX expressions ─────────────────
+    ENGLISH_STRING_LITERAL_RE.lastIndex = 0;
+    while ((match = ENGLISH_STRING_LITERAL_RE.exec(line)) !== null) {
+      const val = match[1].trim();
+      if (val.length < 8) continue;
+      if (LEGIT_ENGLISH.has(val)) continue;
+      // Skip if preceded by t( or T(
+      const before = line.substring(0, match.index);
+      if (/[tT]\s*\(\s*['"]$/.test(before)) continue;
+
+      issues.push({ file: path.relative(repoRoot, filePath), line: lineNum, type: 'string literal', text: val.substring(0, 100) });
     }
   }
   
@@ -103,7 +141,7 @@ function scanDir(dirPath) {
     const fullPath = path.join(absPath, entry.name);
     if (entry.isDirectory() && !entry.name.startsWith('.') && entry.name !== 'node_modules') {
       allIssues = allIssues.concat(scanDir(fullPath));
-    } else if (entry.isFile() && /\.(tsx|jsx)$/.test(entry.name)) {
+    } else if (entry.isFile() && /\.(tsx|jsx|ts)$/.test(entry.name)) {
       allIssues = allIssues.concat(scanFile(fullPath));
     }
   }
@@ -119,7 +157,7 @@ const customDir = args.find(a => !a.startsWith('--'));
 
 const dirs = customDir ? [customDir] : DIRS_TO_CHECK.map(d => path.join(repoRoot, d));
 
-console.log('🔍 Scanning for hardcoded English text in JSX...\n');
+console.log('🔍 Scanning for hardcoded English text in JSX/TSX...\n');
 
 let totalIssues = 0;
 for (const dir of dirs) {
@@ -128,7 +166,7 @@ for (const dir of dirs) {
   if (issues.length > 0) {
     console.log(`  ${relDir}:`);
     for (const issue of issues) {
-      console.log(`    📄 ${issue.file}:${issue.line} → "${issue.text}"`);
+      console.log(`    📄 ${issue.file}:${issue.line} [${issue.type}] → "${issue.text}"`);
       totalIssues++;
     }
   }
@@ -139,6 +177,6 @@ if (totalIssues === 0) {
   process.exit(0);
 } else {
   console.log(`\n⚠️  Found ${totalIssues} potential hardcoded English strings.`);
-  console.log('   If these are legitimate, ignore or add them to skip list.');
+  console.log('   Review and either add t() calls or add to LEGIT_ENGLISH set.');
   if (isCI) process.exit(1);
 }

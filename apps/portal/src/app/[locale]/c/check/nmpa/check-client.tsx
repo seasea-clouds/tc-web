@@ -122,7 +122,7 @@ export default function NmpaCheckClient() {
                 required
               >
                 <option value="">{t('selectCategory')}</option>
-                {catOptions.map(([v, l]) => (<option key={v} value={v}>{l}</option>))}
+                {catOptions.map(([v, l]) => (<option key={v} value={v}>{t(`catNmpa_${v}`, l)}</option>))}
               </select>
             </div>
             <div>
@@ -183,7 +183,7 @@ export default function NmpaCheckClient() {
                   className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent"
                 >
                   <option value="">{t('selectOption')}</option>
-                  <option value="true">{t('yes')} — SPECIAL cosmetics</option>
+                  <option value="true">{t('yesSpecialCosmetics')}</option>
                   <option value="false">{t('no')}</option>
                 </select>
               </div>

@@ -120,7 +120,7 @@ export default function LabelCheckClient() {
                 required
               >
                 <option value="">{t('selectCategory')}</option>
-                {catOptions.map(([v, l]) => (<option key={v} value={v}>{l}</option>))}
+                {catOptions.map(([v, l]) => (<option key={v} value={v}>{t(`catLabel_${v}`, l)}</option>))}
               </select>
             </div>
             <div>
@@ -167,9 +167,9 @@ export default function LabelCheckClient() {
                   className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent"
                 >
                   <option value="">{t('selectOption')}</option>
-                  <option value="yes">{t('yes')} — full lab report</option>
-                  <option value="partial">Partial — known ingredient data</option>
-                  <option value="no">{t('no')} — need testing</option>
+                  <option value="yes">{t('yesLabelArtwork')}</option>
+                  <option value="partial">{t('partialKnownIngredient')}</option>
+                  <option value="no">{t('noNeedTesting')}</option>
                 </select>
               </div>
             </div>
@@ -194,7 +194,7 @@ export default function LabelCheckClient() {
                 >
                   <option value="">{t('selectOption')}</option>
                   <option value="yes">{t('yes')}</option>
-                  <option value="partial">Partial</option>
+                  <option value="partial">{t('partial')}</option>
                   <option value="no">{t('no')}</option>
                 </select>
               </div>

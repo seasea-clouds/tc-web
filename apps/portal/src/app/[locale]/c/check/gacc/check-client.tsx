@@ -118,7 +118,7 @@ export default function GaccCheckClient() {
               >
                 <option value="">{t('selectCategory')}</option>
                 {(Object.entries(CATEGORY_LABELS) as [GaccCategory, string][]).map(([key, label]) => (
-                  <option key={key} value={key}>{label}</option>
+                  <option key={key} value={key}>{t(`catGacc_${key}`, label)}</option>
                 ))}
               </select>
             </div>

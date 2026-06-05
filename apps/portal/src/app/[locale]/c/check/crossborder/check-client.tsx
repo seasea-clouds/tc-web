@@ -120,7 +120,7 @@ export default function CrossborderCheckClient() {
                 required
               >
                 <option value="">{t('selectCategory')}</option>
-                {catOptions.map(([v, l]) => (<option key={v} value={v}>{l}</option>))}
+                {catOptions.map(([v, l]) => (<option key={v} value={v}>{t(`catCb_${v}`, l)}</option>))}
               </select>
             </div>
             <div>
@@ -218,7 +218,7 @@ export default function CrossborderCheckClient() {
                 >
                   <option value="">{t('selectOption')}</option>
                   <option value="yes">{t('yes')}</option>
-                  <option value="no">{t('no')} — need to create</option>
+                  <option value="no">{t('noNeedToCreate')}</option>
                   <option value="in_progress">{t('inProgress')}</option>
                 </select>
               </div>

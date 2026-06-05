@@ -120,7 +120,7 @@ export default function TrademarkCheckClient() {
                 required
               >
                 <option value="">{t('selectCategory')}</option>
-                {catOptions.map(([v, l]) => (<option key={v} value={v}>{l}</option>))}
+                {catOptions.map(([v, l]) => (<option key={v} value={v}>{t(`catTm_${v}`, l)}</option>))}
               </select>
             </div>
             <div>
@@ -182,7 +182,7 @@ export default function TrademarkCheckClient() {
                 >
                   <option value="">{t('selectOption')}</option>
                   <option value="yes">{t('yes')}</option>
-                  <option value="no">{t('no')} — need one</option>
+                  <option value="no">{t('noNeedOne')}</option>
                 </select>
               </div>
               <div>

@@ -121,7 +121,7 @@ export default function CccCheckClient() {
                 required
               >
                 <option value="">{t('selectCategory')}</option>
-                {catOptions.map(([v, l]) => (<option key={v} value={v}>{l}</option>))}
+                {catOptions.map(([v, l]) => (<option key={v} value={v}>{t(`catCcc_${v}`, l)}</option>))}
               </select>
             </div>
             <div>
@@ -217,10 +217,10 @@ export default function CccCheckClient() {
                   className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent"
                 >
                   <option value="">{t('selectOption')}</option>
-                  <option value="ce">CE</option>
-                  <option value="ul">UL</option>
-                  <option value="fcc">FCC</option>
-                  <option value="other">Other</option>
+                  <option value="ce">{t('ce')}</option>
+                  <option value="ul">{t('ul')}</option>
+                  <option value="fcc">{t('fcc')}</option>
+                  <option value="other">{t('other')}</option>
                   <option value="none">{t('none')}</option>
                 </select>
               </div>

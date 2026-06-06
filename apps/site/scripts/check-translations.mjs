@@ -182,6 +182,8 @@ const ENGLISH_RESIDUAL_ALLOW = new Set([
   'Class', 'FAQ',
   'com', 'http', 'https', 'www', 'API',
   'for', 'and', 'This', 'About',
+  'cookie', 'Cookie', 'cookies',
+  'banner', 'Banner',
 ]);
 
 // ============================================================

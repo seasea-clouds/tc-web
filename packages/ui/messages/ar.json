@@ -67,7 +67,11 @@
     "search": "يبحث",
     "freeCheck": "فحص مجاني",
     "signIn": "تسجيل الدخول",
-    "signUp": "اشتراك"
+    "signUp": "اشتراك",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "الرئيسية",
@@ -98,5 +102,10 @@
     "industries": "الصناعات",
     "packages": "الحزم",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "تواصل معنا عبر واتساب",
+    "sendEmail": "أرسل لنا بريدًا إلكترونيًا",
+    "backToTop": "العودة إلى الأعلى"
   }
 }

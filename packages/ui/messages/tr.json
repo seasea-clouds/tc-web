@@ -67,7 +67,11 @@
     "search": "Aramak",
     "freeCheck": "Ücretsiz Çek",
     "signIn": "Giriş",
-    "signUp": "Kaydol"
+    "signUp": "Kaydol",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "Ana Sayfa",
@@ -98,5 +102,10 @@
     "industries": "Endüstriler",
     "packages": "Paketler",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "WhatsApp'ta iletişime geçin",
+    "sendEmail": "Bize e-posta gönderin",
+    "backToTop": "Başa dön"
   }
 }

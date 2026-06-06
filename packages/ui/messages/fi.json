@@ -67,7 +67,11 @@
     "search": "Haku",
     "freeCheck": "Ilmainen sekki",
     "signIn": "Kirjaudu",
-    "signUp": "Rekisteröidy"
+    "signUp": "Rekisteröidy",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "Etusivu",
@@ -98,5 +102,10 @@
     "industries": "Toimialat",
     "packages": "Paketit",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "Ota yhteyttä WhatsAppissa",
+    "sendEmail": "Lähetä sähköpostia",
+    "backToTop": "Takaisin ylös"
   }
 }

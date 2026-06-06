@@ -1,5 +1,7 @@
 'use client';
 
+import { useT } from './TranslationProvider';
+
 interface ActionDockProps {
   whatsappAriaLabel?: string;
   emailAriaLabel?: string;
@@ -9,10 +11,14 @@ interface ActionDockProps {
 const WHATSAPP_URL = 'https://wa.me/message/HPPZ5X6XZSMLM1';
 
 export default function ActionDock({
-  whatsappAriaLabel = 'Contact us on WhatsApp',
-  emailAriaLabel = 'Send us an email',
-  backToTopAriaLabel = 'Back to top',
+  whatsappAriaLabel: waOverride,
+  emailAriaLabel: emailOverride,
+  backToTopAriaLabel: topOverride,
 }: ActionDockProps) {
+  const t = useT('ActionDock');
+  const whatsappAriaLabel = waOverride || t('contactWhatsapp') || 'Contact us on WhatsApp';
+  const emailAriaLabel = emailOverride || t('sendEmail') || 'Send us an email';
+  const backToTopAriaLabel = topOverride || t('backToTop') || 'Back to top';
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   return (

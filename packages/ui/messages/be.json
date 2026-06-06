@@ -67,7 +67,11 @@
     "search": "Пошук",
     "freeCheck": "Бясплатная праверка",
     "signIn": "Увайсці",
-    "signUp": "Рэгістрацыя"
+    "signUp": "Рэгістрацыя",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "Галоўная",
@@ -98,5 +102,10 @@
     "industries": "галін прамысловасці",
     "packages": "Пакеты",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "Звяжыцеся з намі па WhatsApp для хуткай падтрымкі",
+    "sendEmail": "Дашліце нам ліст для падрабязных запытаў",
+    "backToTop": "Пракруціце назад да пачатку старонкі"
   }
 }

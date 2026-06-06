@@ -67,7 +67,11 @@
     "search": "Soek",
     "freeCheck": "Gratis Tjek",
     "signIn": "Teken In",
-    "signUp": "Registreer"
+    "signUp": "Registreer",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "Tuis",
@@ -98,5 +102,10 @@
     "industries": "Nywerhede",
     "packages": "Pakkette",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "Kontak ons op WhatsApp",
+    "sendEmail": "Stuur vir ons 'n e-pos",
+    "backToTop": "Terug na bo"
   }
 }

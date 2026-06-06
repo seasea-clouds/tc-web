@@ -67,7 +67,11 @@
     "search": "Căutare",
     "freeCheck": "Cec gratuit",
     "signIn": "Autentificare",
-    "signUp": "Înregistrare"
+    "signUp": "Înregistrare",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "Acasă",
@@ -98,5 +102,10 @@
     "industries": "Industrii",
     "packages": "Pachete",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "Contactați-ne pe WhatsApp",
+    "sendEmail": "Trimiteți-ne un e-mail",
+    "backToTop": "Sus"
   }
 }

@@ -67,7 +67,11 @@
     "search": "Cerca",
     "freeCheck": "Comprovació gratuïta",
     "signIn": "Iniciar sessió",
-    "signUp": "Registrar-se"
+    "signUp": "Registrar-se",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "Inici",
@@ -98,5 +102,10 @@
     "industries": "Indústries",
     "packages": "Paquets",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "Contacta amb nosaltres per WhatsApp",
+    "sendEmail": "Envieu-nos un correu electrònic per a consultes detallades",
+    "backToTop": "Desplaceu-vos cap enrere a la part superior de la pàgina"
   }
 }

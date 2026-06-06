@@ -67,7 +67,11 @@
     "search": "לְחַפֵּשׂ",
     "freeCheck": "צ'ק חינם",
     "signIn": "התחברות",
-    "signUp": "הרשמה"
+    "signUp": "הרשמה",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "דף הבית",
@@ -98,5 +102,10 @@
     "industries": "תעשיות",
     "packages": "חבילות",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "צור קשר בוואטסאפ",
+    "sendEmail": "שלח לנו אימייל",
+    "backToTop": "חזרה לראש הדף"
   }
 }

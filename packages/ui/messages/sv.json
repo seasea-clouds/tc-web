@@ -67,7 +67,11 @@
     "search": "Söka",
     "freeCheck": "Gratis check",
     "signIn": "Logga in",
-    "signUp": "Registrera"
+    "signUp": "Registrera",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "Hem",
@@ -98,5 +102,10 @@
     "industries": "industrier",
     "packages": "Paket",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "Kontakta oss på WhatsApp",
+    "sendEmail": "Skicka e-post",
+    "backToTop": "Tillbaka till toppen"
   }
 }

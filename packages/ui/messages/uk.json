@@ -67,7 +67,11 @@
     "search": "Пошук",
     "freeCheck": "Безкоштовний чек",
     "signIn": "Увійти",
-    "signUp": "Реєстрація"
+    "signUp": "Реєстрація",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "Головна",
@@ -98,5 +102,10 @@
     "industries": "Галузі промисловості",
     "packages": "пакети",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "Свяжитесь в WhatsApp",
+    "sendEmail": "Отправьте нам email",
+    "backToTop": "Наверх"
   }
 }

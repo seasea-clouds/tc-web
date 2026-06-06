@@ -67,7 +67,11 @@
     "search": "ძიება",
     "freeCheck": "უფასო შემოწმება",
     "signIn": "შესვლა",
-    "signUp": "რეგისტრაცია"
+    "signUp": "რეგისტრაცია",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "მთავარი",
@@ -98,5 +102,10 @@
     "industries": "ინდუსტრიები",
     "packages": "პაკეტები",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "დაგვიკავშირდით WhatsApp-ზე სწრაფი მხარდაჭერისთვის",
+    "sendEmail": "გამოგვიგზავნეთ ელ.წერილი დეტალური კითხვებისთვის",
+    "backToTop": "გადაახვიეთ გვერდის თავში"
   }
 }

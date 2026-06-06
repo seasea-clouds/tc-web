@@ -67,7 +67,11 @@
     "search": "खोज",
     "freeCheck": "निःशुल्क जांच",
     "signIn": "साइन इन",
-    "signUp": "साइन अप"
+    "signUp": "साइन अप",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "होम",
@@ -98,5 +102,10 @@
     "industries": "इंडस्ट्रीज",
     "packages": "संकुल",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "WhatsApp पर संपर्क करें",
+    "sendEmail": "हमें ईमेल भेजें",
+    "backToTop": "ऊपर जाएं"
   }
 }

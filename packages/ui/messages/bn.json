@@ -67,7 +67,11 @@
     "search": "অনুসন্ধান করুন",
     "freeCheck": "বিনামূল্যে চেক",
     "signIn": "সাইন ইন",
-    "signUp": "সাইন আপ"
+    "signUp": "সাইন আপ",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "হোম",
@@ -98,5 +102,10 @@
     "industries": "শিল্প",
     "packages": "প্যাকেজ",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "WhatsApp-এ যোগাযোগ করুন",
+    "sendEmail": "আমাদের ইমেল পাঠান",
+    "backToTop": "উপরে ফিরে যান"
   }
 }

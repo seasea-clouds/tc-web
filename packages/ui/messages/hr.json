@@ -67,7 +67,11 @@
     "search": "Pretraživanje",
     "freeCheck": "Besplatni ček",
     "signIn": "Prijava",
-    "signUp": "Registracija"
+    "signUp": "Registracija",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "Početna",
@@ -98,5 +102,10 @@
     "industries": "Industrije",
     "packages": "Paketi",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "Kontaktirajte nas na WhatsApp",
+    "sendEmail": "Pošaljite nam e-mail",
+    "backToTop": "Na vrh"
   }
 }

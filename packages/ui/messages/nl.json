@@ -67,7 +67,11 @@
     "search": "Zoekopdracht",
     "freeCheck": "Gratis cheque",
     "signIn": "Inloggen",
-    "signUp": "Registreren"
+    "signUp": "Registreren",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "Thuis",
@@ -98,5 +102,10 @@
     "industries": "Industrieën",
     "packages": "Pakketten",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "Contact via WhatsApp",
+    "sendEmail": "E-mail sturen",
+    "backToTop": "Naar boven"
   }
 }

@@ -55,7 +55,7 @@
     "errorLength": "비밀번호는 5자 이상이어야 합니다."
   },
   "Dashboard": {
-    "title": "대시보드",
+    "title": "계기반",
     "welcomeBack": "돌아온 것을 환영합니다.",
     "myReports": "내 보고서",
     "myReportsDesc": "규정 준수 보고서 기록 보기",

@@ -45,7 +45,7 @@
     "noAccount": "¿No tienes una cuenta?",
     "hasAccount": "¿Ya tienes una cuenta?",
     "signOut": "Cerrar sesión",
-    "emailPlaceholder": "tu@ejemplo.com",
+    "emailPlaceholder": "you@example.com",
     "passwordPlaceholder": "Introduce tu contraseña",
     "namePlaceholder": "tu nombre",
     "passwordMinHint": "Al menos 5 caracteres",
@@ -55,7 +55,7 @@
     "errorLength": "La contraseña debe tener al menos 5 caracteres."
   },
   "Dashboard": {
-    "title": "Panel de control",
+    "title": "Panel",
     "welcomeBack": "Bienvenido de nuevo,",
     "myReports": "Mis informes",
     "myReportsDesc": "Ver su historial de informes de cumplimiento",
@@ -142,8 +142,8 @@
     "reportCtaTitle": "Obtenga una cotización personalizada",
     "reportCtaDesc": "Nuestros expertos en cumplimiento le proporcionarán un plan y precios personalizados para su producto específico.",
     "reportCtaBtn": "Contáctenos",
-    "reportFooterName": "Cumplimiento de SinoTrade",
-    "reportFooterAddress": "Distrito de Jing'an, Shanghái, China",
+    "reportFooterName": "SinoTrade Compliance",
+    "reportFooterAddress": "Jing'an District, Shanghai, China",
     "reportFooterEmail": "david@sinotradecompliance.com",
     "reportModuleGacc": "Registro de Alimentos GACC",
     "reportModuleLabel": "Cumplimiento de la etiqueta china",

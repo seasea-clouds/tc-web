@@ -38,7 +38,7 @@
     "registerDesc": "התחל לנהל את דוחות התאימות שלך",
     "registerBtn": "צור חשבון",
     "creatingAccount": "יוצר חשבון...",
-    "email": "דוא\"ל",
+    "email": "אֶלֶקטרוֹנִי",
     "password": "סיסמה",
     "name": "שם (אופציונלי)",
     "rememberMe": "תזכור אותי",
@@ -55,7 +55,7 @@
     "errorLength": "הסיסמה חייבת להיות לפחות 5 תווים"
   },
   "Dashboard": {
-    "title": "לוח מחוונים",
+    "title": "לוּחַ מַחווָנִים",
     "welcomeBack": "ברוך שובך,",
     "myReports": "הדוחות שלי",
     "myReportsDesc": "הצג את היסטוריית דוחות התאימות שלך",
@@ -142,8 +142,8 @@
     "reportCtaTitle": "קבל הצעת מחיר מותאמת אישית",
     "reportCtaDesc": "מומחי התאימות שלנו יספקו תוכנית ותמחור מותאמים עבור המוצר הספציפי שלך.",
     "reportCtaBtn": "צור קשר",
-    "reportFooterName": "תאימות SinoTrade",
-    "reportFooterAddress": "מחוז ג'ינג'אן, שנגחאי, סין",
+    "reportFooterName": "SinoTrade Compliance",
+    "reportFooterAddress": "Jing'an District, Shanghai, China",
     "reportFooterEmail": "david@sinotradecompliance.com",
     "reportModuleGacc": "רישום מזון GACC",
     "reportModuleLabel": "תאימות לתווית סינית",

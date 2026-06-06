@@ -55,7 +55,7 @@
     "errorLength": "Паролата трябва да е поне 5 знака"
   },
   "Dashboard": {
-    "title": "Табло за управление",
+    "title": "Табло",
     "welcomeBack": "добре дошла отново",
     "myReports": "Моите отчети",
     "myReportsDesc": "Вижте хронологията на отчета си за съответствие",
@@ -97,7 +97,7 @@
     "singleBullet4": "Възможност за печат/споделяне",
     "getReport": "Вземете отчет — $1.99",
     "monthly": "Месечно",
-    "monthlyPrice": "9,9 долара",
+    "monthlyPrice": "$9.9",
     "monthlyDesc": "Неограничени отчети за един месец",
     "monthlyBullet1": "Неограничени отчети",
     "monthlyBullet2": "Включени всички 6 модула",
@@ -142,8 +142,8 @@
     "reportCtaTitle": "Вземете персонализирана оферта",
     "reportCtaDesc": "Нашите експерти по съответствие ще предоставят персонализиран план и ценообразуване за вашия конкретен продукт.",
     "reportCtaBtn": "Свържете се с нас",
-    "reportFooterName": "Съответствие на SinoTrade",
-    "reportFooterAddress": "Област Джинг'ан, Шанхай, Китай",
+    "reportFooterName": "SinoTrade Compliance",
+    "reportFooterAddress": "Jing'an District, Shanghai, China",
     "reportFooterEmail": "david@sinotradecompliance.com",
     "reportModuleGacc": "GACC регистрация на храни",
     "reportModuleLabel": "Съответствие на китайския етикет",

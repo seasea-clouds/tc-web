@@ -4,7 +4,6 @@ import { locales, defaultLocale } from '@/i18n/routing';
 import { messagesMap } from '@/i18n/messages';
 import { Footer, SearchProvider, CookieConsent, ActionDock, TradeTranslationProvider, OrganizationJsonLd, buildAlternates, sharedOpenGraph, sharedTwitter } from '@trade/ui';
 import { AuthProvider } from "@/components/AuthProvider";
-import PortalUserMenu from "@/components/PortalUserMenu";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -51,7 +50,7 @@ export default async function LocaleLayout({
           <TradeTranslationProvider messages={messages} locale={validLocale}>
             <OrganizationJsonLd />
             <AuthProvider>
-              <SearchProvider freeCheckHref="/c/" userSlot={<PortalUserMenu />} />
+              <SearchProvider freeCheckHref="/c/" loginHref={`/${locale}/c/login`} />
               <main className="flex-1">{children}</main>
               <Footer />
               <ActionDock />

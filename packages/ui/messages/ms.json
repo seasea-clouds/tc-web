@@ -67,7 +67,11 @@
     "search": "Cari",
     "freeCheck": "Cek Percuma",
     "signIn": "Log Masuk",
-    "signUp": "Daftar"
+    "signUp": "Daftar",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "Laman Utama",
@@ -98,5 +102,10 @@
     "industries": "industri",
     "packages": "Pakej",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "Hubungi kami di WhatsApp",
+    "sendEmail": "Hantar e-mel kepada kami",
+    "backToTop": "Kembali ke atas"
   }
 }

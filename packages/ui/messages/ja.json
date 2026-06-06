@@ -67,7 +67,11 @@
     "search": "検索",
     "freeCheck": "無料小切手",
     "signIn": "ログイン",
-    "signUp": "新規登録"
+    "signUp": "新規登録",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "ホーム",
@@ -98,5 +102,10 @@
     "industries": "産業",
     "packages": "パッケージ",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "WhatsApp でお問い合わせ",
+    "sendEmail": "メールを送信",
+    "backToTop": "トップへ戻る"
   }
 }

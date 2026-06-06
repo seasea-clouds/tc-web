@@ -67,7 +67,11 @@
     "search": "සොයන්න",
     "freeCheck": "නොමිලේ චෙක්පත",
     "signIn": "පිවිසෙන්න",
-    "signUp": "ලියාපදිංචි වන්න"
+    "signUp": "ලියාපදිංචි වන්න",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "මුල් පිටුව",
@@ -98,5 +102,10 @@
     "industries": "කර්මාන්ත",
     "packages": "පැකේජ",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "WhatsApp අමතන්න",
+    "sendEmail": "අපට විද්යුත් තැපෑලක් යවන්න",
+    "backToTop": "ඉහළට යන්න"
   }
 }

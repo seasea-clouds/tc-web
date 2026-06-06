@@ -67,7 +67,11 @@
     "search": "ค้นหา",
     "freeCheck": "เช็คฟรี",
     "signIn": "เข้าสู่ระบบ",
-    "signUp": "สมัครสมาชิก"
+    "signUp": "สมัครสมาชิก",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "หน้าแรก",
@@ -98,5 +102,10 @@
     "industries": "อุตสาหกรรม",
     "packages": "แพ็คเกจ",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "ติดต่อเราทาง WhatsApp",
+    "sendEmail": "ส่งอีเมลถึงเรา",
+    "backToTop": "กลับไปด้านบน"
   }
 }

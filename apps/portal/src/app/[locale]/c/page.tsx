@@ -48,6 +48,7 @@ export default function HomePage() {
                 desc={tCheck(tool.descKey as any)}
                 href={subsiteHref(`/check/${tool.id}`)}
                 badge={tool.badge}
+                ctaLabel={t('free')}
               />
             ))}
           </div>

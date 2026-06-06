@@ -67,7 +67,11 @@
     "search": "تلاش کریں۔",
     "freeCheck": "مفت چیک",
     "signIn": "سائن ان",
-    "signUp": "سائن اپ"
+    "signUp": "سائن اپ",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "ہوم",
@@ -98,5 +102,10 @@
     "industries": "صنعتیں",
     "packages": "پیکجز",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "واٹس ایپ پر رابطہ کریں",
+    "sendEmail": "ہمیں ای میل بھیجیں",
+    "backToTop": "اوپر جائیں"
   }
 }

@@ -7,6 +7,7 @@ interface ToolCardProps {
   title: string;
   desc: string;
   href: string;
+  ctaLabel?: string;
   badge?: 'free' | 'new' | 'popular';
 }
 
@@ -37,7 +38,7 @@ export default function ToolCard({ icon, title, desc, href, badge }: ToolCardPro
       </p>
 
       <div className="flex items-center gap-1 text-sm text-gold font-medium group-hover:gap-2 transition-all">
-        Free Check
+        {ctaLabel || 'Free Check'}
         <span className="group-hover:translate-x-0.5 transition-transform">&rarr;</span>
       </div>
     </Link>

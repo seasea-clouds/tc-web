@@ -28,6 +28,7 @@ export default function NmpaCheckClient() {
     setStep("free-result");
   };
 
+  const pathPrefix = usePathPrefix();
   const handlePayment = async () => { try {
       const reportId = `NMPA-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
 
@@ -74,7 +75,7 @@ export default function NmpaCheckClient() {
         }).catch(e => console.warn('Email send failed (dev mode):', e));
       }
 
-      window.location.href = usePathPrefix() + "/c/report/?id=" + reportId;
+      window.location.href = pathPrefix + "/c/report/?id=" + reportId;
     } catch (err) {
       try {
         localStorage.setItem('compli-report-input', JSON.stringify({

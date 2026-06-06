@@ -33,6 +33,7 @@ export default async function PrivacyPage({ params }: { params: Promise<{ locale
     <div className="bg-white">
       <div className="max-w-3xl mx-auto px-4 py-16">
         <Breadcrumb
+          locale={locale}
           items={[
             { label: 'Home', href: '/' },
             { label: t('title'), href: '/privacy/' },

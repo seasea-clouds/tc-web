@@ -7,6 +7,9 @@ export { default as SearchProvider } from './SearchProvider';
 export { default as OrganizationJsonLd } from './OrganizationJsonLd';
 export { default as SearchModal } from './SearchModal';
 export { default as CookieConsent } from './CookieConsent';
+export { AuthContext, useAuth } from './AuthContext';
+export type { AuthUser, AuthContextType } from './AuthContext';
+export { AuthProvider } from './AuthProvider';
 export {
   TradeTranslationProvider,
   useT,

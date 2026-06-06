@@ -17,8 +17,6 @@ interface SearchProviderProps {
   locale?: string;
   industries?: { slug: string; emoji: string }[];
   loginHref?: string;
-  registerHref?: string;
-  userSlot?: React.ReactNode;
 }
 
 export default function SearchProvider(props: SearchProviderProps) {

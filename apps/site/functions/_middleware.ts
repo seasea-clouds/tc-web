@@ -67,9 +67,13 @@ async function proxyFetch(upstreamUrl: string, request: Request): Promise<Respon
     ? await request.clone().text()
     : undefined;
 
+  // Strip Host from incoming headers and let fetch() set it from upstreamUrl
+  const headers = new Headers(request.headers);
+  headers.delete('host');
+
   const upstreamReq = new Request(upstreamUrl, {
     method: request.method,
-    headers: request.headers,
+    headers,
     body: bodyText,
     redirect: 'manual',
   });

@@ -1,6 +1,6 @@
 {
   "Home": {
-    "title": "China Compliance Self-Check |中贸合规",
+    "title": "中国合规自查 | SinoTrade Compliance",
     "description": "检查您的产品是否需要GACC注册、CCC认证或NMPA备案才能出口到中国。",
     "heroTitle": "中国合规自查",
     "heroSubtitle": "在出口到中国之前，通过 3 个步骤了解您的产品适用哪些合规要求。",
@@ -394,8 +394,8 @@
     "noReports": "还没有报道。",
     "noReportsDesc": "完成合规性检查以在此处查看您的报告。",
     "noActiveSubscription": "没有活跃的订阅。",
-    "plan": "Plan",
-    "status": "Status",
+    "plan": "计划",
+    "status": "状态",
     "renewal": "更新",
     "currentPlan": "当前计划",
     "profile": "轮廓",

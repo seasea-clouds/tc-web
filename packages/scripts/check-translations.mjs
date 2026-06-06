@@ -187,6 +187,8 @@ const ENGLISH_RESIDUAL_ALLOW = new Set([
   'Telegram',
   'FAQ',
   'WhatsApp',
+  'cookie', 'Cookie', 'cookies',
+  'banner', 'Banner',
 ]);
 
 // ============================================================

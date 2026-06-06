@@ -47,13 +47,21 @@ const IGNORE_FALLBACK_KEYS = new Set([
   'IndustriesCommon.industries.babymaternal',
   'Navbar.industriesDropdown.babymaternal',
   'Navbar.servicesDropdown.gacc', 'Home.industry.babymaternal',
-  'Check.reportFooterEmail', 'Check.reportFooterName', 'Check.reportFooterAddress',
-  'Check.reportFooterWebsite', 'Check.fcc', 'Check.ce', 'Check.ul',
   'Auth.emailPlaceholder', 'Auth.email', 'Dashboard.email',
   'Pricing.singlePrice', 'Pricing.professionalPrice', 'Pricing.monthlyPrice',
-  'Report.plan', 'Report.status',
   'Dashboard.title',
-  'Home.popular', 'Check.complianceNo',
+  // Portal: brand/address/abbreviation — must stay English
+  'Check.reportFooterEmail', 'Check.reportFooterName',
+  'Check.reportFooterAddress', 'Check.reportFooterWebsite',
+  'Check.fcc', 'Check.ce', 'Check.ul',
+  'Check.complianceNo',
+  'Check.reportProduct', 'Check.resultProduct', 'Check.resultProductLabel',
+  'Check.packagingPlastic',
+  'Check.reportModuleCrossborder', 'Check.crossborderTitle',
+  'Check.crossborderDesc',
+  'Home.popular',
+  // Report: short loanwords (Status/Plan are correct in Germanic/Romance)
+  'Report.status', 'Report.plan',
 ]);
 
 const IGNORE_FALLBACK_VALUES = new Set([

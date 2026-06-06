@@ -30,7 +30,7 @@ const BLOG_DIR = path.join(PROJECT_ROOT, 'content', 'blog');
 // ============================================================
 const NO_TRANSLATE = new Set([
   'WeChat', 'LinkedIn', 'Facebook', 'Twitter', 'YouTube',
-  'SinoTrade Compliance', 'Global Trade Network', 'Go-to-Market',
+  'SinoTrade Compliance', 'Global Trade Network',
   'David Zhang', 'Sarah Chen', 'Mike Wang', 'Leo Liu',
   'GB 7718-2025', 'you@company.com', 'John Smith',
   'GACC', 'NMPA', 'CCC', 'CBEC', 'CIFER', 'MOA', 'CNCA', 'MEE', 'min',

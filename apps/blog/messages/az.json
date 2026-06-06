@@ -54,5 +54,11 @@
     "contactTitle": "Pulsuz Uyğunluğun Qiymətləndirilməsi",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "WhatsApp-da paylaşın"
+  },
+  "Cookie": {
+    "message": "Bu sayt yalnız əsas autentifikasiya kukilərindən istifadə edir. Heç bir izləmə və ya reklam kukilərindən istifadə edilmir.",
+    "accept": "Hamısını qəbul et",
+    "reject": "Vacib olmayanı rədd edin",
+    "privacyLink": "Məxfilik Siyasəti"
   }
 }

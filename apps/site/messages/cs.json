@@ -1270,5 +1270,26 @@
     "faq": "FAQ",
     "packages": "Balíčky",
     "testimonials": "Posudky"
+  },
+  "Cookie": {
+    "message": "Tento web používá pouze nezbytné ověřovací soubory cookie. Nejsou používány žádné sledovací ani reklamní soubory cookie.",
+    "accept": "Přijmout vše",
+    "reject": "Odmítnout nepodstatné",
+    "privacyLink": "Zásady ochrany osobních údajů"
+  },
+  "Privacy": {
+    "metaTitle": "Zásady ochrany osobních údajů | Soulad se SinoTrade",
+    "metaDescription": "Zásady ochrany osobních údajů pro dodržování SinoTrade – jak shromažďujeme, používáme a chráníme vaše osobní údaje.",
+    "title": "Zásady ochrany osobních údajů",
+    "infoTitle": "Informace, které shromažďujeme",
+    "infoText1": "Shromažďujeme pouze osobní údaje, které nám dobrovolně poskytnete prostřednictvím našich kontaktních formulářů, nástrojů pro kontrolu souladu nebo registrace účtu. To může zahrnovat vaše jméno, e-mailovou adresu, název společnosti a podrobnosti o produktu nezbytné pro poskytování našich služeb posuzování shody.",
+    "infoText2": "Vaše osobní údaje neprodáváme, neobchodujeme ani nepronajímáme třetím stranám. Vaše údaje jsou používány výhradně k poskytování našich služeb a zlepšování vašeho zážitku na našich webových stránkách.",
+    "cookieTitle": "Používání souborů cookie",
+    "cookieText1": "Tento web používá pouze nezbytné ověřovací soubory cookie. Tyto soubory cookie jsou nezbytné pro správné fungování našich nástrojů kontroly souladu a správy uživatelských účtů. Nejsou používány žádné sledovací ani reklamní soubory cookie.",
+    "cookieText2": "Své preference týkající se souborů cookie můžete spravovat prostřednictvím banneru se souhlasem se soubory cookie, který se zobrazí při vaší první návštěvě. Základní soubory cookie nelze zakázat, protože jsou nutné pro základní funkce.",
+    "contactTitle": "Kontaktujte nás",
+    "contactText": "Máte-li jakékoli dotazy týkající se těchto Zásad ochrany osobních údajů nebo toho, jak nakládáme s vašimi údaji, kontaktujte nás:",
+    "updateTitle": "Aktualizace těchto zásad",
+    "updateText": "Tyto Zásady ochrany osobních údajů můžeme čas od času aktualizovat. Jakékoli změny budou zveřejněny na této stránce s aktualizovaným datem revize."
   }
 }

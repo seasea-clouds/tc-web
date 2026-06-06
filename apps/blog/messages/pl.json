@@ -54,5 +54,11 @@
     "contactTitle": "Bezpłatna ocena zgodności",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Udostępnij na WhatsAppie"
+  },
+  "Cookie": {
+    "message": "Ta witryna wykorzystuje wyłącznie niezbędne pliki cookie służące do uwierzytelniania. Nie są używane żadne śledzące ani reklamowe pliki cookie.",
+    "accept": "Zaakceptuj wszystko",
+    "reject": "Odrzuć niepotrzebne",
+    "privacyLink": "Polityka prywatności"
   }
 }

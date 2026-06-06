@@ -1270,5 +1270,26 @@
     "faq": "FAQ",
     "packages": "Csomagok",
     "testimonials": "Beszámolók"
+  },
+  "Cookie": {
+    "message": "Ez az oldal csak alapvető hitelesítési cookie-kat használ. Nem használnak nyomkövető vagy hirdetési sütiket.",
+    "accept": "Az összes elfogadása",
+    "reject": "Elutasítás Nem alapvető",
+    "privacyLink": "Adatvédelmi szabályzat"
+  },
+  "Privacy": {
+    "metaTitle": "Adatvédelmi szabályzat | SinoTrade megfelelőség",
+    "metaDescription": "A SinoTrade Compliance adatvédelmi szabályzata – hogyan gyűjtjük, használjuk és védjük személyes adatait.",
+    "title": "Adatvédelmi szabályzat",
+    "infoTitle": "Az általunk gyűjtött információk",
+    "infoText1": "Csak olyan személyes adatokat gyűjtünk, amelyeket Ön önként ad nekünk kapcsolatfelvételi űrlapjainkon, megfelelőség-ellenőrző eszközeinken vagy fiókregisztráción keresztül. Ez tartalmazhatja az Ön nevét, e-mail címét, cégnevét és a megfelelőségértékelési szolgáltatásaink biztosításához szükséges termékadatokat.",
+    "infoText2": "Személyes adatait nem adjuk el, nem adjuk el vagy béreljük harmadik félnek. Az Ön adatait kizárólag szolgáltatásaink nyújtására és webhelyünkön tapasztalt élményének javítására használjuk fel.",
+    "cookieTitle": "Cookie-használat",
+    "cookieText1": "Ez az oldal csak alapvető hitelesítési cookie-kat használ. Ezek a cookie-k szükségesek megfelelőség-ellenőrző eszközeink megfelelő működéséhez és felhasználói fiókok kezeléséhez. Nem használnak nyomkövető vagy hirdetési sütiket.",
+    "cookieText2": "A cookie-beállításait az első látogatáskor megjelenő cookie-bejelentési szalagon keresztül kezelheti. Az alapvető sütiket nem lehet letiltani, mivel az alapvető funkciókhoz szükségesek.",
+    "contactTitle": "Lépjen kapcsolatba velünk",
+    "contactText": "Ha bármilyen kérdése van a jelen Adatvédelmi nyilatkozattal vagy az adatainak kezelésével kapcsolatban, kérjük, lépjen kapcsolatba velünk:",
+    "updateTitle": "A szabályzat frissítései",
+    "updateText": "Időről időre frissíthetjük ezt az Adatvédelmi szabályzatot. Bármilyen változtatást ezen az oldalon teszünk közzé frissített felülvizsgálati dátummal."
   }
 }

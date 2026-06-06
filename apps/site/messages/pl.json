@@ -1270,5 +1270,26 @@
     "faq": "FAQ",
     "packages": "Pakiety",
     "testimonials": "Referencje"
+  },
+  "Cookie": {
+    "message": "Ta witryna wykorzystuje wyłącznie niezbędne pliki cookie służące do uwierzytelniania. Nie są używane żadne śledzące ani reklamowe pliki cookie.",
+    "accept": "Zaakceptuj wszystko",
+    "reject": "Odrzuć niepotrzebne",
+    "privacyLink": "Polityka prywatności"
+  },
+  "Privacy": {
+    "metaTitle": "Polityka prywatności | Zgodność z przepisami chińskiego handlu",
+    "metaDescription": "Polityka prywatności dotycząca zgodności z przepisami SinoTrade — w jaki sposób gromadzimy, wykorzystujemy i chronimy Twoje dane osobowe.",
+    "title": "Polityka prywatności",
+    "infoTitle": "Informacje, które zbieramy",
+    "infoText1": "Gromadzimy wyłącznie dane osobowe, które nam dobrowolnie przekazujesz za pośrednictwem naszych formularzy kontaktowych, narzędzi do sprawdzania zgodności lub rejestracji konta. Może to obejmować Twoje imię i nazwisko, adres e-mail, nazwę firmy i szczegóły produktu niezbędne do świadczenia naszych usług oceny zgodności.",
+    "infoText2": "Nie sprzedajemy, nie handlujemy ani nie wynajmujemy Twoich danych osobowych stronom trzecim. Twoje dane są wykorzystywane wyłącznie w celu świadczenia naszych usług i poprawy komfortu korzystania z naszej witryny.",
+    "cookieTitle": "Wykorzystanie plików cookie",
+    "cookieText1": "Ta witryna wykorzystuje wyłącznie niezbędne pliki cookie służące do uwierzytelniania. Te pliki cookie są niezbędne do prawidłowego funkcjonowania naszych narzędzi do sprawdzania zgodności i zarządzania kontami użytkowników. Nie są używane żadne śledzące ani reklamowe pliki cookie.",
+    "cookieText2": "Możesz zarządzać swoimi preferencjami dotyczącymi plików cookie za pomocą banera zgody na pliki cookie wyświetlanego podczas pierwszej wizyty. Niezbędnych plików cookie nie można wyłączyć, ponieważ są one wymagane do podstawowej funkcjonalności.",
+    "contactTitle": "Skontaktuj się z nami",
+    "contactText": "Jeśli masz jakiekolwiek pytania dotyczące niniejszej Polityki prywatności lub sposobu, w jaki postępujemy z Twoimi danymi, skontaktuj się z nami:",
+    "updateTitle": "Aktualizacje niniejszej Polityki",
+    "updateText": "Od czasu do czasu możemy aktualizować niniejszą Politykę prywatności. Wszelkie zmiany zostaną opublikowane na tej stronie ze zaktualizowaną datą wersji."
   }
 }

@@ -54,5 +54,11 @@
     "contactTitle": "Gratis Voldoeningsbeoordeling",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Deel op WhatsApp"
+  },
+  "Cookie": {
+    "message": "Hierdie webwerf gebruik slegs noodsaaklike verifikasiekoekies. Geen dop- of advertensiekoekies word gebruik nie.",
+    "accept": "Aanvaar Almal",
+    "reject": "Verwerp Nie-noodsaaklik",
+    "privacyLink": "Privaatheidsbeleid"
   }
 }

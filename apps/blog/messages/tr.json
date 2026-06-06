@@ -54,5 +54,11 @@
     "contactTitle": "Ücretsiz Uyumluluk Değerlendirmesi",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "WhatsApp'ta paylaş"
+  },
+  "Cookie": {
+    "message": "Bu site yalnızca gerekli kimlik doğrulama çerezlerini kullanır. Hiçbir izleme veya reklam çerezi kullanılmaz.",
+    "accept": "Tümünü Kabul Et",
+    "reject": "Gerekli Olmayanları Reddet",
+    "privacyLink": "Gizlilik Politikası"
   }
 }

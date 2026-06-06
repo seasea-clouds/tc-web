@@ -54,5 +54,11 @@
     "contactTitle": "הערכת תאימות בחינם",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "שתפו בוואטסאפ"
+  },
+  "Cookie": {
+    "message": "אתר זה משתמש רק בעוגיות אימות חיוניות. לא נעשה שימוש בעוגיות מעקב או פרסום.",
+    "accept": "קבל הכל",
+    "reject": "דחה לא חיוני",
+    "privacyLink": "מדיניות פרטיות"
   }
 }

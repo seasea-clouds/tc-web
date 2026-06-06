@@ -403,5 +403,26 @@
     "registeredUser": "Geregistreerde gebruiker",
     "periodEnds": "Periode eindig",
     "youAreOnFreePlan": "Jy is tans op die gratis plan."
+  },
+  "Cookie": {
+    "message": "Hierdie webwerf gebruik slegs noodsaaklike verifikasiekoekies. Geen dop- of advertensiekoekies word gebruik nie.",
+    "accept": "Aanvaar Almal",
+    "reject": "Verwerp Nie-noodsaaklik",
+    "privacyLink": "Privaatheidsbeleid"
+  },
+  "Privacy": {
+    "metaTitle": "Privaatheidsbeleid | SinoTrade-nakoming",
+    "metaDescription": "Privaatheidsbeleid vir SinoTrade-nakoming - hoe ons jou persoonlike data insamel, gebruik en beskerm.",
+    "title": "Privaatheidsbeleid",
+    "infoTitle": "Inligting wat ons versamel",
+    "infoText1": "Ons samel slegs persoonlike inligting in wat u vrywillig aan ons verskaf deur ons kontakvorms, nakomingstoetsinstrumente of rekeningregistrasie. Dit kan jou naam, e-posadres, maatskappynaam en produkbesonderhede insluit wat nodig is vir die verskaffing van ons voldoeningsbeoordelingsdienste.",
+    "infoText2": "Ons verkoop, verhandel of verhuur nie jou persoonlike inligting aan derde partye nie. Jou data word uitsluitlik gebruik om ons dienste te lewer en jou ervaring op ons webwerf te verbeter.",
+    "cookieTitle": "Koekiegebruik",
+    "cookieText1": "Hierdie webwerf gebruik slegs noodsaaklike verifikasiekoekies. Hierdie webkoekies is nodig vir die behoorlike funksionering van ons nakomingskontrolenutsmiddels en gebruikersrekeningbestuur. Geen dop- of advertensiekoekies word gebruik nie.",
+    "cookieText2": "Jy kan jou koekievoorkeure bestuur deur die koekietoestemmingsbanier wat tydens jou eerste besoek vertoon word. Noodsaaklike webkoekies kan nie gedeaktiveer word nie, aangesien dit vir kernfunksies vereis word.",
+    "contactTitle": "Kontak ons",
+    "contactText": "As jy enige vrae het oor hierdie Privaatheidsbeleid of hoe ons jou data hanteer, kontak ons ​​asseblief:",
+    "updateTitle": "Opdaterings aan hierdie beleid",
+    "updateText": "Ons kan hierdie Privaatheidsbeleid van tyd tot tyd opdateer. Enige veranderinge sal op hierdie bladsy geplaas word met 'n bygewerkte hersieningsdatum."
   }
 }

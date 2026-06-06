@@ -403,5 +403,26 @@
     "registeredUser": "Registrirani korisnik",
     "periodEnds": "Razdoblje završava",
     "youAreOnFreePlan": "Trenutno ste na besplatnom planu."
+  },
+  "Cookie": {
+    "message": "Ova stranica koristi samo bitne kolačiće za provjeru autentičnosti. Ne koriste se kolačići za praćenje ili oglašavanje.",
+    "accept": "Prihvati sve",
+    "reject": "Odbaci nebitno",
+    "privacyLink": "Politika privatnosti"
+  },
+  "Privacy": {
+    "metaTitle": "Politika privatnosti | Sukladnost SinoTrade",
+    "metaDescription": "Politika privatnosti za usklađenost SinoTradea — kako prikupljamo, koristimo i štitimo vaše osobne podatke.",
+    "title": "Politika privatnosti",
+    "infoTitle": "Podaci koje prikupljamo",
+    "infoText1": "Prikupljamo samo osobne podatke koje ste nam dobrovoljno dali putem naših obrazaca za kontakt, alata za provjeru usklađenosti ili registracije računa. To može uključivati ​​vaše ime, adresu e-pošte, naziv tvrtke i pojedinosti o proizvodu potrebne za pružanje naših usluga procjene usklađenosti.",
+    "infoText2": "Ne prodajemo, ne trgujemo niti iznajmljujemo vaše osobne podatke trećim stranama. Vaši se podaci koriste isključivo za pružanje naših usluga i poboljšanje vašeg iskustva na našoj web stranici.",
+    "cookieTitle": "Korištenje kolačića",
+    "cookieText1": "Ova stranica koristi samo bitne kolačiće za provjeru autentičnosti. Ovi su kolačići nužni za pravilno funkcioniranje naših alata za provjeru usklađenosti i upravljanje korisničkim računom. Ne koriste se kolačići za praćenje ili oglašavanje.",
+    "cookieText2": "Svojim postavkama kolačića možete upravljati putem natpisa pristanka na kolačiće koji se prikazuje prilikom vašeg prvog posjeta. Neophodni kolačići ne mogu se onemogućiti jer su potrebni za osnovne funkcije.",
+    "contactTitle": "Kontaktirajte nas",
+    "contactText": "Ako imate bilo kakvih pitanja o ovim Pravilima privatnosti ili o tome kako postupamo s vašim podacima, kontaktirajte nas:",
+    "updateTitle": "Ažuriranja ove politike",
+    "updateText": "S vremena na vrijeme možemo ažurirati ovu Politiku privatnosti. Sve promjene bit će objavljene na ovoj stranici s ažuriranim datumom revizije."
   }
 }

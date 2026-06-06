@@ -403,5 +403,26 @@
     "registeredUser": "Pengguna terdaftar",
     "periodEnds": "Periode berakhir",
     "youAreOnFreePlan": "Anda saat ini menggunakan paket Gratis."
+  },
+  "Cookie": {
+    "message": "Situs ini hanya menggunakan cookie otentikasi penting. Tidak ada cookie pelacakan atau iklan yang digunakan.",
+    "accept": "Terima Semua",
+    "reject": "Tolak Tidak Penting",
+    "privacyLink": "Kebijakan Privasi"
+  },
+  "Privacy": {
+    "metaTitle": "Kebijakan Privasi | Kepatuhan SinoTrade",
+    "metaDescription": "Kebijakan Privasi untuk Kepatuhan SinoTrade — cara kami mengumpulkan, menggunakan, dan melindungi data pribadi Anda.",
+    "title": "Kebijakan Privasi",
+    "infoTitle": "Informasi yang Kami Kumpulkan",
+    "infoText1": "Kami hanya mengumpulkan informasi pribadi yang Anda berikan secara sukarela kepada kami melalui formulir kontak, alat pemeriksaan kepatuhan, atau pendaftaran akun. Ini mungkin termasuk nama Anda, alamat email, nama perusahaan, dan detail produk yang diperlukan untuk menyediakan layanan penilaian kepatuhan kami.",
+    "infoText2": "Kami tidak menjual, memperdagangkan, atau menyewakan informasi pribadi Anda kepada pihak ketiga. Data Anda hanya digunakan untuk memberikan layanan kami dan meningkatkan pengalaman Anda di situs web kami.",
+    "cookieTitle": "Penggunaan Kue",
+    "cookieText1": "Situs ini hanya menggunakan cookie otentikasi penting. Cookies ini diperlukan agar alat pemeriksaan kepatuhan dan manajemen akun pengguna kami berfungsi dengan baik. Tidak ada cookie pelacakan atau iklan yang digunakan.",
+    "cookieText2": "Anda dapat mengelola preferensi cookie Anda melalui spanduk persetujuan cookie yang ditampilkan pada kunjungan pertama Anda. Cookie penting tidak dapat dinonaktifkan karena diperlukan untuk fungsi inti.",
+    "contactTitle": "Hubungi kami",
+    "contactText": "Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini atau bagaimana kami menangani data Anda, silakan hubungi kami:",
+    "updateTitle": "Pembaruan pada Kebijakan Ini",
+    "updateText": "Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu. Setiap perubahan akan diposting di halaman ini dengan tanggal revisi yang diperbarui."
   }
 }

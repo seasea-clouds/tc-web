@@ -54,5 +54,11 @@
     "contactTitle": "Kostenlose Compliance-Bewertung",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Auf WhatsApp teilen"
+  },
+  "Cookie": {
+    "message": "Diese Website verwendet nur unbedingt erforderliche Authentifizierungscookies. Es werden keine Tracking- oder Werbecookies verwendet.",
+    "accept": "Alle akzeptieren",
+    "reject": "Unwesentliches ablehnen",
+    "privacyLink": "Datenschutzrichtlinie"
   }
 }

@@ -54,5 +54,11 @@
     "contactTitle": "Tathmini ya Uzingatiaji Bila Malipo",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Shiriki kwenye WhatsApp"
+  },
+  "Cookie": {
+    "message": "Tovuti hii hutumia vidakuzi muhimu vya uthibitishaji pekee. Hakuna vidakuzi vya ufuatiliaji au utangazaji vinatumika.",
+    "accept": "Kubali Yote",
+    "reject": "Kataa Isiyo Muhimu",
+    "privacyLink": "Sera ya Faragha"
   }
 }

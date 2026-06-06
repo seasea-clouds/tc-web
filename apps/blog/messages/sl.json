@@ -54,5 +54,11 @@
     "contactTitle": "Brezplačna ocena skladnosti",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Delite na WhatsApp"
+  },
+  "Cookie": {
+    "message": "To spletno mesto uporablja samo bistvene piškotke za preverjanje pristnosti. Piškotki za sledenje ali oglaševanje se ne uporabljajo.",
+    "accept": "Sprejmi vse",
+    "reject": "Zavrni nebistveno",
+    "privacyLink": "Politika zasebnosti"
   }
 }

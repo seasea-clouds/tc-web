@@ -54,5 +54,11 @@
     "contactTitle": "Δωρεάν Αξιολόγηση Συμμόρφωσης",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Μοιραστείτε το στο WhatsApp"
+  },
+  "Cookie": {
+    "message": "Αυτός ο ιστότοπος χρησιμοποιεί μόνο απαραίτητα cookies ελέγχου ταυτότητας. Δεν χρησιμοποιούνται cookies παρακολούθησης ή διαφήμισης.",
+    "accept": "Αποδοχή όλων",
+    "reject": "Απόρριψη μη ουσιώδους",
+    "privacyLink": "Πολιτική Απορρήτου"
   }
 }

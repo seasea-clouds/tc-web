@@ -54,5 +54,11 @@
     "contactTitle": "Ingyenes megfelelőségi értékelés",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Oszd meg a WhatsApp-on"
+  },
+  "Cookie": {
+    "message": "Ez az oldal csak alapvető hitelesítési cookie-kat használ. Nem használnak nyomkövető vagy hirdetési sütiket.",
+    "accept": "Az összes elfogadása",
+    "reject": "Elutasítás Nem alapvető",
+    "privacyLink": "Adatvédelmi szabályzat"
   }
 }

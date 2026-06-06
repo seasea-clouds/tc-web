@@ -1270,5 +1270,26 @@
     "faq": "FAQ",
     "packages": "Pakej",
     "testimonials": "Testimoni"
+  },
+  "Cookie": {
+    "message": "Tapak ini hanya menggunakan kuki pengesahan penting. Tiada kuki penjejakan atau pengiklanan digunakan.",
+    "accept": "Terima Semua",
+    "reject": "Tolak Bukan Penting",
+    "privacyLink": "Dasar Privasi"
+  },
+  "Privacy": {
+    "metaTitle": "Dasar Privasi | Pematuhan SinoTrade",
+    "metaDescription": "Dasar Privasi untuk Pematuhan SinoTrade — cara kami mengumpul, menggunakan dan melindungi data peribadi anda.",
+    "title": "Dasar Privasi",
+    "infoTitle": "Maklumat yang Kami Kumpul",
+    "infoText1": "Kami hanya mengumpul maklumat peribadi yang anda berikan secara sukarela kepada kami melalui borang hubungan kami, alat semakan pematuhan atau pendaftaran akaun. Ini mungkin termasuk nama, alamat e-mel, nama syarikat dan butiran produk anda yang diperlukan untuk menyediakan perkhidmatan penilaian pematuhan kami.",
+    "infoText2": "Kami tidak menjual, berdagang atau menyewakan maklumat peribadi anda kepada pihak ketiga. Data anda digunakan semata-mata untuk menyampaikan perkhidmatan kami dan meningkatkan pengalaman anda di tapak web kami.",
+    "cookieTitle": "Penggunaan Kuki",
+    "cookieText1": "Tapak ini hanya menggunakan kuki pengesahan penting. Kuki ini diperlukan untuk alat semakan pematuhan dan pengurusan akaun pengguna kami berfungsi dengan baik. Tiada kuki penjejakan atau pengiklanan digunakan.",
+    "cookieText2": "Anda boleh mengurus pilihan kuki anda melalui sepanduk persetujuan kuki yang dipaparkan pada lawatan pertama anda. Kuki penting tidak boleh dilumpuhkan kerana ia diperlukan untuk fungsi teras.",
+    "contactTitle": "Hubungi Kami",
+    "contactText": "Jika anda mempunyai sebarang soalan tentang Dasar Privasi ini atau cara kami mengendalikan data anda, sila hubungi kami:",
+    "updateTitle": "Kemas kini pada Dasar Ini",
+    "updateText": "Kami mungkin mengemas kini Dasar Privasi ini dari semasa ke semasa. Sebarang perubahan akan disiarkan pada halaman ini dengan tarikh semakan yang dikemas kini."
   }
 }

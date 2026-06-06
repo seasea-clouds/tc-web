@@ -403,5 +403,26 @@
     "registeredUser": "Utilisateur enregistré",
     "periodEnds": "Fin de la période",
     "youAreOnFreePlan": "Vous êtes actuellement sur le forfait Gratuit."
+  },
+  "Cookie": {
+    "message": "Ce site utilise uniquement des cookies d'authentification essentiels. Aucun cookie de suivi ou publicitaire n'est utilisé.",
+    "accept": "Accepter tout",
+    "reject": "Rejeter les produits non essentiels",
+    "privacyLink": "politique de confidentialité"
+  },
+  "Privacy": {
+    "metaTitle": "Politique de confidentialité | Conformité SinoTrade",
+    "metaDescription": "Politique de confidentialité pour SinoTrade Compliance – comment nous collectons, utilisons et protégeons vos données personnelles.",
+    "title": "politique de confidentialité",
+    "infoTitle": "Informations que nous collectons",
+    "infoText1": "Nous collectons uniquement les informations personnelles que vous nous fournissez volontairement via nos formulaires de contact, nos outils de contrôle de conformité ou l'enregistrement d'un compte. Cela peut inclure votre nom, votre adresse e-mail, le nom de votre entreprise et les détails du produit nécessaires à la fourniture de nos services d'évaluation de la conformité.",
+    "infoText2": "Nous ne vendons, n’échangeons ni ne louons vos informations personnelles à des tiers. Vos données sont utilisées uniquement pour fournir nos services et améliorer votre expérience sur notre site Web.",
+    "cookieTitle": "Utilisation des cookies",
+    "cookieText1": "Ce site utilise uniquement des cookies d'authentification essentiels. Ces cookies sont nécessaires au bon fonctionnement de nos outils de contrôle de conformité et de gestion des comptes utilisateurs. Aucun cookie de suivi ou publicitaire n'est utilisé.",
+    "cookieText2": "Vous pouvez gérer vos préférences en matière de cookies via la bannière de consentement aux cookies affichée lors de votre première visite. Les cookies essentiels ne peuvent pas être désactivés car ils sont requis pour les fonctionnalités de base.",
+    "contactTitle": "Contactez-nous",
+    "contactText": "Si vous avez des questions sur cette politique de confidentialité ou sur la façon dont nous traitons vos données, veuillez nous contacter :",
+    "updateTitle": "Mises à jour de cette politique",
+    "updateText": "Nous pouvons mettre à jour cette politique de confidentialité de temps à autre. Toute modification sera publiée sur cette page avec une date de révision mise à jour."
   }
 }

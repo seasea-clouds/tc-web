@@ -54,5 +54,11 @@
     "contactTitle": "Бясплатная ацэнка адпаведнасці",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Падзяліцеся ў WhatsApp"
+  },
+  "Cookie": {
+    "message": "Гэты сайт выкарыстоўвае толькі неабходныя файлы cookie для аўтэнтыфікацыі. Файлы cookie для адсочвання і рэкламы не выкарыстоўваюцца.",
+    "accept": "Прыняць усе",
+    "reject": "Адхіліць неістотнае",
+    "privacyLink": "Палітыка прыватнасці"
   }
 }

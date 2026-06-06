@@ -54,5 +54,11 @@
     "shareTelegram": "分享到 Telegram",
     "shareEmail": "通过邮件分享",
     "copyLink": "复制链接"
+  },
+  "Cookie": {
+    "message": "本网站仅使用必要的身份验证Cookie。不使用跟踪或广告Cookie。",
+    "accept": "接受全部",
+    "reject": "拒绝非必要",
+    "privacyLink": "隐私政策"
   }
 }

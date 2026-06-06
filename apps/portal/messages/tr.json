@@ -403,5 +403,26 @@
     "registeredUser": "Kayıtlı kullanıcı",
     "periodEnds": "Dönem sonu",
     "youAreOnFreePlan": "Şu anda Ücretsiz plandasınız."
+  },
+  "Cookie": {
+    "message": "Bu site yalnızca gerekli kimlik doğrulama çerezlerini kullanır. Hiçbir izleme veya reklam çerezi kullanılmaz.",
+    "accept": "Tümünü Kabul Et",
+    "reject": "Gerekli Olmayanları Reddet",
+    "privacyLink": "Gizlilik Politikası"
+  },
+  "Privacy": {
+    "metaTitle": "Gizlilik Politikası | SinoTrade Uyumluluğu",
+    "metaDescription": "SinoTrade Uyumluluğu için Gizlilik Politikası - kişisel verilerinizi nasıl topluyoruz, kullanıyoruz ve koruyoruz.",
+    "title": "Gizlilik Politikası",
+    "infoTitle": "Topladığımız Bilgiler",
+    "infoText1": "Yalnızca iletişim formlarımız, uyumluluk kontrol araçlarımız veya hesap kaydımız aracılığıyla bize gönüllü olarak sağladığınız kişisel bilgileri topluyoruz. Bu, uyumluluk değerlendirme hizmetlerimizi sağlamak için gerekli olan adınızı, e-posta adresinizi, şirket adınızı ve ürün ayrıntılarınızı içerebilir.",
+    "infoText2": "Kişisel bilgilerinizi üçüncü taraflara satmıyoruz, takas etmiyoruz veya kiralamıyoruz. Verileriniz yalnızca hizmetlerimizi sunmak ve web sitemizdeki deneyiminizi geliştirmek için kullanılır.",
+    "cookieTitle": "Çerez Kullanımı",
+    "cookieText1": "Bu site yalnızca gerekli kimlik doğrulama çerezlerini kullanır. Bu çerezler uyumluluk kontrol araçlarımızın ve kullanıcı hesabı yönetiminin düzgün çalışması için gereklidir. Hiçbir izleme veya reklam çerezi kullanılmaz.",
+    "cookieText2": "Çerez tercihlerinizi ilk ziyaretinizde görüntülenen çerez onay bannerı üzerinden yönetebilirsiniz. Temel çerezler temel işlevler için gerekli olduğundan devre dışı bırakılamaz.",
+    "contactTitle": "Bize Ulaşın",
+    "contactText": "Bu Gizlilik Politikası veya verilerinizi nasıl işlediğimiz hakkında herhangi bir sorunuz varsa lütfen bizimle iletişime geçin:",
+    "updateTitle": "Bu Politikadaki Güncellemeler",
+    "updateText": "Bu Gizlilik Politikasını zaman zaman güncelleyebiliriz. Herhangi bir değişiklik güncellenmiş revizyon tarihi ile bu sayfada yayınlanacaktır."
   }
 }

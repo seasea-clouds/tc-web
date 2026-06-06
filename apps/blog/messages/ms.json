@@ -54,5 +54,11 @@
     "contactTitle": "Penilaian Pematuhan Percuma",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Kongsi di WhatsApp"
+  },
+  "Cookie": {
+    "message": "Tapak ini hanya menggunakan kuki pengesahan penting. Tiada kuki penjejakan atau pengiklanan digunakan.",
+    "accept": "Terima Semua",
+    "reject": "Tolak Bukan Penting",
+    "privacyLink": "Dasar Privasi"
   }
 }

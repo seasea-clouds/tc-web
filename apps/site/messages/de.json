@@ -1270,5 +1270,26 @@
     "faq": "FAQ",
     "packages": "Pakete",
     "testimonials": "Erfahrungsberichte"
+  },
+  "Cookie": {
+    "message": "Diese Website verwendet nur unbedingt erforderliche Authentifizierungscookies. Es werden keine Tracking- oder Werbecookies verwendet.",
+    "accept": "Alle akzeptieren",
+    "reject": "Unwesentliches ablehnen",
+    "privacyLink": "Datenschutzrichtlinie"
+  },
+  "Privacy": {
+    "metaTitle": "Datenschutzrichtlinie | SinoTrade-Konformität",
+    "metaDescription": "Datenschutzrichtlinie für SinoTrade-Compliance – wie wir Ihre personenbezogenen Daten erfassen, verwenden und schützen.",
+    "title": "Datenschutzrichtlinie",
+    "infoTitle": "Informationen, die wir sammeln",
+    "infoText1": "Wir erfassen nur personenbezogene Daten, die Sie uns freiwillig über unsere Kontaktformulare, Compliance-Check-Tools oder Kontoregistrierung zur Verfügung stellen. Dazu können Ihr Name, Ihre E-Mail-Adresse, Ihr Firmenname und Produktdetails gehören, die für die Bereitstellung unserer Compliance-Bewertungsdienste erforderlich sind.",
+    "infoText2": "Wir verkaufen, handeln oder vermieten Ihre persönlichen Daten nicht an Dritte. Ihre Daten werden ausschließlich dazu verwendet, unsere Dienste bereitzustellen und Ihr Erlebnis auf unserer Website zu verbessern.",
+    "cookieTitle": "Verwendung von Cookies",
+    "cookieText1": "Diese Website verwendet nur unbedingt erforderliche Authentifizierungscookies. Diese Cookies sind für das ordnungsgemäße Funktionieren unserer Compliance-Check-Tools und der Benutzerkontoverwaltung erforderlich. Es werden keine Tracking- oder Werbecookies verwendet.",
+    "cookieText2": "Sie können Ihre Cookie-Einstellungen über das Cookie-Zustimmungsbanner verwalten, das bei Ihrem ersten Besuch angezeigt wird. Wesentliche Cookies können nicht deaktiviert werden, da sie für die Kernfunktionalität erforderlich sind.",
+    "contactTitle": "Kontaktieren Sie uns",
+    "contactText": "Wenn Sie Fragen zu dieser Datenschutzerklärung oder unserem Umgang mit Ihren Daten haben, kontaktieren Sie uns bitte:",
+    "updateTitle": "Aktualisierungen dieser Richtlinie",
+    "updateText": "Wir können diese Datenschutzrichtlinie von Zeit zu Zeit aktualisieren. Alle Änderungen werden auf dieser Seite mit einem aktualisierten Revisionsdatum veröffentlicht."
   }
 }

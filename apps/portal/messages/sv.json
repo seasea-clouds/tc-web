@@ -403,5 +403,26 @@
     "registeredUser": "Registrerad användare",
     "periodEnds": "Perioden slutar",
     "youAreOnFreePlan": "Du har för närvarande gratisplanen."
+  },
+  "Cookie": {
+    "message": "Denna webbplats använder endast viktiga autentiseringscookies. Inga spårnings- eller reklamcookies används.",
+    "accept": "Acceptera alla",
+    "reject": "Avvisa Ej väsentligt",
+    "privacyLink": "Sekretesspolicy"
+  },
+  "Privacy": {
+    "metaTitle": "Sekretesspolicy | SinoTrade efterlevnad",
+    "metaDescription": "Sekretesspolicy för SinoTrade-efterlevnad – hur vi samlar in, använder och skyddar dina personuppgifter.",
+    "title": "Sekretesspolicy",
+    "infoTitle": "Information vi samlar in",
+    "infoText1": "Vi samlar endast in personlig information som du frivilligt lämnar till oss via våra kontaktformulär, verktyg för efterlevnadskontroll eller kontoregistrering. Detta kan inkludera ditt namn, e-postadress, företagsnamn och produktinformation som är nödvändig för att tillhandahålla våra tjänster för efterlevnadsbedömning.",
+    "infoText2": "Vi säljer, handlar inte med eller hyr ut din personliga information till tredje part. Dina uppgifter används enbart för att leverera våra tjänster och förbättra din upplevelse på vår webbplats.",
+    "cookieTitle": "Cookieanvändning",
+    "cookieText1": "Denna webbplats använder endast viktiga autentiseringscookies. Dessa cookies är nödvändiga för att våra verktyg för efterlevnadskontroll och användarkontohantering ska fungera korrekt. Inga spårnings- eller reklamcookies används.",
+    "cookieText2": "Du kan hantera dina cookie-preferenser genom cookie-samtyckesbannern som visas vid ditt första besök. Viktiga cookies kan inte inaktiveras eftersom de krävs för kärnfunktionalitet.",
+    "contactTitle": "Kontakta oss",
+    "contactText": "Om du har några frågor om denna integritetspolicy eller hur vi hanterar dina uppgifter, vänligen kontakta oss:",
+    "updateTitle": "Uppdateringar av denna policy",
+    "updateText": "Vi kan uppdatera denna integritetspolicy då och då. Eventuella ändringar kommer att publiceras på denna sida med ett uppdaterat revisionsdatum."
   }
 }

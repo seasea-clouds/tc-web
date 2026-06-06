@@ -1270,5 +1270,26 @@
     "faq": "FAQ",
     "packages": "Pachete",
     "testimonials": "Mărturii"
+  },
+  "Cookie": {
+    "message": "Acest site folosește numai cookie-uri de autentificare esențiale. Nu sunt utilizate cookie-uri de urmărire sau de publicitate.",
+    "accept": "Acceptați toate",
+    "reject": "Respinge neesențiale",
+    "privacyLink": "Politica de confidențialitate"
+  },
+  "Privacy": {
+    "metaTitle": "Politica de confidențialitate | Conformitatea SinoTrade",
+    "metaDescription": "Politica de confidențialitate pentru conformitatea SinoTrade — cum colectăm, utilizăm și vă protejăm datele personale.",
+    "title": "Politica de confidențialitate",
+    "infoTitle": "Informații pe care le colectăm",
+    "infoText1": "Colectăm doar informații personale pe care ni le furnizați în mod voluntar prin formularele noastre de contact, instrumentele de verificare a conformității sau înregistrarea contului. Acestea pot include numele dvs., adresa de e-mail, numele companiei și detaliile produsului necesare pentru furnizarea serviciilor noastre de evaluare a conformității.",
+    "infoText2": "Nu vindem, comercializăm sau închiriem informațiile dumneavoastră personale către terți. Datele dumneavoastră sunt folosite exclusiv pentru a vă oferi serviciile și pentru a vă îmbunătăți experiența pe site-ul nostru.",
+    "cookieTitle": "Utilizarea cookie-urilor",
+    "cookieText1": "Acest site folosește numai cookie-uri de autentificare esențiale. Aceste cookie-uri sunt necesare pentru buna funcționare a instrumentelor noastre de verificare a conformității și pentru gestionarea contului de utilizator. Nu sunt utilizate cookie-uri de urmărire sau de publicitate.",
+    "cookieText2": "Vă puteți gestiona preferințele privind cookie-urile prin intermediul bannerului de consimțământ pentru cookie-uri afișat la prima vizita. Cookie-urile esențiale nu pot fi dezactivate, deoarece sunt necesare pentru funcționalitatea de bază.",
+    "contactTitle": "Contactaţi-ne",
+    "contactText": "Dacă aveți întrebări despre această politică de confidențialitate sau despre modul în care gestionăm datele dvs., vă rugăm să ne contactați:",
+    "updateTitle": "Actualizări ale acestei politici",
+    "updateText": "Este posibil să actualizăm această Politică de confidențialitate din când în când. Orice modificări vor fi postate pe această pagină cu o dată actualizată de revizuire."
   }
 }

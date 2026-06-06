@@ -54,5 +54,11 @@
     "contactTitle": "無料のコンプライアンス評価",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "WhatsAppで共有する"
+  },
+  "Cookie": {
+    "message": "このサイトでは、必須の認証 Cookie のみを使用します。追跡クッキーや広告クッキーは使用されません。",
+    "accept": "すべてを受け入れる",
+    "reject": "必須でないものを拒否する",
+    "privacyLink": "プライバシーポリシー"
   }
 }

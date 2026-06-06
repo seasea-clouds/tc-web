@@ -54,5 +54,11 @@
     "contactTitle": "Bezplatné posouzení souladu",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Sdílejte na WhatsApp"
+  },
+  "Cookie": {
+    "message": "Tento web používá pouze nezbytné ověřovací soubory cookie. Nejsou používány žádné sledovací ani reklamní soubory cookie.",
+    "accept": "Přijmout vše",
+    "reject": "Odmítnout nepodstatné",
+    "privacyLink": "Zásady ochrany osobních údajů"
   }
 }

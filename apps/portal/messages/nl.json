@@ -403,5 +403,26 @@
     "registeredUser": "Geregistreerde gebruiker",
     "periodEnds": "Periode eindigt",
     "youAreOnFreePlan": "Je hebt momenteel het gratis abonnement."
+  },
+  "Cookie": {
+    "message": "Deze site gebruikt alleen essentiële authenticatiecookies. Er worden geen tracking- of advertentiecookies gebruikt.",
+    "accept": "Accepteer alles",
+    "reject": "Niet-essentieel afwijzen",
+    "privacyLink": "Privacybeleid"
+  },
+  "Privacy": {
+    "metaTitle": "Privacybeleid | SinoTrade-naleving",
+    "metaDescription": "Privacybeleid voor naleving van SinoTrade – hoe wij uw persoonlijke gegevens verzamelen, gebruiken en beschermen.",
+    "title": "Privacybeleid",
+    "infoTitle": "Informatie die we verzamelen",
+    "infoText1": "We verzamelen alleen persoonlijke gegevens die u vrijwillig aan ons verstrekt via onze contactformulieren, compliancecontroletools of accountregistratie. Dit kunnen uw naam, e-mailadres, bedrijfsnaam en productgegevens zijn die nodig zijn voor het leveren van onze nalevingsbeoordelingsdiensten.",
+    "infoText2": "Wij verkopen, verhandelen of verhuren uw persoonlijke gegevens niet aan derden. Uw gegevens worden uitsluitend gebruikt om onze diensten te leveren en uw ervaring op onze website te verbeteren.",
+    "cookieTitle": "Cookiegebruik",
+    "cookieText1": "Deze site gebruikt alleen essentiële authenticatiecookies. Deze cookies zijn noodzakelijk voor de goede werking van onze compliance-controletools en het beheer van gebruikersaccounts. Er worden geen tracking- of advertentiecookies gebruikt.",
+    "cookieText2": "U kunt uw cookievoorkeuren beheren via de cookie-toestemmingsbanner die bij uw eerste bezoek wordt weergegeven. Essentiële cookies kunnen niet worden uitgeschakeld, omdat ze nodig zijn voor de kernfunctionaliteit.",
+    "contactTitle": "Neem contact met ons op",
+    "contactText": "Als u vragen heeft over dit privacybeleid of over de manier waarop wij met uw gegevens omgaan, kunt u contact met ons opnemen:",
+    "updateTitle": "Updates van dit beleid",
+    "updateText": "We kunnen dit privacybeleid van tijd tot tijd bijwerken. Eventuele wijzigingen worden op deze pagina geplaatst met een bijgewerkte revisiedatum."
   }
 }

@@ -54,5 +54,11 @@
     "contactTitle": "Gratis efterlevnadsbedömning",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Dela på WhatsApp"
+  },
+  "Cookie": {
+    "message": "Denna webbplats använder endast viktiga autentiseringscookies. Inga spårnings- eller reklamcookies används.",
+    "accept": "Acceptera alla",
+    "reject": "Avvisa Ej väsentligt",
+    "privacyLink": "Sekretesspolicy"
   }
 }

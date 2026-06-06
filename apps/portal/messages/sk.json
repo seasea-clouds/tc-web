@@ -403,5 +403,26 @@
     "registeredUser": "Registrovaný užívateľ",
     "periodEnds": "Obdobie končí",
     "youAreOnFreePlan": "Momentálne máte bezplatný plán."
+  },
+  "Cookie": {
+    "message": "Táto stránka používa iba nevyhnutné overovacie súbory cookie. Nepoužívajú sa žiadne sledovacie ani reklamné súbory cookie.",
+    "accept": "Prijať všetko",
+    "reject": "Odmietnuť nepodstatné",
+    "privacyLink": "Zásady ochrany osobných údajov"
+  },
+  "Privacy": {
+    "metaTitle": "Ochrana osobných údajov | Súlad SinoTrade",
+    "metaDescription": "Zásady ochrany osobných údajov pre dodržiavanie SinoTrade – ako zhromažďujeme, používame a chránime vaše osobné údaje.",
+    "title": "Zásady ochrany osobných údajov",
+    "infoTitle": "Informácie, ktoré zhromažďujeme",
+    "infoText1": "Zhromažďujeme iba osobné údaje, ktoré nám dobrovoľne poskytnete prostredníctvom našich kontaktných formulárov, nástrojov na kontrolu súladu alebo registrácie účtu. Môže to zahŕňať vaše meno, e-mailovú adresu, názov spoločnosti a podrobnosti o produkte potrebné na poskytovanie našich služieb hodnotenia súladu.",
+    "infoText2": "Vaše osobné údaje nepredávame, neobchodujeme ani neprenajímame tretím stranám. Vaše údaje sa používajú výhradne na poskytovanie našich služieb a zlepšovanie vášho zážitku na našej webovej stránke.",
+    "cookieTitle": "Používanie súborov cookie",
+    "cookieText1": "Táto stránka používa iba nevyhnutné overovacie súbory cookie. Tieto súbory cookie sú nevyhnutné pre správne fungovanie našich nástrojov na kontrolu súladu a správu používateľských účtov. Nepoužívajú sa žiadne sledovacie ani reklamné súbory cookie.",
+    "cookieText2": "Predvoľby súborov cookie môžete spravovať prostredníctvom bannera so súhlasom so súbormi cookie, ktorý sa zobrazí pri vašej prvej návšteve. Nevyhnutné súbory cookie nemožno zakázať, pretože sú potrebné pre základnú funkčnosť.",
+    "contactTitle": "Kontaktujte nás",
+    "contactText": "Ak máte akékoľvek otázky týkajúce sa týchto Zásad ochrany osobných údajov alebo toho, ako nakladáme s vašimi údajmi, kontaktujte nás:",
+    "updateTitle": "Aktualizácie týchto zásad",
+    "updateText": "Tieto Zásady ochrany osobných údajov môžeme z času na čas aktualizovať. Akékoľvek zmeny budú zverejnené na tejto stránke s aktualizovaným dátumom revízie."
   }
 }

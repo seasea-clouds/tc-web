@@ -1270,5 +1270,26 @@
     "faq": "FAQ",
     "packages": "Pakker",
     "testimonials": "Attester"
+  },
+  "Cookie": {
+    "message": "Dette nettstedet bruker kun viktige autentiseringsinformasjonskapsler. Ingen sporings- eller reklameinformasjonskapsler brukes.",
+    "accept": "Godta alle",
+    "reject": "Avvis ikke-essensielt",
+    "privacyLink": "Personvernerklæring"
+  },
+  "Privacy": {
+    "metaTitle": "Personvernerklæring | SinoTrade-overholdelse",
+    "metaDescription": "Personvernerklæring for SinoTrade-overholdelse – hvordan vi samler inn, bruker og beskytter dine personopplysninger.",
+    "title": "Personvernerklæring",
+    "infoTitle": "Informasjon vi samler inn",
+    "infoText1": "Vi samler bare inn personlig informasjon som du frivillig gir oss gjennom kontaktskjemaene våre, verktøy for samsvarskontroll eller kontoregistrering. Dette kan inkludere navn, e-postadresse, firmanavn og produktdetaljer som er nødvendige for å tilby våre tjenester for samsvarsvurdering.",
+    "infoText2": "Vi selger, bytter eller leier ikke ut personopplysningene dine til tredjeparter. Dine data brukes utelukkende for å levere våre tjenester og forbedre opplevelsen din på nettstedet vårt.",
+    "cookieTitle": "Bruk av informasjonskapsler",
+    "cookieText1": "Dette nettstedet bruker kun viktige autentiseringsinformasjonskapsler. Disse informasjonskapslene er nødvendige for at våre samsvarskontrollverktøy og brukerkontoadministrasjon skal fungere på riktig måte. Ingen sporings- eller reklameinformasjonskapsler brukes.",
+    "cookieText2": "Du kan administrere informasjonskapselpreferansene dine gjennom samtykkebanneret for informasjonskapsler som vises ved ditt første besøk. Viktige informasjonskapsler kan ikke deaktiveres da de kreves for kjernefunksjonalitet.",
+    "contactTitle": "Kontakt oss",
+    "contactText": "Hvis du har spørsmål om denne personvernerklæringen eller hvordan vi håndterer dataene dine, vennligst kontakt oss:",
+    "updateTitle": "Oppdateringer til denne policyen",
+    "updateText": "Vi kan oppdatere denne personvernerklæringen fra tid til annen. Eventuelle endringer vil bli lagt ut på denne siden med en oppdatert revisjonsdato."
   }
 }

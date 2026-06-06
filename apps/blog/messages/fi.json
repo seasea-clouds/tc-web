@@ -54,5 +54,11 @@
     "contactTitle": "Ilmainen vaatimustenmukaisuuden arviointi",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Jaa WhatsAppissa"
+  },
+  "Cookie": {
+    "message": "Tämä sivusto käyttää vain välttämättömiä todennusevästeitä. Mitään seuranta- tai mainosevästeitä ei käytetä.",
+    "accept": "Hyväksy kaikki",
+    "reject": "Hylkää Ei-välttämätön",
+    "privacyLink": "Tietosuojakäytäntö"
   }
 }

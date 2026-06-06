@@ -54,5 +54,11 @@
     "contactTitle": "Bezplatné posúdenie súladu",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Zdieľať na WhatsApp"
+  },
+  "Cookie": {
+    "message": "Táto stránka používa iba nevyhnutné overovacie súbory cookie. Nepoužívajú sa žiadne sledovacie ani reklamné súbory cookie.",
+    "accept": "Prijať všetko",
+    "reject": "Odmietnuť nepodstatné",
+    "privacyLink": "Zásady ochrany osobných údajov"
   }
 }

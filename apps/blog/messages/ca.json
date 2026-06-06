@@ -54,5 +54,11 @@
     "contactTitle": "Avaluació gratuïta del compliment",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Comparteix al WhatsApp"
+  },
+  "Cookie": {
+    "message": "Aquest lloc només utilitza cookies d'autenticació essencials. No s'utilitzen cookies de seguiment ni de publicitat.",
+    "accept": "Acceptar-ho tot",
+    "reject": "Rebutja els no essencials",
+    "privacyLink": "Política de privadesa"
   }
 }

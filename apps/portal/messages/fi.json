@@ -403,5 +403,26 @@
     "registeredUser": "Rekisteröity käyttäjä",
     "periodEnds": "Kausi päättyy",
     "youAreOnFreePlan": "Olet tällä hetkellä ilmaisessa paketissa."
+  },
+  "Cookie": {
+    "message": "Tämä sivusto käyttää vain välttämättömiä todennusevästeitä. Mitään seuranta- tai mainosevästeitä ei käytetä.",
+    "accept": "Hyväksy kaikki",
+    "reject": "Hylkää Ei-välttämätön",
+    "privacyLink": "Tietosuojakäytäntö"
+  },
+  "Privacy": {
+    "metaTitle": "Tietosuojakäytäntö | SinoTrade-yhteensopivuus",
+    "metaDescription": "SinoTrade Compliancen tietosuojakäytäntö – kuinka keräämme, käytämme ja suojaamme henkilötietojasi.",
+    "title": "Tietosuojakäytäntö",
+    "infoTitle": "Keräämämme tiedot",
+    "infoText1": "Keräämme vain henkilötietoja, jotka annat meille vapaaehtoisesti yhteydenottolomakkeiden, vaatimustenmukaisuuden tarkistustyökalujemme tai tilin rekisteröinnin kautta. Tämä voi sisältää nimesi, sähköpostiosoitteesi, yrityksen nimesi ja tuotetiedot, joita tarvitaan vaatimustenmukaisuuden arviointipalveluidemme tarjoamiseen.",
+    "infoText2": "Emme myy, vaihda tai vuokraa henkilötietojasi kolmansille osapuolille. Tietojasi käytetään vain palveluidemme tarjoamiseen ja käyttökokemuksesi parantamiseen verkkosivustollamme.",
+    "cookieTitle": "Evästeiden käyttö",
+    "cookieText1": "Tämä sivusto käyttää vain välttämättömiä todennusevästeitä. Nämä evästeet ovat välttämättömiä vaatimustenmukaisuuden tarkistustyökalujemme moitteettoman toiminnan ja käyttäjätilien hallinnan kannalta. Mitään seuranta- tai mainosevästeitä ei käytetä.",
+    "cookieText2": "Voit hallita evästeasetuksiasi ensimmäisellä vierailullasi näkyvän evästeen suostumusbannerin kautta. Välttämättömiä evästeitä ei voi poistaa käytöstä, koska niitä tarvitaan ydintoimintoihin.",
+    "contactTitle": "Ota yhteyttä",
+    "contactText": "Jos sinulla on kysyttävää tästä tietosuojakäytännöstä tai siitä, miten käsittelemme tietojasi, ota meihin yhteyttä:",
+    "updateTitle": "Päivitykset tähän käytäntöön",
+    "updateText": "Saatamme päivittää tätä tietosuojakäytäntöä ajoittain. Kaikki muutokset julkaistaan ​​tälle sivulle päivitetyllä tarkistuspäivämäärällä."
   }
 }

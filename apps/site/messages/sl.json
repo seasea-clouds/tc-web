@@ -1270,5 +1270,26 @@
     "faq": "FAQ",
     "packages": "Paketi",
     "testimonials": "Pričevanja"
+  },
+  "Cookie": {
+    "message": "To spletno mesto uporablja samo bistvene piškotke za preverjanje pristnosti. Piškotki za sledenje ali oglaševanje se ne uporabljajo.",
+    "accept": "Sprejmi vse",
+    "reject": "Zavrni nebistveno",
+    "privacyLink": "Politika zasebnosti"
+  },
+  "Privacy": {
+    "metaTitle": "Politika zasebnosti | Skladnost s predpisi SinoTrade",
+    "metaDescription": "Politika zasebnosti za skladnost SinoTrade – kako zbiramo, uporabljamo in varujemo vaše osebne podatke.",
+    "title": "Politika zasebnosti",
+    "infoTitle": "Podatki, ki jih zbiramo",
+    "infoText1": "Zbiramo samo osebne podatke, ki nam jih prostovoljno posredujete prek naših kontaktnih obrazcev, orodij za preverjanje skladnosti ali registracije računa. To lahko vključuje vaše ime, e-poštni naslov, ime podjetja in podrobnosti o izdelku, potrebne za zagotavljanje naših storitev ocenjevanja skladnosti.",
+    "infoText2": "Vaših osebnih podatkov ne prodajamo, trgujemo ali dajemo v najem tretjim osebam. Vaše podatke uporabljamo izključno za zagotavljanje naših storitev in izboljšanje vaše izkušnje na naši spletni strani.",
+    "cookieTitle": "Uporaba piškotkov",
+    "cookieText1": "To spletno mesto uporablja samo bistvene piškotke za preverjanje pristnosti. Ti piškotki so potrebni za pravilno delovanje naših orodij za preverjanje skladnosti in upravljanje uporabniškega računa. Piškotki za sledenje ali oglaševanje se ne uporabljajo.",
+    "cookieText2": "Nastavitve piškotkov lahko upravljate prek pasice za soglasje za piškotke, ki se prikaže ob vašem prvem obisku. Bistvenih piškotkov ni mogoče onemogočiti, saj so potrebni za osnovno delovanje.",
+    "contactTitle": "Kontaktirajte nas",
+    "contactText": "Če imate kakršna koli vprašanja o tem pravilniku o zasebnosti ali o tem, kako ravnamo z vašimi podatki, nas kontaktirajte:",
+    "updateTitle": "Posodobitve tega pravilnika",
+    "updateText": "Ta pravilnik o zasebnosti lahko občasno posodobimo. Vse spremembe bodo objavljene na tej strani s posodobljenim datumom revizije."
   }
 }

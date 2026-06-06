@@ -1270,5 +1270,26 @@
     "faq": "FAQ",
     "packages": "套餐",
     "testimonials": "感言"
+  },
+  "Cookie": {
+    "message": "本网站仅使用必要的身份验证Cookie。不使用跟踪或广告Cookie。",
+    "accept": "接受全部",
+    "reject": "拒绝非必要",
+    "privacyLink": "隐私政策"
+  },
+  "Privacy": {
+    "metaTitle": "隐私政策 | SinoTrade Compliance",
+    "metaDescription": "SinoTrade Compliance 隐私政策——我们如何收集、使用和保护您的个人数据。",
+    "title": "隐私政策",
+    "infoTitle": "我们收集的信息",
+    "infoText1": "我们仅收集您通过联系表单、合规自查工具或账户注册自愿提供的个人信息，包括您的姓名、电子邮件地址、公司名称及产品信息，用于提供合规评估服务。",
+    "infoText2": "我们不会向第三方出售、交易或出租您的个人信息。您的数据仅用于提供服务并改善网站体验。",
+    "cookieTitle": "Cookie 使用",
+    "cookieText1": "本网站仅使用必要的身份验证 Cookie。这些 Cookie 是保证合规自查工具和用户账户管理正常运行所必需的。不使用跟踪或广告 Cookie。",
+    "cookieText2": "您可以在首次访问时通过 Cookie 同意横幅管理您的偏好。必要 Cookie 无法禁用，因为它们是核心功能所必需的。",
+    "contactTitle": "联系我们",
+    "contactText": "如果您对本隐私政策或我们如何处理您的数据有任何疑问，请联系我们：",
+    "updateTitle": "政策更新",
+    "updateText": "我们可能会不时更新本隐私政策。任何更改将发布在此页面，并标注更新日期。"
   }
 }

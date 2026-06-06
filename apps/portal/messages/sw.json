@@ -403,5 +403,26 @@
     "registeredUser": "Mtumiaji aliyesajiliwa",
     "periodEnds": "Kipindi kinaisha",
     "youAreOnFreePlan": "Kwa sasa uko kwenye Mpango Bila Malipo."
+  },
+  "Cookie": {
+    "message": "Tovuti hii hutumia vidakuzi muhimu vya uthibitishaji pekee. Hakuna vidakuzi vya ufuatiliaji au utangazaji vinatumika.",
+    "accept": "Kubali Yote",
+    "reject": "Kataa Isiyo Muhimu",
+    "privacyLink": "Sera ya Faragha"
+  },
+  "Privacy": {
+    "metaTitle": "Sera ya Faragha | Uzingatiaji wa SinoTrade",
+    "metaDescription": "Sera ya Faragha ya Uzingatiaji wa SinoTrade - jinsi tunavyokusanya, kutumia, na kulinda data yako ya kibinafsi.",
+    "title": "Sera ya Faragha",
+    "infoTitle": "Habari Tunazokusanya",
+    "infoText1": "Tunakusanya tu taarifa za kibinafsi ambazo unatupatia kwa hiari kupitia fomu zetu za mawasiliano, zana za kuangalia utiifu au usajili wa akaunti. Hii inaweza kujumuisha jina lako, anwani ya barua pepe, jina la kampuni, na maelezo ya bidhaa muhimu kwa ajili ya kutoa huduma zetu za tathmini ya kufuata.",
+    "infoText2": "Hatuuzi, kufanya biashara, au kukodisha taarifa zako za kibinafsi kwa wahusika wengine. Data yako inatumika tu kutoa huduma zetu na kuboresha matumizi yako kwenye tovuti yetu.",
+    "cookieTitle": "Matumizi ya kuki",
+    "cookieText1": "Tovuti hii hutumia vidakuzi muhimu vya uthibitishaji pekee. Vidakuzi hivi ni muhimu kwa utendakazi mzuri wa zana zetu za kuangalia utiifu na usimamizi wa akaunti ya mtumiaji. Hakuna vidakuzi vya ufuatiliaji au utangazaji vinatumika.",
+    "cookieText2": "Unaweza kudhibiti mapendeleo yako ya vidakuzi kupitia bango la idhini ya kuki inayoonyeshwa kwenye ziara yako ya kwanza. Vidakuzi muhimu haziwezi kuzimwa kwani zinahitajika kwa utendakazi wa kimsingi.",
+    "contactTitle": "Wasiliana Nasi",
+    "contactText": "Ikiwa una maswali yoyote kuhusu Sera hii ya Faragha au jinsi tunavyoshughulikia data yako, tafadhali wasiliana nasi:",
+    "updateTitle": "Masasisho ya Sera hii",
+    "updateText": "Tunaweza kusasisha Sera hii ya Faragha mara kwa mara. Mabadiliko yoyote yatachapishwa kwenye ukurasa huu na tarehe ya marekebisho iliyosasishwa."
   }
 }

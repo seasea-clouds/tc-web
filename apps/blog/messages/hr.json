@@ -54,5 +54,11 @@
     "contactTitle": "Besplatna procjena usklađenosti",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Podijelite na WhatsAppu"
+  },
+  "Cookie": {
+    "message": "Ova stranica koristi samo bitne kolačiće za provjeru autentičnosti. Ne koriste se kolačići za praćenje ili oglašavanje.",
+    "accept": "Prihvati sve",
+    "reject": "Odbaci nebitno",
+    "privacyLink": "Politika privatnosti"
   }
 }

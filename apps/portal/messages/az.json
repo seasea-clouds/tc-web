@@ -403,5 +403,26 @@
     "registeredUser": "Qeydiyyatdan keçmiş istifadəçi",
     "periodEnds": "Dövr bitir",
     "youAreOnFreePlan": "Hazırda Pulsuz plandasınız."
+  },
+  "Cookie": {
+    "message": "Bu sayt yalnız əsas autentifikasiya kukilərindən istifadə edir. Heç bir izləmə və ya reklam kukilərindən istifadə edilmir.",
+    "accept": "Hamısını qəbul et",
+    "reject": "Vacib olmayanı rədd edin",
+    "privacyLink": "Məxfilik Siyasəti"
+  },
+  "Privacy": {
+    "metaTitle": "Məxfilik Siyasəti | SinoTrade Uyğunluğu",
+    "metaDescription": "SinoTrade Uyğunluğu üçün Məxfilik Siyasəti — şəxsi məlumatlarınızı necə toplayırıq, istifadə edirik və qoruyuruq.",
+    "title": "Məxfilik Siyasəti",
+    "infoTitle": "Topladığımız Məlumat",
+    "infoText1": "Biz yalnız əlaqə formalarımız, uyğunluğu yoxlamaq alətlərimiz və ya hesab qeydiyyatı vasitəsilə könüllü olaraq bizə təqdim etdiyiniz şəxsi məlumatları toplayırıq. Buraya adınızı, e-poçt ünvanınızı, şirkət adınız və uyğunluğun qiymətləndirilməsi xidmətlərimizi təqdim etmək üçün lazım olan məhsul təfərrüatları daxil ola bilər.",
+    "infoText2": "Biz sizin şəxsi məlumatlarınızı üçüncü tərəflərə satmırıq, ticarət etmirik və ya icarəyə götürmürük. Məlumatlarınız yalnız xidmətlərimizi təqdim etmək və veb saytımızda təcrübənizi yaxşılaşdırmaq üçün istifadə olunur.",
+    "cookieTitle": "Cookie İstifadəsi",
+    "cookieText1": "Bu sayt yalnız əsas autentifikasiya kukilərindən istifadə edir. Bu kukilər uyğunluğu yoxlamaq alətlərimizin və istifadəçi hesabının idarə edilməsinin düzgün işləməsi üçün lazımdır. Heç bir izləmə və ya reklam kukilərindən istifadə edilmir.",
+    "cookieText2": "Siz kuki seçimlərinizi ilk səfərinizdə nümayiş etdirilən kukiyə razılıq banneri vasitəsilə idarə edə bilərsiniz. Əsas funksiyalar üçün tələb olunduğu üçün əsas kukiləri deaktiv etmək olmaz.",
+    "contactTitle": "Bizimlə əlaqə saxlayın",
+    "contactText": "Bu Məxfilik Siyasəti və ya məlumatlarınızı necə idarə etdiyimizlə bağlı hər hansı sualınız varsa, bizimlə əlaqə saxlayın:",
+    "updateTitle": "Bu Siyasətdə Yeniləmələr",
+    "updateText": "Biz bu Məxfilik Siyasətini vaxtaşırı yeniləyə bilərik. İstənilən dəyişiklik yenilənmiş təftiş tarixi ilə bu səhifədə dərc olunacaq."
   }
 }

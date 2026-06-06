@@ -54,5 +54,11 @@
     "contactTitle": "Evaluare gratuită a conformității",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Distribuie pe WhatsApp"
+  },
+  "Cookie": {
+    "message": "Acest site folosește numai cookie-uri de autentificare esențiale. Nu sunt utilizate cookie-uri de urmărire sau de publicitate.",
+    "accept": "Acceptați toate",
+    "reject": "Respinge neesențiale",
+    "privacyLink": "Politica de confidențialitate"
   }
 }

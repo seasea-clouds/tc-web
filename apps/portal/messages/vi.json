@@ -403,5 +403,26 @@
     "registeredUser": "Người dùng đã đăng ký",
     "periodEnds": "Thời kỳ kết thúc",
     "youAreOnFreePlan": "Bạn hiện đang sử dụng gói Miễn phí."
+  },
+  "Cookie": {
+    "message": "Trang web này chỉ sử dụng cookie xác thực cần thiết. Không sử dụng cookie theo dõi hoặc quảng cáo.",
+    "accept": "Chấp nhận tất cả",
+    "reject": "Từ chối không cần thiết",
+    "privacyLink": "Chính sách bảo mật"
+  },
+  "Privacy": {
+    "metaTitle": "Chính sách bảo mật | Tuân thủ thương mại Trung Quốc",
+    "metaDescription": "Chính sách quyền riêng tư dành cho Tuân thủ SinoTrade - cách chúng tôi thu thập, sử dụng và bảo vệ dữ liệu cá nhân của bạn.",
+    "title": "Chính sách bảo mật",
+    "infoTitle": "Thông tin chúng tôi thu thập",
+    "infoText1": "Chúng tôi chỉ thu thập thông tin cá nhân mà bạn tự nguyện cung cấp cho chúng tôi thông qua biểu mẫu liên hệ, công cụ kiểm tra tuân thủ hoặc đăng ký tài khoản. Thông tin này có thể bao gồm tên, địa chỉ email, tên công ty và chi tiết sản phẩm cần thiết để cung cấp dịch vụ đánh giá tuân thủ của chúng tôi.",
+    "infoText2": "Chúng tôi không bán, trao đổi hoặc cho thuê thông tin cá nhân của bạn cho bên thứ ba. Dữ liệu của bạn chỉ được sử dụng để cung cấp dịch vụ của chúng tôi và cải thiện trải nghiệm của bạn trên trang web của chúng tôi.",
+    "cookieTitle": "Sử dụng cookie",
+    "cookieText1": "Trang web này chỉ sử dụng cookie xác thực cần thiết. Những cookie này cần thiết để các công cụ kiểm tra tuân thủ và quản lý tài khoản người dùng của chúng tôi hoạt động bình thường. Không sử dụng cookie theo dõi hoặc quảng cáo.",
+    "cookieText2": "Bạn có thể quản lý tùy chọn cookie của mình thông qua biểu ngữ chấp thuận cookie được hiển thị trong lần truy cập đầu tiên của bạn. Không thể tắt các cookie thiết yếu vì chúng cần thiết cho chức năng cốt lõi.",
+    "contactTitle": "Liên hệ với chúng tôi",
+    "contactText": "Nếu bạn có bất kỳ câu hỏi nào về Chính sách quyền riêng tư này hoặc cách chúng tôi xử lý dữ liệu của bạn, vui lòng liên hệ với chúng tôi:",
+    "updateTitle": "Cập nhật chính sách này",
+    "updateText": "Thỉnh thoảng chúng tôi có thể cập nhật Chính sách quyền riêng tư này. Mọi thay đổi sẽ được đăng trên trang này với ngày sửa đổi được cập nhật."
   }
 }

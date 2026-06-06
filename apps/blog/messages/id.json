@@ -54,5 +54,11 @@
     "contactTitle": "Penilaian Kepatuhan Gratis",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Bagikan di WhatsApp"
+  },
+  "Cookie": {
+    "message": "Situs ini hanya menggunakan cookie otentikasi penting. Tidak ada cookie pelacakan atau iklan yang digunakan.",
+    "accept": "Terima Semua",
+    "reject": "Tolak Tidak Penting",
+    "privacyLink": "Kebijakan Privasi"
   }
 }

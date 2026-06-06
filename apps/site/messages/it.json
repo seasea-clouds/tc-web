@@ -1270,5 +1270,26 @@
     "faq": "FAQ",
     "packages": "Pacchetti",
     "testimonials": "Testimonianze"
+  },
+  "Cookie": {
+    "message": "Questo sito utilizza solo cookie di autenticazione essenziali. Non vengono utilizzati cookie di tracciamento o pubblicitari.",
+    "accept": "Accetta tutto",
+    "reject": "Rifiuta non essenziale",
+    "privacyLink": "politica sulla riservatezza"
+  },
+  "Privacy": {
+    "metaTitle": "Informativa sulla privacy | Conformità SinoTrade",
+    "metaDescription": "Informativa sulla privacy per la conformità di SinoTrade: come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali.",
+    "title": "politica sulla riservatezza",
+    "infoTitle": "Informazioni che raccogliamo",
+    "infoText1": "Raccogliamo solo le informazioni personali che ci fornisci volontariamente tramite i nostri moduli di contatto, strumenti di controllo della conformità o registrazione dell'account. Ciò può includere il tuo nome, indirizzo e-mail, nome dell'azienda e dettagli del prodotto necessari per fornire i nostri servizi di valutazione della conformità.",
+    "infoText2": "Non vendiamo, scambiamo o affittiamo le tue informazioni personali a terzi. I tuoi dati vengono utilizzati esclusivamente per fornire i nostri servizi e migliorare la tua esperienza sul nostro sito web.",
+    "cookieTitle": "Utilizzo dei cookie",
+    "cookieText1": "Questo sito utilizza solo cookie di autenticazione essenziali. Questi cookie sono necessari per il corretto funzionamento dei nostri strumenti di controllo della conformità e per la gestione dell'account utente. Non vengono utilizzati cookie di tracciamento o pubblicitari.",
+    "cookieText2": "Puoi gestire le tue preferenze sui cookie attraverso il banner di consenso sui cookie visualizzato alla tua prima visita. I cookie essenziali non possono essere disabilitati poiché sono necessari per le funzionalità principali.",
+    "contactTitle": "Contattaci",
+    "contactText": "Se hai domande sulla presente Informativa sulla privacy o su come gestiamo i tuoi dati, ti preghiamo di contattarci:",
+    "updateTitle": "Aggiornamenti a questa politica",
+    "updateText": "Potremmo aggiornare la presente Informativa sulla privacy di tanto in tanto. Eventuali modifiche verranno pubblicate su questa pagina con una data di revisione aggiornata."
   }
 }

@@ -54,5 +54,11 @@
     "contactTitle": "Gratis overensstemmelsesvurdering",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Del på WhatsApp"
+  },
+  "Cookie": {
+    "message": "Dette websted bruger kun vigtige autentificeringscookies. Der bruges ingen sporings- eller reklamecookies.",
+    "accept": "Accepter alle",
+    "reject": "Afvis ikke-væsentligt",
+    "privacyLink": "Privatlivspolitik"
   }
 }

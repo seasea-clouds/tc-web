@@ -1270,5 +1270,26 @@
     "faq": "FAQ",
     "packages": "Pakker",
     "testimonials": "Udtalelser"
+  },
+  "Cookie": {
+    "message": "Dette websted bruger kun vigtige autentificeringscookies. Der bruges ingen sporings- eller reklamecookies.",
+    "accept": "Accepter alle",
+    "reject": "Afvis ikke-væsentligt",
+    "privacyLink": "Privatlivspolitik"
+  },
+  "Privacy": {
+    "metaTitle": "Privatlivspolitik | Overholdelse af SinoTrade",
+    "metaDescription": "Privatlivspolitik for SinoTrade Compliance - hvordan vi indsamler, bruger og beskytter dine personlige data.",
+    "title": "Privatlivspolitik",
+    "infoTitle": "Oplysninger, vi indsamler",
+    "infoText1": "Vi indsamler kun personlige oplysninger, som du frivilligt giver os via vores kontaktformularer, compliance check-værktøjer eller kontoregistrering. Dette kan omfatte dit navn, e-mailadresse, firmanavn og produktoplysninger, der er nødvendige for at levere vores compliance-vurderingstjenester.",
+    "infoText2": "Vi sælger, bytter eller udlejer ikke dine personlige oplysninger til tredjepart. Dine data bruges udelukkende til at levere vores tjenester og forbedre din oplevelse på vores hjemmeside.",
+    "cookieTitle": "Brug af cookies",
+    "cookieText1": "Dette websted bruger kun vigtige autentificeringscookies. Disse cookies er nødvendige for, at vores compliance-kontrolværktøjer og brugerkontoadministration fungerer korrekt. Der bruges ingen sporings- eller reklamecookies.",
+    "cookieText2": "Du kan administrere dine cookie-præferencer gennem cookie-samtykkebanneret, der vises ved dit første besøg. Væsentlige cookies kan ikke deaktiveres, da de er nødvendige for kernefunktionalitet.",
+    "contactTitle": "Kontakt os",
+    "contactText": "Hvis du har spørgsmål om denne privatlivspolitik eller hvordan vi håndterer dine data, bedes du kontakte os:",
+    "updateTitle": "Opdateringer til denne politik",
+    "updateText": "Vi kan opdatere denne fortrolighedspolitik fra tid til anden. Eventuelle ændringer vil blive offentliggjort på denne side med en opdateret revisionsdato."
   }
 }

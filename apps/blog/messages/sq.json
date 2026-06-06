@@ -54,5 +54,11 @@
     "contactTitle": "Vlerësimi Falas i Përputhshmërisë",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Shpërndaje në WhatsApp"
+  },
+  "Cookie": {
+    "message": "Ky sajt përdor vetëm cookie thelbësore të vërtetimit. Nuk përdoren skedarë gjurmimi ose reklamimi.",
+    "accept": "Prano të gjitha",
+    "reject": "Refuzo jo-thelbësoren",
+    "privacyLink": "Politika e privatësisë"
   }
 }

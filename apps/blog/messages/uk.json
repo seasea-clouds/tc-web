@@ -54,5 +54,11 @@
     "contactTitle": "Безкоштовна оцінка відповідності",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Поділіться в WhatsApp"
+  },
+  "Cookie": {
+    "message": "Цей сайт використовує лише необхідні файли cookie для автентифікації. Файли cookie для відстеження чи реклами не використовуються.",
+    "accept": "Прийняти всі",
+    "reject": "Відхилити несуттєве",
+    "privacyLink": "Політика конфіденційності"
   }
 }

@@ -54,5 +54,11 @@
     "contactTitle": "Gratis samsvarsvurdering",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Del på WhatsApp"
+  },
+  "Cookie": {
+    "message": "Dette nettstedet bruker kun viktige autentiseringsinformasjonskapsler. Ingen sporings- eller reklameinformasjonskapsler brukes.",
+    "accept": "Godta alle",
+    "reject": "Avvis ikke-essensielt",
+    "privacyLink": "Personvernerklæring"
   }
 }

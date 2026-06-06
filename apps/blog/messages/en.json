@@ -54,5 +54,11 @@
     "shareTelegram": "Share on Telegram",
     "shareEmail": "Share via Email",
     "copyLink": "Copy link"
+  },
+  "Cookie": {
+    "message": "This site uses only essential authentication cookies. No tracking or advertising cookies are used.",
+    "accept": "Accept All",
+    "reject": "Reject Non-Essential",
+    "privacyLink": "Privacy Policy"
   }
 }

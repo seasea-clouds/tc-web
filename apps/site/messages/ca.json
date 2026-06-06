@@ -1270,5 +1270,26 @@
     "faq": "FAQ",
     "packages": "Paquets",
     "testimonials": "Testimonis"
+  },
+  "Cookie": {
+    "message": "Aquest lloc només utilitza cookies d'autenticació essencials. No s'utilitzen cookies de seguiment ni de publicitat.",
+    "accept": "Acceptar-ho tot",
+    "reject": "Rebutja els no essencials",
+    "privacyLink": "Política de privadesa"
+  },
+  "Privacy": {
+    "metaTitle": "Política de privadesa | Compliment de SinoTrade",
+    "metaDescription": "Política de privadesa per al compliment de SinoTrade: com recollim, utilitzem i protegim les vostres dades personals.",
+    "title": "Política de privadesa",
+    "infoTitle": "Informació que recollim",
+    "infoText1": "Només recopilem la informació personal que ens proporcioneu voluntàriament a través dels nostres formularis de contacte, eines de verificació del compliment o registre del compte. Això pot incloure el vostre nom, adreça electrònica, nom de l'empresa i els detalls del producte necessaris per oferir els nostres serveis d'avaluació del compliment.",
+    "infoText2": "No venem, comercialitzem ni lloguem la vostra informació personal a tercers. Les vostres dades s'utilitzen únicament per oferir els nostres serveis i millorar la vostra experiència al nostre lloc web.",
+    "cookieTitle": "Ús de galetes",
+    "cookieText1": "Aquest lloc només utilitza cookies d'autenticació essencials. Aquestes galetes són necessàries per al bon funcionament de les nostres eines de verificació del compliment i la gestió del compte d'usuari. No s'utilitzen cookies de seguiment ni de publicitat.",
+    "cookieText2": "Podeu gestionar les vostres preferències de galetes mitjançant el bàner de consentiment de galetes que es mostra a la vostra primera visita. Les galetes essencials no es poden desactivar, ja que són necessàries per a la funcionalitat bàsica.",
+    "contactTitle": "Contacta amb nosaltres",
+    "contactText": "Si teniu cap pregunta sobre aquesta Política de privadesa o sobre com tractem les vostres dades, poseu-vos en contacte amb nosaltres:",
+    "updateTitle": "Actualitzacions d'aquesta política",
+    "updateText": "És possible que actualitzem aquesta Política de privadesa de tant en tant. Qualsevol canvi es publicarà en aquesta pàgina amb una data de revisió actualitzada."
   }
 }

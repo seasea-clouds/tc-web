@@ -54,5 +54,11 @@
     "contactTitle": "무료 규정 준수 평가",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "WhatsApp에 공유"
+  },
+  "Cookie": {
+    "message": "이 사이트는 필수 인증 쿠키만을 사용합니다. 추적 또는 광고 쿠키는 사용되지 않습니다.",
+    "accept": "모두 수락",
+    "reject": "필수적이지 않은 것은 거부",
+    "privacyLink": "개인 정보 보호 정책"
   }
 }

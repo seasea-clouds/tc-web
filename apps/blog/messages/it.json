@@ -54,5 +54,11 @@
     "contactTitle": "Valutazione di conformità gratuita",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Condividi su WhatsApp"
+  },
+  "Cookie": {
+    "message": "Questo sito utilizza solo cookie di autenticazione essenziali. Non vengono utilizzati cookie di tracciamento o pubblicitari.",
+    "accept": "Accetta tutto",
+    "reject": "Rifiuta non essenziale",
+    "privacyLink": "politica sulla riservatezza"
   }
 }

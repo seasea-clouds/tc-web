@@ -403,5 +403,26 @@
     "registeredUser": "Përdorues i regjistruar",
     "periodEnds": "Periudha përfundon",
     "youAreOnFreePlan": "Aktualisht jeni në planin Falas."
+  },
+  "Cookie": {
+    "message": "Ky sajt përdor vetëm cookie thelbësore të vërtetimit. Nuk përdoren skedarë gjurmimi ose reklamimi.",
+    "accept": "Prano të gjitha",
+    "reject": "Refuzo jo-thelbësoren",
+    "privacyLink": "Politika e privatësisë"
+  },
+  "Privacy": {
+    "metaTitle": "Politika e Privatësisë | Pajtueshmëria e SinoTrade",
+    "metaDescription": "Politika e privatësisë për pajtueshmërinë me SinoTrade - si ne mbledhim, përdorim dhe mbrojmë të dhënat tuaja personale.",
+    "title": "Politika e privatësisë",
+    "infoTitle": "Informacioni që mbledhim",
+    "infoText1": "Ne mbledhim vetëm informacione personale që ju na jepni vullnetarisht përmes formularëve tanë të kontaktit, mjeteve të kontrollit të pajtueshmërisë ose regjistrimit të llogarisë. Kjo mund të përfshijë emrin tuaj, adresën e emailit, emrin e kompanisë dhe detajet e produktit të nevojshme për ofrimin e shërbimeve tona të vlerësimit të pajtueshmërisë.",
+    "infoText2": "Ne nuk shesim, tregtojmë ose japim me qira të dhënat tuaja personale palëve të treta. Të dhënat tuaja përdoren vetëm për të ofruar shërbimet tona dhe për të përmirësuar përvojën tuaj në faqen tonë të internetit.",
+    "cookieTitle": "Përdorimi i cookie-ve",
+    "cookieText1": "Ky sajt përdor vetëm cookie thelbësore të vërtetimit. Këto cookie janë të nevojshme për funksionimin e duhur të mjeteve tona të kontrollit të pajtueshmërisë dhe menaxhimit të llogarisë së përdoruesit. Nuk përdoren skedarë gjurmimi ose reklamimi.",
+    "cookieText2": "Ju mund t'i menaxhoni preferencat tuaja të cookie-ve përmes banerit të pëlqimit të cookie-ve të shfaqur në vizitën tuaj të parë. Cookies thelbësore nuk mund të çaktivizohen pasi ato kërkohen për funksionalitetin bazë.",
+    "contactTitle": "Na kontaktoni",
+    "contactText": "Nëse keni ndonjë pyetje në lidhje me këtë Politikë të Privatësisë ose mënyrën se si ne i trajtojmë të dhënat tuaja, ju lutemi na kontaktoni:",
+    "updateTitle": "Përditësimet e kësaj politike",
+    "updateText": "Ne mund ta përditësojmë këtë politikë të privatësisë herë pas here. Çdo ndryshim do të postohet në këtë faqe me një datë të përditësuar të rishikimit."
   }
 }

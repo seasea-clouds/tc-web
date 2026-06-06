@@ -54,5 +54,11 @@
     "contactTitle": "Gratis nalevingsbeoordeling",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Deel op WhatsApp"
+  },
+  "Cookie": {
+    "message": "Deze site gebruikt alleen essentiële authenticatiecookies. Er worden geen tracking- of advertentiecookies gebruikt.",
+    "accept": "Accepteer alles",
+    "reject": "Niet-essentieel afwijzen",
+    "privacyLink": "Privacybeleid"
   }
 }

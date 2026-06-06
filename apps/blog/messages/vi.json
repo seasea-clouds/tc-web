@@ -54,5 +54,11 @@
     "contactTitle": "Đánh giá tuân thủ miễn phí",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Chia sẻ trên WhatsApp"
+  },
+  "Cookie": {
+    "message": "Trang web này chỉ sử dụng cookie xác thực cần thiết. Không sử dụng cookie theo dõi hoặc quảng cáo.",
+    "accept": "Chấp nhận tất cả",
+    "reject": "Từ chối không cần thiết",
+    "privacyLink": "Chính sách bảo mật"
   }
 }

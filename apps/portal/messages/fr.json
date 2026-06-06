@@ -372,7 +372,8 @@
     "noNeedTesting": "Non – nécessite des tests en laboratoire",
     "noNeedToCreate": "Non : il faut créer",
     "yesSpecialCosmetics": "Oui — Cosmétiques SPÉCIAUX",
-    "noNeedOne": "Non, j'en ai besoin d'un"
+    "noNeedOne": "Non, j'en ai besoin d'un",
+    "freeCheckCta": "Chèque gratuit"
   },
   "Report": {
     "loadingTitle": "Chargement de votre rapport",

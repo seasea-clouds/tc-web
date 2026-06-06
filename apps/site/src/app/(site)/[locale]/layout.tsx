@@ -2,7 +2,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { locales, defaultLocale } from '@/i18n/routing';
 import { messagesMap } from '@/i18n/messages';
-import { Footer, SearchProvider, CookieConsent, ActionDock, TradeTranslationProvider, OrganizationJsonLd, buildAlternates, sharedOpenGraph, sharedTwitter } from '@trade/ui';
+import { Footer, SearchProvider, CookieConsent, ActionDock, TradeTranslationProvider, OrganizationJsonLd, buildAlternates, sharedOpenGraph, sharedTwitter, AuthProvider } from '@trade/ui';
 import '../../globals.css';
 
 export function generateStaticParams() {
@@ -58,11 +58,13 @@ export default async function LocaleLayout({
       <NextIntlClientProvider messages={messages} locale={locale} timeZone="Asia/Shanghai">
         <TradeTranslationProvider messages={messages} locale={locale}>
           <OrganizationJsonLd />
-          <SearchProvider freeCheckHref="/c/" loginHref={`/${locale}/c/login`} registerHref={`/${locale}/c/register`} />
-          <main className="flex-1">{children}</main>
-          <Footer />
-          <CookieConsent />
-          <ActionDock />
+          <AuthProvider>
+            <SearchProvider freeCheckHref="/c/" loginHref={`/${locale}/c/login`} />
+            <main className="flex-1">{children}</main>
+            <Footer />
+            <CookieConsent />
+            <ActionDock />
+          </AuthProvider>
         </TradeTranslationProvider>
       </NextIntlClientProvider>
     </body>

@@ -372,7 +372,8 @@
     "noNeedTesting": "خیر - نیاز به آزمایش آزمایشگاهی دارد",
     "noNeedToCreate": "نه - نیاز به ایجاد",
     "yesSpecialCosmetics": "بله - لوازم آرایشی ویژه",
-    "noNeedOne": "نه - به یکی نیاز دارید"
+    "noNeedOne": "نه - به یکی نیاز دارید",
+    "freeCheckCta": "چک رایگان"
   },
   "Report": {
     "loadingTitle": "در حال بارگیری گزارش شما",

@@ -372,7 +372,8 @@
     "noNeedTesting": "Ei - tarvitsee laboratoriotestejä",
     "noNeedToCreate": "Ei – täytyy luoda",
     "yesSpecialCosmetics": "Kyllä – ERIKOISkosmetiikkaa",
-    "noNeedOne": "Ei - tarvitaan yksi"
+    "noNeedOne": "Ei - tarvitaan yksi",
+    "freeCheckCta": "Ilmainen sekki"
   },
   "Report": {
     "loadingTitle": "Ladataan raporttiasi",

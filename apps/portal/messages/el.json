@@ -45,7 +45,7 @@
     "noAccount": "Δεν έχετε λογαριασμό;",
     "hasAccount": "Έχετε ήδη λογαριασμό;",
     "signOut": "Αποσύνδεση",
-    "emailPlaceholder": "you@example.com",
+    "emailPlaceholder": "you@company.com",
     "passwordPlaceholder": "Εισαγάγετε τον κωδικό πρόσβασής σας",
     "namePlaceholder": "Το όνομά σου",
     "passwordMinHint": "Τουλάχιστον 5 χαρακτήρες",
@@ -372,7 +372,8 @@
     "noNeedTesting": "Όχι — χρειάζονται εργαστηριακές δοκιμές",
     "noNeedToCreate": "Όχι — ανάγκη δημιουργίας",
     "yesSpecialCosmetics": "Ναι — ΕΙΔΙΚΑ καλλυντικά",
-    "noNeedOne": "Όχι - χρειάζομαι ένα"
+    "noNeedOne": "Όχι - χρειάζομαι ένα",
+    "freeCheckCta": "Δωρεάν έλεγχος"
   },
   "Report": {
     "loadingTitle": "Φόρτωση της αναφοράς σας",

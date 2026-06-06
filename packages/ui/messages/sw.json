@@ -67,7 +67,11 @@
     "search": "Tafuta",
     "freeCheck": "Angalia Bure",
     "signIn": "Ingia",
-    "signUp": "Jisajili"
+    "signUp": "Jisajili",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "Nyumbani",
@@ -98,5 +102,10 @@
     "industries": "Viwanda",
     "packages": "Vifurushi",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "Wasiliana nasi kwa WhatsApp",
+    "sendEmail": "Tutumie barua pepe",
+    "backToTop": "Rudi juu"
   }
 }

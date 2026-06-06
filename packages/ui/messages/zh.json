@@ -67,7 +67,11 @@
     "search": "搜索",
     "freeCheck": "Free Check",
     "signIn": "登录",
-    "signUp": "注册"
+    "signUp": "注册",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "首页",
@@ -98,5 +102,10 @@
     "industries": "行业",
     "packages": "套餐",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "通过 WhatsApp 联系我们",
+    "sendEmail": "发送电子邮件给我们",
+    "backToTop": "返回顶部"
   }
 }

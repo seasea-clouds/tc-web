@@ -67,7 +67,11 @@
     "search": "Buscar",
     "freeCheck": "Cheque Gratis",
     "signIn": "Iniciar sesión",
-    "signUp": "Registrarse"
+    "signUp": "Registrarse",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "Inicio",
@@ -98,5 +102,10 @@
     "industries": "Industrias",
     "packages": "Paquetes",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "Contáctenos en WhatsApp",
+    "sendEmail": "Envíenos un correo",
+    "backToTop": "Volver arriba"
   }
 }

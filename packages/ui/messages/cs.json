@@ -67,7 +67,11 @@
     "search": "Vyhledávání",
     "freeCheck": "Kontrola zdarma",
     "signIn": "Přihlásit",
-    "signUp": "Registrovat"
+    "signUp": "Registrovat",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "Domů",
@@ -98,5 +102,10 @@
     "industries": "Průmyslová odvětví",
     "packages": "Balíčky",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "Kontaktujte nás na WhatsApp",
+    "sendEmail": "Pošlete nám e-mail",
+    "backToTop": "Nahoru"
   }
 }

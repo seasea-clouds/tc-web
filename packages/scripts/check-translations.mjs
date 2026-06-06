@@ -197,7 +197,7 @@ const ENGLISH_RESIDUAL_ALLOW = new Set([
   'General', 'State', 'Radio', 'Recordal',
   'Entry', 'Order', 'Law', 'Protection', 'Information', 'Personal',
   'Class',
-  'com', 'http', 'https', 'www', 'API',
+  'com', 'example', 'http', 'https', 'www', 'API',
   'for', 'and', 'This', 'About',
   'Telegram',
   'FAQ',

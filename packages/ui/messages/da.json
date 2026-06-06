@@ -67,7 +67,11 @@
     "search": "Søge",
     "freeCheck": "Gratis check",
     "signIn": "Log ind",
-    "signUp": "Registrer"
+    "signUp": "Registrer",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "Forside",
@@ -98,5 +102,10 @@
     "industries": "Industrier",
     "packages": "Pakker",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "Kontakt os på WhatsApp",
+    "sendEmail": "Send e-mail",
+    "backToTop": "Til toppen"
   }
 }

@@ -67,7 +67,11 @@
     "search": "Որոնում",
     "freeCheck": "Անվճար ստուգում",
     "signIn": "Մուտք",
-    "signUp": "Գրանցվել"
+    "signUp": "Գրանցվել",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "Գլխավոր",
@@ -98,5 +102,10 @@
     "industries": "Արդյունաբերություններ",
     "packages": "Փաթեթներ",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "Արագ աջակցության համար կապվեք մեզ հետ WhatsApp-ով",
+    "sendEmail": "Մանրամասն հարցումների համար մեզ նամակ ուղարկեք",
+    "backToTop": "Ոլորեք ետ դեպի էջի սկիզբ"
   }
 }

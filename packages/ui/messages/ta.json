@@ -67,7 +67,11 @@
     "search": "தேடு",
     "freeCheck": "இலவச காசோலை",
     "signIn": "உள்நுழைய",
-    "signUp": "பதிவு"
+    "signUp": "பதிவு",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "முகப்பு",
@@ -98,5 +102,10 @@
     "industries": "தொழில்கள்",
     "packages": "தொகுப்புகள்",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "விரைவான ஆதரவுக்கு WhatsAppல் எங்களைத் தொடர்பு கொள்ளவும்",
+    "sendEmail": "விரிவான விசாரணைகளுக்கு எங்களுக்கு மின்னஞ்சல் அனுப்பவும்",
+    "backToTop": "பக்கத்தின் மேல் மீண்டும் உருட்டவும்"
   }
 }

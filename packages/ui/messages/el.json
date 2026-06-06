@@ -67,7 +67,11 @@
     "search": "Ερευνα",
     "freeCheck": "Δωρεάν έλεγχος",
     "signIn": "Σύνδεση",
-    "signUp": "Εγγραφή"
+    "signUp": "Εγγραφή",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "Αρχική",
@@ -98,5 +102,10 @@
     "industries": "Βιομηχανίες",
     "packages": "Πακέτα",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "Επικοινωνήστε στο WhatsApp",
+    "sendEmail": "Στείλτε email",
+    "backToTop": "Επιστροφή στην κορυφή"
   }
 }

@@ -67,7 +67,11 @@
     "search": "Keresés",
     "freeCheck": "Ingyenes csekk",
     "signIn": "Bejelentkezés",
-    "signUp": "Regisztráció"
+    "signUp": "Regisztráció",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "Kezdőlap",
@@ -98,5 +102,10 @@
     "industries": "Iparágak",
     "packages": "Csomagok",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "Lépjen kapcsolatba WhatsAppon",
+    "sendEmail": "Küldjön e-mailt",
+    "backToTop": "Vissza a tetejére"
   }
 }

@@ -67,7 +67,11 @@
     "search": "खोज्नुहोस्",
     "freeCheck": "नि: शुल्क जाँच",
     "signIn": "साइन इन",
-    "signUp": "साइन अप"
+    "signUp": "साइन अप",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "होम",
@@ -98,5 +102,10 @@
     "industries": "उद्योगहरू",
     "packages": "प्याकेजहरू",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "द्रुत समर्थनको लागि व्हाट्सएपमा हामीलाई सम्पर्क गर्नुहोस्",
+    "sendEmail": "हामीलाई विस्तृत सोधपुछको लागि ईमेल पठाउनुहोस्",
+    "backToTop": "पृष्ठको शीर्षमा फिर्ता स्क्रोल गर्नुहोस्"
   }
 }

@@ -67,7 +67,11 @@
     "search": "Търсене",
     "freeCheck": "Безплатна проверка",
     "signIn": "Вход",
-    "signUp": "Регистрация"
+    "signUp": "Регистрация",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "Начало",
@@ -98,5 +102,10 @@
     "industries": "Индустрии",
     "packages": "Пакети",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "Свържете се в WhatsApp",
+    "sendEmail": "Изпратете ни имейл",
+    "backToTop": "Към началото"
   }
 }

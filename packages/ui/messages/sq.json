@@ -67,7 +67,11 @@
     "search": "Kërko",
     "freeCheck": "Kontroll falas",
     "signIn": "Hyr",
-    "signUp": "Regjistrohu"
+    "signUp": "Regjistrohu",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "Kryefaqja",
@@ -98,5 +102,10 @@
     "industries": "Industritë",
     "packages": "Paketat",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "Na kontaktoni në WhatsApp",
+    "sendEmail": "Na dërgoni email",
+    "backToTop": "Kthehu lart"
   }
 }

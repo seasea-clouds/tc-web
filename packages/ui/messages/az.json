@@ -67,7 +67,11 @@
     "search": "Axtar",
     "freeCheck": "Pulsuz Çek",
     "signIn": "Daxil ol",
-    "signUp": "Qeydiyyat"
+    "signUp": "Qeydiyyat",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "Ana səhifə",
@@ -98,5 +102,10 @@
     "industries": "sənayelər",
     "packages": "Paketlər",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "Tez dəstək üçün WhatsApp-da bizimlə əlaqə saxlayın",
+    "sendEmail": "Ətraflı sorğular üçün bizə e-poçt göndərin",
+    "backToTop": "Səhifənin yuxarısına qayıdın"
   }
 }

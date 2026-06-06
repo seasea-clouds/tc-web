@@ -67,7 +67,11 @@
     "search": "Tìm kiếm",
     "freeCheck": "Kiểm tra miễn phí",
     "signIn": "Đăng nhập",
-    "signUp": "Đăng ký"
+    "signUp": "Đăng ký",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "Trang chủ",
@@ -98,5 +102,10 @@
     "industries": "ngành công nghiệp",
     "packages": "Gói",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "Liên hệ qua WhatsApp",
+    "sendEmail": "Gửi email cho chúng tôi",
+    "backToTop": "Lên đầu trang"
   }
 }

@@ -67,7 +67,11 @@
     "search": "جستجو کنید",
     "freeCheck": "چک رایگان",
     "signIn": "ورود",
-    "signUp": "ثبت نام"
+    "signUp": "ثبت نام",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "خانه",
@@ -98,5 +102,10 @@
     "industries": "صنایع",
     "packages": "بسته ها",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "تماس با ما در واتساپ",
+    "sendEmail": "برای ما ایمیل بفرستید",
+    "backToTop": "بازگشت به بالا"
   }
 }

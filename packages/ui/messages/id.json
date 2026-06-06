@@ -67,7 +67,11 @@
     "search": "Mencari",
     "freeCheck": "Cek Gratis",
     "signIn": "Masuk",
-    "signUp": "Daftar"
+    "signUp": "Daftar",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "Beranda",
@@ -98,5 +102,10 @@
     "industries": "Industri",
     "packages": "Paket",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "Hubungi kami di WhatsApp",
+    "sendEmail": "Kirim email ke kami",
+    "backToTop": "Kembali ke atas"
   }
 }

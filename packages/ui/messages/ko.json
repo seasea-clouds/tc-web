@@ -67,7 +67,11 @@
     "search": "찾다",
     "freeCheck": "무료수표",
     "signIn": "로그인",
-    "signUp": "회원가입"
+    "signUp": "회원가입",
+    "signOut": "signOut",
+    "myReports": "myReports",
+    "subscription": "subscription",
+    "settings": "settings"
   },
   "MobileTab": {
     "home": "홈",
@@ -98,5 +102,10 @@
     "industries": "산업",
     "packages": "패키지",
     "faq": "FAQ"
+  },
+  "ActionDock": {
+    "contactWhatsapp": "WhatsApp으로 문의",
+    "sendEmail": "이메일 보내기",
+    "backToTop": "맨 위로"
   }
 }

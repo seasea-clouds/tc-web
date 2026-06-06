@@ -11,7 +11,7 @@ interface ToolCardProps {
   badge?: 'free' | 'new' | 'popular';
 }
 
-export default function ToolCard({ icon, title, desc, href, badge }: ToolCardProps) {
+export default function ToolCard({ icon, title, desc, href, ctaLabel, badge }: ToolCardProps) {
   return (
     <Link
       href={href}

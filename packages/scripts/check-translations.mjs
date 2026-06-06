@@ -30,7 +30,7 @@ const BLOG_DIR = path.join(PROJECT_ROOT, 'content', 'blog');
 // ============================================================
 const NO_TRANSLATE = new Set([
   'WeChat', 'LinkedIn', 'Facebook', 'Twitter', 'YouTube',
-  'SinoTrade Compliance', 'Global Trade Network',
+  'SinoTrade Compliance', 'SinoTrade-nakoming', 'Global Trade Network',
   'David Zhang', 'Sarah Chen', 'Mike Wang', 'Leo Liu',
   'GB 7718-2025', 'you@company.com', 'John Smith',
   'GACC', 'NMPA', 'CCC', 'CBEC', 'CIFER', 'MOA', 'CNCA', 'MEE', 'min',
@@ -47,6 +47,13 @@ const IGNORE_FALLBACK_KEYS = new Set([
   'IndustriesCommon.industries.babymaternal',
   'Navbar.industriesDropdown.babymaternal',
   'Navbar.servicesDropdown.gacc', 'Home.industry.babymaternal',
+  'Check.reportFooterEmail', 'Check.reportFooterName', 'Check.reportFooterAddress',
+  'Check.reportFooterWebsite', 'Check.fcc', 'Check.ce', 'Check.ul',
+  'Auth.emailPlaceholder', 'Auth.email', 'Dashboard.email',
+  'Pricing.singlePrice', 'Pricing.professionalPrice', 'Pricing.monthlyPrice',
+  'Report.plan', 'Report.status',
+  'Dashboard.title',
+  'Home.popular', 'Check.complianceNo',
 ]);
 
 const IGNORE_FALLBACK_VALUES = new Set([
@@ -189,6 +196,17 @@ const ENGLISH_RESIDUAL_ALLOW = new Set([
   'WhatsApp',
   'cookie', 'Cookie', 'cookies',
   'banner', 'Banner',
+  'PDF', 'PET', 'ABV', 'EST',
+  'Wine', 'Red', 'Chocolate', 'Dark',
+  'Nice', 'pcs', 'Est', 'web', 'mail',
+  'Sunscreen', 'Cross', 'Border',
+  'Decret', 'Douin',
+  'Bordeaux', 'NaturePure',
+  'New', 'Ground', 'Stone',
+  'USA', 'Bottle', 'Box', 'Pouch',
+  'need', 'only', 'what', 'you',
+  'Cabernet', 'Sauvignon',
+  'Self', 'Sinotrade',
 ]);
 
 // ============================================================

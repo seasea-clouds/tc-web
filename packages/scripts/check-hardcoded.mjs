@@ -182,7 +182,34 @@ function scanFile(filePath) {
 
   // Checks 1-4 + Check B need a translation-aware file
   const hasI18nImport = /\b(useT|useTranslations|getTranslations|t\s*\(\s*['"`])/.test(content);
-  if (!hasI18nImport) return dataLabelIssues;
+
+  // For .tsx files without i18n imports: still scan JSX prose and attrs
+  // (catches components like CookieConsent that render English JSX without t())
+  if (!hasI18nImport) {
+    if (/\.tsx$/.test(filePath)) {
+      const lns = content.split('\n');
+      for (let i = 0; i < lns.length; i++) {
+        const trimmed = lns[i].trim();
+        if (trimmed.startsWith('//') || trimmed.startsWith('/*') ||
+            trimmed.startsWith('*') || /^\s*(import |interface |type |from )/.test(lns[i])) continue;
+        let m;
+        ENGLISH_PROSE_RE.lastIndex = 0;
+        while ((m = ENGLISH_PROSE_RE.exec(lns[i])) !== null) {
+          const t = m[1].trim();
+          if (t.length < 5 || LEGIT_ENGLISH.has(t) || /^[A-Z][a-z]+$/.test(t) ||
+              t === t.toUpperCase() || t.startsWith('http')) continue;
+          dataLabelIssues.push({ file: path.relative(repoRoot, filePath), line: i + 1, type: 'JSX prose (no i18n)', text: t.substring(0, 100) });
+        }
+        ENGLISH_ATTR_RE.lastIndex = 0;
+        while ((m = ENGLISH_ATTR_RE.exec(lns[i])) !== null) {
+          const val = m[2].trim();
+          if (val.length < 5 || val.includes('{') || val.includes('}') || LEGIT_ENGLISH.has(val)) continue;
+          dataLabelIssues.push({ file: path.relative(repoRoot, filePath), line: i + 1, type: 'attr ' + m[1] + ' (no i18n)', text: val.substring(0, 100) });
+        }
+      }
+    }
+    return dataLabelIssues;
+  }
 
   const lines = content.split('\n');
   const issues = [];

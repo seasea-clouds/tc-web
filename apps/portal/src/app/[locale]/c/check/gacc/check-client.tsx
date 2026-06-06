@@ -26,6 +26,7 @@ export default function GaccCheckClient() {
     setStep("free-result");
   };
 
+  const pathPrefix = usePathPrefix();
   const handlePayment = async () => { try {
       const reportId = `GACC-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
 
@@ -73,7 +74,7 @@ export default function GaccCheckClient() {
       }
 
       // 3. Always redirect after saving to localStorage
-      window.location.href = usePathPrefix() + "/c/report/?id=" + reportId;
+      window.location.href = pathPrefix + "/c/report/?id=" + reportId;
     } catch (err) {
       // Last resort: even if everything fails, try to get the user to the report page
       try {

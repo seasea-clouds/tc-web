@@ -28,6 +28,7 @@ export default function TrademarkCheckClient() {
     setStep("free-result");
   };
 
+  const pathPrefix = usePathPrefix();
   const handlePayment = async () => { try {
       const reportId = `TRADEMARK-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
 
@@ -72,7 +73,7 @@ export default function TrademarkCheckClient() {
         }).catch(e => console.warn('Email send failed (dev mode):', e));
       }
 
-      window.location.href = usePathPrefix() + "/c/report/?id=" + reportId;
+      window.location.href = pathPrefix + "/c/report/?id=" + reportId;
     } catch (err) {
       try {
         localStorage.setItem('compli-report-input', JSON.stringify({

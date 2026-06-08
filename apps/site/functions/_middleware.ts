@@ -14,15 +14,7 @@
 
 // LanguageSwitcher + Navbar dropdowns: CSS group-hover, no React state
 // Force rebuild for Navbar CSS hover fix
-const SUPPORTED_LOCALES = [
-  'en', 'zh', 'es', 'fr', 'de', 'ja', 'pt', 'ru',
-  'ar', 'ko', 'it', 'nl', 'tr', 'vi', 'id', 'th',
-  'hi', 'pl', 'sv', 'el', 'cs', 'ro', 'hu', 'fi',
-  'da', 'no', 'uk', 'bg', 'hr', 'sr', 'sk', 'sl',
-  'ms', 'ka', 'he', 'sw', 'bn', 'ca',
-  'fa', 'ur', 'ta', 'af', 'sq', 'az', 'hy', 'be', 'ne', 'si',
-];
-const DEFAULT_LOCALE = 'en';
+import { LOCALES as SUPPORTED_LOCALES, DEFAULT_LOCALE, matchBrowserLanguage } from '@trade/ui/constants';
 const CANONICAL_HOST = 'sinotradecompliance.com';
 
 // ─── Upstream URL resolution ─────────────────────────────────────
@@ -226,18 +218,6 @@ async function proxySubSiteAsset(url: URL, request: Request, env?: Record<string
 
 // ─── Main handler ────────────────────────────────────────────────
 
-function matchBrowserLanguage(acceptLanguage: string | null): string {
-  if (!acceptLanguage) return DEFAULT_LOCALE;
-  const prefs = acceptLanguage.split(',').map((p) => {
-    const [lang, q] = p.trim().split(';');
-    return { lang: lang.split('-')[0].trim(), q: parseFloat(q?.replace('q=', '') || '1') };
-  }).sort((a, b) => b.q - a.q);
-  for (const { lang } of prefs) {
-    const match = SUPPORTED_LOCALES.find((l) => l.toLowerCase() === lang.toLowerCase());
-    if (match) return match;
-  }
-  return DEFAULT_LOCALE;
-}
 
 export async function onRequest(context: { request: Request; next: () => Promise<Response>; env?: Record<string, string> }): Promise<Response> {
   const { request, env } = context;

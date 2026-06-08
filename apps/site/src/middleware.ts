@@ -3,27 +3,9 @@
 // 此文件仅用于 next dev 本地开发时的语言路由。
 import createMiddleware from 'next-intl/middleware';
 import { routing } from './i18n/routing';
+import { matchBrowserLanguage } from '@trade/ui/constants';
 
 const intlMiddleware = createMiddleware(routing);
-
-function matchBrowserLanguage(acceptLanguage: string | null): string {
-  if (!acceptLanguage) return routing.defaultLocale;
-
-  const prefs = acceptLanguage
-    .split(',')
-    .map((p) => {
-      const [lang, q] = p.trim().split(';');
-      return { lang: lang.split('-')[0].trim(), q: parseFloat(q?.replace('q=', '') || '1') };
-    })
-    .sort((a, b) => b.q - a.q);
-
-  const { locales, defaultLocale } = routing;
-  for (const { lang } of prefs) {
-    const match = locales.find((l) => l.toLowerCase() === lang.toLowerCase());
-    if (match) return match;
-  }
-  return defaultLocale;
-}
 
 export default function middleware(request: Parameters<typeof intlMiddleware>[0]) {
   const { pathname } = request.nextUrl;
@@ -31,7 +13,9 @@ export default function middleware(request: Parameters<typeof intlMiddleware>[0]
   // Only redirect on root path "/"
   if (pathname === '/') {
     const locale = matchBrowserLanguage(
-      request.headers.get('accept-language')
+      request.headers.get('accept-language'),
+      routing.locales,
+      routing.defaultLocale
     );
     const url = request.nextUrl.clone();
     url.pathname = `/${locale}/`;

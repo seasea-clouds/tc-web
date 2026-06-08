@@ -17,6 +17,15 @@ import matter from 'gray-matter';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '../..');
+const APPS_DIR = path.join(ROOT, 'apps');
+
+/** Auto-discover apps that have messages/ directory */
+function discoverApps() {
+  return fs.readdirSync(APPS_DIR).filter(name => {
+    const dir = path.join(APPS_DIR, name);
+    return fs.existsSync(path.join(dir, 'messages'));
+  }).sort();
+}
 
 // 服务列表 — keys 匹配 Navbar servicesDropdown + translation namespaces
 const services = [
@@ -84,6 +93,24 @@ function extractBlog(blogDir, locale, msg) {
   return posts;
 }
 
+function extractCheckPages(msg) {
+  const check = msg.Check || {};
+  const seen = new Set();
+  const items = [];
+  for (const [key, val] of Object.entries(check)) {
+    const slug = key.replace(/(Title|Desc)$/, '').toLowerCase();
+    if (seen.has(slug)) continue;
+    seen.add(slug);
+    items.push({
+      type: 'check',
+      title: check[slug + 'Title'] || slug,
+      desc: check[slug + 'Desc'] || '',
+      href: '/c/check/' + slug + '/',
+    });
+  }
+  return items;
+}
+
 function extractFAQ(msg) {
   const faq = msg.Faq || {};
   const items = [];
@@ -123,10 +150,17 @@ function extractFAQ(msg) {
 
 function generateIndex(messagesDir, blogDir, locale) {
   const msg = loadMessages(messagesDir, locale);
+  // Load portal messages to extract check page titles
+  const portalMsgDir = path.join(APPS_DIR, 'portal', 'messages');
+  if (fs.existsSync(portalMsgDir)) {
+    const portalMsg = loadMessages(portalMsgDir, locale);
+    Object.assign(msg, portalMsg);
+  }
   return {
     services: extractServices(msg),
     blog: extractBlog(blogDir, locale, msg),
     faq: extractFAQ(msg),
+    checks: extractCheckPages(msg),
     generated: new Date().toISOString(),
   };
 }
@@ -150,10 +184,10 @@ export function buildSearchIndexes(messagesDir, blogDir, outDir) {
       const outFile = path.join(outDir, `search-index-${locale}.json`);
       fs.mkdirSync(outDir, { recursive: true });
       fs.writeFileSync(outFile, JSON.stringify(index), 'utf-8');
-      const total = index.services.length + index.blog.length + index.faq.length;
-      console.log(`  ${locale}: ${total} items (${index.services.length}S + ${index.blog.length}B + ${index.faq.length}F)`);
+      const total = index.services.length + index.blog.length + index.faq.length + index.checks.length;
+      console.log('  ' + locale + ': ' + total + ' items (' + index.services.length + 'S + ' + index.blog.length + 'B + ' + index.faq.length + 'F + ' + index.checks.length + 'C)');
     } catch (err) {
-      console.error(`  ${locale}: FAILED — ${err.message}`);
+      console.error('  ' + locale + ': FAILED - ' + err.message);
     }
   }
 
@@ -162,12 +196,15 @@ export function buildSearchIndexes(messagesDir, blogDir, outDir) {
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const { 'out-dir': outDirArg } = parseArgs();
+
+  // Read blog content from blog app, not site
   const messagesDir = path.join(ROOT, 'apps', 'site', 'messages');
-  const blogDir = path.join(ROOT, 'apps', 'site', 'content', 'blog');
+  const blogDir = path.join(ROOT, 'apps', 'blog', 'content');
 
   // Default outDir: apps/site/public/
   const defaultOutDir = path.join(ROOT, 'apps', 'site', 'public');
   const outDir = outDirArg ? path.resolve(ROOT, outDirArg) : defaultOutDir;
 
+  console.log('Apps discovered:', discoverApps().join(', '));
   buildSearchIndexes(messagesDir, blogDir, outDir);
 }

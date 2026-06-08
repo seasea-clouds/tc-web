@@ -3,7 +3,7 @@
 ## 本地开发
 
 ```bash
-cd /root/projects/trade/compli-service
+cd /root/projects/trade/trade/web/apps/portal
 npm run dev        # 本地开发
 npm run build      # 静态构建验证
 ```
@@ -22,16 +22,16 @@ git push
 
 ### 代理路由
 
-`sinotradecompliance.com/compli-service/*` → 通过主站 Pages Function `functions/compli-service/[[catchall]].ts` 透明代理到 `compli-service.pages.dev`。
+`sinotradecompliance.com/trade/web/apps/portal/*` → 通过主站 Pages Function `functions/trade/web/apps/portal/[[catchall]].ts` 透明代理到 `trade/web/apps/portal.pages.dev`。
 
-路由去除 `/compli-service` 前缀后转发：
-- `/compli-service/check/gacc` → `compli-service.pages.dev/check/gacc`
-- `/compli-service/_next/static/xxx.css` → `compli-service.pages.dev/_next/static/xxx.css`
+路由去除 `/trade/web/apps/portal` 前缀后转发：
+- `/trade/web/apps/portal/check/gacc` → `trade/web/apps/portal.pages.dev/check/gacc`
+- `/trade/web/apps/portal/_next/static/xxx.css` → `trade/web/apps/portal.pages.dev/_next/static/xxx.css`
 
 ### 初始化 D1
 
 ```bash
-npx wrangler d1 execute compli-service-db --file=./migrations/001_init.sql
+npx wrangler d1 execute trade/web/apps/portal-db --file=./migrations/001_init.sql
 ```
 
 ---
@@ -53,8 +53,8 @@ npx wrangler d1 execute compli-service-db --file=./migrations/001_init.sql
 | Name | Single Compliance Report |
 | Price | $1 (One-time) |
 | Description | Full compliance report for one product. |
-| Success URL | `https://sinotradecompliance.com/compli-service/report/success` |
-| Cancel URL | `https://sinotradecompliance.com/compli-service/check/gacc` |
+| Success URL | `https://sinotradecompliance.com/trade/web/apps/portal/report/success` |
+| Cancel URL | `https://sinotradecompliance.com/trade/web/apps/portal/check/gacc` |
 
 > 注意：代码创建 checkout 时会动态覆盖 Success URL，传入真实 report_id。
 
@@ -65,8 +65,8 @@ npx wrangler d1 execute compli-service-db --file=./migrations/001_init.sql
 | Name | Monthly Compliance Report |
 | Price | $9.9/mo (Recurring) |
 | Description | Unlimited monthly compliance reports across all 6 modules (GACC, Label, CCC, Cosmetics, E-commerce, Brand). Full reports with PDF download and email delivery. Cancel anytime. |
-| Success URL | `https://sinotradecompliance.com/compli-service/dashboard/` |
-| Cancel URL | `https://sinotradecompliance.com/compli-service/pricing` |
+| Success URL | `https://sinotradecompliance.com/trade/web/apps/portal/dashboard/` |
+| Cancel URL | `https://sinotradecompliance.com/trade/web/apps/portal/pricing` |
 
 创建后拿到两个 `product_id`（如 `prod_xxx`）
 
@@ -74,7 +74,7 @@ npx wrangler d1 execute compli-service-db --file=./migrations/001_init.sql
 
 Dashboard → Developers → Webhooks → Add Endpoint
 
-- **URL：** `https://sinotradecompliance.com/compli-service/api/payment/webhook`
+- **URL：** `https://sinotradecompliance.com/trade/web/apps/portal/api/payment/webhook`
 - **监听事件：**
   - `checkout.completed`
   - `subscription.created`
@@ -83,7 +83,7 @@ Dashboard → Developers → Webhooks → Add Endpoint
 
 ### 3. 配置环境变量
 
-在 Cloudflare Pages Dashboard → compli-service → Settings → Environment Variables 添加：
+在 Cloudflare Pages Dashboard → trade/web/apps/portal → Settings → Environment Variables 添加：
 
 ```
 CREEM_API_KEY=sk_live_xxx          # 从 Creem Developers 获取

@@ -13,16 +13,10 @@ const FAQ_NS: Record<string, string> = {
 };
 
 const SITE_URL = 'https://trade-web-site.pages.dev';
-import { WHATSAPP_URL } from '@trade/ui';
+import { WHATSAPP_URL, LOCALES } from '@trade/ui';
 import { getMessages } from '@/lib/messages';
 import CopyButton from '@/components/CopyButton';
 import { ActionDock } from '@trade/ui';
-
-const LOCALES = [
-  'en','zh','es','fr','de','ja','pt','ru','ar','ko','it','nl','tr','vi','id','th',
-  'hi','pl','sv','el','cs','ro','hu','fi','da','no','uk','bg','hr','sr','sk',
-  'sl','ms','ka','he','sw','bn','ca','fa','ur','ta','af','sq','az','hy','be','ne','si',
-];
 
 export async function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];

@@ -11,14 +11,10 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '../..');
 const APPS_DIR = path.join(ROOT, 'apps');
 
-export const LOCALES = [
-  'en','zh','es','fr','de','ja','pt','ru',
-  'ar','ko','it','nl','tr','vi','id','th',
-  'hi','pl','sv','el','cs','ro','hu','fi',
-  'da','no','uk','bg','hr','sr','sk','sl',
-  'ms','ka','he','sw','bn','ca',
-  'fa','ur','ta','af','sq','az','hy','be','ne','si',
-];
+import { LOCALES } from './locales.mjs';
+
+// Re-export so build-sitemap.mjs / build-llms.mjs can still import from here
+export { LOCALES };
 
 const PRIVATE_SEGMENTS = ['/login','/register','/dashboard','/me/','/report','/api','/auth','/billing','/settings','/subscription'];
 const PRIVATE_PATHS = ['/c/login','/c/register','/c/dashboard','/c/me','/c/report','/c/report/preview','/thank-you','/testimonials','/sitemap'];
@@ -111,7 +107,7 @@ export function discoverAll() {
 
   const result = [];
   for (const appName of apps) {
-    if (appName === 'admin' || appName === 'blog') continue;
+    if (appName === 'admin') continue;
     const appDir = path.join(APPS_DIR, appName);
     const pages = scanPageTsx(appDir);
     const app = {

@@ -16,7 +16,7 @@ export {
   useTradeLocale,
 } from './TranslationProvider';
 export type { Messages } from './TranslationProvider';
-export { WHATSAPP_URL, BRAND_NAME, SITE_URL } from './constants';
+export { WHATSAPP_URL, BRAND_NAME, SITE_URL, LOCALES, DEFAULT_LOCALE, matchBrowserLanguage } from './constants';
 export { buildAlternates, sharedOpenGraph, sharedTwitter } from './seo';
 export { defaultSearch, loadSearchIndex, search, clearCache } from './search';
 export type { SearchItem, SearchIndex, SearchResult } from './search';

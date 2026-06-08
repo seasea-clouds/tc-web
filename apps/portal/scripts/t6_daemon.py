@@ -76,6 +76,24 @@ def release_lock():
             os.unlink(PID_FILE)
 
 
+TRACKER_FILE = os.path.join(MSG_DIR, "_t6_tracker.json")
+
+
+def load_tracker():
+    if os.path.exists(TRACKER_FILE):
+        try:
+            with open(TRACKER_FILE) as f:
+                return json.load(f)
+        except (json.JSONDecodeError, OSError):
+            return {}
+    return {}
+
+
+def save_tracker(tracker):
+    with open(TRACKER_FILE, "w") as f:
+        json.dump(tracker, f, sort_keys=True)
+
+
 def flatten_dict(d, prefix=""):
     items = {}
     if isinstance(d, dict):
@@ -97,7 +115,10 @@ def unflatten_to(flat, target):
                 if isinstance(obj, dict) and part in obj:
                     obj[part] = value
             else:
-                obj = obj.get(part, {})
+                # Create intermediate dict if missing
+                if part not in obj:
+                    obj[part] = {}
+                obj = obj[part]
 
 
 def should_skip(text):
@@ -142,6 +163,8 @@ def sort_locales_by_priority():
         en_data = json.load(f)
     en_flat = flatten_dict(en_data)
 
+    tracker = load_tracker()
+
     scores = []
     for locale in LOCALE_TO_GT:
         if locale == "en":
@@ -153,9 +176,13 @@ def sort_locales_by_priority():
         with open(loc_path) as f:
             loc_data = json.load(f)
         loc_flat = flatten_dict(loc_data)
+
+        done_keys = set(tracker.get(locale, {}).get("done", []))
         untranslated = sum(
             1 for k, v in en_flat.items()
-            if loc_flat.get(k, "") == v and not should_skip(v)
+            if k not in done_keys
+            and loc_flat.get(k, "") == v
+            and not should_skip(v)
         )
         scores.append((untranslated, locale))
 
@@ -181,6 +208,11 @@ def main():
             en_data = json.load(f)
         en_flat = flatten_dict(en_data)
 
+        # Load translation tracker (prevents re-attempting strings that
+        # translate to the same value, e.g. prices, acronyms)
+        tracker = load_tracker()
+        tracker_changed = False
+
         # Collect translatable English texts
         en_texts = [(k, v) for k, v in en_flat.items() if not should_skip(v)]
 
@@ -200,9 +232,14 @@ def main():
                 loc_data = json.load(f)
             loc_flat = flatten_dict(loc_data)
 
-            # Find untranslated keys (still equal to English)
+            # Keys already attempted for this locale
+            done_keys = set(tracker.get(locale, {}).get("done", []))
+
+            # Find untranslated keys (still equal to English and not already attempted)
             untranslated = {}
             for key, en_val in en_texts:
+                if key in done_keys:
+                    continue
                 loc_val = loc_flat.get(key, "")
                 if loc_val == en_val:
                     untranslated[key] = en_val
@@ -226,12 +263,23 @@ def main():
             with open(loc_path, "w", encoding="utf-8") as f:
                 json.dump(loc_data, f, ensure_ascii=False, indent=2)
 
+            # Mark all attempted keys as done in tracker
+            if locale not in tracker:
+                tracker[locale] = {"done": []}
+            tracker[locale]["done"] = sorted(
+                set(tracker[locale]["done"] + list(untranslated.keys()))
+            )
+            tracker_changed = True
+
             total_translated += n
             processed += 1
             log(f"  ✅ {locale}: +{n}")
 
             # Brief pause between locales
             time.sleep(0.5)
+
+        if tracker_changed:
+            save_tracker(tracker)
 
     except Exception as e:
         log(f"❌ Error: {e}")

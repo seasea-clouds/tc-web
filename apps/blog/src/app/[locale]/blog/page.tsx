@@ -7,13 +7,9 @@ import BlogClient from './BlogClient';
 
 import { ActionDock } from '@trade/ui';
 
-const SITE_URL = 'https://trade-web-site.pages.dev';
+import { LOCALES } from '@trade/ui/constants';
 
-const LOCALES = [
-  'en','zh','es','fr','de','ja','pt','ru','ar','ko','it','nl','tr','vi','id','th',
-  'hi','pl','sv','el','cs','ro','hu','fi','da','no','uk','bg','hr','sr','sk',
-  'sl','ms','ka','he','sw','bn','ca','fa','ur','ta','af','sq','az','hy','be','ne','si',
-];
+const SITE_URL = 'https://trade-web-site.pages.dev';
 
 export async function generateStaticParams() {
   return LOCALES.map(l => ({ locale: l }));

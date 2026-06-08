@@ -55,7 +55,7 @@
     "errorLength": "Mật khẩu phải có ít nhất 5 ký tự"
   },
   "Dashboard": {
-    "title": "Dashboard",
+    "title": "Trang tổng quan",
     "welcomeBack": "Chào mừng trở lại,",
     "myReports": "Báo cáo của tôi",
     "myReportsDesc": "Xem lịch sử báo cáo tuân thủ của bạn",

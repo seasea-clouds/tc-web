@@ -1,11 +1,15 @@
 'use client';
 
 import { type ReactNode } from 'react';
-import { AuthProvider as SharedAuthProvider, useAuth as sharedUseAuth } from '@trade/ui';
+import {
+  AuthProvider as SharedAuthProvider,
+  useAuth as sharedUseAuth,
+} from '@trade/ui';
 import type { AuthContextType } from '@trade/ui';
 
 /**
  * Portal AuthProvider — delegates to shared AuthProvider.
+ * logoutRedirect sends user back to login page on sign out.
  */
 export function AuthProvider({ children }: { children: ReactNode }) {
   return <SharedAuthProvider logoutRedirect="/en/c/login">{children}</SharedAuthProvider>;

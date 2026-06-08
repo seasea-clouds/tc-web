@@ -80,6 +80,7 @@ const LEGIT_ENGLISH = new Set([
   'ArrowDown',
   'Asia/Shanghai',
   'Assessment Result',
+  'AuthProvider as SharedAuthProvider',
   'Baby / Maternity',
   'Baby Products (HS 33.04)',
   'Back to Account',

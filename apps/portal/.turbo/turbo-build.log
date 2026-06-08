@@ -56,24 +56,127 @@ Done.
 - Environments: .env
 
   Creating an optimized production build ...
-✓ Compiled successfully in 2.3s
+✓ Compiled successfully in 1754ms
   Running TypeScript ...
-Failed to type check.
+  Finished TypeScript in 3.3s ...
+  Collecting page data using 19 workers ...
+  Generating static pages using 19 workers (0/915) ...
+  Generating static pages using 19 workers (228/915) 
+  Generating static pages using 19 workers (457/915) 
+  Generating static pages using 19 workers (686/915) 
+✓ Generating static pages using 19 workers (915/915) in 2.1s
+  Finalizing page optimization ...
 
-./src/app/[locale]/c/login/page.tsx:31:13
-Type error: Cannot invoke an object which is possibly 'undefined'.
+Route (app)
+┌ ○ /_not-found
+├ ● /[locale]/c
+│ ├ /en/c
+│ ├ /zh/c
+│ ├ /es/c
+│ └ [+45 more paths]
+├ ● /[locale]/c/check/ccc
+│ ├ /en/c/check/ccc
+│ ├ /zh/c/check/ccc
+│ ├ /es/c/check/ccc
+│ └ [+45 more paths]
+├ ● /[locale]/c/check/crossborder
+│ ├ /en/c/check/crossborder
+│ ├ /zh/c/check/crossborder
+│ ├ /es/c/check/crossborder
+│ └ [+45 more paths]
+├ ● /[locale]/c/check/gacc
+│ ├ /en/c/check/gacc
+│ ├ /zh/c/check/gacc
+│ ├ /es/c/check/gacc
+│ └ [+45 more paths]
+├ ● /[locale]/c/check/label
+│ ├ /en/c/check/label
+│ ├ /zh/c/check/label
+│ ├ /es/c/check/label
+│ └ [+45 more paths]
+├ ● /[locale]/c/check/nmpa
+│ ├ /en/c/check/nmpa
+│ ├ /zh/c/check/nmpa
+│ ├ /es/c/check/nmpa
+│ └ [+45 more paths]
+├ ● /[locale]/c/check/trademark
+│ ├ /en/c/check/trademark
+│ ├ /zh/c/check/trademark
+│ ├ /es/c/check/trademark
+│ └ [+45 more paths]
+├ ● /[locale]/c/dashboard
+│ ├ /en/c/dashboard
+│ ├ /zh/c/dashboard
+│ ├ /es/c/dashboard
+│ └ [+45 more paths]
+├ ● /[locale]/c/dashboard/billing
+│ ├ /en/c/dashboard/billing
+│ ├ /zh/c/dashboard/billing
+│ ├ /es/c/dashboard/billing
+│ └ [+45 more paths]
+├ ● /[locale]/c/dashboard/reports
+│ ├ /en/c/dashboard/reports
+│ ├ /zh/c/dashboard/reports
+│ ├ /es/c/dashboard/reports
+│ └ [+45 more paths]
+├ ● /[locale]/c/login
+│ ├ /en/c/login
+│ ├ /zh/c/login
+│ ├ /es/c/login
+│ └ [+45 more paths]
+├ ● /[locale]/c/me
+│ ├ /en/c/me
+│ ├ /zh/c/me
+│ ├ /es/c/me
+│ └ [+45 more paths]
+├ ● /[locale]/c/me/reports
+│ ├ /en/c/me/reports
+│ ├ /zh/c/me/reports
+│ ├ /es/c/me/reports
+│ └ [+45 more paths]
+├ ● /[locale]/c/me/settings
+│ ├ /en/c/me/settings
+│ ├ /zh/c/me/settings
+│ ├ /es/c/me/settings
+│ └ [+45 more paths]
+├ ● /[locale]/c/me/subscription
+│ ├ /en/c/me/subscription
+│ ├ /zh/c/me/subscription
+│ ├ /es/c/me/subscription
+│ └ [+45 more paths]
+├ ● /[locale]/c/pricing
+│ ├ /en/c/pricing
+│ ├ /zh/c/pricing
+│ ├ /es/c/pricing
+│ └ [+45 more paths]
+├ ● /[locale]/c/register
+│ ├ /en/c/register
+│ ├ /zh/c/register
+│ ├ /es/c/register
+│ └ [+45 more paths]
+├ ● /[locale]/c/report
+│ ├ /en/c/report
+│ ├ /zh/c/report
+│ ├ /es/c/report
+│ └ [+45 more paths]
+└ ● /[locale]/c/report/preview
+  ├ /en/c/report/preview
+  ├ /zh/c/report/preview
+  ├ /es/c/report/preview
+  └ [+45 more paths]
 
-  [90m29 |[0m     setLoading([36mtrue[0m);
-  [90m30 |[0m     [36mtry[0m {
-[31m[1m>[0m [90m31 |[0m       [36mawait[0m login(email, password, rememberMe);
-  [90m   |[0m             [31m[1m^[0m
-  [90m32 |[0m       window.location.href = [32m'./dashboard'[0m;
-  [90m33 |[0m     } [36mcatch[0m (err: any) {
-  [90m34 |[0m       setError(err.message || t([32m'errorInvalid'[0m));
-Next.js build worker exited with code: 1 and signal: null
+
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)
+
+🔍 Scanning for hardcoded English text in JSX/TSX...
+
+✅ No hardcoded English text found.
+
+✅ 全量核验通过！48 种语言无质量问题。
 🧹 Cleaning RSC .txt payload files from out/...
-✅ Deleted 0 RSC payload files (0.0 MB freed)
-(node:2148873) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/projects/trade/web/packages/scripts/clean-rsc.js is not specified and it doesn't parse as CommonJS.
+✅ Deleted 8743 RSC payload files (126.2 MB freed)
+(node:2179809) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/projects/trade/web/packages/scripts/clean-rsc.js is not specified and it doesn't parse as CommonJS.
 Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
 To eliminate this warning, add "type": "module" to /root/projects/trade/web/package.json.
 (Use `node --trace-warnings ...` to show where the warning was created)

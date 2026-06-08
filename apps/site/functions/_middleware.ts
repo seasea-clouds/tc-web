@@ -61,41 +61,23 @@ function injectSearchWidget(html: string): string {
   return html.replace('</body>', `${SEARCH_WIDGET_SCRIPT}\n</body>`);
 }
 
-// ─── Promote RSC data scripts before async bootstrap ─────────────
-// Next.js SSG embeds RSC data as inline <script>self.__next_f.push(...)</script>
-// at the end of <body>. Async chunks (like 07lhk_q6pmm3r.js which consumes
-// __next_f via R.forEach(z);R.length=0) can load and execute before the parser
-// reaches these inline scripts — especially through the CF Worker proxy where
-// JS chunks may hit edge cache faster than the freshly-proxied HTML is parsed.
-// Fix: promote all RSC data scripts to <head> so they execute before any async script.
+// ─── Ensure __next_f exists before async modules attempt to consume it ──
+// Next.js async chunk 07lhk_q6pmm3r.js contains:
+//   let R=self.__next_f=self.__next_f||[]; R.forEach(z); R.length=0; R.push=z;
+// This code only runs when the module body is EVALUATED by the turbopack
+// module system. Through the CF Worker proxy, module evaluation can be
+// deferred if the module system init depends on timing (DOMContentLoaded).
+// Fix: eagerly initialize __next_f in <head> so that when modules evaluate,
+// the array is ready. Keep RSC data scripts in their original <body> position.
+// The consumer module's `R.push=z` interceptor will process any deferred pushes.
 
-function promoteRscDataScripts(html: string): string {
-  // Extract ALL inline scripts containing self.__next_f.push(...)
-  const rscBlocks: string[] = [];
-  const cleaned = html.replace(
-    /<script>self\.__next_f(?:\.push|\.push\.apply)?\(.*?<\/script>/gs,
-    (match) => {
-      rscBlocks.push(match);
-      return '';
-    }
-  );
-
-  if (rscBlocks.length === 0) return html;
-
-  // Insert inside <head> BEFORE any async scripts.
-  // CRITICAL: __next_f array is normally initialized by the async bootstrap chunk.
-  // Since we're promoting RSC data BEFORE async scripts, we MUST ensure the
-  // array exists before the first push. Wrap all RSC data in an IIFE that
-  // initializes the array first.
-  const initScript = '<script>self.__next_f||(self.__next_f=[]);</script>';
-  const rscHtml = initScript + '\n' + rscBlocks.join('\n');
-
-  const headEnd = cleaned.indexOf('</head>');
+function ensureNextF(html: string): string {
+  const initScr = '<script>self.__next_f||(self.__next_f=[]);</script><!-- NXF -->';
+  const headEnd = html.indexOf('</head>');
   if (headEnd >= 0) {
-    return cleaned.slice(0, headEnd) + '\n' + rscHtml + '\n' + cleaned.slice(headEnd);
+    return html.slice(0, headEnd) + '\n' + initScr + '\n' + html.slice(headEnd);
   }
-
-  return rscHtml + html;
+  return initScr + html;
 }
 
 
@@ -172,7 +154,7 @@ async function proxyToPortal(url: URL, request: Request, env?: Record<string, st
   if (contentType.includes('text/html')) {
     let html = await resp.text();
     html = rewriteNextStatic(html, 'c');
-    html = promoteRscDataScripts(html);
+    html = ensureNextF(html);
     html = injectSearchWidget(html);
     return new Response(html, {
       status: resp.status,

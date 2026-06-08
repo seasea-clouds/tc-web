@@ -72,6 +72,11 @@ function injectSearchWidget(html: string): string {
 // The consumer module's `R.push=z` interceptor will process any deferred pushes.
 
 function ensureNextF(html: string): string {
+  // Init guard: ensure self.__next_f exists before any async scripts
+  // The async chunks call TURBOPACK.push() which eventually evaluates
+  // module 23755 (RSC consumer). This runs: let R=self.__next_f=R||[]; R.forEach(z);
+  // __next_f must be initialized before this runs to be the same array that
+  // inline RSC push scripts write to.
   const initScr = '<script>self.__next_f||(self.__next_f=[]);</script><!-- NXF -->';
   const headEnd = html.indexOf('</head>');
   if (headEnd >= 0) {
@@ -228,6 +233,35 @@ export async function onRequest(context: { request: Request; next: () => Promise
   // ── Sub-site static assets (check first, before HTML routing) ──
   const assetResp = await proxySubSiteAsset(url, request, env);
   if (assetResp) return assetResp;
+
+  // ── Portal module system's dynamically loaded chunks ────────────
+  // Turbopack's module system uses a hardcoded `/_next/` base path (t = "/_next/")
+  // in its q() function to generate chunk URLs from "otherChunks" relative paths.
+  // This means dynamically loaded portal chunks appear at:
+  //   /_next/static/chunks/{hash}.js  (without /c/ prefix)
+  // But the actual <script async> tags were rewritten to /c/_next/static/chunks/...
+  // The module system can't find existing script tags (querySelector uses wrong path)
+  // and creates new <script> elements pointing to /_next/static/chunks/...
+  // which would request from the MAIN site (wrong/no content).
+  // Fix: try main site first, fallback to portal proxy.
+  if (url.pathname.startsWith('/_next/static/chunks/')) {
+    const nextResp = await context.next();
+    if (nextResp.ok) return nextResp;
+
+    // Fallback: proxy from portal
+    const relativePath = url.pathname.slice('/_next/static/'.length);
+    const upstream = resolveUpstream(url.hostname, 'portal', env);
+    const assetUrl = `${upstream}/_next/static/${relativePath}`;
+    const portalResp = await fetch(assetUrl);
+    if (portalResp.ok) {
+      const h = sanitizeHeaders(portalResp.headers);
+      if (url.pathname.endsWith('.js')) h.set('content-type', 'application/javascript');
+      else if (url.pathname.endsWith('.css')) h.set('content-type', 'text/css');
+      return new Response(portalResp.body, { status: portalResp.status, headers: h });
+    }
+
+    return new Response('next_chunk not found', { status: 404 });
+  }
 
   // ── Portal proxy (/c/) ─────────────────────────────────────────
   const portalMatch = url.pathname.match(/^\/([a-z]{2})\/c\/?$/);

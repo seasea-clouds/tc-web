@@ -73,7 +73,7 @@ function promoteRscDataScripts(html: string): string {
   // Extract ALL inline scripts containing self.__next_f.push(...)
   const rscBlocks: string[] = [];
   const cleaned = html.replace(
-    /<script>self\.__next_f(?:\.push|\.push\.apply)?\(.*?<\/script>/g,
+    /<script>self\.__next_f(?:\.push|\.push\.apply)?\(.*?<\/script>/gs,
     (match) => {
       rscBlocks.push(match);
       return '';
@@ -82,19 +82,17 @@ function promoteRscDataScripts(html: string): string {
 
   if (rscBlocks.length === 0) return html;
 
-  // Insert after <head> close but BEFORE any <script async> tags
-  const headEnd = cleaned.indexOf('</head>');
-  const rscHtml = rscBlocks.join('\n');
+  // Insert inside <head> BEFORE any async scripts.
+  // CRITICAL: __next_f array is normally initialized by the async bootstrap chunk.
+  // Since we're promoting RSC data BEFORE async scripts, we MUST ensure the
+  // array exists before the first push. Wrap all RSC data in an IIFE that
+  // initializes the array first.
+  const initScript = '<script>self.__next_f||(self.__next_f=[]);</script>';
+  const rscHtml = initScript + '\n' + rscBlocks.join('\n');
 
+  const headEnd = cleaned.indexOf('</head>');
   if (headEnd >= 0) {
     return cleaned.slice(0, headEnd) + '\n' + rscHtml + '\n' + cleaned.slice(headEnd);
-  }
-
-  // Fallback: just prepend to body
-  const bodyOpen = cleaned.indexOf('<body');
-  if (bodyOpen >= 0) {
-    const afterTag = cleaned.indexOf('>', bodyOpen) + 1;
-    return cleaned.slice(0, afterTag) + '\n' + rscHtml + '\n' + cleaned.slice(afterTag);
   }
 
   return rscHtml + html;

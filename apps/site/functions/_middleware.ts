@@ -61,6 +61,45 @@ function injectSearchWidget(html: string): string {
   return html.replace('</body>', `${SEARCH_WIDGET_SCRIPT}\n</body>`);
 }
 
+// ─── Promote RSC data scripts before async bootstrap ─────────────
+// Next.js SSG embeds RSC data as inline <script>self.__next_f.push(...)</script>
+// at the end of <body>. Async chunks (like 07lhk_q6pmm3r.js which consumes
+// __next_f via R.forEach(z);R.length=0) can load and execute before the parser
+// reaches these inline scripts — especially through the CF Worker proxy where
+// JS chunks may hit edge cache faster than the freshly-proxied HTML is parsed.
+// Fix: promote all RSC data scripts to <head> so they execute before any async script.
+
+function promoteRscDataScripts(html: string): string {
+  // Extract ALL inline scripts containing self.__next_f.push(...)
+  const rscBlocks: string[] = [];
+  const cleaned = html.replace(
+    /<script>self\.__next_f(?:\.push|\.push\.apply)?\(.*?<\/script>/g,
+    (match) => {
+      rscBlocks.push(match);
+      return '';
+    }
+  );
+
+  if (rscBlocks.length === 0) return html;
+
+  // Insert after <head> close but BEFORE any <script async> tags
+  const headEnd = cleaned.indexOf('</head>');
+  const rscHtml = rscBlocks.join('\n');
+
+  if (headEnd >= 0) {
+    return cleaned.slice(0, headEnd) + '\n' + rscHtml + '\n' + cleaned.slice(headEnd);
+  }
+
+  // Fallback: just prepend to body
+  const bodyOpen = cleaned.indexOf('<body');
+  if (bodyOpen >= 0) {
+    const afterTag = cleaned.indexOf('>', bodyOpen) + 1;
+    return cleaned.slice(0, afterTag) + '\n' + rscHtml + '\n' + cleaned.slice(afterTag);
+  }
+
+  return rscHtml + html;
+}
+
 
 async function proxyFetch(upstreamUrl: string, request: Request): Promise<Response> {
   const bodyText = (request.method !== 'GET' && request.method !== 'HEAD')
@@ -135,7 +174,8 @@ async function proxyToPortal(url: URL, request: Request, env?: Record<string, st
   if (contentType.includes('text/html')) {
     let html = await resp.text();
     html = rewriteNextStatic(html, 'c');
-        html = injectSearchWidget(html);
+    html = promoteRscDataScripts(html);
+    html = injectSearchWidget(html);
     return new Response(html, {
       status: resp.status,
       statusText: resp.statusText,

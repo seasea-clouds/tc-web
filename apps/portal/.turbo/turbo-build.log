@@ -1,20 +1,70 @@
 
 > @trade/portal@0.1.0 build
-> next build && node ../../packages/scripts/check-translations.mjs --short ; node ../../packages/scripts/clean-rsc.js
+> node ../../packages/scripts/build-search-index.mjs --out-dir=apps/portal/public && next build && node ../../packages/scripts/check-hardcoded.mjs --ci && node ../../packages/scripts/check-translations.mjs --short ; node ../../packages/scripts/clean-rsc.js
 
+Generating search index for 48 locales...
+  af: 52 items (6S + 7B + 39F)
+  ar: 52 items (6S + 7B + 39F)
+  az: 52 items (6S + 7B + 39F)
+  be: 52 items (6S + 7B + 39F)
+  bg: 52 items (6S + 7B + 39F)
+  bn: 52 items (6S + 7B + 39F)
+  ca: 52 items (6S + 7B + 39F)
+  cs: 52 items (6S + 7B + 39F)
+  da: 52 items (6S + 7B + 39F)
+  de: 52 items (6S + 7B + 39F)
+  el: 52 items (6S + 7B + 39F)
+  en: 52 items (6S + 7B + 39F)
+  es: 52 items (6S + 7B + 39F)
+  fa: 52 items (6S + 7B + 39F)
+  fi: 52 items (6S + 7B + 39F)
+  fr: 52 items (6S + 7B + 39F)
+  he: 52 items (6S + 7B + 39F)
+  hi: 52 items (6S + 7B + 39F)
+  hr: 52 items (6S + 7B + 39F)
+  hu: 52 items (6S + 7B + 39F)
+  hy: 52 items (6S + 7B + 39F)
+  id: 52 items (6S + 7B + 39F)
+  it: 52 items (6S + 7B + 39F)
+  ja: 52 items (6S + 7B + 39F)
+  ka: 52 items (6S + 7B + 39F)
+  ko: 52 items (6S + 7B + 39F)
+  ms: 52 items (6S + 7B + 39F)
+  ne: 52 items (6S + 7B + 39F)
+  nl: 52 items (6S + 7B + 39F)
+  no: 52 items (6S + 7B + 39F)
+  pl: 52 items (6S + 7B + 39F)
+  pt: 52 items (6S + 7B + 39F)
+  ro: 52 items (6S + 7B + 39F)
+  ru: 52 items (6S + 7B + 39F)
+  si: 52 items (6S + 7B + 39F)
+  sk: 52 items (6S + 7B + 39F)
+  sl: 52 items (6S + 7B + 39F)
+  sq: 52 items (6S + 7B + 39F)
+  sr: 52 items (6S + 7B + 39F)
+  sv: 52 items (6S + 7B + 39F)
+  sw: 52 items (6S + 7B + 39F)
+  ta: 52 items (6S + 7B + 39F)
+  th: 52 items (6S + 7B + 39F)
+  tr: 52 items (6S + 7B + 39F)
+  uk: 52 items (6S + 7B + 39F)
+  ur: 52 items (6S + 7B + 39F)
+  vi: 52 items (6S + 7B + 39F)
+  zh: 52 items (6S + 7B + 39F)
+Done.
 ▲ Next.js 16.2.6 (Turbopack)
 - Environments: .env
 
   Creating an optimized production build ...
-✓ Compiled successfully in 2.0s
+✓ Compiled successfully in 1786ms
   Running TypeScript ...
-  Finished TypeScript in 3.9s ...
+  Finished TypeScript in 3.3s ...
   Collecting page data using 19 workers ...
   Generating static pages using 19 workers (0/915) ...
   Generating static pages using 19 workers (228/915) 
   Generating static pages using 19 workers (457/915) 
   Generating static pages using 19 workers (686/915) 
-✓ Generating static pages using 19 workers (915/915) in 1848ms
+✓ Generating static pages using 19 workers (915/915) in 2.0s
   Finalizing page optimization ...
 
 Route (app)
@@ -119,12 +169,14 @@ Route (app)
 ○  (Static)  prerendered as static content
 ●  (SSG)     prerendered as static HTML (uses generateStaticParams)
 
+🔍 Scanning for hardcoded English text in JSX/TSX...
 
-⚠️ 发现 5716 个问题
-   - 翻译质量: 5716 个问题
+✅ No hardcoded English text found.
+
+✅ 全量核验通过！48 种语言无质量问题。
 🧹 Cleaning RSC .txt payload files from out/...
-✅ Deleted 8743 RSC payload files (84.8 MB freed)
-(node:957325) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/projects/trade/web/packages/scripts/clean-rsc.js is not specified and it doesn't parse as CommonJS.
+✅ Deleted 8743 RSC payload files (126.2 MB freed)
+(node:2123102) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/projects/trade/web/packages/scripts/clean-rsc.js is not specified and it doesn't parse as CommonJS.
 Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
 To eliminate this warning, add "type": "module" to /root/projects/trade/web/package.json.
 (Use `node --trace-warnings ...` to show where the warning was created)

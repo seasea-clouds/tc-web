@@ -47,8 +47,8 @@ export default async function Layout({
         <NextIntlClientProvider messages={messages} locale={locale} timeZone="Asia/Shanghai">
           <TradeTranslationProvider messages={messages} locale={locale}>
             <OrganizationJsonLd />
-          <AuthProvider>
-            <SearchProvider loginHref={`/${locale}/c/login`} />
+          <AuthProvider logoutRedirect={`/${locale}/c/login`}>
+            <SearchProvider freeCheckHref="/c/" loginHref={`/${locale}/c/login`} />
             <main className="flex-1">{children}</main>
             <Footer />
             <CookieConsent />

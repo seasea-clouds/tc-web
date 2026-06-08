@@ -57,7 +57,7 @@ function rewriteNextStatic(html: string, prefix: string): string {
   // waits for D("/_next/static/chunks/{name}") from its own q() call.
   // Keep <link>, inline scripts, and RSC data prefixed for HTTP requests.
   html = html.replace(
-    /(<script[^>]+src=")\/c\/(_next\/static\/)/g,
+    /(<script[^>]*?src=")\/c\/(_next\/static\/)/g,
     '$1/$2'
   );
 

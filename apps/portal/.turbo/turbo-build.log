@@ -56,7 +56,7 @@ Done.
 - Environments: .env
 
   Creating an optimized production build ...
-✓ Compiled successfully in 1786ms
+✓ Compiled successfully in 1865ms
   Running TypeScript ...
   Finished TypeScript in 3.3s ...
   Collecting page data using 19 workers ...
@@ -176,7 +176,7 @@ Route (app)
 ✅ 全量核验通过！48 种语言无质量问题。
 🧹 Cleaning RSC .txt payload files from out/...
 ✅ Deleted 8743 RSC payload files (126.2 MB freed)
-(node:2123102) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/projects/trade/web/packages/scripts/clean-rsc.js is not specified and it doesn't parse as CommonJS.
+(node:2126261) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/projects/trade/web/packages/scripts/clean-rsc.js is not specified and it doesn't parse as CommonJS.
 Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
 To eliminate this warning, add "type": "module" to /root/projects/trade/web/package.json.
 (Use `node --trace-warnings ...` to show where the warning was created)

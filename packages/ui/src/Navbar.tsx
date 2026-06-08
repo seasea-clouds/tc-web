@@ -56,7 +56,19 @@ function UserMenu({ loginHref, locale }: { loginHref?: string; locale?: string }
   }, []);
 
   if (isLoading) {
-    return <div className="w-8 h-8 rounded-full bg-white/20 animate-pulse" />;
+    // During loading, show Sign In button if loginHref is available
+    // instead of a pulse placeholder — avoids flash of gray circle
+    if (loginHref) {
+      return (
+        <a
+          href={loginHref}
+          className="text-white/80 hover:text-white border border-white/30 hover:border-white/60 px-3 py-1.5 rounded-md text-sm font-medium transition-all"
+        >
+          {t('signIn') || 'Sign In'}
+        </a>
+      );
+    }
+    return null;
   }
 
   if (!isAuthenticated || !user) {

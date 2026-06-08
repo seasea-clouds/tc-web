@@ -57,16 +57,50 @@ This information is used to shape Next.js' roadmap and prioritize features.
 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
 https://nextjs.org/telemetry
 
-  Suggestion: Wait for the build to complete.
-⨯ Another next build process is already running.
+▲ Next.js 16.2.6 (Turbopack)
 
-  This could be:
-  - A next build still in progress
-  - A previous build that didn't exit cleanly
+  Creating an optimized production build ...
+✓ Compiled successfully in 1483ms
+  Running TypeScript ...
+  Finished TypeScript in 1814ms ...
+  Collecting page data using 6 workers ...
+  Generating static pages using 6 workers (0/434) ...
+  Generating static pages using 6 workers (108/434) 
+  Generating static pages using 6 workers (216/434) 
+  Generating static pages using 6 workers (325/434) 
+✓ Generating static pages using 6 workers (434/434) in 2.4s
+  Finalizing page optimization ...
 
+Route (app)
+┌ ○ /_not-found
+├ ● /[locale]
+│ ├ /en
+│ ├ /zh
+│ ├ /es
+│ └ [+45 more paths]
+├ ● /[locale]/blog
+│ ├ /en/blog
+│ ├ /zh/blog
+│ ├ /es/blog
+│ └ [+45 more paths]
+└ ● /[locale]/blog/[slug]
+  ├ /en/blog/ccc-certification-explained
+  ├ /en/blog/china-import-compliance-guide
+  ├ /en/blog/china-label-compliance
+  └ [+333 more paths]
+
+
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)
+
+🔍 Scanning for hardcoded English text in JSX/TSX...
+
+✅ No hardcoded English text found.
+
+✅ 全量核验通过！48 种语言无质量问题。
 🧹 Cleaning RSC .txt payload files from out/...
-✅ Deleted 0 RSC payload files (0.0 MB freed)
-(node:2118575) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/projects/trade/web/packages/scripts/clean-rsc.js is not specified and it doesn't parse as CommonJS.
+✅ Deleted 3751 RSC payload files (85.1 MB freed)
+(node:2127079) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/projects/trade/web/packages/scripts/clean-rsc.js is not specified and it doesn't parse as CommonJS.
 Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
 To eliminate this warning, add "type": "module" to /root/projects/trade/web/package.json.
 (Use `node --trace-warnings ...` to show where the warning was created)

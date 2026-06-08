@@ -1,22 +1,72 @@
 
 > @trade/blog@0.1.0 build
-> rm -rf .next/cache && next build && node ../../packages/scripts/check-translations.mjs --short ; node ../../packages/scripts/clean-rsc.js
+> node ../../packages/scripts/build-search-index.mjs --out-dir=apps/blog/public && rm -rf .next/cache && next build && node ../../packages/scripts/check-hardcoded.mjs --ci && node ../../packages/scripts/check-translations.mjs --short ; node ../../packages/scripts/clean-rsc.js
 
+Generating search index for 48 locales...
+  af: 52 items (6S + 7B + 39F)
+  ar: 52 items (6S + 7B + 39F)
+  az: 52 items (6S + 7B + 39F)
+  be: 52 items (6S + 7B + 39F)
+  bg: 52 items (6S + 7B + 39F)
+  bn: 52 items (6S + 7B + 39F)
+  ca: 52 items (6S + 7B + 39F)
+  cs: 52 items (6S + 7B + 39F)
+  da: 52 items (6S + 7B + 39F)
+  de: 52 items (6S + 7B + 39F)
+  el: 52 items (6S + 7B + 39F)
+  en: 52 items (6S + 7B + 39F)
+  es: 52 items (6S + 7B + 39F)
+  fa: 52 items (6S + 7B + 39F)
+  fi: 52 items (6S + 7B + 39F)
+  fr: 52 items (6S + 7B + 39F)
+  he: 52 items (6S + 7B + 39F)
+  hi: 52 items (6S + 7B + 39F)
+  hr: 52 items (6S + 7B + 39F)
+  hu: 52 items (6S + 7B + 39F)
+  hy: 52 items (6S + 7B + 39F)
+  id: 52 items (6S + 7B + 39F)
+  it: 52 items (6S + 7B + 39F)
+  ja: 52 items (6S + 7B + 39F)
+  ka: 52 items (6S + 7B + 39F)
+  ko: 52 items (6S + 7B + 39F)
+  ms: 52 items (6S + 7B + 39F)
+  ne: 52 items (6S + 7B + 39F)
+  nl: 52 items (6S + 7B + 39F)
+  no: 52 items (6S + 7B + 39F)
+  pl: 52 items (6S + 7B + 39F)
+  pt: 52 items (6S + 7B + 39F)
+  ro: 52 items (6S + 7B + 39F)
+  ru: 52 items (6S + 7B + 39F)
+  si: 52 items (6S + 7B + 39F)
+  sk: 52 items (6S + 7B + 39F)
+  sl: 52 items (6S + 7B + 39F)
+  sq: 52 items (6S + 7B + 39F)
+  sr: 52 items (6S + 7B + 39F)
+  sv: 52 items (6S + 7B + 39F)
+  sw: 52 items (6S + 7B + 39F)
+  ta: 52 items (6S + 7B + 39F)
+  th: 52 items (6S + 7B + 39F)
+  tr: 52 items (6S + 7B + 39F)
+  uk: 52 items (6S + 7B + 39F)
+  ur: 52 items (6S + 7B + 39F)
+  vi: 52 items (6S + 7B + 39F)
+  zh: 52 items (6S + 7B + 39F)
+Done.
 Attention: Next.js now collects completely anonymous telemetry regarding usage.
 This information is used to shape Next.js' roadmap and prioritize features.
 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
 https://nextjs.org/telemetry
 
+  Suggestion: Wait for the build to complete.
 ⨯ Another next build process is already running.
 
   This could be:
   - A next build still in progress
   - A previous build that didn't exit cleanly
 
-  Suggestion: Wait for the build to complete.
 🧹 Cleaning RSC .txt payload files from out/...
 ✅ Deleted 0 RSC payload files (0.0 MB freed)
-(node:956059) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/projects/trade/web/packages/scripts/clean-rsc.js is not specified and it doesn't parse as CommonJS.
+(node:2118575) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/projects/trade/web/packages/scripts/clean-rsc.js is not specified and it doesn't parse as CommonJS.
 Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
 To eliminate this warning, add "type": "module" to /root/projects/trade/web/package.json.
 (Use `node --trace-warnings ...` to show where the warning was created)

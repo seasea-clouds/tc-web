@@ -15,6 +15,8 @@ interface NavbarProps {
   industries?: { slug: string; emoji: string }[];
   /** Login link for unauthenticated users */
   loginHref?: string;
+  /** Portal base path for user dashboard links (e.g. /c) */
+  portalBaseHref?: string;
 }
 
 const DEFAULT_INDUSTRIES = [
@@ -39,7 +41,7 @@ const serviceLinks = [
   { key: 'brand', href: '/services/brand/', emoji: '🛡️' },
 ];
 
-function UserMenu({ loginHref }: { loginHref?: string }) {
+function UserMenu({ loginHref, locale }: { loginHref?: string; locale?: string }) {
   const { user, isAuthenticated, isLoading, logout } = useAuth();
   const t = useT('Navbar');
   const [open, setOpen] = useState(false);
@@ -84,7 +86,7 @@ function UserMenu({ loginHref }: { loginHref?: string }) {
       {open && (
         <div className="absolute right-0 top-full mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-50">
           <a
-            href="me/reports"
+            href={`/${locale}/c/me/reports`}
             className="flex items-center gap-2 px-4 py-2.5 text-sm text-gray-700 hover:bg-bg-ice transition-colors"
             onClick={() => setOpen(false)}
           >
@@ -92,7 +94,7 @@ function UserMenu({ loginHref }: { loginHref?: string }) {
             {t('myReports')}
           </a>
           <a
-            href="me/subscription"
+            href={`/${locale}/c/me/subscription`}
             className="flex items-center gap-2 px-4 py-2.5 text-sm text-gray-700 hover:bg-bg-ice transition-colors"
             onClick={() => setOpen(false)}
           >
@@ -100,7 +102,7 @@ function UserMenu({ loginHref }: { loginHref?: string }) {
             {t('subscription')}
           </a>
           <a
-            href="me/settings"
+            href={`/${locale}/c/me/settings`}
             className="flex items-center gap-2 px-4 py-2.5 text-sm text-gray-700 hover:bg-bg-ice transition-colors"
             onClick={() => setOpen(false)}
           >
@@ -168,7 +170,7 @@ export default function Navbar(props: NavbarProps) {
             </a>
 
             {/* User menu — 自动处理登录态 */}
-            <UserMenu loginHref={props.loginHref} />
+            <UserMenu loginHref={props.loginHref} locale={locale} />
 
             <a
               href={fcHref}

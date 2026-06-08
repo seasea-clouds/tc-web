@@ -48,7 +48,20 @@ function resolveUpstream(hostname: string, subProject: string, env?: Record<stri
 
 function rewriteNextStatic(html: string, prefix: string): string {
   // Replace ALL occurrences — covers both HTML attributes and RSC data (self.__next_f)
-  return html.replace(/\/_next\/static\//g, `/${prefix}/_next/static/`);
+  html = html.replace(/\/_next\/static\//g, `/${prefix}/_next/static/`);
+
+  // Revert for <script src> tags: the module system's D() key must match
+  // the q() output which uses /_next/static/chunks/{name} (no prefix).
+  // The script tag's registerChunk resolves D(script.src). If we add /c/,
+  // D("/c/_next/static/chunks/{name}") is resolved, but the module system
+  // waits for D("/_next/static/chunks/{name}") from its own q() call.
+  // Keep <link>, inline scripts, and RSC data prefixed for HTTP requests.
+  html = html.replace(
+    /(<script[^>]+src=")\/c\/(_next\/static\/)/g,
+    '$1/$2'
+  );
+
+  return html;
 }
 
 // ─── Proxy request with header sanitation ────────────────────────
@@ -244,11 +257,15 @@ export async function onRequest(context: { request: Request; next: () => Promise
   // and creates new <script> elements pointing to /_next/static/chunks/...
   // which would request from the MAIN site (wrong/no content).
   // Fix: try main site first, fallback to portal proxy.
+  // ── Portal module system's dynamically loaded chunks ────────────
+  // Turbopack module system uses hardcoded /_next/ base path in its q()
+  // function, generating /_next/static/chunks/{name}.js. We've reverted
+  // the /c/ prefix on <script src> tags so that async chunks execute
+  // registerChunk and resolve D("/_next/static/...") — matching the key
+  // that the module system's own D(q(e)) creates.
+  // We still need to serve these chunk files from the PORTAL (not main site).
+  // The browser requests them at /_next/static/chunks/..., we proxy to portal.
   if (url.pathname.startsWith('/_next/static/chunks/')) {
-    const nextResp = await context.next();
-    if (nextResp.ok) return nextResp;
-
-    // Fallback: proxy from portal
     const relativePath = url.pathname.slice('/_next/static/'.length);
     const upstream = resolveUpstream(url.hostname, 'portal', env);
     const assetUrl = `${upstream}/_next/static/${relativePath}`;
@@ -259,8 +276,7 @@ export async function onRequest(context: { request: Request; next: () => Promise
       else if (url.pathname.endsWith('.css')) h.set('content-type', 'text/css');
       return new Response(portalResp.body, { status: portalResp.status, headers: h });
     }
-
-    return new Response('next_chunk not found', { status: 404 });
+    // Not a portal chunk — fall through to main site's static assets
   }
 
   // ── Portal proxy (/c/) ─────────────────────────────────────────

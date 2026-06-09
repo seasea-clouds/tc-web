@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { getNumberedItems, splitByComma } from '@/lib/utils';
 import { locales } from '@/i18n/routing';
-import { sharedOpenGraph, sharedTwitter } from '@/lib/metadata';
+import { sharedOpenGraph, sharedTwitter } from '@trade/ui/seo';
 import ContactForm from '@/components/ContactForm';
 import { WHATSAPP_URL } from '@trade/ui';
 import CTASection from '@/components/CTASection';

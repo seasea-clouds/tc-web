@@ -1,5 +1,5 @@
-/* Google Fonts Import - must be first */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap');
+/* Self-hosted fonts — replaces Google Fonts external dependency */
+@import "../../../../packages/ui/src/fonts.css";
 
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";

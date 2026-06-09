@@ -43,5 +43,10 @@ next-env.d.ts
 # Build output
 out/
 
+# Build artifacts (auto-generated, do not commit)
+public/search-index-*.json
+public/sitemap*.xml
+public/llms-*.txt
+
 # Functions (Cloudflare Pages)
 .wrangler/

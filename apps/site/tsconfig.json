@@ -20,7 +20,8 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "@trade/ui": ["../../packages/ui/src"]
+      "@trade/ui": ["../../packages/ui/src"],
+      "@trade/ui/*": ["../../packages/ui/src/*"]
     }
   },
   "include": [

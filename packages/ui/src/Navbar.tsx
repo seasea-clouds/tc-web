@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { ChevronDown, Search, User, LogOut, FileText, Settings, CreditCard } from 'lucide-react';
 import { WHATSAPP_URL } from './constants';
+import { industries as INDUSTRIES } from './data/industries';
 import LanguageSwitcher from './LanguageSwitcher';
 import { useT, useTradeLocale } from './TranslationProvider';
 import { useAuth } from './AuthContext';
@@ -18,19 +19,6 @@ interface NavbarProps {
   /** Portal base path for user dashboard links (e.g. /c) */
   portalBaseHref?: string;
 }
-
-const DEFAULT_INDUSTRIES = [
-  { slug: 'dairy-milk-products', emoji: '🥛' },
-  { slug: 'meat-seafood', emoji: '🥩' },
-  { slug: 'wine-spirits', emoji: '🍷' },
-  { slug: 'skincare-cosmetics', emoji: '💄' },
-  { slug: 'pet-food', emoji: '🐾' },
-  { slug: 'health-supplements', emoji: '💊' },
-  { slug: 'baby-maternal', emoji: '👶' },
-  { slug: 'consumer-electronics', emoji: '📱' },
-  { slug: 'medical-devices', emoji: '🏥' },
-  { slug: 'cross-border-ecommerce', emoji: '🛒' },
-];
 
 const serviceLinks = [
   { key: 'gacc', href: '/services/gacc/', emoji: '📋' },
@@ -139,7 +127,7 @@ function UserMenu({ loginHref, locale }: { loginHref?: string; locale?: string }
 }
 
 export default function Navbar(props: NavbarProps) {
-  const { onSearchOpen, freeCheckHref, industries = DEFAULT_INDUSTRIES } = props;
+  const { onSearchOpen, freeCheckHref, industries = INDUSTRIES } = props;
   const t = useT('Navbar');
   const ctxLocale = useTradeLocale();
   const locale = props.locale || ctxLocale || 'en';

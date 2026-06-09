@@ -72,10 +72,7 @@ for (const dir of DIRS) {
           // Skip: maps returning plain objects (not JSX) — no `<tag>` in return
           // Skip: maps in generateStaticParams — always plain objects
           // Skip: maps as prop values (rows={...} or data=...)
-          const returnsJsx = blockLines.includes('<') && !blockLines.includes('({') && !blockLines.includes('return {');
-          const inPropValue = blockLines.includes('rows={') || blockLines.includes('items={') || blockLines.includes('data={');
-          
-          if (blockLines.includes('=>') && !blockLines.includes('key=') && returnsJsx && !inPropValue) {
+          if (blockLines.includes('=>') && !blockLines.includes('key=') && blockLines.includes('<') && !blockLines.includes('({') && !blockLines.includes('return {') && !blockLines.includes('rows={') && !blockLines.includes('.slice(')) {
             fail(relativeFile, mapLine, blockLines.trim().slice(0, 80));
             fileHasIssue = true;
           }

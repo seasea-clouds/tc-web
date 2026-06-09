@@ -5,7 +5,6 @@ import { sharedOpenGraph, sharedTwitter, buildLanguages } from '@trade/ui/seo';
 import ContactForm from '@/components/ContactForm';
 import { WHATSAPP_URL } from '@trade/ui';
 import CTASection from '@/components/CTASection';
-import Breadcrumb from '@/components/Breadcrumb';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const locale = (await params).locale;
@@ -50,14 +49,6 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
 
   return (
     <main>
-      <Breadcrumb
-        locale={locale}
-        items={[
-          { label: bcT('home'), href: `/${locale}/` },
-          { label: t('title') },
-        ]}
-      />
-
       {/* Hero */}
       <section className="py-16 bg-primary-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

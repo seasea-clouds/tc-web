@@ -3,7 +3,6 @@ import { locales } from '@/i18n/routing';
 import { sharedOpenGraph, sharedTwitter, buildLanguages } from '@trade/ui/seo';
 import { getAllPostSlugs } from '@/lib/blog';
 import { industries } from '@/data/industries';
-import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 
 export function generateStaticParams() {
@@ -93,14 +92,6 @@ export default async function SitemapPage({ params }: { params: Promise<{ locale
 
   return (
     <main>
-      <Breadcrumb
-        locale={locale}
-        items={[
-          { label: bcT('home'), href: `/${locale}/` },
-          { label: t('pageTitle') || 'Site Map' },
-        ]}
-      />
-
       <div className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-3xl md:text-4xl font-bold text-primary-navy mb-2">
           {t('pageTitle') || 'Site Map'}

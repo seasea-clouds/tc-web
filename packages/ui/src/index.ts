@@ -1,5 +1,6 @@
 export { default as CfAnalytics } from './CfAnalytics';
 export { default as Navbar } from './Navbar';
+export { default as AutoBreadcrumb } from './AutoBreadcrumb';
 export { default as Footer } from './Footer';
 export { default as LanguageSwitcher } from './LanguageSwitcher';
 export { default as ActionDock } from './ActionDock';

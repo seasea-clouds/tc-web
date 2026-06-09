@@ -12,7 +12,6 @@ import ServiceFAQ from '@/components/ServiceFAQ';
 import ContactForm from '@/components/ContactForm';
 import CTASection from '@/components/CTASection';
 import HowToJsonLd from '@/components/HowToJsonLd';
-import Breadcrumb from '@/components/Breadcrumb';
 
 export function generateStaticParams() {
   const params: Array<{ locale: string; industry: string }> = [];
@@ -81,14 +80,6 @@ export default async function IndustryPage({
 
   return (
     <main>
-      <Breadcrumb
-        locale={locale}
-        items={[
-          { label: bcT('home'), href: `/${locale}/` },
-          { label: bcT('industries'), href: `/${locale}/industries` },
-          { label: t('heroTitle') },
-        ]}
-      />
       <HowToJsonLd locale={locale} namespace={industry.namespace} url={url} />
       <Hero
         title={t('heroTitle')}

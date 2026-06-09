@@ -2,7 +2,7 @@
 import { useT } from '@trade/ui';
 
 import { useState, useEffect } from 'react';
-import { useAuth } from '@/components/AuthProvider';
+import { useAuth } from '@trade/ui';
 import Link from 'next/link';
 
 export default function SubscriptionPage() {

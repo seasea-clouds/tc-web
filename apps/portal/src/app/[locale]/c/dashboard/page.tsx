@@ -1,7 +1,7 @@
 'use client';
 
 import ProtectedRoute from '@/components/ProtectedRoute';
-import { useAuth } from '@/components/AuthProvider';
+import { useAuth } from '@trade/ui';
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 

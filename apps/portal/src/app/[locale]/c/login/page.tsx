@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef } from 'react';
-import { useAuth } from '@/components/AuthProvider';
+import { useAuth } from '@trade/ui';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import TurnstileWidget from '@/components/TurnstileWidget';

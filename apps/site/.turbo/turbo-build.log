@@ -1,14 +1,7 @@
 
 > @trade/site@2.0.0 build
-> bash ../../packages/scripts/merge-blog.sh && node ../../packages/scripts/images/convert-webp.mjs && node ../../packages/scripts/build-search-index.mjs && node ../../packages/scripts/build-search-translations.mjs && next build && cp -r ../../apps/blog/out/_next/static/chunks/* out/_next/static/chunks/ 2>/dev/null; cp -r ../../apps/blog/out/_next/static/css/* out/_next/static/css/ 2>/dev/null; cp -r ../../apps/blog/out/_next/static/media/* out/_next/static/media/ 2>/dev/null; true && node ../../packages/scripts/build-all.mjs --base-url=https://sinotradecompliance.com --out-dir=out && node ../../packages/scripts/clean-rsc.js && node ../../packages/scripts/check-hardcoded.mjs --ci && node ../../packages/scripts/check-translations.mjs --short
+> node ../../packages/scripts/images/convert-webp.mjs && node ../../packages/scripts/build-search-index.mjs && node ../../packages/scripts/build-search-translations.mjs && next build && node ../../packages/scripts/build-all.mjs --base-url=https://sinotradecompliance.com --out-dir=out && node ../../packages/scripts/clean-rsc.js && node ../../packages/scripts/check-hardcoded.mjs --ci && node ../../packages/scripts/check-translations.mjs --short
 
-=== Building blog (no assetPrefix) ===
-Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
-To eliminate this warning, add "type": "module" to /root/projects/trade/web/package.json.
-(Use `node --trace-warnings ...` to show where the warning was created)
-=== Merging blog pages into site public/ ===
-=== Cleaning up blog artifacts from site public ===
-✅ Blog merge complete (pages only, chunks will merge post-build)
 Converting 18 images to WebP...
 
   ✓ david-zhang.jpg: 77K → 28K (63% saved)
@@ -35,70 +28,71 @@ Component paths updated: 0
 ==================================================
 Images: 18 converted
 Size: 1138K → 473K (58% saved)
+Apps discovered: blog, portal, site
 Generating search index for 48 locales...
-  af: 52 items (6S + 7B + 39F)
-  ar: 52 items (6S + 7B + 39F)
-  az: 52 items (6S + 7B + 39F)
-  be: 52 items (6S + 7B + 39F)
-  bg: 52 items (6S + 7B + 39F)
-  bn: 52 items (6S + 7B + 39F)
-  ca: 52 items (6S + 7B + 39F)
-  cs: 52 items (6S + 7B + 39F)
-  da: 52 items (6S + 7B + 39F)
-  de: 52 items (6S + 7B + 39F)
-  el: 52 items (6S + 7B + 39F)
-  en: 52 items (6S + 7B + 39F)
-  es: 52 items (6S + 7B + 39F)
-  fa: 52 items (6S + 7B + 39F)
-  fi: 52 items (6S + 7B + 39F)
-  fr: 52 items (6S + 7B + 39F)
-  he: 52 items (6S + 7B + 39F)
-  hi: 52 items (6S + 7B + 39F)
-  hr: 52 items (6S + 7B + 39F)
-  hu: 52 items (6S + 7B + 39F)
-  hy: 52 items (6S + 7B + 39F)
-  id: 52 items (6S + 7B + 39F)
-  it: 52 items (6S + 7B + 39F)
-  ja: 52 items (6S + 7B + 39F)
-  ka: 52 items (6S + 7B + 39F)
-  ko: 52 items (6S + 7B + 39F)
-  ms: 52 items (6S + 7B + 39F)
-  ne: 52 items (6S + 7B + 39F)
-  nl: 52 items (6S + 7B + 39F)
-  no: 52 items (6S + 7B + 39F)
-  pl: 52 items (6S + 7B + 39F)
-  pt: 52 items (6S + 7B + 39F)
-  ro: 52 items (6S + 7B + 39F)
-  ru: 52 items (6S + 7B + 39F)
-  si: 52 items (6S + 7B + 39F)
-  sk: 52 items (6S + 7B + 39F)
-  sl: 52 items (6S + 7B + 39F)
-  sq: 52 items (6S + 7B + 39F)
-  sr: 52 items (6S + 7B + 39F)
-  sv: 52 items (6S + 7B + 39F)
-  sw: 52 items (6S + 7B + 39F)
-  ta: 52 items (6S + 7B + 39F)
-  th: 52 items (6S + 7B + 39F)
-  tr: 52 items (6S + 7B + 39F)
-  uk: 52 items (6S + 7B + 39F)
-  ur: 52 items (6S + 7B + 39F)
-  vi: 52 items (6S + 7B + 39F)
-  zh: 52 items (6S + 7B + 39F)
+  af: 296 items (6S + 7B + 39F + 244C)
+  ar: 296 items (6S + 7B + 39F + 244C)
+  az: 296 items (6S + 7B + 39F + 244C)
+  be: 296 items (6S + 7B + 39F + 244C)
+  bg: 296 items (6S + 7B + 39F + 244C)
+  bn: 296 items (6S + 7B + 39F + 244C)
+  ca: 296 items (6S + 7B + 39F + 244C)
+  cs: 296 items (6S + 7B + 39F + 244C)
+  da: 296 items (6S + 7B + 39F + 244C)
+  de: 296 items (6S + 7B + 39F + 244C)
+  el: 297 items (6S + 7B + 39F + 245C)
+  en: 296 items (6S + 7B + 39F + 244C)
+  es: 297 items (6S + 7B + 39F + 245C)
+  fa: 297 items (6S + 7B + 39F + 245C)
+  fi: 297 items (6S + 7B + 39F + 245C)
+  fr: 297 items (6S + 7B + 39F + 245C)
+  he: 296 items (6S + 7B + 39F + 244C)
+  hi: 296 items (6S + 7B + 39F + 244C)
+  hr: 296 items (6S + 7B + 39F + 244C)
+  hu: 296 items (6S + 7B + 39F + 244C)
+  hy: 296 items (6S + 7B + 39F + 244C)
+  id: 296 items (6S + 7B + 39F + 244C)
+  it: 296 items (6S + 7B + 39F + 244C)
+  ja: 296 items (6S + 7B + 39F + 244C)
+  ka: 296 items (6S + 7B + 39F + 244C)
+  ko: 296 items (6S + 7B + 39F + 244C)
+  ms: 296 items (6S + 7B + 39F + 244C)
+  ne: 296 items (6S + 7B + 39F + 244C)
+  nl: 296 items (6S + 7B + 39F + 244C)
+  no: 296 items (6S + 7B + 39F + 244C)
+  pl: 296 items (6S + 7B + 39F + 244C)
+  pt: 296 items (6S + 7B + 39F + 244C)
+  ro: 296 items (6S + 7B + 39F + 244C)
+  ru: 296 items (6S + 7B + 39F + 244C)
+  si: 296 items (6S + 7B + 39F + 244C)
+  sk: 296 items (6S + 7B + 39F + 244C)
+  sl: 296 items (6S + 7B + 39F + 244C)
+  sq: 296 items (6S + 7B + 39F + 244C)
+  sr: 296 items (6S + 7B + 39F + 244C)
+  sv: 296 items (6S + 7B + 39F + 244C)
+  sw: 296 items (6S + 7B + 39F + 244C)
+  ta: 296 items (6S + 7B + 39F + 244C)
+  th: 296 items (6S + 7B + 39F + 244C)
+  tr: 296 items (6S + 7B + 39F + 244C)
+  uk: 296 items (6S + 7B + 39F + 244C)
+  ur: 296 items (6S + 7B + 39F + 244C)
+  vi: 296 items (6S + 7B + 39F + 244C)
+  zh: 296 items (6S + 7B + 39F + 244C)
 Done.
 Generated search-widget-translations.json: 48 locales → /root/projects/trade/web/apps/site/public/search-widget-translations.json
 ▲ Next.js 16.2.4 (Turbopack)
 
 ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
   Creating an optimized production build ...
-✓ Compiled successfully in 2.7s
+✓ Compiled successfully in 2.1s
   Running TypeScript ...
-  Finished TypeScript in 3.7s ...
+  Finished TypeScript in 3.2s ...
   Collecting page data using 19 workers ...
   Generating static pages using 19 workers (0/1301) ...
   Generating static pages using 19 workers (325/1301) 
   Generating static pages using 19 workers (650/1301) 
   Generating static pages using 19 workers (975/1301) 
-✓ Generating static pages using 19 workers (1301/1301) in 5.4s
+✓ Generating static pages using 19 workers (1301/1301) in 4.7s
   Finalizing page optimization ...
 ⚠ Statically exporting a Next.js application via `next export` disables API routes and middleware.
 This command is meant for static-only hosts, and is not necessary to make your application static.
@@ -224,8 +218,8 @@ Output:   /root/projects/trade/web/apps/site/out
 
 ✅ build-all.mjs complete
 🧹 Cleaning RSC .txt payload files from out/...
-✅ Deleted 12397 RSC payload files (753.4 MB freed)
-(node:2150650) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/projects/trade/web/packages/scripts/clean-rsc.js is not specified and it doesn't parse as CommonJS.
+✅ Deleted 12397 RSC payload files (751.7 MB freed)
+(node:2362460) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/projects/trade/web/packages/scripts/clean-rsc.js is not specified and it doesn't parse as CommonJS.
 Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
 To eliminate this warning, add "type": "module" to /root/projects/trade/web/package.json.
 (Use `node --trace-warnings ...` to show where the warning was created)

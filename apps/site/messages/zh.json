@@ -849,7 +849,9 @@
     "coverItems4": "成分与添加剂合规验证",
     "coverItems5": "冷链与温度要求",
     "coverItems6": "持续法规监测与续期支持",
-    "coverItems7": "乳制品行业合规培训与咨询服务"
+    "coverItems7": "乳制品行业合规培训与咨询服务",
+    "metaDescription": "进入中国的乳制品和奶制品的专家 GACC 注册、中文标签和进口合规性。帮助乳制品出口商超过 15 年。",
+    "metaTitle": "乳制品及奶制品出口商的中国合规性|海关总署注册指南"
   },
   "IndustryMeat": {
     "heroTitle": "肉类和海鲜出口商的中国合规性",
@@ -879,7 +881,9 @@
     "coverItems4": "冷链物流合规指导",
     "coverItems5": "各国市场准入要求",
     "coverItems6": "持续法规监测与续期支持",
-    "coverItems7": "肉制品及水产品进口商合规培训"
+    "coverItems7": "肉制品及水产品进口商合规培训",
+    "metaDescription": "为向中国的肉类和海鲜出口商提供专业的 GACC CIFER 注册、冷链合规以及海关支持。",
+    "metaTitle": "中国肉类和海鲜进口合规|海关总署注册指南"
   },
   "IndustryWine": {
     "heroTitle": "葡萄酒及烈酒出口商的中国合规性",
@@ -910,7 +914,9 @@
     "coverItems4": "添加剂与亚硫酸盐合规验证",
     "coverItems5": "各国葡萄酒进口要求",
     "coverItems6": "持续法规监测与续期支持",
-    "coverItems7": "葡萄酒行业合规培训与咨询服务"
+    "coverItems7": "葡萄酒行业合规培训与咨询服务",
+    "metaDescription": "完成进入中国的葡萄酒和烈酒的进口合规性。 GACC 注册、品牌保护和职责优化。",
+    "metaTitle": "葡萄酒及烈酒进口至中国| GACC 注册和品牌保护"
   },
   "IndustrySkincare": {
     "heroTitle": "护肤品和化妆品品牌的中国合规性",
@@ -934,7 +940,9 @@
     "faq6a": "基本的。中国的商标先申请制度意味着您的品牌名称必须在进入市场之前注册。如果没有它，您将面临品牌被抢注和无法行使权利的风险。作为我们服务的一部分，我们处理商标注册。",
     "jsonldName": "护肤品和化妆品中国合规服务",
     "jsonldDescription": "CSAR 下的 NMPA 备案、成分安全评估、动物试验豁免指南以及进入中国的化妆品品牌的进口咨询。",
-    "cta": "获得免费评估"
+    "cta": "获得免费评估",
+    "metaDescription": "国际护肤品和化妆品品牌进入中国的 NMPA 化妆品备案、成分安全审查以及 CSAR 合规。",
+    "metaTitle": "化妆品进口中国| NMPA备案和CSAR合规指南"
   },
   "IndustryPetFood": {
     "heroTitle": "宠物食品出口商的中国合规性",
@@ -958,7 +966,9 @@
     "faq6a": "是的。中国宠物食品市场是全球增长最快的市场之一，年增长率超过15%。中产阶级的崛起和宠物拥有量的增加为国际品牌创造了巨大的机遇。",
     "jsonldName": "宠物食品中国合规服务",
     "jsonldDescription": "宠物食品出口商进入中国市场的 GACC 注册、饲料进口许可、成分批准和标签合规性。",
-    "cta": "获得免费评估"
+    "cta": "获得免费评估",
+    "metaDescription": "宠物食品出口商的端到端 GACC 和 MOA 注册。中国的成分批准、标签合规性和进口许可证。",
+    "metaTitle": "宠物食品进口中国| GACC & MOA 注册指南"
   },
   "IndustrySupplements": {
     "heroTitle": "保健品和补充剂出口商的中国合规性",
@@ -982,7 +992,9 @@
     "faq6a": "是的。跨境电商允许保健品无需国家市场监督管理总局注册即可销售，这使其成为一个有吸引力的进入渠道。但是，产品仍必须符合安全标准并符合正面清单要求。",
     "jsonldName": "健康与补充剂中国合规服务",
     "jsonldDescription": "国家市场监督管理总局保健食品注册、成分评估、标签合规性以及为进入中国的补充剂出口商提供进口咨询。",
-    "cta": "获得免费评估"
+    "cta": "获得免费评估",
+    "metaDescription": "进入中国市场的膳食补充剂的国家市场监督管理总局保健食品注册、海关总署备案和标签合规性。",
+    "metaTitle": "保健品中国进口|市场监管总局注册指南"
   },
   "IndustryBaby": {
     "heroTitle": "母婴产品出口商的中国合规性",
@@ -1006,7 +1018,9 @@
     "faq6a": "是的。尽管出生率下降，中国父母在每个孩子身上的支出却比以往任何时候都高。优质进口婴儿产品，特别是婴儿配方奶粉和有机婴儿食品，在中产阶级家庭中仍然有很高的需求。",
     "jsonldName": "母婴产品中国合规服务",
     "jsonldDescription": "国家市场监督管理总局婴儿配方奶粉注册、海关总署食品注册、国家药监局化妆品备案以及进入中国的母婴产品出口商的安全合规。",
-    "cta": "获得免费评估"
+    "cta": "获得免费评估",
+    "metaDescription": "婴幼儿配方奶粉进入中国的婴幼儿配方奶粉国家市场监管总局注册、海关总署合规、国家药品监督管理局备案。",
+    "metaTitle": "婴儿用品及婴儿配方奶粉中国进口|市场监管总局和海关总署指南"
   },
   "IndustryElectronics": {
     "heroTitle": "消费电子产品出口商的中国合规性",
@@ -1030,7 +1044,9 @@
     "faq6a": "批判的。电子品牌在进入市场前应在中国注册商标、专利和外观设计。中国的先申请制度意味着注册延迟可能导致知识产权盗窃。我们提供品牌保护服务。",
     "jsonldName": "消费电子产品中国合规服务",
     "jsonldDescription": "CCC 认证、SRRC 批准、中国标签合规性以及电子产品出口商进入中国市场的知识产权保护。",
-    "cta": "获得免费评估"
+    "cta": "获得免费评估",
+    "metaDescription": "CCC认证、SRRC批准以及消费电子品牌进入中国市场的IP保护。",
+    "metaTitle": "消费类电子产品中国进口| CCC认证指南"
   },
   "IndustryMedical": {
     "heroTitle": "医疗器械出口商的中国合规性",
@@ -1061,7 +1077,9 @@
     "coverItems4": "NMPA 审核准备与支持",
     "coverItems5": "上市后监管与合规监测",
     "coverItems6": "持续法规监测与续期支持",
-    "coverItems7": "医疗器械合规培训与咨询服务"
+    "coverItems7": "医疗器械合规培训与咨询服务",
+    "metaDescription": "为国际医疗器械生产企业提供NMPA医疗器械注册、临床评价、CCC认证。",
+    "metaTitle": "医疗器械中国进口| NMPA I/II/III类注册"
   },
   "IndustryEcommerce": {
     "heroTitle": "跨境电商品牌中国合规",
@@ -1092,7 +1110,9 @@
     "coverItems4": "跨境电商税收优化",
     "coverItems5": "中文标签豁免资格评估",
     "coverItems6": "持续法规监测与合规支持",
-    "coverItems7": "电商平台合规培训与咨询服务"
+    "coverItems7": "电商平台合规培训与咨询服务",
+    "metaDescription": "天猫国际、京东全球购、抖音跨境电商合规。平台上线、保税仓库和税务优化。",
+    "metaTitle": "中国跨境电商|天猫、京东、抖音合规"
   },
   "IndustriesCommon": {
     "heroTitle": "我们服务的行业",
@@ -1123,7 +1143,9 @@
       "medicaldevicesDesc": "NMPA I/II/III类注册及临床评价。",
       "crossborderecommerce": "跨境电商",
       "crossborderecommerceDesc": "跨境电商监管、平台合规和税务优化。"
-    }
+    },
+    "metaTitle": "China Import Compliance by Industry | GACC, CCC, NMPA Services",
+    "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
     "coverItems1": "CCC 认证目录评估",

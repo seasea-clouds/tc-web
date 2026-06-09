@@ -1,10 +1,30 @@
 import { getTranslations } from 'next-intl/server';
+import { locales } from '@/i18n/routing';
+import { sharedOpenGraph, sharedTwitter, buildLanguages } from '@trade/ui/seo';
 import { industries } from '@/data/industries';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 import Breadcrumb from '@/components/Breadcrumb';
 import ContactForm from '@/components/ContactForm';
 import CTASection from '@/components/CTASection';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const locale = (await params).locale;
+  const t = await getTranslations({ locale, namespace: 'IndustriesCommon' });
+  const title = `${t('heroTitle')} | SinoTrade Compliance`;
+  const description = t('heroSubtitle');
+  const url = `https://sinotradecompliance.com/${locale}/industries/`;
+  return {
+    title,
+    description,
+    openGraph: sharedOpenGraph({ title, description, locale, url }),
+    twitter: sharedTwitter({ title, description }),
+    alternates: {
+      canonical: url,
+      languages: buildLanguages(locale, [...locales], '/industries/'),
+    },
+  };
+}
 
 export default async function IndustriesPage({ params }: { params: Promise<{ locale: string }> }) {
   const resolvedParams = await params;

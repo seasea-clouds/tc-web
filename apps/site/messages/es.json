@@ -849,7 +849,9 @@
     "coverItems4": "Verificación de cumplimiento de ingredientes y aditivos",
     "coverItems5": "Requisitos de cadena de frío y temperatura",
     "coverItems6": "Monitoreo regulatorio continuo y soporte de renovación",
-    "coverItems7": "Capacitación y asesoría en cumplimiento de la industria láctea"
+    "coverItems7": "Capacitación y asesoría en cumplimiento de la industria láctea",
+    "metaDescription": "Registro experto en GACC, etiquetado chino y cumplimiento de las importaciones de productos lácteos y lácteos que ingresan a China. Más de 15 años ayudando a exportadores de lácteos.",
+    "metaTitle": "Cumplimiento de China para los exportadores de lácteos y productos lácteos | Guía de registro GACC"
   },
   "IndustryMeat": {
     "heroTitle": "Cumplimiento de China para exportadores de carnes y mariscos",
@@ -879,7 +881,9 @@
     "coverItems4": "Guía de cumplimiento logístico de cadena de frío",
     "coverItems5": "Requisitos de acceso al mercado por país",
     "coverItems6": "Monitoreo regulatorio continuo y soporte de renovación",
-    "coverItems7": "Capacitación en cumplimiento regulatorio para importadores de carne y mariscos"
+    "coverItems7": "Capacitación en cumplimiento regulatorio para importadores de carne y mariscos",
+    "metaDescription": "Registro profesional GACC CIFER, cumplimiento de la cadena de frío y soporte aduanero para exportadores de carnes y mariscos a China.",
+    "metaTitle": "Cumplimiento de importaciones de carnes y mariscos de China | Guía de registro GACC"
   },
   "IndustryWine": {
     "heroTitle": "Cumplimiento de China para exportadores de vinos y bebidas espirituosas",
@@ -910,7 +914,9 @@
     "coverItems4": "Verificación de cumplimiento de aditivos y sulfitos",
     "coverItems5": "Requisitos de importación de vino por país",
     "coverItems6": "Monitoreo regulatorio continuo y soporte de renovación",
-    "coverItems7": "Capacitación y asesoría en cumplimiento de la industria del vino"
+    "coverItems7": "Capacitación y asesoría en cumplimiento de la industria del vino",
+    "metaDescription": "Cumplimiento total de las importaciones de vinos y licores que ingresan a China. Registro GACC, protección de marca y optimización de derechos.",
+    "metaTitle": "Importación de vinos y licores a China | Registro GACC y protección de marca"
   },
   "IndustrySkincare": {
     "heroTitle": "Cumplimiento de China para marcas de cosméticos y cuidado de la piel",
@@ -934,7 +940,9 @@
     "faq6a": "Básico. El sistema de registro de marca de China significa que su marca debe registrarse antes de ingresar al mercado. Sin él, corre el riesgo de ocupar su marca y de no poder hacer valer sus derechos. Manejamos el registro de marcas como parte de nuestro servicio.",
     "jsonldName": "Servicios de cumplimiento de cuidado de la piel y cosméticos en China",
     "jsonldDescription": "Presentación de NMPA bajo CSAR, evaluación de seguridad de ingredientes, guía de exención de pruebas con animales y consultoría de importación para marcas de cosméticos que ingresan a China.",
-    "cta": "Obtenga una evaluación gratuita"
+    "cta": "Obtenga una evaluación gratuita",
+    "metaDescription": "Presentación de cosméticos NMPA, revisión de seguridad de ingredientes y cumplimiento CSAR para marcas internacionales de cosméticos y cuidado de la piel que ingresan a China.",
+    "metaTitle": "Importación de cosméticos China | Guía de cumplimiento de CSAR y presentación de NMPA"
   },
   "IndustryPetFood": {
     "heroTitle": "Cumplimiento de China para los exportadores de alimentos para mascotas",
@@ -958,7 +966,9 @@
     "faq6a": "Sí. El mercado de alimentos para mascotas de China es uno de los de más rápido crecimiento del mundo, con un crecimiento anual superior al 15%. La creciente clase media y el aumento de la propiedad de mascotas crean importantes oportunidades para las marcas internacionales.",
     "jsonldName": "Servicios de cumplimiento de alimentos para mascotas en China",
     "jsonldDescription": "Registro GACC, licencias de importación de piensos, aprobación de ingredientes y cumplimiento del etiquetado para los exportadores de alimentos para mascotas que ingresan al mercado chino.",
-    "cta": "Obtenga una evaluación gratuita"
+    "cta": "Obtenga una evaluación gratuita",
+    "metaDescription": "Registro GACC y MOA de extremo a extremo para exportadores de alimentos para mascotas. Aprobación de ingredientes, cumplimiento de etiquetado y permisos de importación para China.",
+    "metaTitle": "Importación de alimentos para mascotas China | Guía de registro de GACC y MOA"
   },
   "IndustrySupplements": {
     "heroTitle": "Cumplimiento de China para exportadores de salud y suplementos",
@@ -982,7 +992,9 @@
     "faq6a": "Sí. El comercio electrónico transfronterizo permite la venta de suplementos sin registro SAMR, lo que lo convierte en un canal de entrada atractivo. Sin embargo, los productos aún deben cumplir con los estándares de seguridad y cumplir con los requisitos de la lista positiva.",
     "jsonldName": "Servicios de cumplimiento de suplementos de salud en China",
     "jsonldDescription": "Registro de alimentos saludables SAMR, evaluación de ingredientes, cumplimiento del etiquetado y consultoría de importación para exportadores de suplementos que ingresan a China.",
-    "cta": "Obtenga una evaluación gratuita"
+    "cta": "Obtenga una evaluación gratuita",
+    "metaDescription": "Registro SAMR de alimentos saludables, presentación GACC y cumplimiento del etiquetado para suplementos dietéticos que ingresan al mercado chino.",
+    "metaTitle": "Suplementos para la salud Importación de China | Guía de registro SAMR"
   },
   "IndustryBaby": {
     "heroTitle": "Cumplimiento de China para exportadores de productos maternos y para bebés",
@@ -1006,7 +1018,9 @@
     "faq6a": "Sí. A pesar de una tasa de natalidad en descenso, los padres chinos gastan más por hijo que nunca. Los productos para bebés importados de primera calidad, especialmente las fórmulas infantiles y los alimentos orgánicos para bebés, siguen teniendo una gran demanda entre las familias de clase media.",
     "jsonldName": "Servicios de cumplimiento de productos para bebé y maternidad en China",
     "jsonldDescription": "Registro de fórmulas infantiles SAMR, registro de alimentos GACC, presentación de cosméticos NMPA y cumplimiento de seguridad para exportadores de productos maternos y para bebés que ingresan a China.",
-    "cta": "Obtenga una evaluación gratuita"
+    "cta": "Obtenga una evaluación gratuita",
+    "metaDescription": "Registro SAMR de fórmula infantil, cumplimiento de GACC y presentación de solicitudes NMPA para productos maternales y para bebés que ingresan a China.",
+    "metaTitle": "Productos para bebés y fórmulas infantiles Importación de China | Guía SAMR y GACC"
   },
   "IndustryElectronics": {
     "heroTitle": "Cumplimiento de China para los exportadores de productos electrónicos de consumo",
@@ -1030,7 +1044,9 @@
     "faq6a": "Crítico. Las marcas de productos electrónicos deben registrar marcas, patentes y diseños en China antes de ingresar al mercado. El sistema de \"primero en presentar la solicitud\" de China significa que los retrasos en el registro pueden dar lugar al robo de propiedad intelectual. Brindamos servicios de protección de marca.",
     "jsonldName": "Servicios de cumplimiento de electrónica de consumo en China",
     "jsonldDescription": "Certificación CCC, aprobación SRRC, cumplimiento del etiquetado chino y protección de propiedad intelectual para exportadores de productos electrónicos que ingresan al mercado chino.",
-    "cta": "Obtenga una evaluación gratuita"
+    "cta": "Obtenga una evaluación gratuita",
+    "metaDescription": "Certificación CCC, aprobación SRRC y protección IP para marcas de electrónica de consumo que ingresan al mercado chino.",
+    "metaTitle": "Importación de China de electrónica de consumo | Guía de certificación CCC"
   },
   "IndustryMedical": {
     "heroTitle": "Cumplimiento de China para exportadores de dispositivos médicos",
@@ -1061,7 +1077,9 @@
     "coverItems4": "Preparación y soporte para auditoría NMPA",
     "coverItems5": "Vigilancia post-mercado y monitoreo de cumplimiento",
     "coverItems6": "Monitoreo regulatorio continuo y soporte de renovación",
-    "coverItems7": "Capacitación y asesoría en cumplimiento de dispositivos médicos"
+    "coverItems7": "Capacitación y asesoría en cumplimiento de dispositivos médicos",
+    "metaDescription": "Registro de dispositivos médicos NMPA, evaluación clínica y certificación CCC para fabricantes internacionales de dispositivos médicos.",
+    "metaTitle": "Importación de dispositivos médicos de China | Registro NMPA Clase I/II/III"
   },
   "IndustryEcommerce": {
     "heroTitle": "Cumplimiento de China para marcas de comercio electrónico transfronterizo",
@@ -1092,7 +1110,9 @@
     "coverItems4": "Optimización fiscal de comercio electrónico transfronterizo",
     "coverItems5": "Evaluación de elegibilidad de exención de etiquetado chino",
     "coverItems6": "Monitoreo regulatorio continuo y soporte de cumplimiento",
-    "coverItems7": "Capacitación y asesoría en cumplimiento de plataformas de e-commerce"
+    "coverItems7": "Capacitación y asesoría en cumplimiento de plataformas de e-commerce",
+    "metaDescription": "Cumplimiento del comercio electrónico transfronterizo para Tmall Global, JD Worldwide y Douyin. Incorporación de plataforma, depósito aduanero y optimización fiscal.",
+    "metaTitle": "Comercio electrónico transfronterizo China | Tmall, JD, Cumplimiento de Douyin"
   },
   "IndustriesCommon": {
     "heroTitle": "Industrias a las que servimos",
@@ -1123,7 +1143,9 @@
       "medicaldevicesDesc": "Registro y evaluación clínica NMPA Clase I/II/III.",
       "crossborderecommerce": "Comercio electrónico transfronterizo",
       "crossborderecommerceDesc": "Regulaciones CBEC, cumplimiento de plataformas y optimización fiscal."
-    }
+    },
+    "metaTitle": "China Import Compliance by Industry | GACC, CCC, NMPA Services",
+    "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
     "coverItems1": "Evaluación del directorio de certificación CCC",

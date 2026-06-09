@@ -849,7 +849,9 @@
     "coverItems4": "Verifikasie van die nakoming van bestanddeel en bymiddels",
     "coverItems5": "Koueketting en temperatuurvereistes",
     "coverItems6": "Deurlopende regulatoriese monitering en hernuwingsondersteuning",
-    "coverItems7": "Suiwelbedryf nakoming opleiding en advies"
+    "coverItems7": "Suiwelbedryf nakoming opleiding en advies",
+    "metaDescription": "Deskundige GACC-registrasie, Chinese etikettering en invoervoldoening vir suiwel- en melkprodukte wat China binnekom. 15+ jaar om suiweluitvoerders te help.",
+    "metaTitle": "China-nakoming vir suiwel- en melkproduk-uitvoerders | GACC-registrasiegids"
   },
   "IndustryMeat": {
     "heroTitle": "China-nakoming vir vleis- en seekosuitvoerders",
@@ -879,7 +881,9 @@
     "coverItems4": "Koueketting logistieke nakoming leiding",
     "coverItems5": "Landspesifieke marktoegangsvereistes",
     "coverItems6": "Deurlopende regulatoriese monitering en hernuwingsondersteuning",
-    "coverItems7": "Reguleringsnakomingsopleiding vir vleis- en seekosinvoerders"
+    "coverItems7": "Reguleringsnakomingsopleiding vir vleis- en seekosinvoerders",
+    "metaDescription": "Professionele GACC CIFER-registrasie, koueketting-nakoming en doeane-ondersteuning vir vleis- en seekosuitvoerders na China.",
+    "metaTitle": "Vleis en seekos China invoer nakoming | GACC-registrasiegids"
   },
   "IndustryWine": {
     "heroTitle": "China-nakoming vir wyn- en spiritualieë-uitvoerders",
@@ -910,7 +914,9 @@
     "coverItems4": "Verifikasie van nakoming van toevoeging en sulfiet",
     "coverItems5": "Landspesifieke wyninvoervereistes",
     "coverItems6": "Deurlopende regulatoriese monitering en hernuwingsondersteuning",
-    "coverItems7": "Wynbedryf nakoming opleiding en advies"
+    "coverItems7": "Wynbedryf nakoming opleiding en advies",
+    "metaDescription": "Voltooi invoer nakoming vir wyn en spiritualieë wat China binnekom. GACC-registrasie, handelsmerkbeskerming en diensoptimalisering.",
+    "metaTitle": "Wyn en spiritualieë invoer na China | GACC-registrasie en handelsmerkbeskerming"
   },
   "IndustrySkincare": {
     "heroTitle": "China-nakoming vir velsorg- en skoonheidsmiddelshandelsmerke",
@@ -934,7 +940,9 @@
     "faq6a": "Noodsaaklik. China se eerste-na-lêer handelsmerkstelsel beteken dat jou handelsnaam geregistreer moet word voordat jy die mark betree. Daarsonder loop jy die risiko om handelsmerk-hurking en onvermoë om jou regte af te dwing. Ons hanteer handelsmerkregistrasie as deel van ons diens.",
     "jsonldName": "Velversorging en Kosmetika China Nakomingsdienste",
     "jsonldDescription": "NMPA-liassering onder CSAR, bestanddeelveiligheidsevaluering, leiding vir vrystelling van dieretoetsing, en invoerkonsultasie vir skoonheidsmiddelhandelsmerke wat China binnekom.",
-    "cta": "Kry gratis assessering"
+    "cta": "Kry gratis assessering",
+    "metaDescription": "NMPA-skoonheidsmiddelliassering, bestanddeelveiligheidsoorsig en CSAR-nakoming vir internasionale velsorg- en skoonheidsmiddelhandelsmerke wat China binnekom.",
+    "metaTitle": "Skoonheidsmiddels invoer China | NMPA-liasseer- en CSAR-voldoeningsgids"
   },
   "IndustryPetFood": {
     "heroTitle": "China-nakoming vir troeteldiervoedseluitvoerders",
@@ -958,7 +966,9 @@
     "faq6a": "Ja. China se troeteldiervoedselmark is een van die vinnigs groeiende ter wêreld, met jaarlikse groei van meer as 15%. Die stygende middelklas en toenemende troeteldiereienaarskap skep aansienlike geleenthede vir internasionale handelsmerke.",
     "jsonldName": "Troeteldierkos China Nakomingsdienste",
     "jsonldDescription": "GACC-registrasie, voerinvoerlisensiëring, bestanddeelgoedkeuring en etikettering vir uitvoerders van troeteldierkos wat die Chinese mark betree.",
-    "cta": "Kry gratis assessering"
+    "cta": "Kry gratis assessering",
+    "metaDescription": "Einde-tot-einde GACC- en MOA-registrasie vir troeteldiervoedseluitvoerders. Bestanddeelgoedkeuring, etikettering en invoerpermitte vir China.",
+    "metaTitle": "Troeteldiervoedsel invoer China | GACC & MOA Registrasiegids"
   },
   "IndustrySupplements": {
     "heroTitle": "China-nakoming vir gesondheids- en aanvullingsuitvoerders",
@@ -982,7 +992,9 @@
     "faq6a": "Ja. Oorgrens-e-handel laat toe dat aanvullings verkoop word sonder SAMR-registrasie, wat dit 'n aantreklike toegangskanaal maak. Produkte moet egter steeds aan veiligheidstandaarde voldoen en aan positiewe lysvereistes voldoen.",
     "jsonldName": "Gesondheidstoevoegings China Nakomingsdienste",
     "jsonldDescription": "SAMR gesondheidsvoedselregistrasie, bestanddeelbeoordeling, etikettering en invoerkonsultasie vir aanvullingsuitvoerders wat China binnekom.",
-    "cta": "Kry gratis assessering"
+    "cta": "Kry gratis assessering",
+    "metaDescription": "SAMR-gesondheidsvoedselregistrasie, GACC-liassering en nakoming van etikettering vir dieetaanvullings wat die Chinese mark betree.",
+    "metaTitle": "Gesondheidsaanvullings China Invoer | SAMR Registrasie Gids"
   },
   "IndustryBaby": {
     "heroTitle": "China-nakoming vir baba- en moederprodukuitvoerders",
@@ -1006,7 +1018,9 @@
     "faq6a": "Ja. Ondanks 'n dalende geboortesyfer bestee Chinese ouers meer per kind as ooit tevore. Premium ingevoerde babaprodukte, veral babaformule en organiese babakos, bly hoog in aanvraag onder middelklasgesinne.",
     "jsonldName": "Baba en Moederprodukte China Nakomingsdienste",
     "jsonldDescription": "SAMR-babaformuleregistrasie, GACC-voedselregistrasie, NMPA-skoonheidsmiddelliassering en veiligheidsnakoming vir baba- en moederprodukuitvoerders wat China binnekom.",
-    "cta": "Kry gratis assessering"
+    "cta": "Kry gratis assessering",
+    "metaDescription": "SAMR-registrasie vir babaformule, GACC-nakoming en NMPA-liassering vir baba- en moederprodukte wat China binnekom.",
+    "metaTitle": "Baba produkte en baba formule China invoer | SAMR & GACC Gids"
   },
   "IndustryElectronics": {
     "heroTitle": "China-nakoming vir verbruikerselektronika-uitvoerders",
@@ -1030,7 +1044,9 @@
     "faq6a": "Kritiek. Elektroniese handelsmerke moet handelsmerke, patente en ontwerpe in China registreer voor marktoetrede. China se eerste-na-lêer-stelsel beteken vertragings in registrasie kan lei tot IP-diefstal. Ons bied handelsmerkbeskermingsdienste.",
     "jsonldName": "Verbruikerselektronika China Nakomingsdienste",
     "jsonldDescription": "CCC-sertifisering, SRRC-goedkeuring, Chinese etikettering en IP-beskerming vir elektroniese uitvoerders wat die Chinese mark betree.",
-    "cta": "Kry gratis assessering"
+    "cta": "Kry gratis assessering",
+    "metaDescription": "CCC-sertifisering, SRRC-goedkeuring en IP-beskerming vir verbruikerselektronika-handelsmerke wat die Chinese mark betree.",
+    "metaTitle": "Verbruikerselektronika China Invoer | CCC Sertifisering Gids"
   },
   "IndustryMedical": {
     "heroTitle": "China-nakoming vir uitvoerders van mediese toestelle",
@@ -1061,7 +1077,9 @@
     "coverItems4": "NMPA oudit voorbereiding en ondersteuning",
     "coverItems5": "Na-mark toesig en voldoeningsmonitering",
     "coverItems6": "Deurlopende regulatoriese monitering en hernuwingsondersteuning",
-    "coverItems7": "Mediese toestel nakoming opleiding en advies"
+    "coverItems7": "Mediese toestel nakoming opleiding en advies",
+    "metaDescription": "NMPA mediese toestelregistrasie, kliniese evaluering en CCC-sertifisering vir internasionale vervaardigers van mediese toestelle.",
+    "metaTitle": "Mediese Toestelle China Invoer | NMPA Klas I/II/III Registrasie"
   },
   "IndustryEcommerce": {
     "heroTitle": "China-nakoming vir oorgrens-e-handelsmerke",
@@ -1092,7 +1110,9 @@
     "coverItems4": "Oorgrens-e-handelbelastingoptimalisering",
     "coverItems5": "Chinese etiket vrystelling geskiktheid assessering",
     "coverItems6": "Deurlopende regulatoriese monitering en voldoeningsondersteuning",
-    "coverItems7": "E-handel platform nakoming opleiding en advies"
+    "coverItems7": "E-handel platform nakoming opleiding en advies",
+    "metaDescription": "Oorgrens-e-handel-nakoming vir Tmall Global, JD Worldwide en Douyin. Platformaanboord, gebonde pakhuis en belastingoptimalisering.",
+    "metaTitle": "Oorgrens-e-handel China | Tmall, JD, Douyin-nakoming"
   },
   "IndustriesCommon": {
     "heroTitle": "Nywerhede wat ons bedien",
@@ -1123,7 +1143,9 @@
       "medicaldevicesDesc": "NMPA Klas I/II/III registrasie en kliniese evaluering.",
       "crossborderecommerce": "Oorgrens e-handel",
       "crossborderecommerceDesc": "CBEC-regulasies, platformvoldoening en belastingoptimalisering."
-    }
+    },
+    "metaTitle": "China Import Compliance by Industry | GACC, CCC, NMPA Services",
+    "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
     "coverItems1": "CCC sertifisering gids assessering",

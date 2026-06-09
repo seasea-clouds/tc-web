@@ -849,7 +849,9 @@
     "coverItems4": "Összetevők és adalékanyagok megfelelőségének ellenőrzése",
     "coverItems5": "Hideglánc és hőmérsékleti követelmények",
     "coverItems6": "Folyamatos szabályozási monitoring és megújítási támogatás",
-    "coverItems7": "Tejipari megfelelőségi képzés és tanácsadás"
+    "coverItems7": "Tejipari megfelelőségi képzés és tanácsadás",
+    "metaDescription": "Szakértői GACC-regisztráció, kínai címkézés, valamint a Kínába belépő tej- és tejtermékek behozatalának megfelelősége. 15+ éve segíti a tejexportőröket.",
+    "metaTitle": "Kínai megfelelés a tej- és tejtermék-exportőrök számára | GACC regisztrációs útmutató"
   },
   "IndustryMeat": {
     "heroTitle": "Kínai megfelelőség a hús- és tenger gyümölcsei exportőrei számára",
@@ -879,7 +881,9 @@
     "coverItems4": "Hideglánc logisztikai megfelelőségi útmutató",
     "coverItems5": "Országspecifikus piacra jutási követelmények",
     "coverItems6": "Folyamatos szabályozási monitoring és megújítási támogatás",
-    "coverItems7": "Szabályozási megfelelőségi képzés hús- és tenger gyümölcsei importőrök számára"
+    "coverItems7": "Szabályozási megfelelőségi képzés hús- és tenger gyümölcsei importőrök számára",
+    "metaDescription": "Professzionális GACC CIFER regisztráció, hűtőlánc-megfelelőség és vámtámogatás a Kínába irányuló hús- és tengeri termékek exportőrei számára.",
+    "metaTitle": "Hús és tenger gyümölcsei kínai import megfelelőség | GACC regisztrációs útmutató"
   },
   "IndustryWine": {
     "heroTitle": "Kínai megfelelőség a bor- és szeszesital-exportőrök számára",
@@ -910,7 +914,9 @@
     "coverItems4": "Adalékanyag és szulfit megfelelőség ellenőrzése",
     "coverItems5": "Országspecifikus borimport követelmények",
     "coverItems6": "Folyamatos szabályozási monitoring és megújítási támogatás",
-    "coverItems7": "Boripari megfelelőségi képzés és tanácsadás"
+    "coverItems7": "Boripari megfelelőségi képzés és tanácsadás",
+    "metaDescription": "A Kínába belépő borok és szeszes italok teljes behozatali megfelelősége. GACC regisztráció, márkavédelem és kötelességoptimalizálás.",
+    "metaTitle": "Bor és szeszes italok importja Kínába | GACC regisztráció és márkavédelem"
   },
   "IndustrySkincare": {
     "heroTitle": "Kínai megfelelőség a bőrápoló és kozmetikai márkák számára",
@@ -934,7 +940,9 @@
     "faq6a": "Alapvető. Kína elsőként bejegyzett védjegyrendszere azt jelenti, hogy a márkanevet regisztrálni kell, mielőtt belép a piacra. Enélkül azt kockáztatja, hogy a márka összeomlik, és képtelen lesz érvényesíteni jogait. A védjegybejegyzést szolgáltatásunk részeként kezeljük.",
     "jsonldName": "Kínai bőrápolás és kozmetikum megfelelőségi szolgáltatások",
     "jsonldDescription": "A CSAR szerinti NMPA bejelentés, az összetevők biztonsági értékelése, az állatkísérletek alóli mentességre vonatkozó útmutatás, valamint import tanácsadás a Kínába belépő kozmetikai márkák számára.",
-    "cta": "Kérjen ingyenes értékelést"
+    "cta": "Kérjen ingyenes értékelést",
+    "metaDescription": "NMPA kozmetikai bejelentések, összetevők biztonsági felülvizsgálata és CSAR-megfelelés a Kínába belépő nemzetközi bőrápoló és kozmetikai márkák esetében.",
+    "metaTitle": "Kozmetikai import Kína | NMPA bejelentési és CSAR-megfelelőségi útmutató"
   },
   "IndustryPetFood": {
     "heroTitle": "Kínai megfelelőség az állateledel-exportőrök számára",
@@ -958,7 +966,9 @@
     "faq6a": "Igen. Kína állateledel piaca az egyik leggyorsabban növekvő piac a világon, éves növekedése meghaladja a 15%-ot. Az emelkedő középosztály és a növekvő állattartás jelentős lehetőségeket teremt a nemzetközi márkák számára.",
     "jsonldName": "Kínai állateledel megfelelőségi szolgáltatások",
     "jsonldDescription": "GACC-regisztráció, takarmányimport-engedélyezés, összetevő-jóváhagyás és címkézési megfelelés a kínai piacra belépő állateledel-exportőrök számára.",
-    "cta": "Kérjen ingyenes értékelést"
+    "cta": "Kérjen ingyenes értékelést",
+    "metaDescription": "Teljes körű GACC és MOA regisztráció kisállateledel-exportőrök számára. Összetevők jóváhagyása, címkézési megfelelőség és importengedélyek Kínában.",
+    "metaTitle": "Pet Food Import Kína | GACC és MOA regisztrációs útmutató"
   },
   "IndustrySupplements": {
     "heroTitle": "Kínai megfelelőség az egészségügyi és étrend-kiegészítő exportőrök számára",
@@ -982,7 +992,9 @@
     "faq6a": "Igen. A határokon átnyúló e-kereskedelem lehetővé teszi a kiegészítők SAMR regisztráció nélkül történő értékesítését, így vonzó belépési csatornává válik. A termékeknek azonban továbbra is meg kell felelniük a biztonsági előírásoknak és a pozitív listára vonatkozó követelményeknek.",
     "jsonldName": "Kínai egészségügyi kiegészítő megfelelőségi szolgáltatások",
     "jsonldDescription": "SAMR egészségügyi élelmiszerek regisztrálása, összetevők értékelése, címkézési megfelelőség és import tanácsadás Kínába belépő kiegészítő exportőrök számára.",
-    "cta": "Kérjen ingyenes értékelést"
+    "cta": "Kérjen ingyenes értékelést",
+    "metaDescription": "SAMR egészségügyi élelmiszerek regisztrációja, GACC bejelentése és címkézési megfelelősége a kínai piacra kerülő étrend-kiegészítők esetében.",
+    "metaTitle": "Egészség-kiegészítők Kínai import | SAMR regisztrációs útmutató"
   },
   "IndustryBaby": {
     "heroTitle": "Kínai megfelelőség a baba- és anyatermék-exportőrök számára",
@@ -1006,7 +1018,9 @@
     "faq6a": "Igen. A csökkenő születési ráta ellenére a kínai szülők többet költenek egy gyermekre, mint valaha. Továbbra is nagy kereslet mutatkozik a középosztálybeli családok körében a prémium import bébitermékek, különösen az anyatej-helyettesítő tápszerek és a bio bébiételek iránt.",
     "jsonldName": "Kínai baba és anya termék megfelelőségi szolgáltatások",
     "jsonldDescription": "SAMR anyatej-helyettesítő tápszer-regisztráció, GACC élelmiszer-regisztráció, NMPA kozmetikai termékek bejelentése és biztonsági megfelelés a Kínába belépő baba- és anyatermék-exportőrök számára.",
-    "cta": "Kérjen ingyenes értékelést"
+    "cta": "Kérjen ingyenes értékelést",
+    "metaDescription": "A csecsemőtápszer SAMR-regisztrációja, a GACC-megfelelőség és az NMPA bejelentése a Kínába érkező baba- és anyáknak szánt termékekre vonatkozóan.",
+    "metaTitle": "Babatermékek és csecsemőtápszer kínai import | SAMR és GACC útmutató"
   },
   "IndustryElectronics": {
     "heroTitle": "Kínai megfelelés a szórakoztatóelektronikai exportőrök számára",
@@ -1030,7 +1044,9 @@
     "faq6a": "Kritikai. Az elektronikai márkáknak a piacra lépés előtt be kell jegyeztetniük a védjegyeket, a szabadalmakat és a formatervezési mintákat Kínában. Kína elsőként fájlokat tartalmazó rendszere azt jelenti, hogy a regisztráció késése IP-lopást eredményezhet. Márkavédelmi szolgáltatásokat nyújtunk.",
     "jsonldName": "Kínai fogyasztói elektronika megfelelőségi szolgáltatások",
     "jsonldDescription": "CCC-tanúsítvány, SRRC-jóváhagyás, kínai címkézési megfelelőség és IP-védelem a kínai piacra belépő elektronikai exportőrök számára.",
-    "cta": "Kérjen ingyenes értékelést"
+    "cta": "Kérjen ingyenes értékelést",
+    "metaDescription": "CCC tanúsítás, SRRC jóváhagyás és IP-védelem a kínai piacra belépő fogyasztói elektronikai márkák számára.",
+    "metaTitle": "Consumer Electronics China Import | CCC tanúsítási útmutató"
   },
   "IndustryMedical": {
     "heroTitle": "Kínai megfelelőség orvostechnikai eszköz-exportőrök számára",
@@ -1061,7 +1077,9 @@
     "coverItems4": "NMPA audit előkészítés és támogatás",
     "coverItems5": "Forgalomba hozatalt követő felügyelet és megfelelőség ellenőrzése",
     "coverItems6": "Folyamatos szabályozási monitoring és megújítási támogatás",
-    "coverItems7": "Orvosi eszközök megfelelőségi képzés és tanácsadás"
+    "coverItems7": "Orvosi eszközök megfelelőségi képzés és tanácsadás",
+    "metaDescription": "NMPA orvostechnikai eszközök regisztrációja, klinikai értékelése és CCC-tanúsítvány nemzetközi orvostechnikai eszközök gyártói számára.",
+    "metaTitle": "Orvosi eszközök Kína import | NMPA I/II/III osztály Regisztráció"
   },
   "IndustryEcommerce": {
     "heroTitle": "Kínai megfelelőség a határokon átnyúló e-kereskedelmi márkák számára",
@@ -1092,7 +1110,9 @@
     "coverItems4": "Határon átnyúló e-kereskedelmi adóoptimalizálás",
     "coverItems5": "A kínai címkementességre való alkalmasság értékelése",
     "coverItems6": "Folyamatos szabályozási ellenőrzés és megfelelőségi támogatás",
-    "coverItems7": "E-kereskedelmi platform megfelelőségi képzés és tanácsadás"
+    "coverItems7": "E-kereskedelmi platform megfelelőségi képzés és tanácsadás",
+    "metaDescription": "Határokon átnyúló e-kereskedelem megfelelősége a Tmall Global, a JD Worldwide és a Douyin számára. Platform bevezetés, vámraktár és adóoptimalizálás.",
+    "metaTitle": "Határokon átnyúló e-kereskedelem Kína | Tmall, JD, Douyin megfelelőség"
   },
   "IndustriesCommon": {
     "heroTitle": "Iparágak, amelyeket kiszolgálunk",
@@ -1123,7 +1143,9 @@
       "medicaldevicesDesc": "NMPA I/II/III osztályú regisztráció és klinikai értékelés.",
       "crossborderecommerce": "Határokon átnyúló e-kereskedelem",
       "crossborderecommerceDesc": "CBEC előírások, platformmegfelelőség és adóoptimalizálás."
-    }
+    },
+    "metaTitle": "China Import Compliance by Industry | GACC, CCC, NMPA Services",
+    "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
     "coverItems1": "CCC tanúsítási címtár értékelése",

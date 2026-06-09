@@ -849,7 +849,9 @@
     "coverItems4": "Ověření shody přísad a přísad",
     "coverItems5": "Požadavky na chladící řetězec a teplotu",
     "coverItems6": "Průběžné regulační monitorování a podpora obnovy",
-    "coverItems7": "Školení a poradenství v oblasti shody v mlékárenském průmyslu"
+    "coverItems7": "Školení a poradenství v oblasti shody v mlékárenském průmyslu",
+    "metaDescription": "Odborná registrace GACC, čínské značení a dodržování dovozních předpisů pro mléčné a mléčné výrobky vstupující do Číny. 15+ let pomáháme vývozcům mléčných výrobků.",
+    "metaTitle": "Soulad Číny pro vývozce mléčných výrobků a mléčných výrobků | Průvodce registrací GACC"
   },
   "IndustryMeat": {
     "heroTitle": "Soulad Číny pro vývozce masa a mořských plodů",
@@ -879,7 +881,9 @@
     "coverItems4": "Pokyny pro dodržování logistiky chladného řetězce",
     "coverItems5": "Požadavky na přístup na trh specifické pro jednotlivé země",
     "coverItems6": "Průběžné regulační monitorování a podpora obnovy",
-    "coverItems7": "Školení o dodržování předpisů pro dovozce masa a mořských plodů"
+    "coverItems7": "Školení o dodržování předpisů pro dovozce masa a mořských plodů",
+    "metaDescription": "Profesionální registrace GACC CIFER, dodržování chladicího řetězce a celní podpora pro vývozce masa a mořských plodů do Číny.",
+    "metaTitle": "Shoda s dovozem masa a mořských plodů z Číny | Průvodce registrací GACC"
   },
   "IndustryWine": {
     "heroTitle": "Shoda Číny pro vývozce vína a lihovin",
@@ -910,7 +914,9 @@
     "coverItems4": "Ověření shody s přísadami a siřičitany",
     "coverItems5": "Požadavky na dovoz vína specifické pro danou zemi",
     "coverItems6": "Průběžné regulační monitorování a podpora obnovy",
-    "coverItems7": "Školení a poradenství ve vinařském odvětví"
+    "coverItems7": "Školení a poradenství ve vinařském odvětví",
+    "metaDescription": "Kompletní dodržování dovozních předpisů pro víno a lihoviny vstupující do Číny. Registrace GACC, ochrana značky a optimalizace cla.",
+    "metaTitle": "Dovoz vína a lihovin do Číny | Registrace a ochrana značky GACC"
   },
   "IndustrySkincare": {
     "heroTitle": "Soulad v Číně pro značky péče o pleť a kosmetiky",
@@ -934,7 +940,9 @@
     "faq6a": "Základní. Čínský systém ochranných známek „first-to-file“ znamená, že vaše značka musí být zaregistrována, než vstoupíte na trh. Bez něj riskujete squatting značky a nemožnost prosadit svá práva. Registraci ochranných známek řešíme jako součást naší služby.",
     "jsonldName": "Čínské služby souladu pro péči o pleť a kosmetiku",
     "jsonldDescription": "Podání NMPA podle CSAR, posouzení bezpečnosti přísad, pokyny k výjimce z testování na zvířatech a poradenství při dovozu kosmetických značek vstupujících do Číny.",
-    "cta": "Získejte bezplatné hodnocení"
+    "cta": "Získejte bezplatné hodnocení",
+    "metaDescription": "Evidence kosmetiky NMPA, kontrola bezpečnosti přísad a soulad s normou CSAR pro mezinárodní značky péče o pleť a kosmetiku vstupující do Číny.",
+    "metaTitle": "Dovoz kosmetiky Čína | Průvodce podáním NMPA a CSAR"
   },
   "IndustryPetFood": {
     "heroTitle": "Soulad Číny pro vývozce krmiva pro domácí zvířata",
@@ -958,7 +966,9 @@
     "faq6a": "Ano. Čínský trh s krmivem pro domácí zvířata je jedním z nejrychleji rostoucích na světě s ročním růstem přesahujícím 15 %. Rostoucí střední třída a rostoucí vlastnictví domácích mazlíčků vytváří významné příležitosti pro mezinárodní značky.",
     "jsonldName": "Čínské služby souladu pro krmiva pro domácí mazlíčky",
     "jsonldDescription": "Registrace GACC, licencování dovozu krmiv, schvalování přísad a dodržování označení pro vývozce krmiva pro domácí zvířata vstupující na čínský trh.",
-    "cta": "Získejte bezplatné hodnocení"
+    "cta": "Získejte bezplatné hodnocení",
+    "metaDescription": "Kompletní registrace GACC a MOA pro vývozce krmiva pro domácí zvířata. Schválení přísad, shoda se značením a dovozní povolení pro Čínu.",
+    "metaTitle": "Dovoz krmiva pro domácí zvířata Čína | Průvodce registrací GACC a MOA"
   },
   "IndustrySupplements": {
     "heroTitle": "Soulad Číny pro vývozce zdraví a doplňků",
@@ -982,7 +992,9 @@
     "faq6a": "Ano. Přeshraniční elektronický obchod umožňuje prodej doplňků bez registrace SAMR, což z něj činí atraktivní vstupní kanál. Produkty však musí stále splňovat bezpečnostní normy a splňovat požadavky pozitivního seznamu.",
     "jsonldName": "Čínské služby souladu pro zdravotní doplňky",
     "jsonldDescription": "Registrace zdravé výživy SAMR, hodnocení přísad, dodržování předpisů v oblasti označování a poradenství při dovozu pro vývozce doplňků vstupujících do Číny.",
-    "cta": "Získejte bezplatné hodnocení"
+    "cta": "Získejte bezplatné hodnocení",
+    "metaDescription": "Registrace zdravé výživy SAMR, podání GACC a dodržování označení pro doplňky stravy vstupující na čínský trh.",
+    "metaTitle": "Zdravotní doplňky Čína Import | Průvodce registrací SAMR"
   },
   "IndustryBaby": {
     "heroTitle": "Soulad v Číně pro vývozce produktů pro kojence a matky",
@@ -1006,7 +1018,9 @@
     "faq6a": "Ano. Navzdory klesající porodnosti utrácejí čínští rodiče za dítě více než kdykoli předtím. Prvotřídní dovážené dětské výrobky, zejména kojenecká výživa a organická dětská výživa, zůstávají mezi rodinami střední třídy velmi žádané.",
     "jsonldName": "Čínské služby souladu pro dětské a mateřské produkty",
     "jsonldDescription": "Registrace kojenecké výživy SAMR, registrace potravin GACC, evidence kosmetiky NMPA a dodržování bezpečnostních předpisů pro vývozce produktů pro kojence a matky vstupující do Číny.",
-    "cta": "Získejte bezplatné hodnocení"
+    "cta": "Získejte bezplatné hodnocení",
+    "metaDescription": "Registrace kojeneckého mléka SAMR, soulad s GACC a podání NMPA pro kojenecké a mateřské produkty vstupující do Číny.",
+    "metaTitle": "Dovoz kojeneckých výrobků a kojenecké výživy z Číny | Průvodce SAMR a GACC"
   },
   "IndustryElectronics": {
     "heroTitle": "Shoda Číny pro vývozce spotřební elektroniky",
@@ -1030,7 +1044,9 @@
     "faq6a": "Kritické. Značky elektroniky by si měly před vstupem na trh zaregistrovat ochranné známky, patenty a vzory v Číně. Čínský systém prvního souboru znamená, že zpoždění v registraci může vést ke krádeži IP. Poskytujeme služby ochrany značky.",
     "jsonldName": "Čínské služby souladu pro spotřební elektroniku",
     "jsonldDescription": "Certifikace CCC, schválení SRRC, shoda s čínským značením a ochrana IP pro vývozce elektroniky vstupující na čínský trh.",
-    "cta": "Získejte bezplatné hodnocení"
+    "cta": "Získejte bezplatné hodnocení",
+    "metaDescription": "Certifikace CCC, schválení SRRC a ochrana IP pro značky spotřební elektroniky vstupující na čínský trh.",
+    "metaTitle": "Dovoz spotřební elektroniky z Číny | Průvodce certifikací CCC"
   },
   "IndustryMedical": {
     "heroTitle": "Soulad Číny pro vývozce zdravotnických prostředků",
@@ -1061,7 +1077,9 @@
     "coverItems4": "Příprava a podpora auditu NMPA",
     "coverItems5": "Dohled po uvedení na trh a sledování souladu",
     "coverItems6": "Průběžné regulační monitorování a podpora obnovy",
-    "coverItems7": "Školení a poradenství v oblasti shody se zdravotnickými prostředky"
+    "coverItems7": "Školení a poradenství v oblasti shody se zdravotnickými prostředky",
+    "metaDescription": "Registrace zdravotnických prostředků NMPA, klinické hodnocení a certifikace CCC pro mezinárodní výrobce zdravotnických prostředků.",
+    "metaTitle": "Dovoz lékařských přístrojů z Číny | Registrace NMPA třídy I/II/III"
   },
   "IndustryEcommerce": {
     "heroTitle": "Soulad v Číně pro značky přeshraničního elektronického obchodu",
@@ -1092,7 +1110,9 @@
     "coverItems4": "Daňová optimalizace přeshraničního elektronického obchodování",
     "coverItems5": "Posouzení způsobilosti pro výjimku z čínské značky",
     "coverItems6": "Průběžné regulační monitorování a podpora dodržování předpisů",
-    "coverItems7": "Školení a poradenství v oblasti shody s platformou elektronického obchodu"
+    "coverItems7": "Školení a poradenství v oblasti shody s platformou elektronického obchodu",
+    "metaDescription": "Přeshraniční e-commerce dodržování pro Tmall Global, JD Worldwide a Douyin. Platforma onboarding, celní sklad a daňová optimalizace.",
+    "metaTitle": "Přeshraniční elektronický obchod Čína | Tmall, JD, Douyin Compliance"
   },
   "IndustriesCommon": {
     "heroTitle": "Odvětví, kterým sloužíme",
@@ -1123,7 +1143,9 @@
       "medicaldevicesDesc": "Registrace a klinické hodnocení NMPA třídy I/II/III.",
       "crossborderecommerce": "Přeshraniční elektronický obchod",
       "crossborderecommerceDesc": "Předpisy CBEC, dodržování platforem a daňová optimalizace."
-    }
+    },
+    "metaTitle": "China Import Compliance by Industry | GACC, CCC, NMPA Services",
+    "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
     "coverItems1": "Posouzení certifikačního adresáře CCC",

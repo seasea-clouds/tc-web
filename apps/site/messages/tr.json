@@ -849,7 +849,9 @@
     "coverItems4": "İçerik ve katkı maddesi uyumluluğunun doğrulanması",
     "coverItems5": "Soğuk zincir ve sıcaklık gereksinimleri",
     "coverItems6": "Sürekli mevzuat izleme ve yenileme desteği",
-    "coverItems7": "Süt endüstrisi uyumluluk eğitimi ve danışmanlığı"
+    "coverItems7": "Süt endüstrisi uyumluluk eğitimi ve danışmanlığı",
+    "metaDescription": "Uzman GACC kaydı, Çin etiketlemesi ve Çin'e giren süt ve süt ürünleri için ithalat uyumluluğu. 15 yılı aşkın süredir süt ürünleri ihracatçılarına yardım ediyoruz.",
+    "metaTitle": "Süt Ürünleri ve Süt Ürünleri İhracatçıları için Çin Uyumluluğu | GACC Kayıt Kılavuzu"
   },
   "IndustryMeat": {
     "heroTitle": "Et ve Deniz Ürünleri İhracatçıları için Çin Uyumluluğu",
@@ -879,7 +881,9 @@
     "coverItems4": "Soğuk zincir lojistiği uyumluluk kılavuzu",
     "coverItems5": "Ülkeye özgü pazar erişim gereksinimleri",
     "coverItems6": "Sürekli mevzuat izleme ve yenileme desteği",
-    "coverItems7": "Et ve deniz ürünleri ithalatçılarına mevzuata uygunluk eğitimi"
+    "coverItems7": "Et ve deniz ürünleri ithalatçılarına mevzuata uygunluk eğitimi",
+    "metaDescription": "Çin'e et ve deniz ürünleri ihracatçıları için profesyonel GACC CIFER kaydı, soğuk zincir uyumluluğu ve gümrük desteği.",
+    "metaTitle": "Et ve Deniz Ürünleri Çin İthalat Uyumluluğu | GACC Kayıt Kılavuzu"
   },
   "IndustryWine": {
     "heroTitle": "Şarap ve Alkollü İçkiler İhracatçıları için Çin Uyumluluğu",
@@ -910,7 +914,9 @@
     "coverItems4": "Katkı maddesi ve sülfit uyumluluğunun doğrulanması",
     "coverItems5": "Ülkeye özgü şarap ithalatı gereklilikleri",
     "coverItems6": "Sürekli mevzuat izleme ve yenileme desteği",
-    "coverItems7": "Şarap endüstrisi uyum eğitimi ve danışmanlığı"
+    "coverItems7": "Şarap endüstrisi uyum eğitimi ve danışmanlığı",
+    "metaDescription": "Çin'e giren şarap ve alkollü içkiler için tam ithalat uyumluluğu. GACC kaydı, marka koruması ve görev optimizasyonu.",
+    "metaTitle": "Çin'e Şarap ve Alkollü İçki İthalatı | GACC Kaydı ve Marka Koruması"
   },
   "IndustrySkincare": {
     "heroTitle": "Cilt Bakımı ve Kozmetik Markaları için Çin Uyumluluğu",
@@ -934,7 +940,9 @@
     "faq6a": "Gerekli. Çin'in ilk tescilli ticari marka sistemi, pazara girmeden önce marka adınızın kaydedilmesi gerektiği anlamına gelir. Bu olmadan, markanın işgal edilmesi ve haklarınızı uygulayamama riskiyle karşı karşıya kalırsınız. Hizmetimizin bir parçası olarak ticari marka tescilini gerçekleştiriyoruz.",
     "jsonldName": "Çin Cilt Bakımı ve Kozmetik Uyumluluk Hizmetleri",
     "jsonldDescription": "CSAR kapsamında NMPA başvurusu, içerik güvenliği değerlendirmesi, hayvan testi muafiyet kılavuzu ve Çin'e giren kozmetik markaları için ithalat danışmanlığı.",
-    "cta": "Ücretsiz Değerlendirme Alın"
+    "cta": "Ücretsiz Değerlendirme Alın",
+    "metaDescription": "Çin'e giren uluslararası cilt bakımı ve kozmetik markaları için NMPA kozmetik dosyalama, içerik güvenliği incelemesi ve CSAR uyumluluğu.",
+    "metaTitle": "Kozmetik İthalatı Çin | NMPA Dosyalama ve CSAR Uyumluluk Kılavuzu"
   },
   "IndustryPetFood": {
     "heroTitle": "Evcil Hayvan Yemi İhracatçıları için Çin Uyumluluğu",
@@ -958,7 +966,9 @@
     "faq6a": "Evet. Çin'in evcil hayvan maması pazarı, yıllık %15'i aşan büyüme oranıyla dünyanın en hızlı büyüyen pazarlarından biridir. Yükselen orta sınıf ve artan evcil hayvan sahipliği, uluslararası markalar için önemli fırsatlar yaratıyor.",
     "jsonldName": "Çin Evcil Hayvan Maması Uyumluluk Hizmetleri",
     "jsonldDescription": "Çin pazarına giren evcil hayvan maması ihracatçıları için GACC kaydı, yem ithalat lisansı, içerik onayı ve etiketleme uyumluluğu.",
-    "cta": "Ücretsiz Değerlendirme Alın"
+    "cta": "Ücretsiz Değerlendirme Alın",
+    "metaDescription": "Evcil hayvan maması ihracatçıları için uçtan uca GACC ve MOA kaydı. Çin için içerik onayı, etiketleme uyumluluğu ve ithalat izinleri.",
+    "metaTitle": "Evcil Hayvan Yemi İthalatı Çin | GACC ve MOA Kayıt Kılavuzu"
   },
   "IndustrySupplements": {
     "heroTitle": "Sağlık ve Gıda Takviyesi İhracatçıları için Çin Uyumluluğu",
@@ -982,7 +992,9 @@
     "faq6a": "Evet. Sınır ötesi e-ticaret, takviyelerin SAMR kaydı olmadan satılmasına olanak tanır ve bu da onu cazip bir giriş kanalı haline getirir. Ancak ürünlerin yine de güvenlik standartlarını karşılaması ve pozitif liste gerekliliklerine uyması gerekiyor.",
     "jsonldName": "Çin Sağlık ve Takviye Uyumluluk Hizmetleri",
     "jsonldDescription": "SAMR sağlıklı gıda kaydı, içerik değerlendirmesi, etiketleme uyumluluğu ve Çin'e giren besin takviyesi ihracatçıları için ithalat danışmanlığı.",
-    "cta": "Ücretsiz Değerlendirme Alın"
+    "cta": "Ücretsiz Değerlendirme Alın",
+    "metaDescription": "SAMR sağlıklı gıda kaydı, GACC dosyalaması ve Çin pazarına giren besin takviyeleri için etiketleme uyumluluğu.",
+    "metaTitle": "Sağlık Takviyeleri Çin İthalatı | SAMR Kayıt Kılavuzu"
   },
   "IndustryBaby": {
     "heroTitle": "Bebek ve Anne Ürünleri İhracatçıları için Çin Uyumluluğu",
@@ -1006,7 +1018,9 @@
     "faq6a": "Evet. Düşen doğum oranına rağmen Çinli ebeveynler çocuk başına her zamankinden daha fazla harcama yapıyor. Birinci sınıf ithal bebek ürünleri, özellikle de bebek maması ve organik bebek maması, orta sınıf aileler arasında yüksek talep görmeye devam ediyor.",
     "jsonldName": "Çin Bebek ve Anne Ürünleri Uyumluluk Hizmetleri",
     "jsonldDescription": "SAMR bebek maması kaydı, GACC gıda kaydı, NMPA kozmetik dosyalama ve Çin'e giren bebek ve anne ürünleri ihracatçıları için güvenlik uyumluluğu.",
-    "cta": "Ücretsiz Değerlendirme Alın"
+    "cta": "Ücretsiz Değerlendirme Alın",
+    "metaDescription": "Bebek maması SAMR kaydı, GACC uyumluluğu ve Çin'e giren bebek ve anne ürünleri için NMPA başvurusu.",
+    "metaTitle": "Bebek Ürünleri ve Bebek Mamaları Çin İthalatı | SAMR ve GACC Kılavuzu"
   },
   "IndustryElectronics": {
     "heroTitle": "Tüketici Elektroniği İhracatçıları için Çin Uyumluluğu",
@@ -1030,7 +1044,9 @@
     "faq6a": "Kritik. Elektronik markaları, pazara girmeden önce Çin'de ticari markalarını, patentlerini ve tasarımlarını tescil ettirmelidir. Çin'in ilk dosyalama sistemi, kayıttaki gecikmelerin IP hırsızlığına yol açabileceği anlamına geliyor. Marka koruma hizmetleri vermekteyiz.",
     "jsonldName": "Çin Tüketici Elektroniği Uyumluluk Hizmetleri",
     "jsonldDescription": "Çin pazarına giren elektronik ihracatçıları için CCC sertifikası, SRRC onayı, Çin etiketleme uyumluluğu ve IP koruması.",
-    "cta": "Ücretsiz Değerlendirme Alın"
+    "cta": "Ücretsiz Değerlendirme Alın",
+    "metaDescription": "Çin pazarına giren tüketici elektroniği markaları için CCC sertifikası, SRRC onayı ve IP koruması.",
+    "metaTitle": "Tüketici Elektroniği Çin İthalatı | CCC Sertifikasyon Kılavuzu"
   },
   "IndustryMedical": {
     "heroTitle": "Tıbbi Cihaz İhracatçıları için Çin Uyumluluğu",
@@ -1061,7 +1077,9 @@
     "coverItems4": "NMPA denetim hazırlığı ve desteği",
     "coverItems5": "Piyasaya arz sonrası gözetim ve uygunluk izleme",
     "coverItems6": "Sürekli mevzuat izleme ve yenileme desteği",
-    "coverItems7": "Tıbbi cihaz uyumluluk eğitimi ve danışmanlığı"
+    "coverItems7": "Tıbbi cihaz uyumluluk eğitimi ve danışmanlığı",
+    "metaDescription": "Uluslararası tıbbi cihaz üreticileri için NMPA tıbbi cihaz kaydı, klinik değerlendirme ve CCC sertifikasyonu.",
+    "metaTitle": "Tıbbi Cihazlar Çin İthalatı | NMPA Sınıf I/II/III Kaydı"
   },
   "IndustryEcommerce": {
     "heroTitle": "Sınır Ötesi E-Ticaret Markaları için Çin Uyumluluğu",
@@ -1092,7 +1110,9 @@
     "coverItems4": "Sınır ötesi e-ticaret vergi optimizasyonu",
     "coverItems5": "Çince etiket muafiyeti uygunluk değerlendirmesi",
     "coverItems6": "Sürekli mevzuat izleme ve uyumluluk desteği",
-    "coverItems7": "E-ticaret platformu uyumluluk eğitimi ve danışmanlığı"
+    "coverItems7": "E-ticaret platformu uyumluluk eğitimi ve danışmanlığı",
+    "metaDescription": "Tmall Global, JD Worldwide ve Douyin için sınır ötesi e-ticaret uyumluluğu. Platforma katılım, gümrüklü depo ve vergi optimizasyonu.",
+    "metaTitle": "Sınır Ötesi E-ticaret Çin | Tmall, JD, Douyin Uyumluluğu"
   },
   "IndustriesCommon": {
     "heroTitle": "Hizmet Verdiğimiz Sektörler",
@@ -1123,7 +1143,9 @@
       "medicaldevicesDesc": "NMPA Sınıf I/II/III kaydı ve klinik değerlendirme.",
       "crossborderecommerce": "Sınır ötesi E-ticaret",
       "crossborderecommerceDesc": "CBEC düzenlemeleri, platform uyumluluğu ve vergi optimizasyonu."
-    }
+    },
+    "metaTitle": "China Import Compliance by Industry | GACC, CCC, NMPA Services",
+    "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
     "coverItems1": "CCC sertifikasyon rehberi değerlendirmesi",

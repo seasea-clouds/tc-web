@@ -1,20 +1,26 @@
 import { getTranslations } from 'next-intl/server';
-import { Metadata } from 'next';
+import { locales } from '@/i18n/routing';
+import { sharedOpenGraph, sharedTwitter, buildLanguages } from '@trade/ui/seo';
 import { testimonials } from '@/data/testimonials';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import ContactForm from '@/components/ContactForm';
 import CTASection from '@/components/CTASection';
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
-  const resolvedParams = await params;
-  const t = await getTranslations({ locale: resolvedParams.locale, namespace: 'Testimonials' });
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const locale = (await params).locale;
+  const t = await getTranslations({ locale, namespace: 'Testimonials' });
+  const title = t('metaTitle');
+  const description = t('metaDescription');
+  const url = `https://sinotradecompliance.com/${locale}/testimonials/`;
   return {
-    title: t('metaTitle'),
-    description: t('metaDescription'),
-    openGraph: {
-      title: t('ogTitle'),
-      description: t('metaDescription'),
+    title,
+    description,
+    openGraph: sharedOpenGraph({ title, description, locale, url }),
+    twitter: sharedTwitter({ title, description }),
+    alternates: {
+      canonical: url,
+      languages: buildLanguages(locale, [...locales], '/testimonials/'),
     },
   };
 }

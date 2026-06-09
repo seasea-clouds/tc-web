@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import { getTranslations } from 'next-intl/server';
 import { locales } from '@/i18n/routing';
 import { industryBySlug, industries } from '@/data/industries';
-import { sharedOpenGraph, sharedTwitter } from '@trade/ui/seo';
+import { sharedOpenGraph, sharedTwitter, buildLanguages } from '@trade/ui/seo';
 import Hero from '@/components/Hero';
 import { WHATSAPP_URL } from '@/lib/constants';
 import CoverSection from '@/components/CoverSection';
@@ -34,8 +34,11 @@ export async function generateMetadata({
   if (!industry) return { title: 'Not Found' };
 
   const t = await getTranslations({ locale, namespace: industry.namespace });
-  const title = t('metaTitle') || t('heroTitle');
-  const description = t('metaDescription') || t('heroSubtitle');
+  // Use metaTitle/metaDescription when available, fall back to heroTitle/heroSubtitle
+  const rawTitle = t('metaTitle');
+  const title = rawTitle && !rawTitle.includes('.') ? rawTitle : t('heroTitle');
+  const rawDesc = t('metaDescription');
+  const description = rawDesc && !rawDesc.includes('.') ? rawDesc : t('heroSubtitle');
   const url = `https://sinotradecompliance.com/${locale}/industries/${industrySlug}/`;
 
   return {
@@ -45,12 +48,7 @@ export async function generateMetadata({
     twitter: sharedTwitter({ title, description }),
     alternates: {
       canonical: url,
-      languages: Object.fromEntries(
-        locales.map((l) => [
-          l,
-          `https://sinotradecompliance.com/${l}/industries/${industrySlug}/`,
-        ])
-      ),
+      languages: buildLanguages(locale, [...locales], `/industries/${industrySlug}/`),
     },
   };
 }

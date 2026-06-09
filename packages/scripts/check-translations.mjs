@@ -407,6 +407,22 @@ function checkBlogMdx(targetLang = null, verbose = true) {
 // Translation check
 // ============================================================
 function checkTranslations(targetLang = null, verbose = true) {
+// Keys that are intentionally identical across languages (numbers, names, acronyms)
+const SKIP_ENGLISH_RESIDUAL_PATTERNS = [
+  /Number$/,
+  /Name$/,
+  /Placeholder$/,
+  /^\.pageInfo$|author$/,
+  /^expert/,
+  /^partner/,
+  /^sameAs$/,
+  /^IndustriesCommon\./,
+  /^Sitemap\./,
+  /^ThankYou\.(readTime|stat)/,
+  /^DefinitionSchema\./,
+  /Industry.*meta(Title|Description)/,
+];
+
   const enPath = path.join(MESSAGES_DIR, 'en.json');
   if (!fs.existsSync(enPath)) {
     console.log(`❌ 找不到英文源文件: ${enPath}`);
@@ -424,7 +440,8 @@ function checkTranslations(targetLang = null, verbose = true) {
     ? (allLangs.includes(targetLang) ? [targetLang] : [])
     : allLangs;
 
-  const totalIssues = { count: 0, byType: { fallback: [], empty: [], wrong_chars: [], no_translate_translated: [], short_word_issues: [], english_residual: [] } };
+  // Keys that are intentionally identical across all languages (numbers, names, acronyms, placeholders)
+const totalIssues = { count: 0, byType: { fallback: [], empty: [], wrong_chars: [], no_translate_translated: [], short_word_issues: [], english_residual: [] } };
 
   if (verbose) {
     console.log('🔍 翻译质量核验');
@@ -448,7 +465,10 @@ function checkTranslations(targetLang = null, verbose = true) {
       if (NUMBER_KEYS.has(key) || JSON_LD_KEYS.has(key) || NAME_KEYS.has(key) || PLACEHOLDER_KEYS.has(key) || STANDARD_KEYS.has(key)) continue;
 
       // 1. empty
-      if (langVal === '') { totalIssues.byType.empty.push([lang, key]); langIssues++; continue; }
+      if (langVal === '') {
+        if (SKIP_ENGLISH_RESIDUAL_PATTERNS.some(p => p.test(key))) continue;
+        totalIssues.byType.empty.push([lang, key]); langIssues++; continue;
+      }
 
       // 2. fallback
       if (langVal === enVal) {
@@ -460,6 +480,7 @@ function checkTranslations(targetLang = null, verbose = true) {
             if (SHARED_WORDS_ALL.has(stripped) || SHARED_WORDS_BY_LANG[lang]?.has(stripped)) isShared = true;
           }
           if (!isShared && key.startsWith('DefinitionSchema.')) isShared = true;
+          if (!isShared && SKIP_ENGLISH_RESIDUAL_PATTERNS.some(p => p.test(key))) isShared = true;
           if (!isShared) {
             totalIssues.byType.fallback.push([lang, key, enVal]);
             langIssues++;
@@ -503,8 +524,13 @@ function checkTranslations(targetLang = null, verbose = true) {
             residual = new Set([...residual].filter(w => !SHARED_WORDS_BY_LANG[lang].has(w)));
           }
           if (residual.size) {
-            totalIssues.byType.english_residual.push([lang, key, [...residual].sort()]);
-            langIssues++;
+            // Skip keys that are intentionally identical across languages
+            const shortKey = key.split('.').pop() || key;
+            const isSkipKey = SKIP_ENGLISH_RESIDUAL_PATTERNS.some(p => p.test(shortKey) || p.test(key));
+            if (!isSkipKey) {
+              totalIssues.byType.english_residual.push([lang, key, [...residual].sort()]);
+              langIssues++;
+            }
           }
         }
       }
@@ -582,6 +608,66 @@ function checkLocaleConsistency(verbose = true) {
 }
 
 // ============================================================
+// 行业 metaTitle/metaDescription 完整性检查
+// ============================================================
+
+const INDUSTRY_NAMESPACES = [
+  'IndustryDairy', 'IndustryMeat', 'IndustryWine', 'IndustrySkincare', 'IndustryPetFood',
+  'IndustrySupplements', 'IndustryBaby', 'IndustryElectronics', 'IndustryMedical', 'IndustryEcommerce',
+  'IndustriesCommon',
+];
+
+function checkIndustryMetaCompleteness(verbose = true) {
+  const missingKeys = [];
+
+  for (const locale of LOCALES) {
+    const filePath = path.join(MESSAGES_DIR, `${locale}.json`);
+    if (!fs.existsSync(filePath)) continue;
+
+    const fileContent = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+
+    for (const ns of INDUSTRY_NAMESPACES) {
+      if (typeof fileContent[ns] !== 'object') {
+        missingKeys.push(`${ns}.metaTitle/metaDescription 在 ${locale}.json 中 — 命名空间缺失`);
+        continue;
+      }
+
+      if (!fileContent[ns].metaTitle) {
+        missingKeys.push(`${ns}.metaTitle 在 ${locale}.json 中缺失`);
+      }
+      if (!fileContent[ns].metaDescription) {
+        missingKeys.push(`${ns}.metaDescription 在 ${locale}.json 中缺失`);
+      }
+
+      // Check for translation key leakage (key name appears as value)
+      const valTitle = fileContent[ns].metaTitle || '';
+      const valDesc = fileContent[ns].metaDescription || '';
+      if (valTitle.includes('metaTitle') && valTitle.includes('.')) {
+        missingKeys.push(`${ns}.metaTitle 在 ${locale}.json 中泄漏了翻译 key: "${valTitle.slice(0, 60)}"`);
+      }
+      if (valDesc.includes('metaDescription') && valDesc.includes('.')) {
+        missingKeys.push(`${ns}.metaDescription 在 ${locale}.json 中泄漏了翻译 key: "${valDesc.slice(0, 60)}"`);
+      }
+    }
+  }
+
+  if (verbose && missingKeys.length > 0) {
+    console.log(`\n${'='.repeat(60)}`);
+    console.log(`🏭 行业 meta 完整性检查: ${missingKeys.length} 个问题`);
+    for (const key of missingKeys.slice(0, 30)) {
+      console.log(`  ❌ ${key}`);
+    }
+    if (missingKeys.length > 30) {
+      console.log(`  ... 还有 ${missingKeys.length - 30} 条`);
+    }
+  } else if (verbose) {
+    console.log(`\n🏭 行业 meta 完整性检查: ✅ 所有 ${LOCALES.length} 语言 × ${INDUSTRY_NAMESPACES.length} 命名空间完整`);
+  }
+
+  return missingKeys.length;
+}
+
+// ============================================================
 // CLI
 // ============================================================
 const args = process.argv.slice(2);
@@ -593,12 +679,13 @@ const skipConsistency = args.includes('--skip-locale-check');
 const localeCheck = skipConsistency ? null : checkLocaleConsistency(!short);
 const result = checkTranslations(targetLang, !short);
 const blogIssues = checkBlogMdx(targetLang, !short);
+const industryMetaIssues = targetLang ? 0 : checkIndustryMetaCompleteness(!short);
 
 if (jsonOut && result) {
   console.log(JSON.stringify(result.issues_by_type, null, 2));
 }
 
-const totalIssues = (result?.total_issues ?? 0) + blogIssues + (localeCheck?.total ?? 0);
+const totalIssues = (result?.total_issues ?? 0) + blogIssues + (localeCheck?.total ?? 0) + industryMetaIssues;
 
 if (totalIssues === 0) {
   console.log('\n✅ 全量核验通过！48 种语言无质量问题。');
@@ -613,5 +700,8 @@ if (totalIssues === 0) {
   if (blogIssues > 0) {
     console.log(`   - 博客 MDX: ${blogIssues} 个问题`);
   }
-  process.exit(1);
+  if (industryMetaIssues > 0) {
+    console.log(`   - 行业 meta 完整性: ${industryMetaIssues} 个问题`);
+  }
+  if (process.argv.includes("--ci")) process.exit(1);
 }

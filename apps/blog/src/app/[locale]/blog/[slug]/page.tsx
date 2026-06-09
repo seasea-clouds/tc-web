@@ -13,7 +13,7 @@ const FAQ_NS: Record<string, string> = {
 };
 
 const SITE_URL = 'https://trade-web-site.pages.dev';
-import { WHATSAPP_URL, LOCALES } from '@trade/ui';
+import { WHATSAPP_URL, LOCALES, buildLanguages } from '@trade/ui';
 import { getMessages } from '@/lib/messages';
 import CopyButton from '@/components/CopyButton';
 
@@ -37,11 +37,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   }
   const raw = fs.readFileSync(filePath, 'utf-8');
   const { data } = matter(raw);
+  const title = data.title || slug.replace(/-/g, ' ');
+  const description = data.excerpt || '';
   return {
-    title: data.title || slug.replace(/-/g, ' '),
-    description: data.excerpt || '',
+    title,
+    description,
     alternates: {
       canonical: `https://sinotradecompliance.com/${locale}/blog/${slug}/`,
+      languages: buildLanguages(locale, [...LOCALES], `/blog/${slug}/`),
     },
     openGraph: {
       title: data.title || slug.replace(/-/g, ' '),

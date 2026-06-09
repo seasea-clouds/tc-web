@@ -849,7 +849,9 @@
     "coverItems4": "Ingredient and additive compliance verification",
     "coverItems5": "Cold chain and temperature requirements",
     "coverItems6": "Ongoing regulatory monitoring and renewal support",
-    "coverItems7": "Dairy industry compliance training and advisory"
+    "coverItems7": "Dairy industry compliance training and advisory",
+    "metaTitle": "China Compliance for Dairy & Milk Product Exporters | GACC Registration Guide",
+    "metaDescription": "Expert GACC registration, Chinese labeling, and import compliance for dairy & milk products entering China. 15+ years helping dairy exporters."
   },
   "IndustryMeat": {
     "heroTitle": "China Compliance for Meat & Seafood Exporters",
@@ -879,7 +881,9 @@
     "coverItems4": "Cold chain logistics compliance guidance",
     "coverItems5": "Country-specific market access requirements",
     "coverItems6": "Ongoing regulatory monitoring and renewal support",
-    "coverItems7": "Regulatory compliance training for meat and seafood importers"
+    "coverItems7": "Regulatory compliance training for meat and seafood importers",
+    "metaTitle": "Meat & Seafood China Import Compliance | GACC Registration Guide",
+    "metaDescription": "Professional GACC CIFER registration, cold chain compliance, and customs support for meat & seafood exporters to China."
   },
   "IndustryWine": {
     "heroTitle": "China Compliance for Wine & Spirits Exporters",
@@ -910,7 +914,9 @@
     "coverItems4": "Additive and sulfite compliance verification",
     "coverItems5": "Country-specific wine import requirements",
     "coverItems6": "Ongoing regulatory monitoring and renewal support",
-    "coverItems7": "Wine industry compliance training and advisory"
+    "coverItems7": "Wine industry compliance training and advisory",
+    "metaTitle": "Wine & Spirits Import to China | GACC Registration & Brand Protection",
+    "metaDescription": "Complete import compliance for wine and spirits entering China. GACC registration, brand protection, and duty optimization."
   },
   "IndustrySkincare": {
     "heroTitle": "China Compliance for Skincare & Cosmetics Brands",
@@ -934,7 +940,9 @@
     "faq6a": "Essential. China's first-to-file trademark system means your brand name must be registered before you enter the market. Without it, you risk brand squatting and inability to enforce your rights. We handle trademark registration as part of our service.",
     "jsonldName": "Skincare & Cosmetics China Compliance Services",
     "jsonldDescription": "NMPA filing under CSAR, ingredient safety assessment, animal testing exemption guidance, and import consulting for cosmetics brands entering China.",
-    "cta": "Get Free Assessment"
+    "cta": "Get Free Assessment",
+    "metaTitle": "Cosmetics Import China | NMPA Filing & CSAR Compliance Guide",
+    "metaDescription": "NMPA cosmetics filing, ingredient safety review, and CSAR compliance for international skincare and cosmetics brands entering China."
   },
   "IndustryPetFood": {
     "heroTitle": "China Compliance for Pet Food Exporters",
@@ -958,7 +966,9 @@
     "faq6a": "Yes. China's pet food market is one of the fastest-growing in the world, with annual growth exceeding 15%. The rising middle class and increasing pet ownership create significant opportunities for international brands.",
     "jsonldName": "Pet Food China Compliance Services",
     "jsonldDescription": "GACC registration, feed import licensing, ingredient approval, and labeling compliance for pet food exporters entering the Chinese market.",
-    "cta": "Get Free Assessment"
+    "cta": "Get Free Assessment",
+    "metaTitle": "Pet Food Import China | GACC & MOA Registration Guide",
+    "metaDescription": "End-to-end GACC and MOA registration for pet food exporters. Ingredient approval, labeling compliance, and import permits for China."
   },
   "IndustrySupplements": {
     "heroTitle": "China Compliance for Health & Supplement Exporters",
@@ -982,7 +992,9 @@
     "faq6a": "Yes. Cross-border e-commerce allows supplements to be sold without SAMR registration, making it an attractive entry channel. However, products must still meet safety standards and comply with positive list requirements.",
     "jsonldName": "Health & Supplement China Compliance Services",
     "jsonldDescription": "SAMR health food registration, ingredient assessment, labeling compliance, and import consulting for supplement exporters entering China.",
-    "cta": "Get Free Assessment"
+    "cta": "Get Free Assessment",
+    "metaTitle": "Health Supplements China Import | SAMR Registration Guide",
+    "metaDescription": "SAMR health food registration, GACC filing, and labeling compliance for dietary supplements entering the Chinese market."
   },
   "IndustryBaby": {
     "heroTitle": "China Compliance for Baby & Maternal Product Exporters",
@@ -1006,7 +1018,9 @@
     "faq6a": "Yes. Despite a declining birth rate, Chinese parents spend more per child than ever before. Premium imported baby products, especially infant formula and organic baby food, remain in high demand among middle-class families.",
     "jsonldName": "Baby & Maternal Product China Compliance Services",
     "jsonldDescription": "SAMR infant formula registration, GACC food registration, NMPA cosmetics filing, and safety compliance for baby and maternal product exporters entering China.",
-    "cta": "Get Free Assessment"
+    "cta": "Get Free Assessment",
+    "metaTitle": "Baby Products & Infant Formula China Import | SAMR & GACC Guide",
+    "metaDescription": "Infant formula SAMR registration, GACC compliance, and NMPA filing for baby and maternal products entering China."
   },
   "IndustryElectronics": {
     "heroTitle": "China Compliance for Consumer Electronics Exporters",
@@ -1030,7 +1044,9 @@
     "faq6a": "Critical. Electronics brands should register trademarks, patents, and designs in China before market entry. China's first-to-file system means delays in registration can result in IP theft. We provide brand protection services.",
     "jsonldName": "Consumer Electronics China Compliance Services",
     "jsonldDescription": "CCC certification, SRRC approval, Chinese labeling compliance, and IP protection for electronics exporters entering the Chinese market.",
-    "cta": "Get Free Assessment"
+    "cta": "Get Free Assessment",
+    "metaTitle": "Consumer Electronics China Import | CCC Certification Guide",
+    "metaDescription": "CCC certification, SRRC approval, and IP protection for consumer electronics brands entering the Chinese market."
   },
   "IndustryMedical": {
     "heroTitle": "China Compliance for Medical Device Exporters",
@@ -1061,7 +1077,9 @@
     "coverItems4": "NMPA audit preparation and support",
     "coverItems5": "Post-market surveillance and compliance monitoring",
     "coverItems6": "Ongoing regulatory monitoring and renewal support",
-    "coverItems7": "Medical device compliance training and advisory"
+    "coverItems7": "Medical device compliance training and advisory",
+    "metaTitle": "Medical Devices China Import | NMPA Class I/II/III Registration",
+    "metaDescription": "NMPA medical device registration, clinical evaluation, and CCC certification for international medical device manufacturers."
   },
   "IndustriesCommon": {
     "heroTitle": "Industries We Serve",
@@ -1092,7 +1110,9 @@
       "medicaldevicesDesc": "NMPA Class I/II/III registration and clinical evaluation.",
       "crossborderecommerce": "Cross-border E-commerce",
       "crossborderecommerceDesc": "CBEC regulations, platform compliance, and tax optimization."
-    }
+    },
+    "metaTitle": "China Import Compliance by Industry | GACC, CCC, NMPA Services",
+    "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryEcommerce": {
     "heroTitle": "China Compliance for Cross-Border E-commerce Brands",
@@ -1123,7 +1143,9 @@
     "coverItems4": "Cross-border e-commerce tax optimization",
     "coverItems5": "Chinese label exemption eligibility assessment",
     "coverItems6": "Ongoing regulatory monitoring and compliance support",
-    "coverItems7": "E-commerce platform compliance training and advisory"
+    "coverItems7": "E-commerce platform compliance training and advisory",
+    "metaTitle": "Cross-Border E-commerce China | Tmall, JD, Douyin Compliance",
+    "metaDescription": "Cross-border e-commerce compliance for Tmall Global, JD Worldwide, and Douyin. Platform onboarding, bonded warehouse, and tax optimization."
   },
   "IndustryCCC": {
     "coverItems1": "CCC certification directory assessment",

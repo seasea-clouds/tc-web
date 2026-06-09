@@ -38,7 +38,7 @@ export default async function Layout({
   const messages = getMessages(locale);
 
   return (
-    <html lang={locale}>
+    <html lang={locale} dir={locale === 'ar' || locale === 'he' || locale === 'fa' || locale === 'ur' ? 'rtl' : 'ltr'}>
       <head>
         {/* Cloudflare Web Analytics */}
         <CfAnalytics />

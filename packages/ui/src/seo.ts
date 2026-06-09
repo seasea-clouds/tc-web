@@ -1,15 +1,27 @@
 import { BRAND_NAME, SITE_URL } from './constants';
 
 /**
+ * Build the hreflang languages object with x-default.
+ * Shared helper to ensure all pages include x-default in alternates.
+ */
+export function buildLanguages(locale: string, locales: string[], path: string): Record<string, string> {
+  return {
+    'x-default': `${SITE_URL}/${locale}${path}`,
+    ...Object.fromEntries(
+      locales.map((l) => [l, `${SITE_URL}/${l}${path}`])
+    ),
+  };
+}
+
+/**
  * Build hreflang alternates for canonical URLs.
  * Pass the app's locale list since it may differ per app.
+ * Automatically includes x-default pointing to the current locale.
  */
 export function buildAlternates(locale: string, locales: string[], path: string) {
   return {
     canonical: `${SITE_URL}/${locale}${path}`,
-    languages: Object.fromEntries(
-      locales.map((l) => [l, `${SITE_URL}/${l}${path}`])
-    ),
+    languages: buildLanguages(locale, locales, path),
   };
 }
 

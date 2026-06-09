@@ -849,7 +849,9 @@
     "coverItems4": "Preverjanje skladnosti sestavin in aditivov",
     "coverItems5": "Hladna veriga in temperaturne zahteve",
     "coverItems6": "Stalno regulativno spremljanje in podpora za obnovo",
-    "coverItems7": "Usposabljanje in svetovanje o skladnosti mlečne industrije"
+    "coverItems7": "Usposabljanje in svetovanje o skladnosti mlečne industrije",
+    "metaDescription": "Strokovna registracija GACC, kitajsko označevanje in uvozna skladnost za mlečne in mlečne izdelke, ki vstopajo na Kitajsko. Več kot 15 let pomaga izvoznikom mlečnih izdelkov.",
+    "metaTitle": "Kitajska skladnost za izvoznike mleka in mlečnih izdelkov | Vodnik za registracijo GACC"
   },
   "IndustryMeat": {
     "heroTitle": "Kitajska skladnost za izvoznike mesa in morske hrane",
@@ -879,7 +881,9 @@
     "coverItems4": "Smernice za skladnost logistike hladne verige",
     "coverItems5": "Zahteve za dostop do trga, specifične za državo",
     "coverItems6": "Stalno regulativno spremljanje in podpora za obnovo",
-    "coverItems7": "Usposabljanje o skladnosti s predpisi za uvoznike mesa in morske hrane"
+    "coverItems7": "Usposabljanje o skladnosti s predpisi za uvoznike mesa in morske hrane",
+    "metaDescription": "Profesionalna registracija GACC CIFER, skladnost s hladno verigo in carinska podpora za izvoznike mesa in morske hrane na Kitajsko.",
+    "metaTitle": "Skladnost pri uvozu mesa in morskih sadežev iz Kitajske | Vodnik za registracijo GACC"
   },
   "IndustryWine": {
     "heroTitle": "Kitajska skladnost za izvoznike vina in žganih pijač",
@@ -910,7 +914,9 @@
     "coverItems4": "Preverjanje skladnosti aditivov in sulfitov",
     "coverItems5": "Zahteve za uvoz vina, specifične za državo",
     "coverItems6": "Stalno regulativno spremljanje in podpora za obnovo",
-    "coverItems7": "Usposabljanje in svetovanje o skladnosti vinarske industrije"
+    "coverItems7": "Usposabljanje in svetovanje o skladnosti vinarske industrije",
+    "metaDescription": "Popolna uvozna skladnost za vino in žgane pijače, ki vstopajo na Kitajsko. Registracija GACC, zaščita blagovne znamke in optimizacija dajatev.",
+    "metaTitle": "Uvoz vina in žganih pijač na Kitajsko | Registracija GACC in zaščita blagovne znamke"
   },
   "IndustrySkincare": {
     "heroTitle": "Kitajska skladnost za blagovne znamke izdelkov za nego kože in kozmetike",
@@ -934,7 +940,9 @@
     "faq6a": "Bistvenega pomena. Kitajski sistem blagovnih znamk, ki jih prvi prijavi, pomeni, da je treba ime vaše blagovne znamke registrirati, preden vstopite na trg. Brez tega tvegate skvot blagovne znamke in nezmožnost uveljavljanja svojih pravic. Registracijo blagovne znamke obravnavamo kot del naše storitve.",
     "jsonldName": "Kitajske storitve skladnosti za nego kože in kozmetiko",
     "jsonldDescription": "Vložitev NMPA v okviru CSAR, ocena varnosti sestavin, navodila za izjeme pri poskusih na živalih in svetovanje pri uvozu kozmetičnih znamk, ki vstopajo na Kitajsko.",
-    "cta": "Pridobite brezplačno oceno"
+    "cta": "Pridobite brezplačno oceno",
+    "metaDescription": "Prijava kozmetičnih izdelkov NMPA, pregled varnosti sestavin in skladnost s CSAR za mednarodne blagovne znamke za nego kože in kozmetiko, ki vstopajo na Kitajsko.",
+    "metaTitle": "Uvoz kozmetike Kitajska | NMPA Filing & CSAR Vodnik za skladnost"
   },
   "IndustryPetFood": {
     "heroTitle": "Skladnost Kitajske za izvoznike hrane za hišne živali",
@@ -958,7 +966,9 @@
     "faq6a": "ja Kitajski trg hrane za hišne ljubljenčke je eden najhitreje rastočih na svetu, z letno rastjo, ki presega 15 %. Naraščajoči srednji razred in naraščajoče število hišnih ljubljenčkov ustvarjata pomembne priložnosti za mednarodne blagovne znamke.",
     "jsonldName": "Kitajske storitve skladnosti za hrano za hišne ljubljenčke",
     "jsonldDescription": "Registracija GACC, uvozna dovoljenja za krmo, odobritev sestavin in skladnost označevanja za izvoznike hrane za hišne živali, ki vstopajo na kitajski trg.",
-    "cta": "Pridobite brezplačno oceno"
+    "cta": "Pridobite brezplačno oceno",
+    "metaDescription": "Celovita registracija GACC in MOA za izvoznike hrane za hišne živali. Odobritev sestavin, skladnost označevanja in uvozna dovoljenja za Kitajsko.",
+    "metaTitle": "Uvoz hrane za hišne živali Kitajska | Vodnik za registracijo GACC & MOA"
   },
   "IndustrySupplements": {
     "heroTitle": "Kitajska skladnost za izvoznike zdravja in dodatkov",
@@ -982,7 +992,9 @@
     "faq6a": "ja Čezmejno e-trgovanje omogoča prodajo dodatkov brez registracije SAMR, zaradi česar je privlačen vstopni kanal. Vendar pa morajo izdelki še vedno izpolnjevati varnostne standarde in zahteve pozitivnega seznama.",
     "jsonldName": "Kitajske storitve skladnosti za zdravstvene dodatke",
     "jsonldDescription": "Registracija zdrave hrane SAMR, ocena sestavin, skladnost označevanja in uvozno svetovanje za izvoznike prehranskih dopolnil, ki vstopajo na Kitajsko.",
-    "cta": "Pridobite brezplačno oceno"
+    "cta": "Pridobite brezplačno oceno",
+    "metaDescription": "Registracija zdrave hrane SAMR, prijava GACC in skladnost označevanja prehranskih dopolnil, ki vstopajo na kitajski trg.",
+    "metaTitle": "Zdravstvena dopolnila Kitajska Uvoz | Vodnik za registracijo SAMR"
   },
   "IndustryBaby": {
     "heroTitle": "Kitajska skladnost za izvoznike izdelkov za dojenčke in matere",
@@ -1006,7 +1018,9 @@
     "faq6a": "ja Kljub upadanju rodnosti kitajski starši zapravijo več na otroka kot kadar koli prej. Visoko povpraševanje po uvoženih izdelkih za dojenčke, zlasti otroških formulah za dojenčke in organski hrani za dojenčke, ostaja med družinami srednjega razreda še vedno veliko.",
     "jsonldName": "Kitajske storitve skladnosti za otroške in materinske izdelke",
     "jsonldDescription": "Registracija formule za dojenčke SAMR, registracija hrane GACC, prijava kozmetike NMPA in varnostna skladnost za izvoznike izdelkov za dojenčke in matere, ki vstopajo na Kitajsko.",
-    "cta": "Pridobite brezplačno oceno"
+    "cta": "Pridobite brezplačno oceno",
+    "metaDescription": "Registracija SAMR za dojenčke, skladnost z GACC in prijava NMPA za izdelke za dojenčke in matere, ki vstopajo na Kitajsko.",
+    "metaTitle": "Izdelki za dojenčke in formule za dojenčke Kitajski uvoz | Vodnik SAMR & GACC"
   },
   "IndustryElectronics": {
     "heroTitle": "Kitajska skladnost za izvoznike zabavne elektronike",
@@ -1030,7 +1044,9 @@
     "faq6a": "Kritično. Blagovne znamke elektronike morajo registrirati blagovne znamke, patente in modele na Kitajskem pred vstopom na trg. Kitajski sistem prve datoteke pomeni, da lahko zamude pri registraciji povzročijo krajo IP. Nudimo storitve zaščite blagovnih znamk.",
     "jsonldName": "Kitajske storitve skladnosti za potrošniško elektroniko",
     "jsonldDescription": "Certificiranje CCC, odobritev SRRC, skladnost kitajskega označevanja in zaščita IP za izvoznike elektronike, ki vstopajo na kitajski trg.",
-    "cta": "Pridobite brezplačno oceno"
+    "cta": "Pridobite brezplačno oceno",
+    "metaDescription": "Certificiranje CCC, odobritev SRRC in zaščita IP za znamke potrošniške elektronike, ki vstopajo na kitajski trg.",
+    "metaTitle": "Zabavna elektronika Kitajska, uvoz | Vodnik za certificiranje CCC"
   },
   "IndustryMedical": {
     "heroTitle": "Kitajska skladnost za izvoznike medicinskih pripomočkov",
@@ -1061,7 +1077,9 @@
     "coverItems4": "Priprava in podpora revizije NMPA",
     "coverItems5": "Poprodajni nadzor in spremljanje skladnosti",
     "coverItems6": "Stalno regulativno spremljanje in podpora za obnovo",
-    "coverItems7": "Usposabljanje in svetovanje o skladnosti medicinskih pripomočkov"
+    "coverItems7": "Usposabljanje in svetovanje o skladnosti medicinskih pripomočkov",
+    "metaDescription": "Registracija medicinskih pripomočkov NMPA, klinična ocena in certificiranje CCC za mednarodne proizvajalce medicinskih pripomočkov.",
+    "metaTitle": "Uvoz medicinskih pripomočkov Kitajska | Registracija NMPA razreda I/II/III"
   },
   "IndustryEcommerce": {
     "heroTitle": "Kitajska skladnost za blagovne znamke čezmejnega e-trgovine",
@@ -1092,7 +1110,9 @@
     "coverItems4": "Davčna optimizacija čezmejnega e-poslovanja",
     "coverItems5": "Ocena upravičenosti do oprostitve kitajske oznake",
     "coverItems6": "Stalno spremljanje predpisov in podpora skladnosti",
-    "coverItems7": "Usposabljanje in svetovanje o skladnosti platforme za e-trgovino"
+    "coverItems7": "Usposabljanje in svetovanje o skladnosti platforme za e-trgovino",
+    "metaDescription": "Čezmejna skladnost e-trgovine za Tmall Global, JD Worldwide in Douyin. Uvedba platforme, carinsko skladišče in davčna optimizacija.",
+    "metaTitle": "Čezmejno e-trgovanje Kitajska | Tmall, JD, skladnost Douyin"
   },
   "IndustriesCommon": {
     "heroTitle": "Panoge, ki jih opravljamo",
@@ -1123,7 +1143,9 @@
       "medicaldevicesDesc": "Registracija NMPA razreda I/II/III in klinična ocena.",
       "crossborderecommerce": "Čezmejno e-trgovanje",
       "crossborderecommerceDesc": "Predpisi CBEC, skladnost platforme in davčna optimizacija."
-    }
+    },
+    "metaTitle": "China Import Compliance by Industry | GACC, CCC, NMPA Services",
+    "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
     "coverItems1": "Ocena imenika certifikatov CCC",

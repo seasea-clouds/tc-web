@@ -35,22 +35,47 @@ export function generateSitemaps(baseUrl, outDir) {
   const localeRoutes = expandLocales(apps);
 
   const now = new Date();
+  // Collect all locale codes for cross-linking
+  const allLocales = localeRoutes.map(x => x.locale);
 
-  // 1. 生成各语言 sitemap
+  // 1. 生成各语言 sitemap（含 xhtml:link hreflang 交叉引用）
   for (const { locale, routes } of localeRoutes) {
     let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
-    xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+    xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n`;
+    xml += `        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n`;
 
     for (const route of routes) {
       const loc = `${baseUrl}${route}`;
-      xml += `  <url>\n    <loc>${escapeXml(loc)}</loc>\n    <lastmod>${now.toISOString()}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.7</priority>\n  </url>\n`;
+      // Extract locale-independent path (remove /{locale} prefix)
+      const pathPart = route.replace(/^\/[a-z]{2}(-[a-z]{2})?\//, '/');
+
+      // Determine priority based on page importance
+      const priority = pathPart === '/' ? '1.0' :
+        pathPart.startsWith('/services/') || pathPart.startsWith('/industries/') ? '0.8' :
+        pathPart.startsWith('/c/') ? '0.6' :
+        pathPart.startsWith('/blog/') ? '0.6' :
+        pathPart.startsWith('/faq/') || pathPart.startsWith('/packages/') || pathPart.startsWith('/about/') ? '0.7' :
+        '0.5';
+
+      xml += `  <url>\n    <loc>${escapeXml(loc)}</loc>\n    <lastmod>${now.toISOString()}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>${priority}</priority>\n`;
+
+      // Add hreflang xhtml:link alternates for all locales
+      for (const altLocale of allLocales) {
+        const altUrl = `${baseUrl}/${altLocale}${pathPart}`;
+        xml += `    <xhtml:link rel="alternate" hreflang="${altLocale}" href="${escapeXml(altUrl)}"/>\n`;
+      }
+      // x-default → English
+      const defaultUrl = `${baseUrl}/en${pathPart}`;
+      xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(defaultUrl)}"/>\n`;
+
+      xml += `  </url>\n`;
     }
 
     xml += `</urlset>\n`;
     fs.writeFileSync(path.join(outDir, `sitemap-${locale}.xml`), xml, 'utf-8');
   }
 
-  console.log(`✅ ${localeRoutes.length} locale sitemaps generated`);
+  console.log(`✅ ${localeRoutes.length} locale sitemaps generated (with hreflang annotations)`);
 
   // 2. 生成 sitemap index
   let idxXml = `<?xml version="1.0" encoding="UTF-8"?>\n`;

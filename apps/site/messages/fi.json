@@ -849,7 +849,9 @@
     "coverItems4": "Ainesosien ja lisäaineiden vaatimustenmukaisuuden tarkastus",
     "coverItems5": "Kylmäketju- ja lämpötilavaatimukset",
     "coverItems6": "Jatkuva sääntelyn seuranta ja uusimisen tuki",
-    "coverItems7": "Meijeriteollisuuden vaatimustenmukaisuuskoulutus ja neuvonta"
+    "coverItems7": "Meijeriteollisuuden vaatimustenmukaisuuskoulutus ja neuvonta",
+    "metaDescription": "Asiantunteva GACC-rekisteröinti, kiinalaiset merkinnät ja tuontivaatimustenmukaisuus Kiinaan tuotaville maito- ja maitotuotteille. Yli 15 vuotta maidon viejien auttamisessa.",
+    "metaTitle": "Kiinan vaatimustenmukaisuus meijeri- ja maitotuotteiden viejille | GACC-rekisteröintiopas"
   },
   "IndustryMeat": {
     "heroTitle": "Kiinan vaatimustenmukaisuus lihan ja äyriäisten viejille",
@@ -879,7 +881,9 @@
     "coverItems4": "Kylmäketjulogistiikan noudattamisohjeet",
     "coverItems5": "Maakohtaiset markkinoille pääsyn vaatimukset",
     "coverItems6": "Jatkuva sääntelyn seuranta ja uusimisen tuki",
-    "coverItems7": "Säännösten noudattamista koskeva koulutus lihan ja äyriäisten maahantuojille"
+    "coverItems7": "Säännösten noudattamista koskeva koulutus lihan ja äyriäisten maahantuojille",
+    "metaDescription": "Ammattimainen GACC CIFER -rekisteröinti, kylmäketjun noudattaminen ja tullituki lihan ja äyriäisten viejille Kiinaan.",
+    "metaTitle": "Liha ja äyriäiset Kiinan tuonnin vaatimustenmukaisuus | GACC-rekisteröintiopas"
   },
   "IndustryWine": {
     "heroTitle": "Kiinan vaatimustenmukaisuus viinin ja väkevien alkoholijuomien viejille",
@@ -910,7 +914,9 @@
     "coverItems4": "Lisäaineiden ja sulfiittien vaatimustenmukaisuuden tarkastus",
     "coverItems5": "Maakohtaiset viinin tuontivaatimukset",
     "coverItems6": "Jatkuva sääntelyn seuranta ja uusimisen tuki",
-    "coverItems7": "Viinialan vaatimustenmukaisuuskoulutus ja neuvonta"
+    "coverItems7": "Viinialan vaatimustenmukaisuuskoulutus ja neuvonta",
+    "metaDescription": "Täydellinen tuontivaatimustenmukaisuus Kiinaan saapuville viineille ja väkeville alkoholijuomille. GACC-rekisteröinti, tuotemerkin suojaus ja tehtävien optimointi.",
+    "metaTitle": "Viinin ja väkevien alkoholijuomien tuonti Kiinaan | GACC-rekisteröinti ja tuotemerkin suojaus"
   },
   "IndustrySkincare": {
     "heroTitle": "Kiinan vaatimustenmukaisuus ihonhoito- ja kosmetiikkabrändeille",
@@ -934,7 +940,9 @@
     "faq6a": "Olennaista. Kiinan ensimmäinen tavaramerkkijärjestelmä tarkoittaa, että tuotenimesi on rekisteröitävä ennen markkinoille tuloa. Ilman sitä vaarana on, että tuotemerkki valtaa ja et pysty valvomaan oikeuksiasi. Käsittelemme tavaramerkkien rekisteröinnin osana palveluamme.",
     "jsonldName": "Kiinan ihonhoidon ja kosmetiikan compliance-palvelut",
     "jsonldDescription": "NMPA-hakemus CSAR:n mukaisesti, ainesosien turvallisuusarviointi, eläinkokeiden vapautusohjeet ja tuontikonsultointi Kiinaan tuleville kosmetiikkabrändeille.",
-    "cta": "Hanki ilmainen arviointi"
+    "cta": "Hanki ilmainen arviointi",
+    "metaDescription": "NMPA-kosmetiikkahakemus, ainesosien turvallisuusarviointi ja CSAR-vaatimustenmukaisuus Kiinaan tuleville kansainvälisille ihonhoito- ja kosmetiikkabrändeille.",
+    "metaTitle": "Kosmetiikka tuonti Kiinaan | NMPA-arkistointi- ja CSAR-vaatimustenmukaisuusopas"
   },
   "IndustryPetFood": {
     "heroTitle": "Kiinan vaatimustenmukaisuus lemmikkieläinten ruokien viejille",
@@ -958,7 +966,9 @@
     "faq6a": "Kyllä. Kiinan lemmikkieläinruokamarkkinat ovat yksi maailman nopeimmin kasvavista, ja vuotuinen kasvu on yli 15 %. Nouseva keskiluokka ja lisääntyvä lemmikkien omistaminen luovat merkittäviä mahdollisuuksia kansainvälisille brändeille.",
     "jsonldName": "Kiinan lemmikkieläinten ruokien compliance-palvelut",
     "jsonldDescription": "GACC-rekisteröinti, rehun tuontilisenssit, ainesosien hyväksyntä ja merkintöjen noudattaminen Kiinan markkinoille tulevien lemmikkieläinten ruokien viejille.",
-    "cta": "Hanki ilmainen arviointi"
+    "cta": "Hanki ilmainen arviointi",
+    "metaDescription": "GACC- ja MOA-rekisteröinti lemmikkieläinten ruokien viejille. Ainesosien hyväksyntä, merkintöjen noudattaminen ja tuontiluvat Kiinalle.",
+    "metaTitle": "Lemmikkieläinruoan tuonti Kiinaan | GACC & MOA rekisteröintiopas"
   },
   "IndustrySupplements": {
     "heroTitle": "Kiinan vaatimustenmukaisuus terveys- ja lisäravinteiden viejille",
@@ -982,7 +992,9 @@
     "faq6a": "Kyllä. Rajat ylittävä sähköinen kaupankäynti mahdollistaa lisäosien myynnin ilman SAMR-rekisteröintiä, mikä tekee siitä houkuttelevan tulokanavan. Tuotteiden on kuitenkin täytettävä turvallisuusstandardit ja täytettävä positiivisten luetteloiden vaatimukset.",
     "jsonldName": "Kiinan ravintolisien compliance-palvelut",
     "jsonldDescription": "SAMR-luonnonruoan rekisteröinti, ainesosien arviointi, merkintöjen noudattaminen ja tuontikonsultointi Kiinaan tuleville lisäravinteiden viejille.",
-    "cta": "Hanki ilmainen arviointi"
+    "cta": "Hanki ilmainen arviointi",
+    "metaDescription": "Kiinan markkinoille tulevien ravintolisien SAMR-luonnonruoan rekisteröinti, GACC-hakemus ja merkintöjen noudattaminen.",
+    "metaTitle": "Terveyslisät Kiinan tuonti | SAMR-rekisteröintiopas"
   },
   "IndustryBaby": {
     "heroTitle": "Kiinan vaatimustenmukaisuus vauva- ja äitiystuotteiden viejille",
@@ -1006,7 +1018,9 @@
     "faq6a": "Kyllä. Syntyvyyden laskusta huolimatta kiinalaiset vanhemmat kuluttavat enemmän lasta kohden kuin koskaan ennen. Korkealuokkaiset tuontivauvojen tuotteet, erityisesti äidinmaidonkorvikkeet ja luomuvauvanruoat, ovat edelleen kysyttyjä keskiluokan perheissä.",
     "jsonldName": "Kiinan vauva- ja äitiystuotteiden compliance-palvelut",
     "jsonldDescription": "SAMR äidinmaidonkorvikkeen rekisteröinti, GACC-elintarvikkeiden rekisteröinti, NMPA-kosmetiikan rekisteröinti ja turvallisuusvaatimusten noudattaminen Kiinaan tuleville vauvojen ja äitien tuotteiden viejille.",
-    "cta": "Hanki ilmainen arviointi"
+    "cta": "Hanki ilmainen arviointi",
+    "metaDescription": "Äidinmaidonkorvikkeen SAMR-rekisteröinti, GACC-yhteensopivuus ja NMPA-hakemus vauvojen ja äitien tuotteista Kiinaan.",
+    "metaTitle": "Vauvatuotteet ja pikkulasten äidinmaidonkorvikkeet Kiinan tuonti | SAMR- ja GACC-opas"
   },
   "IndustryElectronics": {
     "heroTitle": "Kiinan vaatimustenmukaisuus kulutuselektroniikan viejille",
@@ -1030,7 +1044,9 @@
     "faq6a": "Kriittinen. Elektroniikkamerkkien tulee rekisteröidä tavaramerkit, patentit ja mallit Kiinassa ennen markkinoille tuloa. Kiinan ensimmäinen tiedostojärjestelmä tarkoittaa, että rekisteröinnin viivästykset voivat johtaa IP-varkauksiin. Tarjoamme tuotemerkin suojauspalveluita.",
     "jsonldName": "Kiinan kulutuselektroniikan compliance-palvelut",
     "jsonldDescription": "CCC-sertifiointi, SRRC-hyväksyntä, kiinalaisten merkintöjen noudattaminen ja IP-suojaus Kiinan markkinoille tuleville elektroniikan viejille.",
-    "cta": "Hanki ilmainen arviointi"
+    "cta": "Hanki ilmainen arviointi",
+    "metaDescription": "CCC-sertifiointi, SRRC-hyväksyntä ja IP-suojaus Kiinan markkinoille tuleville kulutuselektroniikkamerkeille.",
+    "metaTitle": "Viihde-elektroniikka Kiinan tuonti | CCC-sertifiointiopas"
   },
   "IndustryMedical": {
     "heroTitle": "Kiinan vaatimustenmukaisuus lääkinnällisten laitteiden viejille",
@@ -1061,7 +1077,9 @@
     "coverItems4": "NMPA:n auditoinnin valmistelu ja tuki",
     "coverItems5": "Markkinoinnin jälkeinen valvonta ja vaatimustenmukaisuuden seuranta",
     "coverItems6": "Jatkuva sääntelyn seuranta ja uusimisen tuki",
-    "coverItems7": "Lääketieteellisten laitteiden vaatimustenmukaisuuskoulutus ja neuvonta"
+    "coverItems7": "Lääketieteellisten laitteiden vaatimustenmukaisuuskoulutus ja neuvonta",
+    "metaDescription": "NMPA lääkinnällisten laitteiden rekisteröinti, kliininen arviointi ja CCC-sertifiointi kansainvälisille lääkinnällisten laitteiden valmistajille.",
+    "metaTitle": "Lääketieteelliset laitteet Kiinan tuonti | NMPA Luokka I/II/III Rekisteröinti"
   },
   "IndustryEcommerce": {
     "heroTitle": "Kiinan vaatimustenmukaisuus rajat ylittäville verkkokaupan brändeille",
@@ -1092,7 +1110,9 @@
     "coverItems4": "Rajat ylittävän sähköisen kaupankäynnin verotuksen optimointi",
     "coverItems5": "Kiinalaisen etiketin vapautuksen kelpoisuuden arviointi",
     "coverItems6": "Jatkuva sääntelyn seuranta ja vaatimustenmukaisuuden tuki",
-    "coverItems7": "Sähköisen kaupankäynnin alustan vaatimustenmukaisuuskoulutus ja neuvonta"
+    "coverItems7": "Sähköisen kaupankäynnin alustan vaatimustenmukaisuuskoulutus ja neuvonta",
+    "metaDescription": "Tmall Globalin, JD Worldwiden ja Douyinin rajat ylittävä sähköisen kaupankäynnin vaatimustenmukaisuus. Alustan käyttöönotto, tullivarasto ja verotuksen optimointi.",
+    "metaTitle": "Rajat ylittävä sähköinen kaupankäynti Kiina | Tmall, JD, Douyin-yhteensopivuus"
   },
   "IndustriesCommon": {
     "heroTitle": "Palvelemme toimialat",
@@ -1123,7 +1143,9 @@
       "medicaldevicesDesc": "NMPA Luokka I/II/III rekisteröinti ja kliininen arviointi.",
       "crossborderecommerce": "Rajat ylittävä sähköinen kaupankäynti",
       "crossborderecommerceDesc": "CBEC-säännökset, alustan noudattaminen ja verotuksen optimointi."
-    }
+    },
+    "metaTitle": "China Import Compliance by Industry | GACC, CCC, NMPA Services",
+    "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
     "coverItems1": "CCC-sertifiointihakemiston arviointi",

@@ -14,15 +14,15 @@ SinoTrade 品牌的所有网站代码统一放在此 monorepo 中。三个独立
 ## 三站架构概览
 
 ```
-用户访问 → 主站 (trade-web-site.pages.dev)
+用户访问 → sinotradecompliance.com
               ├── /{locale}/...  → 主站自身 SSG 页面
-              ├── /{locale}/c/...  → Worker 代理 → Portal (trade-web-portal.pages.dev)
-              └── /{locale}/blog/... → Worker 代理 → Blog (trade-web-blog.pages.dev)
+              ├── /{locale}/c/...  → Worker 代理 → Portal
+              └── /{locale}/blog/... → Worker 代理 → Blog
 ```
 
 三站在 CF Pages 各自独立部署，通过主站的 `functions/_middleware.ts`（边缘 Worker）做代理转发。所有导航/页脚/语言切换由 `@trade/ui` 共享组件实现，用户感知上是一个完整的网站。
 
-**当前阶段：** 开发模式。使用 CF 自带的 `.pages.dev` 域名访问，未切换到正式域名 `sinotradecompliance.com`。由 See 未来手动切换域名。
+**当前阶段：** 已切换至正式域名 `sinotradecompliance.com`（2026-06-09）。三站通过 CF Pages 各自动部署，主站 Worker 统一代理门户和博客。
 
 ## 子项目
 
@@ -30,7 +30,7 @@ SinoTrade 品牌的所有网站代码统一放在此 monorepo 中。三个独立
 - **目录：** `apps/site/`
 - **CF Pages 项目名：** `trade-web-site`
 - **dev 域名：** `https://trade-web-site.pages.dev`
-- **生产域名：** `sinotradecompliance.com`（未来切换）
+- **生产域名：** `sinotradecompliance.com` ✅
 - **用途：** 官网主站，品牌展示、服务介绍、行业页面
 - **多语言：** `[locale]` 服务端路由，48 语言 SSG（静态导出）
 - **SSG 输出目录：** `apps/site/out/`
@@ -41,6 +41,7 @@ SinoTrade 品牌的所有网站代码统一放在此 monorepo 中。三个独立
 - **目录：** `apps/portal/`
 - **CF Pages 项目名：** `trade-web-portal`
 - **dev 域名：** `https://trade-web-portal.pages.dev`
+- **主站代理域名：** `sinotradecompliance.com/{locale}/c/*`
 - **主站代理路径：** `/{locale}/c/*`
 - **旧名：** 曾用 "compli-service"，**已全面改为 "portal"**；URL 前缀从 `/compli-service/` 改为 `/c/`。
 - **用途：** 合规工具箱 — 6 大合规自查工具（GACC/Label/CCC/NMPA/Cross-border/Trademark）
@@ -55,6 +56,7 @@ SinoTrade 品牌的所有网站代码统一放在此 monorepo 中。三个独立
 - **目录：** `apps/blog/`
 - **CF Pages 项目名：** `trade-web-blog`
 - **dev 域名：** `https://trade-web-blog.pages.dev`
+- **主站代理域名：** `sinotradecompliance.com/{locale}/blog/*`
 - **主站代理路径：** `/{locale}/blog/*`
 - **用途：** SinoTrade 合规博客
 - **多语言：** `[locale]` 服务端路由，48 语言 SSG
@@ -92,7 +94,7 @@ Portal 不使用 `basePath`，Worker 代理透传完整路径。
 | Portal | `trade-web-portal` | `apps/portal` | `npx next build` | `out` |
 | Blog | `trade-web-blog` | `apps/blog` | `npx next build` | `out` |
 
-**当前状态：** 使用 CF 自动分配的 `.pages.dev` 域名。
+**当前状态：** 已切换至正式域名 `sinotradecompliance.com`。`trade-web-site` 绑定主域名，portal 和 blog 通过主站 Worker 代理访问，无需直接绑定域名。
 **Git 连接：** 三个项目都连接到 GitHub `seasea-clouds/trade-web` 仓库。
 **自动部署：** push 到 `main` 分支触发所有项目构建。
 - 改 `apps/site/**` → 触发主站

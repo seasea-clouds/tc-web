@@ -849,7 +849,9 @@
     "coverItems4": "Uthibitishaji wa kufuata kiambato na nyongeza",
     "coverItems5": "Mahitaji ya mnyororo wa baridi na joto",
     "coverItems6": "Ufuatiliaji unaoendelea wa udhibiti na usaidizi wa upya",
-    "coverItems7": "Mafunzo na ushauri wa kufuata sekta ya maziwa"
+    "coverItems7": "Mafunzo na ushauri wa kufuata sekta ya maziwa",
+    "metaDescription": "Usajili wa kitaalam wa GACC, kuweka lebo za Kichina, na kufuata uagizaji wa bidhaa za maziwa na maziwa zinazoingia Uchina. Miaka 15+ kusaidia wauzaji wa maziwa nje.",
+    "metaTitle": "Utiifu wa China kwa Wasafirishaji wa Bidhaa za Maziwa na Maziwa | Mwongozo wa Usajili wa GACC"
   },
   "IndustryMeat": {
     "heroTitle": "Kuzingatia Uchina kwa Wasafirishaji wa Nyama na Dagaa",
@@ -879,7 +881,9 @@
     "coverItems4": "Mwongozo wa kufuata wa vifaa vya baridi",
     "coverItems5": "Mahitaji ya kufikia soko mahususi ya nchi",
     "coverItems6": "Ufuatiliaji unaoendelea wa udhibiti na usaidizi wa upya",
-    "coverItems7": "Mafunzo ya kufuata sheria kwa waagizaji nyama na dagaa"
+    "coverItems7": "Mafunzo ya kufuata sheria kwa waagizaji nyama na dagaa",
+    "metaDescription": "Usajili wa kitaalamu wa GACC CIFER, kufuata mnyororo baridi, na usaidizi wa forodha kwa wasafirishaji wa nyama na dagaa nchini China.",
+    "metaTitle": "Uzingatiaji wa Uagizaji wa Nyama na Dagaa China | Mwongozo wa Usajili wa GACC"
   },
   "IndustryWine": {
     "heroTitle": "Kuzingatia Uchina kwa Wasafirishaji wa Mvinyo na Viroho",
@@ -910,7 +914,9 @@
     "coverItems4": "Uthibitishaji wa kufuata kwa nyongeza na sulfite",
     "coverItems5": "Mahitaji ya uingizaji wa mvinyo mahususi nchini",
     "coverItems6": "Ufuatiliaji unaoendelea wa udhibiti na usaidizi wa upya",
-    "coverItems7": "Mafunzo ya kufuata sekta ya mvinyo na ushauri"
+    "coverItems7": "Mafunzo ya kufuata sekta ya mvinyo na ushauri",
+    "metaDescription": "Uzingatiaji kamili wa uagizaji wa mvinyo na vinywaji vikali vinavyoingia Uchina. Usajili wa GACC, ulinzi wa chapa, na uboreshaji wa wajibu.",
+    "metaTitle": "Leta Mvinyo na Viroho Uchina | Usajili wa GACC & Ulinzi wa Biashara"
   },
   "IndustrySkincare": {
     "heroTitle": "Utiifu wa China kwa Bidhaa za Utunzaji wa Ngozi na Vipodozi",
@@ -934,7 +940,9 @@
     "faq6a": "Muhimu. Mfumo wa chapa ya biashara ya kwanza hadi faili wa Uchina inamaanisha lazima jina la chapa yako lisajiliwe kabla ya kuingia sokoni. Bila hivyo, una hatari ya kuchuchumaa chapa na kukosa uwezo wa kutekeleza haki zako. Tunashughulikia usajili wa chapa ya biashara kama sehemu ya huduma yetu.",
     "jsonldName": "Huduma za Utii wa Ulea wa Ngozi na Vipodozi China",
     "jsonldDescription": "Uwasilishaji wa NMPA chini ya CSAR, tathmini ya usalama wa viambatisho, mwongozo wa kutolipa ushuru wa majaribio ya wanyama, na ushauri wa kuagiza bidhaa za vipodozi zinazoingia China.",
-    "cta": "Pata Tathmini ya Bure"
+    "cta": "Pata Tathmini ya Bure",
+    "metaDescription": "Uhifadhi wa vipodozi vya NMPA, ukaguzi wa usalama wa viambato, na utiifu wa CSAR kwa chapa za kimataifa za utunzaji wa ngozi na vipodozi zinazoingia Uchina.",
+    "metaTitle": "Vipodozi Ingiza Uchina | Mwongozo wa Ufuataji wa NMPA & Mwongozo wa Uzingatiaji wa CSAR"
   },
   "IndustryPetFood": {
     "heroTitle": "Uchina Ufuataji kwa Wasafirishaji wa Chakula cha Kipenzi",
@@ -958,7 +966,9 @@
     "faq6a": "Ndiyo. Soko la chakula cha wanyama kipenzi la China ni moja ya soko linalokua kwa kasi zaidi ulimwenguni, na ukuaji wa kila mwaka unazidi 15%. Kupanda kwa tabaka la kati na kuongezeka kwa umiliki wa wanyama vipenzi hutengeneza fursa muhimu kwa chapa za kimataifa.",
     "jsonldName": "Huduma za Utii wa Chakula cha Wanyama Vipenzi China",
     "jsonldDescription": "Usajili wa GACC, utoaji leseni ya uingizaji wa malisho, uidhinishaji wa viambato, na uzingatiaji wa lebo kwa wauzaji bidhaa nje wa vyakula vipenzi wanaoingia katika soko la Uchina.",
-    "cta": "Pata Tathmini ya Bure"
+    "cta": "Pata Tathmini ya Bure",
+    "metaDescription": "Usajili wa mwisho hadi mwisho wa GACC na MOA kwa wasafirishaji wa chakula kipenzi. Uidhinishaji wa viambato, utiifu wa lebo, na vibali vya kuagiza kwa Uchina.",
+    "metaTitle": "Kuagiza Chakula cha Kipenzi China | Mwongozo wa Usajili wa GACC na MOA"
   },
   "IndustrySupplements": {
     "heroTitle": "Utiifu wa China kwa Afya na Wasafirishaji wa Nyongeza",
@@ -982,7 +992,9 @@
     "faq6a": "Ndiyo. Biashara ya mtandaoni ya mpakani inaruhusu virutubisho kuuzwa bila usajili wa SAMR, na kuifanya kuwa njia ya kuvutia ya kuingia. Hata hivyo, bidhaa lazima bado zikidhi viwango vya usalama na zifuate mahitaji chanya ya orodha.",
     "jsonldName": "Huduma za Utii wa Viongezi vya Afya China",
     "jsonldDescription": "Usajili wa chakula cha afya cha SAMR, tathmini ya viambatisho, utiifu wa lebo, na ushauri wa kuagiza kwa wauzaji nje wa ziada wanaoingia China.",
-    "cta": "Pata Tathmini ya Bure"
+    "cta": "Pata Tathmini ya Bure",
+    "metaDescription": "Usajili wa chakula cha afya cha SAMR, uwekaji faili wa GACC, na utii wa lebo kwa virutubisho vya lishe vinavyoingia katika soko la Uchina.",
+    "metaTitle": "Virutubisho vya Afya Uchina Import | Mwongozo wa Usajili wa SAMR"
   },
   "IndustryBaby": {
     "heroTitle": "Kuzingatia Uchina kwa Wasafirishaji wa Bidhaa za Mtoto na Mama",
@@ -1006,7 +1018,9 @@
     "faq6a": "Ndiyo. Licha ya kupungua kwa kiwango cha kuzaliwa, wazazi wa Uchina hutumia zaidi kwa kila mtoto kuliko hapo awali. Bidhaa bora za watoto zinazoagizwa kutoka nje, hasa maziwa ya watoto wachanga na vyakula vya kikaboni vya watoto, hubakia kuhitajika sana miongoni mwa familia za tabaka la kati.",
     "jsonldName": "Huduma za Utii wa Bidhaa za Watoto na Mama China",
     "jsonldDescription": "Usajili wa fomula ya watoto wachanga ya SAMR, usajili wa chakula wa GACC, ujazaji wa vipodozi vya NMPA, na kufuata usalama kwa wauzaji bidhaa za watoto na wajawazito wanaoingia China.",
-    "cta": "Pata Tathmini ya Bure"
+    "cta": "Pata Tathmini ya Bure",
+    "metaDescription": "Usajili wa formula ya watoto wachanga ya SAMR, kufuata GACC, na uwekaji faili wa NMPA kwa bidhaa za watoto na wajawazito zinazoingia Uchina.",
+    "metaTitle": "Bidhaa za Mtoto na Mfumo wa Mtoto wa Kuagiza Uchina | Mwongozo wa SAMR & GACC"
   },
   "IndustryElectronics": {
     "heroTitle": "Kuzingatia Uchina kwa Wasafirishaji wa Elektroniki za Watumiaji",
@@ -1030,7 +1044,9 @@
     "faq6a": "Muhimu. Chapa za kielektroniki zinapaswa kusajili chapa za biashara, hataza na miundo nchini Uchina kabla ya kuingia sokoni. Mfumo wa Uchina wa kutuma faili kwanza unamaanisha kucheleweshwa kwa usajili kunaweza kusababisha wizi wa IP. Tunatoa huduma za ulinzi wa chapa.",
     "jsonldName": "Huduma za Utii wa Elektroniki ya Watumiaji China",
     "jsonldDescription": "Uidhinishaji wa CCC, uidhinishaji wa SRRC, utiifu wa lebo za Kichina, na ulinzi wa IP kwa wauzaji bidhaa za kielektroniki wanaoingia kwenye soko la Uchina.",
-    "cta": "Pata Tathmini ya Bure"
+    "cta": "Pata Tathmini ya Bure",
+    "metaDescription": "Uidhinishaji wa CCC, idhini ya SRRC, na ulinzi wa IP kwa chapa za kielektroniki zinazoingia kwenye soko la Uchina.",
+    "metaTitle": "Elektroniki za Watumiaji Uchina Ingiza | Mwongozo wa Udhibitishaji wa CCC"
   },
   "IndustryMedical": {
     "heroTitle": "Utiifu wa China kwa Wasafirishaji wa Vifaa vya Matibabu",
@@ -1061,7 +1077,9 @@
     "coverItems4": "Maandalizi na usaidizi wa ukaguzi wa NMPA",
     "coverItems5": "Ufuatiliaji wa baada ya soko na ufuatiliaji wa kufuata",
     "coverItems6": "Ufuatiliaji unaoendelea wa udhibiti na usaidizi wa upya",
-    "coverItems7": "Mafunzo na ushauri wa kufuata kifaa cha matibabu"
+    "coverItems7": "Mafunzo na ushauri wa kufuata kifaa cha matibabu",
+    "metaDescription": "Usajili wa kifaa cha matibabu cha NMPA, tathmini ya kimatibabu, na uthibitishaji wa CCC kwa watengenezaji wa kimataifa wa vifaa vya matibabu.",
+    "metaTitle": "Vifaa vya Matibabu Uchina Ingiza | Usajili wa NMPA Daraja la I/II/III"
   },
   "IndustryEcommerce": {
     "heroTitle": "Utiifu wa China kwa Chapa za Biashara ya Mtandaoni za Mipakani",
@@ -1092,7 +1110,9 @@
     "coverItems4": "Uboreshaji wa kodi ya biashara ya mtandaoni ya mipakani",
     "coverItems5": "Tathmini ya kutostahiki kwa lebo ya Kichina",
     "coverItems6": "Ufuatiliaji unaoendelea wa udhibiti na usaidizi wa kufuata",
-    "coverItems7": "Mafunzo na ushauri wa kufuata jukwaa la biashara ya mtandaoni"
+    "coverItems7": "Mafunzo na ushauri wa kufuata jukwaa la biashara ya mtandaoni",
+    "metaDescription": "Utiifu wa biashara ya mtandaoni ya mipakani kwa Tmall Global, JD Worldwide, na Douyin. Upandaji wa jukwaa, ghala lililounganishwa, na uboreshaji wa kodi.",
+    "metaTitle": "Biashara ya Mtandaoni ya Mipakani Uchina | Tmall, JD, Ufuataji wa Douyin"
   },
   "IndustriesCommon": {
     "heroTitle": "Viwanda Tunachohudumia",
@@ -1123,7 +1143,9 @@
       "medicaldevicesDesc": "Usajili wa NMPA Daraja la I/II/III na tathmini ya kimatibabu.",
       "crossborderecommerce": "Biashara ya kielektroniki ya mpakani",
       "crossborderecommerceDesc": "Kanuni za CBEC, kufuata jukwaa, na uboreshaji wa kodi."
-    }
+    },
+    "metaTitle": "China Import Compliance by Industry | GACC, CCC, NMPA Services",
+    "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
     "coverItems1": "Tathmini ya saraka ya uthibitishaji wa CCC",

@@ -849,7 +849,9 @@
     "coverItems4": "Vérification de conformité des ingrédients et additifs",
     "coverItems5": "Exigences de chaîne du froid et de température",
     "coverItems6": "Suivi réglementaire continu et support de renouvellement",
-    "coverItems7": "Formation et conseil en conformité de l'industrie laitière"
+    "coverItems7": "Formation et conseil en conformité de l'industrie laitière",
+    "metaDescription": "Enregistrement expert GACC, étiquetage chinois et conformité des importations de produits laitiers et laitiers entrant en Chine. Plus de 15 ans d’expérience à aider les exportateurs de produits laitiers.",
+    "metaTitle": "Conformité en Chine pour les exportateurs de produits laitiers et de produits laitiers | Guide d'enregistrement GACC"
   },
   "IndustryMeat": {
     "heroTitle": "Conformité chinoise pour les exportateurs de viande et de fruits de mer",
@@ -879,7 +881,9 @@
     "coverItems4": "Guidance de conformité logistique de chaîne du froid",
     "coverItems5": "Exigences d'accès au marché par pays",
     "coverItems6": "Suivi réglementaire continu et support de renouvellement",
-    "coverItems7": "Formation en conformité réglementaire pour les importateurs de viande et fruits de mer"
+    "coverItems7": "Formation en conformité réglementaire pour les importateurs de viande et fruits de mer",
+    "metaDescription": "Enregistrement professionnel GACC CIFER, conformité de la chaîne du froid et assistance douanière pour les exportateurs de viande et de fruits de mer vers la Chine.",
+    "metaTitle": "Conformité des importations de viande et de fruits de mer en Chine | Guide d'enregistrement GACC"
   },
   "IndustryWine": {
     "heroTitle": "Conformité chinoise pour les exportateurs de vins et spiritueux",
@@ -910,7 +914,9 @@
     "coverItems4": "Vérification de conformité des additifs et sulfites",
     "coverItems5": "Exigences d'importation de vin par pays",
     "coverItems6": "Suivi réglementaire continu et support de renouvellement",
-    "coverItems7": "Formation et conseil en conformité de l'industrie du vin"
+    "coverItems7": "Formation et conseil en conformité de l'industrie du vin",
+    "metaDescription": "Conformité totale à l’importation des vins et spiritueux entrant en Chine. Enregistrement GACC, protection de la marque et optimisation des droits.",
+    "metaTitle": "Importation de vins et spiritueux en Chine | Enregistrement GACC et protection de la marque"
   },
   "IndustrySkincare": {
     "heroTitle": "Conformité chinoise pour les marques de soins de la peau et de cosmétiques",
@@ -934,7 +940,9 @@
     "faq6a": "Essentiel. Le système chinois du premier dépôt de marque signifie que votre nom de marque doit être enregistré avant d'entrer sur le marché. Sans cela, vous risquez le squattage de marque et l’incapacité de faire valoir vos droits. Nous gérons l’enregistrement des marques dans le cadre de notre service.",
     "jsonldName": "Services de conformité pour soins de la peau et cosmétiques en Chine",
     "jsonldDescription": "Dépôt NMPA en vertu du CSAR, évaluation de la sécurité des ingrédients, directives d'exemption en matière d'expérimentation animale et conseil en importation pour les marques de cosmétiques entrant en Chine.",
-    "cta": "Obtenez une évaluation gratuite"
+    "cta": "Obtenez une évaluation gratuite",
+    "metaDescription": "Dépôt de produits cosmétiques NMPA, examen de la sécurité des ingrédients et conformité CSAR pour les marques internationales de soins de la peau et de cosmétiques entrant en Chine.",
+    "metaTitle": "Importation de cosmétiques Chine | Guide de dépôt NMPA et de conformité CSAR"
   },
   "IndustryPetFood": {
     "heroTitle": "Conformité chinoise pour les exportateurs d’aliments pour animaux de compagnie",
@@ -958,7 +966,9 @@
     "faq6a": "Oui. Le marché chinois des aliments pour animaux de compagnie est l'un des plus dynamiques au monde, avec une croissance annuelle supérieure à 15 %. La classe moyenne croissante et le nombre croissant de propriétaires d’animaux de compagnie créent des opportunités significatives pour les marques internationales.",
     "jsonldName": "Services de conformité pour aliments pour animaux en Chine",
     "jsonldDescription": "Enregistrement GACC, licences d'importation d'aliments pour animaux, approbation des ingrédients et conformité de l'étiquetage pour les exportateurs d'aliments pour animaux de compagnie entrant sur le marché chinois.",
-    "cta": "Obtenez une évaluation gratuite"
+    "cta": "Obtenez une évaluation gratuite",
+    "metaDescription": "Enregistrement de bout en bout GACC et MOA pour les exportateurs d’aliments pour animaux de compagnie. Approbation des ingrédients, conformité de l'étiquetage et permis d'importation pour la Chine.",
+    "metaTitle": "Importation d'aliments pour animaux de compagnie en Chine | Guide d'enregistrement GACC et MOA"
   },
   "IndustrySupplements": {
     "heroTitle": "Conformité en Chine pour les exportateurs de produits de santé et de suppléments",
@@ -982,7 +992,9 @@
     "faq6a": "Oui. Le commerce électronique transfrontalier permet de vendre des suppléments sans enregistrement SAMR, ce qui en fait un canal d'entrée attractif. Cependant, les produits doivent toujours répondre aux normes de sécurité et respecter les exigences de la liste positive.",
     "jsonldName": "Services de conformité pour compléments santé en Chine",
     "jsonldDescription": "Enregistrement des aliments santé SAMR, évaluation des ingrédients, conformité de l'étiquetage et conseil en importation pour les exportateurs de suppléments entrant en Chine.",
-    "cta": "Obtenez une évaluation gratuite"
+    "cta": "Obtenez une évaluation gratuite",
+    "metaDescription": "Enregistrement des aliments santé SAMR, dépôt GACC et conformité de l'étiquetage des compléments alimentaires entrant sur le marché chinois.",
+    "metaTitle": "Suppléments de santé Importation de Chine | Guide d'inscription SAMR"
   },
   "IndustryBaby": {
     "heroTitle": "Conformité chinoise pour les exportateurs de produits pour bébés et maternels",
@@ -1006,7 +1018,9 @@
     "faq6a": "Oui. Malgré un taux de natalité en baisse, les parents chinois dépensent plus que jamais par enfant. Les produits pour bébés importés de qualité supérieure, en particulier les préparations pour nourrissons et les aliments biologiques pour bébés, restent très demandés par les familles de la classe moyenne.",
     "jsonldName": "Services de conformité pour produits bébé et maternité en Chine",
     "jsonldDescription": "Enregistrement des préparations pour nourrissons SAMR, enregistrement des aliments GACC, dépôt de produits cosmétiques NMPA et conformité en matière de sécurité pour les exportateurs de produits pour bébés et maternels entrant en Chine.",
-    "cta": "Obtenez une évaluation gratuite"
+    "cta": "Obtenez une évaluation gratuite",
+    "metaDescription": "Enregistrement SAMR des préparations pour nourrissons, conformité GACC et dépôt NMPA pour les produits pour bébés et maternels entrant en Chine.",
+    "metaTitle": "Produits pour bébés et préparations pour nourrissons Importation de Chine | Guide SAMR et GACC"
   },
   "IndustryElectronics": {
     "heroTitle": "Conformité chinoise pour les exportateurs d’électronique grand public",
@@ -1030,7 +1044,9 @@
     "faq6a": "Critique. Les marques d’électronique doivent enregistrer leurs marques, brevets et modèles en Chine avant d’entrer sur le marché. Le système chinois du premier déposant signifie que les retards dans l'enregistrement peuvent entraîner un vol de propriété intellectuelle. Nous fournissons des services de protection de marque.",
     "jsonldName": "Services de conformité pour électronique grand public en Chine",
     "jsonldDescription": "Certification CCC, approbation SRRC, conformité de l'étiquetage chinois et protection IP pour les exportateurs de produits électroniques entrant sur le marché chinois.",
-    "cta": "Obtenez une évaluation gratuite"
+    "cta": "Obtenez une évaluation gratuite",
+    "metaDescription": "Certification CCC, approbation SRRC et protection IP pour les marques d'électronique grand public entrant sur le marché chinois.",
+    "metaTitle": "Importation de produits électroniques grand public en Chine | Guide de certification CCC"
   },
   "IndustryMedical": {
     "heroTitle": "Conformité chinoise pour les exportateurs de dispositifs médicaux",
@@ -1061,7 +1077,9 @@
     "coverItems4": "Préparation et support pour l'audit NMPA",
     "coverItems5": "Surveillance post-commercialisation et suivi de conformité",
     "coverItems6": "Suivi réglementaire continu et support de renouvellement",
-    "coverItems7": "Formation et conseil en conformité des dispositifs médicaux"
+    "coverItems7": "Formation et conseil en conformité des dispositifs médicaux",
+    "metaDescription": "Enregistrement des dispositifs médicaux NMPA, évaluation clinique et certification CCC pour les fabricants internationaux de dispositifs médicaux.",
+    "metaTitle": "Importation de dispositifs médicaux en Chine | Enregistrement NMPA Classe I/II/III"
   },
   "IndustryEcommerce": {
     "heroTitle": "Conformité chinoise pour les marques de commerce électronique transfrontalier",
@@ -1092,7 +1110,9 @@
     "coverItems4": "Optimisation fiscale du e-commerce transfrontalier",
     "coverItems5": "Évaluation d'éligibilité d'exemption d'étiquetage chinois",
     "coverItems6": "Suivi réglementaire continu et support de conformité",
-    "coverItems7": "Formation et conseil en conformité des plateformes e-commerce"
+    "coverItems7": "Formation et conseil en conformité des plateformes e-commerce",
+    "metaDescription": "Conformité du commerce électronique transfrontalier pour Tmall Global, JD Worldwide et Douyin. Intégration de la plateforme, entrepôt douanier et optimisation fiscale.",
+    "metaTitle": "Commerce électronique transfrontalier Chine | Tmall, JD, Douyin Conformité"
   },
   "IndustriesCommon": {
     "heroTitle": "Industries que nous servons",
@@ -1123,7 +1143,9 @@
       "medicaldevicesDesc": "Enregistrement NMPA Classe I/II/III et évaluation clinique.",
       "crossborderecommerce": "Commerce électronique transfrontalier",
       "crossborderecommerceDesc": "Réglementations CBEC, conformité des plateformes et optimisation fiscale."
-    }
+    },
+    "metaTitle": "China Import Compliance by Industry | GACC, CCC, NMPA Services",
+    "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
     "coverItems1": "Évaluation du répertoire de certification CCC",

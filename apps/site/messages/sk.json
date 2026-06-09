@@ -849,7 +849,9 @@
     "coverItems4": "Overenie zhody zložiek a aditív",
     "coverItems5": "Požiadavky na chladiaci reťazec a teplotu",
     "coverItems6": "Priebežné regulačné monitorovanie a podpora obnovy",
-    "coverItems7": "Školenia a poradenstvo v oblasti dodržiavania predpisov v mliekarenskom priemysle"
+    "coverItems7": "Školenia a poradenstvo v oblasti dodržiavania predpisov v mliekarenskom priemysle",
+    "metaDescription": "Odborná registrácia GACC, čínske označovanie a súlad s dovozom mliečnych a mliečnych výrobkov vstupujúcich do Číny. Viac ako 15 rokov pomáhame vývozcom mlieka a mliečnych výrobkov.",
+    "metaTitle": "Súlad Číny pre vývozcov mliečnych výrobkov a mliečnych výrobkov | Sprievodca registráciou GACC"
   },
   "IndustryMeat": {
     "heroTitle": "Súlad Číny pre vývozcov mäsa a morských plodov",
@@ -879,7 +881,9 @@
     "coverItems4": "Usmernenie k dodržiavaniu logistiky chladiaceho reťazca",
     "coverItems5": "Požiadavky prístupu na trh špecifické pre jednotlivé krajiny",
     "coverItems6": "Priebežné regulačné monitorovanie a podpora obnovy",
-    "coverItems7": "Školenie o dodržiavaní predpisov pre dovozcov mäsa a morských plodov"
+    "coverItems7": "Školenie o dodržiavaní predpisov pre dovozcov mäsa a morských plodov",
+    "metaDescription": "Profesionálna registrácia GACC CIFER, dodržiavanie chladiaceho reťazca a colná podpora pre vývozcov mäsa a morských plodov do Číny.",
+    "metaTitle": "Zhoda s dovozom mäsa a morských plodov z Číny | Sprievodca registráciou GACC"
   },
   "IndustryWine": {
     "heroTitle": "Súlad Číny pre vývozcov vína a liehovín",
@@ -910,7 +914,9 @@
     "coverItems4": "Overenie zhody s prísadami a sulfitmi",
     "coverItems5": "Požiadavky na dovoz vína špecifické pre danú krajinu",
     "coverItems6": "Priebežné regulačné monitorovanie a podpora obnovy",
-    "coverItems7": "Školenia a poradenstvo v oblasti dodržiavania pravidiel vinárskeho priemyslu"
+    "coverItems7": "Školenia a poradenstvo v oblasti dodržiavania pravidiel vinárskeho priemyslu",
+    "metaDescription": "Úplné dodržiavanie dovozných pravidiel pre víno a liehoviny vstupujúce do Číny. Registrácia GACC, ochrana značky a optimalizácia cla.",
+    "metaTitle": "Dovoz vína a liehovín do Číny | Registrácia a ochrana značky GACC"
   },
   "IndustrySkincare": {
     "heroTitle": "Súlad Číny pre značky starostlivosti o pleť a kozmetiky",
@@ -934,7 +940,9 @@
     "faq6a": "Nevyhnutné. Čínsky systém ochranných známok ako prvý v registri znamená, že pred vstupom na trh musí byť vaša značka zaregistrovaná. Bez nej riskujete squatovanie značky a neschopnosť presadiť svoje práva. Registráciu ochrannej známky riešime ako súčasť našej služby.",
     "jsonldName": "Čínske služby compliance pre starostlivosť o pleť a kozmetiku",
     "jsonldDescription": "Podávanie NMPA podľa CSAR, hodnotenie bezpečnosti prísad, usmernenie o výnimke z testovania na zvieratách a poradenstvo pri dovoze kozmetických značiek vstupujúcich do Číny.",
-    "cta": "Získajte bezplatné hodnotenie"
+    "cta": "Získajte bezplatné hodnotenie",
+    "metaDescription": "Evidencia kozmetiky NMPA, kontrola bezpečnosti zložiek a súlad s normou CSAR pre medzinárodné značky starostlivosti o pleť a kozmetické výrobky vstupujúce do Číny.",
+    "metaTitle": "Dovoz kozmetiky Čína | Príručka podávania žiadostí NMPA a súladu s CSAR"
   },
   "IndustryPetFood": {
     "heroTitle": "Súlad Číny pre vývozcov krmiva pre domáce zvieratá",
@@ -958,7 +966,9 @@
     "faq6a": "áno. Čínsky trh s krmivom pre domáce zvieratá je jedným z najrýchlejšie rastúcich na svete s ročným rastom presahujúcim 15 %. Rastúca stredná trieda a rastúce vlastníctvo domácich zvierat vytvára významné príležitosti pre medzinárodné značky.",
     "jsonldName": "Čínske služby compliance pre krmivá pre domáce zvieratá",
     "jsonldDescription": "Registrácia GACC, udeľovanie licencií na dovoz krmív, schvaľovanie prísad a súlad s označovaním pre vývozcov krmiva pre domáce zvieratá vstupujúcich na čínsky trh.",
-    "cta": "Získajte bezplatné hodnotenie"
+    "cta": "Získajte bezplatné hodnotenie",
+    "metaDescription": "Kompletná registrácia GACC a MOA pre vývozcov krmiva pre domáce zvieratá. Schválenie prísad, dodržiavanie označovania a dovozné povolenia pre Čínu.",
+    "metaTitle": "Dovoz krmiva pre domáce zvieratá Čína | Sprievodca registráciou GACC a MOA"
   },
   "IndustrySupplements": {
     "heroTitle": "Súlad Číny pre vývozcov zdravia a doplnkov",
@@ -982,7 +992,9 @@
     "faq6a": "áno. Cezhraničný elektronický obchod umožňuje predaj doplnkov bez registrácie SAMR, čo z neho robí atraktívny vstupný kanál. Výrobky však musia stále spĺňať bezpečnostné normy a spĺňať požiadavky pozitívneho zoznamu.",
     "jsonldName": "Čínske služby compliance pre zdravotné doplnky",
     "jsonldDescription": "Registrácia zdravej výživy SAMR, hodnotenie zložiek, súlad s označovaním a poradenstvo pri dovoze pre vývozcov doplnkov vstupujúcich do Číny.",
-    "cta": "Získajte bezplatné hodnotenie"
+    "cta": "Získajte bezplatné hodnotenie",
+    "metaDescription": "Registrácia zdravej výživy SAMR, registrácia GACC a dodržiavanie označovania doplnkov stravy vstupujúcich na čínsky trh.",
+    "metaTitle": "Zdravotné doplnky Čína Import | Sprievodca registráciou SAMR"
   },
   "IndustryBaby": {
     "heroTitle": "Súlad Číny pre vývozcov produktov pre bábätká a matky",
@@ -1006,7 +1018,9 @@
     "faq6a": "áno. Napriek klesajúcej pôrodnosti míňajú čínski rodičia na jedno dieťa viac ako kedykoľvek predtým. Prémiové dovážané detské výrobky, najmä dojčenská výživa a organická detská výživa, sú stále veľmi žiadané medzi rodinami strednej triedy.",
     "jsonldName": "Čínske služby compliance pre detské a materské produkty",
     "jsonldDescription": "Registrácia dojčenskej výživy SAMR, registrácia potravín GACC, registrácia kozmetiky NMPA a dodržiavanie bezpečnostných predpisov pre vývozcov produktov pre deti a matky, ktorí vstupujú do Číny.",
-    "cta": "Získajte bezplatné hodnotenie"
+    "cta": "Získajte bezplatné hodnotenie",
+    "metaDescription": "Registrácia dojčenskej výživy SAMR, dodržiavanie GACC a registrácia NMPA pre produkty pre deti a matky vstupujúce do Číny.",
+    "metaTitle": "Dovoz dojčiat a dojčenskej výživy z Číny | Sprievodca SAMR a GACC"
   },
   "IndustryElectronics": {
     "heroTitle": "Súlad Číny pre vývozcov spotrebnej elektroniky",
@@ -1030,7 +1044,9 @@
     "faq6a": "Kritické. Značky elektroniky by si pred vstupom na trh mali zaregistrovať ochranné známky, patenty a dizajny v Číne. Čínsky systém prvého súboru znamená, že oneskorenie pri registrácii môže viesť ku krádeži IP. Poskytujeme služby ochrany značky.",
     "jsonldName": "Čínske služby compliance pre spotrebnú elektroniku",
     "jsonldDescription": "Certifikácia CCC, schválenie SRRC, súlad s čínskym označovaním a ochrana IP pre vývozcov elektroniky vstupujúcich na čínsky trh.",
-    "cta": "Získajte bezplatné hodnotenie"
+    "cta": "Získajte bezplatné hodnotenie",
+    "metaDescription": "Certifikácia CCC, schválenie SRRC a ochrana IP pre značky spotrebnej elektroniky vstupujúce na čínsky trh.",
+    "metaTitle": "Import spotrebnej elektroniky z Číny | Sprievodca certifikáciou CCC"
   },
   "IndustryMedical": {
     "heroTitle": "Súlad Číny pre vývozcov zdravotníckych pomôcok",
@@ -1061,7 +1077,9 @@
     "coverItems4": "Príprava a podpora auditu NMPA",
     "coverItems5": "Dohľad po uvedení na trh a monitorovanie súladu",
     "coverItems6": "Priebežné regulačné monitorovanie a podpora obnovy",
-    "coverItems7": "Školenie a poradenstvo v oblasti zhody so zdravotníckymi pomôckami"
+    "coverItems7": "Školenie a poradenstvo v oblasti zhody so zdravotníckymi pomôckami",
+    "metaDescription": "Registrácia zdravotníckych pomôcok NMPA, klinické hodnotenie a certifikácia CCC pre medzinárodných výrobcov zdravotníckych pomôcok.",
+    "metaTitle": "Dovoz zdravotníckych pomôcok z Číny | Registrácia NMPA triedy I/II/III"
   },
   "IndustryEcommerce": {
     "heroTitle": "Súlad Číny pre značky cezhraničného elektronického obchodu",
@@ -1092,7 +1110,9 @@
     "coverItems4": "Daňová optimalizácia cezhraničného elektronického obchodu",
     "coverItems5": "Hodnotenie oprávnenosti na výnimku z čínskej značky",
     "coverItems6": "Neustále regulačné monitorovanie a podpora dodržiavania predpisov",
-    "coverItems7": "Školenie a poradenstvo o dodržiavaní pravidiel elektronického obchodu"
+    "coverItems7": "Školenie a poradenstvo o dodržiavaní pravidiel elektronického obchodu",
+    "metaDescription": "Súlad s cezhraničným elektronickým obchodom pre Tmall Global, JD Worldwide a Douyin. Nástup na platformu, colný sklad a daňová optimalizácia.",
+    "metaTitle": "Cezhraničný elektronický obchod Čína | Tmall, JD, Douyin Compliance"
   },
   "IndustriesCommon": {
     "heroTitle": "Odvetvia, ktorým slúžime",
@@ -1123,7 +1143,9 @@
       "medicaldevicesDesc": "Registrácia a klinické hodnotenie NMPA triedy I/II/III.",
       "crossborderecommerce": "Cezhraničný elektronický obchod",
       "crossborderecommerceDesc": "Predpisy CBEC, dodržiavanie platforiem a daňová optimalizácia."
-    }
+    },
+    "metaTitle": "China Import Compliance by Industry | GACC, CCC, NMPA Services",
+    "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
     "coverItems1": "Hodnotenie certifikačného adresára CCC",

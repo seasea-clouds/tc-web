@@ -849,7 +849,9 @@
     "coverItems4": "成分および添加物のコンプライアンス検証",
     "coverItems5": "コールドチェーンと温度要件",
     "coverItems6": "継続的な規制モニタリングと更新サポート",
-    "coverItems7": "乳製品業界コンプライアンス研修とコンサルティング"
+    "coverItems7": "乳製品業界コンプライアンス研修とコンサルティング",
+    "metaDescription": "中国に輸入される乳製品および乳製品の GACC 登録、中国ラベル、輸入コンプライアンスの専門家。 15 年以上乳製品輸出業者を支援してきました。",
+    "metaTitle": "乳製品および乳製品輸出業者向けの中国コンプライアンス | GACC 登録ガイド"
   },
   "IndustryMeat": {
     "heroTitle": "肉および水産物輸出業者の中国コンプライアンス",
@@ -879,7 +881,9 @@
     "coverItems4": "コールドチェーン物流のコンプライアンスガイダンス",
     "coverItems5": "各国の市場アクセス要件",
     "coverItems6": "継続的な規制モニタリングと更新サポート",
-    "coverItems7": "食肉・水産物輸入業者向け規制コンプライアンス研修"
+    "coverItems7": "食肉・水産物輸入業者向け規制コンプライアンス研修",
+    "metaDescription": "中国への肉と魚介類の輸出業者向けのプロフェッショナルな GACC CIFER 登録、コールド チェーン コンプライアンス、通関サポート。",
+    "metaTitle": "肉と魚介類の中国輸入コンプライアンス | GACC 登録ガイド"
   },
   "IndustryWine": {
     "heroTitle": "ワインおよびスピリッツ輸出業者向けの中国コンプライアンス",
@@ -910,7 +914,9 @@
     "coverItems4": "添加物と亜硫酸塩のコンプライアンス検証",
     "coverItems5": "各国のワイン輸入要件",
     "coverItems6": "継続的な規制モニタリングと更新サポート",
-    "coverItems7": "ワイン業界コンプライアンス研修とコンサルティング"
+    "coverItems7": "ワイン業界コンプライアンス研修とコンサルティング",
+    "metaDescription": "中国に輸入されるワインと蒸留酒の完全な輸入コンプライアンス。 GACC登録、ブランド保護、関税の最適化。",
+    "metaTitle": "中国へのワインとスピリッツの輸入 | GACC 登録とブランド保護"
   },
   "IndustrySkincare": {
     "heroTitle": "スキンケアおよび化粧品ブランドの中国コンプライアンス",
@@ -934,7 +940,9 @@
     "faq6a": "不可欠。中国の先願商標制度は、市場に参入する前にブランド名を登録する必要があることを意味します。これがなければ、ブランドの占有が行われ、権利を行使できなくなる危険があります。弊社ではサービスの一環として商標登録を承っております。",
     "jsonldName": "スキンケアおよび化粧品の中国コンプライアンス サービス",
     "jsonldDescription": "CSARに基づくNMPA申請、成分安全性評価、動物実験免除ガイダンス、中国に参入する化粧品ブランドの輸入コンサルティング。",
-    "cta": "無料の評価を受ける"
+    "cta": "無料の評価を受ける",
+    "metaDescription": "中国に参入する国際的なスキンケアおよび化粧品ブランドの NMPA 化粧品申請、成分安全性審査、CSAR 準拠。",
+    "metaTitle": "中国の化粧品輸入 | NMPA 申請および CSAR コンプライアンス ガイド"
   },
   "IndustryPetFood": {
     "heroTitle": "ペットフード輸出業者の中国コンプライアンス",
@@ -958,7 +966,9 @@
     "faq6a": "はい。中国のペットフード市場は世界で最も急速に成長している市場の一つであり、年間成長率は 15% を超えています。中産階級の台頭とペットの所有者の増加は、国際ブランドにとって大きなチャンスを生み出しています。",
     "jsonldName": "ペットフード中国コンプライアンスサービス",
     "jsonldDescription": "中国市場に参入するペットフード輸出業者向けの GACC 登録、飼料輸入許可、成分承認、表示遵守。",
-    "cta": "無料の評価を受ける"
+    "cta": "無料の評価を受ける",
+    "metaDescription": "ペットフード輸出業者向けのエンドツーエンドの GACC および MOA 登録。成分承認、表示遵守、中国への輸入許可。",
+    "metaTitle": "ペットフード輸入中国 | GACC および MOA 登録ガイド"
   },
   "IndustrySupplements": {
     "heroTitle": "健康食品およびサプリメント輸出業者の中国コンプライアンス",
@@ -982,7 +992,9 @@
     "faq6a": "はい。国境を越えた電子商取引では、SAMR 登録なしでサプリメントを販売できるため、魅力的な参入チャネルとなっています。ただし、製品は依然として安全基準を満たし、ポジティブリスト要件に準拠する必要があります。",
     "jsonldName": "健康とサプリメントの中国コンプライアンス サービス",
     "jsonldDescription": "SAMR健康食品の登録、成分評価、表示遵守、中国に進出するサプリメント輸出業者向けの輸入コンサルティング。",
-    "cta": "無料の評価を受ける"
+    "cta": "無料の評価を受ける",
+    "metaDescription": "中国市場に参入する栄養補助食品の SAMR 健康食品登録、GACC 申請、およびラベル表示コンプライアンス。",
+    "metaTitle": "健康補助食品の中国輸入 | SAMR 登録ガイド"
   },
   "IndustryBaby": {
     "heroTitle": "乳児用品および妊産婦用品の輸出業者に対する中国のコンプライアンス",
@@ -1006,7 +1018,9 @@
     "faq6a": "はい。出生率が低下しているにもかかわらず、中国人の親は子ども1人当たりにこれまで以上に支出を増やしている。高級輸入ベビー用品、特に乳児用粉ミルクやオーガニックベビーフードは、依然として中産階級の家庭の間で高い需要を持っています。",
     "jsonldName": "乳児および母親向け製品の中国コンプライアンス サービス",
     "jsonldDescription": "SAMR 乳児用粉ミルク登録、GACC 食品登録、NMPA 化粧品申請、中国に入国する乳児用および母親用製品の輸出業者向けの安全性コンプライアンス。",
-    "cta": "無料の評価を受ける"
+    "cta": "無料の評価を受ける",
+    "metaDescription": "中国に輸入される乳児用粉ミルクおよび母親用製品の SAMR 登録、GACC 準拠、NMPA 申請。",
+    "metaTitle": "ベビー用品と粉ミルクの中国輸入 | SAMR および GACC ガイド"
   },
   "IndustryElectronics": {
     "heroTitle": "家庭用電化製品輸出業者の中国コンプライアンス",
@@ -1030,7 +1044,9 @@
     "faq6a": "致命的。エレクトロニクスブランドは、市場参入前に中国で商標、特許、意匠を登録する必要があります。中国の先願主義は、登録の遅れが知的財産の盗難につながる可能性があることを意味します。ブランド保護サービスを提供しております。",
     "jsonldName": "家電製品中国コンプライアンス サービス",
     "jsonldDescription": "CCC 認証、SRRC 承認、中国のラベルへの準拠、中国市場に参入するエレクトロニクス輸出業者向けの知的財産保護。",
-    "cta": "無料の評価を受ける"
+    "cta": "無料の評価を受ける",
+    "metaDescription": "中国市場に参入する家電ブランドの CCC 認証、SRRC 承認、および知的財産保護。",
+    "metaTitle": "家電製品の中国輸入 | CCC 認定ガイド"
   },
   "IndustryMedical": {
     "heroTitle": "医療機器輸出業者の中国コンプライアンス",
@@ -1061,7 +1077,9 @@
     "coverItems4": "NMPA監査の準備とサポート",
     "coverItems5": "市場後調査とコンプライアンスモニタリング",
     "coverItems6": "継続的な規制モニタリングと更新サポート",
-    "coverItems7": "医療機器コンプライアンス研修とコンサルティング"
+    "coverItems7": "医療機器コンプライアンス研修とコンサルティング",
+    "metaDescription": "NMPA 医療機器登録、臨床評価、および国際医療機器メーカーの CCC 認証。",
+    "metaTitle": "医療機器の中国輸入 | NMPA クラス I/II/III 登録"
   },
   "IndustryEcommerce": {
     "heroTitle": "越境電子商取引ブランドの中国コンプライアンス",
@@ -1092,7 +1110,9 @@
     "coverItems4": "越境ECの税金最適化",
     "coverItems5": "中国語ラベル免除資格評価",
     "coverItems6": "継続的な規制モニタリングとコンプライアンスサポート",
-    "coverItems7": "ECプラットフォームコンプライアンス研修とコンサルティング"
+    "coverItems7": "ECプラットフォームコンプライアンス研修とコンサルティング",
+    "metaDescription": "Tmall Global、JD Worldwide、Douyin の越境電子商取引コンプライアンス。プラットフォームのオンボーディング、保税倉庫、税金の最適化。",
+    "metaTitle": "中国越境電子商取引 |天猫、JD、Douyinのコンプライアンス"
   },
   "IndustriesCommon": {
     "heroTitle": "私たちがサービスを提供する業界",
@@ -1123,7 +1143,9 @@
       "medicaldevicesDesc": "NMPA クラス I/II/III の登録と臨床評価。",
       "crossborderecommerce": "越境電子商取引",
       "crossborderecommerceDesc": "CBEC 規制、プラットフォームのコンプライアンス、税金の最適化。"
-    }
+    },
+    "metaTitle": "China Import Compliance by Industry | GACC, CCC, NMPA Services",
+    "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
     "coverItems1": "CCC認証ディレクトリ評価",

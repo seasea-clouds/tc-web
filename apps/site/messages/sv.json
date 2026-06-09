@@ -849,7 +849,9 @@
     "coverItems4": "Verifiering av överensstämmelse med ingredienser och tillsatser",
     "coverItems5": "Kylkedja och temperaturkrav",
     "coverItems6": "Löpande regulatorisk övervakning och förnyelsestöd",
-    "coverItems7": "Utbildning och rådgivning om efterlevnad av mejeriindustrin"
+    "coverItems7": "Utbildning och rådgivning om efterlevnad av mejeriindustrin",
+    "metaDescription": "Expert GACC-registrering, kinesisk märkning och importöverensstämmelse för mejeri- och mjölkprodukter som kommer in i Kina. 15+ år som hjälper mejeriexportörer.",
+    "metaTitle": "Kinas efterlevnad för exportörer av mejeri- och mjölkprodukter | GACC-registreringsguide"
   },
   "IndustryMeat": {
     "heroTitle": "Kinas efterlevnad för exportörer av kött och skaldjur",
@@ -879,7 +881,9 @@
     "coverItems4": "Vägledning för efterlevnad av kylkedjelogistik",
     "coverItems5": "Landsspecifika krav på marknadstillträde",
     "coverItems6": "Löpande regulatorisk övervakning och förnyelsestöd",
-    "coverItems7": "Utbildning i regelefterlevnad för importörer av kött och skaldjur"
+    "coverItems7": "Utbildning i regelefterlevnad för importörer av kött och skaldjur",
+    "metaDescription": "Professionell GACC CIFER-registrering, efterlevnad av kylkedjan och tullstöd för kött- och skaldjursexportörer till Kina.",
+    "metaTitle": "Kött och skaldjur Kina importefterlevnad | GACC-registreringsguide"
   },
   "IndustryWine": {
     "heroTitle": "Kinas efterlevnad för vin- och spritexportörer",
@@ -910,7 +914,9 @@
     "coverItems4": "Verifiering av överensstämmelse med tillsatser och sulfit",
     "coverItems5": "Landsspecifika vinimportkrav",
     "coverItems6": "Löpande regulatorisk övervakning och förnyelsestöd",
-    "coverItems7": "Utbildning och rådgivning i vinbranschens efterlevnad"
+    "coverItems7": "Utbildning och rådgivning i vinbranschens efterlevnad",
+    "metaDescription": "Fullständig importöverensstämmelse för vin och sprit som kommer in i Kina. GACC-registrering, varumärkesskydd och tjänsteoptimering.",
+    "metaTitle": "Import av vin och sprit till Kina | GACC-registrering och varumärkesskydd"
   },
   "IndustrySkincare": {
     "heroTitle": "Kinas efterlevnad för hudvårds- och kosmetikamärken",
@@ -934,7 +940,9 @@
     "faq6a": "Grundläggande. Kinas första-till-fil-varumärkessystem innebär att ditt varumärke måste registreras innan du går in på marknaden. Utan det riskerar du varumärkeshukning och oförmåga att upprätthålla dina rättigheter. Vi hanterar varumärkesregistrering som en del av vår tjänst.",
     "jsonldName": "Kina Compliance-tjänster för hudvård och kosmetika",
     "jsonldDescription": "NMPA-anmälan under CSAR, ingredienssäkerhetsbedömning, vägledning för undantag från djurförsök och importkonsultation för kosmetikamärken som kommer in i Kina.",
-    "cta": "Få gratis bedömning"
+    "cta": "Få gratis bedömning",
+    "metaDescription": "NMPA kosmetikaanmälan, ingredienssäkerhetsgranskning och CSAR-efterlevnad för internationella hudvårds- och kosmetikamärken som kommer in i Kina.",
+    "metaTitle": "Kosmetika Import Kina | NMPA Filing & CSAR Compliance Guide"
   },
   "IndustryPetFood": {
     "heroTitle": "Kinas efterlevnad för exportörer av sällskapsdjursfoder",
@@ -958,7 +966,9 @@
     "faq6a": "Ja. Kinas marknad för husdjursfoder är en av de snabbast växande i världen, med en årlig tillväxt på över 15 %. Den stigande medelklassen och ökande djurägande skapar betydande möjligheter för internationella varumärken.",
     "jsonldName": "Kina Compliance-tjänster för husdjursfoder",
     "jsonldDescription": "GACC-registrering, foderimportlicenser, ingrediensgodkännande och märkningsefterlevnad för exportörer av sällskapsdjursfoder som går in på den kinesiska marknaden.",
-    "cta": "Få gratis bedömning"
+    "cta": "Få gratis bedömning",
+    "metaDescription": "End-to-end GACC- och MOA-registrering för exportörer av sällskapsdjursfoder. Ingrediensgodkännande, märkningsöverensstämmelse och importtillstånd för Kina.",
+    "metaTitle": "Djurmat import Kina | GACC & MOA registreringsguide"
   },
   "IndustrySupplements": {
     "heroTitle": "Kinas efterlevnad för hälso- och kosttillskottsexportörer",
@@ -982,7 +992,9 @@
     "faq6a": "Ja. Gränsöverskridande e-handel tillåter att tillägg säljas utan SAMR-registrering, vilket gör det till en attraktiv ingångskanal. Produkterna måste dock fortfarande uppfylla säkerhetsstandarder och uppfylla kraven på positivlista.",
     "jsonldName": "Kina Compliance-tjänster för hälsokost",
     "jsonldDescription": "SAMR hälsokostregistrering, ingrediensbedömning, märkningsefterlevnad och importkonsultation för tillskottsexportörer som kommer in i Kina.",
-    "cta": "Få gratis bedömning"
+    "cta": "Få gratis bedömning",
+    "metaDescription": "SAMR hälsokostregistrering, GACC-anmälan och märkningsefterlevnad för kosttillskott som kommer in på den kinesiska marknaden.",
+    "metaTitle": "Hälsotillskott Kina Import | SAMR registreringsguide"
   },
   "IndustryBaby": {
     "heroTitle": "Kinas efterlevnad för exportörer av baby- och mödraprodukter",
@@ -1006,7 +1018,9 @@
     "faq6a": "Ja. Trots en sjunkande födelsetal spenderar kinesiska föräldrar mer per barn än någonsin tidigare. Premiumimporterade babyprodukter, särskilt modersmjölksersättning och ekologisk barnmat, är fortfarande i hög efterfrågan bland medelklassfamiljer.",
     "jsonldName": "Kina Compliance-tjänster för baby- och mammaprodukter",
     "jsonldDescription": "SAMR registrering av modersmjölksersättning, GACC-matregistrering, NMPA kosmetikaanmälan och säkerhetsöverensstämmelse för baby- och mödraproduktexportörer som kommer in i Kina.",
-    "cta": "Få gratis bedömning"
+    "cta": "Få gratis bedömning",
+    "metaDescription": "SAMR-registrering för modersmjölksersättning, GACC-efterlevnad och NMPA-anmälan för baby- och mödraprodukter som kommer in i Kina.",
+    "metaTitle": "Babyprodukter och modersmjölksersättning Kina Import | SAMR & GACC Guide"
   },
   "IndustryElectronics": {
     "heroTitle": "Kinas efterlevnad för exportörer av konsumentelektronik",
@@ -1030,7 +1044,9 @@
     "faq6a": "Kritisk. Elektronikmärken bör registrera varumärken, patent och mönster i Kina innan de går in på marknaden. Kinas första-till-fil-system innebär att förseningar i registreringen kan resultera i IP-stöld. Vi tillhandahåller varumärkesskyddstjänster.",
     "jsonldName": "Kina Compliance-tjänster för konsumtionselektronik",
     "jsonldDescription": "CCC-certifiering, SRRC-godkännande, kinesisk märkningsöverensstämmelse och IP-skydd för elektronikexportörer som går in på den kinesiska marknaden.",
-    "cta": "Få gratis bedömning"
+    "cta": "Få gratis bedömning",
+    "metaDescription": "CCC-certifiering, SRRC-godkännande och IP-skydd för konsumentelektronikmärken som går in på den kinesiska marknaden.",
+    "metaTitle": "Konsumentelektronik Kina Import | CCC-certifieringsguide"
   },
   "IndustryMedical": {
     "heroTitle": "Kinas efterlevnad för exportörer av medicinsk utrustning",
@@ -1061,7 +1077,9 @@
     "coverItems4": "NMPA revisionsförberedelse och stöd",
     "coverItems5": "Eftermarknadsövervakning och efterlevnadsövervakning",
     "coverItems6": "Löpande regulatorisk övervakning och förnyelsestöd",
-    "coverItems7": "Utbildning och rådgivning om efterlevnad av medicintekniska produkter"
+    "coverItems7": "Utbildning och rådgivning om efterlevnad av medicintekniska produkter",
+    "metaDescription": "NMPA registrering av medicintekniska produkter, klinisk utvärdering och CCC-certifiering för internationella medicintekniska tillverkare.",
+    "metaTitle": "Medicinsk utrustning Kina Import | NMPA klass I/II/III registrering"
   },
   "IndustryEcommerce": {
     "heroTitle": "Kinas efterlevnad för gränsöverskridande e-handelsvarumärken",
@@ -1092,7 +1110,9 @@
     "coverItems4": "Skatteoptimering för gränsöverskridande e-handel",
     "coverItems5": "Bedömning av kvalificering för kinesiska etiketter",
     "coverItems6": "Löpande regulatorisk övervakning och efterlevnadsstöd",
-    "coverItems7": "Utbildning och rådgivning om efterlevnad av e-handelsplattformar"
+    "coverItems7": "Utbildning och rådgivning om efterlevnad av e-handelsplattformar",
+    "metaDescription": "Gränsöverskridande e-handelsefterlevnad för Tmall Global, JD Worldwide och Douyin. Introduktion av plattformar, tullager och skatteoptimering.",
+    "metaTitle": "Gränsöverskridande e-handel Kina | Tmall, JD, Douyin Compliance"
   },
   "IndustriesCommon": {
     "heroTitle": "Branscher vi betjänar",
@@ -1123,7 +1143,9 @@
       "medicaldevicesDesc": "NMPA klass I/II/III registrering och klinisk utvärdering.",
       "crossborderecommerce": "Gränsöverskridande e-handel",
       "crossborderecommerceDesc": "CBEC-regler, plattformsefterlevnad och skatteoptimering."
-    }
+    },
+    "metaTitle": "China Import Compliance by Industry | GACC, CCC, NMPA Services",
+    "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
     "coverItems1": "CCC-certifieringskatalogbedömning",

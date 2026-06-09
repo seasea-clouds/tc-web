@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import { sharedOpenGraph, sharedTwitter } from '@trade/ui/seo';
+import { sharedOpenGraph, sharedTwitter, buildLanguages } from '@trade/ui/seo';
 import { splitByComma } from '@/lib/utils';
 import { locales } from '@/i18n/routing';
 import Hero from '@/components/Hero';
@@ -19,11 +19,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const t = await getTranslations({ locale, namespace: 'Home' });
 
   return {
-    title: t('heroTitle'),
-    description: t('heroSubtitle'),
+    title: t('metaTitle') || t('heroTitle'),
+    description: t('metaDescription') || t('heroSubtitle'),
     openGraph: sharedOpenGraph({
-      title: t('heroTitle'),
-      description: t('heroSubtitle'),
+      title: t('metaTitle') || t('heroTitle'),
+      description: t('metaDescription') || t('heroSubtitle'),
       locale,
       url: `https://sinotradecompliance.com/${locale}/`,
     }),
@@ -33,9 +33,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     }),
     alternates: {
       canonical: `https://sinotradecompliance.com/${locale}/`,
-      languages: Object.fromEntries(
-        [...locales].map((l) => [l, `https://sinotradecompliance.com/${l}/`])
-      ),
+      languages: buildLanguages(locale, [...locales], '/'),
     },
   };
 }
@@ -75,6 +73,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           contactPoint: {
             '@type': 'ContactPoint',
             email: 'david@sinotradecompliance.com',
+            telephone: '+86-21-XXXX-XXXX',
             contactType: 'customer service',
             availableLanguage: ['English', 'Chinese'],
           },

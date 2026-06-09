@@ -849,7 +849,9 @@
     "coverItems4": "Verificació del compliment d'ingredients i additius",
     "coverItems5": "Requisits de temperatura i cadena de fred",
     "coverItems6": "Supervisió regulatòria constant i suport a la renovació",
-    "coverItems7": "Formació i assessorament en compliment de la indústria làctia"
+    "coverItems7": "Formació i assessorament en compliment de la indústria làctia",
+    "metaDescription": "Registre d'experts GACC, etiquetatge xinès i compliment d'importació per a lactis i productes lactis que entren a la Xina. Més de 15 anys ajudant als exportadors de lactis.",
+    "metaTitle": "Compliment de la Xina per als exportadors de productes lactis i lactis | Guia de registre del GACC"
   },
   "IndustryMeat": {
     "heroTitle": "Compliment de la Xina per a exportadors de carn i marisc",
@@ -879,7 +881,9 @@
     "coverItems4": "Guia de compliment logístic de la cadena de fred",
     "coverItems5": "Requisits d'accés al mercat específics del país",
     "coverItems6": "Supervisió regulatòria constant i suport a la renovació",
-    "coverItems7": "Formació en compliment normatiu per a importadors de carn i marisc"
+    "coverItems7": "Formació en compliment normatiu per a importadors de carn i marisc",
+    "metaDescription": "Registre professional GACC CIFER, compliment de la cadena de fred i suport duaner per a exportadors de carn i marisc a la Xina.",
+    "metaTitle": "Conformitat amb les importacions de carn i marisc a la Xina | Guia de registre del GACC"
   },
   "IndustryWine": {
     "heroTitle": "Compliment de la Xina per a exportadors de vins i begudes espirituoses",
@@ -910,7 +914,9 @@
     "coverItems4": "Verificació del compliment d'additius i sulfits",
     "coverItems5": "Requisits d'importació de vi específics del país",
     "coverItems6": "Supervisió regulatòria constant i suport a la renovació",
-    "coverItems7": "Formació i assessorament en compliment de la indústria vitivinícola"
+    "coverItems7": "Formació i assessorament en compliment de la indústria vitivinícola",
+    "metaDescription": "Compliment complet d'importació de vi i licors que entren a la Xina. Registre GACC, protecció de marca i optimització de les obligacions.",
+    "metaTitle": "Importació de vins i licors a la Xina | Registre GACC i protecció de marca"
   },
   "IndustrySkincare": {
     "heroTitle": "Compliment de la Xina per a marques de cosmètics i cura de la pell",
@@ -934,7 +940,9 @@
     "faq6a": "Essencial. El sistema de marca registrada de la Xina en primer lloc significa que la vostra marca ha d'estar registrada abans d'entrar al mercat. Sense ell, corre el risc d'ocupar la marca i de no poder fer valer els vostres drets. Gestionem el registre de marques com a part del nostre servei.",
     "jsonldName": "Serveis de compliment de cura de la pell i cosmètics a la Xina",
     "jsonldDescription": "Presentació NMPA sota CSAR, avaluació de la seguretat dels ingredients, guies d'exempció de proves amb animals i consultoria d'importació per a marques de cosmètics que entren a la Xina.",
-    "cta": "Obteniu una avaluació gratuïta"
+    "cta": "Obteniu una avaluació gratuïta",
+    "metaDescription": "Presentació de cosmètics NMPA, revisió de seguretat dels ingredients i compliment CSAR per a marques internacionals de cosmètics i de cura de la pell que entren a la Xina.",
+    "metaTitle": "Cosmètics Importació Xina | Guia de compliment NMPA i CSAR"
   },
   "IndustryPetFood": {
     "heroTitle": "Compliment de la Xina per a exportadors d'aliments per a mascotes",
@@ -958,7 +966,9 @@
     "faq6a": "Sí. El mercat d'aliments per a mascotes de la Xina és un dels de més ràpid creixement del món, amb un creixement anual superior al 15%. L'augment de la classe mitjana i l'augment de la propietat d'animals de companyia creen oportunitats importants per a les marques internacionals.",
     "jsonldName": "Serveis de compliment d'aliments per a mascotes a la Xina",
     "jsonldDescription": "Registre GACC, llicències d'importació de pinsos, aprovació d'ingredients i compliment de l'etiquetatge per als exportadors d'aliments per a mascotes que entren al mercat xinès.",
-    "cta": "Obteniu una avaluació gratuïta"
+    "cta": "Obteniu una avaluació gratuïta",
+    "metaDescription": "Registre GACC i MOA d'extrem a extrem per a exportadors d'aliments per a mascotes. Aprovació d'ingredients, compliment de l'etiquetatge i permisos d'importació per a la Xina.",
+    "metaTitle": "Importació d'aliments per a mascotes Xina | Guia de registre de GACC i MOA"
   },
   "IndustrySupplements": {
     "heroTitle": "Compliment de la Xina per a exportadors de suplements i salut",
@@ -982,7 +992,9 @@
     "faq6a": "Sí. El comerç electrònic transfronterer permet vendre suplements sense registre SAMR, el que el converteix en un canal d'entrada atractiu. Tanmateix, els productes encara han de complir els estàndards de seguretat i complir els requisits de la llista positiva.",
     "jsonldName": "Serveis de compliment de suplements de salut a la Xina",
     "jsonldDescription": "Registre d'aliments saludables SAMR, avaluació d'ingredients, compliment de l'etiquetatge i consultoria d'importació per als exportadors de suplements que entren a la Xina.",
-    "cta": "Obteniu una avaluació gratuïta"
+    "cta": "Obteniu una avaluació gratuïta",
+    "metaDescription": "Registre d'aliments saludables SAMR, presentació GACC i compliment de l'etiquetatge dels suplements dietètics que entren al mercat xinès.",
+    "metaTitle": "Suplements de salut Importació Xina | Guia de registre SAMR"
   },
   "IndustryBaby": {
     "heroTitle": "Compliment de la Xina per a exportadors de productes materns i infantils",
@@ -1006,7 +1018,9 @@
     "faq6a": "Sí. Malgrat la disminució de la taxa de natalitat, els pares xinesos gasten més per fill que mai. Els productes per a nadons importats de primera qualitat, especialment la fórmula infantil i els aliments orgànics per a nadons, continuen amb una gran demanda entre les famílies de classe mitjana.",
     "jsonldName": "Serveis de compliment de productes de bebè i maternitat a la Xina",
     "jsonldDescription": "Registre de fórmules infantils SAMR, registre d'aliments GACC, presentació de cosmètics NMPA i compliment de seguretat per als exportadors de productes per a nadons i materns que entren a la Xina.",
-    "cta": "Obteniu una avaluació gratuïta"
+    "cta": "Obteniu una avaluació gratuïta",
+    "metaDescription": "Registre SAMR de fórmula infantil, compliment GACC i presentació NMPA per a productes per a nadons i materns que entren a la Xina.",
+    "metaTitle": "Productes per a nadons i fórmules infantils Importació de la Xina | Guia SAMR i GACC"
   },
   "IndustryElectronics": {
     "heroTitle": "Compliment de la Xina per a exportadors d'electrònica de consum",
@@ -1030,7 +1044,9 @@
     "faq6a": "Crític. Les marques d'electrònica haurien de registrar marques comercials, patents i dissenys a la Xina abans de l'entrada al mercat. El primer sistema de la Xina a presentar-se significa que els retards en el registre poden provocar un robatori d'IP. Oferim serveis de protecció de marca.",
     "jsonldName": "Serveis de compliment d'electrònica de consum a la Xina",
     "jsonldDescription": "Certificació CCC, aprovació SRRC, compliment de l'etiquetatge xinès i protecció IP per als exportadors d'electrònica que entren al mercat xinès.",
-    "cta": "Obteniu una avaluació gratuïta"
+    "cta": "Obteniu una avaluació gratuïta",
+    "metaDescription": "Certificació CCC, aprovació SRRC i protecció IP per a les marques d'electrònica de consum que entren al mercat xinès.",
+    "metaTitle": "Electrònica de consum Importació de la Xina | Guia de certificació CCC"
   },
   "IndustryMedical": {
     "heroTitle": "Compliment de la Xina per a exportadors de dispositius mèdics",
@@ -1061,7 +1077,9 @@
     "coverItems4": "Preparació i suport d'auditoria NMPA",
     "coverItems5": "Vigilància posterior a la comercialització i seguiment del compliment",
     "coverItems6": "Supervisió regulatòria constant i suport a la renovació",
-    "coverItems7": "Formació i assessorament sobre el compliment dels dispositius mèdics"
+    "coverItems7": "Formació i assessorament sobre el compliment dels dispositius mèdics",
+    "metaDescription": "Registre de dispositius mèdics NMPA, avaluació clínica i certificació CCC per a fabricants internacionals de dispositius mèdics.",
+    "metaTitle": "Dispositius mèdics Importació Xina | Registre NMPA Classe I/II/III"
   },
   "IndustryEcommerce": {
     "heroTitle": "Compliment de la Xina per a marques de comerç electrònic transfronterer",
@@ -1092,7 +1110,9 @@
     "coverItems4": "Optimització fiscal del comerç electrònic transfronterer",
     "coverItems5": "Avaluació d'elegibilitat per a l'exempció de l'etiqueta xinesa",
     "coverItems6": "Supervisió constant de la normativa i suport al compliment",
-    "coverItems7": "Formació i assessorament sobre el compliment de la plataforma de comerç electrònic"
+    "coverItems7": "Formació i assessorament sobre el compliment de la plataforma de comerç electrònic",
+    "metaDescription": "Compliment de comerç electrònic transfronterer per a Tmall Global, JD Worldwide i Douyin. Incorporació de plataforma, magatzem aduanal i optimització fiscal.",
+    "metaTitle": "Comerç electrònic transfronterer Xina | Tmall, JD, Douyin Compliance"
   },
   "IndustriesCommon": {
     "heroTitle": "Indústries que servim",
@@ -1123,7 +1143,9 @@
       "medicaldevicesDesc": "Registre i avaluació clínica NMPA Classe I/II/III.",
       "crossborderecommerce": "Comerç electrònic transfronterer",
       "crossborderecommerceDesc": "Normativa CBEC, compliment de la plataforma i optimització fiscal."
-    }
+    },
+    "metaTitle": "China Import Compliance by Industry | GACC, CCC, NMPA Services",
+    "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
     "coverItems1": "Avaluació del directori de certificació CCC",

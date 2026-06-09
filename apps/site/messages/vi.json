@@ -849,7 +849,9 @@
     "coverItems4": "Xác minh tuân thủ thành phần và phụ gia",
     "coverItems5": "Yêu cầu về nhiệt độ và dây chuyền lạnh",
     "coverItems6": "Giám sát quy định liên tục và hỗ trợ đổi mới",
-    "coverItems7": "Đào tạo và tư vấn tuân thủ ngành sữa"
+    "coverItems7": "Đào tạo và tư vấn tuân thủ ngành sữa",
+    "metaDescription": "Đăng ký GACC chuyên nghiệp, ghi nhãn bằng tiếng Trung Quốc và tuân thủ nhập khẩu đối với sữa và các sản phẩm sữa vào Trung Quốc. Hơn 15 năm hỗ trợ các nhà xuất khẩu sữa.",
+    "metaTitle": "Tuân thủ Trung Quốc đối với các nhà xuất khẩu sữa và sản phẩm sữa | Hướng dẫn đăng ký GACC"
   },
   "IndustryMeat": {
     "heroTitle": "Sự tuân thủ của Trung Quốc đối với các nhà xuất khẩu thịt và hải sản",
@@ -879,7 +881,9 @@
     "coverItems4": "Hướng dẫn tuân thủ hậu cần chuỗi lạnh",
     "coverItems5": "Yêu cầu tiếp cận thị trường theo quốc gia cụ thể",
     "coverItems6": "Giám sát quy định liên tục và hỗ trợ đổi mới",
-    "coverItems7": "Đào tạo tuân thủ quy định cho các nhà nhập khẩu thịt và hải sản"
+    "coverItems7": "Đào tạo tuân thủ quy định cho các nhà nhập khẩu thịt và hải sản",
+    "metaDescription": "Đăng ký GACC CIFER chuyên nghiệp, tuân thủ chuỗi lạnh và hỗ trợ hải quan cho các nhà xuất khẩu thịt & hải sản sang Trung Quốc.",
+    "metaTitle": "Thịt & Hải sản Tuân thủ Nhập khẩu Trung Quốc | Hướng dẫn đăng ký GACC"
   },
   "IndustryWine": {
     "heroTitle": "Sự tuân thủ của Trung Quốc đối với các nhà xuất khẩu rượu và rượu mạnh",
@@ -910,7 +914,9 @@
     "coverItems4": "Xác minh tuân thủ phụ gia và sulfite",
     "coverItems5": "Yêu cầu nhập khẩu rượu vang theo quốc gia cụ thể",
     "coverItems6": "Giám sát quy định liên tục và hỗ trợ đổi mới",
-    "coverItems7": "Đào tạo và tư vấn tuân thủ ngành rượu vang"
+    "coverItems7": "Đào tạo và tư vấn tuân thủ ngành rượu vang",
+    "metaDescription": "Hoàn thiện việc tuân thủ nhập khẩu đối với rượu vang và rượu mạnh vào Trung Quốc. Đăng ký GACC, bảo vệ thương hiệu và tối ưu hóa nghĩa vụ.",
+    "metaTitle": "Rượu & Rượu mạnh Nhập khẩu vào Trung Quốc | Đăng ký GACC & Bảo vệ thương hiệu"
   },
   "IndustrySkincare": {
     "heroTitle": "Tuân thủ Trung Quốc đối với các thương hiệu chăm sóc da và mỹ phẩm",
@@ -934,7 +940,9 @@
     "faq6a": "Thiết yếu. Hệ thống nhãn hiệu nộp đơn đầu tiên của Trung Quốc có nghĩa là tên thương hiệu của bạn phải được đăng ký trước khi bạn tham gia thị trường. Nếu không có nó, bạn có nguy cơ chiếm đoạt thương hiệu và không thể thực thi các quyền của mình. Chúng tôi xử lý việc đăng ký nhãn hiệu như một phần dịch vụ của mình.",
     "jsonldName": "Dịch vụ tuân thủ dưỡng da và mỹ phẩm Trung Quốc",
     "jsonldDescription": "NMPA nộp đơn theo CSAR, đánh giá an toàn thành phần, hướng dẫn miễn thử nghiệm trên động vật và tư vấn nhập khẩu cho các thương hiệu mỹ phẩm vào Trung Quốc.",
-    "cta": "Nhận đánh giá miễn phí"
+    "cta": "Nhận đánh giá miễn phí",
+    "metaDescription": "Nộp hồ sơ mỹ phẩm NMPA, đánh giá an toàn thành phần và tuân thủ CSAR cho các thương hiệu mỹ phẩm và chăm sóc da quốc tế vào Trung Quốc.",
+    "metaTitle": "Mỹ Phẩm Nhập Khẩu Trung Quốc | Hướng dẫn tuân thủ CSAR và nộp hồ sơ NMPA"
   },
   "IndustryPetFood": {
     "heroTitle": "Sự tuân thủ của Trung Quốc đối với các nhà xuất khẩu thức ăn cho vật nuôi",
@@ -958,7 +966,9 @@
     "faq6a": "Đúng. Thị trường thức ăn cho thú cưng của Trung Quốc là một trong những thị trường phát triển nhanh nhất thế giới, với mức tăng trưởng hàng năm vượt quá 15%. Tầng lớp trung lưu ngày càng tăng và việc sở hữu thú cưng ngày càng tăng tạo ra những cơ hội đáng kể cho các thương hiệu quốc tế.",
     "jsonldName": "Dịch vụ tuân thủ thức ăn thú cưng Trung Quốc",
     "jsonldDescription": "Đăng ký GACC, cấp phép nhập khẩu thức ăn chăn nuôi, phê duyệt thành phần và tuân thủ ghi nhãn đối với các nhà xuất khẩu thức ăn cho vật nuôi vào thị trường Trung Quốc.",
-    "cta": "Nhận đánh giá miễn phí"
+    "cta": "Nhận đánh giá miễn phí",
+    "metaDescription": "Đăng ký GACC và MOA toàn diện cho các nhà xuất khẩu thức ăn cho vật nuôi. Phê duyệt thành phần, tuân thủ ghi nhãn và giấy phép nhập khẩu cho Trung Quốc.",
+    "metaTitle": "Nhập khẩu thức ăn cho thú cưng Trung Quốc | Hướng dẫn đăng ký GACC & MOA"
   },
   "IndustrySupplements": {
     "heroTitle": "Tuân thủ Trung Quốc dành cho các nhà xuất khẩu thực phẩm bổ sung và sức khỏe",
@@ -982,7 +992,9 @@
     "faq6a": "Đúng. Thương mại điện tử xuyên biên giới cho phép bán thực phẩm bổ sung mà không cần đăng ký SAMR, khiến nó trở thành một kênh đầu vào hấp dẫn. Tuy nhiên, sản phẩm vẫn phải đáp ứng các tiêu chuẩn an toàn và tuân thủ các yêu cầu tích cực trong danh sách.",
     "jsonldName": "Dịch vụ tuân thủ TPCN Trung Quốc",
     "jsonldDescription": "Đăng ký thực phẩm sức khỏe SAMR, đánh giá thành phần, tuân thủ ghi nhãn và tư vấn nhập khẩu cho các nhà xuất khẩu thực phẩm bổ sung vào Trung Quốc.",
-    "cta": "Nhận đánh giá miễn phí"
+    "cta": "Nhận đánh giá miễn phí",
+    "metaDescription": "Đăng ký thực phẩm sức khỏe SAMR, nộp hồ sơ GACC và tuân thủ ghi nhãn đối với thực phẩm bổ sung vào thị trường Trung Quốc.",
+    "metaTitle": "Thực Phẩm Bổ Sung Sức Khỏe Nhập Khẩu Trung Quốc | Hướng dẫn đăng ký SAMR"
   },
   "IndustryBaby": {
     "heroTitle": "Sự tuân thủ của Trung Quốc đối với các nhà xuất khẩu sản phẩm dành cho bà mẹ và trẻ em",
@@ -1006,7 +1018,9 @@
     "faq6a": "Đúng. Bất chấp tỷ lệ sinh giảm, cha mẹ Trung Quốc chi tiêu cho mỗi đứa con nhiều hơn bao giờ hết. Các sản phẩm dành cho trẻ em nhập khẩu cao cấp, đặc biệt là sữa bột dành cho trẻ sơ sinh và thực phẩm hữu cơ dành cho trẻ em, vẫn có nhu cầu cao trong các gia đình trung lưu.",
     "jsonldName": "Dịch vụ tuân thủ sản phẩm trẻ em Trung Quốc",
     "jsonldDescription": "Đăng ký sữa bột dành cho trẻ sơ sinh SAMR, đăng ký thực phẩm GACC, nộp hồ sơ mỹ phẩm NMPA và tuân thủ an toàn cho các nhà xuất khẩu sản phẩm dành cho bà mẹ và trẻ sơ sinh vào Trung Quốc.",
-    "cta": "Nhận đánh giá miễn phí"
+    "cta": "Nhận đánh giá miễn phí",
+    "metaDescription": "Đăng ký SAMR sữa bột dành cho trẻ sơ sinh, tuân thủ GACC và nộp đơn NMPA cho các sản phẩm dành cho trẻ sơ sinh và bà mẹ vào Trung Quốc.",
+    "metaTitle": "Sản phẩm dành cho trẻ em & Sữa công thức dành cho trẻ sơ sinh Nhập khẩu từ Trung Quốc | Hướng dẫn SAMR & GACC"
   },
   "IndustryElectronics": {
     "heroTitle": "Sự tuân thủ của Trung Quốc đối với các nhà xuất khẩu điện tử tiêu dùng",
@@ -1030,7 +1044,9 @@
     "faq6a": "Phê bình. Các thương hiệu điện tử nên đăng ký nhãn hiệu, bằng sáng chế và thiết kế tại Trung Quốc trước khi gia nhập thị trường. Hệ thống nộp đơn đầu tiên của Trung Quốc có nghĩa là sự chậm trễ trong việc đăng ký có thể dẫn đến hành vi trộm cắp tài sản trí tuệ. Chúng tôi cung cấp dịch vụ bảo vệ thương hiệu.",
     "jsonldName": "Dịch vụ tuân thủ điện tử tiêu dùng Trung Quốc",
     "jsonldDescription": "Chứng nhận CCC, phê duyệt SRRC, tuân thủ ghi nhãn của Trung Quốc và bảo vệ quyền sở hữu trí tuệ cho các nhà xuất khẩu điện tử vào thị trường Trung Quốc.",
-    "cta": "Nhận đánh giá miễn phí"
+    "cta": "Nhận đánh giá miễn phí",
+    "metaDescription": "Chứng nhận CCC, phê duyệt SRRC và bảo vệ quyền sở hữu trí tuệ cho các thương hiệu điện tử tiêu dùng gia nhập thị trường Trung Quốc.",
+    "metaTitle": "Điện Tử Tiêu Dùng Nhập Khẩu Trung Quốc | Hướng dẫn chứng nhận CCC"
   },
   "IndustryMedical": {
     "heroTitle": "Tuân thủ Trung Quốc đối với các nhà xuất khẩu thiết bị y tế",
@@ -1061,7 +1077,9 @@
     "coverItems4": "Chuẩn bị và hỗ trợ kiểm toán NMPA",
     "coverItems5": "Giám sát sau thị trường và giám sát tuân thủ",
     "coverItems6": "Giám sát quy định liên tục và hỗ trợ đổi mới",
-    "coverItems7": "Đào tạo và tư vấn tuân thủ thiết bị y tế"
+    "coverItems7": "Đào tạo và tư vấn tuân thủ thiết bị y tế",
+    "metaDescription": "Đăng ký thiết bị y tế NMPA, đánh giá lâm sàng và chứng nhận CCC cho các nhà sản xuất thiết bị y tế quốc tế.",
+    "metaTitle": "Thiết Bị Y Tế Nhập Khẩu Trung Quốc | Đăng ký NMPA Loại I/II/III"
   },
   "IndustryEcommerce": {
     "heroTitle": "Sự tuân thủ của Trung Quốc đối với các thương hiệu thương mại điện tử xuyên biên giới",
@@ -1092,7 +1110,9 @@
     "coverItems4": "Tối ưu hóa thuế thương mại điện tử xuyên biên giới",
     "coverItems5": "Đánh giá khả năng đủ điều kiện miễn nhãn mác của Trung Quốc",
     "coverItems6": "Hỗ trợ giám sát và tuân thủ quy định liên tục",
-    "coverItems7": "Đào tạo và tư vấn tuân thủ nền tảng thương mại điện tử"
+    "coverItems7": "Đào tạo và tư vấn tuân thủ nền tảng thương mại điện tử",
+    "metaDescription": "Tuân thủ thương mại điện tử xuyên biên giới dành cho Tmall Global, JD Worldwide và Douyin. Tích hợp nền tảng, kho ngoại quan và tối ưu hóa thuế.",
+    "metaTitle": "Thương mại điện tử xuyên biên giới Trung Quốc | Tmall, JD, Tuân thủ Douyin"
   },
   "IndustriesCommon": {
     "heroTitle": "Các ngành chúng tôi phục vụ",
@@ -1123,7 +1143,9 @@
       "medicaldevicesDesc": "Đăng ký NMPA Loại I/II/III và đánh giá lâm sàng.",
       "crossborderecommerce": "Thương mại điện tử xuyên biên giới",
       "crossborderecommerceDesc": "Các quy định của CBEC, tuân thủ nền tảng và tối ưu hóa thuế."
-    }
+    },
+    "metaTitle": "China Import Compliance by Industry | GACC, CCC, NMPA Services",
+    "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
     "coverItems1": "Đánh giá thư mục chứng nhận CCC",

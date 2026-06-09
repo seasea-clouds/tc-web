@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { locales } from '@/i18n/routing';
-import { sharedOpenGraph, sharedTwitter } from '@/lib/metadata';
+import { sharedOpenGraph, sharedTwitter } from '@trade/ui/seo';
 import PackageCards from '@/components/PackageCards';
 import PackageComparisonTable from '@/components/PackageComparisonTable';
 import CTASection from '@/components/CTASection';

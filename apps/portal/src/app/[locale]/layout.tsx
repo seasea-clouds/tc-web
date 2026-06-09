@@ -2,7 +2,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { locales, defaultLocale } from '@/i18n/routing';
 import { messagesMap } from '@/i18n/messages';
-import { Footer, SearchProvider, CookieConsent, ActionDock, TradeTranslationProvider, OrganizationJsonLd, buildAlternates, sharedOpenGraph, sharedTwitter } from '@trade/ui';
+import { Footer, SearchProvider, CookieConsent, ActionDock, TradeTranslationProvider, OrganizationJsonLd, buildAlternates, sharedOpenGraph, sharedTwitter, CfAnalytics } from '@trade/ui';
 import { AuthProvider } from "@/components/AuthProvider";
 
 export function generateStaticParams() {
@@ -43,7 +43,7 @@ export default async function LocaleLayout({
     <html lang={validLocale}>
       <head>
         {/* Cloudflare Web Analytics */}
-        <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6639e56f244348cda996b883cecc51b7"}'></script>
+        <CfAnalytics />
       </head>
       <body className="min-h-screen flex flex-col pb-16 md:pb-0 antialiased">
         <NextIntlClientProvider locale={validLocale} messages={messages} timeZone="Asia/Shanghai">
@@ -53,8 +53,8 @@ export default async function LocaleLayout({
               <SearchProvider freeCheckHref="/c/" loginHref={`/${locale}/c/login`} />
               <main className="flex-1">{children}</main>
               <Footer />
-              <ActionDock />
               <CookieConsent />
+              <ActionDock />
             </AuthProvider>
           </TradeTranslationProvider>
         </NextIntlClientProvider>

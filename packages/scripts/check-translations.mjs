@@ -20,6 +20,7 @@
  */
 import fs from 'fs';
 import path from 'path';
+import { LOCALES } from './locales.mjs';
 
 const PROJECT_ROOT = process.cwd();
 const MESSAGES_DIR = path.join(PROJECT_ROOT, 'messages');
@@ -553,13 +554,8 @@ function checkTranslations(targetLang = null, verbose = true) {
 // ============================================================
 // 语种一致性检查
 // 确保 messages/ 目录的 locale 文件与 canonical 48 种语言一致
+// LOCALES 从 ./locales.mjs 共享导入
 // ============================================================
-const CANONICAL_LOCALES = [
-  'af','ar','az','be','bg','bn','ca','cs','da','de','el','en','es','fa','fi',
-  'fr','he','hi','hr','hu','hy','id','it','ja','ka','ko','ms','ne','nl','no',
-  'pl','pt','ro','ru','si','sk','sl','sq','sr','sv','sw','ta','th','tr','uk',
-  'ur','vi','zh',
-];
 
 function checkLocaleConsistency(verbose = true) {
   const files = fs.readdirSync(MESSAGES_DIR)
@@ -568,7 +564,7 @@ function checkLocaleConsistency(verbose = true) {
     .sort();
 
   const actual = new Set(files);
-  const canonical = new Set(CANONICAL_LOCALES.filter(l => l !== 'en'));
+  const canonical = new Set(LOCALES.filter(l => l !== 'en'));
 
   const extra = [...actual].filter(l => !canonical.has(l)).sort();
   const missing = [...canonical].filter(l => !actual.has(l)).sort();

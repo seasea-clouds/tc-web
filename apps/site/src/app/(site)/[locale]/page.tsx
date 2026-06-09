@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import { sharedOpenGraph, sharedTwitter } from '@/lib/metadata';
+import { sharedOpenGraph, sharedTwitter } from '@trade/ui/seo';
 import { splitByComma } from '@/lib/utils';
 import { locales } from '@/i18n/routing';
 import Hero from '@/components/Hero';

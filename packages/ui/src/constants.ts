@@ -5,18 +5,68 @@ export const BRAND_NAME = 'SinoTrade Compliance';
 export const SITE_URL = 'https://sinotradecompliance.com';
 
 /** 48 supported locales — shared across site, portal, and blog */
-export const LOCALES = [
-  'en','zh','es','fr','de','ja','pt','ru',
-  'ar','ko','it','nl','tr','vi','id','th',
-  'hi','pl','sv','el','cs','ro','hu','fi',
-  'da','no','uk','bg','hr','sr','sk','sl',
-  'ms','ka','he','sw','bn','ca',
-  'fa','ur','ta','af','sq','az','hy','be','ne','si',
-];
+import localeList from '../locales.json';
+export const LOCALES: readonly string[] = localeList;
 export const DEFAULT_LOCALE = 'en';
 
+export type Locale = (typeof LOCALES)[number];
+
+/**
+ * Human-readable locale names with flag emoji — shared across all apps.
+ */
+export const LOCALE_NAMES: Record<string, string> = {
+  en: '🇬🇧 English',
+  zh: '🇨🇳 中文',
+  es: '🇪🇸 Español',
+  fr: '🇫🇷 Français',
+  de: '🇩🇪 Deutsch',
+  ja: '🇯🇵 日本語',
+  pt: '🇧🇷 Português',
+  ru: '🇷🇺 Русский',
+  ar: '🇸🇦 العربية',
+  ko: '🇰🇷 한국어',
+  it: '🇮🇹 Italiano',
+  nl: '🇳🇱 Nederlands',
+  tr: '🇹🇷 Türkçe',
+  vi: '🇻🇳 Tiếng Việt',
+  id: '🇮🇩 Bahasa Indonesia',
+  th: '🇹🇭 ไทย',
+  hi: '🇮🇳 हिन्दी',
+  pl: '🇵🇱 Polski',
+  sv: '🇸🇪 Svenska',
+  el: '🇬🇷 Ελληνικά',
+  cs: '🇨🇿 Čeština',
+  ro: '🇷🇴 Română',
+  hu: '🇭🇺 Magyar',
+  fi: '🇫🇮 Suomi',
+  da: '🇩🇰 Dansk',
+  no: '🇳🇴 Norsk',
+  uk: '🇺🇦 Українська',
+  bg: '🇧🇬 Български',
+  hr: '🇭🇷 Hrvatski',
+  sr: '🇷🇸 Srpski',
+  sk: '🇸🇰 Slovenčina',
+  sl: '🇸🇮 Slovenščina',
+  ms: '🇲🇾 Bahasa Melayu',
+  ka: '🇬🇪 ქართული',
+  he: '🇮🇱 עברית',
+  sw: '🇰🇪 Kiswahili',
+  bn: '🇧🇩 বাংলা',
+  ca: '🇦🇩 Català',
+  fa: '🇮🇷 فارسی',
+  ur: '🇵🇰 اردو',
+  ta: '🇱🇰 தமிழ்',
+  af: '🇿🇦 Afrikaans',
+  sq: '🇦🇱 Shqip',
+  az: '🇦🇿 Azərbaycan',
+  hy: '🇦🇲 Հայերեն',
+  be: '🇧🇾 Беларуская',
+  ne: '🇳🇵 नेपाली',
+  si: '🇱🇰 සිංහල',
+};
+
 /** Browser language → locale matching (shared by dev middleware and CF worker) */
-export function matchBrowserLanguage(acceptLanguage: string | null, supported: string[] = LOCALES, defaultLocale: string = DEFAULT_LOCALE): string {
+export function matchBrowserLanguage(acceptLanguage: string | null, supported: string[] = LOCALES as unknown as string[], defaultLocale: string = DEFAULT_LOCALE): string {
   if (!acceptLanguage) return defaultLocale;
   const prefs = acceptLanguage.split(',').map((p) => {
     const [lang, q] = p.trim().split(';');

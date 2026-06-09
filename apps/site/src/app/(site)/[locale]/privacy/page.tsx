@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { locales } from '@/i18n/routing';
-import { sharedOpenGraph, sharedTwitter } from '@/lib/metadata';
+import { sharedOpenGraph, sharedTwitter } from '@trade/ui/seo';
 import CTASection from '@/components/CTASection';
 import Breadcrumb from '@/components/Breadcrumb';
 

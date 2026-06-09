@@ -3,7 +3,6 @@ import { locales } from '@/i18n/routing';
 import { sharedOpenGraph, sharedTwitter, buildLanguages } from '@trade/ui/seo';
 import { Suspense } from 'react';
 import ServiceCheckboxes from '@/components/ServiceCheckboxes';
-import Breadcrumb from '@/components/Breadcrumb';
 import CTASection from '@/components/CTASection';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
@@ -33,14 +32,6 @@ export default async function QuotePage({ params }: { params: Promise<{ locale: 
 
   return (
     <div className="bg-[#F4F6F9]">
-      <Breadcrumb
-        locale={locale}
-        items={[
-          { label: bcT('home'), href: `/${locale}/` },
-          { label: t('heroTitle') },
-        ]}
-      />
-
       {/* Hero */}
       <section className="bg-primary-navy text-white py-16 sm:py-20 px-4">
         <div className="max-w-3xl mx-auto text-center">

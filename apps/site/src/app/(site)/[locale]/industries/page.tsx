@@ -4,7 +4,6 @@ import { sharedOpenGraph, sharedTwitter, buildLanguages } from '@trade/ui/seo';
 import { industries } from '@/data/industries';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
-import Breadcrumb from '@/components/Breadcrumb';
 import ContactForm from '@/components/ContactForm';
 import CTASection from '@/components/CTASection';
 
@@ -35,13 +34,6 @@ export default async function IndustriesPage({ params }: { params: Promise<{ loc
 
   return (
     <div className="min-h-screen bg-bg-snow">
-      <Breadcrumb
-        locale={locale}
-        items={[
-          { label: bcT('home'), href: `/${locale}/` },
-          { label: bcT('industries') },
-        ]}
-      />
       {/* Hero */}
       <section className="bg-primary-navy text-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

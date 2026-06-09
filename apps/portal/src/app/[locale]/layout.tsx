@@ -2,7 +2,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { locales, defaultLocale } from '@/i18n/routing';
 import { messagesMap } from '@/i18n/messages';
-import { Footer, SearchProvider, CookieConsent, ActionDock, AuthProvider, TradeTranslationProvider, OrganizationJsonLd, buildAlternates, sharedOpenGraph, sharedTwitter, CfAnalytics } from '@trade/ui';
+import { Footer, SearchProvider, CookieConsent, ActionDock, AuthProvider, TradeTranslationProvider, OrganizationJsonLd, buildAlternates, sharedOpenGraph, sharedTwitter, CfAnalytics, AutoBreadcrumb } from '@trade/ui';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -50,7 +50,10 @@ export default async function LocaleLayout({
             <OrganizationJsonLd />
             <AuthProvider logoutRedirect={`/${locale}/c/login`}>
               <SearchProvider freeCheckHref="/{locale}/c/" loginHref={`/${locale}/c/login`} />
-              <main className="flex-1">{children}</main>
+              <main className="flex-1">
+              <AutoBreadcrumb locale={validLocale} />
+              {children}
+            </main>
               <Footer />
               <CookieConsent />
               <ActionDock />

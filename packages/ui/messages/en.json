@@ -71,7 +71,9 @@
     "signOut": "signOut",
     "myReports": "myReports",
     "subscription": "subscription",
-    "settings": "settings"
+    "settings": "settings",
+    "privacy": "Privacy Policy",
+    "testimonials": "Testimonials"
   },
   "MobileTab": {
     "home": "Home",

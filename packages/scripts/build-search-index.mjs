@@ -2,8 +2,8 @@
 /**
  * build-search-index.mjs — 生成统一搜索索引
  *
- * 读取 apps/site/messages/*.json + apps/site/content/blog/{locale}/*.mdx
- * 输出 {services, blog, faq, generated} 格式的 search-index-{locale}.json
+ * 读取 site + portal + blog 各 app 的 messages 和 content
+ * 输出 {services, blog, faq, checks, generated} 格式的 search-index-{locale}.json
  *
  * 用法: node packages/scripts/build-search-index.mjs [--out-dir=<path>]
  *   默认输出到 apps/site/public/

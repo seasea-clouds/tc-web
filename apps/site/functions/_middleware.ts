@@ -14,7 +14,8 @@
 
 // LanguageSwitcher + Navbar dropdowns: CSS group-hover, no React state
 // Force rebuild for Navbar CSS hover fix
-import { LOCALES as SUPPORTED_LOCALES, DEFAULT_LOCALE, matchBrowserLanguage } from '@trade/ui/constants';
+import { LOCALES, DEFAULT_LOCALE, matchBrowserLanguage } from '@trade/ui/constants';
+const SUPPORTED_LOCALES = LOCALES as unknown as string[];
 const CANONICAL_HOST = 'sinotradecompliance.com';
 
 // ─── Upstream URL resolution ─────────────────────────────────────

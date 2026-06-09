@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { locales } from '@/i18n/routing';
-import { sharedOpenGraph, sharedTwitter } from '@/lib/metadata';
+import { sharedOpenGraph, sharedTwitter } from '@trade/ui/seo';
 import { MessageCircle, CheckCircle, Clock, Shield, Users, Globe } from 'lucide-react';
 import { getAllPostsMeta } from '@/lib/blog';
 import Link from 'next/link';

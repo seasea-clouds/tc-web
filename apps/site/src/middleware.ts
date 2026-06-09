@@ -14,7 +14,7 @@ export default function middleware(request: Parameters<typeof intlMiddleware>[0]
   if (pathname === '/') {
     const locale = matchBrowserLanguage(
       request.headers.get('accept-language'),
-      routing.locales,
+      [...routing.locales],
       routing.defaultLocale
     );
     const url = request.nextUrl.clone();

@@ -44,10 +44,10 @@ export const serviceMetaMap: Record<string, ServiceMeta> = {
     descriptionKey: 'ecommerceDescription',
     keywordKey: 'ecommerceKeyword',
   },
-  trademark: {
-    titleKey: 'trademarkTitle',
-    descriptionKey: 'trademarkDescription',
-    keywordKey: 'trademarkKeyword',
+  brand: {
+    titleKey: 'brandTitle',
+    descriptionKey: 'brandDescription',
+    keywordKey: 'brandKeyword',
   },
 };
 

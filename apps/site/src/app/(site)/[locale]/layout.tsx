@@ -59,7 +59,7 @@ export default async function LocaleLayout({
         <TradeTranslationProvider messages={messages} locale={locale}>
           <OrganizationJsonLd />
           <AuthProvider logoutRedirect={`/${locale}/c/login`}>
-            <SearchProvider freeCheckHref="/c/" loginHref={`/${locale}/c/login`} />
+            <SearchProvider freeCheckHref="/{locale}/c/" loginHref={`/${locale}/c/login`} />
             <main className="flex-1">{children}</main>
             <Footer />
             <CookieConsent />

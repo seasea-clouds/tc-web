@@ -1,11 +1,9 @@
-import { WHATSAPP_URL } from '@trade/ui';
+import { WHATSAPP_URL, LOCALES, buildLanguages } from '@trade/ui';
 import fs from 'fs';
 import path from 'path';
 import { getPosts } from '@/lib/posts';
 import { getMessages } from '@/lib/messages';
 import BlogClient from './BlogClient';
-
-import { LOCALES } from '@trade/ui/constants';
 
 const SITE_URL = 'https://trade-web-site.pages.dev';
 
@@ -17,11 +15,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const msgs = getMessages(locale);
   const B = msgs?.Blog || {};
+  const title = B.metaTitle || 'China Import Compliance Blog';
+  const description = B.metaDescription || 'Expert guides on China import compliance.';
+  const path = '/blog/';
   return {
-    title: B.metaTitle || 'China Import Compliance Blog',
-    description: B.metaDescription || 'Expert guides on China import compliance.',
+    title,
+    description,
     alternates: {
-      canonical: `https://sinotradecompliance.com/${locale}/blog/`,
+      canonical: `https://sinotradecompliance.com/${locale}${path}`,
+      languages: buildLanguages(locale, [...LOCALES], path),
     },
   };
 }

@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { locales } from '@/i18n/routing';
-import { sharedOpenGraph, sharedTwitter } from '@trade/ui/seo';
+import { sharedOpenGraph, sharedTwitter, buildLanguages } from '@trade/ui/seo';
 import PackageCards from '@/components/PackageCards';
 import PackageComparisonTable from '@/components/PackageComparisonTable';
 import CTASection from '@/components/CTASection';
@@ -21,9 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     twitter: sharedTwitter({ title, description }),
     alternates: {
       canonical: url,
-      languages: Object.fromEntries(
-        locales.map((l) => [l, `https://sinotradecompliance.com/${l}/packages/`])
-      ),
+      languages: buildLanguages(locale, [...locales], '/packages/'),
     },
   };
 }

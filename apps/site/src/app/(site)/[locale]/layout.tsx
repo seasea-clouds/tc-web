@@ -49,7 +49,7 @@ export default async function LocaleLayout({
   const messages = messagesMap[locale] ?? messagesMap[defaultLocale];
 
   return (
-    <html lang={locale}>
+    <html lang={locale} dir={locale === 'ar' || locale === 'he' || locale === 'fa' || locale === 'ur' ? 'rtl' : 'ltr'}>
     <head>
       {/* Cloudflare Web Analytics */}
       <CfAnalytics />

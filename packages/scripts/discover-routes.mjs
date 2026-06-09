@@ -72,21 +72,23 @@ function discoverDynamicInstances(appDir, subdir) {
   const contentBase = path.join(appDir, 'content');
   if (!fs.existsSync(contentBase)) return instances;
 
-  // 如果指定了子目录（如 blog），只扫描 content/{subdir}/{locale}/*.mdx
+  // 如果指定了子目录（如 blog），先扫描 content/{subdir}/{locale}/*.mdx
   if (subdir) {
     const subContentDir = path.join(contentBase, subdir);
-    if (!fs.existsSync(subContentDir)) return instances;
-    for (const locale of fs.readdirSync(subContentDir)) {
-      const localeDir = path.join(subContentDir, locale);
-      if (!fs.statSync(localeDir).isDirectory()) continue;
-      for (const file of fs.readdirSync(localeDir)) {
-        if (file.endsWith('.mdx')) instances.push(file.replace(/\.mdx$/, ''));
+    if (fs.existsSync(subContentDir)) {
+      for (const locale of fs.readdirSync(subContentDir)) {
+        const localeDir = path.join(subContentDir, locale);
+        if (!fs.statSync(localeDir).isDirectory()) continue;
+        for (const file of fs.readdirSync(localeDir)) {
+          if (file.endsWith('.mdx')) instances.push(file.replace(/\.mdx$/, ''));
+        }
       }
+      return [...new Set(instances)];
     }
-    return [...new Set(instances)];
   }
 
-  // fallback: 扫描 content/{locale}/*.mdx
+  // fallback: 扫描 content/{locale}/*.mdx（扁平结构）
+  // 也用于 industry slug 从 data 文件读取
   for (const locale of fs.readdirSync(contentBase)) {
     const localeDir = path.join(contentBase, locale);
     if (!fs.statSync(localeDir).isDirectory()) continue;
@@ -145,6 +147,29 @@ export function discoverAll() {
 
     app.staticRoutes = [...new Set(app.staticRoutes)].sort();
     result.push(app);
+  }
+
+  // Post-process: discover industry page slugs from data file for site app
+  const siteApp = result.find(a => a.name === 'site');
+  if (siteApp) {
+    const siteDataPath = path.join(APPS_DIR, 'site', 'src', 'data', 'industries.ts');
+    const uiDataPath = path.join(ROOT, 'packages', 'ui', 'src', 'data', 'industries.ts');
+    for (const dataPath of [siteDataPath, uiDataPath]) {
+      if (fs.existsSync(dataPath)) {
+        const dataContent = fs.readFileSync(dataPath, 'utf-8');
+        const slugMatches = [...dataContent.matchAll(/slug:\s*['"]([^'"]+)['"]/g)];
+        const slugs = [...new Set(slugMatches.map(m => m[1]))];
+        if (slugs.length > 0) {
+          // Add industry dynamic routes
+          siteApp.dynamicRoutes.push({
+            prefix: '/industries',
+            param: 'industry',
+            instances: slugs,
+          });
+          break;
+        }
+      }
+    }
   }
   return result;
 }

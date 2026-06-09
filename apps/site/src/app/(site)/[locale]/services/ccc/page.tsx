@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { locales } from '@/i18n/routing';
-import { sharedOpenGraph, sharedTwitter } from '@trade/ui/seo';
+import { sharedOpenGraph, sharedTwitter, buildLanguages } from '@trade/ui/seo';
 import Hero from '@/components/Hero';
 import { WHATSAPP_URL } from '@/lib/constants';
 import CoverSection from '@/components/CoverSection';
@@ -25,13 +25,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title,
     description,
-    openGraph: sharedOpenGraph({ title, description, locale, url }),
-    twitter: sharedTwitter({ title, description }),
     alternates: {
       canonical: url,
-      languages: Object.fromEntries(
-        locales.map((l) => [l, `https://sinotradecompliance.com/${l}/services/ccc/`])
-      ),
+      languages: buildLanguages(locale, [...locales], '/services/ccc/'),
     },
   };
 }
@@ -48,11 +44,8 @@ export default async function CCCPage({ params }: { params: Promise<{ locale: st
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: t('jsonldName'),
-    description: t('jsonldDescription'),
     url: `https://sinotradecompliance.com/${locale}/services/ccc/`,
     provider: { '@type': 'Organization', name: 'SinoTrade Compliance' },
-    serviceType: t('jsonldServiceType'),
     areaServed: 'Worldwide',
   };
 
@@ -60,7 +53,6 @@ export default async function CCCPage({ params }: { params: Promise<{ locale: st
     '@context': 'https://schema.org',
     '@type': ['ProfessionalService', 'LocalBusiness'],
     name: 'SinoTrade Compliance',
-    description: t('jsonldDescription'),
     url: `https://sinotradecompliance.com/${locale}/services/ccc/`,
     telephone: '+1 (555) 000-0000',
     areaServed: 'Worldwide',

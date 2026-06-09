@@ -2,8 +2,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { locales, defaultLocale } from '@/i18n/routing';
 import { messagesMap } from '@/i18n/messages';
-import { Footer, SearchProvider, CookieConsent, ActionDock, TradeTranslationProvider, OrganizationJsonLd, buildAlternates, sharedOpenGraph, sharedTwitter, CfAnalytics } from '@trade/ui';
-import { AuthProvider } from "@/components/AuthProvider";
+import { Footer, SearchProvider, CookieConsent, ActionDock, AuthProvider, TradeTranslationProvider, OrganizationJsonLd, buildAlternates, sharedOpenGraph, sharedTwitter, CfAnalytics } from '@trade/ui';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));

@@ -4,7 +4,6 @@ import { sharedOpenGraph, sharedTwitter, buildLanguages } from '@trade/ui/seo';
 import ServicesGrid from '@/components/ServicesGrid';
 import CTASection from '@/components/CTASection';
 import ContactForm from '@/components/ContactForm';
-import Breadcrumb from '@/components/Breadcrumb';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const locale = (await params).locale;
@@ -41,13 +40,6 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
 
   return (
     <main>
-      <Breadcrumb
-        locale={locale}
-        items={[
-          { label: bcT('home'), href: `/${locale}/` },
-          { label: bcT('services') },
-        ]}
-      />
       <ServicesGrid headingLevel="h1" />
       <ContactForm />
       <CTASection t={ctaT} />

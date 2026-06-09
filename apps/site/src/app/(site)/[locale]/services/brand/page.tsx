@@ -12,7 +12,6 @@ import ServiceFAQ from '@/components/ServiceFAQ';
 import HowToJsonLd from '@/components/HowToJsonLd';
 import DefinitionSchema from '@/components/DefinitionSchema';
 import QuickAnswer from '@/components/QuickAnswer';
-import Breadcrumb from '@/components/Breadcrumb';
 import RelatedResources from '@/components/RelatedResources';
 import { getBlogCategoryForService } from '@/lib/service-blog-map';
 
@@ -69,14 +68,6 @@ export default async function BrandPage({ params }: { params: Promise<{ locale: 
 
   return (
     <main>
-      <Breadcrumb
-        locale={locale}
-        items={[
-          { label: bcT('home'), href: `/${locale}/` },
-          { label: bcT('services'), href: `/${locale}/services` },
-          { label: t('heroTitle') },
-        ]}
-      />
       <DefinitionSchema locale={locale} terms={definitionTerms} />
       <HowToJsonLd locale={locale} namespace="ServiceBrand" url={url} />
       <Hero

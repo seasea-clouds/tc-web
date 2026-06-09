@@ -1,6 +1,6 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
-import { Footer, SearchProvider, CookieConsent, ActionDock, TradeTranslationProvider, OrganizationJsonLd, buildAlternates, sharedOpenGraph, sharedTwitter, AuthProvider, CfAnalytics } from '@trade/ui';
+import { Footer, SearchProvider, CookieConsent, ActionDock, TradeTranslationProvider, OrganizationJsonLd, buildAlternates, sharedOpenGraph, sharedTwitter, AuthProvider, CfAnalytics, AutoBreadcrumb } from '@trade/ui';
 import { getMessages } from '@/lib/messages';
 import { locales, defaultLocale } from '@/i18n/routing';
 import '../globals.css';
@@ -49,7 +49,10 @@ export default async function Layout({
             <OrganizationJsonLd />
           <AuthProvider logoutRedirect={`/${locale}/c/login`}>
             <SearchProvider freeCheckHref="/{locale}/c/" loginHref={`/${locale}/c/login`} />
-            <main className="flex-1">{children}</main>
+                        <main className="flex-1">
+              <AutoBreadcrumb locale={locale} />
+              {children}
+            </main>
             <Footer />
             <CookieConsent />
             <ActionDock />

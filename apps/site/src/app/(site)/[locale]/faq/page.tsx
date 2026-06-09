@@ -5,7 +5,6 @@ import FAQSection from '@/components/FAQSection';
 import CTASection from '@/components/CTASection';
 import ContactForm from '@/components/ContactForm';
 import DefinitionSchema from '@/components/DefinitionSchema';
-import Breadcrumb from '@/components/Breadcrumb';
 // JSON-LD uses plain <script> tag — next/script does NOT render inline in App Router
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
@@ -97,14 +96,6 @@ export default async function FAQPage({ params }: { params: Promise<{ locale: st
 
   return (
     <main>
-      <Breadcrumb
-        locale={locale}
-        items={[
-          { label: bcT('home'), href: `/${locale}/` },
-          { label: t('heroTitle') },
-        ]}
-      />
-
       {/* JSON-LD */}
       <DefinitionSchema
         locale={locale}

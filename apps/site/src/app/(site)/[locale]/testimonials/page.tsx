@@ -3,7 +3,6 @@ import { locales } from '@/i18n/routing';
 import { sharedOpenGraph, sharedTwitter, buildLanguages } from '@trade/ui/seo';
 import { testimonials } from '@/data/testimonials';
 import Link from 'next/link';
-import Breadcrumb from '@/components/Breadcrumb';
 import ContactForm from '@/components/ContactForm';
 import CTASection from '@/components/CTASection';
 
@@ -53,14 +52,6 @@ export default async function TestimonialsPage({ params }: { params: Promise<{ l
     <div className="bg-[#F4F6F9]">
       {/* JSON-LD */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-
-      <Breadcrumb
-        locale={locale}
-        items={[
-          { label: bcT('home'), href: `/${locale}/` },
-          { label: t('heroTitle') },
-        ]}
-      />
 
       {/* Hero */}
       <section className="bg-primary-navy text-white py-16 sm:py-20 px-4">

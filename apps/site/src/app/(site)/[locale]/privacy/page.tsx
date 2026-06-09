@@ -2,7 +2,6 @@ import { getTranslations } from 'next-intl/server';
 import { locales } from '@/i18n/routing';
 import { sharedOpenGraph, sharedTwitter, buildLanguages } from '@trade/ui/seo';
 import CTASection from '@/components/CTASection';
-import Breadcrumb from '@/components/Breadcrumb';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const locale = (await params).locale;
@@ -30,13 +29,6 @@ export default async function PrivacyPage({ params }: { params: Promise<{ locale
   return (
     <div className="bg-white">
       <div className="max-w-3xl mx-auto px-4 py-16">
-        <Breadcrumb
-          locale={locale}
-          items={[
-            { label: 'Home', href: '/' },
-            { label: t('title'), href: '/privacy/' },
-          ]}
-        />
         <h1 className="text-3xl font-bold text-primary-navy mt-6 mb-8">{t('title')}</h1>
 
         <div className="prose prose-gray max-w-none space-y-6">

@@ -1,7 +1,7 @@
 'use client';
 import { useT } from '@trade/ui';
 
-import { useAuth } from '@/components/AuthProvider';
+import { useAuth } from '@trade/ui';
 import Link from 'next/link';
 
 export default function SettingsPage() {

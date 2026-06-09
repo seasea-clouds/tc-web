@@ -1,6 +1,6 @@
 'use client';
 
-import { useAuth } from '@/components/AuthProvider';
+import { useAuth } from '@trade/ui';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 

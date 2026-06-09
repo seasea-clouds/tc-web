@@ -16,7 +16,6 @@ const SITE_URL = 'https://trade-web-site.pages.dev';
 import { WHATSAPP_URL, LOCALES } from '@trade/ui';
 import { getMessages } from '@/lib/messages';
 import CopyButton from '@/components/CopyButton';
-import { ActionDock } from '@trade/ui';
 
 export async function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];
@@ -586,7 +585,6 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
         __html: `(function(){var b=document.getElementById('reading-progress');if(!b)return;window.addEventListener('scroll',function(){var h=document.documentElement,d=document.body;var p=((h.scrollTop||d.scrollTop)/((h.scrollHeight||d.scrollHeight)-h.clientHeight))*100;b.style.width=p+'%'})})();`,
       }} />
 
-      <ActionDock />
     </>
   );
 }

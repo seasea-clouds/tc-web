@@ -34,6 +34,13 @@
 
 ---
 
+## ✅ 已完成（续）
+
+### P1 — 部署上线
+- [x] 正式域名 `sinotradecompliance.com` 切换（2026-06-09）
+- [x] 归档旧仓库 `sinotradecompliance` 和 `compli-service`
+- [x] Worker 代理全面验证
+
 ## 🟡 当前任务（P0）
 
 ### T1 — 修复 Free Check 跳中文
@@ -63,10 +70,10 @@
 ## ⬜ 远期
 
 ### P1 — 部署上线
-- [ ] CF Pages 环境变量验证（D1 + JWT + Creem + Resend）
-- [ ] 正式域名 `sinotradecompliance.com` 切换
-- [ ] 归档旧仓库 `sinotradecompliance` 和 `compli-service`
-- [ ] Worker 代理全面验证
+- [x] CF Pages 环境变量验证（D1 + JWT + Creem + Resend）
+- [x] 正式域名 `sinotradecompliance.com` 切换 ✅
+- [x] 归档旧仓库 `sinotradecompliance` 和 `compli-service`
+- [x] Worker 代理全面验证
 
 ### P2 — 支付 & 功能
 - [ ] Creem 支付真实对接 + Webhook

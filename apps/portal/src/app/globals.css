@@ -35,3 +35,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', system-ui, sans-serif;
   font-weight: 700;
 }
+
+/* RTL support for Arabic, Hebrew, Persian/Farsi, Urdu */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .lucide {
+  transform: scaleX(-1);
+}

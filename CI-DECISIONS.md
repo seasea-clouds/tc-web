@@ -1,19 +1,31 @@
 # CI Pipeline 决策记录
 
-## 核心原则（2026-06-10）
-1. **不得降低检测强度和缩小范围**。遇到不适合检测的地方，在检测脚本中添加精确特殊处理（如 `--skip-pattern` 参数），而非缩小检测范围。
-2. **检测出来的问题必须修复**，不是掩盖。例如 blog layout.tsx 的硬编码 meta 描述已改为 `getTranslations()`。
-3. **所有检测脚本统一在 `packages/scripts/`**，共享一套，不各自维护。各项目 `package.json` 仅传递不同参数。
+## 核心原则（2026-06-10，用户明确要求）
+1. **检测脚本要统一共享一套**，不要各自站点自己维护自己的脚本。
+2. **不得降低检测强度和缩小范围**。遇到不适合检测的场景，在共享脚本中添加精确特殊处理（如 `--skip-pattern`），而非缩小 scope 或移除检查。
+3. **检测出的问题必须修复**，不是掩盖。
 
-## Portal hreflang 检查
+## 统一入口脚本：`ci-check.mjs`
+- 2026-06-10 创建，位于 `packages/scripts/ci-check.mjs`
+- 三个项目（site / portal / blog）的 `package.json` 中 build 脚本统一调用此脚本
+- 项目差异通过 `--project=site|portal|blog` 参数 + 脚本内部特殊处理
+- 所有检查脚本（check-seo-patterns, check-hardcoded, check-hreflang 等）统一在此调度
+
+## CI 检查全面覆盖
+之前 JSON-LD 只扫描 site，llms.txt 只扫描 blog，map-key 只扫描部分。
+`ci-check.mjs` 统一后：
+- `check-jsonld.mjs` 扩展为扫描 apps/site/src + apps/portal/src + apps/blog/src + packages/ui/src
+- `check-map-key.mjs` 已覆盖全部 4 个目录
+- `check-llms.mjs` 按项目检测 llms.txt 文件存在性，存在则检查
+- `check-seo-output.mjs` 对所有项目的 out/ 输出进行检查
+
+## Portal hreflang 特殊处理
 Portal SSG 输出中 `/c/` 路径不含 hreflang（主站 Worker 边缘端注入）。
-- 脚本中新增 `--skip-pattern` 参数：`check-hreflang.mjs --dir=out --skip-pattern=/c/,404,_not-found --ci`
-- 跳过 /c/ 路径后仍检查其余路径（914 文件 → 跳过 912 文件 → 0 失败）
-- 部署后用 `--url` 远程验证 Worker 注入的 hreflang：`check-hreflang.mjs --url=https://sinotradecompliance.com/en/c/ --ci`
-- 脚本头部注释详细说明各项目模式选择
+通过 `--skip-pattern=/c/,404,_not-found` 在脚本层面精确跳过。
+部署后用 `--url=https://sinotradecompliance.com/en/c/ --ci` 远程验证 Worker 注入的 hreflang。
 
-## check-hardcoded 全量扫描
-portal 构建运行 `check-hardcoded.mjs --ci`（不带路径限定），全量扫描所有项目代码。
-检测到的问题直接修复源码，而非绕过：
-- blog layout.tsx metaTitle/metaDescription → 改为 next-intl getTranslations 调用
-- LEGIT_ENGLISH 添加 "China Import Compliance Guide" 和 "Services."
+## CI 管线结构
+各项目构建脚本分为三阶段：
+1. 预构建（build-search-index, search-translations, convert-webp 等）
+2. 核心构建（next build, build-all/bundle）
+3. 检查阶段 — **统一使用 ci-check.mjs**

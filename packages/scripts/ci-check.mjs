@@ -6,20 +6,13 @@
  * 所有检查脚本统一在 packages/scripts/ 中，此脚本负责按项目参数精确调度。
  *
  * 用法：
- *   # Site（SSG 全量输出，直接托管）
  *   node ci-check.mjs --project=site --out-dir=out --ci
- *
- *   # Portal（SSG 输出，Worker 边缘路由 /c/）
  *   node ci-check.mjs --project=portal --out-dir=out --ci
- *
- *   # Blog（Next.js .next 输出）
- *   node ci-check.mjs --project=blog --next-dir=.next --ci
+ *   node ci-check.mjs --project=blog --out-dir=out --ci
  *
  * 项目参数决定了行为差异：
- *   - hreflang 检查模式（--dir / --skip-pattern / --next-dir）
- *   - 哪些目录检查 hardcoded
- *   - 哪些路径进入 llms.txt / seo-output 检查
- *   - translations 检查是否跳过 locale consistency
+ *   - hreflang 跳过 pattern（site 跳旧blog, portal/blog 跳404/_not-found）
+ *   - translations 参数（portal 跳 locale consistency, blog 跳 industry/portal）
  */
 
 import fs from 'fs';

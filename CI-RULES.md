@@ -10,9 +10,9 @@
 
 | 项目 | 调用方式 | 说明 |
 |------|----------|------|
-| site | `ci-check.mjs --project=site --out-dir=out --ci` | SSG 全量输出，直接托管 |
-| portal | `ci-check.mjs --project=portal --out-dir=out --ci` | SSG 输出，/c/ 由 Worker 边缘路由 |
-| blog | `ci-check.mjs --project=blog --out-dir=out --llms-dir=public --ci` | SSG 输出 + public 目录中 llms.txt |
+| site | `ci-check.mjs --project=site --out-dir=out --ci` | SSG 全量输出，直接托管（跳旧blog页） |
+| portal | `ci-check.mjs --project=portal --out-dir=out --ci` | SSG 输出，/c/ 路径全有 hreflang |
+| blog | `ci-check.mjs --project=blog --out-dir=out --ci` | SSG 输出（与 site/portal 统一模式） |
 
 `ci-check.mjs` 运行以下全部检查（按顺序）：
 | # | 检查脚本 | 适用项目 | 说明 |
@@ -42,19 +42,20 @@
   → deploy → postdeploy-check (远程 hreflang 验证)
 
 # Blog (apps/blog)
-  lint → build-search-index → next build → ci-check.mjs --project=blog --out-dir=out --llms-dir=public --ci
+  lint → build-search-index → next build → ci-check.mjs --project=blog --out-dir=out --ci
 ```
 
 ## 项目间差异处理
 
 | 差异点 | 处理方式 |
 |--------|----------|
-| Portal hreflang | `--skip-pattern=/c/,404,_not-found` 精确跳过 Worker 路由路径 |
+| Site hreflang | `--skip-pattern=/blog/,404,_not-found`（跳旧 blog 页面+错误页） |
+| Portal hreflang | `--skip-pattern=404,_not-found`（跳非内容页） |
+| Blog hreflang | `--skip-pattern=404,_not-found`（跳非内容页） |
 | Portal translations | `--skip-locale-check` 跳过 locale consistency（portal messages 独立） |
 | Blog translations | `--skip-industry-meta --skip-portal-check`（blog 仅有 Blog+Cookie 命名空间） |
 | Site translations | 全量检查（所有模块都运行） |
-| Blog llms.txt | `--llms-dir=public` 指定 llms 文件所在目录 |
-| Blog/portal 无 llms.txt | `ci-check.mjs` 自动检测文件存在性，不存在则跳过 |
+| llms.txt | auto-detect（存在则检查，不存在则跳过） |
 
 ## 维护规范
 1. 所有检查脚本在 `packages/scripts/`。

@@ -50,7 +50,8 @@ function checkDir(outDir) {
 
 function countHreflangInFile(filePath) {
   const content = fs.readFileSync(filePath, 'utf-8');
-  const count = (content.match(/hreflang=/g) || []).length;
+  // Match both HTML <link> format (hreflang=) and RSC payload format (hrefLang=)
+  const count = (content.match(/hreflang=|hrefLang=/g) || []).length;
   const hasXdefault = content.includes('x-default');
   return { count, hasXdefault };
 }
@@ -139,7 +140,7 @@ async function checkRemoteUrl(url) {
   try {
     const resp = await fetch(url);
     const html = await resp.text();
-    const count = (html.match(/hreflang=/g) || []).length;
+    const count = (html.match(/hreflang=|hrefLang=/g) || []).length;
     const hasXdefault = html.includes('x-default');
     if (count >= 1 && hasXdefault) {
       console.log(`  ✅ ${url}: ${count} hreflang, x-default=${hasXdefault}`);

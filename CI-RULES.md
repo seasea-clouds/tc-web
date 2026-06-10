@@ -34,16 +34,15 @@
 | seo-patterns | `check-seo-patterns.mjs --ci` | SEO 模式检查 |
 | next build | `next build` | Next.js 构建 |
 | hardcoded-domain | `check-hardcoded-domain.mjs --ci` | 禁止 dev pages.dev 域名硬编码 |
-| hardcoded | `check-hardcoded.mjs --ci apps/portal/src apps/portal/modules` | 硬编码英文检测(限portal代码) |
+| hardcoded | `check-hardcoded.mjs --ci` | 硬编码英文检测(全量扫描) |
 | console | `check-console.mjs --ci` | 禁止 console.log 残留 |
 | rtl | `check-rtl.mjs --ci` | RTL 排版检查 |
 | translations | `check-translations.mjs --short --skip-locale-check` | Portal 48 语言翻译质量 |
+| hreflang (SSG) | `check-hreflang.mjs --dir=out --skip-pattern=/c/,404,_not-found --ci` | 非 /c/ 路径 hreflang 检查（/c/ 由 Worker 注入） |
+| hreflang (远程) | `check-hreflang.mjs --url=... --ci` | 部署后远程验证 Worker 注入的 hreflang |
 | clean-rsc | `clean-rsc.js` | 清理 RSC payload |
 
-**关于 hreflang**: Portal 是 SSG 静态导出，locale 路由由主站 Cloudflare Worker 中间件在边缘处理，SSG 输出的 HTML 不包含 hreflang `<link>` 标签。因此 `--dir=out` 模式不适用。hreflang 验证在部署后通过 `--url` 模式远程检查：
-```bash
-npm run postdeploy-check
-```
+**hreflang 特殊处理说明**: Portal SSG 输出的 `/c/` 路径不含 hreflang（由主站 Cloudflare Worker 在边缘端注入）。脚本中通过 `--skip-pattern=/c/,404,_not-found` 精确跳过这些路径，而非移除 hreflang 检查。部署后再用 `--url` 模式远程验证 Worker 注入的 hreflang。**检测脚本不简化、不移除、保留框架完整性。**
 
 ### Blog (apps/blog) — 主站 /blog/ 代理
 | 检查 | 命令 | 说明 |

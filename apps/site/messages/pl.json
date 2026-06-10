@@ -89,7 +89,7 @@
     "cccTitle": "Certyfikacja CCC — zgodność importowa z Chin | Zgodność z przepisami chińskiego handlu",
     "cccSubtitle": "Chiny Obowiązkowe doradztwo w zakresie certyfikacji elektroniki, urządzeń, zabawek i części samochodowych.",
     "cccLink": "Dowiedz się więcej",
-    "cosmeticsTitle": "Zgłaszanie kosmetyków (NMPA) — zgodność z przepisami importowymi w Chinach | Zgodność z przepisami chińskiego handlu",
+    "cosmeticsTitle": "Zgłaszanie kosmetyków — zgodność z przepisami importowymi w Chinach | Zgodność z przepisami chińskiego handlu",
     "cosmeticsSubtitle": "Rejestracja i zgłoszenia NMPA dla importowanych kosmetyków – kategorii zwykłego i specjalnego przeznaczenia.",
     "cosmeticsLink": "Dowiedz się więcej",
     "ecommerceTitle": "Transgraniczny handel elektroniczny — zgodność z przepisami dotyczącymi importu w Chinach | Zgodność z przepisami chińskiego handlu",
@@ -303,7 +303,7 @@
     "metaDescription": "Doradztwo w zakresie obowiązkowej certyfikacji chińskiej (CCC) w zakresie elektroniki, sprzętu AGD, zabawek i części samochodowych. Koordynacja testów, przygotowanie do audytu fabryki, szybkie zatwierdzenie."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Archiwizacja kosmetyków (NMPA)",
+    "heroTitle": "Archiwizacja kosmetyków",
     "heroSubtitle": "Dokonaj rejestracji i zgłoszenia NMPA dla importowanych kosmetyków w Chinach.",
     "cta": "Uzyskaj bezpłatną ocenę",
     "coverTitle": "Co obejmujemy",
@@ -541,7 +541,7 @@
     "cccA1": "Certyfikacja CCC jest obowiązkowa dla produktów w 17 kategoriach, m.in. sprzętu AGD, sprzętu IT, oświetlenia, części samochodowych, zabawek dla dzieci i akumulatorów litowo-jonowych (dodano w 2024 r.).",
     "cccQ2": "Jak długo trwa certyfikacja CCC?",
     "cccA2": "Proces obejmuje testowanie produktu, inspekcję fabryczną i przegląd certyfikacji. Złożoność zależy od kategorii produktu. Koordynujemy wszystkie etapy z akredytowanymi chińskimi laboratoriami badawczymi.",
-    "cosmeticsTitle": "Archiwizacja kosmetyków (NMPA)",
+    "cosmeticsTitle": "Archiwizacja kosmetyków",
     "cosmeticsQ1": "Jaka jest różnica między kosmetykami zwykłymi i specjalnymi?",
     "cosmeticsA1": "Zwykłe kosmetyki (pielęgnacja skóry, makijaż, pielęgnacja włosów) wymagają zgłoszenia w NMPA. Kosmetyki specjalne (krem do opalania, wybielanie, farbowanie włosów, usuwanie piegów) wymagają pełnej rejestracji, co trwa dłużej i wymaga większej liczby badań.",
     "ecommerceTitle": "Transgraniczny handel elektroniczny",
@@ -794,7 +794,7 @@
       "gacc": "Rejestracja GACC",
       "label": "Zgodność z etykietą",
       "ccc": "Certyfikat CCC",
-      "cosmetics": "Archiwizacja kosmetyków (NMPA)",
+      "cosmetics": "Archiwizacja kosmetyków",
       "ecommerce": "Handel elektroniczny",
       "brand": "Ochrona marki"
     },

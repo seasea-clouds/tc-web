@@ -89,7 +89,7 @@
     "cccTitle": "Udhibitisho wa CCC - Uzingatiaji wa Uagizaji wa China | Uzingatiaji wa SinoTrade",
     "cccSubtitle": "Ushauri wa Udhibitishaji wa Lazima wa China kwa vifaa vya elektroniki, vifaa, vinyago, na sehemu za magari.",
     "cccLink": "Jifunze zaidi",
-    "cosmeticsTitle": "Uhifadhi wa Vipodozi (NMPA) - Utiifu wa Uagizaji wa China | Uzingatiaji wa SinoTrade",
+    "cosmeticsTitle": "Uhifadhi wa Vipodozi - Utiifu wa Uagizaji wa China | Uzingatiaji wa SinoTrade",
     "cosmeticsSubtitle": "Usajili na uwekaji faili wa NMPA kwa vipodozi vilivyoagizwa kutoka nje - kategoria za kawaida na za matumizi maalum.",
     "cosmeticsLink": "Jifunze zaidi",
     "ecommerceTitle": "Biashara ya kielektroniki ya mpakani - Uzingatiaji wa Uagizaji wa China | Uzingatiaji wa SinoTrade",
@@ -303,7 +303,7 @@
     "metaDescription": "Ushauri wa Udhibitishaji wa Lazima wa China (CCC) wa vifaa vya elektroniki, vifaa, vinyago, sehemu za magari. Uratibu wa majaribio, utayarishaji wa ukaguzi wa kiwanda, idhini ya haraka."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Ujazaji wa Vipodozi (NMPA)",
+    "heroTitle": "Ujazaji wa Vipodozi",
     "heroSubtitle": "Kamilisha usajili wa NMPA na ujaze faili za vipodozi vilivyoagizwa kutoka China.",
     "cta": "Pata Tathmini ya Bure",
     "coverTitle": "Tunachofunika",
@@ -541,7 +541,7 @@
     "cccA1": "Uthibitishaji wa CCC ni wa lazima kwa bidhaa katika kategoria 17 ikijumuisha vifaa vya nyumbani, vifaa vya IT, taa, sehemu za magari, vifaa vya kuchezea vya watoto na betri za lithiamu-ioni (zilizoongezwa mwaka wa 2024).",
     "cccQ2": "Udhibitishaji wa CCC huchukua muda gani?",
     "cccA2": "Mchakato huo unahusisha upimaji wa bidhaa, ukaguzi wa kiwanda, na uhakiki wa uidhinishaji. Ugumu hutegemea aina ya bidhaa. Tunaratibu hatua zote na maabara za upimaji wa Kichina zilizoidhinishwa.",
-    "cosmeticsTitle": "Ujazaji wa Vipodozi (NMPA)",
+    "cosmeticsTitle": "Ujazaji wa Vipodozi",
     "cosmeticsQ1": "Ni tofauti gani kati ya vipodozi vya kawaida na maalum?",
     "cosmeticsA1": "Vipodozi vya kawaida (huduma ya ngozi, vipodozi, utunzaji wa nywele) vinahitaji kufungua na NMPA. Vipodozi maalum (vipodozi vya jua, rangi nyeupe, rangi ya nywele, kuondolewa kwa freckle) vinahitaji usajili kamili, ambao huchukua muda mrefu na unahusisha kupima zaidi.",
     "ecommerceTitle": "Biashara ya kielektroniki ya mpakani",
@@ -794,7 +794,7 @@
       "gacc": "Usajili wa GACC",
       "label": "Kuzingatia Lebo",
       "ccc": "Cheti cha CCC",
-      "cosmetics": "Ujazaji wa Vipodozi (NMPA)",
+      "cosmetics": "Ujazaji wa Vipodozi",
       "ecommerce": "Biashara ya kielektroniki",
       "brand": "Ulinzi wa Biashara"
     },

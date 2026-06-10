@@ -89,7 +89,7 @@
     "cccTitle": "CCC tanúsítás – Kínai import megfelelőség | SinoTrade megfelelőség",
     "cccSubtitle": "Kína kötelező tanúsítási tanácsadás elektronikával, készülékekkel, játékokkal és autóalkatrészekkel kapcsolatban.",
     "cccLink": "Tudjon meg többet",
-    "cosmeticsTitle": "Kozmetikai termékek bejelentése (NMPA) – Kínai import megfelelőség | SinoTrade megfelelőség",
+    "cosmeticsTitle": "Kozmetikai termékek bejelentése – Kínai import megfelelőség | SinoTrade megfelelőség",
     "cosmeticsSubtitle": "Az importált kozmetikumok NMPA regisztrációja és bejelentése – normál és különleges felhasználási kategóriák.",
     "cosmeticsLink": "Tudjon meg többet",
     "ecommerceTitle": "Határokon átnyúló e-kereskedelem – Kínai import-megfelelőség | SinoTrade megfelelőség",
@@ -303,7 +303,7 @@
     "metaDescription": "Kínai kötelező tanúsítási (CCC) tanácsadás elektronikával, készülékekkel, játékokkal és autóalkatrészekkel kapcsolatban. Tesztkoordináció, gyári audit előkészítés, gyors jóváhagyás."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Kozmetikai reszelő (NMPA)",
+    "heroTitle": "Kozmetikai reszelő",
     "heroSubtitle": "A Kínában importált kozmetikumok NMPA regisztrációjának és bejelentésének kitöltése.",
     "cta": "Kérjen ingyenes értékelést",
     "coverTitle": "Amit fedezünk",
@@ -541,7 +541,7 @@
     "cccA1": "A CCC-tanúsítvány 17 kategória termékei esetében kötelező, beleértve a háztartási gépeket, informatikai berendezéseket, világítást, autóalkatrészeket, gyermekjátékokat és lítium-ion akkumulátorokat (2024-ben hozzáadva).",
     "cccQ2": "Mennyi ideig tart a CCC tanúsítás?",
     "cccA2": "A folyamat magában foglalja a termék tesztelését, a gyári ellenőrzést és a tanúsítás felülvizsgálatát. A komplexitás a termékkategóriától függ. Minden lépést akkreditált kínai tesztelő laboratóriumokkal egyeztetünk.",
-    "cosmeticsTitle": "Kozmetikai reszelő (NMPA)",
+    "cosmeticsTitle": "Kozmetikai reszelő",
     "cosmeticsQ1": "Mi a különbség a hagyományos és a speciális kozmetikumok között?",
     "cosmeticsA1": "A közönséges kozmetikumok (bőrápolás, smink, hajápolás) NMPA-val történő bejelentést igényelnek. A speciális kozmetikumok (fényvédő, fehérítő, hajfesték, szeplők eltávolítása) teljes regisztrációt igényelnek, ami hosszabb időt vesz igénybe, és több teszteléssel jár.",
     "ecommerceTitle": "Határokon átnyúló e-kereskedelem",
@@ -794,7 +794,7 @@
       "gacc": "GACC regisztráció",
       "label": "Címke megfelelőség",
       "ccc": "CCC tanúsítás",
-      "cosmetics": "Kozmetikai reszelő (NMPA)",
+      "cosmetics": "Kozmetikai reszelő",
       "ecommerce": "E-kereskedelem",
       "brand": "Márkavédelem"
     },

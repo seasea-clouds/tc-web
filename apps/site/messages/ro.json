@@ -89,7 +89,7 @@
     "cccTitle": "Certificare CCC - Conformitatea importurilor din China | Conformitatea SinoTrade",
     "cccSubtitle": "Consultanță pentru certificare obligatorie din China pentru electronice, electrocasnice, jucării și piese auto.",
     "cccLink": "Aflați mai multe",
-    "cosmeticsTitle": "Depunerea produselor cosmetice (NMPA) - Conformitatea importurilor din China | Conformitatea SinoTrade",
+    "cosmeticsTitle": "Depunerea produselor cosmetice - Conformitatea importurilor din China | Conformitatea SinoTrade",
     "cosmeticsSubtitle": "Înregistrarea și depunerea NMPA pentru produsele cosmetice importate — categorii de utilizare obișnuită și specială.",
     "cosmeticsLink": "Aflați mai multe",
     "ecommerceTitle": "Comerț electronic transfrontalier - Conformitatea importurilor din China | Conformitatea SinoTrade",
@@ -303,7 +303,7 @@
     "metaDescription": "Consultanță China Compulsory Certification (CCC) pentru electronice, electrocasnice, jucării, piese auto. Coordonarea testelor, pregătirea auditului în fabrică, aprobare rapidă."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Depunerea produselor cosmetice (NMPA)",
+    "heroTitle": "Depunerea produselor cosmetice",
     "heroSubtitle": "Completați înregistrarea și depunerea NMPA pentru produsele cosmetice importate în China.",
     "cta": "Obțineți o evaluare gratuită",
     "coverTitle": "Ce acoperim",
@@ -541,7 +541,7 @@
     "cccA1": "Certificarea CCC este obligatorie pentru produsele din 17 categorii, inclusiv aparate de uz casnic, echipamente IT, iluminat, piese auto, jucării pentru copii și baterii litiu-ion (adăugate în 2024).",
     "cccQ2": "Cât durează certificarea CCC?",
     "cccA2": "Procesul implică testarea produsului, inspecția în fabrică și revizuirea certificării. Complexitatea depinde de categoria de produs. Coordonăm toți pașii cu laboratoarele de testare chineze acreditate.",
-    "cosmeticsTitle": "Depunerea produselor cosmetice (NMPA)",
+    "cosmeticsTitle": "Depunerea produselor cosmetice",
     "cosmeticsQ1": "Care este diferența dintre cosmeticele obișnuite și cele speciale?",
     "cosmeticsA1": "Cosmeticele obișnuite (îngrijirea pielii, machiaj, îngrijirea părului) necesită depunerea la NMPA. Cosmeticele speciale (cremă de protecție solară, albire, vopsea de păr, îndepărtarea pistruilor) necesită înregistrare completă, ceea ce durează mai mult și implică mai multe teste.",
     "ecommerceTitle": "Comerț electronic transfrontalier",
@@ -794,7 +794,7 @@
       "gacc": "Înregistrare GACC",
       "label": "Conformitatea etichetei",
       "ccc": "Certificare CCC",
-      "cosmetics": "Depunerea produselor cosmetice (NMPA)",
+      "cosmetics": "Depunerea produselor cosmetice",
       "ecommerce": "Comerț electronic",
       "brand": "Protecția mărcii"
     },

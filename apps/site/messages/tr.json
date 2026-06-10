@@ -89,7 +89,7 @@
     "cccTitle": "CCC Sertifikası - Çin İthalat Uyumluluğu | SinoTrade Uyumluluğu",
     "cccSubtitle": "Elektronik, ev aletleri, oyuncaklar ve otomotiv parçaları için Çin Zorunlu Sertifikasyon danışmanlığı.",
     "cccLink": "Daha fazla bilgi edin",
-    "cosmeticsTitle": "Kozmetik Dosyalama (NMPA) - Çin İthalat Uyumluluğu | SinoTrade Uyumluluğu",
+    "cosmeticsTitle": "Kozmetik Dosyalama - Çin İthalat Uyumluluğu | SinoTrade Uyumluluğu",
     "cosmeticsSubtitle": "İthal kozmetikler için NMPA kaydı ve dosyalanması - sıradan ve özel kullanım kategorileri.",
     "cosmeticsLink": "Daha fazla bilgi edin",
     "ecommerceTitle": "Sınır Ötesi E-ticaret - Çin İthalat Uyumluluğu | SinoTrade Uyumluluğu",
@@ -303,7 +303,7 @@
     "metaDescription": "Elektronik, ev aletleri, oyuncaklar ve otomotiv parçaları için Çin Zorunlu Sertifikasyon (CCC) danışmanlığı. Test koordinasyonu, fabrika denetim hazırlığı, hızlı onay."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Kozmetik Dosyalama (NMPA)",
+    "heroTitle": "Kozmetik Dosyalama",
     "heroSubtitle": "Çin'de ithal edilen kozmetikler için NMPA kaydını ve dosyalamayı tamamlayın.",
     "cta": "Ücretsiz Değerlendirme Alın",
     "coverTitle": "Neleri Kapsıyoruz",
@@ -541,7 +541,7 @@
     "cccA1": "Ev aletleri, BT ekipmanları, aydınlatma, otomotiv parçaları, çocuk oyuncakları ve lityum iyon piller (2024'te eklendi) dahil 17 kategorideki ürünler için CCC sertifikası zorunludur.",
     "cccQ2": "CCC sertifikası ne kadar sürer?",
     "cccA2": "Süreç ürün testini, fabrika denetimini ve sertifikasyon incelemesini içerir. Karmaşıklık ürün kategorisine bağlıdır. Tüm adımları akredite Çin test laboratuvarlarıyla koordine ediyoruz.",
-    "cosmeticsTitle": "Kozmetik Dosyalama (NMPA)",
+    "cosmeticsTitle": "Kozmetik Dosyalama",
     "cosmeticsQ1": "Sıradan ve özel kozmetikler arasındaki fark nedir?",
     "cosmeticsA1": "Sıradan kozmetikler (cilt bakımı, makyaj, saç bakımı) NMPA'ya başvurulmasını gerektirir. Özel kozmetikler (güneş kremi, beyazlatıcı, saç boyası, çil giderme) tam kayıt gerektirir, bu da daha uzun sürer ve daha fazla test gerektirir.",
     "ecommerceTitle": "Sınır ötesi E-ticaret",
@@ -794,7 +794,7 @@
       "gacc": "GACC Kaydı",
       "label": "Etiket Uyumluluğu",
       "ccc": "CCC Sertifikası",
-      "cosmetics": "Kozmetik Dosyalama (NMPA)",
+      "cosmetics": "Kozmetik Dosyalama",
       "ecommerce": "E-ticaret",
       "brand": "Marka Koruması"
     },

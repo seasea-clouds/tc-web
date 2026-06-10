@@ -89,7 +89,7 @@
     "cccTitle": "Certifikácia CCC – Zhoda s dovozom z Číny | Súlad SinoTrade",
     "cccSubtitle": "Čína povinné certifikačné poradenstvo pre elektroniku, spotrebiče, hračky a automobilové diely.",
     "cccLink": "Zistiť viac",
-    "cosmeticsTitle": "Podávanie kozmetiky (NMPA) – súlad s dovozom z Číny | Súlad SinoTrade",
+    "cosmeticsTitle": "Podávanie kozmetiky – súlad s dovozom z Číny | Súlad SinoTrade",
     "cosmeticsSubtitle": "Registrácia a registrácia NMPA pre dovážanú kozmetiku – kategórie bežného a špeciálneho použitia.",
     "cosmeticsLink": "Zistiť viac",
     "ecommerceTitle": "Cezhraničný elektronický obchod – súlad s dovozom z Číny | Súlad SinoTrade",
@@ -303,7 +303,7 @@
     "metaDescription": "Čína povinná certifikácia (CCC) poradenstvo pre elektroniku, spotrebiče, hračky, automobilové diely. Koordinácia testovania, príprava na továrenský audit, rýchle schválenie."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Kozmetický pilník (NMPA)",
+    "heroTitle": "Kozmetický pilník",
     "heroSubtitle": "Kompletná registrácia a podanie NMPA pre dovážanú kozmetiku v Číne.",
     "cta": "Získajte bezplatné hodnotenie",
     "coverTitle": "Čo pokrývame",
@@ -541,7 +541,7 @@
     "cccA1": "Certifikácia CCC je povinná pre produkty v 17 kategóriách vrátane domácich spotrebičov, IT zariadení, osvetlenia, automobilových dielov, detských hračiek a lítium-iónových batérií (pridané v roku 2024).",
     "cccQ2": "Ako dlho trvá certifikácia CCC?",
     "cccA2": "Proces zahŕňa testovanie produktu, továrenskú inšpekciu a certifikačnú kontrolu. Zložitosť závisí od kategórie produktu. Všetky kroky koordinujeme s akreditovanými čínskymi testovacími laboratóriami.",
-    "cosmeticsTitle": "Kozmetický pilník (NMPA)",
+    "cosmeticsTitle": "Kozmetický pilník",
     "cosmeticsQ1": "Aký je rozdiel medzi bežnou a špeciálnou kozmetikou?",
     "cosmeticsA1": "Bežná kozmetika (starostlivosť o pleť, make-up, starostlivosť o vlasy) vyžaduje registráciu u NMPA. Špeciálna kozmetika (opaľovací krém, bielenie, farbenie vlasov, odstraňovanie pieh) si vyžaduje úplnú registráciu, ktorá trvá dlhšie a vyžaduje viac testovania.",
     "ecommerceTitle": "Cezhraničný elektronický obchod",
@@ -794,7 +794,7 @@
       "gacc": "Registrácia GACC",
       "label": "Súlad štítkov",
       "ccc": "Certifikácia CCC",
-      "cosmetics": "Kozmetický pilník (NMPA)",
+      "cosmetics": "Kozmetický pilník",
       "ecommerce": "Elektronický obchod",
       "brand": "Ochrana značky"
     },

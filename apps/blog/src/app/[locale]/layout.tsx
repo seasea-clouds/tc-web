@@ -14,8 +14,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const validLocale = locales.includes(locale as any) ? locale : defaultLocale;
 
 
-  const title = 'China Import Compliance';
-  const description = 'China import compliance guides: GACC registration, CCC certification, NMPA cosmetics filing, and cross-border e-commerce.';
+  const t = await getTranslations({ locale: validLocale, namespace: 'Blog' });
+
+  const title = t('metaTitle') || 'China Import Compliance';
+  const description = t('metaDescription') || 'China import compliance guides: GACC registration, CCC certification, NMPA cosmetics filing, and cross-border e-commerce.';
   return {
     title,
     description,

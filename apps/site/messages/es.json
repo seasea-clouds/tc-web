@@ -89,7 +89,7 @@
     "cccTitle": "Certificación CCC - Cumplimiento de importaciones de China | Cumplimiento de SinoTrade",
     "cccSubtitle": "Consultoría de certificación obligatoria de China para electrónica, electrodomésticos, juguetes y piezas de automóviles.",
     "cccLink": "Más información",
-    "cosmeticsTitle": "Presentación de cosméticos (NMPA) - Cumplimiento de importaciones de China | Cumplimiento de SinoTrade",
+    "cosmeticsTitle": "Presentación de cosméticos - Cumplimiento de importaciones de China | Cumplimiento de SinoTrade",
     "cosmeticsSubtitle": "Registro y presentación en la NMPA para cosméticos importados: categorías de uso ordinario y especial.",
     "cosmeticsLink": "Más información",
     "ecommerceTitle": "Comercio electrónico transfronterizo: Cumplimiento de importaciones de China | Cumplimiento de SinoTrade",
@@ -303,7 +303,7 @@
     "metaDescription": "Consultoría de certificación obligatoria de China (CCC) para electrónica, electrodomésticos, juguetes y piezas de automóviles. Coordinación de pruebas, prepa..."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Presentación de cosméticos (NMPA)",
+    "heroTitle": "Presentación de cosméticos",
     "heroSubtitle": "Complete el registro y la presentación de la NMPA para cosméticos importados en China.",
     "cta": "Obtenga una evaluación gratuita",
     "coverTitle": "Lo que cubrimos",
@@ -541,7 +541,7 @@
     "cccA1": "La certificación CCC es obligatoria para productos de 17 categorías, incluidos electrodomésticos, equipos de TI, iluminación, piezas de automóviles, juguetes para niños y baterías de iones de litio (agregadas en 2024).",
     "cccQ2": "¿Cuánto tiempo lleva la certificación CCC?",
     "cccA2": "El proceso implica pruebas de productos, inspección de fábrica y revisión de certificación. La complejidad depende de la categoría del producto. Coordinamos todos los pasos con laboratorios de pruebas chinos acreditados.",
-    "cosmeticsTitle": "Presentación de cosméticos (NMPA)",
+    "cosmeticsTitle": "Presentación de cosméticos",
     "cosmeticsQ1": "¿Cuál es la diferencia entre cosmética ordinaria y especial?",
     "cosmeticsA1": "Los cosméticos comunes (cuidado de la piel, maquillaje, cuidado del cabello) deben presentarse ante la NMPA. Los cosméticos especiales (protector solar, blanqueadores, tintes para el cabello, eliminación de pecas) requieren un registro completo, lo que lleva más tiempo e implica más pruebas.",
     "ecommerceTitle": "Comercio electrónico transfronterizo",
@@ -794,7 +794,7 @@
       "gacc": "Registro GACC",
       "label": "Cumplimiento de etiquetas",
       "ccc": "Certificación CCC",
-      "cosmetics": "Presentación de cosméticos (NMPA)",
+      "cosmetics": "Presentación de cosméticos",
       "ecommerce": "Comercio electrónico",
       "brand": "Protección de marca"
     },

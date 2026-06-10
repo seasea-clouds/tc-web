@@ -89,7 +89,7 @@
     "cccTitle": "Pensijilan CCC - Pematuhan Import China | Pematuhan SinoTrade",
     "cccSubtitle": "Perundingan Pensijilan Wajib China untuk elektronik, peralatan, mainan dan alat ganti automotif.",
     "cccLink": "Ketahui lebih lanjut",
-    "cosmeticsTitle": "Pemfailan Kosmetik (NMPA) - Pematuhan Import China | Pematuhan SinoTrade",
+    "cosmeticsTitle": "Pemfailan Kosmetik - Pematuhan Import China | Pematuhan SinoTrade",
     "cosmeticsSubtitle": "Pendaftaran dan pemfailan NMPA untuk kosmetik yang diimport — kategori kegunaan biasa dan khas.",
     "cosmeticsLink": "Ketahui lebih lanjut",
     "ecommerceTitle": "E-dagang rentas sempadan - Pematuhan Import China | Pematuhan SinoTrade",
@@ -303,7 +303,7 @@
     "metaDescription": "Perundingan Pensijilan Wajib China (CCC) untuk elektronik, peralatan, mainan, alat ganti automotif. Penyelarasan ujian, persediaan audit kilang, kelulusan cepat."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Pemfailan Kosmetik (NMPA)",
+    "heroTitle": "Pemfailan Kosmetik",
     "heroSubtitle": "Lengkapkan pendaftaran dan pemfailan NMPA untuk kosmetik yang diimport di China.",
     "cta": "Dapatkan Penilaian Percuma",
     "coverTitle": "Apa yang Kami Liput",
@@ -541,7 +541,7 @@
     "cccA1": "Pensijilan CCC adalah mandatori untuk produk dalam 17 kategori termasuk perkakas rumah, peralatan IT, pencahayaan, alat ganti automotif, mainan kanak-kanak dan bateri lithium-ion (ditambah pada 2024).",
     "cccQ2": "Berapa lamakah tempoh pensijilan CCC?",
     "cccA2": "Proses ini melibatkan ujian produk, pemeriksaan kilang dan semakan pensijilan. Kerumitan bergantung pada kategori produk. Kami menyelaraskan semua langkah dengan makmal ujian Cina bertauliah.",
-    "cosmeticsTitle": "Pemfailan Kosmetik (NMPA)",
+    "cosmeticsTitle": "Pemfailan Kosmetik",
     "cosmeticsQ1": "Apakah perbezaan antara kosmetik biasa dan khas?",
     "cosmeticsA1": "Kosmetik biasa (penjagaan kulit, solek, penjagaan rambut) memerlukan pemfailan dengan NMPA. Kosmetik khas (pelindung matahari, pemutihan, pewarna rambut, penyingkiran jeragat) memerlukan pendaftaran penuh, yang mengambil masa lebih lama dan melibatkan lebih banyak ujian.",
     "ecommerceTitle": "E-dagang rentas sempadan",
@@ -794,7 +794,7 @@
       "gacc": "Pendaftaran GACC",
       "label": "Pematuhan Label",
       "ccc": "Pensijilan CCC",
-      "cosmetics": "Pemfailan Kosmetik (NMPA)",
+      "cosmetics": "Pemfailan Kosmetik",
       "ecommerce": "E-dagang",
       "brand": "Perlindungan Jenama"
     },

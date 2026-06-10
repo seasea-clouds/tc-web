@@ -89,7 +89,7 @@
     "cccTitle": "CCC-sertifisering - China-invoervoldoening | SinoTrade-nakoming",
     "cccSubtitle": "China Verpligte Sertifisering konsultasie vir elektronika, toestelle, speelgoed en motoronderdele.",
     "cccLink": "Leer Meer",
-    "cosmeticsTitle": "Skoonheidsmiddelliassering (NMPA) - China-invoervoldoening | SinoTrade-nakoming",
+    "cosmeticsTitle": "Skoonheidsmiddelliassering - China-invoervoldoening | SinoTrade-nakoming",
     "cosmeticsSubtitle": "NMPA registrasie en liassering vir ingevoerde skoonheidsmiddels - gewone en spesiale gebruik kategorieë.",
     "cosmeticsLink": "Leer Meer",
     "ecommerceTitle": "Oorgrens-e-handel - China-invoervoldoening | SinoTrade-nakoming",
@@ -303,7 +303,7 @@
     "metaDescription": "China Verpligte Sertifisering (CCC) konsultasie vir elektronika, toestelle, speelgoed, motoronderdele. Toetskoördinasie, fabrieksouditvoorbereiding, vinnige goedkeuring."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Skoonheidsmiddelliassering (NMPA)",
+    "heroTitle": "Skoonheidsmiddelliassering",
     "heroSubtitle": "Voltooi NMPA-registrasie en liassering vir ingevoerde skoonheidsmiddels in China.",
     "cta": "Kry gratis assessering",
     "coverTitle": "Wat Ons Dek",
@@ -541,7 +541,7 @@
     "cccA1": "CCC-sertifisering is verpligtend vir produkte in 17 kategorieë, insluitend huishoudelike toestelle, IT-toerusting, beligting, motoronderdele, kinderspeelgoed en litiumioonbatterye (bygevoeg in 2024).",
     "cccQ2": "Hoe lank neem CCC-sertifisering?",
     "cccA2": "Die proses behels produktoetsing, fabrieksinspeksie en sertifiseringsoorsig. Kompleksiteit hang af van produkkategorie. Ons koördineer alle stappe met geakkrediteerde Chinese toetslaboratoriums.",
-    "cosmeticsTitle": "Skoonheidsmiddelliassering (NMPA)",
+    "cosmeticsTitle": "Skoonheidsmiddelliassering",
     "cosmeticsQ1": "Wat is die verskil tussen gewone en spesiale skoonheidsmiddels?",
     "cosmeticsA1": "Gewone skoonheidsmiddels (velsorg, grimering, haarsorg) vereis indiening by NMPA. Spesiale skoonheidsmiddels (sonskerm, bleikmiddel, haarverf, sproetverwydering) vereis volle registrasie, wat langer neem en meer toetsing behels.",
     "ecommerceTitle": "Oorgrens e-handel",
@@ -794,7 +794,7 @@
       "gacc": "GACC registrasie",
       "label": "Etiketvoldoening",
       "ccc": "CCC Sertifisering",
-      "cosmetics": "Skoonheidsmiddelliassering (NMPA)",
+      "cosmetics": "Skoonheidsmiddelliassering",
       "ecommerce": "E-handel",
       "brand": "Handelsmerkbeskerming"
     },

@@ -89,7 +89,7 @@
     "cccTitle": "Certifikimi CCC - Pajtueshmëria e importit të Kinës | Pajtueshmëria e SinoTrade",
     "cccSubtitle": "Konsulencë e Çertifikimit të Detyrueshëm të Kinës për elektronikë, pajisje, lodra dhe pjesë të automobilave.",
     "cccLink": "Mëso më shumë",
-    "cosmeticsTitle": "Regjistrimi i kozmetikës (NMPA) - Pajtueshmëria me importin e Kinës | Pajtueshmëria e SinoTrade",
+    "cosmeticsTitle": "Regjistrimi i kozmetikës - Pajtueshmëria me importin e Kinës | Pajtueshmëria e SinoTrade",
     "cosmeticsSubtitle": "Regjistrimi dhe depozitimi i NMPA për kozmetikë të importuar - kategori të zakonshme dhe të veçanta.",
     "cosmeticsLink": "Mëso më shumë",
     "ecommerceTitle": "E-commerce ndërkufitare - Pajtueshmëria e importit të Kinës | Pajtueshmëria e SinoTrade",
@@ -303,7 +303,7 @@
     "metaDescription": "Konsulencë për Çertifikimin e Detyrueshëm të Kinës (CCC) për elektronikë, pajisje, lodra, pjesë automobilistike. Koordinimi i testimit, përgatitja e auditimit të fabrikës, miratimi i shpejtë."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Regjistrimi i kozmetikës (NMPA)",
+    "heroTitle": "Regjistrimi i kozmetikës",
     "heroSubtitle": "Plotësoni regjistrimin dhe depozitimin e NMPA për kozmetikë të importuar në Kinë.",
     "cta": "Merrni vlerësim falas",
     "coverTitle": "Ajo që Ne Mbulojmë",
@@ -541,7 +541,7 @@
     "cccA1": "Certifikimi CCC është i detyrueshëm për produktet në 17 kategori duke përfshirë pajisjet shtëpiake, pajisjet IT, ndriçimin, pjesët e automobilave, lodrat e fëmijëve dhe bateritë litium-jon (të shtuara në 2024).",
     "cccQ2": "Sa kohë zgjat certifikimi CCC?",
     "cccA2": "Procesi përfshin testimin e produktit, inspektimin e fabrikës dhe rishikimin e certifikimit. Kompleksiteti varet nga kategoria e produktit. Ne i koordinojmë të gjitha hapat me laboratorët e akredituar kinezë të testimit.",
-    "cosmeticsTitle": "Regjistrimi i kozmetikës (NMPA)",
+    "cosmeticsTitle": "Regjistrimi i kozmetikës",
     "cosmeticsQ1": "Cili është ndryshimi midis kozmetikës së zakonshme dhe asaj speciale?",
     "cosmeticsA1": "Kozmetika e zakonshme (kujdesi i lëkurës, grimi, kujdesi i flokëve) kërkojnë paraqitjen me NMPA. Kozmetikë të veçantë (krerë kundër diellit, zbardhje, bojë flokësh, heqje njollash) kërkojnë regjistrim të plotë, i cili kërkon më shumë kohë dhe përfshin më shumë testime.",
     "ecommerceTitle": "E-commerce ndërkufitare",
@@ -794,7 +794,7 @@
       "gacc": "Regjistrimi i GACC",
       "label": "Pajtueshmëria e etiketës",
       "ccc": "Certifikimi CCC",
-      "cosmetics": "Regjistrimi i kozmetikës (NMPA)",
+      "cosmetics": "Regjistrimi i kozmetikës",
       "ecommerce": "E-commerce",
       "brand": "Mbrojtja e markës"
     },

@@ -89,7 +89,7 @@
     "cccTitle": "Certificação CCC - Conformidade de Importação da China | Conformidade SinoTrade",
     "cccSubtitle": "Consultoria de certificação compulsória da China para eletrônicos, eletrodomésticos, brinquedos e peças automotivas.",
     "cccLink": "Saiba mais",
-    "cosmeticsTitle": "Arquivo de Cosméticos (NMPA) - Conformidade de Importação da China | Conformidade SinoTrade",
+    "cosmeticsTitle": "Arquivo de Cosméticos - Conformidade de Importação da China | Conformidade SinoTrade",
     "cosmeticsSubtitle": "Registro e depósito NMPA para cosméticos importados – categorias de uso comum e especial.",
     "cosmeticsLink": "Saiba mais",
     "ecommerceTitle": "Comércio eletrônico transfronteiriço - Conformidade de importação da China | Conformidade SinoTrade",
@@ -303,7 +303,7 @@
     "metaDescription": "Consultoria de Certificação Compulsória da China (CCC) para eletrônicos, eletrodomésticos, brinquedos e peças automotivas. Coordenação de testes, preparação para auditoria de fábrica, aprovação rápida."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Arquivamento de Cosméticos (NMPA)",
+    "heroTitle": "Arquivamento de Cosméticos",
     "heroSubtitle": "Registro e depósito NMPA completos para cosméticos importados na China.",
     "cta": "Obtenha avaliação gratuita",
     "coverTitle": "O que cobrimos",
@@ -541,7 +541,7 @@
     "cccA1": "A certificação CCC é obrigatória para produtos em 17 categorias, incluindo eletrodomésticos, equipamentos de TI, iluminação, peças automotivas, brinquedos infantis e baterias de íons de lítio (adicionadas em 2024).",
     "cccQ2": "Quanto tempo leva a certificação CCC?",
     "cccA2": "O processo envolve testes de produtos, inspeção de fábrica e revisão de certificação. A complexidade depende da categoria do produto. Coordenamos todas as etapas com laboratórios de testes chineses credenciados.",
-    "cosmeticsTitle": "Arquivamento de Cosméticos (NMPA)",
+    "cosmeticsTitle": "Arquivamento de Cosméticos",
     "cosmeticsQ1": "Qual é a diferença entre cosméticos comuns e especiais?",
     "cosmeticsA1": "Cosméticos comuns (cuidados com a pele, maquiagem, cuidados com os cabelos) exigem registro na NMPA. Cosméticos especiais (protetor solar, clareamento, tintura de cabelo, remoção de sardas) exigem registro completo, o que leva mais tempo e envolve mais testes.",
     "ecommerceTitle": "Comércio eletrônico transfronteiriço",
@@ -794,7 +794,7 @@
       "gacc": "Registro GACC",
       "label": "Conformidade de etiqueta",
       "ccc": "Certificação CCC",
-      "cosmetics": "Arquivamento de Cosméticos (NMPA)",
+      "cosmetics": "Arquivamento de Cosméticos",
       "ecommerce": "Comércio eletrônico",
       "brand": "Proteção da marca"
     },

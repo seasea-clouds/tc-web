@@ -89,7 +89,7 @@
     "cccTitle": "Chứng nhận CCC - Tuân thủ Nhập khẩu Trung Quốc | Tuân thủ thương mại Trung Quốc",
     "cccSubtitle": "Tư vấn chứng nhận bắt buộc của Trung Quốc về điện tử, thiết bị, đồ chơi và phụ tùng ô tô.",
     "cccLink": "Tìm hiểu thêm",
-    "cosmeticsTitle": "Khai báo Mỹ phẩm (NMPA) - Tuân thủ Nhập khẩu Trung Quốc | Tuân thủ thương mại Trung Quốc",
+    "cosmeticsTitle": "Khai báo Mỹ phẩm - Tuân thủ Nhập khẩu Trung Quốc | Tuân thủ thương mại Trung Quốc",
     "cosmeticsSubtitle": "Đăng ký và nộp đơn NMPA cho mỹ phẩm nhập khẩu - danh mục sử dụng thông thường và đặc biệt.",
     "cosmeticsLink": "Tìm hiểu thêm",
     "ecommerceTitle": "Thương mại điện tử xuyên biên giới - Tuân thủ nhập khẩu của Trung Quốc | Tuân thủ thương mại Trung Quốc",
@@ -303,7 +303,7 @@
     "metaDescription": "Tư vấn chứng nhận bắt buộc của Trung Quốc (CCC) cho thiết bị điện tử, thiết bị, đồ chơi, phụ tùng ô tô. Phối hợp kiểm tra, chuẩn bị kiểm toán nhà máy, phê duyệt nhanh."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Nộp hồ sơ mỹ phẩm (NMPA)",
+    "heroTitle": "Nộp hồ sơ mỹ phẩm",
     "heroSubtitle": "Hoàn tất đăng ký NMPA và nộp hồ sơ cho mỹ phẩm nhập khẩu tại Trung Quốc.",
     "cta": "Nhận đánh giá miễn phí",
     "coverTitle": "Những gì chúng tôi chi trả",
@@ -541,7 +541,7 @@
     "cccA1": "Chứng nhận CCC là bắt buộc đối với các sản phẩm thuộc 17 danh mục bao gồm thiết bị gia dụng, thiết bị CNTT, đèn chiếu sáng, phụ tùng ô tô, đồ chơi trẻ em và pin lithium-ion (được bổ sung vào năm 2024).",
     "cccQ2": "Chứng chỉ CCC mất bao lâu?",
     "cccA2": "Quá trình này bao gồm thử nghiệm sản phẩm, kiểm tra nhà máy và đánh giá chứng nhận. Độ phức tạp phụ thuộc vào loại sản phẩm. Chúng tôi phối hợp tất cả các bước với các phòng thử nghiệm được Trung Quốc công nhận.",
-    "cosmeticsTitle": "Nộp hồ sơ mỹ phẩm (NMPA)",
+    "cosmeticsTitle": "Nộp hồ sơ mỹ phẩm",
     "cosmeticsQ1": "Sự khác biệt giữa mỹ phẩm thông thường và đặc biệt là gì?",
     "cosmeticsA1": "Mỹ phẩm thông thường (chăm sóc da, trang điểm, chăm sóc tóc) yêu cầu phải nộp đơn cho NMPA. Các loại mỹ phẩm đặc biệt (kem chống nắng, làm trắng da, nhuộm tóc, xóa tàn nhang) yêu cầu đăng ký đầy đủ, mất nhiều thời gian hơn và cần nhiều thử nghiệm hơn.",
     "ecommerceTitle": "Thương mại điện tử xuyên biên giới",
@@ -794,7 +794,7 @@
       "gacc": "Đăng ký GACC",
       "label": "Tuân thủ nhãn",
       "ccc": "Chứng nhận CCC",
-      "cosmetics": "Nộp hồ sơ mỹ phẩm (NMPA)",
+      "cosmetics": "Nộp hồ sơ mỹ phẩm",
       "ecommerce": "Thương mại điện tử",
       "brand": "Bảo vệ thương hiệu"
     },

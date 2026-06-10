@@ -89,7 +89,7 @@
     "cccTitle": "CCC Certification – China Import Compliance | Soulad se SinoTrade",
     "cccSubtitle": "Čína povinné certifikační poradenství pro elektroniku, spotřebiče, hračky a automobilové díly.",
     "cccLink": "Zjistit více",
-    "cosmeticsTitle": "Kosmetika Filing (NMPA) - Čína Import Compliance | Soulad se SinoTrade",
+    "cosmeticsTitle": "Kosmetika Filing - Čína Import Compliance | Soulad se SinoTrade",
     "cosmeticsSubtitle": "Registrace a podání NMPA pro dováženou kosmetiku — kategorie běžného a speciálního použití.",
     "cosmeticsLink": "Zjistit více",
     "ecommerceTitle": "Přeshraniční elektronický obchod – dodržování podmínek dovozu z Číny | Soulad se SinoTrade",
@@ -303,7 +303,7 @@
     "metaDescription": "Čínská povinná certifikace (CCC) poradenství pro elektroniku, spotřebiče, hračky, automobilové díly. Koordinace testování, příprava na tovární audit, rychlé schválení."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Kosmetický pilník (NMPA)",
+    "heroTitle": "Kosmetický pilník",
     "heroSubtitle": "Kompletní registrace a podání NMPA pro dováženou kosmetiku v Číně.",
     "cta": "Získejte bezplatné hodnocení",
     "coverTitle": "Co pokrýváme",
@@ -541,7 +541,7 @@
     "cccA1": "Certifikace CCC je povinná pro produkty v 17 kategoriích včetně domácích spotřebičů, IT vybavení, osvětlení, automobilových dílů, dětských hraček a lithium-iontových baterií (přidáno v roce 2024).",
     "cccQ2": "Jak dlouho trvá certifikace CCC?",
     "cccA2": "Proces zahrnuje testování produktu, tovární kontrolu a certifikační přezkoumání. Složitost závisí na kategorii produktu. Všechny kroky koordinujeme s akreditovanými čínskými testovacími laboratořemi.",
-    "cosmeticsTitle": "Kosmetický pilník (NMPA)",
+    "cosmeticsTitle": "Kosmetický pilník",
     "cosmeticsQ1": "Jaký je rozdíl mezi běžnou a speciální kosmetikou?",
     "cosmeticsA1": "Běžná kosmetika (péče o pleť, make-up, péče o vlasy) vyžaduje podání u NMPA. Speciální kosmetika (opalovací krém, bělení, barvení vlasů, odstranění pih) vyžaduje úplnou registraci, která trvá déle a vyžaduje více testování.",
     "ecommerceTitle": "Přeshraniční elektronický obchod",
@@ -794,7 +794,7 @@
       "gacc": "Registrace GACC",
       "label": "Soulad se štítky",
       "ccc": "Certifikace CCC",
-      "cosmetics": "Kosmetický pilník (NMPA)",
+      "cosmetics": "Kosmetický pilník",
       "ecommerce": "Elektronický obchod",
       "brand": "Ochrana značky"
     },

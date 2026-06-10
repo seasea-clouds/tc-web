@@ -89,7 +89,7 @@
     "cccTitle": "CCC-Zertifizierung – China Import Compliance | SinoTrade-Konformität",
     "cccSubtitle": "Beratung zur obligatorischen Zertifizierung in China für Elektronik, Haushaltsgeräte, Spielzeug und Automobilteile.",
     "cccLink": "Mehr erfahren",
-    "cosmeticsTitle": "Kosmetikeinreichung (NMPA) – China Import Compliance | SinoTrade-Konformität",
+    "cosmeticsTitle": "Kosmetikeinreichung – China Import Compliance | SinoTrade-Konformität",
     "cosmeticsSubtitle": "NMPA-Registrierung und Einreichung für importierte Kosmetika – Kategorien für normale und besondere Verwendung.",
     "cosmeticsLink": "Mehr erfahren",
     "ecommerceTitle": "Grenzüberschreitender E-Commerce – China Import Compliance | SinoTrade-Konformität",
@@ -303,7 +303,7 @@
     "metaDescription": "Beratung zur China Compulsory Certification (CCC) für Elektronik, Haushaltsgeräte, Spielzeug und Automobilteile. Testkoordination, Vorbereitung auf Werksaudits, schnelle Genehmigung."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Einreichung von Kosmetika (NMPA)",
+    "heroTitle": "Einreichung von Kosmetika",
     "heroSubtitle": "Vollständige NMPA-Registrierung und Einreichung für importierte Kosmetika in China.",
     "cta": "Erhalten Sie eine kostenlose Bewertung",
     "coverTitle": "Was wir abdecken",
@@ -541,7 +541,7 @@
     "cccA1": "Die CCC-Zertifizierung ist für Produkte in 17 Kategorien obligatorisch, darunter Haushaltsgeräte, IT-Geräte, Beleuchtung, Autoteile, Kinderspielzeug und Lithium-Ionen-Batterien (hinzugefügt im Jahr 2024).",
     "cccQ2": "Wie lange dauert die CCC-Zertifizierung?",
     "cccA2": "Der Prozess umfasst Produkttests, Werksinspektion und Zertifizierungsprüfung. Die Komplexität hängt von der Produktkategorie ab. Wir koordinieren alle Schritte mit akkreditierten chinesischen Prüflaboren.",
-    "cosmeticsTitle": "Einreichung von Kosmetika (NMPA)",
+    "cosmeticsTitle": "Einreichung von Kosmetika",
     "cosmeticsQ1": "Was ist der Unterschied zwischen gewöhnlicher und spezieller Kosmetik?",
     "cosmeticsA1": "Gewöhnliche Kosmetika (Hautpflege, Make-up, Haarpflege) müssen bei der NMPA eingereicht werden. Für spezielle Kosmetika (Sonnencreme, Bleichmittel, Haarfärbemittel, Entfernung von Sommersprossen) ist eine vollständige Registrierung erforderlich, die länger dauert und mehr Tests erfordert.",
     "ecommerceTitle": "Grenzüberschreitender E-Commerce",
@@ -794,7 +794,7 @@
       "gacc": "GACC-Registrierung",
       "label": "Etikettenkonformität",
       "ccc": "CCC-Zertifizierung",
-      "cosmetics": "Einreichung von Kosmetika (NMPA)",
+      "cosmetics": "Einreichung von Kosmetika",
       "ecommerce": "E-Commerce",
       "brand": "Markenschutz"
     },

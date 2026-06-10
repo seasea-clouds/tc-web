@@ -89,7 +89,7 @@
     "cccTitle": "CCC Sertifikatlaşdırma - Çin İdxal Uyğunluğu | SinoTrade Uyğunluğu",
     "cccSubtitle": "Elektronika, məişət texnikası, oyuncaqlar və avtomobil hissələri üçün Çin Məcburi Sertifikatlaşdırma məsləhəti.",
     "cccLink": "Daha çox öyrənin",
-    "cosmeticsTitle": "Kosmetika sənədləri (NMPA) - Çin İdxal Uyğunluğu | SinoTrade Uyğunluğu",
+    "cosmeticsTitle": "Kosmetika sənədləri - Çin İdxal Uyğunluğu | SinoTrade Uyğunluğu",
     "cosmeticsSubtitle": "İdxal edilən kosmetika üçün NMPA qeydiyyatı və sənədləşdirilməsi — adi və xüsusi istifadə kateqoriyaları.",
     "cosmeticsLink": "Daha çox öyrənin",
     "ecommerceTitle": "Sərhədlərarası E-ticarət - Çin İdxal Uyğunluğu | SinoTrade Uyğunluğu",
@@ -303,7 +303,7 @@
     "metaDescription": "Elektronika, məişət texnikası, oyuncaqlar, avtomobil hissələri üçün Çin Məcburi Sertifikatlaşdırma (CCC) məsləhəti. Test koordinasiyası, fabrik yoxlamasına hazırlıq, sürətli təsdiq."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Kosmetika sənədləri (NMPA)",
+    "heroTitle": "Kosmetika sənədləri",
     "heroSubtitle": "Çində idxal olunan kosmetika üçün NMPA qeydiyyatını və sənədləşməni tamamlayın.",
     "cta": "Pulsuz Qiymətləndirmə alın",
     "coverTitle": "Nəyi əhatə edirik",
@@ -541,7 +541,7 @@
     "cccA1": "CCC sertifikatı məişət texnikası, İT avadanlıqları, işıqlandırma, avtomobil hissələri, uşaq oyuncaqları və litium-ion batareyaları (2024-cü ildə əlavə edilib) daxil olmaqla 17 kateqoriya üzrə məhsullar üçün məcburidir.",
     "cccQ2": "CCC sertifikatı nə qədər çəkir?",
     "cccA2": "Proses məhsulun sınaqdan keçirilməsini, zavod yoxlamasını və sertifikatlaşdırmanın nəzərdən keçirilməsini əhatə edir. Mürəkkəblik məhsul kateqoriyasından asılıdır. Biz bütün addımları akkreditə olunmuş Çin sınaq laboratoriyaları ilə əlaqələndiririk.",
-    "cosmeticsTitle": "Kosmetika sənədləri (NMPA)",
+    "cosmeticsTitle": "Kosmetika sənədləri",
     "cosmeticsQ1": "Adi və xüsusi kosmetika arasında fərq nədir?",
     "cosmeticsA1": "Adi kosmetika (dəriyə qulluq, makiyaj, saça qulluq) NMPA-ya müraciət tələb edir. Xüsusi kosmetika (günəşdən qoruyucu, ağardıcı, saç boyası, çillərin aradan qaldırılması) tam qeydiyyat tələb edir ki, bu da daha uzun vaxt aparır və daha çox sınaq tələb edir.",
     "ecommerceTitle": "Transsərhəd e-ticarət",
@@ -794,7 +794,7 @@
       "gacc": "GACC Qeydiyyatı",
       "label": "Etiket Uyğunluğu",
       "ccc": "CCC Sertifikatı",
-      "cosmetics": "Kosmetika sənədləri (NMPA)",
+      "cosmetics": "Kosmetika sənədləri",
       "ecommerce": "Elektron ticarət",
       "brand": "Brend Mühafizəsi"
     },

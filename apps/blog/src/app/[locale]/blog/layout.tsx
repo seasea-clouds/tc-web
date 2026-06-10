@@ -1,3 +1,4 @@
+import { getTranslations } from 'next-intl/server';
 import { locales, defaultLocale } from '@/i18n/routing';
 import { buildAlternates } from '@trade/ui';
 
@@ -16,8 +17,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const validLocale = locales.includes(locale as any) ? locale : defaultLocale;
 
-  const title = 'China Import Compliance Blog | SinoTrade Compliance';
-  const description = 'Expert guides on China import compliance. GACC registration, CCC certification, NMPA cosmetics filing, and cross-border e-commerce.';
+  const t = await getTranslations({ locale: validLocale, namespace: 'Blog' });
+
+  const title = t('metaTitle') || 'China Import Compliance Blog | SinoTrade Compliance';
+  const description = t('metaDescription') || 'Expert guides on China import compliance. GACC registration, CCC certification, NMPA cosmetics filing, and cross-border e-commerce.';
   const path = '/blog/';
   const alternates = buildAlternates(validLocale, [...locales], path);
 

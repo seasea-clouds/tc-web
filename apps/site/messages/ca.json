@@ -89,7 +89,7 @@
     "cccTitle": "Certificació CCC - Compliment d'importació de la Xina | Compliment de SinoTrade",
     "cccSubtitle": "Consultoria de certificació obligatòria de la Xina per a electrònica, electrodomèstics, joguines i peces d'automòbil.",
     "cccLink": "Més informació",
-    "cosmeticsTitle": "Presentació de cosmètics (NMPA) - Compliment d'importació de la Xina | Compliment de SinoTrade",
+    "cosmeticsTitle": "Presentació de cosmètics - Compliment d'importació de la Xina | Compliment de SinoTrade",
     "cosmeticsSubtitle": "Registre NMPA i presentació de cosmètics importats: categories d'ús normal i especial.",
     "cosmeticsLink": "Més informació",
     "ecommerceTitle": "Comerç electrònic transfronterer - Compliment d'importació de la Xina | Compliment de SinoTrade",
@@ -303,7 +303,7 @@
     "metaDescription": "Consultoria de certificació obligatòria de la Xina (CCC) per a electrònica, electrodomèstics, joguines, peces d'automòbil. Coordinació de proves, preparació d'auditoria de fàbrica, aprovació ràpida."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Presentació de cosmètics (NMPA)",
+    "heroTitle": "Presentació de cosmètics",
     "heroSubtitle": "Completa el registre i la presentació de la NMPA per a cosmètics importats a la Xina.",
     "cta": "Obteniu una avaluació gratuïta",
     "coverTitle": "Què Cobrim",
@@ -541,7 +541,7 @@
     "cccA1": "La certificació CCC és obligatòria per als productes de 17 categories, com ara electrodomèstics, equips informàtics, il·luminació, peces d'automòbils, joguines per a nens i bateries d'ions de liti (afegits el 2024).",
     "cccQ2": "Quant de temps triga la certificació CCC?",
     "cccA2": "El procés inclou la prova del producte, la inspecció de fàbrica i la revisió de la certificació. La complexitat depèn de la categoria del producte. Coordinem tots els passos amb laboratoris de proves xinesos acreditats.",
-    "cosmeticsTitle": "Presentació de cosmètics (NMPA)",
+    "cosmeticsTitle": "Presentació de cosmètics",
     "cosmeticsQ1": "Quina diferència hi ha entre cosmètics normals i especials?",
     "cosmeticsA1": "La cosmètica normal (cura de la pell, maquillatge, cura del cabell) requereix la presentació a l'NMPA. Els cosmètics especials (crema solar, blanquejament, tintura de cabell, eliminació de pigues) requereixen un registre complet, que triga més temps i implica més proves.",
     "ecommerceTitle": "Comerç electrònic transfronterer",
@@ -794,7 +794,7 @@
       "gacc": "Registre GACC",
       "label": "Compliment de l'etiqueta",
       "ccc": "Certificació CCC",
-      "cosmetics": "Presentació de cosmètics (NMPA)",
+      "cosmetics": "Presentació de cosmètics",
       "ecommerce": "Comerç electrònic",
       "brand": "Protecció de marca"
     },

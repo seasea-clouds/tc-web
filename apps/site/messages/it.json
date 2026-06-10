@@ -89,7 +89,7 @@
     "cccTitle": "Certificazione CCC - Conformità all'importazione dalla Cina | Conformità SinoTrade",
     "cccSubtitle": "Consulenza sulla certificazione obbligatoria cinese per componenti elettronici, elettrodomestici, giocattoli e componenti automobilistici.",
     "cccLink": "Scopri di più",
-    "cosmeticsTitle": "Presentazione di prodotti cosmetici (NMPA) - Conformità all'importazione in Cina | Conformità SinoTrade",
+    "cosmeticsTitle": "Presentazione di prodotti cosmetici - Conformità all'importazione in Cina | Conformità SinoTrade",
     "cosmeticsSubtitle": "Registrazione e archiviazione NMPA per cosmetici importati: categorie per uso ordinario e speciale.",
     "cosmeticsLink": "Scopri di più",
     "ecommerceTitle": "Commercio elettronico transfrontaliero: conformità alle importazioni dalla Cina | Conformità SinoTrade",
@@ -303,7 +303,7 @@
     "metaDescription": "Consulenza sulla certificazione obbligatoria cinese (CCC) per elettronica, elettrodomestici, giocattoli, componenti automobilistici. Coordinamento dei test, preparazione all'audit di fabbrica, approvazione rapida."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Archiviazione di cosmetici (NMPA)",
+    "heroTitle": "Archiviazione di cosmetici",
     "heroSubtitle": "Completa la registrazione e l'archiviazione NMPA per i cosmetici importati in Cina.",
     "cta": "Ottieni una valutazione gratuita",
     "coverTitle": "Di cosa trattiamo",
@@ -541,7 +541,7 @@
     "cccA1": "La certificazione CCC è obbligatoria per i prodotti di 17 categorie tra cui elettrodomestici, apparecchiature IT, illuminazione, parti automobilistiche, giocattoli per bambini e batterie agli ioni di litio (aggiunte nel 2024).",
     "cccQ2": "Quanto tempo richiede la certificazione CCC?",
     "cccA2": "Il processo prevede test del prodotto, ispezione in fabbrica e revisione della certificazione. La complessità dipende dalla categoria del prodotto. Coordiniamo tutte le fasi con laboratori di test cinesi accreditati.",
-    "cosmeticsTitle": "Archiviazione di cosmetici (NMPA)",
+    "cosmeticsTitle": "Archiviazione di cosmetici",
     "cosmeticsQ1": "Qual è la differenza tra cosmetici ordinari e speciali?",
     "cosmeticsA1": "I cosmetici ordinari (cura della pelle, trucco, cura dei capelli) richiedono la registrazione presso NMPA. Cosmetici speciali (creme solari, sbiancanti, tinture per capelli, rimozione delle lentiggini) richiedono una registrazione completa, che richiede più tempo e comporta più test.",
     "ecommerceTitle": "Commercio elettronico transfrontaliero",
@@ -794,7 +794,7 @@
       "gacc": "Registrazione GACC",
       "label": "Conformità dell'etichetta",
       "ccc": "Certificazione CCC",
-      "cosmetics": "Archiviazione di cosmetici (NMPA)",
+      "cosmetics": "Archiviazione di cosmetici",
       "ecommerce": "Commercio elettronico",
       "brand": "Protezione del marchio"
     },

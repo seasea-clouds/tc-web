@@ -89,7 +89,7 @@
     "cccTitle": "Sertifikasi CCC - Kepatuhan Impor Tiongkok | Kepatuhan SinoTrade",
     "cccSubtitle": "Konsultasi Sertifikasi Wajib China untuk elektronik, peralatan, mainan, dan suku cadang otomotif.",
     "cccLink": "Pelajari lebih lanjut",
-    "cosmeticsTitle": "Pengarsipan Kosmetik (NMPA) - Kepatuhan Impor Tiongkok | Kepatuhan SinoTrade",
+    "cosmeticsTitle": "Pengarsipan Kosmetik - Kepatuhan Impor Tiongkok | Kepatuhan SinoTrade",
     "cosmeticsSubtitle": "Pendaftaran dan pengarsipan NMPA untuk kosmetik impor — kategori penggunaan biasa dan khusus.",
     "cosmeticsLink": "Pelajari lebih lanjut",
     "ecommerceTitle": "E-niaga Lintas Batas - Kepatuhan Impor Tiongkok | Kepatuhan SinoTrade",
@@ -303,7 +303,7 @@
     "metaDescription": "Konsultasi Sertifikasi Wajib China (CCC) untuk elektronik, peralatan, mainan, suku cadang otomotif. Koordinasi pengujian, persiapan audit pabrik, persetujuan cepat."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Pengarsipan Kosmetik (NMPA)",
+    "heroTitle": "Pengarsipan Kosmetik",
     "heroSubtitle": "Menyelesaikan pendaftaran NMPA dan pengarsipan kosmetik impor di Tiongkok.",
     "cta": "Dapatkan Penilaian Gratis",
     "coverTitle": "Apa yang Kami Cakupan",
@@ -541,7 +541,7 @@
     "cccA1": "Sertifikasi CCC bersifat wajib untuk produk dalam 17 kategori termasuk peralatan rumah tangga, peralatan IT, penerangan, suku cadang otomotif, mainan anak-anak, dan baterai lithium-ion (ditambahkan pada tahun 2024).",
     "cccQ2": "Berapa lama waktu yang dibutuhkan untuk sertifikasi CCC?",
     "cccA2": "Prosesnya melibatkan pengujian produk, inspeksi pabrik, dan tinjauan sertifikasi. Kompleksitasnya tergantung pada kategori produk. Kami mengoordinasikan semua langkah dengan laboratorium pengujian Tiongkok yang terakreditasi.",
-    "cosmeticsTitle": "Pengarsipan Kosmetik (NMPA)",
+    "cosmeticsTitle": "Pengarsipan Kosmetik",
     "cosmeticsQ1": "Apa perbedaan kosmetik biasa dan khusus?",
     "cosmeticsA1": "Kosmetik biasa (perawatan kulit, tata rias, perawatan rambut) memerlukan pengajuan dengan NMPA. Kosmetik khusus (tabir surya, pemutih, pewarna rambut, penghilang bintik) memerlukan registrasi penuh, yang membutuhkan waktu lebih lama dan memerlukan lebih banyak pengujian.",
     "ecommerceTitle": "E-niaga lintas batas",
@@ -794,7 +794,7 @@
       "gacc": "Pendaftaran GACC",
       "label": "Kepatuhan Label",
       "ccc": "Sertifikasi CCC",
-      "cosmetics": "Pengarsipan Kosmetik (NMPA)",
+      "cosmetics": "Pengarsipan Kosmetik",
       "ecommerce": "perdagangan elektronik",
       "brand": "Perlindungan Merek"
     },

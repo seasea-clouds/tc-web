@@ -89,7 +89,7 @@
     "cccTitle": "CCC 인증 - 중국 수입 규정 준수 | SinoTrade 규정 준수",
     "cccSubtitle": "전자제품, 가전제품, 장난감, 자동차 부품에 대한 중국강제인증 컨설팅.",
     "cccLink": "자세히 알아보기",
-    "cosmeticsTitle": "화장품 신고(NMPA) - 중국 수입 규정 준수 | SinoTrade 규정 준수",
+    "cosmeticsTitle": "화장품 신고 - 중국 수입 규정 준수 | SinoTrade 규정 준수",
     "cosmeticsSubtitle": "수입 화장품에 대한 NMPA 등록 및 신고 - 일반 및 특수 용도 카테고리.",
     "cosmeticsLink": "자세히 알아보기",
     "ecommerceTitle": "국경 간 전자상거래 - 중국 수입 규정 준수 | SinoTrade 규정 준수",
@@ -303,7 +303,7 @@
     "metaDescription": "전자제품, 가전제품, 장난감, 자동차 부품에 대한 중국강제인증(CCC) 컨설팅을 진행하고 있습니다. 테스트 조정, 공장 감사 준비, 빠른 승인."
   },
   "ServiceCosmetics": {
-    "heroTitle": "화장품 신고(NMPA)",
+    "heroTitle": "화장품 신고",
     "heroSubtitle": "중국 수입화장품에 대한 NMPA 등록 및 신고를 완료합니다.",
     "cta": "무료 평가 받기",
     "coverTitle": "우리가 다루는 내용",
@@ -541,7 +541,7 @@
     "cccA1": "생활가전, IT기기, 조명, 자동차부품, 어린이완구, 리튬이온전지 등 17개 품목에 대해 CCC 인증이 의무화돼 있다(2024년 추가).",
     "cccQ2": "CCC 인증은 얼마나 걸리나요?",
     "cccA2": "프로세스에는 제품 테스트, 공장 검사 및 인증 검토가 포함됩니다. 복잡성은 제품 카테고리에 따라 다릅니다. 우리는 공인된 중국 테스트 연구소와 모든 단계를 조정합니다.",
-    "cosmeticsTitle": "화장품 신고(NMPA)",
+    "cosmeticsTitle": "화장품 신고",
     "cosmeticsQ1": "일반화장품과 특수화장품의 차이점은 무엇인가요?",
     "cosmeticsA1": "일반 화장품(스킨케어, 메이크업, 헤어케어)은 NMPA에 신고해야 합니다. 특수 화장품(자외선차단제, 미백제, 염모제, 주근깨 제거제)은 전체 등록이 필요하며, 이는 더 오랜 시간이 걸리고 더 많은 테스트를 필요로 합니다.",
     "ecommerceTitle": "국경 간 전자상거래",
@@ -794,7 +794,7 @@
       "gacc": "GACC 등록",
       "label": "라벨 준수",
       "ccc": "CCC 인증",
-      "cosmetics": "화장품 신고(NMPA)",
+      "cosmetics": "화장품 신고",
       "ecommerce": "전자상거래",
       "brand": "브랜드 보호"
     },

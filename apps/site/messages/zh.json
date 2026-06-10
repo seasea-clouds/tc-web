@@ -89,7 +89,7 @@
     "cccTitle": "CCC认证-中国进口合规|中贸合规",
     "cccSubtitle": "电子、电器、玩具、汽车零部件的中国强制性认证咨询。",
     "cccLink": "了解更多",
-    "cosmeticsTitle": "化妆品备案（NMPA）-中国进口合规|中贸合规",
+    "cosmeticsTitle": "化妆品备案-中国进口合规|中贸合规",
     "cosmeticsSubtitle": "进口化妆品注册备案——普通类和特殊用途类。",
     "cosmeticsLink": "了解更多",
     "ecommerceTitle": "跨境电商-中国进口合规|中贸合规",
@@ -303,7 +303,7 @@
     "metaDescription": "中国强制性产品认证（CCC）咨询，覆盖电子产品、家电、玩具、汽车零部件。检测协调、工厂审核准备、快速获批。"
   },
   "ServiceCosmetics": {
-    "heroTitle": "化妆品备案（NMPA）",
+    "heroTitle": "化妆品备案",
     "heroSubtitle": "完成进口化妆品在中国的NMPA注册和备案。",
     "cta": "获得免费评估",
     "coverTitle": "我们涵盖的内容",
@@ -541,7 +541,7 @@
     "cccA1": "CCC认证适用于家用电器、IT设备、照明、汽车零部件、儿童玩具、锂离子电池（2024年新增）等17类产品。",
     "cccQ2": "CCC认证需要多长时间？",
     "cccA2": "该过程包括产品测试、工厂检查和认证审查。复杂性取决于产品类别。我们与经过认可的中国测试实验室协调所有步骤。",
-    "cosmeticsTitle": "化妆品备案（NMPA）",
+    "cosmeticsTitle": "化妆品备案",
     "cosmeticsQ1": "普通化妆品和特殊化妆品有什么区别？",
     "cosmeticsA1": "普通化妆品（护肤品、彩妆、护发）需要向NMPA备案。特殊化妆品（防晒、美白、染发、祛斑）需要完整注册，所需时间更长，涉及更多测试。",
     "ecommerceTitle": "跨境电商",
@@ -794,7 +794,7 @@
       "gacc": "海关总署注册",
       "label": "标签合规性",
       "ccc": "CCC认证",
-      "cosmetics": "化妆品备案（NMPA）",
+      "cosmetics": "化妆品备案",
       "ecommerce": "电子商务",
       "brand": "品牌保护"
     },

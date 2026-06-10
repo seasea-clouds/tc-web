@@ -89,7 +89,7 @@
     "cccTitle": "Certification CCC - Conformité des importations en Chine | Conformité SinoTrade",
     "cccSubtitle": "Conseil en certification obligatoire en Chine pour l'électronique, les appareils électroménagers, les jouets et les pièces automobiles.",
     "cccLink": "En savoir plus",
-    "cosmeticsTitle": "Dépôt de produits cosmétiques (NMPA) - Conformité des importations en Chine | Conformité SinoTrade",
+    "cosmeticsTitle": "Dépôt de produits cosmétiques - Conformité des importations en Chine | Conformité SinoTrade",
     "cosmeticsSubtitle": "Enregistrement et dépôt auprès de la NMPA pour les cosmétiques importés — catégories à usage ordinaire et spécial.",
     "cosmeticsLink": "En savoir plus",
     "ecommerceTitle": "Commerce électronique transfrontalier - Conformité des importations en Chine | Conformité SinoTrade",
@@ -303,7 +303,7 @@
     "metaDescription": "Conseil en certification obligatoire en Chine (CCC) pour l'électronique, les appareils électroménagers, les jouets et les pièces automobiles. Coordination de..."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Dépôt de produits cosmétiques (NMPA)",
+    "heroTitle": "Dépôt de produits cosmétiques",
     "heroSubtitle": "Enregistrement et dépôt NMPA complets pour les cosmétiques importés en Chine.",
     "cta": "Obtenez une évaluation gratuite",
     "coverTitle": "Ce que nous couvrons",
@@ -541,7 +541,7 @@
     "cccA1": "La certification CCC est obligatoire pour les produits dans 17 catégories, notamment les appareils électroménagers, les équipements informatiques, l'éclairage, les pièces automobiles, les jouets pour enfants et les batteries lithium-ion (ajoutées en 2024).",
     "cccQ2": "Combien de temps dure la certification CCC ?",
     "cccA2": "Le processus implique des tests de produits, une inspection en usine et un examen de certification. La complexité dépend de la catégorie de produit. Nous coordonnons toutes les étapes avec des laboratoires de tests chinois accrédités.",
-    "cosmeticsTitle": "Dépôt de produits cosmétiques (NMPA)",
+    "cosmeticsTitle": "Dépôt de produits cosmétiques",
     "cosmeticsQ1": "Quelle est la différence entre les cosmétiques ordinaires et spéciaux ?",
     "cosmeticsA1": "Les cosmétiques ordinaires (soins de la peau, maquillage, soins capillaires) doivent être déposés auprès de la NMPA. Les produits cosmétiques spéciaux (crème solaire, blanchiment, teinture capillaire, élimination des taches de rousseur) nécessitent un enregistrement complet, ce qui prend plus de temps et implique davantage de tests.",
     "ecommerceTitle": "Commerce électronique transfrontalier",
@@ -794,7 +794,7 @@
       "gacc": "Enregistrement GACC",
       "label": "Conformité des étiquettes",
       "ccc": "Certification CCC",
-      "cosmetics": "Dépôt de produits cosmétiques (NMPA)",
+      "cosmetics": "Dépôt de produits cosmétiques",
       "ecommerce": "Commerce électronique",
       "brand": "Protection de la marque"
     },

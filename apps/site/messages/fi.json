@@ -89,7 +89,7 @@
     "cccTitle": "CCC-sertifiointi - Kiinan tuontivaatimustenmukaisuus | SinoTrade-yhteensopivuus",
     "cccSubtitle": "Kiina elektroniikan, laitteiden, lelujen ja autonosien pakollinen sertifiointikonsultointi.",
     "cccLink": "Lue lisää",
-    "cosmeticsTitle": "Kosmetiikka-arkistointi (NMPA) - Kiinan tuonnin vaatimustenmukaisuus | SinoTrade-yhteensopivuus",
+    "cosmeticsTitle": "Kosmetiikka-arkistointi - Kiinan tuonnin vaatimustenmukaisuus | SinoTrade-yhteensopivuus",
     "cosmeticsSubtitle": "NMPA:n rekisteröinti ja arkistointi maahantuoduille kosmetiikkatuotteille – tavalliset ja erikoiskäyttöiset luokat.",
     "cosmeticsLink": "Lue lisää",
     "ecommerceTitle": "Rajat ylittävä sähköinen kaupankäynti - Kiinan tuontivaatimusten noudattaminen | SinoTrade-yhteensopivuus",
@@ -303,7 +303,7 @@
     "metaDescription": "Kiinan pakollisen sertifioinnin (CCC) konsultointi elektroniikkaa, laitteita, leluja ja autonosia varten. Testauksen koordinointi, tehdastarkastuksen valmistelu, nopea hyväksyntä."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Kosmetiikkaviilaus (NMPA)",
+    "heroTitle": "Kosmetiikkaviilaus",
     "heroSubtitle": "Täytä NMPA-rekisteröinti ja hakemus tuontikosmetiikkaa varten Kiinassa.",
     "cta": "Hanki ilmainen arviointi",
     "coverTitle": "Mitä katamme",
@@ -541,7 +541,7 @@
     "cccA1": "CCC-sertifiointi on pakollinen tuotteille 17 kategoriassa, mukaan lukien kodinkoneet, IT-laitteet, valaistus, autonosat, lasten lelut ja litiumioniakut (lisätty vuonna 2024).",
     "cccQ2": "Kuinka kauan CCC-sertifiointi kestää?",
     "cccA2": "Prosessi sisältää tuotetestauksen, tehdastarkastuksen ja sertifiointitarkastuksen. Monimutkaisuus riippuu tuoteryhmästä. Koordinoimme kaikki vaiheet akkreditoitujen kiinalaisten testauslaboratorioiden kanssa.",
-    "cosmeticsTitle": "Kosmetiikkaviilaus (NMPA)",
+    "cosmeticsTitle": "Kosmetiikkaviilaus",
     "cosmeticsQ1": "Mitä eroa on tavallisella ja erikoiskosmetiikkalla?",
     "cosmeticsA1": "Tavalliset kosmetiikkatuotteet (ihonhoito, meikki, hiustenhoito) vaativat NMPA-hakemuksen. Erikoiskosmetiikka (aurinkosuojavoide, valkaisu, hiusten värjäys, pisamioiden poisto) vaatii täyden rekisteröinnin, mikä kestää kauemmin ja vaatii enemmän testausta.",
     "ecommerceTitle": "Rajat ylittävä sähköinen kaupankäynti",
@@ -794,7 +794,7 @@
       "gacc": "GACC rekisteröinti",
       "label": "Label-yhteensopivuus",
       "ccc": "CCC-sertifiointi",
-      "cosmetics": "Kosmetiikkaviilaus (NMPA)",
+      "cosmetics": "Kosmetiikkaviilaus",
       "ecommerce": "Sähköinen kaupankäynti",
       "brand": "Brändin suojaus"
     },

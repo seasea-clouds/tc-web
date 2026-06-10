@@ -89,7 +89,7 @@
     "cccTitle": "Certificiranje CCC – skladnost pri uvozu na Kitajsko | Skladnost s predpisi SinoTrade",
     "cccSubtitle": "Svetovanje o obveznem certificiranju na Kitajskem za elektroniko, naprave, igrače in avtomobilske dele.",
     "cccLink": "Več o tem",
-    "cosmeticsTitle": "Kozmetična vložitev (NMPA) – skladnost pri uvozu na Kitajsko | Skladnost s predpisi SinoTrade",
+    "cosmeticsTitle": "Kozmetična vložitev – skladnost pri uvozu na Kitajsko | Skladnost s predpisi SinoTrade",
     "cosmeticsSubtitle": "Registracija in prijava pri NMPA za uvoženo kozmetiko – kategorije običajne in posebne uporabe.",
     "cosmeticsLink": "Več o tem",
     "ecommerceTitle": "Čezmejno e-trgovanje – Kitajska uvozna skladnost | Skladnost s predpisi SinoTrade",
@@ -303,7 +303,7 @@
     "metaDescription": "Svetovanje pri obveznem certificiranju na Kitajskem (CCC) za elektroniko, naprave, igrače, avtomobilske dele. Usklajevanje testiranja, priprava na revizijo tovarne, hitra odobritev."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Kozmetična vložitev (NMPA)",
+    "heroTitle": "Kozmetična vložitev",
     "heroSubtitle": "Popolna registracija in prijava NMPA za uvoženo kozmetiko na Kitajskem.",
     "cta": "Pridobite brezplačno oceno",
     "coverTitle": "Kaj pokrivamo",
@@ -541,7 +541,7 @@
     "cccA1": "Certifikat CCC je obvezen za izdelke v 17 kategorijah, vključno z gospodinjskimi aparati, IT opremo, razsvetljavo, avtomobilskimi deli, otroškimi igračami in litij-ionskimi baterijami (dodane leta 2024).",
     "cccQ2": "Kako dolgo traja certificiranje CCC?",
     "cccA2": "Postopek vključuje testiranje izdelka, pregled tovarne in pregled certificiranja. Kompleksnost je odvisna od kategorije izdelka. Vse korake usklajujemo z akreditiranimi kitajskimi laboratoriji za testiranje.",
-    "cosmeticsTitle": "Kozmetična vložitev (NMPA)",
+    "cosmeticsTitle": "Kozmetična vložitev",
     "cosmeticsQ1": "Kakšna je razlika med navadno in specialno kozmetiko?",
     "cosmeticsA1": "Običajna kozmetika (nega kože, ličila, nega las) zahteva prijavo pri NMPA. Posebna kozmetika (krema za sončenje, beljenje, barvanje las, odstranjevanje peg) zahteva popolno registracijo, ki traja dlje in vključuje več testiranj.",
     "ecommerceTitle": "Čezmejno e-trgovanje",
@@ -794,7 +794,7 @@
       "gacc": "Registracija GACC",
       "label": "Skladnost etikete",
       "ccc": "Certificiranje CCC",
-      "cosmetics": "Kozmetična vložitev (NMPA)",
+      "cosmetics": "Kozmetična vložitev",
       "ecommerce": "E-poslovanje",
       "brand": "Zaščita blagovne znamke"
     },

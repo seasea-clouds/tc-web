@@ -89,7 +89,7 @@
     "cccTitle": "CCC Certification",
     "cccSubtitle": "China Compulsory Certification consulting for electronics, appliances, toys, and automotive parts.",
     "cccLink": "Learn More",
-    "cosmeticsTitle": "Cosmetics Filing (NMPA)",
+    "cosmeticsTitle": "Cosmetics Filing",
     "cosmeticsSubtitle": "NMPA registration and filing for imported cosmetics — ordinary and special-use categories.",
     "cosmeticsLink": "Learn More",
     "ecommerceTitle": "Cross-border E-commerce",
@@ -303,7 +303,7 @@
     "metaDescription": "China Compulsory Certification (CCC) consulting for electronics, appliances, toys, automotive parts. Testing coordination, factory audit prep, fast approval."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Cosmetics Filing (NMPA)",
+    "heroTitle": "Cosmetics Filing",
     "heroSubtitle": "Complete NMPA registration and filing for imported cosmetics in China.",
     "cta": "Get Free Assessment",
     "coverTitle": "What We Cover",
@@ -541,7 +541,7 @@
     "cccA1": "CCC certification is mandatory for products in 17 categories including household appliances, IT equipment, lighting, automotive parts, children's toys, and lithium-ion batteries (added in 2024).",
     "cccQ2": "How long does CCC certification take?",
     "cccA2": "The process involves product testing, factory inspection, and certification review. Complexity depends on product category. We coordinate all steps with accredited Chinese testing labs.",
-    "cosmeticsTitle": "Cosmetics Filing (NMPA)",
+    "cosmeticsTitle": "Cosmetics Filing",
     "cosmeticsQ1": "What is the difference between ordinary and special cosmetics?",
     "cosmeticsA1": "Ordinary cosmetics (skincare, makeup, haircare) require filing with NMPA. Special cosmetics (sunscreen, whitening, hair dye, freckle removal) require full registration, which takes longer and involves more testing.",
     "ecommerceTitle": "Cross-border E-commerce",
@@ -794,7 +794,7 @@
       "gacc": "GACC Registration",
       "label": "Label Compliance",
       "ccc": "CCC Certification",
-      "cosmetics": "Cosmetics Filing (NMPA)",
+      "cosmetics": "Cosmetics Filing",
       "ecommerce": "E-commerce",
       "brand": "Brand Protection"
     },

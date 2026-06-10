@@ -89,7 +89,7 @@
     "cccTitle": "CCC-certificering - Kinas importoverholdelse | Overholdelse af SinoTrade",
     "cccSubtitle": "Kina Obligatorisk certificeringsrådgivning for elektronik, apparater, legetøj og bildele.",
     "cccLink": "Lær mere",
-    "cosmeticsTitle": "Kosmetikarkivering (NMPA) - Kinas importoverholdelse | Overholdelse af SinoTrade",
+    "cosmeticsTitle": "Kosmetikarkivering - Kinas importoverholdelse | Overholdelse af SinoTrade",
     "cosmeticsSubtitle": "NMPA-registrering og arkivering for importeret kosmetik — almindelige og specielle anvendelseskategorier.",
     "cosmeticsLink": "Lær mere",
     "ecommerceTitle": "Grænseoverskridende e-handel - Kinas importoverholdelse | Overholdelse af SinoTrade",
@@ -303,7 +303,7 @@
     "metaDescription": "Kina Compulsory Certification (CCC) rådgivning for elektronik, apparater, legetøj, bildele. Testkoordinering, fabriksrevisionsforberedelse, hurtig godkendelse."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Kosmetikarkivering (NMPA)",
+    "heroTitle": "Kosmetikarkivering",
     "heroSubtitle": "Fuldfør NMPA-registrering og arkivering for importeret kosmetik i Kina.",
     "cta": "Få gratis vurdering",
     "coverTitle": "Hvad vi dækker",
@@ -541,7 +541,7 @@
     "cccA1": "CCC-certificering er obligatorisk for produkter i 17 kategorier, herunder husholdningsapparater, it-udstyr, belysning, bildele, legetøj til børn og lithium-ion-batterier (tilføjet i 2024).",
     "cccQ2": "Hvor lang tid tager CCC-certificering?",
     "cccA2": "Processen involverer produkttestning, fabriksinspektion og certificeringsgennemgang. Kompleksiteten afhænger af produktkategorien. Vi koordinerer alle trin med akkrediterede kinesiske testlaboratorier.",
-    "cosmeticsTitle": "Kosmetikarkivering (NMPA)",
+    "cosmeticsTitle": "Kosmetikarkivering",
     "cosmeticsQ1": "Hvad er forskellen mellem almindelig og speciel kosmetik?",
     "cosmeticsA1": "Almindelig kosmetik (hudpleje, makeup, hårpleje) kræver arkivering hos NMPA. Speciel kosmetik (solcreme, blegning, hårfarve, fregnefjernelse) kræver fuld registrering, hvilket tager længere tid og involverer flere tests.",
     "ecommerceTitle": "Grænseoverskridende e-handel",
@@ -794,7 +794,7 @@
       "gacc": "GACC registrering",
       "label": "Overholdelse af etiket",
       "ccc": "CCC certificering",
-      "cosmetics": "Kosmetikarkivering (NMPA)",
+      "cosmetics": "Kosmetikarkivering",
       "ecommerce": "E-handel",
       "brand": "Brand beskyttelse"
     },

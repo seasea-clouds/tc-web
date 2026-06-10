@@ -127,7 +127,7 @@
     "getFullReport": "获取完整合规报告",
     "getFullReportDesc": "完成报告，包含所有必需文件、时间表和后续步骤。",
     "emailForPdf": "电子邮件（可选，用于接收 PDF）",
-    "fullReport": "完整报告 — .99",
+    "fullReport": "完整报告 $1.99",
     "oneTimePayment": "一次性付款。报告通过网络+电子邮件交付。",
     "expertCtaTitle": "💼 需要专业帮助？",
     "expertCtaDesc": "我们的合规专家可以为您处理整个注册过程。",

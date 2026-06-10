@@ -89,7 +89,7 @@
     "cccTitle": "CCC-certificering - China-importnaleving | SinoTrade-naleving",
     "cccSubtitle": "China Verplicht certificeringsadvies voor elektronica, apparaten, speelgoed en auto-onderdelen.",
     "cccLink": "Meer informatie",
-    "cosmeticsTitle": "Cosmetica-aanvraag (NMPA) - China-importnaleving | SinoTrade-naleving",
+    "cosmeticsTitle": "Cosmetica-aanvraag - China-importnaleving | SinoTrade-naleving",
     "cosmeticsSubtitle": "NMPA-registratie en indiening voor geïmporteerde cosmetica – categorieën voor gewoon en speciaal gebruik.",
     "cosmeticsLink": "Meer informatie",
     "ecommerceTitle": "Grensoverschrijdende e-commerce - China-importnaleving | SinoTrade-naleving",
@@ -303,7 +303,7 @@
     "metaDescription": "China Compulsory Certification (CCC) advies voor elektronica, apparaten, speelgoed, auto-onderdelen. Testcoördinatie, voorbereiding van fabrieksaudits, snelle goedkeuring."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Cosmetica-aanvraag (NMPA)",
+    "heroTitle": "Cosmetica-aanvraag",
     "heroSubtitle": "Voltooi de NMPA-registratie en indiening voor geïmporteerde cosmetica in China.",
     "cta": "Ontvang een gratis beoordeling",
     "coverTitle": "Wat we behandelen",
@@ -541,7 +541,7 @@
     "cccA1": "CCC-certificering is verplicht voor producten in 17 categorieën, waaronder huishoudelijke apparaten, IT-apparatuur, verlichting, auto-onderdelen, kinderspeelgoed en lithium-ionbatterijen (toegevoegd in 2024).",
     "cccQ2": "Hoe lang duurt de CCC-certificering?",
     "cccA2": "Het proces omvat producttesten, fabrieksinspectie en certificeringsbeoordeling. De complexiteit hangt af van de productcategorie. We coördineren alle stappen met geaccrediteerde Chinese testlaboratoria.",
-    "cosmeticsTitle": "Cosmetica-aanvraag (NMPA)",
+    "cosmeticsTitle": "Cosmetica-aanvraag",
     "cosmeticsQ1": "Wat is het verschil tussen gewone en speciale cosmetica?",
     "cosmeticsA1": "Voor gewone cosmetica (huidverzorging, make-up, haarverzorging) moet een aanvraag bij NMPA worden ingediend. Voor speciale cosmetica (zonnebrandcrème, bleken, haarverf, sproetenverwijdering) is volledige registratie vereist, wat langer duurt en meer testen met zich meebrengt.",
     "ecommerceTitle": "Grensoverschrijdende e-commerce",
@@ -794,7 +794,7 @@
       "gacc": "GACC-registratie",
       "label": "Naleving van labels",
       "ccc": "CCC-certificering",
-      "cosmetics": "Cosmetica-aanvraag (NMPA)",
+      "cosmetics": "Cosmetica-aanvraag",
       "ecommerce": "E-commerce",
       "brand": "Merkbescherming"
     },

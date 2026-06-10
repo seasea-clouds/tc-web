@@ -1,3 +1,4 @@
+import { buildT } from '../shared/i18n';
 /**
  * 品牌保护 / 商标注册 — 深度规则引擎
  */
@@ -25,18 +26,20 @@ export const CATEGORY_LABELS: Record<string, string> = {
   "luxury": "Luxury Goods", "other": "Other",
 };
 
-export function checkTrademark(input: any): any {
+export function checkTrademark(input: any, locale?: string): any {
+  const t = buildT(locale || 'en');
+
   const needsReg = !input.registeredInChina;
   const isHighRisk = needsReg;
   const riskScore = needsReg ? 7.5 : 2.0;
   return {
     needsRegistration: needsReg, requiresRegistration: needsReg, riskCategory: isHighRisk ? "high" : "low", isHighRisk, riskScore,
     estimatedTimeline: "8-14 months", totalCostRange: "$600-2,000/class",
-    verdictLabel: needsReg ? 'High Risk' : 'Low Risk',
-    riskPathway: needsReg ? 'Not registered — urgent filing needed before market entry.' : 'Registered — maintain and monitor for renewal.',
-    executiveSummary: `Trademark assessment for "${input.brandName}".`,
-    oneLineDecision: needsReg ? "🔴 Urgent: file trademark before market entry" : "🟢 Registered. Monitor renewal.",
-    summary: needsReg ? "Brand NOT registered in China. High risk of bad-faith squatting." : "Brand registered. Ongoing monitoring recommended.",
+    verdictLabel: t(needsReg ? 'tmVerdictHigh' : 'tmVerdictLow'),
+    riskPathway: t(needsReg ? 'tmRiskPathwayHigh' : 'tmRiskPathwayLow'),
+    executiveSummary: t('tmExecutiveSummary').replace('{brandName}', input.brandName || ''),
+    oneLineDecision: t(needsReg ? 'tmOneLineHigh' : 'tmOneLineLow'),
+    summary: t(needsReg ? 'tmSummaryHigh' : 'tmSummaryLow'),
     riskDimensions: [
       { dimension: "Registration Status", score: needsReg ? 9 : 1, color: needsReg ? "🔴" : "🟢", note: needsReg ? "Not registered — high risk" : "Registered" },
       { dimension: "Squatter Risk", score: needsReg ? 8 : 3, color: needsReg ? "🔴" : "🟢", note: "China first-to-file: squatters may grab your brand" },
@@ -49,9 +52,9 @@ export function checkTrademark(input: any): any {
     ],
     tariffInfo: { mfnRate: "N/A", vatRate: "N/A", consumptionTax: "N/A", ftaRate: null, totalTaxBurden: "N/A (legal service, not import)" },
     regulations: [
-      { name: "Trademark Law of China", number: "4th Revision 2019", effectiveDate: "November 1, 2019", authority: "CNIPA/NPC", relevance: "primary", description: "First-to-file system. Art.32 prevents bad-faith filings. Art.57 defines infringement." },
-      { name: "Trademark Examination Guidelines", number: "CNIPA 2021 Edition", effectiveDate: "2021", authority: "CNIPA", relevance: "primary", description: "Examination standards for distinctiveness and similarity." },
-      { name: "Customs IP Protection Regulations", number: "State Council Decree 395", effectiveDate: "March 1, 2004", authority: "GACC", relevance: "secondary", description: "Border enforcement — customs can detain suspected counterfeits." },
+      { name: "Trademark Law of China", number: "4th Revision 2019", effectiveDate: "November 1, 2019", issuingAuthority: "CNIPA/NPC", relevance: "primary", description: "First-to-file system. Art.32 prevents bad-faith filings. Art.57 defines infringement." },
+      { name: "Trademark Examination Guidelines", number: "CNIPA 2021 Edition", effectiveDate: "2021", issuingAuthority: "CNIPA", relevance: "primary", description: "Examination standards for distinctiveness and similarity." },
+      { name: "Customs IP Protection Regulations", number: "State Council Decree 395", effectiveDate: "March 1, 2004", issuingAuthority: "GACC", relevance: "secondary", description: "Border enforcement — customs can detain suspected counterfeits." },
     ],
     classification: { assignedHsChapter: "N/A", ciqCode: "N/A", isHighRisk: needsReg, riskReason: needsReg ? "Brand not registered. First-to-file risk." : "Registered.", alternativeClassificationNote: "" },
     riskMatrix: [

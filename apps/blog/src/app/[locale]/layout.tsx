@@ -5,7 +5,7 @@ import { getMessages } from '@/lib/messages';
 import { locales, defaultLocale } from '@/i18n/routing';
 import '../globals.css';
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   return locales.map(l => ({ locale: l }));
 }
 

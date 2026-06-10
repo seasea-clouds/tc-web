@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node ../../packages/scripts/build-search-index.mjs --out-dir=apps/portal/public && next build && node ../../packages/scripts/ci-check.mjs --out-dir=out --ci",
+    "build": "node ../../packages/scripts/build-search-index.mjs && next build && node ../../packages/scripts/ci-check.mjs --out-dir=out --ci",
     "start": "next start",
     "lint": "eslint",
     "deploy": "npx wrangler pages deploy ./out --project-name=trade-web-portal",

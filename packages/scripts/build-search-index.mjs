@@ -6,8 +6,8 @@
  * 输出 {services, blog, faq, checks, generated} 格式的 search-index-{locale}.json
  *
  * 用法: node packages/scripts/build-search-index.mjs [--out-dir=<path>]
- *   默认输出到 apps/site/public/
- *   也可指定 --out-dir=apps/blog/public 或 apps/portal/public
+ *   默认输出到当前工作目录的 public/ (支持所有项目)
+ *   也可指定 --out-dir=<path>
  */
 
 import fs from 'fs';
@@ -201,8 +201,8 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const messagesDir = path.join(ROOT, 'apps', 'site', 'messages');
   const blogDir = path.join(ROOT, 'apps', 'blog', 'content');
 
-  // Default outDir: apps/site/public/
-  const defaultOutDir = path.join(ROOT, 'apps', 'site', 'public');
+  // Default outDir: project's public/ directory (derived from cwd)
+  const defaultOutDir = path.join(process.cwd(), 'public');
   const outDir = outDirArg ? path.resolve(ROOT, outDirArg) : defaultOutDir;
 
   console.log('Apps discovered:', discoverApps().join(', '));

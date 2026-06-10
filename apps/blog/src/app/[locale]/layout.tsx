@@ -1,6 +1,6 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
-import { Footer, SearchProvider, CookieConsent, ActionDock, TradeTranslationProvider, OrganizationJsonLd, sharedOpenGraph, sharedTwitter, AuthProvider, CfAnalytics, AutoBreadcrumb } from '@trade/ui';
+import { Footer, SearchProvider, CookieConsent, ActionDock, TradeTranslationProvider, OrganizationJsonLd, sharedOpenGraph, sharedTwitter, AuthProvider, CfAnalytics, AutoBreadcrumb, buildAlternates } from '@trade/ui';
 import { getMessages } from '@/lib/messages';
 import { locales, defaultLocale } from '@/i18n/routing';
 import '../globals.css';
@@ -13,14 +13,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const validLocale = locales.includes(locale as any) ? locale : defaultLocale;
 
-
   const t = await getTranslations({ locale: validLocale, namespace: 'Blog' });
 
   const title = t('metaTitle') || 'China Import Compliance';
   const description = t('metaDescription') || 'China import compliance guides: GACC registration, CCC certification, NMPA cosmetics filing, and cross-border e-commerce.';
+  const alternates = buildAlternates(validLocale, [...locales], '');
   return {
     title,
     description,
+    alternates,
   };
 }
 

@@ -1,4 +1,4 @@
-import { WHATSAPP_URL, LOCALES, SITE_URL } from '@trade/ui';
+import { WHATSAPP_URL, LOCALES, SITE_URL, buildLanguages } from '@trade/ui';
 import fs from 'fs';
 import path from 'path';
 import { getPosts } from '@/lib/posts';
@@ -23,6 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     description,
     alternates: {
       canonical: `https://sinotradecompliance.com/${locale}${path}`,
+      languages: buildLanguages(locale, [...LOCALES], `${path}`),
     },
   };
 }

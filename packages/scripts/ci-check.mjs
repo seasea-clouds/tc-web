@@ -129,13 +129,13 @@ function runBuildPhaseChecks() {
 function runOutputPhaseChecks() {
   // hreflang 检查 — 项目间差异最大，精确参数化
   if (project === 'site') {
-    runLocalScript('check-hreflang.mjs', `--dir=${outDir}`);
+    // site SSG 输出包含废弃的 blog 旧模板 + 404/_not-found 等非内容页
+    runLocalScript('check-hreflang.mjs', `--dir=${outDir}`, '--skip-pattern=/blog/,404,_not-found');
   } else if (project === 'portal') {
-    // Portal 的 /c/ 路径由主站 Worker 在边缘端注入 hreflang
-    // SSG 输出中这些路径不含 hreflang，精确跳过
-    runLocalScript('check-hreflang.mjs', `--dir=${outDir}`, '--skip-pattern=/c/,404,_not-found');
+    // 只跳过非内容页面
+    runLocalScript('check-hreflang.mjs', `--dir=${outDir}`, '--skip-pattern=404,_not-found');
   } else if (project === 'blog') {
-    runLocalScript('check-hreflang.mjs', `--next-dir=${nextDir}`);
+    runLocalScript('check-hreflang.mjs', `--dir=${outDir}`, '--skip-pattern=404,_not-found');
   }
 
   // llms.txt 检查 — 所有项目都该检查（如果该目录下有 llms 文件）

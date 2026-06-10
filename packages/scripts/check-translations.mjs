@@ -776,8 +776,8 @@ const skipConsistency = args.includes('--skip-locale-check');
 const localeCheck = skipConsistency ? null : checkLocaleConsistency(!short);
 const result = checkTranslations(targetLang, !short);
 const blogIssues = checkBlogMdx(targetLang, !short);
-const industryMetaIssues = targetLang ? 0 : checkIndustryMetaCompleteness(!short);
-const portalIssues = targetLang ? 0 : checkPortalTranslations(!short);
+const industryMetaIssues = (targetLang || args.includes('--skip-industry-meta')) ? 0 : checkIndustryMetaCompleteness(!short);
+const portalIssues = (targetLang || args.includes('--skip-portal-check')) ? 0 : checkPortalTranslations(!short);
 
 if (jsonOut && result) {
   console.log(JSON.stringify(result.issues_by_type, null, 2));

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node ../../packages/scripts/build-search-index.mjs --out-dir=apps/portal/public && node ../../packages/scripts/check-seo-patterns.mjs --ci && next build && node ../../packages/scripts/check-hardcoded.mjs --ci && node ../../packages/scripts/check-console.mjs --ci && node ../../packages/scripts/check-rtl.mjs --ci && node ../../packages/scripts/check-translations.mjs --short && node ../../packages/scripts/clean-rsc.js",
+    "build": "node ../../packages/scripts/build-search-index.mjs --out-dir=apps/portal/public && node ../../packages/scripts/check-seo-patterns.mjs --ci && next build && node ../../packages/scripts/check-hardcoded-domain.mjs --ci && node ../../packages/scripts/check-hreflang.mjs --dir=out --ci && node ../../packages/scripts/check-hardcoded.mjs --ci && node ../../packages/scripts/check-console.mjs --ci && node ../../packages/scripts/check-rtl.mjs --ci && node ../../packages/scripts/check-translations.mjs --short && node ../../packages/scripts/clean-rsc.js",
     "start": "next start",
     "lint": "eslint",
     "deploy": "npx wrangler pages deploy ./out --project-name=trade-web-portal"

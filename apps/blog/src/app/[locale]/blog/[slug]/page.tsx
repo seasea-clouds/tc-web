@@ -12,8 +12,7 @@ const FAQ_NS: Record<string, string> = {
   'cross-border-ecommerce-china': 'BlogFaqCrossBorderEcommerceChina',
 };
 
-const SITE_URL = 'https://trade-web-site.pages.dev';
-import { WHATSAPP_URL, LOCALES, buildLanguages } from '@trade/ui';
+import { WHATSAPP_URL, LOCALES, buildLanguages, SITE_URL } from '@trade/ui';
 import { getMessages } from '@/lib/messages';
 import CopyButton from '@/components/CopyButton';
 

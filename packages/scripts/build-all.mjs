@@ -37,8 +37,18 @@ async function main() {
 
   fs.mkdirSync(outDir, { recursive: true });
 
+  // 0. Domain hardcoding check
+  console.log('[0/7] Checking for hardcoded dev domains...');
+  const { runDomainCheck } = await import(path.join(__dirname, 'check-hardcoded-domain.mjs'));
+  const domainIssues = runDomainCheck();
+  if (domainIssues > 0) {
+    console.error(`❌ 发现 ${domainIssues} 处硬编码域名`);
+    process.exit(1);
+  }
+  console.log('  ✅ 域名检查通过');
+
   // 1. Sitemaps
-  console.log('[1/5] Generating sitemaps...');
+  console.log('[1/7] Generating sitemaps...');
   const { generateSitemaps } = await import(path.join(__dirname, 'build-sitemap.mjs'));
   generateSitemaps(baseUrl, outDir);
 
@@ -53,14 +63,25 @@ async function main() {
   buildLLMs(baseUrl, outDir);
 
   // 4. Search indexes — skipped, generated pre-build by apps/site/scripts/build-search-index.mjs
-  console.log('[4/5] Search indexes — skipped (pre-build)');
+  console.log('[4/7] Search indexes — skipped (pre-build)');
 
   // 5. robots.txt
-  console.log('[5/5] Generating robots.txt...');
+  console.log('[5/7] Generating robots.txt...');
   const { generateRobots } = await import(path.join(__dirname, 'build-robots.mjs'));
   generateRobots(baseUrl, outDir);
 
-  // 5. Also copy to public/ for source control
+  // 6. Check llms.txt quality
+  console.log('[6/7] Checking llms.txt quality...');
+  const { runLLMSCheck } = await import(path.join(__dirname, 'check-llms.mjs'));
+  const llmIssues = runLLMSCheck(outDir);
+  if (llmIssues > 0) {
+    console.error(`❌ llms.txt 检查发现 ${llmIssues} 项问题`);
+    process.exit(1);
+  }
+  console.log('  ✅ llms.txt 检查通过');
+
+  // 7. Copy to public/ for source control
+  console.log('[7/7] Copying to public/...');
   const publicDir = path.join(cwd, 'public');
   if (fs.existsSync(publicDir)) {
     for (const f of fs.readdirSync(outDir)) {

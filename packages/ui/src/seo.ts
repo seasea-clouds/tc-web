@@ -6,7 +6,8 @@ import { BRAND_NAME, SITE_URL } from './constants';
  */
 export function buildLanguages(locale: string, locales: string[], path: string): Record<string, string> {
   return {
-    'x-default': `${SITE_URL}/${locale}${path}`,
+    // x-default 始终指向英文，作为浏览器语言不匹配时的兜底
+    'x-default': `${SITE_URL}/en${path}`,
     ...Object.fromEntries(
       locales.map((l) => [l, `${SITE_URL}/${l}${path}`])
     ),

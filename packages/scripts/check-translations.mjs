@@ -403,10 +403,6 @@ function checkBlogMdx(targetLang = null, verbose = true) {
   return issues;
 }
 
-// ============================================================
-// Translation check
-// ============================================================
-function checkTranslations(targetLang = null, verbose = true) {
 // Keys that are intentionally identical across languages (numbers, names, acronyms)
 const SKIP_ENGLISH_RESIDUAL_PATTERNS = [
   /Number$/,
@@ -423,6 +419,10 @@ const SKIP_ENGLISH_RESIDUAL_PATTERNS = [
   /Industry.*meta(Title|Description)/,
 ];
 
+// ============================================================
+// Translation check
+// ============================================================
+function checkTranslations(targetLang = null, verbose = true) {
   const enPath = path.join(MESSAGES_DIR, 'en.json');
   if (!fs.existsSync(enPath)) {
     console.log(`❌ 找不到英文源文件: ${enPath}`);
@@ -668,6 +668,103 @@ function checkIndustryMetaCompleteness(verbose = true) {
 }
 
 // ============================================================
+// Portal 翻译检查
+// ============================================================
+const SCRIPT_DIR = path.dirname(new URL(import.meta.url).pathname);
+const MONOREPO_ROOT = path.resolve(SCRIPT_DIR, '..', '..');
+const PORTAL_MESSAGES_DIR = path.join(MONOREPO_ROOT, 'apps', 'portal', 'messages');
+
+function checkPortalTranslations(verbose = true) {
+  if (!fs.existsSync(PORTAL_MESSAGES_DIR)) {
+    if (verbose) console.log(`\n📱 Portal 翻译检查: ⏭️ 跳过 (${PORTAL_MESSAGES_DIR} 不存在)`);
+    return 0;
+  }
+
+  const enPath = path.join(PORTAL_MESSAGES_DIR, 'en.json');
+  if (!fs.existsSync(enPath)) {
+    if (verbose) console.log(`\n📱 Portal 翻译检查: ❌ 找不到英文源文件`);
+    return 0;
+  }
+
+  const enFlat = flattenKeys(loadJSON(enPath));
+
+  const allLangs = fs.readdirSync(PORTAL_MESSAGES_DIR)
+    .filter(f => f.endsWith('.json') && f !== 'en.json')
+    .map(f => path.basename(f, '.json'))
+    .sort();
+
+  let totalIssues = 0;
+  const details = { fallback: [], empty: [], english_residual: [] };
+
+  for (const lang of allLangs) {
+    const langPath = path.join(PORTAL_MESSAGES_DIR, `${lang}.json`);
+    if (!fs.existsSync(langPath)) continue;
+    const langFlat = flattenKeys(loadJSON(langPath));
+
+    for (const [key, enVal] of Object.entries(enFlat)) {
+      if (typeof enVal !== 'string' || enVal.length <= 2) continue;
+      const langVal = langFlat[key] ?? '';
+
+      // empty check
+      if (langVal === '') {
+        details.empty.push([lang, key]); totalIssues++;
+        continue;
+      }
+
+      // fallback check — skip known shared words (FAQ, Blog, WhatsApp, etc.)
+      if (langVal === enVal && !NO_TRANSLATE.has(enVal) && !IGNORE_FALLBACK_KEYS.has(key) && !IGNORE_FALLBACK_VALUES.has(enVal)) {
+        // Skip shared English words that are acceptable
+        let isShared = SHARED_WORDS_ALL.has(enVal);
+        if (!isShared && SHARED_WORDS_BY_LANG[lang]?.has(enVal)) isShared = true;
+        if (!isShared) {
+          const stripped = enVal.replace(/[^\w\s]/g, '').trim();
+          if (SHARED_WORDS_ALL.has(stripped) || SHARED_WORDS_BY_LANG[lang]?.has(stripped)) isShared = true;
+        }
+        if (!isShared) {
+          details.fallback.push([lang, key, enVal]); totalIssues++;
+        }
+      }
+
+      // English residual in non-latin
+      if (NON_LATIN_LOCALES.has(lang)) {
+        const engWords = new Set((langVal.match(/\b[A-Za-z]{3,}\b/g) || []));
+        if (engWords.size) {
+          let residual = new Set([...engWords].filter(w => !ENGLISH_RESIDUAL_ALLOW.has(w)));
+          if (SHARED_WORDS_BY_LANG[lang]) {
+            residual = new Set([...residual].filter(w => !SHARED_WORDS_BY_LANG[lang].has(w)));
+          }
+          if (residual.size) {
+            const isSkipKey = SKIP_ENGLISH_RESIDUAL_PATTERNS.some(p => p.test(key));
+            if (!isSkipKey) {
+              details.english_residual.push([lang, key, [...residual].sort()]); totalIssues++;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  if (verbose) {
+    console.log(`\n📱 Portal 翻译检查 (${allLangs.length} 语言):`);
+    if (details.fallback.length) {
+      console.log(`  ❌ 英文 fallback (${details.fallback.length} 处):`);
+      for (const [l, k, v] of details.fallback.slice(0, 15)) console.log(`    [${l}] ${k} → ${v.slice(0, 60)}`);
+    }
+    if (details.empty.length) {
+      console.log(`  ❌ 空值 (${details.empty.length} 处):`);
+      for (const [l, k] of details.empty.slice(0, 15)) console.log(`    [${l}] ${k}`);
+    }
+    if (details.english_residual.length) {
+      console.log(`  ❌ 英文残留 (${details.english_residual.length} 处):`);
+      for (const [l, k, w] of details.english_residual.slice(0, 15)) console.log(`    [${l}] ${k} → ${w.slice(0, 10).join(', ')}`);
+    }
+    if (totalIssues === 0) console.log('  ✅ 全部通过');
+  }
+
+  return totalIssues;
+}
+
+// ============================================================
 // CLI
 // ============================================================
 const args = process.argv.slice(2);
@@ -680,12 +777,13 @@ const localeCheck = skipConsistency ? null : checkLocaleConsistency(!short);
 const result = checkTranslations(targetLang, !short);
 const blogIssues = checkBlogMdx(targetLang, !short);
 const industryMetaIssues = targetLang ? 0 : checkIndustryMetaCompleteness(!short);
+const portalIssues = targetLang ? 0 : checkPortalTranslations(!short);
 
 if (jsonOut && result) {
   console.log(JSON.stringify(result.issues_by_type, null, 2));
 }
 
-const totalIssues = (result?.total_issues ?? 0) + blogIssues + (localeCheck?.total ?? 0) + industryMetaIssues;
+const totalIssues = (result?.total_issues ?? 0) + blogIssues + (localeCheck?.total ?? 0) + industryMetaIssues + portalIssues;
 
 if (totalIssues === 0) {
   console.log('\n✅ 全量核验通过！48 种语言无质量问题。');
@@ -695,13 +793,16 @@ if (totalIssues === 0) {
     console.log(`   - 语种一致性: ${localeCheck.total} 个问题 (多余: ${localeCheck.extra.length}, 缺少: ${localeCheck.missing.length})`);
   }
   if (result && result.total_issues > 0) {
-    console.log(`   - 翻译质量: ${result.total_issues} 个问题`);
+    console.log(`   - 网站翻译质量: ${result.total_issues} 个问题`);
   }
   if (blogIssues > 0) {
     console.log(`   - 博客 MDX: ${blogIssues} 个问题`);
   }
   if (industryMetaIssues > 0) {
     console.log(`   - 行业 meta 完整性: ${industryMetaIssues} 个问题`);
+  }
+  if (portalIssues > 0) {
+    console.log(`   - Portal 翻译质量: ${portalIssues} 个问题`);
   }
   if (process.argv.includes("--ci")) process.exit(1);
 }

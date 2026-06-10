@@ -33,11 +33,7 @@ export default function OrganizationJsonLd({ description }: Props) {
         'Thai', 'Turkish', 'Ukrainian', 'Urdu', 'Vietnamese',
       ],
     },
-    sameAs: [
-      'https://www.linkedin.com/company/sinotradecompliance',
-      'https://www.crunchbase.com/organization/sinotradecompliance',
-      'https://github.com/sinotradecompliance',
-    ],
+
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Shanghai',

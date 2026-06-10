@@ -46,7 +46,7 @@ const ENGLISH_PROSE_RE = /[>\s](✅?\s*[A-Z][A-Za-z]*(?:[,.]?\s+[A-Za-z][a-zA-Z]
 const ENGLISH_ATTR_RE = /(placeholder|label|alt|title)\s*=\s*["']([A-Z][^"']{4,})["']/g;
 
 // English prose inside JSX expressions like {loading ? 'Processing...' : 'Done'}
-const ENGLISH_STRING_LITERAL_RE = /['"]([A-Z][a-zA-Z][^'"]{5,})['"]/g;
+const ENGLISH_STRING_LITERAL_RE = /['"]([A-Z][a-z][\w\s\/.,;:\-()']{2,})['"]/g;
 
 // Skip lines that already use translation function
 const SKIP_TRANSLATION_CALL = /\b(t|getTranslations|useTranslations|useT)\s*\(/;
@@ -786,6 +786,8 @@ function scanFile(filePath) {
       if (text.includes('{') || text.includes('}')) continue;
       if (LEGIT_ENGLISH.has(text)) continue;
       if (text.includes('.') || text.includes('_')) continue;
+      if (/'\/\w+/.test(val)) continue;   // skip content-type patterns
+      if (val.includes('://')) continue;   // skip URLs
       if (/^[A-Z][a-z]+$/.test(text)) continue;
       if (text === text.toUpperCase()) continue;
       if (text.startsWith('http') || text.startsWith('www')) continue;
@@ -809,9 +811,42 @@ function scanFile(filePath) {
       const val = match[1].trim();
       if (val.length < 8) continue;
       if (LEGIT_ENGLISH.has(val)) continue;
+      if (/\w+\/\w+/.test(val)) continue;       // skip MIME types, content-type patterns
+      if (val.includes('://')) continue;            // skip URLs
       const before = line.substring(0, match.index);
       if (/[tT]\s*\(\s*['"]$/.test(before)) continue;
       issues.push({ file: path.relative(repoRoot, filePath), line: lineNum, type: 'string literal', text: val.substring(0, 100) });
+    }
+
+    // ── Check 4: Emoji-prefixed string literals ─────────────
+    // Catches: "🔴 High", "🟢 Low", etc. Emoji are surrogate pairs in JS
+    // so we scan for surrogate pair high bits after opening quotes.
+    {
+      let ci = line.indexOf('"');
+      while (ci >= 0 && ci < line.length - 2) {
+        const maybeEmoji = line.charCodeAt(ci + 1);
+        if (maybeEmoji >= 0xD800 && maybeEmoji <= 0xDFFF) {
+          // Find space after the surrogate pair
+          let si = ci + 1;
+          while (si < line.length && line[si] !== ' ' && line[si] !== '"' && line[si] !== '>') {
+            si++;
+          }
+          if (si < line.length && line[si] === ' ') {
+            const startText = si + 1;
+            const endQuote = line.indexOf('"', startText);
+            if (endQuote > startText + 3 && endQuote < startText + 60) {
+              const text = line.substring(startText, endQuote);
+              if (/^[A-Z]/.test(text) && !LEGIT_ENGLISH.has(text)) {
+                const beforeEmoji = line.substring(0, ci);
+                if (!/[tT]\s*\(\s*['"]$/.test(beforeEmoji)) {
+                  issues.push({ file: path.relative(repoRoot, filePath), line: lineNum, type: 'emoji string literal', text: text.substring(0, 100) });
+                }
+              }
+            }
+          }
+        }
+        ci = line.indexOf('"', ci + 1);
+      }
     }
   }
 

@@ -60,5 +60,13 @@
     "accept": "Accept All",
     "reject": "Reject Non-Essential",
     "privacyLink": "Privacy Policy"
+  },
+  "Navbar": {
+    "home": "Home",
+    "blog": "Blog"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "blog": "Blog"
   }
 }

@@ -252,7 +252,7 @@ export default function GaccCheckClient() {
             <div className="text-sm text-gray-600 space-y-2">
               <p><strong>{t('resultProductLabel')}:</strong> {input.productName}</p>
               <p><strong>{t('resultCategoryLabel')}:</strong> {CATEGORY_LABELS[input.category!]}</p>
-              <p><strong>{t('riskLevel')}:</strong> {freeData.riskCategory === "high" ? "🔴 High" : "🟢 Low"}</p>
+              <p><strong>{t('riskLevel')}:</strong> {freeData.riskCategory === "high" ? t('riskHigh') : t('riskLow')}</p>
             </div>
 
             <div className="bg-gray-50 rounded-lg p-4">

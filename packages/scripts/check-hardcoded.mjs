@@ -10,6 +10,12 @@
  *   2. Entries-map — .map(([key, val]) => <option>{val}</option>) — rendering
  *      values from data objects without t() wrapping.
  *
+ * ⚠️ 各项目调用方式:
+ *   site  build: check-hardcoded.mjs --ci                   # 全量扫描
+ *   portal build: check-hardcoded.mjs --ci apps/portal/src apps/portal/modules  # 限portal
+ *   blog  build: check-hardcoded.mjs --ci                   # 全量扫描
+ * Portal 限域是因为 portal 通过主站 Worker 代理，site/blog 各自全量扫描，不会遗漏。
+ *
  * Usage:
  *   node packages/scripts/check-hardcoded.mjs [--fix]
  *   node packages/scripts/check-hardcoded.mjs apps/portal/src

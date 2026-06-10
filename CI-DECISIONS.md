@@ -1,32 +1,30 @@
 # CI Pipeline 决策记录
 
-## 核心原则（2026-06-10，用户明确要求）
+## 核心原则（2026-06-10 确立）
 1. **所有检测脚本统一共享一套（ci-check.mjs）**，不各自维护。
-2. **不得降低检测强度或缩小范围**。遇到不适合检测的场景，在共享脚本中添加精确特殊处理，而非绕过或移除。
-3. **检测出的问题必须修复**，不是掩盖。
+2. **不得降低检测强度或缩小范围**。遇到不适合检查的场景，在共享脚本中添加精确特殊处理。
+3. **检测出的问题必须修复**，非掩盖。
 
-## Portal hreflang — 跳过 914 文件原因
-Portal SSG 输出 914 个 HTML 文件：
-- 912 个在 `/c/` 路径下（48语言 × 各子页面）
-- 2 个不在（`404/`, `_not-found/`）
+## Hreflang 架构统一（修复后）
+| 项目 | 模式 | 说明 |
+|------|------|------|
+| Site | `--dir=out --skip-pattern=/blog/,404,_not-found` | 旧 blog 路径 + 错误页跳过 |
+| Portal | `--dir=out --skip-pattern=404,_not-found` | 所有 /c/ 页面均有 hreflang |
+| Blog | `--dir=out --skip-pattern=404,_not-found` | SSG 输出到 out/，统一用 --dir |
 
-**跳过原因**：Portal 的 locale 路由和 hreflang `<link>` 标签不是由 SSG 生成的，而是由主站 Cloudflare Worker（apps/site/functions/_middleware.ts）在边缘端注入。SSG 静态 HTML 中 `/c/` 路径本就不含 hreflang。
+## 2026-06-10 修复的关键问题
 
-所以：
-- 构建时：`--skip-pattern=/c/,404,_not-found` — 精确跳过 Worker 路由的路径
-- 部署后：`--url=https://sinotradecompliance.com/en/c/ --ci` — 远程验证 Worker 注入的 hreflang
+### check-hreflang 脚本 bug（核心发现）
+- 脚本搜索 `hreflang=`（小写），但 Next.js 16 RSC payload 使用 `hrefLang=`（驼峰）
+- **三个站全都被影响了** — 每次检查都是 false pass
+- 修复：正则改为 `/hreflang=|hrefLang=/g`
 
-**不是降级，是把检查时机从构建时移到部署后**（因为 Worker 注入只能在部署后验证）。
+### Portal hreflang（以前说法是错误的）
+之前说"Portal /c/ 由 Worker 注入 hreflang"，但实际上 Portal **SSG 本身就包含 hreflang**（首页和子页面都有）。之前的 0 检测是因为脚本 bug，不是架构问题。
 
-## 翻译检查按项目分流
-ci-check.mjs 的 check-translations 按 --project 参数传递不同 flags：
-- site: 全量（所有模块）
-- portal: --skip-locale-check（portal 消息独立于 site）
-- blog: --skip-industry-meta --skip-portal-check（blog 仅有 Blog+Cookie 命名空间）
+### Blog hreflang 未输出（两处修复）
+1. 父布局 `[locale]/layout.tsx` 缺少 `alternates` 导致根页面只有 96 hreflang 无 x-default → 已加 buildAlternates
+2. 列表页 `[locale]/blog/page.tsx` 的 generateMetadata 只设了 canonical 覆盖了 segment layout 的 hreflang → 已加 buildLanguages
 
-## 消息文件层级
-修复问题要覆盖三层：
-- packages/ui/messages/（共享 UI：Footer/Navbar）
-- apps/site/messages/（主站）
-- apps/portal/messages/（用户站）
-- apps/blog/messages/（博客）
+### Blog llms
+Blog 无 llms 文件生成，`--llms-dir=public` 是多余的（auto-skip 不触发检查）。已移除。

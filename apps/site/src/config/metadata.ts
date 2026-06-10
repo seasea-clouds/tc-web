@@ -3,10 +3,37 @@ import { BRAND_NAME, SITE_URL } from '@trade/ui';
 export { BRAND_NAME, SITE_URL };
 
 /**
- * Centralized metadata configuration for all page types.
- * Each page type has a Title/Description template with SEO keywords.
- * Templates use i18n keys (resolved via next-intl at runtime).
+ * safeTitle — 确保标题长度在 SEO 最佳范围内
+ * 
+ * 上限 80 字符的考虑（2025 年验证）：
+ * - Google SERP 标题显示宽度约 580-600px，中文字符每个 ≈ 2 拉丁字宽度
+ * - 80 字符以内可完整展示，超长则 Google 在中间截断加 `...`，降低 CTR
+ * - 下限 35 字符避免浪费展示空间、关键词密度不足
+ * - 截断时品牌名 `- SinoTrade Compliance` 始终保留在尾部
+ * 
+ * - 最少 35 字符（对 CJK 语言可接受，每个 CJK 字 ≈ 2 拉丁字的语义密度）
+ * - 最长 80 字符
+ * 当 base + brand 过短时，自动追加描述性上下文关键词
  */
+function safeTitle(base: string, keywordContext?: string): string {
+  const withBrand = `${base} - ${BRAND_NAME}`;
+  if (withBrand.length >= 35 && withBrand.length <= 80) return withBrand;
+  
+  // 过短：追加关键词上下文
+  if (withBrand.length < 35 && keywordContext) {
+    const contextualized = `${base} - ${keywordContext} | ${BRAND_NAME}`;
+    if (contextualized.length <= 80) return contextualized;
+    return contextualized.slice(0, 77) + '...';
+  }
+  
+  // 过长：截断 base
+  if (withBrand.length > 80) {
+    const maxBase = 80 - ` - ${BRAND_NAME}...`.length;
+    return base.slice(0, maxBase) + `... - ${BRAND_NAME}`;
+  }
+  
+  return withBrand;
+}
 
 // Service keywords mapping for SEO-optimized titles
 export interface ServiceMeta {
@@ -61,22 +88,22 @@ export const industryMetaMap: Record<string, { keywordKey: string }> = {
   chemicals: { keywordKey: 'chemicalsKeyword' },
 };
 
-// Brand name used in all metadata titles
-// BRAND_NAME and SITE_URL now imported from @trade/ui
-
 /**
  * Generate metadata for the homepage.
  */
 export function getHomeMetadata(t: (key: string) => string, locale: string) {
+  const title = safeTitle(t('heroTitle'), t('heroSubtitle').substring(0, 60));
+  const description = t('heroSubtitle');
+
   return {
-    title: t('heroTitle'),
-    description: t('heroSubtitle'),
+    title,
+    description,
     alternates: {
       canonical: `${SITE_URL}/${locale}/`,
     },
     openGraph: {
-      title: t('heroTitle'),
-      description: t('heroSubtitle'),
+      title,
+      description,
       locale,
       siteName: BRAND_NAME,
       url: `${SITE_URL}/${locale}/`,
@@ -95,16 +122,17 @@ export function getServiceMetadata(
 ) {
   const meta = serviceMetaMap[serviceSlug];
   if (!meta) {
-    // Fallback to generic service metadata
+    const baseTitle = t('Services.title');
+    const sub = t('Services.subtitle') || '';
     return {
-      title: `${t('Services.title')} - ${BRAND_NAME}`,
-      description: t('Services.description'),
+      title: safeTitle(baseTitle, sub.substring(0, 50)),
+      description: sub,
       alternates: {
         canonical: `${SITE_URL}/${locale}/services/${serviceSlug}/`,
       },
       openGraph: {
-        title: `${t('Services.title')} - ${BRAND_NAME}`,
-        description: t('Services.description'),
+        title: safeTitle(baseTitle, sub.substring(0, 50)),
+        description: sub,
         locale,
         siteName: BRAND_NAME,
         url: `${SITE_URL}/${locale}/services/${serviceSlug}/`,
@@ -113,8 +141,13 @@ export function getServiceMetadata(
     };
   }
 
-  const title = `${t(`Services.${meta.titleKey}`)} - ${BRAND_NAME}`;
+  const baseTitle = t(`Services.${meta.titleKey}`);
   const description = t(`Services.${meta.descriptionKey}`);
+  const keywordHint = t(`Services.${meta.keywordKey}`);
+  // 检查是否是未翻译的 key（next-intl 在 key 不存在时返回 key 本身）
+  const cleanHint = keywordHint && !keywordHint.startsWith('Services.') ? keywordHint : '';
+
+  const title = safeTitle(baseTitle, cleanHint || description?.substring(0, 40));
 
   return {
     title,
@@ -141,7 +174,10 @@ export function getIndustryMetadata(
   locale: string,
   industrySlug: string
 ) {
-  const title = `${t(`Industries.${industrySlug}Title`)} - ${BRAND_NAME} | China Import Guide`;
+  const title = safeTitle(
+    t(`Industries.${industrySlug}Title`),
+    'China Import Compliance Guide'
+  );
   const description = t(`Industries.${industrySlug}Description`);
 
   return {
@@ -172,7 +208,7 @@ export function getBlogMetadata(
   slug: string,
   publishDate?: string
 ) {
-  const title = `${articleTitle} - ${BRAND_NAME}`;
+  const title = safeTitle(articleTitle, 'China Import Compliance Guide');
   const description = articleSummary.length > 160
     ? articleSummary.slice(0, 157) + '...'
     : articleSummary;
@@ -206,14 +242,16 @@ export function getGenericMetadata(
   pageDescription: string
 ) {
   const url = `${SITE_URL}/${locale}/${pagePath}/`;
+  const title = safeTitle(pageTitle, pageDescription?.substring(0, 40));
+
   return {
-    title: `${pageTitle} - ${BRAND_NAME}`,
+    title,
     description: pageDescription,
     alternates: {
       canonical: url,
     },
     openGraph: {
-      title: `${pageTitle} - ${BRAND_NAME}`,
+      title,
       description: pageDescription,
       locale,
       siteName: BRAND_NAME,

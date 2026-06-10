@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run lint && node ../../packages/scripts/build-search-index.mjs --out-dir=apps/blog/public && rm -rf .next/cache && node ../../packages/scripts/check-seo-patterns.mjs --ci && next build && node ../../packages/scripts/check-hardcoded-domain.mjs --ci && node ../../packages/scripts/check-hreflang.mjs --dir=out --ci && node ../../packages/scripts/check-hardcoded.mjs --ci && node ../../packages/scripts/check-console.mjs --ci && node ../../packages/scripts/check-llms.mjs --dir=public --ci && node ../../packages/scripts/check-rtl.mjs --ci && node ../../packages/scripts/check-translations.mjs --short && node ../../packages/scripts/clean-rsc.js",
+    "build": "npm run lint && node ../../packages/scripts/build-search-index.mjs --out-dir=apps/blog/public && rm -rf .next/cache && next build && node ../../packages/scripts/ci-check.mjs --project=blog --out-dir=out --llms-dir=public --ci",
     "start": "next start",
     "lint": "next lint"
   },

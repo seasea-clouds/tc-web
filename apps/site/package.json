@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node ../../packages/scripts/images/convert-webp.mjs && node ../../packages/scripts/check-hardcoded-domain.mjs --ci && node ../../packages/scripts/build-search-index.mjs && node ../../packages/scripts/build-search-translations.mjs && node ../../packages/scripts/check-seo-patterns.mjs --ci && next build && node ../../packages/scripts/build-all.mjs --base-url=https://sinotradecompliance.com --out-dir=out && node ../../packages/scripts/check-seo-output.mjs --out-dir=out --ci && node ../../packages/scripts/clean-rsc.js && node ../../packages/scripts/check-hardcoded.mjs --ci && node ../../packages/scripts/check-hreflang.mjs --dir=out --ci && node ../../packages/scripts/check-console.mjs --ci && node ../../packages/scripts/check-rtl.mjs --ci && node ../../packages/scripts/check-map-key.mjs --ci && node ../../packages/scripts/check-jsonld.mjs --ci && node ../../packages/scripts/check-translations.mjs --ci --short",
+    "build": "node ../../packages/scripts/images/convert-webp.mjs && node ../../packages/scripts/build-search-index.mjs && node ../../packages/scripts/build-search-translations.mjs && next build && node ../../packages/scripts/build-all.mjs --base-url=https://sinotradecompliance.com --out-dir=out && node ../../packages/scripts/ci-check.mjs --project=site --out-dir=out --ci",
     "start": "next start",
     "lint": "eslint"
   },

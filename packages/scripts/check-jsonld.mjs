@@ -16,7 +16,7 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, '../..');
 
-const DIRS = ['apps/site/src'];
+const DIRS = ['apps/site/src', 'apps/portal/src', 'apps/blog/src', 'packages/ui/src'];
 
 // 各 @type 的必填字段（Schema.org 标准）
 const REQUIRED_FIELDS = {

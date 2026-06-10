@@ -22,6 +22,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title,
     description,
     alternates,
+    openGraph: sharedOpenGraph({ title, description, locale: validLocale, url: alternates.canonical }),
+    twitter: sharedTwitter({ title, description }),
   };
 }
 

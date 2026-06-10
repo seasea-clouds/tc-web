@@ -55,7 +55,7 @@ function countHreflangInFile(filePath) {
   return { count, hasXdefault };
 }
 
-function checkSSGOutput(dir) {
+function checkSSGOutput(dir, skipPatterns = []) {
   if (!fs.existsSync(dir)) {
     console.log(`  ⚠️ 目录不存在: ${dir}`);
     return 1;
@@ -65,8 +65,21 @@ function checkSSGOutput(dir) {
 
   let failures = 0;
   let passes = 0;
+  let skipped = 0;
   for (const file of files) {
     const rel = path.relative(dir, file);
+    
+    // Skip files matching skip patterns (e.g., /c/ in portal SSG which gets Worker-level hreflang)
+    // Pattern matching: remove leading / from pattern since rel is relative without leading /
+    const normalizedPattern = (p) => {
+      const clean = p.startsWith('/') ? p.slice(1) : p;
+      return rel.includes(clean);
+    };
+    if (skipPatterns.some(normalizedPattern)) {
+      skipped++;
+      continue;
+    }
+
     const { count, hasXdefault } = countHreflangInFile(file);
     
     if (count >= EXPECTED_MIN_LOCALES && hasXdefault) {
@@ -77,6 +90,7 @@ function checkSSGOutput(dir) {
     }
   }
 
+  console.log(`  跳过: ${skipped} 文件 (路径匹配 skip-pattern)`);
   console.log(`\n  结果: ${passes} 通过, ${failures} 失败`);
   return failures;
 }
@@ -147,6 +161,8 @@ const isCi = args.includes('--ci');
 const dirArg = args.find(a => a.startsWith('--dir='));
 const nextDirArg = args.find(a => a.startsWith('--next-dir='));
 const urlArg = args.find(a => a.startsWith('--url='));
+const skipPatternArg = args.find(a => a.startsWith('--skip-pattern='));
+const skipPatterns = skipPatternArg ? skipPatternArg.split('=')[1].split(',').filter(Boolean) : [];
 
 console.log('🔍 统一 hreflang 检查\n');
 
@@ -154,7 +170,8 @@ let failures = 0;
 
 if (dirArg) {
   console.log('📦 模式: SSG 输出目录检查');
-  failures += checkSSGOutput(path.resolve(dirArg.split('=')[1]));
+  const dir = path.resolve(dirArg.split('=')[1]);
+  failures += checkSSGOutput(dir, skipPatterns);
 } else if (nextDirArg) {
   console.log('📦 模式: Next.js build 输出检查');
   failures += checkNextDir(path.resolve(nextDirArg.split('=')[1]));

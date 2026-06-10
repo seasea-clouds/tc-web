@@ -6,11 +6,16 @@
  * 所有检查脚本统一在 packages/scripts/ 中，此脚本负责按项目参数精确调度。
  *
  * 用法：
- *   node ci-check.mjs --project=site --out-dir=out --ci
- *   node ci-check.mjs --project=portal --out-dir=out --ci
- *   node ci-check.mjs --project=blog --out-dir=out --ci
+ *   node ci-check.mjs --out-dir=out --ci       # 自动识别 project（从 cwd）
  *
- * 项目参数决定了行为差异：
+ * 三种运行方式：
+ *   1. 在 apps/site/ 目录下运行 → 自动识别为 site
+ *   2. 在 apps/portal/ 目录下运行 → 自动识别为 portal
+ *   3. 在 apps/blog/ 目录下运行 → 自动识别为 blog
+ *
+ * 也支持显式指定：--project=site|portal|blog
+ *
+ * 项目差异（脚本内自动处理）：
  *   - hreflang 跳过 pattern（site 跳旧blog, portal/blog 跳404/_not-found）
  *   - translations 参数（portal 跳 locale consistency, blog 跳 industry/portal）
  */
@@ -30,8 +35,15 @@ const REPO_ROOT = path.resolve(__dirname, '../..');
 const args = process.argv.slice(2);
 const isCi = args.includes('--ci');
 const project = (() => {
-  const a = args.find(x => x.startsWith('--project='));
-  return a ? a.split('=')[1] : 'site';
+  // 1. 优先使用显式 `--project=` 参数
+  const explicit = args.find(x => x.startsWith('--project='));
+  if (explicit) return explicit.split('=')[1];
+  // 2. 从 `process.cwd()` 路径自动识别项目
+  const cwd = process.cwd();
+  const m = cwd.match(/\/apps\/(site|portal|blog)(\/|$)/);
+  if (m) return m[1];
+  // 3. 兜底
+  return 'site';
 })();
 const outDir = (() => {
   const a = args.find(x => x.startsWith('--out-dir='));

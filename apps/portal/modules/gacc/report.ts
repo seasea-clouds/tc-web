@@ -1,27 +1,16 @@
-import { checkGacc, type GaccInput, type GaccResult, CATEGORY_LABELS } from "./rules";
+import { checkGacc, type GaccInput, CATEGORY_LABELS } from "./rules";
+import type { ComplianceReport } from "../shared/types";
 
-export interface ComplianceReport {
-  id: string;
-  module: string;
-  generatedAt: string;
-  productInfo: {
-    name: string;
-    category: string;
-    hsCode?: string;
-    originCountry: string;
-  };
-  result: GaccResult;
-  nextSteps: string[];
-}
+export type { ComplianceReport };
 
-export function generateGaccReport(input: GaccInput): Omit<ComplianceReport, "id" | "generatedAt"> {
-  const result = checkGacc(input);
+export function generateGaccReport(input: GaccInput, locale?: string): Omit<ComplianceReport, "id" | "generatedAt"> {
+  const result = checkGacc(input, locale);
 
   return {
     module: "GACC Food Registration",
     productInfo: {
       name: input.productName,
-      category: CATEGORY_LABELS[input.category],
+      category: CATEGORY_LABELS[input.category] || input.category,
       hsCode: input.hsCode,
       originCountry: input.originCountry,
     },

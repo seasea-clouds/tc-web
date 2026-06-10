@@ -1,3 +1,4 @@
+import { buildT } from '../shared/i18n';
 /**
  * 跨境电商合规 — 深度规则引擎
  */
@@ -25,16 +26,18 @@ export const CATEGORY_LABELS: Record<string, string> = {
   "home_goods": "Home / Kitchen", "other": "Other",
 };
 
-export function checkCrossborder(input: any): any {
+export function checkCrossborder(input: any, locale?: string): any {
+  const t = buildT(locale || 'en');
+
   const riskScore = 3.5;
   return {
     requiresRegistration: true, riskCategory: "low", isHighRisk: false, riskScore,
     estimatedTimeline: "4-10 weeks", totalCostRange: "$10,000-40,000",
-    verdictLabel: 'Low Risk',
-    riskPathway: 'On positive list — fastest route to Chinese market.',
-    executiveSummary: `CBEC assessment for ${input.productName} — eligible for cross-border e-commerce channel.`,
-    oneLineDecision: "✅ CBEC eligible. No GACC registration needed.",
-    summary: "Cross-border e-commerce is the fastest channel for entering China.",
+    verdictLabel: t('cbVerdict'),
+    riskPathway: t('cbRiskPathway'),
+    executiveSummary: t('cbExecutiveSummary').replace('{productName}', input.productName || ''),
+    oneLineDecision: t('cbOneLine'),
+    summary: t('cbSummary'),
     riskDimensions: [
       { dimension: "Positive List", score: 2, color: "🟢", note: "Category is on CBEC positive list" },
       { dimension: "Platform Setup", score: 4, color: "🟡", note: "Platform onboarding 4-8 weeks" },
@@ -48,9 +51,9 @@ export function checkCrossborder(input: any): any {
     ],
     tariffInfo: { mfnRate: "9.1% comprehensive", vatRate: "70% of standard", consumptionTax: "N/A", ftaRate: "CBEC tax discount applies", totalTaxBurden: "~9.1% (70% discount on tariff + VAT)" },
     regulations: [
-      { name: "CBEC Retail Import Policy", number: "MOFCOM 2018 Notice", effectiveDate: "January 2019", authority: "MOFCOM", relevance: "primary", description: "Framework for cross-border e-commerce retail import." },
-      { name: "CBEC Positive List", number: "MOFCOM/GACC Joint List", effectiveDate: "Updated annually", authority: "MOFCOM/GACC", relevance: "primary", description: "Defines products eligible for CBEC import." },
-      { name: "Personal Use Declaration", number: "GACC Decree 249 Art.5", effectiveDate: "January 1, 2022", authority: "GACC", relevance: "primary", description: "CBEC goods imported as personal use items." },
+      { name: "CBEC Retail Import Policy", number: "MOFCOM 2018 Notice", effectiveDate: "January 2019", issuingAuthority: "MOFCOM", relevance: "primary", description: "Framework for cross-border e-commerce retail import." },
+      { name: "CBEC Positive List", number: "MOFCOM/GACC Joint List", effectiveDate: "Updated annually", issuingAuthority: "MOFCOM/GACC", relevance: "primary", description: "Defines products eligible for CBEC import." },
+      { name: "Personal Use Declaration", number: "GACC Decree 249 Art.5", effectiveDate: "January 1, 2022", issuingAuthority: "GACC", relevance: "primary", description: "CBEC goods imported as personal use items." },
     ],
     classification: { assignedHsChapter: "Varies", ciqCode: "Check import", isHighRisk: false, riskReason: "On CBEC positive list. Simplified compliance.", alternativeClassificationNote: "" },
     riskMatrix: [
@@ -69,7 +72,7 @@ export function checkCrossborder(input: any): any {
     testCostRange: "$500-2,000",
     labGuide: "Platforms perform their own review of product listings. Labels must still comply with Chinese standards.",
     labTests: ["Platform listing review", "Label compliance"],
-    viability: "High — CBEC is the fastest route to Chinese market",
+    viability: t('cbViability'),
     detailedTimeline: "Platform selection (2-3 weeks) → Document preparation (2-3 weeks) → Platform review (2-4 weeks) → Go live. Total: 4-10 weeks.",
     labelGuide: { requiredItems: [], gb7718Highlights: [], gb28050Highlights: [] },
     timelinePhases: [

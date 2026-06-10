@@ -5,6 +5,7 @@
  * 保留 getPhase1Items / getGlossary 供 ReportShell 和 Preview 页面使用
  */
 import ReportShell from './ReportShell';
+import { buildT } from '../../../modules/shared/i18n';
 
 interface ReportLabels {
   title: string;
@@ -48,80 +49,82 @@ export function ReportTemplate(props: ReportTemplateProps) {
 
 // ─── 工具函数（供 ReportShell 和 Preview 使用） ──────────────────────
 
-export function getPhase1Items(module: string): string[] {
-  var map: Record<string, string[]> = {
-    "GACC Food Registration": ["Identify product category among 18 GACC-regulated categories", "Engage CRA (Compliance Review Agent)", "Prepare facility registration documents", "Collect product specs and ingredient list"],
-    "CCC Certification": ["Confirm product is on CCC mandatory catalog", "Select CNCA-accredited certification body", "Prepare product specs and technical drawings", "Arrange sample shipment for type testing"],
-    "Chinese Label Compliance": ["Collect current label artwork and packaging", "Identify applicable GB standards (7718/28050)", "Prepare ingredient and nutrition data", "Gather Certificate of Free Sale"],
-    "Cosmetics Filing (NMPA)": ["Classify product as ordinary or special-use", "Designate Chinese responsible person", "Prepare full formulation with INCI names", "Collect GMP certificate and test reports"],
-    "Cross-Border E-commerce": ["Select target platform (Tmall/JD/Douyin)", "Determine bonded vs. direct shipping model", "Prepare business registration documents", "Research CBEC positive list eligibility"],
-    "Brand Protection": ["Conduct CNIPA trademark availability search", "Determine relevant Nice classification classes", "Prepare brand specimen and goods list", "Gather Power of Attorney documents"],
+export function getPhase1Items(module: string, locale?: string): string[] {
+  const t = buildT(locale || 'en');
+  var pMap: Record<string, string[]> = {
+    "GACC Food Registration": [t('phase1_gacc_1'), t('phase1_gacc_2'), t('phase1_gacc_3'), t('phase1_gacc_4')],
+    "CCC Certification": [t('phase1_ccc_1'), t('phase1_ccc_2'), t('phase1_ccc_3'), t('phase1_ccc_4')],
+    "Chinese Label Compliance": [t('phase1_label_1'), t('phase1_label_2'), t('phase1_label_3'), t('phase1_label_4')],
+    "Cosmetics Filing (NMPA)": [t('phase1_nmpa_1'), t('phase1_nmpa_2'), t('phase1_nmpa_3'), t('phase1_nmpa_4')],
+    "Cross-Border E-commerce": [t('phase1_cb_1'), t('phase1_cb_2'), t('phase1_cb_3'), t('phase1_cb_4')],
+    "Brand Protection": [t('phase1_tm_1'), t('phase1_tm_2'), t('phase1_tm_3'), t('phase1_tm_4')],
   };
-  return map[module] || map["GACC Food Registration"];
+  return pMap[module] || pMap["GACC Food Registration"];
 }
 
-export function getGlossary(module: string): { term: string; def: string }[] {
-  var map: Record<string, { term: string; def: string }[]> = {
+export function getGlossary(module: string, locale?: string): { term: string; def: string }[] {
+  const t = buildT(locale || 'en');
+  var gMap: Record<string, { term: string; def: string }[]> = {
     "GACC Food Registration": [
-      {term: "GACC", def: "General Administration of Customs — Oversees Decree 248/249 food import registration."},
-      {term: "CIFER", def: "China Import Food Enterprise Registration — Online portal for overseas food manufacturers."},
-      {term: "Decree 248", def: "GACC regulation requiring overseas food manufacturers to register before exporting to China."},
-      {term: "CRA", def: "Compliance Review Agent — Authorized agent for GACC food registration."},
-      {term: "CIQ", def: "China Inspection and Quarantine — Inspects imported food at ports for compliance."},
-      {term: "GB 7718", def: "National food safety standard for prepackaged food labeling."},
-      {term: "GB 28050", def: "National standard for nutrition labeling — kJ + NRV%."},
-      {term: "HS Code", def: "Harmonized System Code — Standardized product classification for tariffs."},
+      {term: "GACC", def: t('gaccGlossary_gacc')},
+      {term: "CIFER", def: t('gaccGlossary_cifer')},
+      {term: "Decree 248", def: t('gaccGlossary_decree248')},
+      {term: "CRA", def: t('gaccGlossary_cra')},
+      {term: "CIQ", def: t('gaccGlossary_ciq')},
+      {term: "GB 7718", def: t('gaccGlossary_gb7718')},
+      {term: "GB 28050", def: t('gaccGlossary_gb28050')},
+      {term: "HS Code", def: t('gaccGlossary_hsCode')},
     ],
     "CCC Certification": [
-      {term: "CCC", def: "China Compulsory Certification — Mandatory safety certification for specified product categories."},
-      {term: "CNCA", def: "Certification and Accreditation Administration — Manages CCC certification."},
-      {term: "GB 4943", def: "Safety standard for IT/AV equipment — primary CCC testing standard."},
-      {term: "GB 9254", def: "EMC emission limits for multimedia equipment."},
-      {term: "CB Report", def: "IECEE CB Test Report — may reduce CCC testing scope."},
-      {term: "SRRC", def: "State Radio Regulation Committee — separate approval for wireless devices."},
-      {term: "Factory Audit", def: "On-site QMS inspection required for initial CCC certification."},
-      {term: "SDOC", def: "Self-Declaration of Conformity — simplified pathway for low-risk products."},
+      {term: "CCC", def: t('cccGlossary_ccc')},
+      {term: "CNCA", def: t('cccGlossary_cnca')},
+      {term: "GB 4943", def: t('cccGlossary_gb4943')},
+      {term: "GB 9254", def: t('cccGlossary_gb9254')},
+      {term: "CB Report", def: t('cccGlossary_cbReport')},
+      {term: "SRRC", def: t('cccGlossary_srrc')},
+      {term: "Factory Audit", def: t('cccGlossary_factoryAudit')},
+      {term: "SDOC", def: t('cccGlossary_sdoc')},
     ],
     "Chinese Label Compliance": [
-      {term: "GB 7718", def: "National standard for prepackaged food labeling — 9 mandatory elements."},
-      {term: "GB 28050", def: "National standard for nutrition labeling — kJ + NRV% format."},
-      {term: "GB 2760", def: "Food additives positive list — only listed additives permitted."},
-      {term: "NRV%", def: "Nutrient Reference Value % — Mandatory nutrition labeling format."},
-      {term: "CIQ", def: "China Inspection and Quarantine — Inspects imported food labels."},
-      {term: "Food Safety Law", def: "PRC Food Safety Law — legal basis for label requirements."},
-      {term: "Allergen", def: "8 mandatory allergen declarations per GB/T 23779-2023."},
-      {term: "HS Code", def: "Harmonized System Code — Standardized product classification for tariffs."},
+      {term: "GB 7718", def: t('labelGlossary_gb7718')},
+      {term: "GB 28050", def: t('labelGlossary_gb28050')},
+      {term: "GB 2760", def: t('labelGlossary_gb2760')},
+      {term: "NRV%", def: t('labelGlossary_nrv')},
+      {term: "CIQ", def: t('labelGlossary_ciq')},
+      {term: "Food Safety Law", def: t('labelGlossary_foodSafetyLaw')},
+      {term: "Allergen", def: t('labelGlossary_allergen')},
+      {term: "HS Code", def: t('labelGlossary_hsCode')},
     ],
     "Cosmetics Filing (NMPA)": [
-      {term: "NMPA", def: "National Medical Products Administration — Regulates cosmetics filing."},
-      {term: "CSAR", def: "Cosmetics Supervision and Administration Regulation — Reformed cosmetics regulation in 2021."},
-      {term: "Ordinary Cosmetics", def: "General cosmetics requiring notification filing (备案)."},
-      {term: "Special Cosmetics", def: "Products needing full registration (注册) — sunscreen, whitening, hair dye."},
-      {term: "ICSC", def: "INCI Standard Chinese — Official Chinese ingredient name database."},
-      {term: "Chinese RP", def: "Chinese Responsible Person — manages NMPA compliance in China."},
-      {term: "GMP", def: "Good Manufacturing Practice — ISO 22716, may qualify for animal testing exemption."},
-      {term: "HS Code", def: "Harmonized System Code — Standardized product classification for tariffs."},
+      {term: "NMPA", def: t('nmpaGlossary_nmpa')},
+      {term: "CSAR", def: t('nmpaGlossary_csar')},
+      {term: "Ordinary Cosmetics", def: t('nmpaGlossary_ordinary')},
+      {term: "Special Cosmetics", def: t('nmpaGlossary_special')},
+      {term: "ICSC", def: t('nmpaGlossary_icsc')},
+      {term: "Chinese RP", def: t('nmpaGlossary_chineseRP')},
+      {term: "GMP", def: t('nmpaGlossary_gmp')},
+      {term: "HS Code", def: t('nmpaGlossary_hsCode')},
     ],
     "Cross-Border E-commerce": [
-      {term: "CBEC", def: "Cross-Border E-Commerce — Simplified import channel via bonded warehouses."},
-      {term: "1210", def: "Bonded warehouse model — bulk shipment to Chinese warehouses, then delivery."},
-      {term: "9610", def: "Direct shipping model — ships directly to consumer after purchase."},
-      {term: "Positive List", def: "CBEC-approved product categories eligible for simplified import."},
-      {term: "3-Doc Matching", def: "Order + payment + logistics document matching for customs clearance."},
-      {term: "PIPL", def: "Personal Information Protection Law — regulates cross-border data transfers."},
-      {term: "Tmall Global", def: "Alibaba's cross-border platform — largest CBEC marketplace."},
-      {term: "HS Code", def: "Harmonized System Code — Standardized product classification for tariffs."},
+      {term: "CBEC", def: t('cbGlossary_cbec')},
+      {term: "1210", def: t('cbGlossary_1210')},
+      {term: "9610", def: t('cbGlossary_9610')},
+      {term: "Positive List", def: t('cbGlossary_positiveList')},
+      {term: "3-Doc Matching", def: t('cbGlossary_3doc')},
+      {term: "PIPL", def: t('cbGlossary_pipl')},
+      {term: "Tmall Global", def: t('cbGlossary_tmallGlobal')},
+      {term: "HS Code", def: t('cbGlossary_hsCode')},
     ],
     "Brand Protection": [
-      {term: "CNIPA", def: "China National Intellectual Property Administration — manages trademark registration."},
-      {term: "First-to-File", def: "China grants trademark rights to first filer, not first user."},
-      {term: "Nice Classification", def: "International trademark classification (1-45 classes) used by CNIPA."},
-      {term: "Madrid System", def: "WIPO international system — extend home registration to China."},
-      {term: "Customs Recordal", def: "Register trademark with China Customs for border enforcement."},
-      {term: "Trademark Squatting", def: "Bad-faith registration of foreign brands by third parties."},
-      {term: "Opposition", def: "3-month window to challenge conflicting CNIPA applications."},
-      {term: "HS Code", def: "Harmonized System Code — Standardized product classification for tariffs."},
+      {term: "CNIPA", def: t('tmGlossary_cnipa')},
+      {term: "First-to-File", def: t('tmGlossary_firstToFile')},
+      {term: "Nice Classification", def: t('tmGlossary_niceClass')},
+      {term: "Madrid System", def: t('tmGlossary_madrid')},
+      {term: "Customs Recordal", def: t('tmGlossary_customsRecordal')},
+      {term: "Trademark Squatting", def: t('tmGlossary_squatting')},
+      {term: "Opposition", def: t('tmGlossary_opposition')},
+      {term: "HS Code", def: t('tmGlossary_hsCode')},
     ],
   };
-  return map[module] || map["GACC Food Registration"];
+  return gMap[module] || gMap["GACC Food Registration"];
 }

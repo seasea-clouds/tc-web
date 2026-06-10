@@ -1,3 +1,4 @@
+import { buildT } from '../shared/i18n';
 /**
  * CCC — 深度规则引擎（品类级配置 / 法规 / 费用 / 时间线）
  */
@@ -32,7 +33,9 @@ const PROFILES: Record<string, any> = {"electronics": {"label": "Consumer Electr
 
 const COUNTRIES: Record<string, any> = {"USA": {"diff": "moderate", "fta": false, "notes": "CB reports accepted. Section 301 tariffs may apply."}, "Germany": {"diff": "easy", "fta": false, "notes": "CB reports widely accepted. Strong CE alignment."}, "Japan": {"diff": "easy", "fta": true, "notes": "PSE certification often recognized for testing."}, "South Korea": {"diff": "easy", "fta": true, "notes": "KC certification testing may be accepted."}};
 
-export function checkCcc(input: any): any {
+export function checkCcc(input: any, locale?: string): any {
+  const t = buildT(locale || 'en');
+
   const cat = PROFILES[input.category] || PROFILES['electronics'];
   if (!cat) return {};
   const requiresReg = cat.risk === "🔴 High";
@@ -43,10 +46,10 @@ export function checkCcc(input: any): any {
     riskCategory: requiresReg ? "high" : "low", isHighRisk, riskScore,
     estimatedTimeline: cat.time || "Contact us",
     totalCostRange: requiresReg ? "$5,000-25,000" : "$800-5,000",
-    verdictLabel: requiresReg ? 'High Risk' : 'Standard Risk',
-    riskPathway: requiresReg ? 'CCC certification required — plan 4-6 months.' : 'Standard pathway — proceed with documentation.',
-    executiveSummary: `CCC compliance assessment for ${input.productName}.`,
-    oneLineDecision: requiresReg ? "🔴 Compliance action required" : "🟢 Proceed with standard process",
+    verdictLabel: t(requiresReg ? 'cccVerdictHigh' : 'cccVerdictStandard'),
+    riskPathway: t(requiresReg ? 'cccRiskPathwayHigh' : 'cccRiskPathwayStandard'),
+    executiveSummary: t('cccExecutiveSummary').replace('{productName}', input.productName || ''),
+    oneLineDecision: t(requiresReg ? 'cccOneLineHigh' : 'cccOneLineLow'),
     riskDimensions: [
       { dimension: "Product Category", score: requiresReg ? 8 : 3, color: requiresReg ? "🔴" : "🟢", note: cat.label },
       { dimension: "Regulatory Complexity", score: requiresReg ? 7 : 3, color: requiresReg ? "🟡" : "🟢", note: cat.riskReason },
@@ -72,7 +75,7 @@ export function checkCcc(input: any): any {
     requiredDocuments: ["CCC Application Form", "Product Specification & Photos", "User Manual (Chinese)", "Factory Quality Manual", "Key Component List", "Circuit Diagram & PCB", "CB Report (if available)"],
     testRequirements: cat.testing || [],
     testCostRange: cat.testCost || "Contact us",
-    labTests: [], viability: "Viable with compliance", detailedTimeline: "Varies by product — contact us for assessment", labGuide: "Testing must be at CNAS-accredited lab. " + ((cat.testing||[]).join(", ") || ""),
+    labTests: [], viability: t('cccViability'), detailedTimeline: "Varies by product — contact us for assessment", labGuide: "Testing must be at CNAS-accredited lab. " + ((cat.testing||[]).join(", ") || ""),
     labelGuide: { requiredItems: [], gb7718Highlights: [], gb28050Highlights: [] },
     timelinePhases: [{"phase": "Pre-assessment & Application", "duration": "2-4 weeks", "description": "Determine GB standards, select lab, prepare application.", "responsible": "Both", dependencies: []}, {"phase": "Type Testing", "duration": "6-12 weeks", "description": "Safety + EMC testing at CNCA-accredited lab.", "responsible": "SinoTrade", dependencies: []}, {"phase": "Factory Inspection", "duration": "2-4 weeks", "description": "QMS audit per CCC requirements.", "responsible": "SinoTrade", dependencies: []}, {"phase": "Certification Review", "duration": "4-6 weeks", "description": "CNCA reviews test reports + inspection results.", "responsible": "CNCA", dependencies: []}, {"phase": "Certificate & Mark", "duration": "1-2 weeks", "description": "Certificate issued. CCC mark printing approval.", "responsible": "Both", dependencies: []}, {"phase": "Annual Maintenance", "duration": "Ongoing", "description": "Factory re-inspection + market surveillance.", "responsible": "Both", dependencies: []}],
     costBreakdown: [{"item": "Type Testing (Safety + EMC)", "estimatedRange": "$3,000-12,000", "notes": "CNCA-accredited lab. CB report may reduce scope."}, {"item": "Factory Inspection (Initial)", "estimatedRange": "$2,000-5,000", "notes": "Auditor visit. Travel cost extra if outside China."}, {"item": "CCC Certification Fee", "estimatedRange": "$1,000-3,000", "notes": "CNCA/CCIC certification body."}, {"item": "CB Report Conversion", "estimatedRange": "$1,000-3,000", "notes": "If existing IEC CB test report is available."}, {"item": "Chinese Manual Translation", "estimatedRange": "$500-2,000", "notes": "CCC requires complete Chinese user manual."}, {"item": "Professional Service", "estimatedRange": "$4,000-12,000", "notes": "End-to-end: lab coordination, factory inspection, document handling."}, {"item": "Annual Factory Follow-up", "estimatedRange": "$1,500-3,000/yr", "notes": "Required annually to maintain CCC certification."}],
@@ -82,7 +85,7 @@ export function checkCcc(input: any): any {
     commonRejections: [{"problem": "EMC exceeds GB 9254 limits", "cause": "Design optimized for FCC/CE but not Chinese grid", "solution": "EMC pre-scan before formal testing at CNCA lab"}],
     postApprovalObligations: [{"item": "Annual Factory Inspection", "frequency": "Yearly", "description": "CNCA inspector verifies production consistency."}, {"item": "Product Change Notice", "frequency": "When applicable", "description": "Design/component changes require re-evaluation."}, {"item": "CCC Certificate Renewal", "frequency": "Every 5 years", "description": "Full re-evaluation. Begin 6 months before expiry."}, {"item": "Market Surveillance", "frequency": "Ongoing", "description": "SAMR random product testing. Respond within 30 days."}],
     horizonScan: [{"topic": "CCC Catalog Expansion (IoT/Smart Home)", "impact": "high", "timeframe": "2025-2026", "description": "New products expected to enter CCC scope.", "actionRequired": true}, {"topic": "GB Standard Revisions", "impact": "high", "timeframe": "2025-2027", "description": "Multiple GB safety standards under revision — may require re-testing.", "actionRequired": true}, {"topic": "CB Report Digitalization", "impact": "medium", "timeframe": "2025+", "description": "IECEE digital CB reports may reduce paper handling.", "actionRequired": false}],
-    summary: requiresReg ? "Compliance action required." : "Standard process applies.",
+    summary: t(requiresReg ? 'cccSummaryHigh' : 'cccSummaryLow'),
   
   cccStandards: {
     electronics: "GB 4943.1-2022 (Safety), GB 9254-2021 (EMC), GB 17625.1-2022 (Harmonics)",

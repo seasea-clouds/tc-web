@@ -79,8 +79,11 @@ function runScript(scriptName, ...extraArgs) {
   }
 
   const scriptArgs = [...extraArgs];
-  // clean-rsc 不支持 --ci，仅接受目录路径参数
-  if (isCi && scriptName !== 'clean-rsc.js') scriptArgs.push('--ci');
+  // 这些脚本不应传递 --ci：
+  // - clean-rsc.js: 清理脚本，非检查
+  // - check-translations.mjs: 报告已有问题数(非本次引入)，不应阻塞
+  const noFailOnIssues = ['clean-rsc.js', 'check-translations.mjs'];
+  if (isCi && !noFailOnIssues.includes(scriptName)) scriptArgs.push('--ci');
 
   console.log(`\n▶ ${scriptName} ${scriptArgs.join(' ')}`);
 

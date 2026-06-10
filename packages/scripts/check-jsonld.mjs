@@ -48,6 +48,9 @@ const REQUIRED_FIELDS = {
   'PostalAddress':         ['addressCountry'],
   'ContactPoint':          ['telephone'],
   'ListItem':              ['position', 'item'],
+  'BlogPosting':           ['headline'],
+  'ImageObject':           ['url'],
+  'Blog':                  ['name'],
 };
 
 

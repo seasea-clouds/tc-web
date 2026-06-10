@@ -1,3 +1,5 @@
+import { buildT } from '../shared/i18n';
+import type { StandardResult } from '../shared/types';
 /** GACC 食品注册 — 专业判断规则引擎（价值 $10,000 报告支撑） */
 
 export type GaccCategory =
@@ -1097,7 +1099,7 @@ function getHorizonScan(): HorizonItem[] {
 // 主力输出接口
 // ═══════════════════════════════════════════════════════════════════════
 
-export interface GaccResult {
+export interface GaccResult extends StandardResult {
   requiresRegistration: boolean;
   isHighRisk: boolean;
   riskCategory: "high" | "low";
@@ -1185,39 +1187,50 @@ export interface GaccResult {
   summary: string;
 }
 
-export function checkGacc(input: GaccInput): GaccResult {
+export function checkGacc(input: GaccInput, locale?: string): GaccResult {
+  const t = buildT(locale || 'en');
+
+  // Category-level translations
   const cat = CATEGORY_PROFILES[input.category] || CATEGORY_PROFILES['other'];
+  const tLabTests = cat.labTests.map((_, i) => t(`gaccCat_${input.category}_labTest_${i}`));
+  const tRejections = cat.commonRejections.map((r, i) => ({
+    problem: t(`gaccCat_${input.category}_reject_${i}_problem`),
+    cause: t(`gaccCat_${input.category}_reject_${i}_cause`),
+    solution: t(`gaccCat_${input.category}_reject_${i}_solution`),
+  }));
+  const tRiskReason = t(`gaccCat_${input.category}_riskReason`);
+
   const country = COUNTRY_DB[input.originCountry] || COUNTRY_DB.DEFAULT;
   const isHighRisk = cat.isHighRisk;
   
   // Risk scoring
   const riskDimensions = [
     { 
-      dimension: "Product Category", 
+      dimension: t("gaccRiskDim_productCategory"), 
       score: isHighRisk ? 8 : 3, 
       color: isHighRisk ? "🔴" : "🟢",
-      note: isHighRisk ? "Category 18 high-risk classification" : "Standard risk category — outside 18 high-risk list"
+      note: t(isHighRisk ? "gaccRiskNote_highRiskCat" : "gaccRiskNote_standardRiskCat")
     },
     {
-      dimension: "Origin Country Complexity",
+      dimension: t("gaccRiskDim_originCountryComplexity"),
       score: country.gaccDifficulty === 'difficult' ? 7 : country.gaccDifficulty === 'moderate' ? 5 : 3,
       color: country.gaccDifficulty === 'difficult' ? "🔴" : country.gaccDifficulty === 'moderate' ? "🟡" : "🟢",
       note: `${input.originCountry}: ${country.gaccDifficulty} compliance pathway${country.ftaWithChina ? ", FTA benefits available" : ""}`
     },
     {
-      dimension: "Documentation Complexity",
+      dimension: t("gaccRiskDim_documentationComplexity"),
       score: isHighRisk ? 7 : 4,
       color: isHighRisk ? "🔴" : "🟢",
-      note: `${isHighRisk ? "Enhanced documentation package required" : "Standard documentation package"}`
+      note: t(isHighRisk ? "gaccRiskNote_enhancedDoc" : "gaccRiskNote_standardDoc")
     },
     {
-      dimension: "Testing Requirements",
+      dimension: t("gaccRiskDim_testingRequirements"),
       score: isHighRisk ? 6 : 4,
       color: isHighRisk ? "🟡" : "🟢",
       note: `${cat.labTests.length} tests required. Cost range: ${cat.testCostRange}`
     },
     {
-      dimension: "Timeline to Market",
+      dimension: t("gaccRiskDim_timelineToMarket"),
       score: isHighRisk ? 8 : 4,
       color: isHighRisk ? "🔴" : "🟢",
       note: `Estimated: ${isHighRisk ? cat.gaccTimelineHigh : cat.gaccTimelineLow}`
@@ -1230,30 +1243,30 @@ export function checkGacc(input: GaccInput): GaccResult {
     assignedHsChapter: cat.hsRange,
     ciqCode: cat.ciqCode,
     isHighRisk,
-    riskReason: cat.riskReason,
+    riskReason: tRiskReason,
     alternativeClassificationNote: input.hsCode && !input.hsCode.startsWith(cat.hsRange.split(",")[0].split("-")[0])
       ? `⚠️ Your HS code ${input.hsCode} may not align with the standard range for ${CATEGORY_LABELS[input.category]}. Verify classification to avoid customs delays.`
-      : "HS code appears consistent with product category.",
+      : t("gaccClassify_hsMatch"),
   };
 
   // Tariff info
   const tariffInfo = {
     hsCode: input.hsCode || cat.hsRange,
     mfnRate: cat.chinaTariffRate,
-    ftaRate: country.ftaWithChina ? "Eligible — may qualify for reduced rates" : "No FTA — MFN rates apply",
+    ftaRate: country.ftaWithChina ? t("gaccTariff_ftaEligible") : t("gaccTariff_noFta"),
     vatRate: cat.vatRate,
     consumptionTax: cat.consumptionTax,
     totalTaxBurden: `${cat.chinaTariffRate} + ${cat.vatRate} ${cat.consumptionTax !== "N/A" ? `+ ${cat.consumptionTax}` : ""}`,
-    estimatedLandedCostExample: "Contact us for a detailed landed cost calculation based on your FOB price.",
+    estimatedLandedCostExample: t("gaccTariff_landedCostExample"),
   };
 
   // Risk matrix
   const riskMatrix = [
-    { dimension: "品类风险 Product Category", rating: isHighRisk ? "🔴" as const : "🟢" as const, explanation: cat.riskReason },
-    { dimension: "产地风险 Origin Country", rating: country.gaccDifficulty === 'difficult' ? "🔴" as const : country.gaccDifficulty === 'moderate' ? "🟡" as const : "🟢" as const, explanation: `${input.originCountry} — ${country.gaccDifficulty} compliance pathway` },
-    { dimension: "成分风险 Ingredients", rating: isHighRisk ? "🟡" as const : "🟢" as const, explanation: isHighRisk ? "Complex ingredient profile — enhanced testing" : "Standard ingredient risk" },
-    { dimension: "加工风险 Processing", rating: (cat.isHighRisk && (input.category === 'meat' || input.category === 'dairy' || input.category === 'seafood')) ? "🔴" as const : "🟢" as const, explanation: (cat.isHighRisk && (input.category === 'meat' || input.category === 'dairy' || input.category === 'seafood')) ? "Raw/perishable processing — strict quarantine" : "Processed/shelf-stable — low quarantine risk" },
-    { dimension: "合规历史 Compliance History", rating: "🟢" as const, explanation: "First-time registration — no negative history" },
+    { dimension: t("gaccRiskDim_productCategoryRisk"), rating: isHighRisk ? "🔴" as const : "🟢" as const, explanation: cat.riskReason },
+    { dimension: t("gaccRiskDim_originCountry"), rating: country.gaccDifficulty === 'difficult' ? "🔴" as const : country.gaccDifficulty === 'moderate' ? "🟡" as const : "🟢" as const, explanation: `${input.originCountry} — ${country.gaccDifficulty} compliance pathway` },
+    { dimension: t("gaccRiskDim_ingredients"), rating: isHighRisk ? "🟡" as const : "🟢" as const, explanation: isHighRisk ? t("gaccRiskMatrix_complexIngredient") : t("gaccRiskMatrix_standardIngredient") },
+    { dimension: t("gaccRiskDim_processing"), rating: (cat.isHighRisk && (input.category === 'meat' || input.category === 'dairy' || input.category === 'seafood')) ? "🔴" as const : "🟢" as const, explanation: (cat.isHighRisk && (input.category === 'meat' || input.category === 'dairy' || input.category === 'seafood')) ? t("gaccRiskMatrix_rawProcessing") : t("gaccRiskMatrix_processed") },
+    { dimension: t("gaccRiskDim_complianceHistory"), rating: "🟢" as const, explanation: t("gaccRiskMatrix_firstTime") },
   ];
 
   // Document guide
@@ -1285,7 +1298,7 @@ export function checkGacc(input: GaccInput): GaccResult {
   // Country-specific warnings
   const countrySpecificWarnings = country.specialRestrictions.length > 0 
     ? country.specialRestrictions 
-    : ["No specific restrictions identified for this origin country."];
+    : [t("gaccCountry_noRestrictions")];
 
   return {
     requiresRegistration: true,
@@ -1295,17 +1308,13 @@ export function checkGacc(input: GaccInput): GaccResult {
     // 1
     riskScore,
     riskDimensions,
-    verdictLabel: isHighRisk ? 'High Risk' : 'Standard Risk',
-    riskPathway: isHighRisk
-      ? 'High-risk classification — enhanced compliance procedures required.'
-      : 'Standard risk — Standard GACC registration pathway applies.',
-    executiveSummary: `This comprehensive assessment evaluates ${input.productName} (${CATEGORY_LABELS[input.category]}) against all applicable Chinese import regulations.`,
-    oneLineDecision: isHighRisk
-      ? "🔴 Action Required: Professional compliance support strongly recommended. Expect 4-14 month timeline."
-      : "🟢 Proceed: GACC registration required. Standard pathway. Estimated 2-4 months.",
+    verdictLabel: t(isHighRisk ? 'gaccVerdictHigh' : 'gaccVerdictStandard'),
+    riskPathway: t(isHighRisk ? 'gaccRiskPathwayHigh' : 'gaccRiskPathwayStandard'),
+    executiveSummary: t('gaccExecutiveSummary').replace('{productName}', input.productName || '').replace('{category}', CATEGORY_LABELS[input.category] || ''),
+    oneLineDecision: isHighRisk ? t("gaccOneLineHigh") : t("gaccOneLineStandard"),
 
     // 2
-    viability: "Viable with compliance investment",
+    viability: t("gaccViability"),
     marketIntel: getMarketIntel(input),
 
     // 3
@@ -1328,9 +1337,9 @@ export function checkGacc(input: GaccInput): GaccResult {
     documentGuide,
 
     // 9
-    labTests: cat.labTests,
+    labTests: tLabTests,
     testCostRange: cat.testCostRange,
-    labGuide: `Testing must be conducted at a CNAS-accredited laboratory (ISO 17025). Samples should be representative of commercial production. Testing scope: ${cat.labTests.join(", ")}. Estimated cost: ${cat.testCostRange}. Turnaround: 2-5 weeks.`,
+    labGuide: t("gaccLabGuide").replace("{tests}", tLabTests.join(", ")).replace("{cost}", cat.testCostRange),
 
     // 10
     labelGuide: getLabelGuide(),
@@ -1345,17 +1354,22 @@ export function checkGacc(input: GaccInput): GaccResult {
     // 13
     estimatedTimeline: isHighRisk ? cat.gaccTimelineHigh : cat.gaccTimelineLow,
     detailedTimeline: isHighRisk
-      ? `Based on typical GACC processing times for high-risk products in ${CATEGORY_LABELS[input.category]}, expect ${cat.gaccTimelineHigh} from start to market entry. This includes competent authority recommendation, enhanced documentation review, and extended lab testing.`
-      : `Standard GACC registration for ${CATEGORY_LABELS[input.category]} typically takes ${cat.gaccTimelineLow}. This assumes complete documentation and no requests for supplementary materials.`,
+      ? t("gaccDetailedTimelineHigh").replace("{category}", CATEGORY_LABELS[input.category] || "").replace("{timeline}", cat.gaccTimelineHigh || "")
+      : t("gaccDetailedTimelineStandard").replace("{category}", CATEGORY_LABELS[input.category] || "").replace("{timeline}", cat.gaccTimelineLow || ""),
 
     // 14
     countryProfile: country,
 
     // 15
-    competitiveAnalysis: `China imported significant volumes of ${CATEGORY_LABELS[input.category].split(" (")[0]} products in 2024-2025. Top origins include ${cat.competitorOrigin.join(", ")}. ${cat.marketTrend === 'growing' ? "The category shows growth potential with rising consumer demand for premium imports." : "The category is stable with steady demand."}`,
+    competitiveAnalysis: (() => {
+      const catLabel = CATEGORY_LABELS[input.category]?.split(" (")[0] || "";
+      const origins = cat.competitorOrigin.join(", ");
+      const base = cat.marketTrend === 'growing' ? t("gaccCompetitiveAnalysis") : t("gaccCompetitiveAnalysisStable");
+      return base.replace("{category}", catLabel).replace("{origins}", origins);
+    })(),
 
     // 16
-    commonRejections: cat.commonRejections,
+    commonRejections: tRejections,
 
     // 17
     postApprovalObligations,
@@ -1364,9 +1378,7 @@ export function checkGacc(input: GaccInput): GaccResult {
     horizonScan: getHorizonScan(),
 
     // Legacy
-    summary: isHighRisk
-      ? `Your product (${CATEGORY_LABELS[input.category]}) is classified under GACC's high-risk category. Professional compliance support is strongly recommended.`
-      : `Your product (${CATEGORY_LABELS[input.category]}) requires GACC registration but is classified as low risk.`,
+    summary: isHighRisk ? t("gaccSummaryHigh") : t("gaccSummaryStandard"),
   };
 }
 

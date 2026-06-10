@@ -1,3 +1,4 @@
+import { buildT } from '../shared/i18n';
 /**
  * 中文标签合规 — 深度规则引擎
  */
@@ -58,7 +59,7 @@ export interface TariffInfo {
 export interface Regulation {
   name: string;
   number: string;
-  authority: string;
+  issuingAuthority: string;
   relevance: string;
   description: string;
   [key: string]: unknown;
@@ -163,17 +164,18 @@ export interface LabelResult {
 /*  checkLabel — main entry point                                      */
 /* ------------------------------------------------------------------ */
 
-export function checkLabel(input: LabelInput): LabelResult {
+export function checkLabel(input: LabelInput, locale?: string): LabelResult {
+  const t = buildT(locale || 'en');
   const isHighRisk = false;
   const riskScore = 4.5;
   return {
     requiresRegistration: true, riskCategory: "medium", isHighRisk, riskScore,
     estimatedTimeline: "2-4 weeks", totalCostRange: "$500-2,000",
-    verdictLabel: 'Medium Risk',
-    riskPathway: 'Chinese label compliance required per GB 7718 and GB 28050.',
-    executiveSummary: `Label compliance assessment for ${input.productName}.`,
-    oneLineDecision: "⚠️ Chinese label compliance required. Timeline: 2-4 weeks.",
-    summary: "All prepackaged food imports require Chinese labels per GB 7718 and GB 28050.",
+    verdictLabel: t('labelVerdict'),
+    riskPathway: t('labelRiskPathway'),
+    executiveSummary: t('labelExecutiveSummary').replace('{productName}', input.productName || ''),
+    oneLineDecision: t('labelOneLine'),
+    summary: t('labelSummary'),
     riskDimensions: [
       { dimension: "Label Fields", score: 5, color: "🟡", note: "12 mandatory fields per GB 7718" },
       { dimension: "Nutrition Panel", score: 5, color: "🟡", note: "GB 28050 — kJ + NRV% required" },
@@ -186,10 +188,10 @@ export function checkLabel(input: LabelInput): LabelResult {
     ],
     tariffInfo: { mfnRate: "5-20%", vatRate: "9-13%", consumptionTax: "N/A", ftaRate: null, totalTaxBurden: "Varies by product" },
     regulations: [
-      { name: "GB 7718-2011", number: "GB 7718-2011 (rev. 2025)", effectiveDate: "April 20, 2012", authority: "NHC", relevance: "primary", description: "Labeling of Prepackaged Foods — mandatory for all food imports." },
-      { name: "GB 28050-2011", number: "GB 28050-2011", effectiveDate: "January 1, 2013", authority: "NHC", relevance: "primary", description: "Nutrition labeling — kJ format + NRV% mandatory." },
-      { name: "GB 2760-2024", number: "GB 2760-2024", effectiveDate: "February 8, 2025", authority: "NHC", relevance: "primary", description: "Food additives positive list — only listed additives permitted." },
-      { name: "Food Safety Law (Label Articles)", number: "Ch.3 Arts.42-47, Ch.9 Arts.148-149", effectiveDate: "October 1, 2015", authority: "NPC", relevance: "primary", description: "Legal basis for all food label requirements. Fines up to 3× product value for violations." },
+      { name: "GB 7718-2011", number: "GB 7718-2011 (rev. 2025)", effectiveDate: "April 20, 2012", issuingAuthority: "NHC", relevance: "primary", description: "Labeling of Prepackaged Foods — mandatory for all food imports." },
+      { name: "GB 28050-2011", number: "GB 28050-2011", effectiveDate: "January 1, 2013", issuingAuthority: "NHC", relevance: "primary", description: "Nutrition labeling — kJ format + NRV% mandatory." },
+      { name: "GB 2760-2024", number: "GB 2760-2024", effectiveDate: "February 8, 2025", issuingAuthority: "NHC", relevance: "primary", description: "Food additives positive list — only listed additives permitted." },
+      { name: "Food Safety Law (Label Articles)", number: "Ch.3 Arts.42-47, Ch.9 Arts.148-149", effectiveDate: "October 1, 2015", issuingAuthority: "NPC", relevance: "primary", description: "Legal basis for all food label requirements. Fines up to 3× product value for violations." },
     ],
     classification: { assignedHsChapter: "Varies", ciqCode: "Varies", isHighRisk: false, riskReason: "Standard GB 7718/28050 compliance. 12 mandatory fields.", alternativeClassificationNote: "" },
     riskMatrix: [
@@ -209,7 +211,7 @@ export function checkLabel(input: LabelInput): LabelResult {
     testCostRange: "$300-1,500",
     labGuide: "Nutritional analysis must be at CNAS-accredited lab. Key point: energy must be in kJ (kilojoules) — kcal alone is insufficient.",
     labTests: ["Nutritional analysis", "Additive verification", "Microbiological"],
-    viability: "High — label compliance is mandatory and cannot be bypassed",
+    viability: t('labelViability'),
     detailedTimeline: "Label review (3-5 working days) → Design (5-7 working days) → Nutrition calc (2-3 days) → Final check (2-3 days). Total: 2-3 weeks.",
     labelGuide: {
       requiredItems: [

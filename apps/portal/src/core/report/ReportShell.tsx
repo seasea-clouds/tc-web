@@ -153,7 +153,7 @@ function renderSection(S: SectionComponent, result: any) {
 export default function ReportShell(props: ReportShellProps) {
   const { reportId, module, locale, labels, productInfo, result, nextSteps, generatedAt } = props;
   const href = (path: string) => `/${locale || 'en'}${path}`;
-  const glossary = result.glossary || getGlossary(module);
+  const glossary = result.glossary || getGlossary(module, locale);
   const formattedDate = generatedAt ? new Date(generatedAt).toLocaleDateString('en-US', {
     year: 'numeric', month: 'long', day: 'numeric',
   }) : '—';

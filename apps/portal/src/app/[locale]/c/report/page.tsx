@@ -1,5 +1,5 @@
 'use client';
-import { useT } from '@trade/ui';
+import { useT, useTradeLocale } from '@trade/ui';
 
 import { useState, useEffect, useRef, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
@@ -19,7 +19,7 @@ import { CATEGORY_LABELS as LABEL_LABELS } from '../../../../../modules/label/ru
 import { CATEGORY_LABELS as CB_LABELS } from '../../../../../modules/crossborder/rules';
 import { CATEGORY_LABELS as TM_LABELS } from '../../../../../modules/trademark/rules';
 
-const CHECK_MAP: Record<string, (input: any) => any> = {
+const CHECK_MAP: Record<string, (input: any, locale?: string) => any> = {
   'GACC Food Registration': checkGacc,
   'CCC Certification': checkCcc,
   'Cosmetics Filing (NMPA)': checkCosmetics,
@@ -37,7 +37,7 @@ const CATEGORY_LABELS_MAP: Record<string, Record<string, string>> = {
   TRADEMARK: TM_LABELS,
 };
 
-function rebuildResult(stored: any): any {
+function rebuildResult(stored: any, locale?: string): any {
   const fn = CHECK_MAP[stored.module];
   if (!fn) return stored.result || {};
   try {
@@ -46,7 +46,7 @@ function rebuildResult(stored: any): any {
       productName: stored.productInfo?.name || '',
       originCountry: stored.productInfo?.originCountry || '',
     };
-    try { return fn(input); } catch { return stored.result || {}; }
+    try { return typeof fn === 'function' && fn.length >= 2 ? fn(input, locale) : fn(input); } catch { return stored.result || {}; }
   } catch (e) {
     console.error('Rebuild failed:', e);
     return stored.result || {};
@@ -65,6 +65,8 @@ function ReportContent() {
   const [error, setError] = useState('');
   const retries = useRef(0);
   const t = useT('Report');
+  const tC = useT('Check');
+  const locale = useTradeLocale();
 
   useEffect(() => {
     if (!id) {
@@ -73,7 +75,6 @@ function ReportContent() {
       return;
     }
 
-    // Fetch report from D1 API
     fetch('/api/report/' + encodeURIComponent(id))
       .then(res => {
         if (!res.ok) throw new Error('Report not found');
@@ -84,23 +85,30 @@ function ReportContent() {
         setLoading(false);
       })
       .catch(err => {
-        // Fallback: try rebuilding from savedInput
         try {
           const storedInput = localStorage.getItem('compli-report-input');
           if (storedInput) {
             const prefix = id.split('-')[0].toUpperCase();
-            const map: Record<string, {label:string;fn:(i:any)=>any;nextSteps:string[]}> = {
-              GACC: {label:'GACC Food Registration',fn:checkGacc,nextSteps:['Complete GACC registration','Prepare documentation','Submit application']},
-              CCC: {label:'CCC Certification',fn:checkCcc,nextSteps:['Select certification body','Submit samples','Prepare factory audit']},
-              COSMETICS: {label:'Cosmetics Filing (NMPA)',fn:checkCosmetics,nextSteps:['Designate responsible person','Complete safety assessment','File NMPA notification']},
-              LABEL: {label:'Chinese Label Compliance',fn:checkLabel,nextSteps:['Submit label artwork','Verify mandatory elements','Obtain print-ready files']},
-              CROSSBORDER: {label:'Cross-Border E-commerce',fn:checkCrossborder,nextSteps:['Select platform','Complete registration','Set up logistics']},
-              TRADEMARK: {label:'Brand Protection',fn:checkTrademark,nextSteps:['CNIPA search','File trademark','Monitor opposition']},
+            const fallbackSteps: Record<string, string[]> = {
+              GACC: [tC('gaccFallbackStep1'), tC('gaccFallbackStep2'), tC('gaccFallbackStep3')],
+              CCC: [tC('cccFallbackStep1'), tC('cccFallbackStep2'), tC('cccFallbackStep3')],
+              COSMETICS: [tC('nmpaFallbackStep1'), tC('nmpaFallbackStep2'), tC('nmpaFallbackStep3')],
+              LABEL: [tC('labelFallbackStep1'), tC('labelFallbackStep2'), tC('labelFallbackStep3')],
+              CROSSBORDER: [tC('cbFallbackStep1'), tC('cbFallbackStep2'), tC('cbFallbackStep3')],
+              TRADEMARK: [tC('tmFallbackStep1'), tC('tmFallbackStep2'), tC('tmFallbackStep3')],
+            };
+            const map: Record<string, {label:string;fn:(i:any, l?:string)=>any;nextSteps:string[]}> = {
+              GACC: {label:'GACC Food Registration',fn:checkGacc,nextSteps:fallbackSteps.GACC},
+              CCC: {label:'CCC Certification',fn:checkCcc,nextSteps:fallbackSteps.CCC},
+              COSMETICS: {label:'Cosmetics Filing (NMPA)',fn:checkCosmetics,nextSteps:fallbackSteps.COSMETICS},
+              LABEL: {label:'Chinese Label Compliance',fn:checkLabel,nextSteps:fallbackSteps.LABEL},
+              CROSSBORDER: {label:'Cross-Border E-commerce',fn:checkCrossborder,nextSteps:fallbackSteps.CROSSBORDER},
+              TRADEMARK: {label:'Brand Protection',fn:checkTrademark,nextSteps:fallbackSteps.TRADEMARK},
             };
             const m = map[prefix];
             if (m) {
               const savedInput = JSON.parse(storedInput);
-              const sr = m.fn(savedInput);
+              const sr = m.fn(savedInput, locale);
               setReport({id,module:m.label,
                 productInfo:{name:savedInput.productName||savedInput.brandName||'Your Product',category:savedInput.category||'',originCountry:savedInput.originCountry||''},
                 result:sr,nextSteps:m.nextSteps,generatedAt:new Date().toISOString()});
@@ -126,7 +134,7 @@ function ReportContent() {
               </svg>
             </div>
             <h1 className="text-xl font-bold text-primary-navy mb-2">{t('loadingTitle')}</h1>
-            <p className="text-gray-500 text-sm">{t('loadingDesc')}</p>
+            <p className="text-gray-500 text-sm mb-6">{t('loadingDesc')}</p>
           </div>
         </div>
       </div>
@@ -153,7 +161,9 @@ function ReportContent() {
   }
 
   return <ReportViewer report={report} />;
-}export default function ReportPage() {
+}
+
+export default function ReportPage() {
   return (
     <Suspense fallback={
       <div className="bg-bg-ice flex items-center justify-center">

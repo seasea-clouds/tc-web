@@ -80,22 +80,22 @@
   "Services": {
     "heroTitle": "Dịch vụ của chúng tôi",
     "heroSubtitle": "Giải pháp tuân thủ nhập khẩu toàn diện cho mọi ngành công nghiệp thâm nhập thị trường Trung Quốc.",
-    "gaccTitle": "Đăng ký thực phẩm GACC",
+    "gaccTitle": "Đăng ký Thực phẩm GACC - Tuân thủ Nhập khẩu Trung Quốc | Tuân thủ thương mại Trung Quốc",
     "gaccSubtitle": "Hoàn tất đăng ký Nghị định GACC 248/249 cho các nhà sản xuất thực phẩm và đồ uống xuất khẩu sang Trung Quốc.",
     "gaccLink": "Tìm hiểu thêm",
-    "labelTitle": "Tuân thủ nhãn hiệu Trung Quốc",
+    "labelTitle": "Tuân thủ nhãn hiệu Trung Quốc - Tuân thủ nhập khẩu Trung Quốc | Tuân thủ thương mại Trung Quốc",
     "labelSubtitle": "Thiết kế và đánh giá nhãn chuyên nghiệp của Trung Quốc đáp ứng tiêu chuẩn GB 7718 và GB 28050.",
     "labelLink": "Tìm hiểu thêm",
-    "cccTitle": "Chứng nhận CCC",
+    "cccTitle": "Chứng nhận CCC - Tuân thủ Nhập khẩu Trung Quốc | Tuân thủ thương mại Trung Quốc",
     "cccSubtitle": "Tư vấn chứng nhận bắt buộc của Trung Quốc về điện tử, thiết bị, đồ chơi và phụ tùng ô tô.",
     "cccLink": "Tìm hiểu thêm",
-    "cosmeticsTitle": "Nộp hồ sơ mỹ phẩm (NMPA)",
+    "cosmeticsTitle": "Khai báo Mỹ phẩm (NMPA) - Tuân thủ Nhập khẩu Trung Quốc | Tuân thủ thương mại Trung Quốc",
     "cosmeticsSubtitle": "Đăng ký và nộp đơn NMPA cho mỹ phẩm nhập khẩu - danh mục sử dụng thông thường và đặc biệt.",
     "cosmeticsLink": "Tìm hiểu thêm",
-    "ecommerceTitle": "Thương mại điện tử xuyên biên giới",
+    "ecommerceTitle": "Thương mại điện tử xuyên biên giới - Tuân thủ nhập khẩu của Trung Quốc | Tuân thủ thương mại Trung Quốc",
     "ecommerceSubtitle": "Thiết lập thương mại điện tử xuyên biên giới từ đầu đến cuối - từ triển khai nền tảng đến tuân thủ vận hành.",
     "ecommerceLink": "Tìm hiểu thêm",
-    "brandTitle": "Bảo vệ thương hiệu",
+    "brandTitle": "Bảo vệ Thương hiệu - Tuân thủ Nhập khẩu Trung Quốc | Tuân thủ thương mại Trung Quốc",
     "brandSubtitle": "Đăng ký nhãn hiệu, nộp đơn IP hải quan và tuân thủ quảng cáo để bảo vệ thương hiệu của bạn ở Trung Quốc.",
     "brandLink": "Tìm hiểu thêm",
     "gaccIndustries": "Sữa, thịt, hải sản, bánh mì, đồ uống, thực phẩm tốt cho sức khỏe và tất cả 18 danh mục do GACC quản lý.",
@@ -154,7 +154,7 @@
     "cosmeticsPoints7": "Cập nhật quy định liên tục và tư vấn tuân thủ",
     "ecommercePoints7": "Cập nhật quy định liên tục và tư vấn tuân thủ",
     "brandPoints7": "Cập nhật quy định liên tục và tư vấn tuân thủ",
-    "metaTitle": "Dịch vụ Tuân thủ Nhập khẩu Trung Quốc | GACC, CCC, NMPA & Nhãn",
+    "metaTitle": "Dịch vụ Tuân thủ Nhập khẩu Trung Quốc | GACC, CCC, NMPA & Nhãn - Dịch vụ Tuân thủ Nhập khẩu Trung Quốc | Tuân thủ thương mại Trung Quốc",
     "metaDescription": "Tuân thủ nhập khẩu một cửa vào Trung Quốc: đăng ký thực phẩm GACC, chứng nhận CCC, nộp hồ sơ mỹ phẩm NMPA, tuân thủ nhãn hiệu & bảo vệ thương hiệu. Hơn 15 năm chuyên môn."
   },
   "ServiceGacc": {
@@ -516,7 +516,7 @@
     "premiumItems3": "Nộp hồ sơ mỹ phẩm NMPA (nếu có)",
     "premiumItems4": "Đánh giá tuân thủ dữ liệu PIPL",
     "premiumItems5": "Tư vấn tuân thủ liên tục",
-    "metaTitle": "Gói dịch vụ tuân thủ Trung Quốc | Giá & Gói",
+    "metaTitle": "Gói dịch vụ tuân thủ Trung Quốc | Giá & Gói - Gói Dịch vụ Tuân thủ | Tuân thủ thương mại Trung Quốc",
     "metaDescription": "Định giá minh bạch cho các dịch vụ tuân thủ nhập khẩu của Trung Quốc. Đăng ký GACC, chứng nhận CCC, gói hồ sơ NMPA. Chọn kế hoạch phù hợp với nhu cầu của bạn."
   },
   "Faq": {
@@ -623,7 +623,7 @@
       "ecommerceName": "Thương mại điện tử xuyên biên giới",
       "brandName": "Bảo vệ thương hiệu"
     },
-    "metaTitle": "Câu hỏi thường gặp về tuân thủ nhập khẩu của Trung Quốc | Câu hỏi về GACC, CCC, NMPA",
+    "metaTitle": "Câu hỏi thường gặp về tuân thủ nhập khẩu của Trung Quốc | Câu hỏi về GACC, CCC, NMPA - Hỏi đáp về tuân thủ nhập khẩu của Trung Quốc | Tuân thủ thương mại Trung Quốc",
     "metaDescription": "Các câu hỏi thường gặp về việc tuân thủ nhập khẩu của Trung Quốc. Đăng ký GACC, chứng nhận CCC, nộp hồ sơ mỹ phẩm NMPA, các yêu cầu về nhãn được giải đáp bởi các chuyên gia."
   },
   "About": {
@@ -682,7 +682,7 @@
     "partners7": "🔬 Viện nghiên cứu",
     "partners8": "🤝 Hiệp hội ngành nghề",
     "values5": "Xuất sắc - Cung cấp các giải pháp tuân thủ chất lượng cao nhất với sự chú ý đến từng chi tiết.",
-    "metaTitle": "Về việc tuân thủ SinoTrade | Hơn 15 năm chuyên môn nhập khẩu Trung Quốc",
+    "metaTitle": "Về việc tuân thủ SinoTrade | Hơn 15 năm Chuyên môn Nhập khẩu Trung Quốc - Chuyên môn Tuân thủ Nhập khẩu Trung Quốc | Tuân thủ thương mại Trung Quốc",
     "metaDescription": "Tìm hiểu về Tuân thủ SinoTrade — đối tác đáng tin cậy của bạn về tuân thủ nhập khẩu vào Trung Quốc. Hơn 15 năm kinh nghiệm, phục vụ trên 50 quốc gia. Gặp gỡ đội ngũ chuyên gia của chúng tôi."
   },
   "ThankYou": {
@@ -753,14 +753,13 @@
     "next": "Tiếp",
     "pageInfo": "",
     "of": " / ",
-    "metaTitle": "Insights tuân thủ nhập khẩu Trung Quốc | Hướng dẫn GACC, CCC, NMPA",
+    "metaTitle": "Thông tin chi tiết về tuân thủ nhập khẩu của Trung Quốc | Hướng dẫn GACC, CCC, NMPA - Thông tin chi tiết về tuân thủ nhập khẩu của Trung Quốc | Tuân thủ thương mại Trung Quốc",
     "metaDescription": "Hướng dẫn của chuyên gia về tuân thủ nhập khẩu của Trung Quốc. Mẹo đăng ký GACC, cập nhật chứng nhận CCC, tin tức nộp hồ sơ NMPA, thông tin chi tiết về tuân thủ nhãn. Luôn cập nhật thông tin."
   },
   "OrganizationJsonLd": {
     "description": "Dịch vụ tư vấn quy định nhập khẩu một cửa cho Trung Quốc — đăng ký GACC, ghi nhãn Trung Quốc, chứng nhận CCC, nộp hồ sơ mỹ phẩm NMPA, thương mại điện tử xuyên biên giới và bảo vệ thương hiệu.",
     "contactType": "dịch vụ khách hàng",
-    "availableLanguage": "Afrikaans, العربية, Azərbaycan, Беларуская, Български, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, Tiếng Anh, Español, فارسی, Suomi, Français, עברית, हिन्दी, Hrvatski, Magyar, Հայերեն, Bahasa Indonesia, Italiano, 日本語, ქართული, 한국어, Bahasa Melayu, नेपाली, Nederlands, Norsk, Polski, Português, Română, Русский, සිංහල, Slovenčina, Slovenščina, Shqip, Српски, Svenska, Kiswahili, தமிழ், ไทย, Türkçe, Українська, اردو, Tiếng Việt, 中文",
-    "sameAs": "[\"https://www.linkedin.com/company/sinotradecompliance\", \"https://www.crunchbase.com/ Organisation/sinotradecompliance\", \"https://github.com/sinotradecompliance\"]"
+    "availableLanguage": "Afrikaans, العربية, Azərbaycan, Беларуская, Български, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, Tiếng Anh, Español, فارسی, Suomi, Français, עברית, हिन्दी, Hrvatski, Magyar, Հայերեն, Bahasa Indonesia, Italiano, 日本語, ქართული, 한국어, Bahasa Melayu, नेपाली, Nederlands, Norsk, Polski, Português, Română, Русский, සිංහල, Slovenčina, Slovenščina, Shqip, Српски, Svenska, Kiswahili, தமிழ், ไทย, Türkçe, Українська, اردو, Tiếng Việt, 中文"
   },
   "DefinitionSchema": {
     "gaccName": "GACC (Tổng cục Hải quan Trung Quốc)",
@@ -1144,7 +1143,7 @@
       "crossborderecommerce": "Thương mại điện tử xuyên biên giới",
       "crossborderecommerceDesc": "Các quy định của CBEC, tuân thủ nền tảng và tối ưu hóa thuế."
     },
-    "metaTitle": "China Import Compliance by Industry | GACC, CCC, NMPA Services",
+    "metaTitle": "Tuân thủ nhập khẩu của Trung Quốc theo ngành | Dịch vụ GACC, CCC, NMPA - Hướng dẫn tuân thủ ngành | Tuân thủ thương mại Trung Quốc",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
@@ -1313,5 +1312,30 @@
     "contactText": "Nếu bạn có bất kỳ câu hỏi nào về Chính sách quyền riêng tư này hoặc cách chúng tôi xử lý dữ liệu của bạn, vui lòng liên hệ với chúng tôi:",
     "updateTitle": "Cập nhật chính sách này",
     "updateText": "Thỉnh thoảng chúng tôi có thể cập nhật Chính sách quyền riêng tư này. Mọi thay đổi sẽ được đăng trên trang này với ngày sửa đổi được cập nhật."
+  },
+  "AiAssistance": {
+    "aboutContent": "SinoTrade Tuân thủ là một công ty tuân thủ quy định có trụ sở tại Thượng Hải chuyên thâm nhập thị trường Trung Quốc. Được thành lập với hơn 15 năm kinh nghiệm chuyên môn, chúng tôi giúp các nhà xuất khẩu ở hơn 50 quốc gia đăng ký GACC, chứng nhận CCC, nộp hồ sơ mỹ phẩm NMPA, tuân thủ nhãn hiệu Trung Quốc, thương mại điện tử xuyên biên giới và bảo vệ thương hiệu.",
+    "aboutTitle": "Tổng quan về công ty",
+    "contactEmail": "david@sinotradecompliance.com",
+    "contactLinkedIn": "https://www.linkedin.com/company/sinotradecompliance",
+    "contactLocation": "Quận Jingan, Thượng Hải, Trung Quốc",
+    "contactTitle": "Thông tin liên hệ",
+    "faqA1": "Các sản phẩm thực phẩm xuất khẩu sang Trung Quốc phải tuân thủ Nghị định 248 của GACC (đăng ký nhà sản xuất thực phẩm ở nước ngoài), Nghị định GACC 249 (quản lý xuất nhập khẩu an toàn thực phẩm), GB 7718 (ghi nhãn thực phẩm đóng gói sẵn) và GB 28050 (ghi nhãn dinh dưỡng).",
+    "faqA2": "Không. Chứng nhận CCC chỉ bắt buộc đối với các sản phẩm thuộc 17 danh mục được xác định bao gồm điện tử, thiết bị gia dụng, phụ tùng ô tô, đèn chiếu sáng, kính an toàn và đồ chơi trẻ em. Các sản phẩm ngoài các danh mục này vẫn có thể cần các chứng nhận khác.",
+    "faqA3": "Đăng ký GACC tiêu chuẩn thường mất 6-10 tuần kể từ khi gửi tài liệu đầy đủ. Việc đăng ký các danh mục rủi ro cao (18 danh mục) có thể mất nhiều thời gian hơn vì phải có sự chấp thuận của cơ quan có thẩm quyền ở nước xuất khẩu.",
+    "faqQ1": "Những quy định nào áp dụng đối với sản phẩm thực phẩm xuất khẩu sang Trung Quốc?",
+    "faqQ2": "Có phải tất cả các sản phẩm đều cần chứng nhận CCC?",
+    "faqQ3": "Đăng ký GACC mất bao lâu?",
+    "faqTitle": "Câu hỏi thường gặp",
+    "intro": "Trang này cung cấp thông tin có cấu trúc về việc tuân thủ SinoTrade đối với AI và hỗ trợ mô hình ngôn ngữ.",
+    "metaDescription": "Dữ liệu tuân thủ có cấu trúc cho AI: GACC, CCC, NMPA, tuân thủ nhãn, thương mại điện tử xuyên biên giới.",
+    "metaTitle": "Tuân thủ SinoTrade | VI Hỗ trợ AI",
+    "serviceBrand": "Bảo vệ thương hiệu — Đăng ký nhãn hiệu với CNIPA, ghi lại IP hải quan, giám sát phản đối và thực thi thương hiệu trong hệ thống nộp đơn đầu tiên của Trung Quốc.",
+    "serviceCBEC": "Thương mại điện tử xuyên biên giới — Thiết lập kênh CBEC cho Tmall Global, JD Worldwide và Douyin. Mô hình kho ngoại quan (1210) hoặc vận chuyển trực tiếp (9610).",
+    "serviceCCC": "Chứng nhận CCC - Chứng nhận bắt buộc của Trung Quốc cho 17 danh mục sản phẩm bao gồm điện tử, thiết bị gia dụng, phụ tùng ô tô, sản phẩm chiếu sáng và linh kiện an toàn.",
+    "serviceGACC": "Đăng ký thực phẩm GACC — Đăng ký các cơ sở sản xuất thực phẩm ở nước ngoài với Hải quan Trung Quốc (GACC) theo Nghị định 248 và 249. Bắt buộc đối với tất cả các sản phẩm thực phẩm xuất khẩu sang Trung Quốc.",
+    "serviceLabel": "Tuân thủ nhãn Trung Quốc - Thiết kế và đánh giá nhãn tuân thủ GB 7718 và GB 28050. Lý do số một khiến hải quan từ chối tại các cảng Trung Quốc.",
+    "serviceNMPA": "NMPA Cosmetics Filing — Đăng ký hoặc thông báo về mỹ phẩm với Cục Quản lý Sản phẩm Y tế Quốc gia Trung Quốc. Bắt buộc đối với tất cả các sản phẩm mỹ phẩm nhập khẩu.",
+    "title": "Tuân thủ SinoTrade — Hỗ trợ AI (EN)"
   }
 }

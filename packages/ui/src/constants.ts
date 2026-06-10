@@ -65,6 +65,19 @@ export const LOCALE_NAMES: Record<string, string> = {
   si: '🇱🇰 සිංහල',
 };
 
+/**
+ * Locale → flag country code mapping for flagcdn.com images.
+ * Used for CSS flag sprites in LanguageSwitcher.
+ */
+export const LOCALE_FLAG_CODES: Record<string, string> = {
+  en: 'gb', zh: 'cn', es: 'es', fr: 'fr', de: 'de', ja: 'jp', pt: 'br', ru: 'ru',
+  ar: 'sa', ko: 'kr', it: 'it', nl: 'nl', tr: 'tr', vi: 'vn', id: 'id', th: 'th',
+  hi: 'in', pl: 'pl', sv: 'se', el: 'gr', cs: 'cz', ro: 'ro', hu: 'hu', fi: 'fi',
+  da: 'dk', no: 'no', uk: 'ua', bg: 'bg', hr: 'hr', sr: 'rs', sk: 'sk', sl: 'si',
+  ms: 'my', ka: 'ge', he: 'il', sw: 'ke', bn: 'bd', ca: 'ad', fa: 'ir', ur: 'pk',
+  ta: 'lk', af: 'za', sq: 'al', az: 'az', hy: 'am', be: 'by', ne: 'np', si: 'lk',
+};
+
 /** Browser language → locale matching (shared by dev middleware and CF worker) */
 export function matchBrowserLanguage(acceptLanguage: string | null, supported: string[] = LOCALES as unknown as string[], defaultLocale: string = DEFAULT_LOCALE): string {
   if (!acceptLanguage) return defaultLocale;

@@ -80,22 +80,22 @@
   "Services": {
     "heroTitle": "Shërbimet tona",
     "heroSubtitle": "Zgjidhje gjithëpërfshirëse të pajtueshmërisë së importit për çdo industri që hyn në tregun kinez.",
-    "gaccTitle": "Regjistrimi i Ushqimit GACC",
+    "gaccTitle": "Regjistrimi i ushqimit GACC - Pajtueshmëria e importit në Kinë | Pajtueshmëria e SinoTrade",
     "gaccSubtitle": "Plotësoni regjistrimin e Dekretit 248/249 të GACC për prodhuesit e ushqimeve dhe pijeve që eksportojnë në Kinë.",
     "gaccLink": "Mëso më shumë",
-    "labelTitle": "Pajtueshmëria me etiketën kineze",
+    "labelTitle": "Pajtueshmëria me etiketën kineze - Përputhshmëria e importit të Kinës | Pajtueshmëria e SinoTrade",
     "labelSubtitle": "Dizajni dhe rishikimi profesional i etiketës kineze që përmbush standardet GB 7718 dhe GB 28050.",
     "labelLink": "Mëso më shumë",
-    "cccTitle": "Certifikimi CCC",
+    "cccTitle": "Certifikimi CCC - Pajtueshmëria e importit të Kinës | Pajtueshmëria e SinoTrade",
     "cccSubtitle": "Konsulencë e Çertifikimit të Detyrueshëm të Kinës për elektronikë, pajisje, lodra dhe pjesë të automobilave.",
     "cccLink": "Mëso më shumë",
-    "cosmeticsTitle": "Regjistrimi i kozmetikës (NMPA)",
+    "cosmeticsTitle": "Regjistrimi i kozmetikës (NMPA) - Pajtueshmëria me importin e Kinës | Pajtueshmëria e SinoTrade",
     "cosmeticsSubtitle": "Regjistrimi dhe depozitimi i NMPA për kozmetikë të importuar - kategori të zakonshme dhe të veçanta.",
     "cosmeticsLink": "Mëso më shumë",
-    "ecommerceTitle": "E-commerce ndërkufitare",
+    "ecommerceTitle": "E-commerce ndërkufitare - Pajtueshmëria e importit të Kinës | Pajtueshmëria e SinoTrade",
     "ecommerceSubtitle": "Konfigurimi i tregtisë elektronike ndërkufitare nga skaji në fund - nga futja në platformë deri te pajtueshmëria operacionale.",
     "ecommerceLink": "Mëso më shumë",
-    "brandTitle": "Mbrojtja e markës",
+    "brandTitle": "Mbrojtja e markës - Pajtueshmëria e importit të Kinës | Pajtueshmëria e SinoTrade",
     "brandSubtitle": "Regjistrimi i markës tregtare, regjistrimi i IP-së doganore dhe pajtueshmëria me reklamat për të mbrojtur markën tuaj në Kinë.",
     "brandLink": "Mëso më shumë",
     "gaccIndustries": "Qumësht, mish, ushqim deti, furrë buke, pije, ushqime të shëndetshme dhe të gjitha 18 kategoritë e rregulluara nga GACC.",
@@ -154,7 +154,7 @@
     "cosmeticsPoints7": "Përditësime të vazhdueshme rregullatore dhe këshillim për pajtueshmërinë",
     "ecommercePoints7": "Përditësime të vazhdueshme rregullatore dhe këshillim për pajtueshmërinë",
     "brandPoints7": "Përditësime të vazhdueshme rregullatore dhe këshillim për pajtueshmërinë",
-    "metaTitle": "Shërbimet e pajtueshmërisë së importit të Kinës | GACC, CCC, NMPA & Label",
+    "metaTitle": "Shërbimet e pajtueshmërisë së importit të Kinës | GACC, CCC, NMPA & Label - Shërbimet e Pajtueshmërisë së Importit në Kinë | Pajtueshmëria e SinoTrade",
     "metaDescription": "Pajtueshmëria e importit të Kinës me një ndalesë: regjistrimi i ushqimit GACC, certifikimi CCC, depozitimi i kozmetikës NMPA, pajtueshmëria e etiketës dhe mbrojtja e markës. Ekspertizë mbi 15 vjet."
   },
   "ServiceGacc": {
@@ -516,7 +516,7 @@
     "premiumItems3": "Regjistrimi i kozmetikës NMPA (nëse është e aplikueshme)",
     "premiumItems4": "Vlerësimi i Pajtueshmërisë së të Dhënave të PIPL",
     "premiumItems5": "Këshillim i vazhdueshëm për pajtueshmërinë",
-    "metaTitle": "Paketat e Shërbimit të Pajtueshmërisë së Kinës | Çmimet dhe planet",
+    "metaTitle": "Paketat e Shërbimit të Pajtueshmërisë së Kinës | Çmimet dhe planet - Paketat e shërbimit të pajtueshmërisë | Pajtueshmëria e SinoTrade",
     "metaDescription": "Çmimi transparent për shërbimet e pajtueshmërisë së importit të Kinës. Regjistrimi i GACC, certifikimi KKK, paketat e dosjeve NMPA. Zgjidhni planin që i përshtatet nevojave tuaja."
   },
   "Faq": {
@@ -623,7 +623,7 @@
       "ecommerceName": "E-commerce ndërkufitare",
       "brandName": "Mbrojtja e markës"
     },
-    "metaTitle": "FAQ për pajtueshmërinë e importit të Kinës | Pyetje GACC, CCC, NMPA",
+    "metaTitle": "FAQ për pajtueshmërinë e importit të Kinës | Pyetjet GACC, CCC, NMPA - Pyetje dhe përgjigje për pajtueshmërinë e importit të Kinës | Pajtueshmëria e SinoTrade",
     "metaDescription": "Pyetjet e bëra shpesh në lidhje me pajtueshmërinë e importeve nga Kina. Regjistrimi GACC, certifikimi CCC, depozitimi i kozmetikës NMPA, kërkesat e etiketës të përgjigjura nga ekspertët."
   },
   "About": {
@@ -682,7 +682,7 @@
     "partners7": "🔬 Institutet Kërkimore",
     "partners8": "🤝 Shoqatat e Industrisë",
     "values5": "Përsosmëri - Ofrimi i zgjidhjeve të pajtueshmërisë me cilësinë më të lartë me vëmendje ndaj çdo detaji.",
-    "metaTitle": "Rreth Pajtueshmërisë SinoTrade | 15+ vjet Ekspertizë e Importit në Kinë",
+    "metaTitle": "Rreth Pajtueshmërisë SinoTrade | 15+ vite Ekspertizë e Importit në Kinë - Ekspertiza e Përputhshmërisë së Importit në Kinë | Pajtueshmëria e SinoTrade",
     "metaDescription": "Mësoni rreth Përputhshmërisë SinoTrade - partneri juaj i besuar për pajtueshmërinë e importit të Kinës. 15+ vite përvojë, 50+ vende të shërbyera. Takoni ekipin tonë të ekspertëve."
   },
   "ThankYou": {
@@ -753,14 +753,13 @@
     "next": "Tjetra",
     "pageInfo": "",
     "of": " nga ",
-    "metaTitle": "Insights i pajtueshmërisë së importit të Kinës | Udhëzues GACC, CCC, NMPA",
+    "metaTitle": "Vështrime të pajtueshmërisë së importit të Kinës | Udhëzues GACC, CCC, NMPA - Vështrime të pajtueshmërisë së importit të Kinës | Pajtueshmëria e SinoTrade",
     "metaDescription": "Udhëzues ekspertësh për pajtueshmërinë e importeve të Kinës. Këshilla për regjistrimin e GACC, përditësime të certifikimit të KKK-së, lajme për paraqitjen e NMPA, njohuri për pajtueshmërinë e etiketës. Qëndroni të informuar."
   },
   "OrganizationJsonLd": {
     "description": "Shërbimet e konsulencës rregullatore të importit me një ndalesë për Kinën — regjistrimi GACC, etiketimi kinez, certifikimi CCC, depozitimi i kozmetikës NMPA, tregtia elektronike ndërkufitare dhe mbrojtja e markës.",
     "contactType": "shërbimi ndaj klientit",
-    "availableLanguage": "Afrikaans, العربية, Azərbaycan, Беларуская, Български, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, anglisht, Español, فارسی, Suomi, Français, עברית, हिन्दी, Hrvatski, Magyar, Հայերեն, Bahasa Indonesia, Italiano, 日本語, ქართული, 한국어, Bahasa Melayu, नेपाली, Nederlands, Norsk, Polski, Português, Română, Русский, සිංහල, Slovenčina, Slovenščina, Shqip, Српски, Svenska, Kiswahili, தமிழ், ไทย, Türkçe, Українська, اردو, Tiếng Việt, 中文",
-    "sameAs": "[\"https://www.linkedin.com/company/sinotradecompliance\", \"https://www.crunchbase.com/organization/sinotradecompliance\", \"https://github.com/sinotradecompliance\"]"
+    "availableLanguage": "Afrikaans, العربية, Azərbaycan, Беларуская, Български, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, anglisht, Español, فارسی, Suomi, Français, עברית, हिन्दी, Hrvatski, Magyar, Հայերեն, Bahasa Indonesia, Italiano, 日本語, ქართული, 한국어, Bahasa Melayu, नेपाली, Nederlands, Norsk, Polski, Português, Română, Русский, සිංහල, Slovenčina, Slovenščina, Shqip, Српски, Svenska, Kiswahili, தமிழ், ไทย, Türkçe, Українська, اردو, Tiếng Việt, 中文"
   },
   "DefinitionSchema": {
     "gaccName": "GACC (Administrata e Përgjithshme e Doganave të Kinës)",
@@ -1144,7 +1143,7 @@
       "crossborderecommerce": "E-commerce ndërkufitare",
       "crossborderecommerceDesc": "Rregulloret CBEC, pajtueshmëria me platformën dhe optimizimi i taksave."
     },
-    "metaTitle": "China Import Compliance by Industry | GACC, CCC, NMPA Services",
+    "metaTitle": "Pajtueshmëria e importit të Kinës sipas industrisë | Shërbimet GACC, CCC, NMPA - Udhëzues për pajtueshmërinë e industrisë | Pajtueshmëria e SinoTrade",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
@@ -1313,5 +1312,30 @@
     "contactText": "Nëse keni ndonjë pyetje në lidhje me këtë Politikë të Privatësisë ose mënyrën se si ne i trajtojmë të dhënat tuaja, ju lutemi na kontaktoni:",
     "updateTitle": "Përditësimet e kësaj politike",
     "updateText": "Ne mund ta përditësojmë këtë politikë të privatësisë herë pas here. Çdo ndryshim do të postohet në këtë faqe me një datë të përditësuar të rishikimit."
+  },
+  "AiAssistance": {
+    "aboutContent": "SinoTrade Compliance është një firmë e pajtueshmërisë rregullatore me bazë në Shangai e specializuar në hyrjen në tregun e Kinës. Të themeluar me 15+ vite ekspertizë, ne ndihmojmë eksportuesit në 50+ vende të lundrojnë në regjistrimin GACC, certifikimin CCC, paraqitjen e kozmetikës NMPA, pajtueshmërinë me etiketën kineze, tregtinë elektronike ndërkufitare dhe mbrojtjen e markës.",
+    "aboutTitle": "Përmbledhje e kompanisë",
+    "contactEmail": "david@sinotradecompliance.com",
+    "contactLinkedIn": "https://www.linkedin.com/company/sinotradecompliance",
+    "contactLocation": "Distrikti Jingan, Shanghai, Kinë",
+    "contactTitle": "Informacioni i Kontaktit",
+    "faqA1": "Produktet ushqimore të eksportuara në Kinë duhet të jenë në përputhje me Dekretin 248 të GACC (regjistrimi i prodhuesve të ushqimit jashtë shtetit), Dekreti GACC 249 (menaxhimi i sigurisë ushqimore të importit dhe eksportit), GB 7718 (etiketimi i ushqimeve të parapaketuara) dhe GB 28050 (etiketimi i ushqimit).",
+    "faqA2": "Nr. Certifikimi CCC është i detyrueshëm vetëm për produktet në 17 kategori të përcaktuara, duke përfshirë elektronikë, pajisje shtëpiake, pjesë automobilistike, ndriçim, xhami sigurie dhe lodra për fëmijë. Produktet jashtë këtyre kategorive mund të kenë ende nevojë për certifikata të tjera.",
+    "faqA3": "Regjistrimi standard i GACC zakonisht zgjat 6-10 javë nga dorëzimi i dokumentacionit të plotë. Regjistrimi për kategoritë me rrezik të lartë (18 kategori) mund të zgjasë më shumë pasi kërkon miratimin nga autoriteti kompetent në vendin eksportues.",
+    "faqQ1": "Cilat rregulla zbatohen për produktet ushqimore të eksportuara në Kinë?",
+    "faqQ2": "A kanë nevojë të gjitha produktet për certifikim CCC?",
+    "faqQ3": "Sa kohë zgjat regjistrimi i GACC?",
+    "faqTitle": "Pyetjet e bëra më shpesh",
+    "intro": "Kjo faqe ofron informacion të strukturuar në lidhje me Përputhshmërinë SinoTrade për AI dhe ndihmën e modelit gjuhësor.",
+    "metaDescription": "Të dhëna të strukturuara të pajtueshmërisë për AI: GACC, CCC, NMPA, pajtueshmëria me etiketat, tregtia elektronike ndërkufitare.",
+    "metaTitle": "Pajtueshmëria SinoTrade | EN AI-Assistance",
+    "serviceBrand": "Mbrojtja e markës - Regjistrimi i markës tregtare me CNIPA, regjistrimi i IP-së doganore, monitorimi i kundërshtimit dhe zbatimi i markës në sistemin e parë në Kinë.",
+    "serviceCBEC": "E-Commerce ndërkufitare - konfigurimi i kanalit CBEC për Tmall Global, JD Worldwide dhe Douyin. Modele të depove të lidhura (1210) ose transportit direkt (9610).",
+    "serviceCCC": "Certifikimi CCC — Certifikimi i detyrueshëm i Kinës për 17 kategori produktesh, duke përfshirë elektronikën, pajisjet shtëpiake, pjesët e automobilave, produktet e ndriçimit dhe komponentët e sigurisë.",
+    "serviceGACC": "Regjistrimi i ushqimit GACC - Regjistroni objektet e prodhimit të ushqimit jashtë shtetit me Doganën e Kinës (GACC) sipas Dekreteve 248 dhe 249. E detyrueshme për të gjitha produktet ushqimore të eksportuara në Kinë.",
+    "serviceLabel": "Përputhshmëria e etiketës kineze — Dizajni dhe rishikimi i etiketës në përputhje me GB 7718 dhe GB 28050. Arsyeja numër një për refuzimin e doganave në portet kineze.",
+    "serviceNMPA": "Regjistrimi i kozmetikës NMPA - Regjistrimi ose njoftimi i kozmetikës me Administratën Kombëtare të Produkteve Mjekësore të Kinës. Kërkohet për të gjitha produktet kozmetike të importuara.",
+    "title": "Përputhshmëria e SinoTrade - Asistenca AI (EN)"
   }
 }

@@ -1,6 +1,6 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
-import { Footer, SearchProvider, CookieConsent, ActionDock, TradeTranslationProvider, OrganizationJsonLd, buildAlternates, sharedOpenGraph, sharedTwitter, AuthProvider, CfAnalytics, AutoBreadcrumb } from '@trade/ui';
+import { Footer, SearchProvider, CookieConsent, ActionDock, TradeTranslationProvider, OrganizationJsonLd, sharedOpenGraph, sharedTwitter, AuthProvider, CfAnalytics, AutoBreadcrumb } from '@trade/ui';
 import { getMessages } from '@/lib/messages';
 import { locales, defaultLocale } from '@/i18n/routing';
 import '../globals.css';
@@ -11,19 +11,14 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'Blog' });
+  const validLocale = locales.includes(locale as any) ? locale : defaultLocale;
 
-  const title = t('metaTitle') || t('title') || 'China Import Compliance Blog | SinoTrade Compliance';
-  const description = t('metaDescription') || t('subtitle') || 'Expert guides on China import compliance. GACC registration, CCC certification, NMPA cosmetics filing, and cross-border e-commerce.';
-  const path = '/blog/';
-  const alternates = buildAlternates(locale, [...locales], path);
 
+  const title = 'China Import Compliance';
+  const description = 'China import compliance guides: GACC registration, CCC certification, NMPA cosmetics filing, and cross-border e-commerce.';
   return {
     title,
     description,
-    alternates,
-    openGraph: sharedOpenGraph({ title, description, locale, url: alternates.canonical }),
-    twitter: sharedTwitter({ title, description }),
   };
 }
 
@@ -35,22 +30,23 @@ export default async function Layout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const messages = getMessages(locale);
+  const validLocale = locales.includes(locale as any) ? locale : defaultLocale;
+  const messages = getMessages(validLocale);
 
   return (
-    <html lang={locale} dir={locale === 'ar' || locale === 'he' || locale === 'fa' || locale === 'ur' ? 'rtl' : 'ltr'}>
+    <html lang={validLocale} dir={validLocale === 'ar' || validLocale === 'he' || validLocale === 'fa' || validLocale === 'ur' ? 'rtl' : 'ltr'}>
       <head>
         {/* Cloudflare Web Analytics */}
         <CfAnalytics />
       </head>
       <body className="min-h-screen flex flex-col pb-16 md:pb-0 antialiased">
-        <NextIntlClientProvider messages={messages} locale={locale} timeZone="Asia/Shanghai">
-          <TradeTranslationProvider messages={messages} locale={locale}>
+        <NextIntlClientProvider messages={messages} locale={validLocale} timeZone="Asia/Shanghai">
+          <TradeTranslationProvider messages={messages} locale={validLocale}>
             <OrganizationJsonLd />
-          <AuthProvider logoutRedirect={`/${locale}/c/login`}>
-            <SearchProvider freeCheckHref="/{locale}/c/" loginHref={`/${locale}/c/login`} />
+          <AuthProvider logoutRedirect={`/${validLocale}/c/login`}>
+            <SearchProvider freeCheckHref="/{locale}/c/" loginHref={`/${validLocale}/c/login`} />
                         <main className="flex-1">
-              <AutoBreadcrumb locale={locale} />
+              <AutoBreadcrumb locale={validLocale} />
               {children}
             </main>
             <Footer />

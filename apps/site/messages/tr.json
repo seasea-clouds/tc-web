@@ -80,22 +80,22 @@
   "Services": {
     "heroTitle": "Hizmetlerimiz",
     "heroSubtitle": "Çin pazarına giren her sektör için kapsamlı ithalat uyumluluğu çözümleri.",
-    "gaccTitle": "GACC Gıda Kaydı",
+    "gaccTitle": "GACC Gıda Kaydı - Çin İthalat Uyumluluğu | SinoTrade Uyumluluğu",
     "gaccSubtitle": "Çin'e ihracat yapan yiyecek ve içecek üreticileri için GACC Kararnamesi 248/249 kaydını tamamlayın.",
     "gaccLink": "Daha fazla bilgi edin",
-    "labelTitle": "Çin Etiket Uyumluluğu",
+    "labelTitle": "Çin Etiket Uyumluluğu - Çin İthalat Uyumluluğu | SinoTrade Uyumluluğu",
     "labelSubtitle": "GB 7718 ve GB 28050 standartlarını karşılayan profesyonel Çin etiket tasarımı ve incelemesi.",
     "labelLink": "Daha fazla bilgi edin",
-    "cccTitle": "CCC Sertifikası",
+    "cccTitle": "CCC Sertifikası - Çin İthalat Uyumluluğu | SinoTrade Uyumluluğu",
     "cccSubtitle": "Elektronik, ev aletleri, oyuncaklar ve otomotiv parçaları için Çin Zorunlu Sertifikasyon danışmanlığı.",
     "cccLink": "Daha fazla bilgi edin",
-    "cosmeticsTitle": "Kozmetik Dosyalama (NMPA)",
+    "cosmeticsTitle": "Kozmetik Dosyalama (NMPA) - Çin İthalat Uyumluluğu | SinoTrade Uyumluluğu",
     "cosmeticsSubtitle": "İthal kozmetikler için NMPA kaydı ve dosyalanması - sıradan ve özel kullanım kategorileri.",
     "cosmeticsLink": "Daha fazla bilgi edin",
-    "ecommerceTitle": "Sınır ötesi E-ticaret",
+    "ecommerceTitle": "Sınır Ötesi E-ticaret - Çin İthalat Uyumluluğu | SinoTrade Uyumluluğu",
     "ecommerceSubtitle": "Platforma katılımdan operasyonel uyumluluğa kadar uçtan uca sınır ötesi e-ticaret kurulumu.",
     "ecommerceLink": "Daha fazla bilgi edin",
-    "brandTitle": "Marka Koruması",
+    "brandTitle": "Marka Koruması - Çin İthalat Uyumluluğu | SinoTrade Uyumluluğu",
     "brandSubtitle": "Markanızı Çin'de korumak için ticari marka kaydı, gümrük IP başvurusu ve reklam uyumluluğu.",
     "brandLink": "Daha fazla bilgi edin",
     "gaccIndustries": "Süt ürünleri, et, deniz ürünleri, fırıncılık, içecekler, sağlıklı gıdalar ve GACC tarafından düzenlenen 18 kategorinin tamamı.",
@@ -154,7 +154,7 @@
     "cosmeticsPoints7": "Sürekli mevzuat güncellemeleri ve uyumluluk danışmanlığı",
     "ecommercePoints7": "Sürekli mevzuat güncellemeleri ve uyumluluk danışmanlığı",
     "brandPoints7": "Sürekli mevzuat güncellemeleri ve uyumluluk danışmanlığı",
-    "metaTitle": "Çin İthalat Uyumluluk Hizmetleri | GACC, CCC, NMPA ve Etiket",
+    "metaTitle": "Çin İthalat Uyumluluk Hizmetleri | GACC, CCC, NMPA ve Etiket - Çin İthalat Uyumluluk Hizmetleri | SinoTrade Uyumluluğu",
     "metaDescription": "Tek noktadan Çin ithalat uyumluluğu: GACC gıda kaydı, CCC sertifikası, NMPA kozmetik dosyalama, etiket uyumluluğu ve marka koruması. 15+ yıllık uzmanlık."
   },
   "ServiceGacc": {
@@ -516,7 +516,7 @@
     "premiumItems3": "NMPA Kozmetik Dosyalaması (varsa)",
     "premiumItems4": "PIPL Veri Uygunluğu Değerlendirmesi",
     "premiumItems5": "Sürekli Uyum Danışmanlığı",
-    "metaTitle": "Çin Uyumluluk Hizmet Paketleri | Fiyatlandırma ve Planlar",
+    "metaTitle": "Çin Uyumluluk Hizmet Paketleri | Fiyatlandırma ve Planlar - Uyumluluk Hizmet Paketleri | SinoTrade Uyumluluğu",
     "metaDescription": "Çin ithalat uyumluluk hizmetleri için şeffaf fiyatlandırma. GACC kaydı, CCC sertifikası, NMPA dosyalama paketleri. İhtiyaçlarınıza uygun planı seçin."
   },
   "Faq": {
@@ -623,7 +623,7 @@
       "ecommerceName": "Sınır ötesi E-ticaret",
       "brandName": "Marka Koruması"
     },
-    "metaTitle": "Çin İthalat Uyumluluğu SSS | GACC, CCC, NMPA Soruları",
+    "metaTitle": "Çin İthalat Uyumluluğu SSS | GACC, CCC, NMPA Soruları - Çin İthalat Uyumluluğu Soru-Cevap | SinoTrade Uyumluluğu",
     "metaDescription": "Çin'in ithalat uyumluluğu hakkında sık sorulan sorular. GACC kaydı, CCC sertifikası, NMPA kozmetik dosyalaması, etiket gereklilikleri uzmanlar tarafından yanıtlandı."
   },
   "About": {
@@ -682,7 +682,7 @@
     "partners7": "🔬 Araştırma Enstitüleri",
     "partners8": "🤝 Sanayi Dernekleri",
     "values5": "Mükemmellik — Her ayrıntıya dikkat edilerek en yüksek kalitede uyumluluk çözümleri sunmak.",
-    "metaTitle": "SinoTrade Uyumluluğu Hakkında | 15+ Yıllık Çin İthalat Uzmanlığı",
+    "metaTitle": "SinoTrade Uyumluluğu Hakkında | 15+ Yıllık Çin İthalat Uzmanlığı - Çin İthalat Uyumluluk Uzmanlığı | SinoTrade Uyumluluğu",
     "metaDescription": "Çin ithalat uyumluluğu konusunda güvenilir ortağınız olan SinoTrade Uyumluluğu hakkında bilgi edinin. 15 yılı aşkın deneyim, 50'den fazla ülkeye hizmet. Uzman ekibimizle tanışın."
   },
   "ThankYou": {
@@ -753,14 +753,13 @@
     "next": "Sonraki",
     "pageInfo": "",
     "of": " / ",
-    "metaTitle": "Çin İthalat Uyumluluğu Insightsu | GACC, CCC, NMPA Kılavuzları",
+    "metaTitle": "Çin İthalat Uyumluluğuna İlişkin Bilgiler | GACC, CCC, NMPA Kılavuzları - Çin İthalat Uyumluluğu Analizleri | SinoTrade Uyumluluğu",
     "metaDescription": "Çin'in ithalat uyumluluğuna ilişkin uzman kılavuzları. GACC kayıt ipuçları, CCC sertifikasyon güncellemeleri, NMPA dosyalama haberleri, etiket uyumluluğu bilgileri. Haberdar olun."
   },
   "OrganizationJsonLd": {
     "description": "Çin için tek noktadan ithalat düzenleme danışmanlık hizmetleri - GACC kaydı, Çince etiketleme, CCC sertifikası, NMPA kozmetik dosyalama, sınır ötesi e-ticaret ve marka koruması.",
     "contactType": "müşteri hizmetleri",
-    "availableLanguage": "Afrikaans, العربية, Azərbaycan, Беларуская, Български, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, İngilizce, Español, فارسی, Suomi, Français, עברית, हिन्दी, Hrvatski, Magyar, Հայերեն, Bahasa Indonesia, Italiano, 日本語, ქართული, 한국어, Bahasa Melayu, नेपाली, Nederlands, Norsk, Polski, Português, Română, Русский, සිංහල, Slovenčina, Slovenščina, Shqip, Српски, Svenska, Kiswahili, தமிழ், ไทย, Türkçe, Українська, اردو, Tiếng Việt, 中文",
-    "sameAs": "[\"https://www.linkedin.com/company/sinotradecompliance\", \"https://www.crunchbase.com/organization/sinotradecompliance\", \"https://github.com/sinotradecompliance\"]"
+    "availableLanguage": "Afrikaans, العربية, Azərbaycan, Беларуская, Български, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, İngilizce, Español, فارسی, Suomi, Français, עברית, हिन्दी, Hrvatski, Magyar, Հայերեն, Bahasa Indonesia, Italiano, 日本語, ქართული, 한국어, Bahasa Melayu, नेपाली, Nederlands, Norsk, Polski, Português, Română, Русский, සිංහල, Slovenčina, Slovenščina, Shqip, Српски, Svenska, Kiswahili, தமிழ், ไทย, Türkçe, Українська, اردو, Tiếng Việt, 中文"
   },
   "DefinitionSchema": {
     "gaccName": "GACC (Çin Gümrük Genel İdaresi)",
@@ -1144,7 +1143,7 @@
       "crossborderecommerce": "Sınır ötesi E-ticaret",
       "crossborderecommerceDesc": "CBEC düzenlemeleri, platform uyumluluğu ve vergi optimizasyonu."
     },
-    "metaTitle": "China Import Compliance by Industry | GACC, CCC, NMPA Services",
+    "metaTitle": "Sektörlere Göre Çin İthalat Uyumluluğu | GACC, CCC, NMPA Hizmetleri - Sektör Uyumluluk Kılavuzları | SinoTrade Uyumluluğu",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
@@ -1313,5 +1312,30 @@
     "contactText": "Bu Gizlilik Politikası veya verilerinizi nasıl işlediğimiz hakkında herhangi bir sorunuz varsa lütfen bizimle iletişime geçin:",
     "updateTitle": "Bu Politikadaki Güncellemeler",
     "updateText": "Bu Gizlilik Politikasını zaman zaman güncelleyebiliriz. Herhangi bir değişiklik güncellenmiş revizyon tarihi ile bu sayfada yayınlanacaktır."
+  },
+  "AiAssistance": {
+    "aboutContent": "SinoTrade Compliance, Çin pazarına giriş konusunda uzmanlaşmış, Şangay merkezli bir mevzuata uygunluk firmasıdır. 15 yıldan fazla deneyimle kurulan, 50'den fazla ülkedeki ihracatçıların GACC tescili, CCC sertifikasyonu, NMPA kozmetik dosyalama, Çin etiket uyumluluğu, sınır ötesi e-ticaret ve marka koruma konularında gezinmelerine yardımcı oluyoruz.",
+    "aboutTitle": "Şirkete Genel Bakış",
+    "contactEmail": "david@sinotradecompliance.com",
+    "contactLinkedIn": "https://www.linkedin.com/company/sinotradecompliance",
+    "contactLocation": "Jingan Bölgesi, Şangay, Çin",
+    "contactTitle": "İletişim Bilgileri",
+    "faqA1": "Çin'e ihraç edilen gıda ürünleri, GACC Kararnamesi 248 (yurtdışı gıda üreticilerinin tescili), GACC Kararnamesi 249 (ithalat ve ihracat gıda güvenliği yönetimi), GB 7718 (hazır ambalajlı gıdaların etiketlenmesi) ve GB 28050 (beslenme etiketlemesi) ile uyumlu olmalıdır.",
+    "faqA2": "Hayır. CCC sertifikası yalnızca elektronik, ev aletleri, otomotiv parçaları, aydınlatma, emniyet camı ve çocuk oyuncakları dahil olmak üzere 17 tanımlanmış kategorideki ürünler için zorunludur. Bu kategorilerin dışındaki ürünlerin yine de başka sertifikalara ihtiyacı olabilir.",
+    "faqA3": "Standart GACC kaydı genellikle belgelerin tamamının gönderilmesinden itibaren 6-10 hafta sürer. Yüksek risk kategorileri (18 kategori) için kayıt, ihracatçı ülkedeki yetkili makamın onayını gerektirdiğinden daha uzun sürebilir.",
+    "faqQ1": "Çin'e ihraç edilen gıda ürünlerine hangi düzenlemeler uygulanıyor?",
+    "faqQ2": "Tüm ürünlerin CCC sertifikasına ihtiyacı var mı?",
+    "faqQ3": "GACC kaydı ne kadar sürer?",
+    "faqTitle": "Sıkça Sorulan Sorular",
+    "intro": "Bu sayfada yapay zeka için SinoTrade Uyumluluğu ve dil modeli yardımı hakkında yapılandırılmış bilgiler sağlanmaktadır.",
+    "metaDescription": "Yapay zeka için yapılandırılmış uyumluluk verileri: GACC, CCC, NMPA, etiket uyumluluğu, sınır ötesi e-ticaret.",
+    "metaTitle": "SinoTrade Uyumluluğu | TR Yapay Zeka Yardımı",
+    "serviceBrand": "Marka Koruması — CNIPA ile ticari marka kaydı, gümrük IP kayıtları, itiraz izleme ve Çin'de ilk dosyalama sisteminde marka uygulaması.",
+    "serviceCBEC": "Sınır Ötesi E-Ticaret — Tmall Global, JD Worldwide ve Douyin için CBEC kanal kurulumu. Gümrüklü antrepo (1210) veya direkt sevkiyat (9610) modelleri.",
+    "serviceCCC": "CCC Sertifikasyonu — Elektronik, ev aletleri, otomotiv parçaları, aydınlatma ürünleri ve güvenlik bileşenleri dahil 17 ürün kategorisi için Çin Zorunlu Sertifikasyonu.",
+    "serviceGACC": "GACC Gıda Kaydı — Denizaşırı gıda üretim tesislerini 248 ve 249 sayılı Kararlar kapsamında Çin Gümrüğüne (GACC) kaydedin. Çin'e ihraç edilen tüm gıda ürünleri için zorunludur.",
+    "serviceLabel": "Çin Etiket Uyumluluğu — GB 7718 ve GB 28050 uyumlu etiket tasarımı ve incelemesi. Çin limanlarında gümrük reddinin bir numaralı nedeni.",
+    "serviceNMPA": "NMPA Kozmetik Dosyalaması — Kozmetiklerin Çin Ulusal Tıbbi Ürünler İdaresi'ne tescili veya bildirimi. İthal edilen tüm kozmetik ürünler için zorunludur.",
+    "title": "SinoTrade Uyumluluğu — Yapay Zeka Yardımı (EN)"
   }
 }

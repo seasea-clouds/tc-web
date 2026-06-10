@@ -1,6 +1,6 @@
 
 > @trade/blog@0.1.0 build
-> npm run lint && node ../../packages/scripts/build-search-index.mjs --out-dir=apps/blog/public && rm -rf .next/cache && next build && node ../../packages/scripts/check-hardcoded.mjs --ci && node ../../packages/scripts/check-translations.mjs --short && node ../../packages/scripts/clean-rsc.js
+> npm run lint && node ../../packages/scripts/build-search-index.mjs --out-dir=apps/blog/public && rm -rf .next/cache && node ../../packages/scripts/check-seo-patterns.mjs --ci && next build && node ../../packages/scripts/check-hardcoded-domain.mjs --ci && node ../../packages/scripts/check-hreflang.mjs --dir=out --ci && node ../../packages/scripts/check-hardcoded.mjs --ci && node ../../packages/scripts/check-console.mjs --ci && node ../../packages/scripts/check-llms.mjs --dir=public --ci && node ../../packages/scripts/check-rtl.mjs --ci && node ../../packages/scripts/check-translations.mjs --short && node ../../packages/scripts/clean-rsc.js
 
 
 > @trade/blog@0.1.0 lint
@@ -20,4 +20,4 @@ npm error path /root/projects/trade/web/apps/blog
 npm error workspace @trade/blog@0.1.0
 npm error location /root/projects/trade/web/apps/blog
 npm error command failed
-npm error command sh -c npm run lint && node ../../packages/scripts/build-search-index.mjs --out-dir=apps/blog/public && rm -rf .next/cache && next build && node ../../packages/scripts/check-hardcoded.mjs --ci && node ../../packages/scripts/check-translations.mjs --short && node ../../packages/scripts/clean-rsc.js
+npm error command sh -c npm run lint && node ../../packages/scripts/build-search-index.mjs --out-dir=apps/blog/public && rm -rf .next/cache && node ../../packages/scripts/check-seo-patterns.mjs --ci && next build && node ../../packages/scripts/check-hardcoded-domain.mjs --ci && node ../../packages/scripts/check-hreflang.mjs --dir=out --ci && node ../../packages/scripts/check-hardcoded.mjs --ci && node ../../packages/scripts/check-console.mjs --ci && node ../../packages/scripts/check-llms.mjs --dir=public --ci && node ../../packages/scripts/check-rtl.mjs --ci && node ../../packages/scripts/check-translations.mjs --short && node ../../packages/scripts/clean-rsc.js

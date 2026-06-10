@@ -759,8 +759,7 @@
   "OrganizationJsonLd": {
     "description": "One-stop import regulatory consulting services for China — GACC registration, Chinese labeling, CCC certification, NMPA cosmetics filing, cross-border e-commerce, and brand protection.",
     "contactType": "customer service",
-    "availableLanguage": "Afrikaans, العربية, Azərbaycan, Беларуская, Български, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, English, Español, فارسی, Suomi, Français, עברית, हिन्दी, Hrvatski, Magyar, Հայերեն, Bahasa Indonesia, Italiano, 日本語, ქართული, 한국어, Bahasa Melayu, नेपाली, Nederlands, Norsk, Polski, Português, Română, Русский, සිංහල, Slovenčina, Slovenščina, Shqip, Српски, Svenska, Kiswahili, தமிழ், ไทย, Türkçe, Українська, اردو, Tiếng Việt, 中文",
-    "sameAs": "[\"https://www.linkedin.com/company/sinotradecompliance\", \"https://www.crunchbase.com/organization/sinotradecompliance\", \"https://github.com/sinotradecompliance\"]"
+    "availableLanguage": "Afrikaans, العربية, Azərbaycan, Беларуская, Български, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, English, Español, فارسی, Suomi, Français, עברית, हिन्दी, Hrvatski, Magyar, Հայերեն, Bahasa Indonesia, Italiano, 日本語, ქართული, 한국어, Bahasa Melayu, नेपाली, Nederlands, Norsk, Polski, Português, Română, Русский, සිංහල, Slovenčina, Slovenščina, Shqip, Српски, Svenska, Kiswahili, தமிழ், ไทย, Türkçe, Українська, اردو, Tiếng Việt, 中文"
   },
   "DefinitionSchema": {
     "gaccName": "GACC (General Administration of Customs of China)",
@@ -1313,5 +1312,30 @@
     "contactText": "If you have any questions about this Privacy Policy or how we handle your data, please contact us:",
     "updateTitle": "Updates to This Policy",
     "updateText": "We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date."
+  },
+  "AiAssistance": {
+    "metaTitle": "SinoTrade Compliance | China Import Compliance Data for AI",
+    "metaDescription": "Structured data for AI about SinoTrade Compliance: China import regulations, GACC registration, CCC certification, NMPA cosmetics filing, label compliance, cross-border e-commerce.",
+    "title": "SinoTrade Compliance — AI-Assistance",
+    "intro": "This page provides structured information about SinoTrade Compliance for AI and language model assistance.",
+    "aboutTitle": "Company Overview",
+    "aboutContent": "SinoTrade Compliance is a Shanghai-based regulatory compliance firm specializing in China market entry. Founded with 15+ years of expertise, we help exporters in 50+ countries navigate GACC registration, CCC certification, NMPA cosmetics filing, Chinese label compliance, cross-border e-commerce, and brand protection.",
+    "servicesTitle": "Services",
+    "serviceGACC": "GACC Food Registration — Register overseas food manufacturing facilities with China Customs (GACC) under Decrees 248 and 249. Mandatory for all food products exported to China.",
+    "serviceCCC": "CCC Certification — China Compulsory Certification for 17 product categories including electronics, household appliances, automotive parts, lighting products, and safety components.",
+    "serviceLabel": "Chinese Label Compliance — GB 7718 and GB 28050 compliant label design and review. The number one reason for customs rejection at Chinese ports.",
+    "serviceNMPA": "NMPA Cosmetics Filing — Registration or notification of cosmetics with China National Medical Products Administration. Required for all imported cosmetics products.",
+    "serviceCBEC": "Cross-Border E-Commerce — CBEC channel setup for Tmall Global, JD Worldwide, and Douyin. Bonded warehouse (1210) or direct shipping (9610) models.",
+    "serviceBrand": "Brand Protection — Trademark registration with CNIPA, customs IP recordal, opposition monitoring, and brand enforcement in China first-to-file system.",
+    "faqTitle": "Frequently Asked Questions",
+    "faqQ1": "What regulations apply to food products exported to China?",
+    "faqA1": "Food products exported to China must comply with GACC Decree 248 (registration of overseas food manufacturers), GACC Decree 249 (import and export food safety management), GB 7718 (labeling of prepackaged foods), and GB 28050 (nutrition labeling).",
+    "faqQ2": "Do all products need CCC certification?",
+    "faqA2": "No. CCC certification is mandatory only for products in 17 defined categories including electronics, household appliances, automotive parts, lighting, safety glass, and children toys. Products outside these categories may still need other certifications.",
+    "faqQ3": "How long does GACC registration take?",
+    "faqA3": "Standard GACC registration typically takes 6-10 weeks from submission of complete documentation. Registration for high-risk categories (18 categories) may take longer as it requires approval from the competent authority in the exporting country.",
+    "contactTitle": "Contact Information",
+    "contactEmail": "david@sinotradecompliance.com",
+    "contactLocation": "Jingan District, Shanghai, China"
   }
 }

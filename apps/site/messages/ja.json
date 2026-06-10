@@ -80,22 +80,22 @@
   "Services": {
     "heroTitle": "当社のサービス",
     "heroSubtitle": "中国市場に参入するあらゆる業界向けの包括的な輸入コンプライアンス ソリューション。",
-    "gaccTitle": "GACC食品登録",
+    "gaccTitle": "GACC 食品登録 - 中国輸入コンプライアンス |中国貿易のコンプライアンス",
     "gaccSubtitle": "中国に輸出する食品および飲料メーカーの GACC 政令 248/249 登録を完了します。",
     "gaccLink": "詳細を見る",
-    "labelTitle": "中国ラベルへの準拠",
+    "labelTitle": "中国ラベルのコンプライアンス - 中国輸入コンプライアンス |中国貿易のコンプライアンス",
     "labelSubtitle": "GB 7718 および GB 28050 規格を満たす専門的な中国語ラベルのデザインとレビュー。",
     "labelLink": "詳細を見る",
-    "cccTitle": "CCC認証",
+    "cccTitle": "CCC 認証 - 中国輸入コンプライアンス |中国貿易のコンプライアンス",
     "cccSubtitle": "電子機器、電化製品、玩具、自動車部品の中国強制認証コンサルティング。",
     "cccLink": "詳細を見る",
-    "cosmeticsTitle": "化粧品申請 (NMPA)",
+    "cosmeticsTitle": "化粧品申請 (NMPA) - 中国輸入コンプライアンス |中国貿易のコンプライアンス",
     "cosmeticsSubtitle": "輸入化粧品の NMPA 登録と申請 - 一般用途および特殊用途のカテゴリー。",
     "cosmeticsLink": "詳細を見る",
-    "ecommerceTitle": "越境電子商取引",
+    "ecommerceTitle": "越境電子商取引 - 中国輸入コンプライアンス |中国貿易のコンプライアンス",
     "ecommerceSubtitle": "プラットフォームのオンボーディングから運用コンプライアンスまで、エンドツーエンドの越境電子商取引セットアップ。",
     "ecommerceLink": "詳細を見る",
-    "brandTitle": "ブランド保護",
+    "brandTitle": "ブランド保護 - 中国輸入コンプライアンス |中国貿易のコンプライアンス",
     "brandSubtitle": "中国でのブランドを保護するための商標登録、税関への知的財産申請、広告コンプライアンス。",
     "brandLink": "詳細を見る",
     "gaccIndustries": "乳製品、肉、魚介類、ベーカリー、飲料、健康食品、および GACC が規制する 18 のカテゴリすべて。",
@@ -154,7 +154,7 @@
     "cosmeticsPoints7": "継続的な規制の更新とコンプライアンスに関する勧告",
     "ecommercePoints7": "継続的な規制の更新とコンプライアンスに関する勧告",
     "brandPoints7": "継続的な規制の更新とコンプライアンスに関する勧告",
-    "metaTitle": "中国輸入コンプライアンスサービス | GACC、CCC、NMPA、ラベル",
+    "metaTitle": "中国輸入コンプライアンスサービス | GACC、CCC、NMPA、ラベル - 中国輸入コンプライアンス サービス |中国貿易のコンプライアンス",
     "metaDescription": "ワンストップの中国輸入コンプライアンス: GACC 食品登録、CCC 認証、NMPA 化粧品申請、ラベルコンプライアンスとブランド保護。 15年以上の専門知識。"
   },
   "ServiceGacc": {
@@ -516,7 +516,7 @@
     "premiumItems3": "NMPA化粧品申請（該当する場合）",
     "premiumItems4": "PIPLデータコンプライアンス評価",
     "premiumItems5": "継続的なコンプライアンス勧告",
-    "metaTitle": "中国コンプライアンス サービス パッケージ |価格とプラン",
+    "metaTitle": "中国コンプライアンス サービス パッケージ |価格とプラン - コンプライアンス サービス パッケージ |中国貿易のコンプライアンス",
     "metaDescription": "中国輸入コンプライアンスサービスの透明性のある価格設定。 GACC 登録、CCC 認証、NMPA 申請パッケージ。ニーズに合ったプランをお選びください。"
   },
   "Faq": {
@@ -623,7 +623,7 @@
       "ecommerceName": "越境電子商取引",
       "brandName": "ブランド保護"
     },
-    "metaTitle": "中国輸入コンプライアンスに関するよくある質問 | GACC、CCC、NMPA に関する質問",
+    "metaTitle": "中国輸入コンプライアンスに関するよくある質問 | GACC、CCC、NMPA の質問 - 中国輸入コンプライアンス Q&A |中国貿易のコンプライアンス",
     "metaDescription": "中国輸入コンプライアンスに関するよくある質問。 GACC 登録、CCC 認証、NMPA 化粧品申請、専門家によるラベル要件への回答。"
   },
   "About": {
@@ -682,7 +682,7 @@
     "partners7": "🔬 研究機関",
     "partners8": "🤝 業界団体",
     "values5": "卓越性 — あらゆる細部に配慮した最高品質のコンプライアンス ソリューションを提供します。",
-    "metaTitle": "SinoTrade コンプライアンスについて | 15年以上の中国輸入の専門知識",
+    "metaTitle": "SinoTrade コンプライアンスについて | 15 年以上の中国輸入に関する専門知識 - 中国輸入コンプライアンスの専門知識 |中国貿易のコンプライアンス",
     "metaDescription": "中国輸入コンプライアンスの信頼できるパートナーである SinoTrade Compliance について学びましょう。 15 年以上の経験、50 か国以上でサービスを提供。当社の専門家チームをご紹介します。"
   },
   "ThankYou": {
@@ -753,14 +753,13 @@
     "next": "次へ",
     "pageInfo": "",
     "of": " / ",
-    "metaTitle": "中国輸入コンプライアンスインサイト | GACC、CCC、NMPA ガイド",
+    "metaTitle": "中国輸入コンプライアンスに関する洞察 | GACC、CCC、NMPA ガイド - 中国輸入コンプライアンスに関する洞察 |中国貿易のコンプライアンス",
     "metaDescription": "中国輸入コンプライアンスに関する専門家ガイド。 GACC 登録のヒント、CCC 認証の最新情報、NMPA 申請ニュース、ラベル コンプライアンスの洞察。常に最新情報を入手してください。"
   },
   "OrganizationJsonLd": {
     "description": "中国向けのワンストップ輸入規制コンサルティング サービス - GACC 登録、中国ラベル、CCC 認証、NMPA 化粧品申請、越境電子商取引、ブランド保護。",
     "contactType": "顧客サービス",
-    "availableLanguage": "Afrikaans, العربية, Azərbaycan, Беларуская, Български, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, 英語, Español, فارسی, Suomi, Français, עברית, हिन्दी, Hrvatski, Magyar, Հայերեն, Bahasa Indonesia, Italiano, 日本語, ქართული, 한국어, Bahasa Melayu, नेपाली, Nederlands, Norsk, Polski, Português, Română, Русский, සිංහල, Slovenčina, Slovenščina, Shqip, Српски, Svenska, Kiswahili, தமிழ், ไทย, Türkçe, Українська, اردو, Tiếng Việt, 中文",
-    "sameAs": "[\"https://www.linkedin.com/company/sinotradecompliance\", \"https://www.crunchbase.com/organization/sinotradecompliance\", \"https://github.com/sinotradecompliance\"]"
+    "availableLanguage": "Afrikaans, العربية, Azərbaycan, Беларуская, Български, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, 英語, Español, فارسی, Suomi, Français, עברית, हिन्दी, Hrvatski, Magyar, Հայերեն, Bahasa Indonesia, Italiano, 日本語, ქართული, 한국어, Bahasa Melayu, नेपाली, Nederlands, Norsk, Polski, Português, Română, Русский, සිංහල, Slovenčina, Slovenščina, Shqip, Српски, Svenska, Kiswahili, தமிழ், ไทย, Türkçe, Українська, اردو, Tiếng Việt, 中文"
   },
   "DefinitionSchema": {
     "gaccName": "GACC (中国税関総署)",
@@ -1144,7 +1143,7 @@
       "crossborderecommerce": "越境電子商取引",
       "crossborderecommerceDesc": "CBEC 規制、プラットフォームのコンプライアンス、税金の最適化。"
     },
-    "metaTitle": "China Import Compliance by Industry | GACC, CCC, NMPA Services",
+    "metaTitle": "業界別の中国輸入コンプライアンス | GACC、CCC、NMPA サービス - 業界コンプライアンス ガイド |中国貿易のコンプライアンス",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
@@ -1313,5 +1312,30 @@
     "contactText": "このプライバシー ポリシーまたは当社によるお客様のデータの処理方法についてご質問がある場合は、以下までお問い合わせください。",
     "updateTitle": "このポリシーの更新",
     "updateText": "当社は、このプライバシー ポリシーを随時更新することがあります。変更があった場合は、更新日とともにこのページに掲載されます。"
+  },
+  "AiAssistance": {
+    "aboutContent": "SinoTrade Compliance は、中国市場への参入を専門とする上海に拠点を置く規制遵守企業です。 15 年以上の専門知識をもとに設立された当社は、50 か国以上の輸出業者が GACC 登録、CCC 認証、NMPA 化粧品申請、中国ラベル準拠、国境を越えた電子商取引、およびブランド保護をサポートします。",
+    "aboutTitle": "会社概要",
+    "contactEmail": "david@sinotradecompliance.com",
+    "contactLinkedIn": "https://www.linkedin.com/company/sinotradecompliance",
+    "contactLocation": "中国上海市静安区",
+    "contactTitle": "連絡先",
+    "faqA1": "中国に輸出される食品は、GACC 政令 248 (海外食品製造業者の登録)、GACC 政令 249 (輸出入食品の安全管理)、GB 7718 (包装済み食品の表示)、および GB 28050 (栄養表示) に準拠する必要があります。",
+    "faqA2": "いいえ、CCC 認証は、電子機器、家庭用電化製品、自動車部品、照明、安全ガラス、子供のおもちゃなど、17 の定義されたカテゴリの製品にのみ必須です。これらのカテゴリ外の製品には、依然として他の認証が必要な場合があります。",
+    "faqA3": "標準的な GACC 登録には、通常、完全な書類の提出から 6 ～ 10 週間かかります。高リスクカテゴリー (18 カテゴリー) の登録には、輸出国の管轄当局の承認が必要なため、さらに時間がかかる場合があります。",
+    "faqQ1": "中国に輸出される食品にはどのような規制が適用されますか?",
+    "faqQ2": "すべての製品に CCC 認証が必要ですか?",
+    "faqQ3": "GACC の登録にはどのくらい時間がかかりますか?",
+    "faqTitle": "よくある質問",
+    "intro": "このページでは、AI および言語モデル支援に関する SinoTrade コンプライアンスに関する構造化された情報を提供します。",
+    "metaDescription": "AI の構造化コンプライアンス データ: GACC、CCC、NMPA、ラベル コンプライアンス、国境を越えた電子商取引。",
+    "metaTitle": "SinoTrade コンプライアンス | JP AI 支援",
+    "serviceBrand": "ブランド保護 — CNIPA への商標登録、税関知財記録、異議申し立ての監視、中国先願主義におけるブランド執行。",
+    "serviceCBEC": "越境電子商取引 — Tmall Global、JD Worldwide、Douyin の CBEC チャネル設定。保税倉庫 (1210) または直接出荷 (9610) モデル。",
+    "serviceCCC": "CCC 認証 — 電子機器、家庭用電化製品、自動車部品、照明製品、安全部品を含む 17 製品カテゴリに対する中国の強制認証。",
+    "serviceGACC": "GACC 食品登録 — 政令 248 および 249 に基づき、海外の食品製造施設を中国税関 (GACC) に登録します。中国に輸出されるすべての食品に義務付けられています。",
+    "serviceLabel": "中国ラベルのコンプライアンス — GB 7718 および GB 28050 に準拠したラベルのデザインとレビュー。中国の港で税関が拒否される最大の理由。",
+    "serviceNMPA": "NMPA 化粧品申請 — 中国国家医薬製品管理局への化粧品の登録または通知。すべての輸入化粧品に必須です。",
+    "title": "SinoTrade コンプライアンス — AI 支援 (EN)"
   }
 }

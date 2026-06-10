@@ -80,22 +80,22 @@
   "Services": {
     "heroTitle": "Palvelumme",
     "heroSubtitle": "Kattavat tuontivaatimustenmukaisuusratkaisut jokaiselle Kiinan markkinoille tulevalle toimialalle.",
-    "gaccTitle": "GACC-elintarvikkeiden rekisteröinti",
+    "gaccTitle": "GACC-elintarvikkeiden rekisteröinti - Kiinan tuontivaatimustenmukaisuus | SinoTrade-yhteensopivuus",
     "gaccSubtitle": "Täytä GACC-asetuksen 248/249 rekisteröinti Kiinaan vieville elintarvike- ja juomavalmistajille.",
     "gaccLink": "Lue lisää",
-    "labelTitle": "Kiinan etikettien noudattaminen",
+    "labelTitle": "Kiinan merkintöjen noudattaminen - Kiinan tuontivaatimustenmukaisuus | SinoTrade-yhteensopivuus",
     "labelSubtitle": "Ammattimainen kiinalainen etikettisuunnittelu ja -tarkastus, joka täyttää GB 7718- ja GB 28050 -standardit.",
     "labelLink": "Lue lisää",
-    "cccTitle": "CCC-sertifiointi",
+    "cccTitle": "CCC-sertifiointi - Kiinan tuontivaatimustenmukaisuus | SinoTrade-yhteensopivuus",
     "cccSubtitle": "Kiina elektroniikan, laitteiden, lelujen ja autonosien pakollinen sertifiointikonsultointi.",
     "cccLink": "Lue lisää",
-    "cosmeticsTitle": "Kosmetiikkaviilaus (NMPA)",
+    "cosmeticsTitle": "Kosmetiikka-arkistointi (NMPA) - Kiinan tuonnin vaatimustenmukaisuus | SinoTrade-yhteensopivuus",
     "cosmeticsSubtitle": "NMPA:n rekisteröinti ja arkistointi maahantuoduille kosmetiikkatuotteille – tavalliset ja erikoiskäyttöiset luokat.",
     "cosmeticsLink": "Lue lisää",
-    "ecommerceTitle": "Rajat ylittävä sähköinen kaupankäynti",
+    "ecommerceTitle": "Rajat ylittävä sähköinen kaupankäynti - Kiinan tuontivaatimusten noudattaminen | SinoTrade-yhteensopivuus",
     "ecommerceSubtitle": "Päästä päähän rajat ylittävän sähköisen kaupankäynnin asennus alustan käyttöönotosta toiminnan vaatimustenmukaisuuteen.",
     "ecommerceLink": "Lue lisää",
-    "brandTitle": "Brändin suojaus",
+    "brandTitle": "Tuotemerkkisuojaus - Kiinan tuonnin vaatimustenmukaisuus | SinoTrade-yhteensopivuus",
     "brandSubtitle": "Tavaramerkin rekisteröinti, tullin IP-arkistointi ja mainonnan vaatimustenmukaisuus brändisi suojaamiseksi Kiinassa.",
     "brandLink": "Lue lisää",
     "gaccIndustries": "Maitotuotteet, liha, äyriäiset, leipomotuotteet, juomat, terveysruoat ja kaikki 18 GACC:n sääntelemää luokkaa.",
@@ -154,7 +154,7 @@
     "cosmeticsPoints7": "Jatkuvat säännösten päivitykset ja noudattamista koskeva neuvonta",
     "ecommercePoints7": "Jatkuvat säännösten päivitykset ja noudattamista koskeva neuvonta",
     "brandPoints7": "Jatkuvat säännösten päivitykset ja noudattamista koskeva neuvonta",
-    "metaTitle": "Kiinan tuonnin vaatimustenmukaisuuspalvelut | GACC, CCC, NMPA ja etiketti",
+    "metaTitle": "Kiinan tuonnin vaatimustenmukaisuuspalvelut | GACC, CCC, NMPA & Label - Kiinan tuontivaatimustenmukaisuuspalvelut | SinoTrade-yhteensopivuus",
     "metaDescription": "Yhden luukun Kiinan tuontivaatimustenmukaisuus: GACC-elintarvikkeiden rekisteröinti, CCC-sertifiointi, NMPA-kosmetiikka-arkistointi, etikettien noudattaminen ja tuotemerkin suojaus. 15+ vuoden ammattitaito."
   },
   "ServiceGacc": {
@@ -516,7 +516,7 @@
     "premiumItems3": "NMPA Cosmetics -arkistointi (jos mahdollista)",
     "premiumItems4": "PIPL-tietojen vaatimustenmukaisuuden arviointi",
     "premiumItems5": "Jatkuva vaatimustenmukaisuuden neuvonta",
-    "metaTitle": "China Compliance -palvelupaketit | Hinnoittelu ja suunnitelmat",
+    "metaTitle": "China Compliance -palvelupaketit | Hinnoittelu ja suunnitelmat - vaatimustenmukaisuuspalvelupaketit | SinoTrade-yhteensopivuus",
     "metaDescription": "Läpinäkyvä hinnoittelu Kiinan tuonnin vaatimustenmukaisuuspalveluille. GACC-rekisteröinti, CCC-sertifiointi, NMPA-arkistointipaketit. Valitse tarpeisiisi sopiva suunnitelma."
   },
   "Faq": {
@@ -623,7 +623,7 @@
       "ecommerceName": "Rajat ylittävä sähköinen kaupankäynti",
       "brandName": "Brändin suojaus"
     },
-    "metaTitle": "Kiinan tuonnin vaatimustenmukaisuus UKK | GACC, CCC, NMPA kysymykset",
+    "metaTitle": "Kiinan tuonnin vaatimustenmukaisuus UKK | GACC-, CCC-, NMPA-kysymykset - Kiinan tuontivaatimusten kysymykset ja vastaukset | SinoTrade-yhteensopivuus",
     "metaDescription": "Usein kysyttyjä kysymyksiä Kiinan tuonnin vaatimustenmukaisuudesta. GACC-rekisteröinti, CCC-sertifiointi, NMPA-kosmetiikka-arkistointi, etikettivaatimukset, joihin asiantuntijat vastasivat."
   },
   "About": {
@@ -682,7 +682,7 @@
     "partners7": "🔬 tutkimuslaitokset",
     "partners8": "🤝 Toimialajärjestöt",
     "values5": "Erinomaisuus – Laadukkaimpien vaatimustenmukaisuusratkaisujen toimittaminen ottaen huomioon kaikki yksityiskohdat.",
-    "metaTitle": "Tietoja SinoTrade Compliancesta | Yli 15 vuoden Kiinan tuontiasiantuntemus",
+    "metaTitle": "Tietoja SinoTrade Compliancesta | Yli 15 vuotta Kiinan tuontia koskevaa asiantuntemusta - Kiinan tuonnin vaatimustenmukaisuuden asiantuntemus | SinoTrade-yhteensopivuus",
     "metaDescription": "Opi SinoTrade Compliancesta – luotetusta kumppanistasi Kiinan tuontivaatimusten noudattamisessa. Yli 15 vuoden kokemus, palvellaan yli 50 maassa. Tutustu asiantuntijatiimiimme."
   },
   "ThankYou": {
@@ -753,14 +753,13 @@
     "next": "Seuraava",
     "pageInfo": "",
     "of": " / ",
-    "metaTitle": "Kiinan tuonnin vaatimustenmukaisuusinsightsi | GACC, CCC, NMPA oppaat",
+    "metaTitle": "Kiina Import Compliance Insights | GACC-, CCC-, NMPA-oppaat - Kiinan tuonnin vaatimustenmukaisuuden näkemykset | SinoTrade-yhteensopivuus",
     "metaDescription": "Asiantuntijaoppaat Kiinan tuonnin vaatimustenmukaisuudesta. GACC-rekisteröintivinkkejä, CCC-sertifiointipäivityksiä, NMPA-arkistointiuutisia, tarrojen noudattamista koskevia tietoja. Pysy ajan tasalla."
   },
   "OrganizationJsonLd": {
     "description": "Yhden luukun tuontisääntelyn konsultointipalvelut Kiinalle – GACC-rekisteröinti, kiinalainen merkintä, CCC-sertifiointi, NMPA-kosmetiikka-arkistointi, rajat ylittävä sähköinen kaupankäynti ja tuotemerkin suojaus.",
     "contactType": "asiakaspalvelu",
-    "availableLanguage": "Afrikaans, العربية, Azərbaycan, Беларуская, Български, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, englanti, Español, فارسی, Suomi, Français, עברית, हिन्दी, Hrvatski, Magyar, Հայերեն, Bahasa Indonesia, Italiano, 日本語, ქართული, 한국어, Bahasa Melayu, नेपाली, Nederlands, Norsk, Polski, Português, Română, Русский, සිංහල, Slovenčina, Slovenščina, Shqip, Српски, Svenska, Kiswahili, தமிழ், ไทย, Türkçe, Українська, اردو, Tiếng Việt, 中文",
-    "sameAs": "[\"https://www.linkedin.com/company/sinotradecompliance\", \"https://www.crunchbase.com/organization/sinotradecompliance\", \"https://github.com/sinotradecompliance\"]"
+    "availableLanguage": "Afrikaans, العربية, Azərbaycan, Беларуская, Български, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, englanti, Español, فارسی, Suomi, Français, עברית, हिन्दी, Hrvatski, Magyar, Հայերեն, Bahasa Indonesia, Italiano, 日本語, ქართული, 한국어, Bahasa Melayu, नेपाली, Nederlands, Norsk, Polski, Português, Română, Русский, සිංහල, Slovenčina, Slovenščina, Shqip, Српски, Svenska, Kiswahili, தமிழ், ไทย, Türkçe, Українська, اردو, Tiếng Việt, 中文"
   },
   "DefinitionSchema": {
     "gaccName": "GACC (General Administration of Customs of China)",
@@ -1144,7 +1143,7 @@
       "crossborderecommerce": "Rajat ylittävä sähköinen kaupankäynti",
       "crossborderecommerceDesc": "CBEC-säännökset, alustan noudattaminen ja verotuksen optimointi."
     },
-    "metaTitle": "China Import Compliance by Industry | GACC, CCC, NMPA Services",
+    "metaTitle": "Kiinan tuonnin vaatimustenmukaisuus toimialan mukaan | GACC-, CCC-, NMPA-palvelut - Toimialan vaatimustenmukaisuusoppaat | SinoTrade-yhteensopivuus",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
@@ -1313,5 +1312,30 @@
     "contactText": "Jos sinulla on kysyttävää tästä tietosuojakäytännöstä tai siitä, miten käsittelemme tietojasi, ota meihin yhteyttä:",
     "updateTitle": "Päivitykset tähän käytäntöön",
     "updateText": "Saatamme päivittää tätä tietosuojakäytäntöä ajoittain. Kaikki muutokset julkaistaan ​​tälle sivulle päivitetyllä tarkistuspäivämäärällä."
+  },
+  "AiAssistance": {
+    "aboutContent": "SinoTrade Compliance on Shanghaissa toimiva sääntelyn noudattamista harjoittava yritys, joka on erikoistunut Kiinan markkinoille tuloon. Yli 15 vuoden kokemuksella perustettu autamme viejiä yli 50 maassa navigoimaan GACC-rekisteröinnissä, CCC-sertifioinnissa, NMPA-kosmetiikan rekisteröinnissä, kiinalaisten etikettien noudattamisessa, rajat ylittävässä sähköisessä kaupankäynnissä ja tuotemerkin suojauksessa.",
+    "aboutTitle": "Yrityksen yleiskatsaus",
+    "contactEmail": "david@sinotradecompliance.com",
+    "contactLinkedIn": "https://www.linkedin.com/company/sinotradecompliance",
+    "contactLocation": "Jinganin alue, Shanghai, Kiina",
+    "contactTitle": "Yhteystiedot",
+    "faqA1": "Kiinaan vietävien elintarvikkeiden on oltava GACC:n asetuksen 248 (ulkomaisten elintarvikevalmistajien rekisteröinti), GACC:n asetuksen 249 (tuonti- ja vientielintarvikkeiden turvallisuuden hallinta), GB 7718 (valmiiksi pakattujen elintarvikkeiden merkinnät) ja GB 28050 (ravintoarvomerkinnät) mukaisia.",
+    "faqA2": "Ei. CCC-sertifiointi on pakollinen vain tuotteille 17 määritellyssä kategoriassa, mukaan lukien elektroniikka, kodinkoneet, autonosat, valaistus, turvalasit ja lasten lelut. Näiden luokkien ulkopuoliset tuotteet saattavat silti tarvita muita sertifikaatteja.",
+    "faqA3": "Tavallinen GACC-rekisteröinti kestää tyypillisesti 6–10 viikkoa täydellisen asiakirjan toimittamisesta. Riskiluokan (18 luokkaa) rekisteröinti voi kestää kauemmin, koska se vaatii viejämaan toimivaltaisen viranomaisen hyväksynnän.",
+    "faqQ1": "Mitä säännöksiä sovelletaan Kiinaan vietäviin elintarvikkeisiin?",
+    "faqQ2": "Tarvitsevatko kaikki tuotteet CCC-sertifioinnin?",
+    "faqQ3": "Kuinka kauan GACC-rekisteröinti kestää?",
+    "faqTitle": "Usein kysytyt kysymykset",
+    "intro": "Tämä sivu tarjoaa jäsenneltyä tietoa SinoTrade Compliancesta tekoälyn ja kielimallien tuesta.",
+    "metaDescription": "Tekoälyn strukturoidut vaatimustenmukaisuustiedot: GACC, CCC, NMPA, etikettien noudattaminen, rajat ylittävä sähköinen kaupankäynti.",
+    "metaTitle": "SinoTrade Compliance | FI AI-apu",
+    "serviceBrand": "Brändin suojaus — Tavaramerkin rekisteröinti CNIPA:ssa, tullin IP-rekisteröinti, vastustuksen valvonta ja tuotemerkin valvonta Kiinan ensimmäisestä tiedostojärjestelmästä.",
+    "serviceCBEC": "Rajat ylittävä sähköinen kaupankäynti — CBEC-kanavan asetukset Tmall Globalille, JD Worldwidelle ja Douyinille. Tullivarasto (1210) tai suoratoimitus (9610) mallit.",
+    "serviceCCC": "CCC-sertifiointi – Kiinan pakollinen sertifiointi 17 tuotekategorialle, mukaan lukien elektroniikka, kodinkoneet, autonosat, valaistustuotteet ja turvakomponentit.",
+    "serviceGACC": "GACC-elintarvikkeiden rekisteröinti — Rekisteröi ulkomaiset elintarviketuotantolaitokset Kiinan tulliin (GACC) asetusten 248 ja 249 mukaisesti. Pakollinen kaikille Kiinaan viedyille elintarvikkeille.",
+    "serviceLabel": "Kiinan etikettien yhteensopivuus — GB 7718- ja GB 28050 -yhteensopiva tarrasuunnittelu ja tarkistus. Suurin syy tullin hylkäämiseen Kiinan satamissa.",
+    "serviceNMPA": "NMPA Cosmetics Filing — Kosmetiikan rekisteröinti tai ilmoitus Kiinan kansalliselle lääketieteelliselle viranomaiselle. Vaaditaan kaikille tuontikosmetiikkatuotteille.",
+    "title": "SinoTrade Compliance — AI-Assistance (EN)"
   }
 }

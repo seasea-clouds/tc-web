@@ -80,22 +80,22 @@
   "Services": {
     "heroTitle": "Onze diensten",
     "heroSubtitle": "Uitgebreide import-compliance-oplossingen voor elke sector die de Chinese markt betreedt.",
-    "gaccTitle": "GACC-voedselregistratie",
+    "gaccTitle": "GACC-voedselregistratie - China-importnaleving | SinoTrade-naleving",
     "gaccSubtitle": "Volledige GACC-decreet 248/249-registratie voor voedsel- en drankenfabrikanten die naar China exporteren.",
     "gaccLink": "Meer informatie",
-    "labelTitle": "Naleving van Chinese labels",
+    "labelTitle": "Naleving van Chinese labels - Naleving van import in China | SinoTrade-naleving",
     "labelSubtitle": "Professioneel Chinees labelontwerp en -beoordeling die voldoen aan de GB 7718- en GB 28050-normen.",
     "labelLink": "Meer informatie",
-    "cccTitle": "CCC-certificering",
+    "cccTitle": "CCC-certificering - China-importnaleving | SinoTrade-naleving",
     "cccSubtitle": "China Verplicht certificeringsadvies voor elektronica, apparaten, speelgoed en auto-onderdelen.",
     "cccLink": "Meer informatie",
-    "cosmeticsTitle": "Cosmetica-aanvraag (NMPA)",
+    "cosmeticsTitle": "Cosmetica-aanvraag (NMPA) - China-importnaleving | SinoTrade-naleving",
     "cosmeticsSubtitle": "NMPA-registratie en indiening voor geïmporteerde cosmetica – categorieën voor gewoon en speciaal gebruik.",
     "cosmeticsLink": "Meer informatie",
-    "ecommerceTitle": "Grensoverschrijdende e-commerce",
+    "ecommerceTitle": "Grensoverschrijdende e-commerce - China-importnaleving | SinoTrade-naleving",
     "ecommerceSubtitle": "End-to-end grensoverschrijdende e-commerce-installatie – van platform-onboarding tot operationele compliance.",
     "ecommerceLink": "Meer informatie",
-    "brandTitle": "Merkbescherming",
+    "brandTitle": "Merkbescherming - China-importnaleving | SinoTrade-naleving",
     "brandSubtitle": "Registratie van handelsmerken, IP-registratie bij de douane en compliance met reclame om uw merk in China te beschermen.",
     "brandLink": "Meer informatie",
     "gaccIndustries": "Zuivel, vlees, zeevruchten, bakkerijproducten, dranken, gezonde voeding en alle 18 door de GACC gereguleerde categorieën.",
@@ -154,7 +154,7 @@
     "cosmeticsPoints7": "Voortdurende updates van regelgeving en compliance-advies",
     "ecommercePoints7": "Voortdurende updates van regelgeving en compliance-advies",
     "brandPoints7": "Voortdurende updates van regelgeving en compliance-advies",
-    "metaTitle": "China Importnalevingsdiensten | GACC, CCC, NMPA en label",
+    "metaTitle": "China Importnalevingsdiensten | GACC, CCC, NMPA & Label - China Importnalevingsdiensten | SinoTrade-naleving",
     "metaDescription": "One-stop China-importnaleving: GACC-voedselregistratie, CCC-certificering, NMPA-cosmetica-aanvraag, naleving van labels en merkbescherming. 15+ jaar expertise."
   },
   "ServiceGacc": {
@@ -516,7 +516,7 @@
     "premiumItems3": "NMPA Cosmetics-aanvraag (indien van toepassing)",
     "premiumItems4": "Beoordeling van de naleving van PIPL-gegevens",
     "premiumItems5": "Voortdurend compliance-advies",
-    "metaTitle": "Nalevingsservicepakketten voor China | Prijzen en abonnementen",
+    "metaTitle": "Nalevingsservicepakketten voor China | Prijzen en abonnementen - Compliance-servicepakketten | SinoTrade-naleving",
     "metaDescription": "Transparante prijzen voor Chinese importcompliancediensten. GACC-registratie, CCC-certificering, NMPA-archiveringspakketten. Kies het plan dat bij uw behoeften past."
   },
   "Faq": {
@@ -623,7 +623,7 @@
       "ecommerceName": "Grensoverschrijdende e-commerce",
       "brandName": "Merkbescherming"
     },
-    "metaTitle": "Veelgestelde vragen over importnaleving in China | GACC-, CCC-, NMPA-vragen",
+    "metaTitle": "Veelgestelde vragen over importnaleving in China | GACC-, CCC-, NMPA-vragen - Vragen en antwoorden over importnaleving in China | SinoTrade-naleving",
     "metaDescription": "Veelgestelde vragen over de importnaleving in China. GACC-registratie, CCC-certificering, NMPA-cosmetica-aanvraag, labelvereisten beantwoord door experts."
   },
   "About": {
@@ -682,7 +682,7 @@
     "partners7": "🔬 Onderzoeksinstituten",
     "partners8": "🤝 Brancheverenigingen",
     "values5": "Uitmuntendheid — Het leveren van compliance-oplossingen van de hoogste kwaliteit met aandacht voor elk detail.",
-    "metaTitle": "Over SinoTrade-naleving | Meer dan 15 jaar Chinese importexpertise",
+    "metaTitle": "Over SinoTrade-naleving | Meer dan 15 jaar Chinese importexpertise - China-importcompliance-expertise | SinoTrade-naleving",
     "metaDescription": "Lees meer over SinoTrade Compliance – uw vertrouwde partner voor importcompliance in China. 15+ jaar ervaring, 50+ landen bediend. Maak kennis met ons expertteam."
   },
   "ThankYou": {
@@ -753,14 +753,13 @@
     "next": "Volgende",
     "pageInfo": "",
     "of": " van ",
-    "metaTitle": "Insights over importnaleving in China | GACC-, CCC-, NMPA-gidsen",
+    "metaTitle": "Inzichten op het gebied van importnaleving in China | GACC-, CCC-, NMPA-gidsen - Inzichten in importnaleving in China | SinoTrade-naleving",
     "metaDescription": "Deskundige gidsen over de naleving van de importwetgeving in China. GACC-registratietips, CCC-certificeringsupdates, NMPA-nieuws over indiening, inzichten in etiketnaleving. Blijf op de hoogte."
   },
   "OrganizationJsonLd": {
     "description": "One-stop adviesdiensten op het gebied van importregelgeving voor China: GACC-registratie, Chinese etikettering, CCC-certificering, NMPA-cosmetica-aanvraag, grensoverschrijdende e-commerce en merkbescherming.",
     "contactType": "klantenservice",
-    "availableLanguage": "Afrikaans, العربية, Azərbaycan, Беларуская, Български, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, Engels, Español, فارسی, Suomi, Français, עברית, हिन्दी, Hrvatski, Magyar, Հայերեն, Bahasa Indonesia, Italiano, 日本語, ქართული, 한국어, Bahasa Melayu, नेपाली, Nederlands, Norsk, Polski, Português, Română, Русский, සිංහල, Slovenčina, Slovenščina, Shqip, Српски, Svenska, Kiswahili, தமிழ், ไทย, Türkçe, Українська, اردو, Tiếng Việt, 中文",
-    "sameAs": "[\"https://www.linkedin.com/company/sinotradecompliance\", \"https://www.crunchbase.com/organization/sinotradecompliance\", \"https://github.com/sinotradecompliance\"]"
+    "availableLanguage": "Afrikaans, العربية, Azərbaycan, Беларуская, Български, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, Engels, Español, فارسی, Suomi, Français, עברית, हिन्दी, Hrvatski, Magyar, Հայերեն, Bahasa Indonesia, Italiano, 日本語, ქართული, 한국어, Bahasa Melayu, नेपाली, Nederlands, Norsk, Polski, Português, Română, Русский, සිංහල, Slovenčina, Slovenščina, Shqip, Српски, Svenska, Kiswahili, தமிழ், ไทย, Türkçe, Українська, اردو, Tiếng Việt, 中文"
   },
   "DefinitionSchema": {
     "gaccName": "GACC (Algemene Douaneadministratie van China)",
@@ -1144,7 +1143,7 @@
       "crossborderecommerce": "Grensoverschrijdende e-commerce",
       "crossborderecommerceDesc": "CBEC-regelgeving, platformnaleving en belastingoptimalisatie."
     },
-    "metaTitle": "China Import Compliance by Industry | GACC, CCC, NMPA Services",
+    "metaTitle": "China-importnaleving per sector | GACC, CCC, NMPA Services - Gidsen voor naleving van de industrie | SinoTrade-naleving",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
@@ -1313,5 +1312,30 @@
     "contactText": "Als u vragen heeft over dit privacybeleid of over de manier waarop wij met uw gegevens omgaan, kunt u contact met ons opnemen:",
     "updateTitle": "Updates van dit beleid",
     "updateText": "We kunnen dit privacybeleid van tijd tot tijd bijwerken. Eventuele wijzigingen worden op deze pagina geplaatst met een bijgewerkte revisiedatum."
+  },
+  "AiAssistance": {
+    "aboutContent": "SinoTrade Compliance is een in Shanghai gevestigd bedrijf dat zich bezighoudt met de naleving van regelgeving, gespecialiseerd in het betreden van de Chinese markt. We zijn opgericht met meer dan 15 jaar expertise en helpen exporteurs in meer dan 50 landen bij het navigeren door GACC-registratie, CCC-certificering, NMPA-cosmetica-aanvraag, naleving van Chinese labels, grensoverschrijdende e-commerce en merkbescherming.",
+    "aboutTitle": "Bedrijfsoverzicht",
+    "contactEmail": "david@sinotradecompliance.com",
+    "contactLinkedIn": "https://www.linkedin.com/company/sinotradecompliance",
+    "contactLocation": "Jingan-district, Shanghai, China",
+    "contactTitle": "Contactgegevens",
+    "faqA1": "Voedselproducten die naar China worden geëxporteerd, moeten voldoen aan GACC-decreet 248 (registratie van overzeese voedselproducenten), GACC-decreet 249 (import- en exportvoedselveiligheidsbeheer), GB 7718 (etikettering van voorverpakte voedingsmiddelen) en GB 28050 (voedingsetikettering).",
+    "faqA2": "Nee. CCC-certificering is alleen verplicht voor producten in 17 gedefinieerde categorieën, waaronder elektronica, huishoudelijke apparaten, auto-onderdelen, verlichting, veiligheidsglas en kinderspeelgoed. Producten buiten deze categorieën hebben mogelijk nog andere certificeringen nodig.",
+    "faqA3": "Standaard GACC-registratie duurt doorgaans 6-10 weken vanaf het indienen van de volledige documentatie. Registratie voor risicocategorieën (18 categorieën) kan langer duren omdat hiervoor toestemming nodig is van de bevoegde autoriteit in het exporterende land.",
+    "faqQ1": "Welke regelgeving is van toepassing op voedingsproducten die naar China worden geëxporteerd?",
+    "faqQ2": "Hebben alle producten een CCC-certificering nodig?",
+    "faqQ3": "Hoe lang duurt de GACC-registratie?",
+    "faqTitle": "Veelgestelde vragen",
+    "intro": "Deze pagina biedt gestructureerde informatie over SinoTrade Compliance voor AI en hulp bij taalmodellen.",
+    "metaDescription": "Gestructureerde compliancegegevens voor AI: GACC, CCC, NMPA, labelcompliance, grensoverschrijdende e-commerce.",
+    "metaTitle": "Naleving van SinoTrade | NL AI-assistentie",
+    "serviceBrand": "Merkbescherming – Merkregistratie bij CNIPA, douane-IP-registratie, toezicht op oppositie en merkhandhaving in het Chinese first-to-file-systeem.",
+    "serviceCBEC": "Grensoverschrijdende e-commerce – CBEC-kanaalconfiguratie voor Tmall Global, JD Worldwide en Douyin. Modellen voor douane-entrepot (1210) of directe verzending (9610).",
+    "serviceCCC": "CCC-certificering – China verplichte certificering voor 17 productcategorieën, waaronder elektronica, huishoudelijke apparaten, auto-onderdelen, verlichtingsproducten en veiligheidscomponenten.",
+    "serviceGACC": "GACC-voedselregistratie — Registreer buitenlandse voedselproductiefaciliteiten bij de Chinese douane (GACC) onder decreten 248 en 249. Verplicht voor alle voedselproducten die naar China worden geëxporteerd.",
+    "serviceLabel": "Naleving van Chinese labels: ontwerp en beoordeling van labels die voldoen aan GB 7718 en GB 28050. De belangrijkste reden voor afwijzing door de douane in Chinese havens.",
+    "serviceNMPA": "NMPA Cosmetics Filing - Registratie of kennisgeving van cosmetica bij de China National Medical Products Administration. Vereist voor alle geïmporteerde cosmeticaproducten.",
+    "title": "Naleving van SinoTrade — AI-Assistance (EN)"
   }
 }

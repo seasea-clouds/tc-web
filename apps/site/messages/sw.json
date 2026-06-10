@@ -80,22 +80,22 @@
   "Services": {
     "heroTitle": "Huduma zetu",
     "heroSubtitle": "Ufumbuzi wa kina wa kufuata uagizaji kwa kila sekta inayoingia kwenye soko la China.",
-    "gaccTitle": "Usajili wa Chakula wa GACC",
+    "gaccTitle": "Usajili wa Chakula wa GACC - Uzingatiaji wa Uagizaji wa China | Uzingatiaji wa SinoTrade",
     "gaccSubtitle": "Kamilisha usajili wa Amri ya GACC 248/249 kwa watengenezaji wa vyakula na vinywaji wanaosafirisha kwenda Uchina.",
     "gaccLink": "Jifunze zaidi",
-    "labelTitle": "Uzingatiaji wa Lebo ya Kichina",
+    "labelTitle": "Uzingatiaji wa Lebo ya Kichina - Utiifu wa Uagizaji wa China | Uzingatiaji wa SinoTrade",
     "labelSubtitle": "Usanifu wa kitaalamu wa lebo ya Kichina na uhakiki unakidhi viwango vya GB 7718 na GB 28050.",
     "labelLink": "Jifunze zaidi",
-    "cccTitle": "Cheti cha CCC",
+    "cccTitle": "Udhibitisho wa CCC - Uzingatiaji wa Uagizaji wa China | Uzingatiaji wa SinoTrade",
     "cccSubtitle": "Ushauri wa Udhibitishaji wa Lazima wa China kwa vifaa vya elektroniki, vifaa, vinyago, na sehemu za magari.",
     "cccLink": "Jifunze zaidi",
-    "cosmeticsTitle": "Ujazaji wa Vipodozi (NMPA)",
+    "cosmeticsTitle": "Uhifadhi wa Vipodozi (NMPA) - Utiifu wa Uagizaji wa China | Uzingatiaji wa SinoTrade",
     "cosmeticsSubtitle": "Usajili na uwekaji faili wa NMPA kwa vipodozi vilivyoagizwa kutoka nje - kategoria za kawaida na za matumizi maalum.",
     "cosmeticsLink": "Jifunze zaidi",
-    "ecommerceTitle": "Biashara ya kielektroniki ya mpakani",
+    "ecommerceTitle": "Biashara ya kielektroniki ya mpakani - Uzingatiaji wa Uagizaji wa China | Uzingatiaji wa SinoTrade",
     "ecommerceSubtitle": "Usanidi wa biashara ya kielektroniki kutoka mwisho hadi mwisho - kutoka kwa upandaji wa jukwaa hadi utiifu wa utendaji.",
     "ecommerceLink": "Jifunze zaidi",
-    "brandTitle": "Ulinzi wa Biashara",
+    "brandTitle": "Ulinzi wa Chapa - Uzingatiaji wa Uagizaji wa China | Uzingatiaji wa SinoTrade",
     "brandSubtitle": "Usajili wa chapa ya biashara, uwekaji faili wa forodha wa IP, na utiifu wa utangazaji ili kulinda chapa yako nchini Uchina.",
     "brandLink": "Jifunze zaidi",
     "gaccIndustries": "Maziwa, nyama, dagaa, mkate, vinywaji, vyakula vya afya, na kategoria zote 18 zinazodhibitiwa na GACC.",
@@ -154,7 +154,7 @@
     "cosmeticsPoints7": "Masasisho ya mara kwa mara ya udhibiti na ushauri wa kufuata",
     "ecommercePoints7": "Masasisho ya mara kwa mara ya udhibiti na ushauri wa kufuata",
     "brandPoints7": "Masasisho ya mara kwa mara ya udhibiti na ushauri wa kufuata",
-    "metaTitle": "Huduma za Uzingatiaji Uagizaji wa China | GACC, CCC, NMPA & Lebo",
+    "metaTitle": "Huduma za Uzingatiaji Uagizaji wa China | GACC, CCC, NMPA & Lebo - Huduma za Uzingatiaji Uagizaji wa China | Uzingatiaji wa SinoTrade",
     "metaDescription": "Utiifu wa uagizaji wa bidhaa kutoka China mara moja: usajili wa chakula wa GACC, uidhinishaji wa CCC, uwekaji faili wa vipodozi vya NMPA, kufuata lebo na ulinzi wa chapa. Utaalam wa miaka 15+."
   },
   "ServiceGacc": {
@@ -516,7 +516,7 @@
     "premiumItems3": "Ujazaji wa Vipodozi vya NMPA (ikiwa inatumika)",
     "premiumItems4": "Tathmini ya Uzingatiaji wa Data ya PIPL",
     "premiumItems5": "Ushauri Unaoendelea wa Uzingatiaji",
-    "metaTitle": "Vifurushi vya Huduma ya Uzingatiaji Uchina | Bei na Mipango",
+    "metaTitle": "Vifurushi vya Huduma ya Kuzingatia Uchina | Bei na Mipango - Vifurushi vya Huduma ya Uzingatiaji | Uzingatiaji wa SinoTrade",
     "metaDescription": "Bei ya uwazi kwa huduma za kufuata uagizaji wa China. Usajili wa GACC, uidhinishaji wa CCC, vifurushi vya kufungua vya NMPA. Chagua mpango unaofaa mahitaji yako."
   },
   "Faq": {
@@ -623,7 +623,7 @@
       "ecommerceName": "Biashara ya kielektroniki ya mpakani",
       "brandName": "Ulinzi wa Biashara"
     },
-    "metaTitle": "Maswali Yanayoulizwa Mara kwa Mara ya Uzingatiaji Uagizaji wa China | Maswali ya GACC, CCC, NMPA",
+    "metaTitle": "Maswali Yanayoulizwa Mara kwa Mara ya Uzingatiaji Uagizaji wa China | Maswali ya GACC, CCC, NMPA - Maswali na Majibu ya Uzingatiaji wa Uagizaji wa China | Uzingatiaji wa SinoTrade",
     "metaDescription": "Maswali yanayoulizwa mara kwa mara kuhusu kufuata uagizaji wa China. Usajili wa GACC, uthibitishaji wa CCC, uwekaji faili wa vipodozi vya NMPA, mahitaji ya lebo kujibiwa na wataalamu."
   },
   "About": {
@@ -682,7 +682,7 @@
     "partners7": "🔬 Taasisi za Utafiti",
     "partners8": "🤝 Vyama vya Viwanda",
     "values5": "Ubora - Kutoa masuluhisho ya utiifu ya hali ya juu kwa umakini kwa kila undani.",
-    "metaTitle": "Kuhusu SinoTrade Compliance | Miaka 15+ Utaalam wa Kuagiza Uchina",
+    "metaTitle": "Kuhusu SinoTrade Compliance | Miaka 15+ Utaalam wa Kuagiza Uchina - Utaalamu wa Uzingatiaji wa Uagizaji wa China | Uzingatiaji wa SinoTrade",
     "metaDescription": "Jifunze kuhusu Uzingatiaji wa SinoTrade - mshirika wako unayemwamini wa kufuata Uchina kutoka kwa uagizaji. Uzoefu wa miaka 15+, nchi 50+ zilihudumiwa. Kutana na timu yetu ya wataalam."
   },
   "ThankYou": {
@@ -753,14 +753,13 @@
     "next": "Inayofuata",
     "pageInfo": "",
     "of": " ya ",
-    "metaTitle": "Insightsu ya Uzingatiaji Uagizaji wa China | Miongozo ya GACC, CCC, NMPA",
+    "metaTitle": "Maarifa ya Uzingatiaji wa Uagizaji wa China | Miongozo ya GACC, CCC, NMPA - Maarifa ya Uzingatiaji Uagizaji wa China | Uzingatiaji wa SinoTrade",
     "metaDescription": "Miongozo ya kitaalam juu ya kufuata Uchina kutoka nje. Vidokezo vya usajili wa GACC, masasisho ya uidhinishaji wa CCC, habari za uwekaji faili za NMPA, maarifa ya kufuata lebo. Endelea kufahamishwa."
   },
   "OrganizationJsonLd": {
     "description": "Huduma za ushauri wa udhibiti wa uagizaji wa mara moja kwa Uchina - usajili wa GACC, uwekaji lebo za Kichina, uthibitishaji wa CCC, uwekaji faili wa vipodozi vya NMPA, biashara ya kielektroniki ya mipakani, na ulinzi wa chapa.",
     "contactType": "huduma kwa wateja",
-    "availableLanguage": "Afrikaans, العربية, Azərbaycan, Беларуская, Български, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, Kiingereza, Español, فارسی, Suomi, Français, עברית, हिन्दी, Hrvatski, Magyar, Հայերեն, Bahasa Indonesia, Italiano, 日本語, ქართული, 한국어, Bahasa Melayu, नेपाली, Nederlands, Norsk, Polski, Português, Română, Русский, සිංහල, Slovenčina, Slovenščina, Shqip, Српски, Svenska, Kiswahili, தமிழ், ไทย, Türkçe, Українська, اردو, Tiếng Việt, 中文",
-    "sameAs": "[\"https://www.linkedin.com/company/sinotradecompliance\", \"https://www.crunchbase.com/organization/sinotradecompliance\", \"https://github.com/sinotradecompliance\"]"
+    "availableLanguage": "Afrikaans, العربية, Azərbaycan, Беларуская, Български, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, Kiingereza, Español, فارسی, Suomi, Français, עברית, हिन्दी, Hrvatski, Magyar, Հայերեն, Bahasa Indonesia, Italiano, 日本語, ქართული, 한국어, Bahasa Melayu, नेपाली, Nederlands, Norsk, Polski, Português, Română, Русский, සිංහල, Slovenčina, Slovenščina, Shqip, Српски, Svenska, Kiswahili, தமிழ், ไทย, Türkçe, Українська, اردو, Tiếng Việt, 中文"
   },
   "DefinitionSchema": {
     "gaccName": "GACC (Utawala Mkuu wa Forodha wa China)",
@@ -1144,7 +1143,7 @@
       "crossborderecommerce": "Biashara ya kielektroniki ya mpakani",
       "crossborderecommerceDesc": "Kanuni za CBEC, kufuata jukwaa, na uboreshaji wa kodi."
     },
-    "metaTitle": "China Import Compliance by Industry | GACC, CCC, NMPA Services",
+    "metaTitle": "Uchina Uzingatiaji wa Uagizaji kwa Viwanda | GACC, CCC, Huduma za NMPA - Miongozo ya Uzingatiaji Sekta | Uzingatiaji wa SinoTrade",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
@@ -1313,5 +1312,30 @@
     "contactText": "Ikiwa una maswali yoyote kuhusu Sera hii ya Faragha au jinsi tunavyoshughulikia data yako, tafadhali wasiliana nasi:",
     "updateTitle": "Masasisho ya Sera hii",
     "updateText": "Tunaweza kusasisha Sera hii ya Faragha mara kwa mara. Mabadiliko yoyote yatachapishwa kwenye ukurasa huu na tarehe ya marekebisho iliyosasishwa."
+  },
+  "AiAssistance": {
+    "aboutContent": "SinoTrade Compliance ni kampuni ya utiifu yenye makao yake makuu mjini Shanghai inayobobea katika kuingia katika soko la China. Imeanzishwa kwa utaalamu wa miaka 15+, tunasaidia wauzaji bidhaa nje katika nchi 50+ kuvinjari usajili wa GACC, uthibitishaji wa CCC, uwekaji faili wa vipodozi vya NMPA, utiifu wa lebo za Kichina, biashara ya mtandaoni ya mipakani, na ulinzi wa chapa.",
+    "aboutTitle": "Muhtasari wa Kampuni",
+    "contactEmail": "david@sinotradecompliance.com",
+    "contactLinkedIn": "https://www.linkedin.com/company/sinotradecompliance",
+    "contactLocation": "Wilaya ya Jingan, Shanghai, Uchina",
+    "contactTitle": "Maelezo ya Mawasiliano",
+    "faqA1": "Bidhaa za chakula zinazosafirishwa kwenda Uchina lazima zitii Amri ya GACC 248 (usajili wa watengenezaji wa vyakula vya ng'ambo), Amri ya GACC 249 (usimamizi wa usalama wa chakula wa kuingiza na kuuza nje), GB 7718 (uwekaji lebo ya vyakula vilivyopakiwa mapema), na GB 28050 (uwekaji lebo ya lishe).",
+    "faqA2": "Hapana. Uthibitishaji wa CCC ni wa lazima tu kwa bidhaa katika kategoria 17 zilizobainishwa ikiwa ni pamoja na vifaa vya elektroniki, vifaa vya nyumbani, sehemu za magari, taa, glasi ya usalama na vifaa vya kuchezea vya watoto. Bidhaa nje ya aina hizi bado zinaweza kuhitaji uidhinishaji mwingine.",
+    "faqA3": "Usajili wa kawaida wa GACC kwa kawaida huchukua wiki 6-10 baada ya kuwasilisha hati kamili. Usajili wa kategoria zenye hatari kubwa (aina 18) unaweza kuchukua muda mrefu kwani unahitaji idhini kutoka kwa mamlaka husika katika nchi inayosafirisha bidhaa.",
+    "faqQ1": "Ni kanuni gani zinazotumika kwa bidhaa za chakula zinazosafirishwa kwenda Uchina?",
+    "faqQ2": "Je, bidhaa zote zinahitaji uthibitisho wa CCC?",
+    "faqQ3": "Usajili wa GACC huchukua muda gani?",
+    "faqTitle": "Maswali Yanayoulizwa Mara Kwa Mara",
+    "intro": "Ukurasa huu unatoa maelezo yaliyopangwa kuhusu Uzingatiaji wa SinoTrade kwa AI na usaidizi wa modeli ya lugha.",
+    "metaDescription": "Data iliyopangwa ya kufuata kwa AI: GACC, CCC, NMPA, kufuata lebo, biashara ya kielektroniki ya mipakani.",
+    "metaTitle": "Uzingatiaji wa SinoTrade | EN AI-Msaada",
+    "serviceBrand": "Ulinzi wa Chapa - Usajili wa chapa ya biashara kwa kutumia CNIPA, rekodi ya IP ya forodha, ufuatiliaji wa upinzani na utekelezaji wa chapa nchini China.",
+    "serviceCBEC": "Biashara ya Mtandaoni ya Mipaka - usanidi wa chaneli ya CBEC kwa Tmall Global, JD Worldwide, na Douyin. Aina za ghala zilizounganishwa (1210) au usafirishaji wa moja kwa moja (9610).",
+    "serviceCCC": "Uthibitishaji wa CCC - Uthibitishaji wa Lazima wa China kwa kategoria 17 za bidhaa ikijumuisha vifaa vya elektroniki, vifaa vya nyumbani, sehemu za magari, bidhaa za taa na vipengele vya usalama.",
+    "serviceGACC": "Usajili wa Chakula wa GACC - Sajili vifaa vya utengenezaji wa chakula nje ya nchi na Forodha ya China (GACC) chini ya Amri 248 na 249. Ni lazima kwa bidhaa zote za chakula zinazosafirishwa kwenda Uchina.",
+    "serviceLabel": "Utiifu wa Lebo za Kichina - muundo na ukaguzi wa lebo unaotii GB 7718 na GB 28050. Sababu kuu ya kukataliwa kwa forodha katika bandari za Uchina.",
+    "serviceNMPA": "Ujazaji wa Vipodozi vya NMPA - Usajili au arifa ya vipodozi na Utawala wa Kitaifa wa Bidhaa za Matibabu wa China. Inahitajika kwa bidhaa zote za vipodozi zilizoagizwa kutoka nje.",
+    "title": "Uzingatiaji wa SinoTrade - AI-Assistance (EN)"
   }
 }

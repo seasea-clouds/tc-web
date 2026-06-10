@@ -80,22 +80,22 @@
   "Services": {
     "heroTitle": "Els nostres serveis",
     "heroSubtitle": "Solucions integrals de compliment d'importació per a cada indústria que entra al mercat xinès.",
-    "gaccTitle": "Registre d'Aliments GACC",
+    "gaccTitle": "Registre d'aliments GACC - Compliment d'importació de la Xina | Compliment de SinoTrade",
     "gaccSubtitle": "Completa el registre del Decret GACC 248/249 per als fabricants d'aliments i begudes que exporten a la Xina.",
     "gaccLink": "Més informació",
-    "labelTitle": "Compliment de l'etiqueta xinesa",
+    "labelTitle": "Compliment de l'etiqueta xinesa - Compliment d'importació de la Xina | Compliment de SinoTrade",
     "labelSubtitle": "Disseny i revisió d'etiquetes xineses professionals que compleixen els estàndards GB 7718 i GB 28050.",
     "labelLink": "Més informació",
-    "cccTitle": "Certificació CCC",
+    "cccTitle": "Certificació CCC - Compliment d'importació de la Xina | Compliment de SinoTrade",
     "cccSubtitle": "Consultoria de certificació obligatòria de la Xina per a electrònica, electrodomèstics, joguines i peces d'automòbil.",
     "cccLink": "Més informació",
-    "cosmeticsTitle": "Presentació de cosmètics (NMPA)",
+    "cosmeticsTitle": "Presentació de cosmètics (NMPA) - Compliment d'importació de la Xina | Compliment de SinoTrade",
     "cosmeticsSubtitle": "Registre NMPA i presentació de cosmètics importats: categories d'ús normal i especial.",
     "cosmeticsLink": "Més informació",
-    "ecommerceTitle": "Comerç electrònic transfronterer",
+    "ecommerceTitle": "Comerç electrònic transfronterer - Compliment d'importació de la Xina | Compliment de SinoTrade",
     "ecommerceSubtitle": "Configuració de comerç electrònic transfronterer d'extrem a extrem, des de la incorporació de la plataforma fins al compliment operatiu.",
     "ecommerceLink": "Més informació",
-    "brandTitle": "Protecció de marca",
+    "brandTitle": "Protecció de marca - Compliment d'importació de la Xina | Compliment de SinoTrade",
     "brandSubtitle": "Registre de marques comercials, presentació d'IP duana i compliment de publicitat per protegir la vostra marca a la Xina.",
     "brandLink": "Més informació",
     "gaccIndustries": "Lactis, carn, marisc, fleca, begudes, aliments saludables i les 18 categories regulades pel GACC.",
@@ -154,7 +154,7 @@
     "cosmeticsPoints7": "Actualitzacions normatives contínues i assessorament de compliment",
     "ecommercePoints7": "Actualitzacions normatives contínues i assessorament de compliment",
     "brandPoints7": "Actualitzacions normatives contínues i assessorament de compliment",
-    "metaTitle": "Serveis de compliment d'importació de la Xina | GACC, CCC, NMPA i etiqueta",
+    "metaTitle": "Serveis de compliment d'importació de la Xina | GACC, CCC, NMPA i etiqueta - Serveis de compliment d'importació de la Xina | Compliment de SinoTrade",
     "metaDescription": "Compliment únic d'importació de la Xina: registre d'aliments GACC, certificació CCC, presentació de cosmètics NMPA, compliment d'etiquetes i protecció de la marca. Més de 15 anys d'experiència."
   },
   "ServiceGacc": {
@@ -516,7 +516,7 @@
     "premiumItems3": "Presentació de cosmètics NMPA (si escau)",
     "premiumItems4": "Avaluació de compliment de dades PIPL",
     "premiumItems5": "Assessorament de compliment permanent",
-    "metaTitle": "Paquets de serveis de compliment de la Xina | Preus i plans",
+    "metaTitle": "Paquets de serveis de compliment de la Xina | Preus i plans - Paquets de serveis de compliment | Compliment de SinoTrade",
     "metaDescription": "Preus transparents per als serveis de compliment d'importació de la Xina. Registre GACC, certificació CCC, paquets de presentació NMPA. Trieu el pla que s'adapti a les vostres necessitats."
   },
   "Faq": {
@@ -623,7 +623,7 @@
       "ecommerceName": "Comerç electrònic transfronterer",
       "brandName": "Protecció de marca"
     },
-    "metaTitle": "Preguntes freqüents sobre el compliment de les importacions de la Xina | Preguntes GACC, CCC, NMPA",
+    "metaTitle": "Preguntes freqüents sobre el compliment d'importació de la Xina | Preguntes de GACC, CCC, NMPA - Preguntes i respostes sobre el compliment de les importacions de la Xina | Compliment de SinoTrade",
     "metaDescription": "Preguntes freqüents sobre el compliment de les importacions de la Xina. Registre GACC, certificació CCC, presentació de cosmètics NMPA, requisits d'etiqueta resposts per experts."
   },
   "About": {
@@ -682,7 +682,7 @@
     "partners7": "🔬 Instituts de recerca",
     "partners8": "🤝 Associacions de la indústria",
     "values5": "Excel·lència — Oferint solucions de compliment de la més alta qualitat amb atenció a cada detall.",
-    "metaTitle": "Sobre SinoTrade Compliance | Més de 15 anys d'experiència en importació de la Xina",
+    "metaTitle": "Sobre SinoTrade Compliance | Més de 15 anys d'experiència en importació a la Xina - Expertise en compliment d'importació a la Xina | Compliment de SinoTrade",
     "metaDescription": "Obteniu més informació sobre SinoTrade Compliance: el vostre soci de confiança per al compliment d'importació de la Xina. Més de 15 anys d'experiència, més de 50 països servits. Coneix el nostre equip d'experts."
   },
   "ThankYou": {
@@ -753,14 +753,13 @@
     "next": "Següent",
     "pageInfo": "",
     "of": " de ",
-    "metaTitle": "Bloc de compliment d'importació de la Xina | Guies GACC, CCC, NMPA",
+    "metaTitle": "Estadístiques de compliment d'importació de la Xina | Guies GACC, CCC, NMPA - Xina Import Compliance Insights | Compliment de SinoTrade",
     "metaDescription": "Guies d'experts sobre el compliment de les importacions de la Xina. Consells de registre de GACC, actualitzacions de certificació CCC, notícies de presentació de NMPA, informació sobre el compliment de les etiquetes. Manteniu-vos informat."
   },
   "OrganizationJsonLd": {
     "description": "Serveis únics de consultoria reguladora d'importació per a la Xina: registre GACC, etiquetatge xinès, certificació CCC, presentació de cosmètics NMPA, comerç electrònic transfronterer i protecció de marca.",
     "contactType": "servei al client",
-    "availableLanguage": "Afrikaans, العربية, Azərbaycan, Беларуская, Български, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, Anglès, Español, فارسی, Suomi, Français, עברית, हिन्दी, Hrvatski, Magyar, Հայերեն, Bahasa Indonesia, Italiano, 日本語, ქართული, 한국어, Bahasa Melayu, नेपाली, Nederlands, Norsk, Polski, Português, Română, Русский, සිංහල, Slovenčina, Slovenščina, Shqip, Српски, Svenska, Kiswahili, தமிழ், ไทย, Türkçe, Українська, اردو, Tiếng Việt, 中文",
-    "sameAs": "[\"https://www.linkedin.com/company/sinotradecompliance\", \"https://www.crunchbase.com/organization/sinotradecompliance\", \"https://github.com/sinotradecompliance\"]"
+    "availableLanguage": "Afrikaans, العربية, Azərbaycan, Беларуская, Български, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, Anglès, Español, فارسی, Suomi, Français, עברית, हिन्दी, Hrvatski, Magyar, Հայերեն, Bahasa Indonesia, Italiano, 日本語, ქართული, 한국어, Bahasa Melayu, नेपाली, Nederlands, Norsk, Polski, Português, Română, Русский, සිංහල, Slovenčina, Slovenščina, Shqip, Српски, Svenska, Kiswahili, தமிழ், ไทย, Türkçe, Українська, اردو, Tiếng Việt, 中文"
   },
   "DefinitionSchema": {
     "gaccName": "GACC (Administració General de Duanes de la Xina)",
@@ -1144,7 +1143,7 @@
       "crossborderecommerce": "Comerç electrònic transfronterer",
       "crossborderecommerceDesc": "Normativa CBEC, compliment de la plataforma i optimització fiscal."
     },
-    "metaTitle": "China Import Compliance by Industry | GACC, CCC, NMPA Services",
+    "metaTitle": "Compliment d'importació de la Xina per indústria | Serveis GACC, CCC, NMPA - Guies de compliment de la indústria | Compliment de SinoTrade",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
@@ -1313,5 +1312,30 @@
     "contactText": "Si teniu cap pregunta sobre aquesta Política de privadesa o sobre com tractem les vostres dades, poseu-vos en contacte amb nosaltres:",
     "updateTitle": "Actualitzacions d'aquesta política",
     "updateText": "És possible que actualitzem aquesta Política de privadesa de tant en tant. Qualsevol canvi es publicarà en aquesta pàgina amb una data de revisió actualitzada."
+  },
+  "AiAssistance": {
+    "aboutContent": "SinoTrade Compliance és una empresa de compliment normatiu amb seu a Xangai especialitzada en l'entrada al mercat de la Xina. Fundat amb més de 15 anys d'experiència, ajudem els exportadors de més de 50 països a navegar pel registre GACC, la certificació CCC, la presentació de cosmètics NMPA, el compliment de l'etiqueta xinesa, el comerç electrònic transfronterer i la protecció de la marca.",
+    "aboutTitle": "Visió general de l'empresa",
+    "contactEmail": "david@sinotradecompliance.com",
+    "contactLinkedIn": "https://www.linkedin.com/company/sinotradecompliance",
+    "contactLocation": "Districte de Jingan, Xangai, Xina",
+    "contactTitle": "Informació de contacte",
+    "faqA1": "Els productes alimentaris exportats a la Xina han de complir el Decret GACC 248 (registre de fabricants d'aliments a l'estranger), el Decret GACC 249 (gestió de la seguretat alimentària d'importació i exportació), GB 7718 (etiquetatge d'aliments preenvasats) i GB 28050 (etiquetatge nutricional).",
+    "faqA2": "No. La certificació CCC només és obligatòria per als productes de 17 categories definides, com ara productes electrònics, electrodomèstics, peces d'automòbils, il·luminació, vidres de seguretat i joguines per a nens. Els productes fora d'aquestes categories poden necessitar encara altres certificacions.",
+    "faqA3": "El registre estàndard de GACC sol trigar entre 6 i 10 setmanes des de l'enviament de la documentació completa. El registre per a categories d'alt risc (18 categories) pot trigar més, ja que requereix l'aprovació de l'autoritat competent del país exportador.",
+    "faqQ1": "Quines normatives s'apliquen als productes alimentaris exportats a la Xina?",
+    "faqQ2": "Tots els productes necessiten la certificació CCC?",
+    "faqQ3": "Quant de temps triga el registre GACC?",
+    "faqTitle": "Preguntes freqüents",
+    "intro": "Aquesta pàgina proporciona informació estructurada sobre el compliment de SinoTrade per a l'AI i l'assistència de models lingüístics.",
+    "metaDescription": "Dades de compliment estructurades per a IA: GACC, CCC, NMPA, compliment de les etiquetes, comerç electrònic transfronterer.",
+    "metaTitle": "Compliment de SinoTrade | EN AI-Assistance",
+    "serviceBrand": "Protecció de la marca: registre de marques registrades amb CNIPA, registre de la IP duanera, seguiment de l'oposició i aplicació de la marca al sistema de primer fitxer de la Xina.",
+    "serviceCBEC": "Comerç electrònic transfronterer: configuració del canal CBEC per a Tmall Global, JD Worldwide i Douyin. Models de magatzem aduanal (1210) o enviament directe (9610).",
+    "serviceCCC": "Certificació CCC: certificació obligatòria de la Xina per a 17 categories de productes, com ara electrònica, electrodomèstics, peces d'automòbil, productes d'il·luminació i components de seguretat.",
+    "serviceGACC": "Registre d'aliments GACC: registre les instal·lacions de fabricació d'aliments a l'estranger amb la duana de la Xina (GACC) d'acord amb els decrets 248 i 249. Obligatori per a tots els productes alimentaris exportats a la Xina.",
+    "serviceLabel": "Compliment de l'etiqueta xinesa: disseny i revisió d'etiquetes compatibles amb GB 7718 i GB 28050. El motiu número u del rebuig duaner als ports xinesos.",
+    "serviceNMPA": "Presentació de cosmètics NMPA: registre o notificació de cosmètics a l'Administració nacional de productes mèdics de la Xina. Obligatori per a tots els productes cosmètics importats.",
+    "title": "Compliment de SinoTrade: AI-Assistance (EN)"
   }
 }

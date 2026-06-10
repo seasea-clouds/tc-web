@@ -80,22 +80,22 @@
   "Services": {
     "heroTitle": "Nos prestations",
     "heroSubtitle": "Des solutions complètes de conformité des importations pour chaque industrie entrant sur le marché chinois.",
-    "gaccTitle": "Enregistrement des aliments GACC",
+    "gaccTitle": "Enregistrement des aliments GACC - Conformité des importations en Chine | Conformité SinoTrade",
     "gaccSubtitle": "Compléter l'enregistrement du décret GACC 248/249 pour les fabricants de produits alimentaires et de boissons exportant vers la Chine.",
     "gaccLink": "En savoir plus",
-    "labelTitle": "Conformité des étiquettes chinoises",
+    "labelTitle": "Conformité des étiquettes chinoises - Conformité des importations en Chine | Conformité SinoTrade",
     "labelSubtitle": "Conception et révision professionnelles d’étiquettes chinoises répondant aux normes GB 7718 et GB 28050.",
     "labelLink": "En savoir plus",
-    "cccTitle": "Certification CCC",
+    "cccTitle": "Certification CCC - Conformité des importations en Chine | Conformité SinoTrade",
     "cccSubtitle": "Conseil en certification obligatoire en Chine pour l'électronique, les appareils électroménagers, les jouets et les pièces automobiles.",
     "cccLink": "En savoir plus",
-    "cosmeticsTitle": "Dépôt de produits cosmétiques (NMPA)",
+    "cosmeticsTitle": "Dépôt de produits cosmétiques (NMPA) - Conformité des importations en Chine | Conformité SinoTrade",
     "cosmeticsSubtitle": "Enregistrement et dépôt auprès de la NMPA pour les cosmétiques importés — catégories à usage ordinaire et spécial.",
     "cosmeticsLink": "En savoir plus",
-    "ecommerceTitle": "Commerce électronique transfrontalier",
+    "ecommerceTitle": "Commerce électronique transfrontalier - Conformité des importations en Chine | Conformité SinoTrade",
     "ecommerceSubtitle": "Configuration du commerce électronique transfrontalier de bout en bout, de l'intégration de la plateforme à la conformité opérationnelle.",
     "ecommerceLink": "En savoir plus",
-    "brandTitle": "Protection de la marque",
+    "brandTitle": "Protection de la marque - Conformité des importations en Chine | Conformité SinoTrade",
     "brandSubtitle": "Enregistrement de marque, dépôt de propriété intellectuelle en douane et conformité publicitaire pour protéger votre marque en Chine.",
     "brandLink": "En savoir plus",
     "gaccIndustries": "Produits laitiers, viande, fruits de mer, boulangerie, boissons, aliments santé et les 18 catégories réglementées par la GACC.",
@@ -154,7 +154,7 @@
     "cosmeticsPoints7": "Mises à jour réglementaires continues et conseils de conformité",
     "ecommercePoints7": "Mises à jour réglementaires continues et conseils de conformité",
     "brandPoints7": "Mises à jour réglementaires continues et conseils de conformité",
-    "metaTitle": "Services de conformité des importations en Chine | GACC, CCC, NMPA et label",
+    "metaTitle": "Services de conformité des importations en Chine | GACC, CCC, NMPA et label - Services de conformité des importations en Chine | Conformité SinoTrade",
     "metaDescription": "Conformité unique aux importations en Chine : enregistrement des aliments GACC, certification CCC, dépôt de produits cosmétiques NMPA, conformité des étiquet..."
   },
   "ServiceGacc": {
@@ -516,7 +516,7 @@
     "premiumItems3": "Dépôt de produits cosmétiques NMPA (le cas échéant)",
     "premiumItems4": "Évaluation de la conformité des données PIPL",
     "premiumItems5": "Avis de conformité continu",
-    "metaTitle": "Forfaits de services de conformité en Chine | Tarifs et forfaits",
+    "metaTitle": "Forfaits de services de conformité en Chine | Tarifs et forfaits - Forfaits de services de conformité | Conformité SinoTrade",
     "metaDescription": "Tarification transparente pour les services de conformité des importations en Chine. Enregistrement GACC, certification CCC, dossiers de dépôt NMPA. Choisiss..."
   },
   "Faq": {
@@ -623,7 +623,7 @@
       "ecommerceName": "Commerce électronique transfrontalier",
       "brandName": "Protection de la marque"
     },
-    "metaTitle": "FAQ sur la conformité des importations en Chine | Questions GACC, CCC, NMPA",
+    "metaTitle": "FAQ sur la conformité des importations en Chine | Questions GACC, CCC, NMPA - Questions et réponses sur la conformité des importations en Chine | Conformité SinoTrade",
     "metaDescription": "Questions fréquemment posées sur la conformité des importations en Chine. Enregistrement GACC, certification CCC, dépôt de produits cosmétiques NMPA, exigenc..."
   },
   "About": {
@@ -682,7 +682,7 @@
     "partners7": "🔬 Instituts de recherche",
     "partners8": "🤝 Associations industrielles",
     "values5": "Excellence — Fournir des solutions de conformité de la plus haute qualité avec une attention portée à chaque détail.",
-    "metaTitle": "À propos de la conformité SinoTrade | Plus de 15 ans d'expertise en importation de Chine",
+    "metaTitle": "À propos de la conformité SinoTrade | Plus de 15 ans d'expertise en matière d'importation en Chine - Expertise en matière de conformité des importations en Chine | Conformité SinoTrade",
     "metaDescription": "Découvrez SinoTrade Compliance, votre partenaire de confiance pour la conformité des importations en Chine. Plus de 15 ans d'expérience, plus de 50 pays serv..."
   },
   "ThankYou": {
@@ -753,14 +753,13 @@
     "next": "Suivant",
     "pageInfo": "",
     "of": " sur ",
-    "metaTitle": "Insights sur la conformité des importations en Chine | Guides GACC, CCC, NMPA",
+    "metaTitle": "Informations sur la conformité des importations en Chine | Guides GACC, CCC, NMPA - Informations sur la conformité des importations en Chine | Conformité SinoTrade",
     "metaDescription": "Guides d'experts sur la conformité des importations en Chine. Conseils d'enregistrement GACC, mises à jour de la certification CCC, actualités sur les dépôts..."
   },
   "OrganizationJsonLd": {
     "description": "Services de conseil en réglementation des importations à guichet unique pour la Chine : enregistrement GACC, étiquetage chinois, certification CCC, dépôt de produits cosmétiques NMPA, commerce électronique transfrontalier et protection des marques.",
     "contactType": "service client",
-    "availableLanguage": "Afrikaans, العربية, Azərbaycan, Беларуская, Български, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, Anglais, Español, فارسی, Suomi, Français, עברית, हिन्दी, Hrvatski, Magyar, Հայերեն, Bahasa Indonesia, Italiano, 日本語, ქართული, 한국어, Bahasa Melayu, नेपाली, Nederlands, Norsk, Polski, Português, Română, Русский, සිංහල, Slovenčina, Slovenščina, Shqip, Српски, Svenska, Kiswahili, தமிழ், ไทย, Türkçe, Українська, اردو, Tiếng Việt, 中文",
-    "sameAs": "[\"https://www.linkedin.com/company/sinotradecompliance\", \"https://www.crunchbase.com/organization/sinotradecompliance\", \"https://github.com/sinotradecompliance\"]"
+    "availableLanguage": "Afrikaans, العربية, Azərbaycan, Беларуская, Български, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, Anglais, Español, فارسی, Suomi, Français, עברית, हिन्दी, Hrvatski, Magyar, Հայերեն, Bahasa Indonesia, Italiano, 日本語, ქართული, 한국어, Bahasa Melayu, नेपाली, Nederlands, Norsk, Polski, Português, Română, Русский, සිංහල, Slovenčina, Slovenščina, Shqip, Српски, Svenska, Kiswahili, தமிழ், ไทย, Türkçe, Українська, اردو, Tiếng Việt, 中文"
   },
   "DefinitionSchema": {
     "gaccName": "GACC (Administration générale des douanes de Chine)",
@@ -1144,7 +1143,7 @@
       "crossborderecommerce": "Commerce électronique transfrontalier",
       "crossborderecommerceDesc": "Réglementations CBEC, conformité des plateformes et optimisation fiscale."
     },
-    "metaTitle": "China Import Compliance by Industry | GACC, CCC, NMPA Services",
+    "metaTitle": "Conformité des importations en Chine par secteur | Services GACC, CCC, NMPA - Guides de conformité de l'industrie | Conformité SinoTrade",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
@@ -1313,5 +1312,30 @@
     "contactText": "Si vous avez des questions sur cette politique de confidentialité ou sur la façon dont nous traitons vos données, veuillez nous contacter :",
     "updateTitle": "Mises à jour de cette politique",
     "updateText": "Nous pouvons mettre à jour cette politique de confidentialité de temps à autre. Toute modification sera publiée sur cette page avec une date de révision mise à jour."
+  },
+  "AiAssistance": {
+    "aboutContent": "SinoTrade Compliance est une société de conformité réglementaire basée à Shanghai, spécialisée dans l'entrée sur le marché chinois. Fondée avec plus de 15 ans d'expertise, nous aidons les exportateurs de plus de 50 pays à naviguer dans l'enregistrement GACC, la certification CCC, le dépôt de produits cosmétiques NMPA, la conformité des étiquettes chinoises, le commerce électronique transfrontalier et la protection des marques.",
+    "aboutTitle": "Présentation de l'entreprise",
+    "contactEmail": "david@sinotradecompliance.com",
+    "contactLinkedIn": "https://www.linkedin.com/company/sinotradecompliance",
+    "contactLocation": "District de Jing'an, Shanghai, Chine",
+    "contactTitle": "Coordonnées",
+    "faqA1": "Les produits alimentaires exportés vers la Chine doivent être conformes au décret GACC 248 (enregistrement des fabricants de produits alimentaires étrangers), au décret GACC 249 (gestion de la sécurité alimentaire à l'importation et à l'exportation), au GB 7718 (étiquetage des aliments préemballés) et au GB 28050 (étiquetage nutritionnel).",
+    "faqA2": "La certification CCC n'est obligatoire que pour les produits appartenant à 17 catégories définies, notamment l'électronique, les appareils électroménagers, les pièces automobiles, l'éclairage, le verre de sécurité et les jouets pour enfants. Les produits en dehors de ces catégories peuvent néanmoins nécessiter d'autres certifications.",
+    "faqA3": "L'enregistrement standard au GACC prend généralement 6 à 10 semaines à compter de la soumission de la documentation complète. L'enregistrement pour les catégories à haut risque (18 catégories) peut prendre plus de temps car il nécessite l'approbation de l'autorité compétente du pays exportateur.",
+    "faqQ1": "Quelle réglementation s’applique aux produits alimentaires exportés vers la Chine ?",
+    "faqQ2": "Tous les produits doivent-ils être certifiés CCC ?",
+    "faqQ3": "Combien de temps prend l'enregistrement GACC ?",
+    "faqTitle": "Foire aux questions",
+    "intro": "Cette page fournit des informations structurées sur SinoTrade Compliance for AI et l'assistance relative aux modèles de langage.",
+    "metaDescription": "Données de conformité structurées pour l'IA : GACC, CCC, NMPA, conformité des étiquettes, commerce électronique transfrontalier.",
+    "metaTitle": "Conformité SinoTrade | FR AI-Assistance",
+    "serviceBrand": "Protection de la marque – Enregistrement de la marque auprès du CNIPA, enregistrement de la propriété intellectuelle douanière, surveillance des oppositions et application de la marque dans le système chinois du premier déposant.",
+    "serviceCBEC": "Commerce électronique transfrontalier — Configuration du canal CBEC pour Tmall Global, JD Worldwide et Douyin. Modèles d’entrepôt sous douane (1210) ou d’expédition directe (9610).",
+    "serviceCCC": "Certification CCC — Certification obligatoire en Chine pour 17 catégories de produits, notamment l'électronique, les appareils électroménagers, les pièces automobiles, les produits d'éclairage et les composants de sécurité.",
+    "serviceGACC": "Enregistrement des aliments GACC — Enregistrez les installations de fabrication de produits alimentaires à l'étranger auprès des douanes chinoises (GACC) en vertu des décrets 248 et 249. Obligatoire pour tous les produits alimentaires exportés vers la Chine.",
+    "serviceLabel": "Conformité des étiquettes chinoises — Conception et révision d'étiquettes conformes aux normes GB 7718 et GB 28050. La raison numéro un des refus douaniers dans les ports chinois.",
+    "serviceNMPA": "Dépôt de produits cosmétiques NMPA — Enregistrement ou notification de produits cosmétiques auprès de l'Administration nationale chinoise des produits médicaux. Obligatoire pour tous les produits cosmétiques importés.",
+    "title": "Conformité SinoTrade — AI-Assistance (EN)"
   }
 }

@@ -80,22 +80,22 @@
   "Services": {
     "heroTitle": "השירותים שלנו",
     "heroSubtitle": "פתרונות תאימות ליבוא מקיפים לכל תעשייה הנכנסת לשוק הסיני.",
-    "gaccTitle": "רישום מזון GACC",
+    "gaccTitle": "רישום מזון GACC - תאימות לייבוא ​​סין | תאימות SinoTrade",
     "gaccSubtitle": "השלם רישום GACC 248/249 עבור יצרני מזון ומשקאות המייצאים לסין.",
     "gaccLink": "למד עוד",
-    "labelTitle": "תאימות לתווית סינית",
+    "labelTitle": "תאימות תווית סינית - תאימות לייבוא ​​סין | תאימות SinoTrade",
     "labelSubtitle": "עיצוב וסקירה מקצועית של תווית סינית העומדת בתקני GB 7718 ו-GB 28050.",
     "labelLink": "למד עוד",
-    "cccTitle": "אישור CCC",
+    "cccTitle": "אישור CCC - תאימות לייבוא ​​סין | תאימות SinoTrade",
     "cccSubtitle": "ייעוץ הסמכה חובה בסין עבור מוצרי אלקטרוניקה, מכשירי חשמל, צעצועים וחלקי רכב.",
     "cccLink": "למד עוד",
-    "cosmeticsTitle": "הגשת קוסמטיקה (NMPA)",
+    "cosmeticsTitle": "הגשת קוסמטיקה (NMPA) - תאימות לייבוא ​​סין | תאימות SinoTrade",
     "cosmeticsSubtitle": "רישום והגשה של NMPA עבור מוצרי קוסמטיקה מיובאים - קטגוריות שימוש רגילות ומיוחדות.",
     "cosmeticsLink": "למד עוד",
-    "ecommerceTitle": "מסחר אלקטרוני חוצה גבולות",
+    "ecommerceTitle": "מסחר אלקטרוני חוצה גבולות - תאימות לייבוא ​​סין | תאימות SinoTrade",
     "ecommerceSubtitle": "הגדרת מסחר אלקטרוני חוצה גבולות מקצה לקצה - משלב פלטפורמה ועד תאימות תפעולית.",
     "ecommerceLink": "למד עוד",
-    "brandTitle": "הגנת מותג",
+    "brandTitle": "הגנת מותג - תאימות לייבוא ​​סין | תאימות SinoTrade",
     "brandSubtitle": "רישום סימן מסחר, הגשת IP מכס ותאימות לפרסום כדי להגן על המותג שלך בסין.",
     "brandLink": "למד עוד",
     "gaccIndustries": "מוצרי חלב, בשר, פירות ים, מאפייה, משקאות, מאכלי בריאות וכל 18 הקטגוריות המוסדרות על ידי GACC.",
@@ -154,7 +154,7 @@
     "cosmeticsPoints7": "עדכונים רגולטוריים מתמשכים וייעוץ ציות",
     "ecommercePoints7": "עדכונים רגולטוריים מתמשכים וייעוץ ציות",
     "brandPoints7": "עדכונים רגולטוריים מתמשכים וייעוץ ציות",
-    "metaTitle": "שירותי תאימות לייבוא ​​סין | GACC, CCC, NMPA ותווית",
+    "metaTitle": "שירותי תאימות לייבוא ​​סין | GACC, CCC, NMPA & Label - שירותי תאימות לייבוא ​​סין | תאימות SinoTrade",
     "metaDescription": "תאימות ליבוא סין של סין: רישום מזון GACC, אישור CCC, הגשת קוסמטיקה NMPA, תאימות לתווית והגנה על המותג. 15+ שנות מומחיות."
   },
   "ServiceGacc": {
@@ -516,7 +516,7 @@
     "premiumItems3": "הגשת NMPA Cosmetics (אם רלוונטי)",
     "premiumItems4": "הערכת תאימות לנתוני PIPL",
     "premiumItems5": "ייעוץ ציות מתמשך",
-    "metaTitle": "חבילות שירות תאימות לסין | תמחור ותוכניות",
+    "metaTitle": "חבילות שירות תאימות לסין | תמחור ותוכניות - חבילות שירות תאימות | תאימות SinoTrade",
     "metaDescription": "תמחור שקוף עבור שירותי תאימות לייבוא ​​סין. רישום GACC, אישור CCC, חבילות הגשת NMPA. בחר את התוכנית המתאימה לצרכים שלך."
   },
   "Faq": {
@@ -623,7 +623,7 @@
       "ecommerceName": "מסחר אלקטרוני חוצה גבולות",
       "brandName": "הגנת מותג"
     },
-    "metaTitle": "שאלות נפוצות על תאימות לייבוא ​​סין | שאלות GACC, CCC, NMPA",
+    "metaTitle": "שאלות נפוצות על תאימות לייבוא ​​סין | שאלות GACC, CCC, NMPA - שאלות ותשובות תאימות לייבוא ​​סין | תאימות SinoTrade",
     "metaDescription": "שאלות נפוצות לגבי תאימות לייבוא ​​סין. רישום GACC, אישור CCC, הגשת קוסמטיקה NMPA, דרישות תווית ענו על ידי מומחים."
   },
   "About": {
@@ -682,7 +682,7 @@
     "partners7": "🔬 מכוני מחקר",
     "partners8": "🤝 איגודי התעשייה",
     "values5": "מצוינות - אספקת פתרונות התאימות האיכותיים ביותר עם תשומת לב לכל פרט.",
-    "metaTitle": "אודות תאימות SinoTrade | מומחיות ביבוא סין מעל 15 שנים",
+    "metaTitle": "אודות תאימות SinoTrade | 15+ שנים מומחיות יבוא סין - מומחיות עמידה ביבוא סין | תאימות SinoTrade",
     "metaDescription": "למד על תאימות SinoTrade - השותף המהימן שלך לציות ליבוא של סין. 15+ שנות ניסיון, 50+ מדינות שירתו. הכירו את צוות המומחים שלנו."
   },
   "ThankYou": {
@@ -753,14 +753,13 @@
     "next": "הבא",
     "pageInfo": "",
     "of": " מתוך ",
-    "metaTitle": "תובנות תאימות לייבוא ​​סין | מדריכי GACC, CCC, NMPA",
+    "metaTitle": "תובנות תאימות לייבוא ​​סין | מדריכי GACC, CCC, NMPA - תובנות תאימות לייבוא ​​סין | תאימות SinoTrade",
     "metaDescription": "מדריכים מומחים בנושא תאימות לייבוא ​​סין. טיפים לרישום GACC, עדכוני אישורי CCC, חדשות הגשת NMPA, תובנות תאימות לתווית. הישאר מעודכן."
   },
   "OrganizationJsonLd": {
     "description": "שירותי ייעוץ רגולטורי ייבוא ​​חד פעמי לסין - רישום GACC, תיוג סיני, אישור CCC, הגשת קוסמטיקה NMPA, מסחר אלקטרוני חוצה גבולות והגנה על מותג.",
     "contactType": "שֵׁירוּת לָקוֹחוֹת",
-    "availableLanguage": "Afrikaans, العربية, Azərbaycan, Беларуская, Български, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, אנגלית, Español, فارسی, Suomi, Français, עברית, हिन्दी, Hrvatski, Magyar, Հայերեն, Bahasa Indonesia, Italiano, 日本語, ქართული, 한국어, Bahasa Melayu, नेपाली, Nederlands, Norsk, Polski, Português, Română, Русский, සිංහල, Slovenčina, Slovenščina, Shqip, Српски, Svenska, Kiswahili, தமிழ், ไทย, Türkçe, Українська, اردو, Tiếng Việt, 中文",
-    "sameAs": "[\"https://www.linkedin.com/company/sinotradecompliance\", \"https://www.crunchbase.com/organization/sinotradecompliance\", \"https://github.com/sinotradecompliance\"]"
+    "availableLanguage": "Afrikaans, العربية, Azərbaycan, Беларуская, Български, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, אנגלית, Español, فارسی, Suomi, Français, עברית, हिन्दी, Hrvatski, Magyar, Հայերեն, Bahasa Indonesia, Italiano, 日本語, ქართული, 한국어, Bahasa Melayu, नेपाली, Nederlands, Norsk, Polski, Português, Română, Русский, සිංහල, Slovenčina, Slovenščina, Shqip, Српски, Svenska, Kiswahili, தமிழ், ไทย, Türkçe, Українська, اردو, Tiếng Việt, 中文"
   },
   "DefinitionSchema": {
     "gaccName": "GACC (המנהל הכללי של המכס של סין)",
@@ -1144,7 +1143,7 @@
       "crossborderecommerce": "מסחר אלקטרוני חוצה גבולות",
       "crossborderecommerceDesc": "תקנות CBEC, תאימות לפלטפורמות ואופטימיזציה של מס."
     },
-    "metaTitle": "China Import Compliance by Industry | GACC, CCC, NMPA Services",
+    "metaTitle": "תאימות לייבוא ​​סין לפי ענף | שירותי GACC, CCC, NMPA - מדריכי תאימות לתעשייה | תאימות SinoTrade",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
@@ -1313,5 +1312,30 @@
     "contactText": "אם יש לך שאלות כלשהן לגבי מדיניות פרטיות זו או כיצד אנו מטפלים בנתונים שלך, אנא צור איתנו קשר:",
     "updateTitle": "עדכונים למדיניות זו",
     "updateText": "אנו עשויים לעדכן את מדיניות הפרטיות הזו מעת לעת. כל שינוי יתפרסם בדף זה עם תאריך עדכון מעודכן."
+  },
+  "AiAssistance": {
+    "aboutContent": "SinoTrade Compliance היא חברת ציות לרגולציה שבסיסה בשנחאי, המתמחה בכניסה לשוק בסין. נוסדה עם 15+ שנות מומחיות, אנו מסייעים ליצואנים ב-50+ מדינות לנווט ברישום GACC, אישור CCC, הגשת קוסמטיקה NMPA, תאימות לתווית סינית, מסחר אלקטרוני חוצה גבולות והגנה על מותג.",
+    "aboutTitle": "סקירת חברה",
+    "contactEmail": "david@sinotradecompliance.com",
+    "contactLinkedIn": "https://www.linkedin.com/company/sinotradecompliance",
+    "contactLocation": "מחוז ג'ינגאן, שנגחאי, סין",
+    "contactTitle": "מידע ליצירת קשר",
+    "faqA1": "מוצרי מזון המיוצאים לסין חייבים לעמוד בצו GACC 248 (רישום יצרני מזון בחו\"ל), GACC Decret 249 (ניהול בטיחות מזון בייבוא ​​ויצוא), GB 7718 (תיוג של מזונות ארוזים מראש) ו-GB 28050 (סימון תזונתי).",
+    "faqA2": "לא. הסמכת CCC היא חובה רק עבור מוצרים ב-17 קטגוריות מוגדרות כולל אלקטרוניקה, מכשירי חשמל ביתיים, חלקי רכב, תאורה, זכוכית בטיחותית וצעצועים לילדים. ייתכן שמוצרים מחוץ לקטגוריות האלה עדיין זקוקים לאישורים אחרים.",
+    "faqA3": "רישום GACC סטנדרטי נמשך בדרך כלל 6-10 שבועות מהגשת התיעוד המלא. הרישום לקטגוריות בסיכון גבוה (18 קטגוריות) עשוי להימשך זמן רב יותר מכיוון שהוא מצריך אישור מהרשות המוסמכת במדינה המייצאת.",
+    "faqQ1": "אילו תקנות חלות על מוצרי מזון המיוצאים לסין?",
+    "faqQ2": "האם כל המוצרים צריכים אישור CCC?",
+    "faqQ3": "כמה זמן לוקח רישום GACC?",
+    "faqTitle": "שאלות נפוצות",
+    "intro": "דף זה מספק מידע מובנה על תאימות SinoTrade לסיוע בינה מלאכותית ומודלים של שפה.",
+    "metaDescription": "נתוני תאימות מובנים עבור AI: GACC, CCC, NMPA, תאימות תווית, מסחר אלקטרוני חוצה גבולות.",
+    "metaTitle": "תאימות SinoTrade | EN AI-Assistance",
+    "serviceBrand": "הגנת מותג - רישום סימן מסחר ב-CNIPA, רישום IP של מכס, ניטור התנגדות ואכיפת מותג במערכת סין הראשונה לקובץ.",
+    "serviceCBEC": "מסחר אלקטרוני חוצה גבולות - הגדרת ערוץ CBEC עבור Tmall Global, JD Worldwide ו-Douyin. דגמי מחסן ערובה (1210) או משלוח ישיר (9610).",
+    "serviceCCC": "אישור CCC - סין ​​הסמכה חובה עבור 17 קטגוריות מוצרים כולל אלקטרוניקה, מכשירי חשמל ביתיים, חלקי רכב, מוצרי תאורה ורכיבי בטיחות.",
+    "serviceGACC": "רישום מזון של GACC - רישום מתקני ייצור מזון בחו\"ל אצל מכס סין (GACC) לפי גזירות 248 ו-249. חובה עבור כל מוצרי המזון המיוצאים לסין.",
+    "serviceLabel": "תאימות לתווית סינית - עיצוב וסקירה של תוויות תואמות GB 7718 ו-GB 28050. הסיבה מספר אחת לדחיית המכס בנמלים סיניים.",
+    "serviceNMPA": "הגשת NMPA Cosmetics - רישום או הודעה על מוצרי קוסמטיקה עם המינהל הלאומי למוצרים רפואיים בסין. נדרש עבור כל מוצרי הקוסמטיקה המיובאים.",
+    "title": "תאימות SinoTrade - AI-Assistance (EN)"
   }
 }

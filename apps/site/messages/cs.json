@@ -80,22 +80,22 @@
   "Services": {
     "heroTitle": "Naše služby",
     "heroSubtitle": "Komplexní řešení pro dodržování dovozních předpisů pro každé odvětví vstupující na čínský trh.",
-    "gaccTitle": "Registrace potravin GACC",
+    "gaccTitle": "Registrace potravin GACC – dodržování dovozu z Číny | Soulad se SinoTrade",
     "gaccSubtitle": "Dokončete registraci vyhlášky GACC 248/249 pro výrobce potravin a nápojů vyvážejících do Číny.",
     "gaccLink": "Zjistit více",
-    "labelTitle": "Soulad s čínskými štítky",
+    "labelTitle": "Soulad s čínskými etiketami – Soulad s čínskými dovozy | Soulad se SinoTrade",
     "labelSubtitle": "Profesionální čínský design a hodnocení štítků splňující normy GB 7718 a GB 28050.",
     "labelLink": "Zjistit více",
-    "cccTitle": "Certifikace CCC",
+    "cccTitle": "CCC Certification – China Import Compliance | Soulad se SinoTrade",
     "cccSubtitle": "Čína povinné certifikační poradenství pro elektroniku, spotřebiče, hračky a automobilové díly.",
     "cccLink": "Zjistit více",
-    "cosmeticsTitle": "Kosmetický pilník (NMPA)",
+    "cosmeticsTitle": "Kosmetika Filing (NMPA) - Čína Import Compliance | Soulad se SinoTrade",
     "cosmeticsSubtitle": "Registrace a podání NMPA pro dováženou kosmetiku — kategorie běžného a speciálního použití.",
     "cosmeticsLink": "Zjistit více",
-    "ecommerceTitle": "Přeshraniční elektronický obchod",
+    "ecommerceTitle": "Přeshraniční elektronický obchod – dodržování podmínek dovozu z Číny | Soulad se SinoTrade",
     "ecommerceSubtitle": "Kompletní nastavení přeshraničního elektronického obchodu – od zavedení platformy až po provozní dodržování.",
     "ecommerceLink": "Zjistit více",
-    "brandTitle": "Ochrana značky",
+    "brandTitle": "Ochrana značky – soulad s dovozem z Číny | Soulad se SinoTrade",
     "brandSubtitle": "Registrace ochranné známky, celní evidence IP a dodržování reklam na ochranu vaší značky v Číně.",
     "brandLink": "Zjistit více",
     "gaccIndustries": "Mléko, maso, mořské plody, pekařství, nápoje, zdravá výživa a všech 18 kategorií regulovaných GACC.",
@@ -154,7 +154,7 @@
     "cosmeticsPoints7": "Průběžné aktualizace předpisů a poradenství v oblasti shody",
     "ecommercePoints7": "Průběžné aktualizace předpisů a poradenství v oblasti shody",
     "brandPoints7": "Průběžné aktualizace předpisů a poradenství v oblasti shody",
-    "metaTitle": "Čína Import Compliance Services | GACC, CCC, NMPA & Label",
+    "metaTitle": "Čína Import Compliance Services | GACC, CCC, NMPA & Label - Čína Import Compliance Services | Soulad se SinoTrade",
     "metaDescription": "Soulad s čínským dovozem na jednom místě: registrace potravin GACC, certifikace CCC, archivace kosmetiky NMPA, dodržování etiket a ochrana značky. 15+ let zkušeností."
   },
   "ServiceGacc": {
@@ -516,7 +516,7 @@
     "premiumItems3": "NMPA Cosmetics Filing (pokud existuje)",
     "premiumItems4": "Posouzení shody dat PIPL",
     "premiumItems5": "Průběžné doporučení pro dodržování předpisů",
-    "metaTitle": "Balíčky služeb pro dodržování předpisů v Číně | Ceny a plány",
+    "metaTitle": "Balíčky služeb pro dodržování předpisů v Číně | Ceny a plány - Balíčky služeb pro dodržování předpisů | Soulad se SinoTrade",
     "metaDescription": "Transparentní ceny za služby dodržování dovozu z Číny. Registrace GACC, certifikace CCC, archivační balíčky NMPA. Vyberte si plán, který vyhovuje vašim potřebám."
   },
   "Faq": {
@@ -623,7 +623,7 @@
       "ecommerceName": "Přeshraniční elektronický obchod",
       "brandName": "Ochrana značky"
     },
-    "metaTitle": "Nejčastější dotazy týkající se shody s dovozem z Číny | Otázky GACC, CCC, NMPA",
+    "metaTitle": "Nejčastější dotazy týkající se shody s dovozem z Číny | Otázky GACC, CCC, NMPA – Otázky a odpovědi týkající se souladu s čínským dovozem | Soulad se SinoTrade",
     "metaDescription": "Často kladené otázky týkající se dodržování dovozu z Číny. Registrace GACC, certifikace CCC, evidence kosmetiky NMPA, požadavky na štítky zodpovězené odborníky."
   },
   "About": {
@@ -682,7 +682,7 @@
     "partners7": "🔬 Výzkumné ústavy",
     "partners8": "🤝 Průmyslové asociace",
     "values5": "Excelence — Poskytování nejkvalitnějších řešení shody s důrazem na každý detail.",
-    "metaTitle": "O dodržování SinoTrade | Více než 15 let zkušeností s dovozem z Číny",
+    "metaTitle": "O dodržování SinoTrade | Více než 15letá odbornost v oblasti dovozu z Číny – odbornost v oblasti dodržování předpisů pro dovoz z Číny | Soulad se SinoTrade",
     "metaDescription": "Přečtěte si o SinoTrade Compliance – vašem důvěryhodném partnerovi pro dodržování dovozu z Číny. 15+ let zkušeností, 50+ zemí. Seznamte se s naším týmem odborníků."
   },
   "ThankYou": {
@@ -753,14 +753,13 @@
     "next": "Další",
     "pageInfo": "",
     "of": " z ",
-    "metaTitle": "China Import Compliance Insights | Průvodci GACC, CCC, NMPA",
+    "metaTitle": "Čína Import Compliance Insights | GACC, CCC, NMPA Guides - China Import Compliance Insights | Soulad se SinoTrade",
     "metaDescription": "Odborné příručky o dodržování dovozu z Číny. Tipy na registraci GACC, aktualizace certifikace CCC, zprávy o podávání NMPA, informace o souladu se štítky. Zůstaňte informováni."
   },
   "OrganizationJsonLd": {
     "description": "Komplexní poradenské služby týkající se regulace dovozu pro Čínu – registrace GACC, čínské značení, certifikace CCC, archivace kosmetiky NMPA, přeshraniční elektronický obchod a ochrana značky.",
     "contactType": "služby zákazníkům",
-    "availableLanguage": "Afrikaans, العربية, Azərbaycan, Беларуская, Български, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, anglicky, Español, فارسی, Suomi, Français, עברית, हिन्दी, Hrvatski, Magyar, Հայերեն, Bahasa Indonesia, Italiano, 日本語, ქართული, 한국어, Bahasa Melayu, नेपाली, Nederlands, Norsk, Polski, Português, Română, Русский, සිංහල, Slovenčina, Slovenščina, Shqip, Српски, Svenska, Kiswahili, தமிழ், ไทย, Türkçe, Українська, اردو, Tiếng Việt, 中文",
-    "sameAs": "[\"https://www.linkedin.com/company/sinotradecompliance\", \"https://www.crunchbase.com/organization/sinotradecompliance\", \"https://github.com/sinotradecompliance\"]"
+    "availableLanguage": "Afrikaans, العربية, Azərbaycan, Беларуская, Български, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, anglicky, Español, فارسی, Suomi, Français, עברית, हिन्दी, Hrvatski, Magyar, Հայերեն, Bahasa Indonesia, Italiano, 日本語, ქართული, 한국어, Bahasa Melayu, नेपाली, Nederlands, Norsk, Polski, Português, Română, Русский, සිංහල, Slovenčina, Slovenščina, Shqip, Српски, Svenska, Kiswahili, தமிழ், ไทย, Türkçe, Українська, اردو, Tiếng Việt, 中文"
   },
   "DefinitionSchema": {
     "gaccName": "GACC (General Administration of Customs of China)",
@@ -1144,7 +1143,7 @@
       "crossborderecommerce": "Přeshraniční elektronický obchod",
       "crossborderecommerceDesc": "Předpisy CBEC, dodržování platforem a daňová optimalizace."
     },
-    "metaTitle": "China Import Compliance by Industry | GACC, CCC, NMPA Services",
+    "metaTitle": "Shoda s dovozem z Číny podle odvětví | GACC, CCC, NMPA Services - Industry Compliance Guides | Soulad se SinoTrade",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
@@ -1313,5 +1312,30 @@
     "contactText": "Máte-li jakékoli dotazy týkající se těchto Zásad ochrany osobních údajů nebo toho, jak nakládáme s vašimi údaji, kontaktujte nás:",
     "updateTitle": "Aktualizace těchto zásad",
     "updateText": "Tyto Zásady ochrany osobních údajů můžeme čas od času aktualizovat. Jakékoli změny budou zveřejněny na této stránce s aktualizovaným datem revize."
+  },
+  "AiAssistance": {
+    "aboutContent": "SinoTrade Compliance je firma se sídlem v Šanghaji, která se specializuje na vstup na čínský trh. Společnost byla založena s více než 15 lety zkušeností a pomáháme vývozcům ve více než 50 zemích orientovat se v registraci GACC, certifikaci CCC, evidování kosmetiky NMPA, dodržování čínských štítků, přeshraniční elektronický obchod a ochranu značky.",
+    "aboutTitle": "Přehled společnosti",
+    "contactEmail": "david@sinotradecompliance.com",
+    "contactLinkedIn": "https://www.linkedin.com/company/sinotradecompliance",
+    "contactLocation": "Jingan District, Šanghaj, Čína",
+    "contactTitle": "Kontaktní informace",
+    "faqA1": "Potravinářské produkty vyvážené do Číny musí být v souladu s vyhláškou GACC 248 (registrace zahraničních výrobců potravin), vyhláškou GACC 249 (řízení bezpečnosti potravin při dovozu a vývozu), GB 7718 (označování balených potravin) a GB 28050 (nutriční označování).",
+    "faqA2": "Ne. Certifikace CCC je povinná pouze pro produkty v 17 definovaných kategoriích včetně elektroniky, domácích spotřebičů, automobilových dílů, osvětlení, bezpečnostního skla a dětských hraček. Produkty mimo tyto kategorie mohou stále vyžadovat další certifikace.",
+    "faqA3": "Standardní registrace GACC obvykle trvá 6–10 týdnů od předložení kompletní dokumentace. Registrace pro vysoce rizikové kategorie (18 kategorií) může trvat déle, protože vyžaduje souhlas příslušného orgánu ve vyvážející zemi.",
+    "faqQ1": "Jaké předpisy se vztahují na potravinářské výrobky vyvážené do Číny?",
+    "faqQ2": "Potřebují všechny produkty certifikaci CCC?",
+    "faqQ3": "Jak dlouho trvá registrace GACC?",
+    "faqTitle": "Často kladené otázky",
+    "intro": "Tato stránka poskytuje strukturované informace o SinoTrade Compliance pro AI a pomoc s jazykovým modelem.",
+    "metaDescription": "Strukturovaná data shody pro AI: GACC, CCC, NMPA, shoda se štítky, přeshraniční elektronický obchod.",
+    "metaTitle": "Soulad SinoTrade | CS AI-Assistance",
+    "serviceBrand": "Ochrana značky — Registrace ochranných známek u CNIPA, celní evidence IP, monitorování námitek a prosazování značky v systému prvního záznamu v Číně.",
+    "serviceCBEC": "Přeshraniční elektronický obchod – nastavení kanálu CBEC pro Tmall Global, JD Worldwide a Douyin. Modely s celním skladem (1210) nebo přímou expedicí (9610).",
+    "serviceCCC": "Certifikace CCC — Čínská povinná certifikace pro 17 kategorií produktů včetně elektroniky, domácích spotřebičů, automobilových dílů, světelných produktů a bezpečnostních komponent.",
+    "serviceGACC": "Registrace potravin GACC — Zaregistrujte zámořská zařízení na výrobu potravin u čínského celního úřadu (GACC) podle dekretů 248 a 249. Povinné pro všechny potravinářské produkty vyvážené do Číny.",
+    "serviceLabel": "Shoda s čínskými štítky – design a kontrola štítků vyhovující GB 7718 a GB 28050. Důvod číslo jedna pro celní odmítnutí v čínských přístavech.",
+    "serviceNMPA": "NMPA Cosmetics Filing — Registrace nebo oznámení kosmetiky u China National Medical Products Administration. Povinné pro všechny dovážené kosmetické produkty.",
+    "title": "Soulad se SinoTrade — AI-Assistance (EN)"
   }
 }

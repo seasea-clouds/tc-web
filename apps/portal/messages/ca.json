@@ -20,11 +20,11 @@
     "monthlyDesc": "Informes il·limitats durant un mes",
     "popular": "Popular",
     "startFree": "Comença gratis",
-    "getReport": "Obteniu l'informe: 1 $",
+    "getReport": "Obteniu l'informe 1,99 $/informe",
     "subscribe": "Subscriu-te 9,9 $/mes",
     "metaTitle": "Autocontrol de compliment de la Xina | Compliment de SinoTrade",
     "metaDescription": "Comproveu si el vostre producte necessita un registre GACC, una certificació CCC o una presentació NMPA per exportar-lo a la Xina.",
-    "allFree": "6 mòduls — tots gratuïts, sense registre",
+    "allFree": "6 mòduls, tots gratuïts, sense registre",
     "howItWorksSub": "3 passos des de la informació del producte fins a l'informe de compliment"
   },
   "Auth": {
@@ -95,7 +95,7 @@
     "singleBullet2": "Lloc web i descàrrega de PDF",
     "singleBullet3": "Lliurament per correu electrònic",
     "singleBullet4": "Imprimible/compartible",
-    "getReport": "Obteniu l'informe: 1 $",
+    "getReport": "Obteniu l'informe 1,99 $/informe",
     "monthly": "Mensualment",
     "monthlyPrice": "9,9 $",
     "monthlyDesc": "Informes il·limitats durant un mes",

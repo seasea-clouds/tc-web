@@ -17,7 +17,7 @@ import { LOCALES } from './locales.mjs';
 export { LOCALES };
 
 const PRIVATE_SEGMENTS = ['/login','/register','/dashboard','/me/','/report','/api','/auth','/billing','/settings','/subscription'];
-const PRIVATE_PATHS = ['/c/login','/c/register','/c/dashboard','/c/me','/c/report','/c/report/preview','/thank-you','/testimonials','/sitemap'];
+const PRIVATE_PATHS = ['/c/login','/c/register','/c/dashboard','/c/me','/c/report','/c/report/preview','/thank-you','/testimonials','/sitemap','/ai-assistance'];
 const ROUTE_GROUP_RE = /\([^)]+\)\//g;
 
 function scanPageTsx(appDir) {

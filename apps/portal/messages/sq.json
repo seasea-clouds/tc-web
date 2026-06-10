@@ -20,11 +20,11 @@
     "monthlyDesc": "Raporte të pakufizuara për një muaj",
     "popular": "Popullore",
     "startFree": "Filloni falas",
-    "getReport": "Merrni raportin - 1 dollarë",
+    "getReport": "Merr Raportin 1,99$/raport",
     "subscribe": "Abonohu 9,9 dollarë në muaj",
     "metaTitle": "Vetë-Kontrolli i Pajtueshmërisë së Kinës | Pajtueshmëria e SinoTrade",
     "metaDescription": "Kontrolloni nëse produkti juaj ka nevojë për regjistrim GACC, certifikim CCC ose paraqitje NMPA për eksport në Kinë.",
-    "allFree": "6 module — të gjitha falas, pa regjistrim",
+    "allFree": "6 module, të gjitha falas, pa regjistrim",
     "howItWorksSub": "3 hapa nga informacioni i produktit deri te raporti i pajtueshmërisë"
   },
   "Auth": {
@@ -95,7 +95,7 @@
     "singleBullet2": "Uebfaqja dhe shkarkimi PDF",
     "singleBullet3": "Dorëzimi me email",
     "singleBullet4": "I printueshëm / i ndashëm",
-    "getReport": "Merrni raportin - 1 dollarë",
+    "getReport": "Merr Raportin 1,99$/raport",
     "monthly": "Mujore",
     "monthlyPrice": "9,9 dollarë",
     "monthlyDesc": "Raporte të pakufizuara për një muaj",

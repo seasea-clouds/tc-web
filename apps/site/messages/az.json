@@ -80,22 +80,22 @@
   "Services": {
     "heroTitle": "Xidmətlərimiz",
     "heroSubtitle": "Çin bazarına daxil olan hər bir sənaye üçün hərtərəfli idxal uyğunluğu həlləri.",
-    "gaccTitle": "GACC Qida Qeydiyyatı",
+    "gaccTitle": "GACC Qida Qeydiyyatı - Çin İdxal Uyğunluğu | SinoTrade Uyğunluğu",
     "gaccSubtitle": "Çinə ixrac edən qida və içki istehsalçıları üçün GACC Fərmanı 248/249 qeydiyyatını tamamlayın.",
     "gaccLink": "Daha çox öyrənin",
-    "labelTitle": "Çin etiketinə uyğunluq",
+    "labelTitle": "Çin Etiket Uyğunluğu - Çin İdxal Uyğunluğu | SinoTrade Uyğunluğu",
     "labelSubtitle": "GB 7718 və GB 28050 standartlarına cavab verən peşəkar Çin etiket dizaynı və nəzərdən keçirilməsi.",
     "labelLink": "Daha çox öyrənin",
-    "cccTitle": "CCC Sertifikatı",
+    "cccTitle": "CCC Sertifikatlaşdırma - Çin İdxal Uyğunluğu | SinoTrade Uyğunluğu",
     "cccSubtitle": "Elektronika, məişət texnikası, oyuncaqlar və avtomobil hissələri üçün Çin Məcburi Sertifikatlaşdırma məsləhəti.",
     "cccLink": "Daha çox öyrənin",
-    "cosmeticsTitle": "Kosmetika sənədləri (NMPA)",
+    "cosmeticsTitle": "Kosmetika sənədləri (NMPA) - Çin İdxal Uyğunluğu | SinoTrade Uyğunluğu",
     "cosmeticsSubtitle": "İdxal edilən kosmetika üçün NMPA qeydiyyatı və sənədləşdirilməsi — adi və xüsusi istifadə kateqoriyaları.",
     "cosmeticsLink": "Daha çox öyrənin",
-    "ecommerceTitle": "Transsərhəd e-ticarət",
+    "ecommerceTitle": "Sərhədlərarası E-ticarət - Çin İdxal Uyğunluğu | SinoTrade Uyğunluğu",
     "ecommerceSubtitle": "Başdan sona transsərhəd e-ticarət quraşdırması — platformanın işə salınmasından əməliyyat uyğunluğuna qədər.",
     "ecommerceLink": "Daha çox öyrənin",
-    "brandTitle": "Brend Mühafizəsi",
+    "brandTitle": "Brend Mühafizəsi - Çin İdxal Uyğunluğu | SinoTrade Uyğunluğu",
     "brandSubtitle": "Çində markanızı qorumaq üçün ticarət nişanının qeydiyyatı, gömrük IP sənədləri və reklam uyğunluğu.",
     "brandLink": "Daha çox öyrənin",
     "gaccIndustries": "Süd məhsulları, ət, dəniz məhsulları, çörək məhsulları, içkilər, sağlamlıq qidaları və bütün 18 GACC tərəfindən tənzimlənən kateqoriyalar.",
@@ -154,7 +154,7 @@
     "cosmeticsPoints7": "Davamlı tənzimləmə yeniləmələri və uyğunluq məsləhətləri",
     "ecommercePoints7": "Davamlı tənzimləmə yeniləmələri və uyğunluq məsləhətləri",
     "brandPoints7": "Davamlı tənzimləmə yeniləmələri və uyğunluq məsləhətləri",
-    "metaTitle": "Çin İdxal Uyğunluq Xidmətləri | GACC, CCC, NMPA və Etiket",
+    "metaTitle": "Çin İdxal Uyğunluq Xidmətləri | GACC, CCC, NMPA & Label - Çin İdxal Uyğunluq Xidmətləri | SinoTrade Uyğunluğu",
     "metaDescription": "Bir pəncərəli Çin idxalına uyğunluq: GACC qida qeydiyyatı, CCC sertifikatı, NMPA kosmetik sənədləri, etiket uyğunluğu və markanın qorunması. 15+ illik təcrübə."
   },
   "ServiceGacc": {
@@ -516,7 +516,7 @@
     "premiumItems3": "NMPA Kosmetika Sənədi (əgər varsa)",
     "premiumItems4": "PIPL Data Uyğunluğunun Qiymətləndirilməsi",
     "premiumItems5": "Davamlı Uyğunluq Məsləhəti",
-    "metaTitle": "Çin Uyğunluq Xidmət Paketləri | Qiymətlər və Planlar",
+    "metaTitle": "Çin Uyğunluq Xidmət Paketləri | Qiymətləndirmə və Planlar - Uyğunluq Xidmət Paketləri | SinoTrade Uyğunluğu",
     "metaDescription": "Çin idxalına uyğunluq xidmətləri üçün şəffaf qiymət. GACC qeydiyyatı, CCC sertifikatı, NMPA sənədləşdirmə paketləri. Ehtiyaclarınıza uyğun olan planı seçin."
   },
   "Faq": {
@@ -623,7 +623,7 @@
       "ecommerceName": "Transsərhəd e-ticarət",
       "brandName": "Brend Mühafizəsi"
     },
-    "metaTitle": "Çin İdxal Uyğunluğu haqqında FAQ | GACC, CCC, NMPA Sualları",
+    "metaTitle": "Çin İdxal Uyğunluğu haqqında FAQ | GACC, CCC, NMPA Sualları - Çin İdxal Uyğunluğu Q&A | SinoTrade Uyğunluğu",
     "metaDescription": "Çin idxalına uyğunluq haqqında tez-tez verilən suallar. GACC qeydiyyatı, CCC sertifikatı, NMPA kosmetik sənədləri, etiket tələbləri ekspertlər tərəfindən cavablandırılır."
   },
   "About": {
@@ -682,7 +682,7 @@
     "partners7": "🔬 Tədqiqat İnstitutları",
     "partners8": "🤝 Sənaye Birlikləri",
     "values5": "Mükəmməllik — Hər bir detala diqqət yetirməklə ən yüksək keyfiyyətli uyğunluq həllərini təqdim etmək.",
-    "metaTitle": "SinoTrade uyğunluğu haqqında | 15+ İllik Çin İdxal Ekspertizası",
+    "metaTitle": "SinoTrade uyğunluğu haqqında | 15+ İllik Çin İdxal Ekspertizası - Çin İdxal Uyğunluğu Ekspertizası | SinoTrade Uyğunluğu",
     "metaDescription": "SinoTrade Compliance haqqında məlumat əldə edin – Çin idxalına uyğunluq üzrə etibarlı tərəfdaşınız. 15+ illik təcrübə, 50+ ölkəyə xidmət göstərmişdir. Ekspert komandamızla tanış olun."
   },
   "ThankYou": {
@@ -753,14 +753,13 @@
     "next": "Növbəti",
     "pageInfo": "",
     "of": " / ",
-    "metaTitle": "Çin İdxal Uyğunluğu Insights | GACC, CCC, NMPA Bələdçiləri",
+    "metaTitle": "Çin İdxal Uyğunluğu Insights | GACC, CCC, NMPA Bələdçiləri - Çin İdxal Uyğunluğu Anlayışları | SinoTrade Uyğunluğu",
     "metaDescription": "Çin idxalına uyğunluq üzrə ekspert təlimatları. GACC qeydiyyat məsləhətləri, CCC sertifikatlaşdırma yeniləmələri, NMPA sənədləşdirmə xəbərləri, etiket uyğunluğu anlayışları. Xəbərdar olun."
   },
   "OrganizationJsonLd": {
     "description": "Çin üçün bir pəncərəli idxal tənzimləyici məsləhət xidmətləri — GACC qeydiyyatı, Çin etiketləməsi, CCC sertifikatı, NMPA kosmetika sənədləri, transsərhəd e-ticarət və brendin qorunması.",
     "contactType": "müştəri xidməti",
-    "availableLanguage": "Afrikaans, العربية, Azərbaycan, Беларуская, Български, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, İngilis dili, Español, فارسی, Suomi, Français, עברית, हिन्दी, Hrvatski, Magyar, Հայերեն, Bahasa Indonesia, Italiano, 日本語, ქართული, 한국어, Bahasa Melayu, नेपाली, Nederlands, Norsk, Polski, Português, Română, Русский, සිංහල, Slovenčina, Slovenščina, Shqip, Српски, Svenska, Kiswahili, தமிழ், ไทย, Türkçe, Українська, اردو, Tiếng Việt, 中文",
-    "sameAs": "[\"https://www.linkedin.com/company/sinotradecompliance\", \"https://www.crunchbase.com/organization/sinotradecompliance\", \"https://github.com/sinotradecompliance\"]"
+    "availableLanguage": "Afrikaans, العربية, Azərbaycan, Беларуская, Български, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, İngilis dili, Español, فارسی, Suomi, Français, עברית, हिन्दी, Hrvatski, Magyar, Հայերեն, Bahasa Indonesia, Italiano, 日本語, ქართული, 한국어, Bahasa Melayu, नेपाली, Nederlands, Norsk, Polski, Português, Română, Русский, සිංහල, Slovenčina, Slovenščina, Shqip, Српски, Svenska, Kiswahili, தமிழ், ไทย, Türkçe, Українська, اردو, Tiếng Việt, 中文"
   },
   "DefinitionSchema": {
     "gaccName": "GACC (Çin Baş Gömrük İdarəsi)",
@@ -1144,7 +1143,7 @@
       "crossborderecommerce": "Transsərhəd e-ticarət",
       "crossborderecommerceDesc": "CBEC qaydaları, platforma uyğunluğu və vergi optimallaşdırılması."
     },
-    "metaTitle": "China Import Compliance by Industry | GACC, CCC, NMPA Services",
+    "metaTitle": "Sənaye tərəfindən Çin İdxal Uyğunluğu | GACC, CCC, NMPA Xidmətləri - Sənaye Uyğunluq Bələdçiləri | SinoTrade Uyğunluğu",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
@@ -1313,5 +1312,30 @@
     "contactText": "Bu Məxfilik Siyasəti və ya məlumatlarınızı necə idarə etdiyimizlə bağlı hər hansı sualınız varsa, bizimlə əlaqə saxlayın:",
     "updateTitle": "Bu Siyasətdə Yeniləmələr",
     "updateText": "Biz bu Məxfilik Siyasətini vaxtaşırı yeniləyə bilərik. İstənilən dəyişiklik yenilənmiş təftiş tarixi ilə bu səhifədə dərc olunacaq."
+  },
+  "AiAssistance": {
+    "aboutContent": "SinoTrade Compliance, Çin bazarına girişdə ixtisaslaşmış Şanxayda yerləşən tənzimləyici uyğunluq firmasıdır. 15+ illik təcrübə ilə əsası qoyulmuş, biz 50+ ölkədəki ixracatçılara GACC qeydiyyatı, CCC sertifikatı, NMPA kosmetika sənədləri, Çin etiketlərinə uyğunluq, transsərhəd e-ticarət və brendin qorunmasında naviqasiyada kömək edirik.",
+    "aboutTitle": "Şirkətə baxış",
+    "contactEmail": "david@sinotradecompliance.com",
+    "contactLinkedIn": "https://www.linkedin.com/company/sinotradecompliance",
+    "contactLocation": "Jingan Rayonu, Şanxay, Çin",
+    "contactTitle": "Əlaqə məlumatı",
+    "faqA1": "Çinə ixrac edilən ərzaq məhsulları GACC 248 saylı fərman (xarici qida istehsalçılarının qeydiyyatı), GACC 249 saylı fərmanı (idxal və ixrac qida təhlükəsizliyinin idarə edilməsi), GB 7718 (qablaşdırılmış qidaların etiketlənməsi) və GB 28050 (qidalanma etiketi) ilə uyğun olmalıdır.",
+    "faqA2": "Xeyr. CCC sertifikatı yalnız elektronika, məişət texnikası, avtomobil hissələri, işıqlandırma, qoruyucu şüşə və uşaq oyuncaqları daxil olmaqla, müəyyən edilmiş 17 kateqoriya üzrə məhsullar üçün məcburidir. Bu kateqoriyalardan kənar məhsulların hələ də başqa sertifikatlara ehtiyacı ola bilər.",
+    "faqA3": "Standart GACC qeydiyyatı tam sənədlərin təqdim edilməsindən sonra adətən 6-10 həftə çəkir. Yüksək riskli kateqoriyalar (18 kateqoriya) üçün qeydiyyat daha uzun çəkə bilər, çünki ixracatçı ölkənin səlahiyyətli orqanının təsdiqini tələb edir.",
+    "faqQ1": "Çinə ixrac olunan ərzaq məhsullarına hansı qaydalar tətbiq edilir?",
+    "faqQ2": "Bütün məhsulların CCC sertifikatına ehtiyacı varmı?",
+    "faqQ3": "GACC qeydiyyatı nə qədər vaxt aparır?",
+    "faqTitle": "Tez-tez verilən suallar",
+    "intro": "Bu səhifə süni intellekt və dil modeli yardımı üçün SinoTrade Compliance haqqında strukturlaşdırılmış məlumat təqdim edir.",
+    "metaDescription": "AI üçün strukturlaşdırılmış uyğunluq məlumatları: GACC, CCC, NMPA, etiket uyğunluğu, transsərhəd e-ticarət.",
+    "metaTitle": "SinoTrade Uyğunluğu | EN AI-Yardım",
+    "serviceBrand": "Brend Mühafizəsi — CNIPA ilə ticarət nişanının qeydiyyatı, gömrük IP qeydi, müxalifətin monitorinqi və Çində ilk fayl sistemində markanın tətbiqi.",
+    "serviceCBEC": "Sərhədlərarası Elektron Ticarət — Tmall Global, JD Worldwide və Douyin üçün CBEC kanalının qurulması. Göndərilən anbar (1210) və ya birbaşa göndərmə (9610) modelləri.",
+    "serviceCCC": "CCC Sertifikatı — Elektronika, məişət texnikası, avtomobil hissələri, işıqlandırma məhsulları və təhlükəsizlik komponentləri daxil olmaqla 17 məhsul kateqoriyası üçün Çin Məcburi Sertifikatlaşdırma.",
+    "serviceGACC": "GACC Ərzaq Qeydiyyatı — 248 və 249 saylı Fərmanlara əsasən Çin Gömrük İdarəsində (GACC) xaricdəki qida istehsalı müəssisələrini qeydiyyatdan keçirin. Çinə ixrac edilən bütün ərzaq məhsulları üçün məcburidir.",
+    "serviceLabel": "Çin Etiket Uyğunluğu — GB 7718 və GB 28050 uyğun etiket dizaynı və nəzərdən keçirilməsi. Çin limanlarında gömrükdən imtina üçün bir nömrəli səbəb.",
+    "serviceNMPA": "NMPA Cosmetics Filing — Çin Milli Tibbi Məhsullar İdarəsində kosmetikanın qeydiyyatı və ya bildirişi. Bütün idxal edilən kosmetika məhsulları üçün tələb olunur.",
+    "title": "SinoTrade Compliance — AI-Assistance (EN)"
   }
 }

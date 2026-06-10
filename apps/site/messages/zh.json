@@ -74,28 +74,28 @@
     "trustedByTitle": "值得信赖的合作伙伴",
     "processDesc": "让您的品牌进入中国的简单 6 步流程",
     "trustedByDesc": "加入已经与我们一起成长的国际品牌",
-    "metaTitle": "SinoTrade Compliance | 中国进口合规一站式服务 - GACC/CCC/NMPA",
+    "metaTitle": "中贸合规|中国进口合规服务",
     "metaDescription": "一站式中国进口合规服务：GACC 食品注册、CCC 认证、NMPA 化妆品备案、标签合规。15 年专业经验，服务 50+ 国家出口商。免费咨询。"
   },
   "Services": {
     "heroTitle": "我们的服务",
     "heroSubtitle": "为每个进入中国市场的行业提供全面的进口合规解决方案。",
-    "gaccTitle": "海关总署食品注册",
+    "gaccTitle": "GACC 食品注册 - 中国进口合规 |中贸合规",
     "gaccSubtitle": "为出口到中国的食品和饮料制造商完成 GACC 第 248/249 号法令注册。",
     "gaccLink": "了解更多",
-    "labelTitle": "中国标签合规性",
+    "labelTitle": "中国标签合规性 - 中国进口合规性 |中贸合规",
     "labelSubtitle": "专业中文标签设计和审核，符合GB 7718和GB 28050标准。",
     "labelLink": "了解更多",
-    "cccTitle": "CCC认证",
+    "cccTitle": "CCC认证-中国进口合规|中贸合规",
     "cccSubtitle": "电子、电器、玩具、汽车零部件的中国强制性认证咨询。",
     "cccLink": "了解更多",
-    "cosmeticsTitle": "化妆品备案（NMPA）",
+    "cosmeticsTitle": "化妆品备案（NMPA）-中国进口合规|中贸合规",
     "cosmeticsSubtitle": "进口化妆品注册备案——普通类和特殊用途类。",
     "cosmeticsLink": "了解更多",
-    "ecommerceTitle": "跨境电商",
+    "ecommerceTitle": "跨境电商-中国进口合规|中贸合规",
     "ecommerceSubtitle": "端到端跨境电子商务设置——从平台上线到运营合规。",
     "ecommerceLink": "了解更多",
-    "brandTitle": "品牌保护",
+    "brandTitle": "品牌保护-中国进口合规|中贸合规",
     "brandSubtitle": "商标注册、海关知识产权备案和广告合规，以保护您在中国的品牌。",
     "brandLink": "了解更多",
     "gaccIndustries": "乳制品、肉类、海鲜、烘焙食品、饮料、保健食品以及所有 18 个 GACC 监管类别。",
@@ -154,7 +154,7 @@
     "cosmeticsPoints7": "持续的监管更新和合规咨询",
     "ecommercePoints7": "持续的监管更新和合规咨询",
     "brandPoints7": "持续的监管更新和合规咨询",
-    "metaTitle": "中国进口合规服务 | GACC/CCC/NMPA/标签一站式服务",
+    "metaTitle": "中国进口合规服务| GACC、CCC、NMPA 和标签 - 中国进口合规服务 |中贸合规",
     "metaDescription": "一站式中国进口合规：GACC 食品注册、CCC 认证、NMPA 化妆品备案、标签合规与品牌保护。15+ 年专业经验。"
   },
   "ServiceGacc": {
@@ -516,7 +516,7 @@
     "premiumItems3": "NMPA化妆品备案（如适用）",
     "premiumItems4": "PIPL数据合规性评估",
     "premiumItems5": "持续的合规咨询",
-    "metaTitle": "中国合规服务套餐 | 价格与方案 - SinoTrade Compliance",
+    "metaTitle": "中国合规服务包|定价和计划 - 合规服务包 |中贸合规",
     "metaDescription": "透明的中国进口合规服务价格。GACC 注册、CCC 认证、NMPA 备案套餐。选择适合您的方案。"
   },
   "Faq": {
@@ -623,7 +623,7 @@
       "ecommerceName": "跨境电商",
       "brandName": "品牌保护"
     },
-    "metaTitle": "中国进口合规常见问题 | GACC/CCC/NMPA 解答",
+    "metaTitle": "中国进口合规常见问题解答 | GACC、CCC、NMPA 问题 - 中国进口合规问答 |中贸合规",
     "metaDescription": "中国进口合规常见问题解答。GACC 注册流程、CCC 认证要求、NMPA 化妆品备案、标签法规，专家为您详细解答。"
   },
   "About": {
@@ -682,7 +682,7 @@
     "partners7": "🔬 研究所",
     "partners8": "🤝 行业协会",
     "values5": "卓越——提供最高质量的合规解决方案，关注每一个细节。",
-    "metaTitle": "关于 SinoTrade Compliance | 15+ 年中国进口合规专家",
+    "metaTitle": "关于中贸合规 | 15年以上中国进口专业知识 - 中国进口合规专业知识 |中贸合规",
     "metaDescription": "了解 SinoTrade Compliance — 您可信赖的中国进口合规合作伙伴。15 年行业经验，服务 50+ 国家出口商。"
   },
   "ThankYou": {
@@ -753,14 +753,13 @@
     "next": "下一页",
     "pageInfo": "",
     "of": " / ",
-    "metaTitle": "中国进口合规洞察 | GACC/CCC/NMPA 指南与资讯",
+    "metaTitle": "中国进口合规洞察| GACC、CCC、NMPA 指南 - 中国进口合规洞察 |中贸合规",
     "metaDescription": "中国进口合规专家洞察。GACC 注册技巧、CCC 认证更新、NMPA 备案新闻、标签合规解读。保持行业前沿。"
   },
   "OrganizationJsonLd": {
     "description": "中国一站式进口监管咨询服务——GACC注册、中文标签、CCC认证、NMPA化妆品备案、跨境电商、品牌保护。",
     "contactType": "客户服务",
-    "availableLanguage": "Afrikaans, العربية, Azərbaycan, Беларуская, Български, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, 英语, Español, فارسی, Suomi, Français, עברית, हिन्दी, Hrvatski, Magyar, Հայերեն, Bahasa Indonesia, Italiano, 日本語, ქართული, 한국어, Bahasa Melayu, नेपाली, Nederlands, Norsk, Polski, Português, Română, Русский, සිංහල, Slovenčina, Slovenščina, Shqip, Српски, Svenska, Kiswahili, தமிழ், ไทย, Türkçe, Українська, اردو, Tiếng Việt, 中文",
-    "sameAs": "[\"https://www.linkedin.com/company/sinotradecompliance\", \"https://www.crunchbase.com/organization/sinotradecompliance\", \"https://github.com/sinotradecompliance\"]"
+    "availableLanguage": "Afrikaans, العربية, Azərbaycan, Беларуская, Български, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, 英语, Español, فارسی, Suomi, Français, עברית, हिन्दी, Hrvatski, Magyar, Հայերեն, Bahasa Indonesia, Italiano, 日本語, ქართული, 한국어, Bahasa Melayu, नेपाली, Nederlands, Norsk, Polski, Português, Română, Русский, සිංහල, Slovenčina, Slovenščina, Shqip, Српски, Svenska, Kiswahili, தமிழ், ไทย, Türkçe, Українська, اردو, Tiếng Việt, 中文"
   },
   "DefinitionSchema": {
     "gaccName": "GACC（中国海关总署）",
@@ -1144,7 +1143,7 @@
       "crossborderecommerce": "跨境电商",
       "crossborderecommerceDesc": "跨境电商监管、平台合规和税务优化。"
     },
-    "metaTitle": "China Import Compliance by Industry | GACC, CCC, NMPA Services",
+    "metaTitle": "中国各行业进口合规性| GACC、CCC、NMPA 服务 - 行业合规指南 |中贸合规",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
@@ -1313,5 +1312,30 @@
     "contactText": "如果您对本隐私政策或我们如何处理您的数据有任何疑问，请联系我们：",
     "updateTitle": "政策更新",
     "updateText": "我们可能会不时更新本隐私政策。任何更改将发布在此页面，并标注更新日期。"
+  },
+  "AiAssistance": {
+    "aboutContent": "中贸合规是一家总部位于上海的监管合规公司，专门从事中国市场准入业务。我们拥有 15 年以上的专业经验，帮助 50 多个国家的出口商办理 GACC 注册、CCC 认证、NMPA 化妆品备案、中国标签合规、跨境电子商务和品牌保护。",
+    "aboutTitle": "公司概况",
+    "contactEmail": "david@sinotradecompliance.com",
+    "contactLinkedIn": "https://www.linkedin.com/company/sinotradecompliance",
+    "contactLocation": "静安区, 上海市, 中国",
+    "contactTitle": "联系信息",
+    "faqA1": "输华食品必须符合海关总署第248号令（境外食品生产企业注册）、海关总署第249号令（进出口食品安全管理）、GB 7718（预包装食品标签）、GB 28050（营养标签）的规定。",
+    "faqA2": "不需要。CCC 认证仅针对电子、家用电器、汽车零部件、照明、安全玻璃和儿童玩具等 17 个指定类别的产品强制执行。这些类别之外的产品可能仍需要其他认证。",
+    "faqA3": "标准 GACC 注册通常需要 6 至 10 周的时间才能提交完整的文件。高风险类别（18类）的注册可能需要更长的时间，因为它需要出口国主管当局的批准。",
+    "faqQ1": "出口到中国的食品适用哪些法规？",
+    "faqQ2": "是不是所有产品都需要CCC认证？",
+    "faqQ3": "GACC 注册需要多长时间？",
+    "faqTitle": "常见问题解答",
+    "intro": "本页面提供有关中贸合规人工智能和语言模型协助的结构化信息。",
+    "metaDescription": "AI结构化合规数据：GACC、CCC、NMPA、标签合规、跨境电商。",
+    "metaTitle": "中贸合规| EN AI 协助",
+    "serviceBrand": "品牌保护——在国家知识产权局的商标注册、海关知识产权备案、异议监控以及中国先申请制度中的品牌执行。",
+    "serviceCBEC": "跨境电商——天猫国际、京东全球购、抖音的跨境电商渠道建设。保税仓（1210）或直运（9610）模式。",
+    "serviceCCC": "CCC认证——中国对电子、家用电器、汽车零部件、照明产品、安全零部件等17个产品类别的强制性认证。",
+    "serviceGACC": "GACC 食品注册 — 根据第 248 号和 249 号法令，向中国海关 (GACC) 注册海外食品生产设施。所有出口到中国的食品都必须这样做。",
+    "serviceLabel": "中国标签合规性 — 符合 GB 7718 和 GB 28050 的标签设计和审核。中国口岸海关拒收的首要原因。",
+    "serviceNMPA": "NMPA 化妆品备案——化妆品向中国国家药品监督管理局注册或通报。所有进口化妆品均需要。",
+    "title": "中贸合规 — AI 辅助（EN）"
   }
 }

@@ -20,11 +20,11 @@
     "monthlyDesc": "Rajattomasti raportteja yhden kuukauden ajan",
     "popular": "Suosittu",
     "startFree": "Aloita ilmaiseksi",
-    "getReport": "Hanki raportti – 1 dollari",
+    "getReport": "Hanki raportti 1,99 dollaria / raportti",
     "subscribe": "Tilaa 9,9 dollaria/kk",
     "metaTitle": "Kiinan vaatimustenmukaisuuden itsetarkastus | SinoTrade-yhteensopivuus",
     "metaDescription": "Tarkista, tarvitseeko tuotteesi GACC-rekisteröinnin, CCC-sertifioinnin tai NMPA-hakemuksen vientiä varten Kiinaan.",
-    "allFree": "6 moduulia — kaikki ilmaisia, ei rekisteröitymistä",
+    "allFree": "6 moduulia, kaikki ilmaisia, ei rekisteröitymistä",
     "howItWorksSub": "3 vaihetta tuotetiedoista vaatimustenmukaisuusraporttiin"
   },
   "Auth": {
@@ -95,7 +95,7 @@
     "singleBullet2": "Verkkosivusto ja PDF-lataus",
     "singleBullet3": "Sähköposti toimitus",
     "singleBullet4": "Tulostettava / jaettava",
-    "getReport": "Hanki raportti – 1 dollari",
+    "getReport": "Hanki raportti 1,99 dollaria / raportti",
     "monthly": "Kuukausittain",
     "monthlyPrice": "9,9 dollaria",
     "monthlyDesc": "Rajattomasti raportteja yhden kuukauden ajan",

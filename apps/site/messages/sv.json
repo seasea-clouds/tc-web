@@ -80,22 +80,22 @@
   "Services": {
     "heroTitle": "Våra tjänster",
     "heroSubtitle": "Omfattande importöverensstämmelselösningar för alla branscher som går in på den kinesiska marknaden.",
-    "gaccTitle": "GACC Food Registration",
+    "gaccTitle": "GACC Food Registration - Kinas importefterlevnad | SinoTrade efterlevnad",
     "gaccSubtitle": "Komplett GACC-dekret 248/249 registrering för livsmedels- och dryckestillverkare som exporterar till Kina.",
     "gaccLink": "Läs mer",
-    "labelTitle": "Efterlevnad av kinesiska etiketter",
+    "labelTitle": "Efterlevnad av kinesiska etiketter - Kinas importefterlevnad | SinoTrade efterlevnad",
     "labelSubtitle": "Professionell kinesisk etikettdesign och recension som uppfyller standarderna GB 7718 och GB 28050.",
     "labelLink": "Läs mer",
-    "cccTitle": "CCC-certifiering",
+    "cccTitle": "CCC-certifiering - Kinas importefterlevnad | SinoTrade efterlevnad",
     "cccSubtitle": "Kinas obligatoriska certifieringsrådgivning för elektronik, apparater, leksaker och bildelar.",
     "cccLink": "Läs mer",
-    "cosmeticsTitle": "Kosmetikaarkivering (NMPA)",
+    "cosmeticsTitle": "Kosmetikaarkivering (NMPA) - Kinas importefterlevnad | SinoTrade efterlevnad",
     "cosmeticsSubtitle": "NMPA-registrering och registrering för importerad kosmetika - kategorier för vanliga och speciella användningsområden.",
     "cosmeticsLink": "Läs mer",
-    "ecommerceTitle": "Gränsöverskridande e-handel",
+    "ecommerceTitle": "Gränsöverskridande e-handel - Kinas importefterlevnad | SinoTrade efterlevnad",
     "ecommerceSubtitle": "End-to-end gränsöverskridande e-handelskonfiguration — från plattformsintroduktion till operativ efterlevnad.",
     "ecommerceLink": "Läs mer",
-    "brandTitle": "Varumärkesskydd",
+    "brandTitle": "Varumärkesskydd - Kinas importefterlevnad | SinoTrade efterlevnad",
     "brandSubtitle": "Varumärkesregistrering, tullregistrering av IP och efterlevnad av reklam för att skydda ditt varumärke i Kina.",
     "brandLink": "Läs mer",
     "gaccIndustries": "Mejeri, kött, skaldjur, bageri, drycker, hälsokost och alla 18 GACC-reglerade kategorier.",
@@ -154,7 +154,7 @@
     "cosmeticsPoints7": "Kontinuerliga regulatoriska uppdateringar och efterlevnadsrådgivning",
     "ecommercePoints7": "Kontinuerliga regulatoriska uppdateringar och efterlevnadsrådgivning",
     "brandPoints7": "Kontinuerliga regulatoriska uppdateringar och efterlevnadsrådgivning",
-    "metaTitle": "Importefterlevnadstjänster för Kina | GACC, CCC, NMPA & Label",
+    "metaTitle": "China Import Compliance Services | GACC, CCC, NMPA & Label - China Import Compliance Services | SinoTrade efterlevnad",
     "metaDescription": "One-stop Kinas importöverensstämmelse: GACC-matregistrering, CCC-certifiering, NMPA kosmetikaanmälan, etikettöverensstämmelse och varumärkesskydd. 15+ års expertis."
   },
   "ServiceGacc": {
@@ -516,7 +516,7 @@
     "premiumItems3": "NMPA Cosmetics Filing (om tillämpligt)",
     "premiumItems4": "PIPL Data Compliance Assessment",
     "premiumItems5": "Löpande efterlevnadsrådgivning",
-    "metaTitle": "China Compliance Service Packages | Priser & planer",
+    "metaTitle": "China Compliance Service Packages | Prissättning och planer - Servicepaket för efterlevnad | SinoTrade efterlevnad",
     "metaDescription": "Transparent prissättning för Kinas importefterlevnadstjänster. GACC-registrering, CCC-certifiering, NMPA-arkiveringspaket. Välj den plan som passar dina behov."
   },
   "Faq": {
@@ -623,7 +623,7 @@
       "ecommerceName": "Gränsöverskridande e-handel",
       "brandName": "Varumärkesskydd"
     },
-    "metaTitle": "China Import Compliance FAQ | GACC, CCC, NMPA-frågor",
+    "metaTitle": "China Import Compliance FAQ | Frågor om GACC, CCC, NMPA - Frågor och svar om Kinas importefterlevnad | SinoTrade efterlevnad",
     "metaDescription": "Vanliga frågor om Kinas importefterlevnad. GACC-registrering, CCC-certifiering, NMPA kosmetikaanmälan, etikettkrav besvarade av experter."
   },
   "About": {
@@ -682,7 +682,7 @@
     "partners7": "🔬 forskningsinstitut",
     "partners8": "🤝 Branschföreningar",
     "values5": "Excellence — Levererar överensstämmelselösningar av högsta kvalitet med uppmärksamhet på varje detalj.",
-    "metaTitle": "Om SinoTrade efterlevnad | 15+ år Kina import expertis",
+    "metaTitle": "Om SinoTrade efterlevnad | 15+ år Kina Import Expertise - Kina Import Compliance Expertise | SinoTrade efterlevnad",
     "metaDescription": "Lär dig mer om SinoTrade Compliance - din betrodda partner för Kinas importefterlevnad. 15+ års erfarenhet, 50+ länder betjänad. Möt vårt expertteam."
   },
   "ThankYou": {
@@ -753,14 +753,13 @@
     "next": "Nästa",
     "pageInfo": "",
     "of": " av ",
-    "metaTitle": "Kina Import Compliance Insights | GACC, CCC, NMPA Guider",
+    "metaTitle": "Kina Import Compliance Insights | GACC, CCC, NMPA Guides - Insikter om Kinas importefterlevnad | SinoTrade efterlevnad",
     "metaDescription": "Expertguider om Kinas importefterlevnad. GACC-registreringstips, CCC-certifieringsuppdateringar, NMPA-nyheter, insikter om efterlevnad av etiketter. Håll dig informerad."
   },
   "OrganizationJsonLd": {
     "description": "Konsulttjänster för importreglering i ett enda ställe för Kina – GACC-registrering, kinesisk märkning, CCC-certifiering, NMPA-ansökan om kosmetika, gränsöverskridande e-handel och varumärkesskydd.",
     "contactType": "kundservice",
-    "availableLanguage": "Afrikaans, العربية, Azərbaycan, Беларуская, Български, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, engelska, Español, فارسی, Suomi, Français, עברית, हिन्दी, Hrvatski, Magyar, Հայերեն, Bahasa Indonesia, Italiano, 日本語, ქართული, 한국어, Bahasa Melayu, नेपाली, Nederlands, Norsk, Polski, Português, Română, Русский, සිංහල, Slovenčina, Slovenščina, Shqip, Српски, Svenska, Kiswahili, தமிழ், ไทย, Türkçe, Українська, اردو, Tiếng Việt, 中文",
-    "sameAs": "[\"https://www.linkedin.com/company/sinotradecompliance\", \"https://www.crunchbase.com/organization/sinotradecompliance\", \"https://github.com/sinotradecompliance\"]"
+    "availableLanguage": "Afrikaans, العربية, Azərbaycan, Беларуская, Български, বাংলা, Català, Čeština, Dansk, Deutsch, Ελληνικά, engelska, Español, فارسی, Suomi, Français, עברית, हिन्दी, Hrvatski, Magyar, Հայերեն, Bahasa Indonesia, Italiano, 日本語, ქართული, 한국어, Bahasa Melayu, नेपाली, Nederlands, Norsk, Polski, Português, Română, Русский, සිංහල, Slovenčina, Slovenščina, Shqip, Српски, Svenska, Kiswahili, தமிழ், ไทย, Türkçe, Українська, اردو, Tiếng Việt, 中文"
   },
   "DefinitionSchema": {
     "gaccName": "GACC (General Administration of Customs of China)",
@@ -1144,7 +1143,7 @@
       "crossborderecommerce": "Gränsöverskridande e-handel",
       "crossborderecommerceDesc": "CBEC-regler, plattformsefterlevnad och skatteoptimering."
     },
-    "metaTitle": "China Import Compliance by Industry | GACC, CCC, NMPA Services",
+    "metaTitle": "Kinas importefterlevnad efter bransch | GACC, CCC, NMPA Services - Guider för efterlevnad av industrin | SinoTrade efterlevnad",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
@@ -1313,5 +1312,30 @@
     "contactText": "Om du har några frågor om denna integritetspolicy eller hur vi hanterar dina uppgifter, vänligen kontakta oss:",
     "updateTitle": "Uppdateringar av denna policy",
     "updateText": "Vi kan uppdatera denna integritetspolicy då och då. Eventuella ändringar kommer att publiceras på denna sida med ett uppdaterat revisionsdatum."
+  },
+  "AiAssistance": {
+    "aboutContent": "SinoTrade Compliance är ett Shanghai-baserat företag som är specialiserat på marknadsinträde i Kina. Grundat med 15+ års expertis, hjälper vi exportörer i 50+ länder att navigera i GACC-registrering, CCC-certifiering, NMPA kosmetikaanmälan, efterlevnad av kinesiska etiketter, gränsöverskridande e-handel och varumärkesskydd.",
+    "aboutTitle": "Företagsöversikt",
+    "contactEmail": "david@sinotradecompliance.com",
+    "contactLinkedIn": "https://www.linkedin.com/company/sinotradecompliance",
+    "contactLocation": "Jingan-distriktet, Shanghai, Kina",
+    "contactTitle": "Kontaktinformation",
+    "faqA1": "Livsmedelsprodukter som exporteras till Kina måste uppfylla GACC-dekret 248 (registrering av utländska livsmedelstillverkare), GACC-dekret 249 (import och export livsmedelssäkerhet), GB 7718 (märkning av färdigförpackade livsmedel) och GB 28050 (näringsdeklaration).",
+    "faqA2": "Nej. CCC-certifiering är endast obligatorisk för produkter i 17 definierade kategorier inklusive elektronik, hushållsapparater, bildelar, belysning, säkerhetsglas och barnleksaker. Produkter utanför dessa kategorier kan fortfarande behöva andra certifieringar.",
+    "faqA3": "Standard GACC-registrering tar vanligtvis 6-10 veckor från inlämnande av fullständig dokumentation. Registrering för högriskkategorier (18 kategorier) kan ta längre tid eftersom det kräver godkännande från den behöriga myndigheten i exportlandet.",
+    "faqQ1": "Vilka regler gäller för livsmedelsprodukter som exporteras till Kina?",
+    "faqQ2": "Behöver alla produkter CCC-certifiering?",
+    "faqQ3": "Hur lång tid tar GACC-registrering?",
+    "faqTitle": "Vanliga frågor",
+    "intro": "Den här sidan ger strukturerad information om SinoTrade Compliance för AI och språkmodellhjälp.",
+    "metaDescription": "Strukturerad efterlevnadsdata för AI: GACC, CCC, NMPA, etikettefterlevnad, gränsöverskridande e-handel.",
+    "metaTitle": "SinoTrade efterlevnad | EN AI-Assistans",
+    "serviceBrand": "Varumärkesskydd — Varumärkesregistrering hos CNIPA, tullens IP-registrering, oppositionsövervakning och varumärkesupprätthållande i Kina först-till-fil-system.",
+    "serviceCBEC": "Cross-Border E-Commerce — CBEC-kanalinställning för Tmall Global, JD Worldwide och Douyin. Toldlager (1210) eller direktleverans (9610) modeller.",
+    "serviceCCC": "CCC-certifiering – Kina Obligatorisk certifiering för 17 produktkategorier inklusive elektronik, hushållsapparater, bildelar, belysningsprodukter och säkerhetskomponenter.",
+    "serviceGACC": "GACC Food Registration — Registrera utländska livsmedelstillverkningsanläggningar hos China Customs (GACC) enligt dekret 248 och 249. Obligatoriskt för alla livsmedelsprodukter som exporteras till Kina.",
+    "serviceLabel": "Kinesisk etikettöverensstämmelse — GB 7718 och GB 28050-kompatibel etikettdesign och granskning. Den främsta anledningen till tullavvisning i kinesiska hamnar.",
+    "serviceNMPA": "NMPA Cosmetics Filing — Registrering eller anmälan av kosmetika hos China National Medical Products Administration. Krävs för alla importerade kosmetikaprodukter.",
+    "title": "SinoTrade Compliance — AI-Assistance (EN)"
   }
 }

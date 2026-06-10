@@ -27,7 +27,7 @@
 | 8 | `check-hreflang.mjs` | 所有 | hreflang 标签完整性（portal 用 --skip-pattern 跳过了 Worker 路由的 /c/ 路径） |
 | 9 | `check-llms.mjs` | 有 llms.txt 的 | llms.txt 质量检查 |
 | 10 | `check-seo-output.mjs` | 所有 | 构建后标题/描述/canonical 检查 |
-| 11 | `check-translations.mjs` | 所有 | 48 语言翻译质量检查（portal 跳过 locale consistency） |
+| 11 | `check-translations.mjs` | 所有 | 48 语言翻译质量检查（根据项目跳过不适用的模块：portal 跳过 locale consistency，blog 跳过 industry-meta+portal） |
 | 12 | `clean-rsc.js` | 有 out/ 的 | 清理 RSC payload .txt 文件 |
 
 ## 各项目构建管线（简化后）
@@ -51,6 +51,8 @@
 |--------|----------|
 | Portal hreflang | `--skip-pattern=/c/,404,_not-found` 精确跳过 Worker 路由路径 |
 | Portal translations | `--skip-locale-check` 跳过 locale consistency（portal messages 独立） |
+| Blog translations | `--skip-industry-meta --skip-portal-check`（blog 仅有 Blog+Cookie 命名空间） |
+| Site translations | 全量检查（所有模块都运行） |
 | Blog llms.txt | `--llms-dir=public` 指定 llms 文件所在目录 |
 | Blog/portal 无 llms.txt | `ci-check.mjs` 自动检测文件存在性，不存在则跳过 |
 

@@ -156,9 +156,12 @@ function runOutputPhaseChecks() {
 // ============================================================
 function runTranslationChecks() {
   const extra = [];
-  // Portal messages 是独立文件，需要检查但跳过 locale consistency
   if (project === 'portal') {
+    // Portal 消息独立，跳过 locale 一致性检查
     extra.push('--skip-locale-check');
+  } else if (project === 'blog') {
+    // Blog 消息仅有 Blog+Cookie 命名空间，跳过 site/portal 专属的检查
+    extra.push('--skip-industry-meta', '--skip-portal-check');
   }
   runLocalScript('check-translations.mjs', '--short', ...extra);
 }

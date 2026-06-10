@@ -20,6 +20,7 @@ export default function OrganizationJsonLd({ description }: Props) {
     logo: 'https://sinotradecompliance.com/logo.png',
     contactPoint: {
       '@type': 'ContactPoint',
+      telephone: '+86-21-xxxx-xxxx',
       email: 'david@sinotradecompliance.com',
       contactType: 'customer service',
       availableLanguage: [

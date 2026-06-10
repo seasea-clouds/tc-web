@@ -2,6 +2,15 @@
 /**
  * check-hreflang.mjs — 统一 hreflang 检查脚本
  *
+ * ⚠️ 项目选择指南：
+ *   site  (SSG, 直接托管)    → --dir=out
+ *   blog  (SSG, 直接托管)    → --next-dir=.next
+ *   portal(SSG+Worker边缘路由) → --url=... 检查已部署实例
+ *
+ * Portal 的 hreflang 由 site 的 Cloudflare Worker 中间件在边缘端注入，
+ * SSG 静态输出中不含 hreflang 标签，因此不能用 --dir=out 检查。
+ * 必须部署后通过 --url 模式进行远程验证。
+ *
  * 支持 3 种模式：
  *   --dir=out         → 扫描 SSG 输出目录（site）
  *   --next-dir=.next  → 扫描 Next.js build 输出（blog）

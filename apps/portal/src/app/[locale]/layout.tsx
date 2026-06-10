@@ -48,8 +48,8 @@ export default async function LocaleLayout({
         <NextIntlClientProvider locale={validLocale} messages={messages} timeZone="Asia/Shanghai">
           <TradeTranslationProvider messages={messages} locale={validLocale}>
             <OrganizationJsonLd />
-            <AuthProvider logoutRedirect={`/${locale}/c/login`}>
-              <SearchProvider freeCheckHref="/{locale}/c/" loginHref={`/${locale}/c/login`} />
+            <AuthProvider logoutRedirect={`/${validLocale}/c/login`}>
+              <SearchProvider freeCheckHref="/{locale}/c/" loginHref={`/${validLocale}/c/login`} />
               <main className="flex-1">
               <AutoBreadcrumb locale={validLocale} />
               {children}

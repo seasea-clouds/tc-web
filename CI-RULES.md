@@ -2,7 +2,7 @@
 
 ## 设计原则（2026-06-10 确立）
 1. **所有检测脚本统一在 `packages/scripts/`**，不得各自维护。
-2. **每个项目通过 `ci-check.mjs --project=X` 调用同一套检查**，使用参数处理项目差异（如 portal hreflang 的 `--skip-pattern`）。
+2. **每个项目调用同一套 `ci-check.mjs --out-dir=out --ci`**，自动从 cwd 识别项目，差异在脚本内精确处理。
 3. **不得降低检测强度或缩小范围**。遇到不适合检测的场景，在共享脚本中添加精确特殊处理（如 `--skip-pattern`），而非移除检查或缩小 scope。
 4. **检测出的问题必须修复**，而非掩盖或绕过。
 
@@ -10,9 +10,9 @@
 
 | 项目 | 调用方式 | 说明 |
 |------|----------|------|
-| site | `ci-check.mjs --project=site --out-dir=out --ci` | SSG 全量输出，直接托管（跳旧blog页） |
-| portal | `ci-check.mjs --project=portal --out-dir=out --ci` | SSG 输出，/c/ 路径全有 hreflang |
-| blog | `ci-check.mjs --project=blog --out-dir=out --ci` | SSG 输出（与 site/portal 统一模式） |
+| site | `ci-check.mjs --out-dir=out --ci` | SSG 全量输出（自动识别为 site）|
+| portal | `ci-check.mjs --out-dir=out --ci` | SSG 输出（自动识别为 portal）|
+| blog | `ci-check.mjs --out-dir=out --ci` | SSG 输出（自动识别为 blog）|
 
 `ci-check.mjs` 运行以下全部检查（按顺序）：
 | # | 检查脚本 | 适用项目 | 说明 |

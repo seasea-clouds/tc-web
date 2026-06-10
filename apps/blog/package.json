@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node ../../packages/scripts/build-search-index.mjs --out-dir=apps/blog/public && rm -rf .next/cache && next build && node ../../packages/scripts/ci-check.mjs --project=blog --out-dir=out --ci",
+    "build": "node ../../packages/scripts/build-search-index.mjs --out-dir=apps/blog/public && rm -rf .next/cache && next build && node ../../packages/scripts/ci-check.mjs --out-dir=out --ci",
     "start": "next start",
     "lint": "next lint"
   },

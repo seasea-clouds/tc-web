@@ -105,6 +105,8 @@ const LEGIT_ENGLISH = new Set([
   'Cannot build brand in market',
   'Cannot sell through retail stores',
   'Carbon Footprint Labeling',
+  'China Import Compliance Guide',
+  'Services.',
   'Category',
   'CB Report Guide',
   'CBEC',

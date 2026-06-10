@@ -1,66 +1,61 @@
 # CI Pipeline Rules
 
-## 设计原则
-- **所有检查脚本不得随意移除或简化** — 脚本存在的意义就是发现问题
-- 每个项目（site / portal / blog）在各自的构建管道中运行适用的检查
-- 如果某个检查在特定项目中不适用，需在文档中说明原因并提供替代方案
+## 设计原则（2026-06-10 确立）
+1. **所有检测脚本统一在 `packages/scripts/`**，不得各自维护。
+2. **每个项目通过 `ci-check.mjs --project=X` 调用同一套检查**，使用参数处理项目差异（如 portal hreflang 的 `--skip-pattern`）。
+3. **不得降低检测强度或缩小范围**。遇到不适合检测的场景，在共享脚本中添加精确特殊处理（如 `--skip-pattern`），而非移除检查或缩小 scope。
+4. **检测出的问题必须修复**，而非掩盖或绕过。
 
-## 各项目构建管道检查清单
+## 统一检查入口：`ci-check.mjs`
 
-### Site (apps/site) — `sinotradecompliance.com`
-| 检查 | 命令 | 说明 |
-|------|------|------|
-| convert-webp | `images/convert-webp.mjs` | 图片 WebP 转换 |
-| hardcoded-domain | `check-hardcoded-domain.mjs --ci` | 禁止 dev pages.dev 域名硬编码 |
-| search-index | `build-search-index.mjs` | 构建搜索索引 |
-| search-translations | `build-search-translations.mjs` | 搜索翻译索引 |
-| seo-patterns | `check-seo-patterns.mjs --ci` | SEO 模式检查 |
-| next build | `next build` | Next.js 构建 |
-| build-all | `build-all.mjs` | 多语言 SSG 导出 |
-| seo-output | `check-seo-output.mjs --ci` | SSG 输出 SEO 检查 |
-| clean-rsc | `clean-rsc.js` | 清理 RSC payload |
-| hardcoded | `check-hardcoded.mjs --ci` | 禁止页面内硬编码英文文本 |
-| hreflang | `check-hreflang.mjs --dir=out --ci` | hreflang 标签完整性 |
-| console | `check-console.mjs --ci` | 禁止 console.log 残留 |
-| rtl | `check-rtl.mjs --ci` | RTL 语言排版检查 |
-| map-key | `check-map-key.mjs --ci` | 地图 key 检查 |
-| jsonld | `check-jsonld.mjs --ci` | JSON-LD 结构化数据检查 |
-| translations | `check-translations.mjs --ci --short` | 48 语言翻译质量检查 |
+| 项目 | 调用方式 | 说明 |
+|------|----------|------|
+| site | `ci-check.mjs --project=site --out-dir=out --ci` | SSG 全量输出，直接托管 |
+| portal | `ci-check.mjs --project=portal --out-dir=out --ci` | SSG 输出，/c/ 由 Worker 边缘路由 |
+| blog | `ci-check.mjs --project=blog --out-dir=out --llms-dir=public --ci` | SSG 输出 + public 目录中 llms.txt |
 
-### Portal (apps/portal) — compliant-service / 主站 /c/ 代理
-| 检查 | 命令 | 说明 |
-|------|------|------|
-| search-index | `build-search-index.mjs` | 构建搜索索引 |
-| seo-patterns | `check-seo-patterns.mjs --ci` | SEO 模式检查 |
-| next build | `next build` | Next.js 构建 |
-| hardcoded-domain | `check-hardcoded-domain.mjs --ci` | 禁止 dev pages.dev 域名硬编码 |
-| hardcoded | `check-hardcoded.mjs --ci` | 硬编码英文检测(全量扫描) |
-| console | `check-console.mjs --ci` | 禁止 console.log 残留 |
-| rtl | `check-rtl.mjs --ci` | RTL 排版检查 |
-| translations | `check-translations.mjs --short --skip-locale-check` | Portal 48 语言翻译质量 |
-| hreflang (SSG) | `check-hreflang.mjs --dir=out --skip-pattern=/c/,404,_not-found --ci` | 非 /c/ 路径 hreflang 检查（/c/ 由 Worker 注入） |
-| hreflang (远程) | `check-hreflang.mjs --url=... --ci` | 部署后远程验证 Worker 注入的 hreflang |
-| clean-rsc | `clean-rsc.js` | 清理 RSC payload |
+`ci-check.mjs` 运行以下全部检查（按顺序）：
+| # | 检查脚本 | 适用项目 | 说明 |
+|---|---------|----------|------|
+| 1 | `check-seo-patterns.mjs` | 所有 | page.tsx 导出 generateMetadata、alternates 完整性 |
+| 2 | `check-hardcoded-domain.mjs` | 所有 | 禁止 dev pages.dev 域名硬编码 |
+| 3 | `check-hardcoded.mjs` | 所有 | 全量扫描硬编码英文字符串 |
+| 4 | `check-console.mjs` | 所有 | 禁止 console.log 残留 |
+| 5 | `check-rtl.mjs` | 所有 | RTL 语言排版检查 |
+| 6 | `check-map-key.mjs` | 所有 | JSX .map() 缺少 key 属性检查 |
+| 7 | `check-jsonld.mjs` | 所有 | JSON-LD 结构化数据完整性（已扩展至全项目） |
+| 8 | `check-hreflang.mjs` | 所有 | hreflang 标签完整性（portal 用 --skip-pattern 跳过了 Worker 路由的 /c/ 路径） |
+| 9 | `check-llms.mjs` | 有 llms.txt 的 | llms.txt 质量检查 |
+| 10 | `check-seo-output.mjs` | 所有 | 构建后标题/描述/canonical 检查 |
+| 11 | `check-translations.mjs` | 所有 | 48 语言翻译质量检查（portal 跳过 locale consistency） |
+| 12 | `clean-rsc.js` | 有 out/ 的 | 清理 RSC payload .txt 文件 |
 
-**hreflang 特殊处理说明**: Portal SSG 输出的 `/c/` 路径不含 hreflang（由主站 Cloudflare Worker 在边缘端注入）。脚本中通过 `--skip-pattern=/c/,404,_not-found` 精确跳过这些路径，而非移除 hreflang 检查。部署后再用 `--url` 模式远程验证 Worker 注入的 hreflang。**检测脚本不简化、不移除、保留框架完整性。**
+## 各项目构建管线（简化后）
 
-### Blog (apps/blog) — 主站 /blog/ 代理
-| 检查 | 命令 | 说明 |
-|------|------|------|
-| lint | `next lint` | ESLint 检查 |
-| search-index | `build-search-index.mjs` | 搜索索引 |
-| seo-patterns | `check-seo-patterns.mjs --ci` | SEO 模式检查 |
-| next build | `next build` | Next.js 构建 |
-| hardcoded-domain | `check-hardcoded-domain.mjs --ci` | 禁止 dev 域名硬编码 |
-| hreflang | `check-hreflang.mjs --next-dir=.next --ci` | hreflang 检查 |
-| hardcoded | `check-hardcoded.mjs --ci` | 硬编码英文检测(全项目扫描) |
-| console | `check-console.mjs --ci` | 禁止 console.log 残留 |
-| llms | `check-llms.mjs --ci` | llms.txt 检查 |
-| rtl | `check-rtl.mjs --ci` | RTL 排版检查 |
-| translations | `check-translations.mjs --short` | 48 语言翻译质量 |
+```
+# Site (apps/site)
+  convert-webp → build-search-index → build-search-translations → next build → build-all
+  → ci-check.mjs --project=site --out-dir=out --ci
 
-## 脚本维护规范
-1. 脚本在 `packages/scripts/` 目录下
-2. 所有检查脚本必须支持 `--ci` 模式（失败时 exit 1）
-3. 新增检查必须加入对应项目的 build 管道
-4. 移除检查需在文档中注明原因 + 替代方案
+# Portal (apps/portal)
+  build-search-index → next build → ci-check.mjs --project=portal --out-dir=out --ci
+  → deploy → postdeploy-check (远程 hreflang 验证)
+
+# Blog (apps/blog)
+  lint → build-search-index → next build → ci-check.mjs --project=blog --out-dir=out --llms-dir=public --ci
+```
+
+## 项目间差异处理
+
+| 差异点 | 处理方式 |
+|--------|----------|
+| Portal hreflang | `--skip-pattern=/c/,404,_not-found` 精确跳过 Worker 路由路径 |
+| Portal translations | `--skip-locale-check` 跳过 locale consistency（portal messages 独立） |
+| Blog llms.txt | `--llms-dir=public` 指定 llms 文件所在目录 |
+| Blog/portal 无 llms.txt | `ci-check.mjs` 自动检测文件存在性，不存在则跳过 |
+
+## 维护规范
+1. 所有检查脚本在 `packages/scripts/`。
+2. 新增检查必须在 `ci-check.mjs` 中注册。
+3. 所有检查脚本必须支持 `--ci` 模式（失败时 exit 1，clean-rsc 除外）。
+4. 项目差异通过 `--project` 参数 + 脚本内部特殊处理实现，不创建脚本副本。

@@ -43,20 +43,9 @@ export default async function BlogHome({ params }: { params: Promise<{ locale: s
   const msgs = getMessages(locale);
   const B = msgs?.Blog || {};
   const tb = (key: string, fb?: string) => B[key] ?? fb ?? key;
-  const Bc = msgs?.breadcrumb || {};
-  const bc = (key: string, fb?: string) => Bc[key] ?? fb ?? key;
 
-  const href = (p: string) => `/${locale}${p}`;
   const readTimeText = tb('readTime', 'min read');
-
-  // Breadcrumb structured data
-  const breadcrumbJsonLd = JSON.stringify({
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: bc('blog', 'Blog'), item: `${SITE_URL}/${locale}/blog/` },
-    ],
-  });
+  const href = (p: string) => `/${locale}${p}`;
 
   return (
     <>
@@ -74,18 +63,6 @@ export default async function BlogHome({ params }: { params: Promise<{ locale: s
           }),
         }}
       />
-
-      {/* Breadcrumb */}
-      <nav aria-label="Breadcrumb" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <ol className="flex items-center gap-1.5 text-sm text-text-muted flex-wrap">
-          <li className="flex items-center gap-1.5">
-            <span className="text-text-charcoal font-medium truncate max-w-[200px] sm:max-w-none">
-              {bc('blog', 'Blog')}
-            </span>
-          </li>
-        </ol>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }} />
-      </nav>
 
       {/* Hero */}
       <section className="py-16 bg-primary-navy">

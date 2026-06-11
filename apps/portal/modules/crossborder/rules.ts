@@ -76,19 +76,19 @@ export function checkCrossborder(input: any, locale?: string): any {
     detailedTimeline: "Platform selection (2-3 weeks) → Document preparation (2-3 weeks) → Platform review (2-4 weeks) → Go live. Total: 4-10 weeks.",
     labelGuide: { requiredItems: [], gb7718Highlights: [], gb28050Highlights: [] },
     timelinePhases: [
-      { phase: "Platform Selection", duration: "2-3 weeks", description: "Evaluate Tmall Global vs JD Worldwide vs Douyin", responsible: "Both", dependencies: [] },
-      { phase: "Document Preparation", duration: "2-3 weeks", description: "Company reg, brand auth, product info", responsible: "Both", dependencies: ["Platform selected"] },
-      { phase: "Platform Application", duration: "2-4 weeks", description: "Submit to platform, product listing review", responsible: "SinoTrade", dependencies: ["Documents ready"] },
-      { phase: "Store Launch", duration: "1-2 weeks", description: "Setup storefront, upload listings, go live", responsible: "Both", dependencies: ["Platform approved"] },
+      { phase: t("cbTimeline_platformSel_name"), duration: "2-3 weeks", description: t("cbTimeline_platformSel_desc"), responsible: "Both", dependencies: [] },
+      { phase: t("cbTimeline_docPrep_name"), duration: "2-3 weeks", description: t("cbTimeline_docPrep_desc"), responsible: "Both", dependencies: ["Platform selected"] },
+      { phase: t("cbTimeline_platformApp_name"), duration: "2-4 weeks", description: t("cbTimeline_platformApp_desc"), responsible: "SinoTrade", dependencies: ["Documents ready"] },
+      { phase: t("cbTimeline_launch_name"), duration: "1-2 weeks", description: t("cbTimeline_launch_desc"), responsible: "Both", dependencies: ["Platform approved"] },
     ],
     costBreakdown: [
-      { item: "Platform Deposit", estimatedRange: "$5,000-25,000", notes: "Refundable platform deposit" },
-      { item: "Platform Annual Fee", estimatedRange: "$5,000-15,000", notes: "Yearly service fee" },
-      { item: "Bonded Warehouse Setup", estimatedRange: "$2,000-5,000", notes: "Registration + product filing" },
-      { item: "Compliance & Listing Service", estimatedRange: "$1,000-5,000", notes: "Professional listing setup" },
+      { item: t("cbCost_deposit_item"), estimatedRange: "$5,000-25,000", notes: t("cbCost_deposit_notes") },
+      { item: t("cbCost_annualFee_item"), estimatedRange: "$5,000-15,000", notes: t("cbCost_annualFee_notes") },
+      { item: t("cbCost_bondedWh_item"), estimatedRange: "$2,000-5,000", notes: t("cbCost_bondedWh_notes") },
+      { item: t("cbCost_compliance_item"), estimatedRange: "$1,000-5,000", notes: t("cbCost_compliance_notes") },
     ],
     countryProfile: { region: "", ftaWithChina: false, ftaDetails: "", specialRestrictions: [], bilateralMeatAccess: false, bilateralAquaticAccess: false, dairyApproved: false, gaccDifficulty: "easy", languageNote: "Chinese listings required.", commonIssues: [], importVolumeNote: "" },
-    marketIntel: { chinaImportTrend: "CBEC is fastest-growing import channel. $200B+ market. 100M+ consumers.", keyDrivers: ["Lower entry barrier", "No GACC for most categories", "Fast market access"], barriers: ["Platform competition", "Marketing cost", "Order limits"], consumerPerception: "CBEC trusted for authentic imports.", topOrigins: [], recommendation: "Start with one platform (Tmall Global recommended) then expand." },
+    marketIntel: { chinaImportTrend: t("cbMarket_trend"), keyDrivers: [t("cbMarket_driver1"), t("cbMarket_driver2"), t("cbMarket_driver3")], barriers: [t("cbMarket_barrier1"), t("cbMarket_barrier2"), t("cbMarket_barrier3")], consumerPerception: t("cbMarket_perception"), topOrigins: [], recommendation: t("cbMarket_reco") },
     competitiveAnalysis: "Thousands of brands on Tmall Global. Korean cosmetics, Japanese snacks, Australian supplements dominate.",
     commonRejections: [
       { problem: "Product not on positive list", cause: "Specific HS code restricted", solution: "Verify HS code against latest positive list" },
@@ -106,13 +106,13 @@ export function checkCrossborder(input: any, locale?: string): any {
       { item: "Bonded Warehouse Inventory", frequency: "Monthly", description: "Verify inventory accuracy" },
     ],
     postApproval: [
-      { item: "Platform Compliance Review", freq: "Quarterly", desc: "Platform audits product listings for compliance" },
-      { item: "Bonded Warehouse Inventory", freq: "Monthly", desc: "Reconcile inventory with platform records" },
-      { item: "Label Renewal Check", freq: "Annually", desc: "Verify labels still meet current GB standards" },
-      { item: "Positive List Review", freq: "Annually", desc: "Check if category remains on CBEC positive list" },
+      { item: t("cbPost_platformReview_item"), freq: t("cbPost_platformReview_frequency"), desc: t("cbPost_platformReview_desc") },
+      { item: t("cbPost_inventory_item"), freq: t("cbPost_inventory_frequency"), desc: t("cbPost_inventory_desc") },
+      { item: t("cbPost_labelRenewal_item"), freq: t("cbPost_labelRenewal_frequency"), desc: t("cbPost_labelRenewal_desc") },
+      { item: t("cbPost_posListReview_item"), freq: t("cbPost_posListReview_frequency"), desc: t("cbPost_posListReview_desc") },
     ],
     horizonScan: [
-      { topic: "Positive List Expansion", impact: "high", timeframe: "2025", description: "More food categories expected to be added.", actionRequired: true },
+      { topic: t("cbHorizon_posList_topic"), impact: t("cbHorizon_posList_impact"), timeframe: t("cbHorizon_posList_timeframe"), description: t("cbHorizon_posList_desc"), actionRequired: true },
     ],
   
   platformGuide: [

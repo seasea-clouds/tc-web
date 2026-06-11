@@ -184,7 +184,7 @@ export function checkLabel(input: LabelInput, locale?: string): LabelResult {
       { dimension: "Cost", score: 2, color: "🟢", note: "$500-2,000" },
     ],
     channels: [
-      { name: "Professional Label Review", channel: "Professional Label Review", suitability: "high", gaccRequired: false, description: "Full label compliance audit + design", advantages: ["Guaranteed customs approval"], disadvantages: ["Professional fee applies"], timeline: "2-4 weeks", costRange: "$500-2,000" },
+      { name: t("labelChannel_name"), channel: t("labelChannel_name"), suitability: "high", gaccRequired: false, description: t("labelChannel_desc"), advantages: [t("labelChannel_adv1")], disadvantages: [t("labelChannel_dis1")], timeline: "2-4 weeks", costRange: "$500-2,000" },
     ],
     tariffInfo: { mfnRate: "5-20%", vatRate: "9-13%", consumptionTax: "N/A", ftaRate: null, totalTaxBurden: "Varies by product" },
     regulations: [
@@ -237,10 +237,10 @@ export function checkLabel(input: LabelInput, locale?: string): LabelResult {
       { phase: "Final Verification", duration: "2-3 working days", description: "Pre-printing compliance check", responsible: "Both", dependencies: ["Chinese design complete"] },
     ],
     costBreakdown: [
-      { item: "Label Compliance Review", estimatedRange: "$200-500", notes: "Full audit against GB 7718/28050/2760" },
-      { item: "Chinese Label Design", estimatedRange: "$300-1,000", notes: "Includes 2 revision rounds" },
-      { item: "Nutrition Testing", estimatedRange: "$200-600", notes: "CNAS lab — mandatory NRV% data" },
-      { item: "Translation Certification", estimatedRange: "$100-300", notes: "English → Chinese" },
+      { item: t("labelCost_review_item"), estimatedRange: "$200-500", notes: t("labelCost_review_notes") },
+      { item: t("labelCost_design_item"), estimatedRange: "$300-1,000", notes: t("labelCost_design_notes") },
+      { item: t("labelCost_nutrition_item"), estimatedRange: "$200-600", notes: t("labelCost_nutrition_notes") },
+      { item: t("labelCost_translation_item"), estimatedRange: "$100-300", notes: t("labelCost_translation_notes") },
     ],
     countryNotes: [
       "China requires all imported food labels in Chinese — foreign text is supplementary only",
@@ -249,25 +249,25 @@ export function checkLabel(input: LabelInput, locale?: string): LabelResult {
       "Bilingual labels strongly recommended for products sold in duty-free or premium retail",
     ],
     countryProfile: { region: "", ftaWithChina: false, ftaDetails: "", specialRestrictions: [], bilateralMeatAccess: false, bilateralAquaticAccess: false, dairyApproved: false, gaccDifficulty: "moderate", languageNote: "All text must be in Chinese. English may be supplementary.", commonIssues: [], importVolumeNote: "" },
-    marketIntel: { chinaImportTrend: "All imported prepackaged food requires Chinese labels. Market size: mandatory for every food importer.", keyDrivers: ["Regulatory requirement", "Market access"], barriers: ["Complex standards", "Professional review needed"], consumerPerception: "Chinese labels build consumer trust.", topOrigins: [], recommendation: "Engage professional label compliance service." },
-    competitiveAnalysis: "Label compliance is regulatory — not competitive. All importers face the same requirements.",
+    marketIntel: { chinaImportTrend: t("labelMarket_trend"), keyDrivers: [t("labelMarket_driver1"), t("labelMarket_driver2")], barriers: [t("labelMarket_barrier1"), t("labelMarket_barrier2")], consumerPerception: t("labelMarket_perception"), topOrigins: [], recommendation: t("labelMarket_reco") },
+    competitiveAnalysis: t("labelCompetitiveAnalysis"),
     commonRejections: [
-      { problem: "Nutrition panel uses kcal without kJ", cause: "GB 28050 mandates kJ as primary", solution: "Always show kJ first, kcal optional" },
-      { problem: "Additive not on GB 2760 list", cause: "Ingredient approved in origin but not China", solution: "Pre-submission additive audit against GB 2760" },
+      { problem: t("labelRej0_problem"), cause: t("labelRej0_cause"), solution: t("labelRej0_solution") },
+      { problem: t("labelRej1_problem"), cause: t("labelRej1_cause"), solution: t("labelRej1_solution") },
     ],
     postApprovalObligations: [
       { item: "Label Update Monitoring", frequency: "Ongoing", description: "Track GB 7718/28050 revisions" },
       { item: "Formula Change Re-label", frequency: "When applicable", description: "New formula = new label compliance check" },
     ],
     postApproval: [
-      { item: "Label Update Monitoring", freq: "Ongoing", desc: "Track GB 7718/28050 revisions and re-print when standards change" },
-      { item: "Formula Change Re-label", freq: "As needed", desc: "Any ingredient or formulation change triggers a new label compliance review" },
-      { item: "Annual Compliance Audit", freq: "Yearly", desc: "Spot check labels against latest regulatory amendments" },
+      { item: t("labelPost_labelUpdate_item"), freq: t("labelPost_labelUpdate_frequency"), desc: t("labelPost_labelUpdate_desc") },
+      { item: t("labelPost_formulaChange_item"), freq: t("labelPost_formulaChange_frequency"), desc: t("labelPost_formulaChange_desc") },
+      { item: t("labelPost_annualAudit_item"), freq: t("labelPost_annualAudit_frequency"), desc: t("labelPost_annualAudit_desc") },
     ],
     horizonScan: [
-      { topic: "GB 7718 Major Revision", impact: "high", timeframe: "2025-2026", description: "New allergen + digital labeling rules expected.", actionRequired: true },
-      { topic: "Digital / QR Labeling", impact: "medium", timeframe: "2026-2028", description: "China exploring QR-code-based label disclosure for traceability.", actionRequired: false },
-      { topic: "Nutrition Front-of-Pack (FOP)", impact: "medium", timeframe: "2027+", description: "Possible mandatory FOP nutrition scoring system (similar to Nutri-Score).", actionRequired: false },
+      { topic: t("labelHorizon_gb7718_topic"), impact: t("labelHorizon_gb7718_impact"), timeframe: t("labelHorizon_gb7718_timeframe"), description: t("labelHorizon_gb7718_desc"), actionRequired: true },
+      { topic: t("labelHorizon_qr_topic"), impact: t("labelHorizon_qr_impact"), timeframe: t("labelHorizon_qr_timeframe"), description: t("labelHorizon_qr_desc"), actionRequired: false },
+      { topic: t("labelHorizon_fop_topic"), impact: t("labelHorizon_fop_impact"), timeframe: t("labelHorizon_fop_timeframe"), description: t("labelHorizon_fop_desc"), actionRequired: false },
     ],
   
   labelMandatoryElements: [

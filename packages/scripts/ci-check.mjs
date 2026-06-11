@@ -124,7 +124,18 @@ function runBuildPhaseChecks() {
   ];
 
   for (const [script, ...extra] of checks) {
-    runLocalScript(script, ...extra);
+    if (script === 'check-hardcoded.mjs') {
+      // Per-project scope: only scan app source, not data modules (portal/modules/)
+      // portal/modules/ contains data dictionaries (PROFILES, REGULATIONS, COUNTRIES)
+      // those are checked by check-translations.mjs for completeness
+      const scope = project === 'site' ? 'apps/site/src packages/ui/src'
+        : project === 'portal' ? 'apps/portal/src'
+        : project === 'blog' ? 'apps/blog/src'
+        : '';
+      runLocalScript(script, scope || '--ci');
+    } else {
+      runLocalScript(script, ...extra);
+    }
   }
 }
 

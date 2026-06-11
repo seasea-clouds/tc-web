@@ -1,6 +1,6 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
-import { Footer, SearchProvider, CookieConsent, ActionDock, TradeTranslationProvider, OrganizationJsonLd, sharedOpenGraph, sharedTwitter, AuthProvider, CfAnalytics, buildAlternates } from '@trade/ui';
+import { Footer, SearchProvider, CookieConsent, ActionDock, TradeTranslationProvider, OrganizationJsonLd, sharedOpenGraph, sharedTwitter, AuthProvider, buildAlternates } from '@trade/ui';
 import { getMessages } from '@/lib/messages';
 import { locales, defaultLocale } from '@/i18n/routing';
 import '../globals.css';
@@ -41,8 +41,7 @@ export default async function Layout({
   return (
     <html lang={validLocale} dir={validLocale === 'ar' || validLocale === 'he' || validLocale === 'fa' || validLocale === 'ur' ? 'rtl' : 'ltr'}>
       <head>
-        {/* Cloudflare Web Analytics */}
-        <CfAnalytics />
+
       </head>
       <body className="min-h-screen flex flex-col pb-16 md:pb-0 antialiased">
         <NextIntlClientProvider messages={messages} locale={validLocale} timeZone="Asia/Shanghai">

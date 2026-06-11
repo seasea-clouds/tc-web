@@ -786,8 +786,8 @@ function scanFile(filePath) {
       if (text.includes('{') || text.includes('}')) continue;
       if (LEGIT_ENGLISH.has(text)) continue;
       if (text.includes('.') || text.includes('_')) continue;
-      if (/'\/\w+/.test(val)) continue;   // skip content-type patterns
-      if (val.includes('://')) continue;   // skip URLs
+      if (/'\/\w+/.test(text)) continue;   // skip content-type patterns
+      if (text.includes('://')) continue;   // skip URLs
       if (/^[A-Z][a-z]+$/.test(text)) continue;
       if (text === text.toUpperCase()) continue;
       if (text.startsWith('http') || text.startsWith('www')) continue;

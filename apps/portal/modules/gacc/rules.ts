@@ -820,7 +820,7 @@ const REGULATIONS: Regulation[] = [
 interface ChannelStrategy {
   channel: string;
   suitability: 'high' | 'medium' | 'low';
-  gaccRequired: boolean;
+  gaccRequired?: boolean;
   description: string;
   advantages: string[];
   disadvantages: string[];
@@ -828,38 +828,35 @@ interface ChannelStrategy {
   costRange: string;
 }
 
-function getChannels(input: GaccInput): ChannelStrategy[] {
+function getChannels(input: GaccInput, t: (k: string) => string): ChannelStrategy[] {
   const cat = CATEGORY_PROFILES[input.category] || CATEGORY_PROFILES['other'];
   return [
     {
-      channel: "General Trade (一般贸易)",
-      suitability: 'high',
-      gaccRequired: true,
-      description: "Standard import channel for commercial sale in physical retail and wholesale.",
-      advantages: ["Full market access (online + offline)", "Build brand presence in China", "Higher margins at scale"],
-      disadvantages: ["Full compliance overhead (GACC + label + testing)", "Longer timeline", "Requires Chinese entity or authorized agent"],
+      channel: t("gaccChannel_generalTrade_name"),
+      suitability: "high",
+      description: t("gaccChannel_generalTrade_desc") + (cat.isHighRisk ? t("gaccChannel_generalTrade_desc_highRisk") : ""),
+      advantages: [t("gaccChannel_generalTrade_adv1"), t("gaccChannel_generalTrade_adv2"), t("gaccChannel_generalTrade_adv3")],
+      disadvantages: [t("gaccChannel_generalTrade_dis1"), t("gaccChannel_generalTrade_dis2"), t("gaccChannel_generalTrade_dis3")],
       timeline: cat.isHighRisk ? "4-14 months" : "2-4 months",
       costRange: cat.isHighRisk ? "$8,000-25,000" : "$3,000-8,000",
     },
     {
-      channel: "Cross-Border E-commerce (CBEC / 跨境电商)",
-      suitability: 'medium',
-      gaccRequired: false,
-      description: "Sell directly to Chinese consumers via Tmall Global, JD Worldwide, Koala. Products stored in bonded warehouses.",
-      advantages: ["Faster market entry", "Lower initial compliance investment", "Test market before full commitment", "Simplified regulatory pathway"],
-      disadvantages: ["Limited to online channels", "Per-shipment limits (RMB 5,000/transaction)", "Cannot sell through retail stores", "CBEC positive list restrictions"],
-      timeline: "1-2 months",
-      costRange: "$500-2,000",
+      channel: t("gaccChannel_cbec_name"),
+      suitability: "high",
+      description: t("gaccChannel_cbec_desc"),
+      advantages: [t("gaccChannel_cbec_adv1"), t("gaccChannel_cbec_adv2"), t("gaccChannel_cbec_adv3"), t("gaccChannel_cbec_adv4")],
+      disadvantages: [t("gaccChannel_cbec_dis1"), t("gaccChannel_cbec_dis2"), t("gaccChannel_cbec_dis3"), t("gaccChannel_cbec_dis4")],
+      timeline: "4-10 weeks",
+      costRange: "$10,000-40,000",
     },
     {
-      channel: "Personal Parcel / Courier",
-      suitability: 'low',
-      gaccRequired: false,
-      description: "Direct-to-consumer via courier (FedEx, DHL). For small quantities only.",
-      advantages: ["No compliance needed for personal use quantities", "Fastest"],
-      disadvantages: ["Strictly limited to personal use quantities", "Not scalable", "Customs may require commercial clearance above threshold", "Cannot build brand in market"],
-      timeline: "Days",
-      costRange: "$200-500 per shipment (customs brokerage)",
+      channel: t("gaccChannel_parcel_name"),
+      suitability: "low",
+      description: t("gaccChannel_parcel_desc"),
+      advantages: [t("gaccChannel_parcel_adv1"), t("gaccChannel_parcel_adv2")],
+      disadvantages: [t("gaccChannel_parcel_dis1"), t("gaccChannel_parcel_dis2"), t("gaccChannel_parcel_dis3"), t("gaccChannel_parcel_dis4")],
+      timeline: "1-3 weeks",
+      costRange: "$500-2,000",
     },
   ];
 }
@@ -875,30 +872,15 @@ interface MarketIntel {
   recommendation: string;
 }
 
-function getMarketIntel(input: GaccInput): MarketIntel {
+function getMarketIntel(input: GaccInput, t: (k: string) => string): MarketIntel {
   const cat = CATEGORY_PROFILES[input.category] || CATEGORY_PROFILES['other'];
   return {
-    chinaImportTrend: cat.marketTrend === 'growing' 
-      ? "Growing demand — China's imports of this category have been increasing 8-15% year on year. Premium imported products particularly sought after by middle-class consumers."
-      : cat.marketTrend === 'declining'
-      ? "Declining — Domestic substitutes gaining market share. However, premium/branded imports still find niche demand."
-      : "Stable — Consistent import volume with moderate growth. Established market with steady demand.",
-    topOrigins: (() => {
-      const origins = cat.competitorOrigin;
-      if (origins.length === 0) return [];
-      if (origins.length === 1 && origins[0] === 'Various') return [];
-      // Distribute realistic market shares among competing origins
-      const shares = origins.length === 4 ? ['35%', '28%', '22%', '15%']
-        : origins.length === 3 ? ['42%', '33%', '25%']
-        : ['30%', '25%', '20%', '15%', '10%'];
-      return origins.map((c, i) => ({ country: c, share: shares[i] || '10%' }));
-    })(),
-    consumerPerception: `Chinese consumers generally view imported ${CATEGORY_LABELS[input.category].split("(")[0]} products favorably, associating them with higher quality and safety standards. Premium positioning is achievable.`,
-    keyDrivers: ["Rising middle class demand for premium imports", "Growing food safety awareness", "Cross-border e-commerce enabling direct access", "Young consumers' preference for international brands"],
-    barriers: ["Competition from established import brands", "Regulatory complexity", "Price sensitivity in certain segments"],
-    recommendation: cat.isHighRisk
-      ? "Consider CBEC channel for market testing before committing to full general trade compliance."
-      : "General trade recommended for full market access. Leverage premium positioning for better margins.",
+    chinaImportTrend: cat.marketTrend === 'growing' ? t("gaccMarket_trendGrowing") : cat.marketTrend === 'stable' ? t("gaccMarket_trendStable") : t("gaccMarket_trendDeclining"),
+    consumerPerception: t("gaccMarket_consumerPerception"),
+    topOrigins: cat.competitorOrigin.map(o => ({ country: o, share: "" })),
+    keyDrivers: [t("gaccMarket_driver1"), t("gaccMarket_driver2"), t("gaccMarket_driver3"), t("gaccMarket_driver4")],
+    barriers: [t("gaccMarket_barrier1"), t("gaccMarket_barrier2"), t("gaccMarket_barrier3")],
+    recommendation: cat.isHighRisk ? t("gaccMarket_recoHigh") : t("gaccMarket_recoStandard"),
   };
 }
 
@@ -910,15 +892,15 @@ export interface CostBreakdown {
   notes: string;
 }
 
-function getCostBreakdown(input: GaccInput): CostBreakdown[] {
+function getCostBreakdown(input: GaccInput, t: (k: string) => string): CostBreakdown[] {
   const cat = CATEGORY_PROFILES[input.category] || CATEGORY_PROFILES['other'];
   return [
-    { item: "GACC Registration Fee", estimatedRange: "$200-800", notes: "CIFER system filing with professional agent handling." },
-    { item: "Laboratory Testing (CNAS)", estimatedRange: cat.testCostRange, notes: `Required tests: ${cat.labTests.slice(0, 4).join(", ")}${cat.labTests.length > 4 ? ` (+${cat.labTests.length - 4} more)` : ""}. Costs vary by test scope.` },
-    { item: "Document Translation & Notarization", estimatedRange: "$500-2,000", notes: "All non-Chinese documents need certified Chinese translation. 3-5 business days." },
-    { item: "Chinese Label Design & Compliance Review", estimatedRange: "$300-1,500", notes: "Includes GB 7718 compliance check, nutrition panel calculation, 2 revision rounds." },
-    { item: "Professional Compliance Consultation", estimatedRange: cat.isHighRisk ? "$5,000-15,000" : "$2,000-5,000", notes: "End-to-end management: classification → documentation → filing → follow-up." },
-    { item: "Customs Brokerage (per shipment)", estimatedRange: "$200-500", notes: "Per-shipment customs clearance. Not a one-time cost." },
+    { item: t("gaccCost_registration_item"), estimatedRange: "$1,500-3,000", notes: t("gaccCost_registration_notes") },
+    { item: t("gaccCost_testing_item"), estimatedRange: cat.testCostRange, notes: t("gaccCost_testing_notes") },
+    { item: t("gaccCost_translation_item"), estimatedRange: "$500-2,000", notes: t("gaccCost_translation_notes") },
+    { item: t("gaccCost_labelDesign_item"), estimatedRange: "$500-2,000", notes: t("gaccCost_labelDesign_notes") },
+    { item: t("gaccCost_consultation_item"), estimatedRange: cat.isHighRisk ? "$5,000-15,000" : "$2,000-5,000", notes: t("gaccCost_consultation_notes") },
+    { item: t("gaccCost_brokerage_item"), estimatedRange: "$500-1,500 per shipment", notes: t("gaccCost_brokerage_notes") },
   ];
 }
 
@@ -938,59 +920,59 @@ export interface TimelinePhase {
   dependencies: string[];
 }
 
-function getTimeline(input: GaccInput): TimelinePhase[] {
+function getTimeline(input: GaccInput, t: (k: string) => string): TimelinePhase[] {
   const cat = CATEGORY_PROFILES[input.category] || CATEGORY_PROFILES['other'];
   const timeline1 = cat.isHighRisk ? cat.gaccTimelineHigh : cat.gaccTimelineLow;
   
   return [
     {
-      phase: "Initial Assessment & Classification",
+      phase: t("gaccTimeline_initAssess_name"),
       duration: "1-2 weeks",
-      description: "Confirm HS code, GACC category classification, and identify required documents.",
+      description: t("gaccTimeline_initAssess_desc"),
       responsible: 'SinoTrade',
       dependencies: [],
     },
     {
-      phase: "Document Preparation & Translation",
+      phase: t("gaccTimeline_docPrep_name"),
       duration: cat.isHighRisk ? "3-6 weeks" : "2-4 weeks",
-      description: "Gather all required documents, translate to Chinese, notarize where required.",
+      description: t("gaccTimeline_docPrep_desc"),
       responsible: 'Both',
       dependencies: ["Initial assessment complete"],
     },
     {
-      phase: "Lab Testing (CNAS Accredited)",
+      phase: t("gaccTimeline_labTest_name"),
       duration: cat.isHighRisk ? "3-5 weeks" : "2-3 weeks",
-      description: "Product samples sent to CNAS-accredited lab for required testing.",
+      description: t("gaccTimeline_labTest_desc"),
       responsible: 'SinoTrade',
       dependencies: ["Sample shipment arranged"],
     },
     {
-      phase: "Application Submission (CIFER)",
+      phase: t("gaccTimeline_submit_name"),
       duration: "1-2 weeks",
-      description: `Submit registration via CIFER system with professional handling of all documentation and submission requirements.${cat.isHighRisk ? " Competent authority recommendation required — complete handling by our experts." : " Our team manages the full application workflow."}`,
+      description: t("gaccTimeline_submit_desc") + (cat.isHighRisk ? t("gaccTimeline_submit_highRiskNote") : ""),
       responsible: 'SinoTrade',
       dependencies: ["All documents ready", "Lab reports received"],
     },
     {
-      phase: "GACC Review & Approval",
+      phase: t("gaccTimeline_review_name"),
       duration: cat.isHighRisk ? "2-6 months" : "2-6 weeks",
-      description: "GACC processes application. May request supplementary materials. Issue registration certificate upon approval.",
+      description: t("gaccTimeline_review_desc"),
       responsible: 'SinoTrade',
       dependencies: ["Application submitted"],
     },
     {
-      phase: "Label Design & Compliance",
+      phase: t("gaccTimeline_label_name"),
       duration: "2-3 weeks",
-      description: "Design Chinese label per GB 7718/28050. Submit for compliance review.",
+      description: t("gaccTimeline_label_desc"),
       responsible: 'SinoTrade',
       dependencies: ["Product details finalized"],
     },
     {
-      phase: "First Shipment & Customs Clearance",
+      phase: t("gaccTimeline_shipment_name"),
       duration: "1-3 weeks",
-      description: "First commercial shipment. CIQ inspection at port: document check, label verification, random sampling.",
+      description: t("gaccTimeline_shipment_desc"),
       responsible: 'Both',
-      dependencies: ["GACC Registration certificate", "Label approved"],
+      dependencies: ["GACC registration approved", "Label artwork finalized"],
     },
   ];
 }
@@ -1003,39 +985,31 @@ interface LabelGuide {
   gb28050Highlights: string[];
 }
 
-function getLabelGuide(): LabelGuide {
+function getLabelGuide(t: (k: string) => string): LabelGuide {
   return {
     requiredItems: [
-      { field: "Product Name", requirement: "Accurate reflection of product's true nature. Standardized name per GB if exists.", commonMistake: "Fanciful names without descriptive standard name" },
-      { field: "Ingredients List", requirement: "Descending order by weight. All additives with GB 2760 code numbers.", commonMistake: "Missing additive code numbers or incorrect order" },
-      { field: "Net Content", requirement: "Metric units (g/mL). Draining weight for solid-in-liquid products.", commonMistake: "Using imperial units or missing draining weight" },
-      { field: "Manufacturer/Distributor", requirement: "Name and address of overseas manufacturer AND Chinese responsible party/agent.", commonMistake: "Missing Chinese agent information" },
-      { field: "Country of Origin", requirement: "Clearly marked. 'Made in [Country]' or similar.", commonMistake: "Vague origin descriptions" },
-      { field: "Date of Manufacture & Best Before", requirement: "DD/MM/YYYY or YYYY/MM/DD format. Position must be prominent.", commonMistake: "Using MM/DD/YYYY format or printing in hard-to-find location" },
-      { field: "Storage Conditions", requirement: "Clearly stated storage requirements.", commonMistake: "Generic 'store in cool dry place' when specific conditions needed" },
-      { field: "Nutrition Information Panel", requirement: "Per GB 28050 format. Energy (kJ), protein, fat, carbs, sodium mandatory. NRV% required.", commonMistake: "Using kcal instead of kJ, or missing NRV% column" },
-      { field: "Food Additives", requirement: "Listed with GB 2760 category codes (e.g., E330, INS 330).", commonMistake: "Using trade names instead of standard codes" },
-      { field: "Allergen Information", requirement: "Mandatory: milk, eggs, fish, crustacea, peanuts, soybeans, wheat, tree nuts.", commonMistake: "Not declaring allergens that are regulated in China" },
-      { field: "QS/SC Logo (if applicable)", requirement: "Not required for imported food. Do NOT print QS/SC logo.", commonMistake: "Printing Chinese production license marks on imported products" },
-      { field: "Import Record Number", requirement: "Must show CIQ registration number after customs clearance.", commonMistake: "Leaving blank or showing incorrect number" },
+      { field: t("gaccLabel_productName_field"), requirement: t("gaccLabel_productName_req"), commonMistake: t("gaccLabel_productName_mistake") },
+      { field: t("gaccLabel_ingredients_field"), requirement: t("gaccLabel_ingredients_req"), commonMistake: t("gaccLabel_ingredients_mistake") },
+      { field: t("gaccLabel_netContent_field"), requirement: t("gaccLabel_netContent_req"), commonMistake: t("gaccLabel_netContent_mistake") },
+      { field: t("gaccLabel_manufacturer_field"), requirement: t("gaccLabel_manufacturer_req"), commonMistake: t("gaccLabel_manufacturer_mistake") },
+      { field: t("gaccLabel_origin_field"), requirement: t("gaccLabel_origin_req"), commonMistake: t("gaccLabel_origin_mistake") },
+      { field: t("gaccLabel_date_field"), requirement: t("gaccLabel_date_req"), commonMistake: t("gaccLabel_date_mistake") },
+      { field: t("gaccLabel_storage_field"), requirement: t("gaccLabel_storage_req"), commonMistake: t("gaccLabel_storage_mistake") },
+      { field: t("gaccLabel_nutrition_field"), requirement: t("gaccLabel_nutrition_req"), commonMistake: t("gaccLabel_nutrition_mistake") },
+      { field: t("gaccLabel_additives_field"), requirement: t("gaccLabel_additives_req"), commonMistake: t("gaccLabel_additives_mistake") },
+      { field: t("gaccLabel_allergen_field"), requirement: t("gaccLabel_allergen_req"), commonMistake: t("gaccLabel_allergen_mistake") },
+      { field: t("gaccLabel_qs_field"), requirement: t("gaccLabel_qs_req"), commonMistake: t("gaccLabel_qs_mistake") },
+      { field: t("gaccLabel_importRecord_field"), requirement: t("gaccLabel_importRecord_req"), commonMistake: t("gaccLabel_importRecord_mistake") },
     ],
     gb7718Highlights: [
-      "All text must be in Chinese. Foreign language may be supplementary but not primary.",
-      "Font size must be no less than 1.8mm for most mandatory items.",
-      "If product has a claimed character (e.g., 'organic', 'natural'), supporting certification required.",
-      "Products containing GMO ingredients must be labeled as per GMO labeling regulations.",
-      "Irradiated ingredients must be declared.",
-      "Trans-fat content must be declared if >0.3g per 100g/100mL.",
+      t("gaccGb7718_1"), t("gaccGb7718_2"), t("gaccGb7718_3"),
+      t("gaccGb7718_4"), t("gaccGb7718_5"), t("gaccGb7718_6"),
     ],
     gb28050Highlights: [
-      "Energy must ALWAYS be shown in kJ (kilojoules) — not kcal alone.",
-      "Mandatory fields: Energy, Protein, Fat, Carbohydrate, Sodium.",
-      "NRV% (Nutrient Reference Values) must be calculated for each mandatory field.",
-      "Additional fields required when making claims (e.g., fiber, vitamins).",
-      "Format must follow the exact table structure shown in GB 28050 appendix.",
-      "Tolerance ranges apply: ≤120% for energy and nutrients, ≥80% for protein, fiber, vitamins.",
+      t("gaccGb28050_1"), t("gaccGb28050_2"), t("gaccGb28050_3"),
+      t("gaccGb28050_4"), t("gaccGb28050_5"), t("gaccGb28050_6"),
     ],
-  };
+  };;
 }
 
 // ─── Horizon Scan ──────────────────────────────────────────────────────
@@ -1048,51 +1022,15 @@ export interface HorizonItem {
   actionRequired: boolean;
 }
 
-function getHorizonScan(): HorizonItem[] {
+function getHorizonScan(t: (k: string) => string): HorizonItem[] {
   return [
-    {
-      topic: "GB 7718 Revision",
-      impact: 'high',
-      timeframe: "2025-2026",
-      description: "The long-anticipated revision of GB 7718 (label standard) expected to introduce significant changes to labeling requirements including new allergen declaration format, font size requirements, and digital labeling options.",
-      actionRequired: true,
-    },
-    {
-      topic: "CBEC Positive List Expansion",
-      impact: 'medium',
-      timeframe: "2025",
-      description: "Expected expansion of the cross-border e-commerce positive list to include more food categories, enabling more products to enter via simplified CBEC channel.",
-      actionRequired: false,
-    },
-    {
-      topic: "Imported Food Traceability System",
-      impact: 'medium',
-      timeframe: "2025-2026",
-      description: "GACC is developing a nationwide traceability system for imported food. May require additional batch documentation and digital tracking.",
-      actionRequired: false,
-    },
-    {
-      topic: "AI-Powered Label Review",
-      impact: 'low',
-      timeframe: "2025+",
-      description: "Customs is piloting AI systems for automated label compliance review. May reduce label clearance times but also increase initial rejection rates.",
-      actionRequired: false,
-    },
-    {
-      topic: "Health Food Registration Reform",
-      impact: 'high',
-      timeframe: "2025-2027",
-      description: "NHC/CFDA reviewing the health food registration system. Possible streamlining of the filing vs registration classification for functional foods.",
-      actionRequired: true,
-    },
-    {
-      topic: "Carbon Footprint Labeling",
-      impact: 'low',
-      timeframe: "2026+",
-      description: "China exploring carbon footprint labeling for imported goods. Initially voluntary for food, but may become expected in premium retail channels.",
-      actionRequired: false,
-    },
-  ];
+    { topic: t("gaccHorizon_gb7718_topic"), impact: "high", timeframe: "2025-2026", description: t("gaccHorizon_gb7718_desc"), actionRequired: true },
+    { topic: t("gaccHorizon_cbec_topic"), impact: "medium", timeframe: "2025-2026", description: t("gaccHorizon_cbec_desc"), actionRequired: false },
+    { topic: t("gaccHorizon_traceability_topic"), impact: "high", timeframe: "2025+", description: t("gaccHorizon_traceability_desc"), actionRequired: true },
+    { topic: t("gaccHorizon_aiLabel_topic"), impact: "medium", timeframe: "2025-2027", description: t("gaccHorizon_aiLabel_desc"), actionRequired: false },
+    { topic: t("gaccHorizon_healthFood_topic"), impact: "medium", timeframe: "2025+", description: t("gaccHorizon_healthFood_desc"), actionRequired: false },
+    { topic: t("gaccHorizon_carbon_topic"), impact: "low", timeframe: "2026+", description: t("gaccHorizon_carbon_desc"), actionRequired: false },
+  ];;
 }
 
 // ═══════════════════════════════════════════════════════════════════════
@@ -1270,29 +1208,34 @@ export function checkGacc(input: GaccInput, locale?: string): GaccResult {
   ];
 
   // Document guide
-  const documentGuide = [
-    { name: "GACC Registration Application Form", format: "CIFER system online submission", notarization: "Not required", validity: "Per application", commonError: "Incomplete fields, missing signatory information" },
-    { name: "Product Description & Ingredients List", format: "PDF/Word, Chinese or bilingual", notarization: "Translation certification recommended", validity: "Per application", commonError: "Additive codes not per GB 2760, missing INN numbers" },
-    { name: "Manufacturing Process Flow Chart", format: "PDF, diagram format, Chinese translation", notarization: "Translation certification recommended", validity: "Per application", commonError: "Too generic, missing critical control points" },
-    { name: "HACCP / ISO 22000 Certificate", format: "PDF, valid certificate copy", notarization: "Certified copy + translation required", validity: "Must be current (not expired)", commonError: "Expired certificate, wrong facility name" },
-    { name: "Lab Test Report", format: "PDF from CNAS/ISO 17025 accredited lab", notarization: "Original + translation", validity: "Within 6 months of application", commonError: "Non-accredited lab, incomplete test scope" },
-    { name: "Certificate of Free Sale / Export Certificate", format: "PDF from competent authority", notarization: "Certified copy + translation", validity: "Typically 6-12 months", commonError: "Wrong issuing authority, product name mismatch" },
-    { name: "Product Photos & Packaging Images", format: "JPEG/PNG, high resolution", notarization: "Not required", validity: "Per application", commonError: "Low resolution, doesn't show all label sides" },
-    ...(isHighRisk ? [
-      { name: "Third-Party Audit Report", format: "PDF, GACC-specified format", notarization: "Original + translation", validity: "Within 12 months", commonError: "Auditor not GACC-approved, scope incomplete" },
-      { name: "Specific Risk Assessment", format: "PDF, bilingual", notarization: "Translation certification", validity: "Per application", commonError: "Generic template, not product-specific" },
-      { name: "Competent Authority Recommendation Letter", format: "Official letter from exporting country authority", notarization: "Certified copy + official translation", validity: "Per application", commonError: "Wrong authority, format not per GACC requirements" },
-    ] : []),
+  const documentGuide = (() => {
+  const items = [
+    { name: t("gaccDoc_appForm_name"), format: t("gaccDoc_appForm_format"), notarization: t("gaccDoc_appForm_notarization"), validity: t("gaccDoc_appForm_validity"), commonError: t("gaccDoc_appForm_error") },
+    { name: t("gaccDoc_productDesc_name"), format: t("gaccDoc_productDesc_format"), notarization: t("gaccDoc_productDesc_notarization"), validity: t("gaccDoc_productDesc_validity"), commonError: t("gaccDoc_productDesc_error") },
+    { name: t("gaccDoc_flowChart_name"), format: t("gaccDoc_flowChart_format"), notarization: t("gaccDoc_flowChart_notarization"), validity: t("gaccDoc_flowChart_validity"), commonError: t("gaccDoc_flowChart_error") },
+    { name: t("gaccDoc_haccp_name"), format: t("gaccDoc_haccp_format"), notarization: t("gaccDoc_haccp_notarization"), validity: t("gaccDoc_haccp_validity"), commonError: t("gaccDoc_haccp_error") },
+    { name: t("gaccDoc_labReport_name"), format: t("gaccDoc_labReport_format"), notarization: t("gaccDoc_labReport_notarization"), validity: t("gaccDoc_labReport_validity"), commonError: t("gaccDoc_labReport_error") },
+    { name: t("gaccDoc_freeSale_name"), format: t("gaccDoc_freeSale_format"), notarization: t("gaccDoc_freeSale_notarization"), validity: t("gaccDoc_freeSale_validity"), commonError: t("gaccDoc_freeSale_error") },
+    { name: t("gaccDoc_photos_name"), format: t("gaccDoc_photos_format"), notarization: t("gaccDoc_photos_notarization"), validity: t("gaccDoc_photos_validity"), commonError: t("gaccDoc_photos_error") },
+    { name: t("gaccDoc_auditReport_name"), format: t("gaccDoc_auditReport_format"), notarization: t("gaccDoc_auditReport_notarization"), validity: t("gaccDoc_auditReport_validity"), commonError: t("gaccDoc_auditReport_error") },
   ];
+  if (isHighRisk) {
+    items.push(
+      { name: t("gaccDoc_riskAssessment_name"), format: t("gaccDoc_riskAssessment_format"), notarization: t("gaccDoc_riskAssessment_notarization"), validity: t("gaccDoc_riskAssessment_validity"), commonError: t("gaccDoc_riskAssessment_error") },
+      { name: t("gaccDoc_authorityLetter_name"), format: t("gaccDoc_authorityLetter_format"), notarization: t("gaccDoc_authorityLetter_notarization"), validity: t("gaccDoc_authorityLetter_validity"), commonError: t("gaccDoc_authorityLetter_error") },
+    );
+  }
+  return items;
+})();;
 
   // Post-approval obligations
   const postApprovalObligations = [
-    { item: "Annual Compliance Report", frequency: "Yearly", description: "Submit annual production and export data to GACC. Failure may result in registration suspension." },
-    { item: "Label Compliance Updates", frequency: "Per regulatory change", description: "Monitor GB 7718/28050 updates. Any change in ingredient/formulation requires label revision." },
-    { item: "Registration Renewal", frequency: "Every 5 years", description: "Submit renewal application 3-6 months before expiry. Include updated documentation." },
-    { item: "Customs Clearance Per Shipment", frequency: "Per import", description: "Each shipment requires CIQ inspection. Random sampling and testing may occur." },
-    { item: "Market Surveillance", frequency: "Ongoing", description: "SAMR conducts regular market inspections. Products may be randomly tested for compliance." },
-    { item: "Formula/Process Change Notification", frequency: "When applicable", description: "Any change in formulation, packaging, or manufacturing location must be notified to GACC." },
+    { item: t("gaccPost_annualReport_item"), frequency: t("gaccPost_annualReport_frequency"), description: t("gaccPost_annualReport_desc") },
+    { item: t("gaccPost_labelUpdate_item"), frequency: t("gaccPost_labelUpdate_frequency"), description: t("gaccPost_labelUpdate_desc") },
+    { item: t("gaccPost_renewal_item"), frequency: t("gaccPost_renewal_frequency"), description: t("gaccPost_renewal_desc") },
+    { item: t("gaccPost_clearance_item"), frequency: t("gaccPost_clearance_frequency"), description: t("gaccPost_clearance_desc") },
+    { item: t("gaccPost_surveillance_item"), frequency: t("gaccPost_surveillance_frequency"), description: t("gaccPost_surveillance_desc") },
+    { item: t("gaccPost_formulaChange_item"), frequency: t("gaccPost_formulaChange_frequency"), description: t("gaccPost_formulaChange_desc") },
   ];
 
   // Country-specific warnings
@@ -1315,10 +1258,10 @@ export function checkGacc(input: GaccInput, locale?: string): GaccResult {
 
     // 2
     viability: t("gaccViability"),
-    marketIntel: getMarketIntel(input),
+    marketIntel: getMarketIntel(input, t),
 
     // 3
-    channels: getChannels(input),
+    channels: getChannels(input, t),
 
     // 4
     tariffInfo,
@@ -1342,13 +1285,13 @@ export function checkGacc(input: GaccInput, locale?: string): GaccResult {
     labGuide: t("gaccLabGuide").replace("{tests}", tLabTests.join(", ")).replace("{cost}", cat.testCostRange),
 
     // 10
-    labelGuide: getLabelGuide(),
+    labelGuide: getLabelGuide(t),
 
     // 11
-    timelinePhases: getTimeline(input),
+    timelinePhases: getTimeline(input, t),
 
     // 12
-    costBreakdown: getCostBreakdown(input),
+    costBreakdown: getCostBreakdown(input, t),
     totalCostRange: getTotalCostRange(input),
 
     // 13
@@ -1375,7 +1318,7 @@ export function checkGacc(input: GaccInput, locale?: string): GaccResult {
     postApprovalObligations,
 
     // 18
-    horizonScan: getHorizonScan(),
+    horizonScan: getHorizonScan(t),
 
     // Legacy
     summary: isHighRisk ? t("gaccSummaryHigh") : t("gaccSummaryStandard"),

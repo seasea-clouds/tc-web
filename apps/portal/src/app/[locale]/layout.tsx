@@ -40,9 +40,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={validLocale} dir={validLocale === 'ar' || validLocale === 'he' || validLocale === 'fa' || validLocale === 'ur' ? 'rtl' : 'ltr'}>
-      <head>
 
-      </head>
       <body className="min-h-screen flex flex-col pb-16 md:pb-0 antialiased">
         <NextIntlClientProvider locale={validLocale} messages={messages} timeZone="Asia/Shanghai">
           <TradeTranslationProvider messages={messages} locale={validLocale}>

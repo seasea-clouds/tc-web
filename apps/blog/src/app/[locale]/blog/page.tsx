@@ -43,7 +43,6 @@ export default async function BlogHome({ params }: { params: Promise<{ locale: s
   const msgs = getMessages(locale);
   const B = msgs?.Blog || {};
   const tb = (key: string, fb?: string) => B[key] ?? fb ?? key;
-  const N = msgs?.Navbar || {};
   const Bc = msgs?.breadcrumb || {};
   const bc = (key: string, fb?: string) => Bc[key] ?? fb ?? key;
 
@@ -55,7 +54,7 @@ export default async function BlogHome({ params }: { params: Promise<{ locale: s
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/${locale}/` },
+      { '@type': 'ListItem', position: 1, name: bc('blog', 'Blog'), item: `${SITE_URL}/${locale}/blog/` },
     ],
   });
 
@@ -80,14 +79,6 @@ export default async function BlogHome({ params }: { params: Promise<{ locale: s
       <nav aria-label="Breadcrumb" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <ol className="flex items-center gap-1.5 text-sm text-text-muted flex-wrap">
           <li className="flex items-center gap-1.5">
-            <a className="hover:text-primary-navy transition-colors truncate max-w-[200px] sm:max-w-none" href={href('/')}>
-              {N.home || 'Home'}
-            </a>
-          </li>
-          <li className="flex items-center gap-1.5">
-            <svg className="w-3.5 h-3.5 flex-shrink-0 text-text-muted/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
             <span className="text-text-charcoal font-medium truncate max-w-[200px] sm:max-w-none">
               {bc('blog', 'Blog')}
             </span>

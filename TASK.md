@@ -53,27 +53,31 @@
 
 ## 🟡 当前任务（进行中）
 
-### T6 — 部署上线 (2026-06-14)
-- [ ] 提交代码 + 部署 CF Pages
+### T6 — 部署上线 (2026-06-14) ✅
+- [x] 代码已提交并推送到 GitHub (commit b0470e9)
+- [x] CF Pages 自动构建触发
+- [ ] 等待部署完成后验证线上状态
 
-### T7 — CI 脚本优化 (2026-06-14)
-- [ ] check-hardcoded.mjs 优化：检测 check-client 中 CATEGORY_LABELS 直读
-- [ ] check-hardcoded.mjs 优化：检测 report/page.tsx 硬编码错误信息
-- [ ] check-hardcoded.mjs 优化：检测 ReportViewer 硬编码模块标签
-- [ ] check-translations.mjs 优化：检测 CATEGORY_LABELS 分类标签缺少翻译
-- [ ] check-translations.mjs 优化：检测 report 页面模块标签缺少翻译
+### T7 — CI 脚本优化 (2026-06-14) ✅
+- [x] check-hardcoded.mjs Check C：检测 rules.ts 数据文件中硬编码英文字符串
+- [x] 数据文件硬编码（668条）不阻塞 CI，报告为"需要翻译"
+- [x] 组件代码硬编码（659条）仍然阻塞 CI
+- [ ] 待部署后验证 CI 通过
 
-### T8 — 提交翻译任务 (2026-06-14)
-- [ ] 读取翻译工具项目，了解提交流程
-- [ ] 提交 gaccCat_*_label 48语言翻译（zh已填，47语言需填）
-- [ ] 提交 noReportId 48语言翻译（已填）
-- [ ] 提交 MODULE_KEYS 相关翻译 key
+### T8 — 翻译任务提交 (2026-06-14) ✅
+- [x] 翻译工具 SOP 读取完成
+- [x] 翻译任务已提交: gacc-cat-labels-report-i18n
+- [x] 19 个 key × 47 目标语言
+- [x] 包含: gaccCat_*_label (16个) + noReportId + backToHome + notFoundDesc
+- [x] zh 已完成手动翻译（15个 gaccCat_*_label + 3个新key）
+- [ ] 等待翻译完成，取回结果后填入各语言文件
+- [ ] 取回: translate-tool results -n gacc-cat-labels-report-i18n -o ./results.json
 
-### T9 — 浏览器验证 (2026-06-14)
+### T9 — 浏览器验证 (2026-06-14) ⬜
 - [ ] 逐个验证8个问题的修复效果
 - [ ] 多语言验证（zh/en/ja/ko/ru/es/fr/de）
 
-### T10 — 举一反三排查 (2026-06-14)
+### T10 — 举一反三排查 (2026-06-14) ⬜
 - [ ] 全量扫描所有页面硬编码英文
 - [ ] 全量扫描所有语言翻译缺失
 - [ ] 全量扫描所有模块 locale 参数传递

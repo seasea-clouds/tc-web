@@ -1,9 +1,12 @@
+'use client';
 import SectionTitle from '../../components/SectionTitle'
+import { useT } from '@trade/ui';
 export default function TestingProcess({ result }: { result: any }) {
+    const t = useT('ReportSection');
   if (!result.testingProcess?.length) return null
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-6">
-      <SectionTitle icon="🔬" label="Testing Process" />
+      <SectionTitle icon="🔬" label={t("sectionTestingProcess")} />
       <div className="space-y-3">
         {result.testingProcess.map((t: any, i: number) => (
           <div key={i} className="flex items-start gap-3">

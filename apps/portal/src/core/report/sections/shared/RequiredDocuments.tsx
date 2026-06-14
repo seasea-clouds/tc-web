@@ -1,22 +1,25 @@
+'use client';
 import SectionTitle from '../../components/SectionTitle'
+import { useT } from '@trade/ui';
 export default function RequiredDocuments({ result }: { result: any }) {
+    const t = useT('ReportSection');
   // Use documentGuide if available (richer data), fall back to requiredDocuments list
   const guide = result.documentGuide?.length ? result.documentGuide : null
   const docs = result.requiredDocuments?.length ? result.requiredDocuments : null
   if (!guide && !docs) return null
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-6">
-      <SectionTitle icon="📄" label="Required Documents" />
+      <SectionTitle icon="📄" label={t("sectionRequiredDocuments")} />
       {guide ? (
         <div className="overflow-x-auto -mx-6">
           <table className="w-full text-xs">
             <thead>
               <tr className="border-b border-gray-200 bg-gray-50">
-                <th className="text-left px-6 py-2.5 font-semibold text-gray-700">Document</th>
-                <th className="text-left px-4 py-2.5 font-semibold text-gray-700">Format</th>
-                <th className="text-center px-4 py-2.5 font-semibold text-gray-700">Notarization</th>
-                <th className="text-center px-4 py-2.5 font-semibold text-gray-700">Validity</th>
-                <th className="text-left px-4 py-2.5 font-semibold text-gray-700 hidden md:table-cell">Common Error</th>
+                <th className="text-left px-6 py-2.5 font-semibold text-gray-700">{t("labelDocument")}</th>
+                <th className="text-left px-4 py-2.5 font-semibold text-gray-700">{t("labelFormat")}</th>
+                <th className="text-center px-4 py-2.5 font-semibold text-gray-700">{t("labelNotarization")}</th>
+                <th className="text-center px-4 py-2.5 font-semibold text-gray-700">{t("labelValidity")}</th>
+                <th className="text-left px-4 py-2.5 font-semibold text-gray-700 hidden md:table-cell">{t("labelCommonError")}</th>
               </tr>
             </thead>
             <tbody>

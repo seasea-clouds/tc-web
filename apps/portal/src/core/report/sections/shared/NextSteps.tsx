@@ -1,9 +1,12 @@
+'use client';
 import SectionTitle from '../../components/SectionTitle'
+import { useT } from '@trade/ui';
 export default function NextSteps({ steps }: { steps: string[] }) {
+    const t = useT('ReportSection');
   if (!steps?.length) return null
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-6">
-      <SectionTitle icon={'🚀'} label="Next Steps" />
+      <SectionTitle icon={'🚀'} label={t("sectionNextSteps")} />
       <ol className="space-y-3">
         {steps.map((step, i) => (
           <li key={i} className="flex items-start gap-3">

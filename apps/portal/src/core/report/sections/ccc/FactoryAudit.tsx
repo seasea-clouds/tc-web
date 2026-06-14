@@ -1,5 +1,8 @@
+'use client';
 import SectionTitle from '../../components/SectionTitle'
+import { useT } from '@trade/ui';
 export default function FactoryAudit({ result }: { result: any }) {
+    const t = useT('ReportSection');
   const a = result.factoryAudit
   if (!a) return null
 
@@ -18,10 +21,10 @@ export default function FactoryAudit({ result }: { result: any }) {
 
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-6">
-      <SectionTitle icon="🏭" label="Factory Audit Requirements" />
+      <SectionTitle icon="🏭" label={t("sectionFactoryAuditRequirements")} />
       <p className="text-sm text-gray-700 mb-3">{a.requirement}</p>
       <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 mb-3">
-        <p className="text-xs font-semibold text-amber-800 mb-1">📋 Audit Checklist ({checklist.length} items)</p>
+        <p className="text-xs font-semibold text-amber-800 mb-1">📋 {t("cccAuditChecklist")} ({checklist.length} items)</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1">
           {checklist.map((s: string, i: number) => (
             <div key={i} className="flex items-start gap-1.5 text-xs text-gray-700">
@@ -33,7 +36,7 @@ export default function FactoryAudit({ result }: { result: any }) {
       </div>
       {a.frequency && (
         <div className="flex gap-4 text-xs text-gray-500">
-          <span><strong>Frequency:</strong> {a.frequency}</span>
+          <span><strong>{t("labelFrequency")}:</strong> {a.frequency}</span>
           {a.travelNote && <span className="text-amber-600">{a.travelNote}</span>}
         </div>
       )}

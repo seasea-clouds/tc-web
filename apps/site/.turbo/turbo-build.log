@@ -1,7 +1,108 @@
 
 > @trade/site@2.0.0 build
-> node ../../packages/scripts/images/convert-webp.mjs && node ../../packages/scripts/check-hardcoded-domain.mjs --ci && node ../../packages/scripts/build-search-index.mjs && node ../../packages/scripts/build-search-translations.mjs && node ../../packages/scripts/check-seo-patterns.mjs --ci && next build && node ../../packages/scripts/build-all.mjs --base-url=https://sinotradecompliance.com --out-dir=out && node ../../packages/scripts/check-seo-output.mjs --out-dir=out --ci && node ../../packages/scripts/clean-rsc.js && node ../../packages/scripts/check-hardcoded.mjs --ci && node ../../packages/scripts/check-hreflang.mjs --dir=out --ci && node ../../packages/scripts/check-console.mjs --ci && node ../../packages/scripts/check-rtl.mjs --ci && node ../../packages/scripts/check-map-key.mjs --ci && node ../../packages/scripts/check-jsonld.mjs --ci && node ../../packages/scripts/check-translations.mjs --ci --short
+> node ../../packages/scripts/images/convert-webp.mjs && node ../../packages/scripts/build-search-index.mjs && node ../../packages/scripts/build-search-translations.mjs && next build && node ../../packages/scripts/build-all.mjs --base-url=https://sinotradecompliance.com --out-dir=out && node ../../packages/scripts/ci-check.mjs --out-dir=out --ci
 
 Converting 18 images to WebP...
 
   ✓ david-zhang.jpg: 77K → 28K (63% saved)
+  ✓ leo-liu.jpg: 94K → 38K (59% saved)
+  ✓ mike-wang.jpg: 154K → 79K (49% saved)
+  ✓ partners/acre-africa.png: 83K → 47K (43% saved)
+  ✓ partners/agrosupply.png: 312K → 85K (73% saved)
+  ✓ partners/alpha-africa.png: 25K → 14K (45% saved)
+  ✓ partners/brazafric.png: 7K → 8K (-12% saved)
+  ✓ partners/brookside.png: 15K → 6K (58% saved)
+  ✓ partners/discovery-group.jpg: 3K → 2K (26% saved)
+  ✓ partners/eafoods.png: 5K → 2K (67% saved)
+  ✓ partners/eastern-produce.png: 23K → 32K (-41% saved)
+  ✓ partners/goldenpot.png: 38K → 14K (62% saved)
+  ✓ partners/mambo-coffee.png: 66K → 15K (77% saved)
+  ✓ partners/paniel.png: 6K → 5K (23% saved)
+  ✓ partners/tiger-tea.png: 53K → 18K (66% saved)
+  ✓ partners/truk.png: 69K → 35K (50% saved)
+  ✓ partners/ziweto.png: 11K → 5K (56% saved)
+  ✓ sarah-chen.jpg: 100K → 41K (59% saved)
+
+Component paths updated: 0
+
+==================================================
+Images: 18 converted
+Size: 1138K → 473K (58% saved)
+Apps discovered: blog, portal, site
+Generating search index for 48 locales...
+  af: 984 items (6S + 7B + 39F + 932C)
+  ar: 984 items (6S + 7B + 39F + 932C)
+  az: 984 items (6S + 7B + 39F + 932C)
+  be: 984 items (6S + 7B + 39F + 932C)
+  bg: 984 items (6S + 7B + 39F + 932C)
+  bn: 984 items (6S + 7B + 39F + 932C)
+  ca: 984 items (6S + 7B + 39F + 932C)
+  cs: 984 items (6S + 7B + 39F + 932C)
+  da: 984 items (6S + 7B + 39F + 932C)
+  de: 984 items (6S + 7B + 39F + 932C)
+  el: 984 items (6S + 7B + 39F + 932C)
+  en: 984 items (6S + 7B + 39F + 932C)
+  es: 984 items (6S + 7B + 39F + 932C)
+  fa: 984 items (6S + 7B + 39F + 932C)
+  fi: 984 items (6S + 7B + 39F + 932C)
+  fr: 984 items (6S + 7B + 39F + 932C)
+  he: 984 items (6S + 7B + 39F + 932C)
+  hi: 984 items (6S + 7B + 39F + 932C)
+  hr: 984 items (6S + 7B + 39F + 932C)
+  hu: 984 items (6S + 7B + 39F + 932C)
+  hy: 984 items (6S + 7B + 39F + 932C)
+  id: 984 items (6S + 7B + 39F + 932C)
+  it: 984 items (6S + 7B + 39F + 932C)
+  ja: 984 items (6S + 7B + 39F + 932C)
+  ka: 984 items (6S + 7B + 39F + 932C)
+  ko: 984 items (6S + 7B + 39F + 932C)
+  ms: 984 items (6S + 7B + 39F + 932C)
+  ne: 984 items (6S + 7B + 39F + 932C)
+  nl: 984 items (6S + 7B + 39F + 932C)
+  no: 984 items (6S + 7B + 39F + 932C)
+  pl: 984 items (6S + 7B + 39F + 932C)
+  pt: 984 items (6S + 7B + 39F + 932C)
+  ro: 984 items (6S + 7B + 39F + 932C)
+  ru: 984 items (6S + 7B + 39F + 932C)
+  si: 984 items (6S + 7B + 39F + 932C)
+  sk: 984 items (6S + 7B + 39F + 932C)
+  sl: 984 items (6S + 7B + 39F + 932C)
+  sq: 984 items (6S + 7B + 39F + 932C)
+  sr: 984 items (6S + 7B + 39F + 932C)
+  sv: 984 items (6S + 7B + 39F + 932C)
+  sw: 984 items (6S + 7B + 39F + 932C)
+  ta: 984 items (6S + 7B + 39F + 932C)
+  th: 984 items (6S + 7B + 39F + 932C)
+  tr: 984 items (6S + 7B + 39F + 932C)
+  uk: 984 items (6S + 7B + 39F + 932C)
+  ur: 984 items (6S + 7B + 39F + 932C)
+  vi: 984 items (6S + 7B + 39F + 932C)
+  zh: 984 items (6S + 7B + 39F + 932C)
+Done.
+Generated search-widget-translations.json: 48 locales → /root/projects/trade/web/apps/site/public/search-widget-translations.json
+▲ Next.js 16.2.4 (Turbopack)
+
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+  Creating an optimized production build ...
+✓ Compiled successfully in 2.3s
+  Running TypeScript ...
+Failed to type check.
+
+./src/app/(site)/[locale]/thank-you/page.tsx:129:37
+Type error: Property 'readTime' does not exist on type 'BlogPostMeta'.
+
+  [90m127 |[0m                         </span>
+  [90m128 |[0m                         <time dateTime={post.date}>{post.date}</time>
+[31m[1m>[0m [90m129 |[0m                         <span>{post.readTime} {t([32m'readTime'[0m)}</span>
+  [90m    |[0m                                     [31m[1m^[0m
+  [90m130 |[0m                       </div>
+  [90m131 |[0m                     </div>
+  [90m132 |[0m                     <span className=[32m"text-[#B8960C] group-hover:translate-x-1 transition-...[0m
+Next.js build worker exited with code: 1 and signal: null
+npm error Lifecycle script `build` failed with error:
+npm error code 1
+npm error path /root/projects/trade/web/apps/site
+npm error workspace @trade/site@2.0.0
+npm error location /root/projects/trade/web/apps/site
+npm error command failed
+npm error command sh -c node ../../packages/scripts/images/convert-webp.mjs && node ../../packages/scripts/build-search-index.mjs && node ../../packages/scripts/build-search-translations.mjs && next build && node ../../packages/scripts/build-all.mjs --base-url=https://sinotradecompliance.com --out-dir=out && node ../../packages/scripts/ci-check.mjs --out-dir=out --ci

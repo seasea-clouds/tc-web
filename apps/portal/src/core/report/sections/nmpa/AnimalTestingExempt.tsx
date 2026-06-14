@@ -1,31 +1,34 @@
+'use client';
 import SectionTitle from '../../components/SectionTitle'
+import { useT } from '@trade/ui';
 export default function AnimalTestingExempt({ result }: { result: any }) {
+    const t = useT('ReportSection');
   const a = result.animalTestingExempt
   if (!a) return null
 
   const steps = [
-    { label: 'Check product type', yes: 'Ordinary cosmetics', no: 'Special cosmetics', yesNext: '→ Check GMP cert', noNext: '→ Full animal testing required' },
-    { label: 'GMP certificate?', yes: 'Valid ISO 22716 / EU GMP', no: 'No or expired', yesNext: '→ Apply for exemption', noNext: '→ Full testing' },
-    { label: 'Exemption review', yes: 'Approved (30-60 days)', no: 'Rejected', yesNext: '→ NMPA filing proceeds', noNext: '→ Switch to full testing' },
+    { label: t('animalCheckProductType'), yes: t('animalOrdinary'), no: t('animalSpecial'), yesNext: '→ ' + t('animalCheckGMP'), noNext: '→ ' + t('animalFullTesting') },
+    { label: t('animalGMPCert'), yes: t('animalGMPValid'), no: t('animalGMPNo'), yesNext: '→ ' + t('animalApplyExemption'), noNext: '→ ' + t('animalTesting') },
+    { label: t('animalExemptionReview'), yes: t('animalApproved'), no: t('animalRejected'), yesNext: '→ ' + t('animalApprovedNext'), noNext: '→ ' + t('animalRejectedNext') },
   ]
 
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-6">
-      <SectionTitle icon="🐰" label="Animal Testing Exemption" tooltip="普通化妆品在具备欧盟/美国 GMP 证书且成分安全数据充分的情况下可申请动物实验豁免。" />
+      <SectionTitle icon="🐰" label={t("sectionAnimalTestingExemption")} tooltip={t("tooltipAnimalTestingExemption")} />
       <div className="grid grid-cols-2 gap-3 mb-4">
         <div className="bg-green-50 rounded-lg p-3 border border-green-200">
-          <p className="text-xs font-bold text-green-800">Eligible</p>
+          <p className="text-xs font-bold text-green-800">{t("animalEligible")}</p>
           <p className="text-[10px] text-green-700 mt-1">{a.eligible}</p>
         </div>
         <div className="bg-red-50 rounded-lg p-3 border border-red-200">
-          <p className="text-xs font-bold text-red-800">Not Eligible</p>
+          <p className="text-xs font-bold text-red-800">{t("animalNotEligible")}</p>
           <p className="text-[10px] text-red-700 mt-1">{a.ineligible}</p>
         </div>
       </div>
 
       {/* Process flow */}
       <div className="bg-gray-50 rounded-lg p-3 border border-gray-200">
-        <p className="text-xs font-semibold text-gray-700 mb-2">🔄 Decision Flow</p>
+        <p className="text-xs font-semibold text-gray-700 mb-2">🔄 {t("animalDecisionFlow")}</p>
         <div className="space-y-2">
           {steps.map((s, i) => (
             <div key={i}>
@@ -52,8 +55,8 @@ export default function AnimalTestingExempt({ result }: { result: any }) {
         </div>
       </div>
 
-      {a.alternative && <p className="text-xs text-gray-600 mt-2"><strong>Alternative methods:</strong> {a.alternative}</p>}
-      {a.timeline && <p className="text-xs text-gray-500 mt-1"><strong>Timeline:</strong> {a.timeline}</p>}
+      {a.alternative && <p className="text-xs text-gray-600 mt-2"><strong>{t("labelAlternativeMethods")}:</strong> {a.alternative}</p>}
+      {a.timeline && <p className="text-xs text-gray-500 mt-1"><strong>{t("labelTimeline")}:</strong> {a.timeline}</p>}
     </div>
   )
 }

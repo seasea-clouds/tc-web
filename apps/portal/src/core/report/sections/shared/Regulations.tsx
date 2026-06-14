@@ -1,10 +1,13 @@
+'use client';
 import SectionTitle from '../../components/SectionTitle'
 import ExpertBox from '../../components/ExpertBox'
+import { useT } from '@trade/ui';
 export default function Regulations({ result }: { result: any }) {
+    const t = useT('ReportSection');
   if (!result.regulations?.length) return null
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-6">
-      <SectionTitle icon="⚖️" label="Regulatory Framework" />
+      <SectionTitle icon="⚖️" label={t("sectionRegulatoryFramework")} />
       <div className="space-y-3">
         {result.regulations.map((reg: any, i: number) => (
           <div key={i} className="flex items-start gap-3 p-3 bg-gray-50 rounded-lg">

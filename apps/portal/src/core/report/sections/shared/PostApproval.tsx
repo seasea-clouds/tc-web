@@ -1,9 +1,12 @@
+'use client';
 import SectionTitle from '../../components/SectionTitle'
+import { useT } from '@trade/ui';
 export default function PostApproval({ result }: { result: any }) {
+    const t = useT('ReportSection');
   if (!result.postApprovalObligations?.length) return null
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-6">
-      <SectionTitle icon={'🔄'} label="Post-Approval Obligations" />
+      <SectionTitle icon={'🔄'} label={t("sectionPostApprovalObligations")} />
       <div className="space-y-3">
         {result.postApprovalObligations.map((o: any, i: number) => (
           <div key={i} className="flex items-start gap-3 p-3 bg-gray-50 rounded-lg">

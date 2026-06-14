@@ -1,23 +1,175 @@
 
 > @trade/blog@0.1.0 build
-> npm run lint && node ../../packages/scripts/build-search-index.mjs --out-dir=apps/blog/public && rm -rf .next/cache && node ../../packages/scripts/check-seo-patterns.mjs --ci && next build && node ../../packages/scripts/check-hardcoded-domain.mjs --ci && node ../../packages/scripts/check-hreflang.mjs --dir=out --ci && node ../../packages/scripts/check-hardcoded.mjs --ci && node ../../packages/scripts/check-console.mjs --ci && node ../../packages/scripts/check-llms.mjs --dir=public --ci && node ../../packages/scripts/check-rtl.mjs --ci && node ../../packages/scripts/check-translations.mjs --short && node ../../packages/scripts/clean-rsc.js
+> node ../../packages/scripts/build-search-index.mjs && rm -rf .next/cache && next build && node ../../packages/scripts/ci-check.mjs --out-dir=out --ci
+
+Apps discovered: blog, portal, site
+Generating search index for 48 locales...
+  af: 984 items (6S + 7B + 39F + 932C)
+  ar: 984 items (6S + 7B + 39F + 932C)
+  az: 984 items (6S + 7B + 39F + 932C)
+  be: 984 items (6S + 7B + 39F + 932C)
+  bg: 984 items (6S + 7B + 39F + 932C)
+  bn: 984 items (6S + 7B + 39F + 932C)
+  ca: 984 items (6S + 7B + 39F + 932C)
+  cs: 984 items (6S + 7B + 39F + 932C)
+  da: 984 items (6S + 7B + 39F + 932C)
+  de: 984 items (6S + 7B + 39F + 932C)
+  el: 984 items (6S + 7B + 39F + 932C)
+  en: 984 items (6S + 7B + 39F + 932C)
+  es: 984 items (6S + 7B + 39F + 932C)
+  fa: 984 items (6S + 7B + 39F + 932C)
+  fi: 984 items (6S + 7B + 39F + 932C)
+  fr: 984 items (6S + 7B + 39F + 932C)
+  he: 984 items (6S + 7B + 39F + 932C)
+  hi: 984 items (6S + 7B + 39F + 932C)
+  hr: 984 items (6S + 7B + 39F + 932C)
+  hu: 984 items (6S + 7B + 39F + 932C)
+  hy: 984 items (6S + 7B + 39F + 932C)
+  id: 984 items (6S + 7B + 39F + 932C)
+  it: 984 items (6S + 7B + 39F + 932C)
+  ja: 984 items (6S + 7B + 39F + 932C)
+  ka: 984 items (6S + 7B + 39F + 932C)
+  ko: 984 items (6S + 7B + 39F + 932C)
+  ms: 984 items (6S + 7B + 39F + 932C)
+  ne: 984 items (6S + 7B + 39F + 932C)
+  nl: 984 items (6S + 7B + 39F + 932C)
+  no: 984 items (6S + 7B + 39F + 932C)
+  pl: 984 items (6S + 7B + 39F + 932C)
+  pt: 984 items (6S + 7B + 39F + 932C)
+  ro: 984 items (6S + 7B + 39F + 932C)
+  ru: 984 items (6S + 7B + 39F + 932C)
+  si: 984 items (6S + 7B + 39F + 932C)
+  sk: 984 items (6S + 7B + 39F + 932C)
+  sl: 984 items (6S + 7B + 39F + 932C)
+  sq: 984 items (6S + 7B + 39F + 932C)
+  sr: 984 items (6S + 7B + 39F + 932C)
+  sv: 984 items (6S + 7B + 39F + 932C)
+  sw: 984 items (6S + 7B + 39F + 932C)
+  ta: 984 items (6S + 7B + 39F + 932C)
+  th: 984 items (6S + 7B + 39F + 932C)
+  tr: 984 items (6S + 7B + 39F + 932C)
+  uk: 984 items (6S + 7B + 39F + 932C)
+  ur: 984 items (6S + 7B + 39F + 932C)
+  vi: 984 items (6S + 7B + 39F + 932C)
+  zh: 984 items (6S + 7B + 39F + 932C)
+Done.
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+▲ Next.js 16.2.6 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 2.1s
+  Running TypeScript ...
+  Finished TypeScript in 2.4s ...
+  Collecting page data using 6 workers ...
+  Generating static pages using 6 workers (0/434) ...
+  Generating static pages using 6 workers (108/434) 
+  Generating static pages using 6 workers (216/434) 
+  Generating static pages using 6 workers (325/434) 
+✓ Generating static pages using 6 workers (434/434) in 2.3s
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /_not-found
+├ ● /[locale]
+│ ├ /en
+│ ├ /zh
+│ ├ /es
+│ └ [+45 more paths]
+├ ● /[locale]/blog
+│ ├ /en/blog
+│ ├ /zh/blog
+│ ├ /es/blog
+│ └ [+45 more paths]
+└ ● /[locale]/blog/[slug]
+  ├ /en/blog/ccc-certification-explained
+  ├ /en/blog/china-import-compliance-guide
+  ├ /en/blog/china-label-compliance
+  └ [+333 more paths]
 
 
-> @trade/blog@0.1.0 lint
-> next lint
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)
 
-Invalid project directory provided, no such directory: /root/projects/trade/web/apps/blog/lint
-npm error Lifecycle script `lint` failed with error:
-npm error code 1
-npm error path /root/projects/trade/web/apps/blog
-npm error workspace @trade/blog@0.1.0
-npm error location /root/projects/trade/web/apps/blog
-npm error command failed
-npm error command sh -c next lint
-npm error Lifecycle script `build` failed with error:
-npm error code 1
-npm error path /root/projects/trade/web/apps/blog
-npm error workspace @trade/blog@0.1.0
-npm error location /root/projects/trade/web/apps/blog
-npm error command failed
-npm error command sh -c npm run lint && node ../../packages/scripts/build-search-index.mjs --out-dir=apps/blog/public && rm -rf .next/cache && node ../../packages/scripts/check-seo-patterns.mjs --ci && next build && node ../../packages/scripts/check-hardcoded-domain.mjs --ci && node ../../packages/scripts/check-hreflang.mjs --dir=out --ci && node ../../packages/scripts/check-hardcoded.mjs --ci && node ../../packages/scripts/check-console.mjs --ci && node ../../packages/scripts/check-llms.mjs --dir=public --ci && node ../../packages/scripts/check-rtl.mjs --ci && node ../../packages/scripts/check-translations.mjs --short && node ../../packages/scripts/clean-rsc.js
+
+═══════════════════════════════════════════════
+  CI 统一检查 — BLOG
+  out-dir: out  next-dir: (none)
+═══════════════════════════════════════════════
+
+
+▶ check-seo-patterns.mjs --ci
+
+📁 site/
+
+📁 blog/
+
+📁 portal/
+
+==================================================
+📊 结果: 167 通过, 0 失败
+
+✅ check-seo-patterns.mjs 完成
+
+▶ check-hardcoded-domain.mjs --ci
+✅ 未发现硬编码的 *.pages.dev 域名引用
+
+▶ check-hardcoded.mjs apps/blog/src --ci
+🔍 Scanning for hardcoded English text in JSX/TSX...
+
+✅ No hardcoded English text found.
+
+▶ check-console.mjs --ci
+📁 扫描 196 个文件
+==================================================
+📊 结果: 206 通过, 0 失败
+
+✅ check-console.mjs 完成
+
+▶ check-rtl.mjs --ci
+
+📁 site/
+
+📁 blog/
+
+📁 portal/
+
+==================================================
+📊 结果: 9 通过, 0 失败
+
+✅ check-rtl.mjs 完成
+
+▶ check-map-key.mjs --ci
+📁 扫描 164 个 TSX 文件
+==================================================
+📊 结果: 164 通过, 0 失败
+
+✅ check-map-key.mjs 完成
+
+▶ check-jsonld.mjs --ci
+📁 扫描 24 个含 JSON-LD 的文件
+==================================================
+📊 结果: 81 通过, 0 失败
+
+✅ check-jsonld.mjs 完成
+
+▶ check-hreflang.mjs --dir=out --skip-pattern=404,_not-found --ci
+🔍 统一 hreflang 检查
+
+📦 模式: SSG 输出目录检查
+  📄 扫描 434 个 HTML 文件
+
+  跳过: 2 文件 (路径匹配 skip-pattern)
+
+  结果: 432 通过, 0 失败
+
+✅ hreflang 全部检查通过
+
+▶ check-seo-output.mjs --out-dir=out --ci
+
+🔍 SEO 输出检查: /root/projects/trade/web/apps/blog/out
+
+📄 扫描 HTML 页面...

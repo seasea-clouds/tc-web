@@ -1,5 +1,8 @@
+'use client';
 import SectionTitle from '../../components/SectionTitle'
+import { useT } from '@trade/ui';
 export default function NiceClassification({ result }: { result: any }) {
+    const t = useT('ReportSection');
   const nc = result.niceClasses
   if (!nc) return null
 
@@ -11,14 +14,14 @@ export default function NiceClassification({ result }: { result: any }) {
 
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-6">
-      <SectionTitle icon="📋" label="Nice Classification" tooltip="中国采用第 11 版尼斯分类。正确选择商品/服务类别是商标注册的核心。" />
-      <p className="text-xs text-gray-500 mb-3">Recommended Nice classes by product category:</p>
+      <SectionTitle icon="📋" label={t("sectionNiceClassification")} tooltip={t("tooltipNiceClassification")} />
+      <p className="text-xs text-gray-500 mb-3">{t("niceClassesDesc")}</p>
       <div className="overflow-x-auto -mx-6">
         <table className="w-full text-xs">
           <thead>
             <tr className="border-b border-gray-200 bg-gray-50">
-              <th className="text-left px-6 py-2 font-semibold text-gray-700">Product Category</th>
-              <th className="text-left px-4 py-2 font-semibold text-gray-700">Recommended Classes</th>
+              <th className="text-left px-6 py-2 font-semibold text-gray-700">{t("labelProductCategory")}</th>
+              <th className="text-left px-4 py-2 font-semibold text-gray-700">{t("labelRecommendedClasses")}</th>
             </tr>
           </thead>
           <tbody>

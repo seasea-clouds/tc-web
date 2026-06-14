@@ -1,5 +1,8 @@
+'use client';
 import SectionTitle from '../../components/SectionTitle'
+import { useT } from '@trade/ui';
 export default function CompetitiveBenchmark({ result }: { result: any }) {
+    const t = useT('ReportSection');
   const mi = result.marketIntel
   const ca = result.competitiveAnalysis
   const hasTopOrigins = mi?.topOrigins?.length > 0
@@ -8,7 +11,7 @@ export default function CompetitiveBenchmark({ result }: { result: any }) {
 
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-6">
-      <SectionTitle icon="🏆" label="Competitive Benchmark" tooltip="了解中国市场上同类产品的竞争格局，帮助您制定入市策略。" />
+      <SectionTitle icon="🏆" label={t("sectionCompetitiveBenchmark")} tooltip={t("tooltipCompetitiveBenchmark")} />
 
       {ca && (
         <div className="mb-4">
@@ -18,7 +21,7 @@ export default function CompetitiveBenchmark({ result }: { result: any }) {
 
       {hasTopOrigins && (
         <div className="mb-4">
-          <p className="text-xs font-semibold text-gray-500 uppercase mb-2">Top Competing Origins</p>
+          <p className="text-xs font-semibold text-gray-500 uppercase mb-2">{t("labelTopCompetingOrigins")}</p>
           <div className="space-y-2">
             {mi.topOrigins.map((o: any, i: number) => {
               const shareNum = parseFloat(o.share) || 0
@@ -38,7 +41,7 @@ export default function CompetitiveBenchmark({ result }: { result: any }) {
 
       {mi?.consumerPerception && (
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
-          <p className="text-[10px] font-semibold text-blue-800 uppercase">Consumer Perception</p>
+          <p className="text-[10px] font-semibold text-blue-800 uppercase">{t("labelConsumerPerception")}</p>
           <p className="text-xs text-blue-700 mt-1">{mi.consumerPerception}</p>
         </div>
       )}

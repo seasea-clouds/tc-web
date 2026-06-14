@@ -1,9 +1,12 @@
+'use client';
 import SectionTitle from '../../components/SectionTitle'
+import { useT } from '@trade/ui';
 export default function CustomsRecordal({ result }: { result: any }) {
+    const t = useT('ReportSection');
   if (!result.customsRecordalSteps?.length) return null
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-6">
-      <SectionTitle icon="🛃" label="Customs IP Recordal" />
+      <SectionTitle icon="🛃" label={t("sectionCustomsIPRecordal")} />
       <ol className="space-y-3">
         {result.customsRecordalSteps.map((s: string, i: number) => (
           <li key={i} className="flex items-start gap-3">

@@ -1,9 +1,12 @@
+'use client';
 import SectionTitle from '../../components/SectionTitle'
+import { useT } from '@trade/ui';
 export default function HorizonScan({ result }: { result: any }) {
+    const t = useT('ReportSection');
   if (!result.horizonScan?.length) return null
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-6">
-      <SectionTitle icon={'🔭'} label="Horizon Scan" />
+      <SectionTitle icon={'🔭'} label={t("sectionHorizonScan")} />
       <div className="space-y-3">
         {result.horizonScan.map((h: any, i: number) => (
           <div key={i} className={`rounded-lg border p-3 ${h.impact === 'high' ? 'border-red-200 bg-red-50' : h.impact === 'medium' ? 'border-amber-200 bg-amber-50' : 'border-gray-200 bg-gray-50'}`}>

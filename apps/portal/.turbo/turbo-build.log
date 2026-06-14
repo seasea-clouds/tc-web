@@ -1,47 +1,278 @@
 
 > @trade/portal@0.1.0 build
-> node ../../packages/scripts/build-search-index.mjs --out-dir=apps/portal/public && node ../../packages/scripts/check-seo-patterns.mjs --ci && next build && node ../../packages/scripts/check-hardcoded-domain.mjs --ci && node ../../packages/scripts/check-hreflang.mjs --dir=out --ci && node ../../packages/scripts/check-hardcoded.mjs --ci && node ../../packages/scripts/check-console.mjs --ci && node ../../packages/scripts/check-rtl.mjs --ci && node ../../packages/scripts/check-translations.mjs --short && node ../../packages/scripts/clean-rsc.js
+> node ../../packages/scripts/build-search-index.mjs && next build && node ../../packages/scripts/ci-check.mjs --out-dir=out --ci
 
 Apps discovered: blog, portal, site
 Generating search index for 48 locales...
-  af: 296 items (6S + 7B + 39F + 244C)
-  ar: 296 items (6S + 7B + 39F + 244C)
-  az: 296 items (6S + 7B + 39F + 244C)
-  be: 296 items (6S + 7B + 39F + 244C)
-  bg: 296 items (6S + 7B + 39F + 244C)
-  bn: 296 items (6S + 7B + 39F + 244C)
-  ca: 296 items (6S + 7B + 39F + 244C)
-  cs: 296 items (6S + 7B + 39F + 244C)
-  da: 296 items (6S + 7B + 39F + 244C)
-  de: 296 items (6S + 7B + 39F + 244C)
-  el: 297 items (6S + 7B + 39F + 245C)
-  en: 296 items (6S + 7B + 39F + 244C)
-  es: 297 items (6S + 7B + 39F + 245C)
-  fa: 297 items (6S + 7B + 39F + 245C)
-  fi: 297 items (6S + 7B + 39F + 245C)
-  fr: 297 items (6S + 7B + 39F + 245C)
-  he: 296 items (6S + 7B + 39F + 244C)
-  hi: 296 items (6S + 7B + 39F + 244C)
-  hr: 296 items (6S + 7B + 39F + 244C)
-  hu: 296 items (6S + 7B + 39F + 244C)
-  hy: 296 items (6S + 7B + 39F + 244C)
-  id: 296 items (6S + 7B + 39F + 244C)
-  it: 296 items (6S + 7B + 39F + 244C)
-  ja: 296 items (6S + 7B + 39F + 244C)
-  ka: 296 items (6S + 7B + 39F + 244C)
-  ko: 296 items (6S + 7B + 39F + 244C)
-  ms: 296 items (6S + 7B + 39F + 244C)
-  ne: 296 items (6S + 7B + 39F + 244C)
-  nl: 296 items (6S + 7B + 39F + 244C)
-  no: 296 items (6S + 7B + 39F + 244C)
-  pl: 296 items (6S + 7B + 39F + 244C)
-  pt: 296 items (6S + 7B + 39F + 244C)
-  ro: 296 items (6S + 7B + 39F + 244C)
-  ru: 296 items (6S + 7B + 39F + 244C)
-  si: 296 items (6S + 7B + 39F + 244C)
-  sk: 296 items (6S + 7B + 39F + 244C)
-  sl: 296 items (6S + 7B + 39F + 244C)
-  sq: 296 items (6S + 7B + 39F + 244C)
-  sr: 296 items (6S + 7B + 39F + 244C)
-  sv: 296 items (6S + 7B + 39F + 244C)
-  sw: 296 items (6S + 7B + 39F + 244C)
+  af: 984 items (6S + 7B + 39F + 932C)
+  ar: 984 items (6S + 7B + 39F + 932C)
+  az: 984 items (6S + 7B + 39F + 932C)
+  be: 984 items (6S + 7B + 39F + 932C)
+  bg: 984 items (6S + 7B + 39F + 932C)
+  bn: 984 items (6S + 7B + 39F + 932C)
+  ca: 984 items (6S + 7B + 39F + 932C)
+  cs: 984 items (6S + 7B + 39F + 932C)
+  da: 984 items (6S + 7B + 39F + 932C)
+  de: 984 items (6S + 7B + 39F + 932C)
+  el: 984 items (6S + 7B + 39F + 932C)
+  en: 984 items (6S + 7B + 39F + 932C)
+  es: 984 items (6S + 7B + 39F + 932C)
+  fa: 984 items (6S + 7B + 39F + 932C)
+  fi: 984 items (6S + 7B + 39F + 932C)
+  fr: 984 items (6S + 7B + 39F + 932C)
+  he: 984 items (6S + 7B + 39F + 932C)
+  hi: 984 items (6S + 7B + 39F + 932C)
+  hr: 984 items (6S + 7B + 39F + 932C)
+  hu: 984 items (6S + 7B + 39F + 932C)
+  hy: 984 items (6S + 7B + 39F + 932C)
+  id: 984 items (6S + 7B + 39F + 932C)
+  it: 984 items (6S + 7B + 39F + 932C)
+  ja: 984 items (6S + 7B + 39F + 932C)
+  ka: 984 items (6S + 7B + 39F + 932C)
+  ko: 984 items (6S + 7B + 39F + 932C)
+  ms: 984 items (6S + 7B + 39F + 932C)
+  ne: 984 items (6S + 7B + 39F + 932C)
+  nl: 984 items (6S + 7B + 39F + 932C)
+  no: 984 items (6S + 7B + 39F + 932C)
+  pl: 984 items (6S + 7B + 39F + 932C)
+  pt: 984 items (6S + 7B + 39F + 932C)
+  ro: 984 items (6S + 7B + 39F + 932C)
+  ru: 984 items (6S + 7B + 39F + 932C)
+  si: 984 items (6S + 7B + 39F + 932C)
+  sk: 984 items (6S + 7B + 39F + 932C)
+  sl: 984 items (6S + 7B + 39F + 932C)
+  sq: 984 items (6S + 7B + 39F + 932C)
+  sr: 984 items (6S + 7B + 39F + 932C)
+  sv: 984 items (6S + 7B + 39F + 932C)
+  sw: 984 items (6S + 7B + 39F + 932C)
+  ta: 984 items (6S + 7B + 39F + 932C)
+  th: 984 items (6S + 7B + 39F + 932C)
+  tr: 984 items (6S + 7B + 39F + 932C)
+  uk: 984 items (6S + 7B + 39F + 932C)
+  ur: 984 items (6S + 7B + 39F + 932C)
+  vi: 984 items (6S + 7B + 39F + 932C)
+  zh: 984 items (6S + 7B + 39F + 932C)
+Done.
+▲ Next.js 16.2.6 (Turbopack)
+- Environments: .env
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 1818ms
+  Running TypeScript ...
+  Finished TypeScript in 3.8s ...
+  Collecting page data using 19 workers ...
+  Generating static pages using 19 workers (0/915) ...
+  Generating static pages using 19 workers (228/915) 
+  Generating static pages using 19 workers (457/915) 
+  Generating static pages using 19 workers (686/915) 
+✓ Generating static pages using 19 workers (915/915) in 3.6s
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /_not-found
+├ ● /[locale]/c
+│ ├ /en/c
+│ ├ /zh/c
+│ ├ /es/c
+│ └ [+45 more paths]
+├ ● /[locale]/c/check/ccc
+│ ├ /en/c/check/ccc
+│ ├ /zh/c/check/ccc
+│ ├ /es/c/check/ccc
+│ └ [+45 more paths]
+├ ● /[locale]/c/check/crossborder
+│ ├ /en/c/check/crossborder
+│ ├ /zh/c/check/crossborder
+│ ├ /es/c/check/crossborder
+│ └ [+45 more paths]
+├ ● /[locale]/c/check/gacc
+│ ├ /en/c/check/gacc
+│ ├ /zh/c/check/gacc
+│ ├ /es/c/check/gacc
+│ └ [+45 more paths]
+├ ● /[locale]/c/check/label
+│ ├ /en/c/check/label
+│ ├ /zh/c/check/label
+│ ├ /es/c/check/label
+│ └ [+45 more paths]
+├ ● /[locale]/c/check/nmpa
+│ ├ /en/c/check/nmpa
+│ ├ /zh/c/check/nmpa
+│ ├ /es/c/check/nmpa
+│ └ [+45 more paths]
+├ ● /[locale]/c/check/trademark
+│ ├ /en/c/check/trademark
+│ ├ /zh/c/check/trademark
+│ ├ /es/c/check/trademark
+│ └ [+45 more paths]
+├ ● /[locale]/c/dashboard
+│ ├ /en/c/dashboard
+│ ├ /zh/c/dashboard
+│ ├ /es/c/dashboard
+│ └ [+45 more paths]
+├ ● /[locale]/c/dashboard/billing
+│ ├ /en/c/dashboard/billing
+│ ├ /zh/c/dashboard/billing
+│ ├ /es/c/dashboard/billing
+│ └ [+45 more paths]
+├ ● /[locale]/c/dashboard/reports
+│ ├ /en/c/dashboard/reports
+│ ├ /zh/c/dashboard/reports
+│ ├ /es/c/dashboard/reports
+│ └ [+45 more paths]
+├ ● /[locale]/c/login
+│ ├ /en/c/login
+│ ├ /zh/c/login
+│ ├ /es/c/login
+│ └ [+45 more paths]
+├ ● /[locale]/c/me
+│ ├ /en/c/me
+│ ├ /zh/c/me
+│ ├ /es/c/me
+│ └ [+45 more paths]
+├ ● /[locale]/c/me/reports
+│ ├ /en/c/me/reports
+│ ├ /zh/c/me/reports
+│ ├ /es/c/me/reports
+│ └ [+45 more paths]
+├ ● /[locale]/c/me/settings
+│ ├ /en/c/me/settings
+│ ├ /zh/c/me/settings
+│ ├ /es/c/me/settings
+│ └ [+45 more paths]
+├ ● /[locale]/c/me/subscription
+│ ├ /en/c/me/subscription
+│ ├ /zh/c/me/subscription
+│ ├ /es/c/me/subscription
+│ └ [+45 more paths]
+├ ● /[locale]/c/pricing
+│ ├ /en/c/pricing
+│ ├ /zh/c/pricing
+│ ├ /es/c/pricing
+│ └ [+45 more paths]
+├ ● /[locale]/c/register
+│ ├ /en/c/register
+│ ├ /zh/c/register
+│ ├ /es/c/register
+│ └ [+45 more paths]
+├ ● /[locale]/c/report
+│ ├ /en/c/report
+│ ├ /zh/c/report
+│ ├ /es/c/report
+│ └ [+45 more paths]
+└ ● /[locale]/c/report/preview
+  ├ /en/c/report/preview
+  ├ /zh/c/report/preview
+  ├ /es/c/report/preview
+  └ [+45 more paths]
+
+
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)
+
+
+═══════════════════════════════════════════════
+  CI 统一检查 — PORTAL
+  out-dir: out  next-dir: (none)
+═══════════════════════════════════════════════
+
+
+▶ check-seo-patterns.mjs --ci
+
+📁 site/
+
+📁 blog/
+
+📁 portal/
+
+==================================================
+📊 结果: 167 通过, 0 失败
+
+✅ check-seo-patterns.mjs 完成
+
+▶ check-hardcoded-domain.mjs --ci
+✅ 未发现硬编码的 *.pages.dev 域名引用
+
+▶ check-hardcoded.mjs apps/portal/src --ci
+🔍 Scanning for hardcoded English text in JSX/TSX...
+
+✅ No hardcoded English text found.
+
+▶ check-console.mjs --ci
+📁 扫描 196 个文件
+==================================================
+📊 结果: 206 通过, 0 失败
+
+✅ check-console.mjs 完成
+
+▶ check-rtl.mjs --ci
+
+📁 site/
+
+📁 blog/
+
+📁 portal/
+
+==================================================
+📊 结果: 9 通过, 0 失败
+
+✅ check-rtl.mjs 完成
+
+▶ check-map-key.mjs --ci
+📁 扫描 164 个 TSX 文件
+==================================================
+📊 结果: 164 通过, 0 失败
+
+✅ check-map-key.mjs 完成
+
+▶ check-jsonld.mjs --ci
+📁 扫描 24 个含 JSON-LD 的文件
+==================================================
+📊 结果: 81 通过, 0 失败
+
+✅ check-jsonld.mjs 完成
+
+▶ check-hreflang.mjs --dir=out --skip-pattern=404,_not-found --ci
+🔍 统一 hreflang 检查
+
+📦 模式: SSG 输出目录检查
+  📄 扫描 914 个 HTML 文件
+
+  跳过: 2 文件 (路径匹配 skip-pattern)
+
+  结果: 912 通过, 0 失败
+
+✅ hreflang 全部检查通过
+
+▶ check-seo-output.mjs --out-dir=out --ci
+
+🔍 SEO 输出检查: /root/projects/trade/web/apps/portal/out
+
+📄 扫描 HTML 页面...
+
+🗺️  检查 Sitemap...
+
+==================================================
+📊 结果: 240 通过, 0 失败
+
+✅ check-seo-output.mjs 完成
+
+▶ check-translations.mjs --short --skip-locale-check
+
+⚠️ 发现 7736 个问题
+   - 网站翻译质量: 3538 个问题
+   - 行业 meta 完整性: 528 个问题
+   - Portal 翻译质量: 3670 个问题
+
+▶ clean-rsc.js out
+🧹 Cleaning RSC .txt payload files from out/...
+✅ Deleted 8743 RSC payload files (340.3 MB freed)
+(node:3414139) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/projects/trade/web/packages/scripts/clean-rsc.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /root/projects/trade/web/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+═══════════════════════════════════════════════
+✅ 全部检查通过
+═══════════════════════════════════════════════
+

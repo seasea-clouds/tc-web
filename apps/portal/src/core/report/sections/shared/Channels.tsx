@@ -1,9 +1,12 @@
+'use client';
 import SectionTitle from '../../components/SectionTitle'
+import { useT } from '@trade/ui';
 export default function Channels({ result }: { result: any }) {
+    const t = useT('ReportSection');
   if (!result.channels?.length) return null
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-6">
-      <SectionTitle icon={'🛒'} label="Channel Strategy" />
+      <SectionTitle icon={'🛒'} label={t("sectionChannelStrategy")} />
       <div className="space-y-4">
         {result.channels.map((ch: any, i: number) => (
           <div key={i} className={`rounded-lg p-4 border ${
@@ -19,13 +22,13 @@ export default function Channels({ result }: { result: any }) {
             </div>
             <p className="text-sm text-gray-600 mb-2">{ch.description}</p>
             <div className="grid grid-cols-2 gap-2 text-xs">
-              <div><p className="text-green-600 font-medium">Advantages</p><ul className="list-disc list-inside text-gray-500">{ch.advantages?.map((a: string, j: number) => <li key={j}>{a}</li>)}</ul></div>
-              <div><p className="text-red-500 font-medium">Disadvantages</p><ul className="list-disc list-inside text-gray-500">{ch.disadvantages?.map((d: string, j: number) => <li key={j}>{d}</li>)}</ul></div>
+              <div><p className="text-green-600 font-medium">{t("labelAdvantages")}</p><ul className="list-disc list-inside text-gray-500">{ch.advantages?.map((a: string, j: number) => <li key={j}>{a}</li>)}</ul></div>
+              <div><p className="text-red-500 font-medium">{t("labelDisadvantages")}</p><ul className="list-disc list-inside text-gray-500">{ch.disadvantages?.map((d: string, j: number) => <li key={j}>{d}</li>)}</ul></div>
             </div>
             <div className="mt-2 flex gap-4 text-xs text-gray-500">
               <span>{'⏱️'} {ch.timeline}</span>
               <span>{'💰'} {ch.costRange}</span>
-              {ch.gaccRequired && <span className="text-amber-600 font-medium">{'📋'} GACC required</span>}
+              {ch.gaccRequired && <span className="text-amber-600 font-medium">{'📋'} {t('channelGACCRequired')}</span>}
             </div>
           </div>
         ))}

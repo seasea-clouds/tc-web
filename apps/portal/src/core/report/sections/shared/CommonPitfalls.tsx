@@ -1,9 +1,12 @@
+'use client';
 import SectionTitle from '../../components/SectionTitle'
+import { useT } from '@trade/ui';
 export default function CommonPitfalls({ result }: { result: any }) {
+    const t = useT('ReportSection');
   if (!result.commonRejections?.length) return null
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-6">
-      <SectionTitle icon="⚠️" label="Common Pitfalls & Rejection Analysis" />
+      <SectionTitle icon="⚠️" label={t("sectionCommonPitfalls")} />
       <div className="space-y-3">
         {result.commonRejections.map((r: any, i: number) => (
           <div key={i} className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg border border-gray-100 hover:border-amber-200 hover:shadow-sm transition-all">
@@ -14,14 +17,14 @@ export default function CommonPitfalls({ result }: { result: any }) {
                 <div className="flex items-start gap-1.5">
                   <span className="text-xs text-amber-600 mt-0.5 flex-shrink-0">🔍</span>
                   <div>
-                    <p className="text-[10px] font-semibold text-gray-500 uppercase">Cause</p>
+                    <p className="text-[10px] font-semibold text-gray-500 uppercase">{t("labelCause")}</p>
                     <p className="text-xs text-amber-800">{r.cause}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-1.5">
                   <span className="text-xs text-green-600 mt-0.5 flex-shrink-0">✅</span>
                   <div>
-                    <p className="text-[10px] font-semibold text-gray-500 uppercase">Solution</p>
+                    <p className="text-[10px] font-semibold text-gray-500 uppercase">{t("labelSolution")}</p>
                     <p className="text-xs text-green-800">{r.solution}</p>
                   </div>
                 </div>

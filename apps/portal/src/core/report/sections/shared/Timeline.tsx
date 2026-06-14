@@ -1,5 +1,8 @@
+'use client';
 import SectionTitle from '../../components/SectionTitle'
+import { useT } from '@trade/ui';
 export default function Timeline({ result }: { result: any }) {
+    const t = useT('ReportSection');
   if (!result.timelinePhases?.length) return null
 
   const colors = ['border-blue-500', 'border-gold', 'border-green-500', 'border-purple-500', 'border-blue-500', 'border-gold', 'border-green-500']
@@ -9,7 +12,7 @@ export default function Timeline({ result }: { result: any }) {
 
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-6">
-      <SectionTitle icon="🗓️" label="Implementation Roadmap" tooltip="分阶段路线图，展示从评估到持续合规的完整流程和时间预估。" />
+      <SectionTitle icon="🗓️" label={t("sectionImplementationRoadmap")} tooltip={t("tooltipImplementationRoadmap")} />
 
       {/* ── 垂直时间轴 ── */}
       <div className="relative pl-8 pb-4">
@@ -48,7 +51,7 @@ export default function Timeline({ result }: { result: any }) {
                       p.responsible === 'SinoTrade' ? 'bg-blue-100 text-blue-700' :
                       p.responsible === 'Both' ? 'bg-purple-100 text-purple-700' : 'bg-amber-100 text-amber-700'
                     }`}>
-                      {p.responsible === 'SinoTrade' ? '🤝 We handle' : p.responsible === 'Both' ? '🔄 Joint' : '📋 Client'}
+                      {p.responsible === 'SinoTrade' ? "🤝 " + t("timelineWeHandle") : p.responsible === 'Both' ? "🔄 " + t("timelineJoint") : "📋 " + t("timelineClient")}
                     </span>
                   )}
                   {(p.dependencies || []).map((dep: string, j: number) => (
@@ -64,7 +67,7 @@ export default function Timeline({ result }: { result: any }) {
       {/* ── 总计 ── */}
       {result.estimatedTimeline && (
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-          <p className="text-lg font-bold text-blue-800">Estimated Total: {result.estimatedTimeline}</p>
+          <p className="text-lg font-bold text-blue-800">{t("estimatedTotal")}: {result.estimatedTimeline}</p>
           {result.detailedTimeline && <p className="text-sm text-gray-700 mt-1">{result.detailedTimeline}</p>}
         </div>
       )}
@@ -76,9 +79,9 @@ export default function Timeline({ result }: { result: any }) {
             <table className="w-full text-xs border-collapse" style={{ minWidth: '500px' }}>
               <thead>
                 <tr>
-                  <th className="text-left p-1.5 text-[9px] font-bold text-gray-500 uppercase w-[30%]">Phase</th>
-                  <th className="text-center p-1.5 text-[9px] font-bold text-gray-500 uppercase">Timeline</th>
-                  <th className="text-center p-1.5 text-[9px] font-bold text-gray-500 uppercase w-[12%]">Duration</th>
+                  <th className="text-left p-1.5 text-[9px] font-bold text-gray-500 uppercase w-[30%]">{t("tableHeaderPhase")}</th>
+                  <th className="text-center p-1.5 text-[9px] font-bold text-gray-500 uppercase">{t("tableHeaderTimeline")}</th>
+                  <th className="text-center p-1.5 text-[9px] font-bold text-gray-500 uppercase w-[12%]">{t("tableHeaderDuration")}</th>
                 </tr>
               </thead>
               <tbody>

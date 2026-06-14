@@ -1,9 +1,12 @@
+'use client';
 import SectionTitle from '../../components/SectionTitle'
+import { useT } from '@trade/ui';
 export default function Glossary({ glossary }: { glossary: { term: string; def: string }[] }) {
+    const t = useT('ReportSection');
   if (!glossary?.length) return null
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-6">
-      <SectionTitle icon={'📖'} label="Glossary" />
+      <SectionTitle icon={'📖'} label={t("sectionGlossary")} />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         {glossary.map((g: any, i: number) => (
           <div key={i} className="bg-gray-50 rounded-lg p-3">

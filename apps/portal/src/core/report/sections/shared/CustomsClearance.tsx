@@ -1,14 +1,17 @@
+'use client';
 import SectionTitle from '../../components/SectionTitle'
+import { useT } from '@trade/ui';
 export default function CustomsClearance({ result }: { result: any }) {
+    const t = useT('ReportSection');
   const steps = [
-    { phase: 'Pre-arrival', actions: 'Submit advance manifest 24h before arrival. Ensure all documents match the cargo.', responsible: 'Forwarder' },
-    { phase: 'Port Arrival', actions: 'CIQ inspects documentation, verifies labels, takes random samples.', responsible: 'CIQ' },
-    { phase: 'Lab Testing', actions: 'Samples sent to CNAS lab. Results in 2-5 weeks.', responsible: 'Lab' },
-    { phase: 'Clearance', actions: 'Duties paid. Customs release. Goods delivered to warehouse.', responsible: 'Broker' },
+    { phase: t('customsPreArrival'), actions: t('customsPreArrivalAction'), responsible: t('customsPreArrivalResp') },
+    { phase: t('customsPortArrival'), actions: t('customsPortArrivalAction'), responsible: t('customsPortArrivalResp') },
+    { phase: t('customsLabTesting'), actions: t('customsLabTestingAction'), responsible: t('customsLabTestingResp') },
+    { phase: t('customsClearance'), actions: t('customsClearanceAction'), responsible: t('customsClearanceResp') },
   ]
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-6">
-      <SectionTitle icon="🚢" label="Customs Clearance & Port Entry" />
+      <SectionTitle icon="🚢" label={t("sectionCustomsClearancePortEntry")} />
       <div className="space-y-3">
         {steps.map((s, i) => (
           <div key={i} className="flex items-start gap-3">
@@ -23,7 +26,7 @@ export default function CustomsClearance({ result }: { result: any }) {
           </div>
         ))}
       </div>
-      <p className="text-[10px] text-gray-400 mt-3 italic">* Timelines vary by port. Shanghai/Ningbo are fastest (2-5 days). Inland ports may take 1-2 weeks.</p>
+      <p className="text-[10px] text-gray-400 mt-3 italic">{t("customsTimelineNote")}</p>
     </div>
   )
 }

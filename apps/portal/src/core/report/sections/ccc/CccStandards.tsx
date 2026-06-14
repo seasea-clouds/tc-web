@@ -1,11 +1,14 @@
+'use client';
 import SectionTitle from '../../components/SectionTitle'
+import { useT } from '@trade/ui';
 export default function CccStandards({ result }: { result: any }) {
+    const t = useT('ReportSection');
   const s = result.cccStandards
   if (!s) return null
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-6">
-      <SectionTitle icon="📋" label="CCC Testing Standards" />
-      <p className="text-xs text-gray-500 mb-3">Each product category requires specific GB standards for CCC testing.</p>
+      <SectionTitle icon="📋" label={t("sectionCccTestingStandards")} />
+      <p className="text-xs text-gray-500 mb-3">{t("cccTestingStandardsDesc")}</p>
       <div className="space-y-2">
         {Object.entries(s).filter(([k]) => k !== 'default').map(([key, val]: any) => (
           <div key={key} className="flex gap-2 p-2 bg-gray-50 rounded">

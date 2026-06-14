@@ -1,12 +1,15 @@
+'use client';
 import SectionTitle from '../../components/SectionTitle'
 import RiskBadge from '../../components/RiskBadge'
+import { useT } from '@trade/ui';
 export default function DecisionSummary({ result }: { result: any }) {
+    const t = useT('ReportSection');
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-6">
-      <SectionTitle icon="📋" label="Assessment Result" tooltip="综合评估您的产品在中国进口合规方面的风险等级和可行性。" />
+      <SectionTitle icon="📋" label={t("sectionAssessmentResult")} tooltip={t("tooltipAssessmentResult")} />
       <div className="flex flex-wrap gap-4 mb-4">
         <RiskBadge level={result.isHighRisk ? 'high' : 'low'} />
-        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium bg-blue-50 text-blue-700 border border-blue-200">🎯 Risk Score: {result.riskScore}/10</span>
+        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium bg-blue-50 text-blue-700 border border-blue-200">🎯 {t('labelRiskScore')}: {result.riskScore}/10</span>
       </div>
       <div className="bg-gray-50 rounded-lg p-4 mb-4 border border-gray-100">
         <p className="text-lg font-semibold text-primary-navy">{result.oneLineDecision}</p>
@@ -18,7 +21,7 @@ export default function DecisionSummary({ result }: { result: any }) {
           <span className={result.isHighRisk ? 'text-red-700' : 'text-green-700'}>{result.riskPathway}</span>
         </div>
       )}
-      {result.viability && <div className="mt-4 flex items-center gap-2 text-sm text-gray-600"><span>📊 Viability:</span><span className="font-semibold text-primary-navy">{result.viability}</span></div>}
+      {result.viability && <div className="mt-4 flex items-center gap-2 text-sm text-gray-600"><span>📊 {t('labelViability')}:</span><span className="font-semibold text-primary-navy">{result.viability}</span></div>}
     </div>
   )
 }

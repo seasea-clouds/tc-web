@@ -9,13 +9,13 @@ interface ReportViewerProps {
   onBack?: () => void;
 }
 
-const moduleLabels: Record<string, string> = {
-  gacc: 'GACC Food Registration',
-  label: 'Chinese Label Compliance',
-  ccc: 'CCC Certification',
-  nmpa: 'Cosmetics Filing (NMPA)',
-  crossborder: 'Cross-Border E-commerce',
-  trademark: 'Brand Protection',
+const MODULE_KEYS: Record<string, string> = {
+  gacc: 'reportModuleGacc',
+  label: 'reportModuleLabel',
+  ccc: 'reportModuleCcc',
+  nmpa: 'reportModuleNmpa',
+  crossborder: 'reportModuleCrossborder',
+  trademark: 'reportModuleTrademark',
 };
 
 export default function ReportViewer({ report, onBack }: ReportViewerProps) {
@@ -51,13 +51,13 @@ export default function ReportViewer({ report, onBack }: ReportViewerProps) {
             onClick={onBack}
             className="text-sm text-gray-500 hover:text-primary-navy transition-colors"
           >
-            &larr; Back
+            &larr; {t('back')}
           </button>
         )}
 
         <ReportTemplate
           reportId={report.id}
-          module={moduleLabels[report.module] || report.module}
+          module={t(MODULE_KEYS[report.module] ?? report.module)}
           locale={locale}
           labels={labels}
           productInfo={report.productInfo}

@@ -32,48 +32,55 @@
 - [x] 报告页面 `/c/report?id=xxx`（D1 API + localStorage 后备路径）
 - [x] Dashboard/用户中心完整（/me/*）
 
----
-
-## ✅ 已完成（续）
-
 ### P1 — 部署上线
 - [x] 正式域名 `sinotradecompliance.com` 切换（2026-06-09）
 - [x] 归档旧仓库 `sinotradecompliance` 和 `compli-service`
 - [x] Worker 代理全面验证
 
-## 🟡 当前任务（P0）
+### P1 — 翻译修复 & CI 优化 (2026-06-14)
+- [x] T5a. 博客面包屑：AutoBreadcrumb.tsx 用 document.title 获取翻译后文章标题
+- [x] T5b. 博客复制按钮：CopyButton.tsx 改进 clipboard API + textarea fallback
+- [x] T5c. 价格符号统一：zh.json 所有 美元→$，48语言文件新增 gaccCat_*_label 和 noReportId
+- [x] T5d. GACC 结果页翻译：rules.ts 中 CATEGORY_LABELS→catLabel(t)，6个check-client传入locale
+- [x] T5e. 按钮文字：完整报告 — $1.99 → 完整报告 $1.99（去破折号）
+- [x] T5f. 报告页翻译：ReportViewer.tsx moduleLabels→MODULE_KEYS(t)，report/page.tsx 硬编码→t()
+- [x] T5g. 报告页切换语言报错："No report ID provided"→t('noReportId')，LanguageSwitcher保留searchParams
+- [x] T5h. Portal面包屑：layout.tsx加入AutoBreadcrumb共享组件
+- [x] TypeScript编译：Portal ✅ Blog ✅ Site(readTime pre-existing)
+- [x] 额外：me/reports/settings/subscription 硬编码→t()，LanguageSwitcher修复正则和query params保留
 
-### T1 — 修复 Free Check 跳中文
-- [x] T1a. site layout 加 `freeCheckHref="/c/"` 
-- [x] T1b. 清理 portal 旧的 `/` → `/compli-service/` redirect
-- [x] T1c. 清理 `out/_redirects` 和 `public/_redirects` 旧 compli-service 规则
+---
 
-### T2 — 增强检查流水线
-- [x] T2a. `check-hardcoded.mjs`: 扩大检测范围（placeholder、短文本≥5、Uppercase Word 包容正则、括号内英文）
-- [x] T2b. `check-translations.mjs`: 各语言 JSON 中值为英文原文且不在 IGNORE_FALLBACK_VALUES 的 key 报 warning
+## 🟡 当前任务（进行中）
 
-### T3 — 修复 6 个 check-client.tsx 硬编码英文
-- [x] T3a. 补齐 `zh.json` / `en.json` Check 命名空间的缺失 key
-- [x] T3b. GACC check-client.tsx 全量替换硬编码 → `t()`
-- [x] T3c. NMPA check-client.tsx 全量替换硬编码 → `t()`
-- [x] T3d. CCC check-client.tsx 全量替换硬编码 → `t()`
-- [x] T3e. Label check-client.tsx 全量替换硬编码 → `t()`
-- [x] T3f. Crossborder check-client.tsx 全量替换硬编码 → `t()`
-- [x] T3g. Trademark check-client.tsx 全量替换硬编码 → `t()`
+### T6 — 部署上线 (2026-06-14)
+- [ ] 提交代码 + 部署 CF Pages
 
-### T4 — 修复提交表单不跳转
-- [x] T4a. `handlePayment` 跳转改为 `useSubsiteHref()` 统一路径生成
-- [x] T4b. 简化 API 依赖链：用 localStorage 后备
+### T7 — CI 脚本优化 (2026-06-14)
+- [ ] check-hardcoded.mjs 优化：检测 check-client 中 CATEGORY_LABELS 直读
+- [ ] check-hardcoded.mjs 优化：检测 report/page.tsx 硬编码错误信息
+- [ ] check-hardcoded.mjs 优化：检测 ReportViewer 硬编码模块标签
+- [ ] check-translations.mjs 优化：检测 CATEGORY_LABELS 分类标签缺少翻译
+- [ ] check-translations.mjs 优化：检测 report 页面模块标签缺少翻译
+
+### T8 — 提交翻译任务 (2026-06-14)
+- [ ] 读取翻译工具项目，了解提交流程
+- [ ] 提交 gaccCat_*_label 48语言翻译（zh已填，47语言需填）
+- [ ] 提交 noReportId 48语言翻译（已填）
+- [ ] 提交 MODULE_KEYS 相关翻译 key
+
+### T9 — 浏览器验证 (2026-06-14)
+- [ ] 逐个验证8个问题的修复效果
+- [ ] 多语言验证（zh/en/ja/ko/ru/es/fr/de）
+
+### T10 — 举一反三排查 (2026-06-14)
+- [ ] 全量扫描所有页面硬编码英文
+- [ ] 全量扫描所有语言翻译缺失
+- [ ] 全量扫描所有模块 locale 参数传递
 
 ---
 
 ## ⬜ 远期
-
-### P1 — 部署上线
-- [x] CF Pages 环境变量验证（D1 + JWT + Creem + Resend）
-- [x] 正式域名 `sinotradecompliance.com` 切换 ✅
-- [x] 归档旧仓库 `sinotradecompliance` 和 `compli-service`
-- [x] Worker 代理全面验证
 
 ### P2 — 支付 & 功能
 - [ ] Creem 支付真实对接 + Webhook

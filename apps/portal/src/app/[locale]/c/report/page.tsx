@@ -70,7 +70,7 @@ function ReportContent() {
 
   useEffect(() => {
     if (!id) {
-      setError('No report ID provided');
+      setError(t('noReportId')),
       setLoading(false);
       return;
     }
@@ -150,9 +150,9 @@ function ReportContent() {
               <span className="text-2xl">⚠️</span>
             </div>
             <h1 className="text-xl font-bold text-primary-navy mb-2">{t('notFoundTitle')}</h1>
-            <p className="text-gray-500 text-sm mb-6">{error || 'Report not found.'}</p>
+            <p className="text-gray-500 text-sm mb-6">{error || t('notFoundDesc')}</p>
             <a href={subsiteHref('/')} className="inline-block bg-gold hover:bg-gold/90 text-primary-navy font-semibold px-6 py-2.5 rounded-md transition-all">
-              &larr; Back to Home
+              &larr; {t('backToHome')}
             </a>
           </div>
         </div>

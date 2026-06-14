@@ -47,6 +47,7 @@ export default function LanguageSwitcher({
   const ctxLocale = useTradeLocale();
   const locale = propLocale || ctxLocale || 'en';
   const pathname = usePathname();
+  const searchParams = typeof window !== 'undefined' ? new URLSearchParams(window.location.search).toString() : '';
 
   const currentDisplayName = localeToName(locale, localeNames);
 
@@ -56,7 +57,11 @@ export default function LanguageSwitcher({
       acc[l] = pathname.replace(`/${locale}`, `/${l}`);
     } else if (pathname) {
       // Fallback: try current path with just the locale segment replaced
-      acc[l] = pathname.replace(/^\/[a-z]{2}(?:-[A-Z]{2})?(?=\/|$)/, `/${l}`);
+      acc[l] = pathname.replace(/^\/\w+(?:-\w+)?(?=\/|$)/, `/${l}`);
+    }
+    // Preserve query params for all paths
+    if (searchParams) {
+      acc[l] = `${acc[l]}?${searchParams}`;
     }
     return acc;
   }, {});

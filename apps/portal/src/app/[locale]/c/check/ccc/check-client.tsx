@@ -1,6 +1,6 @@
 "use client";
 
-import { useT, WHATSAPP_URL } from '@trade/ui';
+import { useT, useTradeLocale, WHATSAPP_URL } from '@trade/ui';
 
 import { useState } from "react";
 import { checkCcc, CATEGORY_LABELS } from "../../../../../../modules/ccc/rules";
@@ -12,6 +12,7 @@ type Step = "form" | "free-result";
 
 export default function CccCheckClient() {
   const t = useT('Check');
+  const locale = useTradeLocale();
   const [step, setStep] = useState<Step>("form");
   const [input, setInput] = useState<Record<string, string>>({});
   const [email, setEmail] = useState("");
@@ -23,7 +24,7 @@ export default function CccCheckClient() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate(input, ['category', 'productName'])) return;
-    const result = checkCcc(input as any);
+    const result = checkCcc(input as any, locale);
     setFreeData(result);
     setStep("free-result");
   };

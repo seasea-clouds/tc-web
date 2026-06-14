@@ -1128,6 +1128,9 @@ export interface GaccResult extends StandardResult {
 export function checkGacc(input: GaccInput, locale?: string): GaccResult {
   const t = buildT(locale || 'en');
 
+  // Translated category label
+  const catLabel = t(`gaccCat_${input.category}_label`) || CATEGORY_LABELS[input.category];
+
   // Category-level translations
   const cat = CATEGORY_PROFILES[input.category] || CATEGORY_PROFILES['other'];
   const tLabTests = cat.labTests.map((_, i) => t(`gaccCat_${input.category}_labTest_${i}`));
@@ -1183,7 +1186,7 @@ export function checkGacc(input: GaccInput, locale?: string): GaccResult {
     isHighRisk,
     riskReason: tRiskReason,
     alternativeClassificationNote: input.hsCode && !input.hsCode.startsWith(cat.hsRange.split(",")[0].split("-")[0])
-      ? `⚠️ Your HS code ${input.hsCode} may not align with the standard range for ${CATEGORY_LABELS[input.category]}. Verify classification to avoid customs delays.`
+      ? `⚠️ Your HS code ${input.hsCode} may not align with the standard range for ${catLabel}. Verify classification to avoid customs delays.`
       : t("gaccClassify_hsMatch"),
   };
 
@@ -1253,7 +1256,7 @@ export function checkGacc(input: GaccInput, locale?: string): GaccResult {
     riskDimensions,
     verdictLabel: t(isHighRisk ? 'gaccVerdictHigh' : 'gaccVerdictStandard'),
     riskPathway: t(isHighRisk ? 'gaccRiskPathwayHigh' : 'gaccRiskPathwayStandard'),
-    executiveSummary: t('gaccExecutiveSummary').replace('{productName}', input.productName || '').replace('{category}', CATEGORY_LABELS[input.category] || ''),
+    executiveSummary: t('gaccExecutiveSummary').replace('{productName}', input.productName || '').replace('{category}', catLabel),
     oneLineDecision: isHighRisk ? t("gaccOneLineHigh") : t("gaccOneLineStandard"),
 
     // 2
@@ -1297,15 +1300,14 @@ export function checkGacc(input: GaccInput, locale?: string): GaccResult {
     // 13
     estimatedTimeline: isHighRisk ? cat.gaccTimelineHigh : cat.gaccTimelineLow,
     detailedTimeline: isHighRisk
-      ? t("gaccDetailedTimelineHigh").replace("{category}", CATEGORY_LABELS[input.category] || "").replace("{timeline}", cat.gaccTimelineHigh || "")
-      : t("gaccDetailedTimelineStandard").replace("{category}", CATEGORY_LABELS[input.category] || "").replace("{timeline}", cat.gaccTimelineLow || ""),
+      ? t("gaccDetailedTimelineHigh").replace("{category}", catLabel).replace("{timeline}", cat.gaccTimelineHigh || "")
+      : t("gaccDetailedTimelineStandard").replace("{category}", catLabel).replace("{timeline}", cat.gaccTimelineLow || ""),
 
     // 14
     countryProfile: country,
 
     // 15
     competitiveAnalysis: (() => {
-      const catLabel = CATEGORY_LABELS[input.category]?.split(" (")[0] || "";
       const origins = cat.competitorOrigin.join(", ");
       const base = cat.marketTrend === 'growing' ? t("gaccCompetitiveAnalysis") : t("gaccCompetitiveAnalysisStable");
       return base.replace("{category}", catLabel).replace("{origins}", origins);

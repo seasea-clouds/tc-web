@@ -64,14 +64,14 @@
 - [x] 组件代码硬编码（659条）仍然阻塞 CI
 - [ ] 待部署后验证 CI 通过
 
-### T8 — 翻译任务提交 (2026-06-14) ✅
+### T8 — 翻译任务提交 (2026-06-14) 🟡
 - [x] 翻译工具 SOP 读取完成
-- [x] 翻译任务已提交: gacc-cat-labels-report-i18n
+- [x] 翻译任务已提交: gacc-cat-labels-v2
 - [x] 19 个 key × 47 目标语言
 - [x] 包含: gaccCat_*_label (16个) + noReportId + backToHome + notFoundDesc
 - [x] zh 已完成手动翻译（15个 gaccCat_*_label + 3个新key）
 - [ ] 等待翻译完成，取回结果后填入各语言文件
-- [ ] 取回: translate-tool results -n gacc-cat-labels-report-i18n -o ./results.json
+- [ ] 取回: translate-tool results -n gacc-cat-labels-v2 -o ./results.json
 
 ### T9 — 浏览器验证 (2026-06-14) ⬜
 - [ ] 逐个验证8个问题的修复效果

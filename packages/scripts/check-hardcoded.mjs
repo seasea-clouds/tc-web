@@ -719,6 +719,71 @@ function scanEntriesMapValue(lines, filePath) {
   return issues;
 }
 
+// ─── Check C: DATA_RULES hardcoded strings ───────────────────────────
+// Detects hardcoded English display strings in module rules.ts files
+// (standard numbers, risk descriptions, doc labels, etc.) that should
+// be translated. These are business data constants rendered in reports.
+// Uses LEGIT_ENGLISH and a per-module allowlist of standard numbers.
+const STANDARD_NUMBERS = new Set([
+  // GB standards
+  'GB 7718-2025', 'GB 2760', 'GB 2760-2014', 'GB 28050-2011',
+  'GB 4706.1', 'GB 4943.1-2022', 'GB 4706.xx', 'GB 17625.1', 'GB 7000.1',
+  'GB/T 23791', 'GB/T 30641',
+  // Other standards
+  'ISO 17025', 'ISO 22000', 'ISO 9001', 'HACCP',
+  'CNCA', 'CAC', 'CNAS',
+  // HS codes and tariffs
+  'HS', 'CIFER', 'CBEC',
+  // Trade terms
+  'FOB', 'CIF', 'DDP', 'DAP', 'EXW', 'FCA', 'CPT', 'CIP',
+  // Product category HS ranges
+]);
+
+function scanRulesHardcoded(content, filePath) {
+  const issues = [];
+  const lines = content.split('\n');
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i].trim();
+    if (!line || line.startsWith('//') || line.startsWith('/*') || line.startsWith('*')) continue;
+
+    // Skip data structures that are translated via t()
+    if (/t\s*\(/.test(line)) continue;
+    if (/LEGIT_ENGLISH/.test(line)) continue;
+    if (/set|Set|Map|map\(|new \{/.test(line)) continue;
+    if (/export const [A-Z_]*(TYPE|CATEGORY|PROFILE)/.test(line)) {
+      // These are data object declarations — Check A catches labels inside them
+      continue;
+    }
+
+    // Skip type/interface declarations
+    if (/^(interface |type |export (type|interface) |const [A-Z_]+:)/.test(line)) continue;
+
+    // Check for hardcoded English strings that aren't standard numbers
+    // Pattern: English strings of 5+ chars that look like display text
+    const strMatches = line.match(/"([A-Z][^"']{4,})"/g);
+    if (strMatches) {
+      for (const match of strMatches) {
+        const val = match.slice(1, -1); // remove quotes
+        if (STANDARD_NUMBERS.has(val) || STANDARD_NUMBERS.has(val.substring(0, 15))) continue;
+        if (LEGIT_ENGLISH.has(val)) continue;
+        if (/^[A-Z]{2,}$/.test(val)) continue; // acronyms
+        if (/\d+\s*(GB|HS|ISO|CIFER|CBEC|CNCA|CNAS)/.test(val)) continue; // standard numbers
+        if (val.includes('/*') || val.startsWith('https?://')) continue; // code comments
+        // Only flag if it looks like a display string (has space, parenthesis, slash)
+        if (!/[A-Za-z]{3,}\s+[A-Za-z]/.test(val) && !val.includes('(') && !val.includes('/') && !val.includes('—') && !val.includes(' - ')) continue;
+        issues.push({
+          file: path.relative(repoRoot, filePath),
+          line: i + 1,
+          type: 'rules data string',
+          text: val.substring(0, 100),
+        });
+      }
+    }
+  }
+  return issues;
+}
+
 // ─── Main scan per file ───────────────────────────────────────────────
 
 function scanFile(filePath) {
@@ -765,6 +830,12 @@ function scanFile(filePath) {
 
   // Check B: entries-map-value
   issues.push(...scanEntriesMapValue(lines, filePath));
+
+  // Check C: data rules.ts hardcoded strings (business data constants)
+  // Only flag in module rules.ts files (apps/portal/modules/*/rules.ts)
+  if (/apps\/portal\/modules\/.+\/rules\.ts$/.test(filePath)) {
+    issues.push(...scanRulesHardcoded(content, filePath));
+  }
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
@@ -883,15 +954,39 @@ const dirs = customDir
 console.log('🔍 Scanning for hardcoded English text in JSX/TSX...\n');
 
 let totalIssues = 0;
+let translationIssues = 0;
+const realIssues = [];
+const translationItems = [];
+
 for (const dir of dirs) {
   const rel = path.relative(repoRoot, dir);
   const found = scanDir(dir);
   if (found.length) {
-    console.log(`  ${rel}:`);
     for (const f of found) {
-      console.log(`    📄 ${f.file}:${f.line} [${f.type}] → "${f.text}"`);
-      totalIssues++;
+      if (f.type === 'rules data string') {
+        translationItems.push({ file: f.file, line: f.line, text: f.text });
+      } else {
+        realIssues.push({ dir: rel, ...f });
+      }
     }
+  }
+}
+
+totalIssues = realIssues.length;
+translationIssues = translationItems.length;
+
+// Report real hardcoded issues (component code problems)
+if (totalIssues) {
+  for (const f of realIssues) {
+    console.log(`  📄 ${f.file}:${f.line} [${f.type}] → "${f.text}"`);
+  }
+}
+
+// Report data translation needs
+if (translationIssues) {
+  console.log(`\n📦 ${translationIssues} data strings in rules.ts that need translation (not CI-blocking):`);
+  for (const f of translationItems) {
+    console.log(`    📄 ${f.file}:${f.line} → "${f.text}"`);
   }
 }
 
@@ -899,7 +994,10 @@ if (totalIssues === 0) {
   console.log('✅ No hardcoded English text found.');
   process.exit(0);
 } else {
-  console.log(`\n⚠️  Found ${totalIssues} potential hardcoded English strings.`);
+  console.log(`\n⚠️  Found ${totalIssues} hardcoded English strings in components.`);
+  if (translationIssues > 0) {
+    console.log(`   (${translationIssues} additional data strings in rules.ts need translation — not blocking CI)`);
+  }
   console.log('   Review and either add t() calls or add to LEGIT_ENGLISH set.');
   if (isCI) process.exit(1);
 }

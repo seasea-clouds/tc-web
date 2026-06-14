@@ -3,10 +3,21 @@
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useT, useTradeLocale } from './TranslationProvider';
+import { createContext, useContext, type ReactNode } from 'react';
 
 interface Segment {
   label: string;
   href?: string;
+}
+
+interface BreadcrumbOverride {
+  label: string;
+}
+
+const BreadcrumbOverrideContext = createContext<BreadcrumbOverride | null>(null);
+
+export function useBreadcrumbOverride() {
+  return useContext(BreadcrumbOverrideContext);
 }
 
 // Path segment → i18n key mapping
@@ -49,10 +60,17 @@ export interface AutoBreadcrumbProps {
 /**
  * Client component that automatically generates breadcrumbs from the current URL path.
  * Uses usePathname() to derive breadcrumb items, and useT() for i18n labels.
+ * 
+ * Can be overridden by a child component via <BreadcrumbOverrideProvider>:
+ *   <BreadcrumbOverrideProvider value={{ label: "Translated Title" }}>
+ *     ...content
+ *   </BreadcrumbOverrideProvider>
+ * The last breadcrumb segment will use the overridden label instead of auto-derived slug.
  */
 export default function AutoBreadcrumb({ locale }: AutoBreadcrumbProps) {
   const pathname = usePathname();
   const t = useT('Navbar');
+  const override = useBreadcrumbOverride();
 
   // Skip root and locale-only paths
   if (!pathname || pathname === '/' || pathname === `/${locale}`) {
@@ -77,6 +95,7 @@ export default function AutoBreadcrumb({ locale }: AutoBreadcrumbProps) {
 
   for (let i = 0; i < pathSegments.length; i++) {
     const seg = pathSegments[i];
+    const isLastSegment = i === pathSegments.length - 1;
     accumulated += `/${seg}`;
     const href = `/${locale}${accumulated}/`;
 
@@ -90,10 +109,20 @@ export default function AutoBreadcrumb({ locale }: AutoBreadcrumbProps) {
       continue;
     }
 
-    // Blog posts: /blog/{slug} → use slug as label
+    // Blog posts: /blog/{slug} → use lastItemLabel override (set by page via metadata)
     if (pathSegments[i - 1] === 'blog' && i > 0) {
-      const label = seg.replace(/-/g, ' ');
-      items.push({ label });
+      if (override) {
+        items.push({ label: override.label });
+        continue;
+      }
+      // Use document.title stripped of site suffix (client-side, set by Next.js generateMetadata)
+      if (typeof document !== 'undefined' && document.title) {
+        const pipeIdx = document.title.indexOf('|');
+        items.push({ label: pipeIdx >= 0 ? document.title.substring(0, pipeIdx).trim() : document.title });
+      } else {
+        // SSR fallback: formatted slug (will be corrected client-side)
+        items.push({ label: seg.replace(/-/g, ' ') });
+      }
       continue;
     }
 
@@ -182,3 +211,5 @@ export default function AutoBreadcrumb({ locale }: AutoBreadcrumbProps) {
     </nav>
   );
 }
+
+export { BreadcrumbOverrideContext };

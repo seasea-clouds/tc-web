@@ -1,6 +1,6 @@
 "use client";
 
-import { useT } from '@trade/ui';
+import { useT, useTradeLocale } from '@trade/ui';
 import { useState } from "react";
 import { checkGacc, CATEGORY_LABELS, type GaccCategory, type GaccInput } from "../../../../../../modules/gacc/rules";
 import { useFormValidation, inputClasses, selectClasses } from "@/lib/useFormValidation";
@@ -10,6 +10,7 @@ type Step = "form" | "free-result";
 
 export default function GaccCheckClient() {
   const t = useT('Check');
+  const locale = useTradeLocale();
   const [step, setStep] = useState<Step>("form");
   const [input, setInput] = useState<Partial<GaccInput>>({});
   const [email, setEmail] = useState("");
@@ -21,7 +22,7 @@ export default function GaccCheckClient() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate(input, ['category', 'productName', 'originCountry'])) return;
-    const result = checkGacc(input as GaccInput);
+    const result = checkGacc(input as GaccInput, locale);
     setFreeData(result);
     setStep("free-result");
   };
@@ -251,7 +252,7 @@ export default function GaccCheckClient() {
 
             <div className="text-sm text-gray-600 space-y-2">
               <p><strong>{t('resultProductLabel')}:</strong> {input.productName}</p>
-              <p><strong>{t('resultCategoryLabel')}:</strong> {CATEGORY_LABELS[input.category!]}</p>
+              <p><strong>{t('resultCategoryLabel')}:</strong> {t(`gaccCat_${input.category!}_label`)}</p>
               <p><strong>{t('riskLevel')}:</strong> {freeData.riskCategory === "high" ? t('riskHigh') : t('riskLow')}</p>
             </div>
 

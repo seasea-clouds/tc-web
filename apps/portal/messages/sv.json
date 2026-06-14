@@ -1060,7 +1060,22 @@
     "yes": "Ja",
     "yesLabelArtwork": "Ja — med fullständig labbrapport",
     "yesSpecialCosmetics": "Ja — SPECIAL kosmetika",
-    "yourProduct": "Din produkt"
+    "yourProduct": "Din produkt",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "Laddar din rapport",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "Fler inställningar kommer snart.",
     "registeredUser": "Registrerad användare",
     "periodEnds": "Perioden slutar",
-    "youAreOnFreePlan": "Du har för närvarande gratisplanen."
+    "youAreOnFreePlan": "Du har för närvarande gratisplanen.",
+    "noReportId": "Inget rapport-ID angivet"
   },
   "Cookie": {
     "message": "Denna webbplats använder endast viktiga autentiseringscookies. Inga spårnings- eller reklamcookies används.",

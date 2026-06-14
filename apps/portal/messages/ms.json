@@ -1060,7 +1060,22 @@
     "yes": "ya",
     "yesLabelArtwork": "Ya — dengan laporan makmal penuh",
     "yesSpecialCosmetics": "Ya — kosmetik KHAS",
-    "yourProduct": "Produk Anda"
+    "yourProduct": "Produk Anda",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "Memuatkan Laporan Anda",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "Lebih banyak tetapan akan datang tidak lama lagi.",
     "registeredUser": "Pengguna berdaftar",
     "periodEnds": "Tempoh tamat",
-    "youAreOnFreePlan": "Anda sedang menggunakan pelan Percuma."
+    "youAreOnFreePlan": "Anda sedang menggunakan pelan Percuma.",
+    "noReportId": "Tiada ID laporan disediakan"
   },
   "Cookie": {
     "message": "Tapak ini hanya menggunakan kuki pengesahan penting. Tiada kuki penjejakan atau pengiklanan digunakan.",

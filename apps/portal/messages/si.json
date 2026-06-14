@@ -1060,7 +1060,22 @@
     "yes": "ඔව්",
     "yesLabelArtwork": "ඔව් - සම්පූර්ණ රසායනාගාර වාර්තාව සමඟ",
     "yesSpecialCosmetics": "ඔව් - විශේෂ ආලේපන",
-    "yourProduct": "ඔබේ නිෂ්පාදනය"
+    "yourProduct": "ඔබේ නිෂ්පාදනය",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "ඔබේ වාර්තාව පූරණය කරමින්",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "තවත් සැකසුම් ඉක්මනින් පැමිණේ.",
     "registeredUser": "ලියාපදිංචි පරිශීලක",
     "periodEnds": "කාලය අවසන් වේ",
-    "youAreOnFreePlan": "ඔබ දැනට සිටින්නේ නිදහස් සැලැස්මේ ය."
+    "youAreOnFreePlan": "ඔබ දැනට සිටින්නේ නිදහස් සැලැස්මේ ය.",
+    "noReportId": "වාර්තා ID එකක් සපයා නැත"
   },
   "Cookie": {
     "message": "මෙම වෙබ් අඩවිය අත්‍යවශ්‍ය සත්‍යාපන කුකීස් පමණක් භාවිතා කරයි. ලුහුබැඳීම හෝ ප්‍රචාරණ කුකීස් භාවිතා නොකෙරේ.",

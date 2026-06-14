@@ -1060,7 +1060,22 @@
     "yes": "כֵּן",
     "yesLabelArtwork": "כן - עם דוח מעבדה מלא",
     "yesSpecialCosmetics": "כן - מוצרי קוסמטיקה מיוחדים",
-    "yourProduct": "המוצר שלך"
+    "yourProduct": "המוצר שלך",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "טוען את הדוח שלך",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "הגדרות נוספות בקרוב.",
     "registeredUser": "משתמש רשום",
     "periodEnds": "התקופה מסתיימת",
-    "youAreOnFreePlan": "אתה נמצא כעת בתוכנית החינמית."
+    "youAreOnFreePlan": "אתה נמצא כעת בתוכנית החינמית.",
+    "noReportId": "לא סופק מזהה דוח"
   },
   "Cookie": {
     "message": "אתר זה משתמש רק בעוגיות אימות חיוניות. לא נעשה שימוש בעוגיות מעקב או פרסום.",

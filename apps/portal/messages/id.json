@@ -1060,7 +1060,22 @@
     "yes": "Ya",
     "yesLabelArtwork": "Ya — dengan laporan lab lengkap",
     "yesSpecialCosmetics": "Ya — kosmetik KHUSUS",
-    "yourProduct": "Produk Anda"
+    "yourProduct": "Produk Anda",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "Memuat Laporan Anda",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "Pengaturan lainnya segera hadir.",
     "registeredUser": "Pengguna terdaftar",
     "periodEnds": "Periode berakhir",
-    "youAreOnFreePlan": "Anda saat ini menggunakan paket Gratis."
+    "youAreOnFreePlan": "Anda saat ini menggunakan paket Gratis.",
+    "noReportId": "Tidak ada ID laporan yangprovided"
   },
   "Cookie": {
     "message": "Situs ini hanya menggunakan cookie otentikasi penting. Tidak ada cookie pelacakan atau iklan yang digunakan.",

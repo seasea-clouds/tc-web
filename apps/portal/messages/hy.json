@@ -1060,7 +1060,22 @@
     "yes": "Այո՛",
     "yesLabelArtwork": "Այո, լաբորատոր զեկույցով",
     "yesSpecialCosmetics": "Այո — ՀԱՏՈՒԿ կոսմետիկա",
-    "yourProduct": "Ձեր արտադրանքը"
+    "yourProduct": "Ձեր արտադրանքը",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "Բեռնվում է ձեր զեկույցը",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "Ավելի շատ կարգավորումներ շուտով:",
     "registeredUser": "Գրանցված օգտվող",
     "periodEnds": "Ժամանակաշրջանն ավարտվում է",
-    "youAreOnFreePlan": "Դուք ներկայումս անվճար պլանում եք:"
+    "youAreOnFreePlan": "Դուք ներկայումս անվճար պլանում եք:",
+    "noReportId": "Հաշվետվության ID չի նշվել"
   },
   "Cookie": {
     "message": "Այս կայքը օգտագործում է միայն վավերացման հիմնական թխուկներ: Հետևելու կամ գովազդային թխուկներ չեն օգտագործվում:",

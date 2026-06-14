@@ -1060,7 +1060,22 @@
     "yes": "Da",
     "yesLabelArtwork": "Da — s punim laboratorijskim izvješćem",
     "yesSpecialCosmetics": "Da — SPECIJALNA kozmetika",
-    "yourProduct": "Vaš proizvod"
+    "yourProduct": "Vaš proizvod",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "Učitavanje vašeg izvješća",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "Više postavki uskoro.",
     "registeredUser": "Registrirani korisnik",
     "periodEnds": "Razdoblje završava",
-    "youAreOnFreePlan": "Trenutno ste na besplatnom planu."
+    "youAreOnFreePlan": "Trenutno ste na besplatnom planu.",
+    "noReportId": "Nije naveden ID izvješća"
   },
   "Cookie": {
     "message": "Ova stranica koristi samo bitne kolačiće za provjeru autentičnosti. Ne koriste se kolačići za praćenje ili oglašavanje.",

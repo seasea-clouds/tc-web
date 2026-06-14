@@ -1060,7 +1060,22 @@
     "yes": "হ্যাঁ",
     "yesLabelArtwork": "হ্যাঁ — সম্পূর্ণ ল্যাব রিপোর্ট সহ",
     "yesSpecialCosmetics": "হ্যাঁ — বিশেষ প্রসাধনী",
-    "yourProduct": "আপনার পণ্য"
+    "yourProduct": "আপনার পণ্য",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "আপনার রিপোর্ট লোড হচ্ছে",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "আরো সেটিংস শীঘ্রই আসছে.",
     "registeredUser": "নিবন্ধিত ব্যবহারকারী",
     "periodEnds": "পিরিয়ড শেষ হয়",
-    "youAreOnFreePlan": "আপনি বর্তমানে বিনামূল্যের প্ল্যানে আছেন।"
+    "youAreOnFreePlan": "আপনি বর্তমানে বিনামূল্যের প্ল্যানে আছেন।",
+    "noReportId": "কোনো রিপোর্ট ID দেওয়া হয়নি"
   },
   "Cookie": {
     "message": "এই সাইটটি শুধুমাত্র প্রয়োজনীয় প্রমাণীকরণ কুকি ব্যবহার করে। কোন ট্র্যাকিং বা বিজ্ঞাপন কুকি ব্যবহার করা হয় না.",

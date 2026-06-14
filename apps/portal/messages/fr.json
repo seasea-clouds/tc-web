@@ -1060,7 +1060,22 @@
     "yes": "Oui",
     "yesLabelArtwork": "Oui, avec rapport de laboratoire complet",
     "yesSpecialCosmetics": "Oui — Cosmétiques SPÉCIAUX",
-    "yourProduct": "Votre produit"
+    "yourProduct": "Votre produit",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "Chargement de votre rapport",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "Plus de paramètres à venir.",
     "registeredUser": "Utilisateur enregistré",
     "periodEnds": "Fin de la période",
-    "youAreOnFreePlan": "Vous êtes actuellement sur le forfait Gratuit."
+    "youAreOnFreePlan": "Vous êtes actuellement sur le forfait Gratuit.",
+    "noReportId": "Aucun ID de rapport fourni"
   },
   "Cookie": {
     "message": "Ce site utilise uniquement des cookies d'authentification essentiels. Aucun cookie de suivi ou publicitaire n'est utilisé.",

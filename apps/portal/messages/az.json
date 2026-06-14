@@ -1060,7 +1060,22 @@
     "yes": "Bəli",
     "yesLabelArtwork": "Bəli - tam laboratoriya hesabatı ilə",
     "yesSpecialCosmetics": "Bəli — XÜSUSİ kosmetika",
-    "yourProduct": "Məhsulunuz"
+    "yourProduct": "Məhsulunuz",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "Hesabatınız Yüklənir",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "Tezliklə əlavə parametrlər gələcək.",
     "registeredUser": "Qeydiyyatdan keçmiş istifadəçi",
     "periodEnds": "Dövr bitir",
-    "youAreOnFreePlan": "Hazırda Pulsuz plandasınız."
+    "youAreOnFreePlan": "Hazırda Pulsuz plandasınız.",
+    "noReportId": "Heç bir hesabat ID təqdim edilməyib"
   },
   "Cookie": {
     "message": "Bu sayt yalnız əsas autentifikasiya kukilərindən istifadə edir. Heç bir izləmə və ya reklam kukilərindən istifadə edilmir.",

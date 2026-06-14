@@ -1060,7 +1060,22 @@
     "yes": "Đúng",
     "yesLabelArtwork": "Có - với báo cáo phòng thí nghiệm đầy đủ",
     "yesSpecialCosmetics": "Có - Mỹ phẩm ĐẶC BIỆT",
-    "yourProduct": "Sản phẩm của bạn"
+    "yourProduct": "Sản phẩm của bạn",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "Đang tải báo cáo của bạn",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "Sắp có thêm cài đặt.",
     "registeredUser": "Người dùng đã đăng ký",
     "periodEnds": "Thời kỳ kết thúc",
-    "youAreOnFreePlan": "Bạn hiện đang sử dụng gói Miễn phí."
+    "youAreOnFreePlan": "Bạn hiện đang sử dụng gói Miễn phí.",
+    "noReportId": "Không cung cấp ID báo cáo"
   },
   "Cookie": {
     "message": "Trang web này chỉ sử dụng cookie xác thực cần thiết. Không sử dụng cookie theo dõi hoặc quảng cáo.",

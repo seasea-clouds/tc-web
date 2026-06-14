@@ -1060,7 +1060,22 @@
     "yes": "Да",
     "yesLabelArtwork": "Да — с полным лабораторным отчетом",
     "yesSpecialCosmetics": "Да — СПЕЦИАЛЬНАЯ косметика",
-    "yourProduct": "Ваш продукт"
+    "yourProduct": "Ваш продукт",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "Загрузка вашего отчета",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "Скоро появятся дополнительные настройки.",
     "registeredUser": "Зарегистрированный пользователь",
     "periodEnds": "Период заканчивается",
-    "youAreOnFreePlan": "В настоящее время вы используете бесплатный план."
+    "youAreOnFreePlan": "В настоящее время вы используете бесплатный план.",
+    "noReportId": "ID отчета не указан"
   },
   "Cookie": {
     "message": "Этот сайт использует только необходимые файлы cookie аутентификации. Никакие файлы cookie для отслеживания или рекламы не используются.",

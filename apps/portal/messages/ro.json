@@ -1060,7 +1060,22 @@
     "yes": "Da",
     "yesLabelArtwork": "Da, cu raportul de laborator complet",
     "yesSpecialCosmetics": "Da — cosmetice SPECIALE",
-    "yourProduct": "Produsul dvs"
+    "yourProduct": "Produsul dvs",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "Se încarcă raportul dvs",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "Mai multe setări în curând.",
     "registeredUser": "Utilizator înregistrat",
     "periodEnds": "Se termină perioada",
-    "youAreOnFreePlan": "În prezent sunteți în planul gratuit."
+    "youAreOnFreePlan": "În prezent sunteți în planul gratuit.",
+    "noReportId": "Niciun ID de raport furnizat"
   },
   "Cookie": {
     "message": "Acest site folosește numai cookie-uri de autentificare esențiale. Nu sunt utilizate cookie-uri de urmărire sau de publicitate.",

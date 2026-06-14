@@ -1,6 +1,6 @@
 "use client";
 
-import { useT, WHATSAPP_URL } from '@trade/ui';
+import { useT, useTradeLocale, WHATSAPP_URL } from '@trade/ui';
 
 import { useState } from "react";
 import { checkCosmetics, CATEGORY_LABELS } from "../../../../../../modules/nmpa/rules";
@@ -12,6 +12,7 @@ type Step = "form" | "free-result";
 
 export default function NmpaCheckClient() {
   const t = useT('Check');
+  const locale = useTradeLocale();
   const [step, setStep] = useState<Step>("form");
   const [input, setInput] = useState<Record<string, string>>({});
   const [email, setEmail] = useState("");
@@ -23,7 +24,7 @@ export default function NmpaCheckClient() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate(input, ['category', 'productName'])) return;
-    const result = checkCosmetics(input as any);
+    const result = checkCosmetics(input as any, locale);
     setFreeData(result);
     setStep("free-result");
   };

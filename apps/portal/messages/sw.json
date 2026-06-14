@@ -1060,7 +1060,22 @@
     "yes": "Ndiyo",
     "yesLabelArtwork": "Ndiyo - na ripoti kamili ya maabara",
     "yesSpecialCosmetics": "Ndiyo - vipodozi MAALUM",
-    "yourProduct": "Bidhaa Yako"
+    "yourProduct": "Bidhaa Yako",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "Inapakia Ripoti Yako",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "Mipangilio zaidi inakuja hivi karibuni.",
     "registeredUser": "Mtumiaji aliyesajiliwa",
     "periodEnds": "Kipindi kinaisha",
-    "youAreOnFreePlan": "Kwa sasa uko kwenye Mpango Bila Malipo."
+    "youAreOnFreePlan": "Kwa sasa uko kwenye Mpango Bila Malipo.",
+    "noReportId": "Hakuna Kitambulisho cha ripoti"
   },
   "Cookie": {
     "message": "Tovuti hii hutumia vidakuzi muhimu vya uthibitishaji pekee. Hakuna vidakuzi vya ufuatiliaji au utangazaji vinatumika.",

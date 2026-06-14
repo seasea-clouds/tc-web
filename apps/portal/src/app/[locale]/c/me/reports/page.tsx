@@ -28,7 +28,7 @@ export default function MyReportsPage() {
   return (
     <div className="bg-bg-ice py-12">
       <div className="max-w-4xl mx-auto px-4">
-        <Link href="./" className="text-sm text-gray-500 hover:text-primary-navy transition-colors">&larr; Back to Account</Link>
+        <Link href="./" className="text-sm text-gray-500 hover:text-primary-navy transition-colors">{t('backToAccount')}</Link>
         <h1 className="text-2xl font-bold text-primary-navy mt-4 mb-6">{t('myReports')}</h1>
 
         {loading ? (

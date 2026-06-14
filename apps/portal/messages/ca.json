@@ -1060,7 +1060,22 @@
     "yes": "Sí",
     "yesLabelArtwork": "Sí, amb un informe de laboratori complet",
     "yesSpecialCosmetics": "Sí — Cosmètica ESPECIAL",
-    "yourProduct": "El vostre producte"
+    "yourProduct": "El vostre producte",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "Carregant el vostre informe",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "Aviat més configuracions.",
     "registeredUser": "Usuari registrat",
     "periodEnds": "S'acaba el període",
-    "youAreOnFreePlan": "Actualment esteu al pla gratuït."
+    "youAreOnFreePlan": "Actualment esteu al pla gratuït.",
+    "noReportId": "No s'ha proporcionat cap ID d'informe"
   },
   "Cookie": {
     "message": "Aquest lloc només utilitza cookies d'autenticació essencials. No s'utilitzen cookies de seguiment ni de publicitat.",

@@ -1060,7 +1060,22 @@
     "yes": "جی ہاں",
     "yesLabelArtwork": "ہاں — مکمل لیب رپورٹ کے ساتھ",
     "yesSpecialCosmetics": "جی ہاں - خصوصی کاسمیٹکس",
-    "yourProduct": "آپ کی پروڈکٹ"
+    "yourProduct": "آپ کی پروڈکٹ",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "آپ کی رپورٹ لوڈ ہو رہی ہے۔",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "مزید ترتیبات جلد آرہی ہیں۔",
     "registeredUser": "رجسٹرڈ صارف",
     "periodEnds": "مدت ختم ہوتی ہے۔",
-    "youAreOnFreePlan": "آپ فی الحال مفت پلان پر ہیں۔"
+    "youAreOnFreePlan": "آپ فی الحال مفت پلان پر ہیں۔",
+    "noReportId": "کوئی رپورٹ ID فراہم نہیں کی گئی"
   },
   "Cookie": {
     "message": "یہ سائٹ صرف ضروری تصدیقی کوکیز استعمال کرتی ہے۔ کوئی ٹریکنگ یا اشتہاری کوکیز استعمال نہیں کی جاتی ہیں۔",

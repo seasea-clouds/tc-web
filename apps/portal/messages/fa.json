@@ -1060,7 +1060,22 @@
     "yes": "بله",
     "yesLabelArtwork": "بله - با گزارش کامل آزمایشگاه",
     "yesSpecialCosmetics": "بله - لوازم آرایشی ویژه",
-    "yourProduct": "محصول شما"
+    "yourProduct": "محصول شما",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "در حال بارگیری گزارش شما",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "تنظیمات بیشتر به زودی.",
     "registeredUser": "کاربر ثبت نام شده",
     "periodEnds": "دوره به پایان می رسد",
-    "youAreOnFreePlan": "شما در حال حاضر در طرح رایگان هستید."
+    "youAreOnFreePlan": "شما در حال حاضر در طرح رایگان هستید.",
+    "noReportId": "شناسه گزارش ارائه نشده است"
   },
   "Cookie": {
     "message": "این سایت فقط از کوکی های احراز هویت ضروری استفاده می کند. هیچ کوکی ردیابی یا تبلیغاتی استفاده نمی شود.",

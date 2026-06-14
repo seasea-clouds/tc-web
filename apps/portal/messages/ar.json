@@ -1060,7 +1060,22 @@
     "yes": "نعم",
     "yesLabelArtwork": "نعم - مع تقرير المختبر الكامل",
     "yesSpecialCosmetics": "نعم – مستحضرات تجميل خاصة",
-    "yourProduct": "المنتج الخاص بك"
+    "yourProduct": "المنتج الخاص بك",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "جارٍ تحميل تقريرك",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "المزيد من الإعدادات قريبا.",
     "registeredUser": "مستخدم مسجل",
     "periodEnds": "تنتهي الفترة",
-    "youAreOnFreePlan": "أنت حاليًا مشترك في الخطة المجانية."
+    "youAreOnFreePlan": "أنت حاليًا مشترك في الخطة المجانية.",
+    "noReportId": "لم يتم توفير معرف التقرير"
   },
   "Cookie": {
     "message": "يستخدم هذا الموقع ملفات تعريف الارتباط الأساسية فقط. لا يتم استخدام ملفات تعريف الارتباط للتتبع أو الإعلانات.",

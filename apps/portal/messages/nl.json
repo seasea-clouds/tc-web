@@ -1060,7 +1060,22 @@
     "yes": "Ja",
     "yesLabelArtwork": "Ja – met volledig laboratoriumrapport",
     "yesSpecialCosmetics": "Ja – SPECIALE cosmetica",
-    "yourProduct": "Uw product"
+    "yourProduct": "Uw product",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "Uw rapport laden",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "Binnenkort meer instellingen.",
     "registeredUser": "Geregistreerde gebruiker",
     "periodEnds": "Periode eindigt",
-    "youAreOnFreePlan": "Je hebt momenteel het gratis abonnement."
+    "youAreOnFreePlan": "Je hebt momenteel het gratis abonnement.",
+    "noReportId": "Geen rapport-ID opgegeven"
   },
   "Cookie": {
     "message": "Deze site gebruikt alleen essentiële authenticatiecookies. Er worden geen tracking- of advertentiecookies gebruikt.",

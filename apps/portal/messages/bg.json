@@ -1060,7 +1060,22 @@
     "yes": "да",
     "yesLabelArtwork": "Да — с пълен лабораторен доклад",
     "yesSpecialCosmetics": "Да — СПЕЦИАЛНА козметика",
-    "yourProduct": "Вашият продукт"
+    "yourProduct": "Вашият продукт",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "Вашият отчет се зарежда",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "Очаквайте скоро още настройки.",
     "registeredUser": "Регистриран потребител",
     "periodEnds": "Периодът приключва",
-    "youAreOnFreePlan": "В момента сте на безплатен план."
+    "youAreOnFreePlan": "В момента сте на безплатен план.",
+    "noReportId": "Не е предоставено ID на доклад"
   },
   "Cookie": {
     "message": "Този сайт използва само основни бисквитки за удостоверяване. Не се използват проследяващи или рекламни бисквитки.",

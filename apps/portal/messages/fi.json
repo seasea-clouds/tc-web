@@ -1060,7 +1060,22 @@
     "yes": "Kyllä",
     "yesLabelArtwork": "Kyllä – täydellä laboratorioraportilla",
     "yesSpecialCosmetics": "Kyllä – ERIKOISkosmetiikkaa",
-    "yourProduct": "Tuotteesi"
+    "yourProduct": "Tuotteesi",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "Ladataan raporttiasi",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "Lisää asetuksia tulossa pian.",
     "registeredUser": "Rekisteröity käyttäjä",
     "periodEnds": "Kausi päättyy",
-    "youAreOnFreePlan": "Olet tällä hetkellä ilmaisessa paketissa."
+    "youAreOnFreePlan": "Olet tällä hetkellä ilmaisessa paketissa.",
+    "noReportId": "Raportti-ID:tä ei ole annettu"
   },
   "Cookie": {
     "message": "Tämä sivusto käyttää vain välttämättömiä todennusevästeitä. Mitään seuranta- tai mainosevästeitä ei käytetä.",

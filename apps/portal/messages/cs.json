@@ -1060,7 +1060,22 @@
     "yes": "Ano",
     "yesLabelArtwork": "Ano – s úplnou laboratorní zprávou",
     "yesSpecialCosmetics": "Ano — SPECIÁLNÍ kosmetika",
-    "yourProduct": "Váš produkt"
+    "yourProduct": "Váš produkt",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "Načítání vaší zprávy",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "Další nastavení již brzy.",
     "registeredUser": "Registrovaný uživatel",
     "periodEnds": "Období končí",
-    "youAreOnFreePlan": "Momentálně máte bezplatný tarif."
+    "youAreOnFreePlan": "Momentálně máte bezplatný tarif.",
+    "noReportId": "Nebylo poskytnuto ID zprávy"
   },
   "Cookie": {
     "message": "Tento web používá pouze nezbytné ověřovací soubory cookie. Nejsou používány žádné sledovací ani reklamní soubory cookie.",

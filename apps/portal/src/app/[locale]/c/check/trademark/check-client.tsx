@@ -1,6 +1,6 @@
 "use client";
 
-import { useT, WHATSAPP_URL } from '@trade/ui';
+import { useT, useTradeLocale, WHATSAPP_URL } from '@trade/ui';
 
 import { useState } from "react";
 import { checkTrademark, CATEGORY_LABELS } from "../../../../../../modules/trademark/rules";
@@ -12,6 +12,7 @@ type Step = "form" | "free-result";
 
 export default function TrademarkCheckClient() {
   const t = useT('Check');
+  const locale = useTradeLocale();
   const [step, setStep] = useState<Step>("form");
   const [input, setInput] = useState<Record<string, string>>({});
   const [email, setEmail] = useState("");
@@ -23,7 +24,7 @@ export default function TrademarkCheckClient() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate(input, ['category', 'productName'])) return;
-    const result = checkTrademark(input as any);
+    const result = checkTrademark(input as any, locale);
     setFreeData(result);
     setStep("free-result");
   };

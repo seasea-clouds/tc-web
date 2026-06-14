@@ -1060,7 +1060,22 @@
     "yes": "はい",
     "yesLabelArtwork": "はい - 完全なラボレポート付き",
     "yesSpecialCosmetics": "はい — 特別な化粧品",
-    "yourProduct": "あなたの製品"
+    "yourProduct": "あなたの製品",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "レポートをロードする",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "さらに詳しい設定は近日公開予定です。",
     "registeredUser": "登録ユーザー",
     "periodEnds": "期間終了",
-    "youAreOnFreePlan": "現在は無料プランをご利用中です。"
+    "youAreOnFreePlan": "現在は無料プランをご利用中です。",
+    "noReportId": "レポートIDが指定されていません"
   },
   "Cookie": {
     "message": "このサイトでは、必須の認証 Cookie のみを使用します。追跡クッキーや広告クッキーは使用されません。",

@@ -1060,7 +1060,22 @@
     "yes": "Ja",
     "yesLabelArtwork": "Ja - met volledige laboratoriumverslag",
     "yesSpecialCosmetics": "Ja — SPESIALE skoonheidsmiddels",
-    "yourProduct": "Jou produk"
+    "yourProduct": "Jou produk",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "Laai tans jou verslag",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "Meer instellings kom binnekort.",
     "registeredUser": "Geregistreerde gebruiker",
     "periodEnds": "Periode eindig",
-    "youAreOnFreePlan": "Jy is tans op die gratis plan."
+    "youAreOnFreePlan": "Jy is tans op die gratis plan.",
+    "noReportId": "Gee geen verslag-ID verskaf nie"
   },
   "Cookie": {
     "message": "Hierdie webwerf gebruik slegs noodsaaklike verifikasiekoekies. Geen dop- of advertensiekoekies word gebruik nie.",

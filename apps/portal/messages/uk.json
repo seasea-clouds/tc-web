@@ -1060,7 +1060,22 @@
     "yes": "так",
     "yesLabelArtwork": "Так — з повним лабораторним звітом",
     "yesSpecialCosmetics": "Так — СПЕЦІАЛЬНА косметика",
-    "yourProduct": "Ваш продукт"
+    "yourProduct": "Ваш продукт",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "Завантаження звіту",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "Більше налаштувань незабаром.",
     "registeredUser": "Зареєстрований користувач",
     "periodEnds": "Період закінчується",
-    "youAreOnFreePlan": "Зараз ви використовуєте безкоштовний план."
+    "youAreOnFreePlan": "Зараз ви використовуєте безкоштовний план.",
+    "noReportId": "ID звіту не вказано"
   },
   "Cookie": {
     "message": "Цей сайт використовує лише необхідні файли cookie для автентифікації. Файли cookie для відстеження чи реклами не використовуються.",

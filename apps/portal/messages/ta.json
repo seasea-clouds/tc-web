@@ -1060,7 +1060,22 @@
     "yes": "ஆம்",
     "yesLabelArtwork": "ஆம் — முழு ஆய்வக அறிக்கையுடன்",
     "yesSpecialCosmetics": "ஆம் - சிறப்பு அழகுசாதனப் பொருட்கள்",
-    "yourProduct": "உங்கள் தயாரிப்பு"
+    "yourProduct": "உங்கள் தயாரிப்பு",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "உங்கள் அறிக்கையை ஏற்றுகிறது",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "மேலும் அமைப்புகள் விரைவில் வரும்.",
     "registeredUser": "பதிவுசெய்யப்பட்ட பயனர்",
     "periodEnds": "காலம் முடிவடைகிறது",
-    "youAreOnFreePlan": "நீங்கள் தற்போது இலவச திட்டத்தில் உள்ளீர்கள்."
+    "youAreOnFreePlan": "நீங்கள் தற்போது இலவச திட்டத்தில் உள்ளீர்கள்.",
+    "noReportId": "எந்த அறிக்கை ID-வும் வழங்கப்படவில்லை"
   },
   "Cookie": {
     "message": "இந்தத் தளம் அத்தியாவசிய அங்கீகார குக்கீகளை மட்டுமே பயன்படுத்துகிறது. கண்காணிப்பு அல்லது விளம்பர குக்கீகள் பயன்படுத்தப்படவில்லை.",

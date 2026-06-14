@@ -1060,7 +1060,22 @@
     "yes": "ใช่",
     "yesLabelArtwork": "ใช่ — พร้อมรายงานห้องปฏิบัติการฉบับเต็ม",
     "yesSpecialCosmetics": "ใช่ — เครื่องสำอางพิเศษ",
-    "yourProduct": "สินค้าของคุณ"
+    "yourProduct": "สินค้าของคุณ",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "กำลังโหลดรายงานของคุณ",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "การตั้งค่าเพิ่มเติมในเร็วๆ นี้",
     "registeredUser": "ผู้ใช้ที่ลงทะเบียน",
     "periodEnds": "ระยะเวลาสิ้นสุด",
-    "youAreOnFreePlan": "ขณะนี้คุณอยู่ในแผนฟรี"
+    "youAreOnFreePlan": "ขณะนี้คุณอยู่ในแผนฟรี",
+    "noReportId": "ไม่ระบุ ID รายงาน"
   },
   "Cookie": {
     "message": "ไซต์นี้ใช้คุกกี้การรับรองความถูกต้องที่จำเป็นเท่านั้น ไม่มีการใช้คุกกี้การติดตามหรือการโฆษณา",

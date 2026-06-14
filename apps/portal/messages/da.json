@@ -1060,7 +1060,22 @@
     "yes": "Ja",
     "yesLabelArtwork": "Ja - med fuld laboratorierapport",
     "yesSpecialCosmetics": "Ja - SPECIAL kosmetik",
-    "yourProduct": "Dit produkt"
+    "yourProduct": "Dit produkt",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "Indlæser din rapport",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "Flere indstillinger kommer snart.",
     "registeredUser": "Registreret bruger",
     "periodEnds": "Perioden slutter",
-    "youAreOnFreePlan": "Du er i øjeblikket på den gratis plan."
+    "youAreOnFreePlan": "Du er i øjeblikket på den gratis plan.",
+    "noReportId": "Intet rapport-ID angivet"
   },
   "Cookie": {
     "message": "Dette websted bruger kun vigtige autentificeringscookies. Der bruges ingen sporings- eller reklamecookies.",

@@ -1060,7 +1060,22 @@
     "yes": "Ja",
     "yesLabelArtwork": "Ja - med fullstendig laboratorierapport",
     "yesSpecialCosmetics": "Ja — SPESIELL kosmetikk",
-    "yourProduct": "Ditt produkt"
+    "yourProduct": "Ditt produkt",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "Laster inn rapporten din",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "Flere innstillinger kommer snart.",
     "registeredUser": "Registrert bruker",
     "periodEnds": "Perioden slutter",
-    "youAreOnFreePlan": "Du er for øyeblikket på gratisplanen."
+    "youAreOnFreePlan": "Du er for øyeblikket på gratisplanen.",
+    "noReportId": "Ingen rapport-ID oppgitt"
   },
   "Cookie": {
     "message": "Dette nettstedet bruker kun viktige autentiseringsinformasjonskapsler. Ingen sporings- eller reklameinformasjonskapsler brukes.",

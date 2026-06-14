@@ -1060,7 +1060,22 @@
     "yes": "हो",
     "yesLabelArtwork": "हो — पूर्ण प्रयोगशाला रिपोर्टको साथ",
     "yesSpecialCosmetics": "हो - विशेष कस्मेटिक्स",
-    "yourProduct": "तपाईंको उत्पादन"
+    "yourProduct": "तपाईंको उत्पादन",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "तपाईंको रिपोर्ट लोड गर्दै",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "थप सेटिङहरू चाँडै आउँदैछन्।",
     "registeredUser": "दर्ता प्रयोगकर्ता",
     "periodEnds": "अवधि समाप्त हुन्छ",
-    "youAreOnFreePlan": "तपाईं हाल नि:शुल्क योजनामा ​​हुनुहुन्छ।"
+    "youAreOnFreePlan": "तपाईं हाल नि:शुल्क योजनामा ​​हुनुहुन्छ।",
+    "noReportId": "कुनै रिपोर्ट ID प्रदान गरिएको छैन"
   },
   "Cookie": {
     "message": "यो साइटले आवश्यक प्रमाणीकरण कुकीहरू मात्र प्रयोग गर्दछ। कुनै ट्र्याकिङ वा विज्ञापन कुकीहरू प्रयोग गरिँदैन।",

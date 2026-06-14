@@ -1060,7 +1060,22 @@
     "yes": "Да",
     "yesLabelArtwork": "Да — са пуним лабораторијским извештајем",
     "yesSpecialCosmetics": "Да — ПОСЕБНА козметика",
-    "yourProduct": "Ваш производ"
+    "yourProduct": "Ваш производ",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "Учитавање вашег извештаја",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "Ускоро стиже још подешавања.",
     "registeredUser": "Регистровани корисник",
     "periodEnds": "Период се завршава",
-    "youAreOnFreePlan": "Тренутно сте на бесплатном плану."
+    "youAreOnFreePlan": "Тренутно сте на бесплатном плану.",
+    "noReportId": "Није наведен ID извештаја"
   },
   "Cookie": {
     "message": "Овај сајт користи само неопходне колачиће за аутентификацију. Не користе се колачићи за праћење или оглашавање.",

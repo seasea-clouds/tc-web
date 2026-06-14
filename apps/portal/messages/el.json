@@ -1060,7 +1060,22 @@
     "yes": "Ναί",
     "yesLabelArtwork": "Ναι — με πλήρη έκθεση εργαστηρίου",
     "yesSpecialCosmetics": "Ναι — ΕΙΔΙΚΑ καλλυντικά",
-    "yourProduct": "Το προϊόν σας"
+    "yourProduct": "Το προϊόν σας",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "Φόρτωση της αναφοράς σας",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "Περισσότερες ρυθμίσεις έρχονται σύντομα.",
     "registeredUser": "Εγγεγραμμένος χρήστης",
     "periodEnds": "Η περίοδος τελειώνει",
-    "youAreOnFreePlan": "Αυτήν τη στιγμή βρίσκεστε στο δωρεάν πρόγραμμα."
+    "youAreOnFreePlan": "Αυτήν τη στιγμή βρίσκεστε στο δωρεάν πρόγραμμα.",
+    "noReportId": "Δεν έχει δοθεί ID αναφοράς"
   },
   "Cookie": {
     "message": "Αυτός ο ιστότοπος χρησιμοποιεί μόνο απαραίτητα cookies ελέγχου ταυτότητας. Δεν χρησιμοποιούνται cookies παρακολούθησης ή διαφήμισης.",

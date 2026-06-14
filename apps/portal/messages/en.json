@@ -1060,7 +1060,22 @@
     "tmDoc_appForm_validity": "Per application",
     "tmDoc_logo_validity": "Per application",
     "tmDoc_goodsList_validity": "Per application",
-    "tmDoc_poa_validity": "Per application"
+    "tmDoc_poa_validity": "Per application",
+    "gaccCat_alcohol_label": "",
+    "gaccCat_beverage_label": "",
+    "gaccCat_confectionery_label": "",
+    "gaccCat_canned_label": "",
+    "gaccCat_sugar_label": "",
+    "gaccCat_grain_label": "",
+    "gaccCat_meat_label": "",
+    "gaccCat_dairy_label": "",
+    "gaccCat_seafood_label": "",
+    "gaccCat_honey_label": "",
+    "gaccCat_oil_label": "",
+    "gaccCat_seasoning_label": "",
+    "gaccCat_nuts_label": "",
+    "gaccCat_other_label": "",
+    "gaccCat_classification_label": ""
   },
   "Report": {
     "loadingTitle": "Loading Your Report",
@@ -1090,7 +1105,8 @@
     "moreSettingsSoon": "More settings coming soon.",
     "registeredUser": "Registered user",
     "periodEnds": "Period ends",
-    "youAreOnFreePlan": "You are currently on the Free plan."
+    "youAreOnFreePlan": "You are currently on the Free plan.",
+    "noReportId": "No report ID provided"
   },
   "Cookie": {
     "message": "This site uses only essential authentication cookies. No tracking or advertising cookies are used.",

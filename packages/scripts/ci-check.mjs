@@ -145,8 +145,8 @@ function runBuildPhaseChecks() {
 function runOutputPhaseChecks() {
   // hreflang 检查 — 项目间差异最大，精确参数化
   if (project === 'site') {
-    // site SSG 输出包含废弃的 blog 旧模板 + 404/_not-found 等非内容页
-    runLocalScript('check-hreflang.mjs', `--dir=${outDir}`, '--skip-pattern=/blog/,404,_not-found');
+    // site SSG 输出包含废弃的 blog 旧模板 + 404/_not-found/index 等非内容页
+    runLocalScript('check-hreflang.mjs', `--dir=${outDir}`, '--skip-pattern=/blog/,404,_not-found,index');
   } else if (project === 'portal') {
     // 只跳过非内容页面
     runLocalScript('check-hreflang.mjs', `--dir=${outDir}`, '--skip-pattern=404,_not-found');

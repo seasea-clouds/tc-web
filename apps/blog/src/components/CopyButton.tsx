@@ -39,7 +39,7 @@ export default function CopyButton({ url }: Props) {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
-      console.warn('Copy failed:', err);
+      // Silently fail — user experience not impacted
     }
   }, [url]);
 

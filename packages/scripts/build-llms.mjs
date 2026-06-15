@@ -65,6 +65,17 @@ const SKIP_KEYS = [
   'AiAssistance.', 'Auth.', 'Dashboard.',
 ];
 
+// 博客 slug → 真实标题映射（从 discover-routes 补充）
+const BLOG_TITLES = {
+  'gacc-registration-guide': 'GACC Registration Guide',
+  'ccc-certification-complete-guide': 'CCC Certification Complete Guide',
+  'import-compliance-checklist': 'Import Compliance Checklist',
+  'chinese-label-compliance-guide': 'Chinese Label Compliance Guide',
+  'trademark-registration-china': 'Trademark Registration in China',
+  'nmpa-cosmetics-filing-guide': 'NMPA Cosmetics Filing Guide',
+  'cross-border-ecommerce-china': 'Cross-Border E-Commerce in China',
+};
+
 function filterSummaryKeys(msgs) {
   if (!msgs) return [];
   const flat = flatten(msgs);
@@ -72,7 +83,8 @@ function filterSummaryKeys(msgs) {
   for (const [key, val] of Object.entries(flat)) {
     if (SKIP_KEYS.some(sk => key.startsWith(sk))) continue;
     if (val.length > 200 || val.length < 3) continue;
-    result.push(`${key}: ${val}`);
+    // 只输出值，不输出 key: 避免翻译 key 泄漏
+    result.push(val);
   }
   return result;
 }
@@ -86,8 +98,10 @@ function getDisplayText(route, enMsgs) {
     return SERVICE_LABELS[parts[1]] || parts[1].replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
   }
   if (parts[0] === 'blog' && parts.length > 1) {
-    // 用 slug 生成标题
-    return parts[1].replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    // 优先用预定义标题，其次用 slug 转标题
+    const slug = parts[1];
+    if (BLOG_TITLES[slug]) return BLOG_TITLES[slug];
+    return slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
   }
   if (parts[0] === 'industries' && parts.length > 1) {
     const slug = parts[1].replace(/-/g, ' ');
@@ -250,10 +264,25 @@ export function buildLLMs(baseUrl, outDir) {
   fullContent += '\n---\n\n';
   fullContent += perLocale['en'];
 
+  // 写入 llms.txt（全量聚合）
   fs.writeFileSync(path.join(outDir, 'llms.txt'), fullContent, 'utf-8');
-
   console.log(`✅ llms.txt (${(fullContent.length / 1024).toFixed(0)}KB)`);
-  console.log(`✅ ${localesExpanded.length} llms-{locale}.txt files`);
+
+  // 写入 llms-{locale}.txt（各语言独立文件）
+  for (const [locale, content] of Object.entries(perLocale)) {
+    const filePath = path.join(outDir, `llms-${locale}.txt`);
+    fs.writeFileSync(filePath, content, 'utf-8');
+  }
+  console.log(`✅ ${Object.keys(perLocale).length} llms-{locale}.txt files written`);
+
+  // 写入 llms-full.txt（所有语言的完整内容聚合）
+  let fullAggregate = '';
+  for (const [locale, content] of Object.entries(perLocale)) {
+    fullAggregate += `## ${locale}\n\n${content}\n\n---\n\n`;
+  }
+  const fullPath = path.join(outDir, 'llms-full.txt');
+  fs.writeFileSync(fullPath, fullAggregate, 'utf-8');
+  console.log(`✅ llms-full.txt (${(fullAggregate.length / 1024).toFixed(0)}KB)`);
 }
 
 function parseArgs() {

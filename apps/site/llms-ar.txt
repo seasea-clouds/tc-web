@@ -1,61 +1,4 @@
-# SinoTrade Compliance - English
-
-> SinoTrade Compliance provides one-stop regulatory consulting services for China market entry.
-
-## Available Languages
-
-- [en](llms-en.txt)
-- [zh](llms-zh.txt)
-- [es](llms-es.txt)
-- [fr](llms-fr.txt)
-- [de](llms-de.txt)
-- [ja](llms-ja.txt)
-- [pt](llms-pt.txt)
-- [ru](llms-ru.txt)
-- [ar](llms-ar.txt)
-- [ko](llms-ko.txt)
-- [it](llms-it.txt)
-- [nl](llms-nl.txt)
-- [tr](llms-tr.txt)
-- [vi](llms-vi.txt)
-- [id](llms-id.txt)
-- [th](llms-th.txt)
-- [hi](llms-hi.txt)
-- [pl](llms-pl.txt)
-- [sv](llms-sv.txt)
-- [el](llms-el.txt)
-- [cs](llms-cs.txt)
-- [ro](llms-ro.txt)
-- [hu](llms-hu.txt)
-- [fi](llms-fi.txt)
-- [da](llms-da.txt)
-- [no](llms-no.txt)
-- [uk](llms-uk.txt)
-- [bg](llms-bg.txt)
-- [hr](llms-hr.txt)
-- [sr](llms-sr.txt)
-- [sk](llms-sk.txt)
-- [sl](llms-sl.txt)
-- [ms](llms-ms.txt)
-- [ka](llms-ka.txt)
-- [he](llms-he.txt)
-- [sw](llms-sw.txt)
-- [bn](llms-bn.txt)
-- [ca](llms-ca.txt)
-- [fa](llms-fa.txt)
-- [ur](llms-ur.txt)
-- [ta](llms-ta.txt)
-- [af](llms-af.txt)
-- [sq](llms-sq.txt)
-- [az](llms-az.txt)
-- [hy](llms-hy.txt)
-- [be](llms-be.txt)
-- [ne](llms-ne.txt)
-- [si](llms-si.txt)
-
----
-
-# SinoTrade Compliance - en
+# SinoTrade Compliance - ar
 
 > SinoTrade Compliance provides one-stop regulatory consulting services for China market entry — GACC registration, Chinese labeling, CCC certification, NMPA cosmetics filing, cross-border e-commerce, and brand protection.
 
@@ -98,11 +41,11 @@
 
 ## Key Content
 
-- Home.heroTitle: China Compliance Self-Check
-- Home.heroTitle: China Compliance for Your Brand
-- Home.heroSubtitle: Find out in 3 steps what compliance requirements apply to your product before exporting to China.
-- Home.heroSubtitle: One-stop import regulatory services for food, cosmetics, electronics, and more. Trusted by exporters in 50+ countries with 15+ years of expertise.
-- About.title: About SinoTrade Compliance
+- Home.heroTitle: الصين الامتثال للفحص الذاتي
+- Home.heroTitle: الامتثال للصين لعلامتك التجارية
+- Home.heroSubtitle: اكتشف في 3 خطوات متطلبات الامتثال التي تنطبق على منتجك قبل التصدير إلى الصين.
+- Home.heroSubtitle: خدمات تنظيمية شاملة لاستيراد المواد الغذائية ومستحضرات التجميل والإلكترونيات وغيرها. موثوق به من قبل المصدرين في أكثر من 50 دولة مع أكثر من 15 عامًا من الخبرة.
+- About.title: حول الامتثال لـ SinoTrade
 
 ## Languages
 

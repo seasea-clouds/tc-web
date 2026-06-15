@@ -6,44 +6,16 @@
  *   llms.txt            → 全量聚合（所有语言所有站点内容）
  *   llms-{locale}.txt   → 各语言 LLM 文件（48个）
  *
- * 内容来源: 各子站的 messages/{locale}.json + 站点结构
+ * 内容来源: discover-routes.mjs 自动发现的路由 + 翻译摘要
  */
 
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { LOCALES } from './discover-routes.mjs';
+import { discoverAll, expandLocales, LOCALES } from './discover-routes.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '../..');
-
-// ── 服务链接映射 ──────────────────────────────────────────
-const SERVICES = [
-  { key: 'GACC', path: '/services/gacc/' },
-  { key: 'Label', path: '/services/label/' },
-  { key: 'CCC', path: '/services/ccc/' },
-  { key: 'Cosmetics', path: '/services/cosmetics/' },
-  { key: 'Ecommerce', path: '/services/ecommerce/' },
-  { key: 'Brand', path: '/services/brand/' },
-];
-
-const BLOG_SLUGS = [
-  '/blog/gacc-decree-248/',
-  '/blog/gacc-decree-249/',
-  '/blog/china-food-import/',
-  '/blog/cosmetics-regulation/',
-  '/blog/ccc-certification/',
-  '/blog/cross-border-ecommerce/',
-];
-
-const ALL_LOCALES = [
-  'en', 'zh', 'ja', 'ko', 'fr', 'de', 'es', 'pt', 'ru', 'ar',
-  'hi', 'th', 'vi', 'id', 'ms', 'tl', 'fa', 'ur', 'bn', 'pa',
-  'te', 'mr', 'gu', 'kn', 'ml', 'ta', 'fi', 'sv', 'no', 'da',
-  'nl', 'pl', 'cs', 'sk', 'hu', 'ro', 'bg', 'hr', 'sl', 'sr',
-  'uk', 'el', 'tr', 'he', 'az', 'ka', 'hy', 'be', 'af', 'sq',
-  'sv', 'sw', 'ne', 'si', 'ca', 'cy', 'is', 'mt', 'eu', 'gl',
-];
 
 function loadMessages(appDir, locale) {
   const msgPath = path.join(appDir, 'messages', `${locale}.json`);
@@ -64,131 +36,207 @@ function flatten(obj, prefix = '') {
   return result;
 }
 
-function getTranslation(msgs, keyPath) {
-  if (!msgs) return keyPath;
+// 导航分组名称映射（英文）
+const GROUP_LABELS = {
+  about: 'About',
+  blog: 'Blog',
+  c: 'Check & Report',
+  faq: 'FAQ',
+  industries: 'Industries',
+  packages: 'Packages',
+  privacy: 'Privacy Policy',
+  quote: 'Get a Quote',
+  services: 'Services',
+};
+
+// 服务子项标签映射
+const SERVICE_LABELS = {
+  'brand': 'Brand Protection',
+  'ccc': 'CCC Certification',
+  'cosmetics': 'NMPA Cosmetics Filing',
+  'ecommerce': 'Cross-border E-commerce',
+  'gacc': 'GACC Registration',
+  'label': 'Chinese Label Compliance',
+};
+
+// 需要跳过的翻译 key（太长或太细节的不适合摘要）
+const SKIP_KEYS = [
+  'Check.', 'Report.', 'ReportSection.', 'Privacy.', 'Cookie.',
+  'AiAssistance.', 'Auth.', 'Dashboard.',
+];
+
+function filterSummaryKeys(msgs) {
+  if (!msgs) return [];
   const flat = flatten(msgs);
-  return flat[keyPath] || keyPath;
+  const result = [];
+  for (const [key, val] of Object.entries(flat)) {
+    if (SKIP_KEYS.some(sk => key.startsWith(sk))) continue;
+    if (val.length > 200 || val.length < 3) continue;
+    result.push(`${key}: ${val}`);
+  }
+  return result;
+}
+
+function getDisplayText(route, enMsgs) {
+  // 根据路由路径推断显示文本
+  const rel = route.replace('/en/', '/').replace(/\/$/, '');
+  const parts = rel.split('/').filter(Boolean);
+
+  if (parts[0] === 'services' && parts[1]) {
+    return SERVICE_LABELS[parts[1]] || parts[1].replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+  }
+  if (parts[0] === 'blog' && parts.length > 1) {
+    // 用 slug 生成标题
+    return parts[1].replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+  }
+  if (parts[0] === 'industries' && parts.length > 1) {
+    const slug = parts[1].replace(/-/g, ' ');
+    return slug.charAt(0).toUpperCase() + slug.slice(1);
+  }
+  if (parts[0] === 'c') {
+    if (parts.includes('check')) {
+      return 'Compliance Check';
+    }
+    return 'Portal';
+  }
+
+  // 一级页面：用翻译 key 找可读名称
+  if (parts.length === 1) {
+    const keyMap = {
+      'about': 'Home.aboutUs',
+      'faq': 'Faq.title',
+      'packages': 'Home.service',
+      'quote': 'Quote.title',
+      'privacy': 'Privacy.title',
+      'services': 'Home.servicesTitle',
+      'blog': 'Blog.title',
+    };
+    const key = keyMap[parts[0]];
+    if (key && enMsgs) {
+      const flat = flatten(enMsgs);
+      const val = flat[key];
+      if (val && val !== key) return val;
+    }
+  }
+
+  // 回退：slug 转标题
+  return parts.map(p => p.charAt(0).toUpperCase() + p.slice(1)).join(' ');
+}
+
+function sortRoutes(routes) {
+  const order = ['about', 'services', 'industries', 'blog', 'faq', 'quote', 'c', 'packages', 'privacy'];
+  return routes.sort((a, b) => {
+    const relA = a.replace('/en/', '').replace(/\/$/, '');
+    const relB = b.replace('/en/', '').replace(/\/$/, '');
+    const partsA = relA.split('/').filter(Boolean);
+    const partsB = relB.split('/').filter(Boolean);
+    const idxA = order.indexOf(partsA[0]);
+    const idxB = order.indexOf(partsB[0]);
+    if (idxA === -1 && idxB === -1) return 0;
+    if (idxA === -1) return 1;
+    if (idxB === -1) return -1;
+    return idxA - idxB;
+  });
 }
 
 export function buildLLMs(baseUrl, outDir) {
-  const appsDir = path.join(ROOT, 'apps');
-  const apps = [];
-  for (const app of fs.readdirSync(appsDir)) {
-    const appDir = path.join(appsDir, app);
-    if (!fs.existsSync(path.join(appDir, 'messages'))) continue;
-    apps.push({ name: app, dir: appDir });
-  }
+  const apps = discoverAll();
+  const localesExpanded = expandLocales(apps);
+
+  // 加载 site 的英文翻译作为摘要基准
+  const siteEnMsgs = loadMessages(path.join(ROOT, 'apps/site'), 'en');
 
   const perLocale = {};
 
-  for (const locale of LOCALES) {
-    const lang = locale === 'en' ? 'en' : locale;
-    const label = locale; // e.g. "English", "中文", "日本語"
+  for (const localeEntry of localesExpanded) {
+    const locale = localeEntry.locale;
+    const routes = sortRoutes([...localeEntry.routes]);
 
-    // 加载翻译
-    const enMsgs = loadMessages(path.join(ROOT, 'apps/site'), 'en');
-    const appMsgs = {};
-    for (const app of apps) {
-      const m = loadMessages(app.dir, locale);
-      if (m) appMsgs[app.name] = m;
-    }
+    // 语言标签
+    const langMap = {
+      en: 'English', zh: '中文', ja: '日本語', ko: '한국어', fr: 'Français',
+      de: 'Deutsch', es: 'Español', pt: 'Português', ru: 'Русский', ar: 'العربية',
+      hi: 'हिन्दी', th: 'ไทย', vi: 'Tiếng Việt', id: 'Bahasa Indonesia',
+      ms: 'Bahasa Melayu', tl: 'Filipino', fa: 'فارسی', ur: 'اردو',
+      bn: 'বাংলা', pa: 'ਪੰਜਾਬੀ', te: 'తెలుగు', mr: 'मराठी',
+      gu: 'ગુજરાતી', kn: 'ಕನ್ನಡ', ml: 'മലയാളം', ta: 'தமிழ்',
+      fi: 'Suomi', sv: 'Svenska', no: 'Norsk', da: 'Dansk',
+      nl: 'Nederlands', pl: 'Polski', cs: 'Čeština', sk: 'Slovenčina',
+      hu: 'Magyar', ro: 'Română', bg: 'Български', hr: 'Hrvatski',
+      sl: 'Slovenščina', sr: 'Srpski', uk: 'Українська', el: 'Ελληνικά',
+      tr: 'Türkçe', he: 'עברית', az: 'Azərbaycan', ka: 'ქართული',
+      hy: 'Հայերեն', be: 'Беларуская', af: 'Afrikaans', sq: 'Shqip',
+      sw: 'Kiswahili', ne: 'नेपाली', si: 'සිංහල', ca: 'Català',
+    };
+    const label = langMap[locale] || locale;
 
-    let content = `# SinoTrade Compliance - ${label}
+    let content = `# SinoTrade Compliance - ${label}\n\n`;
+    content += `> SinoTrade Compliance provides one-stop regulatory consulting services for China market entry.\n\n`;
 
-> SinoTrade Compliance provides one-stop regulatory consulting services for China market entry — GACC registration, Chinese labeling, CCC certification, NMPA cosmetics filing, cross-border e-commerce, and brand protection.
+    // ── Navigation (按分组聚合，合并层级) ────────
+    // 将路由按分组组织，一级作为 section，二级作为该 section 下的链接
+    const navSections = {}; // key: group -> { group, children: [{ path, display }] }
+    let rootItem = null;
 
-`;
+    for (const route of routes) {
+      const rel = route.replace(`/${locale}/`, '/').replace(/\/$/, '');
+      if (rel === '' || rel === '/') continue;
 
-    // ── Services ────────────────────────────────
-    content += '## Services\n\n';
-    for (const svc of SERVICES) {
-      const titleKey = `Home.services.${svc.key}`;
-      const title = enMsgs ? (flatten(enMsgs)[titleKey] || svc.key) : svc.key;
-      const url = `${baseUrl}${svc.path}`;
-      content += `- [${title}](${url})\n`;
-    }
-    content += '\n';
+      const parts = rel.split('/').filter(Boolean);
+      if (parts.length === 0) continue;
 
-    // ── Industries ──────────────────────────────
-    content += '## Industries\n\n';
-    const industries = [
-      { key: 'Dairy', label: 'Dairy & Milk' },
-      { key: 'MeatSeafood', label: 'Meat & Seafood' },
-      { key: 'Wine', label: 'Wine & Spirits' },
-      { key: 'Skincare', label: 'Skincare & Cosmetics' },
-      { key: 'PetFood', label: 'Pet Food' },
-      { key: 'Supplements', label: 'Health Supplements' },
-      { key: 'Baby', label: 'Baby & Maternal' },
-      { key: 'Electronics', label: 'Consumer Electronics' },
-      { key: 'Medical', label: 'Medical Devices' },
-      { key: 'Ecommerce', label: 'Cross-border E-commerce' },
-    ];
-    for (const ind of industries) {
-      const url = `${baseUrl}/industries/${ind.key.toLowerCase().replace(/[^a-z0-9]/g, '-')}/`;
-      content += `- ${ind.label}\n`;
-    }
-    content += '\n';
-
-    // ── Blog ────────────────────────────────────
-    content += '## Blog\n\n';
-    for (const slug of BLOG_SLUGS) {
-      const url = `${baseUrl}${slug}`;
-      content += `- Blog post\n`;
-    }
-    content += '\n';
-
-    // ── Compliance Tools (portal) ───────────────
-    content += '## Compliance Tools\n\n';
-    content += `- [GACC Registration Check](${baseUrl}/c/check/gacc/)\n`;
-    content += `- [CCC Certification Check](${baseUrl}/c/check/ccc/)\n`;
-    content += `- [NMPA Cosmetics Check](${baseUrl}/c/check/cosmetics/)\n`;
-    content += '\n';
-
-    // ── Key content summary ─────────────────────
-    content += '## Key Content\n\n';
-    const summaryKeys = [
-      'Home.heroTitle',
-      'Home.heroSubtitle',
-      'Services.title',
-      'About.title',
-      'About.desc',
-    ];
-    for (const key of summaryKeys) {
-      if (appMsgs['portal']) {
-        const val = getTranslation(appMsgs['portal'], key);
-        if (val && val !== key) {
-          content += `- ${key}: ${val}\n`;
+      if (parts.length === 1) {
+        // 一级路由：作为 section 标题
+        rootItem = { path: route, display: getDisplayText(route, siteEnMsgs) };
+        if (!navSections[parts[0]]) {
+          navSections[parts[0]] = { group: parts[0], children: [rootItem] };
         }
-      }
-      if (appMsgs['site']) {
-        const val = getTranslation(appMsgs['site'], key);
-        if (val && val !== key) {
-          content += `- ${key}: ${val}\n`;
+      } else {
+        // 二级路由：添加到对应 section 的 children
+        const group = parts[0];
+        if (!navSections[group]) {
+          navSections[group] = { group, children: [] };
         }
+        navSections[group].children.push({
+          path: route,
+          display: getDisplayText(route, siteEnMsgs),
+        });
       }
     }
+
+    // 按 order 输出 section
+    const sectionOrder = Object.keys(navSections);
+    for (const group of sectionOrder) {
+      const section = navSections[group];
+      const sectionTitle = GROUP_LABELS[group] || getDisplayText(`/${group}/`, siteEnMsgs);
+      content += `## ${sectionTitle}\n\n`;
+
+      for (const child of section.children) {
+        content += `- [${child.display}](${child.path})\n`;
+      }
+      content += '\n';
+    }
+
+    // ── Key Content Summary ─────────────────────
+    content += `## Key Content\n\n`;
+    const summaries = filterSummaryKeys(siteEnMsgs);
+    for (const s of summaries.slice(0, 15)) {
+      content += `- ${s}\n`;
+    }
     content += '\n';
 
-    // ── Language links ──────────────────────────
-    content += '## Languages\n\n';
-    content += `[en] ${baseUrl}/en/\n`;
+    // ── Language Links ──────────────────────────
+    content += `## Languages\n\n`;
     for (const l of LOCALES) {
-      if (l !== 'en') {
-        content += `[${l}] ${baseUrl}/${l}/\n`;
-      }
+      content += `- [${l}](${baseUrl}/${l}/)\n`;
     }
     content += '\n';
 
     perLocale[locale] = content;
-
-    // 写入分语言 LLM 文件
-    const langFile = locale === 'en' ? 'en' : locale;
-    fs.writeFileSync(path.join(outDir, `llms-${langFile}.txt`), content, 'utf-8');
   }
 
   // 生成 llms.txt（全量聚合 - 用英文作为主索引）
-  const langFile = 'en';
-  const langLabel = 'English';
+  // 去掉重复内容，只保留索引 + 英文版
   let fullContent = `# SinoTrade Compliance - English
 
 > SinoTrade Compliance provides one-stop regulatory consulting services for China market entry.
@@ -197,16 +245,15 @@ export function buildLLMs(baseUrl, outDir) {
 
 `;
   for (const l of LOCALES) {
-    const label = l === 'en' ? 'English' : l;
     fullContent += `- [${l}](llms-${l}.txt)\n`;
   }
   fullContent += '\n---\n\n';
-  fullContent += perLocale[langFile];
+  fullContent += perLocale['en'];
 
   fs.writeFileSync(path.join(outDir, 'llms.txt'), fullContent, 'utf-8');
 
   console.log(`✅ llms.txt (${(fullContent.length / 1024).toFixed(0)}KB)`);
-  console.log(`✅ ${LOCALES.length} llms-{locale}.txt files`);
+  console.log(`✅ ${localesExpanded.length} llms-{locale}.txt files`);
 }
 
 function parseArgs() {
@@ -219,7 +266,8 @@ function parseArgs() {
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  const { 'base-url': baseUrl } = parseArgs();
-  if (!baseUrl) { console.error('Usage: --base-url=...'); process.exit(1); }
-  buildLLMs(baseUrl, process.cwd());
+  const { 'base-url': baseUrl, 'out-dir': outDir } = parseArgs();
+  if (!baseUrl) { console.error('Usage: --base-url=... [--out-dir=...]'); process.exit(1); }
+  const dest = outDir || process.cwd();
+  buildLLMs(baseUrl, dest);
 }

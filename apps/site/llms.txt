@@ -55,54 +55,93 @@
 
 ---
 
-# SinoTrade Compliance - en
+# SinoTrade Compliance - English
 
-> SinoTrade Compliance provides one-stop regulatory consulting services for China market entry — GACC registration, Chinese labeling, CCC certification, NMPA cosmetics filing, cross-border e-commerce, and brand protection.
+> SinoTrade Compliance provides one-stop regulatory consulting services for China market entry.
 
-## Services
+## About
 
-- [GACC](https://sinotradecompliance.com/services/gacc/)
-- [Label](https://sinotradecompliance.com/services/label/)
-- [CCC](https://sinotradecompliance.com/services/ccc/)
-- [Cosmetics](https://sinotradecompliance.com/services/cosmetics/)
-- [Ecommerce](https://sinotradecompliance.com/services/ecommerce/)
-- [Brand](https://sinotradecompliance.com/services/brand/)
-
-## Industries
-
-- Dairy & Milk
-- Meat & Seafood
-- Wine & Spirits
-- Skincare & Cosmetics
-- Pet Food
-- Health Supplements
-- Baby & Maternal
-- Consumer Electronics
-- Medical Devices
-- Cross-border E-commerce
+- [about](/en/about/)
 
 ## Blog
 
-- Blog post
-- Blog post
-- Blog post
-- Blog post
-- Blog post
-- Blog post
+- [blog](/en/blog/)
+- [blog](/en/blog/ccc-certification-explained/)
+- [blog](/en/blog/china-import-compliance-guide/)
+- [blog](/en/blog/china-label-compliance/)
+- [blog](/en/blog/china-trademark-registration/)
+- [blog](/en/blog/cosmetics-nmpa-filing/)
+- [blog](/en/blog/cross-border-ecommerce-china/)
+- [blog](/en/blog/gacc-registration-guide/)
 
-## Compliance Tools
+## C
 
-- [GACC Registration Check](https://sinotradecompliance.com/c/check/gacc/)
-- [CCC Certification Check](https://sinotradecompliance.com/c/check/ccc/)
-- [NMPA Cosmetics Check](https://sinotradecompliance.com/c/check/cosmetics/)
+- [c](/en/c/)
+- [c](/en/c/check/ccc/)
+- [c](/en/c/check/crossborder/)
+- [c](/en/c/check/gacc/)
+- [c](/en/c/check/label/)
+- [c](/en/c/check/nmpa/)
+- [c](/en/c/check/trademark/)
+- [c](/en/c/pricing/)
+
+## Faq
+
+- [faq](/en/faq/)
+
+## Industries
+
+- [industries](/en/industries/)
+- [industries](/en/industries/baby-maternal/)
+- [industries](/en/industries/consumer-electronics/)
+- [industries](/en/industries/cross-border-ecommerce/)
+- [industries](/en/industries/dairy-milk-products/)
+- [industries](/en/industries/health-supplements/)
+- [industries](/en/industries/meat-seafood/)
+- [industries](/en/industries/medical-devices/)
+- [industries](/en/industries/pet-food/)
+- [industries](/en/industries/skincare-cosmetics/)
+- [industries](/en/industries/wine-spirits/)
+
+## Packages
+
+- [packages](/en/packages/)
+
+## Privacy
+
+- [privacy](/en/privacy/)
+
+## Quote
+
+- [quote](/en/quote/)
+
+## Services
+
+- [Services](/en/services/)
+- [Services](/en/services/brand/)
+- [Services](/en/services/ccc/)
+- [Services](/en/services/cosmetics/)
+- [Services](/en/services/ecommerce/)
+- [Services](/en/services/gacc/)
+- [Services](/en/services/label/)
 
 ## Key Content
 
-- Home.heroTitle: China Compliance Self-Check
 - Home.heroTitle: China Compliance for Your Brand
-- Home.heroSubtitle: Find out in 3 steps what compliance requirements apply to your product before exporting to China.
 - Home.heroSubtitle: One-stop import regulatory services for food, cosmetics, electronics, and more. Trusted by exporters in 50+ countries with 15+ years of expertise.
-- About.title: About SinoTrade Compliance
+- Home.heroCta: Get Free Assessment
+- Home.heroExplore: Explore Services
+- Home.servicesTitle: Comprehensive Compliance Services
+- Home.servicesSubtitle: End-to-end regulatory support for brands entering the Chinese market.
+- Home.whyTitle: Why Choose SinoTrade Compliance
+- Home.whySubtitle: Your trusted partner for navigating China's import regulations.
+- Home.whyCard1Title: Full Category Coverage
+- Home.whyCard1Desc: From food and cosmetics to electronics and textiles — we cover every compliance need under one roof.
+- Home.whyCard2Title: One-Stop Service
+- Home.whyCard2Desc: Registration, labeling, certification, trademark, e-commerce — one team handles it all.
+- Home.whyCard3Title: Fixed Fee Pricing
+- Home.whyCard3Desc: Transparent pricing with no hidden costs. You always know what you're paying for.
+- Home.whyCard4Title: Expert Team
 
 ## Languages
 

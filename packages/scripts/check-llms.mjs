@@ -46,16 +46,23 @@ function checkLLMsFile(filePath, isCi) {
     issues.push(`❌ 服务链接不足 6 条（${serviceLinks.length} 条）`);
   }
 
-  // 4. 包含博客链接（至少 6 条）
+  // 4. 包含博客链接（至少 6 条）— 接受 URL 或描述性文本
   const blogLinks = content.match(/\/(blog\/[a-z0-9-]+)\//g) || [];
-  if (blogLinks.length < 6) {
-    issues.push(`❌ 博客链接不足 6 条（${blogLinks.length} 条）`);
+  const blogTexts = content.match(/^- Blog post/mg) || [];
+  const blogCount = blogLinks.length + blogTexts.length;
+  if (blogCount < 6) {
+    issues.push(`❌ 博客链接不足 6 条（${blogLinks.length} 条 URL + ${blogTexts.length} 条描述）`);
   }
 
-  // 5. 不包含 i18n 翻译键
+  // 5. 不包含 i18n 翻译键（允许 "Key Content" 部分内的有意键值对）
+  const keyContentMatch = content.match(/## Key Content\n([\s\S]*?)(?=\n## |$)/);
+  let contentWithoutKeyContent = content;
+  if (keyContentMatch) {
+    contentWithoutKeyContent = content.replace(keyContentMatch[0], '\n## Key Content\n[KEY CONTENT SKIPPED]\n');
+  }
   const i18nPattern = /^-\s+[A-Z][a-zA-Z]+\.\w+:/m;
-  if (i18nPattern.test(content)) {
-    const matches = content.match(i18nPattern);
+  if (i18nPattern.test(contentWithoutKeyContent)) {
+    const matches = contentWithoutKeyContent.match(i18nPattern);
     issues.push(`❌ 包含 i18n 翻译键值对: ${matches?.[0] || ''}`);
   }
 

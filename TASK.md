@@ -64,14 +64,17 @@
 - [x] 组件代码硬编码（659条）仍然阻塞 CI
 - [ ] 待部署后验证 CI 通过
 
-### T8 — 翻译任务提交 (2026-06-14) 🟡
-- [x] 翻译工具 SOP 读取完成
-- [x] 翻译任务已提交: gacc-cat-labels-v2
-- [x] 19 个 key × 47 目标语言
-- [x] 包含: gaccCat_*_label (16个) + noReportId + backToHome + notFoundDesc
-- [x] zh 已完成手动翻译（15个 gaccCat_*_label + 3个新key）
-- [ ] 等待翻译完成，取回结果后填入各语言文件
-- [ ] 取回: translate-tool results -n gacc-cat-labels-v2 -o ./results.json
+### T8 — 翻译任务完成 (2026-06-15) ✅
+- [x] 清理 55 个重复翻译任务，保留最新完成的 4 个 done 任务
+- [x] 取回 portal-translation-fix-20260614 结果：19 key × 47 语言
+- [x] 已应用到 48 个语言文件（47 目标语言 + en 原文）
+- [x] 翻译内容: gaccCat_*_label (15个) + backToHome + notFoundDesc + noReportId
+- [x] 各语言文件中的 Check.gaccCat_*_label 已有翻译值
+
+### T6 — 部署上线 (2026-06-15) 🟡
+- [x] 代码已提交并推送到 GitHub
+- [x] CF Pages 自动构建触发
+- [ ] 等待构建完成后验证线上翻译效果
 
 ### T9 — 浏览器验证 (2026-06-14) ⬜
 - [ ] 逐个验证8个问题的修复效果
@@ -92,6 +95,6 @@
 - [ ] Email 报告发送流程完善
 
 ### P3 — 48 语言翻译填充
-- [ ] Portal Check 命名空间 48 语言翻译
+- [x] Portal Check 命名空间 gaccCat_*_label + report 错误信息 48 语言翻译 ✅
 - [ ] Portal Home / Pricing / Auth 翻译补齐
 - [ ] check-translations.mjs 全面跑通无报错

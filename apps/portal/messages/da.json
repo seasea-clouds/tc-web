@@ -1075,7 +1075,8 @@
     "gaccCat_seasoning_label": "Krydderier/krydderier (HS 21.03)",
     "gaccCat_nuts_label": "Nødder/tørrede frugter (HS 08)",
     "gaccCat_other_label": "Andre fødevarer",
-    "gaccCat_classification_label": ""
+    "gaccCat_classification_label": "",
+    "backToHome": "Tilbage til Hjemmet"
   },
   "Report": {
     "loadingTitle": "Indlæser din rapport",

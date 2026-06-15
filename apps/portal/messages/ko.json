@@ -1075,7 +1075,8 @@
     "gaccCat_seasoning_label": "조미료/조미료 (HS 21.03)",
     "gaccCat_nuts_label": "견과류 / 말린 과일 (HS 08)",
     "gaccCat_other_label": "기타 식품",
-    "gaccCat_classification_label": ""
+    "gaccCat_classification_label": "",
+    "backToHome": "홈으로 돌아가기"
   },
   "Report": {
     "loadingTitle": "보고서 로드 중",

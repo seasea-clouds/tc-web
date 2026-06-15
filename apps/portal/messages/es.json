@@ -1075,7 +1075,8 @@
     "gaccCat_seasoning_label": "Condimentos / Condimentos (SA 21.03)",
     "gaccCat_nuts_label": "Nueces y frutos secos (SA 08)",
     "gaccCat_other_label": "Otros productos alimenticios",
-    "gaccCat_classification_label": ""
+    "gaccCat_classification_label": "",
+    "backToHome": "Volver a Inicio"
   },
   "Report": {
     "loadingTitle": "Cargando su informe",

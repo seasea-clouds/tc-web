@@ -1075,7 +1075,8 @@
     "gaccCat_seasoning_label": "Temperos / Condimentos (HS 21.03)",
     "gaccCat_nuts_label": "Nozes / Frutas Secas (HS 08)",
     "gaccCat_other_label": "Outros produtos alimentares",
-    "gaccCat_classification_label": ""
+    "gaccCat_classification_label": "",
+    "backToHome": "De volta para casa"
   },
   "Report": {
     "loadingTitle": "Carregando seu relatório",

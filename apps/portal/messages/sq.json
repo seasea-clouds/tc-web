@@ -1075,7 +1075,8 @@
     "gaccCat_seasoning_label": "Erëza / erëza (HS 21.03)",
     "gaccCat_nuts_label": "Arra / Fruta të thata (HS 08)",
     "gaccCat_other_label": "Produkte të tjera ushqimore",
-    "gaccCat_classification_label": ""
+    "gaccCat_classification_label": "",
+    "backToHome": "Kthehu në shtëpi"
   },
   "Report": {
     "loadingTitle": "Duke ngarkuar raportin tuaj",

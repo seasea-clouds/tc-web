@@ -1075,7 +1075,8 @@
     "gaccCat_seasoning_label": "Прыправы / прыправы (HS 21.03)",
     "gaccCat_nuts_label": "Арэхі / Сухафрукты (HS 08)",
     "gaccCat_other_label": "Іншыя харчовыя прадукты",
-    "gaccCat_classification_label": ""
+    "gaccCat_classification_label": "",
+    "backToHome": "Назад дадому"
   },
   "Report": {
     "loadingTitle": "Загрузка вашай справаздачы",

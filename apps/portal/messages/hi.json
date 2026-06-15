@@ -1075,7 +1075,8 @@
     "gaccCat_seasoning_label": "मसाले/मसाले (एचएस 21.03)",
     "gaccCat_nuts_label": "मेवे/सूखे फल (एचएस 08)",
     "gaccCat_other_label": "अन्य खाद्य उत्पाद",
-    "gaccCat_classification_label": ""
+    "gaccCat_classification_label": "",
+    "backToHome": "घर वापिस जा रहा हूँ"
   },
   "Report": {
     "loadingTitle": "आपकी रिपोर्ट लोड हो रही है",

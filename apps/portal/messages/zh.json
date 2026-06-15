@@ -1075,7 +1075,8 @@
     "gaccCat_seasoning_label": "调味料/调味品（HS 21.03）",
     "gaccCat_nuts_label": "坚果/干果 (HS 08)",
     "gaccCat_other_label": "其他食品",
-    "gaccCat_classification_label": "分类"
+    "gaccCat_classification_label": "分类",
+    "backToHome": "返回首页"
   },
   "Report": {
     "loadingTitle": "加载您的报告",

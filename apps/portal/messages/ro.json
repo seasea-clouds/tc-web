@@ -1075,7 +1075,8 @@
     "gaccCat_seasoning_label": "Condimente / Condimente (HS 21.03)",
     "gaccCat_nuts_label": "Nuci/Fructe uscate (HS 08)",
     "gaccCat_other_label": "Alte produse alimentare",
-    "gaccCat_classification_label": ""
+    "gaccCat_classification_label": "",
+    "backToHome": "Înapoi la Acasă"
   },
   "Report": {
     "loadingTitle": "Se încarcă raportul dvs",

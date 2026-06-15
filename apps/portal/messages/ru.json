@@ -1075,7 +1075,8 @@
     "gaccCat_seasoning_label": "Приправы/приправы (ГС 21.03)",
     "gaccCat_nuts_label": "Орехи/сухофрукты (HS 08)",
     "gaccCat_other_label": "Другие пищевые продукты",
-    "gaccCat_classification_label": ""
+    "gaccCat_classification_label": "",
+    "backToHome": "Вернуться домой"
   },
   "Report": {
     "loadingTitle": "Загрузка вашего отчета",

@@ -1075,7 +1075,8 @@
     "gaccCat_seasoning_label": "Przyprawy / Przyprawy (HS 21.03)",
     "gaccCat_nuts_label": "Orzechy / Suszone Owoce (HS 08)",
     "gaccCat_other_label": "Inne produkty spożywcze",
-    "gaccCat_classification_label": ""
+    "gaccCat_classification_label": "",
+    "backToHome": "Powrót do domu"
   },
   "Report": {
     "loadingTitle": "Ładowanie raportu",

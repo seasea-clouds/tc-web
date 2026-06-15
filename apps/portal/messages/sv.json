@@ -1075,7 +1075,8 @@
     "gaccCat_seasoning_label": "Kryddor/smaktillsatser (HS 21.03)",
     "gaccCat_nuts_label": "Nötter / torkad frukt (HS 08)",
     "gaccCat_other_label": "Andra livsmedelsprodukter",
-    "gaccCat_classification_label": ""
+    "gaccCat_classification_label": "",
+    "backToHome": "Tillbaka till hemmet"
   },
   "Report": {
     "loadingTitle": "Laddar din rapport",

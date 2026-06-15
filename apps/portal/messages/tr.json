@@ -1075,7 +1075,8 @@
     "gaccCat_seasoning_label": "Baharatlar / Çeşniler (HS 21.03)",
     "gaccCat_nuts_label": "Kuruyemiş / Kuru Meyveler (HS 08)",
     "gaccCat_other_label": "Diğer Gıda Ürünleri",
-    "gaccCat_classification_label": ""
+    "gaccCat_classification_label": "",
+    "backToHome": "Ana Sayfaya Geri Dön"
   },
   "Report": {
     "loadingTitle": "Raporunuzu Yükleme",

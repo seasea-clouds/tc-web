@@ -1075,7 +1075,8 @@
     "gaccCat_seasoning_label": "เครื่องปรุงรส / เครื่องปรุงรส (HS 21.03)",
     "gaccCat_nuts_label": "ถั่ว/ผลไม้แห้ง (HS 08)",
     "gaccCat_other_label": "ผลิตภัณฑ์อาหารอื่นๆ",
-    "gaccCat_classification_label": ""
+    "gaccCat_classification_label": "",
+    "backToHome": "กลับไปที่บ้าน"
   },
   "Report": {
     "loadingTitle": "กำลังโหลดรายงานของคุณ",

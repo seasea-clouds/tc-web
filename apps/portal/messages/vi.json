@@ -1075,7 +1075,8 @@
     "gaccCat_seasoning_label": "Gia vị/Gia vị (HS 21.03)",
     "gaccCat_nuts_label": "Các loại hạt/Trái cây sấy khô (HS 08)",
     "gaccCat_other_label": "Sản phẩm thực phẩm khác",
-    "gaccCat_classification_label": ""
+    "gaccCat_classification_label": "",
+    "backToHome": "Quay lại trang chủ"
   },
   "Report": {
     "loadingTitle": "Đang tải báo cáo của bạn",

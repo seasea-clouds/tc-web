@@ -1075,7 +1075,8 @@
     "gaccCat_seasoning_label": "Začimbe / dišave (HS 21.03)",
     "gaccCat_nuts_label": "Oreščki / Suho sadje (HS 08)",
     "gaccCat_other_label": "Drugi živilski izdelki",
-    "gaccCat_classification_label": ""
+    "gaccCat_classification_label": "",
+    "backToHome": "Nazaj na dom"
   },
   "Report": {
     "loadingTitle": "Nalaganje vašega poročila",

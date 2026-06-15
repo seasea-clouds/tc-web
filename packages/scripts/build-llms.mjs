@@ -249,8 +249,7 @@ export function buildLLMs(baseUrl, outDir) {
     perLocale[locale] = content;
   }
 
-  // 生成 llms.txt（全量聚合 - 用英文作为主索引）
-  // 去掉重复内容，只保留索引 + 英文版
+  // 写入 llms.txt（全量聚合 - 用英文作为主索引）
   let fullContent = `# SinoTrade Compliance - English
 
 > SinoTrade Compliance provides one-stop regulatory consulting services for China market entry.
@@ -263,26 +262,17 @@ export function buildLLMs(baseUrl, outDir) {
   }
   fullContent += '\n---\n\n';
   fullContent += perLocale['en'];
-
-  // 写入 llms.txt（全量聚合）
   fs.writeFileSync(path.join(outDir, 'llms.txt'), fullContent, 'utf-8');
   console.log(`✅ llms.txt (${(fullContent.length / 1024).toFixed(0)}KB)`);
 
-  // 写入 llms-{locale}.txt（各语言独立文件）
+  // 写入 llms-{locale}.txt（各语言独立文件，末尾加反向链接）
   for (const [locale, content] of Object.entries(perLocale)) {
+    // 在末尾追加反向导航：指向 llms.txt 和同目录其他语言
+    const reverseNav = `\n---\n\n## Other Languages\n\n- [llms.txt index](llms.txt)\n`;
     const filePath = path.join(outDir, `llms-${locale}.txt`);
-    fs.writeFileSync(filePath, content, 'utf-8');
+    fs.writeFileSync(filePath, content + reverseNav, 'utf-8');
   }
   console.log(`✅ ${Object.keys(perLocale).length} llms-{locale}.txt files written`);
-
-  // 写入 llms-full.txt（所有语言的完整内容聚合）
-  let fullAggregate = '';
-  for (const [locale, content] of Object.entries(perLocale)) {
-    fullAggregate += `## ${locale}\n\n${content}\n\n---\n\n`;
-  }
-  const fullPath = path.join(outDir, 'llms-full.txt');
-  fs.writeFileSync(fullPath, fullAggregate, 'utf-8');
-  console.log(`✅ llms-full.txt (${(fullAggregate.length / 1024).toFixed(0)}KB)`);
 }
 
 function parseArgs() {

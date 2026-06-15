@@ -157,7 +157,7 @@ function scanDirectory(outDir) {
   walk(outDir);
 
   console.log('\n🗺️  检查 Sitemap...');
-  const sitemaps = fs.readdirSync(outDir).filter(f => /^sitemap-.+\.xml$/.test(f) && f !== 'sitemap-images.xml' && f !== 'sitemap-pages.xml');
+  const sitemaps = fs.readdirSync(outDir).filter(f => /^sitemap-.+\.xml$/.test(f) && f !== 'sitemap-images.xml');
   for (const sitemap of sitemaps) {
     checkSitemap(path.join(outDir, sitemap));
   }

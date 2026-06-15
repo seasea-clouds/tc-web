@@ -95,8 +95,8 @@
 - [China Label Compliance](/en/blog/china-label-compliance/)
 - [China Trademark Registration](/en/blog/china-trademark-registration/)
 - [Cosmetics Nmpa Filing](/en/blog/cosmetics-nmpa-filing/)
-- [Cross Border Ecommerce China](/en/blog/cross-border-ecommerce-china/)
-- [Gacc Registration Guide](/en/blog/gacc-registration-guide/)
+- [Cross-Border E-Commerce in China](/en/blog/cross-border-ecommerce-china/)
+- [GACC Registration Guide](/en/blog/gacc-registration-guide/)
 
 ## FAQ
 
@@ -127,21 +127,21 @@
 
 ## Key Content
 
-- Home.heroTitle: China Compliance for Your Brand
-- Home.heroSubtitle: One-stop import regulatory services for food, cosmetics, electronics, and more. Trusted by exporters in 50+ countries with 15+ years of expertise.
-- Home.heroCta: Get Free Assessment
-- Home.heroExplore: Explore Services
-- Home.servicesTitle: Comprehensive Compliance Services
-- Home.servicesSubtitle: End-to-end regulatory support for brands entering the Chinese market.
-- Home.whyTitle: Why Choose SinoTrade Compliance
-- Home.whySubtitle: Your trusted partner for navigating China's import regulations.
-- Home.whyCard1Title: Full Category Coverage
-- Home.whyCard1Desc: From food and cosmetics to electronics and textiles — we cover every compliance need under one roof.
-- Home.whyCard2Title: One-Stop Service
-- Home.whyCard2Desc: Registration, labeling, certification, trademark, e-commerce — one team handles it all.
-- Home.whyCard3Title: Fixed Fee Pricing
-- Home.whyCard3Desc: Transparent pricing with no hidden costs. You always know what you're paying for.
-- Home.whyCard4Title: Expert Team
+- China Compliance for Your Brand
+- One-stop import regulatory services for food, cosmetics, electronics, and more. Trusted by exporters in 50+ countries with 15+ years of expertise.
+- Get Free Assessment
+- Explore Services
+- Comprehensive Compliance Services
+- End-to-end regulatory support for brands entering the Chinese market.
+- Why Choose SinoTrade Compliance
+- Your trusted partner for navigating China's import regulations.
+- Full Category Coverage
+- From food and cosmetics to electronics and textiles — we cover every compliance need under one roof.
+- One-Stop Service
+- Registration, labeling, certification, trademark, e-commerce — one team handles it all.
+- Fixed Fee Pricing
+- Transparent pricing with no hidden costs. You always know what you're paying for.
+- Expert Team
 
 ## Languages
 

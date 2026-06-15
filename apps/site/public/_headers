@@ -1,14 +1,11 @@
 /*
   X-Content-Type-Options: nosniff
   Strict-Transport-Security: max-age=31536000; includeSubDomains
-
-/
   Link: </llms.txt>; rel="alternate"; type="text/markdown"; title="LLM Sitemap"
   Link: </llms-full.txt>; rel="alternate"; type="text/markdown"; title="Full Service Guide"
   Link: </sitemap.xml>; rel="sitemap"; type="application/xml"; title="XML Sitemap"
   Link: </.well-known/agent-skills/index.json>; rel="service-desc"; type="application/json"; title="Agent Skills"
   Link: </.well-known/agent-skills/index.json>; rel="skills"; type="application/json"
-  Link: </.well-known/api-catalog>; rel="api-catalog"; type="application/linkset+json"; title="API Catalog"
 
 /sitemap*.xml
   Cache-Control: no-cache, s-maxage=0

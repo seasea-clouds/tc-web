@@ -55,103 +55,142 @@
 
 ---
 
-# SinoTrade Compliance - en
+# SinoTrade Compliance - English
 
-> SinoTrade Compliance provides one-stop regulatory consulting services for China market entry — GACC registration, Chinese labeling, CCC certification, NMPA cosmetics filing, cross-border e-commerce, and brand protection.
+> SinoTrade Compliance provides one-stop regulatory consulting services for China market entry.
+
+## About
+
+- [About](/en/about/)
 
 ## Services
 
-- [GACC](https://sinotradecompliance.com/services/gacc/)
-- [Label](https://sinotradecompliance.com/services/label/)
-- [CCC](https://sinotradecompliance.com/services/ccc/)
-- [Cosmetics](https://sinotradecompliance.com/services/cosmetics/)
-- [Ecommerce](https://sinotradecompliance.com/services/ecommerce/)
-- [Brand](https://sinotradecompliance.com/services/brand/)
+- [Comprehensive Compliance Services](/en/services/)
+- [Brand Protection](/en/services/brand/)
+- [CCC Certification](/en/services/ccc/)
+- [NMPA Cosmetics Filing](/en/services/cosmetics/)
+- [Cross-border E-commerce](/en/services/ecommerce/)
+- [GACC Registration](/en/services/gacc/)
+- [Chinese Label Compliance](/en/services/label/)
 
 ## Industries
 
-- Dairy & Milk
-- Meat & Seafood
-- Wine & Spirits
-- Skincare & Cosmetics
-- Pet Food
-- Health Supplements
-- Baby & Maternal
-- Consumer Electronics
-- Medical Devices
-- Cross-border E-commerce
+- [Industries](/en/industries/)
+- [Baby maternal](/en/industries/baby-maternal/)
+- [Consumer electronics](/en/industries/consumer-electronics/)
+- [Cross border ecommerce](/en/industries/cross-border-ecommerce/)
+- [Dairy milk products](/en/industries/dairy-milk-products/)
+- [Health supplements](/en/industries/health-supplements/)
+- [Meat seafood](/en/industries/meat-seafood/)
+- [Medical devices](/en/industries/medical-devices/)
+- [Pet food](/en/industries/pet-food/)
+- [Skincare cosmetics](/en/industries/skincare-cosmetics/)
+- [Wine spirits](/en/industries/wine-spirits/)
 
 ## Blog
 
-- Blog post
-- Blog post
-- Blog post
-- Blog post
-- Blog post
-- Blog post
+- [Insights & Compliance Guides](/en/blog/)
+- [Ccc Certification Explained](/en/blog/ccc-certification-explained/)
+- [China Import Compliance Guide](/en/blog/china-import-compliance-guide/)
+- [China Label Compliance](/en/blog/china-label-compliance/)
+- [China Trademark Registration](/en/blog/china-trademark-registration/)
+- [Cosmetics Nmpa Filing](/en/blog/cosmetics-nmpa-filing/)
+- [Cross Border Ecommerce China](/en/blog/cross-border-ecommerce-china/)
+- [Gacc Registration Guide](/en/blog/gacc-registration-guide/)
 
-## Compliance Tools
+## FAQ
 
-- [GACC Registration Check](https://sinotradecompliance.com/c/check/gacc/)
-- [CCC Certification Check](https://sinotradecompliance.com/c/check/ccc/)
-- [NMPA Cosmetics Check](https://sinotradecompliance.com/c/check/cosmetics/)
+- [Faq](/en/faq/)
+
+## Get a Quote
+
+- [Quote](/en/quote/)
+
+## Check & Report
+
+- [Portal](/en/c/)
+- [Compliance Check](/en/c/check/ccc/)
+- [Compliance Check](/en/c/check/crossborder/)
+- [Compliance Check](/en/c/check/gacc/)
+- [Compliance Check](/en/c/check/label/)
+- [Compliance Check](/en/c/check/nmpa/)
+- [Compliance Check](/en/c/check/trademark/)
+- [Portal](/en/c/pricing/)
+
+## Packages
+
+- [Packages](/en/packages/)
+
+## Privacy Policy
+
+- [Privacy Policy](/en/privacy/)
 
 ## Key Content
 
-- Home.heroTitle: China Compliance Self-Check
 - Home.heroTitle: China Compliance for Your Brand
-- Home.heroSubtitle: Find out in 3 steps what compliance requirements apply to your product before exporting to China.
 - Home.heroSubtitle: One-stop import regulatory services for food, cosmetics, electronics, and more. Trusted by exporters in 50+ countries with 15+ years of expertise.
-- About.title: About SinoTrade Compliance
+- Home.heroCta: Get Free Assessment
+- Home.heroExplore: Explore Services
+- Home.servicesTitle: Comprehensive Compliance Services
+- Home.servicesSubtitle: End-to-end regulatory support for brands entering the Chinese market.
+- Home.whyTitle: Why Choose SinoTrade Compliance
+- Home.whySubtitle: Your trusted partner for navigating China's import regulations.
+- Home.whyCard1Title: Full Category Coverage
+- Home.whyCard1Desc: From food and cosmetics to electronics and textiles — we cover every compliance need under one roof.
+- Home.whyCard2Title: One-Stop Service
+- Home.whyCard2Desc: Registration, labeling, certification, trademark, e-commerce — one team handles it all.
+- Home.whyCard3Title: Fixed Fee Pricing
+- Home.whyCard3Desc: Transparent pricing with no hidden costs. You always know what you're paying for.
+- Home.whyCard4Title: Expert Team
 
 ## Languages
 
-[en] https://sinotradecompliance.com/en/
-[zh] https://sinotradecompliance.com/zh/
-[es] https://sinotradecompliance.com/es/
-[fr] https://sinotradecompliance.com/fr/
-[de] https://sinotradecompliance.com/de/
-[ja] https://sinotradecompliance.com/ja/
-[pt] https://sinotradecompliance.com/pt/
-[ru] https://sinotradecompliance.com/ru/
-[ar] https://sinotradecompliance.com/ar/
-[ko] https://sinotradecompliance.com/ko/
-[it] https://sinotradecompliance.com/it/
-[nl] https://sinotradecompliance.com/nl/
-[tr] https://sinotradecompliance.com/tr/
-[vi] https://sinotradecompliance.com/vi/
-[id] https://sinotradecompliance.com/id/
-[th] https://sinotradecompliance.com/th/
-[hi] https://sinotradecompliance.com/hi/
-[pl] https://sinotradecompliance.com/pl/
-[sv] https://sinotradecompliance.com/sv/
-[el] https://sinotradecompliance.com/el/
-[cs] https://sinotradecompliance.com/cs/
-[ro] https://sinotradecompliance.com/ro/
-[hu] https://sinotradecompliance.com/hu/
-[fi] https://sinotradecompliance.com/fi/
-[da] https://sinotradecompliance.com/da/
-[no] https://sinotradecompliance.com/no/
-[uk] https://sinotradecompliance.com/uk/
-[bg] https://sinotradecompliance.com/bg/
-[hr] https://sinotradecompliance.com/hr/
-[sr] https://sinotradecompliance.com/sr/
-[sk] https://sinotradecompliance.com/sk/
-[sl] https://sinotradecompliance.com/sl/
-[ms] https://sinotradecompliance.com/ms/
-[ka] https://sinotradecompliance.com/ka/
-[he] https://sinotradecompliance.com/he/
-[sw] https://sinotradecompliance.com/sw/
-[bn] https://sinotradecompliance.com/bn/
-[ca] https://sinotradecompliance.com/ca/
-[fa] https://sinotradecompliance.com/fa/
-[ur] https://sinotradecompliance.com/ur/
-[ta] https://sinotradecompliance.com/ta/
-[af] https://sinotradecompliance.com/af/
-[sq] https://sinotradecompliance.com/sq/
-[az] https://sinotradecompliance.com/az/
-[hy] https://sinotradecompliance.com/hy/
-[be] https://sinotradecompliance.com/be/
-[ne] https://sinotradecompliance.com/ne/
-[si] https://sinotradecompliance.com/si/
+- [en](https://sinotradecompliance.com/en/)
+- [zh](https://sinotradecompliance.com/zh/)
+- [es](https://sinotradecompliance.com/es/)
+- [fr](https://sinotradecompliance.com/fr/)
+- [de](https://sinotradecompliance.com/de/)
+- [ja](https://sinotradecompliance.com/ja/)
+- [pt](https://sinotradecompliance.com/pt/)
+- [ru](https://sinotradecompliance.com/ru/)
+- [ar](https://sinotradecompliance.com/ar/)
+- [ko](https://sinotradecompliance.com/ko/)
+- [it](https://sinotradecompliance.com/it/)
+- [nl](https://sinotradecompliance.com/nl/)
+- [tr](https://sinotradecompliance.com/tr/)
+- [vi](https://sinotradecompliance.com/vi/)
+- [id](https://sinotradecompliance.com/id/)
+- [th](https://sinotradecompliance.com/th/)
+- [hi](https://sinotradecompliance.com/hi/)
+- [pl](https://sinotradecompliance.com/pl/)
+- [sv](https://sinotradecompliance.com/sv/)
+- [el](https://sinotradecompliance.com/el/)
+- [cs](https://sinotradecompliance.com/cs/)
+- [ro](https://sinotradecompliance.com/ro/)
+- [hu](https://sinotradecompliance.com/hu/)
+- [fi](https://sinotradecompliance.com/fi/)
+- [da](https://sinotradecompliance.com/da/)
+- [no](https://sinotradecompliance.com/no/)
+- [uk](https://sinotradecompliance.com/uk/)
+- [bg](https://sinotradecompliance.com/bg/)
+- [hr](https://sinotradecompliance.com/hr/)
+- [sr](https://sinotradecompliance.com/sr/)
+- [sk](https://sinotradecompliance.com/sk/)
+- [sl](https://sinotradecompliance.com/sl/)
+- [ms](https://sinotradecompliance.com/ms/)
+- [ka](https://sinotradecompliance.com/ka/)
+- [he](https://sinotradecompliance.com/he/)
+- [sw](https://sinotradecompliance.com/sw/)
+- [bn](https://sinotradecompliance.com/bn/)
+- [ca](https://sinotradecompliance.com/ca/)
+- [fa](https://sinotradecompliance.com/fa/)
+- [ur](https://sinotradecompliance.com/ur/)
+- [ta](https://sinotradecompliance.com/ta/)
+- [af](https://sinotradecompliance.com/af/)
+- [sq](https://sinotradecompliance.com/sq/)
+- [az](https://sinotradecompliance.com/az/)
+- [hy](https://sinotradecompliance.com/hy/)
+- [be](https://sinotradecompliance.com/be/)
+- [ne](https://sinotradecompliance.com/ne/)
+- [si](https://sinotradecompliance.com/si/)
 

@@ -126,7 +126,7 @@ export default async function ThankYouPage({ params }: { params: Promise<{ local
                           {post.category}
                         </span>
                         <time dateTime={post.date}>{post.date}</time>
-                        <span>{post.readTime} {t('readTime')}</span>
+
                       </div>
                     </div>
                     <span className="text-[#B8960C] group-hover:translate-x-1 transition-transform shrink-0 mt-1">

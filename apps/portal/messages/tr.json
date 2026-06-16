@@ -1447,5 +1447,8 @@
     "squattingRiskLabel": "Risk",
     "valueHigh": "Yüksek",
     "labelMandatoryFields": "Zorunlu Alanlar"
+  },
+  "Navbar": {
+    "selfCheck": "Kendi Kendine Kontrol"
   }
 }

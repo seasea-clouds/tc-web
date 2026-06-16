@@ -1447,5 +1447,8 @@
     "squattingRiskLabel": "Risc",
     "valueHigh": "Ridicat",
     "labelMandatoryFields": "Câmpuri obligatorii"
+  },
+  "Navbar": {
+    "selfCheck": "Autoevaluare"
   }
 }

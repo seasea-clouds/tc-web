@@ -76,7 +76,9 @@
     "subscription": "Subscription",
     "settings": "Settings",
     "viewReportsDesc": "View your compliance reports",
-    "manageSubscriptionDesc": "Manage your subscription"
+    "manageSubscriptionDesc": "Manage your subscription",
+    "youAreOnFreePlan": "You are currently on the Free plan.",
+    "viewPricing": "View Pricing"
   },
   "Pricing": {
     "title": "Simple Pricing",
@@ -263,7 +265,7 @@
     "primaryNiceClass": "Primary Nice Class",
     "notSure": "Not sure",
     "registeredInChina": "Registered in China",
-    "productNamePlaceholder": "e.g., Cabernet Sauvignon Red Wine",
+    "productNamePlaceholder": "e.g., Product Name",
     "countryPlaceholder": "e.g., France",
     "hsCodePlaceholder": "e.g., 2204.10",
     "manufacturerPlaceholder": "e.g., Bordeaux Wine Co.",
@@ -1076,7 +1078,13 @@
     "gaccCat_nuts_label": "Nuts / Dried Fruits (HS 08)",
     "gaccCat_other_label": "Other Food Products",
     "gaccCat_classification_label": "Classification",
-    "noReportId": "No report ID provided"
+    "noReportId": "No report ID provided",
+    "gaccProductNamePlaceholder": "e.g., Cabernet Sauvignon Red Wine",
+    "labelProductNamePlaceholder": "e.g., Premium Green Tea 500g",
+    "cccProductNamePlaceholder": "e.g., Smart LED Desk Lamp",
+    "nmpaProductNamePlaceholder": "e.g., Hyaluronic Acid Serum",
+    "crossborderProductNamePlaceholder": "e.g., Organic Matcha Powder",
+    "trademarkProductNamePlaceholder": "e.g., Premium Skincare Line"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",
@@ -1106,7 +1114,6 @@
     "moreSettingsSoon": "More settings coming soon.",
     "registeredUser": "Registered user",
     "periodEnds": "Period ends",
-    "youAreOnFreePlan": "You are currently on the Free plan.",
     "noReportId": "No report ID provided",
     "backToHome": "Back to Home"
   },
@@ -1447,5 +1454,8 @@
     "squattingOfForeignBrandsSquatted": "of foreign brands squatted",
     "squattingRiskLabel": "Risk",
     "valueHigh": "High"
+  },
+  "Navbar": {
+    "selfCheck": "Self-Check"
   }
 }

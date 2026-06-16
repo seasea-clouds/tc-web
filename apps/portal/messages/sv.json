@@ -1447,5 +1447,8 @@
     "squattingRiskLabel": "Risk",
     "valueHigh": "Hög",
     "labelMandatoryFields": "Obligatoriska fält"
+  },
+  "Navbar": {
+    "selfCheck": "Självbedömning"
   }
 }

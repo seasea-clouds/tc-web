@@ -1447,5 +1447,8 @@
     "squattingRiskLabel": "לְהִסְתָכֵּן",
     "valueHigh": "גָבוֹהַ",
     "labelMandatoryFields": "שדות חובה"
+  },
+  "Navbar": {
+    "selfCheck": "בדיקה עצמית"
   }
 }

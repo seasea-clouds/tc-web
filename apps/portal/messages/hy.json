@@ -1447,5 +1447,8 @@
     "squattingRiskLabel": "Ռիսկ",
     "valueHigh": "Բարձր",
     "labelMandatoryFields": "Պարտադիր դաշտեր"
+  },
+  "Navbar": {
+    "selfCheck": "Ինքնագնահատում"
   }
 }

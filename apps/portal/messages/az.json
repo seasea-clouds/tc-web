@@ -1447,5 +1447,8 @@
     "squattingRiskLabel": "Risk",
     "valueHigh": "Yüksək",
     "labelMandatoryFields": "Məcburi Sahələr"
+  },
+  "Navbar": {
+    "selfCheck": "Özünü yoxlama"
   }
 }

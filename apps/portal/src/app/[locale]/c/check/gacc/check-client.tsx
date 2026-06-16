@@ -132,7 +132,7 @@ export default function GaccCheckClient() {
                 className="w-full border border-gray-300 rounded-md p-2.5 text-sm"
                 minLength={2}
                 required
-                placeholder={t('productNamePlaceholder')}
+                placeholder={t('gaccProductNamePlaceholder')}
                 value={input.productName ?? ""}
                 onChange={(e) => setInput({ ...input, productName: e.target.value })}
               />

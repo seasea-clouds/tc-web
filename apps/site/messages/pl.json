@@ -1337,5 +1337,8 @@
     "serviceLabel": "Zgodność chińskiej etykiety — projekt i przegląd etykiet zgodny z normami GB 7718 i GB 28050. Główny powód odmowy odprawy celnej w chińskich portach.",
     "serviceNMPA": "Zgłoszenie kosmetyków NMPA — rejestracja lub powiadomienie o kosmetykach w chińskiej Narodowej Administracji Produktów Medycznych. Wymagane w przypadku wszystkich importowanych produktów kosmetycznych.",
     "title": "Zgodność z przepisami SinoTrade — AI-Assistance (EN)"
+  },
+  "Navbar": {
+    "selfCheck": "Własna kontrola"
   }
 }

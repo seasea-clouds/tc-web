@@ -1447,5 +1447,8 @@
     "squattingRiskLabel": "위험",
     "valueHigh": "높은",
     "labelMandatoryFields": "필수 항목"
+  },
+  "Navbar": {
+    "selfCheck": "셀프 체크"
   }
 }

@@ -4,54 +4,54 @@
 
 Apps discovered: blog, portal, site
 Generating search index for 48 locales...
-  af: 984 items (6S + 7B + 39F + 932C)
-  ar: 984 items (6S + 7B + 39F + 932C)
-  az: 984 items (6S + 7B + 39F + 932C)
-  be: 984 items (6S + 7B + 39F + 932C)
-  bg: 984 items (6S + 7B + 39F + 932C)
-  bn: 984 items (6S + 7B + 39F + 932C)
-  ca: 984 items (6S + 7B + 39F + 932C)
-  cs: 984 items (6S + 7B + 39F + 932C)
-  da: 984 items (6S + 7B + 39F + 932C)
-  de: 984 items (6S + 7B + 39F + 932C)
-  el: 984 items (6S + 7B + 39F + 932C)
-  en: 984 items (6S + 7B + 39F + 932C)
-  es: 984 items (6S + 7B + 39F + 932C)
-  fa: 984 items (6S + 7B + 39F + 932C)
-  fi: 984 items (6S + 7B + 39F + 932C)
-  fr: 984 items (6S + 7B + 39F + 932C)
-  he: 984 items (6S + 7B + 39F + 932C)
-  hi: 984 items (6S + 7B + 39F + 932C)
-  hr: 984 items (6S + 7B + 39F + 932C)
-  hu: 984 items (6S + 7B + 39F + 932C)
-  hy: 984 items (6S + 7B + 39F + 932C)
-  id: 984 items (6S + 7B + 39F + 932C)
-  it: 984 items (6S + 7B + 39F + 932C)
-  ja: 984 items (6S + 7B + 39F + 932C)
-  ka: 984 items (6S + 7B + 39F + 932C)
-  ko: 984 items (6S + 7B + 39F + 932C)
-  ms: 984 items (6S + 7B + 39F + 932C)
-  ne: 984 items (6S + 7B + 39F + 932C)
-  nl: 984 items (6S + 7B + 39F + 932C)
-  no: 984 items (6S + 7B + 39F + 932C)
-  pl: 984 items (6S + 7B + 39F + 932C)
-  pt: 984 items (6S + 7B + 39F + 932C)
-  ro: 984 items (6S + 7B + 39F + 932C)
-  ru: 984 items (6S + 7B + 39F + 932C)
-  si: 984 items (6S + 7B + 39F + 932C)
-  sk: 984 items (6S + 7B + 39F + 932C)
-  sl: 984 items (6S + 7B + 39F + 932C)
-  sq: 984 items (6S + 7B + 39F + 932C)
-  sr: 984 items (6S + 7B + 39F + 932C)
-  sv: 984 items (6S + 7B + 39F + 932C)
-  sw: 984 items (6S + 7B + 39F + 932C)
-  ta: 984 items (6S + 7B + 39F + 932C)
-  th: 984 items (6S + 7B + 39F + 932C)
-  tr: 984 items (6S + 7B + 39F + 932C)
-  uk: 984 items (6S + 7B + 39F + 932C)
-  ur: 984 items (6S + 7B + 39F + 932C)
-  vi: 984 items (6S + 7B + 39F + 932C)
-  zh: 984 items (6S + 7B + 39F + 932C)
+  af: 1000 items (6S + 7B + 39F + 948C)
+  ar: 1000 items (6S + 7B + 39F + 948C)
+  az: 1000 items (6S + 7B + 39F + 948C)
+  be: 1000 items (6S + 7B + 39F + 948C)
+  bg: 1000 items (6S + 7B + 39F + 948C)
+  bn: 1000 items (6S + 7B + 39F + 948C)
+  ca: 1000 items (6S + 7B + 39F + 948C)
+  cs: 1000 items (6S + 7B + 39F + 948C)
+  da: 1000 items (6S + 7B + 39F + 948C)
+  de: 1006 items (6S + 7B + 39F + 954C)
+  el: 1000 items (6S + 7B + 39F + 948C)
+  en: 1006 items (6S + 7B + 39F + 954C)
+  es: 1000 items (6S + 7B + 39F + 948C)
+  fa: 1000 items (6S + 7B + 39F + 948C)
+  fi: 1000 items (6S + 7B + 39F + 948C)
+  fr: 1000 items (6S + 7B + 39F + 948C)
+  he: 1000 items (6S + 7B + 39F + 948C)
+  hi: 1000 items (6S + 7B + 39F + 948C)
+  hr: 1000 items (6S + 7B + 39F + 948C)
+  hu: 1000 items (6S + 7B + 39F + 948C)
+  hy: 1000 items (6S + 7B + 39F + 948C)
+  id: 1000 items (6S + 7B + 39F + 948C)
+  it: 1000 items (6S + 7B + 39F + 948C)
+  ja: 1007 items (6S + 7B + 39F + 955C)
+  ka: 1000 items (6S + 7B + 39F + 948C)
+  ko: 1000 items (6S + 7B + 39F + 948C)
+  ms: 1000 items (6S + 7B + 39F + 948C)
+  ne: 1000 items (6S + 7B + 39F + 948C)
+  nl: 1000 items (6S + 7B + 39F + 948C)
+  no: 1000 items (6S + 7B + 39F + 948C)
+  pl: 1000 items (6S + 7B + 39F + 948C)
+  pt: 1000 items (6S + 7B + 39F + 948C)
+  ro: 1000 items (6S + 7B + 39F + 948C)
+  ru: 1000 items (6S + 7B + 39F + 948C)
+  si: 1000 items (6S + 7B + 39F + 948C)
+  sk: 1000 items (6S + 7B + 39F + 948C)
+  sl: 1000 items (6S + 7B + 39F + 948C)
+  sq: 1000 items (6S + 7B + 39F + 948C)
+  sr: 1000 items (6S + 7B + 39F + 948C)
+  sv: 1000 items (6S + 7B + 39F + 948C)
+  sw: 1000 items (6S + 7B + 39F + 948C)
+  ta: 1000 items (6S + 7B + 39F + 948C)
+  th: 1000 items (6S + 7B + 39F + 948C)
+  tr: 1000 items (6S + 7B + 39F + 948C)
+  uk: 1000 items (6S + 7B + 39F + 948C)
+  ur: 1000 items (6S + 7B + 39F + 948C)
+  vi: 1000 items (6S + 7B + 39F + 948C)
+  zh: 1006 items (6S + 7B + 39F + 954C)
 Done.
 Attention: Next.js now collects completely anonymous telemetry regarding usage.
 This information is used to shape Next.js' roadmap and prioritize features.
@@ -61,15 +61,15 @@ https://nextjs.org/telemetry
 ▲ Next.js 16.2.6 (Turbopack)
 
   Creating an optimized production build ...
-✓ Compiled successfully in 2.1s
+✓ Compiled successfully in 2.3s
   Running TypeScript ...
-  Finished TypeScript in 2.4s ...
+  Finished TypeScript in 2.8s ...
   Collecting page data using 6 workers ...
   Generating static pages using 6 workers (0/434) ...
   Generating static pages using 6 workers (108/434) 
   Generating static pages using 6 workers (216/434) 
   Generating static pages using 6 workers (325/434) 
-✓ Generating static pages using 6 workers (434/434) in 2.3s
+✓ Generating static pages using 6 workers (434/434) in 2.2s
   Finalizing page optimization ...
 
 Route (app)
@@ -123,9 +123,9 @@ Route (app)
 ✅ No hardcoded English text found.
 
 ▶ check-console.mjs --ci
-📁 扫描 196 个文件
+📁 扫描 197 个文件
 ==================================================
-📊 结果: 206 通过, 0 失败
+📊 结果: 207 通过, 0 失败
 
 ✅ check-console.mjs 完成
 
@@ -143,9 +143,9 @@ Route (app)
 ✅ check-rtl.mjs 完成
 
 ▶ check-map-key.mjs --ci
-📁 扫描 164 个 TSX 文件
+📁 扫描 165 个 TSX 文件
 ==================================================
-📊 结果: 164 通过, 0 失败
+📊 结果: 165 通过, 0 失败
 
 ✅ check-map-key.mjs 完成
 
@@ -173,3 +173,28 @@ Route (app)
 🔍 SEO 输出检查: /root/projects/trade/web/apps/blog/out
 
 📄 扫描 HTML 页面...
+
+🗺️  检查 Sitemap...
+
+==================================================
+📊 结果: 240 通过, 0 失败
+
+✅ check-seo-output.mjs 完成
+
+▶ check-translations.mjs --short --skip-industry-meta --skip-portal-check
+
+⚠️ 发现 188 个问题
+   - 网站翻译质量: 188 个问题
+
+▶ clean-rsc.js out
+🧹 Cleaning RSC .txt payload files from out/...
+✅ Deleted 3751 RSC payload files (92.2 MB freed)
+(node:4062821) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/projects/trade/web/packages/scripts/clean-rsc.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /root/projects/trade/web/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+═══════════════════════════════════════════════
+✅ 全部检查通过
+═══════════════════════════════════════════════
+

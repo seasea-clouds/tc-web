@@ -1447,5 +1447,8 @@
     "squattingRiskLabel": "خطرہ",
     "valueHigh": "اعلی",
     "labelMandatoryFields": "لازمی فیلڈز"
+  },
+  "Navbar": {
+    "selfCheck": "خود جانچ"
   }
 }

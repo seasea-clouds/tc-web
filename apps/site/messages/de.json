@@ -1337,5 +1337,8 @@
     "serviceLabel": "Chinesische Etikettenkonformität – GB 7718- und GB 28050-konformes Etikettendesign und -prüfung. Der Hauptgrund für Zollablehnungen in chinesischen Häfen.",
     "serviceNMPA": "NMPA Cosmetics Filing – Registrierung oder Meldung von Kosmetika bei der China National Medical Products Administration. Erforderlich für alle importierten Kosmetikprodukte.",
     "title": "SinoTrade Compliance – AI-Assistance (DE)"
+  },
+  "Navbar": {
+    "selfCheck": "Selbstprüfung"
   }
 }

@@ -1447,5 +1447,8 @@
     "squattingRiskLabel": "Kockázat",
     "valueHigh": "Magas",
     "labelMandatoryFields": "Kötelező mezők"
+  },
+  "Navbar": {
+    "selfCheck": "Önértékelés"
   }
 }

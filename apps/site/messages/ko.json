@@ -1337,5 +1337,8 @@
     "serviceLabel": "중국 라벨 준수 - GB 7718 및 GB 28050 준수 라벨 디자인 및 검토. 중국항만 세관거부 이유 1위.",
     "serviceNMPA": "NMPA 화장품 등록 - 중국 국가 의약품 관리국에 화장품 등록 또는 통지. 모든 수입 화장품에 필수입니다.",
     "title": "SinoTrade 규정 준수 — AI 지원(EN)"
+  },
+  "Navbar": {
+    "selfCheck": "셀프 체크"
   }
 }

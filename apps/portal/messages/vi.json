@@ -1447,5 +1447,8 @@
     "squattingRiskLabel": "Rủi ro",
     "valueHigh": "Cao",
     "labelMandatoryFields": "Trường bắt buộc"
+  },
+  "Navbar": {
+    "selfCheck": "Tự đánh giá"
   }
 }

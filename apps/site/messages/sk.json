@@ -1337,5 +1337,8 @@
     "serviceLabel": "Súlad s čínskymi štítkami – dizajn a kontrola štítkov v súlade s GB 7718 a GB 28050. Dôvod číslo jedna na odmietnutie colných úradov v čínskych prístavoch.",
     "serviceNMPA": "NMPA Cosmetics Filing — Registrácia alebo oznámenie kozmetiky s China National Medical Products Administration. Vyžaduje sa pre všetky dovážané kozmetické výrobky.",
     "title": "Súlad SinoTrade – AI-Assistance (EN)"
+  },
+  "Navbar": {
+    "selfCheck": "Vlastná kontrola"
   }
 }

@@ -1447,5 +1447,8 @@
     "squattingRiskLabel": "Риск",
     "valueHigh": "Высокий",
     "labelMandatoryFields": "Обязательные поля"
+  },
+  "Navbar": {
+    "selfCheck": "Самопроверка"
   }
 }

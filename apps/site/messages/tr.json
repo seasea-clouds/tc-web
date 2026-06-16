@@ -1337,5 +1337,8 @@
     "serviceLabel": "Çin Etiket Uyumluluğu — GB 7718 ve GB 28050 uyumlu etiket tasarımı ve incelemesi. Çin limanlarında gümrük reddinin bir numaralı nedeni.",
     "serviceNMPA": "NMPA Kozmetik Dosyalaması — Kozmetiklerin Çin Ulusal Tıbbi Ürünler İdaresi'ne tescili veya bildirimi. İthal edilen tüm kozmetik ürünler için zorunludur.",
     "title": "SinoTrade Uyumluluğu — Yapay Zeka Yardımı (EN)"
+  },
+  "Navbar": {
+    "selfCheck": "Kendi Kendine Kontrol"
   }
 }

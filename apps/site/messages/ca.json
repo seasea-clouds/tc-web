@@ -1337,5 +1337,8 @@
     "serviceLabel": "Compliment de l'etiqueta xinesa: disseny i revisió d'etiquetes compatibles amb GB 7718 i GB 28050. El motiu número u del rebuig duaner als ports xinesos.",
     "serviceNMPA": "Presentació de cosmètics NMPA: registre o notificació de cosmètics a l'Administració nacional de productes mèdics de la Xina. Obligatori per a tots els productes cosmètics importats.",
     "title": "Compliment de SinoTrade: AI-Assistance (EN)"
+  },
+  "Navbar": {
+    "selfCheck": "Autoavaluació"
   }
 }

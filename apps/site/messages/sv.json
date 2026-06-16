@@ -1337,5 +1337,8 @@
     "serviceLabel": "Kinesisk etikettöverensstämmelse — GB 7718 och GB 28050-kompatibel etikettdesign och granskning. Den främsta anledningen till tullavvisning i kinesiska hamnar.",
     "serviceNMPA": "NMPA Cosmetics Filing — Registrering eller anmälan av kosmetika hos China National Medical Products Administration. Krävs för alla importerade kosmetikaprodukter.",
     "title": "SinoTrade Compliance — AI-Assistance (EN)"
+  },
+  "Navbar": {
+    "selfCheck": "Självbedömning"
   }
 }

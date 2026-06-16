@@ -1447,5 +1447,8 @@
     "squattingRiskLabel": "ریسک",
     "valueHigh": "بالا",
     "labelMandatoryFields": "فیلدهای اجباری"
+  },
+  "Navbar": {
+    "selfCheck": "خودارزیابی"
   }
 }

@@ -1337,5 +1337,8 @@
     "serviceLabel": "Kiinan etikettien yhteensopivuus — GB 7718- ja GB 28050 -yhteensopiva tarrasuunnittelu ja tarkistus. Suurin syy tullin hylkäämiseen Kiinan satamissa.",
     "serviceNMPA": "NMPA Cosmetics Filing — Kosmetiikan rekisteröinti tai ilmoitus Kiinan kansalliselle lääketieteelliselle viranomaiselle. Vaaditaan kaikille tuontikosmetiikkatuotteille.",
     "title": "SinoTrade Compliance — AI-Assistance (EN)"
+  },
+  "Navbar": {
+    "selfCheck": "Itsearviointi"
   }
 }

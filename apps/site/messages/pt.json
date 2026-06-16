@@ -1337,5 +1337,8 @@
     "serviceLabel": "Conformidade de etiquetas chinesas — design e revisão de etiquetas compatíveis com GB 7718 e GB 28050. A razão número um para a rejeição alfandegária nos portos chineses.",
     "serviceNMPA": "Arquivamento de Cosméticos NMPA — Registro ou notificação de cosméticos junto à Administração Nacional de Produtos Médicos da China. Obrigatório para todos os produtos cosméticos importados.",
     "title": "Conformidade SinoTrade - Assistência de IA (EN)"
+  },
+  "Navbar": {
+    "selfCheck": "Autoavaliação"
   }
 }

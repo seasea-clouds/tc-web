@@ -1337,5 +1337,8 @@
     "serviceLabel": "Shoda s čínskými štítky – design a kontrola štítků vyhovující GB 7718 a GB 28050. Důvod číslo jedna pro celní odmítnutí v čínských přístavech.",
     "serviceNMPA": "NMPA Cosmetics Filing — Registrace nebo oznámení kosmetiky u China National Medical Products Administration. Povinné pro všechny dovážené kosmetické produkty.",
     "title": "Soulad se SinoTrade — AI-Assistance (EN)"
+  },
+  "Navbar": {
+    "selfCheck": "Vlastní kontrola"
   }
 }

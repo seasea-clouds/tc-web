@@ -76,12 +76,14 @@
     "subscription": "Abonnement",
     "settings": "Einstellungen",
     "viewReportsDesc": "Sehen Sie sich Ihre Compliance-Berichte an",
-    "manageSubscriptionDesc": "Verwalten Sie Ihr Abonnement"
+    "manageSubscriptionDesc": "Verwalten Sie Ihr Abonnement",
+    "viewPricing": "Preise ansehen",
+    "youAreOnFreePlan": "Sie befinden sich derzeit im kostenlosen Plan."
   },
   "Pricing": {
     "title": "Einfache Preisgestaltung",
     "subtitle": "Zahlen Sie nur für das, was Sie brauchen. Kostenlose Beurteilung inklusive.",
-    "free": "Kostenloser Scheck",
+    "free": "Kostenlose Prüfung",
     "freePrice": "0 $",
     "freeDesc": "Grundlegende Compliance-Bewertung",
     "freeBullet1": "Grundlegende Compliance-Bewertung",
@@ -298,7 +300,7 @@
     "crossborderMetaDescription": "Überprüfen Sie die Compliance-Anforderungen für den grenzüberschreitenden E-Commerce für Ihre Produkte, die nach China eingeführt werden. Kostenloses Bewertungstool.",
     "crossborderMetaTitle": "Grenzüberschreitender E-Commerce-Check | SinoTrade-Konformität",
     "crossborderSubtitle": "Überprüfen Sie die Compliance-Anforderungen für den Verkauf auf chinesischen E-Commerce-Plattformen.",
-    "crossborderTitle": "Grenzüberschreitender E-Commerce-Check",
+    "crossborderTitle": "Grenzüberschreitender E-Commerce",
     "documentsTitle": "Erforderliche Dokumente",
     "emailForPdf": "E-Mail (optional – um PDF zu erhalten)",
     "estMonthlyVolume": "Schätzung: Monatliches Volumen",
@@ -889,7 +891,7 @@
     "nmpaVerdictHigh": "Hohes Risiko",
     "nmpaVerdictLow": "Geringes Risiko",
     "nmpaViability": "Mit Compliance lebensfähig",
-    "no": "NEIN",
+    "no": "Nein",
     "noAction": "Derzeit sind keine Compliance-Maßnahmen erforderlich",
     "noNeedOne": "Nein – ich brauche eins",
     "noNeedTesting": "Nein – Labortests sind erforderlich",
@@ -949,7 +951,7 @@
     "productDescriptionLabel": "Produktbeschreibung (optional)",
     "productFunctionPlaceholder": "z. B. Feuchtigkeitscreme, Anti-Aging",
     "productName": "Produktname",
-    "productNamePlaceholder": "z.B. Cabernet Sauvignon Rotwein",
+    "productNamePlaceholder": "z.B. Produktname",
     "productWeight": "Produktgewicht (pro Einheit, optional)",
     "productWeightPlaceholder": "z. B. 0,5 kg, 200 g",
     "redirecting": "Weiterleitung...",
@@ -1076,7 +1078,13 @@
     "gaccCat_nuts_label": "Nüsse / Trockenfrüchte (HS 08)",
     "gaccCat_other_label": "Andere Lebensmittel",
     "gaccCat_classification_label": "Klassifizierung",
-    "backToHome": "Zurück nach Hause"
+    "backToHome": "Zurück nach Hause",
+    "gaccProductNamePlaceholder": "z.B. Cabernet-Sauvignon-Rotwein",
+    "labelProductNamePlaceholder": "z.B. Premium-Grüntee 500g",
+    "cccProductNamePlaceholder": "z.B. Intelligente LED-Schreibtischlampe",
+    "nmpaProductNamePlaceholder": "z.B. Hyaluronsäure-Serum",
+    "crossborderProductNamePlaceholder": "z.B. Bio-Matcha-Pulver",
+    "trademarkProductNamePlaceholder": "z.B. Premium-Skin-Care-Linie"
   },
   "Report": {
     "loadingTitle": "Laden Ihres Berichts",
@@ -1106,7 +1114,6 @@
     "moreSettingsSoon": "Weitere Einstellungen folgen in Kürze.",
     "registeredUser": "Registrierter Benutzer",
     "periodEnds": "Der Zeitraum endet",
-    "youAreOnFreePlan": "Sie nutzen derzeit den kostenlosen Plan.",
     "noReportId": "Kein Berichts-ID angegeben"
   },
   "Cookie": {
@@ -1447,5 +1454,8 @@
     "squattingRiskLabel": "Risiko",
     "valueHigh": "Hoch",
     "labelMandatoryFields": "Pflichtfelder"
+  },
+  "Navbar": {
+    "selfCheck": "Selbstprüfung"
   }
 }

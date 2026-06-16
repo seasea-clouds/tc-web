@@ -1447,5 +1447,8 @@
     "squattingRiskLabel": "مخاطرة",
     "valueHigh": "عالي",
     "labelMandatoryFields": "الحقول الإلزامية"
+  },
+  "Navbar": {
+    "selfCheck": "التحقق الذاتي"
   }
 }

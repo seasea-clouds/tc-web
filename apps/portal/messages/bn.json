@@ -1447,5 +1447,8 @@
     "squattingRiskLabel": "ঝুঁকি",
     "valueHigh": "উচ্চ",
     "labelMandatoryFields": "বাধ্যতামূলক ক্ষেত্র"
+  },
+  "Navbar": {
+    "selfCheck": "স্ব-পরীক্ষা"
   }
 }

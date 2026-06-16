@@ -45,7 +45,7 @@
     "noAccount": "没有帐户？",
     "hasAccount": "已经有帐户？",
     "signOut": "退出",
-    "emailPlaceholder": "你@example.com",
+    "emailPlaceholder": "your@email.com",
     "passwordPlaceholder": "输入您的密码",
     "namePlaceholder": "你的名字",
     "passwordMinHint": "至少 5 个字符",
@@ -76,7 +76,9 @@
     "subscription": "订阅",
     "settings": "设置",
     "viewReportsDesc": "查看您的合规报告",
-    "manageSubscriptionDesc": "管理您的订阅"
+    "manageSubscriptionDesc": "管理您的订阅",
+    "youAreOnFreePlan": "您当前使用的是免费计划。",
+    "viewPricing": "查看定价"
   },
   "Pricing": {
     "title": "简单的定价",
@@ -113,7 +115,8 @@
     "professionalBullet4": "清关支持",
     "learnMore": "了解更多 →",
     "footnote": "自检工具提供初步指导。专业服务由我们的专家团队负责。",
-    "popular": "最受欢迎"
+    "popular": "最受欢迎",
+    "simplePricing": "简单定价"
   },
   "Check": {
     "allergenInfo": "已知过敏原",
@@ -285,7 +288,7 @@
     "cccYes": "✅ 必填",
     "ce": "CE",
     "ceUlCertified": "CE/UL/其他认证？",
-    "checkBtn": "检查我的产品",
+    "checkBtn": "开始检查",
     "chineseLabelArtworkReady": "中国标签艺术品准备好了吗？",
     "chineseLabelReady": "中国标签准备好了吗？",
     "complianceNeeded": "需要合规",
@@ -889,7 +892,7 @@
     "nmpaVerdictHigh": "高风险",
     "nmpaVerdictLow": "低风险",
     "nmpaViability": "合规可行",
-    "no": "不",
+    "no": "否",
     "noAction": "目前无需采取合规行动",
     "noNeedOne": "不——需要一个",
     "noNeedTesting": "否——需要实验室测试",
@@ -949,7 +952,7 @@
     "productDescriptionLabel": "产品描述（可选）",
     "productFunctionPlaceholder": "例如，保湿、抗衰老",
     "productName": "产品名称",
-    "productNamePlaceholder": "例如，赤霞珠红葡萄酒",
+    "productNamePlaceholder": "例如：产品名称",
     "productWeight": "产品重量（每件，可选）",
     "productWeightPlaceholder": "例如，0.5 千克、200 克",
     "redirecting": "正在重定向...",
@@ -1057,7 +1060,7 @@
     "ul": "UL",
     "voltagePower": "电压/功率规格（可选）",
     "voltagePowerPlaceholder": "例如，100-240V、50/60Hz、50W",
-    "yes": "是的",
+    "yes": "是",
     "yesLabelArtwork": "是的——带有完整的实验室报告",
     "yesSpecialCosmetics": "是的——特殊化妆品",
     "yourProduct": "您的产品",
@@ -1076,7 +1079,13 @@
     "gaccCat_nuts_label": "坚果/干果 (HS 08)",
     "gaccCat_other_label": "其他食品",
     "gaccCat_classification_label": "分类",
-    "backToHome": "返回首页"
+    "backToHome": "返回首页",
+    "gaccProductNamePlaceholder": "例如：赤霞珠干红葡萄酒",
+    "labelProductNamePlaceholder": "例如：特级绿茶 500g",
+    "cccProductNamePlaceholder": "例如：智能LED台灯",
+    "nmpaProductNamePlaceholder": "例如：玻尿酸精华液",
+    "crossborderProductNamePlaceholder": "例如：有机抹茶粉",
+    "trademarkProductNamePlaceholder": "例如：高端护肤系列"
   },
   "Report": {
     "loadingTitle": "加载您的报告",
@@ -1106,7 +1115,6 @@
     "moreSettingsSoon": "更多设置即将推出。",
     "registeredUser": "注册用户",
     "periodEnds": "期间结束",
-    "youAreOnFreePlan": "您目前使用的是免费计划。",
     "noReportId": "未提供报告 ID"
   },
   "Cookie": {
@@ -1447,5 +1455,8 @@
     "squattingRiskLabel": "风险",
     "valueHigh": "高的",
     "labelMandatoryFields": "必填字段"
+  },
+  "Navbar": {
+    "selfCheck": "合规自查"
   }
 }

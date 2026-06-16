@@ -1447,5 +1447,8 @@
     "squattingRiskLabel": "Riski",
     "valueHigh": "Korkea",
     "labelMandatoryFields": "Pakolliset kentät"
+  },
+  "Navbar": {
+    "selfCheck": "Itsearviointi"
   }
 }

@@ -1447,5 +1447,8 @@
     "squattingRiskLabel": "risiko",
     "valueHigh": "tinggi",
     "labelMandatoryFields": "Medan Wajib"
+  },
+  "Navbar": {
+    "selfCheck": "Pengesanan Diri"
   }
 }

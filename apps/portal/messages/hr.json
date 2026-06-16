@@ -1447,5 +1447,8 @@
     "squattingRiskLabel": "Rizik",
     "valueHigh": "visoko",
     "labelMandatoryFields": "Obavezna polja"
+  },
+  "Navbar": {
+    "selfCheck": "Samoprocjena"
   }
 }

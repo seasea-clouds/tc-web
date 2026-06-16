@@ -1337,5 +1337,8 @@
     "serviceLabel": "Tuân thủ nhãn Trung Quốc - Thiết kế và đánh giá nhãn tuân thủ GB 7718 và GB 28050. Lý do số một khiến hải quan từ chối tại các cảng Trung Quốc.",
     "serviceNMPA": "NMPA Cosmetics Filing — Đăng ký hoặc thông báo về mỹ phẩm với Cục Quản lý Sản phẩm Y tế Quốc gia Trung Quốc. Bắt buộc đối với tất cả các sản phẩm mỹ phẩm nhập khẩu.",
     "title": "Tuân thủ SinoTrade — Hỗ trợ AI (EN)"
+  },
+  "Navbar": {
+    "selfCheck": "Tự đánh giá"
   }
 }

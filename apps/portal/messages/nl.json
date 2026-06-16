@@ -1447,5 +1447,8 @@
     "squattingRiskLabel": "Risico",
     "valueHigh": "Hoog",
     "labelMandatoryFields": "Verplichte velden"
+  },
+  "Navbar": {
+    "selfCheck": "Zelfevaluatie"
   }
 }

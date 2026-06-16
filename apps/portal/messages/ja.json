@@ -76,12 +76,14 @@
     "subscription": "サブスクリプション",
     "settings": "設定",
     "viewReportsDesc": "コンプライアンスレポートを表示する",
-    "manageSubscriptionDesc": "サブスクリプションを管理する"
+    "manageSubscriptionDesc": "サブスクリプションを管理する",
+    "viewPricing": "価格を見る",
+    "youAreOnFreePlan": "現在無料でご利用いただけます。"
   },
   "Pricing": {
     "title": "シンプルな価格設定",
     "subtitle": "必要な分だけお支払いください。無料査定込み。",
-    "free": "無料小切手",
+    "free": "無料チェック",
     "freePrice": "$0",
     "freeDesc": "基本的なコンプライアンス評価",
     "freeBullet1": "基本的なコンプライアンス評価",
@@ -183,7 +185,7 @@
     "catTm_other": "他の",
     "categoryCheck": "コンプライアンス自己チェック",
     "categoryCheckDesc": "中国輸入品の 3 秒間の無料コンプライアンス評価",
-    "categoryCheckTitle": "コンプライアンス自己チェック",
+    "categoryCheckTitle": "無料セルフチェック",
     "cbDoc_brandAuth_error": "チェーンが切れた",
     "cbDoc_brandAuth_format": "PDF",
     "cbDoc_brandAuth_name": "ブランド認証レター",
@@ -298,7 +300,7 @@
     "crossborderMetaDescription": "中国に輸入する商品の越境電子商取引コンプライアンス要件を確認してください。無料の評価ツール。",
     "crossborderMetaTitle": "越境電子商取引チェック |中国貿易のコンプライアンス",
     "crossborderSubtitle": "中国の電子商取引プラットフォームで販売するためのコンプライアンス要件を確認してください。",
-    "crossborderTitle": "越境電子商取引小切手",
+    "crossborderTitle": "越境電子商取引",
     "documentsTitle": "必要な書類",
     "emailForPdf": "電子メール (オプション - PDF を受信するため)",
     "estMonthlyVolume": "EST（東部基準時。月間ボリューム",
@@ -949,7 +951,7 @@
     "productDescriptionLabel": "製品説明 (オプション)",
     "productFunctionPlaceholder": "例：保湿、アンチエイジング",
     "productName": "製品名",
-    "productNamePlaceholder": "例: カベルネ・ソーヴィニヨン 赤ワイン",
+    "productNamePlaceholder": "例：製品名",
     "productWeight": "製品重量 (ユニットあたり、オプション)",
     "productWeightPlaceholder": "例：0.5kg、200g",
     "redirecting": "リダイレクト中...",
@@ -1076,7 +1078,14 @@
     "gaccCat_nuts_label": "ナッツ・ドライフルーツ(HS08)",
     "gaccCat_other_label": "その他の食品",
     "gaccCat_classification_label": "分類",
-    "backToHome": "ホームに戻る"
+    "backToHome": "ホームに戻る",
+    "freeCheck": "無料チェック",
+    "gaccProductNamePlaceholder": "例：カベルネ・ソーヴィニョン赤ワイン",
+    "labelProductNamePlaceholder": "例：プレミアム緑茶 500g",
+    "cccProductNamePlaceholder": "例：スマートLEDデスクランプ",
+    "nmpaProductNamePlaceholder": "例：ヒアルロン酸セラム",
+    "crossborderProductNamePlaceholder": "例：オーガニック抹茶パウダー",
+    "trademarkProductNamePlaceholder": "例：プレミアムスキンケアライン"
   },
   "Report": {
     "loadingTitle": "レポートをロードする",
@@ -1106,7 +1115,6 @@
     "moreSettingsSoon": "さらに詳しい設定は近日公開予定です。",
     "registeredUser": "登録ユーザー",
     "periodEnds": "期間終了",
-    "youAreOnFreePlan": "現在は無料プランをご利用中です。",
     "noReportId": "レポートIDが指定されていません"
   },
   "Cookie": {
@@ -1447,5 +1455,8 @@
     "squattingRiskLabel": "リスク",
     "valueHigh": "高い",
     "labelMandatoryFields": "必須フィールド"
+  },
+  "Navbar": {
+    "selfCheck": "セルフチェック"
   }
 }

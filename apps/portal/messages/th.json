@@ -1447,5 +1447,8 @@
     "squattingRiskLabel": "เสี่ยง",
     "valueHigh": "สูง",
     "labelMandatoryFields": "ช่องบังคับ"
+  },
+  "Navbar": {
+    "selfCheck": "การตรวจสอบตนเอง"
   }
 }

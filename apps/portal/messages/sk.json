@@ -1447,5 +1447,8 @@
     "squattingRiskLabel": "Riziko",
     "valueHigh": "Vysoká",
     "labelMandatoryFields": "Povinné polia"
+  },
+  "Navbar": {
+    "selfCheck": "Vlastná kontrola"
   }
 }

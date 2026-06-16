@@ -1337,5 +1337,8 @@
     "serviceLabel": "Kínai címkék megfelelősége – GB 7718 és GB 28050 megfelelő címketervezés és felülvizsgálat. A kínai kikötők vámelutasításának első számú oka.",
     "serviceNMPA": "NMPA kozmetikai bejelentés – A kozmetikumok regisztrálása vagy bejelentése a Kínai Nemzeti Orvosi Termékek Hivatalánál. Minden importált kozmetikai termékhez kötelező.",
     "title": "SinoTrade megfelelőség – AI-Assistance (EN)"
+  },
+  "Navbar": {
+    "selfCheck": "Önértékelés"
   }
 }

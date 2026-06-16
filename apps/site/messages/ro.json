@@ -1337,5 +1337,8 @@
     "serviceLabel": "Conformitatea etichetelor chineze — Proiectare și revizuire a etichetelor conform GB 7718 și GB 28050. Motivul numărul unu al respingerii vamale în porturile din China.",
     "serviceNMPA": "Înregistrare NMPA pentru produse cosmetice — Înregistrarea sau notificarea produselor cosmetice la China National Medical Products Administration. Necesar pentru toate produsele cosmetice importate.",
     "title": "Conformitate SinoTrade — AI-Assistance (EN)"
+  },
+  "Navbar": {
+    "selfCheck": "Autoevaluare"
   }
 }

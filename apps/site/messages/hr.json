@@ -1337,5 +1337,8 @@
     "serviceLabel": "Usklađenost s kineskim naljepnicama — dizajn i pregled naljepnica u skladu s GB 7718 i GB 28050. Razlog broj jedan za odbijanje carine u kineskim lukama.",
     "serviceNMPA": "NMPA prijava za kozmetiku — Registracija ili prijava kozmetike kod Kineske nacionalne uprave za medicinske proizvode. Obavezno za sve uvozne kozmetičke proizvode.",
     "title": "Sukladnost SinoTrade — AI-Assistance (EN)"
+  },
+  "Navbar": {
+    "selfCheck": "Samoprocjena"
   }
 }

@@ -1337,5 +1337,8 @@
     "serviceLabel": "Conformità delle etichette cinesi: progettazione e revisione di etichette conformi a GB 7718 e GB 28050. Il motivo principale del rifiuto doganale nei porti cinesi.",
     "serviceNMPA": "Presentazione dei cosmetici NMPA: registrazione o notifica di cosmetici presso la China National Medical Products Administration. Obbligatorio per tutti i prodotti cosmetici importati.",
     "title": "Conformità SinoTrade — Assistenza AI (EN)"
+  },
+  "Navbar": {
+    "selfCheck": "Autovalutazione"
   }
 }

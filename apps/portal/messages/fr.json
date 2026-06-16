@@ -1447,5 +1447,8 @@
     "squattingRiskLabel": "Risque",
     "valueHigh": "Haut",
     "labelMandatoryFields": "Champs obligatoires"
+  },
+  "Navbar": {
+    "selfCheck": "Auto-évaluation"
   }
 }

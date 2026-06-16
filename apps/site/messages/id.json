@@ -1337,5 +1337,8 @@
     "serviceLabel": "Kepatuhan Label Tiongkok — Desain dan peninjauan label yang sesuai dengan GB 7718 dan GB 28050. Alasan nomor satu penolakan bea cukai di pelabuhan Tiongkok.",
     "serviceNMPA": "Pengajuan Kosmetik NMPA — Pendaftaran atau pemberitahuan kosmetik ke Administrasi Produk Medis Nasional Tiongkok. Wajib untuk semua produk kosmetik impor.",
     "title": "Kepatuhan SinoTrade — Bantuan AI (EN)"
+  },
+  "Navbar": {
+    "selfCheck": "Pemeriksaan Diri"
   }
 }

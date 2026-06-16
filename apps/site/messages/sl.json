@@ -1337,5 +1337,8 @@
     "serviceLabel": "Skladnost kitajskih nalepk — Oblikovanje in pregled nalepk, skladnih z GB 7718 in GB 28050. Razlog številka ena za zavrnitev carine v kitajskih pristaniščih.",
     "serviceNMPA": "NMPA Cosmetics Filing — Registracija ali prijava kozmetičnih izdelkov pri Kitajski nacionalni upravi za medicinske izdelke. Obvezno za vse uvožene kozmetične izdelke.",
     "title": "Skladnost s predpisi SinoTrade — AI-Assistance (EN)"
+  },
+  "Navbar": {
+    "selfCheck": "Samoevalvacija"
   }
 }

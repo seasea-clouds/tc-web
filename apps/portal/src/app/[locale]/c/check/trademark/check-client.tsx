@@ -145,7 +145,7 @@ export default function TrademarkCheckClient() {
                 onChange={e => { setVal("productName", e.target.value); clearFieldError("productName"); }}
                 className={inputClasses(!!fieldErrors["productName"])}
                 minLength={2}
-                placeholder={t("productNamePlaceholder")}
+                placeholder={t("trademarkProductNamePlaceholder")}
                 required
               />
             </div>

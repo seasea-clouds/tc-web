@@ -47,7 +47,7 @@ function BillingContent() {
               href="/pricing"
               className="inline-block bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#1B365D] font-semibold px-4 py-2 rounded-md text-sm transition-all"
             >
-              View Pricing
+              {t('viewPricing')}
             </Link>
           </>
         )}

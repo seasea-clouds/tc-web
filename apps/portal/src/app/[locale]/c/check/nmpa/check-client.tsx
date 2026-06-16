@@ -135,7 +135,7 @@ export default function NmpaCheckClient() {
                 onChange={e => { setVal("productName", e.target.value); clearFieldError("productName"); }}
                 className={inputClasses(!!fieldErrors["productName"])}
                 minLength={2}
-                placeholder={t("productNamePlaceholder")}
+                placeholder={t("nmpaProductNamePlaceholder")}
                 required
               />
             </div>

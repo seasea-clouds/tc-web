@@ -32,6 +32,8 @@ const SEGMENT_LABELS: Record<string, string> = {
   'quote': 'quote',
   'testimonials': 'testimonials',
   'privacy': 'privacy',
+  // Portal /c/ self-check tool
+  'c': 'selfCheck',
 };
 
 // For segments that live under Navbar.servicesDropdown (service pages)

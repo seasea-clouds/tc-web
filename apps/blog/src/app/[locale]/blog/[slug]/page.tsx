@@ -12,7 +12,7 @@ const FAQ_NS: Record<string, string> = {
   'cross-border-ecommerce-china': 'BlogFaqCrossBorderEcommerceChina',
 };
 
-import { WHATSAPP_URL, LOCALES, buildLanguages, SITE_URL } from '@trade/ui';
+import { WHATSAPP_URL, LOCALES, buildLanguages, SITE_URL, sharedOpenGraph, sharedTwitter } from '@trade/ui';
 import { getMessages } from '@/lib/messages';
 import CopyButton from '@/components/CopyButton';
 
@@ -38,20 +38,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { data } = matter(raw);
   const title = data.title || slug.replace(/-/g, ' ');
   const description = data.excerpt || '';
+  const url = `https://sinotradecompliance.com/${locale}/blog/${slug}/`;
   return {
     title,
     description,
+    openGraph: sharedOpenGraph({ title, description, locale, url }),
+    twitter: sharedTwitter({ title, description }),
     alternates: {
-      canonical: `https://sinotradecompliance.com/${locale}/blog/${slug}/`,
+      canonical: url,
       languages: buildLanguages(locale, [...LOCALES], `/blog/${slug}/`),
-    },
-    openGraph: {
-      title: data.title || slug.replace(/-/g, ' '),
-      description: data.excerpt || '',
-      type: 'article',
-      publishedTime: data.date,
-      tags: data.category ? [data.category] : [],
-      url: `https://sinotradecompliance.com/${locale}/blog/${slug}/`,
     },
   };
 }

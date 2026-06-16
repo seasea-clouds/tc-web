@@ -2,7 +2,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { locales, defaultLocale } from '@/i18n/routing';
 import { messagesMap } from '@/i18n/messages';
-import { Footer, SearchProvider, CookieConsent, ActionDock, TradeTranslationProvider, OrganizationJsonLd, buildAlternates, sharedOpenGraph, sharedTwitter, AuthProvider, AutoBreadcrumb } from '@trade/ui';
+import { Footer, SearchProvider, CookieConsent, ActionDock, TradeTranslationProvider, OrganizationJsonLd, buildAlternates, sharedOpenGraph, sharedTwitter, AuthProvider, AutoBreadcrumb, Favicon } from '@trade/ui';
 import '../../globals.css';
 
 export function generateStaticParams() {
@@ -52,6 +52,7 @@ export default async function LocaleLayout({
   return (
     <html lang={validLocale} dir={validLocale === 'ar' || validLocale === 'he' || validLocale === 'fa' || validLocale === 'ur' ? 'rtl' : 'ltr'}>
     <head>
+      <Favicon />
 
       {/* Geo-location meta tags */}
       <meta name="geo.region" content="CN-SH" />

@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { locales, defaultLocale } from '@/i18n/routing';
-import { buildAlternates } from '@trade/ui';
+import { buildAlternates, sharedOpenGraph, sharedTwitter } from '@trade/ui';
 
 /**
  * Blog segment layout — provides hreflang alternates for all /blog/ pages.
@@ -28,5 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title,
     description,
     alternates,
+    openGraph: sharedOpenGraph({ title, description, locale: validLocale, url: alternates.canonical }),
+    twitter: sharedTwitter({ title, description }),
   };
 }

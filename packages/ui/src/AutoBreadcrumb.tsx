@@ -21,22 +21,27 @@ export function useBreadcrumbOverride() {
 }
 
 // Path segment → i18n key mapping
+// For segments that exist as flat keys in Navbar (home, about, services, blog, etc.)
 const SEGMENT_LABELS: Record<string, string> = {
   'services': 'services',
-  'gacc': 'gacc',
-  'label': 'label',
-  'ccc': 'ccc',
-  'cosmetics': 'cosmetics',
-  'ecommerce': 'ecommerce',
-  'brand': 'brand',
-  'industries': 'industries',
   'about': 'about',
   'faq': 'faq',
+  'industries': 'industries',
   'packages': 'packages',
   'blog': 'blog',
   'quote': 'quote',
   'testimonials': 'testimonials',
   'privacy': 'privacy',
+};
+
+// For segments that live under Navbar.servicesDropdown (service pages)
+const SERVICE_SEGMENT_LABELS: Record<string, string> = {
+  'gacc': 'servicesDropdown.gacc',
+  'label': 'servicesDropdown.label',
+  'ccc': 'servicesDropdown.ccc',
+  'cosmetics': 'servicesDropdown.cosmetics',
+  'ecommerce': 'servicesDropdown.ecommerce',
+  'brand': 'servicesDropdown.brand',
 };
 
 // Industry slugs → i18n key mapping
@@ -135,8 +140,8 @@ export default function AutoBreadcrumb({ locale }: AutoBreadcrumbProps) {
       continue; // industry slug already handled above
     }
 
-    // General segment lookup
-    const labelKey = SEGMENT_LABELS[seg];
+    // General segment lookup: first try flat SEGMENT_LABELS, then service dropdown
+    const labelKey = SEGMENT_LABELS[seg] || SERVICE_SEGMENT_LABELS[seg];
     if (labelKey) {
       const label = t(labelKey);
       items.push({ label, href });

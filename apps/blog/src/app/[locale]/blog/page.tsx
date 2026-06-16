@@ -1,4 +1,4 @@
-import { WHATSAPP_URL, LOCALES, SITE_URL, buildLanguages } from '@trade/ui';
+import { WHATSAPP_URL, LOCALES, SITE_URL, buildLanguages, sharedOpenGraph, sharedTwitter } from '@trade/ui';
 import fs from 'fs';
 import path from 'path';
 import { getPosts } from '@/lib/posts';
@@ -18,11 +18,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const title = B.metaTitle || 'China Import Compliance Blog';
   const description = B.metaDescription || 'Expert guides on China import compliance.';
   const path = '/blog/';
+  const url = `https://sinotradecompliance.com/${locale}${path}`;
   return {
     title,
     description,
+    openGraph: sharedOpenGraph({ title, description, locale, url }),
+    twitter: sharedTwitter({ title, description }),
     alternates: {
-      canonical: `https://sinotradecompliance.com/${locale}${path}`,
+      canonical: url,
       languages: buildLanguages(locale, [...LOCALES], `${path}`),
     },
   };

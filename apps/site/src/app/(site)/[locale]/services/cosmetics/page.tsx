@@ -24,6 +24,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title,
     description,
+    openGraph: sharedOpenGraph({ title, description, locale, url }),
+    twitter: sharedTwitter({ title, description }),
     alternates: {
       canonical: url,
       languages: buildLanguages(locale, [...locales], '/services/cosmetics/'),
@@ -53,7 +55,7 @@ export default async function CosmeticsPage({ params }: { params: Promise<{ loca
     '@type': ['ProfessionalService', 'LocalBusiness'],
     name: 'SinoTrade Compliance',
     url: `https://sinotradecompliance.com/${locale}/services/cosmetics/`,
-    telephone: '+1 (555) 000-0000',
+    telephone: '',
     areaServed: 'Worldwide',
     priceRange: '$$',
   };

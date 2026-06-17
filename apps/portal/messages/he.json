@@ -1454,7 +1454,11 @@
   "Navbar": {
     "selfCheck": "בדיקה עצמית",
     "pricing": "מחירים",
-    "dashboard": "לוח בקרה"
+    "dashboard": "לוח בקרה",
+    "billing": "חיוב",
+    "login": "התחברות",
+    "register": "הרשמה",
+    "report": "דוח"
   },
   "Breadcrumb": {
     "pricing": "מחירים"

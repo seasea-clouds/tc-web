@@ -1455,7 +1455,11 @@
   "Navbar": {
     "selfCheck": "Auto-évaluation",
     "pricing": "Tarifs",
-    "dashboard": "Tableau de bord"
+    "dashboard": "Tableau de bord",
+    "billing": "Facturation",
+    "login": "Connexion",
+    "register": "Inscription",
+    "report": "Rapport"
   },
   "Breadcrumb": {
     "pricing": "Tarifs"

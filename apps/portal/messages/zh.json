@@ -1462,7 +1462,11 @@
   "Navbar": {
     "selfCheck": "合规自查",
     "pricing": "定价",
-    "dashboard": "仪表盘"
+    "dashboard": "仪表盘",
+    "billing": "账单",
+    "login": "登录",
+    "register": "注册",
+    "report": "报告"
   },
   "Breadcrumb": {
     "pricing": "定价"

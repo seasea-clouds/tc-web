@@ -1454,7 +1454,11 @@
   "Navbar": {
     "selfCheck": "Ինքնագնահատում",
     "pricing": "Գնագոյացում",
-    "dashboard": "Վերահսկման պանել"
+    "dashboard": "Վերահսկման պանել",
+    "billing": "Վճարում",
+    "login": "Մուտք",
+    "register": "Գրանցում",
+    "report": "Հաշվետվություն"
   },
   "Breadcrumb": {
     "pricing": "Գնագոյացում"

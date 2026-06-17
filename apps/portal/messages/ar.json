@@ -1455,7 +1455,11 @@
   "Navbar": {
     "selfCheck": "التحقق الذاتي",
     "pricing": "تسعير",
-    "dashboard": "لوحة القيادة"
+    "dashboard": "لوحة القيادة",
+    "billing": "الفواتير",
+    "login": "تسجيل الدخول",
+    "register": "التسجيل",
+    "report": "تقرير"
   },
   "Breadcrumb": {
     "pricing": "تسعير"

@@ -1454,7 +1454,11 @@
   "Navbar": {
     "selfCheck": "خود جانچ",
     "pricing": "قیمت",
-    "dashboard": "ڈیش بورڈ"
+    "dashboard": "ڈیش بورڈ",
+    "billing": "بلنگ",
+    "login": "لاگ ان",
+    "register": "رجسٹر",
+    "report": "رپورٹ"
   },
   "Breadcrumb": {
     "pricing": "قیمت"

@@ -1454,7 +1454,11 @@
   "Navbar": {
     "selfCheck": "Vlastní kontrola",
     "pricing": "Ceny",
-    "dashboard": "Panel"
+    "dashboard": "Panel",
+    "billing": "Fakturace",
+    "login": "Přihlášení",
+    "register": "Registrace",
+    "report": "Zpráva"
   },
   "Breadcrumb": {
     "pricing": "Ceny"

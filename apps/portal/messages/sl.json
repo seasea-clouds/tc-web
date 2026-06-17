@@ -1454,7 +1454,11 @@
   "Navbar": {
     "selfCheck": "Samoevalvacija",
     "pricing": "Cenik",
-    "dashboard": "Nadzorna plošča"
+    "dashboard": "Nadzorna plošča",
+    "billing": "Račun",
+    "login": "Prijava",
+    "register": "Registracija",
+    "report": "Poročilo"
   },
   "Breadcrumb": {
     "pricing": "Cenik"

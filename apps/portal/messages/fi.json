@@ -1454,7 +1454,11 @@
   "Navbar": {
     "selfCheck": "Itsearviointi",
     "pricing": "Hinnasto",
-    "dashboard": "Työalue"
+    "dashboard": "Työalue",
+    "billing": "Laskutus",
+    "login": "Kirjautuminen",
+    "register": "Rekisteröityminen",
+    "report": "Raportti"
   },
   "Breadcrumb": {
     "pricing": "Hinnasto"

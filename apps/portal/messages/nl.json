@@ -1455,7 +1455,11 @@
   "Navbar": {
     "selfCheck": "Zelfevaluatie",
     "pricing": "Prijzen",
-    "dashboard": "Dashboard"
+    "dashboard": "Dashboard",
+    "billing": "Facturatie",
+    "login": "Inloggen",
+    "register": "Registratie",
+    "report": "Rapport"
   },
   "Breadcrumb": {
     "pricing": "Prijzen"

@@ -1454,7 +1454,11 @@
   "Navbar": {
     "selfCheck": "Самправерка",
     "pricing": "Цэнаўтварэнне",
-    "dashboard": "Панэль кіравання"
+    "dashboard": "Панэль кіравання",
+    "billing": "Білінг",
+    "login": "Уваход",
+    "register": "Рэгістрацыя",
+    "report": "Даклад"
   },
   "Breadcrumb": {
     "pricing": "Цэнаўтварэнне"

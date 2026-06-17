@@ -1454,7 +1454,11 @@
   "Navbar": {
     "selfCheck": "Pengesanan Diri",
     "pricing": "Harga",
-    "dashboard": "Papan pemuka"
+    "dashboard": "Papan pemuka",
+    "billing": "Pembilhan",
+    "login": "Log masuk",
+    "register": "Pendaftaran",
+    "report": "Laporan"
   },
   "Breadcrumb": {
     "pricing": "Harga"

@@ -1454,7 +1454,11 @@
   "Navbar": {
     "selfCheck": "Αυτοαξιολόγηση",
     "pricing": "Τιμολόγηση",
-    "dashboard": "Πίνακας ελέγχου"
+    "dashboard": "Πίνακας ελέγχου",
+    "billing": "Τιμολόγηση",
+    "login": "Σύνδεση",
+    "register": "Εγγραφή",
+    "report": "Αναφορά"
   },
   "Breadcrumb": {
     "pricing": "Τιμολόγηση"

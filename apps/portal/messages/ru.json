@@ -1455,7 +1455,11 @@
   "Navbar": {
     "selfCheck": "Самопроверка",
     "pricing": "Цены",
-    "dashboard": "Панель управления"
+    "dashboard": "Панель управления",
+    "billing": "Оплата",
+    "login": "Вход",
+    "register": "Регистрация",
+    "report": "Отчет"
   },
   "Breadcrumb": {
     "pricing": "Цены"

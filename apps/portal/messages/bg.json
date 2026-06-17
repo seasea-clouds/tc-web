@@ -1454,7 +1454,11 @@
   "Navbar": {
     "selfCheck": "Самопроверка",
     "pricing": "Ценообразуване",
-    "dashboard": "Табло"
+    "dashboard": "Табло",
+    "billing": "Таксуване",
+    "login": "Вход",
+    "register": "Регистрация",
+    "report": "Доклад"
   },
   "Breadcrumb": {
     "pricing": "Ценообразуване"

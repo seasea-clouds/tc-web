@@ -1454,7 +1454,11 @@
   "Navbar": {
     "selfCheck": "Самоперевірка",
     "pricing": "Ціни",
-    "dashboard": "Панель керування"
+    "dashboard": "Панель керування",
+    "billing": "Білінг",
+    "login": "Вхід",
+    "register": "Реєстрація",
+    "report": "Звіт"
   },
   "Breadcrumb": {
     "pricing": "Ціни"

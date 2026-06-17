@@ -1454,7 +1454,11 @@
   "Navbar": {
     "selfCheck": "Autoavaluació",
     "pricing": "Preus",
-    "dashboard": "Panell"
+    "dashboard": "Panell",
+    "billing": "Facturació",
+    "login": "Inici de sessió",
+    "register": "Registre",
+    "report": "Informe"
   },
   "Breadcrumb": {
     "pricing": "Preus"

@@ -1455,7 +1455,11 @@
   "Navbar": {
     "selfCheck": "셀프 체크",
     "pricing": "가격",
-    "dashboard": "대시보드"
+    "dashboard": "대시보드",
+    "billing": "청구",
+    "login": "로그인",
+    "register": "등록",
+    "report": "보고서"
   },
   "Breadcrumb": {
     "pricing": "가격"

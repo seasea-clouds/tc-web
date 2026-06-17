@@ -1454,7 +1454,11 @@
   "Navbar": {
     "selfCheck": "Самостална провера",
     "pricing": "Цене",
-    "dashboard": "Контролна табла"
+    "dashboard": "Контролна табла",
+    "billing": "Наплата",
+    "login": "Пријава",
+    "register": "Регистрација",
+    "report": "Извештај"
   },
   "Breadcrumb": {
     "pricing": "Цене"

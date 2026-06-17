@@ -1461,7 +1461,11 @@
   "Navbar": {
     "selfCheck": "Self-Check",
     "pricing": "Pricing",
-    "dashboard": "Dashboard"
+    "dashboard": "Dashboard",
+    "billing": "Billing",
+    "login": "Login",
+    "register": "Register",
+    "report": "Report"
   },
   "Breadcrumb": {
     "pricing": "Pricing"

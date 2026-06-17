@@ -1455,7 +1455,11 @@
   "Navbar": {
     "selfCheck": "การตรวจสอบตนเอง",
     "pricing": "ราคา",
-    "dashboard": "แดชบอร์ด"
+    "dashboard": "แดชบอร์ด",
+    "billing": "การเรียกเก็บเงิน",
+    "login": "เข้าสู่ระบบ",
+    "register": "ลงทะเบียน",
+    "report": "รายงาน"
   },
   "Breadcrumb": {
     "pricing": "ราคา"

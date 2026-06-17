@@ -1455,7 +1455,11 @@
   "Navbar": {
     "selfCheck": "Kendi Kendine Kontrol",
     "pricing": "Fiyatlandırma",
-    "dashboard": "Kontrol Paneli"
+    "dashboard": "Kontrol Paneli",
+    "billing": "Faturalandırma",
+    "login": "Giriş",
+    "register": "Kayıt",
+    "report": "Rapor"
   },
   "Breadcrumb": {
     "pricing": "Fiyatlandırma"

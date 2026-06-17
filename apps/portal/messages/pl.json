@@ -1455,7 +1455,11 @@
   "Navbar": {
     "selfCheck": "Własna kontrola",
     "pricing": "Cennik",
-    "dashboard": "Panel"
+    "dashboard": "Panel",
+    "billing": "Fakturowanie",
+    "login": "Logowanie",
+    "register": "Rejestracja",
+    "report": "Raport"
   },
   "Breadcrumb": {
     "pricing": "Cennik"

@@ -1455,7 +1455,11 @@
   "Navbar": {
     "selfCheck": "Autoevaluación",
     "pricing": "Precios",
-    "dashboard": "Panel"
+    "dashboard": "Panel",
+    "billing": "Facturación",
+    "login": "Iniciar sesión",
+    "register": "Registro",
+    "report": "Informe"
   },
   "Breadcrumb": {
     "pricing": "Precios"

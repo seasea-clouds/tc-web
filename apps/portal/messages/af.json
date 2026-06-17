@@ -1454,7 +1454,11 @@
   "Navbar": {
     "selfCheck": "Selftoets",
     "pricing": "Pryzetting",
-    "dashboard": "Paneel"
+    "dashboard": "Paneel",
+    "billing": "Fakturerings",
+    "login": "Aanmelding",
+    "register": "Registrasie",
+    "report": "Rapport"
   },
   "Breadcrumb": {
     "pricing": "Pryzetting"

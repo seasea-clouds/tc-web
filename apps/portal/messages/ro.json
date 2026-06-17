@@ -1454,7 +1454,11 @@
   "Navbar": {
     "selfCheck": "Autoevaluare",
     "pricing": "Prețuri",
-    "dashboard": "Tablou de bord"
+    "dashboard": "Tablou de bord",
+    "billing": "Facturare",
+    "login": "Autentificare",
+    "register": "Înregistrare",
+    "report": "Raport"
   },
   "Breadcrumb": {
     "pricing": "Prețuri"

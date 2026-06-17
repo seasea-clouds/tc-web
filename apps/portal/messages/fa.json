@@ -1454,7 +1454,11 @@
   "Navbar": {
     "selfCheck": "خودارزیابی",
     "pricing": "قیمت گذاری",
-    "dashboard": "داشبورد"
+    "dashboard": "داشبورد",
+    "billing": "صورتحساب",
+    "login": "ورود",
+    "register": "ثبت نام",
+    "report": "گزارش"
   },
   "Breadcrumb": {
     "pricing": "قیمت گذاری"

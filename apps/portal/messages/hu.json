@@ -1454,7 +1454,11 @@
   "Navbar": {
     "selfCheck": "Önértékelés",
     "pricing": "Árazás",
-    "dashboard": "Vezérlőpult"
+    "dashboard": "Vezérlőpult",
+    "billing": "Számlázás",
+    "login": "Bejelentkezés",
+    "register": "Regisztráció",
+    "report": "Jelentés"
   },
   "Breadcrumb": {
     "pricing": "Árazás"

@@ -1454,7 +1454,11 @@
   "Navbar": {
     "selfCheck": "Selvverifikasjon",
     "pricing": "Prising",
-    "dashboard": "Dashboard"
+    "dashboard": "Dashboard",
+    "billing": "Fakturering",
+    "login": "Logg inn",
+    "register": "Registrering",
+    "report": "Rapport"
   },
   "Breadcrumb": {
     "pricing": "Prising"

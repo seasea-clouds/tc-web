@@ -1454,7 +1454,11 @@
   "Navbar": {
     "selfCheck": "Pemeriksaan Diri",
     "pricing": "Harga",
-    "dashboard": "Dasbor"
+    "dashboard": "Dasbor",
+    "billing": "Penagihan",
+    "login": "Masuk",
+    "register": "Daftar",
+    "report": "Laporan"
   },
   "Breadcrumb": {
     "pricing": "Harga"

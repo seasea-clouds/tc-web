@@ -1454,7 +1454,11 @@
   "Navbar": {
     "selfCheck": "Özünü yoxlama",
     "pricing": "Qiymətləndirmə",
-    "dashboard": "İdarəetmə paneli"
+    "dashboard": "İdarəetmə paneli",
+    "billing": "Ödəniş",
+    "login": "Giriş",
+    "register": "Qeydiyyat",
+    "report": "Hesabat"
   },
   "Breadcrumb": {
     "pricing": "Qiymətləndirmə"

@@ -1462,7 +1462,11 @@
   "Navbar": {
     "selfCheck": "セルフチェック",
     "pricing": "料金",
-    "dashboard": "ダッシュボード"
+    "dashboard": "ダッシュボード",
+    "billing": "請求",
+    "login": "ログイン",
+    "register": "登録",
+    "report": "レポート"
   },
   "Breadcrumb": {
     "pricing": "料金"

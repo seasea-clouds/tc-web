@@ -1455,7 +1455,11 @@
   "Navbar": {
     "selfCheck": "Tự đánh giá",
     "pricing": "Bảng giá",
-    "dashboard": "Bảng điều khiển"
+    "dashboard": "Bảng điều khiển",
+    "billing": "Tính tiền",
+    "login": "Đăng nhập",
+    "register": "Đăng ký",
+    "report": "Báo cáo"
   },
   "Breadcrumb": {
     "pricing": "Bảng giá"

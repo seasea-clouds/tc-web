@@ -502,5 +502,6 @@
   },
   "Report": {
     "noReportId": "No report ID provided"
-  }
+  },
+  "Navbar": {}
 }

@@ -1454,7 +1454,11 @@
   "Navbar": {
     "selfCheck": "স্ব-পরীক্ষা",
     "pricing": "মূল্য নির্ধারন",
-    "dashboard": "ড্যাশবোর্ড"
+    "dashboard": "ড্যাশবোর্ড",
+    "billing": "বিলিং",
+    "login": "লগইন",
+    "register": "রেজিস্ট্রেশন",
+    "report": "রিপোর্ট"
   },
   "Breadcrumb": {
     "pricing": "মূল্য নির্ধারণ"

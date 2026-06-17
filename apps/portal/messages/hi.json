@@ -1454,7 +1454,11 @@
   "Navbar": {
     "selfCheck": "स्व-जानच",
     "pricing": "मूल्य निर्धारण",
-    "dashboard": "डैशबोर्ड"
+    "dashboard": "डैशबोर्ड",
+    "billing": "बिलिंג",
+    "login": "लॉगिन",
+    "register": "पंजీकरण",
+    "report": "रिपोर्ट"
   },
   "Breadcrumb": {
     "pricing": "मूल्य निर्धारण"

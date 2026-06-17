@@ -1455,7 +1455,11 @@
   "Navbar": {
     "selfCheck": "Autovalutazione",
     "pricing": "Prezzi",
-    "dashboard": "Cruscotto"
+    "dashboard": "Cruscotto",
+    "billing": "Fatturazione",
+    "login": "Accesso",
+    "register": "Registrazione",
+    "report": "Rapporto"
   },
   "Breadcrumb": {
     "pricing": "Prezzi"

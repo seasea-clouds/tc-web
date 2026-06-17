@@ -1454,7 +1454,11 @@
   "Navbar": {
     "selfCheck": "თვითშეფასება",
     "pricing": "ფასები",
-    "dashboard": "მართვის პანელი"
+    "dashboard": "მართვის პანელი",
+    "billing": "გადახდა",
+    "login": "შესვლა",
+    "register": "რეგისტრაცია",
+    "report": "ანგარიში"
   },
   "Breadcrumb": {
     "pricing": "ფასები"

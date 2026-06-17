@@ -133,7 +133,15 @@ export default function AutoBreadcrumb({ locale }: AutoBreadcrumbProps) {
         const pipeIdx = document.title.indexOf('|');
         items.push({ label: pipeIdx >= 0 ? document.title.substring(0, pipeIdx).trim() : document.title });
       } else {
-        // SSR fallback: formatted slug (will be corrected client-side)
+        // SSR fallback: check for custom element with data-breadcrumb-title
+        if (typeof document !== 'undefined') {
+          const breadcrumbEl = document.querySelector('[data-breadcrumb-title]');
+          if (breadcrumbEl) {
+            items.push({ label: breadcrumbEl.getAttribute('data-breadcrumb-title') || seg.replace(/-/g, ' ') });
+            continue;
+          }
+        }
+        // Final fallback: formatted slug
         items.push({ label: seg.replace(/-/g, ' ') });
       }
       continue;

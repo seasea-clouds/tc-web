@@ -3,7 +3,7 @@
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useT, useTradeLocale } from './TranslationProvider';
-import { createContext, useContext, type ReactNode, useState, useEffect } from 'react';
+import { createContext, useContext, type ReactNode } from 'react';
 
 interface Segment {
   label: string;
@@ -68,6 +68,7 @@ const INDUSTRY_LABELS: Record<string, string> = {
 
 export interface AutoBreadcrumbProps {
   locale: string;
+  /** Optional title from server-side generateMetadata (for SSR) */
   title?: string;
 }
 
@@ -85,14 +86,15 @@ export default function AutoBreadcrumb({ locale, title }: AutoBreadcrumbProps) {
   const pathname = usePathname();
   const t = useT('Navbar');
   const override = useBreadcrumbOverride();
-  const [clientTitle, setClientTitle] = useState<string | undefined>(title);
 
-  // Read document.title on client side (not available during SSR)
-  useEffect(() => {
-    if (!title && typeof document !== 'undefined' && document.title) {
-      setClientTitle(document.title);
-    }
-  }, [title]);
+  // Get title for blog posts: try title prop first, then document.title
+  let blogTitle: string | null = null;
+  if (title) {
+    blogTitle = title;
+  } else if (typeof document !== 'undefined' && document.title) {
+    const pipeIdx = document.title.indexOf('|');
+    blogTitle = pipeIdx >= 0 ? document.title.substring(0, pipeIdx).trim() : document.title;
+  }
 
   // Skip root and locale-only paths
   if (!pathname || pathname === '/' || pathname === `/${locale}`) {
@@ -137,15 +139,9 @@ export default function AutoBreadcrumb({ locale, title }: AutoBreadcrumbProps) {
         items.push({ label: override.label });
         continue;
       }
-      // Server-set title prop
-      if (title) {
-        items.push({ label: title });
-        continue;
-      }
-      // Client-side document.title (set via useEffect, strips site suffix)
-      if (clientTitle) {
-        const pipeIdx = clientTitle.indexOf('|');
-        items.push({ label: pipeIdx >= 0 ? clientTitle.substring(0, pipeIdx).trim() : clientTitle });
+      // Use pre-computed blog title (from title prop or document.title)
+      if (blogTitle) {
+        items.push({ label: blogTitle });
         continue;
       }
       // Final fallback: formatted slug

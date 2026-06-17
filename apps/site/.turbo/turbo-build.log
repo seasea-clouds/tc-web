@@ -84,15 +84,15 @@ Generated search-widget-translations.json: 48 locales → /root/projects/trade/w
 
 ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
   Creating an optimized production build ...
-✓ Compiled successfully in 2.9s
+✓ Compiled successfully in 2.4s
   Running TypeScript ...
-  Finished TypeScript in 7.6s ...
+  Finished TypeScript in 6.6s ...
   Collecting page data using 19 workers ...
   Generating static pages using 19 workers (0/1349) ...
   Generating static pages using 19 workers (337/1349) 
   Generating static pages using 19 workers (674/1349) 
   Generating static pages using 19 workers (1011/1349) 
-✓ Generating static pages using 19 workers (1349/1349) in 5.7s
+✓ Generating static pages using 19 workers (1349/1349) in 5.3s
   Finalizing page optimization ...
 ⚠ Statically exporting a Next.js application via `next export` disables API routes and middleware.
 This command is meant for static-only hosts, and is not necessary to make your application static.
@@ -341,8 +341,8 @@ Output:   /root/projects/trade/web/apps/site/out
 
 ▶ clean-rsc.js out
 🧹 Cleaning RSC .txt payload files from out/...
-✅ Deleted 12829 RSC payload files (804.1 MB freed)
-(node:4177216) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/projects/trade/web/packages/scripts/clean-rsc.js is not specified and it doesn't parse as CommonJS.
+✅ Deleted 12829 RSC payload files (804.0 MB freed)
+(node:4181911) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/projects/trade/web/packages/scripts/clean-rsc.js is not specified and it doesn't parse as CommonJS.
 Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
 To eliminate this warning, add "type": "module" to /root/projects/trade/web/package.json.
 (Use `node --trace-warnings ...` to show where the warning was created)

@@ -22,13 +22,27 @@ export function getMessages(locale: string): Record<string, any> {
     }
   } catch { /* ignore */ }
 
+  // Deep merge helper
+  function deepMerge(base: Record<string, any>, override: Record<string, any>): Record<string, any> {
+    const result = { ...base };
+    for (const key of Object.keys(override)) {
+      if (key in result && typeof result[key] === 'object' && result[key] !== null && !Array.isArray(result[key])
+          && typeof override[key] === 'object' && override[key] !== null && !Array.isArray(override[key])) {
+        (result as any)[key] = deepMerge(result[key], override[key]);
+      } else {
+        (result as any)[key] = override[key];
+      }
+    }
+    return result;
+  }
+
   // Load app messages
   let data: Record<string, any> = { ...shared };
   try {
     const filePath = path.join(process.cwd(), 'messages', `${locale}.json`);
     if (fs.existsSync(filePath)) {
       const appData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-      data = { ...data, ...appData };
+      data = deepMerge(data, appData);
     }
   } catch { /* fall through */ }
 

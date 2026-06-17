@@ -107,8 +107,22 @@ const localeImports: Record<string, Record<string, unknown>> = {
 
 export const messagesMap: Record<string, Record<string, unknown>> = {};
 
+// Deep merge helper: recursively merges nested objects
+function deepMerge<T extends Record<string, unknown>>(base: T, override: Record<string, unknown>): T {
+  const result = { ...base };
+  for (const key of Object.keys(override)) {
+    if (key in result && typeof result[key] === 'object' && result[key] !== null && !Array.isArray(result[key])
+        && typeof override[key] === 'object' && override[key] !== null && !Array.isArray(override[key])) {
+      (result as any)[key] = deepMerge(result[key] as Record<string, unknown>, override[key] as Record<string, unknown>);
+    } else {
+      (result as any)[key] = override[key];
+    }
+  }
+  return result;
+}
+
 // Merge app messages into shared UI messages for all locales
 for (const locale of Object.keys(uiMessagesMap)) {
   const appMsg = localeImports[locale] || {};
-  messagesMap[locale] = { ...uiMessagesMap[locale], ...appMsg };
+  messagesMap[locale] = deepMerge(uiMessagesMap[locale], appMsg);
 }

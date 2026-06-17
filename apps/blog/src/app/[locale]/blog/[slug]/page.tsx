@@ -1,4 +1,5 @@
 import fs from 'fs';
+import { headers } from 'next/headers';
 import path from 'path';
 import matter from 'gray-matter';
 import { getPosts, parseHeadings, mdToHtml, type PostMeta } from '@/lib/posts';

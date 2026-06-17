@@ -49,6 +49,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       canonical: url,
       languages: buildLanguages(locale, [...LOCALES], `/blog/${slug}/`),
     },
+    headers: {
+      'x-breadcrumb-title': title,
+    },
   };
 }
 

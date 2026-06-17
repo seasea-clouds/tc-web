@@ -3,7 +3,7 @@
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useT, useTradeLocale } from './TranslationProvider';
-import { createContext, useContext, type ReactNode } from 'react';
+import { createContext, useContext, type ReactNode, useState, useEffect } from 'react';
 
 interface Segment {
   label: string;
@@ -68,6 +68,7 @@ const INDUSTRY_LABELS: Record<string, string> = {
 
 export interface AutoBreadcrumbProps {
   locale: string;
+  title?: string;
 }
 
 /**
@@ -80,10 +81,18 @@ export interface AutoBreadcrumbProps {
  *   </BreadcrumbOverrideProvider>
  * The last breadcrumb segment will use the overridden label instead of auto-derived slug.
  */
-export default function AutoBreadcrumb({ locale }: AutoBreadcrumbProps) {
+export default function AutoBreadcrumb({ locale, title }: AutoBreadcrumbProps) {
   const pathname = usePathname();
   const t = useT('Navbar');
   const override = useBreadcrumbOverride();
+  const [clientTitle, setClientTitle] = useState<string | undefined>(title);
+
+  // Read document.title on client side (not available during SSR)
+  useEffect(() => {
+    if (!title && typeof document !== 'undefined' && document.title) {
+      setClientTitle(document.title);
+    }
+  }, [title]);
 
   // Skip root and locale-only paths
   if (!pathname || pathname === '/' || pathname === `/${locale}`) {
@@ -122,28 +131,25 @@ export default function AutoBreadcrumb({ locale }: AutoBreadcrumbProps) {
       continue;
     }
 
-    // Blog posts: /blog/{slug} → use lastItemLabel override (set by page via metadata)
+    // Blog posts: /blog/{slug} → use title prop or override
     if (pathSegments[i - 1] === 'blog' && i > 0) {
       if (override) {
         items.push({ label: override.label });
         continue;
       }
-      // Use document.title stripped of site suffix (client-side, set by Next.js generateMetadata)
-      if (typeof document !== 'undefined' && document.title) {
-        const pipeIdx = document.title.indexOf('|');
-        items.push({ label: pipeIdx >= 0 ? document.title.substring(0, pipeIdx).trim() : document.title });
-      } else {
-        // SSR fallback: check for custom element with data-breadcrumb-title
-        if (typeof document !== 'undefined') {
-          const breadcrumbEl = document.querySelector('[data-breadcrumb-title]');
-          if (breadcrumbEl) {
-            items.push({ label: breadcrumbEl.getAttribute('data-breadcrumb-title') || seg.replace(/-/g, ' ') });
-            continue;
-          }
-        }
-        // Final fallback: formatted slug
-        items.push({ label: seg.replace(/-/g, ' ') });
+      // Server-set title prop
+      if (title) {
+        items.push({ label: title });
+        continue;
       }
+      // Client-side document.title (set via useEffect, strips site suffix)
+      if (clientTitle) {
+        const pipeIdx = clientTitle.indexOf('|');
+        items.push({ label: pipeIdx >= 0 ? clientTitle.substring(0, pipeIdx).trim() : clientTitle });
+        continue;
+      }
+      // Final fallback: formatted slug
+      items.push({ label: seg.replace(/-/g, ' ') });
       continue;
     }
 

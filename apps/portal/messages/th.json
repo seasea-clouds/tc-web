@@ -52,7 +52,10 @@
     "errorRequired": "ต้องใช้อีเมลและรหัสผ่าน",
     "errorInvalid": "อีเมลหรือรหัสผ่านไม่ถูกต้อง",
     "errorExists": "อีเมล์ที่ลงทะเบียนไว้แล้ว",
-    "errorLength": "รหัสผ่านต้องมีอย่างน้อย 5 ตัวอักษร"
+    "errorLength": "รหัสผ่านต้องมีอย่างน้อย 5 ตัวอักษร",
+    "securityCheck": "กรุณาทำขั้นตอนความปลอดภัยให้เสร็จสมบูรณ์",
+    "securityCheckFailed": "ขั้นตอนความปลอดภัยล้มเหลว กรุณาลองใหม่อีกครั้ง",
+    "securityCheckExpired": "ขั้นตอนความปลอดภัยหมดอายุ กรุณาลองใหม่อีกครั้ง"
   },
   "Dashboard": {
     "title": "แดชบอร์ด",
@@ -76,7 +79,8 @@
     "subscription": "สมัครสมาชิก",
     "settings": "การตั้งค่า",
     "viewReportsDesc": "ดูรายงานการปฏิบัติตามข้อกำหนดของคุณ",
-    "manageSubscriptionDesc": "จัดการการสมัครของคุณ"
+    "manageSubscriptionDesc": "จัดการการสมัครของคุณ",
+    "youAreOnFreePlan": "คุณกำลังใช้แผนฟรี"
   },
   "Pricing": {
     "title": "การกำหนดราคาที่เรียบง่าย",
@@ -103,7 +107,7 @@
     "monthlyBullet2": "รวมทั้งหมด 6 โมดูล",
     "monthlyBullet3": "รายงานประวัติและข้อมูลที่บันทึกไว้",
     "monthlyBullet4": "ยกเลิกได้ตลอดเวลา",
-    "subscribe": "สมัครสมาชิก $9.9/เดือน",
+    "subscribe": "สมัคร $9.9/เดือน",
     "professional": "บริการระดับมืออาชีพ",
     "professionalPrice": "$500+",
     "professionalDesc": "การลงทะเบียนการปฏิบัติตามข้อกำหนดโดยผู้เชี่ยวชาญของเรา",
@@ -1449,6 +1453,11 @@
     "labelMandatoryFields": "ช่องบังคับ"
   },
   "Navbar": {
-    "selfCheck": "การตรวจสอบตนเอง"
+    "selfCheck": "การตรวจสอบตนเอง",
+    "pricing": "ราคา",
+    "dashboard": "แดชบอร์ด"
+  },
+  "Breadcrumb": {
+    "pricing": "ราคา"
   }
 }

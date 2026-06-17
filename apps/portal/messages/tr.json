@@ -52,7 +52,10 @@
     "errorRequired": "E-posta ve şifre gerekli",
     "errorInvalid": "Geçersiz e-posta veya şifre",
     "errorExists": "E-posta zaten kayıtlı",
-    "errorLength": "Şifre en az 5 karakter olmalıdır"
+    "errorLength": "Şifre en az 5 karakter olmalıdır",
+    "securityCheck": "Lütfen güvenlik kontrolünü tamamlayın.",
+    "securityCheckFailed": "Güvenlik kontrolü başarısız oldu. Lütfen tekrar deneyin.",
+    "securityCheckExpired": "Güvenlik kontrolünün süresi doldu. Lütfen tekrar deneyin."
   },
   "Dashboard": {
     "title": "Kontrol Paneli",
@@ -76,7 +79,8 @@
     "subscription": "Abonelik",
     "settings": "Ayarlar",
     "viewReportsDesc": "Uyumluluk raporlarınızı görüntüleyin",
-    "manageSubscriptionDesc": "Aboneliğinizi yönetin"
+    "manageSubscriptionDesc": "Aboneliğinizi yönetin",
+    "youAreOnFreePlan": "Şu anda ücretsiz planındasınız."
   },
   "Pricing": {
     "title": "Basit Fiyatlandırma",
@@ -1449,6 +1453,11 @@
     "labelMandatoryFields": "Zorunlu Alanlar"
   },
   "Navbar": {
-    "selfCheck": "Kendi Kendine Kontrol"
+    "selfCheck": "Kendi Kendine Kontrol",
+    "pricing": "Fiyatlandırma",
+    "dashboard": "Kontrol Paneli"
+  },
+  "Breadcrumb": {
+    "pricing": "Fiyatlandırma"
   }
 }

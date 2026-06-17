@@ -52,7 +52,10 @@
     "errorRequired": "E-mail és jelszó szükséges",
     "errorInvalid": "Érvénytelen e-mail cím vagy jelszó",
     "errorExists": "Már regisztrált e-mail cím",
-    "errorLength": "A jelszónak legalább 5 karakterből kell állnia"
+    "errorLength": "A jelszónak legalább 5 karakterből kell állnia",
+    "securityCheck": "Kérjük, fejezze be a biztonsági ellenőrzést.",
+    "securityCheckFailed": "A biztonsági ellenőrzés sikertelen. Próbálja újra.",
+    "securityCheckExpired": "A biztonsági ellenőrzés lejárt. Próbálja újra."
   },
   "Dashboard": {
     "title": "Műszerfal",
@@ -1449,6 +1452,11 @@
     "labelMandatoryFields": "Kötelező mezők"
   },
   "Navbar": {
-    "selfCheck": "Önértékelés"
+    "selfCheck": "Önértékelés",
+    "pricing": "Árazás",
+    "dashboard": "Vezérlőpult"
+  },
+  "Breadcrumb": {
+    "pricing": "Árazás"
   }
 }

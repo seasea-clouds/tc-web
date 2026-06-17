@@ -52,7 +52,10 @@
     "errorRequired": "E-post og passord kreves",
     "errorInvalid": "Ugyldig e-postadresse eller passord",
     "errorExists": "E-post er allerede registrert",
-    "errorLength": "Passordet må være på minst 5 tegn"
+    "errorLength": "Passordet må være på minst 5 tegn",
+    "securityCheck": "Vennligst fullfør sikkerhetssjekken.",
+    "securityCheckFailed": "Sikkerhetssjekken mislyktes. Vennligst prøv igjen.",
+    "securityCheckExpired": "Sikkerhetssjekken har utløpt. Vennligst prøv igjen."
   },
   "Dashboard": {
     "title": "Dashbord",
@@ -1449,6 +1452,11 @@
     "labelMandatoryFields": "Obligatoriske felter"
   },
   "Navbar": {
-    "selfCheck": "Selvverifikasjon"
+    "selfCheck": "Selvverifikasjon",
+    "pricing": "Prising",
+    "dashboard": "Dashboard"
+  },
+  "Breadcrumb": {
+    "pricing": "Prising"
   }
 }

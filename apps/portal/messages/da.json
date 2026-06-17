@@ -52,7 +52,10 @@
     "errorRequired": "E-mail og adgangskode påkrævet",
     "errorInvalid": "Ugyldig e-mail eller adgangskode",
     "errorExists": "E-mail allerede registreret",
-    "errorLength": "Adgangskoden skal være på mindst 5 tegn"
+    "errorLength": "Adgangskoden skal være på mindst 5 tegn",
+    "securityCheck": "Udfyld venligst sikkerhedstjekket.",
+    "securityCheckFailed": "Sikkerhedstjekket mislykkedes. Prøv igen.",
+    "securityCheckExpired": "Sikkerhedstjekket er udløbet. Prøv igen."
   },
   "Dashboard": {
     "title": "Dashboard",
@@ -1449,6 +1452,11 @@
     "labelMandatoryFields": "Obligatoriske felter"
   },
   "Navbar": {
-    "selfCheck": "Selvtest"
+    "selfCheck": "Selvtest",
+    "pricing": "Prissætning",
+    "dashboard": "Dashboard"
+  },
+  "Breadcrumb": {
+    "pricing": "Prissætning"
   }
 }

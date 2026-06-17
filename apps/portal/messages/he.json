@@ -52,7 +52,10 @@
     "errorRequired": "דרושים דואר אלקטרוני וסיסמה",
     "errorInvalid": "אימייל או סיסמה לא חוקיים",
     "errorExists": "האימייל כבר רשום",
-    "errorLength": "הסיסמה חייבת להיות לפחות 5 תווים"
+    "errorLength": "הסיסמה חייבת להיות לפחות 5 תווים",
+    "securityCheck": "אנא השלם את בדיקת האבטחה.",
+    "securityCheckFailed": "בדיקת האבטחה נכשלה. נסה שוב.",
+    "securityCheckExpired": "בדיקת האבטחה פגה. נסה שוב."
   },
   "Dashboard": {
     "title": "לוּחַ מַחווָנִים",
@@ -1449,6 +1452,11 @@
     "labelMandatoryFields": "שדות חובה"
   },
   "Navbar": {
-    "selfCheck": "בדיקה עצמית"
+    "selfCheck": "בדיקה עצמית",
+    "pricing": "מחירים",
+    "dashboard": "לוח בקרה"
+  },
+  "Breadcrumb": {
+    "pricing": "מחירים"
   }
 }

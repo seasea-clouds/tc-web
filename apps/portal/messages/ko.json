@@ -52,7 +52,10 @@
     "errorRequired": "이메일과 비밀번호가 필요합니다",
     "errorInvalid": "잘못된 이메일 또는 비밀번호",
     "errorExists": "이미 등록된 이메일",
-    "errorLength": "비밀번호는 5자 이상이어야 합니다."
+    "errorLength": "비밀번호는 5자 이상이어야 합니다.",
+    "securityCheck": "보안 검사를 완료하십시오.",
+    "securityCheckFailed": "보안 검사에 실패했습니다. 다시 시도해 주세요.",
+    "securityCheckExpired": "보안 검사 만료되었습니다. 다시 시도해 주세요."
   },
   "Dashboard": {
     "title": "계기반",
@@ -76,7 +79,8 @@
     "subscription": "신청",
     "settings": "설정",
     "viewReportsDesc": "규정 준수 보고서 보기",
-    "manageSubscriptionDesc": "구독 관리"
+    "manageSubscriptionDesc": "구독 관리",
+    "youAreOnFreePlan": "현재 무료 플랜을 사용하고 있습니다."
   },
   "Pricing": {
     "title": "단순 가격",
@@ -104,7 +108,7 @@
     "monthlyBullet3": "신고 내역 및 저장 데이터",
     "monthlyBullet4": "언제든지 취소",
     "subscribe": "구독 $9.9/월",
-    "professional": "전문적인 서비스",
+    "professional": "전문 서비스",
     "professionalPrice": "$500+",
     "professionalDesc": "당사 전문가에 의한 전체 규정 준수 등록",
     "professionalBullet1": "전체 준수 등록",
@@ -1449,6 +1453,11 @@
     "labelMandatoryFields": "필수 항목"
   },
   "Navbar": {
-    "selfCheck": "셀프 체크"
+    "selfCheck": "셀프 체크",
+    "pricing": "가격",
+    "dashboard": "대시보드"
+  },
+  "Breadcrumb": {
+    "pricing": "가격"
   }
 }

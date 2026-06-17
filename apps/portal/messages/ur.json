@@ -52,7 +52,10 @@
     "errorRequired": "ای میل اور پاس ورڈ درکار ہے۔",
     "errorInvalid": "غلط ای میل یا پاس ورڈ",
     "errorExists": "ای میل پہلے سے رجسٹرڈ ہے۔",
-    "errorLength": "پاس ورڈ کم از کم 5 حروف کا ہونا چاہیے۔"
+    "errorLength": "پاس ورڈ کم از کم 5 حروف کا ہونا چاہیے۔",
+    "securityCheck": "براہ کرم سیکیورٹی چیک مکمل کریں۔",
+    "securityCheckFailed": "سیکیورٹی چیک ناکام ہو گیا۔ براہ کرم دوبارہ کوشش کریں۔",
+    "securityCheckExpired": "سیکیورٹی چیک کی میعاد ختم ہو گئی۔ براہ کرم دوبارہ کوشش کریں۔"
   },
   "Dashboard": {
     "title": "ڈیش بورڈ",
@@ -1449,6 +1452,11 @@
     "labelMandatoryFields": "لازمی فیلڈز"
   },
   "Navbar": {
-    "selfCheck": "خود جانچ"
+    "selfCheck": "خود جانچ",
+    "pricing": "قیمت",
+    "dashboard": "ڈیش بورڈ"
+  },
+  "Breadcrumb": {
+    "pricing": "قیمت"
   }
 }

@@ -52,7 +52,10 @@
     "errorRequired": "E-poçt və parol tələb olunur",
     "errorInvalid": "Yanlış e-poçt və ya parol",
     "errorExists": "E-poçt artıq qeydiyyatdan keçib",
-    "errorLength": "Parol ən azı 5 simvoldan ibarət olmalıdır"
+    "errorLength": "Parol ən azı 5 simvoldan ibarət olmalıdır",
+    "securityCheck": "Təhlükəslik yoxlamasını tamamlayın.",
+    "securityCheckFailed": "Təhlükəslik yoxlaması uğursuz oldu. Yenidən cəhd edin.",
+    "securityCheckExpired": "Təhlükəslik yoxlamasının müddəti bitdi. Yenidən cəhd edin."
   },
   "Dashboard": {
     "title": "İdarə paneli",
@@ -1449,6 +1452,11 @@
     "labelMandatoryFields": "Məcburi Sahələr"
   },
   "Navbar": {
-    "selfCheck": "Özünü yoxlama"
+    "selfCheck": "Özünü yoxlama",
+    "pricing": "Qiymətləndirmə",
+    "dashboard": "İdarəetmə paneli"
+  },
+  "Breadcrumb": {
+    "pricing": "Qiymətləndirmə"
   }
 }

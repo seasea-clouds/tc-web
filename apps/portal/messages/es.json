@@ -52,7 +52,10 @@
     "errorRequired": "Se requiere correo electrónico y contraseña",
     "errorInvalid": "Correo electrónico o contraseña no válida",
     "errorExists": "Correo electrónico ya registrado",
-    "errorLength": "La contraseña debe tener al menos 5 caracteres."
+    "errorLength": "La contraseña debe tener al menos 5 caracteres.",
+    "securityCheck": "Por favor, complete la verificación de seguridad.",
+    "securityCheckFailed": "La verificación de seguridad falló. Inténtelo de nuevo.",
+    "securityCheckExpired": "La verificación de seguridad ha expirado. Inténtelo de nuevo."
   },
   "Dashboard": {
     "title": "Panel",
@@ -76,7 +79,8 @@
     "subscription": "Suscripción",
     "settings": "Ajustes",
     "viewReportsDesc": "Ver sus informes de cumplimiento",
-    "manageSubscriptionDesc": "Gestiona tu suscripción"
+    "manageSubscriptionDesc": "Gestiona tu suscripción",
+    "youAreOnFreePlan": "Actualmente estás en el plan gratuito."
   },
   "Pricing": {
     "title": "Precios sencillos",
@@ -1449,6 +1453,11 @@
     "labelMandatoryFields": "Campos obligatorios"
   },
   "Navbar": {
-    "selfCheck": "Autoevaluación"
+    "selfCheck": "Autoevaluación",
+    "pricing": "Precios",
+    "dashboard": "Panel"
+  },
+  "Breadcrumb": {
+    "pricing": "Precios"
   }
 }

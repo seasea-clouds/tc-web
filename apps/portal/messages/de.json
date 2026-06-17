@@ -52,7 +52,10 @@
     "errorRequired": "E-Mail und Passwort erforderlich",
     "errorInvalid": "Ungültige E-Mail-Adresse oder ungültiges Passwort",
     "errorExists": "E-Mail bereits registriert",
-    "errorLength": "Das Passwort muss mindestens 5 Zeichen lang sein"
+    "errorLength": "Das Passwort muss mindestens 5 Zeichen lang sein",
+    "securityCheck": "Bitte vervollständigen Sie die Sicherheitsüberprüfung.",
+    "securityCheckFailed": "Sicherheitsüberprüfung fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "securityCheckExpired": "Die Sicherheitsüberprüfung ist abgelaufen. Bitte versuchen Sie es erneut."
   },
   "Dashboard": {
     "title": "Armaturenbrett",
@@ -1456,6 +1459,11 @@
     "labelMandatoryFields": "Pflichtfelder"
   },
   "Navbar": {
-    "selfCheck": "Selbstprüfung"
+    "selfCheck": "Selbstprüfung",
+    "pricing": "Preisgestaltung",
+    "dashboard": "Dashboard"
+  },
+  "Breadcrumb": {
+    "pricing": "Preisgestaltung"
   }
 }

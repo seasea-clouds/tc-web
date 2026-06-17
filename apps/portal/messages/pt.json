@@ -52,7 +52,10 @@
     "errorRequired": "E-mail e senha necessários",
     "errorInvalid": "E-mail ou senha inválida",
     "errorExists": "E-mail já cadastrado",
-    "errorLength": "A senha deve ter pelo menos 5 caracteres"
+    "errorLength": "A senha deve ter pelo menos 5 caracteres",
+    "securityCheck": "Por favor, conclua a verificação de segurança.",
+    "securityCheckFailed": "A verificação de segurança falhou. Tente novamente.",
+    "securityCheckExpired": "A verificação de segurança expirou. Tente novamente."
   },
   "Dashboard": {
     "title": "Painel",
@@ -76,7 +79,8 @@
     "subscription": "Subscrição",
     "settings": "Configurações",
     "viewReportsDesc": "Veja seus relatórios de conformidade",
-    "manageSubscriptionDesc": "Gerencie sua assinatura"
+    "manageSubscriptionDesc": "Gerencie sua assinatura",
+    "youAreOnFreePlan": "Você está atualmente no plano gratuito."
   },
   "Pricing": {
     "title": "Preço Simples",
@@ -1449,6 +1453,11 @@
     "labelMandatoryFields": "Campos Obrigatórios"
   },
   "Navbar": {
-    "selfCheck": "Autoavaliação"
+    "selfCheck": "Autoavaliação",
+    "pricing": "Preços",
+    "dashboard": "Painel"
+  },
+  "Breadcrumb": {
+    "pricing": "Preços"
   }
 }

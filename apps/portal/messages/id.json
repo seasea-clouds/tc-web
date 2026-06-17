@@ -52,7 +52,10 @@
     "errorRequired": "Diperlukan email dan kata sandi",
     "errorInvalid": "Email atau kata sandi tidak valid",
     "errorExists": "Email sudah terdaftar",
-    "errorLength": "Kata sandi minimal harus 5 karakter"
+    "errorLength": "Kata sandi minimal harus 5 karakter",
+    "securityCheck": "Silakan selesaikan pemeriksaan keamanan.",
+    "securityCheckFailed": "Pemeriksaan keamanan gagal. Silakan coba lagi.",
+    "securityCheckExpired": "Pemeriksaan keamanan telah kedaluwarsa. Silakan coba lagi."
   },
   "Dashboard": {
     "title": "Dasbor",
@@ -1449,6 +1452,11 @@
     "labelMandatoryFields": "Bidang Wajib"
   },
   "Navbar": {
-    "selfCheck": "Pemeriksaan Diri"
+    "selfCheck": "Pemeriksaan Diri",
+    "pricing": "Harga",
+    "dashboard": "Dasbor"
+  },
+  "Breadcrumb": {
+    "pricing": "Harga"
   }
 }

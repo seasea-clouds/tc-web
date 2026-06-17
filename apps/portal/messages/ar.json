@@ -52,7 +52,10 @@
     "errorRequired": "البريد الإلكتروني وكلمة المرور مطلوبة",
     "errorInvalid": "البريد الإلكتروني أو كلمة المرور غير صالحة",
     "errorExists": "البريد الإلكتروني مسجل بالفعل",
-    "errorLength": "يجب أن تتكون كلمة المرور من 5 أحرف على الأقل"
+    "errorLength": "يجب أن تتكون كلمة المرور من 5 أحرف على الأقل",
+    "securityCheck": "يرجى إكمال التحقق الأمني.",
+    "securityCheckFailed": "فشل التحقق الأمني. يرجى المحاولة مرة أخرى.",
+    "securityCheckExpired": "انتهت صلاحية التحقق الأمني. يرجى المحاولة مرة أخرى."
   },
   "Dashboard": {
     "title": "لوحة القيادة",
@@ -76,7 +79,8 @@
     "subscription": "الاشتراك",
     "settings": "إعدادات",
     "viewReportsDesc": "عرض تقارير الامتثال الخاصة بك",
-    "manageSubscriptionDesc": "إدارة اشتراكك"
+    "manageSubscriptionDesc": "إدارة اشتراكك",
+    "youAreOnFreePlan": "أنت حاليًا على الخطة المجانية."
   },
   "Pricing": {
     "title": "تسعير بسيط",
@@ -104,7 +108,7 @@
     "monthlyBullet3": "تقرير التاريخ والبيانات المحفوظة",
     "monthlyBullet4": "إلغاء في أي وقت",
     "subscribe": "اشترك بـ 9.9 دولارًا شهريًا",
-    "professional": "الخدمة المهنية",
+    "professional": "الخدمة الاحترافية",
     "professionalPrice": "500 دولار+",
     "professionalDesc": "تسجيل الامتثال الكامل من قبل خبرائنا",
     "professionalBullet1": "تسجيل الامتثال الكامل",
@@ -1449,6 +1453,11 @@
     "labelMandatoryFields": "الحقول الإلزامية"
   },
   "Navbar": {
-    "selfCheck": "التحقق الذاتي"
+    "selfCheck": "التحقق الذاتي",
+    "pricing": "تسعير",
+    "dashboard": "لوحة القيادة"
+  },
+  "Breadcrumb": {
+    "pricing": "تسعير"
   }
 }

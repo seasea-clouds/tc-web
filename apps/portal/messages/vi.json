@@ -52,7 +52,10 @@
     "errorRequired": "Cần có email và mật khẩu",
     "errorInvalid": "Email hoặc mật khẩu không hợp lệ",
     "errorExists": "Email đã được đăng ký",
-    "errorLength": "Mật khẩu phải có ít nhất 5 ký tự"
+    "errorLength": "Mật khẩu phải có ít nhất 5 ký tự",
+    "securityCheck": "Vui lòng hoàn thành kiểm tra bảo mật.",
+    "securityCheckFailed": "Kiểm tra bảo mật không thành công. Vui lòng thử lại.",
+    "securityCheckExpired": "Kiểm tra bảo mật đã hết hạn. Vui lòng thử lại."
   },
   "Dashboard": {
     "title": "Trang tổng quan",
@@ -76,7 +79,8 @@
     "subscription": "Đăng ký",
     "settings": "Cài đặt",
     "viewReportsDesc": "Xem báo cáo tuân thủ của bạn",
-    "manageSubscriptionDesc": "Quản lý đăng ký của bạn"
+    "manageSubscriptionDesc": "Quản lý đăng ký của bạn",
+    "youAreOnFreePlan": "Bạn đang dùng gói miễn phí."
   },
   "Pricing": {
     "title": "Định giá đơn giản",
@@ -1449,6 +1453,11 @@
     "labelMandatoryFields": "Trường bắt buộc"
   },
   "Navbar": {
-    "selfCheck": "Tự đánh giá"
+    "selfCheck": "Tự đánh giá",
+    "pricing": "Bảng giá",
+    "dashboard": "Bảng điều khiển"
+  },
+  "Breadcrumb": {
+    "pricing": "Bảng giá"
   }
 }

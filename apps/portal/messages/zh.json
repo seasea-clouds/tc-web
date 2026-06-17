@@ -52,7 +52,10 @@
     "errorRequired": "需要电子邮件和密码",
     "errorInvalid": "电子邮件或密码无效",
     "errorExists": "邮箱已注册",
-    "errorLength": "密码必须至少为 5 个字符"
+    "errorLength": "密码必须至少为 5 个字符",
+    "securityCheck": "请完成安全验证。",
+    "securityCheckFailed": "安全验证失败，请重试。",
+    "securityCheckExpired": "安全验证已过期，请重试。"
   },
   "Dashboard": {
     "title": "仪表板",
@@ -1457,6 +1460,11 @@
     "labelMandatoryFields": "必填字段"
   },
   "Navbar": {
-    "selfCheck": "合规自查"
+    "selfCheck": "合规自查",
+    "pricing": "定价",
+    "dashboard": "仪表盘"
+  },
+  "Breadcrumb": {
+    "pricing": "定价"
   }
 }

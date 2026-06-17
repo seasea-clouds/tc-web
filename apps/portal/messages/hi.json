@@ -52,7 +52,10 @@
     "errorRequired": "ईमेल और पासवर्ड आवश्यक",
     "errorInvalid": "अमान्य ईमेल या पासवर्ड",
     "errorExists": "ईमेल पहले से ही पंजीकृत है",
-    "errorLength": "पासवर्ड कम से कम 5 अक्षर का होना चाहिए"
+    "errorLength": "पासवर्ड कम से कम 5 अक्षर का होना चाहिए",
+    "securityCheck": "कृपया सुरक्षा जांच पूरी करें।",
+    "securityCheckFailed": "सुरक्षा जांच विफल हुई। कृपया पुनः प्रयास करें।",
+    "securityCheckExpired": "सुरक्षा जांच समाप्त हो गई है। कृपया पुनः प्रयास करें।"
   },
   "Dashboard": {
     "title": "डैशबोर्ड",
@@ -1449,6 +1452,11 @@
     "labelMandatoryFields": "अनिवार्य क्षेत्र"
   },
   "Navbar": {
-    "selfCheck": "स्व-जानच"
+    "selfCheck": "स्व-जानच",
+    "pricing": "मूल्य निर्धारण",
+    "dashboard": "डैशबोर्ड"
+  },
+  "Breadcrumb": {
+    "pricing": "मूल्य निर्धारण"
   }
 }

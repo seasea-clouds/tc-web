@@ -52,7 +52,10 @@
     "errorRequired": "ایمیل و رمز عبور لازم است",
     "errorInvalid": "ایمیل یا رمز عبور نامعتبر است",
     "errorExists": "ایمیل قبلا ثبت شده است",
-    "errorLength": "رمز عبور باید حداقل 5 کاراکتر باشد"
+    "errorLength": "رمز عبور باید حداقل 5 کاراکتر باشد",
+    "securityCheck": "لطفاً بررسی امنیتی را تکمیل کنید.",
+    "securityCheckFailed": "بررسی امنیتی ناموفق بود. لطفاً دوباره تلاش کنید.",
+    "securityCheckExpired": "بررسی امنیتی منقضی شده است. لطفاً دوباره تلاش کنید."
   },
   "Dashboard": {
     "title": "داشبورد",
@@ -1449,6 +1452,11 @@
     "labelMandatoryFields": "فیلدهای اجباری"
   },
   "Navbar": {
-    "selfCheck": "خودارزیابی"
+    "selfCheck": "خودارزیابی",
+    "pricing": "قیمت گذاری",
+    "dashboard": "داشبورد"
+  },
+  "Breadcrumb": {
+    "pricing": "قیمت گذاری"
   }
 }

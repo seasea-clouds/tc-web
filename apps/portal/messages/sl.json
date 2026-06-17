@@ -52,7 +52,10 @@
     "errorRequired": "Potrebna sta e-pošta in geslo",
     "errorInvalid": "Neveljaven e-poštni naslov ali geslo",
     "errorExists": "E-pošta je že registrirana",
-    "errorLength": "Geslo mora imeti vsaj 5 znakov"
+    "errorLength": "Geslo mora imeti vsaj 5 znakov",
+    "securityCheck": "Prosimo, dokončajte varnostno preverjanje.",
+    "securityCheckFailed": "Varnostno preverjanje ni uspelo. Poskusite znova.",
+    "securityCheckExpired": "Varnostno preverjanje je poteklo. Poskusite znova."
   },
   "Dashboard": {
     "title": "Nadzorna plošča",
@@ -1449,6 +1452,11 @@
     "labelMandatoryFields": "Obvezna polja"
   },
   "Navbar": {
-    "selfCheck": "Samoevalvacija"
+    "selfCheck": "Samoevalvacija",
+    "pricing": "Cenik",
+    "dashboard": "Nadzorna plošča"
+  },
+  "Breadcrumb": {
+    "pricing": "Cenik"
   }
 }

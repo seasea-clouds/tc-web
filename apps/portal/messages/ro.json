@@ -52,7 +52,10 @@
     "errorRequired": "E-mail și parolă necesare",
     "errorInvalid": "E-mail sau parolă nevalidă",
     "errorExists": "E-mail deja înregistrat",
-    "errorLength": "Parola trebuie să aibă cel puțin 5 caractere"
+    "errorLength": "Parola trebuie să aibă cel puțin 5 caractere",
+    "securityCheck": "Vă rugăm să completați verificarea de securitate.",
+    "securityCheckFailed": "Verificarea de securitate a eșuat. Încercați din nou.",
+    "securityCheckExpired": "Verificarea de securitate a expirat. Încercați din nou."
   },
   "Dashboard": {
     "title": "Bord",
@@ -1449,6 +1452,11 @@
     "labelMandatoryFields": "Câmpuri obligatorii"
   },
   "Navbar": {
-    "selfCheck": "Autoevaluare"
+    "selfCheck": "Autoevaluare",
+    "pricing": "Prețuri",
+    "dashboard": "Tablou de bord"
+  },
+  "Breadcrumb": {
+    "pricing": "Prețuri"
   }
 }

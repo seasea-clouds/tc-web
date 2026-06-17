@@ -52,7 +52,10 @@
     "errorRequired": "Vyžaduje se e-mail a heslo",
     "errorInvalid": "Neplatný e-mail nebo heslo",
     "errorExists": "E-mail je již zaregistrován",
-    "errorLength": "Heslo musí mít alespoň 5 znaků"
+    "errorLength": "Heslo musí mít alespoň 5 znaků",
+    "securityCheck": "Prosím, dokončete bezpečnostní kontrolu.",
+    "securityCheckFailed": "Bezpečnostní kontrola selhala. Zkuste to znovu.",
+    "securityCheckExpired": "Bezpečnostní kontrola vypršela. Zkuste to znovu."
   },
   "Dashboard": {
     "title": "Dashboard",
@@ -1449,6 +1452,11 @@
     "labelMandatoryFields": "Povinná pole"
   },
   "Navbar": {
-    "selfCheck": "Vlastní kontrola"
+    "selfCheck": "Vlastní kontrola",
+    "pricing": "Ceny",
+    "dashboard": "Panel"
+  },
+  "Breadcrumb": {
+    "pricing": "Ceny"
   }
 }

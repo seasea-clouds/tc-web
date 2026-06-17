@@ -52,7 +52,10 @@
     "errorRequired": "Correu electrònic i contrasenya necessaris",
     "errorInvalid": "Correu electrònic o contrasenya no vàlids",
     "errorExists": "Correu electrònic ja registrat",
-    "errorLength": "La contrasenya ha de tenir almenys 5 caràcters"
+    "errorLength": "La contrasenya ha de tenir almenys 5 caràcters",
+    "securityCheck": "Si us plau, completeu la comprovació de seguretat.",
+    "securityCheckFailed": "La comprovació de seguretat ha fallat. Torna-ho a provar.",
+    "securityCheckExpired": "La comprovació de seguretat ha caducat. Torna-ho a provar."
   },
   "Dashboard": {
     "title": "Tauler de control",
@@ -1449,6 +1452,11 @@
     "labelMandatoryFields": "Camps obligatoris"
   },
   "Navbar": {
-    "selfCheck": "Autoavaluació"
+    "selfCheck": "Autoavaluació",
+    "pricing": "Preus",
+    "dashboard": "Panell"
+  },
+  "Breadcrumb": {
+    "pricing": "Preus"
   }
 }

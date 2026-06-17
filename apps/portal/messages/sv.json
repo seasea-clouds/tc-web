@@ -52,7 +52,10 @@
     "errorRequired": "E-post och lösenord krävs",
     "errorInvalid": "Ogiltig e-postadress eller lösenord",
     "errorExists": "E-post redan registrerad",
-    "errorLength": "Lösenordet måste bestå av minst 5 tecken"
+    "errorLength": "Lösenordet måste bestå av minst 5 tecken",
+    "securityCheck": "Vänligen slutför säkerhetskontrollen.",
+    "securityCheckFailed": "Säkerhetskontrollen misslyckades. Försök igen.",
+    "securityCheckExpired": "Säkerhetskontrollen har löpt ut. Försök igen."
   },
   "Dashboard": {
     "title": "Instrumentpanel",
@@ -1449,6 +1452,11 @@
     "labelMandatoryFields": "Obligatoriska fält"
   },
   "Navbar": {
-    "selfCheck": "Självbedömning"
+    "selfCheck": "Självbedömning",
+    "pricing": "Prissättning",
+    "dashboard": "Instrumentpanel"
+  },
+  "Breadcrumb": {
+    "pricing": "Prissättning"
   }
 }

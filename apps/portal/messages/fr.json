@@ -52,7 +52,10 @@
     "errorRequired": "Email et mot de passe requis",
     "errorInvalid": "Email ou mot de passe invalide",
     "errorExists": "Email déjà enregistré",
-    "errorLength": "Le mot de passe doit contenir au moins 5 caractères"
+    "errorLength": "Le mot de passe doit contenir au moins 5 caractères",
+    "securityCheck": "Veuillez compléter la vérification de sécurité.",
+    "securityCheckFailed": "La vérification de sécurité a échoué. Veuillez réessayer.",
+    "securityCheckExpired": "La vérification de sécurité a expiré. Veuillez réessayer."
   },
   "Dashboard": {
     "title": "Tableau de bord",
@@ -76,7 +79,8 @@
     "subscription": "Abonnement",
     "settings": "Paramètres",
     "viewReportsDesc": "Consultez vos rapports de conformité",
-    "manageSubscriptionDesc": "Gérez votre abonnement"
+    "manageSubscriptionDesc": "Gérez votre abonnement",
+    "youAreOnFreePlan": "Vous êtes actuellement sur le plan gratuit."
   },
   "Pricing": {
     "title": "Tarification simple",
@@ -1449,6 +1453,11 @@
     "labelMandatoryFields": "Champs obligatoires"
   },
   "Navbar": {
-    "selfCheck": "Auto-évaluation"
+    "selfCheck": "Auto-évaluation",
+    "pricing": "Tarifs",
+    "dashboard": "Tableau de bord"
+  },
+  "Breadcrumb": {
+    "pricing": "Tarifs"
   }
 }

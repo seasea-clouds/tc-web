@@ -52,7 +52,10 @@
     "errorRequired": "Email and password required",
     "errorInvalid": "Invalid email or password",
     "errorExists": "Email already registered",
-    "errorLength": "Password must be at least 5 characters"
+    "errorLength": "Password must be at least 5 characters",
+    "securityCheck": "Please complete the security check.",
+    "securityCheckFailed": "Security check failed. Please try again.",
+    "securityCheckExpired": "Security check expired. Please try again."
   },
   "Dashboard": {
     "title": "Dashboard",
@@ -1456,6 +1459,11 @@
     "valueHigh": "High"
   },
   "Navbar": {
-    "selfCheck": "Self-Check"
+    "selfCheck": "Self-Check",
+    "pricing": "Pricing",
+    "dashboard": "Dashboard"
+  },
+  "Breadcrumb": {
+    "pricing": "Pricing"
   }
 }

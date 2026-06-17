@@ -52,7 +52,10 @@
     "errorRequired": "E-pos en wagwoord vereis",
     "errorInvalid": "Ongeldige e-pos of wagwoord",
     "errorExists": "E-pos reeds geregistreer",
-    "errorLength": "Wagwoord moet ten minste 5 karakters wees"
+    "errorLength": "Wagwoord moet ten minste 5 karakters wees",
+    "securityCheck": "Voltooi asseblief die sekuriteitskontrole.",
+    "securityCheckFailed": "Beveiligingskontrole misluk. Probeer asseblief weer.",
+    "securityCheckExpired": "Beveiligingskontrole het verval. Probeer asseblief weer."
   },
   "Dashboard": {
     "title": "Dashboard",
@@ -1449,6 +1452,11 @@
     "labelMandatoryFields": "Verpligte velde"
   },
   "Navbar": {
-    "selfCheck": "Selftoets"
+    "selfCheck": "Selftoets",
+    "pricing": "Pryzetting",
+    "dashboard": "Paneel"
+  },
+  "Breadcrumb": {
+    "pricing": "Pryzetting"
   }
 }

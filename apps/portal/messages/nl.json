@@ -52,7 +52,10 @@
     "errorRequired": "E-mailadres en wachtwoord vereist",
     "errorInvalid": "Ongeldig e-mailadres of wachtwoord",
     "errorExists": "E-mailadres al geregistreerd",
-    "errorLength": "Wachtwoord moet minimaal 5 tekens lang zijn"
+    "errorLength": "Wachtwoord moet minimaal 5 tekens lang zijn",
+    "securityCheck": "Voltooi de beveiligingscontrole.",
+    "securityCheckFailed": "Beveiligingscontrole mislukt. Probeer het opnieuw.",
+    "securityCheckExpired": "Beveiligingscontrole is verlopen. Probeer het opnieuw."
   },
   "Dashboard": {
     "title": "Dashboard",
@@ -76,7 +79,8 @@
     "subscription": "Abonnement",
     "settings": "Instellingen",
     "viewReportsDesc": "Bekijk uw nalevingsrapporten",
-    "manageSubscriptionDesc": "Beheer uw abonnement"
+    "manageSubscriptionDesc": "Beheer uw abonnement",
+    "youAreOnFreePlan": "Je gebruikt momenteel het gratis plan."
   },
   "Pricing": {
     "title": "Eenvoudige prijzen",
@@ -1449,6 +1453,11 @@
     "labelMandatoryFields": "Verplichte velden"
   },
   "Navbar": {
-    "selfCheck": "Zelfevaluatie"
+    "selfCheck": "Zelfevaluatie",
+    "pricing": "Prijzen",
+    "dashboard": "Dashboard"
+  },
+  "Breadcrumb": {
+    "pricing": "Prijzen"
   }
 }

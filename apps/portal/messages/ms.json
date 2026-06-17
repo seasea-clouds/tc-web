@@ -52,7 +52,10 @@
     "errorRequired": "E-mel dan kata laluan diperlukan",
     "errorInvalid": "E-mel atau kata laluan tidak sah",
     "errorExists": "E-mel sudah didaftarkan",
-    "errorLength": "Kata laluan mestilah sekurang-kurangnya 5 aksara"
+    "errorLength": "Kata laluan mestilah sekurang-kurangnya 5 aksara",
+    "securityCheck": "Sila lengkapkan pemeriksaan keselamatan.",
+    "securityCheckFailed": "Pemeriksaan keselamatan gagal. Sila cuba lagi.",
+    "securityCheckExpired": "Pemeriksaan keselamatan telah luput. Sila cuba lagi."
   },
   "Dashboard": {
     "title": "Papan pemuka",
@@ -1449,6 +1452,11 @@
     "labelMandatoryFields": "Medan Wajib"
   },
   "Navbar": {
-    "selfCheck": "Pengesanan Diri"
+    "selfCheck": "Pengesanan Diri",
+    "pricing": "Harga",
+    "dashboard": "Papan pemuka"
+  },
+  "Breadcrumb": {
+    "pricing": "Harga"
   }
 }

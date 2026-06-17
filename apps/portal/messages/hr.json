@@ -52,7 +52,10 @@
     "errorRequired": "Potrebna je adresa e-pošte i lozinka",
     "errorInvalid": "Nevažeća adresa e-pošte ili lozinka",
     "errorExists": "Email je već registriran",
-    "errorLength": "Lozinka mora imati najmanje 5 znakova"
+    "errorLength": "Lozinka mora imati najmanje 5 znakova",
+    "securityCheck": "Molimo dovrite sigurnosnu provjeru.",
+    "securityCheckFailed": "Sigurnosna provjera nije uspjela. Pokušajte ponovo.",
+    "securityCheckExpired": "Sigurnosna provjera je istekla. Pokušajte ponovo."
   },
   "Dashboard": {
     "title": "Nadzorna ploča",
@@ -1449,6 +1452,11 @@
     "labelMandatoryFields": "Obavezna polja"
   },
   "Navbar": {
-    "selfCheck": "Samoprocjena"
+    "selfCheck": "Samoprocjena",
+    "pricing": "Cjenik",
+    "dashboard": "Nadzorna ploča"
+  },
+  "Breadcrumb": {
+    "pricing": "Cjenik"
   }
 }

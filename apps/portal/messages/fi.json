@@ -52,7 +52,10 @@
     "errorRequired": "Sähköposti ja salasana vaaditaan",
     "errorInvalid": "Virheellinen sähköpostiosoite tai salasana",
     "errorExists": "Sähköposti on jo rekisteröity",
-    "errorLength": "Salasanassa on oltava vähintään 5 merkkiä"
+    "errorLength": "Salasanassa on oltava vähintään 5 merkkiä",
+    "securityCheck": "Suorita turvatarkistus.",
+    "securityCheckFailed": "Turvatarkistus epäonnistui. Yritä uudelleen.",
+    "securityCheckExpired": "Turvatarkistus on vanhentunut. Yritä uudelleen."
   },
   "Dashboard": {
     "title": "Kojelauta",
@@ -1449,6 +1452,11 @@
     "labelMandatoryFields": "Pakolliset kentät"
   },
   "Navbar": {
-    "selfCheck": "Itsearviointi"
+    "selfCheck": "Itsearviointi",
+    "pricing": "Hinnasto",
+    "dashboard": "Työalue"
+  },
+  "Breadcrumb": {
+    "pricing": "Hinnasto"
   }
 }

@@ -22,7 +22,7 @@ export default function RegisterPage() {
     setError('');
 
     if (!turnstileToken) {
-      setError('Please complete the security check.');
+      setError(t('securityCheck'));
       return;
     }
 
@@ -97,7 +97,7 @@ export default function RegisterPage() {
               onVerify={(token) => setTurnstileToken(token)}
               onError={() => {
                 setTurnstileToken(null);
-                setError('Security check failed. Please try again.');
+                setError(t('securityCheckFailed'));
               }}
               onExpire={() => {
                 setTurnstileToken(null);

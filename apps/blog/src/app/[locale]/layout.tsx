@@ -1,9 +1,12 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
+import { headers } from 'next/headers';
 import { Footer, SearchProvider, CookieConsent, ActionDock, TradeTranslationProvider, OrganizationJsonLd, sharedOpenGraph, sharedTwitter, AuthProvider, AutoBreadcrumb, buildAlternates, Favicon } from '@trade/ui';
 import { getMessages } from '@/lib/messages';
 import { locales, defaultLocale } from '@/i18n/routing';
 import '../globals.css';
+
+export const dynamic = 'force-static';
 
 export function generateStaticParams() {
   return locales.map(l => ({ locale: l }));
@@ -38,6 +41,10 @@ export default async function Layout({
   const validLocale = locales.includes(locale as any) ? locale : defaultLocale;
   const messages = getMessages(validLocale);
 
+  // Read breadcrumb-title from page's generateMetadata headers
+  const hdrs = await headers();
+  const breadcrumbTitle = hdrs.get('x-breadcrumb-title') || '';
+
   return (
     <html lang={validLocale} dir={validLocale === 'ar' || validLocale === 'he' || validLocale === 'fa' || validLocale === 'ur' ? 'rtl' : 'ltr'}>
       <head>
@@ -50,7 +57,7 @@ export default async function Layout({
           <AuthProvider logoutRedirect={`/${validLocale}/c/login`}>
             <SearchProvider freeCheckHref="/{locale}/c/" loginHref={`/${validLocale}/c/login`} />
                         <main className="flex-1">
-              <AutoBreadcrumb locale={validLocale} />
+              <AutoBreadcrumb locale={validLocale} title={breadcrumbTitle || undefined} />
               {children}
             </main>
             <Footer />

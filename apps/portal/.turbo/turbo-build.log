@@ -57,15 +57,15 @@ Done.
 - Environments: .env
 
   Creating an optimized production build ...
-✓ Compiled successfully in 2.4s
+✓ Compiled successfully in 2.3s
   Running TypeScript ...
-  Finished TypeScript in 5.8s ...
+  Finished TypeScript in 6.0s ...
   Collecting page data using 19 workers ...
   Generating static pages using 19 workers (0/915) ...
   Generating static pages using 19 workers (228/915) 
   Generating static pages using 19 workers (457/915) 
   Generating static pages using 19 workers (686/915) 
-✓ Generating static pages using 19 workers (915/915) in 4.3s
+✓ Generating static pages using 19 workers (915/915) in 3.8s
   Finalizing page optimization ...
 
 Route (app)
@@ -259,15 +259,15 @@ Route (app)
 
 ▶ check-translations.mjs --short --skip-locale-check
 
-⚠️ 发现 8104 个问题
-   - 网站翻译质量: 3595 个问题
+⚠️ 发现 8055 个问题
+   - 网站翻译质量: 3551 个问题
    - 行业 meta 完整性: 528 个问题
-   - Portal 翻译质量: 3981 个问题
+   - Portal 翻译质量: 3976 个问题
 
 ▶ clean-rsc.js out
 🧹 Cleaning RSC .txt payload files from out/...
-✅ Deleted 8743 RSC payload files (340.8 MB freed)
-(node:11079) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/projects/trade/web/packages/scripts/clean-rsc.js is not specified and it doesn't parse as CommonJS.
+✅ Deleted 8743 RSC payload files (347.3 MB freed)
+(node:36691) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/projects/trade/web/packages/scripts/clean-rsc.js is not specified and it doesn't parse as CommonJS.
 Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
 To eliminate this warning, add "type": "module" to /root/projects/trade/web/package.json.
 (Use `node --trace-warnings ...` to show where the warning was created)

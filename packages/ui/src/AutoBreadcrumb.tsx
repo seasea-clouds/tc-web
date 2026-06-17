@@ -68,7 +68,7 @@ const INDUSTRY_LABELS: Record<string, string> = {
 
 export interface AutoBreadcrumbProps {
   locale: string;
-  /** Optional title from server-side generateMetadata (for SSR) */
+  /** Optional title from server-side (for blog posts) */
   title?: string;
 }
 
@@ -130,7 +130,7 @@ export default function AutoBreadcrumb({ locale, title }: AutoBreadcrumbProps) {
         items.push({ label: override.label });
         continue;
       }
-      // Server-set title prop (from page's generateMetadata headers)
+      // Server-set title from MDX frontmatter
       if (title) {
         items.push({ label: title });
         continue;

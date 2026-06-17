@@ -252,6 +252,7 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
 
   return (
     <>
+      <div data-breadcrumb-title={title} style={{ display: 'none' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
 
       <style dangerouslySetInnerHTML={{

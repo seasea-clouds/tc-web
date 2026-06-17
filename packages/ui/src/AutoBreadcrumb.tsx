@@ -87,15 +87,6 @@ export default function AutoBreadcrumb({ locale, title }: AutoBreadcrumbProps) {
   const t = useT('Navbar');
   const override = useBreadcrumbOverride();
 
-  // Get title for blog posts: try title prop first, then document.title
-  let blogTitle: string | null = null;
-  if (title) {
-    blogTitle = title;
-  } else if (typeof document !== 'undefined' && document.title) {
-    const pipeIdx = document.title.indexOf('|');
-    blogTitle = pipeIdx >= 0 ? document.title.substring(0, pipeIdx).trim() : document.title;
-  }
-
   // Skip root and locale-only paths
   if (!pathname || pathname === '/' || pathname === `/${locale}`) {
     return null;
@@ -139,9 +130,9 @@ export default function AutoBreadcrumb({ locale, title }: AutoBreadcrumbProps) {
         items.push({ label: override.label });
         continue;
       }
-      // Use pre-computed blog title (from title prop or document.title)
-      if (blogTitle) {
-        items.push({ label: blogTitle });
+      // Server-set title prop (from page's generateMetadata headers)
+      if (title) {
+        items.push({ label: title });
         continue;
       }
       // Final fallback: formatted slug

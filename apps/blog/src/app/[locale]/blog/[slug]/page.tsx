@@ -14,6 +14,7 @@ const FAQ_NS: Record<string, string> = {
 };
 
 import { WHATSAPP_URL, LOCALES, buildLanguages, SITE_URL, sharedOpenGraph, sharedTwitter } from '@trade/ui';
+import { AutoBreadcrumb } from '@trade/ui';
 import { getMessages } from '@/lib/messages';
 import CopyButton from '@/components/CopyButton';
 
@@ -252,6 +253,7 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
 
   return (
     <>
+      <AutoBreadcrumb locale={locale} title={title} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
 
       <style dangerouslySetInnerHTML={{

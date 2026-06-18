@@ -68,16 +68,20 @@
     "freeCheck": "فحص مجاني",
     "signIn": "تسجيل الدخول",
     "signUp": "اشتراك",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "الاشتراك",
+    "settings": "الإعدادات",
+    "selfCheck": "أداة التقييم الذاتي",
+    "mePage": "حسابي",
+    "testimonials": "الشهادات",
+    "privacy": "سياسة الخصوصية"
   },
   "MobileTab": {
     "home": "الرئيسية",
     "services": "الخدمات",
     "blog": "المدونة",
-    "contact": "اتصل بنا"
+    "check": "فحص"
   },
   "CTA": {
     "ctaTitle": "هل تحتاج إلى هذه الخدمة؟",

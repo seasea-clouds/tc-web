@@ -68,16 +68,20 @@
     "freeCheck": "Cek Percuma",
     "signIn": "Log Masuk",
     "signUp": "Daftar",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "Langganan",
+    "settings": "Tetapan",
+    "selfCheck": "Alat Penilaian Diri",
+    "mePage": "Akaun Saya",
+    "testimonials": "Testimoni",
+    "privacy": "Dasar Privasi"
   },
   "MobileTab": {
     "home": "Laman Utama",
     "services": "Perkhidmatan",
     "blog": "Blog",
-    "contact": "Hubungi"
+    "check": "Periksa"
   },
   "CTA": {
     "ctaTitle": "Perlukan Perkhidmatan Ini?",

@@ -68,16 +68,20 @@
     "freeCheck": "مفت چیک",
     "signIn": "سائن ان",
     "signUp": "سائن اپ",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "سبسکرپشن",
+    "settings": "ترتیبات",
+    "selfCheck": "خود تشخیص ٹول",
+    "mePage": "میرا اکاؤنٹ",
+    "testimonials": "تعریفیں",
+    "privacy": "پرائیویسی پالیسی"
   },
   "MobileTab": {
     "home": "ہوم",
     "services": "خدمات",
     "blog": "بلاگ",
-    "contact": "رابطہ"
+    "check": "جانچ"
   },
   "CTA": {
     "ctaTitle": "اس سروس کی ضرورت ہے؟",

@@ -68,16 +68,20 @@
     "freeCheck": "Gratis Tjek",
     "signIn": "Teken In",
     "signUp": "Registreer",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "Abonnement",
+    "settings": "Instellings",
+    "selfCheck": "Self-Evaluasie Instrument",
+    "mePage": "My Rekening",
+    "testimonials": "Getuigskrifte",
+    "privacy": "Privaatheidsbeleid"
   },
   "MobileTab": {
     "home": "Tuis",
     "services": "Dienste",
     "blog": "Blog",
-    "contact": "Kontak"
+    "check": "Kontrole"
   },
   "CTA": {
     "ctaTitle": "Benodig hierdie diens?",

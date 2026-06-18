@@ -183,6 +183,13 @@ function runTranslationChecks() {
 }
 
 // ============================================================
+// 面包屑 key 完整性检查（独立脚本，CI 阻塞）
+// ============================================================
+function runBreadcrumbCheck() {
+  runLocalScript('check-breadcrumb-keys.mjs', '--ci');
+}
+
+// ============================================================
 // 清理
 // ============================================================
 function runCleanup() {
@@ -206,6 +213,7 @@ if (outDir || nextDir) {
 }
 
 runTranslationChecks();
+runBreadcrumbCheck();
 runCleanup();
 
 console.log(`\n═══════════════════════════════════════════════`);

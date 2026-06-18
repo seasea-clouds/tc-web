@@ -16,7 +16,7 @@
     "address": "ஜிங்கான் மாவட்டம், ஷாங்காய், சீனா",
     "disclaimer": "மறுப்பு: நாங்கள் ஒரு சுயாதீனமான ஒழுங்குமுறை ஆலோசனை நிறுவனம் மற்றும் சீனாவின் சுங்க பொது நிர்வாகத்துடன் இணைக்கப்படவில்லை.",
     "whatsapp": "WhatsApp",
-    "testimonials": "சான்றுகள்",
+    "testimonials": "குறிப்புகள்",
     "industries": "தொழில்கள்",
     "blog": "நுண்ணறிவு"
   },
@@ -68,16 +68,20 @@
     "freeCheck": "இலவச காசோலை",
     "signIn": "உள்நுழைய",
     "signUp": "பதிவு",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "சந்தா",
+    "settings": "அமைப்புகள்",
+    "selfCheck": "தன்னுரிப்பாடு கருவி",
+    "mePage": "என் கணக்கு",
+    "testimonials": "குறிப்புகள்",
+    "privacy": "தனியுரிமை கொள்கை"
   },
   "MobileTab": {
     "home": "முகப்பு",
     "services": "சேவைகள்",
     "blog": "வலைப்பதிவு",
-    "contact": "தொடர்பு"
+    "check": "சரிபார்"
   },
   "CTA": {
     "ctaTitle": "இந்த சேவை தேவையா?",

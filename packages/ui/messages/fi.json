@@ -16,7 +16,7 @@
     "address": "Jing'anin alue, Shanghai, Kiina",
     "disclaimer": "Vastuuvapauslauseke: Olemme riippumaton sääntelyyn liittyvä konsulttiyritys, emmekä ole sidoksissa Kiinan tullin yleiseen hallintoon.",
     "whatsapp": "WhatsApp",
-    "testimonials": "Mielipiteitä",
+    "testimonials": "Asiakaskokemukset",
     "industries": "Toimialat",
     "blog": "Näkemyksiä"
   },
@@ -68,16 +68,20 @@
     "freeCheck": "Ilmainen sekki",
     "signIn": "Kirjaudu",
     "signUp": "Rekisteröidy",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "Tilaus",
+    "settings": "Asetukset",
+    "selfCheck": "Itsearviointityökalu",
+    "mePage": "Tilini",
+    "testimonials": "Asiakaskokemukset",
+    "privacy": "Tietosuojakäytäntö"
   },
   "MobileTab": {
     "home": "Etusivu",
     "services": "Palvelut",
     "blog": "Blogi",
-    "contact": "Yhteystiedot"
+    "check": "Tarkista"
   },
   "CTA": {
     "ctaTitle": "Tarvitsetko tätä palvelua?",

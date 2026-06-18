@@ -16,7 +16,7 @@
     "address": "Dystrykt Jing'an, Szanghaj, Chiny",
     "disclaimer": "Zastrzeżenie: Jesteśmy niezależną firmą zajmującą się doradztwem regulacyjnym i nie jesteśmy powiązani z Generalną Administracją Celną Chin.",
     "whatsapp": "WhatsApp",
-    "testimonials": "Referencje",
+    "testimonials": "Opinie klientów",
     "industries": "Przemysły",
     "blog": "Spostrzeżenia"
   },
@@ -68,16 +68,20 @@
     "freeCheck": "Bezpłatne sprawdzenie",
     "signIn": "Zaloguj",
     "signUp": "Zarejestruj",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "Subskrypcja",
+    "settings": "Ustawienia",
+    "selfCheck": "Narzędzie Samoodceny",
+    "mePage": "Moje konto",
+    "testimonials": "Opinie klientów",
+    "privacy": "Polityka prywatności"
   },
   "MobileTab": {
     "home": "Strona główna",
     "services": "Usługi",
     "blog": "Bloga",
-    "contact": "Kontakt"
+    "check": "Sprawdź"
   },
   "CTA": {
     "ctaTitle": "Potrzebujesz tej usługi?",

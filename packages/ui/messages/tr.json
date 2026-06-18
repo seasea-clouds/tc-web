@@ -16,7 +16,7 @@
     "address": "Jing'an Bölgesi, Şangay, Çin",
     "disclaimer": "Yasal Uyarı: Biz bağımsız bir düzenleyici danışmanlık firmasıyız ve Çin Gümrük Genel İdaresi'ne bağlı değiliz.",
     "whatsapp": "WhatsApp",
-    "testimonials": "Görüşler",
+    "testimonials": "Müşteri Yorumları",
     "industries": "Endüstriler",
     "blog": "Analizler"
   },
@@ -68,16 +68,20 @@
     "freeCheck": "Ücretsiz Çek",
     "signIn": "Giriş",
     "signUp": "Kaydol",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "Abonelik",
+    "settings": "Ayarlar",
+    "selfCheck": "Kendi Kendine Kontrol Aracı",
+    "mePage": "Hesabım",
+    "testimonials": "Müşteri Yorumları",
+    "privacy": "Gizlilik Politikası"
   },
   "MobileTab": {
     "home": "Ana Sayfa",
     "services": "Hizmetler",
     "blog": "Blog",
-    "contact": "İletişim"
+    "check": "Kontrol"
   },
   "CTA": {
     "ctaTitle": "Bu Hizmete İhtiyacınız Var mı?",

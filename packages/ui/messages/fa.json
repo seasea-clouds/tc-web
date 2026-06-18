@@ -16,7 +16,7 @@
     "address": "منطقه جینگ آن، شانگهای، چین",
     "disclaimer": "سلب مسئولیت: ما یک شرکت مشاوره نظارتی مستقل هستیم و به اداره کل گمرک چین وابسته نیستیم.",
     "whatsapp": "WhatsApp",
-    "testimonials": "گواهینامه ها",
+    "testimonials": "گواهی‌نامه‌ها",
     "industries": "صنایع",
     "blog": "بینش ها"
   },
@@ -68,16 +68,20 @@
     "freeCheck": "چک رایگان",
     "signIn": "ورود",
     "signUp": "ثبت نام",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "اشتراک",
+    "settings": "تنظیمات",
+    "selfCheck": "ابزار ارزیابی خودکار",
+    "mePage": "حساب من",
+    "testimonials": "گواهی‌نامه‌ها",
+    "privacy": "سیاست حریم خصوصی"
   },
   "MobileTab": {
     "home": "خانه",
     "services": "خدمات",
     "blog": "بلاگ",
-    "contact": "تماس"
+    "check": "بررسی"
   },
   "CTA": {
     "ctaTitle": "به این سرویس نیاز دارید؟",

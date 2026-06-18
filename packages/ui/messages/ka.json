@@ -16,7 +16,7 @@
     "address": "ჯინგანის ოლქი, შანხაი, ჩინეთი",
     "disclaimer": "პასუხისმგებლობის შეზღუდვა: ჩვენ ვართ დამოუკიდებელი მარეგულირებელი საკონსულტაციო ფირმა და არ ვართ დაკავშირებული ჩინეთის საბაჟო გენერალურ ადმინისტრაციასთან.",
     "whatsapp": "WhatsApp",
-    "testimonials": "ჩვენებები",
+    "testimonials": "შეფასებები",
     "industries": "ინდუსტრიები",
     "blog": "Insights"
   },
@@ -68,16 +68,20 @@
     "freeCheck": "უფასო შემოწმება",
     "signIn": "შესვლა",
     "signUp": "რეგისტრაცია",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "გამწერლობა",
+    "settings": "პარამეტრები",
+    "selfCheck": "თვითშეფასების ინსტრუმენტი",
+    "mePage": "ჩემი ანგარიში",
+    "testimonials": "შეფასებები",
+    "privacy": "კონფიდენციალურობის პოლიტიკა"
   },
   "MobileTab": {
     "home": "მთავარი",
     "services": "სერვისები",
     "blog": "ბლოგი",
-    "contact": "კონტაქტი"
+    "check": "შემოწმება"
   },
   "CTA": {
     "ctaTitle": "გჭირდებათ ეს სერვისი?",

@@ -16,7 +16,7 @@
     "address": "Okres Jing'an, Šanghaj, Čína",
     "disclaimer": "Vyhlásenie: Sme nezávislá regulačná poradenská firma a nie sme pridružení k Generálnej colnej správe Číny.",
     "whatsapp": "WhatsApp",
-    "testimonials": "Posudky",
+    "testimonials": "Referencie",
     "industries": "Odvetvia",
     "blog": "Insights"
   },
@@ -68,16 +68,20 @@
     "freeCheck": "Bezplatná kontrola",
     "signIn": "Prihlásiť",
     "signUp": "Registrovať",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "Predplatné",
+    "settings": "Nastavenia",
+    "selfCheck": "Nástroj na Sebahodnotenie",
+    "mePage": "Môj účet",
+    "testimonials": "Referencie",
+    "privacy": "Zásady ochrany osobných údajov"
   },
   "MobileTab": {
     "home": "Domov",
     "services": "Služby",
     "blog": "Blog",
-    "contact": "Kontakt"
+    "check": "Skontrolovať"
   },
   "CTA": {
     "ctaTitle": "Potrebujete túto službu?",

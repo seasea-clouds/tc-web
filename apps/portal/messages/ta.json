@@ -1448,5 +1448,12 @@
     "valueHigh": "உயர்",
     "labelMandatoryFields": "கட்டாய புலங்கள்"
   },
-  "Navbar": {}
+  "Navbar": {
+    "pricing": "விலை நிர்ணயம்",
+    "dashboard": "டாஷ்போர்ட்",
+    "billing": "பரிசோதனை",
+    "login": "உள்நுழைவு",
+    "register": "பதிவு",
+    "report": "அறிக்கை"
+  }
 }

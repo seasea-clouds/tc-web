@@ -68,16 +68,20 @@
     "freeCheck": "Δωρεάν έλεγχος",
     "signIn": "Σύνδεση",
     "signUp": "Εγγραφή",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "Συνδρομή",
+    "settings": "Ρυθμίσεις",
+    "selfCheck": "Εργαλείο Αυτοαξιολόγησης",
+    "mePage": "Ο λογαριασμός μου",
+    "testimonials": "Μαρτυρίες",
+    "privacy": "Πολιτική Απορρήτου"
   },
   "MobileTab": {
     "home": "Αρχική",
     "services": "Υπηρεσίες",
     "blog": "Ιστολόγιο",
-    "contact": "Επικοινωνία"
+    "check": "Έλεγχος"
   },
   "CTA": {
     "ctaTitle": "Χρειάζεστε αυτήν την υπηρεσία;",

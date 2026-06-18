@@ -68,16 +68,20 @@
     "freeCheck": "निःशुल्क जांच",
     "signIn": "साइन इन",
     "signUp": "साइन अप",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "सदस्यता",
+    "settings": "सेटिंग्स",
+    "selfCheck": "स्व-मूल्यांकन टूल",
+    "mePage": "मेरा खाता",
+    "testimonials": "प्रशंसापत्र",
+    "privacy": "गोपनीयता नीति"
   },
   "MobileTab": {
     "home": "होम",
     "services": "सेवाएं",
     "blog": "ब्लॉग",
-    "contact": "संपर्क"
+    "check": "जाँच"
   },
   "CTA": {
     "ctaTitle": "इस सेवा की आवश्यकता है?",

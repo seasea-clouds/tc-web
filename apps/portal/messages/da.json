@@ -1454,10 +1454,10 @@
   "Navbar": {
     "selfCheck": "Selvtest",
     "pricing": "Prissætning",
-    "dashboard": "Dashboard",
+    "dashboard": "Betjeningspanel",
     "billing": "Fakturering",
-    "login": "Login",
-    "register": "Registrering",
+    "login": "Log ind",
+    "register": "Registrer",
     "report": "Rapport"
   },
   "Breadcrumb": {

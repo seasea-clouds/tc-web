@@ -68,16 +68,20 @@
     "freeCheck": "צ'ק חינם",
     "signIn": "התחברות",
     "signUp": "הרשמה",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "מנוי",
+    "settings": "הגדרות",
+    "selfCheck": "כלי הערכה עצמית",
+    "mePage": "החשבון שלי",
+    "testimonials": "המלצות",
+    "privacy": "מדיניות פרטיות"
   },
   "MobileTab": {
     "home": "דף הבית",
     "services": "שירותים",
     "blog": "בלוג",
-    "contact": "צור קשר"
+    "check": "בדיקה"
   },
   "CTA": {
     "ctaTitle": "צריך שירות זה?",

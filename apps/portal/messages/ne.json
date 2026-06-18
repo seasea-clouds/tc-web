@@ -1448,5 +1448,12 @@
     "valueHigh": "उच्च",
     "labelMandatoryFields": "अनिवार्य क्षेत्रहरू"
   },
-  "Navbar": {}
+  "Navbar": {
+    "pricing": "मूल्य निर्धारण",
+    "dashboard": "डैशबोर्ड",
+    "billing": "बिलिंग",
+    "login": "लगइन",
+    "register": "दर्ता",
+    "report": "रिपोर्ट"
+  }
 }

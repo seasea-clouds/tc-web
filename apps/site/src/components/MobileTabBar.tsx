@@ -1,16 +1,15 @@
 'use client';
 
-import { Home, Grid3X3, BookOpen, MessageCircle } from 'lucide-react';
+import { Home, Grid3X3, BookOpen, ClipboardCheck } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname, useParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
-import { WHATSAPP_URL } from '@/lib/constants';
 
 const TAB_HREFS = {
   home: '/',
   services: '/services',
   blog: '/blog',
-  contact: WHATSAPP_URL,
+  check: '/c',
 } as const;
 
 export default function MobileTabBar() {
@@ -28,28 +27,10 @@ export default function MobileTabBar() {
             home: Home,
             services: Grid3X3,
             blog: BookOpen,
-            contact: MessageCircle,
+            check: ClipboardCheck,
           };
           const Icon = icons[key];
-          const isExternal = key === 'contact';
-          const isActive = isExternal
-            ? false
-            : pathname === href || (href !== '/' && pathname.startsWith(href));
-
-          if (isExternal) {
-            return (
-              <a
-                key={key}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col items-center justify-center gap-0.5 flex-1 h-full text-[#5F6F7F] active:bg-bg-ice transition-colors"
-              >
-                <Icon className="w-5 h-5" />
-                <span className="text-[10px] font-medium">{label}</span>
-              </a>
-            );
-          }
+          const isActive = pathname === href || (href !== '/' && pathname.startsWith(href));
 
           return (
             <Link

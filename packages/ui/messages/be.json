@@ -16,7 +16,7 @@
     "address": "Раён Цзінань, Шанхай, Кітай",
     "disclaimer": "Адмова ад адказнасці: мы з'яўляемся незалежнай кансультацыйнай фірмай па пытаннях рэгулявання і не звязаны з Галоўнай мытнай адміністрацыяй Кітая.",
     "whatsapp": "WhatsApp",
-    "testimonials": "Водгукі",
+    "testimonials": "Адзывы",
     "industries": "галін прамысловасці",
     "blog": "Інсайты"
   },
@@ -68,16 +68,20 @@
     "freeCheck": "Бясплатная праверка",
     "signIn": "Увайсці",
     "signUp": "Рэгістрацыя",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "Падпіска",
+    "settings": "Налады",
+    "selfCheck": "Інструмент Самаправеркі",
+    "mePage": "Мой акаўнт",
+    "testimonials": "Адзывы",
+    "privacy": "Палітыка прыватнасці"
   },
   "MobileTab": {
     "home": "Галоўная",
     "services": "Паслугі",
     "blog": "Блог",
-    "contact": "Кантакт"
+    "check": "Праверка"
   },
   "CTA": {
     "ctaTitle": "Патрэбна гэтая паслуга?",

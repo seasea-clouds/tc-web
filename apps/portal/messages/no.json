@@ -1453,8 +1453,8 @@
   },
   "Navbar": {
     "selfCheck": "Selvverifikasjon",
-    "pricing": "Prising",
-    "dashboard": "Dashboard",
+    "pricing": "Prissetting",
+    "dashboard": "Kontrollpanel",
     "billing": "Fakturering",
     "login": "Logg inn",
     "register": "Registrering",

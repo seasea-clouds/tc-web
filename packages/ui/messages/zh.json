@@ -16,7 +16,7 @@
     "address": "静安区, 上海市, 中国",
     "disclaimer": "免责声明：我们是一家独立的监管咨询公司，不隶属于中国海关总署。",
     "whatsapp": "WhatsApp",
-    "testimonials": "感言",
+    "testimonials": "客户评价",
     "industries": "行业",
     "blog": "见解"
   },
@@ -68,16 +68,20 @@
     "freeCheck": "免费检查",
     "signIn": "登录",
     "signUp": "注册",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "订阅",
+    "settings": "设置",
+    "selfCheck": "自查工具",
+    "mePage": "我的账户",
+    "testimonials": "客户评价",
+    "privacy": "隐私政策"
   },
   "MobileTab": {
     "home": "首页",
     "services": "服务",
     "blog": "资讯",
-    "contact": "联系"
+    "check": "检查"
   },
   "CTA": {
     "ctaTitle": "需要这项服务吗？",

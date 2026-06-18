@@ -16,7 +16,7 @@
     "address": "Ջինհան շրջան, Շանհայ, Չինաստան",
     "disclaimer": "Հրաժարում. Մենք անկախ կարգավորող խորհրդատվական ընկերություն ենք և կապված չենք Չինաստանի մաքսային գլխավոր վարչության հետ:",
     "whatsapp": "WhatsApp",
-    "testimonials": "Վկայություններ",
+    "testimonials": "Գնահատականներ",
     "industries": "Արդյունաբերություններ",
     "blog": "Խորաթափանցություն"
   },
@@ -68,16 +68,20 @@
     "freeCheck": "Անվճար ստուգում",
     "signIn": "Մուտք",
     "signUp": "Գրանցվել",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "Բաժանորդագրություն",
+    "settings": "Կարգավորումներ",
+    "selfCheck": "Ինքնագնահատման Գործիք",
+    "mePage": "Իմ հաշիվը",
+    "testimonials": "Գնահատականներ",
+    "privacy": "Գաղտնիության քաղաքականություն"
   },
   "MobileTab": {
     "home": "Գլխավոր",
     "services": "Ծառայություններ",
     "blog": "Բլոգ",
-    "contact": "Կապ"
+    "check": "Ստուգել"
   },
   "CTA": {
     "ctaTitle": "Պե՞տք է այս ծառայությունը:",

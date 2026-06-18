@@ -1448,5 +1448,12 @@
     "valueHigh": "Lartë",
     "labelMandatoryFields": "Fushat e detyrueshme"
   },
-  "Navbar": {}
+  "Navbar": {
+    "pricing": "Çmimet",
+    "dashboard": "Paneli i Kontrollit",
+    "billing": "Faturimi",
+    "login": "Hyrja",
+    "register": "Regjistrohu",
+    "report": "Raporti"
+  }
 }

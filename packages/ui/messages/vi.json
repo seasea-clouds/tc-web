@@ -16,7 +16,7 @@
     "address": "Quận Tĩnh An, Thượng Hải, Trung Quốc",
     "disclaimer": "Tuyên bố miễn trừ trách nhiệm: Chúng tôi là một công ty tư vấn quy định độc lập và không liên kết với Tổng cục Hải quan Trung Quốc.",
     "whatsapp": "WhatsApp",
-    "testimonials": "Lời chứng thực",
+    "testimonials": "Đánh giá",
     "industries": "ngành công nghiệp",
     "blog": "Thông tin chi tiết"
   },
@@ -68,16 +68,20 @@
     "freeCheck": "Kiểm tra miễn phí",
     "signIn": "Đăng nhập",
     "signUp": "Đăng ký",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "Đăng ký",
+    "settings": "Cài đặt",
+    "selfCheck": "Công Cụ Tự Đánh Giá",
+    "mePage": "Tài khoản của tôi",
+    "testimonials": "Đánh giá",
+    "privacy": "Chính sách bảo mật"
   },
   "MobileTab": {
     "home": "Trang chủ",
     "services": "Dịch vụ",
     "blog": "Blog",
-    "contact": "Liên hệ"
+    "check": "Kiểm tra"
   },
   "CTA": {
     "ctaTitle": "Cần dịch vụ này?",

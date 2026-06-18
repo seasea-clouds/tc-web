@@ -1448,5 +1448,12 @@
     "valueHigh": "Juu",
     "labelMandatoryFields": "Viwanja vya lazima"
   },
-  "Navbar": {}
+  "Navbar": {
+    "pricing": "Bei",
+    "dashboard": "Dashibodi",
+    "billing": "Bililingi",
+    "login": "Ingia",
+    "register": "Jisajili",
+    "report": "Ripoti"
+  }
 }

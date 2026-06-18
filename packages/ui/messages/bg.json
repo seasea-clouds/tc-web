@@ -16,7 +16,7 @@
     "address": "Област Джинг'ан, Шанхай, Китай",
     "disclaimer": "Отказ от отговорност: Ние сме независима регулаторна консултантска фирма и не сме свързани с Главната митническа администрация на Китай.",
     "whatsapp": "WhatsApp",
-    "testimonials": "Препоръки",
+    "testimonials": "Отзиви",
     "industries": "Индустрии",
     "blog": "Прозрения"
   },
@@ -68,16 +68,20 @@
     "freeCheck": "Безплатна проверка",
     "signIn": "Вход",
     "signUp": "Регистрация",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "Абонамент",
+    "settings": "Настройки",
+    "selfCheck": "Инструмент за Самооценка",
+    "mePage": "Моят акаунт",
+    "testimonials": "Отзиви",
+    "privacy": "Политика за поверителност"
   },
   "MobileTab": {
     "home": "Начало",
     "services": "Услуги",
     "blog": "Блог",
-    "contact": "Контакт"
+    "check": "Проверка"
   },
   "CTA": {
     "ctaTitle": "Нуждаете се от тази услуга?",

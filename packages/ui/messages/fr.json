@@ -68,16 +68,20 @@
     "freeCheck": "Chèque gratuit",
     "signIn": "Connexion",
     "signUp": "Inscription",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "Abonnement",
+    "settings": "Paramètres",
+    "selfCheck": "Outil d'Auto-Évaluation",
+    "mePage": "Mon compte",
+    "testimonials": "Témoignages",
+    "privacy": "Politique de confidentialité"
   },
   "MobileTab": {
     "home": "Accueil",
     "services": "Services",
     "blog": "Blogue",
-    "contact": "Contact"
+    "check": "Vérifier"
   },
   "CTA": {
     "ctaTitle": "Besoin de ce service ?",

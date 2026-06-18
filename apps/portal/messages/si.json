@@ -298,7 +298,7 @@
     "crossborderMetaDescription": "චීනයට ඇතුළු වන ඔබේ නිෂ්පාදන සඳහා දේශසීමා ඊ-වාණිජ්‍යය අනුකූලතා අවශ්‍යතා පරීක්ෂා කරන්න. නොමිලේ තක්සේරු මෙවලම.",
     "crossborderMetaTitle": "Cross-Border E-commerce Check | SinoTrade අනුකූලතාව",
     "crossborderSubtitle": "චීන ඊ-වාණිජ්‍ය වේදිකාවල විකිණීම සඳහා අනුකූලතා අවශ්‍යතා පරීක්ෂා කරන්න.",
-    "crossborderTitle": "Cross-Border E-commerce Check",
+    "crossborderTitle": "අතික්‍රමණ වෙළඳපොළ පරීක්ෂණය",
     "documentsTitle": "අවශ්‍ය ලියකියවිලි",
     "emailForPdf": "විද්‍යුත් තැපෑල (විකල්ප - PDF ලබා ගැනීමට)",
     "estMonthlyVolume": "EST. මාසික පරිමාව",
@@ -1448,5 +1448,12 @@
     "valueHigh": "ඉහළ",
     "labelMandatoryFields": "අනිවාර්ය ක්ෂේත්ර"
   },
-  "Navbar": {}
+  "Navbar": {
+    "pricing": "මිට ගැනුම්",
+    "dashboard": "ඩෑෂ්බෝඩ්",
+    "billing": "බිල්පත",
+    "login": "ඇතුළු වන්න",
+    "register": "ලියාපදිංචි වන්න",
+    "report": "වාර්තාව"
+  }
 }

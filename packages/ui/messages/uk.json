@@ -68,16 +68,20 @@
     "freeCheck": "Безкоштовний чек",
     "signIn": "Увійти",
     "signUp": "Реєстрація",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "Підписка",
+    "settings": "Налаштування",
+    "selfCheck": "Інструмент Самоперевірки",
+    "mePage": "Мій обліковий запис",
+    "testimonials": "Відгуки",
+    "privacy": "Політика конфіденційності"
   },
   "MobileTab": {
     "home": "Головна",
     "services": "Послуги",
     "blog": "Блог",
-    "contact": "Контакт"
+    "check": "Перевірка"
   },
   "CTA": {
     "ctaTitle": "Потрібна ця послуга?",

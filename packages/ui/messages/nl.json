@@ -68,16 +68,20 @@
     "freeCheck": "Gratis cheque",
     "signIn": "Inloggen",
     "signUp": "Registreren",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "Abonnement",
+    "settings": "Instellingen",
+    "selfCheck": "Zelfcontrole Tool",
+    "mePage": "Mijn account",
+    "testimonials": "Getuigenissen",
+    "privacy": "Privacybeleid"
   },
   "MobileTab": {
     "home": "Thuis",
     "services": "Diensten",
     "blog": "Bloggen",
-    "contact": "Contact"
+    "check": "Controleren"
   },
   "CTA": {
     "ctaTitle": "Deze dienst nodig?",

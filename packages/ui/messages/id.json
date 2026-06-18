@@ -16,7 +16,7 @@
     "address": "Distrik Jing'an, Shanghai, Cina",
     "disclaimer": "Penafian: Kami adalah perusahaan konsultan peraturan independen dan tidak berafiliasi dengan Administrasi Umum Bea Cukai Tiongkok.",
     "whatsapp": "WhatsApp",
-    "testimonials": "Testimonial",
+    "testimonials": "Testimoni",
     "industries": "Industri",
     "blog": "Wawasan"
   },
@@ -68,16 +68,20 @@
     "freeCheck": "Cek Gratis",
     "signIn": "Masuk",
     "signUp": "Daftar",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "Langganan",
+    "settings": "Pengaturan",
+    "selfCheck": "Alat Evaluasi Diri",
+    "mePage": "Akun Saya",
+    "testimonials": "Testimoni",
+    "privacy": "Kebijakan Privasi"
   },
   "MobileTab": {
     "home": "Beranda",
     "services": "Layanan",
     "blog": "Blog",
-    "contact": "Kontak"
+    "check": "Periksa"
   },
   "CTA": {
     "ctaTitle": "Butuh Layanan Ini?",

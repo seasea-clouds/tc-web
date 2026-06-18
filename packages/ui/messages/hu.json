@@ -16,7 +16,7 @@
     "address": "Jing'an kerület, Sanghaj, Kína",
     "disclaimer": "Jogi nyilatkozat: Független szabályozási tanácsadó cég vagyunk, és nem áll kapcsolatban a Kínai Általános Vámigazgatási Hivatallal.",
     "whatsapp": "WhatsApp",
-    "testimonials": "Beszámolók",
+    "testimonials": "Vélemények",
     "industries": "Iparágak",
     "blog": "Insights"
   },
@@ -68,16 +68,20 @@
     "freeCheck": "Ingyenes csekk",
     "signIn": "Bejelentkezés",
     "signUp": "Regisztráció",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "Előfizetés",
+    "settings": "Beállítások",
+    "selfCheck": "Önértékelő Eszköz",
+    "mePage": "Saját fiókom",
+    "testimonials": "Vélemények",
+    "privacy": "Adatvéleti nyilatkozat"
   },
   "MobileTab": {
     "home": "Kezdőlap",
     "services": "Szolgáltatások",
     "blog": "Blog",
-    "contact": "Kapcsolat"
+    "check": "Ellenőrzés"
   },
   "CTA": {
     "ctaTitle": "Szüksége van erre a szolgáltatásra?",

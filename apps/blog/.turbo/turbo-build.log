@@ -61,9 +61,9 @@ https://nextjs.org/telemetry
 ▲ Next.js 16.2.6 (Turbopack)
 
   Creating an optimized production build ...
-✓ Compiled successfully in 1935ms
+✓ Compiled successfully in 1971ms
   Running TypeScript ...
-  Finished TypeScript in 2.7s ...
+  Finished TypeScript in 2.5s ...
   Collecting page data using 6 workers ...
   Generating static pages using 6 workers (0/434) ...
   Generating static pages using 6 workers (108/434) 
@@ -186,10 +186,20 @@ Route (app)
 ⚠️ 发现 188 个问题
    - 网站翻译质量: 188 个问题
 
+▶ check-breadcrumb-keys.mjs --ci --ci
+🧩 面包屑 key 完整性检查
+   映射数: 38
+   语言数: 48
+   来源: /root/projects/trade/web/packages/ui/src/AutoBreadcrumb.tsx
+
+✅ 所有面包屑 key 完整，无硬编码英文
+
+✅ 全部通过
+
 ▶ clean-rsc.js out
 🧹 Cleaning RSC .txt payload files from out/...
-✅ Deleted 3751 RSC payload files (92.3 MB freed)
-(node:154885) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/projects/trade/web/packages/scripts/clean-rsc.js is not specified and it doesn't parse as CommonJS.
+✅ Deleted 3751 RSC payload files (92.5 MB freed)
+(node:216807) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/projects/trade/web/packages/scripts/clean-rsc.js is not specified and it doesn't parse as CommonJS.
 Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
 To eliminate this warning, add "type": "module" to /root/projects/trade/web/package.json.
 (Use `node --trace-warnings ...` to show where the warning was created)

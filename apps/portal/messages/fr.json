@@ -53,9 +53,9 @@
     "errorInvalid": "Email ou mot de passe invalide",
     "errorExists": "Email déjà enregistré",
     "errorLength": "Le mot de passe doit contenir au moins 5 caractères",
-    "securityCheck": "Veuillez compléter la vérification de sécurité.",
-    "securityCheckFailed": "La vérification de sécurité a échoué. Veuillez réessayer.",
-    "securityCheckExpired": "La vérification de sécurité a expiré. Veuillez réessayer."
+    "securityCheck": "Veuillez effectuer le contrôle de sécurité.",
+    "securityCheckFailed": "Le contrôle de sécurité a échoué. Veuillez réessayer.",
+    "securityCheckExpired": "Le contrôle de sécurité a expiré. Veuillez réessayer."
   },
   "Dashboard": {
     "title": "Tableau de bord",
@@ -80,7 +80,8 @@
     "settings": "Paramètres",
     "viewReportsDesc": "Consultez vos rapports de conformité",
     "manageSubscriptionDesc": "Gérez votre abonnement",
-    "youAreOnFreePlan": "Vous êtes actuellement sur le plan gratuit."
+    "youAreOnFreePlan": "Vous êtes actuellement sur le forfait Gratuit.",
+    "viewPricing": "Voir les prix"
   },
   "Pricing": {
     "title": "Tarification simple",
@@ -1080,7 +1081,14 @@
     "gaccCat_nuts_label": "Fruits à coque/fruits secs (SH 08)",
     "gaccCat_other_label": "Autres produits alimentaires",
     "gaccCat_classification_label": "Classification",
-    "backToHome": "Retour à la maison"
+    "backToHome": "Retour à la maison",
+    "cccProductNamePlaceholder": "par exemple, lampe de bureau LED intelligente",
+    "crossborderProductNamePlaceholder": "par exemple, poudre de matcha biologique",
+    "gaccProductNamePlaceholder": "par exemple, vin rouge Cabernet Sauvignon",
+    "labelProductNamePlaceholder": "par exemple, Thé vert Premium 500 g",
+    "nmpaProductNamePlaceholder": "par exemple, sérum d'acide hyaluronique",
+    "noReportId": "Aucun identifiant de rapport fourni",
+    "trademarkProductNamePlaceholder": "par exemple, gamme de soins de la peau Premium"
   },
   "Report": {
     "loadingTitle": "Chargement de votre rapport",
@@ -1111,7 +1119,8 @@
     "registeredUser": "Utilisateur enregistré",
     "periodEnds": "Fin de la période",
     "youAreOnFreePlan": "Vous êtes actuellement sur le forfait Gratuit.",
-    "noReportId": "Aucun ID de rapport fourni"
+    "noReportId": "Aucun ID de rapport fourni",
+    "backToHome": "Retour à la maison"
   },
   "Cookie": {
     "message": "Ce site utilise uniquement des cookies d'authentification essentiels. Aucun cookie de suivi ou publicitaire n'est utilisé.",

@@ -53,9 +53,9 @@
     "errorInvalid": "Няправільны адрас электроннай пошты ці пароль",
     "errorExists": "Адрас электроннай пошты ўжо зарэгістраваны",
     "errorLength": "Пароль павінен быць не менш за 5 сімвалаў",
-    "securityCheck": "Калі ласка, заверце бяспечную праверку.",
-    "securityCheckFailed": "Бяспечная праверка не ўдалася. Паўтарыце спробу.",
-    "securityCheckExpired": "Тэрмін бяспечнай праверкі скончыўся. Паўтарыце спробу."
+    "securityCheck": "Прайдзіце праверку бяспекі.",
+    "securityCheckFailed": "Праверка бяспекі не атрымалася. Калі ласка, паспрабуйце яшчэ раз.",
+    "securityCheckExpired": "Тэрмін праверкі бяспекі скончыўся. Калі ласка, паспрабуйце яшчэ раз."
   },
   "Dashboard": {
     "title": "Прыборная панэль",
@@ -79,7 +79,9 @@
     "subscription": "Падпіска",
     "settings": "Налады",
     "viewReportsDesc": "Праглядзіце свае справаздачы аб адпаведнасці",
-    "manageSubscriptionDesc": "Кіруйце сваёй падпіскай"
+    "manageSubscriptionDesc": "Кіруйце сваёй падпіскай",
+    "viewPricing": "Паглядзець цэны",
+    "youAreOnFreePlan": "Зараз вы карыстаецеся бясплатным планам."
   },
   "Pricing": {
     "title": "Простае цэнаўтварэнне",
@@ -1079,7 +1081,14 @@
     "gaccCat_nuts_label": "Арэхі / Сухафрукты (HS 08)",
     "gaccCat_other_label": "Іншыя харчовыя прадукты",
     "gaccCat_classification_label": "Класіфікацыя",
-    "backToHome": "Назад дадому"
+    "backToHome": "Назад дадому",
+    "cccProductNamePlaceholder": "напрыклад, разумная святлодыёдная настольная лямпа",
+    "crossborderProductNamePlaceholder": "напрыклад, арганічны парашок матча",
+    "gaccProductNamePlaceholder": "напрыклад, чырвонае віно Кабернэ Совиньон",
+    "labelProductNamePlaceholder": "напрыклад, зялёны чай прэміум-класа 500 г",
+    "nmpaProductNamePlaceholder": "напрыклад, сыроватка з гіалуроновой кіслатой",
+    "noReportId": "Ідэнтыфікатар справаздачы не ўказаны",
+    "trademarkProductNamePlaceholder": "напрыклад, прэміум лінія па догляду за скурай"
   },
   "Report": {
     "loadingTitle": "Загрузка вашай справаздачы",
@@ -1110,7 +1119,8 @@
     "registeredUser": "Зарэгістраваны карыстальнік",
     "periodEnds": "Перыяд заканчваецца",
     "youAreOnFreePlan": "Зараз вы карыстаецеся бясплатным планам.",
-    "noReportId": "ID справазда не пазначаны"
+    "noReportId": "ID справазда не пазначаны",
+    "backToHome": "Назад дадому"
   },
   "Cookie": {
     "message": "Гэты сайт выкарыстоўвае толькі неабходныя файлы cookie для аўтэнтыфікацыі. Файлы cookie для адсочвання і рэкламы не выкарыстоўваюцца.",

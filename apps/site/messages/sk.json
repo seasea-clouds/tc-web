@@ -1336,9 +1336,10 @@
     "serviceGACC": "Registrácia potravín GACC: ",
     "serviceLabel": "Súlad s čínskymi štítkami – dizajn a kontrola štítkov v súlade s GB 7718 a GB 28050. Dôvod číslo jedna na odmietnutie colných úradov v čínskych prístavoch.",
     "serviceNMPA": "NMPA Cosmetics Filing: ",
-    "title": "Súlad SinoTrade – AI-Assistance (EN)"
+    "title": "Súlad SinoTrade – AI-Assistance (EN)",
+    "servicesTitle": "Služby"
   },
   "Navbar": {
-    "selfCheck": "Vlastná kontrola"
+    "selfCheck": "Samokontrola"
   }
 }

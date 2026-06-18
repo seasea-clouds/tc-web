@@ -1336,9 +1336,10 @@
     "serviceGACC": "GACC élelmiszer-nyilvántartás – A 248. és 249. számú rendelet értelmében regisztrálja a tengerentúli élelmiszergyártó létesítményeket a kínai vámhatóságnál (GACC). Kötelező minden Kínába exportált élelmiszertermékre.",
     "serviceLabel": "Kínai címkék megfelelősége – GB 7718 és GB 28050 megfelelő címketervezés és felülvizsgálat. A kínai kikötők vámelutasításának első számú oka.",
     "serviceNMPA": "NMPA kozmetikai bejelentés – A kozmetikumok regisztrálása vagy bejelentése a Kínai Nemzeti Orvosi Termékek Hivatalánál. Minden importált kozmetikai termékhez kötelező.",
-    "title": "SinoTrade megfelelőség – AI-Assistance (EN)"
+    "title": "SinoTrade megfelelőség – AI-Assistance (EN)",
+    "servicesTitle": "Szolgáltatások"
   },
   "Navbar": {
-    "selfCheck": "Önértékelés"
+    "selfCheck": "Önellenőrzés"
   }
 }

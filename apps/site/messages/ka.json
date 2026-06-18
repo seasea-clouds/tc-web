@@ -1336,9 +1336,10 @@
     "serviceGACC": "GACC სურსათის რეგისტრაცია: ",
     "serviceLabel": "ჩინური ეტიკეტების შესაბამისობა: ",
     "serviceNMPA": "NMPA Cosmetics Filing: ",
-    "title": "SinoTrade შესაბამისობა: AI-Assistance (EN)"
+    "title": "SinoTrade შესაბამისობა: AI-Assistance (EN)",
+    "servicesTitle": "სერვისები"
   },
   "Navbar": {
-    "selfCheck": "თვითშეფასება"
+    "selfCheck": "თვითშემოწმება"
   }
 }

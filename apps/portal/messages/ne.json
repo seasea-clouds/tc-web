@@ -52,7 +52,10 @@
     "errorRequired": "इमेल र पासवर्ड आवश्यक छ",
     "errorInvalid": "अवैध इमेल वा पासवर्ड",
     "errorExists": "इमेल पहिले नै दर्ता भएको छ",
-    "errorLength": "पासवर्ड कम्तिमा ६ अक्षरको हुनुपर्छ"
+    "errorLength": "पासवर्ड कम्तिमा ६ अक्षरको हुनुपर्छ",
+    "securityCheck": "कृपया सुरक्षा जाँच पूरा गर्नुहोस्।",
+    "securityCheckExpired": "सुरक्षा जाँचको म्याद सकियो। कृपया पुन: प्रयास गर्नुहोस्।",
+    "securityCheckFailed": "सुरक्षा जाँच असफल भयो। कृपया पुन: प्रयास गर्नुहोस्।"
   },
   "Dashboard": {
     "title": "ड्यासबोर्ड",
@@ -76,7 +79,9 @@
     "subscription": "सदस्यता",
     "settings": "सेटिङहरू",
     "viewReportsDesc": "तपाईंको अनुपालन रिपोर्टहरू हेर्नुहोस्",
-    "manageSubscriptionDesc": "आफ्नो सदस्यता प्रबन्ध गर्नुहोस्"
+    "manageSubscriptionDesc": "आफ्नो सदस्यता प्रबन्ध गर्नुहोस्",
+    "viewPricing": "मूल्य निर्धारण हेर्नुहोस्",
+    "youAreOnFreePlan": "तपाईं हाल नि:शुल्क योजनामा ​​हुनुहुन्छ।"
   },
   "Pricing": {
     "title": "सरल मूल्य निर्धारण",
@@ -1076,7 +1081,14 @@
     "gaccCat_nuts_label": "नट / सुकेको फल (HS 08)",
     "gaccCat_other_label": "अन्य खाद्य उत्पादनहरू",
     "gaccCat_classification_label": "वर्गीकरण",
-    "backToHome": "घर फर्कनुहोस्"
+    "backToHome": "घर फर्कनुहोस्",
+    "cccProductNamePlaceholder": "जस्तै, स्मार्ट एलईडी डेस्क बत्ती",
+    "crossborderProductNamePlaceholder": "जस्तै, अर्गानिक म्याचा पाउडर",
+    "gaccProductNamePlaceholder": "उदाहरणका लागि, Cabernet Sauvignon रेड वाइन",
+    "labelProductNamePlaceholder": "जस्तै, प्रिमियम ग्रीन टी ५०० ग्राम",
+    "nmpaProductNamePlaceholder": "जस्तै, Hyaluronic एसिड सीरम",
+    "noReportId": "कुनै रिपोर्ट आईडी प्रदान गरिएको छैन",
+    "trademarkProductNamePlaceholder": "जस्तै, प्रिमियम स्किनकेयर लाइन"
   },
   "Report": {
     "loadingTitle": "तपाईंको रिपोर्ट लोड गर्दै",
@@ -1107,7 +1119,8 @@
     "registeredUser": "दर्ता प्रयोगकर्ता",
     "periodEnds": "अवधि समाप्त हुन्छ",
     "youAreOnFreePlan": "तपाईं हाल नि:शुल्क योजनामा ​​हुनुहुन्छ।",
-    "noReportId": "कुनै रिपोर्ट ID प्रदान गरिएको छैन"
+    "noReportId": "कुनै रिपोर्ट ID प्रदान गरिएको छैन",
+    "backToHome": "घर फर्कनुहोस्"
   },
   "Cookie": {
     "message": "यो साइटले आवश्यक प्रमाणीकरण कुकीहरू मात्र प्रयोग गर्दछ। कुनै ट्र्याकिङ वा विज्ञापन कुकीहरू प्रयोग गरिँदैन।",
@@ -1454,6 +1467,10 @@
     "billing": "बिलिंग",
     "login": "लगइन",
     "register": "दर्ता",
-    "report": "रिपोर्ट"
+    "report": "रिपोर्ट",
+    "selfCheck": "नेभिगेसन"
+  },
+  "Breadcrumb": {
+    "pricing": "मूल्य निर्धारण"
   }
 }

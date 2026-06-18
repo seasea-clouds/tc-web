@@ -53,7 +53,7 @@
     "errorInvalid": "Email hoặc mật khẩu không hợp lệ",
     "errorExists": "Email đã được đăng ký",
     "errorLength": "Mật khẩu phải có ít nhất 5 ký tự",
-    "securityCheck": "Vui lòng hoàn thành kiểm tra bảo mật.",
+    "securityCheck": "Vui lòng hoàn tất kiểm tra an ninh.",
     "securityCheckFailed": "Kiểm tra bảo mật không thành công. Vui lòng thử lại.",
     "securityCheckExpired": "Kiểm tra bảo mật đã hết hạn. Vui lòng thử lại."
   },
@@ -80,7 +80,8 @@
     "settings": "Cài đặt",
     "viewReportsDesc": "Xem báo cáo tuân thủ của bạn",
     "manageSubscriptionDesc": "Quản lý đăng ký của bạn",
-    "youAreOnFreePlan": "Bạn đang dùng gói miễn phí."
+    "youAreOnFreePlan": "Bạn hiện đang sử dụng gói Miễn phí.",
+    "viewPricing": "Xem giá"
   },
   "Pricing": {
     "title": "Định giá đơn giản",
@@ -1080,7 +1081,14 @@
     "gaccCat_nuts_label": "Các loại hạt/Trái cây sấy khô (HS 08)",
     "gaccCat_other_label": "Sản phẩm thực phẩm khác",
     "gaccCat_classification_label": "Phân loại",
-    "backToHome": "Quay lại trang chủ"
+    "backToHome": "Quay lại trang chủ",
+    "cccProductNamePlaceholder": "ví dụ: Đèn bàn LED thông minh",
+    "crossborderProductNamePlaceholder": "ví dụ: Bột Matcha hữu cơ",
+    "gaccProductNamePlaceholder": "ví dụ: Rượu vang đỏ Cabernet Sauvignon",
+    "labelProductNamePlaceholder": "ví dụ: Trà xanh cao cấp 500g",
+    "nmpaProductNamePlaceholder": "ví dụ: Huyết thanh Axit Hyaluronic",
+    "noReportId": "Không có ID báo cáo nào được cung cấp",
+    "trademarkProductNamePlaceholder": "ví dụ: Dòng chăm sóc da cao cấp"
   },
   "Report": {
     "loadingTitle": "Đang tải báo cáo của bạn",
@@ -1111,7 +1119,8 @@
     "registeredUser": "Người dùng đã đăng ký",
     "periodEnds": "Thời kỳ kết thúc",
     "youAreOnFreePlan": "Bạn hiện đang sử dụng gói Miễn phí.",
-    "noReportId": "Không cung cấp ID báo cáo"
+    "noReportId": "Không cung cấp ID báo cáo",
+    "backToHome": "Quay lại trang chủ"
   },
   "Cookie": {
     "message": "Trang web này chỉ sử dụng cookie xác thực cần thiết. Không sử dụng cookie theo dõi hoặc quảng cáo.",
@@ -1462,6 +1471,6 @@
     "report": "Báo cáo"
   },
   "Breadcrumb": {
-    "pricing": "Bảng giá"
+    "pricing": "Định giá"
   }
 }

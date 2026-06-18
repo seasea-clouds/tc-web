@@ -53,9 +53,9 @@
     "errorInvalid": "Yanlış e-poçt və ya parol",
     "errorExists": "E-poçt artıq qeydiyyatdan keçib",
     "errorLength": "Parol ən azı 5 simvoldan ibarət olmalıdır",
-    "securityCheck": "Təhlükəslik yoxlamasını tamamlayın.",
-    "securityCheckFailed": "Təhlükəslik yoxlaması uğursuz oldu. Yenidən cəhd edin.",
-    "securityCheckExpired": "Təhlükəslik yoxlamasının müddəti bitdi. Yenidən cəhd edin."
+    "securityCheck": "Zəhmət olmasa təhlükəsizlik yoxlamasını tamamlayın.",
+    "securityCheckFailed": "Təhlükəsizlik yoxlanışı alınmadı. Yenidən cəhd edin.",
+    "securityCheckExpired": "Təhlükəsizlik yoxlamasının müddəti bitdi. Yenidən cəhd edin."
   },
   "Dashboard": {
     "title": "İdarə paneli",
@@ -79,7 +79,9 @@
     "subscription": "Abunəlik",
     "settings": "Parametrlər",
     "viewReportsDesc": "Uyğunluq hesabatlarınıza baxın",
-    "manageSubscriptionDesc": "Abunəliyinizi idarə edin"
+    "manageSubscriptionDesc": "Abunəliyinizi idarə edin",
+    "viewPricing": "Qiymətlərə Baxın",
+    "youAreOnFreePlan": "Hazırda Pulsuz plandasınız."
   },
   "Pricing": {
     "title": "Sadə Qiymətləndirmə",
@@ -1079,7 +1081,14 @@
     "gaccCat_nuts_label": "Fındıq / Quru Meyvələr (HS 08)",
     "gaccCat_other_label": "Digər Qida Məhsulları",
     "gaccCat_classification_label": "Sinifləndirmə",
-    "backToHome": "Evə qayıt"
+    "backToHome": "Evə qayıt",
+    "cccProductNamePlaceholder": "məsələn, Smart LED Stolüstü Lampa",
+    "crossborderProductNamePlaceholder": "məsələn, Üzvi Matcha Pudrası",
+    "gaccProductNamePlaceholder": "məsələn, Cabernet Sauvignon qırmızı şərabı",
+    "labelProductNamePlaceholder": "məsələn, Premium Yaşıl Çay 500q",
+    "nmpaProductNamePlaceholder": "məsələn, Hialuron turşusu serumu",
+    "noReportId": "Hesabat ID-si təqdim edilməyib",
+    "trademarkProductNamePlaceholder": "məsələn, Premium Skincare Line"
   },
   "Report": {
     "loadingTitle": "Hesabatınız Yüklənir",
@@ -1110,7 +1119,8 @@
     "registeredUser": "Qeydiyyatdan keçmiş istifadəçi",
     "periodEnds": "Dövr bitir",
     "youAreOnFreePlan": "Hazırda Pulsuz plandasınız.",
-    "noReportId": "Heç bir hesabat ID təqdim edilməyib"
+    "noReportId": "Heç bir hesabat ID təqdim edilməyib",
+    "backToHome": "Evə qayıt"
   },
   "Cookie": {
     "message": "Bu sayt yalnız əsas autentifikasiya kukilərindən istifadə edir. Heç bir izləmə və ya reklam kukilərindən istifadə edilmir.",

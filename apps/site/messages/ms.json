@@ -1336,9 +1336,10 @@
     "serviceGACC": "Pendaftaran Makanan GACC: ",
     "serviceLabel": "Pematuhan Label Cina: ",
     "serviceNMPA": "NMPA Cosmetics Filing: ",
-    "title": "Pematuhan SinoTrade: AI-Assistance (EN)"
+    "title": "Pematuhan SinoTrade: AI-Assistance (EN)",
+    "servicesTitle": "Perkhidmatan"
   },
   "Navbar": {
-    "selfCheck": "Pengesanan Diri"
+    "selfCheck": "Semakan Kendiri"
   }
 }

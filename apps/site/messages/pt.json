@@ -1336,9 +1336,10 @@
     "serviceGACC": "Registro de Alimentos GACC – Registrar instalações de fabricação de alimentos no exterior na Alfândega da China (GACC) sob os Decretos 248 e 249. Obrigatório para todos os produtos alimentícios exportados para a China.",
     "serviceLabel": "Conformidade de etiquetas chinesas: ",
     "serviceNMPA": "Arquivamento de Cosméticos NMPA: ",
-    "title": "Conformidade SinoTrade - Assistência de IA (EN)"
+    "title": "Conformidade SinoTrade - Assistência de IA (EN)",
+    "servicesTitle": "Serviços"
   },
   "Navbar": {
-    "selfCheck": "Autoavaliação"
+    "selfCheck": "Autoverificação"
   }
 }

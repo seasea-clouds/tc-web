@@ -1336,9 +1336,10 @@
     "serviceGACC": "GACC-voedselregistratie: ",
     "serviceLabel": "Naleving van Chinese labels: ontwerp en beoordeling van labels die voldoen aan GB 7718 en GB 28050. De belangrijkste reden voor afwijzing door de douane in Chinese havens.",
     "serviceNMPA": "NMPA Cosmetics Filing - Registratie of kennisgeving van cosmetica bij de China National Medical Products Administration. Vereist voor alle geïmporteerde cosmeticaproducten.",
-    "title": "Naleving van SinoTrade: AI-Assistance (EN)"
+    "title": "Naleving van SinoTrade: AI-Assistance (EN)",
+    "servicesTitle": "Diensten"
   },
   "Navbar": {
-    "selfCheck": "Zelfevaluatie"
+    "selfCheck": "Zelfcontrole"
   }
 }

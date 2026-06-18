@@ -80,7 +80,8 @@
     "settings": "Ayarlar",
     "viewReportsDesc": "Uyumluluk raporlarınızı görüntüleyin",
     "manageSubscriptionDesc": "Aboneliğinizi yönetin",
-    "youAreOnFreePlan": "Şu anda ücretsiz planındasınız."
+    "youAreOnFreePlan": "Şu anda Ücretsiz plandasınız.",
+    "viewPricing": "Fiyatlandırmayı Görüntüle"
   },
   "Pricing": {
     "title": "Basit Fiyatlandırma",
@@ -1080,7 +1081,14 @@
     "gaccCat_nuts_label": "Kuruyemiş / Kuru Meyveler (HS 08)",
     "gaccCat_other_label": "Diğer Gıda Ürünleri",
     "gaccCat_classification_label": "Sınıflandırma",
-    "backToHome": "Ana Sayfaya Geri Dön"
+    "backToHome": "Ana Sayfaya Geri Dön",
+    "cccProductNamePlaceholder": "ör. Akıllı LED Masa Lambası",
+    "crossborderProductNamePlaceholder": "örneğin Organik Matcha Tozu",
+    "gaccProductNamePlaceholder": "örneğin Cabernet Sauvignon Kırmızı Şarap",
+    "labelProductNamePlaceholder": "örneğin Premium Yeşil Çay 500g",
+    "nmpaProductNamePlaceholder": "örneğin Hyaluronik Asit Serumu",
+    "noReportId": "Rapor kimliği sağlanmadı",
+    "trademarkProductNamePlaceholder": "örneğin Premium Cilt Bakım Serisi"
   },
   "Report": {
     "loadingTitle": "Raporunuzu Yükleme",
@@ -1111,7 +1119,8 @@
     "registeredUser": "Kayıtlı kullanıcı",
     "periodEnds": "Dönem sonu",
     "youAreOnFreePlan": "Şu anda Ücretsiz plandasınız.",
-    "noReportId": "Hiçbir rapor kimliği sağlanmadı"
+    "noReportId": "Hiçbir rapor kimliği sağlanmadı",
+    "backToHome": "Ana Sayfaya Geri Dön"
   },
   "Cookie": {
     "message": "Bu site yalnızca gerekli kimlik doğrulama çerezlerini kullanır. Hiçbir izleme veya reklam çerezi kullanılmaz.",

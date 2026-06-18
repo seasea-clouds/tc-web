@@ -53,9 +53,9 @@
     "errorInvalid": "Невалиден имейл или парола",
     "errorExists": "Имейлът вече е регистриран",
     "errorLength": "Паролата трябва да е поне 5 знака",
-    "securityCheck": "Моля, завършете сигурността.",
-    "securityCheckFailed": "Неуспешна проверка на сигурността. Моля, опитайте отново.",
-    "securityCheckExpired": "Сигурността е изтекъл. Моля, опитайте отново."
+    "securityCheck": "Моля, завършете проверката за сигурност.",
+    "securityCheckFailed": "Проверката за сигурност е неуспешна. Моля, опитайте отново.",
+    "securityCheckExpired": "Проверката за сигурност е изтекла. Моля, опитайте отново."
   },
   "Dashboard": {
     "title": "Табло",
@@ -79,7 +79,9 @@
     "subscription": "Абонамент",
     "settings": "Настройки",
     "viewReportsDesc": "Вижте отчетите си за съответствие",
-    "manageSubscriptionDesc": "Управлявайте абонамента си"
+    "manageSubscriptionDesc": "Управлявайте абонамента си",
+    "viewPricing": "Вижте цените",
+    "youAreOnFreePlan": "В момента сте на безплатен план."
   },
   "Pricing": {
     "title": "Просто ценообразуване",
@@ -1079,7 +1081,14 @@
     "gaccCat_nuts_label": "Ядки / Сушени плодове (HS 08)",
     "gaccCat_other_label": "Други хранителни продукти",
     "gaccCat_classification_label": "Класификация",
-    "backToHome": "Обратно към дома"
+    "backToHome": "Обратно към дома",
+    "cccProductNamePlaceholder": "например интелигентна LED настолна лампа",
+    "crossborderProductNamePlaceholder": "напр., органичен матча на прах",
+    "gaccProductNamePlaceholder": "например червено вино каберне совиньон",
+    "labelProductNamePlaceholder": "напр. Премиум зелен чай 500g",
+    "nmpaProductNamePlaceholder": "например серум с хиалуронова киселина",
+    "noReportId": "Не е предоставен идентификатор на отчета",
+    "trademarkProductNamePlaceholder": "напр. Премиум линия за грижа за кожата"
   },
   "Report": {
     "loadingTitle": "Вашият отчет се зарежда",
@@ -1110,7 +1119,8 @@
     "registeredUser": "Регистриран потребител",
     "periodEnds": "Периодът приключва",
     "youAreOnFreePlan": "В момента сте на безплатен план.",
-    "noReportId": "Не е предоставено ID на доклад"
+    "noReportId": "Не е предоставено ID на доклад",
+    "backToHome": "Обратно към дома"
   },
   "Cookie": {
     "message": "Този сайт използва само основни бисквитки за удостоверяване. Не се използват проследяващи или рекламни бисквитки.",

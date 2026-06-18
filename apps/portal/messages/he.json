@@ -53,9 +53,9 @@
     "errorInvalid": "אימייל או סיסמה לא חוקיים",
     "errorExists": "האימייל כבר רשום",
     "errorLength": "הסיסמה חייבת להיות לפחות 5 תווים",
-    "securityCheck": "אנא השלם את בדיקת האבטחה.",
-    "securityCheckFailed": "בדיקת האבטחה נכשלה. נסה שוב.",
-    "securityCheckExpired": "בדיקת האבטחה פגה. נסה שוב."
+    "securityCheck": "נא להשלים את בדיקת האבטחה.",
+    "securityCheckFailed": "בדיקת אבטחה נכשלה. אנא נסה שוב.",
+    "securityCheckExpired": "פג תוקף בדיקת האבטחה. אנא נסה שוב."
   },
   "Dashboard": {
     "title": "לוּחַ מַחווָנִים",
@@ -79,7 +79,9 @@
     "subscription": "מִנוּי",
     "settings": "הגדרות",
     "viewReportsDesc": "הצג את דוחות התאימות שלך",
-    "manageSubscriptionDesc": "נהל את המנוי שלך"
+    "manageSubscriptionDesc": "נהל את המנוי שלך",
+    "viewPricing": "צפה בתמחור",
+    "youAreOnFreePlan": "אתה נמצא כעת בתוכנית החינמית."
   },
   "Pricing": {
     "title": "תמחור פשוט",
@@ -1079,7 +1081,14 @@
     "gaccCat_nuts_label": "אגוזים / פירות יבשים (HS 08)",
     "gaccCat_other_label": "מוצרי מזון אחרים",
     "gaccCat_classification_label": "מיון",
-    "backToHome": "חזרה לבית"
+    "backToHome": "חזרה לבית",
+    "cccProductNamePlaceholder": "למשל, מנורת שולחן חכמה LED",
+    "crossborderProductNamePlaceholder": "למשל, אבקת מאצ'ה אורגנית",
+    "gaccProductNamePlaceholder": "למשל, יין אדום קברנה סוביניון",
+    "labelProductNamePlaceholder": "למשל, תה ירוק פרימיום 500 גרם",
+    "nmpaProductNamePlaceholder": "למשל, סרום חומצה היאלורונית",
+    "noReportId": "לא סופק מזהה דוח",
+    "trademarkProductNamePlaceholder": "למשל, קו פרימיום לטיפוח העור"
   },
   "Report": {
     "loadingTitle": "טוען את הדוח שלך",
@@ -1110,7 +1119,8 @@
     "registeredUser": "משתמש רשום",
     "periodEnds": "התקופה מסתיימת",
     "youAreOnFreePlan": "אתה נמצא כעת בתוכנית החינמית.",
-    "noReportId": "לא סופק מזהה דוח"
+    "noReportId": "לא סופק מזהה דוח",
+    "backToHome": "חזרה לבית"
   },
   "Cookie": {
     "message": "אתר זה משתמש רק בעוגיות אימות חיוניות. לא נעשה שימוש בעוגיות מעקב או פרסום.",
@@ -1461,6 +1471,6 @@
     "report": "דוח"
   },
   "Breadcrumb": {
-    "pricing": "מחירים"
+    "pricing": "תמחור"
   }
 }

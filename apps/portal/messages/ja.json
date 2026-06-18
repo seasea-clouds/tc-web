@@ -54,8 +54,8 @@
     "errorExists": "メールアドレスはすでに登録されています",
     "errorLength": "パスワードは5文字以上である必要があります",
     "securityCheck": "セキュリティチェックを完了してください。",
-    "securityCheckFailed": "セキュリティチェックに失敗しました。もう一度お試しください。",
-    "securityCheckExpired": "セキュリティチェックの有効期限が切れました。もう一度お試しください。"
+    "securityCheckFailed": "セキュリティチェックに失敗しました。もう一度試してください。",
+    "securityCheckExpired": "セキュリティチェックの有効期限が切れました。もう一度試してください。"
   },
   "Dashboard": {
     "title": "ダッシュボード",
@@ -81,7 +81,7 @@
     "viewReportsDesc": "コンプライアンスレポートを表示する",
     "manageSubscriptionDesc": "サブスクリプションを管理する",
     "viewPricing": "価格を見る",
-    "youAreOnFreePlan": "現在無料でご利用いただけます。"
+    "youAreOnFreePlan": "現在は無料プランをご利用中です。"
   },
   "Pricing": {
     "title": "シンプルな価格設定",
@@ -1083,12 +1083,13 @@
     "gaccCat_classification_label": "分類",
     "backToHome": "ホームに戻る",
     "freeCheck": "無料チェック",
-    "gaccProductNamePlaceholder": "例：カベルネ・ソーヴィニョン赤ワイン",
+    "gaccProductNamePlaceholder": "例: カベルネ・ソーヴィニヨン 赤ワイン",
     "labelProductNamePlaceholder": "例：プレミアム緑茶 500g",
-    "cccProductNamePlaceholder": "例：スマートLEDデスクランプ",
-    "nmpaProductNamePlaceholder": "例：ヒアルロン酸セラム",
-    "crossborderProductNamePlaceholder": "例：オーガニック抹茶パウダー",
-    "trademarkProductNamePlaceholder": "例：プレミアムスキンケアライン"
+    "cccProductNamePlaceholder": "例: スマート LED デスクランプ",
+    "nmpaProductNamePlaceholder": "例：ヒアルロン酸美容液",
+    "crossborderProductNamePlaceholder": "例：有機抹茶パウダー",
+    "trademarkProductNamePlaceholder": "例: プレミアム スキンケア ライン",
+    "noReportId": "レポート ID が指定されていません"
   },
   "Report": {
     "loadingTitle": "レポートをロードする",
@@ -1118,7 +1119,8 @@
     "moreSettingsSoon": "さらに詳しい設定は近日公開予定です。",
     "registeredUser": "登録ユーザー",
     "periodEnds": "期間終了",
-    "noReportId": "レポートIDが指定されていません"
+    "noReportId": "レポートIDが指定されていません",
+    "backToHome": "ホームに戻る"
   },
   "Cookie": {
     "message": "このサイトでは、必須の認証 Cookie のみを使用します。追跡クッキーや広告クッキーは使用されません。",
@@ -1469,6 +1471,6 @@
     "report": "レポート"
   },
   "Breadcrumb": {
-    "pricing": "料金"
+    "pricing": "価格設定"
   }
 }

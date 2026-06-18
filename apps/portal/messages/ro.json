@@ -53,9 +53,9 @@
     "errorInvalid": "E-mail sau parolă nevalidă",
     "errorExists": "E-mail deja înregistrat",
     "errorLength": "Parola trebuie să aibă cel puțin 5 caractere",
-    "securityCheck": "Vă rugăm să completați verificarea de securitate.",
-    "securityCheckFailed": "Verificarea de securitate a eșuat. Încercați din nou.",
-    "securityCheckExpired": "Verificarea de securitate a expirat. Încercați din nou."
+    "securityCheck": "Vă rugăm să finalizați verificarea de securitate.",
+    "securityCheckFailed": "Verificarea de securitate a eșuat. Vă rugăm să încercați din nou.",
+    "securityCheckExpired": "Verificarea de securitate a expirat. Vă rugăm să încercați din nou."
   },
   "Dashboard": {
     "title": "Bord",
@@ -79,7 +79,9 @@
     "subscription": "Abonament",
     "settings": "Setări",
     "viewReportsDesc": "Vizualizați rapoartele dvs. de conformitate",
-    "manageSubscriptionDesc": "Gestionați-vă abonamentul"
+    "manageSubscriptionDesc": "Gestionați-vă abonamentul",
+    "viewPricing": "Vedeți prețurile",
+    "youAreOnFreePlan": "În prezent sunteți în planul gratuit."
   },
   "Pricing": {
     "title": "Prețuri simple",
@@ -1079,7 +1081,14 @@
     "gaccCat_nuts_label": "Nuci/Fructe uscate (HS 08)",
     "gaccCat_other_label": "Alte produse alimentare",
     "gaccCat_classification_label": "Clasificare",
-    "backToHome": "Înapoi la Acasă"
+    "backToHome": "Înapoi la Acasă",
+    "cccProductNamePlaceholder": "de exemplu, lampă de birou cu LED inteligentă",
+    "crossborderProductNamePlaceholder": "de exemplu, pudră organică de matcha",
+    "gaccProductNamePlaceholder": "de exemplu, vin roșu Cabernet Sauvignon",
+    "labelProductNamePlaceholder": "de exemplu, ceai verde premium 500 g",
+    "nmpaProductNamePlaceholder": "de exemplu, ser cu acid hialuronic",
+    "noReportId": "Nu a fost furnizat niciun ID de raport",
+    "trademarkProductNamePlaceholder": "de exemplu, Premium Skincare Line"
   },
   "Report": {
     "loadingTitle": "Se încarcă raportul dvs",
@@ -1110,7 +1119,8 @@
     "registeredUser": "Utilizator înregistrat",
     "periodEnds": "Se termină perioada",
     "youAreOnFreePlan": "În prezent sunteți în planul gratuit.",
-    "noReportId": "Niciun ID de raport furnizat"
+    "noReportId": "Niciun ID de raport furnizat",
+    "backToHome": "Înapoi la Acasă"
   },
   "Cookie": {
     "message": "Acest site folosește numai cookie-uri de autentificare esențiale. Nu sunt utilizate cookie-uri de urmărire sau de publicitate.",

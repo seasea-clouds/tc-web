@@ -53,9 +53,9 @@
     "errorInvalid": "अमान्य ईमेल या पासवर्ड",
     "errorExists": "ईमेल पहले से ही पंजीकृत है",
     "errorLength": "पासवर्ड कम से कम 5 अक्षर का होना चाहिए",
-    "securityCheck": "कृपया सुरक्षा जांच पूरी करें।",
-    "securityCheckFailed": "सुरक्षा जांच विफल हुई। कृपया पुनः प्रयास करें।",
-    "securityCheckExpired": "सुरक्षा जांच समाप्त हो गई है। कृपया पुनः प्रयास करें।"
+    "securityCheck": "कृपया सुरक्षा जांच पूरी करें.",
+    "securityCheckFailed": "सुरक्षा जांच विफल. कृपया पुन: प्रयास करें।",
+    "securityCheckExpired": "सुरक्षा जांच समाप्त हो गई. कृपया पुन: प्रयास करें।"
   },
   "Dashboard": {
     "title": "डैशबोर्ड",
@@ -79,7 +79,9 @@
     "subscription": "सदस्यता",
     "settings": "सेटिंग्स",
     "viewReportsDesc": "अपनी अनुपालन रिपोर्ट देखें",
-    "manageSubscriptionDesc": "अपनी सदस्यता प्रबंधित करें"
+    "manageSubscriptionDesc": "अपनी सदस्यता प्रबंधित करें",
+    "viewPricing": "मूल्य निर्धारण देखें",
+    "youAreOnFreePlan": "आप वर्तमान में निःशुल्क योजना पर हैं।"
   },
   "Pricing": {
     "title": "सरल मूल्य निर्धारण",
@@ -1079,7 +1081,14 @@
     "gaccCat_nuts_label": "मेवे/सूखे फल (एचएस 08)",
     "gaccCat_other_label": "अन्य खाद्य उत्पाद",
     "gaccCat_classification_label": "वर्गीकरण",
-    "backToHome": "घर वापिस जा रहा हूँ"
+    "backToHome": "घर वापिस जा रहा हूँ",
+    "cccProductNamePlaceholder": "उदाहरण के लिए, स्मार्ट एलईडी डेस्क लैंप",
+    "crossborderProductNamePlaceholder": "उदाहरण के लिए, ऑर्गेनिक माचा पाउडर",
+    "gaccProductNamePlaceholder": "उदाहरण के लिए, कैबरनेट सॉविनन रेड वाइन",
+    "labelProductNamePlaceholder": "उदाहरण के लिए, प्रीमियम ग्रीन टी 500 ग्राम",
+    "nmpaProductNamePlaceholder": "उदाहरण के लिए, हयालूरोनिक एसिड सीरम",
+    "noReportId": "कोई रिपोर्ट आईडी प्रदान नहीं की गई",
+    "trademarkProductNamePlaceholder": "उदाहरण के लिए, प्रीमियम स्किनकेयर लाइन"
   },
   "Report": {
     "loadingTitle": "आपकी रिपोर्ट लोड हो रही है",
@@ -1110,7 +1119,8 @@
     "registeredUser": "पंजीकृत उपयोगकर्ता",
     "periodEnds": "अवधि समाप्त होती है",
     "youAreOnFreePlan": "आप वर्तमान में निःशुल्क योजना पर हैं।",
-    "noReportId": "कोई रिपोर्ट ID प्रदान नहीं की गई"
+    "noReportId": "कोई रिपोर्ट ID प्रदान नहीं की गई",
+    "backToHome": "घर वापिस जा रहा हूँ"
   },
   "Cookie": {
     "message": "यह साइट केवल आवश्यक प्रमाणीकरण कुकीज़ का उपयोग करती है। किसी भी ट्रैकिंग या विज्ञापन कुकीज़ का उपयोग नहीं किया जाता है।",

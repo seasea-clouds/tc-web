@@ -79,7 +79,9 @@
     "subscription": "Prenumeration",
     "settings": "Inställningar",
     "viewReportsDesc": "Se dina efterlevnadsrapporter",
-    "manageSubscriptionDesc": "Hantera ditt abonnemang"
+    "manageSubscriptionDesc": "Hantera ditt abonnemang",
+    "viewPricing": "Visa priser",
+    "youAreOnFreePlan": "Du har för närvarande gratisplanen."
   },
   "Pricing": {
     "title": "Enkel prissättning",
@@ -1079,7 +1081,14 @@
     "gaccCat_nuts_label": "Nötter / torkad frukt (HS 08)",
     "gaccCat_other_label": "Andra livsmedelsprodukter",
     "gaccCat_classification_label": "Klassificering",
-    "backToHome": "Tillbaka till hemmet"
+    "backToHome": "Tillbaka till hemmet",
+    "cccProductNamePlaceholder": "t.ex. Smart LED-bordslampa",
+    "crossborderProductNamePlaceholder": "t.ex. Ekologiskt Matcha-pulver",
+    "gaccProductNamePlaceholder": "t.ex. Cabernet Sauvignon Rödvin",
+    "labelProductNamePlaceholder": "t.ex. Premium Green Tea 500g",
+    "nmpaProductNamePlaceholder": "t.ex. hyaluronsyraserum",
+    "noReportId": "Inget rapport-ID har angetts",
+    "trademarkProductNamePlaceholder": "t.ex. Premium Skincare Line"
   },
   "Report": {
     "loadingTitle": "Laddar din rapport",
@@ -1110,7 +1119,8 @@
     "registeredUser": "Registrerad användare",
     "periodEnds": "Perioden slutar",
     "youAreOnFreePlan": "Du har för närvarande gratisplanen.",
-    "noReportId": "Inget rapport-ID angivet"
+    "noReportId": "Inget rapport-ID angivet",
+    "backToHome": "Tillbaka till hemmet"
   },
   "Cookie": {
     "message": "Denna webbplats använder endast viktiga autentiseringscookies. Inga spårnings- eller reklamcookies används.",

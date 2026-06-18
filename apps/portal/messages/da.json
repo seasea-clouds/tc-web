@@ -53,9 +53,9 @@
     "errorInvalid": "Ugyldig e-mail eller adgangskode",
     "errorExists": "E-mail allerede registreret",
     "errorLength": "Adgangskoden skal være på mindst 5 tegn",
-    "securityCheck": "Udfyld venligst sikkerhedstjekket.",
-    "securityCheckFailed": "Sikkerhedstjekket mislykkedes. Prøv igen.",
-    "securityCheckExpired": "Sikkerhedstjekket er udløbet. Prøv igen."
+    "securityCheck": "Gennemfør venligst sikkerhedstjekket.",
+    "securityCheckFailed": "Sikkerhedstjek mislykkedes. Prøv venligst igen.",
+    "securityCheckExpired": "Sikkerhedstjekket er udløbet. Prøv venligst igen."
   },
   "Dashboard": {
     "title": "Dashboard",
@@ -79,7 +79,9 @@
     "subscription": "Abonnement",
     "settings": "Indstillinger",
     "viewReportsDesc": "Se dine overholdelsesrapporter",
-    "manageSubscriptionDesc": "Administrer dit abonnement"
+    "manageSubscriptionDesc": "Administrer dit abonnement",
+    "viewPricing": "Se priser",
+    "youAreOnFreePlan": "Du er i øjeblikket på den gratis plan."
   },
   "Pricing": {
     "title": "Enkel prissætning",
@@ -1079,7 +1081,14 @@
     "gaccCat_nuts_label": "Nødder/tørrede frugter (HS 08)",
     "gaccCat_other_label": "Andre fødevarer",
     "gaccCat_classification_label": "Klassifikation",
-    "backToHome": "Tilbage til Hjemmet"
+    "backToHome": "Tilbage til Hjemmet",
+    "cccProductNamePlaceholder": "f.eks. Smart LED-bordslampe",
+    "crossborderProductNamePlaceholder": "f.eks. Økologisk Matcha-pulver",
+    "gaccProductNamePlaceholder": "fx Cabernet Sauvignon rødvin",
+    "labelProductNamePlaceholder": "f.eks. Premium grøn te 500 g",
+    "nmpaProductNamePlaceholder": "fx hyaluronsyreserum",
+    "noReportId": "Intet rapport-id angivet",
+    "trademarkProductNamePlaceholder": "f.eks. Premium Skincare Line"
   },
   "Report": {
     "loadingTitle": "Indlæser din rapport",
@@ -1110,7 +1119,8 @@
     "registeredUser": "Registreret bruger",
     "periodEnds": "Perioden slutter",
     "youAreOnFreePlan": "Du er i øjeblikket på den gratis plan.",
-    "noReportId": "Intet rapport-ID angivet"
+    "noReportId": "Intet rapport-ID angivet",
+    "backToHome": "Tilbage til Hjemmet"
   },
   "Cookie": {
     "message": "Dette websted bruger kun vigtige autentificeringscookies. Der bruges ingen sporings- eller reklamecookies.",

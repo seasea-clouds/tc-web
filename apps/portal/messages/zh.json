@@ -53,9 +53,9 @@
     "errorInvalid": "电子邮件或密码无效",
     "errorExists": "邮箱已注册",
     "errorLength": "密码必须至少为 5 个字符",
-    "securityCheck": "请完成安全验证。",
-    "securityCheckFailed": "安全验证失败，请重试。",
-    "securityCheckExpired": "安全验证已过期，请重试。"
+    "securityCheck": "请完成安全检查。",
+    "securityCheckFailed": "安全检查失败。请再试一次。",
+    "securityCheckExpired": "安全检查已过期。请再试一次。"
   },
   "Dashboard": {
     "title": "仪表板",
@@ -80,7 +80,7 @@
     "settings": "设置",
     "viewReportsDesc": "查看您的合规报告",
     "manageSubscriptionDesc": "管理您的订阅",
-    "youAreOnFreePlan": "您当前使用的是免费计划。",
+    "youAreOnFreePlan": "您目前使用的是免费计划。",
     "viewPricing": "查看定价"
   },
   "Pricing": {
@@ -1083,12 +1083,13 @@
     "gaccCat_other_label": "其他食品",
     "gaccCat_classification_label": "分类",
     "backToHome": "返回首页",
-    "gaccProductNamePlaceholder": "例如：赤霞珠干红葡萄酒",
-    "labelProductNamePlaceholder": "例如：特级绿茶 500g",
-    "cccProductNamePlaceholder": "例如：智能LED台灯",
-    "nmpaProductNamePlaceholder": "例如：玻尿酸精华液",
-    "crossborderProductNamePlaceholder": "例如：有机抹茶粉",
-    "trademarkProductNamePlaceholder": "例如：高端护肤系列"
+    "gaccProductNamePlaceholder": "例如，赤霞珠红葡萄酒",
+    "labelProductNamePlaceholder": "例如，优质绿茶 500 克",
+    "cccProductNamePlaceholder": "例如，智能 LED 台灯",
+    "nmpaProductNamePlaceholder": "例如，透明质酸精华液",
+    "crossborderProductNamePlaceholder": "例如，有机抹茶粉",
+    "trademarkProductNamePlaceholder": "例如，高级护肤品系列",
+    "noReportId": "未提供报告 ID"
   },
   "Report": {
     "loadingTitle": "加载您的报告",
@@ -1118,7 +1119,8 @@
     "moreSettingsSoon": "更多设置即将推出。",
     "registeredUser": "注册用户",
     "periodEnds": "期间结束",
-    "noReportId": "未提供报告 ID"
+    "noReportId": "未提供报告 ID",
+    "backToHome": "返回首页"
   },
   "Cookie": {
     "message": "本网站仅使用必要的身份验证Cookie。不使用跟踪或广告Cookie。",

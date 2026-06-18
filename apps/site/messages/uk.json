@@ -1336,7 +1336,8 @@
     "serviceGACC": "Реєстрація харчових продуктів GACC: ",
     "serviceLabel": "Відповідність китайської етикетки: ",
     "serviceNMPA": "NMPA Cosmetics Filing: ",
-    "title": "Відповідність вимогам SinoTrade: AI-Assistance (EN)"
+    "title": "Відповідність вимогам SinoTrade: AI-Assistance (EN)",
+    "servicesTitle": "Послуги"
   },
   "Navbar": {
     "selfCheck": "Самоперевірка"

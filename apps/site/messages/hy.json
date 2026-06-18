@@ -1336,9 +1336,10 @@
     "serviceGACC": "GACC սննդի գրանցում: ",
     "serviceLabel": "Չինական պիտակների համապատասխանություն: ",
     "serviceNMPA": "NMPA Cosmetics-ի ներկայացում: ",
-    "title": "SinoTrade-ի համապատասխանություն: AI-Assistance (EN)"
+    "title": "SinoTrade-ի համապատասխանություն: AI-Assistance (EN)",
+    "servicesTitle": "Ծառայություններ"
   },
   "Navbar": {
-    "selfCheck": "Ինքնագնահատում"
+    "selfCheck": "Ինքնստուգում"
   }
 }

@@ -53,9 +53,9 @@
     "errorInvalid": "Neveljaven e-poštni naslov ali geslo",
     "errorExists": "E-pošta je že registrirana",
     "errorLength": "Geslo mora imeti vsaj 5 znakov",
-    "securityCheck": "Prosimo, dokončajte varnostno preverjanje.",
-    "securityCheckFailed": "Varnostno preverjanje ni uspelo. Poskusite znova.",
-    "securityCheckExpired": "Varnostno preverjanje je poteklo. Poskusite znova."
+    "securityCheck": "Prosimo, dokončajte varnostni pregled.",
+    "securityCheckFailed": "Varnostni pregled ni uspel. prosim poskusite znova",
+    "securityCheckExpired": "Varnostni pregled je potekel. prosim poskusite znova"
   },
   "Dashboard": {
     "title": "Nadzorna plošča",
@@ -79,7 +79,9 @@
     "subscription": "Naročnina",
     "settings": "nastavitve",
     "viewReportsDesc": "Oglejte si svoja poročila o skladnosti",
-    "manageSubscriptionDesc": "Upravljajte svojo naročnino"
+    "manageSubscriptionDesc": "Upravljajte svojo naročnino",
+    "viewPricing": "Ogled cen",
+    "youAreOnFreePlan": "Trenutno ste na brezplačnem načrtu."
   },
   "Pricing": {
     "title": "Preprosto določanje cen",
@@ -1079,7 +1081,14 @@
     "gaccCat_nuts_label": "Oreščki / Suho sadje (HS 08)",
     "gaccCat_other_label": "Drugi živilski izdelki",
     "gaccCat_classification_label": "Razvrščanje",
-    "backToHome": "Nazaj na dom"
+    "backToHome": "Nazaj na dom",
+    "cccProductNamePlaceholder": "npr. pametna LED namizna svetilka",
+    "crossborderProductNamePlaceholder": "npr. organski Matcha prah",
+    "gaccProductNamePlaceholder": "na primer rdeče vino cabernet sauvignon",
+    "labelProductNamePlaceholder": "npr. Premium zeleni čaj 500 g",
+    "nmpaProductNamePlaceholder": "na primer serum s hialuronsko kislino",
+    "noReportId": "ID poročila ni naveden",
+    "trademarkProductNamePlaceholder": "na primer linija za nego kože Premium"
   },
   "Report": {
     "loadingTitle": "Nalaganje vašega poročila",
@@ -1110,7 +1119,8 @@
     "registeredUser": "Registriran uporabnik",
     "periodEnds": "Obdobje se konča",
     "youAreOnFreePlan": "Trenutno ste na brezplačnem načrtu.",
-    "noReportId": "Ni naveden ID poročila"
+    "noReportId": "Ni naveden ID poročila",
+    "backToHome": "Nazaj na dom"
   },
   "Cookie": {
     "message": "To spletno mesto uporablja samo bistvene piškotke za preverjanje pristnosti. Piškotki za sledenje ali oglaševanje se ne uporabljajo.",
@@ -1461,6 +1471,6 @@
     "report": "Poročilo"
   },
   "Breadcrumb": {
-    "pricing": "Cenik"
+    "pricing": "Cene"
   }
 }

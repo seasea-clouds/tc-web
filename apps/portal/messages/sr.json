@@ -53,7 +53,7 @@
     "errorInvalid": "Неважећа адреса е-поште или лозинка",
     "errorExists": "Е-пошта је већ регистрована",
     "errorLength": "Лозинка мора имати најмање 5 знакова",
-    "securityCheck": "Молимо завршите безбедносну проверу.",
+    "securityCheck": "Довршите безбедносну проверу.",
     "securityCheckFailed": "Безбедносна провера није успела. Покушајте поново.",
     "securityCheckExpired": "Безбедносна провера је истекла. Покушајте поново."
   },
@@ -79,7 +79,9 @@
     "subscription": "Претплата",
     "settings": "Подешавања",
     "viewReportsDesc": "Погледајте своје извештаје о усклађености",
-    "manageSubscriptionDesc": "Управљајте својом претплатом"
+    "manageSubscriptionDesc": "Управљајте својом претплатом",
+    "viewPricing": "Погледајте цене",
+    "youAreOnFreePlan": "Тренутно сте на бесплатном плану."
   },
   "Pricing": {
     "title": "Једноставне цене",
@@ -1079,7 +1081,14 @@
     "gaccCat_nuts_label": "Орашасти плодови / сушено воће (ХС 08)",
     "gaccCat_other_label": "Остали прехрамбени производи",
     "gaccCat_classification_label": "Класификација",
-    "backToHome": "Повратак кући"
+    "backToHome": "Повратак кући",
+    "cccProductNamePlaceholder": "на пример, паметна ЛЕД стона лампа",
+    "crossborderProductNamePlaceholder": "на пример, органски матча прах",
+    "gaccProductNamePlaceholder": "на пример, црвено вино каберне совињон",
+    "labelProductNamePlaceholder": "на пример, врхунски зелени чај 500 г",
+    "nmpaProductNamePlaceholder": "на пример, серум са хијалуронском киселином",
+    "noReportId": "Није наведен ИД извештаја",
+    "trademarkProductNamePlaceholder": "нпр. Премиум линија за негу коже"
   },
   "Report": {
     "loadingTitle": "Учитавање вашег извештаја",
@@ -1110,7 +1119,8 @@
     "registeredUser": "Регистровани корисник",
     "periodEnds": "Период се завршава",
     "youAreOnFreePlan": "Тренутно сте на бесплатном плану.",
-    "noReportId": "Није наведен ID извештаја"
+    "noReportId": "Није наведен ID извештаја",
+    "backToHome": "Повратак кући"
   },
   "Cookie": {
     "message": "Овај сајт користи само неопходне колачиће за аутентификацију. Не користе се колачићи за праћење или оглашавање.",
@@ -1461,6 +1471,6 @@
     "report": "Извештај"
   },
   "Breadcrumb": {
-    "pricing": "Цене"
+    "pricing": "Прицинг"
   }
 }

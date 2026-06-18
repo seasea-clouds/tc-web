@@ -183,10 +183,11 @@ function runTranslationChecks() {
 }
 
 // ============================================================
-// 面包屑 key 完整性检查（独立脚本，CI 阻塞）
+// i18n key 完整性检查（独立脚本，CI 阻塞）
+// 检查三个站点（site / portal / ui）的所有 i18n key 是否在 48 语言中完整存在
 // ============================================================
 function runBreadcrumbCheck() {
-  runLocalScript('check-breadcrumb-keys.mjs', '--ci');
+  runLocalScript('check-i18n-keys.mjs', '--ci');
 }
 
 // ============================================================

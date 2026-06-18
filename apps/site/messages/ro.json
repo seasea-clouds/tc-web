@@ -1336,9 +1336,10 @@
     "serviceGACC": "Înregistrarea alimentelor GACC: ",
     "serviceLabel": "Conformitatea etichetelor chineze: ",
     "serviceNMPA": "Înregistrare NMPA pentru produse cosmetice: ",
-    "title": "Conformitate SinoTrade: AI-Assistance (EN)"
+    "title": "Conformitate SinoTrade: AI-Assistance (EN)",
+    "servicesTitle": "Servicii"
   },
   "Navbar": {
-    "selfCheck": "Autoevaluare"
+    "selfCheck": "Autoverificare"
   }
 }

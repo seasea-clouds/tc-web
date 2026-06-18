@@ -1336,9 +1336,10 @@
     "serviceGACC": "Registrazione alimentare GACC: registra gli impianti di produzione alimentare all'estero presso la dogana cinese (GACC) ai sensi dei decreti 248 e 249. Obbligatorio per tutti i prodotti alimentari esportati in Cina.",
     "serviceLabel": "Conformità delle etichette cinesi: progettazione e revisione di etichette conformi a GB 7718 e GB 28050. Il motivo principale del rifiuto doganale nei porti cinesi.",
     "serviceNMPA": "Presentazione dei cosmetici NMPA: registrazione o notifica di cosmetici presso la China National Medical Products Administration. Obbligatorio per tutti i prodotti cosmetici importati.",
-    "title": "Conformità SinoTrade: Assistenza AI (EN)"
+    "title": "Conformità SinoTrade: Assistenza AI (EN)",
+    "servicesTitle": "Servizi"
   },
   "Navbar": {
-    "selfCheck": "Autovalutazione"
+    "selfCheck": "Autocontrollo"
   }
 }

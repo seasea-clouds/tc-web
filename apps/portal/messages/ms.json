@@ -55,7 +55,7 @@
     "errorLength": "Kata laluan mestilah sekurang-kurangnya 5 aksara",
     "securityCheck": "Sila lengkapkan pemeriksaan keselamatan.",
     "securityCheckFailed": "Pemeriksaan keselamatan gagal. Sila cuba lagi.",
-    "securityCheckExpired": "Pemeriksaan keselamatan telah luput. Sila cuba lagi."
+    "securityCheckExpired": "Semakan keselamatan tamat tempoh. Sila cuba lagi."
   },
   "Dashboard": {
     "title": "Papan pemuka",
@@ -79,7 +79,9 @@
     "subscription": "Langganan",
     "settings": "tetapan",
     "viewReportsDesc": "Lihat laporan pematuhan anda",
-    "manageSubscriptionDesc": "Urus langganan anda"
+    "manageSubscriptionDesc": "Urus langganan anda",
+    "viewPricing": "Lihat Harga",
+    "youAreOnFreePlan": "Anda sedang menggunakan pelan Percuma."
   },
   "Pricing": {
     "title": "Harga Mudah",
@@ -1079,7 +1081,14 @@
     "gaccCat_nuts_label": "Kacang / Buah Kering (HS 08)",
     "gaccCat_other_label": "Produk Makanan Lain",
     "gaccCat_classification_label": "Pengelasan",
-    "backToHome": "Kembali ke Rumah"
+    "backToHome": "Kembali ke Rumah",
+    "cccProductNamePlaceholder": "cth., Lampu Meja LED Pintar",
+    "crossborderProductNamePlaceholder": "cth., Serbuk Matcha Organik",
+    "gaccProductNamePlaceholder": "cth., Wain Merah Cabernet Sauvignon",
+    "labelProductNamePlaceholder": "cth., Teh Hijau Premium 500g",
+    "nmpaProductNamePlaceholder": "cth., Serum Asid Hyaluronik",
+    "noReportId": "Tiada ID laporan diberikan",
+    "trademarkProductNamePlaceholder": "cth., Barisan Penjagaan Kulit Premium"
   },
   "Report": {
     "loadingTitle": "Memuatkan Laporan Anda",
@@ -1110,7 +1119,8 @@
     "registeredUser": "Pengguna berdaftar",
     "periodEnds": "Tempoh tamat",
     "youAreOnFreePlan": "Anda sedang menggunakan pelan Percuma.",
-    "noReportId": "Tiada ID laporan disediakan"
+    "noReportId": "Tiada ID laporan disediakan",
+    "backToHome": "Kembali ke Rumah"
   },
   "Cookie": {
     "message": "Tapak ini hanya menggunakan kuki pengesahan penting. Tiada kuki penjejakan atau pengiklanan digunakan.",
@@ -1461,6 +1471,6 @@
     "report": "Laporan"
   },
   "Breadcrumb": {
-    "pricing": "Harga"
+    "pricing": "penentuan harga"
   }
 }

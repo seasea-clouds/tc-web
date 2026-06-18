@@ -53,9 +53,9 @@
     "errorInvalid": "Ungültige E-Mail-Adresse oder ungültiges Passwort",
     "errorExists": "E-Mail bereits registriert",
     "errorLength": "Das Passwort muss mindestens 5 Zeichen lang sein",
-    "securityCheck": "Bitte vervollständigen Sie die Sicherheitsüberprüfung.",
+    "securityCheck": "Bitte führen Sie die Sicherheitsüberprüfung durch.",
     "securityCheckFailed": "Sicherheitsüberprüfung fehlgeschlagen. Bitte versuchen Sie es erneut.",
-    "securityCheckExpired": "Die Sicherheitsüberprüfung ist abgelaufen. Bitte versuchen Sie es erneut."
+    "securityCheckExpired": "Sicherheitsüberprüfung abgelaufen. Bitte versuchen Sie es erneut."
   },
   "Dashboard": {
     "title": "Armaturenbrett",
@@ -80,8 +80,8 @@
     "settings": "Einstellungen",
     "viewReportsDesc": "Sehen Sie sich Ihre Compliance-Berichte an",
     "manageSubscriptionDesc": "Verwalten Sie Ihr Abonnement",
-    "viewPricing": "Preise ansehen",
-    "youAreOnFreePlan": "Sie befinden sich derzeit im kostenlosen Plan."
+    "viewPricing": "Preise anzeigen",
+    "youAreOnFreePlan": "Sie nutzen derzeit den kostenlosen Plan."
   },
   "Pricing": {
     "title": "Einfache Preisgestaltung",
@@ -1082,12 +1082,13 @@
     "gaccCat_other_label": "Andere Lebensmittel",
     "gaccCat_classification_label": "Klassifizierung",
     "backToHome": "Zurück nach Hause",
-    "gaccProductNamePlaceholder": "z.B. Cabernet-Sauvignon-Rotwein",
-    "labelProductNamePlaceholder": "z.B. Premium-Grüntee 500g",
-    "cccProductNamePlaceholder": "z.B. Intelligente LED-Schreibtischlampe",
-    "nmpaProductNamePlaceholder": "z.B. Hyaluronsäure-Serum",
-    "crossborderProductNamePlaceholder": "z.B. Bio-Matcha-Pulver",
-    "trademarkProductNamePlaceholder": "z.B. Premium-Skin-Care-Linie"
+    "gaccProductNamePlaceholder": "z.B. Cabernet Sauvignon Rotwein",
+    "labelProductNamePlaceholder": "z.B. Premium Grüner Tee 500g",
+    "cccProductNamePlaceholder": "z. B. intelligente LED-Schreibtischlampe",
+    "nmpaProductNamePlaceholder": "z. B. Hyaluronsäure-Serum",
+    "crossborderProductNamePlaceholder": "z. B. Bio-Matcha-Pulver",
+    "trademarkProductNamePlaceholder": "z. B. Premium Skincare Line",
+    "noReportId": "Keine Berichts-ID angegeben"
   },
   "Report": {
     "loadingTitle": "Laden Ihres Berichts",
@@ -1117,7 +1118,8 @@
     "moreSettingsSoon": "Weitere Einstellungen folgen in Kürze.",
     "registeredUser": "Registrierter Benutzer",
     "periodEnds": "Der Zeitraum endet",
-    "noReportId": "Kein Berichts-ID angegeben"
+    "noReportId": "Kein Berichts-ID angegeben",
+    "backToHome": "Zurück nach Hause"
   },
   "Cookie": {
     "message": "Diese Website verwendet nur unbedingt erforderliche Authentifizierungscookies. Es werden keine Tracking- oder Werbecookies verwendet.",
@@ -1468,6 +1470,6 @@
     "report": "Bericht"
   },
   "Breadcrumb": {
-    "pricing": "Preisgestaltung"
+    "pricing": "Preise"
   }
 }

@@ -53,9 +53,9 @@
     "errorInvalid": "Неправильна адреса електронної пошти або пароль",
     "errorExists": "Електронна пошта вже зареєстрована",
     "errorLength": "Пароль має бути не менше 5 символів",
-    "securityCheck": "Будь ласка, пройдіть перевірку безпеки.",
-    "securityCheckFailed": "Перевірка безпеки не пройшла. Спробуйте ще раз.",
-    "securityCheckExpired": "Перевірка безпеки прострочена. Спробуйте ще раз."
+    "securityCheck": "Пройдіть перевірку безпеки.",
+    "securityCheckFailed": "Помилка перевірки безпеки. Спробуйте ще раз.",
+    "securityCheckExpired": "Термін перевірки безпеки минув. Спробуйте ще раз."
   },
   "Dashboard": {
     "title": "Приладова панель",
@@ -79,7 +79,9 @@
     "subscription": "Підписка",
     "settings": "Налаштування",
     "viewReportsDesc": "Перегляньте свої звіти про відповідність",
-    "manageSubscriptionDesc": "Керуйте своєю підпискою"
+    "manageSubscriptionDesc": "Керуйте своєю підпискою",
+    "viewPricing": "Переглянути ціни",
+    "youAreOnFreePlan": "Зараз ви використовуєте безкоштовний план."
   },
   "Pricing": {
     "title": "Просте ціноутворення",
@@ -1079,7 +1081,14 @@
     "gaccCat_nuts_label": "Горіхи / Сухофрукти (HS 08)",
     "gaccCat_other_label": "Інші продукти харчування",
     "gaccCat_classification_label": "Класифікація",
-    "backToHome": "Назад додому"
+    "backToHome": "Назад додому",
+    "cccProductNamePlaceholder": "наприклад, розумна світлодіодна настільна лампа",
+    "crossborderProductNamePlaceholder": "наприклад, органічний порошок матча",
+    "gaccProductNamePlaceholder": "наприклад, червоне вино Каберне Совіньон",
+    "labelProductNamePlaceholder": "наприклад, зелений чай преміум-класу 500 г",
+    "nmpaProductNamePlaceholder": "наприклад, сироватка з гіалуроновою кислотою",
+    "noReportId": "Ідентифікатор звіту не надано",
+    "trademarkProductNamePlaceholder": "наприклад, Premium Skincare Line"
   },
   "Report": {
     "loadingTitle": "Завантаження звіту",
@@ -1110,7 +1119,8 @@
     "registeredUser": "Зареєстрований користувач",
     "periodEnds": "Період закінчується",
     "youAreOnFreePlan": "Зараз ви використовуєте безкоштовний план.",
-    "noReportId": "ID звіту не вказано"
+    "noReportId": "ID звіту не вказано",
+    "backToHome": "Назад додому"
   },
   "Cookie": {
     "message": "Цей сайт використовує лише необхідні файли cookie для автентифікації. Файли cookie для відстеження чи реклами не використовуються.",
@@ -1461,6 +1471,6 @@
     "report": "Звіт"
   },
   "Breadcrumb": {
-    "pricing": "Ціни"
+    "pricing": "Ціноутворення"
   }
 }

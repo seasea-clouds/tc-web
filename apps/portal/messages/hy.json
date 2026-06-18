@@ -53,9 +53,9 @@
     "errorInvalid": "Անվավեր էլփոստ կամ գաղտնաբառ",
     "errorExists": "Էլ.փոստն արդեն գրանցված է",
     "errorLength": "Գաղտնաբառը պետք է լինի առնվազն 5 նիշ",
-    "securityCheck": "Խնդրում ենք ավարտել անվտանգության ստուգումը։",
-    "securityCheckFailed": "Անվտանգության ստուգումը ձախողվեց: Կրկին փորձեք:",
-    "securityCheckExpired": "Անվտանգության ստուգման ժամկետը լրացել է: Կրկին փորձեք:"
+    "securityCheck": "Խնդրում ենք լրացնել անվտանգության ստուգումը:",
+    "securityCheckFailed": "Անվտանգության ստուգումը ձախողվեց: Խնդրում ենք կրկին փորձել:",
+    "securityCheckExpired": "Անվտանգության ստուգման ժամկետը լրացել է։ Խնդրում ենք կրկին փորձել:"
   },
   "Dashboard": {
     "title": "Վահանակ",
@@ -79,7 +79,9 @@
     "subscription": "Բաժանորդագրություն",
     "settings": "Կարգավորումներ",
     "viewReportsDesc": "Դիտեք ձեր համապատասխանության հաշվետվությունները",
-    "manageSubscriptionDesc": "Կառավարեք ձեր բաժանորդագրությունը"
+    "manageSubscriptionDesc": "Կառավարեք ձեր բաժանորդագրությունը",
+    "viewPricing": "Դիտել Գինը",
+    "youAreOnFreePlan": "Դուք ներկայումս անվճար պլանում եք:"
   },
   "Pricing": {
     "title": "Պարզ գնագոյացում",
@@ -1079,7 +1081,14 @@
     "gaccCat_nuts_label": "Ընկույզ / Չորացրած մրգեր (HS 08)",
     "gaccCat_other_label": "Այլ պարենային ապրանքներ",
     "gaccCat_classification_label": "Դասակարգում",
-    "backToHome": "Վերադարձ դեպի տուն"
+    "backToHome": "Վերադարձ դեպի տուն",
+    "cccProductNamePlaceholder": "օրինակ՝ Smart LED սեղանի լամպ",
+    "crossborderProductNamePlaceholder": "օրինակ՝ օրգանական մաչա փոշի",
+    "gaccProductNamePlaceholder": "օրինակ՝ Կաբերնե Սովինյոն կարմիր գինի",
+    "labelProductNamePlaceholder": "օրինակ՝ Պրեմիում Կանաչ թեյ 500գ",
+    "nmpaProductNamePlaceholder": "օրինակ՝ հիալուրոնաթթվի շիճուկ",
+    "noReportId": "Հաշվետվության ID-ն չի տրամադրվել",
+    "trademarkProductNamePlaceholder": "օրինակ՝ Մաշկի խնամքի պրեմիում գիծ"
   },
   "Report": {
     "loadingTitle": "Բեռնվում է ձեր զեկույցը",
@@ -1110,7 +1119,8 @@
     "registeredUser": "Գրանցված օգտվող",
     "periodEnds": "Ժամանակաշրջանն ավարտվում է",
     "youAreOnFreePlan": "Դուք ներկայումս անվճար պլանում եք:",
-    "noReportId": "Հաշվետվության ID չի նշվել"
+    "noReportId": "Հաշվետվության ID չի նշվել",
+    "backToHome": "Վերադարձ դեպի տուն"
   },
   "Cookie": {
     "message": "Այս կայքը օգտագործում է միայն վավերացման հիմնական թխուկներ: Հետևելու կամ գովազդային թխուկներ չեն օգտագործվում:",

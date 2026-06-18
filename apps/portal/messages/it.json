@@ -53,9 +53,9 @@
     "errorInvalid": "E-mail o password non valide",
     "errorExists": "E-mail già registrata",
     "errorLength": "La password deve contenere almeno 5 caratteri",
-    "securityCheck": "Si prega di completare la verifica di sicurezza.",
-    "securityCheckFailed": "Verifica di sicurezza fallita. Riprova.",
-    "securityCheckExpired": "La verifica di sicurezza è scaduta. Riprova."
+    "securityCheck": "Si prega di completare il controllo di sicurezza.",
+    "securityCheckFailed": "Il controllo di sicurezza non è riuscito. Per favore riprova.",
+    "securityCheckExpired": "Il controllo di sicurezza è scaduto. Per favore riprova."
   },
   "Dashboard": {
     "title": "Pannello di controllo",
@@ -80,7 +80,8 @@
     "settings": "Impostazioni",
     "viewReportsDesc": "Visualizza i tuoi rapporti di conformità",
     "manageSubscriptionDesc": "Gestisci il tuo abbonamento",
-    "youAreOnFreePlan": "Attualmente sei sul piano gratuito."
+    "youAreOnFreePlan": "Attualmente utilizzi il piano gratuito.",
+    "viewPricing": "Visualizza i prezzi"
   },
   "Pricing": {
     "title": "Prezzi semplici",
@@ -1080,7 +1081,14 @@
     "gaccCat_nuts_label": "Noci/Frutta Secca (HS 08)",
     "gaccCat_other_label": "Altri prodotti alimentari",
     "gaccCat_classification_label": "Classificazione",
-    "backToHome": "Ritorno a casa"
+    "backToHome": "Ritorno a casa",
+    "cccProductNamePlaceholder": "ad esempio, lampada da scrivania LED intelligente",
+    "crossborderProductNamePlaceholder": "ad esempio, polvere di matcha biologico",
+    "gaccProductNamePlaceholder": "ad esempio, vino rosso Cabernet Sauvignon",
+    "labelProductNamePlaceholder": "ad esempio, Tè Verde Premium 500 g",
+    "nmpaProductNamePlaceholder": "ad esempio, siero di acido ialuronico",
+    "noReportId": "Nessun ID rapporto fornito",
+    "trademarkProductNamePlaceholder": "ad esempio, Linea Premium per la cura della pelle"
   },
   "Report": {
     "loadingTitle": "Caricamento del rapporto",
@@ -1111,7 +1119,8 @@
     "registeredUser": "Utente registrato",
     "periodEnds": "Il periodo termina",
     "youAreOnFreePlan": "Attualmente utilizzi il piano gratuito.",
-    "noReportId": "Nessun ID rapporto fornito"
+    "noReportId": "Nessun ID rapporto fornito",
+    "backToHome": "Ritorno a casa"
   },
   "Cookie": {
     "message": "Questo sito utilizza solo cookie di autenticazione essenziali. Non vengono utilizzati cookie di tracciamento o pubblicitari.",

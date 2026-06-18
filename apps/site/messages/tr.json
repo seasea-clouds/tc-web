@@ -1336,9 +1336,10 @@
     "serviceGACC": "GACC Gıda Kaydı: Denizaşırı gıda üretim tesislerini 248 ve 249 sayılı Kararlar kapsamında Çin Gümrüğüne (GACC) kaydedin. Çin'e ihraç edilen tüm gıda ürünleri için zorunludur.",
     "serviceLabel": "Çin Etiket Uyumluluğu: ",
     "serviceNMPA": "NMPA Kozmetik Dosyalaması: ",
-    "title": "SinoTrade Uyumluluğu: Yapay Zeka Yardımı (EN)"
+    "title": "SinoTrade Uyumluluğu: Yapay Zeka Yardımı (EN)",
+    "servicesTitle": "Hizmetler"
   },
   "Navbar": {
-    "selfCheck": "Kendi Kendine Kontrol"
+    "selfCheck": "Otomatik Kontrol"
   }
 }

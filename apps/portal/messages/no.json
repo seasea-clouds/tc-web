@@ -53,9 +53,9 @@
     "errorInvalid": "Ugyldig e-postadresse eller passord",
     "errorExists": "E-post er allerede registrert",
     "errorLength": "Passordet må være på minst 5 tegn",
-    "securityCheck": "Vennligst fullfør sikkerhetssjekken.",
-    "securityCheckFailed": "Sikkerhetssjekken mislyktes. Vennligst prøv igjen.",
-    "securityCheckExpired": "Sikkerhetssjekken har utløpt. Vennligst prøv igjen."
+    "securityCheck": "Vennligst fullfør sikkerhetskontrollen.",
+    "securityCheckFailed": "Sikkerhetssjekk mislyktes. Vennligst prøv igjen.",
+    "securityCheckExpired": "Sikkerhetssjekken er utløpt. Vennligst prøv igjen."
   },
   "Dashboard": {
     "title": "Dashbord",
@@ -79,7 +79,9 @@
     "subscription": "Abonnement",
     "settings": "Innstillinger",
     "viewReportsDesc": "Se samsvarsrapportene dine",
-    "manageSubscriptionDesc": "Administrer abonnementet ditt"
+    "manageSubscriptionDesc": "Administrer abonnementet ditt",
+    "viewPricing": "Se priser",
+    "youAreOnFreePlan": "Du er for øyeblikket på gratisplanen."
   },
   "Pricing": {
     "title": "Enkel prissetting",
@@ -1079,7 +1081,14 @@
     "gaccCat_nuts_label": "Nøtter / tørket frukt (HS 08)",
     "gaccCat_other_label": "Andre matvarer",
     "gaccCat_classification_label": "Klassifisering",
-    "backToHome": "Tilbake til Hjemmet"
+    "backToHome": "Tilbake til Hjemmet",
+    "cccProductNamePlaceholder": "f.eks. Smart LED-bordlampe",
+    "crossborderProductNamePlaceholder": "f.eks. Organisk Matcha-pulver",
+    "gaccProductNamePlaceholder": "f.eks. Cabernet Sauvignon rødvin",
+    "labelProductNamePlaceholder": "f.eks. Premium grønn te 500g",
+    "nmpaProductNamePlaceholder": "f.eks. Hyaluronsyreserum",
+    "noReportId": "Ingen rapport-ID oppgitt",
+    "trademarkProductNamePlaceholder": "f.eks. Premium Skincare Line"
   },
   "Report": {
     "loadingTitle": "Laster inn rapporten din",
@@ -1110,7 +1119,8 @@
     "registeredUser": "Registrert bruker",
     "periodEnds": "Perioden slutter",
     "youAreOnFreePlan": "Du er for øyeblikket på gratisplanen.",
-    "noReportId": "Ingen rapport-ID oppgitt"
+    "noReportId": "Ingen rapport-ID oppgitt",
+    "backToHome": "Tilbake til Hjemmet"
   },
   "Cookie": {
     "message": "Dette nettstedet bruker kun viktige autentiseringsinformasjonskapsler. Ingen sporings- eller reklameinformasjonskapsler brukes.",
@@ -1461,6 +1471,6 @@
     "report": "Rapport"
   },
   "Breadcrumb": {
-    "pricing": "Prising"
+    "pricing": "Prissetting"
   }
 }

@@ -53,9 +53,9 @@
     "errorInvalid": "Neplatný e-mail alebo heslo",
     "errorExists": "E-mail je už zaregistrovaný",
     "errorLength": "Heslo musí mať aspoň 5 znakov",
-    "securityCheck": "Prosím, dokončite bezpečnostnú kontrolu.",
+    "securityCheck": "Dokončite bezpečnostnú kontrolu.",
     "securityCheckFailed": "Bezpečnostná kontrola zlyhala. Skúste to znova.",
-    "securityCheckExpired": "Bezpečnostná kontrola vypršala. Skúste to znova."
+    "securityCheckExpired": "Platnosť bezpečnostnej kontroly vypršala. Skúste to znova."
   },
   "Dashboard": {
     "title": "Dashboard",
@@ -79,7 +79,9 @@
     "subscription": "Predplatné",
     "settings": "Nastavenia",
     "viewReportsDesc": "Pozrite si prehľady súladu",
-    "manageSubscriptionDesc": "Spravujte svoje predplatné"
+    "manageSubscriptionDesc": "Spravujte svoje predplatné",
+    "viewPricing": "Zobraziť ceny",
+    "youAreOnFreePlan": "Momentálne máte bezplatný plán."
   },
   "Pricing": {
     "title": "Jednoduché stanovovanie cien",
@@ -1079,7 +1081,14 @@
     "gaccCat_nuts_label": "Orechy/sušené ovocie (HS 08)",
     "gaccCat_other_label": "Ostatné potravinárske výrobky",
     "gaccCat_classification_label": "Klasifikácia",
-    "backToHome": "Späť na Domov"
+    "backToHome": "Späť na Domov",
+    "cccProductNamePlaceholder": "napríklad Smart LED stolná lampa",
+    "crossborderProductNamePlaceholder": "napr. organický prášok Matcha",
+    "gaccProductNamePlaceholder": "napríklad červené víno Cabernet Sauvignon",
+    "labelProductNamePlaceholder": "napr. Premium Green Tea 500g",
+    "nmpaProductNamePlaceholder": "napr. sérum kyseliny hyalurónovej",
+    "noReportId": "Nebolo poskytnuté žiadne ID prehľadu",
+    "trademarkProductNamePlaceholder": "napr. Prémiový rad starostlivosti o pleť"
   },
   "Report": {
     "loadingTitle": "Načítava sa váš prehľad",
@@ -1110,7 +1119,8 @@
     "registeredUser": "Registrovaný užívateľ",
     "periodEnds": "Obdobie končí",
     "youAreOnFreePlan": "Momentálne máte bezplatný plán.",
-    "noReportId": "Nie je uvedený ID správy"
+    "noReportId": "Nie je uvedený ID správy",
+    "backToHome": "Späť na Domov"
   },
   "Cookie": {
     "message": "Táto stránka používa iba nevyhnutné overovacie súbory cookie. Nepoužívajú sa žiadne sledovacie ani reklamné súbory cookie.",
@@ -1461,6 +1471,6 @@
     "report": "Správa"
   },
   "Breadcrumb": {
-    "pricing": "Cenník"
+    "pricing": "Stanovenie cien"
   }
 }

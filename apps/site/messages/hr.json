@@ -1336,9 +1336,10 @@
     "serviceGACC": "GACC Registracija hrane: ",
     "serviceLabel": "Usklađenost s kineskim naljepnicama: ",
     "serviceNMPA": "NMPA prijava za kozmetiku: ",
-    "title": "Sukladnost SinoTrade: AI-Assistance (EN)"
+    "title": "Sukladnost SinoTrade: AI-Assistance (EN)",
+    "servicesTitle": "Usluge"
   },
   "Navbar": {
-    "selfCheck": "Samoprocjena"
+    "selfCheck": "Samoprovjera"
   }
 }

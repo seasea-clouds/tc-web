@@ -1412,10 +1412,11 @@
     "serviceGACC": "การลงทะเบียนอาหาร GACC: ",
     "serviceLabel": "การปฏิบัติตามข้อกำหนดฉลากของจีน: ",
     "serviceNMPA": "การยื่นเครื่องสำอาง NMPA: ",
-    "title": "การปฏิบัติตามข้อกำหนดของ SinoTrade: ความช่วยเหลือ AI (EN)"
+    "title": "การปฏิบัติตามข้อกำหนดของ SinoTrade: ความช่วยเหลือ AI (EN)",
+    "servicesTitle": "บริการ"
   },
   "Navbar": {
-    "selfCheck": "การตรวจสอบตนเอง",
+    "selfCheck": "ตรวจสอบตัวเอง",
     "home": "หน้าแรก",
     "services": "บริการ",
     "about": "เกี่ยวกับเรา",

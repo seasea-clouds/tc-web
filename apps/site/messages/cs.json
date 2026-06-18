@@ -1336,9 +1336,10 @@
     "serviceGACC": "Registrace potravin GACC: ",
     "serviceLabel": "Shoda s čínskými štítky – design a kontrola štítků vyhovující GB 7718 a GB 28050. Důvod číslo jedna pro celní odmítnutí v čínských přístavech.",
     "serviceNMPA": "NMPA Cosmetics Filing: ",
-    "title": "Soulad se SinoTrade: AI-Assistance (EN)"
+    "title": "Soulad se SinoTrade: AI-Assistance (EN)",
+    "servicesTitle": "Služby"
   },
   "Navbar": {
-    "selfCheck": "Vlastní kontrola"
+    "selfCheck": "Samokontrola"
   }
 }

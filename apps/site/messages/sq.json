@@ -1336,6 +1336,10 @@
     "serviceGACC": "Regjistrimi i ushqimit GACC - Regjistroni objektet e prodhimit të ushqimit jashtë shtetit me Doganën e Kinës (GACC) sipas Dekreteve 248 dhe 249. E detyrueshme për të gjitha produktet ushqimore të eksportuara në Kinë.",
     "serviceLabel": "Përputhshmëria e etiketës kineze: ",
     "serviceNMPA": "Regjistrimi i kozmetikës NMPA - Regjistrimi ose njoftimi i kozmetikës me Administratën Kombëtare të Produkteve Mjekësore të Kinës. Kërkohet për të gjitha produktet kozmetike të importuara.",
-    "title": "Përputhshmëria e SinoTrade - Asistenca AI (EN)"
+    "title": "Përputhshmëria e SinoTrade - Asistenca AI (EN)",
+    "servicesTitle": "Shërbimet"
+  },
+  "Navbar": {
+    "selfCheck": "Vetëkontroll"
   }
 }

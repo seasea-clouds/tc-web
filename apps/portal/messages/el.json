@@ -53,9 +53,9 @@
     "errorInvalid": "Μη έγκυρο email ή κωδικός πρόσβασης",
     "errorExists": "Το email έχει ήδη εγγραφεί",
     "errorLength": "Ο κωδικός πρόσβασης πρέπει να αποτελείται από τουλάχιστον 5 χαρακτήρες",
-    "securityCheck": "Παρακαλώ ολοκληρώστε τον έλεγχο ασφαλείας.",
+    "securityCheck": "Ολοκληρώστε τον έλεγχο ασφαλείας.",
     "securityCheckFailed": "Ο έλεγχος ασφαλείας απέτυχε. Δοκιμάστε ξανά.",
-    "securityCheckExpired": "Ο έλεγχος ασφαλείας έχει λήξει. Δοκιμάστε ξανά."
+    "securityCheckExpired": "Ο έλεγχος ασφαλείας έληξε. Δοκιμάστε ξανά."
   },
   "Dashboard": {
     "title": "Ταμπλό",
@@ -79,7 +79,9 @@
     "subscription": "Συνδρομή",
     "settings": "Ρυθμίσεις",
     "viewReportsDesc": "Δείτε τις αναφορές συμμόρφωσης",
-    "manageSubscriptionDesc": "Διαχειριστείτε τη συνδρομή σας"
+    "manageSubscriptionDesc": "Διαχειριστείτε τη συνδρομή σας",
+    "viewPricing": "Προβολή Τιμολόγησης",
+    "youAreOnFreePlan": "Αυτήν τη στιγμή βρίσκεστε στο δωρεάν πρόγραμμα."
   },
   "Pricing": {
     "title": "Απλή τιμολόγηση",
@@ -1079,7 +1081,14 @@
     "gaccCat_nuts_label": "Ξηροί καρποί / Αποξηραμένα φρούτα (HS 08)",
     "gaccCat_other_label": "Άλλα προϊόντα διατροφής",
     "gaccCat_classification_label": "Ταξινόμηση",
-    "backToHome": "Επιστροφή στο σπίτι"
+    "backToHome": "Επιστροφή στο σπίτι",
+    "cccProductNamePlaceholder": "π.χ. Smart LED επιτραπέζιο φωτιστικό",
+    "crossborderProductNamePlaceholder": "π.χ., Organic Matcha Powder",
+    "gaccProductNamePlaceholder": "π.χ. κόκκινο κρασί Cabernet Sauvignon",
+    "labelProductNamePlaceholder": "π.χ. Πράσινο Τσάι Premium 500 γρ",
+    "nmpaProductNamePlaceholder": "π.χ. ορός υαλουρονικού οξέος",
+    "noReportId": "Δεν παρέχεται αναγνωριστικό αναφοράς",
+    "trademarkProductNamePlaceholder": "π.χ. Premium Skincare Line"
   },
   "Report": {
     "loadingTitle": "Φόρτωση της αναφοράς σας",
@@ -1110,7 +1119,8 @@
     "registeredUser": "Εγγεγραμμένος χρήστης",
     "periodEnds": "Η περίοδος τελειώνει",
     "youAreOnFreePlan": "Αυτήν τη στιγμή βρίσκεστε στο δωρεάν πρόγραμμα.",
-    "noReportId": "Δεν έχει δοθεί ID αναφοράς"
+    "noReportId": "Δεν έχει δοθεί ID αναφοράς",
+    "backToHome": "Επιστροφή στο σπίτι"
   },
   "Cookie": {
     "message": "Αυτός ο ιστότοπος χρησιμοποιεί μόνο απαραίτητα cookies ελέγχου ταυτότητας. Δεν χρησιμοποιούνται cookies παρακολούθησης ή διαφήμισης.",

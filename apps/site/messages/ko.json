@@ -1336,9 +1336,10 @@
     "serviceGACC": "GACC 식품 등록 - 법령 248 및 249에 따라 중국 세관(GACC)에 해외 식품 제조 시설을 등록합니다. 중국으로 수출되는 모든 식품에 대해 필수입니다.",
     "serviceLabel": "중국 라벨 준수 - GB 7718 및 GB 28050 준수 라벨 디자인 및 검토. 중국항만 세관거부 이유 1위.",
     "serviceNMPA": "NMPA 화장품 등록 - 중국 국가 의약품 관리국에 화장품 등록 또는 통지. 모든 수입 화장품에 필수입니다.",
-    "title": "SinoTrade 규정 준수: AI 지원(EN)"
+    "title": "SinoTrade 규정 준수: AI 지원(EN)",
+    "servicesTitle": "서비스"
   },
   "Navbar": {
-    "selfCheck": "셀프 체크"
+    "selfCheck": "자가진단"
   }
 }

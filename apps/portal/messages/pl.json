@@ -53,9 +53,9 @@
     "errorInvalid": "Nieprawidłowy adres e-mail lub hasło",
     "errorExists": "E-mail już zarejestrowany",
     "errorLength": "Hasło musi mieć co najmniej 5 znaków",
-    "securityCheck": "Ukończ sprawdzanie bezpieczeństwa.",
-    "securityCheckFailed": "Sprawdzenie bezpieczeństwa nie powiodło się. Spróbuj ponownie.",
-    "securityCheckExpired": "Sprawdzenie bezpieczeństwa wygasło. Spróbuj ponownie."
+    "securityCheck": "Proszę zakończyć kontrolę bezpieczeństwa.",
+    "securityCheckFailed": "Kontrola bezpieczeństwa nie powiodła się. Spróbuj ponownie.",
+    "securityCheckExpired": "Kontrola bezpieczeństwa wygasła. Spróbuj ponownie."
   },
   "Dashboard": {
     "title": "Panel",
@@ -80,7 +80,8 @@
     "settings": "Ustawienia",
     "viewReportsDesc": "Przeglądaj raporty dotyczące zgodności",
     "manageSubscriptionDesc": "Zarządzaj swoją subskrypcją",
-    "youAreOnFreePlan": "Obecnie korzystasz z planu darmowego."
+    "youAreOnFreePlan": "Obecnie korzystasz z planu bezpłatnego.",
+    "viewPricing": "Zobacz Cennik"
   },
   "Pricing": {
     "title": "Prosty cennik",
@@ -1080,7 +1081,14 @@
     "gaccCat_nuts_label": "Orzechy / Suszone Owoce (HS 08)",
     "gaccCat_other_label": "Inne produkty spożywcze",
     "gaccCat_classification_label": "Klasyfikacja",
-    "backToHome": "Powrót do domu"
+    "backToHome": "Powrót do domu",
+    "cccProductNamePlaceholder": "np. inteligentna lampa biurkowa LED",
+    "crossborderProductNamePlaceholder": "np. organiczny proszek Matcha",
+    "gaccProductNamePlaceholder": "np. czerwone wino Cabernet Sauvignon",
+    "labelProductNamePlaceholder": "np. Premium Zielona Herbata 500g",
+    "nmpaProductNamePlaceholder": "np. serum z kwasem hialuronowym",
+    "noReportId": "Nie podano identyfikatora raportu",
+    "trademarkProductNamePlaceholder": "np. linia Premium Skincare"
   },
   "Report": {
     "loadingTitle": "Ładowanie raportu",
@@ -1111,7 +1119,8 @@
     "registeredUser": "Zarejestrowany użytkownik",
     "periodEnds": "Okres się kończy",
     "youAreOnFreePlan": "Obecnie korzystasz z planu bezpłatnego.",
-    "noReportId": "Nie podano ID raportu"
+    "noReportId": "Nie podano ID raportu",
+    "backToHome": "Powrót do domu"
   },
   "Cookie": {
     "message": "Ta witryna wykorzystuje wyłącznie niezbędne pliki cookie służące do uwierzytelniania. Nie są używane żadne śledzące ani reklamowe pliki cookie.",
@@ -1462,6 +1471,6 @@
     "report": "Raport"
   },
   "Breadcrumb": {
-    "pricing": "Cennik"
+    "pricing": "Wycena"
   }
 }

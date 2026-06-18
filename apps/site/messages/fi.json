@@ -1336,9 +1336,10 @@
     "serviceGACC": "GACC-elintarvikkeiden rekisteröinti: ",
     "serviceLabel": "Kiinan etikettien yhteensopivuus: ",
     "serviceNMPA": "NMPA Cosmetics Filing: ",
-    "title": "SinoTrade Compliance: AI-Assistance (EN)"
+    "title": "SinoTrade Compliance: AI-Assistance (EN)",
+    "servicesTitle": "Palvelut"
   },
   "Navbar": {
-    "selfCheck": "Itsearviointi"
+    "selfCheck": "Itsetarkistus"
   }
 }

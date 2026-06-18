@@ -55,7 +55,7 @@
     "errorLength": "Kata sandi minimal harus 5 karakter",
     "securityCheck": "Silakan selesaikan pemeriksaan keamanan.",
     "securityCheckFailed": "Pemeriksaan keamanan gagal. Silakan coba lagi.",
-    "securityCheckExpired": "Pemeriksaan keamanan telah kedaluwarsa. Silakan coba lagi."
+    "securityCheckExpired": "Pemeriksaan keamanan sudah habis masa berlakunya. Silakan coba lagi."
   },
   "Dashboard": {
     "title": "Dasbor",
@@ -79,7 +79,9 @@
     "subscription": "Berlangganan",
     "settings": "Pengaturan",
     "viewReportsDesc": "Lihat laporan kepatuhan Anda",
-    "manageSubscriptionDesc": "Kelola langganan Anda"
+    "manageSubscriptionDesc": "Kelola langganan Anda",
+    "viewPricing": "Lihat Harga",
+    "youAreOnFreePlan": "Anda saat ini menggunakan paket Gratis."
   },
   "Pricing": {
     "title": "Penetapan Harga Sederhana",
@@ -1079,7 +1081,14 @@
     "gaccCat_nuts_label": "Kacang-kacangan / Buah-buahan Kering (HS 08)",
     "gaccCat_other_label": "Produk Makanan Lainnya",
     "gaccCat_classification_label": "Klasifikasi",
-    "backToHome": "Kembali ke Rumah"
+    "backToHome": "Kembali ke Rumah",
+    "cccProductNamePlaceholder": "misalnya, Lampu Meja LED Cerdas",
+    "crossborderProductNamePlaceholder": "misalnya, Bubuk Matcha Organik",
+    "gaccProductNamePlaceholder": "misalnya, Anggur Merah Cabernet Sauvignon",
+    "labelProductNamePlaceholder": "misalnya, Teh Hijau Premium 500g",
+    "nmpaProductNamePlaceholder": "misalnya, Serum Asam Hyaluronic",
+    "noReportId": "Tidak ada ID laporan yang diberikan",
+    "trademarkProductNamePlaceholder": "misalnya, Lini Perawatan Kulit Premium"
   },
   "Report": {
     "loadingTitle": "Memuat Laporan Anda",
@@ -1110,7 +1119,8 @@
     "registeredUser": "Pengguna terdaftar",
     "periodEnds": "Periode berakhir",
     "youAreOnFreePlan": "Anda saat ini menggunakan paket Gratis.",
-    "noReportId": "Tidak ada ID laporan yangprovided"
+    "noReportId": "Tidak ada ID laporan yangprovided",
+    "backToHome": "Kembali ke Rumah"
   },
   "Cookie": {
     "message": "Situs ini hanya menggunakan cookie otentikasi penting. Tidak ada cookie pelacakan atau iklan yang digunakan.",

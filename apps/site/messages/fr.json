@@ -1336,9 +1336,10 @@
     "serviceGACC": "Enregistrement des aliments GACC: ",
     "serviceLabel": "Conformité des étiquettes chinoises: ",
     "serviceNMPA": "Dépôt de produits cosmétiques NMPA: ",
-    "title": "Conformité SinoTrade: AI-Assistance (EN)"
+    "title": "Conformité SinoTrade: AI-Assistance (EN)",
+    "servicesTitle": "Services"
   },
   "Navbar": {
-    "selfCheck": "Auto-évaluation"
+    "selfCheck": "Auto-vérification"
   }
 }

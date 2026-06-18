@@ -54,8 +54,8 @@
     "errorExists": "ای میل پہلے سے رجسٹرڈ ہے۔",
     "errorLength": "پاس ورڈ کم از کم 5 حروف کا ہونا چاہیے۔",
     "securityCheck": "براہ کرم سیکیورٹی چیک مکمل کریں۔",
-    "securityCheckFailed": "سیکیورٹی چیک ناکام ہو گیا۔ براہ کرم دوبارہ کوشش کریں۔",
-    "securityCheckExpired": "سیکیورٹی چیک کی میعاد ختم ہو گئی۔ براہ کرم دوبارہ کوشش کریں۔"
+    "securityCheckFailed": "سیکیورٹی چیک ناکام ہوگیا۔ براہ کرم دوبارہ کوشش کریں۔",
+    "securityCheckExpired": "سیکیورٹی چیک کی میعاد ختم ہوگئی۔ براہ کرم دوبارہ کوشش کریں۔"
   },
   "Dashboard": {
     "title": "ڈیش بورڈ",
@@ -79,7 +79,9 @@
     "subscription": "رکنیت",
     "settings": "ترتیبات",
     "viewReportsDesc": "اپنی تعمیل کی رپورٹیں دیکھیں",
-    "manageSubscriptionDesc": "اپنی رکنیت کا نظم کریں۔"
+    "manageSubscriptionDesc": "اپنی رکنیت کا نظم کریں۔",
+    "viewPricing": "قیمتوں کا تعین دیکھیں",
+    "youAreOnFreePlan": "آپ فی الحال مفت پلان پر ہیں۔"
   },
   "Pricing": {
     "title": "سادہ قیمتوں کا تعین",
@@ -1079,7 +1081,14 @@
     "gaccCat_nuts_label": "گری دار میوے / خشک میوہ جات (HS 08)",
     "gaccCat_other_label": "دیگر کھانے کی مصنوعات",
     "gaccCat_classification_label": "درجہ بندی",
-    "backToHome": "واپس گھر پر"
+    "backToHome": "واپس گھر پر",
+    "cccProductNamePlaceholder": "مثال کے طور پر، اسمارٹ ایل ای ڈی ڈیسک لیمپ",
+    "crossborderProductNamePlaceholder": "مثال کے طور پر، آرگینک میچا پاؤڈر",
+    "gaccProductNamePlaceholder": "مثال کے طور پر، Cabernet Sauvignon Red Wine",
+    "labelProductNamePlaceholder": "مثال کے طور پر، پریمیم گرین ٹی 500 گرام",
+    "nmpaProductNamePlaceholder": "مثال کے طور پر، Hyaluronic ایسڈ سیرم",
+    "noReportId": "کوئی رپورٹ ID فراہم نہیں کی گئی۔",
+    "trademarkProductNamePlaceholder": "مثال کے طور پر، پریمیم سکن کیئر لائن"
   },
   "Report": {
     "loadingTitle": "آپ کی رپورٹ لوڈ ہو رہی ہے۔",
@@ -1110,7 +1119,8 @@
     "registeredUser": "رجسٹرڈ صارف",
     "periodEnds": "مدت ختم ہوتی ہے۔",
     "youAreOnFreePlan": "آپ فی الحال مفت پلان پر ہیں۔",
-    "noReportId": "کوئی رپورٹ ID فراہم نہیں کی گئی"
+    "noReportId": "کوئی رپورٹ ID فراہم نہیں کی گئی",
+    "backToHome": "واپس گھر پر"
   },
   "Cookie": {
     "message": "یہ سائٹ صرف ضروری تصدیقی کوکیز استعمال کرتی ہے۔ کوئی ٹریکنگ یا اشتہاری کوکیز استعمال نہیں کی جاتی ہیں۔",
@@ -1461,6 +1471,6 @@
     "report": "رپورٹ"
   },
   "Breadcrumb": {
-    "pricing": "قیمت"
+    "pricing": "قیمتوں کا تعین"
   }
 }

@@ -53,9 +53,9 @@
     "errorInvalid": "Ongeldig e-mailadres of wachtwoord",
     "errorExists": "E-mailadres al geregistreerd",
     "errorLength": "Wachtwoord moet minimaal 5 tekens lang zijn",
-    "securityCheck": "Voltooi de beveiligingscontrole.",
+    "securityCheck": "Voltooi de veiligheidscontrole.",
     "securityCheckFailed": "Beveiligingscontrole mislukt. Probeer het opnieuw.",
-    "securityCheckExpired": "Beveiligingscontrole is verlopen. Probeer het opnieuw."
+    "securityCheckExpired": "Beveiligingscontrole verlopen. Probeer het opnieuw."
   },
   "Dashboard": {
     "title": "Dashboard",
@@ -80,7 +80,8 @@
     "settings": "Instellingen",
     "viewReportsDesc": "Bekijk uw nalevingsrapporten",
     "manageSubscriptionDesc": "Beheer uw abonnement",
-    "youAreOnFreePlan": "Je gebruikt momenteel het gratis plan."
+    "youAreOnFreePlan": "Je hebt momenteel het gratis abonnement.",
+    "viewPricing": "Bekijk prijzen"
   },
   "Pricing": {
     "title": "Eenvoudige prijzen",
@@ -1080,7 +1081,14 @@
     "gaccCat_nuts_label": "Noten / Gedroogde Vruchten (HS 08)",
     "gaccCat_other_label": "Andere voedingsproducten",
     "gaccCat_classification_label": "Classificatie",
-    "backToHome": "Terug naar Thuis"
+    "backToHome": "Terug naar Thuis",
+    "cccProductNamePlaceholder": "bijvoorbeeld een slimme LED-bureaulamp",
+    "crossborderProductNamePlaceholder": "bijvoorbeeld biologisch matchapoeder",
+    "gaccProductNamePlaceholder": "bijvoorbeeld Cabernet Sauvignon rode wijn",
+    "labelProductNamePlaceholder": "bijvoorbeeld Premium Groene Thee 500g",
+    "nmpaProductNamePlaceholder": "bijvoorbeeld hyaluronzuurserum",
+    "noReportId": "Er is geen rapport-ID opgegeven",
+    "trademarkProductNamePlaceholder": "bijvoorbeeld Premium Huidverzorgingslijn"
   },
   "Report": {
     "loadingTitle": "Uw rapport laden",
@@ -1111,7 +1119,8 @@
     "registeredUser": "Geregistreerde gebruiker",
     "periodEnds": "Periode eindigt",
     "youAreOnFreePlan": "Je hebt momenteel het gratis abonnement.",
-    "noReportId": "Geen rapport-ID opgegeven"
+    "noReportId": "Geen rapport-ID opgegeven",
+    "backToHome": "Terug naar Thuis"
   },
   "Cookie": {
     "message": "Deze site gebruikt alleen essentiële authenticatiecookies. Er worden geen tracking- of advertentiecookies gebruikt.",

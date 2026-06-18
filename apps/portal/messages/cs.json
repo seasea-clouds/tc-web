@@ -53,9 +53,9 @@
     "errorInvalid": "Neplatný e-mail nebo heslo",
     "errorExists": "E-mail je již zaregistrován",
     "errorLength": "Heslo musí mít alespoň 5 znaků",
-    "securityCheck": "Prosím, dokončete bezpečnostní kontrolu.",
-    "securityCheckFailed": "Bezpečnostní kontrola selhala. Zkuste to znovu.",
-    "securityCheckExpired": "Bezpečnostní kontrola vypršela. Zkuste to znovu."
+    "securityCheck": "Dokončete prosím bezpečnostní kontrolu.",
+    "securityCheckFailed": "Bezpečnostní kontrola se nezdařila. Zkuste to prosím znovu.",
+    "securityCheckExpired": "Platnost bezpečnostní kontroly vypršela. Zkuste to prosím znovu."
   },
   "Dashboard": {
     "title": "Dashboard",
@@ -79,7 +79,9 @@
     "subscription": "Předplatné",
     "settings": "Nastavení",
     "viewReportsDesc": "Prohlédněte si své zprávy o dodržování předpisů",
-    "manageSubscriptionDesc": "Spravujte své předplatné"
+    "manageSubscriptionDesc": "Spravujte své předplatné",
+    "viewPricing": "Zobrazit ceny",
+    "youAreOnFreePlan": "Momentálně máte bezplatný tarif."
   },
   "Pricing": {
     "title": "Jednoduché stanovení ceny",
@@ -1079,7 +1081,14 @@
     "gaccCat_nuts_label": "Ořechy / sušené ovoce (HS 08)",
     "gaccCat_other_label": "Ostatní potravinářské výrobky",
     "gaccCat_classification_label": "Klasifikace",
-    "backToHome": "Zpět na domovskou stránku"
+    "backToHome": "Zpět na domovskou stránku",
+    "cccProductNamePlaceholder": "např. Smart LED stolní lampa",
+    "crossborderProductNamePlaceholder": "např. organický prášek Matcha",
+    "gaccProductNamePlaceholder": "např. červené víno Cabernet Sauvignon",
+    "labelProductNamePlaceholder": "např. Premium Green Tea 500g",
+    "nmpaProductNamePlaceholder": "např. sérum kyseliny hyaluronové",
+    "noReportId": "Nebylo poskytnuto žádné ID přehledu",
+    "trademarkProductNamePlaceholder": "např. Prémiová řada péče o pleť"
   },
   "Report": {
     "loadingTitle": "Načítání vaší zprávy",
@@ -1110,7 +1119,8 @@
     "registeredUser": "Registrovaný uživatel",
     "periodEnds": "Období končí",
     "youAreOnFreePlan": "Momentálně máte bezplatný tarif.",
-    "noReportId": "Nebylo poskytnuto ID zprávy"
+    "noReportId": "Nebylo poskytnuto ID zprávy",
+    "backToHome": "Zpět na domovskou stránku"
   },
   "Cookie": {
     "message": "Tento web používá pouze nezbytné ověřovací soubory cookie. Nejsou používány žádné sledovací ani reklamní soubory cookie.",

@@ -53,9 +53,9 @@
     "errorInvalid": "잘못된 이메일 또는 비밀번호",
     "errorExists": "이미 등록된 이메일",
     "errorLength": "비밀번호는 5자 이상이어야 합니다.",
-    "securityCheck": "보안 검사를 완료하십시오.",
-    "securityCheckFailed": "보안 검사에 실패했습니다. 다시 시도해 주세요.",
-    "securityCheckExpired": "보안 검사 만료되었습니다. 다시 시도해 주세요."
+    "securityCheck": "보안 검색을 완료해주세요.",
+    "securityCheckFailed": "Security check failed. 다시 시도해 주세요.",
+    "securityCheckExpired": "보안 검사가 만료되었습니다. 다시 시도해 주세요."
   },
   "Dashboard": {
     "title": "계기반",
@@ -80,7 +80,8 @@
     "settings": "설정",
     "viewReportsDesc": "규정 준수 보고서 보기",
     "manageSubscriptionDesc": "구독 관리",
-    "youAreOnFreePlan": "현재 무료 플랜을 사용하고 있습니다."
+    "youAreOnFreePlan": "현재 무료 요금제를 사용 중입니다.",
+    "viewPricing": "가격 보기"
   },
   "Pricing": {
     "title": "단순 가격",
@@ -1080,7 +1081,14 @@
     "gaccCat_nuts_label": "견과류 / 말린 과일 (HS 08)",
     "gaccCat_other_label": "기타 식품",
     "gaccCat_classification_label": "분류",
-    "backToHome": "홈으로 돌아가기"
+    "backToHome": "홈으로 돌아가기",
+    "cccProductNamePlaceholder": "예: 스마트 LED 책상 램프",
+    "crossborderProductNamePlaceholder": "예: 유기농 말차 분말",
+    "gaccProductNamePlaceholder": "예: 카베르네 소비뇽 레드 와인",
+    "labelProductNamePlaceholder": "예: 프리미엄 녹차 500g",
+    "nmpaProductNamePlaceholder": "예: 히알루론산 세럼",
+    "noReportId": "제공된 보고서 ID가 없습니다.",
+    "trademarkProductNamePlaceholder": "예: 프리미엄 스킨케어 라인"
   },
   "Report": {
     "loadingTitle": "보고서 로드 중",
@@ -1111,7 +1119,8 @@
     "registeredUser": "등록된 사용자",
     "periodEnds": "기간 종료",
     "youAreOnFreePlan": "현재 무료 요금제를 사용 중입니다.",
-    "noReportId": "보고서 ID가 제공되지 않았습니다"
+    "noReportId": "보고서 ID가 제공되지 않았습니다",
+    "backToHome": "홈으로 돌아가기"
   },
   "Cookie": {
     "message": "이 사이트는 필수 인증 쿠키만을 사용합니다. 추적 또는 광고 쿠키는 사용되지 않습니다.",

@@ -1336,9 +1336,10 @@
     "serviceGACC": "ثبت مواد غذایی GACC: ",
     "serviceLabel": "مطابقت با برچسب چینی - طراحی و بررسی برچسب مطابق با GB 7718 و GB 28050. دلیل شماره یک رد گمرک در بنادر چین.",
     "serviceNMPA": "بایگانی لوازم آرایشی و بهداشتی NMPA: ",
-    "title": "مطابقت SinoTrade - AI-Assistance (EN)"
+    "title": "مطابقت SinoTrade - AI-Assistance (EN)",
+    "servicesTitle": "خدمات"
   },
   "Navbar": {
-    "selfCheck": "خودارزیابی"
+    "selfCheck": "خود چک"
   }
 }

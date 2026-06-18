@@ -52,7 +52,10 @@
     "errorRequired": "Kërkohet email dhe fjalëkalim",
     "errorInvalid": "Email ose fjalëkalim i pavlefshëm",
     "errorExists": "Email tashmë është regjistruar",
-    "errorLength": "Fjalëkalimi duhet të jetë së paku 5 karaktere"
+    "errorLength": "Fjalëkalimi duhet të jetë së paku 5 karaktere",
+    "securityCheck": "Ju lutemi plotësoni kontrollin e sigurisë.",
+    "securityCheckExpired": "Kontrolli i sigurisë ka skaduar. Ju lutemi provoni përsëri.",
+    "securityCheckFailed": "Kontrolli i sigurisë dështoi. Ju lutemi provoni përsëri."
   },
   "Dashboard": {
     "title": "Paneli",
@@ -76,7 +79,9 @@
     "subscription": "Abonimi",
     "settings": "Cilësimet",
     "viewReportsDesc": "Shikoni raportet tuaja të pajtueshmërisë",
-    "manageSubscriptionDesc": "Menaxhoni abonimin tuaj"
+    "manageSubscriptionDesc": "Menaxhoni abonimin tuaj",
+    "viewPricing": "Shiko çmimet",
+    "youAreOnFreePlan": "Aktualisht jeni në planin Falas."
   },
   "Pricing": {
     "title": "Çmimi i thjeshtë",
@@ -1076,7 +1081,14 @@
     "gaccCat_nuts_label": "Arra / Fruta të thata (HS 08)",
     "gaccCat_other_label": "Produkte të tjera ushqimore",
     "gaccCat_classification_label": "Renditja",
-    "backToHome": "Kthehu në shtëpi"
+    "backToHome": "Kthehu në shtëpi",
+    "cccProductNamePlaceholder": "p.sh., Llambë tavoline inteligjente LED",
+    "crossborderProductNamePlaceholder": "p.sh., Pluhuri Organik Matcha",
+    "gaccProductNamePlaceholder": "p.sh., verë e kuqe Cabernet Sauvignon",
+    "labelProductNamePlaceholder": "p.sh., çaj jeshil Premium 500 g",
+    "nmpaProductNamePlaceholder": "p.sh., serumi i acidit hialuronik",
+    "noReportId": "Nuk është dhënë ID e raportit",
+    "trademarkProductNamePlaceholder": "p.sh., Premium Skin Care Line"
   },
   "Report": {
     "loadingTitle": "Duke ngarkuar raportin tuaj",
@@ -1107,7 +1119,8 @@
     "registeredUser": "Përdorues i regjistruar",
     "periodEnds": "Periudha përfundon",
     "youAreOnFreePlan": "Aktualisht jeni në planin Falas.",
-    "noReportId": "Nuk është dhënë ID e raportit"
+    "noReportId": "Nuk është dhënë ID e raportit",
+    "backToHome": "Kthehu në shtëpi"
   },
   "Cookie": {
     "message": "Ky sajt përdor vetëm cookie thelbësore të vërtetimit. Nuk përdoren skedarë gjurmimi ose reklamimi.",
@@ -1454,6 +1467,10 @@
     "billing": "Faturimi",
     "login": "Hyrja",
     "register": "Regjistrohu",
-    "report": "Raporti"
+    "report": "Raporti",
+    "selfCheck": "Vetë-verifikim"
+  },
+  "Breadcrumb": {
+    "pricing": "Çmimet"
   }
 }

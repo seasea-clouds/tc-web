@@ -52,7 +52,10 @@
     "errorRequired": "மின்னஞ்சல் மற்றும் கடவுச்சொல் தேவை",
     "errorInvalid": "தவறான மின்னஞ்சல் அல்லது கடவுச்சொல்",
     "errorExists": "மின்னஞ்சல் ஏற்கனவே பதிவு செய்யப்பட்டுள்ளது",
-    "errorLength": "கடவுச்சொல் குறைந்தது 5 எழுத்துகளாக இருக்க வேண்டும்"
+    "errorLength": "கடவுச்சொல் குறைந்தது 5 எழுத்துகளாக இருக்க வேண்டும்",
+    "securityCheck": "பாதுகாப்பு சோதனையை நிறைவு செய்யவும்.",
+    "securityCheckExpired": "பாதுகாப்பு சோதனை காலாவதியானது. மீண்டும் முயற்சிக்கவும்.",
+    "securityCheckFailed": "பாதுகாப்பு சோதனை தோல்வியடைந்தது. மீண்டும் முயற்சிக்கவும்."
   },
   "Dashboard": {
     "title": "டாஷ்போர்டு",
@@ -76,7 +79,9 @@
     "subscription": "சந்தா",
     "settings": "அமைப்புகள்",
     "viewReportsDesc": "உங்கள் இணக்க அறிக்கைகளைப் பார்க்கவும்",
-    "manageSubscriptionDesc": "உங்கள் சந்தாவை நிர்வகிக்கவும்"
+    "manageSubscriptionDesc": "உங்கள் சந்தாவை நிர்வகிக்கவும்",
+    "viewPricing": "விலை நிர்ணயம் பார்க்கவும்",
+    "youAreOnFreePlan": "நீங்கள் தற்போது இலவச திட்டத்தில் உள்ளீர்கள்."
   },
   "Pricing": {
     "title": "எளிய விலை",
@@ -1076,7 +1081,14 @@
     "gaccCat_nuts_label": "கொட்டைகள் / உலர்ந்த பழங்கள் (HS 08)",
     "gaccCat_other_label": "பிற உணவுப் பொருட்கள்",
     "gaccCat_classification_label": "வகைப்படுத்தல்",
-    "backToHome": "முகப்புக்குத் திரும்பு"
+    "backToHome": "முகப்புக்குத் திரும்பு",
+    "cccProductNamePlaceholder": "எ.கா., ஸ்மார்ட் LED மேசை விளக்கு",
+    "crossborderProductNamePlaceholder": "எ.கா., ஆர்கானிக் மேட்சா பவுடர்",
+    "gaccProductNamePlaceholder": "எ.கா., Cabernet Sauvignon Red Wine",
+    "labelProductNamePlaceholder": "எ.கா., பிரீமியம் கிரீன் டீ 500 கிராம்",
+    "nmpaProductNamePlaceholder": "எ.கா., ஹைலூரோனிக் அமில சீரம்",
+    "noReportId": "அறிக்கை ஐடி வழங்கப்படவில்லை",
+    "trademarkProductNamePlaceholder": "எ.கா., பிரீமியம் ஸ்கின்கேர் லைன்"
   },
   "Report": {
     "loadingTitle": "உங்கள் அறிக்கையை ஏற்றுகிறது",
@@ -1107,7 +1119,8 @@
     "registeredUser": "பதிவுசெய்யப்பட்ட பயனர்",
     "periodEnds": "காலம் முடிவடைகிறது",
     "youAreOnFreePlan": "நீங்கள் தற்போது இலவச திட்டத்தில் உள்ளீர்கள்.",
-    "noReportId": "எந்த அறிக்கை ID-வும் வழங்கப்படவில்லை"
+    "noReportId": "எந்த அறிக்கை ID-வும் வழங்கப்படவில்லை",
+    "backToHome": "முகப்புக்குத் திரும்பு"
   },
   "Cookie": {
     "message": "இந்தத் தளம் அத்தியாவசிய அங்கீகார குக்கீகளை மட்டுமே பயன்படுத்துகிறது. கண்காணிப்பு அல்லது விளம்பர குக்கீகள் பயன்படுத்தப்படவில்லை.",
@@ -1454,6 +1467,10 @@
     "billing": "பரிசோதனை",
     "login": "உள்நுழைவு",
     "register": "பதிவு",
-    "report": "அறிக்கை"
+    "report": "அறிக்கை",
+    "selfCheck": "தன்னிறைவு சோதனை"
+  },
+  "Breadcrumb": {
+    "pricing": "விலை நிர்ணயம்"
   }
 }

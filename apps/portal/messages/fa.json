@@ -53,9 +53,9 @@
     "errorInvalid": "ایمیل یا رمز عبور نامعتبر است",
     "errorExists": "ایمیل قبلا ثبت شده است",
     "errorLength": "رمز عبور باید حداقل 5 کاراکتر باشد",
-    "securityCheck": "لطفاً بررسی امنیتی را تکمیل کنید.",
-    "securityCheckFailed": "بررسی امنیتی ناموفق بود. لطفاً دوباره تلاش کنید.",
-    "securityCheckExpired": "بررسی امنیتی منقضی شده است. لطفاً دوباره تلاش کنید."
+    "securityCheck": "لطفا بررسی امنیتی را تکمیل کنید.",
+    "securityCheckFailed": "بررسی امنیتی انجام نشد. لطفا دوباره امتحان کنید.",
+    "securityCheckExpired": "چک امنیتی منقضی شده است. لطفا دوباره امتحان کنید."
   },
   "Dashboard": {
     "title": "داشبورد",
@@ -79,7 +79,9 @@
     "subscription": "اشتراک",
     "settings": "تنظیمات",
     "viewReportsDesc": "گزارش های انطباق خود را مشاهده کنید",
-    "manageSubscriptionDesc": "اشتراک خود را مدیریت کنید"
+    "manageSubscriptionDesc": "اشتراک خود را مدیریت کنید",
+    "viewPricing": "مشاهده قیمت",
+    "youAreOnFreePlan": "شما در حال حاضر در طرح رایگان هستید."
   },
   "Pricing": {
     "title": "قیمت گذاری ساده",
@@ -1079,7 +1081,14 @@
     "gaccCat_nuts_label": "آجیل / میوه های خشک (HS 08)",
     "gaccCat_other_label": "سایر محصولات غذایی",
     "gaccCat_classification_label": "دسته‌بندی",
-    "backToHome": "بازگشت به خانه"
+    "backToHome": "بازگشت به خانه",
+    "cccProductNamePlaceholder": "به عنوان مثال، چراغ رومیزی LED هوشمند",
+    "crossborderProductNamePlaceholder": "به عنوان مثال، پودر ماچا آلی",
+    "gaccProductNamePlaceholder": "به عنوان مثال، شراب قرمز کابرنه سوویگنون",
+    "labelProductNamePlaceholder": "به عنوان مثال، چای سبز ممتاز 500 گرم",
+    "nmpaProductNamePlaceholder": "به عنوان مثال سرم هیالورونیک اسید",
+    "noReportId": "هیچ شناسه گزارشی ارائه نشده است",
+    "trademarkProductNamePlaceholder": "به عنوان مثال، خط مراقبت از پوست ممتاز"
   },
   "Report": {
     "loadingTitle": "در حال بارگیری گزارش شما",
@@ -1110,7 +1119,8 @@
     "registeredUser": "کاربر ثبت نام شده",
     "periodEnds": "دوره به پایان می رسد",
     "youAreOnFreePlan": "شما در حال حاضر در طرح رایگان هستید.",
-    "noReportId": "شناسه گزارش ارائه نشده است"
+    "noReportId": "شناسه گزارش ارائه نشده است",
+    "backToHome": "بازگشت به خانه"
   },
   "Cookie": {
     "message": "این سایت فقط از کوکی های احراز هویت ضروری استفاده می کند. هیچ کوکی ردیابی یا تبلیغاتی استفاده نمی شود.",

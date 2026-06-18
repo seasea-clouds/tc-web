@@ -1336,9 +1336,10 @@
     "serviceGACC": "GACC Food Registration: ",
     "serviceLabel": "Chinese etikettoverholdelse: ",
     "serviceNMPA": "NMPA Cosmetics Filing: ",
-    "title": "SinoTrade Compliance – AI-Assistance (EN)"
+    "title": "SinoTrade Compliance – AI-Assistance (EN)",
+    "servicesTitle": "Tjenester"
   },
   "Navbar": {
-    "selfCheck": "Selvverifikasjon"
+    "selfCheck": "Selvsjekk"
   }
 }

@@ -1336,9 +1336,10 @@
     "serviceGACC": "Registre d'aliments GACC: registre les instal·lacions de fabricació d'aliments a l'estranger amb la duana de la Xina (GACC) d'acord amb els decrets 248 i 249. Obligatori per a tots els productes alimentaris exportats a la Xina.",
     "serviceLabel": "Compliment de l'etiqueta xinesa: disseny i revisió d'etiquetes compatibles amb GB 7718 i GB 28050. El motiu número u del rebuig duaner als ports xinesos.",
     "serviceNMPA": "Presentació de cosmètics NMPA: registre o notificació de cosmètics a l'Administració nacional de productes mèdics de la Xina. Obligatori per a tots els productes cosmètics importats.",
-    "title": "Compliment de SinoTrade: AI-Assistance (EN)"
+    "title": "Compliment de SinoTrade: AI-Assistance (EN)",
+    "servicesTitle": "Serveis"
   },
   "Navbar": {
-    "selfCheck": "Autoavaluació"
+    "selfCheck": "Autocontrol"
   }
 }

@@ -1336,9 +1336,10 @@
     "serviceGACC": "GACC-Lebensmittelregistrierung – Registrieren Sie ausländische Lebensmittelproduktionsstätten beim chinesischen Zoll (GACC) gemäß den Dekreten 248 und 249. Obligatorisch für alle nach China exportierten Lebensmittelprodukte.",
     "serviceLabel": "Chinesische Etikettenkonformität – GB 7718- und GB 28050-konformes Etikettendesign und -prüfung. Der Hauptgrund für Zollablehnungen in chinesischen Häfen.",
     "serviceNMPA": "NMPA Cosmetics Filing – Registrierung oder Meldung von Kosmetika bei der China National Medical Products Administration. Erforderlich für alle importierten Kosmetikprodukte.",
-    "title": "SinoTrade Compliance – AI-Assistance (DE)"
+    "title": "SinoTrade Compliance – AI-Assistance (DE)",
+    "servicesTitle": "Dienstleistungen"
   },
   "Navbar": {
-    "selfCheck": "Selbstprüfung"
+    "selfCheck": "Selbstkontrolle"
   }
 }

@@ -53,9 +53,9 @@
     "errorInvalid": "অবৈধ ইমেল বা পাসওয়ার্ড",
     "errorExists": "ইমেল ইতিমধ্যে নিবন্ধিত",
     "errorLength": "পাসওয়ার্ড কমপক্ষে 5 অক্ষরের হতে হবে",
-    "securityCheck": "অনুগ্রহ করে সিকিউরিটি চেক সম্পন্ন করুন।",
-    "securityCheckFailed": "সিকিউরিটি চেক ব্যর্থ হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।",
-    "securityCheckExpired": "নিরাপত্তা পরীক্ষার মেয়াদ শেষ হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।"
+    "securityCheck": "নিরাপত্তা চেক সম্পূর্ণ করুন.",
+    "securityCheckFailed": "নিরাপত্তা পরীক্ষা ব্যর্থ হয়েছে. আবার চেষ্টা করুন.",
+    "securityCheckExpired": "নিরাপত্তা চেক মেয়াদ শেষ. আবার চেষ্টা করুন."
   },
   "Dashboard": {
     "title": "ড্যাশবোর্ড",
@@ -79,7 +79,9 @@
     "subscription": "সাবস্ক্রিপশন",
     "settings": "সেটিংস",
     "viewReportsDesc": "আপনার কমপ্লায়েন্স রিপোর্ট দেখুন",
-    "manageSubscriptionDesc": "আপনার সদস্যতা পরিচালনা করুন"
+    "manageSubscriptionDesc": "আপনার সদস্যতা পরিচালনা করুন",
+    "viewPricing": "মূল্য দেখুন",
+    "youAreOnFreePlan": "আপনি বর্তমানে বিনামূল্যের প্ল্যানে আছেন।"
   },
   "Pricing": {
     "title": "সহজ মূল্য",
@@ -1079,7 +1081,14 @@
     "gaccCat_nuts_label": "বাদাম / শুকনো ফল (HS 08)",
     "gaccCat_other_label": "অন্যান্য খাদ্য পণ্য",
     "gaccCat_classification_label": "শ্রেণীবিভাগ",
-    "backToHome": "হোমে ফিরে যান"
+    "backToHome": "হোমে ফিরে যান",
+    "cccProductNamePlaceholder": "যেমন, স্মার্ট এলইডি ডেস্ক ল্যাম্প",
+    "crossborderProductNamePlaceholder": "যেমন, জৈব ম্যাচা পাউডার",
+    "gaccProductNamePlaceholder": "যেমন, ক্যাবারনেট সভিগনন রেড ওয়াইন",
+    "labelProductNamePlaceholder": "যেমন, প্রিমিয়াম গ্রিন টি 500 গ্রাম",
+    "nmpaProductNamePlaceholder": "যেমন, হায়ালুরোনিক অ্যাসিড সিরাম",
+    "noReportId": "কোনো রিপোর্ট আইডি দেওয়া হয়নি",
+    "trademarkProductNamePlaceholder": "যেমন, প্রিমিয়াম স্কিনকেয়ার লাইন"
   },
   "Report": {
     "loadingTitle": "আপনার রিপোর্ট লোড হচ্ছে",
@@ -1110,7 +1119,8 @@
     "registeredUser": "নিবন্ধিত ব্যবহারকারী",
     "periodEnds": "পিরিয়ড শেষ হয়",
     "youAreOnFreePlan": "আপনি বর্তমানে বিনামূল্যের প্ল্যানে আছেন।",
-    "noReportId": "কোনো রিপোর্ট ID দেওয়া হয়নি"
+    "noReportId": "কোনো রিপোর্ট ID দেওয়া হয়নি",
+    "backToHome": "হোমে ফিরে যান"
   },
   "Cookie": {
     "message": "এই সাইটটি শুধুমাত্র প্রয়োজনীয় প্রমাণীকরণ কুকি ব্যবহার করে। কোন ট্র্যাকিং বা বিজ্ঞাপন কুকি ব্যবহার করা হয় না.",

@@ -52,7 +52,10 @@
     "errorRequired": "විද්‍යුත් තැපෑල සහ මුරපදය අවශ්‍යයි",
     "errorInvalid": "වලංගු නොවන ඊමේල් හෝ මුරපදය",
     "errorExists": "විද්‍යුත් තැපෑල දැනටමත් ලියාපදිංචි වී ඇත",
-    "errorLength": "මුරපදය අවම වශයෙන් අක්ෂර 5 ක් විය යුතුය"
+    "errorLength": "මුරපදය අවම වශයෙන් අක්ෂර 5 ක් විය යුතුය",
+    "securityCheck": "කරුණාකර ආරක්ෂක පරීක්ෂාව සම්පූර්ණ කරන්න.",
+    "securityCheckExpired": "ආරක්ෂක පරීක්ෂාව කල් ඉකුත් විය. කරුණාකර නැවත උත්සාහ කරන්න.",
+    "securityCheckFailed": "ආරක්ෂක පරීක්ෂාව අසාර්ථක විය. කරුණාකර නැවත උත්සාහ කරන්න."
   },
   "Dashboard": {
     "title": "උපකරණ පුවරුව",
@@ -76,7 +79,9 @@
     "subscription": "දායකත්වය",
     "settings": "සැකසීම්",
     "viewReportsDesc": "ඔබගේ අනුකූලතා වාර්තා බලන්න",
-    "manageSubscriptionDesc": "ඔබගේ දායකත්වය කළමනාකරණය කරන්න"
+    "manageSubscriptionDesc": "ඔබගේ දායකත්වය කළමනාකරණය කරන්න",
+    "viewPricing": "මිලකරණය බලන්න",
+    "youAreOnFreePlan": "ඔබ දැනට සිටින්නේ නිදහස් සැලැස්මේ ය."
   },
   "Pricing": {
     "title": "සරල මිලකරණය",
@@ -1076,7 +1081,14 @@
     "gaccCat_nuts_label": "ගෙඩි / වියළි පලතුරු (HS 08)",
     "gaccCat_other_label": "වෙනත් ආහාර නිෂ්පාදන",
     "gaccCat_classification_label": "ශ්‍රේණිගත කිරීම",
-    "backToHome": "ආපසු නිවසට"
+    "backToHome": "ආපසු නිවසට",
+    "cccProductNamePlaceholder": "උදා: Smart LED මේස ලාම්පුව",
+    "crossborderProductNamePlaceholder": "උදා: කාබනික මැච්චා කුඩු",
+    "gaccProductNamePlaceholder": "උදා: Cabernet Sauvignon Red Wine",
+    "labelProductNamePlaceholder": "උදා: Premium Green Tea 500g",
+    "nmpaProductNamePlaceholder": "උදා: හයුලූරොනික් අම්ල සෙරුමය",
+    "noReportId": "වාර්තා ID සපයා නැත",
+    "trademarkProductNamePlaceholder": "උදා., Premium Skincare Line"
   },
   "Report": {
     "loadingTitle": "ඔබේ වාර්තාව පූරණය කරමින්",
@@ -1107,7 +1119,8 @@
     "registeredUser": "ලියාපදිංචි පරිශීලක",
     "periodEnds": "කාලය අවසන් වේ",
     "youAreOnFreePlan": "ඔබ දැනට සිටින්නේ නිදහස් සැලැස්මේ ය.",
-    "noReportId": "වාර්තා ID එකක් සපයා නැත"
+    "noReportId": "වාර්තා ID එකක් සපයා නැත",
+    "backToHome": "ආපසු නිවසට"
   },
   "Cookie": {
     "message": "මෙම වෙබ් අඩවිය අත්‍යවශ්‍ය සත්‍යාපන කුකීස් පමණක් භාවිතා කරයි. ලුහුබැඳීම හෝ ප්‍රචාරණ කුකීස් භාවිතා නොකෙරේ.",
@@ -1454,6 +1467,10 @@
     "billing": "බිල්පත",
     "login": "ඇතුළු වන්න",
     "register": "ලියාපදිංචි වන්න",
-    "report": "වාර්තාව"
+    "report": "වාර්තාව",
+    "selfCheck": "ස්වයං පරීක්ෂණ මෙවලම"
+  },
+  "Breadcrumb": {
+    "pricing": "මිල නියම කිරීම"
   }
 }

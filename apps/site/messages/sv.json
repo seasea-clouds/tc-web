@@ -1336,9 +1336,10 @@
     "serviceGACC": "GACC Food Registration: ",
     "serviceLabel": "Kinesisk etikettöverensstämmelse: ",
     "serviceNMPA": "NMPA Cosmetics Filing: ",
-    "title": "SinoTrade Compliance: AI-Assistance (EN)"
+    "title": "SinoTrade Compliance: AI-Assistance (EN)",
+    "servicesTitle": "Tjänster"
   },
   "Navbar": {
-    "selfCheck": "Självbedömning"
+    "selfCheck": "Självkontroll"
   }
 }

@@ -1336,9 +1336,10 @@
     "serviceGACC": "GACC Ərzaq Qeydiyyatı: ",
     "serviceLabel": "Çin Etiket Uyğunluğu: ",
     "serviceNMPA": "NMPA Cosmetics Filing: ",
-    "title": "SinoTrade Compliance: AI-Assistance (EN)"
+    "title": "SinoTrade Compliance: AI-Assistance (EN)",
+    "servicesTitle": "Xidmətlər"
   },
   "Navbar": {
-    "selfCheck": "Özünü yoxlama"
+    "selfCheck": "Özünü yoxlayın"
   }
 }

@@ -1336,9 +1336,10 @@
     "serviceGACC": "GACC 食品注册: 根据第 248 号和 249 号法令，向中国海关 (GACC) 注册海外食品生产设施。所有出口到中国的食品都必须这样做。",
     "serviceLabel": "中国标签合规性: 符合 GB 7718 和 GB 28050 的标签设计和审核。中国口岸海关拒收的首要原因。",
     "serviceNMPA": "NMPA 化妆品备案:化妆品向中国国家药品监督管理局注册或通报。所有进口化妆品均需要。",
-    "title": "中贸合规: AI 辅助（EN）"
+    "title": "中贸合规: AI 辅助（EN）",
+    "servicesTitle": "服务"
   },
   "Navbar": {
-    "selfCheck": "合规自查"
+    "selfCheck": "自检"
   }
 }

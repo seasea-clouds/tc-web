@@ -53,9 +53,9 @@
     "errorInvalid": "Virheellinen sähköpostiosoite tai salasana",
     "errorExists": "Sähköposti on jo rekisteröity",
     "errorLength": "Salasanassa on oltava vähintään 5 merkkiä",
-    "securityCheck": "Suorita turvatarkistus.",
-    "securityCheckFailed": "Turvatarkistus epäonnistui. Yritä uudelleen.",
-    "securityCheckExpired": "Turvatarkistus on vanhentunut. Yritä uudelleen."
+    "securityCheck": "Suorita turvatarkastus.",
+    "securityCheckFailed": "Turvatarkastus epäonnistui. Yritä uudelleen.",
+    "securityCheckExpired": "Turvatarkastus vanhentunut. Yritä uudelleen."
   },
   "Dashboard": {
     "title": "Kojelauta",
@@ -79,7 +79,9 @@
     "subscription": "Tilaus",
     "settings": "Asetukset",
     "viewReportsDesc": "Tarkastele vaatimustenmukaisuusraporttejasi",
-    "manageSubscriptionDesc": "Hallinnoi tilaustasi"
+    "manageSubscriptionDesc": "Hallinnoi tilaustasi",
+    "viewPricing": "Katso hinnoittelu",
+    "youAreOnFreePlan": "Olet tällä hetkellä ilmaisessa paketissa."
   },
   "Pricing": {
     "title": "Yksinkertainen hinnoittelu",
@@ -1079,7 +1081,14 @@
     "gaccCat_nuts_label": "Pähkinät / Kuivatut hedelmät (HS 08)",
     "gaccCat_other_label": "Muut elintarviketuotteet",
     "gaccCat_classification_label": "Luokittelu",
-    "backToHome": "Takaisin etusivulle"
+    "backToHome": "Takaisin etusivulle",
+    "cccProductNamePlaceholder": "esim. Smart LED -pöytälamppu",
+    "crossborderProductNamePlaceholder": "esim. orgaaninen Matcha-jauhe",
+    "gaccProductNamePlaceholder": "esim. Cabernet Sauvignon -punaviini",
+    "labelProductNamePlaceholder": "esim. Premium Green Tea 500g",
+    "nmpaProductNamePlaceholder": "esim. hyaluronihapposeerumi",
+    "noReportId": "Raporttitunnusta ei ole annettu",
+    "trademarkProductNamePlaceholder": "esim. Premium Skincare Line"
   },
   "Report": {
     "loadingTitle": "Ladataan raporttiasi",
@@ -1110,7 +1119,8 @@
     "registeredUser": "Rekisteröity käyttäjä",
     "periodEnds": "Kausi päättyy",
     "youAreOnFreePlan": "Olet tällä hetkellä ilmaisessa paketissa.",
-    "noReportId": "Raportti-ID:tä ei ole annettu"
+    "noReportId": "Raportti-ID:tä ei ole annettu",
+    "backToHome": "Takaisin etusivulle"
   },
   "Cookie": {
     "message": "Tämä sivusto käyttää vain välttämättömiä todennusevästeitä. Mitään seuranta- tai mainosevästeitä ei käytetä.",
@@ -1461,6 +1471,6 @@
     "report": "Raportti"
   },
   "Breadcrumb": {
-    "pricing": "Hinnasto"
+    "pricing": "Hinnoittelu"
   }
 }

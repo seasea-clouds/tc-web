@@ -1336,9 +1336,10 @@
     "serviceGACC": "Pendaftaran Makanan GACC: ",
     "serviceLabel": "Kepatuhan Label Tiongkok: ",
     "serviceNMPA": "Pengajuan Kosmetik NMPA: ",
-    "title": "Kepatuhan SinoTrade: Bantuan AI (EN)"
+    "title": "Kepatuhan SinoTrade: Bantuan AI (EN)",
+    "servicesTitle": "Layanan"
   },
   "Navbar": {
-    "selfCheck": "Pemeriksaan Diri"
+    "selfCheck": "Periksa Diri"
   }
 }

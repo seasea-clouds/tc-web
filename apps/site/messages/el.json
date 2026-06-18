@@ -1336,9 +1336,10 @@
     "serviceGACC": "Εγγραφή τροφίμων GACC: ",
     "serviceLabel": "Συμμόρφωση με την κινεζική ετικέτα: ",
     "serviceNMPA": "Αρχειοθέτηση καλλυντικών NMPA: ",
-    "title": "Συμμόρφωση SinoTrade: AI-Assistance (EN)"
+    "title": "Συμμόρφωση SinoTrade: AI-Assistance (EN)",
+    "servicesTitle": "Υπηρεσίες"
   },
   "Navbar": {
-    "selfCheck": "Αυτοαξιολόγηση"
+    "selfCheck": "Αυτοέλεγχος"
   }
 }

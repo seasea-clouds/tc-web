@@ -1336,9 +1336,10 @@
     "serviceGACC": "Rejestracja żywności GACC: ",
     "serviceLabel": "Zgodność chińskiej etykiety: ",
     "serviceNMPA": "Zgłoszenie kosmetyków NMPA: ",
-    "title": "Zgodność z przepisami SinoTrade: AI-Assistance (EN)"
+    "title": "Zgodność z przepisami SinoTrade: AI-Assistance (EN)",
+    "servicesTitle": "Usługi"
   },
   "Navbar": {
-    "selfCheck": "Własna kontrola"
+    "selfCheck": "Samokontrola"
   }
 }

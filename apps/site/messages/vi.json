@@ -1336,9 +1336,10 @@
     "serviceGACC": "Đăng ký thực phẩm GACC: ",
     "serviceLabel": "Tuân thủ nhãn Trung Quốc - Thiết kế và đánh giá nhãn tuân thủ GB 7718 và GB 28050. Lý do số một khiến hải quan từ chối tại các cảng Trung Quốc.",
     "serviceNMPA": "NMPA Cosmetics Filing: ",
-    "title": "Tuân thủ SinoTrade: Hỗ trợ AI (EN)"
+    "title": "Tuân thủ SinoTrade: Hỗ trợ AI (EN)",
+    "servicesTitle": "Dịch vụ"
   },
   "Navbar": {
-    "selfCheck": "Tự đánh giá"
+    "selfCheck": "Tự kiểm tra"
   }
 }

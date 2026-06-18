@@ -1336,7 +1336,8 @@
     "serviceGACC": "GACC Food Registration: ",
     "serviceLabel": "Съответствие на китайски етикети: ",
     "serviceNMPA": "NMPA Cosmetics Filing: ",
-    "title": "Съответствие на SinoTrade: AI-Assistance (EN)"
+    "title": "Съответствие на SinoTrade: AI-Assistance (EN)",
+    "servicesTitle": "Услуги"
   },
   "Navbar": {
     "selfCheck": "Самопроверка"

@@ -53,9 +53,9 @@
     "errorInvalid": "არასწორი ელფოსტა ან პაროლი",
     "errorExists": "ფოსტა უკვე დარეგისტრირებულია",
     "errorLength": "პაროლი უნდა შედგებოდეს მინიმუმ 5 სიმბოლოსგან",
-    "securityCheck": "გთხოვთ დაადასტუროთ უსაფრთხოების შემოწმება.",
-    "securityCheckFailed": "უსაფრთხოების შემოწმება ვერ მოხერხდა. სცადეთ ხელახლა.",
-    "securityCheckExpired": "უსაფრთხოების შემოწმების ვადა ამოიწურა. სცადეთ ხელახლა."
+    "securityCheck": "გთხოვთ, დაასრულოთ უსაფრთხოების შემოწმება.",
+    "securityCheckFailed": "უსაფრთხოების შემოწმება ვერ მოხერხდა. გთხოვთ, სცადოთ ხელახლა.",
+    "securityCheckExpired": "უსაფრთხოების შემოწმებას ვადა გაუვიდა. გთხოვთ, სცადოთ ხელახლა."
   },
   "Dashboard": {
     "title": "დაფა",
@@ -79,7 +79,9 @@
     "subscription": "გამოწერა",
     "settings": "პარამეტრები",
     "viewReportsDesc": "იხილეთ თქვენი შესაბამისობის ანგარიშები",
-    "manageSubscriptionDesc": "მართეთ თქვენი გამოწერა"
+    "manageSubscriptionDesc": "მართეთ თქვენი გამოწერა",
+    "viewPricing": "ფასების ნახვა",
+    "youAreOnFreePlan": "ამჟამად უფასო გეგმაზე ხართ."
   },
   "Pricing": {
     "title": "მარტივი ფასი",
@@ -1079,7 +1081,14 @@
     "gaccCat_nuts_label": "თხილი / ჩირი (HS 08)",
     "gaccCat_other_label": "სხვა საკვები პროდუქტები",
     "gaccCat_classification_label": "კლასიფიკაცია",
-    "backToHome": "სახლში დაბრუნება"
+    "backToHome": "სახლში დაბრუნება",
+    "cccProductNamePlaceholder": "მაგ., Smart LED მაგიდის ნათურა",
+    "crossborderProductNamePlaceholder": "მაგ., ორგანული მაჩის ფხვნილი",
+    "gaccProductNamePlaceholder": "მაგალითად, კაბერნე სოვინიონის წითელი ღვინო",
+    "labelProductNamePlaceholder": "მაგ., პრემიუმ მწვანე ჩაი 500 გრ",
+    "nmpaProductNamePlaceholder": "მაგ., ჰიალურონის მჟავას შრატი",
+    "noReportId": "ანგარიშის ID არ არის მოწოდებული",
+    "trademarkProductNamePlaceholder": "მაგ., პრემიუმ კანის მოვლის ხაზი"
   },
   "Report": {
     "loadingTitle": "იტვირთება თქვენი ანგარიში",
@@ -1110,7 +1119,8 @@
     "registeredUser": "რეგისტრირებული მომხმარებელი",
     "periodEnds": "პერიოდი მთავრდება",
     "youAreOnFreePlan": "ამჟამად უფასო გეგმაზე ხართ.",
-    "noReportId": "ანგარიშის ID არ არის მითქუფა"
+    "noReportId": "ანგარიშის ID არ არის მითქუფა",
+    "backToHome": "სახლში დაბრუნება"
   },
   "Cookie": {
     "message": "ეს საიტი იყენებს მხოლოდ აუთენტიფიკაციის აუცილებელ ქუქიებს. არ გამოიყენება თვალთვალის ან სარეკლამო ქუქიები.",
@@ -1461,6 +1471,6 @@
     "report": "ანგარიში"
   },
   "Breadcrumb": {
-    "pricing": "ფასები"
+    "pricing": "ფასი"
   }
 }

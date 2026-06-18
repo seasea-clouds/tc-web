@@ -54,8 +54,8 @@
     "errorExists": "E-pos reeds geregistreer",
     "errorLength": "Wagwoord moet ten minste 5 karakters wees",
     "securityCheck": "Voltooi asseblief die sekuriteitskontrole.",
-    "securityCheckFailed": "Beveiligingskontrole misluk. Probeer asseblief weer.",
-    "securityCheckExpired": "Beveiligingskontrole het verval. Probeer asseblief weer."
+    "securityCheckFailed": "Sekuriteitkontrole het misluk. Probeer asseblief weer.",
+    "securityCheckExpired": "Sekuriteitkontrole het verval. Probeer asseblief weer."
   },
   "Dashboard": {
     "title": "Dashboard",
@@ -79,7 +79,9 @@
     "subscription": "Intekening",
     "settings": "Instellings",
     "viewReportsDesc": "Bekyk jou voldoeningsverslae",
-    "manageSubscriptionDesc": "Bestuur jou intekening"
+    "manageSubscriptionDesc": "Bestuur jou intekening",
+    "viewPricing": "Bekyk pryse",
+    "youAreOnFreePlan": "Jy is tans op die gratis plan."
   },
   "Pricing": {
     "title": "Eenvoudige prysbepaling",
@@ -1079,7 +1081,14 @@
     "gaccCat_nuts_label": "Neute / Droë Vrugte (HS 08)",
     "gaccCat_other_label": "Ander voedselprodukte",
     "gaccCat_classification_label": "Klassifikasie",
-    "backToHome": "Terug na die huis"
+    "backToHome": "Terug na die huis",
+    "cccProductNamePlaceholder": "bv. Smart LED-lessenaarlamp",
+    "crossborderProductNamePlaceholder": "bv. Organiese Matcha-poeier",
+    "gaccProductNamePlaceholder": "bv. Cabernet Sauvignon Rooiwyn",
+    "labelProductNamePlaceholder": "bv. Premium Groen Tee 500g",
+    "nmpaProductNamePlaceholder": "bv. Hyaluronzuur Serum",
+    "noReportId": "Geen verslag-ID verskaf nie",
+    "trademarkProductNamePlaceholder": "bv. Premium Velsorglyn"
   },
   "Report": {
     "loadingTitle": "Laai tans jou verslag",
@@ -1110,7 +1119,8 @@
     "registeredUser": "Geregistreerde gebruiker",
     "periodEnds": "Periode eindig",
     "youAreOnFreePlan": "Jy is tans op die gratis plan.",
-    "noReportId": "Gee geen verslag-ID verskaf nie"
+    "noReportId": "Gee geen verslag-ID verskaf nie",
+    "backToHome": "Terug na die huis"
   },
   "Cookie": {
     "message": "Hierdie webwerf gebruik slegs noodsaaklike verifikasiekoekies. Geen dop- of advertensiekoekies word gebruik nie.",
@@ -1461,6 +1471,6 @@
     "report": "Rapport"
   },
   "Breadcrumb": {
-    "pricing": "Pryzetting"
+    "pricing": "Pryse"
   }
 }

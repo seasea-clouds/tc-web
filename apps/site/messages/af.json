@@ -1336,9 +1336,10 @@
     "serviceGACC": "GACC-voedselregistrasie: ",
     "serviceLabel": "Chinese etiket-voldoening: ",
     "serviceNMPA": "NMPA Cosmetics-liassering - Registrasie of kennisgewing van skoonheidsmiddels by China National Medical Products Administration. Vereis vir alle ingevoerde skoonheidsmiddels.",
-    "title": "SinoTrade-nakoming - KI-bystand (EN)"
+    "title": "SinoTrade-nakoming - KI-bystand (EN)",
+    "servicesTitle": "Dienste"
   },
   "Navbar": {
-    "selfCheck": "Selftoets"
+    "selfCheck": "Selfkontrole"
   }
 }

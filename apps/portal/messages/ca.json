@@ -54,8 +54,8 @@
     "errorExists": "Correu electrònic ja registrat",
     "errorLength": "La contrasenya ha de tenir almenys 5 caràcters",
     "securityCheck": "Si us plau, completeu la comprovació de seguretat.",
-    "securityCheckFailed": "La comprovació de seguretat ha fallat. Torna-ho a provar.",
-    "securityCheckExpired": "La comprovació de seguretat ha caducat. Torna-ho a provar."
+    "securityCheckFailed": "La comprovació de seguretat ha fallat. Si us plau, torna-ho a provar.",
+    "securityCheckExpired": "El control de seguretat ha caducat. Si us plau, torna-ho a provar."
   },
   "Dashboard": {
     "title": "Tauler de control",
@@ -79,7 +79,9 @@
     "subscription": "Subscripció",
     "settings": "Configuració",
     "viewReportsDesc": "Consulteu els vostres informes de compliment",
-    "manageSubscriptionDesc": "Gestiona la teva subscripció"
+    "manageSubscriptionDesc": "Gestiona la teva subscripció",
+    "viewPricing": "Veure preus",
+    "youAreOnFreePlan": "Actualment esteu al pla gratuït."
   },
   "Pricing": {
     "title": "Preus senzills",
@@ -1079,7 +1081,14 @@
     "gaccCat_nuts_label": "Fruits secs i fruits secs (HS 08)",
     "gaccCat_other_label": "Altres Productes Alimentaris",
     "gaccCat_classification_label": "Classificació",
-    "backToHome": "Torna a casa"
+    "backToHome": "Torna a casa",
+    "cccProductNamePlaceholder": "per exemple, làmpada d'escriptori LED intel·ligent",
+    "crossborderProductNamePlaceholder": "per exemple, pols de matcha orgànic",
+    "gaccProductNamePlaceholder": "per exemple, vi negre Cabernet Sauvignon",
+    "labelProductNamePlaceholder": "per exemple, te verd premium 500 g",
+    "nmpaProductNamePlaceholder": "per exemple, sèrum d'àcid hialurònic",
+    "noReportId": "No s'ha proporcionat cap identificador d'informe",
+    "trademarkProductNamePlaceholder": "per exemple, Premium Skincare Line"
   },
   "Report": {
     "loadingTitle": "Carregant el vostre informe",
@@ -1110,7 +1119,8 @@
     "registeredUser": "Usuari registrat",
     "periodEnds": "S'acaba el període",
     "youAreOnFreePlan": "Actualment esteu al pla gratuït.",
-    "noReportId": "No s'ha proporcionat cap ID d'informe"
+    "noReportId": "No s'ha proporcionat cap ID d'informe",
+    "backToHome": "Torna a casa"
   },
   "Cookie": {
     "message": "Aquest lloc només utilitza cookies d'autenticació essencials. No s'utilitzen cookies de seguiment ni de publicitat.",

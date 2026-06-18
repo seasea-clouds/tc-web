@@ -1336,6 +1336,10 @@
     "serviceGACC": "Usajili wa Chakula wa GACC - Sajili vifaa vya utengenezaji wa chakula nje ya nchi na Forodha ya China (GACC) chini ya Amri 248 na 249. Ni lazima kwa bidhaa zote za chakula zinazosafirishwa kwenda Uchina.",
     "serviceLabel": "Utiifu wa Lebo za Kichina - muundo na ukaguzi wa lebo unaotii GB 7718 na GB 28050. Sababu kuu ya kukataliwa kwa forodha katika bandari za Uchina.",
     "serviceNMPA": "Ujazaji wa Vipodozi vya NMPA - Usajili au arifa ya vipodozi na Utawala wa Kitaifa wa Bidhaa za Matibabu wa China. Inahitajika kwa bidhaa zote za vipodozi zilizoagizwa kutoka nje.",
-    "title": "Uzingatiaji wa SinoTrade - AI-Assistance (EN)"
+    "title": "Uzingatiaji wa SinoTrade - AI-Assistance (EN)",
+    "servicesTitle": "Huduma"
+  },
+  "Navbar": {
+    "selfCheck": "Kujiangalia"
   }
 }

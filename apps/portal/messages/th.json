@@ -53,9 +53,9 @@
     "errorInvalid": "อีเมลหรือรหัสผ่่านไม่ถุกตอง",
     "errorExists": "อีเมลนี้ถุกบันทึกแล้ว",
     "errorLength": "รหัสผ่่านต้องมีตำน้อย 5 อักขระ",
-    "securityCheck": "กรุณาทำขั้นตอนความปลอดภัยให้เสร็จสมบูรณณ์",
-    "securityCheckFailed": "ขั้นตอนความปลอดภัยล้มเหลว กรุณาลองใหม่อีกครั้ง",
-    "securityCheckExpired": "ขั้นตอนความปลอดภัยหมดอายุ กรุณาลองใหม่อีกครั้ง"
+    "securityCheck": "กรุณาตรวจสอบความปลอดภัยให้เสร็จสิ้น",
+    "securityCheckFailed": "การตรวจสอบความปลอดภัยล้มเหลว โปรดลองอีกครั้ง",
+    "securityCheckExpired": "การตรวจสอบความปลอดภัยหมดอายุแล้ว โปรดลองอีกครั้ง"
   },
   "Dashboard": {
     "title": "แดชบอรด",
@@ -80,8 +80,8 @@
     "settings": "การตั้่งค่า",
     "viewReportsDesc": "ดูประวัติรายงานความสอดคล้อง",
     "manageSubscriptionDesc": "จาดการสมัครและวธิีการชําระเงนิ",
-    "youAreOnFreePlan": "คุณกำาลังใชป้ ้นฟรเี ย็น",
-    "viewPricing": "ดรราคา"
+    "youAreOnFreePlan": "ขณะนี้คุณอยู่ในแผนฟรี",
+    "viewPricing": "ดูราคา"
   },
   "Pricing": {
     "title": "ราคาแบบง่่าย",
@@ -1081,7 +1081,14 @@
     "gaccCat_nuts_label": "ถั่ว/ผลไม้แห้ง (HS 08)",
     "gaccCat_other_label": "ผลิตภัณฑ์อาหารอื่นๆ",
     "gaccCat_classification_label": "การจำแนกประเภท",
-    "backToHome": "กลับไปที่บ้าน"
+    "backToHome": "กลับไปที่บ้าน",
+    "cccProductNamePlaceholder": "เช่น โคมไฟตั้งโต๊ะ LED อัจฉริยะ",
+    "crossborderProductNamePlaceholder": "เช่น ผงมัทฉะออร์แกนิก",
+    "gaccProductNamePlaceholder": "เช่น ไวน์แดง Cabernet Sauvignon",
+    "labelProductNamePlaceholder": "เช่น ชาเขียวพรีเมี่ยม 500g",
+    "nmpaProductNamePlaceholder": "เช่น เซรั่มกรดไฮยาลูโรนิค",
+    "noReportId": "ไม่มีการระบุรหัสรายงาน",
+    "trademarkProductNamePlaceholder": "เช่น กลุ่มผลิตภัณฑ์สกินแคร์ระดับพรีเมี่ยม"
   },
   "Report": {
     "loadingTitle": "กำลังโหลดรายงานของคุณ",
@@ -1112,7 +1119,8 @@
     "registeredUser": "ผู้ใช้ที่ลงทะเบียน",
     "periodEnds": "ระยะเวลาสิ้นสุด",
     "youAreOnFreePlan": "ขณะนี้คุณอยู่ในแผนฟรี",
-    "noReportId": "ไม่ระบุ ID รายงาน"
+    "noReportId": "ไม่ระบุ ID รายงาน",
+    "backToHome": "กลับไปที่บ้าน"
   },
   "Cookie": {
     "message": "ไซต์นี้ใช้คุกกี้การรับรองความถูกต้องที่จำเป็นเท่านั้น ไม่มีการใช้คุกกี้การติดตามหรือการโฆษณา",

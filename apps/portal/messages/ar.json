@@ -53,9 +53,9 @@
     "errorInvalid": "البريد الإلكتروني أو كلمة المرور غير صالحة",
     "errorExists": "البريد الإلكتروني مسجل بالفعل",
     "errorLength": "يجب أن تتكون كلمة المرور من 5 أحرف على الأقل",
-    "securityCheck": "يرجى إكمال التحقق الأمني.",
-    "securityCheckFailed": "فشل التحقق الأمني. يرجى المحاولة مرة أخرى.",
-    "securityCheckExpired": "انتهت صلاحية التحقق الأمني. يرجى المحاولة مرة أخرى."
+    "securityCheck": "الرجاء إكمال الفحص الأمني.",
+    "securityCheckFailed": "فشل فحص الأمان. يرجى المحاولة مرة أخرى.",
+    "securityCheckExpired": "انتهت صلاحية فحص الأمان. يرجى المحاولة مرة أخرى."
   },
   "Dashboard": {
     "title": "لوحة القيادة",
@@ -80,7 +80,8 @@
     "settings": "إعدادات",
     "viewReportsDesc": "عرض تقارير الامتثال الخاصة بك",
     "manageSubscriptionDesc": "إدارة اشتراكك",
-    "youAreOnFreePlan": "أنت حاليًا على الخطة المجانية."
+    "youAreOnFreePlan": "أنت حاليًا مشترك في الخطة المجانية.",
+    "viewPricing": "عرض التسعير"
   },
   "Pricing": {
     "title": "تسعير بسيط",
@@ -1080,7 +1081,14 @@
     "gaccCat_nuts_label": "المكسرات / الفواكه المجففة (HS 08)",
     "gaccCat_other_label": "منتجات غذائية أخرى",
     "gaccCat_classification_label": "التصنيف",
-    "backToHome": "العودة إلى المنزل"
+    "backToHome": "العودة إلى المنزل",
+    "cccProductNamePlaceholder": "على سبيل المثال، مصباح مكتب LED ذكي",
+    "crossborderProductNamePlaceholder": "على سبيل المثال، مسحوق ماتشا العضوي",
+    "gaccProductNamePlaceholder": "على سبيل المثال، النبيذ الأحمر كابيرنيت ساوفيجنون",
+    "labelProductNamePlaceholder": "على سبيل المثال، الشاي الأخضر الفاخر 500 جرام",
+    "nmpaProductNamePlaceholder": "على سبيل المثال، مصل حمض الهيالورونيك",
+    "noReportId": "لم يتم توفير معرف التقرير",
+    "trademarkProductNamePlaceholder": "على سبيل المثال، خط العناية بالبشرة المتميز"
   },
   "Report": {
     "loadingTitle": "جارٍ تحميل تقريرك",
@@ -1111,7 +1119,8 @@
     "registeredUser": "مستخدم مسجل",
     "periodEnds": "تنتهي الفترة",
     "youAreOnFreePlan": "أنت حاليًا مشترك في الخطة المجانية.",
-    "noReportId": "لم يتم توفير معرف التقرير"
+    "noReportId": "لم يتم توفير معرف التقرير",
+    "backToHome": "العودة إلى المنزل"
   },
   "Cookie": {
     "message": "يستخدم هذا الموقع ملفات تعريف الارتباط الأساسية فقط. لا يتم استخدام ملفات تعريف الارتباط للتتبع أو الإعلانات.",
@@ -1462,6 +1471,6 @@
     "report": "تقرير"
   },
   "Breadcrumb": {
-    "pricing": "تسعير"
+    "pricing": "التسعير"
   }
 }

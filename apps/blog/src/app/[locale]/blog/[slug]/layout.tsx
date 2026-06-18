@@ -49,7 +49,6 @@ export default async function BlogSlugLayout({
 
   return (
     <>
-      <AutoBreadcrumb locale={validLocale} title={title} />
       {children}
     </>
   );

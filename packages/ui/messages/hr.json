@@ -68,16 +68,20 @@
     "freeCheck": "Besplatni ček",
     "signIn": "Prijava",
     "signUp": "Registracija",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "Pretplata",
+    "settings": "Postavke",
+    "selfCheck": "Alat za Samoprocjenu",
+    "mePage": "Moj račun",
+    "testimonials": "Svjedočanstva",
+    "privacy": "Politika privatnosti"
   },
   "MobileTab": {
     "home": "Početna",
     "services": "Usluge",
     "blog": "Blog",
-    "contact": "Kontakt"
+    "check": "Provjeri"
   },
   "CTA": {
     "ctaTitle": "Trebate ovu uslugu?",

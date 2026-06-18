@@ -68,18 +68,20 @@
     "freeCheck": "Free Check",
     "signIn": "Sign In",
     "signUp": "Sign Up",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings",
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "Subscription",
+    "settings": "Settings",
     "privacy": "Privacy Policy",
-    "testimonials": "Testimonials"
+    "testimonials": "Testimonials",
+    "selfCheck": "Self-Check Tool",
+    "mePage": "My Account"
   },
   "MobileTab": {
     "home": "Home",
     "services": "Services",
     "blog": "Blog",
-    "contact": "Contact"
+    "check": "Check"
   },
   "CTA": {
     "ctaTitle": "Need This Service?",

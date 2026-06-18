@@ -68,16 +68,20 @@
     "freeCheck": "Comprovació gratuïta",
     "signIn": "Iniciar sessió",
     "signUp": "Registrar-se",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "Subscripció",
+    "settings": "Configuració",
+    "selfCheck": "Eina van Auto-avaluació",
+    "mePage": "El meu compte",
+    "testimonials": "Testimonis",
+    "privacy": "Política de privadesa"
   },
   "MobileTab": {
     "home": "Inici",
     "services": "Serveis",
     "blog": "Bloc",
-    "contact": "Contacte"
+    "check": "Comprova"
   },
   "CTA": {
     "ctaTitle": "Necessites aquest servei?",

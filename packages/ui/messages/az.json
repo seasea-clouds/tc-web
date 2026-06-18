@@ -68,16 +68,20 @@
     "freeCheck": "Pulsuz Çek",
     "signIn": "Daxil ol",
     "signUp": "Qeydiyyat",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "Abunəlik",
+    "settings": "Parametrlər",
+    "selfCheck": "Öz-Özünü Yoxlama Aləti",
+    "mePage": "Mənim Hesabım",
+    "testimonials": "Rəylər",
+    "privacy": "Məxfilik Siyasəti"
   },
   "MobileTab": {
     "home": "Ana səhifə",
     "services": "Xidmətlər",
     "blog": "Bloq",
-    "contact": "Əlaqə"
+    "check": "Yoxlama"
   },
   "CTA": {
     "ctaTitle": "Bu Xidmətə ehtiyacınız varmı?",

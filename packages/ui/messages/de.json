@@ -16,7 +16,7 @@
     "address": "Bezirk Jing'an, Shanghai, China",
     "disclaimer": "Haftungsausschluss: Wir sind ein unabhängiges Regulierungsberatungsunternehmen und nicht mit der Allgemeinen Zollverwaltung Chinas verbunden.",
     "whatsapp": "WhatsApp",
-    "testimonials": "Erfahrungsberichte",
+    "testimonials": "Kundenstimmen",
     "industries": "Branchen",
     "blog": "Einblicke"
   },
@@ -68,16 +68,20 @@
     "freeCheck": "Kostenloser Scheck",
     "signIn": "Anmelden",
     "signUp": "Registrieren",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "Abonnement",
+    "settings": "Einstellungen",
+    "selfCheck": "Selbstprüfungstool",
+    "mePage": "Mein Konto",
+    "testimonials": "Kundenstimmen",
+    "privacy": "Datenschutzrichtlinie"
   },
   "MobileTab": {
     "home": "Startseite",
     "services": "Dienste",
     "blog": "Blog",
-    "contact": "Kontakt"
+    "check": "Prüfen"
   },
   "CTA": {
     "ctaTitle": "Benötigen Sie diesen Service?",

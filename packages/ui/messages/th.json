@@ -16,7 +16,7 @@
     "address": "เขตจิงอัน, เซี่ยงไฮ้, จีน",
     "disclaimer": "ข้อสงวนสิทธิ์: เราเป็นบริษัทที่ปรึกษาด้านกฎระเบียบอิสระและไม่มีส่วนเกี่ยวข้องกับฝ่ายบริหารทั่วไปของกรมศุลกากรแห่งประเทศจีน",
     "whatsapp": "WhatsApp",
-    "testimonials": "ข้อความรับรอง",
+    "testimonials": "บทวิจารณ์",
     "industries": "อุตสาหกรรม",
     "blog": "ข้อมูลเชิงลึก"
   },
@@ -68,16 +68,20 @@
     "freeCheck": "เช็คฟรี",
     "signIn": "เข้าสู่ระบบ",
     "signUp": "สมัครสมาชิก",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "การสมัครสมาชิก",
+    "settings": "การตั้งค่า",
+    "selfCheck": "เครื่องมือประเมินตนเอง",
+    "mePage": "บัญชีของฉัน",
+    "testimonials": "บทวิจารณ์",
+    "privacy": "นโยบายความเป็นส่วนตัว"
   },
   "MobileTab": {
     "home": "หน้าแรก",
     "services": "บริการ",
     "blog": "บล็อก",
-    "contact": "ติดต่อ"
+    "check": "ตรวจสอบ"
   },
   "CTA": {
     "ctaTitle": "ต้องการบริการนี้หรือไม่?",

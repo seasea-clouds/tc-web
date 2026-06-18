@@ -68,16 +68,20 @@
     "freeCheck": "বিনামূল্যে চেক",
     "signIn": "সাইন ইন",
     "signUp": "সাইন আপ",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "সাবস্ক্রিপশন",
+    "settings": "সেটিংস",
+    "selfCheck": "স্ব-মূল্যায়ন টুল",
+    "mePage": "আমার অ্যাকাউন্ট",
+    "testimonials": "প্রশংসাপত্র",
+    "privacy": "গোপনীয়তা নীতি"
   },
   "MobileTab": {
     "home": "হোম",
     "services": "সেবাসমূহ",
     "blog": "ব্লগ",
-    "contact": "যোগাযোগ"
+    "check": "পরীক্ষা"
   },
   "CTA": {
     "ctaTitle": "এই পরিষেবা প্রয়োজন?",

@@ -68,16 +68,20 @@
     "freeCheck": "Angalia Bure",
     "signIn": "Ingia",
     "signUp": "Jisajili",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "Usajili",
+    "settings": "Mipangilio",
+    "selfCheck": "Zana ya Kujitathmini",
+    "mePage": "Akaunti Yangu",
+    "testimonials": "Ushuhuda",
+    "privacy": "Sera ya Faragha"
   },
   "MobileTab": {
     "home": "Nyumbani",
     "services": "Huduma",
     "blog": "Blogu",
-    "contact": "Wasiliana"
+    "check": "Angalia"
   },
   "CTA": {
     "ctaTitle": "Je, unahitaji Huduma Hii?",

@@ -16,7 +16,7 @@
     "address": "Округ Јинг'ан, Шангај, Кина",
     "disclaimer": "Одрицање од одговорности: Ми смо независна регулаторна консултантска фирма и нисмо повезани са Генералном управом царина Кине.",
     "whatsapp": "WhatsApp",
-    "testimonials": "Тестимониалс",
+    "testimonials": "Рецензије",
     "industries": "Индустриес",
     "blog": "Инсигхтс"
   },
@@ -68,16 +68,20 @@
     "freeCheck": "Бесплатна провера",
     "signIn": "Пријава",
     "signUp": "Регистрација",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "Претплата",
+    "settings": "Подешавања",
+    "selfCheck": "Алатка за Самопроцену",
+    "mePage": "Мој налог",
+    "testimonials": "Рецензије",
+    "privacy": "Политика приватности"
   },
   "MobileTab": {
     "home": "Почетна",
     "services": "Услуге",
     "blog": "Блог",
-    "contact": "Контакт"
+    "check": "Провера"
   },
   "CTA": {
     "ctaTitle": "Треба вам ова услуга?",

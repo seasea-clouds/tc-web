@@ -16,7 +16,7 @@
     "address": "Districtul Jing'an, Shanghai, China",
     "disclaimer": "Declinare a răspunderii: Suntem o firmă independentă de consultanță în materie de reglementare și nu suntem afiliați cu Administrația Generală a Vămilor din China.",
     "whatsapp": "WhatsApp",
-    "testimonials": "Mărturii",
+    "testimonials": "Testimoniale",
     "industries": "Industrii",
     "blog": "Perspective"
   },
@@ -68,16 +68,20 @@
     "freeCheck": "Cec gratuit",
     "signIn": "Autentificare",
     "signUp": "Înregistrare",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "Abonament",
+    "settings": "Setări",
+    "selfCheck": "Instrument de Autoevaluare",
+    "mePage": "Contul meu",
+    "testimonials": "Testimoniale",
+    "privacy": "Politica de confidențialitate"
   },
   "MobileTab": {
     "home": "Acasă",
     "services": "Servicii",
     "blog": "Blog",
-    "contact": "Contact"
+    "check": "Verificare"
   },
   "CTA": {
     "ctaTitle": "Aveți nevoie de acest serviciu?",

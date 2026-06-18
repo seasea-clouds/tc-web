@@ -16,7 +16,7 @@
     "address": "Jing'an-distriktet, Shanghai, Kina",
     "disclaimer": "Ansvarsfraskrivelse: Vi er et uavhengig reguleringskonsulentfirma og er ikke tilknyttet General Administration of Customs of China.",
     "whatsapp": "WhatsApp",
-    "testimonials": "Attester",
+    "testimonials": "Kundeomtaler",
     "industries": "Industrier",
     "blog": "Innsikt"
   },
@@ -68,16 +68,20 @@
     "freeCheck": "Gratis sjekk",
     "signIn": "Logg inn",
     "signUp": "Registrer",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "Abonnement",
+    "settings": "Innstillinger",
+    "selfCheck": "Selvevalueringsverktøy",
+    "mePage": "Min konto",
+    "testimonials": "Kundeomtaler",
+    "privacy": "Personvernregler"
   },
   "MobileTab": {
     "home": "Hjem",
     "services": "Tjenester",
     "blog": "Blogg",
-    "contact": "Kontakt"
+    "check": "Sjekk"
   },
   "CTA": {
     "ctaTitle": "Trenger du denne tjenesten?",

@@ -16,7 +16,7 @@
     "address": "Distrikti Jing'an, Shanghai, Kinë",
     "disclaimer": "Mohim përgjegjësie: Ne jemi një firmë e pavarur këshilluese rregullatore dhe nuk jemi të lidhur me Administratën e Përgjithshme të Doganave të Kinës.",
     "whatsapp": "WhatsApp",
-    "testimonials": "Dëshmitë",
+    "testimonials": "Dëshmi",
     "industries": "Industritë",
     "blog": "Vështrime"
   },
@@ -68,16 +68,20 @@
     "freeCheck": "Kontroll falas",
     "signIn": "Hyr",
     "signUp": "Regjistrohu",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "Abonimi",
+    "settings": "Cilësimet",
+    "selfCheck": "Mjet Vlerësimi Vetjak",
+    "mePage": "Llogaria Ime",
+    "testimonials": "Dëshmi",
+    "privacy": "Politika e Privatësisë"
   },
   "MobileTab": {
     "home": "Kryefaqja",
     "services": "Shërbime",
     "blog": "Blog",
-    "contact": "Kontakt"
+    "check": "Kontrollo"
   },
   "CTA": {
     "ctaTitle": "Keni nevojë për këtë shërbim?",

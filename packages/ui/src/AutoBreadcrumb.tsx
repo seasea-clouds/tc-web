@@ -40,6 +40,10 @@ const SEGMENT_LABELS: Record<string, string> = {
   'login': 'login',
   'register': 'register',
   'report': 'report',
+  // Portal /c/me/ sub-pages
+  'me': 'mePage',
+  'settings': 'settings',
+  'subscription': 'subscription',
 };
 
 // For segments that live under Navbar.servicesDropdown (service pages)
@@ -50,6 +54,13 @@ const SERVICE_SEGMENT_LABELS: Record<string, string> = {
   'cosmetics': 'servicesDropdown.cosmetics',
   'ecommerce': 'servicesDropdown.ecommerce',
   'brand': 'servicesDropdown.brand',
+};
+
+// For /c/check/{type}/ segments — maps to Check namespace keys
+const CHECK_SEGMENT_LABELS: Record<string, string> = {
+  'crossborder': 'crossborderTitle',
+  'trademark': 'trademarkTitle',
+  'nmpa': 'nmpaTitle',
 };
 
 // Industry slugs → i18n key mapping
@@ -85,6 +96,7 @@ export interface AutoBreadcrumbProps {
 export default function AutoBreadcrumb({ locale, title }: AutoBreadcrumbProps) {
   const pathname = usePathname();
   const t = useT('Navbar');
+  const tCheck = useT('Check');
   const override = useBreadcrumbOverride();
 
   // Skip root and locale-only paths
@@ -107,6 +119,8 @@ export default function AutoBreadcrumb({ locale, title }: AutoBreadcrumbProps) {
   let accumulated = '';
   // Track which segment type we're in (for special handling)
   let inIndustry = false;
+  // Track if we're inside /c/check/ to route check-type segments to Check namespace
+  let inCheckContext = false;
 
   for (let i = 0; i < pathSegments.length; i++) {
     const seg = pathSegments[i];
@@ -142,14 +156,33 @@ export default function AutoBreadcrumb({ locale, title }: AutoBreadcrumbProps) {
 
     // Portal check pages: /c/check/{type}/
     if (seg === 'check' && i > 0 && pathSegments[i - 1] === 'c') {
+      inCheckContext = true;
       continue; // skip /c/check/ segment, next segment will be the check type
     }
+    if (pathSegments[i - 1] !== 'check') {
+      inCheckContext = false; // reset when leaving /c/check/ context
+    }
+
     if (inIndustry) {
       inIndustry = false;
       continue; // industry slug already handled above
     }
 
-    // General segment lookup: first try flat SEGMENT_LABELS, then service dropdown
+    // Check-type segments: /c/check/{type}/ → use Check namespace
+    if (inCheckContext) {
+      const labelKey = CHECK_SEGMENT_LABELS[seg];
+      if (labelKey) {
+        const label = tCheck(labelKey);
+        items.push({ label, href });
+        continue;
+      }
+      // Fallback for unknown check types
+      const label = seg.replace(/-/g, ' ').replace(/_/g, ' ');
+      items.push({ label });
+      continue;
+    }
+
+    // General segment lookup: flat SEGMENT_LABELS, then service dropdown
     const labelKey = SEGMENT_LABELS[seg] || SERVICE_SEGMENT_LABELS[seg];
     if (labelKey) {
       const label = t(labelKey);

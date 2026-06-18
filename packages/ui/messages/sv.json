@@ -16,7 +16,7 @@
     "address": "Jing'an-distriktet, Shanghai, Kina",
     "disclaimer": "Ansvarsfriskrivning: Vi är ett oberoende tillsynskonsultföretag och är inte anslutna till General Administration of Customs of China.",
     "whatsapp": "WhatsApp",
-    "testimonials": "Rekommendationer",
+    "testimonials": "Kundrecensioner",
     "industries": "industrier",
     "blog": "Insikter"
   },
@@ -38,7 +38,7 @@
     "about": "Om oss",
     "services": "Tjänster",
     "servicesDropdown": {
-      "gacc": "GACC Food Registration",
+      "gacc": "GACC Livsmedelsregistrering",
       "label": "Efterlevnad av kinesiska etiketter",
       "ccc": "CCC-certifiering",
       "cosmetics": "Kosmetikaarkivering (NMPA)",
@@ -59,7 +59,7 @@
       "skincarecosmetics": "Hudvård & Kosmetika",
       "petfood": "Djurmat",
       "healthsupplements": "Hälsotillskott",
-      "babymaternal": "Baby & Maternal",
+      "babymaternal": "Baby & Moder",
       "consumerelectronics": "Konsumentelektronik",
       "medicaldevices": "Medicinsk utrustning",
       "crossborderecommerce": "Gränsöverskridande e-handel"
@@ -68,16 +68,20 @@
     "freeCheck": "Gratis check",
     "signIn": "Logga in",
     "signUp": "Registrera",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "Prenumeration",
+    "settings": "Inställningar",
+    "selfCheck": "Självbedömningsverktyg",
+    "mePage": "Mitt konto",
+    "testimonials": "Kundrecensioner",
+    "privacy": "Integritetspolicy"
   },
   "MobileTab": {
     "home": "Hem",
     "services": "Tjänster",
     "blog": "Blogg",
-    "contact": "Kontakt"
+    "check": "Kontrollera"
   },
   "CTA": {
     "ctaTitle": "Behöver du den här tjänsten?",

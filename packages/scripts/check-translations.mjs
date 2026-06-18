@@ -12,6 +12,8 @@
  * 5. 短词特殊检查
  * 6. 非拉丁语言英文残留检测
  * 7. 输出详细报告
+ * 8. 共享 UI 消息完整性（packages/ui/messages/）
+ * 9. 面包屑 key 完整性（AutoBreadcrumb.tsx 引用的所有 i18n key）
  *
  * 使用方法：
  *   node scripts/check-translations.mjs
@@ -20,11 +22,18 @@
  */
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 import { LOCALES } from './locales.mjs';
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = process.cwd();
 const MESSAGES_DIR = path.join(PROJECT_ROOT, 'messages');
 const BLOG_DIR = path.join(PROJECT_ROOT, 'content', 'blog');
+const MONOREPO_ROOT = path.resolve(__dirname, '..');
+const SHARED_UI_MESSAGES_DIR = path.join(MONOREPO_ROOT, 'ui', 'messages');
+const AUTO_BREADCRUMB_PATH = path.join(MONOREPO_ROOT, 'ui', 'src', 'AutoBreadcrumb.tsx');
+const SITE_MESSAGES_DIR = path.join(MONOREPO_ROOT, '..', 'apps', 'site', 'messages');
+const PORTAL_MESSAGES_DIR = path.join(MONOREPO_ROOT, '..', 'apps', 'portal', 'messages');
 
 // ============================================================
 // 不应翻译的词表
@@ -70,9 +79,9 @@ const IGNORE_FALLBACK_VALUES = new Set([
   'PIPL Data Compliance Assessment', 'GACC Food Registration',
   'China Import Compliance Services', 'Medical device compliance training and advisory',
   'Baby & Maternal',
-  'Free Check',
-  'FAQ',
-  'WhatsApp',
+  'Free Check', 'FAQ', 'WhatsApp',
+  'Sign Out', 'My Reports', 'Settings', 'Subscription',
+  'Pricing', 'Dashboard', 'Billing', 'Login', 'Register', 'Report',
 ]);
 
 const NUMBER_KEYS = new Set([
@@ -670,9 +679,6 @@ function checkIndustryMetaCompleteness(verbose = true) {
 // ============================================================
 // Portal 翻译检查
 // ============================================================
-const SCRIPT_DIR = path.dirname(new URL(import.meta.url).pathname);
-const MONOREPO_ROOT = path.resolve(SCRIPT_DIR, '..', '..');
-const PORTAL_MESSAGES_DIR = path.join(MONOREPO_ROOT, 'apps', 'portal', 'messages');
 
 function checkPortalTranslations(verbose = true) {
   if (!fs.existsSync(PORTAL_MESSAGES_DIR)) {
@@ -689,7 +695,7 @@ function checkPortalTranslations(verbose = true) {
   const enFlat = flattenKeys(loadJSON(enPath));
 
   const allLangs = fs.readdirSync(PORTAL_MESSAGES_DIR)
-    .filter(f => f.endsWith('.json') && f !== 'en.json')
+    .filter(f => f.endsWith('.json') && f !== 'en.json' && !f.startsWith('_'))
     .map(f => path.basename(f, '.json'))
     .sort();
 
@@ -765,6 +771,213 @@ function checkPortalTranslations(verbose = true) {
 }
 
 // ============================================================
+// 共享 UI 消息完整性检查（packages/ui/messages/）
+// 这是以前漏掉的：check-translations.mjs 只扫描 per-app messages/，
+// 但 packages/ui/messages/ 是所有站点共享的翻译源，必须检查。
+// ============================================================
+function checkSharedUiMessages(verbose = true) {
+  if (!fs.existsSync(SHARED_UI_MESSAGES_DIR)) {
+    if (verbose) console.log(`\n🔗 共享 UI 消息检查: ⏭️ 跳过 (${SHARED_UI_MESSAGES_DIR} 不存在)`);
+    return 0;
+  }
+
+  const enPath = path.join(SHARED_UI_MESSAGES_DIR, 'en.json');
+  if (!fs.existsSync(enPath)) {
+    if (verbose) console.log(`\n🔗 共享 UI 消息检查: ❌ 找不到英文源文件`);
+    return 0;
+  }
+
+  const enFlat = flattenKeys(loadJSON(enPath));
+  const allLangs = fs.readdirSync(SHARED_UI_MESSAGES_DIR)
+    .filter(f => f.endsWith('.json') && f !== 'en.json')
+    .map(f => path.basename(f, '.json'))
+    .sort();
+
+  let totalIssues = 0;
+  const details = { fallback: [], empty: [] };
+
+  for (const lang of allLangs) {
+    const langPath = path.join(SHARED_UI_MESSAGES_DIR, `${lang}.json`);
+    if (!fs.existsSync(langPath)) continue;
+    const langFlat = flattenKeys(loadJSON(langPath));
+
+    for (const [key, enVal] of Object.entries(enFlat)) {
+      if (typeof enVal !== 'string' || enVal.length <= 2) continue;
+      const langVal = langFlat[key] ?? '';
+
+      // empty
+      if (langVal === '') {
+        details.empty.push([lang, key]); totalIssues++;
+        continue;
+      }
+
+      // fallback — same logic as portal check
+      if (langVal === enVal && !NO_TRANSLATE.has(enVal) && !IGNORE_FALLBACK_KEYS.has(key) && !IGNORE_FALLBACK_VALUES.has(enVal)) {
+        let isShared = SHARED_WORDS_ALL.has(enVal);
+        if (!isShared && SHARED_WORDS_BY_LANG[lang]?.has(enVal)) isShared = true;
+        if (!isShared) {
+          const stripped = enVal.replace(/[^\w\s]/g, '').trim();
+          if (SHARED_WORDS_ALL.has(stripped) || SHARED_WORDS_BY_LANG[lang]?.has(stripped)) isShared = true;
+        }
+        if (!isShared) {
+          details.fallback.push([lang, key, enVal]); totalIssues++;
+        }
+      }
+    }
+  }
+
+  if (verbose) {
+    console.log(`\n🔗 共享 UI 消息检查 (${allLangs.length} 语言):`);
+    if (details.fallback.length) {
+      console.log(`  ❌ 英文 fallback (${details.fallback.length} 处):`);
+      for (const [l, k, v] of details.fallback.slice(0, 20)) console.log(`    [${l}] ${k} → ${v.slice(0, 60)}`);
+      if (details.fallback.length > 20) console.log(`    ... 还有 ${details.fallback.length - 20} 条`);
+    }
+    if (details.empty.length) {
+      console.log(`  ❌ 空值 (${details.empty.length} 处):`);
+      for (const [l, k] of details.empty.slice(0, 10)) console.log(`    [${l}] ${k}`);
+    }
+    if (totalIssues === 0) console.log('  ✅ 全部通过');
+  }
+
+  return totalIssues;
+}
+
+// ============================================================
+// 面包屑 key 完整性检查（从 AutoBreadcrumb.tsx 提取映射，验证所有 key 在 48 语言中存在）
+// ============================================================
+function extractBreadcrumbMappings() {
+  if (!fs.existsSync(AUTO_BREADCRUMB_PATH)) return [];
+  const content = fs.readFileSync(AUTO_BREADCRUMB_PATH, 'utf-8');
+  const mappings = [];
+
+  for (const varName of ['SEGMENT_LABELS', 'SERVICE_SEGMENT_LABELS', 'CHECK_SEGMENT_LABELS', 'INDUSTRY_LABELS']) {
+    const idx = content.indexOf('const ' + varName + ':');
+    if (idx < 0) continue;
+    const eqIdx = content.indexOf('=', idx);
+    const braceStart = content.indexOf('{', eqIdx);
+    let depth = 0;
+    let blockEnd = braceStart;
+    for (let i = braceStart; i < content.length; i++) {
+      if (content[i] === '{') depth++;
+      if (content[i] === '}') depth--;
+      if (depth === 0) { blockEnd = i; break; }
+    }
+    const block = content.substring(braceStart + 1, blockEnd);
+
+    const entryRe = /'([^']+)':\s*'([^']+)'/g;
+    let m;
+    while ((m = entryRe.exec(block)) !== null) {
+      mappings.push({ key: m[1], namespaceKey: m[2], source: varName });
+    }
+  }
+
+  return mappings;
+}
+
+function getBreadcrumbNamespace(source) {
+  return source === 'CHECK_SEGMENT_LABELS' ? 'Check' : 'Navbar';
+}
+
+function resolveNested(messages, locale, namespace, keyPath) {
+  const parts = keyPath.split('.');
+  let current = messages[locale];
+  if (!current || typeof current !== 'object' || !(namespace in current)) return null;
+  current = current[namespace];
+  for (const part of parts) {
+    if (!current || typeof current !== 'object' || !(part in current)) return null;
+    current = current[part];
+  }
+  return typeof current === 'string' ? current : null;
+}
+
+function checkBreadcrumbKeys(verbose = true) {
+  const mappings = extractBreadcrumbMappings();
+  if (mappings.length === 0) {
+    if (verbose) console.log('\n🧩 面包屑 key 检查: ⏭️ 未找到映射');
+    return { total: 0, missing: [], mappings: 0 };
+  }
+
+  // Load merged messages: shared UI + site + portal
+  const merged = deepMergeShared();
+  const locales = Object.keys(merged).sort();
+
+  const missing = [];
+  for (const mapping of mappings) {
+    const ns = getBreadcrumbNamespace(mapping.source);
+    for (const locale of locales) {
+      const value = resolveNested(merged, locale, ns, mapping.namespaceKey);
+      if (!value) {
+        missing.push({ locale, key: mapping.key, ns, keyPath: mapping.namespaceKey, source: mapping.source });
+      }
+    }
+  }
+
+  if (verbose) {
+    console.log(`\n🧩 面包屑 key 检查 (${mappings.length} 映射 × ${locales.length} 语言):`);
+    if (missing.length > 0) {
+      console.log(`  ❌ 缺失 ${missing.length} 处:`);
+      for (const m of missing.slice(0, 30)) {
+        console.log(`    [${m.locale}] ${m.source}.${m.key} → ${m.ns}.${m.keyPath}`);
+      }
+      if (missing.length > 30) console.log(`    ... 还有 ${missing.length - 30} 条`);
+    } else {
+      console.log('  ✅ 所有面包屑 key 在 48 语言中均存在');
+    }
+  }
+
+  return { total: missing.length, missing, mappings: mappings.length };
+}
+
+// Deep merge shared UI + site + portal messages for breadcrumb check
+function deepMerge(base, override) {
+  const result = { ...base };
+  for (const key of Object.keys(override)) {
+    if (key in result && typeof result[key] === 'object' && result[key] !== null && !Array.isArray(result[key])
+        && typeof override[key] === 'object' && override[key] !== null && !Array.isArray(override[key])) {
+      result[key] = deepMerge(result[key], override[key]);
+    } else {
+      result[key] = override[key];
+    }
+  }
+  return result;
+}
+
+function deepMergeShared() {
+  const base = {};
+  if (!fs.existsSync(SHARED_UI_MESSAGES_DIR)) return base;
+  for (const file of fs.readdirSync(SHARED_UI_MESSAGES_DIR)) {
+    if (!file.endsWith('.json')) continue;
+    const locale = file.slice(0, -5);
+    base[locale] = JSON.parse(fs.readFileSync(path.join(SHARED_UI_MESSAGES_DIR, file), 'utf-8'));
+  }
+
+  // Merge site overrides
+  const siteDir = path.join(MONOREPO_ROOT, '..', 'apps', 'site', 'messages');
+  if (fs.existsSync(siteDir)) {
+    for (const file of fs.readdirSync(siteDir)) {
+      if (!file.endsWith('.json')) continue;
+      const locale = file.slice(0, -5);
+      const data = JSON.parse(fs.readFileSync(path.join(siteDir, file), 'utf-8'));
+      if (base[locale]) base[locale] = deepMerge(base[locale], data);
+    }
+  }
+
+  // Merge portal overrides
+  const portalDir = path.join(MONOREPO_ROOT, '..', 'apps', 'portal', 'messages');
+  if (fs.existsSync(portalDir)) {
+    for (const file of fs.readdirSync(portalDir)) {
+      if (!file.endsWith('.json')) continue;
+      const locale = file.slice(0, -5);
+      const data = JSON.parse(fs.readFileSync(path.join(portalDir, file), 'utf-8'));
+      if (base[locale]) base[locale] = deepMerge(base[locale], data);
+    }
+  }
+
+  return base;
+}
+
+// ============================================================
 // CLI
 // ============================================================
 const args = process.argv.slice(2);
@@ -783,7 +996,10 @@ if (jsonOut && result) {
   console.log(JSON.stringify(result.issues_by_type, null, 2));
 }
 
-const totalIssues = (result?.total_issues ?? 0) + blogIssues + (localeCheck?.total ?? 0) + industryMetaIssues + portalIssues;
+const sharedUiIssues = checkSharedUiMessages(!short);
+const breadcrumbResult = (targetLang || args.includes('--skip-breadcrumb-check')) ? { total: 0, missing: [] } : checkBreadcrumbKeys(!short);
+
+const totalIssues = (result?.total_issues ?? 0) + blogIssues + (localeCheck?.total ?? 0) + industryMetaIssues + portalIssues + sharedUiIssues + breadcrumbResult.total;
 
 if (totalIssues === 0) {
   console.log('\n✅ 全量核验通过！48 种语言无质量问题。');
@@ -803,6 +1019,12 @@ if (totalIssues === 0) {
   }
   if (portalIssues > 0) {
     console.log(`   - Portal 翻译质量: ${portalIssues} 个问题`);
+  }
+  if (sharedUiIssues > 0) {
+    console.log(`   - 共享 UI 消息: ${sharedUiIssues} 个问题`);
+  }
+  if (breadcrumbResult.total > 0) {
+    console.log(`   - 面包屑 key: ${breadcrumbResult.total} 处缺失`);
   }
   if (process.argv.includes("--ci")) process.exit(1);
 }

@@ -16,7 +16,7 @@
     "address": "Okrožje Jing'an, Šanghaj, Kitajska",
     "disclaimer": "Zavrnitev odgovornosti: Smo neodvisno regulativno svetovalno podjetje in nismo povezani z Generalno carinsko upravo Kitajske.",
     "whatsapp": "WhatsApp",
-    "testimonials": "Pričevanja",
+    "testimonials": "Mnenja strank",
     "industries": "Industrije",
     "blog": "Vpogledi"
   },
@@ -59,7 +59,7 @@
       "skincarecosmetics": "Nega kože in kozmetika",
       "petfood": "Hrana za hišne ljubljenčke",
       "healthsupplements": "Zdravstveni dodatki",
-      "babymaternal": "Baby & Maternal",
+      "babymaternal": "Materinstvo & Dojenčki",
       "consumerelectronics": "Zabavna elektronika",
       "medicaldevices": "Medicinski pripomočki",
       "crossborderecommerce": "Čezmejno e-trgovanje"
@@ -68,16 +68,20 @@
     "freeCheck": "Brezplačni pregled",
     "signIn": "Prijava",
     "signUp": "Registracija",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "Naročnina",
+    "settings": "Nastavitve",
+    "selfCheck": "Orodje za Samoevalvacijo",
+    "mePage": "Moj račun",
+    "testimonials": "Mnenja strank",
+    "privacy": "Pravilnik o zasebnosti"
   },
   "MobileTab": {
     "home": "Domov",
     "services": "Storitve",
     "blog": "Blog",
-    "contact": "Kontakt"
+    "check": "Preveri"
   },
   "CTA": {
     "ctaTitle": "Potrebujete to storitev?",

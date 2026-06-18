@@ -16,7 +16,7 @@
     "address": "ජිංගන් දිස්ත්‍රික්කය, ෂැංහයි, චීනය",
     "disclaimer": "වියාචනය: අපි ස්වාධීන නියාමන උපදේශන සමාගමක් වන අතර චීනයේ රේගු සාමාන්‍ය පරිපාලනයට අනුබද්ධ නොවේ.",
     "whatsapp": "WhatsApp",
-    "testimonials": "සහතික",
+    "testimonials": "ශ්‍රේෂ්ඨත්වය",
     "industries": "කර්මාන්ත",
     "blog": "තීක්ෂ්ණ බුද්ධිය"
   },
@@ -68,16 +68,20 @@
     "freeCheck": "නොමිලේ චෙක්පත",
     "signIn": "පිවිසෙන්න",
     "signUp": "ලියාපදිංචි වන්න",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "බැඳීම",
+    "settings": "සැකසුම්",
+    "selfCheck": "ස්වයං මූල්යාංකන මෙවලම",
+    "mePage": "මගේ ගිණුම",
+    "testimonials": "ශ්‍රේෂ්ඨත්වය",
+    "privacy": "ගුප්තත්ව කොන්දේසි"
   },
   "MobileTab": {
     "home": "මුල් පිටුව",
     "services": "සේවා",
     "blog": "බ්ලොගය",
-    "contact": "සම්බන්ධ වන්න"
+    "check": "පරීක්ෂා කරන්න"
   },
   "CTA": {
     "ctaTitle": "මෙම සේවාව අවශ්‍යද?",

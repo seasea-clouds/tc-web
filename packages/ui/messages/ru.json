@@ -68,16 +68,20 @@
     "freeCheck": "Бесплатная проверка",
     "signIn": "Войти",
     "signUp": "Регистрация",
-    "signOut": "signOut",
-    "myReports": "myReports",
-    "subscription": "subscription",
-    "settings": "settings"
+    "signOut": "Sign Out",
+    "myReports": "My Reports",
+    "subscription": "Подписка",
+    "settings": "Настройки",
+    "selfCheck": "Инструмент Самопроверки",
+    "mePage": "Мой аккаунт",
+    "testimonials": "Отзывы",
+    "privacy": "Политика конфиденциальности"
   },
   "MobileTab": {
     "home": "Главная",
     "services": "Услуги",
     "blog": "Блог",
-    "contact": "Контакты"
+    "check": "Проверка"
   },
   "CTA": {
     "ctaTitle": "Нужна эта услуга?",

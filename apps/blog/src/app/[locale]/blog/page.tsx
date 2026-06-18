@@ -1,4 +1,4 @@
-import { WHATSAPP_URL, LOCALES, SITE_URL, buildLanguages, sharedOpenGraph, sharedTwitter } from '@trade/ui';
+import { WHATSAPP_URL, LOCALES, SITE_URL, buildLanguages, sharedOpenGraph, sharedTwitter, AutoBreadcrumb } from '@trade/ui';
 import fs from 'fs';
 import path from 'path';
 import { getPosts } from '@/lib/posts';
@@ -52,6 +52,7 @@ export default async function BlogHome({ params }: { params: Promise<{ locale: s
 
   return (
     <>
+      <AutoBreadcrumb locale={locale} />
       {/* Blog schema */}
       <script
         type="application/ld+json"

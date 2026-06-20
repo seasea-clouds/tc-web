@@ -70,18 +70,25 @@ const IGNORE_FALLBACK_KEYS = new Set([
   'Check.reportModuleCrossborder', 'Check.crossborderTitle',
   'Check.crossborderDesc',
   'Home.popular',
-  // Report: short loanwords (Status/Plan are correct in Germanic/Romance)
-  'Report.status', 'Report.plan',
+  // Report: Status/Plan/Client are correct loanwords in many languages (Germanic, Romance, etc.)
+  'Report.status', 'Report.plan', 'Report.client',
+  'ReportSection.status', 'ReportSection.plan',
+  // AiAssistance: contact info & service headers (partial strings ending with ':')
+  'AiAssistance.contactEmail', 'AiAssistance.contactLinkedIn',
+  'AiAssistance.serviceGACC', 'AiAssistance.serviceCCC', 'AiAssistance.serviceLabel',
+  'AiAssistance.serviceNMPA', 'AiAssistance.serviceCBEC', 'AiAssistance.serviceBrand',
+  'AiAssistance.servicesTitle',
 ]);
 
 const IGNORE_FALLBACK_VALUES = new Set([
   'NMPA Cosmetics Filing', 'NMPA cosmetics filing and registration support',
   'PIPL Data Compliance Assessment', 'GACC Food Registration',
   'China Import Compliance Services', 'Medical device compliance training and advisory',
-  'Baby & Maternal',
-  'Free Check', 'FAQ', 'WhatsApp',
+  'Baby & Maternal', 'Free Check', 'FAQ', 'WhatsApp',
   'Sign Out', 'My Reports', 'Settings', 'Subscription',
   'Pricing', 'Dashboard', 'Billing', 'Login', 'Register', 'Report',
+  // 认证标志（全球通用，不应翻译）
+  'FCC', 'CE', 'UL',
 ]);
 
 const NUMBER_KEYS = new Set([
@@ -178,7 +185,7 @@ for (const lang of ['af','az','ca','cs','el','fi','hr','hu','id','ka','ms','pl',
 const ENGLISH_RESIDUAL_ALLOW = new Set([
   ...NO_TRANSLATE, ...SHARED_WORDS_ALL,
   'Tmall', 'JD', 'Douyin', 'TikTok', 'RED', 'Pinduoduo', 'Xiaohongshu',
-  'Kaola', 'Little', 'Red', 'Book', 'Worldwide', 'Global', 'China',
+  'Kaola', 'Jingan', 'Little', 'Red', 'Book', 'Worldwide', 'Global', 'China',
   'Alipay', 'Pay', 'WeChat',
   'YouTube', 'Instagram', 'Threads', 'Facebook', 'Twitter',
   'SinoTrade', 'Compliance', 'Mini', 'App', 'Partner', 'Partners',
@@ -225,6 +232,7 @@ const ENGLISH_RESIDUAL_ALLOW = new Set([
   'need', 'only', 'what', 'you',
   'Cabernet', 'Sauvignon',
   'Self', 'Sinotrade',
+  'Assistance', 'border',
 ]);
 
 // ============================================================

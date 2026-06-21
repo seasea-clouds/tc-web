@@ -6,7 +6,7 @@
     "heroExplore": "Perkhidmatan Teroka",
     "servicesTitle": "Perkhidmatan Pematuhan Komprehensif",
     "servicesSubtitle": "Sokongan kawal selia hujung ke hujung untuk jenama yang memasuki pasaran China.",
-    "whyTitle": "Mengapa Pilih Pematuhan SinoTrade",
+    "whyTitle": "Mengapa Pilih SinoTrade Compliance",
     "whySubtitle": "Rakan kongsi anda yang dipercayai untuk menavigasi peraturan import China.",
     "whyCard1Title": "Liputan Kategori Penuh",
     "whyCard1Desc": "Daripada makanan dan kosmetik kepada elektronik dan tekstil: ",
@@ -74,28 +74,28 @@
     "trustedByTitle": "Rakan Kongsi Dipercayai",
     "processDesc": "Proses 6 langkah mudah untuk membawa jenama anda ke China",
     "trustedByDesc": "Sertai jenama antarabangsa yang telah berkembang bersama kami",
-    "metaTitle": "Pematuhan SinoTrade | Perkhidmatan Pematuhan Import China",
+    "metaTitle": "SinoTrade Compliance | Perkhidmatan Pematuhan Import China",
     "metaDescription": "Pematuhan import China sehenti: pendaftaran GACC, pensijilan CCC, pemfailan kosmetik NMPA, pematuhan label. Dipercayai oleh pengeksport di 50+ negara."
   },
   "Services": {
     "heroTitle": "Perkhidmatan Kami",
     "heroSubtitle": "Penyelesaian pematuhan import yang komprehensif untuk setiap industri yang memasuki pasaran China.",
-    "gaccTitle": "Pendaftaran Makanan GACC - Pematuhan Import China | Pematuhan SinoTrade",
+    "gaccTitle": "Pendaftaran Makanan GACC - Pematuhan Import China | SinoTrade Compliance",
     "gaccSubtitle": "Lengkapkan pendaftaran Dekri GACC 248/249 untuk pengeluar makanan dan minuman yang mengeksport ke China.",
     "gaccLink": "Ketahui lebih lanjut",
-    "labelTitle": "Pematuhan Label Cina - Pematuhan Import China | Pematuhan SinoTrade",
+    "labelTitle": "Pematuhan Label Cina - Pematuhan Import China | SinoTrade Compliance",
     "labelSubtitle": "Reka bentuk label Cina profesional dan semakan memenuhi standard GB 7718 dan GB 28050.",
     "labelLink": "Ketahui lebih lanjut",
-    "cccTitle": "Pensijilan CCC - Pematuhan Import China | Pematuhan SinoTrade",
+    "cccTitle": "Pensijilan CCC - Pematuhan Import China | SinoTrade Compliance",
     "cccSubtitle": "Perundingan Pensijilan Wajib China untuk elektronik, peralatan, mainan dan alat ganti automotif.",
     "cccLink": "Ketahui lebih lanjut",
-    "cosmeticsTitle": "Pemfailan Kosmetik - Pematuhan Import China | Pematuhan SinoTrade",
+    "cosmeticsTitle": "Pemfailan Kosmetik - Pematuhan Import China | SinoTrade Compliance",
     "cosmeticsSubtitle": "Pendaftaran dan pemfailan NMPA untuk kosmetik yang diimport: kategori kegunaan biasa dan khas.",
     "cosmeticsLink": "Ketahui lebih lanjut",
-    "ecommerceTitle": "E-dagang rentas sempadan - Pematuhan Import China | Pematuhan SinoTrade",
+    "ecommerceTitle": "E-dagang rentas sempadan - Pematuhan Import China | SinoTrade Compliance",
     "ecommerceSubtitle": "Persediaan e-dagang rentas sempadan hujung ke hujung: daripada onboarding platform kepada pematuhan operasi.",
     "ecommerceLink": "Ketahui lebih lanjut",
-    "brandTitle": "Perlindungan Jenama - Pematuhan Import China | Pematuhan SinoTrade",
+    "brandTitle": "Perlindungan Jenama - Pematuhan Import China | SinoTrade Compliance",
     "brandSubtitle": "Pendaftaran tanda dagangan, pemfailan IP kastam dan pematuhan pengiklanan untuk melindungi jenama anda di China.",
     "brandLink": "Ketahui lebih lanjut",
     "gaccIndustries": "Tenusu, daging, makanan laut, kedai roti, minuman, makanan kesihatan dan kesemua 18 kategori terkawal GACC.",
@@ -154,7 +154,7 @@
     "cosmeticsPoints7": "Kemas kini peraturan berterusan dan nasihat pematuhan",
     "ecommercePoints7": "Kemas kini peraturan berterusan dan nasihat pematuhan",
     "brandPoints7": "Kemas kini peraturan berterusan dan nasihat pematuhan",
-    "metaTitle": "Perkhidmatan Pematuhan Import China | GACC, CCC, NMPA & Label - Perkhidmatan Pematuhan Import China | Pematuhan SinoTrade",
+    "metaTitle": "Perkhidmatan Pematuhan Import China | GACC, CCC, NMPA & Label - Perkhidmatan Pematuhan Import China | SinoTrade Compliance",
     "metaDescription": "Pematuhan import China sehenti: pendaftaran makanan GACC, pensijilan CCC, pemfailan kosmetik NMPA, pematuhan label & perlindungan jenama. 15+ tahun kepakaran."
   },
   "ServiceGacc": {
@@ -228,7 +228,7 @@
     "faq6q": "Apakah piawaian yang perlu dipatuhi oleh label?",
     "faq6a": "Label makanan prabungkus mesti mematuhi GB 7718-2025 (Standard Umum untuk Label Makanan Prabungkus) dan GB 28050-2025 (Standard Pelabelan Pemakanan). Ini meliputi penamaan produk, senarai ramuan, panel pemakanan, pengisytiharan alergen dan banyak lagi.",
     "jsonldName": "Pematuhan Label Cina",
-    "jsonldDescription": "Perkhidmatan Pematuhan Label Cina untuk kemasukan pasaran China oleh Pematuhan SinoTrade.",
+    "jsonldDescription": "Perkhidmatan Pematuhan Label Cina untuk kemasukan pasaran China oleh SinoTrade Compliance.",
     "jsonldServiceType": "Pematuhan Label Cina",
     "serviceType": "Pematuhan Label Cina",
     "howtoTitle": "Cara Mematuhi Keperluan Label Cina",
@@ -516,7 +516,7 @@
     "premiumItems3": "Pemfailan Kosmetik NMPA (jika berkenaan)",
     "premiumItems4": "Penilaian Pematuhan Data PIPL",
     "premiumItems5": "Nasihat Pematuhan Berterusan",
-    "metaTitle": "Pakej Perkhidmatan Pematuhan China | Harga & Pelan - Pakej Perkhidmatan Pematuhan | Pematuhan SinoTrade",
+    "metaTitle": "Pakej Perkhidmatan Pematuhan China | Harga & Pelan - Pakej Perkhidmatan Pematuhan | SinoTrade Compliance",
     "metaDescription": "Harga telus untuk perkhidmatan pematuhan import China. Pendaftaran GACC, pensijilan CCC, pakej pemfailan NMPA. Pilih pelan yang sesuai dengan keperluan anda."
   },
   "Faq": {
@@ -623,11 +623,11 @@
       "ecommerceName": "E-dagang rentas sempadan",
       "brandName": "Perlindungan Jenama"
     },
-    "metaTitle": "Soalan Lazim Pematuhan Import China | Soalan GACC, CCC, NMPA - Soal Jawab Pematuhan Import China | Pematuhan SinoTrade",
+    "metaTitle": "Soalan Lazim Pematuhan Import China | Soalan GACC, CCC, NMPA - Soal Jawab Pematuhan Import China | SinoTrade Compliance",
     "metaDescription": "Soalan lazim tentang pematuhan import China. Pendaftaran GACC, pensijilan CCC, pemfailan kosmetik NMPA, keperluan label yang dijawab oleh pakar."
   },
   "About": {
-    "heroTitle": "Mengenai Pematuhan SinoTrade",
+    "heroTitle": "Mengenai SinoTrade Compliance",
     "heroSubtitle": "Rakan kongsi anda yang dipercayai untuk menavigasi peraturan import China.",
     "expertTitle": "Temui Pakar China Anda",
     "expertName": "David Zhang",
@@ -645,7 +645,7 @@
     "ctaTitle": "Mari Berbincang Tentang Produk Anda",
     "ctaSubtitle": "Dapatkan penilaian pematuhan percuma daripada pasukan pakar kami.",
     "ctaButton": "Dapatkan Penilaian Percuma",
-    "title": "Mengenai Pematuhan SinoTrade",
+    "title": "Mengenai SinoTrade Compliance",
     "subtitle": "Rakan kongsi anda yang dipercayai untuk menavigasi peraturan import China.",
     "missionText": "Untuk menjadikan peraturan import China boleh diakses dan dilayari untuk perniagaan antarabangsa dari semua saiz. Kami percaya bahawa pematuhan tidak seharusnya menjadi penghalang kepada kemasukan pasaran — ia harus menjadi jambatan.",
     "teamTitle": "Pasukan Kami",
@@ -664,8 +664,8 @@
     "teamMember4Desc": "9+ tahun pakar dalam hal ehwal pengawalseliaan kosmetik NMPA di bawah CSAR (Peraturan Pengawasan dan Pentadbiran Kosmetik) China. Leo telah berjaya mendaftarkan 300+ produk kosmetik, meliputi kedua-dua kosmetik biasa (penjagaan kulit, solek, pewangi, penjagaan rambut) dan kosmetik kegunaan khas (pelindung matahari, pewarna rambut, pemutihan, anti-rambut gugur). Beliau menguruskan kitaran hayat pendaftaran yang lengkap — daripada penilaian keselamatan bahan dan penyelarasan ujian keberkesanan kepada penjejakan penyerahan dan pemantauan pematuhan pasca pasaran. Kepakaran beliau dalam mengemudi sistem inventori bahan yang baru dilaksanakan dan platform pemberitahuan kosmetik memastikan pelanggan mencapai kemasukan pasaran dengan cekap sambil mengekalkan pematuhan peraturan penuh.",
     "partnersTitle": "Rakan Kongsi Dipercayai",
     "partnersSubtitle": "Kami bekerjasama dengan makmal bertauliah, badan pensijilan dan rakan kongsi undang-undang di seluruh China.",
-    "jsonldName": "Mengenai Pematuhan SinoTrade",
-    "jsonldDescription": "Ketahui tentang David Zhang dan pasukan Pematuhan SinoTrade: ",
+    "jsonldName": "Mengenai SinoTrade Compliance",
+    "jsonldDescription": "Ketahui tentang David Zhang dan pasukan SinoTrade Compliance: ",
     "jsonldJobTitle": "Pakar Pendaftaran GACC",
     "jsonldKnowsAbout": "Pendaftaran GACC, Pematuhan Import, Keselamatan Makanan, Kemasukan Pasaran Cina",
     "cta": "Sembang di WhatsApp",
@@ -682,8 +682,8 @@
     "partners7": "🔬 Institut Penyelidikan",
     "partners8": "🤝 Persatuan Industri",
     "values5": "Kecemerlangan: Menyampaikan penyelesaian pematuhan berkualiti tinggi dengan perhatian kepada setiap butiran.",
-    "metaTitle": "Mengenai Pematuhan SinoTrade | 15+ Tahun Kepakaran Import China - Kepakaran Pematuhan Import China | Pematuhan SinoTrade",
-    "metaDescription": "Ketahui tentang Pematuhan SinoTrade — rakan kongsi anda yang dipercayai untuk pematuhan import China. Pengalaman 15+ tahun, 50+ negara berkhidmat. Temui pasukan pakar kami."
+    "metaTitle": "Mengenai SinoTrade Compliance | 15+ Tahun Kepakaran Import China - Kepakaran Pematuhan Import China | SinoTrade Compliance",
+    "metaDescription": "Ketahui tentang SinoTrade Compliance — rakan kongsi anda yang dipercayai untuk pematuhan import China. Pengalaman 15+ tahun, 50+ negara berkhidmat. Temui pasukan pakar kami."
   },
   "ThankYou": {
     "title": "Terima kasih!",
@@ -700,7 +700,7 @@
     "viewAllBlog": "Lihat Semua Artikel",
     "servicesTitle": "Terokai Perkhidmatan Kami",
     "serviceGacc": "Pendaftaran GACC",
-    "serviceLabel": "Pematuhan Label Cina",
+    "serviceLabel": "Pematuhan Label Cina | SinoTrade Compliance",
     "serviceCcc": "Pensijilan CCC",
     "serviceCosmetics": "Pemfailan Kosmetik NMPA",
     "serviceEcommerce": "E-dagang rentas sempadan",
@@ -714,7 +714,7 @@
     "stat4Number": "100%",
     "stat4Label": "Kadar Pematuhan",
     "blogDesc": "Terokai lebih banyak cerapan",
-    "metaTitle": "Terima Kasih | Pematuhan SinoTrade",
+    "metaTitle": "Terima Kasih | SinoTrade Compliance",
     "metaDescription": "Terima kasih kerana menghubungi SinoTrade Compliance. Kami akan menjawab pertanyaan anda dalam masa 24 jam."
   },
   "Blog": {
@@ -753,7 +753,7 @@
     "next": "Seterusnya",
     "pageInfo": "",
     "of": " daripada ",
-    "metaTitle": "Wawasan Pematuhan Import China | Panduan GACC, CCC, NMPA - Wawasan Pematuhan Import China | Pematuhan SinoTrade",
+    "metaTitle": "Wawasan Pematuhan Import China | Panduan GACC, CCC, NMPA - Wawasan Pematuhan Import China | SinoTrade Compliance",
     "metaDescription": "Panduan pakar tentang pematuhan import China. Petua pendaftaran GACC, kemas kini pensijilan CCC, berita pemfailan NMPA, cerapan pematuhan label. Kekal dimaklumkan."
   },
   "OrganizationJsonLd": {
@@ -784,9 +784,9 @@
     "samrDefinition": "SAMR ialah Pentadbiran Negeri China untuk Peraturan Pasaran. Ia menyelia kualiti produk, piawaian keselamatan makanan, penguatkuasaan anti-monopoli dan penyeliaan pasaran. SAMR bekerjasama dengan GACC mengenai peraturan makanan dan kosmetik."
   },
   "Quote": {
-    "metaTitle": "Dapatkan Sebut Harga Pematuhan China Percuma | Pematuhan SinoTrade",
+    "metaTitle": "Dapatkan Sebut Harga Pematuhan China Percuma | SinoTrade Compliance",
     "metaDescription": "Minta perundingan percuma untuk pematuhan import China. Pendaftaran GACC, pensijilan CCC, pemfailan NMPA, semakan label. Maklum balas dalam masa 24 jam.",
-    "ogTitle": "Dapatkan Sebut Harga Percuma: Pematuhan SinoTrade",
+    "ogTitle": "Dapatkan Sebut Harga Percuma: SinoTrade Compliance",
     "heroTitle": "Dapatkan Sebut Harga Percuma",
     "heroSubtitle": "Beritahu kami perkhidmatan yang anda perlukan dan kami akan menghubungi anda semula dalam masa 24 jam dengan pelan yang diperibadikan.",
     "serviceLabel": "Pilih Perkhidmatan Diperlukan",
@@ -810,9 +810,9 @@
     "privacy": "Kami menghormati privasi anda. Tiada spam, pernah."
   },
   "Testimonials": {
-    "metaTitle": "Testimoni Pelanggan | Kisah Kejayaan Pematuhan SinoTrade",
+    "metaTitle": "Testimoni Pelanggan | Kisah Kejayaan SinoTrade Compliance",
     "metaDescription": "Baca apa yang pelanggan kami katakan tentang perkhidmatan pematuhan import China kami. Kisah kejayaan sebenar daripada pengeksport makanan, kosmetik, elektronik di seluruh dunia.",
-    "ogTitle": "Testimoni Pelanggan: Pematuhan SinoTrade",
+    "ogTitle": "Testimoni Pelanggan: SinoTrade Compliance",
     "heroTitle": "Apa Kata Pelanggan Kami",
     "heroSubtitle": "Dipercayai oleh pengeksport di 50+ negara. Inilah yang mereka katakan tentang bekerja dengan kami.",
     "ctaTitle": "Bersedia untuk Bermula?",
@@ -1143,7 +1143,7 @@
       "crossborderecommerce": "E-dagang rentas sempadan",
       "crossborderecommerceDesc": "Peraturan CBEC, pematuhan platform dan pengoptimuman cukai."
     },
-    "metaTitle": "Pematuhan Import China mengikut Industri | Perkhidmatan GACC, CCC, NMPA - Panduan Pematuhan Industri | Pematuhan SinoTrade",
+    "metaTitle": "Pematuhan Import China mengikut Industri | Perkhidmatan GACC, CCC, NMPA - Panduan Pematuhan Industri | SinoTrade Compliance",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
@@ -1278,8 +1278,8 @@
   "Sitemap": {
     "pageTitle": "Peta Laman",
     "pageSubtitle": "Gambaran keseluruhan lengkap semua halaman di tapak web kami.",
-    "metaTitle": "Peta Laman | Pematuhan SinoTrade",
-    "metaDescription": "Semak imbas semua perkhidmatan, panduan industri, catatan insights dan halaman di tapak web Pematuhan SinoTrade.",
+    "metaTitle": "Peta Laman | SinoTrade Compliance",
+    "metaDescription": "Semak imbas semua perkhidmatan, panduan industri, catatan insights dan halaman di tapak web SinoTrade Compliance.",
     "servicesTitle": "Perkhidmatan",
     "industriesTitle": "industri",
     "blogTitle": "Insights",
@@ -1299,8 +1299,8 @@
     "privacyLink": "Dasar Privasi"
   },
   "Privacy": {
-    "metaTitle": "Dasar Privasi | Pematuhan SinoTrade",
-    "metaDescription": "Dasar Privasi untuk Pematuhan SinoTrade — cara kami mengumpul, menggunakan dan melindungi data peribadi anda.",
+    "metaTitle": "Dasar Privasi | SinoTrade Compliance",
+    "metaDescription": "Dasar Privasi untuk SinoTrade Compliance — cara kami mengumpul, menggunakan dan melindungi data peribadi anda.",
     "title": "Dasar Privasi",
     "infoTitle": "Maklumat yang Kami Kumpul",
     "infoText1": "Kami hanya mengumpul maklumat peribadi yang anda berikan secara sukarela kepada kami melalui borang hubungan kami, alat semakan pematuhan atau pendaftaran akaun. Ini mungkin termasuk nama, alamat e-mel, nama syarikat dan butiran produk anda yang diperlukan untuk menyediakan perkhidmatan penilaian pematuhan kami.",
@@ -1327,16 +1327,16 @@
     "faqQ2": "Adakah semua produk memerlukan pensijilan CCC?",
     "faqQ3": "Berapa lama masa pendaftaran GACC?",
     "faqTitle": "Soalan Lazim",
-    "intro": "Halaman ini menyediakan maklumat berstruktur tentang Pematuhan SinoTrade untuk AI dan bantuan model bahasa.",
+    "intro": "Halaman ini menyediakan maklumat berstruktur tentang SinoTrade Compliance untuk AI dan bantuan model bahasa.",
     "metaDescription": "Data pematuhan berstruktur untuk AI: GACC, CCC, NMPA, pematuhan label, e-dagang rentas sempadan.",
-    "metaTitle": "Pematuhan SinoTrade | EN AI-Bantuan",
+    "metaTitle": "SinoTrade Compliance | EN AI-Bantuan",
     "serviceBrand": "Perlindungan Jenama: ",
     "serviceCBEC": "E-Dagang Merentas Sempadan: ",
     "serviceCCC": "Pensijilan CCC: Pensijilan Wajib China untuk 17 kategori produk termasuk elektronik, perkakas rumah, alat ganti automotif, produk lampu dan komponen keselamatan.",
     "serviceGACC": "Pendaftaran Makanan GACC: ",
     "serviceLabel": "Pematuhan Label Cina: ",
     "serviceNMPA": "NMPA Cosmetics Filing: ",
-    "title": "Pematuhan SinoTrade: AI-Assistance (EN)",
+    "title": "SinoTrade Compliance: AI-Assistance (EN)",
     "servicesTitle": "Perkhidmatan"
   },
   "Navbar": {

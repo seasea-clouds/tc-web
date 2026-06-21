@@ -49,7 +49,7 @@
     "faq": "คำถามที่พบบ่อย",
     "blog": "ข้อมูลเชิงลึก",
     "contact": "ติดต่อเรา",
-    "whatsapp": "วอทส์แอพพ์",
+    "whatsapp": "WhatsApp",
     "quote": "รับใบเสนอราคา",
     "industries": "อุตสาหกรรม",
     "industriesDropdown": {
@@ -65,7 +65,7 @@
       "crossborderecommerce": "อีคอมเมิร์ซข้ามพรมแดน"
     },
     "search": "ค้นหา",
-    "freeCheck": "เช็คฟรี",
+    "freeCheck": "ตรวจสอบฟรี",
     "signIn": "เข้าสู่ระบบ",
     "signUp": "สมัครสมาชิก",
     "signOut": "Sign Out",

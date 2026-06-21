@@ -15,7 +15,7 @@ Generating search index for 48 locales...
   da: 1007 items (6S + 7B + 39F + 955C)
   de: 1007 items (6S + 7B + 39F + 955C)
   el: 1007 items (6S + 7B + 39F + 955C)
-  en: 1006 items (6S + 7B + 39F + 954C)
+  en: 1007 items (6S + 7B + 39F + 955C)
   es: 1007 items (6S + 7B + 39F + 955C)
   fa: 1007 items (6S + 7B + 39F + 955C)
   fi: 1007 items (6S + 7B + 39F + 955C)
@@ -57,11 +57,273 @@ Done.
 - Environments: .env
 
   Creating an optimized production build ...
-✓ Compiled successfully in 2.8s
+✓ Compiled successfully in 2.2s
   Running TypeScript ...
-  Finished TypeScript in 5.6s ...
+  Finished TypeScript in 5.7s ...
   Collecting page data using 19 workers ...
   Generating static pages using 19 workers (0/915) ...
   Generating static pages using 19 workers (228/915) 
   Generating static pages using 19 workers (457/915) 
   Generating static pages using 19 workers (686/915) 
+✓ Generating static pages using 19 workers (915/915) in 3.6s
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /_not-found
+├ ● /[locale]/c
+│ ├ /en/c
+│ ├ /zh/c
+│ ├ /es/c
+│ └ [+45 more paths]
+├ ● /[locale]/c/check/ccc
+│ ├ /en/c/check/ccc
+│ ├ /zh/c/check/ccc
+│ ├ /es/c/check/ccc
+│ └ [+45 more paths]
+├ ● /[locale]/c/check/crossborder
+│ ├ /en/c/check/crossborder
+│ ├ /zh/c/check/crossborder
+│ ├ /es/c/check/crossborder
+│ └ [+45 more paths]
+├ ● /[locale]/c/check/gacc
+│ ├ /en/c/check/gacc
+│ ├ /zh/c/check/gacc
+│ ├ /es/c/check/gacc
+│ └ [+45 more paths]
+├ ● /[locale]/c/check/label
+│ ├ /en/c/check/label
+│ ├ /zh/c/check/label
+│ ├ /es/c/check/label
+│ └ [+45 more paths]
+├ ● /[locale]/c/check/nmpa
+│ ├ /en/c/check/nmpa
+│ ├ /zh/c/check/nmpa
+│ ├ /es/c/check/nmpa
+│ └ [+45 more paths]
+├ ● /[locale]/c/check/trademark
+│ ├ /en/c/check/trademark
+│ ├ /zh/c/check/trademark
+│ ├ /es/c/check/trademark
+│ └ [+45 more paths]
+├ ● /[locale]/c/dashboard
+│ ├ /en/c/dashboard
+│ ├ /zh/c/dashboard
+│ ├ /es/c/dashboard
+│ └ [+45 more paths]
+├ ● /[locale]/c/dashboard/billing
+│ ├ /en/c/dashboard/billing
+│ ├ /zh/c/dashboard/billing
+│ ├ /es/c/dashboard/billing
+│ └ [+45 more paths]
+├ ● /[locale]/c/dashboard/reports
+│ ├ /en/c/dashboard/reports
+│ ├ /zh/c/dashboard/reports
+│ ├ /es/c/dashboard/reports
+│ └ [+45 more paths]
+├ ● /[locale]/c/login
+│ ├ /en/c/login
+│ ├ /zh/c/login
+│ ├ /es/c/login
+│ └ [+45 more paths]
+├ ● /[locale]/c/me
+│ ├ /en/c/me
+│ ├ /zh/c/me
+│ ├ /es/c/me
+│ └ [+45 more paths]
+├ ● /[locale]/c/me/reports
+│ ├ /en/c/me/reports
+│ ├ /zh/c/me/reports
+│ ├ /es/c/me/reports
+│ └ [+45 more paths]
+├ ● /[locale]/c/me/settings
+│ ├ /en/c/me/settings
+│ ├ /zh/c/me/settings
+│ ├ /es/c/me/settings
+│ └ [+45 more paths]
+├ ● /[locale]/c/me/subscription
+│ ├ /en/c/me/subscription
+│ ├ /zh/c/me/subscription
+│ ├ /es/c/me/subscription
+│ └ [+45 more paths]
+├ ● /[locale]/c/pricing
+│ ├ /en/c/pricing
+│ ├ /zh/c/pricing
+│ ├ /es/c/pricing
+│ └ [+45 more paths]
+├ ● /[locale]/c/register
+│ ├ /en/c/register
+│ ├ /zh/c/register
+│ ├ /es/c/register
+│ └ [+45 more paths]
+├ ● /[locale]/c/report
+│ ├ /en/c/report
+│ ├ /zh/c/report
+│ ├ /es/c/report
+│ └ [+45 more paths]
+└ ● /[locale]/c/report/preview
+  ├ /en/c/report/preview
+  ├ /zh/c/report/preview
+  ├ /es/c/report/preview
+  └ [+45 more paths]
+
+
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)
+
+
+═══════════════════════════════════════════════
+  CI 统一检查 — PORTAL
+  out-dir: out  next-dir: (none)
+═══════════════════════════════════════════════
+
+
+▶ check-seo-patterns.mjs --ci
+
+📁 site/
+
+📁 blog/
+
+📁 portal/
+
+==================================================
+📊 结果: 169 通过, 0 失败
+
+✅ check-seo-patterns.mjs 完成
+
+▶ check-hardcoded-domain.mjs --ci
+✅ 未发现硬编码的 *.pages.dev 域名引用
+
+▶ check-hardcoded.mjs apps/portal/src --ci
+🔍 Scanning for hardcoded English text in JSX/TSX...
+
+✅ No hardcoded English text found.
+
+▶ check-console.mjs --ci
+📁 扫描 198 个文件
+==================================================
+📊 结果: 208 通过, 0 失败
+
+✅ check-console.mjs 完成
+
+▶ check-rtl.mjs --ci
+
+📁 site/
+
+📁 blog/
+
+📁 portal/
+
+==================================================
+📊 结果: 9 通过, 0 失败
+
+✅ check-rtl.mjs 完成
+
+▶ check-map-key.mjs --ci
+📁 扫描 166 个 TSX 文件
+==================================================
+📊 结果: 166 通过, 0 失败
+
+✅ check-map-key.mjs 完成
+
+▶ check-jsonld.mjs --ci
+📁 扫描 24 个含 JSON-LD 的文件
+==================================================
+📊 结果: 81 通过, 0 失败
+
+✅ check-jsonld.mjs 完成
+
+▶ check-hreflang.mjs --dir=out --skip-pattern=404,_not-found --ci
+🔍 统一 hreflang 检查
+
+📦 模式: SSG 输出目录检查
+  📄 扫描 914 个 HTML 文件
+
+  跳过: 2 文件 (路径匹配 skip-pattern)
+
+  结果: 912 通过, 0 失败
+
+✅ hreflang 全部检查通过
+
+▶ check-seo-output.mjs --out-dir=out --ci
+
+🔍 SEO 输出检查: /root/projects/trade/web/apps/portal/out
+
+📄 扫描 HTML 页面...
+
+🗺️  检查 Sitemap...
+
+==================================================
+📊 结果: 240 通过, 0 失败
+
+✅ check-seo-output.mjs 完成
+
+▶ check-translations.mjs --short --skip-locale-check
+
+⚠️ 发现 5901 个问题
+   - 网站翻译质量: 3325 个问题
+   - 行业 meta 完整性: 528 个问题
+   - Portal 翻译质量: 2048 个问题
+
+▶ check-i18n-keys.mjs --ci --ci
+🔑 i18n key 完整性检查
+
+📦 SITE (0 missing, 221 extra, 0 hardcoded):
+  ℹ️  多余 key (221 处，lang 中有但 en 中没有):
+    [af] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [ar] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [az] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [be] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [bg] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [bn] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [ca] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [cs] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [da] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [de] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [el] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [es] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [fa] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [fi] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [fr] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [he] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [hi] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [hr] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [hu] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [hy] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    ... 还有 201 条
+
+📦 PORTAL (0 missing, 15 extra, 0 hardcoded):
+  ℹ️  多余 key (15 处，lang 中有但 en 中没有):
+    [ja] Check.freeCheck → "無料チェック"
+    [th] Navbar.home → "หน้าแรก"
+    [th] Navbar.services → "บรเิ วร"
+    [th] Navbar.blog → "บทความ"
+    [th] Navbar.contact → "ตดิ ตอ่"
+    [th] Navbar.freeCheck → "ตรวจสอบฟรเี ยน"
+    [th] Billing.title → "การเรืกเกบเงิ น และการสมัคร"
+    [th] Billing.currentPlan → "แผนปจจุบัน"
+    [th] Billing.plan → "แผน"
+    [th] Billing.status → "สถานะ"
+    [th] Billing.renewal → "ตออายุ"
+    [th] Billing.manageSubscription → "จาดการสมัคร"
+    [th] Billing.noSubscription → "ไมม่ีการสมัคร"
+    [th] Billing.viewPricing → "ดรราคา"
+    [zh] Pricing.simplePricing → "简单定价"
+
+📦 UI (0 missing, 0 extra, 0 hardcoded):
+  ✅ 全部通过
+
+📊 总计: 0 缺失 + 236 多余 + 0 硬编码英文
+✅ 所有 i18n key 完整，无硬编码英文
+
+▶ clean-rsc.js out
+🧹 Cleaning RSC .txt payload files from out/...
+✅ Deleted 8743 RSC payload files (349.5 MB freed)
+(node:53164) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/projects/trade/web/packages/scripts/clean-rsc.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /root/projects/trade/web/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+═══════════════════════════════════════════════
+✅ 全部检查通过
+═══════════════════════════════════════════════
+

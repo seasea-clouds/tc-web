@@ -11,14 +11,14 @@
     "packages": "Paket",
     "faq": "FAQ",
     "about": "Tentang Kami",
-    "rights": "© 2012-2026 Kepatuhan SinoTrade. Semua hak dilindungi undang-undang.",
+    "rights": "© 2012-2026 SinoTrade Compliance. Semua hak dilindungi undang-undang.",
     "quickLinks": "Tautan Cepat",
     "address": "Distrik Jing'an, Shanghai, Cina",
     "disclaimer": "Penafian: Kami adalah perusahaan konsultan peraturan independen dan tidak berafiliasi dengan Administrasi Umum Bea Cukai Tiongkok.",
     "whatsapp": "WhatsApp",
     "testimonials": "Testimoni",
     "industries": "Industri",
-    "blog": "Wawasan"
+    "blog": "Blog"
   },
   "Search": {
     "title": "Mencari",
@@ -34,8 +34,8 @@
   },
   "Navbar": {
     "logo": "SinoTrade Compliance",
-    "home": "Rumah",
-    "about": "Tentang",
+    "home": "Beranda",
+    "about": "Tentang Kami",
     "services": "Layanan",
     "servicesDropdown": {
       "gacc": "Pendaftaran Makanan GACC",
@@ -47,7 +47,7 @@
     },
     "packages": "Paket",
     "faq": "Pertanyaan Umum",
-    "blog": "Wawasan",
+    "blog": "Blog",
     "contact": "Hubungi kami",
     "whatsapp": "WhatsApp",
     "quote": "Dapatkan Penawaran",

@@ -11,14 +11,14 @@
     "packages": "Pakej",
     "faq": "FAQ",
     "about": "Tentang Kami",
-    "rights": "© 2012-2026 Pematuhan SinoTrade. Semua hak terpelihara.",
+    "rights": "© 2012-2026 SinoTrade Compliance. Semua hak terpelihara.",
     "quickLinks": "Pautan Pantas",
     "address": "Daerah Jing'an, Shanghai, China",
     "disclaimer": "Penafian: Kami adalah firma perunding kawal selia bebas dan tidak bergabung dengan Pentadbiran Am Kastam China.",
     "whatsapp": "WhatsApp",
     "testimonials": "Testimoni",
     "industries": "Industri",
-    "blog": "Wawasan"
+    "blog": "Blog"
   },
   "Search": {
     "title": "Cari",
@@ -34,8 +34,8 @@
   },
   "Navbar": {
     "logo": "SinoTrade Compliance",
-    "home": "Rumah",
-    "about": "Tentang",
+    "home": "Utama",
+    "about": "Tentang Kami",
     "services": "Perkhidmatan",
     "servicesDropdown": {
       "gacc": "Pendaftaran Makanan GACC",
@@ -47,7 +47,7 @@
     },
     "packages": "Pakej",
     "faq": "Soalan Lazim",
-    "blog": "Wawasan",
+    "blog": "Blog",
     "contact": "Hubungi Kami",
     "whatsapp": "WhatsApp",
     "quote": "Dapatkan Sebut Harga",

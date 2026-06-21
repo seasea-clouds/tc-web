@@ -30,334 +30,59 @@ Images: 18 converted
 Size: 1138K → 473K (58% saved)
 Apps discovered: blog, portal, site
 Generating search index for 48 locales...
-  af: 1000 items (6S + 7B + 39F + 948C)
-  ar: 1000 items (6S + 7B + 39F + 948C)
-  az: 1000 items (6S + 7B + 39F + 948C)
-  be: 1000 items (6S + 7B + 39F + 948C)
-  bg: 1000 items (6S + 7B + 39F + 948C)
-  bn: 1000 items (6S + 7B + 39F + 948C)
-  ca: 1000 items (6S + 7B + 39F + 948C)
-  cs: 1000 items (6S + 7B + 39F + 948C)
-  da: 1000 items (6S + 7B + 39F + 948C)
-  de: 1006 items (6S + 7B + 39F + 954C)
-  el: 1000 items (6S + 7B + 39F + 948C)
+  af: 1007 items (6S + 7B + 39F + 955C)
+  ar: 1007 items (6S + 7B + 39F + 955C)
+  az: 1007 items (6S + 7B + 39F + 955C)
+  be: 1007 items (6S + 7B + 39F + 955C)
+  bg: 1007 items (6S + 7B + 39F + 955C)
+  bn: 1007 items (6S + 7B + 39F + 955C)
+  ca: 1007 items (6S + 7B + 39F + 955C)
+  cs: 1007 items (6S + 7B + 39F + 955C)
+  da: 1007 items (6S + 7B + 39F + 955C)
+  de: 1007 items (6S + 7B + 39F + 955C)
+  el: 1007 items (6S + 7B + 39F + 955C)
   en: 1006 items (6S + 7B + 39F + 954C)
-  es: 1000 items (6S + 7B + 39F + 948C)
-  fa: 1000 items (6S + 7B + 39F + 948C)
-  fi: 1000 items (6S + 7B + 39F + 948C)
-  fr: 1000 items (6S + 7B + 39F + 948C)
-  he: 1000 items (6S + 7B + 39F + 948C)
-  hi: 1000 items (6S + 7B + 39F + 948C)
-  hr: 1000 items (6S + 7B + 39F + 948C)
-  hu: 1000 items (6S + 7B + 39F + 948C)
-  hy: 1000 items (6S + 7B + 39F + 948C)
-  id: 1000 items (6S + 7B + 39F + 948C)
-  it: 1000 items (6S + 7B + 39F + 948C)
-  ja: 1007 items (6S + 7B + 39F + 955C)
-  ka: 1000 items (6S + 7B + 39F + 948C)
-  ko: 1000 items (6S + 7B + 39F + 948C)
-  ms: 1000 items (6S + 7B + 39F + 948C)
-  ne: 1000 items (6S + 7B + 39F + 948C)
-  nl: 1000 items (6S + 7B + 39F + 948C)
-  no: 1000 items (6S + 7B + 39F + 948C)
-  pl: 1000 items (6S + 7B + 39F + 948C)
-  pt: 1000 items (6S + 7B + 39F + 948C)
-  ro: 1000 items (6S + 7B + 39F + 948C)
-  ru: 1000 items (6S + 7B + 39F + 948C)
-  si: 1000 items (6S + 7B + 39F + 948C)
-  sk: 1000 items (6S + 7B + 39F + 948C)
-  sl: 1000 items (6S + 7B + 39F + 948C)
-  sq: 1000 items (6S + 7B + 39F + 948C)
-  sr: 1000 items (6S + 7B + 39F + 948C)
-  sv: 1000 items (6S + 7B + 39F + 948C)
-  sw: 1000 items (6S + 7B + 39F + 948C)
-  ta: 1000 items (6S + 7B + 39F + 948C)
-  th: 1000 items (6S + 7B + 39F + 948C)
-  tr: 1000 items (6S + 7B + 39F + 948C)
-  uk: 1000 items (6S + 7B + 39F + 948C)
-  ur: 1000 items (6S + 7B + 39F + 948C)
-  vi: 1000 items (6S + 7B + 39F + 948C)
-  zh: 1006 items (6S + 7B + 39F + 954C)
+  es: 1007 items (6S + 7B + 39F + 955C)
+  fa: 1007 items (6S + 7B + 39F + 955C)
+  fi: 1007 items (6S + 7B + 39F + 955C)
+  fr: 1007 items (6S + 7B + 39F + 955C)
+  he: 1007 items (6S + 7B + 39F + 955C)
+  hi: 1007 items (6S + 7B + 39F + 955C)
+  hr: 1007 items (6S + 7B + 39F + 955C)
+  hu: 1007 items (6S + 7B + 39F + 955C)
+  hy: 1007 items (6S + 7B + 39F + 955C)
+  id: 1007 items (6S + 7B + 39F + 955C)
+  it: 1007 items (6S + 7B + 39F + 955C)
+  ja: 1008 items (6S + 7B + 39F + 956C)
+  ka: 1007 items (6S + 7B + 39F + 955C)
+  ko: 1007 items (6S + 7B + 39F + 955C)
+  ms: 1007 items (6S + 7B + 39F + 955C)
+  ne: 1007 items (6S + 7B + 39F + 955C)
+  nl: 1007 items (6S + 7B + 39F + 955C)
+  no: 1007 items (6S + 7B + 39F + 955C)
+  pl: 1007 items (6S + 7B + 39F + 955C)
+  pt: 1007 items (6S + 7B + 39F + 955C)
+  ro: 1007 items (6S + 7B + 39F + 955C)
+  ru: 1007 items (6S + 7B + 39F + 955C)
+  si: 1007 items (6S + 7B + 39F + 955C)
+  sk: 1007 items (6S + 7B + 39F + 955C)
+  sl: 1007 items (6S + 7B + 39F + 955C)
+  sq: 1007 items (6S + 7B + 39F + 955C)
+  sr: 1007 items (6S + 7B + 39F + 955C)
+  sv: 1007 items (6S + 7B + 39F + 955C)
+  sw: 1007 items (6S + 7B + 39F + 955C)
+  ta: 1007 items (6S + 7B + 39F + 955C)
+  th: 1007 items (6S + 7B + 39F + 955C)
+  tr: 1007 items (6S + 7B + 39F + 955C)
+  uk: 1007 items (6S + 7B + 39F + 955C)
+  ur: 1007 items (6S + 7B + 39F + 955C)
+  vi: 1007 items (6S + 7B + 39F + 955C)
+  zh: 1007 items (6S + 7B + 39F + 955C)
 Done.
 Generated search-widget-translations.json: 48 locales → /root/projects/trade/web/apps/site/public/search-widget-translations.json
 ▲ Next.js 16.2.4 (Turbopack)
 
 ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
   Creating an optimized production build ...
-✓ Compiled successfully in 2.1s
+✓ Compiled successfully in 3.9s
   Running TypeScript ...
-  Finished TypeScript in 5.3s ...
-  Collecting page data using 19 workers ...
-  Generating static pages using 19 workers (0/1349) ...
-  Generating static pages using 19 workers (337/1349) 
-  Generating static pages using 19 workers (674/1349) 
-  Generating static pages using 19 workers (1011/1349) 
-✓ Generating static pages using 19 workers (1349/1349) in 5.0s
-  Finalizing page optimization ...
-⚠ Statically exporting a Next.js application via `next export` disables API routes and middleware.
-This command is meant for static-only hosts, and is not necessary to make your application static.
-Pages in your application without server-side data dependencies will be automatically statically exported by `next build`, including pages powered by `getStaticProps`.
-Learn more: https://nextjs.org/docs/messages/api-routes-static-export
-
-Route (app)
-┌ ○ /
-├ ○ /_not-found
-├ ● /[locale]
-│ ├ /en
-│ ├ /zh
-│ ├ /es
-│ └ [+45 more paths]
-├ ● /[locale]/about
-│ ├ /en/about
-│ ├ /zh/about
-│ ├ /es/about
-│ └ [+45 more paths]
-├ ● /[locale]/ai-assistance
-│ ├ /en/ai-assistance
-│ ├ /zh/ai-assistance
-│ ├ /es/ai-assistance
-│ └ [+45 more paths]
-├ ● /[locale]/faq
-│ ├ /en/faq
-│ ├ /zh/faq
-│ ├ /es/faq
-│ └ [+45 more paths]
-├ ● /[locale]/industries
-│ ├ /en/industries
-│ ├ /zh/industries
-│ ├ /es/industries
-│ └ [+45 more paths]
-├ ● /[locale]/industries/[industry]
-│ ├ /en/industries/dairy-milk-products
-│ ├ /en/industries/meat-seafood
-│ ├ /en/industries/wine-spirits
-│ └ [+477 more paths]
-├ ● /[locale]/packages
-│ ├ /en/packages
-│ ├ /zh/packages
-│ ├ /es/packages
-│ └ [+45 more paths]
-├ ● /[locale]/privacy
-│ ├ /en/privacy
-│ ├ /zh/privacy
-│ ├ /es/privacy
-│ └ [+45 more paths]
-├ ● /[locale]/quote
-│ ├ /en/quote
-│ ├ /zh/quote
-│ ├ /es/quote
-│ └ [+45 more paths]
-├ ● /[locale]/services
-│ ├ /en/services
-│ ├ /zh/services
-│ ├ /es/services
-│ └ [+45 more paths]
-├ ● /[locale]/services/brand
-│ ├ /en/services/brand
-│ ├ /zh/services/brand
-│ ├ /es/services/brand
-│ └ [+45 more paths]
-├ ● /[locale]/services/ccc
-│ ├ /en/services/ccc
-│ ├ /zh/services/ccc
-│ ├ /es/services/ccc
-│ └ [+45 more paths]
-├ ● /[locale]/services/cosmetics
-│ ├ /en/services/cosmetics
-│ ├ /zh/services/cosmetics
-│ ├ /es/services/cosmetics
-│ └ [+45 more paths]
-├ ● /[locale]/services/ecommerce
-│ ├ /en/services/ecommerce
-│ ├ /zh/services/ecommerce
-│ ├ /es/services/ecommerce
-│ └ [+45 more paths]
-├ ● /[locale]/services/gacc
-│ ├ /en/services/gacc
-│ ├ /zh/services/gacc
-│ ├ /es/services/gacc
-│ └ [+45 more paths]
-├ ● /[locale]/services/label
-│ ├ /en/services/label
-│ ├ /zh/services/label
-│ ├ /es/services/label
-│ └ [+45 more paths]
-├ ● /[locale]/sitemap
-│ ├ /en/sitemap
-│ ├ /zh/sitemap
-│ ├ /es/sitemap
-│ └ [+45 more paths]
-├ ● /[locale]/testimonials
-│ ├ /en/testimonials
-│ ├ /zh/testimonials
-│ ├ /es/testimonials
-│ └ [+45 more paths]
-├ ● /[locale]/thank-you
-│ ├ /en/thank-you
-│ ├ /zh/thank-you
-│ ├ /es/thank-you
-│ └ [+45 more paths]
-└ ○ /icon.png
-
-
-ƒ Proxy (Middleware)
-
-○  (Static)  prerendered as static content
-●  (SSG)     prerendered as static HTML (uses generateStaticParams)
-
-=== build-all.mjs ===
-Base URL: https://sinotradecompliance.com
-Output:   /root/projects/trade/web/apps/site/out
-
-[0/7] Checking for hardcoded dev domains...
-✅ 未发现硬编码的 *.pages.dev 域名引用
-  ✅ 域名检查通过
-[1/7] Generating sitemaps...
-✅ 48 locale sitemaps generated (with hreflang annotations)
-✅ sitemap.xml index generated
-[2/5] Generating image sitemap...
-✅ sitemap-images.xml (39 images)
-[3/5] Generating LLM files...
-✅ llms.txt (6KB)
-✅ 48 llms-{locale}.txt files written
-[4/7] Search indexes — skipped (pre-build)
-[5/7] Generating robots.txt...
-✅ robots.txt generated
-[6/7] Checking llms.txt quality...
-🔍 检查 llms.txt...
-
-  ✅ llms.txt 格式正确
-  ✅ llms-en.txt 格式正确
-
-  48/48 语言版本文件存在
-
-✅ llms.txt 全部检查通过
-  ✅ llms.txt 检查通过
-[7/7] Copying to public/...
-
-✅ build-all.mjs complete
-
-═══════════════════════════════════════════════
-  CI 统一检查 — SITE
-  out-dir: out  next-dir: (none)
-═══════════════════════════════════════════════
-
-
-▶ check-seo-patterns.mjs --ci
-
-📁 site/
-
-📁 blog/
-
-📁 portal/
-
-==================================================
-📊 结果: 169 通过, 0 失败
-
-✅ check-seo-patterns.mjs 完成
-
-▶ check-hardcoded-domain.mjs --ci
-✅ 未发现硬编码的 *.pages.dev 域名引用
-
-▶ check-hardcoded.mjs apps/site/src packages/ui/src --ci
-🔍 Scanning for hardcoded English text in JSX/TSX...
-
-✅ No hardcoded English text found.
-
-▶ check-console.mjs --ci
-📁 扫描 198 个文件
-==================================================
-📊 结果: 208 通过, 0 失败
-
-✅ check-console.mjs 完成
-
-▶ check-rtl.mjs --ci
-
-📁 site/
-
-📁 blog/
-
-📁 portal/
-
-==================================================
-📊 结果: 9 通过, 0 失败
-
-✅ check-rtl.mjs 完成
-
-▶ check-map-key.mjs --ci
-📁 扫描 166 个 TSX 文件
-==================================================
-📊 结果: 166 通过, 0 失败
-
-✅ check-map-key.mjs 完成
-
-▶ check-jsonld.mjs --ci
-📁 扫描 24 个含 JSON-LD 的文件
-==================================================
-📊 结果: 81 通过, 0 失败
-
-✅ check-jsonld.mjs 完成
-
-▶ check-hreflang.mjs --dir=out --skip-pattern=/blog/,404,_not-found,index --ci
-🔍 统一 hreflang 检查
-
-📦 模式: SSG 输出目录检查
-  📄 扫描 1731 个 HTML 文件
-
-  跳过: 1731 文件 (路径匹配 skip-pattern)
-
-  结果: 0 通过, 0 失败
-
-✅ hreflang 全部检查通过
-
-▶ check-llms.mjs --dir=out --ci
-🔍 检查 llms.txt...
-
-  ✅ llms.txt 格式正确
-  ✅ llms-en.txt 格式正确
-
-  48/48 语言版本文件存在
-
-✅ llms.txt 全部检查通过
-
-▶ check-seo-output.mjs --out-dir=out --ci
-
-🔍 SEO 输出检查: /root/projects/trade/web/apps/site/out
-
-📄 扫描 HTML 页面...
-
-🗺️  检查 Sitemap...
-
-==================================================
-📊 结果: 6289 通过, 0 失败
-
-✅ check-seo-output.mjs 完成
-
-▶ check-translations.mjs --short
-
-⚠️ 发现 2649 个问题
-   - 网站翻译质量: 143 个问题
-   - Portal 翻译质量: 2506 个问题
-
-▶ check-breadcrumb-keys.mjs --ci --ci
-🧩 面包屑 key 完整性检查
-   映射数: 38
-   语言数: 48
-   来源: /root/projects/trade/web/packages/ui/src/AutoBreadcrumb.tsx
-
-✅ 所有面包屑 key 完整，无硬编码英文
-
-✅ 全部通过
-
-▶ clean-rsc.js out
-🧹 Cleaning RSC .txt payload files from out/...
-✅ Deleted 12829 RSC payload files (803.5 MB freed)
-(node:217584) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/projects/trade/web/packages/scripts/clean-rsc.js is not specified and it doesn't parse as CommonJS.
-Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
-To eliminate this warning, add "type": "module" to /root/projects/trade/web/package.json.
-(Use `node --trace-warnings ...` to show where the warning was created)
-
-═══════════════════════════════════════════════
-✅ 全部检查通过
-═══════════════════════════════════════════════
-

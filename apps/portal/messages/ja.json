@@ -1120,7 +1120,8 @@
     "registeredUser": "登録ユーザー",
     "periodEnds": "期間終了",
     "noReportId": "レポートIDが指定されていません",
-    "backToHome": "ホームに戻る"
+    "backToHome": "ホームに戻る",
+    "youAreOnFreePlan": "現在無料プランをご利用中です。"
   },
   "Cookie": {
     "message": "このサイトでは、必須の認証 Cookie のみを使用します。追跡クッキーや広告クッキーは使用されません。",

@@ -1087,7 +1087,8 @@
     "cccProductNamePlaceholder": "e.g., Smart LED Desk Lamp",
     "nmpaProductNamePlaceholder": "e.g., Hyaluronic Acid Serum",
     "crossborderProductNamePlaceholder": "e.g., Organic Matcha Powder",
-    "trademarkProductNamePlaceholder": "e.g., Premium Skincare Line"
+    "trademarkProductNamePlaceholder": "e.g., Premium Skincare Line",
+    "backToHome": "Back to Home"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",
@@ -1118,7 +1119,8 @@
     "registeredUser": "Registered user",
     "periodEnds": "Period ends",
     "noReportId": "No report ID provided",
-    "backToHome": "Back to Home"
+    "backToHome": "Back to Home",
+    "youAreOnFreePlan": "You are currently on the Free plan."
   },
   "Cookie": {
     "message": "This site uses only essential authentication cookies. No tracking or advertising cookies are used.",
@@ -1456,7 +1458,8 @@
     "animalTesting": "Full testing",
     "squattingOfForeignBrandsSquatted": "of foreign brands squatted",
     "squattingRiskLabel": "Risk",
-    "valueHigh": "High"
+    "valueHigh": "High",
+    "labelMandatoryFields": "Mandatory Fields"
   },
   "Navbar": {
     "selfCheck": "Self-Check",

@@ -1119,7 +1119,8 @@
     "registeredUser": "Registrierter Benutzer",
     "periodEnds": "Der Zeitraum endet",
     "noReportId": "Kein Berichts-ID angegeben",
-    "backToHome": "Zurück nach Hause"
+    "backToHome": "Zurück nach Hause",
+    "youAreOnFreePlan": "Sie befinden sich derzeit auf dem kostenlosen Plan."
   },
   "Cookie": {
     "message": "Diese Website verwendet nur unbedingt erforderliche Authentifizierungscookies. Es werden keine Tracking- oder Werbecookies verwendet.",

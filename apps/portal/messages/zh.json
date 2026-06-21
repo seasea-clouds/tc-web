@@ -1120,7 +1120,8 @@
     "registeredUser": "注册用户",
     "periodEnds": "期间结束",
     "noReportId": "未提供报告 ID",
-    "backToHome": "返回首页"
+    "backToHome": "返回首页",
+    "youAreOnFreePlan": "您当前使用的是免费计划。"
   },
   "Cookie": {
     "message": "本网站仅使用必要的身份验证Cookie。不使用跟踪或广告Cookie。",

@@ -18,7 +18,7 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Getuigenissen",
     "industries": "Industrieën",
-    "blog": "Inzichten"
+    "blog": "Blog"
   },
   "Search": {
     "title": "Zoekopdracht",
@@ -34,7 +34,7 @@
   },
   "Navbar": {
     "logo": "SinoTrade Compliance",
-    "home": "Thuis",
+    "home": "Home",
     "about": "Over",
     "services": "Diensten",
     "servicesDropdown": {

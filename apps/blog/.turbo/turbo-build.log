@@ -4,54 +4,54 @@
 
 Apps discovered: blog, portal, site
 Generating search index for 48 locales...
-  af: 1000 items (6S + 7B + 39F + 948C)
-  ar: 1000 items (6S + 7B + 39F + 948C)
-  az: 1000 items (6S + 7B + 39F + 948C)
-  be: 1000 items (6S + 7B + 39F + 948C)
-  bg: 1000 items (6S + 7B + 39F + 948C)
-  bn: 1000 items (6S + 7B + 39F + 948C)
-  ca: 1000 items (6S + 7B + 39F + 948C)
-  cs: 1000 items (6S + 7B + 39F + 948C)
-  da: 1000 items (6S + 7B + 39F + 948C)
-  de: 1006 items (6S + 7B + 39F + 954C)
-  el: 1000 items (6S + 7B + 39F + 948C)
+  af: 1007 items (6S + 7B + 39F + 955C)
+  ar: 1007 items (6S + 7B + 39F + 955C)
+  az: 1007 items (6S + 7B + 39F + 955C)
+  be: 1007 items (6S + 7B + 39F + 955C)
+  bg: 1007 items (6S + 7B + 39F + 955C)
+  bn: 1007 items (6S + 7B + 39F + 955C)
+  ca: 1007 items (6S + 7B + 39F + 955C)
+  cs: 1007 items (6S + 7B + 39F + 955C)
+  da: 1007 items (6S + 7B + 39F + 955C)
+  de: 1007 items (6S + 7B + 39F + 955C)
+  el: 1007 items (6S + 7B + 39F + 955C)
   en: 1006 items (6S + 7B + 39F + 954C)
-  es: 1000 items (6S + 7B + 39F + 948C)
-  fa: 1000 items (6S + 7B + 39F + 948C)
-  fi: 1000 items (6S + 7B + 39F + 948C)
-  fr: 1000 items (6S + 7B + 39F + 948C)
-  he: 1000 items (6S + 7B + 39F + 948C)
-  hi: 1000 items (6S + 7B + 39F + 948C)
-  hr: 1000 items (6S + 7B + 39F + 948C)
-  hu: 1000 items (6S + 7B + 39F + 948C)
-  hy: 1000 items (6S + 7B + 39F + 948C)
-  id: 1000 items (6S + 7B + 39F + 948C)
-  it: 1000 items (6S + 7B + 39F + 948C)
-  ja: 1007 items (6S + 7B + 39F + 955C)
-  ka: 1000 items (6S + 7B + 39F + 948C)
-  ko: 1000 items (6S + 7B + 39F + 948C)
-  ms: 1000 items (6S + 7B + 39F + 948C)
-  ne: 1000 items (6S + 7B + 39F + 948C)
-  nl: 1000 items (6S + 7B + 39F + 948C)
-  no: 1000 items (6S + 7B + 39F + 948C)
-  pl: 1000 items (6S + 7B + 39F + 948C)
-  pt: 1000 items (6S + 7B + 39F + 948C)
-  ro: 1000 items (6S + 7B + 39F + 948C)
-  ru: 1000 items (6S + 7B + 39F + 948C)
-  si: 1000 items (6S + 7B + 39F + 948C)
-  sk: 1000 items (6S + 7B + 39F + 948C)
-  sl: 1000 items (6S + 7B + 39F + 948C)
-  sq: 1000 items (6S + 7B + 39F + 948C)
-  sr: 1000 items (6S + 7B + 39F + 948C)
-  sv: 1000 items (6S + 7B + 39F + 948C)
-  sw: 1000 items (6S + 7B + 39F + 948C)
-  ta: 1000 items (6S + 7B + 39F + 948C)
-  th: 1000 items (6S + 7B + 39F + 948C)
-  tr: 1000 items (6S + 7B + 39F + 948C)
-  uk: 1000 items (6S + 7B + 39F + 948C)
-  ur: 1000 items (6S + 7B + 39F + 948C)
-  vi: 1000 items (6S + 7B + 39F + 948C)
-  zh: 1006 items (6S + 7B + 39F + 954C)
+  es: 1007 items (6S + 7B + 39F + 955C)
+  fa: 1007 items (6S + 7B + 39F + 955C)
+  fi: 1007 items (6S + 7B + 39F + 955C)
+  fr: 1007 items (6S + 7B + 39F + 955C)
+  he: 1007 items (6S + 7B + 39F + 955C)
+  hi: 1007 items (6S + 7B + 39F + 955C)
+  hr: 1007 items (6S + 7B + 39F + 955C)
+  hu: 1007 items (6S + 7B + 39F + 955C)
+  hy: 1007 items (6S + 7B + 39F + 955C)
+  id: 1007 items (6S + 7B + 39F + 955C)
+  it: 1007 items (6S + 7B + 39F + 955C)
+  ja: 1008 items (6S + 7B + 39F + 956C)
+  ka: 1007 items (6S + 7B + 39F + 955C)
+  ko: 1007 items (6S + 7B + 39F + 955C)
+  ms: 1007 items (6S + 7B + 39F + 955C)
+  ne: 1007 items (6S + 7B + 39F + 955C)
+  nl: 1007 items (6S + 7B + 39F + 955C)
+  no: 1007 items (6S + 7B + 39F + 955C)
+  pl: 1007 items (6S + 7B + 39F + 955C)
+  pt: 1007 items (6S + 7B + 39F + 955C)
+  ro: 1007 items (6S + 7B + 39F + 955C)
+  ru: 1007 items (6S + 7B + 39F + 955C)
+  si: 1007 items (6S + 7B + 39F + 955C)
+  sk: 1007 items (6S + 7B + 39F + 955C)
+  sl: 1007 items (6S + 7B + 39F + 955C)
+  sq: 1007 items (6S + 7B + 39F + 955C)
+  sr: 1007 items (6S + 7B + 39F + 955C)
+  sv: 1007 items (6S + 7B + 39F + 955C)
+  sw: 1007 items (6S + 7B + 39F + 955C)
+  ta: 1007 items (6S + 7B + 39F + 955C)
+  th: 1007 items (6S + 7B + 39F + 955C)
+  tr: 1007 items (6S + 7B + 39F + 955C)
+  uk: 1007 items (6S + 7B + 39F + 955C)
+  ur: 1007 items (6S + 7B + 39F + 955C)
+  vi: 1007 items (6S + 7B + 39F + 955C)
+  zh: 1007 items (6S + 7B + 39F + 955C)
 Done.
 Attention: Next.js now collects completely anonymous telemetry regarding usage.
 This information is used to shape Next.js' roadmap and prioritize features.
@@ -61,15 +61,15 @@ https://nextjs.org/telemetry
 ▲ Next.js 16.2.6 (Turbopack)
 
   Creating an optimized production build ...
-✓ Compiled successfully in 1971ms
+✓ Compiled successfully in 2.8s
   Running TypeScript ...
-  Finished TypeScript in 2.5s ...
+  Finished TypeScript in 2.7s ...
   Collecting page data using 6 workers ...
   Generating static pages using 6 workers (0/434) ...
   Generating static pages using 6 workers (108/434) 
   Generating static pages using 6 workers (216/434) 
   Generating static pages using 6 workers (325/434) 
-✓ Generating static pages using 6 workers (434/434) in 2.1s
+✓ Generating static pages using 6 workers (434/434) in 2.3s
   Finalizing page optimization ...
 
 Route (app)
@@ -186,25 +186,244 @@ Route (app)
 ⚠️ 发现 188 个问题
    - 网站翻译质量: 188 个问题
 
-▶ check-breadcrumb-keys.mjs --ci --ci
-🧩 面包屑 key 完整性检查
-   映射数: 38
-   语言数: 48
-   来源: /root/projects/trade/web/packages/ui/src/AutoBreadcrumb.tsx
+▶ check-i18n-keys.mjs --ci --ci
+🔑 i18n key 完整性检查
 
-✅ 所有面包屑 key 完整，无硬编码英文
+📦 SITE (0 missing, 221 extra, 926 hardcoded):
+  ℹ️  多余 key (221 处，lang 中有但 en 中没有):
+    [af] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [ar] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [az] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [be] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [bg] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [bn] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [ca] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [cs] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [da] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [de] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [el] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [es] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [fa] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [fi] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [fr] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [he] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [hi] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [hr] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [hu] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    [hy] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
+    ... 还有 201 条
+  ⚠️  硬编码英文 fallback (926 处):
+    🟡 Home.stat1Number → "500+" (44 语言)
+    🟡 Home.stat2Number → "50+" (45 语言)
+    🟡 Home.stat3Number → "10+" (46 语言)
+    🟡 Home.stat4Number → "100%" (39 语言)
+    🟡 About.expertName → "David Zhang" (47 语言)
+    🟡 About.teamMember1Name → "David Zhang" (47 语言)
+    🟡 About.teamMember2Name → "Sarah Chen" (47 语言)
+    🟡 About.teamMember3Name → "Mike Wang" (47 语言)
+    🟡 About.teamMember4Name → "Leo Liu" (47 语言)
+    🟡 ThankYou.readTime → "min" (47 语言)
+    🟡 ThankYou.stat1Number → "500+" (44 语言)
+    🟡 ThankYou.stat2Number → "50+" (45 语言)
+    🟡 ThankYou.stat3Number → "10+" (46 语言)
+    🟡 ThankYou.stat4Number → "100%" (39 语言)
+    🟡 Blog.author → "David Zhang" (25 语言)
+    🟡 DefinitionSchema.gb7718Name → "GB 7718-2025" (34 语言)
+    🟡 DefinitionSchema.cbecName → "CBEC (Cross-Border E-Commerce)" (3 语言)
+    🟡 DefinitionSchema.ciferName → "CIFER (China Import Food Enterprise Registration)" (4 语言)
+    🟡 Quote.namePlaceholder → "John Smith" (21 语言)
+    🟡 Quote.emailPlaceholder → "you@company.com" (47 语言)
+    🟡 IndustriesCommon.metaDescription → "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more." (47 语言)
+    🟡 AiAssistance.contactEmail → "david@sinotradecompliance.com" (46 语言)
+    🟡 About.partners2 → "📊 Audit" (8 语言)
+    🟡 AiAssistance.serviceNMPA → "NMPA Cosmetics Filing: " (14 语言)
+    🟡 AiAssistance.serviceGACC → "GACC Food Registration: " (3 语言)
+    🟡 AiAssistance.serviceCCC → "CCC Certification: " (1 语言)
+    🟡 About.partners1 → "🏛️ Legal" (3 语言)
+    🔴 Blog.categories → "Categories" (1 语言)
+    🟡 DefinitionSchema.gaccName → "GACC (General Administration of Customs of China)" (6 语言)
+    🟡 DefinitionSchema.nmpaName → "NMPA (National Medical Products Administration)" (9 语言)
+    🟡 DefinitionSchema.csarName → "CSAR (Cosmetic Supervision and Administration Regulation)" (5 语言)
+    🟡 Packages.comparisonFeature → "Feature" (1 语言)
+    🟡 Blog.title → "Insights & Compliance Guides" (2 语言)
+    🟡 AiAssistance.serviceCBEC → "Cross-Border E-Commerce: " (4 语言)
+    🟡 AiAssistance.serviceBrand → "Brand Protection: " (2 语言)
+    🟡 DefinitionSchema.cccName → "CCC (China Compulsory Certification)" (1 语言)
+    🟡 Home.stat4Label → "Compliance Rate" (1 语言)
+    🟡 ThankYou.stat4Label → "Compliance Rate" (1 语言)
+    🟡 DefinitionSchema.samrName → "SAMR (State Administration for Market Regulation)" (1 语言)
+    🟡 Blog.pagination → "Page" (1 语言)
+    🟡 Quote.messageLabel → "Message" (1 语言)
+    🟡 Packages.advancedName → "Go-to-Market" (1 语言)
+    🟡 About.value1Title → "Expertise" (1 语言)
+    🟡 Quote.services.ecommerce → "E-commerce" (2 语言)
 
-✅ 全部通过
+📦 PORTAL (0 missing, 153 extra, 934 hardcoded):
+  ℹ️  多余 key (153 处，lang 中有但 en 中没有):
+    [af] Check.backToHome → "Terug na die huis"
+    [af] Report.youAreOnFreePlan → "Jy is tans op die gratis plan."
+    [af] ReportSection.labelMandatoryFields → "Verpligte velde"
+    [ar] Check.backToHome → "العودة إلى المنزل"
+    [ar] Report.youAreOnFreePlan → "أنت حاليًا مشترك في الخطة المجانية."
+    [ar] ReportSection.labelMandatoryFields → "الحقول الإلزامية"
+    [az] Check.backToHome → "Evə qayıt"
+    [az] Report.youAreOnFreePlan → "Hazırda Pulsuz plandasınız."
+    [az] ReportSection.labelMandatoryFields → "Məcburi Sahələr"
+    [be] Check.backToHome → "Назад дадому"
+    [be] Report.youAreOnFreePlan → "Зараз вы карыстаецеся бясплатным планам."
+    [be] ReportSection.labelMandatoryFields → "Абавязковыя палі"
+    [bg] Check.backToHome → "Обратно към дома"
+    [bg] Report.youAreOnFreePlan → "В момента сте на безплатен план."
+    [bg] ReportSection.labelMandatoryFields → "Задължителни полета"
+    [bn] Check.backToHome → "হোমে ফিরে যান"
+    [bn] Report.youAreOnFreePlan → "আপনি বর্তমানে বিনামূল্যের প্ল্যানে আছেন।"
+    [bn] ReportSection.labelMandatoryFields → "বাধ্যতামূলক ক্ষেত্র"
+    [ca] Check.backToHome → "Torna a casa"
+    [ca] Report.youAreOnFreePlan → "Actualment esteu al pla gratuït."
+    ... 还有 133 条
+  ⚠️  硬编码英文 fallback (934 处):
+    🟡 Pricing.professionalPrice → "$500+" (31 语言)
+    🟡 Check.reportFooterEmail → "david@sinotradecompliance.com" (46 语言)
+    🔴 Check.fcc → "FCC" (40 语言)
+    🟡 Check.gaccTitle → "GACC Food Registration Check" (2 语言)
+    🟡 Check.nmpaDoc_formula_format → "Excel/PDF" (35 语言)
+    🟡 Check.cccDoc_qualityManual_format → "PDF, ISO 9001/QSO" (40 语言)
+    🟡 Check.cccDoc_components_format → "Excel/PDF" (35 语言)
+    🟡 Check.cccDoc_circuit_format → "PDF/DXF" (43 语言)
+    🟡 Check.labelDoc_ingredients_format → "Excel/PDF" (35 语言)
+    🟡 Check.cbDoc_businessReg_format → "PDF" (42 语言)
+    🟡 Check.cbDoc_brandAuth_format → "PDF" (42 语言)
+    🟡 Check.cbDoc_listings_format → "HTML/JPEG" (44 语言)
+    🟡 Check.cbDoc_label_format → "PDF/JPEG" (44 语言)
+    🟡 Check.cbDoc_ingredients_format → "PDF/Excel" (37 语言)
+    🔴 Report.status → "Status" (12 语言)
+    🟡 ReportSection.channelSuitabilityMedium → "MEDIUM" (7 语言)
+    🟡 ReportSection.compareChina → "China" (7 语言)
+    🟡 ReportSection.customsLabTestingResp → "Lab" (6 语言)
+    🟡 ReportSection.customsPortArrivalResp → "CIQ" (41 语言)
+    🟡 ReportSection.emergencyScenario3Basis → "GB 7718 / GB 28050" (34 语言)
+    🟡 ReportSection.labelItem → "Item" (4 语言)
+    🟡 ReportSection.labelLab → "Lab" (6 语言)
+    🟡 ReportSection.labelPlatform → "Platform" (6 语言)
+    🟡 ReportSection.fieldLab → "Lab" (6 语言)
+    🟡 Auth.emailPlaceholder → "you@example.com" (23 语言)
+    🟡 Pricing.singlePrice → "$1.99" (14 语言)
+    🟡 Check.gaccHorizon_gb7718_topic → "GB 7718 Revision" (3 语言)
+    🔴 Report.plan → "Plan" (9 语言)
+    🟡 ReportSection.customsClearanceResp → "Broker" (5 语言)
+    🟡 ReportSection.labelFormat → "Format" (11 语言)
+    🟡 ReportSection.sectionHorizonScan → "Horizon Scan" (9 语言)
+    🟡 ReportSection.valueRegion → "Region" (4 语言)
+    🟡 ReportSection.fieldFormat → "Format" (11 语言)
+    🟡 ReportSection.squattingRiskLabel → "Risk" (3 语言)
+    🟡 Pricing.monthlyPrice → "$9.9" (14 语言)
+    🟡 Check.gaccCat_dairy_labTest_3 → "Aflatoxin M1" (8 语言)
+    🟡 Check.gaccCat_meat_labTest_0 → "Clenbuterol/β-agonists" (8 语言)
+    🟡 Check.labelRiskNote_cost → "$500-2,000" (10 语言)
+    🟡 Check.tmDoc_logo_format → "JPEG, 5-10cm" (8 语言)
+    🔴 Home.popular → "Popular" (2 语言)
+    🟡 Check.complianceNo → "❌ No" (1 语言)
+    🟡 Check.labelRiskDim_cost → "Cost" (2 语言)
+    🔴 ReportSection.client → "Client" (3 语言)
+    🟡 ReportSection.labelCost → "Cost" (2 语言)
+    🟡 ReportSection.labelDocument → "Document" (4 语言)
+    🟡 ReportSection.labelEstCost → "Est. Cost" (1 语言)
+    🟡 ReportSection.labelNotes → "Notes" (1 语言)
+    🟡 ReportSection.timelineClient → "Client" (3 语言)
+    🟡 Check.gaccHorizon_cbec_topic → "CBEC Positive List Expansion" (1 语言)
+    🟡 Check.nmpaDoc_label_name → "Label & Package Artwork" (4 语言)
+    🟡 Check.cbDoc_label_name → "Label Artwork" (4 语言)
+    🟡 ReportSection.sectionMarketIntelligence → "Market Intelligence" (6 语言)
+    🟡 Check.catNmpa_makeup → "Color Cosmetics (HS 33.04)" (4 语言)
+    🟡 Check.cccDoc_cb_format → "IECEE lab PDF" (4 语言)
+    🟡 Check.cbDoc_brandAuth_name → "Brand Authorization Letter" (1 语言)
+    🟡 ReportSection.labelDimension → "Dimension" (4 语言)
+    🟡 ReportSection.labelTurnaround → "Turnaround" (1 语言)
+    🟡 ReportSection.sectionTrademarkWatchService → "Trademark Watch Service" (3 语言)
+    🟡 ReportSection.squattingRealWorldCase → "Real-World Case" (3 语言)
+    🟡 ReportSection.fieldTurnaround → "Turnaround" (1 语言)
+    🟡 ReportSection.labelGB28050Highlights → "GB 28050 Highlights" (1 语言)
+    🟡 ReportSection.labelPhase → "Phase" (2 语言)
+    🟡 ReportSection.tableHeaderPhase → "Phase" (2 语言)
+    🟡 Check.catCcc_electronics → "Consumer Electronics (HS 85)" (1 语言)
+    🟡 Check.gaccCat_oil_labTest_0 → "Benzo(a)pyrene" (3 语言)
+    🟡 Check.gaccHorizon_aiLabel_topic → "AI-Powered Label Review" (3 语言)
+    🟡 ReportSection.labelTopCompetingOrigins → "Top Competing Origins" (1 语言)
+    🟡 ReportSection.sectionRiskAssessmentMatrix → "Risk Assessment Matrix" (1 语言)
+    🟡 ReportSection.channelSuitabilityLow → "LOW" (1 语言)
+    🟡 Check.gaccTimeline_label_name → "Label Design & Compliance" (1 语言)
+    🟡 Check.labelRiskDim_additive → "Additive Review" (1 语言)
+    🟡 ReportSection.sectionLabelCompliance → "Label Compliance (GB 7718)" (1 语言)
+    🟡 Check.gaccCat_seafood_labTest_1 → "Histamine" (3 语言)
+    🟡 Check.gaccCommonRej_cause → "Cause" (1 语言)
+    🟡 Check.gaccCommonRej_solution → "Solution" (1 语言)
+    🟡 Check.nmpaGlossary_icsc → "INCI Standard Chinese: " (5 语言)
+    🟡 Check.gaccCat_classification_label → "Classification" (1 语言)
+    🟡 ReportSection.labelCause → "Cause" (1 语言)
+    🟡 ReportSection.labelSolution → "Solution" (1 语言)
+    🟡 ReportSection.labelVerdict → "Verdict" (2 语言)
+    🟡 ReportSection.valueClassification → "Classification" (1 语言)
+    🟡 ReportSection.fieldLimitation → "Limitation" (1 语言)
+    🟡 Check.primaryNiceClass → "Primary Nice Class" (2 语言)
+    🟡 Check.nmpaDoc_safety_format → "PDF, NMPA 2021 format" (1 语言)
+    🟡 Check.nmpaDoc_efficacy_format → "PDF NMPA format" (1 语言)
+    🟡 Check.cccDoc_appForm_format → "CNCA format" (1 语言)
+    🟡 ReportSection.sectionCBReportGuide → "CB Report Guide" (1 语言)
+    🔴 Auth.email → "Email" (3 语言)
+    🔴 Dashboard.email → "Email" (3 语言)
+    🟡 Check.tmDoc_goodsList_format → "Excel per Nice Class" (4 语言)
+    🟡 ReportSection.ipMonitorEnforce → "Monitor & Enforce" (1 语言)
+    🟡 ReportSection.valueMFNRate → "MFN Rate" (1 语言)
+    🟡 Check.packagingCan → "Can / Tin" (2 语言)
+    🟡 Check.gaccDoc_riskAssessment_format → "PDF, bilingual" (1 语言)
+    🟡 Check.cccDoc_specs_format → "PDF, bilingual" (1 语言)
+    🟡 Check.gaccGlossary_hsCode → "Harmonized System Code: " (1 语言)
+    🟡 Check.labelGlossary_hsCode → "Harmonized System Code: " (1 语言)
+    🟡 Check.nmpaGlossary_hsCode → "Harmonized System Code: " (1 语言)
+    🟡 Check.cbGlossary_hsCode → "Harmonized System Code: " (1 语言)
+    🟡 Check.tmGlossary_hsCode → "Harmonized System Code: " (1 语言)
+    🟡 ReportSection.valueVAT → "VAT" (7 语言)
+    🟡 Check.tmDoc_poa_format → "PDF notarized" (1 语言)
+    🟡 Check.reportProduct → "Product:" (1 语言)
+    🟡 Check.resultProduct → "Product" (1 语言)
+    🟡 Check.resultProductLabel → "Product" (1 语言)
+    🟡 Check.gaccCat_dairy_labTest_0 → "Melamine" (4 语言)
+    🟡 ReportSection.animalTesting → "Full testing" (1 语言)
+    🟡 ReportSection.labelQSSCLogo → "QS/SC Logo" (1 语言)
+    🟡 Check.packagingPlastic → "Plastic / PET" (1 语言)
+    🟡 ReportSection.customsClearance → "Clearance" (1 语言)
+    🟡 ReportSection.nmpaSpecialLabel → "Special" (1 语言)
+    🟡 ReportSection.nmpaSpecialTimeline → "Special" (1 语言)
+    🟡 Check.reportModuleCrossborder → "Cross-Border E-commerce" (1 语言)
+    🟡 Check.gaccCat_coffee_tea_labTest_4 → "Mycotoxins (ochratoxin A)" (3 语言)
+    🟡 Check.gaccCost_labelDesign_item → "Chinese Label Design & Compliance Review" (1 语言)
+    🟡 Check.gaccCat_beverage_labTest_0 → "Microbiological (coliforms, pathogens)" (1 语言)
+    🟡 Check.gaccCat_grain_labTest_1 → "Mycotoxins (aflatoxin, DON, zearalenone)" (1 语言)
+    🟡 Check.gaccCat_honey_labTest_2 → "Tetracycline antibiotics" (1 语言)
+    🟡 Check.gaccCat_seasoning_labTest_4 → "Mycotoxins" (2 语言)
+    🟡 ReportSection.compAllergens → "Allergens" (1 语言)
+
+📦 UI (0 missing, 0 extra, 94 hardcoded):
+  ⚠️  硬编码英文 fallback (94 处):
+    🟡 Navbar.logo → "SinoTrade Compliance" (47 语言)
+    🟡 ContactForm.emailPlaceholder → "you@company.com" (47 语言)
+
+📊 总计: 0 缺失 + 374 多余 + 1954 硬编码英文
 
 ▶ clean-rsc.js out
 🧹 Cleaning RSC .txt payload files from out/...
 ✅ Deleted 3751 RSC payload files (92.5 MB freed)
-(node:216807) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/projects/trade/web/packages/scripts/clean-rsc.js is not specified and it doesn't parse as CommonJS.
+(node:81947) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/projects/trade/web/packages/scripts/clean-rsc.js is not specified and it doesn't parse as CommonJS.
 Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
 To eliminate this warning, add "type": "module" to /root/projects/trade/web/package.json.
 (Use `node --trace-warnings ...` to show where the warning was created)
 
 ═══════════════════════════════════════════════
-✅ 全部检查通过
-═══════════════════════════════════════════════
-
+❌ 共 1 项检查失败
+npm error Lifecycle script `build` failed with error:
+npm error code 1
+npm error path /root/projects/trade/web/apps/blog
+npm error workspace @trade/blog@0.1.0
+npm error location /root/projects/trade/web/apps/blog
+npm error command failed
+npm error command sh -c node ../../packages/scripts/build-search-index.mjs && rm -rf .next/cache && next build && node ../../packages/scripts/ci-check.mjs --out-dir=out --ci

@@ -49,7 +49,7 @@
     "faq": "سوالات متداول",
     "blog": "بینش ها",
     "contact": "تماس با ما",
-    "whatsapp": "واتس اپ",
+    "whatsapp": "WhatsApp",
     "quote": "یک نقل قول دریافت کنید",
     "industries": "صنایع",
     "industriesDropdown": {
@@ -65,7 +65,7 @@
       "crossborderecommerce": "تجارت الکترونیک فرامرزی"
     },
     "search": "جستجو کنید",
-    "freeCheck": "چک رایگان",
+    "freeCheck": "بررسی رایگان",
     "signIn": "ورود",
     "signUp": "ثبت نام",
     "signOut": "Sign Out",

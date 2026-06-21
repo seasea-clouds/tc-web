@@ -15,8 +15,8 @@
   --color-accent-blue: #2563EB;
   --color-text-charcoal: #333333;
 
-  --font-sans: 'Inter', 'Open Sans', system-ui, sans-serif;
-  --font-heading: 'Montserrat', system-ui, sans-serif;
+  --font-sans: 'Inter', 'Noto Sans Thai', 'Noto Sans', 'Open Sans', system-ui, sans-serif;
+  --font-heading: 'Montserrat', 'Noto Serif Thai', 'Noto Serif', system-ui, sans-serif;
 }
 
 /* Base Styles */
@@ -27,12 +27,12 @@ html {
 body {
   background: #F4F6F9;
   color: #333333;
-  font-family: 'Inter', 'Open Sans', system-ui, sans-serif;
+  font-family: 'Inter', 'Noto Sans Thai', 'Noto Sans', 'Open Sans', system-ui, sans-serif;
   line-height: 1.75;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Montserrat', 'Noto Serif Thai', 'Noto Serif', system-ui, sans-serif;
   font-weight: 700;
 }
 

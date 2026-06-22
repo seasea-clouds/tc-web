@@ -60,6 +60,9 @@ const SERVICE_SEGMENT_LABELS: Record<string, string> = {
 const CHECK_SEGMENT_LABELS: Record<string, string> = {
   'crossborder': 'crossborderTitle',
   'trademark': 'trademarkTitle',
+  'gacc': 'gaccTitle',
+  'label': 'labelTitle',
+  'ccc': 'cccTitle',
   'nmpa': 'nmpaTitle',
 };
 

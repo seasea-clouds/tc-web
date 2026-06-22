@@ -188,7 +188,15 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
   const readTime = Math.max(1, Math.ceil(wordCount / 200));
 
   const headings = parseHeadings(raw);
-  const articleHtml = mdToHtml(content);
+
+  // Safety: replace any hardcoded /en/ links in MDX content with current locale
+  let safeContent = content;
+  if (locale !== 'en') {
+    safeContent = content
+      .replace(/\/en\/packages\//g, `/${locale}/packages/`)
+      .replace(/\/en\/quote\//g, `/${locale}/quote/`);
+  }
+  const articleHtml = mdToHtml(safeContent);
 
   const allPosts = getPosts(locale);
   let relatedPosts: PostMeta[];

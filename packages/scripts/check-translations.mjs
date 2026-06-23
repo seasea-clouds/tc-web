@@ -73,7 +73,7 @@ const IGNORE_FALLBACK_KEYS = new Set([
   // Report: Status/Plan/Client are correct loanwords in many languages (Germanic, Romance, etc.)
   'Report.status', 'Report.plan', 'Report.client',
   'ReportSection.status', 'ReportSection.plan',
-  'ReportSection.client',
+  'ReportSection.client', 'ReportSection.timelineClient',
   // Portal: document/category names — keep English as technical terms
   'Check.gaccTitle',
   'Check.packagingCan',
@@ -220,8 +220,9 @@ const SHARED_WORDS_ALL = new Set([
 ]);
 
 const SHARED_WORDS_BY_LANG = {
-  fr: new Set(['Services', 'Contact', 'Blog', 'Page', 'Message', 'Audit', 'Legal']),
-  de: new Set(['Blog', 'Legal']),
+  fr: new Set(['Services', 'Contact', 'Blog', 'Page', 'Message', 'Audit', 'Legal',
+      'Cause', 'Solution', 'Classification', 'Histamine', 'Limitation']),
+  de: new Set(['Blog', 'Legal', 'Aflatoxin M1']),
   nl: new Set(['Blog', 'Contact']),
   sv: new Set(['Blog', 'Contact', 'Services']),
   da: new Set(['Blog', 'Contact', 'Services']),
@@ -229,6 +230,8 @@ const SHARED_WORDS_BY_LANG = {
   es: new Set(['Blog', 'Contact', 'Services']),
   it: new Set(['Blog', 'Contact', 'Services']),
   pt: new Set(['Blog', 'Contact', 'Services']),
+  ca: new Set(['Blog', 'Contact', 'Services', 'Client']),
+  cs: new Set(['Blog', 'Aflatoxin M1']),
 };
 // Blog is universal
 for (const lang of ['af','az','ca','cs','el','fi','hr','hu','id','ka','ms','pl','ro','si','sk','sl','sq','sw','tr','vi']) {

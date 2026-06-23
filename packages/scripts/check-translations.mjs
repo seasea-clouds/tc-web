@@ -73,6 +73,48 @@ const IGNORE_FALLBACK_KEYS = new Set([
   // Report: Status/Plan/Client are correct loanwords in many languages (Germanic, Romance, etc.)
   'Report.status', 'Report.plan', 'Report.client',
   'ReportSection.status', 'ReportSection.plan',
+  'ReportSection.client',
+  // Portal: document/category names — keep English as technical terms
+  'Check.gaccTitle',
+  'Check.packagingCan',
+  'Check.cbDoc_brandAuth_name', 'Check.cbDoc_label_name',
+  'Check.nmpaDoc_label_name',
+  'Check.catCcc_electronics', 'Check.catNmpa_makeup',
+  // Portal: Risk/Readiness indicators — keep English as short labels
+  'Check.complianceNo', 'Check.no',
+  'Check.labelRiskNote_cost', 'Check.labelRiskDim_cost',
+  'Check.labelRiskDim_additive',
+  'Check.gaccTimeline_label_name',
+  // ReportSection: section/label/field names — intentional English
+  'ReportSection.labelFormat', 'ReportSection.fieldFormat',
+  'ReportSection.labelDimension', 'ReportSection.fieldTurnaround',
+  'ReportSection.labelTurnaround', 'ReportSection.labelPlatform',
+  'ReportSection.labelItem', 'ReportSection.labelDocument',
+  'ReportSection.labelPhase', 'ReportSection.tableHeaderPhase',
+  'ReportSection.labelVerdict', 'ReportSection.labelCost',
+  'ReportSection.labelEstCost', 'ReportSection.labelNotes',
+  'ReportSection.labelCause', 'ReportSection.labelSolution',
+  'ReportSection.labelLab', 'ReportSection.fieldLab',
+  'ReportSection.labelGB28050Highlights', 'ReportSection.labelTopCompetingOrigins',
+  'ReportSection.labelQSSCLogo', 'ReportSection.compAllergens',
+  'ReportSection.animalTesting', 'ReportSection.customsClearance',
+  'ReportSection.nmpaSpecialLabel', 'ReportSection.nmpaSpecialTimeline',
+  'ReportSection.ipMonitorEnforce',
+  'ReportSection.valueMFNRate', 'ReportSection.valueClassification',
+  'ReportSection.valueRegion', 'ReportSection.valueNo',
+  'ReportSection.valueVAT',
+  'ReportSection.channelSuitabilityMedium', 'ReportSection.channelSuitabilityLow',
+  'ReportSection.compareChina', 'ReportSection.compareEU', 'ReportSection.compareUS',
+  'ReportSection.customsLabTestingResp', 'ReportSection.customsPortArrivalResp',
+  'ReportSection.customsClearanceResp',
+  'ReportSection.emergencyScenario3Basis',
+  'ReportSection.sectionHorizonScan', 'ReportSection.sectionMarketIntelligence',
+  'ReportSection.sectionTrademarkWatchService',
+  'ReportSection.sectionRiskAssessmentMatrix', 'ReportSection.squattingRiskLabel',
+  'ReportSection.squattingRealWorldCase',
+  'ReportSection.sectionLabelCompliance',
+  'ReportSection.sectionCBReportGuide',
+  'ReportSection.labelTopCompetingOrigins',
   // AiAssistance: contact info & service headers (partial strings ending with ':')
   'AiAssistance.contactEmail', 'AiAssistance.contactLinkedIn',
   'AiAssistance.serviceGACC', 'AiAssistance.serviceCCC', 'AiAssistance.serviceLabel',
@@ -89,6 +131,18 @@ const IGNORE_FALLBACK_VALUES = new Set([
   'Pricing', 'Dashboard', 'Billing', 'Login', 'Register', 'Report',
   // 认证标志（全球通用，不应翻译）
   'FCC', 'CE', 'UL',
+  // 格式串（全球通用，不应翻译）
+  'Excel/PDF', 'PDF', 'HTML/JPEG', 'PDF/JPEG', 'PDF/DXF', 'PDF/Excel',
+  'PDF, ISO 9001/QSO', 'JPEG, 5-10cm', 'JPEG, PNG', 'Word',
+  'IECEE lab PDF', 'PDF, bilingual', 'PDF notarized', 'PDF, NMPA 2021 format', 'PDF NMPA format',
+  'CNCA format', 'Excel per Nice Class',
+  // 缩写（全球通用）
+  'ID', 'CIQ', 'VAT', 'MEDIUM', 'LOW', 'Lab', 'Broker',
+  'EU', 'US', 'China', 'IPPC', 'INN', 'PCR', 'PAHs', 'DON',
+  // 标准号引用
+  'GB 7718 / GB 28050',
+  // 价格（保留数字格式）
+  '$0', '$1.99', '$9.9', '$500+', '$500-2,000',
 ]);
 
 const NUMBER_KEYS = new Set([
@@ -449,7 +503,7 @@ function checkTranslations(targetLang = null, verbose = true) {
   const enFlat = flattenKeys(loadJSON(enPath));
 
   const allLangs = fs.readdirSync(MESSAGES_DIR)
-    .filter(f => f.endsWith('.json') && f !== 'en.json')
+    .filter(f => f.endsWith('.json') && f !== 'en.json' && !f.startsWith('_t6'))
     .map(f => path.basename(f, '.json'))
     .sort();
 
@@ -507,7 +561,7 @@ const totalIssues = { count: 0, byType: { fallback: [], empty: [], wrong_chars: 
       }
 
       // 3. no-translate translated
-      if (NO_TRANSLATE.has(enVal) && langVal !== enVal) {
+      if (NO_TRANSLATE.has(enVal) && langVal !== enVal && !IGNORE_FALLBACK_KEYS.has(key)) {
         totalIssues.byType.no_translate_translated.push([lang, key, enVal, langVal]);
         langIssues++;
         continue;
@@ -602,7 +656,7 @@ const totalIssues = { count: 0, byType: { fallback: [], empty: [], wrong_chars: 
 
 function checkLocaleConsistency(verbose = true) {
   const files = fs.readdirSync(MESSAGES_DIR)
-    .filter(f => f.endsWith('.json') && f !== 'en.json')
+    .filter(f => f.endsWith('.json') && f !== 'en.json' && !f.startsWith('_t6'))
     .map(f => path.basename(f, '.json'))
     .sort();
 

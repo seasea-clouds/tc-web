@@ -121,6 +121,7 @@ function runBuildPhaseChecks() {
     ['check-rtl.mjs'],
     ['check-map-key.mjs'],
     ['check-jsonld.mjs'],
+    ['check-md-format.mjs'],
   ];
 
   for (const [script, ...extra] of checks) {

@@ -7,7 +7,7 @@ import { matchBrowserLanguage } from '@trade/ui/constants';
 
 const intlMiddleware = createMiddleware(routing);
 
-export default function middleware(request: Parameters<typeof intlMiddleware>[0]) {
+export default function proxy(request: Parameters<typeof intlMiddleware>[0]) {
   const { pathname } = request.nextUrl;
 
   // Only redirect on root path "/"

@@ -85,9 +85,9 @@ function runScript(scriptName, ...extraArgs) {
 
   const scriptArgs = [...extraArgs];
   // 这些脚本不应传递 --ci：
-  // - clean-rsc.js: 清理脚本，非检查
+  // - clean-rsc.mjs: 清理脚本，非检查
   // - check-translations.mjs: 报告已有问题数(非本次引入)，不应阻塞
-  const noFailOnIssues = ['clean-rsc.js', 'check-translations.mjs'];
+  const noFailOnIssues = ['clean-rsc.mjs', 'check-translations.mjs'];
   if (isCi && !noFailOnIssues.includes(scriptName)) scriptArgs.push('--ci');
 
   console.log(`\n▶ ${scriptName} ${scriptArgs.join(' ')}`);
@@ -196,7 +196,7 @@ function runBreadcrumbCheck() {
 // ============================================================
 function runCleanup() {
   if (outDir) {
-    runLocalScript('clean-rsc.js', outDir);
+    runLocalScript('clean-rsc.mjs', outDir);
   }
 }
 

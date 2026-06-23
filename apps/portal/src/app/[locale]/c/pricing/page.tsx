@@ -2,10 +2,13 @@
 
 import { useT } from '@trade/ui';
 import useSubsiteHref from '@/lib/useSubsiteHref';
+import { SITE_URL } from '@/lib/constants';
+import { useLocale } from 'next-intl';
 
 export default function PricingPage() {
   const t = useT('Pricing');
   const subsiteHref = useSubsiteHref();
+  const locale = useLocale();
 
   return (
     <div className="bg-bg-ice py-16">
@@ -77,7 +80,7 @@ export default function PricingPage() {
               <li>{t('professionalBullet4')}</li>
             </ul>
             <a
-              href={subsiteHref('/packages/')}
+              href={`${SITE_URL}/${locale}/packages/`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block w-full bg-primary-navy hover:bg-primary-navy/90 text-white font-semibold py-2.5 rounded-md transition-all"

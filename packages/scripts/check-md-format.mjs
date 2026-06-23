@@ -22,6 +22,7 @@
  *   [E05] de-en-dash-in-body         — 德文正文中的 em-dash 应改为 en-dash
  *   [W01] excessive-em-dash          — 单行超过 2 个 em-dash（所有语言）
  *   [W02] ru-en-em-mix               — 俄文同一文件混用 en/em-dash
+ *   [E06] missing-blank-before-list   — 所有语言：列表项前缺少空行（结构性问题）
  *
  * 用法：
  *   node check-md-format.mjs
@@ -151,6 +152,78 @@ const RULES = [
       return hasEnDash && hasEmDash;
     },
   },
+  {
+    id: 'E06',
+    name: 'missing-blank-before-list',
+    severity: 'error',
+    description: '冒号/句尾后列表项前缺少空行（导致渲染为 &lt;p&gt; 内联文本而非 &lt;ul&gt;&lt;li&gt;）',
+    langs: null, // 所有语言
+    checkPerFile: (content, filePath) => {
+      const lines = content.split('\n');
+      const issues = [];
+      let inFrontmatter = false;
+      let inCodeBlock = false;
+
+      for (let i = 0; i < lines.length - 1; i++) {
+        const currentLine = lines[i];
+        const nextLine = lines[i + 1];
+
+        // 跟踪 frontmatter 和代码块状态
+        if (/^---\s*$/.test(currentLine.trim())) {
+          inFrontmatter = !inFrontmatter;
+          continue;
+        }
+        if (/^```/.test(currentLine)) {
+          inCodeBlock = !inCodeBlock;
+          continue;
+        }
+
+        // 在 frontmatter 或代码块中，跳过
+        if (inFrontmatter || inCodeBlock) continue;
+
+        // 跳过 heading、空行、表格
+        if (/^#/.test(currentLine)) continue;
+        if (currentLine.trim() === '') continue;
+        if (/^\|/.test(currentLine)) continue;
+
+        // 跳过本身就是列表项的行（标准标记 + 常见非标准标记）
+        // 标准: -, *, 1.
+        // 非标准: – (en-dash), ・ (日文), --, —, •
+        if (/^[\s]*[-*]\s/.test(currentLine)) continue;
+        if (/^[\s]*\d+\.\s/.test(currentLine)) continue;
+        if (/^[\s]*–\s/.test(currentLine)) continue;
+        if (/^[\s]*・/.test(currentLine)) continue;
+        if (/^[\s]*—\s/.test(currentLine)) continue;
+        if (/^[\s]*•\s/.test(currentLine)) continue;
+        // 非 ASCII 数字列表项（Devanagari १२३、Arabic-Indic ١٢٣ 等）
+        if (/^[\s]*[\u0966-\u096F\u0660-\u0669]+\.\s/.test(currentLine)) continue;
+
+        // 计算缩进
+        const curIndent = currentLine.search(/\S/);
+        const nextIndent = nextLine.search(/\S/);
+
+        // 深缩进的下一行（>> 当前行）可能是嵌套 YAML 或子列表，跳过
+        const isIndented = (nextIndent > curIndent + 3);
+
+        // 下一行是否以列表标记开头（标准 + 非标准 + 非 ASCII 数字）
+        const nextLineIsList = /^[\s]*[-*]\s/.test(nextLine) ||
+                               /^[\s]*\d+\.\s/.test(nextLine) ||
+                               /^[\s]*–\s/.test(nextLine) ||
+                               /^[\s]*・/.test(nextLine) ||
+                               /^[\s]*—\s/.test(nextLine) ||
+                               /^[\s]*[\u0966-\u096F\u0660-\u0669]+\.\s/.test(nextLine);
+
+        if (nextLineIsList && !isIndented) {
+          issues.push({
+            line: i + 2,
+            text: `列表项前缺少空行: "${currentLine.trim().slice(0, 70)}" → "${nextLine.trim().slice(0, 60)}"`,
+            description: '段落文本后紧跟列表项，需空行分隔',
+          });
+        }
+      }
+      return issues;
+    },
+  },
 ];
 
 // ============================================================
@@ -168,12 +241,28 @@ function scanFile(filePath, lang) {
   const langGroup = getLangGroup(lang);
   const fileFindings = [];
 
-  // Per-file rules (W02)
+  // Per-file rules (W02, E06)
   for (const rule of RULES) {
-    if (rule.id !== 'W02') continue;
+    if (rule.id !== 'W02' && rule.id !== 'E06') continue;
     if (rule.langs && !rule.langs.includes(lang)) continue;
     if (filterRule && rule.id !== filterRule) continue;
-    if (rule.checkPerFile && rule.checkPerFile(content)) {
+    
+    const result = rule.checkPerFile(content, filePath);
+    if (Array.isArray(result)) {
+      // E06: returns array of issues
+      for (const issue of result) {
+        fileFindings.push({
+          rule: rule.id,
+          severity: rule.severity,
+          line: issue.line,
+          text: issue.text,
+          description: issue.description,
+        });
+        if (rule.severity === 'error') totalErrors++;
+        else totalWarnings++;
+      }
+    } else if (result) {
+      // W02: returns boolean
       fileFindings.push({
         rule: rule.id,
         severity: rule.severity,
@@ -192,7 +281,7 @@ function scanFile(filePath, lang) {
     const lineNum = i + 1;
 
     for (const rule of RULES) {
-      if (rule.id === 'W02') continue; // per-file rule
+      if (rule.id === 'W02' || rule.id === 'E06') continue; // per-file rules
       if (filterRule && rule.id !== filterRule) continue;
 
       // 语言过滤

@@ -1,5 +1,75 @@
 # trade-web 技术决策与踩坑记录
 
+## 翻译检查脚本 — fallback 豁免机制
+
+`packages/scripts/check-translations.mjs` 中有三种机制用于豁免「英文值 = 翻译值」的报错：
+
+### 1. IGNORE_FALLBACK_KEYS（全局，按 key 路径匹配）
+
+```
+IGNORE_FALLBACK_KEYS.add('Check.fcc')
+```
+
+**用法：** 添加 key 路径字符串。加入后所有 48 种语言都豁免。
+
+**适用：** 这个 key 在项目设计中本来就该保持英文的字段。
+- 邮箱占位符：`Auth.emailPlaceholder`
+- 报告状态/计划/客户：`Report.status`, `ReportSection.timelineClient`
+- 联系人信息：`AiAssistance.contactEmail`, `AiAssistance.contactLinkedIn`
+- 第三方平台缩写：`Check.fcc`, `Check.ce`, `Check.ul`
+
+### 2. IGNORE_FALLBACK_VALUES（全局，按英文值匹配）
+
+```
+IGNORE_FALLBACK_VALUES.add('FCC')
+```
+
+**用法：** 添加英文值字符串。加入后所有 48 种语言都豁免。
+
+**适用：** 这个英文词在所有语言中都不需要翻译。
+- 行业缩写：`FCC`, `CE`, `UL`, `CIQ`, `PCR`, `INN`, `PAHs`
+- 格式串：`PDF`, `Excel/PDF`, `PDF/JPEG`, `Word`
+- 标准号：`GB 7718 / GB 28050`
+- 全局通用术语：`FAQ`, `Report`, `Dashboard`, `Login`
+
+### 3. SHARED_WORDS_BY_LANG（按语言，按英文值匹配）
+
+```
+SHARED_WORDS_BY_LANG['nl'].add('Histamine')
+```
+
+**用法：** 添加语言代码 + 英文值。仅在指定语言中豁免，同一词在其他语言仍会报错。
+
+**适用：** 英文词在特定语言中是正常的借词/科学术语，保持英文是合理的行为。
+- 科学术语：荷兰语中 `Histamine` 就是 `Histamine`
+- 借词：法语中 `Services` 就是正常借词
+- 标准名：瑞典语中 `GB 7718 Revision` 的 `Revision` 是瑞典语固有词
+
+### 选择建议
+
+| 情况 | 用的机制 |
+|------|---------|
+| 某个 key 在所有语言都不该翻译 | `IGNORE_FALLBACK_KEYS` |
+| 某个英文词在所有语言都不该翻译 | `IGNORE_FALLBACK_VALUES` |
+| 某个英文词仅在特定语言中合理保留 | `SHARED_WORDS_BY_LANG` |
+| 吃不准时先加 SHARED_WORDS（范围最小），确认所有语言都需要再加 IGNORE 类 | — |
+
+### 判定顺序（短路逻辑）
+
+```
+1. IGNORE_FALLBACK_KEYS.has(key)       → 跳过 ✅
+2. IGNORE_FALLBACK_VALUES.has(value)   → 跳过 ✅
+3. SHARED_WORDS_ALL.has(value)         → 跳过 ✅（全局共享词）
+4. SHARED_WORDS_BY_LANG[lang].has(val) → 跳过 ✅
+5. 以上都不满足                         → 报错 ❌
+```
+
+### 常见误区
+
+- ❌ 误用 IGNORE_FALLBACK_VALUES 豁免科学术语 → 导致所有语言都不报错，可能遗漏真正需要翻译的语言
+- ✅ 正确做法：用 SHARED_WORDS_BY_LANG 只在德语/荷语等拉丁语言中豁免，日语/中文等仍会提示
+- ⚠️ 如果后来发现该词在 ALL 语言中都是保持原文 → 再升级到 IGNORE_FALLBACK_VALUES
+
 ## 翻译铁律
 
 ### 禁止翻译词表（NO_TRANSLATE）

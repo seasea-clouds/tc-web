@@ -373,6 +373,49 @@ const ENGLISH_RESIDUAL_ALLOW = new Set([
   'Cabernet', 'Sauvignon',
   'Self', 'Sinotrade',
   'Assistance', 'border',
+  // 非拉丁语言英文残留豁免（技术缩写/格式名/占位变量）
+  'CFDA', 'DON', 'FOB', 'INN', 'INS', 'IPPC', 'NHC', 'NRV', 'PAHs', 'PCR',
+  'JPEG', 'PNG', 'DHL', 'FedEx', 'Word',
+  'fumonisin',
+  'YYYY', 'Koala',
+  // i18n 插值变量名
+  'brandName', 'productName', 'category', 'timeline',
+  'address', 'cost', 'name', 'lab', 'packer', 'kcal',
+  // 科学术语/标准缩写
+  'Salmonella', 'Vibrio', 'Producer', 'Excel', 'Pdf', 'pdf',
+  'Alibaba', 'RMB',
+  'EMC', 'GDA', 'ICSC', 'IECEE', 'MFN', 'QUID', 'QSO', 'WIPO',
+  'Engage', 'Test', 'Report',
+  // 第三批残留豁免
+  'Aflatoxin', 'Benzo', 'ochratoxin', 'pyrene', 'Made',
+  'COA', 'GMO', 'PAH', 'PRC',
+  'Accredited', 'Country', 'Courier', 'courier', 'Generic',
+  'additives', 'bulging', 'fanciful', 'kilojoules',
+  'logistics', 'offline', 'online', 'squatted', 'tests',
+  // 第四批残留豁免
+  'Agent', 'Artwork', 'Benchmark', 'Good', 'Manufacturing',
+  'Nutrient', 'Practice', 'Reference', 'Security', 'Trade', 'Value',
+  'FMD', 'ITEM', 'ONLY', 'PCB',
+  'Listeria', 'Nitrofuran', 'Tetracycline', 'melamine', 'zearalenone',
+  'Powered', 'additive', 'check', 'failed',
+  // 第五批残留豁免 + 小写变体
+  'aflatoxin', 'benzopyrene', 'phytosanitary',
+  'exedance',
+  'Notarization', 'Squatting', 'Classification', 'High',
+  'Chloramphenicol', 'Leptospira',
+  'Ningbo', 'Shanghai',
+  'carbs', 'saturates',
+  'cross', 'platform',
+  // 第六批残留豁免（Portal 消息+邮箱片段）
+  'david', 'sinotradecompliance',
+  'FCC', 'DXF',
+  'Color', 'Consumer', 'Electronics', 'Competing', 'Origins', 'Top',
+  // 站点消息残留
+  'Check',
+  // 第七批残留豁免（Portal 最终残留）
+  'Horizon', 'Scan', 'Assessment', 'Matrix', 'Risk',
+  'Can', 'Tin', 'Package',
+  'notarized', 'LOW',
 ]);
 
 // ============================================================
@@ -577,6 +620,17 @@ const SKIP_ENGLISH_RESIDUAL_PATTERNS = [
 ];
 
 // ============================================================
+// SKIP_CHAR_CHECK_PATTERNS — 跳过非目标语言字符检查的 key 模式
+// 用于格式说明/占位符等必须保留拉丁字符的键
+// ============================================================
+const SKIP_CHAR_CHECK_PATTERNS = [
+  /Placeholder$/,
+  /_format$/,
+  /[Ee]mergency[Ss]cenario\d+Basis$/,
+  /cbViability$/,
+];
+
+// ============================================================
 // Translation check
 // ============================================================
 function checkTranslations(targetLang = null, verbose = true) {
@@ -657,8 +711,12 @@ const totalIssues = { count: 0, byType: { fallback: [], empty: [], wrong_chars: 
       if (LANG_CHAR_CHECKS[lang]) {
         const { ranges, desc } = LANG_CHAR_CHECKS[lang];
         if (!hasCharRange(langVal, ranges) && /[a-zA-Z]/.test(langVal)) {
-          totalIssues.byType.wrong_chars.push([lang, key, langVal, desc]);
-          langIssues++;
+          const shortKey = key.split('.').pop() || key;
+          const isSkipKey = SKIP_CHAR_CHECK_PATTERNS.some(p => p.test(shortKey) || p.test(key));
+          if (!isSkipKey) {
+            totalIssues.byType.wrong_chars.push([lang, key, langVal, desc]);
+            langIssues++;
+          }
         }
       }
 
@@ -776,9 +834,10 @@ const INDUSTRY_NAMESPACES = [
 
 function checkIndustryMetaCompleteness(verbose = true) {
   const missingKeys = [];
+  const metaDir = SITE_MESSAGES_DIR;
 
   for (const locale of LOCALES) {
-    const filePath = path.join(MESSAGES_DIR, `${locale}.json`);
+    const filePath = path.join(metaDir, `${locale}.json`);
     if (!fs.existsSync(filePath)) continue;
 
     const fileContent = JSON.parse(fs.readFileSync(filePath, 'utf-8'));

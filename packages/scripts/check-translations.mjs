@@ -15,6 +15,42 @@
  * 8. 共享 UI 消息完整性（packages/ui/messages/）
  * 9. 面包屑 key 完整性（AutoBreadcrumb.tsx 引用的所有 i18n key）
  *
+ * ============================================================
+ * 三种 fallback 豁免机制（用法指南）
+ * ============================================================
+ *
+ * 当检测到「英文值 === 翻译值」时视为英文 fallback，但以下三种机制可豁免：
+ *
+ * 1. IGNORE_FALLBACK_KEYS （全局，按 key 路径匹配）
+ *    - 用法：添加 key 路径字符串，如 'Auth.emailPlaceholder'
+ *    - 适用：该 key 本来就该保持英文（邮箱、报告状态、联系人信息等）
+ *    - 注意：加入后所有 48 种语言都豁免，不要滥用
+ *
+ * 2. IGNORE_FALLBACK_VALUES （全局，按英文精确值匹配）
+ *    - 用法：添加英文值字符串，如 'FCC', 'PDF'
+ *    - 适用：该英文术语在所有语言中都保持原文（缩写、格式串、标准号等）
+ *    - 注意：加入后所有 48 种语言都豁免，真正的全局不变单词
+ *
+ * 3. SHARED_WORDS_BY_LANG （按语言，按英文值匹配）
+ *    - 用法：SHARED_WORDS_BY_LANG['xx'].add('EnglishWord')
+ *    - 适用：某英文词在特定语言中就是该语言的正常借词/科学术语
+ *      （如荷兰语中 Histamine 就是 Histamine；越南语中 Melamine 就是 Melamine）
+ *    - 注意：仅在指定语言豁免，同一词在其他语言仍会报错
+ *
+ * 判定顺序（短路逻辑）：
+ *   1. IGNORE_FALLBACK_KEYS.has(key)     → 跳过 ✅
+ *   2. IGNORE_FALLBACK_VALUES.has(value) → 跳过 ✅
+ *   3. SHARED_WORDS_ALL.has(value)       → 跳过 ✅（全局共享词）
+ *   4. SHARED_WORDS_BY_LANG[语言].has(value) → 跳过 ✅
+ *   5. 以上都不满足                       → 报错 ❌
+ *
+ * 使用建议（选哪个）：
+ *   - 如果某个 key 在所有语言都不该翻译 → IGNORE_FALLBACK_KEYS
+ *   - 如果某个英文词在所有语言都不该翻译 → IGNORE_FALLBACK_VALUES
+ *   - 如果某个英文词仅在特定语言中合理保留 → SHARED_WORDS_BY_LANG
+ *   - 当不确定时，先加 SHARED_WORDS_BY_LANG（范围最小），
+ *     如果后来发现所有语言都同样情况，再升级到 IGNORE_FALLBACK_VALUES
+ *
  * 使用方法：
  *   node scripts/check-translations.mjs
  *   node scripts/check-translations.mjs --lang zh
@@ -46,6 +82,18 @@ const NO_TRANSLATE = new Set([
   'GACC', 'NMPA', 'CCC', 'CBEC', 'CIFER', 'MOA', 'CNCA', 'MEE', 'min',
 ]);
 
+// ============================================================
+// IGNORE_FALLBACK_KEYS — 全局按 key 豁免
+// ============================================================
+// 当某个 key 在项目设计中本来就该保持英文时加入这里。
+// 加入后所有 48 种语言都豁免（范围最广，慎用）。
+// 适用场景：
+//   - 邮箱/占位符 → 'Auth.emailPlaceholder'
+//   - 报告状态/计划/客户 → 'Report.status', 'ReportSection.timelineClient'
+//   - 联系人信息 → 'AiAssistance.contactEmail', 'AiAssistance.contactLinkedIn'
+//   - 第三方平台缩写 → 'Check.fcc', 'Check.ce', 'Check.ul'
+// 如果你不确定某个 key 是否在所有语言都保留英文，
+// 优先用 SHARED_WORDS_BY_LANG（按语言豁免，范围更小）。
 const IGNORE_FALLBACK_KEYS = new Set([
   'Packages.nmpaCosmeticsFiling', 'Packages.piplDataCompliance',
   'Packages.premiumItems4', 'Packages.advancedName', 'Packages.comparisonFeature',
@@ -122,6 +170,18 @@ const IGNORE_FALLBACK_KEYS = new Set([
   'AiAssistance.servicesTitle',
 ]);
 
+// ============================================================
+// IGNORE_FALLBACK_VALUES — 全局按英文值豁免
+// ============================================================
+// 当某个英文值在所有语言中都保持原文不翻译时加入这里。
+// 加入后所有 48 种语言都豁免（范围最广，慎用）。
+// 适用场景：
+//   - 行业缩写如 'FCC', 'CE', 'UL', 'CIQ', 'PCR', 'INN'
+//   - 格式串如 'PDF', 'Excel/PDF', 'PDF/JPEG', 'Word'
+//   - 标准号如 'GB 7718 / GB 28050'
+//   - 全球通用的英文术语如 'FAQ', 'Login', 'Report', 'Dashboard'
+// 注意：确认该词在所有语言中都不需要翻译再加。
+// 如果只在部分语言中保持英文，用 SHARED_WORDS_BY_LANG。
 const IGNORE_FALLBACK_VALUES = new Set([
   'NMPA Cosmetics Filing', 'NMPA cosmetics filing and registration support',
   'PIPL Data Compliance Assessment', 'GACC Food Registration',
@@ -219,6 +279,20 @@ const SHARED_WORDS_ALL = new Set([
   'Compliance Rate', 'Insights & Compliance Guides',
 ]);
 
+// ============================================================
+// SHARED_WORDS_BY_LANG — 按语言豁免（英文借词/科学术语）
+// ============================================================
+// 当某个英文词在特定语言中是正常的借词/科学术语，
+// 在该语言中保持英文是合理的行为。
+// 区别于 IGNORE_FALLBACK_VALUES（全局），这里只豁免指定语言。
+// 同一英文词在语言 A 豁免，在语言 B 仍会报错。
+// 适用场景：
+//   - 科学术语：荷兰语 'Histamine' 就是 'Histamine'，斯瓦希里语 'Aflatoxin M1' 保持英文
+//   - 借词：法语 'Services' 就是借词，阿尔巴尼亚语 'Melamine' 保持英文
+//   - 标准名：瑞典语中 'GB 7718 Revision' 的 'Revision' 是瑞典语固有词
+// 使用方法：
+//   SHARED_WORDS_BY_LANG['xx'].add('EnglishWord')
+// 建议：吃不准时用这个（范围最小），以后发现所有语言都需要再加 IGNORE 类。
 const SHARED_WORDS_BY_LANG = {
   fr: new Set(['Services', 'Contact', 'Blog', 'Page', 'Message', 'Audit', 'Legal',
       'Cause', 'Solution', 'Classification', 'Histamine', 'Limitation']),

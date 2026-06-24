@@ -223,8 +223,8 @@ const SHARED_WORDS_BY_LANG = {
   fr: new Set(['Services', 'Contact', 'Blog', 'Page', 'Message', 'Audit', 'Legal',
       'Cause', 'Solution', 'Classification', 'Histamine', 'Limitation']),
   de: new Set(['Blog', 'Legal', 'Aflatoxin M1']),
-  nl: new Set(['Blog', 'Contact']),
-  sv: new Set(['Blog', 'Contact', 'Services']),
+  nl: new Set(['Blog', 'Contact', 'Melamine', 'Histamine']),
+  sv: new Set(['Blog', 'Contact', 'Services', 'Aflatoxin M1', 'GB 7718 Revision']),
   da: new Set(['Blog', 'Contact', 'Services']),
   no: new Set(['Blog', 'Contact', 'Services']),
   es: new Set(['Blog', 'Contact', 'Services']),
@@ -232,12 +232,21 @@ const SHARED_WORDS_BY_LANG = {
   pt: new Set(['Blog', 'Contact', 'Services']),
   ca: new Set(['Blog', 'Contact', 'Services', 'Client']),
   cs: new Set(['Blog', 'Aflatoxin M1']),
+  hu: new Set(['Blog', 'Aflatoxin M1']),
+  sq: new Set(['Blog', 'Melamine', 'Histamine']),
+  vi: new Set(['Blog', 'Melamine', 'Aflatoxin M1']),
 };
 // Blog is universal
 for (const lang of ['af','az','ca','cs','el','fi','hr','hu','id','ka','ms','pl','ro','si','sk','sl','sq','sw','tr','vi']) {
   if (!SHARED_WORDS_BY_LANG[lang]) SHARED_WORDS_BY_LANG[lang] = new Set();
   SHARED_WORDS_BY_LANG[lang].add('Blog');
 }
+// Swahili keeps international scientific terms in English
+SHARED_WORDS_BY_LANG['sw'].add('Melamine');
+SHARED_WORDS_BY_LANG['sw'].add('Tetracycline antibiotics');
+SHARED_WORDS_BY_LANG['sw'].add('Clenbuterol/β-agonists');
+SHARED_WORDS_BY_LANG['sw'].add('Benzo(a)pyrene');
+SHARED_WORDS_BY_LANG['sw'].add('Mycotoxins');
 
 const ENGLISH_RESIDUAL_ALLOW = new Set([
   ...NO_TRANSLATE, ...SHARED_WORDS_ALL,

@@ -416,7 +416,9 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
               {/* Author Card */}
               <div className="mt-16 pt-8 border-t border-[#F4F6F9]">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary-navy flex items-center justify-center text-white font-bold text-lg flex-shrink-0">D</div>
+                  <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 bg-[#F4F6F9]">
+                      <img src="/images/david-zhang.webp" alt="David Zhang" className="w-full h-full object-cover" loading="lazy" decoding="async" />
+                    </div>
                   <div>
                     <p className="font-semibold text-[#1B365D]">{tb('author', 'David Zhang')}</p>
                     <p className="text-sm text-[#5F6F7F] mt-1">{tb('authorBio', 'Regulatory compliance expert specializing in China market entry.')}</p>

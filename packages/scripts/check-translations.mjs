@@ -133,6 +133,38 @@ const IGNORE_FALLBACK_KEYS = new Set([
   'Check.labelRiskNote_cost', 'Check.labelRiskDim_cost',
   'Check.labelRiskDim_additive',
   'Check.gaccTimeline_label_name',
+  // Check: standard codes, abbreviations, scientific terms — keep English
+  'Check.cnipa_npc', 'Check.china_rohs_2', 'Check.douyin_global',
+  'Check.gb_7718_2011_rev_2025', 'Check.mofcom_gacc', 'Check.ndrc_mofcom_2020',
+  'Check.nhc_cnca', 'Check.asean_cosmetics_gmp', 'Check.eu_cosmetics_gmp_iso_22716',
+  'Check.us_fda_cgmp', 'Check.aflatoxin_m1', 'Check.clenbuterol_β_agonists',
+  'Check.brand_auth_letter', 'Check.formula_change_re_label', 'Check.label_artwork',
+  'Check.gb_7718_2011_under_revision', 'Check.additive_codes', 'Check.benzo_a_pyrene',
+  'Check.additive_review', 'Check.cbec_retail_import_policy', 'Check.label_review',
+  'Check.label_update_monitoring', 'Check.publication_opposition', 'Check.notification',
+  'Check.nmpa_2021_tech_specs', 'Check.mycotoxins_ochratoxin_a', 'Check.miit_order_32_2016',
+  'Check.microbiological_coliforms_pathogens', 'Check.mycotoxins_aflatoxin_don_zearalenone',
+  'Check.tetracycline_antibiotics',
+  'Check.accept_in_vitro_alternative_methods_for_certain_en',
+  'Check.asean_china_fta_also_rcep_member',
+  'Check.bse_history_enhanced_beef_inspections', 'Check.bse_related_enhanced_checks_on_beef',
+  'Check.china_australia_fta_chafta_reduced_tariffs_on_many',
+  'Check.china_australia_fta_chafta_reduced_tariffs_on_many_1',
+  'Check.coordinate_testing_with_nmpa_designated_labs',
+  'Check.energy_efficiency_srrc_wireless_rohs_as_applicable',
+  'Check.integrated_logistics_cainiao', 'Check.kimchi_has_specific_ciq_inspection_procedures',
+  'Check.mofcom_gacc_joint_list',
+  'Check.no_fta_post_brexit_mfn_rates_negotiations_ongoing', 'Check.paid_pending',
+  'Check.plaform_audits_product_listings',
+  'Check.post_brexit_certification_adjustments', 'Check.post_brexit_trade_framework_still_developing',
+  'Check.rcep_member_gradual_tariff_reductions_on_agricultu',
+  'Check.safety_of_it_equipment_mandatory_for_electronics_c',
+  'Check.strong_in_beef_wine_dairy_and_grains_chafta_provid',
+  'Check.use_cnca_certified_led_drivers',
+  'Check.verify_via_mofcom_cbec_positive_list_catalog_or_co',
+  'Check.csar_2021_article_3_5_category_determined_by_produ',
+  'Check.declare_in_ingredient_list_or_separate_contains_statement',
+  'Check.products_needing_full_registration_注册_sunscreen_wh',
   // ReportSection: section/label/field names — intentional English
   'ReportSection.labelFormat', 'ReportSection.fieldFormat',
   'ReportSection.labelDimension', 'ReportSection.fieldTurnaround',
@@ -410,6 +442,26 @@ const ENGLISH_RESIDUAL_ALLOW = new Set([
   'david', 'sinotradecompliance',
   'FCC', 'DXF',
   'Color', 'Consumer', 'Electronics', 'Competing', 'Origins', 'Top',
+  // 第八批残留豁免（缩写/标准名/借词 — 不需翻译）
+  'BSE', 'Brexit', 'Cainiao', 'ChAFTA', 'Kimchi', 'LED', 'MIIT', 'MOFCOM',
+  'RCEP', 'RoHS', 'Paid', 'cGMP', 'FDA', 'vitro',
+  // 第九批残留豁免（更多缩写/标准名/专用名词）
+  'ACETA', 'ASEAN', 'BRICS', 'CHAFTA', 'NDRC', 'NMAP', 'NPC', 'Mercosur',
+  'Canola', 'canola', 'Harmonics', 'Parmigiano', 'Phthalates', 'phthalate',
+  'Prosciutto', 'Clenbuterol', 'Premium', 'Trans', 'bonded', 'warehouse',
+  'squatter', 'labels', 'translation', 'Rev', 'Engl',
+  'Plaform', // typo in source, intentionally kept matching
+  'Mycotoxins', 'Article', 'Contains',
+  'dye', 'full', 'hair', 'needing', 'perm', 'registration', 'sunscreen', 'whitening',
+  // 第十批残留豁免（批量补全遗漏的小写/变体）
+  'CGMP', 'Art', 'calc', 'Ingredients', 'Ingrediants',
+  'rapeseed', 'Rapeseed', 'Italian', 'documents', 'portal',
+  'Specs', 'Tech', 'squatters', 'Auth', 'Letter', 'rev',
+  'agonists', 'Additives', 'mycotoxins', 'avocados', 'blueberries',
+  'Door', 'Live', 'Safety', 'equipment', 'per',
+  'domin', // truncation in source - 'dominant'
+
+
   // 站点消息残留
   'Check',
   // 第七批残留豁免（Portal 最终残留）
@@ -628,6 +680,7 @@ const SKIP_CHAR_CHECK_PATTERNS = [
   /_format$/,
   /[Ee]mergency[Ss]cenario\d+Basis$/,
   /cbViability$/,
+  /safety_of_it_equipment/,
 ];
 
 // ============================================================

@@ -75,7 +75,8 @@
     "processDesc": "Простий 6-етапний процес для впровадження вашого бренду в Китай",
     "trustedByDesc": "Приєднуйтеся до міжнародних брендів, які вже розвиваються разом з нами",
     "metaTitle": "Відповідність вимогам SinoTrade | Послуги з контролю за імпортом Китаю",
-    "metaDescription": "Універсальна відповідність вимогам щодо імпорту в Китай: реєстрація в GACC, сертифікація CCC, подання заявки на косметику NMPA, відповідність етикетці. Довіряють експортери в 50+ країнах."
+    "metaDescription": "Універсальна відповідність вимогам щодо імпорту в Китай: реєстрація в GACC, сертифікація CCC, подання заявки на косметику NMPA, відповідність етикетці. Довіряють експортери в 50+ країнах.",
+    "heroPortalCta": "Try our 3-step compliance checker →"
   },
   "Services": {
     "heroTitle": "Наші послуги",
@@ -463,7 +464,11 @@
     "whyCard4Desc": "Багаторічний практичний досвід допомагає міжнародним брендам досягти успіху в Китаї.",
     "ctaUrgency": "Безкоштовна консультація → відповідь цілодобово",
     "relatedResourcesTitle": "Пов'язані ресурси",
-    "relatedResourcesSubtitle": "Дізнайтеся більше про відповідність імпорту в Китай"
+    "relatedResourcesSubtitle": "Дізнайтеся більше про відповідність імпорту в Китай",
+    "portalCtaTitle": "Not sure if this applies to your products?",
+    "portalCtaLink": "Try our free compliance self-assessment",
+    "portalCtaGenericTitle": "Still have questions?",
+    "portalCtaGenericLink": "Check your products for free"
   },
   "Packages": {
     "heroTitle": "Пакети відповідності",

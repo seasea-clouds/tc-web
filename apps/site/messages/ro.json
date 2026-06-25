@@ -75,7 +75,8 @@
     "processDesc": "Un proces simplu în 6 pași pentru a introduce marca dvs. în China",
     "trustedByDesc": "Alăturați-vă mărcilor internaționale care deja cresc alături de noi",
     "metaTitle": "Conformitate SinoTrade | Servicii de conformitate a importurilor din China",
-    "metaDescription": "Conformitatea unică a importurilor din China: înregistrare GACC, certificare CCC, depunere a produselor cosmetice NMPA, conformitate cu etichete. Exportatorii din peste 50 de țări au încredere."
+    "metaDescription": "Conformitatea unică a importurilor din China: înregistrare GACC, certificare CCC, depunere a produselor cosmetice NMPA, conformitate cu etichete. Exportatorii din peste 50 de țări au încredere.",
+    "heroPortalCta": "Try our 3-step compliance checker →"
   },
   "Services": {
     "heroTitle": "Serviciile noastre",
@@ -463,7 +464,11 @@
     "whyCard4Desc": "Ani de experiență practică care ajută mărcile internaționale să aibă succes în China.",
     "ctaUrgency": "Consultație gratuită → Răspuns 24 de ore",
     "relatedResourcesTitle": "Resurse conexe",
-    "relatedResourcesSubtitle": "Aflați mai multe despre conformitatea importurilor din China"
+    "relatedResourcesSubtitle": "Aflați mai multe despre conformitatea importurilor din China",
+    "portalCtaTitle": "Not sure if this applies to your products?",
+    "portalCtaLink": "Try our free compliance self-assessment",
+    "portalCtaGenericTitle": "Still have questions?",
+    "portalCtaGenericLink": "Check your products for free"
   },
   "Packages": {
     "heroTitle": "Pachete de conformitate",

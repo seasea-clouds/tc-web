@@ -75,7 +75,8 @@
     "processDesc": "Mchakato rahisi wa hatua 6 wa kufikisha chapa yako nchini Uchina",
     "trustedByDesc": "Jiunge na chapa za kimataifa ambazo tayari zinakua nasi",
     "metaTitle": "Uzingatiaji wa SinoTrade | Huduma za Uzingatiaji wa Uagizaji wa China",
-    "metaDescription": "Utiifu wa uagizaji wa bidhaa kutoka China mara moja: usajili wa GACC, uidhinishaji wa CCC, uwekaji faili wa vipodozi vya NMPA, kufuata lebo. Inaaminiwa na wauzaji bidhaa nje katika nchi zaidi ya 50."
+    "metaDescription": "Utiifu wa uagizaji wa bidhaa kutoka China mara moja: usajili wa GACC, uidhinishaji wa CCC, uwekaji faili wa vipodozi vya NMPA, kufuata lebo. Inaaminiwa na wauzaji bidhaa nje katika nchi zaidi ya 50.",
+    "heroPortalCta": "Try our 3-step compliance checker →"
   },
   "Services": {
     "heroTitle": "Huduma zetu",
@@ -463,7 +464,11 @@
     "whyCard4Desc": "Uzoefu wa miaka mingi kusaidia chapa za kimataifa kufanikiwa nchini Uchina.",
     "ctaUrgency": "Ushauri wa bila malipo → jibu la saa 24",
     "relatedResourcesTitle": "Rasilimali Zinazohusiana",
-    "relatedResourcesSubtitle": "Pata maelezo zaidi kuhusu utiifu wa uagizaji wa China"
+    "relatedResourcesSubtitle": "Pata maelezo zaidi kuhusu utiifu wa uagizaji wa China",
+    "portalCtaTitle": "Not sure if this applies to your products?",
+    "portalCtaLink": "Try our free compliance self-assessment",
+    "portalCtaGenericTitle": "Still have questions?",
+    "portalCtaGenericLink": "Check your products for free"
   },
   "Packages": {
     "heroTitle": "Vifurushi vya Kuzingatia",

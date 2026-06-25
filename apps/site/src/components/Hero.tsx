@@ -50,6 +50,14 @@ export default function Hero({ title, subtitle, ctas }: HeroProps = {}) {
               {t('heroExplore')}
             </Link>
           </div>
+          <div className="mt-8">
+            <Link
+              href={`/${locale}/c/`}
+              className="text-white/70 hover:text-white text-sm underline underline-offset-4 transition-colors"
+            >
+              {t('heroPortalCta')}
+            </Link>
+          </div>
         </div>
       </section>
     );

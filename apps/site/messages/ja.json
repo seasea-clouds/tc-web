@@ -75,7 +75,8 @@
     "processDesc": "ブランドを中国に進出させるためのシンプルな 6 ステップのプロセス",
     "trustedByDesc": "すでに成長している国際ブランドに加わりましょう",
     "metaTitle": "SinoTrade コンプライアンス |中国輸入コンプライアンスサービス",
-    "metaDescription": "ワンストップの中国輸入コンプライアンス: GACC 登録、CCC 認証、NMPA 化粧品申請、ラベルコンプライアンス。 50か国以上の輸出業者から信頼されています。"
+    "metaDescription": "ワンストップの中国輸入コンプライアンス: GACC 登録、CCC 認証、NMPA 化粧品申請、ラベルコンプライアンス。 50か国以上の輸出業者から信頼されています。",
+    "heroPortalCta": "Try our 3-step compliance checker →"
   },
   "Services": {
     "heroTitle": "当社のサービス",
@@ -463,7 +464,11 @@
     "whyCard4Desc": "国際ブランドの中国での成功を支援する長年の実践経験。",
     "ctaUrgency": "無料相談→24時間対応",
     "relatedResourcesTitle": "関連リソース",
-    "relatedResourcesSubtitle": "中国輸入コンプライアンスについて詳しく見る"
+    "relatedResourcesSubtitle": "中国輸入コンプライアンスについて詳しく見る",
+    "portalCtaTitle": "Not sure if this applies to your products?",
+    "portalCtaLink": "Try our free compliance self-assessment",
+    "portalCtaGenericTitle": "Still have questions?",
+    "portalCtaGenericLink": "Check your products for free"
   },
   "Packages": {
     "heroTitle": "コンプライアンスパッケージ",

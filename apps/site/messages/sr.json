@@ -75,7 +75,8 @@
     "processDesc": "Једноставан процес у 6 корака за довођење вашег бренда у Кину",
     "trustedByDesc": "Придружите се међународним брендовима који већ расту са нама",
     "metaTitle": "Усклађеност са СиноТраде | Услуге усклађености увоза у Кини",
-    "metaDescription": "Усклађеност са увозом у Кини на једном месту: ГАЦЦ регистрација, ЦЦЦ сертификација, НМПА козметичко подношење, усклађеност са етикетама. Извозници у више од 50 земаља имају поверења."
+    "metaDescription": "Усклађеност са увозом у Кини на једном месту: ГАЦЦ регистрација, ЦЦЦ сертификација, НМПА козметичко подношење, усклађеност са етикетама. Извозници у више од 50 земаља имају поверења.",
+    "heroPortalCta": "Try our 3-step compliance checker →"
   },
   "Services": {
     "heroTitle": "Наше услуге",
@@ -463,7 +464,11 @@
     "whyCard4Desc": "Вишегодишње практично искуство помаже међународним брендовима да успеју у Кини.",
     "ctaUrgency": "Бесплатне консултације → 24х одговор",
     "relatedResourcesTitle": "Повезани ресурси",
-    "relatedResourcesSubtitle": "Сазнајте више о усклађености увоза из Кине"
+    "relatedResourcesSubtitle": "Сазнајте више о усклађености увоза из Кине",
+    "portalCtaTitle": "Not sure if this applies to your products?",
+    "portalCtaLink": "Try our free compliance self-assessment",
+    "portalCtaGenericTitle": "Still have questions?",
+    "portalCtaGenericLink": "Check your products for free"
   },
   "Packages": {
     "heroTitle": "Пакети усклађености",

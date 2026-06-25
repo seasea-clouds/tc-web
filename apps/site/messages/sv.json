@@ -75,7 +75,8 @@
     "processDesc": "En enkel 6-stegsprocess för att få ditt varumärke till Kina",
     "trustedByDesc": "Gå med i internationella varumärken som redan växer med oss",
     "metaTitle": "SinoTrade efterlevnad | China Import Compliance Services",
-    "metaDescription": "One-stop Kina import efterlevnad: GACC registrering, CCC certifiering, NMPA kosmetika ansökan, etikett överensstämmelse. Betrodd av exportörer i 50+ länder."
+    "metaDescription": "One-stop Kina import efterlevnad: GACC registrering, CCC certifiering, NMPA kosmetika ansökan, etikett överensstämmelse. Betrodd av exportörer i 50+ länder.",
+    "heroPortalCta": "Try our 3-step compliance checker →"
   },
   "Services": {
     "heroTitle": "Våra tjänster",
@@ -463,7 +464,11 @@
     "whyCard4Desc": "År av praktisk erfarenhet av att hjälpa internationella varumärken att lyckas i Kina.",
     "ctaUrgency": "Gratis konsultation → 24h svar",
     "relatedResourcesTitle": "Relaterade resurser",
-    "relatedResourcesSubtitle": "Läs mer om Kinas importefterlevnad"
+    "relatedResourcesSubtitle": "Läs mer om Kinas importefterlevnad",
+    "portalCtaTitle": "Not sure if this applies to your products?",
+    "portalCtaLink": "Try our free compliance self-assessment",
+    "portalCtaGenericTitle": "Still have questions?",
+    "portalCtaGenericLink": "Check your products for free"
   },
   "Packages": {
     "heroTitle": "Compliance-paket",

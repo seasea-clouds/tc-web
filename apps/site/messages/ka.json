@@ -75,7 +75,8 @@
     "processDesc": "მარტივი 6-საფეხურიანი პროცესი თქვენი ბრენდის ჩინეთში მოსახვედრად",
     "trustedByDesc": "შემოუერთდით ჩვენთან უკვე მზარდ საერთაშორისო ბრენდებს",
     "metaTitle": "SinoTrade შესაბამისობა | ჩინეთის იმპორტის შესაბამისობის სერვისები",
-    "metaDescription": "ჩინეთის იმპორტის ერთჯერადი შესაბამისობა: GACC რეგისტრაცია, CCC სერთიფიკატი, NMPA კოსმეტიკის შეტანა, ეტიკეტების შესაბამისობა. ენდობა ექსპორტიორებს 50+ ქვეყანაში."
+    "metaDescription": "ჩინეთის იმპორტის ერთჯერადი შესაბამისობა: GACC რეგისტრაცია, CCC სერთიფიკატი, NMPA კოსმეტიკის შეტანა, ეტიკეტების შესაბამისობა. ენდობა ექსპორტიორებს 50+ ქვეყანაში.",
+    "heroPortalCta": "Try our 3-step compliance checker →"
   },
   "Services": {
     "heroTitle": "ჩვენი სერვისები",
@@ -463,7 +464,11 @@
     "whyCard4Desc": "მრავალწლიანი გამოცდილება, რომელიც ეხმარება საერთაშორისო ბრენდებს წარმატების მიღწევაში ჩინეთში.",
     "ctaUrgency": "უფასო კონსულტაცია → 24 საათიანი პასუხი",
     "relatedResourcesTitle": "დაკავშირებული რესურსები",
-    "relatedResourcesSubtitle": "შეიტყვეთ მეტი ჩინეთის იმპორტის შესაბამისობის შესახებ"
+    "relatedResourcesSubtitle": "შეიტყვეთ მეტი ჩინეთის იმპორტის შესაბამისობის შესახებ",
+    "portalCtaTitle": "Not sure if this applies to your products?",
+    "portalCtaLink": "Try our free compliance self-assessment",
+    "portalCtaGenericTitle": "Still have questions?",
+    "portalCtaGenericLink": "Check your products for free"
   },
   "Packages": {
     "heroTitle": "შესაბამისობის პაკეტები",

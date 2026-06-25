@@ -75,7 +75,8 @@
     "processDesc": "Jednoduchý proces v 6 krocích, jak dostat svou značku do Číny",
     "trustedByDesc": "Připojte se k mezinárodním značkám, které s námi již rostou",
     "metaTitle": "Soulad SinoTrade | Čína Import Compliance Services",
-    "metaDescription": "Soulad s čínským dovozem na jednom místě: registrace GACC, certifikace CCC, archivace kosmetiky NMPA, dodržování štítků. Důvěřují exportéři ve více než 50 zemích."
+    "metaDescription": "Soulad s čínským dovozem na jednom místě: registrace GACC, certifikace CCC, archivace kosmetiky NMPA, dodržování štítků. Důvěřují exportéři ve více než 50 zemích.",
+    "heroPortalCta": "Try our 3-step compliance checker →"
   },
   "Services": {
     "heroTitle": "Naše služby",
@@ -463,7 +464,11 @@
     "whyCard4Desc": "Roky praktických zkušeností pomáhají mezinárodním značkám uspět v Číně.",
     "ctaUrgency": "Konzultace zdarma → odpověď 24h",
     "relatedResourcesTitle": "Související zdroje",
-    "relatedResourcesSubtitle": "Další informace o dodržování dovozu z Číny"
+    "relatedResourcesSubtitle": "Další informace o dodržování dovozu z Číny",
+    "portalCtaTitle": "Not sure if this applies to your products?",
+    "portalCtaLink": "Try our free compliance self-assessment",
+    "portalCtaGenericTitle": "Still have questions?",
+    "portalCtaGenericLink": "Check your products for free"
   },
   "Packages": {
     "heroTitle": "Balíčky shody",

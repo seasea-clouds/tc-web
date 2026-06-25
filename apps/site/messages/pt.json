@@ -75,7 +75,8 @@
     "processDesc": "Um processo simples de 6 etapas para colocar sua marca na China",
     "trustedByDesc": "Junte-se a marcas internacionais que já crescem conosco",
     "metaTitle": "Conformidade SinoTrade | Serviços de conformidade de importação da China",
-    "metaDescription": "Conformidade completa de importação da China: registro GACC, certificação CCC, arquivamento de cosméticos NMPA, conformidade de rótulos. Aprovado por exportadores em mais de 50 países."
+    "metaDescription": "Conformidade completa de importação da China: registro GACC, certificação CCC, arquivamento de cosméticos NMPA, conformidade de rótulos. Aprovado por exportadores em mais de 50 países.",
+    "heroPortalCta": "Try our 3-step compliance checker →"
   },
   "Services": {
     "heroTitle": "Nossos serviços",
@@ -463,7 +464,11 @@
     "whyCard4Desc": "Anos de experiência prática ajudando marcas internacionais a terem sucesso na China.",
     "ctaUrgency": "Consulta gratuita → Resposta 24h",
     "relatedResourcesTitle": "Recursos relacionados",
-    "relatedResourcesSubtitle": "Saiba mais sobre a conformidade de importação da China"
+    "relatedResourcesSubtitle": "Saiba mais sobre a conformidade de importação da China",
+    "portalCtaTitle": "Not sure if this applies to your products?",
+    "portalCtaLink": "Try our free compliance self-assessment",
+    "portalCtaGenericTitle": "Still have questions?",
+    "portalCtaGenericLink": "Check your products for free"
   },
   "Packages": {
     "heroTitle": "Pacotes de Conformidade",

@@ -75,7 +75,8 @@
     "processDesc": "Un procés senzill de 6 passos per introduir la vostra marca a la Xina",
     "trustedByDesc": "Uneix-te a marques internacionals que ja creixen amb nosaltres",
     "metaTitle": "Compliment de SinoTrade | Serveis de compliment d'importació de la Xina",
-    "metaDescription": "Compliment únic d'importació de la Xina: registre GACC, certificació CCC, presentació de cosmètics NMPA, compliment de l'etiqueta. Exportadors de més de 50 països de confiança."
+    "metaDescription": "Compliment únic d'importació de la Xina: registre GACC, certificació CCC, presentació de cosmètics NMPA, compliment de l'etiqueta. Exportadors de més de 50 països de confiança.",
+    "heroPortalCta": "Try our 3-step compliance checker →"
   },
   "Services": {
     "heroTitle": "Els nostres serveis",
@@ -463,7 +464,11 @@
     "whyCard4Desc": "Anys d'experiència pràctica ajudant les marques internacionals a tenir èxit a la Xina.",
     "ctaUrgency": "Consulta gratuïta → Resposta 24h",
     "relatedResourcesTitle": "Recursos relacionats",
-    "relatedResourcesSubtitle": "Obteniu més informació sobre el compliment de les importacions de la Xina"
+    "relatedResourcesSubtitle": "Obteniu més informació sobre el compliment de les importacions de la Xina",
+    "portalCtaTitle": "Not sure if this applies to your products?",
+    "portalCtaLink": "Try our free compliance self-assessment",
+    "portalCtaGenericTitle": "Still have questions?",
+    "portalCtaGenericLink": "Check your products for free"
   },
   "Packages": {
     "heroTitle": "Paquets de compliment",

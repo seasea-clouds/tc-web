@@ -5,6 +5,7 @@ import { testimonials } from '@/data/testimonials';
 import Link from 'next/link';
 import ContactForm from '@/components/ContactForm';
 import CTASection from '@/components/CTASection';
+import PortalCTASection from '@/components/PortalCTASection';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const locale = (await params).locale;
@@ -30,6 +31,7 @@ export default async function TestimonialsPage({ params }: { params: Promise<{ l
   const t = await getTranslations({ locale, namespace: 'Testimonials' });
   const bcT = await getTranslations({ locale, namespace: 'breadcrumb' });
   const ctaT = await getTranslations({ locale, namespace: 'CTA' });
+  const commonT = await getTranslations({ locale, namespace: 'ServiceCommon' });
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -107,6 +109,7 @@ export default async function TestimonialsPage({ params }: { params: Promise<{ l
         </div>
       </section>
 
+      <PortalCTASection t={commonT} href={`/${locale}/c/`} generic />
       <ContactForm />
       <CTASection t={ctaT} />
     </div>

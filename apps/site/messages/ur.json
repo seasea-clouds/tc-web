@@ -75,7 +75,8 @@
     "processDesc": "اپنے برانڈ کو چین تک پہنچانے کے لیے ایک سادہ 6 قدمی عمل",
     "trustedByDesc": "ہمارے ساتھ پہلے سے بڑھ رہے بین الاقوامی برانڈز میں شامل ہوں۔",
     "metaTitle": "SinoTrade تعمیل | چائنا امپورٹ کمپلائنس سروسز",
-    "metaDescription": "ون اسٹاپ چائنا امپورٹ کمپلائنس: جی اے سی سی رجسٹریشن، سی سی سی سرٹیفیکیشن، این ایم پی اے کاسمیٹکس فائلنگ، لیبل کی تعمیل۔ 50+ ممالک میں برآمد کنندگان کے ذریعہ قابل اعتماد۔"
+    "metaDescription": "ون اسٹاپ چائنا امپورٹ کمپلائنس: جی اے سی سی رجسٹریشن، سی سی سی سرٹیفیکیشن، این ایم پی اے کاسمیٹکس فائلنگ، لیبل کی تعمیل۔ 50+ ممالک میں برآمد کنندگان کے ذریعہ قابل اعتماد۔",
+    "heroPortalCta": "Try our 3-step compliance checker →"
   },
   "Services": {
     "heroTitle": "ہماری خدمات",
@@ -463,7 +464,11 @@
     "whyCard4Desc": "بین الاقوامی برانڈز کو چین میں کامیاب ہونے میں مدد کرنے والے سالوں کا تجربہ۔",
     "ctaUrgency": "مفت مشاورت → 24 گھنٹے جواب",
     "relatedResourcesTitle": "متعلقہ وسائل",
-    "relatedResourcesSubtitle": "چین کی درآمدی تعمیل کے بارے میں مزید جانیں۔"
+    "relatedResourcesSubtitle": "چین کی درآمدی تعمیل کے بارے میں مزید جانیں۔",
+    "portalCtaTitle": "Not sure if this applies to your products?",
+    "portalCtaLink": "Try our free compliance self-assessment",
+    "portalCtaGenericTitle": "Still have questions?",
+    "portalCtaGenericLink": "Check your products for free"
   },
   "Packages": {
     "heroTitle": "تعمیل پیکیجز",

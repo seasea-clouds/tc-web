@@ -75,7 +75,8 @@
     "processDesc": "กระบวนการ 6 ขั้นตอนง่ายๆ เพื่อนำแบรนด์ของคุณเข้าสู่ประเทศจีน",
     "trustedByDesc": "เข้าร่วมกับแบรนด์ต่างประเทศที่เติบโตไปพร้อมกับเรา",
     "metaTitle": "ตรวจสอบความสอดคล้องจีน | SinoTrade Compliance",
-    "metaDescription": "ตรวจสอบว่าผลิตภัณฑ์ของคุณต้องการการลงทะเบียน GACC การรับรอง CCC หรือการยื่น NMPA สำหรับการส่งออกยังจีนหรือไม่"
+    "metaDescription": "ตรวจสอบว่าผลิตภัณฑ์ของคุณต้องการการลงทะเบียน GACC การรับรอง CCC หรือการยื่น NMPA สำหรับการส่งออกยังจีนหรือไม่",
+    "heroPortalCta": "Try our 3-step compliance checker →"
   },
   "Services": {
     "heroTitle": "บริการของเรา",
@@ -463,7 +464,11 @@
     "whyCard4Desc": "ประสบการณ์หลายปีในการช่วยให้แบรนด์ต่างประเทศประสบความสำเร็จในประเทศจีน",
     "ctaUrgency": "ให้คำปรึกษาฟรี → ตอบกลับตลอด 24 ชั่วโมง",
     "relatedResourcesTitle": "แหล่งข้อมูลที่เกี่ยวข้อง",
-    "relatedResourcesSubtitle": "เรียนรู้เพิ่มเติมเกี่ยวกับการปฏิบัติตามข้อกำหนดการนำเข้าของจีน"
+    "relatedResourcesSubtitle": "เรียนรู้เพิ่มเติมเกี่ยวกับการปฏิบัติตามข้อกำหนดการนำเข้าของจีน",
+    "portalCtaTitle": "Not sure if this applies to your products?",
+    "portalCtaLink": "Try our free compliance self-assessment",
+    "portalCtaGenericTitle": "Still have questions?",
+    "portalCtaGenericLink": "Check your products for free"
   },
   "Packages": {
     "heroTitle": "แพคเกจการปฏิบัติตามข้อกำหนด",

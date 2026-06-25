@@ -3,6 +3,7 @@ import { locales } from '@/i18n/routing';
 import { sharedOpenGraph, sharedTwitter, buildLanguages } from '@trade/ui/seo';
 import ServicesGrid from '@/components/ServicesGrid';
 import CTASection from '@/components/CTASection';
+import PortalCTASection from '@/components/PortalCTASection';
 import ContactForm from '@/components/ContactForm';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
@@ -28,6 +29,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
   const t = await getTranslations({ locale, namespace: 'Services' });
   const bcT = await getTranslations({ locale, namespace: 'breadcrumb' });
   const ctaT = await getTranslations({ locale, namespace: 'CTA' });
+  const commonT = await getTranslations({ locale, namespace: 'ServiceCommon' });
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -41,6 +43,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
   return (
     <main>
       <ServicesGrid headingLevel="h1" />
+      <PortalCTASection t={commonT} href={`/${locale}/c/`} generic />
       <ContactForm />
       <CTASection t={ctaT} />
       <script id="jsonld-services" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />

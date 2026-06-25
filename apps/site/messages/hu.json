@@ -75,7 +75,8 @@
     "processDesc": "Egy egyszerű, 6 lépésből álló folyamat, amellyel márkája Kínába kerülhet",
     "trustedByDesc": "Csatlakozzon a már velünk együtt növekvő nemzetközi márkákhoz",
     "metaTitle": "SinoTrade megfelelőség | Kínai import megfelelőségi szolgáltatások",
-    "metaDescription": "Egyablakos kínai import megfelelőség: GACC regisztráció, CCC tanúsítás, NMPA kozmetikai bejelentés, címke megfelelőség. Több mint 50 ország exportőrei bíznak meg benne."
+    "metaDescription": "Egyablakos kínai import megfelelőség: GACC regisztráció, CCC tanúsítás, NMPA kozmetikai bejelentés, címke megfelelőség. Több mint 50 ország exportőrei bíznak meg benne.",
+    "heroPortalCta": "Try our 3-step compliance checker →"
   },
   "Services": {
     "heroTitle": "Szolgáltatásaink",
@@ -463,7 +464,11 @@
     "whyCard4Desc": "Több éves gyakorlati tapasztalat segíti a nemzetközi márkák sikerét Kínában.",
     "ctaUrgency": "Ingyenes konzultáció → 24 órás válaszadás",
     "relatedResourcesTitle": "Kapcsolódó források",
-    "relatedResourcesSubtitle": "További információ a kínai import megfelelőségéről"
+    "relatedResourcesSubtitle": "További információ a kínai import megfelelőségéről",
+    "portalCtaTitle": "Not sure if this applies to your products?",
+    "portalCtaLink": "Try our free compliance self-assessment",
+    "portalCtaGenericTitle": "Still have questions?",
+    "portalCtaGenericLink": "Check your products for free"
   },
   "Packages": {
     "heroTitle": "Megfelelőségi csomagok",

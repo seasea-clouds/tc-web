@@ -75,7 +75,8 @@
     "processDesc": "یک فرآیند 6 مرحله ای ساده برای ورود نام تجاری خود به چین",
     "trustedByDesc": "به برندهای بین المللی در حال رشد با ما بپیوندید",
     "metaTitle": "مطابقت SinoTrade | خدمات مطابقت واردات چین",
-    "metaDescription": "انطباق یک مرحله ای واردات چین: ثبت GACC، گواهینامه CCC، بایگانی لوازم آرایشی NMPA، مطابقت با برچسب. مورد اعتماد صادرکنندگان در بیش از 50 کشور."
+    "metaDescription": "انطباق یک مرحله ای واردات چین: ثبت GACC، گواهینامه CCC، بایگانی لوازم آرایشی NMPA، مطابقت با برچسب. مورد اعتماد صادرکنندگان در بیش از 50 کشور.",
+    "heroPortalCta": "Try our 3-step compliance checker →"
   },
   "Services": {
     "heroTitle": "خدمات ما",
@@ -463,7 +464,11 @@
     "whyCard4Desc": "سالها تجربه عملی در کمک به موفقیت برندهای بین المللی در چین.",
     "ctaUrgency": "مشاوره رایگان → پاسخگویی 24 ساعته",
     "relatedResourcesTitle": "منابع مرتبط",
-    "relatedResourcesSubtitle": "درباره انطباق با واردات چین بیشتر بدانید"
+    "relatedResourcesSubtitle": "درباره انطباق با واردات چین بیشتر بدانید",
+    "portalCtaTitle": "Not sure if this applies to your products?",
+    "portalCtaLink": "Try our free compliance self-assessment",
+    "portalCtaGenericTitle": "Still have questions?",
+    "portalCtaGenericLink": "Check your products for free"
   },
   "Packages": {
     "heroTitle": "بسته های انطباق",

@@ -75,7 +75,8 @@
     "processDesc": "Quy trình 6 bước đơn giản để đưa thương hiệu của bạn vào Trung Quốc",
     "trustedByDesc": "Tham gia cùng các thương hiệu quốc tế đã phát triển cùng chúng tôi",
     "metaTitle": "SinoTrade Compliance | Dịch vụ tuân thủ nhập khẩu Trung Quốc",
-    "metaDescription": "Tuân thủ nhập khẩu một cửa vào Trung Quốc: đăng ký GACC, chứng nhận CCC, nộp hồ sơ mỹ phẩm NMPA, tuân thủ nhãn. Được các nhà xuất khẩu ở hơn 50 quốc gia tin cậy."
+    "metaDescription": "Tuân thủ nhập khẩu một cửa vào Trung Quốc: đăng ký GACC, chứng nhận CCC, nộp hồ sơ mỹ phẩm NMPA, tuân thủ nhãn. Được các nhà xuất khẩu ở hơn 50 quốc gia tin cậy.",
+    "heroPortalCta": "Try our 3-step compliance checker →"
   },
   "Services": {
     "heroTitle": "Dịch vụ của chúng tôi",
@@ -463,7 +464,11 @@
     "whyCard4Desc": "Nhiều năm kinh nghiệm thực tế giúp các thương hiệu quốc tế thành công ở Trung Quốc.",
     "ctaUrgency": "Tư vấn miễn phí → phản hồi 24h",
     "relatedResourcesTitle": "Tài nguyên liên quan",
-    "relatedResourcesSubtitle": "Tìm hiểu thêm về tuân thủ nhập khẩu của Trung Quốc"
+    "relatedResourcesSubtitle": "Tìm hiểu thêm về tuân thủ nhập khẩu của Trung Quốc",
+    "portalCtaTitle": "Not sure if this applies to your products?",
+    "portalCtaLink": "Try our free compliance self-assessment",
+    "portalCtaGenericTitle": "Still have questions?",
+    "portalCtaGenericLink": "Check your products for free"
   },
   "Packages": {
     "heroTitle": "Gói tuân thủ",

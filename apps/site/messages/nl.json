@@ -75,7 +75,8 @@
     "processDesc": "Een eenvoudig proces van zes stappen om uw merk in China te krijgen",
     "trustedByDesc": "Sluit u aan bij internationale merken die al met ons meegroeien",
     "metaTitle": "SinoTrade Compliance | China Importnalevingsdiensten",
-    "metaDescription": "One-stop China-importnaleving: GACC-registratie, CCC-certificering, NMPA-cosmetica-aanvraag, naleving van labels. Vertrouwd door exporteurs in meer dan 50 landen."
+    "metaDescription": "One-stop China-importnaleving: GACC-registratie, CCC-certificering, NMPA-cosmetica-aanvraag, naleving van labels. Vertrouwd door exporteurs in meer dan 50 landen.",
+    "heroPortalCta": "Try our 3-step compliance checker →"
   },
   "Services": {
     "heroTitle": "Onze diensten",
@@ -463,7 +464,11 @@
     "whyCard4Desc": "Jarenlange praktijkervaring die internationale merken helpt succesvol te zijn in China.",
     "ctaUrgency": "Gratis advies → 24-uurs reactie",
     "relatedResourcesTitle": "Gerelateerde bronnen",
-    "relatedResourcesSubtitle": "Meer informatie over de naleving van importregels in China"
+    "relatedResourcesSubtitle": "Meer informatie over de naleving van importregels in China",
+    "portalCtaTitle": "Not sure if this applies to your products?",
+    "portalCtaLink": "Try our free compliance self-assessment",
+    "portalCtaGenericTitle": "Still have questions?",
+    "portalCtaGenericLink": "Check your products for free"
   },
   "Packages": {
     "heroTitle": "Nalevingspakketten",

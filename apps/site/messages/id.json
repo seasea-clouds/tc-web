@@ -75,7 +75,8 @@
     "processDesc": "Proses 6 langkah sederhana untuk membawa merek Anda ke Tiongkok",
     "trustedByDesc": "Bergabunglah dengan merek internasional yang sudah berkembang bersama kami",
     "metaTitle": "SinoTrade Compliance | Layanan Kepatuhan Impor China",
-    "metaDescription": "Kepatuhan impor Tiongkok terpadu: pendaftaran GACC, sertifikasi CCC, pengarsipan kosmetik NMPA, kepatuhan label. Dipercaya oleh eksportir di 50+ negara."
+    "metaDescription": "Kepatuhan impor Tiongkok terpadu: pendaftaran GACC, sertifikasi CCC, pengarsipan kosmetik NMPA, kepatuhan label. Dipercaya oleh eksportir di 50+ negara.",
+    "heroPortalCta": "Try our 3-step compliance checker →"
   },
   "Services": {
     "heroTitle": "Layanan kami",
@@ -463,7 +464,11 @@
     "whyCard4Desc": "Pengalaman bertahun-tahun membantu merek internasional meraih kesuksesan di Tiongkok.",
     "ctaUrgency": "Konsultasi gratis → Respon 24 jam",
     "relatedResourcesTitle": "Sumber Daya Terkait",
-    "relatedResourcesSubtitle": "Pelajari lebih lanjut tentang kepatuhan impor Tiongkok"
+    "relatedResourcesSubtitle": "Pelajari lebih lanjut tentang kepatuhan impor Tiongkok",
+    "portalCtaTitle": "Not sure if this applies to your products?",
+    "portalCtaLink": "Try our free compliance self-assessment",
+    "portalCtaGenericTitle": "Still have questions?",
+    "portalCtaGenericLink": "Check your products for free"
   },
   "Packages": {
     "heroTitle": "Paket Kepatuhan",

@@ -101,6 +101,7 @@
 ### T-LOCALE-ROUTE. Worker 路由支持 `/{locale}/compli-service/*`
 - **状态：** ✅ 已完成（主站 middleware 处理 locale 前缀）
 ### T-TRANSLATE. 用户站各语言翻译填充
+- **状态：** ✅ 已完成
 ### T-COOKIE. CookieConsent 占位（当前已完整实现，分析工具接入时需跟进）
 
 ---

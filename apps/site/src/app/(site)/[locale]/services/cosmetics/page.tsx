@@ -7,6 +7,7 @@ import CoverSection from '@/components/CoverSection';
 import ProcessSteps from '@/components/ProcessSteps';
 import WhyUsCards from '@/components/WhyUsCards';
 import CTASection from '@/components/CTASection';
+import PortalCTASection from '@/components/PortalCTASection';
 import ContactForm from '@/components/ContactForm';
 import ServiceFAQ from '@/components/ServiceFAQ';
 import HowToJsonLd from '@/components/HowToJsonLd';
@@ -84,6 +85,7 @@ export default async function CosmeticsPage({ params }: { params: Promise<{ loca
       <WhyUsCards t={commonT} />
       <ServiceFAQ namespace="ServiceCosmetics" />
       <RelatedResources locale={locale} category={getBlogCategoryForService('cosmetics', locale)} />
+      <PortalCTASection t={commonT} href={`/${locale}/c/check/nmpa`} />
       <ContactForm />
       <CTASection t={ctaT} />
           <script id="jsonld-cosmetics" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />

@@ -4,6 +4,7 @@ import { sharedOpenGraph, sharedTwitter, buildLanguages } from '@trade/ui/seo';
 import { Suspense } from 'react';
 import ServiceCheckboxes from '@/components/ServiceCheckboxes';
 import CTASection from '@/components/CTASection';
+import PortalCTASection from '@/components/PortalCTASection';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const locale = (await params).locale;
@@ -29,6 +30,7 @@ export default async function QuotePage({ params }: { params: Promise<{ locale: 
   const t = await getTranslations({ locale, namespace: 'Quote' });
   const bcT = await getTranslations({ locale, namespace: 'breadcrumb' });
   const ctaT = await getTranslations({ locale, namespace: 'CTA' });
+  const commonT = await getTranslations({ locale, namespace: 'ServiceCommon' });
 
   return (
     <div className="bg-[#F4F6F9]">
@@ -113,6 +115,7 @@ export default async function QuotePage({ params }: { params: Promise<{ locale: 
         </div>
       </section>
 
+      <PortalCTASection t={commonT} href={`/${locale}/c/`} generic />
       <CTASection t={ctaT} />
     </div>
   );

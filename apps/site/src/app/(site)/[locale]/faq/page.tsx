@@ -3,6 +3,7 @@ import { locales } from '@/i18n/routing';
 import { sharedOpenGraph, sharedTwitter, buildLanguages } from '@trade/ui/seo';
 import FAQSection from '@/components/FAQSection';
 import CTASection from '@/components/CTASection';
+import PortalCTASection from '@/components/PortalCTASection';
 import ContactForm from '@/components/ContactForm';
 import DefinitionSchema from '@/components/DefinitionSchema';
 // JSON-LD uses plain <script> tag — next/script does NOT render inline in App Router
@@ -136,6 +137,7 @@ export default async function FAQPage({ params }: { params: Promise<{ locale: st
 
       <ContactForm />
 
+      <PortalCTASection t={ctaT} href={`/${locale}/c/`} generic />
       <CTASection t={ctaT} />
     </main>
   );

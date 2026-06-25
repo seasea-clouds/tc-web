@@ -235,6 +235,12 @@ const IGNORE_FALLBACK_KEYS = new Set([
   'Blog.categories',
   // Portal labels that need translation
   'Home.popular', 'ReportSection.client', 'Auth.email', 'Dashboard.email',
+  // Portal CTA links — English placeholders pending translation assignment
+  'Home.heroPortalCta',
+  'ServiceCommon.portalCtaTitle',
+  'ServiceCommon.portalCtaLink',
+  'ServiceCommon.portalCtaGenericTitle',
+  'ServiceCommon.portalCtaGenericLink',
   // Check — legitimate English abbreviations, standard codes, scientific terms
   'Check.cnipa_npc',
   'Check.china_rohs_2',

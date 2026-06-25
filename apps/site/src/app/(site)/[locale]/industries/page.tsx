@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
 import CTASection from '@/components/CTASection';
+import PortalCTASection from '@/components/PortalCTASection';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const locale = (await params).locale;
@@ -31,6 +32,7 @@ export default async function IndustriesPage({ params }: { params: Promise<{ loc
   const t = await getTranslations({ locale, namespace: 'IndustriesCommon' });
   const bcT = await getTranslations({ locale, namespace: 'breadcrumb' });
   const ctaT = await getTranslations({ locale, namespace: 'CTA' });
+  const commonT = await getTranslations({ locale, namespace: 'ServiceCommon' });
 
   return (
     <div className="min-h-screen bg-bg-snow">
@@ -83,6 +85,7 @@ export default async function IndustriesPage({ params }: { params: Promise<{ loc
         </div>
       </section>
 
+      <PortalCTASection t={commonT} href={`/${locale}/c/`} generic />
       <ContactForm />
       <CTASection t={ctaT} />
     </div>

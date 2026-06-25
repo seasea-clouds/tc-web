@@ -118,6 +118,12 @@ const IGNORE_FALLBACK_KEYS = new Set([
   'Check.reportModuleCrossborder', 'Check.crossborderTitle',
   'Check.crossborderDesc',
   'Home.popular',
+  // Portal CTA links — English CTAs pending translation assignment
+  'Home.heroPortalCta',
+  'ServiceCommon.portalCtaTitle',
+  'ServiceCommon.portalCtaLink',
+  'ServiceCommon.portalCtaGenericTitle',
+  'ServiceCommon.portalCtaGenericLink',
   // Report: Status/Plan/Client are correct loanwords in many languages (Germanic, Romance, etc.)
   'Report.status', 'Report.plan', 'Report.client',
   'ReportSection.status', 'ReportSection.plan',

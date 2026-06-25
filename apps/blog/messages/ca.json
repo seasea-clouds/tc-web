@@ -60,5 +60,14 @@
     "accept": "Acceptar-ho tot",
     "reject": "Rebutja els no essencials",
     "privacyLink": "Política de privadesa"
+  },
+
+  "Navbar": {
+    "home": "Home",
+    "blog": "Blog"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "blog": "Blog"
   }
 }

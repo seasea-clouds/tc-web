@@ -60,5 +60,14 @@
     "accept": "سب کو قبول کریں۔",
     "reject": "غیر ضروری کو مسترد کریں۔",
     "privacyLink": "رازداری کی پالیسی"
+  },
+
+  "Navbar": {
+    "home": "Home",
+    "blog": "Blog"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "blog": "Blog"
   }
 }

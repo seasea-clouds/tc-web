@@ -60,5 +60,14 @@
     "accept": "Zaakceptuj wszystko",
     "reject": "Odrzuć niepotrzebne",
     "privacyLink": "Polityka prywatności"
+  },
+
+  "Navbar": {
+    "home": "Home",
+    "blog": "Blog"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "blog": "Blog"
   }
 }

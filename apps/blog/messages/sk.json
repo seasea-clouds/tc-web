@@ -60,5 +60,14 @@
     "accept": "Prijať všetko",
     "reject": "Odmietnuť nepodstatné",
     "privacyLink": "Zásady ochrany osobných údajov"
+  },
+
+  "Navbar": {
+    "home": "Home",
+    "blog": "Blog"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "blog": "Blog"
   }
 }

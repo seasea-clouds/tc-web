@@ -60,5 +60,14 @@
     "accept": "קבל הכל",
     "reject": "דחה לא חיוני",
     "privacyLink": "מדיניות פרטיות"
+  },
+
+  "Navbar": {
+    "home": "Home",
+    "blog": "Blog"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "blog": "Blog"
   }
 }

@@ -60,5 +60,14 @@
     "accept": "همه را بپذیر",
     "reject": "رد غیر ضروری",
     "privacyLink": "سیاست حفظ حریم خصوصی"
+  },
+
+  "Navbar": {
+    "home": "Home",
+    "blog": "Blog"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "blog": "Blog"
   }
 }

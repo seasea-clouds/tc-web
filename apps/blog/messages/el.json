@@ -60,5 +60,14 @@
     "accept": "Αποδοχή όλων",
     "reject": "Απόρριψη μη ουσιώδους",
     "privacyLink": "Πολιτική Απορρήτου"
+  },
+
+  "Navbar": {
+    "home": "Home",
+    "blog": "Blog"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "blog": "Blog"
   }
 }

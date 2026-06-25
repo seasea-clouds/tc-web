@@ -60,5 +60,14 @@
     "accept": "ยอมรับทั้งหมด",
     "reject": "ปฏิเสธสิ่งที่ไม่จำเป็น",
     "privacyLink": "นโยบายความเป็นส่วนตัว"
+  },
+
+  "Navbar": {
+    "home": "Home",
+    "blog": "Blog"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "blog": "Blog"
   }
 }

@@ -60,5 +60,14 @@
     "accept": "Kubali Yote",
     "reject": "Kataa Isiyo Muhimu",
     "privacyLink": "Sera ya Faragha"
+  },
+
+  "Navbar": {
+    "home": "Home",
+    "blog": "Blog"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "blog": "Blog"
   }
 }

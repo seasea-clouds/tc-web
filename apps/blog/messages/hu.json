@@ -60,5 +60,14 @@
     "accept": "Az összes elfogadása",
     "reject": "Elutasítás Nem alapvető",
     "privacyLink": "Adatvédelmi szabályzat"
+  },
+
+  "Navbar": {
+    "home": "Home",
+    "blog": "Blog"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "blog": "Blog"
   }
 }

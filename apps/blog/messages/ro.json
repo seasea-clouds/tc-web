@@ -60,5 +60,14 @@
     "accept": "Acceptați toate",
     "reject": "Respinge neesențiale",
     "privacyLink": "Politica de confidențialitate"
+  },
+
+  "Navbar": {
+    "home": "Home",
+    "blog": "Blog"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "blog": "Blog"
   }
 }

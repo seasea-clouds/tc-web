@@ -60,5 +60,14 @@
     "accept": "Accepter alle",
     "reject": "Afvis ikke-væsentligt",
     "privacyLink": "Privatlivspolitik"
+  },
+
+  "Navbar": {
+    "home": "Home",
+    "blog": "Blog"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "blog": "Blog"
   }
 }

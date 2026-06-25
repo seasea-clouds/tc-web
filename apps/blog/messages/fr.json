@@ -60,5 +60,14 @@
     "accept": "Accepter tout",
     "reject": "Rejeter les produits non essentiels",
     "privacyLink": "politique de confidentialité"
+  },
+
+  "Navbar": {
+    "home": "Home",
+    "blog": "Blog"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "blog": "Blog"
   }
 }

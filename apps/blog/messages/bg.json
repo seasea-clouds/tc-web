@@ -60,5 +60,14 @@
     "accept": "Приеми всички",
     "reject": "Отхвърляне на несъществени",
     "privacyLink": "Политика за поверителност"
+  },
+
+  "Navbar": {
+    "home": "Home",
+    "blog": "Blog"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "blog": "Blog"
   }
 }

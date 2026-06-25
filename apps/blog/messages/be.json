@@ -60,5 +60,14 @@
     "accept": "Прыняць усе",
     "reject": "Адхіліць неістотнае",
     "privacyLink": "Палітыка прыватнасці"
+  },
+
+  "Navbar": {
+    "home": "Home",
+    "blog": "Blog"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "blog": "Blog"
   }
 }

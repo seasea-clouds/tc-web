@@ -60,5 +60,14 @@
     "accept": "सभी स्वीकृत",
     "reject": "गैर-जरूरी को अस्वीकार करें",
     "privacyLink": "गोपनीयता नीति"
+  },
+
+  "Navbar": {
+    "home": "Home",
+    "blog": "Blog"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "blog": "Blog"
   }
 }

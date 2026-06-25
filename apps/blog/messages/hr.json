@@ -60,5 +60,14 @@
     "accept": "Prihvati sve",
     "reject": "Odbaci nebitno",
     "privacyLink": "Politika privatnosti"
+  },
+
+  "Navbar": {
+    "home": "Home",
+    "blog": "Blog"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "blog": "Blog"
   }
 }

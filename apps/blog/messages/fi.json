@@ -60,5 +60,14 @@
     "accept": "Hyväksy kaikki",
     "reject": "Hylkää Ei-välttämätön",
     "privacyLink": "Tietosuojakäytäntö"
+  },
+
+  "Navbar": {
+    "home": "Home",
+    "blog": "Blog"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "blog": "Blog"
   }
 }

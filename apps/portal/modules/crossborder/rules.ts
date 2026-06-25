@@ -39,27 +39,27 @@ export function checkCrossborder(input: any, locale?: string): any {
     oneLineDecision: t('cbOneLine'),
     summary: t('cbSummary'),
     riskDimensions: [
-      { dimension: "Positive List", score: 2, color: "🟢", note: "Category is on CBEC positive list" },
+      { dimension: "Positive List", score: 2, color: "🟢", note: t("category_is_on_cbec_positive_list") },
       { dimension: "Platform Setup", score: 4, color: "🟡", note: "Platform onboarding 4-8 weeks" },
-      { dimension: "Compliance", score: 2, color: "🟢", note: "No GACC required for CBEC" },
+      { dimension: "Compliance", score: 2, color: "🟢", note: t("no_gacc_required_for_cbec") },
       { dimension: "Timeline", score: 3, color: "🟢", note: "4-10 weeks" },
       { dimension: "Investment", score: 5, color: "🟡", note: "$10,000-40,000 initial" },
     ],
     channels: [
-      { channel: "Tmall Global", suitability: "high", gaccRequired: false, description: "Largest CBEC platform", advantages: ["Massive traffic", "Integrated logistics (Cainiao)"], disadvantages: ["Higher deposit", "Extensive docs"], timeline: "4-8 weeks", costRange: "$15,000-40,000" },
-      { channel: "JD Worldwide", suitability: "high", gaccRequired: false, description: "Strong for electronics/health", advantages: ["Own logistics (JD Logistics)", "Trusted for authentic"], disadvantages: ["Stricter QC"], timeline: "4-8 weeks", costRange: "$12,000-35,000" },
+      { channel: "Tmall Global", suitability: "high", gaccRequired: false, description: t("largest_cbec_platform"), advantages: [t("massive_traffic"), t("integrated_logistics_cainiao")], disadvantages: [t("higher_deposit"), t("extensive_docs")], timeline: "4-8 weeks", costRange: "$15,000-40,000" },
+      { channel: "JD Worldwide", suitability: "high", gaccRequired: false, description: t("strong_for_electronics_health"), advantages: [t("own_logistics_jd_logistics"), t("trusted_for_authentic")], disadvantages: [t("stricter_qc")], timeline: "4-8 weeks", costRange: "$12,000-35,000" },
     ],
-    tariffInfo: { mfnRate: "9.1% comprehensive", vatRate: "70% of standard", consumptionTax: "N/A", ftaRate: "CBEC tax discount applies", totalTaxBurden: "~9.1% (70% discount on tariff + VAT)" },
+    tariffInfo: { mfnRate: "9.1% comprehensive", vatRate: "70% of standard", consumptionTax: "N/A", ftaRate: t("cbec_tax_discount_applies"), totalTaxBurden: "~9.1% (70% discount on tariff + VAT)" },
     regulations: [
-      { name: "CBEC Retail Import Policy", number: "MOFCOM 2018 Notice", effectiveDate: "January 2019", issuingAuthority: "MOFCOM", relevance: "primary", description: "Framework for cross-border e-commerce retail import." },
-      { name: "CBEC Positive List", number: "MOFCOM/GACC Joint List", effectiveDate: "Updated annually", issuingAuthority: "MOFCOM/GACC", relevance: "primary", description: "Defines products eligible for CBEC import." },
-      { name: "Personal Use Declaration", number: "GACC Decree 249 Art.5", effectiveDate: "January 1, 2022", issuingAuthority: "GACC", relevance: "primary", description: "CBEC goods imported as personal use items." },
+      { name: t("cbec_retail_import_policy"), number: "MOFCOM 2018 Notice", effectiveDate: "January 2019", issuingAuthority: "MOFCOM", relevance: "primary", description: t("framework_for_cross_border_e_commerce_retail_impor") },
+      { name: "CBEC Positive List", number: t("mofcom_gacc_joint_list"), effectiveDate: t("updated_annually"), issuingAuthority: t("mofcom_gacc"), relevance: "primary", description: t("defines_products_eligible_for_cbec_import") },
+      { name: t("personal_use_declaration"), number: t("gacc_decree_249_art_5"), effectiveDate: "January 1, 2022", issuingAuthority: "GACC", relevance: "primary", description: t("cbec_goods_imported_as_personal_use_items") },
     ],
-    classification: { assignedHsChapter: "Varies", ciqCode: "Check import", isHighRisk: false, riskReason: "On CBEC positive list. Simplified compliance.", alternativeClassificationNote: "" },
+    classification: { assignedHsChapter: "Varies", ciqCode: "Check import", isHighRisk: false, riskReason: t("on_cbec_positive_list_simplified_compliance"), alternativeClassificationNote: "" },
     riskMatrix: [
-      { dimension: "Positive List", rating: "🟢", explanation: "Category on approved list" },
+      { dimension: "Positive List", rating: "🟢", explanation: t("category_on_approved_list") },
       { dimension: "Platform Setup", rating: "🟡", explanation: "4-8 weeks onboarding" },
-      { dimension: "Ongoing Compliance", rating: "🟢", explanation: "No GACC registration needed" },
+      { dimension: t("ongoing_compliance"), rating: "🟢", explanation: t("no_gacc_registration_needed") },
     ],
     documentGuide: [
       { name: t("cbDoc_businessReg_name"), format: t("cbDoc_businessReg_format"), notarization: t("cbDoc_businessReg_notarization"), validity: t("cbDoc_businessReg_validity"), commonError: t("cbDoc_businessReg_error") },
@@ -67,13 +67,13 @@ export function checkCrossborder(input: any, locale?: string): any {
       { name: t("cbDoc_listings_name"), format: t("cbDoc_listings_format"), notarization: t("cbDoc_listings_notarization"), validity: t("cbDoc_listings_validity"), commonError: t("cbDoc_listings_error") },
       { name: t("cbDoc_label_name"), format: t("cbDoc_label_format"), notarization: t("cbDoc_label_notarization"), validity: t("cbDoc_label_validity"), commonError: t("cbDoc_label_error") },
     ],
-    requiredDocuments: ["Business Registration", "Brand Auth Letter", "Product Listings", "Label Artwork"],
-    testRequirements: ["Platform product listing review", "Label compliance check"],
+    requiredDocuments: [t("business_registration"), t("brand_auth_letter"), t("product_listings"), t("label_artwork")],
+    testRequirements: [t("platform_product_listing_review"), t("label_compliance_check")],
     testCostRange: "$500-2,000",
-    labGuide: "Platforms perform their own review of product listings. Labels must still comply with Chinese standards.",
-    labTests: ["Platform listing review", "Label compliance"],
+    labGuide: t("platforms_perform_their_own_review_of_product_list_1"),
+    labTests: [t("platform_listing_review"), t("label_compliance")],
     viability: t('cbViability'),
-    detailedTimeline: "Platform selection (2-3 weeks) → Document preparation (2-3 weeks) → Platform review (2-4 weeks) → Go live. Total: 4-10 weeks.",
+    detailedTimeline: t("platform_selection_2_3_weeks_document_preparation_"),
     labelGuide: { requiredItems: [], gb7718Highlights: [], gb28050Highlights: [] },
     timelinePhases: [
       { phase: t("cbTimeline_platformSel_name"), duration: "2-3 weeks", description: t("cbTimeline_platformSel_desc"), responsible: "Both", dependencies: [] },
@@ -87,23 +87,23 @@ export function checkCrossborder(input: any, locale?: string): any {
       { item: t("cbCost_bondedWh_item"), estimatedRange: "$2,000-5,000", notes: t("cbCost_bondedWh_notes") },
       { item: t("cbCost_compliance_item"), estimatedRange: "$1,000-5,000", notes: t("cbCost_compliance_notes") },
     ],
-    countryProfile: { region: "", ftaWithChina: false, ftaDetails: "", specialRestrictions: [], bilateralMeatAccess: false, bilateralAquaticAccess: false, dairyApproved: false, gaccDifficulty: "easy", languageNote: "Chinese listings required.", commonIssues: [], importVolumeNote: "" },
+    countryProfile: { region: "", ftaWithChina: false, ftaDetails: "", specialRestrictions: [], bilateralMeatAccess: false, bilateralAquaticAccess: false, dairyApproved: false, gaccDifficulty: "easy", languageNote: t("chinese_listings_required"), commonIssues: [], importVolumeNote: "" },
     marketIntel: { chinaImportTrend: t("cbMarket_trend"), keyDrivers: [t("cbMarket_driver1"), t("cbMarket_driver2"), t("cbMarket_driver3")], barriers: [t("cbMarket_barrier1"), t("cbMarket_barrier2"), t("cbMarket_barrier3")], consumerPerception: t("cbMarket_perception"), topOrigins: [], recommendation: t("cbMarket_reco") },
-    competitiveAnalysis: "Thousands of brands on Tmall Global. Korean cosmetics, Japanese snacks, Australian supplements dominate.",
+    competitiveAnalysis: t("thousands_of_brands_on_tmall_global_korean_cosmeti_1"),
     commonRejections: [
-      { problem: "Product not on positive list", cause: "Specific HS code restricted", solution: "Verify HS code against latest positive list" },
-      { problem: "Brand authorization chain incomplete", cause: "Platform requires full chain", solution: "Establish complete authorization before applying" },
+      { problem: t("product_not_on_positive_list"), cause: t("specific_hs_code_restricted"), solution: t("verify_hs_code_against_latest_positive_list") },
+      { problem: t("brand_authorization_chain_incomplete"), cause: t("platform_requires_full_chain"), solution: t("establish_complete_authorization_before_applying") },
     ],
     countryNotes: [
-      "Translation service recommended for product listings and label artwork.",
-      "Some categories face stricter inspection at customs (e.g., electronics).",
-      "Bonded warehouse inventory must reconcile monthly with platform data.",
-      "Consumer protection law requires 7-day no-questions-asked returns.",
-      "Intellectual property filing (trademark registration) recommended before listing.",
+      t("translation_service_recommended_for_product_listin"),
+      t("some_categories_face_stricter_inspection_at_custom"),
+      t("bonded_warehouse_inventory_must_reconcile_monthly_"),
+      t("consumer_protection_law_requires_7_day_no_question"),
+      t("intellectual_property_filing_trademark_registratio"),
     ],
     postApprovalObligations: [
-      { item: "Platform Compliance Review", frequency: "Quarterly", description: "Plaform audits product listings" },
-      { item: "Bonded Warehouse Inventory", frequency: "Monthly", description: "Verify inventory accuracy" },
+      { item: t("platform_compliance_review"), frequency: "Quarterly", description: t("plaform_audits_product_listings") },
+      { item: t("bonded_warehouse_inventory"), frequency: "Monthly", description: t("verify_inventory_accuracy") },
     ],
     postApproval: [
       { item: t("cbPost_platformReview_item"), freq: t("cbPost_platformReview_frequency"), desc: t("cbPost_platformReview_desc") },
@@ -116,29 +116,29 @@ export function checkCrossborder(input: any, locale?: string): any {
     ],
   
   platformGuide: [
-    { platform: "Tmall Global", fee: "Deposit $25,000 + 5% commission", req: "Overseas company + brand + TM registration", traffic: "Largest CBEC traffic (50%+ market share)", timeline: "2-4 months to onboard" },
-    { platform: "JD Worldwide", fee: "Deposit $20,000 + 5-8% commission", req: "Overseas company + brand registration", traffic: "Strong electronics/home categories", timeline: "2-3 months to onboard" },
-    { platform: "Douyin Global", fee: "Deposit $5,000 + 2-5% commission", req: "Overseas company + content capability", traffic: "Fastest growing — live-streaming focused", timeline: "1-2 months to onboard" },
+    { platform: "Tmall Global", fee: "Deposit $25,000 + 5% commission", req: t("overseas_company_brand_tm_registration"), traffic: t("largest_cbec_traffic_50_market_share"), timeline: "2-4 months to onboard" },
+    { platform: "JD Worldwide", fee: "Deposit $20,000 + 5-8% commission", req: t("overseas_company_brand_registration"), traffic: t("strong_electronics_home_categories"), timeline: "2-3 months to onboard" },
+    { platform: t("douyin_global"), fee: "Deposit $5,000 + 2-5% commission", req: t("overseas_company_content_capability"), traffic: t("fastest_growing_live_streaming_focused"), timeline: "1-2 months to onboard" },
   ],
   logisticsModels: {
-    bbc: { name: "1210 Bonded Warehouse", process: "Bulk shipment -> Bonded warehouse -> Customs clearance -> Door-to-door", advantage: "Faster delivery (2-5 days), lower per-unit cost", requirement: "CBEC positive list product" },
-    direct: { name: "9610 Direct Shipping", process: "Order placed -> Overseas warehouse -> Courier -> Customs clearance -> Delivery", advantage: "No bonded warehouse needed, wider product range", requirement: "Higher per-shipment cost" },
+    bbc: { name: "1210 Bonded Warehouse", process: t("bulk_shipment_bonded_warehouse_customs_clearance_d"), advantage: t("faster_delivery_2_5_days_lower_per_unit_cost"), requirement: t("cbec_positive_list_product") },
+    direct: { name: "9610 Direct Shipping", process: t("order_placed_overseas_warehouse_courier_customs_cl"), advantage: t("no_bonded_warehouse_needed_wider_product_range"), requirement: t("higher_per_shipment_cost") },
   },
   customsDocGuide: [
     "Order document (订单) — from platform", "Payment document (支付) — from payment gateway",
     "Logistics document (物流) — from carrier" , "Commercial invoice", "Packing list", "Certificate of Origin (if FTA)"
   ],
   positiveList: {
-    note: "Only products on CBEC positive list can use 1210 bonded warehouse model",
-    checkMethod: "Verify via MOFCOM CBEC positive list catalog or consult compliance specialist",
-    typicalIncluded: ["Food supplements", "Cosmetics", "Baby formula", "Small appliances", "Apparel"],
-    typicalExcluded: ["Fresh food", "Live animals", "Large medical devices"]
+    note: t("only_products_on_cbec_positive_list_can_use_1210_b"),
+    checkMethod: t("verify_via_mofcom_cbec_positive_list_catalog_or_co"),
+    typicalIncluded: [t("food_supplements"), "Cosmetics", t("baby_formula"), t("small_appliances"), "Apparel"],
+    typicalExcluded: [t("fresh_food"), t("live_animals"), t("large_medical_devices")]
   },
   cbTaxInfo: {
-    calculation: "Comprehensive tax = (price + shipping) x 70% x (tariff rate + VAT rate)",
-    threshold: "Personal use limit: RMB 5,000/transaction, RMB 26,000/year",
-    note: "Tax exemption for purchases under RMB 1,000 (certain categories)",
-    example: "Product $100 + shipping $20 -> Dutiable value = $84 -> Approx tax = $84 x 13% = $10.92"
+    calculation: t("comprehensive_tax_price_shipping_x_70_x_tariff_rat"),
+    threshold: t("personal_use_limit_rmb_5_000_transaction_rmb_26_00"),
+    note: t("tax_exemption_for_purchases_under_rmb_1_000_certai"),
+    example: t("product_100_shipping_20_dutiable_value_84_approx_t")
   },
 };
 }

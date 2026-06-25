@@ -60,5 +60,14 @@
     "accept": "সব স্বীকার করুন",
     "reject": "অপ্রয়োজনীয় প্রত্যাখ্যান করুন",
     "privacyLink": "গোপনীয়তা নীতি"
+  },
+
+  "Navbar": {
+    "home": "Home",
+    "blog": "Blog"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "blog": "Blog"
   }
 }

@@ -29,12 +29,15 @@ export const CATEGORY_LABELS: Record<string, string> = {
   "baby": "Baby Products (HS 33.04)",
 };
 
-const PROFILES: Record<string, any> = {"skincare": {"label": "Skincare (HS 33.04)", "special": false, "risk": "🟡 Medium", "riskReason": "Ordinary cosmetics. NMPA filing required.", "mfn": "1-5%", "vat": "13%", "testing": ["Microbiological GB 7918", "Heavy metals Pb/As/Hg/Cd", "Stability testing", "Skin irritation"], "testCost": "$1,000-3,000", "reject": [{"problem": "Ingredient not on ICSC catalogue", "cause": "Novel ingredient requires safety assessment", "solution": "Pre-check all INCI names against ICSC database"}], "time": "2-4 months"}, "makeup": {"label": "Color Cosmetics (HS 33.04)", "special": false, "risk": "🟡 Medium", "riskReason": "Ordinary cosmetics. Color additives on positive list.", "mfn": "1-5%", "vat": "13%", "testing": ["Microbiological", "Heavy metals", "Colorant identification", "Stability"], "testCost": "$1,500-4,000", "reject": [{"problem": "Color additive not approved in China", "cause": "China CosIng differs from EU/US approved lists", "solution": "Verify all colorants against China CosIng positive list"}], "time": "2-4 months"}, "sunscreen": {"label": "Sunscreen (HS 33.04) — SPECIAL", "special": true, "risk": "🔴 High", "riskReason": "SPECIAL cosmetics. Full NMPA registration + efficacy testing.", "mfn": "1-5%", "vat": "13%", "testing": ["Safety assessment per NMPA 2021", "SPF efficacy GB/T 35954", "Microbiological", "Heavy metals", "Stability"], "testCost": "$3,000-10,000", "reject": [{"problem": "SPF test method not per GB/T 35954", "cause": "Different protocol vs ISO or FDA methods", "solution": "Use CNAS lab qualified for GB/T 35954 SPF testing"}], "time": "6-12 months"}, "haircare": {"label": "Hair Care (HS 33.05)", "special": false, "risk": "🟢 Low", "riskReason": "Ordinary cosmetics. Standard filing.", "mfn": "1-5%", "vat": "13%", "testing": ["Microbiological", "Heavy metals"], "testCost": "$800-2,500", "reject": [], "time": "2-4 months"}, "fragrance": {"label": "Fragrance / Perfume (HS 33.03)", "special": false, "risk": "🟡 Medium", "riskReason": "Ordinary cosmetics. Alcohol regulations + allergen labeling.", "mfn": "3-6.5%", "vat": "13%", "testing": ["Microbiological", "Heavy metals", "Alcohol content", "Allergen screening"], "testCost": "$1,000-3,000", "reject": [{"problem": "Allergen list differs from EU", "cause": "China allergen list not identical to EU CosIng", "solution": "Cross-check fragrance allergens against China's list"}], "time": "2-4 months"}, "baby": {"label": "Baby Products (HS 33.04)", "special": false, "risk": "🟡 Medium", "riskReason": "Stricter safety requirements for children's products.", "mfn": "1-5%", "vat": "13%", "testing": ["Microbiological", "Heavy metals", "Skin irritation", "pH balance", "Preservative efficacy"], "testCost": "$1,200-3,500", "reject": [{"problem": "Preservative not permitted for baby cosmetics", "cause": "Restricted preservatives list for baby products", "solution": "Check NMPA banned preservatives for children"}], "time": "3-5 months"}};
+function getPROFILES(t: (key: string) => string): Record<string, any> {
+  return {"skincare": {"label": "Skincare (HS 33.04)", "special": false, "risk": "🟡 Medium", "riskReason": "Ordinary cosmetics. NMPA filing required.", "mfn": "1-5%", "vat": "13%", "testing": ["Microbiological GB 7918", "Heavy metals Pb/As/Hg/Cd", "Stability testing", "Skin irritation"], "testCost": "$1,000-3,000", "reject": [{"problem": t("ingredient_not_on_icsc_catalogue"), "cause": t("novel_ingredient_requires_safety_assessment"), "solution": t("pre_check_all_inci_names_against_icsc_database")}], "time": "2-4 months"}, "makeup": {"label": "Color Cosmetics (HS 33.04)", "special": false, "risk": "🟡 Medium", "riskReason": "Ordinary cosmetics. Color additives on positive list.", "mfn": "1-5%", "vat": "13%", "testing": ["Microbiological", "Heavy metals", "Colorant identification", "Stability"], "testCost": "$1,500-4,000", "reject": [{"problem": "Color additive not approved in China", "cause": "China CosIng differs from EU/US approved lists", "solution": "Verify all colorants against China CosIng positive list"}], "time": "2-4 months"}, "sunscreen": {"label": "Sunscreen (HS 33.04) — SPECIAL", "special": true, "risk": "🔴 High", "riskReason": "SPECIAL cosmetics. Full NMPA registration + efficacy testing.", "mfn": "1-5%", "vat": "13%", "testing": ["Safety assessment per NMPA 2021", "SPF efficacy GB/T 35954", "Microbiological", "Heavy metals", "Stability"], "testCost": "$3,000-10,000", "reject": [{"problem": "SPF test method not per GB/T 35954", "cause": "Different protocol vs ISO or FDA methods", "solution": "Use CNAS lab qualified for GB/T 35954 SPF testing"}], "time": "6-12 months"}, "haircare": {"label": "Hair Care (HS 33.05)", "special": false, "risk": "🟢 Low", "riskReason": "Ordinary cosmetics. Standard filing.", "mfn": "1-5%", "vat": "13%", "testing": ["Microbiological", "Heavy metals"], "testCost": "$800-2,500", "reject": [], "time": "2-4 months"}, "fragrance": {"label": "Fragrance / Perfume (HS 33.03)", "special": false, "risk": "🟡 Medium", "riskReason": "Ordinary cosmetics. Alcohol regulations + allergen labeling.", "mfn": "3-6.5%", "vat": "13%", "testing": ["Microbiological", "Heavy metals", t("alcohol_content"), "Allergen screening"], "testCost": "$1,000-3,000", "reject": [{"problem": "Allergen list differs from EU", "cause": "China allergen list not identical to EU CosIng", "solution": "Cross-check fragrance allergens against China's list"}], "time": "2-4 months"}, "baby": {"label": "Baby Products (HS 33.04)", "special": false, "risk": "🟡 Medium", "riskReason": "Stricter safety requirements for children's products.", "mfn": "1-5%", "vat": "13%", "testing": ["Microbiological", "Heavy metals", "Skin irritation", "pH balance", "Preservative efficacy"], "testCost": "$1,200-3,500", "reject": [{"problem": "Preservative not permitted for baby cosmetics", "cause": "Restricted preservatives list for baby products", "solution": "Check NMPA banned preservatives for children"}], "time": "3-5 months"}};
+}
 
 const COUNTRIES: Record<string, any> = {"France": {"diff": "easy", "notes": "Strong reputation in China. French brands well-received."}, "Japan": {"diff": "easy", "notes": "Japanese cosmetics highly trusted by Chinese consumers."}, "South Korea": {"diff": "easy", "notes": "K-beauty popular. Fastest NMPA processing history."}, "USA": {"diff": "moderate", "notes": "US brand premium positioning. Standard processing."}};
 
 export function checkCosmetics(input: any, locale?: string): any {
   const t = buildT(locale || 'en');
+  const PROFILES = getPROFILES(t);
 
   const cat = PROFILES[input.category] || PROFILES['skincare'];
   if (!cat) return {};
@@ -62,7 +65,7 @@ export function checkCosmetics(input: any, locale?: string): any {
       { channel: t("nmpaChannel_cbec_name"), suitability: "medium", description: t("nmpaChannel_cbec_desc"), advantages: [t("nmpaChannel_cbec_adv1")], disadvantages: [t("nmpaChannel_cbec_dis1"), t("nmpaChannel_cbec_dis2")], timeline: "1-2 months", costRange: "$500-2,000" },
     ],
     tariffInfo: { mfnRate: cat.mfn || "Varies", vatRate: cat.vat || "13%", consumptionTax: "N/A", ftaRate: null, totalTaxBurden: (cat.mfn || "Varies") + " + " + (cat.vat || "13%") },
-    regulations: [{"name": "Cosmetics Supervision & Administration Regulation", "number": "State Council Decree 727 (2021)", "issuingAuthority": "NMPA", "relevance": "primary", "effectiveDate": "See document", "description": "Primary cosmetics regulation. Reformed the entire cosmetics regulatory system."}, {"name": "Cosmetics Registration & Filing Measures", "number": "NMPA 2021 No.1-3", "issuingAuthority": "NMPA", "relevance": "primary", "effectiveDate": "See document", "description": "Detailed procedures for registration (special) vs filing (ordinary)."}, {"name": "Cosmetics Safety Assessment Guidelines", "number": "NMPA 2021 Tech Specs", "issuingAuthority": "NMPA", "relevance": "primary", "effectiveDate": "See document", "description": "Required safety assessment report format and content."}, {"name": "Cosmetics Ingredients INCI Name Translation", "number": "NMPA ICSC Database", "issuingAuthority": "NMPA", "relevance": "primary", "effectiveDate": "See document", "description": "Official Chinese translation of INCI names. Must be used in filing."}, {"name": "GB/T 35914-2018", "number": "GB/T 35914-2018", "issuingAuthority": "NHC", "relevance": "secondary", "effectiveDate": "See document", "description": "Hygienic standard for cosmetics. Microbiological limits."}],
+    regulations: [{"name": t("cosmetics_supervision_administration_regulation"), "number": t("state_council_decree_727_2021"), "issuingAuthority": "NMPA", "relevance": "primary", "effectiveDate": "See document", "description": t("primary_cosmetics_regulation_reformed_the_entire_c")}, {"name": t("cosmetics_registration_filing_measures"), "number": "NMPA 2021 No.1-3", "issuingAuthority": "NMPA", "relevance": "primary", "effectiveDate": "See document", "description": t("detailed_procedures_for_registration_special_vs_fi")}, {"name": t("cosmetics_safety_assessment_guidelines"), "number": t("nmpa_2021_tech_specs"), "issuingAuthority": "NMPA", "relevance": "primary", "effectiveDate": "See document", "description": t("required_safety_assessment_report_format_and_conte")}, {"name": t("cosmetics_ingredients_inci_name_translation"), "number": t("nmpa_icsc_database"), "issuingAuthority": "NMPA", "relevance": "primary", "effectiveDate": "See document", "description": t("official_chinese_translation_of_inci_names_must_be")}, {"name": "GB/T 35914-2018", "number": "GB/T 35914-2018", "issuingAuthority": "NHC", "relevance": "secondary", "effectiveDate": "See document", "description": t("hygienic_standard_for_cosmetics_microbiological_li")}],
     classification: { assignedHsChapter: "Varies", ciqCode: "Check import", isHighRisk, riskReason: cat.riskReason, alternativeClassificationNote: "" },
     riskMatrix: [
       { dimension: "Category Risk", rating: requiresReg ? "🔴" : "🟢", explanation: cat.riskReason },
@@ -82,40 +85,40 @@ export function checkCosmetics(input: any, locale?: string): any {
     countryProfile: { region: "—", ftaWithChina: false, ftaDetails: "", specialRestrictions: [], bilateralMeatAccess: false, bilateralAquaticAccess: false, dairyApproved: false, gaccDifficulty: "moderate", languageNote: "", commonIssues: [], importVolumeNote: "" },
     marketIntel: { chinaImportTrend: t("nmpaMarket_trend"), keyDrivers: [t("nmpaMarket_driver1"), t("nmpaMarket_driver2")], barriers: [t("nmpaMarket_barrier1"), t("nmpaMarket_barrier2")], consumerPerception: t("nmpaMarket_perception"), topOrigins: [], recommendation: t(requiresReg ? "nmpaMarket_recoHigh" : "nmpaMarket_recoLow") },
     competitiveAnalysis: t("nmpaCompetitiveAnalysis"),
-    commonRejections: [{"problem": "Ingredient not on ICSC catalogue", "cause": "Novel ingredient requires safety assessment", "solution": "Pre-check all INCI names against ICSC database"}],
+    commonRejections: [{"problem": t("ingredient_not_on_icsc_catalogue"), "cause": t("novel_ingredient_requires_safety_assessment"), "solution": t("pre_check_all_inci_names_against_icsc_database")}],
     postApprovalObligations: [{ item: t("nmpaPost_production_item"), frequency: t("nmpaPost_production_frequency"), description: t("nmpaPost_production_desc") }, { item: t("nmpaPost_formulaChange_item"), frequency: t("nmpaPost_formulaChange_frequency"), description: t("nmpaPost_formulaChange_desc") }, { item: t("nmpaPost_labelUpdate_item"), frequency: t("nmpaPost_labelUpdate_frequency"), description: t("nmpaPost_labelUpdate_desc") }, { item: t("nmpaPost_renewal_item"), frequency: t("nmpaPost_renewal_frequency"), description: t("nmpaPost_renewal_desc") }],
     horizonScan: [{ topic: t("nmpaHorizon_labelRev_topic"), impact: t("nmpaHorizon_labelRev_impact"), timeframe: t("nmpaHorizon_labelRev_timeframe"), description: t("nmpaHorizon_labelRev_desc"), actionRequired: true }, { topic: t("nmpaHorizon_specialList_topic"), impact: t("nmpaHorizon_specialList_impact"), timeframe: t("nmpaHorizon_specialList_timeframe"), description: t("nmpaHorizon_specialList_desc"), actionRequired: false }, { topic: t("nmpaHorizon_animalTest_topic"), impact: t("nmpaHorizon_animalTest_impact"), timeframe: t("nmpaHorizon_animalTest_timeframe"), description: t("nmpaHorizon_animalTest_desc"), actionRequired: false }],
     summary: t(requiresReg ? 'nmpaSummaryHigh' : 'nmpaSummaryLow'),
   
   filingType: {
-    ordinary: "General cosmetics requiring notification filing (备案). Lower requirements, faster timeline.",
-    special: "Products needing full registration (注册) — sunscreen, whitening, hair dye, perm. Higher requirements.",
-    classificationBasis: "CSAR 2021 Article 3-5 — category determined by product function and ingredients",
+    ordinary: t("general_cosmetics_requiring_notification_filing_备案"),
+    special: t("products_needing_full_registration_注册_sunscreen_wh"),
+    classificationBasis: t("csar_2021_article_3_5_category_determined_by_produ"),
     timeline: { ordinary: "2-4 months", special: "6-12 months" }
   },
   nmpaTestingReqs: {
-    categories: ["Microbiological testing", "Heavy metals", "Stability testing", "Hygiene chemical analysis", "Safety assessment report"],
-    labRequirement: "Must use NMPA-designated testing laboratory",
-    exemption: "Products with valid EU/US GMP certificate may qualify for reduced testing"
+    categories: [t("microbiological_testing"), "Heavy metals", "Stability testing", t("hygiene_chemical_analysis"), t("safety_assessment_report")],
+    labRequirement: t("must_use_nmpa_designated_testing_laboratory"),
+    exemption: t("products_with_valid_eu_us_gmp_certificate_may_qual")
   },
   gmpGuide: {
-    standard: "ISO 22716 (Cosmetics GMP) or equivalent",
-    accepted: ["EU Cosmetics GMP (ISO 22716)", "US FDA cGMP", "ASEAN Cosmetics GMP"],
-    notAccepted: "Generic ISO 9001 without cosmetics scope",
-    note: "GMP certificate from recognized body can reduce factory inspection requirements"
+    standard: t("iso_22716_cosmetics_gmp_or_equivalent"),
+    accepted: [t("eu_cosmetics_gmp_iso_22716"), t("us_fda_cgmp"), t("asean_cosmetics_gmp")],
+    notAccepted: t("generic_iso_9001_without_cosmetics_scope"),
+    note: t("gmp_certificate_from_recognized_body_can_reduce_fa")
   },
   chineseRPActions: [
-    "Register as Chinese Responsible Person with NMPA",
-    "Maintain product safety information files",
-    "File adverse event reports within 15 days",
-    "Coordinate testing with NMPA-designated labs",
-    "Manage product recall if required by SAMR"
+    t("register_as_chinese_responsible_person_with_nmpa"),
+    t("maintain_product_safety_information_files"),
+    t("file_adverse_event_reports_within_15_days"),
+    t("coordinate_testing_with_nmpa_designated_labs"),
+    t("manage_product_recall_if_required_by_samr")
   ],
   animalTestingExempt: {
-    eligible: "Ordinary cosmetics with valid GMP certificate and established safety history",
-    ineligible: "Special cosmetics (sunscreen, whitening) always require animal testing",
-    alternative: "Accept in vitro / alternative methods for certain endpoints",
-    timeline: "Exemption review: 30-60 working days"
+    eligible: t("ordinary_cosmetics_with_valid_gmp_certificate_and_"),
+    ineligible: t("special_cosmetics_sunscreen_whitening_always_requi"),
+    alternative: t("accept_in_vitro_alternative_methods_for_certain_en"),
+    timeline: t("exemption_review_30_60_working_days")
   },
 };
 }

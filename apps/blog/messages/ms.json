@@ -60,5 +60,14 @@
     "accept": "Terima Semua",
     "reject": "Tolak Bukan Penting",
     "privacyLink": "Dasar Privasi"
+  },
+
+  "Navbar": {
+    "home": "Home",
+    "blog": "Blog"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "blog": "Blog"
   }
 }

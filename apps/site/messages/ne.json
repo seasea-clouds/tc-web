@@ -76,7 +76,7 @@
     "trustedByDesc": "हामीसँग पहिले नै बढिरहेको अन्तर्राष्ट्रिय ब्रान्डहरूमा सामेल हुनुहोस्",
     "metaTitle": "SinoTrade अनुपालन | चीन आयात अनुपालन सेवाहरू",
     "metaDescription": "एक-स्टप चीन आयात अनुपालन: GACC दर्ता, CCC प्रमाणीकरण, NMPA कस्मेटिक्स फाइलिङ, लेबल अनुपालन। ५०+ देशहरूमा निर्यातकर्ताहरूद्वारा विश्वास गरिएको।",
-    "heroPortalCta": "Try our 3-step compliance checker →"
+    "heroPortalCta": "हाम्रो 3-चरण अनुपालन जाँचकर्ता → प्रयास गर्नुहोस्"
   },
   "Services": {
     "heroTitle": "हाम्रा सेवाहरू",
@@ -465,10 +465,10 @@
     "ctaUrgency": "नि:शुल्क परामर्श → २४ घन्टा प्रतिक्रिया",
     "relatedResourcesTitle": "सम्बन्धित स्रोतहरू",
     "relatedResourcesSubtitle": "चीन आयात अनुपालन बारे थप जान्नुहोस्",
-    "portalCtaTitle": "Not sure if this applies to your products?",
-    "portalCtaLink": "Try our free compliance self-assessment",
-    "portalCtaGenericTitle": "Still have questions?",
-    "portalCtaGenericLink": "Check your products for free"
+    "portalCtaTitle": "निश्चित हुनुहुन्न कि यो तपाइँको उत्पादनहरूमा लागू हुन्छ?",
+    "portalCtaLink": "हाम्रो नि:शुल्क अनुपालन आत्म-मूल्याङ्कन प्रयास गर्नुहोस्",
+    "portalCtaGenericTitle": "अझै प्रश्नहरू छन्?",
+    "portalCtaGenericLink": "आफ्नो उत्पादनहरु नि: शुल्क जाँच गर्नुहोस्"
   },
   "Packages": {
     "heroTitle": "अनुपालन प्याकेजहरू",

@@ -76,7 +76,7 @@
     "trustedByDesc": "Liity kansainvälisten brändien joukkoon, jotka kasvavat kanssamme",
     "metaTitle": "SinoTrade Compliance | Kiinan tuonnin vaatimustenmukaisuuspalvelut",
     "metaDescription": "Yhden luukun Kiinan tuontivaatimustenmukaisuus: GACC-rekisteröinti, CCC-sertifiointi, NMPA-kosmetiikka-arkistointi, etikettien noudattaminen. Viejät luottavat yli 50 maassa.",
-    "heroPortalCta": "Try our 3-step compliance checker →"
+    "heroPortalCta": "Kokeile 3-vaiheista vaatimustenmukaisuuden tarkistusta →"
   },
   "Services": {
     "heroTitle": "Palvelumme",
@@ -465,10 +465,10 @@
     "ctaUrgency": "Ilmainen konsultaatio → 24h vastaus",
     "relatedResourcesTitle": "Aiheeseen liittyviä resursseja",
     "relatedResourcesSubtitle": "Lue lisää Kiinan tuonnin vaatimustenmukaisuudesta",
-    "portalCtaTitle": "Not sure if this applies to your products?",
-    "portalCtaLink": "Try our free compliance self-assessment",
-    "portalCtaGenericTitle": "Still have questions?",
-    "portalCtaGenericLink": "Check your products for free"
+    "portalCtaTitle": "Etkö ole varma, koskeeko tämä tuotteitasi?",
+    "portalCtaLink": "Kokeile ilmaista vaatimustenmukaisuuden itsearviointiamme",
+    "portalCtaGenericTitle": "Onko sinulla vielä kysyttävää?",
+    "portalCtaGenericLink": "Tarkista tuotteesi ilmaiseksi"
   },
   "Packages": {
     "heroTitle": "Vaatimustenmukaisuuspaketit",

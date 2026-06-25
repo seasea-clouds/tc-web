@@ -76,7 +76,7 @@
     "trustedByDesc": "আমাদের সাথে ইতিমধ্যে ক্রমবর্ধমান আন্তর্জাতিক ব্র্যান্ডগুলিতে যোগ দিন",
     "metaTitle": "SinoTrade কমপ্লায়েন্স | চীন আমদানি সম্মতি সেবা",
     "metaDescription": "ওয়ান-স্টপ চায়না ইম্পোর্ট কমপ্লায়েন্স: GACC রেজিস্ট্রেশন, CCC সার্টিফিকেশন, NMPA কসমেটিক্স ফাইলিং, লেবেল কমপ্লায়েন্স। 50+ দেশে রপ্তানিকারকদের দ্বারা বিশ্বস্ত।",
-    "heroPortalCta": "Try our 3-step compliance checker →"
+    "heroPortalCta": "আমাদের 3-পদক্ষেপ সম্মতি পরীক্ষক চেষ্টা করুন →"
   },
   "Services": {
     "heroTitle": "আমাদের সেবা",
@@ -465,10 +465,10 @@
     "ctaUrgency": "বিনামূল্যে পরামর্শ → 24 ঘন্টা প্রতিক্রিয়া",
     "relatedResourcesTitle": "সম্পর্কিত সম্পদ",
     "relatedResourcesSubtitle": "চীন আমদানি সম্মতি সম্পর্কে আরও জানুন",
-    "portalCtaTitle": "Not sure if this applies to your products?",
-    "portalCtaLink": "Try our free compliance self-assessment",
-    "portalCtaGenericTitle": "Still have questions?",
-    "portalCtaGenericLink": "Check your products for free"
+    "portalCtaTitle": "এই আপনার পণ্য প্রযোজ্য কিনা নিশ্চিত না?",
+    "portalCtaLink": "আমাদের বিনামূল্যে সম্মতি স্ব-মূল্যায়ন চেষ্টা করুন",
+    "portalCtaGenericTitle": "এখনও প্রশ্ন আছে?",
+    "portalCtaGenericLink": "বিনামূল্যে জন্য আপনার পণ্য পরীক্ষা করুন"
   },
   "Packages": {
     "heroTitle": "কমপ্লায়েন্স প্যাকেজ",

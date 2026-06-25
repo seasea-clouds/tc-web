@@ -76,7 +76,7 @@
     "trustedByDesc": "Bli med internasjonale merkevarer som allerede vokser med oss",
     "metaTitle": "SinoTrade-overholdelse | Kina Import Compliance Services",
     "metaDescription": "One-stop Kina-importoverholdelse: GACC-registrering, CCC-sertifisering, NMPA-kosmetikkarkivering, etikettoverholdelse. Klarert av eksportører i over 50 land.",
-    "heroPortalCta": "Try our 3-step compliance checker →"
+    "heroPortalCta": "Prøv vår 3-trinns samsvarskontroll →"
   },
   "Services": {
     "heroTitle": "Våre tjenester",
@@ -465,10 +465,10 @@
     "ctaUrgency": "Gratis konsultasjon → 24 timers svar",
     "relatedResourcesTitle": "Relaterte ressurser",
     "relatedResourcesSubtitle": "Finn ut mer om importoverholdelse av Kina",
-    "portalCtaTitle": "Not sure if this applies to your products?",
-    "portalCtaLink": "Try our free compliance self-assessment",
-    "portalCtaGenericTitle": "Still have questions?",
-    "portalCtaGenericLink": "Check your products for free"
+    "portalCtaTitle": "Er du usikker på om dette gjelder produktene dine?",
+    "portalCtaLink": "Prøv vår gratis selvevaluering av samsvar",
+    "portalCtaGenericTitle": "Har du fortsatt spørsmål?",
+    "portalCtaGenericLink": "Sjekk produktene dine gratis"
   },
   "Packages": {
     "heroTitle": "Overholdelsespakker",

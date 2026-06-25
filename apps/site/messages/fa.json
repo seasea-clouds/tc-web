@@ -76,7 +76,7 @@
     "trustedByDesc": "به برندهای بین المللی در حال رشد با ما بپیوندید",
     "metaTitle": "مطابقت SinoTrade | خدمات مطابقت واردات چین",
     "metaDescription": "انطباق یک مرحله ای واردات چین: ثبت GACC، گواهینامه CCC، بایگانی لوازم آرایشی NMPA، مطابقت با برچسب. مورد اعتماد صادرکنندگان در بیش از 50 کشور.",
-    "heroPortalCta": "Try our 3-step compliance checker →"
+    "heroPortalCta": "بررسی‌کننده انطباق ۳ مرحله‌ای ما → را امتحان کنید"
   },
   "Services": {
     "heroTitle": "خدمات ما",
@@ -465,10 +465,10 @@
     "ctaUrgency": "مشاوره رایگان → پاسخگویی 24 ساعته",
     "relatedResourcesTitle": "منابع مرتبط",
     "relatedResourcesSubtitle": "درباره انطباق با واردات چین بیشتر بدانید",
-    "portalCtaTitle": "Not sure if this applies to your products?",
-    "portalCtaLink": "Try our free compliance self-assessment",
-    "portalCtaGenericTitle": "Still have questions?",
-    "portalCtaGenericLink": "Check your products for free"
+    "portalCtaTitle": "مطمئن نیستید که آیا این برای محصولات شما صدق می کند؟",
+    "portalCtaLink": "خود ارزیابی انطباق رایگان ما را امتحان کنید",
+    "portalCtaGenericTitle": "هنوز سوالی دارید؟",
+    "portalCtaGenericLink": "محصولات خود را به صورت رایگان بررسی کنید"
   },
   "Packages": {
     "heroTitle": "بسته های انطباق",

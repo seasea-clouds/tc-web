@@ -76,7 +76,7 @@
     "trustedByDesc": "เข้าร่วมกับแบรนด์ต่างประเทศที่เติบโตไปพร้อมกับเรา",
     "metaTitle": "ตรวจสอบความสอดคล้องจีน | SinoTrade Compliance",
     "metaDescription": "ตรวจสอบว่าผลิตภัณฑ์ของคุณต้องการการลงทะเบียน GACC การรับรอง CCC หรือการยื่น NMPA สำหรับการส่งออกยังจีนหรือไม่",
-    "heroPortalCta": "Try our 3-step compliance checker →"
+    "heroPortalCta": "ลองใช้เครื่องมือตรวจสอบการปฏิบัติตามข้อกำหนด 3 ขั้นตอนของเรา →"
   },
   "Services": {
     "heroTitle": "บริการของเรา",
@@ -465,10 +465,10 @@
     "ctaUrgency": "ให้คำปรึกษาฟรี → ตอบกลับตลอด 24 ชั่วโมง",
     "relatedResourcesTitle": "แหล่งข้อมูลที่เกี่ยวข้อง",
     "relatedResourcesSubtitle": "เรียนรู้เพิ่มเติมเกี่ยวกับการปฏิบัติตามข้อกำหนดการนำเข้าของจีน",
-    "portalCtaTitle": "Not sure if this applies to your products?",
-    "portalCtaLink": "Try our free compliance self-assessment",
-    "portalCtaGenericTitle": "Still have questions?",
-    "portalCtaGenericLink": "Check your products for free"
+    "portalCtaTitle": "ไม่แน่ใจว่าสิ่งนี้ใช้ได้กับผลิตภัณฑ์ของคุณหรือไม่?",
+    "portalCtaLink": "ลองใช้การประเมินตนเองด้านการปฏิบัติตามข้อกำหนดฟรีของเรา",
+    "portalCtaGenericTitle": "ยังมีคำถามอยู่ใช่ไหม?",
+    "portalCtaGenericLink": "ตรวจเช็คสินค้าของคุณได้ฟรี"
   },
   "Packages": {
     "heroTitle": "แพคเกจการปฏิบัติตามข้อกำหนด",

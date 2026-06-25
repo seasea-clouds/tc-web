@@ -76,7 +76,7 @@
     "trustedByDesc": "加入已经与我们一起成长的国际品牌",
     "metaTitle": "中贸合规|中国进口合规服务",
     "metaDescription": "一站式中国进口合规服务：GACC 食品注册、CCC 认证、NMPA 化妆品备案、标签合规。15 年专业经验，服务 50+ 国家出口商。免费咨询。",
-    "heroPortalCta": "Try our 3-step compliance checker →"
+    "heroPortalCta": "尝试我们的三步合规检查器 →"
   },
   "Services": {
     "heroTitle": "我们的服务",
@@ -465,10 +465,10 @@
     "ctaUrgency": "免费咨询→24小时响应",
     "relatedResourcesTitle": "相关资源",
     "relatedResourcesSubtitle": "了解有关中国进口合规性的更多信息",
-    "portalCtaTitle": "Not sure if this applies to your products?",
-    "portalCtaLink": "Try our free compliance self-assessment",
-    "portalCtaGenericTitle": "Still have questions?",
-    "portalCtaGenericLink": "Check your products for free"
+    "portalCtaTitle": "不确定这是否适用于您的产品？",
+    "portalCtaLink": "尝试我们的免费合规自我评估",
+    "portalCtaGenericTitle": "还有疑问吗？",
+    "portalCtaGenericLink": "免费检查您的产品"
   },
   "Packages": {
     "heroTitle": "合规套餐",

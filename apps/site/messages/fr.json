@@ -76,7 +76,7 @@
     "trustedByDesc": "Rejoignez des marques internationales qui grandissent déjà avec nous",
     "metaTitle": "Conformité SinoTrade | Services de conformité des importations en Chine",
     "metaDescription": "Conformité unique des importations en Chine : enregistrement GACC, certification CCC, dépôt de produits cosmétiques NMPA, conformité des étiquettes. Approuvé...",
-    "heroPortalCta": "Try our 3-step compliance checker →"
+    "heroPortalCta": "Essayez notre vérificateur de conformité en 3 étapes →"
   },
   "Services": {
     "heroTitle": "Nos prestations",
@@ -465,10 +465,10 @@
     "ctaUrgency": "Consultation gratuite → réponse 24h",
     "relatedResourcesTitle": "Ressources connexes",
     "relatedResourcesSubtitle": "En savoir plus sur la conformité des importations en Chine",
-    "portalCtaTitle": "Not sure if this applies to your products?",
-    "portalCtaLink": "Try our free compliance self-assessment",
-    "portalCtaGenericTitle": "Still have questions?",
-    "portalCtaGenericLink": "Check your products for free"
+    "portalCtaTitle": "Vous ne savez pas si cela s'applique à vos produits ?",
+    "portalCtaLink": "Essayez notre auto-évaluation gratuite de la conformité",
+    "portalCtaGenericTitle": "Vous avez encore des questions ?",
+    "portalCtaGenericLink": "Vérifiez vos produits gratuitement"
   },
   "Packages": {
     "heroTitle": "Forfaits de conformité",

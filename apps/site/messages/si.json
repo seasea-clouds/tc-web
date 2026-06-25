@@ -76,7 +76,7 @@
     "trustedByDesc": "අප සමඟ දැනටමත් වර්ධනය වන ජාත්‍යන්තර වෙළඳ නාම සමඟ සම්බන්ධ වන්න",
     "metaTitle": "SinoTrade අනුකූලතාව | චීනය ආනයන අනුකූලතා සේවා",
     "metaDescription": "එක්-නැවතුම් චීන ආනයන අනුකූලතාව: GACC ලියාපදිංචිය, CCC සහතිකය, NMPA විලවුන් ගොනු කිරීම, ලේබල් අනුකූලතාව. රටවල් 50+ ක අපනයනකරුවන් විසින් විශ්වාස කෙරේ.",
-    "heroPortalCta": "Try our 3-step compliance checker →"
+    "heroPortalCta": "අපගේ 3-පියවර අනුකූලතා පරීක්ෂක → උත්සාහ කරන්න"
   },
   "Services": {
     "heroTitle": "අපගේ සේවාවන්",
@@ -465,10 +465,10 @@
     "ctaUrgency": "නොමිලේ උපදේශනය → පැය 24 ප්‍රතිචාරය",
     "relatedResourcesTitle": "අදාළ සම්පත්",
     "relatedResourcesSubtitle": "චීන ආනයන අනුකූලතාව ගැන තව දැනගන්න",
-    "portalCtaTitle": "Not sure if this applies to your products?",
-    "portalCtaLink": "Try our free compliance self-assessment",
-    "portalCtaGenericTitle": "Still have questions?",
-    "portalCtaGenericLink": "Check your products for free"
+    "portalCtaTitle": "මෙය ඔබේ නිෂ්පාදන සඳහා අදාළ දැයි විශ්වාස නැද්ද?",
+    "portalCtaLink": "අපගේ නොමිලේ අනුකූලතා ස්වයං තක්සේරුව උත්සාහ කරන්න",
+    "portalCtaGenericTitle": "තවමත් ප්‍රශ්න තිබේද?",
+    "portalCtaGenericLink": "ඔබගේ නිෂ්පාදන නොමිලේ පරීක්ෂා කරන්න"
   },
   "Packages": {
     "heroTitle": "අනුකූලතා පැකේජ",

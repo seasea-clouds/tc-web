@@ -76,7 +76,7 @@
     "trustedByDesc": "எங்களுடன் ஏற்கனவே வளர்ந்து வரும் சர்வதேச பிராண்டுகளில் சேரவும்",
     "metaTitle": "SinoTrade இணக்கம் | சீனா இறக்குமதி இணக்க சேவைகள்",
     "metaDescription": "ஒரே இடத்தில் சீனா இறக்குமதி இணக்கம்: GACC பதிவு, CCC சான்றிதழ், NMPA அழகுசாதனப் பொருட்கள் தாக்கல், லேபிள் இணக்கம். 50+ நாடுகளில் உள்ள ஏற்றுமதியாளர்களால் நம்பப்படுகிறது.",
-    "heroPortalCta": "Try our 3-step compliance checker →"
+    "heroPortalCta": "எங்கள் 3-படி இணக்க சரிபார்ப்பை முயற்சிக்கவும் →"
   },
   "Services": {
     "heroTitle": "எங்கள் சேவைகள்",
@@ -465,10 +465,10 @@
     "ctaUrgency": "இலவச ஆலோசனை → 24 மணிநேர பதில்",
     "relatedResourcesTitle": "தொடர்புடைய வளங்கள்",
     "relatedResourcesSubtitle": "சீனா இறக்குமதி இணக்கம் பற்றி மேலும் அறிக",
-    "portalCtaTitle": "Not sure if this applies to your products?",
-    "portalCtaLink": "Try our free compliance self-assessment",
-    "portalCtaGenericTitle": "Still have questions?",
-    "portalCtaGenericLink": "Check your products for free"
+    "portalCtaTitle": "இது உங்கள் தயாரிப்புகளுக்குப் பொருந்துமா என்பது உறுதியாக தெரியவில்லையா?",
+    "portalCtaLink": "எங்களின் இலவச இணக்க சுய மதிப்பீட்டை முயற்சிக்கவும்",
+    "portalCtaGenericTitle": "இன்னும் கேள்விகள் உள்ளதா?",
+    "portalCtaGenericLink": "உங்கள் தயாரிப்புகளை இலவசமாகச் சரிபார்க்கவும்"
   },
   "Packages": {
     "heroTitle": "இணக்க தொகுப்புகள்",

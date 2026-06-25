@@ -76,7 +76,7 @@
     "trustedByDesc": "Pridružite se mednarodnim blagovnim znamkam, ki že rastejo z nami",
     "metaTitle": "Skladnost s predpisi SinoTrade | Storitve skladnosti uvoza na Kitajskem",
     "metaDescription": "Skladnost pri uvozu na Kitajsko na enem mestu: registracija GACC, certificiranje CCC, vložitev kozmetičnih izdelkov NMPA, skladnost etiket. Zaupajo mu izvozniki v več kot 50 državah.",
-    "heroPortalCta": "Try our 3-step compliance checker →"
+    "heroPortalCta": "Preizkusite naš 3-stopenjski preverjevalnik skladnosti →"
   },
   "Services": {
     "heroTitle": "Naše storitve",
@@ -465,10 +465,10 @@
     "ctaUrgency": "Brezplačno svetovanje → odgovor 24 ur",
     "relatedResourcesTitle": "Sorodni viri",
     "relatedResourcesSubtitle": "Izvedite več o skladnosti uvoza na Kitajsko",
-    "portalCtaTitle": "Not sure if this applies to your products?",
-    "portalCtaLink": "Try our free compliance self-assessment",
-    "portalCtaGenericTitle": "Still have questions?",
-    "portalCtaGenericLink": "Check your products for free"
+    "portalCtaTitle": "Niste prepričani, ali to velja za vaše izdelke?",
+    "portalCtaLink": "Preizkusite našo brezplačno samoocenjevanje skladnosti",
+    "portalCtaGenericTitle": "Imate še vprašanja?",
+    "portalCtaGenericLink": "Preverite svoje izdelke brezplačno"
   },
   "Packages": {
     "heroTitle": "Paketi skladnosti",

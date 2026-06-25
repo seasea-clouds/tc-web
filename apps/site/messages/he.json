@@ -76,7 +76,7 @@
     "trustedByDesc": "הצטרפו למותגים בינלאומיים שכבר צומחים איתנו",
     "metaTitle": "תאימות SinoTrade | שירותי תאימות לייבוא ​​סין",
     "metaDescription": "תאימות ליבוא של סין: רישום GACC, אישור CCC, הגשת קוסמטיקה NMPA, תאימות לתווית. מהימן על ידי יצואנים ב-50+ מדינות.",
-    "heroPortalCta": "Try our 3-step compliance checker →"
+    "heroPortalCta": "נסה את בודק התאימות בן 3 השלבים שלנו →"
   },
   "Services": {
     "heroTitle": "השירותים שלנו",
@@ -465,10 +465,10 @@
     "ctaUrgency": "ייעוץ חינם → מענה 24 שעות",
     "relatedResourcesTitle": "משאבים קשורים",
     "relatedResourcesSubtitle": "למידע נוסף על תאימות ליבוא של סין",
-    "portalCtaTitle": "Not sure if this applies to your products?",
-    "portalCtaLink": "Try our free compliance self-assessment",
-    "portalCtaGenericTitle": "Still have questions?",
-    "portalCtaGenericLink": "Check your products for free"
+    "portalCtaTitle": "לא בטוחים אם זה חל על המוצרים שלכם?",
+    "portalCtaLink": "נסה את ההערכה העצמית שלנו לתאימות בחינם",
+    "portalCtaGenericTitle": "עדיין יש לך שאלות?",
+    "portalCtaGenericLink": "בדוק את המוצרים שלך בחינם"
   },
   "Packages": {
     "heroTitle": "חבילות תאימות",

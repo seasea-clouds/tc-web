@@ -76,7 +76,7 @@
     "trustedByDesc": "हमारे साथ पहले से ही विकसित हो रहे अंतर्राष्ट्रीय ब्रांडों से जुड़ें",
     "metaTitle": "सिनोट्रेड अनुपालन | चीन आयात अनुपालन सेवाएँ",
     "metaDescription": "वन-स्टॉप चीन आयात अनुपालन: GACC पंजीकरण, CCC प्रमाणीकरण, NMPA सौंदर्य प्रसाधन फाइलिंग, लेबल अनुपालन। 50 से अधिक देशों में निर्यातकों द्वारा विश्वसनीय।",
-    "heroPortalCta": "Try our 3-step compliance checker →"
+    "heroPortalCta": "हमारे 3-चरणीय अनुपालन चेकर को आज़माएँ →"
   },
   "Services": {
     "heroTitle": "हमारी सेवाएँ",
@@ -465,10 +465,10 @@
     "ctaUrgency": "निःशुल्क परामर्श → 24 घंटे प्रतिक्रिया",
     "relatedResourcesTitle": "संबंधित संसाधन",
     "relatedResourcesSubtitle": "चीन आयात अनुपालन के बारे में और जानें",
-    "portalCtaTitle": "Not sure if this applies to your products?",
-    "portalCtaLink": "Try our free compliance self-assessment",
-    "portalCtaGenericTitle": "Still have questions?",
-    "portalCtaGenericLink": "Check your products for free"
+    "portalCtaTitle": "निश्चित नहीं कि क्या यह आपके उत्पादों पर लागू होता है?",
+    "portalCtaLink": "हमारे निःशुल्क अनुपालन स्व-मूल्यांकन का प्रयास करें",
+    "portalCtaGenericTitle": "क्या आपके पास अभी भी प्रश्न हैं?",
+    "portalCtaGenericLink": "अपने उत्पादों को निःशुल्क जांचें"
   },
   "Packages": {
     "heroTitle": "अनुपालन पैकेज",

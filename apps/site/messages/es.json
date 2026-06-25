@@ -76,7 +76,7 @@
     "trustedByDesc": "Únase a marcas internacionales que ya crecen con nosotros",
     "metaTitle": "Cumplimiento de SinoTrade | Servicios de cumplimiento de importaciones de China",
     "metaDescription": "Cumplimiento integral de importaciones de China: registro GACC, certificación CCC, presentación de cosméticos NMPA, cumplimiento de etiquetas. Con la confian...",
-    "heroPortalCta": "Try our 3-step compliance checker →"
+    "heroPortalCta": "Pruebe nuestro verificador de cumplimiento de 3 pasos →"
   },
   "Services": {
     "heroTitle": "Nuestros Servicios",
@@ -465,10 +465,10 @@
     "ctaUrgency": "Consulta gratuita → Respuesta 24h",
     "relatedResourcesTitle": "Recursos relacionados",
     "relatedResourcesSubtitle": "Obtenga más información sobre el cumplimiento de las importaciones de China",
-    "portalCtaTitle": "Not sure if this applies to your products?",
-    "portalCtaLink": "Try our free compliance self-assessment",
-    "portalCtaGenericTitle": "Still have questions?",
-    "portalCtaGenericLink": "Check your products for free"
+    "portalCtaTitle": "¿No estás seguro de si esto se aplica a tus productos?",
+    "portalCtaLink": "Pruebe nuestra autoevaluación de cumplimiento gratuita",
+    "portalCtaGenericTitle": "¿Aún tienes preguntas?",
+    "portalCtaGenericLink": "Consulta tus productos gratis"
   },
   "Packages": {
     "heroTitle": "Paquetes de cumplimiento",

@@ -76,7 +76,7 @@
     "trustedByDesc": "انضم إلى العلامات التجارية العالمية التي تنمو معنا بالفعل",
     "metaTitle": "الامتثال لشركة SinoTrade | خدمات الامتثال للاستيراد في الصين",
     "metaDescription": "الامتثال الشامل للاستيراد في الصين: تسجيل GACC، وشهادة CCC، وحفظ مستحضرات التجميل NMPA، والامتثال للملصقات. موثوق به من قبل المصدرين في أكثر من 50 دولة.",
-    "heroPortalCta": "Try our 3-step compliance checker →"
+    "heroPortalCta": "جرب مدقق الامتثال المكون من 3 خطوات →"
   },
   "Services": {
     "heroTitle": "خدماتنا",
@@ -465,10 +465,10 @@
     "ctaUrgency": "استشارة مجانية → استجابة 24 ساعة",
     "relatedResourcesTitle": "الموارد ذات الصلة",
     "relatedResourcesSubtitle": "تعرف على المزيد حول الامتثال للاستيراد في الصين",
-    "portalCtaTitle": "Not sure if this applies to your products?",
-    "portalCtaLink": "Try our free compliance self-assessment",
-    "portalCtaGenericTitle": "Still have questions?",
-    "portalCtaGenericLink": "Check your products for free"
+    "portalCtaTitle": "لست متأكدا إذا كان هذا ينطبق على منتجاتك؟",
+    "portalCtaLink": "جرّب التقييم الذاتي المجاني للامتثال",
+    "portalCtaGenericTitle": "لا تزال لديك أسئلة؟",
+    "portalCtaGenericLink": "قم بفحص منتجاتك مجاناً"
   },
   "Packages": {
     "heroTitle": "حزم الامتثال",

@@ -76,7 +76,7 @@
     "trustedByDesc": "Γίνετε μέλος διεθνών εμπορικών σημάτων που ήδη αναπτύσσονται μαζί μας",
     "metaTitle": "Συμμόρφωση SinoTrade | Υπηρεσίες συμμόρφωσης με τις εισαγωγές της Κίνας",
     "metaDescription": "Ενιαία συμμόρφωση με τις εισαγωγές της Κίνας: εγγραφή GACC, πιστοποίηση CCC, κατάθεση καλλυντικών NMPA, συμμόρφωση με την ετικέτα. Εμπιστεύονται εξαγωγείς σε 50+ χώρες.",
-    "heroPortalCta": "Try our 3-step compliance checker →"
+    "heroPortalCta": "Δοκιμάστε τον έλεγχο συμμόρφωσης σε 3 βήματα →"
   },
   "Services": {
     "heroTitle": "Οι Υπηρεσίες μας",
@@ -465,10 +465,10 @@
     "ctaUrgency": "Δωρεάν διαβούλευση → 24ωρη απάντηση",
     "relatedResourcesTitle": "Σχετικοί πόροι",
     "relatedResourcesSubtitle": "Μάθετε περισσότερα σχετικά με τη συμμόρφωση με τις εισαγωγές από την Κίνα",
-    "portalCtaTitle": "Not sure if this applies to your products?",
-    "portalCtaLink": "Try our free compliance self-assessment",
-    "portalCtaGenericTitle": "Still have questions?",
-    "portalCtaGenericLink": "Check your products for free"
+    "portalCtaTitle": "Δεν είστε σίγουροι αν αυτό ισχύει για τα προϊόντα σας;",
+    "portalCtaLink": "Δοκιμάστε τη δωρεάν αυτοαξιολόγηση συμμόρφωσης",
+    "portalCtaGenericTitle": "Έχετε ακόμα ερωτήσεις;",
+    "portalCtaGenericLink": "Ελέγξτε τα προϊόντα σας δωρεάν"
   },
   "Packages": {
     "heroTitle": "Πακέτα Συμμόρφωσης",

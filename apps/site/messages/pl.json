@@ -76,7 +76,7 @@
     "trustedByDesc": "Dołącz do międzynarodowych marek, które już rozwijają się razem z nami",
     "metaTitle": "Zgodność z przepisami chińskiego handlu | Usługi w zakresie zgodności z przepisami importowymi w Chinach",
     "metaDescription": "Kompleksowa zgodność importu z Chin: rejestracja GACC, certyfikacja CCC, archiwizacja kosmetyków NMPA, zgodność z etykietami. Zaufali nam eksporterzy w ponad 50 krajach.",
-    "heroPortalCta": "Try our 3-step compliance checker →"
+    "heroPortalCta": "Wypróbuj nasz 3-etapowy moduł sprawdzania zgodności →"
   },
   "Services": {
     "heroTitle": "Nasze usługi",
@@ -465,10 +465,10 @@
     "ctaUrgency": "Bezpłatna konsultacja → Odpowiedź 24h",
     "relatedResourcesTitle": "Powiązane zasoby",
     "relatedResourcesSubtitle": "Dowiedz się więcej o zgodności importu z Chin",
-    "portalCtaTitle": "Not sure if this applies to your products?",
-    "portalCtaLink": "Try our free compliance self-assessment",
-    "portalCtaGenericTitle": "Still have questions?",
-    "portalCtaGenericLink": "Check your products for free"
+    "portalCtaTitle": "Nie jesteś pewien, czy dotyczy to Twoich produktów?",
+    "portalCtaLink": "Wypróbuj naszą bezpłatną samoocenę zgodności",
+    "portalCtaGenericTitle": "Nadal masz pytania?",
+    "portalCtaGenericLink": "Sprawdź swoje produkty za darmo"
   },
   "Packages": {
     "heroTitle": "Pakiety zgodności",

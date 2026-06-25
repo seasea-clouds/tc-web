@@ -76,7 +76,7 @@
     "trustedByDesc": "Bizimle birlikte büyüyen uluslararası markalara katılın",
     "metaTitle": "SinoTrade Compliance | Çin İthalat Uyumluluk Hizmetleri",
     "metaDescription": "Tek noktadan Çin ithalat uyumluluğu: GACC kaydı, CCC sertifikası, NMPA kozmetik dosyalama, etiket uyumluluğu. 50'den fazla ülkedeki ihracatçıların güvendiği.",
-    "heroPortalCta": "Try our 3-step compliance checker →"
+    "heroPortalCta": "3 adımlı uyumluluk denetleyicimizi deneyin →"
   },
   "Services": {
     "heroTitle": "Hizmetlerimiz",
@@ -465,10 +465,10 @@
     "ctaUrgency": "Ücretsiz danışmanlık → 24 saat yanıt",
     "relatedResourcesTitle": "İlgili Kaynaklar",
     "relatedResourcesSubtitle": "Çin'in ithalat uyumluluğu hakkında daha fazla bilgi edinin",
-    "portalCtaTitle": "Not sure if this applies to your products?",
-    "portalCtaLink": "Try our free compliance self-assessment",
-    "portalCtaGenericTitle": "Still have questions?",
-    "portalCtaGenericLink": "Check your products for free"
+    "portalCtaTitle": "Bunun ürünleriniz için geçerli olup olmadığından emin değil misiniz?",
+    "portalCtaLink": "Ücretsiz uyumluluk öz değerlendirmemizi deneyin",
+    "portalCtaGenericTitle": "Hala sorularınız mı var?",
+    "portalCtaGenericLink": "Ürünlerinizi ücretsiz kontrol edin"
   },
   "Packages": {
     "heroTitle": "Uyumluluk Paketleri",

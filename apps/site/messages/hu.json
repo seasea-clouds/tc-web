@@ -76,7 +76,7 @@
     "trustedByDesc": "Csatlakozzon a már velünk együtt növekvő nemzetközi márkákhoz",
     "metaTitle": "SinoTrade megfelelőség | Kínai import megfelelőségi szolgáltatások",
     "metaDescription": "Egyablakos kínai import megfelelőség: GACC regisztráció, CCC tanúsítás, NMPA kozmetikai bejelentés, címke megfelelőség. Több mint 50 ország exportőrei bíznak meg benne.",
-    "heroPortalCta": "Try our 3-step compliance checker →"
+    "heroPortalCta": "Próbálja ki 3 lépésből álló megfelelőség-ellenőrzőnket →"
   },
   "Services": {
     "heroTitle": "Szolgáltatásaink",
@@ -465,10 +465,10 @@
     "ctaUrgency": "Ingyenes konzultáció → 24 órás válaszadás",
     "relatedResourcesTitle": "Kapcsolódó források",
     "relatedResourcesSubtitle": "További információ a kínai import megfelelőségéről",
-    "portalCtaTitle": "Not sure if this applies to your products?",
-    "portalCtaLink": "Try our free compliance self-assessment",
-    "portalCtaGenericTitle": "Still have questions?",
-    "portalCtaGenericLink": "Check your products for free"
+    "portalCtaTitle": "Nem biztos benne, hogy ez vonatkozik-e az Ön termékeire?",
+    "portalCtaLink": "Próbálja ki ingyenes megfelelési önértékelésünket",
+    "portalCtaGenericTitle": "Van még kérdése?",
+    "portalCtaGenericLink": "Ellenőrizze termékeit ingyenesen"
   },
   "Packages": {
     "heroTitle": "Megfelelőségi csomagok",

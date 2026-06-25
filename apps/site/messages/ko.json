@@ -76,7 +76,7 @@
     "trustedByDesc": "이미 우리와 함께 성장하고 있는 국제 브랜드에 동참하세요",
     "metaTitle": "SinoTrade 규정 준수 | 중국 수입 규정 준수 서비스",
     "metaDescription": "원스톱 중국 수입 규정 준수: GACC 등록, CCC 인증, NMPA 화장품 서류 제출, 라벨 규정 준수. 50개 이상 국가의 수출업체가 신뢰합니다.",
-    "heroPortalCta": "Try our 3-step compliance checker →"
+    "heroPortalCta": "3단계 규정 준수 검사기를 사용해 보세요 →"
   },
   "Services": {
     "heroTitle": "우리의 서비스",
@@ -465,10 +465,10 @@
     "ctaUrgency": "무료 상담 → 24시간 응답",
     "relatedResourcesTitle": "관련 자료",
     "relatedResourcesSubtitle": "중국 수입 규정 준수에 대해 자세히 알아보기",
-    "portalCtaTitle": "Not sure if this applies to your products?",
-    "portalCtaLink": "Try our free compliance self-assessment",
-    "portalCtaGenericTitle": "Still have questions?",
-    "portalCtaGenericLink": "Check your products for free"
+    "portalCtaTitle": "이것이 귀하의 제품에 적용되는지 확실하지 않습니까?",
+    "portalCtaLink": "무료 규정 준수 자가 평가를 사용해 보세요.",
+    "portalCtaGenericTitle": "아직도 질문이 있으신가요?",
+    "portalCtaGenericLink": "무료로 제품을 확인해보세요"
   },
   "Packages": {
     "heroTitle": "규정 준수 패키지",

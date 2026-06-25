@@ -76,7 +76,7 @@
     "trustedByDesc": "すでに成長している国際ブランドに加わりましょう",
     "metaTitle": "SinoTrade コンプライアンス |中国輸入コンプライアンスサービス",
     "metaDescription": "ワンストップの中国輸入コンプライアンス: GACC 登録、CCC 認証、NMPA 化粧品申請、ラベルコンプライアンス。 50か国以上の輸出業者から信頼されています。",
-    "heroPortalCta": "Try our 3-step compliance checker →"
+    "heroPortalCta": "3 ステップのコンプライアンス チェッカーをお試しください →"
   },
   "Services": {
     "heroTitle": "当社のサービス",
@@ -465,10 +465,10 @@
     "ctaUrgency": "無料相談→24時間対応",
     "relatedResourcesTitle": "関連リソース",
     "relatedResourcesSubtitle": "中国輸入コンプライアンスについて詳しく見る",
-    "portalCtaTitle": "Not sure if this applies to your products?",
-    "portalCtaLink": "Try our free compliance self-assessment",
-    "portalCtaGenericTitle": "Still have questions?",
-    "portalCtaGenericLink": "Check your products for free"
+    "portalCtaTitle": "これがあなたの製品に当てはまるかどうかわかりませんか?",
+    "portalCtaLink": "無料のコンプライアンス自己評価をお試しください",
+    "portalCtaGenericTitle": "まだ質問がありますか?",
+    "portalCtaGenericLink": "無料で製品を確認してください"
   },
   "Packages": {
     "heroTitle": "コンプライアンスパッケージ",

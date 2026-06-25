@@ -7,6 +7,7 @@ import CoverSection from '@/components/CoverSection';
 import ProcessSteps from '@/components/ProcessSteps';
 import WhyUsCards from '@/components/WhyUsCards';
 import CTASection from '@/components/CTASection';
+import PortalCTASection from '@/components/PortalCTASection';
 import ContactForm from '@/components/ContactForm';
 import ServiceFAQ from '@/components/ServiceFAQ';
 import HowToJsonLd from '@/components/HowToJsonLd';
@@ -83,6 +84,7 @@ export default async function BrandPage({ params }: { params: Promise<{ locale: 
       <WhyUsCards t={commonT} />
       <ServiceFAQ namespace="ServiceBrand" />
       <RelatedResources locale={locale} category={getBlogCategoryForService('brand', locale)} />
+      <PortalCTASection t={commonT} href={`/${locale}/c/check/trademark`} />
       <ContactForm />
       <CTASection t={ctaT} />
           <script id="jsonld-brand" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />

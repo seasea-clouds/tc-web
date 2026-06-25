@@ -4,6 +4,7 @@ import { sharedOpenGraph, sharedTwitter, buildLanguages } from '@trade/ui/seo';
 import PackageCards from '@/components/PackageCards';
 import PackageComparisonTable from '@/components/PackageComparisonTable';
 import CTASection from '@/components/CTASection';
+import PortalCTASection from '@/components/PortalCTASection';
 import ContactForm from '@/components/ContactForm';
 import { WHATSAPP_URL } from '@trade/ui';
 
@@ -105,6 +106,7 @@ export default async function PackagesPage({ params }: { params: Promise<{ local
         </div>
       </section>
 
+      <PortalCTASection t={ctaT} href={`/${locale}/c/`} generic />
       <CTASection t={ctaT} />
       <script id="jsonld-packages" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     <ContactForm />

@@ -5,6 +5,7 @@ import { sharedOpenGraph, sharedTwitter, buildLanguages } from '@trade/ui/seo';
 import ContactForm from '@/components/ContactForm';
 import { WHATSAPP_URL } from '@trade/ui';
 import CTASection from '@/components/CTASection';
+import PortalCTASection from '@/components/PortalCTASection';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const locale = (await params).locale;
@@ -29,6 +30,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   const t = await getTranslations({ locale, namespace: 'About' });
   const bcT = await getTranslations({ locale, namespace: 'breadcrumb' });
   const ctaT = await getTranslations({ locale, namespace: 'CTA' });
+  const commonT = await getTranslations({ locale, namespace: 'ServiceCommon' });
 
   // JSON-LD
   const knowsAbout = splitByComma(t('jsonldKnowsAbout'));
@@ -140,6 +142,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
           </a>
         </div>
       </section>
+      <PortalCTASection t={commonT} href={`/${locale}/c/`} generic />
       <ContactForm />
       <CTASection t={ctaT} />
       <script id="jsonld-about" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />

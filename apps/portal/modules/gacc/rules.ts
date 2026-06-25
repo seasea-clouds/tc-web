@@ -41,9 +41,10 @@ interface CategoryProfile {
   importVolumeRank: number; // 在中国进口量排名
 }
 
-const CATEGORY_PROFILES: Record<GaccCategory, CategoryProfile> = {
+function getCATEGORY_PROFILES(t: (key: string) => string): Record<GaccCategory, CategoryProfile> {
+  return {
   alcohol: {
-    label: "Alcoholic Beverages (HS 22.03-22.08)",
+    label: t("alcoholic_beverages_hs_22_03_22_08"),
     hsRange: "2203-2208",
     isHighRisk: false,
     riskReason: "18 categories outside — standard risk. Alcohol content and additives monitored.",
@@ -53,19 +54,19 @@ const CATEGORY_PROFILES: Record<GaccCategory, CategoryProfile> = {
     consumptionTax: "10-20% (varies by alcohol type)",
     gaccTimelineLow: "4-6 weeks",
     gaccTimelineHigh: "8-12 weeks",
-    labTests: ["Alcohol content", "Methanol/aldehydes", "Heavy metals", "Food additives", "Sulfur dioxide"],
+    labTests: [t("alcohol_content"), t("methanol_aldehydes"), "Heavy metals", "Food additives", "Sulfur dioxide"],
     testCostRange: "$800-2,500",
     commonRejections: [
-      { problem: "Label alcohol % mismatch lab result", cause: "Inconsistent labeling vs actual content", solution: "Pre-submission lab verification + label accuracy check" },
-      { problem: "Missing additive declaration", cause: "Additives not declared per GB 2760", solution: "Full ingredient audit against GB 2760 additive list" },
-      { problem: "Incorrect HS code classification", cause: "HS 2204 vs 2205 misclassification", solution: "Tariff classification ruling before submission" },
+      { problem: t("label_alcohol_mismatch_lab_result"), cause: t("inconsistent_labeling_vs_actual_content"), solution: t("pre_submission_lab_verification_label_accuracy_che") },
+      { problem: t("missing_additive_declaration"), cause: t("additives_not_declared_per_gb_2760"), solution: t("full_ingredient_audit_against_gb_2760_additive_lis") },
+      { problem: t("incorrect_hs_code_classification"), cause: "HS 2204 vs 2205 misclassification", solution: t("tariff_classification_ruling_before_submission") },
     ],
     marketTrend: 'growing',
     competitorOrigin: ["France", "Australia", "Chile", "Italy"],
     importVolumeRank: 3,
   },
   beverage: {
-    label: "Non-alcoholic Beverages (HS 22.01-22.02)",
+    label: t("non_alcoholic_beverages_hs_22_01_22_02"),
     hsRange: "2201-2202",
     isHighRisk: false,
     riskReason: "18 categories outside — low risk. Standard documentation applies.",
@@ -75,10 +76,10 @@ const CATEGORY_PROFILES: Record<GaccCategory, CategoryProfile> = {
     consumptionTax: "N/A",
     gaccTimelineLow: "3-5 weeks",
     gaccTimelineHigh: "6-10 weeks",
-    labTests: ["Microbiological (coliforms, pathogens)", "Heavy metals", "Food additives", "Preservatives"],
+    labTests: [t("microbiological_coliforms_pathogens"), "Heavy metals", "Food additives", "Preservatives"],
     testCostRange: "$500-1,800",
     commonRejections: [
-      { problem: "Preservatives exceed GB 2760 limits", cause: "Different preservative standards vs exporting country", solution: "Formulation review against China's positive list" },
+      { problem: t("preservatives_exceed_gb_2760_limits"), cause: t("different_preservative_standards_vs_exporting_coun"), solution: "Formulation review against China's positive list" },
     ],
     marketTrend: 'growing',
     competitorOrigin: ["USA", "Japan", "Thailand", "South Korea"],
@@ -95,7 +96,7 @@ const CATEGORY_PROFILES: Record<GaccCategory, CategoryProfile> = {
     consumptionTax: "N/A",
     gaccTimelineLow: "3-5 weeks",
     gaccTimelineHigh: "6-10 weeks",
-    labTests: ["Microbiological", "Heavy metals", "Food additives", "Melamine (for chocolate/dairy)", "Pesticide residues"],
+    labTests: ["Microbiological", "Heavy metals", "Food additives", t("melamine_for_chocolate_dairy"), "Pesticide residues"],
     testCostRange: "$600-2,000",
     commonRejections: [
       { problem: "Dairy content triggers high-risk reclassification", cause: "Products with >5% dairy content may be reclassified", solution: "Pre-classification review: dairy threshold analysis" },
@@ -106,7 +107,7 @@ const CATEGORY_PROFILES: Record<GaccCategory, CategoryProfile> = {
     importVolumeRank: 7,
   },
   coffee_tea: {
-    label: "Coffee / Tea (HS 09.01-09.02)",
+    label: t("coffee_tea_hs_09_01_09_02"),
     hsRange: "0901-0902",
     isHighRisk: false,
     riskReason: "18 categories outside — standard risk. Roasted coffee and processed tea.",
@@ -116,18 +117,18 @@ const CATEGORY_PROFILES: Record<GaccCategory, CategoryProfile> = {
     consumptionTax: "N/A",
     gaccTimelineLow: "3-5 weeks",
     gaccTimelineHigh: "6-10 weeks",
-    labTests: ["Caffeine content", "Pesticide residues", "Microbiological", "Heavy metals", "Mycotoxins (ochratoxin A)"],
+    labTests: [t("caffeine_content"), "Pesticide residues", "Microbiological", "Heavy metals", t("mycotoxins_ochratoxin_a")],
     testCostRange: "$700-2,200",
     commonRejections: [
-      { problem: "Pesticide residues exceed MRL", cause: "Different MRL standards between China and exporting country", solution: "Pre-export testing at CNAS-lab for compliance" },
-      { problem: "Aflatoxin/ochratoxin exceeded", cause: "Storage conditions causing mycotoxin development", solution: "Certificate of analysis from accredited + shipping container log" },
+      { problem: t("pesticide_residues_exceed_mrl"), cause: t("different_mrl_standards_between_china_and_exportin"), solution: t("pre_export_testing_at_cnas_lab_for_compliance") },
+      { problem: t("aflatoxin_ochratoxin_exceeded"), cause: t("storage_conditions_causing_mycotoxin_development"), solution: t("certificate_of_analysis_from_accredited_shipping_c") },
     ],
     marketTrend: 'growing',
     competitorOrigin: ["Ethiopia", "Vietnam", "Colombia", "Brazil"],
     importVolumeRank: 6,
   },
   canned: {
-    label: "Canned / Processed Foods (HS 20)",
+    label: t("canned_processed_foods_hs_20"),
     hsRange: "2001-2009",
     isHighRisk: false,
     riskReason: "18 categories outside — standard risk. Shelf-stable processed products.",
@@ -137,17 +138,17 @@ const CATEGORY_PROFILES: Record<GaccCategory, CategoryProfile> = {
     consumptionTax: "N/A",
     gaccTimelineLow: "3-5 weeks",
     gaccTimelineHigh: "6-10 weeks",
-    labTests: ["Commercial sterility", "Heavy metals", "Additives", "Container integrity", "Nutritional analysis"],
+    labTests: [t("commercial_sterility"), "Heavy metals", "Additives", t("container_integrity"), "Nutritional analysis"],
     testCostRange: "$800-2,500",
     commonRejections: [
-      { problem: "Can damage or bulging at inspection", cause: "Shipping/transport damage", solution: "Container condition report + pre-shipment inspection" },
+      { problem: t("can_damage_or_bulging_at_inspection"), cause: t("shipping_transport_damage"), solution: t("container_condition_report_pre_shipment_inspection") },
     ],
     marketTrend: 'stable',
     competitorOrigin: ["Thailand", "Italy", "Spain", "USA"],
     importVolumeRank: 9,
   },
   sugar: {
-    label: "Sugar / Syrups (HS 17)",
+    label: t("sugar_syrups_hs_17"),
     hsRange: "1701-1704",
     isHighRisk: false,
     riskReason: "18 categories outside — low risk.",
@@ -157,200 +158,200 @@ const CATEGORY_PROFILES: Record<GaccCategory, CategoryProfile> = {
     consumptionTax: "N/A",
     gaccTimelineLow: "3-5 weeks",
     gaccTimelineHigh: "6-10 weeks",
-    labTests: ["Polarization/sucrose content", "Color value", "Sulfur dioxide", "Heavy metals"],
+    labTests: [t("polarization_sucrose_content"), t("color_value"), "Sulfur dioxide", "Heavy metals"],
     testCostRange: "$400-1,200",
     commonRejections: [
-      { problem: "Import quota exceeded", cause: "China has sugar import tariff-rate quota", solution: "Check quota availability before shipment" },
+      { problem: t("import_quota_exceeded"), cause: t("china_has_sugar_import_tariff_rate_quota"), solution: t("check_quota_availability_before_shipment") },
     ],
     marketTrend: 'stable',
     competitorOrigin: ["Brazil", "Thailand", "Australia"],
     importVolumeRank: 11,
   },
   grain: {
-    label: "Grains / Flour (HS 10-11)",
+    label: t("grains_flour_hs_10_11"),
     hsRange: "1001-1109",
     isHighRisk: true,
-    riskReason: "Category 18 high-risk. Quarantine concerns for pests/diseases.",
+    riskReason: t("category_18_high_risk_quarantine_concerns_for_pest"),
     ciqCode: "111",
     chinaTariffRate: "1-65% (MFN, quota-sensitive)",
     vatRate: "9%",
     consumptionTax: "N/A",
     gaccTimelineLow: "3-5 months",
     gaccTimelineHigh: "6-9 months",
-    labTests: ["Pesticide residues (multi-residue)", "Mycotoxins (aflatoxin, DON, zearalenone)", "Heavy metals", "GMO testing", "Pest quarantine"],
+    labTests: [t("pesticide_residues_multi_residue"), t("mycotoxins_aflatoxin_don_zearalenone"), "Heavy metals", t("gmo_testing"), t("pest_quarantine")],
     testCostRange: "$1,500-4,000",
     commonRejections: [
-      { problem: "Quarantine pest detected", cause: "Live pest larvae found in shipment", solution: "Fumigation certificate + pre-export phytosanitary inspection" },
-      { problem: "Mycotoxin exceedance", cause: "Improper storage causing DON/fumonisin development", solution: "Drying protocol compliance + container moisture monitoring" },
+      { problem: t("quarantine_pest_detected"), cause: t("live_pest_larvae_found_in_shipment"), solution: t("fumigation_certificate_pre_export_phytosanitary_in") },
+      { problem: t("mycotoxin_exceedance"), cause: t("improper_storage_causing_don_fumonisin_development"), solution: t("drying_protocol_compliance_container_moisture_moni") },
     ],
     marketTrend: 'stable',
     competitorOrigin: ["USA", "Australia", "Canada", "France"],
     importVolumeRank: 2,
   },
   meat: {
-    label: "Meat Products (HS 02)",
+    label: t("meat_products_hs_02"),
     hsRange: "0201-0210",
     isHighRisk: true,
-    riskReason: "Category 18 high-risk. Requires overseas enterprise registration + quarantine access negotiation.",
+    riskReason: t("category_18_high_risk_requires_overseas_enterprise"),
     ciqCode: "111",
     chinaTariffRate: "12-25% (MFN)",
     vatRate: "9%",
     consumptionTax: "N/A",
     gaccTimelineLow: "4-8 months",
     gaccTimelineHigh: "9-14 months",
-    labTests: ["Clenbuterol/β-agonists", "Heavy metals", "Pesticide residues", "Hormone residues", "Microbiological", "Species identification (PCR)"],
+    labTests: [t("clenbuterol_β_agonists"), "Heavy metals", "Pesticide residues", t("hormone_residues"), "Microbiological", t("species_identification_pcr")],
     testCostRange: "$2,000-5,000",
     commonRejections: [
-      { problem: "Country not approved for meat exports", cause: "Bilateral meat access agreement required", solution: "Verify country is on GACC approved meat suppliers list" },
-      { problem: "Facility not registered", cause: "Processing plant not in GACC's overseas facility list", solution: "Pre-registration of facility with GACC (can take 6+ months)" },
-      { problem: "Leptospira or FMD concerns", cause: "Disease status of exporting country", solution: "Official veterinary certificate + country disease-free status documentation" },
+      { problem: t("country_not_approved_for_meat_exports"), cause: t("bilateral_meat_access_agreement_required"), solution: t("verify_country_is_on_gacc_approved_meat_suppliers_") },
+      { problem: t("facility_not_registered"), cause: "Processing plant not in GACC's overseas facility list", solution: t("pre_registration_of_facility_with_gacc_can_take_6_") },
+      { problem: t("leptospira_or_fmd_concerns"), cause: t("disease_status_of_exporting_country"), solution: t("official_veterinary_certificate_country_disease_fr") },
     ],
     marketTrend: 'growing',
     competitorOrigin: ["Brazil", "Australia", "Argentina", "USA"],
     importVolumeRank: 1,
   },
   dairy: {
-    label: "Dairy Products (HS 04)",
+    label: t("dairy_products_hs_04"),
     hsRange: "0401-0406",
     isHighRisk: true,
-    riskReason: "Category 18 high-risk. Strict quarantine + formula registration for infant dairy.",
+    riskReason: t("category_18_high_risk_strict_quarantine_formula_re"),
     ciqCode: "112",
     chinaTariffRate: "5-20% (MFN)",
     vatRate: "9%",
     consumptionTax: "N/A",
     gaccTimelineLow: "3-6 months",
     gaccTimelineHigh: "7-12 months",
-    labTests: ["Melamine", "Microbiological (Listeria, Salmonella)", "Heavy metals", "Aflatoxin M1", "Antibiotic residues", "Nutritional composition"],
+    labTests: ["Melamine", t("microbiological_listeria_salmonella"), "Heavy metals", t("aflatoxin_m1"), t("antibiotic_residues"), t("nutritional_composition")],
     testCostRange: "$1,800-4,500",
     commonRejections: [
-      { problem: "Aflatoxin M1 exceedance", cause: "Feed contamination affecting milk", solution: "Quarterly aflatoxin testing + feed source audit documentation" },
-      { problem: "Infant formula formula registration not separate", cause: "Infant formula has separate CFDA registration", solution: "Separate registration pathway for formula products" },
+      { problem: t("aflatoxin_m1_exceedance"), cause: t("feed_contamination_affecting_milk"), solution: t("quarterly_aflatoxin_testing_feed_source_audit_docu") },
+      { problem: t("infant_formula_formula_registration_not_separate"), cause: t("infant_formula_has_separate_cfda_registration"), solution: t("separate_registration_pathway_for_formula_products") },
     ],
     marketTrend: 'growing',
     competitorOrigin: ["New Zealand", "Netherlands", "France", "Australia"],
     importVolumeRank: 4,
   },
   seafood: {
-    label: "Seafood / Aquatic (HS 03)",
+    label: t("seafood_aquatic_hs_03"),
     hsRange: "0301-0308",
     isHighRisk: true,
-    riskReason: "Category 18 high-risk. Quarantine-sensitive. Bilateral protocol often required.",
+    riskReason: t("category_18_high_risk_quarantine_sensitive_bilater"),
     ciqCode: "114",
     chinaTariffRate: "5-15% (MFN)",
     vatRate: "9%",
     consumptionTax: "N/A",
     gaccTimelineLow: "4-7 months",
     gaccTimelineHigh: "8-14 months",
-    labTests: ["Heavy metals (Hg, Pb, Cd, As)", "Histamine", "Microbiological (Vibrio, Salmonella)", "Parasite inspection", "Antibiotic/nitrofuran residues"],
+    labTests: [t("heavy_metals_hg_pb_cd_as"), "Histamine", t("microbiological_vibrio_salmonella"), t("parasite_inspection"), t("antibiotic_nitrofuran_residues")],
     testCostRange: "$1,500-3,500",
     commonRejections: [
-      { problem: "Heavy metals exceed Chinese limits", cause: "CN-GB 2762 limits are stricter than EU/US", solution: "Pre-shipment heavy metals screening at CNAS lab" },
-      { problem: "Country/region not on approved list", cause: "Bilateral fish import protocol not signed", solution: "Check GACC aquatic products approved country list" },
-      { problem: "Nitrofuran metabolite detected", cause: "Prohibited antibiotic use in aquaculture", solution: "Aquaculture traceability + antibiotic-free certification" },
+      { problem: t("heavy_metals_exceed_chinese_limits"), cause: t("cn_gb_2762_limits_are_stricter_than_eu_us"), solution: t("pre_shipment_heavy_metals_screening_at_cnas_lab") },
+      { problem: t("country_region_not_on_approved_list"), cause: t("bilateral_fish_import_protocol_not_signed"), solution: t("check_gacc_aquatic_products_approved_country_list") },
+      { problem: t("nitrofuran_metabolite_detected"), cause: t("prohibited_antibiotic_use_in_aquaculture"), solution: t("aquaculture_traceability_antibiotic_free_certifica") },
     ],
     marketTrend: 'growing',
     competitorOrigin: ["Ecuador", "Norway", "Russia", "Vietnam"],
     importVolumeRank: 1,
   },
   honey: {
-    label: "Honey / Bee Products (HS 04.09)",
+    label: t("honey_bee_products_hs_04_09"),
     hsRange: "0409",
     isHighRisk: true,
-    riskReason: "Category 18 high-risk. Antibiotic residues and heavy metals strict limits.",
+    riskReason: t("category_18_high_risk_antibiotic_residues_and_heav"),
     ciqCode: "115",
     chinaTariffRate: "15% (MFN)",
     vatRate: "9%",
     consumptionTax: "N/A",
     gaccTimelineLow: "2-4 months",
     gaccTimelineHigh: "5-8 months",
-    labTests: ["Chloramphenicol (prohibited)", "Nitrofuran metabolites", "Tetracycline antibiotics", "Heavy metals", "Pesticide residues", "C13 sugar profile (adulteration)"],
+    labTests: [t("chloramphenicol_prohibited"), t("nitrofuran_metabolites"), t("tetracycline_antibiotics"), "Heavy metals", "Pesticide residues", t("c13_sugar_profile_adulteration")],
     testCostRange: "$1,200-3,000",
     commonRejections: [
-      { problem: "Chloramphenicol detected", cause: "Prohibited antibiotic use in beekeeping", solution: "Transition to antibiotic-free beekeeping + certificate of analysis" },
-      { problem: "Sugar adulteration (C4 sugar)", cause: "Rice/corn syrup added to honey", solution: "Carbon isotope ratio testing + traceability documentation" },
+      { problem: t("chloramphenicol_detected"), cause: t("prohibited_antibiotic_use_in_beekeeping"), solution: t("transition_to_antibiotic_free_beekeeping_certifica") },
+      { problem: t("sugar_adulteration_c4_sugar"), cause: t("rice_corn_syrup_added_to_honey"), solution: t("carbon_isotope_ratio_testing_traceability_document") },
     ],
     marketTrend: 'stable',
     competitorOrigin: ["New Zealand", "Australia", "Thailand", "Argentina"],
     importVolumeRank: 10,
   },
   oil: {
-    label: "Edible Oils (HS 15)",
+    label: t("edible_oils_hs_15"),
     hsRange: "1501-1518",
     isHighRisk: true,
-    riskReason: "Category 18 high-risk. Contamination, benzopyrene and heavy metals monitored.",
+    riskReason: t("category_18_high_risk_contamination_benzopyrene_an"),
     ciqCode: "116",
     chinaTariffRate: "5-20% (MFN)",
     vatRate: "9%",
     consumptionTax: "N/A",
     gaccTimelineLow: "2-4 months",
     gaccTimelineHigh: "5-8 months",
-    labTests: ["Benzo(a)pyrene", "Heavy metals", "Acid value", "Peroxide value", "Pesticide residues", "GMO testing (for soybean/corn oil)"],
+    labTests: [t("benzo_a_pyrene"), "Heavy metals", t("acid_value"), t("peroxide_value"), "Pesticide residues", t("gmo_testing_for_soybean_corn_oil")],
     testCostRange: "$1,000-2,800",
     commonRejections: [
-      { problem: "Benzo(a)pyrene exceeded", cause: "High-temperature processing creates PAHs", solution: "Processing parameter review + activated carbon filtration" },
-      { problem: "GMO content not declared", cause: "China requires GMO labeling for certain oils", solution: "GMO testing + labeling compliance per China regulations" },
+      { problem: t("benzo_a_pyrene_exceeded"), cause: t("high_temperature_processing_creates_pahs"), solution: t("processing_parameter_review_activated_carbon_filtr") },
+      { problem: t("gmo_content_not_declared"), cause: t("china_requires_gmo_labeling_for_certain_oils"), solution: t("gmo_testing_labeling_compliance_per_china_regulati") },
     ],
     marketTrend: 'stable',
     competitorOrigin: ["Malaysia", "Indonesia", "Spain", "Ukraine"],
     importVolumeRank: 3,
   },
   seasoning: {
-    label: "Seasonings / Condiments (HS 21.03)",
+    label: t("seasonings_condiments_hs_21_03"),
     hsRange: "2103",
     isHighRisk: true,
-    riskReason: "Category 18 high-risk. Complex ingredient blends raise additive cross-check issues.",
+    riskReason: t("category_18_high_risk_complex_ingredient_blends_ra"),
     ciqCode: "117",
     chinaTariffRate: "12-25% (MFN)",
     vatRate: "13%",
     consumptionTax: "N/A",
     gaccTimelineLow: "2-4 months",
     gaccTimelineHigh: "5-8 months",
-    labTests: ["Food additives complete screening", "Microbiological", "Heavy metals", "Pesticide residues (multi-herb)", "Mycotoxins"],
+    labTests: [t("food_additives_complete_screening"), "Microbiological", "Heavy metals", t("pesticide_residues_multi_herb"), "Mycotoxins"],
     testCostRange: "$1,200-3,200",
     commonRejections: [
-      { problem: "Proprietary blend additives not all approved", cause: "Mixed seasoning contains additives not per GB 2760", solution: "Full ingredient breakdown + additive compliance per Chinese standards" },
+      { problem: t("proprietary_blend_additives_not_all_approved"), cause: t("mixed_seasoning_contains_additives_not_per_gb_2760"), solution: t("full_ingredient_breakdown_additive_compliance_per_") },
     ],
     marketTrend: 'growing',
     competitorOrigin: ["Japan", "South Korea", "USA", "Thailand"],
     importVolumeRank: 8,
   },
   nuts: {
-    label: "Nuts / Dried Fruits (HS 08)",
+    label: t("nuts_dried_fruits_hs_08"),
     hsRange: "0801-0814",
     isHighRisk: true,
-    riskReason: "Category 18 high-risk. Aflatoxin and quarantine concerns.",
+    riskReason: t("category_18_high_risk_aflatoxin_and_quarantine_con"),
     ciqCode: "118",
     chinaTariffRate: "5-25% (MFN)",
     vatRate: "9%",
     consumptionTax: "N/A",
     gaccTimelineLow: "2-4 months",
     gaccTimelineHigh: "5-8 months",
-    labTests: ["Aflatoxin B1 (total)", "Heavy metals", "Pesticide residues", "Microbiological", "Foreign matter", "Moisture content"],
+    labTests: [t("aflatoxin_b1_total"), "Heavy metals", "Pesticide residues", "Microbiological", t("foreign_matter"), t("moisture_content")],
     testCostRange: "$800-2,200",
     commonRejections: [
-      { problem: "Aflatoxin B1 exceeded", cause: "Storage humidity causing mold growth", solution: "COA from CNAS lab + container humidity control log" },
-      { problem: "Insect infestation/quarantine pest", cause: "Live pests in shipment", solution: "Fumigation certificate + IPPC-compliant packaging" },
+      { problem: t("aflatoxin_b1_exceeded"), cause: t("storage_humidity_causing_mold_growth"), solution: t("coa_from_cnas_lab_container_humidity_control_log") },
+      { problem: t("insect_infestation_quarantine_pest"), cause: t("live_pests_in_shipment"), solution: t("fumigation_certificate_ippc_compliant_packaging") },
     ],
     marketTrend: 'growing',
     competitorOrigin: ["USA", "Vietnam", "Iran", "Turkey"],
     importVolumeRank: 6,
   },
   health_food: {
-    label: "Health / Dietary Supplements (HS 21.06)",
+    label: t("health_dietary_supplements_hs_21_06"),
     hsRange: "2106",
     isHighRisk: true,
-    riskReason: "Category 18 high-risk + potential health food registration (separate, stricter path).",
+    riskReason: t("category_18_high_risk_potential_health_food_regist"),
     ciqCode: "119",
     chinaTariffRate: "10-20% (MFN)",
     vatRate: "13%",
     consumptionTax: "N/A",
     gaccTimelineLow: "3-6 months",
     gaccTimelineHigh: "8-18 months",
-    labTests: ["Active ingredient assay", "Heavy metals", "Microbiological", "Pesticide residues", "Stability testing", "Disintegration/dissolution"],
+    labTests: [t("active_ingredient_assay"), "Heavy metals", "Microbiological", "Pesticide residues", "Stability testing", t("disintegration_dissolution")],
     testCostRange: "$2,000-6,000",
     commonRejections: [
-      { problem: "Unapproved health function claims", cause: "Product claims health benefits not per CFDA approved list", solution: "Function claim review per CFDA's 27 allowed health functions" },
-      { problem: "Novel ingredient not in China food catalogue", cause: "Ingredient not approved for use in China", solution: "Novel food ingredient application (can take 1-2 years)" },
+      { problem: t("unapproved_health_function_claims"), cause: t("product_claims_health_benefits_not_per_cfda_approv"), solution: "Function claim review per CFDA's 27 allowed health functions" },
+      { problem: t("novel_ingredient_not_in_china_food_catalogue"), cause: t("ingredient_not_approved_for_use_in_china"), solution: t("novel_food_ingredient_application_can_take_1_2_yea") },
     ],
     marketTrend: 'growing',
     competitorOrigin: ["USA", "Australia", "Japan", "South Korea"],
@@ -360,23 +361,24 @@ const CATEGORY_PROFILES: Record<GaccCategory, CategoryProfile> = {
     label: "Other Food Products",
     hsRange: "Varies",
     isHighRisk: false,
-    riskReason: "Unclassified — case-by-case review required.",
+    riskReason: t("unclassified_case_by_case_review_required"),
     ciqCode: "199",
     chinaTariffRate: "5-30% (MFN, varies)",
     vatRate: "9-13% (varies)",
     consumptionTax: "N/A",
     gaccTimelineLow: "4-8 weeks",
     gaccTimelineHigh: "10-16 weeks",
-    labTests: ["Depends on product category — comprehensive screening recommended"],
+    labTests: [t("depends_on_product_category_comprehensive_screenin")],
     testCostRange: "$800-3,000",
     commonRejections: [
-      { problem: "Product classification ambiguous", cause: "Cannot determine primary category", solution: "Advance classification ruling from CIQ before submission" },
+      { problem: t("product_classification_ambiguous"), cause: t("cannot_determine_primary_category"), solution: t("advance_classification_ruling_from_ciq_before_subm") },
     ],
     marketTrend: 'stable',
     competitorOrigin: ["Various"],
     importVolumeRank: 15,
   },
 };
+}
 
 // ─── 国家/地区数据库 ────────────────────────────────────────────────────
 
@@ -395,7 +397,8 @@ interface CountryProfile {
   importVolumeNote: string;
 }
 
-const COUNTRY_DB: Record<string, CountryProfile> = {
+function getCOUNTRY_DB(t: (key: string) => string): Record<string, CountryProfile> {
+  return {
   USA: {
     region: "North America",
     ftaWithChina: false,
@@ -412,67 +415,67 @@ const COUNTRY_DB: Record<string, CountryProfile> = {
   Canada: {
     region: "North America",
     ftaWithChina: false,
-    ftaDetails: "No FTA. MFN rates apply.",
-    specialRestrictions: ["Canola/rapeseed historically had trade disputes"],
+    ftaDetails: t("no_fta_mfn_rates_apply"),
+    specialRestrictions: [t("canola_rapeseed_historically_had_trade_disputes")],
     bilateralMeatAccess: true,
     bilateralAquaticAccess: true,
     dairyApproved: true,
     gaccDifficulty: 'moderate',
-    languageNote: "English/French accepted. Chinese translation for labels.",
-    commonIssues: ["Canola trade tensions", "Rapeseed inspection protocols"],
-    importVolumeNote: "Major exporter of canola, pork, and seafood to China.",
+    languageNote: t("english_french_accepted_chinese_translation_for_la"),
+    commonIssues: [t("canola_trade_tensions"), t("rapeseed_inspection_protocols")],
+    importVolumeNote: t("major_exporter_of_canola_pork_and_seafood_to_china"),
   },
   Australia: {
     region: "Oceania",
     ftaWithChina: true,
-    ftaDetails: "China-Australia FTA (ChAFTA) — reduced tariffs on many agricultural products. Some tariffs phased to zero.",
-    specialRestrictions: ["Wine anti-dumping duties (2021+, currently under review)", "Barley tariffs eased 2023"],
+    ftaDetails: t("china_australia_fta_chafta_reduced_tariffs_on_many_1"),
+    specialRestrictions: [t("wine_anti_dumping_duties_2021_currently_under_revi"), t("barley_tariffs_eased_2023")],
     bilateralMeatAccess: true,
     bilateralAquaticAccess: true,
     dairyApproved: true,
     gaccDifficulty: 'moderate',
     languageNote: "English accepted. Chinese translation for labels required.",
-    commonIssues: ["Political tensions affecting trade", "Anti-dumping investigations on certain products"],
-    importVolumeNote: "Strong in beef, wine, dairy, and grains. ChAFTA provides tariff advantage.",
+    commonIssues: [t("political_tensions_affecting_trade"), t("anti_dumping_investigations_on_certain_products")],
+    importVolumeNote: t("strong_in_beef_wine_dairy_and_grains_chafta_provid"),
   },
   NewZealand: {
     region: "Oceania",
     ftaWithChina: true,
-    ftaDetails: "China-New Zealand FTA (upgraded 2022) — near-zero tariffs on most dairy by 2024.",
+    ftaDetails: t("china_new_zealand_fta_upgraded_2022_near_zero_tari"),
     specialRestrictions: [],
     bilateralMeatAccess: true,
     bilateralAquaticAccess: true,
     dairyApproved: true,
     gaccDifficulty: 'easy',
     languageNote: "English accepted. Chinese translation for labels.",
-    commonIssues: ["Dairy quota system monitored"],
-    importVolumeNote: "Premium dairy exporter. Strong reputation for food safety in China.",
+    commonIssues: [t("dairy_quota_system_monitored")],
+    importVolumeNote: t("premium_dairy_exporter_strong_reputation_for_food_"),
   },
   France: {
     region: "Europe",
     ftaWithChina: false,
-    ftaDetails: "EU-China framework. MFN rates apply. Individual EU member states.",
-    specialRestrictions: ["EU-specific certificate requirements"],
+    ftaDetails: t("eu_china_framework_mfn_rates_apply_individual_eu_m"),
+    specialRestrictions: [t("eu_specific_certificate_requirements")],
     bilateralMeatAccess: true,
     bilateralAquaticAccess: true,
     dairyApproved: true,
     gaccDifficulty: 'moderate',
-    languageNote: "French documents need Chinese translation. English accepted for some documents.",
-    commonIssues: ["EU certificate format accepted", "Wine/spirits GI protection in China"],
-    importVolumeNote: "Major wine and dairy exporter to China. Strong brand recognition.",
+    languageNote: t("french_documents_need_chinese_translation_english_"),
+    commonIssues: [t("eu_certificate_format_accepted"), t("wine_spirits_gi_protection_in_china")],
+    importVolumeNote: t("major_wine_and_dairy_exporter_to_china_strong_bran"),
   },
   Germany: {
     region: "Europe",
     ftaWithChina: false,
-    ftaDetails: "EU-China framework. MFN rates.",
-    specialRestrictions: ["EU certificate requirements", "BSE history — enhanced beef inspections"],
+    ftaDetails: t("eu_china_framework_mfn_rates"),
+    specialRestrictions: [t("eu_certificate_requirements"), t("bse_history_enhanced_beef_inspections")],
     bilateralMeatAccess: true,
     bilateralAquaticAccess: true,
     dairyApproved: true,
     gaccDifficulty: 'moderate',
-    languageNote: "German documents need Chinese translation. English accepted.",
-    commonIssues: ["BSE-related enhanced checks on beef", "EU food safety certificates"],
-    importVolumeNote: "Strong in dairy, pork, and confectionery exports.",
+    languageNote: t("german_documents_need_chinese_translation_english_"),
+    commonIssues: [t("bse_related_enhanced_checks_on_beef"), t("eu_food_safety_certificates")],
+    importVolumeNote: t("strong_in_dairy_pork_and_confectionery_exports"),
   },
   Netherlands: {
     region: "Europe",
@@ -483,22 +486,22 @@ const COUNTRY_DB: Record<string, CountryProfile> = {
     bilateralAquaticAccess: true,
     dairyApproved: true,
     gaccDifficulty: 'easy',
-    languageNote: "Dutch/English accepted. Chinese translation for labels.",
+    languageNote: t("dutch_english_accepted_chinese_translation_for_lab"),
     commonIssues: [],
-    importVolumeNote: "Key EU exporter of dairy, pork, and processed foods to China.",
+    importVolumeNote: t("key_eu_exporter_of_dairy_pork_and_processed_foods_"),
   },
   Italy: {
     region: "Europe",
     ftaWithChina: false,
     ftaDetails: "EU framework. MFN rates.",
-    specialRestrictions: ["GI protection for certain Italian products (Parmigiano, Prosciutto)"],
+    specialRestrictions: [t("gi_protection_for_certain_italian_products_parmigi")],
     bilateralMeatAccess: true,
     bilateralAquaticAccess: true,
     dairyApproved: true,
     gaccDifficulty: 'moderate',
-    languageNote: "Italian documents need Chinese translation. English accepted.",
-    commonIssues: ["GI product registration beneficial for premium items"],
-    importVolumeNote: "Premium wine, pasta, and olive oil exporter. Strong brand recognition.",
+    languageNote: t("italian_documents_need_chinese_translation_english"),
+    commonIssues: [t("gi_product_registration_beneficial_for_premium_ite")],
+    importVolumeNote: t("premium_wine_pasta_and_olive_oil_exporter_strong_b"),
   },
   Spain: {
     region: "Europe",
@@ -509,119 +512,119 @@ const COUNTRY_DB: Record<string, CountryProfile> = {
     bilateralAquaticAccess: true,
     dairyApproved: true,
     gaccDifficulty: 'moderate',
-    languageNote: "Spanish documents need Chinese translation. English accepted.",
+    languageNote: t("spanish_documents_need_chinese_translation_english"),
     commonIssues: [],
-    importVolumeNote: "Major pork exporter to China. Olive oil and wine significant.",
+    importVolumeNote: t("major_pork_exporter_to_china_olive_oil_and_wine_si"),
   },
   UK: {
     region: "Europe",
     ftaWithChina: false,
-    ftaDetails: "No FTA (post-Brexit). MFN rates. Negotiations ongoing.",
-    specialRestrictions: ["Post-Brexit trade framework still developing"],
+    ftaDetails: t("no_fta_post_brexit_mfn_rates_negotiations_ongoing"),
+    specialRestrictions: [t("post_brexit_trade_framework_still_developing")],
     bilateralMeatAccess: true,
     bilateralAquaticAccess: true,
     dairyApproved: true,
     gaccDifficulty: 'moderate',
     languageNote: "English accepted. Chinese translation for labels.",
-    commonIssues: ["Post-Brexit certification adjustments"],
-    importVolumeNote: "Premium whisky, confectionery, and dairy exporter.",
+    commonIssues: [t("post_brexit_certification_adjustments")],
+    importVolumeNote: t("premium_whisky_confectionery_and_dairy_exporter"),
   },
   Japan: {
     region: "Asia",
     ftaWithChina: true,
-    ftaDetails: "RCEP member. Gradual tariff reductions on agricultural goods.",
-    specialRestrictions: ["Nuclear-related import restrictions on Fukushima region products"],
+    ftaDetails: t("rcep_member_gradual_tariff_reductions_on_agricultu"),
+    specialRestrictions: [t("nuclear_related_import_restrictions_on_fukushima_r")],
     bilateralMeatAccess: true,
     bilateralAquaticAccess: true,
     dairyApproved: false,
     gaccDifficulty: 'moderate',
-    languageNote: "Japanese documents need Chinese translation. English accepted supplementary.",
-    commonIssues: ["Food import restrictions from 10 prefectures post-Fukushima", "Radiation testing certificates required"],
-    importVolumeNote: "Premium confectionery, seasonings, and alcoholic beverages popular in China.",
+    languageNote: t("japanese_documents_need_chinese_translation_englis"),
+    commonIssues: [t("food_import_restrictions_from_10_prefectures_post_"), t("radiation_testing_certificates_required")],
+    importVolumeNote: t("premium_confectionery_seasonings_and_alcoholic_bev"),
   },
   SouthKorea: {
     region: "Asia",
     ftaWithChina: true,
-    ftaDetails: "China-Korea FTA. Tariff reductions on many food items.",
-    specialRestrictions: ["Kimchi specific CIQ requirements"],
+    ftaDetails: t("china_korea_fta_tariff_reductions_on_many_food_ite"),
+    specialRestrictions: [t("kimchi_specific_ciq_requirements")],
     bilateralMeatAccess: true,
     bilateralAquaticAccess: true,
     dairyApproved: true,
     gaccDifficulty: 'easy',
-    languageNote: "Korean documents need Chinese translation. English accepted.",
-    commonIssues: ["Kimchi has specific CIQ inspection procedures"],
-    importVolumeNote: "Growing exporter of confectionery, instant noodles, and beverages.",
+    languageNote: t("korean_documents_need_chinese_translation_english_"),
+    commonIssues: [t("kimchi_has_specific_ciq_inspection_procedures")],
+    importVolumeNote: t("growing_exporter_of_confectionery_instant_noodles_"),
   },
   Thailand: {
     region: "ASEAN",
     ftaWithChina: true,
-    ftaDetails: "ASEAN-China FTA. Near-zero tariffs on many agricultural products. ACETA.",
+    ftaDetails: t("asean_china_fta_near_zero_tariffs_on_many_agricult"),
     specialRestrictions: [],
     bilateralMeatAccess: false,
     bilateralAquaticAccess: true,
     dairyApproved: false,
     gaccDifficulty: 'easy',
-    languageNote: "Thai documents need Chinese translation.",
-    commonIssues: ["Fruit export protocols specific per type", "Aquatic products well-established"],
-    importVolumeNote: "Top ASEAN exporter of food to China. Rice, tropical fruits, seafood, canned goods.",
+    languageNote: t("thai_documents_need_chinese_translation"),
+    commonIssues: [t("fruit_export_protocols_specific_per_type"), t("aquatic_products_well_established")],
+    importVolumeNote: t("top_asean_exporter_of_food_to_china_rice_tropical_"),
   },
   Vietnam: {
     region: "ASEAN",
     ftaWithChina: true,
-    ftaDetails: "ASEAN-China FTA. Also RCEP member.",
+    ftaDetails: t("asean_china_fta_also_rcep_member"),
     specialRestrictions: [],
     bilateralMeatAccess: false,
     bilateralAquaticAccess: true,
     dairyApproved: false,
     gaccDifficulty: 'easy',
-    languageNote: "Vietnamese documents need Chinese translation.",
-    commonIssues: ["Aquatic exports well-established", "Fruit export protocols under negotiation"],
-    importVolumeNote: "Large exporter of aquatic products, tropical fruits, and processed foods.",
+    languageNote: t("vietnamese_documents_need_chinese_translation"),
+    commonIssues: [t("aquatic_exports_well_established"), t("fruit_export_protocols_under_negotiation")],
+    importVolumeNote: t("large_exporter_of_aquatic_products_tropical_fruits"),
   },
   Brazil: {
     region: "South America",
     ftaWithChina: false,
-    ftaDetails: "BRICS framework. No FTA. MFN rates. Mercosur-China talks ongoing.",
-    specialRestrictions: ["Foot-and-mouth disease zoning — enhanced checks"],
+    ftaDetails: t("brics_framework_no_fta_mfn_rates_mercosur_china_ta"),
+    specialRestrictions: [t("foot_and_mouth_disease_zoning_enhanced_checks")],
     bilateralMeatAccess: true,
     bilateralAquaticAccess: true,
     dairyApproved: false,
     gaccDifficulty: 'moderate',
-    languageNote: "Portuguese documents need Chinese translation.",
-    commonIssues: ["FMD zoning affects some meat shipments", "Soybean quality disputes historically"],
-    importVolumeNote: "Largest meat exporter to China (beef, poultry, pork). Significant in soybeans and sugar.",
+    languageNote: t("portuguese_documents_need_chinese_translation"),
+    commonIssues: [t("fmd_zoning_affects_some_meat_shipments"), t("soybean_quality_disputes_historically")],
+    importVolumeNote: t("largest_meat_exporter_to_china_beef_poultry_pork_s"),
     importVolumeRank: 1,
   },
   Argentina: {
     region: "South America",
     ftaWithChina: false,
-    ftaDetails: "No FTA. MFN rates.",
-    specialRestrictions: ["FMD restrictions — regional zoning"],
+    ftaDetails: t("no_fta_mfn_rates"),
+    specialRestrictions: [t("fmd_restrictions_regional_zoning")],
     bilateralMeatAccess: true,
     bilateralAquaticAccess: false,
     dairyApproved: false,
     gaccDifficulty: 'moderate',
     languageNote: "Spanish documents need Chinese translation.",
-    commonIssues: ["Beef export restrictions fluctuate with domestic policy", "FMD zoning"],
-    importVolumeNote: "Major beef and soybean exporter. Meat access protocol in place.",
+    commonIssues: [t("beef_export_restrictions_fluctuate_with_domestic_p"), t("fmd_zoning")],
+    importVolumeNote: t("major_beef_and_soybean_exporter_meat_access_protoc"),
   },
   Chile: {
     region: "South America",
     ftaWithChina: true,
-    ftaDetails: "China-Chile FTA. Nearly all agricultural tariffs zero.",
+    ftaDetails: t("china_chile_fta_nearly_all_agricultural_tariffs_ze"),
     specialRestrictions: [],
     bilateralMeatAccess: true,
     bilateralAquaticAccess: true,
     dairyApproved: true,
     gaccDifficulty: 'easy',
     languageNote: "Spanish documents need Chinese translation.",
-    commonIssues: ["FTA provides significant tariff advantage"],
-    importVolumeNote: "Leading fruit exporter to China (cherries, grapes, plums). Wine also significant.",
+    commonIssues: [t("fta_provides_significant_tariff_advantage")],
+    importVolumeNote: t("leading_fruit_exporter_to_china_cherries_grapes_pl"),
   },
   Peru: {
     region: "South America",
     ftaWithChina: true,
-    ftaDetails: "China-Peru FTA. Comprehensive tariff reduction.",
+    ftaDetails: t("china_peru_fta_comprehensive_tariff_reduction"),
     specialRestrictions: [],
     bilateralMeatAccess: false,
     bilateralAquaticAccess: true,
@@ -629,12 +632,12 @@ const COUNTRY_DB: Record<string, CountryProfile> = {
     gaccDifficulty: 'easy',
     languageNote: "Spanish documents need Chinese translation.",
     commonIssues: [],
-    importVolumeNote: "Key exporter of aquatic products and fruits (grapes, avocados, blueberries).",
+    importVolumeNote: t("key_exporter_of_aquatic_products_and_fruits_grapes"),
   },
   SouthAfrica: {
     region: "Africa",
     ftaWithChina: false,
-    ftaDetails: "No FTA. BRICS framework. MFN rates.",
+    ftaDetails: t("no_fta_brics_framework_mfn_rates"),
     specialRestrictions: [],
     bilateralMeatAccess: true,
     bilateralAquaticAccess: true,
@@ -642,7 +645,7 @@ const COUNTRY_DB: Record<string, CountryProfile> = {
     gaccDifficulty: 'moderate',
     languageNote: "English accepted. Chinese translation for labels.",
     commonIssues: [],
-    importVolumeNote: "Significant citrus exporter to China. Wine growing market.",
+    importVolumeNote: t("significant_citrus_exporter_to_china_wine_growing_"),
   },
   Ethiopia: {
     region: "Africa",
@@ -653,64 +656,65 @@ const COUNTRY_DB: Record<string, CountryProfile> = {
     bilateralAquaticAccess: false,
     dairyApproved: false,
     gaccDifficulty: 'moderate',
-    languageNote: "Amharic/English documents. Chinese translation needed.",
-    commonIssues: ["Developing food safety regulatory framework — may need enhanced documentation"],
+    languageNote: t("amharic_english_documents_chinese_translation_need"),
+    commonIssues: [t("developing_food_safety_regulatory_framework_may_ne")],
     importVolumeNote: "China's largest coffee supplier (green beans). Sesame seeds also significant.",
   },
   India: {
     region: "South Asia",
     ftaWithChina: false,
-    ftaDetails: "No FTA. MFN rates. Geopolitical tensions may affect trade.",
-    specialRestrictions: ["Rice and sugar trade subject to bilateral agreements", "Geopolitical tensions affecting trade flows"],
+    ftaDetails: t("no_fta_mfn_rates_geopolitical_tensions_may_affect_"),
+    specialRestrictions: [t("rice_and_sugar_trade_subject_to_bilateral_agreemen"), t("geopolitical_tensions_affecting_trade_flows")],
     bilateralMeatAccess: false,
     bilateralAquaticAccess: true,
     dairyApproved: false,
     gaccDifficulty: 'difficult',
     languageNote: "English accepted. Chinese translation for labels required.",
-    commonIssues: ["Rice import protocols", "Spice quality consistency", "Geopolitical trade uncertainties"],
-    importVolumeNote: "Major exporter of rice, spices, and seafood to China.",
+    commonIssues: [t("rice_import_protocols"), t("spice_quality_consistency"), t("geopolitical_trade_uncertainties")],
+    importVolumeNote: t("major_exporter_of_rice_spices_and_seafood_to_china"),
   },
   SriLanka: {
     region: "South Asia",
     ftaWithChina: false,
-    ftaDetails: "No FTA. China-Sri Lanka FTA under negotiation.",
+    ftaDetails: t("no_fta_china_sri_lanka_fta_under_negotiation"),
     specialRestrictions: [],
     bilateralMeatAccess: false,
     bilateralAquaticAccess: true,
     dairyApproved: false,
     gaccDifficulty: 'easy',
-    languageNote: "Sinhala/Tamil/English documents. Chinese translation for labels.",
-    commonIssues: ["Tea quality standards compliance", "Cinnamon certification"],
-    importVolumeNote: "Ceylon tea and cinnamon are signature exports with strong China demand.",
+    languageNote: t("sinhala_tamil_english_documents_chinese_translatio"),
+    commonIssues: [t("tea_quality_standards_compliance"), t("cinnamon_certification")],
+    importVolumeNote: t("ceylon_tea_and_cinnamon_are_signature_exports_with"),
   },
   Russia: {
     region: "Eurasia",
     ftaWithChina: false,
-    ftaDetails: "No FTA. Growing bilateral trade. MFN rates with some bilateral agreements.",
-    specialRestrictions: ["Geopolitical sanctions may affect payment channels"],
+    ftaDetails: t("no_fta_growing_bilateral_trade_mfn_rates_with_some"),
+    specialRestrictions: [t("geopolitical_sanctions_may_affect_payment_channels")],
     bilateralMeatAccess: true,
     bilateralAquaticAccess: true,
     dairyApproved: true,
     gaccDifficulty: 'moderate',
-    languageNote: "Russian documents need Chinese translation.",
-    commonIssues: ["Sanctions affecting international payments", "Quality consistency concerns"],
+    languageNote: t("russian_documents_need_chinese_translation"),
+    commonIssues: [t("sanctions_affecting_international_payments"), t("quality_consistency_concerns")],
     importVolumeNote: "Growing supplier of meat (poultry, beef), seafood, and dairy. Strong bilateral trade growth.",
   },
   // Default for unknown countries
   DEFAULT: {
     region: "Other",
     ftaWithChina: false,
-    ftaDetails: "No FTA identified. MFN rates apply. Verify applicable trade agreements.",
-    specialRestrictions: ["Check specific bilateral agreements"],
+    ftaDetails: t("no_fta_identified_mfn_rates_apply_verify_applicabl"),
+    specialRestrictions: [t("check_specific_bilateral_agreements")],
     bilateralMeatAccess: false,
     bilateralAquaticAccess: false,
     dairyApproved: false,
     gaccDifficulty: 'moderate',
-    languageNote: "All non-Chinese documents must be translated to Chinese by certified translator.",
-    commonIssues: ["Verify country is on GACC approved lists for meat/aquatic/dairy"],
-    importVolumeNote: "Trade volume data limited. Market entry may require additional documentation.",
+    languageNote: t("all_non_chinese_documents_must_be_translated_to_ch"),
+    commonIssues: [t("verify_country_is_on_gacc_approved_lists_for_meat_")],
+    importVolumeNote: t("trade_volume_data_limited_market_entry_may_require"),
   },
 };
+}
 
 // ─── 法规数据库 ─────────────────────────────────────────────────────────
 
@@ -724,14 +728,15 @@ export interface Regulation {
   url?: string;
 }
 
-const REGULATIONS: Regulation[] = [
+function getREGULATIONS(t: (key: string) => string): Regulation[] {
+  return [
   {
     name: "GACC Decree 248",
     number: "Decree 248 (2021)",
     effectiveDate: "January 1, 2022",
     issuingAuthority: "General Administration of Customs (GACC)",
     relevance: 'primary',
-    description: "Regulations on the Registration of Overseas Manufacturers of Imported Food. All overseas food producers, processing plants, and storage facilities must register via CIFER before exporting to China.",
+    description: t("regulations_on_the_registration_of_overseas_manufa_1"),
   },
   {
     name: "GACC Decree 249",
@@ -743,19 +748,19 @@ const REGULATIONS: Regulation[] = [
   },
   {
     name: "Food Safety Law of China",
-    number: "PRC Food Safety Law (2015, amended 2018, 2021)",
+    number: t("prc_food_safety_law_2015_amended_2018_2021"),
     effectiveDate: "October 1, 2015",
     issuingAuthority: "National People's Congress (NPC)",
     relevance: 'primary',
-    description: "Primary legislation governing food safety in China. Establishes the legal basis for import food controls, recall systems, and penalties for violations.",
+    description: t("primary_legislation_governing_food_safety_in_china_1"),
   },
   {
     name: "GB 7718",
-    number: "GB 7718-2011 (under revision)",
+    number: t("gb_7718_2011_under_revision"),
     effectiveDate: "April 20, 2012",
     issuingAuthority: "National Health Commission (NHC)",
     relevance: 'primary',
-    description: "National Food Safety Standard — General Rules for Nutrition Labeling of Prepackaged Foods. Mandatory for all imported prepackaged food products. New version expected 2025.",
+    description: t("national_food_safety_standard_general_rules_for_nu_1"),
   },
   {
     name: "GB 28050",
@@ -763,7 +768,7 @@ const REGULATIONS: Regulation[] = [
     effectiveDate: "January 1, 2013",
     issuingAuthority: "National Health Commission (NHC)",
     relevance: 'primary',
-    description: "National Food Safety Standard — General Rules for Nutrition Labeling of Prepackaged Foods. Mandatory format requirements for nutrition facts panels.",
+    description: t("national_food_safety_standard_general_rules_for_nu_2"),
   },
   {
     name: "GB 2760",
@@ -771,7 +776,7 @@ const REGULATIONS: Regulation[] = [
     effectiveDate: "February 8, 2025",
     issuingAuthority: "National Health Commission (NHC)",
     relevance: 'primary',
-    description: "National Food Safety Standard — Uses of Food Additives. Establishes positive list system: only listed additives are permitted in specified food categories at specified levels.",
+    description: t("national_food_safety_standard_uses_of_food_additiv_1"),
   },
   {
     name: "GB 2762",
@@ -787,7 +792,7 @@ const REGULATIONS: Regulation[] = [
     effectiveDate: "September 3, 2021",
     issuingAuthority: "National Health Commission (NHC)",
     relevance: 'secondary',
-    description: "Maximum residue limits for pesticides in food. 10,000+ pesticide MRLs across hundreds of food categories.",
+    description: t("maximum_residue_limits_for_pesticides_in_food_10_0_1"),
   },
   {
     name: "GB 29921",
@@ -795,7 +800,7 @@ const REGULATIONS: Regulation[] = [
     effectiveDate: "November 22, 2021",
     issuingAuthority: "National Health Commission (NHC)",
     relevance: 'secondary',
-    description: "Maximum levels of pathogenic bacteria in prepackaged food. Species-specific microbiological limits.",
+    description: t("maximum_levels_of_pathogenic_bacteria_in_prepackag"),
   },
   {
     name: "CIFER System",
@@ -803,17 +808,18 @@ const REGULATIONS: Regulation[] = [
     effectiveDate: "January 1, 2022",
     issuingAuthority: "GACC",
     relevance: 'primary',
-    description: "Online portal for overseas food manufacturers to submit GACC registration applications. Professional agent handling recommended due to complex documentation and verification requirements.",
+    description: t("online_portal_for_overseas_food_manufacturers_to_s_1"),
   },
   {
-    name: "CIQ Inspection",
-    number: "Customs Inspection Procedures",
+    name: t("ciq_inspection"),
+    number: t("customs_inspection_procedures"),
     effectiveDate: "Ongoing",
-    issuingAuthority: "Customs (formerly CIQ)",
+    issuingAuthority: t("customs_formerly_ciq"),
     relevance: 'secondary',
-    description: "Upon arrival at Chinese ports, shipments must undergo CIQ inspection covering documentation review, label verification, and random sampling for lab testing.",
+    description: t("upon_arrival_at_chinese_ports_shipments_must_under_1"),
   },
 ];
+}
 
 // ─── 渠道策略 ──────────────────────────────────────────────────────────
 
@@ -828,8 +834,8 @@ interface ChannelStrategy {
   costRange: string;
 }
 
-function getChannels(input: GaccInput, t: (k: string) => string): ChannelStrategy[] {
-  const cat = CATEGORY_PROFILES[input.category] || CATEGORY_PROFILES['other'];
+function getChannels(input: GaccInput, catProfiles: Record<GaccCategory, CategoryProfile>, t: (k: string) => string): ChannelStrategy[] {
+  const cat = catProfiles[input.category] || catProfiles['other'];
   return [
     {
       channel: t("gaccChannel_generalTrade_name"),
@@ -872,8 +878,8 @@ interface MarketIntel {
   recommendation: string;
 }
 
-function getMarketIntel(input: GaccInput, t: (k: string) => string): MarketIntel {
-  const cat = CATEGORY_PROFILES[input.category] || CATEGORY_PROFILES['other'];
+function getMarketIntel(input: GaccInput, catProfiles: Record<GaccCategory, CategoryProfile>, t: (k: string) => string): MarketIntel {
+  const cat = catProfiles[input.category] || catProfiles['other'];
   return {
     chinaImportTrend: cat.marketTrend === 'growing' ? t("gaccMarket_trendGrowing") : cat.marketTrend === 'stable' ? t("gaccMarket_trendStable") : t("gaccMarket_trendDeclining"),
     consumerPerception: t("gaccMarket_consumerPerception"),
@@ -892,8 +898,8 @@ export interface CostBreakdown {
   notes: string;
 }
 
-function getCostBreakdown(input: GaccInput, t: (k: string) => string): CostBreakdown[] {
-  const cat = CATEGORY_PROFILES[input.category] || CATEGORY_PROFILES['other'];
+function getCostBreakdown(input: GaccInput, catProfiles: Record<GaccCategory, CategoryProfile>, t: (k: string) => string): CostBreakdown[] {
+  const cat = catProfiles[input.category] || catProfiles['other'];
   return [
     { item: t("gaccCost_registration_item"), estimatedRange: "$1,500-3,000", notes: t("gaccCost_registration_notes") },
     { item: t("gaccCost_testing_item"), estimatedRange: cat.testCostRange, notes: t("gaccCost_testing_notes") },
@@ -904,8 +910,8 @@ function getCostBreakdown(input: GaccInput, t: (k: string) => string): CostBreak
   ];
 }
 
-function getTotalCostRange(input: GaccInput): string {
-  const cat = CATEGORY_PROFILES[input.category] || CATEGORY_PROFILES['other'];
+function getTotalCostRange(input: GaccInput, catProfiles: Record<GaccCategory, CategoryProfile>): string {
+  const cat = catProfiles[input.category] || catProfiles['other'];
   if (cat.isHighRisk) return "$8,500-24,500";
   return "$3,500-9,500";
 }
@@ -920,8 +926,8 @@ export interface TimelinePhase {
   dependencies: string[];
 }
 
-function getTimeline(input: GaccInput, t: (k: string) => string): TimelinePhase[] {
-  const cat = CATEGORY_PROFILES[input.category] || CATEGORY_PROFILES['other'];
+function getTimeline(input: GaccInput, catProfiles: Record<GaccCategory, CategoryProfile>, t: (k: string) => string): TimelinePhase[] {
+  const cat = catProfiles[input.category] || catProfiles['other'];
   const timeline1 = cat.isHighRisk ? cat.gaccTimelineHigh : cat.gaccTimelineLow;
   
   return [
@@ -972,7 +978,7 @@ function getTimeline(input: GaccInput, t: (k: string) => string): TimelinePhase[
       duration: "1-3 weeks",
       description: t("gaccTimeline_shipment_desc"),
       responsible: 'Both',
-      dependencies: ["GACC registration approved", "Label artwork finalized"],
+      dependencies: [t("gacc_registration_approved"), t("label_artwork_finalized")],
     },
   ];
 }
@@ -1127,6 +1133,9 @@ export interface GaccResult extends StandardResult {
 
 export function checkGacc(input: GaccInput, locale?: string): GaccResult {
   const t = buildT(locale || 'en');
+  const CATEGORY_PROFILES = getCATEGORY_PROFILES(t);
+  const COUNTRY_DB = getCOUNTRY_DB(t);
+  const REGULATIONS = getREGULATIONS(t);
 
   // Translated category label
   const catLabel = t(`gaccCat_${input.category}_label`) || CATEGORY_LABELS[input.category];
@@ -1261,10 +1270,10 @@ export function checkGacc(input: GaccInput, locale?: string): GaccResult {
 
     // 2
     viability: t("gaccViability"),
-    marketIntel: getMarketIntel(input, t),
+    marketIntel: getMarketIntel(input, CATEGORY_PROFILES, t),
 
     // 3
-    channels: getChannels(input, t),
+    channels: getChannels(input, CATEGORY_PROFILES, t),
 
     // 4
     tariffInfo,
@@ -1291,11 +1300,11 @@ export function checkGacc(input: GaccInput, locale?: string): GaccResult {
     labelGuide: getLabelGuide(t),
 
     // 11
-    timelinePhases: getTimeline(input, t),
+    timelinePhases: getTimeline(input, CATEGORY_PROFILES, t),
 
     // 12
-    costBreakdown: getCostBreakdown(input, t),
-    totalCostRange: getTotalCostRange(input),
+    costBreakdown: getCostBreakdown(input, CATEGORY_PROFILES, t),
+    totalCostRange: getTotalCostRange(input, CATEGORY_PROFILES),
 
     // 13
     estimatedTimeline: isHighRisk ? cat.gaccTimelineHigh : cat.gaccTimelineLow,
@@ -1328,11 +1337,28 @@ export function checkGacc(input: GaccInput, locale?: string): GaccResult {
 }
 
 /** Backwards-compatible label map */
-export const CATEGORY_LABELS: Record<GaccCategory, string> = Object.fromEntries(
-  (Object.entries(CATEGORY_PROFILES) as [GaccCategory, CategoryProfile][]).map(([k, v]) => [k, v.label])
-) as Record<GaccCategory, string>;
+export const CATEGORY_LABELS: Record<GaccCategory, string> = {
+  alcohol: "Alcoholic Beverages (HS 22.03-22.08)",
+  beverage: "Non-alcoholic Beverages (HS 22.01-22.02)",
+  confectionery: "Confectionery / Chocolate (HS 17.04, 18.06)",
+  coffee_tea: "Coffee / Tea (HS 09.01-09.02)",
+  canned: "Canned / Processed Foods (HS 20)",
+  sugar: "Sugar / Syrups (HS 17)",
+  grain: "Grains / Flour (HS 10-11)",
+  meat: "Meat Products (HS 02)",
+  dairy: "Dairy Products (HS 04)",
+  seafood: "Seafood / Aquatic (HS 03)",
+  honey: "Honey / Bee Products (HS 04.09)",
+  oil: "Edible Oils (HS 15)",
+  seasoning: "Seasonings / Condiments (HS 21.03)",
+  nuts: "Nuts / Dried Fruits (HS 08)",
+  health_food: "Health / Dietary Supplements (HS 21.06)",
+  other: "Other Food Products",
+};
 
 /** Backwards-compatible high-risk map */
-export const HIGH_RISK_18: Record<GaccCategory, boolean> = Object.fromEntries(
-  (Object.entries(CATEGORY_PROFILES) as [GaccCategory, CategoryProfile][]).map(([k, v]) => [k, v.isHighRisk])
-) as Record<GaccCategory, boolean>;
+export function getHIGH_RISK_18(catProfiles: Record<GaccCategory, CategoryProfile>): Record<GaccCategory, boolean> {
+  return Object.fromEntries(
+    (Object.entries(catProfiles) as [GaccCategory, CategoryProfile][]).map(([k, v]) => [k, v.isHighRisk])
+  ) as Record<GaccCategory, boolean>;
+}

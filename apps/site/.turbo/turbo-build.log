@@ -82,17 +82,16 @@ Done.
 Generated search-widget-translations.json: 48 locales → /root/projects/trade/web/apps/site/public/search-widget-translations.json
 ▲ Next.js 16.2.4 (Turbopack)
 
-⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
   Creating an optimized production build ...
-✓ Compiled successfully in 3.6s
+✓ Compiled successfully in 2.3s
   Running TypeScript ...
-  Finished TypeScript in 6.6s ...
+  Finished TypeScript in 5.7s ...
   Collecting page data using 19 workers ...
   Generating static pages using 19 workers (0/1349) ...
   Generating static pages using 19 workers (337/1349) 
   Generating static pages using 19 workers (674/1349) 
   Generating static pages using 19 workers (1011/1349) 
-✓ Generating static pages using 19 workers (1349/1349) in 4.8s
+✓ Generating static pages using 19 workers (1349/1349) in 6.3s
   Finalizing page optimization ...
 ⚠ Statically exporting a Next.js application via `next export` disables API routes and middleware.
 This command is meant for static-only hosts, and is not necessary to make your application static.
@@ -298,6 +297,16 @@ Output:   /root/projects/trade/web/apps/site/out
 
 ✅ check-jsonld.mjs 完成
 
+▶ check-md-format.mjs --ci
+
+═══════════════════════════════════════════════
+  Markdown 格式质量检查（精细化语言策略）
+═══════════════════════════════════════════════
+
+✅ 未发现格式问题
+  扫描文件: 336
+
+
 ▶ check-hreflang.mjs --dir=out --skip-pattern=/blog/,404,_not-found,index --ci
 🔍 统一 hreflang 检查
 
@@ -335,35 +344,34 @@ Output:   /root/projects/trade/web/apps/site/out
 
 ▶ check-translations.mjs --short
 
-⚠️ 发现 2048 个问题
-   - Portal 翻译质量: 2048 个问题
+✅ 全量核验通过！48 种语言无质量问题。
 
 ▶ check-i18n-keys.mjs --ci --ci
 🔑 i18n key 完整性检查
 
-📦 SITE (0 missing, 221 extra, 0 hardcoded):
-  ℹ️  多余 key (221 处，lang 中有但 en 中没有):
-    [af] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
-    [ar] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
-    [az] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
-    [be] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
-    [bg] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
-    [bn] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
-    [ca] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
-    [cs] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
-    [da] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
-    [de] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
-    [el] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
-    [es] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
-    [fa] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
-    [fi] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
-    [fr] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
-    [he] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
-    [hi] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
-    [hr] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
-    [hu] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
-    [hy] AiAssistance.contactLinkedIn → "https://www.linkedin.com/company/sinotradecompliance"
-    ... 还有 201 条
+📦 SITE (0 missing, 174 extra, 0 hardcoded):
+  ℹ️  多余 key (174 处，lang 中有但 en 中没有):
+    [th] Home.description → "ตรวจสอบว่าผลิตภัณฑ์ของคุณต้องการการลงทะเบียน GACC การรับรอง CCC หรือการยื่น NMPA สำหรับการส่งออกไปยังจีนหรือไม่"
+    [th] Home.howItWorks → "วิธีการทำงาน"
+    [th] Home.step1Title → "บอกเราเกี่ยวกับผลิตภัณฑ์ของคุณ"
+    [th] Home.step1Desc → "กรอกหมวดหมู่ แหล่งกำเนิดสินค้า และรายละเอียดสินค้า"
+    [th] Home.step2Title → "รับผลการประเมินฟรี"
+    [th] Home.step2Desc → "ผลลัพธ์ทันที: ไม่ต้องชำระเงินหรือลงทะเบียน"
+    [th] Home.step3Title → "ปลดล็อก/full report"
+    [th] Home.step3Desc → "จ่าย $1.99 สำหรับรายงานความสอดคล้องฉบับเต็ม"
+    [th] Home.simplePricing → "ราคาแบบง่าย"
+    [th] Home.free → "ฟรี"
+    [th] Home.freeDesc → "ผลลัพธ์การประเมินเบื้องต้น"
+    [th] Home.single → "รายงานครั้งเดียว"
+    [th] Home.singleDesc → "รายงานฉบับเต็ม + PDF + ส่งทางอีเมล"
+    [th] Home.monthly → "รายเดือน"
+    [th] Home.monthlyDesc → "รายงานไม่จำกัดสำหรับหนึ่งเดือน"
+    [th] Home.popular → "ยอดนิยม"
+    [th] Home.startFree → "เริ่มต้นฟรี"
+    [th] Home.getReport → "รับรายงาน: $1.99"
+    [th] Home.subscribe → "สมัคร $9.9/เดือน"
+    [th] Home.allFree → "6 โมดูล ฟรีทั้งหมด ไม่ต้องลงทะเบียน"
+    ... 还有 154 条
 
 📦 PORTAL (0 missing, 15 extra, 0 hardcoded):
   ℹ️  多余 key (15 处，lang 中有但 en 中没有):
@@ -386,16 +394,12 @@ Output:   /root/projects/trade/web/apps/site/out
 📦 UI (0 missing, 0 extra, 0 hardcoded):
   ✅ 全部通过
 
-📊 总计: 0 缺失 + 236 多余 + 0 硬编码英文
+📊 总计: 0 缺失 + 189 多余 + 0 硬编码英文
 ✅ 所有 i18n key 完整，无硬编码英文
 
-▶ clean-rsc.js out
+▶ clean-rsc.mjs out
 🧹 Cleaning RSC .txt payload files from out/...
-✅ Deleted 12829 RSC payload files (803.6 MB freed)
-(node:6968) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/projects/trade/web/packages/scripts/clean-rsc.js is not specified and it doesn't parse as CommonJS.
-Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
-To eliminate this warning, add "type": "module" to /root/projects/trade/web/package.json.
-(Use `node --trace-warnings ...` to show where the warning was created)
+✅ Deleted 12829 RSC payload files (803.3 MB freed)
 
 ═══════════════════════════════════════════════
 ✅ 全部检查通过

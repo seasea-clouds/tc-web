@@ -294,22 +294,23 @@ const args = process.argv.slice(2);
 const isCi = args.includes('--ci');
 const missingOnly = args.includes('--missing-only');
 const generateInput = args.includes('--generate-input');
+const skipPortal = args.includes('--skip-portal');
 
 // 加载各站点
 const siteData = loadProjectMessages('site');
-const portalData = loadProjectMessages('portal');
+const portalData = skipPortal ? null : loadProjectMessages('portal');
 const uiData = loadProjectMessages('ui');
 
 // 检查 key 完整性
 const siteResult = checkKeyCompleteness('site', siteData);
-const portalResult = checkKeyCompleteness('portal', portalData);
+const portalResult = portalData ? checkKeyCompleteness('portal', portalData) : { total: 0, missing: [], extra: [] };
 const uiResult = checkKeyCompleteness('ui', uiData);
 
 const missingByProject = { site: siteResult, portal: portalResult, ui: uiResult };
 
 // 检查硬编码 fallback
 const siteHardcoded = checkHardcodedFallbacks('site', siteData);
-const portalHardcoded = checkHardcodedFallbacks('portal', portalData);
+const portalHardcoded = portalData ? checkHardcodedFallbacks('portal', portalData) : { total: 0, missing: [], extra: [], hardcoded: [] };
 const uiHardcoded = checkHardcodedFallbacks('ui', uiData);
 
 if (generateInput) {

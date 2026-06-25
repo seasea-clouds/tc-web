@@ -28,7 +28,7 @@ export default function RegisterPage() {
 
     setLoading(true);
     try {
-      await register(email, password, name || undefined);
+      await register(email, password, name || undefined, turnstileToken);
       window.location.href = './dashboard';
     } catch (err: any) {
       setError(err.message || t('errorExists'));

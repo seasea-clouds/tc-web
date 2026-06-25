@@ -2,13 +2,13 @@
 
 import { useState, useRef } from 'react';
 import { useAuth } from '@trade/ui';
-import { useTranslations } from 'next-intl';
-import Link from 'next/link';
+import { useTranslations, useLocale } from 'next-intl';
 import TurnstileWidget from '@/components/TurnstileWidget';
 
 export default function RegisterPage() {
   const { register } = useAuth();
   const t = useTranslations('Auth');
+  const locale = useLocale();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
@@ -29,7 +29,7 @@ export default function RegisterPage() {
     setLoading(true);
     try {
       await register(email, password, name || undefined, turnstileToken);
-      window.location.href = './dashboard';
+      window.location.href = `/${locale}/c/dashboard`;
     } catch (err: any) {
       setError(err.message || t('errorExists'));
     } finally {
@@ -109,9 +109,9 @@ export default function RegisterPage() {
 
         <p className="text-center text-sm text-gray-500 mt-6">
           {t('hasAccount')}{' '}
-          <Link href="./login" className="text-[#D4AF37] hover:underline font-medium">
+          <a href={`/${locale}/c/login`} className="text-[#D4AF37] hover:underline font-medium">
             {t('signIn')}
-          </Link>
+          </a>
         </p>
       </div>
     </div>

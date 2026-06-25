@@ -188,7 +188,8 @@ function runTranslationChecks() {
 // 检查三个站点（site / portal / ui）的所有 i18n key 是否在 48 语言中完整存在
 // ============================================================
 function runBreadcrumbCheck() {
-  runLocalScript('check-i18n-keys.mjs', '--ci');
+  const extra = project === 'blog' ? ['--skip-portal'] : [];
+  runLocalScript('check-i18n-keys.mjs', '--ci', ...extra);
 }
 
 // ============================================================

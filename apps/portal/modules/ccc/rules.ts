@@ -52,17 +52,17 @@ export function checkCcc(input: any, locale?: string): any {
     oneLineDecision: t(requiresReg ? 'cccOneLineHigh' : 'cccOneLineLow'),
     riskDimensions: [
       { dimension: "Product Category", score: requiresReg ? 8 : 3, color: requiresReg ? "🔴" : "🟢", note: cat.label },
-      { dimension: "Regulatory Complexity", score: requiresReg ? 7 : 3, color: requiresReg ? "🟡" : "🟢", note: cat.riskReason },
+      { dimension: t("regulatory_complexity"), score: requiresReg ? 7 : 3, color: requiresReg ? "🟡" : "🟢", note: cat.riskReason },
       { dimension: "Testing", score: requiresReg ? 6 : 3, color: requiresReg ? "🟡" : "🟢", note: `${(cat.testing||[]).length} tests required` },
       { dimension: "Timeline", score: requiresReg ? 7 : 3, color: requiresReg ? "🔴" : "🟢", note: cat.time },
-      { dimension: "Origin Country", score: 4, color: "🟡", note: input.originCountry || "Standard" },
+      { dimension: t("origin_country"), score: 4, color: "🟡", note: input.originCountry || "Standard" },
     ],
     channels: [
       { channel: t("cccChannel_standard_name"), suitability: "high", description: requiresReg ? t("cccChannel_standard_desc_full") : t("cccChannel_standard_desc_normal"), advantages: [t("cccChannel_standard_adv1")], disadvantages: [cat.time || "TBD"], timeline: cat.time, costRange: requiresReg ? "$5,000-25,000" : "$800-5,000" },
       { channel: t("cccChannel_cbec_name"), suitability: "medium", description: t("cccChannel_cbec_desc"), advantages: [t("cccChannel_cbec_adv1")], disadvantages: [t("cccChannel_cbec_dis1"), t("cccChannel_cbec_dis2")], timeline: "1-2 months", costRange: "$500-2,000" },
     ],
     tariffInfo: { mfnRate: cat.mfn || "Varies", vatRate: cat.vat || "13%", consumptionTax: "N/A", ftaRate: null, totalTaxBurden: (cat.mfn || "Varies") + " + " + (cat.vat || "13%") },
-    regulations: [{"name": "CNCA-CCC Implementation Rules", "number": "CNCA 00C-001:2023", "issuingAuthority": "CNCA/SAMR", "relevance": "primary", "effectiveDate": "See document", "description": "CCC certification procedures: application, testing, factory inspection, certification maintenance."}, {"name": "CCC Product Catalogue", "number": "CNCA 2023 Announcement", "issuingAuthority": "CNCA", "relevance": "primary", "effectiveDate": "See document", "description": "Products subject to mandatory CCC certification. 17 categories currently."}, {"name": "GB 4943.1-2022", "number": "GB 4943.1-2022", "issuingAuthority": "NHC/CNCA", "relevance": "secondary", "effectiveDate": "See document", "description": "Safety of IT equipment. Mandatory for electronics CCC testing."}, {"name": "GB 4706.1-2005", "number": "GB 4706.1-2005 + 30 sub-standards", "issuingAuthority": "CNCA", "relevance": "secondary", "effectiveDate": "See document", "description": "Safety of household appliances. Each product type has a specific sub-standard."}, {"name": "GB 6675 Series", "number": "GB 6675.1-.4:2014", "issuingAuthority": "CNCA/SAMR", "relevance": "secondary", "effectiveDate": "See document", "description": "Toy safety: mechanical, flammability, chemical migration standards."}, {"name": "GB 17625.1-2022", "number": "GB 17625.1-2022", "issuingAuthority": "CNCA", "relevance": "secondary", "effectiveDate": "See document", "description": "EMC harmonic current emissions."}, {"name": "China Energy Label", "number": "NDRC/MOFCOM 2020", "issuingAuthority": "NDRC", "relevance": "secondary", "effectiveDate": "See document", "description": "Mandatory energy efficiency labeling for specified products."}, {"name": "China RoHS 2", "number": "MIIT Order 32:2016", "issuingAuthority": "MIIT", "relevance": "secondary", "effectiveDate": "See document", "description": "Hazardous substances in electronic products."}],
+    regulations: [{"name": t("cnca_ccc_implementation_rules"), "number": "CNCA 00C-001:2023", "issuingAuthority": "CNCA/SAMR", "relevance": "primary", "effectiveDate": "See document", "description": t("ccc_certification_procedures_application_testing_f")}, {"name": t("ccc_product_catalogue"), "number": "CNCA 2023 Announcement", "issuingAuthority": "CNCA", "relevance": "primary", "effectiveDate": "See document", "description": t("products_subject_to_mandatory_ccc_certification_17")}, {"name": "GB 4943.1-2022", "number": "GB 4943.1-2022", "issuingAuthority": t("nhc_cnca"), "relevance": "secondary", "effectiveDate": "See document", "description": t("safety_of_it_equipment_mandatory_for_electronics_c")}, {"name": "GB 4706.1-2005", "number": "GB 4706.1-2005 + 30 sub-standards", "issuingAuthority": "CNCA", "relevance": "secondary", "effectiveDate": "See document", "description": t("safety_of_household_appliances_each_product_type_h")}, {"name": "GB 6675 Series", "number": "GB 6675.1-.4:2014", "issuingAuthority": "CNCA/SAMR", "relevance": "secondary", "effectiveDate": "See document", "description": t("toy_safety_mechanical_flammability_chemical_migrat")}, {"name": "GB 17625.1-2022", "number": "GB 17625.1-2022", "issuingAuthority": "CNCA", "relevance": "secondary", "effectiveDate": "See document", "description": t("emc_harmonic_current_emissions")}, {"name": t("china_energy_label"), "number": t("ndrc_mofcom_2020"), "issuingAuthority": "NDRC", "relevance": "secondary", "effectiveDate": "See document", "description": t("mandatory_energy_efficiency_labeling_for_specified")}, {"name": t("china_rohs_2"), "number": t("miit_order_32_2016"), "issuingAuthority": "MIIT", "relevance": "secondary", "effectiveDate": "See document", "description": t("hazardous_substances_in_electronic_products")}],
     classification: { assignedHsChapter: "Varies", ciqCode: "Check import", isHighRisk, riskReason: cat.riskReason, alternativeClassificationNote: "" },
     riskMatrix: [
       { dimension: "Category Risk", rating: requiresReg ? "🔴" : "🟢", explanation: cat.riskReason },
@@ -88,37 +88,37 @@ export function checkCcc(input: any, locale?: string): any {
     summary: t(requiresReg ? 'cccSummaryHigh' : 'cccSummaryLow'),
   
   cccStandards: {
-    electronics: "GB 4943.1-2022 (Safety), GB 9254-2021 (EMC), GB 17625.1-2022 (Harmonics)",
-    homeAppliance: "GB 4706.1-2005 + product-specific sub-standards",
-    itEquipment: "GB 4943.1-2022, GB 9254-2021, SRRC (wireless)",
+    electronics: t("gb_4943_1_2022_safety_gb_9254_2021_emc_gb_17625_1_"),
+    homeAppliance: t("gb_4706_1_2005_product_specific_sub_standards"),
+    itEquipment: t("gb_4943_1_2022_gb_9254_2021_srrc_wireless"),
     lighting: "GB 7000.1-2015, GB 17743-2021, GB 17625.1-2022",
     toy: "GB 6675.1-.4:2014 series",
-    default: "Contact us for applicable GB standards"
+    default: t("contact_us_for_applicable_gb_standards")
   },
   factoryAudit: {
-    requirement: "On-site QMS inspection by CNCA-accredited auditor",
-    scope: ["Production process review", "Incoming quality control", "Testing equipment calibration", "Non-conforming product handling", "Corrective action records"],
-    frequency: "Initial certification + annual surveillance",
-    travelNote: "Auditor travel costs extra if factory outside China"
+    requirement: t("on_site_qms_inspection_by_cnca_accredited_auditor"),
+    scope: [t("production_process_review"), t("incoming_quality_control"), t("testing_equipment_calibration"), t("non_conforming_product_handling"), t("corrective_action_records")],
+    frequency: t("initial_certification_annual_surveillance"),
+    travelNote: t("auditor_travel_costs_extra_if_factory_outside_chin")
   },
   testingProcess: [
-    { phase: "Sample Preparation", duration: "1-2 weeks", detail: "Send 5-10 samples per model to CNCA-accredited lab" },
-    { phase: "Safety Testing", duration: "4-8 weeks", detail: "Per applicable GB standard. CB report may reduce scope." },
-    { phase: "EMC Testing", duration: "2-4 weeks", detail: "EMC emission + immunity per GB standards" },
-    { phase: "Additional Testing", duration: "2-4 weeks", detail: "Energy efficiency, SRRC (wireless), RoHS as applicable" },
-    { phase: "Report Review", duration: "2-4 weeks", detail: "Lab issues test report. Review for completeness." }
+    { phase: t("sample_preparation"), duration: "1-2 weeks", detail: t("send_5_10_samples_per_model_to_cnca_accredited_lab") },
+    { phase: t("safety_testing"), duration: "4-8 weeks", detail: t("per_applicable_gb_standard_cb_report_may_reduce_sc") },
+    { phase: t("emc_testing"), duration: "2-4 weeks", detail: t("emc_emission_immunity_per_gb_standards") },
+    { phase: t("additional_testing"), duration: "2-4 weeks", detail: t("energy_efficiency_srrc_wireless_rohs_as_applicable") },
+    { phase: t("report_review"), duration: "2-4 weeks", detail: t("lab_issues_test_report_review_for_completeness") }
   ],
   cccCatalog: {
     productCategories: 17,
     lastUpdate: "2023",
-    note: "Products not in CCC catalog may still require SRRC (wireless) or NMPA (medical) approval",
-    verificationTip: "Verify via CNCA official catalog or consult a certification body"
+    note: t("products_not_in_ccc_catalog_may_still_require_srrc"),
+    verificationTip: t("verify_via_cnca_official_catalog_or_consult_a_cert")
   },
   cbReportGuide: {
-    acceptance: "CB reports from IECEE member bodies are generally accepted for safety testing",
-    savings: "Can reduce testing cost by 30-50% and timeline by 4-8 weeks",
-    requirement: "Must be submitted with Chinese translation. CB report must cover China deviations.",
-    limitation: "CB report does NOT cover EMC, energy efficiency, or SRRC testing",
+    acceptance: t("cb_reports_from_iecee_member_bodies_are_generally_"),
+    savings: t("can_reduce_testing_cost_by_30_50_and_timeline_by_4"),
+    requirement: t("must_be_submitted_with_chinese_translation_cb_repo"),
+    limitation: t("cb_report_does_not_cover_emc_energy_efficiency_or_"),
   },
 };
 }

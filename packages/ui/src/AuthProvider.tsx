@@ -30,11 +30,11 @@ export function AuthProvider({ children, logoutRedirect = '/' }: AuthProviderPro
       .finally(() => setIsLoading(false));
   }, []);
 
-  const login = useCallback(async (email: string, password: string, rememberMe = false) => {
+  const login = useCallback(async (email: string, password: string, rememberMe = false, turnstileToken?: string) => {
     const res = await fetch('/api/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password, rememberMe }),
+      body: JSON.stringify({ email, password, rememberMe, turnstileToken }),
       credentials: 'include',
     });
     if (!res.ok) {
@@ -45,11 +45,11 @@ export function AuthProvider({ children, logoutRedirect = '/' }: AuthProviderPro
     setUser(data.user);
   }, []);
 
-  const register = useCallback(async (email: string, password: string, name?: string) => {
+  const register = useCallback(async (email: string, password: string, name?: string, turnstileToken?: string) => {
     const res = await fetch('/api/auth/register', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password, name }),
+      body: JSON.stringify({ email, password, name, turnstileToken }),
       credentials: 'include',
     });
     if (!res.ok) {

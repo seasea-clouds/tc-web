@@ -28,7 +28,7 @@ export default function LoginPage() {
 
     setLoading(true);
     try {
-      await login(email, password, rememberMe);
+      await login(email, password, rememberMe, turnstileToken);
       window.location.href = './dashboard';
     } catch (err: any) {
       setError(err.message || t('errorInvalid'));

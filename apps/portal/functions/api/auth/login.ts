@@ -8,8 +8,25 @@
 import { verifyPassword } from './password';
 import { createSession } from '../../lib/session';
 
+/**
+ * Verify Turnstile token against Cloudflare's siteverify API
+ */
+async function verifyTurnstileToken(token: string, secret: string): Promise<{ success: boolean; error?: string }> {
+  const formData = new URLSearchParams();
+  formData.append('secret', secret);
+  formData.append('response', token);
+
+  const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+    method: 'POST',
+    body: formData,
+  });
+  const data = await res.json();
+  return { success: data.success === true, error: data['error-codes']?.[0] };
+}
+
 interface Env {
   DB: any;
+  TURNSTILE_SECRET_KEY?: string;
 }
 
 export async function onRequest(context: { request: Request; env: Env }) {
@@ -18,9 +35,20 @@ export async function onRequest(context: { request: Request; env: Env }) {
   }
 
   try {
-    const { email, password, rememberMe } = await context.request.json();
+    const { email, password, rememberMe, turnstileToken } = await context.request.json();
     if (!email || !password) {
       return Response.json({ error: 'Email and password required' }, { status: 400 });
+    }
+
+    // Verify Turnstile token
+    const secret = context.env.TURNSTILE_SECRET_KEY;
+    if (secret && turnstileToken) {
+      const verification = await verifyTurnstileToken(turnstileToken, secret);
+      if (!verification.success) {
+        return Response.json({ error: 'Security check failed. Please try again.' }, { status: 403 });
+      }
+    } else if (secret && !turnstileToken) {
+      return Response.json({ error: 'Security check required' }, { status: 400 });
     }
 
     // Find user

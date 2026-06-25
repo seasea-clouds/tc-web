@@ -10,7 +10,7 @@ interface TurnstileWidgetProps {
 }
 
 // CF Turnstile test key (always passes in dev)
-const DEFAULT_SITE_KEY = '1x00000000000000000000AA';
+const DEFAULT_SITE_KEY = '***';
 
 export default function TurnstileWidget({
   onVerify,

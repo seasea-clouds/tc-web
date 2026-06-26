@@ -1,6 +1,6 @@
 /**
  * List user reports API
- * GET /api/reports/list
+ * GET /api/reports/list?limit=20&offset=0
  * Uses httpOnly session cookie (same as AuthProvider)
  */
 
@@ -26,13 +26,25 @@ export async function onRequest(context: { request: Request; env: Env }) {
     return Response.json({ error: 'Session expired' }, { status: 401 });
   }
 
+  // Parse pagination params
+  const url = new URL(context.request.url);
+  const limit = Math.min(Math.max(parseInt(url.searchParams.get('limit') || '20', 10) || 20, 1), 100);
+  const offset = Math.max(parseInt(url.searchParams.get('offset') || '0', 10) || 0, 0);
+
+  // Get total count
+  const countResult = await context.env.DB.prepare(
+    `SELECT COUNT(*) as total FROM reports WHERE user_email = ?`
+  ).bind(user.email).first<{ total: number }>();
+  const total = countResult?.total || 0;
+
+  // Get paginated reports
   const reports = await context.env.DB.prepare(
     `SELECT id, module, product_name, payment_status, created_at
      FROM reports
      WHERE user_email = ?
      ORDER BY created_at DESC
-     LIMIT 50`
-  ).bind(user.email).all();
+     LIMIT ? OFFSET ?`
+  ).bind(user.email, limit, offset).all();
 
-  return Response.json({ reports: reports.results });
+  return Response.json({ reports: reports.results, total, limit, offset });
 }

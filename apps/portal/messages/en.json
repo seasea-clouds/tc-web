@@ -1734,7 +1734,16 @@
     "wrong_gb_4706_sub_standard_applied": "Wrong GB 4706 sub-standard applied",
     "young_consumers_preference_for_international_brands": "Young consumers' preference for international brands",
     "gaccCat_coffee_tea_label": "Coffee / Tea (HS 09.01-09.02)",
-    "gaccCat_health_food_label": "Health / Dietary Supplements (HS 21.06)"
+    "gaccCat_health_food_label": "Health / Dietary Supplements (HS 21.06)",
+    "reportRiskScore": "Risk Score",
+    "reportVerdict": "Verdict",
+    "reportTimeline": "Timeline",
+    "reportTotalCost": "Total Cost",
+    "reportConfidential": "CONFIDENTIAL",
+    "reportPreparedFor": "Prepared for:",
+    "reportClient": "Client",
+    "reportReportLabel": "Report #",
+    "reportRiskDimension": "Risk Dimension"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",

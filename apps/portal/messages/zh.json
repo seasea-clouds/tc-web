@@ -1734,7 +1734,16 @@
     "wrong_gb_4706_sub_standard_applied": "GB 4706 子标准应用错误",
     "young_consumers_preference_for_international_brands": "年轻消费者对国际品牌的偏好",
     "gaccCat_coffee_tea_label": "咖啡/茶 (HS 09.01-09.02)",
-    "gaccCat_health_food_label": "保健食品/膳食补充剂 (HS 21.06)"
+    "gaccCat_health_food_label": "保健食品/膳食补充剂 (HS 21.06)",
+    "reportRiskScore": "风险评分",
+    "reportVerdict": "评估结论",
+    "reportTimeline": "预计时间",
+    "reportTotalCost": "总费用",
+    "reportConfidential": "机密",
+    "reportPreparedFor": "准备人:",
+    "reportClient": "客户",
+    "reportReportLabel": "报告 #",
+    "reportRiskDimension": "风险维度"
   },
   "Report": {
     "loadingTitle": "加载您的报告",

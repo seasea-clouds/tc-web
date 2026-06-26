@@ -1,5 +1,6 @@
 'use client';
 import { useT } from '@trade/ui';
+import { useTranslations } from 'next-intl';
 
 import { ReportTemplate } from '@/core/report/template';
 import type { GaccResult } from '../../../../../../modules/gacc/rules';
@@ -172,28 +173,38 @@ const SAMPLE_RESULT: GaccResult = {
   summary: "Your product (Confectionery / Chocolate (HS 17.04, 18.06)) requires GACC registration but is classified as low risk.",
 };
 
-const labels = {
-  title: "China Market Entry Compliance Report",
-  sectionProduct: "Product Information",
-  sectionResult: "Assessment Result",
-  sectionDocuments: "Required Documents",
-  sectionNextSteps: "Next Steps",
-  ctaTitle: "Get a Custom Quote",
-  ctaDesc: "Our compliance experts will provide a tailored plan and pricing for your specific product.",
-  ctaBtn: "Contact Us",
-  footerName: "SinoTrade Compliance",
-  footerAddress: "Shanghai, China",
-  footerEmail: "david@sinotradecompliance.com",
-  labelProduct: "Product",
-  labelCategory: "Category",
-  labelHsCode: "HS Code",
-  labelOrigin: "Origin",
-  gaccRequired: "GACC Registration Required",
-  gaccNotRequired: "No GACC Registration Required",
-};
-
 export default function ReportPreviewPage() {
   const t = useT('Report');
+  const tCheck = useTranslations('Check');
+  const labels = {
+    title: tCheck('reportTitle'),
+    sectionProduct: tCheck('reportSectionProduct'),
+    sectionResult: tCheck('reportSectionResult'),
+    sectionDocuments: tCheck('reportSectionDocuments'),
+    sectionNextSteps: tCheck('reportSectionNextSteps'),
+    ctaTitle: tCheck('reportCtaTitle'),
+    ctaDesc: tCheck('reportCtaDesc'),
+    ctaBtn: tCheck('reportCtaBtn'),
+    footerName: tCheck('reportFooterName'),
+    footerAddress: tCheck('reportFooterAddress'),
+    footerEmail: tCheck('reportFooterEmail'),
+    labelProduct: tCheck('reportProduct'),
+    labelCategory: tCheck('reportCategory'),
+    labelHsCode: tCheck('reportHsCode'),
+    labelOrigin: tCheck('reportOrigin'),
+    gaccRequired: tCheck('reportGaccRequired'),
+    gaccNotRequired: tCheck('reportGaccNotRequired'),
+    labelPreparedFor: tCheck('reportPreparedFor'),
+    labelClient: tCheck('reportClient'),
+    labelReportLabel: tCheck('reportReportLabel'),
+    labelConfidential: tCheck('reportConfidential'),
+    labelRiskScore: tCheck('reportRiskScore'),
+    labelVerdict: tCheck('reportVerdict'),
+    labelTimeline: tCheck('reportTimeline'),
+    labelTotalCost: tCheck('reportTotalCost'),
+    labelRiskDimension: tCheck('reportRiskDimension'),
+  };
+
   return (
     <div className="min-h-screen bg-bg-ice py-8">
       <div className="max-w-4xl mx-auto px-4 mb-4">

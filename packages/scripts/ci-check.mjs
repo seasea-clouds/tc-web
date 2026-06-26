@@ -193,6 +193,22 @@ function runBreadcrumbCheck() {
 }
 
 // ============================================================
+// 跨 App 覆盖检测（项目无关，每次 CI 都执行一次）
+// ============================================================
+function runOverrideCheck() {
+  // 只在 portal 项目运行时执行，避免重复
+  if (project !== 'portal') return;
+  runLocalScript('check-override-keys.mjs');
+}
+
+// ============================================================
+// i18n 覆盖率和缺失统计
+// ============================================================
+function runCoverageCheck() {
+  runLocalScript('check-i18n-coverage.mjs');
+}
+
+// ============================================================
 // 清理
 // ============================================================
 function runCleanup() {
@@ -217,6 +233,8 @@ if (outDir || nextDir) {
 
 runTranslationChecks();
 runBreadcrumbCheck();
+runCoverageCheck();
+runOverrideCheck();
 runCleanup();
 
 console.log(`\n═══════════════════════════════════════════════`);

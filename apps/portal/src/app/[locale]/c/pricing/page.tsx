@@ -9,6 +9,8 @@ export default function PricingPage() {
   const t = useT('Pricing');
   const subsiteHref = useSubsiteHref();
   const locale = useLocale();
+  const formatPrice = (price: number) =>
+    new Intl.NumberFormat(locale, { style: 'currency', currency: 'USD', minimumFractionDigits: 2 }).format(price);
 
   return (
     <div className="bg-bg-ice py-16">
@@ -29,7 +31,7 @@ export default function PricingPage() {
               <li>{t('freeBullet3')}</li>
             </ul>
             <a
-              href={subsiteHref('/check/gacc')}
+              href={subsiteHref('/')}
               className="inline-block w-full border-2 border-primary-navy text-primary-navy font-semibold py-2.5 rounded-md hover:bg-primary-navy hover:text-white transition-all"
             >
               {t('startFree')}
@@ -42,7 +44,7 @@ export default function PricingPage() {
               {t('popular')}
             </div>
             <h2 className="text-lg font-semibold text-primary-navy">{t('single')}</h2>
-            <p className="text-4xl font-bold text-gold my-6">{t('singlePrice')}</p>
+            <p className="text-4xl font-bold text-gold my-6">{formatPrice(1.99)}</p>
             <ul className="text-sm text-gray-500 space-y-3 mb-8">
               <li>{t('singleBullet1')}</li>
               <li>{t('singleBullet2')}</li>
@@ -57,7 +59,7 @@ export default function PricingPage() {
           {/* Monthly */}
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 text-center">
             <h2 className="text-lg font-semibold text-primary-navy">{t('monthly')}</h2>
-            <p className="text-4xl font-bold text-primary-navy my-6">{t('monthlyPrice')}</p>
+            <p className="text-4xl font-bold text-primary-navy my-6">{formatPrice(9.9)}</p>
             <ul className="text-sm text-gray-500 space-y-3 mb-8">
               <li>{t('monthlyBullet1')}</li>
               <li>{t('monthlyBullet2')}</li>

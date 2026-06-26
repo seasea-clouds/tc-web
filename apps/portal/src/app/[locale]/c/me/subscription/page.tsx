@@ -1,5 +1,5 @@
 'use client';
-import { useT } from '@trade/ui';
+import { useT, useTradeLocale } from '@trade/ui';
 
 import { useState, useEffect } from 'react';
 import { useAuth } from '@trade/ui';
@@ -7,6 +7,7 @@ import Link from 'next/link';
 
 export default function SubscriptionPage() {
   const t = useT('Report');
+  const locale = useTradeLocale();
   const { user, isLoading } = useAuth();
   const [sub, setSub] = useState<any>(null);
   const [loading, setLoading] = useState(true);
@@ -36,8 +37,8 @@ export default function SubscriptionPage() {
         ) : !sub ? (
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 text-center">
             <p className="text-gray-500">{t('noActiveSubscription')}</p>
-            <Link href="../pricing" className="inline-block mt-4 bg-gold hover:bg-gold/90 text-primary-navy font-semibold px-6 py-2.5 rounded-md transition-all">
-              View {t('plan')}s
+            <Link href={`/${locale}/c/pricing/`} className="inline-block mt-4 bg-gold hover:bg-gold/90 text-primary-navy font-semibold px-6 py-2.5 rounded-md transition-all">
+              {t('viewPlans')}
             </Link>
           </div>
         ) : (

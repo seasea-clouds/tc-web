@@ -1,137 +1,153 @@
-# trade-web 翻译任务清单
+# i18n 全面修复计划
 
-> ⚠️ 翻译工具位置: `/root/projects/translate-tool/`
-> 虚拟环境: `source /root/projects/.venv/bin/activate`
-> 调用入口: `translate-tool <command>`
+## 🔴 P0 — 功能性 Bug / 硬编码英文
 
----
+### P0-1 博客导航/面包屑 "Blog" 未翻译
+**问题：** `apps/blog/messages/*.json` 中 Navbar.blog / breadcrumb.blog 写死英文 "Blog"，覆盖 UI 包已有翻译
+**修复：** 删除 48 文件中的 `Navbar.blog`/`Navbar.home`/`breadcrumb` 键
+**文件：** apps/blog/messages/*.json (48 files)
 
-## 📌 三个进行中的翻译任务
+### P0-2 定价格式用 Intl.NumberFormat 重构
+**问题：** 48 语言中 singlePrice / monthlyPrice 格式混乱（不同小数点、货币符号位置、货币名称），$9.9 应为 $9.90
+**修复：** 从 48 文件中删除 singlePrice/monthlyPrice，改用 Intl.NumberFormat(locale, {style:'currency', currency:'USD', minimumFractionDigits:2}) 在组件中格式化
+**文件：** apps/portal/messages/*.json (48 files, 移除2键), apps/portal/src/app/[locale]/c/pricing/page.tsx, apps/portal/src/app/[locale]/c/page.tsx
 
-所有三个任务都因 **Google API 429 限流** 卡住，worker 进程已死，worker 锁未释放。
+### P0-3 计费页 "查看定价" 404
+**问题：** dashboard/billing/page.tsx:47 — href="/pricing" 缺少 locale 前缀
+**修复：** 改为 `/{locale}/c/pricing/`
+**文件：** apps/portal/src/app/[locale]/c/dashboard/billing/page.tsx
 
-### 任务 A: `rules-data-strings-v1-20260624`
-| 字段 | 值 |
-|------|-----|
-| 状态 | **75.8%**（标注 running，实际 worker 已死） |
-| 内容 | 592 条 rules.ts 数据字符串（合规报告内容）× 47 语言 |
-| 输入文件 | `/tmp/rules_data_translate_input.json` |
-| 说明 | 第一批提交，进度最高 |
+### P0-4 My Reports "Run a Check" / 链接 / 多余点号
+**问题：** me/reports/page.tsx:40 — "Run a Check" 硬编码; href="../check/gacc" 应改为 "../c/"; 多余 `.` 在 t('noReports') 后
+**修复：** 替换为 t('runACheck') + 链接修复 + 去掉多余点号
+**文件：** apps/portal/src/app/[locale]/c/me/reports/page.tsx
 
-### 任务 B: `rules-data-strings-v2-20260624`
-| 字段 | 值 |
-|------|-----|
-| 状态 | **24.7%**（标注 running，实际 worker 已死） |
-| 内容 | 同上 592 条 × 47 语言 |
-| 说明 | 第二次提交，因 429 限流只跑了少部分 |
+### P0-5 GACC 类别翻译键缺失
+**问题：** gaccCat_coffee_tea_label / gaccCat_health_food_label 在 48 语言全缺失
+**修复：** 补全 2 键到 en.json + zh.json，提交翻译任务
+**文件：** apps/portal/messages/en.json, apps/portal/messages/zh.json
 
-### 任务 C: `portal-hardcoded-v3-20260624` ⭐ 主任务
-| 字段 | 值 |
-|------|-----|
-| 状态 | **65.1%**（49398/75858，标注 running，实际 worker 已死） |
-| 内容 | **1614 keys × 47 语言**（含 A+B 的缓存 + 新增组件字符串 + CATEGORY_LABELS） |
-| 输入文件 | `/tmp/portal_hardcoded_translate_input.json` |
-| 备注 | 覆盖全部翻译需求，A/B 完成后无需单独处理 |
-| followup | 用 apply-portal-translations.mjs 写入 locale 文件 |
+### P0-6 博客复制链接按钮不工作
+**问题：** CopyButton.tsx clipboard API 可能被 CSP 限制 / aria-label 硬编码
+**修复：** 调试 CSP + 加反馈 Toast + aria-label 改为 i18n
+**文件：** apps/blog/src/components/CopyButton.tsx
 
-> **关系说明：** C 是新提交的综合任务，自动复用 A/B 已完成项的缓存。**任务 C 完成后即可，A/B 不需要单独取结果。**
-
----
-
-## 🟡 已知阻塞问题
-
-### 问题 1: Worker 锁未释放
-- DB 里 `worker_lock` 表仍有死进程 PID（如 60208）
-- Daemon cron（每分钟跑一次）检查到锁以为 worker 还活着，不会重启新 worker
-- **解决：** 执行下面任一方案：
-  ```bash
-  # 方案 A: 暂停 + 恢复（清锁 + 重启）
-  source /root/projects/.venv/bin/activate
-  translate-tool pause -n portal-hardcoded-v3-20260624
-  translate-tool resume -n portal-hardcoded-v3-20260624
-
-  # 方案 B: 重试（会释放锁 + 重启）
-  translate-tool retry -n portal-hardcoded-v3-20260624
-  ```
-
-### 问题 2: Google API 429 限流 + 渠道效率低
-- 三个渠道中 `deep_translator` 和 `mobile_regex` 持续 429
-- 冷却策略（AIMD）：连续 429 → 冷却翻倍（60→120→240→480→600s 封顶）
-- 渠道顺序：`deep_translator` → `mobile_regex` → `translators`（健康的排在最后）
-- 每条翻译都要等前两个渠道超时后才 fallback，效率极低
-- **影响：** 剩余 26459 项即使 worker 重启也需要很长时间
-- **建议：** 考虑手工从 translate.db 的 `channels` 表禁用前两个渠道（设 `enabled=0`），或联系开发者优化渠道顺序/跳过逻辑
+### P0-7 报告页面大面积英文（ReportShell.tsx + rules.ts）
+**问题：** ReportShell.tsx ~15 处硬编码（CONFIDENTIAL, Prepared for:, Risk Score 等）；rules.ts 3 处风险维度 note 写死英文（compliance pathway, tests required, Estimated:）
+**修复：** 替换为 i18n 键 + 改为使用 locale 格式化日期
+**文件：** apps/portal/src/core/report/ReportShell.tsx, apps/portal/modules/gacc/rules.ts
 
 ---
 
-## ✅ 翻译完成后的应用流程
+## 🟡 P1 — 翻译质量 / 硬编码
 
-### Step 1: 确认任务状态
-```bash
-source /root/projects/.venv/bin/activate
-translate-tool list
-# 确认 portal-hardcoded-v3-20260624 的进度为 100%
-```
+### P1-1 Subscriptions "View 计划s"
+**问题：** me/subscription/page.tsx:40 — View {t('plan')}s
+**修复：** 改为 t('viewPlans')
+**文件：** apps/portal/src/app/[locale]/c/me/subscription/page.tsx
 
-### Step 2: 取回翻译结果
-```bash
-translate-tool results -n portal-hardcoded-v3-20260624 -o /tmp/portal_translate_results.json
-```
+### P1-2 My Account "Sign Out"
+**问题：** me/page.tsx:71 — 写死 "Sign Out"
+**修复：** 改为 t('signOut')
+**文件：** apps/portal/src/app/[locale]/c/me/page.tsx
 
-### Step 3: 应用到 Portal 语言文件
-```bash
-cd /root/projects/trade/web
-node packages/scripts/apply-portal-translations.mjs \
-  -i /tmp/portal_translate_results.json
-```
-这个脚本会：
-- 读取翻译结果（translate-tool 的 `{results: {locale: {key: text}}}` 格式）
-- 遍历 47 个语言文件
-- **只替换值等于英文原文的 fallback 项**（不覆盖已有翻译）
-- 写回对应 `<locale>.json` 文件
+### P1-3 Settings 页面
+**问题：** Name:/Email: 硬编码 + "轮廓" 翻译错误 + border-t 去掉
+**修复：** 改为 i18n 键 + 补充翻译 + 去掉分隔线区块
+**文件：** apps/portal/src/app/[locale]/c/me/settings/page.tsx
 
-### Step 4: 验证翻译完整性
-```bash
-# i18n key 完整性检查
-node packages/scripts/check-i18n-keys.mjs
+### P1-4 定价页 "免费开始" 链接
+**问题：** href={subsiteHref('/check/gacc')} 跳过模块选择
+**修复：** 改为 /{locale}/c/
+**文件：** apps/portal/src/app/[locale]/c/pricing/page.tsx
 
-# 硬编码英文检查
-node packages/scripts/check-hardcoded.mjs apps/portal/src
-
-# 全量 CI 检查
-node packages/scripts/ci-check.mjs
-
-# TypeScript 编译验证
-cd /root/projects/trade/web
-npm run build  # 三站全量构建
-```
-
-### Step 5: (如需要) 取回 A/B 的翻译结果
-如果 C 任务 **仍未完成** 而 A/B 先完成了，也可以单独取：
-```bash
-translate-tool results -n rules-data-strings-v1-20260624 -o /tmp/rules_v1_results.json
-translate-tool results -n rules-data-strings-v2-20260624 -o /tmp/rules_v2_results.json
-```
-然后合并结果：v2 优先（进度更高），v1 补充 v2 缺失项，用同一个 apply 脚本应用。
-但**推荐等 C 任务完成**，C 的缓存已包含 A+B 完成的部分。
+### P1-5 "Check.xxx" 交叉模块翻译键
+**问题：** Check 命名空间中 reportModuleGacc 等键在 zh.json 存在，但 47 语言其他语言需确认
+**检查：** 比对 ALL 48 语言是否存在 reportModuleGacc/ccc/crossborder/label/nmpa/trademark 键
 
 ---
 
-## 📁 相关文件索引
+## 🟢 P2 — 次要 / 翻译任务
 
-| 文件 | 用途 |
-|------|------|
-| `/root/projects/trade/web/apps/portal/messages/en.json` | Portal 英文源（翻译 key 定义在此） |
-| `/root/projects/trade/web/apps/portal/messages/*.json` | 47 个语言翻译文件 |
-| `/root/projects/trade/web/packages/scripts/apply-portal-translations.mjs` | 翻译结果应用脚本 |
-| `/root/projects/trade/web/packages/scripts/check-i18n-keys.mjs` | i18n key 完整性检查 |
-| `/root/projects/trade/web/packages/scripts/check-hardcoded.mjs` | 硬编码英文检查 |
-| `/root/projects/translate-tool/data/translate.db` | 翻译引擎数据库（含任务状态、缓存、渠道限流状态） |
-| `/root/projects/trade/web/TASK.md` | 本文件 |
+### P2-1 仪表盘面包屑
+**问题：** AutoBreadcrumb 缺少 reports/me/settings/subscription 映射
+**修复：** 添加 Navbar 键 + AutoBreadcrumb SEGMENT_LABELS
 
-## ⚡ 后续代码改造
+### P2-2 "标签艺术品" 翻译质量
+**问题：** chineseLabelArtworkReady 翻译别扭
+**修复：** 改为 "标签设计稿"
 
-翻译应用到语言文件后，还需完成：
-1. 将 `rules.ts` 的数据字符串改为 `t()` 调用（已改造完成，见 commit 5984fe1）
-2. 将 Portal 组件中的硬编码字符串改为 `t()` 调用
-3. 最终验证：`check-hardcoded.mjs` 0 error，`check-i18n-keys.mjs` 0 missing
+### P2-3 crossborderTitle "支票→检查"
+**问题：** zh.json: "跨境电商支票" — "支票" 应为 "检查"
+**修复：** 改翻译
+
+### P2-4 CopyButton aria-label
+**问题：** aria-label="Copy link" 硬编码
+**修复：** 改为 i18n 键
+
+### P2-5 报告列表翻页
+**问题：** 无分页，一次性加载所有
+**修复：** 增加分页组件（20条/页）+ 后端 API 支持 limit/offset
+
+---
+
+## 🔧 CI 优化（后续）
+
+### CI-1 代码级英文模板检测
+**问题：** check-translations.mjs 只检查消息文件，不检查 rules.ts/ReportShell.tsx 中的模板字符串
+**修复：** 增加对 "compliance pathway" / "tests required" / "Estimated:" 等模式的检测
+
+### CI-2 gaccCat_*_label 完整性校验
+**问题：** CATEGORY_LABELS 与消息键不同步
+**修复：** 增加 rules.ts 与消息文件的交叉校验
+
+### CI-3 跨 app 消息覆盖检测
+**问题：** app 级消息覆盖了 UI 包已翻译键
+**修复：** 检测 app locale 文件中的键是否在 UI 包中有翻译值但被英文覆盖
+
+### CI-4 路由 locale 前缀检测
+**问题：** 检测 href="/..." 无 locale 前缀的链接
+**修复：** 正则匹配路由链接
+
+---
+
+## 📦 翻译任务（需提交给 translate-tool）
+
+| 任务 ID | 描述 | 键数 | 语言 |
+|---------|------|------|------|
+| pricing-format-v1 | 移除 singlePrice/monthlyPrice，改为 Intl.NumberFormat | 0 (代码重构) | - |
+| portal-harcoded-v6 | 补充 runACheck, viewPlans, signOut, nameLabel, emailLabel 等 | ~10 | 47 |
+| portal-gacc-cats-v1 | 补充 gaccCat_coffee_tea_label, gaccCat_health_food_label | 2 | 47 |
+| portal-report-labels-v1 | 报告页面新增 ~20 键（riskScore, verdict, timeline, confidential 等） | ~20 | 47 |
+| portal-trans-quality-v5 | 修复 crossborderTitle, profile, noReports, chineseLabelArtworkReady | ~4 | 47 |
+
+---
+
+## 执行顺序
+
+```
+[迭代1] 代码修复 + 构建部署
+  ├── P0-1 博客消息删除覆盖键 (48文件脚本批量)
+  ├── P0-2 定价格式 Intl.NumberFormat 重构 (2组件 + 48文件删键)
+  ├── P0-3 计费页链接 404 修复 (1文件)
+  ├── P0-4 My Reports 修复 (1文件)
+  ├── P0-6 博客 CopyButton + aria-label (1文件)
+  ├── P1-1 Subscription "计划s" 修复 (1文件)
+  ├── P1-2 My Account "Sign Out" (1文件)
+  ├── P1-3 Settings 页面 (1文件)
+  ├── P1-4 定价页链接修复 (1文件)
+  ├── P2-2/P2-3 翻译质量小修 (1-2文件)
+  └── P2-4 CopyButton aria-label (1文件)
+
+[迭代2] 报告页修复（较大）
+  ├── P0-7 ReportShell.tsx 15处硬编码 (1文件)
+  ├── P0-7 rules.ts 3处模板英文 (1文件)
+  ├── P2-1 AutoBreadcrumb 映射 (1-2文件)
+  └── P2-5 报告列表翻页 (2文件 + 后端API)
+
+[迭代3] 翻译任务 + 合并 + 部署
+  └── 提交对译任务 → 合并 → 构建 → 部署
+
+[迭代4] CI 增强（后续独立迭代）
+  └── CI-1~CI-4 新增检查规则
+```

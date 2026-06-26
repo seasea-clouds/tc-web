@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useCallback } from 'react';
+import { useTranslations } from 'next-intl';
 
 interface Props {
   url: string;
@@ -8,8 +9,10 @@ interface Props {
 
 export default function CopyButton({ url }: Props) {
   const [copied, setCopied] = useState(false);
+  const t = useTranslations('Blog');
 
-  const handleCopy = useCallback(async () => {
+  const handleCopy = useCallback(async (e: React.MouseEvent) => {
+    e.preventDefault();
     try {
       // Modern clipboard API
       if (navigator.clipboard?.writeText) {
@@ -48,7 +51,7 @@ export default function CopyButton({ url }: Props) {
       type="button"
       onClick={handleCopy}
       className="p-2 rounded-full bg-white/15 text-white hover:bg-white/25 transition-colors"
-      aria-label="Copy link"
+      aria-label={t('copyLink')}
     >
       {copied ? (
         <svg className="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">

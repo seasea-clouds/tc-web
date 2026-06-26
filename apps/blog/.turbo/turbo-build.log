@@ -4,54 +4,54 @@
 
 Apps discovered: blog, portal, site
 Generating search index for 48 locales...
-  af: 1007 items (6S + 7B + 39F + 955C)
-  ar: 1007 items (6S + 7B + 39F + 955C)
-  az: 1007 items (6S + 7B + 39F + 955C)
-  be: 1007 items (6S + 7B + 39F + 955C)
-  bg: 1007 items (6S + 7B + 39F + 955C)
-  bn: 1007 items (6S + 7B + 39F + 955C)
-  ca: 1007 items (6S + 7B + 39F + 955C)
-  cs: 1007 items (6S + 7B + 39F + 955C)
-  da: 1007 items (6S + 7B + 39F + 955C)
-  de: 1007 items (6S + 7B + 39F + 955C)
-  el: 1007 items (6S + 7B + 39F + 955C)
-  en: 1007 items (6S + 7B + 39F + 955C)
-  es: 1007 items (6S + 7B + 39F + 955C)
-  fa: 1007 items (6S + 7B + 39F + 955C)
-  fi: 1007 items (6S + 7B + 39F + 955C)
-  fr: 1007 items (6S + 7B + 39F + 955C)
-  he: 1007 items (6S + 7B + 39F + 955C)
-  hi: 1007 items (6S + 7B + 39F + 955C)
-  hr: 1007 items (6S + 7B + 39F + 955C)
-  hu: 1007 items (6S + 7B + 39F + 955C)
-  hy: 1007 items (6S + 7B + 39F + 955C)
-  id: 1007 items (6S + 7B + 39F + 955C)
-  it: 1007 items (6S + 7B + 39F + 955C)
-  ja: 1008 items (6S + 7B + 39F + 956C)
-  ka: 1007 items (6S + 7B + 39F + 955C)
-  ko: 1007 items (6S + 7B + 39F + 955C)
-  ms: 1007 items (6S + 7B + 39F + 955C)
-  ne: 1007 items (6S + 7B + 39F + 955C)
-  nl: 1007 items (6S + 7B + 39F + 955C)
-  no: 1007 items (6S + 7B + 39F + 955C)
-  pl: 1007 items (6S + 7B + 39F + 955C)
-  pt: 1007 items (6S + 7B + 39F + 955C)
-  ro: 1007 items (6S + 7B + 39F + 955C)
-  ru: 1007 items (6S + 7B + 39F + 955C)
-  si: 1007 items (6S + 7B + 39F + 955C)
-  sk: 1007 items (6S + 7B + 39F + 955C)
-  sl: 1007 items (6S + 7B + 39F + 955C)
-  sq: 1007 items (6S + 7B + 39F + 955C)
-  sr: 1007 items (6S + 7B + 39F + 955C)
-  sv: 1007 items (6S + 7B + 39F + 955C)
-  sw: 1007 items (6S + 7B + 39F + 955C)
-  ta: 1007 items (6S + 7B + 39F + 955C)
-  th: 1007 items (6S + 7B + 39F + 955C)
-  tr: 1007 items (6S + 7B + 39F + 955C)
-  uk: 1007 items (6S + 7B + 39F + 955C)
-  ur: 1007 items (6S + 7B + 39F + 955C)
-  vi: 1007 items (6S + 7B + 39F + 955C)
-  zh: 1007 items (6S + 7B + 39F + 955C)
+  af: 1653 items (6S + 7B + 39F + 1601C)
+  ar: 1653 items (6S + 7B + 39F + 1601C)
+  az: 1653 items (6S + 7B + 39F + 1601C)
+  be: 1653 items (6S + 7B + 39F + 1601C)
+  bg: 1653 items (6S + 7B + 39F + 1601C)
+  bn: 1653 items (6S + 7B + 39F + 1601C)
+  ca: 1653 items (6S + 7B + 39F + 1601C)
+  cs: 1653 items (6S + 7B + 39F + 1601C)
+  da: 1653 items (6S + 7B + 39F + 1601C)
+  de: 1653 items (6S + 7B + 39F + 1601C)
+  el: 1653 items (6S + 7B + 39F + 1601C)
+  en: 1653 items (6S + 7B + 39F + 1601C)
+  es: 1653 items (6S + 7B + 39F + 1601C)
+  fa: 1653 items (6S + 7B + 39F + 1601C)
+  fi: 1653 items (6S + 7B + 39F + 1601C)
+  fr: 1653 items (6S + 7B + 39F + 1601C)
+  he: 1653 items (6S + 7B + 39F + 1601C)
+  hi: 1653 items (6S + 7B + 39F + 1601C)
+  hr: 1653 items (6S + 7B + 39F + 1601C)
+  hu: 1653 items (6S + 7B + 39F + 1601C)
+  hy: 1653 items (6S + 7B + 39F + 1601C)
+  id: 1653 items (6S + 7B + 39F + 1601C)
+  it: 1653 items (6S + 7B + 39F + 1601C)
+  ja: 1653 items (6S + 7B + 39F + 1601C)
+  ka: 1653 items (6S + 7B + 39F + 1601C)
+  ko: 1653 items (6S + 7B + 39F + 1601C)
+  ms: 1653 items (6S + 7B + 39F + 1601C)
+  ne: 1653 items (6S + 7B + 39F + 1601C)
+  nl: 1653 items (6S + 7B + 39F + 1601C)
+  no: 1653 items (6S + 7B + 39F + 1601C)
+  pl: 1653 items (6S + 7B + 39F + 1601C)
+  pt: 1653 items (6S + 7B + 39F + 1601C)
+  ro: 1653 items (6S + 7B + 39F + 1601C)
+  ru: 1653 items (6S + 7B + 39F + 1601C)
+  si: 1653 items (6S + 7B + 39F + 1601C)
+  sk: 1653 items (6S + 7B + 39F + 1601C)
+  sl: 1653 items (6S + 7B + 39F + 1601C)
+  sq: 1653 items (6S + 7B + 39F + 1601C)
+  sr: 1653 items (6S + 7B + 39F + 1601C)
+  sv: 1653 items (6S + 7B + 39F + 1601C)
+  sw: 1653 items (6S + 7B + 39F + 1601C)
+  ta: 1653 items (6S + 7B + 39F + 1601C)
+  th: 1653 items (6S + 7B + 39F + 1601C)
+  tr: 1653 items (6S + 7B + 39F + 1601C)
+  uk: 1653 items (6S + 7B + 39F + 1601C)
+  ur: 1653 items (6S + 7B + 39F + 1601C)
+  vi: 1653 items (6S + 7B + 39F + 1601C)
+  zh: 1653 items (6S + 7B + 39F + 1601C)
 Done.
 Attention: Next.js now collects completely anonymous telemetry regarding usage.
 This information is used to shape Next.js' roadmap and prioritize features.
@@ -61,15 +61,15 @@ https://nextjs.org/telemetry
 ▲ Next.js 16.2.6 (Turbopack)
 
   Creating an optimized production build ...
-✓ Compiled successfully in 1971ms
+✓ Compiled successfully in 2.7s
   Running TypeScript ...
-  Finished TypeScript in 2.8s ...
+  Finished TypeScript in 3.4s ...
   Collecting page data using 6 workers ...
   Generating static pages using 6 workers (0/434) ...
   Generating static pages using 6 workers (108/434) 
   Generating static pages using 6 workers (216/434) 
   Generating static pages using 6 workers (325/434) 
-✓ Generating static pages using 6 workers (434/434) in 2.4s
+✓ Generating static pages using 6 workers (434/434) in 2.8s
   Finalizing page optimization ...
 
 Route (app)
@@ -123,9 +123,9 @@ Route (app)
 ✅ No hardcoded English text found.
 
 ▶ check-console.mjs --ci
-📁 扫描 198 个文件
+📁 扫描 199 个文件
 ==================================================
-📊 结果: 208 通过, 0 失败
+📊 结果: 209 通过, 0 失败
 
 ✅ check-console.mjs 完成
 
@@ -143,9 +143,9 @@ Route (app)
 ✅ check-rtl.mjs 完成
 
 ▶ check-map-key.mjs --ci
-📁 扫描 166 个 TSX 文件
+📁 扫描 167 个 TSX 文件
 ==================================================
-📊 结果: 166 通过, 0 失败
+📊 结果: 167 通过, 0 失败
 
 ✅ check-map-key.mjs 完成
 
@@ -193,58 +193,20 @@ Route (app)
 
 ▶ check-translations.mjs --short --skip-industry-meta --skip-portal-check
 
-⚠️ 发现 188 个问题
-   - 网站翻译质量: 188 个问题
+✅ 全量核验通过！48 种语言无质量问题。
 
-▶ check-i18n-keys.mjs --ci --ci
+▶ check-i18n-keys.mjs --ci --skip-portal --ci
 🔑 i18n key 完整性检查
 
-📦 SITE (0 missing, 174 extra, 0 hardcoded):
-  ℹ️  多余 key (174 处，lang 中有但 en 中没有):
-    [th] Home.description → "ตรวจสอบว่าผลิตภัณฑ์ของคุณต้องการการลงทะเบียน GACC การรับรอง CCC หรือการยื่น NMPA สำหรับการส่งออกไปยังจีนหรือไม่"
-    [th] Home.howItWorks → "วิธีการทำงาน"
-    [th] Home.step1Title → "บอกเราเกี่ยวกับผลิตภัณฑ์ของคุณ"
-    [th] Home.step1Desc → "กรอกหมวดหมู่ แหล่งกำเนิดสินค้า และรายละเอียดสินค้า"
-    [th] Home.step2Title → "รับผลการประเมินฟรี"
-    [th] Home.step2Desc → "ผลลัพธ์ทันที: ไม่ต้องชำระเงินหรือลงทะเบียน"
-    [th] Home.step3Title → "ปลดล็อก/full report"
-    [th] Home.step3Desc → "จ่าย $1.99 สำหรับรายงานความสอดคล้องฉบับเต็ม"
-    [th] Home.simplePricing → "ราคาแบบง่าย"
-    [th] Home.free → "ฟรี"
-    [th] Home.freeDesc → "ผลลัพธ์การประเมินเบื้องต้น"
-    [th] Home.single → "รายงานครั้งเดียว"
-    [th] Home.singleDesc → "รายงานฉบับเต็ม + PDF + ส่งทางอีเมล"
-    [th] Home.monthly → "รายเดือน"
-    [th] Home.monthlyDesc → "รายงานไม่จำกัดสำหรับหนึ่งเดือน"
-    [th] Home.popular → "ยอดนิยม"
-    [th] Home.startFree → "เริ่มต้นฟรี"
-    [th] Home.getReport → "รับรายงาน: $1.99"
-    [th] Home.subscribe → "สมัคร $9.9/เดือน"
-    [th] Home.allFree → "6 โมดูล ฟรีทั้งหมด ไม่ต้องลงทะเบียน"
-    ... 还有 154 条
+📦 SITE (0 missing, 0 extra, 0 hardcoded):
+  ✅ 全部通过
 
-📦 PORTAL (0 missing, 15 extra, 0 hardcoded):
-  ℹ️  多余 key (15 处，lang 中有但 en 中没有):
-    [ja] Check.freeCheck → "無料チェック"
-    [th] Navbar.home → "หน้าแรก"
-    [th] Navbar.services → "บรเิ วร"
-    [th] Navbar.blog → "บทความ"
-    [th] Navbar.contact → "ตดิ ตอ่"
-    [th] Navbar.freeCheck → "ตรวจสอบฟรเี ยน"
-    [th] Billing.title → "การเรืกเกบเงิ น และการสมัคร"
-    [th] Billing.currentPlan → "แผนปจจุบัน"
-    [th] Billing.plan → "แผน"
-    [th] Billing.status → "สถานะ"
-    [th] Billing.renewal → "ตออายุ"
-    [th] Billing.manageSubscription → "จาดการสมัคร"
-    [th] Billing.noSubscription → "ไมม่ีการสมัคร"
-    [th] Billing.viewPricing → "ดรราคา"
-    [zh] Pricing.simplePricing → "简单定价"
+📦 PORTAL (0 missing, 0 extra, undefined hardcoded):
 
 📦 UI (0 missing, 0 extra, 0 hardcoded):
   ✅ 全部通过
 
-📊 总计: 0 缺失 + 189 多余 + 0 硬编码英文
+📊 总计: 0 缺失 + 0 多余 + NaN 硬编码英文
 ✅ 所有 i18n key 完整，无硬编码英文
 
 ▶ clean-rsc.mjs out

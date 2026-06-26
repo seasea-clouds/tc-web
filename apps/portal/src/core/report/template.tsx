@@ -25,6 +25,15 @@ interface ReportLabels {
   labelOrigin: string;
   gaccRequired: string;
   gaccNotRequired: string;
+  labelPreparedFor: string;
+  labelClient: string;
+  labelReportLabel: string;
+  labelConfidential: string;
+  labelRiskScore: string;
+  labelVerdict: string;
+  labelTimeline: string;
+  labelTotalCost: string;
+  labelRiskDimension: string;
 }
 
 interface ReportTemplateProps {

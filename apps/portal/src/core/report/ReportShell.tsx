@@ -154,7 +154,7 @@ export default function ReportShell(props: ReportShellProps) {
   const { reportId, module, locale, labels, productInfo, result, nextSteps, generatedAt } = props;
   const href = (path: string) => `/${locale || 'en'}${path}`;
   const glossary = result.glossary || getGlossary(module, locale);
-  const formattedDate = generatedAt ? new Date(generatedAt).toLocaleDateString('en-US', {
+  const formattedDate = generatedAt ? new Date(generatedAt).toLocaleDateString(locale || 'en', {
     year: 'numeric', month: 'long', day: 'numeric',
   }) : '—';
 
@@ -177,23 +177,23 @@ export default function ReportShell(props: ReportShellProps) {
               <h1 className="text-2xl font-bold">{labels.title}</h1>
             </div>
             <div className="text-right text-xs">
-              <p className="text-white/60">Report #{reportId}</p>
+              <p className="text-white/60">{labels.labelReportLabel}{reportId}</p>
               <p className="text-white/60">{formattedDate}</p>
-              <p className="text-white/40 mt-1 uppercase tracking-wider">CONFIDENTIAL</p>
+              <p className="text-white/40 mt-1 uppercase tracking-wider">{labels.labelConfidential}</p>
             </div>
           </div>
           <div className="mt-4 pt-4 border-t border-white/10 flex flex-wrap gap-x-6 gap-y-1 text-xs text-white/70">
-            <span>Prepared for: <strong className="text-white">{productInfo.name || 'Client'}</strong></span>
-            <span>Category: <strong className="text-white">{productInfo.category}</strong></span>
-            <span>Origin: <strong className="text-white">{productInfo.originCountry || '—'}</strong></span>
-            {productInfo.hsCode && <span>HS Code: <strong className="text-white">{productInfo.hsCode}</strong></span>}
+            <span>{labels.labelPreparedFor} <strong className="text-white">{productInfo.name || labels.labelClient}</strong></span>
+            <span>{labels.labelCategory} <strong className="text-white">{productInfo.category}</strong></span>
+            <span>{labels.labelOrigin} <strong className="text-white">{productInfo.originCountry || '—'}</strong></span>
+            {productInfo.hsCode && <span>{labels.labelHsCode} <strong className="text-white">{productInfo.hsCode}</strong></span>}
           </div>
           <div className="mt-5 grid grid-cols-2 md:grid-cols-4 gap-3">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/10 group hover:bg-white/15 transition-all">
               <p className={`text-4xl font-bold mb-1 ${
                 (result.riskScore || 0) >= 7 ? 'text-red-400' : (result.riskScore || 0) >= 4 ? 'text-amber-400' : 'text-green-400'
               }`}>{result.riskScore || 0}</p>
-              <p className="text-[10px] text-white/50 uppercase tracking-wider">Risk Score</p>
+              <p className="text-[10px] text-white/50 uppercase tracking-wider">{labels.labelRiskScore}</p>
               <div className="mt-2 w-full bg-white/10 rounded-full h-1.5">
                 <div className={`h-1.5 rounded-full transition-all ${
                   (result.riskScore || 0) >= 7 ? 'bg-red-400 w-3/4' : (result.riskScore || 0) >= 4 ? 'bg-amber-400 w-1/2' : 'bg-green-400 w-1/4'
@@ -204,16 +204,16 @@ export default function ReportShell(props: ReportShellProps) {
               <p className={`text-lg font-bold mb-1 ${
                 (result.riskScore || 0) >= 7 ? 'text-red-400' : (result.riskScore || 0) >= 4 ? 'text-amber-400' : 'text-green-400'
               }`}>{(result.riskScore || 0) >= 7 ? '🔴' : (result.riskScore || 0) >= 4 ? '🟡' : '🟢'}</p>
-              <p className="text-[10px] text-white/50 uppercase tracking-wider">Verdict</p>
+              <p className="text-[10px] text-white/50 uppercase tracking-wider">{labels.labelVerdict}</p>
               <p className="text-[9px] text-white/40 mt-1 leading-tight">{result.verdictLabel || '—'}</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/10 group hover:bg-white/15 transition-all">
               <p className="text-lg font-bold text-white mb-1">{result.estimatedTimeline || '—'}</p>
-              <p className="text-[10px] text-white/50 uppercase tracking-wider">Timeline</p>
+              <p className="text-[10px] text-white/50 uppercase tracking-wider">{labels.labelTimeline}</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/10 group hover:bg-white/15 transition-all">
               <p className="text-lg font-bold text-white mb-1">{result.totalCostRange || '—'}</p>
-              <p className="text-[10px] text-white/50 uppercase tracking-wider">Total Cost</p>
+              <p className="text-[10px] text-white/50 uppercase tracking-wider">{labels.labelTotalCost}</p>
             </div>
           </div>
 
@@ -301,8 +301,8 @@ export default function ReportShell(props: ReportShellProps) {
           <span>{labels.footerEmail}</span>
         </div>
         <div className="flex items-center gap-4 mt-2 md:mt-0">
-          <span>CONFIDENTIAL</span>
-          <span>Report #{reportId}</span>
+          <span>{labels.labelConfidential}</span>
+          <span>{labels.labelReportLabel}{reportId}</span>
         </div>
       </div>
     </div>

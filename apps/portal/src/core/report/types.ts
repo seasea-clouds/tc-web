@@ -76,6 +76,15 @@ export interface ReportLabels {
   labelOrigin: string;
   gaccRequired: string;
   gaccNotRequired: string;
+  labelPreparedFor: string;
+  labelClient: string;
+  labelReportLabel: string;
+  labelConfidential: string;
+  labelRiskScore: string;
+  labelVerdict: string;
+  labelTimeline: string;
+  labelTotalCost: string;
+  labelRiskDimension: string;
 }
 
 // ─── 基础报告数据（所有模块必须返回） ────────────────────────────────

@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "Sử dụng chất làm dẻo không chứa phthalate cho tất cả các bộ phận mềm",
     "wireless_device_shipped_without_srrc": "Thiết bị không dây được vận chuyển không có SRRC",
     "wrong_gb_4706_sub_standard_applied": "Áp dụng sai tiêu chuẩn phụ GB 4706",
-    "young_consumers_preference_for_international_brands": "Sự ưa thích của người tiêu dùng trẻ đối với thương hiệu quốc tế"
+    "young_consumers_preference_for_international_brands": "Sự ưa thích của người tiêu dùng trẻ đối với thương hiệu quốc tế",
+    "reportClient": "Khách hàng",
+    "reportConfidential": "BẢO MẬT",
+    "reportPreparedFor": "Chuẩn bị cho:",
+    "reportReportLabel": "Báo cáo #",
+    "reportRiskDimension": "Thứ nguyên rủi ro",
+    "reportRiskScore": "Điểm rủi ro",
+    "reportTimeline": "Dòng thời gian",
+    "reportTotalCost": "Tổng chi phí",
+    "reportVerdict": "Phán quyết"
   },
   "Report": {
     "loadingTitle": "Đang tải báo cáo của bạn",

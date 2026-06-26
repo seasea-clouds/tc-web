@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "Використовуйте пластифікатори без фталатів для всіх м’яких частин",
     "wireless_device_shipped_without_srrc": "Бездротовий пристрій поставляється без SRRC",
     "wrong_gb_4706_sub_standard_applied": "Застосовано неправильний субстандарт GB 4706",
-    "young_consumers_preference_for_international_brands": "Молоді споживачі віддають перевагу міжнародним брендам"
+    "young_consumers_preference_for_international_brands": "Молоді споживачі віддають перевагу міжнародним брендам",
+    "reportClient": "Клієнт",
+    "reportConfidential": "КОНФІДЕНЦІЙНО",
+    "reportPreparedFor": "Підготовлено до:",
+    "reportReportLabel": "Звіт №",
+    "reportRiskDimension": "Вимір ризику",
+    "reportRiskScore": "Оцінка ризику",
+    "reportTimeline": "Хронологія",
+    "reportTotalCost": "Загальна вартість",
+    "reportVerdict": "Вердикт"
   },
   "Report": {
     "loadingTitle": "Завантаження звіту",

@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "Käytä ftalaatittomia pehmittimiä kaikissa pehmeissä osissa",
     "wireless_device_shipped_without_srrc": "Langaton laite toimitetaan ilman SRRC:tä",
     "wrong_gb_4706_sub_standard_applied": "Väärä GB 4706 alistandardi sovellettu",
-    "young_consumers_preference_for_international_brands": "Nuorten kuluttajien suosio kansainvälisiä brändejä kohtaan"
+    "young_consumers_preference_for_international_brands": "Nuorten kuluttajien suosio kansainvälisiä brändejä kohtaan",
+    "reportClient": "Asiakas",
+    "reportConfidential": "LUOTTAMUKSELLINEN",
+    "reportPreparedFor": "Valmistettu:",
+    "reportReportLabel": "Raportti #",
+    "reportRiskDimension": "Riskin ulottuvuus",
+    "reportRiskScore": "Riskipisteet",
+    "reportTimeline": "Aikajana",
+    "reportTotalCost": "Kokonaiskustannukset",
+    "reportVerdict": "Tuomio"
   },
   "Report": {
     "loadingTitle": "Ladataan raporttiasi",

@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "Für alle Weichteile phthalatfreie Weichmacher verwenden",
     "wireless_device_shipped_without_srrc": "Drahtloses Gerät wird ohne SRRC geliefert",
     "wrong_gb_4706_sub_standard_applied": "Es wurde der falsche Unterstandard GB 4706 angewendet",
-    "young_consumers_preference_for_international_brands": "Präferenz junger Verbraucher für internationale Marken"
+    "young_consumers_preference_for_international_brands": "Präferenz junger Verbraucher für internationale Marken",
+    "reportClient": "Kunde",
+    "reportConfidential": "VERTRAULICH",
+    "reportPreparedFor": "Vorbereitet für:",
+    "reportReportLabel": "Bericht #",
+    "reportRiskDimension": "Risikodimension",
+    "reportRiskScore": "Risikobewertung",
+    "reportTimeline": "Zeitleiste",
+    "reportTotalCost": "Gesamtkosten",
+    "reportVerdict": "Urteil"
   },
   "Report": {
     "loadingTitle": "Laden Ihres Berichts",

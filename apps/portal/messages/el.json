@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "Χρησιμοποιήστε πλαστικοποιητές χωρίς φθαλικές ενώσεις για όλα τα μαλακά μέρη",
     "wireless_device_shipped_without_srrc": "Η ασύρματη συσκευή αποστέλλεται χωρίς SRRC",
     "wrong_gb_4706_sub_standard_applied": "Εφαρμόστηκε λάθος υποπρότυπο GB 4706",
-    "young_consumers_preference_for_international_brands": "Προτίμηση των νέων καταναλωτών για διεθνείς μάρκες"
+    "young_consumers_preference_for_international_brands": "Προτίμηση των νέων καταναλωτών για διεθνείς μάρκες",
+    "reportClient": "Πελάτης",
+    "reportConfidential": "ΕΜΠΙΣΤΕΥΤΙΚΟΣ",
+    "reportPreparedFor": "Προετοιμάστηκε για:",
+    "reportReportLabel": "Αναφορά #",
+    "reportRiskDimension": "Διάσταση κινδύνου",
+    "reportRiskScore": "Βαθμολογία κινδύνου",
+    "reportTimeline": "Χρονολόγιο",
+    "reportTotalCost": "Συνολικό Κόστος",
+    "reportVerdict": "Ετυμηγορία"
   },
   "Report": {
     "loadingTitle": "Φόρτωση της αναφοράς σας",

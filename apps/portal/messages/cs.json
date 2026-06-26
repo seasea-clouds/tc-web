@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "Na všechny měkké části používejte změkčovadla bez obsahu ftalátů",
     "wireless_device_shipped_without_srrc": "Bezdrátové zařízení je dodáváno bez SRRC",
     "wrong_gb_4706_sub_standard_applied": "Byl použit nesprávný podstandard GB 4706",
-    "young_consumers_preference_for_international_brands": "Preference mladých spotřebitelů pro mezinárodní značky"
+    "young_consumers_preference_for_international_brands": "Preference mladých spotřebitelů pro mezinárodní značky",
+    "reportClient": "Klient",
+    "reportConfidential": "DŮVĚRNÉ",
+    "reportPreparedFor": "Připraveno pro:",
+    "reportReportLabel": "hlášení č.",
+    "reportRiskDimension": "Riziková dimenze",
+    "reportRiskScore": "Skóre rizika",
+    "reportTimeline": "Časová osa",
+    "reportTotalCost": "Celkové náklady",
+    "reportVerdict": "Výrok"
   },
   "Report": {
     "loadingTitle": "Načítání vaší zprávy",

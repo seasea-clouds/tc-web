@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "সমস্ত নরম অংশের জন্য phthalate-মুক্ত প্লাস্টিকাইজার ব্যবহার করুন",
     "wireless_device_shipped_without_srrc": "SRRC ছাড়া ওয়্যারলেস ডিভাইস পাঠানো হয়েছে",
     "wrong_gb_4706_sub_standard_applied": "ভুল GB 4706 সাব-স্ট্যান্ডার্ড প্রয়োগ করা হয়েছে",
-    "young_consumers_preference_for_international_brands": "আন্তর্জাতিক ব্র্যান্ডের জন্য তরুণ ভোক্তাদের পছন্দ"
+    "young_consumers_preference_for_international_brands": "আন্তর্জাতিক ব্র্যান্ডের জন্য তরুণ ভোক্তাদের পছন্দ",
+    "reportClient": "ক্লায়েন্ট",
+    "reportConfidential": "গোপনীয়",
+    "reportPreparedFor": "এর জন্য প্রস্তুত:",
+    "reportReportLabel": "রিপোর্ট #",
+    "reportRiskDimension": "ঝুঁকির মাত্রা",
+    "reportRiskScore": "ঝুঁকি স্কোর",
+    "reportTimeline": "টাইমলাইন",
+    "reportTotalCost": "মোট খরচ",
+    "reportVerdict": "রায়"
   },
   "Report": {
     "loadingTitle": "আপনার রিপোর্ট লোড হচ্ছে",

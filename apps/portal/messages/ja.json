@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "すべての軟質部品にフタル酸エステルを含まない可塑剤を使用する",
     "wireless_device_shipped_without_srrc": "SRRC なしで出荷されるワイヤレス デバイス",
     "wrong_gb_4706_sub_standard_applied": "間違った GB 4706 準規格が適用されています",
-    "young_consumers_preference_for_international_brands": "若い消費者は国際ブランドを好む"
+    "young_consumers_preference_for_international_brands": "若い消費者は国際ブランドを好む",
+    "reportClient": "クライアント",
+    "reportConfidential": "機密",
+    "reportPreparedFor": "準備するもの:",
+    "reportReportLabel": "報告 ＃",
+    "reportRiskDimension": "リスクの次元",
+    "reportRiskScore": "リスクスコア",
+    "reportTimeline": "タイムライン",
+    "reportTotalCost": "総コスト",
+    "reportVerdict": "評決"
   },
   "Report": {
     "loadingTitle": "レポートをロードする",

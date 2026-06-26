@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "Для ўсіх мяккіх частак выкарыстоўвайце пластыфікатары без фталатаў",
     "wireless_device_shipped_without_srrc": "Бесправадная прылада пастаўляецца без SRRC",
     "wrong_gb_4706_sub_standard_applied": "Ужыты няправільны субстандарт GB 4706",
-    "young_consumers_preference_for_international_brands": "Перавага маладых спажыўцоў міжнародным брэндам"
+    "young_consumers_preference_for_international_brands": "Перавага маладых спажыўцоў міжнародным брэндам",
+    "reportClient": "Кліент",
+    "reportConfidential": "КАНФІДЭНЦЫЙНА",
+    "reportPreparedFor": "Падрыхтавана да:",
+    "reportReportLabel": "Справаздача #",
+    "reportRiskDimension": "Вымярэнне рызыкі",
+    "reportRiskScore": "Ацэнка рызыкі",
+    "reportTimeline": "Храналогія",
+    "reportTotalCost": "Агульны кошт",
+    "reportVerdict": "Прысуд"
   },
   "Report": {
     "loadingTitle": "Загрузка вашай справаздачы",

@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "Za vse mehke dele uporabljajte mehčala brez ftalatov",
     "wireless_device_shipped_without_srrc": "Brezžična naprava dobavljena brez SRRC",
     "wrong_gb_4706_sub_standard_applied": "Uporabljen je napačen podstandard GB 4706",
-    "young_consumers_preference_for_international_brands": "Prednost mladih potrošnikov mednarodnim blagovnim znamkam"
+    "young_consumers_preference_for_international_brands": "Prednost mladih potrošnikov mednarodnim blagovnim znamkam",
+    "reportClient": "Stranka",
+    "reportConfidential": "ZAUPNO",
+    "reportPreparedFor": "Pripravljeno za:",
+    "reportReportLabel": "Poročilo #",
+    "reportRiskDimension": "Dimenzija tveganja",
+    "reportRiskScore": "Ocena tveganja",
+    "reportTimeline": "Časovnica",
+    "reportTotalCost": "Skupni stroški",
+    "reportVerdict": "Razsodba"
   },
   "Report": {
     "loadingTitle": "Nalaganje vašega poročila",

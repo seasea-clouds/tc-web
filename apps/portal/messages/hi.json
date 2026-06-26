@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "सभी नरम भागों के लिए फ़ेथलेट-मुक्त प्लास्टिसाइज़र का उपयोग करें",
     "wireless_device_shipped_without_srrc": "वायरलेस डिवाइस SRRC के बिना भेजा गया",
     "wrong_gb_4706_sub_standard_applied": "गलत जीबी 4706 घटिया लागू किया गया",
-    "young_consumers_preference_for_international_brands": "अंतरराष्ट्रीय ब्रांडों के प्रति युवा उपभोक्ताओं की प्राथमिकता"
+    "young_consumers_preference_for_international_brands": "अंतरराष्ट्रीय ब्रांडों के प्रति युवा उपभोक्ताओं की प्राथमिकता",
+    "reportClient": "ग्राहक",
+    "reportConfidential": "गोपनीय",
+    "reportPreparedFor": "तैयार किया गया:",
+    "reportReportLabel": "प्रतिवेदन #",
+    "reportRiskDimension": "जोखिम का आयाम",
+    "reportRiskScore": "जोखिम स्कोर",
+    "reportTimeline": "समय",
+    "reportTotalCost": "कुल लागत",
+    "reportVerdict": "निर्णय"
   },
   "Report": {
     "loadingTitle": "आपकी रिपोर्ट लोड हो रही है",

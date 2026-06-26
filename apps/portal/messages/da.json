@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "Brug ftalatfri blødgørere til alle bløddele",
     "wireless_device_shipped_without_srrc": "Trådløs enhed leveret uden SRRC",
     "wrong_gb_4706_sub_standard_applied": "Forkert GB 4706 understandard anvendt",
-    "young_consumers_preference_for_international_brands": "Unge forbrugeres præference for internationale mærker"
+    "young_consumers_preference_for_international_brands": "Unge forbrugeres præference for internationale mærker",
+    "reportClient": "Klient",
+    "reportConfidential": "FORTROLIG",
+    "reportPreparedFor": "Forberedt til:",
+    "reportReportLabel": "Rapport #",
+    "reportRiskDimension": "Risikodimension",
+    "reportRiskScore": "Risikoscore",
+    "reportTimeline": "Tidslinje",
+    "reportTotalCost": "Samlede omkostninger",
+    "reportVerdict": "Dom"
   },
   "Report": {
     "loadingTitle": "Indlæser din rapport",

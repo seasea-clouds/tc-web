@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "Do wszystkich miękkich części należy używać plastyfikatorów niezawierających ftalanów",
     "wireless_device_shipped_without_srrc": "Urządzenie bezprzewodowe dostarczane bez SRRC",
     "wrong_gb_4706_sub_standard_applied": "Zastosowano błędną normę GB 4706",
-    "young_consumers_preference_for_international_brands": "Preferencje młodych konsumentów wobec marek międzynarodowych"
+    "young_consumers_preference_for_international_brands": "Preferencje młodych konsumentów wobec marek międzynarodowych",
+    "reportClient": "Klient",
+    "reportConfidential": "POUFNY",
+    "reportPreparedFor": "Przygotowany dla:",
+    "reportReportLabel": "Raport #",
+    "reportRiskDimension": "Wymiar ryzyka",
+    "reportRiskScore": "Ocena ryzyka",
+    "reportTimeline": "Oś czasu",
+    "reportTotalCost": "Całkowity koszt",
+    "reportVerdict": "Werdykt"
   },
   "Report": {
     "loadingTitle": "Ładowanie raportu",

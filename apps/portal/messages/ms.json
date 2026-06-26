@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "Gunakan pemplastik bebas phthalate untuk semua bahagian lembut",
     "wireless_device_shipped_without_srrc": "Peranti wayarles dihantar tanpa SRRC",
     "wrong_gb_4706_sub_standard_applied": "GB 4706 substandard yang salah digunakan",
-    "young_consumers_preference_for_international_brands": "Keutamaan pengguna muda terhadap jenama antarabangsa"
+    "young_consumers_preference_for_international_brands": "Keutamaan pengguna muda terhadap jenama antarabangsa",
+    "reportClient": "Pelanggan",
+    "reportConfidential": "SULIT",
+    "reportPreparedFor": "Disediakan untuk:",
+    "reportReportLabel": "Laporan #",
+    "reportRiskDimension": "Dimensi Risiko",
+    "reportRiskScore": "Skor Risiko",
+    "reportTimeline": "Garis masa",
+    "reportTotalCost": "Jumlah Kos",
+    "reportVerdict": "keputusan"
   },
   "Report": {
     "loadingTitle": "Memuatkan Laporan Anda",

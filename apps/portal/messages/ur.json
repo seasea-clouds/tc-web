@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "تمام نرم حصوں کے لیے فتھالیٹ سے پاک پلاسٹائزر استعمال کریں۔",
     "wireless_device_shipped_without_srrc": "وائرلیس ڈیوائس SRRC کے بغیر بھیجی گئی۔",
     "wrong_gb_4706_sub_standard_applied": "غلط GB 4706 ذیلی معیار کا اطلاق ہوا۔",
-    "young_consumers_preference_for_international_brands": "بین الاقوامی برانڈز کے لیے نوجوان صارفین کی ترجیح"
+    "young_consumers_preference_for_international_brands": "بین الاقوامی برانڈز کے لیے نوجوان صارفین کی ترجیح",
+    "reportClient": "کلائنٹ",
+    "reportConfidential": "خفیہ",
+    "reportPreparedFor": "کے لیے تیار:",
+    "reportReportLabel": "رپورٹ #",
+    "reportRiskDimension": "رسک ڈائمینشن",
+    "reportRiskScore": "رسک اسکور",
+    "reportTimeline": "ٹائم لائن",
+    "reportTotalCost": "کل لاگت",
+    "reportVerdict": "فیصلہ"
   },
   "Report": {
     "loadingTitle": "آپ کی رپورٹ لوڈ ہو رہی ہے۔",

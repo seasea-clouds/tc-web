@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "Använd ftalatfria mjukgörare för alla mjukdelar",
     "wireless_device_shipped_without_srrc": "Trådlös enhet levereras utan SRRC",
     "wrong_gb_4706_sub_standard_applied": "Fel GB 4706 understandard tillämpas",
-    "young_consumers_preference_for_international_brands": "Unga konsumenters förkärlek för internationella varumärken"
+    "young_consumers_preference_for_international_brands": "Unga konsumenters förkärlek för internationella varumärken",
+    "reportClient": "Klient",
+    "reportConfidential": "KONFIDENTIELL",
+    "reportPreparedFor": "Förberedd för:",
+    "reportReportLabel": "Rapport #",
+    "reportRiskDimension": "Riskdimension",
+    "reportRiskScore": "Riskpoäng",
+    "reportTimeline": "Tidslinje",
+    "reportTotalCost": "Total kostnad",
+    "reportVerdict": "Dom"
   },
   "Report": {
     "loadingTitle": "Laddar din rapport",

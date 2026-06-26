@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "සියලුම මෘදු කොටස් සඳහා තැලේට් රහිත ප්ලාස්ටිසයිසර් භාවිතා කරන්න",
     "wireless_device_shipped_without_srrc": "SRRC නොමැතිව නැව්ගත කරන ලද රැහැන් රහිත උපාංගය",
     "wrong_gb_4706_sub_standard_applied": "වැරදි GB 4706 උප ප්‍රමිතියක් යොදන ලදී",
-    "young_consumers_preference_for_international_brands": "ජාත්‍යන්තර වෙළඳ නාම සඳහා තරුණ පාරිභෝගිකයින්ගේ කැමැත්ත"
+    "young_consumers_preference_for_international_brands": "ජාත්‍යන්තර වෙළඳ නාම සඳහා තරුණ පාරිභෝගිකයින්ගේ කැමැත්ත",
+    "reportClient": "සේවාදායකයා",
+    "reportConfidential": "රහසිගතයි",
+    "reportPreparedFor": "සඳහා සූදානම්:",
+    "reportReportLabel": "වාර්තාව #",
+    "reportRiskDimension": "අවදානම් මානය",
+    "reportRiskScore": "අවදානම් ලකුණු",
+    "reportTimeline": "කාලරේඛාව",
+    "reportTotalCost": "මුළු පිරිවැය",
+    "reportVerdict": "තීන්දුව"
   },
   "Report": {
     "loadingTitle": "ඔබේ වාර්තාව පූරණය කරමින්",

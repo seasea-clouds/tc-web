@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "모든 부드러운 부품에는 프탈레이트가 없는 가소제를 사용합니다.",
     "wireless_device_shipped_without_srrc": "SRRC 없이 배송된 무선 장치",
     "wrong_gb_4706_sub_standard_applied": "잘못된 GB 4706 하위 표준 적용",
-    "young_consumers_preference_for_international_brands": "해외 브랜드에 대한 젊은 소비자의 선호"
+    "young_consumers_preference_for_international_brands": "해외 브랜드에 대한 젊은 소비자의 선호",
+    "reportClient": "고객",
+    "reportConfidential": "비밀의",
+    "reportPreparedFor": "다음을 위해 준비됨:",
+    "reportReportLabel": "보고서 #",
+    "reportRiskDimension": "위험 차원",
+    "reportRiskScore": "위험 점수",
+    "reportTimeline": "타임라인",
+    "reportTotalCost": "총 비용",
+    "reportVerdict": "평결"
   },
   "Report": {
     "loadingTitle": "보고서 로드 중",

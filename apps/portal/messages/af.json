@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "Gebruik ftalaatvrye weekmakers vir alle sagte dele",
     "wireless_device_shipped_without_srrc": "Draadlose toestel gestuur sonder SRRC",
     "wrong_gb_4706_sub_standard_applied": "Verkeerde GB 4706 substandaard toegepas",
-    "young_consumers_preference_for_international_brands": "Jong verbruikers se voorkeur vir internasionale handelsmerke"
+    "young_consumers_preference_for_international_brands": "Jong verbruikers se voorkeur vir internasionale handelsmerke",
+    "reportClient": "Kliënt",
+    "reportConfidential": "VERTROULIK",
+    "reportPreparedFor": "Voorbereid vir:",
+    "reportReportLabel": "Verslag #",
+    "reportRiskDimension": "Risiko Dimensie",
+    "reportRiskScore": "Risiko telling",
+    "reportTimeline": "Tydlyn",
+    "reportTotalCost": "Totale koste",
+    "reportVerdict": "Uitspraak"
   },
   "Report": {
     "loadingTitle": "Laai tans jou verslag",

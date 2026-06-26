@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "За све меке делове користите пластификаторе без фталата",
     "wireless_device_shipped_without_srrc": "Бежични уређај се испоручује без СРРЦ-а",
     "wrong_gb_4706_sub_standard_applied": "Примењен је погрешан подстандард ГБ 4706",
-    "young_consumers_preference_for_international_brands": "Млади потрошачи преферирају међународне брендове"
+    "young_consumers_preference_for_international_brands": "Млади потрошачи преферирају међународне брендове",
+    "reportClient": "Клијент",
+    "reportConfidential": "ЦОНФИДЕНТИАЛ",
+    "reportPreparedFor": "Припремљено за:",
+    "reportReportLabel": "Извештај #",
+    "reportRiskDimension": "Димензија ризика",
+    "reportRiskScore": "Оцена ризика",
+    "reportTimeline": "Временска линија",
+    "reportTotalCost": "Тотал Цост",
+    "reportVerdict": "Пресуда"
   },
   "Report": {
     "loadingTitle": "Учитавање вашег извештаја",

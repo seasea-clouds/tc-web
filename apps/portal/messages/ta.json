@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "அனைத்து மென்மையான பாகங்களுக்கும் பித்தலேட் இல்லாத பிளாஸ்டிசைசர்களைப் பயன்படுத்தவும்",
     "wireless_device_shipped_without_srrc": "SRRC இல்லாமல் வயர்லெஸ் சாதனம் அனுப்பப்பட்டது",
     "wrong_gb_4706_sub_standard_applied": "தவறான ஜிபி 4706 துணைத் தரம் பயன்படுத்தப்பட்டது",
-    "young_consumers_preference_for_international_brands": "சர்வதேச பிராண்டுகளுக்கு இளம் நுகர்வோரின் விருப்பம்"
+    "young_consumers_preference_for_international_brands": "சர்வதேச பிராண்டுகளுக்கு இளம் நுகர்வோரின் விருப்பம்",
+    "reportClient": "வாடிக்கையாளர்",
+    "reportConfidential": "இரகசியமானது",
+    "reportPreparedFor": "தயார்:",
+    "reportReportLabel": "அறிக்கை #",
+    "reportRiskDimension": "இடர் அளவு",
+    "reportRiskScore": "ஆபத்து மதிப்பெண்",
+    "reportTimeline": "காலவரிசை",
+    "reportTotalCost": "மொத்த செலவு",
+    "reportVerdict": "தீர்ப்பு"
   },
   "Report": {
     "loadingTitle": "உங்கள் அறிக்கையை ஏற்றுகிறது",

@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "برای تمام قطعات نرم از نرم کننده های بدون فتالات استفاده کنید",
     "wireless_device_shipped_without_srrc": "دستگاه بی سیم بدون SRRC ارسال می شود",
     "wrong_gb_4706_sub_standard_applied": "زیر استاندارد GB 4706 اشتباه اعمال شده است",
-    "young_consumers_preference_for_international_brands": "ترجیح مصرف کنندگان جوان برای مارک های بین المللی"
+    "young_consumers_preference_for_international_brands": "ترجیح مصرف کنندگان جوان برای مارک های بین المللی",
+    "reportClient": "مشتری",
+    "reportConfidential": "محرمانه",
+    "reportPreparedFor": "آماده شده برای:",
+    "reportReportLabel": "گزارش #",
+    "reportRiskDimension": "بعد ریسک",
+    "reportRiskScore": "امتیاز ریسک",
+    "reportTimeline": "جدول زمانی",
+    "reportTotalCost": "هزینه کل",
+    "reportVerdict": "حکم"
   },
   "Report": {
     "loadingTitle": "در حال بارگیری گزارش شما",

@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "Használjon ftalátmentes lágyítót minden puha részhez",
     "wireless_device_shipped_without_srrc": "Vezeték nélküli eszköz SRRC nélkül szállítva",
     "wrong_gb_4706_sub_standard_applied": "Rossz GB 4706 alszabványt alkalmaztak",
-    "young_consumers_preference_for_international_brands": "A fiatal fogyasztók preferenciája a nemzetközi márkák iránt"
+    "young_consumers_preference_for_international_brands": "A fiatal fogyasztók preferenciája a nemzetközi márkák iránt",
+    "reportClient": "Ügyfél",
+    "reportConfidential": "BIZALMAS",
+    "reportPreparedFor": "Felkészült:",
+    "reportReportLabel": "Jelentés Nr.",
+    "reportRiskDimension": "Kockázati dimenzió",
+    "reportRiskScore": "Kockázati pontszám",
+    "reportTimeline": "Idővonal",
+    "reportTotalCost": "Teljes költség",
+    "reportVerdict": "Ítélet"
   },
   "Report": {
     "loadingTitle": "A jelentés betöltése",

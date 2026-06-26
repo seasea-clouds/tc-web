@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "ใช้พลาสติไซเซอร์ที่ปราศจากพาทาเลทสำหรับชิ้นส่วนที่อ่อนนุ่มทั้งหมด",
     "wireless_device_shipped_without_srrc": "อุปกรณ์ไร้สายจัดส่งโดยไม่มี SRRC",
     "wrong_gb_4706_sub_standard_applied": "ใช้มาตรฐานย่อย GB 4706 ผิด",
-    "young_consumers_preference_for_international_brands": "ความชอบของผู้บริโภครุ่นใหม่สำหรับแบรนด์ต่างประเทศ"
+    "young_consumers_preference_for_international_brands": "ความชอบของผู้บริโภครุ่นใหม่สำหรับแบรนด์ต่างประเทศ",
+    "reportClient": "ลูกค้า",
+    "reportConfidential": "เป็นความลับ",
+    "reportPreparedFor": "เตรียมไว้สำหรับ:",
+    "reportReportLabel": "รายงาน #",
+    "reportRiskDimension": "มิติความเสี่ยง",
+    "reportRiskScore": "คะแนนความเสี่ยง",
+    "reportTimeline": "ไทม์ไลน์",
+    "reportTotalCost": "ต้นทุนรวม",
+    "reportVerdict": "คำตัดสิน"
   },
   "Report": {
     "loadingTitle": "กำลังโหลดรายงานของคุณ",

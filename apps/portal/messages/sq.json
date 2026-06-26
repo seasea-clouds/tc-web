@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "Përdorni plastifikues pa ftalate për të gjitha pjesët e buta",
     "wireless_device_shipped_without_srrc": "Pajisja me valë dërgohet pa SRRC",
     "wrong_gb_4706_sub_standard_applied": "U aplikua nën-standard i gabuar GB 4706",
-    "young_consumers_preference_for_international_brands": "Preferenca e konsumatorëve të rinj për markat ndërkombëtare"
+    "young_consumers_preference_for_international_brands": "Preferenca e konsumatorëve të rinj për markat ndërkombëtare",
+    "reportClient": "Klienti",
+    "reportConfidential": "KONFIDENCIALE",
+    "reportPreparedFor": "Përgatitur për:",
+    "reportReportLabel": "Raporti #",
+    "reportRiskDimension": "Dimensioni i rrezikut",
+    "reportRiskScore": "Nota e rrezikut",
+    "reportTimeline": "Afati kohor",
+    "reportTotalCost": "Kostoja totale",
+    "reportVerdict": "Verdikti"
   },
   "Report": {
     "loadingTitle": "Duke ngarkuar raportin tuaj",

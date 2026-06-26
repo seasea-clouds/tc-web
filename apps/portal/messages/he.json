@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "השתמש בחומרי פלסטיק נטולי פתלטים עבור כל החלקים הרכים",
     "wireless_device_shipped_without_srrc": "מכשיר אלחוטי נשלח ללא SRRC",
     "wrong_gb_4706_sub_standard_applied": "הוחל תת-תקן שגוי GB 4706",
-    "young_consumers_preference_for_international_brands": "העדפת צרכנים צעירים למותגים בינלאומיים"
+    "young_consumers_preference_for_international_brands": "העדפת צרכנים צעירים למותגים בינלאומיים",
+    "reportClient": "לָקוּחַ",
+    "reportConfidential": "סוֹדִי",
+    "reportPreparedFor": "מוכן ל:",
+    "reportReportLabel": "דוח מס'",
+    "reportRiskDimension": "מימד סיכון",
+    "reportRiskScore": "ציון סיכון",
+    "reportTimeline": "ציר זמן",
+    "reportTotalCost": "עלות כוללת",
+    "reportVerdict": "פְּסַק דִין"
   },
   "Report": {
     "loadingTitle": "טוען את הדוח שלך",

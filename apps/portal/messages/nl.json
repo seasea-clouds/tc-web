@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "Gebruik voor alle zachte delen ftalaatvrije weekmakers",
     "wireless_device_shipped_without_srrc": "Draadloos apparaat verzonden zonder Zeehondencrèche",
     "wrong_gb_4706_sub_standard_applied": "Verkeerde substandaard GB 4706 toegepast",
-    "young_consumers_preference_for_international_brands": "Voorkeur van jonge consumenten voor internationale merken"
+    "young_consumers_preference_for_international_brands": "Voorkeur van jonge consumenten voor internationale merken",
+    "reportClient": "Cliënt",
+    "reportConfidential": "VERTROUWELIJK",
+    "reportPreparedFor": "Voorbereid op:",
+    "reportReportLabel": "Rapport #",
+    "reportRiskDimension": "Risicodimensie",
+    "reportRiskScore": "Risicoscore",
+    "reportTimeline": "Tijdlijn",
+    "reportTotalCost": "Totale kosten",
+    "reportVerdict": "Uitspraak"
   },
   "Report": {
     "loadingTitle": "Uw rapport laden",

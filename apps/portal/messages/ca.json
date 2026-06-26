@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "Utilitzeu plastificants sense ftalats per a totes les parts toves",
     "wireless_device_shipped_without_srrc": "Dispositiu sense fil enviat sense SRRC",
     "wrong_gb_4706_sub_standard_applied": "S'ha aplicat un estàndard inferior GB 4706 incorrecte",
-    "young_consumers_preference_for_international_brands": "Preferència dels joves consumidors per les marques internacionals"
+    "young_consumers_preference_for_international_brands": "Preferència dels joves consumidors per les marques internacionals",
+    "reportClient": "Client",
+    "reportConfidential": "CONFIDENCIAL",
+    "reportPreparedFor": "Preparat per a:",
+    "reportReportLabel": "Informe núm.",
+    "reportRiskDimension": "Dimensió de risc",
+    "reportRiskScore": "Puntuació de risc",
+    "reportTimeline": "Cronologia",
+    "reportTotalCost": "Cost total",
+    "reportVerdict": "Veredicte"
   },
   "Report": {
     "loadingTitle": "Carregant el vostre informe",

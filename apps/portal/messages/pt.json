@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "Use plastificantes sem ftalatos para todas as peças moles",
     "wireless_device_shipped_without_srrc": "Dispositivo sem fio enviado sem SRRC",
     "wrong_gb_4706_sub_standard_applied": "Subpadrão GB 4706 errado aplicado",
-    "young_consumers_preference_for_international_brands": "Preferência dos jovens consumidores por marcas internacionais"
+    "young_consumers_preference_for_international_brands": "Preferência dos jovens consumidores por marcas internacionais",
+    "reportClient": "Cliente",
+    "reportConfidential": "CONFIDENCIAL",
+    "reportPreparedFor": "Preparado para:",
+    "reportReportLabel": "Relatório #",
+    "reportRiskDimension": "Dimensão de Risco",
+    "reportRiskScore": "Pontuação de risco",
+    "reportTimeline": "Linha do tempo",
+    "reportTotalCost": "Custo total",
+    "reportVerdict": "Veredicto"
   },
   "Report": {
     "loadingTitle": "Carregando seu relatório",

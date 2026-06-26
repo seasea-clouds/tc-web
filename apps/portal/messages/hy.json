@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "Օգտագործեք առանց ֆտալատների պլաստիկացնողներ բոլոր փափուկ մասերի համար",
     "wireless_device_shipped_without_srrc": "Անլար սարքը առաքվում է առանց SRRC",
     "wrong_gb_4706_sub_standard_applied": "Սխալ է կիրառվել GB 4706 ենթ ստանդարտ",
-    "young_consumers_preference_for_international_brands": "Երիտասարդ սպառողների նախապատվությունը միջազգային ապրանքանիշերին"
+    "young_consumers_preference_for_international_brands": "Երիտասարդ սպառողների նախապատվությունը միջազգային ապրանքանիշերին",
+    "reportClient": "Հաճախորդ",
+    "reportConfidential": "ԳԱՂՏՆԻ",
+    "reportPreparedFor": "Պատրաստված է.",
+    "reportReportLabel": "Հաշվետվություն #",
+    "reportRiskDimension": "Ռիսկի չափը",
+    "reportRiskScore": "Ռիսկի միավոր",
+    "reportTimeline": "Ժամանակացույց",
+    "reportTotalCost": "Ընդհանուր արժեքը",
+    "reportVerdict": "Դատավճիռ"
   },
   "Report": {
     "loadingTitle": "Բեռնվում է ձեր զեկույցը",

@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "Bruk ftalatfrie myknere for alle myke deler",
     "wireless_device_shipped_without_srrc": "Trådløs enhet leveres uten SRRC",
     "wrong_gb_4706_sub_standard_applied": "Feil GB 4706 understandard brukt",
-    "young_consumers_preference_for_international_brands": "Unge forbrukeres preferanse for internasjonale merkevarer"
+    "young_consumers_preference_for_international_brands": "Unge forbrukeres preferanse for internasjonale merkevarer",
+    "reportClient": "Klient",
+    "reportConfidential": "FORTROLIG",
+    "reportPreparedFor": "Forberedt for:",
+    "reportReportLabel": "Rapport #",
+    "reportRiskDimension": "Risikodimensjon",
+    "reportRiskScore": "Risikopoeng",
+    "reportTimeline": "Tidslinje",
+    "reportTotalCost": "Total kostnad",
+    "reportVerdict": "Kjennelse"
   },
   "Report": {
     "loadingTitle": "Laster inn rapporten din",

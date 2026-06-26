@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "Tumia plasticizers zisizo na phthalate kwa sehemu zote laini",
     "wireless_device_shipped_without_srrc": "Kifaa kisichotumia waya kinasafirishwa bila SRRC",
     "wrong_gb_4706_sub_standard_applied": "Kiwango kidogo cha GB 4706 kimetumika",
-    "young_consumers_preference_for_international_brands": "Upendeleo wa watumiaji wachanga kwa chapa za kimataifa"
+    "young_consumers_preference_for_international_brands": "Upendeleo wa watumiaji wachanga kwa chapa za kimataifa",
+    "reportClient": "Mteja",
+    "reportConfidential": "SIRI",
+    "reportPreparedFor": "Imetayarishwa kwa:",
+    "reportReportLabel": "Ripoti #",
+    "reportRiskDimension": "Vipimo vya Hatari",
+    "reportRiskScore": "Alama ya Hatari",
+    "reportTimeline": "Rekodi ya matukio",
+    "reportTotalCost": "Jumla ya Gharama",
+    "reportVerdict": "Uamuzi"
   },
   "Report": {
     "loadingTitle": "Inapakia Ripoti Yako",

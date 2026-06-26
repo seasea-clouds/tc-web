@@ -1732,7 +1732,16 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "استخدم الملدنات الخالية من الفثالات لجميع الأجزاء الناعمة",
     "wireless_device_shipped_without_srrc": "يتم شحن الجهاز اللاسلكي بدون SRRC",
     "wrong_gb_4706_sub_standard_applied": "تم تطبيق المعيار الفرعي GB 4706 بشكل خاطئ",
-    "young_consumers_preference_for_international_brands": "تفضيل المستهلكين الشباب للعلامات التجارية العالمية"
+    "young_consumers_preference_for_international_brands": "تفضيل المستهلكين الشباب للعلامات التجارية العالمية",
+    "reportClient": "عميل",
+    "reportConfidential": "مؤتمن",
+    "reportPreparedFor": "على استعداد ل:",
+    "reportReportLabel": "تقرير #",
+    "reportRiskDimension": "البعد المخاطر",
+    "reportRiskScore": "درجة المخاطرة",
+    "reportTimeline": "الجدول الزمني",
+    "reportTotalCost": "التكلفة الإجمالية",
+    "reportVerdict": "الحكم"
   },
   "Report": {
     "loadingTitle": "جارٍ تحميل تقريرك",

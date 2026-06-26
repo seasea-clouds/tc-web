@@ -142,11 +142,14 @@
   ├── ✅ P2-2/P2-3 翻译质量小修
   ├── ✅ P2-4 CopyButton aria-label
   └── ⏳ P0-5 GACC类别key补全47语言翻译任务
-  └── ⏳ P0-7 报告页修复 (ReportShell + rules.ts)
+  └── ✅ P0-7 ReportShell 15处硬编码 + preview i18n (7文件)
+  ├── ✅ 翻译 9个 Check 新键 × 46语言
+  └── ⏳ rules.ts 风险维度 note — 深层重构
 
-[迭代2] 报告页修复（较大）
-  ├── P0-7 ReportShell.tsx 15处硬编码 (1文件)
-  ├── P0-7 rules.ts 3处模板英文 (1文件)
+[迭代2] ✅ 报告页修复
+  ├── ✅ P0-7 ReportShell.tsx 15处硬编码 (7文件)
+  ├── ✅ P0-7 preview/react-viewer i18n
+  └── ⏳ rules.ts 3处模板英文 (需深层重构)
   ├── P2-1 AutoBreadcrumb 映射 (1-2文件)
   └── P2-5 报告列表翻页 (2文件 + 后端API)
 

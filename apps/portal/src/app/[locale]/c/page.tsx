@@ -1,6 +1,7 @@
 'use client';
 
 import { useT } from '@trade/ui';
+import { useLocale } from 'next-intl';
 import useSubsiteHref from '@/lib/useSubsiteHref';
 import ToolCard from '@/components/ToolCard';
 import { toolCategories } from '@/data/tools';
@@ -10,6 +11,9 @@ export default function HomePage() {
   const tCheck = useT('Check');
   const tPricing = useT('Pricing');
   const subsiteHref = useSubsiteHref();
+  const locale = useLocale();
+  const formatPrice = (price: number) =>
+    new Intl.NumberFormat(locale, { style: 'currency', currency: 'USD', minimumFractionDigits: 2 }).format(price);
 
   return (
     <div className="bg-bg-ice">
@@ -90,7 +94,7 @@ export default function HomePage() {
                 <li>{tPricing('freeBullet3')}</li>
               </ul>
               <a
-                href={subsiteHref('/check/gacc')}
+                href={subsiteHref('/')}
                 className="w-full border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white font-semibold py-2 rounded-md transition-all text-sm"
               >
                 {tPricing('startFree')}
@@ -103,7 +107,7 @@ export default function HomePage() {
                 {tPricing('popular')}
               </div>
               <h3 className="font-bold text-lg text-primary-navy">{tPricing('single')}</h3>
-              <p className="text-3xl font-bold text-gold my-4">{tPricing('singlePrice')}</p>
+              <p className="text-3xl font-bold text-gold my-4">{formatPrice(1.99)}</p>
               <ul className="text-sm text-gray-500 space-y-2 mb-6 flex-1">
                 <li>{tPricing('singleBullet1')}</li>
                 <li>{tPricing('singleBullet2')}</li>
@@ -117,7 +121,7 @@ export default function HomePage() {
             {/* Monthly */}
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 text-center flex flex-col">
               <h3 className="font-bold text-lg text-primary-navy">{tPricing('monthly')}</h3>
-              <p className="text-3xl font-bold text-primary-navy my-4">{tPricing('monthlyPrice')}</p>
+              <p className="text-3xl font-bold text-primary-navy my-4">{formatPrice(9.9)}</p>
               <ul className="text-sm text-gray-500 space-y-2 mb-6 flex-1">
                 <li>{tPricing('monthlyBullet1')}</li>
                 <li>{tPricing('monthlyBullet2')}</li>

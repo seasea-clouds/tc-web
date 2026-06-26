@@ -20,11 +20,8 @@ export default function SettingsPage() {
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 space-y-6">
           <div>
             <h2 className="font-semibold text-primary-navy mb-2">{t('profile')}</h2>
-            <p className="text-sm text-gray-500">Name: {user.name}</p>
-            <p className="text-sm text-gray-500">Email: {user.email}</p>
-          </div>
-          <div className="border-t pt-4">
-            <p className="text-xs text-gray-400">{t('moreSettingsSoon')}</p>
+            <p className="text-sm text-gray-500">{t('nameLabel')}: {user.name}</p>
+            <p className="text-sm text-gray-500">{t('emailLabel')}: {user.email}</p>
           </div>
         </div>
       </div>

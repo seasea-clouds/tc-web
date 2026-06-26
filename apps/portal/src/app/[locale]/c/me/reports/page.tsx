@@ -35,9 +35,9 @@ export default function MyReportsPage() {
           <div className="text-center py-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gold mx-auto" /></div>
         ) : reports.length === 0 ? (
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 text-center">
-            <p className="text-gray-500">{t('noReports')}.</p>
-            <Link href="../check/gacc" className="inline-block mt-4 bg-gold hover:bg-gold/90 text-primary-navy font-semibold px-6 py-2.5 rounded-md transition-all">
-              Run a Check
+            <p className="text-gray-500">{t('noReports')}</p>
+            <Link href="../" className="inline-block mt-4 bg-gold hover:bg-gold/90 text-primary-navy font-semibold px-6 py-2.5 rounded-md transition-all">
+              {t('runACheck')}
             </Link>
           </div>
         ) : (

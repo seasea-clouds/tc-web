@@ -209,6 +209,14 @@ function runCoverageCheck() {
 }
 
 // ============================================================
+// 数据层英文模板检测（项目无关，每次 CI 都执行一次）
+// ============================================================
+function runTemplateCheck() {
+  if (project !== 'portal') return;
+  runLocalScript('check-hardcoded-templates.mjs');
+}
+
+// ============================================================
 // 清理
 // ============================================================
 function runCleanup() {
@@ -235,6 +243,7 @@ runTranslationChecks();
 runBreadcrumbCheck();
 runCoverageCheck();
 runOverrideCheck();
+runTemplateCheck();
 runCleanup();
 
 console.log(`\n═══════════════════════════════════════════════`);

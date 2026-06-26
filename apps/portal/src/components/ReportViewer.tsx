@@ -41,6 +41,15 @@ export default function ReportViewer({ report, onBack }: ReportViewerProps) {
     labelOrigin: t('reportOrigin'),
     gaccRequired: t('reportGaccRequired'),
     gaccNotRequired: t('reportGaccNotRequired'),
+    labelPreparedFor: t('reportPreparedFor'),
+    labelClient: t('reportClient'),
+    labelReportLabel: t('reportReportLabel'),
+    labelConfidential: t('reportConfidential'),
+    labelRiskScore: t('reportRiskScore'),
+    labelVerdict: t('reportVerdict'),
+    labelTimeline: t('reportTimeline'),
+    labelTotalCost: t('reportTotalCost'),
+    labelRiskDimension: t('reportRiskDimension'),
   };
 
   return (

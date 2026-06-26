@@ -1741,7 +1741,9 @@
     "reportRiskScore": "Ռիսկի միավոր",
     "reportTimeline": "Ժամանակացույց",
     "reportTotalCost": "Ընդհանուր արժեքը",
-    "reportVerdict": "Դատավճիռ"
+    "reportVerdict": "Դատավճիռ",
+    "gaccCat_coffee_tea_label": "Սուրճ / թեյ (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "Առողջություն / դիետիկ հավելումներ (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "Բեռնվում է ձեր զեկույցը",

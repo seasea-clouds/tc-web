@@ -1741,7 +1741,9 @@
     "reportRiskScore": "Kockázati pontszám",
     "reportTimeline": "Idővonal",
     "reportTotalCost": "Teljes költség",
-    "reportVerdict": "Ítélet"
+    "reportVerdict": "Ítélet",
+    "gaccCat_coffee_tea_label": "Kávé / Tea (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "Egészség / Étrend-kiegészítők (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "A jelentés betöltése",

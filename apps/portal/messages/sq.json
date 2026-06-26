@@ -1741,7 +1741,9 @@
     "reportRiskScore": "Nota e rrezikut",
     "reportTimeline": "Afati kohor",
     "reportTotalCost": "Kostoja totale",
-    "reportVerdict": "Verdikti"
+    "reportVerdict": "Verdikti",
+    "gaccCat_coffee_tea_label": "Kafe/Çaj (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "Shëndeti / Suplemente dietike (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "Duke ngarkuar raportin tuaj",

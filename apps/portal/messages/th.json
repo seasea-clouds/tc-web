@@ -1741,7 +1741,9 @@
     "reportRiskScore": "คะแนนความเสี่ยง",
     "reportTimeline": "ไทม์ไลน์",
     "reportTotalCost": "ต้นทุนรวม",
-    "reportVerdict": "คำตัดสิน"
+    "reportVerdict": "คำตัดสิน",
+    "gaccCat_coffee_tea_label": "กาแฟ / ชา (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "สุขภาพ/อาหารเสริม (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "กำลังโหลดรายงานของคุณ",

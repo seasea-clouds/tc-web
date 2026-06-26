@@ -1741,7 +1741,9 @@
     "reportRiskScore": "Puntuación de riesgo",
     "reportTimeline": "Línea de tiempo",
     "reportTotalCost": "Costo total",
-    "reportVerdict": "Veredicto"
+    "reportVerdict": "Veredicto",
+    "gaccCat_coffee_tea_label": "Café/Té (SA 09.01-09.02)",
+    "gaccCat_health_food_label": "Salud/Suplementos dietéticos (SA 21.06)"
   },
   "Report": {
     "loadingTitle": "Cargando su informe",

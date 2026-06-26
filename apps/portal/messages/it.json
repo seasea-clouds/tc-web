@@ -1741,7 +1741,9 @@
     "reportRiskScore": "Punteggio di rischio",
     "reportTimeline": "Cronologia",
     "reportTotalCost": "Costo totale",
-    "reportVerdict": "Verdetto"
+    "reportVerdict": "Verdetto",
+    "gaccCat_coffee_tea_label": "Caffè/Tè (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "Salute/Integratori alimentari (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "Caricamento del rapporto",

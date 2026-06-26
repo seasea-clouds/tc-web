@@ -1741,7 +1741,9 @@
     "reportRiskScore": "درجة المخاطرة",
     "reportTimeline": "الجدول الزمني",
     "reportTotalCost": "التكلفة الإجمالية",
-    "reportVerdict": "الحكم"
+    "reportVerdict": "الحكم",
+    "gaccCat_coffee_tea_label": "القهوة / الشاي (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "الصحة / المكملات الغذائية (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "جارٍ تحميل تقريرك",

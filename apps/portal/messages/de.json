@@ -1741,7 +1741,9 @@
     "reportRiskScore": "Risikobewertung",
     "reportTimeline": "Zeitleiste",
     "reportTotalCost": "Gesamtkosten",
-    "reportVerdict": "Urteil"
+    "reportVerdict": "Urteil",
+    "gaccCat_coffee_tea_label": "Kaffee / Tee (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "Gesundheit / Nahrungsergänzungsmittel (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "Laden Ihres Berichts",

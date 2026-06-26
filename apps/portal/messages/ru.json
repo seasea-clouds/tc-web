@@ -1741,7 +1741,9 @@
     "reportRiskScore": "Оценка риска",
     "reportTimeline": "Хронология",
     "reportTotalCost": "Общая стоимость",
-    "reportVerdict": "Вердикт"
+    "reportVerdict": "Вердикт",
+    "gaccCat_coffee_tea_label": "Кофе/Чай (ТС 09.01-09.02)",
+    "gaccCat_health_food_label": "Здоровье/диетические добавки (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "Загрузка вашего отчета",

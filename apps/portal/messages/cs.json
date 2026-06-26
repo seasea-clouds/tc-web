@@ -1741,7 +1741,9 @@
     "reportRiskScore": "Skóre rizika",
     "reportTimeline": "Časová osa",
     "reportTotalCost": "Celkové náklady",
-    "reportVerdict": "Výrok"
+    "reportVerdict": "Výrok",
+    "gaccCat_coffee_tea_label": "Káva / čaj (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "Zdraví / Doplňky stravy (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "Načítání vaší zprávy",

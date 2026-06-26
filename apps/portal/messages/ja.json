@@ -1741,7 +1741,9 @@
     "reportRiskScore": "リスクスコア",
     "reportTimeline": "タイムライン",
     "reportTotalCost": "総コスト",
-    "reportVerdict": "評決"
+    "reportVerdict": "評決",
+    "gaccCat_coffee_tea_label": "コーヒー / 紅茶 (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "健康/栄養補助食品 (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "レポートをロードする",

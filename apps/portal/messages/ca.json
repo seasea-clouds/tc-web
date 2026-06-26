@@ -1741,7 +1741,9 @@
     "reportRiskScore": "Puntuació de risc",
     "reportTimeline": "Cronologia",
     "reportTotalCost": "Cost total",
-    "reportVerdict": "Veredicte"
+    "reportVerdict": "Veredicte",
+    "gaccCat_coffee_tea_label": "Cafè/Te (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "Salut/Complements dietètics (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "Carregant el vostre informe",

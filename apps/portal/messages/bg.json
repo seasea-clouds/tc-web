@@ -1741,7 +1741,9 @@
     "reportRiskScore": "Рейтинг на риска",
     "reportTimeline": "Хронология",
     "reportTotalCost": "Обща цена",
-    "reportVerdict": "Присъда"
+    "reportVerdict": "Присъда",
+    "gaccCat_coffee_tea_label": "Кафе / чай (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "Здраве / Диетични добавки (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "Вашият отчет се зарежда",

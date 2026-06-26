@@ -1741,7 +1741,9 @@
     "reportRiskScore": "ציון סיכון",
     "reportTimeline": "ציר זמן",
     "reportTotalCost": "עלות כוללת",
-    "reportVerdict": "פְּסַק דִין"
+    "reportVerdict": "פְּסַק דִין",
+    "gaccCat_coffee_tea_label": "קפה/תה (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "בריאות / תוספי תזונה (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "טוען את הדוח שלך",

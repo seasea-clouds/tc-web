@@ -1741,7 +1741,9 @@
     "reportRiskScore": "Score de risque",
     "reportTimeline": "Chronologie",
     "reportTotalCost": "Coût total",
-    "reportVerdict": "Verdict"
+    "reportVerdict": "Verdict",
+    "gaccCat_coffee_tea_label": "Café/Thé (SH 09.01-09.02)",
+    "gaccCat_health_food_label": "Santé/Compléments alimentaires (SH 21.06)"
   },
   "Report": {
     "loadingTitle": "Chargement de votre rapport",

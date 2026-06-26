@@ -1741,7 +1741,9 @@
     "reportRiskScore": "رسک اسکور",
     "reportTimeline": "ٹائم لائن",
     "reportTotalCost": "کل لاگت",
-    "reportVerdict": "فیصلہ"
+    "reportVerdict": "فیصلہ",
+    "gaccCat_coffee_tea_label": "کافی / چائے (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "صحت / غذائی سپلیمنٹس (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "آپ کی رپورٹ لوڈ ہو رہی ہے۔",

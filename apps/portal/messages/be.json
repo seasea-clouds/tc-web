@@ -1741,7 +1741,9 @@
     "reportRiskScore": "Ацэнка рызыкі",
     "reportTimeline": "Храналогія",
     "reportTotalCost": "Агульны кошт",
-    "reportVerdict": "Прысуд"
+    "reportVerdict": "Прысуд",
+    "gaccCat_coffee_tea_label": "Кава / Чай (ГС 09.01-09.02)",
+    "gaccCat_health_food_label": "Здароўе / Дыетычныя дабаўкі (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "Загрузка вашай справаздачы",

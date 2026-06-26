@@ -1741,7 +1741,9 @@
     "reportRiskScore": "Điểm rủi ro",
     "reportTimeline": "Dòng thời gian",
     "reportTotalCost": "Tổng chi phí",
-    "reportVerdict": "Phán quyết"
+    "reportVerdict": "Phán quyết",
+    "gaccCat_coffee_tea_label": "Cà phê/Trà (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "Sức khỏe/Thực phẩm bổ sung (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "Đang tải báo cáo của bạn",

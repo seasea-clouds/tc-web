@@ -1741,7 +1741,9 @@
     "reportRiskScore": "ঝুঁকি স্কোর",
     "reportTimeline": "টাইমলাইন",
     "reportTotalCost": "মোট খরচ",
-    "reportVerdict": "রায়"
+    "reportVerdict": "রায়",
+    "gaccCat_coffee_tea_label": "কফি / চা (এইচএস 09.01-09.02)",
+    "gaccCat_health_food_label": "স্বাস্থ্য / খাদ্যতালিকাগত পরিপূরক (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "আপনার রিপোর্ট লোড হচ্ছে",

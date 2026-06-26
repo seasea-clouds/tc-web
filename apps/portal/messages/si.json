@@ -1741,7 +1741,9 @@
     "reportRiskScore": "අවදානම් ලකුණු",
     "reportTimeline": "කාලරේඛාව",
     "reportTotalCost": "මුළු පිරිවැය",
-    "reportVerdict": "තීන්දුව"
+    "reportVerdict": "තීන්දුව",
+    "gaccCat_coffee_tea_label": "කෝපි / තේ (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "සෞඛ්‍ය / ආහාර අතිරේක (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "ඔබේ වාර්තාව පූරණය කරමින්",

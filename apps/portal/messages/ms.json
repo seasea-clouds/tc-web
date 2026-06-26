@@ -1741,7 +1741,9 @@
     "reportRiskScore": "Skor Risiko",
     "reportTimeline": "Garis masa",
     "reportTotalCost": "Jumlah Kos",
-    "reportVerdict": "keputusan"
+    "reportVerdict": "keputusan",
+    "gaccCat_coffee_tea_label": "Kopi / Teh (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "Kesihatan / Makanan Tambahan (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "Memuatkan Laporan Anda",

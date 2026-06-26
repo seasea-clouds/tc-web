@@ -1741,7 +1741,9 @@
     "reportRiskScore": "Risk balı",
     "reportTimeline": "Zaman qrafiki",
     "reportTotalCost": "Ümumi Xərc",
-    "reportVerdict": "Hökm"
+    "reportVerdict": "Hökm",
+    "gaccCat_coffee_tea_label": "Qəhvə / Çay (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "Sağlamlıq / Pəhriz Əlavələri (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "Hesabatınız Yüklənir",

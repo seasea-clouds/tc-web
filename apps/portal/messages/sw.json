@@ -1741,7 +1741,9 @@
     "reportRiskScore": "Alama ya Hatari",
     "reportTimeline": "Rekodi ya matukio",
     "reportTotalCost": "Jumla ya Gharama",
-    "reportVerdict": "Uamuzi"
+    "reportVerdict": "Uamuzi",
+    "gaccCat_coffee_tea_label": "Kahawa / Chai (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "Virutubisho vya Afya/Lishe (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "Inapakia Ripoti Yako",

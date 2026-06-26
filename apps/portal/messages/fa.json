@@ -1741,7 +1741,9 @@
     "reportRiskScore": "امتیاز ریسک",
     "reportTimeline": "جدول زمانی",
     "reportTotalCost": "هزینه کل",
-    "reportVerdict": "حکم"
+    "reportVerdict": "حکم",
+    "gaccCat_coffee_tea_label": "قهوه / چای (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "سلامت / مکمل های غذایی (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "در حال بارگیری گزارش شما",

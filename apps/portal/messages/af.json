@@ -1741,7 +1741,9 @@
     "reportRiskScore": "Risiko telling",
     "reportTimeline": "Tydlyn",
     "reportTotalCost": "Totale koste",
-    "reportVerdict": "Uitspraak"
+    "reportVerdict": "Uitspraak",
+    "gaccCat_coffee_tea_label": "Koffie / Tee (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "Gesondheid / Dieetaanvullings (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "Laai tans jou verslag",

@@ -1741,7 +1741,9 @@
     "reportRiskScore": "Risicoscore",
     "reportTimeline": "Tijdlijn",
     "reportTotalCost": "Totale kosten",
-    "reportVerdict": "Uitspraak"
+    "reportVerdict": "Uitspraak",
+    "gaccCat_coffee_tea_label": "Koffie / Thee (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "Gezondheid / Voedingssupplementen (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "Uw rapport laden",

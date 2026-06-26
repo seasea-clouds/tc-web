@@ -1741,7 +1741,9 @@
     "reportRiskScore": "Ocena ryzyka",
     "reportTimeline": "Oś czasu",
     "reportTotalCost": "Całkowity koszt",
-    "reportVerdict": "Werdykt"
+    "reportVerdict": "Werdykt",
+    "gaccCat_coffee_tea_label": "Kawa / Herbata (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "Zdrowie / Suplementy diety (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "Ładowanie raportu",

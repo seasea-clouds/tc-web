@@ -1741,7 +1741,9 @@
     "reportRiskScore": "Оцінка ризику",
     "reportTimeline": "Хронологія",
     "reportTotalCost": "Загальна вартість",
-    "reportVerdict": "Вердикт"
+    "reportVerdict": "Вердикт",
+    "gaccCat_coffee_tea_label": "Кава / Чай (ГС 09.01-09.02)",
+    "gaccCat_health_food_label": "Здоров'я / Дієтичні добавки (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "Завантаження звіту",

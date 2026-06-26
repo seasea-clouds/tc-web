@@ -1741,7 +1741,9 @@
     "reportRiskScore": "Risikoscore",
     "reportTimeline": "Tidslinje",
     "reportTotalCost": "Samlede omkostninger",
-    "reportVerdict": "Dom"
+    "reportVerdict": "Dom",
+    "gaccCat_coffee_tea_label": "Kaffe/te (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "Sundhed/kosttilskud (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "Indlæser din rapport",

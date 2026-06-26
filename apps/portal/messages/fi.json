@@ -1741,7 +1741,9 @@
     "reportRiskScore": "Riskipisteet",
     "reportTimeline": "Aikajana",
     "reportTotalCost": "Kokonaiskustannukset",
-    "reportVerdict": "Tuomio"
+    "reportVerdict": "Tuomio",
+    "gaccCat_coffee_tea_label": "Kahvi/tee (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "Terveys / Ravintolisät (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "Ladataan raporttiasi",

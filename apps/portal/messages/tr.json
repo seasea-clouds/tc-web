@@ -1741,7 +1741,9 @@
     "reportRiskScore": "Risk Puanı",
     "reportTimeline": "Zaman çizelgesi",
     "reportTotalCost": "Toplam Maliyet",
-    "reportVerdict": "Karar"
+    "reportVerdict": "Karar",
+    "gaccCat_coffee_tea_label": "Kahve / Çay (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "Sağlık / Diyet Takviyeleri (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "Raporunuzu Yükleme",

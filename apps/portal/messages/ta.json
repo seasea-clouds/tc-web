@@ -1741,7 +1741,9 @@
     "reportRiskScore": "ஆபத்து மதிப்பெண்",
     "reportTimeline": "காலவரிசை",
     "reportTotalCost": "மொத்த செலவு",
-    "reportVerdict": "தீர்ப்பு"
+    "reportVerdict": "தீர்ப்பு",
+    "gaccCat_coffee_tea_label": "காபி / தேநீர் (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "உடல்நலம் / உணவு சப்ளிமெண்ட்ஸ் (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "உங்கள் அறிக்கையை ஏற்றுகிறது",

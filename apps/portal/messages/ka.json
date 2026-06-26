@@ -1741,7 +1741,9 @@
     "reportRiskScore": "რისკის ქულა",
     "reportTimeline": "ვადები",
     "reportTotalCost": "მთლიანი ღირებულება",
-    "reportVerdict": "ვერდიქტი"
+    "reportVerdict": "ვერდიქტი",
+    "gaccCat_coffee_tea_label": "ყავა / ჩაი (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "ჯანმრთელობა / დიეტური დანამატები (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "იტვირთება თქვენი ანგარიში",

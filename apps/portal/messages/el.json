@@ -1741,7 +1741,9 @@
     "reportRiskScore": "Βαθμολογία κινδύνου",
     "reportTimeline": "Χρονολόγιο",
     "reportTotalCost": "Συνολικό Κόστος",
-    "reportVerdict": "Ετυμηγορία"
+    "reportVerdict": "Ετυμηγορία",
+    "gaccCat_coffee_tea_label": "Καφές / Τσάι (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "Υγεία / Συμπληρώματα Διατροφής (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "Φόρτωση της αναφοράς σας",

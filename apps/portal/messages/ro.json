@@ -1741,7 +1741,9 @@
     "reportRiskScore": "Scorul de risc",
     "reportTimeline": "Cronologie",
     "reportTotalCost": "Costul total",
-    "reportVerdict": "Verdict"
+    "reportVerdict": "Verdict",
+    "gaccCat_coffee_tea_label": "Cafea/ceai (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "Sănătate/Suplimente alimentare (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "Se încarcă raportul dvs",

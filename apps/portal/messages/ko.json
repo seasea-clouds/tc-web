@@ -1741,7 +1741,9 @@
     "reportRiskScore": "위험 점수",
     "reportTimeline": "타임라인",
     "reportTotalCost": "총 비용",
-    "reportVerdict": "평결"
+    "reportVerdict": "평결",
+    "gaccCat_coffee_tea_label": "커피/차 (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "건강/식이 보조제 (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "보고서 로드 중",

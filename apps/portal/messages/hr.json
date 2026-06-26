@@ -1741,7 +1741,9 @@
     "reportRiskScore": "Ocjena rizika",
     "reportTimeline": "Vremenska crta",
     "reportTotalCost": "Ukupni trošak",
-    "reportVerdict": "Presuda"
+    "reportVerdict": "Presuda",
+    "gaccCat_coffee_tea_label": "Kava / čaj (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "Zdravlje / dodaci prehrani (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "Učitavanje vašeg izvješća",

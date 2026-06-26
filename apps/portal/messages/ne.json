@@ -1741,7 +1741,9 @@
     "reportRiskScore": "जोखिम स्कोर",
     "reportTimeline": "टाइमलाइन",
     "reportTotalCost": "कुल लागत",
-    "reportVerdict": "फैसला"
+    "reportVerdict": "फैसला",
+    "gaccCat_coffee_tea_label": "कफी / चिया (HS ०९.०१-०९.०२)",
+    "gaccCat_health_food_label": "स्वास्थ्य / आहार पूरक (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "तपाईंको रिपोर्ट लोड गर्दै",

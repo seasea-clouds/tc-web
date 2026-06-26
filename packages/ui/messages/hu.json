@@ -75,7 +75,14 @@
     "selfCheck": "Önértékelő Eszköz",
     "mePage": "Saját fiókom",
     "testimonials": "Vélemények",
-    "privacy": "Adatvéleti nyilatkozat"
+    "privacy": "Adatvéleti nyilatkozat",
+    "billing": "Számlázás",
+    "dashboard": "Műszerfal",
+    "login": "Bejelentkezés",
+    "pricing": "Árképzés",
+    "register": "Nyilvántartás",
+    "report": "Jelentés",
+    "reports": "Jelentések"
   },
   "MobileTab": {
     "home": "Kezdőlap",

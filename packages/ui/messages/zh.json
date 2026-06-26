@@ -75,7 +75,14 @@
     "selfCheck": "自查工具",
     "mePage": "我的账户",
     "testimonials": "客户评价",
-    "privacy": "隐私政策"
+    "privacy": "隐私政策",
+    "dashboard": "仪表盘",
+    "reports": "报告列表",
+    "billing": "账单",
+    "pricing": "定价",
+    "login": "登录",
+    "register": "注册",
+    "report": "报告"
   },
   "MobileTab": {
     "home": "首页",

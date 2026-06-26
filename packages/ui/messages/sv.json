@@ -75,7 +75,14 @@
     "selfCheck": "Självbedömningsverktyg",
     "mePage": "Mitt konto",
     "testimonials": "Kundrecensioner",
-    "privacy": "Integritetspolicy"
+    "privacy": "Integritetspolicy",
+    "billing": "Fakturering",
+    "dashboard": "Instrumentbräda",
+    "login": "Logga in",
+    "pricing": "Prissättning",
+    "register": "Register",
+    "report": "Rapportera",
+    "reports": "Rapporter"
   },
   "MobileTab": {
     "home": "Hem",

@@ -75,7 +75,14 @@
     "selfCheck": "Selvvurderingsværktøj",
     "mePage": "Min konto",
     "testimonials": "Kundesuccesser",
-    "privacy": "Privatlivspolitik"
+    "privacy": "Privatlivspolitik",
+    "billing": "Fakturering",
+    "dashboard": "Dashboard",
+    "login": "Log ind",
+    "pricing": "Prissætning",
+    "register": "Register",
+    "report": "Rapport",
+    "reports": "Rapporter"
   },
   "MobileTab": {
     "home": "Forside",

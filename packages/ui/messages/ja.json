@@ -75,7 +75,14 @@
     "selfCheck": "セルフチェックツール",
     "mePage": "マイアカウント",
     "testimonials": "お客様の声",
-    "privacy": "プライバシーポリシー"
+    "privacy": "プライバシーポリシー",
+    "billing": "請求する",
+    "dashboard": "ダッシュボード",
+    "login": "ログイン",
+    "pricing": "価格設定",
+    "register": "登録する",
+    "report": "報告",
+    "reports": "レポート"
   },
   "MobileTab": {
     "home": "ホーム",

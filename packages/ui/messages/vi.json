@@ -75,7 +75,14 @@
     "selfCheck": "Công Cụ Tự Đánh Giá",
     "mePage": "Tài khoản của tôi",
     "testimonials": "Đánh giá",
-    "privacy": "Chính sách bảo mật"
+    "privacy": "Chính sách bảo mật",
+    "billing": "Thanh toán",
+    "dashboard": "Trang tổng quan",
+    "login": "Đăng nhập",
+    "pricing": "Định giá",
+    "register": "Đăng ký",
+    "report": "Báo cáo",
+    "reports": "Báo cáo"
   },
   "MobileTab": {
     "home": "Trang chủ",

@@ -75,7 +75,14 @@
     "selfCheck": "Mjet Vlerësimi Vetjak",
     "mePage": "Llogaria Ime",
     "testimonials": "Dëshmi",
-    "privacy": "Politika e Privatësisë"
+    "privacy": "Politika e Privatësisë",
+    "billing": "Faturimi",
+    "dashboard": "Paneli",
+    "login": "Identifikohu",
+    "pricing": "Çmimet",
+    "register": "Regjistrohu",
+    "report": "Raportoni",
+    "reports": "Raportet"
   },
   "MobileTab": {
     "home": "Kryefaqja",

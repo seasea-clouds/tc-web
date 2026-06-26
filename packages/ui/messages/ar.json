@@ -75,7 +75,14 @@
     "selfCheck": "أداة التقييم الذاتي",
     "mePage": "حسابي",
     "testimonials": "الشهادات",
-    "privacy": "سياسة الخصوصية"
+    "privacy": "سياسة الخصوصية",
+    "billing": "الفواتير",
+    "dashboard": "لوحة القيادة",
+    "login": "تسجيل الدخول",
+    "pricing": "التسعير",
+    "register": "يسجل",
+    "report": "تقرير",
+    "reports": "التقارير"
   },
   "MobileTab": {
     "home": "الرئيسية",

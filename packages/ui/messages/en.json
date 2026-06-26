@@ -75,7 +75,14 @@
     "privacy": "Privacy Policy",
     "testimonials": "Testimonials",
     "selfCheck": "Self-Check Tool",
-    "mePage": "My Account"
+    "mePage": "My Account",
+    "dashboard": "Dashboard",
+    "reports": "Reports",
+    "billing": "Billing",
+    "pricing": "Pricing",
+    "login": "Log In",
+    "register": "Register",
+    "report": "Report"
   },
   "MobileTab": {
     "home": "Home",

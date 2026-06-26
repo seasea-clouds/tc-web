@@ -75,7 +75,14 @@
     "selfCheck": "셀프 체크 도구",
     "mePage": "내 계정",
     "testimonials": "사용후기",
-    "privacy": "개인정보처리방침"
+    "privacy": "개인정보처리방침",
+    "billing": "청구",
+    "dashboard": "계기반",
+    "login": "로그인",
+    "pricing": "가격",
+    "register": "등록하다",
+    "report": "보고서",
+    "reports": "보고서"
   },
   "MobileTab": {
     "home": "홈",

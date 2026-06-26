@@ -75,7 +75,14 @@
     "selfCheck": "Selbstprüfungstool",
     "mePage": "Mein Konto",
     "testimonials": "Kundenstimmen",
-    "privacy": "Datenschutzrichtlinie"
+    "privacy": "Datenschutzrichtlinie",
+    "billing": "Abrechnung",
+    "dashboard": "Armaturenbrett",
+    "login": "Einloggen",
+    "pricing": "Preise",
+    "register": "Registrieren",
+    "report": "Bericht",
+    "reports": "Berichte"
   },
   "MobileTab": {
     "home": "Startseite",

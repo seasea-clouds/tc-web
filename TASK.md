@@ -72,9 +72,9 @@
 ### P-DEFERRED rules.ts 风险维度 note 英文（需要深层重构：传入 locale-aware 翻译器）
 **影响：** gacc/ccc/nmpa/label/crossborder/trademark 各模块 rules.ts 中 ~4 处 note 模板字符串
 
-### P2-1 仪表盘面包屑
-**问题：** AutoBreadcrumb 缺少 reports/me/settings/subscription 映射
-**修复：** 添加 Navbar 键 + AutoBreadcrumb SEGMENT_LABELS
+### P2-1 ✅ 仪表盘面包屑
+**问题：** AutoBreadcrumb SEGMENT_LABELS 中 dashboard/reports/billing/pricing/login/register/report 7 个键在 Navbar 消息中不存在
+**修复：** 向 48 语言 UI 包添加 7 个 Navbar 键
 
 ### P2-2 ✅ "标签艺术品" 翻译质量
 **问题：** chineseLabelArtworkReady 翻译别扭
@@ -150,7 +150,7 @@
   ├── ✅ P0-7 ReportShell.tsx 15处硬编码 (7文件)
   ├── ✅ P0-7 preview/react-viewer i18n
   └── ⏳ rules.ts 3处模板英文 (需深层重构)
-  ├── P2-1 AutoBreadcrumb 映射 (1-2文件)
+  ├── ✅ P2-1 AutoBreadcrumb 映射 (48 UI文件)
   └── P2-5 报告列表翻页 (2文件 + 后端API)
 
 [迭代3] 翻译任务 + 合并 + 部署

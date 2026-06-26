@@ -15,22 +15,31 @@ interface Report {
   created_at: string;
 }
 
+const PAGE_SIZE = 20;
+
 function ReportsContent() {
   const t = useTranslations('Dashboard');
   
   const [reports, setReports] = useState<Report[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedReport, setSelectedReport] = useState<Report | null>(null);
+  const [page, setPage] = useState(0);
+  const [total, setTotal] = useState(0);
+  const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
 
   useEffect(() => {
-    fetch(`${API_BASE}/reports/list`, {
+    const offset = page * PAGE_SIZE;
+    fetch(`${API_BASE}/reports/list?limit=${PAGE_SIZE}&offset=${offset}`, {
       credentials: 'include',
     })
       .then((r) => r.json())
-      .then((data) => setReports(data.reports || []))
+      .then((data) => {
+        setReports(data.reports || []);
+        setTotal(data.total || 0);
+      })
       .catch(console.error)
       .finally(() => setLoading(false));
-  }, []);
+  }, [page]);
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
@@ -70,6 +79,36 @@ function ReportsContent() {
               </div>
             </button>
           ))}
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="flex items-center justify-center gap-2 pt-4">
+              <button
+                onClick={() => setPage(p => Math.max(0, p - 1))}
+                disabled={page === 0}
+                className={`px-3 py-1.5 text-sm rounded-md transition-all ${page === 0 ? 'text-gray-300 cursor-not-allowed' : 'text-primary-navy hover:bg-gray-100'}`}
+              >
+                ← Prev
+              </button>
+              <div className="flex gap-1">
+                {Array.from({ length: Math.min(totalPages, 10) }, (_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setPage(i)}
+                    className={`w-8 h-8 text-sm rounded-md transition-all ${i === page ? 'bg-primary-navy text-white' : 'text-gray-500 hover:bg-gray-100'}`}
+                  >
+                    {i + 1}
+                  </button>
+                ))}
+              </div>
+              <button
+                onClick={() => setPage(p => Math.min(totalPages - 1, p + 1))}
+                disabled={page >= totalPages - 1}
+                className={`px-3 py-1.5 text-sm rounded-md transition-all ${page >= totalPages - 1 ? 'text-gray-300 cursor-not-allowed' : 'text-primary-navy hover:bg-gray-100'}`}
+              >
+                Next →
+              </button>
+            </div>
+          )}
         </div>
       )}
 

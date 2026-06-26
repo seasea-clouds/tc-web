@@ -5,22 +5,29 @@ import { useState, useEffect } from 'react';
 import { useAuth } from '@trade/ui';
 import Link from 'next/link';
 
+const PAGE_SIZE = 20;
+
 export default function MyReportsPage() {
   const t = useT('Report');
   const { user, isLoading } = useAuth();
   const [reports, setReports] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const [page, setPage] = useState(0);
+  const [total, setTotal] = useState(0);
+  const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
 
   useEffect(() => {
     if (!user) return;
-    fetch('/api/reports/list', { credentials: 'include' })
-      .then(res => res.ok ? res.json() : [])
+    const offset = page * PAGE_SIZE;
+    fetch(`/api/reports/list?limit=${PAGE_SIZE}&offset=${offset}`, { credentials: 'include' })
+      .then(res => res.ok ? res.json() : { reports: [], total: 0 })
       .then(data => {
         setReports(data.reports || []);
+        setTotal(data.total || 0);
         setLoading(false);
       })
       .catch(() => setLoading(false));
-  }, [user]);
+  }, [user, page]);
 
   if (isLoading) return <Loading />;
   if (!user) return <NotLoggedIn />;
@@ -58,6 +65,36 @@ export default function MyReportsPage() {
                 </div>
               </Link>
             ))}
+            {/* Pagination */}
+            {totalPages > 1 && (
+              <div className="flex items-center justify-center gap-2 pt-4">
+                <button
+                  onClick={() => setPage(p => Math.max(0, p - 1))}
+                  disabled={page === 0}
+                  className={`px-3 py-1.5 text-sm rounded-md transition-all ${page === 0 ? 'text-gray-300 cursor-not-allowed' : 'text-primary-navy hover:bg-gray-100'}`}
+                >
+                  ← Prev
+                </button>
+                <div className="flex gap-1">
+                  {Array.from({ length: totalPages }, (_, i) => (
+                    <button
+                      key={i}
+                      onClick={() => setPage(i)}
+                      className={`w-8 h-8 text-sm rounded-md transition-all ${i === page ? 'bg-primary-navy text-white' : 'text-gray-500 hover:bg-gray-100'}`}
+                    >
+                      {i + 1}
+                    </button>
+                  ))}
+                </div>
+                <button
+                  onClick={() => setPage(p => Math.min(totalPages - 1, p + 1))}
+                  disabled={page >= totalPages - 1}
+                  className={`px-3 py-1.5 text-sm rounded-md transition-all ${page >= totalPages - 1 ? 'text-gray-300 cursor-not-allowed' : 'text-primary-navy hover:bg-gray-100'}`}
+                >
+                  Next →
+                </button>
+              </div>
+            )}
           </div>
         )}
       </div>

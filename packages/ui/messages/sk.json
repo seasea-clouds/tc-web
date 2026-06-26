@@ -75,7 +75,14 @@
     "selfCheck": "Nástroj na Sebahodnotenie",
     "mePage": "Môj účet",
     "testimonials": "Referencie",
-    "privacy": "Zásady ochrany osobných údajov"
+    "privacy": "Zásady ochrany osobných údajov",
+    "billing": "Fakturácia",
+    "dashboard": "Dashboard",
+    "login": "Prihláste sa",
+    "pricing": "Stanovenie cien",
+    "register": "Zaregistrujte sa",
+    "report": "Správa",
+    "reports": "Správy"
   },
   "MobileTab": {
     "home": "Domov",

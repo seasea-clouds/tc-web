@@ -75,7 +75,14 @@
     "selfCheck": "Eina van Auto-avaluació",
     "mePage": "El meu compte",
     "testimonials": "Testimonis",
-    "privacy": "Política de privadesa"
+    "privacy": "Política de privadesa",
+    "billing": "Facturació",
+    "dashboard": "Tauler de control",
+    "login": "Inicieu sessió",
+    "pricing": "Preus",
+    "register": "Registra't",
+    "report": "Informeu",
+    "reports": "Informes"
   },
   "MobileTab": {
     "home": "Inici",

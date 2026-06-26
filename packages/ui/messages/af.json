@@ -75,7 +75,14 @@
     "selfCheck": "Self-Evaluasie Instrument",
     "mePage": "My Rekening",
     "testimonials": "Getuigskrifte",
-    "privacy": "Privaatheidsbeleid"
+    "privacy": "Privaatheidsbeleid",
+    "billing": "Fakturering",
+    "dashboard": "Dashboard",
+    "login": "Meld aan",
+    "pricing": "Pryse",
+    "register": "Registreer",
+    "report": "Rapporteer",
+    "reports": "Verslae"
   },
   "MobileTab": {
     "home": "Tuis",

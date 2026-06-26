@@ -75,7 +75,14 @@
     "selfCheck": "स्व-मूल्यांकन टूल",
     "mePage": "मेरा खाता",
     "testimonials": "प्रशंसापत्र",
-    "privacy": "गोपनीयता नीति"
+    "privacy": "गोपनीयता नीति",
+    "billing": "बिलिंग",
+    "dashboard": "डैशबोर्ड",
+    "login": "लॉग इन करें",
+    "pricing": "मूल्य निर्धारण",
+    "register": "पंजीकरण करवाना",
+    "report": "प्रतिवेदन",
+    "reports": "रिपोर्टों"
   },
   "MobileTab": {
     "home": "होम",

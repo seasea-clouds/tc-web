@@ -75,7 +75,14 @@
     "selfCheck": "Outil d'Auto-Évaluation",
     "mePage": "Mon compte",
     "testimonials": "Témoignages",
-    "privacy": "Politique de confidentialité"
+    "privacy": "Politique de confidentialité",
+    "billing": "Facturation",
+    "dashboard": "Tableau de bord",
+    "login": "Se connecter",
+    "pricing": "Tarifs",
+    "register": "Registre",
+    "report": "Rapport",
+    "reports": "Rapports"
   },
   "MobileTab": {
     "home": "Accueil",

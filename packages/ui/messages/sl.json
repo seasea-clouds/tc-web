@@ -75,7 +75,14 @@
     "selfCheck": "Orodje za Samoevalvacijo",
     "mePage": "Moj račun",
     "testimonials": "Mnenja strank",
-    "privacy": "Pravilnik o zasebnosti"
+    "privacy": "Pravilnik o zasebnosti",
+    "billing": "Obračunavanje",
+    "dashboard": "Nadzorna plošča",
+    "login": "Prijavite se",
+    "pricing": "Cene",
+    "register": "Registrirajte se",
+    "report": "Poročilo",
+    "reports": "Poročila"
   },
   "MobileTab": {
     "home": "Domov",

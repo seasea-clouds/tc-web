@@ -75,7 +75,14 @@
     "selfCheck": "Öz-Özünü Yoxlama Aləti",
     "mePage": "Mənim Hesabım",
     "testimonials": "Rəylər",
-    "privacy": "Məxfilik Siyasəti"
+    "privacy": "Məxfilik Siyasəti",
+    "billing": "Faturalandırma",
+    "dashboard": "İdarə paneli",
+    "login": "Daxil ol",
+    "pricing": "Qiymətləndirmə",
+    "register": "Qeydiyyatdan keçin",
+    "report": "Hesabat",
+    "reports": "Hesabatlar"
   },
   "MobileTab": {
     "home": "Ana səhifə",

@@ -75,7 +75,14 @@
     "selfCheck": "Alat Evaluasi Diri",
     "mePage": "Akun Saya",
     "testimonials": "Testimoni",
-    "privacy": "Kebijakan Privasi"
+    "privacy": "Kebijakan Privasi",
+    "billing": "Penagihan",
+    "dashboard": "Dasbor",
+    "login": "Masuk",
+    "pricing": "Harga",
+    "register": "Daftar",
+    "report": "Laporan",
+    "reports": "Laporan"
   },
   "MobileTab": {
     "home": "Beranda",

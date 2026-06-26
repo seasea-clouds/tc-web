@@ -75,7 +75,14 @@
     "selfCheck": "Instrument de Autoevaluare",
     "mePage": "Contul meu",
     "testimonials": "Testimoniale",
-    "privacy": "Politica de confidențialitate"
+    "privacy": "Politica de confidențialitate",
+    "billing": "Facturare",
+    "dashboard": "Bord",
+    "login": "Log in",
+    "pricing": "Prețuri",
+    "register": "Registru",
+    "report": "Raport",
+    "reports": "Rapoarte"
   },
   "MobileTab": {
     "home": "Acasă",

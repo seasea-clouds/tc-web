@@ -75,7 +75,14 @@
     "selfCheck": "خود تشخیص ٹول",
     "mePage": "میرا اکاؤنٹ",
     "testimonials": "تعریفیں",
-    "privacy": "پرائیویسی پالیسی"
+    "privacy": "پرائیویسی پالیسی",
+    "billing": "بلنگ",
+    "dashboard": "ڈیش بورڈ",
+    "login": "لاگ ان کریں۔",
+    "pricing": "قیمتوں کا تعین",
+    "register": "رجسٹر کریں۔",
+    "report": "رپورٹ",
+    "reports": "رپورٹس"
   },
   "MobileTab": {
     "home": "ہوم",

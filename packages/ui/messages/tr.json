@@ -75,7 +75,14 @@
     "selfCheck": "Kendi Kendine Kontrol Aracı",
     "mePage": "Hesabım",
     "testimonials": "Müşteri Yorumları",
-    "privacy": "Gizlilik Politikası"
+    "privacy": "Gizlilik Politikası",
+    "billing": "Faturalandırma",
+    "dashboard": "Kontrol Paneli",
+    "login": "Giriş yapmak",
+    "pricing": "Fiyatlandırma",
+    "register": "Kayıt olmak",
+    "report": "Rapor",
+    "reports": "Raporlar"
   },
   "MobileTab": {
     "home": "Ana Sayfa",

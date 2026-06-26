@@ -75,7 +75,14 @@
     "selfCheck": "Strumento di Autovalutazione",
     "mePage": "Il mio account",
     "testimonials": "Testimonianze",
-    "privacy": "Informativa sulla privacy"
+    "privacy": "Informativa sulla privacy",
+    "billing": "Fatturazione",
+    "dashboard": "Pannello di controllo",
+    "login": "Login",
+    "pricing": "Prezzi",
+    "register": "Registro",
+    "report": "Rapporto",
+    "reports": "Rapporti"
   },
   "MobileTab": {
     "home": "Casa",

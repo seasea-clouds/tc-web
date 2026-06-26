@@ -75,7 +75,14 @@
     "selfCheck": "ابزار ارزیابی خودکار",
     "mePage": "حساب من",
     "testimonials": "گواهی‌نامه‌ها",
-    "privacy": "سیاست حریم خصوصی"
+    "privacy": "سیاست حریم خصوصی",
+    "billing": "صورتحساب",
+    "dashboard": "داشبورد",
+    "login": "وارد شوید",
+    "pricing": "قیمت گذاری",
+    "register": "ثبت نام کنید",
+    "report": "گزارش دهید",
+    "reports": "گزارش ها"
   },
   "MobileTab": {
     "home": "خانه",

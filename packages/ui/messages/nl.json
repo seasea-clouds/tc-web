@@ -75,7 +75,14 @@
     "selfCheck": "Zelfcontrole Tool",
     "mePage": "Mijn account",
     "testimonials": "Getuigenissen",
-    "privacy": "Privacybeleid"
+    "privacy": "Privacybeleid",
+    "billing": "Facturering",
+    "dashboard": "Dashboard",
+    "login": "Inloggen",
+    "pricing": "Prijzen",
+    "register": "Register",
+    "report": "Rapport",
+    "reports": "Rapporten"
   },
   "MobileTab": {
     "home": "Thuis",

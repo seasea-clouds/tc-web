@@ -75,7 +75,14 @@
     "selfCheck": "Zana ya Kujitathmini",
     "mePage": "Akaunti Yangu",
     "testimonials": "Ushuhuda",
-    "privacy": "Sera ya Faragha"
+    "privacy": "Sera ya Faragha",
+    "billing": "Bili",
+    "dashboard": "Dashibodi",
+    "login": "Ingia",
+    "pricing": "Bei",
+    "register": "Sajili",
+    "report": "Ripoti",
+    "reports": "Ripoti"
   },
   "MobileTab": {
     "home": "Nyumbani",

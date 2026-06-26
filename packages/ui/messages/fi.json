@@ -75,7 +75,14 @@
     "selfCheck": "Itsearviointityökalu",
     "mePage": "Tilini",
     "testimonials": "Asiakaskokemukset",
-    "privacy": "Tietosuojakäytäntö"
+    "privacy": "Tietosuojakäytäntö",
+    "billing": "Laskutus",
+    "dashboard": "Kojelauta",
+    "login": "Kirjaudu sisään",
+    "pricing": "Hinnoittelu",
+    "register": "Rekisteröidy",
+    "report": "Raportoi",
+    "reports": "Raportit"
   },
   "MobileTab": {
     "home": "Etusivu",

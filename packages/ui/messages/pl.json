@@ -75,7 +75,14 @@
     "selfCheck": "Narzędzie Samoodceny",
     "mePage": "Moje konto",
     "testimonials": "Opinie klientów",
-    "privacy": "Polityka prywatności"
+    "privacy": "Polityka prywatności",
+    "billing": "Rozliczenia",
+    "dashboard": "Panel",
+    "login": "Zaloguj się",
+    "pricing": "Wycena",
+    "register": "Rejestr",
+    "report": "Raport",
+    "reports": "Raporty"
   },
   "MobileTab": {
     "home": "Strona główna",

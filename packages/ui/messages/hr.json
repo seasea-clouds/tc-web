@@ -75,7 +75,14 @@
     "selfCheck": "Alat za Samoprocjenu",
     "mePage": "Moj račun",
     "testimonials": "Svjedočanstva",
-    "privacy": "Politika privatnosti"
+    "privacy": "Politika privatnosti",
+    "billing": "Naplata",
+    "dashboard": "Nadzorna ploča",
+    "login": "Prijavite se",
+    "pricing": "Cijene",
+    "register": "Registar",
+    "report": "Izvješće",
+    "reports": "izvješća"
   },
   "MobileTab": {
     "home": "Početna",

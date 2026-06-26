@@ -75,7 +75,14 @@
     "selfCheck": "স্ব-মূল্যায়ন টুল",
     "mePage": "আমার অ্যাকাউন্ট",
     "testimonials": "প্রশংসাপত্র",
-    "privacy": "গোপনীয়তা নীতি"
+    "privacy": "গোপনীয়তা নীতি",
+    "billing": "বিলিং",
+    "dashboard": "ড্যাশবোর্ড",
+    "login": "লগ ইন করুন",
+    "pricing": "মূল্য নির্ধারণ",
+    "register": "নিবন্ধন করুন",
+    "report": "রিপোর্ট",
+    "reports": "রিপোর্ট"
   },
   "MobileTab": {
     "home": "হোম",

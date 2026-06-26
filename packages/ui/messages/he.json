@@ -75,7 +75,14 @@
     "selfCheck": "כלי הערכה עצמית",
     "mePage": "החשבון שלי",
     "testimonials": "המלצות",
-    "privacy": "מדיניות פרטיות"
+    "privacy": "מדיניות פרטיות",
+    "billing": "חיוב",
+    "dashboard": "לוּחַ מַחווָנִים",
+    "login": "התחבר",
+    "pricing": "תמחור",
+    "register": "לִרְשׁוֹם",
+    "report": "דִוּוּחַ",
+    "reports": "דוחות"
   },
   "MobileTab": {
     "home": "דף הבית",

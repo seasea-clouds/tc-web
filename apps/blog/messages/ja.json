@@ -60,14 +60,5 @@
     "accept": "すべてを受け入れる",
     "reject": "必須でないものを拒否する",
     "privacyLink": "プライバシーポリシー"
-  },
-
-  "Navbar": {
-    "home": "Home",
-    "blog": "Blog"
-  },
-  "breadcrumb": {
-    "home": "Home",
-    "blog": "Blog"
   }
 }

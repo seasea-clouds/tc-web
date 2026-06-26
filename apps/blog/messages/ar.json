@@ -60,14 +60,5 @@
     "accept": "قبول الكل",
     "reject": "رفض غير الضرورية",
     "privacyLink": "سياسة الخصوصية"
-  },
-
-  "Navbar": {
-    "home": "Home",
-    "blog": "Blog"
-  },
-  "breadcrumb": {
-    "home": "Home",
-    "blog": "Blog"
   }
 }

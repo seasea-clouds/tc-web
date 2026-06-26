@@ -60,14 +60,5 @@
     "accept": "Chấp nhận tất cả",
     "reject": "Từ chối không cần thiết",
     "privacyLink": "Chính sách bảo mật"
-  },
-
-  "Navbar": {
-    "home": "Home",
-    "blog": "Blog"
-  },
-  "breadcrumb": {
-    "home": "Home",
-    "blog": "Blog"
   }
 }

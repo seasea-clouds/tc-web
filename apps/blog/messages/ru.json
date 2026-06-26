@@ -60,14 +60,5 @@
     "accept": "Принять все",
     "reject": "Отклонить несущественное",
     "privacyLink": "политика конфиденциальности"
-  },
-
-  "Navbar": {
-    "home": "Home",
-    "blog": "Blog"
-  },
-  "breadcrumb": {
-    "home": "Home",
-    "blog": "Blog"
   }
 }

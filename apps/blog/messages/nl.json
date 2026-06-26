@@ -60,14 +60,5 @@
     "accept": "Accepteer alles",
     "reject": "Niet-essentieel afwijzen",
     "privacyLink": "Privacybeleid"
-  },
-
-  "Navbar": {
-    "home": "Home",
-    "blog": "Blog"
-  },
-  "breadcrumb": {
-    "home": "Home",
-    "blog": "Blog"
   }
 }

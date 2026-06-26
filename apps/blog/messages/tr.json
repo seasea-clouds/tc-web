@@ -60,14 +60,5 @@
     "accept": "Tümünü Kabul Et",
     "reject": "Gerekli Olmayanları Reddet",
     "privacyLink": "Gizlilik Politikası"
-  },
-
-  "Navbar": {
-    "home": "Home",
-    "blog": "Blog"
-  },
-  "breadcrumb": {
-    "home": "Home",
-    "blog": "Blog"
   }
 }

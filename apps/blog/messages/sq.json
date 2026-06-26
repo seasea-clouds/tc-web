@@ -60,14 +60,5 @@
     "accept": "Prano të gjitha",
     "reject": "Refuzo jo-thelbësoren",
     "privacyLink": "Politika e privatësisë"
-  },
-
-  "Navbar": {
-    "home": "Home",
-    "blog": "Blog"
-  },
-  "breadcrumb": {
-    "home": "Home",
-    "blog": "Blog"
   }
 }

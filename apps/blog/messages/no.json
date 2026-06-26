@@ -60,14 +60,5 @@
     "accept": "Godta alle",
     "reject": "Avvis ikke-essensielt",
     "privacyLink": "Personvernerklæring"
-  },
-
-  "Navbar": {
-    "home": "Home",
-    "blog": "Blog"
-  },
-  "breadcrumb": {
-    "home": "Home",
-    "blog": "Blog"
   }
 }

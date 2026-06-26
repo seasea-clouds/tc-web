@@ -68,7 +68,7 @@ export default function MePage() {
 
         <div className="mt-8">
           <button onClick={logout} className="text-sm text-red-500 hover:text-red-700 transition-colors">
-            Sign Out
+            {t('signOut')}
           </button>
         </div>
       </div>

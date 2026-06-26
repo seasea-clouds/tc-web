@@ -60,14 +60,5 @@
     "accept": "Прийняти всі",
     "reject": "Відхилити несуттєве",
     "privacyLink": "Політика конфіденційності"
-  },
-
-  "Navbar": {
-    "home": "Home",
-    "blog": "Blog"
-  },
-  "breadcrumb": {
-    "home": "Home",
-    "blog": "Blog"
   }
 }

@@ -60,14 +60,5 @@
     "accept": "Прихвати све",
     "reject": "Одбаци небитно",
     "privacyLink": "Политика приватности"
-  },
-
-  "Navbar": {
-    "home": "Home",
-    "blog": "Blog"
-  },
-  "breadcrumb": {
-    "home": "Home",
-    "blog": "Blog"
   }
 }

@@ -60,14 +60,5 @@
     "accept": "Hamısını qəbul et",
     "reject": "Vacib olmayanı rədd edin",
     "privacyLink": "Məxfilik Siyasəti"
-  },
-
-  "Navbar": {
-    "home": "Home",
-    "blog": "Blog"
-  },
-  "breadcrumb": {
-    "home": "Home",
-    "blog": "Blog"
   }
 }

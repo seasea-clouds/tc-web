@@ -94,7 +94,6 @@
     "freeBullet3": "No registration needed",
     "startFree": "Start Free",
     "single": "Single Report",
-    "singlePrice": "$1.99",
     "singleDesc": "Complete compliance report + PDF + email",
     "singleBullet1": "Complete compliance report",
     "singleBullet2": "Website & PDF download",
@@ -102,7 +101,6 @@
     "singleBullet4": "Printable / shareable",
     "getReport": "Get Report $1.99/report",
     "monthly": "Monthly",
-    "monthlyPrice": "$9.9",
     "monthlyDesc": "Unlimited reports for one month",
     "monthlyBullet1": "Unlimited reports",
     "monthlyBullet2": "All 6 modules included",
@@ -1734,7 +1732,9 @@
     "use_phthalate_free_plasticizers_for_all_soft_parts": "Use phthalate-free plasticizers for all soft parts",
     "wireless_device_shipped_without_srrc": "Wireless device shipped without SRRC",
     "wrong_gb_4706_sub_standard_applied": "Wrong GB 4706 sub-standard applied",
-    "young_consumers_preference_for_international_brands": "Young consumers' preference for international brands"
+    "young_consumers_preference_for_international_brands": "Young consumers' preference for international brands",
+    "gaccCat_coffee_tea_label": "Coffee / Tea (HS 09.01-09.02)",
+    "gaccCat_health_food_label": "Health / Dietary Supplements (HS 21.06)"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",
@@ -1766,7 +1766,17 @@
     "periodEnds": "Period ends",
     "noReportId": "No report ID provided",
     "backToHome": "Back to Home",
-    "youAreOnFreePlan": "You are currently on the Free plan."
+    "youAreOnFreePlan": "You are currently on the Free plan.",
+    "runACheck": "Run a Check",
+    "viewPlans": "View Plans",
+    "riskScore": "Risk Score",
+    "verdict": "Verdict",
+    "timeline": "Timeline",
+    "totalCost": "Total Cost",
+    "confidential": "CONFIDENTIAL",
+    "preparedFor": "Prepared for:",
+    "nameLabel": "Name",
+    "emailLabel": "Email"
   },
   "Cookie": {
     "message": "This site uses only essential authentication cookies. No tracking or advertising cookies are used.",

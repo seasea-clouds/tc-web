@@ -60,14 +60,5 @@
     "accept": "Sprejmi vse",
     "reject": "Zavrni nebistveno",
     "privacyLink": "Politika zasebnosti"
-  },
-
-  "Navbar": {
-    "home": "Home",
-    "blog": "Blog"
-  },
-  "breadcrumb": {
-    "home": "Home",
-    "blog": "Blog"
   }
 }

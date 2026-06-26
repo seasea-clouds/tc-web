@@ -60,14 +60,5 @@
     "accept": "සියල්ල පිළිගන්න",
     "reject": "අත්‍යවශ්‍ය නොවන දේ ප්‍රතික්ෂේප කරන්න",
     "privacyLink": "රහස්යතා ප්රතිපත්තිය"
-  },
-
-  "Navbar": {
-    "home": "Home",
-    "blog": "Blog"
-  },
-  "breadcrumb": {
-    "home": "Home",
-    "blog": "Blog"
   }
 }

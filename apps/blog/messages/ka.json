@@ -60,14 +60,5 @@
     "accept": "მიიღე ყველა",
     "reject": "უარყოთ არაარსებითი",
     "privacyLink": "კონფიდენციალურობის პოლიტიკა"
-  },
-
-  "Navbar": {
-    "home": "Home",
-    "blog": "Blog"
-  },
-  "breadcrumb": {
-    "home": "Home",
-    "blog": "Blog"
   }
 }

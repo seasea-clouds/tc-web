@@ -60,14 +60,5 @@
     "accept": "Ընդունել բոլորը",
     "reject": "Մերժիր ոչ էականը",
     "privacyLink": "Գաղտնիության քաղաքականություն"
-  },
-
-  "Navbar": {
-    "home": "Home",
-    "blog": "Blog"
-  },
-  "breadcrumb": {
-    "home": "Home",
-    "blog": "Blog"
   }
 }

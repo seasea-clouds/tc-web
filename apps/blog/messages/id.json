@@ -60,14 +60,5 @@
     "accept": "Terima Semua",
     "reject": "Tolak Tidak Penting",
     "privacyLink": "Kebijakan Privasi"
-  },
-
-  "Navbar": {
-    "home": "Home",
-    "blog": "Blog"
-  },
-  "breadcrumb": {
-    "home": "Home",
-    "blog": "Blog"
   }
 }

@@ -60,14 +60,5 @@
     "accept": "Acceptera alla",
     "reject": "Avvisa Ej väsentligt",
     "privacyLink": "Sekretesspolicy"
-  },
-
-  "Navbar": {
-    "home": "Home",
-    "blog": "Blog"
-  },
-  "breadcrumb": {
-    "home": "Home",
-    "blog": "Blog"
   }
 }

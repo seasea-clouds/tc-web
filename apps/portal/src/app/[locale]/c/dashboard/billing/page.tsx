@@ -1,7 +1,7 @@
 'use client';
 
 import { useAuth } from '@trade/ui';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { useState, useEffect } from 'react';
 import ProtectedRoute from '@/components/ProtectedRoute';
 import Link from 'next/link';
@@ -16,6 +16,7 @@ interface Subscription {
 
 function BillingContent() {
   const t = useTranslations('Dashboard');
+  const locale = useLocale();
   const { user } = useAuth();
   const [sub, setSub] = useState<Subscription | null>(null);
 
@@ -44,7 +45,7 @@ function BillingContent() {
           <>
             <p className="text-sm text-gray-500 mb-4">{t('youAreOnFreePlan')}</p>
             <Link
-              href="/pricing"
+              href={`/${locale}/c/pricing/`}
               className="inline-block bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#1B365D] font-semibold px-4 py-2 rounded-md text-sm transition-all"
             >
               {t('viewPricing')}

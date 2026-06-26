@@ -60,14 +60,5 @@
     "accept": "모두 수락",
     "reject": "필수적이지 않은 것은 거부",
     "privacyLink": "개인 정보 보호 정책"
-  },
-
-  "Navbar": {
-    "home": "Home",
-    "blog": "Blog"
-  },
-  "breadcrumb": {
-    "home": "Home",
-    "blog": "Blog"
   }
 }

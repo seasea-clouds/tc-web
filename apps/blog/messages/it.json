@@ -60,14 +60,5 @@
     "accept": "Accetta tutto",
     "reject": "Rifiuta non essenziale",
     "privacyLink": "politica sulla riservatezza"
-  },
-
-  "Navbar": {
-    "home": "Home",
-    "blog": "Blog"
-  },
-  "breadcrumb": {
-    "home": "Home",
-    "blog": "Blog"
   }
 }

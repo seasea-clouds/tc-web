@@ -107,9 +107,9 @@ export default async function PackagesPage({ params }: { params: Promise<{ local
       </section>
 
       <PortalCTASection t={ctaT} href={`/${locale}/c/`} generic />
+      <ContactForm />
       <CTASection t={ctaT} />
       <script id="jsonld-packages" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-    <ContactForm />
     </main>
   );
 }

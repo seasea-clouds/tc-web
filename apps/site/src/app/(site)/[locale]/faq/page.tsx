@@ -135,9 +135,9 @@ export default async function FAQPage({ params }: { params: Promise<{ locale: st
       {/* FAQ Sections — semantic dl/dt/dd */}
       <FAQSection categories={categories} />
 
-      <ContactForm />
-
       <PortalCTASection t={ctaT} href={`/${locale}/c/`} generic />
+
+      <ContactForm />
       <CTASection t={ctaT} />
     </main>
   );

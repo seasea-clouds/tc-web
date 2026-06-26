@@ -88,9 +88,10 @@
 **问题：** aria-label="Copy link" 硬编码
 **修复：** 改为 i18n 键
 
-### P2-5 报告列表翻页
+### P2-5 ✅ 报告列表翻页
 **问题：** 无分页，一次性加载所有
 **修复：** 增加分页组件（20条/页）+ 后端 API 支持 limit/offset
+**文件：** functions/api/reports/list.ts (API), me/reports/page.tsx, dashboard/reports/page.tsx (UI)
 
 ---
 
@@ -151,7 +152,7 @@
   ├── ✅ P0-7 preview/react-viewer i18n
   └── ⏳ rules.ts 3处模板英文 (需深层重构)
   ├── ✅ P2-1 AutoBreadcrumb 映射 (48 UI文件)
-  └── P2-5 报告列表翻页 (2文件 + 后端API)
+  └── ✅ P2-5 报告列表翻页 (3文件: API + 两个前端页面)
 
 [迭代3] 翻译任务 + 合并 + 部署
   └── 提交对译任务 → 合并 → 构建 → 部署

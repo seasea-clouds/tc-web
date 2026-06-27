@@ -177,11 +177,11 @@ export function checkLabel(input: LabelInput, locale?: string): LabelResult {
     oneLineDecision: t('labelOneLine'),
     summary: t('labelSummary'),
     riskDimensions: [
-      { dimension: "Label Fields", score: 5, color: "🟡", note: "12 mandatory fields per GB 7718" },
-      { dimension: "Nutrition Panel", score: 5, color: "🟡", note: t("gb_28050_kj_nrv_required") },
+      { dimension: t("labelDimension_labelFields"), score: 5, color: "🟡", note: t("labelRiskNote_labelFields") },
+      { dimension: t("labelDimension_nutritionPanel"), score: 5, color: "🟡", note: t("gb_28050_kj_nrv_required") },
       { dimension: t("additive_review"), score: 6, color: "🟡", note: t("gb_2760_positive_list_compliance") },
-      { dimension: "Timeline", score: 3, color: "🟢", note: "2-4 weeks" },
-      { dimension: "Cost", score: 2, color: "🟢", note: "$500-2,000" },
+      { dimension: t("labelDimension_timeline"), score: 3, color: "🟢", note: "2-4 weeks" },
+      { dimension: t("labelDimension_cost"), score: 2, color: "🟢", note: "$500-2,000" },
     ],
     channels: [
       { name: t("labelChannel_name"), channel: t("labelChannel_name"), suitability: "high", gaccRequired: false, description: t("labelChannel_desc"), advantages: [t("labelChannel_adv1")], disadvantages: [t("labelChannel_dis1")], timeline: "2-4 weeks", costRange: "$500-2,000" },
@@ -195,8 +195,8 @@ export function checkLabel(input: LabelInput, locale?: string): LabelResult {
     ],
     classification: { assignedHsChapter: "Varies", ciqCode: "Varies", isHighRisk: false, riskReason: t("standard_gb_7718_28050_compliance_12_mandatory_fie"), alternativeClassificationNote: "" },
     riskMatrix: [
-      { dimension: "Label Fields", rating: "🟡", explanation: "12 mandatory fields — all must be in Chinese" },
-      { dimension: "Nutrition Panel", rating: "🟡", explanation: "kJ format + NRV% calculation required" },
+      { dimension: t("labelDimension_labelFields"), rating: "🟡", explanation: t("labelMatrixNote_labelFields") },
+      { dimension: t("labelDimension_nutritionPanel"), rating: "🟡", explanation: t("labelMatrixNote_nutrition") },
       { dimension: t("additive_check"), rating: "🟡", explanation: t("all_additives_must_be_on_gb_2760_positive_list") },
     ],
     documentGuide: [
@@ -297,7 +297,7 @@ export function checkLabel(input: LabelInput, locale?: string): LabelResult {
   allergenGuide: {
     regulated: ["Milk", "Eggs", "Fish", "Crustacea", "Peanuts", "Soybeans", "Wheat", t("tree_nuts")],
     format: "Declare in ingredient list or separate 'Contains' statement",
-    note: "China's list differs from EU/US — verify all 8 categories"
+    note: t("labelAllergenNote")
   },
   labelReviewGuide: {
     process: [t("submit_artwork_for_pre_review"), t("compliance_audit_against_gb_7718_28050_2760"), t("revise_per_feedback"), t("final_approval"), t("print_ready_file_delivery")],

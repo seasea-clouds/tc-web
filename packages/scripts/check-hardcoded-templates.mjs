@@ -70,6 +70,7 @@ function hasHardcodedStatic(line) {
     /^Standard$/,                // Standard
     /^Check import$/,            // Check import
     /^Both$/,                    // Both
+    /\d+-\d+ (weeks|months)/,  // Duration data like "1-2 weeks", "8-14 months"
     /All documents in English/,  // Known i18n note
     /English accepted/,          // Known i18n note
   ];

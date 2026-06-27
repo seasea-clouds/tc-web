@@ -715,7 +715,7 @@
     "gaccRiskDim_ingredients": "成分风险 Ingrédients",
     "gaccRiskDim_originCountry": "Pays d'origine de 产地风险",
     "gaccRiskDim_originCountryComplexity": "Complexité du pays d’origine",
-    "gaccRiskDim_processing": "加工风险 Traitement",
+    "gaccRiskDim_processing": "Traitement",
     "gaccRiskDim_productCategory": "Catégorie de produit",
     "gaccRiskDim_productCategoryRisk": "Catégorie de produit",
     "gaccRiskDim_testingRequirements": "Exigences de test",

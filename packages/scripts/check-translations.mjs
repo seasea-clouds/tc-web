@@ -62,8 +62,21 @@ import { fileURLToPath } from 'url';
 import { LOCALES } from './locales.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const REPO_ROOT = path.resolve(__dirname, '..', '..'); // monorepo root
 const PROJECT_ROOT = process.cwd();
-const MESSAGES_DIR = path.join(PROJECT_ROOT, 'messages');
+
+// Auto-detect MESSAGES_DIR: if CWD-based messages/ exists, use it;
+// otherwise fall back to detecting the app from well-known paths.
+// This allows the script to be run from repo root or any app directory.
+const MESSAGES_DIR_CWD = path.join(PROJECT_ROOT, 'messages');
+const MESSAGES_DIR = fs.existsSync(MESSAGES_DIR_CWD)
+  ? MESSAGES_DIR_CWD
+  : [
+      path.join(REPO_ROOT, 'apps', 'site', 'messages'),
+      path.join(REPO_ROOT, 'apps', 'portal', 'messages'),
+      path.join(REPO_ROOT, 'apps', 'blog', 'messages'),
+    ].find(d => fs.existsSync(d)) || MESSAGES_DIR_CWD;
+
 const BLOG_DIR = path.join(PROJECT_ROOT, 'content', 'blog');
 const MONOREPO_ROOT = path.resolve(__dirname, '..');
 const SHARED_UI_MESSAGES_DIR = path.join(MONOREPO_ROOT, 'ui', 'messages');
@@ -206,6 +219,18 @@ const IGNORE_FALLBACK_KEYS = new Set([
   'AiAssistance.serviceGACC', 'AiAssistance.serviceCCC', 'AiAssistance.serviceLabel',
   'AiAssistance.serviceNMPA', 'AiAssistance.serviceCBEC', 'AiAssistance.serviceBrand',
   'AiAssistance.servicesTitle',
+  // Report: name/email/verdict — loanwords in Romance/Germanic languages
+  'Report.nameLabel', 'Report.emailLabel', 'Report.verdict',
+  // Check report labels — loanwords in French, Romanian, Catalan
+  'Check.reportVerdict', 'Check.reportClient',
+  // Check dimension names — "Cost" is loanword in Catalan, Romanian
+  'Check.cccDimension_cost', 'Check.labelDimension_cost',
+  'Check.nmpaDimension_cost', 'Check.tmDimension_cost',
+  // Check dimension labels — loanwords/technical terms
+  'Check.cccDimension_testing',
+  'Check.tmDimension_squatterRisk',
+  // Check category labels — product categories with HS codes
+  'Check.cccCat_electronics_label', 'Check.nmpaCat_makeup_label',
 ]);
 
 // ============================================================
@@ -455,7 +480,7 @@ const ENGLISH_RESIDUAL_ALLOW = new Set([
   'ACETA', 'ASEAN', 'BRICS', 'CHAFTA', 'NDRC', 'NMAP', 'NPC', 'Mercosur',
   'Canola', 'canola', 'Harmonics', 'Parmigiano', 'Phthalates', 'phthalate',
   'Prosciutto', 'Clenbuterol', 'Premium', 'Trans', 'bonded', 'warehouse',
-  'squatter', 'labels', 'translation', 'Rev', 'Engl',
+  'squatter', 'Squatter', 'labels', 'translation', 'Rev', 'Engl',
   'Plaform', // typo in source, intentionally kept matching
   'Mycotoxins', 'Article', 'Contains',
   'dye', 'full', 'hair', 'needing', 'perm', 'registration', 'sunscreen', 'whitening',
@@ -791,7 +816,9 @@ const totalIssues = { count: 0, byType: { fallback: [], empty: [], wrong_chars: 
 
       // 6. english residual in non-latin
       if (NON_LATIN_LOCALES.has(lang)) {
-        const engWords = new Set((langVal.match(/\b[A-Za-z]{3,}\b/g) || []));
+        // Strip variable placeholders like {originCountry} before checking
+        const cleanVal = langVal.replace(/\{[A-Za-z ]+\}/g, '');
+        const engWords = new Set((cleanVal.match(/\b[A-Za-z]{3,}\b/g) || []));
         if (engWords.size) {
           let residual = new Set([...engWords].filter(w => !ENGLISH_RESIDUAL_ALLOW.has(w)));
           if (SHARED_WORDS_BY_LANG[lang]) {
@@ -999,7 +1026,9 @@ function checkPortalTranslations(verbose = true) {
 
       // English residual in non-latin
       if (NON_LATIN_LOCALES.has(lang)) {
-        const engWords = new Set((langVal.match(/\b[A-Za-z]{3,}\b/g) || []));
+        // Strip variable placeholders like {originCountry} before checking
+        const cleanVal = langVal.replace(/\{[A-Za-z ]+\}/g, '');
+        const engWords = new Set((cleanVal.match(/\b[A-Za-z]{3,}\b/g) || []));
         if (engWords.size) {
           let residual = new Set([...engWords].filter(w => !ENGLISH_RESIDUAL_ALLOW.has(w)));
           if (SHARED_WORDS_BY_LANG[lang]) {

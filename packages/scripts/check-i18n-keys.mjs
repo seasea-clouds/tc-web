@@ -190,11 +190,8 @@ const IGNORE_FALLBACK_KEYS = new Set([
   'Check.reportModuleCrossborder', 'Check.resultProduct', 'Check.resultProductLabel', 'Check.reportProduct',
   // Check: compliance report section labels (domain-specific)
   'Check.cbGlossary_hsCode',
-  // Check: risk note labels for all 6 modules (newly added, need translation)
-  'Check.cbRiskNote_platformSetup', 'Check.cbRiskNote_timeline', 'Check.cbMatrixNote_platformSetup',
-  'Check.labelRiskNote_labelFields', 'Check.labelMatrixNote_labelFields', 'Check.labelMatrixNote_nutrition',
-  'Check.tmRiskNote_registered', 'Check.tmRiskNote_timeline', 'Check.tmMatrixNote_registered',
-  'Check.tmMatrixNote_timeline', 'Check.nmpaRiskNote_tests', 'Check.labelAllergenNote',
+  // Check: {count} tests is identical in French (legitimate)
+  'Check.nmpaRiskNote_tests',
   // ReportSection: domain-specific labels and values
   'ReportSection.compAllergens', 'ReportSection.customsClearance', 'ReportSection.nmpaSpecialLabel',
   'ReportSection.nmpaSpecialTimeline', 'ReportSection.channelSuitabilityMedium',

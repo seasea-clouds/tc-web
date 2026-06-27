@@ -39,11 +39,11 @@ export function checkCrossborder(input: any, locale?: string): any {
     oneLineDecision: t('cbOneLine'),
     summary: t('cbSummary'),
     riskDimensions: [
-      { dimension: "Positive List", score: 2, color: "🟢", note: t("category_is_on_cbec_positive_list") },
-      { dimension: "Platform Setup", score: 4, color: "🟡", note: "Platform onboarding 4-8 weeks" },
-      { dimension: "Compliance", score: 2, color: "🟢", note: t("no_gacc_required_for_cbec") },
-      { dimension: "Timeline", score: 3, color: "🟢", note: "4-10 weeks" },
-      { dimension: "Investment", score: 5, color: "🟡", note: "$10,000-40,000 initial" },
+      { dimension: t("cbDimension_positiveList"), score: 2, color: "🟢", note: t("category_is_on_cbec_positive_list") },
+      { dimension: t("cbDimension_platformSetup"), score: 4, color: "🟡", note: t("cbRiskNote_platformSetup") },
+      { dimension: t("cbDimension_compliance"), score: 2, color: "🟢", note: t("no_gacc_required_for_cbec") },
+      { dimension: t("cbDimension_timeline"), score: 3, color: "🟢", note: t("cbRiskNote_timeline") },
+      { dimension: t("cbDimension_investment"), score: 5, color: "🟡", note: "$10,000-40,000 initial" },
     ],
     channels: [
       { channel: "Tmall Global", suitability: "high", gaccRequired: false, description: t("largest_cbec_platform"), advantages: [t("massive_traffic"), t("integrated_logistics_cainiao")], disadvantages: [t("higher_deposit"), t("extensive_docs")], timeline: "4-8 weeks", costRange: "$15,000-40,000" },
@@ -57,8 +57,8 @@ export function checkCrossborder(input: any, locale?: string): any {
     ],
     classification: { assignedHsChapter: "Varies", ciqCode: "Check import", isHighRisk: false, riskReason: t("on_cbec_positive_list_simplified_compliance"), alternativeClassificationNote: "" },
     riskMatrix: [
-      { dimension: "Positive List", rating: "🟢", explanation: t("category_on_approved_list") },
-      { dimension: "Platform Setup", rating: "🟡", explanation: "4-8 weeks onboarding" },
+      { dimension: t("cbDimension_positiveList"), rating: "🟢", explanation: t("category_on_approved_list") },
+      { dimension: t("cbDimension_platformSetup"), rating: "🟡", explanation: t("cbMatrixNote_platformSetup") },
       { dimension: t("ongoing_compliance"), rating: "🟢", explanation: t("no_gacc_registration_needed") },
     ],
     documentGuide: [

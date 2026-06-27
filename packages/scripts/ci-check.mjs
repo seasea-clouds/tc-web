@@ -122,6 +122,7 @@ function runBuildPhaseChecks() {
     ['check-map-key.mjs'],
     ['check-jsonld.mjs'],
     ['check-md-format.mjs'],
+    ['check-locale-prefix.mjs'],
   ];
 
   for (const [script, ...extra] of checks) {
@@ -217,6 +218,18 @@ function runTemplateCheck() {
 }
 
 // ============================================================
+// 品类翻译键完整性校验 (CI-2)
+// 验证每个合规模块 (gacc/ccc/nmpa/label/crossborder/trademark) 的
+// CATEGORY_LABELS ↔ 翻译键是否完整对应
+// ============================================================
+function runCategoryLabelCheck() {
+  if (project !== 'portal') return;
+  runLocalScript('check-category-labels.mjs');
+}
+
+// CI-4 路由 locale 前缀检测: 已作为 build-phase check 集成 (见 runBuildPhaseChecks)
+
+// ============================================================
 // 清理
 // ============================================================
 function runCleanup() {
@@ -244,6 +257,7 @@ runBreadcrumbCheck();
 runCoverageCheck();
 runOverrideCheck();
 runTemplateCheck();
+runCategoryLabelCheck();
 runCleanup();
 
 console.log(`\n═══════════════════════════════════════════════`);

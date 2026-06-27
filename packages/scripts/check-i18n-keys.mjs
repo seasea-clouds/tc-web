@@ -141,6 +141,7 @@ const IGNORE_FALLBACK_VALUES = new Set([
 const IGNORE_FALLBACK_KEYS = new Set([
   // Report: Status/Plan/Client are correct loanwords in many languages (Germanic, Romance, etc.)
   'Report.status', 'Report.plan', 'Report.client',
+  'Report.nameLabel', 'Report.verdict', 'Report.emailLabel',
   'ReportSection.status', 'ReportSection.plan',
   // AiAssistance: contact info & service headers (partial strings ending with ':')
   'AiAssistance.contactEmail', 'AiAssistance.contactLinkedIn',
@@ -189,6 +190,11 @@ const IGNORE_FALLBACK_KEYS = new Set([
   'Check.reportModuleCrossborder', 'Check.resultProduct', 'Check.resultProductLabel', 'Check.reportProduct',
   // Check: compliance report section labels (domain-specific)
   'Check.cbGlossary_hsCode',
+  // Check: risk note labels for all 6 modules (newly added, need translation)
+  'Check.cbRiskNote_platformSetup', 'Check.cbRiskNote_timeline', 'Check.cbMatrixNote_platformSetup',
+  'Check.labelRiskNote_labelFields', 'Check.labelMatrixNote_labelFields', 'Check.labelMatrixNote_nutrition',
+  'Check.tmRiskNote_registered', 'Check.tmRiskNote_timeline', 'Check.tmMatrixNote_registered',
+  'Check.tmMatrixNote_timeline', 'Check.nmpaRiskNote_tests', 'Check.labelAllergenNote',
   // ReportSection: domain-specific labels and values
   'ReportSection.compAllergens', 'ReportSection.customsClearance', 'ReportSection.nmpaSpecialLabel',
   'ReportSection.nmpaSpecialTimeline', 'ReportSection.channelSuitabilityMedium',
@@ -247,6 +253,12 @@ const IGNORE_FALLBACK_KEYS = new Set([
   'Check.douyin_global',
   'Check.gb_7718_2011_rev_2025',
   'Check.mofcom_gacc',
+  // Check — dimension/category labels: domain terms with HS codes, legal/commercial terms
+  'Check.cccDimension_cost', 'Check.labelDimension_cost', 'Check.nmpaDimension_cost', 'Check.tmDimension_cost',
+  'Check.cccDimension_testing',
+  'Check.nmpaCat_makeup_label', 'Check.cccCat_electronics_label',
+  'Check.tmDimension_squatterRisk',
+  'Check.reportClient', 'Check.reportVerdict',
   'Check.ndrc_mofcom_2020',
   'Check.nhc_cnca',
   'Check.asean_cosmetics_gmp',

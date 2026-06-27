@@ -41,11 +41,11 @@ export function checkTrademark(input: any, locale?: string): any {
     oneLineDecision: t(needsReg ? 'tmOneLineHigh' : 'tmOneLineLow'),
     summary: t(needsReg ? 'tmSummaryHigh' : 'tmSummaryLow'),
     riskDimensions: [
-      { dimension: "Registration Status", score: needsReg ? 9 : 1, color: needsReg ? "🔴" : "🟢", note: needsReg ? t("not_registered_high_risk") : "Registered" },
-      { dimension: "Squatter Risk", score: needsReg ? 8 : 3, color: needsReg ? "🔴" : "🟢", note: t("china_first_to_file_squatters_may_grab_your_brand") },
-      { dimension: "Timeline", score: needsReg ? 6 : 1, color: needsReg ? "🟡" : "🟢", note: "8-14 months if filing now" },
-      { dimension: "Cost", score: 3, color: "🟢", note: "$600-2,000/class" },
-      { dimension: "Enforcement", score: needsReg ? 8 : 3, color: needsReg ? "🔴" : "🟢", note: needsReg ? t("cannot_enforce_without_registration") : t("full_enforcement_rights") },
+      { dimension: t("tmDimension_registrationStatus"), score: needsReg ? 9 : 1, color: needsReg ? "🔴" : "🟢", note: needsReg ? t("not_registered_high_risk") : t("tmRiskNote_registered") },
+      { dimension: t("tmDimension_squatterRisk"), score: needsReg ? 8 : 3, color: needsReg ? "🔴" : "🟢", note: t("china_first_to_file_squatters_may_grab_your_brand") },
+      { dimension: t("tmDimension_timeline"), score: needsReg ? 6 : 1, color: needsReg ? "🟡" : "🟢", note: t("tmRiskNote_timeline") },
+      { dimension: t("tmDimension_cost"), score: 3, color: "🟢", note: "$600-2,000/class" },
+      { dimension: t("tmDimension_enforcement"), score: needsReg ? 8 : 3, color: needsReg ? "🔴" : "🟢", note: needsReg ? t("cannot_enforce_without_registration") : t("full_enforcement_rights") },
     ],
     channels: [
       { channel: t("trademark_registration"), suitability: "high", gaccRequired: false, description: t("file_with_cnipa_for_full_legal_protection"), advantages: [t("legal_protection"), t("platform_enforcement")], disadvantages: ["8-14 month timeline"], timeline: "8-14 months", costRange: "$600-2,000/class" },
@@ -58,9 +58,9 @@ export function checkTrademark(input: any, locale?: string): any {
     ],
     classification: { assignedHsChapter: "N/A", ciqCode: "N/A", isHighRisk: needsReg, riskReason: needsReg ? t("brand_not_registered_first_to_file_risk") : "Registered.", alternativeClassificationNote: "" },
     riskMatrix: [
-      { dimension: "Registration Status", rating: needsReg ? "🔴" : "🟢", explanation: needsReg ? t("not_registered") : "Registered" },
-      { dimension: "Squatter Risk", rating: "🔴", explanation: t("china_first_to_file_anyone_can_register_your_brand") },
-      { dimension: "Timeline", rating: needsReg ? "🟡" : "🟢", explanation: "8-14 months" },
+      { dimension: t("tmDimension_registrationStatus"), rating: needsReg ? "🔴" : "🟢", explanation: needsReg ? t("not_registered") : t("tmMatrixNote_registered") },
+      { dimension: t("tmDimension_squatterRisk"), rating: "🔴", explanation: t("china_first_to_file_anyone_can_register_your_brand") },
+      { dimension: t("tmDimension_timeline"), rating: needsReg ? "🟡" : "🟢", explanation: t("tmMatrixNote_timeline") },
     ],
     documentGuide: [
       { name: t("tmDoc_appForm_name"), format: t("tmDoc_appForm_format"), notarization: t("tmDoc_appForm_notarization"), validity: t("tmDoc_appForm_validity"), commonError: t("tmDoc_appForm_error") },

@@ -7,6 +7,7 @@ import { checkTrademark, CATEGORY_LABELS } from "../../../../../../modules/trade
 import { API_BASE } from "@/lib/constants";
 import { useFormValidation, inputClasses, selectClasses } from "@/lib/useFormValidation";
 import { usePathPrefix } from '@/lib/useSubsiteHref';
+import { initiateCheckout } from '@/lib/checkout';
 
 type Step = "form" | "free-result";
 
@@ -74,7 +75,24 @@ export default function TrademarkCheckClient() {
         }).catch(e => console.warn('Email send failed (dev mode):', e));
       }
 
-      window.location.href = pathPrefix + "/c/report/?id=" + reportId;
+      // 3. Try checkout API — redirect to Creem checkout
+      const checkoutUrl = await initiateCheckout({
+        reportId,
+        email,
+        locale,
+        productName: input.productName || t('yourProduct'),
+        category: input.category,
+        originCountry: input.originCountry,
+        module: 'Brand Protection',
+        moduleKey: 'trademark',
+      });
+
+      if (checkoutUrl) {
+        window.location.href = checkoutUrl;
+      } else {
+        // Fallback: go to report page directly
+        window.location.href = pathPrefix + "/c/report/?id=" + reportId;
+      }
     } catch (err) {
       try {
         localStorage.setItem('compli-report-input', JSON.stringify({

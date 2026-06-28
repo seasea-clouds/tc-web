@@ -1708,7 +1708,6 @@
     "notification": "Уведомяване",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "Хранителният анализ трябва да бъде в лаборатория, акредитирана от CNAS.",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "Онлайн портал за задгранични производители на храни за подаване на заявления за регистрация в GACC.",
-    "paid_pending": "Платено' : 'Предстоящо",
     "photometric_performance": "Фотометрични характеристики",
     "phthalates_exceed_china_limit": "Фталатите надхвърлят ограничението за Китай",
     "platform_onboarding_4_8_weeks": "Влизане в платформата 4-8 седмици",
@@ -1864,7 +1863,11 @@
     "timeline": "Хронология",
     "totalCost": "Обща цена",
     "verdict": "Присъда",
-    "viewPlans": "Преглед на планове"
+    "viewPlans": "Преглед на планове",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "Този сайт използва само основни бисквитки за удостоверяване. Не се използват проследяващи или рекламни бисквитки.",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "на чужди марки скуотирани",
     "squattingRiskLabel": "Риск",
     "valueHigh": "високо",
-    "labelMandatoryFields": "Задължителни полета"
+    "labelMandatoryFields": "Задължителни полета",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "selfCheck": "Самопроверка",

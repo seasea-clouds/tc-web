@@ -1708,7 +1708,6 @@
     "notification": "अधिसूचना",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "पोषण संबंधी विश्लेषण सीएनएएस-मान्यता प्राप्त प्रयोगशाला में होना चाहिए।",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "GACC पंजीकरण आवेदन जमा करने के लिए विदेशी खाद्य निर्माताओं के लिए ऑनलाइन पोर्टल।",
-    "paid_pending": "भुगतान': 'लंबित",
     "photometric_performance": "फोटोमीट्रिक प्रदर्शन",
     "phthalates_exceed_china_limit": "थैलेट्स चीन की सीमा से अधिक है",
     "platform_onboarding_4_8_weeks": "प्लेटफ़ॉर्म ऑनबोर्डिंग 4-8 सप्ताह",
@@ -1864,7 +1863,11 @@
     "timeline": "समय",
     "totalCost": "कुल लागत",
     "verdict": "निर्णय",
-    "viewPlans": "योजनाएं देखें"
+    "viewPlans": "योजनाएं देखें",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "यह साइट केवल आवश्यक प्रमाणीकरण कुकीज़ का उपयोग करती है। किसी भी ट्रैकिंग या विज्ञापन कुकीज़ का उपयोग नहीं किया जाता है।",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "विदेशी ब्रांडों का कब्जा हो गया",
     "squattingRiskLabel": "जोखिम",
     "valueHigh": "उच्च",
-    "labelMandatoryFields": "अनिवार्य क्षेत्र"
+    "labelMandatoryFields": "अनिवार्य क्षेत्र",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "selfCheck": "स्व-जानच",

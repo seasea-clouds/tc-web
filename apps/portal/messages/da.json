@@ -1708,7 +1708,6 @@
     "notification": "Notifikation",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "Ernæringsanalyse skal være på CNAS-akkrediteret laboratorium.",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "Online portal for oversøiske fødevareproducenter til at indsende GACC-registreringsansøgninger.",
-    "paid_pending": "Betalt' : 'Afventer",
     "photometric_performance": "Fotometrisk ydeevne",
     "phthalates_exceed_china_limit": "Phthalater overskrider Kinas grænse",
     "platform_onboarding_4_8_weeks": "Platform onboarding 4-8 uger",
@@ -1864,7 +1863,11 @@
     "timeline": "Tidslinje",
     "totalCost": "Samlede omkostninger",
     "verdict": "Dom",
-    "viewPlans": "Se planer"
+    "viewPlans": "Se planer",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "Dette websted bruger kun vigtige autentificeringscookies. Der bruges ingen sporings- eller reklamecookies.",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "af udenlandske mærker på hug",
     "squattingRiskLabel": "Risiko",
     "valueHigh": "Høj",
-    "labelMandatoryFields": "Obligatoriske felter"
+    "labelMandatoryFields": "Obligatoriske felter",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "selfCheck": "Selvtest",

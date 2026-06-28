@@ -1708,7 +1708,6 @@
     "notification": "Notificación",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "Los análisis nutricionales deben realizarse en un laboratorio acreditado por CNAS.",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "Portal en línea para que los fabricantes de alimentos extranjeros presenten solicitudes de registro GACC.",
-    "paid_pending": "Pagado' : 'Pendiente",
     "photometric_performance": "Rendimiento fotométrico",
     "phthalates_exceed_china_limit": "Los ftalatos superan el límite de China",
     "platform_onboarding_4_8_weeks": "Incorporación a la plataforma 4-8 semanas",
@@ -1864,7 +1863,11 @@
     "timeline": "Línea de tiempo",
     "totalCost": "Costo total",
     "verdict": "Veredicto",
-    "viewPlans": "Ver planos"
+    "viewPlans": "Ver planos",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "Este sitio utiliza sólo cookies de autenticación esenciales. No se utilizan cookies de seguimiento ni publicidad.",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "de marcas extranjeras okupadas",
     "squattingRiskLabel": "Riesgo",
     "valueHigh": "Alto",
-    "labelMandatoryFields": "Campos obligatorios"
+    "labelMandatoryFields": "Campos obligatorios",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "selfCheck": "Autoevaluación",

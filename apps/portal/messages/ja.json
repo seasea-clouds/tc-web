@@ -1708,7 +1708,6 @@
     "notification": "通知",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "栄養分析は CNAS 認定ラボで行う必要があります。",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "海外の食品メーカーがGACC登録申請を行うためのオンラインポータル。",
-    "paid_pending": "支払い済み' : '保留中",
     "photometric_performance": "測光性能",
     "phthalates_exceed_china_limit": "フタル酸エステル類が中国の制限を超える",
     "platform_onboarding_4_8_weeks": "プラットフォームのオンボーディング 4 ～ 8 週間",
@@ -1864,7 +1863,11 @@
     "timeline": "タイムライン",
     "totalCost": "総コスト",
     "verdict": "評決",
-    "viewPlans": "プランを見る"
+    "viewPlans": "プランを見る",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "このサイトでは、必須の認証 Cookie のみを使用します。追跡クッキーや広告クッキーは使用されません。",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "不法占拠された外国ブランドの",
     "squattingRiskLabel": "リスク",
     "valueHigh": "高い",
-    "labelMandatoryFields": "必須フィールド"
+    "labelMandatoryFields": "必須フィールド",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "selfCheck": "セルフチェック",

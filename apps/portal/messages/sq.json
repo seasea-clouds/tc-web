@@ -1708,7 +1708,6 @@
     "notification": "Njoftimi",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "Analiza ushqyese duhet të bëhet në laborator të akredituar nga CNAS.",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "Portali online për prodhuesit e ushqimeve jashtë shtetit për të dorëzuar aplikacionet e regjistrimit të GACC.",
-    "paid_pending": "Paguar' : 'Në pritje",
     "photometric_performance": "Performanca fotometrike",
     "phthalates_exceed_china_limit": "Ftalatet tejkalojnë kufirin e Kinës",
     "platform_onboarding_4_8_weeks": "Hyrja në platformë 4-8 javë",
@@ -1864,7 +1863,11 @@
     "timeline": "Afati kohor",
     "totalCost": "Kostoja totale",
     "verdict": "Verdikti",
-    "viewPlans": "Shikoni planet"
+    "viewPlans": "Shikoni planet",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "Ky sajt përdor vetëm cookie thelbësore të vërtetimit. Nuk përdoren skedarë gjurmimi ose reklamimi.",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "të markave të huaja të grumbulluara",
     "squattingRiskLabel": "Rreziku",
     "valueHigh": "Lartë",
-    "labelMandatoryFields": "Fushat e detyrueshme"
+    "labelMandatoryFields": "Fushat e detyrueshme",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "pricing": "Çmimet",

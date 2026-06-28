@@ -1708,7 +1708,6 @@
     "notification": "Powiadomienie",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "Analiza wartości odżywczej musi zostać przeprowadzona w laboratorium akredytowanym przez CNAS.",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "Portal internetowy dla zagranicznych producentów żywności umożliwiający składanie wniosków rejestracyjnych GACC.",
-    "paid_pending": "Zapłacono' : 'Oczekuje",
     "photometric_performance": "Wydajność fotometryczna",
     "phthalates_exceed_china_limit": "Ftalany przekraczają limit chiński",
     "platform_onboarding_4_8_weeks": "Wdrożenie platformy 4-8 tygodni",
@@ -1864,7 +1863,11 @@
     "timeline": "Oś czasu",
     "totalCost": "Całkowity koszt",
     "verdict": "Werdykt",
-    "viewPlans": "Zobacz plany"
+    "viewPlans": "Zobacz plany",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "Ta witryna wykorzystuje wyłącznie niezbędne pliki cookie służące do uwierzytelniania. Nie są używane żadne śledzące ani reklamowe pliki cookie.",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "zagranicznych marek kucnęło",
     "squattingRiskLabel": "Ryzyko",
     "valueHigh": "Wysoki",
-    "labelMandatoryFields": "Pola obowiązkowe"
+    "labelMandatoryFields": "Pola obowiązkowe",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "selfCheck": "Własna kontrola",

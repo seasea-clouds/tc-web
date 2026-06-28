@@ -1708,7 +1708,6 @@
     "notification": "Notificació",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "L'anàlisi nutricional ha de ser en un laboratori acreditat pel CNAS.",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "Portal en línia per als fabricants d'aliments a l'estranger per presentar sol·licituds de registre GACC.",
-    "paid_pending": "Pagat': 'Pendent",
     "photometric_performance": "Rendiment fotomètric",
     "phthalates_exceed_china_limit": "Els ftalats superen el límit de la Xina",
     "platform_onboarding_4_8_weeks": "Incorporació a la plataforma 4-8 setmanes",
@@ -1864,7 +1863,11 @@
     "timeline": "Cronologia",
     "totalCost": "Cost total",
     "verdict": "Veredicte",
-    "viewPlans": "Veure plànols"
+    "viewPlans": "Veure plànols",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "Aquest lloc només utilitza cookies d'autenticació essencials. No s'utilitzen cookies de seguiment ni de publicitat.",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "de marques estrangeres ocupades",
     "squattingRiskLabel": "Risc",
     "valueHigh": "Alt",
-    "labelMandatoryFields": "Camps obligatoris"
+    "labelMandatoryFields": "Camps obligatoris",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "selfCheck": "Autoavaluació",

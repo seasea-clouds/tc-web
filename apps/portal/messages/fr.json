@@ -1708,7 +1708,6 @@
     "notification": "Notification",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "L'analyse nutritionnelle doit être effectuée dans un laboratoire accrédité par le CNAS.",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "Portail en ligne permettant aux fabricants de produits alimentaires étrangers de soumettre des demandes d'enregistrement au GACC.",
-    "paid_pending": "Payé' : 'En attente",
     "photometric_performance": "Performances photométriques",
     "phthalates_exceed_china_limit": "Les phtalates dépassent la limite chinoise",
     "platform_onboarding_4_8_weeks": "Intégration de la plateforme 4 à 8 semaines",
@@ -1864,7 +1863,11 @@
     "timeline": "Chronologie",
     "totalCost": "Coût total",
     "verdict": "Verdict",
-    "viewPlans": "Voir les forfaits"
+    "viewPlans": "Voir les forfaits",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "Ce site utilise uniquement des cookies d'authentification essentiels. Aucun cookie de suivi ou publicitaire n'est utilisé.",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "des marques étrangères squattées",
     "squattingRiskLabel": "Risque",
     "valueHigh": "Haut",
-    "labelMandatoryFields": "Champs obligatoires"
+    "labelMandatoryFields": "Champs obligatoires",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "selfCheck": "Auto-évaluation",

@@ -1708,7 +1708,6 @@
     "notification": "Kennisgeving",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "Voedingsanalyses moeten plaatsvinden in een door het CNAS geaccrediteerd laboratorium.",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "Online portaal waar buitenlandse voedselproducenten GACC-registratieaanvragen kunnen indienen.",
-    "paid_pending": "Betaald' : 'In behandeling",
     "photometric_performance": "Fotometrische prestaties",
     "phthalates_exceed_china_limit": "Ftalaten overschrijden de Chinese limiet",
     "platform_onboarding_4_8_weeks": "Platform-onboarding 4-8 weken",
@@ -1864,7 +1863,11 @@
     "timeline": "Tijdlijn",
     "totalCost": "Totale kosten",
     "verdict": "Uitspraak",
-    "viewPlans": "Bekijk plannen"
+    "viewPlans": "Bekijk plannen",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "Deze site gebruikt alleen essentiële authenticatiecookies. Er worden geen tracking- of advertentiecookies gebruikt.",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "van buitenlandse merken gekraakt",
     "squattingRiskLabel": "Risico",
     "valueHigh": "Hoog",
-    "labelMandatoryFields": "Verplichte velden"
+    "labelMandatoryFields": "Verplichte velden",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "selfCheck": "Zelfevaluatie",

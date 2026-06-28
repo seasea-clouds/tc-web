@@ -59,7 +59,7 @@ export default function MyReportsPage() {
                   <div className="text-right text-xs text-gray-400">
                     <p>{r.created_at ? new Date(r.created_at).toLocaleDateString() : '—'}</p>
                     <span className={`inline-block mt-1 px-2 py-0.5 rounded-full ${r.payment_status === 'completed' ? 'bg-green-100 text-green-700' : 'bg-amber-100 text-amber-700'}`}>
-                      {r.payment_status === 'completed' ? 'Paid' : 'Pending'}
+                      {r.payment_status === 'completed' ? t('paid') : t('pending')}
                     </span>
                   </div>
                 </div>
@@ -73,7 +73,7 @@ export default function MyReportsPage() {
                   disabled={page === 0}
                   className={`px-3 py-1.5 text-sm rounded-md transition-all ${page === 0 ? 'text-gray-300 cursor-not-allowed' : 'text-primary-navy hover:bg-gray-100'}`}
                 >
-                  ← Prev
+                  {t('prevPage')}
                 </button>
                 <div className="flex gap-1">
                   {Array.from({ length: totalPages }, (_, i) => (
@@ -91,7 +91,7 @@ export default function MyReportsPage() {
                   disabled={page >= totalPages - 1}
                   className={`px-3 py-1.5 text-sm rounded-md transition-all ${page >= totalPages - 1 ? 'text-gray-300 cursor-not-allowed' : 'text-primary-navy hover:bg-gray-100'}`}
                 >
-                  Next →
+                  {t('nextPage')}
                 </button>
               </div>
             )}

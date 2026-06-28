@@ -1708,7 +1708,6 @@
     "notification": "Thông báo",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "Phân tích dinh dưỡng phải được thực hiện tại phòng thí nghiệm được CNAS công nhận.",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "Cổng thông tin trực tuyến dành cho các nhà sản xuất thực phẩm ở nước ngoài nộp đơn đăng ký GACC.",
-    "paid_pending": "Đã thanh toán' : 'Đang chờ xử lý",
     "photometric_performance": "Hiệu suất trắc quang",
     "phthalates_exceed_china_limit": "Phthalates vượt quá giới hạn của Trung Quốc",
     "platform_onboarding_4_8_weeks": "Tích hợp nền tảng 4-8 tuần",
@@ -1864,7 +1863,11 @@
     "timeline": "Dòng thời gian",
     "totalCost": "Tổng chi phí",
     "verdict": "Phán quyết",
-    "viewPlans": "Xem kế hoạch"
+    "viewPlans": "Xem kế hoạch",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "Trang web này chỉ sử dụng cookie xác thực cần thiết. Không sử dụng cookie theo dõi hoặc quảng cáo.",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "thương hiệu nước ngoài lấn sân",
     "squattingRiskLabel": "Rủi ro",
     "valueHigh": "Cao",
-    "labelMandatoryFields": "Trường bắt buộc"
+    "labelMandatoryFields": "Trường bắt buộc",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "selfCheck": "Tự đánh giá",

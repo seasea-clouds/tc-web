@@ -1708,7 +1708,6 @@
     "notification": "通知",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "营养分析必须在 CNAS 认可的实验室进行。",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "境外食品生产商提交GACC注册申请的在线门户。",
-    "paid_pending": "已付款' : '待定",
     "photometric_performance": "光度性能",
     "phthalates_exceed_china_limit": "邻苯二甲酸盐超标",
     "platform_onboarding_4_8_weeks": "平台上线 4-8 周",
@@ -1864,7 +1863,11 @@
     "confidential": "机密",
     "preparedFor": "准备人:",
     "nameLabel": "名称",
-    "emailLabel": "邮箱"
+    "emailLabel": "邮箱",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "本网站仅使用必要的身份验证Cookie。不使用跟踪或广告Cookie。",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "外资品牌被抢占",
     "squattingRiskLabel": "风险",
     "valueHigh": "高的",
-    "labelMandatoryFields": "必填字段"
+    "labelMandatoryFields": "必填字段",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "selfCheck": "合规自查",

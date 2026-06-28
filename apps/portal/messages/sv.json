@@ -1708,7 +1708,6 @@
     "notification": "Underrättelse",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "Näringsanalys måste göras på CNAS-ackrediterat labb.",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "Onlineportal för utländska livsmedelstillverkare att skicka in GACC-registreringsansökningar.",
-    "paid_pending": "Betald' : 'Väntar",
     "photometric_performance": "Fotometrisk prestanda",
     "phthalates_exceed_china_limit": "Ftalater överskrider Kinas gräns",
     "platform_onboarding_4_8_weeks": "Plattform onboarding 4-8 veckor",
@@ -1864,7 +1863,11 @@
     "timeline": "Tidslinje",
     "totalCost": "Total kostnad",
     "verdict": "Dom",
-    "viewPlans": "Visa planer"
+    "viewPlans": "Visa planer",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "Denna webbplats använder endast viktiga autentiseringscookies. Inga spårnings- eller reklamcookies används.",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "av utländska märken på huk",
     "squattingRiskLabel": "Risk",
     "valueHigh": "Hög",
-    "labelMandatoryFields": "Obligatoriska fält"
+    "labelMandatoryFields": "Obligatoriska fält",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "selfCheck": "Självbedömning",

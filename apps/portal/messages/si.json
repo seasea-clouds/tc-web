@@ -1708,7 +1708,6 @@
     "notification": "දැනුම්දීම",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "පෝෂණ විශ්ලේෂණය CNAS ප්‍රතීතනය ලත් රසායනාගාරයේ තිබිය යුතුය.",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "GACC ලියාපදිංචි අයදුම්පත් ඉදිරිපත් කිරීමට විදේශීය ආහාර නිෂ්පාදකයින් සඳහා මාර්ගගත ද්වාරය.",
-    "paid_pending": "ගෙවා ඇත' : 'පොරොත්තුවෙන්",
     "photometric_performance": "ඡායාරූපමිතික කාර්ය සාධනය",
     "phthalates_exceed_china_limit": "තැලේට් චීනයේ සීමාව ඉක්මවයි",
     "platform_onboarding_4_8_weeks": "වේදිකාවට ඇතුල් වීම සති 4-8",
@@ -1864,7 +1863,11 @@
     "timeline": "කාලරේඛාව",
     "totalCost": "මුළු පිරිවැය",
     "verdict": "තීන්දුව",
-    "viewPlans": "සැලසුම් බලන්න"
+    "viewPlans": "සැලසුම් බලන්න",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "මෙම වෙබ් අඩවිය අත්‍යවශ්‍ය සත්‍යාපන කුකීස් පමණක් භාවිතා කරයි. ලුහුබැඳීම හෝ ප්‍රචාරණ කුකීස් භාවිතා නොකෙරේ.",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "විදේශීය වෙළඳ නාමවල squatted",
     "squattingRiskLabel": "අවදානම",
     "valueHigh": "ඉහළ",
-    "labelMandatoryFields": "අනිවාර්ය ක්ෂේත්ර"
+    "labelMandatoryFields": "අනිවාර්ය ක්ෂේත්ර",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "pricing": "මිට ගැනුම්",

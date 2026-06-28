@@ -1708,7 +1708,6 @@
     "notification": "Obavijest",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "Nutritivna analiza mora biti u laboratoriju ovlaštenom od CNAS-a.",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "Internetski portal za inozemne proizvođače hrane za podnošenje zahtjeva za registraciju GACC-a.",
-    "paid_pending": "Plaćeno' : 'Na čekanju",
     "photometric_performance": "Fotometrijska izvedba",
     "phthalates_exceed_china_limit": "Ftalati premašuju kinesku granicu",
     "platform_onboarding_4_8_weeks": "Uključivanje u platformu 4-8 tjedana",
@@ -1864,7 +1863,11 @@
     "timeline": "Vremenska crta",
     "totalCost": "Ukupni trošak",
     "verdict": "Presuda",
-    "viewPlans": "Pogledajte planove"
+    "viewPlans": "Pogledajte planove",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "Ova stranica koristi samo bitne kolačiće za provjeru autentičnosti. Ne koriste se kolačići za praćenje ili oglašavanje.",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "stranih marki skvotiranih",
     "squattingRiskLabel": "Rizik",
     "valueHigh": "visoko",
-    "labelMandatoryFields": "Obavezna polja"
+    "labelMandatoryFields": "Obavezna polja",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "selfCheck": "Samoprocjena",

@@ -1708,7 +1708,6 @@
     "notification": "การแจ้งเตือน",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "การวิเคราะห์ทางโภชนาการจะต้องอยู่ที่ห้องปฏิบัติการที่ได้รับการรับรองจาก CNAS",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "พอร์ทัลออนไลน์สำหรับผู้ผลิตอาหารในต่างประเทศเพื่อยื่นคำขอจดทะเบียน GACC",
-    "paid_pending": "ชำระเงินแล้ว' : 'รอดำเนินการ",
     "photometric_performance": "ประสิทธิภาพโฟโตเมตริก",
     "phthalates_exceed_china_limit": "สารพาทาเลทเกินขีดจำกัดของจีน",
     "platform_onboarding_4_8_weeks": "การเริ่มต้นใช้งานแพลตฟอร์ม 4-8 สัปดาห์",
@@ -1864,7 +1863,11 @@
     "timeline": "ไทม์ไลน์",
     "totalCost": "ต้นทุนรวม",
     "verdict": "คำตัดสิน",
-    "viewPlans": "ดูแผน"
+    "viewPlans": "ดูแผน",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "ไซต์นี้ใช้คุกกี้การรับรองความถูกต้องที่จำเป็นเท่านั้น ไม่มีการใช้คุกกี้การติดตามหรือการโฆษณา",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "ของแบรนด์ต่างประเทศนั่งยองๆ",
     "squattingRiskLabel": "เสี่ยง",
     "valueHigh": "สูง",
-    "labelMandatoryFields": "ช่องบังคับ"
+    "labelMandatoryFields": "ช่องบังคับ",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "selfCheck": "ตรวจสอบตนเอง",

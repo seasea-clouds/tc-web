@@ -1708,7 +1708,6 @@
     "notification": "შეტყობინება",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "კვების ანალიზი უნდა იყოს CNAS აკრედიტებულ ლაბორატორიაში.",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "ონლაინ პორტალი უცხოური სურსათის მწარმოებლებისთვის, რათა წარადგინონ GACC სარეგისტრაციო განაცხადები.",
-    "paid_pending": "გადახდილი' : 'მოლოდინშია",
     "photometric_performance": "ფოტომეტრული შესრულება",
     "phthalates_exceed_china_limit": "ფტალატები აღემატება ჩინეთის ლიმიტს",
     "platform_onboarding_4_8_weeks": "პლატფორმის ჩართვა 4-8 კვირა",
@@ -1864,7 +1863,11 @@
     "timeline": "ვადები",
     "totalCost": "მთლიანი ღირებულება",
     "verdict": "ვერდიქტი",
-    "viewPlans": "გეგმების ნახვა"
+    "viewPlans": "გეგმების ნახვა",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "ეს საიტი იყენებს მხოლოდ აუთენტიფიკაციის აუცილებელ ქუქიებს. არ გამოიყენება თვალთვალის ან სარეკლამო ქუქიები.",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "უცხოური ბრენდების ჩახშობილი",
     "squattingRiskLabel": "რისკი",
     "valueHigh": "მაღალი",
-    "labelMandatoryFields": "სავალდებულო ველები"
+    "labelMandatoryFields": "სავალდებულო ველები",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "selfCheck": "თვითშეფასება",

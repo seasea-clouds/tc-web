@@ -1708,7 +1708,6 @@
     "notification": "Обавештење",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "Анализа исхране мора бити у лабораторији акредитованој ЦНАС.",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "Онлине портал за иностране произвођаче хране за подношење пријава за регистрацију ГАЦЦ-а.",
-    "paid_pending": "Плаћено' : 'На чекању",
     "photometric_performance": "Фотометријске перформансе",
     "phthalates_exceed_china_limit": "Фталати премашују кинеску границу",
     "platform_onboarding_4_8_weeks": "Укључивање платформе 4-8 недеља",
@@ -1864,7 +1863,11 @@
     "timeline": "Временска линија",
     "totalCost": "Тотал Цост",
     "verdict": "Пресуда",
-    "viewPlans": "Погледајте планове"
+    "viewPlans": "Погледајте планове",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "Овај сајт користи само неопходне колачиће за аутентификацију. Не користе се колачићи за праћење или оглашавање.",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "страних брендова сквотирао",
     "squattingRiskLabel": "Ризик",
     "valueHigh": "Високо",
-    "labelMandatoryFields": "Обавезна поља"
+    "labelMandatoryFields": "Обавезна поља",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "selfCheck": "Самостална провера",

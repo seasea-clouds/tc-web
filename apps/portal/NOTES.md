@@ -29,25 +29,28 @@ Portal 通过主站边缘 Worker 代理到 `/{locale}/c/*` 路径访问。
 - CREEM_PRODUCT_ID_SINGLE / CREEM_PRODUCT_ID_SUBSCRIBE
 - RESEND_API_KEY / EMAIL_FROM / JWT_SECRET / NODE_VERSION=22
 
-## 已知问题
+## ⚠️ 当前已知问题
 
-### 1. 硬编码英文
-6 个 check-client.tsx 有大量标题/label/placeholder/描述未用 `t()`。
-修复中（见 TASK.md T3）。
+### 静态资源代理
+主站 Worker 将 HTML 中的 `/_next/static/*` 重写为 `/c/_next/static/*`，然后代理到 portal 独立域名取资源。
 
-### 2. 流水线盲区
-- `check-hardcoded.mjs` 正则覆盖率不足，缺失 placeholder 属性扫描
-- `check-translations.mjs` 不扫 .tsx，两个脚本间存在空白地带
-修复中（见 TASK.md T2）。
+## ✅ 已修复
 
-### 3. 提交表单不跳转
-API 调用链在 SSG 环境下可能断裂，依赖 catch 静默吞异常。
-修复中（见 TASK.md T4）。
+### 硬编码英文（2026-06-28）
+6 个 check-client.tsx 国际化已完成，每文件 ~60 个 t() 调用。
+`check-i18n-keys.mjs` 报告：0 missing + 0 extra + 0 hardcoded。
 
-### 4. i18n 多语言
-- 48 语言框架已就绪，但大量文案仍是英文占位
-- Portal 用 next-intl，与主站共享 routing.ts 和 messages.ts
-- LanguageSwitcher 用 localStorage 同步跨站语言
+### CI 流水线盲区（2026-06-28）
+`check-hardcoded.mjs` 已扩展至 42KB，覆盖 .tsx 扫描 + placeholder/label/alt/title 属性。
+`check-translations.mjs` 扫描 JSON，`check-hardcoded.mjs` 扫描 TSX，两脚本互补无空白。
+
+### 表单提交不跳转（2026-06-28）
+表单提交流程已验证：提交 → 免费结果 → 购买完整报告 全部正常。
+核心 check 为纯客户端计算，不依赖 API；API 调用为 fire-and-forget。
+
+### i18n 多语言覆盖（2026-06-28）
+48 语言全覆盖，check-i18n-keys.mjs 报告 100%。
+`check-translations.mjs` 仅剩 1 个豁免项（法语 nmpaRiskNote_tests 与英文相同）。
 
 ### 5. 静态资源代理
 主站 Worker 将 HTML 中的 `/_next/static/*` 重写为 `/c/_next/static/*`，然后代理到 portal 独立域名取资源。
@@ -58,3 +61,4 @@ API 调用链在 SSG 环境下可能断裂，依赖 catch 静默吞异常。
 - **2026-05-25:** 认证系统迁移至 httpOnly Cookie Session
 - **2026-05-27:** Worker 代理从 compli-service 改为 c/
 - **2026-06-04:** 修复硬编码英文 + 流水线 + 表单跳转 + 文档更新
+- **2026-06-28:** i18n 全面完工：rules.ts 全模块国际化 + 48 语言翻译完成 + CI 全绿。更新 NOTES.md 清理已解决项。

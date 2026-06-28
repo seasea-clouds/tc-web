@@ -1708,7 +1708,6 @@
     "notification": "Κοινοποίηση",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "Η διατροφική ανάλυση πρέπει να γίνεται σε εργαστήριο διαπιστευμένο από το CNAS.",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "Διαδικτυακή πύλη για παραγωγούς τροφίμων στο εξωτερικό για υποβολή αιτήσεων εγγραφής GACC.",
-    "paid_pending": "Πληρώθηκε' : 'Εκκρεμεί",
     "photometric_performance": "Φωτομετρική απόδοση",
     "phthalates_exceed_china_limit": "Οι φθαλικές ενώσεις υπερβαίνουν το όριο της Κίνας",
     "platform_onboarding_4_8_weeks": "Ενσωμάτωση πλατφόρμας 4-8 εβδομάδες",
@@ -1864,7 +1863,11 @@
     "timeline": "Χρονολόγιο",
     "totalCost": "Συνολικό Κόστος",
     "verdict": "Ετυμηγορία",
-    "viewPlans": "Προβολή σχεδίων"
+    "viewPlans": "Προβολή σχεδίων",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "Αυτός ο ιστότοπος χρησιμοποιεί μόνο απαραίτητα cookies ελέγχου ταυτότητας. Δεν χρησιμοποιούνται cookies παρακολούθησης ή διαφήμισης.",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "ξένων εμπορικών σημάτων κατάληψη",
     "squattingRiskLabel": "Κίνδυνος",
     "valueHigh": "Ψηλά",
-    "labelMandatoryFields": "Υποχρεωτικά Πεδία"
+    "labelMandatoryFields": "Υποχρεωτικά Πεδία",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "selfCheck": "Αυτοαξιολόγηση",

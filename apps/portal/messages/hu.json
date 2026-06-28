@@ -1708,7 +1708,6 @@
     "notification": "Bejelentés",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "A táplálkozási elemzést a CNAS által akkreditált laboratóriumban kell elvégezni.",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "Online portál a tengerentúli élelmiszergyártók számára a GACC regisztrációs kérelmek benyújtásához.",
-    "paid_pending": "Fizetett' : 'Függőben",
     "photometric_performance": "Fotometriai teljesítmény",
     "phthalates_exceed_china_limit": "A ftalátok túllépik a kínai határértéket",
     "platform_onboarding_4_8_weeks": "Platform bevezetés 4-8 hét",
@@ -1864,7 +1863,11 @@
     "timeline": "Idővonal",
     "totalCost": "Teljes költség",
     "verdict": "Ítélet",
-    "viewPlans": "Tervek megtekintése"
+    "viewPlans": "Tervek megtekintése",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "Ez az oldal csak alapvető hitelesítési cookie-kat használ. Nem használnak nyomkövető vagy hirdetési sütiket.",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "külföldi márkák közül guggolt",
     "squattingRiskLabel": "Kockázat",
     "valueHigh": "Magas",
-    "labelMandatoryFields": "Kötelező mezők"
+    "labelMandatoryFields": "Kötelező mezők",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "selfCheck": "Önértékelés",

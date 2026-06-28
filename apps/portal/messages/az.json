@@ -1708,7 +1708,6 @@
     "notification": "Bildiriş",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "Qidalanma analizi CNAS tərəfindən akkreditə olunmuş laboratoriyada aparılmalıdır.",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "GACC qeydiyyat ərizələrini təqdim etmək üçün xarici qida istehsalçıları üçün onlayn portal.",
-    "paid_pending": "Ödənilmiş' : 'Gözləmədədir",
     "photometric_performance": "Fotometrik performans",
     "phthalates_exceed_china_limit": "Ftalatlar Çin limitini aşır",
     "platform_onboarding_4_8_weeks": "Platformanın işə salınması 4-8 həftə",
@@ -1864,7 +1863,11 @@
     "timeline": "Zaman qrafiki",
     "totalCost": "Ümumi Xərc",
     "verdict": "Hökm",
-    "viewPlans": "Planlara baxın"
+    "viewPlans": "Planlara baxın",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "Bu sayt yalnız əsas autentifikasiya kukilərindən istifadə edir. Heç bir izləmə və ya reklam kukilərindən istifadə edilmir.",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "xarici markalar squat etdi",
     "squattingRiskLabel": "Risk",
     "valueHigh": "Yüksək",
-    "labelMandatoryFields": "Məcburi Sahələr"
+    "labelMandatoryFields": "Məcburi Sahələr",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "selfCheck": "Özünü yoxlama",

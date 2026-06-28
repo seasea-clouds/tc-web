@@ -1708,7 +1708,6 @@
     "notification": "Pemberitahuan",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "Analisis nutrisi harus dilakukan di laboratorium terakreditasi CNAS.",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "Portal online bagi produsen makanan luar negeri untuk mengajukan permohonan pendaftaran GACC.",
-    "paid_pending": "Dibayar' : 'Tertunda",
     "photometric_performance": "Kinerja fotometrik",
     "phthalates_exceed_china_limit": "Phthalates melebihi batas China",
     "platform_onboarding_4_8_weeks": "Orientasi platform 4-8 minggu",
@@ -1864,7 +1863,11 @@
     "timeline": "Garis waktu",
     "totalCost": "Jumlah Biaya",
     "verdict": "Dakwaan",
-    "viewPlans": "Lihat Paket"
+    "viewPlans": "Lihat Paket",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "Situs ini hanya menggunakan cookie otentikasi penting. Tidak ada cookie pelacakan atau iklan yang digunakan.",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "merek asing berjongkok",
     "squattingRiskLabel": "Mempertaruhkan",
     "valueHigh": "Tinggi",
-    "labelMandatoryFields": "Bidang Wajib"
+    "labelMandatoryFields": "Bidang Wajib",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "selfCheck": "Pemeriksaan Diri",

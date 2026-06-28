@@ -1708,7 +1708,6 @@
     "notification": "Notificare",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "Analiza nutrițională trebuie să fie la laboratorul acreditat CNAS.",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "Portal online pentru producătorii de alimente de peste mări pentru a depune cereri de înregistrare GACC.",
-    "paid_pending": "Plătit': 'În așteptare",
     "photometric_performance": "Performanță fotometrică",
     "phthalates_exceed_china_limit": "Ftalații depășesc limita Chinei",
     "platform_onboarding_4_8_weeks": "Integrarea platformei 4-8 săptămâni",
@@ -1864,7 +1863,11 @@
     "timeline": "Cronologie",
     "totalCost": "Costul total",
     "verdict": "Verdict",
-    "viewPlans": "Vizualizați planuri"
+    "viewPlans": "Vizualizați planuri",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "Acest site folosește numai cookie-uri de autentificare esențiale. Nu sunt utilizate cookie-uri de urmărire sau de publicitate.",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "de mărci străine ghemuite",
     "squattingRiskLabel": "Risc",
     "valueHigh": "Ridicat",
-    "labelMandatoryFields": "Câmpuri obligatorii"
+    "labelMandatoryFields": "Câmpuri obligatorii",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "selfCheck": "Autoevaluare",

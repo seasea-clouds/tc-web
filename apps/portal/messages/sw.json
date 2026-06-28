@@ -1708,7 +1708,6 @@
     "notification": "Taarifa",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "Uchambuzi wa lishe lazima uwe katika maabara iliyoidhinishwa na CNAS.",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "Tovuti ya mtandaoni kwa watengenezaji wa vyakula vya ng'ambo kuwasilisha maombi ya usajili wa GACC.",
-    "paid_pending": "Imelipwa' : 'Inasubiri",
     "photometric_performance": "Utendaji wa picha",
     "phthalates_exceed_china_limit": "Phthalates huzidi kikomo cha Uchina",
     "platform_onboarding_4_8_weeks": "Kupanda jukwaa kwa wiki 4-8",
@@ -1864,7 +1863,11 @@
     "timeline": "Rekodi ya matukio",
     "totalCost": "Jumla ya Gharama",
     "verdict": "Uamuzi",
-    "viewPlans": "Tazama Mipango"
+    "viewPlans": "Tazama Mipango",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "Tovuti hii hutumia vidakuzi muhimu vya uthibitishaji pekee. Hakuna vidakuzi vya ufuatiliaji au utangazaji vinatumika.",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "ya bidhaa za kigeni squatted",
     "squattingRiskLabel": "Hatari",
     "valueHigh": "Juu",
-    "labelMandatoryFields": "Viwanja vya lazima"
+    "labelMandatoryFields": "Viwanja vya lazima",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "pricing": "Bei",

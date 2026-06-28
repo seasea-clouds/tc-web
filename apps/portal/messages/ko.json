@@ -1708,7 +1708,6 @@
     "notification": "공고",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "영양 분석은 CNAS 인증 실험실에서 이루어져야 합니다.",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "해외 식품 제조업체가 GACC 등록 신청서를 제출할 수 있는 온라인 포털입니다.",
-    "paid_pending": "지불됨' : '보류 중",
     "photometric_performance": "광도 성능",
     "phthalates_exceed_china_limit": "프탈레이트, 중국 기준 초과",
     "platform_onboarding_4_8_weeks": "플랫폼 온보딩 4~8주",
@@ -1864,7 +1863,11 @@
     "timeline": "타임라인",
     "totalCost": "총 비용",
     "verdict": "평결",
-    "viewPlans": "계획 보기"
+    "viewPlans": "계획 보기",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "이 사이트는 필수 인증 쿠키만을 사용합니다. 추적 또는 광고 쿠키는 사용되지 않습니다.",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "쪼그리고 앉은 외국 브랜드의",
     "squattingRiskLabel": "위험",
     "valueHigh": "높은",
-    "labelMandatoryFields": "필수 항목"
+    "labelMandatoryFields": "필수 항목",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "selfCheck": "셀프 체크",

@@ -1708,7 +1708,6 @@
     "notification": "Oznámenie",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "Nutričná analýza musí byť vykonaná v laboratóriu akreditovanom CNAS.",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "Online portál pre zahraničných výrobcov potravín na predkladanie žiadostí o registráciu GACC.",
-    "paid_pending": "Zaplatené“ : „Čaká",
     "photometric_performance": "Fotometrický výkon",
     "phthalates_exceed_china_limit": "Ftaláty prekračujú limit pre Čínu",
     "platform_onboarding_4_8_weeks": "Nástup na platformu 4-8 týždňov",
@@ -1864,7 +1863,11 @@
     "timeline": "Časová os",
     "totalCost": "Celkové náklady",
     "verdict": "Verdikt",
-    "viewPlans": "Zobraziť plány"
+    "viewPlans": "Zobraziť plány",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "Táto stránka používa iba nevyhnutné overovacie súbory cookie. Nepoužívajú sa žiadne sledovacie ani reklamné súbory cookie.",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "zahraničných značiek squatovali",
     "squattingRiskLabel": "Riziko",
     "valueHigh": "Vysoká",
-    "labelMandatoryFields": "Povinné polia"
+    "labelMandatoryFields": "Povinné polia",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "selfCheck": "Vlastná kontrola",

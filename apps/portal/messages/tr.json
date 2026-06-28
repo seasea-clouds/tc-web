@@ -1708,7 +1708,6 @@
     "notification": "Bildiri",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "Beslenme analizi CNAS onaylı laboratuvarda yapılmalıdır.",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "Yurtdışı gıda üreticilerinin GACC kayıt başvurularını göndermeleri için çevrimiçi portal.",
-    "paid_pending": "Ödendi' : 'Beklemede",
     "photometric_performance": "Fotometrik performans",
     "phthalates_exceed_china_limit": "Ftalatlar Çin sınırını aştı",
     "platform_onboarding_4_8_weeks": "Platforma katılım 4-8 hafta",
@@ -1864,7 +1863,11 @@
     "timeline": "Zaman çizelgesi",
     "totalCost": "Toplam Maliyet",
     "verdict": "Karar",
-    "viewPlans": "Planları Görüntüle"
+    "viewPlans": "Planları Görüntüle",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "Bu site yalnızca gerekli kimlik doğrulama çerezlerini kullanır. Hiçbir izleme veya reklam çerezi kullanılmaz.",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "Yabancı markalar işgal edildi",
     "squattingRiskLabel": "Risk",
     "valueHigh": "Yüksek",
-    "labelMandatoryFields": "Zorunlu Alanlar"
+    "labelMandatoryFields": "Zorunlu Alanlar",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "selfCheck": "Kendi Kendine Kontrol",

@@ -1708,7 +1708,6 @@
     "notification": "বিজ্ঞপ্তি",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "পুষ্টি বিশ্লেষণ অবশ্যই CNAS-স্বীকৃত ল্যাবে হতে হবে।",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "GACC নিবন্ধন আবেদন জমা দেওয়ার জন্য বিদেশী খাদ্য প্রস্তুতকারকদের জন্য অনলাইন পোর্টাল।",
-    "paid_pending": "পরিশোধিত' : 'মুলতুবি",
     "photometric_performance": "ফটোমেট্রিক কর্মক্ষমতা",
     "phthalates_exceed_china_limit": "Phthalates চীন সীমা অতিক্রম",
     "platform_onboarding_4_8_weeks": "প্ল্যাটফর্ম অনবোর্ডিং 4-8 সপ্তাহ",
@@ -1864,7 +1863,11 @@
     "timeline": "টাইমলাইন",
     "totalCost": "মোট খরচ",
     "verdict": "রায়",
-    "viewPlans": "পরিকল্পনা দেখুন"
+    "viewPlans": "পরিকল্পনা দেখুন",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "এই সাইটটি শুধুমাত্র প্রয়োজনীয় প্রমাণীকরণ কুকি ব্যবহার করে। কোন ট্র্যাকিং বা বিজ্ঞাপন কুকি ব্যবহার করা হয় না.",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "বিদেশী ব্র্যান্ড squatted",
     "squattingRiskLabel": "ঝুঁকি",
     "valueHigh": "উচ্চ",
-    "labelMandatoryFields": "বাধ্যতামূলক ক্ষেত্র"
+    "labelMandatoryFields": "বাধ্যতামূলক ক্ষেত্র",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "selfCheck": "স্ব-পরীক্ষা",

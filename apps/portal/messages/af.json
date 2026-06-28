@@ -1708,7 +1708,6 @@
     "notification": "Kennisgewing",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "Voedingsontleding moet by CNAS-geakkrediteerde laboratorium wees.",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "Aanlynportaal vir oorsese voedselvervaardigers om GACC-registrasie-aansoeke in te dien.",
-    "paid_pending": "Betaal' : 'Hangende",
     "photometric_performance": "Fotometriese prestasie",
     "phthalates_exceed_china_limit": "Ftalate oorskry China limiet",
     "platform_onboarding_4_8_weeks": "Platform aanboord 4-8 weke",
@@ -1864,7 +1863,11 @@
     "timeline": "Tydlyn",
     "totalCost": "Totale koste",
     "verdict": "Uitspraak",
-    "viewPlans": "Bekyk planne"
+    "viewPlans": "Bekyk planne",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "Hierdie webwerf gebruik slegs noodsaaklike verifikasiekoekies. Geen dop- of advertensiekoekies word gebruik nie.",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "van buitelandse handelsmerke gehurk",
     "squattingRiskLabel": "Risiko",
     "valueHigh": "Hoog",
-    "labelMandatoryFields": "Verpligte velde"
+    "labelMandatoryFields": "Verpligte velde",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "selfCheck": "Selftoets",

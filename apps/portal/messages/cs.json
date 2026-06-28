@@ -1708,7 +1708,6 @@
     "notification": "Oznámení",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "Nutriční analýza musí být provedena v akreditované laboratoři CNAS.",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "Online portál pro zámořské výrobce potravin pro podávání žádostí o registraci GACC.",
-    "paid_pending": "Zaplaceno': 'Nevyřízeno",
     "photometric_performance": "Fotometrický výkon",
     "phthalates_exceed_china_limit": "Ftaláty překračují čínský limit",
     "platform_onboarding_4_8_weeks": "Zavedení platformy 4-8 týdnů",
@@ -1864,7 +1863,11 @@
     "timeline": "Časová osa",
     "totalCost": "Celkové náklady",
     "verdict": "Výrok",
-    "viewPlans": "Zobrazit plány"
+    "viewPlans": "Zobrazit plány",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "Tento web používá pouze nezbytné ověřovací soubory cookie. Nejsou používány žádné sledovací ani reklamní soubory cookie.",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "zahraničních značek squatoval",
     "squattingRiskLabel": "Riziko",
     "valueHigh": "Vysoký",
-    "labelMandatoryFields": "Povinná pole"
+    "labelMandatoryFields": "Povinná pole",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "selfCheck": "Vlastní kontrola",

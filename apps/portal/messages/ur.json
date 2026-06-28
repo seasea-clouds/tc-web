@@ -1708,7 +1708,6 @@
     "notification": "اطلاع",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "غذائیت کا تجزیہ CNAS سے منظور شدہ لیب میں ہونا چاہیے۔",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "بیرون ملک مقیم فوڈ مینوفیکچررز کے لیے GACC رجسٹریشن کی درخواستیں جمع کرانے کے لیے آن لائن پورٹل۔",
-    "paid_pending": "ادا شدہ' : 'زیر التواء",
     "photometric_performance": "فوٹو میٹرک کارکردگی",
     "phthalates_exceed_china_limit": "Phthalates چین کی حد سے زیادہ ہے۔",
     "platform_onboarding_4_8_weeks": "پلیٹ فارم آن بورڈنگ 4-8 ہفتے",
@@ -1864,7 +1863,11 @@
     "timeline": "ٹائم لائن",
     "totalCost": "کل لاگت",
     "verdict": "فیصلہ",
-    "viewPlans": "منصوبے دیکھیں"
+    "viewPlans": "منصوبے دیکھیں",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "یہ سائٹ صرف ضروری تصدیقی کوکیز استعمال کرتی ہے۔ کوئی ٹریکنگ یا اشتہاری کوکیز استعمال نہیں کی جاتی ہیں۔",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "غیر ملکی برانڈز کے squatted",
     "squattingRiskLabel": "خطرہ",
     "valueHigh": "اعلی",
-    "labelMandatoryFields": "لازمی فیلڈز"
+    "labelMandatoryFields": "لازمی فیلڈز",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "selfCheck": "خود جانچ",

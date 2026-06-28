@@ -1708,7 +1708,6 @@
     "notification": "Апавяшчэнне",
     "nutritional_analysis_must_be_at_cnas_accredited_la_1": "Аналіз харчавання павінен праводзіцца ў лабараторыі, акрэдытаванай CNAS.",
     "online_portal_for_overseas_food_manufacturers_to_s_1": "Інтэрнэт-партал для замежных вытворцаў прадуктаў харчавання для падачы заявак на рэгістрацыю GACC.",
-    "paid_pending": "Paid' : 'У чаканні",
     "photometric_performance": "Фотаметрычныя паказчыкі",
     "phthalates_exceed_china_limit": "Фталаты перавышаюць кітайскі ліміт",
     "platform_onboarding_4_8_weeks": "Пераход на платформу 4-8 тыдняў",
@@ -1864,7 +1863,11 @@
     "timeline": "Храналогія",
     "totalCost": "Агульны кошт",
     "verdict": "Прысуд",
-    "viewPlans": "Прагляд планаў"
+    "viewPlans": "Прагляд планаў",
+    "paid": "Paid",
+    "pending": "Pending",
+    "prevPage": "← Prev",
+    "nextPage": "Next →"
   },
   "Cookie": {
     "message": "Гэты сайт выкарыстоўвае толькі неабходныя файлы cookie для аўтэнтыфікацыі. Файлы cookie для адсочвання і рэкламы не выкарыстоўваюцца.",
@@ -2203,7 +2206,19 @@
     "squattingOfForeignBrandsSquatted": "замежных брэндаў сквотаваны",
     "squattingRiskLabel": "Рызыка",
     "valueHigh": "Высокі",
-    "labelMandatoryFields": "Абавязковыя палі"
+    "labelMandatoryFields": "Абавязковыя палі",
+    "cccAuditItem_productProcess": "Production process and workflow review",
+    "cccAuditItem_incomingQC": "Incoming quality control procedures",
+    "cccAuditItem_testingCalibration": "Testing equipment calibration records",
+    "cccAuditItem_nonConforming": "Non-conforming product handling",
+    "cccAuditItem_capa": "Corrective and preventive action records",
+    "cccAuditItem_staffTraining": "Staff training and qualification files",
+    "cccAuditItem_rawMaterialAudit": "Raw material supplier audit records",
+    "cccAuditItem_finishedInspection": "Finished product inspection reports",
+    "cccAuditItem_traceability": "Traceability system documentation",
+    "cccAuditItem_enviroSafety": "Environmental and safety compliance",
+    "ordinaryLabel": "Ordinary",
+    "specialLabel": "Special"
   },
   "Navbar": {
     "selfCheck": "Самправерка",

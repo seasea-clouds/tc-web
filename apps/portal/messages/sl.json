@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", so na voljo ugodnosti sporazuma o prosti trgovini",
     "gaccRiskNote_pathwayCountry": "{originCountry}: {difficulty} pot skladnosti",
     "gaccRiskNote_pathwayShort": "{originCountry} — {difficulty} pot skladnosti",
-    "gaccRiskNote_testsCost": "{count} potrebnih testov.",
+    "gaccRiskNote_testsCost": "{count} potrebnih testov. Cost range: {costRange}",
     "labelCat_alcohol_label": "Alkoholne pijače",
     "labelCat_beverage_label": "Pijače / sokovi",
     "labelCat_confectionery_label": "Slaščice / Prigrizki",

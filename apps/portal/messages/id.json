@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "Terdaftar",
     "tmMatrixNote_timeline": "8-14 bulan",
     "nmpaRiskNote_tests": "{hitungan} tes",
-    "labelAllergenNote": "Daftar Tiongkok berbeda dengan UE/AS — verifikasi ke-8 kategori tersebut"
+    "labelAllergenNote": "Daftar Tiongkok berbeda dengan UE/AS — verifikasi ke-8 kategori tersebut",
+    "gaccCat_health_food_labTest_5": "Disintegrasi / pembubaran",
+    "gaccCat_health_food_reject_1_problem": "Bahan baru tidak ada dalam katalog makanan Cina",
+    "gaccCat_health_food_reject_1_cause": "Bahan tidak disetujui untuk digunakan di Tiongkok",
+    "gaccCat_health_food_reject_1_solution": "Aplikasi bahan makanan baru (bisa memakan waktu 1-2 tahun)"
   },
   "Report": {
     "loadingTitle": "Memuat Laporan Anda",

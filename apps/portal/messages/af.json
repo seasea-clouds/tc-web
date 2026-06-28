@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "Geregistreer",
     "tmMatrixNote_timeline": "8-14 maande",
     "nmpaRiskNote_tests": "{tel} toetse",
-    "labelAllergenNote": "China se lys verskil van die EU/VS - verifieer al 8 kategorieë"
+    "labelAllergenNote": "China se lys verskil van die EU/VS - verifieer al 8 kategorieë",
+    "gaccCat_health_food_labTest_5": "Disintegrasie/ontbinding",
+    "gaccCat_health_food_reject_1_problem": "Nuwe bestanddeel nie in China se voedselkatalogus nie",
+    "gaccCat_health_food_reject_1_cause": "Bestanddeel nie goedgekeur vir gebruik in China nie",
+    "gaccCat_health_food_reject_1_solution": "Toepassing van nuwe voedselbestanddele (kan 1-2 jaar neem)"
   },
   "Report": {
     "loadingTitle": "Laai tans jou verslag",

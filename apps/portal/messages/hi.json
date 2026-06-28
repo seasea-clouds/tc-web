@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "दर्ज कराई",
     "tmMatrixNote_timeline": "8-14 महीने",
     "nmpaRiskNote_tests": "{गिनती} परीक्षण",
-    "labelAllergenNote": "चीन की सूची EU/US से भिन्न है - सभी 8 श्रेणियों को सत्यापित करें"
+    "labelAllergenNote": "चीन की सूची EU/US से भिन्न है - सभी 8 श्रेणियों को सत्यापित करें",
+    "gaccCat_health_food_labTest_5": "विघटन/विघटन",
+    "gaccCat_health_food_reject_1_problem": "नवीन सामग्री चीन की खाद्य सूची में नहीं है",
+    "gaccCat_health_food_reject_1_cause": "घटक चीन में उपयोग के लिए स्वीकृत नहीं है",
+    "gaccCat_health_food_reject_1_solution": "नवीन खाद्य सामग्री अनुप्रयोग (1-2 वर्ष लग सकते हैं)"
   },
   "Report": {
     "loadingTitle": "आपकी रिपोर्ट लोड हो रही है",

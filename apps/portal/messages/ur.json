@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "رجسٹرڈ",
     "tmMatrixNote_timeline": "8-14 ماہ",
     "nmpaRiskNote_tests": "{count} ٹیسٹ",
-    "labelAllergenNote": "چین کی فہرست EU/US سے مختلف ہے — تمام 8 زمروں کی تصدیق کریں۔"
+    "labelAllergenNote": "چین کی فہرست EU/US سے مختلف ہے — تمام 8 زمروں کی تصدیق کریں۔",
+    "gaccCat_health_food_labTest_5": "تحلیل / تحلیل",
+    "gaccCat_health_food_reject_1_problem": "چین فوڈ کیٹلاگ میں ناول کا جزو نہیں ہے۔",
+    "gaccCat_health_food_reject_1_cause": "جزو چین میں استعمال کے لیے منظور نہیں ہے۔",
+    "gaccCat_health_food_reject_1_solution": "کھانے کے اجزاء کی نئی درخواست (1-2 سال لگ سکتے ہیں)"
   },
   "Report": {
     "loadingTitle": "آپ کی رپورٹ لوڈ ہو رہی ہے۔",

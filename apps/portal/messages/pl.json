@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "Zarejestrowany",
     "tmMatrixNote_timeline": "8-14 miesięcy",
     "nmpaRiskNote_tests": "Liczba testów",
-    "labelAllergenNote": "Lista Chin różni się od listy UE/USA — sprawdź wszystkie 8 kategorii"
+    "labelAllergenNote": "Lista Chin różni się od listy UE/USA — sprawdź wszystkie 8 kategorii",
+    "gaccCat_health_food_labTest_5": "Rozpad/rozpuszczenie",
+    "gaccCat_health_food_reject_1_problem": "Nowatorski składnik, którego nie ma w chińskim katalogu żywności",
+    "gaccCat_health_food_reject_1_cause": "Składnik niezatwierdzony do użytku w Chinach",
+    "gaccCat_health_food_reject_1_solution": "Zastosowanie nowego składnika żywności (może zająć 1–2 lata)"
   },
   "Report": {
     "loadingTitle": "Ładowanie raportu",

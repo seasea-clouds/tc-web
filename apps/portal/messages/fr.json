@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "Inscrit",
     "tmMatrixNote_timeline": "8-14 mois",
     "nmpaRiskNote_tests": "{count} tests",
-    "labelAllergenNote": "La liste de la Chine diffère de celle de l'UE et des États-Unis : vérifiez les 8 catégories"
+    "labelAllergenNote": "La liste de la Chine diffère de celle de l'UE et des États-Unis : vérifiez les 8 catégories",
+    "gaccCat_health_food_labTest_5": "Désintégration / dissolution",
+    "gaccCat_health_food_reject_1_problem": "Nouvel ingrédient ne figurant pas dans le catalogue alimentaire chinois",
+    "gaccCat_health_food_reject_1_cause": "Ingrédient non approuvé pour une utilisation en Chine",
+    "gaccCat_health_food_reject_1_solution": "Application d'ingrédients alimentaires nouveaux (peut prendre 1 à 2 ans)"
   },
   "Report": {
     "loadingTitle": "Chargement de votre rapport",

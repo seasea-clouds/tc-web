@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "Kayıtlı",
     "tmMatrixNote_timeline": "8-14 ay",
     "nmpaRiskNote_tests": "{count} test",
-    "labelAllergenNote": "Çin'in listesi AB/ABD'den farklıdır; 8 kategorinin tümünü doğrulayın"
+    "labelAllergenNote": "Çin'in listesi AB/ABD'den farklıdır; 8 kategorinin tümünü doğrulayın",
+    "gaccCat_health_food_labTest_5": "Parçalanma / çözülme",
+    "gaccCat_health_food_reject_1_problem": "Çin gıda kataloğunda bulunmayan yeni içerik",
+    "gaccCat_health_food_reject_1_cause": "Çin'de kullanım için onaylanmamış içerik",
+    "gaccCat_health_food_reject_1_solution": "Yeni gıda maddesi uygulaması (1-2 yıl sürebilir)"
   },
   "Report": {
     "loadingTitle": "Raporunuzu Yükleme",

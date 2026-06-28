@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "დარეგისტრირდა",
     "tmMatrixNote_timeline": "8-14 თვე",
     "nmpaRiskNote_tests": "{count} ტესტი",
-    "labelAllergenNote": "ჩინეთის სია განსხვავდება ევროკავშირი/აშშ-ისგან — გადაამოწმეთ 8-ვე კატეგორია"
+    "labelAllergenNote": "ჩინეთის სია განსხვავდება ევროკავშირი/აშშ-ისგან — გადაამოწმეთ 8-ვე კატეგორია",
+    "gaccCat_health_food_labTest_5": "დაშლა/დაშლა",
+    "gaccCat_health_food_reject_1_problem": "ახალი ინგრედიენტი არ არის ჩინეთის საკვების კატალოგში",
+    "gaccCat_health_food_reject_1_cause": "ინგრედიენტი არ არის დამტკიცებული ჩინეთში გამოსაყენებლად",
+    "gaccCat_health_food_reject_1_solution": "ახალი საკვები ინგრედიენტების გამოყენება (შეიძლება დასჭირდეს 1-2 წელი)"
   },
   "Report": {
     "loadingTitle": "იტვირთება თქვენი ანგარიში",

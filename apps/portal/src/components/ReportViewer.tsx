@@ -11,17 +11,37 @@ interface ReportViewerProps {
 
 const MODULE_KEYS: Record<string, string> = {
   gacc: 'reportModuleGacc',
+  'GACC Food Registration': 'reportModuleGacc',
   label: 'reportModuleLabel',
+  'Chinese Label Compliance': 'reportModuleLabel',
   ccc: 'reportModuleCcc',
+  'CCC Certification': 'reportModuleCcc',
   nmpa: 'reportModuleNmpa',
+  'Cosmetics Filing (NMPA)': 'reportModuleNmpa',
   crossborder: 'reportModuleCrossborder',
+  'Cross-Border E-commerce': 'reportModuleCrossborder',
   trademark: 'reportModuleTrademark',
+  'Brand Protection': 'reportModuleTrademark',
 };
 
 export default function ReportViewer({ report, onBack }: ReportViewerProps) {
   const locale = useLocale();
   const t = useTranslations('Check');
   const href = (path: string) => `/${locale}${path}`;
+
+    // Translate category label
+  const CATEGORY_PREFIX: Record<string, string> = {
+    'GACC Food Registration': 'gaccCat',
+    'CCC Certification': 'cccCat',
+    'Cosmetics Filing (NMPA)': 'nmpaCat',
+    'Chinese Label Compliance': 'labelCat',
+    'Cross-Border E-commerce': 'cbCat',
+    'Brand Protection': 'tmCat',
+  };
+  const catPrefix = CATEGORY_PREFIX[report.module] || '';
+  const translatedCategory = catPrefix
+    ? t(`${catPrefix}_${report.productInfo.category}_label`) || report.productInfo.category
+    : report.productInfo.category;
 
   const labels = {
     title: t('reportTitle'),
@@ -69,7 +89,7 @@ export default function ReportViewer({ report, onBack }: ReportViewerProps) {
           module={t(MODULE_KEYS[report.module] ?? report.module)}
           locale={locale}
           labels={labels}
-          productInfo={report.productInfo}
+          productInfo={{...report.productInfo, category: translatedCategory}}
           result={report.result}
           nextSteps={report.nextSteps}
           generatedAt={report.generatedAt}

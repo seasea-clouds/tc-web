@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "Berdaftar",
     "tmMatrixNote_timeline": "8-14 bulan",
     "nmpaRiskNote_tests": "{count} ujian",
-    "labelAllergenNote": "Senarai China berbeza daripada EU/AS — sahkan kesemua 8 kategori"
+    "labelAllergenNote": "Senarai China berbeza daripada EU/AS — sahkan kesemua 8 kategori",
+    "gaccCat_health_food_labTest_5": "Perpecahan/pembubaran",
+    "gaccCat_health_food_reject_1_problem": "Ramuan novel tiada dalam katalog makanan China",
+    "gaccCat_health_food_reject_1_cause": "Ramuan tidak diluluskan untuk digunakan di China",
+    "gaccCat_health_food_reject_1_solution": "Permohonan ramuan makanan baru (boleh mengambil masa 1-2 tahun)"
   },
   "Report": {
     "loadingTitle": "Memuatkan Laporan Anda",

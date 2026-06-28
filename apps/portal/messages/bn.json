@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "নিবন্ধিত",
     "tmMatrixNote_timeline": "8-14 মাস",
     "nmpaRiskNote_tests": "{count} পরীক্ষা",
-    "labelAllergenNote": "চীনের তালিকা EU/US থেকে আলাদা — সমস্ত 8টি বিভাগ যাচাই করুন"
+    "labelAllergenNote": "চীনের তালিকা EU/US থেকে আলাদা — সমস্ত 8টি বিভাগ যাচাই করুন",
+    "gaccCat_health_food_labTest_5": "বিচ্ছেদ/দ্রবীভূতকরণ",
+    "gaccCat_health_food_reject_1_problem": "নতুন উপাদান চীন খাদ্য ক্যাটালগ নয়",
+    "gaccCat_health_food_reject_1_cause": "উপাদান চীনে ব্যবহারের জন্য অনুমোদিত নয়",
+    "gaccCat_health_food_reject_1_solution": "অভিনব খাদ্য উপাদান প্রয়োগ (1-2 বছর লাগতে পারে)"
   },
   "Report": {
     "loadingTitle": "আপনার রিপোর্ট লোড হচ্ছে",

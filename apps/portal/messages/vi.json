@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "Đăng ký",
     "tmMatrixNote_timeline": "8-14 tháng",
     "nmpaRiskNote_tests": "{đếm} bài kiểm tra",
-    "labelAllergenNote": "Danh sách của Trung Quốc khác với EU/Mỹ - xác minh tất cả 8 danh mục"
+    "labelAllergenNote": "Danh sách của Trung Quốc khác với EU/Mỹ - xác minh tất cả 8 danh mục",
+    "gaccCat_health_food_labTest_5": "Sự tan rã/giải thể",
+    "gaccCat_health_food_reject_1_problem": "Thành phần mới không có trong danh mục thực phẩm Trung Quốc",
+    "gaccCat_health_food_reject_1_cause": "Thành phần không được phép sử dụng ở Trung Quốc",
+    "gaccCat_health_food_reject_1_solution": "Ứng dụng thành phần thực phẩm mới (có thể mất 1-2 năm)"
   },
   "Report": {
     "loadingTitle": "Đang tải báo cáo của bạn",

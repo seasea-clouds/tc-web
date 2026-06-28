@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "Registriran",
     "tmMatrixNote_timeline": "8-14 mesecev",
     "nmpaRiskNote_tests": "{count} testov",
-    "labelAllergenNote": "Seznam Kitajske se razlikuje od seznama EU/ZDA – preverite vseh 8 kategorij"
+    "labelAllergenNote": "Seznam Kitajske se razlikuje od seznama EU/ZDA – preverite vseh 8 kategorij",
+    "gaccCat_health_food_labTest_5": "Razpad / razpad",
+    "gaccCat_health_food_reject_1_problem": "Nova sestavina ni v Kitajskem katalogu hrane",
+    "gaccCat_health_food_reject_1_cause": "Sestavina ni odobrena za uporabo na Kitajskem",
+    "gaccCat_health_food_reject_1_solution": "Uporaba novih živilskih sestavin (lahko traja 1-2 leti)"
   },
   "Report": {
     "loadingTitle": "Nalaganje vašega poročila",

@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "Գրանցված է",
     "tmMatrixNote_timeline": "8-14 ամիս",
     "nmpaRiskNote_tests": "{count} թեստեր",
-    "labelAllergenNote": "Չինաստանի ցուցակը տարբերվում է ԵՄ/ԱՄՆ-ից. ստուգեք բոլոր 8 կատեգորիաները"
+    "labelAllergenNote": "Չինաստանի ցուցակը տարբերվում է ԵՄ/ԱՄՆ-ից. ստուգեք բոլոր 8 կատեգորիաները",
+    "gaccCat_health_food_labTest_5": "Քանդում/տարրալուծում",
+    "gaccCat_health_food_reject_1_problem": "Նոր բաղադրիչը չինական սննդի կատալոգում չէ",
+    "gaccCat_health_food_reject_1_cause": "Բաղադրությունը հաստատված չէ Չինաստանում օգտագործման համար",
+    "gaccCat_health_food_reject_1_solution": "Սննդի նոր բաղադրիչի կիրառում (կարող է տևել 1-2 տարի)"
   },
   "Report": {
     "loadingTitle": "Բեռնվում է ձեր զեկույցը",

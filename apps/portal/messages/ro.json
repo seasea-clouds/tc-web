@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "Înregistrat",
     "tmMatrixNote_timeline": "8-14 luni",
     "nmpaRiskNote_tests": "{count} teste",
-    "labelAllergenNote": "Lista Chinei diferă de UE/SUA — verificați toate cele 8 categorii"
+    "labelAllergenNote": "Lista Chinei diferă de UE/SUA — verificați toate cele 8 categorii",
+    "gaccCat_health_food_labTest_5": "Dezintegrare/dizolvare",
+    "gaccCat_health_food_reject_1_problem": "Ingredient nou care nu este în catalogul alimentar din China",
+    "gaccCat_health_food_reject_1_cause": "Ingredient neaprobat pentru utilizare în China",
+    "gaccCat_health_food_reject_1_solution": "Aplicarea ingredientelor alimentare noi (poate dura 1-2 ani)"
   },
   "Report": {
     "loadingTitle": "Se încarcă raportul dvs",

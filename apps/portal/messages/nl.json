@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "Geregistreerd",
     "tmMatrixNote_timeline": "8-14 maanden",
     "nmpaRiskNote_tests": "{count} testen",
-    "labelAllergenNote": "De Chinese lijst wijkt af van de EU/VS-lijst: controleer alle acht categorieën"
+    "labelAllergenNote": "De Chinese lijst wijkt af van de EU/VS-lijst: controleer alle acht categorieën",
+    "gaccCat_health_food_labTest_5": "Desintegratie / ontbinding",
+    "gaccCat_health_food_reject_1_problem": "Nieuw ingrediënt niet in China voedselcatalogus",
+    "gaccCat_health_food_reject_1_cause": "Ingrediënt niet goedgekeurd voor gebruik in China",
+    "gaccCat_health_food_reject_1_solution": "Toepassing van nieuwe voedingsingrediënten (kan 1-2 jaar duren)"
   },
   "Report": {
     "loadingTitle": "Uw rapport laden",

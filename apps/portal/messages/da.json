@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "Registreret",
     "tmMatrixNote_timeline": "8-14 måneder",
     "nmpaRiskNote_tests": "{count} test",
-    "labelAllergenNote": "Kinas liste adskiller sig fra EU/USA — bekræft alle 8 kategorier"
+    "labelAllergenNote": "Kinas liste adskiller sig fra EU/USA — bekræft alle 8 kategorier",
+    "gaccCat_health_food_labTest_5": "Opløsning / opløsning",
+    "gaccCat_health_food_reject_1_problem": "Ny ingrediens ikke i Kinas fødevarekatalog",
+    "gaccCat_health_food_reject_1_cause": "Ingrediens ikke godkendt til brug i Kina",
+    "gaccCat_health_food_reject_1_solution": "Anvendelse af ny fødevareingrediens (kan tage 1-2 år)"
   },
   "Report": {
     "loadingTitle": "Indlæser din rapport",

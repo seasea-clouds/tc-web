@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "Imesajiliwa",
     "tmMatrixNote_timeline": "Miezi 8-14",
     "nmpaRiskNote_tests": "{count} majaribio",
-    "labelAllergenNote": "Orodha ya Uchina inatofautiana na EU/Marekani - thibitisha aina zote 8"
+    "labelAllergenNote": "Orodha ya Uchina inatofautiana na EU/Marekani - thibitisha aina zote 8",
+    "gaccCat_health_food_labTest_5": "Kutengana/kuvunjika",
+    "gaccCat_health_food_reject_1_problem": "Kiambato cha riwaya hakiko kwenye orodha ya vyakula vya China",
+    "gaccCat_health_food_reject_1_cause": "Kiungo hakijaidhinishwa kutumika nchini Uchina",
+    "gaccCat_health_food_reject_1_solution": "Utumizi wa riwaya ya kingo ya chakula (inaweza kuchukua miaka 1-2)"
   },
   "Report": {
     "loadingTitle": "Inapakia Ripoti Yako",

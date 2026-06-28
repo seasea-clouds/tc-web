@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "등기",
     "tmMatrixNote_timeline": "8~14개월",
     "nmpaRiskNote_tests": "{count} 테스트",
-    "labelAllergenNote": "중국의 목록은 EU/US와 다릅니다. 8개 범주를 모두 확인하세요."
+    "labelAllergenNote": "중국의 목록은 EU/US와 다릅니다. 8개 범주를 모두 확인하세요.",
+    "gaccCat_health_food_labTest_5": "분해/해산",
+    "gaccCat_health_food_reject_1_problem": "중국 식품 카탈로그에는 없는 새로운 성분",
+    "gaccCat_health_food_reject_1_cause": "중국에서 사용이 승인되지 않은 성분",
+    "gaccCat_health_food_reject_1_solution": "신규 식품원료 적용 (1~2년 소요 가능)"
   },
   "Report": {
     "loadingTitle": "보고서 로드 중",

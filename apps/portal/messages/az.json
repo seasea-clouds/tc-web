@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "Qeydiyyatdan keçib",
     "tmMatrixNote_timeline": "8-14 ay",
     "nmpaRiskNote_tests": "{count} test",
-    "labelAllergenNote": "Çinin siyahısı AB/ABŞ-dan fərqlənir — bütün 8 kateqoriyanı yoxlayın"
+    "labelAllergenNote": "Çinin siyahısı AB/ABŞ-dan fərqlənir — bütün 8 kateqoriyanı yoxlayın",
+    "gaccCat_health_food_labTest_5": "Parçalanma/dağılma",
+    "gaccCat_health_food_reject_1_problem": "Yeni tərkib hissəsi Çin qida kataloqunda yoxdur",
+    "gaccCat_health_food_reject_1_cause": "Tərkib Çində istifadə üçün təsdiqlənməyib",
+    "gaccCat_health_food_reject_1_solution": "Yeni qida inqrediyentinin tətbiqi (1-2 il çəkə bilər)"
   },
   "Report": {
     "loadingTitle": "Hesabatınız Yüklənir",

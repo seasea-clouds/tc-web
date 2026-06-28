@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "Εγγεγραμμένος",
     "tmMatrixNote_timeline": "8-14 μηνών",
     "nmpaRiskNote_tests": "{count} δοκιμές",
-    "labelAllergenNote": "Η λίστα της Κίνας διαφέρει από την ΕΕ/ΗΠΑ — επαληθεύστε και τις 8 κατηγορίες"
+    "labelAllergenNote": "Η λίστα της Κίνας διαφέρει από την ΕΕ/ΗΠΑ — επαληθεύστε και τις 8 κατηγορίες",
+    "gaccCat_health_food_labTest_5": "Αποσύνθεση / διάλυση",
+    "gaccCat_health_food_reject_1_problem": "Νέο συστατικό όχι στον κατάλογο τροφίμων της Κίνας",
+    "gaccCat_health_food_reject_1_cause": "Συστατικό που δεν έχει εγκριθεί για χρήση στην Κίνα",
+    "gaccCat_health_food_reject_1_solution": "Νέα εφαρμογή συστατικών τροφίμων (μπορεί να διαρκέσει 1-2 έτη)"
   },
   "Report": {
     "loadingTitle": "Φόρτωση της αναφοράς σας",

@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "登録済み",
     "tmMatrixNote_timeline": "8～14ヶ月",
     "nmpaRiskNote_tests": "{count} 個のテスト",
-    "labelAllergenNote": "中国のリストはEU/米国とは異なる - 8つのカテゴリーをすべて確認する"
+    "labelAllergenNote": "中国のリストはEU/米国とは異なる - 8つのカテゴリーをすべて確認する",
+    "gaccCat_health_food_labTest_5": "崩壊・溶解",
+    "gaccCat_health_food_reject_1_problem": "中国の食品カタログに載っていない斬新な食材",
+    "gaccCat_health_food_reject_1_cause": "中国での使用が承認されていない成分",
+    "gaccCat_health_food_reject_1_solution": "新規食品成分の適用 (1～2 年かかる場合があります)"
   },
   "Report": {
     "loadingTitle": "レポートをロードする",

@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "Registrato",
     "tmMatrixNote_timeline": "8-14 mesi",
     "nmpaRiskNote_tests": "{count} test",
-    "labelAllergenNote": "L'elenco della Cina è diverso da quello di UE/USA: verifica tutte le 8 categorie"
+    "labelAllergenNote": "L'elenco della Cina è diverso da quello di UE/USA: verifica tutte le 8 categorie",
+    "gaccCat_health_food_labTest_5": "Disintegrazione / dissoluzione",
+    "gaccCat_health_food_reject_1_problem": "Nuovo ingrediente non nel catalogo alimentare cinese",
+    "gaccCat_health_food_reject_1_cause": "Ingrediente non approvato per l'uso in Cina",
+    "gaccCat_health_food_reject_1_solution": "Applicazione Novel food ingrediente (può richiedere 1-2 anni)"
   },
   "Report": {
     "loadingTitle": "Caricamento del rapporto",

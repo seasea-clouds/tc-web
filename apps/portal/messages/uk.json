@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "Зареєстрований",
     "tmMatrixNote_timeline": "8-14 місяців",
     "nmpaRiskNote_tests": "{count} тестів",
-    "labelAllergenNote": "Китайський список відрізняється від ЄС/США — перевірте всі 8 категорій"
+    "labelAllergenNote": "Китайський список відрізняється від ЄС/США — перевірте всі 8 категорій",
+    "gaccCat_health_food_labTest_5": "Дезінтеграція / розчинення",
+    "gaccCat_health_food_reject_1_problem": "Новий інгредієнт, якого немає в каталозі китайських продуктів харчування",
+    "gaccCat_health_food_reject_1_cause": "Інгредієнт, не дозволений до використання в Китаї",
+    "gaccCat_health_food_reject_1_solution": "Застосування нових харчових інгредієнтів (може зайняти 1-2 роки)"
   },
   "Report": {
     "loadingTitle": "Завантаження звіту",

@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "பதிவு செய்யப்பட்டது",
     "tmMatrixNote_timeline": "8-14 மாதங்கள்",
     "nmpaRiskNote_tests": "{count} சோதனைகள்",
-    "labelAllergenNote": "சீனாவின் பட்டியல் EU/US இல் இருந்து வேறுபட்டது — அனைத்து 8 வகைகளையும் சரிபார்க்கவும்"
+    "labelAllergenNote": "சீனாவின் பட்டியல் EU/US இல் இருந்து வேறுபட்டது — அனைத்து 8 வகைகளையும் சரிபார்க்கவும்",
+    "gaccCat_health_food_labTest_5": "சிதைவு / கலைத்தல்",
+    "gaccCat_health_food_reject_1_problem": "புதிய மூலப்பொருள் சீனா உணவு பட்டியலில் இல்லை",
+    "gaccCat_health_food_reject_1_cause": "மூலப்பொருள் சீனாவில் பயன்படுத்த அனுமதிக்கப்படவில்லை",
+    "gaccCat_health_food_reject_1_solution": "புதிய உணவு மூலப்பொருள் பயன்பாடு (1-2 ஆண்டுகள் ஆகலாம்)"
   },
   "Report": {
     "loadingTitle": "உங்கள் அறிக்கையை ஏற்றுகிறது",

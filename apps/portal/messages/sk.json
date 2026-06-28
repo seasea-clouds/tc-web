@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "Registrovaný",
     "tmMatrixNote_timeline": "8-14 mesiacov",
     "nmpaRiskNote_tests": "{count} testov",
-    "labelAllergenNote": "Zoznam Číny sa líši od zoznamu EÚ/USA – overte všetkých 8 kategórií"
+    "labelAllergenNote": "Zoznam Číny sa líši od zoznamu EÚ/USA – overte všetkých 8 kategórií",
+    "gaccCat_health_food_labTest_5": "Dezintegrácia / rozpustenie",
+    "gaccCat_health_food_reject_1_problem": "Nová zložka, ktorá nie je v čínskom katalógu potravín",
+    "gaccCat_health_food_reject_1_cause": "Zložka nie je schválená na použitie v Číne",
+    "gaccCat_health_food_reject_1_solution": "Aplikácia nových zložiek potravín (môže trvať 1-2 roky)"
   },
   "Report": {
     "loadingTitle": "Načítava sa váš prehľad",

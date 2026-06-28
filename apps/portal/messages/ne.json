@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "दर्ता गरियो",
     "tmMatrixNote_timeline": "8-14 महिना",
     "nmpaRiskNote_tests": "{count} परीक्षणहरू",
-    "labelAllergenNote": "चीनको सूची EU/US भन्दा फरक छ — सबै 8 कोटीहरू प्रमाणित गर्नुहोस्"
+    "labelAllergenNote": "चीनको सूची EU/US भन्दा फरक छ — सबै 8 कोटीहरू प्रमाणित गर्नुहोस्",
+    "gaccCat_health_food_labTest_5": "विघटन/विघटन",
+    "gaccCat_health_food_reject_1_problem": "उपन्यास सामग्री चीन खाना सूची मा छैन",
+    "gaccCat_health_food_reject_1_cause": "सामग्री चीनमा प्रयोगको लागि अनुमोदित छैन",
+    "gaccCat_health_food_reject_1_solution": "उपन्यास खाद्य सामग्री आवेदन (१-२ वर्ष लाग्न सक्छ)"
   },
   "Report": {
     "loadingTitle": "तपाईंको रिपोर्ट लोड गर्दै",

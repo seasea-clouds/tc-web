@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "ثبت شده است",
     "tmMatrixNote_timeline": "8-14 ماه",
     "nmpaRiskNote_tests": "{count} تست",
-    "labelAllergenNote": "لیست چین با اتحادیه اروپا/ایالات متحده متفاوت است - همه 8 دسته را تأیید کنید"
+    "labelAllergenNote": "لیست چین با اتحادیه اروپا/ایالات متحده متفاوت است - همه 8 دسته را تأیید کنید",
+    "gaccCat_health_food_labTest_5": "فروپاشی/انحلال",
+    "gaccCat_health_food_reject_1_problem": "ماده جدید در کاتالوگ مواد غذایی چین نیست",
+    "gaccCat_health_food_reject_1_cause": "این ماده برای استفاده در چین تایید نشده است",
+    "gaccCat_health_food_reject_1_solution": "استفاده از مواد غذایی جدید (می تواند 1-2 سال طول بکشد)"
   },
   "Report": {
     "loadingTitle": "در حال بارگیری گزارش شما",

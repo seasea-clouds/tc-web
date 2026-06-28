@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "Регистрован",
     "tmMatrixNote_timeline": "8-14 месеци",
     "nmpaRiskNote_tests": "{цоунт} тестова",
-    "labelAllergenNote": "Кинеска листа се разликује од ЕУ/САД — проверите свих 8 категорија"
+    "labelAllergenNote": "Кинеска листа се разликује од ЕУ/САД — проверите свих 8 категорија",
+    "gaccCat_health_food_labTest_5": "Дезинтеграција/распад",
+    "gaccCat_health_food_reject_1_problem": "Нови састојак није у кинеском каталогу хране",
+    "gaccCat_health_food_reject_1_cause": "Састојак није одобрен за употребу у Кини",
+    "gaccCat_health_food_reject_1_solution": "Примена нових састојака у храни (може потрајати 1-2 године)"
   },
   "Report": {
     "loadingTitle": "Учитавање вашег извештаја",

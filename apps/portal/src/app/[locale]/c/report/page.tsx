@@ -81,7 +81,13 @@ function ReportContent() {
         return res.json();
       })
       .then(data => {
-        setReport(data);
+        const rebuilt = rebuildResult({
+          module: data.module,
+          result: data.result,
+          productInfo: data.productInfo,
+          savedInput: data.productInfo || {},
+        }, locale);
+        setReport({...data, result: rebuilt});
         setLoading(false);
       })
       .catch(err => {

@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "I regjistruar",
     "tmMatrixNote_timeline": "8-14 muaj",
     "nmpaRiskNote_tests": "{count} teste",
-    "labelAllergenNote": "Lista e Kinës ndryshon nga BE/SHBA — verifikoni të 8 kategoritë"
+    "labelAllergenNote": "Lista e Kinës ndryshon nga BE/SHBA — verifikoni të 8 kategoritë",
+    "gaccCat_health_food_labTest_5": "Shpërbërja/shpërbërja",
+    "gaccCat_health_food_reject_1_problem": "Përbërës i ri jo në katalogun E ushqimit Të Kinës",
+    "gaccCat_health_food_reject_1_cause": "Përbërës jo i aprovuar për përdorim Në Kinë",
+    "gaccCat_health_food_reject_1_solution": "Aplikimi i ri i përbërësve të ushqimit (mund të zgjasë 1-2 vjet)"
   },
   "Report": {
     "loadingTitle": "Duke ngarkuar raportin tuaj",

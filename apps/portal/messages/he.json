@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "רָשׁוּם",
     "tmMatrixNote_timeline": "8-14 חודשים",
     "nmpaRiskNote_tests": "{count} בדיקות",
-    "labelAllergenNote": "הרשימה של סין שונה מהאיחוד האירופי/ארה\"ב - אמת את כל 8 הקטגוריות"
+    "labelAllergenNote": "הרשימה של סין שונה מהאיחוד האירופי/ארה\"ב - אמת את כל 8 הקטגוריות",
+    "gaccCat_health_food_labTest_5": "פירוק/פירוק",
+    "gaccCat_health_food_reject_1_problem": "מרכיב חדש שאינו בקטלוג המזון של סין",
+    "gaccCat_health_food_reject_1_cause": "המרכיב אינו מאושר לשימוש בסין",
+    "gaccCat_health_food_reject_1_solution": "יישום מרכיבי מזון חדשניים (יכול לקחת 1-2 שנים)"
   },
   "Report": {
     "loadingTitle": "טוען את הדוח שלך",

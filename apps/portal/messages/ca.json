@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "Registrat",
     "tmMatrixNote_timeline": "8-14 mesos",
     "nmpaRiskNote_tests": "{count} proves",
-    "labelAllergenNote": "La llista de la Xina difereix de la UE/EUA: verifiqueu les 8 categories"
+    "labelAllergenNote": "La llista de la Xina difereix de la UE/EUA: verifiqueu les 8 categories",
+    "gaccCat_health_food_labTest_5": "Desintegració/dissolució",
+    "gaccCat_health_food_reject_1_problem": "Nou ingredient no al catàleg d'aliments De La Xina",
+    "gaccCat_health_food_reject_1_cause": "Ingredient no aprovat per al seu ús A La Xina",
+    "gaccCat_health_food_reject_1_solution": "Aplicació d'ingredients alimentaris nous (pot trigar 1-2 anys)"
   },
   "Report": {
     "loadingTitle": "Carregant el vostre informe",

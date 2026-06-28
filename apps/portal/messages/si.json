@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "ලියාපදිංචි කර ඇත",
     "tmMatrixNote_timeline": "මාස 8-14",
     "nmpaRiskNote_tests": "{count} පරීක්ෂණ",
-    "labelAllergenNote": "චීනයේ ලැයිස්තුව EU/US වෙතින් වෙනස් වේ - සියලුම වර්ග 8 සත්‍යාපනය කරන්න"
+    "labelAllergenNote": "චීනයේ ලැයිස්තුව EU/US වෙතින් වෙනස් වේ - සියලුම වර්ග 8 සත්‍යාපනය කරන්න",
+    "gaccCat_health_food_labTest_5": "විසංයෝජනය / විසුරුවා හැරීම",
+    "gaccCat_health_food_reject_1_problem": "නව අමුද්‍රව්‍ය චීන ආහාර නාමාවලියෙහි නොමැත",
+    "gaccCat_health_food_reject_1_cause": "අමුද්‍රව්‍ය චීනයේ භාවිතය සඳහා අනුමත කර නැත",
+    "gaccCat_health_food_reject_1_solution": "නව ආහාර ද්‍රව්‍ය යෙදීම (වසර 1-2ක් ගත විය හැක)"
   },
   "Report": {
     "loadingTitle": "ඔබේ වාර්තාව පූරණය කරමින්",

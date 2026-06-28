@@ -1821,7 +1821,11 @@
     "tmMatrixNote_registered": "已注册",
     "tmMatrixNote_timeline": "8-14个月",
     "nmpaRiskNote_tests": "{count} 次测试",
-    "labelAllergenNote": "中国的清单与欧盟/美国的清单不同——验证所有 8 个类别"
+    "labelAllergenNote": "中国的清单与欧盟/美国的清单不同——验证所有 8 个类别",
+    "gaccCat_health_food_labTest_5": "崩解/溶解",
+    "gaccCat_health_food_reject_1_problem": "未列入中国食品目录的新原料",
+    "gaccCat_health_food_reject_1_cause": "成分未经批准在中国使用",
+    "gaccCat_health_food_reject_1_solution": "新型食品成分应用（可能需要1-2年）"
   },
   "Report": {
     "loadingTitle": "加载您的报告",

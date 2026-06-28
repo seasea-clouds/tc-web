@@ -363,7 +363,7 @@ const SHARED_WORDS_BY_LANG = {
       'Cause', 'Solution', 'Classification', 'Histamine', 'Limitation']),
   de: new Set(['Blog', 'Legal', 'Aflatoxin M1']),
   nl: new Set(['Blog', 'Contact', 'Melamine', 'Histamine']),
-  sv: new Set(['Blog', 'Contact', 'Services', 'Aflatoxin M1', 'GB 7718 Revision']),
+  sv: new Set(['Blog', 'Contact', 'Services', 'Aflatoxin M1', 'GB 7718 Revision', 'Special']),
   da: new Set(['Blog', 'Contact', 'Services']),
   no: new Set(['Blog', 'Contact', 'Services']),
   es: new Set(['Blog', 'Contact', 'Services']),

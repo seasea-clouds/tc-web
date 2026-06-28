@@ -281,6 +281,20 @@ const IGNORE_FALLBACK_KEYS = new Set([
   'Check.microbiological_coliforms_pathogens',
   'Check.mycotoxins_aflatoxin_don_zearalenone',
   'Check.tetracycline_antibiotics',
+  // Report: UI labels (pending translation assignment)
+  'Report.paid', 'Report.pending', 'Report.prevPage', 'Report.nextPage',
+  // ReportSection: audit checklist items (pending translation)
+  'ReportSection.cccAuditItem_productProcess',
+  'ReportSection.cccAuditItem_incomingQC',
+  'ReportSection.cccAuditItem_testingCalibration',
+  'ReportSection.cccAuditItem_nonConforming',
+  'ReportSection.cccAuditItem_capa',
+  'ReportSection.cccAuditItem_staffTraining',
+  'ReportSection.cccAuditItem_rawMaterialAudit',
+  'ReportSection.cccAuditItem_finishedInspection',
+  'ReportSection.cccAuditItem_traceability',
+  'ReportSection.cccAuditItem_enviroSafety',
+  'ReportSection.ordinaryLabel', 'ReportSection.specialLabel',
 ]);
 
 function checkHardcodedFallbacks(projectName, projectData) {

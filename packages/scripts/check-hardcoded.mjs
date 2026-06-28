@@ -686,6 +686,11 @@ const LEGIT_ENGLISH = new Set([
   'September 3, 2021',
   'November 22, 2021',
   'National People\'s Congress (NPC)',
+  'Young consumers\' preference for international brands',
+  'ProductName\', \'Ingredients\', \'NetContent\', \'Nutrition\', \'Allergens\', \'DateMarking\', \'CountryOfOrigin\', \'Language\', \'Storage\', \'Manufacturer',
+  'Notification',
+  'Registration',
+  'Certified',
 ]);
 
 // ─── Check A: Exported data-object display labels ──────────────────────

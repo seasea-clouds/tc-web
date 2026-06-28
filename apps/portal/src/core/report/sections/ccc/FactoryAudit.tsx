@@ -6,18 +6,19 @@ export default function FactoryAudit({ result }: { result: any }) {
   const a = result.factoryAudit
   if (!a) return null
 
-  const checklist = a.scope?.length ? a.scope : [
-    'Production process and workflow review',
-    'Incoming quality control procedures',
-    'Testing equipment calibration records',
-    'Non-conforming product handling',
-    'Corrective and preventive action records',
-    'Staff training and qualification files',
-    'Raw material supplier audit records',
-    'Finished product inspection reports',
-    'Traceability system documentation',
-    'Environmental and safety compliance',
+  const defaultChecklist = [
+    t('cccAuditItem_productProcess'),
+    t('cccAuditItem_incomingQC'),
+    t('cccAuditItem_testingCalibration'),
+    t('cccAuditItem_nonConforming'),
+    t('cccAuditItem_capa'),
+    t('cccAuditItem_staffTraining'),
+    t('cccAuditItem_rawMaterialAudit'),
+    t('cccAuditItem_finishedInspection'),
+    t('cccAuditItem_traceability'),
+    t('cccAuditItem_enviroSafety'),
   ]
+  const checklist = a.scope?.length ? a.scope : defaultChecklist
 
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-6">

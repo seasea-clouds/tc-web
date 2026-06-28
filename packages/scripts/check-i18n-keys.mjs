@@ -133,6 +133,8 @@ const IGNORE_FALLBACK_VALUES = new Set([
   'SinoTrade Compliance', 'you@company.com',
   // Certification marks — always English
   'FCC',
+  // Special = valid in Romanian & Swedish (not English fallback)
+  'Special',
 ]);
 
 // 原则：不要轻易加入 IGNORE_FALLBACK_KEYS，可以在脚本里精确排除，

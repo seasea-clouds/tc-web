@@ -1864,8 +1864,8 @@
     "totalCost": "Общая стоимость",
     "verdict": "Вердикт",
     "viewPlans": "Посмотреть планы",
-    "paid": "Оплаченный",
-    "pending": "В ожидании",
+    "paid": "Оплачено",
+    "pending": "Ожидание",
     "prevPage": "← Предыдущий",
     "nextPage": "Далее →"
   },
@@ -2218,7 +2218,7 @@
     "cccAuditItem_traceability": "Документация системы прослеживаемости",
     "cccAuditItem_enviroSafety": "Соблюдение требований экологии и безопасности",
     "ordinaryLabel": "Обычный",
-    "specialLabel": "Особенный"
+    "specialLabel": "Специальный"
   },
   "Navbar": {
     "selfCheck": "Самопроверка",

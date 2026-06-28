@@ -1864,8 +1864,8 @@
     "totalCost": "Tổng chi phí",
     "verdict": "Phán quyết",
     "viewPlans": "Xem kế hoạch",
-    "paid": "Trả",
-    "pending": "Chưa giải quyết",
+    "paid": "Đã thanh toán",
+    "pending": "Đang chờ xử lý",
     "prevPage": "← Trước đó",
     "nextPage": "Tiếp theo →"
   },
@@ -2217,7 +2217,7 @@
     "cccAuditItem_finishedInspection": "Báo cáo kiểm tra thành phẩm",
     "cccAuditItem_traceability": "Tài liệu hệ thống truy xuất nguồn gốc",
     "cccAuditItem_enviroSafety": "Tuân thủ môi trường và an toàn",
-    "ordinaryLabel": "Bình thường",
+    "ordinaryLabel": "Thông thường",
     "specialLabel": "Đặc biệt"
   },
   "Navbar": {

@@ -1864,7 +1864,7 @@
     "totalCost": "Kostoja totale",
     "verdict": "Verdikti",
     "viewPlans": "Shikoni planet",
-    "paid": "I paguar",
+    "paid": "E paguar",
     "pending": "Në pritje",
     "prevPage": "← E mëparshme",
     "nextPage": "Tjetra →"
@@ -2218,7 +2218,7 @@
     "cccAuditItem_traceability": "Dokumentacioni i sistemit të gjurmueshmërisë",
     "cccAuditItem_enviroSafety": "Pajtueshmëria me mjedisin dhe sigurinë",
     "ordinaryLabel": "E zakonshme",
-    "specialLabel": "E veçanta"
+    "specialLabel": "Speciale"
   },
   "Navbar": {
     "pricing": "Çmimet",

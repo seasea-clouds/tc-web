@@ -1864,8 +1864,8 @@
     "totalCost": "Teljes költség",
     "verdict": "Ítélet",
     "viewPlans": "Tervek megtekintése",
-    "paid": "Fizetett",
-    "pending": "Függőben levő",
+    "paid": "Fizetve",
+    "pending": "Függőben",
     "prevPage": "← Előző",
     "nextPage": "Következő →"
   },
@@ -2217,8 +2217,8 @@
     "cccAuditItem_finishedInspection": "Kész termékellenőrzési jelentések",
     "cccAuditItem_traceability": "Nyomon követhetőségi rendszer dokumentációja",
     "cccAuditItem_enviroSafety": "Környezetvédelmi és biztonsági megfelelés",
-    "ordinaryLabel": "Rendes",
-    "specialLabel": "Különleges"
+    "ordinaryLabel": "Közönséges",
+    "specialLabel": "Speciális"
   },
   "Navbar": {
     "selfCheck": "Önértékelés",

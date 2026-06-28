@@ -2218,7 +2218,7 @@
     "cccAuditItem_traceability": "Jäljitettävyysjärjestelmän dokumentaatio",
     "cccAuditItem_enviroSafety": "Ympäristö- ja turvallisuusvaatimusten noudattaminen",
     "ordinaryLabel": "Tavallinen",
-    "specialLabel": "Erityinen"
+    "specialLabel": "Erikoisluokka"
   },
   "Navbar": {
     "selfCheck": "Itsearviointi",

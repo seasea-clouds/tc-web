@@ -1864,8 +1864,8 @@
     "totalCost": "Toplam Maliyet",
     "verdict": "Karar",
     "viewPlans": "Planları Görüntüle",
-    "paid": "Paralı",
-    "pending": "Askıda olması",
+    "paid": "Ödendi",
+    "pending": "Beklemede",
     "prevPage": "← Önceki",
     "nextPage": "Sonraki →"
   },

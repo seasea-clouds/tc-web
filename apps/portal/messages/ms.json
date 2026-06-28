@@ -2217,8 +2217,8 @@
     "cccAuditItem_finishedInspection": "Laporan pemeriksaan produk siap",
     "cccAuditItem_traceability": "Dokumentasi sistem kebolehkesanan",
     "cccAuditItem_enviroSafety": "Pematuhan alam sekitar dan keselamatan",
-    "ordinaryLabel": "Biasalah",
-    "specialLabel": "Istimewa"
+    "ordinaryLabel": "Biasa",
+    "specialLabel": "Khas"
   },
   "Navbar": {
     "selfCheck": "Pengesanan Diri",

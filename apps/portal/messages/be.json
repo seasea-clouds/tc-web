@@ -1864,7 +1864,7 @@
     "totalCost": "Агульны кошт",
     "verdict": "Прысуд",
     "viewPlans": "Прагляд планаў",
-    "paid": "Платна",
+    "paid": "Аплачана",
     "pending": "У чаканні",
     "prevPage": "← Папярэд",
     "nextPage": "Далей →"
@@ -2218,7 +2218,7 @@
     "cccAuditItem_traceability": "Дакументацыя сістэмы адсочвання",
     "cccAuditItem_enviroSafety": "Адпаведнасць экалогіі і бяспекі",
     "ordinaryLabel": "Звычайны",
-    "specialLabel": "Асаблівы"
+    "specialLabel": "Спецыяльны"
   },
   "Navbar": {
     "selfCheck": "Самправерка",

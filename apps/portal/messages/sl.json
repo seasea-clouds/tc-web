@@ -2218,7 +2218,7 @@
     "cccAuditItem_traceability": "Dokumentacija sistema sledljivosti",
     "cccAuditItem_enviroSafety": "Okoljska in varnostna skladnost",
     "ordinaryLabel": "Navadna",
-    "specialLabel": "Posebna"
+    "specialLabel": "Posebno"
   },
   "Navbar": {
     "selfCheck": "Samoevalvacija",

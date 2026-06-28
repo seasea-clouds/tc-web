@@ -1864,8 +1864,8 @@
     "totalCost": "මුළු පිරිවැය",
     "verdict": "තීන්දුව",
     "viewPlans": "සැලසුම් බලන්න",
-    "paid": "ගෙවා ඇත",
-    "pending": "පොරොත්තුවෙන්",
+    "paid": "ගෙවූ",
+    "pending": "පොරොත්තු",
     "prevPage": "← පෙර",
     "nextPage": "ඊළඟ →"
   },
@@ -2217,7 +2217,7 @@
     "cccAuditItem_finishedInspection": "නිමි නිෂ්පාදන පරීක්ෂණ වාර්තා",
     "cccAuditItem_traceability": "ලුහුබැඳීමේ පද්ධති ලේඛනගත කිරීම",
     "cccAuditItem_enviroSafety": "පාරිසරික හා ආරක්ෂිත අනුකූලතාවය",
-    "ordinaryLabel": "සාමාන්ය",
+    "ordinaryLabel": "සාමාන්‍ය",
     "specialLabel": "විශේෂ"
   },
   "Navbar": {

@@ -2217,7 +2217,7 @@
     "cccAuditItem_finishedInspection": "Informes de inspección de producto terminado.",
     "cccAuditItem_traceability": "Documentación del sistema de trazabilidad",
     "cccAuditItem_enviroSafety": "Cumplimiento ambiental y de seguridad",
-    "ordinaryLabel": "Común",
+    "ordinaryLabel": "Ordinario",
     "specialLabel": "Especial"
   },
   "Navbar": {

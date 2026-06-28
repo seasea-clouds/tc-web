@@ -1864,7 +1864,7 @@
     "totalCost": "کل لاگت",
     "verdict": "فیصلہ",
     "viewPlans": "منصوبے دیکھیں",
-    "paid": "ادا کیا",
+    "paid": "ادا شدہ",
     "pending": "زیر التواء",
     "prevPage": "← پچھلا",
     "nextPage": "اگلا →"
@@ -2218,7 +2218,7 @@
     "cccAuditItem_traceability": "ٹریس ایبلٹی سسٹم کی دستاویزات",
     "cccAuditItem_enviroSafety": "ماحولیاتی اور حفاظت کی تعمیل",
     "ordinaryLabel": "عام",
-    "specialLabel": "خاص"
+    "specialLabel": "خصوصی"
   },
   "Navbar": {
     "selfCheck": "خود جانچ",

@@ -1864,8 +1864,8 @@
     "totalCost": "Total kostnad",
     "verdict": "Dom",
     "viewPlans": "Visa planer",
-    "paid": "Betalt",
-    "pending": "I avvaktan på",
+    "paid": "Betald",
+    "pending": "Väntar",
     "prevPage": "← Föreg",
     "nextPage": "Nästa →"
   },
@@ -2218,7 +2218,7 @@
     "cccAuditItem_traceability": "Dokumentation för spårbarhetssystem",
     "cccAuditItem_enviroSafety": "Miljö- och säkerhetsöverensstämmelse",
     "ordinaryLabel": "Vanlig",
-    "specialLabel": "Särskild"
+    "specialLabel": "Special"
   },
   "Navbar": {
     "selfCheck": "Självbedömning",

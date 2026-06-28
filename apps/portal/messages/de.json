@@ -2217,8 +2217,8 @@
     "cccAuditItem_finishedInspection": "Inspektionsberichte für fertige Produkte",
     "cccAuditItem_traceability": "Dokumentation des Rückverfolgbarkeitssystems",
     "cccAuditItem_enviroSafety": "Einhaltung von Umwelt- und Sicherheitsvorschriften",
-    "ordinaryLabel": "Normal",
-    "specialLabel": "Besonders"
+    "ordinaryLabel": "Gewöhnlich",
+    "specialLabel": "Spezial"
   },
   "Navbar": {
     "selfCheck": "Selbstprüfung",

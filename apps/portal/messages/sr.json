@@ -2217,8 +2217,8 @@
     "cccAuditItem_finishedInspection": "Извештаји о инспекцији готовог производа",
     "cccAuditItem_traceability": "Документација система следљивости",
     "cccAuditItem_enviroSafety": "Усклађеност са животном средином и безбедношћу",
-    "ordinaryLabel": "Обичне",
-    "specialLabel": "Специјални"
+    "ordinaryLabel": "Обичан",
+    "specialLabel": "Специјална"
   },
   "Navbar": {
     "selfCheck": "Самостална провера",

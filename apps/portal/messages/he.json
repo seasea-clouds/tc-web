@@ -1865,7 +1865,7 @@
     "verdict": "פְּסַק דִין",
     "viewPlans": "הצג תוכניות",
     "paid": "בתשלום",
-    "pending": "תָלוּי וְעוֹמֵד",
+    "pending": "בהמתנה",
     "prevPage": "← הקודם",
     "nextPage": "הבא →"
   },
@@ -2217,8 +2217,8 @@
     "cccAuditItem_finishedInspection": "דוחות בדיקת מוצר מוגמר",
     "cccAuditItem_traceability": "תיעוד מערכת מעקב",
     "cccAuditItem_enviroSafety": "תאימות סביבתיות ובטיחות",
-    "ordinaryLabel": "רָגִיל",
-    "specialLabel": "מְיוּחָד"
+    "ordinaryLabel": "רגיל",
+    "specialLabel": "מיוחד"
   },
   "Navbar": {
     "selfCheck": "בדיקה עצמית",

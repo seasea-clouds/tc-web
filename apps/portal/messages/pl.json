@@ -1864,8 +1864,8 @@
     "totalCost": "Całkowity koszt",
     "verdict": "Werdykt",
     "viewPlans": "Zobacz plany",
-    "paid": "Płatny",
-    "pending": "Aż do",
+    "paid": "Zapłacono",
+    "pending": "Oczekujące",
     "prevPage": "← Poprzednie",
     "nextPage": "Dalej →"
   },

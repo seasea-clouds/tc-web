@@ -1865,7 +1865,7 @@
     "verdict": "Dom",
     "viewPlans": "Se planer",
     "paid": "Betalt",
-    "pending": "Indtil",
+    "pending": "Afventer",
     "prevPage": "← Forrige",
     "nextPage": "Næste →"
   },
@@ -2218,7 +2218,7 @@
     "cccAuditItem_traceability": "Dokumentation af sporbarhedssystem",
     "cccAuditItem_enviroSafety": "Overholdelse af miljø og sikkerhed",
     "ordinaryLabel": "Almindelig",
-    "specialLabel": "Særlig"
+    "specialLabel": "Speciel"
   },
   "Navbar": {
     "selfCheck": "Selvtest",

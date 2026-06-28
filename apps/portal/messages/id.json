@@ -1865,7 +1865,7 @@
     "verdict": "Dakwaan",
     "viewPlans": "Lihat Paket",
     "paid": "Dibayar",
-    "pending": "Tertunda",
+    "pending": "Menunggu",
     "prevPage": "← Sebelumnya",
     "nextPage": "Selanjutnya →"
   },
@@ -2218,7 +2218,7 @@
     "cccAuditItem_traceability": "Dokumentasi sistem ketertelusuran",
     "cccAuditItem_enviroSafety": "Kepatuhan lingkungan dan keselamatan",
     "ordinaryLabel": "Biasa",
-    "specialLabel": "Spesial"
+    "specialLabel": "Khusus"
   },
   "Navbar": {
     "selfCheck": "Pemeriksaan Diri",

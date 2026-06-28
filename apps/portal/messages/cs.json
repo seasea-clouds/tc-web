@@ -1865,7 +1865,7 @@
     "verdict": "Výrok",
     "viewPlans": "Zobrazit plány",
     "paid": "Zaplaceno",
-    "pending": "Čeká na vyřízení",
+    "pending": "Nevyřízeno",
     "prevPage": "← Předchozí",
     "nextPage": "Další →"
   },
@@ -2217,7 +2217,7 @@
     "cccAuditItem_finishedInspection": "Kontrolní zprávy hotových výrobků",
     "cccAuditItem_traceability": "Dokumentace systému sledovatelnosti",
     "cccAuditItem_enviroSafety": "Dodržování ochrany životního prostředí a bezpečnosti",
-    "ordinaryLabel": "Obyčejný",
+    "ordinaryLabel": "Obyčejné",
     "specialLabel": "Speciální"
   },
   "Navbar": {

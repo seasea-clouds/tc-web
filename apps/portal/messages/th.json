@@ -1864,7 +1864,7 @@
     "totalCost": "ต้นทุนรวม",
     "verdict": "คำตัดสิน",
     "viewPlans": "ดูแผน",
-    "paid": "จ่าย",
+    "paid": "ชำระเงินแล้ว",
     "pending": "รอดำเนินการ",
     "prevPage": "← ก่อนหน้า",
     "nextPage": "ถัดไป →"
@@ -2217,7 +2217,7 @@
     "cccAuditItem_finishedInspection": "รายงานการตรวจสอบผลิตภัณฑ์สำเร็จรูป",
     "cccAuditItem_traceability": "เอกสารระบบการตรวจสอบย้อนกลับ",
     "cccAuditItem_enviroSafety": "การปฏิบัติตามข้อกำหนดด้านสิ่งแวดล้อมและความปลอดภัย",
-    "ordinaryLabel": "สามัญ",
+    "ordinaryLabel": "ธรรมดา",
     "specialLabel": "พิเศษ"
   },
   "Navbar": {

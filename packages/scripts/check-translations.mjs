@@ -231,20 +231,6 @@ const IGNORE_FALLBACK_KEYS = new Set([
   'Check.tmDimension_squatterRisk',
   // Check category labels — product categories with HS codes
   'Check.cccCat_electronics_label', 'Check.nmpaCat_makeup_label',
-  // Report: UI labels (pending translation assignment)
-  'Report.paid', 'Report.pending', 'Report.prevPage', 'Report.nextPage',
-  // ReportSection: audit checklist items (pending translation)
-  'ReportSection.cccAuditItem_productProcess',
-  'ReportSection.cccAuditItem_incomingQC',
-  'ReportSection.cccAuditItem_testingCalibration',
-  'ReportSection.cccAuditItem_nonConforming',
-  'ReportSection.cccAuditItem_capa',
-  'ReportSection.cccAuditItem_staffTraining',
-  'ReportSection.cccAuditItem_rawMaterialAudit',
-  'ReportSection.cccAuditItem_finishedInspection',
-  'ReportSection.cccAuditItem_traceability',
-  'ReportSection.cccAuditItem_enviroSafety',
-  'ReportSection.ordinaryLabel', 'ReportSection.specialLabel',
   // French exemption: translation identical to English
   'Check.nmpaRiskNote_tests',
 ]);
@@ -394,6 +380,10 @@ for (const lang of ['af','az','ca','cs','el','fi','hr','hu','id','ka','ms','pl',
   if (!SHARED_WORDS_BY_LANG[lang]) SHARED_WORDS_BY_LANG[lang] = new Set();
   SHARED_WORDS_BY_LANG[lang].add('Blog');
 }
+
+// Romanian: 'Special' is same as English (loanword)
+SHARED_WORDS_BY_LANG['ro'].add('Special');
+
 // Swahili keeps international scientific terms in English
 SHARED_WORDS_BY_LANG['sw'].add('Melamine');
 SHARED_WORDS_BY_LANG['sw'].add('Tetracycline antibiotics');

@@ -304,7 +304,7 @@
     "crossborderTitle": "跨境电商检查",
     "documentsTitle": "所需文件",
     "emailForPdf": "电子邮件（可选: 用于接收 PDF）",
-    "estMonthlyVolume": "预计。每月交易量",
+    "estMonthlyVolume": "预计每月交易量",
     "existingLabelArtwork": "现有标签图稿（可选）",
     "expertCtaBtn": "从我们的专家那里获取报价 →",
     "expertCtaDesc": "我们的合规专家可以为您处理整个注册过程。",
@@ -1864,8 +1864,8 @@
     "preparedFor": "准备人:",
     "nameLabel": "名称",
     "emailLabel": "邮箱",
-    "paid": "有薪酬的",
-    "pending": "待办的",
+    "paid": "已支付",
+    "pending": "待处理",
     "prevPage": "← 上一页",
     "nextPage": "下一页 →"
   },
@@ -2205,7 +2205,7 @@
     "ipLegalFrameworkTitle": "中国知识产权法律框架和执法选项",
     "squattingOfForeignBrandsSquatted": "外资品牌被抢占",
     "squattingRiskLabel": "风险",
-    "valueHigh": "高的",
+    "valueHigh": "高",
     "labelMandatoryFields": "必填字段",
     "cccAuditItem_productProcess": "生产流程和工作流程审查",
     "cccAuditItem_incomingQC": "进货质量控制程序",
@@ -2217,8 +2217,8 @@
     "cccAuditItem_finishedInspection": "成品检验报告",
     "cccAuditItem_traceability": "追溯系统文档",
     "cccAuditItem_enviroSafety": "环境和安全合规性",
-    "ordinaryLabel": "普通的",
-    "specialLabel": "特别的"
+    "ordinaryLabel": "普通",
+    "specialLabel": "特殊"
   },
   "Navbar": {
     "selfCheck": "合规自查",

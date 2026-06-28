@@ -1864,8 +1864,8 @@
     "totalCost": "총 비용",
     "verdict": "평결",
     "viewPlans": "계획 보기",
-    "paid": "유급의",
-    "pending": "보류 중",
+    "paid": "결제 완료",
+    "pending": "처리 중",
     "prevPage": "← 이전",
     "nextPage": "다음 →"
   },
@@ -2217,8 +2217,8 @@
     "cccAuditItem_finishedInspection": "완제품 검사 보고서",
     "cccAuditItem_traceability": "추적성 시스템 문서",
     "cccAuditItem_enviroSafety": "환경 및 안전 규정 준수",
-    "ordinaryLabel": "평범한",
-    "specialLabel": "특별한"
+    "ordinaryLabel": "일반",
+    "specialLabel": "특수"
   },
   "Navbar": {
     "selfCheck": "셀프 체크",

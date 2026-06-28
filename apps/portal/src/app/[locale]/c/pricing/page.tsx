@@ -1,16 +1,58 @@
 'use client';
 
-import { useT } from '@trade/ui';
+import { useState } from 'react';
+import { useT, useAuth } from '@trade/ui';
 import useSubsiteHref from '@/lib/useSubsiteHref';
 import { SITE_URL } from '@/lib/constants';
 import { useLocale } from 'next-intl';
 
 export default function PricingPage() {
   const t = useT('Pricing');
+  const tCheck = useT('Check');
   const subsiteHref = useSubsiteHref();
   const locale = useLocale();
+  const { isAuthenticated, isLoading: authLoading } = useAuth();
+  const [subLoading, setSubLoading] = useState(false);
+  const [singleLoading, setSingleLoading] = useState(false);
+  const [error, setError] = useState('');
+
   const formatPrice = (price: number) =>
     new Intl.NumberFormat(locale, { style: 'currency', currency: 'USD', minimumFractionDigits: 2 }).format(price);
+
+  const handleSubscribe = async () => {
+    if (!isAuthenticated) {
+      window.location.href = subsiteHref(`/login?redirect=/pricing`);
+      return;
+    }
+    setSubLoading(true);
+    setError('');
+    try {
+      const res = await fetch('/api/subscription/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ locale }),
+      });
+      if (!res.ok) {
+        const err = await res.json();
+        throw new Error(err.error || 'Checkout failed');
+      }
+      const data = await res.json();
+      if (data.checkoutUrl) {
+        window.location.href = data.checkoutUrl;
+      } else {
+        throw new Error('No checkout URL returned');
+      }
+    } catch (err) {
+      setError(String(err));
+      setSubLoading(false);
+    }
+  };
+
+  const handleGetReport = () => {
+    // Redirect to check page — user runs a check first, then pays for full report
+    window.location.href = subsiteHref('/');
+  };
 
   return (
     <div className="bg-bg-ice py-16">
@@ -19,6 +61,12 @@ export default function PricingPage() {
         <p className="text-gray-500 mb-12 max-w-2xl mx-auto">
           {t('subtitle')}
         </p>
+
+        {error && (
+          <div className="max-w-md mx-auto mb-6 bg-red-50 border border-red-200 text-red-700 text-sm rounded-lg p-3">
+            {error}
+          </div>
+        )}
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {/* Free */}
@@ -51,8 +99,12 @@ export default function PricingPage() {
               <li>{t('singleBullet3')}</li>
               <li>{t('singleBullet4')}</li>
             </ul>
-            <button className="inline-block w-full bg-gold hover:bg-gold/90 text-primary-navy font-semibold py-2.5 rounded-md transition-all">
-              {t('getReport')}
+            <button
+              onClick={handleGetReport}
+              disabled={singleLoading}
+              className="inline-block w-full bg-gold hover:bg-gold/90 disabled:bg-gray-300 text-primary-navy font-semibold py-2.5 rounded-md transition-all"
+            >
+              {singleLoading ? tCheck('redirecting') || 'Redirecting...' : t('getReport')}
             </button>
           </div>
 
@@ -66,8 +118,12 @@ export default function PricingPage() {
               <li>{t('monthlyBullet3')}</li>
               <li>{t('monthlyBullet4')}</li>
             </ul>
-            <button className="inline-block w-full border-2 border-primary-navy text-primary-navy font-semibold py-2.5 rounded-md hover:bg-primary-navy hover:text-white transition-all">
-              {t('subscribe')}
+            <button
+              onClick={handleSubscribe}
+              disabled={subLoading || authLoading}
+              className="inline-block w-full border-2 border-primary-navy text-primary-navy font-semibold py-2.5 rounded-md hover:bg-primary-navy hover:text-white transition-all disabled:border-gray-300 disabled:text-gray-400 disabled:cursor-not-allowed"
+            >
+              {subLoading ? tCheck('redirecting') || 'Redirecting...' : t('subscribe')}
             </button>
           </div>
 

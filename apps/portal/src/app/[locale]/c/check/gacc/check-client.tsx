@@ -5,6 +5,7 @@ import { useState } from "react";
 import { checkGacc, CATEGORY_LABELS, type GaccCategory, type GaccInput } from "../../../../../../modules/gacc/rules";
 import { useFormValidation, inputClasses, selectClasses } from "@/lib/useFormValidation";
 import { usePathPrefix } from '@/lib/useSubsiteHref';
+import { initiateCheckout } from '@/lib/checkout';
 
 type Step = "form" | "free-result";
 
@@ -74,8 +75,24 @@ export default function GaccCheckClient() {
         }).catch(e => console.warn('Email send failed (dev mode):', e));
       }
 
-      // 3. Always redirect after saving to localStorage
-      window.location.href = pathPrefix + "/c/report/?id=" + reportId;
+      // 3. Try checkout API — redirect to Creem checkout
+      const checkoutUrl = await initiateCheckout({
+        reportId,
+        email,
+        locale,
+        productName: input.productName || t('yourProduct'),
+        category: input.category,
+        originCountry: input.originCountry,
+        module: 'GACC Food Registration',
+        moduleKey: 'gacc',
+      });
+
+      if (checkoutUrl) {
+        window.location.href = checkoutUrl;
+      } else {
+        // Fallback: go to report page directly (free access as before)
+        window.location.href = pathPrefix + "/c/report/?id=" + reportId;
+      }
     } catch (err) {
       // Last resort: even if everything fails, try to get the user to the report page
       try {

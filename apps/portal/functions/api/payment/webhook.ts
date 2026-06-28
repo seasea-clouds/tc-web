@@ -84,6 +84,10 @@ export async function onRequest(context: { request: Request; env: Env }) {
 
     if (type === "checkout.completed") {
       await handleCheckoutCompleted(context.request, context.env, meta, data);
+    } else if (type === "subscription.created") {
+      await handleSubscriptionCreated(context.env, data, meta);
+    } else if (type === "subscription.cancelled") {
+      await handleSubscriptionCancelled(context.env, data);
     }
 
     return Response.json({ ok: true });
@@ -187,5 +191,88 @@ async function handleCheckoutCompleted(
     } catch (dbErr) {
       console.error("D1 fallback save failed:", dbErr);
     }
+  }
+}
+
+// ─── subscription.created 处理 ────────────────────────────────────────
+
+async function handleSubscriptionCreated(
+  env: Env,
+  data: Record<string, unknown>,
+  meta: Record<string, string>
+) {
+  const subId = String(data.id ?? "");
+  const customerEmail = String((data as any).customer?.email ?? meta.email ?? "");
+  const userId = meta.user_id ?? "";
+  const periodStart = String((data as any).current_period_start ?? "");
+  const periodEnd = String((data as any).current_period_end ?? "");
+  const planId = String((data as any).plan?.id ?? "monthly");
+
+  if (!subId || (!userId && !customerEmail)) {
+    console.warn("subscription.created: missing subscription id or user id/email");
+    return;
+  }
+
+  try {
+    // Find user by userId from metadata, or by email
+    let dbUserId = userId;
+    if (!dbUserId && customerEmail && env.DB) {
+      const user = await env.DB.prepare("SELECT id FROM users WHERE email = ?")
+        .bind(customerEmail).first();
+      if (user) {
+        dbUserId = (user as any).id;
+      }
+    }
+
+    if (!dbUserId) {
+      console.warn("subscription.created: could not resolve user_id for", { customerEmail });
+      return;
+    }
+
+    // Check if subscription already exists
+    const existing = await env.DB.prepare(
+      "SELECT id FROM subscriptions WHERE provider_subscription_id = ?"
+    ).bind(subId).first();
+
+    if (existing) {
+      // Update existing
+      await env.DB.prepare(
+        `UPDATE subscriptions SET status = 'active', current_period_start = ?, current_period_end = ? WHERE provider_subscription_id = ?`
+      ).bind(periodStart, periodEnd, subId).run();
+      console.log(`subscription.created: updated existing sub ${subId}`);
+    } else {
+      // Create new
+      const newId = crypto.randomUUID();
+      await env.DB.prepare(
+        `INSERT INTO subscriptions (id, user_id, plan, status, provider_subscription_id, current_period_start, current_period_end)
+         VALUES (?, ?, ?, 'active', ?, ?, ?)`
+      ).bind(newId, dbUserId, planId, subId, periodStart, periodEnd).run();
+      console.log(`subscription.created: created new sub ${subId} for user ${dbUserId}`);
+    }
+  } catch (err) {
+    console.error("subscription.created handler error:", err);
+  }
+}
+
+// ─── subscription.cancelled 处理 ────────────────────────────────────────
+
+async function handleSubscriptionCancelled(
+  env: Env,
+  data: Record<string, unknown>
+) {
+  const subId = String(data.id ?? "");
+
+  if (!subId) {
+    console.warn("subscription.cancelled: missing subscription id");
+    return;
+  }
+
+  try {
+    await env.DB.prepare(
+      `UPDATE subscriptions SET status = 'cancelled' WHERE provider_subscription_id = ?`
+    ).bind(subId).run();
+    console.log(`subscription.cancelled: updated sub ${subId} to cancelled`);
+  } catch (err) {
+    console.error("subscription.cancelled handler error:", err);
   }
 }

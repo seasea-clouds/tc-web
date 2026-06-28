@@ -40,23 +40,21 @@ export async function onRequest(context: {
     const { locale } = await context.request.json();
     const loc = locale ?? "en";
 
-    // ── Build Creem subscription session ─────────────────────────
+    // ── Build Creem subscription checkout session ─────────────────
+    // Use the same checkout endpoint format as the existing single-report checkout.
+    // Creem creates both one-time and subscription checkout sessions via /v1/checkouts.
     const body = {
-      price_id: context.env.CREEM_PRODUCT_ID_SUBSCRIBE,
-      customer: {
-        email: user.email,
-        name: user.name,
-      },
+      product_id: context.env.CREEM_PRODUCT_ID_SUBSCRIBE,
+      success_url: `https://sinotradecompliance.com/${loc}/c/me/subscription/`,
+      cancel_url: `https://sinotradecompliance.com/${loc}/c/pricing/`,
       metadata: {
         user_id: user.userId,
         email: user.email,
         locale: loc,
       },
-      success_url: `https://sinotradecompliance.com/${loc}/c/me/subscription/`,
-      cancel_url: `https://sinotradecompliance.com/${loc}/c/pricing/`,
     };
 
-    const res = await fetch("https://api.creem.io/v1/subscriptions", {
+    const res = await fetch("https://test-api.creem.io/v1/checkouts", {
       method: "POST",
       headers: {
         "x-api-key": context.env.CREEM_API_KEY,

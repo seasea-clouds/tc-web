@@ -173,7 +173,7 @@ const IGNORE_FALLBACK_KEYS = new Set([
   'Check.energy_efficiency_srrc_wireless_rohs_as_applicable',
   'Check.integrated_logistics_cainiao', 'Check.kimchi_has_specific_ciq_inspection_procedures',
   'Check.mofcom_gacc_joint_list',
-  'Check.no_fta_post_brexit_mfn_rates_negotiations_ongoing', 'Check.paid_pending',
+  'Check.no_fta_post_brexit_mfn_rates_negotiations_ongoing',
   'Check.plaform_audits_product_listings',
   'Check.post_brexit_certification_adjustments', 'Check.post_brexit_trade_framework_still_developing',
   'Check.rcep_member_gradual_tariff_reductions_on_agricultu',
@@ -231,6 +231,22 @@ const IGNORE_FALLBACK_KEYS = new Set([
   'Check.tmDimension_squatterRisk',
   // Check category labels — product categories with HS codes
   'Check.cccCat_electronics_label', 'Check.nmpaCat_makeup_label',
+  // Report: UI labels (pending translation assignment)
+  'Report.paid', 'Report.pending', 'Report.prevPage', 'Report.nextPage',
+  // ReportSection: audit checklist items (pending translation)
+  'ReportSection.cccAuditItem_productProcess',
+  'ReportSection.cccAuditItem_incomingQC',
+  'ReportSection.cccAuditItem_testingCalibration',
+  'ReportSection.cccAuditItem_nonConforming',
+  'ReportSection.cccAuditItem_capa',
+  'ReportSection.cccAuditItem_staffTraining',
+  'ReportSection.cccAuditItem_rawMaterialAudit',
+  'ReportSection.cccAuditItem_finishedInspection',
+  'ReportSection.cccAuditItem_traceability',
+  'ReportSection.cccAuditItem_enviroSafety',
+  'ReportSection.ordinaryLabel', 'ReportSection.specialLabel',
+  // French exemption: translation identical to English
+  'Check.nmpaRiskNote_tests',
 ]);
 
 // ============================================================

@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", FTA ප්‍රතිලාභ තිබේ",
     "gaccRiskNote_pathwayCountry": "{originCountry}: {difficulty} අනුකූලතා මාර්ගය",
     "gaccRiskNote_pathwayShort": "{originCountry} — {difficulty} අනුකූලතා මාර්ගය",
-    "gaccRiskNote_testsCost": "{count} පරීක්ෂණ අවශ්‍යයි Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "{count} පරීක්ෂණ අවශ්‍යයි පිරිවැය පරාසය: {costRange}",
     "labelCat_alcohol_label": "මධ්යසාර පාන වර්ග",
     "labelCat_beverage_label": "බීම / යුෂ",
     "labelCat_confectionery_label": "රසකැවිලි / කෙටි ආහාර",

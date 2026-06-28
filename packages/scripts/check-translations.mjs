@@ -374,6 +374,7 @@ const SHARED_WORDS_BY_LANG = {
   hu: new Set(['Blog', 'Aflatoxin M1']),
   sq: new Set(['Blog', 'Melamine', 'Histamine']),
   vi: new Set(['Blog', 'Melamine', 'Aflatoxin M1']),
+  sr: new Set(['Opseg', 'tro', 'kova']),
 };
 // Blog is universal
 for (const lang of ['af','az','ca','cs','el','fi','hr','hu','id','ka','ms','pl','ro','si','sk','sl','sq','sw','tr','vi']) {

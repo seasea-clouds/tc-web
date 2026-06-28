@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", доступні переваги FTA",
     "gaccRiskNote_pathwayCountry": "{originCountry}: {difficulty} шлях відповідності",
     "gaccRiskNote_pathwayShort": "{originCountry} — {difficulty} шлях відповідності",
-    "gaccRiskNote_testsCost": "Потрібно {count} тестів. Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "Потрібно {count} тестів. Діапазон вартості: {costRange}",
     "labelCat_alcohol_label": "Алкогольні напої",
     "labelCat_beverage_label": "Напої / Соки",
     "labelCat_confectionery_label": "Кондитерські вироби / Закуски",

@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", FTA लाभहरू उपलब्ध छन्",
     "gaccRiskNote_pathwayCountry": "{originCountry}: {difficulty} अनुपालन मार्ग",
     "gaccRiskNote_pathwayShort": "{originCountry} — {difficulty} अनुपालन मार्ग",
-    "gaccRiskNote_testsCost": "{count} परीक्षण आवश्यक छ। Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "{count} परीक्षण आवश्यक छ। लागत दायरा: {costRange}",
     "labelCat_alcohol_label": "मादक पेय पदार्थ",
     "labelCat_beverage_label": "पेय पदार्थ / रस",
     "labelCat_confectionery_label": "कन्फेक्शनरी / स्न्याक्स",

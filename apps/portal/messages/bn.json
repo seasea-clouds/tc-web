@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", FTA সুবিধা উপলব্ধ",
     "gaccRiskNote_pathwayCountry": "{originCountry}: {difficulty} মেনে চলার পথ",
     "gaccRiskNote_pathwayShort": "{originCountry} — {difficulty} মেনে চলার পথ",
-    "gaccRiskNote_testsCost": "{count} পরীক্ষা প্রয়োজন। Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "{count} পরীক্ষা প্রয়োজন। খরচের পরিসর: {costRange}",
     "labelCat_alcohol_label": "অ্যালকোহলযুক্ত পানীয়",
     "labelCat_beverage_label": "পানীয় / জুস",
     "labelCat_confectionery_label": "মিষ্টান্ন / স্ন্যাকস",

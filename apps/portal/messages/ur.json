@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": "، ایف ٹی اے کے فوائد دستیاب ہیں۔",
     "gaccRiskNote_pathwayCountry": "{originCountry}: {difficulty} تعمیل کا راستہ",
     "gaccRiskNote_pathwayShort": "{originCountry} — {difficulty} تعمیل کا راستہ",
-    "gaccRiskNote_testsCost": "{count} ٹیسٹ درکار ہیں۔ Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "{count} ٹیسٹ درکار ہیں۔ لاگت کی حد: {costRange}",
     "labelCat_alcohol_label": "الکحل مشروبات",
     "labelCat_beverage_label": "مشروبات / جوس",
     "labelCat_confectionery_label": "کنفیکشنری / اسنیکس",

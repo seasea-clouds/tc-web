@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": "، مزایای FTA در دسترس است",
     "gaccRiskNote_pathwayCountry": "{originCountry}: مسیر انطباق {difficulty}",
     "gaccRiskNote_pathwayShort": "{originCountry} — مسیر انطباق {difficulty}",
-    "gaccRiskNote_testsCost": "{count} تست لازم است Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "{count} تست لازم است محدوده هزینه: {costRange}",
     "labelCat_alcohol_label": "نوشیدنی های الکلی",
     "labelCat_beverage_label": "نوشیدنی ها / آب میوه ها",
     "labelCat_confectionery_label": "قنادی / تنقلات",

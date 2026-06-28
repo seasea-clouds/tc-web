@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", FTA სარგებელი ხელმისაწვდომია",
     "gaccRiskNote_pathwayCountry": "{originCountry}: {difficulty} შესაბამისობის გზა",
     "gaccRiskNote_pathwayShort": "{originCountry} — {difficulty} შესაბამისობის გზა",
-    "gaccRiskNote_testsCost": "საჭიროა {count} ტესტი Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "საჭიროა {count} ტესტი ხარჯების დიაპაზონი: {costRange}",
     "labelCat_alcohol_label": "ალკოჰოლური სასმელები",
     "labelCat_beverage_label": "სასმელები / წვენები",
     "labelCat_confectionery_label": "საკონდიტრო ნაწარმი/საჭმელები",

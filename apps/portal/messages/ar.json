@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": "، فوائد اتفاقية التجارة الحرة المتاحة",
     "gaccRiskNote_pathwayCountry": "{originCountry}: مسار الامتثال {difficulty}.",
     "gaccRiskNote_pathwayShort": "{originCountry} — مسار الامتثال {difficulty}.",
-    "gaccRiskNote_testsCost": "{count} الاختبارات المطلوبة Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "{count} الاختبارات المطلوبة نطاق التكلفة: {costRange}",
     "labelCat_alcohol_label": "المشروبات الكحولية",
     "labelCat_beverage_label": "المشروبات / العصائر",
     "labelCat_confectionery_label": "الحلويات / الوجبات الخفيفة",

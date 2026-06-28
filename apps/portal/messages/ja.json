@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": "、FTA特典が利用可能",
     "gaccRiskNote_pathwayCountry": "{originCountry}: {difficulty} コンプライアンス経路",
     "gaccRiskNote_pathwayShort": "{originCountry} — {difficulty} コンプライアンス経路",
-    "gaccRiskNote_testsCost": "{count} 個のテストが必要です。 Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "{count} 個のテストが必要です。 費用範囲: {costRange}",
     "labelCat_alcohol_label": "アルコール飲料",
     "labelCat_beverage_label": "飲料・ジュース",
     "labelCat_confectionery_label": "菓子・スナック",

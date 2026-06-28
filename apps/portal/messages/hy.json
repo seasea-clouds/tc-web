@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", FTA-ի առավելությունները հասանելի են",
     "gaccRiskNote_pathwayCountry": "{originCountry}. {difficulty} համապատասխանության ուղի",
     "gaccRiskNote_pathwayShort": "{originCountry} — {difficulty} համապատասխանության ուղի",
-    "gaccRiskNote_testsCost": "Պահանջվում է {count} թեստ: Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "Պահանջվում է {count} թեստ: Ծախսերի միջակայք: {costRange}",
     "labelCat_alcohol_label": "Ալկոհոլային խմիչքներ",
     "labelCat_beverage_label": "Խմիչքներ / Հյութեր",
     "labelCat_confectionery_label": "Հրուշակեղեն / խորտիկներ",

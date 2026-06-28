@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ",มีสิทธิประโยชน์ FTA",
     "gaccRiskNote_pathwayCountry": "{originCountry}: {difficulty} เส้นทางการปฏิบัติตามข้อกำหนด",
     "gaccRiskNote_pathwayShort": "{originCountry} — {difficulty} เส้นทางการปฏิบัติตามข้อกำหนด",
-    "gaccRiskNote_testsCost": "ต้องมีการทดสอบ {count} รายการ Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "ต้องมีการทดสอบ {count} รายการ ช่วงต้นทุน: {costRange}",
     "labelCat_alcohol_label": "เครื่องดื่มแอลกอฮอล์",
     "labelCat_beverage_label": "เครื่องดื่ม/น้ำผลไม้",
     "labelCat_confectionery_label": "ขนมหวาน/ของว่าง",

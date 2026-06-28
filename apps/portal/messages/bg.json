@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", налични ползи от FTA",
     "gaccRiskNote_pathwayCountry": "{originCountry}: {difficulty} път за съответствие",
     "gaccRiskNote_pathwayShort": "{originCountry} — {difficulty} път за съответствие",
-    "gaccRiskNote_testsCost": "Необходими са {count} теста Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "Необходими са {count} теста Диапазон на разходите: {costRange}",
     "labelCat_alcohol_label": "Алкохолни напитки",
     "labelCat_beverage_label": "Напитки / сокове",
     "labelCat_confectionery_label": "Сладкарски изделия / Закуски",

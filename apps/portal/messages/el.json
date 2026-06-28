@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", διαθέσιμα οφέλη ΣΕΣ",
     "gaccRiskNote_pathwayCountry": "{originCountry}: διαδρομή συμμόρφωσης {difficulty}",
     "gaccRiskNote_pathwayShort": "{originCountry} — διαδρομή συμμόρφωσης {difficulty}",
-    "gaccRiskNote_testsCost": "Απαιτούνται {count} εξετάσεις Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "Απαιτούνται {count} εξετάσεις Εύρος κόστους: {costRange}",
     "labelCat_alcohol_label": "Αλκοολούχα Ποτά",
     "labelCat_beverage_label": "Ποτά / Χυμοί",
     "labelCat_confectionery_label": "Ζαχαροπλαστεία / Σνακ",

@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", FTA 优惠可得",
     "gaccRiskNote_pathwayCountry": "{originCountry}：{difficulty} 合规途径",
     "gaccRiskNote_pathwayShort": "{originCountry} — {difficulty} 合规途径",
-    "gaccRiskNote_testsCost": "需要 {count} 次测试。 Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "需要 {count} 次测试。 费用范围: {costRange}",
     "labelCat_alcohol_label": "酒精饮料",
     "labelCat_beverage_label": "饮料/果汁",
     "labelCat_confectionery_label": "糖果/零食",

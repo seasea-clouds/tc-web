@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", доступне погодности ФТА",
     "gaccRiskNote_pathwayCountry": "{originCountry}: {difficulty} пут усклађености",
     "gaccRiskNote_pathwayShort": "{originCountry} — {difficulty} пут усклађености",
-    "gaccRiskNote_testsCost": "Потребно је {count} тестова. Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "Потребно је {count} тестова. Opseg troškova: {costRange}",
     "labelCat_alcohol_label": "Алцохолиц Беверагес",
     "labelCat_beverage_label": "Пића / сокови",
     "labelCat_confectionery_label": "Кондиторски производи / Грицкалице",

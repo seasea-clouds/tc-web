@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", एफटीए लाभ उपलब्ध हैं",
     "gaccRiskNote_pathwayCountry": "{originCountry}: {difficulty} अनुपालन मार्ग",
     "gaccRiskNote_pathwayShort": "{originCountry} — {difficulty} अनुपालन मार्ग",
-    "gaccRiskNote_testsCost": "{count} परीक्षण आवश्यक हैं। Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "{count} परीक्षण आवश्यक हैं। लागत सीमा: {costRange}",
     "labelCat_alcohol_label": "मादक पेय पदार्थ",
     "labelCat_beverage_label": "पेय पदार्थ/जूस",
     "labelCat_confectionery_label": "हलवाई की दुकान/नाश्ता",

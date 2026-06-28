@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", FTA நன்மைகள் கிடைக்கும்",
     "gaccRiskNote_pathwayCountry": "{originCountry}: {difficulty} இணக்கப் பாதை",
     "gaccRiskNote_pathwayShort": "{originCountry} — {difficulty} இணக்கப் பாதை",
-    "gaccRiskNote_testsCost": "{count} சோதனைகள் தேவை. Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "{count} சோதனைகள் தேவை. செலவு வரம்பு: {costRange}",
     "labelCat_alcohol_label": "மது பானங்கள்",
     "labelCat_beverage_label": "பானங்கள் / பழச்சாறுகள்",
     "labelCat_confectionery_label": "மிட்டாய் / சிற்றுண்டி",

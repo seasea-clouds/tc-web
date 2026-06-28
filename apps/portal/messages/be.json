@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", даступныя перавагі FTA",
     "gaccRiskNote_pathwayCountry": "{originCountry}: шлях адпаведнасці патрабаванням {difficulty}",
     "gaccRiskNote_pathwayShort": "{originCountry} — шлях адпаведнасці патрабаванням {difficulty}",
-    "gaccRiskNote_testsCost": "Патрабуецца {count} тэстаў Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "Патрабуецца {count} тэстаў Дыяпазон выдаткаў: {costRange}",
     "labelCat_alcohol_label": "Алкагольныя напоі",
     "labelCat_beverage_label": "Напоі / сокі",
     "labelCat_confectionery_label": "Кандытарскія вырабы / Закускі",

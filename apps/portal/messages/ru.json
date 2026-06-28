@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", доступны льготы по ЗСТ",
     "gaccRiskNote_pathwayCountry": "{originCountry}: путь соблюдения требований {difficulty}",
     "gaccRiskNote_pathwayShort": "{originCountry} — путь соблюдения требований {difficulty}",
-    "gaccRiskNote_testsCost": "Требуется тестов: {count} Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "Требуется тестов: {count} Диапазон стоимости: {costRange}",
     "labelCat_alcohol_label": "Алкогольные напитки",
     "labelCat_beverage_label": "Напитки/Соки",
     "labelCat_confectionery_label": "Кондитерские изделия / Снеки",

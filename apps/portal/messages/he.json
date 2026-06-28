@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", הטבות FTA זמינות",
     "gaccRiskNote_pathwayCountry": "{originCountry}: מסלול תאימות {difficulty}",
     "gaccRiskNote_pathwayShort": "{originCountry} — מסלול תאימות של {difficulty}",
-    "gaccRiskNote_testsCost": "נדרשות {count} בדיקות Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "נדרשות {count} בדיקות טווח עלות: {costRange}",
     "labelCat_alcohol_label": "משקאות אלכוהוליים",
     "labelCat_beverage_label": "משקאות / מיצים",
     "labelCat_confectionery_label": "ממתקים / חטיפים",

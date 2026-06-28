@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", dostępne korzyści w ramach umowy o wolnym handlu",
     "gaccRiskNote_pathwayCountry": "{originCountry}: ścieżka zgodności o {difficulty}",
     "gaccRiskNote_pathwayShort": "{originCountry} — ścieżka zgodności o {difficulty}",
-    "gaccRiskNote_testsCost": "Wymagane testy: {count} Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "Wymagane testy: {count} Zakres kosztów: {costRange}",
     "labelCat_alcohol_label": "Napoje Alkoholowe",
     "labelCat_beverage_label": "Napoje / Soki",
     "labelCat_confectionery_label": "Słodycze / Przekąski",

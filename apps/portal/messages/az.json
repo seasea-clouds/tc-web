@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", FTA faydaları mövcuddur",
     "gaccRiskNote_pathwayCountry": "{originCountry}: {difficulty} uyğunluq yolu",
     "gaccRiskNote_pathwayShort": "{originCountry} — {difficulty} uyğunluq yolu",
-    "gaccRiskNote_testsCost": "{count} test tələb olunur Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "{count} test tələb olunur Xərc aralığı: {costRange}",
     "labelCat_alcohol_label": "Spirtli İçkilər",
     "labelCat_beverage_label": "İçkilər / Şirələr",
     "labelCat_confectionery_label": "Şirniyyat / Qəlyanaltılar",

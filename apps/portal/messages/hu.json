@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", A szabadkereskedelmi megállapodás előnyei elérhetők",
     "gaccRiskNote_pathwayCountry": "{originCountry}: {difficulty} megfelelőségi útvonal",
     "gaccRiskNote_pathwayShort": "{originCountry} – {difficulty} megfelelőségi útvonal",
-    "gaccRiskNote_testsCost": "{count} teszt szükséges Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "{count} teszt szükséges Költségtartomány: {costRange}",
     "labelCat_alcohol_label": "Alkoholos italok",
     "labelCat_beverage_label": "Italok / Gyümölcslevek",
     "labelCat_confectionery_label": "Cukrászda / Snackek",

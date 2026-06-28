@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", FTA avantajları mevcut",
     "gaccRiskNote_pathwayCountry": "{originCountry}: {difficulty} uyumluluk yolu",
     "gaccRiskNote_pathwayShort": "{originCountry} — {difficulty} uyumluluk yolu",
-    "gaccRiskNote_testsCost": "{count} test gerekli. Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "{count} test gerekli. Maliyet aralığı: {costRange}",
     "labelCat_alcohol_label": "Alkollü İçecekler",
     "labelCat_beverage_label": "İçecekler / Meyve Suları",
     "labelCat_confectionery_label": "Şekerleme / Atıştırmalıklar",

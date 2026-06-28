@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", Lợi ích FTA có sẵn",
     "gaccRiskNote_pathwayCountry": "{originCountry}: lộ trình tuân thủ {difficulty}",
     "gaccRiskNote_pathwayShort": "{originCountry} — lộ trình tuân thủ {difficulty}",
-    "gaccRiskNote_testsCost": "{count} bài kiểm tra được yêu cầu. Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "{count} bài kiểm tra được yêu cầu. Phạm vi chi phí: {costRange}",
     "labelCat_alcohol_label": "Đồ uống có cồn",
     "labelCat_beverage_label": "Đồ uống / Nước ép",
     "labelCat_confectionery_label": "Bánh Kẹo / Đồ Ăn Nhẹ",

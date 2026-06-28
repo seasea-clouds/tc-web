@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", FTA-voordele beskikbaar",
     "gaccRiskNote_pathwayCountry": "{originCountry}: {difficulty} nakomingspad",
     "gaccRiskNote_pathwayShort": "{originCountry} — {difficulty} nakomingspad",
-    "gaccRiskNote_testsCost": "{count} toetse word vereis Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "{count} toetse word vereis Koste reeks: {costRange}",
     "labelCat_alcohol_label": "Alkoholiese drankies",
     "labelCat_beverage_label": "Drank / Sappe",
     "labelCat_confectionery_label": "Soetgoed / Snacks",

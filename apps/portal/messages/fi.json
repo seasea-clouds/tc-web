@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", Vapaakauppasopimuksen edut saatavilla",
     "gaccRiskNote_pathwayCountry": "{originCountry}: {difficulty} vaatimustenmukaisuuspolku",
     "gaccRiskNote_pathwayShort": "{originCountry} – {difficulty} vaatimustenmukaisuuspolku",
-    "gaccRiskNote_testsCost": "{count} testiä vaaditaan Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "{count} testiä vaaditaan Kustannusalue: {costRange}",
     "labelCat_alcohol_label": "Alkoholijuomat",
     "labelCat_beverage_label": "Juomat / mehut",
     "labelCat_confectionery_label": "Makeiset / välipalat",

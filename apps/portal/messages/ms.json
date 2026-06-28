@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", faedah FTA tersedia",
     "gaccRiskNote_pathwayCountry": "{originCountry}: laluan pematuhan {difficulty}.",
     "gaccRiskNote_pathwayShort": "{originCountry} — laluan pematuhan {difficulty}.",
-    "gaccRiskNote_testsCost": "{count} ujian diperlukan Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "{count} ujian diperlukan Julat kos: {costRange}",
     "labelCat_alcohol_label": "Minuman Beralkohol",
     "labelCat_beverage_label": "Minuman / Jus",
     "labelCat_confectionery_label": "Kuih-muih / Snek",

@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", përfitimet e MTL-së në dispozicion",
     "gaccRiskNote_pathwayCountry": "{originCountry}: {difficulty} shteg përputhshmërie",
     "gaccRiskNote_pathwayShort": "{originCountry} — {difficulty} rruga e pajtueshmërisë",
-    "gaccRiskNote_testsCost": "Kërkohen {count} teste. Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "Kërkohen {count} teste. Gama e kostos: {costRange}",
     "labelCat_alcohol_label": "Pijet Alkoolike",
     "labelCat_beverage_label": "Pije / Lëngje",
     "labelCat_confectionery_label": "Ëmbëlsira / Snacks",

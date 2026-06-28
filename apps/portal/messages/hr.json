@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", dostupne pogodnosti FTA",
     "gaccRiskNote_pathwayCountry": "{originCountry}: {difficulty} put usklađenosti",
     "gaccRiskNote_pathwayShort": "{originCountry} — {difficulty} put usklađenosti",
-    "gaccRiskNote_testsCost": "{count} potrebnih testova Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "{count} potrebnih testova Raspon troškova: {costRange}",
     "labelCat_alcohol_label": "Alkoholna pića",
     "labelCat_beverage_label": "Pića / Sokovi",
     "labelCat_confectionery_label": "Slastice / Grickalice",

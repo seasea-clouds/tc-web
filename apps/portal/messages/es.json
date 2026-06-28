@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", Beneficios del TLC disponibles",
     "gaccRiskNote_pathwayCountry": "{originCountry}: {difficulty} vía de cumplimiento",
     "gaccRiskNote_pathwayShort": "{originCountry} — vía de cumplimiento de {difficulty}",
-    "gaccRiskNote_testsCost": "{count} pruebas requeridas Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "{count} pruebas requeridas Rango de costos: {costRange}",
     "labelCat_alcohol_label": "Bebidas Alcohólicas",
     "labelCat_beverage_label": "Bebidas / Jugos",
     "labelCat_confectionery_label": "Confitería / Snacks",

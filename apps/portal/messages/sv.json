@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", FTA-förmåner tillgängliga",
     "gaccRiskNote_pathwayCountry": "{originCountry}: {difficulty} efterlevnadsväg",
     "gaccRiskNote_pathwayShort": "{originCountry} — {difficulty} efterlevnadsväg",
-    "gaccRiskNote_testsCost": "{count} tester krävs. Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "{count} tester krävs. Kostnadsintervall: {costRange}",
     "labelCat_alcohol_label": "Alkoholhaltiga drycker",
     "labelCat_beverage_label": "Drycker/juicer",
     "labelCat_confectionery_label": "Konfektyr / Snacks",

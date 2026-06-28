@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", faida za FTA zinapatikana",
     "gaccRiskNote_pathwayCountry": "{originCountry}: {difficulty} njia ya kufuata",
     "gaccRiskNote_pathwayShort": "{originCountry} — {difficulty} njia ya kufuata",
-    "gaccRiskNote_testsCost": "majaribio {count} inahitajika. Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "majaribio {count} inahitajika. Aina ya gharama: {costRange}",
     "labelCat_alcohol_label": "Vinywaji vya Pombe",
     "labelCat_beverage_label": "Vinywaji / Juisi",
     "labelCat_confectionery_label": "Confectionery / Vitafunio",

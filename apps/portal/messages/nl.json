@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", FTA-voordelen beschikbaar",
     "gaccRiskNote_pathwayCountry": "{originCountry}: nalevingstraject met {difficulty}",
     "gaccRiskNote_pathwayShort": "{originCountry} — {difficulty} nalevingstraject",
-    "gaccRiskNote_testsCost": "{count} tests vereist Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "{count} tests vereist Kostenbereik: {costRange}",
     "labelCat_alcohol_label": "Alcoholische dranken",
     "labelCat_beverage_label": "Dranken / Sappen",
     "labelCat_confectionery_label": "Zoetwaren / Snacks",

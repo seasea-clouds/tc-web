@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", FTA-fordeler tilgjengelig",
     "gaccRiskNote_pathwayCountry": "{originCountry}: {difficulty} overholdelsesvei",
     "gaccRiskNote_pathwayShort": "{originCountry} — {difficulty} overholdelsesvei",
-    "gaccRiskNote_testsCost": "{count} tester kreves Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "{count} tester kreves Kostnadsområde: {costRange}",
     "labelCat_alcohol_label": "Alkoholholdige drikker",
     "labelCat_beverage_label": "Drikkevarer / juice",
     "labelCat_confectionery_label": "Godteri / Snacks",

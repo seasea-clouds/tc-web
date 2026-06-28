@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", dostupné výhody FTA",
     "gaccRiskNote_pathwayCountry": "{originCountry}: {difficulty} cesta dodržiavania pravidiel",
     "gaccRiskNote_pathwayShort": "{originCountry} – {difficulty} cesta dodržiavania pravidiel",
-    "gaccRiskNote_testsCost": "Vyžaduje sa {count} testov. Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "Vyžaduje sa {count} testov. Rozsah nákladov: {costRange}",
     "labelCat_alcohol_label": "Alkoholické nápoje",
     "labelCat_beverage_label": "Nápoje / Šťavy",
     "labelCat_confectionery_label": "Cukrovinky / Občerstvenie",

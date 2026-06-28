@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", beneficii FTA disponibile",
     "gaccRiskNote_pathwayCountry": "{originCountry}: calea de conformitate cu {difficulty}",
     "gaccRiskNote_pathwayShort": "{originCountry} — calea de conformitate cu {difficulty}",
-    "gaccRiskNote_testsCost": "Sunt necesare {count} teste Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "Sunt necesare {count} teste Gama de costuri: {costRange}",
     "labelCat_alcohol_label": "Băuturi alcoolice",
     "labelCat_beverage_label": "Băuturi / Sucuri",
     "labelCat_confectionery_label": "Cofetărie / Gustări",

@@ -1768,7 +1768,7 @@
     "gaccRiskNote_ftaBenefits": ", FTA-Vorteile verfügbar",
     "gaccRiskNote_pathwayCountry": "{originCountry}: Compliance-Pfad {difficulty}",
     "gaccRiskNote_pathwayShort": "{originCountry} – {difficulty} Compliance-Pfad",
-    "gaccRiskNote_testsCost": "{count} Tests erforderlich Cost range: {costRange}",
+    "gaccRiskNote_testsCost": "{count} Tests erforderlich Kostenspanne: {costRange}",
     "labelCat_alcohol_label": "Alkoholische Getränke",
     "labelCat_beverage_label": "Getränke / Säfte",
     "labelCat_confectionery_label": "Süßwaren / Snacks",

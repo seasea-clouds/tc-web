@@ -75,8 +75,36 @@ export class CreemProvider implements PaymentProvider {
     return { url: data.checkout_url, sessionId: data.id };
   }
 
-  verifyWebhook(payload: unknown, signature: string): PaymentEvent {
-    // TODO: Verify Creem webhook signature
+  async verifyWebhook(payload: unknown, signature: string): Promise<PaymentEvent> {
+    // Verify HMAC-SHA256 signature using the configured webhook secret
+    if (!this.config.webhookSecret) {
+      throw new Error("Creem webhook secret not configured");
+    }
+
+    const encoder = new TextEncoder();
+    const key = await crypto.subtle.importKey(
+      "raw",
+      encoder.encode(this.config.webhookSecret),
+      { name: "HMAC", hash: "SHA-256" },
+      false,
+      ["verify"]
+    );
+
+    // Decode hex signature
+    const sigBytes = new Uint8Array(signature.length / 2);
+    for (let i = 0; i < signature.length; i += 2) {
+      sigBytes[i / 2] = parseInt(signature.substring(i, i + 2), 16);
+    }
+
+    // Re-serialize payload to JSON for verification
+    // Note: assumes the original request body was minified JSON
+    const bodyBytes = encoder.encode(JSON.stringify(payload));
+
+    const isValid = await crypto.subtle.verify("HMAC", key, sigBytes, bodyBytes);
+    if (!isValid) {
+      throw new Error("Invalid Creem webhook signature");
+    }
+
     const event = payload as Record<string, unknown>;
     return {
       type: event.type as PaymentEvent["type"],

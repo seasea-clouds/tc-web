@@ -27,7 +27,7 @@ export interface PaymentProvider {
   }): Promise<PaymentSession>;
 
   /** 验证 Webhook 回调 */
-  verifyWebhook(payload: unknown, signature: string): PaymentEvent;
+  verifyWebhook(payload: unknown, signature: string): Promise<PaymentEvent>;
 
   /** 创建订阅 */
   createSubscription(params: {

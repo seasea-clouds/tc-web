@@ -74,7 +74,7 @@ function ReportsContent() {
                 <span className={`text-xs px-2 py-1 rounded-full ${
                   r.payment_status === 'paid' ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-500'
                 }`}>
-                  {r.payment_status}
+                  {t(r.payment_status)}
                 </span>
               </div>
             </button>
@@ -87,7 +87,7 @@ function ReportsContent() {
                 disabled={page === 0}
                 className={`px-3 py-1.5 text-sm rounded-md transition-all ${page === 0 ? 'text-gray-300 cursor-not-allowed' : 'text-primary-navy hover:bg-gray-100'}`}
               >
-                ← Prev
+                                ← {t('prev')}
               </button>
               <div className="flex gap-1">
                 {Array.from({ length: Math.min(totalPages, 10) }, (_, i) => (
@@ -105,7 +105,7 @@ function ReportsContent() {
                 disabled={page >= totalPages - 1}
                 className={`px-3 py-1.5 text-sm rounded-md transition-all ${page >= totalPages - 1 ? 'text-gray-300 cursor-not-allowed' : 'text-primary-navy hover:bg-gray-100'}`}
               >
-                Next →
+                                {t('next')} →
               </button>
             </div>
           )}
@@ -126,7 +126,7 @@ function ReportsContent() {
             <span className={`inline-block text-xs px-2 py-1 rounded-full ${
               selectedReport.payment_status === 'paid' ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-500'
             }`}>
-              {selectedReport.payment_status}
+              {t(selectedReport.payment_status)}
             </span>
           </div>
         </div>

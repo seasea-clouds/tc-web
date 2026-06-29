@@ -1151,6 +1151,12 @@ export function checkGacc(input: GaccInput, locale?: string): GaccResult {
   const tRiskReason = t(`gaccCat_${input.category}_riskReason`);
 
   const country = COUNTRY_DB[input.originCountry] || COUNTRY_DB.DEFAULT;
+  const diffLabelMap: Record<string, string> = {
+    'easy': t('gaccDifficultyEasy'),
+    'moderate': t('gaccDifficultyModerate'),
+    'difficult': t('gaccDifficultyDifficult'),
+  };
+  const diffLabel = diffLabelMap[country.gaccDifficulty] || country.gaccDifficulty;
   const isHighRisk = cat.isHighRisk;
   
   // Risk scoring
@@ -1165,7 +1171,7 @@ export function checkGacc(input: GaccInput, locale?: string): GaccResult {
       dimension: t("gaccRiskDim_originCountryComplexity"),
       score: country.gaccDifficulty === 'difficult' ? 7 : country.gaccDifficulty === 'moderate' ? 5 : 3,
       color: country.gaccDifficulty === 'difficult' ? "🔴" : country.gaccDifficulty === 'moderate' ? "🟡" : "🟢",
-      note: t('gaccRiskNote_pathwayCountry').replace('{originCountry}', input.originCountry || '').replace('{difficulty}', country.gaccDifficulty) + (country.ftaWithChina ? t('gaccRiskNote_ftaBenefits') : '')
+      note: t('gaccRiskNote_pathwayCountry').replace('{originCountry}', input.originCountry || '').replace('{difficulty}', diffLabel) + (country.ftaWithChina ? t('gaccRiskNote_ftaBenefits') : '')
     },
     {
       dimension: t("gaccRiskDim_documentationComplexity"),
@@ -1213,7 +1219,7 @@ export function checkGacc(input: GaccInput, locale?: string): GaccResult {
   // Risk matrix
   const riskMatrix = [
     { dimension: t("gaccRiskDim_productCategoryRisk"), rating: isHighRisk ? "🔴" as const : "🟢" as const, explanation: cat.riskReason },
-    { dimension: t("gaccRiskDim_originCountry"), rating: country.gaccDifficulty === 'difficult' ? "🔴" as const : country.gaccDifficulty === 'moderate' ? "🟡" as const : "🟢" as const, explanation: t('gaccRiskNote_pathwayShort').replace('{originCountry}', input.originCountry || '').replace('{difficulty}', country.gaccDifficulty) },
+    { dimension: t("gaccRiskDim_originCountry"), rating: country.gaccDifficulty === 'difficult' ? "🔴" as const : country.gaccDifficulty === 'moderate' ? "🟡" as const : "🟢" as const, explanation: t('gaccRiskNote_pathwayShort').replace('{originCountry}', input.originCountry || '').replace('{difficulty}', diffLabel) },
     { dimension: t("gaccRiskDim_ingredients"), rating: isHighRisk ? "🟡" as const : "🟢" as const, explanation: isHighRisk ? t("gaccRiskMatrix_complexIngredient") : t("gaccRiskMatrix_standardIngredient") },
     { dimension: t("gaccRiskDim_processing"), rating: (cat.isHighRisk && (input.category === 'meat' || input.category === 'dairy' || input.category === 'seafood')) ? "🔴" as const : "🟢" as const, explanation: (cat.isHighRisk && (input.category === 'meat' || input.category === 'dairy' || input.category === 'seafood')) ? t("gaccRiskMatrix_rawProcessing") : t("gaccRiskMatrix_processed") },
     { dimension: t("gaccRiskDim_complianceHistory"), rating: "🟢" as const, explanation: t("gaccRiskMatrix_firstTime") },

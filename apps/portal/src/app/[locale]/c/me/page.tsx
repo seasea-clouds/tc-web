@@ -1,12 +1,14 @@
 'use client';
 
-import { useAuth } from '@trade/ui';
+import { useAuth, useT } from '@trade/ui';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
 export default function MePage() {
   const { user, isLoading, logout } = useAuth();
   const t = useTranslations('Dashboard');
+  const tReport = useT('Report');
+  const tAuth = useT('Auth');
 
   if (isLoading) {
     return (
@@ -22,9 +24,9 @@ export default function MePage() {
     return (
       <div className="bg-bg-ice py-16">
         <div className="max-w-md mx-auto px-4 text-center">
-          <h1 className="text-xl font-bold text-primary-navy mb-4">{t('pleaseLogIn')}</h1>
+          <h1 className="text-xl font-bold text-primary-navy mb-4">{tReport('pleaseLogIn')}</h1>
           <Link href="./login" className="inline-block bg-gold hover:bg-gold/90 text-primary-navy font-semibold px-6 py-2.5 rounded-md transition-all">
-            Log In
+            {tReport('logIn')}
           </Link>
         </div>
       </div>
@@ -34,7 +36,7 @@ export default function MePage() {
   return (
     <div className="bg-bg-ice py-12">
       <div className="max-w-4xl mx-auto px-4">
-        <h1 className="text-2xl font-bold text-primary-navy mb-8">{t('myAccount')}</h1>
+        <h1 className="text-2xl font-bold text-primary-navy mb-8">{tReport('myAccount')}</h1>
 
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">
           <div className="flex items-center gap-4">
@@ -68,7 +70,7 @@ export default function MePage() {
 
         <div className="mt-8">
           <button onClick={logout} className="text-sm text-red-500 hover:text-red-700 transition-colors">
-            {t('signOut')}
+            {tAuth('signOut')}
           </button>
         </div>
       </div>

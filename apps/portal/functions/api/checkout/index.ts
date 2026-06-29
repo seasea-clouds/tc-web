@@ -57,7 +57,8 @@ export async function onRequest(context: {
     if (!res.ok) {
       const err = await res.text();
       console.error("Creem checkout failed:", err);
-      return Response.json({ error: "Checkout creation failed", debug: err, keyPrefix: (context.env.CREEM_API_KEY || '').substring(0, 10) }, { status: 502 });
+      const key = context.env.CREEM_API_KEY || '';
+      return Response.json({ error: "Checkout creation failed", debug: err, keyLen: key.length, keyStart: key.substring(0, 2) }, { status: 502 });
     }
 
     const data = await res.json();

@@ -81,7 +81,11 @@
     "viewReportsDesc": "View your compliance reports",
     "manageSubscriptionDesc": "Manage your subscription",
     "youAreOnFreePlan": "You are currently on the Free plan.",
-    "viewPricing": "View Pricing"
+    "viewPricing": "View Pricing",
+    "paid": "paid",
+    "pending": "pending",
+    "prev": "← Prev",
+    "next": "Next →"
   },
   "Pricing": {
     "title": "Simple Pricing",
@@ -1825,7 +1829,10 @@
     "gaccCat_health_food_labTest_5": "Disintegration/dissolution",
     "gaccCat_health_food_reject_1_problem": "Novel ingredient not in China food catalogue",
     "gaccCat_health_food_reject_1_cause": "Ingredient not approved for use in China",
-    "gaccCat_health_food_reject_1_solution": "Novel food ingredient application (can take 1-2 years)"
+    "gaccCat_health_food_reject_1_solution": "Novel food ingredient application (can take 1-2 years)",
+    "gaccDifficultyEasy": "Easy",
+    "gaccDifficultyModerate": "Moderate",
+    "gaccDifficultyDifficult": "Difficult"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",
@@ -2222,7 +2229,10 @@
     "squattingOfForeignBrandsSquatted": "of foreign brands squatted",
     "squattingRiskLabel": "Risk",
     "valueHigh": "High",
-    "labelMandatoryFields": "Mandatory Fields"
+    "labelMandatoryFields": "Mandatory Fields",
+    "difficulty_easy": "Easy",
+    "difficulty_moderate": "Moderate",
+    "difficulty_difficult": "Difficult"
   },
   "Navbar": {
     "selfCheck": "Self-Check",
@@ -2231,7 +2241,8 @@
     "billing": "Billing",
     "login": "Login",
     "register": "Register",
-    "report": "Report"
+    "report": "Report",
+    "reports": "My Reports"
   },
   "Breadcrumb": {
     "pricing": "Pricing"

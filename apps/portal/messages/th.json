@@ -81,7 +81,11 @@
     "viewReportsDesc": "ดูประวัติรายงานความสอดคล้อง",
     "manageSubscriptionDesc": "จาดการสมัครและวธิีการชําระเงนิ",
     "youAreOnFreePlan": "ขณะนี้คุณอยู่ในแผนฟรี",
-    "viewPricing": "ดูราคา"
+    "viewPricing": "ดูราคา",
+    "paid": "paid",
+    "pending": "pending",
+    "prev": "← Prev",
+    "next": "Next →"
   },
   "Pricing": {
     "title": "ราคาแบบง่่าย",
@@ -1825,7 +1829,10 @@
     "gaccCat_health_food_labTest_5": "การแตกตัว/การละลาย",
     "gaccCat_health_food_reject_1_problem": "ส่วนผสมใหม่ไม่ได้อยู่ในแค็ตตาล็อกอาหารจีน",
     "gaccCat_health_food_reject_1_cause": "ส่วนผสมไม่ได้รับการอนุมัติให้ใช้ในประเทศจีน",
-    "gaccCat_health_food_reject_1_solution": "การใช้ส่วนผสมอาหารแบบใหม่ (อาจใช้เวลา 1-2 ปี)"
+    "gaccCat_health_food_reject_1_solution": "การใช้ส่วนผสมอาหารแบบใหม่ (อาจใช้เวลา 1-2 ปี)",
+    "gaccDifficultyEasy": "Easy",
+    "gaccDifficultyModerate": "Moderate",
+    "gaccDifficultyDifficult": "Difficult"
   },
   "Report": {
     "loadingTitle": "กำลังโหลดรายงานของคุณ",
@@ -2222,7 +2229,10 @@
     "cccAuditItem_traceability": "เอกสารระบบการตรวจสอบย้อนกลับ",
     "cccAuditItem_enviroSafety": "การปฏิบัติตามข้อกำหนดด้านสิ่งแวดล้อมและความปลอดภัย",
     "ordinaryLabel": "ธรรมดา",
-    "specialLabel": "พิเศษ"
+    "specialLabel": "พิเศษ",
+    "difficulty_easy": "Easy",
+    "difficulty_moderate": "Moderate",
+    "difficulty_difficult": "Difficult"
   },
   "Navbar": {
     "selfCheck": "ตรวจสอบตนเอง",
@@ -2231,7 +2241,8 @@
     "billing": "การเรียกรเกบ็ เงนิ",
     "login": "เขาสสู่ ะบบ",
     "register": "ลงทะเบียน",
-    "report": "รายงาน"
+    "report": "รายงาน",
+    "reports": "รายงานของฉัน"
   },
   "Breadcrumb": {
     "pricing": "ราคา"

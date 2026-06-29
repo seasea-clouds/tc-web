@@ -81,7 +81,11 @@
     "viewReportsDesc": "আপনার কমপ্লায়েন্স রিপোর্ট দেখুন",
     "manageSubscriptionDesc": "আপনার সদস্যতা পরিচালনা করুন",
     "viewPricing": "মূল্য দেখুন",
-    "youAreOnFreePlan": "আপনি বর্তমানে বিনামূল্যের প্ল্যানে আছেন।"
+    "youAreOnFreePlan": "আপনি বর্তমানে বিনামূল্যের প্ল্যানে আছেন।",
+    "paid": "paid",
+    "pending": "pending",
+    "prev": "← Prev",
+    "next": "Next →"
   },
   "Pricing": {
     "title": "সহজ মূল্য",
@@ -1825,7 +1829,10 @@
     "gaccCat_health_food_labTest_5": "বিচ্ছেদ/দ্রবীভূতকরণ",
     "gaccCat_health_food_reject_1_problem": "নতুন উপাদান চীন খাদ্য ক্যাটালগ নয়",
     "gaccCat_health_food_reject_1_cause": "উপাদান চীনে ব্যবহারের জন্য অনুমোদিত নয়",
-    "gaccCat_health_food_reject_1_solution": "অভিনব খাদ্য উপাদান প্রয়োগ (1-2 বছর লাগতে পারে)"
+    "gaccCat_health_food_reject_1_solution": "অভিনব খাদ্য উপাদান প্রয়োগ (1-2 বছর লাগতে পারে)",
+    "gaccDifficultyEasy": "Easy",
+    "gaccDifficultyModerate": "Moderate",
+    "gaccDifficultyDifficult": "Difficult"
   },
   "Report": {
     "loadingTitle": "আপনার রিপোর্ট লোড হচ্ছে",
@@ -2222,7 +2229,10 @@
     "cccAuditItem_traceability": "ট্রেসেবিলিটি সিস্টেম ডকুমেন্টেশন",
     "cccAuditItem_enviroSafety": "পরিবেশগত এবং নিরাপত্তা সম্মতি",
     "ordinaryLabel": "সাধারণ",
-    "specialLabel": "বিশেষ"
+    "specialLabel": "বিশেষ",
+    "difficulty_easy": "Easy",
+    "difficulty_moderate": "Moderate",
+    "difficulty_difficult": "Difficult"
   },
   "Navbar": {
     "selfCheck": "স্ব-পরীক্ষা",
@@ -2231,7 +2241,8 @@
     "billing": "বিলিং",
     "login": "লগইন",
     "register": "রেজিস্ট্রেশন",
-    "report": "রিপোর্ট"
+    "report": "রিপোর্ট",
+    "reports": "আমার রিপোর্ট"
   },
   "Breadcrumb": {
     "pricing": "মূল্য নির্ধারণ"

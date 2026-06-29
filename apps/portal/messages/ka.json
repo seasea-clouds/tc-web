@@ -81,7 +81,11 @@
     "viewReportsDesc": "იხილეთ თქვენი შესაბამისობის ანგარიშები",
     "manageSubscriptionDesc": "მართეთ თქვენი გამოწერა",
     "viewPricing": "ფასების ნახვა",
-    "youAreOnFreePlan": "ამჟამად უფასო გეგმაზე ხართ."
+    "youAreOnFreePlan": "ამჟამად უფასო გეგმაზე ხართ.",
+    "paid": "paid",
+    "pending": "pending",
+    "prev": "← Prev",
+    "next": "Next →"
   },
   "Pricing": {
     "title": "მარტივი ფასი",
@@ -1825,7 +1829,10 @@
     "gaccCat_health_food_labTest_5": "დაშლა/დაშლა",
     "gaccCat_health_food_reject_1_problem": "ახალი ინგრედიენტი არ არის ჩინეთის საკვების კატალოგში",
     "gaccCat_health_food_reject_1_cause": "ინგრედიენტი არ არის დამტკიცებული ჩინეთში გამოსაყენებლად",
-    "gaccCat_health_food_reject_1_solution": "ახალი საკვები ინგრედიენტების გამოყენება (შეიძლება დასჭირდეს 1-2 წელი)"
+    "gaccCat_health_food_reject_1_solution": "ახალი საკვები ინგრედიენტების გამოყენება (შეიძლება დასჭირდეს 1-2 წელი)",
+    "gaccDifficultyEasy": "Easy",
+    "gaccDifficultyModerate": "Moderate",
+    "gaccDifficultyDifficult": "Difficult"
   },
   "Report": {
     "loadingTitle": "იტვირთება თქვენი ანგარიში",
@@ -2222,7 +2229,10 @@
     "cccAuditItem_traceability": "მიკვლევადობის სისტემის დოკუმენტაცია",
     "cccAuditItem_enviroSafety": "გარემოსდაცვითი და უსაფრთხოების დაცვა",
     "ordinaryLabel": "ჩვეულებრივი",
-    "specialLabel": "სპეციალური"
+    "specialLabel": "სპეციალური",
+    "difficulty_easy": "Easy",
+    "difficulty_moderate": "Moderate",
+    "difficulty_difficult": "Difficult"
   },
   "Navbar": {
     "selfCheck": "თვითშეფასება",
@@ -2231,7 +2241,8 @@
     "billing": "გადახდა",
     "login": "შესვლა",
     "register": "რეგისტრაცია",
-    "report": "ანგარიში"
+    "report": "ანგარიში",
+    "reports": "ჩემი მოხსენებები"
   },
   "Breadcrumb": {
     "pricing": "ფასი"

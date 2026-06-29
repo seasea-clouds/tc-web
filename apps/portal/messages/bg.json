@@ -81,7 +81,11 @@
     "viewReportsDesc": "Вижте отчетите си за съответствие",
     "manageSubscriptionDesc": "Управлявайте абонамента си",
     "viewPricing": "Вижте цените",
-    "youAreOnFreePlan": "В момента сте на безплатен план."
+    "youAreOnFreePlan": "В момента сте на безплатен план.",
+    "paid": "paid",
+    "pending": "pending",
+    "prev": "← Prev",
+    "next": "Next →"
   },
   "Pricing": {
     "title": "Просто ценообразуване",
@@ -1825,7 +1829,10 @@
     "gaccCat_health_food_labTest_5": "Разпадане/разтваряне",
     "gaccCat_health_food_reject_1_problem": "Нова съставка, която не е в китайския хранителен каталог",
     "gaccCat_health_food_reject_1_cause": "Съставката не е одобрена за употреба в Китай",
-    "gaccCat_health_food_reject_1_solution": "Приложение на нови хранителни съставки (може да отнеме 1-2 години)"
+    "gaccCat_health_food_reject_1_solution": "Приложение на нови хранителни съставки (може да отнеме 1-2 години)",
+    "gaccDifficultyEasy": "Easy",
+    "gaccDifficultyModerate": "Moderate",
+    "gaccDifficultyDifficult": "Difficult"
   },
   "Report": {
     "loadingTitle": "Вашият отчет се зарежда",
@@ -2222,7 +2229,10 @@
     "cccAuditItem_traceability": "Документация на системата за проследяване",
     "cccAuditItem_enviroSafety": "Съответствие с околната среда и безопасността",
     "ordinaryLabel": "Обикновен",
-    "specialLabel": "Специален"
+    "specialLabel": "Специален",
+    "difficulty_easy": "Easy",
+    "difficulty_moderate": "Moderate",
+    "difficulty_difficult": "Difficult"
   },
   "Navbar": {
     "selfCheck": "Самопроверка",
@@ -2231,7 +2241,8 @@
     "billing": "Таксуване",
     "login": "Вход",
     "register": "Регистрация",
-    "report": "Доклад"
+    "report": "Доклад",
+    "reports": "Моите отчети"
   },
   "Breadcrumb": {
     "pricing": "Ценообразуване"

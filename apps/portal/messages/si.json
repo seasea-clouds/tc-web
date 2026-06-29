@@ -81,7 +81,11 @@
     "viewReportsDesc": "ඔබගේ අනුකූලතා වාර්තා බලන්න",
     "manageSubscriptionDesc": "ඔබගේ දායකත්වය කළමනාකරණය කරන්න",
     "viewPricing": "මිලකරණය බලන්න",
-    "youAreOnFreePlan": "ඔබ දැනට සිටින්නේ නිදහස් සැලැස්මේ ය."
+    "youAreOnFreePlan": "ඔබ දැනට සිටින්නේ නිදහස් සැලැස්මේ ය.",
+    "paid": "paid",
+    "pending": "pending",
+    "prev": "← Prev",
+    "next": "Next →"
   },
   "Pricing": {
     "title": "සරල මිලකරණය",
@@ -1825,7 +1829,10 @@
     "gaccCat_health_food_labTest_5": "විසංයෝජනය / විසුරුවා හැරීම",
     "gaccCat_health_food_reject_1_problem": "නව අමුද්‍රව්‍ය චීන ආහාර නාමාවලියෙහි නොමැත",
     "gaccCat_health_food_reject_1_cause": "අමුද්‍රව්‍ය චීනයේ භාවිතය සඳහා අනුමත කර නැත",
-    "gaccCat_health_food_reject_1_solution": "නව ආහාර ද්‍රව්‍ය යෙදීම (වසර 1-2ක් ගත විය හැක)"
+    "gaccCat_health_food_reject_1_solution": "නව ආහාර ද්‍රව්‍ය යෙදීම (වසර 1-2ක් ගත විය හැක)",
+    "gaccDifficultyEasy": "Easy",
+    "gaccDifficultyModerate": "Moderate",
+    "gaccDifficultyDifficult": "Difficult"
   },
   "Report": {
     "loadingTitle": "ඔබේ වාර්තාව පූරණය කරමින්",
@@ -2222,7 +2229,10 @@
     "cccAuditItem_traceability": "ලුහුබැඳීමේ පද්ධති ලේඛනගත කිරීම",
     "cccAuditItem_enviroSafety": "පාරිසරික හා ආරක්ෂිත අනුකූලතාවය",
     "ordinaryLabel": "සාමාන්‍ය",
-    "specialLabel": "විශේෂ"
+    "specialLabel": "විශේෂ",
+    "difficulty_easy": "Easy",
+    "difficulty_moderate": "Moderate",
+    "difficulty_difficult": "Difficult"
   },
   "Navbar": {
     "pricing": "මිට ගැනුම්",
@@ -2231,7 +2241,8 @@
     "login": "ඇතුළු වන්න",
     "register": "ලියාපදිංචි වන්න",
     "report": "වාර්තාව",
-    "selfCheck": "ස්වයං පරීක්ෂණ මෙවලම"
+    "selfCheck": "ස්වයං පරීක්ෂණ මෙවලම",
+    "reports": "මගේ වාර්තා"
   },
   "Breadcrumb": {
     "pricing": "මිල නියම කිරීම"

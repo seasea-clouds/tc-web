@@ -81,7 +81,11 @@
     "viewReportsDesc": "Перегляньте свої звіти про відповідність",
     "manageSubscriptionDesc": "Керуйте своєю підпискою",
     "viewPricing": "Переглянути ціни",
-    "youAreOnFreePlan": "Зараз ви використовуєте безкоштовний план."
+    "youAreOnFreePlan": "Зараз ви використовуєте безкоштовний план.",
+    "paid": "paid",
+    "pending": "pending",
+    "prev": "← Prev",
+    "next": "Next →"
   },
   "Pricing": {
     "title": "Просте ціноутворення",
@@ -1825,7 +1829,10 @@
     "gaccCat_health_food_labTest_5": "Дезінтеграція / розчинення",
     "gaccCat_health_food_reject_1_problem": "Новий інгредієнт, якого немає в каталозі китайських продуктів харчування",
     "gaccCat_health_food_reject_1_cause": "Інгредієнт, не дозволений до використання в Китаї",
-    "gaccCat_health_food_reject_1_solution": "Застосування нових харчових інгредієнтів (може зайняти 1-2 роки)"
+    "gaccCat_health_food_reject_1_solution": "Застосування нових харчових інгредієнтів (може зайняти 1-2 роки)",
+    "gaccDifficultyEasy": "Easy",
+    "gaccDifficultyModerate": "Moderate",
+    "gaccDifficultyDifficult": "Difficult"
   },
   "Report": {
     "loadingTitle": "Завантаження звіту",
@@ -2222,7 +2229,10 @@
     "cccAuditItem_traceability": "Документація системи простежуваності",
     "cccAuditItem_enviroSafety": "Відповідність екологічності та безпеки",
     "ordinaryLabel": "Звичайний",
-    "specialLabel": "Особливий"
+    "specialLabel": "Особливий",
+    "difficulty_easy": "Easy",
+    "difficulty_moderate": "Moderate",
+    "difficulty_difficult": "Difficult"
   },
   "Navbar": {
     "selfCheck": "Самоперевірка",
@@ -2231,7 +2241,8 @@
     "billing": "Білінг",
     "login": "Вхід",
     "register": "Реєстрація",
-    "report": "Звіт"
+    "report": "Звіт",
+    "reports": "Мої звіти"
   },
   "Breadcrumb": {
     "pricing": "Ціноутворення"

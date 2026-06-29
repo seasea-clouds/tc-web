@@ -81,7 +81,11 @@
     "viewReportsDesc": "查看您的合规报告",
     "manageSubscriptionDesc": "管理您的订阅",
     "youAreOnFreePlan": "您目前使用的是免费计划。",
-    "viewPricing": "查看定价"
+    "viewPricing": "查看定价",
+    "paid": "paid",
+    "pending": "pending",
+    "prev": "← Prev",
+    "next": "Next →"
   },
   "Pricing": {
     "title": "简单的定价",
@@ -1825,7 +1829,10 @@
     "gaccCat_health_food_labTest_5": "崩解/溶解",
     "gaccCat_health_food_reject_1_problem": "未列入中国食品目录的新原料",
     "gaccCat_health_food_reject_1_cause": "成分未经批准在中国使用",
-    "gaccCat_health_food_reject_1_solution": "新型食品成分应用（可能需要1-2年）"
+    "gaccCat_health_food_reject_1_solution": "新型食品成分应用（可能需要1-2年）",
+    "gaccDifficultyEasy": "简单",
+    "gaccDifficultyModerate": "中等",
+    "gaccDifficultyDifficult": "困难"
   },
   "Report": {
     "loadingTitle": "加载您的报告",
@@ -2222,7 +2229,10 @@
     "cccAuditItem_traceability": "追溯系统文档",
     "cccAuditItem_enviroSafety": "环境和安全合规性",
     "ordinaryLabel": "普通",
-    "specialLabel": "特殊"
+    "specialLabel": "特殊",
+    "difficulty_easy": "简单",
+    "difficulty_moderate": "中等",
+    "difficulty_difficult": "困难"
   },
   "Navbar": {
     "selfCheck": "合规自查",
@@ -2231,7 +2241,8 @@
     "billing": "账单",
     "login": "登录",
     "register": "注册",
-    "report": "报告"
+    "report": "报告",
+    "reports": "我的报告"
   },
   "Breadcrumb": {
     "pricing": "定价"

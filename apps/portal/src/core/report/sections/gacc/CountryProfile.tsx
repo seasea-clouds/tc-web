@@ -12,7 +12,7 @@ export default function CountryProfile({ result }: { result: any }) {
       <div className="grid grid-cols-2 gap-3">
         <ValueCard label={t("valueRegion")} value={cp.region} />
         <ValueCard label={t("valueFTAWithChina")} value={cp.ftaWithChina ? t('valueYes') : t('valueNo')} />
-        <ValueCard label={t("valueGACCDifficulty")} value={cp.gaccDifficulty} />
+        <ValueCard label={t("valueGACCDifficulty")} value={t('difficulty_' + cp.gaccDifficulty)} />
         <ValueCard label={t("valueLanguageNote")} value={cp.languageNote || '—'} />
       </div>
     </div>

@@ -81,7 +81,11 @@
     "viewReportsDesc": "Uyumluluk raporlarınızı görüntüleyin",
     "manageSubscriptionDesc": "Aboneliğinizi yönetin",
     "youAreOnFreePlan": "Şu anda Ücretsiz plandasınız.",
-    "viewPricing": "Fiyatlandırmayı Görüntüle"
+    "viewPricing": "Fiyatlandırmayı Görüntüle",
+    "paid": "paid",
+    "pending": "pending",
+    "prev": "← Prev",
+    "next": "Next →"
   },
   "Pricing": {
     "title": "Basit Fiyatlandırma",
@@ -1825,7 +1829,10 @@
     "gaccCat_health_food_labTest_5": "Parçalanma / çözülme",
     "gaccCat_health_food_reject_1_problem": "Çin gıda kataloğunda bulunmayan yeni içerik",
     "gaccCat_health_food_reject_1_cause": "Çin'de kullanım için onaylanmamış içerik",
-    "gaccCat_health_food_reject_1_solution": "Yeni gıda maddesi uygulaması (1-2 yıl sürebilir)"
+    "gaccCat_health_food_reject_1_solution": "Yeni gıda maddesi uygulaması (1-2 yıl sürebilir)",
+    "gaccDifficultyEasy": "Easy",
+    "gaccDifficultyModerate": "Moderate",
+    "gaccDifficultyDifficult": "Difficult"
   },
   "Report": {
     "loadingTitle": "Raporunuzu Yükleme",
@@ -2222,7 +2229,10 @@
     "cccAuditItem_traceability": "İzlenebilirlik sistemi dokümantasyonu",
     "cccAuditItem_enviroSafety": "Çevre ve güvenlik uyumluluğu",
     "ordinaryLabel": "Sıradan",
-    "specialLabel": "Özel"
+    "specialLabel": "Özel",
+    "difficulty_easy": "Easy",
+    "difficulty_moderate": "Moderate",
+    "difficulty_difficult": "Difficult"
   },
   "Navbar": {
     "selfCheck": "Kendi Kendine Kontrol",
@@ -2231,7 +2241,8 @@
     "billing": "Faturalandırma",
     "login": "Giriş",
     "register": "Kayıt",
-    "report": "Rapor"
+    "report": "Rapor",
+    "reports": "Raporlarım"
   },
   "Breadcrumb": {
     "pricing": "Fiyatlandırma"

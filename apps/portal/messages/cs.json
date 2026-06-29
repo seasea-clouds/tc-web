@@ -81,7 +81,11 @@
     "viewReportsDesc": "Prohlédněte si své zprávy o dodržování předpisů",
     "manageSubscriptionDesc": "Spravujte své předplatné",
     "viewPricing": "Zobrazit ceny",
-    "youAreOnFreePlan": "Momentálně máte bezplatný tarif."
+    "youAreOnFreePlan": "Momentálně máte bezplatný tarif.",
+    "paid": "paid",
+    "pending": "pending",
+    "prev": "← Prev",
+    "next": "Next →"
   },
   "Pricing": {
     "title": "Jednoduché stanovení ceny",
@@ -1825,7 +1829,10 @@
     "gaccCat_health_food_labTest_5": "Rozpad / rozpad",
     "gaccCat_health_food_reject_1_problem": "Nová složka není v katalogu potravin v Číně",
     "gaccCat_health_food_reject_1_cause": "Složka není schválena pro použití v Číně",
-    "gaccCat_health_food_reject_1_solution": "Nová aplikace složek potravin (může trvat 1-2 roky)"
+    "gaccCat_health_food_reject_1_solution": "Nová aplikace složek potravin (může trvat 1-2 roky)",
+    "gaccDifficultyEasy": "Easy",
+    "gaccDifficultyModerate": "Moderate",
+    "gaccDifficultyDifficult": "Difficult"
   },
   "Report": {
     "loadingTitle": "Načítání vaší zprávy",
@@ -2222,7 +2229,10 @@
     "cccAuditItem_traceability": "Dokumentace systému sledovatelnosti",
     "cccAuditItem_enviroSafety": "Dodržování ochrany životního prostředí a bezpečnosti",
     "ordinaryLabel": "Obyčejné",
-    "specialLabel": "Speciální"
+    "specialLabel": "Speciální",
+    "difficulty_easy": "Easy",
+    "difficulty_moderate": "Moderate",
+    "difficulty_difficult": "Difficult"
   },
   "Navbar": {
     "selfCheck": "Vlastní kontrola",
@@ -2231,7 +2241,8 @@
     "billing": "Fakturace",
     "login": "Přihlášení",
     "register": "Registrace",
-    "report": "Zpráva"
+    "report": "Zpráva",
+    "reports": "Moje přehledy"
   },
   "Breadcrumb": {
     "pricing": "Ceny"

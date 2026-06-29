@@ -283,7 +283,13 @@ const IGNORE_FALLBACK_KEYS = new Set([
   'Check.microbiological_coliforms_pathogens',
   'Check.mycotoxins_aflatoxin_don_zearalenone',
   'Check.tetracycline_antibiotics',
-
+  // Dashboard report status values — DB data stored in English, same across all locales
+  'Dashboard.paid', 'Dashboard.pending',
+  // Dashboard pagination — English-based labels, pending translation assignment
+  'Dashboard.prev', 'Dashboard.next',
+  // Difficulty labels — simple English terms acceptable across all locales
+  'Check.gaccDifficultyEasy', 'Check.gaccDifficultyModerate', 'Check.gaccDifficultyDifficult',
+  'ReportSection.difficulty_easy', 'ReportSection.difficulty_moderate', 'ReportSection.difficulty_difficult',
 ]);
 
 function checkHardcodedFallbacks(projectName, projectData) {

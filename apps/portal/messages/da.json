@@ -81,7 +81,11 @@
     "viewReportsDesc": "Se dine overholdelsesrapporter",
     "manageSubscriptionDesc": "Administrer dit abonnement",
     "viewPricing": "Se priser",
-    "youAreOnFreePlan": "Du er i øjeblikket på den gratis plan."
+    "youAreOnFreePlan": "Du er i øjeblikket på den gratis plan.",
+    "paid": "paid",
+    "pending": "pending",
+    "prev": "← Prev",
+    "next": "Next →"
   },
   "Pricing": {
     "title": "Enkel prissætning",
@@ -1825,7 +1829,10 @@
     "gaccCat_health_food_labTest_5": "Opløsning / opløsning",
     "gaccCat_health_food_reject_1_problem": "Ny ingrediens ikke i Kinas fødevarekatalog",
     "gaccCat_health_food_reject_1_cause": "Ingrediens ikke godkendt til brug i Kina",
-    "gaccCat_health_food_reject_1_solution": "Anvendelse af ny fødevareingrediens (kan tage 1-2 år)"
+    "gaccCat_health_food_reject_1_solution": "Anvendelse af ny fødevareingrediens (kan tage 1-2 år)",
+    "gaccDifficultyEasy": "Easy",
+    "gaccDifficultyModerate": "Moderate",
+    "gaccDifficultyDifficult": "Difficult"
   },
   "Report": {
     "loadingTitle": "Indlæser din rapport",
@@ -2222,7 +2229,10 @@
     "cccAuditItem_traceability": "Dokumentation af sporbarhedssystem",
     "cccAuditItem_enviroSafety": "Overholdelse af miljø og sikkerhed",
     "ordinaryLabel": "Almindelig",
-    "specialLabel": "Speciel"
+    "specialLabel": "Speciel",
+    "difficulty_easy": "Easy",
+    "difficulty_moderate": "Moderate",
+    "difficulty_difficult": "Difficult"
   },
   "Navbar": {
     "selfCheck": "Selvtest",
@@ -2231,7 +2241,8 @@
     "billing": "Fakturering",
     "login": "Log ind",
     "register": "Registrer",
-    "report": "Rapport"
+    "report": "Rapport",
+    "reports": "Mine rapporter"
   },
   "Breadcrumb": {
     "pricing": "Prissætning"

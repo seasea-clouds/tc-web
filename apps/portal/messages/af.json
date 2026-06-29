@@ -81,7 +81,11 @@
     "viewReportsDesc": "Bekyk jou voldoeningsverslae",
     "manageSubscriptionDesc": "Bestuur jou intekening",
     "viewPricing": "Bekyk pryse",
-    "youAreOnFreePlan": "Jy is tans op die gratis plan."
+    "youAreOnFreePlan": "Jy is tans op die gratis plan.",
+    "paid": "paid",
+    "pending": "pending",
+    "prev": "← Prev",
+    "next": "Next →"
   },
   "Pricing": {
     "title": "Eenvoudige prysbepaling",
@@ -1825,7 +1829,10 @@
     "gaccCat_health_food_labTest_5": "Disintegrasie/ontbinding",
     "gaccCat_health_food_reject_1_problem": "Nuwe bestanddeel nie in China se voedselkatalogus nie",
     "gaccCat_health_food_reject_1_cause": "Bestanddeel nie goedgekeur vir gebruik in China nie",
-    "gaccCat_health_food_reject_1_solution": "Toepassing van nuwe voedselbestanddele (kan 1-2 jaar neem)"
+    "gaccCat_health_food_reject_1_solution": "Toepassing van nuwe voedselbestanddele (kan 1-2 jaar neem)",
+    "gaccDifficultyEasy": "Easy",
+    "gaccDifficultyModerate": "Moderate",
+    "gaccDifficultyDifficult": "Difficult"
   },
   "Report": {
     "loadingTitle": "Laai tans jou verslag",
@@ -2222,7 +2229,10 @@
     "cccAuditItem_traceability": "Naspeurbaarheidstelseldokumentasie",
     "cccAuditItem_enviroSafety": "Omgewings- en veiligheidsnakoming",
     "ordinaryLabel": "Gewone",
-    "specialLabel": "Spesiale"
+    "specialLabel": "Spesiale",
+    "difficulty_easy": "Easy",
+    "difficulty_moderate": "Moderate",
+    "difficulty_difficult": "Difficult"
   },
   "Navbar": {
     "selfCheck": "Selftoets",
@@ -2231,7 +2241,8 @@
     "billing": "Fakturerings",
     "login": "Aanmelding",
     "register": "Registrasie",
-    "report": "Rapport"
+    "report": "Rapport",
+    "reports": "My verslae"
   },
   "Breadcrumb": {
     "pricing": "Pryse"

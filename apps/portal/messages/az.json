@@ -81,7 +81,11 @@
     "viewReportsDesc": "Uyğunluq hesabatlarınıza baxın",
     "manageSubscriptionDesc": "Abunəliyinizi idarə edin",
     "viewPricing": "Qiymətlərə Baxın",
-    "youAreOnFreePlan": "Hazırda Pulsuz plandasınız."
+    "youAreOnFreePlan": "Hazırda Pulsuz plandasınız.",
+    "paid": "paid",
+    "pending": "pending",
+    "prev": "← Prev",
+    "next": "Next →"
   },
   "Pricing": {
     "title": "Sadə Qiymətləndirmə",
@@ -1825,7 +1829,10 @@
     "gaccCat_health_food_labTest_5": "Parçalanma/dağılma",
     "gaccCat_health_food_reject_1_problem": "Yeni tərkib hissəsi Çin qida kataloqunda yoxdur",
     "gaccCat_health_food_reject_1_cause": "Tərkib Çində istifadə üçün təsdiqlənməyib",
-    "gaccCat_health_food_reject_1_solution": "Yeni qida inqrediyentinin tətbiqi (1-2 il çəkə bilər)"
+    "gaccCat_health_food_reject_1_solution": "Yeni qida inqrediyentinin tətbiqi (1-2 il çəkə bilər)",
+    "gaccDifficultyEasy": "Easy",
+    "gaccDifficultyModerate": "Moderate",
+    "gaccDifficultyDifficult": "Difficult"
   },
   "Report": {
     "loadingTitle": "Hesabatınız Yüklənir",
@@ -2222,7 +2229,10 @@
     "cccAuditItem_traceability": "İzləmə sisteminin sənədləri",
     "cccAuditItem_enviroSafety": "Ətraf mühitə və təhlükəsizliyə uyğunluq",
     "ordinaryLabel": "Adi",
-    "specialLabel": "Xüsusi"
+    "specialLabel": "Xüsusi",
+    "difficulty_easy": "Easy",
+    "difficulty_moderate": "Moderate",
+    "difficulty_difficult": "Difficult"
   },
   "Navbar": {
     "selfCheck": "Özünü yoxlama",
@@ -2231,7 +2241,8 @@
     "billing": "Ödəniş",
     "login": "Giriş",
     "register": "Qeydiyyat",
-    "report": "Hesabat"
+    "report": "Hesabat",
+    "reports": "Hesabatlarım"
   },
   "Breadcrumb": {
     "pricing": "Qiymətləndirmə"

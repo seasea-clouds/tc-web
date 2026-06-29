@@ -81,7 +81,11 @@
     "viewReportsDesc": "Tazama ripoti zako za kufuata",
     "manageSubscriptionDesc": "Dhibiti usajili wako",
     "viewPricing": "Tazama Bei",
-    "youAreOnFreePlan": "Kwa sasa uko kwenye Mpango Bila Malipo."
+    "youAreOnFreePlan": "Kwa sasa uko kwenye Mpango Bila Malipo.",
+    "paid": "paid",
+    "pending": "pending",
+    "prev": "← Prev",
+    "next": "Next →"
   },
   "Pricing": {
     "title": "Bei Rahisi",
@@ -1825,7 +1829,10 @@
     "gaccCat_health_food_labTest_5": "Kutengana/kuvunjika",
     "gaccCat_health_food_reject_1_problem": "Kiambato cha riwaya hakiko kwenye orodha ya vyakula vya China",
     "gaccCat_health_food_reject_1_cause": "Kiungo hakijaidhinishwa kutumika nchini Uchina",
-    "gaccCat_health_food_reject_1_solution": "Utumizi wa riwaya ya kingo ya chakula (inaweza kuchukua miaka 1-2)"
+    "gaccCat_health_food_reject_1_solution": "Utumizi wa riwaya ya kingo ya chakula (inaweza kuchukua miaka 1-2)",
+    "gaccDifficultyEasy": "Easy",
+    "gaccDifficultyModerate": "Moderate",
+    "gaccDifficultyDifficult": "Difficult"
   },
   "Report": {
     "loadingTitle": "Inapakia Ripoti Yako",
@@ -2222,7 +2229,10 @@
     "cccAuditItem_traceability": "Nyaraka za mfumo wa ufuatiliaji",
     "cccAuditItem_enviroSafety": "Uzingatiaji wa mazingira na usalama",
     "ordinaryLabel": "Kawaida",
-    "specialLabel": "Maalum"
+    "specialLabel": "Maalum",
+    "difficulty_easy": "Easy",
+    "difficulty_moderate": "Moderate",
+    "difficulty_difficult": "Difficult"
   },
   "Navbar": {
     "pricing": "Bei",
@@ -2231,7 +2241,8 @@
     "login": "Ingia",
     "register": "Jisajili",
     "report": "Ripoti",
-    "selfCheck": "Kujipima"
+    "selfCheck": "Kujipima",
+    "reports": "Ripoti Zangu"
   },
   "Breadcrumb": {
     "pricing": "Bei"

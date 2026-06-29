@@ -81,7 +81,11 @@
     "viewReportsDesc": "Lihat laporan pematuhan anda",
     "manageSubscriptionDesc": "Urus langganan anda",
     "viewPricing": "Lihat Harga",
-    "youAreOnFreePlan": "Anda sedang menggunakan pelan Percuma."
+    "youAreOnFreePlan": "Anda sedang menggunakan pelan Percuma.",
+    "paid": "paid",
+    "pending": "pending",
+    "prev": "← Prev",
+    "next": "Next →"
   },
   "Pricing": {
     "title": "Harga Mudah",
@@ -1825,7 +1829,10 @@
     "gaccCat_health_food_labTest_5": "Perpecahan/pembubaran",
     "gaccCat_health_food_reject_1_problem": "Ramuan novel tiada dalam katalog makanan China",
     "gaccCat_health_food_reject_1_cause": "Ramuan tidak diluluskan untuk digunakan di China",
-    "gaccCat_health_food_reject_1_solution": "Permohonan ramuan makanan baru (boleh mengambil masa 1-2 tahun)"
+    "gaccCat_health_food_reject_1_solution": "Permohonan ramuan makanan baru (boleh mengambil masa 1-2 tahun)",
+    "gaccDifficultyEasy": "Easy",
+    "gaccDifficultyModerate": "Moderate",
+    "gaccDifficultyDifficult": "Difficult"
   },
   "Report": {
     "loadingTitle": "Memuatkan Laporan Anda",
@@ -2222,7 +2229,10 @@
     "cccAuditItem_traceability": "Dokumentasi sistem kebolehkesanan",
     "cccAuditItem_enviroSafety": "Pematuhan alam sekitar dan keselamatan",
     "ordinaryLabel": "Biasa",
-    "specialLabel": "Khas"
+    "specialLabel": "Khas",
+    "difficulty_easy": "Easy",
+    "difficulty_moderate": "Moderate",
+    "difficulty_difficult": "Difficult"
   },
   "Navbar": {
     "selfCheck": "Pengesanan Diri",
@@ -2231,7 +2241,8 @@
     "billing": "Pembilhan",
     "login": "Log masuk",
     "register": "Pendaftaran",
-    "report": "Laporan"
+    "report": "Laporan",
+    "reports": "Laporan Saya"
   },
   "Breadcrumb": {
     "pricing": "penentuan harga"

@@ -81,7 +81,11 @@
     "viewReportsDesc": "گزارش های انطباق خود را مشاهده کنید",
     "manageSubscriptionDesc": "اشتراک خود را مدیریت کنید",
     "viewPricing": "مشاهده قیمت",
-    "youAreOnFreePlan": "شما در حال حاضر در طرح رایگان هستید."
+    "youAreOnFreePlan": "شما در حال حاضر در طرح رایگان هستید.",
+    "paid": "paid",
+    "pending": "pending",
+    "prev": "← Prev",
+    "next": "Next →"
   },
   "Pricing": {
     "title": "قیمت گذاری ساده",
@@ -1825,7 +1829,10 @@
     "gaccCat_health_food_labTest_5": "فروپاشی/انحلال",
     "gaccCat_health_food_reject_1_problem": "ماده جدید در کاتالوگ مواد غذایی چین نیست",
     "gaccCat_health_food_reject_1_cause": "این ماده برای استفاده در چین تایید نشده است",
-    "gaccCat_health_food_reject_1_solution": "استفاده از مواد غذایی جدید (می تواند 1-2 سال طول بکشد)"
+    "gaccCat_health_food_reject_1_solution": "استفاده از مواد غذایی جدید (می تواند 1-2 سال طول بکشد)",
+    "gaccDifficultyEasy": "Easy",
+    "gaccDifficultyModerate": "Moderate",
+    "gaccDifficultyDifficult": "Difficult"
   },
   "Report": {
     "loadingTitle": "در حال بارگیری گزارش شما",
@@ -2222,7 +2229,10 @@
     "cccAuditItem_traceability": "اسناد سیستم ردیابی",
     "cccAuditItem_enviroSafety": "رعایت محیط زیست و ایمنی",
     "ordinaryLabel": "معمولی",
-    "specialLabel": "ویژه"
+    "specialLabel": "ویژه",
+    "difficulty_easy": "Easy",
+    "difficulty_moderate": "Moderate",
+    "difficulty_difficult": "Difficult"
   },
   "Navbar": {
     "selfCheck": "خودارزیابی",
@@ -2231,7 +2241,8 @@
     "billing": "صورتحساب",
     "login": "ورود",
     "register": "ثبت نام",
-    "report": "گزارش"
+    "report": "گزارش",
+    "reports": "گزارش های من"
   },
   "Breadcrumb": {
     "pricing": "قیمت گذاری"

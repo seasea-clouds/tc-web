@@ -81,7 +81,11 @@
     "viewReportsDesc": "Праглядзіце свае справаздачы аб адпаведнасці",
     "manageSubscriptionDesc": "Кіруйце сваёй падпіскай",
     "viewPricing": "Паглядзець цэны",
-    "youAreOnFreePlan": "Зараз вы карыстаецеся бясплатным планам."
+    "youAreOnFreePlan": "Зараз вы карыстаецеся бясплатным планам.",
+    "paid": "paid",
+    "pending": "pending",
+    "prev": "← Prev",
+    "next": "Next →"
   },
   "Pricing": {
     "title": "Простае цэнаўтварэнне",
@@ -1825,7 +1829,10 @@
     "gaccCat_health_food_labTest_5": "Распад/распад",
     "gaccCat_health_food_reject_1_problem": "Новага інгрэдыента няма ў каталогу харчовых прадуктаў Кітая",
     "gaccCat_health_food_reject_1_cause": "Інгрэдыент не дазволены для выкарыстання ў Кітаі",
-    "gaccCat_health_food_reject_1_solution": "Прымяненне новых харчовых інгрэдыентаў (можа заняць 1-2 гады)"
+    "gaccCat_health_food_reject_1_solution": "Прымяненне новых харчовых інгрэдыентаў (можа заняць 1-2 гады)",
+    "gaccDifficultyEasy": "Easy",
+    "gaccDifficultyModerate": "Moderate",
+    "gaccDifficultyDifficult": "Difficult"
   },
   "Report": {
     "loadingTitle": "Загрузка вашай справаздачы",
@@ -2222,7 +2229,10 @@
     "cccAuditItem_traceability": "Дакументацыя сістэмы адсочвання",
     "cccAuditItem_enviroSafety": "Адпаведнасць экалогіі і бяспекі",
     "ordinaryLabel": "Звычайны",
-    "specialLabel": "Спецыяльны"
+    "specialLabel": "Спецыяльны",
+    "difficulty_easy": "Easy",
+    "difficulty_moderate": "Moderate",
+    "difficulty_difficult": "Difficult"
   },
   "Navbar": {
     "selfCheck": "Самправерка",
@@ -2231,7 +2241,8 @@
     "billing": "Білінг",
     "login": "Уваход",
     "register": "Рэгістрацыя",
-    "report": "Даклад"
+    "report": "Даклад",
+    "reports": "Мае справаздачы"
   },
   "Breadcrumb": {
     "pricing": "Цэнаўтварэнне"

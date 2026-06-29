@@ -81,7 +81,11 @@
     "viewReportsDesc": "Tekintse meg megfelelőségi jelentéseit",
     "manageSubscriptionDesc": "Kezelje előfizetését",
     "viewPricing": "Árak megtekintése",
-    "youAreOnFreePlan": "Jelenleg az ingyenes csomagot használja."
+    "youAreOnFreePlan": "Jelenleg az ingyenes csomagot használja.",
+    "paid": "paid",
+    "pending": "pending",
+    "prev": "← Prev",
+    "next": "Next →"
   },
   "Pricing": {
     "title": "Egyszerű árképzés",
@@ -1825,7 +1829,10 @@
     "gaccCat_health_food_labTest_5": "Szétesés/oldódás",
     "gaccCat_health_food_reject_1_problem": "Új összetevő nem szerepel a kínai élelmiszer-katalógusban",
     "gaccCat_health_food_reject_1_cause": "Az összetevő Kínában nem engedélyezett",
-    "gaccCat_health_food_reject_1_solution": "Új élelmiszer-összetevő alkalmazása (1-2 évig tarthat)"
+    "gaccCat_health_food_reject_1_solution": "Új élelmiszer-összetevő alkalmazása (1-2 évig tarthat)",
+    "gaccDifficultyEasy": "Easy",
+    "gaccDifficultyModerate": "Moderate",
+    "gaccDifficultyDifficult": "Difficult"
   },
   "Report": {
     "loadingTitle": "A jelentés betöltése",
@@ -2222,7 +2229,10 @@
     "cccAuditItem_traceability": "Nyomon követhetőségi rendszer dokumentációja",
     "cccAuditItem_enviroSafety": "Környezetvédelmi és biztonsági megfelelés",
     "ordinaryLabel": "Közönséges",
-    "specialLabel": "Speciális"
+    "specialLabel": "Speciális",
+    "difficulty_easy": "Easy",
+    "difficulty_moderate": "Moderate",
+    "difficulty_difficult": "Difficult"
   },
   "Navbar": {
     "selfCheck": "Önértékelés",
@@ -2231,7 +2241,8 @@
     "billing": "Számlázás",
     "login": "Bejelentkezés",
     "register": "Regisztráció",
-    "report": "Jelentés"
+    "report": "Jelentés",
+    "reports": "Saját jelentéseim"
   },
   "Breadcrumb": {
     "pricing": "Árképzés"

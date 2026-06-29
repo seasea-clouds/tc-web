@@ -81,7 +81,11 @@
     "viewReportsDesc": "Consulteu els vostres informes de compliment",
     "manageSubscriptionDesc": "Gestiona la teva subscripció",
     "viewPricing": "Veure preus",
-    "youAreOnFreePlan": "Actualment esteu al pla gratuït."
+    "youAreOnFreePlan": "Actualment esteu al pla gratuït.",
+    "paid": "paid",
+    "pending": "pending",
+    "prev": "← Prev",
+    "next": "Next →"
   },
   "Pricing": {
     "title": "Preus senzills",
@@ -1825,7 +1829,10 @@
     "gaccCat_health_food_labTest_5": "Desintegració/dissolució",
     "gaccCat_health_food_reject_1_problem": "Nou ingredient no al catàleg d'aliments De La Xina",
     "gaccCat_health_food_reject_1_cause": "Ingredient no aprovat per al seu ús A La Xina",
-    "gaccCat_health_food_reject_1_solution": "Aplicació d'ingredients alimentaris nous (pot trigar 1-2 anys)"
+    "gaccCat_health_food_reject_1_solution": "Aplicació d'ingredients alimentaris nous (pot trigar 1-2 anys)",
+    "gaccDifficultyEasy": "Easy",
+    "gaccDifficultyModerate": "Moderate",
+    "gaccDifficultyDifficult": "Difficult"
   },
   "Report": {
     "loadingTitle": "Carregant el vostre informe",
@@ -2222,7 +2229,10 @@
     "cccAuditItem_traceability": "Documentació del sistema de traçabilitat",
     "cccAuditItem_enviroSafety": "Compliment mediambiental i de seguretat",
     "ordinaryLabel": "Ordinari",
-    "specialLabel": "Especial"
+    "specialLabel": "Especial",
+    "difficulty_easy": "Easy",
+    "difficulty_moderate": "Moderate",
+    "difficulty_difficult": "Difficult"
   },
   "Navbar": {
     "selfCheck": "Autoavaluació",
@@ -2231,7 +2241,8 @@
     "billing": "Facturació",
     "login": "Inici de sessió",
     "register": "Registre",
-    "report": "Informe"
+    "report": "Informe",
+    "reports": "Els meus informes"
   },
   "Breadcrumb": {
     "pricing": "Preus"

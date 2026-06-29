@@ -81,7 +81,11 @@
     "viewReportsDesc": "Consultez vos rapports de conformité",
     "manageSubscriptionDesc": "Gérez votre abonnement",
     "youAreOnFreePlan": "Vous êtes actuellement sur le forfait Gratuit.",
-    "viewPricing": "Voir les prix"
+    "viewPricing": "Voir les prix",
+    "paid": "paid",
+    "pending": "pending",
+    "prev": "← Prev",
+    "next": "Next →"
   },
   "Pricing": {
     "title": "Tarification simple",
@@ -1825,7 +1829,10 @@
     "gaccCat_health_food_labTest_5": "Désintégration / dissolution",
     "gaccCat_health_food_reject_1_problem": "Nouvel ingrédient ne figurant pas dans le catalogue alimentaire chinois",
     "gaccCat_health_food_reject_1_cause": "Ingrédient non approuvé pour une utilisation en Chine",
-    "gaccCat_health_food_reject_1_solution": "Application d'ingrédients alimentaires nouveaux (peut prendre 1 à 2 ans)"
+    "gaccCat_health_food_reject_1_solution": "Application d'ingrédients alimentaires nouveaux (peut prendre 1 à 2 ans)",
+    "gaccDifficultyEasy": "Easy",
+    "gaccDifficultyModerate": "Moderate",
+    "gaccDifficultyDifficult": "Difficult"
   },
   "Report": {
     "loadingTitle": "Chargement de votre rapport",
@@ -2222,7 +2229,10 @@
     "cccAuditItem_traceability": "Documentation du système de traçabilité",
     "cccAuditItem_enviroSafety": "Conformité environnementale et sécurité",
     "ordinaryLabel": "Ordinaire",
-    "specialLabel": "Spécial"
+    "specialLabel": "Spécial",
+    "difficulty_easy": "Easy",
+    "difficulty_moderate": "Moderate",
+    "difficulty_difficult": "Difficult"
   },
   "Navbar": {
     "selfCheck": "Auto-évaluation",
@@ -2231,7 +2241,8 @@
     "billing": "Facturation",
     "login": "Connexion",
     "register": "Inscription",
-    "report": "Rapport"
+    "report": "Rapport",
+    "reports": "Mes rapports"
   },
   "Breadcrumb": {
     "pricing": "Tarifs"

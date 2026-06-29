@@ -81,7 +81,11 @@
     "viewReportsDesc": "अपनी अनुपालन रिपोर्ट देखें",
     "manageSubscriptionDesc": "अपनी सदस्यता प्रबंधित करें",
     "viewPricing": "मूल्य निर्धारण देखें",
-    "youAreOnFreePlan": "आप वर्तमान में निःशुल्क योजना पर हैं।"
+    "youAreOnFreePlan": "आप वर्तमान में निःशुल्क योजना पर हैं।",
+    "paid": "paid",
+    "pending": "pending",
+    "prev": "← Prev",
+    "next": "Next →"
   },
   "Pricing": {
     "title": "सरल मूल्य निर्धारण",
@@ -1825,7 +1829,10 @@
     "gaccCat_health_food_labTest_5": "विघटन/विघटन",
     "gaccCat_health_food_reject_1_problem": "नवीन सामग्री चीन की खाद्य सूची में नहीं है",
     "gaccCat_health_food_reject_1_cause": "घटक चीन में उपयोग के लिए स्वीकृत नहीं है",
-    "gaccCat_health_food_reject_1_solution": "नवीन खाद्य सामग्री अनुप्रयोग (1-2 वर्ष लग सकते हैं)"
+    "gaccCat_health_food_reject_1_solution": "नवीन खाद्य सामग्री अनुप्रयोग (1-2 वर्ष लग सकते हैं)",
+    "gaccDifficultyEasy": "Easy",
+    "gaccDifficultyModerate": "Moderate",
+    "gaccDifficultyDifficult": "Difficult"
   },
   "Report": {
     "loadingTitle": "आपकी रिपोर्ट लोड हो रही है",
@@ -2222,7 +2229,10 @@
     "cccAuditItem_traceability": "ट्रैसेबिलिटी सिस्टम दस्तावेज़ीकरण",
     "cccAuditItem_enviroSafety": "पर्यावरण एवं सुरक्षा अनुपालन",
     "ordinaryLabel": "साधारण",
-    "specialLabel": "विशेष"
+    "specialLabel": "विशेष",
+    "difficulty_easy": "Easy",
+    "difficulty_moderate": "Moderate",
+    "difficulty_difficult": "Difficult"
   },
   "Navbar": {
     "selfCheck": "स्व-जानच",
@@ -2231,7 +2241,8 @@
     "billing": "बिलिंג",
     "login": "लॉगिन",
     "register": "पंजీकरण",
-    "report": "रिपोर्ट"
+    "report": "रिपोर्ट",
+    "reports": "मेरी रिपोर्ट"
   },
   "Breadcrumb": {
     "pricing": "मूल्य निर्धारण"

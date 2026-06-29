@@ -81,7 +81,11 @@
     "viewReportsDesc": "Sehen Sie sich Ihre Compliance-Berichte an",
     "manageSubscriptionDesc": "Verwalten Sie Ihr Abonnement",
     "viewPricing": "Preise anzeigen",
-    "youAreOnFreePlan": "Sie nutzen derzeit den kostenlosen Plan."
+    "youAreOnFreePlan": "Sie nutzen derzeit den kostenlosen Plan.",
+    "paid": "paid",
+    "pending": "pending",
+    "prev": "← Prev",
+    "next": "Next →"
   },
   "Pricing": {
     "title": "Einfache Preisgestaltung",
@@ -1825,7 +1829,10 @@
     "gaccCat_health_food_labTest_5": "Desintegration/ Auflösung",
     "gaccCat_health_food_reject_1_problem": "Neuartige Zutat nicht im chinesischen Lebensmittelkatalog",
     "gaccCat_health_food_reject_1_cause": "Inhaltsstoff nicht für die Verwendung in China zugelassen",
-    "gaccCat_health_food_reject_1_solution": "Anwendung neuartiger Lebensmittelzutaten (kann 1-2 Jahre dauern)"
+    "gaccCat_health_food_reject_1_solution": "Anwendung neuartiger Lebensmittelzutaten (kann 1-2 Jahre dauern)",
+    "gaccDifficultyEasy": "Easy",
+    "gaccDifficultyModerate": "Moderate",
+    "gaccDifficultyDifficult": "Difficult"
   },
   "Report": {
     "loadingTitle": "Laden Ihres Berichts",
@@ -2222,7 +2229,10 @@
     "cccAuditItem_traceability": "Dokumentation des Rückverfolgbarkeitssystems",
     "cccAuditItem_enviroSafety": "Einhaltung von Umwelt- und Sicherheitsvorschriften",
     "ordinaryLabel": "Gewöhnlich",
-    "specialLabel": "Spezial"
+    "specialLabel": "Spezial",
+    "difficulty_easy": "Easy",
+    "difficulty_moderate": "Moderate",
+    "difficulty_difficult": "Difficult"
   },
   "Navbar": {
     "selfCheck": "Selbstprüfung",
@@ -2231,7 +2241,8 @@
     "billing": "Abrechnung",
     "login": "Anmeldung",
     "register": "Registrierung",
-    "report": "Bericht"
+    "report": "Bericht",
+    "reports": "Meine Berichte"
   },
   "Breadcrumb": {
     "pricing": "Preise"

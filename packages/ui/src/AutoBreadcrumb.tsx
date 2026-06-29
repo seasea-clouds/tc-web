@@ -40,6 +40,7 @@ const SEGMENT_LABELS: Record<string, string> = {
   'login': 'login',
   'register': 'register',
   'report': 'report',
+  'reports': 'reports',
   // Portal /c/me/ sub-pages
   'me': 'mePage',
   'settings': 'settings',

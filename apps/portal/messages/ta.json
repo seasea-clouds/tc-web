@@ -81,7 +81,11 @@
     "viewReportsDesc": "உங்கள் இணக்க அறிக்கைகளைப் பார்க்கவும்",
     "manageSubscriptionDesc": "உங்கள் சந்தாவை நிர்வகிக்கவும்",
     "viewPricing": "விலை நிர்ணயம் பார்க்கவும்",
-    "youAreOnFreePlan": "நீங்கள் தற்போது இலவச திட்டத்தில் உள்ளீர்கள்."
+    "youAreOnFreePlan": "நீங்கள் தற்போது இலவச திட்டத்தில் உள்ளீர்கள்.",
+    "paid": "paid",
+    "pending": "pending",
+    "prev": "← Prev",
+    "next": "Next →"
   },
   "Pricing": {
     "title": "எளிய விலை",
@@ -1825,7 +1829,10 @@
     "gaccCat_health_food_labTest_5": "சிதைவு / கலைத்தல்",
     "gaccCat_health_food_reject_1_problem": "புதிய மூலப்பொருள் சீனா உணவு பட்டியலில் இல்லை",
     "gaccCat_health_food_reject_1_cause": "மூலப்பொருள் சீனாவில் பயன்படுத்த அனுமதிக்கப்படவில்லை",
-    "gaccCat_health_food_reject_1_solution": "புதிய உணவு மூலப்பொருள் பயன்பாடு (1-2 ஆண்டுகள் ஆகலாம்)"
+    "gaccCat_health_food_reject_1_solution": "புதிய உணவு மூலப்பொருள் பயன்பாடு (1-2 ஆண்டுகள் ஆகலாம்)",
+    "gaccDifficultyEasy": "Easy",
+    "gaccDifficultyModerate": "Moderate",
+    "gaccDifficultyDifficult": "Difficult"
   },
   "Report": {
     "loadingTitle": "உங்கள் அறிக்கையை ஏற்றுகிறது",
@@ -2222,7 +2229,10 @@
     "cccAuditItem_traceability": "டிரேசபிலிட்டி அமைப்பு ஆவணங்கள்",
     "cccAuditItem_enviroSafety": "சுற்றுச்சூழல் மற்றும் பாதுகாப்பு இணக்கம்",
     "ordinaryLabel": "சாதாரண",
-    "specialLabel": "சிறப்பு"
+    "specialLabel": "சிறப்பு",
+    "difficulty_easy": "Easy",
+    "difficulty_moderate": "Moderate",
+    "difficulty_difficult": "Difficult"
   },
   "Navbar": {
     "pricing": "விலை நிர்ணயம்",
@@ -2231,7 +2241,8 @@
     "login": "உள்நுழைவு",
     "register": "பதிவு",
     "report": "அறிக்கை",
-    "selfCheck": "தன்னிறைவு சோதனை"
+    "selfCheck": "தன்னிறைவு சோதனை",
+    "reports": "எனது அறிக்கைகள்"
   },
   "Breadcrumb": {
     "pricing": "விலை நிர்ணயம்"

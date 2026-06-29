@@ -81,7 +81,11 @@
     "viewReportsDesc": "Δείτε τις αναφορές συμμόρφωσης",
     "manageSubscriptionDesc": "Διαχειριστείτε τη συνδρομή σας",
     "viewPricing": "Προβολή Τιμολόγησης",
-    "youAreOnFreePlan": "Αυτήν τη στιγμή βρίσκεστε στο δωρεάν πρόγραμμα."
+    "youAreOnFreePlan": "Αυτήν τη στιγμή βρίσκεστε στο δωρεάν πρόγραμμα.",
+    "paid": "paid",
+    "pending": "pending",
+    "prev": "← Prev",
+    "next": "Next →"
   },
   "Pricing": {
     "title": "Απλή τιμολόγηση",
@@ -1825,7 +1829,10 @@
     "gaccCat_health_food_labTest_5": "Αποσύνθεση / διάλυση",
     "gaccCat_health_food_reject_1_problem": "Νέο συστατικό όχι στον κατάλογο τροφίμων της Κίνας",
     "gaccCat_health_food_reject_1_cause": "Συστατικό που δεν έχει εγκριθεί για χρήση στην Κίνα",
-    "gaccCat_health_food_reject_1_solution": "Νέα εφαρμογή συστατικών τροφίμων (μπορεί να διαρκέσει 1-2 έτη)"
+    "gaccCat_health_food_reject_1_solution": "Νέα εφαρμογή συστατικών τροφίμων (μπορεί να διαρκέσει 1-2 έτη)",
+    "gaccDifficultyEasy": "Easy",
+    "gaccDifficultyModerate": "Moderate",
+    "gaccDifficultyDifficult": "Difficult"
   },
   "Report": {
     "loadingTitle": "Φόρτωση της αναφοράς σας",
@@ -2222,7 +2229,10 @@
     "cccAuditItem_traceability": "Τεκμηρίωση συστήματος ιχνηλασιμότητας",
     "cccAuditItem_enviroSafety": "Συμμόρφωση με το περιβάλλον και την ασφάλεια",
     "ordinaryLabel": "Συνήθης",
-    "specialLabel": "Ειδικός"
+    "specialLabel": "Ειδικός",
+    "difficulty_easy": "Easy",
+    "difficulty_moderate": "Moderate",
+    "difficulty_difficult": "Difficult"
   },
   "Navbar": {
     "selfCheck": "Αυτοαξιολόγηση",
@@ -2231,7 +2241,8 @@
     "billing": "Τιμολόγηση",
     "login": "Σύνδεση",
     "register": "Εγγραφή",
-    "report": "Αναφορά"
+    "report": "Αναφορά",
+    "reports": "Οι αναφορές μου"
   },
   "Breadcrumb": {
     "pricing": "Τιμολόγηση"

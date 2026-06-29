@@ -81,7 +81,11 @@
     "viewReportsDesc": "Pregledajte svoja izvješća o usklađenosti",
     "manageSubscriptionDesc": "Upravljajte svojom pretplatom",
     "viewPricing": "Pogledajte cijene",
-    "youAreOnFreePlan": "Trenutno ste na besplatnom planu."
+    "youAreOnFreePlan": "Trenutno ste na besplatnom planu.",
+    "paid": "paid",
+    "pending": "pending",
+    "prev": "← Prev",
+    "next": "Next →"
   },
   "Pricing": {
     "title": "Jednostavna cijena",
@@ -1825,7 +1829,10 @@
     "gaccCat_health_food_labTest_5": "Raspad/rastvaranje",
     "gaccCat_health_food_reject_1_problem": "Novi sastojak nije u kineskom prehrambenom katalogu",
     "gaccCat_health_food_reject_1_cause": "Sastojak nije odobren za upotrebu u Kini",
-    "gaccCat_health_food_reject_1_solution": "Primjena novih sastojaka hrane (može trajati 1-2 godine)"
+    "gaccCat_health_food_reject_1_solution": "Primjena novih sastojaka hrane (može trajati 1-2 godine)",
+    "gaccDifficultyEasy": "Easy",
+    "gaccDifficultyModerate": "Moderate",
+    "gaccDifficultyDifficult": "Difficult"
   },
   "Report": {
     "loadingTitle": "Učitavanje vašeg izvješća",
@@ -2222,7 +2229,10 @@
     "cccAuditItem_traceability": "Dokumentacija sustava sljedivosti",
     "cccAuditItem_enviroSafety": "Usklađenost s okolišem i sigurnošću",
     "ordinaryLabel": "Obični",
-    "specialLabel": "Posebno"
+    "specialLabel": "Posebno",
+    "difficulty_easy": "Easy",
+    "difficulty_moderate": "Moderate",
+    "difficulty_difficult": "Difficult"
   },
   "Navbar": {
     "selfCheck": "Samoprocjena",
@@ -2231,7 +2241,8 @@
     "billing": "Naplaćivanje",
     "login": "Prijava",
     "register": "Registracija",
-    "report": "Izvještaj"
+    "report": "Izvještaj",
+    "reports": "Moja izvješća"
   },
   "Breadcrumb": {
     "pricing": "Cijene"

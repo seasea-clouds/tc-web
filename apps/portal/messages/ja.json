@@ -81,7 +81,11 @@
     "viewReportsDesc": "コンプライアンスレポートを表示する",
     "manageSubscriptionDesc": "サブスクリプションを管理する",
     "viewPricing": "価格を見る",
-    "youAreOnFreePlan": "現在は無料プランをご利用中です。"
+    "youAreOnFreePlan": "現在は無料プランをご利用中です。",
+    "paid": "paid",
+    "pending": "pending",
+    "prev": "← Prev",
+    "next": "Next →"
   },
   "Pricing": {
     "title": "シンプルな価格設定",
@@ -1825,7 +1829,10 @@
     "gaccCat_health_food_labTest_5": "崩壊・溶解",
     "gaccCat_health_food_reject_1_problem": "中国の食品カタログに載っていない斬新な食材",
     "gaccCat_health_food_reject_1_cause": "中国での使用が承認されていない成分",
-    "gaccCat_health_food_reject_1_solution": "新規食品成分の適用 (1～2 年かかる場合があります)"
+    "gaccCat_health_food_reject_1_solution": "新規食品成分の適用 (1～2 年かかる場合があります)",
+    "gaccDifficultyEasy": "Easy",
+    "gaccDifficultyModerate": "Moderate",
+    "gaccDifficultyDifficult": "Difficult"
   },
   "Report": {
     "loadingTitle": "レポートをロードする",
@@ -2222,7 +2229,10 @@
     "cccAuditItem_traceability": "トレーサビリティ システムのドキュメント",
     "cccAuditItem_enviroSafety": "環境と安全のコンプライアンス",
     "ordinaryLabel": "普通",
-    "specialLabel": "特別"
+    "specialLabel": "特別",
+    "difficulty_easy": "Easy",
+    "difficulty_moderate": "Moderate",
+    "difficulty_difficult": "Difficult"
   },
   "Navbar": {
     "selfCheck": "セルフチェック",
@@ -2231,7 +2241,8 @@
     "billing": "請求",
     "login": "ログイン",
     "register": "登録",
-    "report": "レポート"
+    "report": "レポート",
+    "reports": "私のレポート"
   },
   "Breadcrumb": {
     "pricing": "価格設定"

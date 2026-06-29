@@ -81,7 +81,11 @@
     "viewReportsDesc": "عرض تقارير الامتثال الخاصة بك",
     "manageSubscriptionDesc": "إدارة اشتراكك",
     "youAreOnFreePlan": "أنت حاليًا مشترك في الخطة المجانية.",
-    "viewPricing": "عرض التسعير"
+    "viewPricing": "عرض التسعير",
+    "paid": "paid",
+    "pending": "pending",
+    "prev": "← Prev",
+    "next": "Next →"
   },
   "Pricing": {
     "title": "تسعير بسيط",
@@ -1825,7 +1829,10 @@
     "gaccCat_health_food_labTest_5": "التفكك/الانحلال",
     "gaccCat_health_food_reject_1_problem": "عنصر جديد غير موجود في كتالوج الطعام الصيني",
     "gaccCat_health_food_reject_1_cause": "المكون غير معتمد للاستخدام في الصين",
-    "gaccCat_health_food_reject_1_solution": "تطبيق جديد للمكونات الغذائية (قد يستغرق من عام إلى عامين)"
+    "gaccCat_health_food_reject_1_solution": "تطبيق جديد للمكونات الغذائية (قد يستغرق من عام إلى عامين)",
+    "gaccDifficultyEasy": "Easy",
+    "gaccDifficultyModerate": "Moderate",
+    "gaccDifficultyDifficult": "Difficult"
   },
   "Report": {
     "loadingTitle": "جارٍ تحميل تقريرك",
@@ -2222,7 +2229,10 @@
     "cccAuditItem_traceability": "وثائق نظام التتبع",
     "cccAuditItem_enviroSafety": "الامتثال البيئي والسلامة",
     "ordinaryLabel": "عادي",
-    "specialLabel": "خاص"
+    "specialLabel": "خاص",
+    "difficulty_easy": "Easy",
+    "difficulty_moderate": "Moderate",
+    "difficulty_difficult": "Difficult"
   },
   "Navbar": {
     "selfCheck": "التحقق الذاتي",
@@ -2231,7 +2241,8 @@
     "billing": "الفواتير",
     "login": "تسجيل الدخول",
     "register": "التسجيل",
-    "report": "تقرير"
+    "report": "تقرير",
+    "reports": "تقاريري"
   },
   "Breadcrumb": {
     "pricing": "التسعير"

@@ -82,10 +82,10 @@
     "manageSubscriptionDesc": "अपनी सदस्यता प्रबंधित करें",
     "viewPricing": "मूल्य निर्धारण देखें",
     "youAreOnFreePlan": "आप वर्तमान में निःशुल्क योजना पर हैं।",
-    "paid": "paid",
-    "pending": "pending",
-    "prev": "← Prev",
-    "next": "Next →"
+    "paid": "चुकाया गया",
+    "pending": "लंबित",
+    "prev": "← पिछला",
+    "next": "अगला →"
   },
   "Pricing": {
     "title": "सरल मूल्य निर्धारण",
@@ -1830,9 +1830,9 @@
     "gaccCat_health_food_reject_1_problem": "नवीन सामग्री चीन की खाद्य सूची में नहीं है",
     "gaccCat_health_food_reject_1_cause": "घटक चीन में उपयोग के लिए स्वीकृत नहीं है",
     "gaccCat_health_food_reject_1_solution": "नवीन खाद्य सामग्री अनुप्रयोग (1-2 वर्ष लग सकते हैं)",
-    "gaccDifficultyEasy": "Easy",
-    "gaccDifficultyModerate": "Moderate",
-    "gaccDifficultyDifficult": "Difficult"
+    "gaccDifficultyEasy": "आसान",
+    "gaccDifficultyModerate": "मध्यम",
+    "gaccDifficultyDifficult": "कठिन"
   },
   "Report": {
     "loadingTitle": "आपकी रिपोर्ट लोड हो रही है",
@@ -2230,12 +2230,12 @@
     "cccAuditItem_enviroSafety": "पर्यावरण एवं सुरक्षा अनुपालन",
     "ordinaryLabel": "साधारण",
     "specialLabel": "विशेष",
-    "difficulty_easy": "Easy",
-    "difficulty_moderate": "Moderate",
-    "difficulty_difficult": "Difficult",
-    "timelineWeeks": "weeks",
-    "timelineMonths": "months",
-    "timelineDays": "days",
+    "difficulty_easy": "आसान",
+    "difficulty_moderate": "मध्यम",
+    "difficulty_difficult": "कठिन",
+    "timelineWeeks": "हफ्तों",
+    "timelineMonths": "महीने",
+    "timelineDays": "दिन",
     "curUsd": "$"
   },
   "Navbar": {

@@ -82,10 +82,10 @@
     "manageSubscriptionDesc": "Bestuur jou intekening",
     "viewPricing": "Bekyk pryse",
     "youAreOnFreePlan": "Jy is tans op die gratis plan.",
-    "paid": "paid",
-    "pending": "pending",
-    "prev": "← Prev",
-    "next": "Next →"
+    "paid": "betaal",
+    "pending": "hangende",
+    "prev": "← Vorige",
+    "next": "Volgende →"
   },
   "Pricing": {
     "title": "Eenvoudige prysbepaling",
@@ -1830,9 +1830,9 @@
     "gaccCat_health_food_reject_1_problem": "Nuwe bestanddeel nie in China se voedselkatalogus nie",
     "gaccCat_health_food_reject_1_cause": "Bestanddeel nie goedgekeur vir gebruik in China nie",
     "gaccCat_health_food_reject_1_solution": "Toepassing van nuwe voedselbestanddele (kan 1-2 jaar neem)",
-    "gaccDifficultyEasy": "Easy",
-    "gaccDifficultyModerate": "Moderate",
-    "gaccDifficultyDifficult": "Difficult"
+    "gaccDifficultyEasy": "Maklik",
+    "gaccDifficultyModerate": "Matig",
+    "gaccDifficultyDifficult": "Moeilik"
   },
   "Report": {
     "loadingTitle": "Laai tans jou verslag",
@@ -2230,12 +2230,12 @@
     "cccAuditItem_enviroSafety": "Omgewings- en veiligheidsnakoming",
     "ordinaryLabel": "Gewone",
     "specialLabel": "Spesiale",
-    "difficulty_easy": "Easy",
-    "difficulty_moderate": "Moderate",
-    "difficulty_difficult": "Difficult",
-    "timelineWeeks": "weeks",
-    "timelineMonths": "months",
-    "timelineDays": "days",
+    "difficulty_easy": "Maklik",
+    "difficulty_moderate": "Matig",
+    "difficulty_difficult": "Moeilik",
+    "timelineWeeks": "weke",
+    "timelineMonths": "maande",
+    "timelineDays": "dae",
     "curUsd": "$"
   },
   "Navbar": {

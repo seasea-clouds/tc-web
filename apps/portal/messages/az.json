@@ -82,10 +82,10 @@
     "manageSubscriptionDesc": "Abunəliyinizi idarə edin",
     "viewPricing": "Qiymətlərə Baxın",
     "youAreOnFreePlan": "Hazırda Pulsuz plandasınız.",
-    "paid": "paid",
-    "pending": "pending",
-    "prev": "← Prev",
-    "next": "Next →"
+    "paid": "ödənilmişdir",
+    "pending": "gözləyir",
+    "prev": "← Əvvəlki",
+    "next": "Sonrakı →"
   },
   "Pricing": {
     "title": "Sadə Qiymətləndirmə",
@@ -1830,9 +1830,9 @@
     "gaccCat_health_food_reject_1_problem": "Yeni tərkib hissəsi Çin qida kataloqunda yoxdur",
     "gaccCat_health_food_reject_1_cause": "Tərkib Çində istifadə üçün təsdiqlənməyib",
     "gaccCat_health_food_reject_1_solution": "Yeni qida inqrediyentinin tətbiqi (1-2 il çəkə bilər)",
-    "gaccDifficultyEasy": "Easy",
-    "gaccDifficultyModerate": "Moderate",
-    "gaccDifficultyDifficult": "Difficult"
+    "gaccDifficultyEasy": "Asan",
+    "gaccDifficultyModerate": "Orta",
+    "gaccDifficultyDifficult": "Çətin"
   },
   "Report": {
     "loadingTitle": "Hesabatınız Yüklənir",
@@ -2230,12 +2230,12 @@
     "cccAuditItem_enviroSafety": "Ətraf mühitə və təhlükəsizliyə uyğunluq",
     "ordinaryLabel": "Adi",
     "specialLabel": "Xüsusi",
-    "difficulty_easy": "Easy",
-    "difficulty_moderate": "Moderate",
-    "difficulty_difficult": "Difficult",
-    "timelineWeeks": "weeks",
-    "timelineMonths": "months",
-    "timelineDays": "days",
+    "difficulty_easy": "Asan",
+    "difficulty_moderate": "Orta",
+    "difficulty_difficult": "Çətin",
+    "timelineWeeks": "həftələr",
+    "timelineMonths": "ay",
+    "timelineDays": "günlər",
     "curUsd": "$"
   },
   "Navbar": {

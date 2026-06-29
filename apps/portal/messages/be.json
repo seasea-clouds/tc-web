@@ -82,10 +82,10 @@
     "manageSubscriptionDesc": "Кіруйце сваёй падпіскай",
     "viewPricing": "Паглядзець цэны",
     "youAreOnFreePlan": "Зараз вы карыстаецеся бясплатным планам.",
-    "paid": "paid",
-    "pending": "pending",
-    "prev": "← Prev",
-    "next": "Next →"
+    "paid": "аплачаны",
+    "pending": "у чаканні",
+    "prev": "← Папярэд",
+    "next": "Далей →"
   },
   "Pricing": {
     "title": "Простае цэнаўтварэнне",
@@ -1830,9 +1830,9 @@
     "gaccCat_health_food_reject_1_problem": "Новага інгрэдыента няма ў каталогу харчовых прадуктаў Кітая",
     "gaccCat_health_food_reject_1_cause": "Інгрэдыент не дазволены для выкарыстання ў Кітаі",
     "gaccCat_health_food_reject_1_solution": "Прымяненне новых харчовых інгрэдыентаў (можа заняць 1-2 гады)",
-    "gaccDifficultyEasy": "Easy",
-    "gaccDifficultyModerate": "Moderate",
-    "gaccDifficultyDifficult": "Difficult"
+    "gaccDifficultyEasy": "лёгка",
+    "gaccDifficultyModerate": "Умераны",
+    "gaccDifficultyDifficult": "Цяжка"
   },
   "Report": {
     "loadingTitle": "Загрузка вашай справаздачы",
@@ -2230,12 +2230,12 @@
     "cccAuditItem_enviroSafety": "Адпаведнасць экалогіі і бяспекі",
     "ordinaryLabel": "Звычайны",
     "specialLabel": "Спецыяльны",
-    "difficulty_easy": "Easy",
-    "difficulty_moderate": "Moderate",
-    "difficulty_difficult": "Difficult",
-    "timelineWeeks": "weeks",
-    "timelineMonths": "months",
-    "timelineDays": "days",
+    "difficulty_easy": "лёгка",
+    "difficulty_moderate": "Умераны",
+    "difficulty_difficult": "Цяжка",
+    "timelineWeeks": "тыдняў",
+    "timelineMonths": "месяцаў",
+    "timelineDays": "дзён",
     "curUsd": "$"
   },
   "Navbar": {

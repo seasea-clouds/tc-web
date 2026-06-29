@@ -82,10 +82,10 @@
     "manageSubscriptionDesc": "Управляйте своей подпиской",
     "youAreOnFreePlan": "В настоящее время вы используете бесплатный план.",
     "viewPricing": "Посмотреть цены",
-    "paid": "paid",
-    "pending": "pending",
-    "prev": "← Prev",
-    "next": "Next →"
+    "paid": "оплаченный",
+    "pending": "в ожидании",
+    "prev": "← Предыдущий",
+    "next": "Далее →"
   },
   "Pricing": {
     "title": "Простое ценообразование",
@@ -1830,9 +1830,9 @@
     "gaccCat_health_food_reject_1_problem": "Новый ингредиент, которого нет в каталоге китайских продуктов питания",
     "gaccCat_health_food_reject_1_cause": "Ингредиент, не разрешенный к использованию в Китае",
     "gaccCat_health_food_reject_1_solution": "Применение новых пищевых ингредиентов (может занять 1-2 года)",
-    "gaccDifficultyEasy": "Easy",
-    "gaccDifficultyModerate": "Moderate",
-    "gaccDifficultyDifficult": "Difficult"
+    "gaccDifficultyEasy": "Легкий",
+    "gaccDifficultyModerate": "Умеренный",
+    "gaccDifficultyDifficult": "Трудный"
   },
   "Report": {
     "loadingTitle": "Загрузка вашего отчета",
@@ -2230,12 +2230,12 @@
     "cccAuditItem_enviroSafety": "Соблюдение требований экологии и безопасности",
     "ordinaryLabel": "Обычный",
     "specialLabel": "Специальный",
-    "difficulty_easy": "Easy",
-    "difficulty_moderate": "Moderate",
-    "difficulty_difficult": "Difficult",
-    "timelineWeeks": "weeks",
-    "timelineMonths": "months",
-    "timelineDays": "days",
+    "difficulty_easy": "Легкий",
+    "difficulty_moderate": "Умеренный",
+    "difficulty_difficult": "Трудный",
+    "timelineWeeks": "недели",
+    "timelineMonths": "месяцы",
+    "timelineDays": "дни",
     "curUsd": "$"
   },
   "Navbar": {

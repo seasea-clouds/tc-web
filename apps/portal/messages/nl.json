@@ -82,10 +82,10 @@
     "manageSubscriptionDesc": "Beheer uw abonnement",
     "youAreOnFreePlan": "Je hebt momenteel het gratis abonnement.",
     "viewPricing": "Bekijk prijzen",
-    "paid": "paid",
-    "pending": "pending",
-    "prev": "← Prev",
-    "next": "Next →"
+    "paid": "betaald",
+    "pending": "in behandeling",
+    "prev": "← Vorige",
+    "next": "Volgende →"
   },
   "Pricing": {
     "title": "Eenvoudige prijzen",
@@ -1830,9 +1830,9 @@
     "gaccCat_health_food_reject_1_problem": "Nieuw ingrediënt niet in China voedselcatalogus",
     "gaccCat_health_food_reject_1_cause": "Ingrediënt niet goedgekeurd voor gebruik in China",
     "gaccCat_health_food_reject_1_solution": "Toepassing van nieuwe voedingsingrediënten (kan 1-2 jaar duren)",
-    "gaccDifficultyEasy": "Easy",
-    "gaccDifficultyModerate": "Moderate",
-    "gaccDifficultyDifficult": "Difficult"
+    "gaccDifficultyEasy": "Eenvoudig",
+    "gaccDifficultyModerate": "Gematigd",
+    "gaccDifficultyDifficult": "Moeilijk"
   },
   "Report": {
     "loadingTitle": "Uw rapport laden",
@@ -2230,12 +2230,12 @@
     "cccAuditItem_enviroSafety": "Naleving van milieu- en veiligheidsvoorschriften",
     "ordinaryLabel": "Normaal",
     "specialLabel": "Speciaal",
-    "difficulty_easy": "Easy",
-    "difficulty_moderate": "Moderate",
-    "difficulty_difficult": "Difficult",
-    "timelineWeeks": "weeks",
-    "timelineMonths": "months",
-    "timelineDays": "days",
+    "difficulty_easy": "Eenvoudig",
+    "difficulty_moderate": "Gematigd",
+    "difficulty_difficult": "Moeilijk",
+    "timelineWeeks": "weken",
+    "timelineMonths": "maanden",
+    "timelineDays": "dagen",
     "curUsd": "$"
   },
   "Navbar": {

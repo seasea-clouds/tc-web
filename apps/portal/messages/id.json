@@ -82,10 +82,10 @@
     "manageSubscriptionDesc": "Kelola langganan Anda",
     "viewPricing": "Lihat Harga",
     "youAreOnFreePlan": "Anda saat ini menggunakan paket Gratis.",
-    "paid": "paid",
-    "pending": "pending",
-    "prev": "← Prev",
-    "next": "Next →"
+    "paid": "dibayar",
+    "pending": "tertunda",
+    "prev": "← Sebelumnya",
+    "next": "Selanjutnya →"
   },
   "Pricing": {
     "title": "Penetapan Harga Sederhana",
@@ -1830,9 +1830,9 @@
     "gaccCat_health_food_reject_1_problem": "Bahan baru tidak ada dalam katalog makanan Cina",
     "gaccCat_health_food_reject_1_cause": "Bahan tidak disetujui untuk digunakan di Tiongkok",
     "gaccCat_health_food_reject_1_solution": "Aplikasi bahan makanan baru (bisa memakan waktu 1-2 tahun)",
-    "gaccDifficultyEasy": "Easy",
-    "gaccDifficultyModerate": "Moderate",
-    "gaccDifficultyDifficult": "Difficult"
+    "gaccDifficultyEasy": "Mudah",
+    "gaccDifficultyModerate": "Sedang",
+    "gaccDifficultyDifficult": "Sulit"
   },
   "Report": {
     "loadingTitle": "Memuat Laporan Anda",
@@ -2230,12 +2230,12 @@
     "cccAuditItem_enviroSafety": "Kepatuhan lingkungan dan keselamatan",
     "ordinaryLabel": "Biasa",
     "specialLabel": "Khusus",
-    "difficulty_easy": "Easy",
-    "difficulty_moderate": "Moderate",
-    "difficulty_difficult": "Difficult",
-    "timelineWeeks": "weeks",
-    "timelineMonths": "months",
-    "timelineDays": "days",
+    "difficulty_easy": "Mudah",
+    "difficulty_moderate": "Sedang",
+    "difficulty_difficult": "Sulit",
+    "timelineWeeks": "minggu",
+    "timelineMonths": "bulan",
+    "timelineDays": "hari",
     "curUsd": "$"
   },
   "Navbar": {

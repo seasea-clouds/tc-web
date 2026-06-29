@@ -82,10 +82,10 @@
     "manageSubscriptionDesc": "Gestiona la teva subscripció",
     "viewPricing": "Veure preus",
     "youAreOnFreePlan": "Actualment esteu al pla gratuït.",
-    "paid": "paid",
-    "pending": "pending",
-    "prev": "← Prev",
-    "next": "Next →"
+    "paid": "pagat",
+    "pending": "pendent",
+    "prev": "← Anterior",
+    "next": "Següent →"
   },
   "Pricing": {
     "title": "Preus senzills",
@@ -1830,9 +1830,9 @@
     "gaccCat_health_food_reject_1_problem": "Nou ingredient no al catàleg d'aliments De La Xina",
     "gaccCat_health_food_reject_1_cause": "Ingredient no aprovat per al seu ús A La Xina",
     "gaccCat_health_food_reject_1_solution": "Aplicació d'ingredients alimentaris nous (pot trigar 1-2 anys)",
-    "gaccDifficultyEasy": "Easy",
-    "gaccDifficultyModerate": "Moderate",
-    "gaccDifficultyDifficult": "Difficult"
+    "gaccDifficultyEasy": "Fàcil",
+    "gaccDifficultyModerate": "Moderat",
+    "gaccDifficultyDifficult": "Difícil"
   },
   "Report": {
     "loadingTitle": "Carregant el vostre informe",
@@ -2230,12 +2230,12 @@
     "cccAuditItem_enviroSafety": "Compliment mediambiental i de seguretat",
     "ordinaryLabel": "Ordinari",
     "specialLabel": "Especial",
-    "difficulty_easy": "Easy",
-    "difficulty_moderate": "Moderate",
-    "difficulty_difficult": "Difficult",
-    "timelineWeeks": "weeks",
-    "timelineMonths": "months",
-    "timelineDays": "days",
+    "difficulty_easy": "Fàcil",
+    "difficulty_moderate": "Moderat",
+    "difficulty_difficult": "Difícil",
+    "timelineWeeks": "setmanes",
+    "timelineMonths": "mesos",
+    "timelineDays": "dies",
     "curUsd": "$"
   },
   "Navbar": {

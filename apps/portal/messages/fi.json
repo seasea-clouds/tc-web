@@ -82,10 +82,10 @@
     "manageSubscriptionDesc": "Hallinnoi tilaustasi",
     "viewPricing": "Katso hinnoittelu",
     "youAreOnFreePlan": "Olet tällä hetkellä ilmaisessa paketissa.",
-    "paid": "paid",
-    "pending": "pending",
-    "prev": "← Prev",
-    "next": "Next →"
+    "paid": "maksettu",
+    "pending": "vireillä",
+    "prev": "← Ed",
+    "next": "Seuraava →"
   },
   "Pricing": {
     "title": "Yksinkertainen hinnoittelu",
@@ -1830,9 +1830,9 @@
     "gaccCat_health_food_reject_1_problem": "Uusi ainesosa ei ole Kiinan elintarvikeluettelossa",
     "gaccCat_health_food_reject_1_cause": "Ainesosa, jota ei ole hyväksytty käytettäväksi Kiinassa",
     "gaccCat_health_food_reject_1_solution": "Elintarvikkeiden uuden ainesosan käyttö (voi kestää 1-2 vuotta)",
-    "gaccDifficultyEasy": "Easy",
-    "gaccDifficultyModerate": "Moderate",
-    "gaccDifficultyDifficult": "Difficult"
+    "gaccDifficultyEasy": "Helppo",
+    "gaccDifficultyModerate": "Kohtalainen",
+    "gaccDifficultyDifficult": "Vaikea"
   },
   "Report": {
     "loadingTitle": "Ladataan raporttiasi",
@@ -2230,12 +2230,12 @@
     "cccAuditItem_enviroSafety": "Ympäristö- ja turvallisuusvaatimusten noudattaminen",
     "ordinaryLabel": "Tavallinen",
     "specialLabel": "Erikoisluokka",
-    "difficulty_easy": "Easy",
-    "difficulty_moderate": "Moderate",
-    "difficulty_difficult": "Difficult",
-    "timelineWeeks": "weeks",
-    "timelineMonths": "months",
-    "timelineDays": "days",
+    "difficulty_easy": "Helppo",
+    "difficulty_moderate": "Kohtalainen",
+    "difficulty_difficult": "Vaikea",
+    "timelineWeeks": "viikkoa",
+    "timelineMonths": "kuukautta",
+    "timelineDays": "päivää",
     "curUsd": "$"
   },
   "Navbar": {

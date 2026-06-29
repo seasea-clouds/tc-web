@@ -82,10 +82,10 @@
     "manageSubscriptionDesc": "Menaxhoni abonimin tuaj",
     "viewPricing": "Shiko çmimet",
     "youAreOnFreePlan": "Aktualisht jeni në planin Falas.",
-    "paid": "paid",
-    "pending": "pending",
-    "prev": "← Prev",
-    "next": "Next →"
+    "paid": "paguar",
+    "pending": "në pritje",
+    "prev": "← E mëparshme",
+    "next": "Tjetra →"
   },
   "Pricing": {
     "title": "Çmimi i thjeshtë",
@@ -1830,9 +1830,9 @@
     "gaccCat_health_food_reject_1_problem": "Përbërës i ri jo në katalogun E ushqimit Të Kinës",
     "gaccCat_health_food_reject_1_cause": "Përbërës jo i aprovuar për përdorim Në Kinë",
     "gaccCat_health_food_reject_1_solution": "Aplikimi i ri i përbërësve të ushqimit (mund të zgjasë 1-2 vjet)",
-    "gaccDifficultyEasy": "Easy",
-    "gaccDifficultyModerate": "Moderate",
-    "gaccDifficultyDifficult": "Difficult"
+    "gaccDifficultyEasy": "Lehtë",
+    "gaccDifficultyModerate": "E moderuar",
+    "gaccDifficultyDifficult": "E veshtire"
   },
   "Report": {
     "loadingTitle": "Duke ngarkuar raportin tuaj",
@@ -2230,12 +2230,12 @@
     "cccAuditItem_enviroSafety": "Pajtueshmëria me mjedisin dhe sigurinë",
     "ordinaryLabel": "E zakonshme",
     "specialLabel": "Speciale",
-    "difficulty_easy": "Easy",
-    "difficulty_moderate": "Moderate",
-    "difficulty_difficult": "Difficult",
-    "timelineWeeks": "weeks",
-    "timelineMonths": "months",
-    "timelineDays": "days",
+    "difficulty_easy": "Lehtë",
+    "difficulty_moderate": "E moderuar",
+    "difficulty_difficult": "E veshtire",
+    "timelineWeeks": "javë",
+    "timelineMonths": "muaj",
+    "timelineDays": "ditë",
     "curUsd": "$"
   },
   "Navbar": {

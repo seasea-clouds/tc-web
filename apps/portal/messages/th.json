@@ -82,10 +82,10 @@
     "manageSubscriptionDesc": "จาดการสมัครและวธิีการชําระเงนิ",
     "youAreOnFreePlan": "ขณะนี้คุณอยู่ในแผนฟรี",
     "viewPricing": "ดูราคา",
-    "paid": "paid",
-    "pending": "pending",
-    "prev": "← Prev",
-    "next": "Next →"
+    "paid": "จ่าย",
+    "pending": "รอดำเนินการ",
+    "prev": "← ก่อนหน้า",
+    "next": "ถัดไป →"
   },
   "Pricing": {
     "title": "ราคาแบบง่่าย",
@@ -1830,9 +1830,9 @@
     "gaccCat_health_food_reject_1_problem": "ส่วนผสมใหม่ไม่ได้อยู่ในแค็ตตาล็อกอาหารจีน",
     "gaccCat_health_food_reject_1_cause": "ส่วนผสมไม่ได้รับการอนุมัติให้ใช้ในประเทศจีน",
     "gaccCat_health_food_reject_1_solution": "การใช้ส่วนผสมอาหารแบบใหม่ (อาจใช้เวลา 1-2 ปี)",
-    "gaccDifficultyEasy": "Easy",
-    "gaccDifficultyModerate": "Moderate",
-    "gaccDifficultyDifficult": "Difficult"
+    "gaccDifficultyEasy": "ง่าย",
+    "gaccDifficultyModerate": "ปานกลาง",
+    "gaccDifficultyDifficult": "ยาก"
   },
   "Report": {
     "loadingTitle": "กำลังโหลดรายงานของคุณ",
@@ -2230,12 +2230,12 @@
     "cccAuditItem_enviroSafety": "การปฏิบัติตามข้อกำหนดด้านสิ่งแวดล้อมและความปลอดภัย",
     "ordinaryLabel": "ธรรมดา",
     "specialLabel": "พิเศษ",
-    "difficulty_easy": "Easy",
-    "difficulty_moderate": "Moderate",
-    "difficulty_difficult": "Difficult",
-    "timelineWeeks": "weeks",
-    "timelineMonths": "months",
-    "timelineDays": "days",
+    "difficulty_easy": "ง่าย",
+    "difficulty_moderate": "ปานกลาง",
+    "difficulty_difficult": "ยาก",
+    "timelineWeeks": "สัปดาห์",
+    "timelineMonths": "เดือน",
+    "timelineDays": "วัน",
     "curUsd": "$"
   },
   "Navbar": {

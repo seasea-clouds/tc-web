@@ -82,10 +82,10 @@
     "manageSubscriptionDesc": "Dhibiti usajili wako",
     "viewPricing": "Tazama Bei",
     "youAreOnFreePlan": "Kwa sasa uko kwenye Mpango Bila Malipo.",
-    "paid": "paid",
-    "pending": "pending",
-    "prev": "← Prev",
-    "next": "Next →"
+    "paid": "kulipwa",
+    "pending": "inasubiri",
+    "prev": "← Iliyotangulia",
+    "next": "Inayofuata →"
   },
   "Pricing": {
     "title": "Bei Rahisi",
@@ -1830,9 +1830,9 @@
     "gaccCat_health_food_reject_1_problem": "Kiambato cha riwaya hakiko kwenye orodha ya vyakula vya China",
     "gaccCat_health_food_reject_1_cause": "Kiungo hakijaidhinishwa kutumika nchini Uchina",
     "gaccCat_health_food_reject_1_solution": "Utumizi wa riwaya ya kingo ya chakula (inaweza kuchukua miaka 1-2)",
-    "gaccDifficultyEasy": "Easy",
-    "gaccDifficultyModerate": "Moderate",
-    "gaccDifficultyDifficult": "Difficult"
+    "gaccDifficultyEasy": "Rahisi",
+    "gaccDifficultyModerate": "Wastani",
+    "gaccDifficultyDifficult": "Ngumu"
   },
   "Report": {
     "loadingTitle": "Inapakia Ripoti Yako",
@@ -2230,12 +2230,12 @@
     "cccAuditItem_enviroSafety": "Uzingatiaji wa mazingira na usalama",
     "ordinaryLabel": "Kawaida",
     "specialLabel": "Maalum",
-    "difficulty_easy": "Easy",
-    "difficulty_moderate": "Moderate",
-    "difficulty_difficult": "Difficult",
-    "timelineWeeks": "weeks",
-    "timelineMonths": "months",
-    "timelineDays": "days",
+    "difficulty_easy": "Rahisi",
+    "difficulty_moderate": "Wastani",
+    "difficulty_difficult": "Ngumu",
+    "timelineWeeks": "wiki",
+    "timelineMonths": "miezi",
+    "timelineDays": "siku",
     "curUsd": "$"
   },
   "Navbar": {

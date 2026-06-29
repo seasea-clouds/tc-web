@@ -82,10 +82,10 @@
     "manageSubscriptionDesc": "Διαχειριστείτε τη συνδρομή σας",
     "viewPricing": "Προβολή Τιμολόγησης",
     "youAreOnFreePlan": "Αυτήν τη στιγμή βρίσκεστε στο δωρεάν πρόγραμμα.",
-    "paid": "paid",
-    "pending": "pending",
-    "prev": "← Prev",
-    "next": "Next →"
+    "paid": "έμμισθος",
+    "pending": "εκκρεμής",
+    "prev": "← Προηγ",
+    "next": "Επόμενο →"
   },
   "Pricing": {
     "title": "Απλή τιμολόγηση",
@@ -1830,9 +1830,9 @@
     "gaccCat_health_food_reject_1_problem": "Νέο συστατικό όχι στον κατάλογο τροφίμων της Κίνας",
     "gaccCat_health_food_reject_1_cause": "Συστατικό που δεν έχει εγκριθεί για χρήση στην Κίνα",
     "gaccCat_health_food_reject_1_solution": "Νέα εφαρμογή συστατικών τροφίμων (μπορεί να διαρκέσει 1-2 έτη)",
-    "gaccDifficultyEasy": "Easy",
-    "gaccDifficultyModerate": "Moderate",
-    "gaccDifficultyDifficult": "Difficult"
+    "gaccDifficultyEasy": "Εύκολος",
+    "gaccDifficultyModerate": "Μέτριος",
+    "gaccDifficultyDifficult": "Δύσκολος"
   },
   "Report": {
     "loadingTitle": "Φόρτωση της αναφοράς σας",
@@ -2230,12 +2230,12 @@
     "cccAuditItem_enviroSafety": "Συμμόρφωση με το περιβάλλον και την ασφάλεια",
     "ordinaryLabel": "Συνήθης",
     "specialLabel": "Ειδικός",
-    "difficulty_easy": "Easy",
-    "difficulty_moderate": "Moderate",
-    "difficulty_difficult": "Difficult",
-    "timelineWeeks": "weeks",
-    "timelineMonths": "months",
-    "timelineDays": "days",
+    "difficulty_easy": "Εύκολος",
+    "difficulty_moderate": "Μέτριος",
+    "difficulty_difficult": "Δύσκολος",
+    "timelineWeeks": "εβδομάδες",
+    "timelineMonths": "μήνες",
+    "timelineDays": "ημέρες",
     "curUsd": "$"
   },
   "Navbar": {

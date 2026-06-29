@@ -82,10 +82,10 @@
     "manageSubscriptionDesc": "Zarządzaj swoją subskrypcją",
     "youAreOnFreePlan": "Obecnie korzystasz z planu bezpłatnego.",
     "viewPricing": "Zobacz Cennik",
-    "paid": "paid",
-    "pending": "pending",
-    "prev": "← Prev",
-    "next": "Next →"
+    "paid": "płatny",
+    "pending": "aż do",
+    "prev": "← Poprzednie",
+    "next": "Dalej →"
   },
   "Pricing": {
     "title": "Prosty cennik",
@@ -1830,9 +1830,9 @@
     "gaccCat_health_food_reject_1_problem": "Nowatorski składnik, którego nie ma w chińskim katalogu żywności",
     "gaccCat_health_food_reject_1_cause": "Składnik niezatwierdzony do użytku w Chinach",
     "gaccCat_health_food_reject_1_solution": "Zastosowanie nowego składnika żywności (może zająć 1–2 lata)",
-    "gaccDifficultyEasy": "Easy",
-    "gaccDifficultyModerate": "Moderate",
-    "gaccDifficultyDifficult": "Difficult"
+    "gaccDifficultyEasy": "Łatwy",
+    "gaccDifficultyModerate": "Umiarkowany",
+    "gaccDifficultyDifficult": "Trudny"
   },
   "Report": {
     "loadingTitle": "Ładowanie raportu",
@@ -2230,12 +2230,12 @@
     "cccAuditItem_enviroSafety": "Zgodność z wymogami ochrony środowiska i bezpieczeństwa",
     "ordinaryLabel": "Zwykły",
     "specialLabel": "Specjalny",
-    "difficulty_easy": "Easy",
-    "difficulty_moderate": "Moderate",
-    "difficulty_difficult": "Difficult",
-    "timelineWeeks": "weeks",
-    "timelineMonths": "months",
-    "timelineDays": "days",
+    "difficulty_easy": "Łatwy",
+    "difficulty_moderate": "Umiarkowany",
+    "difficulty_difficult": "Trudny",
+    "timelineWeeks": "tygodnie",
+    "timelineMonths": "miesiące",
+    "timelineDays": "dni",
     "curUsd": "$"
   },
   "Navbar": {

@@ -82,10 +82,10 @@
     "manageSubscriptionDesc": "נהל את המנוי שלך",
     "viewPricing": "צפה בתמחור",
     "youAreOnFreePlan": "אתה נמצא כעת בתוכנית החינמית.",
-    "paid": "paid",
-    "pending": "pending",
-    "prev": "← Prev",
-    "next": "Next →"
+    "paid": "שילם",
+    "pending": "תָלוּי וְעוֹמֵד",
+    "prev": "← הקודם",
+    "next": "הבא →"
   },
   "Pricing": {
     "title": "תמחור פשוט",
@@ -1830,9 +1830,9 @@
     "gaccCat_health_food_reject_1_problem": "מרכיב חדש שאינו בקטלוג המזון של סין",
     "gaccCat_health_food_reject_1_cause": "המרכיב אינו מאושר לשימוש בסין",
     "gaccCat_health_food_reject_1_solution": "יישום מרכיבי מזון חדשניים (יכול לקחת 1-2 שנים)",
-    "gaccDifficultyEasy": "Easy",
-    "gaccDifficultyModerate": "Moderate",
-    "gaccDifficultyDifficult": "Difficult"
+    "gaccDifficultyEasy": "קַל",
+    "gaccDifficultyModerate": "לְמַתֵן",
+    "gaccDifficultyDifficult": "קָשֶׁה"
   },
   "Report": {
     "loadingTitle": "טוען את הדוח שלך",
@@ -2230,12 +2230,12 @@
     "cccAuditItem_enviroSafety": "תאימות סביבתיות ובטיחות",
     "ordinaryLabel": "רגיל",
     "specialLabel": "מיוחד",
-    "difficulty_easy": "Easy",
-    "difficulty_moderate": "Moderate",
-    "difficulty_difficult": "Difficult",
-    "timelineWeeks": "weeks",
-    "timelineMonths": "months",
-    "timelineDays": "days",
+    "difficulty_easy": "קַל",
+    "difficulty_moderate": "לְמַתֵן",
+    "difficulty_difficult": "קָשֶׁה",
+    "timelineWeeks": "שבועות",
+    "timelineMonths": "חודשים",
+    "timelineDays": "ימים",
     "curUsd": "$"
   },
   "Navbar": {

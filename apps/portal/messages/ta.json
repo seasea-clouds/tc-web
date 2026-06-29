@@ -82,10 +82,10 @@
     "manageSubscriptionDesc": "உங்கள் சந்தாவை நிர்வகிக்கவும்",
     "viewPricing": "விலை நிர்ணயம் பார்க்கவும்",
     "youAreOnFreePlan": "நீங்கள் தற்போது இலவச திட்டத்தில் உள்ளீர்கள்.",
-    "paid": "paid",
-    "pending": "pending",
-    "prev": "← Prev",
-    "next": "Next →"
+    "paid": "செலுத்தப்பட்டது",
+    "pending": "நிலுவையில் உள்ளது",
+    "prev": "← முந்தைய",
+    "next": "அடுத்து →"
   },
   "Pricing": {
     "title": "எளிய விலை",
@@ -1830,9 +1830,9 @@
     "gaccCat_health_food_reject_1_problem": "புதிய மூலப்பொருள் சீனா உணவு பட்டியலில் இல்லை",
     "gaccCat_health_food_reject_1_cause": "மூலப்பொருள் சீனாவில் பயன்படுத்த அனுமதிக்கப்படவில்லை",
     "gaccCat_health_food_reject_1_solution": "புதிய உணவு மூலப்பொருள் பயன்பாடு (1-2 ஆண்டுகள் ஆகலாம்)",
-    "gaccDifficultyEasy": "Easy",
-    "gaccDifficultyModerate": "Moderate",
-    "gaccDifficultyDifficult": "Difficult"
+    "gaccDifficultyEasy": "எளிதானது",
+    "gaccDifficultyModerate": "மிதமான",
+    "gaccDifficultyDifficult": "கடினமானது"
   },
   "Report": {
     "loadingTitle": "உங்கள் அறிக்கையை ஏற்றுகிறது",
@@ -2230,12 +2230,12 @@
     "cccAuditItem_enviroSafety": "சுற்றுச்சூழல் மற்றும் பாதுகாப்பு இணக்கம்",
     "ordinaryLabel": "சாதாரண",
     "specialLabel": "சிறப்பு",
-    "difficulty_easy": "Easy",
-    "difficulty_moderate": "Moderate",
-    "difficulty_difficult": "Difficult",
-    "timelineWeeks": "weeks",
-    "timelineMonths": "months",
-    "timelineDays": "days",
+    "difficulty_easy": "எளிதானது",
+    "difficulty_moderate": "மிதமான",
+    "difficulty_difficult": "கடினமானது",
+    "timelineWeeks": "வாரங்கள்",
+    "timelineMonths": "மாதங்கள்",
+    "timelineDays": "நாட்கள்",
     "curUsd": "$"
   },
   "Navbar": {

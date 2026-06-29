@@ -82,10 +82,10 @@
     "manageSubscriptionDesc": "Hantera ditt abonnemang",
     "viewPricing": "Visa priser",
     "youAreOnFreePlan": "Du har för närvarande gratisplanen.",
-    "paid": "paid",
-    "pending": "pending",
-    "prev": "← Prev",
-    "next": "Next →"
+    "paid": "betalas",
+    "pending": "i avvaktan på",
+    "prev": "← Föreg",
+    "next": "Nästa →"
   },
   "Pricing": {
     "title": "Enkel prissättning",
@@ -1830,9 +1830,9 @@
     "gaccCat_health_food_reject_1_problem": "Ny ingrediens inte i Kina matkatalog",
     "gaccCat_health_food_reject_1_cause": "Ingrediens som inte är godkänd för användning i Kina",
     "gaccCat_health_food_reject_1_solution": "Användning av nya livsmedelsingredienser (kan ta 1-2 år)",
-    "gaccDifficultyEasy": "Easy",
-    "gaccDifficultyModerate": "Moderate",
-    "gaccDifficultyDifficult": "Difficult"
+    "gaccDifficultyEasy": "Lätt",
+    "gaccDifficultyModerate": "Måttlig",
+    "gaccDifficultyDifficult": "Svår"
   },
   "Report": {
     "loadingTitle": "Laddar din rapport",
@@ -2230,12 +2230,12 @@
     "cccAuditItem_enviroSafety": "Miljö- och säkerhetsöverensstämmelse",
     "ordinaryLabel": "Vanlig",
     "specialLabel": "Special",
-    "difficulty_easy": "Easy",
-    "difficulty_moderate": "Moderate",
-    "difficulty_difficult": "Difficult",
-    "timelineWeeks": "weeks",
-    "timelineMonths": "months",
-    "timelineDays": "days",
+    "difficulty_easy": "Lätt",
+    "difficulty_moderate": "Måttlig",
+    "difficulty_difficult": "Svår",
+    "timelineWeeks": "veckor",
+    "timelineMonths": "månader",
+    "timelineDays": "dagar",
     "curUsd": "$"
   },
   "Navbar": {

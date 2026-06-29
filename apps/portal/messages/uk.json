@@ -82,10 +82,10 @@
     "manageSubscriptionDesc": "Керуйте своєю підпискою",
     "viewPricing": "Переглянути ціни",
     "youAreOnFreePlan": "Зараз ви використовуєте безкоштовний план.",
-    "paid": "paid",
-    "pending": "pending",
-    "prev": "← Prev",
-    "next": "Next →"
+    "paid": "платний",
+    "pending": "в очікуванні",
+    "prev": "← Попередня",
+    "next": "Далі →"
   },
   "Pricing": {
     "title": "Просте ціноутворення",
@@ -1830,9 +1830,9 @@
     "gaccCat_health_food_reject_1_problem": "Новий інгредієнт, якого немає в каталозі китайських продуктів харчування",
     "gaccCat_health_food_reject_1_cause": "Інгредієнт, не дозволений до використання в Китаї",
     "gaccCat_health_food_reject_1_solution": "Застосування нових харчових інгредієнтів (може зайняти 1-2 роки)",
-    "gaccDifficultyEasy": "Easy",
-    "gaccDifficultyModerate": "Moderate",
-    "gaccDifficultyDifficult": "Difficult"
+    "gaccDifficultyEasy": "легко",
+    "gaccDifficultyModerate": "Помірний",
+    "gaccDifficultyDifficult": "важко"
   },
   "Report": {
     "loadingTitle": "Завантаження звіту",
@@ -2230,12 +2230,12 @@
     "cccAuditItem_enviroSafety": "Відповідність екологічності та безпеки",
     "ordinaryLabel": "Звичайний",
     "specialLabel": "Особливий",
-    "difficulty_easy": "Easy",
-    "difficulty_moderate": "Moderate",
-    "difficulty_difficult": "Difficult",
-    "timelineWeeks": "weeks",
-    "timelineMonths": "months",
-    "timelineDays": "days",
+    "difficulty_easy": "легко",
+    "difficulty_moderate": "Помірний",
+    "difficulty_difficult": "важко",
+    "timelineWeeks": "тижнів",
+    "timelineMonths": "місяців",
+    "timelineDays": "днів",
     "curUsd": "$"
   },
   "Navbar": {

@@ -82,10 +82,10 @@
     "manageSubscriptionDesc": "Urus langganan anda",
     "viewPricing": "Lihat Harga",
     "youAreOnFreePlan": "Anda sedang menggunakan pelan Percuma.",
-    "paid": "paid",
-    "pending": "pending",
-    "prev": "← Prev",
-    "next": "Next →"
+    "paid": "dibayar",
+    "pending": "belum selesai",
+    "prev": "← Sebelumnya",
+    "next": "Seterusnya →"
   },
   "Pricing": {
     "title": "Harga Mudah",
@@ -1830,9 +1830,9 @@
     "gaccCat_health_food_reject_1_problem": "Ramuan novel tiada dalam katalog makanan China",
     "gaccCat_health_food_reject_1_cause": "Ramuan tidak diluluskan untuk digunakan di China",
     "gaccCat_health_food_reject_1_solution": "Permohonan ramuan makanan baru (boleh mengambil masa 1-2 tahun)",
-    "gaccDifficultyEasy": "Easy",
-    "gaccDifficultyModerate": "Moderate",
-    "gaccDifficultyDifficult": "Difficult"
+    "gaccDifficultyEasy": "Mudah",
+    "gaccDifficultyModerate": "Sederhana",
+    "gaccDifficultyDifficult": "Sukar"
   },
   "Report": {
     "loadingTitle": "Memuatkan Laporan Anda",
@@ -2230,12 +2230,12 @@
     "cccAuditItem_enviroSafety": "Pematuhan alam sekitar dan keselamatan",
     "ordinaryLabel": "Biasa",
     "specialLabel": "Khas",
-    "difficulty_easy": "Easy",
-    "difficulty_moderate": "Moderate",
-    "difficulty_difficult": "Difficult",
-    "timelineWeeks": "weeks",
-    "timelineMonths": "months",
-    "timelineDays": "days",
+    "difficulty_easy": "Mudah",
+    "difficulty_moderate": "Sederhana",
+    "difficulty_difficult": "Sukar",
+    "timelineWeeks": "minggu",
+    "timelineMonths": "bulan",
+    "timelineDays": "hari",
     "curUsd": "$"
   },
   "Navbar": {

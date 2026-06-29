@@ -82,10 +82,10 @@
     "manageSubscriptionDesc": "Aboneliğinizi yönetin",
     "youAreOnFreePlan": "Şu anda Ücretsiz plandasınız.",
     "viewPricing": "Fiyatlandırmayı Görüntüle",
-    "paid": "paid",
-    "pending": "pending",
-    "prev": "← Prev",
-    "next": "Next →"
+    "paid": "paralı",
+    "pending": "askıda olması",
+    "prev": "← Önceki",
+    "next": "Sonraki →"
   },
   "Pricing": {
     "title": "Basit Fiyatlandırma",
@@ -1830,9 +1830,9 @@
     "gaccCat_health_food_reject_1_problem": "Çin gıda kataloğunda bulunmayan yeni içerik",
     "gaccCat_health_food_reject_1_cause": "Çin'de kullanım için onaylanmamış içerik",
     "gaccCat_health_food_reject_1_solution": "Yeni gıda maddesi uygulaması (1-2 yıl sürebilir)",
-    "gaccDifficultyEasy": "Easy",
-    "gaccDifficultyModerate": "Moderate",
-    "gaccDifficultyDifficult": "Difficult"
+    "gaccDifficultyEasy": "Kolay",
+    "gaccDifficultyModerate": "Ilıman",
+    "gaccDifficultyDifficult": "Zor"
   },
   "Report": {
     "loadingTitle": "Raporunuzu Yükleme",
@@ -2230,12 +2230,12 @@
     "cccAuditItem_enviroSafety": "Çevre ve güvenlik uyumluluğu",
     "ordinaryLabel": "Sıradan",
     "specialLabel": "Özel",
-    "difficulty_easy": "Easy",
-    "difficulty_moderate": "Moderate",
-    "difficulty_difficult": "Difficult",
-    "timelineWeeks": "weeks",
-    "timelineMonths": "months",
-    "timelineDays": "days",
+    "difficulty_easy": "Kolay",
+    "difficulty_moderate": "Ilıman",
+    "difficulty_difficult": "Zor",
+    "timelineWeeks": "haftalar",
+    "timelineMonths": "aylar",
+    "timelineDays": "günler",
     "curUsd": "$"
   },
   "Navbar": {

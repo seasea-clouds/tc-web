@@ -82,10 +82,10 @@
     "manageSubscriptionDesc": "Управљајте својом претплатом",
     "viewPricing": "Погледајте цене",
     "youAreOnFreePlan": "Тренутно сте на бесплатном плану.",
-    "paid": "paid",
-    "pending": "pending",
-    "prev": "← Prev",
-    "next": "Next →"
+    "paid": "плаћени",
+    "pending": "на чекању",
+    "prev": "← Прет",
+    "next": "Следеће →"
   },
   "Pricing": {
     "title": "Једноставне цене",
@@ -1830,9 +1830,9 @@
     "gaccCat_health_food_reject_1_problem": "Нови састојак није у кинеском каталогу хране",
     "gaccCat_health_food_reject_1_cause": "Састојак није одобрен за употребу у Кини",
     "gaccCat_health_food_reject_1_solution": "Примена нових састојака у храни (може потрајати 1-2 године)",
-    "gaccDifficultyEasy": "Easy",
-    "gaccDifficultyModerate": "Moderate",
-    "gaccDifficultyDifficult": "Difficult"
+    "gaccDifficultyEasy": "Лако",
+    "gaccDifficultyModerate": "Умерено",
+    "gaccDifficultyDifficult": "Тешко"
   },
   "Report": {
     "loadingTitle": "Учитавање вашег извештаја",
@@ -2230,12 +2230,12 @@
     "cccAuditItem_enviroSafety": "Усклађеност са животном средином и безбедношћу",
     "ordinaryLabel": "Обичан",
     "specialLabel": "Специјална",
-    "difficulty_easy": "Easy",
-    "difficulty_moderate": "Moderate",
-    "difficulty_difficult": "Difficult",
-    "timelineWeeks": "weeks",
-    "timelineMonths": "months",
-    "timelineDays": "days",
+    "difficulty_easy": "Лако",
+    "difficulty_moderate": "Умерено",
+    "difficulty_difficult": "Тешко",
+    "timelineWeeks": "недеље",
+    "timelineMonths": "месеци",
+    "timelineDays": "дана",
     "curUsd": "$"
   },
   "Navbar": {

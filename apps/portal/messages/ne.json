@@ -82,10 +82,10 @@
     "manageSubscriptionDesc": "आफ्नो सदस्यता प्रबन्ध गर्नुहोस्",
     "viewPricing": "मूल्य निर्धारण हेर्नुहोस्",
     "youAreOnFreePlan": "तपाईं हाल नि:शुल्क योजनामा ​​हुनुहुन्छ।",
-    "paid": "paid",
-    "pending": "pending",
-    "prev": "← Prev",
-    "next": "Next →"
+    "paid": "भुक्तान गरियो",
+    "pending": "विचाराधीन",
+    "prev": "← अघिल्लो",
+    "next": "अर्को →"
   },
   "Pricing": {
     "title": "सरल मूल्य निर्धारण",
@@ -1830,9 +1830,9 @@
     "gaccCat_health_food_reject_1_problem": "उपन्यास सामग्री चीन खाना सूची मा छैन",
     "gaccCat_health_food_reject_1_cause": "सामग्री चीनमा प्रयोगको लागि अनुमोदित छैन",
     "gaccCat_health_food_reject_1_solution": "उपन्यास खाद्य सामग्री आवेदन (१-२ वर्ष लाग्न सक्छ)",
-    "gaccDifficultyEasy": "Easy",
-    "gaccDifficultyModerate": "Moderate",
-    "gaccDifficultyDifficult": "Difficult"
+    "gaccDifficultyEasy": "सजिलो",
+    "gaccDifficultyModerate": "मध्यम",
+    "gaccDifficultyDifficult": "गाह्रो"
   },
   "Report": {
     "loadingTitle": "तपाईंको रिपोर्ट लोड गर्दै",
@@ -2230,12 +2230,12 @@
     "cccAuditItem_enviroSafety": "पर्यावरण र सुरक्षा अनुपालन",
     "ordinaryLabel": "साधारण",
     "specialLabel": "विशेष",
-    "difficulty_easy": "Easy",
-    "difficulty_moderate": "Moderate",
-    "difficulty_difficult": "Difficult",
-    "timelineWeeks": "weeks",
-    "timelineMonths": "months",
-    "timelineDays": "days",
+    "difficulty_easy": "सजिलो",
+    "difficulty_moderate": "मध्यम",
+    "difficulty_difficult": "गाह्रो",
+    "timelineWeeks": "हप्ताहरू",
+    "timelineMonths": "महिना",
+    "timelineDays": "दिनहरू",
     "curUsd": "$"
   },
   "Navbar": {

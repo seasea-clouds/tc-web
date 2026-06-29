@@ -82,10 +82,10 @@
     "manageSubscriptionDesc": "구독 관리",
     "youAreOnFreePlan": "현재 무료 요금제를 사용 중입니다.",
     "viewPricing": "가격 보기",
-    "paid": "paid",
-    "pending": "pending",
-    "prev": "← Prev",
-    "next": "Next →"
+    "paid": "유급의",
+    "pending": "보류 중",
+    "prev": "← 이전",
+    "next": "다음 →"
   },
   "Pricing": {
     "title": "단순 가격",
@@ -1830,9 +1830,9 @@
     "gaccCat_health_food_reject_1_problem": "중국 식품 카탈로그에는 없는 새로운 성분",
     "gaccCat_health_food_reject_1_cause": "중국에서 사용이 승인되지 않은 성분",
     "gaccCat_health_food_reject_1_solution": "신규 식품원료 적용 (1~2년 소요 가능)",
-    "gaccDifficultyEasy": "Easy",
-    "gaccDifficultyModerate": "Moderate",
-    "gaccDifficultyDifficult": "Difficult"
+    "gaccDifficultyEasy": "쉬운",
+    "gaccDifficultyModerate": "보통의",
+    "gaccDifficultyDifficult": "어려운"
   },
   "Report": {
     "loadingTitle": "보고서 로드 중",
@@ -2230,12 +2230,12 @@
     "cccAuditItem_enviroSafety": "환경 및 안전 규정 준수",
     "ordinaryLabel": "일반",
     "specialLabel": "특수",
-    "difficulty_easy": "Easy",
-    "difficulty_moderate": "Moderate",
-    "difficulty_difficult": "Difficult",
-    "timelineWeeks": "weeks",
-    "timelineMonths": "months",
-    "timelineDays": "days",
+    "difficulty_easy": "쉬운",
+    "difficulty_moderate": "보통의",
+    "difficulty_difficult": "어려운",
+    "timelineWeeks": "주",
+    "timelineMonths": "개월",
+    "timelineDays": "날",
     "curUsd": "$"
   },
   "Navbar": {

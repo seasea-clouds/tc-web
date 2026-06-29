@@ -82,10 +82,10 @@
     "manageSubscriptionDesc": "Upravljajte svojo naročnino",
     "viewPricing": "Ogled cen",
     "youAreOnFreePlan": "Trenutno ste na brezplačnem načrtu.",
-    "paid": "paid",
-    "pending": "pending",
-    "prev": "← Prev",
-    "next": "Next →"
+    "paid": "plačan",
+    "pending": "v teku",
+    "prev": "← Prejšnji",
+    "next": "Naprej →"
   },
   "Pricing": {
     "title": "Preprosto določanje cen",
@@ -1830,9 +1830,9 @@
     "gaccCat_health_food_reject_1_problem": "Nova sestavina ni v Kitajskem katalogu hrane",
     "gaccCat_health_food_reject_1_cause": "Sestavina ni odobrena za uporabo na Kitajskem",
     "gaccCat_health_food_reject_1_solution": "Uporaba novih živilskih sestavin (lahko traja 1-2 leti)",
-    "gaccDifficultyEasy": "Easy",
-    "gaccDifficultyModerate": "Moderate",
-    "gaccDifficultyDifficult": "Difficult"
+    "gaccDifficultyEasy": "enostavno",
+    "gaccDifficultyModerate": "Zmerno",
+    "gaccDifficultyDifficult": "Težko"
   },
   "Report": {
     "loadingTitle": "Nalaganje vašega poročila",
@@ -2230,12 +2230,12 @@
     "cccAuditItem_enviroSafety": "Okoljska in varnostna skladnost",
     "ordinaryLabel": "Navadna",
     "specialLabel": "Posebno",
-    "difficulty_easy": "Easy",
-    "difficulty_moderate": "Moderate",
-    "difficulty_difficult": "Difficult",
-    "timelineWeeks": "weeks",
-    "timelineMonths": "months",
-    "timelineDays": "days",
+    "difficulty_easy": "enostavno",
+    "difficulty_moderate": "Zmerno",
+    "difficulty_difficult": "Težko",
+    "timelineWeeks": "tedne",
+    "timelineMonths": "mesecih",
+    "timelineDays": "dni",
     "curUsd": "$"
   },
   "Navbar": {

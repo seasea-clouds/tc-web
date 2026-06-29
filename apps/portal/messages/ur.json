@@ -82,10 +82,10 @@
     "manageSubscriptionDesc": "اپنی رکنیت کا نظم کریں۔",
     "viewPricing": "قیمتوں کا تعین دیکھیں",
     "youAreOnFreePlan": "آپ فی الحال مفت پلان پر ہیں۔",
-    "paid": "paid",
-    "pending": "pending",
-    "prev": "← Prev",
-    "next": "Next →"
+    "paid": "ادا کیا",
+    "pending": "زیر التواء",
+    "prev": "← پچھلا",
+    "next": "اگلا →"
   },
   "Pricing": {
     "title": "سادہ قیمتوں کا تعین",
@@ -1830,9 +1830,9 @@
     "gaccCat_health_food_reject_1_problem": "چین فوڈ کیٹلاگ میں ناول کا جزو نہیں ہے۔",
     "gaccCat_health_food_reject_1_cause": "جزو چین میں استعمال کے لیے منظور نہیں ہے۔",
     "gaccCat_health_food_reject_1_solution": "کھانے کے اجزاء کی نئی درخواست (1-2 سال لگ سکتے ہیں)",
-    "gaccDifficultyEasy": "Easy",
-    "gaccDifficultyModerate": "Moderate",
-    "gaccDifficultyDifficult": "Difficult"
+    "gaccDifficultyEasy": "آسان",
+    "gaccDifficultyModerate": "اعتدال پسند",
+    "gaccDifficultyDifficult": "مشکل"
   },
   "Report": {
     "loadingTitle": "آپ کی رپورٹ لوڈ ہو رہی ہے۔",
@@ -2230,12 +2230,12 @@
     "cccAuditItem_enviroSafety": "ماحولیاتی اور حفاظت کی تعمیل",
     "ordinaryLabel": "عام",
     "specialLabel": "خصوصی",
-    "difficulty_easy": "Easy",
-    "difficulty_moderate": "Moderate",
-    "difficulty_difficult": "Difficult",
-    "timelineWeeks": "weeks",
-    "timelineMonths": "months",
-    "timelineDays": "days",
+    "difficulty_easy": "آسان",
+    "difficulty_moderate": "اعتدال پسند",
+    "difficulty_difficult": "مشکل",
+    "timelineWeeks": "ہفتے",
+    "timelineMonths": "مہینے",
+    "timelineDays": "دن",
     "curUsd": "$"
   },
   "Navbar": {

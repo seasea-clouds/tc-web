@@ -82,10 +82,10 @@
     "manageSubscriptionDesc": "Quản lý đăng ký của bạn",
     "youAreOnFreePlan": "Bạn hiện đang sử dụng gói Miễn phí.",
     "viewPricing": "Xem giá",
-    "paid": "paid",
-    "pending": "pending",
-    "prev": "← Prev",
-    "next": "Next →"
+    "paid": "trả",
+    "pending": "chưa giải quyết",
+    "prev": "← Trước đó",
+    "next": "Tiếp theo →"
   },
   "Pricing": {
     "title": "Định giá đơn giản",
@@ -1830,9 +1830,9 @@
     "gaccCat_health_food_reject_1_problem": "Thành phần mới không có trong danh mục thực phẩm Trung Quốc",
     "gaccCat_health_food_reject_1_cause": "Thành phần không được phép sử dụng ở Trung Quốc",
     "gaccCat_health_food_reject_1_solution": "Ứng dụng thành phần thực phẩm mới (có thể mất 1-2 năm)",
-    "gaccDifficultyEasy": "Easy",
-    "gaccDifficultyModerate": "Moderate",
-    "gaccDifficultyDifficult": "Difficult"
+    "gaccDifficultyEasy": "Dễ",
+    "gaccDifficultyModerate": "Vừa phải",
+    "gaccDifficultyDifficult": "Khó"
   },
   "Report": {
     "loadingTitle": "Đang tải báo cáo của bạn",
@@ -2230,12 +2230,12 @@
     "cccAuditItem_enviroSafety": "Tuân thủ môi trường và an toàn",
     "ordinaryLabel": "Thông thường",
     "specialLabel": "Đặc biệt",
-    "difficulty_easy": "Easy",
-    "difficulty_moderate": "Moderate",
-    "difficulty_difficult": "Difficult",
-    "timelineWeeks": "weeks",
-    "timelineMonths": "months",
-    "timelineDays": "days",
+    "difficulty_easy": "Dễ",
+    "difficulty_moderate": "Vừa phải",
+    "difficulty_difficult": "Khó",
+    "timelineWeeks": "tuần",
+    "timelineMonths": "tháng",
+    "timelineDays": "ngày",
     "curUsd": "$"
   },
   "Navbar": {

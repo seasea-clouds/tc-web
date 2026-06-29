@@ -82,10 +82,10 @@
     "manageSubscriptionDesc": "Administrer dit abonnement",
     "viewPricing": "Se priser",
     "youAreOnFreePlan": "Du er i øjeblikket på den gratis plan.",
-    "paid": "paid",
-    "pending": "pending",
-    "prev": "← Prev",
-    "next": "Next →"
+    "paid": "betalt",
+    "pending": "indtil",
+    "prev": "← Forrige",
+    "next": "Næste →"
   },
   "Pricing": {
     "title": "Enkel prissætning",
@@ -1830,9 +1830,9 @@
     "gaccCat_health_food_reject_1_problem": "Ny ingrediens ikke i Kinas fødevarekatalog",
     "gaccCat_health_food_reject_1_cause": "Ingrediens ikke godkendt til brug i Kina",
     "gaccCat_health_food_reject_1_solution": "Anvendelse af ny fødevareingrediens (kan tage 1-2 år)",
-    "gaccDifficultyEasy": "Easy",
-    "gaccDifficultyModerate": "Moderate",
-    "gaccDifficultyDifficult": "Difficult"
+    "gaccDifficultyEasy": "Let",
+    "gaccDifficultyModerate": "Moderat",
+    "gaccDifficultyDifficult": "Vanskelig"
   },
   "Report": {
     "loadingTitle": "Indlæser din rapport",
@@ -2230,12 +2230,12 @@
     "cccAuditItem_enviroSafety": "Overholdelse af miljø og sikkerhed",
     "ordinaryLabel": "Almindelig",
     "specialLabel": "Speciel",
-    "difficulty_easy": "Easy",
-    "difficulty_moderate": "Moderate",
-    "difficulty_difficult": "Difficult",
-    "timelineWeeks": "weeks",
-    "timelineMonths": "months",
-    "timelineDays": "days",
+    "difficulty_easy": "Let",
+    "difficulty_moderate": "Moderat",
+    "difficulty_difficult": "Vanskelig",
+    "timelineWeeks": "uger",
+    "timelineMonths": "måneder",
+    "timelineDays": "dage",
     "curUsd": "$"
   },
   "Navbar": {

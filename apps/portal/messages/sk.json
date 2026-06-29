@@ -82,10 +82,10 @@
     "manageSubscriptionDesc": "Spravujte svoje predplatné",
     "viewPricing": "Zobraziť ceny",
     "youAreOnFreePlan": "Momentálne máte bezplatný plán.",
-    "paid": "paid",
-    "pending": "pending",
-    "prev": "← Prev",
-    "next": "Next →"
+    "paid": "zaplatené",
+    "pending": "čakajúce",
+    "prev": "← Predch",
+    "next": "Ďalej →"
   },
   "Pricing": {
     "title": "Jednoduché stanovovanie cien",
@@ -1830,9 +1830,9 @@
     "gaccCat_health_food_reject_1_problem": "Nová zložka, ktorá nie je v čínskom katalógu potravín",
     "gaccCat_health_food_reject_1_cause": "Zložka nie je schválená na použitie v Číne",
     "gaccCat_health_food_reject_1_solution": "Aplikácia nových zložiek potravín (môže trvať 1-2 roky)",
-    "gaccDifficultyEasy": "Easy",
-    "gaccDifficultyModerate": "Moderate",
-    "gaccDifficultyDifficult": "Difficult"
+    "gaccDifficultyEasy": "Jednoduché",
+    "gaccDifficultyModerate": "Mierne",
+    "gaccDifficultyDifficult": "Ťažké"
   },
   "Report": {
     "loadingTitle": "Načítava sa váš prehľad",
@@ -2230,12 +2230,12 @@
     "cccAuditItem_enviroSafety": "Súlad so životným prostredím a bezpečnosťou",
     "ordinaryLabel": "Bežné",
     "specialLabel": "Špeciálne",
-    "difficulty_easy": "Easy",
-    "difficulty_moderate": "Moderate",
-    "difficulty_difficult": "Difficult",
-    "timelineWeeks": "weeks",
-    "timelineMonths": "months",
-    "timelineDays": "days",
+    "difficulty_easy": "Jednoduché",
+    "difficulty_moderate": "Mierne",
+    "difficulty_difficult": "Ťažké",
+    "timelineWeeks": "týždňov",
+    "timelineMonths": "mesiacov",
+    "timelineDays": "dní",
     "curUsd": "$"
   },
   "Navbar": {

@@ -82,10 +82,10 @@
     "manageSubscriptionDesc": "Gerencie sua assinatura",
     "youAreOnFreePlan": "Você está atualmente no plano Gratuito.",
     "viewPricing": "Ver preços",
-    "paid": "paid",
-    "pending": "pending",
-    "prev": "← Prev",
-    "next": "Next →"
+    "paid": "pago",
+    "pending": "pendente",
+    "prev": "← Anterior",
+    "next": "Próximo →"
   },
   "Pricing": {
     "title": "Preço Simples",
@@ -1830,9 +1830,9 @@
     "gaccCat_health_food_reject_1_problem": "Novo ingrediente não incluído no catálogo alimentar da China",
     "gaccCat_health_food_reject_1_cause": "Ingrediente não aprovado para utilização na China",
     "gaccCat_health_food_reject_1_solution": "Aplicação de novos ingredientes alimentares (pode demorar 1-2 anos)",
-    "gaccDifficultyEasy": "Easy",
-    "gaccDifficultyModerate": "Moderate",
-    "gaccDifficultyDifficult": "Difficult"
+    "gaccDifficultyEasy": "Fácil",
+    "gaccDifficultyModerate": "Moderado",
+    "gaccDifficultyDifficult": "Difícil"
   },
   "Report": {
     "loadingTitle": "Carregando seu relatório",
@@ -2230,12 +2230,12 @@
     "cccAuditItem_enviroSafety": "Conformidade ambiental e de segurança",
     "ordinaryLabel": "Ordinário",
     "specialLabel": "Especial",
-    "difficulty_easy": "Easy",
-    "difficulty_moderate": "Moderate",
-    "difficulty_difficult": "Difficult",
-    "timelineWeeks": "weeks",
-    "timelineMonths": "months",
-    "timelineDays": "days",
+    "difficulty_easy": "Fácil",
+    "difficulty_moderate": "Moderado",
+    "difficulty_difficult": "Difícil",
+    "timelineWeeks": "semanas",
+    "timelineMonths": "meses",
+    "timelineDays": "dias",
     "curUsd": "$"
   },
   "Navbar": {

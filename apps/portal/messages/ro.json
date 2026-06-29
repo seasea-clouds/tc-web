@@ -82,10 +82,10 @@
     "manageSubscriptionDesc": "Gestionați-vă abonamentul",
     "viewPricing": "Vedeți prețurile",
     "youAreOnFreePlan": "În prezent sunteți în planul gratuit.",
-    "paid": "paid",
-    "pending": "pending",
-    "prev": "← Prev",
-    "next": "Next →"
+    "paid": "plătit",
+    "pending": "în așteptare",
+    "prev": "← Prec",
+    "next": "Următorul →"
   },
   "Pricing": {
     "title": "Prețuri simple",
@@ -1830,9 +1830,9 @@
     "gaccCat_health_food_reject_1_problem": "Ingredient nou care nu este în catalogul alimentar din China",
     "gaccCat_health_food_reject_1_cause": "Ingredient neaprobat pentru utilizare în China",
     "gaccCat_health_food_reject_1_solution": "Aplicarea ingredientelor alimentare noi (poate dura 1-2 ani)",
-    "gaccDifficultyEasy": "Easy",
-    "gaccDifficultyModerate": "Moderate",
-    "gaccDifficultyDifficult": "Difficult"
+    "gaccDifficultyEasy": "Uşor",
+    "gaccDifficultyModerate": "Moderat",
+    "gaccDifficultyDifficult": "Dificil"
   },
   "Report": {
     "loadingTitle": "Se încarcă raportul dvs",
@@ -2230,12 +2230,12 @@
     "cccAuditItem_enviroSafety": "Conformitatea cu mediul și siguranța",
     "ordinaryLabel": "Obișnuit",
     "specialLabel": "Special",
-    "difficulty_easy": "Easy",
-    "difficulty_moderate": "Moderate",
-    "difficulty_difficult": "Difficult",
-    "timelineWeeks": "weeks",
-    "timelineMonths": "months",
-    "timelineDays": "days",
+    "difficulty_easy": "Uşor",
+    "difficulty_moderate": "Moderat",
+    "difficulty_difficult": "Dificil",
+    "timelineWeeks": "săptămâni",
+    "timelineMonths": "luni",
+    "timelineDays": "zile",
     "curUsd": "$"
   },
   "Navbar": {

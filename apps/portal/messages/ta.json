@@ -2232,7 +2232,11 @@
     "specialLabel": "சிறப்பு",
     "difficulty_easy": "Easy",
     "difficulty_moderate": "Moderate",
-    "difficulty_difficult": "Difficult"
+    "difficulty_difficult": "Difficult",
+    "timelineWeeks": "weeks",
+    "timelineMonths": "months",
+    "timelineDays": "days",
+    "curUsd": "$"
   },
   "Navbar": {
     "pricing": "விலை நிர்ணயம்",

@@ -2232,7 +2232,11 @@
     "specialLabel": "特殊",
     "difficulty_easy": "简单",
     "difficulty_moderate": "中等",
-    "difficulty_difficult": "困难"
+    "difficulty_difficult": "困难",
+    "timelineWeeks": "weeks",
+    "timelineMonths": "months",
+    "timelineDays": "days",
+    "curUsd": "$"
   },
   "Navbar": {
     "selfCheck": "合规自查",

@@ -290,6 +290,8 @@ const IGNORE_FALLBACK_KEYS = new Set([
   // Difficulty labels — simple English terms acceptable across all locales
   'Check.gaccDifficultyEasy', 'Check.gaccDifficultyModerate', 'Check.gaccDifficultyDifficult',
   'ReportSection.difficulty_easy', 'ReportSection.difficulty_moderate', 'ReportSection.difficulty_difficult',
+  // ReportSection: timeline unit labels — data-level values, same across all locales
+  'ReportSection.timelineWeeks', 'ReportSection.timelineMonths', 'ReportSection.timelineDays', 'ReportSection.curUsd',
 ]);
 
 function checkHardcodedFallbacks(projectName, projectData) {

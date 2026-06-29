@@ -1,6 +1,7 @@
 'use client';
 import SectionTitle from '../../components/SectionTitle'
 import { useT } from '@trade/ui';
+import { localizeTimeline } from '../../localize';
 export default function AnimalTestingExempt({ result }: { result: any }) {
     const t = useT('ReportSection');
   const a = result.animalTestingExempt
@@ -56,7 +57,7 @@ export default function AnimalTestingExempt({ result }: { result: any }) {
       </div>
 
       {a.alternative && <p className="text-xs text-gray-600 mt-2"><strong>{t("labelAlternativeMethods")}:</strong> {a.alternative}</p>}
-      {a.timeline && <p className="text-xs text-gray-500 mt-1"><strong>{t("labelTimeline")}:</strong> {a.timeline}</p>}
+      {a.timeline && <p className="text-xs text-gray-500 mt-1"><strong>{t("labelTimeline")}:</strong> {localizeTimeline(t, a.timeline)}</p>}
     </div>
   )
 }

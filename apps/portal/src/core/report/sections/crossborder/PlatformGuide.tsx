@@ -1,6 +1,7 @@
 'use client';
 import SectionTitle from '../../components/SectionTitle'
 import { useT } from '@trade/ui';
+import { localizeTimeline } from '../../localize';
 export default function PlatformGuide({ result }: { result: any }) {
     const t = useT('ReportSection');
   if (!result.platformGuide?.length) return null
@@ -23,7 +24,7 @@ export default function PlatformGuide({ result }: { result: any }) {
                 <td className="px-6 py-2.5 font-medium text-primary-navy">{p.platform}</td>
                 <td className="px-4 py-2.5 text-right font-semibold text-gold">{p.fee}</td>
                 <td className="px-4 py-2.5 text-gray-600 hidden md:table-cell">{p.req || '—'}</td>
-                <td className="px-4 py-2.5 text-gray-600 hidden md:table-cell">{p.timeline || '—'}</td>
+                <td className="px-4 py-2.5 text-gray-600 hidden md:table-cell">{localizeTimeline(t, p.timeline || '—')}</td>
               </tr>
             ))}
           </tbody>
@@ -46,7 +47,7 @@ export default function PlatformGuide({ result }: { result: any }) {
                 <div className="w-full bg-gray-200 rounded-full h-2">
                   <div className="h-2 rounded-full bg-gold/70" style={{width: Math.min(deposit * 4, 100) + '%'}}></div>
                 </div>
-                <p className="text-[9px] text-gray-400 mt-0.5">Deposit: ${deposit}K{/*nbsp*/} | Timeline: {p.timeline}</p>
+                <p className="text-[9px] text-gray-400 mt-0.5">Deposit: ${deposit}K{/*nbsp*/} | Timeline: {localizeTimeline(t, p.timeline)}</p>
               </div>
             );
           })}

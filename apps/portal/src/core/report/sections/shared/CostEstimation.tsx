@@ -1,6 +1,7 @@
 'use client';
 import SectionTitle from '../../components/SectionTitle'
 import { useT } from '@trade/ui';
+import { localizeCost } from '../../localize';
 export default function CostEstimation({ result }: { result: any }) {
     const t = useT('ReportSection');
   if (!result.costBreakdown?.length) return null
@@ -18,7 +19,7 @@ export default function CostEstimation({ result }: { result: any }) {
             {result.costBreakdown.map((c: any, i: number) => (
               <tr key={i} className="border-b border-gray-100">
                 <td className="py-2 pr-4 text-gray-700">{c.item}</td>
-                <td className="text-right py-2 pr-4 text-gray-900 font-medium">{c.estimatedCost || c.estimatedRange || c.cost || ''}</td>
+                <td className="text-right py-2 pr-4 text-gray-900 font-medium">{localizeCost(t, c.estimatedCost || c.estimatedRange || c.cost || '')}</td>
                 <td className="text-right py-2 text-gray-500">{c.notes || ''}</td>
               </tr>
             ))}
@@ -28,7 +29,7 @@ export default function CostEstimation({ result }: { result: any }) {
       {result.totalCostRange && (
         <div className="mt-4 bg-gold/5 rounded-lg p-3 text-center border border-gold/20">
           <p className="text-sm text-gray-500">{t("labelEstimatedTotalCost")}</p>
-          <p className="text-xl font-bold text-primary-navy">{result.totalCostRange}</p>
+          <p className="text-xl font-bold text-primary-navy">{localizeCost(t, result.totalCostRange)}</p>
         </div>
       )}
     </div>

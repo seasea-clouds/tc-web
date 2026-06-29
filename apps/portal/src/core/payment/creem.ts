@@ -109,7 +109,7 @@ export class CreemProvider implements PaymentProvider {
     return {
       type: event.type as PaymentEvent["type"],
       sessionId: String(event.id ?? ""),
-      customerEmail: String((event as any).customer?.email ?? ""),
+      customerEmail: String((event as any).customer?.email ?? (event as any).billing?.email ?? (event as any).email ?? ""),
       metadata: (event as any).metadata ?? {},
       amount: Number((event as any).amount ?? 0),
       currency: String((event as any).currency ?? "usd"),

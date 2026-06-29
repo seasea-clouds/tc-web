@@ -6,7 +6,7 @@ export interface PaymentSession {
 }
 
 export interface PaymentEvent {
-  type: "checkout.completed" | "subscription.created" | "subscription.cancelled";
+  type: "checkout.completed" | "subscription.active" | "subscription.canceled";
   sessionId: string;
   customerEmail: string;
   metadata: Record<string, string>;

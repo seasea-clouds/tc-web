@@ -1,6 +1,7 @@
 'use client';
 import SectionTitle from '../../components/SectionTitle'
 import { useT } from '@trade/ui';
+import { localizeTimeline } from '../../localize';
 export default function FilingType({ result }: { result: any }) {
     const t = useT('ReportSection');
   const f = result.filingType
@@ -13,7 +14,7 @@ export default function FilingType({ result }: { result: any }) {
         <div className="bg-red-50 rounded-lg p-3 border border-red-200"><p className="text-xs font-bold text-red-800">{t('specialLabel')} {f.special?.includes('Registration') ? '(注册)' : ''}</p><p className="text-[10px] text-red-700 mt-1">{f.special}</p></div>
       </div>
       <p className="text-xs text-gray-500">{f.classificationBasis}</p>
-      {f.timeline && <div className="mt-2 flex gap-4 text-xs text-gray-600"><span>{t('ordinaryLabel')}: {f.timeline.ordinary || '—'}</span><span>{t('specialLabel')}: {f.timeline.special || '—'}</span></div>}
+      {f.timeline && <div className="mt-2 flex gap-4 text-xs text-gray-600"><span>{t('ordinaryLabel')}: {localizeTimeline(t, f.timeline.ordinary || '—')}</span><span>{t('specialLabel')}: {localizeTimeline(t, f.timeline.special || '—')}</span></div>}
     </div>
   )
 }

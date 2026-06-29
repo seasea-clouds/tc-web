@@ -1,6 +1,7 @@
 'use client';
 import SectionTitle from '../../components/SectionTitle'
 import { useT } from '@trade/ui';
+import { localizeTimeline, localizeCost } from '../../localize';
 export default function Channels({ result }: { result: any }) {
     const t = useT('ReportSection');
   if (!result.channels?.length) return null
@@ -26,8 +27,8 @@ export default function Channels({ result }: { result: any }) {
               <div><p className="text-red-500 font-medium">{t("labelDisadvantages")}</p><ul className="list-disc list-inside text-gray-500">{ch.disadvantages?.map((d: string, j: number) => <li key={j}>{d}</li>)}</ul></div>
             </div>
             <div className="mt-2 flex gap-4 text-xs text-gray-500">
-              <span>{'⏱️'} {ch.timeline}</span>
-              <span>{'💰'} {ch.costRange}</span>
+              <span>{'⏱️'} {localizeTimeline(t, ch.timeline)}</span>
+              <span>{'💰'} {localizeCost(t, ch.costRange)}</span>
               {ch.gaccRequired && <span className="text-amber-600 font-medium">{'📋'} {t('channelGACCRequired')}</span>}
             </div>
           </div>

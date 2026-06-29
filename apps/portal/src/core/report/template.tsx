@@ -53,7 +53,40 @@ interface ReportTemplateProps {
 }
 
 export function ReportTemplate(props: ReportTemplateProps) {
-  return <ReportShell {...props} />;
+  const { locale, result } = props;
+  
+  // Server-side localize timeline and cost values from rules data
+  const localizedResult = localizeServerResult(locale || 'en', result);
+  
+  return <ReportShell {...props} result={localizedResult} />;
+}
+
+/**
+ * Server-side localization of hardcoded English values in rules data.
+ * Mimics the client-side localizeTimeline/localizeCost helpers.
+ */
+function localizeServerResult(locale: string, result: any): any {
+  if (!result) return result;
+  const t = buildT(locale, 'ReportSection');
+  const weeks = t('timelineWeeks');
+  const months = t('timelineMonths');
+  const days = t('timelineDays');
+  const cur = t('curUsd');
+
+  const localize = (v: string) => {
+    if (!v) return v;
+    return v
+      .replace(/(\d+(?:[-–]\d+)?)\s*weeks?\b/gi, `$1 ${weeks}`)
+      .replace(/(\d+(?:[-–]\d+)?)\s*months?\b/gi, `$1 ${months}`)
+      .replace(/\bDays\b/gi, days)
+      .replace(/^\$/, cur);
+  };
+
+  return {
+    ...result,
+    estimatedTimeline: result.estimatedTimeline ? localize(result.estimatedTimeline) : result.estimatedTimeline,
+    totalCostRange: result.totalCostRange ? localize(result.totalCostRange) : result.totalCostRange,
+  };
 }
 
 // ─── 工具函数（供 ReportShell 和 Preview 使用） ──────────────────────

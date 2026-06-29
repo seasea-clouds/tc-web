@@ -1,8 +1,10 @@
 'use client';
 import SectionTitle from '../../components/SectionTitle'
 import { useT } from '@trade/ui';
+import { localizeTimeline } from '../../localize';
 export default function Timeline({ result }: { result: any }) {
     const t = useT('ReportSection');
+    const lt = (v: string) => localizeTimeline(t, v);
   if (!result.timelinePhases?.length) return null
 
   const colors = ['border-blue-500', 'border-gold', 'border-green-500', 'border-purple-500', 'border-blue-500', 'border-gold', 'border-green-500']
@@ -30,7 +32,7 @@ export default function Timeline({ result }: { result: any }) {
               <div className={`rounded-lg p-4 border ${lightBg[ci]} border-${colors[ci].replace('border-', '')}/30 ml-2`}>
                 <div className="flex justify-between items-start mb-1">
                   <h3 className="text-sm font-bold text-gray-900">{p.phase}</h3>
-                  <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${bgColors[ci]} text-white`}>{p.duration}</span>
+                  <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${bgColors[ci]} text-white`}>{lt(p.duration)}</span>
                 </div>
 
                 {/* 活动列表 */}
@@ -67,8 +69,8 @@ export default function Timeline({ result }: { result: any }) {
       {/* ── 总计 ── */}
       {result.estimatedTimeline && (
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-          <p className="text-lg font-bold text-blue-800">{t("estimatedTotal")}: {result.estimatedTimeline}</p>
-          {result.detailedTimeline && <p className="text-sm text-gray-700 mt-1">{result.detailedTimeline}</p>}
+          <p className="text-lg font-bold text-blue-800">{t("estimatedTotal")}: {lt(result.estimatedTimeline)}</p>
+          {result.detailedTimeline && <p className="text-sm text-gray-700 mt-1">{lt(result.detailedTimeline)}</p>}
         </div>
       )}
 
@@ -102,7 +104,7 @@ export default function Timeline({ result }: { result: any }) {
                         </div>
                       </td>
                       <td className="p-1.5 text-center">
-                        <span className="text-[9px] font-semibold text-gray-700 bg-gray-100 px-1.5 py-0.5 rounded">{p.duration}</span>
+                        <span className="text-[9px] font-semibold text-gray-700 bg-gray-100 px-1.5 py-0.5 rounded">{lt(p.duration)}</span>
                       </td>
                     </tr>
                   )

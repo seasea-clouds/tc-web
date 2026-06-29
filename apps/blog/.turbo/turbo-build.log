@@ -61,15 +61,15 @@ https://nextjs.org/telemetry
 ▲ Next.js 16.2.6 (Turbopack)
 
   Creating an optimized production build ...
-✓ Compiled successfully in 2.0s
+✓ Compiled successfully in 2.4s
   Running TypeScript ...
-  Finished TypeScript in 2.7s ...
+  Finished TypeScript in 2.8s ...
   Collecting page data using 6 workers ...
   Generating static pages using 6 workers (0/434) ...
   Generating static pages using 6 workers (108/434) 
   Generating static pages using 6 workers (216/434) 
   Generating static pages using 6 workers (325/434) 
-✓ Generating static pages using 6 workers (434/434) in 2.2s
+✓ Generating static pages using 6 workers (434/434) in 2.8s
   Finalizing page optimization ...
 
 Route (app)
@@ -123,9 +123,9 @@ Route (app)
 ✅ No hardcoded English text found.
 
 ▶ check-console.mjs --ci
-📁 扫描 199 个文件
+📁 扫描 200 个文件
 ==================================================
-📊 结果: 209 通过, 0 失败
+📊 结果: 210 通过, 0 失败
 
 ✅ check-console.mjs 完成
 

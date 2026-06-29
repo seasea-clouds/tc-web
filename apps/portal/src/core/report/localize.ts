@@ -57,6 +57,6 @@ export function localizeCost(t: TFunc, value: string): string {
   if (!value) return value;
 
   const cur = t('curUsd');
-  // Replace leading "$" with localized currency
-  return value.replace(/^\$/, cur);
+  // Replace all "$" with localized currency (handles "费用范围: $800" etc.)
+  return value.replace(/\$/g, cur);
 }

@@ -57,15 +57,15 @@ Done.
 - Environments: .env
 
   Creating an optimized production build ...
-✓ Compiled successfully in 2.5s
+✓ Compiled successfully in 2.4s
   Running TypeScript ...
-  Finished TypeScript in 6.1s ...
+  Finished TypeScript in 6.4s ...
   Collecting page data using 19 workers ...
   Generating static pages using 19 workers (0/915) ...
   Generating static pages using 19 workers (228/915) 
   Generating static pages using 19 workers (457/915) 
   Generating static pages using 19 workers (686/915) 
-✓ Generating static pages using 19 workers (915/915) in 7.3s
+✓ Generating static pages using 19 workers (915/915) in 3.7s
   Finalizing page optimization ...
 
 Route (app)
@@ -199,9 +199,9 @@ Route (app)
 ✅ No hardcoded English text found.
 
 ▶ check-console.mjs --ci
-📁 扫描 199 个文件
+📁 扫描 200 个文件
 ==================================================
-📊 结果: 209 通过, 0 失败
+📊 结果: 210 通过, 0 失败
 
 ✅ check-console.mjs 完成
 

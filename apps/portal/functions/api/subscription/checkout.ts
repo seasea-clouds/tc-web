@@ -46,7 +46,6 @@ export async function onRequest(context: {
     const body = {
       product_id: context.env.CREEM_PRODUCT_ID_SUBSCRIBE,
       success_url: `https://sinotradecompliance.com/${loc}/c/me/subscription/`,
-      cancel_url: `https://sinotradecompliance.com/${loc}/c/pricing/`,
       metadata: {
         user_id: user.userId,
         email: user.email,

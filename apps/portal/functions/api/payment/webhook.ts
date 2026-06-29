@@ -84,9 +84,9 @@ export async function onRequest(context: { request: Request; env: Env }) {
 
     if (type === "checkout.completed") {
       await handleCheckoutCompleted(context.request, context.env, meta, data);
-    } else if (type === "subscription.created") {
+    } else if (type === "subscription.active") {
       await handleSubscriptionCreated(context.env, data, meta);
-    } else if (type === "subscription.cancelled") {
+    } else if (type === "subscription.canceled") {
       await handleSubscriptionCancelled(context.env, data);
     }
 

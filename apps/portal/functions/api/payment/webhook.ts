@@ -55,10 +55,6 @@ async function verifySignature(
 
 export async function onRequest(context: { request: Request; env: Env }) {
   if (context.request.method !== "POST") {
-    // GET: return recent webhook logs for debugging
-    if (context.request.method === "GET") {
-      return await handleDebugLogs(context.env);
-    }
     return new Response("Method not allowed", { status: 405 });
   }
 
@@ -136,41 +132,6 @@ export async function onRequest(context: { request: Request; env: Env }) {
   } catch (err) {
     console.error("Webhook error:", err);
     return Response.json({ error: String(err) }, { status: 400 });
-  }
-}
-
-// ─── Debug endpoint: GET /api/payment/webhook ─────────────────────
-
-async function handleDebugLogs(env: Env) {
-  try {
-    if (!env.DB) {
-      return Response.json({ error: "DB not configured" });
-    }
-
-    await env.DB.prepare(
-      "CREATE TABLE IF NOT EXISTS webhook_logs (id INTEGER PRIMARY KEY, type TEXT, payload TEXT, metadata TEXT, created_at TEXT DEFAULT (datetime('now')))"
-    ).run();
-
-    const logs = await env.DB.prepare(
-      "SELECT id, type, metadata, payload, created_at FROM webhook_logs ORDER BY id DESC LIMIT 10"
-    ).all();
-    // Truncate payload for response size
-    for (const log of (logs?.results || [])) {
-      if (log.payload && typeof log.payload === 'string' && log.payload.length > 500) {
-        log.payload = log.payload.substring(0, 500) + '...';
-      }
-    }
-
-    const subs = await env.DB.prepare(
-      "SELECT id, user_id, plan, status, provider_subscription_id, current_period_start, current_period_end, created_at FROM subscriptions ORDER BY created_at DESC LIMIT 5"
-    ).all();
-
-    return Response.json({
-      webhook_logs: logs?.results || [],
-      recent_subscriptions: subs?.results || [],
-    });
-  } catch (err) {
-    return Response.json({ error: String(err), message: "Debug endpoint error" }, { status: 500 });
   }
 }
 

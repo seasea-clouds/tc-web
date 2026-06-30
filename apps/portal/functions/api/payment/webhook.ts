@@ -82,20 +82,22 @@ export async function onRequest(context: { request: Request; env: Env }) {
 
     // ── Store in D1 for later inspection ──────────────────────────
     try {
-      await env.DB?.prepare(
-        "CREATE TABLE IF NOT EXISTS webhook_logs (id INTEGER PRIMARY KEY AUTOINCREMENT, type TEXT, payload TEXT, metadata TEXT, created_at TEXT DEFAULT (datetime('now')))"
-      ).run();
-      await env.DB?.prepare(
-        "INSERT INTO webhook_logs (type, payload, metadata) VALUES (?, ?, ?)"
-      ).bind(
-        payload.type || "unknown",
-        JSON.stringify(payload).substring(0, 3000),
-        JSON.stringify(payload.data?.metadata || {})
-      ).run();
-      // Keep only last 20 logs
-      await env.DB?.prepare(
-        "DELETE FROM webhook_logs WHERE id NOT IN (SELECT id FROM webhook_logs ORDER BY id DESC LIMIT 20)"
-      ).run();
+      if (env.DB) {
+        await env.DB.prepare(
+          "CREATE TABLE IF NOT EXISTS webhook_logs (id INTEGER PRIMARY KEY, type TEXT, payload TEXT, metadata TEXT, created_at TEXT DEFAULT (datetime('now')))"
+        ).run();
+        await env.DB.prepare(
+          "INSERT INTO webhook_logs (type, payload, metadata) VALUES (?, ?, ?)"
+        ).bind(
+          payload.type || "unknown",
+          JSON.stringify(payload).substring(0, 3000),
+          JSON.stringify(payload.data?.metadata || {})
+        ).run();
+        // Keep only last 20 logs
+        await env.DB.prepare(
+          "DELETE FROM webhook_logs WHERE id NOT IN (SELECT id FROM webhook_logs ORDER BY id DESC LIMIT 20)"
+        ).run();
+      }
     } catch (dbErr) {
       console.error("Failed to store webhook log:", dbErr);
     }
@@ -141,16 +143,25 @@ export async function onRequest(context: { request: Request; env: Env }) {
 
 async function handleDebugLogs(env: Env) {
   try {
-    await env.DB?.prepare(
-      "CREATE TABLE IF NOT EXISTS webhook_logs (id INTEGER PRIMARY KEY AUTOINCREMENT, type TEXT, payload TEXT, metadata TEXT, created_at TEXT DEFAULT (datetime('now')))"
+    if (!env.DB) {
+      return Response.json({ error: "DB not configured" });
+    }
+
+    await env.DB.prepare(
+      "CREATE TABLE IF NOT EXISTS webhook_logs (id INTEGER PRIMARY KEY, type TEXT, payload TEXT, metadata TEXT, created_at TEXT DEFAULT (datetime('now')))"
     ).run();
 
-    const logs = await env.DB?.prepare(
-      "SELECT id, type, metadata, substr(payload, 1, 500) as payload_preview, created_at FROM webhook_logs ORDER BY id DESC LIMIT 10"
+    const logs = await env.DB.prepare(
+      "SELECT id, type, metadata, payload, created_at FROM webhook_logs ORDER BY id DESC LIMIT 10"
     ).all();
+    // Truncate payload for response size
+    for (const log of (logs?.results || [])) {
+      if (log.payload && typeof log.payload === 'string' && log.payload.length > 500) {
+        log.payload = log.payload.substring(0, 500) + '...';
+      }
+    }
 
-    // Also show recent subscriptions
-    const subs = await env.DB?.prepare(
+    const subs = await env.DB.prepare(
       "SELECT id, user_id, plan, status, provider_subscription_id, current_period_start, current_period_end, created_at FROM subscriptions ORDER BY created_at DESC LIMIT 5"
     ).all();
 
@@ -159,7 +170,7 @@ async function handleDebugLogs(env: Env) {
       recent_subscriptions: subs?.results || [],
     });
   } catch (err) {
-    return Response.json({ error: String(err) }, { status: 500 });
+    return Response.json({ error: String(err), message: "Debug endpoint error" }, { status: 500 });
   }
 }
 

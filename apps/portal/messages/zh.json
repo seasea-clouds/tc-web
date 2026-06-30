@@ -1835,7 +1835,8 @@
     "gaccDifficultyDifficult": "困难",
     "subscribedViewReport": "View Full Report",
     "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription"
+    "subscribedBadge": "✓ Active Subscription",
+    "checkoutError": "Checkout failed. Please try again."
   },
   "Report": {
     "loadingTitle": "加载您的报告",

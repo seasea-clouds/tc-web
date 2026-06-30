@@ -78,11 +78,12 @@ export async function onRequest(context: { request: Request; env: Env }) {
 
     // ── Store in D1 for later inspection ──────────────────────────
     try {
-      if (env.DB) {
-        await env.DB.prepare(
+      const db = context.env.DB;
+      if (db) {
+        await db.prepare(
           "CREATE TABLE IF NOT EXISTS webhook_logs (id INTEGER PRIMARY KEY, type TEXT, payload TEXT, metadata TEXT, created_at TEXT DEFAULT (datetime('now')))"
         ).run();
-        await env.DB.prepare(
+        await db.prepare(
           "INSERT INTO webhook_logs (type, payload, metadata) VALUES (?, ?, ?)"
         ).bind(
           payload.type || "unknown",
@@ -90,7 +91,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
           JSON.stringify(payload.data?.metadata || {})
         ).run();
         // Keep only last 20 logs
-        await env.DB.prepare(
+        await db.prepare(
           "DELETE FROM webhook_logs WHERE id NOT IN (SELECT id FROM webhook_logs ORDER BY id DESC LIMIT 20)"
         ).run();
       }

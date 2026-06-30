@@ -30,17 +30,17 @@ export async function onRequest(context: { request: Request; env: Env }) {
       console.error("webhook_logs table create error:", tableErr);
     }
 
-    // Get webhook logs
+    // Get webhook logs (full payload for analysis)
     let logs: any[] = [];
     try {
       const result = await db.prepare(
-        "SELECT id, type, metadata, payload, created_at FROM webhook_logs ORDER BY id DESC LIMIT 10"
+        "SELECT id, type, metadata, payload, created_at FROM webhook_logs WHERE payload LIKE '%checkout.complete%' OR payload LIKE '%subscription.active%' ORDER BY id DESC LIMIT 5"
       ).all();
       logs = (result?.results || []).map((log: any) => ({
         id: log.id,
         type: log.type,
         metadata: log.metadata,
-        payload: log.payload ? log.payload.substring(0, 500) : null,
+        payload: log.payload ? log.payload.substring(0, 3000) : null,
         created_at: log.created_at,
       }));
     } catch (logErr) {

@@ -57,7 +57,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
   if (context.request.method !== "POST") {
     // GET: return recent webhook logs for debugging
     if (context.request.method === "GET") {
-      return await handleDebugLogs(env);
+      return await handleDebugLogs(context.env);
     }
     return new Response("Method not allowed", { status: 405 });
   }

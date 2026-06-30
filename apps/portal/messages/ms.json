@@ -1883,7 +1883,8 @@
     "pending": "Belum selesai",
     "prevPage": "← Sebelumnya",
     "nextPage": "Seterusnya →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "Tapak ini hanya menggunakan kuki pengesahan penting. Tiada kuki penjejakan atau pengiklanan digunakan.",
@@ -2251,7 +2252,9 @@
     "login": "Log masuk",
     "register": "Pendaftaran",
     "report": "Laporan",
-    "reports": "Laporan Saya"
+    "reports": "Laporan Saya",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "penentuan harga"

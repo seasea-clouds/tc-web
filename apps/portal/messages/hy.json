@@ -1883,7 +1883,8 @@
     "pending": "Սպասվում է",
     "prevPage": "← Նախ",
     "nextPage": "Հաջորդը →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "Այս կայքը օգտագործում է միայն վավերացման հիմնական թխուկներ: Հետևելու կամ գովազդային թխուկներ չեն օգտագործվում:",
@@ -2251,7 +2252,9 @@
     "login": "Մուտք",
     "register": "Գրանցում",
     "report": "Հաշվետվություն",
-    "reports": "Իմ հաշվետվությունները"
+    "reports": "Իմ հաշվետվությունները",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "Գնագոյացում"

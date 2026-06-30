@@ -1883,7 +1883,8 @@
     "pending": "Nevyřízeno",
     "prevPage": "← Předchozí",
     "nextPage": "Další →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "Tento web používá pouze nezbytné ověřovací soubory cookie. Nejsou používány žádné sledovací ani reklamní soubory cookie.",
@@ -2251,7 +2252,9 @@
     "login": "Přihlášení",
     "register": "Registrace",
     "report": "Zpráva",
-    "reports": "Moje přehledy"
+    "reports": "Moje přehledy",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "Ceny"

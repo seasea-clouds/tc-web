@@ -1883,7 +1883,8 @@
     "pending": "در انتظار",
     "prevPage": "← قبلی",
     "nextPage": "بعدی →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "این سایت فقط از کوکی های احراز هویت ضروری استفاده می کند. هیچ کوکی ردیابی یا تبلیغاتی استفاده نمی شود.",
@@ -2251,7 +2252,9 @@
     "login": "ورود",
     "register": "ثبت نام",
     "report": "گزارش",
-    "reports": "گزارش های من"
+    "reports": "گزارش های من",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "قیمت گذاری"

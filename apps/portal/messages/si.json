@@ -1883,7 +1883,8 @@
     "pending": "පොරොත්තු",
     "prevPage": "← පෙර",
     "nextPage": "ඊළඟ →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "මෙම වෙබ් අඩවිය අත්‍යවශ්‍ය සත්‍යාපන කුකීස් පමණක් භාවිතා කරයි. ලුහුබැඳීම හෝ ප්‍රචාරණ කුකීස් භාවිතා නොකෙරේ.",
@@ -2251,7 +2252,9 @@
     "register": "ලියාපදිංචි වන්න",
     "report": "වාර්තාව",
     "selfCheck": "ස්වයං පරීක්ෂණ මෙවලම",
-    "reports": "මගේ වාර්තා"
+    "reports": "මගේ වාර්තා",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "මිල නියම කිරීම"

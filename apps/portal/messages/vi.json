@@ -1883,7 +1883,8 @@
     "pending": "Đang chờ xử lý",
     "prevPage": "← Trước đó",
     "nextPage": "Tiếp theo →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "Trang web này chỉ sử dụng cookie xác thực cần thiết. Không sử dụng cookie theo dõi hoặc quảng cáo.",
@@ -2251,7 +2252,9 @@
     "login": "Đăng nhập",
     "register": "Đăng ký",
     "report": "Báo cáo",
-    "reports": "Báo cáo của tôi"
+    "reports": "Báo cáo của tôi",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "Định giá"

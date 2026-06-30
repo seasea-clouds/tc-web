@@ -1883,7 +1883,8 @@
     "pending": "पेन्डिङ",
     "prevPage": "← अघिल्लो",
     "nextPage": "अर्को →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "यो साइटले आवश्यक प्रमाणीकरण कुकीहरू मात्र प्रयोग गर्दछ। कुनै ट्र्याकिङ वा विज्ञापन कुकीहरू प्रयोग गरिँदैन।",
@@ -2251,7 +2252,9 @@
     "register": "दर्ता",
     "report": "रिपोर्ट",
     "selfCheck": "नेभिगेसन",
-    "reports": "मेरा रिपोर्टहरू"
+    "reports": "मेरा रिपोर्टहरू",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "मूल्य निर्धारण"

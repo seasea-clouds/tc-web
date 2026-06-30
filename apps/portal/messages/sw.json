@@ -1883,7 +1883,8 @@
     "pending": "Inasubiri",
     "prevPage": "← Iliyotangulia",
     "nextPage": "Inayofuata →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "Tovuti hii hutumia vidakuzi muhimu vya uthibitishaji pekee. Hakuna vidakuzi vya ufuatiliaji au utangazaji vinatumika.",
@@ -2251,7 +2252,9 @@
     "register": "Jisajili",
     "report": "Ripoti",
     "selfCheck": "Kujipima",
-    "reports": "Ripoti Zangu"
+    "reports": "Ripoti Zangu",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "Bei"

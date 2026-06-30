@@ -1883,7 +1883,8 @@
     "pending": "保留中",
     "prevPage": "← 前へ",
     "nextPage": "次へ →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "このサイトでは、必須の認証 Cookie のみを使用します。追跡クッキーや広告クッキーは使用されません。",
@@ -2251,7 +2252,9 @@
     "login": "ログイン",
     "register": "登録",
     "report": "レポート",
-    "reports": "私のレポート"
+    "reports": "私のレポート",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "価格設定"

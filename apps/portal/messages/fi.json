@@ -1883,7 +1883,8 @@
     "pending": "Odottaa",
     "prevPage": "← Ed",
     "nextPage": "Seuraava →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "Tämä sivusto käyttää vain välttämättömiä todennusevästeitä. Mitään seuranta- tai mainosevästeitä ei käytetä.",
@@ -2251,7 +2252,9 @@
     "login": "Kirjautuminen",
     "register": "Rekisteröityminen",
     "report": "Raportti",
-    "reports": "Omat raportit"
+    "reports": "Omat raportit",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "Hinnoittelu"

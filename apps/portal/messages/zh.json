@@ -1883,7 +1883,8 @@
     "pending": "待处理",
     "prevPage": "← 上一页",
     "nextPage": "下一页 →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "报告 ID"
   },
   "Cookie": {
     "message": "本网站仅使用必要的身份验证Cookie。不使用跟踪或广告Cookie。",
@@ -2251,7 +2252,9 @@
     "login": "登录",
     "register": "注册",
     "report": "报告",
-    "reports": "我的报告"
+    "reports": "我的报告",
+    "myReports": "我的报告",
+    "signOut": "退出"
   },
   "Breadcrumb": {
     "pricing": "定价"

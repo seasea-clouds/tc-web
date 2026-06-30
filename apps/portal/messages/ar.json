@@ -1883,7 +1883,8 @@
     "pending": "في انتظار",
     "prevPage": "← السابق",
     "nextPage": "التالي →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "يستخدم هذا الموقع ملفات تعريف الارتباط الأساسية فقط. لا يتم استخدام ملفات تعريف الارتباط للتتبع أو الإعلانات.",
@@ -2251,7 +2252,9 @@
     "login": "تسجيل الدخول",
     "register": "التسجيل",
     "report": "تقرير",
-    "reports": "تقاريري"
+    "reports": "تقاريري",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "التسعير"

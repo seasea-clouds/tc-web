@@ -1883,7 +1883,8 @@
     "pending": "Pendiente",
     "prevPage": "← Anterior",
     "nextPage": "Siguiente →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "Este sitio utiliza sólo cookies de autenticación esenciales. No se utilizan cookies de seguimiento ni publicidad.",
@@ -2251,7 +2252,9 @@
     "login": "Iniciar sesión",
     "register": "Registro",
     "report": "Informe",
-    "reports": "Mis informes"
+    "reports": "Mis informes",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "Precios"

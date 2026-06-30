@@ -1883,7 +1883,8 @@
     "pending": "মুলতুবি",
     "prevPage": "← পূর্ববর্তী",
     "nextPage": "পরবর্তী →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "এই সাইটটি শুধুমাত্র প্রয়োজনীয় প্রমাণীকরণ কুকি ব্যবহার করে। কোন ট্র্যাকিং বা বিজ্ঞাপন কুকি ব্যবহার করা হয় না.",
@@ -2251,7 +2252,9 @@
     "login": "লগইন",
     "register": "রেজিস্ট্রেশন",
     "report": "রিপোর্ট",
-    "reports": "আমার রিপোর্ট"
+    "reports": "আমার রিপোর্ট",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "মূল্য নির্ধারণ"

@@ -1883,7 +1883,8 @@
     "pending": "Në pritje",
     "prevPage": "← E mëparshme",
     "nextPage": "Tjetra →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "Ky sajt përdor vetëm cookie thelbësore të vërtetimit. Nuk përdoren skedarë gjurmimi ose reklamimi.",
@@ -2251,7 +2252,9 @@
     "register": "Regjistrohu",
     "report": "Raporti",
     "selfCheck": "Vetë-verifikim",
-    "reports": "Raportet e mia"
+    "reports": "Raportet e mia",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "Çmimet"

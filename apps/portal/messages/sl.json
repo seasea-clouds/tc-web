@@ -1883,7 +1883,8 @@
     "pending": "V teku",
     "prevPage": "← Prejšnji",
     "nextPage": "Naprej →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "To spletno mesto uporablja samo bistvene piškotke za preverjanje pristnosti. Piškotki za sledenje ali oglaševanje se ne uporabljajo.",
@@ -2251,7 +2252,9 @@
     "login": "Prijava",
     "register": "Registracija",
     "report": "Poročilo",
-    "reports": "Moja poročila"
+    "reports": "Moja poročila",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "Cene"

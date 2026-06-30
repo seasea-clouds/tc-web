@@ -1883,7 +1883,8 @@
     "pending": "მომლოდინე",
     "prevPage": "← წინა",
     "nextPage": "შემდეგი →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "ეს საიტი იყენებს მხოლოდ აუთენტიფიკაციის აუცილებელ ქუქიებს. არ გამოიყენება თვალთვალის ან სარეკლამო ქუქიები.",
@@ -2251,7 +2252,9 @@
     "login": "შესვლა",
     "register": "რეგისტრაცია",
     "report": "ანგარიში",
-    "reports": "ჩემი მოხსენებები"
+    "reports": "ჩემი მოხსენებები",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "ფასი"

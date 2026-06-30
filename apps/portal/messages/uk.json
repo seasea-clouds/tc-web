@@ -1883,7 +1883,8 @@
     "pending": "Очікує на розгляд",
     "prevPage": "← Попередня",
     "nextPage": "Далі →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "Цей сайт використовує лише необхідні файли cookie для автентифікації. Файли cookie для відстеження чи реклами не використовуються.",
@@ -2251,7 +2252,9 @@
     "login": "Вхід",
     "register": "Реєстрація",
     "report": "Звіт",
-    "reports": "Мої звіти"
+    "reports": "Мої звіти",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "Ціноутворення"

@@ -1883,7 +1883,8 @@
     "pending": "நிலுவையில் உள்ளது",
     "prevPage": "← முந்தைய",
     "nextPage": "அடுத்து →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "இந்தத் தளம் அத்தியாவசிய அங்கீகார குக்கீகளை மட்டுமே பயன்படுத்துகிறது. கண்காணிப்பு அல்லது விளம்பர குக்கீகள் பயன்படுத்தப்படவில்லை.",
@@ -2251,7 +2252,9 @@
     "register": "பதிவு",
     "report": "அறிக்கை",
     "selfCheck": "தன்னிறைவு சோதனை",
-    "reports": "எனது அறிக்கைகள்"
+    "reports": "எனது அறிக்கைகள்",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "விலை நிர்ணயம்"

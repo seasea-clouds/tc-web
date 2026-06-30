@@ -1883,7 +1883,8 @@
     "preparedFor": "Prepared for:",
     "nameLabel": "Name",
     "emailLabel": "Email",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "This site uses only essential authentication cookies. No tracking or advertising cookies are used.",
@@ -2251,7 +2252,9 @@
     "login": "Login",
     "register": "Register",
     "report": "Report",
-    "reports": "My Reports"
+    "reports": "My Reports",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "Pricing"

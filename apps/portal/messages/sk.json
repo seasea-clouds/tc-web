@@ -1883,7 +1883,8 @@
     "pending": "Čaká",
     "prevPage": "← Predch",
     "nextPage": "Ďalej →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "Táto stránka používa iba nevyhnutné overovacie súbory cookie. Nepoužívajú sa žiadne sledovacie ani reklamné súbory cookie.",
@@ -2251,7 +2252,9 @@
     "login": "Prihlásenie",
     "register": "Registrácia",
     "report": "Správa",
-    "reports": "Moje prehľady"
+    "reports": "Moje prehľady",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "Stanovenie cien"

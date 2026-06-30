@@ -1883,7 +1883,8 @@
     "pending": "Venter",
     "prevPage": "← Forrige",
     "nextPage": "Neste →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "Dette nettstedet bruker kun viktige autentiseringsinformasjonskapsler. Ingen sporings- eller reklameinformasjonskapsler brukes.",
@@ -2251,7 +2252,9 @@
     "login": "Logg inn",
     "register": "Registrering",
     "report": "Rapport",
-    "reports": "Mine rapporter"
+    "reports": "Mine rapporter",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "Prissetting"

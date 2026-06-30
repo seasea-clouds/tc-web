@@ -1883,7 +1883,8 @@
     "pending": "Beklemede",
     "prevPage": "← Önceki",
     "nextPage": "Sonraki →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "Bu site yalnızca gerekli kimlik doğrulama çerezlerini kullanır. Hiçbir izleme veya reklam çerezi kullanılmaz.",
@@ -2251,7 +2252,9 @@
     "login": "Giriş",
     "register": "Kayıt",
     "report": "Rapor",
-    "reports": "Raporlarım"
+    "reports": "Raporlarım",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "Fiyatlandırma"

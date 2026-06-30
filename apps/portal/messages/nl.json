@@ -1883,7 +1883,8 @@
     "pending": "In behandeling",
     "prevPage": "← Vorige",
     "nextPage": "Volgende →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "Deze site gebruikt alleen essentiële authenticatiecookies. Er worden geen tracking- of advertentiecookies gebruikt.",
@@ -2251,7 +2252,9 @@
     "login": "Inloggen",
     "register": "Registratie",
     "report": "Rapport",
-    "reports": "Mijn rapporten"
+    "reports": "Mijn rapporten",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "Prijzen"

@@ -1883,7 +1883,8 @@
     "pending": "รอดำเนินการ",
     "prevPage": "← ก่อนหน้า",
     "nextPage": "ถัดไป →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "ไซต์นี้ใช้คุกกี้การรับรองความถูกต้องที่จำเป็นเท่านั้น ไม่มีการใช้คุกกี้การติดตามหรือการโฆษณา",
@@ -2251,7 +2252,9 @@
     "login": "เขาสสู่ ะบบ",
     "register": "ลงทะเบียน",
     "report": "รายงาน",
-    "reports": "รายงานของฉัน"
+    "reports": "รายงานของฉัน",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "ราคา"

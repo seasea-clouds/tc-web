@@ -1883,7 +1883,8 @@
     "pending": "लंबित",
     "prevPage": "← पिछला",
     "nextPage": "अगला →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "यह साइट केवल आवश्यक प्रमाणीकरण कुकीज़ का उपयोग करती है। किसी भी ट्रैकिंग या विज्ञापन कुकीज़ का उपयोग नहीं किया जाता है।",
@@ -2251,7 +2252,9 @@
     "login": "लॉगिन",
     "register": "पंजీकरण",
     "report": "रिपोर्ट",
-    "reports": "मेरी रिपोर्ट"
+    "reports": "मेरी रिपोर्ट",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "मूल्य निर्धारण"

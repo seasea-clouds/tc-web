@@ -1883,7 +1883,8 @@
     "pending": "În așteptare",
     "prevPage": "← Prec",
     "nextPage": "Următorul →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "Acest site folosește numai cookie-uri de autentificare esențiale. Nu sunt utilizate cookie-uri de urmărire sau de publicitate.",
@@ -2251,7 +2252,9 @@
     "login": "Autentificare",
     "register": "Înregistrare",
     "report": "Raport",
-    "reports": "Rapoartele mele"
+    "reports": "Rapoartele mele",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "Prețuri"

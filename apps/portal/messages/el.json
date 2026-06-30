@@ -1883,7 +1883,8 @@
     "pending": "Εκκρεμής",
     "prevPage": "← Προηγ",
     "nextPage": "Επόμενο →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "Αυτός ο ιστότοπος χρησιμοποιεί μόνο απαραίτητα cookies ελέγχου ταυτότητας. Δεν χρησιμοποιούνται cookies παρακολούθησης ή διαφήμισης.",
@@ -2251,7 +2252,9 @@
     "login": "Σύνδεση",
     "register": "Εγγραφή",
     "report": "Αναφορά",
-    "reports": "Οι αναφορές μου"
+    "reports": "Οι αναφορές μου",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "Τιμολόγηση"

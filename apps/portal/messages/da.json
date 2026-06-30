@@ -1883,7 +1883,8 @@
     "pending": "Afventer",
     "prevPage": "← Forrige",
     "nextPage": "Næste →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "Dette websted bruger kun vigtige autentificeringscookies. Der bruges ingen sporings- eller reklamecookies.",
@@ -2251,7 +2252,9 @@
     "login": "Log ind",
     "register": "Registrer",
     "report": "Rapport",
-    "reports": "Mine rapporter"
+    "reports": "Mine rapporter",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "Prissætning"

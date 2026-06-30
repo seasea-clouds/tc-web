@@ -1883,7 +1883,8 @@
     "pending": "Hangende",
     "prevPage": "← Vorige",
     "nextPage": "Volgende →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "Hierdie webwerf gebruik slegs noodsaaklike verifikasiekoekies. Geen dop- of advertensiekoekies word gebruik nie.",
@@ -2251,7 +2252,9 @@
     "login": "Aanmelding",
     "register": "Registrasie",
     "report": "Rapport",
-    "reports": "My verslae"
+    "reports": "My verslae",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "Pryse"

@@ -1883,7 +1883,8 @@
     "pending": "У чаканні",
     "prevPage": "← Папярэд",
     "nextPage": "Далей →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "Гэты сайт выкарыстоўвае толькі неабходныя файлы cookie для аўтэнтыфікацыі. Файлы cookie для адсочвання і рэкламы не выкарыстоўваюцца.",
@@ -2251,7 +2252,9 @@
     "login": "Уваход",
     "register": "Рэгістрацыя",
     "report": "Даклад",
-    "reports": "Мае справаздачы"
+    "reports": "Мае справаздачы",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "Цэнаўтварэнне"

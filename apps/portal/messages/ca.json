@@ -1883,7 +1883,8 @@
     "pending": "Pendent",
     "prevPage": "← Anterior",
     "nextPage": "Següent →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "Aquest lloc només utilitza cookies d'autenticació essencials. No s'utilitzen cookies de seguiment ni de publicitat.",
@@ -2251,7 +2252,9 @@
     "login": "Inici de sessió",
     "register": "Registre",
     "report": "Informe",
-    "reports": "Els meus informes"
+    "reports": "Els meus informes",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "Preus"

@@ -1883,7 +1883,8 @@
     "pending": "Ожидание",
     "prevPage": "← Предыдущий",
     "nextPage": "Далее →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "Этот сайт использует только необходимые файлы cookie аутентификации. Никакие файлы cookie для отслеживания или рекламы не используются.",
@@ -2251,7 +2252,9 @@
     "login": "Вход",
     "register": "Регистрация",
     "report": "Отчет",
-    "reports": "Мои отчеты"
+    "reports": "Мои отчеты",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "Цены"

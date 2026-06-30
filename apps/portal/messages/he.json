@@ -1883,7 +1883,8 @@
     "pending": "בהמתנה",
     "prevPage": "← הקודם",
     "nextPage": "הבא →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "אתר זה משתמש רק בעוגיות אימות חיוניות. לא נעשה שימוש בעוגיות מעקב או פרסום.",
@@ -2251,7 +2252,9 @@
     "login": "התחברות",
     "register": "הרשמה",
     "report": "דוח",
-    "reports": "הדוחות שלי"
+    "reports": "הדוחות שלי",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "תמחור"

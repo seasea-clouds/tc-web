@@ -1883,7 +1883,8 @@
     "pending": "زیر التواء",
     "prevPage": "← پچھلا",
     "nextPage": "اگلا →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "یہ سائٹ صرف ضروری تصدیقی کوکیز استعمال کرتی ہے۔ کوئی ٹریکنگ یا اشتہاری کوکیز استعمال نہیں کی جاتی ہیں۔",
@@ -2251,7 +2252,9 @@
     "login": "لاگ ان",
     "register": "رجسٹر",
     "report": "رپورٹ",
-    "reports": "میری رپورٹس"
+    "reports": "میری رپورٹس",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "قیمتوں کا تعین"

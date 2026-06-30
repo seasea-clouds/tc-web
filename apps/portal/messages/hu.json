@@ -1883,7 +1883,8 @@
     "pending": "Függőben",
     "prevPage": "← Előző",
     "nextPage": "Következő →",
-    "periodStart": "Period start"
+    "periodStart": "Period start",
+    "reportId": "Report ID"
   },
   "Cookie": {
     "message": "Ez az oldal csak alapvető hitelesítési cookie-kat használ. Nem használnak nyomkövető vagy hirdetési sütiket.",
@@ -2251,7 +2252,9 @@
     "login": "Bejelentkezés",
     "register": "Regisztráció",
     "report": "Jelentés",
-    "reports": "Saját jelentéseim"
+    "reports": "Saját jelentéseim",
+    "myReports": "My Reports",
+    "signOut": "Sign Out"
   },
   "Breadcrumb": {
     "pricing": "Árképzés"

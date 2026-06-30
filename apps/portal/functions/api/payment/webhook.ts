@@ -55,6 +55,10 @@ async function verifySignature(
 
 export async function onRequest(context: { request: Request; env: Env }) {
   if (context.request.method !== "POST") {
+    // GET: return recent webhook logs for debugging
+    if (context.request.method === "GET") {
+      return await handleDebugLogs(env);
+    }
     return new Response("Method not allowed", { status: 405 });
   }
 
@@ -64,12 +68,45 @@ export async function onRequest(context: { request: Request; env: Env }) {
     const signature =
       context.request.headers.get("x-creem-signature") ?? "";
 
+    // ── Log full payload for debugging ────────────────────────────
+    console.log("=== CREEM WEBHOOK RECEIVED ===");
+    console.log("Signature:", signature ? signature.substring(0, 16) + "..." : "(none)");
+    console.log("Payload type:", payload.type);
+    console.log("Payload keys:", Object.keys(payload));
+    console.log("Payload.data keys:", payload.data ? Object.keys(payload.data) : "(no data)");
+    console.log("Payload.data.metadata:", payload.data?.metadata || "(none)");
+    console.log("Payload.data.customer:", JSON.stringify(payload.data?.customer || "(none)").substring(0, 200));
+    console.log("Payload.data.subscription:", payload.data?.subscription ? "present" : "(none)");
+    console.log("Payload.data.subscription_id:", payload.data?.subscription_id || "(none)");
+    console.log("Payload.data.id:", payload.data?.id || "(none)");
+
+    // ── Store in D1 for later inspection ──────────────────────────
+    try {
+      await env.DB?.prepare(
+        "CREATE TABLE IF NOT EXISTS webhook_logs (id INTEGER PRIMARY KEY AUTOINCREMENT, type TEXT, payload TEXT, metadata TEXT, created_at TEXT DEFAULT (datetime('now')))"
+      ).run();
+      await env.DB?.prepare(
+        "INSERT INTO webhook_logs (type, payload, metadata) VALUES (?, ?, ?)"
+      ).bind(
+        payload.type || "unknown",
+        JSON.stringify(payload).substring(0, 3000),
+        JSON.stringify(payload.data?.metadata || {})
+      ).run();
+      // Keep only last 20 logs
+      await env.DB?.prepare(
+        "DELETE FROM webhook_logs WHERE id NOT IN (SELECT id FROM webhook_logs ORDER BY id DESC LIMIT 20)"
+      ).run();
+    } catch (dbErr) {
+      console.error("Failed to store webhook log:", dbErr);
+    }
+
     if (context.env.CREEM_WEBHOOK_SECRET && signature) {
       const isValid = await verifySignature(
         bodyText,
         signature,
         context.env.CREEM_WEBHOOK_SECRET
       );
+      console.log("Signature valid:", isValid);
       if (!isValid) {
         console.error("Invalid webhook signature");
         return new Response("Invalid signature", { status: 401 });
@@ -81,6 +118,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
     const meta = (data.metadata ?? {}) as Record<string, string>;
 
     console.log(`Creem webhook: ${type}`, { meta });
+    console.log(`data.id=${data.id}, data.customer?.email=${(data as any).customer?.email || "(none)"}`);
 
     if (type === "checkout.completed") {
       await handleCheckoutCompleted(context.request, context.env, meta, data);
@@ -88,12 +126,40 @@ export async function onRequest(context: { request: Request; env: Env }) {
       await handleSubscriptionCreated(context.env, data, meta);
     } else if (type === "subscription.canceled") {
       await handleSubscriptionCancelled(context.env, data);
+    } else {
+      console.log(`Unhandled webhook type: "${type}"`);
     }
 
     return Response.json({ ok: true });
   } catch (err) {
     console.error("Webhook error:", err);
     return Response.json({ error: String(err) }, { status: 400 });
+  }
+}
+
+// ─── Debug endpoint: GET /api/payment/webhook ─────────────────────
+
+async function handleDebugLogs(env: Env) {
+  try {
+    await env.DB?.prepare(
+      "CREATE TABLE IF NOT EXISTS webhook_logs (id INTEGER PRIMARY KEY AUTOINCREMENT, type TEXT, payload TEXT, metadata TEXT, created_at TEXT DEFAULT (datetime('now')))"
+    ).run();
+
+    const logs = await env.DB?.prepare(
+      "SELECT id, type, metadata, substr(payload, 1, 500) as payload_preview, created_at FROM webhook_logs ORDER BY id DESC LIMIT 10"
+    ).all();
+
+    // Also show recent subscriptions
+    const subs = await env.DB?.prepare(
+      "SELECT id, user_id, plan, status, provider_subscription_id, current_period_start, current_period_end, created_at FROM subscriptions ORDER BY created_at DESC LIMIT 5"
+    ).all();
+
+    return Response.json({
+      webhook_logs: logs?.results || [],
+      recent_subscriptions: subs?.results || [],
+    });
+  } catch (err) {
+    return Response.json({ error: String(err) }, { status: 500 });
   }
 }
 
@@ -262,6 +328,8 @@ async function handleSubscriptionCreated(
   const customerEmail = String(
     (data as any).customer?.email ??
     (data as any).customer_email ??
+    (data as any).owner?.email ??
+    (data as any).email ??
     meta.email ??
     ""
   );

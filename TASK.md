@@ -1,5 +1,13 @@
 # TASK.md — 当前待执行任务
 
+## ⚠️ 待恢复项（翻译完成后必须处理）
+
+**🔴 任务 0：恢复 build:ci 模式**
+- 翻译到位后，将各 app 的 `build:ci` 脚本合并回 `build`，重新启用 `--ci` 标记
+- 涉及文件：`apps/site/package.json`、`apps/portal/package.json`、`apps/blog/package.json`
+- 现状：因 P3 翻译卡住（738 处硬编码英文回退），临时将 `build` 中的 `--ci` 移除到 `build:ci`
+- 触发条件：所有翻译任务完成且 CI 每项目硬编码数降为 0
+
 ## 待修复问题（按优先级排序）
 
 ### 高优先级

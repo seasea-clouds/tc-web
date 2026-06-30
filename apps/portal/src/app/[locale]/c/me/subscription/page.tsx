@@ -51,9 +51,15 @@ export default function SubscriptionPage() {
               <span className="text-gray-500">{t('status')}</span>
               <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${sub.status === 'active' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>{sub.status}</span>
             </div>
+            {sub.current_period_start && (
+              <div className="flex justify-between items-center">
+                <span className="text-gray-500">{t('periodStart')}</span>
+                <span className="text-sm text-gray-700">{new Date(sub.current_period_start).toLocaleDateString()}</span>
+              </div>
+            )}
             {sub.current_period_end && (
               <div className="flex justify-between items-center">
-                <span className="text-gray-500">{t('renewal')}</span>
+                <span className="text-gray-500">{t('periodEnds')}</span>
                 <span className="text-sm text-gray-700">{new Date(sub.current_period_end).toLocaleDateString()}</span>
               </div>
             )}

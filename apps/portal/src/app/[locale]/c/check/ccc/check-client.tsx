@@ -8,6 +8,7 @@ import { API_BASE } from "@/lib/constants";
 import { useFormValidation, inputClasses, selectClasses } from "@/lib/useFormValidation";
 import { usePathPrefix } from '@/lib/useSubsiteHref';
 import { initiateCheckout } from '@/lib/checkout';
+import { useSubscription } from '@/lib/useSubscription';
 
 type Step = "form" | "free-result";
 
@@ -21,6 +22,7 @@ export default function CccCheckClient() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const { fieldErrors, validate, clearFieldError } = useFormValidation();
+  const { subscribed } = useSubscription();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -31,7 +33,20 @@ export default function CccCheckClient() {
   };
 
   const pathPrefix = usePathPrefix();
-  const handlePayment = async () => { try {
+  const handlePayment = async () => {
+    // If subscribed, skip checkout and go directly to the report page
+    if (subscribed) {
+      try {
+        localStorage.setItem('compli-report-input', JSON.stringify({
+          ...input,
+          productName: input.productName || t('yourProduct'),
+        }));
+      } catch {}
+      const reportId = `CCC-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
+      window.location.href = pathPrefix + "/c/report/?id=" + reportId;
+      return;
+    }
+    try {
       const reportId = `CCC-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
 
       try {
@@ -290,31 +305,49 @@ export default function CccCheckClient() {
 
             {/* Payment Section */}
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sm:p-8 text-center space-y-4">
-              <p className="text-lg font-semibold text-[#1B365D]">{t('paymentTitle')}</p>
-              <p className="text-sm text-gray-500">{t('fullReportDesc')}</p>
+              {subscribed ? (
+                <>
+                  <p className="text-lg font-semibold text-[#1B365D]">{t('subscribedViewReport')}</p>
+                  <p className="text-sm text-gray-500">{t('subscribedDesc')}</p>
+                  <div className="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">{t('subscribedBadge')}</div>
+                  {error && <p className="text-sm text-red-500">{error}</p>}
+                  <button
+                    onClick={handlePayment}
+                    disabled={loading}
+                    className="w-full max-w-xs bg-[#D4AF37] hover:bg-[#D4AF37]/90 disabled:bg-gray-300 text-[#1B365D] font-semibold py-3 px-6 rounded-md transition-all text-lg"
+                  >
+                    {loading ? t('redirecting') : t('subscribedViewReport')}
+                  </button>
+                </>
+              ) : (
+                <>
+                  <p className="text-lg font-semibold text-[#1B365D]">{t('paymentTitle')}</p>
+                  <p className="text-sm text-gray-500">{t('fullReportDesc')}</p>
 
-              <div className="max-w-xs mx-auto">
-                <input
-                  type="email"
-                  placeholder={t("emailForPdf")}
-                  className="w-full border border-gray-300 rounded-md p-2.5 text-sm text-center"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </div>
+                  <div className="max-w-xs mx-auto">
+                    <input
+                      type="email"
+                      placeholder={t("emailForPdf")}
+                      className="w-full border border-gray-300 rounded-md p-2.5 text-sm text-center"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                  </div>
 
-              {error && <p className="text-sm text-red-500">{error}</p>}
+                  {error && <p className="text-sm text-red-500">{error}</p>}
 
-              <div className="flex flex-col items-center gap-3">
-                <button
-                  onClick={handlePayment}
-                  disabled={loading}
-                  className="w-full max-w-xs bg-[#D4AF37] hover:bg-[#D4AF37]/90 disabled:bg-gray-300 text-[#1B365D] font-semibold py-3 px-6 rounded-md transition-all text-lg"
-                >
-                  {loading ? t('redirecting') : t('fullReport1')}
-                </button>
-                <p className="text-xs text-gray-400">{t('oneTimePayment')}</p>
-              </div>
+                  <div className="flex flex-col items-center gap-3">
+                    <button
+                      onClick={handlePayment}
+                      disabled={loading}
+                      className="w-full max-w-xs bg-[#D4AF37] hover:bg-[#D4AF37]/90 disabled:bg-gray-300 text-[#1B365D] font-semibold py-3 px-6 rounded-md transition-all text-lg"
+                    >
+                      {loading ? t('redirecting') : t('fullReport1')}
+                    </button>
+                    <p className="text-xs text-gray-400">{t('oneTimePayment')}</p>
+                  </div>
+                </>
+              )}
             </div>
 
             {/* Expert CTA */}

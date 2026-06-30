@@ -43,19 +43,19 @@ export function checkCrossborder(input: any, locale?: string): any {
       { dimension: t("cbDimension_platformSetup"), score: 4, color: "🟡", note: t("cbRiskNote_platformSetup") },
       { dimension: t("cbDimension_compliance"), score: 2, color: "🟢", note: t("no_gacc_required_for_cbec") },
       { dimension: t("cbDimension_timeline"), score: 3, color: "🟢", note: t("cbRiskNote_timeline") },
-      { dimension: t("cbDimension_investment"), score: 5, color: "🟡", note: "$10,000-40,000 initial" },
+      { dimension: t("cbDimension_investment"), score: 5, color: "🟡", note: t("cbRiskNote_investment") },
     ],
     channels: [
-      { channel: "Tmall Global", suitability: "high", gaccRequired: false, description: t("largest_cbec_platform"), advantages: [t("massive_traffic"), t("integrated_logistics_cainiao")], disadvantages: [t("higher_deposit"), t("extensive_docs")], timeline: "4-8 weeks", costRange: "$15,000-40,000" },
-      { channel: "JD Worldwide", suitability: "high", gaccRequired: false, description: t("strong_for_electronics_health"), advantages: [t("own_logistics_jd_logistics"), t("trusted_for_authentic")], disadvantages: [t("stricter_qc")], timeline: "4-8 weeks", costRange: "$12,000-35,000" },
+      { channel: t("cbChannel_tmall"), suitability: "high", gaccRequired: false, description: t("largest_cbec_platform"), advantages: [t("massive_traffic"), t("integrated_logistics_cainiao")], disadvantages: [t("higher_deposit"), t("extensive_docs")], timeline: "4-8 weeks", costRange: "$15,000-40,000" },
+      { channel: t("cbChannel_jd"), suitability: "high", gaccRequired: false, description: t("strong_for_electronics_health"), advantages: [t("own_logistics_jd_logistics"), t("trusted_for_authentic")], disadvantages: [t("stricter_qc")], timeline: "4-8 weeks", costRange: "$12,000-35,000" },
     ],
-    tariffInfo: { mfnRate: "9.1% comprehensive", vatRate: "70% of standard", consumptionTax: "N/A", ftaRate: t("cbec_tax_discount_applies"), totalTaxBurden: "~9.1% (70% discount on tariff + VAT)" },
+    tariffInfo: { mfnRate: t("cbTariff_mfn"), vatRate: t("cbTariff_vat"), consumptionTax: t("cbTariff_consumption"), ftaRate: t("cbec_tax_discount_applies"), totalTaxBurden: t("cbTariff_total") },
     regulations: [
-      { name: t("cbec_retail_import_policy"), number: "MOFCOM 2018 Notice", effectiveDate: "January 2019", issuingAuthority: "MOFCOM", relevance: "primary", description: t("framework_for_cross_border_e_commerce_retail_impor") },
-      { name: "CBEC Positive List", number: t("mofcom_gacc_joint_list"), effectiveDate: t("updated_annually"), issuingAuthority: t("mofcom_gacc"), relevance: "primary", description: t("defines_products_eligible_for_cbec_import") },
-      { name: t("personal_use_declaration"), number: t("gacc_decree_249_art_5"), effectiveDate: "January 1, 2022", issuingAuthority: "GACC", relevance: "primary", description: t("cbec_goods_imported_as_personal_use_items") },
+      { name: t("cbec_retail_import_policy"), number: t("cbReg_mofcom2018_number"), effectiveDate: t("cbReg_mofcom2018_date"), issuingAuthority: t("cbReg_mofcom2018_authority"), relevance: "primary", description: t("framework_for_cross_border_e_commerce_retail_impor") },
+      { name: t("cbReg_positiveList_name"), number: t("mofcom_gacc_joint_list"), effectiveDate: t("updated_annually"), issuingAuthority: t("mofcom_gacc"), relevance: "primary", description: t("defines_products_eligible_for_cbec_import") },
+      { name: t("personal_use_declaration"), number: t("gacc_decree_249_art_5"), effectiveDate: t("cbReg_decree249_date"), issuingAuthority: t("cbReg_decree249_authority"), relevance: "primary", description: t("cbec_goods_imported_as_personal_use_items") },
     ],
-    classification: { assignedHsChapter: "Varies", ciqCode: "Check import", isHighRisk: false, riskReason: t("on_cbec_positive_list_simplified_compliance"), alternativeClassificationNote: "" },
+    classification: { assignedHsChapter: t("varies_label"), ciqCode: t("check_import_label"), isHighRisk: false, riskReason: t("on_cbec_positive_list_simplified_compliance"), alternativeClassificationNote: "" },
     riskMatrix: [
       { dimension: t("cbDimension_positiveList"), rating: "🟢", explanation: t("category_on_approved_list") },
       { dimension: t("cbDimension_platformSetup"), rating: "🟡", explanation: t("cbMatrixNote_platformSetup") },
@@ -77,9 +77,9 @@ export function checkCrossborder(input: any, locale?: string): any {
     labelGuide: { requiredItems: [], gb7718Highlights: [], gb28050Highlights: [] },
     timelinePhases: [
       { phase: t("cbTimeline_platformSel_name"), duration: "2-3 weeks", description: t("cbTimeline_platformSel_desc"), responsible: "Both", dependencies: [] },
-      { phase: t("cbTimeline_docPrep_name"), duration: "2-3 weeks", description: t("cbTimeline_docPrep_desc"), responsible: "Both", dependencies: ["Platform selected"] },
-      { phase: t("cbTimeline_platformApp_name"), duration: "2-4 weeks", description: t("cbTimeline_platformApp_desc"), responsible: "SinoTrade", dependencies: ["Documents ready"] },
-      { phase: t("cbTimeline_launch_name"), duration: "1-2 weeks", description: t("cbTimeline_launch_desc"), responsible: "Both", dependencies: ["Platform approved"] },
+      { phase: t("cbTimeline_docPrep_name"), duration: "2-3 weeks", description: t("cbTimeline_docPrep_desc"), responsible: "Both", dependencies: [t("cbTimeline_docPrep_dep_platform")] },
+      { phase: t("cbTimeline_platformApp_name"), duration: "2-4 weeks", description: t("cbTimeline_platformApp_desc"), responsible: "SinoTrade", dependencies: [t("cbTimeline_platformApp_dep_docs")] },
+      { phase: t("cbTimeline_launch_name"), duration: "1-2 weeks", description: t("cbTimeline_launch_desc"), responsible: "Both", dependencies: [t("cbTimeline_launch_dep_approved")] },
     ],
     costBreakdown: [
       { item: t("cbCost_deposit_item"), estimatedRange: "$5,000-25,000", notes: t("cbCost_deposit_notes") },
@@ -102,8 +102,8 @@ export function checkCrossborder(input: any, locale?: string): any {
       t("intellectual_property_filing_trademark_registratio"),
     ],
     postApprovalObligations: [
-      { item: t("platform_compliance_review"), frequency: "Quarterly", description: t("plaform_audits_product_listings") },
-      { item: t("bonded_warehouse_inventory"), frequency: "Monthly", description: t("verify_inventory_accuracy") },
+      { item: t("platform_compliance_review"), frequency: t("cbPost_platformReview_frequency"), description: t("plaform_audits_product_listings") },
+      { item: t("bonded_warehouse_inventory"), frequency: t("cbPost_inventory_frequency"), description: t("verify_inventory_accuracy") },
     ],
     postApproval: [
       { item: t("cbPost_platformReview_item"), freq: t("cbPost_platformReview_frequency"), desc: t("cbPost_platformReview_desc") },
@@ -116,22 +116,22 @@ export function checkCrossborder(input: any, locale?: string): any {
     ],
   
   platformGuide: [
-    { platform: "Tmall Global", fee: "Deposit $25,000 + 5% commission", req: t("overseas_company_brand_tm_registration"), traffic: t("largest_cbec_traffic_50_market_share"), timeline: "2-4 months to onboard" },
-    { platform: "JD Worldwide", fee: "Deposit $20,000 + 5-8% commission", req: t("overseas_company_brand_registration"), traffic: t("strong_electronics_home_categories"), timeline: "2-3 months to onboard" },
-    { platform: t("douyin_global"), fee: "Deposit $5,000 + 2-5% commission", req: t("overseas_company_content_capability"), traffic: t("fastest_growing_live_streaming_focused"), timeline: "1-2 months to onboard" },
+    { platform: t("cbPlatform_tmall_name"), fee: t("cbPlatform_tmall_fee"), req: t("overseas_company_brand_tm_registration"), traffic: t("largest_cbec_traffic_50_market_share"), timeline: t("cbPlatform_tmall_timeline") },
+    { platform: t("cbPlatform_jd_name"), fee: t("cbPlatform_jd_fee"), req: t("overseas_company_brand_registration"), traffic: t("strong_electronics_home_categories"), timeline: t("cbPlatform_jd_timeline") },
+    { platform: t("douyin_global"), fee: t("cbPlatform_douyin_fee"), req: t("overseas_company_content_capability"), traffic: t("fastest_growing_live_streaming_focused"), timeline: t("cbPlatform_douyin_timeline") },
   ],
   logisticsModels: {
-    bbc: { name: "1210 Bonded Warehouse", process: t("bulk_shipment_bonded_warehouse_customs_clearance_d"), advantage: t("faster_delivery_2_5_days_lower_per_unit_cost"), requirement: t("cbec_positive_list_product") },
-    direct: { name: "9610 Direct Shipping", process: t("order_placed_overseas_warehouse_courier_customs_cl"), advantage: t("no_bonded_warehouse_needed_wider_product_range"), requirement: t("higher_per_shipment_cost") },
+    bbc: { name: t("cbLogistics_bbc_name"), process: t("bulk_shipment_bonded_warehouse_customs_clearance_d"), advantage: t("faster_delivery_2_5_days_lower_per_unit_cost"), requirement: t("cbec_positive_list_product") },
+    direct: { name: t("cbLogistics_direct_name"), process: t("order_placed_overseas_warehouse_courier_customs_cl"), advantage: t("no_bonded_warehouse_needed_wider_product_range"), requirement: t("higher_per_shipment_cost") },
   },
   customsDocGuide: [
-    "Order document (订单) — from platform", "Payment document (支付) — from payment gateway",
-    "Logistics document (物流) — from carrier" , "Commercial invoice", "Packing list", "Certificate of Origin (if FTA)"
+    t("cbCustomsDoc_0"), t("cbCustomsDoc_1"),
+    t("cbCustomsDoc_2"), t("cbCustomsDoc_3"), t("cbCustomsDoc_4"), t("cbCustomsDoc_5")
   ],
   positiveList: {
     note: t("only_products_on_cbec_positive_list_can_use_1210_b"),
     checkMethod: t("verify_via_mofcom_cbec_positive_list_catalog_or_co"),
-    typicalIncluded: [t("food_supplements"), "Cosmetics", t("baby_formula"), t("small_appliances"), "Apparel"],
+    typicalIncluded: [t("food_supplements"), t("cbPositiveList_cosmetics"), t("baby_formula"), t("small_appliances"), t("cbPositiveList_apparel")],
     typicalExcluded: [t("fresh_food"), t("live_animals"), t("large_medical_devices")]
   },
   cbTaxInfo: {

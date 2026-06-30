@@ -31,17 +31,17 @@ export async function onRequest(context: { request: Request; env: Env }) {
   const limit = Math.min(Math.max(parseInt(url.searchParams.get('limit') || '20', 10) || 20, 1), 100);
   const offset = Math.max(parseInt(url.searchParams.get('offset') || '0', 10) || 0, 0);
 
-  // Get total count
+  // Get total count (only completed payments)
   const countResult = await context.env.DB.prepare(
-    `SELECT COUNT(*) as total FROM reports WHERE user_email = ?`
+    `SELECT COUNT(*) as total FROM reports WHERE user_email = ? AND payment_status = 'completed'`
   ).bind(user.email).first<{ total: number }>();
   const total = countResult?.total || 0;
 
-  // Get paginated reports
+  // Get paginated reports (only completed payments)
   const reports = await context.env.DB.prepare(
     `SELECT id, module, product_name, payment_status, created_at
      FROM reports
-     WHERE user_email = ?
+     WHERE user_email = ? AND payment_status = 'completed'
      ORDER BY created_at DESC
      LIMIT ? OFFSET ?`
   ).bind(user.email, limit, offset).all();

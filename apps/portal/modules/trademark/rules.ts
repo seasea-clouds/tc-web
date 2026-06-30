@@ -34,7 +34,7 @@ export function checkTrademark(input: any, locale?: string): any {
   const riskScore = needsReg ? 7.5 : 2.0;
   return {
     needsRegistration: needsReg, requiresRegistration: needsReg, riskCategory: isHighRisk ? "high" : "low", isHighRisk, riskScore,
-    estimatedTimeline: "8-14 months", totalCostRange: "$600-2,000/class",
+    estimatedTimeline: t("tmEstimTimeline"), totalCostRange: t("tmTotalCostRange"),
     verdictLabel: t(needsReg ? 'tmVerdictHigh' : 'tmVerdictLow'),
     riskPathway: t(needsReg ? 'tmRiskPathwayHigh' : 'tmRiskPathwayLow'),
     executiveSummary: t('tmExecutiveSummary').replace('{brandName}', input.brandName || ''),
@@ -44,19 +44,19 @@ export function checkTrademark(input: any, locale?: string): any {
       { dimension: t("tmDimension_registrationStatus"), score: needsReg ? 9 : 1, color: needsReg ? "🔴" : "🟢", note: needsReg ? t("not_registered_high_risk") : t("tmRiskNote_registered") },
       { dimension: t("tmDimension_squatterRisk"), score: needsReg ? 8 : 3, color: needsReg ? "🔴" : "🟢", note: t("china_first_to_file_squatters_may_grab_your_brand") },
       { dimension: t("tmDimension_timeline"), score: needsReg ? 6 : 1, color: needsReg ? "🟡" : "🟢", note: t("tmRiskNote_timeline") },
-      { dimension: t("tmDimension_cost"), score: 3, color: "🟢", note: "$600-2,000/class" },
+      { dimension: t("tmDimension_cost"), score: 3, color: "🟢", note: t("tmCost_note") },
       { dimension: t("tmDimension_enforcement"), score: needsReg ? 8 : 3, color: needsReg ? "🔴" : "🟢", note: needsReg ? t("cannot_enforce_without_registration") : t("full_enforcement_rights") },
     ],
     channels: [
-      { channel: t("trademark_registration"), suitability: "high", gaccRequired: false, description: t("file_with_cnipa_for_full_legal_protection"), advantages: [t("legal_protection"), t("platform_enforcement")], disadvantages: ["8-14 month timeline"], timeline: "8-14 months", costRange: "$600-2,000/class" },
+      { channel: t("trademark_registration"), suitability: "high", gaccRequired: false, description: t("file_with_cnipa_for_full_legal_protection"), advantages: [t("legal_protection"), t("platform_enforcement")], disadvantages: [t("tmChannel_disadv")], timeline: t("tmEstimTimeline"), costRange: t("tmTotalCostRange") },
     ],
-    tariffInfo: { mfnRate: "N/A", vatRate: "N/A", consumptionTax: "N/A", ftaRate: null, totalTaxBurden: t("n_a_legal_service_not_import") },
+    tariffInfo: { mfnRate: t("na_label"), vatRate: t("na_label"), consumptionTax: t("na_label"), ftaRate: null, totalTaxBurden: t("n_a_legal_service_not_import") },
     regulations: [
       { name: t("trademark_law_of_china"), number: "4th Revision 2019", effectiveDate: "November 1, 2019", issuingAuthority: t("cnipa_npc"), relevance: "primary", description: t("first_to_file_system_art_32_prevents_bad_faith_fil") },
       { name: t("trademark_examination_guidelines"), number: "CNIPA 2021 Edition", effectiveDate: "2021", issuingAuthority: "CNIPA", relevance: "primary", description: t("examination_standards_for_distinctiveness_and_simi") },
       { name: t("customs_ip_protection_regulations"), number: t("state_council_decree_395"), effectiveDate: "March 1, 2004", issuingAuthority: "GACC", relevance: "secondary", description: t("border_enforcement_customs_can_detain_suspected_co") },
     ],
-    classification: { assignedHsChapter: "N/A", ciqCode: "N/A", isHighRisk: needsReg, riskReason: needsReg ? t("brand_not_registered_first_to_file_risk") : "Registered.", alternativeClassificationNote: "" },
+    classification: { assignedHsChapter: t("na_label"), ciqCode: t("na_label"), isHighRisk: needsReg, riskReason: needsReg ? t("brand_not_registered_first_to_file_risk") : t("tmRiskReason_registered"), alternativeClassificationNote: "" },
     riskMatrix: [
       { dimension: t("tmDimension_registrationStatus"), rating: needsReg ? "🔴" : "🟢", explanation: needsReg ? t("not_registered") : t("tmMatrixNote_registered") },
       { dimension: t("tmDimension_squatterRisk"), rating: "🔴", explanation: t("china_first_to_file_anyone_can_register_your_brand") },
@@ -72,17 +72,17 @@ export function checkTrademark(input: any, locale?: string): any {
     testRequirements: [t("cnipa_database_search"), t("common_law_prior_art_search")],
     testCostRange: "$200-500",
     labGuide: t("trademark_search_should_cover_cnipa_database_wipo_"),
-    labTests: ["CNIPA search", t("wipo_search"), t("marketplace_search")],
+    labTests: [t("tmLab_cnipa"), t("wipo_search"), t("marketplace_search")],
     viability: t("critical_trademark_registration_is_essential_for_c"),
     detailedTimeline: t("search_1_2_weeks_application_1_3_days_formal_exam_"),
     labelGuide: { requiredItems: [], gb7718Highlights: [], gb28050Highlights: [] },
     timelinePhases: [
       { phase: t("tmTimeline_search_name"), duration: "1-2 weeks", description: t("tmTimeline_search_desc"), responsible: "Both", dependencies: [] },
-      { phase: t("tmTimeline_filing_name"), duration: "1-3 days", description: t("tmTimeline_filing_desc"), responsible: "SinoTrade", dependencies: ["Search complete"] },
-      { phase: t("tmTimeline_formalExam_name"), duration: "1-2 months", description: t("tmTimeline_formalExam_desc"), responsible: "CNIPA", dependencies: ["Application filed"] },
-      { phase: t("tmTimeline_substantiveExam_name"), duration: "6-9 months", description: t("tmTimeline_substantiveExam_desc"), responsible: "CNIPA", dependencies: ["Formal exam passed"] },
-      { phase: t("tmTimeline_publication_name"), duration: "3 months", description: t("tmTimeline_publication_desc"), responsible: "CNIPA", dependencies: ["Substantive exam passed"] },
-      { phase: t("tmTimeline_cert_name"), duration: "1-2 months", description: t("tmTimeline_cert_desc"), responsible: "Both", dependencies: ["Publication period passed"] },
+      { phase: t("tmTimeline_filing_name"), duration: "1-3 days", description: t("tmTimeline_filing_desc"), responsible: "SinoTrade", dependencies: [t("tmDep_search_complete")] },
+      { phase: t("tmTimeline_formalExam_name"), duration: "1-2 months", description: t("tmTimeline_formalExam_desc"), responsible: "CNIPA", dependencies: [t("tmDep_app_filed")] },
+      { phase: t("tmTimeline_substantiveExam_name"), duration: "6-9 months", description: t("tmTimeline_substantiveExam_desc"), responsible: "CNIPA", dependencies: [t("tmDep_formal_exam_passed")] },
+      { phase: t("tmTimeline_publication_name"), duration: "3 months", description: t("tmTimeline_publication_desc"), responsible: "CNIPA", dependencies: [t("tmDep_subs_exam_passed")] },
+      { phase: t("tmTimeline_cert_name"), duration: "1-2 months", description: t("tmTimeline_cert_desc"), responsible: "Both", dependencies: [t("tmDep_pub_period_passed")] },
     ],
     costBreakdown: [
       { item: t("tmCost_search_item"), estimatedRange: "$200-500", notes: t("tmCost_search_notes") },
@@ -126,7 +126,7 @@ export function checkTrademark(input: any, locale?: string): any {
   ],
   squattingGuide: {
     risk: t("china_is_first_to_file_anyone_can_register_your_br"),
-    stats: "15-25% of foreign brands experience squatting in China",
+    stats: t("tmSquatting_stats"),
     prevention: [t("file_trademark_in_china_before_market_entry"), t("file_defensive_classes"), t("monitor_cnipa_weekly"), t("file_transliteration_marks")],
     remedy: [t("file_opposition_within_3_months_of_publication"), t("invalidation_action_prove_bad_faith"), t("negotiate_purchase_from_squatter")]
   },
@@ -141,7 +141,7 @@ export function checkTrademark(input: any, locale?: string): any {
     description: t("monthly_monitoring_of_cnipa_trademark_applications"),
     includes: [t("monthly_cnipa_database_scan"), t("conflict_alert_within_48_hours"), t("opposition_feasibility_analysis"), t("enforcement_recommendation")],
     frequency: t("monthly_reports_real_time_alerts_for_urgent_confli"),
-    cost: "$200-500/month depending on number of classes"
+    cost: t("tmWatchService_cost")
   },
 };
 }

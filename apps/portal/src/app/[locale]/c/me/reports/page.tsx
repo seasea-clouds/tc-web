@@ -7,8 +7,22 @@ import Link from 'next/link';
 
 const PAGE_SIZE = 20;
 
+const MODULE_T_KEY: Record<string, string> = {
+  'GACC Food Registration': 'reportModuleGacc',
+  'CCC Certification': 'reportModuleCcc',
+  'NMPA Cosmetics Filing': 'reportModuleNmpa',
+  'Cross-Border E-commerce': 'reportModuleCrossborder',
+  'Brand Protection': 'reportModuleTrademark',
+  'Chinese Label Compliance': 'reportModuleLabel',
+};
+
+function translateModule(t: (key: string) => string, module: string): string {
+  const tKey = MODULE_T_KEY[module];
+  return tKey ? t(tKey) : module;
+}
+
 export default function MyReportsPage() {
-  const t = useT('Report');
+  const t = useT('Check');
   const { user, isLoading } = useAuth();
   const [reports, setReports] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
@@ -53,7 +67,7 @@ export default function MyReportsPage() {
               <Link key={r.id} href={`../report/?id=${r.id}`} className="block bg-white rounded-xl shadow-sm border border-gray-200 p-4 hover:shadow-md transition-all">
                 <div className="flex justify-between items-center">
                   <div>
-                    <p className="font-semibold text-primary-navy">{r.module || 'Report'}</p>
+                    <p className="font-semibold text-primary-navy">{translateModule(t, r.module) || 'Report'}</p>
                     <p className="text-sm text-gray-500 mt-1">{t('reportId')}: {r.id}</p>
                   </div>
                   <div className="text-right text-xs text-gray-400">

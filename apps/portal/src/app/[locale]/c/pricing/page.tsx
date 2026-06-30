@@ -44,7 +44,7 @@ export default function PricingPage() {
         throw new Error('No checkout URL returned');
       }
     } catch (err) {
-      setError(String(err));
+      setError(tCheck('checkoutError'));
       setSubLoading(false);
     }
   };

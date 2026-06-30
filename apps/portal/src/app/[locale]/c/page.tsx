@@ -45,7 +45,7 @@ export default function HomePage() {
         throw new Error('No checkout URL returned');
       }
     } catch (err) {
-      setError(String(err));
+      setError(tCheck('checkoutError'));
       setSubLoading(false);
     }
   };
@@ -179,7 +179,7 @@ export default function HomePage() {
                 disabled={subLoading || authLoading}
                 className="w-full border-2 border-primary-navy text-primary-navy hover:bg-primary-navy hover:text-white font-semibold py-2 rounded-md transition-all text-sm disabled:border-gray-300 disabled:text-gray-400 disabled:cursor-not-allowed"
               >
-                {subLoading ? (tCheck('redirecting') || 'Redirecting...') : tPricing('subscribe')}
+                {subLoading ? tCheck('redirecting') : tPricing('subscribe')}
               </button>
             </div>
 

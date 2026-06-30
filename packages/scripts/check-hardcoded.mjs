@@ -603,6 +603,23 @@ const LEGIT_ENGLISH = new Set([
   'Yes',
   'Young consumers',
   'Your Product',
+  // ─── Module name mapping keys (not rendered, used as lookup) ─────
+  "Cross-Border E-commerce': 'reportModuleCrossborder",
+  "Brand Protection': 'reportModuleTrademark",
+  "Chinese Label Compliance': 'reportModuleLabel",
+  "Cosmetics Filing (NMPA)': 'reportModuleNmpa",
+  "Cross-Border E-commerce': 'reportModuleCrossborder",
+  "Brand Protection': 'reportModuleTrademark",
+  "Cosmetics Filing (NMPA)': 'nmpaCat",
+  "Chinese Label Compliance': 'labelCat",
+  "Cross-Border E-commerce': 'cbCat",
+  "Brand Protection': 'tmCat",
+  // ─── Error fallback strings (throw statements, not rendered text) ─
+  'Checkout failed',
+  'No checkout URL returned',
+  'Redirecting...',
+  // ─── Translation namespace names ────────────────────────────────
+  'ReportSection',
   'Your product (Confectionery / Chocolate (HS 17.04, 18.06)) requires GACC registration but is classified as low risk.',
   // Common repeated data strings in module rules.ts
   'CNCA/SAMR',

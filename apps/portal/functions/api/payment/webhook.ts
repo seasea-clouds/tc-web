@@ -67,14 +67,12 @@ export async function onRequest(context: { request: Request; env: Env }) {
     // ── Log full payload for debugging ────────────────────────────
     console.log("=== CREEM WEBHOOK RECEIVED ===");
     console.log("Signature:", signature ? signature.substring(0, 16) + "..." : "(none)");
-    console.log("Payload type:", payload.type);
+    console.log("Payload.eventType:", payload.eventType);
     console.log("Payload keys:", Object.keys(payload));
-    console.log("Payload.data keys:", payload.data ? Object.keys(payload.data) : "(no data)");
-    console.log("Payload.data.metadata:", payload.data?.metadata || "(none)");
-    console.log("Payload.data.customer:", JSON.stringify(payload.data?.customer || "(none)").substring(0, 200));
-    console.log("Payload.data.subscription:", payload.data?.subscription ? "present" : "(none)");
-    console.log("Payload.data.subscription_id:", payload.data?.subscription_id || "(none)");
-    console.log("Payload.data.id:", payload.data?.id || "(none)");
+    console.log("Payload.object keys:", payload.object ? Object.keys(payload.object) : "(no object)");
+    console.log("Payload.object.metadata:", JSON.stringify(payload.object?.metadata || "(none)"));
+    console.log("Payload.object.customer:", JSON.stringify(payload.object?.customer || "(none)").substring(0, 200));
+    console.log("Payload.object.order?.customer:", payload.object?.order?.customer || "(none)");
 
     // ── Store in D1 for later inspection ──────────────────────────
     const d1Status: any = {};
@@ -89,9 +87,9 @@ export async function onRequest(context: { request: Request; env: Env }) {
         await db.prepare(
           "INSERT INTO webhook_logs (type, payload, metadata) VALUES (?, ?, ?)"
         ).bind(
-          payload.type || "unknown",
+          payload.eventType || "unknown",
           JSON.stringify(payload).substring(0, 3000),
-          JSON.stringify(payload.data?.metadata || {})
+          JSON.stringify(payload.object?.metadata || {})
         ).run();
         d1Status.inserted = true;
         // Keep only last 20 logs
@@ -120,21 +118,22 @@ export async function onRequest(context: { request: Request; env: Env }) {
       }
     }
 
-    const type = (payload.type ?? "") as string;
-    const data = (payload.data ?? payload) as Record<string, unknown>;
-    const meta = (data.metadata ?? {}) as Record<string, string>;
+    // ── Creem uses { eventType, object } instead of { type, data } ─
+    const eventType = (payload.eventType ?? "") as string;
+    const webhookData = (payload.object ?? payload) as Record<string, unknown>;
+    const meta = (webhookData.metadata ?? {}) as Record<string, string>;
 
-    console.log(`Creem webhook: ${type}`, { meta });
-    console.log(`data.id=${data.id}, data.customer?.email=${(data as any).customer?.email || "(none)"}`);
+    console.log(`Creem webhook: ${eventType}`, { meta });
+    console.log(`data.id=${webhookData.id}, customer=${(webhookData as any).customer || (webhookData as any).order?.customer || "(none)"}`);
 
-    if (type === "checkout.completed") {
-      await handleCheckoutCompleted(context.request, context.env, meta, data);
-    } else if (type === "subscription.active") {
-      await handleSubscriptionCreated(context.env, data, meta);
-    } else if (type === "subscription.canceled") {
-      await handleSubscriptionCancelled(context.env, data);
+    if (eventType === "checkout.completed") {
+      await handleCheckoutCompleted(context.request, context.env, meta, webhookData);
+    } else if (eventType === "subscription.active") {
+      await handleSubscriptionCreated(context.env, webhookData, meta);
+    } else if (eventType === "subscription.canceled") {
+      await handleSubscriptionCancelled(context.env, webhookData);
     } else {
-      console.log(`Unhandled webhook type: "${type}"`);
+      console.log(`Unhandled webhook eventType: "${eventType}"`);
     }
 
     return Response.json({ ok: true, d1: d1Status });
@@ -159,15 +158,19 @@ async function handleCheckoutCompleted(
 
   if (!reportId) {
     // Not a report purchase — might be a subscription checkout.
-    // checkout.completed fires BEFORE subscription.active for subscription checkouts.
-    // The checkout object has metadata (user_id, email).
-    // The subscription.active event may NOT carry this metadata.
-    // So we create the subscription record here if data includes subscription info.
+    // The checkout object (data) has the structure:
+    // { id: "ch_xxx", object: "checkout", order: { customer: "cust_xxx", ... }, metadata: { user_id, email, locale } }
+    // Save the customer mapping here so subscription.active can find the user.
     const userId = meta.user_id ?? "";
+    const customerId = String((data as any).order?.customer ?? "");
+    if (userId && customerId) {
+      await saveCustomerMapping(env, customerId, userId, meta.email || "");
+      console.log(`checkout.completed: saved customer mapping: ${customerId} -> ${userId}`);
+    }
     if (userId) {
       await handleSubscriptionFromCheckout(env, data, meta);
     }
-    console.warn("checkout.completed: missing report_id in metadata", { userId: userId || "none" });
+    console.warn("checkout.completed: missing report_id", { userId: userId || "none", customerId });
     return;
   }
 
@@ -250,9 +253,33 @@ async function handleCheckoutCompleted(
   }
 }
 
+// ─── Save customer mapping (customer_id → user_id) ─────────────────
+// checkout.completed has metadata with user_id. subscription.active
+// has the same customer_id but no metadata. This mapping bridges them.
+
+async function saveCustomerMapping(
+  env: Env,
+  creemCustomerId: string,
+  userId: string,
+  email: string
+) {
+  try {
+    const db = env.DB;
+    if (!db) return;
+    await db.prepare(
+      "CREATE TABLE IF NOT EXISTS customer_mapping (creem_customer_id TEXT PRIMARY KEY, user_id TEXT, email TEXT, created_at TEXT DEFAULT (datetime('now')))"
+    ).run();
+    await db.prepare(
+      "INSERT OR REPLACE INTO customer_mapping (creem_customer_id, user_id, email) VALUES (?, ?, ?)"
+    ).bind(creemCustomerId, userId, email).run();
+  } catch (err) {
+    console.error("saveCustomerMapping error:", err);
+  }
+}
+
 // ─── Handle subscription from checkout.completed ──────────────────
 // checkout.completed fires with checkout object that has metadata (user_id, email).
-// Creem may also include the subscription reference in the checkout data.
+// At this point the subscription may not be created yet.
 
 async function handleSubscriptionFromCheckout(
   env: Env,
@@ -260,7 +287,6 @@ async function handleSubscriptionFromCheckout(
   meta: Record<string, string>
 ) {
   const userId = meta.user_id ?? "";
-  const customerEmail = (data as any).customer?.email ?? meta.email ?? "";
 
   // Try to extract subscription id from checkout data
   const subId = String(
@@ -278,7 +304,7 @@ async function handleSubscriptionFromCheckout(
 
   const planId = String((data as any).plan?.id ?? "monthly");
 
-  console.log(`checkout.completed (subscription): subId=${subId}, userId=${userId}, email=${customerEmail}`);
+  console.log(`checkout.completed (subscription): subId=${subId}, userId=${userId}`);
 
   try {
     const existing = await env.DB?.prepare(
@@ -298,7 +324,10 @@ async function handleSubscriptionFromCheckout(
   }
 }
 
-// ─── subscription.created 处理 ────────────────────────────────────────
+// ─── subscription.active 处理 ────────────────────────────────────────
+// Creem subscription object structure:
+// { id: "sub_xxx", object: "subscription", customer: { id: "cust_xxx", email: "..." },
+//   status: "active", current_period_start: "...", current_period_end: "...", mode: "test" }
 
 async function handleSubscriptionCreated(
   env: Env,
@@ -306,37 +335,52 @@ async function handleSubscriptionCreated(
   meta: Record<string, string>
 ) {
   const subId = String(data.id ?? "");
-  const customerEmail = String(
-    (data as any).customer?.email ??
-    (data as any).customer_email ??
-    (data as any).owner?.email ??
-    (data as any).email ??
-    meta.email ??
-    ""
-  );
+  const custObj = (data as any).customer ?? {};
+  const customerId = String(custObj.id ?? "");
+  const customerEmail = String(custObj.email ?? "");
   const userId = meta.user_id ?? "";
-  const periodStart = String((data as any).current_period_start ?? "");
-  const periodEnd = String((data as any).current_period_end ?? "");
+  const periodStart = String((data as any).current_period_start_date ?? (data as any).current_period_start ?? "");
+  const periodEnd = String((data as any).current_period_end_date ?? (data as any).current_period_end ?? "");
   const planId = String((data as any).plan?.id ?? "monthly");
 
-  if (!subId || (!userId && !customerEmail)) {
-    console.warn("subscription.created: missing subscription id or user id/email");
+  if (!subId) {
+    console.warn("subscription.active: missing subscription id");
     return;
   }
 
+  console.log(`subscription.active: subId=${subId}, customerId=${customerId}, email=${customerEmail}`);
+
   try {
-    // Find user by userId from metadata, or by email
+    // Find user: from meta (checkout.completed might have created mapping),
+    // or by customerId from customer_mapping table,
+    // or by email lookup in users table
     let dbUserId = userId;
+
+    if (!dbUserId && customerId && env.DB) {
+      // Check customer_mapping table first
+      try {
+        const mapping = await env.DB.prepare(
+          "SELECT user_id FROM customer_mapping WHERE creem_customer_id = ?"
+        ).bind(customerId).first();
+        if (mapping) {
+          dbUserId = (mapping as any).user_id;
+          console.log(`subscription.active: found user ${dbUserId} from customer_mapping`);
+        }
+      } catch { /* table may not exist yet */ }
+    }
+
     if (!dbUserId && customerEmail && env.DB) {
+      // Fall back to email lookup
       const user = await env.DB.prepare("SELECT id FROM users WHERE email = ?")
         .bind(customerEmail).first();
       if (user) {
         dbUserId = (user as any).id;
+        console.log(`subscription.active: found user ${dbUserId} by email lookup`);
       }
     }
 
     if (!dbUserId) {
-      console.warn("subscription.created: could not resolve user_id for", { customerEmail });
+      console.warn("subscription.active: could not resolve user_id", { customerId, customerEmail });
       return;
     }
 
@@ -350,7 +394,7 @@ async function handleSubscriptionCreated(
       await env.DB.prepare(
         `UPDATE subscriptions SET status = 'active', current_period_start = ?, current_period_end = ? WHERE provider_subscription_id = ?`
       ).bind(periodStart, periodEnd, subId).run();
-      console.log(`subscription.created: updated existing sub ${subId}`);
+      console.log(`subscription.active: updated existing sub ${subId}`);
     } else {
       // Create new
       const newId = crypto.randomUUID();
@@ -358,10 +402,10 @@ async function handleSubscriptionCreated(
         `INSERT INTO subscriptions (id, user_id, plan, status, provider_subscription_id, current_period_start, current_period_end)
          VALUES (?, ?, ?, 'active', ?, ?, ?)`
       ).bind(newId, dbUserId, planId, subId, periodStart, periodEnd).run();
-      console.log(`subscription.created: created new sub ${subId} for user ${dbUserId}`);
+      console.log(`subscription.active: created new sub ${subId} for user ${dbUserId}`);
     }
   } catch (err) {
-    console.error("subscription.created handler error:", err);
+    console.error("subscription.active handler error:", err);
   }
 }
 

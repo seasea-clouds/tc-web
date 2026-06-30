@@ -111,7 +111,16 @@ async function handleCheckoutCompleted(
   const locale = meta.locale ?? "en";
 
   if (!reportId) {
-    console.warn("checkout.completed: missing report_id in metadata");
+    // Not a report purchase — might be a subscription checkout.
+    // checkout.completed fires BEFORE subscription.active for subscription checkouts.
+    // The checkout object has metadata (user_id, email).
+    // The subscription.active event may NOT carry this metadata.
+    // So we create the subscription record here if data includes subscription info.
+    const userId = meta.user_id ?? "";
+    if (userId) {
+      await handleSubscriptionFromCheckout(env, data, meta);
+    }
+    console.warn("checkout.completed: missing report_id in metadata", { userId: userId || "none" });
     return;
   }
 
@@ -194,6 +203,54 @@ async function handleCheckoutCompleted(
   }
 }
 
+// ─── Handle subscription from checkout.completed ──────────────────
+// checkout.completed fires with checkout object that has metadata (user_id, email).
+// Creem may also include the subscription reference in the checkout data.
+
+async function handleSubscriptionFromCheckout(
+  env: Env,
+  data: Record<string, unknown>,
+  meta: Record<string, string>
+) {
+  const userId = meta.user_id ?? "";
+  const customerEmail = (data as any).customer?.email ?? meta.email ?? "";
+
+  // Try to extract subscription id from checkout data
+  const subId = String(
+    (data as any).subscription_id ??
+    (data as any).subscription?.id ??
+    ""
+  );
+
+  if (!subId) {
+    // No subscription info yet — checkout.completed fires before subscription is created
+    // The subscription.active event will handle it later
+    console.log("checkout.completed (subscription): no subscription_id yet, waiting for subscription.active");
+    return;
+  }
+
+  const planId = String((data as any).plan?.id ?? "monthly");
+
+  console.log(`checkout.completed (subscription): subId=${subId}, userId=${userId}, email=${customerEmail}`);
+
+  try {
+    const existing = await env.DB?.prepare(
+      "SELECT id FROM subscriptions WHERE provider_subscription_id = ?"
+    ).bind(subId).first();
+
+    if (!existing && userId) {
+      const newId = crypto.randomUUID();
+      await env.DB?.prepare(
+        `INSERT OR IGNORE INTO subscriptions (id, user_id, plan, status, provider_subscription_id)
+         VALUES (?, ?, ?, 'active', ?)`
+      ).bind(newId, userId, planId, subId).run();
+      console.log(`checkout.completed: created subscription ${subId} for user ${userId}`);
+    }
+  } catch (err) {
+    console.error("handleSubscriptionFromCheckout error:", err);
+  }
+}
+
 // ─── subscription.created 处理 ────────────────────────────────────────
 
 async function handleSubscriptionCreated(
@@ -202,7 +259,12 @@ async function handleSubscriptionCreated(
   meta: Record<string, string>
 ) {
   const subId = String(data.id ?? "");
-  const customerEmail = String((data as any).customer?.email ?? meta.email ?? "");
+  const customerEmail = String(
+    (data as any).customer?.email ??
+    (data as any).customer_email ??
+    meta.email ??
+    ""
+  );
   const userId = meta.user_id ?? "";
   const periodStart = String((data as any).current_period_start ?? "");
   const periodEnd = String((data as any).current_period_end ?? "");

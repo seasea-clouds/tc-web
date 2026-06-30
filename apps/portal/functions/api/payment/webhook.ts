@@ -77,12 +77,15 @@ export async function onRequest(context: { request: Request; env: Env }) {
     console.log("Payload.data.id:", payload.data?.id || "(none)");
 
     // ── Store in D1 for later inspection ──────────────────────────
+    const d1Status: any = {};
     try {
       const db = context.env.DB;
+      d1Status.hasDB = !!db;
       if (db) {
         await db.prepare(
           "CREATE TABLE IF NOT EXISTS webhook_logs (id INTEGER PRIMARY KEY, type TEXT, payload TEXT, metadata TEXT, created_at TEXT DEFAULT (datetime('now')))"
         ).run();
+        d1Status.tableReady = true;
         await db.prepare(
           "INSERT INTO webhook_logs (type, payload, metadata) VALUES (?, ?, ?)"
         ).bind(
@@ -90,14 +93,19 @@ export async function onRequest(context: { request: Request; env: Env }) {
           JSON.stringify(payload).substring(0, 3000),
           JSON.stringify(payload.data?.metadata || {})
         ).run();
+        d1Status.inserted = true;
         // Keep only last 20 logs
         await db.prepare(
           "DELETE FROM webhook_logs WHERE id NOT IN (SELECT id FROM webhook_logs ORDER BY id DESC LIMIT 20)"
         ).run();
+        d1Status.cleaned = true;
       }
     } catch (dbErr) {
+      d1Status.error = String(dbErr);
       console.error("Failed to store webhook log:", dbErr);
     }
+
+    console.log("D1 status:", JSON.stringify(d1Status));
 
     if (context.env.CREEM_WEBHOOK_SECRET && signature) {
       const isValid = await verifySignature(
@@ -129,7 +137,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
       console.log(`Unhandled webhook type: "${type}"`);
     }
 
-    return Response.json({ ok: true });
+    return Response.json({ ok: true, d1: d1Status });
   } catch (err) {
     console.error("Webhook error:", err);
     return Response.json({ error: String(err) }, { status: 400 });

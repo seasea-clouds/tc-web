@@ -117,6 +117,30 @@ SSG (`output: 'export'`) 模式下，动态路由必须提供 `generateStaticPar
 `bg-gold` 没有对应色值，按钮背景一直是透明的。
 - 修复：加入 `--color-gold: #D4AF37`
 
+## translate-tool 铁律（2026-06-30）
+
+**只调 CLI，不写 Python 脚本。**
+
+- ❌ 禁止编写自定义 Python 脚本调用 translate-tool 的内部 API
+- ❌ 禁止直接修改 translate-tool 项目代码、配置或 `pyproject.toml`
+- ✅ 所有交互必须通过 `translate-tool` CLI 命令行完成
+- ✅ 结果导出后手动处理 JSON merge
+- ⚠️ 工具缺功能（如无内置 merge 命令）→ 如实上报，由你评估是否修复
+
+**示例：**
+```bash
+# ✅ 正确
+source /root/projects/.venv/bin/activate
+python -m translate_tool --help
+translate-tool submit -i input.json -n task_name -s en -t "zh,ja,fr"
+translate-tool status -n task_name
+translate-tool results -n task_name -o output.json
+
+# ❌ 错误 — 不要这样
+from translate_tool import submit
+translate_tool.submit_task(...)
+```
+
 ### `||` 和 `??` 混用
 `const locale = propLocale || params?.locale ?? 'en'` 在 Turbopack 中报语法错误。
 需要加括号：`propLocale || (params?.locale ?? 'en')`

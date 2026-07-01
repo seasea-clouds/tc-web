@@ -1,9 +1,10 @@
 {
   "name": "@trade/portal",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node ../../packages/scripts/inject-version.mjs",
     "build": "node ../../packages/scripts/build-search-index.mjs && next build && node ../../packages/scripts/ci-check.mjs --out-dir=out",
     "build:ci": "node ../../packages/scripts/build-search-index.mjs && next build && node ../../packages/scripts/ci-check.mjs --out-dir=out --ci",
     "start": "next start",

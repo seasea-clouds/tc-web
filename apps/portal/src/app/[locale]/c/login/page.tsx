@@ -16,10 +16,18 @@ export default function LoginPage() {
   const [loading, setLoading] = useState(false);
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
   const turnstileKey = useRef(0);
+  const [agreedToPrivacy, setAgreedToPrivacy] = useState(false);
+  const [privacyError, setPrivacyError] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
+    setPrivacyError(false);
+
+    if (!agreedToPrivacy) {
+      setPrivacyError(true);
+      return;
+    }
 
     if (!turnstileToken) {
       setError(t('securityCheck'));
@@ -82,6 +90,28 @@ export default function LoginPage() {
             <label htmlFor="remember" className="text-sm text-gray-600">{t('rememberMe')}</label>
           </div>
 
+          {/* Privacy agreement checkbox */}
+          <div className={`flex items-start gap-2 p-3 rounded-md border ${privacyError ? 'border-red-300 bg-red-50' : 'border-gray-100'}`}>
+            <input
+              type="checkbox"
+              id="agree-privacy"
+              checked={agreedToPrivacy}
+              onChange={(e) => { setAgreedToPrivacy(e.target.checked); setPrivacyError(false); }}
+              className="mt-0.5 rounded border-gray-300"
+            />
+            <label htmlFor="agree-privacy" className="text-sm text-gray-600">
+              {t('agreeToPrivacy')}{' '}
+              <a href={`https://sinotradecompliance.com/${locale}/privacy`} target="_blank" rel="noopener noreferrer" className="text-gold hover:underline">
+                {t('privacyPolicy')}
+              </a>
+            </label>
+          </div>
+          {privacyError && (
+            <p className="text-sm text-red-500">
+              {locale.startsWith('zh') ? '请先同意隐私政策' : 'Please agree to the Privacy Policy'}
+            </p>
+          )}
+
           <button
             type="submit"
             disabled={loading || !turnstileToken}
@@ -113,12 +143,7 @@ export default function LoginPage() {
           </a>
         </p>
 
-        <p className="text-center text-xs text-gray-400 mt-4">
-          {t('agreeToPrivacy')}{' '}
-          <a href={`https://sinotradecompliance.com/${locale}/privacy`} target="_blank" rel="noopener noreferrer" className="text-gold hover:underline">
-            {t('privacyPolicy')}
-          </a>
-        </p>
+
       </div>
     </div>
   );

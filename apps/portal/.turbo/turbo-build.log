@@ -4,62 +4,727 @@
 
 Apps discovered: blog, portal, site
 Generating search index for 48 locales...
-  af: 1749 items (6S + 7B + 39F + 1697C)
-  ar: 1749 items (6S + 7B + 39F + 1697C)
-  az: 1749 items (6S + 7B + 39F + 1697C)
-  be: 1749 items (6S + 7B + 39F + 1697C)
-  bg: 1749 items (6S + 7B + 39F + 1697C)
-  bn: 1749 items (6S + 7B + 39F + 1697C)
-  ca: 1749 items (6S + 7B + 39F + 1697C)
-  cs: 1749 items (6S + 7B + 39F + 1697C)
-  da: 1749 items (6S + 7B + 39F + 1697C)
-  de: 1749 items (6S + 7B + 39F + 1697C)
-  el: 1749 items (6S + 7B + 39F + 1697C)
-  en: 1749 items (6S + 7B + 39F + 1697C)
-  es: 1749 items (6S + 7B + 39F + 1697C)
-  fa: 1749 items (6S + 7B + 39F + 1697C)
-  fi: 1749 items (6S + 7B + 39F + 1697C)
-  fr: 1749 items (6S + 7B + 39F + 1697C)
-  he: 1749 items (6S + 7B + 39F + 1697C)
-  hi: 1749 items (6S + 7B + 39F + 1697C)
-  hr: 1749 items (6S + 7B + 39F + 1697C)
-  hu: 1749 items (6S + 7B + 39F + 1697C)
-  hy: 1749 items (6S + 7B + 39F + 1697C)
-  id: 1749 items (6S + 7B + 39F + 1697C)
-  it: 1749 items (6S + 7B + 39F + 1697C)
-  ja: 1749 items (6S + 7B + 39F + 1697C)
-  ka: 1749 items (6S + 7B + 39F + 1697C)
-  ko: 1749 items (6S + 7B + 39F + 1697C)
-  ms: 1749 items (6S + 7B + 39F + 1697C)
-  ne: 1749 items (6S + 7B + 39F + 1697C)
-  nl: 1749 items (6S + 7B + 39F + 1697C)
-  no: 1749 items (6S + 7B + 39F + 1697C)
-  pl: 1749 items (6S + 7B + 39F + 1697C)
-  pt: 1749 items (6S + 7B + 39F + 1697C)
-  ro: 1749 items (6S + 7B + 39F + 1697C)
-  ru: 1749 items (6S + 7B + 39F + 1697C)
-  si: 1749 items (6S + 7B + 39F + 1697C)
-  sk: 1749 items (6S + 7B + 39F + 1697C)
-  sl: 1749 items (6S + 7B + 39F + 1697C)
-  sq: 1749 items (6S + 7B + 39F + 1697C)
-  sr: 1749 items (6S + 7B + 39F + 1697C)
-  sv: 1749 items (6S + 7B + 39F + 1697C)
-  sw: 1749 items (6S + 7B + 39F + 1697C)
-  ta: 1749 items (6S + 7B + 39F + 1697C)
-  th: 1749 items (6S + 7B + 39F + 1697C)
-  tr: 1749 items (6S + 7B + 39F + 1697C)
-  uk: 1749 items (6S + 7B + 39F + 1697C)
-  ur: 1749 items (6S + 7B + 39F + 1697C)
-  vi: 1749 items (6S + 7B + 39F + 1697C)
-  zh: 1749 items (6S + 7B + 39F + 1697C)
+  af: 1753 items (6S + 7B + 39F + 1701C)
+  ar: 1753 items (6S + 7B + 39F + 1701C)
+  az: 1753 items (6S + 7B + 39F + 1701C)
+  be: 1753 items (6S + 7B + 39F + 1701C)
+  bg: 1753 items (6S + 7B + 39F + 1701C)
+  bn: 1753 items (6S + 7B + 39F + 1701C)
+  ca: 1753 items (6S + 7B + 39F + 1701C)
+  cs: 1753 items (6S + 7B + 39F + 1701C)
+  da: 1753 items (6S + 7B + 39F + 1701C)
+  de: 1753 items (6S + 7B + 39F + 1701C)
+  el: 1753 items (6S + 7B + 39F + 1701C)
+  en: 1753 items (6S + 7B + 39F + 1701C)
+  es: 1753 items (6S + 7B + 39F + 1701C)
+  fa: 1753 items (6S + 7B + 39F + 1701C)
+  fi: 1753 items (6S + 7B + 39F + 1701C)
+  fr: 1753 items (6S + 7B + 39F + 1701C)
+  he: 1753 items (6S + 7B + 39F + 1701C)
+  hi: 1753 items (6S + 7B + 39F + 1701C)
+  hr: 1753 items (6S + 7B + 39F + 1701C)
+  hu: 1753 items (6S + 7B + 39F + 1701C)
+  hy: 1753 items (6S + 7B + 39F + 1701C)
+  id: 1753 items (6S + 7B + 39F + 1701C)
+  it: 1753 items (6S + 7B + 39F + 1701C)
+  ja: 1753 items (6S + 7B + 39F + 1701C)
+  ka: 1753 items (6S + 7B + 39F + 1701C)
+  ko: 1753 items (6S + 7B + 39F + 1701C)
+  ms: 1753 items (6S + 7B + 39F + 1701C)
+  ne: 1753 items (6S + 7B + 39F + 1701C)
+  nl: 1753 items (6S + 7B + 39F + 1701C)
+  no: 1753 items (6S + 7B + 39F + 1701C)
+  pl: 1753 items (6S + 7B + 39F + 1701C)
+  pt: 1753 items (6S + 7B + 39F + 1701C)
+  ro: 1753 items (6S + 7B + 39F + 1701C)
+  ru: 1753 items (6S + 7B + 39F + 1701C)
+  si: 1753 items (6S + 7B + 39F + 1701C)
+  sk: 1753 items (6S + 7B + 39F + 1701C)
+  sl: 1753 items (6S + 7B + 39F + 1701C)
+  sq: 1753 items (6S + 7B + 39F + 1701C)
+  sr: 1753 items (6S + 7B + 39F + 1701C)
+  sv: 1753 items (6S + 7B + 39F + 1701C)
+  sw: 1753 items (6S + 7B + 39F + 1701C)
+  ta: 1753 items (6S + 7B + 39F + 1701C)
+  th: 1753 items (6S + 7B + 39F + 1701C)
+  tr: 1753 items (6S + 7B + 39F + 1701C)
+  uk: 1753 items (6S + 7B + 39F + 1701C)
+  ur: 1753 items (6S + 7B + 39F + 1701C)
+  vi: 1753 items (6S + 7B + 39F + 1701C)
+  zh: 1753 items (6S + 7B + 39F + 1701C)
 Done.
 ▲ Next.js 16.2.6 (Turbopack)
 - Environments: .env
 
   Creating an optimized production build ...
-✓ Compiled successfully in 2.8s
+✓ Compiled successfully in 2.6s
   Running TypeScript ...
-  Finished TypeScript in 6.2s ...
+  Finished TypeScript in 4.8s ...
   Collecting page data using 19 workers ...
   Generating static pages using 19 workers (0/915) ...
   Generating static pages using 19 workers (228/915) 
+  Generating static pages using 19 workers (457/915) 
+  Generating static pages using 19 workers (686/915) 
+✓ Generating static pages using 19 workers (915/915) in 3.2s
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /_not-found
+├ ● /[locale]/c
+│ ├ /en/c
+│ ├ /zh/c
+│ ├ /es/c
+│ └ [+45 more paths]
+├ ● /[locale]/c/check/ccc
+│ ├ /en/c/check/ccc
+│ ├ /zh/c/check/ccc
+│ ├ /es/c/check/ccc
+│ └ [+45 more paths]
+├ ● /[locale]/c/check/crossborder
+│ ├ /en/c/check/crossborder
+│ ├ /zh/c/check/crossborder
+│ ├ /es/c/check/crossborder
+│ └ [+45 more paths]
+├ ● /[locale]/c/check/gacc
+│ ├ /en/c/check/gacc
+│ ├ /zh/c/check/gacc
+│ ├ /es/c/check/gacc
+│ └ [+45 more paths]
+├ ● /[locale]/c/check/label
+│ ├ /en/c/check/label
+│ ├ /zh/c/check/label
+│ ├ /es/c/check/label
+│ └ [+45 more paths]
+├ ● /[locale]/c/check/nmpa
+│ ├ /en/c/check/nmpa
+│ ├ /zh/c/check/nmpa
+│ ├ /es/c/check/nmpa
+│ └ [+45 more paths]
+├ ● /[locale]/c/check/trademark
+│ ├ /en/c/check/trademark
+│ ├ /zh/c/check/trademark
+│ ├ /es/c/check/trademark
+│ └ [+45 more paths]
+├ ● /[locale]/c/dashboard
+│ ├ /en/c/dashboard
+│ ├ /zh/c/dashboard
+│ ├ /es/c/dashboard
+│ └ [+45 more paths]
+├ ● /[locale]/c/dashboard/billing
+│ ├ /en/c/dashboard/billing
+│ ├ /zh/c/dashboard/billing
+│ ├ /es/c/dashboard/billing
+│ └ [+45 more paths]
+├ ● /[locale]/c/dashboard/reports
+│ ├ /en/c/dashboard/reports
+│ ├ /zh/c/dashboard/reports
+│ ├ /es/c/dashboard/reports
+│ └ [+45 more paths]
+├ ● /[locale]/c/login
+│ ├ /en/c/login
+│ ├ /zh/c/login
+│ ├ /es/c/login
+│ └ [+45 more paths]
+├ ● /[locale]/c/me
+│ ├ /en/c/me
+│ ├ /zh/c/me
+│ ├ /es/c/me
+│ └ [+45 more paths]
+├ ● /[locale]/c/me/reports
+│ ├ /en/c/me/reports
+│ ├ /zh/c/me/reports
+│ ├ /es/c/me/reports
+│ └ [+45 more paths]
+├ ● /[locale]/c/me/settings
+│ ├ /en/c/me/settings
+│ ├ /zh/c/me/settings
+│ ├ /es/c/me/settings
+│ └ [+45 more paths]
+├ ● /[locale]/c/me/subscription
+│ ├ /en/c/me/subscription
+│ ├ /zh/c/me/subscription
+│ ├ /es/c/me/subscription
+│ └ [+45 more paths]
+├ ● /[locale]/c/pricing
+│ ├ /en/c/pricing
+│ ├ /zh/c/pricing
+│ ├ /es/c/pricing
+│ └ [+45 more paths]
+├ ● /[locale]/c/register
+│ ├ /en/c/register
+│ ├ /zh/c/register
+│ ├ /es/c/register
+│ └ [+45 more paths]
+├ ● /[locale]/c/report
+│ ├ /en/c/report
+│ ├ /zh/c/report
+│ ├ /es/c/report
+│ └ [+45 more paths]
+└ ● /[locale]/c/report/preview
+  ├ /en/c/report/preview
+  ├ /zh/c/report/preview
+  ├ /es/c/report/preview
+  └ [+45 more paths]
+
+
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)
+
+
+═══════════════════════════════════════════════
+  CI 统一检查 — PORTAL
+  out-dir: out  next-dir: (none)
+═══════════════════════════════════════════════
+
+
+▶ check-seo-patterns.mjs --ci
+
+📁 site/
+
+📁 blog/
+
+📁 portal/
+
+==================================================
+📊 结果: 169 通过, 0 失败
+
+✅ check-seo-patterns.mjs 完成
+
+▶ check-hardcoded-domain.mjs --ci
+✅ 未发现硬编码的 *.pages.dev 域名引用
+
+▶ check-hardcoded.mjs apps/portal/src --ci
+🔍 Scanning for hardcoded English text in JSX/TSX...
+
+✅ No hardcoded English text found.
+
+▶ check-console.mjs --ci
+📁 扫描 202 个文件
+==================================================
+📊 结果: 212 通过, 0 失败
+
+✅ check-console.mjs 完成
+
+▶ check-rtl.mjs --ci
+
+📁 site/
+
+📁 blog/
+
+📁 portal/
+
+==================================================
+📊 结果: 9 通过, 0 失败
+
+✅ check-rtl.mjs 完成
+
+▶ check-map-key.mjs --ci
+📁 扫描 167 个 TSX 文件
+==================================================
+📊 结果: 167 通过, 0 失败
+
+✅ check-map-key.mjs 完成
+
+▶ check-jsonld.mjs --ci
+📁 扫描 24 个含 JSON-LD 的文件
+==================================================
+📊 结果: 81 通过, 0 失败
+
+✅ check-jsonld.mjs 完成
+
+▶ check-md-format.mjs --ci
+
+═══════════════════════════════════════════════
+  Markdown 格式质量检查（精细化语言策略）
+═══════════════════════════════════════════════
+
+✅ 未发现格式问题
+  扫描文件: 336
+
+
+▶ check-locale-prefix.mjs --ci
+
+═══════════════════════════════════════════════
+  路由 locale 前缀检测 (CI-4)
+═══════════════════════════════════════════════
+
+✅ 未发现缺少 locale 前缀的 href
+
+
+▶ check-hreflang.mjs --dir=out --skip-pattern=404,_not-found --ci
+🔍 统一 hreflang 检查
+
+📦 模式: SSG 输出目录检查
+  📄 扫描 914 个 HTML 文件
+
+  跳过: 2 文件 (路径匹配 skip-pattern)
+
+  结果: 912 通过, 0 失败
+
+✅ hreflang 全部检查通过
+
+▶ check-seo-output.mjs --out-dir=out --ci
+
+🔍 SEO 输出检查: /root/projects/trade/web/apps/portal/out
+
+📄 扫描 HTML 页面...
+
+🗺️  检查 Sitemap...
+
+==================================================
+📊 结果: 240 通过, 0 失败
+
+✅ check-seo-output.mjs 完成
+
+▶ check-translations.mjs --short --skip-locale-check
+
+⚠️ 发现 1778 个问题
+   - 网站翻译质量: 834 个问题
+   - Portal 翻译质量: 944 个问题
+
+▶ check-i18n-keys.mjs --ci --ci
+🔑 i18n key 完整性检查
+
+📦 SITE (0 missing, 0 extra, 0 hardcoded):
+  ✅ 全部通过
+
+📦 PORTAL (138 missing, 0 extra, 692 hardcoded):
+  🟡 Report.reportId: 缺失于 46/47 语言
+  🟡 Navbar.myReports: 缺失于 46/47 语言
+  🟡 Navbar.signOut: 缺失于 46/47 语言
+  ⚠️  硬编码英文 fallback (692 处):
+    🟡 Check.subscribedViewReport → "View Full Report" (47 语言)
+    🟡 Check.subscribedDesc → "You have an active subscription. Access the full report now." (47 语言)
+    🟡 Check.subscribedBadge → "✓ Active Subscription" (47 语言)
+    🟡 Check.checkoutError → "Checkout failed. Please try again." (47 语言)
+    🟡 Report.periodStart → "Period start" (47 语言)
+    🟡 tbd_label → "TBD" (26 语言)
+    🟡 cccProfile_electronics_test_1 → "EMC GB 9254" (31 语言)
+    🟡 cccProfile_home_appliance_test_2 → "EMC GB 4343.1" (35 语言)
+    🟡 cccProfile_it_equipment_test_1 → "EMC GB 9254" (31 语言)
+    🟡 cccProfile_lighting_test_2 → "EMC GB 17743" (33 语言)
+    🟡 cccProfile_medical_test_1 → "EMC YY 0505" (35 语言)
+    🟡 cccStandard_lighting → "GB 7000.1-2015, GB 17743-2021, GB 17625.1-2022" (33 语言)
+    🟡 labelTariff_mfn → "5-20%" (35 语言)
+    🟡 labelTariff_vat → "9-13%" (37 语言)
+    🟡 labelAllergen_crustacea → "Crustacea" (5 语言)
+    🟡 cccRiskMatrix_costHigh → "$5,000+" (16 语言)
+    🟡 na_label → "N/A" (22 语言)
+    🟡 cccProfile_toy_test_3 → "Phthalates" (6 语言)
+    🟡 cccRiskMatrix_costLow → "$800-5,000" (9 语言)
+    🟡 labelTotalCostRange → "$500-2,000" (10 语言)
+    🟡 labelCost → "$500-2,000" (10 语言)
+    🟡 labelTestCostRange → "$300-1,500" (11 语言)
+    🟡 cccProfile_toy_test_2 → "Chemical GB 6675.4" (5 语言)
+    🟡 labelNutr_protein → "Protein" (9 语言)
+    🟡 standard_label → "Standard" (12 语言)
+    🟡 cccProfile_electronics_test_2 → "Harmonics GB 17625.1" (12 语言)
+    🟡 cccProfile_lighting_test_3 → "Harmonics GB 17625.1" (12 语言)
+    🟡 cccProfile_medical_cert_1 → "NMPA Medical Device Registration" (2 语言)
+    🟡 cccProfile_electronics_test_0 → "Safety GB 4943.1-2022" (3 语言)
+    🟡 cccProfile_medical_test_0 → "Safety GB 9706.1" (2 语言)
+    🟡 cccProfile_home_appliance_test_0 → "Safety GB 4706.1" (1 语言)
+    🟡 cccProfile_it_equipment_test_0 → "Safety GB 4943.1" (1 语言)
+    🟡 cccProfile_it_equipment_test_3 → "SAR if radio" (1 语言)
+    🟡 cccProfile_lighting_test_0 → "Safety GB 7000.1" (1 语言)
+    🟡 labelNutr_sodium → "Sodium" (2 语言)
+    🟡 lab_melamine → "Melamine" (4 语言)
+    🟡 labelField_blank → "Blank" (1 语言)
+    🟡 cccProfile_medical_test_2 → "Biocompatibility ISO 10993" (1 语言)
+    🟡 labelField_allergens → "Allergens" (1 语言)
+    🟡 lab_mycotoxins → "Mycotoxins" (2 语言)
+
+📦 UI (0 missing, 0 extra, 0 hardcoded):
+  ✅ 全部通过
+
+📊 总计: 138 缺失 + 0 多余 + 692 硬编码英文
+
+▶ check-i18n-coverage.mjs --ci
+
+📊 UI 包
+   en.json: 98 键
+
+   af  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   ar  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   az  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   be  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   bg  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   bn  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   ca  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   cs  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   da  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   de  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   el  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   es  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   fa  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   fi  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   fr  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   he  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   hi  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   hr  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   hu  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   hy  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   id  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   it  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   ja  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   ka  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   ko  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   ms  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   ne  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   nl  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   no  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   pl  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   pt  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   ro  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   ru  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   si  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   sk  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   sl  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   sq  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   sr  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   sv  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   sw  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   ta  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   th  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   tr  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   uk  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   ur  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   vi  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   zh  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   ─────────────────────────────────────────
+   平均: 100.0%
+
+📊 Site
+   en.json: 1243 键
+
+   af  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   ar  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   az  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   be  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   bg  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   bn  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   ca  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   cs  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   da  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   de  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   el  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   es  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   fa  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   fi  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   fr  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   he  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   hi  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   hr  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   hu  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   hy  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   id  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   it  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   ja  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   ka  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   ko  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   ms  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   ne  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   nl  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   no  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   pl  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   pt  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   ro  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   ru  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   si  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   sk  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   sl  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   sq  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   sr  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   sv  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   sw  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   ta  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   th  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   tr  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   uk  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   ur  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   vi  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   zh  ████████████████████ 100.0%  (1243/1243  缺失:0  多余:0)
+   ─────────────────────────────────────────
+   平均: 100.0%
+
+📊 Portal
+   en.json: 2389 键
+
+   af  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   ar  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   az  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   be  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   bg  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   bn  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   ca  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   cs  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   da  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   de  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   el  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   es  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   fa  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   fi  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   fr  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   he  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   hi  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   hr  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   hu  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   hy  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   id  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   it  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   ja  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   ka  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   ko  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   ms  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   ne  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   nl  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   no  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   pl  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   pt  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   ro  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   ru  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   si  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   sk  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   sl  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   sq  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   sr  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   sv  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   sw  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   ta  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   th  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   tr  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   uk  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   ur  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   vi  ████████████████████ 99.9%  (2386/2389  缺失:3  多余:0)
+   zh  ████████████████████ 100.0%  (2389/2389  缺失:0  多余:0)
+   ─────────────────────────────────────────
+   平均: 99.9%
+   缺失最多的: af(3), ar(3), az(3), be(3), bg(3)
+
+📊 Blog
+   en.json: 58 键
+
+   af  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   ar  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   az  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   be  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   bg  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   bn  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   ca  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   cs  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   da  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   de  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   el  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   es  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   fa  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   fi  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   fr  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   he  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   hi  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   hr  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   hu  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   hy  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   id  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   it  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   ja  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   ka  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   ko  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   ms  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   ne  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   nl  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   no  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   pl  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   pt  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   ro  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   ru  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   si  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   sk  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   sl  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   sq  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   sr  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   sv  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   sw  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   ta  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   th  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   tr  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   uk  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   ur  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   vi  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   zh  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   ─────────────────────────────────────────
+   平均: 100.0%
+
+═══════════════════════════════════════════════
+  ✅ UI 包: 100.0%
+  ✅ Site: 100.0%
+  ✅ Portal: 99.9%
+  ✅ Blog: 100.0%
+═══════════════════════════════════════════════
+
+
+▶ check-override-keys.mjs --ci
+
+═══════════════════════════════════════════════
+  跨 App 消息覆盖检测
+═══════════════════════════════════════════════
+
+🟡 WARNING: 305 个覆盖值与 UI 包不同
+
+  ── site (47) ──
+    [af] Navbar.selfCheck
+      App: "Selfkontrole"
+      UI:  "Self-Evaluasie Instrument"
+    [ar] Navbar.selfCheck
+      App: "الفحص الذاتي"
+      UI:  "أداة التقييم الذاتي"
+    [az] Navbar.selfCheck
+      App: "Özünü yoxlayın"
+      UI:  "Öz-Özünü Yoxlama Aləti"
+    [be] Navbar.selfCheck
+      App: "Самакантроль"
+      UI:  "Інструмент Самаправеркі"
+    [bg] Navbar.selfCheck
+      App: "Самопроверка"
+      UI:  "Инструмент за Самооценка"
+    [bn] Navbar.selfCheck
+      App: "স্ব-পরীক্ষা"
+      UI:  "স্ব-মূল্যায়ন টুল"
+    [ca] Navbar.selfCheck
+      App: "Autocontrol"
+      UI:  "Eina van Auto-avaluació"
+    [cs] Navbar.selfCheck
+      App: "Samokontrola"
+      UI:  "Nástroj pro sebehodnocení"
+    [da] Navbar.selfCheck
+      App: "Selvtjek"
+      UI:  "Selvvurderingsværktøj"
+    [de] Navbar.selfCheck
+      App: "Selbstkontrolle"
+      UI:  "Selbstprüfungstool"
+    [el] Navbar.selfCheck
+      App: "Αυτοέλεγχος"
+      UI:  "Εργαλείο Αυτοαξιολόγησης"
+    [es] Navbar.selfCheck
+      App: "Autocomprobación"
+      UI:  "Herramienta de Autoevaluación"
+    [fa] Navbar.selfCheck
+      App: "خود چک"
+      UI:  "ابزار ارزیابی خودکار"
+    [fi] Navbar.selfCheck
+      App: "Itsetarkistus"
+      UI:  "Itsearviointityökalu"
+    [fr] Navbar.selfCheck
+      App: "Auto-vérification"
+      UI:  "Outil d'Auto-Évaluation"
+    ... 还有 32 个
+
+  ── portal (258) ──
+    [af] Navbar.selfCheck
+      App: "Selftoets"
+      UI:  "Self-Evaluasie Instrument"
+    [af] Navbar.pricing
+      App: "Pryzetting"
+      UI:  "Pryse"
+    [af] Navbar.dashboard
+      App: "Paneel"
+      UI:  "Dashboard"
+    [af] Navbar.billing
+      App: "Fakturerings"
+      UI:  "Fakturering"
+    [af] Navbar.login
+      App: "Aanmelding"
+      UI:  "Meld aan"
+    [af] Navbar.register
+      App: "Registrasie"
+      UI:  "Registreer"
+    [af] Navbar.report
+      App: "Rapport"
+      UI:  "Rapporteer"
+    [af] Navbar.reports
+      App: "My verslae"
+      UI:  "Verslae"
+    [ar] Navbar.selfCheck
+      App: "التحقق الذاتي"
+      UI:  "أداة التقييم الذاتي"
+    [ar] Navbar.pricing
+      App: "تسعير"
+      UI:  "التسعير"
+    [ar] Navbar.register
+      App: "التسجيل"
+      UI:  "يسجل"
+    [ar] Navbar.reports
+      App: "تقاريري"
+      UI:  "التقارير"
+    [az] Navbar.selfCheck
+      App: "Özünü yoxlama"
+      UI:  "Öz-Özünü Yoxlama Aləti"
+    [az] Navbar.dashboard
+      App: "İdarəetmə paneli"
+      UI:  "İdarə paneli"
+    [az] Navbar.billing
+      App: "Ödəniş"
+      UI:  "Faturalandırma"
+    ... 还有 243 个
+
+ℹ️  INFO: 120 个重复定义（值相同，可直接删除）
+
+  portal: 120
+
+─────────────────────────────────────────────
+总计: 425 个覆盖键
+  🔴 0  CRITICAL (与英文源相同)
+  🟡 305  WARNING (值不同)
+  ℹ️  120  INFO (重复)
+─────────────────────────────────────────────
+
+
+▶ check-hardcoded-templates.mjs --ci
+
+═══════════════════════════════════════════════
+  数据层英文模板检测
+═══════════════════════════════════════════════
+
+✅ 无硬编码英文模板
+
+
+▶ check-category-labels.mjs --ci
+
+═══════════════════════════════════════════════
+  品类翻译键完整性校验 (CI-2)
+═══════════════════════════════════════════════
+
+📦 GACC — 16 个品类
+  ✅ 全部 16 个品类翻译键完整
+
+📦 CCC — 6 个品类
+  ✅ 全部 6 个品类翻译键完整
+
+📦 NMPA — 6 个品类
+  ✅ 全部 6 个品类翻译键完整
+
+📦 LABEL — 10 个品类
+  ✅ 全部 10 个品类翻译键完整
+
+📦 CROSSBORDER — 8 个品类
+  ✅ 全部 8 个品类翻译键完整
+
+📦 TRADEMARK — 8 个品类
+  ✅ 全部 8 个品类翻译键完整
+
+─────────────────────────────────────────────
+✅ 全部 6 个模块的品类翻译键完整
+
+
+▶ clean-rsc.mjs out
+🧹 Cleaning RSC .txt payload files from out/...
+✅ Deleted 8743 RSC payload files (567.1 MB freed)
+
+═══════════════════════════════════════════════
+❌ 共 1 项检查失败
+npm error Lifecycle script `build` failed with error:
+npm error code 1
+npm error path /root/projects/trade/web/apps/portal
+npm error workspace @trade/portal@0.1.0
+npm error location /root/projects/trade/web/apps/portal
+npm error command failed
+npm error command sh -c node ../../packages/scripts/build-search-index.mjs && next build && node ../../packages/scripts/ci-check.mjs --out-dir=out --ci

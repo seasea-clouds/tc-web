@@ -31,7 +31,7 @@ const NOINDEX_PATHS = [
   '/404/', '/_not-found/','/blog/',   // blog是独立app构建，out/中的是旧拷贝，真正hreflang在blog app构建后验证
   // 根路径重定向页 — 由 checkHtmlFile 直接检查 path 是否为 /
   '/404/', '/_not-found/',
-  '/c/login/', '/c/register/', '/c/dashboard/', '/c/me/', '/c/report/',
+  '/c/login/', '/c/register/', '/c/me/', '/c/report/',
   '/c/billing/', '/c/settings/', '/c/subscription/',
   '/c/check/', '/c/pricing/', '/thank-you/', '/sitemap/',
 ];

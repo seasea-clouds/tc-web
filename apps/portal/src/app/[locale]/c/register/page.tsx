@@ -29,7 +29,7 @@ export default function RegisterPage() {
     setLoading(true);
     try {
       await register(email, password, name || undefined, turnstileToken);
-      window.location.href = `/${locale}/c/dashboard`;
+      window.location.href = `/${locale}/c/me`;
     } catch (err: any) {
       setError(err.message || t('errorExists'));
     } finally {

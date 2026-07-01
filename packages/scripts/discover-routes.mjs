@@ -16,8 +16,8 @@ import { LOCALES } from './locales.mjs';
 // Re-export so build-sitemap.mjs / build-llms.mjs can still import from here
 export { LOCALES };
 
-const PRIVATE_SEGMENTS = ['/login','/register','/dashboard','/me/','/report','/api','/auth','/billing','/settings','/subscription'];
-const PRIVATE_PATHS = ['/c/login','/c/register','/c/dashboard','/c/me','/c/report','/c/report/preview','/thank-you','/testimonials','/sitemap','/ai-assistance'];
+const PRIVATE_SEGMENTS = ['/login','/register','/me/','/report','/api','/auth','/billing','/settings','/subscription'];
+const PRIVATE_PATHS = ['/c/login','/c/register','/c/me','/c/report','/c/report/preview','/thank-you','/testimonials','/sitemap','/ai-assistance'];
 const ROUTE_GROUP_RE = /\([^)]+\)\//g;
 
 function scanPageTsx(appDir) {

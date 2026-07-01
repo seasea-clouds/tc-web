@@ -1,94 +1,29 @@
-# trade-web 技术决策与踩坑记录
+# trade-web 注意事项与技术参考
 
-## 翻译检查脚本 — fallback 豁免机制
+## 翻译检查豁免机制
 
-`packages/scripts/check-translations.mjs` 中有三种机制用于豁免「英文值 = 翻译值」的报错：
-
-### 1. IGNORE_FALLBACK_KEYS（全局，按 key 路径匹配）
+`packages/scripts/check-translations.mjs` 的豁免机制（判定顺序短路）：
 
 ```
-IGNORE_FALLBACK_KEYS.add('Check.fcc')
-```
-
-**用法：** 添加 key 路径字符串。加入后所有 48 种语言都豁免。
-
-**适用：** 这个 key 在项目设计中本来就该保持英文的字段。
-- 邮箱占位符：`Auth.emailPlaceholder`
-- 报告状态/计划/客户：`Report.status`, `ReportSection.timelineClient`
-- 联系人信息：`AiAssistance.contactEmail`, `AiAssistance.contactLinkedIn`
-- 第三方平台缩写：`Check.fcc`, `Check.ce`, `Check.ul`
-
-### 2. IGNORE_FALLBACK_VALUES（全局，按英文值匹配）
-
-```
-IGNORE_FALLBACK_VALUES.add('FCC')
-```
-
-**用法：** 添加英文值字符串。加入后所有 48 种语言都豁免。
-
-**适用：** 这个英文词在所有语言中都不需要翻译。
-- 行业缩写：`FCC`, `CE`, `UL`, `CIQ`, `PCR`, `INN`, `PAHs`
-- 格式串：`PDF`, `Excel/PDF`, `PDF/JPEG`, `Word`
-- 标准号：`GB 7718 / GB 28050`
-- 全局通用术语：`FAQ`, `Report`, `Dashboard`, `Login`
-
-### 3. SHARED_WORDS_BY_LANG（按语言，按英文值匹配）
-
-```
-SHARED_WORDS_BY_LANG['nl'].add('Histamine')
-```
-
-**用法：** 添加语言代码 + 英文值。仅在指定语言中豁免，同一词在其他语言仍会报错。
-
-**适用：** 英文词在特定语言中是正常的借词/科学术语，保持英文是合理的行为。
-- 科学术语：荷兰语中 `Histamine` 就是 `Histamine`
-- 借词：法语中 `Services` 就是正常借词
-- 标准名：瑞典语中 `GB 7718 Revision` 的 `Revision` 是瑞典语固有词
-
-### 选择建议
-
-| 情况 | 用的机制 |
-|------|---------|
-| 某个 key 在所有语言都不该翻译 | `IGNORE_FALLBACK_KEYS` |
-| 某个英文词在所有语言都不该翻译 | `IGNORE_FALLBACK_VALUES` |
-| 某个英文词仅在特定语言中合理保留 | `SHARED_WORDS_BY_LANG` |
-| 吃不准时先加 SHARED_WORDS（范围最小），确认所有语言都需要再加 IGNORE 类 | — |
-
-### 判定顺序（短路逻辑）
-
-```
-1. IGNORE_FALLBACK_KEYS.has(key)       → 跳过 ✅
-2. IGNORE_FALLBACK_VALUES.has(value)   → 跳过 ✅
+1. IGNORE_FALLBACK_KEYS.has(key)       → 跳过 ✅（全局，按 key 路径）
+2. IGNORE_FALLBACK_VALUES.has(value)   → 跳过 ✅（全局，按英文值）
 3. SHARED_WORDS_ALL.has(value)         → 跳过 ✅（全局共享词）
-4. SHARED_WORDS_BY_LANG[lang].has(val) → 跳过 ✅
+4. SHARED_WORDS_BY_LANG[lang].has(val) → 跳过 ✅（按语言）
 5. 以上都不满足                         → 报错 ❌
 ```
 
+### 选择建议
+
+| 情况 | 机制 |
+|------|------|
+| 某个 key 在所有语言都不该翻译 | `IGNORE_FALLBACK_KEYS` |
+| 某个英文词在所有语言都不该翻译 | `IGNORE_FALLBACK_VALUES` |
+| 某个英文词仅在特定语言中合理保留 | `SHARED_WORDS_BY_LANG` |
+| 吃不准 | 先加 `SHARED_WORDS_BY_LANG`，确认所有语言都需要再升到 `IGNORE_FALLBACK_VALUES` |
+
 ### 常见误区
-
-- ❌ 误用 IGNORE_FALLBACK_VALUES 豁免科学术语 → 导致所有语言都不报错，可能遗漏真正需要翻译的语言
-- ✅ 正确做法：用 SHARED_WORDS_BY_LANG 只在德语/荷语等拉丁语言中豁免，日语/中文等仍会提示
-- ⚠️ 如果后来发现该词在 ALL 语言中都是保持原文 → 再升级到 IGNORE_FALLBACK_VALUES
-
-## CI 临时绕过记录
-
-### 2026-06-30：因 P3 翻译任务失败，临时移除 `--ci` 标记
-
-**原因：** P3 翻译任务 `portal-rules-i18n-p3` 失败，导致 738 处硬编码英文回退未翻译。
-CI 脚本 `--ci` 模式下检测到任何硬编码英文即 `exit(1)`，阻塞所有 CF Pages 自动构建。
-
-**临时方案：**
-- 将各 app `package.json` 中 `build` 脚本里的 `--ci` 标记移到新脚本 `build:ci`
-- `build` 继续运行 CI 检查但不再阻塞（仅报告不退出）
-- `build:ci` 保留完整 `--ci` 模式，翻译到位后切回
-
-**恢复条件：** 所有翻译任务完成且每项目硬编码数降为 0
-- 见 `TASK.md` 任务 0
-
-**涉及文件：**
-- `apps/site/package.json`
-- `apps/portal/package.json`
-- `apps/blog/package.json`
+- ❌ 误用 `IGNORE_FALLBACK_VALUES` 豁免科学术语 → 所有语言不报错，可能遗漏需翻译语言
+- ✅ 正确：先用 `SHARED_WORDS_BY_LANG` 只在拉丁语言中豁免，日语/中文仍会提示
 
 ## 翻译铁律
 
@@ -110,94 +45,45 @@ CI 脚本 `--ci` 模式下检测到任何硬编码英文即 `exit(1)`，阻塞�
 | Contact | 联系我们 | お問い合わせ |
 | Services | 服务 | サービス |
 
-详见 `/root/projects/trade/sinotradecompliance/NOTES.md` 完整表格。
-
 ### 翻译注意
 - blog title ≤ 55 Unicode 字符
-- 翻译后必须 `python3 scripts/check-translations.py` 验证
 - 48 语言不允许英文 fallback
 
-## 技术决策
+## 用户页面设计规范
 
-### Turbofack 不支持 `workspace:*` 协议
-npm 不支持 `workspace:*` 协议（那是 pnpm/yarn 的）。使用 npm workspaces 时直接 `"*"` 或省略版本号。
-- 最终方案：tsconfig paths alias + `transpilePackages`
+`docs/USER-PAGES.md` — 用户页面目录、UI 标准、导航关系图。
 
-### Portal 无法使用 `[id]` 动态路由
-SSG (`output: 'export'`) 模式下，动态路由必须提供 `generateStaticParams()`。
-但报告 ID 是运行时生成的，无法预知。临时方案：保持 `?id=xxx` 查询参数方式。
-
-### 共享组件 locale 兼容
-主站用 `useParams().locale` 从 `[locale]` 路由取，Portal 没有 `[locale]` 路由。
-- 共享 Navbar/Footer 加了 `locale` prop，Portal 传自己检测的 locale
-- LanguageSwitcher 加 `onLocaleChange` 回调
-
-### `--color-gold` 缺失
-主站 Tailwind v4 主题中定义的是 `accent-gold: #B8960C`，但 Navbar 用了 `bg-gold`。
-`bg-gold` 没有对应色值，按钮背景一直是透明的。
-- 修复：加入 `--color-gold: #D4AF37`
+### 关键规则
+1. **禁止硬编码颜色：** 使用主题 tokens（`text-primary-navy`、`bg-bg-ice`、`gold`），不用 `text-[#1B365D]`
+2. **卡片样式统一：** `rounded-xl shadow-sm border-gray-200 hover:shadow-md`
+3. **i18n：** Dashboard 页面用 `useTranslations('Dashboard')`，Me 系列页用 `useT('Report')`
+4. **加载/未登录态：** 统一复用内联 Loading/NotLoggedIn 组件
+5. **计划/状态显示：** API raw 值（monthly/active）需通过映射表转翻译 key
 
 ## translate-tool 铁律（2026-06-30）
 
 **只调 CLI，不写 Python 脚本。**
-
 - ❌ 禁止编写自定义 Python 脚本调用 translate-tool 的内部 API
 - ❌ 禁止直接修改 translate-tool 项目代码、配置或 `pyproject.toml`
 - ✅ 所有交互必须通过 `translate-tool` CLI 命令行完成
 - ✅ 结果导出后手动处理 JSON merge
 - ⚠️ 工具缺功能（如无内置 merge 命令）→ 如实上报，由你评估是否修复
 
-**示例：**
-```bash
-# ✅ 正确
-source /root/projects/.venv/bin/activate
-python -m translate_tool --help
-translate-tool submit -i input.json -n task_name -s en -t "zh,ja,fr"
-translate-tool status -n task_name
-translate-tool results -n task_name -o output.json
-
-# ❌ 错误 — 不要这样
-from translate_tool import submit
-translate_tool.submit_task(...)
-```
-
-### `||` 和 `??` 混用
-`const locale = propLocale || params?.locale ?? 'en'` 在 Turbopack 中报语法错误。
-需要加括号：`propLocale || (params?.locale ?? 'en')`
+### 语法注意
+`const locale = propLocale || params?.locale ?? 'en'` 在 Turbopack 中报错。需加括号：
+`propLocale || (params?.locale ?? 'en')`
 
 ### 翻译引擎
-翻译调用 `/root/projects/translate-tool/` 双渠道 Google Translate。
-Quota 查看：`source /root/projects/.venv/bin/activate && python scripts/translate.py quota`
+- 路径：`/root/projects/translate-tool/`（Google Translate 双渠道）
+- Quota 查看：`source /root/projects/.venv/bin/activate && python scripts/translate.py quota`
 
 ### 环境变量
-所有秘密变量统一在 `~/.openclaw/.env`。
+所有秘密变量统一在 `~/.openclaw/.env`。CF Pages 已配置：
 
-CF Pages 已配置变量：
-- CREEM_API_KEY / CREEM_WEBHOOK_SECRET
-- CREEM_PRODUCT_ID_SINGLE / CREEM_PRODUCT_ID_SUBSCRIBE
-- RESEND_API_KEY / EMAIL_FROM
-- NODE_VERSION=22
-
-## 踩坑记录
-
-### Worker `_middleware.ts` 匹配规则
-旧规则匹配 `/{locale}/compli-service/` 并剥离 locale 发送给 Portal。
-改成 `/{locale}/c/` 后要保留 locale 透传，不能剥离。
-
-### `functions/_middleware.ts` 改名
-Next.js 16 开始 middleware 文件名从 `middleware.ts` 改为 `_middleware.ts`（CF Pages 格式）。
-主站的 `middleware.ts` 是 Next.js 自身 middleware，`functions/_middleware.ts` 是 CF Pages 的。
-
-### 重复路由导致构建失败
-拷贝文件到 `[locale]/c/` 后忘记删除原位置的页面文件。
-两个地方都有 `page.tsx` → 路由冲突 → AuthProvider 找不到。
-删除原文件后解决。
-
-### Schema SQL 换行问题
-将 sessions 表 SQL 追加到 schema.ts 时，写在了模板字面量 `SCHEMA_SQL` 外面。
-TypeScript 把 SQL 语句当代码解析 → 编译错误。
-修复：移入模板字面量内，并用英文注释。
-
-### 语言同步提醒
-Portal 切语言后，标签页不自动刷新。用户需要手动点 LanguageSwitcher。
-要等 Phase 4 服务端 locale 路由上线后，URL 变语言自动变。
+| 变量 | 说明 |
+|------|------|
+| `CREEM_API_KEY` / `CREEM_WEBHOOK_SECRET` | Creem 支付 |
+| `CREEM_PRODUCT_ID_SINGLE` / `CREEM_PRODUCT_ID_SUBSCRIBE` | 产品 ID |
+| `RESEND_API_KEY` / `EMAIL_FROM` | 邮件 |
+| `JWT_SECRET` | Portal 会话签名 |
+| `NODE_VERSION=22` | CF Pages 运行时 |

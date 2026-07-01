@@ -878,7 +878,7 @@
     "nmpaViability": "コンプライアンスに従って実行可能",
     "no": "いいえ",
     "noAction": "現時点ではコンプライアンス措置は必要ありません",
-    "noNeedOne": "いいえ: 必要です",
+    "noNeedOne": "いいえ – 必要です",
     "noNeedTesting": "いいえ - 臨床検査が必要です",
     "noNeedToCreate": "いいえ: 作成する必要があります",
     "none": "なし",

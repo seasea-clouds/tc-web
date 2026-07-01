@@ -85,7 +85,9 @@
     "paid": "plaćeno",
     "pending": "na čekanju",
     "prev": "← Pret",
-    "next": "Dalje →"
+    "next": "Dalje →",
+    "plan": "Plan",
+    "status": "Status"
   },
   "Pricing": {
     "title": "Jednostavna cijena",

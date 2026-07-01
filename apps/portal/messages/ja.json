@@ -85,7 +85,9 @@
     "paid": "支払われた",
     "pending": "保留中",
     "prev": "← 前へ",
-    "next": "次へ →"
+    "next": "次へ →",
+    "plan": "プラン",
+    "status": "状態"
   },
   "Pricing": {
     "title": "シンプルな価格設定",

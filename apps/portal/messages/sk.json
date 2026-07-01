@@ -85,7 +85,9 @@
     "paid": "zaplatené",
     "pending": "čakajúce",
     "prev": "← Predch",
-    "next": "Ďalej →"
+    "next": "Ďalej →",
+    "plan": "Plán",
+    "status": "Stav"
   },
   "Pricing": {
     "title": "Jednoduché stanovovanie cien",

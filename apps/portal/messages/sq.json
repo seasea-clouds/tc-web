@@ -85,7 +85,9 @@
     "paid": "paguar",
     "pending": "në pritje",
     "prev": "← E mëparshme",
-    "next": "Tjetra →"
+    "next": "Tjetra →",
+    "plan": "Planifikoni",
+    "status": "Statusi"
   },
   "Pricing": {
     "title": "Çmimi i thjeshtë",

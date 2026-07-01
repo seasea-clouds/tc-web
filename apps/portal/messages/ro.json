@@ -85,7 +85,9 @@
     "paid": "plătit",
     "pending": "în așteptare",
     "prev": "← Prec",
-    "next": "Următorul →"
+    "next": "Următorul →",
+    "plan": "Plan",
+    "status": "Stare"
   },
   "Pricing": {
     "title": "Prețuri simple",

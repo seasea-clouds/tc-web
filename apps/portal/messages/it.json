@@ -85,7 +85,9 @@
     "paid": "pagato",
     "pending": "in attesa di",
     "prev": "← Prec",
-    "next": "Avanti →"
+    "next": "Avanti →",
+    "plan": "Piano",
+    "status": "Stato"
   },
   "Pricing": {
     "title": "Prezzi semplici",

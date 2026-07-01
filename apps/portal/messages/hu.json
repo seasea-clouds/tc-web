@@ -85,7 +85,9 @@
     "paid": "fizetett",
     "pending": "függőben levő",
     "prev": "← Előző",
-    "next": "Következő →"
+    "next": "Következő →",
+    "plan": "Terv",
+    "status": "Állapot"
   },
   "Pricing": {
     "title": "Egyszerű árképzés",

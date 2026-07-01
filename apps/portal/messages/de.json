@@ -85,7 +85,9 @@
     "paid": "bezahlt",
     "pending": "ausstehend",
     "prev": "← Vorher",
-    "next": "Weiter →"
+    "next": "Weiter →",
+    "plan": "Planen",
+    "status": "Status"
   },
   "Pricing": {
     "title": "Einfache Preisgestaltung",

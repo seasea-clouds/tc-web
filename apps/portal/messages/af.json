@@ -85,7 +85,9 @@
     "paid": "betaal",
     "pending": "hangende",
     "prev": "← Vorige",
-    "next": "Volgende →"
+    "next": "Volgende →",
+    "plan": "Beplan",
+    "status": "Status"
   },
   "Pricing": {
     "title": "Eenvoudige prysbepaling",

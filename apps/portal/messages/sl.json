@@ -85,7 +85,9 @@
     "paid": "plačan",
     "pending": "v teku",
     "prev": "← Prejšnji",
-    "next": "Naprej →"
+    "next": "Naprej →",
+    "plan": "Načrtujte",
+    "status": "Stanje"
   },
   "Pricing": {
     "title": "Preprosto določanje cen",

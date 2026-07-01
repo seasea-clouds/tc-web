@@ -85,7 +85,9 @@
     "paid": "pagat",
     "pending": "pendent",
     "prev": "← Anterior",
-    "next": "Següent →"
+    "next": "Següent →",
+    "plan": "Pla",
+    "status": "Estat"
   },
   "Pricing": {
     "title": "Preus senzills",

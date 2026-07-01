@@ -85,7 +85,9 @@
     "paid": "ödənilmişdir",
     "pending": "gözləyir",
     "prev": "← Əvvəlki",
-    "next": "Sonrakı →"
+    "next": "Sonrakı →",
+    "plan": "Plan",
+    "status": "Vəziyyət"
   },
   "Pricing": {
     "title": "Sadə Qiymətləndirmə",

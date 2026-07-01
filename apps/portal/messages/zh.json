@@ -85,7 +85,9 @@
     "paid": "已支付",
     "pending": "待处理",
     "prev": "上一页",
-    "next": "下一页"
+    "next": "下一页",
+    "plan": "计划",
+    "status": "状态"
   },
   "Pricing": {
     "title": "简单的定价",

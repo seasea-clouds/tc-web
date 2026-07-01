@@ -85,7 +85,9 @@
     "paid": "trả",
     "pending": "chưa giải quyết",
     "prev": "← Trước đó",
-    "next": "Tiếp theo →"
+    "next": "Tiếp theo →",
+    "plan": "Kế hoạch",
+    "status": "Trạng thái"
   },
   "Pricing": {
     "title": "Định giá đơn giản",

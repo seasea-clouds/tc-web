@@ -85,7 +85,9 @@
     "paid": "zaplaceno",
     "pending": "čeká na vyřízení",
     "prev": "← Předchozí",
-    "next": "Další →"
+    "next": "Další →",
+    "plan": "Plán",
+    "status": "Postavení"
   },
   "Pricing": {
     "title": "Jednoduché stanovení ceny",

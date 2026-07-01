@@ -85,7 +85,9 @@
     "paid": "paralı",
     "pending": "askıda olması",
     "prev": "← Önceki",
-    "next": "Sonraki →"
+    "next": "Sonraki →",
+    "plan": "Planı",
+    "status": "Durum"
   },
   "Pricing": {
     "title": "Basit Fiyatlandırma",

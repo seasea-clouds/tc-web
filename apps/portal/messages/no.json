@@ -85,7 +85,9 @@
     "paid": "betalt",
     "pending": "i påvente av",
     "prev": "← Forrige",
-    "next": "Neste →"
+    "next": "Neste →",
+    "plan": "Plan",
+    "status": "Status"
   },
   "Pricing": {
     "title": "Enkel prissetting",

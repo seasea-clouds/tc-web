@@ -85,7 +85,9 @@
     "paid": "płatny",
     "pending": "aż do",
     "prev": "← Poprzednie",
-    "next": "Dalej →"
+    "next": "Dalej →",
+    "plan": "Plan",
+    "status": "Status"
   },
   "Pricing": {
     "title": "Prosty cennik",

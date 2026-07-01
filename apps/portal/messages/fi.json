@@ -85,7 +85,9 @@
     "paid": "maksettu",
     "pending": "vireillä",
     "prev": "← Ed",
-    "next": "Seuraava →"
+    "next": "Seuraava →",
+    "plan": "Suunnitelma",
+    "status": "Status"
   },
   "Pricing": {
     "title": "Yksinkertainen hinnoittelu",

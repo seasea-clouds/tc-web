@@ -85,7 +85,9 @@
     "paid": "kulipwa",
     "pending": "inasubiri",
     "prev": "← Iliyotangulia",
-    "next": "Inayofuata →"
+    "next": "Inayofuata →",
+    "plan": "Mpango",
+    "status": "Hali"
   },
   "Pricing": {
     "title": "Bei Rahisi",

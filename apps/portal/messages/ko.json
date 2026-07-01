@@ -85,7 +85,9 @@
     "paid": "유급의",
     "pending": "보류 중",
     "prev": "← 이전",
-    "next": "다음 →"
+    "next": "다음 →",
+    "plan": "계획",
+    "status": "상태"
   },
   "Pricing": {
     "title": "단순 가격",

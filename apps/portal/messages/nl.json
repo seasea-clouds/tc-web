@@ -85,7 +85,9 @@
     "paid": "betaald",
     "pending": "in behandeling",
     "prev": "← Vorige",
-    "next": "Volgende →"
+    "next": "Volgende →",
+    "plan": "Plan",
+    "status": "Status"
   },
   "Pricing": {
     "title": "Eenvoudige prijzen",

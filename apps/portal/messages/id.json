@@ -85,7 +85,9 @@
     "paid": "dibayar",
     "pending": "tertunda",
     "prev": "← Sebelumnya",
-    "next": "Selanjutnya →"
+    "next": "Selanjutnya →",
+    "plan": "Rencana",
+    "status": "Status"
   },
   "Pricing": {
     "title": "Penetapan Harga Sederhana",

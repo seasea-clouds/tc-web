@@ -85,7 +85,9 @@
     "paid": "betalas",
     "pending": "i avvaktan på",
     "prev": "← Föreg",
-    "next": "Nästa →"
+    "next": "Nästa →",
+    "plan": "Planera",
+    "status": "Status"
   },
   "Pricing": {
     "title": "Enkel prissättning",

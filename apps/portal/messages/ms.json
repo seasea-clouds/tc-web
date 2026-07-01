@@ -85,7 +85,9 @@
     "paid": "dibayar",
     "pending": "belum selesai",
     "prev": "← Sebelumnya",
-    "next": "Seterusnya →"
+    "next": "Seterusnya →",
+    "plan": "Rancang",
+    "status": "Status"
   },
   "Pricing": {
     "title": "Harga Mudah",

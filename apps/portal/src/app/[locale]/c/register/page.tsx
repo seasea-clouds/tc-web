@@ -113,6 +113,13 @@ export default function RegisterPage() {
             {t('signIn')}
           </a>
         </p>
+
+        <p className="text-center text-xs text-gray-400 mt-4">
+          {t('agreeToPrivacy')}{' '}
+          <a href={`https://sinotradecompliance.com/${locale}/privacy`} target="_blank" rel="noopener noreferrer" className="text-[#D4AF37] hover:underline">
+            {t('privacyPolicy')}
+          </a>
+        </p>
       </div>
     </div>
   );

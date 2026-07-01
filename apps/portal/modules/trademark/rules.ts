@@ -22,7 +22,7 @@ export interface TrademarkInput {
 export const CATEGORY_LABELS: Record<string, string> = {
   "food": "Food Products", "cosmetics": "Cosmetics / Personal Care",
   "electronics": "Electronics / Technology", "apparel": "Apparel / Fashion",
-  "beverage": t("tm_cat_beverage"), "health_supplement": "Health Supplements",
+  "beverage": "Beverages", "health_supplement": "Health Supplements",
   "luxury": "Luxury Goods", "other": "Other",
 };
 

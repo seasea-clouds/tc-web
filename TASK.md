@@ -1,28 +1,62 @@
 # TASK.md — Trade Web
 
-## Pending
+## Current Plan (8 Issues)
 
-_None. All tasks completed and verified._
+Priority order: P0 → P1 → P2 → P3 → P4 → P5
+
+### ✅ P0 — Privacy checkbox with highlight warning
+**Files:** `apps/portal/src/app/[locale]/c/login/page.tsx`, `apps/portal/src/app/[locale]/c/register/page.tsx`
+
+Replace plain text privacy link with a required checkbox. If submitted unchecked, show red-border highlight warning. Move checkbox above submit button.
+
+**Status:** Done
+
+---
+
+### ✅ P1 — Subscription badge separation & centering
+**Files:** 6 check-client.tsx (ccc/crossborder/gacc/label/nmpa/trademark) + `en.json` + `zh.json`
+
+Move "✓ 活跃订阅" badge above "查看完整报告" button, center both as separate components. Fix button label to not duplicate the heading text (add `viewFullReport` key).
+
+**Status:** Done
+
+---
+
+### ⬜ P2 — Subscribe-user report persistence
+**Files:** 6 check-client.tsx + `apps/portal/functions/api/report/save.ts` + `apps/portal/functions/api/reports/list.ts`
+
+- **A:** Add `paymentStatus` param to `/api/report/save` (default `'pending'`, accept `'completed'`)
+- **B:** In each check-client.tsx subscribed branch, call `/api/report/save` with `paymentStatus: 'completed'`
+- **C:** Update `/api/reports/list` to include reports where user has active subscription
+
+**Status:** Not started
+
+---
+
+### ⬜ P3 — "noNeedOne" dropdown 48-language optimization
+**Files:** `apps/portal/messages/en.json` + translation submit
+
+Fix `en.json` source: `"No: need one"` → `"No – need one"`. Submit translate-tool job for all 47 target languages.
+
+**Status:** Not started
+
+---
+
+### ⬜ P4 — Subscription renewal billing cycle
+**File:** `apps/portal/functions/api/webhook.ts`
+
+In `handleSubscriptionCreated`, check if user already has an active subscription. If yes, extend existing period_end by 1 month + 1 day instead of creating a new record or overwriting with Creem's date.
+
+**Status:** Not started
+
+---
+
+### ⬜ P5 — Report page i18n + Reports list i18n
+**Status:** Awaiting user confirmation after P2 fix (reports need to be visible first)
+
+---
 
 ## Latest Deploy
 
 - **Commit:** `c417999` — fix: resolve TypeScript errors in nmpa/rules.ts and trademark/rules.ts
 - **CF Deploy:** Site ✅ Active | Portal ✅ Active | Blog ✅ Active
-- **Verification:**
-  - `/en/c/login` — loads, has privacy link → ✅
-  - `/en/c/register` — loads, has privacy link → ✅
-  - `/en/c/me` — My Account page, no billing link → ✅
-  - `/en/c/me/subscription` — Subscription page → ✅
-  - `/en/c/dashboard/billing` — returns 404 (deleted) → ✅
-  - Hardcoded colors (`#1B365D`, `#D4AF37`) — replaced with CSS vars → ✅
-  - Dashboard dead keys — 24 unused keys removed from 48 locales → ✅
-  - Build — Portal `next build` succeeded, all CI checks pass → ✅
-
-## Previous Tasks (for reference)
-
-### ✅ P1 — Translation export & merge (commit 7a7d21c)
-### ✅ P2 — build:ci consolidation (commit ed81c18)
-### ✅ P3 — Billing page 404 → Dashboard consolidation (commit fddf6d2, 5f16379, 3004854)
-### ✅ Audit items 1-9 (commit 3aa5513)
-### ✅ CF Build fix — package.json ci-check args (commit bd28188)
-### ✅ CF Build fix — TypeScript errors in nmpa & trademark rules (commit c417999)

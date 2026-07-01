@@ -19,9 +19,13 @@ export async function onRequest(context: {
   }
 
   try {
-    const { reportId, module, inputData, resultData, nextSteps, locale } = await context.request.json();
+    const { reportId, module, inputData, resultData, nextSteps, locale, paymentStatus } = await context.request.json();
 
-    if (!reportId || !module || !resultData) {
+    if (!reportId || !module) {
+      return Response.json({ error: "Missing required fields" }, { status: 400 });
+    }
+
+    if (!resultData && paymentStatus !== 'completed') {
       return Response.json({ error: "Missing required fields" }, { status: 400 });
     }
 
@@ -44,7 +48,7 @@ export async function onRequest(context: {
     if (context.env.DB) {
       const result = await context.env.DB.prepare(
         `INSERT OR REPLACE INTO reports (id, module, product_name, hs_code, origin_country, input_data, result_data, user_email, payment_status, locale, created_at)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'pending', ?, datetime('now'))`
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'))`
       )
         .bind(
           reportId,
@@ -55,6 +59,7 @@ export async function onRequest(context: {
           JSON.stringify(inputData || {}),
           JSON.stringify(reportMeta),
           userEmail || null,
+          paymentStatus || 'pending',
           locale || 'en'
         )
         .run();

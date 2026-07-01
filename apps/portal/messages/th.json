@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "ง่าย",
     "gaccDifficultyModerate": "ปานกลาง",
     "gaccDifficultyDifficult": "ยาก",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "ดูรายงานฉบับเต็ม",
+    "subscribedDesc": "คุณมีการสมัครใช้งานอยู่ เข้าถึงรายงานฉบับเต็มทันที",
+    "subscribedBadge": "✓ การสมัครสมาชิกที่ใช้งานอยู่",
+    "checkoutError": "การชำระเงินล้มเหลว โปรดลองอีกครั้ง",
+    "periodStart": "ระยะเวลาเริ่มต้น"
   },
   "Report": {
     "loadingTitle": "กำลังโหลดรายงานของคุณ",

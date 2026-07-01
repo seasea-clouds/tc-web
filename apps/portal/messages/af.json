@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "Maklik",
     "gaccDifficultyModerate": "Matig",
     "gaccDifficultyDifficult": "Moeilik",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "Bekyk volledige verslag",
+    "subscribedDesc": "Jy het &#39;n aktiewe intekening. Kry nou toegang tot die volledige verslag.",
+    "subscribedBadge": "✓ Aktiewe intekening",
+    "checkoutError": "Kon nie betaal nie. Probeer asseblief weer.",
+    "periodStart": "Periode begin"
   },
   "Report": {
     "loadingTitle": "Laai tans jou verslag",

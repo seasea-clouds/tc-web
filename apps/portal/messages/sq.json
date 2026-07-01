@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "Lehtë",
     "gaccDifficultyModerate": "E moderuar",
     "gaccDifficultyDifficult": "E veshtire",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "Shiko Raportin e Plotë",
+    "subscribedDesc": "Ju keni një abonim aktiv. Hyni në raportin e plotë tani.",
+    "subscribedBadge": "✓ Abonim aktiv",
+    "checkoutError": "Përfundimi dështoi. Ju lutemi provoni përsëri.",
+    "periodStart": "Fillimi i periudhës"
   },
   "Report": {
     "loadingTitle": "Duke ngarkuar raportin tuaj",

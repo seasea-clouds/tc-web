@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "आसान",
     "gaccDifficultyModerate": "मध्यम",
     "gaccDifficultyDifficult": "कठिन",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "पूरी रिपोर्ट देखें",
+    "subscribedDesc": "आपके पास एक सक्रिय सदस्यता है. अभी पूरी रिपोर्ट देखें।",
+    "subscribedBadge": "✓ सक्रिय सदस्यता",
+    "checkoutError": "चेकआउट विफल रहा. कृपया पुन: प्रयास करें।",
+    "periodStart": "अवधि प्रारंभ"
   },
   "Report": {
     "loadingTitle": "आपकी रिपोर्ट लोड हो रही है",

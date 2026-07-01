@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "Könnyen",
     "gaccDifficultyModerate": "Mérsékelt",
     "gaccDifficultyDifficult": "Nehéz",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "Teljes jelentés megtekintése",
+    "subscribedDesc": "Aktív előfizetése van. Hozzáférés a teljes jelentéshez most.",
+    "subscribedBadge": "✓ Aktív előfizetés",
+    "checkoutError": "A fizetés sikertelen. Kérjük, próbálja újra.",
+    "periodStart": "Időszak kezdete"
   },
   "Report": {
     "loadingTitle": "A jelentés betöltése",

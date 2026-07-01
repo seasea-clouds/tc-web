@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "лесно",
     "gaccDifficultyModerate": "Умерен",
     "gaccDifficultyDifficult": "трудно",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "Вижте пълния отчет",
+    "subscribedDesc": "Имате активен абонамент. Достъп до пълния отчет сега.",
+    "subscribedBadge": "✓ Активен абонамент",
+    "checkoutError": "Плащането не бе успешно. Моля, опитайте отново.",
+    "periodStart": "Начало на менструация"
   },
   "Report": {
     "loadingTitle": "Вашият отчет се зарежда",

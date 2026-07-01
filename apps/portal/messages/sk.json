@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "Jednoduché",
     "gaccDifficultyModerate": "Mierne",
     "gaccDifficultyDifficult": "Ťažké",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "Zobraziť celú správu",
+    "subscribedDesc": "Máte aktívne predplatné. Získajte prístup k úplnému prehľadu.",
+    "subscribedBadge": "✓ Aktívne predplatné",
+    "checkoutError": "Platba zlyhala. Skúste to znova.",
+    "periodStart": "Začiatok obdobia"
   },
   "Report": {
     "loadingTitle": "Načítava sa váš prehľad",

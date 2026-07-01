@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "Fácil",
     "gaccDifficultyModerate": "Moderado",
     "gaccDifficultyDifficult": "Difícil",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "Ver relatório completo",
+    "subscribedDesc": "Você tem uma assinatura ativa. Acesse agora o relatório completo.",
+    "subscribedBadge": "✓ Assinatura Ativa",
+    "checkoutError": "Falha na finalização da compra. Por favor, tente novamente.",
+    "periodStart": "Início do período"
   },
   "Report": {
     "loadingTitle": "Carregando seu relatório",

@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "آسان",
     "gaccDifficultyModerate": "اعتدال پسند",
     "gaccDifficultyDifficult": "مشکل",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "مکمل رپورٹ دیکھیں",
+    "subscribedDesc": "آپ کے پاس ایک فعال رکنیت ہے۔ ابھی مکمل رپورٹ تک رسائی حاصل کریں۔",
+    "subscribedBadge": "✓ ایکٹو سبسکرپشن",
+    "checkoutError": "چیک آؤٹ ناکام ہو گیا۔ براہ کرم دوبارہ کوشش کریں۔",
+    "periodStart": "مدت کا آغاز"
   },
   "Report": {
     "loadingTitle": "آپ کی رپورٹ لوڈ ہو رہی ہے۔",

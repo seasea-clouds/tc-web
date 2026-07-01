@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "آسان",
     "gaccDifficultyModerate": "متوسط",
     "gaccDifficultyDifficult": "دشوار است",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "مشاهده گزارش کامل",
+    "subscribedDesc": "شما یک اشتراک فعال دارید. اکنون به گزارش کامل دسترسی داشته باشید.",
+    "subscribedBadge": "✓ اشتراک فعال",
+    "checkoutError": "تسویه حساب انجام نشد. لطفا دوباره امتحان کنید.",
+    "periodStart": "شروع دوره"
   },
   "Report": {
     "loadingTitle": "در حال بارگیری گزارش شما",

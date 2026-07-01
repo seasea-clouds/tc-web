@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "පහසුයි",
     "gaccDifficultyModerate": "මධ්යස්ථ",
     "gaccDifficultyDifficult": "අපහසුයි",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "සම්පූර්ණ වාර්තාව බලන්න",
+    "subscribedDesc": "ඔබට සක්‍රිය දායකත්වයක් ඇත. සම්පූර්ණ වාර්තාවට දැන් පිවිසෙන්න.",
+    "subscribedBadge": "✓ ක්රියාකාරී දායකත්වය",
+    "checkoutError": "පිටවීම අසාර්ථක විය. කරුණාකර නැවත උත්සාහ කරන්න.",
+    "periodStart": "කාල සීමාව ආරම්භය"
   },
   "Report": {
     "loadingTitle": "ඔබේ වාර්තාව පූරණය කරමින්",

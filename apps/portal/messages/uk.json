@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "легко",
     "gaccDifficultyModerate": "Помірний",
     "gaccDifficultyDifficult": "важко",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "Переглянути повний звіт",
+    "subscribedDesc": "У вас активна підписка. Доступ до повного звіту зараз.",
+    "subscribedBadge": "✓ Активна підписка",
+    "checkoutError": "Помилка оформлення замовлення. Спробуйте ще раз.",
+    "periodStart": "Початок місячних"
   },
   "Report": {
     "loadingTitle": "Завантаження звіту",

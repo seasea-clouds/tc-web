@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "enostavno",
     "gaccDifficultyModerate": "Zmerno",
     "gaccDifficultyDifficult": "Težko",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "Oglejte si celotno poročilo",
+    "subscribedDesc": "Imate aktivno naročnino. Dostopajte do celotnega poročila zdaj.",
+    "subscribedBadge": "✓ Aktivna naročnina",
+    "checkoutError": "Blagajna ni uspela. prosim poskusite znova",
+    "periodStart": "Začetek menstruacije"
   },
   "Report": {
     "loadingTitle": "Nalaganje vašega poročila",

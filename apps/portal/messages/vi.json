@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "Dễ",
     "gaccDifficultyModerate": "Vừa phải",
     "gaccDifficultyDifficult": "Khó",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "Xem báo cáo đầy đủ",
+    "subscribedDesc": "Bạn có một thuê bao đang hoạt động. Truy cập báo cáo đầy đủ ngay bây giờ.",
+    "subscribedBadge": "✓ Đăng ký hoạt động",
+    "checkoutError": "Thanh toán không thành công. Vui lòng thử lại.",
+    "periodStart": "Bắt đầu kỳ kinh"
   },
   "Report": {
     "loadingTitle": "Đang tải báo cáo của bạn",

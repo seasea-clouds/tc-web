@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "简单",
     "gaccDifficultyModerate": "中等",
     "gaccDifficultyDifficult": "困难",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "查看完整报告",
+    "subscribedDesc": "您有一个有效的订阅。立即查看完整报告。",
+    "subscribedBadge": "✓ 活跃订阅",
+    "checkoutError": "结账失败。请再试一次。",
+    "periodStart": "经期开始"
   },
   "Report": {
     "loadingTitle": "加载您的报告",

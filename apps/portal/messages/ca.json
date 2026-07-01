@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "Fàcil",
     "gaccDifficultyModerate": "Moderat",
     "gaccDifficultyDifficult": "Difícil",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "Veure informe complet",
+    "subscribedDesc": "Tens una subscripció activa. Accediu ara a l&#39;informe complet.",
+    "subscribedBadge": "✓ Subscripció activa",
+    "checkoutError": "La compra ha fallat. Si us plau, torna-ho a provar.",
+    "periodStart": "Inici del període"
   },
   "Report": {
     "loadingTitle": "Carregant el vostre informe",

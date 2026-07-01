@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "Mudah",
     "gaccDifficultyModerate": "Sederhana",
     "gaccDifficultyDifficult": "Sukar",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "Lihat Laporan Penuh",
+    "subscribedDesc": "Anda mempunyai langganan aktif. Akses laporan penuh sekarang.",
+    "subscribedBadge": "✓ Langganan Aktif",
+    "checkoutError": "Daftar keluar gagal. Sila cuba lagi.",
+    "periodStart": "Tempoh bermula"
   },
   "Report": {
     "loadingTitle": "Memuatkan Laporan Anda",

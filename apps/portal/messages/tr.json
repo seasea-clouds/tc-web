@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "Kolay",
     "gaccDifficultyModerate": "Ilıman",
     "gaccDifficultyDifficult": "Zor",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "Raporun Tamamını Görüntüle",
+    "subscribedDesc": "Aktif bir aboneliğiniz var. Raporun tamamına şimdi erişin.",
+    "subscribedBadge": "✓ Aktif Abonelik",
+    "checkoutError": "Ödeme başarısız oldu. Lütfen tekrar deneyin.",
+    "periodStart": "Dönem başlangıcı"
   },
   "Report": {
     "loadingTitle": "Raporunuzu Yükleme",

@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "Eenvoudig",
     "gaccDifficultyModerate": "Gematigd",
     "gaccDifficultyDifficult": "Moeilijk",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "Bekijk het volledige rapport",
+    "subscribedDesc": "Je hebt een actief abonnement. Bekijk nu het volledige rapport.",
+    "subscribedBadge": "✓ Actief abonnement",
+    "checkoutError": "Afrekenen mislukt. Probeer het opnieuw.",
+    "periodStart": "Periode begin"
   },
   "Report": {
     "loadingTitle": "Uw rapport laden",

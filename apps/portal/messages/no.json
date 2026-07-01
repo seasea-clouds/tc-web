@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "Lett",
     "gaccDifficultyModerate": "Moderat",
     "gaccDifficultyDifficult": "Vanskelig",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "Se hele rapporten",
+    "subscribedDesc": "Du har et aktivt abonnement. Få tilgang til hele rapporten nå.",
+    "subscribedBadge": "✓ Aktivt abonnement",
+    "checkoutError": "Betaling mislyktes. Vennligst prøv igjen.",
+    "periodStart": "Periodestart"
   },
   "Report": {
     "loadingTitle": "Laster inn rapporten din",

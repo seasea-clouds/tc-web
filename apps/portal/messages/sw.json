@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "Rahisi",
     "gaccDifficultyModerate": "Wastani",
     "gaccDifficultyDifficult": "Ngumu",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "Tazama Ripoti Kamili",
+    "subscribedDesc": "Una usajili unaoendelea. Fikia ripoti kamili sasa.",
+    "subscribedBadge": "✓ Usajili Unaotumika",
+    "checkoutError": "Kulipa kumeshindwa. Tafadhali jaribu tena.",
+    "periodStart": "Kipindi cha kuanza"
   },
   "Report": {
     "loadingTitle": "Inapakia Ripoti Yako",

@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "簡単",
     "gaccDifficultyModerate": "適度",
     "gaccDifficultyDifficult": "難しい",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "完全なレポートを表示",
+    "subscribedDesc": "アクティブなサブスクリプションがあります。今すぐ完全なレポートにアクセスしてください。",
+    "subscribedBadge": "✓ アクティブなサブスクリプション",
+    "checkoutError": "チェックアウトに失敗しました。もう一度試してください。",
+    "periodStart": "期間開始"
   },
   "Report": {
     "loadingTitle": "レポートをロードする",

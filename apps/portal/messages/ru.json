@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "Легкий",
     "gaccDifficultyModerate": "Умеренный",
     "gaccDifficultyDifficult": "Трудный",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "Посмотреть полный отчет",
+    "subscribedDesc": "У вас есть активная подписка. Получите доступ к полному отчету прямо сейчас.",
+    "subscribedBadge": "✓ Активная подписка",
+    "checkoutError": "Оформить заказ не удалось. Пожалуйста, попробуйте еще раз.",
+    "periodStart": "Начало периода"
   },
   "Report": {
     "loadingTitle": "Загрузка вашего отчета",

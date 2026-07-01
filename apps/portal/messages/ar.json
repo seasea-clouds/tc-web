@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "سهل",
     "gaccDifficultyModerate": "معتدل",
     "gaccDifficultyDifficult": "صعب",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "عرض التقرير الكامل",
+    "subscribedDesc": "لديك اشتراك نشط. الوصول إلى التقرير الكامل الآن.",
+    "subscribedBadge": "✓ الاشتراك النشط",
+    "checkoutError": "فشل الخروج. يرجى المحاولة مرة أخرى.",
+    "periodStart": "بداية الدورة الشهرية"
   },
   "Report": {
     "loadingTitle": "جارٍ تحميل تقريرك",

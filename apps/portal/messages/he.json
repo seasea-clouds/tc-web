@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "קַל",
     "gaccDifficultyModerate": "לְמַתֵן",
     "gaccDifficultyDifficult": "קָשֶׁה",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "צפה בדוח המלא",
+    "subscribedDesc": "יש לך מנוי פעיל. גש לדוח המלא עכשיו.",
+    "subscribedBadge": "✓ מנוי פעיל",
+    "checkoutError": "התשלום נכשל. אנא נסה שוב.",
+    "periodStart": "תחילת תקופה"
   },
   "Report": {
     "loadingTitle": "טוען את הדוח שלך",

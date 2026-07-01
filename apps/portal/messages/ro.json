@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "Uşor",
     "gaccDifficultyModerate": "Moderat",
     "gaccDifficultyDifficult": "Dificil",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "Vezi raportul complet",
+    "subscribedDesc": "Ai un abonament activ. Accesați raportul complet acum.",
+    "subscribedBadge": "✓ Abonament activ",
+    "checkoutError": "Checkout a eșuat. Vă rugăm să încercați din nou.",
+    "periodStart": "Începutul perioadei"
   },
   "Report": {
     "loadingTitle": "Se încarcă raportul dvs",

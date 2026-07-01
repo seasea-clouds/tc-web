@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "Лако",
     "gaccDifficultyModerate": "Умерено",
     "gaccDifficultyDifficult": "Тешко",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "Погледајте цео извештај",
+    "subscribedDesc": "Имате активну претплату. Приступите целом извештају сада.",
+    "subscribedBadge": "✓ Активна претплата",
+    "checkoutError": "Плаћање није успело. Покушајте поново.",
+    "periodStart": "Почетак периода"
   },
   "Report": {
     "loadingTitle": "Учитавање вашег извештаја",

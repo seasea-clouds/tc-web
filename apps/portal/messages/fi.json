@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "Helppo",
     "gaccDifficultyModerate": "Kohtalainen",
     "gaccDifficultyDifficult": "Vaikea",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "Näytä koko raportti",
+    "subscribedDesc": "Sinulla on aktiivinen tilaus. Avaa koko raportti nyt.",
+    "subscribedBadge": "✓ Aktiivinen tilaus",
+    "checkoutError": "Checkout epäonnistui. Yritä uudelleen.",
+    "periodStart": "Jakson alku"
   },
   "Report": {
     "loadingTitle": "Ladataan raporttiasi",

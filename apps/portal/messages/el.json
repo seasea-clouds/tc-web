@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "Εύκολος",
     "gaccDifficultyModerate": "Μέτριος",
     "gaccDifficultyDifficult": "Δύσκολος",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "Προβολή πλήρους αναφοράς",
+    "subscribedDesc": "Έχετε ενεργή συνδρομή. Αποκτήστε πρόσβαση στην πλήρη αναφορά τώρα.",
+    "subscribedBadge": "✓ Ενεργή συνδρομή",
+    "checkoutError": "Η ολοκλήρωση αγοράς απέτυχε. Δοκιμάστε ξανά.",
+    "periodStart": "Έναρξη περιόδου"
   },
   "Report": {
     "loadingTitle": "Φόρτωση της αναφοράς σας",

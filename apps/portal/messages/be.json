@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "лёгка",
     "gaccDifficultyModerate": "Умераны",
     "gaccDifficultyDifficult": "Цяжка",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "Поўны справаздачу",
+    "subscribedDesc": "У вас ёсць актыўная падпіска. Доступ да поўнай справаздачы зараз.",
+    "subscribedBadge": "✓ Актыўная падпіска",
+    "checkoutError": "Збой афармлення заказу. Калі ласка, паспрабуйце яшчэ раз.",
+    "periodStart": "Пачатак месячных"
   },
   "Report": {
     "loadingTitle": "Загрузка вашай справаздачы",

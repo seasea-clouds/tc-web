@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "Հեշտ",
     "gaccDifficultyModerate": "Չափավոր",
     "gaccDifficultyDifficult": "Դժվար",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "Դիտել ամբողջական զեկույցը",
+    "subscribedDesc": "Դուք ունեք ակտիվ բաժանորդագրություն: Մուտք գործեք ամբողջական զեկույցը հիմա:",
+    "subscribedBadge": "✓ Ակտիվ բաժանորդագրություն",
+    "checkoutError": "Չհաջողվեց վճարել: Խնդրում ենք կրկին փորձել:",
+    "periodStart": "Ժամանակաշրջանի սկիզբ"
   },
   "Report": {
     "loadingTitle": "Բեռնվում է ձեր զեկույցը",

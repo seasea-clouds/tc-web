@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "ადვილია",
     "gaccDifficultyModerate": "ზომიერი",
     "gaccDifficultyDifficult": "რთული",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "სრული ანგარიშის ნახვა",
+    "subscribedDesc": "თქვენ გაქვთ აქტიური გამოწერა. წვდომა სრულ ანგარიშზე ახლავე.",
+    "subscribedBadge": "✓ აქტიური გამოწერა",
+    "checkoutError": "გადახდა ვერ მოხერხდა. გთხოვთ, სცადოთ ხელახლა.",
+    "periodStart": "პერიოდის დაწყება"
   },
   "Report": {
     "loadingTitle": "იტვირთება თქვენი ანგარიში",

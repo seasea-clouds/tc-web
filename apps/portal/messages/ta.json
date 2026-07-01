@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "எளிதானது",
     "gaccDifficultyModerate": "மிதமான",
     "gaccDifficultyDifficult": "கடினமானது",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "முழு அறிக்கையையும் பார்க்கவும்",
+    "subscribedDesc": "உங்களிடம் செயலில் சந்தா உள்ளது. முழு அறிக்கையையும் இப்போது அணுகவும்.",
+    "subscribedBadge": "✓ செயலில் சந்தா",
+    "checkoutError": "செக்அவுட் தோல்வியடைந்தது. மீண்டும் முயற்சிக்கவும்.",
+    "periodStart": "காலம் ஆரம்பம்"
   },
   "Report": {
     "loadingTitle": "உங்கள் அறிக்கையை ஏற்றுகிறது",

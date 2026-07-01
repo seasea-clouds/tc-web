@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "Snadný",
     "gaccDifficultyModerate": "Mírný",
     "gaccDifficultyDifficult": "Obtížný",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "Zobrazit celou zprávu",
+    "subscribedDesc": "Máte aktivní předplatné. Získejte přístup k úplné zprávě nyní.",
+    "subscribedBadge": "✓ Aktivní předplatné",
+    "checkoutError": "Pokladna se nezdařila. Zkuste to prosím znovu.",
+    "periodStart": "Začátek období"
   },
   "Report": {
     "loadingTitle": "Načítání vaší zprávy",

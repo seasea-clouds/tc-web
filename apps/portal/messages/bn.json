@@ -1833,10 +1833,11 @@
     "gaccDifficultyEasy": "সহজ",
     "gaccDifficultyModerate": "পরিমিত",
     "gaccDifficultyDifficult": "কঠিন",
-    "subscribedViewReport": "View Full Report",
-    "subscribedDesc": "You have an active subscription. Access the full report now.",
-    "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "subscribedViewReport": "সম্পূর্ণ প্রতিবেদন দেখুন",
+    "subscribedDesc": "আপনার একটি সক্রিয় সদস্যতা আছে. এখন সম্পূর্ণ রিপোর্ট অ্যাক্সেস.",
+    "subscribedBadge": "✓ সক্রিয় সদস্যতা",
+    "checkoutError": "চেকআউট ব্যর্থ হয়েছে. আবার চেষ্টা করুন.",
+    "periodStart": "পিরিয়ড শুরু"
   },
   "Report": {
     "loadingTitle": "আপনার রিপোর্ট লোড হচ্ছে",

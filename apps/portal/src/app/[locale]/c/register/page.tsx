@@ -38,9 +38,9 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F4F6F9] flex items-center justify-center py-12 px-4">
+    <div className="min-h-screen bg-bg-ice flex items-center justify-center py-12 px-4">
       <div className="max-w-md w-full bg-white rounded-lg shadow-sm border border-gray-200 p-8">
-        <h1 className="text-2xl font-bold text-[#1B365D] text-center mb-6">{t('register')}</h1>
+        <h1 className="text-2xl font-bold text-primary-navy text-center mb-6">{t('register')}</h1>
 
         {error && (
           <div className="bg-red-50 text-red-600 text-sm p-3 rounded-md mb-4">{error}</div>
@@ -53,7 +53,7 @@ export default function RegisterPage() {
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent"
+              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
               placeholder={t('namePlaceholder')}
             />
           </div>
@@ -65,7 +65,7 @@ export default function RegisterPage() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent"
+              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
               placeholder={t('emailPlaceholder')}
             />
           </div>
@@ -78,7 +78,7 @@ export default function RegisterPage() {
               minLength={5}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent"
+              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
               placeholder={t('passwordMinHint')}
             />
           </div>
@@ -86,7 +86,7 @@ export default function RegisterPage() {
           <button
             type="submit"
             disabled={loading || !turnstileToken}
-            className="w-full bg-[#1B365D] hover:bg-[#1B365D]/90 text-white font-semibold py-2.5 rounded-md transition-all disabled:opacity-50"
+            className="w-full bg-primary-navy hover:bg-primary-navy/90 text-white font-semibold py-2.5 rounded-md transition-all disabled:opacity-50"
           >
             {loading ? t('creatingAccount') : t('registerBtn')}
           </button>
@@ -109,14 +109,14 @@ export default function RegisterPage() {
 
         <p className="text-center text-sm text-gray-500 mt-6">
           {t('hasAccount')}{' '}
-          <a href={`/${locale}/c/login`} className="text-[#D4AF37] hover:underline font-medium">
+          <a href={`/${locale}/c/login`} className="text-gold hover:underline font-medium">
             {t('signIn')}
           </a>
         </p>
 
         <p className="text-center text-xs text-gray-400 mt-4">
           {t('agreeToPrivacy')}{' '}
-          <a href={`https://sinotradecompliance.com/${locale}/privacy`} target="_blank" rel="noopener noreferrer" className="text-[#D4AF37] hover:underline">
+          <a href={`https://sinotradecompliance.com/${locale}/privacy`} target="_blank" rel="noopener noreferrer" className="text-gold hover:underline">
             {t('privacyPolicy')}
           </a>
         </p>

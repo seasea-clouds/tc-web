@@ -127,13 +127,13 @@ export default function TrademarkCheckClient() {
   const setVal = (name: string, val: string) => setInput(v => ({ ...v, [name]: val }));
 
   return (
-    <div className="bg-[#F4F6F9]">
+    <div className="bg-bg-ice">
       <div className="max-w-3xl mx-auto px-4 py-12">
         {/* Progress */}
         <div className="flex items-center justify-center gap-2 mb-8 text-sm text-gray-400">
-          <span className={step === "form" ? "text-[#D4AF37] font-semibold" : ""}>{t('step1')}</span>
+          <span className={step === "form" ? "text-gold font-semibold" : ""}>{t('step1')}</span>
           <span>&rarr;</span>
-          <span className={step === "free-result" ? "text-[#D4AF37] font-semibold" : ""}>{t('step2')}</span>
+          <span className={step === "free-result" ? "text-gold font-semibold" : ""}>{t('step2')}</span>
         </div>
 
         {step === "form" && (
@@ -143,7 +143,7 @@ export default function TrademarkCheckClient() {
                 {t('requiredFieldsError')}
               </div>
             )}
-            <h1 className="text-2xl font-bold text-[#1B365D]">{t('trademarkTitle')}</h1>
+            <h1 className="text-2xl font-bold text-primary-navy">{t('trademarkTitle')}</h1>
             <p className="text-sm text-gray-500">{t('trademarkSubtitle')}</p>
 
             <div>
@@ -166,7 +166,7 @@ export default function TrademarkCheckClient() {
                 onChange={e => setVal("brandName", e.target.value)}
                 minLength={2}
                 placeholder={t("brandNamePlaceholder")}
-                className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent"
+                className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-gold focus:border-transparent"
                 required
               />
             </div>
@@ -190,7 +190,7 @@ export default function TrademarkCheckClient() {
                 onChange={e => setVal("originCountry", e.target.value)}
                 minLength={2}
                 placeholder={t("countryPlaceholder")}
-                className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent"
+                className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-gold focus:border-transparent"
                 required
               />
             </div>
@@ -199,7 +199,7 @@ export default function TrademarkCheckClient() {
               <select
                 value={input["registeredInChina"] || ""}
                 onChange={e => setVal("registeredInChina", e.target.value)}
-                className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent"
+                className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-gold focus:border-transparent"
               >
                 <option value="">{t('selectOption')}</option>
                 <option value="true">{t('yes')}</option>
@@ -213,7 +213,7 @@ export default function TrademarkCheckClient() {
                 <select
                   value={input["hasChineseName"] || ""}
                   onChange={e => setVal("hasChineseName", e.target.value)}
-                  className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent"
+                  className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-gold focus:border-transparent"
                 >
                   <option value="">{t('selectOption')}</option>
                   <option value="yes">{t('yes')}</option>
@@ -225,7 +225,7 @@ export default function TrademarkCheckClient() {
                 <select
                   value={input["hasForeignRegistration"] || ""}
                   onChange={e => setVal("hasForeignRegistration", e.target.value)}
-                  className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent"
+                  className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-gold focus:border-transparent"
                 >
                   <option value="">{t('selectOption')}</option>
                   <option value="yes">{t('yes')}</option>
@@ -242,7 +242,7 @@ export default function TrademarkCheckClient() {
                   value={input["tmClassDescription"] || ""}
                   onChange={e => setVal("tmClassDescription", e.target.value)}
                   placeholder={t("niceClassPlaceholder")}
-                  className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent"
+                  className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-gold focus:border-transparent"
                 />
               </div>
               <div>
@@ -252,7 +252,7 @@ export default function TrademarkCheckClient() {
                   value={input["brandYearsInMarket"] || ""}
                   onChange={e => setVal("brandYearsInMarket", e.target.value)}
                   placeholder={t("brandInMarketPlaceholder")}
-                  className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent"
+                  className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-gold focus:border-transparent"
                 />
               </div>
             </div>
@@ -262,7 +262,7 @@ export default function TrademarkCheckClient() {
               <select
                 value={input["needsCustomsRecordal"] || ""}
                 onChange={e => setVal("needsCustomsRecordal", e.target.value)}
-                className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent"
+                className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-gold focus:border-transparent"
               >
                 <option value="">{t('selectOption')}</option>
                 <option value="yes">{t('yes')}</option>
@@ -273,7 +273,7 @@ export default function TrademarkCheckClient() {
 
             <button
               type="submit"
-              className="w-full bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#1B365D] font-bold py-3 px-6 rounded-lg transition-all text-lg"
+              className="w-full bg-gold hover:bg-gold/90 text-primary-navy font-bold py-3 px-6 rounded-lg transition-all text-lg"
             >
               {t('checkBtn')}
             </button>
@@ -283,7 +283,7 @@ export default function TrademarkCheckClient() {
         {step === "free-result" && freeData && (
           <div className="space-y-4">
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sm:p-8">
-              <h2 className="text-xl font-bold text-[#1B365D] mb-4">{t('freeResult')}</h2>
+              <h2 className="text-xl font-bold text-primary-navy mb-4">{t('freeResult')}</h2>
               <p className="text-sm text-gray-700 mb-4">{freeData.summary}</p>
 
               <div className="grid grid-cols-2 gap-3 mb-4">
@@ -295,9 +295,9 @@ export default function TrademarkCheckClient() {
 
               {freeData.requiredDocuments && freeData.requiredDocuments.length > 0 && (
                 <div>
-                  <h3 className="font-semibold text-sm mb-2 text-[#1B365D]">{t('documentsTitle')}</h3>
+                  <h3 className="font-semibold text-sm mb-2 text-primary-navy">{t('documentsTitle')}</h3>
                   <ul className="space-y-1">
-                    {freeData.requiredDocuments.map((d: string, i: number) => (<li key={i} className="flex items-center gap-2 text-sm text-gray-600"><span className="w-1.5 h-1.5 bg-[#D4AF37] rounded-full"></span>{d}</li>))}
+                    {freeData.requiredDocuments.map((d: string, i: number) => (<li key={i} className="flex items-center gap-2 text-sm text-gray-600"><span className="w-1.5 h-1.5 bg-gold rounded-full"></span>{d}</li>))}
                   </ul>
                 </div>
               )}
@@ -307,21 +307,21 @@ export default function TrademarkCheckClient() {
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sm:p-8 text-center space-y-4">
               {subscribed ? (
                 <>
-                  <p className="text-lg font-semibold text-[#1B365D]">{t('subscribedViewReport')}</p>
+                  <p className="text-lg font-semibold text-primary-navy">{t('subscribedViewReport')}</p>
                   <p className="text-sm text-gray-500">{t('subscribedDesc')}</p>
                   <div className="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">{t('subscribedBadge')}</div>
                   {error && <p className="text-sm text-red-500">{error}</p>}
                   <button
                     onClick={handlePayment}
                     disabled={loading}
-                    className="w-full max-w-xs bg-[#D4AF37] hover:bg-[#D4AF37]/90 disabled:bg-gray-300 text-[#1B365D] font-semibold py-3 px-6 rounded-md transition-all text-lg"
+                    className="w-full max-w-xs bg-gold hover:bg-gold/90 disabled:bg-gray-300 text-primary-navy font-semibold py-3 px-6 rounded-md transition-all text-lg"
                   >
                     {loading ? t('redirecting') : t('subscribedViewReport')}
                   </button>
                 </>
               ) : (
                 <>
-                  <p className="text-lg font-semibold text-[#1B365D]">{t('paymentTitle')}</p>
+                  <p className="text-lg font-semibold text-primary-navy">{t('paymentTitle')}</p>
                   <p className="text-sm text-gray-500">{t('fullReportDesc')}</p>
 
                   <div className="max-w-xs mx-auto">
@@ -340,7 +340,7 @@ export default function TrademarkCheckClient() {
                     <button
                       onClick={handlePayment}
                       disabled={loading}
-                      className="w-full max-w-xs bg-[#D4AF37] hover:bg-[#D4AF37]/90 disabled:bg-gray-300 text-[#1B365D] font-semibold py-3 px-6 rounded-md transition-all text-lg"
+                      className="w-full max-w-xs bg-gold hover:bg-gold/90 disabled:bg-gray-300 text-primary-navy font-semibold py-3 px-6 rounded-md transition-all text-lg"
                     >
                       {loading ? t('redirecting') : t('fullReport1')}
                     </button>
@@ -351,14 +351,14 @@ export default function TrademarkCheckClient() {
             </div>
 
             {/* Expert CTA */}
-            <div className="bg-[#1B365D] text-white rounded-lg p-8 text-center">
+            <div className="bg-primary-navy text-white rounded-lg p-8 text-center">
               <h3 className="text-xl font-bold mb-2">{t('expertCtaTitle')}</h3>
               <p className="text-white/80 mb-6 max-w-lg mx-auto">{t('expertCtaDesc')}</p>
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#1B365D] font-semibold px-6 py-3 rounded-md transition-all"
+                className="inline-block bg-gold hover:bg-gold/90 text-primary-navy font-semibold px-6 py-3 rounded-md transition-all"
               >
                 {t('expertCtaBtn')}
               </a>

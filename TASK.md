@@ -1,6 +1,6 @@
 # TASK.md
 
-> 当前时间：2026-07-01 17:10 (Asia/Shanghai)
+> 当前时间：2026-07-01 17:31 (Asia/Shanghai)
 
 ---
 
@@ -19,11 +19,19 @@
 - 补全 en.json source key（Auth, Dashboard, Report 命名空间）
 - 已提交 3 个翻译任务（46 语言 × 9 key）
 
+### P4: 移除 Dashboard 系列页面 ✅ (5f16379)
+
+- 删除 `/c/dashboard/` 首页 + `/c/dashboard/reports/`
+- 登录/注册后跳转 → `/c/me`
+- 清理脚本引用（check-seo-patterns/check-seo-output/discover-routes）
+- 清理 AutoBreadcrumb `dashboard` / `billing` 映射
+- Me 系列页面（`/c/me/`）仍使用 Dashboard i18n 命名空间
+
 ---
 
 ## 🟡 进行中
 
-### P4: 翻译任务进行中
+### P5: 翻译任务进行中
 
 | 任务 | key | 状态 |
 |------|-----|------|
@@ -34,19 +42,6 @@
 **完成后：** 导出 → 合并到 47 个 locale JSON → git push
 
 ---
-
-## 🔵 待确认
-
-| 事项 | 说明 |
-|------|------|
-| Dashboard 页面 UI 统一 | 旧版硬编码颜色需改为主题 tokens（P3） |
-| `/c/dashboard/reports/` 双入口 | 与 `/c/me/reports/` 功能重复 |
-
----
-
-### 用户页面文档
-
-`docs/USER-PAGES.md` — 包含全部页面目录、UI 规范、导航关系图。
 
 ### 故障预案
 

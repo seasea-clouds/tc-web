@@ -35,8 +35,6 @@ const SEGMENT_LABELS: Record<string, string> = {
   // Portal /c/ self-check tool
   'c': 'selfCheck',
   'pricing': 'pricing',
-  'dashboard': 'dashboard',
-  'billing': 'billing',
   'login': 'login',
   'register': 'register',
   'report': 'report',

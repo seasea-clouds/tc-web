@@ -1,46 +1,55 @@
-# TASK.md — 当前待执行任务
+# TASK.md
 
-## ⚠️ 待恢复项（翻译完成后必须处理）
+> 当前时间：2026-07-01 17:10 (Asia/Shanghai)
 
-**🔴 任务 0：恢复 build:ci 模式**
-- 翻译到位（硬编码英文回退数降为 0）后，将各 app 的 `build:ci` 脚本合并回 `build`，重新启用 `--ci` 标记
-- 涉及文件：`apps/site/package.json`、`apps/portal/package.json`、`apps/blog/package.json`
-- 背景：P3 翻译任务失败导致 738 处硬编码英文未翻译，临时移除 `--ci` 让 CF Pages 构建通过
-- 触发条件：`portal-rules-i18n-p3` 重新提交完成，各项目硬编码数归零
+---
 
-## ✅ 已完成（今日修复）
+## ✅ 已完成
 
-**🔴 任务 1：修复 /zh/c/me/ 页面 raw key 值** ✅
-- 线上已正确显示中文，之前的 raw key 问题是部署缓存导致的
+### P1: 翻译导出 + 合并 ✅ (7a7d21c)
+### P2: 恢复 `build:ci` 模式 ✅ (ed81c18)
 
-**🔴 任务 2：面包屑 "reports" 未翻译** ✅
-- SEGMENT_LABELS 已有映射，UI package 和 Portal 均有中文翻译
+### P3: 修复登录/注册页 + 订阅页翻译 + 删除旧路由 billing ✅ (fddf6d2)
 
-**🔴 任务 3：报告页英文残留** ✅
-- 修复 rules.ts 中 21 处硬编码英文为 `t()` 调用
-- 涉及 GACC（语言注释/协这/进口量/常见问题）、NMPA（国家说明）、Trademark（品类标签）
+- 登录/注册页底部添加「同意隐私政策」链接（匹配当前语言）
+- 订阅页修复：`Report.periodStart` 翻译 + plan/status 映射翻译
+- 删除旧路由 `/c/dashboard/billing/`
+- 仪表盘「计费和订阅」→ 指向 `/c/me/subscription`
+- `check-seo-patterns.mjs` 移除 `/c/dashboard/billing/`
+- 补全 en.json source key（Auth, Dashboard, Report 命名空间）
+- 已提交 3 个翻译任务（46 语言 × 9 key）
 
-**🟡 任务 4：订阅支付未显示（David $9.9）** ✅
-- D1 数据库确认记录存在：`sub_6lkUfqVPSJ8WMnF8DJjrYj` → status: active
-- webhook 事件流完整记录（update → active → checkout → paid）
+---
 
-## 📋 当前状态
+## 🟡 进行中
 
-**任务 5：翻译任务** — 需翻译工具组处理
-- P3 翻译 `portal-rules-i18n-p3` 失败（仅完成 5/7097 条）
-- 今天新加的 21 条 key 也需要提交翻译
-- 需要翻译工具恢复后重新提交
+### P4: 翻译任务进行中
 
-**任务 6：博客复制链接** ✅ 已验证无问题
-- CopyButton 已有 SVG 切换（链接图标 → 绿色勾 ✓ → 2 秒后复原）
-- Clipboard API + textarea fallback，在线已验证通过
+| 任务 | key | 状态 |
+|------|-----|------|
+| `portal-auth-privacy-v1` | `agreeToPrivacy`, `privacyPolicy`（Auth） | 🟡 翻译中 |
+| `portal-dashboard-planstatus-v1` | `plan`, `status`（Dashboard） | 🟡 翻译中 |
+| `portal-report-planmap-v1` | `planMonthly`, `planYearly`, `statusActive`, `statusCanceled`, `statusPastDue`（Report） | 🟡 翻译中 |
 
-## 🔵 低优先级（待确认）
+**完成后：** 导出 → 合并到 47 个 locale JSON → git push
 
-**任务 7：Pricing 页面向导链接** — `Start Free` → `/{locale}/c/` 功能正常
+---
 
-**任务 8：Dashboard 账单页 404** — 疑似 Worker 代理或 SSG 问题，待用户确认
+## 🔵 待确认
 
-**任务 9：中文标签措辞不一致** — 可能系缓存问题，待用户确认
+| 事项 | 说明 |
+|------|------|
+| Dashboard 页面 UI 统一 | 旧版硬编码颜色需改为主题 tokens（P3） |
+| `/c/dashboard/reports/` 双入口 | 与 `/c/me/reports/` 功能重复 |
 
-**任务 10：Pricing 价格格式** — `Intl.NumberFormat` 规范行为，zh 下 "1.99 美元"
+---
+
+### 用户页面文档
+
+`docs/USER-PAGES.md` — 包含全部页面目录、UI 规范、导航关系图。
+
+### 故障预案
+
+- **翻译失败/超时：** `translate-tool retry -n "<task-name>"`
+- **CI 缺失 key：** `npm run build 2>&1 | grep "缺失于"` 定位
+- **部署后英文 fallback：** 硬刷新浏览器 + 检查 locale JSON

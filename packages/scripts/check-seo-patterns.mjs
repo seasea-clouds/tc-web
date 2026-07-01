@@ -45,8 +45,6 @@ const CLIENT_COMPONENT_EXEMPT = [
 const PORTAL_AUTH_ROUTES = [
   '/c/login/',
   '/c/register/',
-  '/c/dashboard/',
-  '/c/dashboard/reports/',
   '/c/me/',
   '/c/me/reports/',
   '/c/me/settings/',

@@ -5,7 +5,7 @@
 版本号支持方案：
 
 - 单源：`<root>/VERSION` 文件是整个 monorepo 版本号的唯一来源
-- 各子项目 `package.json#version` 已改为 `0.0.0`（占位符），构建时通过 `prebuild` hook 注入
+- 各子项目 `package.json#version` 已改为文本占位符 `"from ../../VERSION"`，表明版本来自根目录的 VERSION 文件
 - 注入脚本：`packages/scripts/inject-version.mjs`
 - 构建流程：`npm run prebuild` → `inject-version.mjs` 读取 `../../VERSION` → 写入当前子包的 `package.json#version`
 - 已接入的项目：Site、Portal、Blog（UI 不单独部署，不接入）

@@ -55,39 +55,17 @@
     "errorLength": "Heslo musí mať aspoň 5 znakov",
     "securityCheck": "Dokončite bezpečnostnú kontrolu.",
     "securityCheckFailed": "Bezpečnostná kontrola zlyhala. Skúste to znova.",
-    "securityCheckExpired": "Platnosť bezpečnostnej kontroly vypršala. Skúste to znova."
+    "securityCheckExpired": "Platnosť bezpečnostnej kontroly vypršala. Skúste to znova.",
+    "agreeToPrivacy": "súhlasím s",
+    "privacyPolicy": "Zásady ochrany osobných údajov"
   },
   "Dashboard": {
-    "title": "Dashboard",
-    "welcomeBack": "vitajte späť,",
     "myReports": "Moje prehľady",
-    "myReportsDesc": "Pozrite si históriu správ o súlade",
-    "billing": "Fakturácia a predplatné",
-    "billingDesc": "Spravujte svoje predplatné a spôsoby platby",
-    "account": "účtu",
-    "currentPlan": "Aktuálny plán",
-    "periodEnds": "Obdobie končí",
-    "registeredUser": "Registrovaný užívateľ",
-    "completeCheck": "Ak chcete zobraziť svoje prehľady, dokončite kontrolu súladu.",
-    "loading": "Načítava sa...",
     "accountPreferences": "Predvoľby účtu",
-    "manageSubscription": "Spravujte svoje predplatné",
-    "reportId": "ID",
-    "name": "Meno",
-    "email": "E-mail",
-    "noReportsYet": "Zatiaľ žiadne správy",
     "subscription": "Predplatné",
     "settings": "Nastavenia",
     "viewReportsDesc": "Pozrite si prehľady súladu",
-    "manageSubscriptionDesc": "Spravujte svoje predplatné",
-    "viewPricing": "Zobraziť ceny",
-    "youAreOnFreePlan": "Momentálne máte bezplatný plán.",
-    "paid": "zaplatené",
-    "pending": "čakajúce",
-    "prev": "← Predch",
-    "next": "Ďalej →",
-    "plan": "Plán",
-    "status": "Stav"
+    "manageSubscriptionDesc": "Spravujte svoje predplatné"
   },
   "Pricing": {
     "title": "Jednoduché stanovovanie cien",
@@ -1887,7 +1865,12 @@
     "prevPage": "← Predch",
     "nextPage": "Ďalej →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "Mesačne",
+    "planYearly": "Ročne",
+    "statusActive": "Aktívne",
+    "statusCanceled": "Zrušené",
+    "statusPastDue": "Po splatnosti"
   },
   "Cookie": {
     "message": "Táto stránka používa iba nevyhnutné overovacie súbory cookie. Nepoužívajú sa žiadne sledovacie ani reklamné súbory cookie.",

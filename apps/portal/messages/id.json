@@ -55,39 +55,17 @@
     "errorLength": "Kata sandi minimal harus 5 karakter",
     "securityCheck": "Silakan selesaikan pemeriksaan keamanan.",
     "securityCheckFailed": "Pemeriksaan keamanan gagal. Silakan coba lagi.",
-    "securityCheckExpired": "Pemeriksaan keamanan sudah habis masa berlakunya. Silakan coba lagi."
+    "securityCheckExpired": "Pemeriksaan keamanan sudah habis masa berlakunya. Silakan coba lagi.",
+    "agreeToPrivacy": "Saya setuju dengan",
+    "privacyPolicy": "Kebijakan Privasi"
   },
   "Dashboard": {
-    "title": "Dasbor",
-    "welcomeBack": "Selamat datang kembali,",
     "myReports": "Laporan Saya",
-    "myReportsDesc": "Lihat riwayat laporan kepatuhan Anda",
-    "billing": "Penagihan & Berlangganan",
-    "billingDesc": "Kelola langganan dan metode pembayaran Anda",
-    "account": "Akun",
-    "currentPlan": "Rencana Saat Ini",
-    "periodEnds": "Periode berakhir",
-    "registeredUser": "Pengguna terdaftar",
-    "completeCheck": "Selesaikan pemeriksaan kepatuhan untuk melihat laporan Anda di sini.",
-    "loading": "Memuat...",
     "accountPreferences": "Preferensi akun",
-    "manageSubscription": "Kelola langganan Anda",
-    "reportId": "PENGENAL",
-    "name": "Nama",
-    "email": "E-mail",
-    "noReportsYet": "Belum ada laporan",
     "subscription": "Berlangganan",
     "settings": "Pengaturan",
     "viewReportsDesc": "Lihat laporan kepatuhan Anda",
-    "manageSubscriptionDesc": "Kelola langganan Anda",
-    "viewPricing": "Lihat Harga",
-    "youAreOnFreePlan": "Anda saat ini menggunakan paket Gratis.",
-    "paid": "dibayar",
-    "pending": "tertunda",
-    "prev": "← Sebelumnya",
-    "next": "Selanjutnya →",
-    "plan": "Rencana",
-    "status": "Status"
+    "manageSubscriptionDesc": "Kelola langganan Anda"
   },
   "Pricing": {
     "title": "Penetapan Harga Sederhana",
@@ -1887,7 +1865,12 @@
     "prevPage": "← Sebelumnya",
     "nextPage": "Selanjutnya →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "Bulanan",
+    "planYearly": "Tahunan",
+    "statusActive": "Aktif",
+    "statusCanceled": "Dibatalkan",
+    "statusPastDue": "Telah Jatuh Tempo"
   },
   "Cookie": {
     "message": "Situs ini hanya menggunakan cookie otentikasi penting. Tidak ada cookie pelacakan atau iklan yang digunakan.",

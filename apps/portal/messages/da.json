@@ -55,39 +55,17 @@
     "errorLength": "Adgangskoden skal være på mindst 5 tegn",
     "securityCheck": "Gennemfør venligst sikkerhedstjekket.",
     "securityCheckFailed": "Sikkerhedstjek mislykkedes. Prøv venligst igen.",
-    "securityCheckExpired": "Sikkerhedstjekket er udløbet. Prøv venligst igen."
+    "securityCheckExpired": "Sikkerhedstjekket er udløbet. Prøv venligst igen.",
+    "agreeToPrivacy": "Jeg er enig i",
+    "privacyPolicy": "Privatlivspolitik"
   },
   "Dashboard": {
-    "title": "Dashboard",
-    "welcomeBack": "Velkommen tilbage,",
     "myReports": "Mine rapporter",
-    "myReportsDesc": "Se din overholdelsesrapporthistorik",
-    "billing": "Fakturering og abonnement",
-    "billingDesc": "Administrer dit abonnement og betalingsmetoder",
-    "account": "Konto",
-    "currentPlan": "Nuværende plan",
-    "periodEnds": "Perioden slutter",
-    "registeredUser": "Registreret bruger",
-    "completeCheck": "Gennemfør et overensstemmelsestjek for at se dine rapporter her.",
-    "loading": "Indlæser...",
     "accountPreferences": "Kontopræferencer",
-    "manageSubscription": "Administrer dit abonnement",
-    "reportId": "ID",
-    "name": "Navn",
-    "email": "E-mail",
-    "noReportsYet": "Ingen rapporter endnu",
     "subscription": "Abonnement",
     "settings": "Indstillinger",
     "viewReportsDesc": "Se dine overholdelsesrapporter",
-    "manageSubscriptionDesc": "Administrer dit abonnement",
-    "viewPricing": "Se priser",
-    "youAreOnFreePlan": "Du er i øjeblikket på den gratis plan.",
-    "paid": "betalt",
-    "pending": "indtil",
-    "prev": "← Forrige",
-    "next": "Næste →",
-    "plan": "Plan",
-    "status": "Status"
+    "manageSubscriptionDesc": "Administrer dit abonnement"
   },
   "Pricing": {
     "title": "Enkel prissætning",
@@ -1887,7 +1865,12 @@
     "prevPage": "← Forrige",
     "nextPage": "Næste →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "Månedlig",
+    "planYearly": "Årligt",
+    "statusActive": "Aktiv",
+    "statusCanceled": "Annulleret",
+    "statusPastDue": "Forfaldne"
   },
   "Cookie": {
     "message": "Dette websted bruger kun vigtige autentificeringscookies. Der bruges ingen sporings- eller reklamecookies.",

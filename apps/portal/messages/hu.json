@@ -55,39 +55,17 @@
     "errorLength": "A jelszónak legalább 5 karakterből kell állnia",
     "securityCheck": "Kérjük, végezze el a biztonsági ellenőrzést.",
     "securityCheckFailed": "Security check failed. Kérjük, próbálja újra.",
-    "securityCheckExpired": "A biztonsági ellenőrzés lejárt. Kérjük, próbálja újra."
+    "securityCheckExpired": "A biztonsági ellenőrzés lejárt. Kérjük, próbálja újra.",
+    "agreeToPrivacy": "Egyetértek a",
+    "privacyPolicy": "Adatvédelmi szabályzat"
   },
   "Dashboard": {
-    "title": "Műszerfal",
-    "welcomeBack": "Isten hozott vissza,",
     "myReports": "Saját jelentéseim",
-    "myReportsDesc": "Tekintse meg a megfelelőségi jelentés előzményeit",
-    "billing": "Számlázás és előfizetés",
-    "billingDesc": "Kezelje előfizetését és fizetési módjait",
-    "account": "fiók",
-    "currentPlan": "Jelenlegi terv",
-    "periodEnds": "Az időszak véget ér",
-    "registeredUser": "Regisztrált felhasználó",
-    "completeCheck": "A jelentések itt való megtekintéséhez hajtson végre megfelelőségi ellenőrzést.",
-    "loading": "Terhelés...",
     "accountPreferences": "Fiókbeállítások",
-    "manageSubscription": "Kezelje előfizetését",
-    "reportId": "ID",
-    "name": "Név",
-    "email": "E-mail",
-    "noReportsYet": "Még nincsenek jelentések",
     "subscription": "Előfizetés",
     "settings": "Beállítások elemre",
     "viewReportsDesc": "Tekintse meg megfelelőségi jelentéseit",
-    "manageSubscriptionDesc": "Kezelje előfizetését",
-    "viewPricing": "Árak megtekintése",
-    "youAreOnFreePlan": "Jelenleg az ingyenes csomagot használja.",
-    "paid": "fizetett",
-    "pending": "függőben levő",
-    "prev": "← Előző",
-    "next": "Következő →",
-    "plan": "Terv",
-    "status": "Állapot"
+    "manageSubscriptionDesc": "Kezelje előfizetését"
   },
   "Pricing": {
     "title": "Egyszerű árképzés",
@@ -1887,7 +1865,12 @@
     "prevPage": "← Előző",
     "nextPage": "Következő →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "Havi",
+    "planYearly": "Évi",
+    "statusActive": "Aktív",
+    "statusCanceled": "Törölve",
+    "statusPastDue": "Lejárt"
   },
   "Cookie": {
     "message": "Ez az oldal csak alapvető hitelesítési cookie-kat használ. Nem használnak nyomkövető vagy hirdetési sütiket.",

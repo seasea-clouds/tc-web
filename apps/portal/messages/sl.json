@@ -55,39 +55,17 @@
     "errorLength": "Geslo mora imeti vsaj 5 znakov",
     "securityCheck": "Prosimo, dokončajte varnostni pregled.",
     "securityCheckFailed": "Varnostni pregled ni uspel. prosim poskusite znova",
-    "securityCheckExpired": "Varnostni pregled je potekel. prosim poskusite znova"
+    "securityCheckExpired": "Varnostni pregled je potekel. prosim poskusite znova",
+    "agreeToPrivacy": "Strinjam se z",
+    "privacyPolicy": "Politika zasebnosti"
   },
   "Dashboard": {
-    "title": "Nadzorna plošča",
-    "welcomeBack": "dobrodošli nazaj,",
     "myReports": "Moja poročila",
-    "myReportsDesc": "Oglejte si zgodovino poročil o skladnosti",
-    "billing": "Obračunavanje in naročnina",
-    "billingDesc": "Upravljajte svojo naročnino in načine plačila",
-    "account": "Račun",
-    "currentPlan": "Trenutni načrt",
-    "periodEnds": "Obdobje se konča",
-    "registeredUser": "Registriran uporabnik",
-    "completeCheck": "Izpolnite preverjanje skladnosti, da si ogledate svoja poročila tukaj.",
-    "loading": "Nalaganje...",
     "accountPreferences": "Nastavitve računa",
-    "manageSubscription": "Upravljajte svojo naročnino",
-    "reportId": "ID",
-    "name": "Ime",
-    "email": "E-pošta",
-    "noReportsYet": "Še ni poročil",
     "subscription": "Naročnina",
     "settings": "nastavitve",
     "viewReportsDesc": "Oglejte si svoja poročila o skladnosti",
-    "manageSubscriptionDesc": "Upravljajte svojo naročnino",
-    "viewPricing": "Ogled cen",
-    "youAreOnFreePlan": "Trenutno ste na brezplačnem načrtu.",
-    "paid": "plačan",
-    "pending": "v teku",
-    "prev": "← Prejšnji",
-    "next": "Naprej →",
-    "plan": "Načrtujte",
-    "status": "Stanje"
+    "manageSubscriptionDesc": "Upravljajte svojo naročnino"
   },
   "Pricing": {
     "title": "Preprosto določanje cen",
@@ -1887,7 +1865,12 @@
     "prevPage": "← Prejšnji",
     "nextPage": "Naprej →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "Mesečno",
+    "planYearly": "Letno",
+    "statusActive": "Aktiven",
+    "statusCanceled": "Preklicano",
+    "statusPastDue": "Preteklost"
   },
   "Cookie": {
     "message": "To spletno mesto uporablja samo bistvene piškotke za preverjanje pristnosti. Piškotki za sledenje ali oglaševanje se ne uporabljajo.",

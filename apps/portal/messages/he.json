@@ -55,39 +55,17 @@
     "errorLength": "הסיסמה חייבת להיות לפחות 5 תווים",
     "securityCheck": "נא להשלים את בדיקת האבטחה.",
     "securityCheckFailed": "בדיקת אבטחה נכשלה. אנא נסה שוב.",
-    "securityCheckExpired": "פג תוקף בדיקת האבטחה. אנא נסה שוב."
+    "securityCheckExpired": "פג תוקף בדיקת האבטחה. אנא נסה שוב.",
+    "agreeToPrivacy": "אני מסכים ל",
+    "privacyPolicy": "מדיניות פרטיות"
   },
   "Dashboard": {
-    "title": "לוּחַ מַחווָנִים",
-    "welcomeBack": "ברוך שובך,",
     "myReports": "הדוחות שלי",
-    "myReportsDesc": "הצג את היסטוריית דוחות התאימות שלך",
-    "billing": "חיוב ומנוי",
-    "billingDesc": "נהל את המנוי ואמצעי התשלום שלך",
-    "account": "חֶשְׁבּוֹן",
-    "currentPlan": "תוכנית נוכחית",
-    "periodEnds": "התקופה מסתיימת",
-    "registeredUser": "משתמש רשום",
-    "completeCheck": "השלם בדיקת תאימות כדי לראות את הדוחות שלך כאן.",
-    "loading": "טְעִינָה...",
     "accountPreferences": "העדפות חשבון",
-    "manageSubscription": "נהל את המנוי שלך",
-    "reportId": "תְעוּדַת זֶהוּת",
-    "name": "שֵׁם",
-    "email": "אֶלֶקטרוֹנִי",
-    "noReportsYet": "אין עדיין דיווחים",
     "subscription": "מִנוּי",
     "settings": "הגדרות",
     "viewReportsDesc": "הצג את דוחות התאימות שלך",
-    "manageSubscriptionDesc": "נהל את המנוי שלך",
-    "viewPricing": "צפה בתמחור",
-    "youAreOnFreePlan": "אתה נמצא כעת בתוכנית החינמית.",
-    "paid": "שילם",
-    "pending": "תָלוּי וְעוֹמֵד",
-    "prev": "← הקודם",
-    "next": "הבא →",
-    "plan": "לְתַכְנֵן",
-    "status": "סטָטוּס"
+    "manageSubscriptionDesc": "נהל את המנוי שלך"
   },
   "Pricing": {
     "title": "תמחור פשוט",
@@ -1887,7 +1865,12 @@
     "prevPage": "← הקודם",
     "nextPage": "הבא →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "יַרחוֹן",
+    "planYearly": "שְׁנָתִי",
+    "statusActive": "פָּעִיל",
+    "statusCanceled": "בּוּטלָה",
+    "statusPastDue": "עבר מועד"
   },
   "Cookie": {
     "message": "אתר זה משתמש רק בעוגיות אימות חיוניות. לא נעשה שימוש בעוגיות מעקב או פרסום.",

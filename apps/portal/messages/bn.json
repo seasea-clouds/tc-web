@@ -55,39 +55,17 @@
     "errorLength": "পাসওয়ার্ড কমপক্ষে 5 অক্ষরের হতে হবে",
     "securityCheck": "নিরাপত্তা চেক সম্পূর্ণ করুন.",
     "securityCheckFailed": "নিরাপত্তা পরীক্ষা ব্যর্থ হয়েছে. আবার চেষ্টা করুন.",
-    "securityCheckExpired": "নিরাপত্তা চেক মেয়াদ শেষ. আবার চেষ্টা করুন."
+    "securityCheckExpired": "নিরাপত্তা চেক মেয়াদ শেষ. আবার চেষ্টা করুন.",
+    "agreeToPrivacy": "আমি রাজি",
+    "privacyPolicy": "গোপনীয়তা নীতি"
   },
   "Dashboard": {
-    "title": "ড্যাশবোর্ড",
-    "welcomeBack": "আবার স্বাগতম,",
     "myReports": "আমার রিপোর্ট",
-    "myReportsDesc": "আপনার কমপ্লায়েন্স রিপোর্ট ইতিহাস দেখুন",
-    "billing": "বিলিং এবং সদস্যতা",
-    "billingDesc": "আপনার সদস্যতা এবং অর্থপ্রদান পদ্ধতি পরিচালনা করুন",
-    "account": "হিসাব",
-    "currentPlan": "বর্তমান পরিকল্পনা",
-    "periodEnds": "পিরিয়ড শেষ হয়",
-    "registeredUser": "নিবন্ধিত ব্যবহারকারী",
-    "completeCheck": "এখানে আপনার প্রতিবেদনগুলি দেখতে একটি সম্মতি পরীক্ষা সম্পূর্ণ করুন৷",
-    "loading": "লোড হচ্ছে...",
     "accountPreferences": "অ্যাকাউন্ট পছন্দ",
-    "manageSubscription": "আপনার সদস্যতা পরিচালনা করুন",
-    "reportId": "আইডি",
-    "name": "নাম",
-    "email": "ইমেইল",
-    "noReportsYet": "এখনও কোন রিপোর্ট",
     "subscription": "সাবস্ক্রিপশন",
     "settings": "সেটিংস",
     "viewReportsDesc": "আপনার কমপ্লায়েন্স রিপোর্ট দেখুন",
-    "manageSubscriptionDesc": "আপনার সদস্যতা পরিচালনা করুন",
-    "viewPricing": "মূল্য দেখুন",
-    "youAreOnFreePlan": "আপনি বর্তমানে বিনামূল্যের প্ল্যানে আছেন।",
-    "paid": "পরিশোধ করা",
-    "pending": "মুলতুবি",
-    "prev": "← পূর্ববর্তী",
-    "next": "পরবর্তী →",
-    "plan": "পরিকল্পনা",
-    "status": "স্ট্যাটাস"
+    "manageSubscriptionDesc": "আপনার সদস্যতা পরিচালনা করুন"
   },
   "Pricing": {
     "title": "সহজ মূল্য",
@@ -1887,7 +1865,12 @@
     "prevPage": "← পূর্ববর্তী",
     "nextPage": "পরবর্তী →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "মাসিক",
+    "planYearly": "বার্ষিক",
+    "statusActive": "সক্রিয়",
+    "statusCanceled": "বাতিল",
+    "statusPastDue": "অতীত বকেয়া"
   },
   "Cookie": {
     "message": "এই সাইটটি শুধুমাত্র প্রয়োজনীয় প্রমাণীকরণ কুকি ব্যবহার করে। কোন ট্র্যাকিং বা বিজ্ঞাপন কুকি ব্যবহার করা হয় না.",

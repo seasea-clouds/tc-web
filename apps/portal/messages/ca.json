@@ -55,39 +55,17 @@
     "errorLength": "La contrasenya ha de tenir almenys 5 caràcters",
     "securityCheck": "Si us plau, completeu la comprovació de seguretat.",
     "securityCheckFailed": "La comprovació de seguretat ha fallat. Si us plau, torna-ho a provar.",
-    "securityCheckExpired": "El control de seguretat ha caducat. Si us plau, torna-ho a provar."
+    "securityCheckExpired": "El control de seguretat ha caducat. Si us plau, torna-ho a provar.",
+    "agreeToPrivacy": "Estic d'acord amb el",
+    "privacyPolicy": "Política de privadesa"
   },
   "Dashboard": {
-    "title": "Tauler de control",
-    "welcomeBack": "Benvingut de nou,",
     "myReports": "Els meus informes",
-    "myReportsDesc": "Consulteu l'historial de l'informe de compliment",
-    "billing": "Facturació i subscripció",
-    "billingDesc": "Gestiona la teva subscripció i formes de pagament",
-    "account": "Compte",
-    "currentPlan": "Pla actual",
-    "periodEnds": "S'acaba el període",
-    "registeredUser": "Usuari registrat",
-    "completeCheck": "Completeu una comprovació de compliment per veure els vostres informes aquí.",
-    "loading": "Carregant...",
     "accountPreferences": "Preferències del compte",
-    "manageSubscription": "Gestiona la teva subscripció",
-    "reportId": "ID",
-    "name": "Nom",
-    "email": "Correu electrònic",
-    "noReportsYet": "Encara no hi ha informes",
     "subscription": "Subscripció",
     "settings": "Configuració",
     "viewReportsDesc": "Consulteu els vostres informes de compliment",
-    "manageSubscriptionDesc": "Gestiona la teva subscripció",
-    "viewPricing": "Veure preus",
-    "youAreOnFreePlan": "Actualment esteu al pla gratuït.",
-    "paid": "pagat",
-    "pending": "pendent",
-    "prev": "← Anterior",
-    "next": "Següent →",
-    "plan": "Pla",
-    "status": "Estat"
+    "manageSubscriptionDesc": "Gestiona la teva subscripció"
   },
   "Pricing": {
     "title": "Preus senzills",
@@ -1887,7 +1865,12 @@
     "prevPage": "← Anterior",
     "nextPage": "Següent →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "Mensualment",
+    "planYearly": "Anualment",
+    "statusActive": "Actius",
+    "statusCanceled": "Cancel·lat",
+    "statusPastDue": "Vençut"
   },
   "Cookie": {
     "message": "Aquest lloc només utilitza cookies d'autenticació essencials. No s'utilitzen cookies de seguiment ni de publicitat.",

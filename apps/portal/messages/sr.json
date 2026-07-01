@@ -55,39 +55,17 @@
     "errorLength": "Лозинка мора имати најмање 5 знакова",
     "securityCheck": "Довршите безбедносну проверу.",
     "securityCheckFailed": "Безбедносна провера није успела. Покушајте поново.",
-    "securityCheckExpired": "Безбедносна провера је истекла. Покушајте поново."
+    "securityCheckExpired": "Безбедносна провера је истекла. Покушајте поново.",
+    "agreeToPrivacy": "Слажем се са",
+    "privacyPolicy": "Политика приватности"
   },
   "Dashboard": {
-    "title": "Дасхбоард",
-    "welcomeBack": "Добродошли назад,",
     "myReports": "Моји извештаји",
-    "myReportsDesc": "Погледајте историју извештаја о усклађености",
-    "billing": "Наплата и претплата",
-    "billingDesc": "Управљајте својом претплатом и начинима плаћања",
-    "account": "Рачун",
-    "currentPlan": "Тренутни план",
-    "periodEnds": "Период се завршава",
-    "registeredUser": "Регистровани корисник",
-    "completeCheck": "Завршите проверу усклађености да бисте видели своје извештаје овде.",
-    "loading": "Учитавање...",
     "accountPreferences": "Подешавања налога",
-    "manageSubscription": "Управљајте својом претплатом",
-    "reportId": "ИД",
-    "name": "Име",
-    "email": "Емаил",
-    "noReportsYet": "Још нема извештаја",
     "subscription": "Претплата",
     "settings": "Подешавања",
     "viewReportsDesc": "Погледајте своје извештаје о усклађености",
-    "manageSubscriptionDesc": "Управљајте својом претплатом",
-    "viewPricing": "Погледајте цене",
-    "youAreOnFreePlan": "Тренутно сте на бесплатном плану.",
-    "paid": "плаћени",
-    "pending": "на чекању",
-    "prev": "← Прет",
-    "next": "Следеће →",
-    "plan": "План",
-    "status": "Статус"
+    "manageSubscriptionDesc": "Управљајте својом претплатом"
   },
   "Pricing": {
     "title": "Једноставне цене",
@@ -1887,7 +1865,12 @@
     "prevPage": "← Прет",
     "nextPage": "Следеће →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "Месечно",
+    "planYearly": "Годишње",
+    "statusActive": "Ацтиве",
+    "statusCanceled": "Отказано",
+    "statusPastDue": "Паст Дуе"
   },
   "Cookie": {
     "message": "Овај сајт користи само неопходне колачиће за аутентификацију. Не користе се колачићи за праћење или оглашавање.",

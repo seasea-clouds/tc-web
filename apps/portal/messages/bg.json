@@ -55,39 +55,17 @@
     "errorLength": "Паролата трябва да е поне 5 знака",
     "securityCheck": "Моля, завършете проверката за сигурност.",
     "securityCheckFailed": "Проверката за сигурност е неуспешна. Моля, опитайте отново.",
-    "securityCheckExpired": "Проверката за сигурност е изтекла. Моля, опитайте отново."
+    "securityCheckExpired": "Проверката за сигурност е изтекла. Моля, опитайте отново.",
+    "agreeToPrivacy": "Съгласен съм с",
+    "privacyPolicy": "Политика за поверителност"
   },
   "Dashboard": {
-    "title": "Табло",
-    "welcomeBack": "добре дошла отново",
     "myReports": "Моите отчети",
-    "myReportsDesc": "Вижте хронологията на отчета си за съответствие",
-    "billing": "Таксуване и абонамент",
-    "billingDesc": "Управлявайте абонамента и методите си на плащане",
-    "account": "акаунт",
-    "currentPlan": "Текущ план",
-    "periodEnds": "Периодът приключва",
-    "registeredUser": "Регистриран потребител",
-    "completeCheck": "Завършете проверка за съответствие, за да видите отчетите си тук.",
-    "loading": "Зареждане...",
     "accountPreferences": "Предпочитания за акаунт",
-    "manageSubscription": "Управлявайте абонамента си",
-    "reportId": "ID",
-    "name": "Име",
-    "email": "Имейл",
-    "noReportsYet": "Все още няма отчети",
     "subscription": "Абонамент",
     "settings": "Настройки",
     "viewReportsDesc": "Вижте отчетите си за съответствие",
-    "manageSubscriptionDesc": "Управлявайте абонамента си",
-    "viewPricing": "Вижте цените",
-    "youAreOnFreePlan": "В момента сте на безплатен план.",
-    "paid": "платени",
-    "pending": "в очакване",
-    "prev": "← Предишна",
-    "next": "Следваща →",
-    "plan": "Планирайте",
-    "status": "Статус"
+    "manageSubscriptionDesc": "Управлявайте абонамента си"
   },
   "Pricing": {
     "title": "Просто ценообразуване",
@@ -1887,7 +1865,12 @@
     "prevPage": "← Предишна",
     "nextPage": "Следваща →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "Месечно",
+    "planYearly": "Годишно",
+    "statusActive": "Активен",
+    "statusCanceled": "Отменено",
+    "statusPastDue": "Просрочени"
   },
   "Cookie": {
     "message": "Този сайт използва само основни бисквитки за удостоверяване. Не се използват проследяващи или рекламни бисквитки.",

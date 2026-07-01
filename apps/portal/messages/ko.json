@@ -55,39 +55,17 @@
     "errorLength": "비밀번호는 5자 이상이어야 합니다.",
     "securityCheck": "보안 검색을 완료해주세요.",
     "securityCheckFailed": "Security check failed. 다시 시도해 주세요.",
-    "securityCheckExpired": "보안 검사가 만료되었습니다. 다시 시도해 주세요."
+    "securityCheckExpired": "보안 검사가 만료되었습니다. 다시 시도해 주세요.",
+    "agreeToPrivacy": "나는 다음에 동의한다.",
+    "privacyPolicy": "개인 정보 보호 정책"
   },
   "Dashboard": {
-    "title": "계기반",
-    "welcomeBack": "돌아온 것을 환영합니다.",
     "myReports": "내 보고서",
-    "myReportsDesc": "규정 준수 보고서 기록 보기",
-    "billing": "청구 및 구독",
-    "billingDesc": "구독 및 결제 방법 관리",
-    "account": "계정",
-    "currentPlan": "현재 계획",
-    "periodEnds": "기간 종료",
-    "registeredUser": "등록된 사용자",
-    "completeCheck": "여기에서 보고서를 보려면 규정 준수 검사를 완료하세요.",
-    "loading": "로드 중...",
     "accountPreferences": "계정 환경설정",
-    "manageSubscription": "구독 관리",
-    "reportId": "ID",
-    "name": "이름",
-    "email": "이메일",
-    "noReportsYet": "아직 보고서가 없습니다.",
     "subscription": "신청",
     "settings": "설정",
     "viewReportsDesc": "규정 준수 보고서 보기",
-    "manageSubscriptionDesc": "구독 관리",
-    "youAreOnFreePlan": "현재 무료 요금제를 사용 중입니다.",
-    "viewPricing": "가격 보기",
-    "paid": "유급의",
-    "pending": "보류 중",
-    "prev": "← 이전",
-    "next": "다음 →",
-    "plan": "계획",
-    "status": "상태"
+    "manageSubscriptionDesc": "구독 관리"
   },
   "Pricing": {
     "title": "단순 가격",
@@ -1887,7 +1865,12 @@
     "prevPage": "← 이전",
     "nextPage": "다음 →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "월간 간행물",
+    "planYearly": "매년",
+    "statusActive": "활동적인",
+    "statusCanceled": "취소",
+    "statusPastDue": "연체"
   },
   "Cookie": {
     "message": "이 사이트는 필수 인증 쿠키만을 사용합니다. 추적 또는 광고 쿠키는 사용되지 않습니다.",

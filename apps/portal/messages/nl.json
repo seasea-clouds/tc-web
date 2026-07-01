@@ -55,39 +55,17 @@
     "errorLength": "Wachtwoord moet minimaal 5 tekens lang zijn",
     "securityCheck": "Voltooi de veiligheidscontrole.",
     "securityCheckFailed": "Beveiligingscontrole mislukt. Probeer het opnieuw.",
-    "securityCheckExpired": "Beveiligingscontrole verlopen. Probeer het opnieuw."
+    "securityCheckExpired": "Beveiligingscontrole verlopen. Probeer het opnieuw.",
+    "agreeToPrivacy": "Ik ga akkoord met de",
+    "privacyPolicy": "Privacybeleid"
   },
   "Dashboard": {
-    "title": "Dashboard",
-    "welcomeBack": "Welkom terug,",
     "myReports": "Mijn rapporten",
-    "myReportsDesc": "Bekijk de geschiedenis van uw nalevingsrapporten",
-    "billing": "Facturering en abonnement",
-    "billingDesc": "Beheer uw abonnement en betaalmethoden",
-    "account": "Rekening",
-    "currentPlan": "Huidig ​​abonnement",
-    "periodEnds": "Periode eindigt",
-    "registeredUser": "Geregistreerde gebruiker",
-    "completeCheck": "Voer een nalevingscontrole uit om uw rapporten hier te bekijken.",
-    "loading": "Laden...",
     "accountPreferences": "Accountvoorkeuren",
-    "manageSubscription": "Beheer uw abonnement",
-    "reportId": "Identiteitskaart",
-    "name": "Naam",
-    "email": "E-mail",
-    "noReportsYet": "Nog geen rapporten",
     "subscription": "Abonnement",
     "settings": "Instellingen",
     "viewReportsDesc": "Bekijk uw nalevingsrapporten",
-    "manageSubscriptionDesc": "Beheer uw abonnement",
-    "youAreOnFreePlan": "Je hebt momenteel het gratis abonnement.",
-    "viewPricing": "Bekijk prijzen",
-    "paid": "betaald",
-    "pending": "in behandeling",
-    "prev": "← Vorige",
-    "next": "Volgende →",
-    "plan": "Plan",
-    "status": "Status"
+    "manageSubscriptionDesc": "Beheer uw abonnement"
   },
   "Pricing": {
     "title": "Eenvoudige prijzen",
@@ -1887,7 +1865,12 @@
     "prevPage": "← Vorige",
     "nextPage": "Volgende →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "Maandelijks",
+    "planYearly": "Jaarlijks",
+    "statusActive": "Actief",
+    "statusCanceled": "Geannuleerd",
+    "statusPastDue": "Verleden tijd"
   },
   "Cookie": {
     "message": "Deze site gebruikt alleen essentiële authenticatiecookies. Er worden geen tracking- of advertentiecookies gebruikt.",

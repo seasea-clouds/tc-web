@@ -55,39 +55,17 @@
     "errorLength": "Heslo musí mít alespoň 5 znaků",
     "securityCheck": "Dokončete prosím bezpečnostní kontrolu.",
     "securityCheckFailed": "Bezpečnostní kontrola se nezdařila. Zkuste to prosím znovu.",
-    "securityCheckExpired": "Platnost bezpečnostní kontroly vypršela. Zkuste to prosím znovu."
+    "securityCheckExpired": "Platnost bezpečnostní kontroly vypršela. Zkuste to prosím znovu.",
+    "agreeToPrivacy": "souhlasím s",
+    "privacyPolicy": "Zásady ochrany osobních údajů"
   },
   "Dashboard": {
-    "title": "Dashboard",
-    "welcomeBack": "vítej zpět,",
     "myReports": "Moje přehledy",
-    "myReportsDesc": "Prohlédněte si historii zpráv o dodržování předpisů",
-    "billing": "Fakturace a předplatné",
-    "billingDesc": "Spravujte své předplatné a platební metody",
-    "account": "Účet",
-    "currentPlan": "Aktuální plán",
-    "periodEnds": "Období končí",
-    "registeredUser": "Registrovaný uživatel",
-    "completeCheck": "Chcete-li zde zobrazit své přehledy, proveďte kontrolu souladu.",
-    "loading": "Načítání...",
     "accountPreferences": "Předvolby účtu",
-    "manageSubscription": "Spravujte své předplatné",
-    "reportId": "ID",
-    "name": "Jméno",
-    "email": "E-mail",
-    "noReportsYet": "Zatím žádné zprávy",
     "subscription": "Předplatné",
     "settings": "Nastavení",
     "viewReportsDesc": "Prohlédněte si své zprávy o dodržování předpisů",
-    "manageSubscriptionDesc": "Spravujte své předplatné",
-    "viewPricing": "Zobrazit ceny",
-    "youAreOnFreePlan": "Momentálně máte bezplatný tarif.",
-    "paid": "zaplaceno",
-    "pending": "čeká na vyřízení",
-    "prev": "← Předchozí",
-    "next": "Další →",
-    "plan": "Plán",
-    "status": "Postavení"
+    "manageSubscriptionDesc": "Spravujte své předplatné"
   },
   "Pricing": {
     "title": "Jednoduché stanovení ceny",
@@ -1887,7 +1865,12 @@
     "prevPage": "← Předchozí",
     "nextPage": "Další →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "Měsíční",
+    "planYearly": "Roční",
+    "statusActive": "Aktivní",
+    "statusCanceled": "Zrušeno",
+    "statusPastDue": "Po splatnosti"
   },
   "Cookie": {
     "message": "Tento web používá pouze nezbytné ověřovací soubory cookie. Nejsou používány žádné sledovací ani reklamní soubory cookie.",

@@ -55,39 +55,17 @@
     "errorLength": "Mật khẩu phải có ít nhất 5 ký tự",
     "securityCheck": "Vui lòng hoàn tất kiểm tra an ninh.",
     "securityCheckFailed": "Kiểm tra bảo mật không thành công. Vui lòng thử lại.",
-    "securityCheckExpired": "Kiểm tra bảo mật đã hết hạn. Vui lòng thử lại."
+    "securityCheckExpired": "Kiểm tra bảo mật đã hết hạn. Vui lòng thử lại.",
+    "agreeToPrivacy": "Tôi đồng ý với",
+    "privacyPolicy": "Chính sách bảo mật"
   },
   "Dashboard": {
-    "title": "Trang tổng quan",
-    "welcomeBack": "Chào mừng trở lại,",
     "myReports": "Báo cáo của tôi",
-    "myReportsDesc": "Xem lịch sử báo cáo tuân thủ của bạn",
-    "billing": "Thanh toán & Đăng ký",
-    "billingDesc": "Quản lý đăng ký và phương thức thanh toán của bạn",
-    "account": "Tài khoản",
-    "currentPlan": "Gói hiện tại",
-    "periodEnds": "Thời kỳ kết thúc",
-    "registeredUser": "Người dùng đã đăng ký",
-    "completeCheck": "Hoàn tất kiểm tra tuân thủ để xem báo cáo của bạn tại đây.",
-    "loading": "Đang tải...",
     "accountPreferences": "Tùy chọn tài khoản",
-    "manageSubscription": "Quản lý đăng ký của bạn",
-    "reportId": "NHẬN DẠNG",
-    "name": "Tên",
-    "email": "E-mail",
-    "noReportsYet": "Chưa có báo cáo nào",
     "subscription": "Đăng ký",
     "settings": "Cài đặt",
     "viewReportsDesc": "Xem báo cáo tuân thủ của bạn",
-    "manageSubscriptionDesc": "Quản lý đăng ký của bạn",
-    "youAreOnFreePlan": "Bạn hiện đang sử dụng gói Miễn phí.",
-    "viewPricing": "Xem giá",
-    "paid": "trả",
-    "pending": "chưa giải quyết",
-    "prev": "← Trước đó",
-    "next": "Tiếp theo →",
-    "plan": "Kế hoạch",
-    "status": "Trạng thái"
+    "manageSubscriptionDesc": "Quản lý đăng ký của bạn"
   },
   "Pricing": {
     "title": "Định giá đơn giản",
@@ -1887,7 +1865,12 @@
     "prevPage": "← Trước đó",
     "nextPage": "Tiếp theo →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "hàng tháng",
+    "planYearly": "Hàng năm",
+    "statusActive": "Tích cực",
+    "statusCanceled": "Đã hủy",
+    "statusPastDue": "Quá hạn"
   },
   "Cookie": {
     "message": "Trang web này chỉ sử dụng cookie xác thực cần thiết. Không sử dụng cookie theo dõi hoặc quảng cáo.",

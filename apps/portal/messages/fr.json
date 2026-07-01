@@ -55,39 +55,17 @@
     "errorLength": "Le mot de passe doit contenir au moins 5 caractères",
     "securityCheck": "Veuillez effectuer le contrôle de sécurité.",
     "securityCheckFailed": "Le contrôle de sécurité a échoué. Veuillez réessayer.",
-    "securityCheckExpired": "Le contrôle de sécurité a expiré. Veuillez réessayer."
+    "securityCheckExpired": "Le contrôle de sécurité a expiré. Veuillez réessayer.",
+    "agreeToPrivacy": "J'accepte le",
+    "privacyPolicy": "politique de confidentialité"
   },
   "Dashboard": {
-    "title": "Tableau de bord",
-    "welcomeBack": "Bon retour,",
     "myReports": "Mes rapports",
-    "myReportsDesc": "Afficher l'historique de votre rapport de conformité",
-    "billing": "Facturation et abonnement",
-    "billingDesc": "Gérez votre abonnement et vos moyens de paiement",
-    "account": "Compte",
-    "currentPlan": "Forfait actuel",
-    "periodEnds": "Fin de la période",
-    "registeredUser": "Utilisateur enregistré",
-    "completeCheck": "Effectuez une vérification de conformité pour voir vos rapports ici.",
-    "loading": "Chargement...",
     "accountPreferences": "Préférences de compte",
-    "manageSubscription": "Gérez votre abonnement",
-    "reportId": "IDENTIFIANT",
-    "name": "Nom",
-    "email": "E-mail",
-    "noReportsYet": "Aucun rapport pour l'instant",
     "subscription": "Abonnement",
     "settings": "Paramètres",
     "viewReportsDesc": "Consultez vos rapports de conformité",
-    "manageSubscriptionDesc": "Gérez votre abonnement",
-    "youAreOnFreePlan": "Vous êtes actuellement sur le forfait Gratuit.",
-    "viewPricing": "Voir les prix",
-    "paid": "payé",
-    "pending": "en attente",
-    "prev": "← Précédent",
-    "next": "Suivant →",
-    "plan": "Plan",
-    "status": "Statut"
+    "manageSubscriptionDesc": "Gérez votre abonnement"
   },
   "Pricing": {
     "title": "Tarification simple",
@@ -1887,7 +1865,12 @@
     "prevPage": "← Précédent",
     "nextPage": "Suivant →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "Mensuel",
+    "planYearly": "Annuel",
+    "statusActive": "Actif",
+    "statusCanceled": "Annulé",
+    "statusPastDue": "En souffrance"
   },
   "Cookie": {
     "message": "Ce site utilise uniquement des cookies d'authentification essentiels. Aucun cookie de suivi ou publicitaire n'est utilisé.",

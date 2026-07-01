@@ -55,39 +55,17 @@
     "errorLength": "Ο κωδικός πρόσβασης πρέπει να αποτελείται από τουλάχιστον 5 χαρακτήρες",
     "securityCheck": "Ολοκληρώστε τον έλεγχο ασφαλείας.",
     "securityCheckFailed": "Ο έλεγχος ασφαλείας απέτυχε. Δοκιμάστε ξανά.",
-    "securityCheckExpired": "Ο έλεγχος ασφαλείας έληξε. Δοκιμάστε ξανά."
+    "securityCheckExpired": "Ο έλεγχος ασφαλείας έληξε. Δοκιμάστε ξανά.",
+    "agreeToPrivacy": "συμφωνώ με το",
+    "privacyPolicy": "Πολιτική Απορρήτου"
   },
   "Dashboard": {
-    "title": "Ταμπλό",
-    "welcomeBack": "Καλώς ήρθες πίσω,",
     "myReports": "Οι αναφορές μου",
-    "myReportsDesc": "Δείτε το ιστορικό της αναφοράς συμμόρφωσης",
-    "billing": "Χρέωση & Συνδρομή",
-    "billingDesc": "Διαχειριστείτε τη συνδρομή και τους τρόπους πληρωμής σας",
-    "account": "Λογαριασμός",
-    "currentPlan": "Τρέχον Σχέδιο",
-    "periodEnds": "Η περίοδος τελειώνει",
-    "registeredUser": "Εγγεγραμμένος χρήστης",
-    "completeCheck": "Ολοκληρώστε έναν έλεγχο συμμόρφωσης για να δείτε τις αναφορές σας εδώ.",
-    "loading": "Φόρτωση...",
     "accountPreferences": "Προτιμήσεις λογαριασμού",
-    "manageSubscription": "Διαχειριστείτε τη συνδρομή σας",
-    "reportId": "ταυτότητα",
-    "name": "Ονομα",
-    "email": "Ηλεκτρονικό ταχυδρομείο",
-    "noReportsYet": "Δεν υπάρχουν ακόμη αναφορές",
     "subscription": "Συνδρομή",
     "settings": "Ρυθμίσεις",
     "viewReportsDesc": "Δείτε τις αναφορές συμμόρφωσης",
-    "manageSubscriptionDesc": "Διαχειριστείτε τη συνδρομή σας",
-    "viewPricing": "Προβολή Τιμολόγησης",
-    "youAreOnFreePlan": "Αυτήν τη στιγμή βρίσκεστε στο δωρεάν πρόγραμμα.",
-    "paid": "έμμισθος",
-    "pending": "εκκρεμής",
-    "prev": "← Προηγ",
-    "next": "Επόμενο →",
-    "plan": "Σχέδιο",
-    "status": "Κατάσταση"
+    "manageSubscriptionDesc": "Διαχειριστείτε τη συνδρομή σας"
   },
   "Pricing": {
     "title": "Απλή τιμολόγηση",
@@ -1887,7 +1865,12 @@
     "prevPage": "← Προηγ",
     "nextPage": "Επόμενο →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "Μηνιαίος",
+    "planYearly": "Ετήσια",
+    "statusActive": "Ενεργός",
+    "statusCanceled": "Ακυρώθηκε",
+    "statusPastDue": "Παρελθούσα"
   },
   "Cookie": {
     "message": "Αυτός ο ιστότοπος χρησιμοποιεί μόνο απαραίτητα cookies ελέγχου ταυτότητας. Δεν χρησιμοποιούνται cookies παρακολούθησης ή διαφήμισης.",

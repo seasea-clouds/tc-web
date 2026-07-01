@@ -55,39 +55,17 @@
     "errorLength": "يجب أن تتكون كلمة المرور من 5 أحرف على الأقل",
     "securityCheck": "الرجاء إكمال الفحص الأمني.",
     "securityCheckFailed": "فشل فحص الأمان. يرجى المحاولة مرة أخرى.",
-    "securityCheckExpired": "انتهت صلاحية فحص الأمان. يرجى المحاولة مرة أخرى."
+    "securityCheckExpired": "انتهت صلاحية فحص الأمان. يرجى المحاولة مرة أخرى.",
+    "agreeToPrivacy": "أنا أوافق على",
+    "privacyPolicy": "سياسة الخصوصية"
   },
   "Dashboard": {
-    "title": "لوحة القيادة",
-    "welcomeBack": "مرحبًا بعودتك،",
     "myReports": "تقاريري",
-    "myReportsDesc": "عرض سجل تقرير الامتثال الخاص بك",
-    "billing": "الفواتير والاشتراك",
-    "billingDesc": "إدارة الاشتراك وطرق الدفع الخاصة بك",
-    "account": "حساب",
-    "currentPlan": "الخطة الحالية",
-    "periodEnds": "تنتهي الفترة",
-    "registeredUser": "مستخدم مسجل",
-    "completeCheck": "أكمل فحص الامتثال لرؤية تقاريرك هنا.",
-    "loading": "تحميل...",
     "accountPreferences": "تفضيلات الحساب",
-    "manageSubscription": "إدارة اشتراكك",
-    "reportId": "بطاقة تعريف",
-    "name": "اسم",
-    "email": "بريد إلكتروني",
-    "noReportsYet": "لا توجد تقارير حتى الآن",
     "subscription": "الاشتراك",
     "settings": "إعدادات",
     "viewReportsDesc": "عرض تقارير الامتثال الخاصة بك",
-    "manageSubscriptionDesc": "إدارة اشتراكك",
-    "youAreOnFreePlan": "أنت حاليًا مشترك في الخطة المجانية.",
-    "viewPricing": "عرض التسعير",
-    "paid": "مدفوع",
-    "pending": "قيد الانتظار",
-    "prev": "← السابق",
-    "next": "التالي →",
-    "plan": "يخطط",
-    "status": "حالة"
+    "manageSubscriptionDesc": "إدارة اشتراكك"
   },
   "Pricing": {
     "title": "تسعير بسيط",
@@ -1887,7 +1865,12 @@
     "prevPage": "← السابق",
     "nextPage": "التالي →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "شهريا",
+    "planYearly": "سنوي",
+    "statusActive": "نشيط",
+    "statusCanceled": "تم الإلغاء",
+    "statusPastDue": "تاريخ الاستحقاق الماضي"
   },
   "Cookie": {
     "message": "يستخدم هذا الموقع ملفات تعريف الارتباط الأساسية فقط. لا يتم استخدام ملفات تعريف الارتباط للتتبع أو الإعلانات.",

@@ -55,39 +55,17 @@
     "errorLength": "මුරපදය අවම වශයෙන් අක්ෂර 5 ක් විය යුතුය",
     "securityCheck": "කරුණාකර ආරක්ෂක පරීක්ෂාව සම්පූර්ණ කරන්න.",
     "securityCheckExpired": "ආරක්ෂක පරීක්ෂාව කල් ඉකුත් විය. කරුණාකර නැවත උත්සාහ කරන්න.",
-    "securityCheckFailed": "ආරක්ෂක පරීක්ෂාව අසාර්ථක විය. කරුණාකර නැවත උත්සාහ කරන්න."
+    "securityCheckFailed": "ආරක්ෂක පරීක්ෂාව අසාර්ථක විය. කරුණාකර නැවත උත්සාහ කරන්න.",
+    "agreeToPrivacy": "මම එකඟ වෙමි",
+    "privacyPolicy": "රහස්යතා ප්රතිපත්තිය"
   },
   "Dashboard": {
-    "title": "උපකරණ පුවරුව",
-    "welcomeBack": "නැවත සාදරයෙන් පිළිගනිමු,",
     "myReports": "මගේ වාර්තා",
-    "myReportsDesc": "ඔබගේ අනුකූලතා වාර්තා ඉතිහාසය බලන්න",
-    "billing": "බිල්පත් සහ දායකත්වය",
-    "billingDesc": "ඔබගේ දායකත්වය සහ ගෙවීම් ක්‍රම කළමනාකරණය කරන්න",
-    "account": "ගිණුම",
-    "currentPlan": "වත්මන් සැලැස්ම",
-    "periodEnds": "කාලය අවසන් වේ",
-    "registeredUser": "ලියාපදිංචි පරිශීලක",
-    "completeCheck": "ඔබේ වාර්තා මෙතැනින් බැලීමට අනුකූලතා පරීක්ෂාවක් සම්පූර්ණ කරන්න.",
-    "loading": "පූරණය වෙමින්...",
     "accountPreferences": "ගිණුම් මනාප",
-    "manageSubscription": "ඔබගේ දායකත්වය කළමනාකරණය කරන්න",
-    "reportId": "හැඳුනුම්පත",
-    "name": "නම",
-    "email": "ඊමේල් කරන්න",
-    "noReportsYet": "තවමත් වාර්තා නොමැත",
     "subscription": "දායකත්වය",
     "settings": "සැකසීම්",
     "viewReportsDesc": "ඔබගේ අනුකූලතා වාර්තා බලන්න",
-    "manageSubscriptionDesc": "ඔබගේ දායකත්වය කළමනාකරණය කරන්න",
-    "viewPricing": "මිලකරණය බලන්න",
-    "youAreOnFreePlan": "ඔබ දැනට සිටින්නේ නිදහස් සැලැස්මේ ය.",
-    "paid": "ගෙවා ඇත",
-    "pending": "පොරොත්තුවෙන්",
-    "prev": "← පෙර",
-    "next": "ඊළඟ →",
-    "plan": "සැලසුම් කරන්න",
-    "status": "තත්ත්වය"
+    "manageSubscriptionDesc": "ඔබගේ දායකත්වය කළමනාකරණය කරන්න"
   },
   "Pricing": {
     "title": "සරල මිලකරණය",
@@ -1887,7 +1865,12 @@
     "prevPage": "← පෙර",
     "nextPage": "ඊළඟ →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "මාසිකව",
+    "planYearly": "වාර්ෂිකව",
+    "statusActive": "ක්රියාකාරී",
+    "statusCanceled": "අවලංගු කළා",
+    "statusPastDue": "පසුගිය නියමිත කාලය"
   },
   "Cookie": {
     "message": "මෙම වෙබ් අඩවිය අත්‍යවශ්‍ය සත්‍යාපන කුකීස් පමණක් භාවිතා කරයි. ලුහුබැඳීම හෝ ප්‍රචාරණ කුකීස් භාවිතා නොකෙරේ.",

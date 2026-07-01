@@ -55,39 +55,17 @@
     "errorLength": "密码必须至少为 5 个字符",
     "securityCheck": "请完成安全检查。",
     "securityCheckFailed": "安全检查失败。请再试一次。",
-    "securityCheckExpired": "安全检查已过期。请再试一次。"
+    "securityCheckExpired": "安全检查已过期。请再试一次。",
+    "agreeToPrivacy": "我已阅读并同意",
+    "privacyPolicy": "隐私政策"
   },
   "Dashboard": {
-    "title": "仪表板",
-    "welcomeBack": "欢迎回来，",
     "myReports": "我的报告",
-    "myReportsDesc": "查看您的合规报告历史记录",
-    "billing": "计费和订阅",
-    "billingDesc": "管理您的订阅和付款方式",
-    "account": "帐户",
-    "currentPlan": "当前计划",
-    "periodEnds": "期间结束",
-    "registeredUser": "注册用户",
-    "completeCheck": "完成合规性检查以在此处查看您的报告。",
-    "loading": "加载中...",
     "accountPreferences": "账户偏好",
-    "manageSubscription": "管理您的订阅",
-    "reportId": "ID",
-    "name": "姓名",
-    "email": "电子邮件",
-    "noReportsYet": "还没有报告",
     "subscription": "订阅",
     "settings": "设置",
     "viewReportsDesc": "查看您的合规报告",
-    "manageSubscriptionDesc": "管理您的订阅",
-    "youAreOnFreePlan": "您目前使用的是免费计划。",
-    "viewPricing": "查看定价",
-    "paid": "已支付",
-    "pending": "待处理",
-    "prev": "上一页",
-    "next": "下一页",
-    "plan": "计划",
-    "status": "状态"
+    "manageSubscriptionDesc": "管理您的订阅"
   },
   "Pricing": {
     "title": "简单的定价",
@@ -1887,7 +1865,12 @@
     "prevPage": "← 上一页",
     "nextPage": "下一页 →",
     "periodStart": "期间开始",
-    "reportId": "报告 ID"
+    "reportId": "报告 ID",
+    "planMonthly": "每月",
+    "planYearly": "每年",
+    "statusActive": "有效",
+    "statusCanceled": "已取消",
+    "statusPastDue": "逾期"
   },
   "Cookie": {
     "message": "本网站仅使用必要的身份验证Cookie。不使用跟踪或广告Cookie。",

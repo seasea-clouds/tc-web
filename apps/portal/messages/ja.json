@@ -55,39 +55,17 @@
     "errorLength": "パスワードは5文字以上である必要があります",
     "securityCheck": "セキュリティチェックを完了してください。",
     "securityCheckFailed": "セキュリティチェックに失敗しました。もう一度試してください。",
-    "securityCheckExpired": "セキュリティチェックの有効期限が切れました。もう一度試してください。"
+    "securityCheckExpired": "セキュリティチェックの有効期限が切れました。もう一度試してください。",
+    "agreeToPrivacy": "に同意します",
+    "privacyPolicy": "プライバシーポリシー"
   },
   "Dashboard": {
-    "title": "ダッシュボード",
-    "welcomeBack": "おかえりなさい、",
     "myReports": "私のレポート",
-    "myReportsDesc": "コンプライアンスレポート履歴を表示する",
-    "billing": "請求とサブスクリプション",
-    "billingDesc": "サブスクリプションと支払い方法を管理する",
-    "account": "アカウント",
-    "currentPlan": "現在の計画",
-    "periodEnds": "期間終了",
-    "registeredUser": "登録ユーザー",
-    "completeCheck": "コンプライアンスチェックを完了すると、ここでレポートが表示されます。",
-    "loading": "読み込み中...",
     "accountPreferences": "アカウント設定",
-    "manageSubscription": "サブスクリプションを管理する",
-    "reportId": "ID",
-    "name": "名前",
-    "email": "電子メール",
-    "noReportsYet": "まだ報告はありません",
     "subscription": "サブスクリプション",
     "settings": "設定",
     "viewReportsDesc": "コンプライアンスレポートを表示する",
-    "manageSubscriptionDesc": "サブスクリプションを管理する",
-    "viewPricing": "価格を見る",
-    "youAreOnFreePlan": "現在は無料プランをご利用中です。",
-    "paid": "支払われた",
-    "pending": "保留中",
-    "prev": "← 前へ",
-    "next": "次へ →",
-    "plan": "プラン",
-    "status": "状態"
+    "manageSubscriptionDesc": "サブスクリプションを管理する"
   },
   "Pricing": {
     "title": "シンプルな価格設定",
@@ -1887,7 +1865,12 @@
     "prevPage": "← 前へ",
     "nextPage": "次へ →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "毎月",
+    "planYearly": "毎年",
+    "statusActive": "アクティブ",
+    "statusCanceled": "キャンセル",
+    "statusPastDue": "期限を過ぎた場合"
   },
   "Cookie": {
     "message": "このサイトでは、必須の認証 Cookie のみを使用します。追跡クッキーや広告クッキーは使用されません。",

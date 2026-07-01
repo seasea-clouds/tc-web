@@ -55,39 +55,17 @@
     "errorLength": "Parol ən azı 5 simvoldan ibarət olmalıdır",
     "securityCheck": "Zəhmət olmasa təhlükəsizlik yoxlamasını tamamlayın.",
     "securityCheckFailed": "Təhlükəsizlik yoxlanışı alınmadı. Yenidən cəhd edin.",
-    "securityCheckExpired": "Təhlükəsizlik yoxlamasının müddəti bitdi. Yenidən cəhd edin."
+    "securityCheckExpired": "Təhlükəsizlik yoxlamasının müddəti bitdi. Yenidən cəhd edin.",
+    "agreeToPrivacy": "ilə razıyam",
+    "privacyPolicy": "Məxfilik Siyasəti"
   },
   "Dashboard": {
-    "title": "İdarə paneli",
-    "welcomeBack": "Xoş gəldiniz,",
     "myReports": "Hesabatlarım",
-    "myReportsDesc": "Uyğunluq hesabat tarixçənizə baxın",
-    "billing": "Ödəniş və Abunəlik",
-    "billingDesc": "Abunəlik və ödəniş üsullarınızı idarə edin",
-    "account": "Hesab",
-    "currentPlan": "Cari Plan",
-    "periodEnds": "Dövr bitir",
-    "registeredUser": "Qeydiyyatdan keçmiş istifadəçi",
-    "completeCheck": "Hesabatlarınızı burada görmək üçün uyğunluq yoxlamasını tamamlayın.",
-    "loading": "Yüklənir...",
     "accountPreferences": "Hesab üstünlükləri",
-    "manageSubscription": "Abunəliyinizi idarə edin",
-    "reportId": "ID",
-    "name": "ad",
-    "email": "E-poçt",
-    "noReportsYet": "Hələ hesabat yoxdur",
     "subscription": "Abunəlik",
     "settings": "Parametrlər",
     "viewReportsDesc": "Uyğunluq hesabatlarınıza baxın",
-    "manageSubscriptionDesc": "Abunəliyinizi idarə edin",
-    "viewPricing": "Qiymətlərə Baxın",
-    "youAreOnFreePlan": "Hazırda Pulsuz plandasınız.",
-    "paid": "ödənilmişdir",
-    "pending": "gözləyir",
-    "prev": "← Əvvəlki",
-    "next": "Sonrakı →",
-    "plan": "Plan",
-    "status": "Vəziyyət"
+    "manageSubscriptionDesc": "Abunəliyinizi idarə edin"
   },
   "Pricing": {
     "title": "Sadə Qiymətləndirmə",
@@ -1887,7 +1865,12 @@
     "prevPage": "← Əvvəlki",
     "nextPage": "Sonrakı →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "Aylıq",
+    "planYearly": "İllik",
+    "statusActive": "Aktiv",
+    "statusCanceled": "Ləğv edildi",
+    "statusPastDue": "Vaxtı keçmiş"
   },
   "Cookie": {
     "message": "Bu sayt yalnız əsas autentifikasiya kukilərindən istifadə edir. Heç bir izləmə və ya reklam kukilərindən istifadə edilmir.",

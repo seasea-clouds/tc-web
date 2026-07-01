@@ -43,7 +43,7 @@ export function inputClasses(hasError: boolean): string {
   if (hasError) {
     return `${base} border-red-400 focus:ring-red-400`;
   }
-  return `${base} border-gray-300 focus:ring-[#D4AF37]`;
+  return `${base} border-gray-300 focus:ring-gold`;
 }
 
 /** Helper: CSS classes for a select with optional field error */
@@ -52,5 +52,5 @@ export function selectClasses(hasError: boolean): string {
   if (hasError) {
     return `${base} border-red-400 focus:ring-red-400`;
   }
-  return `${base} border-gray-300 focus:ring-[#D4AF37]`;
+  return `${base} border-gray-300 focus:ring-gold`;
 }

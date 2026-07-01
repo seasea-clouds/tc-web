@@ -55,39 +55,17 @@
     "errorLength": "رمز عبور باید حداقل 5 کاراکتر باشد",
     "securityCheck": "لطفا بررسی امنیتی را تکمیل کنید.",
     "securityCheckFailed": "بررسی امنیتی انجام نشد. لطفا دوباره امتحان کنید.",
-    "securityCheckExpired": "چک امنیتی منقضی شده است. لطفا دوباره امتحان کنید."
+    "securityCheckExpired": "چک امنیتی منقضی شده است. لطفا دوباره امتحان کنید.",
+    "agreeToPrivacy": "من موافقم",
+    "privacyPolicy": "سیاست حفظ حریم خصوصی"
   },
   "Dashboard": {
-    "title": "داشبورد",
-    "welcomeBack": "خوش آمدید،",
     "myReports": "گزارش های من",
-    "myReportsDesc": "سابقه گزارش انطباق خود را مشاهده کنید",
-    "billing": "صورتحساب و اشتراک",
-    "billingDesc": "اشتراک و روش های پرداخت خود را مدیریت کنید",
-    "account": "حساب",
-    "currentPlan": "طرح فعلی",
-    "periodEnds": "دوره به پایان می رسد",
-    "registeredUser": "کاربر ثبت نام شده",
-    "completeCheck": "یک بررسی انطباق را کامل کنید تا گزارش های خود را در اینجا ببینید.",
-    "loading": "در حال بارگیری...",
     "accountPreferences": "تنظیمات برگزیده حساب",
-    "manageSubscription": "اشتراک خود را مدیریت کنید",
-    "reportId": "شناسه",
-    "name": "نام",
-    "email": "ایمیل",
-    "noReportsYet": "هنوز گزارشی وجود ندارد",
     "subscription": "اشتراک",
     "settings": "تنظیمات",
     "viewReportsDesc": "گزارش های انطباق خود را مشاهده کنید",
-    "manageSubscriptionDesc": "اشتراک خود را مدیریت کنید",
-    "viewPricing": "مشاهده قیمت",
-    "youAreOnFreePlan": "شما در حال حاضر در طرح رایگان هستید.",
-    "paid": "پرداخت شده است",
-    "pending": "در انتظار",
-    "prev": "← قبلی",
-    "next": "بعدی →",
-    "plan": "برنامه ریزی کنید",
-    "status": "وضعیت"
+    "manageSubscriptionDesc": "اشتراک خود را مدیریت کنید"
   },
   "Pricing": {
     "title": "قیمت گذاری ساده",
@@ -1887,7 +1865,12 @@
     "prevPage": "← قبلی",
     "nextPage": "بعدی →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "ماهانه",
+    "planYearly": "سالانه",
+    "statusActive": "فعال",
+    "statusCanceled": "لغو شد",
+    "statusPastDue": "سررسید گذشته"
   },
   "Cookie": {
     "message": "این سایت فقط از کوکی های احراز هویت ضروری استفاده می کند. هیچ کوکی ردیابی یا تبلیغاتی استفاده نمی شود.",

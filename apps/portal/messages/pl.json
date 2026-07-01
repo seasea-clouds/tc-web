@@ -55,39 +55,17 @@
     "errorLength": "Hasło musi mieć co najmniej 5 znaków",
     "securityCheck": "Proszę zakończyć kontrolę bezpieczeństwa.",
     "securityCheckFailed": "Kontrola bezpieczeństwa nie powiodła się. Spróbuj ponownie.",
-    "securityCheckExpired": "Kontrola bezpieczeństwa wygasła. Spróbuj ponownie."
+    "securityCheckExpired": "Kontrola bezpieczeństwa wygasła. Spróbuj ponownie.",
+    "agreeToPrivacy": "Zgadzam się na",
+    "privacyPolicy": "Polityka prywatności"
   },
   "Dashboard": {
-    "title": "Panel",
-    "welcomeBack": "Witamy ponownie,",
     "myReports": "Moje raporty",
-    "myReportsDesc": "Wyświetl historię raportów zgodności",
-    "billing": "Rozliczenia i subskrypcja",
-    "billingDesc": "Zarządzaj swoją subskrypcją i metodami płatności",
-    "account": "Konto",
-    "currentPlan": "Aktualny plan",
-    "periodEnds": "Okres się kończy",
-    "registeredUser": "Zarejestrowany użytkownik",
-    "completeCheck": "Aby wyświetlić tutaj swoje raporty, przeprowadź kontrolę zgodności.",
-    "loading": "Załadunek...",
     "accountPreferences": "Preferencje konta",
-    "manageSubscription": "Zarządzaj swoją subskrypcją",
-    "reportId": "ID",
-    "name": "Nazwa",
-    "email": "E-mail",
-    "noReportsYet": "Nie ma jeszcze żadnych raportów",
     "subscription": "Prenumerata",
     "settings": "Ustawienia",
     "viewReportsDesc": "Przeglądaj raporty dotyczące zgodności",
-    "manageSubscriptionDesc": "Zarządzaj swoją subskrypcją",
-    "youAreOnFreePlan": "Obecnie korzystasz z planu bezpłatnego.",
-    "viewPricing": "Zobacz Cennik",
-    "paid": "płatny",
-    "pending": "aż do",
-    "prev": "← Poprzednie",
-    "next": "Dalej →",
-    "plan": "Plan",
-    "status": "Status"
+    "manageSubscriptionDesc": "Zarządzaj swoją subskrypcją"
   },
   "Pricing": {
     "title": "Prosty cennik",
@@ -1887,7 +1865,12 @@
     "prevPage": "← Poprzednie",
     "nextPage": "Dalej →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "Miesięczny",
+    "planYearly": "Rocznie",
+    "statusActive": "Aktywny",
+    "statusCanceled": "Odwołany",
+    "statusPastDue": "Przeterminowany"
   },
   "Cookie": {
     "message": "Ta witryna wykorzystuje wyłącznie niezbędne pliki cookie służące do uwierzytelniania. Nie są używane żadne śledzące ani reklamowe pliki cookie.",

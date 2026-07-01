@@ -55,39 +55,17 @@
     "errorLength": "รหัสผ่่านต้องมีตำน้อย 5 อักขระ",
     "securityCheck": "กรุณาตรวจสอบความปลอดภัยให้เสร็จสิ้น",
     "securityCheckFailed": "การตรวจสอบความปลอดภัยล้มเหลว โปรดลองอีกครั้ง",
-    "securityCheckExpired": "การตรวจสอบความปลอดภัยหมดอายุแล้ว โปรดลองอีกครั้ง"
+    "securityCheckExpired": "การตรวจสอบความปลอดภัยหมดอายุแล้ว โปรดลองอีกครั้ง",
+    "agreeToPrivacy": "ฉันเห็นด้วยกับ",
+    "privacyPolicy": "นโยบายความเป็นส่วนตัว"
   },
   "Dashboard": {
-    "title": "แดชบอรด",
-    "welcomeBack": "ยินดีตองกลับ,",
     "myReports": "รายงานของฉัน",
-    "myReportsDesc": "ดูประวัติรายงานความสอดคล้องของคณุ",
-    "billing": "การเรืกเกบเงนิ และ การสมัคร",
-    "billingDesc": "จาดการสมัครและวธิีการชําระเงนิ ของคณุ",
-    "account": "บัญชี",
-    "currentPlan": "แผนปจจุบัน",
-    "periodEnds": "งวดสิ้สุุด",
-    "registeredUser": "ผใู้ช้ทไ่ีดย้เนียน",
-    "completeCheck": "ทำกาารประเมินความสอดคล้องเพือ่ ดูรายงานท่นีั",
-    "loading": "กำลังโหลด...",
     "accountPreferences": "การตั้่งค่าบัญชี",
-    "manageSubscription": "จาดการสมัคร",
-    "reportId": "รหสั",
-    "name": "ช่ือ",
-    "email": "อีเมล",
-    "noReportsYet": "ยงัไมม่ีรายงาน",
     "subscription": "การสมัคร",
     "settings": "การตั้่งค่า",
     "viewReportsDesc": "ดูประวัติรายงานความสอดคล้อง",
-    "manageSubscriptionDesc": "จาดการสมัครและวธิีการชําระเงนิ",
-    "youAreOnFreePlan": "ขณะนี้คุณอยู่ในแผนฟรี",
-    "viewPricing": "ดูราคา",
-    "paid": "จ่าย",
-    "pending": "รอดำเนินการ",
-    "prev": "← ก่อนหน้า",
-    "next": "ถัดไป →",
-    "plan": "วางแผน",
-    "status": "สถานะ"
+    "manageSubscriptionDesc": "จาดการสมัครและวธิีการชําระเงนิ"
   },
   "Pricing": {
     "title": "ราคาแบบง่่าย",
@@ -1887,7 +1865,12 @@
     "prevPage": "← ก่อนหน้า",
     "nextPage": "ถัดไป →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "รายเดือน",
+    "planYearly": "เป็นประจำทุกปี",
+    "statusActive": "คล่องแคล่ว",
+    "statusCanceled": "ยกเลิก",
+    "statusPastDue": "เลยกำหนดชำระแล้ว"
   },
   "Cookie": {
     "message": "ไซต์นี้ใช้คุกกี้การรับรองความถูกต้องที่จำเป็นเท่านั้น ไม่มีการใช้คุกกี้การติดตามหรือการโฆษณา",

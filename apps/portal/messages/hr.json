@@ -55,39 +55,17 @@
     "errorLength": "Lozinka mora imati najmanje 5 znakova",
     "securityCheck": "Molimo dovršite sigurnosnu provjeru.",
     "securityCheckFailed": "Sigurnosna provjera nije uspjela. Molimo pokušajte ponovo.",
-    "securityCheckExpired": "Sigurnosna provjera je istekla. Molimo pokušajte ponovo."
+    "securityCheckExpired": "Sigurnosna provjera je istekla. Molimo pokušajte ponovo.",
+    "agreeToPrivacy": "Slažem se s",
+    "privacyPolicy": "Politika privatnosti"
   },
   "Dashboard": {
-    "title": "Nadzorna ploča",
-    "welcomeBack": "dobro došao nazad,",
     "myReports": "Moja izvješća",
-    "myReportsDesc": "Pregledajte povijest izvješća o usklađenosti",
-    "billing": "Naplata i pretplata",
-    "billingDesc": "Upravljajte svojom pretplatom i načinima plaćanja",
-    "account": "Račun",
-    "currentPlan": "Trenutni plan",
-    "periodEnds": "Razdoblje završava",
-    "registeredUser": "Registrirani korisnik",
-    "completeCheck": "Dovršite provjeru sukladnosti kako biste ovdje vidjeli svoja izvješća.",
-    "loading": "Učitavanje...",
     "accountPreferences": "Postavke računa",
-    "manageSubscription": "Upravljajte svojom pretplatom",
-    "reportId": "ID",
-    "name": "Ime",
-    "email": "E-mail",
-    "noReportsYet": "Još nema izvješća",
     "subscription": "Pretplata",
     "settings": "postavke",
     "viewReportsDesc": "Pregledajte svoja izvješća o usklađenosti",
-    "manageSubscriptionDesc": "Upravljajte svojom pretplatom",
-    "viewPricing": "Pogledajte cijene",
-    "youAreOnFreePlan": "Trenutno ste na besplatnom planu.",
-    "paid": "plaćeno",
-    "pending": "na čekanju",
-    "prev": "← Pret",
-    "next": "Dalje →",
-    "plan": "Plan",
-    "status": "Status"
+    "manageSubscriptionDesc": "Upravljajte svojom pretplatom"
   },
   "Pricing": {
     "title": "Jednostavna cijena",
@@ -1887,7 +1865,12 @@
     "prevPage": "← Pret",
     "nextPage": "Dalje →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "Mjesečno",
+    "planYearly": "Godišnje",
+    "statusActive": "Aktivan",
+    "statusCanceled": "Otkazano",
+    "statusPastDue": "Pad Due"
   },
   "Cookie": {
     "message": "Ova stranica koristi samo bitne kolačiće za provjeru autentičnosti. Ne koriste se kolačići za praćenje ili oglašavanje.",

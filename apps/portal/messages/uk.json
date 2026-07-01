@@ -55,39 +55,17 @@
     "errorLength": "Пароль має бути не менше 5 символів",
     "securityCheck": "Пройдіть перевірку безпеки.",
     "securityCheckFailed": "Помилка перевірки безпеки. Спробуйте ще раз.",
-    "securityCheckExpired": "Термін перевірки безпеки минув. Спробуйте ще раз."
+    "securityCheckExpired": "Термін перевірки безпеки минув. Спробуйте ще раз.",
+    "agreeToPrivacy": "Я згоден на",
+    "privacyPolicy": "Політика конфіденційності"
   },
   "Dashboard": {
-    "title": "Приладова панель",
-    "welcomeBack": "Ласкаво просимо назад,",
     "myReports": "Мої звіти",
-    "myReportsDesc": "Переглянути історію звітів про відповідність",
-    "billing": "Виставлення рахунків і підписка",
-    "billingDesc": "Керуйте своєю підпискою та способами оплати",
-    "account": "Обліковий запис",
-    "currentPlan": "Поточний план",
-    "periodEnds": "Період закінчується",
-    "registeredUser": "Зареєстрований користувач",
-    "completeCheck": "Завершіть перевірку відповідності, щоб переглянути свої звіти тут.",
-    "loading": "Завантаження...",
     "accountPreferences": "Налаштування облікового запису",
-    "manageSubscription": "Керуйте своєю підпискою",
-    "reportId": "ID",
-    "name": "Ім'я",
-    "email": "Електронна пошта",
-    "noReportsYet": "Звітів ще немає",
     "subscription": "Підписка",
     "settings": "Налаштування",
     "viewReportsDesc": "Перегляньте свої звіти про відповідність",
-    "manageSubscriptionDesc": "Керуйте своєю підпискою",
-    "viewPricing": "Переглянути ціни",
-    "youAreOnFreePlan": "Зараз ви використовуєте безкоштовний план.",
-    "paid": "платний",
-    "pending": "в очікуванні",
-    "prev": "← Попередня",
-    "next": "Далі →",
-    "plan": "План",
-    "status": "Статус"
+    "manageSubscriptionDesc": "Керуйте своєю підпискою"
   },
   "Pricing": {
     "title": "Просте ціноутворення",
@@ -1887,7 +1865,12 @@
     "prevPage": "← Попередня",
     "nextPage": "Далі →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "Щомісяця",
+    "planYearly": "щорічно",
+    "statusActive": "Активний",
+    "statusCanceled": "Скасовано",
+    "statusPastDue": "Прострочено"
   },
   "Cookie": {
     "message": "Цей сайт використовує лише необхідні файли cookie для автентифікації. Файли cookie для відстеження чи реклами не використовуються.",

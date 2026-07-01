@@ -55,39 +55,17 @@
     "errorLength": "Пароль павінен быць не менш за 5 сімвалаў",
     "securityCheck": "Прайдзіце праверку бяспекі.",
     "securityCheckFailed": "Праверка бяспекі не атрымалася. Калі ласка, паспрабуйце яшчэ раз.",
-    "securityCheckExpired": "Тэрмін праверкі бяспекі скончыўся. Калі ласка, паспрабуйце яшчэ раз."
+    "securityCheckExpired": "Тэрмін праверкі бяспекі скончыўся. Калі ласка, паспрабуйце яшчэ раз.",
+    "agreeToPrivacy": "Я згодны з",
+    "privacyPolicy": "Палітыка прыватнасці"
   },
   "Dashboard": {
-    "title": "Прыборная панэль",
-    "welcomeBack": "Сардэчна запрашаем назад,",
     "myReports": "Мае справаздачы",
-    "myReportsDesc": "Праглядвайце гісторыю справаздач аб адпаведнасці",
-    "billing": "Выстаўленне рахункаў і падпіска",
-    "billingDesc": "Кіруйце сваёй падпіскай і спосабамі аплаты",
-    "account": "Рахунак",
-    "currentPlan": "Бягучы план",
-    "periodEnds": "Перыяд заканчваецца",
-    "registeredUser": "Зарэгістраваны карыстальнік",
-    "completeCheck": "Прайдзіце праверку адпаведнасці, каб убачыць свае справаздачы тут.",
-    "loading": "Загрузка...",
     "accountPreferences": "Параметры ўліковага запісу",
-    "manageSubscription": "Кіруйце сваёй падпіскай",
-    "reportId": "ID",
-    "name": "Імя",
-    "email": "Электронная пошта",
-    "noReportsYet": "Пакуль няма справаздач",
     "subscription": "Падпіска",
     "settings": "Налады",
     "viewReportsDesc": "Праглядзіце свае справаздачы аб адпаведнасці",
-    "manageSubscriptionDesc": "Кіруйце сваёй падпіскай",
-    "viewPricing": "Паглядзець цэны",
-    "youAreOnFreePlan": "Зараз вы карыстаецеся бясплатным планам.",
-    "paid": "аплачаны",
-    "pending": "у чаканні",
-    "prev": "← Папярэд",
-    "next": "Далей →",
-    "plan": "План",
-    "status": "Статус"
+    "manageSubscriptionDesc": "Кіруйце сваёй падпіскай"
   },
   "Pricing": {
     "title": "Простае цэнаўтварэнне",
@@ -1887,7 +1865,12 @@
     "prevPage": "← Папярэд",
     "nextPage": "Далей →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "Штомесяц",
+    "planYearly": "Штогод",
+    "statusActive": "Актыўны",
+    "statusCanceled": "Адменена",
+    "statusPastDue": "Пратэрмінаваны тэрмін"
   },
   "Cookie": {
     "message": "Гэты сайт выкарыстоўвае толькі неабходныя файлы cookie для аўтэнтыфікацыі. Файлы cookie для адсочвання і рэкламы не выкарыстоўваюцца.",

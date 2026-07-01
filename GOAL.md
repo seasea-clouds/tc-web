@@ -2,7 +2,7 @@
 
 ## 核心目标
 
-将主站（sinotradecompliance.com）、用户站（Portal）、博客站（Blog）整合到同一个 monorepo 中，共享 UI 组件（页头/页脚/Cookie），统一多语言路由，独立部署，四站视觉一致让用户以为是一个网站。
+将主站（sinotradecompliance.com）、用户站（Portal）、博客站（Blog）整合到同一个 monorepo 中，共享 UI 组件（页头/页脚/Cookie），统一多语言路由，独立部署，三站视觉一致让用户以为是一个网站。
 
 ## 品牌 VI（不可违反）
 
@@ -64,7 +64,7 @@
 - `credentials: 'include'` 自动携带 cookie
 - 登录/注册页加 CF Turnstile 人机验证
 
-### 四站页头页脚统一
+### 各站页头页脚统一
 - site / blog / portal / admin（未来）全部使用 `@trade/ui` 共享 Navbar + Footer
 - Navbar 新增登录/注册入口（`loginHref` / `registerHref` / `userSlot` props）
 - CookieConsent 提升为共享组件，放在 Footer 位置，提供「允许全部」「拒绝非必要」两个选项
@@ -86,7 +86,7 @@
 - 共享组件 `@trade/ui/CookieConsent`
 - 两个按钮：「允许全部」（金色主按钮）「拒绝非必要」（灰色边框）
 - localStorage 记忆选择，不再重复弹出
-- 四站 layout 统一引用
+- 各站 layout 统一引用
 
 ## SEO + GEO 要求
 

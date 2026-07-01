@@ -55,39 +55,17 @@
     "errorLength": "पासवर्ड कम्तिमा ६ अक्षरको हुनुपर्छ",
     "securityCheck": "कृपया सुरक्षा जाँच पूरा गर्नुहोस्।",
     "securityCheckExpired": "सुरक्षा जाँचको म्याद सकियो। कृपया पुन: प्रयास गर्नुहोस्।",
-    "securityCheckFailed": "सुरक्षा जाँच असफल भयो। कृपया पुन: प्रयास गर्नुहोस्।"
+    "securityCheckFailed": "सुरक्षा जाँच असफल भयो। कृपया पुन: प्रयास गर्नुहोस्।",
+    "agreeToPrivacy": "म सहमत छु",
+    "privacyPolicy": "गोपनीयता नीति"
   },
   "Dashboard": {
-    "title": "ड्यासबोर्ड",
-    "welcomeBack": "फेरि स्वागत छ,",
     "myReports": "मेरा रिपोर्टहरू",
-    "myReportsDesc": "आफ्नो अनुपालन रिपोर्ट इतिहास हेर्नुहोस्",
-    "billing": "बिलिङ र सदस्यता",
-    "billingDesc": "आफ्नो सदस्यता र भुक्तानी विधिहरू प्रबन्ध गर्नुहोस्",
-    "account": "खाता",
-    "currentPlan": "हालको योजना",
-    "periodEnds": "अवधि समाप्त हुन्छ",
-    "registeredUser": "दर्ता प्रयोगकर्ता",
-    "completeCheck": "यहाँ आफ्ना रिपोर्टहरू हेर्नको लागि अनुपालन जाँच पूरा गर्नुहोस्।",
-    "loading": "लोड गर्दै...",
     "accountPreferences": "खाता प्राथमिकताहरू",
-    "manageSubscription": "आफ्नो सदस्यता प्रबन्ध गर्नुहोस्",
-    "reportId": "ID",
-    "name": "नाम",
-    "email": "इमेल",
-    "noReportsYet": "अहिलेसम्म कुनै रिपोर्ट छैन",
     "subscription": "सदस्यता",
     "settings": "सेटिङहरू",
     "viewReportsDesc": "तपाईंको अनुपालन रिपोर्टहरू हेर्नुहोस्",
-    "manageSubscriptionDesc": "आफ्नो सदस्यता प्रबन्ध गर्नुहोस्",
-    "viewPricing": "मूल्य निर्धारण हेर्नुहोस्",
-    "youAreOnFreePlan": "तपाईं हाल नि:शुल्क योजनामा ​​हुनुहुन्छ।",
-    "paid": "भुक्तान गरियो",
-    "pending": "विचाराधीन",
-    "prev": "← अघिल्लो",
-    "next": "अर्को →",
-    "plan": "योजना",
-    "status": "स्थिति"
+    "manageSubscriptionDesc": "आफ्नो सदस्यता प्रबन्ध गर्नुहोस्"
   },
   "Pricing": {
     "title": "सरल मूल्य निर्धारण",
@@ -1887,7 +1865,12 @@
     "prevPage": "← अघिल्लो",
     "nextPage": "अर्को →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "मासिक",
+    "planYearly": "वार्षिक",
+    "statusActive": "सक्रिय",
+    "statusCanceled": "रद्द गरियो",
+    "statusPastDue": "विगतको बक्यौता"
   },
   "Cookie": {
     "message": "यो साइटले आवश्यक प्रमाणीकरण कुकीहरू मात्र प्रयोग गर्दछ। कुनै ट्र्याकिङ वा विज्ञापन कुकीहरू प्रयोग गरिँदैन।",

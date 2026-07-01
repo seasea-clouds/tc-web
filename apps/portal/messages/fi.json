@@ -55,39 +55,17 @@
     "errorLength": "Salasanassa on oltava vähintään 5 merkkiä",
     "securityCheck": "Suorita turvatarkastus.",
     "securityCheckFailed": "Turvatarkastus epäonnistui. Yritä uudelleen.",
-    "securityCheckExpired": "Turvatarkastus vanhentunut. Yritä uudelleen."
+    "securityCheckExpired": "Turvatarkastus vanhentunut. Yritä uudelleen.",
+    "agreeToPrivacy": "Olen samaa mieltä",
+    "privacyPolicy": "Tietosuojakäytäntö"
   },
   "Dashboard": {
-    "title": "Kojelauta",
-    "welcomeBack": "Tervetuloa takaisin,",
     "myReports": "Omat raportit",
-    "myReportsDesc": "Tarkastele vaatimustenmukaisuusraporttisi historiaa",
-    "billing": "Laskutus ja tilaus",
-    "billingDesc": "Hallinnoi tilaustasi ja maksutapojasi",
-    "account": "Tili",
-    "currentPlan": "Nykyinen suunnitelma",
-    "periodEnds": "Kausi päättyy",
-    "registeredUser": "Rekisteröity käyttäjä",
-    "completeCheck": "Suorita vaatimustenmukaisuuden tarkistus nähdäksesi raportit täällä.",
-    "loading": "Ladataan...",
     "accountPreferences": "Tiliasetukset",
-    "manageSubscription": "Hallinnoi tilaustasi",
-    "reportId": "ID",
-    "name": "Nimi",
-    "email": "Sähköposti",
-    "noReportsYet": "Ei vielä raportteja",
     "subscription": "Tilaus",
     "settings": "Asetukset",
     "viewReportsDesc": "Tarkastele vaatimustenmukaisuusraporttejasi",
-    "manageSubscriptionDesc": "Hallinnoi tilaustasi",
-    "viewPricing": "Katso hinnoittelu",
-    "youAreOnFreePlan": "Olet tällä hetkellä ilmaisessa paketissa.",
-    "paid": "maksettu",
-    "pending": "vireillä",
-    "prev": "← Ed",
-    "next": "Seuraava →",
-    "plan": "Suunnitelma",
-    "status": "Status"
+    "manageSubscriptionDesc": "Hallinnoi tilaustasi"
   },
   "Pricing": {
     "title": "Yksinkertainen hinnoittelu",
@@ -1887,7 +1865,12 @@
     "prevPage": "← Ed",
     "nextPage": "Seuraava →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "Kuukausittain",
+    "planYearly": "Vuosittain",
+    "statusActive": "Aktiivinen",
+    "statusCanceled": "Peruutettu",
+    "statusPastDue": "Erääntynyt"
   },
   "Cookie": {
     "message": "Tämä sivusto käyttää vain välttämättömiä todennusevästeitä. Mitään seuranta- tai mainosevästeitä ei käytetä.",

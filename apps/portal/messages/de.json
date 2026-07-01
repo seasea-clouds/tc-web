@@ -55,39 +55,17 @@
     "errorLength": "Das Passwort muss mindestens 5 Zeichen lang sein",
     "securityCheck": "Bitte führen Sie die Sicherheitsüberprüfung durch.",
     "securityCheckFailed": "Sicherheitsüberprüfung fehlgeschlagen. Bitte versuchen Sie es erneut.",
-    "securityCheckExpired": "Sicherheitsüberprüfung abgelaufen. Bitte versuchen Sie es erneut."
+    "securityCheckExpired": "Sicherheitsüberprüfung abgelaufen. Bitte versuchen Sie es erneut.",
+    "agreeToPrivacy": "Ich stimme dem zu",
+    "privacyPolicy": "Datenschutzrichtlinie"
   },
   "Dashboard": {
-    "title": "Armaturenbrett",
-    "welcomeBack": "Willkommen zurück,",
     "myReports": "Meine Berichte",
-    "myReportsDesc": "Sehen Sie sich den Verlauf Ihres Compliance-Berichts an",
-    "billing": "Abrechnung und Abonnement",
-    "billingDesc": "Verwalten Sie Ihr Abonnement und Ihre Zahlungsmethoden",
-    "account": "Konto",
-    "currentPlan": "Aktueller Plan",
-    "periodEnds": "Der Zeitraum endet",
-    "registeredUser": "Registrierter Benutzer",
-    "completeCheck": "Führen Sie eine Compliance-Prüfung durch, um Ihre Berichte hier anzuzeigen.",
-    "loading": "Laden...",
     "accountPreferences": "Kontoeinstellungen",
-    "manageSubscription": "Verwalten Sie Ihr Abonnement",
-    "reportId": "AUSWEIS",
-    "name": "Namen",
-    "email": "E-Mail",
-    "noReportsYet": "Noch keine Berichte",
     "subscription": "Abonnement",
     "settings": "Einstellungen",
     "viewReportsDesc": "Sehen Sie sich Ihre Compliance-Berichte an",
-    "manageSubscriptionDesc": "Verwalten Sie Ihr Abonnement",
-    "viewPricing": "Preise anzeigen",
-    "youAreOnFreePlan": "Sie nutzen derzeit den kostenlosen Plan.",
-    "paid": "bezahlt",
-    "pending": "ausstehend",
-    "prev": "← Vorher",
-    "next": "Weiter →",
-    "plan": "Planen",
-    "status": "Status"
+    "manageSubscriptionDesc": "Verwalten Sie Ihr Abonnement"
   },
   "Pricing": {
     "title": "Einfache Preisgestaltung",
@@ -1887,7 +1865,12 @@
     "prevPage": "← Vorher",
     "nextPage": "Weiter →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "Monatlich",
+    "planYearly": "Jährlich",
+    "statusActive": "Aktiv",
+    "statusCanceled": "Abgesagt",
+    "statusPastDue": "Überfällig"
   },
   "Cookie": {
     "message": "Diese Website verwendet nur unbedingt erforderliche Authentifizierungscookies. Es werden keine Tracking- oder Werbecookies verwendet.",

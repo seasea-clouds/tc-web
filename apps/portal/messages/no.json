@@ -55,39 +55,17 @@
     "errorLength": "Passordet må være på minst 5 tegn",
     "securityCheck": "Vennligst fullfør sikkerhetskontrollen.",
     "securityCheckFailed": "Sikkerhetssjekk mislyktes. Vennligst prøv igjen.",
-    "securityCheckExpired": "Sikkerhetssjekken er utløpt. Vennligst prøv igjen."
+    "securityCheckExpired": "Sikkerhetssjekken er utløpt. Vennligst prøv igjen.",
+    "agreeToPrivacy": "Jeg er enig i",
+    "privacyPolicy": "Personvernerklæring"
   },
   "Dashboard": {
-    "title": "Dashbord",
-    "welcomeBack": "Velkommen tilbake,",
     "myReports": "Mine rapporter",
-    "myReportsDesc": "Se historikken for samsvarsrapporten din",
-    "billing": "Fakturering og abonnement",
-    "billingDesc": "Administrer abonnementet og betalingsmåtene dine",
-    "account": "Konto",
-    "currentPlan": "Gjeldende plan",
-    "periodEnds": "Perioden slutter",
-    "registeredUser": "Registrert bruker",
-    "completeCheck": "Fullfør en samsvarskontroll for å se rapportene dine her.",
-    "loading": "Laster inn...",
     "accountPreferences": "Kontopreferanser",
-    "manageSubscription": "Administrer abonnementet ditt",
-    "reportId": "ID",
-    "name": "Navn",
-    "email": "E-post",
-    "noReportsYet": "Ingen rapporter ennå",
     "subscription": "Abonnement",
     "settings": "Innstillinger",
     "viewReportsDesc": "Se samsvarsrapportene dine",
-    "manageSubscriptionDesc": "Administrer abonnementet ditt",
-    "viewPricing": "Se priser",
-    "youAreOnFreePlan": "Du er for øyeblikket på gratisplanen.",
-    "paid": "betalt",
-    "pending": "i påvente av",
-    "prev": "← Forrige",
-    "next": "Neste →",
-    "plan": "Plan",
-    "status": "Status"
+    "manageSubscriptionDesc": "Administrer abonnementet ditt"
   },
   "Pricing": {
     "title": "Enkel prissetting",
@@ -1887,7 +1865,12 @@
     "prevPage": "← Forrige",
     "nextPage": "Neste →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "Månedlig",
+    "planYearly": "Årlig",
+    "statusActive": "Aktiv",
+    "statusCanceled": "Kansellert",
+    "statusPastDue": "Forfalt"
   },
   "Cookie": {
     "message": "Dette nettstedet bruker kun viktige autentiseringsinformasjonskapsler. Ingen sporings- eller reklameinformasjonskapsler brukes.",

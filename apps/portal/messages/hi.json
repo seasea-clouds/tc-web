@@ -55,39 +55,17 @@
     "errorLength": "पासवर्ड कम से कम 5 अक्षर का होना चाहिए",
     "securityCheck": "कृपया सुरक्षा जांच पूरी करें.",
     "securityCheckFailed": "सुरक्षा जांच विफल. कृपया पुन: प्रयास करें।",
-    "securityCheckExpired": "सुरक्षा जांच समाप्त हो गई. कृपया पुन: प्रयास करें।"
+    "securityCheckExpired": "सुरक्षा जांच समाप्त हो गई. कृपया पुन: प्रयास करें।",
+    "agreeToPrivacy": "मैं करने के लिए सहमत हूं",
+    "privacyPolicy": "गोपनीयता नीति"
   },
   "Dashboard": {
-    "title": "डैशबोर्ड",
-    "welcomeBack": "पुनः स्वागत है,",
     "myReports": "मेरी रिपोर्ट",
-    "myReportsDesc": "अपनी अनुपालन रिपोर्ट का इतिहास देखें",
-    "billing": "बिलिंग एवं सदस्यता",
-    "billingDesc": "अपनी सदस्यता और भुगतान विधियाँ प्रबंधित करें",
-    "account": "खाता",
-    "currentPlan": "वर्तमान योजना",
-    "periodEnds": "अवधि समाप्त होती है",
-    "registeredUser": "पंजीकृत उपयोगकर्ता",
-    "completeCheck": "अपनी रिपोर्ट यहां देखने के लिए अनुपालन जांच पूरी करें।",
-    "loading": "लोड हो रहा है...",
     "accountPreferences": "खाता प्राथमिकताएँ",
-    "manageSubscription": "अपनी सदस्यता प्रबंधित करें",
-    "reportId": "पहचान",
-    "name": "नाम",
-    "email": "ईमेल",
-    "noReportsYet": "अभी तक कोई रिपोर्ट नहीं",
     "subscription": "सदस्यता",
     "settings": "सेटिंग्स",
     "viewReportsDesc": "अपनी अनुपालन रिपोर्ट देखें",
-    "manageSubscriptionDesc": "अपनी सदस्यता प्रबंधित करें",
-    "viewPricing": "मूल्य निर्धारण देखें",
-    "youAreOnFreePlan": "आप वर्तमान में निःशुल्क योजना पर हैं।",
-    "paid": "चुकाया गया",
-    "pending": "लंबित",
-    "prev": "← पिछला",
-    "next": "अगला →",
-    "plan": "योजना",
-    "status": "स्थिति"
+    "manageSubscriptionDesc": "अपनी सदस्यता प्रबंधित करें"
   },
   "Pricing": {
     "title": "सरल मूल्य निर्धारण",
@@ -1887,7 +1865,12 @@
     "prevPage": "← पिछला",
     "nextPage": "अगला →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "महीने के",
+    "planYearly": "सालाना",
+    "statusActive": "सक्रिय",
+    "statusCanceled": "रद्द कर दिया गया",
+    "statusPastDue": "पिछला बकाया"
   },
   "Cookie": {
     "message": "यह साइट केवल आवश्यक प्रमाणीकरण कुकीज़ का उपयोग करती है। किसी भी ट्रैकिंग या विज्ञापन कुकीज़ का उपयोग नहीं किया जाता है।",

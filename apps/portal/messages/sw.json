@@ -55,39 +55,17 @@
     "errorLength": "Nenosiri lazima liwe na angalau vibambo 5",
     "securityCheck": "Tafadhali kamilisha ukaguzi wa usalama.",
     "securityCheckExpired": "Muda wa ukaguzi wa usalama umekwisha. Tafadhali jaribu tena.",
-    "securityCheckFailed": "Ukaguzi wa usalama umeshindwa. Tafadhali jaribu tena."
+    "securityCheckFailed": "Ukaguzi wa usalama umeshindwa. Tafadhali jaribu tena.",
+    "agreeToPrivacy": "Nakubaliana na",
+    "privacyPolicy": "Sera ya Faragha"
   },
   "Dashboard": {
-    "title": "Dashibodi",
-    "welcomeBack": "Karibu tena,",
     "myReports": "Ripoti Zangu",
-    "myReportsDesc": "Tazama historia yako ya ripoti ya kufuata",
-    "billing": "Bili na Usajili",
-    "billingDesc": "Dhibiti usajili wako na njia za kulipa",
-    "account": "Akaunti",
-    "currentPlan": "Mpango wa Sasa",
-    "periodEnds": "Kipindi kinaisha",
-    "registeredUser": "Mtumiaji aliyesajiliwa",
-    "completeCheck": "Kamilisha ukaguzi wa kufuata ili kuona ripoti zako hapa.",
-    "loading": "Inapakia...",
     "accountPreferences": "Mapendeleo ya akaunti",
-    "manageSubscription": "Dhibiti usajili wako",
-    "reportId": "ID",
-    "name": "Jina",
-    "email": "Barua pepe",
-    "noReportsYet": "Hakuna ripoti bado",
     "subscription": "Usajili",
     "settings": "Mipangilio",
     "viewReportsDesc": "Tazama ripoti zako za kufuata",
-    "manageSubscriptionDesc": "Dhibiti usajili wako",
-    "viewPricing": "Tazama Bei",
-    "youAreOnFreePlan": "Kwa sasa uko kwenye Mpango Bila Malipo.",
-    "paid": "kulipwa",
-    "pending": "inasubiri",
-    "prev": "← Iliyotangulia",
-    "next": "Inayofuata →",
-    "plan": "Mpango",
-    "status": "Hali"
+    "manageSubscriptionDesc": "Dhibiti usajili wako"
   },
   "Pricing": {
     "title": "Bei Rahisi",
@@ -1887,7 +1865,12 @@
     "prevPage": "← Iliyotangulia",
     "nextPage": "Inayofuata →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "Kila mwezi",
+    "planYearly": "Kila mwaka",
+    "statusActive": "Inayotumika",
+    "statusCanceled": "Imeghairiwa",
+    "statusPastDue": "Malipo Iliyopita"
   },
   "Cookie": {
     "message": "Tovuti hii hutumia vidakuzi muhimu vya uthibitishaji pekee. Hakuna vidakuzi vya ufuatiliaji au utangazaji vinatumika.",

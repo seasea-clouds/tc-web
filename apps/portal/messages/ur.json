@@ -55,39 +55,17 @@
     "errorLength": "پاس ورڈ کم از کم 5 حروف کا ہونا چاہیے۔",
     "securityCheck": "براہ کرم سیکیورٹی چیک مکمل کریں۔",
     "securityCheckFailed": "سیکیورٹی چیک ناکام ہوگیا۔ براہ کرم دوبارہ کوشش کریں۔",
-    "securityCheckExpired": "سیکیورٹی چیک کی میعاد ختم ہوگئی۔ براہ کرم دوبارہ کوشش کریں۔"
+    "securityCheckExpired": "سیکیورٹی چیک کی میعاد ختم ہوگئی۔ براہ کرم دوبارہ کوشش کریں۔",
+    "agreeToPrivacy": "میں اس سے اتفاق کرتا ہوں۔",
+    "privacyPolicy": "رازداری کی پالیسی"
   },
   "Dashboard": {
-    "title": "ڈیش بورڈ",
-    "welcomeBack": "دوبارہ خوش آمدید،",
     "myReports": "میری رپورٹس",
-    "myReportsDesc": "اپنی تعمیل کی رپورٹ کی سرگزشت دیکھیں",
-    "billing": "بلنگ اور سبسکرپشن",
-    "billingDesc": "اپنی رکنیت اور ادائیگی کے طریقوں کا نظم کریں۔",
-    "account": "اکاؤنٹ",
-    "currentPlan": "موجودہ منصوبہ",
-    "periodEnds": "مدت ختم ہوتی ہے۔",
-    "registeredUser": "رجسٹرڈ صارف",
-    "completeCheck": "اپنی رپورٹس کو یہاں دیکھنے کے لیے تعمیل کی جانچ مکمل کریں۔",
-    "loading": "لوڈ ہو رہا ہے...",
     "accountPreferences": "اکاؤنٹ کی ترجیحات",
-    "manageSubscription": "اپنی رکنیت کا نظم کریں۔",
-    "reportId": "ID",
-    "name": "نام",
-    "email": "ای میل",
-    "noReportsYet": "ابھی تک کوئی رپورٹ نہیں ہے۔",
     "subscription": "رکنیت",
     "settings": "ترتیبات",
     "viewReportsDesc": "اپنی تعمیل کی رپورٹیں دیکھیں",
-    "manageSubscriptionDesc": "اپنی رکنیت کا نظم کریں۔",
-    "viewPricing": "قیمتوں کا تعین دیکھیں",
-    "youAreOnFreePlan": "آپ فی الحال مفت پلان پر ہیں۔",
-    "paid": "ادا کیا",
-    "pending": "زیر التواء",
-    "prev": "← پچھلا",
-    "next": "اگلا →",
-    "plan": "منصوبہ",
-    "status": "حیثیت"
+    "manageSubscriptionDesc": "اپنی رکنیت کا نظم کریں۔"
   },
   "Pricing": {
     "title": "سادہ قیمتوں کا تعین",
@@ -1887,7 +1865,12 @@
     "prevPage": "← پچھلا",
     "nextPage": "اگلا →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "ماہانہ",
+    "planYearly": "سالانہ",
+    "statusActive": "فعال",
+    "statusCanceled": "منسوخ",
+    "statusPastDue": "گزشتہ واجب الادا"
   },
   "Cookie": {
     "message": "یہ سائٹ صرف ضروری تصدیقی کوکیز استعمال کرتی ہے۔ کوئی ٹریکنگ یا اشتہاری کوکیز استعمال نہیں کی جاتی ہیں۔",

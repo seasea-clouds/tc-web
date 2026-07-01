@@ -55,39 +55,17 @@
     "errorLength": "პაროლი უნდა შედგებოდეს მინიმუმ 5 სიმბოლოსგან",
     "securityCheck": "გთხოვთ, დაასრულოთ უსაფრთხოების შემოწმება.",
     "securityCheckFailed": "უსაფრთხოების შემოწმება ვერ მოხერხდა. გთხოვთ, სცადოთ ხელახლა.",
-    "securityCheckExpired": "უსაფრთხოების შემოწმებას ვადა გაუვიდა. გთხოვთ, სცადოთ ხელახლა."
+    "securityCheckExpired": "უსაფრთხოების შემოწმებას ვადა გაუვიდა. გთხოვთ, სცადოთ ხელახლა.",
+    "agreeToPrivacy": "მე ვეთანხმები",
+    "privacyPolicy": "კონფიდენციალურობის პოლიტიკა"
   },
   "Dashboard": {
-    "title": "დაფა",
-    "welcomeBack": "კეთილი იყოს შენი დაბრუნება,",
     "myReports": "ჩემი მოხსენებები",
-    "myReportsDesc": "იხილეთ თქვენი შესაბამისობის ანგარიშის ისტორია",
-    "billing": "ბილინგი და გამოწერა",
-    "billingDesc": "მართეთ თქვენი გამოწერა და გადახდის მეთოდები",
-    "account": "ანგარიში",
-    "currentPlan": "მიმდინარე გეგმა",
-    "periodEnds": "პერიოდი მთავრდება",
-    "registeredUser": "რეგისტრირებული მომხმარებელი",
-    "completeCheck": "დაასრულეთ შესაბამისობის შემოწმება, რომ ნახოთ თქვენი ანგარიშები აქ.",
-    "loading": "იტვირთება...",
     "accountPreferences": "ანგარიშის პარამეტრები",
-    "manageSubscription": "მართეთ თქვენი გამოწერა",
-    "reportId": "ID",
-    "name": "სახელი",
-    "email": "ელფოსტა",
-    "noReportsYet": "ჯერ ანგარიშები არ არის",
     "subscription": "გამოწერა",
     "settings": "პარამეტრები",
     "viewReportsDesc": "იხილეთ თქვენი შესაბამისობის ანგარიშები",
-    "manageSubscriptionDesc": "მართეთ თქვენი გამოწერა",
-    "viewPricing": "ფასების ნახვა",
-    "youAreOnFreePlan": "ამჟამად უფასო გეგმაზე ხართ.",
-    "paid": "გადახდილი",
-    "pending": "მომლოდინე",
-    "prev": "← წინა",
-    "next": "შემდეგი →",
-    "plan": "გეგმავენ",
-    "status": "სტატუსი"
+    "manageSubscriptionDesc": "მართეთ თქვენი გამოწერა"
   },
   "Pricing": {
     "title": "მარტივი ფასი",
@@ -1887,7 +1865,12 @@
     "prevPage": "← წინა",
     "nextPage": "შემდეგი →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "ყოველთვიური",
+    "planYearly": "ყოველწლიურად",
+    "statusActive": "აქტიური",
+    "statusCanceled": "გაუქმდა",
+    "statusPastDue": "ვადა"
   },
   "Cookie": {
     "message": "ეს საიტი იყენებს მხოლოდ აუთენტიფიკაციის აუცილებელ ქუქიებს. არ გამოიყენება თვალთვალის ან სარეკლამო ქუქიები.",

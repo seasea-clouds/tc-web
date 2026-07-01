@@ -55,39 +55,17 @@
     "errorLength": "Fjalëkalimi duhet të jetë së paku 5 karaktere",
     "securityCheck": "Ju lutemi plotësoni kontrollin e sigurisë.",
     "securityCheckExpired": "Kontrolli i sigurisë ka skaduar. Ju lutemi provoni përsëri.",
-    "securityCheckFailed": "Kontrolli i sigurisë dështoi. Ju lutemi provoni përsëri."
+    "securityCheckFailed": "Kontrolli i sigurisë dështoi. Ju lutemi provoni përsëri.",
+    "agreeToPrivacy": "Jam dakord me",
+    "privacyPolicy": "Politika e privatësisë"
   },
   "Dashboard": {
-    "title": "Paneli",
-    "welcomeBack": "Mirë se erdhe,",
     "myReports": "Raportet e mia",
-    "myReportsDesc": "Shikoni historikun tuaj të raportit të pajtueshmërisë",
-    "billing": "Faturimi & Abonimi",
-    "billingDesc": "Menaxho mënyrat e pajtimit dhe pagesës",
-    "account": "Llogaria",
-    "currentPlan": "Plani aktual",
-    "periodEnds": "Periudha përfundon",
-    "registeredUser": "Përdorues i regjistruar",
-    "completeCheck": "Përfundoni një kontroll të pajtueshmërisë për të parë raportet tuaja këtu.",
-    "loading": "Po ngarkohet...",
     "accountPreferences": "Preferencat e llogarisë",
-    "manageSubscription": "Menaxhoni abonimin tuaj",
-    "reportId": "ID",
-    "name": "Emri",
-    "email": "Email",
-    "noReportsYet": "Nuk ka ende raporte",
     "subscription": "Abonimi",
     "settings": "Cilësimet",
     "viewReportsDesc": "Shikoni raportet tuaja të pajtueshmërisë",
-    "manageSubscriptionDesc": "Menaxhoni abonimin tuaj",
-    "viewPricing": "Shiko çmimet",
-    "youAreOnFreePlan": "Aktualisht jeni në planin Falas.",
-    "paid": "paguar",
-    "pending": "në pritje",
-    "prev": "← E mëparshme",
-    "next": "Tjetra →",
-    "plan": "Planifikoni",
-    "status": "Statusi"
+    "manageSubscriptionDesc": "Menaxhoni abonimin tuaj"
   },
   "Pricing": {
     "title": "Çmimi i thjeshtë",
@@ -1887,7 +1865,12 @@
     "prevPage": "← E mëparshme",
     "nextPage": "Tjetra →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "Mujore",
+    "planYearly": "vjetore",
+    "statusActive": "Aktiv",
+    "statusCanceled": "Anuluar",
+    "statusPastDue": "E kaluara"
   },
   "Cookie": {
     "message": "Ky sajt përdor vetëm cookie thelbësore të vërtetimit. Nuk përdoren skedarë gjurmimi ose reklamimi.",

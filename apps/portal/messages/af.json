@@ -55,39 +55,17 @@
     "errorLength": "Wagwoord moet ten minste 5 karakters wees",
     "securityCheck": "Voltooi asseblief die sekuriteitskontrole.",
     "securityCheckFailed": "Sekuriteitkontrole het misluk. Probeer asseblief weer.",
-    "securityCheckExpired": "Sekuriteitkontrole het verval. Probeer asseblief weer."
+    "securityCheckExpired": "Sekuriteitkontrole het verval. Probeer asseblief weer.",
+    "agreeToPrivacy": "Ek stem in tot die",
+    "privacyPolicy": "Privaatheidsbeleid"
   },
   "Dashboard": {
-    "title": "Dashboard",
-    "welcomeBack": "Welkom terug,",
     "myReports": "My verslae",
-    "myReportsDesc": "Bekyk jou voldoeningsverslaggeskiedenis",
-    "billing": "Fakturering en intekening",
-    "billingDesc": "Bestuur jou intekening en betaalmetodes",
-    "account": "Rekening",
-    "currentPlan": "Huidige Plan",
-    "periodEnds": "Periode eindig",
-    "registeredUser": "Geregistreerde gebruiker",
-    "completeCheck": "Voltooi 'n nakomingskontrole om jou verslae hier te sien.",
-    "loading": "Laai tans...",
     "accountPreferences": "Rekeningvoorkeure",
-    "manageSubscription": "Bestuur jou intekening",
-    "reportId": "ID",
-    "name": "Naam",
-    "email": "E-pos",
-    "noReportsYet": "Nog geen verslae nie",
     "subscription": "Intekening",
     "settings": "Instellings",
     "viewReportsDesc": "Bekyk jou voldoeningsverslae",
-    "manageSubscriptionDesc": "Bestuur jou intekening",
-    "viewPricing": "Bekyk pryse",
-    "youAreOnFreePlan": "Jy is tans op die gratis plan.",
-    "paid": "betaal",
-    "pending": "hangende",
-    "prev": "← Vorige",
-    "next": "Volgende →",
-    "plan": "Beplan",
-    "status": "Status"
+    "manageSubscriptionDesc": "Bestuur jou intekening"
   },
   "Pricing": {
     "title": "Eenvoudige prysbepaling",
@@ -1887,7 +1865,12 @@
     "prevPage": "← Vorige",
     "nextPage": "Volgende →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "Maandeliks",
+    "planYearly": "Jaarliks",
+    "statusActive": "Aktief",
+    "statusCanceled": "Gekanselleer",
+    "statusPastDue": "Verlede"
   },
   "Cookie": {
     "message": "Hierdie webwerf gebruik slegs noodsaaklike verifikasiekoekies. Geen dop- of advertensiekoekies word gebruik nie.",

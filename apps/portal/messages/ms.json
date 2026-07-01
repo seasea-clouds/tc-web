@@ -55,39 +55,17 @@
     "errorLength": "Kata laluan mestilah sekurang-kurangnya 5 aksara",
     "securityCheck": "Sila lengkapkan pemeriksaan keselamatan.",
     "securityCheckFailed": "Pemeriksaan keselamatan gagal. Sila cuba lagi.",
-    "securityCheckExpired": "Semakan keselamatan tamat tempoh. Sila cuba lagi."
+    "securityCheckExpired": "Semakan keselamatan tamat tempoh. Sila cuba lagi.",
+    "agreeToPrivacy": "Saya bersetuju dengan",
+    "privacyPolicy": "Dasar Privasi"
   },
   "Dashboard": {
-    "title": "Papan pemuka",
-    "welcomeBack": "selamat kembali,",
     "myReports": "Laporan Saya",
-    "myReportsDesc": "Lihat sejarah laporan pematuhan anda",
-    "billing": "Pengebilan & Langganan",
-    "billingDesc": "Urus langganan dan kaedah pembayaran anda",
-    "account": "Akaun",
-    "currentPlan": "Rancangan Semasa",
-    "periodEnds": "Tempoh tamat",
-    "registeredUser": "Pengguna berdaftar",
-    "completeCheck": "Lengkapkan semakan pematuhan untuk melihat laporan anda di sini.",
-    "loading": "Memuatkan...",
     "accountPreferences": "Pilihan akaun",
-    "manageSubscription": "Urus langganan anda",
-    "reportId": "ID",
-    "name": "Nama",
-    "email": "E-mel",
-    "noReportsYet": "Tiada laporan lagi",
     "subscription": "Langganan",
     "settings": "tetapan",
     "viewReportsDesc": "Lihat laporan pematuhan anda",
-    "manageSubscriptionDesc": "Urus langganan anda",
-    "viewPricing": "Lihat Harga",
-    "youAreOnFreePlan": "Anda sedang menggunakan pelan Percuma.",
-    "paid": "dibayar",
-    "pending": "belum selesai",
-    "prev": "← Sebelumnya",
-    "next": "Seterusnya →",
-    "plan": "Rancang",
-    "status": "Status"
+    "manageSubscriptionDesc": "Urus langganan anda"
   },
   "Pricing": {
     "title": "Harga Mudah",
@@ -1887,7 +1865,12 @@
     "prevPage": "← Sebelumnya",
     "nextPage": "Seterusnya →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "Bulanan",
+    "planYearly": "setiap tahun",
+    "statusActive": "Aktif",
+    "statusCanceled": "Dibatalkan",
+    "statusPastDue": "Lewat Tempoh"
   },
   "Cookie": {
     "message": "Tapak ini hanya menggunakan kuki pengesahan penting. Tiada kuki penjejakan atau pengiklanan digunakan.",

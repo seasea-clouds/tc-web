@@ -55,39 +55,17 @@
     "errorLength": "Parola trebuie să aibă cel puțin 5 caractere",
     "securityCheck": "Vă rugăm să finalizați verificarea de securitate.",
     "securityCheckFailed": "Verificarea de securitate a eșuat. Vă rugăm să încercați din nou.",
-    "securityCheckExpired": "Verificarea de securitate a expirat. Vă rugăm să încercați din nou."
+    "securityCheckExpired": "Verificarea de securitate a expirat. Vă rugăm să încercați din nou.",
+    "agreeToPrivacy": "Sunt de acord cu",
+    "privacyPolicy": "Politica de confidențialitate"
   },
   "Dashboard": {
-    "title": "Bord",
-    "welcomeBack": "Bine ai revenit,",
     "myReports": "Rapoartele mele",
-    "myReportsDesc": "Vedeți istoricul rapoartelor dvs. de conformitate",
-    "billing": "Facturare și abonament",
-    "billingDesc": "Gestionați-vă abonamentul și metodele de plată",
-    "account": "Cont",
-    "currentPlan": "Planul curent",
-    "periodEnds": "Se termină perioada",
-    "registeredUser": "Utilizator înregistrat",
-    "completeCheck": "Finalizați o verificare a conformității pentru a vedea rapoartele dvs. aici.",
-    "loading": "Încărcare...",
     "accountPreferences": "Preferințele contului",
-    "manageSubscription": "Gestionați-vă abonamentul",
-    "reportId": "ID",
-    "name": "Nume",
-    "email": "E-mail",
-    "noReportsYet": "Încă nu există rapoarte",
     "subscription": "Abonament",
     "settings": "Setări",
     "viewReportsDesc": "Vizualizați rapoartele dvs. de conformitate",
-    "manageSubscriptionDesc": "Gestionați-vă abonamentul",
-    "viewPricing": "Vedeți prețurile",
-    "youAreOnFreePlan": "În prezent sunteți în planul gratuit.",
-    "paid": "plătit",
-    "pending": "în așteptare",
-    "prev": "← Prec",
-    "next": "Următorul →",
-    "plan": "Plan",
-    "status": "Stare"
+    "manageSubscriptionDesc": "Gestionați-vă abonamentul"
   },
   "Pricing": {
     "title": "Prețuri simple",
@@ -1887,7 +1865,12 @@
     "prevPage": "← Prec",
     "nextPage": "Următorul →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "Lunar",
+    "planYearly": "Anual",
+    "statusActive": "Activ",
+    "statusCanceled": "Anulat",
+    "statusPastDue": "Ulterior"
   },
   "Cookie": {
     "message": "Acest site folosește numai cookie-uri de autentificare esențiale. Nu sunt utilizate cookie-uri de urmărire sau de publicitate.",

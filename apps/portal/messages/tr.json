@@ -55,39 +55,17 @@
     "errorLength": "Şifre en az 5 karakter olmalıdır",
     "securityCheck": "Lütfen güvenlik kontrolünü tamamlayın.",
     "securityCheckFailed": "Güvenlik kontrolü başarısız oldu. Lütfen tekrar deneyin.",
-    "securityCheckExpired": "Güvenlik kontrolünün süresi doldu. Lütfen tekrar deneyin."
+    "securityCheckExpired": "Güvenlik kontrolünün süresi doldu. Lütfen tekrar deneyin.",
+    "agreeToPrivacy": "katılıyorum",
+    "privacyPolicy": "Gizlilik Politikası"
   },
   "Dashboard": {
-    "title": "Kontrol Paneli",
-    "welcomeBack": "Tekrar hoş geldiniz,",
     "myReports": "Raporlarım",
-    "myReportsDesc": "Uyumluluk raporu geçmişinizi görüntüleyin",
-    "billing": "Faturalandırma ve Abonelik",
-    "billingDesc": "Aboneliğinizi ve ödeme yöntemlerinizi yönetin",
-    "account": "Hesap",
-    "currentPlan": "Mevcut Plan",
-    "periodEnds": "Dönem sonu",
-    "registeredUser": "Kayıtlı kullanıcı",
-    "completeCheck": "Raporlarınızı burada görmek için uyumluluk kontrolünü tamamlayın.",
-    "loading": "Yükleniyor...",
     "accountPreferences": "Hesap tercihleri",
-    "manageSubscription": "Aboneliğinizi yönetin",
-    "reportId": "İD",
-    "name": "İsim",
-    "email": "E-posta",
-    "noReportsYet": "Henüz rapor yok",
     "subscription": "Abonelik",
     "settings": "Ayarlar",
     "viewReportsDesc": "Uyumluluk raporlarınızı görüntüleyin",
-    "manageSubscriptionDesc": "Aboneliğinizi yönetin",
-    "youAreOnFreePlan": "Şu anda Ücretsiz plandasınız.",
-    "viewPricing": "Fiyatlandırmayı Görüntüle",
-    "paid": "paralı",
-    "pending": "askıda olması",
-    "prev": "← Önceki",
-    "next": "Sonraki →",
-    "plan": "Planı",
-    "status": "Durum"
+    "manageSubscriptionDesc": "Aboneliğinizi yönetin"
   },
   "Pricing": {
     "title": "Basit Fiyatlandırma",
@@ -1887,7 +1865,12 @@
     "prevPage": "← Önceki",
     "nextPage": "Sonraki →",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "Aylık",
+    "planYearly": "Yıllık",
+    "statusActive": "Aktif",
+    "statusCanceled": "İptal edildi",
+    "statusPastDue": "Vadesi Geçmiş"
   },
   "Cookie": {
     "message": "Bu site yalnızca gerekli kimlik doğrulama çerezlerini kullanır. Hiçbir izleme veya reklam çerezi kullanılmaz.",

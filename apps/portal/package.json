@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "eslint",
     "deploy": "npx wrangler pages deploy ./out --project-name=trade-web-portal",
-    "postdeploy-check": "sleep 30 && node ../../packages/scripts/check-hreflang.mjs --url=https://sinotradecompliance.com/en/c/ --ci"
+    "postdeploy-check": "sleep 30 && node ../../packages/scripts/check-hreflang-portal.mjs --ci"
   },
   "dependencies": {
     "@trade/ui": "*",

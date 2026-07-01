@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node ../../packages/scripts/images/convert-webp.mjs && node ../../packages/scripts/build-search-index.mjs && node ../../packages/scripts/build-search-translations.mjs && next build && node ../../packages/scripts/build-all.mjs --base-url=https://sinotradecompliance.com --out-dir=out && node ../../packages/scripts/ci-check.mjs --out-dir=out",
-    "build:ci": "node ../../packages/scripts/images/convert-webp.mjs && node ../../packages/scripts/build-search-index.mjs && node ../../packages/scripts/build-search-translations.mjs && next build && node ../../packages/scripts/build-all.mjs --base-url=https://sinotradecompliance.com --out-dir=out && node ../../packages/scripts/ci-check.mjs --out-dir=out --ci",
+    "build": "node ../../packages/scripts/images/convert-webp.mjs && node ../../packages/scripts/build-search-index.mjs && node ../../packages/scripts/build-search-translations.mjs && next build && node ../../packages/scripts/build-all.mjs --base-url=https://sinotradecompliance.com --out-dir=out && node ../../packages/scripts/ci-check.mjs --out-dir=out --ci",
+    "build:ci": "npm run build",
     "start": "next start",
     "lint": "eslint"
   },

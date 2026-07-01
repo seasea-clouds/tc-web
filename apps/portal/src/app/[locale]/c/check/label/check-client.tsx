@@ -43,6 +43,19 @@ export default function LabelCheckClient() {
         }));
       } catch {}
       const reportId = `LABEL-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
+      if (freeData) {
+        fetch('/api/report/save', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            reportId,
+            module: 'Chinese Label Compliance',
+            inputData: input,
+            resultData: freeData,
+            paymentStatus: 'completed',
+          }),
+        }).catch(e => console.warn('D1 save failed (subscribed):', e));
+      }
       window.location.href = pathPrefix + "/c/report/?id=" + reportId;
       return;
     }
@@ -283,15 +296,21 @@ export default function LabelCheckClient() {
                 <>
                   <p className="text-lg font-semibold text-primary-navy">{t('subscribedViewReport')}</p>
                   <p className="text-sm text-gray-500">{t('subscribedDesc')}</p>
-                  <div className="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">{t('subscribedBadge')}</div>
+                  <div className="flex justify-center">
+                    <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
+                      <span>{t('subscribedBadge')}</span>
+                    </div>
+                  </div>
                   {error && <p className="text-sm text-red-500">{error}</p>}
-                  <button
-                    onClick={handlePayment}
-                    disabled={loading}
-                    className="w-full max-w-xs bg-gold hover:bg-gold/90 disabled:bg-gray-300 text-primary-navy font-semibold py-3 px-6 rounded-md transition-all text-lg"
-                  >
-                    {loading ? t('redirecting') : t('subscribedViewReport')}
-                  </button>
+                  <div className="flex justify-center">
+                    <button
+                      onClick={handlePayment}
+                      disabled={loading}
+                      className="w-full max-w-xs bg-gold hover:bg-gold/90 disabled:bg-gray-300 text-primary-navy font-semibold py-3 px-6 rounded-md transition-all text-lg"
+                    >
+                      {loading ? t('redirecting') : t('viewFullReport')}
+                    </button>
+                  </div>
                 </>
               ) : (
                 <>

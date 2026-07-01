@@ -33,21 +33,23 @@ Move "✓ 活跃订阅" badge above "查看完整报告" button, center both as 
 
 ---
 
-### ⬜ P3 — "noNeedOne" dropdown 48-language optimization
-**Files:** `apps/portal/messages/en.json` + translation submit
+### ✅ P3 — "noNeedOne" dropdown 48-language optimization
+**Files:** `apps/portal/messages/en.json` + translation results merged into 47 locale JSONs
 
-Fix `en.json` source: `"No: need one"` → `"No – need one"`. Submit translate-tool job for all 47 target languages.
+Fixed `en.json` source: `"No: need one"` → `"No – need one"`. Submitted `portal-noNeedOne-fix-v1` (47 langs, completed). Results merged into all 47 locale JSON files.
 
-**Status:** Not started
+**Status:** Done (commit 9555262)
 
 ---
 
-### ⬜ P4 — Subscription renewal billing cycle
-**File:** `apps/portal/functions/api/webhook.ts`
+### ✅ P4 — Subscription renewal billing cycle
+**File:** `apps/portal/functions/api/payment/webhook.ts`
 
-In `handleSubscriptionCreated`, check if user already has an active subscription. If yes, extend existing period_end by 1 month + 1 day instead of creating a new record or overwriting with Creem's date.
+- `handleSubscriptionCreated`: when updating existing sub, adjusted `current_period_start` to ≥ `old_period_end + 1 day`
+- Added `handleSubscriptionUpdated` handler for Creem's subscription.updated webhook
+- Same period adjustment applied in updated handler
 
-**Status:** Not started
+**Status:** Done (commit 9555262)
 
 ---
 

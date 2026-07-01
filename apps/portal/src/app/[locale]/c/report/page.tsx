@@ -77,7 +77,7 @@ function ReportContent() {
 
     fetch('/api/report/' + encodeURIComponent(id))
       .then(res => {
-        if (!res.ok) throw new Error('Report not found');
+        if (!res.ok) throw new Error(t('notFoundDesc'));
         return res.json();
       })
       .then(data => {

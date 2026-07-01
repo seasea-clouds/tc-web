@@ -53,8 +53,14 @@ Fixed `en.json` source: `"No: need one"` → `"No – need one"`. Submitted `por
 
 ---
 
-### ⬜ P5 — Report page i18n + Reports list i18n
-**Status:** Awaiting user confirmation after P2 fix (reports need to be visible first)
+### ✅ P5 — Report page i18n + Reports list i18n
+**Files:** `apps/portal/src/app/[locale]/c/report/page.tsx`
+
+- Fixed hardcoded English 'Report not found' → uses `t('notFoundDesc')` i18n key
+- Reports list page already fully translated (51 Report keys in all locales)
+- rebuildResult correctly re-renders reports with current locale via module check functions
+
+**Status:** Done
 
 ---
 

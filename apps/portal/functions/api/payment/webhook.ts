@@ -132,6 +132,8 @@ export async function onRequest(context: { request: Request; env: Env }) {
       await handleSubscriptionCreated(context.env, webhookData, meta);
     } else if (eventType === "subscription.canceled") {
       await handleSubscriptionCancelled(context.env, webhookData);
+    } else if (eventType === "subscription.updated") {
+      await handleSubscriptionUpdated(context.env, webhookData);
     } else {
       console.log(`Unhandled webhook eventType: "${eventType}"`);
     }
@@ -390,10 +392,22 @@ async function handleSubscriptionCreated(
     ).bind(subId).first();
 
     if (existing) {
-      // Update existing
+      // Update existing — ensure new period starts day after old period ends
+      let adjustedStart = periodStart;
+      const oldEnd = (existing as any).current_period_end;
+      if (oldEnd && periodStart) {
+        const oldEndDate = new Date(oldEnd);
+        const creemStartDate = new Date(periodStart);
+        const expectedStart = new Date(oldEndDate);
+        expectedStart.setDate(expectedStart.getDate() + 1);
+        if (creemStartDate <= oldEndDate) {
+          adjustedStart = expectedStart.toISOString().split('T')[0];
+          console.log(`subscription.active: adjusted period_start from ${periodStart} to ${adjustedStart} (old period_end was ${oldEnd})`);
+        }
+      }
       await env.DB.prepare(
         `UPDATE subscriptions SET status = 'active', current_period_start = ?, current_period_end = ? WHERE provider_subscription_id = ?`
-      ).bind(periodStart, periodEnd, subId).run();
+      ).bind(adjustedStart, periodEnd, subId).run();
       console.log(`subscription.active: updated existing sub ${subId}`);
     } else {
       // Create new
@@ -429,5 +443,57 @@ async function handleSubscriptionCancelled(
     console.log(`subscription.cancelled: updated sub ${subId} to cancelled`);
   } catch (err) {
     console.error("subscription.cancelled handler error:", err);
+  }
+}
+
+// ─── subscription.updated 处理 ────────────────────────────────────────
+
+async function handleSubscriptionUpdated(
+  env: Env,
+  data: Record<string, unknown>
+) {
+  const subId = String(data.id ?? "");
+  const periodStart = String((data as any).current_period_start_date ?? (data as any).current_period_start ?? "");
+  const periodEnd = String((data as any).current_period_end_date ?? (data as any).current_period_end ?? "");
+  const status = String(data.status ?? "active");
+
+  if (!subId || !periodStart || !periodEnd) {
+    console.warn("subscription.updated: missing subId or period dates");
+    return;
+  }
+
+  console.log(`subscription.updated: subId=${subId}, status=${status}`);
+
+  try {
+    // Fetch existing subscription to get old period end
+    const existing = await env.DB.prepare(
+      "SELECT id, current_period_end FROM subscriptions WHERE provider_subscription_id = ?"
+    ).bind(subId).first();
+
+    if (!existing) {
+      console.warn(`subscription.updated: subscription ${subId} not found in DB`);
+      return;
+    }
+
+    // Ensure new period starts day after old period ends
+    let adjustedStart = periodStart;
+    const oldEnd = (existing as any).current_period_end;
+    if (oldEnd && periodStart) {
+      const oldEndDate = new Date(oldEnd);
+      const creemStartDate = new Date(periodStart);
+      const expectedStart = new Date(oldEndDate);
+      expectedStart.setDate(expectedStart.getDate() + 1);
+      if (creemStartDate <= oldEndDate) {
+        adjustedStart = expectedStart.toISOString().split('T')[0];
+        console.log(`subscription.updated: adjusted period_start from ${periodStart} to ${adjustedStart} (old period_end was ${oldEnd})`);
+      }
+    }
+
+    await env.DB.prepare(
+      `UPDATE subscriptions SET status = ?, current_period_start = ?, current_period_end = ? WHERE provider_subscription_id = ?`
+    ).bind(status, adjustedStart, periodEnd, subId).run();
+    console.log(`subscription.updated: updated sub ${subId}`);
+  } catch (err) {
+    console.error("subscription.updated handler error:", err);
   }
 }

@@ -22,14 +22,14 @@ Move "✓ 活跃订阅" badge above "查看完整报告" button, center both as 
 
 ---
 
-### ⬜ P2 — Subscribe-user report persistence
-**Files:** 6 check-client.tsx + `apps/portal/functions/api/report/save.ts` + `apps/portal/functions/api/reports/list.ts`
+### ✅ P2 — Subscribe-user report persistence
+**Files:** 6 check-client.tsx + `apps/portal/functions/api/report/save.ts`
 
-- **A:** Add `paymentStatus` param to `/api/report/save` (default `'pending'`, accept `'completed'`)
-- **B:** In each check-client.tsx subscribed branch, call `/api/report/save` with `paymentStatus: 'completed'`
-- **C:** Update `/api/reports/list` to include reports where user has active subscription
+- **A:** Modified `/api/report/save` to accept `paymentStatus` param (default `'pending'`)
+- **B:** Each check-client subscribed branch now saves report with `paymentStatus: 'completed'`
+- **C:** Reports list API already filters by `'completed'` — no changes needed
 
-**Status:** Not started
+**Status:** Done (commit 09583cc)
 
 ---
 

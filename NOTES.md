@@ -51,8 +51,6 @@
 
 ## 用户页面设计规范
 
-`docs/USER-PAGES.md` — 用户页面目录、UI 标准、导航关系图。
-
 ### 关键规则
 1. **禁止硬编码颜色：** 使用主题 tokens（`text-primary-navy`、`bg-bg-ice`、`gold`），不用 `text-[#1B365D]`
 2. **卡片样式统一：** `rounded-xl shadow-sm border-gray-200 hover:shadow-md`

@@ -1,6 +1,6 @@
 {
   "name": "@trade/site",
-  "version": "0.0.0",
+  "version": "from ../../VERSION",
   "type": "module",
   "private": true,
   "scripts": {

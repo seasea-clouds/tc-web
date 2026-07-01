@@ -1816,7 +1816,8 @@
     "subscribedViewReport": "View Full Report",
     "subscribedDesc": "You have an active subscription. Access the full report now.",
     "subscribedBadge": "✓ Active Subscription",
-    "checkoutError": "Checkout failed. Please try again."
+    "checkoutError": "Checkout failed. Please try again.",
+    "periodStart": "Period Start"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",

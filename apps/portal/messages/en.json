@@ -55,7 +55,9 @@
     "errorLength": "Password must be at least 5 characters",
     "securityCheck": "Please complete the security check.",
     "securityCheckFailed": "Security check failed. Please try again.",
-    "securityCheckExpired": "Security check expired. Please try again."
+    "securityCheckExpired": "Security check expired. Please try again.",
+    "agreeToPrivacy": "I agree to the",
+    "privacyPolicy": "Privacy Policy"
   },
   "Dashboard": {
     "title": "Dashboard",
@@ -85,7 +87,9 @@
     "paid": "paid",
     "pending": "pending",
     "prev": "← Prev",
-    "next": "Next →"
+    "next": "Next →",
+    "plan": "Plan",
+    "status": "Status"
   },
   "Pricing": {
     "title": "Simple Pricing",
@@ -1884,7 +1888,12 @@
     "nameLabel": "Name",
     "emailLabel": "Email",
     "periodStart": "Period start",
-    "reportId": "Report ID"
+    "reportId": "Report ID",
+    "planMonthly": "Monthly",
+    "planYearly": "Yearly",
+    "statusActive": "Active",
+    "statusCanceled": "Canceled",
+    "statusPastDue": "Past Due"
   },
   "Cookie": {
     "message": "This site uses only essential authentication cookies. No tracking or advertising cookies are used.",

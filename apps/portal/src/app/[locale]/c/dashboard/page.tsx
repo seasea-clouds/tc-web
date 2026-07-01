@@ -39,11 +39,11 @@ function DashboardContent() {
         </Link>
 
         <Link
-          href={`/${locale}/c/dashboard/billing`}
+          href={`/${locale}/c/me/subscription`}
           className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:border-[#D4AF37] transition-colors"
         >
-          <h3 className="font-semibold text-[#1B365D] mb-1">{t('billing')}</h3>
-          <p className="text-sm text-gray-500">{t('billingDesc')}</p>
+          <h3 className="font-semibold text-[#1B365D] mb-1">{t('subscription')}</h3>
+          <p className="text-sm text-gray-500">{t('manageSubscriptionDesc')}</p>
         </Link>
       </div>
     </div>

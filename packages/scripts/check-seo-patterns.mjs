@@ -46,7 +46,6 @@ const PORTAL_AUTH_ROUTES = [
   '/c/login/',
   '/c/register/',
   '/c/dashboard/',
-  '/c/dashboard/billing/',
   '/c/dashboard/reports/',
   '/c/me/',
   '/c/me/reports/',

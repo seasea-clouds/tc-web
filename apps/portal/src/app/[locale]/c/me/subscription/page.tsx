@@ -5,6 +5,17 @@ import { useState, useEffect } from 'react';
 import { useAuth } from '@trade/ui';
 import Link from 'next/link';
 
+const PLAN_LABELS: Record<string, string> = {
+  monthly: 'planMonthly',
+  yearly: 'planYearly',
+};
+
+const STATUS_LABELS: Record<string, string> = {
+  active: 'statusActive',
+  canceled: 'statusCanceled',
+  past_due: 'statusPastDue',
+};
+
 export default function SubscriptionPage() {
   const t = useT('Report');
   const locale = useTradeLocale();
@@ -22,6 +33,9 @@ export default function SubscriptionPage() {
       })
       .catch(() => setLoading(false));
   }, [user]);
+
+  const planLabel = (plan: string) => t(PLAN_LABELS[plan.toLowerCase()] || plan);
+  const statusLabel = (status: string) => t(STATUS_LABELS[status.toLowerCase()] || status);
 
   if (isLoading) return <Loading />;
   if (!user) return <NotLoggedIn />;
@@ -45,11 +59,11 @@ export default function SubscriptionPage() {
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 space-y-4">
             <div className="flex justify-between items-center">
               <span className="text-gray-500">{t('plan')}</span>
-              <span className="font-semibold text-primary-navy">{sub.plan}</span>
+              <span className="font-semibold text-primary-navy">{planLabel(sub.plan)}</span>
             </div>
             <div className="flex justify-between items-center">
               <span className="text-gray-500">{t('status')}</span>
-              <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${sub.status === 'active' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>{sub.status}</span>
+              <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${sub.status === 'active' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>{statusLabel(sub.status)}</span>
             </div>
             {sub.current_period_start && (
               <div className="flex justify-between items-center">

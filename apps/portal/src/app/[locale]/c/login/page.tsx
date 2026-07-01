@@ -29,7 +29,7 @@ export default function LoginPage() {
     setLoading(true);
     try {
       await login(email, password, rememberMe, turnstileToken);
-      window.location.href = `/${locale}/c/dashboard`;
+      window.location.href = `/${locale}/c/me`;
     } catch (err: any) {
       setError(err.message || t('errorInvalid'));
     } finally {

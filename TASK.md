@@ -43,19 +43,52 @@
 
 ## ✅ P2 — Portal UI label 修复（已完成）
 
-**已完成：**
-1. 新增 `Auth.agreeToPrivacyError` key 到 48 个语言文件
-2. 修复 login/register 页面硬编码 ternary → 改用 `t('agreeToPrivacyError')`
-3. 添加 15 个 GACC 品类标签 + 1 个 Trademark 品类到 `LEGIT_ENGLISH`
-4. 添加 `Auth.agreeToPrivacyError` 到 `check-i18n-keys.mjs` 的 IGNORE_FALLBACK_KEYS
-5. 运行 CI 验证：check-translations ✅ / check-i18n-keys ✅ / check-hardcoded ✅
-
 ## ✅ P3 — Worker Proxy JSON 边缘案例修复（已完成）
 
-**诊断结果：**
-- 主站 Worker 的 `/api/` 路由正常工作（所有 API 端点返回 JSON 而非 HTML）
-- Portal 前端所有 API 调用使用相对路径 `fetch('/api/...')`，经 Worker `/api/` 路由正确代理
-- 唯一问题：`/en/c/api/...` 路径经由 `/c/` 路由代理到 portal 时保留了 locale 前缀，导致 portal 返回 404 HTML
+## ✅ P4 — Portal 404 排查（已完成）
+
+## ✅ P5 — Portal CTA 修复（已完成）
+
+## ✅ P6 — i18n CI 优化（已完成）
+
+## ✅ P7 — 翻译任务提交（已完成）
+
+## ✅ P8 — 部署验证记录（已完成）
+
+---
+
+## Issue 1 ✅ — 价格显示统一（formatPrice）
+
+**问题：** 价格显示不一致 — 部分使用 formatPrice (Intl.NumberFormat)，部分硬编码（$0 / $500+），不同 locale 显示不统一
 
 **修复：**
-- 在 `proxyToPortal()` 中检测 `/c/api/` 模式，自动剥离 locale 前缀，正确映射到 portal 的 `/api/` 端点
+- **Site PackageCards.tsx**: 3 个价格 key（basicPriceFrom/advancedPriceFrom/premiumPriceFrom）改用 `{price}` 模板插值 + `Intl.NumberFormat(locale, { style: 'currency', currency: 'USD', minimumFractionDigits: 0 })`
+- **Site 48 locale files**: hardcoded 价格（`$500`, `500 美元`, `500$`, `1 500$` 等各国格式）→ 替换为 `{price}` 占位符
+- **Portal page.tsx**: freePrice/professionalPrice → `formatPrice(0)` / `formatPrice(500)+`
+- **Portal pricing/page.tsx**: 同上
+
+## Issue 2 ✅ — 订阅连续性（webhook 合并）
+
+**问题：** 用户续订时 Creem 创建新 sub_xxx ID，webhook 在 D1 创建新记录，导致订阅周期重叠
+
+**修复：** `handleSubscriptionCreated` 中，当 `provider_subscription_id` 未匹配时，先查该 user_id 是否有 active 订阅：
+- 有 → 更新现有记录的 period（延长相同时长），更新 `provider_subscription_id`
+- 无 → 正常创建新记录
+
+## Issue 3 ✅ — 68 个 i18n 翻译警告已消除
+
+**问题：** `Auth.agreeToPrivacyError` 在所有 47 个非英文 locale 中保留英文文本
+
+**修复：**
+- 通过 translate-tool 分两批提交翻译（v2: 31 语言, v3: 16 语言）
+- 合并翻译结果到 47 个 locale 文件
+- 修复意大利语 HTML 实体（`&#39;` → `'`）
+- CI 验证：
+  - check-translations: ✅ 全量核验通过，48 语言无质量问题
+  - check-i18n-keys: ✅ 全部通过
+  - check-hardcoded: ✅ No hardcoded English
+
+## 部署
+
+- commit `14b0d65` → CF Pages auto-build → deployment `d3a10a46` (Active)
+- 已验证：pricing 页面格式正确、login 页面翻译生效、PackageCards 价格插值正常

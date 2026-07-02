@@ -55,6 +55,20 @@ Portal 通过主站边缘 Worker 代理到 `/{locale}/c/*` 路径访问。
 ### 5. 静态资源代理
 主站 Worker 将 HTML 中的 `/_next/static/*` 重写为 `/c/_next/static/*`，然后代理到 portal 独立域名取资源。
 
+## ⚠️ CF Pages Secrets 更新策略
+
+### 教训：secret put 不够，必须 delete + recreate
+
+2026-07-02 更新 Creem API Key 时发现：
+1. `wrangler pages secret put` 报 Success 但实际未更新值（旧 key 仍然有效）
+2. 必须先 `wrangler pages secret delete` 再 `wrangler pages secret put`
+3. 随后必须**触发新的 deployment** 让新 secret 生效（旧 deployment 绑定旧 secret）
+4. GitHub auto-build 生成的新 deployment 才能读取到新 secret
+
+### 故障诊断
+- debug-creem 端点是验证 CF Pages 环境变量的最佳工具
+- `apiKeyPrefix` 输出可快速确认当前生效的是哪个 key
+
 ## 进度记录
 
 - **2026-05-23~25:** 项目迁入 monorepo，基础架构
@@ -62,3 +76,4 @@ Portal 通过主站边缘 Worker 代理到 `/{locale}/c/*` 路径访问。
 - **2026-05-27:** Worker 代理从 compli-service 改为 c/
 - **2026-06-04:** 修复硬编码英文 + 流水线 + 表单跳转 + 文档更新
 - **2026-06-28:** i18n 全面完工：rules.ts 全模块国际化 + 48 语言翻译完成 + CI 全绿。更新 NOTES.md 清理已解决项。
+- **2026-07-02:** Creem API key 更新为 `creem_test_4Xkla1XafsXmqUQ3x1fsrk`，debug-creem 端点验证通过（200 OK）。废弃 CF Pages 项目 `sinotradecompliance` + `compli-service` 已删除。

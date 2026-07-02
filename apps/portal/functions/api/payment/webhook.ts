@@ -487,7 +487,7 @@ async function handleSubscriptionCancelled(
 
   try {
     await env.DB.prepare(
-      `UPDATE subscriptions SET status = 'cancelled' WHERE provider_subscription_id = ?`
+      `UPDATE subscriptions SET status = 'canceled' WHERE provider_subscription_id = ?`
     ).bind(subId).run();
     console.log(`subscription.cancelled: updated sub ${subId} to cancelled`);
   } catch (err) {

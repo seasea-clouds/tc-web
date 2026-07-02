@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { useTradeLocale } from './TranslationProvider';
 import { usePathname } from 'next/navigation';
 import { LOCALES, LOCALE_NAMES, LOCALE_FLAG_CODES } from './constants';
@@ -47,7 +48,14 @@ export default function LanguageSwitcher({
   const ctxLocale = useTradeLocale();
   const locale = propLocale || ctxLocale || 'en';
   const pathname = usePathname();
-  const searchParams = typeof window !== 'undefined' ? new URLSearchParams(window.location.search).toString() : '';
+  const [searchParams, setSearchParams] = useState('');
+
+  // After hydration, read query params from the actual URL
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setSearchParams(new URLSearchParams(window.location.search).toString());
+    }
+  }, []);
 
   const currentDisplayName = localeToName(locale, localeNames);
 

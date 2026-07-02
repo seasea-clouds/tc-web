@@ -92,3 +92,75 @@
 
 - commit `14b0d65` → CF Pages auto-build → deployment `d3a10a46` (Active)
 - 已验证：pricing 页面格式正确、login 页面翻译生效、PackageCards 价格插值正常
+
+---
+
+## Issues — 用户报告的问题
+
+### Issue A 🔴 — 报告页翻译 + 语言切换问题
+
+**问题 1a:** 报告页 `useEffect` 依赖数组为 `[id]`，切换语言时不刷新报告内容
+**问题 1b:** LanguageSwitcher SSR 中 `window.location.search` 未定义，语言切换链接丢失 query params
+
+**修复方案：**
+1a. 报告页 page.tsx useEffect 依赖数组改为 `[id, locale]`)
+1b. LanguageSwitcher 改用 `useSearchParams()` 替代 `window.location.search`
+
+**涉及文件：**
+- `apps/portal/src/app/[locale]/c/report/page.tsx`（1 行变更）
+- `packages/ui/src/LanguageSwitcher.tsx`（~5 行变更）
+
+---
+
+### Issue B 🔴 — 订阅状态显示 cancelled
+
+**状态：2026-07-02 已修复部署** ✅
+
+- **已修复：** webhook `handleSubscriptionCancelled` 中 `'cancelled'` → `'canceled'`（匹配前端 `STATUS_LABELS` key）
+- **已修复：** 订阅 API query 改为优先返回 active 订阅（`ORDER BY CASE WHEN status='active' THEN 0 ELSE 1 END`）
+- **已修复：** D1 脏数据 `cancelled` → `canceled`
+- 无需再次操作
+
+---
+
+### Issue C 🟡 — Label 表单选项破折号
+
+**问题 3a:** zh.json 中 3 个选项 key 使用 `——` 而非 `：`
+- `noNeedTesting`: "否——需要实验室测试"
+- `yesLabelArtwork`: "是的——带有完整的实验室报告"
+- `noNeedOne`: "不——需要一个"
+
+**问题 3b:** 其他 52 处 `——` 分布在 glossary/描述中（暂不动）
+
+**修复方案：** 修改 3 个 key × 48 语言文件
+
+**涉及文件：** `apps/portal/messages/*.json`（48 文件）
+
+---
+
+### Issue D 🔴 — 免费结果页"类别"字段未翻译
+
+**问题 4a:** 5/6 模块 free-result 使用 hardcoded English 的 `CATEGORY_LABELS[...]`
+
+| 模块 | 当前 | 修复方案 |
+|------|------|---------|
+| GACC ✅ | `t(`gaccCat_${...}_label`)` | 无需修改 |
+| CCC ❌ | `CATEGORY_LABELS[...]` | 改为 `t(`catLabel_${...}`)` |
+| NMPA ❌ | `CATEGORY_LABELS[...]` | 同上 |
+| Cross-Border ❌ | `CATEGORY_LABELS[...]` | 同上 |
+| Trademark ❌ | `CATEGORY_LABELS[...]` | 同上 |
+| Label ❌ | `CATEGORY_LABELS[...]` | 同上 |
+
+**问题 4c:** 其他模块同样检查，其他字段（产品名、risk level 等）已正常不需要改
+
+**涉及文件：** 5 × check-client.tsx
+
+---
+
+## 部署清单
+
+1. 报告页 locale 依赖 + LanguageSwitcher SSR
+2. Label 3 个选项破折号（48 语言）
+3. 5 个模块 free-result 类别翻译
+4. 全部 CI 验证通过后推送
+5. 验证线上状态

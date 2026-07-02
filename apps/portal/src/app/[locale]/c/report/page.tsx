@@ -126,7 +126,7 @@ function ReportContent() {
         setError(err.message);
         setLoading(false);
       });
-  }, [id]);
+  }, [id, locale]);
 
   if (loading) {
     return (

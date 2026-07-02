@@ -79,13 +79,13 @@ export default function LoginPage() {
             />
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-start gap-2 p-3 rounded-md border border-gray-100">
             <input
               type="checkbox"
               id="remember"
               checked={rememberMe}
               onChange={(e) => setRememberMe(e.target.checked)}
-              className="rounded border-gray-300"
+              className="mt-0.5 rounded border-gray-300"
             />
             <label htmlFor="remember" className="text-sm text-gray-600">{t('rememberMe')}</label>
           </div>

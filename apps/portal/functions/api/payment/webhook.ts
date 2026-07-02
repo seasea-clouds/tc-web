@@ -314,12 +314,26 @@ async function handleSubscriptionFromCheckout(
     ).bind(subId).first();
 
     if (!existing && userId) {
-      const newId = crypto.randomUUID();
-      await env.DB?.prepare(
-        `INSERT OR IGNORE INTO subscriptions (id, user_id, plan, status, provider_subscription_id)
-         VALUES (?, ?, ?, 'active', ?)`
-      ).bind(newId, userId, planId, subId).run();
-      console.log(`checkout.completed: created subscription ${subId} for user ${userId}`);
+      // Check if user already has an active subscription — merge instead of duplicate
+      const activeSub = await env.DB?.prepare(
+        "SELECT id FROM subscriptions WHERE user_id = ? AND status = 'active' ORDER BY created_at DESC LIMIT 1"
+      ).bind(userId).first();
+
+      if (activeSub) {
+        // Merge: update existing subscription with new provider_subscription_id
+        const oldId = (activeSub as any).id;
+        console.log(`checkout.completed: merging new sub ${subId} into existing sub ${oldId}`);
+        await env.DB?.prepare(
+          `UPDATE subscriptions SET provider_subscription_id = ?, status = 'active' WHERE id = ?`
+        ).bind(subId, oldId).run();
+      } else {
+        const newId = crypto.randomUUID();
+        await env.DB?.prepare(
+          `INSERT OR IGNORE INTO subscriptions (id, user_id, plan, status, provider_subscription_id)
+           VALUES (?, ?, ?, 'active', ?)`
+        ).bind(newId, userId, planId, subId).run();
+        console.log(`checkout.completed: created subscription ${subId} for user ${userId}`);
+      }
     }
   } catch (err) {
     console.error("handleSubscriptionFromCheckout error:", err);

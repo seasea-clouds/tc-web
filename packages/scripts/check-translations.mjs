@@ -760,6 +760,13 @@ const SKIP_CHAR_CHECK_PATTERNS = [
   /[Ee]mergency[Ss]cenario\d+Basis$/,
   /cbViability$/,
   /safety_of_it_equipment/,
+  // CCC profile/standard keys: technical codes must stay Latin
+  /cccProfile/,
+  /cccStandard/,
+  // Lab scientific terms: loanwords that remain Latin
+  /^lab_/,
+  // Email: stays Latin in all languages
+  /emailLabel/,
 ];
 
 // ============================================================

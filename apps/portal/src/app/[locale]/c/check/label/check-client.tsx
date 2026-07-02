@@ -276,7 +276,7 @@ export default function LabelCheckClient() {
 
               <div className="grid grid-cols-2 gap-3 mb-4">
                 <div className="bg-gray-50 rounded-lg p-3"><p className="text-xs text-gray-500">{t('resultProduct')}</p><p className="text-sm font-semibold mt-0.5">{input["productName"]}</p></div>
-                <div className="bg-gray-50 rounded-lg p-3"><p className="text-xs text-gray-500">{t('resultCategory')}</p><p className="text-sm font-semibold mt-0.5">{CATEGORY_LABELS[input["category"] as keyof typeof CATEGORY_LABELS] || input["category"]}</p></div>
+                <div className="bg-gray-50 rounded-lg p-3"><p className="text-xs text-gray-500">{t('resultCategory')}</p><p className="text-sm font-semibold mt-0.5">{t(`catLabel_${input["category"]}`) || input["category"]}</p></div>
                 <div className="bg-gray-50 rounded-lg p-3"><p className="text-xs text-gray-500">{t('complianceNeeded')}</p><p className="text-sm font-semibold mt-0.5">{freeData.requiresCompliance ? t('complianceYes') : t('complianceNo')}</p></div>
               </div>
 

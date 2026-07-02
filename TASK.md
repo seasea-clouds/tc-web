@@ -1,166 +1,164 @@
-# TASK.md — Trade Web
+# TASK.md — 全量 i18n 修复计划
 
-## 🔴 P0 — Creem 支付修复
+## 总览
 
-**根因确认：** Creem test API 返回 **401 Invalid API Key**，两个本地存储的 API key 都已无效。
-
-### 已完成的修复
-
-| # | 状态 | 任务 | 说明 |
-|---|------|------|------|
-| S1 | ✅ 完成 | 同步 portal .env | `CREEM_API_KEY` 已统一为 master key |
-| S2 | ✅ 完成 | 添加 debug-creem 端点 | `trade-web-portal.pages.dev/api/debug-creem` 可用 |
-| S3 | ✅ 完成 | 更新 CF Pages secrets | `trade-web-portal` + `compli-service` 均更新 |
-| S4 | ✅ 完成 | 触发 CF Pages 部署 | Git push → GitHub auto-build |
-| S5 | ✅ 完成 | 验证 debug-creem | 端点工作，返回 Creem 401 Invalid API Key |
-
-### ⚠️ 重要发现
-
-**1. 两个 Creem API key 都无效**
-- Master key (`creem_test_7VkMeyR8z46jiGObBfffTE`) → 401
-- Portal key (`creem_test_4Xkla1XafsXmqUQ3x1fsrk`) → 401
-- 需要：在 Creem Dashboard 生成新的 test API key
-
-**2. ✅ 已删除废弃 CF Pages 项目**
-- `sinotradecompliance` — 已删除
-- `compli-service` — 已删除
-- 主站 Worker `/c/` 路由必须改为指向 `trade-web-portal.pages.dev`
-
-### 待完成子任务
-
-- [x] S6: 在 Creem Dashboard 生成新的 test API key
-- [x] S7: 更新 `~/.openclaw/.env` + `apps/portal/.env` 的 CREEM_API_KEY
-- [x] S8: 更新 CF Pages secrets（仅 `trade-web-portal`）
-- [x] S9: 验证 debug-creem 端点在线上可用（✅ 200 OK 新 Key）
-- [ ] S9b: 验证完整 checkout 支付流程（需人工测试）
+完整排查确认 **6 个模块 × 48 种语言** 存在不同程度的 i18n 问题。根本原因：
+1. **代码 bug**（P0-1）：commit 5a2c5aa 引入了错误的 key 前缀
+2. **数据缺失**（P2-3）：rules.ts 中的 `t()` key 有 ~1042 个有效缺失
+3. **namespace 错位**（P2）：部分 key 在 top-level 而非 Check namespace
+4. **CI 盲区**（P4）：无法检测缺失 key
+5. **无降级机制**（P5）：`buildT` 找不到 key 时直接返回 raw key
 
 ---
 
-## 🟡 P1 — Portal pages.dev 404 问题
+## P0-1 🔴 free-result 类别前缀修复
 
-- `compli-service` 已删除，路由改为 `trade-web-portal.pages.dev`
-- 先处理 Worker 路由更新
+**问题：** commit 5a2c5aa 将 4 个模块的自由结果类别改为 `t(\`catLabel_\${v}\`)`，但只有 Label 模块使用 `catLabel_` 前缀，其他模块使用各自的特定前缀。结果显示为 raw key。
 
-## ✅ P2 — Portal UI label 修复（已完成）
+**需要修改 4 个文件：**
 
-## ✅ P3 — Worker Proxy JSON 边缘案例修复（已完成）
+| 文件 | 当前 | 改为 |
+|------|------|------|
+| `ccc/check-client.tsx:305` | `catLabel_${...}` | `catCcc_${...}` |
+| `nmpa/check-client.tsx:294` | `catLabel_${...}` | `catNmpa_${...}` |
+| `crossborder/check-client.tsx:303` | `catLabel_${...}` | `catCb_${...}` |
+| `trademark/check-client.tsx:304` | `catLabel_${...}` | `catTm_${...}` |
 
-## ✅ P4 — Portal 404 排查（已完成）
-
-## ✅ P5 — Portal CTA 修复（已完成）
-
-## ✅ P6 — i18n CI 优化（已完成）
-
-## ✅ P7 — 翻译任务提交（已完成）
-
-## ✅ P8 — 部署验证记录（已完成）
+- [ ] 完成
 
 ---
 
-## Issue 1 ✅ — 价格显示统一（formatPrice）
+## P0-2 🟡 yesSpecialCosmetics 破折号修复
 
-**问题：** 价格显示不一致 — 部分使用 formatPrice (Intl.NumberFormat)，部分硬编码（$0 / $500+），不同 locale 显示不统一
+**问题：** zh.json 中 `yesSpecialCosmetics = "是的——特殊化妆品"` 使用中文破折号 `——`，应使用冒号 `：`
 
-**修复：**
-- **Site PackageCards.tsx**: 3 个价格 key（basicPriceFrom/advancedPriceFrom/premiumPriceFrom）改用 `{price}` 模板插值 + `Intl.NumberFormat(locale, { style: 'currency', currency: 'USD', minimumFractionDigits: 0 })`
-- **Site 48 locale files**: hardcoded 价格（`$500`, `500 美元`, `500$`, `1 500$` 等各国格式）→ 替换为 `{price}` 占位符
-- **Portal page.tsx**: freePrice/professionalPrice → `formatPrice(0)` / `formatPrice(500)+`
-- **Portal pricing/page.tsx**: 同上
+**修改：** 1 个文件 1 个 key
 
-## Issue 2 ✅ — 订阅连续性（webhook 合并）
+| 文件 | 当前 | 改为 |
+|------|------|------|
+| `apps/portal/messages/zh.json` | `"是的——特殊化妆品"` | `"是的：特殊化妆品"` |
 
-**问题：** 用户续订时 Creem 创建新 sub_xxx ID，webhook 在 D1 创建新记录，导致订阅周期重叠
-
-**修复：** `handleSubscriptionCreated` 中，当 `provider_subscription_id` 未匹配时，先查该 user_id 是否有 active 订阅：
-- 有 → 更新现有记录的 period（延长相同时长），更新 `provider_subscription_id`
-- 无 → 正常创建新记录
-
-## Issue 3 ✅ — 68 个 i18n 翻译警告已消除
-
-**问题：** `Auth.agreeToPrivacyError` 在所有 47 个非英文 locale 中保留英文文本
-
-**修复：**
-- 通过 translate-tool 分两批提交翻译（v2: 31 语言, v3: 16 语言）
-- 合并翻译结果到 47 个 locale 文件
-- 修复意大利语 HTML 实体（`&#39;` → `'`）
-- CI 验证：
-  - check-translations: ✅ 全量核验通过，48 语言无质量问题
-  - check-i18n-keys: ✅ 全部通过
-  - check-hardcoded: ✅ No hardcoded English
-
-## 部署
-
-- commit `14b0d65` → CF Pages auto-build → deployment `d3a10a46` (Active)
-- 已验证：pricing 页面格式正确、login 页面翻译生效、PackageCards 价格插值正常
+- [ ] 完成
 
 ---
 
-## Issues — 用户报告的问题
+## P0-3 🟡 验证 CI + 构建 + 部署
 
-### Issue A 🔴 — 报告页翻译 + 语言切换问题
-
-**问题 1a:** 报告页 `useEffect` 依赖数组为 `[id]`，切换语言时不刷新报告内容
-**问题 1b:** LanguageSwitcher SSR 中 `window.location.search` 未定义，语言切换链接丢失 query params
-
-**修复方案：**
-1a. 报告页 page.tsx useEffect 依赖数组改为 `[id, locale]`)
-1b. LanguageSwitcher 改用 `useSearchParams()` 替代 `window.location.search`
-
-**涉及文件：**
-- `apps/portal/src/app/[locale]/c/report/page.tsx`（1 行变更）
-- `packages/ui/src/LanguageSwitcher.tsx`（~5 行变更）
+- [ ] 运行 CI 检查（check-translations / check-i18n-keys / check-hardcoded）
+- [ ] 构建 portal + site + blog
+- [ ] commit & push
+- [ ] 确认 CF Pages 部署成功
 
 ---
 
-### Issue B 🔴 — 订阅状态显示 cancelled
+## P1 🔴 补全 en.json Check namespace（~1042 key）
 
-**状态：2026-07-02 已修复部署** ✅
+**背景：** 6 个模块的 rules.ts 使用 `buildT(locale)` 调用 `t("key")`，但 `buildT` 只查找 `locale.json.Check` namespace。大量 key 要么完全不存在，要么在 top-level。
 
-- **已修复：** webhook `handleSubscriptionCancelled` 中 `'cancelled'` → `'canceled'`（匹配前端 `STATUS_LABELS` key）
-- **已修复：** 订阅 API query 改为优先返回 active 订阅（`ORDER BY CASE WHEN status='active' THEN 0 ELSE 1 END`）
-- **已修复：** D1 脏数据 `cancelled` → `canceled`
-- 无需再次操作
+### 1a — 将 top-level key 移入 Check namespace
+
+以下 key 存在于 en.json 的 top-level 但 buildT() 的 Check namespace 找不到：
+
+| 模块 | Top-level key 数量 | 示例 |
+|------|-------------------|------|
+| CCC | ~26 | `cccRequiredDoc_0~6`, `cccProfile_*_riskReason`, `cccDetailedTimeline`, `cccLabGuide` |
+| GACC | ~21 | `gaccProfile_*_riskReason`, `gaccStandards` 等 |
+| Label | ~40 | `labelAllergen_*`, `labelReqDoc_chineseDesign`, `labelReqDoc_cfs` 等 |
+| NMPA | ~7 | 少量 |
+| Crossborder | ~2 | |
+| Trademark | ~14 | `tmCompetitiveAnalysis` 等 |
+
+**方案：** 用 Python 脚本复制所有 top-level 模块前缀 key 到 `Check` 子对象中，不动原有的 top-level 引用（其他代码可能依赖）。
+
+### 1b — 为完全缺失的 key 编写英文文本
+
+以下 key 在 en.json 完全不存在（任何层级都没有）：
+
+| 模块 | 完全缺失 | 示例 |
+|------|---------|------|
+| NMPA | ~132 | `nmpaProfile_*_riskReason`, `nmpaTimeline_*`, `nmpaMarket_*`, `nmpaHorizon_*`, `nmpaCost_*` 等 |
+| CCC | ~117 | `cccChannel_*`, `cccCost_*`, `cccCompetitiveAnalysis` 等 |
+| GACC | ~281 | `gaccProfile_*_riskReason`, `common_issue_*`, `fta_*` 等 |
+| Label | ~140 | `labelAllergen_*`, `labelChannel_*`, `labelCost_design_*`, `labelCompetitiveAnalysis` 等 |
+| Crossborder | ~144 | `cbChannel_*`, `cbCost_*`, `cbCustomsDoc_*` 等 |
+| Trademark | ~118 | `tmChannel_*`, `tmCost_*`, `tmCompetitiveAnalysis` 等 |
+
+**方案：** 为每个模块创建一个 Python 脚本：
+1. 解析 rules.ts 提取所有 `t("key")` 调用
+2. 对比 en.json 筛出缺失
+3. 对短 key（CATEGORY_LABELS 类型），用 `snake_case → Title Case` 转换
+4. 对专业 key（riskReason 等），手动补充短英文文本
+5. 结果写入 en.json Check namespace
+
+**优先级：** 先做影响最大的 NMPA + CCC（用户正在测试的模块），再做其他 4 个。
+
+- [ ] 1a: 复制 top-level key 到 Check namespace
+- [ ] 1b: 编写 NMPA 缺失 key
+- [ ] 1c: 编写 CCC 缺失 key
+- [ ] 1d: 编写其他 4 模块缺失 key
 
 ---
 
-### Issue C 🟡 — Label 表单选项破折号
+## P2 🟡 translate-tool 翻译 47 语言
 
-**问题 3a:** zh.json 中 3 个选项 key 使用 `——` 而非 `：`
-- `noNeedTesting`: "否——需要实验室测试"
-- `yesLabelArtwork`: "是的——带有完整的实验室报告"
-- `noNeedOne`: "不——需要一个"
-
-**问题 3b:** 其他 52 处 `——` 分布在 glossary/描述中（暂不动）
-
-**修复方案：** 修改 3 个 key × 48 语言文件
-
-**涉及文件：** `apps/portal/messages/*.json`（48 文件）
+- [ ] 将 P1 补全后的 en.json 作为源，提交翻译
+- [ ] 合并翻译结果到 47 个 locale 文件
+- [ ] CI 验证
 
 ---
 
-### Issue D 🔴 — 免费结果页"类别"字段未翻译
+## P3 🟡 CI 改进
 
-**问题 4a:** 5/6 模块 free-result 使用 hardcoded English 的 `CATEGORY_LABELS[...]`
+### 3a — check-t-keys.mjs（新增脚本）
+扫描所有 `.ts`/`.tsx` 中的 `t("static_key")` 调用，验证 key 在 en.json 对应 namespace 中存在。
 
-| 模块 | 当前 | 修复方案 |
-|------|------|---------|
-| GACC ✅ | `t(`gaccCat_${...}_label`)` | 无需修改 |
-| CCC ❌ | `CATEGORY_LABELS[...]` | 改为 `t(`catLabel_${...}`)` |
-| NMPA ❌ | `CATEGORY_LABELS[...]` | 同上 |
-| Cross-Border ❌ | `CATEGORY_LABELS[...]` | 同上 |
-| Trademark ❌ | `CATEGORY_LABELS[...]` | 同上 |
-| Label ❌ | `CATEGORY_LABELS[...]` | 同上 |
+**检测覆盖：**
+- `t("cccProfile_electronics_riskReason")` → 查 `en.json.Check.cccProfile_electronics_riskReason`
+- `t("cccRequiredDoc_0")` → 查 `en.json.Check.cccRequiredDoc_0`
 
-**问题 4c:** 其他模块同样检查，其他字段（产品名、risk level 等）已正常不需要改
+**不检测：**
+- 动态 key `t(\`catLabel_${v}\`)` — 需要独立的前缀验证
 
-**涉及文件：** 5 × check-client.tsx
+### 3b — 动态 key 前缀验证
+扫描 `t(\`prefix_${var}\`)` 模式，提取 prefix，与 locale 文件中的 key 前缀交叉验证。
+
+### 3c — buildT 开发环境警告
+在 `buildT` 中，当 key 缺失时输出 `console.warn("[i18n] Missing key: …")`
+
+- [ ] 3a: check-t-keys.mjs
+- [ ] 3b: 动态前缀验证（可选）
+- [ ] 3c: buildT 警告
+
+---
+
+## P4 🟢 buildT en.json 降级
+
+**问题：** `buildT` 在 key 不存在时直接返回 raw key。改进使其降级到 en.json 的值。
+
+**修改 `packages/ui/src/TranslationProvider.tsx` 的 `useT`：**
+当前：`return (typeof value === 'string' ? value : fallback) ?? key;`
+改为：如果是生产环境且 value 不存在，查找硬编码的 en 数据作为最后 fallback。
+
+- [ ] 完成
 
 ---
 
 ## 部署清单
 
-1. 报告页 locale 依赖 + LanguageSwitcher SSR
-2. Label 3 个选项破折号（48 语言）
-3. 5 个模块 free-result 类别翻译
-4. 全部 CI 验证通过后推送
-5. 验证线上状态
+- [ ] P0-1+P0-2: 提交修复代码
+- [ ] P0-3: 验证 CI + 部署
+- [ ] P1: 分模块补 key + 翻译 47 语言
+- [ ] P3: CI 改进
+- [ ] P4: buildT 降级
+
+---
+
+## 当前状态
+
+```
+P0-1: ⬜ P0-2: ⬜ P0-3: ⬜
+P1a: ⬜ P1b: ⬜ P1c: ⬜ P1d: ⬜
+P2:  ⬜
+P3a: ⬜ P3b: ⬜ P3c: ⬜
+P4:  ⬜
+```

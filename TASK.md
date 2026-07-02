@@ -24,7 +24,7 @@
 | `crossborder/check-client.tsx:303` | `catLabel_${...}` | `catCb_${...}` |
 | `trademark/check-client.tsx:304` | `catLabel_${...}` | `catTm_${...}` |
 
-- [ ] 完成
+- [x] 完成（commit b99e670 → CF Pages 585daf10 Active）
 
 ---
 
@@ -38,7 +38,7 @@
 |------|------|------|
 | `apps/portal/messages/zh.json` | `"是的——特殊化妆品"` | `"是的：特殊化妆品"` |
 
-- [ ] 完成
+- [x] 完成
 
 ---
 
@@ -156,7 +156,7 @@
 ## 当前状态
 
 ```
-P0-1: ⬜ P0-2: ⬜ P0-3: ⬜
+P0-1: ✅ P0-2: ✅ P0-3: ⬜
 P1a: ⬜ P1b: ⬜ P1c: ⬜ P1d: ⬜
 P2:  ⬜
 P3a: ⬜ P3b: ⬜ P3c: ⬜

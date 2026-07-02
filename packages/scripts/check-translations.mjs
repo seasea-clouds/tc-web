@@ -152,6 +152,37 @@ const IGNORE_FALLBACK_KEYS = new Set([
   'Check.labelRiskNote_cost', 'Check.labelRiskDim_cost',
   'Check.labelRiskDim_additive',
   'Check.gaccTimeline_label_name',
+  // CCC standard/technical codes — scientific terms, abbreviations, standard numbers
+  'Check.cccProfile_electronics_test_1', 'Check.cccProfile_electronics_test_2',
+  'Check.cccProfile_home_appliance_test_2',
+  'Check.cccProfile_it_equipment_test_1', 'Check.cccProfile_lighting_test_2', 'Check.cccProfile_lighting_test_3',
+  'Check.cccProfile_medical_test_1', 'Check.cccProfile_toy_test_3',
+  'Check.cccProfile_medical_cert_1', 'Check.cccProfile_it_equipment_test_3',
+  'Check.cccStandard_lighting',
+  // Portal (flat keys): CCC standard/technical codes
+  'cccProfile_electronics_test_0', 'cccProfile_electronics_test_1', 'cccProfile_electronics_test_2',
+  'cccProfile_home_appliance_test_0', 'cccProfile_home_appliance_test_2',
+  'cccProfile_it_equipment_test_0', 'cccProfile_it_equipment_test_1', 'cccProfile_it_equipment_test_3',
+  'cccProfile_lighting_test_0', 'cccProfile_lighting_test_2', 'cccProfile_lighting_test_3',
+  'cccProfile_medical_test_0', 'cccProfile_medical_test_1', 'cccProfile_medical_test_2',
+  'cccProfile_toy_test_2', 'cccProfile_toy_test_3',
+  'cccProfile_medical_cert_1',
+  'cccProfile_lighting_reject_0_problem',
+  'cccStandard_lighting',
+  // Portal: label/scientific terms — keep English
+  'Check.standard_label', 'Check.labelNutr_protein', 'Check.labelNutr_sodium',
+  'Check.lab_melamine', 'Check.lab_mycotoxins',
+  'Check.labelAllergen_crustacea', 'Check.labelField_blank', 'Check.labelField_allergens',
+  'Check.cccProfile_toy_test_3', 'Check.cccProfile_medical_cert_1',
+  // Portal (flat keys): label/scientific terms
+  'standard_label', 'labelNutr_protein', 'labelNutr_sodium',
+  'lab_melamine', 'lab_mycotoxins',
+  'labelAllergen_crustacea', 'labelField_blank', 'labelField_allergens',
+  // Portal: tariff/label ranges — keep English technical format
+  'Check.labelTariff_mfn', 'Check.labelTariff_vat',
+  // Portal (flat keys): tariff/label ranges
+  'labelTariff_mfn', 'labelTariff_vat',
+  'tbd_label',
   // Check: standard codes, abbreviations, scientific terms — keep English
   'Check.cnipa_npc', 'Check.china_rohs_2', 'Check.douyin_global',
   'Check.gb_7718_2011_rev_2025', 'Check.mofcom_gacc', 'Check.ndrc_mofcom_2020',
@@ -268,6 +299,12 @@ const IGNORE_FALLBACK_VALUES = new Set([
   'GB 7718 / GB 28050',
   // 价格（保留数字格式）
   '$0', '$1.99', '$9.9', '$500+', '$500-2,000',
+  // 成本范围（不应翻译的数值格式）
+  '$300-1,500', '$800-5,000', '$5,000+',
+  // 税率/百分比（所有语言保持相同格式）
+  '5-20%', '9-13%',
+  // 通用缩写（所有语言保持英文）
+  'TBD', 'N/A',
 ]);
 
 const NUMBER_KEYS = new Set([
@@ -506,6 +543,10 @@ const ENGLISH_RESIDUAL_ALLOW = new Set([
   'Horizon', 'Scan', 'Assessment', 'Matrix', 'Risk',
   'Can', 'Tin', 'Package',
   'notarized', 'LOW',
+  // 第十一批残留豁免（Portal 翻译残留 — Reports, SAR, Out, Sign 等）
+  'Reports', 'Out', 'Sign', 'SAR',
+  // 第十二批残留豁免（CCC profile 专业技术词 + TBD）
+  'Chemical', 'radio', 'phthalates', 'flicker', 'Biocompatibility', 'TBD',
 ]);
 
 // ============================================================

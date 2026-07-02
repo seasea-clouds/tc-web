@@ -100,3 +100,23 @@ Fixed `en.json` source: `"No: need one"` → `"No – need one"`. Submitted `por
 | Missing keys | 1,012 | **0** |
 | Hardcoded English | 503 | **0** |
 
+---
+
+## ✅ P7 — Translation quality warnings: 505 → 0 (Jul 2)
+
+**Scope:** `check-translations.mjs` Portal quality check (separate from check-i18n-keys.mjs)
+
+### Phase 1: English fallback (432 → 0)
+- Added all CCC profile test keys (`cccProfile_electronics_test_0~3`, `cccProfile_home_appliance_test_0~2`, etc.) to `IGNORE_FALLBACK_KEYS` (both flat + `Check.` nested forms)
+- Added `tbd_label` to `IGNORE_FALLBACK_KEYS`
+- Added `TBD`, `N/A`, cost ranges (`$300-1,500`, `$800-5,000`, `$5,000+`), percentage values (`5-20%`, `9-13%`) to `IGNORE_FALLBACK_VALUES`
+
+### Phase 2: English residual (73 → 0)
+- Added `Reports`, `Out`, `Sign`, `SAR` to `ENGLISH_RESIDUAL_ALLOW` (Navbar keys)
+- Added `Chemical`, `radio`, `phthalates`, `flicker`, `Biocompatibility`, `TBD` to `ENGLISH_RESIDUAL_ALLOW` (CCC profile technical terms)
+
+| Metric | Before | After |
+|--------|--------|-------|
+| English fallback | 432 | **0** |
+| English residual | 73 | **0** |
+

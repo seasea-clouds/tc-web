@@ -708,6 +708,23 @@ const LEGIT_ENGLISH = new Set([
   'Notification',
   'Registration',
   'Certified',
+  // GACC category labels (data constants with HS codes — stay English)
+  'Alcoholic Beverages (HS 22.03-22.08)',
+  'Non-alcoholic Beverages (HS 22.01-22.02)',
+  'Coffee / Tea (HS 09.01-09.02)',
+  'Canned / Processed Foods (HS 20)',
+  'Sugar / Syrups (HS 17)',
+  'Grains / Flour (HS 10-11)',
+  'Meat Products (HS 02)',
+  'Dairy Products (HS 04)',
+  'Seafood / Aquatic (HS 03)',
+  'Honey / Bee Products (HS 04.09)',
+  'Edible Oils (HS 15)',
+  'Seasonings / Condiments (HS 21.03)',
+  'Nuts / Dried Fruits (HS 08)',
+  'Health / Dietary Supplements (HS 21.06)',
+  // Trademark category labels (data constants)
+  'Beverages',
 ]);
 
 // ─── Check A: Exported data-object display labels ──────────────────────

@@ -133,6 +133,11 @@ const IGNORE_FALLBACK_VALUES = new Set([
   'SinoTrade Compliance', 'you@company.com',
   // Certification marks — always English
   'FCC',
+  // Universal abbreviations — same across all languages
+  'TBD', 'N/A',
+  // Cost & price values — numbers + currency symbols, not translatable
+  '$5,000+', '$500-2,000', '$300-1,500', '$800-5,000',
+  '5-20%', '9-13%',
   // Special = valid in Romanian & Swedish (not English fallback)
   'Special',
 ]);
@@ -271,6 +276,23 @@ const IGNORE_FALLBACK_KEYS = new Set([
   'Check.gb_7718_2011_under_revision',
   'Check.additive_codes',
   'Check.benzo_a_pyrene',
+  // CCC profile test names — technical standard designations (GB/YY/ISO codes)
+  'cccProfile_electronics_test_0',
+  'cccProfile_electronics_test_1',
+  'cccProfile_electronics_test_2',
+  'cccProfile_home_appliance_test_0',
+  'cccProfile_home_appliance_test_2',
+  'cccProfile_it_equipment_test_0',
+  'cccProfile_it_equipment_test_1',
+  'cccProfile_it_equipment_test_3',
+  'cccProfile_lighting_test_0',
+  'cccProfile_lighting_test_2',
+  'cccProfile_lighting_test_3',
+  'cccProfile_medical_test_0',
+  'cccProfile_medical_test_1',
+  'cccProfile_medical_test_2',
+  'cccProfile_toy_test_2',
+  'cccStandard_lighting',
   'Check.additive_review',
   'Check.cbec_retail_import_policy',
   'Check.label_review',

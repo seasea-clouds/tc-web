@@ -1,57 +1,62 @@
 
-> @trade/blog@0.1.0 build
-> node ../../packages/scripts/build-search-index.mjs && rm -rf .next/cache && next build && node ../../packages/scripts/ci-check.mjs --out-dir=out --ci
+> @trade/blog@from ../../VERSION prebuild
+> node ../../packages/scripts/inject-version.mjs
+
+✓ @trade/blog: version → 6.0.0
+
+> @trade/blog@from ../../VERSION build
+> node ../../packages/scripts/build-search-index.mjs && rm -rf .next/cache && next build && node ../../packages/scripts/ci-check.mjs --out-dir=out
 
 Apps discovered: blog, portal, site
 Generating search index for 48 locales...
-  af: 1749 items (6S + 7B + 39F + 1697C)
-  ar: 1749 items (6S + 7B + 39F + 1697C)
-  az: 1749 items (6S + 7B + 39F + 1697C)
-  be: 1749 items (6S + 7B + 39F + 1697C)
-  bg: 1749 items (6S + 7B + 39F + 1697C)
-  bn: 1749 items (6S + 7B + 39F + 1697C)
-  ca: 1749 items (6S + 7B + 39F + 1697C)
-  cs: 1749 items (6S + 7B + 39F + 1697C)
-  da: 1749 items (6S + 7B + 39F + 1697C)
-  de: 1749 items (6S + 7B + 39F + 1697C)
-  el: 1749 items (6S + 7B + 39F + 1697C)
-  en: 1749 items (6S + 7B + 39F + 1697C)
-  es: 1749 items (6S + 7B + 39F + 1697C)
-  fa: 1749 items (6S + 7B + 39F + 1697C)
-  fi: 1749 items (6S + 7B + 39F + 1697C)
-  fr: 1749 items (6S + 7B + 39F + 1697C)
-  he: 1749 items (6S + 7B + 39F + 1697C)
-  hi: 1749 items (6S + 7B + 39F + 1697C)
-  hr: 1749 items (6S + 7B + 39F + 1697C)
-  hu: 1749 items (6S + 7B + 39F + 1697C)
-  hy: 1749 items (6S + 7B + 39F + 1697C)
-  id: 1749 items (6S + 7B + 39F + 1697C)
-  it: 1749 items (6S + 7B + 39F + 1697C)
-  ja: 1749 items (6S + 7B + 39F + 1697C)
-  ka: 1749 items (6S + 7B + 39F + 1697C)
-  ko: 1749 items (6S + 7B + 39F + 1697C)
-  ms: 1749 items (6S + 7B + 39F + 1697C)
-  ne: 1749 items (6S + 7B + 39F + 1697C)
-  nl: 1749 items (6S + 7B + 39F + 1697C)
-  no: 1749 items (6S + 7B + 39F + 1697C)
-  pl: 1749 items (6S + 7B + 39F + 1697C)
-  pt: 1749 items (6S + 7B + 39F + 1697C)
-  ro: 1749 items (6S + 7B + 39F + 1697C)
-  ru: 1749 items (6S + 7B + 39F + 1697C)
-  si: 1749 items (6S + 7B + 39F + 1697C)
-  sk: 1749 items (6S + 7B + 39F + 1697C)
-  sl: 1749 items (6S + 7B + 39F + 1697C)
-  sq: 1749 items (6S + 7B + 39F + 1697C)
-  sr: 1749 items (6S + 7B + 39F + 1697C)
-  sv: 1749 items (6S + 7B + 39F + 1697C)
-  sw: 1749 items (6S + 7B + 39F + 1697C)
-  ta: 1749 items (6S + 7B + 39F + 1697C)
-  th: 1749 items (6S + 7B + 39F + 1697C)
-  tr: 1749 items (6S + 7B + 39F + 1697C)
-  uk: 1749 items (6S + 7B + 39F + 1697C)
-  ur: 1749 items (6S + 7B + 39F + 1697C)
-  vi: 1749 items (6S + 7B + 39F + 1697C)
-  zh: 1749 items (6S + 7B + 39F + 1697C)
+  af: 1754 items (6S + 7B + 39F + 1702C)
+  ar: 1754 items (6S + 7B + 39F + 1702C)
+  az: 1754 items (6S + 7B + 39F + 1702C)
+  be: 1754 items (6S + 7B + 39F + 1702C)
+  bg: 1754 items (6S + 7B + 39F + 1702C)
+  bn: 1754 items (6S + 7B + 39F + 1702C)
+  ca: 1754 items (6S + 7B + 39F + 1702C)
+  cs: 1754 items (6S + 7B + 39F + 1702C)
+  da: 1754 items (6S + 7B + 39F + 1702C)
+  de: 1754 items (6S + 7B + 39F + 1702C)
+  el: 1754 items (6S + 7B + 39F + 1702C)
+  en: 1755 items (6S + 7B + 39F + 1703C)
+  es: 1754 items (6S + 7B + 39F + 1702C)
+  fa: 1754 items (6S + 7B + 39F + 1702C)
+  fi: 1754 items (6S + 7B + 39F + 1702C)
+  fr: 1754 items (6S + 7B + 39F + 1702C)
+  he: 1754 items (6S + 7B + 39F + 1702C)
+  hi: 1754 items (6S + 7B + 39F + 1702C)
+  hr: 1754 items (6S + 7B + 39F + 1702C)
+  hu: 1754 items (6S + 7B + 39F + 1702C)
+  hy: 1754 items (6S + 7B + 39F + 1702C)
+  id: 1754 items (6S + 7B + 39F + 1702C)
+  it: 1754 items (6S + 7B + 39F + 1702C)
+  ja: 1754 items (6S + 7B + 39F + 1702C)
+  ka: 1754 items (6S + 7B + 39F + 1702C)
+  ko: 1754 items (6S + 7B + 39F + 1702C)
+  ms: 1754 items (6S + 7B + 39F + 1702C)
+  ne: 1754 items (6S + 7B + 39F + 1702C)
+  nl: 1754 items (6S + 7B + 39F + 1702C)
+  no: 1754 items (6S + 7B + 39F + 1702C)
+  pl: 1754 items (6S + 7B + 39F + 1702C)
+  pt: 1754 items (6S + 7B + 39F + 1702C)
+  ro: 1754 items (6S + 7B + 39F + 1702C)
+  ru: 1754 items (6S + 7B + 39F + 1702C)
+  si: 1754 items (6S + 7B + 39F + 1702C)
+  sk: 1754 items (6S + 7B + 39F + 1702C)
+  sl: 1754 items (6S + 7B + 39F + 1702C)
+  sq: 1754 items (6S + 7B + 39F + 1702C)
+  sr: 1754 items (6S + 7B + 39F + 1702C)
+  sv: 1754 items (6S + 7B + 39F + 1702C)
+  sw: 1754 items (6S + 7B + 39F + 1702C)
+  ta: 1754 items (6S + 7B + 39F + 1702C)
+  th: 1754 items (6S + 7B + 39F + 1702C)
+  tr: 1754 items (6S + 7B + 39F + 1702C)
+  uk: 1754 items (6S + 7B + 39F + 1702C)
+  ur: 1754 items (6S + 7B + 39F + 1702C)
+  vi: 1754 items (6S + 7B + 39F + 1702C)
+  zh: 1755 items (6S + 7B + 39F + 1703C)
 Done.
 Attention: Next.js now collects completely anonymous telemetry regarding usage.
 This information is used to shape Next.js' roadmap and prioritize features.
@@ -61,15 +66,15 @@ https://nextjs.org/telemetry
 ▲ Next.js 16.2.6 (Turbopack)
 
   Creating an optimized production build ...
-✓ Compiled successfully in 2.7s
+✓ Compiled successfully in 2.2s
   Running TypeScript ...
-  Finished TypeScript in 2.8s ...
+  Finished TypeScript in 2.5s ...
   Collecting page data using 6 workers ...
   Generating static pages using 6 workers (0/434) ...
   Generating static pages using 6 workers (108/434) 
   Generating static pages using 6 workers (216/434) 
   Generating static pages using 6 workers (325/434) 
-✓ Generating static pages using 6 workers (434/434) in 2.2s
+✓ Generating static pages using 6 workers (434/434) in 2.9s
   Finalizing page optimization ...
 
 Route (app)
@@ -101,7 +106,7 @@ Route (app)
 ═══════════════════════════════════════════════
 
 
-▶ check-seo-patterns.mjs --ci
+▶ check-seo-patterns.mjs 
 
 📁 site/
 
@@ -110,26 +115,26 @@ Route (app)
 📁 portal/
 
 ==================================================
-📊 结果: 169 通过, 0 失败
+📊 结果: 163 通过, 0 失败
 
 ✅ check-seo-patterns.mjs 完成
 
-▶ check-hardcoded-domain.mjs --ci
+▶ check-hardcoded-domain.mjs 
 ✅ 未发现硬编码的 *.pages.dev 域名引用
 
-▶ check-hardcoded.mjs apps/blog/src --ci
+▶ check-hardcoded.mjs apps/blog/src
 🔍 Scanning for hardcoded English text in JSX/TSX...
 
 ✅ No hardcoded English text found.
 
-▶ check-console.mjs --ci
-📁 扫描 201 个文件
+▶ check-console.mjs 
+📁 扫描 199 个文件
 ==================================================
-📊 结果: 211 通过, 0 失败
+📊 结果: 209 通过, 0 失败
 
 ✅ check-console.mjs 完成
 
-▶ check-rtl.mjs --ci
+▶ check-rtl.mjs 
 
 📁 site/
 
@@ -142,21 +147,21 @@ Route (app)
 
 ✅ check-rtl.mjs 完成
 
-▶ check-map-key.mjs --ci
-📁 扫描 167 个 TSX 文件
+▶ check-map-key.mjs 
+📁 扫描 164 个 TSX 文件
 ==================================================
-📊 结果: 167 通过, 0 失败
+📊 结果: 164 通过, 0 失败
 
 ✅ check-map-key.mjs 完成
 
-▶ check-jsonld.mjs --ci
+▶ check-jsonld.mjs 
 📁 扫描 24 个含 JSON-LD 的文件
 ==================================================
 📊 结果: 81 通过, 0 失败
 
 ✅ check-jsonld.mjs 完成
 
-▶ check-md-format.mjs --ci
+▶ check-md-format.mjs 
 
 ═══════════════════════════════════════════════
   Markdown 格式质量检查（精细化语言策略）
@@ -166,7 +171,7 @@ Route (app)
   扫描文件: 336
 
 
-▶ check-locale-prefix.mjs --ci
+▶ check-locale-prefix.mjs 
 
 ═══════════════════════════════════════════════
   路由 locale 前缀检测 (CI-4)
@@ -175,7 +180,7 @@ Route (app)
 ✅ 未发现缺少 locale 前缀的 href
 
 
-▶ check-hreflang.mjs --dir=out --skip-pattern=404,_not-found --ci
+▶ check-hreflang.mjs --dir=out --skip-pattern=404,_not-found
 🔍 统一 hreflang 检查
 
 📦 模式: SSG 输出目录检查
@@ -187,7 +192,7 @@ Route (app)
 
 ✅ hreflang 全部检查通过
 
-▶ check-seo-output.mjs --out-dir=out --ci
+▶ check-seo-output.mjs --out-dir=out
 
 🔍 SEO 输出检查: /root/projects/trade/web/apps/blog/out
 
@@ -204,7 +209,7 @@ Route (app)
 
 ✅ 全量核验通过！48 种语言无质量问题。
 
-▶ check-i18n-keys.mjs --ci --skip-portal --ci
+▶ check-i18n-keys.mjs --ci --skip-portal
 🔑 i18n key 完整性检查
 
 📦 SITE (0 missing, 0 extra, 0 hardcoded):
@@ -218,7 +223,7 @@ Route (app)
 📊 总计: 0 缺失 + 0 多余 + NaN 硬编码英文
 ✅ 所有 i18n key 完整，无硬编码英文
 
-▶ check-i18n-coverage.mjs --ci
+▶ check-i18n-coverage.mjs 
 
 📊 UI 包
    en.json: 98 键
@@ -327,58 +332,58 @@ Route (app)
    平均: 100.0%
 
 📊 Portal
-   en.json: 2381 键
+   en.json: 2397 键
 
-   af  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   ar  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   az  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   be  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   bg  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   bn  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   ca  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   cs  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   da  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   de  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   el  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   es  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   fa  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   fi  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   fr  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   he  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   hi  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   hr  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   hu  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   hy  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   id  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   it  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   ja  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   ka  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   ko  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   ms  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   ne  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   nl  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   no  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   pl  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   pt  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   ro  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   ru  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   si  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   sk  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   sl  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   sq  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   sr  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   sv  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   sw  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   ta  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   th  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   tr  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   uk  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   ur  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   vi  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
-   zh  ███████████████████░ 93.7%  (2230/2381  缺失:151  多余:0)
+   af  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   ar  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   az  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   be  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   bg  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   bn  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   ca  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   cs  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   da  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   de  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   el  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   es  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   fa  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   fi  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   fr  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   he  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   hi  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   hr  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   hu  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   hy  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   id  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   it  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   ja  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   ka  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   ko  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   ms  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   ne  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   nl  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   no  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   pl  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   pt  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   ro  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   ru  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   si  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   sk  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   sl  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   sq  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   sr  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   sv  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   sw  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   ta  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   th  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   tr  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   uk  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   ur  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   vi  ████████████████████ 99.1%  (2375/2397  缺失:22  多余:0)
+   zh  ████████████████████ 100.0%  (2397/2397  缺失:0  多余:0)
    ─────────────────────────────────────────
-   平均: 93.7%
-   缺失最多的: af(151), ar(151), az(151), be(151), bg(151)
+   平均: 99.1%
+   缺失最多的: af(22), ar(22), az(22), be(22), bg(22)
 
 📊 Blog
    en.json: 58 键
@@ -436,7 +441,7 @@ Route (app)
 ═══════════════════════════════════════════════
   ✅ UI 包: 100.0%
   ✅ Site: 100.0%
-  ❌ Portal: 93.7%
+  ✅ Portal: 99.1%
   ✅ Blog: 100.0%
 ═══════════════════════════════════════════════
 
@@ -446,11 +451,6 @@ Route (app)
 ✅ Deleted 3751 RSC payload files (92.9 MB freed)
 
 ═══════════════════════════════════════════════
-❌ 共 1 项检查失败
-npm error Lifecycle script `build` failed with error:
-npm error code 1
-npm error path /root/projects/trade/web/apps/blog
-npm error workspace @trade/blog@0.1.0
-npm error location /root/projects/trade/web/apps/blog
-npm error command failed
-npm error command sh -c node ../../packages/scripts/build-search-index.mjs && rm -rf .next/cache && next build && node ../../packages/scripts/ci-check.mjs --out-dir=out --ci
+✅ 全部检查通过
+═══════════════════════════════════════════════
+

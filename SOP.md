@@ -54,6 +54,30 @@ cd apps/blog   && npx next build   # 博客站
 - 改 `packages/ui/**` → 触发所有站
 - 改 `packages/scripts/**` → 触发所有站
 
+### ⚠️ Portal Worker 大小限制（Free Plan）
+
+**问题：** Portal 的 Cloudflare Functions（23 个 API 端点，位于 `apps/portal/functions/`）打包后超过 Free Plan 的 **3 MiB 限制**，wrangler CLI 部署失败（`Your Worker exceeded the size limit of 3 MiB`）。
+
+**影响：**
+- Portal 的 API 端点（`/api/auth/*`、`/api/report/*`、`/api/payment/*`、`/api/subscription/*` 等）不可用
+- 用户无法登录、保存报告、处理支付
+
+**部署方法（已有）**
+1. **✅ GitHub auto-build（推荐）：** 推送到 `main` 分支 → CF Pages 自动从 GitHub 构建+部署。CF 环境的构建管线能通过 Worker 大小限制。
+2. **❌ wrangler CLI 直接部署：** 使用 `npx wrangler pages deploy ./out --project-name=trade-web-portal` 会因 Worker 超限失败。
+
+**紧急回滚（如用无 Functions 的部署覆盖了生产环境）：**
+```bash
+# 1. 找到最近的 GitHub auto-build deployment ID
+npx wrangler pages deployment list --project-name=trade-web-portal | grep -v "Failure"
+
+# 2. 通过 CF API 回滚到该 deployment
+curl -s -X POST "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/pages/projects/trade-web-portal/deployments/${DEPLOYMENT_ID}/rollback" \
+  -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}"
+```
+
+**解决方法（规划中）：** 升级到 CF Pro Plan（$5/月）可支持 10 MiB Workers。
+
 ### 主站代理转发
 
 主站 `functions/_middleware.ts`（CF Pages 边缘 Worker）处理子站代理：

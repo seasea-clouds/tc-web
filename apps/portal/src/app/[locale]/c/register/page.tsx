@@ -109,7 +109,7 @@ export default function RegisterPage() {
           </div>
           {privacyError && (
             <p className="text-sm text-red-500">
-              {locale.startsWith('zh') ? '请先同意隐私政策' : 'Please agree to the Privacy Policy'}
+              {t('agreeToPrivacyError')}
             </p>
           )}
 

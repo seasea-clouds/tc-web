@@ -123,7 +123,17 @@ function sanitizeHeaders(headers: Headers): Headers {
 
 async function proxyToPortal(url: URL, request: Request, env?: Record<string, string>): Promise<Response> {
   const upstream = resolveUpstream(url.hostname, 'portal', env);
-  const upstreamPath = url.pathname; // full path including /{locale}/c/...
+  let upstreamPath = url.pathname; // full path including /{locale}/c/...
+
+  // Fix: if the path is under /c/api/, strip locale prefix to reach portal's bare /api/ endpoints.
+  // Normal portal API calls use fetch('/api/...') which goes through the /api/ route, not /c/.
+  // But if a request arrives at /{locale}/c/api/... (via incorrect link or bookmark),
+  // proxy it to /api/... on the portal instead of /{locale}/c/api/... (which returns 404).
+  const apiFromC = upstreamPath.match(/^\/[a-z]{2}\/c\/api\//);
+  if (apiFromC) {
+    upstreamPath = upstreamPath.replace(/^\/[a-z]{2}\/c/, '');
+  }
+
   const upstreamUrl = `${upstream}${upstreamPath}${url.search}`;
 
   let resp = await proxyFetch(upstreamUrl, request);

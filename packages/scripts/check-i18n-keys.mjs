@@ -314,6 +314,8 @@ const IGNORE_FALLBACK_KEYS = new Set([
   'ReportSection.difficulty_easy', 'ReportSection.difficulty_moderate', 'ReportSection.difficulty_difficult',
   // ReportSection: timeline unit labels — data-level values, same across all locales
   'ReportSection.timelineWeeks', 'ReportSection.timelineMonths', 'ReportSection.timelineDays', 'ReportSection.curUsd',
+  // Auth: privacy error text — pending translation via translate-tool
+  'Auth.agreeToPrivacyError',
   // Portal label/text keys — scientific terms, technical designations, loanwords (Google Translate returns same value)
   'standard_label',
   'labelNutr_protein',

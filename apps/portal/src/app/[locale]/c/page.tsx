@@ -186,7 +186,7 @@ export default function HomePage() {
             {/* Expert */}
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 text-center flex flex-col">
               <h3 className="font-bold text-lg text-primary-navy">{tPricing('professional')}</h3>
-              <p className="text-3xl font-bold text-primary-navy my-4">{formatPrice(500)}+</p>
+              <p className="text-3xl font-bold text-primary-navy my-4 whitespace-nowrap">{formatPrice(500).replace(/[.,]00$/,'')}<span className="text-xl">+</span></p>
               <ul className="text-sm text-gray-500 space-y-2 mb-6 flex-1">
                 <li>{tPricing('professionalBullet1')}</li>
                 <li>{tPricing('professionalBullet2')}</li>

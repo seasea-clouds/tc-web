@@ -130,7 +130,7 @@ export default function PricingPage() {
           {/* Professional Service */}
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 text-center flex flex-col">
             <h2 className="text-lg font-semibold text-primary-navy">{t('professional')}</h2>
-            <p className="text-4xl font-bold text-primary-navy my-6">{formatPrice(500)}+</p>
+            <p className="text-4xl font-bold text-primary-navy my-6 whitespace-nowrap">{formatPrice(500).replace(/[.,]00$/,'')}<span className="text-2xl">+</span></p>
             <ul className="text-sm text-gray-500 space-y-3 mb-8 flex-1">
               <li>{t('professionalBullet1')}</li>
               <li>{t('professionalBullet2')}</li>

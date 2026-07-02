@@ -25,10 +25,12 @@ export async function onRequest(context: { request: Request; env: Env }) {
     return Response.json({ error: 'Session expired' }, { status: 401 });
   }
 
-  // Fetch subscription
+  // Fetch subscription — prefer active, fall back to most recent
   const sub = await context.env.DB.prepare(
     `SELECT id, plan, status, provider_subscription_id, current_period_start, current_period_end, created_at
-     FROM subscriptions WHERE user_id = ? ORDER BY created_at DESC LIMIT 1`
+     FROM subscriptions WHERE user_id = ? ORDER BY
+       CASE WHEN status = 'active' THEN 0 ELSE 1 END,
+       created_at DESC LIMIT 1`
   ).bind(user.userId).first();
 
   return Response.json({ subscription: sub || null });

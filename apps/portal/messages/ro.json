@@ -1794,18 +1794,7 @@
     "allFree": "6 module, toate gratuite, fără înregistrare",
     "howItWorksSub": "3 pași de la informațiile despre produs la raportul de conformitate"
   },
-  "Navbar": {
-    "selfCheck": "Autoevaluare",
-    "pricing": "Prețuri",
-    "dashboard": "Tablou de bord",
-    "billing": "Facturare",
-    "login": "Autentificare",
-    "register": "Înregistrare",
-    "report": "Raport",
-    "reports": "Rapoartele mele",
-    "myReports": "My Reports",
-    "signOut": "Sign Out"
-  },
+  "Navbar": {},
   "Pricing": {
     "title": "Prețuri simple",
     "subtitle": "Plătește doar pentru ceea ce ai nevoie. Evaluare gratuită inclusă.",

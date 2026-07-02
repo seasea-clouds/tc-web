@@ -1343,7 +1343,5 @@
     "title": "SinoTrade-nakoming - KI-bystand (EN)",
     "servicesTitle": "Dienste"
   },
-  "Navbar": {
-    "selfCheck": "Selfkontrole"
-  }
+  "Navbar": {}
 }

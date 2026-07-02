@@ -1343,7 +1343,5 @@
     "title": "Naleving van SinoTrade: AI-Assistance (EN)",
     "servicesTitle": "Diensten"
   },
-  "Navbar": {
-    "selfCheck": "Zelfcontrole"
-  }
+  "Navbar": {}
 }

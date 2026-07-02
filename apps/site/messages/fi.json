@@ -1343,7 +1343,5 @@
     "title": "SinoTrade Compliance: AI-Assistance (EN)",
     "servicesTitle": "Palvelut"
   },
-  "Navbar": {
-    "selfCheck": "Itsetarkistus"
-  }
+  "Navbar": {}
 }

@@ -1794,18 +1794,7 @@
     "allFree": "6 modułów, wszystkie za darmo, bez rejestracji",
     "howItWorksSub": "3 kroki od informacji o produkcie do raportu zgodności"
   },
-  "Navbar": {
-    "selfCheck": "Własna kontrola",
-    "pricing": "Cennik",
-    "dashboard": "Panel sterowania",
-    "billing": "Fakturowanie",
-    "login": "Logowanie",
-    "register": "Rejestracja",
-    "report": "Raport",
-    "reports": "Moje raporty",
-    "myReports": "My Reports",
-    "signOut": "Sign Out"
-  },
+  "Navbar": {},
   "Pricing": {
     "title": "Prosty cennik",
     "subtitle": "Płać tylko za to, czego potrzebujesz. W cenie bezpłatna wycena.",

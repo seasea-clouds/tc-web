@@ -1794,18 +1794,7 @@
     "allFree": "6 módulos, todos gratis, sin registro",
     "howItWorksSub": "3 pasos desde la información del producto hasta el informe"
   },
-  "Navbar": {
-    "selfCheck": "Autoevaluación",
-    "pricing": "Precios",
-    "dashboard": "Panel",
-    "billing": "Facturación",
-    "login": "Iniciar sesión",
-    "register": "Registro",
-    "report": "Informe",
-    "reports": "Mis informes",
-    "myReports": "My Reports",
-    "signOut": "Sign Out"
-  },
+  "Navbar": {},
   "Pricing": {
     "title": "Precios sencillos",
     "subtitle": "Paga sólo por lo que necesitas. Evaluación gratuita incluida.",

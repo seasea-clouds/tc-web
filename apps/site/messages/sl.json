@@ -1343,7 +1343,5 @@
     "title": "Skladnost s predpisi SinoTrade: AI-Assistance (EN)",
     "servicesTitle": "Storitve"
   },
-  "Navbar": {
-    "selfCheck": "Samopreverjanje"
-  }
+  "Navbar": {}
 }

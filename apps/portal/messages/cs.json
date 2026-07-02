@@ -1794,18 +1794,7 @@
     "allFree": "6 modulů, vše zdarma, bez registrace",
     "howItWorksSub": "3 kroky od informací o produktu po zprávu o shodě"
   },
-  "Navbar": {
-    "selfCheck": "Vlastní kontrola",
-    "pricing": "Ceny",
-    "dashboard": "Palubní deska",
-    "billing": "Fakturace",
-    "login": "Přihlášení",
-    "register": "Registrace",
-    "report": "Zpráva",
-    "reports": "Moje přehledy",
-    "myReports": "My Reports",
-    "signOut": "Sign Out"
-  },
+  "Navbar": {},
   "Pricing": {
     "title": "Jednoduché stanovení ceny",
     "subtitle": "Plaťte pouze za to, co potřebujete. Hodnocení zdarma v ceně.",

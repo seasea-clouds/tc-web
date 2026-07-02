@@ -1794,18 +1794,7 @@
     "allFree": "6 moduler, alle gratis, ingen registrering",
     "howItWorksSub": "3 trin fra produktinformation til overholdelsesrapport"
   },
-  "Navbar": {
-    "selfCheck": "Selvtest",
-    "pricing": "Prissætning",
-    "dashboard": "Betjeningspanel",
-    "billing": "Fakturering",
-    "login": "Log ind",
-    "register": "Registrer",
-    "report": "Rapport",
-    "reports": "Mine rapporter",
-    "myReports": "My Reports",
-    "signOut": "Sign Out"
-  },
+  "Navbar": {},
   "Pricing": {
     "title": "Enkel prissætning",
     "subtitle": "Betal kun for det, du har brug for. Gratis vurdering inkluderet.",

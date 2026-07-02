@@ -1794,18 +1794,7 @@
     "allFree": "6 modules, allemaal gratis, geen registratie",
     "howItWorksSub": "3 stappen van productinfo naar compliancerapport"
   },
-  "Navbar": {
-    "selfCheck": "Zelfevaluatie",
-    "pricing": "Prijzen",
-    "dashboard": "Bedieningspaneel",
-    "billing": "Facturatie",
-    "login": "Inloggen",
-    "register": "Registratie",
-    "report": "Rapport",
-    "reports": "Mijn rapporten",
-    "myReports": "My Reports",
-    "signOut": "Sign Out"
-  },
+  "Navbar": {},
   "Pricing": {
     "title": "Eenvoudige prijzen",
     "subtitle": "Betaal alleen voor wat u nodig heeft. Gratis taxatie inbegrepen.",

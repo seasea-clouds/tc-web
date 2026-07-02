@@ -1343,7 +1343,5 @@
     "title": "SinoTrade Compliance – AI-Assistance (DE)",
     "servicesTitle": "Dienstleistungen"
   },
-  "Navbar": {
-    "selfCheck": "Selbstkontrolle"
-  }
+  "Navbar": {}
 }

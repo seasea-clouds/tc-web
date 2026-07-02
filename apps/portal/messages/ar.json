@@ -1794,18 +1794,7 @@
     "allFree": "6 وحدات، كلها مجانية، بدون تسجيل",
     "howItWorksSub": "3 خطوات من معلومات المنتج إلى تقرير الامتثال"
   },
-  "Navbar": {
-    "selfCheck": "التحقق الذاتي",
-    "pricing": "تسعير",
-    "dashboard": "لوحة القيادة",
-    "billing": "الفواتير",
-    "login": "تسجيل الدخول",
-    "register": "التسجيل",
-    "report": "تقرير",
-    "reports": "تقاريري",
-    "myReports": "My Reports",
-    "signOut": "Sign Out"
-  },
+  "Navbar": {},
   "Pricing": {
     "title": "تسعير بسيط",
     "subtitle": "ادفع فقط مقابل ما تحتاجه. يشمل التقييم المجاني.",

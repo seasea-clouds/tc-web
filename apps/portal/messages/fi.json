@@ -1794,18 +1794,7 @@
     "allFree": "6 moduulia, kaikki ilmaisia, ei rekisteröitymistä",
     "howItWorksSub": "3 vaihetta tuotetiedoista vaatimustenmukaisuusraporttiin"
   },
-  "Navbar": {
-    "selfCheck": "Itsearviointi",
-    "pricing": "Hinnasto",
-    "dashboard": "Työpöytä",
-    "billing": "Laskutus",
-    "login": "Kirjautuminen",
-    "register": "Rekisteröityminen",
-    "report": "Raportti",
-    "reports": "Omat raportit",
-    "myReports": "My Reports",
-    "signOut": "Sign Out"
-  },
+  "Navbar": {},
   "Pricing": {
     "title": "Yksinkertainen hinnoittelu",
     "subtitle": "Maksa vain siitä mitä tarvitset. Ilmainen arviointi sisältyy hintaan.",

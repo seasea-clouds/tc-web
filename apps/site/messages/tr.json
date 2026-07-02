@@ -1343,7 +1343,5 @@
     "title": "SinoTrade Compliance: Yapay Zeka Yardımı (EN)",
     "servicesTitle": "Hizmetler"
   },
-  "Navbar": {
-    "selfCheck": "Otomatik Kontrol"
-  }
+  "Navbar": {}
 }

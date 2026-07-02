@@ -1343,7 +1343,5 @@
     "title": "مطابقت SinoTrade - AI-Assistance (EN)",
     "servicesTitle": "خدمات"
   },
-  "Navbar": {
-    "selfCheck": "خود چک"
-  }
+  "Navbar": {}
 }

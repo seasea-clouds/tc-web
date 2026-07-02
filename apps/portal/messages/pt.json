@@ -1794,18 +1794,7 @@
     "allFree": "6 módulos, todos grátis, sem cadastro",
     "howItWorksSub": "3 passos da informação do produto ao relatório"
   },
-  "Navbar": {
-    "selfCheck": "Autoavaliação",
-    "pricing": "Preços",
-    "dashboard": "Painel",
-    "billing": "Faturamento",
-    "login": "Entrar",
-    "register": "Cadastro",
-    "report": "Relatório",
-    "reports": "Meus relatórios",
-    "myReports": "My Reports",
-    "signOut": "Sign Out"
-  },
+  "Navbar": {},
   "Pricing": {
     "title": "Preço Simples",
     "subtitle": "Pague apenas pelo que você precisa. Avaliação gratuita incluída.",

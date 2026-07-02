@@ -1794,18 +1794,7 @@
     "allFree": "6 modül, hepsi ücretsiz, kayıt gerekmez",
     "howItWorksSub": "Ürün bilgisinden uyumluluk raporuna 3 adım"
   },
-  "Navbar": {
-    "selfCheck": "Kendi Kendine Kontrol",
-    "pricing": "Fiyatlandırma",
-    "dashboard": "Kontrol Paneli",
-    "billing": "Faturalandırma",
-    "login": "Giriş",
-    "register": "Kayıt",
-    "report": "Rapor",
-    "reports": "Raporlarım",
-    "myReports": "My Reports",
-    "signOut": "Sign Out"
-  },
+  "Navbar": {},
   "Pricing": {
     "title": "Basit Fiyatlandırma",
     "subtitle": "Yalnızca ihtiyacınız olan şey için ödeme yapın. Ücretsiz değerlendirme dahildir.",

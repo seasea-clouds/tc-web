@@ -1343,7 +1343,5 @@
     "title": "Sukladnost SinoTrade: AI-Assistance (EN)",
     "servicesTitle": "Usluge"
   },
-  "Navbar": {
-    "selfCheck": "Samoprovjera"
-  }
+  "Navbar": {}
 }

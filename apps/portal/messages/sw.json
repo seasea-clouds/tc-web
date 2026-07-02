@@ -1794,18 +1794,7 @@
     "allFree": "Moduli 6, zote bure, hakuna usajili",
     "howItWorksSub": "Hatua 3 kutoka kwa maelezo ya bidhaa hadi ripoti ya kufuata"
   },
-  "Navbar": {
-    "pricing": "Bei",
-    "dashboard": "Dashibodi",
-    "billing": "Bililingi",
-    "login": "Ingia",
-    "register": "Jisajili",
-    "report": "Ripoti",
-    "selfCheck": "Kujipima",
-    "reports": "Ripoti Zangu",
-    "myReports": "My Reports",
-    "signOut": "Sign Out"
-  },
+  "Navbar": {},
   "Pricing": {
     "title": "Bei Rahisi",
     "subtitle": "Lipa tu kile unachohitaji. Tathmini ya bure imejumuishwa.",

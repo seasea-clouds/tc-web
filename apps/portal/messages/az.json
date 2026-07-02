@@ -1794,18 +1794,7 @@
     "allFree": "6 modul, hamısı pulsuz, qeydiyyat tələb olunmur",
     "howItWorksSub": "Məhsul məlumatından uyğunluq hesabatına qədər 3 addım"
   },
-  "Navbar": {
-    "selfCheck": "Özünü yoxlama",
-    "pricing": "Qiymətləndirmə",
-    "dashboard": "İdarəetmə paneli",
-    "billing": "Ödəniş",
-    "login": "Giriş",
-    "register": "Qeydiyyat",
-    "report": "Hesabat",
-    "reports": "Hesabatlarım",
-    "myReports": "My Reports",
-    "signOut": "Sign Out"
-  },
+  "Navbar": {},
   "Pricing": {
     "title": "Sadə Qiymətləndirmə",
     "subtitle": "Yalnız sizə lazım olanı ödəyin. Pulsuz qiymətləndirmə daxildir.",

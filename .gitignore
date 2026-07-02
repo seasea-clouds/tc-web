@@ -12,6 +12,9 @@ temp/
 __pycache__/
 *.pyc
 
+# Build artifacts: search indices regenerated per build
+**/public/search-index-*.json
+
 # Blog files merged during site build
 apps/site/public/*/blog/
 apps/site/public/blog/

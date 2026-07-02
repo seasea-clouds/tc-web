@@ -1343,7 +1343,5 @@
     "contactEmail": "david@sinotradecompliance.com",
     "contactLocation": "Jingan District, Shanghai, China"
   },
-  "Navbar": {
-    "selfCheck": "Self-Check"
-  }
+  "Navbar": {}
 }

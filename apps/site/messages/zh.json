@@ -1343,7 +1343,5 @@
     "title": "中贸合规: AI 辅助（EN）",
     "servicesTitle": "服务"
   },
-  "Navbar": {
-    "selfCheck": "自检"
-  }
+  "Navbar": {}
 }

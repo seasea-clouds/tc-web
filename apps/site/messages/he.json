@@ -1343,7 +1343,5 @@
     "title": "תאימות SinoTrade - AI-Assistance (EN)",
     "servicesTitle": "שירותים"
   },
-  "Navbar": {
-    "selfCheck": "בדיקה עצמית"
-  }
+  "Navbar": {}
 }

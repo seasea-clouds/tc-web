@@ -1794,18 +1794,7 @@
     "allFree": "6 modulov, všetko zadarmo, bez registrácie",
     "howItWorksSub": "3 kroky od informácií o produkte po správu o súlade"
   },
-  "Navbar": {
-    "selfCheck": "Vlastná kontrola",
-    "pricing": "Cenník",
-    "dashboard": "Panel",
-    "billing": "Faktúrácia",
-    "login": "Prihlásenie",
-    "register": "Registrácia",
-    "report": "Správa",
-    "reports": "Moje prehľady",
-    "myReports": "My Reports",
-    "signOut": "Sign Out"
-  },
+  "Navbar": {},
   "Pricing": {
     "title": "Jednoduché stanovovanie cien",
     "subtitle": "Plaťte len za to, čo potrebujete. Vrátane bezplatného hodnotenia.",

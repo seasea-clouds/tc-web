@@ -1343,7 +1343,5 @@
     "title": "Συμμόρφωση SinoTrade: AI-Assistance (EN)",
     "servicesTitle": "Υπηρεσίες"
   },
-  "Navbar": {
-    "selfCheck": "Αυτοέλεγχος"
-  }
+  "Navbar": {}
 }

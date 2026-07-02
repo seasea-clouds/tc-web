@@ -1343,7 +1343,5 @@
     "title": "Conformità SinoTrade: Assistenza AI (EN)",
     "servicesTitle": "Servizi"
   },
-  "Navbar": {
-    "selfCheck": "Autocontrollo"
-  }
+  "Navbar": {}
 }

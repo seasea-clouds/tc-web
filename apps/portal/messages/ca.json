@@ -1794,18 +1794,7 @@
     "allFree": "6 mòduls, tots gratuïts, sense registre",
     "howItWorksSub": "3 passos des de la informació del producte fins a l'informe de compliment"
   },
-  "Navbar": {
-    "selfCheck": "Autoavaluació",
-    "pricing": "Preus",
-    "dashboard": "Panell",
-    "billing": "Facturació",
-    "login": "Inici de sessió",
-    "register": "Registre",
-    "report": "Informe",
-    "reports": "Els meus informes",
-    "myReports": "My Reports",
-    "signOut": "Sign Out"
-  },
+  "Navbar": {},
   "Pricing": {
     "title": "Preus senzills",
     "subtitle": "Pagueu només pel que necessiteu. Avaluació gratuïta inclosa.",

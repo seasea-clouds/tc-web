@@ -1794,18 +1794,7 @@
     "allFree": "6 moduler, alla gratis, ingen registrering",
     "howItWorksSub": "3 steg från produktinformation till efterlevnadsrapport"
   },
-  "Navbar": {
-    "selfCheck": "Självbedömning",
-    "pricing": "Prissättning",
-    "dashboard": "Instrumentpanel",
-    "billing": "Fakturering",
-    "login": "Logga in",
-    "register": "Registrering",
-    "report": "Rapport",
-    "reports": "Mina rapporter",
-    "myReports": "My Reports",
-    "signOut": "Sign Out"
-  },
+  "Navbar": {},
   "Pricing": {
     "title": "Enkel prissättning",
     "subtitle": "Betala bara för det du behöver. Gratis bedömning ingår.",

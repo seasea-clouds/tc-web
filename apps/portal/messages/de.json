@@ -1794,18 +1794,7 @@
     "allFree": "6 Module, alle kostenlos, keine Anmeldung",
     "howItWorksSub": "3 Schritte von der Produktinfo zum Compliance-Bericht"
   },
-  "Navbar": {
-    "selfCheck": "Selbstprüfung",
-    "pricing": "Preisgestaltung",
-    "dashboard": "Armaturenbrett",
-    "billing": "Abrechnung",
-    "login": "Anmeldung",
-    "register": "Registrierung",
-    "report": "Bericht",
-    "reports": "Meine Berichte",
-    "myReports": "My Reports",
-    "signOut": "Sign Out"
-  },
+  "Navbar": {},
   "Pricing": {
     "title": "Einfache Preisgestaltung",
     "subtitle": "Zahlen Sie nur für das, was Sie brauchen. Kostenlose Beurteilung inklusive.",

@@ -1794,18 +1794,7 @@
     "allFree": "6 modules, almal gratis, geen registrasie",
     "howItWorksSub": "3 stappe van produkinligting tot voldoeningsverslag"
   },
-  "Navbar": {
-    "selfCheck": "Selftoets",
-    "pricing": "Pryzetting",
-    "dashboard": "Paneel",
-    "billing": "Fakturerings",
-    "login": "Aanmelding",
-    "register": "Registrasie",
-    "report": "Rapport",
-    "reports": "My verslae",
-    "myReports": "My Reports",
-    "signOut": "Sign Out"
-  },
+  "Navbar": {},
   "Pricing": {
     "title": "Eenvoudige prysbepaling",
     "subtitle": "Betaal net vir wat jy nodig het. Gratis assessering ingesluit.",

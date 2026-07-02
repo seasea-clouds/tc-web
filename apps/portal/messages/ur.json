@@ -1794,18 +1794,7 @@
     "allFree": "6 ماڈیولز، سب مفت، کوئی سائن اپ نہیں",
     "howItWorksSub": "پروڈکٹ کی معلومات سے تعمیل رپورٹ تک 3 مراحل"
   },
-  "Navbar": {
-    "selfCheck": "خود جانچ",
-    "pricing": "قیمت",
-    "dashboard": "ڈیش بورڈ",
-    "billing": "بلنگ",
-    "login": "لاگ ان",
-    "register": "رجسٹر",
-    "report": "رپورٹ",
-    "reports": "میری رپورٹس",
-    "myReports": "My Reports",
-    "signOut": "Sign Out"
-  },
+  "Navbar": {},
   "Pricing": {
     "title": "سادہ قیمتوں کا تعین",
     "subtitle": "صرف اس کے لئے ادائیگی کریں جس کی آپ کو ضرورت ہے۔ مفت تشخیص شامل ہے۔",

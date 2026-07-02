@@ -1794,18 +1794,7 @@
     "allFree": "6 modul, mind ingyenes, regisztráció nélkül",
     "howItWorksSub": "3 lépés a termékinformációtól a megfelelőségi jelentésig"
   },
-  "Navbar": {
-    "selfCheck": "Önértékelés",
-    "pricing": "Árazás",
-    "dashboard": "Vezérlőpult",
-    "billing": "Számlázás",
-    "login": "Bejelentkezés",
-    "register": "Regisztráció",
-    "report": "Jelentés",
-    "reports": "Saját jelentéseim",
-    "myReports": "My Reports",
-    "signOut": "Sign Out"
-  },
+  "Navbar": {},
   "Pricing": {
     "title": "Egyszerű árképzés",
     "subtitle": "Csak azért fizessen, amire szüksége van. Ingyenes értékelés tartalmazza.",

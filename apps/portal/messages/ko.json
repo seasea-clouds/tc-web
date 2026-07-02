@@ -1794,18 +1794,7 @@
     "allFree": "6개 모듈，전부 무료, 가입 불필요",
     "howItWorksSub": "제품 정보부터 규정 준수 보고서까지 3단계"
   },
-  "Navbar": {
-    "selfCheck": "셀프 체크",
-    "pricing": "가격",
-    "dashboard": "대시보드",
-    "billing": "청구",
-    "login": "로그인",
-    "register": "등록",
-    "report": "보고서",
-    "reports": "내 보고서",
-    "myReports": "My Reports",
-    "signOut": "Sign Out"
-  },
+  "Navbar": {},
   "Pricing": {
     "title": "단순 가격",
     "subtitle": "필요한 만큼만 비용을 지불하세요. 무료 평가가 포함되어 있습니다.",

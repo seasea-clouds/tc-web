@@ -1794,18 +1794,7 @@
     "allFree": "6 modul, semuanya percuma, tiada pendaftaran",
     "howItWorksSub": "3 langkah dari maklumat produk ke laporan pematuhan"
   },
-  "Navbar": {
-    "selfCheck": "Pengesanan Diri",
-    "pricing": "Harga",
-    "dashboard": "Papan pemuka",
-    "billing": "Pembilhan",
-    "login": "Log masuk",
-    "register": "Pendaftaran",
-    "report": "Laporan",
-    "reports": "Laporan Saya",
-    "myReports": "My Reports",
-    "signOut": "Sign Out"
-  },
+  "Navbar": {},
   "Pricing": {
     "title": "Harga Mudah",
     "subtitle": "Bayar hanya untuk apa yang anda perlukan. Penilaian percuma disertakan.",

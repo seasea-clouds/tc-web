@@ -1794,18 +1794,7 @@
     "allFree": "6つのモジュール，すべて無料、登録不要",
     "howItWorksSub": "製品情報からコンプライアンスレポートまで3ステップ"
   },
-  "Navbar": {
-    "selfCheck": "セルフチェック",
-    "pricing": "料金",
-    "dashboard": "ダッシュボード",
-    "billing": "請求",
-    "login": "ログイン",
-    "register": "登録",
-    "report": "レポート",
-    "reports": "私のレポート",
-    "myReports": "My Reports",
-    "signOut": "Sign Out"
-  },
+  "Navbar": {},
   "Pricing": {
     "title": "シンプルな価格設定",
     "subtitle": "必要な分だけお支払いください。無料査定込み。",

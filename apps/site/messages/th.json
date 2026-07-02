@@ -1343,7 +1343,5 @@
     "title": "SinoTrade Compliance: ความช่วยเหลือ AI (EN)",
     "servicesTitle": "บริการ"
   },
-  "Navbar": {
-    "selfCheck": "ตรวจสอบตัวเอง"
-  }
+  "Navbar": {}
 }

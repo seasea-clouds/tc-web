@@ -1343,7 +1343,5 @@
     "title": "SinoTrade 규정 준수: AI 지원(EN)",
     "servicesTitle": "서비스"
   },
-  "Navbar": {
-    "selfCheck": "자가진단"
-  }
+  "Navbar": {}
 }

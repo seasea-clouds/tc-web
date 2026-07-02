@@ -1794,18 +1794,7 @@
     "allFree": "6 moduler, alle gratis, ingen registrering",
     "howItWorksSub": "3 trinn fra produktinformasjon til samsvarsrapport"
   },
-  "Navbar": {
-    "selfCheck": "Selvverifikasjon",
-    "pricing": "Prissetting",
-    "dashboard": "Kontrollpanel",
-    "billing": "Fakturering",
-    "login": "Logg inn",
-    "register": "Registrering",
-    "report": "Rapport",
-    "reports": "Mine rapporter",
-    "myReports": "My Reports",
-    "signOut": "Sign Out"
-  },
+  "Navbar": {},
   "Pricing": {
     "title": "Enkel prissetting",
     "subtitle": "Betal kun for det du trenger. Gratis vurdering inkludert.",

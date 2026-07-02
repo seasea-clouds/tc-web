@@ -1794,18 +1794,7 @@
     "allFree": "6 מודולים، הכל בחינם, אין צורך בהרשמה",
     "howItWorksSub": "3 שלבים מפרטי המוצר ועד לדוח תאימות"
   },
-  "Navbar": {
-    "selfCheck": "בדיקה עצמית",
-    "pricing": "מחירים",
-    "dashboard": "לוח בקרה",
-    "billing": "חיוב",
-    "login": "התחברות",
-    "register": "הרשמה",
-    "report": "דוח",
-    "reports": "הדוחות שלי",
-    "myReports": "My Reports",
-    "signOut": "Sign Out"
-  },
+  "Navbar": {},
   "Pricing": {
     "title": "תמחור פשוט",
     "subtitle": "שלם רק על מה שאתה צריך. הערכה חינם כלולה.",

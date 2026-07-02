@@ -1343,7 +1343,5 @@
     "title": "SinoTrade コンプライアンス: AI 支援 (EN)",
     "servicesTitle": "サービス"
   },
-  "Navbar": {
-    "selfCheck": "セルフチェック"
-  }
+  "Navbar": {}
 }

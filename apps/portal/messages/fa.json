@@ -1794,18 +1794,7 @@
     "allFree": "۶ ماژول، همه رایگان، بدون ثبت نام",
     "howItWorksSub": "3 مرحله از اطلاعات محصول تا گزارش انطباق"
   },
-  "Navbar": {
-    "selfCheck": "خودارزیابی",
-    "pricing": "قیمت گذاری",
-    "dashboard": "داشبورد",
-    "billing": "صورتحساب",
-    "login": "ورود",
-    "register": "ثبت نام",
-    "report": "گزارش",
-    "reports": "گزارش های من",
-    "myReports": "My Reports",
-    "signOut": "Sign Out"
-  },
+  "Navbar": {},
   "Pricing": {
     "title": "قیمت گذاری ساده",
     "subtitle": "فقط برای آنچه نیاز دارید پرداخت کنید. ارزیابی رایگان گنجانده شده است.",

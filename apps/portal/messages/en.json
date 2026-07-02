@@ -2252,18 +2252,7 @@
     "nmpa_country_japan": "Japanese cosmetics highly trusted by Chinese consumers.",
     "tm_cat_beverage": "Beverages"
   },
-  "Navbar": {
-    "selfCheck": "Self-Check",
-    "pricing": "Pricing",
-    "dashboard": "Dashboard",
-    "billing": "Billing",
-    "login": "Login",
-    "register": "Register",
-    "report": "Report",
-    "reports": "My Reports",
-    "myReports": "My Reports",
-    "signOut": "Sign Out"
-  },
+  "Navbar": {},
   "Breadcrumb": {
     "pricing": "Pricing"
   },

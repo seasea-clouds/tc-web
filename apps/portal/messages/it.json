@@ -1794,18 +1794,7 @@
     "allFree": "6 moduli, tutti gratuiti, senza registrazione",
     "howItWorksSub": "3 passi dalle info prodotto al report di conformità"
   },
-  "Navbar": {
-    "selfCheck": "Autovalutazione",
-    "pricing": "Prezzi",
-    "dashboard": "Cruscotto",
-    "billing": "Fatturazione",
-    "login": "Accesso",
-    "register": "Registrazione",
-    "report": "Rapporto",
-    "reports": "I miei resoconti",
-    "myReports": "My Reports",
-    "signOut": "Sign Out"
-  },
+  "Navbar": {},
   "Pricing": {
     "title": "Prezzi semplici",
     "subtitle": "Paga solo ciò di cui hai bisogno. Valutazione gratuita inclusa.",

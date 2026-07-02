@@ -1794,18 +1794,7 @@
     "allFree": "6 modul, semua gratis, tanpa registrasi",
     "howItWorksSub": "3 langkah dari info produk ke laporan kepatuhan"
   },
-  "Navbar": {
-    "selfCheck": "Pemeriksaan Diri",
-    "pricing": "Harga",
-    "dashboard": "Dasbor",
-    "billing": "Penagihan",
-    "login": "Masuk",
-    "register": "Daftar",
-    "report": "Laporan",
-    "reports": "Laporan Saya",
-    "myReports": "My Reports",
-    "signOut": "Sign Out"
-  },
+  "Navbar": {},
   "Pricing": {
     "title": "Penetapan Harga Sederhana",
     "subtitle": "Bayar hanya untuk apa yang Anda butuhkan. Termasuk penilaian gratis.",

@@ -1794,18 +1794,7 @@
     "allFree": "6 module, të gjitha falas, pa regjistrim",
     "howItWorksSub": "3 hapa nga informacioni i produktit deri te raporti i pajtueshmërisë"
   },
-  "Navbar": {
-    "pricing": "Çmimet",
-    "dashboard": "Paneli i Kontrollit",
-    "billing": "Faturimi",
-    "login": "Hyrja",
-    "register": "Regjistrohu",
-    "report": "Raporti",
-    "selfCheck": "Vetë-verifikim",
-    "reports": "Raportet e mia",
-    "myReports": "My Reports",
-    "signOut": "Sign Out"
-  },
+  "Navbar": {},
   "Pricing": {
     "title": "Çmimi i thjeshtë",
     "subtitle": "Paguani vetëm për atë që ju nevojitet. Vlerësimi falas i përfshirë.",

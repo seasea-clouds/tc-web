@@ -1794,18 +1794,7 @@
     "allFree": "6 modula, svi besplatni, bez registracije",
     "howItWorksSub": "3 koraka od informacija o proizvodu do izvješća o sukladnosti"
   },
-  "Navbar": {
-    "selfCheck": "Samoprocjena",
-    "pricing": "Cjenik",
-    "dashboard": "Nadzorna ploča",
-    "billing": "Naplaćivanje",
-    "login": "Prijava",
-    "register": "Registracija",
-    "report": "Izvještaj",
-    "reports": "Moja izvješća",
-    "myReports": "My Reports",
-    "signOut": "Sign Out"
-  },
+  "Navbar": {},
   "Pricing": {
     "title": "Jednostavna cijena",
     "subtitle": "Plaćajte samo ono što vam je potrebno. Uključena besplatna procjena.",

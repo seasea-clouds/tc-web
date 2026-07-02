@@ -1343,7 +1343,5 @@
     "title": "Cumplimiento de SinoTrade: Asistencia de IA (ES)",
     "servicesTitle": "Servicios"
   },
-  "Navbar": {
-    "selfCheck": "Autocomprobación"
-  }
+  "Navbar": {}
 }

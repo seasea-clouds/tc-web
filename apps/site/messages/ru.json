@@ -1343,7 +1343,5 @@
     "title": "Соответствие требованиям SinoTrade: AI-Assistance (EN)",
     "servicesTitle": "Услуги"
   },
-  "Navbar": {
-    "selfCheck": "Самопроверка"
-  }
+  "Navbar": {}
 }

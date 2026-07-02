@@ -1794,18 +1794,7 @@
     "allFree": "6 mô-đun, tất cả miễn phí, không cần đăng ký",
     "howItWorksSub": "3 bước từ thông tin sản phẩm đến báo cáo tuân thủ"
   },
-  "Navbar": {
-    "selfCheck": "Tự đánh giá",
-    "pricing": "Bảng giá",
-    "dashboard": "Bảng điều khiển",
-    "billing": "Tính tiền",
-    "login": "Đăng nhập",
-    "register": "Đăng ký",
-    "report": "Báo cáo",
-    "reports": "Báo cáo của tôi",
-    "myReports": "My Reports",
-    "signOut": "Sign Out"
-  },
+  "Navbar": {},
   "Pricing": {
     "title": "Định giá đơn giản",
     "subtitle": "Chỉ trả tiền cho những gì bạn cần. Bao gồm đánh giá miễn phí.",

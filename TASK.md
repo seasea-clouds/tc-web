@@ -1,122 +1,53 @@
 # TASK.md — Trade Web
 
-## Current Plan (8 Issues)
+## 🔴 P0 — Creem 支付修复
 
-Priority order: P0 → P1 → P2 → P3 → P4 → P5
+**根因确认：** Creem test API 返回 **401 Invalid API Key**，两个本地存储的 API key 都已无效。
 
-### ✅ P0 — Privacy checkbox with highlight warning
-**Files:** `apps/portal/src/app/[locale]/c/login/page.tsx`, `apps/portal/src/app/[locale]/c/register/page.tsx`
+### 已完成的修复
 
-Replace plain text privacy link with a required checkbox. If submitted unchecked, show red-border highlight warning. Move checkbox above submit button.
+| # | 状态 | 任务 | 说明 |
+|---|------|------|------|
+| S1 | ✅ 完成 | 同步 portal .env | `CREEM_API_KEY` 已统一为 master key |
+| S2 | ✅ 完成 | 添加 debug-creem 端点 | `trade-web-portal.pages.dev/api/debug-creem` 可用 |
+| S3 | ✅ 完成 | 更新 CF Pages secrets | `trade-web-portal` + `compli-service` 均更新 |
+| S4 | ✅ 完成 | 触发 CF Pages 部署 | Git push → GitHub auto-build |
+| S5 | ✅ 完成 | 验证 debug-creem | 端点工作，返回 Creem 401 Invalid API Key |
 
-**Status:** Done
+### ⚠️ 重要发现
 
----
+**1. 两个 Creem API key 都无效**
+- Master key (`creem_test_7VkMeyR8z46jiGObBfffTE`) → 401
+- Portal key (`creem_test_4Xkla1XafsXmqUQ3x1fsrk`) → 401
+- 需要：在 Creem Dashboard 生成新的 test API key
 
-### ✅ P1 — Subscription badge separation & centering
-**Files:** 6 check-client.tsx (ccc/crossborder/gacc/label/nmpa/trademark) + `en.json` + `zh.json`
+**2. ✅ 已删除废弃 CF Pages 项目**
+- `sinotradecompliance` — 已删除
+- `compli-service` — 已删除
+- 主站 Worker `/c/` 路由必须改为指向 `trade-web-portal.pages.dev`
 
-Move "✓ 活跃订阅" badge above "查看完整报告" button, center both as separate components. Fix button label to not duplicate the heading text (add `viewFullReport` key).
+### 待完成子任务
 
-**Status:** Done
-
----
-
-### ✅ P2 — Subscribe-user report persistence
-**Files:** 6 check-client.tsx + `apps/portal/functions/api/report/save.ts`
-
-- **A:** Modified `/api/report/save` to accept `paymentStatus` param (default `'pending'`)
-- **B:** Each check-client subscribed branch now saves report with `paymentStatus: 'completed'`
-- **C:** Reports list API already filters by `'completed'` — no changes needed
-
-**Status:** Done (commit 09583cc)
-
----
-
-### ✅ P3 — "noNeedOne" dropdown 48-language optimization
-**Files:** `apps/portal/messages/en.json` + translation results merged into 47 locale JSONs
-
-Fixed `en.json` source: `"No: need one"` → `"No – need one"`. Submitted `portal-noNeedOne-fix-v1` (47 langs, completed). Results merged into all 47 locale JSON files.
-
-**Status:** Done (commit 9555262)
+- [x] S6: 在 Creem Dashboard 生成新的 test API key
+- [x] S7: 更新 `~/.openclaw/.env` + `apps/portal/.env` 的 CREEM_API_KEY
+- [x] S8: 更新 CF Pages secrets（仅 `trade-web-portal`）
+- [x] S9: 验证 debug-creem 端点在线上可用（✅ 200 OK 新 Key）
+- [ ] S9b: 验证完整 checkout 支付流程（需人工测试）
 
 ---
 
-### ✅ P4 — Subscription renewal billing cycle
-**File:** `apps/portal/functions/api/payment/webhook.ts`
+## 🟡 P1 — Portal pages.dev 404 问题
 
-- `handleSubscriptionCreated`: when updating existing sub, adjusted `current_period_start` to ≥ `old_period_end + 1 day`
-- Added `handleSubscriptionUpdated` handler for Creem's subscription.updated webhook
-- Same period adjustment applied in updated handler
+- `compli-service` 已删除，路由改为 `trade-web-portal.pages.dev`
+- 先处理 Worker 路由更新
 
-**Status:** Done (commit 9555262)
+## 🟡 P2 — 16 个 Portal UI label 翻译合并
 
----
+Portal 新增了 16 个 UI label，需要：
+- 合并到 47 个 locale JSON 文件中
+- 更新 `check-translations.mjs` 和 `check-i18n-keys.mjs` 的 IGNORE 列表
+- 运行 CI 验证
 
-### ✅ P5 — Report page i18n + Reports list i18n
-**Files:** `apps/portal/src/app/[locale]/c/report/page.tsx`
+## 🟡 P3 — Worker Proxy JSON 篡改
 
-- Fixed hardcoded English 'Report not found' → uses `t('notFoundDesc')` i18n key
-- Reports list page already fully translated (51 Report keys in all locales)
-- rebuildResult correctly re-renders reports with current locale via module check functions
-
-**Status:** Done
-
----
-
-## Latest Deploy
-
-- **Commit:** `c417999` — fix: resolve TypeScript errors in nmpa/rules.ts and trademark/rules.ts
-- **CF Deploy:** Site ✅ Active | Portal ✅ Active | Blog ✅ Active
-
----
-
-## ✅ P6 — Bulk translation: eliminate 1,582 i18n issues (Jul 2)
-
-**Scope:** ReportSection (22 keys × 47 langs), misc keys (10 keys), periodStart context fix
-
-### Phase 1: ReportSection keys (22 keys → 1,033 missing fixed)
-- Submitted 4 batches: CCC profiles, Label keys, ReportSection, Report-utils
-- Safely merged, avoiding context errors (Reverted periodStart to HEAD after menstrual-period mistranslation)
-- **Result:** 1,012 missing keys → **0 missing** ✅
-
-### Phase 2: CI exclusion rules
-- Added 16 CCC standard keys + cccStandard_lighting to IGNORE_FALLBACK_KEYS
-- Added TBD, N/A, cost ranges to IGNORE_FALLBACK_VALUES
-- **Result:** -413 false positives removed
-
-### Phase 3: Scientific/technical terms
-- Submitted `portal-misc-keys-v1` (10 keys: standard_label, labelNutr_*, lab_*, labelAllergen_*, labelField_*, cccProfile_*)
-- These are legitimately same-as-English in many languages (loanwords, scientific names)
-- Added to IGNORE_FALLBACK_KEYS
-
-### Phase 4: periodStart context fix
-- Re-submitted as "Subscription period start" to avoid menstrual-period misinterpretation
-- All 46 languages updated correctly (zh already had correct translation)
-- **Result:** 503 hardcoded fallbacks → **0 hardcoded** ✅
-
-| Metric | Before | After |
-|--------|--------|-------|
-| Missing keys | 1,012 | **0** |
-| Hardcoded English | 503 | **0** |
-
----
-
-## ✅ P7 — Translation quality warnings: 505 → 0 (Jul 2)
-
-**Scope:** `check-translations.mjs` Portal quality check (separate from check-i18n-keys.mjs)
-
-### Phase 1: English fallback (432 → 0)
-- Added all CCC profile test keys (`cccProfile_electronics_test_0~3`, `cccProfile_home_appliance_test_0~2`, etc.) to `IGNORE_FALLBACK_KEYS` (both flat + `Check.` nested forms)
-- Added `tbd_label` to `IGNORE_FALLBACK_KEYS`
-- Added `TBD`, `N/A`, cost ranges (`$300-1,500`, `$800-5,000`, `$5,000+`), percentage values (`5-20%`, `9-13%`) to `IGNORE_FALLBACK_VALUES`
-
-### Phase 2: English residual (73 → 0)
-- Added `Reports`, `Out`, `Sign`, `SAR` to `ENGLISH_RESIDUAL_ALLOW` (Navbar keys)
-- Added `Chemical`, `radio`, `phthalates`, `flicker`, `Biocompatibility`, `TBD` to `ENGLISH_RESIDUAL_ALLOW` (CCC profile technical terms)
-
-| Metric | Before | After |
-|--------|--------|-------|
-| English fallback | 432 | **0** |
-| English residual | 73 | **0** |
-
+主站 Worker 代理 `/api/*` 到 Portal 时可能篡改 JSON 响应，浏览器端收到 HTML 而非 JSON。

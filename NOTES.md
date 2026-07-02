@@ -87,6 +87,27 @@
 - 路径：`/root/projects/translate-tool/`（Google Translate 双渠道）
 - Quota 查看：`source /root/projects/.venv/bin/activate && python scripts/translate.py quota`
 
+## ⚠️ Portal Cloudflare Functions Worker 大小限制（2026-07-02）
+
+**问题：** Portal 的 23 个 CF Pages Functions API 端点打包后超过 Free Plan 的 **3 MiB Worker 限制**，wrangler CLI 部署失败。
+
+**影响：** 静态 SSG 页面可正常部署（`mv functions functions.bak && wrangler pages deploy`），但 API 端点（`/api/auth/*`、`/api/report/*`、`/api/payment/*` 等）不可用。
+
+**解决方案（当前）：** 依赖 **GitHub auto-build** 进行 Portal 部署。推送到 `main` 后 CF Pages 自动从 GitHub 构建，能通过 Worker 大小限制。
+
+**临时修复方法（如误用无 Functions 部署覆盖了生产）：**
+```bash
+# 1. 找到 GitHub auto-build 的成功部署（无 "Failure" 标签）
+npx wrangler pages deployment list --project-name=trade-web-portal | grep -v "Failure"
+
+# 2. 通过 CF API 回滚
+curl -s -X POST \
+  "https://api.cloudflare.com/client/v4/accounts/f4c6ce66c3dd07c11547fd610c4bb891/pages/projects/trade-web-portal/deployments/{DEPLOYMENT_ID}/rollback" \
+  -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}"
+```
+
+**长期方案：** 升级 CF Pro Plan（$5/月，10 MiB Worker limit），或精简 Functions 依赖。
+
 ### 环境变量
 所有秘密变量统一在 `~/.openclaw/.env`。CF Pages 已配置：
 

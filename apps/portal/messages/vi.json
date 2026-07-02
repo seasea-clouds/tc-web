@@ -29,7 +29,8 @@
     "securityCheckFailed": "Kiểm tra bảo mật không thành công. Vui lòng thử lại.",
     "securityCheckExpired": "Kiểm tra bảo mật đã hết hạn. Vui lòng thử lại.",
     "agreeToPrivacy": "Tôi đồng ý với",
-    "privacyPolicy": "Chính sách bảo mật"
+    "privacyPolicy": "Chính sách bảo mật",
+    "agreeToPrivacyError": "Please agree to the Privacy Policy"
   },
   "Breadcrumb": {
     "pricing": "Định giá"

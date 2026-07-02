@@ -57,7 +57,8 @@
     "securityCheckFailed": "Security check failed. Please try again.",
     "securityCheckExpired": "Security check expired. Please try again.",
     "agreeToPrivacy": "I agree to the",
-    "privacyPolicy": "Privacy Policy"
+    "privacyPolicy": "Privacy Policy",
+    "agreeToPrivacyError": "Please agree to the Privacy Policy"
   },
   "Dashboard": {
     "myReports": "My Reports",

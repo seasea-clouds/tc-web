@@ -29,7 +29,8 @@
     "securityCheckFailed": "Праверка бяспекі не атрымалася. Калі ласка, паспрабуйце яшчэ раз.",
     "securityCheckExpired": "Тэрмін праверкі бяспекі скончыўся. Калі ласка, паспрабуйце яшчэ раз.",
     "agreeToPrivacy": "Я згодны з",
-    "privacyPolicy": "Палітыка прыватнасці"
+    "privacyPolicy": "Палітыка прыватнасці",
+    "agreeToPrivacyError": "Please agree to the Privacy Policy"
   },
   "Breadcrumb": {
     "pricing": "Цэнаўтварэнне"

@@ -29,7 +29,8 @@
     "securityCheckFailed": "Il controllo di sicurezza non è riuscito. Per favore riprova.",
     "securityCheckExpired": "Il controllo di sicurezza è scaduto. Per favore riprova.",
     "agreeToPrivacy": "Sono d&#39;accordo con",
-    "privacyPolicy": "politica sulla riservatezza"
+    "privacyPolicy": "politica sulla riservatezza",
+    "agreeToPrivacyError": "Please agree to the Privacy Policy"
   },
   "Breadcrumb": {
     "pricing": "Prezzi"

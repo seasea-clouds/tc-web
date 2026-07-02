@@ -29,7 +29,8 @@
     "securityCheckFailed": "La comprovació de seguretat ha fallat. Si us plau, torna-ho a provar.",
     "securityCheckExpired": "El control de seguretat ha caducat. Si us plau, torna-ho a provar.",
     "agreeToPrivacy": "Estic d'acord amb el",
-    "privacyPolicy": "Política de privadesa"
+    "privacyPolicy": "Política de privadesa",
+    "agreeToPrivacyError": "Please agree to the Privacy Policy"
   },
   "Breadcrumb": {
     "pricing": "Preus"

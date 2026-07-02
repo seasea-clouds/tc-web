@@ -29,7 +29,8 @@
     "securityCheckFailed": "নিরাপত্তা পরীক্ষা ব্যর্থ হয়েছে. আবার চেষ্টা করুন.",
     "securityCheckExpired": "নিরাপত্তা চেক মেয়াদ শেষ. আবার চেষ্টা করুন.",
     "agreeToPrivacy": "আমি রাজি",
-    "privacyPolicy": "গোপনীয়তা নীতি"
+    "privacyPolicy": "গোপনীয়তা নীতি",
+    "agreeToPrivacyError": "Please agree to the Privacy Policy"
   },
   "Breadcrumb": {
     "pricing": "মূল্য নির্ধারণ"

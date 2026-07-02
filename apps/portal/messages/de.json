@@ -29,7 +29,8 @@
     "securityCheckFailed": "Sicherheitsüberprüfung fehlgeschlagen. Bitte versuchen Sie es erneut.",
     "securityCheckExpired": "Sicherheitsüberprüfung abgelaufen. Bitte versuchen Sie es erneut.",
     "agreeToPrivacy": "Ich stimme dem zu",
-    "privacyPolicy": "Datenschutzrichtlinie"
+    "privacyPolicy": "Datenschutzrichtlinie",
+    "agreeToPrivacyError": "Please agree to the Privacy Policy"
   },
   "Breadcrumb": {
     "pricing": "Preise"

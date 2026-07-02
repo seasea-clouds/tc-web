@@ -29,7 +29,8 @@
     "securityCheckFailed": "سیکیورٹی چیک ناکام ہوگیا۔ براہ کرم دوبارہ کوشش کریں۔",
     "securityCheckExpired": "سیکیورٹی چیک کی میعاد ختم ہوگئی۔ براہ کرم دوبارہ کوشش کریں۔",
     "agreeToPrivacy": "میں اس سے اتفاق کرتا ہوں۔",
-    "privacyPolicy": "رازداری کی پالیسی"
+    "privacyPolicy": "رازداری کی پالیسی",
+    "agreeToPrivacyError": "Please agree to the Privacy Policy"
   },
   "Breadcrumb": {
     "pricing": "قیمتوں کا تعین"

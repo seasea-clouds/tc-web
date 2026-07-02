@@ -29,7 +29,8 @@
     "securityCheckFailed": "Ο έλεγχος ασφαλείας απέτυχε. Δοκιμάστε ξανά.",
     "securityCheckExpired": "Ο έλεγχος ασφαλείας έληξε. Δοκιμάστε ξανά.",
     "agreeToPrivacy": "συμφωνώ με το",
-    "privacyPolicy": "Πολιτική Απορρήτου"
+    "privacyPolicy": "Πολιτική Απορρήτου",
+    "agreeToPrivacyError": "Please agree to the Privacy Policy"
   },
   "Breadcrumb": {
     "pricing": "Τιμολόγηση"

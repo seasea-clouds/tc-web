@@ -29,7 +29,8 @@
     "securityCheckFailed": "การตรวจสอบความปลอดภัยล้มเหลว โปรดลองอีกครั้ง",
     "securityCheckExpired": "การตรวจสอบความปลอดภัยหมดอายุแล้ว โปรดลองอีกครั้ง",
     "agreeToPrivacy": "ฉันเห็นด้วยกับ",
-    "privacyPolicy": "นโยบายความเป็นส่วนตัว"
+    "privacyPolicy": "นโยบายความเป็นส่วนตัว",
+    "agreeToPrivacyError": "Please agree to the Privacy Policy"
   },
   "Breadcrumb": {
     "pricing": "ราคา"

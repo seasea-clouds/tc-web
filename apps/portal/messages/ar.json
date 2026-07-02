@@ -29,7 +29,8 @@
     "securityCheckFailed": "فشل فحص الأمان. يرجى المحاولة مرة أخرى.",
     "securityCheckExpired": "انتهت صلاحية فحص الأمان. يرجى المحاولة مرة أخرى.",
     "agreeToPrivacy": "أنا أوافق على",
-    "privacyPolicy": "سياسة الخصوصية"
+    "privacyPolicy": "سياسة الخصوصية",
+    "agreeToPrivacyError": "Please agree to the Privacy Policy"
   },
   "Breadcrumb": {
     "pricing": "التسعير"

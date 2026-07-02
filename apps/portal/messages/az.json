@@ -29,7 +29,8 @@
     "securityCheckFailed": "Təhlükəsizlik yoxlanışı alınmadı. Yenidən cəhd edin.",
     "securityCheckExpired": "Təhlükəsizlik yoxlamasının müddəti bitdi. Yenidən cəhd edin.",
     "agreeToPrivacy": "ilə razıyam",
-    "privacyPolicy": "Məxfilik Siyasəti"
+    "privacyPolicy": "Məxfilik Siyasəti",
+    "agreeToPrivacyError": "Please agree to the Privacy Policy"
   },
   "Breadcrumb": {
     "pricing": "Qiymətləndirmə"

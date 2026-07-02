@@ -29,7 +29,8 @@
     "securityCheckFailed": "Помилка перевірки безпеки. Спробуйте ще раз.",
     "securityCheckExpired": "Термін перевірки безпеки минув. Спробуйте ще раз.",
     "agreeToPrivacy": "Я згоден на",
-    "privacyPolicy": "Політика конфіденційності"
+    "privacyPolicy": "Політика конфіденційності",
+    "agreeToPrivacyError": "Please agree to the Privacy Policy"
   },
   "Breadcrumb": {
     "pricing": "Ціноутворення"

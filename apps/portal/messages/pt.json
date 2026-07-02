@@ -29,7 +29,8 @@
     "securityCheckFailed": "A verificação de segurança falhou. Por favor, tente novamente.",
     "securityCheckExpired": "A verificação de segurança expirou. Por favor, tente novamente.",
     "agreeToPrivacy": "Eu concordo com o",
-    "privacyPolicy": "política de Privacidade"
+    "privacyPolicy": "política de Privacidade",
+    "agreeToPrivacyError": "Please agree to the Privacy Policy"
   },
   "Breadcrumb": {
     "pricing": "Preços"

@@ -29,7 +29,8 @@
     "securityCheckFailed": "Проверката за сигурност е неуспешна. Моля, опитайте отново.",
     "securityCheckExpired": "Проверката за сигурност е изтекла. Моля, опитайте отново.",
     "agreeToPrivacy": "Съгласен съм с",
-    "privacyPolicy": "Политика за поверителност"
+    "privacyPolicy": "Политика за поверителност",
+    "agreeToPrivacyError": "Please agree to the Privacy Policy"
   },
   "Breadcrumb": {
     "pricing": "Ценообразуване"

@@ -29,7 +29,8 @@
     "securityCheckFailed": "בדיקת אבטחה נכשלה. אנא נסה שוב.",
     "securityCheckExpired": "פג תוקף בדיקת האבטחה. אנא נסה שוב.",
     "agreeToPrivacy": "אני מסכים ל",
-    "privacyPolicy": "מדיניות פרטיות"
+    "privacyPolicy": "מדיניות פרטיות",
+    "agreeToPrivacyError": "Please agree to the Privacy Policy"
   },
   "Breadcrumb": {
     "pricing": "תמחור"

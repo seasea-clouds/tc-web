@@ -29,7 +29,8 @@
     "securityCheckExpired": "ආරක්ෂක පරීක්ෂාව කල් ඉකුත් විය. කරුණාකර නැවත උත්සාහ කරන්න.",
     "securityCheckFailed": "ආරක්ෂක පරීක්ෂාව අසාර්ථක විය. කරුණාකර නැවත උත්සාහ කරන්න.",
     "agreeToPrivacy": "මම එකඟ වෙමි",
-    "privacyPolicy": "රහස්යතා ප්රතිපත්තිය"
+    "privacyPolicy": "රහස්යතා ප්රතිපත්තිය",
+    "agreeToPrivacyError": "Please agree to the Privacy Policy"
   },
   "Breadcrumb": {
     "pricing": "මිල නියම කිරීම"

@@ -29,7 +29,8 @@
     "securityCheckFailed": "सुरक्षा जांच विफल. कृपया पुन: प्रयास करें।",
     "securityCheckExpired": "सुरक्षा जांच समाप्त हो गई. कृपया पुन: प्रयास करें।",
     "agreeToPrivacy": "मैं करने के लिए सहमत हूं",
-    "privacyPolicy": "गोपनीयता नीति"
+    "privacyPolicy": "गोपनीयता नीति",
+    "agreeToPrivacyError": "Please agree to the Privacy Policy"
   },
   "Breadcrumb": {
     "pricing": "मूल्य निर्धारण"

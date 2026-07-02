@@ -29,7 +29,8 @@
     "securityCheckExpired": "பாதுகாப்பு சோதனை காலாவதியானது. மீண்டும் முயற்சிக்கவும்.",
     "securityCheckFailed": "பாதுகாப்பு சோதனை தோல்வியடைந்தது. மீண்டும் முயற்சிக்கவும்.",
     "agreeToPrivacy": "நான் ஒப்புக்கொள்கிறேன்",
-    "privacyPolicy": "தனியுரிமைக் கொள்கை"
+    "privacyPolicy": "தனியுரிமைக் கொள்கை",
+    "agreeToPrivacyError": "Please agree to the Privacy Policy"
   },
   "Breadcrumb": {
     "pricing": "விலை நிர்ணயம்"

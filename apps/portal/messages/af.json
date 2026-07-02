@@ -29,7 +29,8 @@
     "securityCheckFailed": "Sekuriteitkontrole het misluk. Probeer asseblief weer.",
     "securityCheckExpired": "Sekuriteitkontrole het verval. Probeer asseblief weer.",
     "agreeToPrivacy": "Ek stem in tot die",
-    "privacyPolicy": "Privaatheidsbeleid"
+    "privacyPolicy": "Privaatheidsbeleid",
+    "agreeToPrivacyError": "Please agree to the Privacy Policy"
   },
   "Breadcrumb": {
     "pricing": "Pryse"

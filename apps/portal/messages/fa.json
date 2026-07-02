@@ -29,7 +29,8 @@
     "securityCheckFailed": "بررسی امنیتی انجام نشد. لطفا دوباره امتحان کنید.",
     "securityCheckExpired": "چک امنیتی منقضی شده است. لطفا دوباره امتحان کنید.",
     "agreeToPrivacy": "من موافقم",
-    "privacyPolicy": "سیاست حفظ حریم خصوصی"
+    "privacyPolicy": "سیاست حفظ حریم خصوصی",
+    "agreeToPrivacyError": "Please agree to the Privacy Policy"
   },
   "Breadcrumb": {
     "pricing": "قیمت گذاری"

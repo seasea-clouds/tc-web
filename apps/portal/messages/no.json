@@ -29,7 +29,8 @@
     "securityCheckFailed": "Sikkerhetssjekk mislyktes. Vennligst prøv igjen.",
     "securityCheckExpired": "Sikkerhetssjekken er utløpt. Vennligst prøv igjen.",
     "agreeToPrivacy": "Jeg er enig i",
-    "privacyPolicy": "Personvernerklæring"
+    "privacyPolicy": "Personvernerklæring",
+    "agreeToPrivacyError": "Please agree to the Privacy Policy"
   },
   "Breadcrumb": {
     "pricing": "Prissetting"

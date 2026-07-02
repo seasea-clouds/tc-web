@@ -29,7 +29,8 @@
     "securityCheckFailed": "Güvenlik kontrolü başarısız oldu. Lütfen tekrar deneyin.",
     "securityCheckExpired": "Güvenlik kontrolünün süresi doldu. Lütfen tekrar deneyin.",
     "agreeToPrivacy": "katılıyorum",
-    "privacyPolicy": "Gizlilik Politikası"
+    "privacyPolicy": "Gizlilik Politikası",
+    "agreeToPrivacyError": "Please agree to the Privacy Policy"
   },
   "Breadcrumb": {
     "pricing": "Fiyatlandırma"

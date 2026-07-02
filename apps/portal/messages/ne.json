@@ -29,7 +29,8 @@
     "securityCheckExpired": "सुरक्षा जाँचको म्याद सकियो। कृपया पुन: प्रयास गर्नुहोस्।",
     "securityCheckFailed": "सुरक्षा जाँच असफल भयो। कृपया पुन: प्रयास गर्नुहोस्।",
     "agreeToPrivacy": "म सहमत छु",
-    "privacyPolicy": "गोपनीयता नीति"
+    "privacyPolicy": "गोपनीयता नीति",
+    "agreeToPrivacyError": "Please agree to the Privacy Policy"
   },
   "Breadcrumb": {
     "pricing": "मूल्य निर्धारण"

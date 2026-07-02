@@ -29,7 +29,8 @@
     "securityCheckFailed": "Säkerhetskontrollen misslyckades. Försök igen.",
     "securityCheckExpired": "Säkerhetskontrollen har löpt ut. Försök igen.",
     "agreeToPrivacy": "Jag håller med om",
-    "privacyPolicy": "Sekretesspolicy"
+    "privacyPolicy": "Sekretesspolicy",
+    "agreeToPrivacyError": "Please agree to the Privacy Policy"
   },
   "Breadcrumb": {
     "pricing": "Prissättning"

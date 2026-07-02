@@ -29,7 +29,8 @@
     "securityCheckFailed": "Verificarea de securitate a eșuat. Vă rugăm să încercați din nou.",
     "securityCheckExpired": "Verificarea de securitate a expirat. Vă rugăm să încercați din nou.",
     "agreeToPrivacy": "Sunt de acord cu",
-    "privacyPolicy": "Politica de confidențialitate"
+    "privacyPolicy": "Politica de confidențialitate",
+    "agreeToPrivacyError": "Please agree to the Privacy Policy"
   },
   "Breadcrumb": {
     "pricing": "Prețuri"

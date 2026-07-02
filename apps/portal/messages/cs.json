@@ -29,7 +29,8 @@
     "securityCheckFailed": "Bezpečnostní kontrola se nezdařila. Zkuste to prosím znovu.",
     "securityCheckExpired": "Platnost bezpečnostní kontroly vypršela. Zkuste to prosím znovu.",
     "agreeToPrivacy": "souhlasím s",
-    "privacyPolicy": "Zásady ochrany osobních údajů"
+    "privacyPolicy": "Zásady ochrany osobních údajů",
+    "agreeToPrivacyError": "Please agree to the Privacy Policy"
   },
   "Breadcrumb": {
     "pricing": "Ceny"

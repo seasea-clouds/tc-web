@@ -29,7 +29,8 @@
     "securityCheckFailed": "Turvatarkastus epäonnistui. Yritä uudelleen.",
     "securityCheckExpired": "Turvatarkastus vanhentunut. Yritä uudelleen.",
     "agreeToPrivacy": "Olen samaa mieltä",
-    "privacyPolicy": "Tietosuojakäytäntö"
+    "privacyPolicy": "Tietosuojakäytäntö",
+    "agreeToPrivacyError": "Please agree to the Privacy Policy"
   },
   "Breadcrumb": {
     "pricing": "Hinnoittelu"

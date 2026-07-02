@@ -30,7 +30,7 @@
     "securityCheckExpired": "Sikkerhedstjekket er udløbet. Prøv venligst igen.",
     "agreeToPrivacy": "Jeg er enig i",
     "privacyPolicy": "Privatlivspolitik",
-    "agreeToPrivacyError": "Please agree to the Privacy Policy"
+    "agreeToPrivacyError": "Acceptér venligst fortrolighedspolitikken"
   },
   "Breadcrumb": {
     "pricing": "Prissætning"

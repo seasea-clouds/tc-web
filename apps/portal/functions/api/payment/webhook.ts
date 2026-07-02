@@ -410,13 +410,48 @@ async function handleSubscriptionCreated(
       ).bind(adjustedStart, periodEnd, subId).run();
       console.log(`subscription.active: updated existing sub ${subId}`);
     } else {
-      // Create new
-      const newId = crypto.randomUUID();
-      await env.DB.prepare(
-        `INSERT INTO subscriptions (id, user_id, plan, status, provider_subscription_id, current_period_start, current_period_end)
-         VALUES (?, ?, ?, 'active', ?, ?, ?)`
-      ).bind(newId, dbUserId, planId, subId, periodStart, periodEnd).run();
-      console.log(`subscription.active: created new sub ${subId} for user ${dbUserId}`);
+      // Check if user already has an active subscription — merge instead of duplicate
+      const activeSub = await env.DB.prepare(
+        "SELECT id, current_period_end FROM subscriptions WHERE user_id = ? AND status = 'active' ORDER BY created_at DESC LIMIT 1"
+      ).bind(dbUserId).first();
+
+      if (activeSub) {
+        // Merge: extend the existing subscription's period
+        const oldId = (activeSub as any).id;
+        const oldEnd = (activeSub as any).current_period_end;
+
+        let adjustedEnd = periodEnd;
+        let adjustedStart = periodStart;
+
+        if (oldEnd && periodStart && periodEnd) {
+          const oldEndDate = new Date(oldEnd);
+          const startDate = new Date(periodStart);
+          const endDate = new Date(periodEnd);
+
+          // Calculate the duration of the new subscription
+          const durationMs = endDate.getTime() - startDate.getTime();
+
+          // Extend the old subscription by the same duration
+          const extendedEnd = new Date(oldEndDate.getTime() + durationMs);
+          adjustedEnd = extendedEnd.toISOString().split('T')[0];
+          adjustedStart = new Date(oldEndDate.getTime() + 86400000).toISOString().split('T')[0];
+
+          console.log(`subscription.active: extending sub ${oldId} from ${oldEnd} to ${adjustedEnd}`);
+        }
+
+        await env.DB.prepare(
+          `UPDATE subscriptions SET status = 'active', provider_subscription_id = ?, current_period_start = ?, current_period_end = ? WHERE id = ?`
+        ).bind(subId, adjustedStart, adjustedEnd, oldId).run();
+        console.log(`subscription.active: merged new sub ${subId} into existing sub ${oldId}`);
+      } else {
+        // No active subscription — create new
+        const newId = crypto.randomUUID();
+        await env.DB.prepare(
+          `INSERT INTO subscriptions (id, user_id, plan, status, provider_subscription_id, current_period_start, current_period_end)
+           VALUES (?, ?, ?, 'active', ?, ?, ?)`
+        ).bind(newId, dbUserId, planId, subId, periodStart, periodEnd).run();
+        console.log(`subscription.active: created new sub ${subId} for user ${dbUserId}`);
+      }
     }
   } catch (err) {
     console.error("subscription.active handler error:", err);

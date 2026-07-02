@@ -30,7 +30,7 @@
     "securityCheckFailed": "सुरक्षा जाँच असफल भयो। कृपया पुन: प्रयास गर्नुहोस्।",
     "agreeToPrivacy": "म सहमत छु",
     "privacyPolicy": "गोपनीयता नीति",
-    "agreeToPrivacyError": "Please agree to the Privacy Policy"
+    "agreeToPrivacyError": "कृपया गोपनीयता नीतिमा सहमत हुनुहोस्"
   },
   "Breadcrumb": {
     "pricing": "मूल्य निर्धारण"

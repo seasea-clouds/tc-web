@@ -30,7 +30,7 @@
     "securityCheckExpired": "Pemeriksaan keamanan sudah habis masa berlakunya. Silakan coba lagi.",
     "agreeToPrivacy": "Saya setuju dengan",
     "privacyPolicy": "Kebijakan Privasi",
-    "agreeToPrivacyError": "Please agree to the Privacy Policy"
+    "agreeToPrivacyError": "Harap setujui Kebijakan Privasi"
   },
   "Breadcrumb": {
     "pricing": "Harga"

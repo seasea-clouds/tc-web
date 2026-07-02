@@ -30,7 +30,7 @@
     "securityCheckExpired": "Термін перевірки безпеки минув. Спробуйте ще раз.",
     "agreeToPrivacy": "Я згоден на",
     "privacyPolicy": "Політика конфіденційності",
-    "agreeToPrivacyError": "Please agree to the Privacy Policy"
+    "agreeToPrivacyError": "Будь ласка, погодьтеся з Політикою конфіденційності"
   },
   "Breadcrumb": {
     "pricing": "Ціноутворення"

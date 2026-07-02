@@ -30,7 +30,7 @@
     "securityCheckExpired": "Безбедносна провера је истекла. Покушајте поново.",
     "agreeToPrivacy": "Слажем се са",
     "privacyPolicy": "Политика приватности",
-    "agreeToPrivacyError": "Please agree to the Privacy Policy"
+    "agreeToPrivacyError": "Прихватите Политику приватности"
   },
   "Breadcrumb": {
     "pricing": "Прицинг"

@@ -30,7 +30,7 @@
     "securityCheckExpired": "უსაფრთხოების შემოწმებას ვადა გაუვიდა. გთხოვთ, სცადოთ ხელახლა.",
     "agreeToPrivacy": "მე ვეთანხმები",
     "privacyPolicy": "კონფიდენციალურობის პოლიტიკა",
-    "agreeToPrivacyError": "Please agree to the Privacy Policy"
+    "agreeToPrivacyError": "გთხოვთ დაეთანხმოთ კონფიდენციალურობის პოლიტიკას"
   },
   "Breadcrumb": {
     "pricing": "ფასი"

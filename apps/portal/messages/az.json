@@ -30,7 +30,7 @@
     "securityCheckExpired": "Təhlükəsizlik yoxlamasının müddəti bitdi. Yenidən cəhd edin.",
     "agreeToPrivacy": "ilə razıyam",
     "privacyPolicy": "Məxfilik Siyasəti",
-    "agreeToPrivacyError": "Please agree to the Privacy Policy"
+    "agreeToPrivacyError": "Zəhmət olmasa Məxfilik Siyasəti ilə razılaşın"
   },
   "Breadcrumb": {
     "pricing": "Qiymətləndirmə"

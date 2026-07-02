@@ -30,7 +30,7 @@
     "securityCheckExpired": "Säkerhetskontrollen har löpt ut. Försök igen.",
     "agreeToPrivacy": "Jag håller med om",
     "privacyPolicy": "Sekretesspolicy",
-    "agreeToPrivacyError": "Please agree to the Privacy Policy"
+    "agreeToPrivacyError": "Vänligen godkänn integritetspolicyn"
   },
   "Breadcrumb": {
     "pricing": "Prissättning"

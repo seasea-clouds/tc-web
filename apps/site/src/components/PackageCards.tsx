@@ -4,16 +4,19 @@ import { getNumberedItems } from '@/lib/utils';
 import { WHATSAPP_URL } from '@/lib/constants';
 
 interface PackageCardsProps {
-  t: { (key: string): string; has(key: string): boolean };
+  t: { (key: string, values?: Record<string, string | number>): string; has(key: string): boolean };
   locale: string;
 }
 
 export default function PackageCards({ t, locale }: PackageCardsProps) {
+  const formatPrice = (price: number) =>
+    new Intl.NumberFormat(locale, { style: 'currency', currency: 'USD', minimumFractionDigits: 0 }).format(price);
+
   const packages = [
     {
       name: t('basicName'),
       desc: t('basicDesc'),
-      priceFrom: t('basicPriceFrom'),
+      priceFrom: t('basicPriceFrom', { price: formatPrice(500) }),
       items: getNumberedItems(t, 'basicItems'),
       cta: t('basicCta'),
       popular: false,
@@ -22,7 +25,7 @@ export default function PackageCards({ t, locale }: PackageCardsProps) {
     {
       name: t('advancedName'),
       desc: t('advancedDesc'),
-      priceFrom: t('advancedPriceFrom'),
+      priceFrom: t('advancedPriceFrom', { price: formatPrice(1500) }),
       items: getNumberedItems(t, 'advancedItems'),
       cta: t('advancedCta'),
       popular: true,
@@ -31,7 +34,7 @@ export default function PackageCards({ t, locale }: PackageCardsProps) {
     {
       name: t('premiumName'),
       desc: t('premiumDesc'),
-      priceFrom: t('premiumPriceFrom'),
+      priceFrom: t('premiumPriceFrom', { price: formatPrice(3000) }),
       items: getNumberedItems(t, 'premiumItems'),
       cta: t('premiumCta'),
       popular: false,

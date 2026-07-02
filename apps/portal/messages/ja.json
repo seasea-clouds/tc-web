@@ -30,7 +30,7 @@
     "securityCheckExpired": "セキュリティチェックの有効期限が切れました。もう一度試してください。",
     "agreeToPrivacy": "に同意します",
     "privacyPolicy": "プライバシーポリシー",
-    "agreeToPrivacyError": "Please agree to the Privacy Policy"
+    "agreeToPrivacyError": "プライバシーポリシーに同意してください"
   },
   "Breadcrumb": {
     "pricing": "価格設定"

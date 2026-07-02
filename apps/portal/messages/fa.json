@@ -30,7 +30,7 @@
     "securityCheckExpired": "چک امنیتی منقضی شده است. لطفا دوباره امتحان کنید.",
     "agreeToPrivacy": "من موافقم",
     "privacyPolicy": "سیاست حفظ حریم خصوصی",
-    "agreeToPrivacyError": "Please agree to the Privacy Policy"
+    "agreeToPrivacyError": "لطفاً با سیاست حفظ حریم خصوصی موافقت کنید"
   },
   "Breadcrumb": {
     "pricing": "قیمت گذاری"

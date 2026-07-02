@@ -30,7 +30,7 @@
     "securityCheckExpired": "নিরাপত্তা চেক মেয়াদ শেষ. আবার চেষ্টা করুন.",
     "agreeToPrivacy": "আমি রাজি",
     "privacyPolicy": "গোপনীয়তা নীতি",
-    "agreeToPrivacyError": "Please agree to the Privacy Policy"
+    "agreeToPrivacyError": "অনুগ্রহ করে গোপনীয়তা নীতিতে সম্মত হন"
   },
   "Breadcrumb": {
     "pricing": "মূল্য নির্ধারণ"

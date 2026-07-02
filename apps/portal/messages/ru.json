@@ -30,7 +30,7 @@
     "securityCheckExpired": "Срок проверки безопасности истек. Пожалуйста, попробуйте еще раз.",
     "agreeToPrivacy": "Я согласен на",
     "privacyPolicy": "политика конфиденциальности",
-    "agreeToPrivacyError": "Please agree to the Privacy Policy"
+    "agreeToPrivacyError": "Пожалуйста, согласитесь с Политикой конфиденциальности"
   },
   "Breadcrumb": {
     "pricing": "Цены"

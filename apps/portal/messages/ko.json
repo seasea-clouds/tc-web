@@ -30,7 +30,7 @@
     "securityCheckExpired": "보안 검사가 만료되었습니다. 다시 시도해 주세요.",
     "agreeToPrivacy": "나는 다음에 동의한다.",
     "privacyPolicy": "개인 정보 보호 정책",
-    "agreeToPrivacyError": "Please agree to the Privacy Policy"
+    "agreeToPrivacyError": "개인정보 보호정책에 동의해주세요"
   },
   "Breadcrumb": {
     "pricing": "가격"

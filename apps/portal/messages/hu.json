@@ -30,7 +30,7 @@
     "securityCheckExpired": "A biztonsági ellenőrzés lejárt. Kérjük, próbálja újra.",
     "agreeToPrivacy": "Egyetértek a",
     "privacyPolicy": "Adatvédelmi szabályzat",
-    "agreeToPrivacyError": "Please agree to the Privacy Policy"
+    "agreeToPrivacyError": "Kérjük, fogadja el az Adatvédelmi szabályzatot"
   },
   "Breadcrumb": {
     "pricing": "Árképzés"

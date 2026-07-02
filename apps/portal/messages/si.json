@@ -30,7 +30,7 @@
     "securityCheckFailed": "ආරක්ෂක පරීක්ෂාව අසාර්ථක විය. කරුණාකර නැවත උත්සාහ කරන්න.",
     "agreeToPrivacy": "මම එකඟ වෙමි",
     "privacyPolicy": "රහස්යතා ප්රතිපත්තිය",
-    "agreeToPrivacyError": "Please agree to the Privacy Policy"
+    "agreeToPrivacyError": "කරුණාකර රහස්‍යතා ප්‍රතිපත්තියට එකඟ වන්න"
   },
   "Breadcrumb": {
     "pricing": "මිල නියම කිරීම"

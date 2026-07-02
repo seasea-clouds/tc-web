@@ -30,7 +30,7 @@
     "securityCheckExpired": "Beveiligingscontrole verlopen. Probeer het opnieuw.",
     "agreeToPrivacy": "Ik ga akkoord met de",
     "privacyPolicy": "Privacybeleid",
-    "agreeToPrivacyError": "Please agree to the Privacy Policy"
+    "agreeToPrivacyError": "Ga akkoord met het privacybeleid"
   },
   "Breadcrumb": {
     "pricing": "Prijzen"

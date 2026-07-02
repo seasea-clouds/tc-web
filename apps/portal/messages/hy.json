@@ -30,7 +30,7 @@
     "securityCheckExpired": "Անվտանգության ստուգման ժամկետը լրացել է։ Խնդրում ենք կրկին փորձել:",
     "agreeToPrivacy": "Ես համաձայն եմ",
     "privacyPolicy": "Գաղտնիության քաղաքականություն",
-    "agreeToPrivacyError": "Please agree to the Privacy Policy"
+    "agreeToPrivacyError": "Խնդրում ենք համաձայնել Գաղտնիության քաղաքականությանը"
   },
   "Breadcrumb": {
     "pricing": "Գնագոյացում"

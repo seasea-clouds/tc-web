@@ -30,7 +30,7 @@
     "securityCheckExpired": "انتهت صلاحية فحص الأمان. يرجى المحاولة مرة أخرى.",
     "agreeToPrivacy": "أنا أوافق على",
     "privacyPolicy": "سياسة الخصوصية",
-    "agreeToPrivacyError": "Please agree to the Privacy Policy"
+    "agreeToPrivacyError": "يرجى الموافقة على سياسة الخصوصية"
   },
   "Breadcrumb": {
     "pricing": "التسعير"

@@ -30,7 +30,7 @@
     "securityCheckExpired": "Kontrola bezpieczeństwa wygasła. Spróbuj ponownie.",
     "agreeToPrivacy": "Zgadzam się na",
     "privacyPolicy": "Polityka prywatności",
-    "agreeToPrivacyError": "Please agree to the Privacy Policy"
+    "agreeToPrivacyError": "Proszę zaakceptować Politykę Prywatności"
   },
   "Breadcrumb": {
     "pricing": "Wycena"

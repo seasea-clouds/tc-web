@@ -30,7 +30,7 @@
     "securityCheckExpired": "Проверката за сигурност е изтекла. Моля, опитайте отново.",
     "agreeToPrivacy": "Съгласен съм с",
     "privacyPolicy": "Политика за поверителност",
-    "agreeToPrivacyError": "Please agree to the Privacy Policy"
+    "agreeToPrivacyError": "Моля, съгласете се с Политиката за поверителност"
   },
   "Breadcrumb": {
     "pricing": "Ценообразуване"

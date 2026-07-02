@@ -30,7 +30,7 @@
     "securityCheckExpired": "سیکیورٹی چیک کی میعاد ختم ہوگئی۔ براہ کرم دوبارہ کوشش کریں۔",
     "agreeToPrivacy": "میں اس سے اتفاق کرتا ہوں۔",
     "privacyPolicy": "رازداری کی پالیسی",
-    "agreeToPrivacyError": "Please agree to the Privacy Policy"
+    "agreeToPrivacyError": "براہ کرم رازداری کی پالیسی سے اتفاق کریں۔"
   },
   "Breadcrumb": {
     "pricing": "قیمتوں کا تعین"

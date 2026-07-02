@@ -30,7 +30,7 @@
     "securityCheckExpired": "Sicherheitsüberprüfung abgelaufen. Bitte versuchen Sie es erneut.",
     "agreeToPrivacy": "Ich stimme dem zu",
     "privacyPolicy": "Datenschutzrichtlinie",
-    "agreeToPrivacyError": "Please agree to the Privacy Policy"
+    "agreeToPrivacyError": "Bitte stimmen Sie der Datenschutzerklärung zu"
   },
   "Breadcrumb": {
     "pricing": "Preise"

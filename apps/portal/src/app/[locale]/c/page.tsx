@@ -131,7 +131,7 @@ export default function HomePage() {
             {/* Free */}
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 text-center flex flex-col">
               <h3 className="font-bold text-lg text-primary-navy">{tPricing('free')}</h3>
-              <p className="text-3xl font-bold text-green-600 my-4">{tPricing('freePrice')}</p>
+              <p className="text-3xl font-bold text-green-600 my-4">{formatPrice(0)}</p>
               <ul className="text-sm text-gray-500 space-y-2 mb-6 flex-1">
                 <li>{tPricing('freeBullet1')}</li>
                 <li>{tPricing('freeBullet2')}</li>
@@ -186,7 +186,7 @@ export default function HomePage() {
             {/* Expert */}
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 text-center flex flex-col">
               <h3 className="font-bold text-lg text-primary-navy">{tPricing('professional')}</h3>
-              <p className="text-3xl font-bold text-primary-navy my-4">{tPricing('professionalPrice')}</p>
+              <p className="text-3xl font-bold text-primary-navy my-4">{formatPrice(500)}+</p>
               <ul className="text-sm text-gray-500 space-y-2 mb-6 flex-1">
                 <li>{tPricing('professionalBullet1')}</li>
                 <li>{tPricing('professionalBullet2')}</li>

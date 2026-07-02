@@ -30,7 +30,7 @@
     "securityCheckExpired": "Kiểm tra bảo mật đã hết hạn. Vui lòng thử lại.",
     "agreeToPrivacy": "Tôi đồng ý với",
     "privacyPolicy": "Chính sách bảo mật",
-    "agreeToPrivacyError": "Please agree to the Privacy Policy"
+    "agreeToPrivacyError": "Vui lòng đồng ý với Chính sách quyền riêng tư"
   },
   "Breadcrumb": {
     "pricing": "Định giá"

@@ -30,7 +30,7 @@
     "securityCheckExpired": "การตรวจสอบความปลอดภัยหมดอายุแล้ว โปรดลองอีกครั้ง",
     "agreeToPrivacy": "ฉันเห็นด้วยกับ",
     "privacyPolicy": "นโยบายความเป็นส่วนตัว",
-    "agreeToPrivacyError": "Please agree to the Privacy Policy"
+    "agreeToPrivacyError": "โปรดยอมรับนโยบายความเป็นส่วนตัว"
   },
   "Breadcrumb": {
     "pricing": "ราคา"

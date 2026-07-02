@@ -77,3 +77,4 @@ export async function onRequest(context: { request: Request; env: Env }) {
 }
 // redeploy: creem api key updated july 2
 // redeploy: creem secret recreated july 2
+// redeploy: creem api key recreated and trigger fresh build

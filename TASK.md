@@ -41,13 +41,21 @@
 - `compli-service` 已删除，路由改为 `trade-web-portal.pages.dev`
 - 先处理 Worker 路由更新
 
-## 🟡 P2 — 16 个 Portal UI label 翻译合并
+## ✅ P2 — Portal UI label 修复（已完成）
 
-Portal 新增了 16 个 UI label，需要：
-- 合并到 47 个 locale JSON 文件中
-- 更新 `check-translations.mjs` 和 `check-i18n-keys.mjs` 的 IGNORE 列表
-- 运行 CI 验证
+**已完成：**
+1. 新增 `Auth.agreeToPrivacyError` key 到 48 个语言文件
+2. 修复 login/register 页面硬编码 ternary → 改用 `t('agreeToPrivacyError')`
+3. 添加 15 个 GACC 品类标签 + 1 个 Trademark 品类到 `LEGIT_ENGLISH`
+4. 添加 `Auth.agreeToPrivacyError` 到 `check-i18n-keys.mjs` 的 IGNORE_FALLBACK_KEYS
+5. 运行 CI 验证：check-translations ✅ / check-i18n-keys ✅ / check-hardcoded ✅
 
-## 🟡 P3 — Worker Proxy JSON 篡改
+## ✅ P3 — Worker Proxy JSON 边缘案例修复（已完成）
 
-主站 Worker 代理 `/api/*` 到 Portal 时可能篡改 JSON 响应，浏览器端收到 HTML 而非 JSON。
+**诊断结果：**
+- 主站 Worker 的 `/api/` 路由正常工作（所有 API 端点返回 JSON 而非 HTML）
+- Portal 前端所有 API 调用使用相对路径 `fetch('/api/...')`，经 Worker `/api/` 路由正确代理
+- 唯一问题：`/en/c/api/...` 路径经由 `/c/` 路由代理到 portal 时保留了 locale 前缀，导致 portal 返回 404 HTML
+
+**修复：**
+- 在 `proxyToPortal()` 中检测 `/c/api/` 模式，自动剥离 locale 前缀，正确映射到 portal 的 `/api/` 端点

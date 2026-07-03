@@ -45,12 +45,17 @@ function rewriteNextStatic(html: string, prefix: string): string {
 
   // Revert for <script src> tags: the module system's D() key must match
   // the q() output which uses /_next/static/chunks/{name} (no prefix).
-  // The script tag's registerChunk resolves D(script.src). If we add /c/,
-  // D("/c/_next/static/chunks/{name}") is resolved, but the module system
+  // The script tag's registerChunk resolves D(script.src). If we add a prefix,
+  // D("/{prefix}/_next/static/chunks/{name}") is resolved, but the module system
   // waits for D("/_next/static/chunks/{name}") from its own q() call.
   // Keep <link>, inline scripts, and RSC data prefixed for HTTP requests.
   html = html.replace(
     /(<script[^>]*?src=")\/c\/(_next\/static\/)/g,
+    '$1/$2'
+  );
+  // Same revert for /blog/ prefix (same module system constraint)
+  html = html.replace(
+    /(<script[^>]*?src=")\/blog\/(_next\/static\/)/g,
     '$1/$2'
   );
 
@@ -238,36 +243,40 @@ export async function onRequest(context: { request: Request; next: () => Promise
   const assetResp = await proxySubSiteAsset(url, request, env);
   if (assetResp) return assetResp;
 
-  // ── Portal module system's dynamically loaded chunks ────────────
-  // Turbopack's module system uses a hardcoded `/_next/` base path (t = "/_next/")
-  // in its q() function to generate chunk URLs from "otherChunks" relative paths.
-  // This means dynamically loaded portal chunks appear at:
-  //   /_next/static/chunks/{hash}.js  (without /c/ prefix)
-  // But the actual <script async> tags were rewritten to /c/_next/static/chunks/...
-  // The module system can't find existing script tags (querySelector uses wrong path)
-  // and creates new <script> elements pointing to /_next/static/chunks/...
-  // which would request from the MAIN site (wrong/no content).
-  // Fix: try main site first, fallback to portal proxy.
-  // ── Portal module system's dynamically loaded chunks ────────────
+  // ── Sub-site module system's dynamically loaded chunks ──────────
   // Turbopack module system uses hardcoded /_next/ base path in its q()
   // function, generating /_next/static/chunks/{name}.js. We've reverted
-  // the /c/ prefix on <script src> tags so that async chunks execute
-  // registerChunk and resolve D("/_next/static/...") — matching the key
-  // that the module system's own D(q(e)) creates.
-  // We still need to serve these chunk files from the PORTAL (not main site).
-  // The browser requests them at /_next/static/chunks/..., we proxy to portal.
+  // the /c/ and /blog/ prefixes on <script src> tags so that async chunks
+  // execute registerChunk and resolve D("/_next/static/...") — matching
+  // the key that the module system's own D(q(e)) creates.
+  // We still need to serve these chunk files from the correct upstream.
+  // Try portal first, then blog, then fall through to main site assets.
   if (url.pathname.startsWith('/_next/static/chunks/')) {
     const relativePath = url.pathname.slice('/_next/static/'.length);
-    const upstream = resolveUpstream(url.hostname, 'portal', env);
-    const assetUrl = `${upstream}/_next/static/${relativePath}`;
-    const portalResp = await fetch(assetUrl);
+
+    // Try portal upstream first
+    const portalUpstream = resolveUpstream(url.hostname, 'portal', env);
+    const portalUrl = `${portalUpstream}/_next/static/${relativePath}`;
+    const portalResp = await fetch(portalUrl);
     if (portalResp.ok) {
       const h = sanitizeHeaders(portalResp.headers);
       if (url.pathname.endsWith('.js')) h.set('content-type', 'application/javascript');
       else if (url.pathname.endsWith('.css')) h.set('content-type', 'text/css');
       return new Response(portalResp.body, { status: portalResp.status, headers: h });
     }
-    // Not a portal chunk — fall through to main site's static assets
+
+    // Fallback: try blog upstream
+    const blogUpstream = resolveUpstream(url.hostname, 'blog', env);
+    const blogUrl = `${blogUpstream}/_next/static/${relativePath}`;
+    const blogResp = await fetch(blogUrl);
+    if (blogResp.ok) {
+      const h = sanitizeHeaders(blogResp.headers);
+      if (url.pathname.endsWith('.js')) h.set('content-type', 'application/javascript');
+      else if (url.pathname.endsWith('.css')) h.set('content-type', 'text/css');
+      return new Response(blogResp.body, { status: blogResp.status, headers: h });
+    }
+
+    // Not found on either sub-site — fall through to main site's static assets
   }
 
   // ── Portal proxy (/c/) ─────────────────────────────────────────
@@ -319,6 +328,8 @@ export async function onRequest(context: { request: Request; next: () => Promise
         let html = await resp.text();
         // Rewrite /_next/static/ → /blog/_next/static/ (relative, no absolute domain)
         html = rewriteNextStatic(html, 'blog');
+        // Eagerly initialize __next_f for RSC streaming (same as portal)
+        html = ensureNextF(html);
         // Inject standalone search widget for non-React pages
         html = injectSearchWidget(html);
 

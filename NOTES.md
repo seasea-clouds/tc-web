@@ -27,6 +27,23 @@ build-llms.mjs 的 `getDisplayText()` 对所有 `/c/check/*` 路由统一返回 
 ### 修复
 在 `getDisplayText()` 中添加 `CHECK_LABELS` 映射表，按工具 ID 返回具体名称。
 
+## 2026-07-04 — Worker Proxy 博客水合修复 (commit bfc65bd)
+
+### 问题
+通过主域名 `sinotradecompliance.com/en/blog/...` 访问博客时，React RSC 水合完全失败（`bodyReactKeys: []`），CopyButton 等所有交互功能不可用。直接访问博客独立域名 `trade-web-blog.pages.dev` 则正常。
+
+### 根本原因
+`rewriteNextStatic(html, 'blog')` 将 `/_next/static/` 全部替换为 `/blog/_next/static/`，但对 `<script src>` 标签的还原只写了 `/c/` 前缀（portal），没有 `/blog/` 前缀的还原。
+
+Turbopack 模块系统的 `q()` 生成 chunk key 为 `_next/static/chunks/{name}`（无前缀），但 `registerChunk(script.src)` 注册的是 `/blog/_next/static/chunks/{name}` → key 不匹配 → 模块永不执行 → React 永不初始化。
+
+Portal 有同样的问题但提前修复了（`rewriteNextStatic` 中已写入 `/c/` revert）。
+
+### 修复
+1. 在 `rewriteNextStatic()` 中添加 `<script src="/blog/_next/static/...">` → `/_next/static/...` 的还原
+2. 扩展 `/_next/static/chunks/` 动态 chunk 处理器，回退到 blog upstream
+3. 为 blog 代理路径添加 `ensureNextF()`（portal 已有）
+
 ## 2026-06-11 — CI 脚本铁律
 
 ### 原则 1：不掩盖问题

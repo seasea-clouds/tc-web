@@ -2,7 +2,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { locales, defaultLocale } from '@/i18n/routing';
 import { messagesMap } from '@/i18n/messages';
-import { Footer, SearchProvider, CookieConsent, ActionDock, AuthProvider, TradeTranslationProvider, OrganizationJsonLd, buildAlternates, sharedOpenGraph, sharedTwitter, AutoBreadcrumb, Favicon } from '@trade/ui';
+import { Footer, SearchProvider, CookieConsent, ActionDock, AuthProvider, TradeTranslationProvider, OrganizationJsonLd, buildAlternates, sharedOpenGraph, sharedTwitter, AutoBreadcrumb, Favicon, GeoMeta } from '@trade/ui';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -42,10 +42,7 @@ export default async function LocaleLayout({
     <html lang={validLocale} dir={validLocale === 'ar' || validLocale === 'he' || validLocale === 'fa' || validLocale === 'ur' ? 'rtl' : 'ltr'}>
       <head>
         <Favicon />
-        {/* Geo-location meta tags */}
-        <meta name="geo.region" content="CN-SH" />
-        <meta name="geo.placename" content="Shanghai" />
-        <meta name="ICBM" content="31.2304, 121.4737" />
+        <GeoMeta />
       </head>
       <body className="min-h-screen flex flex-col pb-16 md:pb-0 antialiased">
         <NextIntlClientProvider locale={validLocale} messages={messages} timeZone="Asia/Shanghai">

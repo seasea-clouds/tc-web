@@ -71,5 +71,19 @@ P1a:  ✅ P1b:  ✅
 P2:   🔄 (4.5%, ~8天)
 P3a:  ✅ P3b: ⬜ P3c: ✅
 P4:   ✅
-T1:   ⬜ T2: ⬜ T3: ⬜ T4: ⬜
+T1:   ✅ (committed fc40836)
+T2:   ✅ (committed 941d90a)
+T3:   ❌ CF Pages 平台问题，新部署卡在 deploy stage
+T4:   ✅ Creem 支付验证通过
 ```
+
+## ⚠️ CF Pages 部署问题
+
+2026-07-03 00:32 UTC 起，Portal 的 GitHub auto-build 所有新部署均返回 404。
+- Build stage 成功，但 deploy stage 卡住（status=active 永不结束）
+- 生产别名仍指向最后一个工作部署 132aab80（commit 04d69a8）
+- 用户不受影响
+- 手动 wrangler deploy 因 8221 文件/785MB 上传太慢被 SIGTERM
+- 已推送 commit f7342b2 触发重构建，同样失败
+
+**待观察：** 可能是 CF Pages 临时平台故障，后续重新触发构建可能恢复。

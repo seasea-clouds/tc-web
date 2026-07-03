@@ -13,6 +13,15 @@ const serviceLinks = [
   { key: 'brandProtection', href: '/services/brand/' },
 ];
 
+const checkLinks = [
+  { key: 'checkGacc', path: '/c/check/gacc/' },
+  { key: 'checkLabel', path: '/c/check/label/' },
+  { key: 'checkCcc', path: '/c/check/ccc/' },
+  { key: 'checkNmpa', path: '/c/check/nmpa/' },
+  { key: 'checkCb', path: '/c/check/crossborder/' },
+  { key: 'checkTm', path: '/c/check/trademark/' },
+];
+
 export default function Footer({ locale: propLocale }: { locale?: string } = {}) {
   const t = useT('Footer');
   const ctxLocale = useTradeLocale();
@@ -35,6 +44,23 @@ export default function Footer({ locale: propLocale }: { locale?: string } = {})
                     className="text-white/70 hover:text-white transition-colors text-sm"
                   >
                     {t(s.key)}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Free Check — 新增列 */}
+          <div>
+            <h4 className="text-white font-bold mb-4">{t('freeCheckHeader')}</h4>
+            <ul className="space-y-2">
+              {checkLinks.map((c) => (
+                <li key={c.key}>
+                  <a
+                    href={href(c.path)}
+                    className="text-white/70 hover:text-white transition-colors text-sm"
+                  >
+                    {t(c.key)}
                   </a>
                 </li>
               ))}
@@ -74,7 +100,7 @@ export default function Footer({ locale: propLocale }: { locale?: string } = {})
           </div>
 
           {/* Contact */}
-          <div className="md:col-span-2">
+          <div>
             <h4 className="text-white font-bold mb-4">{t('contact')}</h4>
             <div className="flex flex-col gap-3">
               <a
@@ -82,7 +108,7 @@ export default function Footer({ locale: propLocale }: { locale?: string } = {})
                 className="flex items-center gap-2 text-white/70 hover:text-white transition-colors text-sm"
               >
                 <Mail className="w-4 h-4 text-white/70" />
-                <span>david@sinotradecompliance.com</span>
+                <span>{t('email')}</span>
               </a>
               <a
                 href={WHATSAPP_URL}

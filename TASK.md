@@ -36,11 +36,19 @@
 - 0 错误
 - 等待完成后合并到 47 个 locale 文件
 
+### F1 — Footer 优化：Email 改标签 + 新增 Free Check 列
+**状态：** 进行中
+- [ ] Footer.tsx — 邮箱改标签 + 插入 Free Check 列
+- [ ] en.json — 新增 7 个 Footer key
+- [ ] translate-tool — 提交 47 语言翻译
+- [ ] 合并翻译 → commit → 部署
+
 ---
 
 ## ⬜ 待执行
 
-（当前无待执行任务 — P2 翻译完成后需 merge + 部署）
+- P2 翻译完成后的 merge + 部署
+- F1 翻译完成后的 merge + 部署
 
 ---
 
@@ -49,8 +57,9 @@
 ```
 P0-1: ✅ P0-2: ✅ P0-3: ✅
 P1a:  ✅ P1b:  ✅
-P2:   🔄 (56.1%, 预计今晚完成)
+P2:   🔄 (56.1%, 预计今晚)
 P3a:  ✅ P3b: ✅ P3c: ✅
 P4:   ✅
 T1-T4: ✅
+F1:   🔄
 ```

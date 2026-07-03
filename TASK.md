@@ -36,19 +36,21 @@
 - 0 错误
 - 等待完成后合并到 47 个 locale 文件
 
-### F1 — Footer 优化：Email 改标签 + 新增 Free Check 列
-**状态：** 进行中
-- [ ] Footer.tsx — 邮箱改标签 + 插入 Free Check 列
-- [ ] en.json — 新增 7 个 Footer key
-- [ ] translate-tool — 提交 47 语言翻译
-- [ ] 合并翻译 → commit → 部署
+### F1 — Footer 优化：Email 改标签 + 新增 Free Tools 列
+**状态：** ✅ 已完成
+- [x] Footer.tsx — 邮箱改标签 + 插入 Free Tools 列 (commit 94936c0)
+- [x] en.json — 新增 8 个 Footer key
+- [x] translate-tool — 提交 47 语言翻译 (footer-i18n-v4~v6, footer-header-fix-v1~v3)
+- [x] 合并翻译 → commit → 部署 (commit d53d31b)
+
+**备注：** 源文 "Free Check" 被 Google Translate 误译为金融支票（如 zh: 免费支票, ja: 無料小切手），后改为 "Free Tools" 重翻所有 47 语言。
 
 ---
 
 ## ⬜ 待执行
 
 - P2 翻译完成后的 merge + 部署
-- F1 翻译完成后的 merge + 部署
+
 
 ---
 
@@ -61,5 +63,5 @@ P2:   🔄 (56.1%, 预计今晚)
 P3a:  ✅ P3b: ✅ P3c: ✅
 P4:   ✅
 T1-T4: ✅
-F1:   🔄
+F1:   ✅
 ```

@@ -140,7 +140,8 @@ curl -s -X POST "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/
 | 9 | `check-llms.mjs` | 有 llms.txt 的 | llms.txt 质量检查 |
 | 10 | `check-seo-output.mjs` | 所有 | 构建后标题/描述/canonical 检查 |
 | 11 | `check-translations.mjs` | 所有 | 48 语言翻译质量检查 |
-| 12 | `clean-rsc.js` | 有 out/ 的 | 清理 RSC payload .txt 文件 |
+| 12 | `check-t-keys.mjs` | portal | 扫描 t("key") 调用，验证 en.json 存在 |
+| 13 | `clean-rsc.js` | 有 out/ 的 | 清理 RSC payload .txt 文件 |
 
 ### 项目间差异处理
 
@@ -211,6 +212,7 @@ import { SearchProvider } from '@trade/ui';
 | `build-all.mjs` | 总入口：运行以上所有脚本 |
 | `check-translations.mjs` | 翻译质量检查（全量核验）|
 | `check-hardcoded.mjs` | 检查 JSX 中硬编码英文 |
+| `check-t-keys.mjs` | 扫描 t("key") 调用，验证 en.json 存在 |
 | `convert-webp.mjs` | 图片格式转换 |
 | `clean-rsc.js` | 清理构建产物 |
 

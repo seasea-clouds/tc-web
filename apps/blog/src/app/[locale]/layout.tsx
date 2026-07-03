@@ -42,6 +42,10 @@ export default async function Layout({
     <html lang={validLocale} dir={validLocale === 'ar' || validLocale === 'he' || validLocale === 'fa' || validLocale === 'ur' ? 'rtl' : 'ltr'}>
       <head>
         <Favicon />
+        {/* Geo-location meta tags */}
+        <meta name="geo.region" content="CN-SH" />
+        <meta name="geo.placename" content="Shanghai" />
+        <meta name="ICBM" content="31.2304, 121.4737" />
       </head>
       <body className="min-h-screen flex flex-col pb-16 md:pb-0 antialiased">
         <NextIntlClientProvider messages={messages} locale={validLocale} timeZone="Asia/Shanghai">

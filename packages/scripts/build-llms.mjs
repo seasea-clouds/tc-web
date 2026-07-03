@@ -68,11 +68,11 @@ const SKIP_KEYS = [
 // 博客 slug → 真实标题映射（从 discover-routes 补充）
 const BLOG_TITLES = {
   'gacc-registration-guide': 'GACC Registration Guide',
-  'ccc-certification-complete-guide': 'CCC Certification Complete Guide',
-  'import-compliance-checklist': 'Import Compliance Checklist',
-  'chinese-label-compliance-guide': 'Chinese Label Compliance Guide',
-  'trademark-registration-china': 'Trademark Registration in China',
-  'nmpa-cosmetics-filing-guide': 'NMPA Cosmetics Filing Guide',
+  'ccc-certification-explained': 'CCC Certification Complete Guide',
+  'china-import-compliance-guide': 'Import Compliance Checklist',
+  'china-label-compliance': 'Chinese Label Compliance Guide',
+  'china-trademark-registration': 'Trademark Registration in China',
+  'cosmetics-nmpa-filing': 'NMPA Cosmetics Filing Guide',
   'cross-border-ecommerce-china': 'Cross-Border E-Commerce in China',
 };
 

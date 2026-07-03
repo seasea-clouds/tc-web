@@ -19,9 +19,9 @@
 | P0-3 | CI + 构建 + 部署验证 | ✅ |
 | P1a | 140 个 top-level key 复制到 Check namespace (commit 04d69a8) | ✅ 已部署 |
 | P1b | 341 个完全缺失 key 写入 en.json | ✅ 已部署 |
-| P3a | check-t-keys.mjs + CI 集成 | ✅ 未提交 |
-| P3c | buildT 开发环境 console.warn | ✅ 未提交 |
-| P4 | buildT en.json 降级（key 缺失时回退到英文） | ✅ 未提交 |
+| P3a | check-t-keys.mjs + CI 集成 (commit fc40836) | ✅ 已部署 (ee5e0e10) |
+| P3c | buildT 开发环境 console.warn (commit fc40836) | ✅ 已部署 (ee5e0e10) |
+| P4 | buildT en.json 降级（key 缺失时回退到英文）(commit fc40836) | ✅ 已部署 (ee5e0e10) |
 
 ---
 
@@ -73,17 +73,21 @@ P3a:  ✅ P3b: ⬜ P3c: ✅
 P4:   ✅
 T1:   ✅ (committed fc40836)
 T2:   ✅ (committed 941d90a)
-T3:   ❌ CF Pages 平台问题，新部署卡在 deploy stage
+T3:   ✅ CF Pages 新部署 ee5e0e10 已成功上线
 T4:   ✅ Creem 支付验证通过
 ```
 
-## ⚠️ CF Pages 部署问题
+## ✅ CF Pages 部署已恢复
 
-2026-07-03 00:32 UTC 起，Portal 的 GitHub auto-build 所有新部署均返回 404。
-- Build stage 成功，但 deploy stage 卡住（status=active 永不结束）
-- 生产别名仍指向最后一个工作部署 132aab80（commit 04d69a8）
-- 用户不受影响
-- 手动 wrangler deploy 因 8221 文件/785MB 上传太慢被 SIGTERM
-- 已推送 commit f7342b2 触发重构建，同样失败
+2026-07-03 01:22 UTC，空 commit（62c16e7）触发的 auto-build `ee5e0e10` 成功上线：
+- Deploy stage: success ✅
+- 部署专用 URL 可正常访问（HTTP 200）
+- 生产别名 `trade-web-portal.pages.dev` 已自动切换
+- 主站 Worker proxy (`sinotradecompliance.com/c/`) 验证正常
 
-**待观察：** 可能是 CF Pages 临时平台故障，后续重新触发构建可能恢复。
+已上线的代码包含：
+- fc40836: P3a (check-t-keys.mjs CI), P3c (buildT 开发警告), P4 (buildT en fallback)
+- 941d90a: 文档更新 (NOTES.md, SOP.md)
+- 080f433: TASK.md 更新
+
+**注意：** 这是空 commit 触发的新构建，并非旧部署（080f433 retry）的恢复——旧 retry（3d20bcf4）仍为 `deploy=failure`。

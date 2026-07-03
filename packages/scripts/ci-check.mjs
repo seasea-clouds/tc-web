@@ -226,6 +226,16 @@ function runCategoryLabelCheck() {
   runLocalScript('check-category-labels.mjs');
 }
 
+// ============================================================
+// t() 键引用完整性检测 (P3)
+// 扫描源码中 t("static_key") 调用，验证键名存在于 en.json
+// 防止 rules.ts 中新增的 t() 引用未同步到 locale 文件
+// ============================================================
+function runTKeyCheck() {
+  if (project !== 'portal') return;
+  runLocalScript('check-t-keys.mjs');
+}
+
 // CI-4 路由 locale 前缀检测: 已作为 build-phase check 集成 (见 runBuildPhaseChecks)
 
 // ============================================================
@@ -257,6 +267,7 @@ runCoverageCheck();
 runOverrideCheck();
 runTemplateCheck();
 runCategoryLabelCheck();
+runTKeyCheck();
 runCleanup();
 
 console.log(`\n═══════════════════════════════════════════════`);

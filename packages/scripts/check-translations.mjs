@@ -136,6 +136,8 @@ const IGNORE_FALLBACK_KEYS = new Set([
   'ServiceCommon.portalCtaTitle',
   'ServiceCommon.portalCtaLink',
   'ServiceCommon.portalCtaGenericTitle',
+  // Footer: abbreviations that must stay English
+  'Footer.checkCb',
   'ServiceCommon.portalCtaGenericLink',
   // Report: Status/Plan/Client are correct loanwords in many languages (Germanic, Romance, etc.)
   'Report.status', 'Report.plan', 'Report.client',
@@ -428,6 +430,11 @@ SHARED_WORDS_BY_LANG['sw'].add('Tetracycline antibiotics');
 SHARED_WORDS_BY_LANG['sw'].add('Clenbuterol/β-agonists');
 SHARED_WORDS_BY_LANG['sw'].add('Benzo(a)pyrene');
 SHARED_WORDS_BY_LANG['sw'].add('Mycotoxins');
+
+// Hungarian/Slovak/Albanian: 'Email' is a universal loanword
+SHARED_WORDS_BY_LANG['hu'].add('Email');
+SHARED_WORDS_BY_LANG['sk'].add('Email');
+SHARED_WORDS_BY_LANG['sq'].add('Email');
 
 const ENGLISH_RESIDUAL_ALLOW = new Set([
   ...NO_TRANSLATE, ...SHARED_WORDS_ALL,

@@ -98,3 +98,6 @@ Portal 通过主站边缘 Worker 代理到 `/{locale}/c/*` 路径访问。
 - **2026-06-28:** i18n 全面完工：rules.ts 全模块国际化 + 48 语言翻译完成 + CI 全绿。更新 NOTES.md 清理已解决项。
 - **2026-07-02:** Creem API key 更新为 `creem_test_4Xkla1XafsXmqUQ3x1fsrk`，debug-creem 端点验证通过（200 OK）。废弃 CF Pages 项目 `sinotradecompliance` + `compli-service` 已删除。
 - **2026-07-03:** i18n 大修：341 缺失 key 补全 en.json，140 个 top-level key 复制到 Check namespace。新增 `check-t-keys.mjs` CI 脚本检测 `t("key")` 缺失引用。`buildT` 增加 en.json 降级（key 缺失时回退到英文）和 dev 环境 console.warn。
+
+### CF Pages deploy stuck (2026-07-03)
+Deployments after 00:32 UTC got stuck at deploy stage. Platform issue. Prod alias still on 132aab80.

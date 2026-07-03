@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "บทวิจารณ์",
     "industries": "อุตสาหกรรม",
-    "blog": "บล็อก"
+    "blog": "บล็อก",
+    "checkCb": "",
+    "checkCcc": "",
+    "checkGacc": "",
+    "checkLabel": "",
+    "checkNmpa": "",
+    "checkTm": "",
+    "email": "อีเมล",
+    "freeCheckHeader": "เครื่องมือฟรี"
   },
   "Search": {
     "title": "ค้นหา",

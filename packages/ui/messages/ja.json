@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "お客様の声",
     "industries": "産業",
-    "blog": "洞察"
+    "blog": "洞察",
+    "checkCb": "CBEC",
+    "checkCcc": "エレクトロニクス",
+    "checkGacc": "食品輸入",
+    "checkLabel": "ラベル",
+    "checkNmpa": "化粧品",
+    "checkTm": "商標",
+    "email": "電子メール",
+    "freeCheckHeader": "無料ツール"
   },
   "Search": {
     "title": "検索",

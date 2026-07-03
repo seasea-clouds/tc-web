@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Getuigenissen",
     "industries": "Industrieën",
-    "blog": "Blog"
+    "blog": "Blog",
+    "checkCb": "CBEC",
+    "checkCcc": "Elektronica",
+    "checkGacc": "Voedsel importeren",
+    "checkLabel": "Etiketten",
+    "checkNmpa": "Cosmetica",
+    "checkTm": "Handelsmerken",
+    "email": "E-mail",
+    "freeCheckHeader": "Gratis hulpmiddelen"
   },
   "Search": {
     "title": "Zoekopdracht",

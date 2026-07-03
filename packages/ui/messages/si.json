@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "ශ්‍රේෂ්ඨත්වය",
     "industries": "කර්මාන්ත",
-    "blog": "තීක්ෂ්ණ බුද්ධිය"
+    "blog": "තීක්ෂ්ණ බුද්ධිය",
+    "checkCb": "CBEC",
+    "checkCcc": "ඉලෙක්ට්රොනික උපකරණ",
+    "checkGacc": "ආහාර ආනයනය",
+    "checkLabel": "ලේබල්",
+    "checkNmpa": "විලවුන්",
+    "checkTm": "වෙළඳ ලකුණු",
+    "email": "ඊමේල් කරන්න",
+    "freeCheckHeader": "නිදහස් මෙවලම්"
   },
   "Search": {
     "title": "සොයන්න",

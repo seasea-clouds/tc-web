@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Mnenja strank",
     "industries": "Industrije",
-    "blog": "Vpogledi"
+    "blog": "Vpogledi",
+    "checkCb": "CBEC",
+    "checkCcc": "elektronika",
+    "checkGacc": "Uvoz hrane",
+    "checkLabel": "Oznake",
+    "checkNmpa": "Kozmetika",
+    "checkTm": "Blagovne znamke",
+    "email": "E-pošta",
+    "freeCheckHeader": "Brezplačna orodja"
   },
   "Search": {
     "title": "Iskanje",

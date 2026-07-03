@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Rəylər",
     "industries": "Sənayelər",
-    "blog": "Anlayışlar"
+    "blog": "Anlayışlar",
+    "checkCb": "CBEC",
+    "checkCcc": "Elektronika",
+    "checkGacc": "Qida idxalı",
+    "checkLabel": "Etiketlər",
+    "checkNmpa": "Kosmetika",
+    "checkTm": "Ticarət nişanları",
+    "email": "E-poçt",
+    "freeCheckHeader": "Pulsuz Alətlər"
   },
   "Search": {
     "title": "Axtar",

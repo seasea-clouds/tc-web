@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Рецензије",
     "industries": "Индустриес",
-    "blog": "Инсигхтс"
+    "blog": "Инсигхтс",
+    "checkCb": "ЦБЕЦ",
+    "checkCcc": "Електроника",
+    "checkGacc": "Увоз хране",
+    "checkLabel": "Етикете",
+    "checkNmpa": "Козметика",
+    "checkTm": "Традемаркс",
+    "email": "Емаил",
+    "freeCheckHeader": "Бесплатни алати"
   },
   "Search": {
     "title": "Тражи",

@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "گواهی‌نامه‌ها",
     "industries": "صنایع",
-    "blog": "بینش ها"
+    "blog": "بینش ها",
+    "checkCb": "CBEC",
+    "checkCcc": "الکترونیک",
+    "checkGacc": "واردات مواد غذایی",
+    "checkLabel": "برچسب ها",
+    "checkNmpa": "لوازم آرایشی",
+    "checkTm": "علائم تجاری",
+    "email": "ایمیل",
+    "freeCheckHeader": "ابزار رایگان"
   },
   "Search": {
     "title": "جستجو کنید",

@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Μαρτυρίες",
     "industries": "Βιομηχανίες",
-    "blog": "Εποπτεία"
+    "blog": "Εποπτεία",
+    "checkCb": "CBEC",
+    "checkCcc": "Ηλεκτρονική",
+    "checkGacc": "Εισαγωγές Τροφίμων",
+    "checkLabel": "Ετικέτες",
+    "checkNmpa": "Καλλυντικά",
+    "checkTm": "Εμπορικά σήματα",
+    "email": "E-mail",
+    "freeCheckHeader": "Δωρεάν Εργαλεία"
   },
   "Search": {
     "title": "Ερευνα",

@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "تعریفیں",
     "industries": "صنعتیں",
-    "blog": "بصیرت"
+    "blog": "بصیرت",
+    "checkCb": "",
+    "checkCcc": "",
+    "checkGacc": "",
+    "checkLabel": "",
+    "checkNmpa": "",
+    "checkTm": "",
+    "email": "ای میل",
+    "freeCheckHeader": "مفت ٹولز"
   },
   "Search": {
     "title": "تلاش کریں۔",

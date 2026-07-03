@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Getuigskrifte",
     "industries": "Nywerhede",
-    "blog": "Insigte"
+    "blog": "Insigte",
+    "checkCb": "CBEC",
+    "checkCcc": "Elektronika",
+    "checkGacc": "Voedsel invoer",
+    "checkLabel": "Etikette",
+    "checkNmpa": "Skoonheidsmiddels",
+    "checkTm": "Handelsmerke",
+    "email": "E-pos",
+    "freeCheckHeader": "Gratis gereedskap"
   },
   "Search": {
     "title": "Soek",

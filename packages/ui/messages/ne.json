@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "प्रशंसापत्रहरू",
     "industries": "उद्योगहरू",
-    "blog": "अन्तर्दृष्टिहरू"
+    "blog": "अन्तर्दृष्टिहरू",
+    "checkCb": "CBEC",
+    "checkCcc": "इलेक्ट्रोनिक्स",
+    "checkGacc": "खाद्यान्न आयात",
+    "checkLabel": "लेबलहरू",
+    "checkNmpa": "कस्मेटिक्स",
+    "checkTm": "ट्रेडमार्कहरू",
+    "email": "इमेल",
+    "freeCheckHeader": "नि: शुल्क उपकरणहरू"
   },
   "Search": {
     "title": "खोज्नुहोस्",

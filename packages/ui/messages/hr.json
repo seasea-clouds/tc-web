@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Svjedočanstva",
     "industries": "Industrije",
-    "blog": "Uvidi"
+    "blog": "Uvidi",
+    "checkCb": "CBEC",
+    "checkCcc": "Elektronika",
+    "checkGacc": "Uvoz hrane",
+    "checkLabel": "Etikete",
+    "checkNmpa": "Kozmetika",
+    "checkTm": "Zaštitni znakovi",
+    "email": "E-mail",
+    "freeCheckHeader": "Besplatni alati"
   },
   "Search": {
     "title": "Pretraživanje",

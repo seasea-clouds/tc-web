@@ -109,7 +109,16 @@ function getDisplayText(route, enMsgs) {
   }
   if (parts[0] === 'c') {
     if (parts.includes('check')) {
-      return 'Compliance Check';
+      const CHECK_LABELS = {
+        'gacc': 'GACC Registration Check',
+        'label': 'Chinese Label Compliance Check',
+        'ccc': 'CCC Certification Check',
+        'nmpa': 'NMPA Cosmetics Filing Check',
+        'crossborder': 'Cross-border E-commerce Check',
+        'trademark': 'Trademark Registration Check',
+      };
+      const tool = parts[2];
+      return CHECK_LABELS[tool] || 'Compliance Check';
     }
     return 'Portal';
   }

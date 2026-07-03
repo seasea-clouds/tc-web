@@ -239,6 +239,14 @@ export async function onRequest(context: { request: Request; next: () => Promise
   const { request, env } = context;
   const url = new URL(request.url);
 
+  // ── RSC prefetch tree (__next._tree.txt) — static export, no server → 204 ──
+  // Next.js App Router client prefetches __next._tree.txt for visible <Link>
+  // elements on mount. With output: 'export', these files don't exist.
+  // Return 204 (no content) to avoid console 404 errors.
+  if (url.pathname.endsWith('__next._tree.txt')) {
+    return new Response(null, { status: 204 });
+  }
+
   // ── Sub-site static assets (check first, before HTML routing) ──
   const assetResp = await proxySubSiteAsset(url, request, env);
   if (assetResp) return assetResp;

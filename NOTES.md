@@ -159,6 +159,21 @@ curl -s -X POST \
 
 **长期方案：** 升级 CF Pro Plan（$5/月，10 MiB Worker limit），或精简 Functions 依赖。
 
+## F1 — Footer 优化（2026-07-03）
+
+### 改动内容
+1. **Email 改标签**：邮箱显示从完整地址改为 "Email" 标签（mailto 链接），新增 `Footer.email` 翻译 key
+2. **新增 Free Tools 列**：Services 列后插入第 2 列，含 6 个自查工具（Food Import / Labels / Electronics / Cosmetics / CBEC / Trademarks），新增 key: `Footer.freeCheckHeader`, `Footer.checkGacc`, `Footer.checkLabel`, `Footer.checkCcc`, `Footer.checkNmpa`, `Footer.checkCb`, `Footer.checkTm`
+3. **布局**：Footer 改为 `md:grid-cols-4`（移除 col-span-2）
+
+### 踩坑记录
+- **"Free Check" 被 Google Translate 误译**：翻译为金融支票（zh: 免费支票, ja: 無料小切手, de: Kostenloser Scheck...）。源文改为 "Free Tools" 后所有语言正确翻译（zh: 免费工具, ja: 無料ツール, de: Kostenlose Tools...）
+- **SIGTERM 频繁中断**：多次被 timeout 杀掉，但后台 worker 继续完成。翻译结果需从多次任务的 results 合并
+
+### Commits
+- 94936c0 — `feat(Footer): email label + free check column` (Footer.tsx + en.json)
+- d53d31b — `fix(Footer): change 'Free Check' to 'Free Tools' for all 47 languages`
+
 ### 环境变量
 所有秘密变量统一在 `~/.openclaw/.env`。CF Pages 已配置：
 

@@ -20,8 +20,10 @@
 | P1a | 140 个 top-level key 复制到 Check namespace (commit 04d69a8) | ✅ 已部署 |
 | P1b | 341 个完全缺失 key 写入 en.json | ✅ 已部署 |
 | P3a | check-t-keys.mjs + CI 集成 (commit fc40836) | ✅ 已部署 (ee5e0e10) |
+| P3b | 动态 key 前缀验证：扩展 check-t-keys.mjs 检测 `t(\`prefix_${var}\`)` | ✅ 本会话完成 |
 | P3c | buildT 开发环境 console.warn (commit fc40836) | ✅ 已部署 (ee5e0e10) |
 | P4 | buildT en.json 降级（key 缺失时回退到英文）(commit fc40836) | ✅ 已部署 (ee5e0e10) |
+| T1-T4 | 部署/文档/验证/Creem 支付 | ✅ 全部完成 |
 
 ---
 
@@ -29,8 +31,8 @@
 
 ### P2 — translate-tool 翻译 47 语言
 **任务：** portal-i18n-v4（348 keys → 47 种语言）
-- 完成：732 / 16,356 项（4.5%）
-- 速度：~80 项/小时，预计还需 ~8 天
+- 完成：9,177 / 16,356 项（**56.1%**）
+- 已运行约 6 小时，速度 ~1,400 项/小时
 - 0 错误
 - 等待完成后合并到 47 个 locale 文件
 
@@ -38,28 +40,7 @@
 
 ## ⬜ 待执行
 
-### T1 — 提交+部署 P3a/P3c/P4
-- commit 4 个文件：check-t-keys.mjs, ci-check.mjs, i18n.ts, TASK.md
-- 推送 → CF Pages 自动构建部署
-- 验证 CI 通过、部署成功
-
-### T2 — 更新文档
-- NOTES.md 记录 P3/P4 技术决策
-- SOP.md 更新 CI 检查清单
-
-### T3 — 验证部署
-- 浏览器检查 portal 页面
-- 验证语言切换、报告页面
-
-### T4 — Creem 支付验证
-- 确认 webhook 正确接收付款
-- D1 订阅状态正确（不重复记录）
-- 单次报告购买流程
-- 订阅连续性修复验证
-
-### P3b — 动态 key 前缀验证（可选）
-- 扩展 check-t-keys.mjs 检测 `t(\`prefix_${var}\`)` 模式
-- 非紧急，可暂缓
+（当前无待执行任务 — P2 翻译完成后需 merge + 部署）
 
 ---
 
@@ -68,26 +49,8 @@
 ```
 P0-1: ✅ P0-2: ✅ P0-3: ✅
 P1a:  ✅ P1b:  ✅
-P2:   🔄 (4.5%, ~8天)
-P3a:  ✅ P3b: ⬜ P3c: ✅
+P2:   🔄 (56.1%, 预计今晚完成)
+P3a:  ✅ P3b: ✅ P3c: ✅
 P4:   ✅
-T1:   ✅ (committed fc40836)
-T2:   ✅ (committed 941d90a)
-T3:   ✅ CF Pages 新部署 ee5e0e10 已成功上线
-T4:   ✅ Creem 支付验证通过
+T1-T4: ✅
 ```
-
-## ✅ CF Pages 部署已恢复
-
-2026-07-03 01:22 UTC，空 commit（62c16e7）触发的 auto-build `ee5e0e10` 成功上线：
-- Deploy stage: success ✅
-- 部署专用 URL 可正常访问（HTTP 200）
-- 生产别名 `trade-web-portal.pages.dev` 已自动切换
-- 主站 Worker proxy (`sinotradecompliance.com/c/`) 验证正常
-
-已上线的代码包含：
-- fc40836: P3a (check-t-keys.mjs CI), P3c (buildT 开发警告), P4 (buildT en fallback)
-- 941d90a: 文档更新 (NOTES.md, SOP.md)
-- 080f433: TASK.md 更新
-
-**注意：** 这是空 commit 触发的新构建，并非旧部署（080f433 retry）的恢复——旧 retry（3d20bcf4）仍为 `deploy=failure`。

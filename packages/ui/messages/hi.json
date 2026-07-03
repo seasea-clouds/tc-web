@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "प्रशंसापत्र",
     "industries": "इंडस्ट्रीज",
-    "blog": "इनसाइट्स"
+    "blog": "इनसाइट्स",
+    "checkCb": "सीबीईसी",
+    "checkCcc": "इलेक्ट्रानिक्स",
+    "checkGacc": "खाद्य आयात",
+    "checkLabel": "लेबल",
+    "checkNmpa": "प्रसाधन सामग्री",
+    "checkTm": "ट्रेडमार्क",
+    "email": "ईमेल",
+    "freeCheckHeader": "मुफ़्त उपकरण"
   },
   "Search": {
     "title": "खोज",

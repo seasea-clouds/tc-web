@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Vélemények",
     "industries": "Iparágak",
-    "blog": "Bepillantások"
+    "blog": "Bepillantások",
+    "checkCb": "CBEC",
+    "checkCcc": "Elektronika",
+    "checkGacc": "Élelmiszer import",
+    "checkLabel": "Címkék",
+    "checkNmpa": "Kozmetikumok",
+    "checkTm": "Védjegyek",
+    "email": "Email",
+    "freeCheckHeader": "Ingyenes eszközök"
   },
   "Search": {
     "title": "Keresés",

@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Dëshmi",
     "industries": "Industritë",
-    "blog": "Vështrime"
+    "blog": "Vështrime",
+    "checkCb": "CBEC",
+    "checkCcc": "Elektronikë",
+    "checkGacc": "Importi i Ushqimit",
+    "checkLabel": "Etiketat",
+    "checkNmpa": "Kozmetikë",
+    "checkTm": "Markat tregtare",
+    "email": "Email",
+    "freeCheckHeader": "Mjete Falas"
   },
   "Search": {
     "title": "Kërko",

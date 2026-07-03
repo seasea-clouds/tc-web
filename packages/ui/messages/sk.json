@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Referencie",
     "industries": "Odvetvia",
-    "blog": "Inšighty"
+    "blog": "Inšighty",
+    "checkCb": "CBEC",
+    "checkCcc": "Elektronika",
+    "checkGacc": "Dovoz potravín",
+    "checkLabel": "Štítky",
+    "checkNmpa": "Kozmetika",
+    "checkTm": "Ochranné známky",
+    "email": "Email",
+    "freeCheckHeader": "Bezplatné nástroje"
   },
   "Search": {
     "title": "Hľadať",

@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "客户评价",
     "industries": "行业",
-    "blog": "见解"
+    "blog": "见解",
+    "checkCb": "跨境电商",
+    "checkCcc": "电子产品",
+    "checkGacc": "食品进口",
+    "checkLabel": "标签",
+    "checkNmpa": "化妆品",
+    "checkTm": "商标",
+    "email": "电子邮件",
+    "freeCheckHeader": "免费工具"
   },
   "Search": {
     "title": "搜索",

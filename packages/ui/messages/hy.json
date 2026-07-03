@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Գնահատականներ",
     "industries": "Արդյունաբերություններ",
-    "blog": "Խորաթափանցություն"
+    "blog": "Խորաթափանցություն",
+    "checkCb": "CBEC",
+    "checkCcc": "Էլեկտրոնիկա",
+    "checkGacc": "Սննդի ներմուծում",
+    "checkLabel": "Պիտակներ",
+    "checkNmpa": "Կոսմետիկա",
+    "checkTm": "Ապրանքային նշաններ",
+    "email": "Էլ",
+    "freeCheckHeader": "Անվճար գործիքներ"
   },
   "Search": {
     "title": "Որոնում",

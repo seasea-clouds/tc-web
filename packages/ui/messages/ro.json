@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Testimoniale",
     "industries": "Industrii",
-    "blog": "Blog"
+    "blog": "Blog",
+    "checkCb": "CBEC",
+    "checkCcc": "Electronice",
+    "checkGacc": "Import de alimente",
+    "checkLabel": "Etichete",
+    "checkNmpa": "Cosmetice",
+    "checkTm": "Mărci comerciale",
+    "email": "E-mail",
+    "freeCheckHeader": "Instrumente gratuite"
   },
   "Search": {
     "title": "Căutare",

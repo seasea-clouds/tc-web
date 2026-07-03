@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "המלצות",
     "industries": "תעשיות",
-    "blog": "תובנות"
+    "blog": "תובנות",
+    "checkCb": "CBEC",
+    "checkCcc": "אֶלֶקטרוֹנִיקָה",
+    "checkGacc": "יבוא מזון",
+    "checkLabel": "תוויות",
+    "checkNmpa": "קוֹסמֵטִיקָה",
+    "checkTm": "סימני מסחר",
+    "email": "אֶלֶקטרוֹנִי",
+    "freeCheckHeader": "כלים בחינם"
   },
   "Search": {
     "title": "לְחַפֵּשׂ",

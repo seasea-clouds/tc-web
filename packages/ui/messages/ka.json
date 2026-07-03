@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "შეფასებები",
     "industries": "Ინდუსტრიები",
-    "blog": "ბლოგი"
+    "blog": "ბლოგი",
+    "checkCb": "CBEC",
+    "checkCcc": "ელექტრონიკა",
+    "checkGacc": "სურსათის იმპორტი",
+    "checkLabel": "ეტიკეტები",
+    "checkNmpa": "კოსმეტიკა",
+    "checkTm": "სავაჭრო ნიშნები",
+    "email": "ელფოსტა",
+    "freeCheckHeader": "უფასო ინსტრუმენტები"
   },
   "Search": {
     "title": "ძიება",

@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "প্রশংসাপত্র",
     "industries": "শিল্প",
-    "blog": "অন্তর্দৃষ্টি"
+    "blog": "অন্তর্দৃষ্টি",
+    "checkCb": "সিবিইসি",
+    "checkCcc": "ইলেকট্রনিক্স",
+    "checkGacc": "খাদ্য আমদানি",
+    "checkLabel": "লেবেল",
+    "checkNmpa": "প্রসাধনী",
+    "checkTm": "ট্রেডমার্ক",
+    "email": "ইমেইল",
+    "freeCheckHeader": "বিনামূল্যের সরঞ্জাম"
   },
   "Search": {
     "title": "অনুসন্ধান করুন",

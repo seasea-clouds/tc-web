@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Testimoni",
     "industries": "Industri",
-    "blog": "Blog"
+    "blog": "Blog",
+    "checkCb": "CBEC",
+    "checkCcc": "Elektronik",
+    "checkGacc": "Impor Pangan",
+    "checkLabel": "Label",
+    "checkNmpa": "Kosmetik",
+    "checkTm": "Merek Dagang",
+    "email": "E-mail",
+    "freeCheckHeader": "Alat Gratis"
   },
   "Search": {
     "title": "Mencari",

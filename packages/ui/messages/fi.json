@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Asiakaskokemukset",
     "industries": "Toimialat",
-    "blog": "Blog"
+    "blog": "Blog",
+    "checkCb": "CBEC",
+    "checkCcc": "Elektroniikka",
+    "checkGacc": "Elintarvikkeiden tuonti",
+    "checkLabel": "Tarrat",
+    "checkNmpa": "Kosmetiikka",
+    "checkTm": "Tavaramerkit",
+    "email": "Sähköposti",
+    "freeCheckHeader": "Ilmaiset työkalut"
   },
   "Search": {
     "title": "Haku",

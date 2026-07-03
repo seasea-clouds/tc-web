@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Testimonianze",
     "industries": "Industrie",
-    "blog": "Approfondimenti"
+    "blog": "Approfondimenti",
+    "checkCb": "CBEC",
+    "checkCcc": "Elettronica",
+    "checkGacc": "Importazione di prodotti alimentari",
+    "checkLabel": "Etichette",
+    "checkNmpa": "Cosmetici",
+    "checkTm": "Marchi",
+    "email": "E-mail",
+    "freeCheckHeader": "Strumenti gratuiti"
   },
   "Search": {
     "title": "Ricerca",

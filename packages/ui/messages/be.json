@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Адзывы",
     "industries": "Галін прамысловасці",
-    "blog": "Інсайты"
+    "blog": "Інсайты",
+    "checkCb": "CBEC",
+    "checkCcc": "Электроніка",
+    "checkGacc": "Імпарт прадуктаў харчавання",
+    "checkLabel": "Этыкеткі",
+    "checkNmpa": "Касметыка",
+    "checkTm": "Таварныя знакі",
+    "email": "Электронная пошта",
+    "freeCheckHeader": "Бясплатныя інструменты"
   },
   "Search": {
     "title": "Пошук",

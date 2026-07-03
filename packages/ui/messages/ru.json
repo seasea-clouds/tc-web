@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Отзывы",
     "industries": "Отрасли",
-    "blog": "Блог"
+    "blog": "Блог",
+    "checkCb": "CBEC",
+    "checkCcc": "Электроника",
+    "checkGacc": "Импорт продуктов питания",
+    "checkLabel": "Этикетки",
+    "checkNmpa": "Косметика",
+    "checkTm": "Товарные знаки",
+    "email": "Электронная почта",
+    "freeCheckHeader": "Бесплатные инструменты"
   },
   "Search": {
     "title": "Поиск",

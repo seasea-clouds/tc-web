@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "الشهادات",
     "industries": "الصناعات",
-    "blog": "رؤى"
+    "blog": "رؤى",
+    "checkCb": "CBEC",
+    "checkCcc": "إلكترونيات",
+    "checkGacc": "استيراد المواد الغذائية",
+    "checkLabel": "التسميات",
+    "checkNmpa": "مستحضرات التجميل",
+    "checkTm": "العلامات التجارية",
+    "email": "بريد إلكتروني",
+    "freeCheckHeader": "أدوات مجانية"
   },
   "Search": {
     "title": "يبحث",

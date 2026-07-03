@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Müşteri Yorumları",
     "industries": "Endüstriler",
-    "blog": "Blog"
+    "blog": "Blog",
+    "checkCb": "",
+    "checkCcc": "",
+    "checkGacc": "",
+    "checkLabel": "",
+    "checkNmpa": "",
+    "checkTm": "",
+    "email": "E-posta",
+    "freeCheckHeader": "Ücretsiz Araçlar"
   },
   "Search": {
     "title": "Aramak",

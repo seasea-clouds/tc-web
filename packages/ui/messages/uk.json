@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Відгуки",
     "industries": "Галузі промисловості",
-    "blog": "Інсайти"
+    "blog": "Інсайти",
+    "checkCb": "",
+    "checkCcc": "",
+    "checkGacc": "",
+    "checkLabel": "",
+    "checkNmpa": "",
+    "checkTm": "",
+    "email": "Електронна пошта",
+    "freeCheckHeader": "Безкоштовні інструменти"
   },
   "Search": {
     "title": "Пошук",

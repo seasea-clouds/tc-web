@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Отзиви",
     "industries": "Индустрии",
-    "blog": "Прозрения"
+    "blog": "Прозрения",
+    "checkCb": "CBEC",
+    "checkCcc": "електроника",
+    "checkGacc": "Внос на храни",
+    "checkLabel": "Етикети",
+    "checkNmpa": "Козметика",
+    "checkTm": "Търговски марки",
+    "email": "Имейл",
+    "freeCheckHeader": "Безплатни инструменти"
   },
   "Search": {
     "title": "Търсене",

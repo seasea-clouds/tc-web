@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Kundesuccesser",
     "industries": "Industrier",
-    "blog": "Indsigt"
+    "blog": "Indsigt",
+    "checkCb": "CBEC",
+    "checkCcc": "Elektronik",
+    "checkGacc": "Fødevareimport",
+    "checkLabel": "Etiketter",
+    "checkNmpa": "Kosmetik",
+    "checkTm": "Varemærker",
+    "email": "E-mail",
+    "freeCheckHeader": "Gratis værktøjer"
   },
   "Search": {
     "title": "Søge",

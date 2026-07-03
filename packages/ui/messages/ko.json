@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "사용후기",
     "industries": "산업",
-    "blog": "통찰력"
+    "blog": "통찰력",
+    "checkCb": "CBEC",
+    "checkCcc": "전자제품",
+    "checkGacc": "식품 수입",
+    "checkLabel": "라벨",
+    "checkNmpa": "화장품",
+    "checkTm": "상표",
+    "email": "이메일",
+    "freeCheckHeader": "무료 도구"
   },
   "Search": {
     "title": "검색",

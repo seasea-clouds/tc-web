@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Testimonis",
     "industries": "Indústries",
-    "blog": "Perspectives"
+    "blog": "Perspectives",
+    "checkCb": "CBEC",
+    "checkCcc": "Electrònica",
+    "checkGacc": "Importació d'aliments",
+    "checkLabel": "Etiquetes",
+    "checkNmpa": "Cosmètics",
+    "checkTm": "Marques comercials",
+    "email": "Correu electrònic",
+    "freeCheckHeader": "Eines gratuïtes"
   },
   "Search": {
     "title": "Cerca",

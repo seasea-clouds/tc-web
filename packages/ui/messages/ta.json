@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "குறிப்புகள்",
     "industries": "தொழில்கள்",
-    "blog": "நுண்ணறிவு"
+    "blog": "நுண்ணறிவு",
+    "checkCb": "",
+    "checkCcc": "",
+    "checkGacc": "",
+    "checkLabel": "",
+    "checkNmpa": "",
+    "checkTm": "",
+    "email": "மின்னஞ்சல்",
+    "freeCheckHeader": "இலவச கருவிகள்"
   },
   "Search": {
     "title": "தேடு",

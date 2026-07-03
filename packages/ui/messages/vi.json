@@ -18,7 +18,15 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Đánh giá",
     "industries": "Ngành công nghiệp",
-    "blog": "Blog"
+    "blog": "Blog",
+    "checkCb": "",
+    "checkCcc": "",
+    "checkGacc": "",
+    "checkLabel": "",
+    "checkNmpa": "",
+    "checkTm": "",
+    "email": "E-mail",
+    "freeCheckHeader": "Công cụ miễn phí"
   },
   "Search": {
     "title": "Tìm kiếm",

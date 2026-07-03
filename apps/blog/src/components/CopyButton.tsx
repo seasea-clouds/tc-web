@@ -13,37 +13,38 @@ export default function CopyButton({ url }: Props) {
 
   const handleCopy = useCallback(async (e: React.MouseEvent) => {
     e.preventDefault();
+
+    // ═══════ try Clipboard API ═══════
+    let ok = false;
     try {
-      // Modern clipboard API
       if (navigator.clipboard?.writeText) {
         await navigator.clipboard.writeText(url);
-        setCopied(true);
-        setTimeout(() => setCopied(false), 2000);
-        return;
+        ok = true;
       }
     } catch {
-      // Fallback for older browsers
+      // falls through to fallback
     }
 
-    // Fallback: textarea method
-    try {
-      const textarea = document.createElement('textarea');
-      textarea.value = url;
-      textarea.style.position = 'fixed';
-      textarea.style.left = '-9999px';
-      textarea.style.top = '-9999px';
-      document.body.appendChild(textarea);
-      textarea.focus();
-      textarea.select();
+    // ═══════ fallback: textarea + execCommand ═══════
+    if (!ok) {
       try {
-        document.execCommand('copy');
-      } catch {}
-      document.body.removeChild(textarea);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
-      // Silently fail — user experience not impacted
+        const textarea = document.createElement('textarea');
+        textarea.value = url;
+        textarea.style.cssText = 'position:fixed;left:-9999px;top:-9999px;opacity:0';
+        document.body.appendChild(textarea);
+        textarea.focus();
+        textarea.select();
+        try {
+          document.execCommand('copy');
+          ok = true;
+        } catch { /* ignored */ }
+        document.body.removeChild(textarea);
+      } catch { /* fallback failed, ok stays false */ }
     }
+
+    // ═══════ always show visual feedback ═══════
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   }, [url]);
 
   return (

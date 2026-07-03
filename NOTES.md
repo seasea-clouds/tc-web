@@ -79,6 +79,57 @@
 - ✅ 结果导出后手动处理 JSON merge
 - ⚠️ 工具缺功能（如无内置 merge 命令）→ 如实上报，由你评估是否修复
 
+## P3b — check-t-keys.mjs 动态 key 验证（2026-07-03）
+
+`check-t-keys.mjs` 原仅检查静态 `t("key")` 调用。P3b 扩展后额外验证 **模板字面量** `t(\`prefix_${var}\`)` 模式。
+
+### 设计原理
+
+1. **静态前缀匹配**: 解析 `t(\`...\`)` 成 static segments + `${var}` 占位符
+2. **已知值来源展开**: 对以下模式做完整组合验证：
+   - `comp${prefix}` (+China/EU/US) → COMPARISON_FIELDS 交叉验证（10 × 4 = 40 keys）
+   - `step${i}Title/Desc` → [1,2,3] 展开（6 keys）
+   - `catCcc_${v}`, `catNmpa_${v}` 等 → 从 modules/*/rules.ts 动态加载 CATEGORY_LABELS
+   - `gaccCat_${cat}_label` / `gaccCat_${cat}_riskReason` → 同上
+   - `cccCat_${cat}_label`, `nmpaCat_${cat}_label` → 同上
+3. **多变量跳过**: 2+ 动态变量的模式（如 `cccProfile_${cat}_test_${idx}`）暂不展开
+4. **非翻译模式过滤**: 文件路径、字符串拼接、URL 等 false positive 自动跳过
+
+### CATEGORY_LABELS 自动加载
+
+脚本扫描 `apps/portal/modules/*/rules.ts` 中的 `CATEGORY_LABELS` 定义（支持带引号和不带引号的 key），自动关联到对应前缀：
+
+| 模块 | 前缀 |
+|------|------|
+| gacc | catGacc_, gaccCat_ |
+| ccc | catCcc_, cccCat_ |
+| nmpa | catNmpa_, nmpaCat_ |
+| label | catLabel_ |
+| crossborder | catCb_ |
+| trademark | catTm_ |
+
+新增品类时只需在 rules.ts 中添加 CATEGORY_LABELS 条目，脚本自动识别验证。
+
+### 翻译铁律
+
+禁止翻译词表（NO_TRANSLATE）
+
+| 类别 | 示例 |
+|------|------|
+| 品牌名 | SinoTrade Compliance, WhatsApp, WeChat, Tmall, LinkedIn |
+| 人名 | David Zhang, Sarah Chen, Mike Wang, Leo Liu, John Smith |
+| 机构缩写 | GACC, NMPA, CCC, CBEC, CIFER, MOA, CNCA, MEE |
+| 标准编号 | GB 7718-2025 |
+| 邮箱占位符 | you@company.com |
+
+### Google Translate 短词修正
+
+| 英文 | 中文 | 日文 |
+|------|------|------|
+| Home | 首页 | ホーム |
+| Contact | 联系我们 | お問い合わせ |
+| Services | 服务 | サービス |
+
 ### 语法注意
 `const locale = propLocale || params?.locale ?? 'en'` 在 Turbopack 中报错。需加括号：
 `propLocale || (params?.locale ?? 'en')`

@@ -87,3 +87,23 @@ Worker `rewriteNextStatic()` 将 `/_next/static/` 替换为 `/{prefix}/_next/sta
 ## 2026-06-11 — lottie-web 依赖修复
 - lottie-web 在 pnpm workspace 下链接异常 → 移除 `node_modules/lottie-web` 中的 `.pnpm` 目录结构后重新 install 解决
 - 不是 lottie-web 本身的 bug，是脱机安装导致符号链接受损
+
+## 2026-07-04 — 翻译冒号风格一致性修复
+
+### 问题
+中文翻译文件的 "营养数据可用吗？" 下拉框三个选项冒号风格不一致：
+- `是的：带有完整的实验室报告`（全角冒号）
+- `部分: 已知成分数据`（半角冒号 + 空格 ❌）
+- `否：需要实验室测试`（全角冒号）
+
+### 全量扫描发现
+`apps/portal/messages/zh.json` 的 Check 命名空间中有 33 个 key 使用了半角冒号 `:`。
+其中 4 个是标准号/代码引用（如 `GB 6675.1-.4:2014`），保留半角；
+其余 27 个正文文案全部改为全角冒号 `：`，并去除冒号后的多余空格。
+
+### CI 检查
+新增 `check-colon-consistency.mjs` 脚本：
+- 扫描所有 48 语言翻译文件的 Check 命名空间
+- 中文 (zh) 检测半角冒号正文文案（有豁免列表）
+- 所有语言检测同一值内混用全半角冒号
+- 已注册到 `ci-check.mjs`，portal CI 时自动运行

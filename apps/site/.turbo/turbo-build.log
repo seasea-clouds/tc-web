@@ -35,68 +35,68 @@ Images: 18 converted
 Size: 1138K → 473K (58% saved)
 Apps discovered: blog, portal, site
 Generating search index for 48 locales...
-  af: 1755 items (6S + 7B + 39F + 1703C)
-  ar: 1755 items (6S + 7B + 39F + 1703C)
-  az: 1755 items (6S + 7B + 39F + 1703C)
-  be: 1755 items (6S + 7B + 39F + 1703C)
-  bg: 1755 items (6S + 7B + 39F + 1703C)
-  bn: 1755 items (6S + 7B + 39F + 1703C)
-  ca: 1755 items (6S + 7B + 39F + 1703C)
-  cs: 1755 items (6S + 7B + 39F + 1703C)
-  da: 1755 items (6S + 7B + 39F + 1703C)
-  de: 1755 items (6S + 7B + 39F + 1703C)
-  el: 1755 items (6S + 7B + 39F + 1703C)
-  en: 1755 items (6S + 7B + 39F + 1703C)
-  es: 1755 items (6S + 7B + 39F + 1703C)
-  fa: 1755 items (6S + 7B + 39F + 1703C)
-  fi: 1755 items (6S + 7B + 39F + 1703C)
-  fr: 1755 items (6S + 7B + 39F + 1703C)
-  he: 1755 items (6S + 7B + 39F + 1703C)
-  hi: 1755 items (6S + 7B + 39F + 1703C)
-  hr: 1755 items (6S + 7B + 39F + 1703C)
-  hu: 1755 items (6S + 7B + 39F + 1703C)
-  hy: 1755 items (6S + 7B + 39F + 1703C)
-  id: 1755 items (6S + 7B + 39F + 1703C)
-  it: 1755 items (6S + 7B + 39F + 1703C)
-  ja: 1755 items (6S + 7B + 39F + 1703C)
-  ka: 1755 items (6S + 7B + 39F + 1703C)
-  ko: 1755 items (6S + 7B + 39F + 1703C)
-  ms: 1755 items (6S + 7B + 39F + 1703C)
-  ne: 1755 items (6S + 7B + 39F + 1703C)
-  nl: 1755 items (6S + 7B + 39F + 1703C)
-  no: 1755 items (6S + 7B + 39F + 1703C)
-  pl: 1755 items (6S + 7B + 39F + 1703C)
-  pt: 1755 items (6S + 7B + 39F + 1703C)
-  ro: 1755 items (6S + 7B + 39F + 1703C)
-  ru: 1755 items (6S + 7B + 39F + 1703C)
-  si: 1755 items (6S + 7B + 39F + 1703C)
-  sk: 1755 items (6S + 7B + 39F + 1703C)
-  sl: 1755 items (6S + 7B + 39F + 1703C)
-  sq: 1755 items (6S + 7B + 39F + 1703C)
-  sr: 1755 items (6S + 7B + 39F + 1703C)
-  sv: 1755 items (6S + 7B + 39F + 1703C)
-  sw: 1755 items (6S + 7B + 39F + 1703C)
-  ta: 1755 items (6S + 7B + 39F + 1703C)
-  th: 1755 items (6S + 7B + 39F + 1703C)
-  tr: 1755 items (6S + 7B + 39F + 1703C)
-  uk: 1755 items (6S + 7B + 39F + 1703C)
-  ur: 1755 items (6S + 7B + 39F + 1703C)
-  vi: 1755 items (6S + 7B + 39F + 1703C)
-  zh: 1755 items (6S + 7B + 39F + 1703C)
+  af: 1895 items (6S + 7B + 39F + 1843C)
+  ar: 1895 items (6S + 7B + 39F + 1843C)
+  az: 1895 items (6S + 7B + 39F + 1843C)
+  be: 1895 items (6S + 7B + 39F + 1843C)
+  bg: 1895 items (6S + 7B + 39F + 1843C)
+  bn: 1895 items (6S + 7B + 39F + 1843C)
+  ca: 1895 items (6S + 7B + 39F + 1843C)
+  cs: 1895 items (6S + 7B + 39F + 1843C)
+  da: 1895 items (6S + 7B + 39F + 1843C)
+  de: 1895 items (6S + 7B + 39F + 1843C)
+  el: 1895 items (6S + 7B + 39F + 1843C)
+  en: 2243 items (6S + 7B + 39F + 2191C)
+  es: 1895 items (6S + 7B + 39F + 1843C)
+  fa: 1895 items (6S + 7B + 39F + 1843C)
+  fi: 1895 items (6S + 7B + 39F + 1843C)
+  fr: 1895 items (6S + 7B + 39F + 1843C)
+  he: 1895 items (6S + 7B + 39F + 1843C)
+  hi: 1895 items (6S + 7B + 39F + 1843C)
+  hr: 1895 items (6S + 7B + 39F + 1843C)
+  hu: 1895 items (6S + 7B + 39F + 1843C)
+  hy: 1895 items (6S + 7B + 39F + 1843C)
+  id: 1895 items (6S + 7B + 39F + 1843C)
+  it: 1895 items (6S + 7B + 39F + 1843C)
+  ja: 1895 items (6S + 7B + 39F + 1843C)
+  ka: 1895 items (6S + 7B + 39F + 1843C)
+  ko: 1895 items (6S + 7B + 39F + 1843C)
+  ms: 1895 items (6S + 7B + 39F + 1843C)
+  ne: 1895 items (6S + 7B + 39F + 1843C)
+  nl: 1895 items (6S + 7B + 39F + 1843C)
+  no: 1895 items (6S + 7B + 39F + 1843C)
+  pl: 1895 items (6S + 7B + 39F + 1843C)
+  pt: 1895 items (6S + 7B + 39F + 1843C)
+  ro: 1895 items (6S + 7B + 39F + 1843C)
+  ru: 1895 items (6S + 7B + 39F + 1843C)
+  si: 1895 items (6S + 7B + 39F + 1843C)
+  sk: 1895 items (6S + 7B + 39F + 1843C)
+  sl: 1895 items (6S + 7B + 39F + 1843C)
+  sq: 1895 items (6S + 7B + 39F + 1843C)
+  sr: 1895 items (6S + 7B + 39F + 1843C)
+  sv: 1895 items (6S + 7B + 39F + 1843C)
+  sw: 1895 items (6S + 7B + 39F + 1843C)
+  ta: 1895 items (6S + 7B + 39F + 1843C)
+  th: 1895 items (6S + 7B + 39F + 1843C)
+  tr: 1895 items (6S + 7B + 39F + 1843C)
+  uk: 1895 items (6S + 7B + 39F + 1843C)
+  ur: 1895 items (6S + 7B + 39F + 1843C)
+  vi: 1895 items (6S + 7B + 39F + 1843C)
+  zh: 1895 items (6S + 7B + 39F + 1843C)
 Done.
 Generated search-widget-translations.json: 48 locales → /root/projects/trade/web/apps/site/public/search-widget-translations.json
 ▲ Next.js 16.2.4 (Turbopack)
 
   Creating an optimized production build ...
-✓ Compiled successfully in 3.6s
+✓ Compiled successfully in 2.4s
   Running TypeScript ...
-  Finished TypeScript in 7.4s ...
+  Finished TypeScript in 6.0s ...
   Collecting page data using 19 workers ...
   Generating static pages using 19 workers (0/1349) ...
   Generating static pages using 19 workers (337/1349) 
   Generating static pages using 19 workers (674/1349) 
   Generating static pages using 19 workers (1011/1349) 
-✓ Generating static pages using 19 workers (1349/1349) in 5.1s
+✓ Generating static pages using 19 workers (1349/1349) in 14.7s
   Finalizing page optimization ...
 ⚠ Statically exporting a Next.js application via `next export` disables API routes and middleware.
 This command is meant for static-only hosts, and is not necessary to make your application static.
@@ -358,7 +358,9 @@ Output:   /root/projects/trade/web/apps/site/out
 
 ▶ check-translations.mjs --short
 
-✅ 全量核验通过！48 种语言无质量问题。
+⚠️ 发现 16413 个问题
+   - Portal 翻译质量: 16370 个问题
+   - 共享 UI 消息: 43 个问题
 
 ▶ check-i18n-keys.mjs --ci
 🔑 i18n key 完整性检查
@@ -366,67 +368,440 @@ Output:   /root/projects/trade/web/apps/site/out
 📦 SITE (0 missing, 0 extra, 0 hardcoded):
   ✅ 全部通过
 
-📦 PORTAL (0 missing, 0 extra, 0 hardcoded):
-  ✅ 全部通过
+📦 PORTAL (16356 missing, 0 extra, 275 hardcoded):
+  🔴 Check.nmpaRequiredDoc_0: 缺失于 47/47 语言
+  🔴 Check.nmpaRequiredDoc_1: 缺失于 47/47 语言
+  🔴 Check.nmpaRequiredDoc_2: 缺失于 47/47 语言
+  🔴 Check.nmpaRequiredDoc_3: 缺失于 47/47 语言
+  🔴 Check.nmpaRequiredDoc_4: 缺失于 47/47 语言
+  🔴 Check.nmpaRequiredDoc_5: 缺失于 47/47 语言
+  🔴 Check.nmpaRequiredDoc_6: 缺失于 47/47 语言
+  🔴 Check.cccChannel_cbec_adv1: 缺失于 47/47 语言
+  🔴 Check.cccChannel_cbec_desc: 缺失于 47/47 语言
+  🔴 Check.cccChannel_cbec_dis1: 缺失于 47/47 语言
+  🔴 Check.cccChannel_cbec_dis2: 缺失于 47/47 语言
+  🔴 Check.cccChannel_cbec_name: 缺失于 47/47 语言
+  🔴 Check.cccChannel_standard_adv1: 缺失于 47/47 语言
+  🔴 Check.cccChannel_standard_desc_full: 缺失于 47/47 语言
+  🔴 Check.cccChannel_standard_desc_normal: 缺失于 47/47 语言
+  🔴 Check.cccChannel_standard_name: 缺失于 47/47 语言
+  🔴 Check.cccCompetitiveAnalysis: 缺失于 47/47 语言
+  🔴 Check.cccCost_annualFollowup_item: 缺失于 47/47 语言
+  🔴 Check.cccCost_annualFollowup_notes: 缺失于 47/47 语言
+  🔴 Check.cccCost_cbConv_item: 缺失于 47/47 语言
+  🔴 Check.cccCost_cbConv_notes: 缺失于 47/47 语言
+  🔴 Check.cccCost_certFee_item: 缺失于 47/47 语言
+  🔴 Check.cccCost_certFee_notes: 缺失于 47/47 语言
+  🔴 Check.cccCost_factoryInsp_item: 缺失于 47/47 语言
+  🔴 Check.cccCost_factoryInsp_notes: 缺失于 47/47 语言
+  🔴 Check.cccCost_manualTrans_item: 缺失于 47/47 语言
+  🔴 Check.cccCost_manualTrans_notes: 缺失于 47/47 语言
+  🔴 Check.cccCost_service_item: 缺失于 47/47 语言
+  🔴 Check.cccCost_service_notes: 缺失于 47/47 语言
+  🔴 Check.cccCost_testing_item: 缺失于 47/47 语言
+  🔴 Check.cccCost_testing_notes: 缺失于 47/47 语言
+  🔴 Check.cccHorizon_cbDigital_desc: 缺失于 47/47 语言
+  🔴 Check.cccHorizon_cbDigital_impact: 缺失于 47/47 语言
+  🔴 Check.cccHorizon_cbDigital_timeframe: 缺失于 47/47 语言
+  🔴 Check.cccHorizon_cbDigital_topic: 缺失于 47/47 语言
+  🔴 Check.cccHorizon_gbRev_desc: 缺失于 47/47 语言
+  🔴 Check.cccHorizon_gbRev_impact: 缺失于 47/47 语言
+  🔴 Check.cccHorizon_gbRev_timeframe: 缺失于 47/47 语言
+  🔴 Check.cccHorizon_gbRev_topic: 缺失于 47/47 语言
+  🔴 Check.cccHorizon_iot_desc: 缺失于 47/47 语言
+  🔴 Check.cccHorizon_iot_impact: 缺失于 47/47 语言
+  🔴 Check.cccHorizon_iot_timeframe: 缺失于 47/47 语言
+  🔴 Check.cccHorizon_iot_topic: 缺失于 47/47 语言
+  🔴 Check.cccMarket_barrier1: 缺失于 47/47 语言
+  🔴 Check.cccMarket_barrier2: 缺失于 47/47 语言
+  🔴 Check.cccMarket_driver1: 缺失于 47/47 语言
+  🔴 Check.cccMarket_driver2: 缺失于 47/47 语言
+  🔴 Check.cccMarket_perception: 缺失于 47/47 语言
+  🔴 Check.cccMarket_trend: 缺失于 47/47 语言
+  🔴 Check.cccPost_annualInsp_desc: 缺失于 47/47 语言
+  🔴 Check.cccPost_annualInsp_frequency: 缺失于 47/47 语言
+  🔴 Check.cccPost_annualInsp_item: 缺失于 47/47 语言
+  🔴 Check.cccPost_changeNotice_desc: 缺失于 47/47 语言
+  🔴 Check.cccPost_changeNotice_frequency: 缺失于 47/47 语言
+  🔴 Check.cccPost_changeNotice_item: 缺失于 47/47 语言
+  🔴 Check.cccPost_renewal_desc: 缺失于 47/47 语言
+  🔴 Check.cccPost_renewal_frequency: 缺失于 47/47 语言
+  🔴 Check.cccPost_renewal_item: 缺失于 47/47 语言
+  🔴 Check.cccPost_surveillance_desc: 缺失于 47/47 语言
+  🔴 Check.cccPost_surveillance_frequency: 缺失于 47/47 语言
+  🔴 Check.cccPost_surveillance_item: 缺失于 47/47 语言
+  🔴 Check.cccReject_cause: 缺失于 47/47 语言
+  🔴 Check.cccReject_problem: 缺失于 47/47 语言
+  🔴 Check.cccReject_solution: 缺失于 47/47 语言
+  🔴 Check.cccRiskMatrix_firstTime: 缺失于 47/47 语言
+  🔴 Check.cccTimeline_annual_desc: 缺失于 47/47 语言
+  🔴 Check.cccTimeline_annual_name: 缺失于 47/47 语言
+  🔴 Check.cccTimeline_certMark_desc: 缺失于 47/47 语言
+  🔴 Check.cccTimeline_certMark_name: 缺失于 47/47 语言
+  🔴 Check.cccTimeline_certReview_desc: 缺失于 47/47 语言
+  🔴 Check.cccTimeline_certReview_name: 缺失于 47/47 语言
+  🔴 Check.cccTimeline_factoryInsp_desc: 缺失于 47/47 语言
+  🔴 Check.cccTimeline_factoryInsp_name: 缺失于 47/47 语言
+  🔴 Check.cccTimeline_preAssess_desc: 缺失于 47/47 语言
+  🔴 Check.cccTimeline_preAssess_name: 缺失于 47/47 语言
+  🔴 Check.cccTimeline_typeTest_desc: 缺失于 47/47 语言
+  🔴 Check.cccTimeline_typeTest_name: 缺失于 47/47 语言
+  🔴 Check.cbChannel_jd: 缺失于 47/47 语言
+  🔴 Check.cbChannel_tmall: 缺失于 47/47 语言
+  🔴 Check.cbCost_annualFee_item: 缺失于 47/47 语言
+  🔴 Check.cbCost_annualFee_notes: 缺失于 47/47 语言
+  🔴 Check.cbCost_bondedWh_item: 缺失于 47/47 语言
+  🔴 Check.cbCost_bondedWh_notes: 缺失于 47/47 语言
+  🔴 Check.cbCost_compliance_item: 缺失于 47/47 语言
+  🔴 Check.cbCost_compliance_notes: 缺失于 47/47 语言
+  🔴 Check.cbCost_deposit_item: 缺失于 47/47 语言
+  🔴 Check.cbCost_deposit_notes: 缺失于 47/47 语言
+  🔴 Check.cbCustomsDoc_0: 缺失于 47/47 语言
+  🔴 Check.cbCustomsDoc_1: 缺失于 47/47 语言
+  🔴 Check.cbCustomsDoc_2: 缺失于 47/47 语言
+  🔴 Check.cbCustomsDoc_3: 缺失于 47/47 语言
+  🔴 Check.cbCustomsDoc_4: 缺失于 47/47 语言
+  🔴 Check.cbCustomsDoc_5: 缺失于 47/47 语言
+  🔴 Check.cbHorizon_posList_desc: 缺失于 47/47 语言
+  🔴 Check.cbHorizon_posList_impact: 缺失于 47/47 语言
+  🔴 Check.cbHorizon_posList_timeframe: 缺失于 47/47 语言
+  🔴 Check.cbHorizon_posList_topic: 缺失于 47/47 语言
+  🔴 Check.cbLogistics_bbc_name: 缺失于 47/47 语言
+  🔴 Check.cbLogistics_direct_name: 缺失于 47/47 语言
+  🔴 Check.cbMarket_barrier1: 缺失于 47/47 语言
+  🔴 Check.cbMarket_barrier2: 缺失于 47/47 语言
+  🔴 Check.cbMarket_barrier3: 缺失于 47/47 语言
+  🔴 Check.cbMarket_driver1: 缺失于 47/47 语言
+  🔴 Check.cbMarket_driver2: 缺失于 47/47 语言
+  🔴 Check.cbMarket_driver3: 缺失于 47/47 语言
+  🔴 Check.cbMarket_perception: 缺失于 47/47 语言
+  🔴 Check.cbMarket_reco: 缺失于 47/47 语言
+  🔴 Check.cbMarket_trend: 缺失于 47/47 语言
+  🔴 Check.cbPlatform_douyin_fee: 缺失于 47/47 语言
+  🔴 Check.cbPlatform_douyin_timeline: 缺失于 47/47 语言
+  🔴 Check.cbPlatform_jd_fee: 缺失于 47/47 语言
+  🔴 Check.cbPlatform_jd_name: 缺失于 47/47 语言
+  🔴 Check.cbPlatform_jd_timeline: 缺失于 47/47 语言
+  🔴 Check.cbPlatform_tmall_fee: 缺失于 47/47 语言
+  🔴 Check.cbPlatform_tmall_name: 缺失于 47/47 语言
+  🔴 Check.cbPlatform_tmall_timeline: 缺失于 47/47 语言
+  🔴 Check.cbPositiveList_apparel: 缺失于 47/47 语言
+  🔴 Check.cbPositiveList_cosmetics: 缺失于 47/47 语言
+  🔴 Check.cbPost_inventory_desc: 缺失于 47/47 语言
+  🔴 Check.cbPost_inventory_frequency: 缺失于 47/47 语言
+  🔴 Check.cbPost_inventory_item: 缺失于 47/47 语言
+  🔴 Check.cbPost_labelRenewal_desc: 缺失于 47/47 语言
+  🔴 Check.cbPost_labelRenewal_frequency: 缺失于 47/47 语言
+  🔴 Check.cbPost_labelRenewal_item: 缺失于 47/47 语言
+  🔴 Check.cbPost_platformReview_desc: 缺失于 47/47 语言
+  🔴 Check.cbPost_platformReview_frequency: 缺失于 47/47 语言
+  🔴 Check.cbPost_platformReview_item: 缺失于 47/47 语言
+  🔴 Check.cbPost_posListReview_desc: 缺失于 47/47 语言
+  🔴 Check.cbPost_posListReview_frequency: 缺失于 47/47 语言
+  🔴 Check.cbPost_posListReview_item: 缺失于 47/47 语言
+  🔴 Check.cbReg_decree249_authority: 缺失于 47/47 语言
+  🔴 Check.cbReg_decree249_date: 缺失于 47/47 语言
+  🔴 Check.cbReg_mofcom2018_authority: 缺失于 47/47 语言
+  🔴 Check.cbReg_mofcom2018_date: 缺失于 47/47 语言
+  🔴 Check.cbReg_mofcom2018_number: 缺失于 47/47 语言
+  🔴 Check.cbReg_positiveList_name: 缺失于 47/47 语言
+  🔴 Check.cbRiskNote_investment: 缺失于 47/47 语言
+  🔴 Check.cbTariff_consumption: 缺失于 47/47 语言
+  🔴 Check.cbTariff_mfn: 缺失于 47/47 语言
+  🔴 Check.cbTariff_total: 缺失于 47/47 语言
+  🔴 Check.cbTariff_vat: 缺失于 47/47 语言
+  🔴 Check.cbTimeline_docPrep_dep_platform: 缺失于 47/47 语言
+  🔴 Check.cbTimeline_docPrep_desc: 缺失于 47/47 语言
+  🔴 Check.cbTimeline_docPrep_name: 缺失于 47/47 语言
+  🔴 Check.cbTimeline_launch_dep_approved: 缺失于 47/47 语言
+  🔴 Check.cbTimeline_launch_desc: 缺失于 47/47 语言
+  🔴 Check.cbTimeline_launch_name: 缺失于 47/47 语言
+  🔴 Check.cbTimeline_platformApp_dep_docs: 缺失于 47/47 语言
+  🔴 Check.cbTimeline_platformApp_desc: 缺失于 47/47 语言
+  🔴 Check.cbTimeline_platformApp_name: 缺失于 47/47 语言
+  🔴 Check.cbTimeline_platformSel_desc: 缺失于 47/47 语言
+  🔴 Check.cbTimeline_platformSel_name: 缺失于 47/47 语言
+  🔴 Check.common_issue_301_tariffs: 缺失于 47/47 语言
+  🔴 Check.common_issue_fda_cfda_standards: 缺失于 47/47 语言
+  🔴 Check.fta_ethiopia: 缺失于 47/47 语言
+  🔴 Check.fta_italy: 缺失于 47/47 语言
+  🔴 Check.fta_netherlands: 缺失于 47/47 语言
+  🔴 Check.fta_spain: 缺失于 47/47 语言
+  🔴 Check.fta_usa: 缺失于 47/47 语言
+  🔴 Check.import_volume_ethiopia: 缺失于 47/47 语言
+  🔴 Check.import_volume_russia: 缺失于 47/47 语言
+  🔴 Check.import_volume_usa: 缺失于 47/47 语言
+  🔴 Check.langnote_argentina: 缺失于 47/47 语言
+  🔴 Check.langnote_australia: 缺失于 47/47 语言
+  🔴 Check.langnote_chile: 缺失于 47/47 语言
+  🔴 Check.langnote_newzealand: 缺失于 47/47 语言
+  🔴 Check.langnote_peru: 缺失于 47/47 语言
+  🔴 Check.langnote_southafrica: 缺失于 47/47 语言
+  🔴 Check.langnote_uk: 缺失于 47/47 语言
+  🔴 Check.langnote_usa: 缺失于 47/47 语言
+  🔴 Check.labelChannel_adv1: 缺失于 47/47 语言
+  🔴 Check.labelChannel_desc: 缺失于 47/47 语言
+  🔴 Check.labelChannel_dis1: 缺失于 47/47 语言
+  🔴 Check.labelChannel_name: 缺失于 47/47 语言
+  🔴 Check.labelCompetitiveAnalysis: 缺失于 47/47 语言
+  🔴 Check.labelCost_design_item: 缺失于 47/47 语言
+  🔴 Check.labelCost_design_notes: 缺失于 47/47 语言
+  🔴 Check.labelCost_nutrition_item: 缺失于 47/47 语言
+  🔴 Check.labelCost_nutrition_notes: 缺失于 47/47 语言
+  🔴 Check.labelCost_review_item: 缺失于 47/47 语言
+  🔴 Check.labelCost_review_notes: 缺失于 47/47 语言
+  🔴 Check.labelCost_translation_item: 缺失于 47/47 语言
+  🔴 Check.labelCost_translation_notes: 缺失于 47/47 语言
+  🔴 Check.labelHorizon_fop_desc: 缺失于 47/47 语言
+  🔴 Check.labelHorizon_fop_impact: 缺失于 47/47 语言
+  🔴 Check.labelHorizon_fop_timeframe: 缺失于 47/47 语言
+  🔴 Check.labelHorizon_fop_topic: 缺失于 47/47 语言
+  🔴 Check.labelHorizon_gb7718_desc: 缺失于 47/47 语言
+  🔴 Check.labelHorizon_gb7718_impact: 缺失于 47/47 语言
+  🔴 Check.labelHorizon_gb7718_timeframe: 缺失于 47/47 语言
+  🔴 Check.labelHorizon_gb7718_topic: 缺失于 47/47 语言
+  🔴 Check.labelHorizon_qr_desc: 缺失于 47/47 语言
+  🔴 Check.labelHorizon_qr_impact: 缺失于 47/47 语言
+  🔴 Check.labelHorizon_qr_timeframe: 缺失于 47/47 语言
+  🔴 Check.labelHorizon_qr_topic: 缺失于 47/47 语言
+  🔴 Check.labelMarket_barrier1: 缺失于 47/47 语言
+  🔴 Check.labelMarket_barrier2: 缺失于 47/47 语言
+  🔴 Check.labelMarket_driver1: 缺失于 47/47 语言
+  🔴 Check.labelMarket_driver2: 缺失于 47/47 语言
+  🔴 Check.labelMarket_perception: 缺失于 47/47 语言
+  🔴 Check.labelMarket_reco: 缺失于 47/47 语言
+  🔴 Check.labelMarket_trend: 缺失于 47/47 语言
+  🔴 Check.labelPost_annualAudit_desc: 缺失于 47/47 语言
+  🔴 Check.labelPost_annualAudit_frequency: 缺失于 47/47 语言
+  🔴 Check.labelPost_annualAudit_item: 缺失于 47/47 语言
+  🔴 Check.labelPost_formulaChange_desc: 缺失于 47/47 语言
+  🔴 Check.labelPost_formulaChange_frequency: 缺失于 47/47 语言
+  🔴 Check.labelPost_formulaChange_item: 缺失于 47/47 语言
+  🔴 Check.labelPost_labelUpdate_desc: 缺失于 47/47 语言
+  🔴 Check.labelPost_labelUpdate_frequency: 缺失于 47/47 语言
+  🔴 Check.labelPost_labelUpdate_item: 缺失于 47/47 语言
+  🔴 Check.labelRej0_cause: 缺失于 47/47 语言
+  🔴 Check.labelRej0_problem: 缺失于 47/47 语言
+  🔴 Check.labelRej0_solution: 缺失于 47/47 语言
+  🔴 Check.labelRej1_cause: 缺失于 47/47 语言
+  🔴 Check.labelRej1_problem: 缺失于 47/47 语言
+  🔴 Check.labelRej1_solution: 缺失于 47/47 语言
+  🔴 Check.nmpaChannel_cbec_adv1: 缺失于 47/47 语言
+  🔴 Check.nmpaChannel_cbec_desc: 缺失于 47/47 语言
+  🔴 Check.nmpaChannel_cbec_dis1: 缺失于 47/47 语言
+  🔴 Check.nmpaChannel_cbec_dis2: 缺失于 47/47 语言
+  🔴 Check.nmpaChannel_cbec_name: 缺失于 47/47 语言
+  🔴 Check.nmpaChannel_standard_adv1: 缺失于 47/47 语言
+  🔴 Check.nmpaChannel_standard_name: 缺失于 47/47 语言
+  🔴 Check.nmpaCompetitiveAnalysis: 缺失于 47/47 语言
+  🔴 Check.nmpaCost_formula_item: 缺失于 47/47 语言
+  🔴 Check.nmpaCost_formula_notes: 缺失于 47/47 语言
+  🔴 Check.nmpaCost_label_item: 缺失于 47/47 语言
+  🔴 Check.nmpaCost_label_notes: 缺失于 47/47 语言
+  🔴 Check.nmpaCost_safety_item: 缺失于 47/47 语言
+  🔴 Check.nmpaCost_safety_notes: 缺失于 47/47 语言
+  🔴 Check.nmpaCost_service_item: 缺失于 47/47 语言
+  🔴 Check.nmpaCost_service_notes: 缺失于 47/47 语言
+  🔴 Check.nmpaCost_testing_item: 缺失于 47/47 语言
+  🔴 Check.nmpaCost_testing_notes: 缺失于 47/47 语言
+  🔴 Check.nmpaCost_translation_item: 缺失于 47/47 语言
+  🔴 Check.nmpaCost_translation_notes: 缺失于 47/47 语言
+  🔴 Check.nmpaDetailedTimeline: 缺失于 47/47 语言
+  🔴 Check.nmpaExecutiveSummary: 缺失于 47/47 语言
+  🔴 Check.nmpaHorizon_animalTest_desc: 缺失于 47/47 语言
+  🔴 Check.nmpaHorizon_animalTest_impact: 缺失于 47/47 语言
+  🔴 Check.nmpaHorizon_animalTest_timeframe: 缺失于 47/47 语言
+  🔴 Check.nmpaHorizon_animalTest_topic: 缺失于 47/47 语言
+  🔴 Check.nmpaHorizon_labelRev_desc: 缺失于 47/47 语言
+  🔴 Check.nmpaHorizon_labelRev_impact: 缺失于 47/47 语言
+  🔴 Check.nmpaHorizon_labelRev_timeframe: 缺失于 47/47 语言
+  🔴 Check.nmpaHorizon_labelRev_topic: 缺失于 47/47 语言
+  🔴 Check.nmpaHorizon_specialList_desc: 缺失于 47/47 语言
+  🔴 Check.nmpaHorizon_specialList_impact: 缺失于 47/47 语言
+  🔴 Check.nmpaHorizon_specialList_timeframe: 缺失于 47/47 语言
+  🔴 Check.nmpaHorizon_specialList_topic: 缺失于 47/47 语言
+  🔴 Check.nmpaLabGuide: 缺失于 47/47 语言
+  🔴 Check.nmpaMarket_barrier1: 缺失于 47/47 语言
+  🔴 Check.nmpaMarket_barrier2: 缺失于 47/47 语言
+  🔴 Check.nmpaMarket_driver1: 缺失于 47/47 语言
+  🔴 Check.nmpaMarket_driver2: 缺失于 47/47 语言
+  🔴 Check.nmpaMarket_perception: 缺失于 47/47 语言
+  🔴 Check.nmpaMarket_trend: 缺失于 47/47 语言
+  🔴 Check.nmpaPost_formulaChange_desc: 缺失于 47/47 语言
+  🔴 Check.nmpaPost_formulaChange_frequency: 缺失于 47/47 语言
+  🔴 Check.nmpaPost_formulaChange_item: 缺失于 47/47 语言
+  🔴 Check.nmpaPost_labelUpdate_desc: 缺失于 47/47 语言
+  🔴 Check.nmpaPost_labelUpdate_frequency: 缺失于 47/47 语言
+  🔴 Check.nmpaPost_labelUpdate_item: 缺失于 47/47 语言
+  🔴 Check.nmpaPost_production_desc: 缺失于 47/47 语言
+  🔴 Check.nmpaPost_production_frequency: 缺失于 47/47 语言
+  🔴 Check.nmpaPost_production_item: 缺失于 47/47 语言
+  🔴 Check.nmpaPost_renewal_desc: 缺失于 47/47 语言
+  🔴 Check.nmpaPost_renewal_frequency: 缺失于 47/47 语言
+  🔴 Check.nmpaPost_renewal_item: 缺失于 47/47 语言
+  🔴 Check.nmpaProfile_baby_riskReason: 缺失于 47/47 语言
+  🔴 Check.nmpaProfile_fragrance_riskReason: 缺失于 47/47 语言
+  🔴 Check.nmpaProfile_haircare_riskReason: 缺失于 47/47 语言
+  🔴 Check.nmpaProfile_makeup_riskReason: 缺失于 47/47 语言
+  🔴 Check.nmpaProfile_skincare_riskReason: 缺失于 47/47 语言
+  🔴 Check.nmpaProfile_sunscreen_riskReason: 缺失于 47/47 语言
+  🔴 Check.nmpaRiskDim_originCountry: 缺失于 47/47 语言
+  🔴 Check.nmpaRiskDim_productCategory: 缺失于 47/47 语言
+  🔴 Check.nmpaRiskDim_regulatoryComplexity: 缺失于 47/47 语言
+  🔴 Check.nmpaRiskDim_testing: 缺失于 47/47 语言
+  🔴 Check.nmpaRiskDim_timeline: 缺失于 47/47 语言
+  🔴 Check.nmpaRiskMatrix_costHigh: 缺失于 47/47 语言
+  🔴 Check.nmpaRiskMatrix_costLow: 缺失于 47/47 语言
+  🔴 Check.nmpaRiskMatrix_firstTime: 缺失于 47/47 语言
+  🔴 Check.nmpaTesting_heavyMetals: 缺失于 47/47 语言
+  🔴 Check.nmpaTesting_stability: 缺失于 47/47 语言
+  🔴 Check.nmpaTimeline_dossier_desc: 缺失于 47/47 语言
+  🔴 Check.nmpaTimeline_dossier_name: 缺失于 47/47 语言
+  🔴 Check.nmpaTimeline_formulaReview_desc: 缺失于 47/47 语言
+  🔴 Check.nmpaTimeline_formulaReview_name: 缺失于 47/47 语言
+  🔴 Check.nmpaTimeline_labTest_desc: 缺失于 47/47 语言
+  🔴 Check.nmpaTimeline_labTest_name: 缺失于 47/47 语言
+  🔴 Check.nmpaTimeline_post_desc: 缺失于 47/47 语言
+  🔴 Check.nmpaTimeline_post_name: 缺失于 47/47 语言
+  🔴 Check.nmpaTimeline_safetyAssess_desc: 缺失于 47/47 语言
+  🔴 Check.nmpaTimeline_safetyAssess_name: 缺失于 47/47 语言
+  🔴 Check.nmpaTimeline_submit_desc: 缺失于 47/47 语言
+  🔴 Check.nmpaTimeline_submit_name: 缺失于 47/47 语言
+  🔴 Check.nmpa_country_france: 缺失于 47/47 语言
+  🔴 Check.nmpa_country_japan: 缺失于 47/47 语言
+  🔴 Check.tmCompetitiveAnalysis: 缺失于 47/47 语言
+  🔴 Check.tmCost_cert_item: 缺失于 47/47 语言
+  🔴 Check.tmCost_cert_notes: 缺失于 47/47 语言
+  🔴 Check.tmCost_filing_item: 缺失于 47/47 语言
+  🔴 Check.tmCost_filing_notes: 缺失于 47/47 语言
+  🔴 Check.tmCost_search_item: 缺失于 47/47 语言
+  🔴 Check.tmCost_search_notes: 缺失于 47/47 语言
+  🔴 Check.tmCost_service_item: 缺失于 47/47 语言
+  🔴 Check.tmCost_service_notes: 缺失于 47/47 语言
+  🔴 Check.tmHorizon_lawRev_desc: 缺失于 47/47 语言
+  🔴 Check.tmHorizon_lawRev_impact: 缺失于 47/47 语言
+  🔴 Check.tmHorizon_lawRev_timeframe: 缺失于 47/47 语言
+  🔴 Check.tmHorizon_lawRev_topic: 缺失于 47/47 语言
+  🔴 Check.tmMarket_barrier1: 缺失于 47/47 语言
+  🔴 Check.tmMarket_barrier2: 缺失于 47/47 语言
+  🔴 Check.tmMarket_barrier3: 缺失于 47/47 语言
+  🔴 Check.tmMarket_driver1: 缺失于 47/47 语言
+  🔴 Check.tmMarket_driver2: 缺失于 47/47 语言
+  🔴 Check.tmMarket_driver3: 缺失于 47/47 语言
+  🔴 Check.tmMarket_perception: 缺失于 47/47 语言
+  🔴 Check.tmMarket_trend: 缺失于 47/47 语言
+  🔴 Check.tmPost_renewal_desc: 缺失于 47/47 语言
+  🔴 Check.tmPost_renewal_frequency: 缺失于 47/47 语言
+  🔴 Check.tmPost_renewal_item: 缺失于 47/47 语言
+  🔴 Check.tmPost_useEvidence_desc: 缺失于 47/47 语言
+  🔴 Check.tmPost_useEvidence_frequency: 缺失于 47/47 语言
+  🔴 Check.tmPost_useEvidence_item: 缺失于 47/47 语言
+  🔴 Check.tmPost_watch_desc: 缺失于 47/47 语言
+  🔴 Check.tmPost_watch_frequency: 缺失于 47/47 语言
+  🔴 Check.tmPost_watch_item: 缺失于 47/47 语言
+  🔴 Check.tmRej0_cause: 缺失于 47/47 语言
+  🔴 Check.tmRej0_problem: 缺失于 47/47 语言
+  🔴 Check.tmRej0_solution: 缺失于 47/47 语言
+  🔴 Check.tmRej1_cause: 缺失于 47/47 语言
+  🔴 Check.tmRej1_problem: 缺失于 47/47 语言
+  🔴 Check.tmRej1_solution: 缺失于 47/47 语言
+  🔴 Check.tmTimeline_cert_desc: 缺失于 47/47 语言
+  🔴 Check.tmTimeline_cert_name: 缺失于 47/47 语言
+  🔴 Check.tmTimeline_filing_desc: 缺失于 47/47 语言
+  🔴 Check.tmTimeline_filing_name: 缺失于 47/47 语言
+  🔴 Check.tmTimeline_formalExam_desc: 缺失于 47/47 语言
+  🔴 Check.tmTimeline_formalExam_name: 缺失于 47/47 语言
+  🔴 Check.tmTimeline_publication_desc: 缺失于 47/47 语言
+  🔴 Check.tmTimeline_publication_name: 缺失于 47/47 语言
+  🔴 Check.tmTimeline_search_desc: 缺失于 47/47 语言
+  🔴 Check.tmTimeline_search_name: 缺失于 47/47 语言
+  🔴 Check.tmTimeline_substantiveExam_desc: 缺失于 47/47 语言
+  🔴 Check.tmTimeline_substantiveExam_name: 缺失于 47/47 语言
+  ⚠️  硬编码英文 fallback (275 处):
+    🟡 Check.cccProfile_electronics_test_1 → "EMC GB 9254" (31 语言)
+    🟡 Check.cccProfile_home_appliance_test_2 → "EMC GB 4343.1" (35 语言)
+    🟡 Check.cccProfile_it_equipment_test_1 → "EMC GB 9254" (31 语言)
+    🟡 Check.cccProfile_lighting_test_2 → "EMC GB 17743" (33 语言)
+    🟡 Check.cccProfile_medical_test_1 → "EMC YY 0505" (35 语言)
+    🟡 Check.cccStandard_lighting → "GB 7000.1-2015, GB 17743-2021, GB 17625.1-2022" (33 语言)
+    🟡 Check.labelAllergen_crustacea → "Crustacea" (5 语言)
+    🟡 Check.cccProfile_toy_test_3 → "Phthalates" (6 语言)
+    🟡 Check.cccProfile_toy_test_2 → "Chemical GB 6675.4" (5 语言)
+    🟡 Check.labelNutr_protein → "Protein" (9 语言)
+    🟡 Check.standard_label → "Standard" (12 语言)
+    🟡 Check.cccProfile_electronics_test_2 → "Harmonics GB 17625.1" (12 语言)
+    🟡 Check.cccProfile_lighting_test_3 → "Harmonics GB 17625.1" (12 语言)
+    🟡 Check.cccProfile_medical_cert_1 → "NMPA Medical Device Registration" (2 语言)
+    🟡 Check.cccProfile_electronics_test_0 → "Safety GB 4943.1-2022" (3 语言)
+    🟡 Check.cccProfile_medical_test_0 → "Safety GB 9706.1" (2 语言)
+    🟡 Check.cccProfile_home_appliance_test_0 → "Safety GB 4706.1" (1 语言)
+    🟡 Check.cccProfile_it_equipment_test_0 → "Safety GB 4943.1" (1 语言)
+    🟡 Check.cccProfile_it_equipment_test_3 → "SAR if radio" (1 语言)
+    🟡 Check.cccProfile_lighting_test_0 → "Safety GB 7000.1" (1 语言)
+    🟡 Check.labelNutr_sodium → "Sodium" (2 语言)
+    🟡 Check.labelField_blank → "Blank" (1 语言)
+    🟡 Check.cccProfile_medical_test_2 → "Biocompatibility ISO 10993" (1 语言)
+    🟡 Check.labelField_allergens → "Allergens" (1 语言)
 
-📦 UI (0 missing, 0 extra, 0 hardcoded):
-  ✅ 全部通过
+📦 UI (0 missing, 0 extra, 38 hardcoded):
+  ⚠️  硬编码英文 fallback (38 处):
+    🟡 Footer.checkCb → "CBEC" (35 语言)
+    🔴 Footer.email → "Email" (3 语言)
 
-📊 总计: 0 缺失 + 0 多余 + 0 硬编码英文
-✅ 所有 i18n key 完整，无硬编码英文
+📊 总计: 16356 缺失 + 0 多余 + 313 硬编码英文
 
 ▶ check-i18n-coverage.mjs 
 
 📊 UI 包
-   en.json: 98 键
+   en.json: 106 键
 
-   af  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   ar  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   az  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   be  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   bg  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   bn  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   ca  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   cs  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   da  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   de  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   el  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   es  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   fa  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   fi  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   fr  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   he  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   hi  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   hr  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   hu  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   hy  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   id  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   it  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   ja  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   ka  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   ko  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   ms  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   ne  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   nl  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   no  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   pl  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   pt  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   ro  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   ru  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   si  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   sk  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   sl  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   sq  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   sr  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   sv  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   sw  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   ta  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   th  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   tr  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   uk  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   ur  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   vi  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
-   zh  ████████████████████ 100.0%  (98/98  缺失:0  多余:0)
+   af  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   ar  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   az  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   be  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   bg  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   bn  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   ca  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   cs  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   da  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   de  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   el  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   es  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   fa  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   fi  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   fr  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   he  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   hi  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   hr  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   hu  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   hy  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   id  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   it  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   ja  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   ka  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   ko  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   ms  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   ne  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   nl  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   no  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   pl  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   pt  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   ro  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   ru  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   si  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   sk  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   sl  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   sq  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   sr  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   sv  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   sw  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   ta  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   th  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   tr  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   uk  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   ur  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   vi  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
+   zh  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
    ─────────────────────────────────────────
    平均: 100.0%
 
@@ -484,57 +859,58 @@ Output:   /root/projects/trade/web/apps/site/out
    平均: 100.0%
 
 📊 Portal
-   en.json: 2388 键
+   en.json: 2876 键
 
-   af  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   ar  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   az  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   be  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   bg  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   bn  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   ca  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   cs  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   da  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   de  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   el  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   es  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   fa  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   fi  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   fr  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   he  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   hi  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   hr  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   hu  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   hy  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   id  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   it  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   ja  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   ka  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   ko  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   ms  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   ne  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   nl  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   no  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   pl  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   pt  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   ro  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   ru  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   si  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   sk  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   sl  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   sq  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   sr  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   sv  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   sw  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   ta  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   th  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   tr  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   uk  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   ur  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   vi  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
-   zh  ████████████████████ 100.0%  (2388/2388  缺失:0  多余:0)
+   af  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   ar  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   az  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   be  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   bg  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   bn  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   ca  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   cs  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   da  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   de  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   el  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   es  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   fa  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   fi  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   fr  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   he  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   hi  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   hr  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   hu  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   hy  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   id  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   it  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   ja  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   ka  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   ko  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   ms  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   ne  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   nl  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   no  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   pl  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   pt  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   ro  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   ru  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   si  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   sk  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   sl  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   sq  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   sr  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   sv  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   sw  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   ta  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   th  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   tr  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   uk  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   ur  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   vi  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
+   zh  ██████████████████░░ 87.9%  (2528/2876  缺失:348  多余:0)
    ─────────────────────────────────────────
-   平均: 100.0%
+   平均: 87.9%
+   缺失最多的: af(348), ar(348), az(348), be(348), bg(348)
 
 📊 Blog
    en.json: 58 键
@@ -592,16 +968,16 @@ Output:   /root/projects/trade/web/apps/site/out
 ═══════════════════════════════════════════════
   ✅ UI 包: 100.0%
   ✅ Site: 100.0%
-  ✅ Portal: 100.0%
+  ❌ Portal: 87.9%
   ✅ Blog: 100.0%
 ═══════════════════════════════════════════════
 
 
 ▶ clean-rsc.mjs out
 🧹 Cleaning RSC .txt payload files from out/...
-✅ Deleted 12829 RSC payload files (806.0 MB freed)
+✅ Deleted 12829 RSC payload files (806.9 MB freed)
 
 ═══════════════════════════════════════════════
-✅ 全部检查通过
+❌ 共 1 项检查失败
 ═══════════════════════════════════════════════
 

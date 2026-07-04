@@ -236,6 +236,14 @@ function runTKeyCheck() {
   runLocalScript('check-t-keys.mjs');
 }
 
+// ============================================================
+// 翻译冒号风格一致性检测
+// ============================================================
+function runColonCheck() {
+  if (project !== 'portal') return;
+  runLocalScript('check-colon-consistency.mjs');
+}
+
 // CI-4 路由 locale 前缀检测: 已作为 build-phase check 集成 (见 runBuildPhaseChecks)
 
 // ============================================================
@@ -268,6 +276,7 @@ runOverrideCheck();
 runTemplateCheck();
 runCategoryLabelCheck();
 runTKeyCheck();
+runColonCheck();
 runCleanup();
 
 console.log(`\n═══════════════════════════════════════════════`);

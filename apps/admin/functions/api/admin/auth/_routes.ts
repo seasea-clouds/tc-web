@@ -1,8 +1,8 @@
 /**
  * Admin auth APIs
- * POST /api/auth/login — Login
- * POST /api/auth/logout — Logout
- * GET /api/auth/me — Current admin
+ * POST /api/admin/auth/login — Login
+ * POST /api/admin/auth/logout — Logout
+ * GET /api/admin/auth/me — Current admin
  */
 
 export { onRequest as loginHandler } from "./login";

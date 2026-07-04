@@ -44,6 +44,38 @@ Portal 有同样的问题但提前修复了（`rewriteNextStatic` 中已写入 `
 2. 扩展 `/_next/static/chunks/` 动态 chunk 处理器，回退到 blog upstream
 3. 为 blog 代理路径添加 `ensureNextF()`（portal 已有）
 
+## 2026-07-04 — `__next._tree.txt` Prefetch 静默处理 (commit ddcc2d0)
+
+### 问题
+Next.js App Router 在 mount 后对可见 `<Link>` 发起 `fetch('/__next._tree.txt?_rsc=...')` RSC 预取请求。
+在 `output: 'export'` 静态导出模式下，这些文件不存在，返回 404 导致控制台错误。
+
+### 方案选择
+| 方案 | 语义 | 控制台 | 客户端影响 |
+|------|------|--------|-----------|
+| 404 | 资源不存在，诚实 | ❌ 显示 error | 路由器 fallback 到全页导航 |
+| 204 | 端点存在但无内容返回（当前方案） | ✅ 干净 | 路由器拿到空 RSC 流，等价"无预取数据" |
+| 200 + 空 RSC payload | 返回格式正确的空 RSC 树 | ✅ 干净 | 最准确但依赖 Next.js 内部格式，脆弱 |
+
+### 结论
+保持 204。这是基础设施层的合理处理方式（并非掩盖问题），路由器处理空 RSC 流无异常。
+
+## 2026-07-04 — Preload as="script" URL 不匹配 (commit ddcc2d0)
+
+### 问题
+Worker `rewriteNextStatic()` 将 `/_next/static/` 替换为 `/{prefix}/_next/static/` 后，
+对 `<script src>` 做了前缀还原，但 `<link rel="preload" as="script">` 的 `href` 未还原。
+
+结果：
+- preload: `/{prefix}/_next/static/chunks/abc.js` → 浏览器预加载了但用不上
+- script: `/_next/static/chunks/abc.js` → 不同 URL，重新下载一次
+
+控制台 warning + 双倍网络下载。
+
+### 修复
+在 `rewriteNextStatic()` 中使用 lookahead 正则（不依赖属性顺序）增加
+`<link rel="preload" as="script">` 的前缀还原。
+
 ## 2026-06-11 — CI 脚本铁律
 
 ### 原则 1：不掩盖问题

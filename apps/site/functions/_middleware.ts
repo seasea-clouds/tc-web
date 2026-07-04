@@ -48,14 +48,26 @@ function rewriteNextStatic(html: string, prefix: string): string {
   // The script tag's registerChunk resolves D(script.src). If we add a prefix,
   // D("/{prefix}/_next/static/chunks/{name}") is resolved, but the module system
   // waits for D("/_next/static/chunks/{name}") from its own q() call.
-  // Keep <link>, inline scripts, and RSC data prefixed for HTTP requests.
+  // Also revert for <link rel="preload" as="script"> tags: the preload URL must
+  // match the actual script URL (which is reused above). Otherwise browser
+  // preloads /{prefix}/_next/static/... while script loads /_next/static/... →
+  // preload goes unused, warning in console, chunk downloaded twice.
+  // Keep <link rel="preload" as="style">, inline scripts, and RSC data prefixed.
+  // Use lookaheads for attribute-order independence (rel, as can appear in any order).
   html = html.replace(
     /(<script[^>]*?src=")\/c\/(_next\/static\/)/g,
     '$1/$2'
   );
-  // Same revert for /blog/ prefix (same module system constraint)
   html = html.replace(
     /(<script[^>]*?src=")\/blog\/(_next\/static\/)/g,
+    '$1/$2'
+  );
+  html = html.replace(
+    /(<link(?=[^>]*?rel="preload")(?=[^>]*?as="script")[^>]*?href=")\/c\/(_next\/static\/)/g,
+    '$1/$2'
+  );
+  html = html.replace(
+    /(<link(?=[^>]*?rel="preload")(?=[^>]*?as="script")[^>]*?href=")\/blog\/(_next\/static\/)/g,
     '$1/$2'
   );
 
@@ -241,8 +253,18 @@ export async function onRequest(context: { request: Request; next: () => Promise
 
   // ── RSC prefetch tree (__next._tree.txt) — static export, no server → 204 ──
   // Next.js App Router client prefetches __next._tree.txt for visible <Link>
-  // elements on mount. With output: 'export', these files don't exist.
-  // Return 204 (no content) to avoid console 404 errors.
+  // elements on mount. With output: 'export', these RSC tree files don't exist
+  // because there's no running Next.js server to generate them dynamically.
+  // This is a known framework-level behavior of App Router in static export mode.
+  //
+  // Returning 404 is the honest HTTP status (the resource genuinely doesn't
+  // exist), but it causes console noise for an otherwise harmless prefetch.
+  // The client router handles 404 gracefully by falling back to full navigation.
+  //
+  // Returning 204 at the infrastructure level (Worker) tells the client:
+  // "the endpoint is valid but has no content to return" — the router receives
+  // an empty RSC stream, interprets it as "no prefetch data available", and
+  // falls back to full navigation on click. No console errors, no functional impact.
   if (url.pathname.endsWith('__next._tree.txt')) {
     return new Response(null, { status: 204 });
   }

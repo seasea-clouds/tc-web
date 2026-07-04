@@ -3,7 +3,7 @@
  * POST /api/auth/logout
  */
 
-import { getAdminSessionId, deleteAdminSession, clearAdminSessionCookie } from "../../lib/admin-session";
+import { getAdminSessionId, deleteAdminSession, clearAdminSessionCookie } from "../../../lib/admin-session";
 
 interface Env {
   DB: any;

@@ -33,7 +33,17 @@
 
 ## 部署
 - CF Pages 项目: `trade-web-admin`
+- 域名: `https://trade-web-admin.pages.dev`
 - Root dir: `apps/admin`
-- Build: `npx next build`
+- Build: `npx next build` + `wrangler pages deploy`（直接上传替代自动构建）
 - D1 binding: `DB` (共享 Portal 的 D1 数据库)
-- 生产路径：`/{locale}/admin/*` → `trade-web-admin.pages.dev`
+- 访问方式：直接访问 `trade-web-admin.pages.dev`（无需通过主站代理）
+
+### 自动构建问题
+CF Pages 自动构建（从 GitHub 触发）持续失败，原因不明（`clone_repo` 成功但 `build` 阶段失败且无可用日志）。
+当前通过 `wrangler pages deploy` 直接上传部署。
+
+### 坑
+- 移动 `functions/api/auth/*` 到 `functions/api/admin/auth/*` 后，必须更新 import 路径：
+  `../../lib/admin-session` → `../../../lib/admin-session`（多一级目录）
+- 更新 `package.json` 依赖后必须更新 `package-lock.json`，否则 `npm ci` 在 CF Pages 上会失败

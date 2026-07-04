@@ -3,7 +3,7 @@
  * GET /api/auth/me
  */
 
-import { requireAdmin } from "../../lib/admin-session";
+import { requireAdmin } from "../../../lib/admin-session";
 
 interface Env {
   DB: any;

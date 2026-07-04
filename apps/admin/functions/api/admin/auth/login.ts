@@ -4,8 +4,8 @@
  * Body: { username, password, turnstileToken }
  */
 
-import { createAdminSession } from "../../lib/admin-session";
-import { createLog } from "../../lib/log";
+import { createAdminSession } from "../../../lib/admin-session";
+import { createLog } from "../../../lib/log";
 
 interface Env {
   DB: any;

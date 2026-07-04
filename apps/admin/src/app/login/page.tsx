@@ -15,7 +15,21 @@ export default function LoginPage() {
 
   useEffect(() => {
     // Load Turnstile script
-    if ((window as any).turnstile) {
+    if (!(window as any).turnstile) {
+      const script = document.createElement('script');
+      script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+      script.async = true;
+      script.defer = true;
+      script.onload = () => {
+        if ((window as any).turnstile && turnstileRef.current) {
+          (window as any).turnstile.render(turnstileRef.current, {
+            sitekey: "0x4AAAAAAAewC-TLy6pJ7WgB",
+            callback: (token: string) => setTurnstileToken(token),
+          });
+        }
+      };
+      document.head.appendChild(script);
+    } else if ((window as any).turnstile && turnstileRef.current) {
       (window as any).turnstile.render(turnstileRef.current, {
         sitekey: "0x4AAAAAAAewC-TLy6pJ7WgB",
         callback: (token: string) => setTurnstileToken(token),

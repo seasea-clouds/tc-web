@@ -8,8 +8,8 @@
  * 5. Canonical host redirect: www / pages.dev → main domain
  *
  * Upstream URLs (for server-side proxy) resolved via:
- *   - Environment variables: UPSTREAM_PORTAL, UPSTREAM_BLOG
- *   - Auto-derivation on .pages.dev: trade-web-site → trade-web-portal / trade-web-blog
+ *   - Environment variables: UPSTREAM_PORTAL, UPSTREAM_BLOG, UPSTREAM_ADMIN
+ *   - Auto-derivation on .pages.dev: trade-web-site → trade-web-portal / trade-web-blog / trade-web-admin
  */
 
 // LanguageSwitcher + Navbar dropdowns: CSS group-hover, no React state
@@ -68,6 +68,14 @@ function rewriteNextStatic(html: string, prefix: string): string {
   );
   html = html.replace(
     /(<link(?=[^>]*?rel="preload")(?=[^>]*?as="script")[^>]*?href=")\/blog\/(_next\/static\/)/g,
+    '$1/$2'
+  );
+  html = html.replace(
+    /(<script[^>]*?src=")\/admin\/(_next\/static\/)/g,
+    '$1/$2'
+  );
+  html = html.replace(
+    /(<link(?=[^>]*?rel="preload")(?=[^>]*?as="script")[^>]*?href=")\/admin\/(_next\/static\/)/g,
     '$1/$2'
   );
 
@@ -229,6 +237,18 @@ async function proxySubSiteAsset(url: URL, request: Request, env?: Record<string
     return new Response(resp.body, { status: resp.status, statusText: resp.statusText, headers: h });
   }
 
+  // Match /admin/_next/static/* → admin upstream
+  const adminAssetMatch = url.pathname.match(/^\/admin\/_next\/static\/(.+)/);
+  if (adminAssetMatch) {
+    const upstream = resolveUpstream(url.hostname, 'admin', env);
+    const assetUrl = `${upstream}/_next/static/${adminAssetMatch[1]}`;
+    const resp = await fetch(assetUrl);
+    const h = sanitizeHeaders(resp.headers);
+    if (url.pathname.endsWith('.js')) h.set('content-type', 'application/javascript');
+    else if (url.pathname.endsWith('.css')) h.set('content-type', 'text/css');
+    return new Response(resp.body, { status: resp.status, statusText: resp.statusText, headers: h });
+  }
+
   // Match /c/_next/static/* → portal upstream
   const portalMatch = url.pathname.match(/^\/c\/_next\/static\/(.+)/);
   if (portalMatch) {
@@ -339,6 +359,47 @@ export async function onRequest(context: { request: Request; next: () => Promise
   if (url.pathname === '/api' || url.pathname === '/api/') {
     const locale = matchBrowserLanguage(request.headers.get('accept-language'));
     return Response.redirect(url.origin + '/' + locale + url.pathname + '/', 302);
+  }
+
+  // ── Admin proxy ────────────────────────────────────────────────
+  // /{locale}/admin/* → trade-web-admin.pages.dev
+  const adminPathMatch = url.pathname.match(/^\/([a-z]{2})\/admin(\/.*)?$/);
+  if (adminPathMatch) {
+    const rest = adminPathMatch[2] || '/';
+    const upstream = resolveUpstream(url.hostname, 'admin', env);
+    // Admin has no locale prefix in its own routing (Chinese-only)
+    // So strip the /{locale}/admin prefix and proxy remaining path to admin root
+    const adminUrl = upstream + rest;
+
+    try {
+      const resp = await fetch(adminUrl);
+      const contentType = resp.headers.get('content-type') || '';
+
+      if (contentType.includes('text/html')) {
+        let html = await resp.text();
+        html = rewriteNextStatic(html, 'admin');
+        const headers = sanitizeHeaders(resp.headers);
+        return new Response(html, {
+          status: resp.status,
+          statusText: resp.statusText,
+          headers,
+        });
+      }
+
+      return new Response(resp.body, {
+        status: resp.status,
+        statusText: resp.statusText,
+        headers: sanitizeHeaders(resp.headers),
+      });
+    } catch (err) {
+      return new Response('Admin proxy error: ' + err, { status: 502 });
+    }
+  }
+
+  // Redirect /admin → /{locale}/admin
+  if (url.pathname === '/admin' || url.pathname === '/admin/') {
+    const locale = matchBrowserLanguage(request.headers.get('accept-language'));
+    return Response.redirect(url.origin + '/' + locale + '/admin/', 302);
   }
 
   // ── Blog proxy ─────────────────────────────────────────────────

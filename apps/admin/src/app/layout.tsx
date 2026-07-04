@@ -55,6 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <head>
           <title>Admin 登录 — SinoTrade Compliance</title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
         </head>
         <body>{children}</body>
       </html>

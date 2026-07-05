@@ -53,42 +53,49 @@ export async function onRequest(context: { request: Request; env: Env }) {
       .bind(todayStart)
       .first();
 
-    // ── Hourly breakdown (today) ──
-    let hourlyData: { hour: number; pv: number; uv: number }[] = [];
-    if (range === "today") {
-      const hourly: any = await context.env.DB.prepare(
-        `SELECT CAST(strftime('%H', created_at) AS INTEGER) as hour,
-                COUNT(*) as pv
-         FROM page_views
-         WHERE created_at >= ?
-         GROUP BY hour
-         ORDER BY hour`,
-      )
-        .bind(todayStart)
-        .all();
+    // ── Hourly breakdown ──
+    const hourlyQueryTs = range === "today" ? todayStart : pastStart;
+    const hourlyRaw: any = await context.env.DB.prepare(
+      `SELECT CAST(strftime('%H', created_at) AS INTEGER) as hour,
+              COUNT(*) as pv
+       FROM page_views
+       WHERE created_at >= ?
+       GROUP BY hour
+       ORDER BY hour`,
+    )
+      .bind(hourlyQueryTs)
+      .all();
 
-      const uvHourly: any = await context.env.DB.prepare(
-        `SELECT CAST(strftime('%H', created_at) AS INTEGER) as hour,
-                COUNT(DISTINCT user_agent) as uv
-         FROM page_views
-         WHERE created_at >= ? AND user_agent != ''
-         GROUP BY hour
-         ORDER BY hour`,
-      )
-        .bind(todayStart)
-        .all();
+    const uvHourlyRaw: any = await context.env.DB.prepare(
+      `SELECT CAST(strftime('%H', created_at) AS INTEGER) as hour,
+              COUNT(DISTINCT user_agent) as uv
+       FROM page_views
+       WHERE created_at >= ? AND user_agent != ''
+       GROUP BY hour
+       ORDER BY hour`,
+    )
+      .bind(hourlyQueryTs)
+      .all();
 
-      const pvMap = new Map(hourly.results?.map((r: any) => [r.hour, r.pv]) || []);
-      const uvMap = new Map(uvHourly.results?.map((r: any) => [r.hour, r.uv]) || []);
+    const pvMap = new Map(hourlyRaw.results?.map((r: any) => [r.hour, r.pv]) || []);
+    const uvMap = new Map(uvHourlyRaw.results?.map((r: any) => [r.hour, r.uv]) || []);
 
-      for (let h = 0; h < 24; h++) {
-        hourlyData.push({
-          hour: h,
-          pv: pvMap.get(h) || 0,
-          uv: uvMap.get(h) || 0,
-        });
-      }
+    const hourlySum: { hour: number; pv: number; uv: number }[] = [];
+    for (let h = 0; h < 24; h++) {
+      hourlySum.push({
+        hour: h,
+        pv: pvMap.get(h) || 0,
+        uv: uvMap.get(h) || 0,
+      });
     }
+
+    // For multi-day views, also compute hourly daily averages
+    const hoursCovered = range === "today" ? 1 : days;
+    const hourlyAvg = hourlySum.map((h) => ({
+      hour: h.hour,
+      pv: Math.round(h.pv / hoursCovered),
+      uv: Math.round(h.uv / hoursCovered),
+    }));
 
     // ── Daily breakdown (for 7d / 30d) ──
     const dailyRaw: any = await context.env.DB.prepare(
@@ -166,7 +173,9 @@ export async function onRequest(context: { request: Request; env: Env }) {
         todayUV: todayUV?.uv || 0,
         countries: total?.countries || 0,
       },
-      hourlyData,
+      hourlySum,
+      hourlyAvg,
+      hoursCovered,
       dailyData: dailyRaw.results || [],
       geoData: geoRaw.results || [],
       pageData: pagesRaw.results || [],

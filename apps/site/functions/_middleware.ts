@@ -2,86 +2,68 @@
  * Cloudflare Pages Middleware:
  * 1. Route /{locale}/c/* → portal site (user compliance portal)
  * 2. Route /{locale}/blog/* → blog site
- * 3. Serve sub-site static assets at /blog/_next/static/* and /c/_next/static/*
- *    (relative paths — no absolute domains in HTML)
- * 4. Accept-Language → redirect / to corresponding locale
- * 5. Canonical host redirect: www / pages.dev → main domain
+ * 3. Route /api/admin/* → admin API
+ * 4. Route /admin/* → admin dashboard (HTML + static assets)
+ * 5. Serve sub-site static assets at /blog/_next/static/*, /c/_next/static/*, /admin/_next/static/*
+ * 6. Accept-Language → redirect / to corresponding locale
+ * 7. Canonical host redirect: www / pages.dev → main domain
  *
  * Upstream URLs (for server-side proxy) resolved via:
- *   - Environment variables: UPSTREAM_PORTAL, UPSTREAM_BLOG
- *   - Auto-derivation on .pages.dev: trade-web-site → trade-web-portal / trade-web-blog
+ *   - Environment variables: UPSTREAM_PORTAL, UPSTREAM_BLOG, UPSTREAM_ADMIN
+ *   - Auto-derivation on .pages.dev: trade-web-site → trade-web-portal / trade-web-blog / trade-web-admin
  */
 
 // LanguageSwitcher + Navbar dropdowns: CSS group-hover, no React state
 // Force rebuild for Navbar CSS hover fix
 import { LOCALES, DEFAULT_LOCALE, matchBrowserLanguage } from '@trade/ui/constants';
+
 const SUPPORTED_LOCALES = LOCALES as unknown as string[];
-const CANONICAL_HOST = 'sinotradecompliance.com';
 
-// ─── Upstream URL resolution ─────────────────────────────────────
+// ── Admin proxy (via basePath /admin/) ────────────────────────────
 
-function resolveUpstream(hostname: string, subProject: string, env?: Record<string, string>): string {
-  const envKey = `UPSTREAM_${subProject.toUpperCase()}`;
-  if (env && env[envKey]) return env[envKey];
+async function proxyToAdmin(url: URL, request: Request, env?: Record<string, string>): Promise<Response> {
+  const upstream = resolveUpstream(url.hostname, 'admin', env);
+  const upstreamUrl = `${upstream}${url.pathname}${url.search}`;
+  return proxyFetch(upstreamUrl, request);
+}
+// ─── Portal proxy ────────────────────────────────────────────────
 
-  // Auto-derive for .pages.dev using naming convention
-  if (hostname.endsWith('.pages.dev')) {
-    const projectName = hostname.replace('.pages.dev', '');
-    // trade-web-site → trade-web-blog / trade-web-portal
-    const derived = projectName.replace(/-site$/, `-${subProject}`);
-    if (derived !== projectName) return `https://${derived}.pages.dev`;
-    return `https://${projectName}-${subProject}.pages.dev`;
+async function proxyToPortal(url: URL, request: Request, env?: Record<string, string>): Promise<Response> {
+  const upstream = resolveUpstream(url.hostname, 'portal', env);
+  let upstreamPath = url.pathname; // full path including /{locale}/c/...
+
+  // Fix: if the path is under /c/api/, strip locale prefix to reach portal's bare /api/ endpoints.
+  // Normal portal API calls use fetch('/api/...') which goes through the /api/ route, not /c/.
+  // But if a request arrives at /{locale}/c/api/... (via incorrect link or bookmark),
+  // proxy it to /api/... on the portal instead of /{locale}/c/api/... (which returns 404).
+  const apiFromC = upstreamPath.match(/^\/[a-z]{2}\/c\/api\//);
+  if (apiFromC) {
+    upstreamPath = upstreamPath.replace(/^\/[a-z]{2}\/c/, '');
   }
 
-  // Final fallback
-  return `https://trade-web-${subProject}.pages.dev`;
+  const upstreamUrl = upstream + upstreamPath + url.search;
+
+  // For HTML responses, inject search widget and fix chunk paths
+  const accept = request.headers.get('accept') || '';
+  if (accept.includes('text/html')) {
+    const response = await fetch(upstreamUrl);
+    const body = await response.text();
+    const patched = injectSearchWidget(ensureNextF(rewriteNextStatic(body, 'c')));
+    return new Response(patched, {
+      status: response.status,
+      statusText: response.statusText,
+      headers: sanitizeHeaders(response.headers),
+    });
+  }
+
+  return proxyFetch(upstreamUrl, request);
 }
 
 // ─── Rewrite HTML: replace /_next/static/ with /{prefix}/_next/static/ ───
 
 function rewriteNextStatic(html: string, prefix: string): string {
-  // Replace ALL occurrences — covers both HTML attributes and RSC data (self.__next_f)
-  html = html.replace(/\/_next\/static\//g, `/${prefix}/_next/static/`);
-
-  // Revert for <script src> tags: the module system's D() key must match
-  // the q() output which uses /_next/static/chunks/{name} (no prefix).
-  // The script tag's registerChunk resolves D(script.src). If we add a prefix,
-  // D("/{prefix}/_next/static/chunks/{name}") is resolved, but the module system
-  // waits for D("/_next/static/chunks/{name}") from its own q() call.
-  // Also revert for <link rel="preload" as="script"> tags: the preload URL must
-  // match the actual script URL (which is reused above). Otherwise browser
-  // preloads /{prefix}/_next/static/... while script loads /_next/static/... →
-  // preload goes unused, warning in console, chunk downloaded twice.
-  // Keep <link rel="preload" as="style">, inline scripts, and RSC data prefixed.
-  // Use lookaheads for attribute-order independence (rel, as can appear in any order).
-  html = html.replace(
-    /(<script[^>]*?src=")\/c\/(_next\/static\/)/g,
-    '$1/$2'
-  );
-  html = html.replace(
-    /(<script[^>]*?src=")\/blog\/(_next\/static\/)/g,
-    '$1/$2'
-  );
-  html = html.replace(
-    /(<link(?=[^>]*?rel="preload")(?=[^>]*?as="script")[^>]*?href=")\/c\/(_next\/static\/)/g,
-    '$1/$2'
-  );
-  html = html.replace(
-    /(<link(?=[^>]*?rel="preload")(?=[^>]*?as="script")[^>]*?href=")\/blog\/(_next\/static\/)/g,
-    '$1/$2'
-  );
-
-  return html;
-}
-
-// ─── Proxy request with header sanitation ────────────────────────
-
-// ─── Inject standalone search widget into proxied HTML ────────────
-
-const SEARCH_WIDGET_SCRIPT = '<script defer src="/search-widget.js"></script>';
-
-function injectSearchWidget(html: string): string {
-  return html.replace('</body>', `${SEARCH_WIDGET_SCRIPT}\n</body>`);
+  // Rewrite _next/static/ → {prefix}/_next/static/
+  return html.replace(/\/_next\/static\//g, `/${prefix}/_next/static/`);
 }
 
 // ─── Ensure __next_f exists before async modules attempt to consume it ──
@@ -108,6 +90,48 @@ function ensureNextF(html: string): string {
   return initScr + html;
 }
 
+// ─── Inject standalone search widget into proxied HTML ────────────
+
+const SEARCH_WIDGET_SCRIPT = '<script defer src="/search-widget.js"></script>';
+
+function injectSearchWidget(html: string): string {
+  return html.replace('</body>', `${SEARCH_WIDGET_SCRIPT}\n</body>`);
+}
+
+// ─── Canonical host check ────────────────────────────────────────
+
+function getCanonicalHost(original: string): string | null {
+  const url = new URL(original);
+  const host = url.hostname;
+  // 1. If already on main domain → null (no redirect needed)
+  if (host === 'sinotradecompliance.com') return null;
+  // 2. If www. → redirect to main domain
+  if (host === 'www.sinotradecompliance.com') return 'sinotradecompliance.com';
+  // 3. If any .pages.dev → redirect to main domain
+  if (host.endsWith('.pages.dev')) return 'sinotradecompliance.com';
+  return null;
+}
+
+// ─── Resolve upstream URL for sub-sites ──────────────────────────
+
+function resolveUpstream(hostname: string, subProject: string, env?: Record<string, string>): string {
+  const envKey = `UPSTREAM_${subProject.toUpperCase()}`;
+  if (env && env[envKey]) return env[envKey];
+
+  // Auto-derive for .pages.dev using naming convention
+  if (hostname.endsWith('.pages.dev')) {
+    const projectName = hostname.replace('.pages.dev', '');
+    // trade-web-site → trade-web-blog / trade-web-portal
+    const derived = projectName.replace(/-site$/, `-${subProject}`);
+    if (derived !== projectName) return `https://${derived}.pages.dev`;
+    return `https://${projectName}-${subProject}.pages.dev`;
+  }
+
+  // Final fallback
+  return `https://trade-web-${subProject}.pages.dev`;
+}
+
+// ─── Proxy request with header sanitation ────────────────────────
 
 async function proxyFetch(upstreamUrl: string, request: Request): Promise<Response> {
   const bodyText = (request.method !== 'GET' && request.method !== 'HEAD')
@@ -136,85 +160,8 @@ function sanitizeHeaders(headers: Headers): Headers {
   return h;
 }
 
-// ─── Portal proxy ────────────────────────────────────────────────
+// ─── Sub-site static assets ─────────────────────────────────────
 
-async function proxyToPortal(url: URL, request: Request, env?: Record<string, string>): Promise<Response> {
-  const upstream = resolveUpstream(url.hostname, 'portal', env);
-  let upstreamPath = url.pathname; // full path including /{locale}/c/...
-
-  // Fix: if the path is under /c/api/, strip locale prefix to reach portal's bare /api/ endpoints.
-  // Normal portal API calls use fetch('/api/...') which goes through the /api/ route, not /c/.
-  // But if a request arrives at /{locale}/c/api/... (via incorrect link or bookmark),
-  // proxy it to /api/... on the portal instead of /{locale}/c/api/... (which returns 404).
-  const apiFromC = upstreamPath.match(/^\/[a-z]{2}\/c\/api\//);
-  if (apiFromC) {
-    upstreamPath = upstreamPath.replace(/^\/[a-z]{2}\/c/, '');
-  }
-
-  const upstreamUrl = `${upstream}${upstreamPath}${url.search}`;
-
-  let resp = await proxyFetch(upstreamUrl, request);
-
-  // Follow internal redirects (portal may redirect /c/ → /c)
-  if (resp.status >= 300 && resp.status < 400) {
-    const location = resp.headers.get('location');
-    if (location) {
-      const locUrl = new URL(location, upstreamUrl);
-      const upstreamHost = new URL(upstream).hostname;
-      if (locUrl.hostname === upstreamHost) {
-        resp = await proxyFetch(`${upstream}${locUrl.pathname}${locUrl.search}`, request);
-      } else {
-        // External redirect: rewrite Location to main site domain
-        const headers = new Headers(resp.headers);
-        headers.set('location', `${url.origin}${locUrl.pathname}${locUrl.search}`);
-        return new Response(resp.body, {
-          status: resp.status,
-          statusText: resp.statusText,
-          headers,
-        });
-      }
-    }
-  }
-
-  // Rewrite Location header if needed
-  const headers = sanitizeHeaders(resp.headers);
-  const location = headers.get('location');
-  if (location) {
-    const locUrl = new URL(location, upstreamUrl);
-    const upstreamHost = new URL(upstream).hostname;
-    if (locUrl.hostname === upstreamHost) {
-      headers.set('location', `${url.origin}${locUrl.pathname}${locUrl.search}`);
-    }
-  }
-
-  // Rewrite static asset paths in HTML to relative /c/_next/static/
-  const contentType = resp.headers.get('content-type') || '';
-  if (contentType.includes('text/html')) {
-    let html = await resp.text();
-    html = rewriteNextStatic(html, 'c');
-    html = ensureNextF(html);
-    html = injectSearchWidget(html);
-    return new Response(html, {
-      status: resp.status,
-      statusText: resp.statusText,
-      headers,
-    });
-  }
-
-  return new Response(resp.body, {
-    status: resp.status,
-    statusText: resp.statusText,
-    headers,
-  });
-}
-
-// ─── Static asset proxy helpers ──────────────────────────────────
-
-/**
- * If the request URL matches /{prefix}/_next/static/{path},
- * proxy to the sub-site upstream at /_next/static/{path}.
- * Returns a Response if matched, or null to continue normal routing.
- */
 async function proxySubSiteAsset(url: URL, request: Request, env?: Record<string, string>): Promise<Response | null> {
   // Match /blog/_next/static/* → blog upstream
   const blogMatch = url.pathname.match(/^\/blog\/_next\/static\/(.+)/);
@@ -241,6 +188,19 @@ async function proxySubSiteAsset(url: URL, request: Request, env?: Record<string
     return new Response(resp.body, { status: resp.status, statusText: resp.statusText, headers: h });
   }
 
+  // Match /admin/_next/static/* → admin upstream
+  const adminMatch = url.pathname.match(/^\/admin\/_next\/static\/(.+)/);
+  if (adminMatch) {
+    const upstream = resolveUpstream(url.hostname, 'admin', env);
+    // Admin uses basePath /admin, so files served at /admin/_next/static/
+    const assetUrl = `${upstream}/admin/_next/static/${adminMatch[1]}`;
+    const resp = await fetch(assetUrl);
+    const h = sanitizeHeaders(resp.headers);
+    if (url.pathname.endsWith('.js')) h.set('content-type', 'application/javascript');
+    else if (url.pathname.endsWith('.css')) h.set('content-type', 'text/css');
+    return new Response(resp.body, { status: resp.status, statusText: resp.statusText, headers: h });
+  }
+
   return null;
 }
 
@@ -255,58 +215,38 @@ export async function onRequest(context: { request: Request; next: () => Promise
   // Next.js App Router client prefetches __next._tree.txt for visible <Link>
   // elements on mount. With output: 'export', these RSC tree files don't exist
   // because there's no running Next.js server to generate them dynamically.
-  // This is a known framework-level behavior of App Router in static export mode.
-  //
-  // Returning 404 is the honest HTTP status (the resource genuinely doesn't
-  // exist), but it causes console noise for an otherwise harmless prefetch.
-  // The client router handles 404 gracefully by falling back to full navigation.
-  //
-  // Returning 204 at the infrastructure level (Worker) tells the client:
-  // "the endpoint is valid but has no content to return" — the router receives
-  // an empty RSC stream, interprets it as "no prefetch data available", and
-  // falls back to full navigation on click. No console errors, no functional impact.
-  if (url.pathname.endsWith('__next._tree.txt')) {
+  // In Cloudflare Pages Workers, requesting a non-existent file (404) causes a
+  // full Worker invocation. For every visible <Link> on every page load, the
+  // Worker is called just to return a 404. Instead, short-circuit to 204 No Content
+  // so the client bails out of the prefetch without error.
+  if (url.pathname.endsWith('/__next._tree.txt')) {
     return new Response(null, { status: 204 });
   }
 
-  // ── Sub-site static assets (check first, before HTML routing) ──
+  // ── Sub-site static assets ──
   const assetResp = await proxySubSiteAsset(url, request, env);
   if (assetResp) return assetResp;
 
-  // ── Sub-site module system's dynamically loaded chunks ──────────
-  // Turbopack module system uses hardcoded /_next/ base path in its q()
-  // function, generating /_next/static/chunks/{name}.js. We've reverted
-  // the /c/ and /blog/ prefixes on <script src> tags so that async chunks
-  // execute registerChunk and resolve D("/_next/static/...") — matching
-  // the key that the module system's own D(q(e)) creates.
-  // We still need to serve these chunk files from the correct upstream.
-  // Try portal first, then blog, then fall through to main site assets.
+  // ── Sub-site module system ──
+  // Next.js async chunks are loaded at runtime via requestAnimationFrame + <link prefetch>.
+  // These are relative to the same origin, so they request `/_next/static/chunks/*`.
+  // On the main site, `/_next/static/` belongs to the main site itself.
+  // For proxied sub-sites (portal/blog with /c/ and /blog/ base paths),
+  // their modules use un-prefixed `/_next/static/chunks/*` URLs.
+  // This handler serves those chunks from the correct upstream.
   if (url.pathname.startsWith('/_next/static/chunks/')) {
-    const relativePath = url.pathname.slice('/_next/static/'.length);
-
-    // Try portal upstream first
-    const portalUpstream = resolveUpstream(url.hostname, 'portal', env);
-    const portalUrl = `${portalUpstream}/_next/static/${relativePath}`;
-    const portalResp = await fetch(portalUrl);
-    if (portalResp.ok) {
-      const h = sanitizeHeaders(portalResp.headers);
-      if (url.pathname.endsWith('.js')) h.set('content-type', 'application/javascript');
-      else if (url.pathname.endsWith('.css')) h.set('content-type', 'text/css');
-      return new Response(portalResp.body, { status: portalResp.status, headers: h });
+    // Try portal first, then blog
+    for (const sub of ['portal', 'blog']) {
+      const upstream = resolveUpstream(url.hostname, sub, env);
+      const fwdUrl = `${upstream}/_next/static/chunks/${url.pathname.replace('/_next/static/chunks/', '')}`;
+      const resp = await fetch(fwdUrl);
+      if (resp.ok) {
+        const h = sanitizeHeaders(resp.headers);
+        h.set('content-type', 'application/javascript');
+        return new Response(resp.body, { status: 200, headers: h });
+      }
     }
-
-    // Fallback: try blog upstream
-    const blogUpstream = resolveUpstream(url.hostname, 'blog', env);
-    const blogUrl = `${blogUpstream}/_next/static/${relativePath}`;
-    const blogResp = await fetch(blogUrl);
-    if (blogResp.ok) {
-      const h = sanitizeHeaders(blogResp.headers);
-      if (url.pathname.endsWith('.js')) h.set('content-type', 'application/javascript');
-      else if (url.pathname.endsWith('.css')) h.set('content-type', 'text/css');
-      return new Response(blogResp.body, { status: blogResp.status, headers: h });
-    }
-
-    // Not found on either sub-site — fall through to main site's static assets
+    // If neither portal nor blog has it, let it 404 as usual
   }
 
   // ── Portal proxy (/c/) ─────────────────────────────────────────
@@ -347,6 +287,11 @@ export async function onRequest(context: { request: Request; next: () => Promise
     }
   }
 
+  // ── Admin page proxy (/admin/*) ──
+  if (url.pathname.startsWith('/admin/')) {
+    return proxyToAdmin(url, request, env);
+  }
+
   // ── Portal API proxy (/api/) ──────────────────────────────────
   if (url.pathname.startsWith('/api/')) {
     return proxyToPortal(url, request, env);
@@ -358,7 +303,6 @@ export async function onRequest(context: { request: Request; next: () => Promise
   }
 
   // ── Blog proxy ─────────────────────────────────────────────────
-  // Preserves /blog/ prefix. Static assets served at /blog/_next/static/*.
   const blogPathMatch = url.pathname.match(/^\/([a-z]{2})\/blog(\/.*)?$/);
   if (blogPathMatch && SUPPORTED_LOCALES.includes(blogPathMatch[1])) {
     const locale = blogPathMatch[1];
@@ -372,11 +316,8 @@ export async function onRequest(context: { request: Request; next: () => Promise
 
       if (contentType.includes('text/html')) {
         let html = await resp.text();
-        // Rewrite /_next/static/ → /blog/_next/static/ (relative, no absolute domain)
         html = rewriteNextStatic(html, 'blog');
-        // Eagerly initialize __next_f for RSC streaming (same as portal)
         html = ensureNextF(html);
-        // Inject standalone search widget for non-React pages
         html = injectSearchWidget(html);
 
         const headers = sanitizeHeaders(resp.headers);
@@ -402,17 +343,20 @@ export async function onRequest(context: { request: Request; next: () => Promise
     return Response.redirect(url.origin + '/' + locale + '/blog/', 302);
   }
 
-  // ── Canonical host redirect ────────────────────────────────────
-  const isDevDomain = url.hostname.endsWith('.pages.dev');
-  if (url.hostname !== CANONICAL_HOST && !isDevDomain) {
-    return Response.redirect('https://' + CANONICAL_HOST + url.pathname + url.search, 301);
+  // ── Canonical host redirect ──
+  const canonical = getCanonicalHost(url.toString());
+  if (canonical && url.hostname !== canonical) {
+    return Response.redirect(url.toString().replace(url.hostname, canonical), 301);
   }
 
-  // ── Language auto-detect ───────────────────────────────────────
+  // ── Language auto-detect for root path ──
   if (url.pathname === '/' || url.pathname === '') {
-    const locale = matchBrowserLanguage(request.headers.get('accept-language'));
-    return Response.redirect(url.origin + '/' + locale + '/', 302);
+    const acceptLang = request.headers.get('accept-language');
+    const locale = matchBrowserLanguage(acceptLang);
+    const target = '/' + locale + '/';
+    return Response.redirect(new URL(target, url.origin).toString(), 302);
   }
 
+  // ── Default: serve main site ──
   return context.next();
 }

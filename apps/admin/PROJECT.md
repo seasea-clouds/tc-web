@@ -44,14 +44,12 @@
 | CF Pages 项目 | `trade-web-admin` |
 | 域名 | `https://trade-web-admin.pages.dev` |
 | Root dir | `apps/admin` |
-| 构建 | `npm run build`（GitHub 自动触发） |
+| 构建 | GitHub Actions 自动触发（`npm run build:admin` → `wrangler pages deploy`） |
 | D1 binding | `DB`（共享 Portal 的 D1 数据库） |
 | 访问方式 | 直接访问 `trade-web-admin.pages.dev` 或通过主站 `sinotradecompliance.com/admin/*`|
 
 ## 待完成
-- ⏳ `TURNSTILE_SECRET_KEY` 环境变量 — 需从 CF Dashboard → Turnstile 获取 site key `0x4AAAAAAAewC-TLy6pJ7WgB` 对应的 secret key，配置到 Pages 项目环境变量中
 - ⏳ CF Analytics (GraphQL) 集成
-- ⏳ CF Pages 自动构建修复
 - ⏳ 支付与订单（P1 — 待开发）
 
 ## 踩坑记录

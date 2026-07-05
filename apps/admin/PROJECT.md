@@ -44,7 +44,7 @@
 | CF Pages 项目 | `trade-web-admin` |
 | 域名 | `https://trade-web-admin.pages.dev` |
 | Root dir | `apps/admin` |
-| 构建 | 手动 `npx next build` → `wrangler pages deploy` |
+| 构建 | `npm run build`（GitHub 自动触发） |
 | D1 binding | `DB`（共享 Portal 的 D1 数据库） |
 | 访问方式 | 直接访问 `trade-web-admin.pages.dev` 或通过主站 `sinotradecompliance.com/admin/*`|
 

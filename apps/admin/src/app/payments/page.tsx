@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { get, post } from "@/lib/api";
-import { Search } from "lucide-react";
+import { Search, DollarSign, TrendingUp, Calendar, CreditCard } from "lucide-react";
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip } from "recharts";
 
 interface Payment {
   id: string;
@@ -18,6 +19,13 @@ interface Payment {
   created_at: string;
   product_name: string;
   report_module: string;
+}
+
+interface RevenueSummary {
+  today: { revenue: number; count: number };
+  month: { revenue: number; count: number };
+  total: { revenue: number; count: number };
+  trend: Array<{ month: string; amount: number }>;
 }
 
 const STATUS_OPTIONS = [
@@ -44,6 +52,10 @@ function formatAmount(cents: number, currency: string): string {
   return `${symbol}${(cents / 100).toFixed(2)}`;
 }
 
+function formatRevenue(cents: number): string {
+  return `¥${(cents / 100).toLocaleString("zh-CN", { minimumFractionDigits: 2 })}`;
+}
+
 export default function PaymentsPage() {
   const [payments, setPayments] = useState<Payment[]>([]);
   const [total, setTotal] = useState(0);
@@ -53,6 +65,11 @@ export default function PaymentsPage() {
   const [loading, setLoading] = useState(true);
   const [refunding, setRefunding] = useState<string | null>(null);
   const [toast, setToast] = useState<{ type: string; message: string } | null>(null);
+
+  // Revenue summary
+  const [revenue, setRevenue] = useState<RevenueSummary | null>(null);
+  const [revenueLoading, setRevenueLoading] = useState(true);
+
   const pageSize = 20;
 
   const showToast = (type: string, message: string) => {
@@ -81,12 +98,24 @@ export default function PaymentsPage() {
     fetchPayments();
   }, [page, search, statusFilter]);
 
+  // Fetch revenue summary
+  useEffect(() => {
+    setRevenueLoading(true);
+    get<RevenueSummary>("/payments/summary")
+      .then((data) => setRevenue(data))
+      .catch(() => {})
+      .finally(() => setRevenueLoading(false));
+  }, []);
+
   const handleRefund = async (paymentId: string) => {
     setRefunding(paymentId);
     try {
       await post(`/payments/${paymentId}/refund`, {});
       showToast("success", "退款成功");
       fetchPayments();
+      // Refresh revenue
+      const data = await get<RevenueSummary>("/payments/summary");
+      setRevenue(data);
     } catch {
       showToast("error", "退款失败");
     } finally {
@@ -101,6 +130,80 @@ export default function PaymentsPage() {
       {/* Toast */}
       {toast && (
         <div className={`toast toast-${toast.type}`}>{toast.message}</div>
+      )}
+
+      {/* Revenue overview */}
+      {revenueLoading ? (
+        <div style={{ display: "flex", justifyContent: "center", padding: "1rem" }}>
+          <div className="spinner" />
+        </div>
+      ) : revenue && (
+        <div style={{ marginBottom: "1.5rem" }}>
+          {/* Summary cards */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "0.75rem", marginBottom: "1rem" }}>
+            <div className="stat-card">
+              <div className="stat-icon" style={{ background: "#dbeafe" }}>
+                <DollarSign size={20} color="#2563eb" />
+              </div>
+              <div>
+                <div className="stat-label">今日收入</div>
+                <div className="stat-value">{formatRevenue(revenue.today.revenue)}</div>
+                <div className="stat-sub">{revenue.today.count} 笔交易</div>
+              </div>
+            </div>
+            <div className="stat-card">
+              <div className="stat-icon" style={{ background: "#dcfce7" }}>
+                <Calendar size={20} color="#16a34a" />
+              </div>
+              <div>
+                <div className="stat-label">本月收入</div>
+                <div className="stat-value">{formatRevenue(revenue.month.revenue)}</div>
+                <div className="stat-sub">{revenue.month.count} 笔交易</div>
+              </div>
+            </div>
+            <div className="stat-card">
+              <div className="stat-icon" style={{ background: "#fef3c7" }}>
+                <TrendingUp size={20} color="#d97706" />
+              </div>
+              <div>
+                <div className="stat-label">累计收入</div>
+                <div className="stat-value">{formatRevenue(revenue.total.revenue)}</div>
+                <div className="stat-sub">{revenue.total.count} 笔交易</div>
+              </div>
+            </div>
+            <div className="stat-card">
+              <div className="stat-icon" style={{ background: "#e0e7ff" }}>
+                <CreditCard size={20} color="#6366f1" />
+              </div>
+              <div>
+                <div className="stat-label">全部支付</div>
+                <div className="stat-value">{total}</div>
+                <div className="stat-sub">共计记录</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Monthly revenue trend chart */}
+          {revenue.trend.length > 0 && (
+            <div className="card" style={{ padding: "1rem", marginBottom: "1rem" }}>
+              <h4 style={{ margin: "0 0 0.75rem 0", fontSize: "0.95rem", fontWeight: 600 }}>
+                月度收入趋势
+              </h4>
+              <ResponsiveContainer width="100%" height={200}>
+                <BarChart data={revenue.trend.map((t) => ({ ...t, amountUSD: t.amount / 100 }))}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+                  <XAxis dataKey="month" tick={{ fontSize: 11 }} />
+                  <YAxis tick={{ fontSize: 11 }} tickFormatter={(v) => `¥${v}`} />
+                  <Tooltip
+                    formatter={(value: unknown) => [`¥${Number(value).toLocaleString()}`, "收入"]}
+                    labelFormatter={(label: unknown) => `${label} 月`}
+                  />
+                  <Bar dataKey="amountUSD" fill="#D4AF37" radius={[4, 4, 0, 0]} />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+          )}
+        </div>
       )}
 
       {/* Filters bar */}

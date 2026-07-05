@@ -1,7 +1,8 @@
 /**
  * Subscriptions API
- * GET /api/admin/subscriptions — list all
- * POST /api/admin/subscriptions — add subscription
+ * GET /api/admin/subscriptions          — list all
+ * GET /api/admin/subscriptions/:id      — single subscription detail
+ * POST /api/admin/subscriptions         — add subscription
  * POST /api/admin/subscriptions/:id/status — change status
  */
 
@@ -23,7 +24,39 @@ export async function onRequest(context: { request: Request; env: Env }) {
   const url = new URL(context.request.url);
   const path = url.pathname;
 
-  // GET /api/admin/subscriptions
+  // ── GET /api/admin/subscriptions/:id — single detail ──
+  if (context.request.method === "GET") {
+    const pathParts = path.split("/").filter(Boolean);
+    if (pathParts.length >= 4 && pathParts[3]) {
+      const subId = pathParts[3];
+
+      const sub: any = await context.env.DB.prepare(
+        `SELECT s.*, u.email as user_email, u.name as user_name, u.locale as user_locale
+         FROM subscriptions s
+         LEFT JOIN users u ON u.id = s.user_id
+         WHERE s.id = ?`
+      ).bind(subId).first();
+
+      if (!sub) {
+        return Response.json({ error: "Subscription not found" }, { status: 404 });
+      }
+
+      // Get associated payments
+      const payments: any = await context.env.DB.prepare(
+        `SELECT id, amount_cents, currency, status, provider_payment_id, created_at
+         FROM payments
+         WHERE provider_subscription_id = ?
+         ORDER BY created_at DESC LIMIT 20`
+      ).bind(sub.provider_subscription_id).all();
+
+      return Response.json({
+        subscription: sub,
+        payments: payments.results || [],
+      });
+    }
+  }
+
+  // ── GET /api/admin/subscriptions — list ──
   if (context.request.method === "GET") {
     const rows: any = await context.env.DB.prepare(
       `SELECT s.*, u.email as user_email, u.name as user_name

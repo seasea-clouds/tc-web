@@ -12,17 +12,24 @@
   - 热门页面排行
   - 每日报告/用户趋势图
   - 报告模块分布 + 支付状态分布（饼图）
-- ✅ 用户管理（列表/搜索/分页/启用禁用）
-- ✅ 订阅管理（列表/手动修改状态/手动添加订阅）
-- ✅ 报告管理（列表/模块筛选/状态筛选）
+- ✅ 用户管理（列表/搜索/分页/启用禁用 + 详情面板含报告/订阅记录）
+- ✅ 订阅管理（列表/手动修改状态/手动添加订阅 + 详情面板含支付记录）
+- ✅ 报告管理（列表/模块筛选/状态筛选 + 详情面板含输入数据/评估结果/Next Steps）
 - ✅ 操作日志（搜索/日期筛选/类型筛选/详情展开）
-- ✅ 支付与订单（列表/搜索/状态筛选/退款操作）
+- ✅ 支付与订单（列表/搜索/状态筛选/退款操作 + 收入概览含今日/本月/累计 + 月度趋势图）
 - ✅ 页面浏览量分析（D1 自建 page_views 表 + 异步跟踪 + 管理端分析看板）
+- ✅ Creem 回调集成（Webhook 写入 payments 表，更新报告支付状态）
+
+## 与策划文档的差异
+文档参考「Admin 管理后台 — 完整策划方案」（飞书文档）。
+- 数据看板改用 D1 自建分析（非 CF Analytics GraphQL）
+- 缺乏：渠道来源分布、三站分看、每小时趋势、用户平均停留时长（D1 无法获取）
+- 缺乏 PDF 下载（R2 存储未配置）
 
 ## 技术栈
 - Next.js 16 + TypeScript + Tailwind CSS
 - Cloudflare Pages Functions (API)
-- D1 Database (共享 Portal 的 D1)
+- D1 Database（共享 Portal 的 D1）
 - Recharts + D1 自建分析
 
 ## 路由结构
@@ -47,12 +54,13 @@
 | 域名 | `https://trade-web-admin.pages.dev` |
 | Root dir | `apps/admin` |
 | 构建 | GitHub 自动触发（CF Pages 原生构建） |
+| 构建触发器 | `apps/admin/**`, `packages/ui/**`, `packages/scripts/**` |
 | D1 binding | `DB`（共享 Portal 的 D1 数据库） |
+| 环境变量 | `ADMIN_JWT_SECRET`, `TURNSTILE_SECRET_KEY` |
 | 访问方式 | 直接访问或通过主站 `sinotradecompliance.com/admin/*`|
-
-## 待完成
-- ⏳ Creem 回调集成（Webhook 写入 payments 表）
 
 ## 技术决策
 - ~~CF Analytics (GraphQL) 集成~~ → 改用 D1 自建 page_views 表（CF API Token 无 analytics:read 权限）
 - 页面浏览量通过主站 _middleware.ts 异步 fire-and-forget 跟踪，零延迟影响
+- 详情页改用内联面板（非独立 [id] 路由），兼容 Next.js static export
+- Build 命令：`npm run build`（= `next build && postbuild.sh`），postbuild.sh 负责将导出文件移到 /admin/ 子目录

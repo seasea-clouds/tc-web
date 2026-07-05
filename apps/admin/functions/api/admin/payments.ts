@@ -1,7 +1,9 @@
 /**
  * Payments API
- * GET /api/admin/payments — list payments with search/filter/pagination
- * POST /api/admin/payments/:id/refund — refund a payment
+ * GET  /api/admin/payments               — list payments with search/filter/pagination
+ * GET  /api/admin/payments/summary       — revenue summary (today/month/total + trend)
+ * POST /api/admin/payments/:id/refund    — refund a payment
+ * POST /api/admin/payments               — create manual payment record
  */
 
 import { requireAdmin } from "../../lib/admin-session";
@@ -21,6 +23,62 @@ export async function onRequest(context: { request: Request; env: Env }) {
 
   const url = new URL(context.request.url);
   const path = url.pathname;
+
+  // ── GET /api/admin/payments/summary — revenue overview ──
+  if (context.request.method === "GET" && path.endsWith("/payments/summary")) {
+    const today = new Date().toISOString().split("T")[0];
+    const monthStart = new Date(new Date().getFullYear(), new Date().getMonth(), 1).toISOString().split("T")[0];
+
+    // Today's revenue
+    const todayResult: any = await context.env.DB.prepare(
+      `SELECT COALESCE(SUM(amount_cents), 0) as today_revenue,
+              COUNT(*) as today_count
+       FROM payments
+       WHERE status = 'completed' AND date(created_at) = ?`
+    ).bind(today).first();
+
+    // This month's revenue
+    const monthResult: any = await context.env.DB.prepare(
+      `SELECT COALESCE(SUM(amount_cents), 0) as month_revenue,
+              COUNT(*) as month_count
+       FROM payments
+       WHERE status = 'completed' AND date(created_at) >= ?`
+    ).bind(monthStart).first();
+
+    // All-time revenue
+    const totalResult: any = await context.env.DB.prepare(
+      `SELECT COALESCE(SUM(amount_cents), 0) as total_revenue,
+              COUNT(*) as total_count
+       FROM payments
+       WHERE status = 'completed'`
+    ).first();
+
+    // Monthly revenue trend (last 12 months)
+    const trend: any = await context.env.DB.prepare(
+      `SELECT strftime('%Y-%m', created_at) as month,
+              COALESCE(SUM(amount_cents), 0) as amount
+       FROM payments
+       WHERE status = 'completed' AND created_at >= date('now', '-12 months')
+       GROUP BY month
+       ORDER BY month ASC`
+    ).all();
+
+    return Response.json({
+      today: {
+        revenue: todayResult?.today_revenue || 0,
+        count: todayResult?.today_count || 0,
+      },
+      month: {
+        revenue: monthResult?.month_revenue || 0,
+        count: monthResult?.month_count || 0,
+      },
+      total: {
+        revenue: totalResult?.total_revenue || 0,
+        count: totalResult?.total_count || 0,
+      },
+      trend: trend.results || [],
+    });
+  }
 
   // ── GET /api/admin/payments — list ──
   if (context.request.method === "GET") {

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { get, post } from "@/lib/api";
+import { X, ChevronDown, ChevronUp, Eye, ExternalLink } from "lucide-react";
 
 interface Subscription {
   id: string;
@@ -16,13 +17,42 @@ interface Subscription {
   created_at: string;
 }
 
+interface SubscriptionDetailData {
+  subscription: Subscription;
+  payments: Array<{
+    id: string;
+    amount_cents: number;
+    currency: string;
+    status: string;
+    provider_payment_id: string;
+    created_at: string;
+  }>;
+}
+
+const statusLabel = (s: string) => ({
+  active: "活跃",
+  past_due: "扣款失败",
+  expired: "已过期",
+  canceled: "已取消",
+})[s] || s;
+
+function formatAmount(cents: number, currency: string): string {
+  const symbol = currency === "USD" ? "$" : currency === "CNY" ? "¥" : currency + " ";
+  return `${symbol}${(cents / 100).toFixed(2)}`;
+}
+
 export default function SubscriptionsPage() {
   const [subscriptions, setSubscriptions] = useState<Subscription[]>([]);
   const [loading, setLoading] = useState(true);
   const [showAdd, setShowAdd] = useState(false);
   const [addUserId, setAddUserId] = useState("");
   const [addPlan, setAddPlan] = useState("monthly");
-  const addUnit = addPlan === "monthly" ? "月" : "年";
+
+  // Detail panel
+  const [selectedSubId, setSelectedSubId] = useState<string | null>(null);
+  const [subDetail, setSubDetail] = useState<SubscriptionDetailData | null>(null);
+  const [detailLoading, setDetailLoading] = useState(false);
+  const [expandedPayments, setExpandedPayments] = useState(true);
 
   useEffect(() => {
     setLoading(true);
@@ -37,6 +67,10 @@ export default function SubscriptionsPage() {
     setSubscriptions((prev) =>
       prev.map((s) => (s.id === id ? { ...s, status } : s))
     );
+    // Update open detail if viewing this subscription
+    if (subDetail?.subscription.id === id) {
+      setSubDetail((prev) => prev ? { ...prev, subscription: { ...prev.subscription, status } } : null);
+    }
   };
 
   const handleAddSubscription = async () => {
@@ -44,9 +78,27 @@ export default function SubscriptionsPage() {
     await post("/subscriptions", { userId: addUserId, plan: addPlan });
     setShowAdd(false);
     setAddUserId("");
-    // Reload
     const data = await get<{ subscriptions: Subscription[] }>("/subscriptions");
     setSubscriptions(data.subscriptions);
+  };
+
+  const openDetail = async (subId: string) => {
+    setSelectedSubId(subId);
+    setDetailLoading(true);
+    setSubDetail(null);
+    try {
+      const data = await get<SubscriptionDetailData>(`/subscriptions/${subId}`);
+      setSubDetail(data);
+    } catch {
+      setSubDetail(null);
+    } finally {
+      setDetailLoading(false);
+    }
+  };
+
+  const closeDetail = () => {
+    setSelectedSubId(null);
+    setSubDetail(null);
   };
 
   return (
@@ -63,66 +115,165 @@ export default function SubscriptionsPage() {
           <div className="spinner" />
         </div>
       ) : (
-        <div className="card" style={{ padding: 0, overflow: "auto" }}>
-          <table className="data-table">
-            <thead>
-              <tr>
-                <th>用户</th>
-                <th>邮箱</th>
-                <th>计划</th>
-                <th>状态</th>
-                <th>周期开始</th>
-                <th>周期结束</th>
-                <th>操作</th>
-              </tr>
-            </thead>
-            <tbody>
-              {subscriptions.length === 0 ? (
+        <>
+          <div className="card" style={{ padding: 0, overflow: "auto" }}>
+            <table className="data-table">
+              <thead>
                 <tr>
-                  <td colSpan={7} className="empty-state">暂无订阅记录</td>
+                  <th>用户</th>
+                  <th>邮箱</th>
+                  <th>计划</th>
+                  <th>状态</th>
+                  <th>周期开始</th>
+                  <th>周期结束</th>
+                  <th>操作</th>
                 </tr>
-              ) : (
-                subscriptions.map((sub) => (
-                  <tr key={sub.id}>
-                    <td style={{ fontWeight: 500 }}>{sub.user_name || "—"}</td>
-                    <td style={{ color: "#6b7280" }}>{sub.user_email}</td>
-                    <td>{sub.plan}</td>
-                    <td>
-                      <span className={`badge badge-${sub.status.toLowerCase()}`}>
-                        {sub.status === "active" ? "活跃" :
-                         sub.status === "past_due" ? "扣款失败" :
-                         sub.status === "expired" ? "已过期" :
-                         sub.status === "canceled" ? "已取消" : sub.status}
-                      </span>
-                    </td>
-                    <td style={{ fontSize: "0.8rem", color: "#6b7280" }}>
-                      {sub.current_period_start ? new Date(sub.current_period_start + "Z").toLocaleDateString("zh-CN") : "—"}
-                    </td>
-                    <td style={{ fontSize: "0.8rem", color: "#6b7280" }}>
-                      {sub.current_period_end ? new Date(sub.current_period_end + "Z").toLocaleDateString("zh-CN") : "—"}
-                    </td>
-                    <td>
-                      <div style={{ display: "flex", gap: "0.25rem" }}>
-                        {sub.status !== "active" && (
-                          <button className="btn btn-primary" style={{ padding: "0.25rem 0.5rem", fontSize: "0.75rem" }}
-                            onClick={() => changeStatus(sub.id, "active")}>
-                            激活
-                          </button>
-                        )}
-                        {sub.status !== "canceled" && (
-                          <button className="btn btn-outline" style={{ padding: "0.25rem 0.5rem", fontSize: "0.75rem", color: "#dc2626" }}
-                            onClick={() => changeStatus(sub.id, "canceled")}>
-                            取消
-                          </button>
-                        )}
-                      </div>
-                    </td>
+              </thead>
+              <tbody>
+                {subscriptions.length === 0 ? (
+                  <tr>
+                    <td colSpan={7} className="empty-state">暂无订阅记录</td>
                   </tr>
-                ))
+                ) : (
+                  subscriptions.map((sub) => (
+                    <tr
+                      key={sub.id}
+                      style={{ cursor: "pointer" }}
+                      onClick={() => openDetail(sub.id)}
+                    >
+                      <td style={{ fontWeight: 500 }}>{sub.user_name || "—"}</td>
+                      <td style={{ color: "#6b7280" }}>{sub.user_email}</td>
+                      <td>{sub.plan === "monthly" ? "月度订阅" : sub.plan === "annual" ? "年度订阅" : sub.plan}</td>
+                      <td>
+                        <span className={`badge badge-${sub.status.toLowerCase()}`}>
+                          {statusLabel(sub.status)}
+                        </span>
+                      </td>
+                      <td style={{ fontSize: "0.8rem", color: "#6b7280" }}>
+                        {sub.current_period_start ? new Date(sub.current_period_start + "Z").toLocaleDateString("zh-CN") : "—"}
+                      </td>
+                      <td style={{ fontSize: "0.8rem", color: "#6b7280" }}>
+                        {sub.current_period_end ? new Date(sub.current_period_end + "Z").toLocaleDateString("zh-CN") : "—"}
+                      </td>
+                      <td>
+                        <div style={{ display: "flex", gap: "0.25rem" }}>
+                          <button
+                            className="btn btn-outline"
+                            style={{ padding: "0.25rem 0.5rem", fontSize: "0.75rem" }}
+                            onClick={(e) => { e.stopPropagation(); openDetail(sub.id); }}
+                          >
+                            <Eye size={14} />
+                          </button>
+                          {sub.status !== "active" && (
+                            <button className="btn btn-primary" style={{ padding: "0.25rem 0.5rem", fontSize: "0.75rem" }}
+                              onClick={(e) => { e.stopPropagation(); changeStatus(sub.id, "active"); }}>
+                              激活
+                            </button>
+                          )}
+                          {sub.status !== "canceled" && (
+                            <button className="btn btn-outline" style={{ padding: "0.25rem 0.5rem", fontSize: "0.75rem", color: "#dc2626" }}
+                              onClick={(e) => { e.stopPropagation(); changeStatus(sub.id, "canceled"); }}>
+                              取消
+                            </button>
+                          )}
+                        </div>
+                      </td>
+                    </tr>
+                  ))
+                )}
+              </tbody>
+            </table>
+          </div>
+
+          {/* Detail panel */}
+          {detailLoading && (
+            <div style={{ display: "flex", justifyContent: "center", padding: "3rem" }}>
+              <div className="spinner" />
+            </div>
+          )}
+
+          {subDetail && !detailLoading && (
+            <div className="card" style={{ marginTop: "1.5rem" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem" }}>
+                <h3 style={{ margin: 0, fontSize: "1.1rem" }}>
+                  订阅详情 — {subDetail.subscription.user_name || subDetail.subscription.user_email}
+                </h3>
+                <button className="btn btn-outline" style={{ padding: "0.25rem 0.5rem" }} onClick={closeDetail}>
+                  <X size={16} />
+                </button>
+              </div>
+
+              {/* Subscription info */}
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: "0.5rem", marginBottom: "1rem", padding: "0.75rem", background: "#f9fafb", borderRadius: "0.5rem", fontSize: "0.85rem" }}>
+                <div><strong>ID:</strong> <code style={{ fontSize: "0.7rem" }}>{subDetail.subscription.id}</code></div>
+                <div><strong>用户:</strong> {subDetail.subscription.user_name || "—"} ({subDetail.subscription.user_email})</div>
+                <div><strong>计划:</strong> {subDetail.subscription.plan === "monthly" ? "月度订阅" : "年度订阅"}</div>
+                <div><strong>状态:</strong> <span className={`badge badge-${subDetail.subscription.status.toLowerCase()}`}>{statusLabel(subDetail.subscription.status)}</span></div>
+                <div><strong>Creem ID:</strong> <code style={{ fontSize: "0.7rem" }}>{subDetail.subscription.provider_subscription_id || "—"}</code></div>
+                <div><strong>周期开始:</strong> {subDetail.subscription.current_period_start ? new Date(subDetail.subscription.current_period_start + "Z").toLocaleDateString("zh-CN") : "—"}</div>
+                <div><strong>周期结束:</strong> {subDetail.subscription.current_period_end ? new Date(subDetail.subscription.current_period_end + "Z").toLocaleDateString("zh-CN") : "—"}</div>
+                <div><strong>创建时间:</strong> {new Date(subDetail.subscription.created_at + "Z").toLocaleString("zh-CN")}</div>
+                <div>
+                  <div style={{ display: "flex", gap: "0.375rem", marginTop: "0.25rem" }}>
+                    {subDetail.subscription.status !== "active" && (
+                      <button className="btn btn-primary" style={{ padding: "0.25rem 0.5rem", fontSize: "0.75rem" }}
+                        onClick={() => changeStatus(subDetail.subscription.id, "active")}>
+                        激活
+                      </button>
+                    )}
+                    {subDetail.subscription.status !== "canceled" && (
+                      <button className="btn btn-outline" style={{ padding: "0.25rem 0.5rem", fontSize: "0.75rem", color: "#dc2626" }}
+                        onClick={() => changeStatus(subDetail.subscription.id, "canceled")}>
+                        取消订阅
+                      </button>
+                    )}
+                  </div>
+                </div>
+              </div>
+
+              {/* Payment history */}
+              {subDetail.payments.length > 0 && (
+                <div>
+                  <div
+                    style={{ display: "flex", alignItems: "center", gap: "0.5rem", cursor: "pointer", padding: "0.5rem 0", userSelect: "none" }}
+                    onClick={() => setExpandedPayments(!expandedPayments)}
+                  >
+                    {expandedPayments ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                    <h4 style={{ margin: 0, fontSize: "0.95rem" }}>支付记录 ({subDetail.payments.length})</h4>
+                  </div>
+                  {expandedPayments && (
+                    <div style={{ overflow: "auto" }}>
+                      <table className="data-table" style={{ fontSize: "0.8rem" }}>
+                        <thead>
+                          <tr>
+                            <th>交易 ID</th>
+                            <th>金额</th>
+                            <th>状态</th>
+                            <th>时间</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {subDetail.payments.map((p) => (
+                            <tr key={p.id}>
+                              <td style={{ fontFamily: "monospace", fontSize: "0.7rem" }}>{p.provider_payment_id || p.id.slice(0, 8)}</td>
+                              <td style={{ fontWeight: 600 }}>{formatAmount(p.amount_cents, p.currency)}</td>
+                              <td>
+                                <span className={`badge ${p.status === "completed" ? "badge-completed" : "badge-pending"}`}>
+                                  {p.status === "completed" ? "已支付" : p.status}
+                                </span>
+                              </td>
+                              <td>{new Date(p.created_at + "Z").toLocaleDateString("zh-CN")}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  )}
+                </div>
               )}
-            </tbody>
-          </table>
-        </div>
+            </div>
+          )}
+        </>
       )}
 
       {/* Add subscription modal */}

@@ -42,6 +42,22 @@ GitHub 推送触发的自动构建持续失败（`clone_repo` 成功但 `build` 
 ### _routes.ts 死代码
 `functions/api/admin/auth/_routes.ts` 把 `onRequest` 重命名为 `loginHandler` 等，导致 CF Pages Functions 路由匹配失败。已删除（由独立函数文件按路径匹配）。
 
+### 详情页实现策略（2026-07-05）
+- 文档要求 `/admin/users/[id]`、`/admin/subscriptions/[id]`、`/admin/reports/[id]` 独立详情页
+- 但 Next.js `output: 'export'` 模式下动态路由 `[id]` 无法预渲染
+- 改用**内联详情面板**：点击列表行展开面板（类似模态框/抽屉），展示完整详情
+- 数据通过 CF Pages Functions API 获取：
+  - `GET /api/admin/reports/:id` — 返回完整报告数据（含 `input_data`、`result_data` 解析）
+  - `GET /api/admin/users/:id` — 返回用户详情 + 报告列表 + 订阅记录
+  - `GET /api/admin/subscriptions/:id` — 返回订阅详情 + 支付历史
+  - `GET /api/admin/payments/summary` — 返回收入汇总（今日/月/总 + 月度趋势）
+
+### 构建触发器路径限制（2026-07-05）
+- 文档建议仅 `apps/admin/**`、`packages/ui/**`、`packages/scripts/**` 触发构建
+- 之前设置为 `['*']`（所有项目变更均触发 Admin 构建）
+- 已通过 CF API 更新为精确路径列表
+- 通过 PATCH `/accounts/{account_id}/pages/projects/trade-web-admin` 设置 `source.config.path_includes`
+
 ### 分析系统 — D1 自建方案（2026-07-05）
 - 原计划集成 CF Analytics GraphQL API，但现有 CF API Token 缺乏 `analytics:read` 权限
 - 改用 **D1 自建 page_views 表**：

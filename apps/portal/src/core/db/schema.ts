@@ -50,6 +50,39 @@ CREATE TABLE IF NOT EXISTS sessions (
   created_at TEXT DEFAULT (datetime('now')),
   FOREIGN KEY (user_id) REFERENCES users(id)
 );
+
+-- page_views table (custom analytics tracking)
+CREATE TABLE IF NOT EXISTS page_views (
+  id TEXT PRIMARY KEY,
+  path TEXT NOT NULL,
+  project TEXT DEFAULT 'site',
+  referrer TEXT,
+  country TEXT,
+  user_agent TEXT,
+  locale TEXT,
+  created_at TEXT DEFAULT (datetime('now'))
+);
+
+-- payments table (Creem payment records)
+CREATE TABLE IF NOT EXISTS payments (
+  id TEXT PRIMARY KEY,
+  report_id TEXT,
+  user_email TEXT,
+  amount_cents INTEGER NOT NULL,
+  currency TEXT DEFAULT 'USD',
+  status TEXT DEFAULT 'pending',
+  provider TEXT DEFAULT 'creem',
+  provider_payment_id TEXT,
+  provider_subscription_id TEXT,
+  refunded_at TEXT,
+  created_at TEXT DEFAULT (datetime('now')),
+  FOREIGN KEY (report_id) REFERENCES reports(id)
+);
+
+-- indexes for analytics queries
+CREATE INDEX IF NOT EXISTS idx_page_views_created ON page_views(created_at);
+CREATE INDEX IF NOT EXISTS idx_page_views_project ON page_views(project);
+CREATE INDEX IF NOT EXISTS idx_page_views_country ON page_views(country);
 `;
 
 export const D1_BINDING = "DB";

@@ -11,9 +11,9 @@
 - Admin 使用独立的 D1 表（`admin_users`, `admin_logs` 等），不与 Portal 用户数据冲突
 
 ### Turnstile 人机验证
-- Admin 使用独立 Turnstile widget，site key: `0x4AAAAAAAewC-TLy6pJ7WgB`
+- Admin 使用独立 Turnstile widget，site key: `0x4AAAAAADqoEtL5oqrpaf3R`
 - 与 Portal 的 Turnstile 不同（Portal 用的是另一个 widget）
-- **当前问题：** `TURNSTILE_SECRET_KEY` 环境变量未配置。代码会自动跳过验证（`if (env.TURNSTILE_SECRET_KEY && turnstileToken)`），登录功能正常，但缺少人机验证
+- `TURNSTILE_SECRET_KEY` 环境变量已通过 wrangler 配置
 
 ### 静态导出
 - `output: 'export'` + `basePath: '/admin'`，产出到 `out/admin/` 目录

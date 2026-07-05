@@ -90,11 +90,11 @@
 ## Blog
 
 - [Insights & Compliance Guides](/en/blog/)
-- [Ccc Certification Explained](/en/blog/ccc-certification-explained/)
-- [China Import Compliance Guide](/en/blog/china-import-compliance-guide/)
-- [China Label Compliance](/en/blog/china-label-compliance/)
-- [China Trademark Registration](/en/blog/china-trademark-registration/)
-- [Cosmetics Nmpa Filing](/en/blog/cosmetics-nmpa-filing/)
+- [CCC Certification Complete Guide](/en/blog/ccc-certification-explained/)
+- [Import Compliance Checklist](/en/blog/china-import-compliance-guide/)
+- [Chinese Label Compliance Guide](/en/blog/china-label-compliance/)
+- [Trademark Registration in China](/en/blog/china-trademark-registration/)
+- [NMPA Cosmetics Filing Guide](/en/blog/cosmetics-nmpa-filing/)
 - [Cross-Border E-Commerce in China](/en/blog/cross-border-ecommerce-china/)
 - [GACC Registration Guide](/en/blog/gacc-registration-guide/)
 
@@ -109,12 +109,12 @@
 ## Check & Report
 
 - [Portal](/en/c/)
-- [Compliance Check](/en/c/check/ccc/)
-- [Compliance Check](/en/c/check/crossborder/)
-- [Compliance Check](/en/c/check/gacc/)
-- [Compliance Check](/en/c/check/label/)
-- [Compliance Check](/en/c/check/nmpa/)
-- [Compliance Check](/en/c/check/trademark/)
+- [CCC Certification Check](/en/c/check/ccc/)
+- [Cross-border E-commerce Check](/en/c/check/crossborder/)
+- [GACC Registration Check](/en/c/check/gacc/)
+- [Chinese Label Compliance Check](/en/c/check/label/)
+- [NMPA Cosmetics Filing Check](/en/c/check/nmpa/)
+- [Trademark Registration Check](/en/c/check/trademark/)
 - [Portal](/en/c/pricing/)
 
 ## Packages

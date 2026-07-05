@@ -127,6 +127,26 @@ export async function onRequest(context: { request: Request; env: Env }) {
       .bind(pastStart)
       .all();
 
+    // ── Channel source / referrer breakdown ──
+    // Categorize referrers into channels using SQL CASE
+    const channelsRaw: any = await context.env.DB.prepare(
+      `SELECT
+        CASE
+          WHEN referrer IS NULL OR referrer = '' THEN 'Direct'
+          WHEN referrer LIKE '%google.%' OR referrer LIKE '%bing.%' OR referrer LIKE '%baidu.%' OR referrer LIKE '%yandex.%' OR referrer LIKE '%duckduckgo.%' OR referrer LIKE '%sogou.%' OR referrer LIKE '%360.%' THEN 'Search'
+          WHEN referrer LIKE '%facebook.%' OR referrer LIKE '%twitter.%' OR referrer LIKE '%x.com%' OR referrer LIKE '%linkedin.%' OR referrer LIKE '%instagram.%' OR referrer LIKE '%pinterest.%' OR referrer LIKE '%reddit.%' OR referrer LIKE '%weixin.%' OR referrer LIKE '%weibo.%' OR referrer LIKE '%youtube.%' THEN 'Social'
+          WHEN referrer LIKE '%sinotradecompliance.%' OR referrer LIKE '%compli-service.%' OR referrer LIKE '%trade-web-%' THEN 'Internal'
+          ELSE 'Referral'
+        END AS channel,
+        COUNT(*) as count
+       FROM page_views
+       WHERE created_at >= ?
+       GROUP BY channel
+       ORDER BY count DESC`,
+    )
+      .bind(pastStart)
+      .all();
+
     // ── Project breakdown ──
     const projectsRaw: any = await context.env.DB.prepare(
       `SELECT project, COUNT(*) as count
@@ -150,6 +170,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
       dailyData: dailyRaw.results || [],
       geoData: geoRaw.results || [],
       pageData: pagesRaw.results || [],
+      channelData: channelsRaw.results || [],
       projectData: projectsRaw.results || [],
     });
   } catch (err: any) {

@@ -276,12 +276,7 @@ export async function onRequest(context: { request: Request; next: () => Promise
     const upstream = resolveUpstream(url.hostname, 'admin', env);
     const adminUrl = upstream + url.pathname + url.search;
     try {
-      const resp = await fetch(adminUrl);
-      return new Response(resp.body, {
-        status: resp.status,
-        statusText: resp.statusText,
-        headers: sanitizeHeaders(resp.headers),
-      });
+      return await proxyFetch(adminUrl, request);
     } catch (err) {
       return new Response('Admin API proxy error: ' + err, { status: 502 });
     }

@@ -353,5 +353,31 @@ export async function onRequest(context: { request: Request; next: () => Promise
   }
 
   // ── Default: serve main site ──
-  return context.next();
+  const response = await context.next();
+
+  // ── Async page view tracking (fire-and-forget) ──
+  // Only track HTML page loads (not CSS/JS/images)
+  if (
+    request.method === 'GET' &&
+    (request.headers.get('accept') || '').includes('text/html') &&
+    !url.pathname.startsWith('/_next/')
+  ) {
+    const locale = url.pathname.match(/^\/([a-z]{2}(-[A-Z]{2})?)\//)?.[1] || '';
+    const trackingPayload = {
+      path: url.pathname,
+      project: 'site',
+      referrer: request.headers.get('referer') || '',
+      locale,
+    };
+    const adminUrl = resolveUpstream(url.hostname, 'admin', env);
+    context.waitUntil(
+      fetch(`${adminUrl}/api/admin/track`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(trackingPayload),
+      }).catch(() => {}),
+    );
+  }
+
+  return response;
 }

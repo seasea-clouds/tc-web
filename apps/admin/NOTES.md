@@ -36,3 +36,14 @@ GitHub 推送触发的自动构建持续失败（`clone_repo` 成功但 `build` 
 
 ### _routes.ts 死代码
 `functions/api/admin/auth/_routes.ts` 把 `onRequest` 重命名为 `loginHandler` 等，导致 CF Pages Functions 路由匹配失败。已删除（由独立函数文件按路径匹配）。
+
+### 分析系统 — D1 自建方案（2026-07-05）
+- 原计划集成 CF Analytics GraphQL API，但现有 CF API Token 缺乏 `analytics:read` 权限
+- 改用 **D1 自建 page_views 表**：
+  - 优势：实时数据、无延迟、无 API 调用限制、可交叉查询
+- 跟踪机制：
+  - 主站 `_middleware.ts` 添加异步 fire-and-forget（`context.waitUntil`）
+  - 仅跟踪 GET + text/html 页面加载，排除静��资源/CSS/JS/API
+  - 请求代理到 admin 的 `/api/admin/track` 端点，写入 D1
+- 管理看板：新增 PV/UV 趋势 + 地域分布 + 热门页面排行
+- 部署后自动开始采集，无需额外配置

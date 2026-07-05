@@ -15,7 +15,7 @@ const NAV_ITEMS = [
   { href: "/subscriptions", label: "订阅管理", icon: Repeat },
   { href: "/reports", label: "报告管理", icon: FileText },
   { href: "/logs", label: "操作日志", icon: ClipboardList },
-  { href: "/payments", label: "支付与订单 (P1)", icon: CreditCard, disabled: true },
+  { href: "/payments", label: "支付与订单", icon: CreditCard },
 ];
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -94,12 +94,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {NAV_ITEMS.map((item) => {
               const Icon = item.icon;
               const isActive = pathname?.startsWith(item.href);
-              return item.disabled ? (
-                <span key={item.href} style={{ opacity: 0.4, cursor: "not-allowed", padding: "0.625rem 1.25rem", display: "block", fontSize: "0.875rem" }} title="待开发">
-                  <Icon size={18} style={{ display: "inline", marginRight: "0.5rem", verticalAlign: "middle" }} />
-                  {item.label}
-                </span>
-              ) : (
+              return (
                 <Link
                   key={item.href}
                   href={item.href}

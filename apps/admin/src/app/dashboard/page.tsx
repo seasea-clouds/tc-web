@@ -337,34 +337,7 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          {/* ── Hourly summary for non-today views ── */}
-          {timeRange !== "today" && (
-              <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>站点来源分布</h3>
-              {analytics.projectData && analytics.projectData.length > 0 ? (
-                <ResponsiveContainer width="100%" height={200}>
-                  <PieChart>
-                    <Pie
-                      data={analytics.projectData}
-                      dataKey="count"
-                      nameKey="project"
-                      cx="50%"
-                      cy="50%"
-                      outerRadius={80}
-                      label={({ project, count }: any) => `${project} (${count})`}
-                      fontSize={11}
-                    >
-                      {analytics.projectData.map((_: any, index: number) => (
-                        <Cell key={`proj-${index}`} fill={COLORS[index % COLORS.length]} />
-                      ))}
-                    </Pie>
-                    <Tooltip />
-                  </PieChart>
-                </ResponsiveContainer>
-              ) : (
-                <div className="empty-state" style={{ padding: "1.5rem" }}>等待数据采集</div>
-              )}
-            </div>
-          )}
+
 
           {/* ── Bottom row: Pages + Quick stats + Data status ── */}
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>

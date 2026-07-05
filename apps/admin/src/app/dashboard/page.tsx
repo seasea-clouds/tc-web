@@ -21,7 +21,9 @@ interface DashboardStats {
 
 interface AnalyticsData {
   summary: { total: number; uv: number; today: number; todayUV: number; countries: number };
-  hourlyData: { hour: number; pv: number; uv: number }[];
+  hourlySum: { hour: number; pv: number; uv: number }[];
+  hourlyAvg: { hour: number; pv: number; uv: number }[];
+  hoursCovered: number;
   dailyData: { date: string; pv: number; uv: number }[];
   geoData: { country: string; count: number }[];
   pageData: { path: string; count: number }[];
@@ -122,37 +124,45 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          {/* ── PV/UV Hourly/Daily Trend ── */}
+          {/* ── PV/UV Hourly Trend ── */}
           <div className="card" style={{ marginBottom: "1.5rem" }}>
             <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>
-              {timeRange === "today" ? "今日每小时页面浏览" : "每日页面浏览趋势"}
+              {timeRange === "today" ? "今日每小时页面浏览" : `近${timeRange === "7d" ? "7" : "30"}天日均每小时浏览`}
             </h3>
             <ResponsiveContainer width="100%" height={260}>
-              {timeRange === "today" && analytics.hourlyData.length > 0 ? (
-                <BarChart data={analytics.hourlyData}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-                  <XAxis dataKey="hour" tickFormatter={formatHour} fontSize={12} />
-                  <YAxis fontSize={12} />
-                  <Tooltip labelFormatter={(h) => formatHour(h as number)} />
-                  <Legend />
-                  <Bar dataKey="pv" name="PV" fill="#1B365D" radius={[3, 3, 0, 0]} />
-                  <Bar dataKey="uv" name="UV" fill="#D4AF37" radius={[3, 3, 0, 0]} />
-                </BarChart>
-              ) : analytics.dailyData.length > 0 ? (
-                <LineChart data={analytics.dailyData}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-                  <XAxis dataKey="date" tickFormatter={(d: string) => d.slice(5)} fontSize={12} />
-                  <YAxis fontSize={12} />
-                  <Tooltip />
-                  <Legend />
-                  <Line type="monotone" dataKey="pv" name="PV" stroke="#1B365D" strokeWidth={2} dot={{ r: 3 }} />
-                  <Line type="monotone" dataKey="uv" name="UV" stroke="#D4AF37" strokeWidth={2} dot={{ r: 3 }} />
-                </LineChart>
-              ) : (
-                <div className="empty-state" style={{ padding: "2rem" }}>
-                  暂无流量数据 — 部署后自动开始采集
-                </div>
-              )}
+              {(() => {
+                const hourlyChartData = timeRange === "today" ? analytics.hourlySum : analytics.hourlyAvg;
+                if (hourlyChartData.length > 0) {
+                  return (
+                    <BarChart data={hourlyChartData}>
+                      <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
+                      <XAxis dataKey="hour" tickFormatter={formatHour} fontSize={12} />
+                      <YAxis fontSize={12} />
+                      <Tooltip
+                        labelFormatter={(label: any) => formatHour(Number(label))}
+                        formatter={(value: any, name: any) => [value, name === "pv" ? "PV" : "UV"]}
+                      />
+                      <Legend />
+                      <Bar dataKey="pv" name="pv" fill="#1B365D" radius={[3, 3, 0, 0]} />
+                      <Bar dataKey="uv" name="uv" fill="#D4AF37" radius={[3, 3, 0, 0]} />
+                    </BarChart>
+                  );
+                }
+                if (analytics.dailyData.length > 0) {
+                  return (
+                    <LineChart data={analytics.dailyData}>
+                      <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
+                      <XAxis dataKey="date" tickFormatter={(d: string) => d.slice(5)} fontSize={12} />
+                      <YAxis fontSize={12} />
+                      <Tooltip />
+                      <Legend />
+                      <Line type="monotone" dataKey="pv" name="PV" stroke="#1B365D" strokeWidth={2} dot={{ r: 3 }} />
+                      <Line type="monotone" dataKey="uv" name="UV" stroke="#D4AF37" strokeWidth={2} dot={{ r: 3 }} />
+                    </LineChart>
+                  );
+                }
+                return <div className="empty-state" style={{ padding: "2rem" }}>暂无流量数据 — 部署后自动开始采集</div>;
+              })()}
             </ResponsiveContainer>
           </div>
 

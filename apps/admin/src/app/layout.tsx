@@ -3,6 +3,7 @@
 import "./globals.css";
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
 import {
   LayoutDashboard, Users, Repeat, FileText, ClipboardList, CreditCard, LogOut, Menu, X
 } from "lucide-react";
@@ -94,19 +95,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               const Icon = item.icon;
               const isActive = pathname?.startsWith(item.href);
               return item.disabled ? (
-                <a key={item.href} style={{ opacity: 0.4, cursor: "not-allowed" }} title="待开发">
+                <span key={item.href} style={{ opacity: 0.4, cursor: "not-allowed", padding: "0.625rem 1.25rem", display: "block", fontSize: "0.875rem" }} title="待开发">
                   <Icon size={18} style={{ display: "inline", marginRight: "0.5rem", verticalAlign: "middle" }} />
                   {item.label}
-                </a>
+                </span>
               ) : (
-                <a
+                <Link
                   key={item.href}
                   href={item.href}
                   className={isActive ? "active" : ""}
                 >
                   <Icon size={18} style={{ display: "inline", marginRight: "0.5rem", verticalAlign: "middle" }} />
                   {item.label}
-                </a>
+                </Link>
               );
             })}
           </nav>

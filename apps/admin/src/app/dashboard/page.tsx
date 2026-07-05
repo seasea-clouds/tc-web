@@ -279,6 +279,36 @@ export default function DashboardPage() {
             </div>
           </div>
 
+          {/* ── Project/Site breakdown ── */}
+          {timeRange !== "today" && (
+            <div className="card" style={{ marginBottom: "1.5rem" }}>
+              <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>站点来源分布</h3>
+              {analytics.projectData && analytics.projectData.length > 0 ? (
+                <ResponsiveContainer width="100%" height={200}>
+                  <PieChart>
+                    <Pie
+                      data={analytics.projectData}
+                      dataKey="count"
+                      nameKey="project"
+                      cx="50%"
+                      cy="50%"
+                      outerRadius={80}
+                      label={({ project, count }: any) => `${project} (${count})`}
+                      fontSize={11}
+                    >
+                      {analytics.projectData.map((_: any, index: number) => (
+                        <Cell key={`proj-${index}`} fill={COLORS[index % COLORS.length]} />
+                      ))}
+                    </Pie>
+                    <Tooltip />
+                  </PieChart>
+                </ResponsiveContainer>
+              ) : (
+                <div className="empty-state" style={{ padding: "1.5rem" }}>等待数据采集</div>
+              )}
+            </div>
+          )}
+
           {/* ── Bottom row: Pages + Quick stats + Data status ── */}
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
             {/* Top pages */}
@@ -307,6 +337,7 @@ export default function DashboardPage() {
                   <StatusRow label="D1 用户数据" status="已集成" />
                   <StatusRow label="D1 页面浏览量 (PV/UV)" status="已集成" />
                   <StatusRow label="D1 地域分布" status="已集成" />
+                  <StatusRow label="D1 站点来源" status="已集成" />
                   <StatusRow label="D1 热门页面" status="已集成" />
                 </div>
               </div>

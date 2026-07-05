@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   images: { unoptimized: true },
   transpilePackages: ['@trade/ui'],
-  basePath: '',
+  basePath: '/admin',
 };
 
 export default nextConfig;

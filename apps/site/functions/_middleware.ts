@@ -370,7 +370,7 @@ export async function onRequest(context: { request: Request; next: () => Promise
       locale,
     };
     const adminUrl = resolveUpstream(url.hostname, 'admin', env);
-    context.waitUntil(
+    (context as any).waitUntil(
       fetch(`${adminUrl}/api/admin/track`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

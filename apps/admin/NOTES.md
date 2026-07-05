@@ -31,8 +31,13 @@
 ### Turnstile 脚本加载
 Turnstile script 不能放在 `<head>` 的 `<script>` 标签中（Next.js RSC 渲染忽略），必须通过 `document.createElement('script')` 动态加载。
 
-### CF Pages 自动构建故障
-GitHub 推送触发的自动构建持续失败（`clone_repo` 成功但 `build` 阶段报错）。当前只能 `wrangler pages deploy` 手动上传。`functions/` 目录仅在 wrangler 部署时生效，`next build` 会把它当作页面文件，但不影响部署。
+### ~~CF Pages 自动构建故障~~ 已修复
+GitHub 推送触发的自动构建持续失败（`clone_repo` 成功但 `build` 阶段报错，队列不调度）。
+
+**根因：** GitHub webhook 未正确激活。通过 CF API toggle `deployments_enabled` false → true 修复。
+现在自动构建正常运作。
+
+`functions/` 目录仅在 wrangler 部署时生效，`next build` 会把它当作页面文件，但不影响部署。
 
 ### _routes.ts 死代码
 `functions/api/admin/auth/_routes.ts` 把 `onRequest` 重命名为 `loginHandler` 等，导致 CF Pages Functions 路由匹配失败。已删除（由独立函数文件按路径匹配）。

@@ -23,7 +23,7 @@ export default function LoginPage() {
       script.onload = () => {
         if ((window as any).turnstile && turnstileRef.current) {
           (window as any).turnstile.render(turnstileRef.current, {
-            sitekey: "0x4AAAAAAAewC-TLy6pJ7WgB",
+            sitekey: "0x4AAAAAADqoEtL5oqrpaf3R",
             callback: (token: string) => setTurnstileToken(token),
           });
         }
@@ -31,7 +31,7 @@ export default function LoginPage() {
       document.head.appendChild(script);
     } else if ((window as any).turnstile && turnstileRef.current) {
       (window as any).turnstile.render(turnstileRef.current, {
-        sitekey: "0x4AAAAAAAewC-TLy6pJ7WgB",
+        sitekey: "0x4AAAAAADqoEtL5oqrpaf3R",
         callback: (token: string) => setTurnstileToken(token),
       });
     }

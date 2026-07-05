@@ -1,21 +1,14 @@
 # Admin SOP — 部署与发布流程
 
-## 自动部署（GitHub Actions）
+## 自动部署（CF Pages 原生 GitHub 集成）
 
-Admin 使用 **GitHub Actions** 自动构建和部署。
+Admin 通过 CF Pages 原生构建自动部署，与 site/portal/blog 相同。
 
-- **触发条件**：向 `main` 分支推送代码时，文件匹配 `apps/admin/**`、`packages/ui/**` 或 `packages/scripts/**`
-- **构建命令**：`npm run build:admin`（根目录 turborepo）
-- **部署命令**：`npx wrangler pages deploy`（从 `apps/admin/` 执行）
-- **构建产出**：`apps/admin/out/`
-
-### 前提条件
-
-GitHub 仓库须配置以下 Secrets：
-
-| Secret | 说明 | 值位置 |
-|--------|------|--------|
-| `CLOUDFLARE_API_TOKEN` | CF API 令牌（Pages 部署权限） | `~/.openclaw/.env` |
+- **触发条件**：向 `main` 分支推送代码时自动触发
+- **构建命令**：`npm run build`（= `next build && bash scripts/postbuild.sh`）
+- **输出目录**：`out/`
+- **根目录**：`apps/admin`
+- **构建时间**：约 40 秒
 
 ### 验证部署
 

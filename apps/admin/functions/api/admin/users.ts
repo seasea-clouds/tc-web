@@ -1,10 +1,11 @@
 /**
  * Users API
- * GET /api/admin/users?page=1&pageSize=20&search=
- * POST /api/admin/users/:id/status
+ * GET /api/admin/users                — list (with pagination/search)
+ * GET /api/admin/users/:id            — single user detail
+ * POST /api/admin/users/:id/status    — enable/disable user
  */
 
-import { requireAdmin, getAdminSessionId, verifyAdminSession } from "../../lib/admin-session";
+import { requireAdmin } from "../../lib/admin-session";
 import { createLog } from "../../lib/log";
 
 interface Env {
@@ -22,7 +23,55 @@ export async function onRequest(context: { request: Request; env: Env }) {
   const url = new URL(context.request.url);
   const path = url.pathname;
 
-  // GET /api/admin/users
+  // ── GET /api/admin/users/:id — single user detail ──
+  if (context.request.method === "GET") {
+    const pathParts = path.split("/").filter(Boolean);
+    // pathParts: ["api", "admin", "users", ":id"]
+
+    if (pathParts.length >= 4 && pathParts[3] && !url.searchParams.has("page")) {
+      const userId = pathParts[3];
+
+      const user: any = await context.env.DB.prepare(
+        `SELECT u.*,
+          (SELECT COUNT(*) FROM reports r WHERE r.user_email = u.email) as report_count,
+          (SELECT s.status FROM subscriptions s WHERE s.user_id = u.id ORDER BY s.created_at DESC LIMIT 1) as subscription_status,
+          (SELECT s.plan FROM subscriptions s WHERE s.user_id = u.id ORDER BY s.created_at DESC LIMIT 1) as subscription_plan,
+          (SELECT s.current_period_end FROM subscriptions s WHERE s.user_id = u.id ORDER BY s.created_at DESC LIMIT 1) as subscription_end
+        FROM users u WHERE u.id = ?`
+      ).bind(userId).first();
+
+      if (!user) {
+        return Response.json({ error: "User not found" }, { status: 404 });
+      }
+
+      // Get user's recent reports
+      const reports: any = await context.env.DB.prepare(
+        `SELECT id, module, product_name, payment_status, created_at
+         FROM reports WHERE user_email = ? ORDER BY created_at DESC LIMIT 20`
+      ).bind(user.email).all();
+
+      // Get user's subscriptions
+      const subscriptions: any = await context.env.DB.prepare(
+        `SELECT * FROM subscriptions WHERE user_id = ? ORDER BY created_at DESC LIMIT 5`
+      ).bind(userId).all();
+
+      return Response.json({
+        user: {
+          id: user.id,
+          email: user.email,
+          name: user.name,
+          locale: user.locale,
+          status: user.status,
+          created_at: user.created_at,
+          report_count: user.report_count,
+        },
+        reports: reports.results || [],
+        subscriptions: subscriptions.results || [],
+      });
+    }
+  }
+
+  // ── GET /api/admin/users — list ──
   if (context.request.method === "GET") {
     const page = parseInt(url.searchParams.get("page") || "1");
     const pageSize = parseInt(url.searchParams.get("pageSize") || "20");
@@ -39,15 +88,16 @@ export async function onRequest(context: { request: Request; env: Env }) {
     if (search) {
       query += ` WHERE u.email LIKE ? OR u.name LIKE ?`;
       countQuery += ` WHERE u.email LIKE ? OR u.name LIKE ?`;
-      params.push(`%${search}%`, `%${search}%`);
+      const q = `%${search}%`;
+      params.push(q, q);
     }
 
     query += ` ORDER BY u.created_at DESC LIMIT ? OFFSET ?`;
-    params.push(String(pageSize), String(offset));
+    const allParams = [...params, String(pageSize), String(offset)];
 
     const [rows, countResult]: any = await Promise.all([
-      context.env.DB.prepare(query).bind(...params).all(),
-      context.env.DB.prepare(countQuery).bind(...(search ? [`%${search}%`, `%${search}%`] : [])).first(),
+      context.env.DB.prepare(query).bind(...allParams).all(),
+      context.env.DB.prepare(countQuery).bind(...params).first(),
     ]);
 
     return Response.json({
@@ -56,7 +106,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
     });
   }
 
-  // POST /api/admin/users/:id/status
+  // ── POST /api/admin/users/:id/status — enable/disable ──
   if (context.request.method === "POST") {
     const match = path.match(/\/users\/([^/]+)\/status$/);
     if (!match) {

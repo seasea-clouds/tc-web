@@ -128,12 +128,19 @@ export async function onRequest(context: { request: Request; env: Env }) {
 
     if (eventType === "checkout.completed") {
       await handleCheckoutCompleted(context.request, context.env, meta, webhookData);
+      // Record payment for checkout.completed
+      await recordPaymentFromCheckout(context.env, webhookData, meta);
     } else if (eventType === "subscription.active") {
       await handleSubscriptionCreated(context.env, webhookData, meta);
+      // Record payment for subscription activation
+      await recordPaymentFromSubscription(context.env, webhookData, meta);
     } else if (eventType === "subscription.canceled") {
       await handleSubscriptionCancelled(context.env, webhookData);
     } else if (eventType === "subscription.updated") {
       await handleSubscriptionUpdated(context.env, webhookData);
+    } else if (eventType === "subscription.paid") {
+      // Recurring payment success — record payment
+      await recordPaymentFromSubscription(context.env, webhookData, meta);
     } else {
       console.log(`Unhandled webhook eventType: "${eventType}"`);
     }
@@ -544,5 +551,96 @@ async function handleSubscriptionUpdated(
     console.log(`subscription.updated: updated sub ${subId}`);
   } catch (err) {
     console.error("subscription.updated handler error:", err);
+  }
+}
+
+// ─── Record payment from checkout.completed ──────────────────────────
+// Writes to the shared payments table so Admin payment management can see it.
+
+async function recordPaymentFromCheckout(
+  env: Env,
+  data: Record<string, unknown>,
+  meta: Record<string, string>
+) {
+  try {
+    const order = (data as any).order ?? {};
+    const amountCents = order.amount ?? 0;
+    const currency = order.currency ?? "USD";
+    const checkoutId = String(data.id ?? "");
+    const transactionId = String(order.transaction ?? "");
+
+    const reportId = meta.report_id ?? "";
+    const userEmail = meta.email ?? "";
+
+    if (!amountCents && !reportId) {
+      // No meaningful payment data — skip
+      return;
+    }
+
+    const paymentId = crypto.randomUUID();
+    const now = new Date().toISOString();
+
+    await env.DB.prepare(
+      `INSERT OR IGNORE INTO payments (id, report_id, user_email, amount_cents, currency, status, provider, provider_payment_id, created_at)
+       VALUES (?, ?, ?, ?, ?, 'completed', 'creem', ?, ?)`
+    ).bind(
+      paymentId,
+      reportId || null,
+      userEmail || null,
+      amountCents,
+      currency,
+      transactionId || checkoutId,
+      now
+    ).run();
+
+    // Also update the report's payment_status if applicable
+    if (reportId) {
+      await env.DB.prepare(
+        "UPDATE reports SET payment_status = 'completed' WHERE id = ? AND (payment_status IS NULL OR payment_status = 'pending')"
+      ).bind(reportId).run();
+    }
+
+    console.log(`recordPaymentFromCheckout: recorded payment ${paymentId} for ${checkoutId}`);
+  } catch (err) {
+    console.error("recordPaymentFromCheckout error:", err);
+  }
+}
+
+// ─── Record payment from subscription events ─────────────────────────
+
+async function recordPaymentFromSubscription(
+  env: Env,
+  data: Record<string, unknown>,
+  meta: Record<string, string>
+) {
+  try {
+    const product = (data as any).product ?? {};
+    const amountCents = product.price ?? 0;
+    const currency = product.currency ?? "USD";
+    const subId = String(data.id ?? "");
+    const userEmail = String((data as any).customer?.email ?? meta.email ?? "");
+
+    if (!amountCents || !subId) {
+      return;
+    }
+
+    const paymentId = crypto.randomUUID();
+    const now = new Date().toISOString();
+
+    await env.DB.prepare(
+      `INSERT OR IGNORE INTO payments (id, report_id, user_email, amount_cents, currency, status, provider, provider_subscription_id, created_at)
+       VALUES (?, NULL, ?, ?, ?, 'completed', 'creem', ?, ?)`
+    ).bind(
+      paymentId,
+      userEmail || null,
+      amountCents,
+      currency,
+      subId,
+      now
+    ).run();
+
+    console.log(`recordPaymentFromSubscription: recorded payment ${paymentId} for sub ${subId}`);
+  } catch (err) {
+    console.error("recordPaymentFromSubscription error:", err);
   }
 }

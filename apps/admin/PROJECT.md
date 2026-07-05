@@ -52,8 +52,6 @@
 
 ## 待完成
 - ⏳ Creem 回调集成（Webhook 写入 payments 表）
-- ⏳ 数据看板 — 导出功能（CSV）
-- ⏳ 邮件通知系统
 
 ## 技术决策
 - ~~CF Analytics (GraphQL) 集成~~ → 改用 D1 自建 page_views 表（CF API Token 无 analytics:read 权限）

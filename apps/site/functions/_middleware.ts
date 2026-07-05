@@ -363,9 +363,18 @@ export async function onRequest(context: { request: Request; next: () => Promise
     !url.pathname.startsWith('/_next/')
   ) {
     const locale = url.pathname.match(/^\/([a-z]{2}(-[A-Z]{2})?)\//)?.[1] || '';
+    // Identify which sub-project served this request
+    const subProject = url.pathname.startsWith('/c/')
+      ? 'portal'
+      : url.pathname.startsWith('/blog/')
+        ? 'blog'
+        : url.pathname.startsWith('/admin/')
+          ? 'admin'
+          : 'site';
+
     const trackingPayload = {
       path: url.pathname,
-      project: 'site',
+      project: subProject,
       referrer: request.headers.get('referer') || '',
       locale,
     };

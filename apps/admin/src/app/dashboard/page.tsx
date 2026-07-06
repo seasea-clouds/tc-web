@@ -64,7 +64,7 @@ export default function DashboardPage() {
   const runAggregation = async () => {
     setAggregating(true);
     try {
-      const res = await fetch("/api/admin/aggregate", { method: "POST" });
+      const res = await fetch("/api/admin/analytics?trigger=1");
       const data = await res.json();
       if (data.ok) {
         showToast("success", data.message);

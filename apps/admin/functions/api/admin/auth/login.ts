@@ -21,20 +21,16 @@ export async function onRequest(context: { request: Request; env: Env }) {
   try {
     const { username, password, turnstileToken } = await context.request.json();
 
-    // Verify Turnstile
+    // Verify Turnstile (form-encoded, per CF API requirement — JSON not supported)
     if (!turnstileToken) {
       return Response.json({ error: "请完成人机验证" }, { status: 400 });
     }
+    const turnstileForm = new URLSearchParams();
+    turnstileForm.append("secret", context.env.TURNSTILE_SECRET_KEY || "");
+    turnstileForm.append("response", turnstileToken);
     const turnstileResp = await fetch(
       "https://challenges.cloudflare.com/turnstile/v0/siteverify",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          secret: context.env.TURNSTILE_SECRET_KEY,
-          response: turnstileToken,
-        }),
-      },
+      { method: "POST", body: turnstileForm },
     );
     const turnstileResult: any = await turnstileResp.json();
     if (!turnstileResult.success) {

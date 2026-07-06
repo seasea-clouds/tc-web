@@ -63,7 +63,7 @@ export default function SubscriptionsPage() {
   }, []);
 
   const changeStatus = async (id: string, status: string) => {
-    await post(`/subscriptions/${id}/status`, { status });
+    await post(`/subscriptions?id=${id}`, { status });
     setSubscriptions((prev) =>
       prev.map((s) => (s.id === id ? { ...s, status } : s))
     );
@@ -87,7 +87,7 @@ export default function SubscriptionsPage() {
     setDetailLoading(true);
     setSubDetail(null);
     try {
-      const data = await get<SubscriptionDetailData>(`/subscriptions/${subId}`);
+      const data = await get<SubscriptionDetailData>(`/subscriptions?id=${subId}`);
       setSubDetail(data);
     } catch {
       setSubDetail(null);

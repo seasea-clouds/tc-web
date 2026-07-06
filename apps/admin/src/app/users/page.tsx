@@ -93,7 +93,7 @@ export default function UsersPage() {
 
   const toggleUserStatus = async (userId: string, currentStatus: string) => {
     const newStatus = currentStatus === "disabled" ? "active" : "disabled";
-    await post(`/users/${userId}/status`, { status: newStatus });
+    await post(`/users?id=${userId}`, { status: newStatus });
     setUsers((prev) =>
       prev.map((u) => (u.id === userId ? { ...u, status: newStatus } : u))
     );
@@ -108,7 +108,7 @@ export default function UsersPage() {
     setDetailLoading(true);
     setUserDetail(null);
     try {
-      const data = await get<UserDetailData>(`/users/${userId}`);
+      const data = await get<UserDetailData>(`/users?id=${userId}`);
       setUserDetail(data);
     } catch {
       setUserDetail(null);

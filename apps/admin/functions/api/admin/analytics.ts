@@ -1,6 +1,7 @@
 /**
  * Analytics API — custom D1-based page view analytics
  * GET /api/admin/analytics?range=today|7d|30d
+ * GET /api/admin/analytics?trigger=1 — manual aggregation trigger
  *
  * Data sources:
  *   - Today (current UTC day):  queries `page_views` directly (real-time detail)
@@ -233,8 +234,22 @@ export async function onRequest(context: { request: Request; env: Env }) {
 
   const url = new URL(context.request.url);
   const range = url.searchParams.get("range") || "today";
+  const isTrigger = url.searchParams.get("trigger") === "1";
 
   try {
+    // ── Manual aggregation trigger ──
+    if (isTrigger) {
+      const aggregated = await maybeAggregate(context.env);
+      return Response.json({
+        ok: true,
+        aggregated,
+        message:
+          aggregated.length > 0
+            ? `已聚合 ${aggregated.length} 天数据: ${aggregated.join(", ")}`
+            : "暂无需要聚合的数据，所有历史数据已完成聚合",
+      });
+    }
+
     // ── Lazy aggregation: consolidate any previous-day page_views ──
     await maybeAggregate(context.env);
 

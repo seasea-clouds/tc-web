@@ -198,8 +198,8 @@ export default function DashboardPage() {
             </ResponsiveContainer>
           </div>
 
-          {/* ── Three column: Geo + Module + Payment ── */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "1rem", marginBottom: "1.5rem" }}>
+          {/* ── Geo + Module + Payment — responsive: 1→2→3 columns ── */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "1rem", marginBottom: "1.5rem" }}>
             {/* Geographic distribution */}
             <div className="card">
               <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>地域分布（前 10）</h3>
@@ -290,8 +290,8 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          {/* ── Channel Source + Site breakdown ── */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", marginBottom: "1.5rem" }}>
+          {/* ── Channel Source + Site breakdown — responsive ── */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(350px, 1fr))", gap: "1rem", marginBottom: "1.5rem" }}>
             <div className="card">
               <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>渠道来源分布</h3>
               {analytics.channelData && analytics.channelData.length > 0 ? (
@@ -349,8 +349,8 @@ export default function DashboardPage() {
 
 
 
-          {/* ── Bottom row: Pages + Quick stats + Data status ── */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+          {/* ── Bottom row: Pages + Quick stats + Data status — responsive ── */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(350px, 1fr))", gap: "1rem" }}>
             {/* Top pages */}
             <div className="card">
               <h3 style={{ fontSize: "0.95rem", fontWeight: 600, marginBottom: "0.75rem" }}>热门页面</h3>

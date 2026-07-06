@@ -120,7 +120,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </aside>
 
         {/* Main content */}
-        <div className="main-content">
+        <div className={`main-content ${sidebarCollapsed ? "collapsed" : ""}`}>
           {/* Top bar */}
           <header className="topbar">
             <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>

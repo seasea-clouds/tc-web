@@ -52,11 +52,12 @@ GitHub 推送触发的自动构建持续失败（`clone_repo` 成功但 `build` 
   - `GET /api/admin/subscriptions/:id` — 返回订阅详情 + 支付历史
   - `GET /api/admin/payments/summary` — 返回收入汇总（今日/月/总 + 月度趋势）
 
-### 构建触发器路径限制（2026-07-05）
+### 构建触发器路径限制（2026-07-05 — 已回退）
 - 文档建议仅 `apps/admin/**`、`packages/ui/**`、`packages/scripts/**` 触发构建
 - 之前设置为 `['*']`（所有项目变更均触发 Admin 构建）
 - 已通过 CF API 更新为精确路径列表
-- 通过 PATCH `/accounts/{account_id}/pages/projects/trade-web-admin` 设置 `source.config.path_includes`
+- 但设置后**构建 Runner 忽略 Admin 的所有构建**（卡在 `queued/idle`），回退到 `['*']` 后恢复
+- ⚠️ CF Pages 免费版对 `path_includes` 的非通配符支持有问题，暂维持 `['*']`
 
 ### 分析系统 — D1 自建方案（2026-07-05）
 - 原计划集成 CF Analytics GraphQL API，但现有 CF API Token 缺乏 `analytics:read` 权限

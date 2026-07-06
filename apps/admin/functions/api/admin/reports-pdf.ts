@@ -1,16 +1,17 @@
 /**
  * Admin PDF download endpoint
- * GET /api/admin/reports/:id/pdf
+ * GET /api/admin/reports-pdf?id=xxx
  *
- * Fetches the report PDF from R2 and returns it as a downloadable file.
- * Requires the R2 bucket binding (name: R2) to be configured.
+ * Generates PDF on-the-fly from stored report data (no R2 needed).
+ * Reads result_data + input_data from D1, generates PDF via pdf-lib,
+ * returns as downloadable file.
  */
 
 import { requireAdmin } from "../../lib/admin-session";
+import { generateReportPdf } from "../../lib/pdf";
 
 interface Env {
   DB: any;
-  R2?: any;
 }
 
 export async function onRequest(context: {
@@ -28,61 +29,73 @@ export async function onRequest(context: {
   }
 
   const url = new URL(context.request.url);
-  const pathParts = url.pathname.split("/").filter(Boolean);
-  // pathParts: ["api", "admin", "reports-pdf", ":id"]
-
-  const reportId = pathParts[3];
+  const reportId = url.searchParams.get("id");
   if (!reportId) {
     return Response.json({ error: "Missing report ID" }, { status: 400 });
   }
 
   try {
-    // ── Look up pdf_path from D1 ──
+    // ── Read report from D1 ──
     const row: any = await context.env.DB.prepare(
-      "SELECT pdf_path FROM reports WHERE id = ?"
+      `SELECT id, module, product_name, hs_code, origin_country, input_data, result_data, locale, created_at
+       FROM reports WHERE id = ?`
     ).bind(reportId).first();
 
     if (!row) {
       return Response.json({ error: "Report not found" }, { status: 404 });
     }
 
-    const pdfPath = row.pdf_path || "";
-    if (!pdfPath) {
-      return Response.json({
-        error: "No PDF available for this report",
-        detail: "PDF has not been generated yet. This may be because R2 storage was configured after the report was created.",
-      }, { status: 404 });
-    }
+    // ── Parse stored data ──
+    const inputData = row.input_data ? JSON.parse(row.input_data) : {};
+    const resultData = row.result_data ? JSON.parse(row.result_data) : {};
 
-    // ── Fetch PDF from R2 ──
-    if (!context.env.R2) {
-      return Response.json({
-        error: "R2 storage not configured",
-        detail: "The R2 bucket binding is missing. Add R2 binding to the Pages project.",
-      }, { status: 500 });
-    }
+    // result_data stores { result, nextSteps }
+    const result = resultData.result || {};
+    const nextSteps = resultData.nextSteps || [];
 
-    const pdfObject = await context.env.R2.get(pdfPath);
-    if (!pdfObject) {
-      return Response.json({
-        error: "PDF file not found in storage",
-        detail: `The file at ${pdfPath} does not exist in the bucket.`,
-      }, { status: 404 });
-    }
+    // Map module code to label
+    const moduleLabels: Record<string, string> = {
+      gacc: "GACC Food Registration",
+      label: "Chinese Label Compliance",
+      ccc: "CCC Certification",
+      nmpa: "NMPA Cosmetics Registration",
+      crossborder: "Cross-Border E-Commerce",
+      trademark: "Trademark Registration (China)",
+    };
+
+    // ── Generate PDF ──
+    const pdfBytes = await generateReportPdf({
+      reportId: row.id,
+      module: moduleLabels[row.module] || row.module,
+      generatedAt: (row.created_at || "").split("T")[0],
+      productInfo: {
+        name: row.product_name || inputData.productName || "",
+        category: inputData.category || "",
+        hsCode: row.hs_code || inputData.hsCode,
+        originCountry: row.origin_country || inputData.originCountry || "",
+      },
+      result: {
+        requiresRegistration: result.requiresRegistration,
+        isHighRisk: result.isHighRisk,
+        riskCategory: result.riskCategory,
+        summary: result.summary,
+        requiredDocuments: result.requiredDocuments,
+      },
+      nextSteps,
+    });
 
     // ── Return PDF as downloadable response ──
-    const pdfBytes = await pdfObject.arrayBuffer();
     return new Response(pdfBytes, {
       status: 200,
       headers: {
         "Content-Type": "application/pdf",
         "Content-Disposition": `attachment; filename="${reportId}.pdf"`,
         "Content-Length": String(pdfBytes.byteLength),
-        "Cache-Control": "public, max-age=3600",
+        "Cache-Control": "no-cache",
       },
     });
   } catch (err: any) {
-    console.error("PDF download error:", err);
+    console.error("PDF generation error:", err);
     return Response.json({ error: String(err) }, { status: 500 });
   }
 }

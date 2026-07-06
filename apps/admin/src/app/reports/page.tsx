@@ -76,7 +76,7 @@ export default function ReportsPage() {
     setDetailLoading(true);
     setSelectedReport(null);
     try {
-      const data = await get<ReportDetail>(`/reports/${reportId}`);
+      const data = await get<ReportDetail>(`/reports?id=${reportId}`);
       setSelectedReport(data);
     } catch {
       setSelectedReport(null);
@@ -282,7 +282,7 @@ export default function ReportsPage() {
               {selectedReport.pdf_path ? (
                 <div style={{ marginTop: "1rem" }}>
                   <a
-                    href={`/api/admin/reports-pdf/${selectedReport.id}`}
+                    href={`/api/admin/reports-pdf?id=${selectedReport.id}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-primary"

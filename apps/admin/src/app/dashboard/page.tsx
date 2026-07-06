@@ -52,6 +52,33 @@ export default function DashboardPage() {
   const [analytics, setAnalytics] = useState<AnalyticsData | null>(null);
   const [timeRange, setTimeRange] = useState<"today" | "7d" | "30d">("today");
   const [loading, setLoading] = useState(true);
+  const [aggregating, setAggregating] = useState(false);
+  const [refreshKey, setRefreshKey] = useState(0);
+  const [toast, setToast] = useState<{ type: "success" | "error"; message: string } | null>(null);
+
+  const showToast = (type: "success" | "error", message: string) => {
+    setToast({ type, message });
+    setTimeout(() => setToast(null), 4000);
+  };
+
+  const runAggregation = async () => {
+    setAggregating(true);
+    try {
+      const res = await fetch("/api/admin/aggregate", { method: "POST" });
+      const data = await res.json();
+      if (data.ok) {
+        showToast("success", data.message);
+        // Refresh dashboard data after aggregation
+        setRefreshKey((k) => k + 1); // triggers data re-fetch
+      } else {
+        showToast("error", data.error || "聚合失败");
+      }
+    } catch {
+      showToast("error", "网络请求失败");
+    } finally {
+      setAggregating(false);
+    }
+  };
 
   useEffect(() => {
     setLoading(true);
@@ -65,7 +92,7 @@ export default function DashboardPage() {
       })
       .catch(() => {})
       .finally(() => setLoading(false));
-  }, [timeRange]);
+  }, [timeRange, refreshKey]);
 
   const formatHour = (h: number) => `${h.toString().padStart(2, "0")}:00`;
 
@@ -76,7 +103,7 @@ export default function DashboardPage() {
         <p style={{ color: "#6b7280", fontSize: "0.875rem" }}>
           欢迎使用 SinoTrade Compliance 管理后台
         </p>
-        <div style={{ display: "flex", gap: "0.375rem" }}>
+        <div style={{ display: "flex", gap: "0.375rem", alignItems: "center" }}>
           {(["today" as const, "7d" as const, "30d" as const]).map((range) => (
             <button
               key={range}
@@ -87,6 +114,14 @@ export default function DashboardPage() {
               {range === "today" ? "今日" : range === "7d" ? "近7天" : "近30天"}
             </button>
           ))}
+          <button
+            className="btn btn-outline"
+            style={{ padding: "0.375rem 0.75rem", fontSize: "0.8rem", marginLeft: "0.5rem" }}
+            onClick={runAggregation}
+            disabled={aggregating}
+          >
+            {aggregating ? "聚合中..." : "⚡ 立即聚合"}
+          </button>
         </div>
       </div>
 
@@ -407,6 +442,13 @@ export default function DashboardPage() {
       ) : (
         <div className="empty-state">
           <p>暂无数据</p>
+        </div>
+      )}
+
+      {/* ── Toast notification ── */}
+      {toast && (
+        <div className={`toast toast-${toast.type}`} style={{ position: "fixed", top: "1rem", right: "1rem", zIndex: 999 }}>
+          {toast.message}
         </div>
       )}
     </div>

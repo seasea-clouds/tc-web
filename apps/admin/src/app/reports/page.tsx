@@ -282,7 +282,7 @@ export default function ReportsPage() {
               {selectedReport.pdf_path ? (
                 <div style={{ marginTop: "1rem" }}>
                   <a
-                    href={selectedReport.pdf_path}
+                    href={`/api/admin/reports-pdf/${selectedReport.id}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-primary"
@@ -294,7 +294,7 @@ export default function ReportsPage() {
                 </div>
               ) : (
                 <div style={{ marginTop: "1rem", padding: "0.5rem 0.75rem", background: "#fef2f2", borderRadius: "0.5rem", fontSize: "0.8rem", color: "#dc2626" }}>
-                  ⚠️ PDF 文件未生成。需要配置 R2 存储后，报告生成时自动上传 PDF。
+                  ⚠️ PDF 文件未生成。需要在 Cloudflare Dashboard 启用 R2 后，新报告会自动生成 PDF。
                 </div>
               )}
             </div>

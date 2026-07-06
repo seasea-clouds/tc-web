@@ -1,63 +1,27 @@
 "use client";
 
-import { useState, FormEvent, useRef, useEffect } from "react";
+import { useState, FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import { login } from "@/lib/auth";
 
 export default function LoginPage() {
   const router = useRouter();
-  const turnstileRef = useRef<HTMLDivElement>(null);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const [turnstileToken, setTurnstileToken] = useState("");
-
-  useEffect(() => {
-    // Load Turnstile script
-    if (!(window as any).turnstile) {
-      const script = document.createElement('script');
-      script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
-      script.async = true;
-      script.defer = true;
-      script.onload = () => {
-        if ((window as any).turnstile && turnstileRef.current) {
-          (window as any).turnstile.render(turnstileRef.current, {
-            sitekey: "0x4AAAAAADqoEtL5oqrpaf3R",
-            callback: (token: string) => setTurnstileToken(token),
-          });
-        }
-      };
-      document.head.appendChild(script);
-    } else if ((window as any).turnstile && turnstileRef.current) {
-      (window as any).turnstile.render(turnstileRef.current, {
-        sitekey: "0x4AAAAAADqoEtL5oqrpaf3R",
-        callback: (token: string) => setTurnstileToken(token),
-      });
-    }
-  }, []);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setError("");
 
-    if (!turnstileToken) {
-      setError("请完成人机验证");
-      return;
-    }
-
     setLoading(true);
 
     try {
-      await login(username, password, turnstileToken);
+      await login(username, password);
       router.replace("/dashboard");
     } catch (err: any) {
       setError(err.message || "登录失败，请重试");
-      // Reset Turnstile
-      if ((window as any).turnstile) {
-        (window as any).turnstile.reset(turnstileRef.current);
-      }
-      setTurnstileToken("");
     } finally {
       setLoading(false);
     }
@@ -107,11 +71,6 @@ export default function LoginPage() {
               required
             />
           </div>
-
-          <div
-            ref={turnstileRef}
-            style={{ marginBottom: "1.5rem", display: "flex", justifyContent: "center" }}
-          />
 
           <button
             type="submit"

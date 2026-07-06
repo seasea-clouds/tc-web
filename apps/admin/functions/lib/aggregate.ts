@@ -7,10 +7,30 @@
  * Called lazily by analytics.ts (on dashboard load) and manually via POST /api/admin/aggregate.
  *
  * Idempotent: uses INSERT OR IGNORE so re-running is safe.
+ *
+ * Auto-creates `daily_page_stats` table if not present (self-bootstrapping).
  */
 
 interface Env {
   DB: any;
+}
+
+/** Ensure the daily_page_stats table exists */
+async function ensureTable(env: Env): Promise<void> {
+  await env.DB.prepare(
+    `CREATE TABLE IF NOT EXISTS daily_page_stats (
+      date TEXT PRIMARY KEY,
+      total_pv INTEGER DEFAULT 0,
+      total_uv INTEGER DEFAULT 0,
+      countries_count INTEGER DEFAULT 0,
+      hourly_data TEXT,
+      geo_data TEXT,
+      page_data TEXT,
+      channel_data TEXT,
+      project_data TEXT,
+      created_at TEXT DEFAULT (datetime('now'))
+    )`
+  ).run();
 }
 
 /**
@@ -40,6 +60,7 @@ async function hasAnyDailyStats(env: Env): Promise<boolean> {
  */
 export async function maybeAggregate(env: Env): Promise<string[]> {
   const today = getTodayUTC();
+  await ensureTable(env);
 
   // Distinct dates in page_views before today
   const unaggregated: any = await env.DB.prepare(

@@ -1,27 +1,57 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { login } from "@/lib/auth";
 
 export default function LoginPage() {
   const router = useRouter();
+  const turnstileRef = useRef<HTMLDivElement>(null);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState("");
+
+  useEffect(() => {
+    if (window.turnstile) {
+      window.turnstile.render(turnstileRef.current!, {
+        sitekey: "0x4AAAAAADqoEtL5oqrpaf3R",
+        callback: (token: string) => setTurnstileToken(token),
+      });
+    } else {
+      const script = document.createElement("script");
+      script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js";
+      script.async = true;
+      script.defer = true;
+      script.onload = () => {
+        window.turnstile.render(turnstileRef.current!, {
+          sitekey: "0x4AAAAAADqoEtL5oqrpaf3R",
+          callback: (token: string) => setTurnstileToken(token),
+        });
+      };
+      document.head.appendChild(script);
+    }
+  }, []);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setError("");
 
+    if (!turnstileToken) {
+      setError("请完成人机验证");
+      return;
+    }
+
     setLoading(true);
 
     try {
-      await login(username, password);
+      await login(username, password, turnstileToken);
       router.replace("/dashboard");
     } catch (err: any) {
       setError(err.message || "登录失败，请重试");
+      window.turnstile?.reset(turnstileRef.current!);
+      setTurnstileToken("");
     } finally {
       setLoading(false);
     }
@@ -71,6 +101,8 @@ export default function LoginPage() {
               required
             />
           </div>
+
+          <div ref={turnstileRef} style={{ marginBottom: "1.5rem", display: "flex", justifyContent: "center" }} />
 
           <button
             type="submit"

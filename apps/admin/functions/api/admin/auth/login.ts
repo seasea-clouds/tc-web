@@ -1,10 +1,7 @@
 /**
  * Admin Login
  * POST /api/admin/auth/login
- * Body: { username, password }
- *
- * Note: Turnstile intentionally omitted — admin is an internal management tool,
- * not a public-facing form. All login attempts require valid admin credentials.
+ * Body: { username, password, turnstileToken }
  */
 
 import { createAdminSession } from "../../../lib/admin-session";
@@ -13,6 +10,7 @@ import { createLog } from "../../../lib/log";
 interface Env {
   DB: any;
   ADMIN_JWT_SECRET?: string;
+  TURNSTILE_SECRET_KEY?: string;
 }
 
 export async function onRequest(context: { request: Request; env: Env }) {
@@ -21,7 +19,27 @@ export async function onRequest(context: { request: Request; env: Env }) {
   }
 
   try {
-    const { username, password } = await context.request.json();
+    const { username, password, turnstileToken } = await context.request.json();
+
+    // Verify Turnstile
+    if (!turnstileToken) {
+      return Response.json({ error: "请完成人机验证" }, { status: 400 });
+    }
+    const turnstileResp = await fetch(
+      "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          secret: context.env.TURNSTILE_SECRET_KEY,
+          response: turnstileToken,
+        }),
+      },
+    );
+    const turnstileResult: any = await turnstileResp.json();
+    if (!turnstileResult.success) {
+      return Response.json({ error: "人机验证失败，请刷新后重试" }, { status: 400 });
+    }
     if (!username || !password) {
       return Response.json({ error: "用户名和密码不能为空" }, { status: 400 });
     }

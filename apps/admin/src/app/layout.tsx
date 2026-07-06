@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import {
-  LayoutDashboard, Users, Repeat, FileText, ClipboardList, CreditCard, LogOut, Menu, X
+  LayoutDashboard, Users, Repeat, FileText, ClipboardList, CreditCard, LogOut, Menu, X, ChevronLeft, ChevronRight
 } from "lucide-react";
 import { getCurrentAdmin, logout, AdminUser } from "@/lib/auth";
 
@@ -23,7 +23,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const router = useRouter();
   const [admin, setAdmin] = useState<AdminUser | null>(null);
   const [loading, setLoading] = useState(true);
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const isLoginPage = pathname === "/login" || pathname === "/login/";
 
@@ -84,11 +85,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         {/* Sidebar */}
-        <aside className="sidebar" style={{ transform: sidebarOpen ? "translateX(0)" : undefined }}>
+        <aside className={`sidebar ${mobileMenuOpen ? "open" : ""} ${sidebarCollapsed ? "collapsed" : ""}`}>
           <div className="brand">
             <h1>SinoTrade Admin</h1>
             <p>管理后台</p>
           </div>
+
+          {/* Close button for mobile */}
+          <button className="sidebar-close-btn" onClick={() => setMobileMenuOpen(false)} aria-label="关闭菜单">
+            <X size={20} />
+          </button>
+
+          {/* Collapse toggle for desktop */}
+          <button className="sidebar-collapse-btn" onClick={() => setSidebarCollapsed(!sidebarCollapsed)} aria-label={sidebarCollapsed ? "展开侧栏" : "收起侧栏"}>
+            {sidebarCollapsed ? <ChevronRight size={16} /> : <ChevronLeft size={16} />}
+          </button>
 
           <nav style={{ padding: "0.75rem" }}>
             {NAV_ITEMS.map((item) => {
@@ -100,8 +111,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   href={item.href}
                   className={isActive ? "active" : ""}
                 >
-                  <Icon size={18} style={{ display: "inline", marginRight: "0.5rem", verticalAlign: "middle" }} />
-                  {item.label}
+                  <Icon size={18} style={{ display: "inline", verticalAlign: "middle" }} />
+                  <span className="nav-label" style={{ marginLeft: "0.5rem" }}>{item.label}</span>
                 </Link>
               );
             })}
@@ -113,12 +124,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {/* Top bar */}
           <header className="topbar">
             <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+              {/* Mobile hamburger */}
               <button
-                className="btn btn-outline"
-                style={{ padding: "0.375rem", display: "none" }}
-                onClick={() => setSidebarOpen(!sidebarOpen)}
+                className="btn btn-outline mobile-menu-btn"
+                style={{ padding: "0.375rem" }}
+                onClick={() => setMobileMenuOpen(true)}
+                aria-label="打开菜单"
               >
-                {sidebarOpen ? <X size={18} /> : <Menu size={18} />}
+                <Menu size={18} />
+              </button>
+              {/* Desktop collapse toggle */}
+              <button
+                className="btn btn-outline desktop-collapse-btn"
+                style={{ padding: "0.375rem" }}
+                onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
+                aria-label={sidebarCollapsed ? "展开侧栏" : "收起侧栏"}
+              >
+                {sidebarCollapsed ? <ChevronRight size={18} /> : <ChevronLeft size={18} />}
               </button>
               <h2 style={{ fontSize: "1.125rem", fontWeight: 600, margin: 0 }}>
                 {NAV_ITEMS.find((i) => pathname?.startsWith(i.href))?.label || "Admin"}
@@ -141,6 +163,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {children}
           </main>
         </div>
+
+        {/* Mobile overlay backdrop */}
+        <div className={`sidebar-overlay ${mobileMenuOpen ? "visible" : ""}`} onClick={() => setMobileMenuOpen(false)} />
       </body>
     </html>
   );

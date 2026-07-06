@@ -435,3 +435,113 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #9ca3af;
 }
+
+/* ===== Sidebar Responsive & Collapsible ===== */
+.sidebar {
+  transition: width 0.25s ease, transform 0.25s ease;
+  z-index: 30;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* ===== Desktop (≥769px) ===== */
+@media (min-width: 769px) {
+  .sidebar.collapsed {
+    width: 64px;
+  }
+  .sidebar.collapsed .brand h1,
+  .sidebar.collapsed .brand p,
+  .sidebar.collapsed .nav-label {
+    display: none;
+  }
+  .sidebar.collapsed nav a {
+    padding: 0.625rem;
+    display: flex;
+    justify-content: center;
+  }
+  .sidebar.collapsed nav a svg {
+    margin-right: 0 !important;
+  }
+  .main-content {
+    margin-left: 240px;
+    transition: margin-left 0.25s ease;
+  }
+  .main-content.collapsed {
+    margin-left: 64px;
+  }
+  .sidebar-close-btn { display: none !important; }
+  .mobile-menu-btn { display: none !important; }
+}
+
+/* ===== Mobile (≤768px) ===== */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    width: 240px;
+  }
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  .sidebar.collapsed {
+    width: 240px; /* collapsed ignored on mobile */
+  }
+  .main-content {
+    margin-left: 0;
+  }
+  .sidebar-close-btn { display: flex !important; }
+  .sidebar-collapse-btn { display: none !important; }
+  .desktop-collapse-btn { display: none !important; }
+}
+
+/* Overlay backdrop for mobile */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 29;
+}
+.sidebar-overlay.visible {
+  display: block;
+}
+
+/* Sidebar close button (mobile) */
+.sidebar-close-btn {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: rgba(255,255,255,0.08);
+  border: none;
+  color: rgba(255,255,255,0.5);
+  cursor: pointer;
+  padding: 0.375rem;
+  border-radius: 0.375rem;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+.sidebar-close-btn:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.15);
+}
+
+/* Sidebar collapse toggle (desktop) */
+.sidebar-collapse-btn {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,0.08);
+  border: none;
+  color: rgba(255,255,255,0.5);
+  cursor: pointer;
+  padding: 0.375rem 0.5rem;
+  border-radius: 0.375rem;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+.sidebar-collapse-btn:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.15);
+}

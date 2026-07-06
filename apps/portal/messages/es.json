@@ -1893,7 +1893,7 @@
     "tmWatchService_cost": "$200-500/mes dependiendo del número de clases",
     "varies_label": "Varía",
     "cbChannel_jd": "JD (京东)",
-    "cbChannel_tmall": "Pequeño (天猫)",
+    "cbChannel_tmall": "Tmall (天猫)",
     "cbCost_annualFee_item": "Cuota Anual",
     "cbCost_annualFee_notes": "Cuota de membresía anual de la plataforma, varía según el mercado",
     "cbCost_bondedWh_item": "Almacén Fiscal",

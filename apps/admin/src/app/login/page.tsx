@@ -15,7 +15,7 @@ export default function LoginPage() {
 
   useEffect(() => {
     if (window.turnstile) {
-      window.turnstile.render(turnstileRef.current!, {
+      window.turnstile!.render(turnstileRef.current!, {
         sitekey: "0x4AAAAAADqoEtL5oqrpaf3R",
         callback: (token: string) => setTurnstileToken(token),
       });
@@ -25,7 +25,7 @@ export default function LoginPage() {
       script.async = true;
       script.defer = true;
       script.onload = () => {
-        window.turnstile.render(turnstileRef.current!, {
+        window.turnstile!.render(turnstileRef.current!, {
           sitekey: "0x4AAAAAADqoEtL5oqrpaf3R",
           callback: (token: string) => setTurnstileToken(token),
         });

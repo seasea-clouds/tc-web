@@ -278,25 +278,19 @@ export default function ReportsPage() {
                 </div>
               )}
 
-              {/* PDF download */}
-              {selectedReport.pdf_path ? (
-                <div style={{ marginTop: "1rem" }}>
-                  <a
-                    href={`/api/admin/reports-pdf?id=${selectedReport.id}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-primary"
-                    style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem" }}
-                  >
-                    <Download size={16} />
-                    下载 PDF
-                  </a>
-                </div>
-              ) : (
-                <div style={{ marginTop: "1rem", padding: "0.5rem 0.75rem", background: "#fef2f2", borderRadius: "0.5rem", fontSize: "0.8rem", color: "#dc2626" }}>
-                  ⚠️ PDF 文件未生成。需要在 Cloudflare Dashboard 启用 R2 后，新报告会自动生成 PDF。
-                </div>
-              )}
+              {/* PDF download (on-the-fly generation, no R2 needed) */}
+              <div style={{ marginTop: "1rem" }}>
+                <a
+                  href={`/api/admin/reports-pdf?id=${selectedReport.id}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary"
+                  style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem" }}
+                >
+                  <Download size={16} />
+                  下载 PDF
+                </a>
+              </div>
             </div>
           )}
         </>

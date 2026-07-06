@@ -22,9 +22,12 @@
 
 ## 与策划文档的差异
 文档参考「Admin 管理后台 — 完整策划方案」（飞书文档）。
-- 数据看板改用 D1 自建分析（非 CF Analytics GraphQL）
-- 缺乏：渠道来源分布、三站分看、每小时趋势、用户平均停留时长（D1 无法获取）
-- 缺乏 PDF 下载（R2 存储未配置）
+- ✅ 数据看板改用 D1 自建分析（非 CF Analytics GraphQL）
+- ✅ 渠道来源分布（Direct/Search/Social/Internal/Referral 饼图）
+- ✅ 站点来源分布（site/portal/blog/admin 饼图）
+- ✅ 每小时趋势（今日：实际值；7天/30天：日均每小时平均值）
+- ❌ 用户平均停留时长（D1 无前端计时数据，需改前端代码）
+- ❌ PDF 下载（R2 存储未配置）
 
 ## 技术栈
 - Next.js 16 + TypeScript + Tailwind CSS
@@ -54,7 +57,7 @@
 | 域名 | `https://trade-web-admin.pages.dev` |
 | Root dir | `apps/admin` |
 | 构建 | GitHub 自动触发（CF Pages 原生构建） |
-| 构建触发器 | `apps/admin/**`, `packages/ui/**`, `packages/scripts/**` |
+| 构建触发器 | `['*']`（因具体路径导致 Runner 忽略构建，已回退） |
 | D1 binding | `DB`（共享 Portal 的 D1 数据库） |
 | 环境变量 | `ADMIN_JWT_SECRET`, `TURNSTILE_SECRET_KEY` |
 | 访问方式 | 直接访问或通过主站 `sinotradecompliance.com/admin/*`|

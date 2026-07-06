@@ -8,11 +8,11 @@ export interface AdminUser {
   name: string;
 }
 
-export async function login(username: string, password: string): Promise<AdminUser> {
+export async function login(username: string, password: string, turnstileToken?: string): Promise<AdminUser> {
   const res = await fetch("/api/admin/auth/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ username, password }),
+    body: JSON.stringify({ username, password, turnstileToken }),
   });
   if (!res.ok) {
     const err = await res.json().catch(() => ({ error: "Login failed" }));

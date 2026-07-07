@@ -256,7 +256,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
     // ── Determine date range ──
     const days = range === "7d" ? 7 : range === "30d" ? 30 : 1;
     const today = todayUTC();
-    const todayStart = `${today}T00:00:00`;
+    const todayStart = `${today} 00:00:00`;
     const pastStart = new Date(Date.now() - days * 24 * 60 * 60 * 1000).toISOString();
 
     if (range === "today") {

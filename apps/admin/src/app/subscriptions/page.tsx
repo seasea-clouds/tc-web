@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { get, post } from "@/lib/api";
 import { safeDate, safeDateTime } from "@/lib/date";
-import { X, ChevronDown, ChevronUp, Eye, ChevronLeft, ChevronRight } from "lucide-react";
+import { X, ChevronDown, ChevronUp, Eye, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 
 interface Subscription {
   id: string;
@@ -50,11 +50,7 @@ export default function SubscriptionsPage() {
   const [addStartDate, setAddStartDate] = useState("");
   const [addEndDate, setAddEndDate] = useState("");
 
-  // Detail panel
-  const [selectedSubId, setSelectedSubId] = useState<string | null>(null);
-  const [subDetail, setSubDetail] = useState<SubscriptionDetailData | null>(null);
-  const [detailLoading, setDetailLoading] = useState(false);
-  const [expandedPayments, setExpandedPayments] = useState(true);
+
 
   useEffect(() => {
     setLoading(true);
@@ -98,24 +94,7 @@ export default function SubscriptionsPage() {
     setTotal(data.total);
   };
 
-  const openDetail = async (subId: string) => {
-    setSelectedSubId(subId);
-    setDetailLoading(true);
-    setSubDetail(null);
-    try {
-      const data = await get<SubscriptionDetailData>(`/subscriptions?id=${subId}`);
-      setSubDetail(data);
-    } catch {
-      setSubDetail(null);
-    } finally {
-      setDetailLoading(false);
-    }
-  };
 
-  const closeDetail = () => {
-    setSelectedSubId(null);
-    setSubDetail(null);
-  };
 
   const totalPages = Math.ceil(total / pageSize);
 
@@ -159,7 +138,7 @@ export default function SubscriptionsPage() {
                     <tr
                       key={sub.id}
                       style={{ cursor: "pointer" }}
-                      onClick={() => openDetail(sub.id)}
+                      onClick={() => window.location.href = `/admin/subscription-detail?id=${encodeURIComponent(sub.id)}`}
                     >
                       <td style={{ fontWeight: 500 }}>{sub.user_name || "—"}</td>
                       <td style={{ color: "#6b7280" }}>{sub.user_email}</td>
@@ -183,16 +162,14 @@ export default function SubscriptionsPage() {
                       </td>
                       <td>
                         <div style={{ display: "flex", gap: "0.25rem" }}>
-                          <button
+                          <a
+                            href={`/admin/subscription-detail?id=${encodeURIComponent(sub.id)}`}
                             className="btn btn-outline"
-                            style={{ padding: "0.25rem 0.5rem", fontSize: "0.75rem" }}
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              openDetail(sub.id);
-                            }}
+                            style={{ padding: "0.25rem 0.5rem", fontSize: "0.75rem", textDecoration: "none" }}
+                            onClick={(e) => e.stopPropagation()}
                           >
                             <Eye size={14} />
-                          </button>
+                          </a>
                           {sub.status !== "active" && (
                             <button
                               className="btn btn-primary"
@@ -248,96 +225,10 @@ export default function SubscriptionsPage() {
             )}
           </div>
 
-          {/* Detail panel */}
-          {detailLoading && (
-            <div style={{ display: "flex", justifyContent: "center", padding: "3rem" }}>
-              <div className="spinner" />
-            </div>
-          )}
-
-          {subDetail && !detailLoading && (
-            <div className="card" style={{ marginTop: "1.5rem" }}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem" }}>
-                <h3 style={{ margin: 0, fontSize: "1.1rem" }}>
-                  订阅详情 — {subDetail.subscription.user_name || subDetail.subscription.user_email}
-                </h3>
-                <button className="btn btn-outline" style={{ padding: "0.25rem 0.5rem" }} onClick={closeDetail}>
-                  <X size={16} />
-                </button>
-              </div>
-
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: "0.5rem", marginBottom: "1rem", padding: "0.75rem", background: "#f9fafb", borderRadius: "0.5rem", fontSize: "0.85rem" }}>
-                <div><strong>ID:</strong> <code style={{ fontSize: "0.7rem" }}>{subDetail.subscription.id}</code></div>
-                <div><strong>用户:</strong> {subDetail.subscription.user_name || "—"} ({subDetail.subscription.user_email})</div>
-                <div><strong>计划:</strong> {subDetail.subscription.plan === "monthly" ? "月度订阅" : "年度订阅"}</div>
-                <div>
-                  <strong>状态:</strong>{" "}
-                  <span className={`badge badge-${subDetail.subscription.status.toLowerCase()}`}>
-                    {statusLabel(subDetail.subscription.status)}
-                  </span>
-                </div>
-                <div><strong>Creem ID:</strong> <code style={{ fontSize: "0.7rem" }}>{subDetail.subscription.provider_subscription_id || "—"}</code></div>
-                <div><strong>周期开始:</strong> {safeDate(subDetail.subscription.current_period_start)}</div>
-                <div><strong>周期结束:</strong> {safeDate(subDetail.subscription.current_period_end)}</div>
-                <div><strong>创建时间:</strong> {safeDateTime(subDetail.subscription.created_at)}</div>
-                <div>
-                  <div style={{ display: "flex", gap: "0.375rem", marginTop: "0.25rem" }}>
-                    {subDetail.subscription.status !== "active" && (
-                      <button className="btn btn-primary" style={{ padding: "0.25rem 0.5rem", fontSize: "0.75rem" }}
-                        onClick={() => changeStatus(subDetail.subscription.id, "active")}>
-                        激活
-                      </button>
-                    )}
-                    {subDetail.subscription.status !== "canceled" && (
-                      <button className="btn btn-outline" style={{ padding: "0.25rem 0.5rem", fontSize: "0.75rem", color: "#dc2626" }}
-                        onClick={() => changeStatus(subDetail.subscription.id, "canceled")}>
-                        取消订阅
-                      </button>
-                    )}
-                  </div>
-                </div>
-              </div>
-
-              {/* Payment history */}
-              {subDetail.payments.length > 0 && (
-                <div>
-                  <div
-                    style={{ display: "flex", alignItems: "center", gap: "0.5rem", cursor: "pointer", padding: "0.5rem 0", userSelect: "none" }}
-                    onClick={() => setExpandedPayments(!expandedPayments)}
-                  >
-                    {expandedPayments ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                    <h4 style={{ margin: 0, fontSize: "0.95rem" }}>支付记录 ({subDetail.payments.length})</h4>
-                  </div>
-                  {expandedPayments && (
-                    <div style={{ overflow: "auto" }}>
-                      <table className="data-table" style={{ fontSize: "0.8rem" }}>
-                        <thead>
-                          <tr>
-                            <th>交易 ID</th>
-                            <th>金额</th>
-                            <th>状态</th>
-                            <th>时间</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {subDetail.payments.map((p) => (
-                            <tr key={p.id}>
-                              <td style={{ fontFamily: "monospace", fontSize: "0.7rem" }}>{p.provider_payment_id || p.id.slice(0, 8)}</td>
-                              <td style={{ fontWeight: 600 }}>{formatAmount(p.amount_cents, p.currency)}</td>
-                              <td>
-                                <span className={`badge ${p.status === "completed" ? "badge-completed" : "badge-pending"}`}>
-                                  {p.status === "completed" ? "已支付" : p.status}
-                                </span>
-                              </td>
-                              <td>{safeDate(p.created_at)}</td>
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  )}
-                </div>
-              )}
+          {/* Dedicated detail page link */}
+          {subscriptions.length > 0 && (
+            <div style={{ textAlign: "center", padding: "0.75rem", borderTop: "1px solid #e5e7eb", fontSize: "0.85rem", color: "#6b7280" }}>
+              点击行或 <Eye size={12} style={{ verticalAlign: "middle" }} /> 按钮查看详情
             </div>
           )}
         </>

@@ -53,7 +53,11 @@ const COUNTRY_NAMES: Record<string, string> = {
 export default function DashboardPage() {
   const [stats, setStats] = useState<DashboardStats | null>(null);
   const [analytics, setAnalytics] = useState<AnalyticsData | null>(null);
-  const [timeRange, setTimeRange] = useState<"today" | "7d" | "30d">("today");
+  const [timeRange, setTimeRange] = useState<
+    "today" | "7d" | "30d" | "custom"
+  >("today");
+  const [customStartDate, setCustomStartDate] = useState("");
+  const [customEndDate, setCustomEndDate] = useState("");
   const [loading, setLoading] = useState(true);
   const [refreshKey, setRefreshKey] = useState(0);
   const [toast, setToast] = useState<{ type: "success" | "error"; message: string } | null>(null);
@@ -65,9 +69,14 @@ export default function DashboardPage() {
 
   useEffect(() => {
     setLoading(true);
+    const common = `/dashboard?range=${timeRange}`;
+    let analyticsUrl = `/analytics?range=${timeRange}`;
+    if (timeRange === "custom" && customStartDate && customEndDate) {
+      analyticsUrl = `/analytics?range=${timeRange}&start_date=${customStartDate}&end_date=${customEndDate}`;
+    }
     Promise.all([
-      get<DashboardStats>(`/dashboard?range=${timeRange}`),
-      get<AnalyticsData>(`/analytics?range=${timeRange}`),
+      get<DashboardStats>(common),
+      get<AnalyticsData>(analyticsUrl),
     ])
       .then(([s, a]) => {
         setStats(s);
@@ -75,7 +84,7 @@ export default function DashboardPage() {
       })
       .catch(() => {})
       .finally(() => setLoading(false));
-  }, [timeRange, refreshKey]);
+  }, [timeRange, refreshKey, customStartDate, customEndDate]);
 
   const formatHour = (h: number) => `${h.toString().padStart(2, "0")}:00`;
 
@@ -87,16 +96,43 @@ export default function DashboardPage() {
           欢迎使用 SinoTrade Compliance 管理后台
         </p>
         <div style={{ display: "flex", gap: "0.375rem", alignItems: "center" }}>
-          {(["today" as const, "7d" as const, "30d" as const]).map((range) => (
+          {(["today" as const, "7d" as const, "30d" as const, "custom" as const]).map((range) => (
             <button
               key={range}
               className={`btn ${timeRange === range ? "btn-gold" : "btn-outline"}`}
               style={{ padding: "0.375rem 0.75rem", fontSize: "0.8rem" }}
               onClick={() => setTimeRange(range)}
             >
-              {range === "today" ? "今日" : range === "7d" ? "近7天" : "近30天"}
+              {range === "today" ? "今日" : range === "7d" ? "近7天" : range === "30d" ? "近30天" : "自定义"}
             </button>
           ))}
+          {timeRange === "custom" && (
+            <div style={{ display: "flex", gap: "0.375rem", alignItems: "center" }}>
+              <input
+                type="date"
+                value={customStartDate}
+                onChange={(e) => setCustomStartDate(e.target.value)}
+                style={{
+                  padding: "0.25rem 0.5rem",
+                  fontSize: "0.8rem",
+                  border: "1px solid #d1d5db",
+                  borderRadius: "0.375rem",
+                }}
+              />
+              <span style={{ fontSize: "0.8rem", color: "#6b7280" }}>至</span>
+              <input
+                type="date"
+                value={customEndDate}
+                onChange={(e) => setCustomEndDate(e.target.value)}
+                style={{
+                  padding: "0.25rem 0.5rem",
+                  fontSize: "0.8rem",
+                  border: "1px solid #d1d5db",
+                  borderRadius: "0.375rem",
+                }}
+              />
+            </div>
+          )}
 
         </div>
       </div>

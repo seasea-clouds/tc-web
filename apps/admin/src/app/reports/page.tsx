@@ -31,7 +31,14 @@ interface ReportDetail {
   result_data: { result?: Record<string, unknown>; nextSteps?: string[] } | null;
 }
 
-const MODULES = ["hs_code", "compliance", "tariff", "gacc", "label", "crossborder", "ccc", "nmpa", "trademark"];
+const MODULES = [
+  "GACC Food Registration",
+  "Chinese Label Compliance",
+  "Cosmetics Filing (NMPA)",
+  "CCC Certification",
+  "Cross-Border E-commerce",
+  "Brand Protection",
+];
 const STATUS_OPTIONS = ["pending", "completed", "free_with_subscription", "refunded"];
 
 const statusLabel = (s: string) => ({

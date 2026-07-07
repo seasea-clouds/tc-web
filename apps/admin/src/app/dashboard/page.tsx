@@ -21,6 +21,8 @@ interface DashboardStats {
 }
 
 interface AnalyticsData {
+  allTimeTotal: number;
+  allTimeUV: number;
   summary: { total: number; uv: number; today: number; todayUV: number; countries: number };
   hourlySum: { hour: number; pv: number; uv: number }[];
   hourlyAvg: { hour: number; pv: number; uv: number }[];
@@ -161,7 +163,7 @@ export default function DashboardPage() {
           <div className="spinner" />
         </div>
       ) : stats ? (() => {
-        const _a = analytics ?? { summary: { today: 0, total: 0, todayUV: 0, uv: 0, countries: 0 } as any, hourlySum: [] as any[], hourlyAvg: [] as any[], dailyData: [] as any[], geoData: [] as any[], browserData: [] as any[], osData: [] as any[], deviceData: [] as any[], projectData: [] as any[], pageData: [] as any[] };
+        const _a = analytics ?? { allTimeTotal: 0, allTimeUV: 0, summary: { today: 0, total: 0, todayUV: 0, uv: 0, countries: 0 } as any, hourlySum: [] as any[], hourlyAvg: [] as any[], dailyData: [] as any[], geoData: [] as any[], browserData: [] as any[], osData: [] as any[], deviceData: [] as any[], projectData: [] as any[], pageData: [] as any[] };
         return (
         <>
           {/* ── Overview stats (range-aware) + cumulative ── */}
@@ -169,12 +171,12 @@ export default function DashboardPage() {
             <div className="stat-card">
               <div className="stat-value">{timeRange === "today" ? _a.summary.today : _a.summary.total}</div>
               <div className="stat-label">{timeRange === "today" ? "今日 PV" : timeRange === "7d" ? "近7天 PV" : timeRange === "30d" ? "近30天 PV" : "所选时段 PV"}</div>
-              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }}>累计 {_a.summary.total}</div>
+              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }}>累计 {_a.allTimeTotal}</div>
             </div>
             <div className="stat-card">
               <div className="stat-value">{timeRange === "today" ? _a.summary.todayUV : _a.summary.uv}</div>
               <div className="stat-label">{timeRange === "today" ? "今日 UV" : timeRange === "7d" ? "近7天 UV" : timeRange === "30d" ? "近30天 UV" : "所选时段 UV"}</div>
-              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }}>累计 {_a.summary.uv}</div>
+              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }}>累计 {_a.allTimeUV}</div>
             </div>
             <div className="stat-card">
               <div className="stat-value">{timeRange === "today" ? stats.today.reports : stats.period?.reports || 0}</div>
@@ -271,22 +273,20 @@ export default function DashboardPage() {
             </ResponsiveContainer>
           </div>
 
-          {/* ── Chart grid: Geo + Module + Payment ── */}
+          {/* ── All charts in one responsive grid (7 cards) ── */}
           <div className="chart-grid">
             {/* Geographic distribution */}
             <div className="card">
               <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>地域分布（前 10）</h3>
               {_a.geoData.length > 0 ? (
                 <div>
-                  <ResponsiveContainer width="100%" height={180}>
+                  <ResponsiveContainer width="100%" height={280}>
                     <PieChart>
                       <Pie
                         data={_a.geoData.slice(0, 8)}
                         dataKey="count"
                         nameKey="country"
-                        cx="50%"
-                        cy="50%"
-                        outerRadius={70}
+                        cx="50%" cy="50%" outerRadius={90}
                         label={({ country, count }: any) => `${COUNTRY_NAMES[country] || country} (${count})`}
                         fontSize={10}
                       >
@@ -310,15 +310,13 @@ export default function DashboardPage() {
             <div className="card">
               <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>报告模块分布</h3>
               {stats.moduleData.length > 0 ? (
-                <ResponsiveContainer width="100%" height={200}>
+                <ResponsiveContainer width="100%" height={280}>
                   <PieChart>
                     <Pie
                       data={stats.moduleData}
                       dataKey="count"
                       nameKey="module"
-                      cx="50%"
-                      cy="50%"
-                      outerRadius={70}
+                      cx="50%" cy="50%" outerRadius={90}
                       label={({ name, value }) => `${name} (${value})`}
                       fontSize={10}
                     >
@@ -338,15 +336,13 @@ export default function DashboardPage() {
             <div className="card">
               <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>报告支付状态</h3>
               {stats.statusData.length > 0 ? (
-                <ResponsiveContainer width="100%" height={200}>
+                <ResponsiveContainer width="100%" height={280}>
                   <PieChart>
                     <Pie
                       data={stats.statusData.map((s) => ({ ...s, label: STATUS_LABELS[s.status] || s.status }))}
                       dataKey="count"
                       nameKey="label"
-                      cx="50%"
-                      cy="50%"
-                      outerRadius={70}
+                      cx="50%" cy="50%" outerRadius={90}
                       label={({ name, value }) => `${name} (${value})`}
                       fontSize={10}
                     >
@@ -361,20 +357,18 @@ export default function DashboardPage() {
                 <div className="empty-state" style={{ padding: "1.5rem" }}>暂无数据</div>
               )}
             </div>
-          </div>
 
-          {/* ── Chart grid: Browser + OS + Device ── */}
-          <div className="chart-grid">
+            {/* Browser distribution */}
             <div className="card">
               <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>浏览器分布</h3>
               {_a.browserData && _a.browserData.length > 0 ? (
-                <ResponsiveContainer width="100%" height={180}>
+                <ResponsiveContainer width="100%" height={280}>
                   <PieChart>
                     <Pie
                       data={_a.browserData.slice(0, 8)}
                       dataKey="pageViews"
                       nameKey="browser"
-                      cx="50%" cy="50%" outerRadius={70}
+                      cx="50%" cy="50%" outerRadius={90}
                       label={({ browser, pageViews }: any) => `${browser} (${pageViews})`}
                       fontSize={10}
                     >
@@ -390,10 +384,11 @@ export default function DashboardPage() {
               )}
             </div>
 
+            {/* OS distribution */}
             <div className="card">
               <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>OS 分布</h3>
               {_a.osData && _a.osData.length > 0 ? (
-                <ResponsiveContainer width="100%" height={180}>
+                <ResponsiveContainer width="100%" height={280}>
                   <BarChart data={_a.osData.slice(0, 8)} layout="vertical">
                     <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
                     <XAxis type="number" fontSize={10} />
@@ -407,16 +402,17 @@ export default function DashboardPage() {
               )}
             </div>
 
+            {/* Device type */}
             <div className="card">
               <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>设备类型</h3>
               {_a.deviceData && _a.deviceData.length > 0 ? (
-                <ResponsiveContainer width="100%" height={160}>
+                <ResponsiveContainer width="100%" height={280}>
                   <PieChart>
                     <Pie
                       data={_a.deviceData}
                       dataKey="count"
                       nameKey="device"
-                      cx="50%" cy="50%" outerRadius={60}
+                      cx="50%" cy="50%" outerRadius={90}
                       label={({ device, count }: any) => `${device} (${count})`}
                       fontSize={11}
                     >
@@ -431,22 +427,18 @@ export default function DashboardPage() {
                 <div className="empty-state" style={{ padding: "1.5rem" }}>暂无数据</div>
               )}
             </div>
-          </div>
 
-          {/* ── Site breakdown ── */}
-          <div className="chart-grid">
+            {/* Site breakdown */}
             <div className="card">
               <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>站点来源分布</h3>
               {_a.projectData && _a.projectData.length > 0 ? (
-                <ResponsiveContainer width="100%" height={200}>
+                <ResponsiveContainer width="100%" height={280}>
                   <PieChart>
                     <Pie
                       data={_a.projectData}
                       dataKey="count"
                       nameKey="project"
-                      cx="50%"
-                      cy="50%"
-                      outerRadius={80}
+                      cx="50%" cy="50%" outerRadius={90}
                       label={({ project, count }: any) => `${project} (${count})`}
                       fontSize={11}
                     >
@@ -463,25 +455,21 @@ export default function DashboardPage() {
             </div>
           </div>
 
-
-
-          {/* ── 热门页面 ── */}
-          <div className="chart-grid">
-            <div className="card">
-              <h3 style={{ fontSize: "0.95rem", fontWeight: 600, marginBottom: "0.75rem" }}>热门页面</h3>
-              {_a.pageData.length > 0 ? (
-                <div>
-                  {_a.pageData.slice(0, 10).map((p, i) => (
-                    <div key={p.path} style={{ display: "flex", justifyContent: "space-between", padding: "0.25rem 0", fontSize: "0.8rem", borderBottom: i < 9 ? "1px solid #f3f4f6" : "none" }}>
-                      <span style={{ color: "#374151", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", maxWidth: "75%" }}>{p.path}</span>
-                      <span style={{ fontWeight: 600, color: "#1B365D" }}>{p.count}</span>
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <div className="empty-state" style={{ padding: "1.5rem" }}>等待数据采集</div>
-              )}
-            </div>
+          {/* ── 热门页面 (full-width row, top 20) ── */}
+          <div className="card" style={{ marginBottom: "1.5rem" }}>
+            <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "0.75rem" }}>热门页面（统计区间）</h3>
+            {_a.pageData.length > 0 ? (
+              <div>
+                {_a.pageData.slice(0, 20).map((p, i) => (
+                  <div key={p.path} style={{ display: "flex", justifyContent: "space-between", padding: "0.3rem 0", fontSize: "0.8rem", borderBottom: i < 19 ? "1px solid #f3f4f6" : "none" }}>
+                    <span style={{ color: "#374151", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{p.path}</span>
+                    <span style={{ fontWeight: 600, color: "#1B365D", whiteSpace: "nowrap", marginLeft: "1rem" }}>{p.count}</span>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="empty-state" style={{ padding: "1.5rem" }}>等待数据采集</div>
+            )}
           </div>
         </>
         );

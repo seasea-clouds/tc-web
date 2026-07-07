@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { safeDate } from "@/lib/date";
 import { get, post } from "@/lib/api";
 import { Search, DollarSign, TrendingUp, Calendar, CreditCard } from "lucide-react";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip } from "recharts";
@@ -291,7 +292,7 @@ export default function PaymentsPage() {
                     </td>
                     <td style={{ fontSize: "0.8rem", color: "#6b7280" }}>{p.provider}</td>
                     <td style={{ fontSize: "0.8rem", color: "#6b7280" }}>
-                      {new Date(p.created_at + "Z").toLocaleDateString("zh-CN")}
+                      {safeDate(p.created_at)}
                     </td>
                     <td>
                       {p.status === "completed" ? (

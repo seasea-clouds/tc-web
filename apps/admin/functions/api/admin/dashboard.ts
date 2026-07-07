@@ -34,7 +34,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
 
     // ── Today's report stats (proxy for traffic until CF Analytics is integrated) ──
     const today = new Date();
-    const todayStart = today.toISOString().slice(0, 10) + "T00:00:00";
+    const todayStart = today.toISOString().slice(0, 10) + " 00:00:00";
 
     const todayReports: any = await context.env.DB.prepare(
       "SELECT COUNT(*) as count FROM reports WHERE created_at >= ?",
@@ -79,7 +79,8 @@ export async function onRequest(context: { request: Request; env: Env }) {
 
     // ── Daily breakdown (for 7d / 30d) ──
     let days = range === "7d" ? 7 : range === "30d" ? 30 : 1;
-    const pastStart = new Date(Date.now() - days * 24 * 60 * 60 * 1000).toISOString();
+    const pastStart = new Date(Date.now() - days * 24 * 60 * 60 * 1000);
+    const pastStartStr = pastStart.toISOString().slice(0, 10) + " 00:00:00";
 
     const daily: any = await context.env.DB.prepare(
       `SELECT DATE(created_at) as date,
@@ -89,7 +90,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
        WHERE created_at >= ?
        GROUP BY date
        ORDER BY date`,
-    ).bind(pastStart).all();
+    ).bind(pastStartStr).all();
 
     // ── Module breakdown ──
     const modules: any = await context.env.DB.prepare(
@@ -98,7 +99,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
        WHERE created_at >= ?
        GROUP BY module
        ORDER BY count DESC`,
-    ).bind(pastStart).all();
+    ).bind(pastStartStr).all();
 
     // ── Payment status breakdown ──
     const statuses: any = await context.env.DB.prepare(
@@ -107,7 +108,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
        WHERE created_at >= ?
        GROUP BY status
        ORDER BY count DESC`,
-    ).bind(pastStart).all();
+    ).bind(pastStartStr).all();
 
     return Response.json({
       // Today's proxy stats (reports = proxy for PV, unique users = proxy for UV)

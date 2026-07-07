@@ -356,11 +356,9 @@ export async function onRequest(context: { request: Request; env: Env }) {
     // 1. Run D1 schema migration (idempotent)
     await runMigration(context.env);
 
-    // 2. Fetch missing data from CF only if trigger=1
-    if (forceRefresh) {
-      await ensureDailyCFCache(context.env);
-      await ensureHourlyCFCache(context.env);
-    }
+    // 2. Fetch missing data from CF (idempotent - skips existing dates/hours)
+    await ensureDailyCFCache(context.env);
+    await ensureHourlyCFCache(context.env);
 
     if (range === "today") {
       // ===== TODAY ONLY =====

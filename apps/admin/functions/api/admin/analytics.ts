@@ -115,7 +115,7 @@ async function ensureDailyCFCache(env: Env): Promise<void> {
   const lastRow: any = await env.DB.prepare(
     "SELECT MAX(date) as lastDate FROM daily_page_stats WHERE source = 'cf_api'",
   ).first();
-  const lastFetched = lastRow?.lastDate || "2026-07-01";
+  const lastFetched = lastRow?.lastDate || "2026-06-01";
 
   // If today == lastFetched, no new daily data yet
   if (lastFetched >= yesterday) return;
@@ -399,6 +399,8 @@ export async function onRequest(context: { request: Request; env: Env }) {
       }
 
       return Response.json({
+        allTimeTotal: allTimePV,
+        allTimeUV: allTimeUV,
         summary: {
           total: totalPV,
           uv: totalUV,
@@ -495,6 +497,8 @@ export async function onRequest(context: { request: Request; env: Env }) {
     const projectData = mergeByKey(projectArrays, "project", "count");
 
     return Response.json({
+      allTimeTotal: allTimePV,
+      allTimeUV: allTimeUV,
       summary: {
         total: totalPV,
         uv: totalUV,
@@ -517,6 +521,8 @@ export async function onRequest(context: { request: Request; env: Env }) {
   } catch (err: any) {
     console.error("[analytics] error:", err);
     return Response.json({
+      allTimeTotal: 0,
+      allTimeUV: 0,
       summary: { total: 0, uv: 0, today: 0, todayUV: 0, countries: 0 },
       hourlySum: [],
       hourlyAvg: [],

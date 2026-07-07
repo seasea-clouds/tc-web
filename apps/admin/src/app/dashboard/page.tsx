@@ -136,6 +136,26 @@ export default function DashboardPage() {
         </div>
       </div>
 
+      {/* ── Responsive chart grid CSS ── */}
+      <style>{`
+        .chart-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 1rem;
+          margin-bottom: 1.5rem;
+        }
+        @media (min-width: 768px) {
+          .chart-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+        @media (min-width: 1024px) {
+          .chart-grid {
+            grid-template-columns: repeat(3, 1fr);
+          }
+        }
+      `}</style>
+
       {loading ? (
         <div style={{ display: "flex", justifyContent: "center", padding: "3rem" }}>
           <div className="spinner" />
@@ -144,23 +164,27 @@ export default function DashboardPage() {
         const _a = analytics ?? { summary: { today: 0, total: 0, todayUV: 0, uv: 0, countries: 0 } as any, hourlySum: [] as any[], hourlyAvg: [] as any[], dailyData: [] as any[], geoData: [] as any[], browserData: [] as any[], osData: [] as any[], deviceData: [] as any[], projectData: [] as any[], pageData: [] as any[] };
         return (
         <>
-          {/* ── Overview stats (range-aware) ── */}
+          {/* ── Overview stats (range-aware) + cumulative ── */}
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))", gap: "0.75rem", marginBottom: "1.5rem" }}>
             <div className="stat-card">
               <div className="stat-value">{timeRange === "today" ? _a.summary.today : _a.summary.total}</div>
               <div className="stat-label">{timeRange === "today" ? "今日 PV" : timeRange === "7d" ? "近7天 PV" : timeRange === "30d" ? "近30天 PV" : "所选时段 PV"}</div>
+              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }}>累计 {_a.summary.total}</div>
             </div>
             <div className="stat-card">
               <div className="stat-value">{timeRange === "today" ? _a.summary.todayUV : _a.summary.uv}</div>
               <div className="stat-label">{timeRange === "today" ? "今日 UV" : timeRange === "7d" ? "近7天 UV" : timeRange === "30d" ? "近30天 UV" : "所选时段 UV"}</div>
+              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }}>累计 {_a.summary.uv}</div>
             </div>
             <div className="stat-card">
               <div className="stat-value">{timeRange === "today" ? stats.today.reports : stats.period?.reports || 0}</div>
               <div className="stat-label">{timeRange === "today" ? "今日报告" : timeRange === "7d" ? "近7天报告" : timeRange === "30d" ? "近30天报告" : "所选时段报告"}</div>
+              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }}>累计 {stats.totalReports}</div>
             </div>
             <div className="stat-card">
               <div className="stat-value">{timeRange === "today" ? stats.today.newUsers : stats.period?.newUsers || 0}</div>
               <div className="stat-label">{timeRange === "today" ? "今日新用户" : timeRange === "7d" ? "近7天新用户" : timeRange === "30d" ? "近30天新用户" : "所选时段新用户"}</div>
+              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }}>累计 {stats.totalUsers}</div>
             </div>
             <div className="stat-card">
               <div className="stat-value">{stats.totalUsers}</div>
@@ -172,29 +196,30 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          {/* ── PV/UV Hourly Trend ── */}
+          {/* ── PV/UV Trend — hourly for today, daily for other ranges ── */}
           <div className="card" style={{ marginBottom: "1.5rem" }}>
             <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>
-              {timeRange === "today" ? "今日每小时页面浏览" : `近${timeRange === "7d" ? "7" : "30"}天日均每小时浏览`}
+              {timeRange === "today" ? "今日每小时页面浏览" : "每日页面浏览趋势"}
             </h3>
             <ResponsiveContainer width="100%" height={260}>
               {(() => {
-                const hourlyChartData = timeRange === "today" ? _a.hourlySum : _a.hourlyAvg;
-                if (hourlyChartData.length > 0) {
-                  return (
-                    <BarChart data={hourlyChartData}>
-                      <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-                      <XAxis dataKey="hour" tickFormatter={formatHour} fontSize={12} />
-                      <YAxis fontSize={12} />
-                      <Tooltip
-                        labelFormatter={(label: any) => formatHour(Number(label))}
-                        formatter={(value: any, name: any) => [value, name === "pv" ? "PV" : "UV"]}
-                      />
-                      <Legend />
-                      <Bar dataKey="pv" name="pv" fill="#1B365D" radius={[3, 3, 0, 0]} />
-                      <Bar dataKey="uv" name="uv" fill="#D4AF37" radius={[3, 3, 0, 0]} />
-                    </BarChart>
-                  );
+                if (timeRange === "today") {
+                  if (_a.hourlySum.length > 0) {
+                    return (
+                      <BarChart data={_a.hourlySum}>
+                        <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
+                        <XAxis dataKey="hour" tickFormatter={formatHour} fontSize={12} />
+                        <YAxis fontSize={12} />
+                        <Tooltip
+                          labelFormatter={(label: any) => formatHour(Number(label))}
+                          formatter={(value: any, name: any) => [value, name === "pv" ? "PV" : "UV"]}
+                        />
+                        <Legend />
+                        <Bar dataKey="pv" name="pv" fill="#1B365D" radius={[3, 3, 0, 0]} />
+                        <Bar dataKey="uv" name="uv" fill="#D4AF37" radius={[3, 3, 0, 0]} />
+                      </BarChart>
+                    );
+                  }
                 }
                 if (_a.dailyData.length > 0) {
                   return (
@@ -246,8 +271,8 @@ export default function DashboardPage() {
             </ResponsiveContainer>
           </div>
 
-          {/* ── Geo + Module + Payment — responsive: 1→2→3 columns ── */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "1rem", marginBottom: "1.5rem" }}>
+          {/* ── Chart grid: Geo + Module + Payment ── */}
+          <div className="chart-grid">
             {/* Geographic distribution */}
             <div className="card">
               <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>地域分布（前 10）</h3>
@@ -338,8 +363,8 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          {/* ── Browser + OS/Device distribution — responsive ── */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "1rem", marginBottom: "1.5rem" }}>
+          {/* ── Chart grid: Browser + OS + Device ── */}
+          <div className="chart-grid">
             <div className="card">
               <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>浏览器分布</h3>
               {_a.browserData && _a.browserData.length > 0 ? (
@@ -408,8 +433,8 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          {/* ── Site breakdown — responsive ── */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(350px, 1fr))", gap: "1rem", marginBottom: "1.5rem" }}>
+          {/* ── Site breakdown ── */}
+          <div className="chart-grid">
             <div className="card">
               <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>站点来源分布</h3>
               {_a.projectData && _a.projectData.length > 0 ? (
@@ -440,9 +465,8 @@ export default function DashboardPage() {
 
 
 
-          {/* ── Bottom row: Pages + Quick stats + Data status — responsive ── */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(350px, 1fr))", gap: "1rem" }}>
-            {/* Top pages */}
+          {/* ── 热门页面 ── */}
+          <div className="chart-grid">
             <div className="card">
               <h3 style={{ fontSize: "0.95rem", fontWeight: 600, marginBottom: "0.75rem" }}>热门页面</h3>
               {_a.pageData.length > 0 ? (
@@ -457,41 +481,6 @@ export default function DashboardPage() {
               ) : (
                 <div className="empty-state" style={{ padding: "1.5rem" }}>等待数据采集</div>
               )}
-            </div>
-
-            {/* Data status */}
-            <div>
-              <div className="card" style={{ marginBottom: "1rem" }}>
-                <h3 style={{ fontSize: "0.95rem", fontWeight: 600, marginBottom: "0.75rem" }}>数据集成状态</h3>
-                <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-                  <StatusRow label="D1 报告数据" status="已集成" />
-                  <StatusRow label="D1 用户数据" status="已集成" />
-                  <StatusRow label="CF → PV/UV/地域/浏览器" status="已集成" />
-                  <StatusRow label="CF → 页面路径 (67%采样)" status="已集成" />
-                  <StatusRow label="CF → OS/设备类型" status="已集成" />
-                  <StatusRow label="CF → 站点分布" status="已集成" />
-                  <StatusRow label="D1 报告数据" status="已集成" />
-                </div>
-              </div>
-
-              <div className="card" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.75rem" }}>
-                <div style={{ textAlign: "center", padding: "0.75rem", background: "#F4F6F9", borderRadius: "0.5rem" }}>
-                  <div style={{ fontSize: "1.25rem", fontWeight: 700, color: "#1B365D" }}>{_a.summary.total}</div>
-                  <div style={{ fontSize: "0.7rem", color: "#6b7280" }}>累计 PV</div>
-                </div>
-                <div style={{ textAlign: "center", padding: "0.75rem", background: "#F4F6F9", borderRadius: "0.5rem" }}>
-                  <div style={{ fontSize: "1.25rem", fontWeight: 700, color: "#D4AF37" }}>{_a.summary.uv}</div>
-                  <div style={{ fontSize: "0.7rem", color: "#6b7280" }}>累计 UV</div>
-                </div>
-                <div style={{ textAlign: "center", padding: "0.75rem", background: "#F4F6F9", borderRadius: "0.5rem" }}>
-                  <div style={{ fontSize: "1.25rem", fontWeight: 700, color: "#059669" }}>{stats.totalReports}</div>
-                  <div style={{ fontSize: "0.7rem", color: "#6b7280" }}>累计报告</div>
-                </div>
-                <div style={{ textAlign: "center", padding: "0.75rem", background: "#F4F6F9", borderRadius: "0.5rem" }}>
-                  <div style={{ fontSize: "1.25rem", fontWeight: 700, color: "#3B82F6" }}>{stats.totalSubscriptions}</div>
-                  <div style={{ fontSize: "0.7rem", color: "#6b7280" }}>累计订阅</div>
-                </div>
-              </div>
             </div>
           </div>
         </>
@@ -508,15 +497,6 @@ export default function DashboardPage() {
           {toast.message}
         </div>
       )}
-    </div>
-  );
-}
-
-function StatusRow({ label, status }: { label: string; status: string }) {
-  return (
-    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-      <span style={{ fontSize: "0.8rem" }}>{label}</span>
-      <span className="badge badge-active" style={{ fontSize: "0.65rem" }}>{status}</span>
     </div>
   );
 }

@@ -18,5 +18,8 @@
   "devDependencies": {
     "turbo": "^2"
   },
-  "packageManager": "npm@10.9.7"
+  "packageManager": "npm@10.9.7",
+  "dependencies": {
+    "gray-matter": "^4.0.3"
+  }
 }

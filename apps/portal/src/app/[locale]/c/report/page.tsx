@@ -141,7 +141,7 @@ function ReportContent() {
         setError(err.message || t('notFoundDesc'));
         setLoading(false);
       });
-  }, [id, locale, t, tC]);
+  }, [id, locale]);
 
   if (loading) {
     return (

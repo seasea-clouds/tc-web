@@ -79,18 +79,36 @@ CREATE TABLE IF NOT EXISTS payments (
   FOREIGN KEY (report_id) REFERENCES reports(id)
 );
 
--- daily aggregated page stats (compact storage, 1 row per day)
+-- daily aggregated page stats (powered by CF GraphQL Analytics, 1 row per day)
 CREATE TABLE IF NOT EXISTS daily_page_stats (
   date TEXT PRIMARY KEY,
   total_pv INTEGER DEFAULT 0,
   total_uv INTEGER DEFAULT 0,
+  total_requests INTEGER DEFAULT 0,
+  total_bytes INTEGER DEFAULT 0,
+  cached_requests INTEGER DEFAULT 0,
   countries_count INTEGER DEFAULT 0,
   hourly_data TEXT,
   geo_data TEXT,
+  browser_data TEXT DEFAULT '[]',
+  status_code_data TEXT DEFAULT '[]',
   page_data TEXT,
   channel_data TEXT,
   project_data TEXT,
+  os_data TEXT DEFAULT '[]',
+  device_data TEXT DEFAULT '[]',
+  source TEXT DEFAULT 'page_views',
   created_at TEXT DEFAULT (datetime('now'))
+);
+
+-- hourly aggregated page stats (CF httpRequests1hGroups cache)
+CREATE TABLE IF NOT EXISTS hourly_page_stats (
+  date TEXT NOT NULL,
+  hour INTEGER NOT NULL,
+  pv INTEGER DEFAULT 0,
+  uv INTEGER DEFAULT 0,
+  requests INTEGER DEFAULT 0,
+  PRIMARY KEY (date, hour)
 );
 
 -- indexes for analytics queries
@@ -98,6 +116,7 @@ CREATE INDEX IF NOT EXISTS idx_page_views_created ON page_views(created_at);
 CREATE INDEX IF NOT EXISTS idx_page_views_project ON page_views(project);
 CREATE INDEX IF NOT EXISTS idx_page_views_country ON page_views(country);
 CREATE INDEX IF NOT EXISTS idx_daily_stats_date ON daily_page_stats(date);
+CREATE INDEX IF NOT EXISTS idx_hourly_stats_date ON hourly_page_stats(date);
 `;
 
 export const D1_BINDING = "DB";

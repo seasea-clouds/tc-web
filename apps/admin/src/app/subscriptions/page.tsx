@@ -68,11 +68,6 @@ export default function SubscriptionsPage() {
   const changeStatus = async (id: string, status: string) => {
     await post(`/subscriptions?id=${id}`, { status });
     setSubscriptions((prev) => prev.map((s) => (s.id === id ? { ...s, status } : s)));
-    if (subDetail?.subscription.id === id) {
-      setSubDetail((prev) =>
-        prev ? { ...prev, subscription: { ...prev.subscription, status } } : null
-      );
-    }
   };
 
   const handleAddSubscription = async () => {

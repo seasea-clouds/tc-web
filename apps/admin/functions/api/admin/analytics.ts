@@ -353,6 +353,13 @@ export async function onRequest(context: { request: Request; env: Env }) {
   }
 
   try {
+    // 0. Query all-time totals from D1
+    const allTimeRow: any = await context.env.DB.prepare(
+      "SELECT COALESCE(SUM(total_pv), 0) as pv, COALESCE(SUM(total_uv), 0) as uv FROM daily_page_stats"
+    ).first();
+    const allTimePV = allTimeRow?.pv || 0;
+    const allTimeUV = allTimeRow?.uv || 0;
+
     // 1. Run D1 schema migration (idempotent)
     await runMigration(context.env);
 

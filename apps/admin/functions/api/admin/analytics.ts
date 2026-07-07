@@ -328,19 +328,39 @@ export async function onRequest(context: { request: Request; env: Env }) {
 
   const url = new URL(context.request.url);
   const range = url.searchParams.get("range") || "today";
-  const days = range === "7d" ? 7 : range === "30d" ? 30 : 1;
+  const forceRefresh = url.searchParams.get("trigger") === "1";
+  const customStart = url.searchParams.get("start_date") || "";
+  const customEnd = url.searchParams.get("end_date") || "";
+
+  // Determine date range
+  let days: number;
+  let pastStart: string;
+  const today = todayUTC();
+
+  if (customStart && customEnd) {
+    // Custom date range
+    days = Math.round((new Date(customEnd + "T23:59:59Z").getTime() - new Date(customStart + "T00:00:00Z").getTime()) / (86400000)) + 1;
+    pastStart = customStart;
+  } else if (range === "7d") {
+    days = 7;
+    pastStart = getDateString(Date.now() - 7 * 24 * 60 * 60 * 1000);
+  } else if (range === "30d") {
+    days = 30;
+    pastStart = getDateString(Date.now() - 30 * 24 * 60 * 60 * 1000);
+  } else {
+    days = 1;
+    pastStart = today;
+  }
 
   try {
     // 1. Run D1 schema migration (idempotent)
     await runMigration(context.env);
 
-    // 2. Fetch missing data from CF (side-effect: fills D1 cache)
-    await ensureDailyCFCache(context.env);
-    await ensureHourlyCFCache(context.env);
-
-    // 3. Read from D1 and build response
-    const today = todayUTC();
-    const pastStart = getDateString(Date.now() - days * 24 * 60 * 60 * 1000);
+    // 2. Fetch missing data from CF only if trigger=1
+    if (forceRefresh) {
+      await ensureDailyCFCache(context.env);
+      await ensureHourlyCFCache(context.env);
+    }
 
     if (range === "today") {
       // ===== TODAY ONLY =====

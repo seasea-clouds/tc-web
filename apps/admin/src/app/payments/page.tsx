@@ -77,7 +77,7 @@ export default function PaymentsPage() {
     if (!confirm('确认从已有已完成报告中补录支付记录？')) return;
     setBackfilling(true);
     try {
-      const res = await post<{ ok: boolean; found: number; inserted: number; message: string }>('/payments/backfill', {});
+      const res = await post<{ ok: boolean; found: number; inserted: number; message: string }>('/payments', { action: 'backfill' });
       showToast('success', res.message || `补录完成：${res.inserted}/${res.found}`);
       fetchPayments();
       const rev = await get<RevenueSummary>('/payments/summary');

@@ -355,41 +355,7 @@ export async function onRequest(context: { request: Request; next: () => Promise
   // ── Default: serve main site ──
   const response = await context.next();
 
-  // ── Async page view tracking (fire-and-forget) ──
-  // Only track HTML page loads (not CSS/JS/images)
-  if (
-    request.method === 'GET' &&
-    (request.headers.get('accept') || '').includes('text/html') &&
-    !url.pathname.startsWith('/_next/')
-  ) {
-    const locale = url.pathname.match(/^\/([a-z]{2}(-[A-Z]{2})?)\//)?.[1] || '';
-    // Identify which sub-project served this request
-    const subProject = url.pathname.startsWith('/c/')
-      ? 'portal'
-      : url.pathname.startsWith('/blog/')
-        ? 'blog'
-        : url.pathname.startsWith('/admin/')
-          ? 'admin'
-          : 'site';
 
-    const trackingPayload = {
-      path: url.pathname,
-      project: subProject,
-      referrer: request.headers.get('referer') || '',
-      locale,
-    };
-    const adminUrl = resolveUpstream(url.hostname, 'admin', env);
-    (context as any).waitUntil(
-      fetch(`${adminUrl}/api/admin/track`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'User-Agent': request.headers.get('user-agent') || '',
-        },
-        body: JSON.stringify(trackingPayload),
-      }).catch(() => {}),
-    );
-  }
 
   return response;
 }

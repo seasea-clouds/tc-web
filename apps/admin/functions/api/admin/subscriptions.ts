@@ -1,9 +1,9 @@
 /**
  * Subscriptions API
- * GET  /api/admin/subscriptions            — list all
- * GET  /api/admin/subscriptions?id=xxx     — single subscription detail
- * POST /api/admin/subscriptions            — add subscription
- * POST /api/admin/subscriptions?id=xxx     — change status (body: { status })
+ * GET  /api/admin/subscriptions               — list (with pagination ?page=&pageSize=)
+ * GET  /api/admin/subscriptions?id=xxx        — single subscription detail
+ * POST /api/admin/subscriptions               — add subscription (by email)
+ * POST /api/admin/subscriptions?id=xxx        — change status (body: { status })
  */
 
 import { requireAdmin } from "../../lib/admin-session";
@@ -82,40 +82,62 @@ export async function onRequest(context: { request: Request; env: Env }) {
     });
   }
 
-  // ── GET /api/admin/subscriptions — list ──
+  // ── GET /api/admin/subscriptions — list with pagination ──
   if (context.request.method === "GET") {
+    const page = Math.max(1, parseInt(url.searchParams.get("page") || "1"));
+    const pageSize = Math.min(100, Math.max(1, parseInt(url.searchParams.get("pageSize") || "25")));
+    const offset = (page - 1) * pageSize;
+
+    const countRow: any = await context.env.DB.prepare(
+      `SELECT COUNT(*) as total FROM subscriptions s LEFT JOIN users u ON u.id = s.user_id`
+    ).first();
+    const total = countRow?.total || 0;
+
     const rows: any = await context.env.DB.prepare(
       `SELECT s.*, u.email as user_email, u.name as user_name
        FROM subscriptions s
        LEFT JOIN users u ON u.id = s.user_id
-       ORDER BY s.created_at DESC`,
-    ).all();
+       ORDER BY s.created_at DESC
+       LIMIT ? OFFSET ?`,
+    ).bind(pageSize, offset).all();
 
-    return Response.json({ subscriptions: rows.results || [] });
+    return Response.json({
+      subscriptions: rows.results || [],
+      total,
+      page,
+      pageSize,
+    });
   }
 
-  // POST /api/admin/subscriptions (add new — no id param)
+  // ── POST /api/admin/subscriptions (add new — by email) ──
   if (context.request.method === "POST" && !subId) {
-    const { userId, plan } = await context.request.json();
+    const { email, plan, startDate, endDate } = await context.request.json();
 
-    if (!userId || !plan) {
-      return Response.json({ error: "userId and plan required" }, { status: 400 });
+    if (!email || !plan) {
+      return Response.json({ error: "email and plan required" }, { status: 400 });
+    }
+    if (!startDate || !endDate) {
+      return Response.json({ error: "startDate and endDate required" }, { status: 400 });
+    }
+
+    // Look up user by email
+    const user: any = await context.env.DB.prepare(
+      "SELECT id, email, name FROM users WHERE email = ?"
+    ).bind(email).first();
+
+    if (!user) {
+      return Response.json({ error: "User not found with this email" }, { status: 404 });
     }
 
     const id = crypto.randomUUID();
     const now = new Date().toISOString();
-    const periodEnd = new Date(Date.now() + (plan === "annual" ? 365 : 30) * 24 * 60 * 60 * 1000).toISOString();
 
     await context.env.DB.prepare(
       `INSERT INTO subscriptions (id, user_id, plan, status, provider_subscription_id, current_period_start, current_period_end, created_at)
        VALUES (?, ?, ?, 'active', 'manual', ?, ?, ?)`,
     )
-      .bind(id, userId, plan, now, periodEnd, now)
+      .bind(id, user.id, plan, startDate, endDate, now)
       .run();
-
-    const user: any = await context.env.DB.prepare("SELECT email, name FROM users WHERE id = ?")
-      .bind(userId)
-      .first();
 
     await createLog(context.env.DB, {
       adminId: admin.adminId,
@@ -123,8 +145,8 @@ export async function onRequest(context: { request: Request; env: Env }) {
       action: "add_subscription",
       targetType: "subscription",
       targetId: id,
-      targetSummary: `${user?.email || userId} - ${plan}`,
-      detail: JSON.stringify({ userId, plan, periodEnd }),
+      targetSummary: `${user.email} - ${plan}`,
+      detail: JSON.stringify({ email: user.email, userId: user.id, plan, startDate, endDate }),
     });
 
     return Response.json({ id, ok: true });

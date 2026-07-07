@@ -9,6 +9,7 @@ import {
 
 interface DashboardStats {
   today: { pv: number; uv: number; reports: number; newUsers: number };
+  period: { reports: number; newUsers: number };
   totalUsers: number;
   totalSubscriptions: number;
   activeSubscriptions: number;
@@ -143,27 +144,27 @@ export default function DashboardPage() {
         </div>
       ) : stats && analytics ? (
         <>
-          {/* ── Overview stats ── */}
+          {/* ── Overview stats (range-aware) ── */}
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))", gap: "0.75rem", marginBottom: "1.5rem" }}>
             <div className="stat-card">
-              <div className="stat-value">{analytics.summary.today}</div>
-              <div className="stat-label">今日 PV</div>
+              <div className="stat-value">{timeRange === "today" ? analytics.summary.today : analytics.summary.total}</div>
+              <div className="stat-label">{timeRange === "today" ? "今日 PV" : timeRange === "7d" ? "近7天 PV" : timeRange === "30d" ? "近30天 PV" : "所选时段 PV"}</div>
             </div>
             <div className="stat-card">
-              <div className="stat-value">{analytics.summary.todayUV}</div>
-              <div className="stat-label">今日 UV</div>
+              <div className="stat-value">{timeRange === "today" ? analytics.summary.todayUV : analytics.summary.uv}</div>
+              <div className="stat-label">{timeRange === "today" ? "今日 UV" : timeRange === "7d" ? "近7天 UV" : timeRange === "30d" ? "近30天 UV" : "所选时段 UV"}</div>
             </div>
             <div className="stat-card">
-              <div className="stat-value">{stats.today.reports}</div>
-              <div className="stat-label">今日报告</div>
+              <div className="stat-value">{timeRange === "today" ? stats.today.reports : stats.period?.reports || 0}</div>
+              <div className="stat-label">{timeRange === "today" ? "今日报告" : timeRange === "7d" ? "近7天报告" : timeRange === "30d" ? "近30天报告" : "所选时段报告"}</div>
             </div>
             <div className="stat-card">
-              <div className="stat-value">{stats.today.newUsers}</div>
-              <div className="stat-label">今日新用户</div>
+              <div className="stat-value">{timeRange === "today" ? stats.today.newUsers : stats.period?.newUsers || 0}</div>
+              <div className="stat-label">{timeRange === "today" ? "今日新用户" : timeRange === "7d" ? "近7天新用户" : timeRange === "30d" ? "近30天新用户" : "所选时段新用户"}</div>
             </div>
             <div className="stat-card">
               <div className="stat-value">{stats.totalUsers}</div>
-              <div className="stat-label">注册用户</div>
+              <div className="stat-label">注册用户（累计）</div>
             </div>
             <div className="stat-card">
               <div className="stat-value">{stats.activeSubscriptions}</div>

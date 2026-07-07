@@ -32,17 +32,33 @@ export async function onRequest(context: { request: Request; env: Env }) {
       context.env.DB.prepare("SELECT COUNT(*) as count FROM reports").first(),
     ]);
 
-    // ── Today's report stats (proxy for traffic until CF Analytics is integrated) ──
+    // ── Period stats: today for 'today' range, or accumulated for 7d/30d ──
     const today = new Date();
     const todayStart = today.toISOString().slice(0, 10) + " 00:00:00";
 
-    const todayReports: any = await context.env.DB.prepare(
-      "SELECT COUNT(*) as count FROM reports WHERE created_at >= ?",
-    ).bind(todayStart).first();
+    // Determine period start based on range
+    let periodStart: string;
+    if (range === "7d") {
+      const d = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+      periodStart = d.toISOString().slice(0, 10) + " 00:00:00";
+    } else if (range === "30d") {
+      const d = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
+      periodStart = d.toISOString().slice(0, 10) + " 00:00:00";
+    } else {
+      periodStart = todayStart;
+    }
 
-    const todayUsers: any = await context.env.DB.prepare(
-      "SELECT COUNT(*) as count FROM users WHERE created_at >= ?",
-    ).bind(todayStart).first();
+    const [todayReports, periodReports, periodUsers]: any[] = await Promise.all([
+      context.env.DB.prepare(
+        "SELECT COUNT(*) as count FROM reports WHERE created_at >= ?",
+      ).bind(todayStart).first(),
+      context.env.DB.prepare(
+        "SELECT COUNT(*) as count FROM reports WHERE created_at >= ?",
+      ).bind(periodStart).first(),
+      context.env.DB.prepare(
+        "SELECT COUNT(*) as count FROM users WHERE created_at >= ?",
+      ).bind(periodStart).first(),
+    ]);
 
     // ── Hourly breakdown (today) ──
     let hourlyData: { hour: number; reports: number; users: number }[] = [];
@@ -111,12 +127,17 @@ export async function onRequest(context: { request: Request; env: Env }) {
     ).bind(pastStartStr).all();
 
     return Response.json({
-      // Today's proxy stats (reports = proxy for PV, unique users = proxy for UV)
+      // Period proxy stats (reports = proxy for PV, unique users = proxy for UV)
+      // 'today' is always today; 'period' matches the requested range
       today: {
         pv: (todayReports?.count || 0) * 3, // Rough multiplier for page views
-        uv: todayUsers?.count || 0,
+        uv: periodUsers?.count || 0, // We don't have separate today-UV, approximate with period
         reports: todayReports?.count || 0,
         newUsers: todayUsers?.count || 0,
+      },
+      period: {
+        reports: periodReports?.count || 0,
+        newUsers: periodUsers?.count || 0,
       },
       totalUsers: userCount?.count || 0,
       totalSubscriptions: subCount?.count || 0,

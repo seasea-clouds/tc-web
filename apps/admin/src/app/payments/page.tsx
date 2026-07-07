@@ -71,6 +71,23 @@ export default function PaymentsPage() {
   const [revenueLoading, setRevenueLoading] = useState(true);
 
   const pageSize = 20;
+  const [backfilling, setBackfilling] = useState(false);
+
+  const handleBackfill = async () => {
+    if (!confirm('确认从已有已完成报告中补录支付记录？')) return;
+    setBackfilling(true);
+    try {
+      const res = await post<{ ok: boolean; found: number; inserted: number; message: string }>('/payments/backfill', {});
+      showToast('success', res.message || `补录完成：${res.inserted}/${res.found}`);
+      fetchPayments();
+      const rev = await get<RevenueSummary>('/payments/summary');
+      setRevenue(rev);
+    } catch (err: any) {
+      showToast('error', '补录失败: ' + (err.message || err));
+    } finally {
+      setBackfilling(false);
+    }
+  };
 
   const showToast = (type: string, message: string) => {
     setToast({ type, message });
@@ -224,6 +241,14 @@ export default function PaymentsPage() {
           ))}
         </select>
         <span style={{ fontSize: "0.8rem", color: "#6b7280" }}>共 {total} 条记录</span>
+        <button
+          className="btn btn-outline"
+          style={{ fontSize: "0.8rem", padding: "0.4rem 0.75rem", whiteSpace: "nowrap" }}
+          onClick={handleBackfill}
+          disabled={backfilling}
+        >
+          {backfilling ? "补录中…" : "⬆ 补录支付"}
+        </button>
       </div>
 
       {loading ? (

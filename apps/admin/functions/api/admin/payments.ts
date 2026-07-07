@@ -131,6 +131,50 @@ export async function onRequest(context: { request: Request; env: Env }) {
     });
   }
 
+  // ── POST /api/admin/payments/backfill — backfill from completed reports ──
+  if (context.request.method === "POST" && path.endsWith("/payments/backfill")) {
+    const { reportId: specificReportId } = await context.request.json();
+
+    // Query completed reports not yet in payments table
+    let query: string;
+    let bindings: any[];
+
+    if (specificReportId) {
+      query = `SELECT id, user_email, created_at FROM reports WHERE id = ? AND payment_status = 'completed'`;
+      bindings = [specificReportId];
+    } else {
+      query = `SELECT r.id, r.user_email, r.created_at FROM reports r
+               LEFT JOIN payments p ON p.report_id = r.id
+               WHERE r.payment_status = 'completed' AND p.id IS NULL`;
+      bindings = [];
+    }
+
+    const missing: any = await context.env.DB.prepare(query).bind(...bindings).all();
+    const rows = missing.results || [];
+    let inserted = 0;
+
+    for (const row of rows) {
+      const paymentId = crypto.randomUUID();
+      const now = new Date().toISOString();
+      try {
+        await context.env.DB.prepare(
+          `INSERT OR IGNORE INTO payments (id, report_id, user_email, amount_cents, currency, status, provider, provider_payment_id, created_at)
+           VALUES (?, ?, ?, 199, 'USD', 'completed', 'backfill', ?, ?)`
+        ).bind(paymentId, row.id, row.user_email || null, row.id, now).run();
+        inserted++;
+      } catch {
+        // skip duplicates
+      }
+    }
+
+    return Response.json({
+      ok: true,
+      found: rows.length,
+      inserted,
+      message: `从 ${rows.length} 条已完成报告中补录了 ${inserted} 条支付记录`,
+    });
+  }
+
   // ── POST /api/admin/payments/:id/refund — refund ──
   if (context.request.method === "POST") {
     const match = path.match(/\/payments\/([^/]+)\/refund$/);

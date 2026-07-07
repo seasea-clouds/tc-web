@@ -29,6 +29,9 @@ interface AnalyticsData {
   pageData: { path: string; count: number }[];
   channelData: { channel: string; count: number }[];
   projectData: { project: string; count: number }[];
+  browserData: { browser: string; pageViews: number }[];
+  osData: { os: string; count: number }[];
+  deviceData: { device: string; count: number }[];
 }
 
 const COLORS = ["#1B365D", "#D4AF37", "#059669", "#3B82F6", "#F59E0B", "#EF4444", "#8B5CF6", "#EC4899"];
@@ -52,32 +55,12 @@ export default function DashboardPage() {
   const [analytics, setAnalytics] = useState<AnalyticsData | null>(null);
   const [timeRange, setTimeRange] = useState<"today" | "7d" | "30d">("today");
   const [loading, setLoading] = useState(true);
-  const [aggregating, setAggregating] = useState(false);
   const [refreshKey, setRefreshKey] = useState(0);
   const [toast, setToast] = useState<{ type: "success" | "error"; message: string } | null>(null);
 
   const showToast = (type: "success" | "error", message: string) => {
     setToast({ type, message });
     setTimeout(() => setToast(null), 4000);
-  };
-
-  const runAggregation = async () => {
-    setAggregating(true);
-    try {
-      const res = await fetch("/api/admin/analytics?trigger=1");
-      const data = await res.json();
-      if (data.ok) {
-        showToast("success", data.message);
-        // Refresh dashboard data after aggregation
-        setRefreshKey((k) => k + 1); // triggers data re-fetch
-      } else {
-        showToast("error", data.error || "聚合失败");
-      }
-    } catch {
-      showToast("error", "网络请求失败");
-    } finally {
-      setAggregating(false);
-    }
   };
 
   useEffect(() => {
@@ -114,14 +97,7 @@ export default function DashboardPage() {
               {range === "today" ? "今日" : range === "7d" ? "近7天" : "近30天"}
             </button>
           ))}
-          <button
-            className="btn btn-outline"
-            style={{ padding: "0.375rem 0.75rem", fontSize: "0.8rem", marginLeft: "0.5rem" }}
-            onClick={runAggregation}
-            disabled={aggregating}
-          >
-            {aggregating ? "聚合中..." : "⚡ 立即聚合"}
-          </button>
+
         </div>
       </div>
 
@@ -325,35 +301,78 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          {/* ── Channel Source + Site breakdown — responsive ── */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(350px, 1fr))", gap: "1rem", marginBottom: "1.5rem" }}>
+          {/* ── Browser + OS/Device distribution — responsive ── */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "1rem", marginBottom: "1.5rem" }}>
             <div className="card">
-              <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>渠道来源分布</h3>
-              {analytics.channelData && analytics.channelData.length > 0 ? (
-                <ResponsiveContainer width="100%" height={200}>
+              <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>浏览器分布</h3>
+              {analytics.browserData && analytics.browserData.length > 0 ? (
+                <ResponsiveContainer width="100%" height={180}>
                   <PieChart>
                     <Pie
-                      data={analytics.channelData}
-                      dataKey="count"
-                      nameKey="channel"
-                      cx="50%"
-                      cy="50%"
-                      outerRadius={80}
-                      label={({ channel, count }: any) => `${channel} (${count})`}
-                      fontSize={11}
+                      data={analytics.browserData.slice(0, 8)}
+                      dataKey="pageViews"
+                      nameKey="browser"
+                      cx="50%" cy="50%" outerRadius={70}
+                      label={({ browser, pageViews }: any) => `${browser} (${pageViews})`}
+                      fontSize={10}
                     >
-                      {analytics.channelData.map((_: any, index: number) => (
-                        <Cell key={`chan-${index}`} fill={COLORS[index % COLORS.length]} />
+                      {analytics.browserData.slice(0, 8).map((_: any, i: number) => (
+                        <Cell key={`br-${i}`} fill={COLORS[i % COLORS.length]} />
                       ))}
                     </Pie>
                     <Tooltip />
                   </PieChart>
                 </ResponsiveContainer>
               ) : (
-                <div className="empty-state" style={{ padding: "1.5rem" }}>等待数据采集</div>
+                <div className="empty-state" style={{ padding: "1.5rem" }}>暂无数据</div>
               )}
             </div>
 
+            <div className="card">
+              <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>OS 分布</h3>
+              {analytics.osData && analytics.osData.length > 0 ? (
+                <ResponsiveContainer width="100%" height={180}>
+                  <BarChart data={analytics.osData.slice(0, 8)} layout="vertical">
+                    <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
+                    <XAxis type="number" fontSize={10} />
+                    <YAxis type="category" dataKey="os" fontSize={10} width={70} />
+                    <Tooltip />
+                    <Bar dataKey="count" fill="#1B365D" radius={[0, 3, 3, 0]} />
+                  </BarChart>
+                </ResponsiveContainer>
+              ) : (
+                <div className="empty-state" style={{ padding: "1.5rem" }}>暂无数据</div>
+              )}
+            </div>
+
+            <div className="card">
+              <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>设备类型</h3>
+              {analytics.deviceData && analytics.deviceData.length > 0 ? (
+                <ResponsiveContainer width="100%" height={160}>
+                  <PieChart>
+                    <Pie
+                      data={analytics.deviceData}
+                      dataKey="count"
+                      nameKey="device"
+                      cx="50%" cy="50%" outerRadius={60}
+                      label={({ device, count }: any) => `${device} (${count})`}
+                      fontSize={11}
+                    >
+                      {analytics.deviceData.map((_: any, index: number) => (
+                        <Cell key={`dev-${index}`} fill={COLORS[index % COLORS.length]} />
+                      ))}
+                    </Pie>
+                    <Tooltip />
+                  </PieChart>
+                </ResponsiveContainer>
+              ) : (
+                <div className="empty-state" style={{ padding: "1.5rem" }}>暂无数据</div>
+              )}
+            </div>
+          </div>
+
+          {/* ── Site breakdown — responsive ── */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(350px, 1fr))", gap: "1rem", marginBottom: "1.5rem" }}>
             <div className="card">
               <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>站点来源分布</h3>
               {analytics.projectData && analytics.projectData.length > 0 ? (
@@ -410,11 +429,11 @@ export default function DashboardPage() {
                 <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
                   <StatusRow label="D1 报告数据" status="已集成" />
                   <StatusRow label="D1 用户数据" status="已集成" />
-                  <StatusRow label="D1 页面浏览量 (PV/UV)" status="已集成" />
-                  <StatusRow label="D1 地域分布" status="已集成" />
-                  <StatusRow label="D1 渠道来源" status="已集成" />
-                  <StatusRow label="D1 站点来源" status="已集成" />
-                  <StatusRow label="D1 热门页面" status="已集成" />
+                  <StatusRow label="CF → PV/UV/地域/浏览器" status="已集成" />
+                  <StatusRow label="CF → 页面路径 (67%采样)" status="已集成" />
+                  <StatusRow label="CF → OS/设备类型" status="已集成" />
+                  <StatusRow label="CF → 站点分布" status="已集成" />
+                  <StatusRow label="D1 报告数据" status="已集成" />
                 </div>
               </div>
 

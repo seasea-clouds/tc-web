@@ -133,7 +133,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
         pv: (todayReports?.count || 0) * 3, // Rough multiplier for page views
         uv: periodUsers?.count || 0, // We don't have separate today-UV, approximate with period
         reports: todayReports?.count || 0,
-        newUsers: todayUsers?.count || 0,
+        newUsers: 0, // No separate query for today's new users yet
       },
       period: {
         reports: periodReports?.count || 0,

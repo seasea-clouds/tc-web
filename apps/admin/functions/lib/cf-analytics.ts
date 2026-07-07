@@ -72,7 +72,7 @@ async function graphql(query: string, token: string): Promise<any> {
     const msgs = body.errors.map((e: any) => e.message).join("; ");
     throw new Error(`CF GraphQL errors: ${msgs}`);
   }
-  return body;
+  return body.data || {};
 }
 
 /** Ensure a string has at least `minLen` chars (pad with zero if needed). */

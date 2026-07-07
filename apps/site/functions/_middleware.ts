@@ -382,7 +382,10 @@ export async function onRequest(context: { request: Request; next: () => Promise
     (context as any).waitUntil(
       fetch(`${adminUrl}/api/admin/track`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'User-Agent': request.headers.get('user-agent') || '',
+        },
         body: JSON.stringify(trackingPayload),
       }).catch(() => {}),
     );

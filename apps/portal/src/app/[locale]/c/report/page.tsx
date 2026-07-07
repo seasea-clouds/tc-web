@@ -59,7 +59,9 @@ const RETRY_DELAY = 2000;
 function ReportContent() {
   const searchParams = useSearchParams();
   const subsiteHref = useSubsiteHref();
-  const id = searchParams.get('id');
+  // Read id from searchParams with window.location fallback for SSG hydration edge case
+  const rawId = searchParams ? searchParams.get('id') : null;
+  const [id, setId] = useState(rawId);
   const [report, setReport] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -68,12 +70,23 @@ function ReportContent() {
   const tC = useT('Check');
   const locale = useTradeLocale();
 
+  // Sync useSearchParams into local state (fixes SSG hydration issue)
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const urlId = searchParams?.get('id') || params.get('id') || params.get('reportId') || '';
+    setId(urlId || null);
+  }, [searchParams]);
+
   useEffect(() => {
     if (!id) {
-      setError(t('noReportId')),
+      setError(t('noReportId'));
       setLoading(false);
       return;
     }
+
+    // Reset loading state when id becomes available
+    setError('');
+    setLoading(true);
 
     fetch('/api/report/' + encodeURIComponent(id))
       .then(res => {
@@ -87,6 +100,7 @@ function ReportContent() {
           productInfo: data.productInfo,
           savedInput: data.productInfo || {},
         }, locale);
+        setError('');
         setReport({...data, result: rebuilt});
         setLoading(false);
       })
@@ -115,6 +129,7 @@ function ReportContent() {
             if (m) {
               const savedInput = JSON.parse(storedInput);
               const sr = m.fn(savedInput, locale);
+              setError('');
               setReport({id,module:m.label,
                 productInfo:{name:savedInput.productName||savedInput.brandName||'Your Product',category:savedInput.category||'',originCountry:savedInput.originCountry||''},
                 result:sr,nextSteps:m.nextSteps,generatedAt:new Date().toISOString()});
@@ -123,10 +138,10 @@ function ReportContent() {
             }
           }
         } catch {}
-        setError(err.message);
+        setError(err.message || t('notFoundDesc'));
         setLoading(false);
       });
-  }, [id, locale]);
+  }, [id, locale, t, tC]);
 
   if (loading) {
     return (

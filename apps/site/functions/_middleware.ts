@@ -232,24 +232,6 @@ export async function onRequest(context: { request: Request; next: () => Promise
   const assetResp = await proxySubSiteAsset(url, request, env);
   if (assetResp) return assetResp;
 
-  // ── Font proxy ──
-  // Portal/blog CSS references /fonts/* from the same origin.
-  // Proxy these to the portal upstream where they exist at out/fonts/.
-  if (url.pathname.startsWith('/fonts/')) {
-    for (const sub of ['portal', 'blog']) {
-      const upstream = resolveUpstream(url.hostname, sub, env);
-      const resp = await fetch(`${upstream}${url.pathname}`);
-      if (resp.ok) {
-        const h = sanitizeHeaders(resp.headers);
-        // Ensure proper MIME type for fonts
-        if (url.pathname.endsWith('.ttf')) h.set('content-type', 'font/ttf');
-        else if (url.pathname.endsWith('.woff')) h.set('content-type', 'font/woff');
-        else if (url.pathname.endsWith('.woff2')) h.set('content-type', 'font/woff2');
-        return new Response(resp.body, { status: 200, headers: h });
-      }
-    }
-  }
-
   // ── Sub-site module system ──
   // Next.js async chunks are loaded at runtime via requestAnimationFrame + <link prefetch>.
   // These are relative to the same origin, so they request `/_next/static/chunks/*`.

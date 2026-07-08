@@ -276,6 +276,38 @@ const IGNORE_FALLBACK_KEYS = new Set([
   // Portal: impact levels (kept as English in most languages)
   'Check.cccHorizon_gbRev_impact',
   'Check.nmpaHorizon_animalTest_impact',
+  // Portal: CCC standard codes (standard numbers should not be translated)
+  'Check.cccProfile_toy_test_2',
+  'Check.cccProfile_electronics_test_0',
+  'Check.cccProfile_medical_test_0',
+  'Check.cccProfile_home_appliance_test_0',
+  // Portal: institution/service names (intentional English)
+  'Check.cbReg_decree249_authority',
+  'Check.nmpaPost_labelUpdate_item',
+  'Check.nmpaExecutiveSummary',
+  'Check.tmPost_watch_item',
+  'Check.cbCustomsDoc_2',
+  // Portal: key-name-as-value (data reference keys)
+  'Check.import_volume_usa',
+  'Check.fta_usa',
+  // Portal: CCC standard codes (more test_0 variants)
+  'Check.cccProfile_it_equipment_test_0',
+  'Check.cccProfile_lighting_test_0',
+  // Portal: Label compliance service names / component names
+  'Check.labelChannel_name',
+  'Check.labelCost_design_item',
+  'Check.labelCost_review_item',
+  'Check.labelPost_labelUpdate_item',
+  'Check.tmTimeline_publication_name',
+  'Check.cccCost_cbConv_item',
+  'Check.cbCost_deposit_item',
+  'Check.cbTimeline_launch_name',
+  // Portal: key-name-as-value / abbreviation
+  'Check.fta_ethiopia',
+  'Check.common_issue_fda_cfda_standards',
+  // Portal: chemical/service term (universal)
+  'Check.nmpaProfile_haircare_riskReason',
+  'Check.nmpaCost_service_notes',
 ]);
 
 // ============================================================
@@ -504,6 +536,9 @@ const ENGLISH_RESIDUAL_ALLOW = new Set([
   'need', 'only', 'what', 'you',
   'IEC', 'FOP', 'IoT', 'BBC', 'Fta', 'Fda', 'Cfda',
   'Digital', 'Front', 'Pack', 'Evidence', 'Record',
+  'First', 'File', 'Designed', 'Lab', 'Bonded', 'Warehouse',
+  'panel', 'Mark', 'Airway', 'Bill', 'Code', 'Usa',
+  'CCFDA', 'Formaldehyde', 'end',
   'Cabernet', 'Sauvignon',
   'Self', 'Sinotrade',
   'Assistance', 'border',

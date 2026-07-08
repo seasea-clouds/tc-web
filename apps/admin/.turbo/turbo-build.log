@@ -1,0 +1,37 @@
+
+> @trade/admin@6.1.0 build
+> next build && bash scripts/postbuild.sh
+
+▲ Next.js 16.2.6 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 2.3s
+  Running TypeScript ...
+  Finished TypeScript in 3.9s ...
+  Collecting page data using 14 workers ...
+  Generating static pages using 14 workers (0/13) ...
+  Generating static pages using 14 workers (3/13) 
+  Generating static pages using 14 workers (6/13) 
+  Generating static pages using 14 workers (9/13) 
+✓ Generating static pages using 14 workers (13/13) in 481ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /dashboard
+├ ○ /login
+├ ○ /logs
+├ ○ /payments
+├ ○ /report-detail
+├ ○ /reports
+├ ○ /subscription-detail
+├ ○ /subscriptions
+├ ○ /user-detail
+└ ○ /users
+
+
+○  (Static)  prerendered as static content
+
+✅ postbuild.sh: All content moved under out/admin/
+   Root redirect: / → /admin/

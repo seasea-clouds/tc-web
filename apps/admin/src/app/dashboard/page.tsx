@@ -146,6 +146,13 @@ export default function DashboardPage() {
           gap: 1rem;
           margin-bottom: 1.5rem;
         }
+        .chart-grid .empty-state {
+          min-height: 280px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 1.5rem;
+        }
         @media (min-width: 768px) {
           .chart-grid {
             grid-template-columns: repeat(2, 1fr);
@@ -191,6 +198,7 @@ export default function DashboardPage() {
             <div className="stat-card">
               <div className="stat-value">{stats.activeSubscriptions}</div>
               <div className="stat-label">活跃订阅</div>
+              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }}>累计 {stats.totalSubscriptions}</div>
             </div>
           </div>
 

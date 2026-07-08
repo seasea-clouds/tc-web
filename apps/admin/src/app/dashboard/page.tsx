@@ -459,13 +459,36 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          {/* ── 热门页面 (full-width row, top 20) ── */}
+          {/* ── 热门页面 (full-width row, top 30, filtered pages only) ── */}
           <div className="card" style={{ marginBottom: "1.5rem" }}>
-            <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "0.75rem" }}>热门页面（统计区间）</h3>
+            <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "0.75rem" }}>热门页面</h3>
+            {(() => {
+              const isRes = (p: string) => /\.(js|ttf|woff2?|css|png|jpe?g|gif|svg|ico|webp|json|map|txt|xml)(\?|$)/i.test(p) || p.startsWith('/_next/');
+              const pages = _a.pageData.filter((p: any) => !isRes(p.path)).slice(0, 30);
+              return pages.length > 0 ? (
+                <div>
+                  {pages.map((p: any, i: number) => (
+                    <div key={p.path} style={{ display: "flex", justifyContent: "space-between", padding: "0.3rem 0", fontSize: "0.8rem", borderBottom: i < pages.length - 1 ? "1px solid #f3f4f6" : "none" }}>
+                      <div style={{ flex: 1, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                        <span style={{ color: "#374151" }}>{p.path}</span>
+                      </div>
+                      <span style={{ fontWeight: 600, color: "#1B365D", whiteSpace: "nowrap", marginLeft: "1rem" }}>{p.count}</span>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="empty-state" style={{ padding: "1.5rem" }}>等待数据采集</div>
+              );
+            })()}
+          </div>
+
+          {/* ── 热门路径 (full-width row, top 30, all paths incl. resources) ── */}
+          <div className="card" style={{ marginBottom: "1.5rem" }}>
+            <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "0.75rem" }}>热门路径</h3>
             {_a.pageData.length > 0 ? (
               <div>
-                {_a.pageData.slice(0, 20).map((p, i) => (
-                  <div key={p.path} style={{ display: "flex", justifyContent: "space-between", padding: "0.3rem 0", fontSize: "0.8rem", borderBottom: i < 19 ? "1px solid #f3f4f6" : "none" }}>
+                {_a.pageData.slice(0, 30).map((p, i) => (
+                  <div key={p.path} style={{ display: "flex", justifyContent: "space-between", padding: "0.3rem 0", fontSize: "0.8rem", borderBottom: i < 29 ? "1px solid #f3f4f6" : "none" }}>
                     <span style={{ color: "#374151", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{p.path}</span>
                     <span style={{ fontWeight: 600, color: "#1B365D", whiteSpace: "nowrap", marginLeft: "1rem" }}>{p.count}</span>
                   </div>

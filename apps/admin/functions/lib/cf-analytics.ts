@@ -289,7 +289,7 @@ export async function fetchAggregateStatsRange(
           limit: 2000,
           filter: {datetime_geq: "${startDate}T00:00:00Z", datetime_lt: "${endDate}T23:59:59Z"}
         ) {
-          dimensions { date clientRequestPath clientOS clientDeviceType }
+          dimensions { date clientRequestPath userAgentOS clientDeviceType }
           count
         }
       }
@@ -328,14 +328,14 @@ export async function fetchAggregateStatsRange(
       bucket.projectMap.set(project, (bucket.projectMap.get(project) || 0) + cnt);
     }
 
-    // OS — try clientOS first, fallback to userAgentOS for older schema
-    const os = dims.clientOS || dims.userAgentOS || "Unknown";
+    // OS
+    const os = dims.userAgentOS || "Unknown";
     if (os) {
       bucket.osMap.set(os, (bucket.osMap.get(os) || 0) + cnt);
     }
 
     // Device
-    const device = dims.clientDeviceType || dims.clientDevice || "unknown";
+    const device = dims.clientDeviceType || "unknown";
     if (device) {
       bucket.deviceMap.set(device, (bucket.deviceMap.get(device) || 0) + cnt);
     }

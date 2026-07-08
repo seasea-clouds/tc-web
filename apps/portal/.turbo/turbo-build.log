@@ -62,15 +62,15 @@ Done.
 - Environments: .env
 
   Creating an optimized production build ...
-✓ Compiled successfully in 2.5s
+✓ Compiled successfully in 2.6s
   Running TypeScript ...
-  Finished TypeScript in 7.1s ...
+  Finished TypeScript in 7.3s ...
   Collecting page data using 19 workers ...
   Generating static pages using 19 workers (0/771) ...
   Generating static pages using 19 workers (192/771) 
   Generating static pages using 19 workers (385/771) 
   Generating static pages using 19 workers (578/771) 
-✓ Generating static pages using 19 workers (771/771) in 7.8s
+✓ Generating static pages using 19 workers (771/771) in 7.9s
   Finalizing page optimization ...
 
 Route (app)
@@ -268,9 +268,9 @@ Route (app)
 
 ▶ check-translations.mjs --short --skip-locale-check
 
-⚠️ 发现 190 个问题
-   - 网站翻译质量: 87 个问题
-   - Portal 翻译质量: 103 个问题
+⚠️ 发现 47 个问题
+   - 网站翻译质量: 20 个问题
+   - Portal 翻译质量: 27 个问题
 
 ▶ check-i18n-keys.mjs --ci
 🔑 i18n key 完整性检查

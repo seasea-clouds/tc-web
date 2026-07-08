@@ -17,6 +17,7 @@ import {
   fetchDailyStats,
   fetchHourlyStats,
   fetchAggregateStats,
+  fetchAggregateStatsRange,
   type DailyStats,
   type HourlyStats,
   type AggregateStats,
@@ -176,25 +177,38 @@ async function ensureDailyCFCache(env: Env, forceRefresh = false): Promise<void>
         ),
       )
       .run();
+  }
 
-    // Also fetch aggregate stats (paths, OS, device, project)
+  // Single range-based aggregate stats fetch (paths, OS, device, project)
+  // Much more efficient than 1 per-date call
+  if (dailyStats.length > 0) {
+    const firstDate = dailyStats[0].date;
+    const lastDate = dailyStats[dailyStats.length - 1].date;
     try {
-      const agg = await fetchAggregateStats(zoneId, token, ds.date);
-      await env.DB.prepare(
-        `UPDATE daily_page_stats
-         SET page_data = ?, os_data = ?, device_data = ?, project_data = ?
-         WHERE date = ?`,
-      )
-        .bind(
-          JSON.stringify(agg.pathData),
-          JSON.stringify(agg.osData),
-          JSON.stringify(agg.deviceData),
-          JSON.stringify(agg.projectData),
-          ds.date,
-        )
-        .run();
+      const aggMap = await fetchAggregateStatsRange(
+        zoneId, token, firstDate, lastDate
+      );
+      for (const [date, agg] of Array.from(aggMap.entries())) {
+        try {
+          await env.DB.prepare(
+            `UPDATE daily_page_stats
+             SET page_data = ?, os_data = ?, device_data = ?, project_data = ?
+             WHERE date = ? AND source = 'cf_api'`,
+          )
+            .bind(
+              JSON.stringify(agg.pathData),
+              JSON.stringify(agg.osData),
+              JSON.stringify(agg.deviceData),
+              JSON.stringify(agg.projectData),
+              date,
+            )
+            .run();
+        } catch (innerErr) {
+          console.error(`[analytics] agg update failed for ${date}:`, innerErr);
+        }
+      }
     } catch (err) {
-      console.error(`[analytics] fetchAggregateStats failed for ${ds.date}:`, err);
+      console.error(`[analytics] fetchAggregateStatsRange failed:`, err);
     }
   }
 }

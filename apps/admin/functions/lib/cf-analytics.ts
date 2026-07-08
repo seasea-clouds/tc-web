@@ -269,108 +269,106 @@ export async function fetchHourlyStats(
  * Sampling: ~67% with just path dimension and limit=500.
  */
 /**
- * Fetch aggregate stats (page paths, OS, device) for an ENTIRE date range
- * in a SINGLE GraphQL call, grouped by date dimension.
+ * Fetch aggregate stats (page paths, OS, device) using httpRequests1dGroups
+ * (which works with the current token, unlike AdaptiveGroups).
+ * Queries per-date in parallel with concurrency control.
  * Returns a Map<string, AggregateStats> keyed by date (YYYY-MM-DD).
  */
-export async function fetchAggregateStatsRange(
+export async function fetchAggregateStats1d(
   zoneId: string,
   token: string,
-  startDate: string,
-  endDate: string,
+  dates: string[],
 ): Promise<Map<string, AggregateStats>> {
   const result = new Map<string, AggregateStats>();
 
-  // Query across the full range, grouped by date
-  const query = `{
-    viewer {
-      zones(filter: {zoneTag: "${zoneId}"}) {
-        httpRequestsAdaptiveGroups(
-          limit: 2000,
-          filter: {datetime_geq: "${startDate}T00:00:00Z", datetime_lt: "${endDate}T23:59:59Z"}
-        ) {
-          dimensions { date clientRequestPath userAgentOS clientDeviceType }
-          count
+  // Concurrency-limited parallel calls
+  const CONCURRENCY = 5;
+  for (let i = 0; i < dates.length; i += CONCURRENCY) {
+    const batch = dates.slice(i, i + CONCURRENCY);
+    const batchResults = await Promise.allSettled(
+      batch.map(async (date) => {
+        const query = `{
+          viewer {
+            zones(filter: {zoneTag: "${zoneId}"}) {
+              httpRequests1dGroups(
+                limit: 500,
+                filter: {date: "${date}"}
+              ) {
+                dimensions { date clientRequestPath userAgentOS clientDeviceType }
+                sum { pageViews }
+              }
+            }
+          }
+        }`;
+        const data = await graphql(query, token);
+        const groups = data?.viewer?.zones?.[0]?.httpRequests1dGroups || [];
+        return { date, groups };
+      }),
+    );
+
+    for (const r of batchResults) {
+      if (r.status === "rejected") {
+        console.error(`[cf-analytics] aggregate1d call failed:`, r.reason);
+        continue;
+      }
+      const { date: d, groups } = r.value;
+      if (!groups || groups.length === 0) continue;
+
+      const pathMap = new Map<string, number>();
+      const osMap = new Map<string, number>();
+      const deviceMap = new Map<string, number>();
+      const projectMap = new Map<string, number>();
+
+      for (const g of groups) {
+        const dims = g.dimensions || {};
+        const cnt = g.sum?.pageViews || g.count || 0;
+
+        const path = dims.clientRequestPath || "";
+        if (path) {
+          pathMap.set(path, (pathMap.get(path) || 0) + cnt);
+          const project = inferProject(path);
+          projectMap.set(project, (projectMap.get(project) || 0) + cnt);
+        }
+
+        const os = dims.userAgentOS || "Unknown";
+        if (os) {
+          osMap.set(os, (osMap.get(os) || 0) + cnt);
+        }
+
+        const device = dims.clientDeviceType || "unknown";
+        if (device) {
+          deviceMap.set(device, (deviceMap.get(device) || 0) + cnt);
         }
       }
+
+      result.set(d, {
+        osData: Array.from(osMap.entries())
+          .sort((a, b) => b[1] - a[1])
+          .map(([os, count]) => ({ os, count })),
+        deviceData: Array.from(deviceMap.entries())
+          .sort((a, b) => b[1] - a[1])
+          .map(([device, count]) => ({ device, count })),
+        pathData: Array.from(pathMap.entries())
+          .sort((a, b) => b[1] - a[1])
+          .slice(0, 30)
+          .map(([path, count]) => ({ path, count })),
+        projectData: Array.from(projectMap.entries())
+          .sort((a, b) => b[1] - a[1])
+          .map(([project, count]) => ({ project, count })),
+      });
     }
-  }`;
-
-  const data = await graphql(query, token);
-  const groups = data?.viewer?.zones?.[0]?.httpRequestsAdaptiveGroups || [];
-
-  // Per-date accumulators
-  const dateBuckets = new Map<string, {
-    pathMap: Map<string, number>;
-    osMap: Map<string, number>;
-    deviceMap: Map<string, number>;
-    projectMap: Map<string, number>;
-  }>();
-
-  for (const g of groups) {
-    const dims = g.dimensions || {};
-    const cnt = g.count || 0;
-    const date = dims.date || "";
-    if (!date) continue;
-
-    let bucket = dateBuckets.get(date);
-    if (!bucket) {
-      bucket = { pathMap: new Map(), osMap: new Map(), deviceMap: new Map(), projectMap: new Map() };
-      dateBuckets.set(date, bucket);
-    }
-
-    // Path
-    const path = dims.clientRequestPath || "";
-    if (path) {
-      bucket.pathMap.set(path, (bucket.pathMap.get(path) || 0) + cnt);
-      // Project from path
-      const project = inferProject(path);
-      bucket.projectMap.set(project, (bucket.projectMap.get(project) || 0) + cnt);
-    }
-
-    // OS
-    const os = dims.userAgentOS || "Unknown";
-    if (os) {
-      bucket.osMap.set(os, (bucket.osMap.get(os) || 0) + cnt);
-    }
-
-    // Device
-    const device = dims.clientDeviceType || "unknown";
-    if (device) {
-      bucket.deviceMap.set(device, (bucket.deviceMap.get(device) || 0) + cnt);
-    }
-  }
-
-  // Build result map
-  for (const [date, bucket] of Array.from(dateBuckets.entries())) {
-    result.set(date, {
-      osData: Array.from(bucket.osMap.entries())
-        .sort((a, b) => b[1] - a[1])
-        .map(([os, count]) => ({ os, count })),
-      deviceData: Array.from(bucket.deviceMap.entries())
-        .sort((a, b) => b[1] - a[1])
-        .map(([device, count]) => ({ device, count })),
-      pathData: Array.from(bucket.pathMap.entries())
-        .sort((a, b) => b[1] - a[1])
-        .slice(0, 30)
-        .map(([path, count]) => ({ path, count })),
-      projectData: Array.from(bucket.projectMap.entries())
-        .sort((a, b) => b[1] - a[1])
-        .map(([project, count]) => ({ project, count })),
-    });
   }
 
   return result;
 }
 
-// Legacy single-date aggregate fetch (kept for reference, use fetchAggregateStatsRange instead)
+// Legacy single-date aggregate fetch (kept for backward compat)
 export async function fetchAggregateStats(
   zoneId: string,
   token: string,
   date: string,
 ): Promise<AggregateStats> {
-  // Fall back to per-date for backward compat, but prefer range-based
-  const map = await fetchAggregateStatsRange(zoneId, token, date, date);
+  const map = await fetchAggregateStats1d(zoneId, token, [date]);
   return map.get(date) || { osData: [], deviceData: [], pathData: [], projectData: [] };
 }
 

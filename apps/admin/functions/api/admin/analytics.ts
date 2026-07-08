@@ -17,7 +17,7 @@ import {
   fetchDailyStats,
   fetchHourlyStats,
   fetchAggregateStats,
-  fetchAggregateStatsRange,
+  fetchAggregateStats1d,
   type DailyStats,
   type HourlyStats,
   type AggregateStats,
@@ -182,11 +182,10 @@ async function ensureDailyCFCache(env: Env, forceRefresh = false): Promise<void>
   // Single range-based aggregate stats fetch (paths, OS, device, project)
   // Much more efficient than 1 per-date call
   if (dailyStats.length > 0) {
-    const firstDate = dailyStats[0].date;
-    const lastDate = dailyStats[dailyStats.length - 1].date;
+    const aggDates = dailyStats.map((ds: { date: string }) => ds.date);
     try {
-      const aggMap = await fetchAggregateStatsRange(
-        zoneId, token, firstDate, lastDate
+      const aggMap = await fetchAggregateStats1d(
+        zoneId, token, aggDates
       );
       for (const [date, agg] of Array.from(aggMap.entries())) {
         try {
@@ -208,7 +207,7 @@ async function ensureDailyCFCache(env: Env, forceRefresh = false): Promise<void>
         }
       }
     } catch (err) {
-      console.error(`[analytics] fetchAggregateStatsRange failed:`, err);
+      console.error(`[analytics] fetchAggregateStats1d failed:`, err);
     }
   }
 }

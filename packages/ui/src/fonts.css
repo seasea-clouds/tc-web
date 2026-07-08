@@ -1,6 +1,7 @@
 /**
  * Self-hosted fonts — replaces Google Fonts external dependency.
- * Fonts are served from each app's /fonts/ directory.
+ * Fonts are served from the main site (sinotradecompliance.com) /fonts/ directory.
+ * Each sub-site also keeps copies in public/fonts/ for local development.
  *
  * Usage: import this file in your app's globals.css BEFORE @import "tailwindcss"
  *   @import "../../../../packages/ui/src/fonts.css";
@@ -11,7 +12,8 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('/fonts/Inter-400.ttf') format('truetype');
+  src: url('https://sinotradecompliance.com/fonts/Inter-400.ttf') format('truetype'),
+         url('/fonts/Inter-400.ttf') format('truetype');
 }
 
 @font-face {
@@ -19,7 +21,8 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url('/fonts/Inter-500.ttf') format('truetype');
+  src: url('https://sinotradecompliance.com/fonts/Inter-500.ttf') format('truetype'),
+         url('/fonts/Inter-500.ttf') format('truetype');
 }
 
 @font-face {
@@ -27,7 +30,8 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url('/fonts/Inter-600.ttf') format('truetype');
+  src: url('https://sinotradecompliance.com/fonts/Inter-600.ttf') format('truetype'),
+         url('/fonts/Inter-600.ttf') format('truetype');
 }
 
 @font-face {
@@ -35,7 +39,8 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url('/fonts/Inter-700.ttf') format('truetype');
+  src: url('https://sinotradecompliance.com/fonts/Inter-700.ttf') format('truetype'),
+         url('/fonts/Inter-700.ttf') format('truetype');
 }
 
 @font-face {
@@ -43,7 +48,8 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url('/fonts/Montserrat-600.ttf') format('truetype');
+  src: url('https://sinotradecompliance.com/fonts/Montserrat-600.ttf') format('truetype'),
+         url('/fonts/Montserrat-600.ttf') format('truetype');
 }
 
 @font-face {
@@ -51,7 +57,8 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url('/fonts/Montserrat-700.ttf') format('truetype');
+  src: url('https://sinotradecompliance.com/fonts/Montserrat-700.ttf') format('truetype'),
+         url('/fonts/Montserrat-700.ttf') format('truetype');
 }
 
 @font-face {
@@ -59,7 +66,8 @@
   font-style: normal;
   font-weight: 800;
   font-display: swap;
-  src: url('/fonts/Montserrat-800.ttf') format('truetype');
+  src: url('https://sinotradecompliance.com/fonts/Montserrat-800.ttf') format('truetype'),
+         url('/fonts/Montserrat-800.ttf') format('truetype');
 }
 
 /* Thai script support — Noto Sans Thai / Noto Serif Thai */
@@ -68,26 +76,30 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('/fonts/NotoSansThai-400.ttf') format('truetype');
+  src: url('https://sinotradecompliance.com/fonts/NotoSansThai-400.ttf') format('truetype'),
+         url('/fonts/NotoSansThai-400.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Noto Sans Thai';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url('/fonts/NotoSansThai-700.ttf') format('truetype');
+  src: url('https://sinotradecompliance.com/fonts/NotoSansThai-700.ttf') format('truetype'),
+         url('/fonts/NotoSansThai-700.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Noto Serif Thai';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('/fonts/NotoSerifThai-400.ttf') format('truetype');
+  src: url('https://sinotradecompliance.com/fonts/NotoSerifThai-400.ttf') format('truetype'),
+         url('/fonts/NotoSerifThai-400.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Noto Serif Thai';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url('/fonts/NotoSerifThai-700.ttf') format('truetype');
+  src: url('https://sinotradecompliance.com/fonts/NotoSerifThai-700.ttf') format('truetype'),
+         url('/fonts/NotoSerifThai-700.ttf') format('truetype');
 }

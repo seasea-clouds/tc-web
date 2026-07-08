@@ -14,7 +14,7 @@ export default function Regulations({ result }: { result: any }) {
             <span className={`mt-0.5 w-2 h-2 rounded-full flex-shrink-0 ${reg.relevance === 'primary' ? 'bg-red-500' : 'bg-amber-400'}`} />
             <div className="min-w-0">
               <p className="text-sm font-semibold text-gray-900">{reg.name}</p>
-              <p className="text-xs text-gray-500">{reg.number} | {reg.issuingAuthority} | Effective: {reg.effectiveDate}</p>
+              <p className="text-xs text-gray-500">{reg.number} | {reg.issuingAuthority} | {t('labelEffective')}: {reg.effectiveDate}</p>
               <p className="text-sm text-gray-600 mt-1">{reg.description}</p>
             </div>
           </div>

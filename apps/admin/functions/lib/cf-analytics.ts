@@ -240,7 +240,7 @@ export async function fetchHourlyStats(
 /**
  * Fetch page paths (and inferred project / OS / device) from CF adaptive groups.
  * Uses httpRequestsAdaptiveGroups with clientRequestPath dimension.
- * Sampling: ~67% with just path dimension and limit=500.
+ * Sampling: ~67% with just path dimension and limit=10000.
  */
 /**
  * Fetch aggregate stats (page paths, OS, device) using httpRequestsAdaptiveGroups
@@ -275,7 +275,7 @@ export async function fetchAggregateStatsRange(
           viewer {
             zones(filter: {zoneTag: "${zoneId}"}) {
               httpRequestsAdaptiveGroups(
-                limit: 500,
+                limit: 10000,
                 filter: {datetime_geq: "${date}T00:00:00Z", datetime_lt: "${date}T23:59:59Z"}
               ) {
                 dimensions { date clientRequestPath userAgentOS clientDeviceType }

@@ -18,7 +18,10 @@ export function buildT(locale: string = 'en', namespace: string = 'Check'): (key
   const cacheKey = `${locale}:${namespace}`;
   if (!CACHE[cacheKey]) {
     try {
-      const msgs = locale === 'en' || !locale ? enMsgs : require(`../../messages/${locale}.json`);
+      const msgs = locale === 'en' || !locale ? enMsgs : (() => {
+        // Use eval to hide require path from esbuild (prevents Worker bundle bloat)
+        try { return eval('require')('../../messages/' + locale + '.json'); } catch { return enMsgs; }
+      })();
       CACHE[cacheKey] = (msgs as Record<string, any>)?.[namespace] || {};
     } catch {
       CACHE[cacheKey] = CACHE[EN_CACHE_KEY] || EN_NS;

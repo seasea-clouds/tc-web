@@ -266,6 +266,16 @@ const IGNORE_FALLBACK_KEYS = new Set([
   'Check.cccCat_electronics_label', 'Check.nmpaCat_makeup_label',
   // French exemption: translation identical to English
   'Check.nmpaRiskNote_tests',
+  // Portal: brand names with Chinese parenthetical (platforms should not be translated)
+  'Check.cbChannel_jd',
+  'Check.cbChannel_tmall',
+  'Check.cbPlatform_jd_name',
+  'Check.cbPlatform_tmall_name',
+  // Portal: logistics/technical terms (include Chinese abbreviations)
+  'Check.cbLogistics_bbc_name',
+  // Portal: impact levels (kept as English in most languages)
+  'Check.cccHorizon_gbRev_impact',
+  'Check.nmpaHorizon_animalTest_impact',
 ]);
 
 // ============================================================
@@ -307,6 +317,11 @@ const IGNORE_FALLBACK_VALUES = new Set([
   '5-20%', '9-13%',
   // 通用缩写（所有语言保持英文）
   'TBD', 'N/A',
+  // Portal: impact levels (English loanwords)
+  'Medium',
+  // Portal: abbreviations that appear in non-latin residuals
+  'IEC',
+  'BBC',
 ]);
 
 const NUMBER_KEYS = new Set([
@@ -382,6 +397,9 @@ const SHARED_WORDS_ALL = new Set([
   'Home', 'Contact', 'Expertise', 'E-commerce',
   'Compliance Rate', 'Insights & Compliance Guides',
 ]);
+
+// add IEC, FOP, IoT to ENGLISH_RESIDUAL_ALLOW below
+// so that non-latin translations can keep these abbreviations
 
 // ============================================================
 // SHARED_WORDS_BY_LANG — 按语言豁免（英文借词/科学术语）
@@ -484,6 +502,8 @@ const ENGLISH_RESIDUAL_ALLOW = new Set([
   'New', 'Ground', 'Stone',
   'USA', 'Bottle', 'Box', 'Pouch',
   'need', 'only', 'what', 'you',
+  'IEC', 'FOP', 'IoT', 'BBC', 'Fta', 'Fda', 'Cfda',
+  'Digital', 'Front', 'Pack', 'Evidence', 'Record',
   'Cabernet', 'Sauvignon',
   'Self', 'Sinotrade',
   'Assistance', 'border',

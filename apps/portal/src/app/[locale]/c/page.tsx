@@ -51,7 +51,11 @@ export default function HomePage() {
   };
 
   const handleGetReport = () => {
-    window.location.href = subsiteHref('/');
+    // Scroll to tool cards section on the same page
+    const toolsSection = document.querySelector('main section:nth-of-type(2)');
+    if (toolsSection) {
+      toolsSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (

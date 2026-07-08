@@ -247,7 +247,8 @@ export async function onRequest(context: { request: Request; next: () => Promise
       const resp = await fetch(fwdUrl);
       if (resp.ok) {
         const h = sanitizeHeaders(resp.headers);
-        h.set('content-type', 'application/javascript');
+        if (url.pathname.endsWith('.js')) h.set('content-type', 'application/javascript');
+        else if (url.pathname.endsWith('.css')) h.set('content-type', 'text/css');
         return new Response(resp.body, { status: 200, headers: h });
       }
     }

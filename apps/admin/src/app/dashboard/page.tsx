@@ -89,6 +89,36 @@ export default function DashboardPage() {
 
   const formatHour = (h: number) => `${h.toString().padStart(2, "0")}:00`;
 
+// ── Page path to breadcrumb ──
+// Known segment names for breadcrumb display (en locale common segments)
+const SEGMENT_LABELS: Record<string, string> = {
+  'c': 'Compliance Check',
+  'report': 'Report',
+  'check': 'Self-Check',
+  'services': 'Services',
+  'blog': 'Blog',
+  'about': 'About',
+  'contact': 'Contact',
+  'pricing': 'Pricing',
+  'faq': 'FAQ',
+  'account': 'Account',
+  'login': 'Login',
+  'register': 'Register',
+  'subscription': 'Subscription',
+  'payments': 'Payments',
+};
+
+/** Parse a URL path into a breadcrumb-like segment array (locale-aware) */
+function pathToBreadcrumb(path: string): string {
+  const segs = path.replace(/\/+$/, '').split('/').filter(Boolean);
+  if (segs.length === 0) return 'Home';
+  // Skip locale prefix (en, zh, etc)
+  const skipLocale = segs.length > 0 && /^[a-z]{2}$/.test(segs[0]);
+  const bc = skipLocale ? segs.slice(1) : segs;
+  if (bc.length === 0) return 'Home';
+  return bc.map(s => SEGMENT_LABELS[s] || s.charAt(0).toUpperCase() + s.slice(1).replace(/[-_]/g, ' ')).join(' › ');
+}
+
   return (
     <div>
       {/* ── Top bar ── */}
@@ -461,18 +491,27 @@ export default function DashboardPage() {
 
           {/* ── 热门页面 (full-width row, top 30, filtered pages only) ── */}
           <div className="card" style={{ marginBottom: "1.5rem" }}>
-            <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "0.75rem" }}>热门页面</h3>
+            <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "0.5rem" }}>热门页面</h3>
             {(() => {
               const isRes = (p: string) => /\.(js|ttf|woff2?|css|png|jpe?g|gif|svg|ico|webp|json|map|txt|xml)(\?|$)/i.test(p) || p.startsWith('/_next/');
               const pages = _a.pageData.filter((p: any) => !isRes(p.path)).slice(0, 30);
               return pages.length > 0 ? (
                 <div>
+                  {/* Column headers */}
+                  <div style={{ display: "flex", padding: "0.3rem 0", fontSize: "0.7rem", fontWeight: 600, color: "#9ca3af", borderBottom: "1px solid #e5e7eb" }}>
+                    <span style={{ flex: "0 0 40%", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>页面路径</span>
+                    <span style={{ flex: "0 0 40%", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", paddingLeft: "0.5rem" }}>URL 路径</span>
+                    <span style={{ flex: "0 0 20%", textAlign: "right" }}>访问次数</span>
+                  </div>
                   {pages.map((p: any, i: number) => (
-                    <div key={p.path} style={{ display: "flex", justifyContent: "space-between", padding: "0.3rem 0", fontSize: "0.8rem", borderBottom: i < pages.length - 1 ? "1px solid #f3f4f6" : "none" }}>
-                      <div style={{ flex: 1, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
-                        <span style={{ color: "#374151" }}>{p.path}</span>
-                      </div>
-                      <span style={{ fontWeight: 600, color: "#1B365D", whiteSpace: "nowrap", marginLeft: "1rem" }}>{p.count}</span>
+                    <div key={p.path} style={{ display: "flex", alignItems: "center", padding: "0.3rem 0", fontSize: "0.8rem", borderBottom: i < pages.length - 1 ? "1px solid #f3f4f6" : "none" }}>
+                      <span style={{ flex: "0 0 40%", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", color: "#374151", fontSize: "0.75rem" }} title={pathToBreadcrumb(p.path)}>
+                        {pathToBreadcrumb(p.path)}
+                      </span>
+                      <span style={{ flex: "0 0 40%", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", color: "#6b7280", fontSize: "0.7rem", paddingLeft: "0.5rem" }} title={p.path}>
+                        {p.path}
+                      </span>
+                      <span style={{ flex: "0 0 20%", textAlign: "right", fontWeight: 600, color: "#1B365D", whiteSpace: "nowrap" }}>{p.count}</span>
                     </div>
                   ))}
                 </div>

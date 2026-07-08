@@ -17,7 +17,7 @@ import {
   fetchDailyStats,
   fetchHourlyStats,
   fetchAggregateStats,
-  fetchAggregateStats1d,
+  fetchAggregateStatsRange,
   type DailyStats,
   type HourlyStats,
   type AggregateStats,
@@ -104,8 +104,8 @@ function fillHourly(hourMap: Map<number, { pv: number; uv: number }>): { hour: n
  * Ensure CF daily stats are cached in D1 for all dates from last check to yesterday.
  * Also fetches aggregate stats (paths, OS, device, project) for each date.
  */
-async function ensureDailyCFCache(env: Env, forceRefresh = false): Promise<void> {
-  if (!hasConfig(env)) return;
+async function ensureDailyCFCache(env: Env, forceRefresh = false): Promise<string> {
+  if (!hasConfig(env)) return "";
 
   const zoneId = getZoneId(env);
   const token = getApiToken(env);
@@ -182,10 +182,11 @@ async function ensureDailyCFCache(env: Env, forceRefresh = false): Promise<void>
   // Single range-based aggregate stats fetch (paths, OS, device, project)
   // Much more efficient than 1 per-date call
   if (dailyStats.length > 0) {
-    const aggDates = dailyStats.map((ds: { date: string }) => ds.date);
+    const firstDate = dailyStats[0].date;
+    const lastDate = dailyStats[dailyStats.length - 1].date;
     try {
-      const aggMap = await fetchAggregateStats1d(
-        zoneId, token, aggDates
+      const aggMap = await fetchAggregateStatsRange(
+        zoneId, token, firstDate, lastDate
       );
       for (const [date, agg] of Array.from(aggMap.entries())) {
         try {
@@ -206,10 +207,12 @@ async function ensureDailyCFCache(env: Env, forceRefresh = false): Promise<void>
           console.error(`[analytics] agg update failed for ${date}:`, innerErr);
         }
       }
-    } catch (err) {
-      console.error(`[analytics] fetchAggregateStats1d failed:`, err);
+    } catch (err: any) {
+      console.error(`[analytics] fetchAggregateStatsRange failed:`, err);
+      return err.message || String(err);
     }
   }
+  return "";
 }
 
 /**
@@ -387,8 +390,9 @@ export async function onRequest(context: { request: Request; env: Env }) {
     await runMigration(context.env);
 
     // 2. Fetch missing data from CF (non-blocking — errors won't break the response)
+    let aggError = "";
     try {
-      await ensureDailyCFCache(context.env, forceRefresh);
+      aggError = await ensureDailyCFCache(context.env, forceRefresh);
     } catch (e) {
       console.error('[analytics] ensureDailyCFCache error:', e);
     }
@@ -416,7 +420,13 @@ export async function onRequest(context: { request: Request; env: Env }) {
       // For today, we only have hourly data. Path/geo data comes from historical daily rows.
       // Read the most recent daily row for distributions
       const dailyRows = await readDailyRange(context.env, pastStart, today);
-      const latestDaily = dailyRows[dailyRows.length - 1];
+      let latestDaily = dailyRows[dailyRows.length - 1];
+
+      // If no data for today, fall back to the most recent available row (yesterday)
+      if (!latestDaily) {
+        const allDaily = await readDailyRange(context.env, "2026-06-01", yesterdayUTC());
+        latestDaily = allDaily[allDaily.length - 1];
+      }
 
       // For geo, use the most recent daily page stat's geo_data
       let geoData: { country: string; count: number }[] = [];
@@ -427,7 +437,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
       let osData: any[] = [];
       let deviceData: any[] = [];
 
-      if (latestDaily && latestDaily.date < today) {
+      if (latestDaily) {
         geoData = safeJSON(latestDaily.geo_data, []);
         pageData = safeJSON(latestDaily.page_data, []);
         projectData = safeJSON(latestDaily.project_data, []);
@@ -537,7 +547,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
     return Response.json({
       allTimeTotal: allTimePV,
       allTimeUV: allTimeUV,
-      summary: {
+      aggError: aggError,      summary: {
         total: totalPV,
         uv: totalUV,
         today: hourlyRows.reduce((s, h) => s + (h.pv || 0), 0),

@@ -111,18 +111,13 @@ export async function fetchDailyStats(
 ): Promise<DailyStats[]> {
   if (!dates.length) return [];
 
-  // Build a union query for all dates
-  const dateFilters = dates
-    .map((d) => `{date: "${d}"}`)
-    .join(" OR ");
+  const startDate = dates[0];
+  const endDate = dates[dates.length - 1];
 
-  const query = `{
+  const q = `{
     viewer {
       zones(filter: {zoneTag: "${zoneId}"}) {
-        httpRequests1dGroups(
-          limit: ${dates.length},
-          filter: {date_gt: "${dates[0] === dates[dates.length-1] ? dates[0] : dateFilters}"}
-        ) {
+        httpRequests1dGroups(limit: 366, filter: {date_geq: "${startDate}", date_leq: "${endDate}"}) {
           dimensions { date }
           sum {
             pageViews requests bytes cachedRequests
@@ -136,73 +131,27 @@ export async function fetchDailyStats(
     }
   }`;
 
-  // Hmm, the filter needs to handle multiple dates. Let me use OR filter.
-  // Actually, let me just query one date at a time for reliability.
+  let groups: any[] = [];
+  try {
+    const data = await graphql(q, token);
+    groups = data?.viewer?.zones?.[0]?.httpRequests1dGroups || [];
+  } catch (err) {
+    console.error(`[cf-analytics] fetchDailyStats range query failed:`, err);
+    // Fall through with empty groups; fill zeros for all requested dates
+  }
+
+  // Build a map of date → group for easy lookup
+  const groupByDate = new Map<string, any>();
+  for (const g of groups) {
+    const d = g?.dimensions?.date;
+    if (d) groupByDate.set(d, g);
+  }
+
   const results: DailyStats[] = [];
   for (const date of dates) {
-    try {
-      const q = `{
-        viewer {
-          zones(filter: {zoneTag: "${zoneId}"}) {
-            httpRequests1dGroups(limit: 1, filter: {date: "${date}"}) {
-              dimensions { date }
-              sum {
-                pageViews requests bytes cachedRequests
-                countryMap { clientCountryName requests }
-                browserMap { uaBrowserFamily pageViews }
-                responseStatusMap { edgeResponseStatus requests }
-              }
-              uniq { uniques }
-            }
-          }
-        }
-      }`;
-
-      const data = await graphql(q, token);
-      const groups = data?.viewer?.zones?.[0]?.httpRequests1dGroups;
-      if (!groups || groups.length === 0) {
-        // No data for this date (future or no traffic)
-        results.push({
-          date,
-          pv: 0,
-          uv: 0,
-          requests: 0,
-          bytes: 0,
-          cachedRequests: 0,
-          countryMap: [],
-          browserMap: [],
-          statusCodeMap: [],
-        });
-        continue;
-      }
-
-      const g = groups[0];
-      const sum = g.sum || {};
-      const uniq = g.uniq || {};
-
-      results.push({
-        date,
-        pv: sum.pageViews || 0,
-        uv: uniq.uniques || 0,
-        requests: sum.requests || 0,
-        bytes: sum.bytes || 0,
-        cachedRequests: sum.cachedRequests || 0,
-        countryMap: (sum.countryMap || []).map((c: any) => ({
-          clientCountryName: c.clientCountryName || "",
-          requests: c.requests || 0,
-        })),
-        browserMap: (sum.browserMap || []).map((b: any) => ({
-          uaBrowserFamily: b.uaBrowserFamily || "",
-          pageViews: b.pageViews || 0,
-        })),
-        statusCodeMap: (sum.responseStatusMap || []).map((s: any) => ({
-          edgeResponseStatus: s.edgeResponseStatus || 0,
-          requests: s.requests || 0,
-        })),
-      });
-    } catch (err) {
-      // Log and return empty for this date (don't break the whole batch)
-      console.error(`[cf-analytics] fetchDailyStats failed for ${date}:`, err);
+    const g = groupByDate.get(date);
+    if (!g) {
+      // No data for this date
       results.push({
         date,
         pv: 0,
@@ -214,7 +163,32 @@ export async function fetchDailyStats(
         browserMap: [],
         statusCodeMap: [],
       });
+      continue;
     }
+
+    const sum = g.sum || {};
+    const uniq = g.uniq || {};
+
+    results.push({
+      date,
+      pv: sum.pageViews || 0,
+      uv: uniq.uniques || 0,
+      requests: sum.requests || 0,
+      bytes: sum.bytes || 0,
+      cachedRequests: sum.cachedRequests || 0,
+      countryMap: (sum.countryMap || []).map((c: any) => ({
+        clientCountryName: c.clientCountryName || "",
+        requests: c.requests || 0,
+      })),
+      browserMap: (sum.browserMap || []).map((b: any) => ({
+        uaBrowserFamily: b.uaBrowserFamily || "",
+        pageViews: b.pageViews || 0,
+      })),
+      statusCodeMap: (sum.responseStatusMap || []).map((s: any) => ({
+        edgeResponseStatus: s.edgeResponseStatus || 0,
+        requests: s.requests || 0,
+      })),
+    });
   }
 
   return results;
@@ -269,19 +243,29 @@ export async function fetchHourlyStats(
  * Sampling: ~67% with just path dimension and limit=500.
  */
 /**
- * Fetch aggregate stats (page paths, OS, device) using httpRequests1dGroups
- * (which works with the current token, unlike AdaptiveGroups).
- * Queries per-date in parallel with concurrency control.
+ * Fetch aggregate stats (page paths, OS, device) using httpRequestsAdaptiveGroups
+ * (one query per date — the dataset has a 1-day time range limit).
+ * Uses concurrency control (max 5 parallel requests) for efficiency.
  * Returns a Map<string, AggregateStats> keyed by date (YYYY-MM-DD).
  */
-export async function fetchAggregateStats1d(
+export async function fetchAggregateStatsRange(
   zoneId: string,
   token: string,
-  dates: string[],
+  startDate: string,
+  endDate: string,
 ): Promise<Map<string, AggregateStats>> {
   const result = new Map<string, AggregateStats>();
 
-  // Concurrency-limited parallel calls
+  // Build the date list
+  const start = new Date(startDate + "T00:00:00Z");
+  const end = new Date(endDate + "T00:00:00Z");
+  const dates: string[] = [];
+  for (const d = new Date(start); d <= end; d.setUTCDate(d.getUTCDate() + 1)) {
+    dates.push(d.toISOString().slice(0, 10));
+  }
+
+  if (dates.length === 0) return result;
+
   const CONCURRENCY = 5;
   for (let i = 0; i < dates.length; i += CONCURRENCY) {
     const batch = dates.slice(i, i + CONCURRENCY);
@@ -290,25 +274,37 @@ export async function fetchAggregateStats1d(
         const query = `{
           viewer {
             zones(filter: {zoneTag: "${zoneId}"}) {
-              httpRequests1dGroups(
+              httpRequestsAdaptiveGroups(
                 limit: 500,
-                filter: {date: "${date}"}
+                filter: {datetime_geq: "${date}T00:00:00Z", datetime_lt: "${date}T23:59:59Z"}
               ) {
                 dimensions { date clientRequestPath userAgentOS clientDeviceType }
-                sum { pageViews }
+                count
               }
             }
           }
         }`;
-        const data = await graphql(query, token);
-        const groups = data?.viewer?.zones?.[0]?.httpRequests1dGroups || [];
+        // Use direct fetch instead of graphql helper to match debug test pattern
+        const resp = await fetch("https://api.cloudflare.com/client/v4/graphql", {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ query }),
+        });
+        if (!resp.ok) {
+          throw new Error(`HTTP ${resp.status}: ${await resp.text().catch(() => "")}`);
+        }
+        const body = await resp.json();
+        const groups = body?.data?.viewer?.zones?.[0]?.httpRequestsAdaptiveGroups || [];
         return { date, groups };
       }),
     );
 
     for (const r of batchResults) {
       if (r.status === "rejected") {
-        console.error(`[cf-analytics] aggregate1d call failed:`, r.reason);
+        console.error(`[cf-analytics] aggregate per-date call failed:`, r.reason);
         continue;
       }
       const { date: d, groups } = r.value;
@@ -321,7 +317,7 @@ export async function fetchAggregateStats1d(
 
       for (const g of groups) {
         const dims = g.dimensions || {};
-        const cnt = g.sum?.pageViews || g.count || 0;
+        const cnt = g.count || 0;
 
         const path = dims.clientRequestPath || "";
         if (path) {
@@ -368,7 +364,7 @@ export async function fetchAggregateStats(
   token: string,
   date: string,
 ): Promise<AggregateStats> {
-  const map = await fetchAggregateStats1d(zoneId, token, [date]);
+  const map = await fetchAggregateStatsRange(zoneId, token, date, date);
   return map.get(date) || { osData: [], deviceData: [], pathData: [], projectData: [] };
 }
 

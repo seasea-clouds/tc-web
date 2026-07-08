@@ -189,10 +189,6 @@ export default function DashboardPage() {
               <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }}>累计 {stats.totalUsers}</div>
             </div>
             <div className="stat-card">
-              <div className="stat-value">{stats.totalUsers}</div>
-              <div className="stat-label">注册用户（累计）</div>
-            </div>
-            <div className="stat-card">
               <div className="stat-value">{stats.activeSubscriptions}</div>
               <div className="stat-label">活跃订阅</div>
             </div>

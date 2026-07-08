@@ -103,7 +103,7 @@ function fillHourly(hourMap: Map<number, { pv: number; uv: number }>): { hour: n
  * Ensure CF daily stats are cached in D1 for all dates from last check to yesterday.
  * Also fetches aggregate stats (paths, OS, device, project) for each date.
  */
-async function ensureDailyCFCache(env: Env): Promise<void> {
+async function ensureDailyCFCache(env: Env, forceRefresh = false): Promise<void> {
   if (!hasConfig(env)) return;
 
   const zoneId = getZoneId(env);
@@ -111,14 +111,19 @@ async function ensureDailyCFCache(env: Env): Promise<void> {
   const today = todayUTC();
   const yesterday = yesterdayUTC();
 
+  // On force refresh, delete all existing cf_api data and re-fetch from scratch
+  if (forceRefresh) {
+    await env.DB.prepare("DELETE FROM daily_page_stats WHERE source = 'cf_api'").run();
+  }
+
   // Find the last date that was fetched via CF
   const lastRow: any = await env.DB.prepare(
     "SELECT MAX(date) as lastDate FROM daily_page_stats WHERE source = 'cf_api'",
   ).first();
-  const lastFetched = lastRow?.lastDate || "2026-06-01";
+  const lastFetched = lastRow?.lastDate || (forceRefresh ? "2026-06-01" : "2026-06-01");
 
   // If today == lastFetched, no new daily data yet
-  if (lastFetched >= yesterday) return;
+  if (!forceRefresh && lastFetched >= yesterday) return;
 
   const missingDates = dateRange(lastFetched, yesterday);
   // Remove lastFetched itself (already have it)
@@ -198,13 +203,18 @@ async function ensureDailyCFCache(env: Env): Promise<void> {
  * Ensure today's hourly CF data is cached in D1.
  * Fetches any completed hours (before current UTC hour) that are missing.
  */
-async function ensureHourlyCFCache(env: Env): Promise<void> {
+async function ensureHourlyCFCache(env: Env, forceRefresh = false): Promise<void> {
   if (!hasConfig(env)) return;
 
   const zoneId = getZoneId(env);
   const token = getApiToken(env);
   const today = todayUTC();
   const currentHour = new Date().getUTCHours();
+
+  // On force refresh, clear existing hourly data
+  if (forceRefresh) {
+    await env.DB.prepare("DELETE FROM hourly_page_stats WHERE date = ?").bind(today).run();
+  }
 
   // Completed hours are 0 to currentHour-1
   if (currentHour < 1) return; // No completed hours yet
@@ -365,12 +375,12 @@ export async function onRequest(context: { request: Request; env: Env }) {
 
     // 2. Fetch missing data from CF (non-blocking — errors won't break the response)
     try {
-      await ensureDailyCFCache(context.env);
+      await ensureDailyCFCache(context.env, forceRefresh);
     } catch (e) {
       console.error('[analytics] ensureDailyCFCache error:', e);
     }
     try {
-      await ensureHourlyCFCache(context.env);
+      await ensureHourlyCFCache(context.env, forceRefresh);
     } catch (e) {
       console.error('[analytics] ensureHourlyCFCache error:', e);
     }

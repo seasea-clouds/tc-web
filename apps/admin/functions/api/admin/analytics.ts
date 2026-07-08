@@ -224,49 +224,62 @@ async function ensureHourlyCFCache(env: Env, forceRefresh = false): Promise<void
 
   const zoneId = getZoneId(env);
   const token = getApiToken(env);
-  const today = todayUTC();
-  const currentHour = new Date().getUTCHours();
 
-  // On force refresh, clear existing hourly data
+  // Use CST (UTC+8) for today's hourly data
+  const now = new Date();
+  const cstNow = new Date(now.getTime() + 8 * 3600 * 1000);
+  const cstDate = cstNow.toISOString().slice(0, 10);
+  const cstHour = cstNow.getUTCHours();
+
+  if (cstHour < 1) return;
+
   if (forceRefresh) {
-    await env.DB.prepare("DELETE FROM hourly_page_stats WHERE date = ?").bind(today).run();
+    await env.DB.prepare("DELETE FROM hourly_page_stats WHERE date = ?").bind(cstDate).run();
   }
 
-  // Completed hours are 0 to currentHour-1
-  if (currentHour < 1) return; // No completed hours yet
-
-  // Find which completed hours we already have
   const existing: any = await env.DB.prepare(
     "SELECT DISTINCT hour FROM hourly_page_stats WHERE date = ?",
-  )
-    .bind(today)
-    .all();
+  ).bind(cstDate).all();
   const existingHours = new Set<number>((existing.results || []).map((r: any) => r.hour));
 
   const missingHours: number[] = [];
-  for (let h = 0; h < currentHour; h++) {
+  for (let h = 0; h < cstHour; h++) {
     if (!existingHours.has(h)) missingHours.push(h);
   }
   if (missingHours.length === 0) return;
 
-  // Fetch from CF in one request
-  const startISO = formatISO(today, missingHours[0]);
-  const endHour = Math.max(...missingHours) + 1;
-  const endISO = formatISO(today, Math.min(endHour, 24));
+  // Convert missing CST hours to UTC date+hour for CF GraphQL queries
+  // CST h=0 = UTC (h+16)%24=16 of previous UTC day
+  // CST h=8 = UTC (h-8)=0 of same UTC day
+  const cstMidnightUTC = new Date(cstDate + "T00:00:00Z").getTime() - 8 * 3600 * 1000;
+  const prevUTC = new Date(cstMidnightUTC).toISOString().slice(0, 10);
 
-  try {
-    const hourlyStats = await fetchHourlyStats(zoneId, token, startISO, endISO);
+  const byUtcDate: Record<string, number[]> = {};
+  for (const h of missingHours) {
+    const utcHour = (h + 16) % 24;
+    const utcDate = h < 8 ? prevUTC : cstDate;
+    if (!byUtcDate[utcDate]) byUtcDate[utcDate] = [];
+    byUtcDate[utcDate].push(utcHour);
+  }
 
-    for (const hs of hourlyStats) {
-      await env.DB.prepare(
-        `INSERT OR REPLACE INTO hourly_page_stats (date, hour, pv, uv, requests)
-         VALUES (?, ?, ?, ?, ?)`,
-      )
-        .bind(hs.date, hs.hour, hs.pv, hs.uv, hs.requests)
-        .run();
+  for (const [utcDate, utcHours] of Object.entries(byUtcDate)) {
+    const startHour = Math.min(...utcHours);
+    const endHour = Math.min(Math.max(...utcHours) + 1, 24);
+    const startISO = formatISO(utcDate, startHour);
+    const endISO = formatISO(utcDate, endHour);
+
+    try {
+      const hourlyStats = await fetchHourlyStats(zoneId, token, startISO, endISO);
+      for (const hs of hourlyStats) {
+        const cstH = (hs.hour + 8) % 24;
+        await env.DB.prepare(
+          `INSERT OR REPLACE INTO hourly_page_stats (date, hour, pv, uv, requests)
+           VALUES (?, ?, ?, ?, ?)`,
+        ).bind(cstDate, cstH, hs.pv, hs.uv, hs.requests).run();
+      }
+    } catch (err) {
+      console.error(`[analytics] fetchHourlyStats failed for ${utcDate}:`, err);
     }
-  } catch (err) {
-    console.error(`[analytics] fetchHourlyStats failed:`, err);
   }
 }
 
@@ -362,6 +375,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
   let days: number;
   let pastStart: string;
   const today = todayUTC();
+  const cstToday = new Date(new Date().getTime() + 8 * 3600 * 1000).toISOString().slice(0, 10);
 
   if (customStart && customEnd) {
     // Custom date range
@@ -404,7 +418,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
 
     if (range === "today") {
       // ===== TODAY ONLY =====
-      const hourlyRows = await readTodayHourly(context.env, today);
+      const hourlyRows = await readTodayHourly(context.env, cstToday);
 
       // Build hourly map
       const hourlyMap = new Map<number, { pv: number; uv: number }>();
@@ -474,7 +488,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
 
     // ===== MULTI-DAY (7d/30d) =====
     const dailyRows = await readDailyRange(context.env, pastStart, today);
-    const hourlyRows = await readTodayHourly(context.env, today);
+    const hourlyRows = await readTodayHourly(context.env, cstToday);
 
     // Aggregate daily totals
     let totalPV = 0;

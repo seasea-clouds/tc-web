@@ -48,7 +48,7 @@ async function proxyToPortal(url: URL, request: Request, env?: Record<string, st
   if (accept.includes('text/html')) {
     const response = await fetch(upstreamUrl);
     const body = await response.text();
-    const patched = injectSearchWidget(ensureNextF(rewriteNextStatic(body, 'c')));
+    const patched = injectSearchWidget(ensureNextF(body));
     return new Response(patched, {
       status: response.status,
       statusText: response.statusText,
@@ -62,8 +62,13 @@ async function proxyToPortal(url: URL, request: Request, env?: Record<string, st
 // ─── Rewrite HTML: replace /_next/static/ with /{prefix}/_next/static/ ───
 
 function rewriteNextStatic(html: string, prefix: string): string {
-  // Rewrite _next/static/ → {prefix}/_next/static/
-  return html.replace(/\/_next\/static\//g, `/${prefix}/_next/static/`);
+  // Rewrite _next/static/ → {prefix}/_next/static/ ONLY in HTML attributes
+  // (src="...", href="..."), NOT inside inline <script> content.
+  // The RSC data inside inline scripts contains _next/static/chunks/... paths
+  // that must NOT be rewritten because the Turbopack runtime uses hardcoded
+  // /_next/ base paths for module resolution. Rewriting them causes chunk URL
+  // mismatch in registerChunk, breaking the module loading chain.
+  return html.replace(/((?:src|href)=")\/_next\/static\//g, `$1/${prefix}/_next/static/`);
 }
 
 // ─── Ensure __next_f exists before async modules attempt to consume it ──

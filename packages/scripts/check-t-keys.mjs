@@ -26,6 +26,7 @@ const LEGIT_SKIP = new Set([
   "Authorization", "Cookie", "T", "id", "limit", "offset", "script",
   // packages/ui locale keys (in separate locale files, not portal/en.json)
   "about", "address", "backToTop", "blog", "contact", "contactWhatsapp",
+  "freeCheckHeader",
   "disclaimer", "faq", "freeCheck", "hint", "home", "industries",
   "noResults", "packages", "placeholder", "quickLinks", "rights",
   "searching", "sendEmail", "services", "whatsapp", "logo",

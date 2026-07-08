@@ -573,7 +573,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
       hoursCovered: days,
       dailyData,
       geoData: geoData.slice(0, 20),
-      pageData: pageData.slice(0, 20),
+      pageData: pageData.slice(0, 30),
       channelData: [],
       projectData,
       browserData: mergeByKey(browserArrays, "browser", "pageViews"),

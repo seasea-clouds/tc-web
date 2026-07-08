@@ -92,20 +92,20 @@ export default function DashboardPage() {
 // ── Page path to breadcrumb ──
 // Known segment names for breadcrumb display (en locale common segments)
 const SEGMENT_LABELS: Record<string, string> = {
-  'c': 'Compliance Check',
-  'report': 'Report',
-  'check': 'Self-Check',
-  'services': 'Services',
-  'blog': 'Blog',
-  'about': 'About',
-  'contact': 'Contact',
-  'pricing': 'Pricing',
-  'faq': 'FAQ',
-  'account': 'Account',
-  'login': 'Login',
-  'register': 'Register',
-  'subscription': 'Subscription',
-  'payments': 'Payments',
+  'c': '合规自查',
+  'report': '报告',
+  'check': '自查工具',
+  'services': '服务',
+  'blog': '博客',
+  'about': '关于我们',
+  'contact': '联系方式',
+  'pricing': '定价',
+  'faq': '常见问题',
+  'account': '账户',
+  'login': '登录',
+  'register': '注册',
+  'subscription': '订阅',
+  'payments': '支付',
 };
 
 /** Parse a URL path into a breadcrumb-like segment array (locale-aware) */
@@ -493,7 +493,7 @@ function pathToBreadcrumb(path: string): string {
           <div className="card" style={{ marginBottom: "1.5rem" }}>
             <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "0.5rem" }}>热门页面</h3>
             {(() => {
-              const isRes = (p: string) => /\.(js|ttf|woff2?|css|png|jpe?g|gif|svg|ico|webp|json|map|txt|xml)(\?|$)/i.test(p) || p.startsWith('/_next/');
+              const isRes = (p: string) => /\.(js|ttf|woff2?|css|png|jpe?g|gif|svg|ico|webp|json|map|txt|xml|php|asp|aspx|jsp|cgi)(\?|$)/i.test(p) || p.startsWith('/_next/') || /\/(php_info|wp-|xmlrpc)\./.test(p);
               const pages = _a.pageData.filter((p: any) => !isRes(p.path)).slice(0, 30);
               return pages.length > 0 ? (
                 <div>

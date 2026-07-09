@@ -103,7 +103,7 @@ export function checkTrademark(input: any, locale?: string): any {
       { item: t("tmPost_watch_item"), frequency: t("tmPost_watch_frequency"), description: t("tmPost_watch_desc") },
     ],
     horizonScan: [
-      { topic: t("tmHorizon_lawRev_topic"), impact: t("tmHorizon_lawRev_impact"), timeframe: t("tmHorizon_lawRev_timeframe"), description: t("tmHorizon_lawRev_desc"), actionRequired: true },
+      { topic: t("tmHorizon_lawRev_topic"), impact: "high", timeframe: t("tmHorizon_lawRev_timeframe"), description: t("tmHorizon_lawRev_desc"), actionRequired: true },
     ],
   
   niceClasses: {

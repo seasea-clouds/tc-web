@@ -39,6 +39,7 @@ interface ReportLabels {
 interface ReportTemplateProps {
   reportId: string;
   module: string;
+  moduleKey?: string;
   locale?: string;
   labels: ReportLabels;
   productInfo: {

@@ -85,3 +85,11 @@ export function useT(namespace: string) {
 export function useTradeLocale(): string {
   return useContext(TradeTranslationCtx).locale;
 }
+
+/**
+ * Return the raw messages object for the current locale.
+ * Use this to inject data into external translation caches (e.g. buildT).
+ */
+export function useMessages(): Messages {
+  return useContext(TradeTranslationCtx).messages;
+}

@@ -51,11 +51,11 @@ export default function CrossborderCheckClient() {
           resultData: freeData,
           paymentStatus: 'completed',
           nextSteps: [
-            'Select target platform (Tmall Global/JD/Douyin)',
-            'Complete overseas merchant registration',
-            'Set up bonded warehouse (1210) or direct shipping (9610)',
-            'Configure three-document matching for customs',
-            'Launch store with compliant Chinese listings',
+            t('crossborderStep1'),
+            t('crossborderStep2'),
+            t('crossborderStep3'),
+            t('crossborderStep4'),
+            t('crossborderStep5'),
           ],
         }),
       }).catch(e => console.warn('D1 save failed:', e));

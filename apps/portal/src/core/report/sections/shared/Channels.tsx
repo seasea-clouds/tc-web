@@ -19,7 +19,7 @@ export default function Channels({ result }: { result: any }) {
               <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${
                 ch.suitability === 'high' ? 'bg-green-200 text-green-800' :
                 ch.suitability === 'medium' ? 'bg-amber-200 text-amber-800' : 'bg-gray-200 text-gray-600'
-              }`}>{ch.suitability.toUpperCase()}</span>
+              }`}>{t(ch.suitability === 'high' ? 'channelSuitabilityHigh' : ch.suitability === 'medium' ? 'channelSuitabilityMedium' : 'channelSuitabilityLow')}</span>
             </div>
             <p className="text-sm text-gray-600 mb-2">{ch.description}</p>
             <div className="grid grid-cols-2 gap-2 text-xs">

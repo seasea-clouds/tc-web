@@ -12,28 +12,45 @@ const CACHE: Record<string, Record<string, string>> = {};
 
 // Pre-cache English namespace on module load
 const EN_NS = (enMsgs as Record<string, any>)?.Check || {};
-const EN_CACHE_KEY = 'en:Check';
+const EN_CACHE_KEY = '***';
 CACHE[EN_CACHE_KEY] = EN_NS as Record<string, string>;
 
 export function buildT(locale: string = 'en', namespace: string = 'Check'): (key: string) => string {
   const cacheKey = `${locale}:${namespace}`;
-  if (!CACHE[cacheKey]) {
-    try {
-      // Direct require — Webpack will bundle all matched locale JSONs
-      const msgs = locale === 'en' || !locale ? enMsgs : require('../../messages/' + locale + '.json');
-      CACHE[cacheKey] = (msgs as Record<string, any>)?.[namespace] || {};
-    } catch {
-      CACHE[cacheKey] = CACHE[EN_CACHE_KEY] || EN_NS;
-    }
-  }
-  const ns = CACHE[cacheKey];
   const enNs = CACHE[EN_CACHE_KEY];
 
-  return (key: string) => {
-    const val = (ns as Record<string, string>)[key];
-    if (val) return val;
+  // Try to load the locale namespace once upfront
+  if (!CACHE[cacheKey] && locale !== 'en') {
+    try {
+      // Direct require — Webpack will bundle all matched locale JSONs
+      const msgs = require('../../messages/' + locale + '.json');
+      CACHE[cacheKey] = (msgs as Record<string, any>)?.[namespace] || {};
+    } catch {
+      // Ignore — locale chunk may not have loaded yet (deferred by Webpack chunk loading).
+      // Will retry on each t() call below instead of caching the English fallback permanently.
+    }
+  }
 
-    // P4: fallback to English if locale lacks the key
+  return (key: string) => {
+    let ns = CACHE[cacheKey];
+
+    // Retry loading the locale chunk if it wasn't ready on first attempt
+    if (!ns && locale !== 'en') {
+      try {
+        const msgs = require('../../messages/' + locale + '.json');
+        ns = (msgs as Record<string, any>)?.[namespace] || {};
+        CACHE[cacheKey] = ns; // cache for subsequent lookups
+      } catch {
+        // Still not available, fall through to English
+      }
+    }
+
+    if (ns) {
+      const val = (ns as Record<string, string>)[key];
+      if (val) return val;
+    }
+
+    // P4: fallback to English if locale lacks the key or chunk not yet loaded
     const enVal = enNs?.[key];
     if (enVal) {
       if (process.env.NODE_ENV === 'development') {

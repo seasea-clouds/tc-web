@@ -51,11 +51,11 @@ export default function TrademarkCheckClient() {
           resultData: freeData,
           paymentStatus: 'completed',
           nextSteps: [
-            'Conduct CNIPA trademark search in relevant Nice classes',
-            'File trademark via direct CNIPA filing (8-14 months)',
-            'Monitor 3-month opposition period',
-            'Register Customs IP recordal for border enforcement',
-            'Set up ongoing trademark monitoring',
+            t('trademarkStep1'),
+            t('trademarkStep2'),
+            t('trademarkStep3'),
+            t('trademarkStep4'),
+            t('trademarkStep5'),
           ],
         }),
       }).catch(e => console.warn('D1 save failed:', e));

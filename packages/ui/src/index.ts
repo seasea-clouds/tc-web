@@ -15,6 +15,7 @@ export {
   TradeTranslationProvider,
   useT,
   useTradeLocale,
+  useMessages,
 } from './TranslationProvider';
 export type { Messages } from './TranslationProvider';
 export { WHATSAPP_URL, BRAND_NAME, SITE_URL, LOCALES, DEFAULT_LOCALE, matchBrowserLanguage } from './constants';

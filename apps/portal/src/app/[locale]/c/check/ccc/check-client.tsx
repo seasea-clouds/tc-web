@@ -51,11 +51,11 @@ export default function CccCheckClient() {
           resultData: freeData,
           paymentStatus: 'completed',
           nextSteps: [
-            'Select a CNCA-accredited certification body for your product category',
-            'Submit product samples for type testing (Safety + EMC)',
-            'Prepare factory inspection documentation and QMS',
-            'Receive CCC certificate and mark authorization (4-6 months)',
-            'Maintain annual factory surveillance inspections',
+            t('cccStep1'),
+            t('cccStep2'),
+            t('cccStep3'),
+            t('cccStep4'),
+            t('cccStep5'),
           ],
         }),
       }).catch(e => console.warn('D1 save failed:', e));

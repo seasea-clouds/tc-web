@@ -49,11 +49,11 @@ export default function GaccCheckClient() {
           resultData: freeData,
           paymentStatus: 'completed',
           nextSteps: [
-            'Determine product category among 18 GACC-regulated categories',
-            'Register in CIFER system with CRA (Compliance Review Agent) assignment',
-            'Prepare all required documentation with professional Chinese translation',
-            'Complete label compliance review (GB 7718 / GB 28050) before printing',
-            'Submit GACC registration application and track 3-6 month review',
+            t('gaccStep1'),
+            t('gaccStep2'),
+            t('gaccStep3'),
+            t('gaccStep4'),
+            t('gaccStep5'),
           ],
         }),
       }).catch(e => console.warn('D1 save failed:', e));

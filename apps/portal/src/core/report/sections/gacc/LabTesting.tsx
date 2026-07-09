@@ -1,7 +1,7 @@
 'use client';
 import SectionTitle from '../../components/SectionTitle'
 import { useT } from '@trade/ui';
-import { localizeCost } from '../../localize';
+import { localizeCost, localizeTimeline } from '../../localize';
 export default function LabTesting({ result }: { result: any }) {
     const t = useT('ReportSection');
   if (!result.labTests?.length) return null
@@ -14,7 +14,7 @@ export default function LabTesting({ result }: { result: any }) {
         ))}
       </div>
       {result.testCostRange && <p className="text-sm text-gray-500">{'💰'} {t('labelCostRange')}: <strong className="text-gray-900">{localizeCost(t, result.testCostRange)}</strong></p>}
-      {result.labGuide && <p className="text-sm text-gray-600 mt-2">{localizeCost(t, result.labGuide)}</p>}
+      {result.labGuide && <p className="text-sm text-gray-600 mt-2">{localizeCost(t, localizeTimeline(t, result.labGuide))}</p>}
     </div>
   )
 }

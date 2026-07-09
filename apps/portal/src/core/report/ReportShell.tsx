@@ -255,7 +255,7 @@ export default function ReportShell(props: ReportShellProps) {
                         d.score >= 7 ? 'bg-red-400' : d.score >= 4 ? 'bg-amber-400' : 'bg-green-400'
                       }`} style={{width: pct + '%'}}></div>
                     </div>
-                    <p className="text-[8px] text-white/40 mt-1 line-clamp-2">{lt(d.note)}</p>
+                    <p className="text-[8px] text-white/40 mt-1 line-clamp-2">{lc(lt(d.note))}</p>
                   </div>
                 );
               })}

@@ -1,6 +1,6 @@
 {
   "Footer": {
-    "contact": "Contact",
+    "contact": "Nous contacter",
     "services": "Services",
     "gaccRegistration": "Enregistrement GACC",
     "labelCompliance": "Conformité des étiquettes chinoises",
@@ -44,7 +44,7 @@
     "logo": "SinoTrade Compliance",
     "home": "Accueil",
     "about": "À propos",
-    "services": "Prestations",
+    "services": "Services",
     "servicesDropdown": {
       "gacc": "Enregistrement des aliments GACC",
       "label": "Conformité des étiquettes chinoises",
@@ -55,7 +55,7 @@
     },
     "packages": "Forfaits",
     "faq": "Questions fréquentes",
-    "blog": "Connaissances",
+    "blog": "Articles",
     "contact": "Contactez-nous",
     "whatsapp": "WhatsApp",
     "quote": "Obtenez un devis",
@@ -88,7 +88,7 @@
     "dashboard": "Tableau de bord",
     "login": "Se connecter",
     "pricing": "Tarifs",
-    "register": "Registre",
+    "register": "S'inscrire",
     "report": "Rapport",
     "reports": "Rapports"
   },

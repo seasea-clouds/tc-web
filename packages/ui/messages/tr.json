@@ -55,7 +55,7 @@
     },
     "packages": "Paketler",
     "faq": "SSS",
-    "blog": "Blog",
+    "blog": "İçgörüler",
     "contact": "Bize Ulaşın",
     "whatsapp": "WhatsApp",
     "quote": "Teklif Al",
@@ -95,7 +95,7 @@
   "MobileTab": {
     "home": "Ana Sayfa",
     "services": "Hizmetler",
-    "blog": "Blog",
+    "blog": "İçgörüler",
     "check": "Kontrol"
   },
   "CTA": {

@@ -51,9 +51,10 @@ export default function Timeline({ result }: { result: any }) {
                   {p.responsible && (
                     <span className={`text-[10px] px-2 py-0.5 rounded font-medium ${
                       p.responsible === 'SinoTrade' ? 'bg-blue-100 text-blue-700' :
-                      p.responsible === 'Both' ? 'bg-purple-100 text-purple-700' : 'bg-amber-100 text-amber-700'
+                      p.responsible === 'Both' ? 'bg-purple-100 text-purple-700' :
+                      p.responsible === 'CNCA' ? 'bg-gray-100 text-gray-700' : 'bg-amber-100 text-amber-700'
                     }`}>
-                      {p.responsible === 'SinoTrade' ? "🤝 " + t("timelineWeHandle") : p.responsible === 'Both' ? "🔄 " + t("timelineJoint") : "📋 " + t("timelineClient")}
+                      {p.responsible === 'SinoTrade' ? "🤝 " + t("timelineWeHandle") : p.responsible === 'Both' ? "🔄 " + t("timelineJoint") : p.responsible === 'CNCA' ? '📋 CNCA' : "📋 " + t("timelineClient")}
                     </span>
                   )}
                   {(p.dependencies || []).map((dep: string, j: number) => (

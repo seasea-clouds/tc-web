@@ -35,7 +35,7 @@ export async function onRequest(context: { request: Request; env: any; params: {
         }
         
         // Parse product info from input_data
-        let productInfo = { name: '', category: '', hsCode: '', originCountry: '' };
+        let productInfo = { name: '', category: '', hsCode: '', originCountry: '', brandName: '' };
         if (row.input_data) {
           try {
             const inputData = JSON.parse(row.input_data);
@@ -44,6 +44,7 @@ export async function onRequest(context: { request: Request; env: any; params: {
               category: (inputData.category as string) || '',
               hsCode: (inputData.hsCode as string) || row.hs_code || '',
               originCountry: (inputData.originCountry as string) || row.origin_country || '',
+              brandName: (inputData.brandName as string) || '',
             };
           } catch {}
         }

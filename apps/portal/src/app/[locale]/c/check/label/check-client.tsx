@@ -7,7 +7,6 @@ import { checkLabel, CATEGORY_LABELS } from "../../../../../../modules/label/rul
 import { API_BASE } from "@/lib/constants";
 import { useFormValidation, inputClasses, selectClasses } from "@/lib/useFormValidation";
 import { usePathPrefix } from '@/lib/useSubsiteHref';
-import { initiateCheckout } from '@/lib/checkout';
 import { useSubscription } from '@/lib/useSubscription';
 
 type Step = "form" | "free-result";
@@ -34,103 +33,41 @@ export default function LabelCheckClient() {
 
   const pathPrefix = usePathPrefix();
   const handlePayment = async () => {
-    // If subscribed, skip checkout and go directly to the report page
-    if (subscribed) {
-      try {
-        localStorage.setItem('compli-report-input', JSON.stringify({
-          ...input,
-          productName: input.productName || t('yourProduct'),
-        }));
-      } catch {}
-      const reportId = `LABEL-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
-      if (freeData) {
-        fetch('/api/report/save', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            reportId,
-            module: 'Chinese Label Compliance',
-            inputData: input,
-            resultData: freeData,
-            paymentStatus: 'completed',
-          }),
-        }).catch(e => console.warn('D1 save failed (subscribed):', e));
-      }
-      window.location.href = pathPrefix + "/c/report/?id=" + reportId;
-      return;
-    }
     try {
-      const reportId = `LABEL-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
-
-      try {
-        localStorage.setItem('compli-report-input', JSON.stringify({
-          ...input,
-          productName: input.productName || t('yourProduct'),
-        }));
-      } catch {}
-
-      if (freeData) {
-        fetch('/api/report/save', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            reportId,
-            module: 'Chinese Label Compliance',
-            inputData: input,
-            resultData: freeData,
-            nextSteps: [
-              'Submit label artwork for GB 7718-2025 compliance audit',
-              'Receive compliant Chinese label design',
-              'Verify all 9 mandatory elements and nutrition panel',
-              'Obtain print-ready label files',
-              'Arrange customs clearance label support',
-            ],
-          }),
-        }).catch(e => console.warn('D1 save failed:', e));
-        
-        fetch('/api/report/generate-pdf', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ reportId, module: 'label', inputData: input }),
-        }).catch(e => console.warn('PDF generation skipped (dev mode):', e));
-      }
-
-      if (email) {
-        fetch('/api/report/send-email', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ reportId, email, module: 'label', inputData: input }),
-        }).catch(e => console.warn('Email send failed (dev mode):', e));
-      }
-
-      // 3. Try checkout API — redirect to Creem checkout
-      const checkoutUrl = await initiateCheckout({
-        reportId,
-        email,
-        locale,
+      localStorage.setItem('compli-report-input', JSON.stringify({
+        ...input,
         productName: input.productName || t('yourProduct'),
-        category: input.category,
-        originCountry: input.originCountry,
-        module: 'Chinese Label Compliance',
-        moduleKey: 'label',
-      });
-
-      if (checkoutUrl) {
-        window.location.href = checkoutUrl;
-      } else {
-        // Fallback: go to report page directly
-        window.location.href = pathPrefix + "/c/report/?id=" + reportId;
-      }
-    } catch (err) {
-      try {
-        localStorage.setItem('compli-report-input', JSON.stringify({
-          ...input,
-          productName: input.productName || t('yourProduct'),
-        }));
-      } catch {}
-      setError(String(err));
-      setLoading(false);
+      }));
+    } catch {}
+    const reportId = `LABEL-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
+    if (freeData) {
+      fetch('/api/report/save', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          reportId,
+          module: 'Chinese Label Compliance',
+          inputData: input,
+          resultData: freeData,
+          paymentStatus: 'completed',
+          nextSteps: [
+            'Submit label artwork for GB 7718-2025 compliance audit',
+            'Receive compliant Chinese label design',
+            'Verify all 9 mandatory elements and nutrition panel',
+            'Obtain print-ready label files',
+            'Arrange customs clearance label support',
+          ],
+        }),
+      }).catch(e => console.warn('D1 save failed:', e));
     }
+    if (email) {
+      fetch('/api/report/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ reportId, email, module: 'label', inputData: input }),
+      }).catch(e => console.warn('Email send failed:', e));
+    }
+    window.location.href = pathPrefix + "/c/report/?id=" + reportId;
   }
 
   // Helper to set input values
@@ -292,55 +229,30 @@ export default function LabelCheckClient() {
 
             {/* Payment Section */}
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sm:p-8 text-center space-y-4">
-              {subscribed ? (
-                <>
-                  <p className="text-lg font-semibold text-primary-navy">{t('subscribedViewReport')}</p>
-                  <p className="text-sm text-gray-500">{t('subscribedDesc')}</p>
-                  <div className="flex justify-center">
-                    <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
-                      <span>{t('subscribedBadge')}</span>
-                    </div>
-                  </div>
-                  {error && <p className="text-sm text-red-500">{error}</p>}
-                  <div className="flex justify-center">
-                    <button
-                      onClick={handlePayment}
-                      disabled={loading}
-                      className="w-full max-w-xs bg-gold hover:bg-gold/90 disabled:bg-gray-300 text-primary-navy font-semibold py-3 px-6 rounded-md transition-all text-lg"
-                    >
-                      {loading ? t('redirecting') : t('viewFullReport')}
-                    </button>
-                  </div>
-                </>
-              ) : (
-                <>
-                  <p className="text-lg font-semibold text-primary-navy">{t('paymentTitle')}</p>
-                  <p className="text-sm text-gray-500">{t('fullReportDesc')}</p>
+              <p className="text-lg font-semibold text-primary-navy">{t('viewFullReport')}</p>
+              <p className="text-sm text-gray-500">{t('fullReportDesc')}</p>
 
-                  <div className="max-w-xs mx-auto">
-                    <input
-                      type="email"
-                      placeholder={t("emailForPdf")}
-                      className="w-full border border-gray-300 rounded-md p-2.5 text-sm text-center"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                    />
-                  </div>
+              <div className="max-w-xs mx-auto">
+                <input
+                  type="email"
+                  placeholder={t("emailForPdf")}
+                  className="w-full border border-gray-300 rounded-md p-2.5 text-sm text-center"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
 
-                  {error && <p className="text-sm text-red-500">{error}</p>}
+              {error && <p className="text-sm text-red-500">{error}</p>}
 
-                  <div className="flex flex-col items-center gap-3">
-                    <button
-                      onClick={handlePayment}
-                      disabled={loading}
-                      className="w-full max-w-xs bg-gold hover:bg-gold/90 disabled:bg-gray-300 text-primary-navy font-semibold py-3 px-6 rounded-md transition-all text-lg"
-                    >
-                      {loading ? t('redirecting') : t('fullReport1')}
-                    </button>
-                    <p className="text-xs text-gray-400">{t('oneTimePayment')}</p>
-                  </div>
-                </>
-              )}
+              <div className="flex flex-col items-center gap-3">
+                <button
+                  onClick={handlePayment}
+                  disabled={loading}
+                  className="w-full max-w-xs bg-gold hover:bg-gold/90 disabled:bg-gray-300 text-primary-navy font-semibold py-3 px-6 rounded-md transition-all text-lg"
+                >
+                  {loading ? t('redirecting') : t('viewFullReport')}
+                </button>
+              </div>
             </div>
 
             {/* Expert CTA */}

@@ -220,13 +220,7 @@ export default function ReportPreviewPage() {
         labels={labels}
         productInfo={{ name: "Stone Ground Dark Chocolate", category: "Confectionery / Chocolate (HS 17.04, 18.06)", hsCode: "1806.32", originCountry: "USA" }}
         result={SAMPLE_RESULT}
-        nextSteps={[
-          "Contact SinoTrade Compliance for a detailed compliance assessment",
-          "Prepare required documentation",
-          "Submit GACC registration application",
-          "Design compliant Chinese label (GB 7718)",
-          "Arrange customs clearance support",
-        ]}
+        nextSteps={[tCheck('gaccStep1'), tCheck('gaccStep2'), tCheck('gaccStep3'), tCheck('gaccStep4'), tCheck('gaccStep5')]}
         generatedAt="2026-05-26T07:00:00.000Z"
       />
     </div>

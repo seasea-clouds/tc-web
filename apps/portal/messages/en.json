@@ -2350,7 +2350,10 @@
     "trademarkStep2": "File trademark via direct CNIPA filing (8-14 months)",
     "trademarkStep3": "Monitor 3-month opposition period",
     "trademarkStep4": "Register Customs IP recordal for border enforcement",
-    "trademarkStep5": "Set up ongoing trademark monitoring"
+    "trademarkStep5": "Set up ongoing trademark monitoring",
+    "tmMarket_recoHigh": "Urgent: file trademark application before market entry. Consider a comprehensive filing strategy covering core and adjacent classes with professional CNIPA representation.",
+    "tmMarket_recoLow": "Proactive trademark registration recommended to secure brand protection. File in relevant Nice classes with CNIPA.",
+    "perShipment": "per shipment"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",

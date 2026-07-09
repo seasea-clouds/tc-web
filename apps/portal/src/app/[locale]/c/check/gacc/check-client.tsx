@@ -1,8 +1,9 @@
 "use client";
 
-import { useT, useTradeLocale } from '@trade/ui';
-import { useState } from "react";
+import { useT, useTradeLocale, useMessages } from '@trade/ui';
+import { useState, useEffect } from "react";
 import { checkGacc, CATEGORY_LABELS, type GaccCategory, type GaccInput } from "../../../../../../modules/gacc/rules";
+import { setLocaleData } from '../../../../../../modules/shared/i18n';
 import { useFormValidation, inputClasses, selectClasses } from "@/lib/useFormValidation";
 import { usePathPrefix } from '@/lib/useSubsiteHref';
 import { useSubscription } from '@/lib/useSubscription';
@@ -12,6 +13,10 @@ type Step = "form" | "free-result";
 export default function GaccCheckClient() {
   const t = useT('Check');
   const locale = useTradeLocale();
+  const messages = useMessages();
+  useEffect(() => {
+    setLocaleData(locale, messages);
+  }, [locale, messages]);
   const [step, setStep] = useState<Step>("form");
   const [input, setInput] = useState<Partial<GaccInput>>({});
   const [email, setEmail] = useState("");

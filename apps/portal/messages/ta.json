@@ -2285,7 +2285,17 @@
     "gaccTimelineDep_sampleShipment": "மாதிரி ஏற்றுமதி ஏற்பாடு செய்யப்பட்டது",
     "perShipment": "கப்பலுக்கு",
     "tmMarket_recoHigh": "அவசரம்: சந்தை நுழைவதற்கு முன் வர்த்தக முத்திரை விண்ணப்பத்தை தாக்கல் செய்யவும்.",
-    "tmMarket_recoLow": "பிராண்ட் பாதுகாப்பைப் பாதுகாக்க செயலில் வர்த்தக முத்திரை பதிவு பரிந்துரைக்கப்படுகிறது."
+    "tmMarket_recoLow": "பிராண்ட் பாதுகாப்பைப் பாதுகாக்க செயலில் வர்த்தக முத்திரை பதிவு பரிந்துரைக்கப்படுகிறது.",
+    "gaccReg_ciferSystem_name": "CIFER அமைப்பு",
+    "gaccReg_ciferSystem_number": "சீனா இறக்குமதி உணவு நிறுவன பதிவு அமைப்பு",
+    "gaccReg_decree248_name": "GACC ஆணை 248",
+    "gaccReg_decree249_name": "GACC ஆணை 249",
+    "gaccReg_foodSafetyLaw_name": "சீனாவின் உணவு பாதுகாப்பு சட்டம்",
+    "regAuthority_gacc": "சுங்க பொது நிர்வாகம் (GACC)",
+    "regAuthority_nhc": "தேசிய சுகாதார ஆணையம் (NHC)",
+    "regAuthority_npc": "தேசிய மக்கள் காங்கிரஸ் (NPC)",
+    "tmReg_cnipaEdition_name": "CNIPA 2021 பதிப்பு",
+    "tmReg_revision_number": "4வது திருத்தம் 2019"
   },
   "Cookie": {
     "message": "இந்தத் தளம் அத்தியாவசிய அங்கீகார குக்கீகளை மட்டுமே பயன்படுத்துகிறது. கண்காணிப்பு அல்லது விளம்பர குக்கீகள் பயன்படுத்தப்படவில்லை.",

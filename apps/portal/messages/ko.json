@@ -2285,7 +2285,17 @@
     "gaccTimelineDep_sampleShipment": "샘플 배송 준비",
     "perShipment": "배송 당",
     "tmMarket_recoHigh": "긴급: 시장 진입 전에 상표 출원을 제출하세요.",
-    "tmMarket_recoLow": "브랜드 보호를 위해 적극적인 상표등록을 권장합니다."
+    "tmMarket_recoLow": "브랜드 보호를 위해 적극적인 상표등록을 권장합니다.",
+    "gaccReg_ciferSystem_name": "CIFER 시스템",
+    "gaccReg_ciferSystem_number": "중국수입식품기업등록제도",
+    "gaccReg_decree248_name": "GACC 법령 248",
+    "gaccReg_decree249_name": "GACC 법령 249",
+    "gaccReg_foodSafetyLaw_name": "중국식품안전법",
+    "regAuthority_gacc": "관세청(GACC)",
+    "regAuthority_nhc": "국민건강위원회(NHC)",
+    "regAuthority_npc": "전국인민대표대회(NPC)",
+    "tmReg_cnipaEdition_name": "CNIPA 2021 에디션",
+    "tmReg_revision_number": "2019년 4차 개정"
   },
   "Cookie": {
     "message": "이 사이트는 필수 인증 쿠키만을 사용합니다. 추적 또는 광고 쿠키는 사용되지 않습니다.",

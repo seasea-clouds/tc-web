@@ -2285,7 +2285,17 @@
     "gaccTimelineDep_sampleShipment": "Usafirishaji wa sampuli umepangwa",
     "perShipment": "kwa usafirishaji",
     "tmMarket_recoHigh": "Haraka: ombi la nembo ya biashara ya faili kabla ya kuingia sokoni.",
-    "tmMarket_recoLow": "Usajili thabiti wa chapa ya biashara unapendekezwa ili kupata ulinzi wa chapa."
+    "tmMarket_recoLow": "Usajili thabiti wa chapa ya biashara unapendekezwa ili kupata ulinzi wa chapa.",
+    "gaccReg_ciferSystem_name": "Mfumo wa CIFER",
+    "gaccReg_ciferSystem_number": "Mfumo wa Usajili wa Biashara ya Chakula nchini China",
+    "gaccReg_decree248_name": "Amri ya GACC 248",
+    "gaccReg_decree249_name": "Amri ya GACC 249",
+    "gaccReg_foodSafetyLaw_name": "Sheria ya Usalama wa Chakula ya Uchina",
+    "regAuthority_gacc": "Utawala Mkuu wa Forodha (GACC)",
+    "regAuthority_nhc": "Tume ya Taifa ya Afya (NHC)",
+    "regAuthority_npc": "Bunge la Taifa la Wananchi (NPC)",
+    "tmReg_cnipaEdition_name": "Toleo la CNIPA 2021",
+    "tmReg_revision_number": "Marekebisho ya 4 2019"
   },
   "Cookie": {
     "message": "Tovuti hii hutumia vidakuzi muhimu vya uthibitishaji pekee. Hakuna vidakuzi vya ufuatiliaji au utangazaji vinatumika.",

@@ -2285,7 +2285,17 @@
     "gaccTimelineDep_sampleShipment": "নমুনা চালান ব্যবস্থা করা হয়েছে",
     "perShipment": "চালান প্রতি",
     "tmMarket_recoHigh": "জরুরী: বাজারে প্রবেশের আগে ট্রেডমার্ক আবেদন ফাইল করুন।",
-    "tmMarket_recoLow": "ব্র্যান্ড সুরক্ষা সুরক্ষিত করার জন্য সক্রিয় ট্রেডমার্ক নিবন্ধন সুপারিশ করা হয়েছে।"
+    "tmMarket_recoLow": "ব্র্যান্ড সুরক্ষা সুরক্ষিত করার জন্য সক্রিয় ট্রেডমার্ক নিবন্ধন সুপারিশ করা হয়েছে।",
+    "gaccReg_ciferSystem_name": "CIFER সিস্টেম",
+    "gaccReg_ciferSystem_number": "চীন আমদানি খাদ্য এন্টারপ্রাইজ রেজিস্ট্রেশন সিস্টেম",
+    "gaccReg_decree248_name": "GACC ডিক্রি 248",
+    "gaccReg_decree249_name": "GACC ডিক্রি 249",
+    "gaccReg_foodSafetyLaw_name": "চীনের খাদ্য নিরাপত্তা আইন",
+    "regAuthority_gacc": "কাস্টমসের সাধারণ প্রশাসন (GACC)",
+    "regAuthority_nhc": "জাতীয় স্বাস্থ্য কমিশন (NHC)",
+    "regAuthority_npc": "ন্যাশনাল পিপলস কংগ্রেস (NPC)",
+    "tmReg_cnipaEdition_name": "CNIPA 2021 সংস্করণ",
+    "tmReg_revision_number": "৪র্থ রিভিশন ২০১৯"
   },
   "Cookie": {
     "message": "এই সাইটটি শুধুমাত্র প্রয়োজনীয় প্রমাণীকরণ কুকি ব্যবহার করে। কোন ট্র্যাকিং বা বিজ্ঞাপন কুকি ব্যবহার করা হয় না.",

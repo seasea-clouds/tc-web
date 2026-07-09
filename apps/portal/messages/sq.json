@@ -2285,7 +2285,17 @@
     "gaccTimelineDep_sampleShipment": "Dërgesa e mostrës është rregulluar",
     "perShipment": "për dërgesë",
     "tmMarket_recoHigh": "Urgjente: paraqisni aplikacionin për markë tregtare përpara hyrjes në treg.",
-    "tmMarket_recoLow": "Rekomandohet regjistrim proaktiv i markës tregtare për të siguruar mbrojtjen e markës."
+    "tmMarket_recoLow": "Rekomandohet regjistrim proaktiv i markës tregtare për të siguruar mbrojtjen e markës.",
+    "gaccReg_ciferSystem_name": "Sistemi CIFER",
+    "gaccReg_ciferSystem_number": "Sistemi i regjistrimit të ndërmarrjeve ushqimore të importit në Kinë",
+    "gaccReg_decree248_name": "Dekreti 248 i GACC",
+    "gaccReg_decree249_name": "Dekreti 249 i GACC",
+    "gaccReg_foodSafetyLaw_name": "Ligji për Sigurinë Ushqimore të Kinës",
+    "regAuthority_gacc": "Administrata e Përgjithshme e Doganave (GACC)",
+    "regAuthority_nhc": "Komisioni Kombëtar i Shëndetësisë (NHC)",
+    "regAuthority_npc": "Kongresi Popullor Kombëtar (NPC)",
+    "tmReg_cnipaEdition_name": "Botim CNIPA 2021",
+    "tmReg_revision_number": "Rishikimi i 4-të 2019"
   },
   "Cookie": {
     "message": "Ky sajt përdor vetëm cookie thelbësore të vërtetimit. Nuk përdoren skedarë gjurmimi ose reklamimi.",

@@ -2285,7 +2285,17 @@
     "gaccTimelineDep_sampleShipment": "Dogovorjena pošiljka vzorcev",
     "perShipment": "na pošiljko",
     "tmMarket_recoHigh": "Nujno: vložite prijavo znamke pred vstopom na trg. Razmislite o celoviti strategiji arhiviranja, ki zajema jedro in sosednje razrede s strokovnim zastopanjem CNIPA.",
-    "tmMarket_recoLow": "Priporočena proaktivna registracija blagovne znamke za zaščito blagovne znamke. Vložite v ustrezne razrede Nice pri CNIPA."
+    "tmMarket_recoLow": "Priporočena proaktivna registracija blagovne znamke za zaščito blagovne znamke. Vložite v ustrezne razrede Nice pri CNIPA.",
+    "gaccReg_ciferSystem_name": "Sistem CIFER",
+    "gaccReg_ciferSystem_number": "Sistem registracije kitajskih uvoznih živilskih podjetij",
+    "gaccReg_decree248_name": "Odlok GACC 248",
+    "gaccReg_decree249_name": "Odlok GACC 249",
+    "gaccReg_foodSafetyLaw_name": "Kitajski zakon o varnosti hrane",
+    "regAuthority_gacc": "Generalna carinska uprava (GACC)",
+    "regAuthority_nhc": "Nacionalna zdravstvena komisija (NHC)",
+    "regAuthority_npc": "Nacionalni ljudski kongres (NPC)",
+    "tmReg_cnipaEdition_name": "Izdaja CNIPA 2021",
+    "tmReg_revision_number": "4. revizija 2019"
   },
   "Cookie": {
     "message": "To spletno mesto uporablja samo bistvene piškotke za preverjanje pristnosti. Piškotki za sledenje ali oglaševanje se ne uporabljajo.",

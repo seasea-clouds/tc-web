@@ -2285,7 +2285,17 @@
     "gaccTimelineDep_sampleShipment": "Enviament de mostres organitzat",
     "perShipment": "per enviament",
     "tmMarket_recoHigh": "Urgent: presentar la sol·licitud de marca abans de l'entrada al mercat.",
-    "tmMarket_recoLow": "Es recomana el registre proactiu de la marca per garantir la protecció de la marca."
+    "tmMarket_recoLow": "Es recomana el registre proactiu de la marca per garantir la protecció de la marca.",
+    "gaccReg_ciferSystem_name": "Sistema CIFER",
+    "gaccReg_ciferSystem_number": "Sistema de registre d'empreses alimentaries d'importació de la Xina",
+    "gaccReg_decree248_name": "Decret GACC 248",
+    "gaccReg_decree249_name": "Decret GACC 249",
+    "gaccReg_foodSafetyLaw_name": "Llei de seguretat alimentària de la Xina",
+    "regAuthority_gacc": "Administració General de Duanes (GACC)",
+    "regAuthority_nhc": "Comissió Nacional de Salut (NHC)",
+    "regAuthority_npc": "Congrés Nacional del Poble (NPC)",
+    "tmReg_cnipaEdition_name": "Edició CNIPA 2021",
+    "tmReg_revision_number": "4a revisió 2019"
   },
   "Cookie": {
     "message": "Aquest lloc només utilitza cookies d'autenticació essencials. No s'utilitzen cookies de seguiment ni de publicitat.",

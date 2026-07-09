@@ -2285,7 +2285,17 @@
     "gaccTimelineDep_sampleShipment": "サンプル出荷手配済み",
     "perShipment": "出荷ごとに",
     "tmMarket_recoHigh": "緊急: 市場参入前に商標出願を行ってください。",
-    "tmMarket_recoLow": "ブランド保護を確保するには、積極的な商標登録を推奨します。"
+    "tmMarket_recoLow": "ブランド保護を確保するには、積極的な商標登録を推奨します。",
+    "gaccReg_ciferSystem_name": "CIFERシステム",
+    "gaccReg_ciferSystem_number": "中国輸入食品企業登録制度",
+    "gaccReg_decree248_name": "GACC 法令 248",
+    "gaccReg_decree249_name": "GACC 法令 249",
+    "gaccReg_foodSafetyLaw_name": "中国の食品安全法",
+    "regAuthority_gacc": "税関総局 (GACC)",
+    "regAuthority_nhc": "国家衛生健康委員会 (NHC)",
+    "regAuthority_npc": "全国人民代表大会（全人代）",
+    "tmReg_cnipaEdition_name": "CNIPA 2021 年版",
+    "tmReg_revision_number": "2019 年第 4 版改訂"
   },
   "Cookie": {
     "message": "このサイトでは、必須の認証 Cookie のみを使用します。追跡クッキーや広告クッキーは使用されません。",

@@ -2285,7 +2285,17 @@
     "gaccTimelineDep_sampleShipment": "Expedierea probei a fost aranjată",
     "perShipment": "per transport",
     "tmMarket_recoHigh": "Urgent: depuneți cererea de marcă înainte de intrarea pe piață.",
-    "tmMarket_recoLow": "Se recomandă înregistrarea proactivă a mărcii pentru a asigura protecția mărcii."
+    "tmMarket_recoLow": "Se recomandă înregistrarea proactivă a mărcii pentru a asigura protecția mărcii.",
+    "gaccReg_ciferSystem_name": "Sistemul CIFER",
+    "gaccReg_ciferSystem_number": "Sistemul de înregistrare a întreprinderilor alimentare de import din China",
+    "gaccReg_decree248_name": "Decretul GACC 248",
+    "gaccReg_decree249_name": "Decretul GACC 249",
+    "gaccReg_foodSafetyLaw_name": "Legea privind siguranța alimentelor din China",
+    "regAuthority_gacc": "Administrația Generală a Vămilor (GACC)",
+    "regAuthority_nhc": "Comisia Națională de Sănătate (NHC)",
+    "regAuthority_npc": "Congresul Național al Poporului (NPC)",
+    "tmReg_cnipaEdition_name": "Ediția CNIPA 2021",
+    "tmReg_revision_number": "A patra revizuire 2019"
   },
   "Cookie": {
     "message": "Acest site folosește numai cookie-uri de autentificare esențiale. Nu sunt utilizate cookie-uri de urmărire sau de publicitate.",

@@ -2353,7 +2353,17 @@
     "trademarkStep5": "Set up ongoing trademark monitoring",
     "tmMarket_recoHigh": "Urgent: file trademark application before market entry. Consider a comprehensive filing strategy covering core and adjacent classes with professional CNIPA representation.",
     "tmMarket_recoLow": "Proactive trademark registration recommended to secure brand protection. File in relevant Nice classes with CNIPA.",
-    "perShipment": "per shipment"
+    "perShipment": "per shipment",
+    "gaccReg_decree248_name": "GACC Decree 248",
+    "gaccReg_decree249_name": "GACC Decree 249",
+    "gaccReg_foodSafetyLaw_name": "Food Safety Law of China",
+    "gaccReg_ciferSystem_name": "CIFER System",
+    "gaccReg_ciferSystem_number": "China Import Food Enterprise Registration System",
+    "regAuthority_gacc": "General Administration of Customs (GACC)",
+    "regAuthority_npc": "National People's Congress (NPC)",
+    "regAuthority_nhc": "National Health Commission (NHC)",
+    "tmReg_cnipaEdition_name": "CNIPA 2021 Edition",
+    "tmReg_revision_number": "4th Revision 2019"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",

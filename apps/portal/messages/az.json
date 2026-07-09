@@ -2285,7 +2285,17 @@
     "gaccTimelineDep_sampleShipment": "Nümunə göndərilməsi təşkil edilmişdir",
     "perShipment": "göndərmə başına",
     "tmMarket_recoHigh": "Təcili: bazara daxil olmamışdan əvvəl ticarət nişanı ərizəsi faylı. Professional CNIPA təmsilçiliyi ilə əsas və bitişik sinifləri əhatə edən hərtərəfli sənədləşdirmə strategiyasını nəzərdən keçirin.",
-    "tmMarket_recoLow": "Brendin qorunmasını təmin etmək üçün proaktiv ticarət nişanının qeydiyyatı tövsiyə olunur. CNIPA ilə müvafiq Nice siniflərində fayl."
+    "tmMarket_recoLow": "Brendin qorunmasını təmin etmək üçün proaktiv ticarət nişanının qeydiyyatı tövsiyə olunur. CNIPA ilə müvafiq Nice siniflərində fayl.",
+    "gaccReg_ciferSystem_name": "CIFER sistemi",
+    "gaccReg_ciferSystem_number": "Çin İdxal Qida Müəssisəsinin Qeydiyyat Sistemi",
+    "gaccReg_decree248_name": "GACC Fərmanı 248",
+    "gaccReg_decree249_name": "GACC Fərmanı 249",
+    "gaccReg_foodSafetyLaw_name": "Çin Qida Təhlükəsizliyi Qanunu",
+    "regAuthority_gacc": "Baş Gömrük İdarəsi (GACC)",
+    "regAuthority_nhc": "Milli Səhiyyə Komissiyası (NHC)",
+    "regAuthority_npc": "Milli Xalq Konqresi (NPC)",
+    "tmReg_cnipaEdition_name": "CNIPA 2021 Buraxılışı",
+    "tmReg_revision_number": "4-cü Baxış 2019"
   },
   "Cookie": {
     "message": "Bu sayt yalnız əsas autentifikasiya kukilərindən istifadə edir. Heç bir izləmə və ya reklam kukilərindən istifadə edilmir.",

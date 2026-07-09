@@ -2285,7 +2285,17 @@
     "gaccTimelineDep_sampleShipment": "Prøveforsendelse arrangeret",
     "perShipment": "per forsendelse",
     "tmMarket_recoHigh": "Haster: indsend varemærkeansøgning før markedsadgang.",
-    "tmMarket_recoLow": "Proaktiv varemærkeregistrering anbefales for at sikre varemærkebeskyttelse."
+    "tmMarket_recoLow": "Proaktiv varemærkeregistrering anbefales for at sikre varemærkebeskyttelse.",
+    "gaccReg_ciferSystem_name": "CIFER System",
+    "gaccReg_ciferSystem_number": "Kina Import Food Enterprise Registration System",
+    "gaccReg_decree248_name": "GACC-dekret 248",
+    "gaccReg_decree249_name": "GACC-dekret 249",
+    "gaccReg_foodSafetyLaw_name": "Fødevaresikkerhedsloven i Kina",
+    "regAuthority_gacc": "General Administration of Customs (GACC)",
+    "regAuthority_nhc": "National Health Commission (NHC)",
+    "regAuthority_npc": "National People's Congress (NPC)",
+    "tmReg_cnipaEdition_name": "CNIPA 2021 udgave",
+    "tmReg_revision_number": "4. revision 2019"
   },
   "Cookie": {
     "message": "Dette websted bruger kun vigtige autentificeringscookies. Der bruges ingen sporings- eller reklamecookies.",

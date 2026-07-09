@@ -2285,7 +2285,17 @@
     "gaccTimelineDep_sampleShipment": "Dogovorena isporuka uzoraka",
     "perShipment": "po pošiljci",
     "tmMarket_recoHigh": "Hitno: podnesite prijavu žiga prije ulaska na tržište.",
-    "tmMarket_recoLow": "Preporučuje se proaktivna registracija robne marke kako bi se osigurala zaštita marke."
+    "tmMarket_recoLow": "Preporučuje se proaktivna registracija robne marke kako bi se osigurala zaštita marke.",
+    "gaccReg_ciferSystem_name": "Sustav CIFER",
+    "gaccReg_ciferSystem_number": "Sustav registracije poduzeća za uvoz hrane iz Kine",
+    "gaccReg_decree248_name": "GACC Dekret 248",
+    "gaccReg_decree249_name": "GACC Dekret 249",
+    "gaccReg_foodSafetyLaw_name": "Kineski zakon o sigurnosti hrane",
+    "regAuthority_gacc": "Opća carinska uprava (GACC)",
+    "regAuthority_nhc": "Nacionalna zdravstvena komisija (NHC)",
+    "regAuthority_npc": "Nacionalni narodni kongres (NPC)",
+    "tmReg_cnipaEdition_name": "Izdanje CNIPA 2021",
+    "tmReg_revision_number": "4. revizija 2019"
   },
   "Cookie": {
     "message": "Ova stranica koristi samo bitne kolačiće za provjeru autentičnosti. Ne koriste se kolačići za praćenje ili oglašavanje.",

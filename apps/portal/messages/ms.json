@@ -2285,7 +2285,17 @@
     "gaccTimelineDep_sampleShipment": "Penghantaran sampel diatur",
     "perShipment": "setiap penghantaran",
     "tmMarket_recoHigh": "Urgent: failkan permohonan tanda dagangan sebelum kemasukan pasaran.",
-    "tmMarket_recoLow": "Pendaftaran tanda dagangan proaktif disyorkan untuk mendapatkan perlindungan jenama."
+    "tmMarket_recoLow": "Pendaftaran tanda dagangan proaktif disyorkan untuk mendapatkan perlindungan jenama.",
+    "gaccReg_ciferSystem_name": "Sistem CIFER",
+    "gaccReg_ciferSystem_number": "Sistem Pendaftaran Perusahaan Makanan Import China",
+    "gaccReg_decree248_name": "Dekri GACC 248",
+    "gaccReg_decree249_name": "Dekri GACC 249",
+    "gaccReg_foodSafetyLaw_name": "Undang-undang Keselamatan Makanan China",
+    "regAuthority_gacc": "Pentadbiran Am Kastam (GACC)",
+    "regAuthority_nhc": "Suruhanjaya Kesihatan Kebangsaan (NHC)",
+    "regAuthority_npc": "Kongres Rakyat Kebangsaan (NPC)",
+    "tmReg_cnipaEdition_name": "CNIPA Edisi 2021",
+    "tmReg_revision_number": "Semakan ke-4 2019"
   },
   "Cookie": {
     "message": "Tapak ini hanya menggunakan kuki pengesahan penting. Tiada kuki penjejakan atau pengiklanan digunakan.",

@@ -2285,7 +2285,17 @@
     "gaccTimelineDep_sampleShipment": "Lô hàng mẫu được sắp xếp",
     "perShipment": "mỗi lô hàng",
     "tmMarket_recoHigh": "Khẩn cấp: nộp đơn đăng ký nhãn hiệu trước khi gia nhập thị trường.",
-    "tmMarket_recoLow": "Khuyến khích đăng ký nhãn hiệu chủ động để đảm bảo bảo vệ thương hiệu."
+    "tmMarket_recoLow": "Khuyến khích đăng ký nhãn hiệu chủ động để đảm bảo bảo vệ thương hiệu.",
+    "gaccReg_ciferSystem_name": "Hệ thống CIFER",
+    "gaccReg_ciferSystem_number": "Hệ thống đăng ký doanh nghiệp thực phẩm nhập khẩu Trung Quốc",
+    "gaccReg_decree248_name": "Nghị định GACC 248",
+    "gaccReg_decree249_name": "Nghị định GACC 249",
+    "gaccReg_foodSafetyLaw_name": "Luật an toàn thực phẩm của Trung Quốc",
+    "regAuthority_gacc": "Tổng cục Hải quan (GACC)",
+    "regAuthority_nhc": "Ủy ban Y tế Quốc gia (NHC)",
+    "regAuthority_npc": "Đại hội đại biểu nhân dân toàn quốc (NPC)",
+    "tmReg_cnipaEdition_name": "Phiên bản CNIPA 2021",
+    "tmReg_revision_number": "Sửa đổi lần thứ 4 năm 2019"
   },
   "Cookie": {
     "message": "Trang web này chỉ sử dụng cookie xác thực cần thiết. Không sử dụng cookie theo dõi hoặc quảng cáo.",

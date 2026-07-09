@@ -2285,7 +2285,17 @@
     "gaccTimelineDep_sampleShipment": "Provleverans ordnad",
     "perShipment": "per försändelse",
     "tmMarket_recoHigh": "Brådskande: lämna in varumärkesansökan innan marknadsinträde. Överväg en omfattande arkiveringsstrategi som täcker kärnklasser och angränsande klasser med professionell CNIPA-representation.",
-    "tmMarket_recoLow": "Proaktiv varumärkesregistrering rekommenderas för att säkerställa varumärkesskydd. Fila i relevanta Nice-klasser med CNIPA."
+    "tmMarket_recoLow": "Proaktiv varumärkesregistrering rekommenderas för att säkerställa varumärkesskydd. Fila i relevanta Nice-klasser med CNIPA.",
+    "gaccReg_ciferSystem_name": "CIFER-system",
+    "gaccReg_ciferSystem_number": "Kina Import Food Enterprise Registration System",
+    "gaccReg_decree248_name": "GACC-dekret 248",
+    "gaccReg_decree249_name": "GACC-dekret 249",
+    "gaccReg_foodSafetyLaw_name": "Kinas livsmedelssäkerhetslag",
+    "regAuthority_gacc": "General Administration of Customs (GACC)",
+    "regAuthority_nhc": "National Health Commission (NHC)",
+    "regAuthority_npc": "National People's Congress (NPC)",
+    "tmReg_cnipaEdition_name": "CNIPA 2021 Edition",
+    "tmReg_revision_number": "4:e revisionen 2019"
   },
   "Cookie": {
     "message": "Denna webbplats använder endast viktiga autentiseringscookies. Inga spårnings- eller reklamcookies används.",

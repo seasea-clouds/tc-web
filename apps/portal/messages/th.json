@@ -2285,7 +2285,17 @@
     "gaccTimelineDep_sampleShipment": "จัดส่งตัวอย่าง",
     "perShipment": "ต่อการจัดส่ง",
     "tmMarket_recoHigh": "ด่วน : ยื่นคำขอจดทะเบียนเครื่องหมายการค้าก่อนเข้าตลาด",
-    "tmMarket_recoLow": "แนะนำให้จดทะเบียนเครื่องหมายการค้าเชิงรุกเพื่อปกป้องแบรนด์"
+    "tmMarket_recoLow": "แนะนำให้จดทะเบียนเครื่องหมายการค้าเชิงรุกเพื่อปกป้องแบรนด์",
+    "gaccReg_ciferSystem_name": "ระบบไซเฟอร์",
+    "gaccReg_ciferSystem_number": "ระบบจดทะเบียนวิสาหกิจอาหารนำเข้าของจีน",
+    "gaccReg_decree248_name": "กฤษฎีกา GACC 248",
+    "gaccReg_decree249_name": "กฤษฎีกา GACC 249",
+    "gaccReg_foodSafetyLaw_name": "กฎหมายความปลอดภัยด้านอาหารของจีน",
+    "regAuthority_gacc": "การบริหารงานศุลกากรทั่วไป (GACC)",
+    "regAuthority_nhc": "คณะกรรมการสุขภาพแห่งชาติ (สสช.)",
+    "regAuthority_npc": "สภาประชาชนแห่งชาติ (นปช.)",
+    "tmReg_cnipaEdition_name": "CNIPA ฉบับปี 2021",
+    "tmReg_revision_number": "ฉบับแก้ไขครั้งที่ 4 ปี 2019"
   },
   "Cookie": {
     "message": "ไซต์นี้ใช้คุกกี้การรับรองความถูกต้องที่จำเป็นเท่านั้น ไม่มีการใช้คุกกี้การติดตามหรือการโฆษณา",

@@ -2285,7 +2285,17 @@
     "gaccTimelineDep_sampleShipment": "Örnek sevkiyat düzenlendi",
     "perShipment": "gönderi başına",
     "tmMarket_recoHigh": "Acil: Pazara girmeden önce ticari marka başvurusunda bulunun.",
-    "tmMarket_recoLow": "Marka korumasını güvence altına almak için proaktif ticari marka tescili önerilir."
+    "tmMarket_recoLow": "Marka korumasını güvence altına almak için proaktif ticari marka tescili önerilir.",
+    "gaccReg_ciferSystem_name": "CIFER Sistemi",
+    "gaccReg_ciferSystem_number": "Çin İthalat Gıda İşletme Kayıt Sistemi",
+    "gaccReg_decree248_name": "GACC Kararnamesi 248",
+    "gaccReg_decree249_name": "GACC Kararnamesi 249",
+    "gaccReg_foodSafetyLaw_name": "Çin Gıda Güvenliği Kanunu",
+    "regAuthority_gacc": "Gümrük Genel İdaresi (GACC)",
+    "regAuthority_nhc": "Ulusal Sağlık Komisyonu (NHC)",
+    "regAuthority_npc": "Ulusal Halk Kongresi (NPC)",
+    "tmReg_cnipaEdition_name": "CNIPA 2021 Sürümü",
+    "tmReg_revision_number": "4. Revizyon 2019"
   },
   "Cookie": {
     "message": "Bu site yalnızca gerekli kimlik doğrulama çerezlerini kullanır. Hiçbir izleme veya reklam çerezi kullanılmaz.",

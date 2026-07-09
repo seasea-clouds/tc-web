@@ -2285,7 +2285,17 @@
     "gaccTimelineDep_sampleShipment": "نمونے کی ترسیل کا اہتمام کیا گیا ہے۔",
     "perShipment": "فی کھیپ",
     "tmMarket_recoHigh": "فوری: مارکیٹ میں داخلے سے پہلے ٹریڈ مارک کی درخواست فائل کریں۔",
-    "tmMarket_recoLow": "برانڈ کے تحفظ کو محفوظ بنانے کے لیے فعال ٹریڈ مارک رجسٹریشن کی سفارش کی جاتی ہے۔"
+    "tmMarket_recoLow": "برانڈ کے تحفظ کو محفوظ بنانے کے لیے فعال ٹریڈ مارک رجسٹریشن کی سفارش کی جاتی ہے۔",
+    "gaccReg_ciferSystem_name": "CIFER سسٹم",
+    "gaccReg_ciferSystem_number": "چائنا امپورٹ فوڈ انٹرپرائز رجسٹریشن سسٹم",
+    "gaccReg_decree248_name": "GACC کا فرمان 248",
+    "gaccReg_decree249_name": "GACC کا فرمان 249",
+    "gaccReg_foodSafetyLaw_name": "چین کا فوڈ سیفٹی قانون",
+    "regAuthority_gacc": "کسٹمز کی جنرل ایڈمنسٹریشن (GACC)",
+    "regAuthority_nhc": "نیشنل ہیلتھ کمیشن (NHC)",
+    "regAuthority_npc": "نیشنل پیپلز کانگریس (NPC)",
+    "tmReg_cnipaEdition_name": "CNIPA 2021 ایڈیشن",
+    "tmReg_revision_number": "چوتھی نظرثانی 2019"
   },
   "Cookie": {
     "message": "یہ سائٹ صرف ضروری تصدیقی کوکیز استعمال کرتی ہے۔ کوئی ٹریکنگ یا اشتہاری کوکیز استعمال نہیں کی جاتی ہیں۔",

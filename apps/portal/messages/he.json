@@ -2285,7 +2285,17 @@
     "gaccTimelineDep_sampleShipment": "משלוח לדוגמא מסודר",
     "perShipment": "לכל משלוח",
     "tmMarket_recoHigh": "דחוף: הגש בקשה לסימן מסחר לפני הכניסה לשוק. שקול אסטרטגיית הגשה מקיפה המכסה הליבה והשיעורים הסמוכים עם ייצוג CNIPA מקצועי.",
-    "tmMarket_recoLow": "מומלץ לרשום סימן מסחר יזום כדי להבטיח הגנה על המותג. קובץ בשיעורי Nice רלוונטיים עם CNIPA."
+    "tmMarket_recoLow": "מומלץ לרשום סימן מסחר יזום כדי להבטיח הגנה על המותג. קובץ בשיעורי Nice רלוונטיים עם CNIPA.",
+    "gaccReg_ciferSystem_name": "מערכת CIFER",
+    "gaccReg_ciferSystem_number": "מערכת רישום ארגוני מזון ייבוא ​​סין",
+    "gaccReg_decree248_name": "צו GACC 248",
+    "gaccReg_decree249_name": "צו GACC 249",
+    "gaccReg_foodSafetyLaw_name": "חוק בטיחות המזון של סין",
+    "regAuthority_gacc": "מינהל מכס כללי (GACC)",
+    "regAuthority_nhc": "נציבות הבריאות הלאומית (NHC)",
+    "regAuthority_npc": "הקונגרס הלאומי העממי (NPC)",
+    "tmReg_cnipaEdition_name": "מהדורת CNIPA 2021",
+    "tmReg_revision_number": "הגרסה הרביעית 2019"
   },
   "Cookie": {
     "message": "אתר זה משתמש רק בעוגיות אימות חיוניות. לא נעשה שימוש בעוגיות מעקב או פרסום.",

@@ -2285,7 +2285,17 @@
     "gaccTimelineDep_sampleShipment": "Pengiriman sampel diatur",
     "perShipment": "per pengiriman",
     "tmMarket_recoHigh": "Mendesak: ajukan permohonan merek dagang sebelum memasuki pasar.",
-    "tmMarket_recoLow": "Pendaftaran merek dagang proaktif direkomendasikan untuk mengamankan perlindungan merek."
+    "tmMarket_recoLow": "Pendaftaran merek dagang proaktif direkomendasikan untuk mengamankan perlindungan merek.",
+    "gaccReg_ciferSystem_name": "Sistem CIFER",
+    "gaccReg_ciferSystem_number": "Sistem Registrasi Perusahaan Makanan Impor China",
+    "gaccReg_decree248_name": "Keputusan GACC 248",
+    "gaccReg_decree249_name": "Keputusan GACC 249",
+    "gaccReg_foodSafetyLaw_name": "Hukum Keamanan Pangan Tiongkok",
+    "regAuthority_gacc": "Administrasi Umum Kepabeanan (GACC)",
+    "regAuthority_nhc": "Komisi Kesehatan Nasional (NHC)",
+    "regAuthority_npc": "Kongres Rakyat Nasional (NPC)",
+    "tmReg_cnipaEdition_name": "CNIPA Edisi 2021",
+    "tmReg_revision_number": "Revisi ke-4 2019"
   },
   "Cookie": {
     "message": "Situs ini hanya menggunakan cookie otentikasi penting. Tidak ada cookie pelacakan atau iklan yang digunakan.",

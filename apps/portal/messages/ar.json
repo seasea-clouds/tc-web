@@ -2285,7 +2285,17 @@
     "gaccTimelineDep_sampleShipment": "ترتيب شحنة العينة",
     "perShipment": "لكل شحنة",
     "tmMarket_recoHigh": "عاجل: قم بتقديم طلب العلامة التجارية قبل دخول السوق.",
-    "tmMarket_recoLow": "يوصى بالتسجيل الاستباقي للعلامات التجارية لتأمين حماية العلامة التجارية."
+    "tmMarket_recoLow": "يوصى بالتسجيل الاستباقي للعلامات التجارية لتأمين حماية العلامة التجارية.",
+    "gaccReg_ciferSystem_name": "نظام سيفر",
+    "gaccReg_ciferSystem_number": "نظام تسجيل شركات استيراد الأغذية في الصين",
+    "gaccReg_decree248_name": "قرار الهيئة العامة للطيران المدني رقم 248",
+    "gaccReg_decree249_name": "قرار الهيئة العامة للطيران المدني رقم 249",
+    "gaccReg_foodSafetyLaw_name": "قانون سلامة الأغذية في الصين",
+    "regAuthority_gacc": "الإدارة العامة للجمارك (GACC)",
+    "regAuthority_nhc": "لجنة الصحة الوطنية (NHC)",
+    "regAuthority_npc": "المؤتمر الشعبي الوطني (NPC)",
+    "tmReg_cnipaEdition_name": "إصدار CNIPA 2021",
+    "tmReg_revision_number": "المراجعة الرابعة 2019"
   },
   "Cookie": {
     "message": "يستخدم هذا الموقع ملفات تعريف الارتباط الأساسية فقط. لا يتم استخدام ملفات تعريف الارتباط للتتبع أو الإعلانات.",

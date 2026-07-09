@@ -2285,7 +2285,17 @@
     "gaccTimelineDep_sampleShipment": "Vzorová zásielka dohodnutá",
     "perShipment": "na zásielku",
     "tmMarket_recoHigh": "Naliehavé: podajte prihlášku ochrannej známky pred vstupom na trh. Zvážte komplexnú stratégiu registrácie zahŕňajúcu základné a priľahlé triedy s profesionálnym zastúpením CNIPA.",
-    "tmMarket_recoLow": "Odporúča sa proaktívna registrácia ochrannej známky na zabezpečenie ochrany značky. Zaraďte do príslušných tried Nice s CNIPA."
+    "tmMarket_recoLow": "Odporúča sa proaktívna registrácia ochrannej známky na zabezpečenie ochrany značky. Zaraďte do príslušných tried Nice s CNIPA.",
+    "gaccReg_ciferSystem_name": "Systém CIFER",
+    "gaccReg_ciferSystem_number": "Čínsky systém registrácie potravinárskych podnikov",
+    "gaccReg_decree248_name": "Vyhláška GACC 248",
+    "gaccReg_decree249_name": "Vyhláška GACC 249",
+    "gaccReg_foodSafetyLaw_name": "Čínsky zákon o bezpečnosti potravín",
+    "regAuthority_gacc": "Všeobecná colná správa (GACC)",
+    "regAuthority_nhc": "Národná zdravotná komisia (NHC)",
+    "regAuthority_npc": "Národný ľudový kongres (NPC)",
+    "tmReg_cnipaEdition_name": "Vydanie CNIPA 2021",
+    "tmReg_revision_number": "4. revízia 2019"
   },
   "Cookie": {
     "message": "Táto stránka používa iba nevyhnutné overovacie súbory cookie. Nepoužívajú sa žiadne sledovacie ani reklamné súbory cookie.",

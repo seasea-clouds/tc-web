@@ -2285,7 +2285,17 @@
     "gaccTimelineDep_sampleShipment": "Організовано відправлення зразків",
     "perShipment": "за відправлення",
     "tmMarket_recoHigh": "Терміново: подати заявку на торговельну марку до виходу на ринок.",
-    "tmMarket_recoLow": "Рекомендується профілактична реєстрація торгової марки для захисту бренду."
+    "tmMarket_recoLow": "Рекомендується профілактична реєстрація торгової марки для захисту бренду.",
+    "gaccReg_ciferSystem_name": "Система CIFER",
+    "gaccReg_ciferSystem_number": "Китайська система реєстрації імпортних харчових підприємств",
+    "gaccReg_decree248_name": "Указ GACC 248",
+    "gaccReg_decree249_name": "Указ GACC 249",
+    "gaccReg_foodSafetyLaw_name": "Закон Китаю про безпечність харчових продуктів",
+    "regAuthority_gacc": "Головне митне управління (GACC)",
+    "regAuthority_nhc": "Національна комісія охорони здоров'я (NHC)",
+    "regAuthority_npc": "Національні збори народних представників (ВСНП)",
+    "tmReg_cnipaEdition_name": "Видання CNIPA 2021",
+    "tmReg_revision_number": "4-й перегляд 2019"
   },
   "Cookie": {
     "message": "Цей сайт використовує лише необхідні файли cookie для автентифікації. Файли cookie для відстеження чи реклами не використовуються.",

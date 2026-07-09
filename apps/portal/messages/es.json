@@ -2285,7 +2285,17 @@
     "gaccTimelineDep_sampleShipment": "Envío de muestra organizado",
     "perShipment": "por envío",
     "tmMarket_recoHigh": "Urgente: presentar solicitud de marca antes de la entrada al mercado.",
-    "tmMarket_recoLow": "Se recomienda el registro proactivo de la marca para garantizar la protección de la marca."
+    "tmMarket_recoLow": "Se recomienda el registro proactivo de la marca para garantizar la protección de la marca.",
+    "gaccReg_ciferSystem_name": "Sistema CIFER",
+    "gaccReg_ciferSystem_number": "Sistema de registro de empresas importadas de alimentos de China",
+    "gaccReg_decree248_name": "Decreto GACC 248",
+    "gaccReg_decree249_name": "Decreto GACC 249",
+    "gaccReg_foodSafetyLaw_name": "Ley de seguridad alimentaria de China",
+    "regAuthority_gacc": "Administración General de Aduanas (GACC)",
+    "regAuthority_nhc": "Comisión Nacional de Salud (NHC)",
+    "regAuthority_npc": "Congreso Nacional del Pueblo (APN)",
+    "tmReg_cnipaEdition_name": "CNIPA Edición 2021",
+    "tmReg_revision_number": "4ta Revisión 2019"
   },
   "Cookie": {
     "message": "Este sitio utiliza sólo cookies de autenticación esenciales. No se utilizan cookies de seguimiento ni publicidad.",

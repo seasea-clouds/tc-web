@@ -2285,7 +2285,17 @@
     "gaccTimelineDep_sampleShipment": "Expédition d'échantillon arrangée",
     "perShipment": "par envoi",
     "tmMarket_recoHigh": "Urgent: déposer une demande de marque avant l'entrée sur le marché. Envisager une stratégie de dépôt complète couvrant les classes principales et adjacentes avec une représentation professionnelle de la CNIPA.",
-    "tmMarket_recoLow": "Enregistrement proactif de la marque recommandé pour garantir la protection de la marque. Déposer dans les classes Nice pertinentes avec CNIPA."
+    "tmMarket_recoLow": "Enregistrement proactif de la marque recommandé pour garantir la protection de la marque. Déposer dans les classes Nice pertinentes avec CNIPA.",
+    "gaccReg_ciferSystem_name": "Système CIFER",
+    "gaccReg_ciferSystem_number": "Système d'Enregistrement des Entreprises Alimentaires d'Importation en Chine",
+    "gaccReg_decree248_name": "Décret 248 du GACC",
+    "gaccReg_decree249_name": "Décret 249 du GACC",
+    "gaccReg_foodSafetyLaw_name": "Loi sur la Sécurité alimentaire de la Chine",
+    "regAuthority_gacc": "Administration Générale des Douanes (GACC)",
+    "regAuthority_nhc": "Commission Nationale de la Santé (NHC)",
+    "regAuthority_npc": "Assemblée Populaire nationale (APN)",
+    "tmReg_cnipaEdition_name": "Édition 2021 du CNIPA",
+    "tmReg_revision_number": "4ème révision 2019"
   },
   "Cookie": {
     "message": "Ce site utilise uniquement des cookies d'authentification essentiels. Aucun cookie de suivi ou publicitaire n'est utilisé.",

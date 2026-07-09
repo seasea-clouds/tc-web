@@ -2285,7 +2285,17 @@
     "gaccTimelineDep_sampleShipment": "නියැදි නැව්ගත කිරීම සංවිධානය කර ඇත",
     "perShipment": "නැව්ගත කිරීම සඳහා",
     "tmMarket_recoHigh": "හදිසි: වෙළඳපොළට ඇතුල් වීමට පෙර වෙළඳ ලකුණු අයදුම්පත ගොනු කරන්න. වෘත්තීය CNIPA නියෝජනය සහිත මූලික සහ යාබද පන්ති ආවරණය වන පරිදි පුළුල් ගොනු කිරීමේ උපාය මාර්ගයක් සලකා බලන්න.",
-    "tmMarket_recoLow": "සන්නාම ආරක්ෂාව සුරක්ෂිත කිරීම සඳහා ක්‍රියාශීලී වෙළඳ ලකුණු ලියාපදිංචි කිරීම නිර්දේශ කෙරේ. CNIPA සමඟ අදාළ Nice පන්තිවල ගොනු කරන්න."
+    "tmMarket_recoLow": "සන්නාම ආරක්ෂාව සුරක්ෂිත කිරීම සඳහා ක්‍රියාශීලී වෙළඳ ලකුණු ලියාපදිංචි කිරීම නිර්දේශ කෙරේ. CNIPA සමඟ අදාළ Nice පන්තිවල ගොනු කරන්න.",
+    "gaccReg_ciferSystem_name": "CIFER පද්ධතිය",
+    "gaccReg_ciferSystem_number": "China Import Food Enterprise Registration System",
+    "gaccReg_decree248_name": "GACC නියෝගය 248",
+    "gaccReg_decree249_name": "GACC ආඥාව 249",
+    "gaccReg_foodSafetyLaw_name": "චීනයේ ආහාර සුරක්ෂිතතා නීතිය",
+    "regAuthority_gacc": "රේගු සාමාන්‍ය පරිපාලනය (GACC)",
+    "regAuthority_nhc": "ජාතික සෞඛ්‍ය කොමිසම (NHC)",
+    "regAuthority_npc": "ජාතික මහජන කොංග්‍රසය (NPC)",
+    "tmReg_cnipaEdition_name": "CNIPA 2021 සංස්කරණය",
+    "tmReg_revision_number": "4 වන සංශෝධනය 2019"
   },
   "Cookie": {
     "message": "මෙම වෙබ් අඩවිය අත්‍යවශ්‍ය සත්‍යාපන කුකීස් පමණක් භාවිතා කරයි. ලුහුබැඳීම හෝ ප්‍රචාරණ කුකීස් භාවිතා නොකෙරේ.",

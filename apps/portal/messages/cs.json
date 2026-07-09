@@ -2285,7 +2285,17 @@
     "gaccTimelineDep_sampleShipment": "Vzorová zásilka zajištěna",
     "perShipment": "na zásilku",
     "tmMarket_recoHigh": "Naléhavé: podejte přihlášku ochranné známky před vstupem na trh. Zvažte komplexní strategii evidence zahrnující základní a přilehlé třídy s profesionálním zastoupením CNIPA.",
-    "tmMarket_recoLow": "Pro zajištění ochrany značky se doporučuje proaktivní registrace ochranné známky. Zapište se do příslušných tříd Nice u CNIPA."
+    "tmMarket_recoLow": "Pro zajištění ochrany značky se doporučuje proaktivní registrace ochranné známky. Zapište se do příslušných tříd Nice u CNIPA.",
+    "gaccReg_ciferSystem_name": "Systém CIFER",
+    "gaccReg_ciferSystem_number": "Čínský systém registrace potravinářských podniků",
+    "gaccReg_decree248_name": "Vyhláška GACC 248",
+    "gaccReg_decree249_name": "Vyhláška GACC 249",
+    "gaccReg_foodSafetyLaw_name": "Čínský zákon o bezpečnosti potravin",
+    "regAuthority_gacc": "Generální celní správa (GACC)",
+    "regAuthority_nhc": "Národní zdravotní komise (NHC)",
+    "regAuthority_npc": "Národní lidový kongres (NPC)",
+    "tmReg_cnipaEdition_name": "Vydání CNIPA 2021",
+    "tmReg_revision_number": "4. revize 2019"
   },
   "Cookie": {
     "message": "Tento web používá pouze nezbytné ověřovací soubory cookie. Nejsou používány žádné sledovací ani reklamní soubory cookie.",

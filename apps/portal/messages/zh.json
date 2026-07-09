@@ -2285,7 +2285,17 @@
     "gaccTimelineDep_sampleShipment": "已安排样品发货",
     "tmMarket_recoHigh": "紧急：在进入市场之前提交商标申请。",
     "tmMarket_recoLow": "建议积极主动进行商标注册，以确保品牌保护。",
-    "perShipment": "每批货物"
+    "perShipment": "每批货物",
+    "gaccReg_ciferSystem_name": "CIFER系统",
+    "gaccReg_ciferSystem_number": "中国进口食品企业备案系统",
+    "gaccReg_decree248_name": "海关总署第 248 号法令",
+    "gaccReg_decree249_name": "海关总署第 249 号法令",
+    "gaccReg_foodSafetyLaw_name": "中华人民共和国食品安全法",
+    "regAuthority_gacc": "海关总署 (GACC)",
+    "regAuthority_nhc": "国家卫生健康委员会",
+    "regAuthority_npc": "全国人民代表大会（NPC）",
+    "tmReg_cnipaEdition_name": "中国国家知识产权局2021年版",
+    "tmReg_revision_number": "2019 年第四次修订"
   },
   "Cookie": {
     "message": "本网站仅使用必要的身份验证Cookie。不使用跟踪或广告Cookie。",

@@ -2285,7 +2285,17 @@
     "gaccTimelineDep_sampleShipment": "Mintaszállítás megszervezve",
     "perShipment": "szállítmányonként",
     "tmMarket_recoHigh": "Sürgős: a védjegybejelentés benyújtása a piacra lépés előtt. Fontolja meg egy átfogó bejelentési stratégiát, amely magában foglalja az alapvető és a szomszédos osztályokat professzionális CNIPA képviselettel.",
-    "tmMarket_recoLow": "Proaktív védjegyregisztráció javasolt a márkavédelem biztosítása érdekében. Fájl a megfelelő Nice-osztályokba a CNIPA-val."
+    "tmMarket_recoLow": "Proaktív védjegyregisztráció javasolt a márkavédelem biztosítása érdekében. Fájl a megfelelő Nice-osztályokba a CNIPA-val.",
+    "gaccReg_ciferSystem_name": "CIFER rendszer",
+    "gaccReg_ciferSystem_number": "Kínai import élelmiszeripari vállalati regisztrációs rendszer",
+    "gaccReg_decree248_name": "GACC rendelet 248",
+    "gaccReg_decree249_name": "GACC rendelet 249",
+    "gaccReg_foodSafetyLaw_name": "Kína élelmiszerbiztonsági törvénye",
+    "regAuthority_gacc": "Általános Vámigazgatás (GACC)",
+    "regAuthority_nhc": "Nemzeti Egészségügyi Bizottság (NHC)",
+    "regAuthority_npc": "Országos Népi Kongresszus (NPC)",
+    "tmReg_cnipaEdition_name": "CNIPA 2021-es kiadás",
+    "tmReg_revision_number": "4. felülvizsgálat, 2019"
   },
   "Cookie": {
     "message": "Ez az oldal csak alapvető hitelesítési cookie-kat használ. Nem használnak nyomkövető vagy hirdetési sütiket.",

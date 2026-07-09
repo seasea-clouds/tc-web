@@ -2285,7 +2285,17 @@
     "gaccTimelineDep_sampleShipment": "حمل و نقل نمونه ترتیب داده شده است",
     "perShipment": "در هر محموله",
     "tmMarket_recoHigh": "فوری: درخواست علامت تجاری را قبل از ورود به بازار ثبت کنید.",
-    "tmMarket_recoLow": "ثبت علامت تجاری فعال برای محافظت از برند توصیه می شود."
+    "tmMarket_recoLow": "ثبت علامت تجاری فعال برای محافظت از برند توصیه می شود.",
+    "gaccReg_ciferSystem_name": "سیستم سیفر",
+    "gaccReg_ciferSystem_number": "سیستم ثبت شرکت های غذایی وارداتی چین",
+    "gaccReg_decree248_name": "فرمان 248 GACC",
+    "gaccReg_decree249_name": "فرمان 249 GACC",
+    "gaccReg_foodSafetyLaw_name": "قانون ایمنی مواد غذایی چین",
+    "regAuthority_gacc": "اداره کل گمرک (GACC)",
+    "regAuthority_nhc": "کمیسیون ملی بهداشت (NHC)",
+    "regAuthority_npc": "کنگره ملی خلق (NPC)",
+    "tmReg_cnipaEdition_name": "نسخه 2021 CNIPA",
+    "tmReg_revision_number": "نسخه چهارم 2019"
   },
   "Cookie": {
     "message": "این سایت فقط از کوکی های احراز هویت ضروری استفاده می کند. هیچ کوکی ردیابی یا تبلیغاتی استفاده نمی شود.",

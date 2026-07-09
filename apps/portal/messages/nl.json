@@ -2285,7 +2285,17 @@
     "gaccTimelineDep_sampleShipment": "Monsterzending geregeld",
     "perShipment": "per zending",
     "tmMarket_recoHigh": "Dringend: merkaanvraag indienen vóór marktintroductie.",
-    "tmMarket_recoLow": "Proactieve merkregistratie wordt aanbevolen om merkbescherming te garanderen."
+    "tmMarket_recoLow": "Proactieve merkregistratie wordt aanbevolen om merkbescherming te garanderen.",
+    "gaccReg_ciferSystem_name": "CIFER-systeem",
+    "gaccReg_ciferSystem_number": "China Import Food Enterprise-registratiesysteem",
+    "gaccReg_decree248_name": "GACC-decreet 248",
+    "gaccReg_decree249_name": "GACC-decreet 249",
+    "gaccReg_foodSafetyLaw_name": "Voedselveiligheidswet van China",
+    "regAuthority_gacc": "Algemene douaneadministratie (GACC)",
+    "regAuthority_nhc": "Nationale Gezondheidscommissie (NHC)",
+    "regAuthority_npc": "Nationaal Volkscongres (NPC)",
+    "tmReg_cnipaEdition_name": "CNIPA 2021-editie",
+    "tmReg_revision_number": "4e herziening 2019"
   },
   "Cookie": {
     "message": "Deze site gebruikt alleen essentiële authenticatiecookies. Er worden geen tracking- of advertentiecookies gebruikt.",

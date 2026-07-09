@@ -62,15 +62,15 @@ Done.
 - Environments: .env
 
   Creating an optimized production build ...
-✓ Compiled successfully in 1872ms
+✓ Compiled successfully in 1813ms
   Running TypeScript ...
-  Finished TypeScript in 5.1s ...
+  Finished TypeScript in 5.6s ...
   Collecting page data using 19 workers ...
   Generating static pages using 19 workers (0/771) ...
   Generating static pages using 19 workers (192/771) 
   Generating static pages using 19 workers (385/771) 
   Generating static pages using 19 workers (578/771) 
-✓ Generating static pages using 19 workers (771/771) in 3.3s
+✓ Generating static pages using 19 workers (771/771) in 7.0s
   Finalizing page optimization ...
 
 Route (app)
@@ -268,9 +268,9 @@ Route (app)
 
 ▶ check-translations.mjs --short --skip-locale-check
 
-⚠️ 发现 114 个问题
-   - 网站翻译质量: 47 个问题
-   - Portal 翻译质量: 67 个问题
+⚠️ 发现 151 个问题
+   - 网站翻译质量: 59 个问题
+   - Portal 翻译质量: 92 个问题
 
 ▶ check-i18n-keys.mjs --ci
 🔑 i18n key 完整性检查
@@ -278,14 +278,14 @@ Route (app)
 📦 SITE (0 missing, 0 extra, 0 hardcoded):
   ✅ 全部通过
 
-📦 PORTAL (0 missing, 0 extra, 46 hardcoded):
-  ⚠️  硬编码英文 fallback (46 处):
-    🟡 ReportSection.timelineCnca → "Certification Body" (46 语言)
+📦 PORTAL (0 missing, 0 extra, 0 hardcoded):
+  ✅ 全部通过
 
 📦 UI (0 missing, 0 extra, 0 hardcoded):
   ✅ 全部通过
 
-📊 总计: 0 缺失 + 0 多余 + 46 硬编码英文
+📊 总计: 0 缺失 + 0 多余 + 0 硬编码英文
+✅ 所有 i18n key 完整，无硬编码英文
 
 ▶ check-i18n-coverage.mjs 
 
@@ -607,9 +607,9 @@ Route (app)
 
 ▶ clean-rsc.mjs out
 🧹 Cleaning RSC .txt payload files from out/...
-✅ Deleted 7351 RSC payload files (575.3 MB freed)
+✅ Deleted 7351 RSC payload files (576.4 MB freed)
 
 ═══════════════════════════════════════════════
-❌ 共 1 项检查失败
+✅ 全部检查通过
 ═══════════════════════════════════════════════
 

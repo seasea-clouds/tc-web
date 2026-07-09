@@ -72,10 +72,10 @@ function ReportContent() {
   const locale = useTradeLocale();
   const messages = useMessages();
 
-  // Inject locale data into buildT cache before check functions run
-  useEffect(() => {
-    setLocaleData(locale, messages);
-  }, [locale, messages]);
+  // Inject locale data into buildT cache synchronously (before render)
+  // so check functions, localizeTimeline, and categoryKey lookup work from first render,
+  // not waiting for useEffect to fire (which would leave EN fallback on first paint)
+  setLocaleData(locale, messages);
 
   // Sync useSearchParams into local state (fixes SSG hydration issue)
   useEffect(() => {

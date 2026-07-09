@@ -43,7 +43,19 @@ export default function ReportViewer({ report, onBack }: ReportViewerProps) {
     ? t(`${catPrefix}_${report.productInfo.category}_label`) || report.productInfo.category
     : report.productInfo.category;
 
-  const labels = {
+  const MODULE_NEXT_STEPS: Record<string, string[]> = {
+  'GACC Food Registration': ['gaccStep1', 'gaccStep2', 'gaccStep3', 'gaccStep4', 'gaccStep5'],
+  'CCC Certification': ['cccStep1', 'cccStep2', 'cccStep3', 'cccStep4', 'cccStep5'],
+  'Chinese Label Compliance': ['labelStep1', 'labelStep2', 'labelStep3', 'labelStep4', 'labelStep5'],
+  'Cosmetics Filing (NMPA)': ['nmpaStep1', 'nmpaStep2', 'nmpaStep3', 'nmpaStep4', 'nmpaStep5'],
+  'Cross-Border E-commerce': ['crossborderStep1', 'crossborderStep2', 'crossborderStep3', 'crossborderStep4', 'crossborderStep5'],
+  'Brand Protection': ['trademarkStep1', 'trademarkStep2', 'trademarkStep3', 'trademarkStep4', 'trademarkStep5'],
+};
+
+const nextStepKeys = MODULE_NEXT_STEPS[report.module];
+const nextSteps = nextStepKeys ? nextStepKeys.map(k => t(k)) : report.nextSteps;
+
+const labels = {
     title: t('reportTitle'),
     sectionProduct: t('reportSectionProduct'),
     sectionResult: t('reportSectionResult'),
@@ -91,7 +103,7 @@ export default function ReportViewer({ report, onBack }: ReportViewerProps) {
           labels={labels}
           productInfo={{...report.productInfo, category: translatedCategory}}
           result={report.result}
-          nextSteps={report.nextSteps}
+          nextSteps={nextSteps}
           generatedAt={report.generatedAt}
         />
       </div>

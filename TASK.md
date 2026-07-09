@@ -40,7 +40,8 @@
 | P3a | check-t-keys.mjs + CI 集成 (commit fc40836) | ✅ 已部署 (ee5e0e10) |
 | P3b | 动态 key 前缀验证 | ✅ |
 | P3c | buildT 开发环境 console.warn (commit fc40836) | ✅ 已部署 (ee5e0e10) |
-| P4 | buildT en.json 降级 | ✅ 已部署 (ee5e0e10) |
+| P4 | buildT en.json 降级 — Check namespace (commit ee5e0e10) | ✅ 已部署 |
+| P4b | buildT en.json 降级扩展 — 支持 ReportSection 等所有 namespace (commit cc2679a6) | ✅ 已部署 |
 | P5.1-6 | 组件层硬编码英文 → t() | ✅ |
 | P6 | 6 模块 NextSteps → t() | ✅ |
 | P7 | 36 新 key × 47 语言翻译 (v5/v7 系列) | ✅ 已 merge |
@@ -60,4 +61,4 @@
 
 ## 待执行
 
-- 部署到生产环境（sinotradecompliance.com）
+- 无（所有任务已完成）

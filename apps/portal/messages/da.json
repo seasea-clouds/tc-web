@@ -2239,7 +2239,11 @@
     "tmTimeline_search_desc": "Forudgående varemærkesøgning — CNIPA-database, WIPO, markedsplads",
     "tmTimeline_search_name": "Varemærkesøgning",
     "tmTimeline_substantiveExam_desc": "CNIPA undersøger særpræg, lighed og klassificering",
-    "tmTimeline_substantiveExam_name": "Materiel undersøgelse"
+    "tmTimeline_substantiveExam_name": "Materiel undersøgelse",
+    "nmpaChannel_standard_desc_full": "Fuld NMPA registreringsvej for speciel kosmetik: omfattende sikkerhedsvurdering, forbedret testning og regulatorisk godkendelse.",
+    "nmpaChannel_standard_desc_standard": "Standard NMPA-ansøgningsvej for almindelig kosmetik: formelgennemgang, sikkerhedsvurdering, laboratorietest og indsendelse af dossier.",
+    "nmpaMarket_recoHigh": "Professionel compliance support anbefales stærkt.",
+    "nmpaMarket_recoLow": "Standard arkiveringsvej anbefales."
   },
   "Cookie": {
     "message": "Dette websted bruger kun vigtige autentificeringscookies. Der bruges ingen sporings- eller reklamecookies.",

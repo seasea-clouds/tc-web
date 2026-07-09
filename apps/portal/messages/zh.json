@@ -2239,7 +2239,11 @@
     "tmTimeline_search_desc": "申请前商标检索 — CNIPA 数据库、WIPO、市场",
     "tmTimeline_search_name": "商标检索",
     "tmTimeline_substantiveExam_desc": "CNIPA 审查独特性、相似性和分类",
-    "tmTimeline_substantiveExam_name": "实质审查"
+    "tmTimeline_substantiveExam_name": "实质审查",
+    "nmpaChannel_standard_desc_full": "特殊化妆品NMPA注册全程：全面安全评估、强化检测、监管审批。",
+    "nmpaChannel_standard_desc_standard": "普通化妆品NMPA备案标准流程：配方审查、安全性评估、实验室检测、资料提交。",
+    "nmpaMarket_recoHigh": "强烈推荐专业的合规支持。",
+    "nmpaMarket_recoLow": "推荐的标准归档途径。"
   },
   "Cookie": {
     "message": "本网站仅使用必要的身份验证Cookie。不使用跟踪或广告Cookie。",

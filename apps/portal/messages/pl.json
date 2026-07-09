@@ -2239,7 +2239,11 @@
     "tmTimeline_search_desc": "Wyszukiwanie znaków towarowych przed zgłoszeniem — baza danych CNIPA, WIPO, marketplace",
     "tmTimeline_search_name": "Wyszukiwanie znaków towarowych",
     "tmTimeline_substantiveExam_desc": "CNIPA bada charakter odróżniający, podobieństwo i klasyfikację",
-    "tmTimeline_substantiveExam_name": "Badanie merytoryczne"
+    "tmTimeline_substantiveExam_name": "Badanie merytoryczne",
+    "nmpaChannel_standard_desc_full": "Pełna ścieżka rejestracji NMPA dla kosmetyków specjalnych: kompleksowa ocena bezpieczeństwa, ulepszone testy i zatwierdzenie przez organy regulacyjne.",
+    "nmpaChannel_standard_desc_standard": "Standardowa ścieżka składania wniosków przez NMPA w przypadku zwykłych kosmetyków: przegląd receptury, ocena bezpieczeństwa, badania laboratoryjne i składanie dokumentacji.",
+    "nmpaMarket_recoHigh": "Zdecydowanie zalecane jest profesjonalne wsparcie w zakresie zgodności. Kosmetyki specjalne wymagają szeroko zakrojonych przygotowań regulacyjnych i dłuższego przeglądu NMPA.",
+    "nmpaMarket_recoLow": "Zalecana standardowa ścieżka zgłoszenia. Zapewnij zgodność z INCI i testy akredytowane przez CNAS, aby zapewnić płynne powiadomienia."
   },
   "Cookie": {
     "message": "Ta witryna wykorzystuje wyłącznie niezbędne pliki cookie służące do uwierzytelniania. Nie są używane żadne śledzące ani reklamowe pliki cookie.",

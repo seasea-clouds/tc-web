@@ -2239,7 +2239,11 @@
     "tmTimeline_search_desc": "Před podáním rešerše ochranných známek — databáze CNIPA, WIPO, tržiště",
     "tmTimeline_search_name": "Vyhledávání ochranných známek",
     "tmTimeline_substantiveExam_desc": "CNIPA zkoumá rozlišovací způsobilost, podobnost a klasifikaci",
-    "tmTimeline_substantiveExam_name": "Věcná zkouška"
+    "tmTimeline_substantiveExam_name": "Věcná zkouška",
+    "nmpaChannel_standard_desc_full": "Plná registrační cesta NMPA pro speciální kosmetiku: komplexní hodnocení bezpečnosti, rozšířené testování a regulační schválení.",
+    "nmpaChannel_standard_desc_standard": "Standardní způsob podání NMPA pro běžnou kosmetiku: kontrola složení, posouzení bezpečnosti, laboratorní testování a předložení dokumentace.",
+    "nmpaMarket_recoHigh": "Důrazně doporučujeme profesionální podporu shody. Speciální kosmetika vyžaduje rozsáhlou regulační přípravu a delší přezkoumání NMPA.",
+    "nmpaMarket_recoLow": "Doporučuje se standardní způsob ukládání. Zajistěte soulad s INCI a akreditované testování CNAS pro hladké oznámení."
   },
   "Cookie": {
     "message": "Tento web používá pouze nezbytné ověřovací soubory cookie. Nejsou používány žádné sledovací ani reklamní soubory cookie.",

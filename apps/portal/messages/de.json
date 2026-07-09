@@ -2239,7 +2239,11 @@
     "tmTimeline_search_desc": "Markenrecherche vor der Einreichung – CNIPA-Datenbank, WIPO, Marktplatz",
     "tmTimeline_search_name": "Markenrecherche",
     "tmTimeline_substantiveExam_desc": "CNIPA untersucht Unterscheidungskraft, Ähnlichkeit und Klassifizierung",
-    "tmTimeline_substantiveExam_name": "Sachliche Prüfung"
+    "tmTimeline_substantiveExam_name": "Sachliche Prüfung",
+    "nmpaChannel_standard_desc_full": "Vollständiger NMPA-Registrierungsweg für Spezialkosmetik: umfassende Sicherheitsbewertung, erweiterte Tests und behördliche Genehmigung.",
+    "nmpaChannel_standard_desc_standard": "Standardmäßiger NMPA-Anmeldeweg für gewöhnliche Kosmetika: Überprüfung der Formel, Sicherheitsbewertung, Labortests und Dossiereinreichung.",
+    "nmpaMarket_recoHigh": "Professioneller Compliance-Support wird dringend empfohlen.",
+    "nmpaMarket_recoLow": "Standard-Ablageweg empfohlen."
   },
   "Cookie": {
     "message": "Diese Website verwendet nur unbedingt erforderliche Authentifizierungscookies. Es werden keine Tracking- oder Werbecookies verwendet.",

@@ -2239,7 +2239,11 @@
     "tmTimeline_search_desc": "جستجوی علامت تجاری پیش از تشکیل پرونده - پایگاه داده CNIPA، WIPO، بازار",
     "tmTimeline_search_name": "جستجوی علامت تجاری",
     "tmTimeline_substantiveExam_desc": "CNIPA تمایز، شباهت و طبقه بندی را بررسی می کند",
-    "tmTimeline_substantiveExam_name": "معاینه ماهوی"
+    "tmTimeline_substantiveExam_name": "معاینه ماهوی",
+    "nmpaChannel_standard_desc_full": "مسیر ثبت نام کامل NMPA برای لوازم آرایشی ویژه: ارزیابی ایمنی جامع، آزمایش پیشرفته و تأیید نظارتی.",
+    "nmpaChannel_standard_desc_standard": "مسیر بایگانی استاندارد NMPA برای لوازم آرایشی معمولی: بررسی فرمول، ارزیابی ایمنی، آزمایش آزمایشگاهی و ارسال پرونده.",
+    "nmpaMarket_recoHigh": "پشتیبانی انطباق حرفه ای به شدت توصیه می شود.",
+    "nmpaMarket_recoLow": "مسیر استاندارد بایگانی توصیه می شود."
   },
   "Cookie": {
     "message": "این سایت فقط از کوکی های احراز هویت ضروری استفاده می کند. هیچ کوکی ردیابی یا تبلیغاتی استفاده نمی شود.",

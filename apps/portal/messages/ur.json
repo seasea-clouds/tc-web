@@ -2239,7 +2239,11 @@
     "tmTimeline_search_desc": "پری فائلنگ ٹریڈ مارک تلاش — CNIPA ڈیٹا بیس، WIPO، مارکیٹ پلیس",
     "tmTimeline_search_name": "ٹریڈ مارک کی تلاش",
     "tmTimeline_substantiveExam_desc": "CNIPA امتیاز، مماثلت اور درجہ بندی کا جائزہ لیتا ہے۔",
-    "tmTimeline_substantiveExam_name": "بنیادی امتحان"
+    "tmTimeline_substantiveExam_name": "بنیادی امتحان",
+    "nmpaChannel_standard_desc_full": "خصوصی کاسمیٹکس کے لیے مکمل NMPA رجسٹریشن کا راستہ: جامع حفاظتی تشخیص، بہتر جانچ، اور ریگولیٹری منظوری۔",
+    "nmpaChannel_standard_desc_standard": "عام کاسمیٹکس کے لیے معیاری NMPA فائلنگ پاتھ وے: فارمولے کا جائزہ، حفاظتی جائزہ، لیب ٹیسٹنگ، اور ڈوزیئر جمع کروانا۔",
+    "nmpaMarket_recoHigh": "پیشہ ورانہ تعمیل کی حمایت کی سختی سے سفارش کی جاتی ہے۔",
+    "nmpaMarket_recoLow": "معیاری فائلنگ کا راستہ تجویز کیا گیا ہے۔"
   },
   "Cookie": {
     "message": "یہ سائٹ صرف ضروری تصدیقی کوکیز استعمال کرتی ہے۔ کوئی ٹریکنگ یا اشتہاری کوکیز استعمال نہیں کی جاتی ہیں۔",

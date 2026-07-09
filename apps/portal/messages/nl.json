@@ -2239,7 +2239,11 @@
     "tmTimeline_search_desc": "Merkonderzoek vooraf indienen — CNIPA-database, WIPO, marktplaats",
     "tmTimeline_search_name": "Zoeken naar handelsmerken",
     "tmTimeline_substantiveExam_desc": "CNIPA onderzoekt onderscheidend vermogen, gelijkenis en classificatie",
-    "tmTimeline_substantiveExam_name": "Inhoudelijk onderzoek"
+    "tmTimeline_substantiveExam_name": "Inhoudelijk onderzoek",
+    "nmpaChannel_standard_desc_full": "Volledig NMPA-registratietraject voor speciale cosmetica: uitgebreide veiligheidsbeoordeling, uitgebreide tests en goedkeuring door regelgevende instanties.",
+    "nmpaChannel_standard_desc_standard": "Standaard NMPA-aanvraagtraject voor gewone cosmetica: formulebeoordeling, veiligheidsbeoordeling, laboratoriumtests en indiening van dossiers.",
+    "nmpaMarket_recoHigh": "Professionele compliance-ondersteuning wordt sterk aanbevolen.",
+    "nmpaMarket_recoLow": "Standaard archiveringstraject aanbevolen."
   },
   "Cookie": {
     "message": "Deze site gebruikt alleen essentiële authenticatiecookies. Er worden geen tracking- of advertentiecookies gebruikt.",

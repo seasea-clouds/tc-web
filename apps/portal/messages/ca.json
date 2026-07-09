@@ -2239,7 +2239,11 @@
     "tmTimeline_search_desc": "Cerca de marques registrades prèviament a la presentació: base de dades CNIPA, OMPI, mercat",
     "tmTimeline_search_name": "Cerca de marques comercials",
     "tmTimeline_substantiveExam_desc": "CNIPA examina la distinció, la similitud i la classificació",
-    "tmTimeline_substantiveExam_name": "Examen de fons"
+    "tmTimeline_substantiveExam_name": "Examen de fons",
+    "nmpaChannel_standard_desc_full": "Ruta completa de registre NMPA per a cosmètics especials: avaluació integral de la seguretat, proves millorades i aprovació reguladora.",
+    "nmpaChannel_standard_desc_standard": "Via estàndard de presentació de NMPA per a cosmètics ordinaris: revisió de fórmules, avaluació de la seguretat, proves de laboratori i presentació d'expedients.",
+    "nmpaMarket_recoHigh": "Suport de compliment professional molt recomanable.",
+    "nmpaMarket_recoLow": "Es recomana la via de presentació estàndard."
   },
   "Cookie": {
     "message": "Aquest lloc només utilitza cookies d'autenticació essencials. No s'utilitzen cookies de seguiment ni de publicitat.",

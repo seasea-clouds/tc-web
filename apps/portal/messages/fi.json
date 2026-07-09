@@ -2239,7 +2239,11 @@
     "tmTimeline_search_desc": "Tavaramerkkihaku ennen rekisteröintiä — CNIPA-tietokanta, WIPO, markkinapaikka",
     "tmTimeline_search_name": "Tavaramerkkihaku",
     "tmTimeline_substantiveExam_desc": "CNIPA tutkii erottuvuutta, samankaltaisuutta ja luokittelua",
-    "tmTimeline_substantiveExam_name": "Sisältötutkimus"
+    "tmTimeline_substantiveExam_name": "Sisältötutkimus",
+    "nmpaChannel_standard_desc_full": "Täydellinen NMPA-rekisteröintipolku erikoiskosmetiikkaa varten: kattava turvallisuusarviointi, tehostettu testaus ja viranomaishyväksyntä.",
+    "nmpaChannel_standard_desc_standard": "Tavallinen NMPA-arkistointipolku tavalliselle kosmeettiselle tuotteelle: kaavan tarkistus, turvallisuusarviointi, laboratoriotestaus ja aineiston toimittaminen.",
+    "nmpaMarket_recoHigh": "Ammattimainen vaatimustenmukaisuustuki on erittäin suositeltavaa.",
+    "nmpaMarket_recoLow": "Tavallinen arkistointireitti suositellaan."
   },
   "Cookie": {
     "message": "Tämä sivusto käyttää vain välttämättömiä todennusevästeitä. Mitään seuranta- tai mainosevästeitä ei käytetä.",

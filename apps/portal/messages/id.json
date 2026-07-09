@@ -2239,7 +2239,11 @@
     "tmTimeline_search_desc": "Pencarian merek dagang pra-pengarsipan — database CNIPA, WIPO, pasar",
     "tmTimeline_search_name": "Pencarian Merek Dagang",
     "tmTimeline_substantiveExam_desc": "CNIPA mengkaji kekhasan, persamaan, dan klasifikasi",
-    "tmTimeline_substantiveExam_name": "Pemeriksaan Substantif"
+    "tmTimeline_substantiveExam_name": "Pemeriksaan Substantif",
+    "nmpaChannel_standard_desc_full": "Jalur pendaftaran NMPA lengkap untuk kosmetik khusus: penilaian keamanan komprehensif, pengujian yang ditingkatkan, dan persetujuan peraturan.",
+    "nmpaChannel_standard_desc_standard": "Jalur pengarsipan NMPA standar untuk kosmetik biasa: tinjauan formula, penilaian keamanan, pengujian laboratorium, dan penyerahan dokumen.",
+    "nmpaMarket_recoHigh": "Dukungan kepatuhan profesional sangat disarankan.",
+    "nmpaMarket_recoLow": "Jalur pengarsipan standar direkomendasikan."
   },
   "Cookie": {
     "message": "Situs ini hanya menggunakan cookie otentikasi penting. Tidak ada cookie pelacakan atau iklan yang digunakan.",

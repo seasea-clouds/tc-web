@@ -2239,7 +2239,11 @@
     "tmTimeline_search_desc": "Búsqueda de marcas previa a la presentación: base de datos CNIPA, OMPI, mercado",
     "tmTimeline_search_name": "Búsqueda de marcas",
     "tmTimeline_substantiveExam_desc": "CNIPA examina la distinción, la similitud y la clasificación",
-    "tmTimeline_substantiveExam_name": "Examen sustantivo"
+    "tmTimeline_substantiveExam_name": "Examen sustantivo",
+    "nmpaChannel_standard_desc_full": "Vía completa de registro de la NMPA para cosméticos especiales: evaluación de seguridad integral, pruebas mejoradas y aprobación regulatoria.",
+    "nmpaChannel_standard_desc_standard": "Vía de presentación estándar de la NMPA para cosméticos comunes: revisión de fórmulas, evaluación de seguridad, pruebas de laboratorio y presentación de expedientes.",
+    "nmpaMarket_recoHigh": "Se recomienda encarecidamente el soporte de cumplimiento profesional.",
+    "nmpaMarket_recoLow": "Se recomienda la vía de presentación estándar."
   },
   "Cookie": {
     "message": "Este sitio utiliza sólo cookies de autenticación esenciales. No se utilizan cookies de seguimiento ni publicidad.",

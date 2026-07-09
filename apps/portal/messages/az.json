@@ -2239,7 +2239,11 @@
     "tmTimeline_search_desc": "Əmtəə nişanının təqdim edilməsindən əvvəl axtarış — CNIPA verilənlər bazası, WIPO, bazar yeri",
     "tmTimeline_search_name": "Ticarət nişanı axtarışı",
     "tmTimeline_substantiveExam_desc": "CNIPA fərqliliyi, oxşarlığı və təsnifatı araşdırır",
-    "tmTimeline_substantiveExam_name": "Əsas İmtahan"
+    "tmTimeline_substantiveExam_name": "Əsas İmtahan",
+    "nmpaChannel_standard_desc_full": "Xüsusi kosmetika üçün tam NMPA qeydiyyat yolu: hərtərəfli təhlükəsizlik qiymətləndirməsi, təkmilləşdirilmiş sınaq və tənzimləyici təsdiq.",
+    "nmpaChannel_standard_desc_standard": "Adi kosmetika üçün standart NMPA sənədləşdirmə yolu: formulun nəzərdən keçirilməsi, təhlükəsizliyin qiymətləndirilməsi, laboratoriya testi və sənədlərin təqdim edilməsi.",
+    "nmpaMarket_recoHigh": "Peşəkar uyğunluq dəstəyi şiddətlə tövsiyə olunur. Xüsusi kosmetika geniş tənzimləyici hazırlıq və daha uzun NMPA nəzərdən keçirilməsini tələb edir.",
+    "nmpaMarket_recoLow": "Standart sənədləşdirmə yolu tövsiyə olunur. Rahat bildiriş üçün INCI uyğunluğunu və CNAS tərəfindən akkreditə olunmuş testi təmin edin."
   },
   "Cookie": {
     "message": "Bu sayt yalnız əsas autentifikasiya kukilərindən istifadə edir. Heç bir izləmə və ya reklam kukilərindən istifadə edilmir.",

@@ -2239,7 +2239,11 @@
     "tmTimeline_search_desc": "חיפוש סימנים מסחריים מראש - מסד נתונים של CNIPA, WIPO, שוק",
     "tmTimeline_search_name": "חיפוש סימן מסחרי",
     "tmTimeline_substantiveExam_desc": "CNIPA בוחנת ייחוד, דמיון וסיווג",
-    "tmTimeline_substantiveExam_name": "בדיקה מהותית"
+    "tmTimeline_substantiveExam_name": "בדיקה מהותית",
+    "nmpaChannel_standard_desc_full": "מסלול רישום מלא של NMPA לקוסמטיקה מיוחדת: הערכת בטיחות מקיפה, בדיקות משופרות ואישור רגולטורי.",
+    "nmpaChannel_standard_desc_standard": "מסלול הגשת NMPA סטנדרטי לקוסמטיקה רגילה: סקירת נוסחאות, הערכת בטיחות, בדיקות מעבדה והגשת תיקים.",
+    "nmpaMarket_recoHigh": "תמיכה מקצועית בציות מומלצת בחום. מוצרי קוסמטיקה מיוחדים דורשים הכנה רגולטורית מקיפה וסקירת NMPA ארוכה יותר.",
+    "nmpaMarket_recoLow": "מסלול הגשה סטנדרטי מומלץ. ודא תאימות INCI ובדיקות מוסמכות CNAS לקבלת הודעה חלקה."
   },
   "Cookie": {
     "message": "אתר זה משתמש רק בעוגיות אימות חיוניות. לא נעשה שימוש בעוגיות מעקב או פרסום.",

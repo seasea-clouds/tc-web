@@ -2239,7 +2239,11 @@
     "tmTimeline_search_desc": "A bejelentés előtti védjegykeresés – CNIPA adatbázis, WIPO, piactér",
     "tmTimeline_search_name": "Védjegykeresés",
     "tmTimeline_substantiveExam_desc": "A CNIPA a megkülönböztethetőséget, a hasonlóságot és az osztályozást vizsgálja",
-    "tmTimeline_substantiveExam_name": "Érdemi vizsgálat"
+    "tmTimeline_substantiveExam_name": "Érdemi vizsgálat",
+    "nmpaChannel_standard_desc_full": "Teljes NMPA regisztrációs útvonal speciális kozmetikumokhoz: átfogó biztonsági értékelés, továbbfejlesztett tesztelés és hatósági jóváhagyás.",
+    "nmpaChannel_standard_desc_standard": "Szabványos NMPA bejelentési útvonal a közönséges kozmetikumokhoz: formula felülvizsgálata, biztonsági értékelés, laboratóriumi vizsgálatok és dokumentáció benyújtása.",
+    "nmpaMarket_recoHigh": "Erősen ajánlott a szakmai megfelelőség támogatása. A speciális kozmetikumok kiterjedt szabályozási előkészítést és hosszabb NMPA felülvizsgálatot igényelnek.",
+    "nmpaMarket_recoLow": "Szabványos benyújtási mód ajánlott. Biztosítsa az INCI-megfelelőséget és a CNAS-akkreditált tesztelést a zavartalan értesítés érdekében."
   },
   "Cookie": {
     "message": "Ez az oldal csak alapvető hitelesítési cookie-kat használ. Nem használnak nyomkövető vagy hirdetési sütiket.",

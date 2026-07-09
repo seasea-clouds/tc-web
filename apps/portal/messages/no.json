@@ -2239,7 +2239,11 @@
     "tmTimeline_search_desc": "Forhåndsinnlevering av varemerkesøk — CNIPA-database, WIPO, markedsplass",
     "tmTimeline_search_name": "Varemerkesøk",
     "tmTimeline_substantiveExam_desc": "CNIPA undersøker særpreg, likhet og klassifisering",
-    "tmTimeline_substantiveExam_name": "Innholdsmessig eksamen"
+    "tmTimeline_substantiveExam_name": "Innholdsmessig eksamen",
+    "nmpaChannel_standard_desc_full": "Full NMPA-registreringsvei for spesialkosmetikk: omfattende sikkerhetsvurdering, forbedret testing og regulatorisk godkjenning.",
+    "nmpaChannel_standard_desc_standard": "Standard NMPA-arkiveringsvei for vanlig kosmetikk: formelgjennomgang, sikkerhetsvurdering, laboratorietesting og innsending av dossier.",
+    "nmpaMarket_recoHigh": "Profesjonell overholdelsesstøtte anbefales sterkt. Spesialkosmetikk krever omfattende forskriftsforberedelser og lengre NMPA-gjennomgang.",
+    "nmpaMarket_recoLow": "Standard arkiveringsvei anbefales. Sikre INCI-samsvar og CNAS-akkreditert testing for jevn varsling."
   },
   "Cookie": {
     "message": "Dette nettstedet bruker kun viktige autentiseringsinformasjonskapsler. Ingen sporings- eller reklameinformasjonskapsler brukes.",

@@ -2239,7 +2239,11 @@
     "tmTimeline_search_desc": "Predbežný prieskum ochrannej známky — databáza CNIPA, WIPO, trhovisko",
     "tmTimeline_search_name": "Vyhľadávanie ochranných známok",
     "tmTimeline_substantiveExam_desc": "CNIPA skúma rozlišovaciu spôsobilosť, podobnosť a klasifikáciu",
-    "tmTimeline_substantiveExam_name": "Hmotná skúška"
+    "tmTimeline_substantiveExam_name": "Hmotná skúška",
+    "nmpaChannel_standard_desc_full": "Úplná registračná cesta NMPA pre špeciálnu kozmetiku: komplexné hodnotenie bezpečnosti, rozšírené testovanie a schválenie regulačnými orgánmi.",
+    "nmpaChannel_standard_desc_standard": "Štandardná registračná cesta NMPA pre bežnú kozmetiku: kontrola receptúry, hodnotenie bezpečnosti, laboratórne testovanie a predloženie dokumentácie.",
+    "nmpaMarket_recoHigh": "Dôrazne sa odporúča profesionálna podpora zhody. Špeciálna kozmetika si vyžaduje rozsiahlu regulačnú prípravu a dlhšiu kontrolu NMPA.",
+    "nmpaMarket_recoLow": "Odporúča sa štandardný spôsob podávania. Zabezpečte súlad s INCI a akreditované testovanie CNAS pre bezproblémové oznamovanie."
   },
   "Cookie": {
     "message": "Táto stránka používa iba nevyhnutné overovacie súbory cookie. Nepoužívajú sa žiadne sledovacie ani reklamné súbory cookie.",

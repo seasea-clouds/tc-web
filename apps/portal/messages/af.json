@@ -2239,7 +2239,11 @@
     "tmTimeline_search_desc": "Vooraf indiening van handelsmerksoektog - CNIPA-databasis, WIPO, mark",
     "tmTimeline_search_name": "Handelsmerksoektog",
     "tmTimeline_substantiveExam_desc": "CNIPA ondersoek eiesoortigheid, ooreenkoms en klassifikasie",
-    "tmTimeline_substantiveExam_name": "Substantiewe Eksamen"
+    "tmTimeline_substantiveExam_name": "Substantiewe Eksamen",
+    "nmpaChannel_standard_desc_full": "Volledige NMPA-registrasiepad vir spesiale skoonheidsmiddels: omvattende veiligheidsbeoordeling, verbeterde toetsing en regulatoriese goedkeuring.",
+    "nmpaChannel_standard_desc_standard": "Standaard NMPA-liasseerpad vir gewone skoonheidsmiddels: formulehersiening, veiligheidsbeoordeling, laboratoriumtoetsing en dossierindiening.",
+    "nmpaMarket_recoHigh": "Professionele voldoeningsondersteuning word sterk aanbeveel.",
+    "nmpaMarket_recoLow": "Standaard liasseringsroete word aanbeveel."
   },
   "Cookie": {
     "message": "Hierdie webwerf gebruik slegs noodsaaklike verifikasiekoekies. Geen dop- of advertensiekoekies word gebruik nie.",

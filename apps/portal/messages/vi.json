@@ -2239,7 +2239,11 @@
     "tmTimeline_search_desc": "Tìm kiếm nhãn hiệu trước khi nộp đơn — Cơ sở dữ liệu CNIPA, WIPO, thị trường",
     "tmTimeline_search_name": "Tìm kiếm nhãn hiệu",
     "tmTimeline_substantiveExam_desc": "CNIPA kiểm tra tính khác biệt, sự tương đồng và phân loại",
-    "tmTimeline_substantiveExam_name": "Kiểm tra nội dung"
+    "tmTimeline_substantiveExam_name": "Kiểm tra nội dung",
+    "nmpaChannel_standard_desc_full": "Lộ trình đăng ký NMPA đầy đủ cho mỹ phẩm đặc biệt: đánh giá an toàn toàn diện, thử nghiệm nâng cao và phê duyệt theo quy định.",
+    "nmpaChannel_standard_desc_standard": "Lộ trình nộp đơn NMPA tiêu chuẩn cho mỹ phẩm thông thường: xem xét công thức, đánh giá an toàn, thử nghiệm trong phòng thí nghiệm và nộp hồ sơ.",
+    "nmpaMarket_recoHigh": "Hỗ trợ tuân thủ chuyên nghiệp được khuyến khích mạnh mẽ.",
+    "nmpaMarket_recoLow": "Lộ trình nộp đơn tiêu chuẩn được đề xuất."
   },
   "Cookie": {
     "message": "Trang web này chỉ sử dụng cookie xác thực cần thiết. Không sử dụng cookie theo dõi hoặc quảng cáo.",

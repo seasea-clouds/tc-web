@@ -2239,7 +2239,11 @@
     "tmTimeline_search_desc": "Pesquisa de marca pré-depósito — banco de dados CNIPA, OMPI, mercado",
     "tmTimeline_search_name": "Pesquisa de marca registrada",
     "tmTimeline_substantiveExam_desc": "CNIPA examina distintividade, similaridade e classificação",
-    "tmTimeline_substantiveExam_name": "Exame substantivo"
+    "tmTimeline_substantiveExam_name": "Exame substantivo",
+    "nmpaChannel_standard_desc_full": "Caminho completo de registro NMPA para cosméticos especiais: avaliação de segurança abrangente, testes aprimorados e aprovação regulatória.",
+    "nmpaChannel_standard_desc_standard": "Caminho de arquivamento padrão da NMPA para cosméticos comuns: revisão de fórmula, avaliação de segurança, testes de laboratório e envio de dossiê.",
+    "nmpaMarket_recoHigh": "Suporte de conformidade profissional fortemente recomendado.",
+    "nmpaMarket_recoLow": "Caminho de arquivamento padrão recomendado."
   },
   "Cookie": {
     "message": "Este site utiliza apenas cookies de autenticação essenciais. Nenhum cookie de rastreamento ou publicidade é usado.",

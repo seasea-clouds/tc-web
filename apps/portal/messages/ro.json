@@ -2239,7 +2239,11 @@
     "tmTimeline_search_desc": "Căutare de mărci comerciale înainte de depunere — baza de date CNIPA, OMPI, piață",
     "tmTimeline_search_name": "Căutare mărci comerciale",
     "tmTimeline_substantiveExam_desc": "CNIPA examinează caracterul distinctiv, asemănarea și clasificarea",
-    "tmTimeline_substantiveExam_name": "Examenul de fond"
+    "tmTimeline_substantiveExam_name": "Examenul de fond",
+    "nmpaChannel_standard_desc_full": "Calea completă de înregistrare NMPA pentru cosmetice speciale: evaluare cuprinzătoare a siguranței, testare îmbunătățită și aprobare de reglementare.",
+    "nmpaChannel_standard_desc_standard": "Calea standard de depunere a NMPA pentru produsele cosmetice obișnuite: revizuirea formulei, evaluarea siguranței, testarea în laborator și depunerea dosarului.",
+    "nmpaMarket_recoHigh": "Asistență profesională pentru conformitate, recomandată cu tărie.",
+    "nmpaMarket_recoLow": "Se recomandă calea de depunere standard."
   },
   "Cookie": {
     "message": "Acest site folosește numai cookie-uri de autentificare esențiale. Nu sunt utilizate cookie-uri de urmărire sau de publicitate.",

@@ -2239,7 +2239,11 @@
     "tmTimeline_search_desc": "Utafutaji wa chapa ya biashara kabla ya kufungua - hifadhidata ya CNIPA, WIPO, sokoni",
     "tmTimeline_search_name": "Utafutaji wa Alama ya Biashara",
     "tmTimeline_substantiveExam_desc": "CNIPA inachunguza upambanuzi, kufanana, na uainishaji",
-    "tmTimeline_substantiveExam_name": "Mtihani wa Kimsingi"
+    "tmTimeline_substantiveExam_name": "Mtihani wa Kimsingi",
+    "nmpaChannel_standard_desc_full": "Njia kamili ya usajili wa NMPA kwa vipodozi maalum: tathmini ya kina ya usalama, upimaji ulioimarishwa, na idhini ya udhibiti.",
+    "nmpaChannel_standard_desc_standard": "Njia ya kawaida ya kujaza vipodozi vya kawaida vya NMPA: mapitio ya fomula, tathmini ya usalama, majaribio ya maabara na uwasilishaji wa hati.",
+    "nmpaMarket_recoHigh": "Usaidizi wa kufuata wa kitaalamu unapendekezwa sana.",
+    "nmpaMarket_recoLow": "Njia ya kawaida ya kufungua inapendekezwa."
   },
   "Cookie": {
     "message": "Tovuti hii hutumia vidakuzi muhimu vya uthibitishaji pekee. Hakuna vidakuzi vya ufuatiliaji au utangazaji vinatumika.",

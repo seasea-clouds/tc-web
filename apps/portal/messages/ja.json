@@ -2239,7 +2239,11 @@
     "tmTimeline_search_desc": "出願前商標調査 — CNIPA データベース、WIPO、マーケットプレイス",
     "tmTimeline_search_name": "商標調査",
     "tmTimeline_substantiveExam_desc": "CNIPA は独自性、類似性、分類を調査します",
-    "tmTimeline_substantiveExam_name": "実体審査"
+    "tmTimeline_substantiveExam_name": "実体審査",
+    "nmpaChannel_standard_desc_full": "特殊化粧品の完全な NMPA 登録経路: 包括的な安全性評価、強化された試験、および規制当局の承認。",
+    "nmpaChannel_standard_desc_standard": "通常の化粧品の標準的な NMPA 申請経路: 配合レビュー、安全性評価、臨床検査、および書類の提出。",
+    "nmpaMarket_recoHigh": "専門的なコンプライアンス サポートを強くお勧めします。",
+    "nmpaMarket_recoLow": "標準的な提出経路を推奨します。"
   },
   "Cookie": {
     "message": "このサイトでは、必須の認証 Cookie のみを使用します。追跡クッキーや広告クッキーは使用されません。",

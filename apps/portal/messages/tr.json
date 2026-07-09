@@ -2239,7 +2239,11 @@
     "tmTimeline_search_desc": "Ticari marka araştırması için ön başvuru — CNIPA veritabanı, WIPO, pazar yeri",
     "tmTimeline_search_name": "Ticari Marka Arama",
     "tmTimeline_substantiveExam_desc": "CNIPA ayırt ediciliği, benzerliği ve sınıflandırmayı inceler",
-    "tmTimeline_substantiveExam_name": "Maddi İnceleme"
+    "tmTimeline_substantiveExam_name": "Maddi İnceleme",
+    "nmpaChannel_standard_desc_full": "Özel kozmetikler için tam NMPA kayıt yolu: kapsamlı güvenlik değerlendirmesi, gelişmiş testler ve düzenleyici onay.",
+    "nmpaChannel_standard_desc_standard": "Sıradan kozmetikler için standart NMPA dosyalama yolu: formül incelemesi, güvenlik değerlendirmesi, laboratuvar testleri ve dosya gönderimi.",
+    "nmpaMarket_recoHigh": "Profesyonel uyumluluk desteği şiddetle tavsiye edilir.",
+    "nmpaMarket_recoLow": "Standart dosyalama yolu önerilir."
   },
   "Cookie": {
     "message": "Bu site yalnızca gerekli kimlik doğrulama çerezlerini kullanır. Hiçbir izleme veya reklam çerezi kullanılmaz.",

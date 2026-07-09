@@ -2239,7 +2239,11 @@
     "tmTimeline_search_desc": "Kërkimi paraprak i paraqitjes së markës tregtare - baza e të dhënave CNIPA, WIPO, tregu",
     "tmTimeline_search_name": "Kërkimi i markës tregtare",
     "tmTimeline_substantiveExam_desc": "CNIPA shqyrton dallueshmërinë, ngjashmërinë dhe klasifikimin",
-    "tmTimeline_substantiveExam_name": "Ekzaminimi Substancial"
+    "tmTimeline_substantiveExam_name": "Ekzaminimi Substancial",
+    "nmpaChannel_standard_desc_full": "Rruga e plotë e regjistrimit NMPA për kozmetikë të veçantë: vlerësim gjithëpërfshirës i sigurisë, testim i përmirësuar dhe miratim rregullator.",
+    "nmpaChannel_standard_desc_standard": "Rruga standarde e paraqitjes së NMPA për kozmetikën e zakonshme: rishikimi i formulës, vlerësimi i sigurisë, testimi laboratorik dhe dorëzimi i dosjeve.",
+    "nmpaMarket_recoHigh": "Rekomandohet fuqimisht mbështetja profesionale e pajtueshmërisë.",
+    "nmpaMarket_recoLow": "Rekomandohet rruga standarde e depozitimit."
   },
   "Cookie": {
     "message": "Ky sajt përdor vetëm cookie thelbësore të vërtetimit. Nuk përdoren skedarë gjurmimi ose reklamimi.",

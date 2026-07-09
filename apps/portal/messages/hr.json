@@ -2239,7 +2239,11 @@
     "tmTimeline_search_desc": "Pretraživanje zaštitnih znakova prije prijave — CNIPA baza podataka, WIPO, tržište",
     "tmTimeline_search_name": "Pretraživanje zaštitnih znakova",
     "tmTimeline_substantiveExam_desc": "HZJPA ispituje razlikovnost, sličnost i klasifikaciju",
-    "tmTimeline_substantiveExam_name": "Suštinsko ispitivanje"
+    "tmTimeline_substantiveExam_name": "Suštinsko ispitivanje",
+    "nmpaChannel_standard_desc_full": "Potpuni put registracije NMPA za posebne kozmetičke proizvode: sveobuhvatna procjena sigurnosti, poboljšano testiranje i regulatorno odobrenje.",
+    "nmpaChannel_standard_desc_standard": "Standardni put podnošenja NMPA za običnu kozmetiku: pregled formule, procjena sigurnosti, laboratorijsko testiranje i podnošenje dosjea.",
+    "nmpaMarket_recoHigh": "Strogo se preporučuje profesionalna podrška za usklađenost.",
+    "nmpaMarket_recoLow": "Preporuča se standardni način arhiviranja."
   },
   "Cookie": {
     "message": "Ova stranica koristi samo bitne kolačiće za provjeru autentičnosti. Ne koriste se kolačići za praćenje ili oglašavanje.",

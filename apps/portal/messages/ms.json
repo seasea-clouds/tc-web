@@ -2239,7 +2239,11 @@
     "tmTimeline_search_desc": "Carian tanda dagangan pra-fail — pangkalan data CNIPA, WIPO, pasaran",
     "tmTimeline_search_name": "Carian Tanda Dagangan",
     "tmTimeline_substantiveExam_desc": "CNIPA mengkaji keistimewaan, persamaan dan klasifikasi",
-    "tmTimeline_substantiveExam_name": "Peperiksaan Substantif"
+    "tmTimeline_substantiveExam_name": "Peperiksaan Substantif",
+    "nmpaChannel_standard_desc_full": "Laluan pendaftaran NMPA penuh untuk kosmetik khas: penilaian keselamatan komprehensif, ujian dipertingkatkan dan kelulusan kawal selia.",
+    "nmpaChannel_standard_desc_standard": "Laluan pemfailan NMPA standard untuk kosmetik biasa: semakan formula, penilaian keselamatan, ujian makmal dan penyerahan dossier.",
+    "nmpaMarket_recoHigh": "Sokongan pematuhan profesional amat disyorkan.",
+    "nmpaMarket_recoLow": "Laluan pemfailan standard disyorkan."
   },
   "Cookie": {
     "message": "Tapak ini hanya menggunakan kuki pengesahan penting. Tiada kuki penjejakan atau pengiklanan digunakan.",

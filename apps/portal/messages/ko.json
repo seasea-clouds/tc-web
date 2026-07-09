@@ -2239,7 +2239,11 @@
     "tmTimeline_search_desc": "출원 전 상표 검색 — CNIPA 데이터베이스, WIPO, 마켓플레이스",
     "tmTimeline_search_name": "상표 검색",
     "tmTimeline_substantiveExam_desc": "CNIPA는 구별성, 유사성 및 분류를 검사합니다.",
-    "tmTimeline_substantiveExam_name": "실체심사"
+    "tmTimeline_substantiveExam_name": "실체심사",
+    "nmpaChannel_standard_desc_full": "특수 화장품에 대한 전체 NMPA 등록 경로: 종합적인 안전성 평가, 강화된 테스트 및 규제 승인.",
+    "nmpaChannel_standard_desc_standard": "일반 화장품에 대한 표준 NMPA 제출 경로: 공식 검토, 안전성 평가, 실험실 테스트 및 서류 제출.",
+    "nmpaMarket_recoHigh": "전문적인 규정 준수 지원을 적극 권장합니다.",
+    "nmpaMarket_recoLow": "표준 파일링 경로가 권장됩니다."
   },
   "Cookie": {
     "message": "이 사이트는 필수 인증 쿠키만을 사용합니다. 추적 또는 광고 쿠키는 사용되지 않습니다.",

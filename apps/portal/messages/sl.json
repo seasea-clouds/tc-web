@@ -2239,7 +2239,11 @@
     "tmTimeline_search_desc": "Iskanje blagovnih znamk pred vložitvijo — baza podatkov CNIPA, WIPO, trg",
     "tmTimeline_search_name": "Iskanje Blagovnih Znamk",
     "tmTimeline_substantiveExam_desc": "CNIPA preučuje razlikovalnost, podobnost in klasifikacijo",
-    "tmTimeline_substantiveExam_name": "Vsebinski pregled"
+    "tmTimeline_substantiveExam_name": "Vsebinski pregled",
+    "nmpaChannel_standard_desc_full": "Popolna registracijska pot NMPA za posebno kozmetiko: celovita ocena varnosti, izboljšano testiranje in regulativna odobritev.",
+    "nmpaChannel_standard_desc_standard": "Standardna pot prijave NMPA za običajno kozmetiko: pregled formule, ocena varnosti, laboratorijsko testiranje in predložitev dokumentacije.",
+    "nmpaMarket_recoHigh": "Strokovna podpora za skladnost je zelo priporočljiva. Posebna kozmetika zahteva obsežno regulativno pripravo in daljši pregled NMPA.",
+    "nmpaMarket_recoLow": "Priporočena standardna pot vložitve. Za nemoteno obveščanje zagotovite skladnost z INCI in testiranje, akreditirano s strani CNAS."
   },
   "Cookie": {
     "message": "To spletno mesto uporablja samo bistvene piškotke za preverjanje pristnosti. Piškotki za sledenje ali oglaševanje se ne uporabljajo.",

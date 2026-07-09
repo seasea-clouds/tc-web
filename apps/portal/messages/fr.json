@@ -2239,7 +2239,11 @@
     "tmTimeline_search_desc": "Recherche de marques avant dépôt — Base de données CNIPA, OMPI, marketplace",
     "tmTimeline_search_name": "Recherche de marque",
     "tmTimeline_substantiveExam_desc": "La CNIPA examine la distinction, la similitude et la classification",
-    "tmTimeline_substantiveExam_name": "Examen quant au fond"
+    "tmTimeline_substantiveExam_name": "Examen quant au fond",
+    "nmpaChannel_standard_desc_full": "Procédure d'enregistrement NMPA complète pour les cosmétiques spéciaux: évaluation complète de la sécurité, tests améliorés et approbation réglementaire.",
+    "nmpaChannel_standard_desc_standard": "Procédure de dépôt standard NMPA pour les cosmétiques ordinaires: examen de la formule, évaluation de la sécurité, tests de laboratoire et soumission du dossier.",
+    "nmpaMarket_recoHigh": "Une assistance professionnelle en matière de conformité est fortement recommandée. Les cosmétiques spéciaux nécessitent une préparation réglementaire approfondie et un examen NMPA plus long.",
+    "nmpaMarket_recoLow": "Voie de dépôt standard recommandée. Assurez la conformité INCI et les tests accrédités CNAS pour une notification en douceur."
   },
   "Cookie": {
     "message": "Ce site utilise uniquement des cookies d'authentification essentiels. Aucun cookie de suivi ou publicitaire n'est utilisé.",

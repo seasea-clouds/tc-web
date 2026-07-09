@@ -155,6 +155,8 @@ const IGNORE_FALLBACK_VALUES = new Set([
   'Protein', 'Phthalates', 'Crustacea', 'Sodium', 'Allergens', 'Blank',
   // Universal acronyms — same across all languages
   'CBEC',
+  // Standard trade terms retained in English where translation not available
+  'Cross-Border E-commerce (CBEC)',
 ]);
 
 // 原则：不要轻易加入 IGNORE_FALLBACK_KEYS，可以在脚本里精确排除，

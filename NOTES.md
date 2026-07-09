@@ -136,3 +136,35 @@ Worker `rewriteNextStatic()` 将 `/_next/static/` 替换为 `/{prefix}/_next/sta
 
 ### 部署
 commit cc2679a6 → main → Cloudflare Pages 预览 + 生产
+
+## 2026-07-09: Timeline Localization + CNCA Badge (commit 282886d3)
+
+### 问题
+1. ReportShell 报告标题栏的 `estimatedTimeline` (如 "4-6 weeks") 和 `totalCostRange` 未本地化 → 所有语言显示英文
+2. Timeline 组件中 `responsible='CNCA'` 时错误显示为 "📋 Client"（客户负责），实际上 CNCA 是认证机构
+3. Sinhala 语言的 `gaccChannel_cbec_name` 有硬编码英文（commit 157a92b7）
+
+### 修复
+1. ReportShell.tsx:
+   - 导入 `{ localizeTimeline, localizeCost }` + `{ buildT }`
+   - 创建 `lt`/`lc` helper 函数
+   - `estimatedTimeline` → `lt(result.estimatedTimeline)` → ¥3500-9500
+   - `totalCostRange` → `lc(result.totalCostRange)` → "$3,500-9,500"
+2. Timeline.tsx:
+   - 新增 `responsible === 'CNCA'` 判断分支
+   - 显示灰色 "📋 CNCA" 徽章（而非 "📋 Client"）
+3. check-i18n-keys.mjs: 将 `'Cross-Border E-commerce (CBEC)'` 加入 IGNORE_FALLBACK_VALUES
+
+### 数据流
+- **预览报告 (preview)**: 原本就已通过 `localizeServerResult` 在服务端处理了
+- **付费报告**: API 返回 "4-6 weeks" (英文) → ReportShell 现在用 `lt()` 本地化
+- Timeline 子组件的 `lt(p.duration)` 原本就正确处理
+
+### 涉及文件
+- `apps/portal/src/core/report/ReportShell.tsx` — 标题栏本地化
+- `apps/portal/src/core/report/sections/shared/Timeline.tsx` — CNCA 徽章
+- `packages/scripts/check-i18n-keys.mjs` — Sinhala 豁免
+- `TASK.md` — 更新完成列表
+
+### 部署
+commit 282886d3 → main → Cloudflare Pages Active

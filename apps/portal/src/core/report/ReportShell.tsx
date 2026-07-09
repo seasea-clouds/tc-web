@@ -7,6 +7,8 @@
 import type { ReportLabels } from './types';
 import { getGlossary } from './template';
 import SectionTitle from './components/SectionTitle';
+import { localizeTimeline, localizeCost } from './localize';
+import { buildT } from '../../../modules/shared/i18n';
 
 // ─── 共享区块 ─────────────────────────────────────────────────────
 import DecisionSummary from './sections/shared/DecisionSummary';
@@ -153,6 +155,9 @@ function renderSection(S: SectionComponent, result: any) {
 export default function ReportShell(props: ReportShellProps) {
   const { reportId, module, locale, labels, productInfo, result, nextSteps, generatedAt } = props;
   const href = (path: string) => `/${locale || 'en'}${path}`;
+  const t = buildT(locale || 'en', 'ReportSection');
+  const lt = (v: string) => localizeTimeline(t, v);
+  const lc = (v: string) => localizeCost(t, v);
   const glossary = result.glossary || getGlossary(module, locale);
   const formattedDate = generatedAt ? new Date(generatedAt).toLocaleDateString(locale || 'en', {
     year: 'numeric', month: 'long', day: 'numeric',
@@ -208,11 +213,11 @@ export default function ReportShell(props: ReportShellProps) {
               <p className="text-[9px] text-white/40 mt-1 leading-tight">{result.verdictLabel || '—'}</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/10 group hover:bg-white/15 transition-all">
-              <p className="text-lg font-bold text-white mb-1">{result.estimatedTimeline || '—'}</p>
+              <p className="text-lg font-bold text-white mb-1">{lt(result.estimatedTimeline || '—')}</p>
               <p className="text-[10px] text-white/50 uppercase tracking-wider">{labels.labelTimeline}</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/10 group hover:bg-white/15 transition-all">
-              <p className="text-lg font-bold text-white mb-1">{result.totalCostRange || '—'}</p>
+              <p className="text-lg font-bold text-white mb-1">{lc(result.totalCostRange || '—')}</p>
               <p className="text-[10px] text-white/50 uppercase tracking-wider">{labels.labelTotalCost}</p>
             </div>
           </div>

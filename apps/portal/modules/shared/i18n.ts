@@ -7,12 +7,14 @@
  */
 import enMsgs from '../../messages/en.json';
 
-const CACHE: Record<string, Record<string, string>> = {};
+const CACHE: Record<string, any> = {};
 
-// Pre-cache English namespace on module load
-const EN_NS = (enMsgs as Record<string, any>)?.Check || {};
+// Pre-cache full English message tree (all namespaces) on module load
+const EN_NS = enMsgs as Record<string, any>;
 const EN_CACHE_KEY = '***';
-CACHE[EN_CACHE_KEY] = EN_NS as Record<string, string>;
+CACHE[EN_CACHE_KEY] = EN_NS;
+const EN_CACHE_KEY_CHECK = '***check';
+CACHE[EN_CACHE_KEY_CHECK] = EN_NS?.Check || {};
 
 /**
  * Inject pre-loaded locale data into the translation cache.
@@ -26,7 +28,7 @@ export function setLocaleData(locale: string, messages: Record<string, any>): vo
     if (data && typeof data === 'object') {
       const cacheKey = `${locale}:${namespace}`;
       if (!CACHE[cacheKey]) {
-        CACHE[cacheKey] = data as Record<string, string>;
+        CACHE[cacheKey] = data;
       }
     }
   }
@@ -34,8 +36,6 @@ export function setLocaleData(locale: string, messages: Record<string, any>): vo
 
 export function buildT(locale: string = 'en', namespace: string = 'Check'): (key: string) => string {
   const cacheKey = `${locale}:${namespace}`;
-  const enNs = CACHE[EN_CACHE_KEY];
-
   // Try to load locale data once upfront
   if (!CACHE[cacheKey] && locale !== 'en') {
     try {
@@ -56,29 +56,43 @@ export function buildT(locale: string = 'en', namespace: string = 'Check'): (key
       try {
         const msgs = eval('require')('../../messages/' + locale + '.json');
         ns = (msgs as Record<string, any>)?.[namespace] || {};
-        CACHE[cacheKey] = ns; // cache for subsequent lookups
+        CACHE[cacheKey] = ns;
       } catch {
         // Still not available, fall through to English
       }
     }
 
     if (ns) {
-      const val = (ns as Record<string, string>)[key];
+      const val = ns?.[key] as string | undefined;
       if (val) return val;
     }
 
-    // P4: fallback to English if locale lacks the key or chunk not yet loaded
-    const enVal = enNs?.[key];
+    // P4: namespace-aware English fallback
+    // Try same namespace in English first, then Check namespace as general fallback
+    const enFull = CACHE[EN_CACHE_KEY];
+    let enVal: string | undefined;
+
+    // 1) Same namespace in English (e.g. ReportSection.curUsd)
+    if (enFull?.[namespace]) {
+      enVal = enFull[namespace][key] as string | undefined;
+    }
+
+    // 2) Check namespace fallback (backward compat)
+    if (!enVal) {
+      const enCheck = CACHE[EN_CACHE_KEY_CHECK];
+      enVal = enCheck?.[key] as string | undefined;
+    }
+
     if (enVal) {
       if (process.env.NODE_ENV === 'development') {
-        console.warn(`[i18n] Missing key "${key}" in ${locale}.Check, fell back to en`);
+        console.warn(`[i18n] Missing key "${key}" in ${locale}.${namespace}, fell back to en`);
       }
       return enVal as string;
     }
 
     // Last resort: return raw key (should never happen with CI check-t-keys)
     if (process.env.NODE_ENV === 'development') {
-      console.warn(`[i18n] Missing key "${key}" in both ${locale}.Check and en.Check`);
+      console.warn(`[i18n] Missing key "${key}" in both ${locale}.${namespace} and en.${namespace}`);
     }
     return key;
   };

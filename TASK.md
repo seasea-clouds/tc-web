@@ -43,12 +43,20 @@
 | P4 | buildT en.json 降级 — Check namespace (commit ee5e0e10) | ✅ 已部署 |
 | P4b | buildT en.json 降级扩展 — 支持 ReportSection 等所有 namespace (commit cc2679a6) | ✅ 已部署 |
 | P5.1-6 | 组件层硬编码英文 → t() | ✅ |
-| P6 | 6 模块 NextSteps → t() | ✅ |
+| P6 | 6 模块 NextSteps → t() (ReportViewer.tsx + preview) | ✅ |
 | P7 | 36 新 key × 47 语言翻译 (v5/v7 系列) | ✅ 已 merge |
 | P8 | 翻译质量修复 — 5403 处 CamelCase 污染 (20 非拉丁语言) | ✅ |
 | P9 | check-i18n-keys 硬编码英文修复 — 409 处 → 0 处 | ✅ |
 | T1-T4 | 部署/文档/验证/Creem 支付 | ✅ |
 | F1 | Footer 优化 | ✅ 已部署 |
+
+## 最终验证
+
+| 项目 | 验证内容 | 状态 |
+|------|----------|------|
+| NextSteps 修复验证 | 6 模块 × 6 语言浏览器实测 | ✅ 全部通过 |
+| 付费报告页面验证 | GACC/CCC/Label/NMPA/CBEC/Trademark 渲染正确 | ✅ 全部通过 |
+| 表单页面验证 | 所有模块 × 所有已测语言渲染正确 | ✅ 全部通过 |
 
 ## 构建状态
 

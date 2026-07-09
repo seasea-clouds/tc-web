@@ -42,7 +42,7 @@
   },
   "Navbar": {
     "logo": "SinoTrade Compliance",
-    "home": "Thuis",
+    "home": "Home",
     "about": "Over",
     "services": "Diensten",
     "servicesDropdown": {
@@ -93,7 +93,7 @@
     "reports": "Rapporten"
   },
   "MobileTab": {
-    "home": "Thuis",
+    "home": "Home",
     "services": "Diensten",
     "blog": "Bloggen",
     "check": "Controleren"

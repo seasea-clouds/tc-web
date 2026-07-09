@@ -4,7 +4,7 @@ export interface ComplianceReport {
   id: string;
   module: string;
   generatedAt: string;
-  productInfo: { name: string; category: string; originCountry?: string };
+  productInfo: { name: string; category: string; categoryKey?: string; originCountry?: string };
   result: any;
   nextSteps: string[];
 }
@@ -13,7 +13,7 @@ export function generateTrademarkReport(input: TrademarkInput): Omit<ComplianceR
   const result = checkTrademark(input);
   return {
     module: "Brand Protection",
-    productInfo: { name: input.productName, category: CATEGORY_LABELS[input.category] },
+    productInfo: { name: input.productName, category: CATEGORY_LABELS[input.category], categoryKey: input.category },
     result,
     nextSteps: [
       "Contact SinoTrade Compliance for a detailed compliance assessment",

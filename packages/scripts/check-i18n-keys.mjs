@@ -159,6 +159,22 @@ const IGNORE_FALLBACK_VALUES = new Set([
   'CBEC',
   // Standard trade terms retained in English where translation not available
   'Cross-Border E-commerce (CBEC)',
+  // CNCA timeline badge — universal term, single English value across 46 locales
+  'Certification Body',
+  // Label report cost/rejection — Sinhala (si) uses English (translate-tool unsupported)
+  'Label Design', 'Label Review',
+  'Chinese label artwork creation per GB 7718/28050 format requirements',
+  'Nutrition Analysis',
+  'Lab testing for nutrition panel data (energy, protein, fat, carbs, sodium)',
+  'Compliance audit of existing label against GB 7718, GB 28050, and GB 2760',
+  'Translation',
+  'Professional translation of label content to Simplified Chinese',
+  'Missing or incorrect mandatory label fields per GB 7718',
+  'Label artwork lacks required Chinese text elements',
+  'Add all 12 mandatory label fields per GB 7718 checklist',
+  'Nutrition panel does not match GB 28050 format requirements',
+  'Nutrition information format non-compliant',
+  'Redesign nutrition panel per GB 28050 (kJ primary, NRV column required)',
 ]);
 
 // 原则：不要轻易加入 IGNORE_FALLBACK_KEYS，可以在脚本里精确排除，

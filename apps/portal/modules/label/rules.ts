@@ -265,9 +265,9 @@ export function checkLabel(input: LabelInput, locale?: string): LabelResult {
       { item: t("labelPost_annualAudit_item"), freq: t("labelPost_annualAudit_frequency"), desc: t("labelPost_annualAudit_desc") },
     ],
     horizonScan: [
-      { topic: t("labelHorizon_gb7718_topic"), impact: t("labelHorizon_gb7718_impact"), timeframe: t("labelHorizon_gb7718_timeframe"), description: t("labelHorizon_gb7718_desc"), actionRequired: true },
-      { topic: t("labelHorizon_qr_topic"), impact: t("labelHorizon_qr_impact"), timeframe: t("labelHorizon_qr_timeframe"), description: t("labelHorizon_qr_desc"), actionRequired: false },
-      { topic: t("labelHorizon_fop_topic"), impact: t("labelHorizon_fop_impact"), timeframe: t("labelHorizon_fop_timeframe"), description: t("labelHorizon_fop_desc"), actionRequired: false },
+      { topic: t("labelHorizon_gb7718_topic"), impact: "high", timeframe: t("labelHorizon_gb7718_timeframe"), description: t("labelHorizon_gb7718_desc"), actionRequired: true },
+      { topic: t("labelHorizon_qr_topic"), impact: "medium", timeframe: t("labelHorizon_qr_timeframe"), description: t("labelHorizon_qr_desc"), actionRequired: false },
+      { topic: t("labelHorizon_fop_topic"), impact: "medium", timeframe: t("labelHorizon_fop_timeframe"), description: t("labelHorizon_fop_desc"), actionRequired: false },
     ],
   
   labelMandatoryElements: [

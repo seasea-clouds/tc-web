@@ -112,7 +112,7 @@ export function checkCrossborder(input: any, locale?: string): any {
       { item: t("cbPost_posListReview_item"), freq: t("cbPost_posListReview_frequency"), desc: t("cbPost_posListReview_desc") },
     ],
     horizonScan: [
-      { topic: t("cbHorizon_posList_topic"), impact: t("cbHorizon_posList_impact"), timeframe: t("cbHorizon_posList_timeframe"), description: t("cbHorizon_posList_desc"), actionRequired: true },
+      { topic: t("cbHorizon_posList_topic"), impact: "high", timeframe: t("cbHorizon_posList_timeframe"), description: t("cbHorizon_posList_desc"), actionRequired: true },
     ],
   
   platformGuide: [

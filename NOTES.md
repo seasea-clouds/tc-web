@@ -107,3 +107,32 @@ Worker `rewriteNextStatic()` 将 `/_next/static/` 替换为 `/{prefix}/_next/sta
 - 中文 (zh) 检测半角冒号正文文案（有豁免列表）
 - 所有语言检测同一值内混用全半角冒号
 - 已注册到 `ci-check.mjs`，portal CI 时自动运行
+
+## 2026-07-09: buildT ReportSection namespace 降级修复
+
+### 问题
+报告页 Summary header 显示 `curUsd3,500-9,500` 和 `4-6 timelineWeeks` 等原始 key 名。
+
+### 根因
+`modules/shared/i18n.ts` 中的 `buildT` 函数只预缓存了 `Check` namespace 的英文 JSON。当 `localizeServerResult()` 以 `buildT(locale, 'ReportSection')` 调用时：
+
+1. `CACHE['en:ReportSection']` 不存在（从未加载）
+2. `locale === 'en'` 跳过所有 `require` 逻辑
+3. 英文降级到 `CACHE[EN_CACHE_KEY]` 即 `Check` namespace
+4. 在 Check 中找不到 `curUsd` / `timelineWeeks`
+5. 返回原始 raw key
+
+### 修复
+修改 `buildT` 函数：
+- 将 `CACHE[EN_CACHE_KEY]` 存储完整的 enMsgs（所有 namespace）
+- 新增 `CACHE[EN_CACHE_KEY_CHECK]` 存储 Check namespace 用于向后兼容
+- 英文降级先查找 `enFull[namespace][key]`（相同 namespace）
+- 找不到再回退到 `enCheck[key]`（Check namespace 兼容）
+
+### 涉及文件
+- `apps/portal/modules/shared/i18n.ts` — buildT 函数修复
+- `apps/portal/src/app/[locale]/c/report/page.tsx` — 已验证
+- `apps/portal/src/core/report/template.tsx` — localizeServerResult 调用方
+
+### 部署
+commit cc2679a6 → main → Cloudflare Pages 预览 + 生产

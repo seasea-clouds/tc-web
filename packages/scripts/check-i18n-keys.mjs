@@ -436,6 +436,26 @@ function generateTranslateInput(missingByProject) {
 }
 
 // ============================================================
+// 检查面包屑(Pc) Navbar.home 与移动端 MobileTab.home 翻译一致性
+// ============================================================
+function checkNavbarMobileConsistency() {
+  const issues = [];
+  const uiDir = UI_MESSAGES_DIR;
+  for (const locale of LOCALES) {
+    const filePath = path.join(uiDir, `${locale}.json`);
+    if (!fs.existsSync(filePath)) continue;
+    const data = loadJSON(filePath);
+    if (!data) continue;
+    const navHome = data?.Navbar?.home;
+    const mobileHome = data?.MobileTab?.home;
+    if (navHome && mobileHome && navHome !== mobileHome) {
+      issues.push({ locale, navHome, mobileHome });
+    }
+  }
+  return issues;
+}
+
+// ============================================================
 // Main
 // ============================================================
 const args = process.argv.slice(2);
@@ -460,6 +480,9 @@ const missingByProject = { site: siteResult, portal: portalResult, ui: uiResult 
 const siteHardcoded = checkHardcodedFallbacks('site', siteData);
 const portalHardcoded = portalData ? checkHardcodedFallbacks('portal', portalData) : { total: 0, missing: [], extra: [], hardcoded: [] };
 const uiHardcoded = checkHardcodedFallbacks('ui', uiData);
+
+// 检查 Navbar.home vs MobileTab.home 一致性
+const navbarMobileIssues = checkNavbarMobileConsistency();
 
 if (generateInput) {
   const outputFile = generateTranslateInput(missingByProject);
@@ -544,10 +567,23 @@ for (const proj of projects) {
   console.log('');
 }
 
-console.log(`📊 总计: ${totalMissing} 缺失 + ${totalExtra} 多余 + ${totalHardcoded} 硬编码英文`);
+// ============================================================
+// Navbar.home vs MobileTab.home 一致性检查
+// ============================================================
+if (navbarMobileIssues.length > 0) {
+  console.log(`🔍 面包屑 Navbar.home 与移动导航 MobileTab.home 翻译不一致 (${navbarMobileIssues.length} 种语言):`);
+  for (const issue of navbarMobileIssues) {
+    console.log(`  ❌ ${issue.locale}: Navbar.home="${issue.navHome}" vs MobileTab.home="${issue.mobileHome}"`);
+  }
+  console.log('');
+} else {
+  console.log('✅ 面包屑与移动导航 Navbar.home 翻译一致');
+}
 
-if (totalMissing > 0 || totalHardcoded > 0) {
+console.log(`📊 总计: ${totalMissing} 缺失 + ${totalExtra} 多余 + ${totalHardcoded} 硬编码英文 + ${navbarMobileIssues.length} 导航翻译不一致`);
+
+if (totalMissing > 0 || totalHardcoded > 0 || navbarMobileIssues.length > 0) {
   if (isCi) process.exit(1);
 } else {
-  console.log('✅ 所有 i18n key 完整，无硬编码英文');
+  console.log('✅ 所有 i18n key 完整，无硬编码英文，导航翻译一致');
 }

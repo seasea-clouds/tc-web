@@ -52,6 +52,7 @@
 | F2 | ReportShell 标题区 timeline/cost 本地化 (commit 282886d3) | ✅ 已部署 |
 | F3 | Timeline CNCA 徽章修复 (commit 282886d3) | ✅ 已部署 |
 | F4 | Sinhala 硬编码英文豁免 (commit 157a92b7) | ✅ 已部署 |
+| L1 | LabelRej0/LabelRej1/LabelCost key 名泄露修复 (commit 8a0192c2) | ✅ 已部署 |
 
 ## 最终验证
 

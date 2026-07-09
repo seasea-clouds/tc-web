@@ -124,6 +124,7 @@ interface ReportShellProps {
     name: string;
     category: string;
     hsCode?: string;
+    categoryKey?: string;
     originCountry: string;
   };
   result: any;
@@ -159,6 +160,19 @@ export default function ReportShell(props: ReportShellProps) {
   const t = buildT(locale || 'en', 'ReportSection');
   const lt = (v: string) => localizeTimeline(t, v);
   const lc = (v: string) => localizeCost(t, v);
+  const tCheck = buildT(locale || 'en', 'Check');
+  const MODULE_CAT_PREFIX: Record<string, string> = {
+    'GACC Food Registration': 'gaccCat',
+    'CCC Certification': 'cccCat',
+    'Chinese Label Compliance': 'labelCat',
+    'Cosmetics Filing (NMPA)': 'nmpaCat',
+    'Cross-border E-commerce': 'cbCat',
+    'Brand Protection': 'tmCat',
+  };
+  const catPrefix = MODULE_CAT_PREFIX[module] || 'gaccCat';
+  const categoryLabel = productInfo.categoryKey
+    ? (tCheck(`${catPrefix}_${productInfo.categoryKey}_label`) || productInfo.category)
+    : productInfo.category;
   const glossary = result.glossary || getGlossary(moduleKey || module, locale);
   const formattedDate = generatedAt ? new Date(generatedAt).toLocaleDateString(locale || 'en', {
     year: 'numeric', month: 'long', day: 'numeric',
@@ -190,7 +204,7 @@ export default function ReportShell(props: ReportShellProps) {
           </div>
           <div className="mt-4 pt-4 border-t border-white/10 flex flex-wrap gap-x-6 gap-y-1 text-xs text-white/70">
             <span>{labels.labelPreparedFor} <strong className="text-white">{productInfo.name || labels.labelClient}</strong></span>
-            <span>{labels.labelCategory} <strong className="text-white">{productInfo.category}</strong></span>
+            <span>{labels.labelCategory} <strong className="text-white">{categoryLabel}</strong></span>
             <span>{labels.labelOrigin} <strong className="text-white">{productInfo.originCountry || '—'}</strong></span>
             {productInfo.hsCode && <span>{labels.labelHsCode} <strong className="text-white">{productInfo.hsCode}</strong></span>}
           </div>

@@ -138,7 +138,7 @@ function ReportContent() {
               const sr = m.fn(savedInput, locale);
               setError('');
               setReport({id,module:m.label,
-                productInfo:{name:savedInput.productName||savedInput.brandName||'Your Product',category:savedInput.category||'',originCountry:savedInput.originCountry||''},
+                productInfo:{name:savedInput.productName||savedInput.brandName||'Your Product',category:savedInput.category||'',categoryKey:savedInput.category||'',originCountry:savedInput.originCountry||''},
                 result:sr,nextSteps:m.nextSteps,generatedAt:new Date().toISOString()});
               setLoading(false);
               return;

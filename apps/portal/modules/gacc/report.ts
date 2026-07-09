@@ -11,6 +11,7 @@ export function generateGaccReport(input: GaccInput, locale?: string): Omit<Comp
     productInfo: {
       name: input.productName,
       category: CATEGORY_LABELS[input.category] || input.category,
+      categoryKey: input.category,
       hsCode: input.hsCode,
       originCountry: input.originCountry,
     },

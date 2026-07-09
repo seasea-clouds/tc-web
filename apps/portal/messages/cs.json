@@ -2796,7 +2796,8 @@
     "impact_low": "NÍZKÝ DOPAD",
     "perShipment": "na zásilku",
     "valueNA": "N/A",
-    "valueNone": "Žádný"
+    "valueNone": "Žádný",
+    "timelineCnca": "Certification Body"
   },
   "cccDetailedTimeline": "Liší se podle produktu – kontaktujte nás pro posouzení",
   "cccLabGuide": "Testování musí být provedeno v laboratoři akreditované CNAS.",

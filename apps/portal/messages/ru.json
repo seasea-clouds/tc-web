@@ -2796,7 +2796,8 @@
     "impact_low": "НИЗКОЕ ВОЗДЕЙСТВИЕ",
     "perShipment": "за отправку",
     "valueNA": "Н/Д",
-    "valueNone": "Никто"
+    "valueNone": "Никто",
+    "timelineCnca": "Certification Body"
   },
   "cccDetailedTimeline": "Зависит от продукта — свяжитесь с нами для оценки",
   "cccLabGuide": "Тестирование должно проводиться в лаборатории, аккредитованной CNAS.",

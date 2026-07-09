@@ -2796,7 +2796,8 @@
     "impact_low": "BAIX IMPACTE",
     "perShipment": "per enviament",
     "valueNA": "N/A",
-    "valueNone": "Cap"
+    "valueNone": "Cap",
+    "timelineCnca": "Certification Body"
   },
   "cccDetailedTimeline": "Varia segons el producte: poseu-vos en contacte amb nosaltres per a una avaluació",
   "cccLabGuide": "Les proves s'han de fer al laboratori acreditat pel CNAS.",

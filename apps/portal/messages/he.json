@@ -2796,7 +2796,8 @@
     "impact_low": "השפעה נמוכה",
     "perShipment": "לכל משלוח",
     "valueNA": "לא",
-    "valueNone": "אַף לֹא אֶחָד"
+    "valueNone": "אַף לֹא אֶחָד",
+    "timelineCnca": "Certification Body"
   },
   "cccDetailedTimeline": "משתנה לפי מוצר - צור איתנו קשר להערכה",
   "cccLabGuide": "הבדיקה חייבת להיות במעבדה מוסמכת CNAS.",

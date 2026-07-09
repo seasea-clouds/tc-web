@@ -2796,7 +2796,8 @@
     "impact_low": "IMPACT scazut",
     "perShipment": "per transport",
     "valueNA": "N / A",
-    "valueNone": "Nici unul"
+    "valueNone": "Nici unul",
+    "timelineCnca": "Certification Body"
   },
   "cccDetailedTimeline": "Variază în funcție de produs - contactați-ne pentru evaluare",
   "cccLabGuide": "Testarea trebuie să fie la laboratorul acreditat CNAS.",

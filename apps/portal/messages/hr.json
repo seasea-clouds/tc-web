@@ -2796,7 +2796,8 @@
     "impact_low": "NIZAK UTJECAJ",
     "perShipment": "po pošiljci",
     "valueNA": "N/A",
-    "valueNone": "Nijedan"
+    "valueNone": "Nijedan",
+    "timelineCnca": "Certification Body"
   },
   "cccDetailedTimeline": "Razlikuje se ovisno o proizvodu — kontaktirajte nas za procjenu",
   "cccLabGuide": "Testiranje mora biti u laboratoriju ovlaštenom od CNAS-a.",

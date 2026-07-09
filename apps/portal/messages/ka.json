@@ -2796,7 +2796,8 @@
     "impact_low": "დაბალი ზემოქმედება",
     "perShipment": "თითო გადაზიდვაზე",
     "valueNA": "N/A",
-    "valueNone": "არცერთი"
+    "valueNone": "არცერთი",
+    "timelineCnca": "Certification Body"
   },
   "cccDetailedTimeline": "განსხვავდება პროდუქტის მიხედვით — შეფასებისთვის დაგვიკავშირდით",
   "cccLabGuide": "ტესტირება უნდა ჩატარდეს CNAS აკრედიტებულ ლაბორატორიაში.",

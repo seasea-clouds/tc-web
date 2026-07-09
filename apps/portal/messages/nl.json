@@ -2796,7 +2796,8 @@
     "impact_low": "LAGE IMPACT",
     "perShipment": "per zending",
     "valueNA": "N.v.t",
-    "valueNone": "Geen"
+    "valueNone": "Geen",
+    "timelineCnca": "Certification Body"
   },
   "cccDetailedTimeline": "Varieert per product - neem contact met ons op voor beoordeling",
   "cccLabGuide": "Het testen moet plaatsvinden in een door CNAS geaccrediteerd laboratorium.",

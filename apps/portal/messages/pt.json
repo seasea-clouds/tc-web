@@ -2796,7 +2796,8 @@
     "impact_low": "BAIXO IMPACTO",
     "perShipment": "por remessa",
     "valueNA": "N / D",
-    "valueNone": "Nenhum"
+    "valueNone": "Nenhum",
+    "timelineCnca": "Certification Body"
   },
   "cccDetailedTimeline": "Varia de acordo com o produto – entre em contato conosco para avaliação",
   "cccLabGuide": "O teste deve ser realizado em laboratório credenciado pelo CNAS.",

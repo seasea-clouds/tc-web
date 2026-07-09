@@ -2796,7 +2796,8 @@
     "impact_low": "LAV PÅVIRKNING",
     "perShipment": "per forsendelse",
     "valueNA": "N/A",
-    "valueNone": "Ingen"
+    "valueNone": "Ingen",
+    "timelineCnca": "Certification Body"
   },
   "cccDetailedTimeline": "Varierer efter produkt - kontakt os for vurdering",
   "cccLabGuide": "Testning skal være på CNAS-akkrediteret laboratorium.",

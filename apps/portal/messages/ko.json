@@ -2796,7 +2796,8 @@
     "impact_low": "영향이 적음",
     "perShipment": "배송 당",
     "valueNA": "해당 없음",
-    "valueNone": "없음"
+    "valueNone": "없음",
+    "timelineCnca": "Certification Body"
   },
   "cccDetailedTimeline": "제품에 따라 다릅니다. 평가를 위해 당사에 문의하십시오.",
   "cccLabGuide": "테스트는 CNAS 인증 연구소에서 이루어져야 합니다.",

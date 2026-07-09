@@ -2796,7 +2796,8 @@
     "impact_low": "අඩු බලපෑම",
     "perShipment": "නැව්ගත කිරීම සඳහා",
     "valueNA": "N/A",
-    "valueNone": "කිසිවක් නැත"
+    "valueNone": "කිසිවක් නැත",
+    "timelineCnca": "Certification Body"
   },
   "cccDetailedTimeline": "නිෂ්පාදනය අනුව වෙනස් වේ - ඇගයීම සඳහා අප අමතන්න",
   "cccLabGuide": "පරීක්ෂණ CNAS-ප්‍රතීතනය ලත් රසායනාගාරයේ තිබිය යුතුය.",

@@ -2796,7 +2796,8 @@
     "impact_low": "ЛОВ ИМПАЦТ",
     "perShipment": "по пошиљци",
     "valueNA": "Н/А",
-    "valueNone": "Ниједан"
+    "valueNone": "Ниједан",
+    "timelineCnca": "Certification Body"
   },
   "cccDetailedTimeline": "Зависи од производа - контактирајте нас за процену",
   "cccLabGuide": "Тестирање мора бити у лабораторији акредитованој ЦНАС-у.",

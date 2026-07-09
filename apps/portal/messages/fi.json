@@ -2796,7 +2796,8 @@
     "impact_low": "ALHAINEN VAIKUTUS",
     "perShipment": "lähetystä kohti",
     "valueNA": "Ei käytössä",
-    "valueNone": "Ei mitään"
+    "valueNone": "Ei mitään",
+    "timelineCnca": "Certification Body"
   },
   "cccDetailedTimeline": "Vaihtelee tuotteen mukaan – ota meihin yhteyttä arvioidaksesi",
   "cccLabGuide": "Testaus on suoritettava CNAS-akkreditoidussa laboratoriossa.",

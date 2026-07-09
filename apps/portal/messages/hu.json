@@ -2796,7 +2796,8 @@
     "impact_low": "ALACSONY HATÁS",
     "perShipment": "szállítmányonként",
     "valueNA": "N/A",
-    "valueNone": "Egyik sem"
+    "valueNone": "Egyik sem",
+    "timelineCnca": "Certification Body"
   },
   "cccDetailedTimeline": "Termékenként változó – értékelésért forduljon hozzánk",
   "cccLabGuide": "A tesztelést a CNAS által akkreditált laboratóriumban kell elvégezni.",

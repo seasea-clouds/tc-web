@@ -54,7 +54,7 @@ export default function Timeline({ result }: { result: any }) {
                       p.responsible === 'Both' ? 'bg-purple-100 text-purple-700' :
                       p.responsible === 'CNCA' ? 'bg-gray-100 text-gray-700' : 'bg-amber-100 text-amber-700'
                     }`}>
-                      {p.responsible === 'SinoTrade' ? "🤝 " + t("timelineWeHandle") : p.responsible === 'Both' ? "🔄 " + t("timelineJoint") : p.responsible === 'CNCA' ? '📋 CNCA' : "📋 " + t("timelineClient")}
+                      {p.responsible === 'SinoTrade' ? "🤝 " + t("timelineWeHandle") : p.responsible === 'Both' ? "🔄 " + t("timelineJoint") : p.responsible === 'CNCA' ? '📋 ' + t("timelineCnca") : "📋 " + t("timelineClient")}
                     </span>
                   )}
                   {(p.dependencies || []).map((dep: string, j: number) => (

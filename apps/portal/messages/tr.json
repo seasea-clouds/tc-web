@@ -2796,7 +2796,8 @@
     "impact_low": "DÜŞÜK ETKİ",
     "perShipment": "gönderi başına",
     "valueNA": "Yok",
-    "valueNone": "Hiçbiri"
+    "valueNone": "Hiçbiri",
+    "timelineCnca": "Certification Body"
   },
   "cccDetailedTimeline": "Ürüne göre değişir; değerlendirme için bizimle iletişime geçin",
   "cccLabGuide": "Testler CNAS onaylı laboratuvarda yapılmalıdır.",

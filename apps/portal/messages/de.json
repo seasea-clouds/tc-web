@@ -2796,7 +2796,8 @@
     "impact_low": "GERINGE AUSWIRKUNG",
     "perShipment": "pro Sendung",
     "valueNA": "N / A",
-    "valueNone": "Keiner"
+    "valueNone": "Keiner",
+    "timelineCnca": "Certification Body"
   },
   "cccDetailedTimeline": "Variiert je nach Produkt – kontaktieren Sie uns für eine Bewertung",
   "cccLabGuide": "Die Tests müssen in einem vom CNAS akkreditierten Labor durchgeführt werden.",

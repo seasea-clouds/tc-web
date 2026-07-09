@@ -2796,7 +2796,8 @@
     "impact_low": "低影响",
     "perShipment": "每批货物",
     "valueNA": "不适用",
-    "valueNone": "没有任何"
+    "valueNone": "没有任何",
+    "timelineCnca": "认证机构"
   },
   "cccDetailedTimeline": "因产品而异 — 请联系我们进行评估",
   "cccLabGuide": "测试必须在 CNAS 认可的实验室进行。",

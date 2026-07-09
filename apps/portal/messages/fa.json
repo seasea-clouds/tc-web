@@ -2796,7 +2796,8 @@
     "impact_low": "تاثیر کم",
     "perShipment": "در هر محموله",
     "valueNA": "N/A",
-    "valueNone": "هیچ کدام"
+    "valueNone": "هیچ کدام",
+    "timelineCnca": "Certification Body"
   },
   "cccDetailedTimeline": "بسته به محصول متفاوت است - برای ارزیابی با ما تماس بگیرید",
   "cccLabGuide": "آزمایش باید در آزمایشگاه معتبر CNAS باشد.",

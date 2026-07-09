@@ -2796,7 +2796,8 @@
     "impact_low": "MAJHEN VPLIV",
     "perShipment": "na pošiljko",
     "valueNA": "N/A",
-    "valueNone": "Noben"
+    "valueNone": "Noben",
+    "timelineCnca": "Certification Body"
   },
   "cccDetailedTimeline": "Odvisno od izdelka - kontaktirajte nas za oceno",
   "cccLabGuide": "Testiranje mora biti v laboratoriju, akreditiranem s strani CNAS.",

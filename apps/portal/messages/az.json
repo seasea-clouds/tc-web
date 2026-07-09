@@ -2796,7 +2796,8 @@
     "impact_low": "AZ TƏSİRLƏR",
     "perShipment": "göndərmə başına",
     "valueNA": "Yoxdur",
-    "valueNone": "Heç biri"
+    "valueNone": "Heç biri",
+    "timelineCnca": "Certification Body"
   },
   "cccDetailedTimeline": "Məhsula görə dəyişir — qiymətləndirmə üçün bizimlə əlaqə saxlayın",
   "cccLabGuide": "Test CNAS tərəfindən akkreditə olunmuş laboratoriyada aparılmalıdır.",

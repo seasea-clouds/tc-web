@@ -2796,7 +2796,8 @@
     "impact_low": "LAE IMPAK",
     "perShipment": "per besending",
     "valueNA": "NVT",
-    "valueNone": "Geen"
+    "valueNone": "Geen",
+    "timelineCnca": "Certification Body"
   },
   "cccDetailedTimeline": "Wissel volgens produk — kontak ons ​​vir assessering",
   "cccLabGuide": "Toetsing moet by CNAS-geakkrediteerde laboratorium wees.",

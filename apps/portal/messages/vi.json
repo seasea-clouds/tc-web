@@ -2796,7 +2796,8 @@
     "impact_low": "TÁC ĐỘNG THẤP",
     "perShipment": "mỗi lô hàng",
     "valueNA": "không áp dụng",
-    "valueNone": "Không có"
+    "valueNone": "Không có",
+    "timelineCnca": "Certification Body"
   },
   "cccDetailedTimeline": "Khác nhau tùy theo sản phẩm - liên hệ với chúng tôi để đánh giá",
   "cccLabGuide": "Việc kiểm tra phải được thực hiện tại phòng thí nghiệm được CNAS công nhận.",

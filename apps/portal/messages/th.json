@@ -2796,7 +2796,8 @@
     "impact_low": "ผลกระทบต่ำ",
     "perShipment": "ต่อการจัดส่ง",
     "valueNA": "ไม่มี",
-    "valueNone": "ไม่มี"
+    "valueNone": "ไม่มี",
+    "timelineCnca": "Certification Body"
   },
   "cccDetailedTimeline": "แตกต่างกันไปตามผลิตภัณฑ์ — ติดต่อเราเพื่อรับการประเมิน",
   "cccLabGuide": "การทดสอบจะต้องอยู่ที่ห้องปฏิบัติการที่ได้รับการรับรองจาก CNAS",

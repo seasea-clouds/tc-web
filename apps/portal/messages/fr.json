@@ -2796,7 +2796,8 @@
     "impact_low": "FAIBLE IMPACT",
     "perShipment": "par envoi",
     "valueNA": "N / A",
-    "valueNone": "Aucun"
+    "valueNone": "Aucun",
+    "timelineCnca": "Certification Body"
   },
   "cccDetailedTimeline": "Varie selon le produit — contactez-nous pour une évaluation",
   "cccLabGuide": "Les tests doivent être effectués dans un laboratoire accrédité par le CNAS.",

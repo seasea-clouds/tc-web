@@ -2796,7 +2796,8 @@
     "impact_low": "DAMPAK RENDAH",
     "perShipment": "per pengiriman",
     "valueNA": "T/A",
-    "valueNone": "Tidak ada"
+    "valueNone": "Tidak ada",
+    "timelineCnca": "Certification Body"
   },
   "cccDetailedTimeline": "Bervariasi berdasarkan produk — hubungi kami untuk penilaian",
   "cccLabGuide": "Pengujian harus dilakukan di laboratorium terakreditasi CNAS.",

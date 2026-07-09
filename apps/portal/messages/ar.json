@@ -2796,7 +2796,8 @@
     "impact_low": "تأثير منخفض",
     "perShipment": "لكل شحنة",
     "valueNA": "لا يوجد",
-    "valueNone": "لا أحد"
+    "valueNone": "لا أحد",
+    "timelineCnca": "Certification Body"
   },
   "cccDetailedTimeline": "يختلف حسب المنتج - اتصل بنا للتقييم",
   "cccLabGuide": "يجب أن يتم الاختبار في مختبر معتمد من CNAS.",

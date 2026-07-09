@@ -99,6 +99,7 @@ const labels = {
         <ReportTemplate
           reportId={report.id}
           module={t(MODULE_KEYS[report.module] ?? report.module)}
+          moduleKey={report.module}
           locale={locale}
           labels={labels}
           productInfo={{...report.productInfo, category: translatedCategory}}

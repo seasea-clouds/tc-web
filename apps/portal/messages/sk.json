@@ -2796,7 +2796,8 @@
     "impact_low": "NÍZKY VPLYV",
     "perShipment": "na zásielku",
     "valueNA": "N/A",
-    "valueNone": "žiadne"
+    "valueNone": "žiadne",
+    "timelineCnca": "Certification Body"
   },
   "cccDetailedTimeline": "Líši sa podľa produktu – kontaktujte nás pre posúdenie",
   "cccLabGuide": "Testovanie sa musí uskutočniť v laboratóriu akreditovanom CNAS.",

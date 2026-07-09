@@ -117,6 +117,7 @@ const MODULE_SECTIONS: Record<string, ModuleSectionGroup> = {
 interface ReportShellProps {
   reportId: string;
   module: string;
+  moduleKey?: string;
   locale?: string;
   labels: ReportLabels;
   productInfo: {
@@ -153,17 +154,17 @@ function renderSection(S: SectionComponent, result: any) {
 // ─── Main Component ─────────────────────────────────────────────
 
 export default function ReportShell(props: ReportShellProps) {
-  const { reportId, module, locale, labels, productInfo, result, nextSteps, generatedAt } = props;
+  const { reportId, module, locale, labels, productInfo, result, nextSteps, generatedAt, moduleKey } = props;
   const href = (path: string) => `/${locale || 'en'}${path}`;
   const t = buildT(locale || 'en', 'ReportSection');
   const lt = (v: string) => localizeTimeline(t, v);
   const lc = (v: string) => localizeCost(t, v);
-  const glossary = result.glossary || getGlossary(module, locale);
+  const glossary = result.glossary || getGlossary(moduleKey || module, locale);
   const formattedDate = generatedAt ? new Date(generatedAt).toLocaleDateString(locale || 'en', {
     year: 'numeric', month: 'long', day: 'numeric',
   }) : '—';
 
-  const mod = MODULE_SECTIONS[module] || MODULE_SECTIONS['GACC Food Registration'];
+  const mod = MODULE_SECTIONS[moduleKey || module] || MODULE_SECTIONS['GACC Food Registration'];
 
   return (
     <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden print:shadow-none print:border-none">

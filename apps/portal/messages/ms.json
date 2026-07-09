@@ -2796,7 +2796,8 @@
     "impact_low": "IMPAK RENDAH",
     "perShipment": "setiap penghantaran",
     "valueNA": "T/A",
-    "valueNone": "tiada"
+    "valueNone": "tiada",
+    "timelineCnca": "Certification Body"
   },
   "cccDetailedTimeline": "Berbeza mengikut produk — hubungi kami untuk penilaian",
   "cccLabGuide": "Ujian mestilah di makmal yang diiktiraf CNAS.",

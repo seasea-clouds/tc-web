@@ -1,11 +1,12 @@
 'use client';
-import { useT, useTradeLocale } from '@trade/ui';
+import { useT, useTradeLocale, useMessages } from '@trade/ui';
 
 import { useState, useEffect, useRef, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import ReportViewer from '@/components/ReportViewer';
 import { API_BASE } from '@/lib/constants';
 import useSubsiteHref from '@/lib/useSubsiteHref';
+import { setLocaleData } from '../../../../../modules/shared/i18n';
 import { checkGacc } from '../../../../../modules/gacc/rules';
 import { checkCcc } from '../../../../../modules/ccc/rules';
 import { checkCosmetics } from '../../../../../modules/nmpa/rules';
@@ -69,6 +70,12 @@ function ReportContent() {
   const t = useT('Report');
   const tC = useT('Check');
   const locale = useTradeLocale();
+  const messages = useMessages();
+
+  // Inject locale data into buildT cache before check functions run
+  useEffect(() => {
+    setLocaleData(locale, messages);
+  }, [locale, messages]);
 
   // Sync useSearchParams into local state (fixes SSG hydration issue)
   useEffect(() => {

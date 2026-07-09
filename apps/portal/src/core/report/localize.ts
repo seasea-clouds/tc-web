@@ -53,10 +53,23 @@ export function localizeTimeline(t: TFunc, value: string): string {
  *   localizeCost(t, "$200-500 per shipment")  → "$200-500 per shipment" (en)
  *   localizeCost(t, "$200-500 per shipment")  → "美元200-500 per shipment" (zh)
  */
+/**
+ * Localize cost strings like "$800-2,500" and "per shipment".
+ *
+ * Examples:
+ *   localizeCost(t, "$800-2,500")             → "$800-2,500"        (en)
+ *   localizeCost(t, "$800-2,500")             → "美元800-2,500"     (zh)
+ *   localizeCost(t, "$200-500 per shipment")  → "$200-500 per shipment" (en)
+ *   localizeCost(t, "$200-500 per shipment")  → "美元200-500 每批" (zh)
+ */
 export function localizeCost(t: TFunc, value: string): string {
   if (!value) return value;
 
   const cur = t('curUsd');
-  // Replace all "$" with localized currency (handles "费用范围: $800" etc.)
-  return value.replace(/\$/g, cur);
+  const perShipment = t('perShipment');
+  // Replace all "$" with localized currency
+  let result = value.replace(/\$/g, cur);
+  // Replace "per shipment" with localized equivalent
+  result = result.replace(/per\s+shipment\b/gi, perShipment);
+  return result;
 }

@@ -51,11 +51,11 @@ export default function NmpaCheckClient() {
           resultData: freeData,
           paymentStatus: 'completed',
           nextSteps: [
-            'Designate Chinese responsible person (境内责任人)',
-            'Complete safety assessment per NMPA 2021 guidelines',
-            'Coordinate testing at NMPA-designated laboratory',
-            'File NMPA notification (备案) for ordinary cosmetics',
-            'Set up post-market adverse event monitoring',
+            t('nmpaStep1'),
+            t('nmpaStep2'),
+            t('nmpaStep3'),
+            t('nmpaStep4'),
+            t('nmpaStep5'),
           ],
         }),
       }).catch(e => console.warn('D1 save failed:', e));

@@ -11,30 +11,63 @@ const CACHE: Record<string, Record<string, string>> = {};
 
 // Pre-cache English namespace on module load
 const EN_NS = (enMsgs as Record<string, any>)?.Check || {};
-const EN_CACHE_KEY = 'en:Check';
+const EN_CACHE_KEY = '***';
 CACHE[EN_CACHE_KEY] = EN_NS as Record<string, string>;
+
+/**
+ * Inject pre-loaded locale data into the translation cache.
+ * Called by page components (e.g. report/page.tsx) to bridge
+ * @trade/ui useT context data into buildT's cache, avoiding
+ * the need for dynamic require() on lazy-loaded chunks.
+ */
+export function setLocaleData(locale: string, messages: Record<string, any>): void {
+  if (!locale || locale === 'en') return;
+  for (const [namespace, data] of Object.entries(messages)) {
+    if (data && typeof data === 'object') {
+      const cacheKey = `${locale}:${namespace}`;
+      if (!CACHE[cacheKey]) {
+        CACHE[cacheKey] = data as Record<string, string>;
+      }
+    }
+  }
+}
 
 export function buildT(locale: string = 'en', namespace: string = 'Check'): (key: string) => string {
   const cacheKey = `${locale}:${namespace}`;
-  if (!CACHE[cacheKey]) {
-    try {
-      const msgs = locale === 'en' || !locale ? enMsgs : (() => {
-        // Use eval to hide require path from esbuild (prevents Worker bundle bloat)
-        try { return eval('require')('../../messages/' + locale + '.json'); } catch { return enMsgs; }
-      })();
-      CACHE[cacheKey] = (msgs as Record<string, any>)?.[namespace] || {};
-    } catch {
-      CACHE[cacheKey] = CACHE[EN_CACHE_KEY] || EN_NS;
-    }
-  }
-  const ns = CACHE[cacheKey];
   const enNs = CACHE[EN_CACHE_KEY];
 
-  return (key: string) => {
-    const val = (ns as Record<string, string>)[key];
-    if (val) return val;
+  // Try to load locale data once upfront
+  if (!CACHE[cacheKey] && locale !== 'en') {
+    try {
+      // Use eval to hide require path from esbuild (prevents Worker bundle bloat)
+      const msgs = eval('require')('../../messages/' + locale + '.json');
+      CACHE[cacheKey] = (msgs as Record<string, any>)?.[namespace] || {};
+    } catch {
+      // Ignore — chunk may not have loaded yet (deferred by Webpack chunk loading).
+      // Will retry on each t() call below instead of caching English fallback permanently.
+    }
+  }
 
-    // P4: fallback to English if locale lacks the key
+  return (key: string) => {
+    let ns = CACHE[cacheKey];
+
+    // Retry loading the locale chunk if it wasn't ready on first attempt
+    if (!ns && locale !== 'en') {
+      try {
+        const msgs = eval('require')('../../messages/' + locale + '.json');
+        ns = (msgs as Record<string, any>)?.[namespace] || {};
+        CACHE[cacheKey] = ns; // cache for subsequent lookups
+      } catch {
+        // Still not available, fall through to English
+      }
+    }
+
+    if (ns) {
+      const val = (ns as Record<string, string>)[key];
+      if (val) return val;
+    }
+
+    // P4: fallback to English if locale lacks the key or chunk not yet loaded
     const enVal = enNs?.[key];
     if (enVal) {
       if (process.env.NODE_ENV === 'development') {

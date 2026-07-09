@@ -140,6 +140,21 @@ const IGNORE_FALLBACK_VALUES = new Set([
   '5-20%', '9-13%',
   // Special = valid in Romanian & Swedish (not English fallback)
   'Special',
+  // CCC product safety standards — always English (standard designations)
+  'EMC GB 9254', 'EMC GB 4343.1', 'EMC YY 0505', 'EMC GB 17743',
+  'GB 7000.1-2015, GB 17743-2021, GB 17625.1-2022',
+  'Harmonics GB 17625.1', 'Chemical GB 6675.4',
+  'Safety GB 4943.1-2022', 'Safety GB 9706.1', 'Safety GB 4706.1',
+  'Safety GB 4943.1', 'SAR if radio', 'Safety GB 7000.1',
+  'Biocompatibility ISO 10993',
+  // Platform brand names — always English (proper names with Chinese)
+  'Tmall (天猫)', 'Tmall Global (天猫国际)',
+  'JD (京东)', 'JD Worldwide (京东国际)',
+  '1210 Bonded Warehouse (BBC)',
+  // Scientific/nutrient terms — English in all locales
+  'Protein', 'Phthalates', 'Crustacea', 'Sodium', 'Allergens', 'Blank',
+  // Universal acronyms — same across all languages
+  'CBEC',
 ]);
 
 // 原则：不要轻易加入 IGNORE_FALLBACK_KEYS，可以在脚本里精确排除，
@@ -161,6 +176,8 @@ const IGNORE_FALLBACK_KEYS = new Set([
   'Sitemap.home', 'Sitemap.about', 'Sitemap.contact',
   // Auth: email placeholder is always English
   'Auth.emailPlaceholder',
+  // Footer: email label is a universal loanword in many languages
+  'Footer.email',
   // DefinitionSchema: standard numbers/names are never translated
   'DefinitionSchema.gb7718Name', 'DefinitionSchema.cbecName', 'DefinitionSchema.ciferName',
   'DefinitionSchema.gaccName', 'DefinitionSchema.nmpaName', 'DefinitionSchema.csarName',
@@ -327,6 +344,18 @@ const IGNORE_FALLBACK_KEYS = new Set([
   'labelField_allergens',
   'cccProfile_toy_test_3',
   'cccProfile_medical_cert_1',
+  // Check — loanwords verified by Google Translate (same in specific languages)
+  'Check.standard_label',
+  'Check.cccHorizon_gbRev_impact',
+  'Check.nmpaHorizon_animalTest_impact',
+  'Check.fta_usa',
+  'Check.fta_ethiopia',
+  'Check.nmpaPost_labelUpdate_item',
+  'Check.cccProfile_medical_cert_1',
+  'Check.nmpaExecutiveSummary',
+  'Check.cccCost_cbConv_item',
+  'Check.cccChannel_cbec_name',
+  'Check.nmpaChannel_cbec_name',
 ]);
 
 function checkHardcodedFallbacks(projectName, projectData) {

@@ -51,11 +51,11 @@ export default function LabelCheckClient() {
           resultData: freeData,
           paymentStatus: 'completed',
           nextSteps: [
-            'Submit label artwork for GB 7718-2025 compliance audit',
-            'Receive compliant Chinese label design',
-            'Verify all 9 mandatory elements and nutrition panel',
-            'Obtain print-ready label files',
-            'Arrange customs clearance label support',
+            t('labelStep1'),
+            t('labelStep2'),
+            t('labelStep3'),
+            t('labelStep4'),
+            t('labelStep5'),
           ],
         }),
       }).catch(e => console.warn('D1 save failed:', e));

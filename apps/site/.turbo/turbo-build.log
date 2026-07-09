@@ -88,7 +88,7 @@ Generated search-widget-translations.json: 48 locales → /root/projects/trade/w
 ▲ Next.js 16.2.4 (Turbopack)
 
   Creating an optimized production build ...
-✓ Compiled successfully in 1962ms
+✓ Compiled successfully in 2.1s
   Running TypeScript ...
   Finished TypeScript in 3.7s ...
   Collecting page data using 19 workers ...
@@ -96,7 +96,7 @@ Generated search-widget-translations.json: 48 locales → /root/projects/trade/w
   Generating static pages using 19 workers (337/1349) 
   Generating static pages using 19 workers (674/1349) 
   Generating static pages using 19 workers (1011/1349) 
-✓ Generating static pages using 19 workers (1349/1349) in 4.9s
+✓ Generating static pages using 19 workers (1349/1349) in 7.3s
   Finalizing page optimization ...
 ⚠ Statically exporting a Next.js application via `next export` disables API routes and middleware.
 This command is meant for static-only hosts, and is not necessary to make your application static.
@@ -358,8 +358,8 @@ Output:   /root/projects/trade/web/apps/site/out
 
 ▶ check-translations.mjs --short
 
-⚠️ 发现 67 个问题
-   - Portal 翻译质量: 67 个问题
+⚠️ 发现 92 个问题
+   - Portal 翻译质量: 92 个问题
 
 ▶ check-i18n-keys.mjs --ci
 🔑 i18n key 完整性检查
@@ -367,14 +367,14 @@ Output:   /root/projects/trade/web/apps/site/out
 📦 SITE (0 missing, 0 extra, 0 hardcoded):
   ✅ 全部通过
 
-📦 PORTAL (0 missing, 0 extra, 46 hardcoded):
-  ⚠️  硬编码英文 fallback (46 处):
-    🟡 ReportSection.timelineCnca → "Certification Body" (46 语言)
+📦 PORTAL (0 missing, 0 extra, 0 hardcoded):
+  ✅ 全部通过
 
 📦 UI (0 missing, 0 extra, 0 hardcoded):
   ✅ 全部通过
 
-📊 总计: 0 缺失 + 0 多余 + 46 硬编码英文
+📊 总计: 0 缺失 + 0 多余 + 0 硬编码英文
+✅ 所有 i18n key 完整，无硬编码英文
 
 ▶ check-i18n-coverage.mjs 
 
@@ -603,6 +603,6 @@ Output:   /root/projects/trade/web/apps/site/out
 ✅ Deleted 12829 RSC payload files (807.0 MB freed)
 
 ═══════════════════════════════════════════════
-❌ 共 1 项检查失败
+✅ 全部检查通过
 ═══════════════════════════════════════════════
 

@@ -172,6 +172,7 @@ export interface ComplianceReport {
     name: string;
     category: string;
     hsCode?: string;
+    categoryKey?: string;
     originCountry: string;
   };
   result: ComplianceResult;

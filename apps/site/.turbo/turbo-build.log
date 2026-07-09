@@ -88,7 +88,7 @@ Generated search-widget-translations.json: 48 locales → /root/projects/trade/w
 ▲ Next.js 16.2.4 (Turbopack)
 
   Creating an optimized production build ...
-✓ Compiled successfully in 4.1s
+✓ Compiled successfully in 4.3s
   Running TypeScript ...
   Finished TypeScript in 7.3s ...
   Collecting page data using 19 workers ...
@@ -96,7 +96,7 @@ Generated search-widget-translations.json: 48 locales → /root/projects/trade/w
   Generating static pages using 19 workers (337/1349) 
   Generating static pages using 19 workers (674/1349) 
   Generating static pages using 19 workers (1011/1349) 
-✓ Generating static pages using 19 workers (1349/1349) in 5.2s
+✓ Generating static pages using 19 workers (1349/1349) in 5.1s
   Finalizing page optimization ...
 ⚠ Statically exporting a Next.js application via `next export` disables API routes and middleware.
 This command is meant for static-only hosts, and is not necessary to make your application static.

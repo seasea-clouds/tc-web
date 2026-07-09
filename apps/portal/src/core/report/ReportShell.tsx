@@ -268,7 +268,7 @@ export default function ReportShell(props: ReportShellProps) {
       <div className="space-y-0">
         {/* ── Shared: 策略层 ── */}
         {hasContent(DecisionSummary, result) && <Section><DecisionSummary result={result} /></Section>}
-        {hasContent(Regulations, result) && <Section><Regulations result={result} /></Section>}
+        {hasContent(Regulations, result) && <Section><Regulations result={result} locale={locale} /></Section>}
         {hasContent(RequiredDocuments, result) && <Section><RequiredDocuments result={result} /></Section>}
         {hasContent(DocumentGuide, result) && <Section><DocumentGuide result={result} /></Section>}
         {hasContent(CommonPitfalls, result) && <Section><CommonPitfalls result={result} /></Section>}

@@ -52,8 +52,8 @@ export function checkTrademark(input: any, locale?: string): any {
     ],
     tariffInfo: { mfnRate: t("na_label"), vatRate: t("na_label"), consumptionTax: t("na_label"), ftaRate: null, totalTaxBurden: t("n_a_legal_service_not_import") },
     regulations: [
-      { name: t("trademark_law_of_china"), number: "4th Revision 2019", effectiveDate: "November 1, 2019", issuingAuthority: t("cnipa_npc"), relevance: "primary", description: t("first_to_file_system_art_32_prevents_bad_faith_fil") },
-      { name: t("trademark_examination_guidelines"), number: "CNIPA 2021 Edition", effectiveDate: "2021", issuingAuthority: "CNIPA", relevance: "primary", description: t("examination_standards_for_distinctiveness_and_simi") },
+      { name: t("trademark_law_of_china"), number: t("tmReg_revision_number"), effectiveDate: "November 1, 2019", issuingAuthority: t("cnipa_npc"), relevance: "primary", description: t("first_to_file_system_art_32_prevents_bad_faith_fil") },
+      { name: t("tmReg_cnipaEdition_name"), number: "CNIPA 2021 Edition", effectiveDate: "2021", issuingAuthority: "CNIPA", relevance: "primary", description: t("examination_standards_for_distinctiveness_and_simi") },
       { name: t("customs_ip_protection_regulations"), number: t("state_council_decree_395"), effectiveDate: "March 1, 2004", issuingAuthority: "GACC", relevance: "secondary", description: t("border_enforcement_customs_can_detain_suspected_co") },
     ],
     classification: { assignedHsChapter: t("na_label"), ciqCode: t("na_label"), isHighRisk: needsReg, riskReason: needsReg ? t("brand_not_registered_first_to_file_risk") : t("tmRiskReason_registered"), alternativeClassificationNote: "" },

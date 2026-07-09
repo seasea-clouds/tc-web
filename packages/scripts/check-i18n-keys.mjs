@@ -175,6 +175,13 @@ const IGNORE_FALLBACK_VALUES = new Set([
   'Nutrition panel does not match GB 28050 format requirements',
   'Nutrition information format non-compliant',
   'Redesign nutrition panel per GB 28050 (kJ primary, NRV column required)',
+  // Regulation names/authorities — proper nouns, acronyms retained in original
+  'CIFER System',
+  'China Import Food Enterprise Registration System',
+  'CNIPA 2021 Edition',
+  'General Administration of Customs (GACC)',
+  'National People\'s Congress (NPC)',
+  'National Health Commission (NHC)',
 ]);
 
 // 原则：不要轻易加入 IGNORE_FALLBACK_KEYS，可以在脚本里精确排除，

@@ -128,7 +128,7 @@ const IGNORE_FALLBACK_KEYS = new Set([
   'Check.complianceNo',
   'Check.reportProduct', 'Check.resultProduct', 'Check.resultProductLabel',
   'Check.packagingPlastic',
-  'Check.reportModuleCrossborder', 'Check.crossborderTitle',
+  'Check.reportModuleCrossborder', 'Check.crossborderTitle', 'Check.cccChannel_cbec_name', 'Check.nmpaChannel_cbec_name',
   'Check.crossborderDesc',
   'Home.popular',
   // Portal CTA links — English CTAs pending translation assignment
@@ -158,7 +158,7 @@ const IGNORE_FALLBACK_KEYS = new Set([
   'Check.cccProfile_electronics_test_1', 'Check.cccProfile_electronics_test_2',
   'Check.cccProfile_home_appliance_test_2',
   'Check.cccProfile_it_equipment_test_1', 'Check.cccProfile_lighting_test_2', 'Check.cccProfile_lighting_test_3',
-  'Check.cccProfile_medical_test_1', 'Check.cccProfile_toy_test_3',
+  'Check.cccProfile_medical_test_1', 'Check.cccProfile_medical_test_2', 'Check.cccProfile_toy_test_3',
   'Check.cccProfile_medical_cert_1', 'Check.cccProfile_it_equipment_test_3',
   'Check.cccStandard_lighting',
   // Portal (flat keys): CCC standard/technical codes

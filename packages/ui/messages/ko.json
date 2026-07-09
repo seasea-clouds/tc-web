@@ -43,7 +43,7 @@
   "Navbar": {
     "logo": "SinoTrade Compliance",
     "home": "홈",
-    "about": "에 대한",
+    "about": "소개",
     "services": "서비스",
     "servicesDropdown": {
       "gacc": "GACC 식품 등록",
@@ -85,7 +85,7 @@
     "testimonials": "사용후기",
     "privacy": "개인정보처리방침",
     "billing": "청구",
-    "dashboard": "계기반",
+    "dashboard": "대시보드",
     "login": "로그인",
     "pricing": "가격",
     "register": "등록하다",

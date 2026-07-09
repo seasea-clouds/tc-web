@@ -43,7 +43,7 @@
   "Navbar": {
     "logo": "SinoTrade Compliance",
     "home": "Startseite",
-    "about": "Über",
+    "about": "Über uns",
     "services": "Dienstleistungen",
     "servicesDropdown": {
       "gacc": "GACC-Lebensmittelregistrierung",
@@ -85,7 +85,7 @@
     "testimonials": "Kundenstimmen",
     "privacy": "Datenschutzrichtlinie",
     "billing": "Abrechnung",
-    "dashboard": "Armaturenbrett",
+    "dashboard": "Dashboard",
     "login": "Einloggen",
     "pricing": "Preise",
     "register": "Registrieren",

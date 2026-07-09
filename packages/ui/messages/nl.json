@@ -55,7 +55,7 @@
     },
     "packages": "Pakketten",
     "faq": "Veelgestelde vragen",
-    "blog": "Blog",
+    "blog": "Inzichten",
     "contact": "Neem contact met ons op",
     "whatsapp": "WhatsApp",
     "quote": "Ontvang een offerte",
@@ -95,7 +95,7 @@
   "MobileTab": {
     "home": "Home",
     "services": "Diensten",
-    "blog": "Bloggen",
+    "blog": "Inzichten",
     "check": "Controleren"
   },
   "CTA": {

@@ -55,7 +55,7 @@
     },
     "packages": "Gói",
     "faq": "Câu hỏi thường gặp",
-    "blog": "Blog",
+    "blog": "Bài viết",
     "contact": "Liên hệ với chúng tôi",
     "whatsapp": "WhatsApp",
     "quote": "Nhận báo giá",
@@ -95,7 +95,7 @@
   "MobileTab": {
     "home": "Trang chủ",
     "services": "Dịch vụ",
-    "blog": "Blog",
+    "blog": "Bài viết",
     "check": "Kiểm tra"
   },
   "CTA": {

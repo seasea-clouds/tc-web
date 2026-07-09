@@ -55,7 +55,7 @@
     },
     "packages": "Paket",
     "faq": "Pertanyaan Umum",
-    "blog": "Blog",
+    "blog": "Wawasan",
     "contact": "Hubungi kami",
     "whatsapp": "WhatsApp",
     "quote": "Dapatkan Penawaran",
@@ -95,7 +95,7 @@
   "MobileTab": {
     "home": "Beranda",
     "services": "Layanan",
-    "blog": "Blog",
+    "blog": "Wawasan",
     "check": "Periksa"
   },
   "CTA": {

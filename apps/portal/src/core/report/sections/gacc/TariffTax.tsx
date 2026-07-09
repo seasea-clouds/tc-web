@@ -13,9 +13,9 @@ export default function TariffTax({ result }: { result: any }) {
         <ValueCard label={t("valueHSCode")} value={data.hsCode || '—'} />
         <ValueCard label={t("valueMFNRate")} value={data.mfnRate || '—'} />
         <ValueCard label={t("valueVAT")} value={data.vatRate || '—'} />
-        <ValueCard label={t("valueConsumptionTax")} value={data.consumptionTax || 'N/A'} />
+        <ValueCard label={t("valueConsumptionTax")} value={data.consumptionTax === 'N/A' ? t('valueNA') : data.consumptionTax || '—'} />
         <ValueCard label={t("valueTotalTaxBurden")} value={data.totalTaxBurden || '—'} />
-        <ValueCard label={t("valueFTARate")} value={data.ftaRate || 'None'} />
+        <ValueCard label={t("valueFTARate")} value={data.ftaRate === 'None' ? t('valueNone') : data.ftaRate || '—'} />
       </div>
       {data.estimatedLandedCostExample && (
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">

@@ -133,6 +133,8 @@ const IGNORE_FALLBACK_VALUES = new Set([
   'SinoTrade Compliance', 'you@company.com',
   // Certification marks — always English
   'FCC',
+  // Trademark timeline — valid in French, identical to English
+  'Publication / Opposition',
   // Universal abbreviations — same across all languages
   'TBD', 'N/A',
   // Cost & price values — numbers + currency symbols, not translatable

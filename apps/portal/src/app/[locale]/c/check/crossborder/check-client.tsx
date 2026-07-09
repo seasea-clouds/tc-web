@@ -1,10 +1,11 @@
 "use client";
 
-import { useT, useTradeLocale, WHATSAPP_URL } from '@trade/ui';
+import { useT, useTradeLocale, WHATSAPP_URL, useMessages } from '@trade/ui';
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { checkCrossborder, CATEGORY_LABELS } from "../../../../../../modules/crossborder/rules";
 import { API_BASE } from "@/lib/constants";
+import { setLocaleData } from '../../../../../../modules/shared/i18n';
 import { useFormValidation, inputClasses, selectClasses } from "@/lib/useFormValidation";
 import { usePathPrefix } from '@/lib/useSubsiteHref';
 import { useSubscription } from '@/lib/useSubscription';
@@ -14,6 +15,10 @@ type Step = "form" | "free-result";
 export default function CrossborderCheckClient() {
   const t = useT('Check');
   const locale = useTradeLocale();
+  const messages = useMessages();
+  useEffect(() => {
+    setLocaleData(locale, messages);
+  }, [locale, messages]);
   const [step, setStep] = useState<Step>("form");
   const [input, setInput] = useState<Record<string, string>>({});
   const [email, setEmail] = useState("");

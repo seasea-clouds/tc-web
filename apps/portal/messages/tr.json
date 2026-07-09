@@ -2273,7 +2273,16 @@
     "trademarkStep2": "Ticari markayı doğrudan CNIPA başvurusu yoluyla dosyalayın (8-14 ay)",
     "trademarkStep3": "3 aylık itiraz süresini takip edin",
     "trademarkStep4": "Sınır uygulamaları için Gümrük IP kayıtlarını kaydedin",
-    "trademarkStep5": "Devam eden ticari marka izlemeyi ayarlayın"
+    "trademarkStep5": "Devam eden ticari marka izlemeyi ayarlayın",
+    "gaccConsumTax_alcohol": "%10-20 (alkol türüne göre değişir)",
+    "gaccSpecialRestriction_usa1": "Bölüm 301 misilleme tarifeleri (%5-25 ek)",
+    "gaccSpecialRestriction_usa2": "Menşe ülke etiketlemesi katı",
+    "gaccTimelineDep_appSubmitted": "Başvuru gönderildi",
+    "gaccTimelineDep_docsReady": "Tüm belgeler hazır",
+    "gaccTimelineDep_initAssess": "İlk değerlendirme tamamlandı",
+    "gaccTimelineDep_labReportsReceived": "Laboratuvar raporları alındı",
+    "gaccTimelineDep_productDetailsFinalized": "Ürün ayrıntıları kesinleşti",
+    "gaccTimelineDep_sampleShipment": "Örnek sevkiyat düzenlendi"
   },
   "Cookie": {
     "message": "Bu site yalnızca gerekli kimlik doğrulama çerezlerini kullanır. Hiçbir izleme veya reklam çerezi kullanılmaz.",

@@ -2273,7 +2273,16 @@
     "trademarkStep2": "Поднесите жиг путем директног ЦНИПА подношења (8-14 месеци)",
     "trademarkStep3": "Пратити 3-месечни период противљења",
     "trademarkStep4": "Региструјте царинску ИП евиденцију за спровођење границе",
-    "trademarkStep5": "Поставите континуирано праћење жига"
+    "trademarkStep5": "Поставите континуирано праћење жига",
+    "gaccConsumTax_alcohol": "10-20% (зависи од врсте алкохола)",
+    "gaccSpecialRestriction_usa1": "Одељак 301 узвратне тарифе (додатних 5-25%)",
+    "gaccSpecialRestriction_usa2": "Означавање земље порекла строго",
+    "gaccTimelineDep_appSubmitted": "Пријава поднета",
+    "gaccTimelineDep_docsReady": "Сви документи спремни",
+    "gaccTimelineDep_initAssess": "Почетна процена завршена",
+    "gaccTimelineDep_labReportsReceived": "Примљени лабораторијски извештаји",
+    "gaccTimelineDep_productDetailsFinalized": "Детаљи о производу су финализовани",
+    "gaccTimelineDep_sampleShipment": "Уређена испорука узорка"
   },
   "Cookie": {
     "message": "Овај сајт користи само неопходне колачиће за аутентификацију. Не користе се колачићи за праћење или оглашавање.",

@@ -2273,7 +2273,16 @@
     "trademarkStep2": "Ilmoita tavaramerkki suoralla CNIPA-arkistuksella (8-14 kuukautta)",
     "trademarkStep3": "Seuraa 3 kuukauden vastustusaikaa",
     "trademarkStep4": "Rekisteröi Tullin IP-tietue rajavalvontaa varten",
-    "trademarkStep5": "Ota käyttöön jatkuva tavaramerkkivalvonta"
+    "trademarkStep5": "Ota käyttöön jatkuva tavaramerkkivalvonta",
+    "gaccConsumTax_alcohol": "10-20 % (vaihtelee alkoholityypin mukaan)",
+    "gaccSpecialRestriction_usa1": "Kohta 301 kostotariffit (5–25 %)",
+    "gaccSpecialRestriction_usa2": "Alkuperämaamerkintä on tiukka",
+    "gaccTimelineDep_appSubmitted": "Hakemus lähetetty",
+    "gaccTimelineDep_docsReady": "Kaikki asiakirjat valmiina",
+    "gaccTimelineDep_initAssess": "Alkuarviointi suoritettu",
+    "gaccTimelineDep_labReportsReceived": "Laboratorioraportit vastaanotettu",
+    "gaccTimelineDep_productDetailsFinalized": "Tuotetiedot viimeistelty",
+    "gaccTimelineDep_sampleShipment": "Näytelähetys järjestetty"
   },
   "Cookie": {
     "message": "Tämä sivusto käyttää vain välttämättömiä todennusevästeitä. Mitään seuranta- tai mainosevästeitä ei käytetä.",

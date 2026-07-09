@@ -2273,7 +2273,16 @@
     "trademarkStep2": "Registrera varumärke via direkt CNIPA-anmälan (8-14 månader)",
     "trademarkStep3": "Övervaka 3-månaders oppositionsperiod",
     "trademarkStep4": "Registrera Tullens IP-registrering för gränskontroll",
-    "trademarkStep5": "Ställ in löpande varumärkesövervakning"
+    "trademarkStep5": "Ställ in löpande varumärkesövervakning",
+    "gaccConsumTax_alcohol": "10-20% (varierar beroende på alkoholtyp)",
+    "gaccSpecialRestriction_usa1": "Sektion 301 vedergällningstariffer (ytterligare 5–25 %)",
+    "gaccSpecialRestriction_usa2": "Ursprungslandsmärkning strikt",
+    "gaccTimelineDep_appSubmitted": "Ansökan inlämnad",
+    "gaccTimelineDep_docsReady": "Alla dokument är klara",
+    "gaccTimelineDep_initAssess": "Inledande bedömning klar",
+    "gaccTimelineDep_labReportsReceived": "Inkomna laboratorierapporter",
+    "gaccTimelineDep_productDetailsFinalized": "Produktdetaljer slutförda",
+    "gaccTimelineDep_sampleShipment": "Provleverans ordnad"
   },
   "Cookie": {
     "message": "Denna webbplats använder endast viktiga autentiseringscookies. Inga spårnings- eller reklamcookies används.",

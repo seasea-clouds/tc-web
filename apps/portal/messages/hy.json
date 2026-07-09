@@ -2273,7 +2273,16 @@
     "trademarkStep2": "Ֆայլի ապրանքանիշը CNIPA-ի ուղղակի ներկայացման միջոցով (8-14 ամիս)",
     "trademarkStep3": "Դիտարկեք ընդդիմության 3-ամսյա ժամանակահատվածը",
     "trademarkStep4": "Գրանցեք մաքսային IP-ի գրանցումը սահմանի պահպանման համար",
-    "trademarkStep5": "Ստեղծեք ապրանքանիշի շարունակական մոնիտորինգ"
+    "trademarkStep5": "Ստեղծեք ապրանքանիշի շարունակական մոնիտորինգ",
+    "gaccConsumTax_alcohol": "10-20% (տարբերվում է ըստ ալկոհոլի տեսակի)",
+    "gaccSpecialRestriction_usa1": "301-րդ հոդվածի պատասխան սակագներ (լրացուցիչ 5-25%).",
+    "gaccSpecialRestriction_usa2": "Ծագման երկրի պիտակավորումը խիստ է",
+    "gaccTimelineDep_appSubmitted": "Հայտը ներկայացված է",
+    "gaccTimelineDep_docsReady": "Բոլոր փաստաթղթերը պատրաստ են",
+    "gaccTimelineDep_initAssess": "Նախնական գնահատումն ավարտված է",
+    "gaccTimelineDep_labReportsReceived": "Ստացվել են լաբորատոր հաշվետվություններ",
+    "gaccTimelineDep_productDetailsFinalized": "Ապրանքի մանրամասները վերջնական տեսքի բերվեցին",
+    "gaccTimelineDep_sampleShipment": "Կազմակերպված նմուշի առաքում"
   },
   "Cookie": {
     "message": "Այս կայքը օգտագործում է միայն վավերացման հիմնական թխուկներ: Հետևելու կամ գովազդային թխուկներ չեն օգտագործվում:",

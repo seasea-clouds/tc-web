@@ -2273,7 +2273,16 @@
     "trademarkStep2": "通过直接 CNIPA 备案提交商标（8-14 个月）",
     "trademarkStep3": "监控 3 个月的异议期",
     "trademarkStep4": "为边境执法登记海关知识产权备案",
-    "trademarkStep5": "建立持续的商标监控"
+    "trademarkStep5": "建立持续的商标监控",
+    "gaccConsumTax_alcohol": "10-20%（因酒精类型而异）",
+    "gaccSpecialRestriction_usa1": "301条款报复性关税（额外5-25%）",
+    "gaccSpecialRestriction_usa2": "原产地标签严格",
+    "gaccTimelineDep_appSubmitted": "已提交申请",
+    "gaccTimelineDep_docsReady": "所有文件准备好",
+    "gaccTimelineDep_initAssess": "初步评估完成",
+    "gaccTimelineDep_labReportsReceived": "收到实验室报告",
+    "gaccTimelineDep_productDetailsFinalized": "产品细节已确定",
+    "gaccTimelineDep_sampleShipment": "已安排样品发货"
   },
   "Cookie": {
     "message": "本网站仅使用必要的身份验证Cookie。不使用跟踪或广告Cookie。",

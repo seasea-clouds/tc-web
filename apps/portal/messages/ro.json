@@ -2273,7 +2273,16 @@
     "trademarkStep2": "Depuneți marca comercială prin depunerea directă la CNIPA (8-14 luni)",
     "trademarkStep3": "Monitorizarea perioadei de opoziție de 3 luni",
     "trademarkStep4": "Înregistrați înregistrarea IP vamală pentru aplicarea la frontieră",
-    "trademarkStep5": "Configurați monitorizarea continuă a mărcilor comerciale"
+    "trademarkStep5": "Configurați monitorizarea continuă a mărcilor comerciale",
+    "gaccConsumTax_alcohol": "10-20% (variază în funcție de tipul de alcool)",
+    "gaccSpecialRestriction_usa1": "Tarifele de represalii în conformitate cu secțiunea 301 (în plus 5-25%)",
+    "gaccSpecialRestriction_usa2": "Etichetarea țării de origine strictă",
+    "gaccTimelineDep_appSubmitted": "Cerere depusă",
+    "gaccTimelineDep_docsReady": "Toate documentele gata",
+    "gaccTimelineDep_initAssess": "Evaluarea inițială finalizată",
+    "gaccTimelineDep_labReportsReceived": "Rapoarte de laborator primite",
+    "gaccTimelineDep_productDetailsFinalized": "Detaliile produsului finalizate",
+    "gaccTimelineDep_sampleShipment": "Expedierea probei a fost aranjată"
   },
   "Cookie": {
     "message": "Acest site folosește numai cookie-uri de autentificare esențiale. Nu sunt utilizate cookie-uri de urmărire sau de publicitate.",

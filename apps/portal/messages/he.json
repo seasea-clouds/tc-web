@@ -2273,7 +2273,16 @@
     "trademarkStep2": "הגשת סימן מסחרי באמצעות הגשה ישירה של CNIPA (8-14 חודשים)",
     "trademarkStep3": "עקוב אחר תקופת התנגדות של 3 חודשים",
     "trademarkStep4": "רישום רישום IP של המכס לאכיפת גבולות",
-    "trademarkStep5": "הגדר ניטור שוטף של סימנים מסחריים"
+    "trademarkStep5": "הגדר ניטור שוטף של סימנים מסחריים",
+    "gaccConsumTax_alcohol": "10-20% (משתנה לפי סוג האלכוהול)",
+    "gaccSpecialRestriction_usa1": "תעריפי תגמול סעיף 301 (נוספים 5-25%)",
+    "gaccSpecialRestriction_usa2": "תיוג ארץ המקור קפדני",
+    "gaccTimelineDep_appSubmitted": "הבקשה הוגשה",
+    "gaccTimelineDep_docsReady": "כל המסמכים מוכנים",
+    "gaccTimelineDep_initAssess": "הערכה ראשונית הושלמה",
+    "gaccTimelineDep_labReportsReceived": "התקבלו דוחות מעבדה",
+    "gaccTimelineDep_productDetailsFinalized": "פרטי המוצר סוכמו",
+    "gaccTimelineDep_sampleShipment": "משלוח לדוגמא מסודר"
   },
   "Cookie": {
     "message": "אתר זה משתמש רק בעוגיות אימות חיוניות. לא נעשה שימוש בעוגיות מעקב או פרסום.",

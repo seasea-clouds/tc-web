@@ -2273,7 +2273,16 @@
     "trademarkStep2": "Merkregistratie via directe CNIPA-aanvraag (8-14 maanden)",
     "trademarkStep3": "Monitor oppositietermijn van 3 maanden",
     "trademarkStep4": "Registreer douane-IP-records voor grenshandhaving",
-    "trademarkStep5": "Zet doorlopende handelsmerkmonitoring op"
+    "trademarkStep5": "Zet doorlopende handelsmerkmonitoring op",
+    "gaccConsumTax_alcohol": "10-20% (varieert per alcoholtype)",
+    "gaccSpecialRestriction_usa1": "Sectie 301 vergeldingstarieven (extra 5-25%)",
+    "gaccSpecialRestriction_usa2": "Etikettering van land van herkomst streng",
+    "gaccTimelineDep_appSubmitted": "Aanvraag ingediend",
+    "gaccTimelineDep_docsReady": "Alle documenten klaar",
+    "gaccTimelineDep_initAssess": "Eerste beoordeling afgerond",
+    "gaccTimelineDep_labReportsReceived": "Laboratoriumrapporten ontvangen",
+    "gaccTimelineDep_productDetailsFinalized": "Productdetails afgerond",
+    "gaccTimelineDep_sampleShipment": "Monsterzending geregeld"
   },
   "Cookie": {
     "message": "Deze site gebruikt alleen essentiële authenticatiecookies. Er worden geen tracking- of advertentiecookies gebruikt.",

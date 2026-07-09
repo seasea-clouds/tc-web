@@ -2273,7 +2273,16 @@
     "trademarkStep2": "Indsend varemærke via direkte CNIPA-arkivering (8-14 måneder)",
     "trademarkStep3": "Overvåg 3-måneders oppositionsperiode",
     "trademarkStep4": "Registrer Told IP-registrering til grænsehåndhævelse",
-    "trademarkStep5": "Opsæt løbende varemærkeovervågning"
+    "trademarkStep5": "Opsæt løbende varemærkeovervågning",
+    "gaccConsumTax_alcohol": "10-20% (varierer efter alkoholtype)",
+    "gaccSpecialRestriction_usa1": "Afsnit 301 gengældelsestakster (yderligere 5-25 %)",
+    "gaccSpecialRestriction_usa2": "Oprindelseslandsmærkning streng",
+    "gaccTimelineDep_appSubmitted": "Ansøgning indsendt",
+    "gaccTimelineDep_docsReady": "Alle dokumenter er klar",
+    "gaccTimelineDep_initAssess": "Indledende vurdering afsluttet",
+    "gaccTimelineDep_labReportsReceived": "Laboratorierapporter modtaget",
+    "gaccTimelineDep_productDetailsFinalized": "Produktdetaljer færdiggjort",
+    "gaccTimelineDep_sampleShipment": "Prøveforsendelse arrangeret"
   },
   "Cookie": {
     "message": "Dette websted bruger kun vigtige autentificeringscookies. Der bruges ingen sporings- eller reklamecookies.",

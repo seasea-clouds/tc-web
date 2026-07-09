@@ -2273,7 +2273,16 @@
     "trademarkStep2": "प्रत्यक्ष CNIPA फाइलिङ मार्फत ट्रेडमार्क फाइल गर्नुहोस् (८-१४ महिना)",
     "trademarkStep3": "3-महिनाको प्रतिपक्ष अवधि अनुगमन गर्नुहोस्",
     "trademarkStep4": "सीमा प्रवर्तनको लागि भन्सार आईपी रेकर्डल दर्ता गर्नुहोस्",
-    "trademarkStep5": "चलिरहेको ट्रेडमार्क अनुगमन सेट अप गर्नुहोस्"
+    "trademarkStep5": "चलिरहेको ट्रेडमार्क अनुगमन सेट अप गर्नुहोस्",
+    "gaccConsumTax_alcohol": "10-20% (रक्सीको प्रकार अनुसार भिन्न हुन्छ)",
+    "gaccSpecialRestriction_usa1": "खण्ड 301 प्रतिशोधात्मक शुल्कहरू (अतिरिक्त 5-25%)",
+    "gaccSpecialRestriction_usa2": "उत्पत्तिको देश सख्त लेबलिङ",
+    "gaccTimelineDep_appSubmitted": "आवेदन पेश गरियो",
+    "gaccTimelineDep_docsReady": "सबै कागजात तयार छ",
+    "gaccTimelineDep_initAssess": "प्रारम्भिक मूल्याङ्कन पूरा",
+    "gaccTimelineDep_labReportsReceived": "प्रयोगशाला रिपोर्टहरू प्राप्त भयो",
+    "gaccTimelineDep_productDetailsFinalized": "उत्पादन विवरणहरू फाइनल गरियो",
+    "gaccTimelineDep_sampleShipment": "नमूना ढुवानी व्यवस्था गरियो"
   },
   "Cookie": {
     "message": "यो साइटले आवश्यक प्रमाणीकरण कुकीहरू मात्र प्रयोग गर्दछ। कुनै ट्र्याकिङ वा विज्ञापन कुकीहरू प्रयोग गरिँदैन।",

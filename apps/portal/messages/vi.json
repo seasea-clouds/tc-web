@@ -2273,7 +2273,16 @@
     "trademarkStep2": "Nộp đơn nhãn hiệu thông qua nộp CNIPA trực tiếp (8-14 tháng)",
     "trademarkStep3": "Theo dõi thời gian phản đối 3 tháng",
     "trademarkStep4": "Đăng ký hồ sơ IP hải quan để thực thi biên giới",
-    "trademarkStep5": "Thiết lập giám sát nhãn hiệu liên tục"
+    "trademarkStep5": "Thiết lập giám sát nhãn hiệu liên tục",
+    "gaccConsumTax_alcohol": "10-20% (thay đổi tùy theo loại rượu)",
+    "gaccSpecialRestriction_usa1": "Thuế trả đũa theo Mục 301 (thêm 5-25%)",
+    "gaccSpecialRestriction_usa2": "Ghi nhãn xuất xứ nghiêm ngặt",
+    "gaccTimelineDep_appSubmitted": "Đơn đăng ký đã được gửi",
+    "gaccTimelineDep_docsReady": "Tất cả tài liệu đã sẵn sàng",
+    "gaccTimelineDep_initAssess": "Đánh giá ban đầu hoàn tất",
+    "gaccTimelineDep_labReportsReceived": "Đã nhận được báo cáo phòng thí nghiệm",
+    "gaccTimelineDep_productDetailsFinalized": "Chi tiết sản phẩm đã hoàn thiện",
+    "gaccTimelineDep_sampleShipment": "Lô hàng mẫu được sắp xếp"
   },
   "Cookie": {
     "message": "Trang web này chỉ sử dụng cookie xác thực cần thiết. Không sử dụng cookie theo dõi hoặc quảng cáo.",

@@ -2273,7 +2273,16 @@
     "trademarkStep2": "ملف العلامة التجارية عبر التسجيل المباشر لـ CNIPA (من 8 إلى 14 شهرًا)",
     "trademarkStep3": "مراقبة فترة المعارضة لمدة 3 أشهر",
     "trademarkStep4": "تسجيل سجل IP الجمركي لإنفاذ الحدود",
-    "trademarkStep5": "قم بإعداد مراقبة مستمرة للعلامات التجارية"
+    "trademarkStep5": "قم بإعداد مراقبة مستمرة للعلامات التجارية",
+    "gaccConsumTax_alcohol": "10-20% (يختلف حسب نوع الكحول)",
+    "gaccSpecialRestriction_usa1": "القسم 301 التعريفات الانتقامية (5-25٪ إضافية)",
+    "gaccSpecialRestriction_usa2": "بلد المنشأ وضع العلامات صارمة",
+    "gaccTimelineDep_appSubmitted": "تم تقديم الطلب",
+    "gaccTimelineDep_docsReady": "جميع الوثائق جاهزة",
+    "gaccTimelineDep_initAssess": "تم الانتهاء من التقييم الأولي",
+    "gaccTimelineDep_labReportsReceived": "تم استلام التقارير المخبرية",
+    "gaccTimelineDep_productDetailsFinalized": "تم الانتهاء من تفاصيل المنتج",
+    "gaccTimelineDep_sampleShipment": "ترتيب شحنة العينة"
   },
   "Cookie": {
     "message": "يستخدم هذا الموقع ملفات تعريف الارتباط الأساسية فقط. لا يتم استخدام ملفات تعريف الارتباط للتتبع أو الإعلانات.",

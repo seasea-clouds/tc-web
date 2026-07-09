@@ -2273,7 +2273,16 @@
     "trademarkStep2": "Déposer une marque via le dépôt direct CNIPA (8-14 mois)",
     "trademarkStep3": "Suivi du délai d'opposition de 3 mois",
     "trademarkStep4": "Enregistrer l'enregistrement douanier de la propriété intellectuelle pour le contrôle aux frontières",
-    "trademarkStep5": "Mettre en place une surveillance continue des marques"
+    "trademarkStep5": "Mettre en place une surveillance continue des marques",
+    "gaccConsumTax_alcohol": "10-20% (varie selon le type d'alcool)",
+    "gaccSpecialRestriction_usa1": "Tarifs de rétorsion de l'article 301 (5 à 25% supplémentaires)",
+    "gaccSpecialRestriction_usa2": "Étiquetage strict du pays d'origine",
+    "gaccTimelineDep_appSubmitted": "Demande soumise",
+    "gaccTimelineDep_docsReady": "Tous les documents prêts",
+    "gaccTimelineDep_initAssess": "Évaluation initiale terminée",
+    "gaccTimelineDep_labReportsReceived": "Rapports de laboratoire reçus",
+    "gaccTimelineDep_productDetailsFinalized": "Détails du produit finalisés",
+    "gaccTimelineDep_sampleShipment": "Expédition d'échantillon arrangée"
   },
   "Cookie": {
     "message": "Ce site utilise uniquement des cookies d'authentification essentiels. Aucun cookie de suivi ou publicitaire n'est utilisé.",

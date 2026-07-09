@@ -2273,7 +2273,16 @@
     "trademarkStep2": "Архивирайте търговска марка чрез директно подаване на CNIPA (8-14 месеца)",
     "trademarkStep3": "Монитор 3-месечен период на опозиция",
     "trademarkStep4": "Регистрирайте митнически IP запис за гранично правоприлагане",
-    "trademarkStep5": "Настройте постоянно наблюдение на търговски марки"
+    "trademarkStep5": "Настройте постоянно наблюдение на търговски марки",
+    "gaccConsumTax_alcohol": "10-20% (варира според вида на алкохола)",
+    "gaccSpecialRestriction_usa1": "Раздел 301 ответни тарифи (допълнителни 5-25%)",
+    "gaccSpecialRestriction_usa2": "Строго етикетиране на страната на произход",
+    "gaccTimelineDep_appSubmitted": "Заявлението е подадено",
+    "gaccTimelineDep_docsReady": "Всички документи готови",
+    "gaccTimelineDep_initAssess": "Първоначалната оценка е завършена",
+    "gaccTimelineDep_labReportsReceived": "Получени лабораторни доклади",
+    "gaccTimelineDep_productDetailsFinalized": "Подробностите за продукта са финализирани",
+    "gaccTimelineDep_sampleShipment": "Уредена е мостра"
   },
   "Cookie": {
     "message": "Този сайт използва само основни бисквитки за удостоверяване. Не се използват проследяващи или рекламни бисквитки.",

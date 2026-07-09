@@ -2273,7 +2273,16 @@
     "trademarkStep2": "Paraqisni markën tregtare përmes depozitimit të drejtpërdrejtë të CNIPA (8-14 muaj)",
     "trademarkStep3": "Monitoroni periudhën 3-mujore të opozitës",
     "trademarkStep4": "Regjistroni regjistrimin e IP të Doganës për zbatimin e kufirit",
-    "trademarkStep5": "Vendosni monitorimin e vazhdueshëm të markës tregtare"
+    "trademarkStep5": "Vendosni monitorimin e vazhdueshëm të markës tregtare",
+    "gaccConsumTax_alcohol": "10-20% (ndryshon sipas llojit të alkoolit)",
+    "gaccSpecialRestriction_usa1": "Seksioni 301 tarifat hakmarrëse (shtesë 5-25%)",
+    "gaccSpecialRestriction_usa2": "Etiketimi i rreptë i vendit të origjinës",
+    "gaccTimelineDep_appSubmitted": "Aplikimi i dorëzuar",
+    "gaccTimelineDep_docsReady": "Te gjitha dokumentat gati",
+    "gaccTimelineDep_initAssess": "Vlerësimi fillestar ka përfunduar",
+    "gaccTimelineDep_labReportsReceived": "Raportet laboratorike të marra",
+    "gaccTimelineDep_productDetailsFinalized": "Detajet e produktit janë finalizuar",
+    "gaccTimelineDep_sampleShipment": "Dërgesa e mostrës është rregulluar"
   },
   "Cookie": {
     "message": "Ky sajt përdor vetëm cookie thelbësore të vërtetimit. Nuk përdoren skedarë gjurmimi ose reklamimi.",

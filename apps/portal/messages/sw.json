@@ -2273,7 +2273,16 @@
     "trademarkStep2": "Alama ya biashara ya faili kupitia uwasilishaji wa moja kwa moja wa CNIPA (miezi 8-14)",
     "trademarkStep3": "Fuatilia kipindi cha miezi 3 cha upinzani",
     "trademarkStep4": "Sajili rekodi ya IP ya Forodha kwa utekelezaji wa mpaka",
-    "trademarkStep5": "Sanidi ufuatiliaji unaoendelea wa chapa ya biashara"
+    "trademarkStep5": "Sanidi ufuatiliaji unaoendelea wa chapa ya biashara",
+    "gaccConsumTax_alcohol": "10-20% (inatofautiana na aina ya pombe)",
+    "gaccSpecialRestriction_usa1": "Sehemu ya 301 ya ushuru wa kulipiza kisasi (ziada 5-25%)",
+    "gaccSpecialRestriction_usa2": "Nchi ya asili kuweka lebo kali",
+    "gaccTimelineDep_appSubmitted": "Ombi limewasilishwa",
+    "gaccTimelineDep_docsReady": "Nyaraka zote tayari",
+    "gaccTimelineDep_initAssess": "Tathmini ya awali imekamilika",
+    "gaccTimelineDep_labReportsReceived": "Ripoti za maabara zimepokelewa",
+    "gaccTimelineDep_productDetailsFinalized": "Maelezo ya bidhaa yamekamilishwa",
+    "gaccTimelineDep_sampleShipment": "Usafirishaji wa sampuli umepangwa"
   },
   "Cookie": {
     "message": "Tovuti hii hutumia vidakuzi muhimu vya uthibitishaji pekee. Hakuna vidakuzi vya ufuatiliaji au utangazaji vinatumika.",

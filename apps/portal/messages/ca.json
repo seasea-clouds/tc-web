@@ -2273,7 +2273,16 @@
     "trademarkStep2": "Arxiu de marca mitjançant presentació directa de CNIPA (8-14 mesos)",
     "trademarkStep3": "Supervisar el període d'oposició de 3 mesos",
     "trademarkStep4": "Registre el registre IP duaner per a l'aplicació de la frontera",
-    "trademarkStep5": "Configurar un seguiment continu de les marques"
+    "trademarkStep5": "Configurar un seguiment continu de les marques",
+    "gaccConsumTax_alcohol": "10-20% (varia segons el tipus d'alcohol)",
+    "gaccSpecialRestriction_usa1": "Tarifes de represàlia de la secció 301 (del 5 al 25%)",
+    "gaccSpecialRestriction_usa2": "Etiquetat del país d'origen estricte",
+    "gaccTimelineDep_appSubmitted": "Sol·licitud presentada",
+    "gaccTimelineDep_docsReady": "Tots els documents a punt",
+    "gaccTimelineDep_initAssess": "Avaluació inicial completada",
+    "gaccTimelineDep_labReportsReceived": "Informes de laboratori rebuts",
+    "gaccTimelineDep_productDetailsFinalized": "Detalls del producte finalitzats",
+    "gaccTimelineDep_sampleShipment": "Enviament de mostres organitzat"
   },
   "Cookie": {
     "message": "Aquest lloc només utilitza cookies d'autenticació essencials. No s'utilitzen cookies de seguiment ni de publicitat.",

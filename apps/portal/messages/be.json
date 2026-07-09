@@ -2273,7 +2273,16 @@
     "trademarkStep2": "Заяўка на таварны знак праз прамую заяўку ў CNIPA (8-14 месяцаў)",
     "trademarkStep3": "Манітор 3-месячны перыяд апазіцыі",
     "trademarkStep4": "Зарэгіструйце мытны IP-запіс для аховы мяжы",
-    "trademarkStep5": "Наладзьце пастаянны маніторынг гандлёвых марак"
+    "trademarkStep5": "Наладзьце пастаянны маніторынг гандлёвых марак",
+    "gaccConsumTax_alcohol": "10-20% (у залежнасці ад тыпу алкаголю)",
+    "gaccSpecialRestriction_usa1": "Тарыфы ў адказ па раздзеле 301 (дадатковыя 5-25%)",
+    "gaccSpecialRestriction_usa2": "Строгая маркіроўка краіны паходжання",
+    "gaccTimelineDep_appSubmitted": "Заяўка пададзена",
+    "gaccTimelineDep_docsReady": "Усе дакументы гатовыя",
+    "gaccTimelineDep_initAssess": "Першапачатковая ацэнка завершана",
+    "gaccTimelineDep_labReportsReceived": "Атрыманы справаздачы лабараторыі",
+    "gaccTimelineDep_productDetailsFinalized": "Падрабязнасці прадукту завершаны",
+    "gaccTimelineDep_sampleShipment": "Арганізавана адпраўка ўзораў"
   },
   "Cookie": {
     "message": "Гэты сайт выкарыстоўвае толькі неабходныя файлы cookie для аўтэнтыфікацыі. Файлы cookie для адсочвання і рэкламы не выкарыстоўваюцца.",

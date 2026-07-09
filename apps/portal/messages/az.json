@@ -2273,7 +2273,16 @@
     "trademarkStep2": "Birbaşa CNIPA sənədləri vasitəsilə ticarət nişanını fayl (8-14 ay)",
     "trademarkStep3": "3 aylıq müxalifət müddətinə nəzarət edin",
     "trademarkStep4": "Sərhəd mühafizəsi üçün Gömrük IP qeydini qeyd edin",
-    "trademarkStep5": "Davamlı ticarət nişanı monitorinqini qurun"
+    "trademarkStep5": "Davamlı ticarət nişanı monitorinqini qurun",
+    "gaccConsumTax_alcohol": "10-20% (alkoqolun növünə görə dəyişir)",
+    "gaccSpecialRestriction_usa1": "Bölmə 301 cavab tarifləri (əlavə 5-25%)",
+    "gaccSpecialRestriction_usa2": "Mənşə ölkəsinin etiketlənməsi ciddidir",
+    "gaccTimelineDep_appSubmitted": "Ərizə təqdim edildi",
+    "gaccTimelineDep_docsReady": "Bütün sənədlər hazırdır",
+    "gaccTimelineDep_initAssess": "İlkin qiymətləndirmə tamamlandı",
+    "gaccTimelineDep_labReportsReceived": "Laboratoriya hesabatları qəbul edildi",
+    "gaccTimelineDep_productDetailsFinalized": "Məhsul detalları yekunlaşdırıldı",
+    "gaccTimelineDep_sampleShipment": "Nümunə göndərilməsi təşkil edilmişdir"
   },
   "Cookie": {
     "message": "Bu sayt yalnız əsas autentifikasiya kukilərindən istifadə edir. Heç bir izləmə və ya reklam kukilərindən istifadə edilmir.",

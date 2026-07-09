@@ -2273,7 +2273,16 @@
     "trademarkStep2": "සෘජු CNIPA ගොනු කිරීම හරහා වෙළඳ ලකුණ ගොනු කරන්න (මාස 8-14)",
     "trademarkStep3": "මාස 3 ක විරුද්ධ කාලය නිරීක්ෂණය කරන්න",
     "trademarkStep4": "දේශසීමා බලාත්මක කිරීම සඳහා රේගු IP වාර්තා ලියාපදිංචි කරන්න",
-    "trademarkStep5": "අඛණ්ඩ වෙළඳ ලකුණු නිරීක්ෂණ සකසන්න"
+    "trademarkStep5": "අඛණ්ඩ වෙළඳ ලකුණු නිරීක්ෂණ සකසන්න",
+    "gaccConsumTax_alcohol": "10-20% (මත්පැන් වර්ගය අනුව වෙනස් වේ)",
+    "gaccSpecialRestriction_usa1": "301 වගන්තිය පළිගැනීමේ ගාස්තු (අමතර 5-25%)",
+    "gaccSpecialRestriction_usa2": "සම්භවය රට ලේබල් කිරීම දැඩි",
+    "gaccTimelineDep_appSubmitted": "අයදුම්පත ඉදිරිපත් කරන ලදී",
+    "gaccTimelineDep_docsReady": "සියලුම ලියකියවිලි සූදානම්",
+    "gaccTimelineDep_initAssess": "මූලික තක්සේරුව සම්පූර්ණයි",
+    "gaccTimelineDep_labReportsReceived": "රසායනාගාර වාර්තා ලැබී ඇත",
+    "gaccTimelineDep_productDetailsFinalized": "නිෂ්පාදන විස්තර අවසන් කර ඇත",
+    "gaccTimelineDep_sampleShipment": "නියැදි නැව්ගත කිරීම සංවිධානය කර ඇත"
   },
   "Cookie": {
     "message": "මෙම වෙබ් අඩවිය අත්‍යවශ්‍ය සත්‍යාපන කුකීස් පමණක් භාවිතා කරයි. ලුහුබැඳීම හෝ ප්‍රචාරණ කුකීස් භාවිතා නොකෙරේ.",

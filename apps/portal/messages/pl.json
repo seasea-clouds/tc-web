@@ -2273,7 +2273,16 @@
     "trademarkStep2": "Zgłoś znak towarowy bezpośrednio w CNIPA (8-14 miesięcy)",
     "trademarkStep3": "Monitoruj 3-miesięczny okres sprzeciwu",
     "trademarkStep4": "Zarejestruj rekord adresu IP urzędu celnego na potrzeby egzekwowania prawa granicznego",
-    "trademarkStep5": "Skonfiguruj ciągłe monitorowanie znaków towarowych"
+    "trademarkStep5": "Skonfiguruj ciągłe monitorowanie znaków towarowych",
+    "gaccConsumTax_alcohol": "10-20% (w zależności od rodzaju alkoholu)",
+    "gaccSpecialRestriction_usa1": "Artykuł 301 Taryfy odwetowe (dodatkowe 5-25%)",
+    "gaccSpecialRestriction_usa2": "Oznakowanie kraju pochodzenia rygorystyczne",
+    "gaccTimelineDep_appSubmitted": "Wniosek złożony",
+    "gaccTimelineDep_docsReady": "Wszystkie dokumenty gotowe",
+    "gaccTimelineDep_initAssess": "Ocena wstępna zakończona",
+    "gaccTimelineDep_labReportsReceived": "Otrzymano raporty laboratoryjne",
+    "gaccTimelineDep_productDetailsFinalized": "Szczegóły produktu sfinalizowane",
+    "gaccTimelineDep_sampleShipment": "Zorganizowano przykładową wysyłkę"
   },
   "Cookie": {
     "message": "Ta witryna wykorzystuje wyłącznie niezbędne pliki cookie służące do uwierzytelniania. Nie są używane żadne śledzące ani reklamowe pliki cookie.",

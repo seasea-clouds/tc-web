@@ -2273,7 +2273,16 @@
     "trademarkStep2": "Registrujte ochrannou známku prostřednictvím přímého podání CNIPA (8–14 měsíců)",
     "trademarkStep3": "Sledujte 3měsíční lhůtu pro podání námitek",
     "trademarkStep4": "Zaregistrujte celní záznam IP pro vymáhání hranic",
-    "trademarkStep5": "Nastavte průběžné sledování ochranných známek"
+    "trademarkStep5": "Nastavte průběžné sledování ochranných známek",
+    "gaccConsumTax_alcohol": "10-20% (liší se podle typu alkoholu)",
+    "gaccSpecialRestriction_usa1": "Odvetná cla podle § 301 (dalších 5–25 %)",
+    "gaccSpecialRestriction_usa2": "Označení země původu přísné",
+    "gaccTimelineDep_appSubmitted": "Přihláška odeslána",
+    "gaccTimelineDep_docsReady": "Všechny dokumenty připraveny",
+    "gaccTimelineDep_initAssess": "Počáteční hodnocení dokončeno",
+    "gaccTimelineDep_labReportsReceived": "Přijaté laboratorní zprávy",
+    "gaccTimelineDep_productDetailsFinalized": "Detaily produktu dokončeny",
+    "gaccTimelineDep_sampleShipment": "Vzorová zásilka zajištěna"
   },
   "Cookie": {
     "message": "Tento web používá pouze nezbytné ověřovací soubory cookie. Nejsou používány žádné sledovací ani reklamní soubory cookie.",

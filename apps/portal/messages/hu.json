@@ -2273,7 +2273,16 @@
     "trademarkStep2": "A védjegy bejelentése közvetlen CNIPA-nyilvántartással (8-14 hónap)",
     "trademarkStep3": "Figyelje a 3 hónapos felszólalási időszakot",
     "trademarkStep4": "Regisztrálja a vámhatósági IP-rekordot a határellenőrzéshez",
-    "trademarkStep5": "Állítsa be a folyamatos védjegyfigyelést"
+    "trademarkStep5": "Állítsa be a folyamatos védjegyfigyelést",
+    "gaccConsumTax_alcohol": "10-20% (alkoholtípustól függően)",
+    "gaccSpecialRestriction_usa1": "301. szakasz megtorló tarifák (további 5-25%)",
+    "gaccSpecialRestriction_usa2": "Szigorú a származási ország címkézése",
+    "gaccTimelineDep_appSubmitted": "Pályázat benyújtva",
+    "gaccTimelineDep_docsReady": "Minden dokumentum készen áll",
+    "gaccTimelineDep_initAssess": "Az első értékelés befejeződött",
+    "gaccTimelineDep_labReportsReceived": "Laboratóriumi jelentések érkeztek",
+    "gaccTimelineDep_productDetailsFinalized": "A termék részletei véglegesítve",
+    "gaccTimelineDep_sampleShipment": "Mintaszállítás megszervezve"
   },
   "Cookie": {
     "message": "Ez az oldal csak alapvető hitelesítési cookie-kat használ. Nem használnak nyomkövető vagy hirdetési sütiket.",

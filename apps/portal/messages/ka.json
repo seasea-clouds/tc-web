@@ -2273,7 +2273,16 @@
     "trademarkStep2": "სავაჭრო ნიშნის შეტანა პირდაპირი CNIPA შეტანის მეშვეობით (8-14 თვე)",
     "trademarkStep3": "ოპოზიციის 3-თვიანი პერიოდის მონიტორინგი",
     "trademarkStep4": "დაარეგისტრირეთ საბაჟო IP ჩანაწერი საზღვრის აღსრულებისთვის",
-    "trademarkStep5": "დააყენეთ სავაჭრო ნიშნის მიმდინარე მონიტორინგი"
+    "trademarkStep5": "დააყენეთ სავაჭრო ნიშნის მიმდინარე მონიტორინგი",
+    "gaccConsumTax_alcohol": "10-20% (იცვლება ალკოჰოლის ტიპის მიხედვით)",
+    "gaccSpecialRestriction_usa1": "მუხლი 301 საპასუხო ტარიფები (დამატებითი 5-25%)",
+    "gaccSpecialRestriction_usa2": "წარმოშობის ქვეყნის მარკირება მკაცრია",
+    "gaccTimelineDep_appSubmitted": "განაცხადი წარდგენილია",
+    "gaccTimelineDep_docsReady": "ყველა დოკუმენტი მზადაა",
+    "gaccTimelineDep_initAssess": "პირველადი შეფასება დასრულებულია",
+    "gaccTimelineDep_labReportsReceived": "მიღებულია ლაბორატორიის მოხსენებები",
+    "gaccTimelineDep_productDetailsFinalized": "პროდუქტის დეტალები დასრულებულია",
+    "gaccTimelineDep_sampleShipment": "ნიმუშის გადაზიდვა მოწყობილია"
   },
   "Cookie": {
     "message": "ეს საიტი იყენებს მხოლოდ აუთენტიფიკაციის აუცილებელ ქუქიებს. არ გამოიყენება თვალთვალის ან სარეკლამო ქუქიები.",

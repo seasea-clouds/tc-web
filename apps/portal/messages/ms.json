@@ -2273,7 +2273,16 @@
     "trademarkStep2": "Failkan tanda dagangan melalui pemfailan CNIPA langsung (8-14 bulan)",
     "trademarkStep3": "Pantau tempoh pembangkang selama 3 bulan",
     "trademarkStep4": "Daftar rekod IP Kastam untuk penguatkuasaan sempadan",
-    "trademarkStep5": "Sediakan pemantauan tanda dagangan yang berterusan"
+    "trademarkStep5": "Sediakan pemantauan tanda dagangan yang berterusan",
+    "gaccConsumTax_alcohol": "10-20% (berbeza mengikut jenis alkohol)",
+    "gaccSpecialRestriction_usa1": "Seksyen 301 tarif pembalasan (tambahan 5-25%)",
+    "gaccSpecialRestriction_usa2": "Pelabelan negara asal yang ketat",
+    "gaccTimelineDep_appSubmitted": "Permohonan diserahkan",
+    "gaccTimelineDep_docsReady": "Semua dokumen siap",
+    "gaccTimelineDep_initAssess": "Penilaian awal selesai",
+    "gaccTimelineDep_labReportsReceived": "Laporan makmal diterima",
+    "gaccTimelineDep_productDetailsFinalized": "Butiran produk dimuktamadkan",
+    "gaccTimelineDep_sampleShipment": "Penghantaran sampel diatur"
   },
   "Cookie": {
     "message": "Tapak ini hanya menggunakan kuki pengesahan penting. Tiada kuki penjejakan atau pengiklanan digunakan.",

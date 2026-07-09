@@ -2273,7 +2273,16 @@
     "trademarkStep2": "Presentar la marca mediante presentación directa al CNIPA (8-14 meses)",
     "trademarkStep3": "Monitorear el período de oposición de 3 meses",
     "trademarkStep4": "Registrar el registro de propiedad intelectual de la Aduana para el control fronterizo",
-    "trademarkStep5": "Establecer un seguimiento continuo de las marcas"
+    "trademarkStep5": "Establecer un seguimiento continuo de las marcas",
+    "gaccConsumTax_alcohol": "10-20% (varía según el tipo de alcohol)",
+    "gaccSpecialRestriction_usa1": "Aranceles de represalia de la Sección 301 (5-25% adicional)",
+    "gaccSpecialRestriction_usa2": "Etiquetado del país de origen estricto",
+    "gaccTimelineDep_appSubmitted": "Solicitud enviada",
+    "gaccTimelineDep_docsReady": "Todos los documentos listos",
+    "gaccTimelineDep_initAssess": "Evaluación inicial completa",
+    "gaccTimelineDep_labReportsReceived": "Informes de laboratorio recibidos",
+    "gaccTimelineDep_productDetailsFinalized": "Detalles del producto finalizados",
+    "gaccTimelineDep_sampleShipment": "Envío de muestra organizado"
   },
   "Cookie": {
     "message": "Este sitio utiliza sólo cookies de autenticación esenciales. No se utilizan cookies de seguimiento ni publicidad.",

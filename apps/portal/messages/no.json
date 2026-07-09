@@ -2273,7 +2273,16 @@
     "trademarkStep2": "Fil varemerke via direkte CNIPA-arkivering (8-14 måneder)",
     "trademarkStep3": "Overvåk 3-måneders opposisjonsperiode",
     "trademarkStep4": "Registrer Tollvesenets IP-registrering for grensehåndhevelse",
-    "trademarkStep5": "Sett opp løpende varemerkeovervåking"
+    "trademarkStep5": "Sett opp løpende varemerkeovervåking",
+    "gaccConsumTax_alcohol": "10-20 % (varierer etter alkoholtype)",
+    "gaccSpecialRestriction_usa1": "Seksjon 301 gjengjeldelsestariffer (ytterligere 5–25 %)",
+    "gaccSpecialRestriction_usa2": "Opprinnelseslandsmerking er streng",
+    "gaccTimelineDep_appSubmitted": "Søknad sendt inn",
+    "gaccTimelineDep_docsReady": "Alle dokumenter er klare",
+    "gaccTimelineDep_initAssess": "Innledende vurdering fullført",
+    "gaccTimelineDep_labReportsReceived": "Laboratorierapporter mottatt",
+    "gaccTimelineDep_productDetailsFinalized": "Produktdetaljer ferdigstilt",
+    "gaccTimelineDep_sampleShipment": "Prøveforsendelse ordnet"
   },
   "Cookie": {
     "message": "Dette nettstedet bruker kun viktige autentiseringsinformasjonskapsler. Ingen sporings- eller reklameinformasjonskapsler brukes.",

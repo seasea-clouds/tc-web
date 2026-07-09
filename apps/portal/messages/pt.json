@@ -2273,7 +2273,16 @@
     "trademarkStep2": "Registrar marca registrada por meio de depósito direto no CNIPA (8 a 14 meses)",
     "trademarkStep3": "Monitore o período de oposição de 3 meses",
     "trademarkStep4": "Registrar registro de IP alfandegário para fiscalização de fronteiras",
-    "trademarkStep5": "Configure o monitoramento contínuo de marcas registradas"
+    "trademarkStep5": "Configure o monitoramento contínuo de marcas registradas",
+    "gaccConsumTax_alcohol": "10-20% (varia de acordo com o tipo de álcool)",
+    "gaccSpecialRestriction_usa1": "Seção 301, tarifas retaliatórias (5-25% adicionais)",
+    "gaccSpecialRestriction_usa2": "Rotulagem rigorosa do país de origem",
+    "gaccTimelineDep_appSubmitted": "Candidatura submetida",
+    "gaccTimelineDep_docsReady": "Todos os documentos prontos",
+    "gaccTimelineDep_initAssess": "Avaliação inicial concluída",
+    "gaccTimelineDep_labReportsReceived": "Relatórios de laboratório recebidos",
+    "gaccTimelineDep_productDetailsFinalized": "Detalhes do produto finalizados",
+    "gaccTimelineDep_sampleShipment": "Envio de amostra organizado"
   },
   "Cookie": {
     "message": "Este site utiliza apenas cookies de autenticação essenciais. Nenhum cookie de rastreamento ou publicidade é usado.",

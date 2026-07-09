@@ -2273,7 +2273,16 @@
     "trademarkStep2": "Markenanmeldung über direkte CNIPA-Einreichung (8–14 Monate)",
     "trademarkStep3": "Überwachen Sie die 3-monatige Widerspruchsfrist",
     "trademarkStep4": "Registrieren Sie den IP-Datensatz des Zolls für die Grenzdurchsetzung",
-    "trademarkStep5": "Richten Sie eine laufende Markenüberwachung ein"
+    "trademarkStep5": "Richten Sie eine laufende Markenüberwachung ein",
+    "gaccConsumTax_alcohol": "10–20 % (variiert je nach Alkoholtyp)",
+    "gaccSpecialRestriction_usa1": "§ 301 Vergeltungszölle (zusätzlich 5-25 %)",
+    "gaccSpecialRestriction_usa2": "Kennzeichnung des Herkunftslandes streng",
+    "gaccTimelineDep_appSubmitted": "Antrag eingereicht",
+    "gaccTimelineDep_docsReady": "Alle Unterlagen liegen bereit",
+    "gaccTimelineDep_initAssess": "Erste Beurteilung abgeschlossen",
+    "gaccTimelineDep_labReportsReceived": "Laborberichte erhalten",
+    "gaccTimelineDep_productDetailsFinalized": "Produktdetails finalisiert",
+    "gaccTimelineDep_sampleShipment": "Musterversand vereinbart"
   },
   "Cookie": {
     "message": "Diese Website verwendet nur unbedingt erforderliche Authentifizierungscookies. Es werden keine Tracking- oder Werbecookies verwendet.",

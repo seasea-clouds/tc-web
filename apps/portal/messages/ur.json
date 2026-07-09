@@ -2273,7 +2273,16 @@
     "trademarkStep2": "براہ راست CNIPA فائلنگ کے ذریعے ٹریڈ مارک فائل کریں (8-14 ماہ)",
     "trademarkStep3": "اپوزیشن کی 3 ماہ کی مدت کی نگرانی کریں۔",
     "trademarkStep4": "سرحدی نفاذ کے لیے کسٹم آئی پی ریکارڈل کو رجسٹر کریں۔",
-    "trademarkStep5": "جاری ٹریڈ مارک مانیٹرنگ سیٹ اپ کریں۔"
+    "trademarkStep5": "جاری ٹریڈ مارک مانیٹرنگ سیٹ اپ کریں۔",
+    "gaccConsumTax_alcohol": "10-20% (شراب کی قسم کے لحاظ سے مختلف ہوتا ہے)",
+    "gaccSpecialRestriction_usa1": "سیکشن 301 جوابی ٹیرف (اضافی 5-25%)",
+    "gaccSpecialRestriction_usa2": "اصل ملک کا سخت لیبل لگانا",
+    "gaccTimelineDep_appSubmitted": "درخواست جمع کرائی",
+    "gaccTimelineDep_docsReady": "تمام دستاویزات تیار ہیں۔",
+    "gaccTimelineDep_initAssess": "ابتدائی تشخیص مکمل",
+    "gaccTimelineDep_labReportsReceived": "لیبارٹری رپورٹس موصول ہوئیں",
+    "gaccTimelineDep_productDetailsFinalized": "مصنوعات کی تفصیلات کو حتمی شکل دی گئی۔",
+    "gaccTimelineDep_sampleShipment": "نمونے کی ترسیل کا اہتمام کیا گیا ہے۔"
   },
   "Cookie": {
     "message": "یہ سائٹ صرف ضروری تصدیقی کوکیز استعمال کرتی ہے۔ کوئی ٹریکنگ یا اشتہاری کوکیز استعمال نہیں کی جاتی ہیں۔",

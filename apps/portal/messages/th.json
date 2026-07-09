@@ -2273,7 +2273,16 @@
     "trademarkStep2": "ยื่นเครื่องหมายการค้าผ่านการยื่น CNIPA โดยตรง (8-14 เดือน)",
     "trademarkStep3": "ติดตามช่วงคัดค้าน 3 เดือน",
     "trademarkStep4": "ลงทะเบียนบันทึก IP ศุลกากรสำหรับการบังคับใช้ชายแดน",
-    "trademarkStep5": "ตั้งค่าการติดตามเครื่องหมายการค้าอย่างต่อเนื่อง"
+    "trademarkStep5": "ตั้งค่าการติดตามเครื่องหมายการค้าอย่างต่อเนื่อง",
+    "gaccConsumTax_alcohol": "10-20% (แตกต่างกันไปตามประเภทของแอลกอฮอล์)",
+    "gaccSpecialRestriction_usa1": "อัตราภาษีตอบโต้มาตรา 301 (เพิ่มเติม 5-25%)",
+    "gaccSpecialRestriction_usa2": "ประเทศต้นทางมีการติดฉลากอย่างเข้มงวด",
+    "gaccTimelineDep_appSubmitted": "ส่งใบสมัครแล้ว",
+    "gaccTimelineDep_docsReady": "เอกสารทั้งหมดพร้อม",
+    "gaccTimelineDep_initAssess": "การประเมินเบื้องต้นเสร็จสมบูรณ์",
+    "gaccTimelineDep_labReportsReceived": "รายงานห้องปฏิบัติการที่ได้รับ",
+    "gaccTimelineDep_productDetailsFinalized": "รายละเอียดสินค้าสรุปแล้ว",
+    "gaccTimelineDep_sampleShipment": "จัดส่งตัวอย่าง"
   },
   "Cookie": {
     "message": "ไซต์นี้ใช้คุกกี้การรับรองความถูกต้องที่จำเป็นเท่านั้น ไม่มีการใช้คุกกี้การติดตามหรือการโฆษณา",

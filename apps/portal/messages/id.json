@@ -2273,7 +2273,16 @@
     "trademarkStep2": "Ajukan merek dagang melalui pengajuan CNIPA langsung (8-14 bulan)",
     "trademarkStep3": "Pantau periode oposisi 3 bulan",
     "trademarkStep4": "Daftarkan catatan IP Bea Cukai untuk penegakan perbatasan",
-    "trademarkStep5": "Siapkan pemantauan merek dagang yang berkelanjutan"
+    "trademarkStep5": "Siapkan pemantauan merek dagang yang berkelanjutan",
+    "gaccConsumTax_alcohol": "10-20% (bervariasi berdasarkan jenis alkohol)",
+    "gaccSpecialRestriction_usa1": "Tarif pembalasan Pasal 301 (tambahan 5-25%)",
+    "gaccSpecialRestriction_usa2": "Pelabelan negara asal ketat",
+    "gaccTimelineDep_appSubmitted": "Permohonan diajukan",
+    "gaccTimelineDep_docsReady": "Semua dokumen sudah siap",
+    "gaccTimelineDep_initAssess": "Penilaian awal selesai",
+    "gaccTimelineDep_labReportsReceived": "Laporan laboratorium diterima",
+    "gaccTimelineDep_productDetailsFinalized": "Detail produk selesai",
+    "gaccTimelineDep_sampleShipment": "Pengiriman sampel diatur"
   },
   "Cookie": {
     "message": "Situs ini hanya menggunakan cookie otentikasi penting. Tidak ada cookie pelacakan atau iklan yang digunakan.",

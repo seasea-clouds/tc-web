@@ -2273,7 +2273,16 @@
     "trademarkStep2": "ثبت علامت تجاری از طریق بایگانی مستقیم CNIPA (8 تا 14 ماه)",
     "trademarkStep3": "دوره 3 ماهه مخالفت را نظارت کنید",
     "trademarkStep4": "ثبت IP گمرک برای اجرای مرز",
-    "trademarkStep5": "نظارت مداوم بر علامت تجاری را تنظیم کنید"
+    "trademarkStep5": "نظارت مداوم بر علامت تجاری را تنظیم کنید",
+    "gaccConsumTax_alcohol": "10-20٪ (بر اساس نوع الکل متفاوت است)",
+    "gaccSpecialRestriction_usa1": "تعرفه های تلافی جویانه بخش 301 (5-25٪ اضافی)",
+    "gaccSpecialRestriction_usa2": "برچسب گذاری کشور مبدأ سخت است",
+    "gaccTimelineDep_appSubmitted": "درخواست ارسال شد",
+    "gaccTimelineDep_docsReady": "تمام مدارک آماده",
+    "gaccTimelineDep_initAssess": "ارزیابی اولیه کامل شد",
+    "gaccTimelineDep_labReportsReceived": "گزارش های آزمایشگاهی دریافت شد",
+    "gaccTimelineDep_productDetailsFinalized": "جزئیات محصول نهایی شد",
+    "gaccTimelineDep_sampleShipment": "حمل و نقل نمونه ترتیب داده شده است"
   },
   "Cookie": {
     "message": "این سایت فقط از کوکی های احراز هویت ضروری استفاده می کند. هیچ کوکی ردیابی یا تبلیغاتی استفاده نمی شود.",

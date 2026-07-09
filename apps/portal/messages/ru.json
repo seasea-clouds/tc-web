@@ -2273,7 +2273,16 @@
     "trademarkStep2": "Зарегистрируйте товарный знак путем прямой подачи заявки в CNIPA (8–14 месяцев)",
     "trademarkStep3": "Мониторинг 3-месячного периода возражения",
     "trademarkStep4": "Зарегистрировать таможенную запись IP для обеспечения пограничного контроля",
-    "trademarkStep5": "Настройте постоянный мониторинг товарных знаков"
+    "trademarkStep5": "Настройте постоянный мониторинг товарных знаков",
+    "gaccConsumTax_alcohol": "10-20% (зависит от типа алкоголя)",
+    "gaccSpecialRestriction_usa1": "Ответные тарифы раздела 301 (дополнительно 5–25%)",
+    "gaccSpecialRestriction_usa2": "Строгая маркировка страны происхождения",
+    "gaccTimelineDep_appSubmitted": "Заявка отправлена",
+    "gaccTimelineDep_docsReady": "Все документы готовы",
+    "gaccTimelineDep_initAssess": "Первоначальная оценка завершена",
+    "gaccTimelineDep_labReportsReceived": "Получены лабораторные отчеты",
+    "gaccTimelineDep_productDetailsFinalized": "Подробная информация о продукте завершена",
+    "gaccTimelineDep_sampleShipment": "Отгрузка образца организована"
   },
   "Cookie": {
     "message": "Этот сайт использует только необходимые файлы cookie аутентификации. Никакие файлы cookie для отслеживания или рекламы не используются.",

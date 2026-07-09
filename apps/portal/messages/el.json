@@ -2273,7 +2273,16 @@
     "trademarkStep2": "Καταχώρηση εμπορικού σήματος μέσω απευθείας κατάθεσης CNIPA (8-14 μήνες)",
     "trademarkStep3": "Παρακολούθηση 3μηνης περιόδου ανακοπής",
     "trademarkStep4": "Καταχωρίστε το αρχείο τελωνειακής IP για επιβολή των συνόρων",
-    "trademarkStep5": "Ρυθμίστε τη συνεχή παρακολούθηση εμπορικών σημάτων"
+    "trademarkStep5": "Ρυθμίστε τη συνεχή παρακολούθηση εμπορικών σημάτων",
+    "gaccConsumTax_alcohol": "10-20% (διαφέρει ανάλογα με τον τύπο αλκοόλ)",
+    "gaccSpecialRestriction_usa1": "Τιμολόγια αντιποίνων του άρθρου 301 (επιπλέον 5-25%)",
+    "gaccSpecialRestriction_usa2": "Αυστηρή επισήμανση της χώρας προέλευσης",
+    "gaccTimelineDep_appSubmitted": "Η αίτηση υποβλήθηκε",
+    "gaccTimelineDep_docsReady": "Όλα τα έγγραφα είναι έτοιμα",
+    "gaccTimelineDep_initAssess": "Ολοκληρώθηκε η αρχική αξιολόγηση",
+    "gaccTimelineDep_labReportsReceived": "Λήφθηκαν εργαστηριακές αναφορές",
+    "gaccTimelineDep_productDetailsFinalized": "Οι λεπτομέρειες του προϊόντος οριστικοποιήθηκαν",
+    "gaccTimelineDep_sampleShipment": "Τακτοποιημένη αποστολή δειγμάτων"
   },
   "Cookie": {
     "message": "Αυτός ο ιστότοπος χρησιμοποιεί μόνο απαραίτητα cookies ελέγχου ταυτότητας. Δεν χρησιμοποιούνται cookies παρακολούθησης ή διαφήμισης.",

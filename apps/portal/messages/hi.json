@@ -2273,7 +2273,16 @@
     "trademarkStep2": "प्रत्यक्ष सीएनआईपीए फाइलिंग के माध्यम से ट्रेडमार्क फ़ाइल करें (8-14 महीने)",
     "trademarkStep3": "3 महीने की विरोध अवधि की निगरानी करें",
     "trademarkStep4": "सीमा प्रवर्तन के लिए सीमा शुल्क आईपी रिकार्डल पंजीकृत करें",
-    "trademarkStep5": "चल रही ट्रेडमार्क निगरानी स्थापित करें"
+    "trademarkStep5": "चल रही ट्रेडमार्क निगरानी स्थापित करें",
+    "gaccConsumTax_alcohol": "10-20% (शराब के प्रकार के अनुसार भिन्न होता है)",
+    "gaccSpecialRestriction_usa1": "धारा 301 प्रतिशोधात्मक शुल्क (अतिरिक्त 5-25%)",
+    "gaccSpecialRestriction_usa2": "मूल देश का लेबलिंग सख्त",
+    "gaccTimelineDep_appSubmitted": "आवेदन प्रस्तुत किया गया",
+    "gaccTimelineDep_docsReady": "सभी दस्तावेज़ तैयार",
+    "gaccTimelineDep_initAssess": "प्रारंभिक मूल्यांकन पूरा",
+    "gaccTimelineDep_labReportsReceived": "लैब रिपोर्ट प्राप्त हुई",
+    "gaccTimelineDep_productDetailsFinalized": "उत्पाद विवरण को अंतिम रूप दिया गया",
+    "gaccTimelineDep_sampleShipment": "नमूना शिपमेंट की व्यवस्था की गई"
   },
   "Cookie": {
     "message": "यह साइट केवल आवश्यक प्रमाणीकरण कुकीज़ का उपयोग करती है। किसी भी ट्रैकिंग या विज्ञापन कुकीज़ का उपयोग नहीं किया जाता है।",

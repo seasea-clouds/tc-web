@@ -2273,7 +2273,16 @@
     "trademarkStep2": "Prijavite blagovno znamko prek neposredne prijave CNIPA (8–14 mesecev)",
     "trademarkStep3": "Spremljajte 3-mesečno obdobje ugovora",
     "trademarkStep4": "Registrirajte carinski zapis IP za nadzor meje",
-    "trademarkStep5": "Nastavite stalno spremljanje blagovnih znamk"
+    "trademarkStep5": "Nastavite stalno spremljanje blagovnih znamk",
+    "gaccConsumTax_alcohol": "10-20 % (odvisno od vrste alkohola)",
+    "gaccSpecialRestriction_usa1": "Oddelek 301 povračilne tarife (dodatnih 5–25 %)",
+    "gaccSpecialRestriction_usa2": "Strogo označevanje države izvora",
+    "gaccTimelineDep_appSubmitted": "Prijava oddana",
+    "gaccTimelineDep_docsReady": "Vsi dokumenti pripravljeni",
+    "gaccTimelineDep_initAssess": "Začetna ocena končana",
+    "gaccTimelineDep_labReportsReceived": "Prejeta laboratorijska poročila",
+    "gaccTimelineDep_productDetailsFinalized": "Podrobnosti o izdelku so dokončane",
+    "gaccTimelineDep_sampleShipment": "Dogovorjena pošiljka vzorcev"
   },
   "Cookie": {
     "message": "To spletno mesto uporablja samo bistvene piškotke za preverjanje pristnosti. Piškotki za sledenje ali oglaševanje se ne uporabljajo.",

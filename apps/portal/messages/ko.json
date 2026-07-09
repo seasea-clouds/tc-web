@@ -2273,7 +2273,16 @@
     "trademarkStep2": "직접 CNIPA 제출을 통해 상표 제출(8~14개월)",
     "trademarkStep3": "3개월 이의신청 기간 모니터링",
     "trademarkStep4": "국경 집행을 위한 관세 IP 기록 등록",
-    "trademarkStep5": "지속적인 상표 모니터링 설정"
+    "trademarkStep5": "지속적인 상표 모니터링 설정",
+    "gaccConsumTax_alcohol": "10~20%(알코올 종류에 따라 다름)",
+    "gaccSpecialRestriction_usa1": "301조 보복 관세(추가 5-25%)",
+    "gaccSpecialRestriction_usa2": "원산지 표기가 엄격함",
+    "gaccTimelineDep_appSubmitted": "신청서 제출됨",
+    "gaccTimelineDep_docsReady": "모든 서류가 준비되어 있습니다",
+    "gaccTimelineDep_initAssess": "초기 평가 완료",
+    "gaccTimelineDep_labReportsReceived": "실험실 보고서 접수됨",
+    "gaccTimelineDep_productDetailsFinalized": "제품 세부정보 확정",
+    "gaccTimelineDep_sampleShipment": "샘플 배송 준비"
   },
   "Cookie": {
     "message": "이 사이트는 필수 인증 쿠키만을 사용합니다. 추적 또는 광고 쿠키는 사용되지 않습니다.",

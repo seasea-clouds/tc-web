@@ -629,7 +629,7 @@
     "gaccPost_surveillance_item": "市場監視",
     "gaccRiskDim_complianceHistory": "コンプライアンス履歴",
     "gaccRiskDim_documentationComplexity": "ドキュメントの複雑さ",
-    "gaccRiskDim_ingredients": "成分风险",
+    "gaccRiskDim_ingredients": "成分リスク",
     "gaccRiskDim_originCountry": "原産国",
     "gaccRiskDim_originCountryComplexity": "原産国の複雑さ",
     "gaccRiskDim_processing": "加工",
@@ -2273,7 +2273,16 @@
     "trademarkStep2": "CNIPA への直接出願による商標出願 (8 ～ 14 か月)",
     "trademarkStep3": "3か月の異議申し立て期間を監視する",
     "trademarkStep4": "国境取締りのために税関のIP記録を登録する",
-    "trademarkStep5": "継続的な商標監視を設定する"
+    "trademarkStep5": "継続的な商標監視を設定する",
+    "gaccConsumTax_alcohol": "10～20％（アルコールの種類により異なります）",
+    "gaccSpecialRestriction_usa1": "第 301 条報復関税 (追加 5 ～ 25%)",
+    "gaccSpecialRestriction_usa2": "原産国表示厳格化",
+    "gaccTimelineDep_appSubmitted": "申請書を提出しました",
+    "gaccTimelineDep_docsReady": "すべての書類が準備完了",
+    "gaccTimelineDep_initAssess": "初期評価が完了しました",
+    "gaccTimelineDep_labReportsReceived": "ラボレポートを受け取りました",
+    "gaccTimelineDep_productDetailsFinalized": "製品詳細が決定しました",
+    "gaccTimelineDep_sampleShipment": "サンプル出荷手配済み"
   },
   "Cookie": {
     "message": "このサイトでは、必須の認証 Cookie のみを使用します。追跡クッキーや広告クッキーは使用されません。",

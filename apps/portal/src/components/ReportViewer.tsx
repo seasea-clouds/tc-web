@@ -53,7 +53,7 @@ export default function ReportViewer({ report, onBack }: ReportViewerProps) {
 };
 
 const nextStepKeys = MODULE_NEXT_STEPS[report.module];
-const nextSteps = nextStepKeys ? nextStepKeys.map(k => t(k)) : report.nextSteps;
+const nextSteps = nextStepKeys ? Array.from(nextStepKeys, k => t(k)) : report.nextSteps;
 
 const labels = {
     title: t('reportTitle'),

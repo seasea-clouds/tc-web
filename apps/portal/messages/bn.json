@@ -2273,7 +2273,16 @@
     "trademarkStep2": "সরাসরি CNIPA ফাইলিংয়ের মাধ্যমে ট্রেডমার্ক ফাইল করুন (8-14 মাস)",
     "trademarkStep3": "3 মাসের বিরোধী সময় নিরীক্ষণ করুন",
     "trademarkStep4": "সীমান্ত প্রয়োগের জন্য কাস্টমস আইপি রেকর্ডাল নিবন্ধন করুন",
-    "trademarkStep5": "চলমান ট্রেডমার্ক পর্যবেক্ষণ সেট আপ করুন"
+    "trademarkStep5": "চলমান ট্রেডমার্ক পর্যবেক্ষণ সেট আপ করুন",
+    "gaccConsumTax_alcohol": "10-20% (অ্যালকোহলের প্রকারভেদে পরিবর্তিত হয়)",
+    "gaccSpecialRestriction_usa1": "ধারা 301 প্রতিশোধমূলক শুল্ক (অতিরিক্ত 5-25%)",
+    "gaccSpecialRestriction_usa2": "মূল দেশ কঠোর লেবেল",
+    "gaccTimelineDep_appSubmitted": "আবেদন জমা দেওয়া হয়েছে",
+    "gaccTimelineDep_docsReady": "সমস্ত নথি প্রস্তুত",
+    "gaccTimelineDep_initAssess": "প্রাথমিক মূল্যায়ন সম্পূর্ণ",
+    "gaccTimelineDep_labReportsReceived": "ল্যাব রিপোর্ট প্রাপ্ত",
+    "gaccTimelineDep_productDetailsFinalized": "পণ্যের বিবরণ চূড়ান্ত করা হয়েছে",
+    "gaccTimelineDep_sampleShipment": "নমুনা চালান ব্যবস্থা করা হয়েছে"
   },
   "Cookie": {
     "message": "এই সাইটটি শুধুমাত্র প্রয়োজনীয় প্রমাণীকরণ কুকি ব্যবহার করে। কোন ট্র্যাকিং বা বিজ্ঞাপন কুকি ব্যবহার করা হয় না.",

@@ -2273,7 +2273,16 @@
     "trademarkStep2": "Lêer handelsmerk via direkte CNIPA-liassering (8-14 maande)",
     "trademarkStep3": "Monitor 3-maande opposisieperiode",
     "trademarkStep4": "Registreer Doeane-IP-rekord vir grensafdwinging",
-    "trademarkStep5": "Stel deurlopende handelsmerkmonitering op"
+    "trademarkStep5": "Stel deurlopende handelsmerkmonitering op",
+    "gaccConsumTax_alcohol": "10-20% (wissel volgens alkoholtipe)",
+    "gaccSpecialRestriction_usa1": "Artikel 301-weergeldtariewe (bykomende 5-25%)",
+    "gaccSpecialRestriction_usa2": "Land van oorsprong etikettering streng",
+    "gaccTimelineDep_appSubmitted": "Aansoek ingedien",
+    "gaccTimelineDep_docsReady": "Alle dokumente gereed",
+    "gaccTimelineDep_initAssess": "Aanvanklike assessering voltooi",
+    "gaccTimelineDep_labReportsReceived": "Laboratoriumverslae ontvang",
+    "gaccTimelineDep_productDetailsFinalized": "Produkbesonderhede gefinaliseer",
+    "gaccTimelineDep_sampleShipment": "Monster gestuur gereël"
   },
   "Cookie": {
     "message": "Hierdie webwerf gebruik slegs noodsaaklike verifikasiekoekies. Geen dop- of advertensiekoekies word gebruik nie.",

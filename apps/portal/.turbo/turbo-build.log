@@ -70,7 +70,7 @@ Done.
   Generating static pages using 19 workers (192/771) 
   Generating static pages using 19 workers (385/771) 
   Generating static pages using 19 workers (578/771) 
-✓ Generating static pages using 19 workers (771/771) in 3.7s
+✓ Generating static pages using 19 workers (771/771) in 8.0s
   Finalizing page optimization ...
 
 Route (app)
@@ -284,8 +284,9 @@ Route (app)
 📦 UI (0 missing, 0 extra, 0 hardcoded):
   ✅ 全部通过
 
-📊 总计: 0 缺失 + 0 多余 + 0 硬编码英文
-✅ 所有 i18n key 完整，无硬编码英文
+✅ 面包屑与移动导航 Navbar.home 翻译一致
+📊 总计: 0 缺失 + 0 多余 + 0 硬编码英文 + 0 导航翻译不一致
+✅ 所有 i18n key 完整，无硬编码英文，导航翻译一致
 
 ▶ check-i18n-coverage.mjs 
 

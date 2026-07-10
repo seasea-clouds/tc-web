@@ -2286,14 +2286,14 @@
     "perShipment": "per forsendelse",
     "tmMarket_recoHigh": "Haster: indsend varemærkeansøgning før markedsadgang.",
     "tmMarket_recoLow": "Proaktiv varemærkeregistrering anbefales for at sikre varemærkebeskyttelse.",
-    "gaccReg_ciferSystem_name": "CIFER System",
+    "gaccReg_ciferSystem_name": "CIFER-systemet",
     "gaccReg_ciferSystem_number": "Kina Import Food Enterprise Registration System",
     "gaccReg_decree248_name": "GACC-dekret 248",
     "gaccReg_decree249_name": "GACC-dekret 249",
     "gaccReg_foodSafetyLaw_name": "Fødevaresikkerhedsloven i Kina",
-    "regAuthority_gacc": "General Administration of Customs (GACC)",
-    "regAuthority_nhc": "National Health Commission (NHC)",
-    "regAuthority_npc": "National People's Congress (NPC)",
+    "regAuthority_gacc": "Generaltoldadministrationen (GACC)",
+    "regAuthority_nhc": "Den Nationale Sundhedskommission (NHC)",
+    "regAuthority_npc": "Den Nationale Folkekongres (NPC)",
     "tmReg_cnipaEdition_name": "CNIPA 2021 udgave",
     "tmReg_revision_number": "4. revision 2019"
   },
@@ -2807,7 +2807,7 @@
     "perShipment": "per forsendelse",
     "valueNA": "N/A",
     "valueNone": "Ingen",
-    "timelineCnca": "Certification Body"
+    "timelineCnca": "Certificeringsorgan"
   },
   "cccDetailedTimeline": "Varierer efter produkt - kontakt os for vurdering",
   "cccLabGuide": "Testning skal være på CNAS-akkrediteret laboratorium.",

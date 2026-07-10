@@ -2291,10 +2291,10 @@
     "gaccReg_decree248_name": "GACC-dekret 248",
     "gaccReg_decree249_name": "GACC-dekret 249",
     "gaccReg_foodSafetyLaw_name": "Kinas livsmedelssäkerhetslag",
-    "regAuthority_gacc": "General Administration of Customs (GACC)",
-    "regAuthority_nhc": "National Health Commission (NHC)",
-    "regAuthority_npc": "National People's Congress (NPC)",
-    "tmReg_cnipaEdition_name": "CNIPA 2021 Edition",
+    "regAuthority_gacc": "Generaltullförvaltningen (GACC)",
+    "regAuthority_nhc": "Nationella hälsokommissionen (NHC)",
+    "regAuthority_npc": "Nationella folkkongressen (NPC)",
+    "tmReg_cnipaEdition_name": "CNIPA 2021 års upplaga",
     "tmReg_revision_number": "4:e revisionen 2019"
   },
   "Cookie": {
@@ -2807,7 +2807,7 @@
     "perShipment": "per försändelse",
     "valueNA": "N/A",
     "valueNone": "Ingen",
-    "timelineCnca": "Certification Body"
+    "timelineCnca": "Certifieringsorgan"
   },
   "cccDetailedTimeline": "Varierar beroende på produkt — kontakta oss för bedömning",
   "cccLabGuide": "Testning måste ske på CNAS-ackrediterat labb.",

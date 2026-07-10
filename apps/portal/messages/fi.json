@@ -2292,7 +2292,7 @@
     "gaccReg_decree249_name": "GACC:n asetus 249",
     "gaccReg_foodSafetyLaw_name": "Kiinan elintarviketurvallisuuslaki",
     "regAuthority_gacc": "Yleinen tullihallinto (GACC)",
-    "regAuthority_nhc": "National Health Commission (NHC)",
+    "regAuthority_nhc": "Kansallinen terveyskomissio (NHC)",
     "regAuthority_npc": "Kansallinen kansankongressi (NPC)",
     "tmReg_cnipaEdition_name": "CNIPA 2021 -versio",
     "tmReg_revision_number": "4. versio 2019"
@@ -2807,7 +2807,7 @@
     "perShipment": "lähetystä kohti",
     "valueNA": "Ei käytössä",
     "valueNone": "Ei mitään",
-    "timelineCnca": "Certification Body"
+    "timelineCnca": "Sertifiointielin"
   },
   "cccDetailedTimeline": "Vaihtelee tuotteen mukaan – ota meihin yhteyttä arvioidaksesi",
   "cccLabGuide": "Testaus on suoritettava CNAS-akkreditoidussa laboratoriossa.",

@@ -110,8 +110,6 @@ export async function onRequest(context: { request: Request; env: Env }) {
 
     return Response.json({
       today: {
-        pv: (period?.today_reports || 0) * 3,
-        uv: period?.period_users || 0,
         reports: period?.today_reports || 0,
         newUsers: 0,
       },

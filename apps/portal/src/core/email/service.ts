@@ -52,7 +52,7 @@ export async function sendReportEmail(params: {
     <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;">
     <p style="font-size: 12px; color: #999; text-align: center;">
       SinoTrade Compliance<br>
-      david@sinotradecompliance.com | sinotradecompliance.com
+      info@sinotradecompliance.com | sinotradecompliance.com
     </p>
   </div>
 </body>

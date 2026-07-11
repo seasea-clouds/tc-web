@@ -41,7 +41,7 @@ export default function ActionDock({
 
       {/* Email */}
       <a
-        href="mailto:david@sinotradecompliance.com"
+        href="mailto:info@sinotradecompliance.com"
         aria-label={emailAriaLabel}
         className="flex items-center justify-center w-10 h-10 bg-gray-600 border-2 border-white rounded-full shadow-lg hover:bg-gray-700 hover:shadow-xl transition-all hover:scale-110"
       >

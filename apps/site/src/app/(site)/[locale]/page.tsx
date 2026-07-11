@@ -72,7 +72,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           },
           contactPoint: {
             '@type': 'ContactPoint',
-            email: 'david@sinotradecompliance.com',
+            email: 'info@sinotradecompliance.com',
             telephone: '+86-21-XXXX-XXXX',
             contactType: 'customer service',
             availableLanguage: ['English', 'Chinese'],

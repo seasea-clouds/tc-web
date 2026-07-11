@@ -130,6 +130,14 @@ export function isPagePath(path: string): boolean {
     return false;
   }
 
+  // 第 5 步：排除无扩展名的 API 版本路径和扫描器
+  if (
+    /^\/v\d+\//.test(clean) || // /v1/onboarding/config 等 API 版本路径
+    /^\/[a-z]+\d+(?:php|asp|jsp|aspx|pl|cgi)/i.test(clean) // /w1php 等扫描器
+  ) {
+    return false;
+  }
+
   return true;
 }
 
@@ -288,7 +296,7 @@ export async function ensureDailyCFCache(env: CacheEnv): Promise<string> {
 
           await env.DB.prepare(
             `UPDATE daily_page_stats
-             SET page_data = ?, page_paths = ?, os_data = ?, device_data = ?, project_data = ?
+             SET page_data = ?, page_paths = ?, os_data = ?, device_data = ?, project_data = ?, browser_data = ?
              WHERE date = ? AND source = 'cf_api'`,
           )
             .bind(
@@ -297,6 +305,7 @@ export async function ensureDailyCFCache(env: CacheEnv): Promise<string> {
               JSON.stringify(agg.osData),
               JSON.stringify(agg.deviceData),
               JSON.stringify(agg.projectData),
+              JSON.stringify(agg.browserData),
               date,
             )
             .run();

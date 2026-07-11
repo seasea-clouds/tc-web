@@ -17,12 +17,12 @@
 - ✅ 报告管理（列表/模块筛选/状态筛选 + 详情面板含输入数据/评估结果/Next Steps）
 - ✅ 操作日志（搜索/日期筛选/类型筛选/详情展开）
 - ✅ 支付与订单（列表/搜索/状态筛选/退款操作 + 收入概览含今日/本月/累计 + 月度趋势图）
-- ✅ 页面浏览量分析（CF Analytics GraphQL 直连 + 管理端分析看板）
+- ✅ 页面浏览量分析（CF Analytics GraphQL + D1 缓存 → 管理端分析看板）
 - ✅ Creem 回调集成（Webhook 写入 payments 表，更新报告支付状态）
 
 ## 与策划文档的差异
 文档参考「Admin 管理后台 — 完整策划方案」（飞书文档）。
-- ✅ 数据看板：CF Analytics GraphQL 直连（PV/UV/地域/浏览器/路径/OS/设备/项目分布）
+- ✅ 数据看板：CF Analytics GraphQL + D1 缓存（PV/UV/地域/浏览器/路径/OS/设备/项目分布）
 - ✅ 渠道来源分布（Direct/Search/Social/Internal/Referral 饼图）
 - ✅ 站点来源分布（site/portal/blog/admin 饼图）
 - ✅ 每小时趋势（今日：实际值；7天/30天：日均每小时平均值）
@@ -33,7 +33,7 @@
 - Next.js 16 + TypeScript + Tailwind CSS
 - Cloudflare Pages Functions (API)
 - D1 Database（共享 Portal 的 D1）
-- CF Analytics GraphQL API（PV/UV/地域/浏览器/路径等数据）
+- CF Analytics GraphQL API + D1 缓存（PV/UV/地域/浏览器/路径等数据）
 - Recharts
 
 ## 路由结构
@@ -64,10 +64,14 @@
 | 访问方式 | 直接访问或通过主站 `sinotradecompliance.com/admin/*`|
 
 ## 技术决策
-- CF Analytics GraphQL 直连（cf-analytics.ts 库封装 GraphQL 查询）
+- CF Analytics GraphQL + D1 缓存（cf-analytics.ts 库封装 GraphQL 查询，d1-cache.ts 管理 D1 缓存层）
   - `fetchDailyStats()` — PV/UV/国家/浏览器/状态码
   - `fetchHourlyStats()` — 每小时 PV/UV
   - `fetchAggregateStatsRange()` — 路径/OS/设备/项目分布
+- **缓存策略**：历史数据缓存到 D1 的 `daily_page_stats` 和 `hourly_page_stats` 表
+  - 每日数据：从 CF 取一次后永久缓存，不再重复查询
+  - 每小时数据（今日）：已完成的小时自动回填缓存
+  - 首次请求自动回填全部历史数据，后续只补充新增部分
 - 环境变量 `CLOUDFLARE_ZONE_ID` + `CLOUDFLARE_API_TOKEN`（需 `analytics:read` 权限）需在 CF Pages 面板配置
 - 详情页改用内联面板（非独立 [id] 路由），兼容 Next.js static export
 - Build 命令：`npm run build`（= `next build && postbuild.sh`），postbuild.sh 负责将导出文件移到 /admin/ 子目录

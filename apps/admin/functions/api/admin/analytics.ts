@@ -1,54 +1,46 @@
 /**
- * Analytics API — powered by Cloudflare GraphQL Analytics.
- * GET /api/admin/analytics?range=today|7d|30d
+ * Analytics API — CF GraphQL with D1 caching.
+ * GET /api/admin/analytics?range=today|7d|30d&start_date=&end_date=
  *
- * All data fetched directly from CF Analytics GraphQL API (no D1 cache).
- * The cf-analytics.ts library handles GraphQL queries, error handling,
- * and aggregate data merging across multiple dates.
+ * Data flow:
+ *   1. Auto-migrate D1 schema (idempotent)
+ *   2. Backfill missing historical daily data from CF → D1 cache
+ *   3. Backfill today's completed hours from CF → D1 cache
+ *   4. Read all data from D1, build response
+ *
+ * Historical data is fetched once and cached forever.
+ * Today's hourly data is fetched incrementally as hours complete.
  */
 
 import { requireAdmin } from "../../lib/admin-session";
 import {
-  hasConfig,
-  getApiToken,
-  getZoneId,
-  fetchDailyStats,
-  fetchHourlyStats,
-  fetchAggregateStatsRange,
-} from "../../lib/cf-analytics";
+  runMigration,
+  ensureDailyCFCache,
+  ensureHourlyCFCache,
+  readDailyRange,
+  readTodayHourly,
+  readAllTimeTotals,
+  safeJSON,
+} from "../../lib/d1-cache";
+import { type HourlyStats } from "../../lib/cf-analytics";
 
 interface Env {
+  DB: any;
   CLOUDFLARE_API_TOKEN?: string;
   CLOUDFLARE_ZONE_ID?: string;
 }
 
-// ── Helpers ──────────────────────────────────────────────────────
+// ── Date helpers ─────────────────────────────────────────────────
 
 function todayUTC(): string {
   return new Date().toISOString().slice(0, 10);
-}
-
-function formatISO(date: string, hour: number): string {
-  const h = String(hour).padStart(2, "0");
-  return `${date}T${h}:00:00Z`;
-}
-
-function dateRange(start: string, end: string): string[] {
-  const dates: string[] = [];
-  const s = new Date(start + "T00:00:00Z");
-  const e = new Date(end + "T00:00:00Z");
-  while (s <= e) {
-    dates.push(s.toISOString().slice(0, 10));
-    s.setDate(s.getDate() + 1);
-  }
-  return dates;
 }
 
 function getDateString(ts: number): string {
   return new Date(ts).toISOString().slice(0, 10);
 }
 
-/** Build the 24-slot hourly array, filling gaps with 0. */
+/** Fill 24-hour slots from a map of {hour → {pv, uv}}. */
 function fillHourly(
   hourMap: Map<number, { pv: number; uv: number }>,
 ): { hour: number; pv: number; uv: number }[] {
@@ -113,19 +105,6 @@ export async function onRequest(context: { request: Request; env: Env }) {
   const range = url.searchParams.get("range") || "today";
   const customStart = url.searchParams.get("start_date") || "";
   const customEnd = url.searchParams.get("end_date") || "";
-
-  // Check if CF Analytics is configured
-  if (!hasConfig(context.env)) {
-    return Response.json(emptyResponse(), {
-      headers: {
-        "X-Analytics-Error":
-          "CF Analytics not configured (missing CLOUDFLARE_ZONE_ID or CLOUDFLARE_API_TOKEN)",
-      },
-    });
-  }
-
-  const zoneId = getZoneId(context.env);
-  const token = getApiToken(context.env);
   const today = todayUTC();
 
   // Determine date range
@@ -157,159 +136,174 @@ export async function onRequest(context: { request: Request; env: Env }) {
   }
 
   try {
+    // 1. Schema migration (idempotent)
+    await runMigration(context.env);
+
+    // 2. Backfill — fetch missing historical daily data from CF → cache in D1
+    //    Errors are non-fatal; we still serve whatever D1 already has
+    let cacheError = "";
+    try {
+      cacheError = await ensureDailyCFCache(context.env);
+    } catch (e) {
+      cacheError = String(e);
+      console.error("[analytics] ensureDailyCFCache error:", e);
+    }
+
+    // 3. Backfill — fetch today's missing completed hours from CF → cache in D1
+    try {
+      await ensureHourlyCFCache(context.env);
+    } catch (e) {
+      console.error("[analytics] ensureHourlyCFCache error:", e);
+    }
+
+    // 4. Read all-time totals from D1
+    const allTime = await readAllTimeTotals(context.env);
+
+    // 5. Read today's hourly data
+    const hourlyRows = await readTodayHourly(context.env, today);
+
+    // Build hourly map
+    const hourlyMap = new Map<number, { pv: number; uv: number }>();
+    let todayPV = 0;
+    let todayUV = 0;
+    for (const h of hourlyRows) {
+      hourlyMap.set(h.hour, { pv: h.pv || 0, uv: h.uv || 0 });
+      todayPV += h.pv || 0;
+      todayUV += h.uv || 0;
+    }
+    const hourlySum = fillHourly(hourlyMap);
+
+    // ─── RANGE: today ───
     if (range === "today") {
-      // ═════ TODAY ONLY: hourly + aggregate stats ═════
+      // For geo/browser/page data, use the most recent daily row as a best estimate
+      // (today's adaptive groups data is incomplete/sampled)
+      const dailyRows = await readDailyRange(context.env, "2026-06-01", today);
+      const latestComplete = dailyRows[dailyRows.length - 1];
 
-      // 1. Hourly PV/UV (for chart + summary)
-      const hourlyStats = await fetchHourlyStats(
-        zoneId,
-        token,
-        formatISO(today, 0),
-        formatISO(today, 24),
-      );
+      let geoData: { country: string; count: number }[] = [];
+      let pageData: { path: string; count: number }[] = [];
+      let projectData: { project: string; count: number }[] = [];
+      let browserData: { browser: string; pageViews: number }[] = [];
+      let osData: { os: string; count: number }[] = [];
+      let deviceData: { device: string; count: number }[] = [];
 
-      const hourlyMap = new Map<number, { pv: number; uv: number }>();
-      for (const h of hourlyStats) {
-        hourlyMap.set(h.hour, { pv: h.pv || 0, uv: h.uv || 0 });
+      if (latestComplete) {
+        geoData = safeJSON(latestComplete.geo_data, []);
+        pageData = safeJSON(latestComplete.page_data, []);
+        projectData = safeJSON(latestComplete.project_data, []);
+        browserData = safeJSON(latestComplete.browser_data, []);
+        osData = safeJSON(latestComplete.os_data, []);
+        deviceData = safeJSON(latestComplete.device_data, []);
       }
-      const hourlySum = fillHourly(hourlyMap);
-      const totalPV = hourlyStats.reduce((s, h) => s + (h.pv || 0), 0);
-      const totalUV = hourlyStats.reduce((s, h) => s + (h.uv || 0), 0);
-
-      // 2. Daily aggregate (for country/browser data — not available via hourly)
-      const dailyStats = await fetchDailyStats(zoneId, token, [today]);
-      const ds = dailyStats[0];
-
-      // 3. Aggregate stats (for paths, OS, device, project)
-      const aggMap = await fetchAggregateStatsRange(zoneId, token, today, today);
-      const agg = aggMap.get(today);
 
       return Response.json({
-        allTimeTotal: totalPV,
-        allTimeUV: totalUV,
+        allTimeTotal: allTime.pv,
+        allTimeUV: allTime.uv,
         summary: {
-          total: totalPV,
-          uv: totalUV,
-          today: totalPV,
-          todayUV: totalUV,
-          countries: ds?.countryMap?.length || 0,
+          total: todayPV,
+          uv: todayUV,
+          today: todayPV,
+          todayUV: todayUV,
+          countries: geoData.length,
         },
         hourlySum,
         hourlyAvg: hourlySum,
         hoursCovered: 1,
         dailyData:
-          hourlyStats.length > 0
-            ? [{ date: today, pv: totalPV, uv: totalUV }]
+          hourlyRows.length > 0
+            ? [{ date: today, pv: todayPV, uv: todayUV }]
             : [],
-        geoData:
-          ds?.countryMap?.map((c) => ({
-            country: c.clientCountryName,
-            count: c.requests,
-          })) || [],
-        pageData: agg?.pathData || [],
+        geoData,
+        pageData,
         channelData: [],
-        projectData: agg?.projectData || [],
-        browserData:
-          ds?.browserMap?.map((b) => ({
-            browser: b.uaBrowserFamily,
-            pageViews: b.pageViews,
-          })) || [],
-        osData: agg?.osData || [],
-        deviceData: agg?.deviceData || [],
+        projectData,
+        browserData,
+        osData,
+        deviceData,
       });
     }
 
-    // ═════ MULTI-DAY (7d/30d/custom) ═════
+    // ─── RANGE: 7d / 30d / custom ───
+    // Read daily rows for the period
+    const dailyRows = await readDailyRange(context.env, startDate, endDate);
 
-    // 1. Daily PV/UV + geo/browser per date
-    const dateList = dateRange(startDate, endDate);
-    const dailyStats = await fetchDailyStats(zoneId, token, dateList);
-
-    let totalPV = 0;
-    let totalUV = 0;
+    let periodPV = 0;
+    let periodUV = 0;
     const dailyData: { date: string; pv: number; uv: number }[] = [];
-    const countryArrays: { country: string; count: number }[][] = [];
+
+    // Collect per-dimension arrays for merging
+    const geoArrays: { country: string; count: number }[][] = [];
+    const pageArrays: { path: string; count: number }[][] = [];
+    const projectArrays: { project: string; count: number }[][] = [];
     const browserArrays: { browser: string; pageViews: number }[][] = [];
-
-    for (const ds of dailyStats) {
-      totalPV += ds.pv;
-      totalUV += ds.uv;
-      dailyData.push({ date: ds.date, pv: ds.pv, uv: ds.uv });
-      if (ds.countryMap.length > 0) {
-        countryArrays.push(
-          ds.countryMap.map((c) => ({
-            country: c.clientCountryName,
-            count: c.requests,
-          })),
-        );
-      }
-      if (ds.browserMap.length > 0) {
-        browserArrays.push(
-          ds.browserMap.map((b) => ({
-            browser: b.uaBrowserFamily,
-            pageViews: b.pageViews,
-          })),
-        );
-      }
-    }
-
-    // 2. Aggregate stats (paths, OS, device, project) across all dates
-    const aggMap = await fetchAggregateStatsRange(zoneId, token, startDate, endDate);
-    const pathArrays: { path: string; count: number }[][] = [];
     const osArrays: { os: string; count: number }[][] = [];
     const deviceArrays: { device: string; count: number }[][] = [];
-    const projectArrays: { project: string; count: number }[][] = [];
+    const hourlyMaps: Map<number, { pv: number; uv: number }>[] = [];
 
-    for (const [, agg] of aggMap) {
-      if (agg.pathData.length > 0) pathArrays.push(agg.pathData);
-      if (agg.osData.length > 0) osArrays.push(agg.osData);
-      if (agg.deviceData.length > 0) deviceArrays.push(agg.deviceData);
-      if (agg.projectData.length > 0) projectArrays.push(agg.projectData);
+    for (const row of dailyRows) {
+      periodPV += row.total_pv || 0;
+      periodUV += row.total_uv || 0;
+      dailyData.push({
+        date: row.date,
+        pv: row.total_pv || 0,
+        uv: row.total_uv || 0,
+      });
+
+      if (row.geo_data) geoArrays.push(safeJSON(row.geo_data, []));
+      if (row.page_data) pageArrays.push(safeJSON(row.page_data, []));
+      if (row.project_data) projectArrays.push(safeJSON(row.project_data, []));
+      if (row.browser_data) browserArrays.push(safeJSON(row.browser_data, []));
+      if (row.os_data) osArrays.push(safeJSON(row.os_data, []));
+      if (row.device_data) deviceArrays.push(safeJSON(row.device_data, []));
     }
 
-    // 3. Today's hourly (for hourly chart when viewing 7d/30d)
-    const hourlyStats = await fetchHourlyStats(
-      zoneId,
-      token,
-      formatISO(today, 0),
-      formatISO(today, 24),
-    );
-    const todayHourMap = new Map<number, { pv: number; uv: number }>();
-    let todayPV = 0;
-    let todayUV = 0;
-    for (const h of hourlyStats) {
-      todayHourMap.set(h.hour, { pv: h.pv || 0, uv: h.uv || 0 });
-      todayPV += h.pv || 0;
-      todayUV += h.uv || 0;
+    // Add today's hourly data (today is not in daily_page_stats until tomorrow)
+    if (hourlyRows.length > 0) {
+      hourlyMaps.push(hourlyMap);
+      periodPV += todayPV;
+      periodUV += todayUV;
+      dailyData.push({ date: today, pv: todayPV, uv: todayUV });
     }
-    const hourlySum = fillHourly(todayHourMap);
-    const hourlyAvg = hourlySum.map((h) => ({
+
+    // Merge hourly maps from all dates
+    const mergedHourlyMap = new Map<number, { pv: number; uv: number }>();
+    for (const m of hourlyMaps) {
+      Array.from(m.entries()).forEach(([hour, val]) => {
+        const existing = mergedHourlyMap.get(hour) || { pv: 0, uv: 0 };
+        mergedHourlyMap.set(hour, {
+          pv: existing.pv + val.pv,
+          uv: existing.uv + val.uv,
+        });
+      });
+    }
+
+    const periodHourly = fillHourly(mergedHourlyMap);
+    const hourlyAvg = periodHourly.map((h) => ({
       hour: h.hour,
       pv: Math.round(h.pv / days),
       uv: Math.round(h.uv / days),
     }));
 
+    // Merge distribution data
+    const geoData = mergeByKey(geoArrays, "country", "count");
+    const pageData = mergeByKey(pageArrays, "path", "count");
+
     return Response.json({
-      allTimeTotal: totalPV,
-      allTimeUV: totalUV,
+      allTimeTotal: allTime.pv,
+      allTimeUV: allTime.uv,
       summary: {
-        total: totalPV,
-        uv: totalUV,
+        total: periodPV,
+        uv: periodUV,
         today: todayPV,
         todayUV: todayUV,
-        countries:
-          countryArrays.length > 0
-            ? mergeByKey(countryArrays, "country", "count").length
-            : 0,
+        countries: geoData.length,
       },
-      hourlySum,
+      hourlySum: periodHourly,
       hourlyAvg,
       hoursCovered: days,
       dailyData,
-      geoData:
-        mergeByKey(countryArrays, "country", "count").slice(0, 20),
-      pageData:
-        mergeByKey(pathArrays, "path", "count").slice(0, 30),
+      geoData: geoData.slice(0, 20),
+      pageData: pageData.slice(0, 30),
       channelData: [],
       projectData: mergeByKey(projectArrays, "project", "count"),
       browserData: mergeByKey(browserArrays, "browser", "pageViews"),

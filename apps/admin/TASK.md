@@ -2,7 +2,7 @@
 
 ## 状态：全部已完成
 
-- [x] 1. 数据分析迁移：移除 D1 缓存层，所有数据直接从 CF Analytics GraphQL API 拉取（2026-07-11）
+- [x] 1. 数据分析架构：CF Analytics GraphQL + D1 缓存（历史数据永久缓存，今日小时数据增量回填）
 - [x] 2. 订阅状态"canceled"翻译 → "已取消"（已在 statusLabel 中正确映射）
 - [x] 3. 订阅管理 Invalid Date 修复 — 创建 safeDate() 工具函数处理 ISO/SQLite 两种日期格式
 - [x] 4. 报告管理：详情改为独立页面（`/admin/report-detail?id=xxx`）；新增"原始报告"按钮

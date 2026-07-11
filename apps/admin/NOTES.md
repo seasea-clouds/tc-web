@@ -19,12 +19,17 @@
 - `output: 'export'` + `basePath: '/admin'`，产出到 `out/admin/` 目录
 - CF Pages Functions 负责 API 路由（不在 Next.js 路由系统中）
 
-### 数据分析 — CF Analytics GraphQL 直连
-- 所有 PV/UV/地域/路径数据直接从 Cloudflare GraphQL API 拉取，无 D1 中间缓存
-- 库文件：`functions/lib/cf-analytics.ts`
+### 数据分析 — CF Analytics GraphQL + D1 缓存
+- CF GraphQL 直取历史数据，写入 D1 长期缓存
+- 库文件：`functions/lib/cf-analytics.ts`（GraphQL 查询） + `functions/lib/d1-cache.ts`（D1 缓存层）
   - `fetchDailyStats()` — httpRequests1dGroups：PV/UV/国家/浏览器/状态码
   - `fetchHourlyStats()` — httpRequests1hGroups：每小时 PV/UV
   - `fetchAggregateStatsRange()` — httpRequestsAdaptiveGroups：路径/OS/设备/项目分布（每日期并发，5 路并行）
+- **缓存策略**：
+  - 每日数据（`daily_page_stats` 表）：历史日期的数据不可变，从 CF 取一次后永久缓存
+  - 每小时数据（`hourly_page_stats` 表）：今日完成的 UTC 小时逐步缓存，不缓存未完成的小时
+  - 第一次请求：自动回填所有历史数据（从 2026-06-01 至今）
+  - 后续请求：只补充未缓存的新数据（如新的一天或新完成的小时）
 - API 端点：`GET /api/admin/analytics?range=today|7d|30d`（支持自定义 `start_date`/`end_date`）
 - 环境变量（CF Pages 中配置）：
   - `CLOUDFLARE_ZONE_ID` — sinotradecompliance.com 的 Zone ID

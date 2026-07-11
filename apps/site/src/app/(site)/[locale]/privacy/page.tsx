@@ -50,7 +50,7 @@ export default async function PrivacyPage({ params }: { params: Promise<{ locale
             <h2 className="text-xl font-semibold text-primary-navy mt-8 mb-3">{t('contactTitle')}</h2>
             <p className="text-gray-600 leading-relaxed">{t('contactText')}</p>
             <p className="text-gray-600 leading-relaxed mt-2">
-              Email: <a href="mailto:david@sinotradecompliance.com" className="text-gold hover:underline">david@sinotradecompliance.com</a>
+              Email: <a href="mailto:info@sinotradecompliance.com" className="text-gold hover:underline">info@sinotradecompliance.com</a>
             </p>
           </section>
 

@@ -292,7 +292,7 @@ export async function fetchAggregateStatsRange(
             zones(filter: {zoneTag: "${zoneId}"}) {
               httpRequestsAdaptiveGroups(
                 limit: 10000,
-                filter: {datetime_geq: "${date}T00:00:00Z", datetime_lt: "${date}T23:59:59Z", clientRequestHTTPStatus: "200"}
+                filter: {datetime_geq: "${date}T00:00:00Z", datetime_lt: "${date}T23:59:59Z"}
               ) {
                 dimensions { date clientRequestPath userAgentOS clientDeviceType }
                 count

@@ -30,6 +30,7 @@ interface AnalyticsData {
   dailyData: { date: string; pv: number; uv: number }[];
   geoData: { country: string; count: number }[];
   pageData: { path: string; count: number }[];
+  pagePaths: { path: string; count: number }[];
   channelData: { channel: string; count: number }[];
   projectData: { project: string; count: number }[];
   browserData: { browser: string; pageViews: number }[];

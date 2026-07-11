@@ -224,7 +224,7 @@ export async function fetchHourlyStats(
     viewer {
       zones(filter: {zoneTag: "${zoneId}"}) {
         httpRequests1hGroups(
-          limit: 100,
+          limit: 500,
           filter: {datetime_geq: "${startISO}", datetime_lt: "${endISO}"}
         ) {
           dimensions { datetime }
@@ -294,7 +294,7 @@ export async function fetchAggregateStatsRange(
                 limit: 10000,
                 filter: {datetime_geq: "${date}T00:00:00Z", datetime_lt: "${date}T23:59:59Z"}
               ) {
-                dimensions { date clientRequestPath userAgentOS clientDeviceType }
+                dimensions { date clientRequestPath userAgentOS clientDeviceType clientRequestHTTPStatus }
                 count
               }
             }
@@ -334,6 +334,9 @@ export async function fetchAggregateStatsRange(
       for (const g of groups) {
         const dims = g.dimensions || {};
         const cnt = g.count || 0;
+
+        // 仅统计 HTTP 200 的请求（CF Free 不支持 filter，改在服务端过滤）
+        if (dims.clientRequestHTTPStatus !== "200") continue;
 
         const path = dims.clientRequestPath || "";
         if (path) {

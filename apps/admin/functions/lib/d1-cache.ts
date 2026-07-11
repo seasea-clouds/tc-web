@@ -88,9 +88,9 @@ export function safeJSON<T>(json: string, fallback: T): T {
  *
  * 判断逻辑（按顺序）：
  * 1. 根据 inferProject() 识别路由架构，排除非页面的子站（admin、api）
- * 2. 排除静态资源文件（带已知后缀的）
- * 3. 排除 Next.js 内部路径（_next、__nextjs）
- * 4. 排除常见的静态资源目录（fonts、images）
+ * 2. 排除 Next.js 内部路径（_next、__nextjs）
+ * 3. 排除所有带扩展名的路径（自动覆盖全部扩展名）
+ * 4. 排除隐藏文件和已知扫描器/攻击路径
  *
  * 「热门路径」不受此函数影响，它展示所有路径的原始请求次数。
  * 此函数仅用于从全部路径中筛选出「页面」路径，存入 page_paths 字段。
@@ -105,38 +105,21 @@ export function isPagePath(path: string): boolean {
   const { isPage } = inferProject(path);
   if (!isPage) return false;
 
-  // 第 2 步：排除 Next.js 内部路径
+  // 第 2 步：排除 Next.js 内部路径、隐藏文件和扫描器
   const clean = path.replace(/\/+$/, "");
   if (clean.startsWith("/_next/") || clean.startsWith("/__nextjs")) return false;
 
-  // 第 3 步：排除已知的静态资源文件扩展名和扫描器文件
-  if (
-    /\.(js|css|png|jpe?g|gif|svg|ico|webp|avif|ttf|woff2?|eot|otf|json|xml|map|txt|php|phar|phtml|asp|aspx|jsp|log|bak|sql|env|conf|ini|yml|yaml|md)(\?|$)/i.test(
-      clean,
-    )
-  ) {
-    return false;
-  }
+  // 第 3 步：带扩展名的路径都不是页面（自动覆盖所有扩展名）
+  // 对于 Next.js SSG 站点，所有页面路径均为无点号的纯路由
+  if (clean.includes(".")) return false;
 
-  // 第 4 步：排除已知的静态资源目录（这些目录下不可能有页面）
+  // 第 4 步：排除隐藏文件和已知扫描器/攻击路径（不含扩展名的前缀式扫描）
   if (
-    clean.startsWith("/fonts/") ||
-    clean.startsWith("/images/") ||
-    clean.startsWith("/assets/") ||
-    clean === "/favicon.ico"
-  ) {
-    return false;
-  }
-
-  // 第 5 步：排除隐藏文件和已知扫描器/攻击路径
-  if (
-    clean.startsWith("/.") || // 隐藏文件 /.env, /.ssmtp.conf 等
+    clean.startsWith("/.") || // 隐藏文件
     clean.startsWith("/wp-") || // WordPress 扫描
     clean.startsWith("/php") || // PHP 探针/信息扫描
     clean.startsWith("/xmlrpc") || // XML-RPC 扫描
-    clean.startsWith("//") || // 双斜杠路径（扫描器常见特征）
-    clean === "/crossdomain.xml" ||
-    clean === "/clientaccesspolicy.xml"
+    clean.startsWith("//") // 双斜杠路径（扫描器常见特征）
   ) {
     return false;
   }
@@ -326,8 +309,13 @@ export async function ensureDailyCFCache(env: CacheEnv): Promise<string> {
 }
 
 /**
- * Ensure today's completed UTC hours are cached in D1.
- * Only fetches hours that are in the past (completed) and not yet cached.
+ * Ensure hourly stats are cached in D1 for today's completed hours
+ * and historical dates within CF's hourly retention window (~3 days).
+ *
+ * Strategy:
+ *   1. Today's completed hours: incremental — only fetch missing hours
+ *   2. Historical dates within retention window: batch fetch all hours,
+ *      INSERT OR REPLACE (idempotent)
  */
 export async function ensureHourlyCFCache(env: CacheEnv): Promise<void> {
   if (!hasConfig(env)) return;
@@ -338,43 +326,87 @@ export async function ensureHourlyCFCache(env: CacheEnv): Promise<void> {
   const today = todayUTC();
   const currentHour = now.getUTCHours();
 
-  // No completed hours yet today
-  if (currentHour < 1) return;
+  // ── Step 1: Today's completed hours ──
+  if (currentHour >= 1) {
+    // Find which hours are already cached
+    const existing: any = await env.DB.prepare(
+      "SELECT DISTINCT hour FROM hourly_page_stats WHERE date = ?",
+    )
+      .bind(today)
+      .all();
+    const existingHours = new Set<number>(
+      (existing.results || []).map((r: any) => r.hour),
+    );
 
-  // Find which hours are already cached
-  const existing: any = await env.DB.prepare(
-    "SELECT DISTINCT hour FROM hourly_page_stats WHERE date = ?",
-  )
-    .bind(today)
-    .all();
-  const existingHours = new Set<number>(
-    (existing.results || []).map((r: any) => r.hour),
-  );
+    // Find missing completed hours (0 to currentHour-1)
+    const missingHours: number[] = [];
+    for (let h = 0; h < currentHour; h++) {
+      if (!existingHours.has(h)) missingHours.push(h);
+    }
 
-  // Find missing completed hours (0 to currentHour-1)
-  const missingHours: number[] = [];
-  for (let h = 0; h < currentHour; h++) {
-    if (!existingHours.has(h)) missingHours.push(h);
+    if (missingHours.length > 0) {
+      const startHour = Math.min(...missingHours);
+      const endHour = Math.max(...missingHours) + 1;
+      const startISO = formatISO(today, startHour);
+      const endISO = formatISO(today, endHour);
+
+      try {
+        const hourlyStats = await fetchHourlyStats(zoneId, token, startISO, endISO);
+        for (const hs of hourlyStats) {
+          if (missingHours.includes(hs.hour)) {
+            await env.DB.prepare(
+              `INSERT OR REPLACE INTO hourly_page_stats (date, hour, pv, uv, requests)
+               VALUES (?, ?, ?, ?, ?)`,
+            )
+              .bind(today, hs.hour, hs.pv, hs.uv, hs.requests)
+              .run();
+          }
+        }
+      } catch (err) {
+        console.error(`[d1-cache] fetchHourlyStats failed for ${today}:`, err);
+      }
+    }
   }
-  if (missingHours.length === 0) return;
 
-  const startHour = Math.min(...missingHours);
-  const endHour = Math.max(...missingHours) + 1;
-  const startISO = formatISO(today, startHour);
-  const endISO = formatISO(today, endHour);
+  // ── Step 2: Historical hourly backfill (within CF ~3-day retention) ──
+  // httpRequests1hGroups Free plan retention is ~3 days
+  const retentionDays = 3;
+  const cutoff = new Date(now.getTime() - retentionDays * 86400000);
+  const cutoffDate = cutoff.toISOString().slice(0, 10);
+
+  // Get dates from daily_page_stats that fall within the retention window
+  const dailyRows: any = await env.DB.prepare(
+    "SELECT DISTINCT date FROM daily_page_stats WHERE date >= ? ORDER BY date",
+  )
+    .bind(cutoffDate)
+    .all();
+  const historicalDates = (dailyRows.results || [])
+    .map((r: any) => r.date)
+    .filter((d: string) => d !== today);
+
+  if (historicalDates.length === 0) return;
+
+  // Batch-fetch all hourly data for the retention window in one call
+  const earliestDate = historicalDates[0];
+  const startISO = formatISO(earliestDate, 0);
+  const endISO = formatISO(today, 0);
 
   try {
     const hourlyStats = await fetchHourlyStats(zoneId, token, startISO, endISO);
     for (const hs of hourlyStats) {
+      // INSERT OR REPLACE handles both new and previously-cached rows
       await env.DB.prepare(
         `INSERT OR REPLACE INTO hourly_page_stats (date, hour, pv, uv, requests)
          VALUES (?, ?, ?, ?, ?)`,
       )
-        .bind(today, hs.hour, hs.pv, hs.uv, hs.requests)
+        .bind(hs.date, hs.hour, hs.pv, hs.uv, hs.requests)
         .run();
     }
   } catch (err) {
-    console.error(`[d1-cache] fetchHourlyStats failed for ${today}:`, err);
+    console.error(
+      `[d1-cache] historical hourly backfill failed for ${earliestDate}~${today}:`,
+      err,
+    );
   }
 }
 

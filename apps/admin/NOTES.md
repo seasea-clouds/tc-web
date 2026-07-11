@@ -35,6 +35,12 @@
   - `CLOUDFLARE_ZONE_ID` — sinotradecompliance.com 的 Zone ID
   - `CLOUDFLARE_API_TOKEN` — 需要 `analytics:read` 权限
 - 注意：httpRequestsAdaptiveGroups 存在采样（~67%），图表数据为采样值
+- 注意：uaBrowserFamily 和 clientRequestHTTPStatus 不是 httpRequestsAdaptiveGroups 的合法 dimensions
+  → fetchDailyStats (httpRequests1dGroups) 支持 uaBrowserFamily
+  → fetchAggregateStatsRange (httpRequestsAdaptiveGroups) 只能用 clientRequestPath/userAgentOS/clientDeviceType/date
+  → browserData 走 Step 1 (httpRequests1dGroups)，不由 Step 2 覆盖
+  → CF Free 不支持在 AdaptiveGroups 上按 clientRequestHTTPStatus 过滤或分维度
+  → HTTP 200 过滤也无法在服务端做，因为该字段不是合法 dimension
 
 ## 踩坑记录
 

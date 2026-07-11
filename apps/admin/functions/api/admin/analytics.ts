@@ -22,7 +22,12 @@ import {
   readAllTimeTotals,
   safeJSON,
 } from "../../lib/d1-cache";
-import { type HourlyStats } from "../../lib/cf-analytics";
+import {
+  type HourlyStats,
+  fetchDailyStats,
+  getZoneId,
+  getApiToken,
+} from "../../lib/cf-analytics";
 
 interface Env {
   DB: any;
@@ -173,6 +178,27 @@ export async function onRequest(context: { request: Request; env: Env }) {
       todayUV += h.uv || 0;
     }
     const hourlySum = fillHourly(hourlyMap);
+
+    // 5a. Override todayUV with exact daily UV from CF GraphQL (de-duplicated).
+    //     Summing per-hour UV overcounts the same visitor across multiple hours.
+    //     httpRequests1dGroups uses uniq { uniques } for exact daily UV.
+    //     Falls back to hourly-sum UV if CF data unavailable or zero.
+    try {
+      const zoneId = getZoneId(context.env);
+      const token = getApiToken(context.env);
+      if (zoneId && token) {
+        const dailyStats = await fetchDailyStats(zoneId, token, [today]);
+        if (
+          dailyStats.length > 0 &&
+          dailyStats[0].uv > 0 &&
+          dailyStats[0].pv > 0
+        ) {
+          todayUV = dailyStats[0].uv;
+        }
+      }
+    } catch (e) {
+      console.error("[analytics] today UV fetch failed, using hourly sum:", e);
+    }
 
     // ─── RANGE: today ───
     if (range === "today") {

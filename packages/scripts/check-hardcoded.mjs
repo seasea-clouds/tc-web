@@ -222,6 +222,7 @@ const LEGIT_ENGLISH = new Set([
   'Edible Oils / Fats',
   'Electronics / Small Appliances',
   'Electronics / Technology',
+  'Email send failed:',
   'Email send failed (dev mode):',
   'Emergency Response & Contingency Plan',
   'End-to-end management: classification → documentation → filing → follow-up.',

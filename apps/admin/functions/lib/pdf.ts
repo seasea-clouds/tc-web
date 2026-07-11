@@ -131,12 +131,12 @@ export async function generateReportPdf(data: AdminPdfData): Promise<Uint8Array>
   y -= 18;
   page.drawText("Our compliance experts can provide a tailored market-entry plan.", { x: margin + 20, y, size: 9, font, color: white });
   y -= 16;
-  page.drawText("david@sinotradecompliance.com | sinotradecompliance.com", { x: margin + 20, y, size: 8, font, color: rgb(0.7, 0.7, 0.7) });
+  page.drawText("info@sinotradecompliance.com | sinotradecompliance.com", { x: margin + 20, y, size: 8, font, color: rgb(0.7, 0.7, 0.7) });
 
   // Footer
   page.drawLine({ start: { x: margin, y: 40 }, end: { x: 545, y: 40 }, color: rgb(0.9, 0.9, 0.9), thickness: 1 });
   page.drawText("SinoTrade Compliance — Jing'an District, Shanghai, China", { x: margin, y: 28, size: 7, font, color: gray });
-  page.drawText("david@sinotradecompliance.com | sinotradecompliance.com", { x: margin, y: 18, size: 7, font, color: gray });
+  page.drawText("info@sinotradecompliance.com | sinotradecompliance.com", { x: margin, y: 18, size: 7, font, color: gray });
 
   return doc.save();
 }

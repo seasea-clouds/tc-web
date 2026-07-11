@@ -21,7 +21,7 @@ export default function OrganizationJsonLd({ description }: Props) {
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '',
-      email: 'david@sinotradecompliance.com',
+      email: 'info@sinotradecompliance.com',
       contactType: 'customer service',
       availableLanguage: [
         'Afrikaans', 'Arabic', 'Azerbaijani', 'Belarusian', 'Bengali', 'Bulgarian',

@@ -21,7 +21,7 @@
 - ❌ **不展示交付周期** — 不出现具体天数/周数
 - ✅ **48 语言全覆盖**，禁止英文 fallback（品牌名除外）
 - ✅ 品牌名 "SinoTrade Compliance" 所有语言保持英文
-- ✅ 联系方式统一：david@sinotradecompliance.com
+- ✅ 联系方式统一：info@sinotradecompliance.com
 - ✅ 部署后必须验证线上状态（`grep __next_error__`）
 
 ## 关键规则

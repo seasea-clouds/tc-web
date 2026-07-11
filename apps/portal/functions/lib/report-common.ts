@@ -121,7 +121,7 @@ export function buildEmailHtml(params: {
       <a href="${params.reportUrl}" style="display:inline-block; background:#D4AF37; color:#1B365D; text-decoration:none; padding:12px 32px; border-radius:6px; font-weight:bold; font-size:14px;">View Full Report Online</a>
     </div>
     <hr style="border:none; border-top:1px solid #eee; margin:20px 0;">
-    <p style="font-size:12px; color:#999; text-align:center;">SinoTrade Compliance<br>david@sinotradecompliance.com | sinotradecompliance.com</p>
+    <p style="font-size:12px; color:#999; text-align:center;">SinoTrade Compliance<br>info@sinotradecompliance.com | sinotradecompliance.com</p>
   </div>
 </body></html>`;
 }

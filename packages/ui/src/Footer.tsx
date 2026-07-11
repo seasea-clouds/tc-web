@@ -104,7 +104,7 @@ export default function Footer({ locale: propLocale }: { locale?: string } = {})
             <h4 className="text-white font-bold mb-4">{t('contact')}</h4>
             <div className="flex flex-col gap-3">
               <a
-                href="mailto:david@sinotradecompliance.com"
+                href="mailto:info@sinotradecompliance.com"
                 className="flex items-center gap-2 text-white/70 hover:text-white transition-colors text-sm"
               >
                 <Mail className="w-4 h-4 text-white/70" />

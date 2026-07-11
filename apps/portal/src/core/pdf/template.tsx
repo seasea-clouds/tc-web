@@ -198,7 +198,7 @@ export function ReportPdfDocument(data: PdfReportData) {
               Our compliance experts will provide a tailored plan for your product.
             </Text>
             <Text style={{ color: "rgba(255,255,255,0.6)", fontSize: 8, marginTop: 6 }}>
-              david@sinotradecompliance.com | sinotradecompliance.com
+              info@sinotradecompliance.com | sinotradecompliance.com
             </Text>
           </View>
         </View>
@@ -206,7 +206,7 @@ export function ReportPdfDocument(data: PdfReportData) {
         {/* Footer */}
         <View style={styles.footer}>
           <Text>SinoTrade Compliance — Jing'an District, Shanghai, China</Text>
-          <Text>david@sinotradecompliance.com | sinotradecompliance.com</Text>
+          <Text>info@sinotradecompliance.com | sinotradecompliance.com</Text>
         </View>
       </Page>
     </Document>

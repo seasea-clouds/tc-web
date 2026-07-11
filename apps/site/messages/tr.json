@@ -1343,5 +1343,35 @@
     "title": "SinoTrade Compliance: Yapay Zeka Yardımı (EN)",
     "servicesTitle": "Hizmetler"
   },
-  "Navbar": {}
+  "Navbar": {},
+  "Terms": {
+    "acceptanceText1": "SinoTrade Uyumluluk web sitesine ve hizmetlerine erişerek veya bunları kullanarak, bu Hizmet Koşullarına bağlı kalmayı kabul edersiniz.",
+    "acceptanceText2": "Bu şartlar, uyumluluk kontrol araçlarımızın, değerlendirme raporlarımızın ve danışmanlık hizmetlerimizin tüm ziyaretçileri, kullanıcıları ve müşterileri için geçerlidir.",
+    "acceptanceTitle": "Şartların Kabulü",
+    "accountText1": "Hesap kimlik bilgilerinizin gizliliğini korumaktan ve hesabınız altında gerçekleşen tüm faaliyetlerden siz sorumlusunuz.",
+    "accountText2": "Hesap oluştururken doğru ve eksiksiz bilgi vermeniz ve değişiklikleri derhal güncellemeniz gerekir.",
+    "accountTitle": "Kullanıcı Hesapları",
+    "changesText": "Bu Hizmet Şartlarını istediğimiz zaman değiştirebiliriz.",
+    "changesTitle": "Şartlardaki Değişiklikler",
+    "contactText": "Bu Hizmet Şartları hakkında herhangi bir sorunuz varsa lütfen bizimle iletişime geçin:",
+    "contactTitle": "Bize Ulaşın",
+    "governingText": "Bu Şartlar, Çin Halk Cumhuriyeti yasalarına göre yönetilecek ve yorumlanacaktır.",
+    "governingTitle": "Geçerli Hukuk",
+    "intellectualText1": "Tüm metinler, grafikler, logolar ve yazılımlar dahil ancak bunlarla sınırlı olmamak üzere bu web sitesinin içeriği, düzeni, tasarımı ve işlevselliği SinoTrade Uyumluluğunun mülkiyetindedir ve geçerli fikri mülkiyet yasalarıyla korunmaktadır.",
+    "intellectualText2": "Açık yazılı iznimiz olmadan içeriğimizi çoğaltamaz, dağıtamaz, değiştiremez veya bunlardan türev çalışmalar oluşturamazsınız.",
+    "intellectualTitle": "Fikri Mülkiyet",
+    "limitationText": "SinoTrade Uyumluluğu, hizmetlerimizi kullanmanızdan kaynaklanan hiçbir dolaylı, arızi, özel, sonuçsal veya cezai zarardan sorumlu olmayacaktır.",
+    "limitationTitle": "Sorumluluğun Sınırlandırılması",
+    "metaDescription": "SinoTrade Uyumluluğuna İlişkin Hizmet Şartları — uyumluluk kontrol araçlarımızı, raporlarımızı ve danışmanlık hizmetlerimizi kullanma koşulları.",
+    "metaTitle": "Hizmet Şartları |",
+    "paymentText1": "Bazı hizmetler ödeme gerektirir.",
+    "paymentText2": "Başarılı ödeme sonrasında raporlar dijital olarak teslim edilir.",
+    "paymentTitle": "Ödeme Koşulları",
+    "serviceText1": "SinoTrade Uyumluluğu, Çin'e ürün ithal eden işletmeler için otomatik uyumluluk değerlendirme araçları, uyumluluk raporları ve uzman danışmanlık hizmetleri sağlar.",
+    "serviceText2": "Tüm hizmetler 'olduğu gibi' ve 'mevcut olduğu şekilde' sağlanmaktadır.",
+    "serviceTitle": "Hizmetlerin Açıklaması",
+    "terminationText": "Bu Koşulları ihlal ettiğine veya diğer kullanıcılara, üçüncü taraflara veya ticari çıkarlarımıza zarar verdiğine inandığımız davranışlar nedeniyle, hizmetlerimize erişiminizi herhangi bir zamanda önceden bildirimde bulunmaksızın askıya alma veya sonlandırma hakkını saklı tutarız.",
+    "terminationTitle": "Fesih",
+    "title": "Hizmet Şartları"
+  }
 }

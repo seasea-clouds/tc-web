@@ -1343,5 +1343,35 @@
     "title": "SinoTrade-nakoming - KI-bystand (EN)",
     "servicesTitle": "Dienste"
   },
-  "Navbar": {}
+  "Navbar": {},
+  "Terms": {
+    "acceptanceText1": "Deur toegang tot of gebruik van die SinoTrade Compliance webwerf en dienste, stem jy in om gebonde te wees deur hierdie diensbepalings.",
+    "acceptanceText2": "Hierdie bepalings is van toepassing op alle besoekers, gebruikers en kliënte van ons nakomingskontrole-instrumente, assesseringsverslae en konsultasiedienste.",
+    "acceptanceTitle": "Aanvaarding van bepalings",
+    "accountText1": "Jy is verantwoordelik vir die handhawing van die vertroulikheid van jou rekeningbewyse en vir alle aktiwiteite wat onder jou rekening plaasvind.",
+    "accountText2": "Jy moet akkurate en volledige inligting verskaf wanneer jy 'n rekening skep en enige veranderinge dadelik bywerk.",
+    "accountTitle": "Gebruikersrekeninge",
+    "changesText": "Ons kan hierdie diensbepalings enige tyd wysig.",
+    "changesTitle": "Veranderinge aan bepalings",
+    "contactText": "As jy enige vrae het oor hierdie diensbepalings, kontak ons ​​asseblief:",
+    "contactTitle": "Kontak ons",
+    "governingText": "Hierdie bepalings sal beheer word deur en vertolk word in ooreenstemming met die wette van die Volksrepubliek van China.",
+    "governingTitle": "Beheersende wet",
+    "intellectualText1": "Die inhoud, uitleg, ontwerp en funksionaliteit van hierdie webwerf, insluitend maar nie beperk nie tot alle teks, grafika, logo's en sagteware, is die eiendom van SinoTrade Compliance en word beskerm deur toepaslike intellektuele eiendomswette.",
+    "intellectualText2": "Jy mag nie reproduseer, versprei, wysig of afgeleide werke van ons inhoud skep sonder ons uitdruklike skriftelike toestemming nie.",
+    "intellectualTitle": "Intellektuele Eiendom",
+    "limitationText": "SinoTrade Compliance sal nie aanspreeklik wees vir enige indirekte, toevallige, spesiale, gevolglike of bestraffende skade wat voortspruit uit jou gebruik van ons dienste nie.",
+    "limitationTitle": "Beperking van aanspreeklikheid",
+    "metaDescription": "Diensbepalings vir SinoTrade-nakoming - voorwaardes vir die gebruik van ons nakomingstoetsinstrumente, verslae en konsultasiedienste.",
+    "metaTitle": "Diensbepalings |",
+    "paymentText1": "Sekere dienste vereis betaling.",
+    "paymentText2": "Verslae word digitaal afgelewer by suksesvolle betaling.",
+    "paymentTitle": "Betalingsvoorwaardes",
+    "serviceText1": "SinoTrade Compliance bied outomatiese voldoeningsbeoordelingsinstrumente, voldoeningsverslae en kundige konsultasiedienste vir besighede wat produkte na China invoer.",
+    "serviceText2": "Alle dienste word verskaf op 'n 'soos dit is' en 'soos beskikbaar' basis.",
+    "serviceTitle": "Beskrywing van dienste",
+    "terminationText": "Ons behou die reg voor om jou toegang tot ons dienste te eniger tyd, sonder kennisgewing, op te skort of te beëindig vir gedrag wat ons glo hierdie Bepalings oortree of skadelik is vir ander gebruikers, derde partye of ons besigheidsbelange.",
+    "terminationTitle": "Beëindiging",
+    "title": "Diensbepalings"
+  }
 }

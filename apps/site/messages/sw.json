@@ -1343,5 +1343,35 @@
     "title": "Uzingatiaji wa SinoTrade - AI-Assistance (EN)",
     "servicesTitle": "Huduma"
   },
-  "Navbar": {}
+  "Navbar": {},
+  "Terms": {
+    "acceptanceText1": "Kwa kufikia au kutumia tovuti na huduma za Uzingatiaji wa SinoTrade, unakubali kufungwa na Sheria na Masharti haya.",
+    "acceptanceText2": "Masharti haya yanatumika kwa wageni, watumiaji na wateja wote wa zana zetu za ukaguzi wa kufuata, ripoti za tathmini na huduma za ushauri.",
+    "acceptanceTitle": "Kukubalika kwa Masharti",
+    "accountText1": "Una jukumu la kudumisha usiri wa vitambulisho vya akaunti yako na kwa shughuli zote zinazofanyika chini ya akaunti yako.",
+    "accountText2": "Ni lazima utoe taarifa sahihi na kamili unapofungua akaunti na usasishe mabadiliko yoyote mara moja.",
+    "accountTitle": "Akaunti za Mtumiaji",
+    "changesText": "Tunaweza kurekebisha Sheria na Masharti haya wakati wowote.",
+    "changesTitle": "Mabadiliko ya Masharti",
+    "contactText": "Ikiwa una maswali yoyote kuhusu Sheria na Masharti haya, tafadhali wasiliana nasi:",
+    "contactTitle": "Wasiliana Nasi",
+    "governingText": "Masharti haya yatasimamiwa na kufasiriwa kwa mujibu wa sheria za Jamhuri ya Watu wa Uchina.",
+    "governingTitle": "Sheria ya Utawala",
+    "intellectualText1": "Maudhui, mpangilio, muundo na utendaji wa tovuti hii, ikijumuisha lakini si tu kwa maandishi, michoro, nembo na programu zote, ni mali ya Uzingatiaji wa SinoTrade na zinalindwa na sheria zinazotumika za uvumbuzi.",
+    "intellectualText2": "Huruhusiwi kuzalisha tena, kusambaza, kurekebisha, au kuunda kazi zinazotokana na maudhui yetu bila idhini yetu ya maandishi.",
+    "intellectualTitle": "Mali Miliki",
+    "limitationText": "Uzingatiaji wa SinoTrade hautawajibika kwa uharibifu wowote usio wa moja kwa moja, wa bahati nasibu, maalum, wa matokeo au wa adhabu kutokana na matumizi yako ya huduma zetu.",
+    "limitationTitle": "Ukomo wa Dhima",
+    "metaDescription": "Sheria na Masharti ya Uzingatiaji wa SinoTrade - masharti ya kutumia zana zetu za kuangalia utiifu, ripoti na huduma za ushauri.",
+    "metaTitle": "Masharti ya Huduma |",
+    "paymentText1": "Huduma fulani zinahitaji malipo.",
+    "paymentText2": "Ripoti hutolewa kwa njia ya kidijitali baada ya malipo kufanikiwa.",
+    "paymentTitle": "Masharti ya Malipo",
+    "serviceText1": "Uzingatiaji wa SinoTrade hutoa zana za kutathmini utiifu kiotomatiki, ripoti za kufuata, na huduma za ushauri wa kitaalamu kwa biashara zinazoagiza bidhaa nchini China.",
+    "serviceText2": "Huduma zote hutolewa kwa misingi ya 'kama ilivyo' na 'kama inapatikana'.",
+    "serviceTitle": "Maelezo ya Huduma",
+    "terminationText": "Tunahifadhi haki ya kusimamisha au kusitisha ufikiaji wako kwa huduma zetu wakati wowote, bila taarifa, kwa tabia ambayo tunaamini inakiuka Sheria na Masharti haya au inadhuru watumiaji wengine, washirika wengine, au maslahi yetu ya biashara.",
+    "terminationTitle": "Kukomesha",
+    "title": "Masharti ya Huduma"
+  }
 }

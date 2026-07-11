@@ -1343,5 +1343,35 @@
     "title": "中贸合规: AI 辅助（EN）",
     "servicesTitle": "服务"
   },
-  "Navbar": {}
+  "Navbar": {},
+  "Terms": {
+    "acceptanceText1": "通过访问或使用中贸合规网站和服务，您同意受这些服务条款的约束。",
+    "acceptanceText2": "这些条款适用于我们的合规性检查工具、评估报告和咨询服务的所有访问者、用户和客户。",
+    "acceptanceTitle": "接受条款",
+    "accountText1": "您有责任维护您的帐户凭据以及在您的帐户下发生的所有活动的机密性。",
+    "accountText2": "创建帐户时，您必须提供准确、完整的信息，并及时更新任何更改。",
+    "accountTitle": "用户帐户",
+    "changesText": "我们可能随时修改这些服务条款。",
+    "changesTitle": "条款变更",
+    "contactText": "如果您对这些服务条款有任何疑问，请联系我们：",
+    "contactTitle": "联系我们",
+    "governingText": "本条款受中华人民共和国法律管辖并按中华人民共和国法律解释。",
+    "governingTitle": "适用法律",
+    "intellectualText1": "本网站的内容、布局、设计和功能，包括但不限于所有文本、图形、徽标和软件，均为SinoTrade Compliance的财产，并受适用的知识产权法的保护。",
+    "intellectualText2": "未经我们明确的书面许可，您不得复制、分发、修改我们的内容或根据我们的内容创建衍生作品。",
+    "intellectualTitle": "知识产权",
+    "limitationText": "对于您因使用我们的服务而产生的任何间接的、偶然的、特殊的、后果性的或惩罚性的损害，中贸合规不承担任何责任。",
+    "limitationTitle": "责任限制",
+    "metaDescription": "中贸合规服务条款——使用我们的合规检查工具、报告和咨询服务的条件。",
+    "metaTitle": "服务条款 |",
+    "paymentText1": "某些服务需要付费。",
+    "paymentText2": "成功付款后将以数字方式提供报告。",
+    "paymentTitle": "付款条件",
+    "serviceText1": "中贸合规为向中国进口产品的企业提供自动化合规评估工具、合规报告和专家咨询服务。",
+    "serviceText2": "所有服务均按“原样”和“可用”的基础提供。",
+    "serviceTitle": "服务说明",
+    "terminationText": "对于我们认为违反这些条款或损害其他用户、第三方或我们的商业利益的行为，我们保留随时暂停或终止您对我们服务的访问的权利，恕不另行通知。",
+    "terminationTitle": "终止",
+    "title": "服务条款"
+  }
 }

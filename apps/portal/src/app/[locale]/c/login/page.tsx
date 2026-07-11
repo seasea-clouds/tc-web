@@ -104,6 +104,10 @@ export default function LoginPage() {
               <a href={`https://sinotradecompliance.com/${locale}/privacy`} target="_blank" rel="noopener noreferrer" className="text-gold hover:underline">
                 {t('privacyPolicy')}
               </a>
+              {' '}{t('agreeToTermsAnd')}{' '}
+              <a href={`https://sinotradecompliance.com/${locale}/terms`} target="_blank" rel="noopener noreferrer" className="text-gold hover:underline">
+                {t('termsOfService')}
+              </a>
             </label>
           </div>
           {privacyError && (

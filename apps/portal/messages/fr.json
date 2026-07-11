@@ -30,7 +30,9 @@
     "securityCheckExpired": "Le contrôle de sécurité a expiré. Veuillez réessayer.",
     "agreeToPrivacy": "J'accepte le",
     "privacyPolicy": "politique de confidentialité",
-    "agreeToPrivacyError": "Veuillez accepter la politique de confidentialité"
+    "agreeToPrivacyError": "Veuillez accepter la Politique de confidentialité et les Conditions d'utilisation",
+    "agreeToTermsAnd": "et",
+    "termsOfService": "Conditions d'Utilisation"
   },
   "Breadcrumb": {
     "pricing": "Tarifs"

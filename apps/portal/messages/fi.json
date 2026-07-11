@@ -30,7 +30,9 @@
     "securityCheckExpired": "Turvatarkastus vanhentunut. Yritä uudelleen.",
     "agreeToPrivacy": "Olen samaa mieltä",
     "privacyPolicy": "Tietosuojakäytäntö",
-    "agreeToPrivacyError": "Hyväksy tietosuojakäytäntö"
+    "agreeToPrivacyError": "Hyväksy tietosuojakäytäntö ja palveluehdot",
+    "agreeToTermsAnd": "ja",
+    "termsOfService": "Palveluehdot"
   },
   "Breadcrumb": {
     "pricing": "Hinnoittelu"

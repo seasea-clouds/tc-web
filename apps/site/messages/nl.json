@@ -1343,5 +1343,35 @@
     "title": "Naleving van SinoTrade: AI-Assistance (EN)",
     "servicesTitle": "Diensten"
   },
-  "Navbar": {}
+  "Navbar": {},
+  "Terms": {
+    "acceptanceText1": "Door de SinoTrade Compliance-website en -diensten te bezoeken of te gebruiken, gaat u ermee akkoord gebonden te zijn aan deze Servicevoorwaarden.",
+    "acceptanceText2": "Deze voorwaarden zijn van toepassing op alle bezoekers, gebruikers en klanten van onze compliance-controletools, beoordelingsrapporten en adviesdiensten.",
+    "acceptanceTitle": "Acceptatie van voorwaarden",
+    "accountText1": "U bent verantwoordelijk voor het handhaven van de vertrouwelijkheid van uw accountgegevens en voor alle activiteiten die plaatsvinden onder uw account.",
+    "accountText2": "U moet nauwkeurige en volledige informatie verstrekken bij het aanmaken van een account en eventuele wijzigingen onmiddellijk bijwerken.",
+    "accountTitle": "Gebruikersaccounts",
+    "changesText": "We kunnen deze Servicevoorwaarden op elk moment wijzigen.",
+    "changesTitle": "Wijzigingen in de voorwaarden",
+    "contactText": "Als u vragen heeft over deze Servicevoorwaarden, kunt u contact met ons opnemen:",
+    "contactTitle": "Neem contact met ons op",
+    "governingText": "Deze Voorwaarden worden beheerst door en geïnterpreteerd in overeenstemming met de wetten van de Volksrepubliek China.",
+    "governingTitle": "Toepasselijk recht",
+    "intellectualText1": "De inhoud, lay-out, ontwerp en functionaliteit van deze website, inclusief maar niet beperkt tot alle tekst, afbeeldingen, logo's en software, zijn eigendom van SinoTrade Compliance en worden beschermd door toepasselijke wetten op intellectueel eigendom.",
+    "intellectualText2": "U mag onze inhoud niet reproduceren, distribueren, wijzigen of er afgeleide werken van maken zonder onze uitdrukkelijke schriftelijke toestemming.",
+    "intellectualTitle": "Intellectueel eigendom",
+    "limitationText": "SinoTrade Compliance is niet aansprakelijk voor enige indirecte, incidentele, speciale, gevolg- of punitieve schade die voortvloeit uit uw gebruik van onze diensten.",
+    "limitationTitle": "Beperking van aansprakelijkheid",
+    "metaDescription": "Servicevoorwaarden voor SinoTrade-naleving — voorwaarden voor het gebruik van onze nalevingscontroletools, rapporten en adviesdiensten.",
+    "metaTitle": "Servicevoorwaarden |",
+    "paymentText1": "Voor bepaalde diensten is betaling vereist.",
+    "paymentText2": "Bij succesvolle betaling worden de rapporten digitaal aangeleverd.",
+    "paymentTitle": "Betalingsvoorwaarden",
+    "serviceText1": "SinoTrade Compliance biedt geautomatiseerde tools voor nalevingsbeoordeling, nalevingsrapporten en deskundige adviesdiensten voor bedrijven die producten in China importeren.",
+    "serviceText2": "Alle diensten worden geleverd op een 'as is'- en 'asavailable'-basis.",
+    "serviceTitle": "Beschrijving van diensten",
+    "terminationText": "Wij behouden ons het recht voor om uw toegang tot onze diensten op elk moment en zonder voorafgaande kennisgeving op te schorten of te beëindigen vanwege gedrag dat naar onze mening in strijd is met deze Voorwaarden of schadelijk is voor andere gebruikers, derden of onze zakelijke belangen.",
+    "terminationTitle": "Beëindiging",
+    "title": "Servicevoorwaarden"
+  }
 }

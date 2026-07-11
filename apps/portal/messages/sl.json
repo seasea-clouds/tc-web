@@ -30,7 +30,9 @@
     "securityCheckExpired": "Varnostni pregled je potekel. prosim poskusite znova",
     "agreeToPrivacy": "Strinjam se z",
     "privacyPolicy": "Politika zasebnosti",
-    "agreeToPrivacyError": "Prosimo, da se strinjate s Politiko zasebnosti"
+    "agreeToPrivacyError": "Prosimo, da se strinjate s pravilnikom o zasebnosti in pogoji storitve",
+    "agreeToTermsAnd": "in",
+    "termsOfService": "Pogoji storitve"
   },
   "Breadcrumb": {
     "pricing": "Cene"

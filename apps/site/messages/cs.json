@@ -1343,5 +1343,35 @@
     "title": "Soulad se SinoTrade: AI-Assistance (EN)",
     "servicesTitle": "Služby"
   },
-  "Navbar": {}
+  "Navbar": {},
+  "Terms": {
+    "acceptanceText1": "Přístupem nebo používáním webu a služeb SinoTrade Compliance souhlasíte s tím, že budete vázáni těmito Podmínkami služby. Pokud nesouhlasíte, nepoužívejte prosím naše služby.",
+    "acceptanceText2": "Tyto podmínky se vztahují na všechny návštěvníky, uživatele a zákazníky našich nástrojů pro kontrolu souladu, hodnotících zpráv a konzultačních služeb.",
+    "acceptanceTitle": "Přijetí podmínek",
+    "accountText1": "Jste odpovědní za zachování důvěrnosti přihlašovacích údajů k vašemu účtu a za všechny aktivity, ke kterým pod vaším účtem dojde.",
+    "accountText2": "Při vytváření účtu musíte poskytnout přesné a úplné informace a neprodleně aktualizovat jakékoli změny. Abyste si mohli vytvořit účet, musíte být starší 18 let.",
+    "accountTitle": "Uživatelské účty",
+    "changesText": "Tyto podmínky služby můžeme kdykoli upravit. Změny budou účinné ihned po zveřejnění. Vaše další používání našich služeb po jakýchkoli změnách představuje přijetí nových podmínek.",
+    "changesTitle": "Změny podmínek",
+    "contactText": "Máte-li jakékoli dotazy týkající se těchto podmínek služby, kontaktujte nás:",
+    "contactTitle": "Kontaktujte nás",
+    "governingText": "Tyto podmínky se budou řídit a vykládat v souladu se zákony Čínské lidové republiky. Jakékoli spory vyplývající z těchto podmínek budou řešeny přátelským jednáním nebo v případě potřeby prostřednictvím soudů příslušné jurisdikce.",
+    "governingTitle": "Rozhodné právo",
+    "intellectualText1": "Obsah, rozvržení, design a funkčnost této webové stránky, včetně, nikoli však výhradně, veškerého textu, grafiky, log a softwaru, jsou majetkem SinoTrade Compliance a jsou chráněny příslušnými zákony o duševním vlastnictví.",
+    "intellectualText2": "Bez našeho výslovného písemného souhlasu nesmíte reprodukovat, distribuovat, upravovat nebo vytvářet odvozená díla z našeho obsahu.",
+    "intellectualTitle": "Duševní vlastnictví",
+    "limitationText": "SinoTrade Compliance nenese odpovědnost za žádné nepřímé, náhodné, zvláštní, následné nebo represivní škody vzniklé z vašeho používání našich služeb. Naše celková odpovědnost, pokud existuje, bude omezena na částku, kterou zaplatíte za konkrétní službu, která vedla ke vzniku nároku.",
+    "limitationTitle": "Omezení odpovědnosti",
+    "metaDescription": "Podmínky služby pro SinoTrade Compliance — podmínky pro používání našich nástrojů pro kontrolu souladu, zpráv a konzultačních služeb.",
+    "metaTitle": "Podmínky služby | Soulad se SinoTrade",
+    "paymentText1": "Některé služby vyžadují platbu. Ceny jsou jasně zobrazeny před nákupem. Platba probíhá prostřednictvím našeho poskytovatele bezpečných plateb.",
+    "paymentText2": "Zprávy jsou dodávány digitálně po úspěšné platbě. Žádosti o vrácení peněz se vyřizují případ od případu. Předplatné služby se automaticky obnovují, pokud nejsou zrušeny.",
+    "paymentTitle": "Platební podmínky",
+    "serviceText1": "SinoTrade Compliance poskytuje automatizované nástroje pro posuzování shody, zprávy o shodě a odborné konzultační služby pro podniky dovážející produkty do Číny. Naše služby zahrnují: (a) kontroly dodržování registrace potravin GACC; b) posouzení souladu čínského štítku; c) certifikační posouzení CCC; (d) posouzení registrace kosmetiky NMPA; e) posouzení souladu přeshraničního elektronického obchodu; a f) posouzení ochrany ochranné známky.",
+    "serviceText2": "Všechny služby jsou poskytovány „jak jsou“ a „jak jsou dostupné“. I když se snažíme o přesnost, naše automatizované nástroje poskytují pouze předběžná hodnocení a nepředstavují právní nebo regulační poradenství.",
+    "serviceTitle": "Popis služeb",
+    "terminationText": "Vyhrazujeme si právo kdykoli bez upozornění pozastavit nebo ukončit váš přístup k našim službám za chování, o kterém se domníváme, že porušuje tyto Podmínky nebo poškozuje ostatní uživatele, třetí strany nebo naše obchodní zájmy.",
+    "terminationTitle": "Ukončení",
+    "title": "Podmínky služby"
+  }
 }

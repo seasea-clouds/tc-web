@@ -30,7 +30,9 @@
     "securityCheckExpired": "פג תוקף בדיקת האבטחה. אנא נסה שוב.",
     "agreeToPrivacy": "אני מסכים ל",
     "privacyPolicy": "מדיניות פרטיות",
-    "agreeToPrivacyError": "נא להסכים למדיניות הפרטיות"
+    "agreeToPrivacyError": "נא להסכים למדיניות הפרטיות ולתנאי השירות",
+    "agreeToTermsAnd": "ו",
+    "termsOfService": "תנאים והגבלות"
   },
   "Breadcrumb": {
     "pricing": "תמחור"

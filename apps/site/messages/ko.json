@@ -1343,5 +1343,35 @@
     "title": "SinoTrade 규정 준수: AI 지원(EN)",
     "servicesTitle": "서비스"
   },
-  "Navbar": {}
+  "Navbar": {},
+  "Terms": {
+    "acceptanceText1": "SinoTrade 규정 준수 웹사이트 및 서비스에 접속하거나 이를 사용함으로써 귀하는 본 서비스 약관을 준수할 것에 동의하게 됩니다.",
+    "acceptanceText2": "본 약관은 규정 준수 확인 도구, 평가 보고서 및 컨설팅 서비스의 모든 방문자, 사용자 및 고객에게 적용됩니다.",
+    "acceptanceTitle": "약관 동의",
+    "accountText1": "귀하는 귀하의 계정 자격 증명의 기밀을 유지하고 귀하의 계정에서 발생하는 모든 활동에 대해 책임을 집니다.",
+    "accountText2": "귀하는 계정을 생성할 때 정확하고 완전한 정보를 제공해야 하며 변경 사항이 있으면 즉시 업데이트해야 합니다.",
+    "accountTitle": "사용자 계정",
+    "changesText": "당사는 언제든지 본 서비스 약관을 수정할 수 있습니다.",
+    "changesTitle": "약관 변경",
+    "contactText": "본 서비스 약관에 대해 질문이 있는 경우 다음 연락처로 문의해 주세요.",
+    "contactTitle": "문의하기",
+    "governingText": "본 약관은 중화인민공화국 법률의 적용을 받으며 이에 따라 해석됩니다.",
+    "governingTitle": "준거법",
+    "intellectualText1": "모든 텍스트, 그래픽, 로고 및 소프트웨어를 포함하되 이에 국한되지 않는 이 웹사이트의 콘텐츠, 레이아웃, 디자인 및 기능은 SinoTrade 규정 준수의 자산이며 관련 지적재산권법에 의해 보호됩니다.",
+    "intellectualText2": "귀하는 당사의 명시적인 서면 허가 없이 당사 콘텐츠를 복제, 배포, 수정하거나 파생물을 생성할 수 없습니다.",
+    "intellectualTitle": "지적재산권",
+    "limitationText": "SinoTrade 규정 준수는 귀하의 당사 서비스 사용으로 인해 발생하는 모든 간접적, 우발적, 특수적, 결과적 또는 징벌적 손해에 대해 책임을 지지 않습니다.",
+    "limitationTitle": "책임의 제한",
+    "metaDescription": "SinoTrade 규정 준수 서비스 약관 - 규정 준수 확인 도구, 보고서 및 컨설팅 서비스 사용 조건입니다.",
+    "metaTitle": "서비스 약관 |",
+    "paymentText1": "일부 서비스는 결제가 필요합니다.",
+    "paymentText2": "결제가 완료되면 보고서가 디지털 방식으로 전달됩니다.",
+    "paymentTitle": "지불 조건",
+    "serviceText1": "SinoTrade 규정 준수는 중국으로 제품을 수입하는 기업을 위한 자동화된 규정 준수 평가 도구, 규정 준수 보고서 및 전문 컨설팅 서비스를 제공합니다.",
+    "serviceText2": "모든 서비스는 '있는 그대로', '사용 가능한 대로' 제공됩니다.",
+    "serviceTitle": "서비스 설명",
+    "terminationText": "당사는 본 약관을 위반하거나 다른 사용자, 제3자 또는 당사의 비즈니스 이익에 해를 끼친다고 판단되는 행위에 대해 언제든지 통지 없이 당사 서비스에 대한 귀하의 액세스를 일시 중지하거나 종료할 권리를 보유합니다.",
+    "terminationTitle": "종료",
+    "title": "서비스 약관"
+  }
 }

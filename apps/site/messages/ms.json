@@ -1343,5 +1343,35 @@
     "title": "SinoTrade Compliance: AI-Assistance (EN)",
     "servicesTitle": "Perkhidmatan"
   },
-  "Navbar": {}
+  "Navbar": {},
+  "Terms": {
+    "acceptanceText1": "Dengan mengakses atau menggunakan tapak web dan perkhidmatan Pematuhan SinoTrade, anda bersetuju untuk terikat dengan Syarat Perkhidmatan ini.",
+    "acceptanceText2": "Syarat ini digunakan untuk semua pelawat, pengguna dan pelanggan alat semakan pematuhan, laporan penilaian dan perkhidmatan perundingan kami.",
+    "acceptanceTitle": "Penerimaan Terma",
+    "accountText1": "Anda bertanggungjawab untuk mengekalkan kerahsiaan bukti kelayakan akaun anda dan untuk semua aktiviti yang berlaku di bawah akaun anda.",
+    "accountText2": "Anda mesti memberikan maklumat yang tepat dan lengkap semasa membuat akaun dan mengemas kini sebarang perubahan dengan segera.",
+    "accountTitle": "Akaun Pengguna",
+    "changesText": "Kami boleh mengubah suai Syarat Perkhidmatan ini pada bila-bila masa.",
+    "changesTitle": "Perubahan kepada Syarat",
+    "contactText": "Jika anda mempunyai sebarang soalan tentang Syarat Perkhidmatan ini, sila hubungi kami:",
+    "contactTitle": "Hubungi Kami",
+    "governingText": "Syarat ini akan ditadbir oleh dan ditafsirkan mengikut undang-undang Republik Rakyat China.",
+    "governingTitle": "Undang-undang yang Mentadbir",
+    "intellectualText1": "Kandungan, reka letak, reka bentuk dan kefungsian tapak web ini, termasuk tetapi tidak terhad kepada semua teks, grafik, logo dan perisian, adalah hak milik Pematuhan SinoTrade dan dilindungi oleh undang-undang harta intelek yang berkenaan.",
+    "intellectualText2": "Anda tidak boleh mengeluarkan semula, mengedar, mengubah suai atau mencipta karya terbitan daripada kandungan kami tanpa kebenaran bertulis nyata kami.",
+    "intellectualTitle": "Harta Intelek",
+    "limitationText": "Pematuhan SinoTrade tidak akan bertanggungjawab untuk sebarang kerosakan tidak langsung, sampingan, khas, berbangkit atau punitif yang timbul daripada penggunaan perkhidmatan kami oleh anda.",
+    "limitationTitle": "Had Liabiliti",
+    "metaDescription": "Syarat Perkhidmatan untuk Pematuhan SinoTrade — syarat untuk menggunakan alat, laporan dan perkhidmatan perundingan pematuhan kami.",
+    "metaTitle": "Syarat Perkhidmatan |",
+    "paymentText1": "Perkhidmatan tertentu memerlukan bayaran.",
+    "paymentText2": "Laporan dihantar secara digital apabila pembayaran berjaya.",
+    "paymentTitle": "Syarat Pembayaran",
+    "serviceText1": "SinoTrade Compliance menyediakan alat penilaian pematuhan automatik, laporan pematuhan dan perkhidmatan perundingan pakar untuk perniagaan yang mengimport produk ke China.",
+    "serviceText2": "Semua perkhidmatan disediakan atas dasar 'seadanya' dan 'sebagaimana tersedia'.",
+    "serviceTitle": "Perihalan Perkhidmatan",
+    "terminationText": "Kami berhak untuk menggantung atau menamatkan akses anda kepada perkhidmatan kami pada bila-bila masa, tanpa notis, kerana kelakuan yang kami percaya melanggar Syarat ini atau berbahaya kepada pengguna lain, pihak ketiga, atau kepentingan perniagaan kami.",
+    "terminationTitle": "Penamatan",
+    "title": "Syarat Perkhidmatan"
+  }
 }

@@ -30,7 +30,9 @@
     "securityCheckExpired": "Sikkerhetssjekken er utløpt. Vennligst prøv igjen.",
     "agreeToPrivacy": "Jeg er enig i",
     "privacyPolicy": "Personvernerklæring",
-    "agreeToPrivacyError": "Vennligst godta personvernreglene"
+    "agreeToPrivacyError": "Vennligst godta personvernreglene og vilkårene for bruk",
+    "agreeToTermsAnd": "og",
+    "termsOfService": "Vilkår for bruk"
   },
   "Breadcrumb": {
     "pricing": "Prissetting"

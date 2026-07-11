@@ -64,13 +64,13 @@ Done.
   Creating an optimized production build ...
 ✓ Compiled successfully in 2.5s
   Running TypeScript ...
-  Finished TypeScript in 7.3s ...
+  Finished TypeScript in 7.9s ...
   Collecting page data using 19 workers ...
   Generating static pages using 19 workers (0/771) ...
   Generating static pages using 19 workers (192/771) 
   Generating static pages using 19 workers (385/771) 
   Generating static pages using 19 workers (578/771) 
-✓ Generating static pages using 19 workers (771/771) in 8.0s
+✓ Generating static pages using 19 workers (771/771) in 6.6s
   Finalizing page optimization ...
 
 Route (app)
@@ -268,9 +268,7 @@ Route (app)
 
 ▶ check-translations.mjs --short --skip-locale-check
 
-⚠️ 发现 178 个问题
-   - 网站翻译质量: 72 个问题
-   - Portal 翻译质量: 106 个问题
+✅ 全量核验通过！48 种语言无质量问题。
 
 ▶ check-i18n-keys.mjs --ci
 🔑 i18n key 完整性检查
@@ -608,7 +606,7 @@ Route (app)
 
 ▶ clean-rsc.mjs out
 🧹 Cleaning RSC .txt payload files from out/...
-✅ Deleted 7351 RSC payload files (577.8 MB freed)
+✅ Deleted 7351 RSC payload files (577.9 MB freed)
 
 ═══════════════════════════════════════════════
 ✅ 全部检查通过

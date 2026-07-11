@@ -1343,5 +1343,35 @@
     "title": "Zgodność z przepisami SinoTrade: AI-Assistance (EN)",
     "servicesTitle": "Usługi"
   },
-  "Navbar": {}
+  "Navbar": {},
+  "Terms": {
+    "acceptanceText1": "Wchodząc lub korzystając ze strony internetowej i usług SinoTrade Compliance, wyrażasz zgodę na przestrzeganie niniejszych Warunków świadczenia usług.",
+    "acceptanceText2": "Niniejsze warunki mają zastosowanie do wszystkich osób odwiedzających, użytkowników i klientów naszych narzędzi do sprawdzania zgodności, raportów z oceny i usług doradczych.",
+    "acceptanceTitle": "Akceptacja Warunków",
+    "accountText1": "Jesteś odpowiedzialny za zachowanie poufności danych uwierzytelniających Twoje konto i za wszystkie działania podejmowane w ramach Twojego konta.",
+    "accountText2": "Podczas tworzenia konta musisz podać dokładne i kompletne informacje oraz niezwłocznie aktualizować wszelkie zmiany.",
+    "accountTitle": "Konta użytkowników",
+    "changesText": "Możemy modyfikować niniejsze Warunki świadczenia usług w dowolnym momencie.",
+    "changesTitle": "Zmiany Warunków",
+    "contactText": "Jeśli masz jakiekolwiek pytania dotyczące niniejszego Regulaminu, skontaktuj się z nami:",
+    "contactTitle": "Skontaktuj się z nami",
+    "governingText": "Niniejsze Warunki podlegają prawu Chińskiej Republiki Ludowej i zgodnie z nim będą interpretowane.",
+    "governingTitle": "Obowiązujące prawo",
+    "intellectualText1": "Treść, układ, projekt i funkcjonalność tej witryny, w tym między innymi cały tekst, grafika, logo i oprogramowanie, są własnością firmy SinoTrade Compliance i są chronione obowiązującymi przepisami prawa własności intelektualnej.",
+    "intellectualText2": "Nie możesz reprodukować, rozpowszechniać, modyfikować ani tworzyć dzieł pochodnych na podstawie naszych treści bez naszej wyraźnej pisemnej zgody.",
+    "intellectualTitle": "Własność intelektualna",
+    "limitationText": "SinoTrade Compliance nie ponosi odpowiedzialności za jakiekolwiek szkody pośrednie, przypadkowe, szczególne, wynikowe lub karne wynikające z korzystania z naszych usług.",
+    "limitationTitle": "Ograniczenie odpowiedzialności",
+    "metaDescription": "Warunki świadczenia usług w zakresie zgodności z przepisami SinoTrade — warunki korzystania z naszych narzędzi do sprawdzania zgodności, raportów i usług doradczych.",
+    "metaTitle": "Warunki świadczenia usług |",
+    "paymentText1": "Niektóre usługi wymagają zapłaty.",
+    "paymentText2": "Raporty są dostarczane cyfrowo po pomyślnej płatności.",
+    "paymentTitle": "Warunki płatności",
+    "serviceText1": "SinoTrade Compliance zapewnia zautomatyzowane narzędzia oceny zgodności, raporty dotyczące zgodności i specjalistyczne usługi konsultingowe dla firm importujących produkty do Chin.",
+    "serviceText2": "Wszystkie usługi są świadczone na zasadzie „tak jak jest” i „w miarę dostępności”.",
+    "serviceTitle": "Opis usług",
+    "terminationText": "Zastrzegamy sobie prawo do zawieszenia lub zakończenia dostępu do naszych usług w dowolnym momencie i bez powiadomienia w przypadku postępowania, które naszym zdaniem narusza niniejsze Warunki lub jest szkodliwe dla innych użytkowników, osób trzecich lub naszych interesów biznesowych.",
+    "terminationTitle": "Zakończenie",
+    "title": "Warunki świadczenia usług"
+  }
 }

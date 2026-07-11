@@ -1343,5 +1343,35 @@
     "title": "SinoTrade Compliance: AI-Assistance (EN)",
     "servicesTitle": "Palvelut"
   },
-  "Navbar": {}
+  "Navbar": {},
+  "Terms": {
+    "acceptanceText1": "Kun avaat tai käytät SinoTrade Compliance -verkkosivustoa ja -palveluita, sitoudut noudattamaan näitä palveluehtoja.",
+    "acceptanceText2": "Nämä ehdot koskevat kaikkia vaatimustenmukaisuuden tarkistustyökalujemme, arviointiraporttiemme ja konsultointipalveluidemme vierailijoita, käyttäjiä ja asiakkaita.",
+    "acceptanceTitle": "Ehtojen hyväksyminen",
+    "accountText1": "Olet vastuussa tilisi käyttöoikeustietojesi luottamuksellisuuden säilyttämisestä ja kaikesta tililläsi tapahtuvasta toiminnasta.",
+    "accountText2": "Sinun on annettava tarkat ja täydelliset tiedot tiliä luodessasi ja päivitettävä kaikki muutokset viipymättä.",
+    "accountTitle": "Käyttäjätilit",
+    "changesText": "Voimme muuttaa näitä Palveluehtoja milloin tahansa.",
+    "changesTitle": "Muutokset ehtoihin",
+    "contactText": "Jos sinulla on kysyttävää näistä käyttöehdoista, ota meihin yhteyttä:",
+    "contactTitle": "Ota yhteyttä",
+    "governingText": "Näihin ehtoihin sovelletaan Kiinan kansantasavallan lakeja ja niitä tulkitaan niiden mukaisesti.",
+    "governingTitle": "Sovellettava laki",
+    "intellectualText1": "Tämän verkkosivuston sisältö, ulkoasu, suunnittelu ja toiminnallisuus, mukaan lukien, mutta ei rajoittuen, kaikki teksti, grafiikka, logot ja ohjelmistot, ovat SinoTrade Compliancen omaisuutta, ja niitä suojaavat soveltuvat immateriaalioikeudet.",
+    "intellectualText2": "Et saa jäljentää, levittää, muokata tai luoda sisällöstämme johdettuja teoksia ilman nimenomaista kirjallista lupaamme.",
+    "intellectualTitle": "Immateriaaliomaisuus",
+    "limitationText": "SinoTrade Compliance shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our services.",
+    "limitationTitle": "Vastuun rajoitus",
+    "metaDescription": "SinoTrade Compliancen palveluehdot — vaatimustenmukaisuuden tarkistustyökalujemme, raporttiemme ja konsultointipalveluidemme käyttöehdot.",
+    "metaTitle": "Palveluehdot |",
+    "paymentText1": "Tietyt palvelut vaativat maksua.",
+    "paymentText2": "Raportit toimitetaan digitaalisesti onnistuneen maksun jälkeen.",
+    "paymentTitle": "Maksuehdot",
+    "serviceText1": "SinoTrade Compliance tarjoaa automaattisia vaatimustenmukaisuuden arviointityökaluja, vaatimustenmukaisuusraportteja ja asiantuntijakonsultointipalveluita yrityksille, jotka tuovat tuotteita Kiinaan.",
+    "serviceText2": "Kaikki palvelut tarjotaan \"sellaisenaan\" ja \"sellaisena kuin saatavilla\".",
+    "serviceTitle": "Palvelun kuvaus",
+    "terminationText": "Varaamme oikeuden keskeyttää tai lopettaa pääsysi palveluihimme milloin tahansa ilman erillistä ilmoitusta käytöksestä, jonka uskomme rikkovan näitä ehtoja tai olevan haitallisia muille käyttäjille, kolmansille osapuolille tai liiketoimintaetuillemme.",
+    "terminationTitle": "Irtisanominen",
+    "title": "Palveluehdot"
+  }
 }

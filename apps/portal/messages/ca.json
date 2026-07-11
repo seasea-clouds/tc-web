@@ -30,7 +30,9 @@
     "securityCheckExpired": "El control de seguretat ha caducat. Si us plau, torna-ho a provar.",
     "agreeToPrivacy": "Estic d'acord amb el",
     "privacyPolicy": "Política de privadesa",
-    "agreeToPrivacyError": "Accepteu la política de privadesa"
+    "agreeToPrivacyError": "Accepteu la política de privadesa i les condicions del servei",
+    "agreeToTermsAnd": "i",
+    "termsOfService": "Condicions del servei"
   },
   "Breadcrumb": {
     "pricing": "Preus"

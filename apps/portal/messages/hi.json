@@ -30,7 +30,9 @@
     "securityCheckExpired": "सुरक्षा जांच समाप्त हो गई. कृपया पुन: प्रयास करें।",
     "agreeToPrivacy": "मैं करने के लिए सहमत हूं",
     "privacyPolicy": "गोपनीयता नीति",
-    "agreeToPrivacyError": "कृपया गोपनीयता नीति से सहमत हों"
+    "agreeToPrivacyError": "कृपया गोपनीयता नीति और सेवा की शर्तों से सहमत हों",
+    "agreeToTermsAnd": "और",
+    "termsOfService": "सेवा की शर्तें"
   },
   "Breadcrumb": {
     "pricing": "मूल्य निर्धारण"

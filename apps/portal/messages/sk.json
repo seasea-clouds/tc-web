@@ -30,7 +30,9 @@
     "securityCheckExpired": "Platnosť bezpečnostnej kontroly vypršala. Skúste to znova.",
     "agreeToPrivacy": "súhlasím s",
     "privacyPolicy": "Zásady ochrany osobných údajov",
-    "agreeToPrivacyError": "Vyjadrite súhlas so Zásadami ochrany osobných údajov"
+    "agreeToPrivacyError": "Vyjadrite súhlas so Zásadami ochrany osobných údajov a Zmluvnými podmienkami",
+    "agreeToTermsAnd": "a",
+    "termsOfService": "Zmluvné podmienky"
   },
   "Breadcrumb": {
     "pricing": "Stanovenie cien"

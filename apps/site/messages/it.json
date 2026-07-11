@@ -1343,5 +1343,35 @@
     "title": "Conformità SinoTrade: Assistenza AI (EN)",
     "servicesTitle": "Servizi"
   },
-  "Navbar": {}
+  "Navbar": {},
+  "Terms": {
+    "acceptanceText1": "Accedendo o utilizzando il sito Web e i servizi di conformità di SinoTrade, accetti di essere vincolato dai presenti Termini di servizio.",
+    "acceptanceText2": "I presenti termini si applicano a tutti i visitatori, utenti e clienti dei nostri strumenti di controllo della conformità, rapporti di valutazione e servizi di consulenza.",
+    "acceptanceTitle": "Accettazione dei Termini",
+    "accountText1": "Sei responsabile del mantenimento della riservatezza delle credenziali del tuo account e di tutte le attività che si verificano sotto il tuo account.",
+    "accountText2": "È necessario fornire informazioni accurate e complete al momento della creazione di un account e aggiornare tempestivamente eventuali modifiche.",
+    "accountTitle": "Account utente",
+    "changesText": "Possiamo modificare i presenti Termini di servizio in qualsiasi momento.",
+    "changesTitle": "Modifiche ai Termini",
+    "contactText": "In caso di domande sui presenti Termini di servizio, contattaci:",
+    "contactTitle": "Contattaci",
+    "governingText": "Le presenti Condizioni saranno regolate e interpretate in conformità con le leggi della Repubblica popolare cinese.",
+    "governingTitle": "Legge applicabile",
+    "intellectualText1": "Il contenuto, il layout, il design e la funzionalità di questo sito Web, inclusi ma non limitati a tutto il testo, la grafica, i loghi e il software, sono di proprietà di SinoTrade Compliance e sono protetti dalle leggi sulla proprietà intellettuale applicabili.",
+    "intellectualText2": "Non è possibile riprodurre, distribuire, modificare o creare opere derivate dai nostri contenuti senza il nostro esplicito consenso scritto.",
+    "intellectualTitle": "Proprietà intellettuale",
+    "limitationText": "SinoTrade Compliance non sarà responsabile per eventuali danni indiretti, incidentali, speciali, consequenziali o punitivi derivanti dall'utilizzo dei nostri servizi.",
+    "limitationTitle": "Limitazione di responsabilità",
+    "metaDescription": "Termini di servizio per la conformità di SinoTrade: condizioni per l'utilizzo dei nostri strumenti di controllo della conformità, rapporti e servizi di consulenza.",
+    "metaTitle": "Termini di servizio |",
+    "paymentText1": "Alcuni servizi richiedono un pagamento.",
+    "paymentText2": "I report vengono consegnati digitalmente dopo il pagamento andato a buon fine.",
+    "paymentTitle": "Termini di pagamento",
+    "serviceText1": "SinoTrade Compliance fornisce strumenti automatizzati di valutazione della conformità, rapporti di conformità e servizi di consulenza di esperti per le aziende che importano prodotti in Cina.",
+    "serviceText2": "Tutti i servizi sono forniti \"così come sono\" e \"come disponibili\".",
+    "serviceTitle": "Descrizione dei servizi",
+    "terminationText": "Ci riserviamo il diritto di sospendere o interrompere l'accesso ai nostri servizi in qualsiasi momento, senza preavviso, per comportamenti che riteniamo violino i presenti Termini o siano dannosi per altri utenti, terze parti o i nostri interessi commerciali.",
+    "terminationTitle": "Terminazione",
+    "title": "Termini di servizio"
+  }
 }

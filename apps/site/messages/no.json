@@ -1343,5 +1343,35 @@
     "title": "SinoTrade Compliance – AI-Assistance (EN)",
     "servicesTitle": "Tjenester"
   },
-  "Navbar": {}
+  "Navbar": {},
+  "Terms": {
+    "acceptanceText1": "Ved å gå inn på eller bruke SinoTrade Compliance-nettstedet og -tjenestene, godtar du å være bundet av disse tjenestevilkårene. Hvis du ikke er enig, vennligst ikke bruk tjenestene våre.",
+    "acceptanceText2": "Disse vilkårene gjelder for alle besøkende, brukere og kunder av våre samsvarskontrollverktøy, vurderingsrapporter og konsulenttjenester.",
+    "acceptanceTitle": "Aksept av vilkår",
+    "accountText1": "Du er ansvarlig for å opprettholde konfidensialiteten til kontolegitimasjonen din og for alle aktiviteter som skjer under kontoen din.",
+    "accountText2": "Du må oppgi nøyaktig og fullstendig informasjon når du oppretter en konto og umiddelbart oppdatere eventuelle endringer. Du må være minst 18 år for å opprette en konto.",
+    "accountTitle": "Brukerkontoer",
+    "changesText": "Vi kan endre disse vilkårene for bruk når som helst. Endringer trer i kraft umiddelbart etter publisering. Din fortsatte bruk av tjenestene våre etter eventuelle endringer utgjør aksept av de nye vilkårene.",
+    "changesTitle": "Endringer i vilkårene",
+    "contactText": "Hvis du har spørsmål om disse vilkårene for bruk, vennligst kontakt oss:",
+    "contactTitle": "Kontakt oss",
+    "governingText": "Disse vilkårene skal styres av og tolkes i samsvar med lovene i Folkerepublikken Kina. Eventuelle tvister som oppstår fra disse vilkårene skal løses gjennom vennlige forhandlinger eller, om nødvendig, gjennom domstolene med kompetent jurisdiksjon.",
+    "governingTitle": "Gjeldende lov",
+    "intellectualText1": "Innholdet, layouten, designen og funksjonaliteten til denne nettsiden, inkludert men ikke begrenset til all tekst, grafikk, logoer og programvare, er SinoTrade Compliances eiendom og er beskyttet av gjeldende lover om immaterielle rettigheter.",
+    "intellectualText2": "Du kan ikke reprodusere, distribuere, modifisere eller lage avledede verk fra innholdet vårt uten vår uttrykkelige skriftlige tillatelse.",
+    "intellectualTitle": "Immaterielle rettigheter",
+    "limitationText": "SinoTrade Compliance skal ikke være ansvarlig for noen indirekte, tilfeldige, spesielle, følgeskader eller straffskader som oppstår fra din bruk av tjenestene våre. Vårt totale ansvar, hvis noen, skal være begrenset til beløpet betalt av deg for den spesifikke tjenesten som gir opphav til kravet.",
+    "limitationTitle": "Ansvarsbegrensning",
+    "metaDescription": "Vilkår for bruk for SinoTrade-overholdelse — betingelser for bruk av våre samsvarskontrollverktøy, rapporter og konsulenttjenester.",
+    "metaTitle": "Vilkår for bruk | SinoTrade-overholdelse",
+    "paymentText1": "Enkelte tjenester krever betaling. Prisene vises tydelig før kjøp. Betalingen behandles gjennom vår sikre betalingsleverandør.",
+    "paymentText2": "Rapporter leveres digitalt ved vellykket betaling. Refusjonsforespørsler behandles fra sak til sak. Abonnementstjenester fornyes automatisk med mindre de kanselleres.",
+    "paymentTitle": "Betalingsbetingelser",
+    "serviceText1": "SinoTrade Compliance tilbyr automatiserte samsvarsvurderingsverktøy, samsvarsrapporter og ekspertkonsulenttjenester for bedrifter som importerer produkter til Kina. Våre tjenester inkluderer: (a) GACC-matregistreringskontroller; (b) vurdering av samsvar med kinesisk etikett; (c) CCC-sertifiseringsvurdering; (d) NMPA kosmetikk innlevering vurdering; (e) vurdering av overholdelse av e-handel på tvers av landegrensene; og (f) vurdering av varemerkebeskyttelse.",
+    "serviceText2": "Alle tjenester tilbys på en «som den er» og «som tilgjengelig»-basis. Mens vi streber etter nøyaktighet, gir våre automatiserte verktøy kun foreløpige vurderinger og utgjør ikke juridisk eller forskriftsmessig råd.",
+    "serviceTitle": "Beskrivelse av tjenester",
+    "terminationText": "Vi forbeholder oss retten til å suspendere eller avslutte din tilgang til tjenestene våre når som helst, uten varsel, for oppførsel som vi mener bryter disse vilkårene eller er skadelig for andre brukere, tredjeparter eller våre forretningsinteresser.",
+    "terminationTitle": "Avslutning",
+    "title": "Vilkår for bruk"
+  }
 }

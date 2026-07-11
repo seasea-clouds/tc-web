@@ -1343,5 +1343,35 @@
     "title": "SinoTrade Compliance: Hỗ trợ AI (EN)",
     "servicesTitle": "Dịch vụ"
   },
-  "Navbar": {}
+  "Navbar": {},
+  "Terms": {
+    "acceptanceText1": "Bằng cách truy cập hoặc sử dụng trang web và dịch vụ Tuân thủ SinoTrade, bạn đồng ý bị ràng buộc bởi các Điều khoản dịch vụ này.",
+    "acceptanceText2": "Các điều khoản này áp dụng cho tất cả khách truy cập, người dùng và khách hàng sử dụng các công cụ kiểm tra tuân thủ, báo cáo đánh giá và dịch vụ tư vấn của chúng tôi.",
+    "acceptanceTitle": "Chấp nhận các điều khoản",
+    "accountText1": "Bạn có trách nhiệm duy trì tính bảo mật của thông tin đăng nhập tài khoản của mình và cho tất cả các hoạt động diễn ra trong tài khoản của bạn.",
+    "accountText2": "Bạn phải cung cấp thông tin chính xác và đầy đủ khi tạo tài khoản và cập nhật kịp thời mọi thay đổi.",
+    "accountTitle": "Tài khoản người dùng",
+    "changesText": "Chúng tôi có thể sửa đổi các Điều khoản dịch vụ này bất cứ lúc nào.",
+    "changesTitle": "Thay đổi điều khoản",
+    "contactText": "Nếu bạn có bất kỳ câu hỏi nào về các Điều khoản dịch vụ này, vui lòng liên hệ với chúng tôi:",
+    "contactTitle": "Liên hệ với chúng tôi",
+    "governingText": "Các Điều khoản này sẽ được điều chỉnh và hiểu theo luật pháp của Cộng hòa Nhân dân Trung Hoa.",
+    "governingTitle": "Luật điều chỉnh",
+    "intellectualText1": "Nội dung, bố cục, thiết kế và chức năng của trang web này, bao gồm nhưng không giới hạn ở tất cả văn bản, đồ họa, logo và phần mềm, là tài sản của SinoTrade Tuân thủ và được bảo vệ bởi luật sở hữu trí tuệ hiện hành.",
+    "intellectualText2": "Bạn không được sao chép, phân phối, sửa đổi hoặc tạo tác phẩm phái sinh từ nội dung của chúng tôi mà không có sự cho phép rõ ràng bằng văn bản của chúng tôi.",
+    "intellectualTitle": "Sở hữu trí tuệ",
+    "limitationText": "Tuân thủ SinoTrade sẽ không chịu trách nhiệm về bất kỳ thiệt hại gián tiếp, ngẫu nhiên, đặc biệt, do hậu quả hoặc trừng phạt nào phát sinh từ việc bạn sử dụng dịch vụ của chúng tôi.",
+    "limitationTitle": "Giới hạn trách nhiệm pháp lý",
+    "metaDescription": "Điều khoản dịch vụ tuân thủ SinoTrade - điều kiện để sử dụng các công cụ, báo cáo và dịch vụ tư vấn kiểm tra tuân thủ của chúng tôi.",
+    "metaTitle": "Điều khoản dịch vụ |",
+    "paymentText1": "Một số dịch vụ yêu cầu thanh toán.",
+    "paymentText2": "Báo cáo được gửi dưới dạng kỹ thuật số khi thanh toán thành công.",
+    "paymentTitle": "Điều khoản thanh toán",
+    "serviceText1": "SinoTrade Tuân thủ cung cấp các công cụ đánh giá tuân thủ tự động, báo cáo tuân thủ và dịch vụ tư vấn chuyên môn cho các doanh nghiệp nhập khẩu sản phẩm vào Trung Quốc.",
+    "serviceText2": "Tất cả các dịch vụ được cung cấp trên cơ sở 'nguyên trạng' và 'có sẵn'.",
+    "serviceTitle": "Mô tả dịch vụ",
+    "terminationText": "Chúng tôi có quyền đình chỉ hoặc chấm dứt quyền truy cập của bạn vào các dịch vụ của chúng tôi bất kỳ lúc nào mà không cần thông báo vì hành vi mà chúng tôi cho rằng vi phạm các Điều khoản này hoặc có hại cho người dùng khác, bên thứ ba hoặc lợi ích kinh doanh của chúng tôi.",
+    "terminationTitle": "Chấm dứt",
+    "title": "Điều khoản dịch vụ"
+  }
 }

@@ -1343,5 +1343,35 @@
     "title": "SinoTrade Compliance: AI-Assistance (EN)",
     "servicesTitle": "Xidmətlər"
   },
-  "Navbar": {}
+  "Navbar": {},
+  "Terms": {
+    "acceptanceText1": "SinoTrade Compliance vebsaytına və xidmətlərinə daxil olmaq və ya istifadə etməklə siz bu Xidmət Şərtləri ilə bağlı olmağa razılaşırsınız. Razı deyilsinizsə, xahiş edirik xidmətlərimizdən istifadə etməyin.",
+    "acceptanceText2": "Bu şərtlər uyğunluğu yoxlamaq alətlərimizin, qiymətləndirmə hesabatlarımızın və məsləhət xidmətlərimizin bütün ziyarətçiləri, istifadəçiləri və müştərilərinə şamil edilir.",
+    "acceptanceTitle": "Şərtlərin qəbulu",
+    "accountText1": "Siz hesab məlumatlarınızın məxfiliyinin qorunmasına və hesabınız altında baş verən bütün fəaliyyətlərə görə məsuliyyət daşıyırsınız.",
+    "accountText2": "Hesab yaratarkən dəqiq və tam məlumat verməli və hər hansı dəyişiklikləri dərhal yeniləməlisiniz. Hesab yaratmaq üçün ən azı 18 yaşınız olmalıdır.",
+    "accountTitle": "İstifadəçi hesabları",
+    "changesText": "Biz bu Xidmət Şərtlərini istənilən vaxt dəyişdirə bilərik. Dəyişikliklər dərc edildikdən dərhal sonra qüvvəyə minəcək. Hər hansı bir dəyişiklikdən sonra xidmətlərimizdən davamlı istifadəniz yeni şərtləri qəbul edirsiniz.",
+    "changesTitle": "Şərtlərə Dəyişikliklər",
+    "contactText": "Bu Xidmət Şərtləri ilə bağlı hər hansı sualınız varsa, bizimlə əlaqə saxlayın:",
+    "contactTitle": "Bizimlə əlaqə saxlayın",
+    "governingText": "Bu Şərtlər Çin Xalq Respublikasının qanunlarına uyğun olaraq tənzimlənir və şərh edilir. Bu şərtlərdən irəli gələn hər hansı mübahisələr dostluq danışıqları və ya lazım gələrsə, səlahiyyətli yurisdiksiya məhkəmələri vasitəsilə həll edilir.",
+    "governingTitle": "İdarəetmə Qanunu",
+    "intellectualText1": "Bu vebsaytın məzmunu, tərtibatı, dizaynı və funksionallığı, o cümlədən bütün mətn, qrafika, loqolar və proqram təminatı, SinoTrade Compliance şirkətinin mülkiyyətidir və tətbiq olunan əqli mülkiyyət qanunları ilə qorunur.",
+    "intellectualText2": "Siz bizim açıq yazılı icazəmiz olmadan məzmunumuzu çoxalda, yayma, dəyişdirmə və ya törəmə işləri yarada bilməzsiniz.",
+    "intellectualTitle": "Əqli Mülkiyyət",
+    "limitationText": "SinoTrade Compliance, xidmətlərimizdən istifadəniz nəticəsində yaranan hər hansı dolayı, təsadüfi, xüsusi, ardıcıl və ya cəza xarakterli zərərlərə görə məsuliyyət daşımır. Bizim ümumi məsuliyyətimiz, əgər varsa, iddiaya əsas verən xüsusi xidmət üçün ödədiyiniz məbləğlə məhdudlaşacaq.",
+    "limitationTitle": "Məsuliyyətin məhdudlaşdırılması",
+    "metaDescription": "SinoTrade Uyğunluğu üzrə Xidmət Şərtləri — uyğunluğu yoxlamaq alətlərimiz, hesabatlarımız və məsləhət xidmətlərimizdən istifadə şərtləri.",
+    "metaTitle": "Xidmət Şərtləri | SinoTrade Uyğunluğu",
+    "paymentText1": "Müəyyən xidmətlər ödəniş tələb edir. Qiymətlər satın almadan əvvəl aydın şəkildə göstərilir. Ödəniş təhlükəsiz ödəniş provayderimiz vasitəsilə həyata keçirilir.",
+    "paymentText2": "Hesabatlar uğurlu ödənişdən sonra rəqəmsal olaraq çatdırılır. Geri qaytarma sorğuları ayrı-ayrılıqda nəzərdən keçirilir. Ləğv edilmədikcə abunə xidmətləri avtomatik yenilənir.",
+    "paymentTitle": "Ödəniş şərtləri",
+    "serviceText1": "SinoTrade Compliance, Çinə məhsul idxal edən müəssisələr üçün avtomatlaşdırılmış uyğunluğun qiymətləndirilməsi alətləri, uyğunluq hesabatları və ekspert məsləhət xidmətləri təqdim edir. Xidmətlərimizə aşağıdakılar daxildir: (a) GACC qida qeydiyyatına uyğunluq yoxlamaları; (b) Çin etiketinə uyğunluğun qiymətləndirilməsi; (c) CCC sertifikatının qiymətləndirilməsi; (d) NMPA kosmetika sənədlərinin qiymətləndirilməsi; (e) transsərhəd e-ticarət uyğunluğunun qiymətləndirilməsi; və (f) əmtəə nişanının qorunmasının qiymətləndirilməsi.",
+    "serviceText2": "Bütün xidmətlər “olduğu kimi” və “mövcud olduğu kimi” əsasında təqdim olunur. Dəqiqliyə çalışsaq da, avtomatlaşdırılmış alətlərimiz yalnız ilkin qiymətləndirmələri təmin edir və hüquqi və ya tənzimləyici məsləhətlər təşkil etmir.",
+    "serviceTitle": "Xidmətlərin təsviri",
+    "terminationText": "Bu Şərtləri pozduğuna və ya digər istifadəçilərə, üçüncü tərəflərə və ya biznes maraqlarımıza zərərli olduğuna inandığımız hərəkətlərə görə, istənilən vaxt xəbərdarlıq etmədən xidmətlərimizə girişinizi dayandırmaq və ya ləğv etmək hüququmuzu özümüzdə saxlayırıq.",
+    "terminationTitle": "Xitam",
+    "title": "Xidmət Şərtləri"
+  }
 }

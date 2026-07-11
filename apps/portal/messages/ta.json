@@ -30,7 +30,9 @@
     "securityCheckFailed": "பாதுகாப்பு சோதனை தோல்வியடைந்தது. மீண்டும் முயற்சிக்கவும்.",
     "agreeToPrivacy": "நான் ஒப்புக்கொள்கிறேன்",
     "privacyPolicy": "தனியுரிமைக் கொள்கை",
-    "agreeToPrivacyError": "தனியுரிமைக் கொள்கையை ஏற்கவும்"
+    "agreeToPrivacyError": "தனியுரிமைக் கொள்கை மற்றும் சேவை விதிமுறைகளை ஏற்கவும்",
+    "agreeToTermsAnd": "மற்றும்",
+    "termsOfService": "சேவை விதிமுறைகள்"
   },
   "Breadcrumb": {
     "pricing": "விலை நிர்ணயம்"

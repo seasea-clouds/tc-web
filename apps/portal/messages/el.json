@@ -30,7 +30,9 @@
     "securityCheckExpired": "Ο έλεγχος ασφαλείας έληξε. Δοκιμάστε ξανά.",
     "agreeToPrivacy": "συμφωνώ με το",
     "privacyPolicy": "Πολιτική Απορρήτου",
-    "agreeToPrivacyError": "Παρακαλούμε συμφωνήστε με την Πολιτική Απορρήτου"
+    "agreeToPrivacyError": "Παρακαλούμε συμφωνήστε με την Πολιτική Απορρήτου και τους Όρους Παροχής Υπηρεσιών",
+    "agreeToTermsAnd": "και",
+    "termsOfService": "Όροι Παροχής Υπηρεσιών"
   },
   "Breadcrumb": {
     "pricing": "Τιμολόγηση"

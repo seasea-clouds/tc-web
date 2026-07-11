@@ -30,7 +30,9 @@
     "securityCheckExpired": "Təhlükəsizlik yoxlamasının müddəti bitdi. Yenidən cəhd edin.",
     "agreeToPrivacy": "ilə razıyam",
     "privacyPolicy": "Məxfilik Siyasəti",
-    "agreeToPrivacyError": "Zəhmət olmasa Məxfilik Siyasəti ilə razılaşın"
+    "agreeToPrivacyError": "Zəhmət olmasa Məxfilik Siyasəti və Xidmət Şərtləri ilə razılaşın",
+    "agreeToTermsAnd": "və",
+    "termsOfService": "Xidmət Şərtləri"
   },
   "Breadcrumb": {
     "pricing": "Qiymətləndirmə"

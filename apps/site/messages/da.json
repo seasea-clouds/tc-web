@@ -1343,5 +1343,35 @@
     "title": "SinoTrade Compliance: AI-Assistance (EN)",
     "servicesTitle": "Tjenester"
   },
-  "Navbar": {}
+  "Navbar": {},
+  "Terms": {
+    "acceptanceText1": "Ved at tilgå eller bruge SinoTrade Compliance-webstedet og -tjenesterne accepterer du at være bundet af disse Servicevilkår.",
+    "acceptanceText2": "Disse vilkår gælder for alle besøgende, brugere og kunder af vores compliance-kontrolværktøjer, vurderingsrapporter og konsulenttjenester.",
+    "acceptanceTitle": "Accept af vilkår",
+    "accountText1": "Du er ansvarlig for at opretholde fortroligheden af ​​dine kontolegitimationsoplysninger og for alle aktiviteter, der finder sted under din konto.",
+    "accountText2": "Du skal give nøjagtige og fuldstændige oplysninger, når du opretter en konto og straks opdatere eventuelle ændringer.",
+    "accountTitle": "Brugerkonti",
+    "changesText": "Vi kan til enhver tid ændre disse servicevilkår.",
+    "changesTitle": "Ændringer af vilkår",
+    "contactText": "Hvis du har spørgsmål om disse servicevilkår, bedes du kontakte os:",
+    "contactTitle": "Kontakt os",
+    "governingText": "Disse vilkår skal være underlagt og fortolket i overensstemmelse med lovene i Folkerepublikken Kina.",
+    "governingTitle": "Gældende lov",
+    "intellectualText1": "Indholdet, layoutet, designet og funktionaliteten af ​​denne hjemmeside, inklusive men ikke begrænset til al tekst, grafik, logoer og software, tilhører SinoTrade Compliance og er beskyttet af gældende love om intellektuel ejendom.",
+    "intellectualText2": "Du må ikke reproducere, distribuere, ændre eller skabe afledte værker fra vores indhold uden vores udtrykkelige skriftlige tilladelse.",
+    "intellectualTitle": "Intellektuel ejendomsret",
+    "limitationText": "SinoTrade Compliance er ikke ansvarlig for nogen indirekte, tilfældige, særlige, følgeskader eller strafbare skader, der opstår som følge af din brug af vores tjenester.",
+    "limitationTitle": "Ansvarsbegrænsning",
+    "metaDescription": "Servicevilkår for SinoTrade-overholdelse — betingelser for brug af vores compliance-kontrolværktøjer, rapporter og konsulenttjenester.",
+    "metaTitle": "Servicevilkår |",
+    "paymentText1": "Visse tjenester kræver betaling.",
+    "paymentText2": "Rapporter leveres digitalt ved vellykket betaling.",
+    "paymentTitle": "Betalingsbetingelser",
+    "serviceText1": "SinoTrade Compliance leverer automatiserede compliancevurderingsværktøjer, overholdelsesrapporter og ekspertrådgivningstjenester til virksomheder, der importerer produkter til Kina.",
+    "serviceText2": "Alle tjenester leveres på basis af \"som de er\" og \"som tilgængelig\".",
+    "serviceTitle": "Beskrivelse af tjenester",
+    "terminationText": "Vi forbeholder os retten til at suspendere eller afslutte din adgang til vores tjenester til enhver tid uden varsel for adfærd, som vi mener overtræder disse vilkår eller er skadelig for andre brugere, tredjeparter eller vores forretningsinteresser.",
+    "terminationTitle": "Afslutning",
+    "title": "Servicevilkår"
+  }
 }

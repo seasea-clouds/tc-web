@@ -30,7 +30,9 @@
     "securityCheckExpired": "Verificarea de securitate a expirat. Vă rugăm să încercați din nou.",
     "agreeToPrivacy": "Sunt de acord cu",
     "privacyPolicy": "Politica de confidențialitate",
-    "agreeToPrivacyError": "Vă rugăm să fiți de acord cu Politica de confidențialitate"
+    "agreeToPrivacyError": "Vă rugăm să fiți de acord cu Politica de confidențialitate și Termenii și condițiile",
+    "agreeToTermsAnd": "şi",
+    "termsOfService": "Termeni și condiții"
   },
   "Breadcrumb": {
     "pricing": "Prețuri"

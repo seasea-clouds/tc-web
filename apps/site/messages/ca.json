@@ -1343,5 +1343,35 @@
     "title": "Compliment de SinoTrade: AI-Assistance (EN)",
     "servicesTitle": "Serveis"
   },
-  "Navbar": {}
+  "Navbar": {},
+  "Terms": {
+    "acceptanceText1": "En accedir o utilitzar el lloc web i els serveis de compliment de SinoTrade, accepteu estar subjecte a aquestes Condicions del servei.",
+    "acceptanceText2": "Aquestes condicions s'apliquen a tots els visitants, usuaris i clients de les nostres eines de verificació de compliment, informes d'avaluació i serveis de consultoria.",
+    "acceptanceTitle": "Acceptació de les condicions",
+    "accountText1": "Sou responsable de mantenir la confidencialitat de les credencials del vostre compte i de totes les activitats que es produeixin al vostre compte.",
+    "accountText2": "Heu de proporcionar informació precisa i completa en crear un compte i actualitzar ràpidament els canvis.",
+    "accountTitle": "Comptes d'usuari",
+    "changesText": "Podem modificar aquestes Condicions del servei en qualsevol moment.",
+    "changesTitle": "Canvis a les condicions",
+    "contactText": "Si teniu cap pregunta sobre aquestes Condicions del servei, poseu-vos en contacte amb nosaltres:",
+    "contactTitle": "Contacta amb nosaltres",
+    "governingText": "Aquestes Condicions es regiran i s'interpretaran d'acord amb les lleis de la República Popular de la Xina.",
+    "governingTitle": "Llei aplicable",
+    "intellectualText1": "El contingut, la disposició, el disseny i la funcionalitat d'aquest lloc web, inclosos, entre d'altres, tots els textos, gràfics, logotips i programari, són propietat de SinoTrade Compliance i estan protegits per les lleis de propietat intel·lectual aplicables.",
+    "intellectualText2": "No podeu reproduir, distribuir, modificar o crear obres derivades del nostre contingut sense el nostre permís exprés per escrit.",
+    "intellectualTitle": "Propietat intel·lectual",
+    "limitationText": "SinoTrade Compliance no serà responsable de cap dany indirecte, incidental, especial, conseqüent o punitiu derivat de l'ús que feu dels nostres serveis.",
+    "limitationTitle": "Limitació de responsabilitat",
+    "metaDescription": "Condicions del servei per al compliment de SinoTrade: condicions per utilitzar les nostres eines de verificació de compliment, informes i serveis de consultoria.",
+    "metaTitle": "Condicions del servei |",
+    "paymentText1": "Alguns serveis requereixen pagament.",
+    "paymentText2": "Els informes s'envien digitalment després del pagament correcte.",
+    "paymentTitle": "Condicions de pagament",
+    "serviceText1": "SinoTrade Compliance ofereix eines automatitzades d'avaluació del compliment, informes de compliment i serveis de consultoria d'experts per a empreses que importen productes a la Xina.",
+    "serviceText2": "Tots els serveis es proporcionen \"tal com estan\" i \"segons estan disponibles\".",
+    "serviceTitle": "Descripció dels serveis",
+    "terminationText": "Ens reservem el dret de suspendre o cancel·lar el vostre accés als nostres serveis en qualsevol moment, sense previ avís, per conductes que creiem que infringeixen aquestes Condicions o són perjudicials per a altres usuaris, tercers o els nostres interessos comercials.",
+    "terminationTitle": "Terminació",
+    "title": "Condicions del servei"
+  }
 }

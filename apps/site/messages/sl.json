@@ -1343,5 +1343,35 @@
     "title": "Skladnost s predpisi SinoTrade: AI-Assistance (EN)",
     "servicesTitle": "Storitve"
   },
-  "Navbar": {}
+  "Navbar": {},
+  "Terms": {
+    "acceptanceText1": "Z dostopom ali uporabo spletnega mesta in storitev skladnosti SinoTrade se strinjate, da vas zavezujejo ti pogoji storitve. Če se ne strinjate, vas prosimo, da ne uporabljate naših storitev.",
+    "acceptanceText2": "Ti pogoji veljajo za vse obiskovalce, uporabnike in stranke naših orodij za preverjanje skladnosti, poročil o oceni in svetovalnih storitev.",
+    "acceptanceTitle": "Sprejem pogojev",
+    "accountText1": "Odgovorni ste za ohranjanje zaupnosti poverilnic vašega računa in za vse dejavnosti, ki se zgodijo v vašem računu.",
+    "accountText2": "Pri ustvarjanju računa morate zagotoviti točne in popolne podatke ter nemudoma posodobiti morebitne spremembe. Za ustvarjanje računa morate biti stari vsaj 18 let.",
+    "accountTitle": "Uporabniški računi",
+    "changesText": "Te pogoje storitve lahko kadar koli spremenimo. Spremembe stopijo v veljavo takoj po objavi. Vaša nadaljnja uporaba naših storitev po kakršnih koli spremembah pomeni, da sprejemate nove pogoje.",
+    "changesTitle": "Spremembe pogojev",
+    "contactText": "Če imate kakršna koli vprašanja o teh pogojih storitve, se obrnite na nas:",
+    "contactTitle": "Kontaktirajte nas",
+    "governingText": "Te pogoje ureja in razlaga v skladu z zakoni Ljudske republike Kitajske. Morebitni spori, ki izhajajo iz teh pogojev, se bodo reševali s prijateljskimi pogajanji ali po potrebi prek pristojnih sodišč.",
+    "governingTitle": "Veljavno pravo",
+    "intellectualText1": "Vsebina, postavitev, dizajn in funkcionalnost tega spletnega mesta, vključno z vsem besedilom, grafiko, logotipi in programsko opremo, vendar ne omejeno nanje, so last podjetja SinoTrade Compliance in so zaščiteni z veljavno zakonodajo o intelektualni lastnini.",
+    "intellectualText2": "Brez našega izrecnega pisnega dovoljenja ne smete reproducirati, distribuirati, spreminjati ali ustvarjati izpeljanih del iz naše vsebine.",
+    "intellectualTitle": "Intelektualna lastnina",
+    "limitationText": "SinoTrade Compliance ni odgovoren za nobeno posredno, naključno, posebno, posledično ali kaznovalno škodo, ki izhaja iz vaše uporabe naših storitev. Naša skupna odgovornost, če obstaja, bo omejena na znesek, ki ste ga plačali za določeno storitev, ki je bila podlaga za zahtevek.",
+    "limitationTitle": "Omejitev odgovornosti",
+    "metaDescription": "Pogoji storitve za skladnost SinoTrade — pogoji za uporabo naših orodij za preverjanje skladnosti, poročil in svetovalnih storitev.",
+    "metaTitle": "Pogoji storitve | Skladnost s predpisi SinoTrade",
+    "paymentText1": "Nekatere storitve zahtevajo plačilo. Cene so jasno prikazane pred nakupom. Plačilo poteka prek našega ponudnika varnih plačil.",
+    "paymentText2": "Poročila so dostavljena digitalno po uspešnem plačilu. Zahtevki za vračilo se obravnavajo od primera do primera. Naročniške storitve se samodejno obnovijo, razen če so preklicane.",
+    "paymentTitle": "Plačilni pogoji",
+    "serviceText1": "SinoTrade Compliance ponuja avtomatizirana orodja za ocenjevanje skladnosti, poročila o skladnosti in storitve strokovnega svetovanja za podjetja, ki uvažajo izdelke na Kitajsko. Naše storitve vključujejo: (a) preverjanje skladnosti registracije živil GACC; (b) ocena skladnosti kitajske oznake; (c) certifikacijska ocena CCC; (d) ocena kozmetične dokumentacije NMPA; (e) čezmejna ocena skladnosti elektronskega poslovanja; in (f) oceno zaščite blagovne znamke.",
+    "serviceText2": "Vse storitve so na voljo na podlagi \"kot so\" in \"kot so na voljo\". Čeprav si prizadevamo za natančnost, naša avtomatizirana orodja zagotavljajo le predhodne ocene in ne predstavljajo pravnega ali regulativnega nasveta.",
+    "serviceTitle": "Opis storitev",
+    "terminationText": "Pridržujemo si pravico, da kadar koli brez predhodnega obvestila prekinemo ali prekinemo vaš dostop do naših storitev zaradi ravnanja, za katerega menimo, da krši te pogoje ali škoduje drugim uporabnikom, tretjim osebam ali našim poslovnim interesom.",
+    "terminationTitle": "Odpoved",
+    "title": "Pogoji storitve"
+  }
 }

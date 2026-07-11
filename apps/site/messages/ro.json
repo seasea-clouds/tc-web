@@ -1343,5 +1343,35 @@
     "title": "Conformitate SinoTrade: AI-Assistance (EN)",
     "servicesTitle": "Servicii"
   },
-  "Navbar": {}
+  "Navbar": {},
+  "Terms": {
+    "acceptanceText1": "Accesând sau utilizând site-ul web și serviciile SinoTrade Compliance, sunteți de acord să respectați acești Termeni și condiții.",
+    "acceptanceText2": "Acești termeni se aplică tuturor vizitatorilor, utilizatorilor și clienților instrumentelor noastre de verificare a conformității, rapoartelor de evaluare și serviciilor de consultanță.",
+    "acceptanceTitle": "Acceptarea Termenilor",
+    "accountText1": "Sunteți responsabil pentru păstrarea confidențialității acreditărilor contului dvs. și pentru toate activitățile care au loc în contul dvs.",
+    "accountText2": "Trebuie să furnizați informații exacte și complete atunci când creați un cont și să actualizați prompt orice modificări.",
+    "accountTitle": "Conturi de utilizator",
+    "changesText": "Putem modifica acești Termeni și condiții în orice moment.",
+    "changesTitle": "Modificări ale Termenilor",
+    "contactText": "Dacă aveți întrebări despre acești Termeni și condiții, vă rugăm să ne contactați:",
+    "contactTitle": "Contactaţi-ne",
+    "governingText": "Acești Termeni vor fi guvernați și interpretați în conformitate cu legile Republicii Populare Chineze.",
+    "governingTitle": "Legea aplicabilă",
+    "intellectualText1": "Conținutul, aspectul, designul și funcționalitatea acestui site web, inclusiv, dar fără a se limita la toate textul, grafica, logo-urile și software-ul, sunt proprietatea SinoTrade Compliance și sunt protejate de legile aplicabile privind proprietatea intelectuală.",
+    "intellectualText2": "Nu puteți reproduce, distribui, modifica sau crea lucrări derivate din conținutul nostru fără permisiunea noastră expresă în scris.",
+    "intellectualTitle": "Proprietate intelectuală",
+    "limitationText": "SinoTrade Compliance nu va fi responsabil pentru nicio daune indirecte, incidentale, speciale, consecutive sau punitive care decurg din utilizarea serviciilor noastre.",
+    "limitationTitle": "Limitarea răspunderii",
+    "metaDescription": "Termeni și condiții pentru conformitatea SinoTrade — condiții pentru utilizarea instrumentelor noastre de verificare a conformității, a rapoartelor și a serviciilor de consultanță.",
+    "metaTitle": "Termeni și condiții |",
+    "paymentText1": "Anumite servicii necesită plată.",
+    "paymentText2": "Rapoartele sunt livrate digital la plata cu succes.",
+    "paymentTitle": "Condiții de plată",
+    "serviceText1": "SinoTrade Compliance oferă instrumente automate de evaluare a conformității, rapoarte de conformitate și servicii de consultanță de specialitate pentru companiile care importă produse în China.",
+    "serviceText2": "Toate serviciile sunt furnizate „ca atare” și „așa cum sunt disponibile”.",
+    "serviceTitle": "Descrierea Serviciilor",
+    "terminationText": "Ne rezervăm dreptul de a suspenda sau de a rezilia accesul dumneavoastră la serviciile noastre în orice moment, fără notificare, pentru comportamentul care credem că încalcă acești Termeni sau este dăunător altor utilizatori, terților sau intereselor noastre de afaceri.",
+    "terminationTitle": "Încetarea",
+    "title": "Termeni și condiții"
+  }
 }

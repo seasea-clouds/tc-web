@@ -1343,5 +1343,35 @@
     "title": "Përputhshmëria e SinoTrade - Asistenca AI (EN)",
     "servicesTitle": "Shërbimet"
   },
-  "Navbar": {}
+  "Navbar": {},
+  "Terms": {
+    "acceptanceText1": "Duke hyrë ose duke përdorur faqen e internetit dhe shërbimet e Pajtueshmërisë SinoTrade, ju pranoni të jeni të detyruar nga këto Kushte të Shërbimit.",
+    "acceptanceText2": "Këto kushte zbatohen për të gjithë vizitorët, përdoruesit dhe klientët e mjeteve tona të kontrollit të përputhshmërisë, raporteve të vlerësimit dhe shërbimeve të këshillimit.",
+    "acceptanceTitle": "Pranimi i kushteve",
+    "accountText1": "Ju jeni përgjegjës për ruajtjen e konfidencialitetit të kredencialeve të llogarisë tuaj dhe për të gjitha aktivitetet që ndodhin nën llogarinë tuaj.",
+    "accountText2": "Ju duhet të jepni informacion të saktë dhe të plotë kur krijoni një llogari dhe të përditësoni menjëherë çdo ndryshim.",
+    "accountTitle": "Llogaritë e përdoruesve",
+    "changesText": "Ne mund t'i modifikojmë këto Kushte të Shërbimit në çdo kohë.",
+    "changesTitle": "Ndryshimet në Kushtet",
+    "contactText": "Nëse keni ndonjë pyetje në lidhje me këto Kushte të Shërbimit, ju lutemi na kontaktoni:",
+    "contactTitle": "Na kontaktoni",
+    "governingText": "Këto Kushte do të qeverisen dhe interpretohen në përputhje me ligjet e Republikës Popullore të Kinës.",
+    "governingTitle": "Ligji qeverisës",
+    "intellectualText1": "Përmbajtja, faqosja, dizajni dhe funksionaliteti i kësaj faqeje interneti, duke përfshirë por pa u kufizuar në të gjithë tekstin, grafikët, logot dhe softuerin, janë pronë e SinoTrade Compliance dhe mbrohen nga ligjet e zbatueshme të pronësisë intelektuale.",
+    "intellectualText2": "Ju nuk mund të riprodhoni, shpërndani, modifikoni ose krijoni vepra të prejardhura nga përmbajtja jonë pa lejen tonë të shprehur me shkrim.",
+    "intellectualTitle": "Pronësia Intelektuale",
+    "limitationText": "SinoTrade Compliance nuk do të jetë përgjegjës për ndonjë dëm të tërthortë, të rastësishëm, të veçantë, pasues ose ndëshkues që rrjedh nga përdorimi juaj i shërbimeve tona.",
+    "limitationTitle": "Kufizimi i Përgjegjësisë",
+    "metaDescription": "Kushtet e shërbimit për pajtueshmërinë me SinoTrade - kushtet për përdorimin e mjeteve, raporteve dhe shërbimeve tona të konsulencës për kontrollin e pajtueshmërisë.",
+    "metaTitle": "Kushtet e Shërbimit |",
+    "paymentText1": "Disa shërbime kërkojnë pagesë.",
+    "paymentText2": "Raportet dorëzohen në mënyrë dixhitale pas pagesës së suksesshme.",
+    "paymentTitle": "Kushtet e pagesës",
+    "serviceText1": "SinoTrade Compliance ofron mjete të automatizuara të vlerësimit të përputhshmërisë, raporte të pajtueshmërisë dhe shërbime këshillimi ekspertësh për bizneset që importojnë produkte në Kinë.",
+    "serviceText2": "Të gjitha shërbimet ofrohen mbi bazën \"siç është\" dhe \"siç disponohet\".",
+    "serviceTitle": "Përshkrimi i Shërbimeve",
+    "terminationText": "Ne rezervojmë të drejtën të pezullojmë ose të ndërpresim aksesin tuaj në shërbimet tona në çdo kohë, pa paralajmërim, për sjellje që ne besojmë se shkel këto Kushte ose është e dëmshme për përdoruesit e tjerë, palët e treta ose interesat tona të biznesit.",
+    "terminationTitle": "Përfundimi",
+    "title": "Kushtet e Shërbimit"
+  }
 }

@@ -30,7 +30,9 @@
     "securityCheckExpired": "Güvenlik kontrolünün süresi doldu. Lütfen tekrar deneyin.",
     "agreeToPrivacy": "katılıyorum",
     "privacyPolicy": "Gizlilik Politikası",
-    "agreeToPrivacyError": "Lütfen Gizlilik Politikasını kabul edin"
+    "agreeToPrivacyError": "Lütfen Gizlilik Politikasını ve Hizmet Şartlarını kabul edin",
+    "agreeToTermsAnd": "Ve",
+    "termsOfService": "Hizmet Şartları"
   },
   "Breadcrumb": {
     "pricing": "Fiyatlandırma"

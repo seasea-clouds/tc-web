@@ -30,7 +30,9 @@
     "securityCheckFailed": "Ukaguzi wa usalama umeshindwa. Tafadhali jaribu tena.",
     "agreeToPrivacy": "Nakubaliana na",
     "privacyPolicy": "Sera ya Faragha",
-    "agreeToPrivacyError": "Tafadhali ukubali Sera ya Faragha"
+    "agreeToPrivacyError": "Tafadhali kubali Sera ya Faragha na Sheria na Masharti",
+    "agreeToTermsAnd": "na",
+    "termsOfService": "Masharti ya Huduma"
   },
   "Breadcrumb": {
     "pricing": "Bei"

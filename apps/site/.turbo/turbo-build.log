@@ -88,15 +88,15 @@ Generated search-widget-translations.json: 48 locales → /root/projects/trade/w
 ▲ Next.js 16.2.4 (Turbopack)
 
   Creating an optimized production build ...
-✓ Compiled successfully in 2.4s
+✓ Compiled successfully in 2.5s
   Running TypeScript ...
-  Finished TypeScript in 5.5s ...
+  Finished TypeScript in 5.6s ...
   Collecting page data using 19 workers ...
   Generating static pages using 19 workers (0/1349) ...
   Generating static pages using 19 workers (337/1349) 
   Generating static pages using 19 workers (674/1349) 
   Generating static pages using 19 workers (1011/1349) 
-✓ Generating static pages using 19 workers (1349/1349) in 9.1s
+✓ Generating static pages using 19 workers (1349/1349) in 7.0s
   Finalizing page optimization ...
 ⚠ Statically exporting a Next.js application via `next export` disables API routes and middleware.
 This command is meant for static-only hosts, and is not necessary to make your application static.
@@ -358,8 +358,7 @@ Output:   /root/projects/trade/web/apps/site/out
 
 ▶ check-translations.mjs --short
 
-⚠️ 发现 106 个问题
-   - Portal 翻译质量: 106 个问题
+✅ 全量核验通过！48 种语言无质量问题。
 
 ▶ check-i18n-keys.mjs --ci
 🔑 i18n key 完整性检查

@@ -1343,5 +1343,35 @@
     "title": "SinoTrade Compliance – AI-Assistance (DE)",
     "servicesTitle": "Dienstleistungen"
   },
-  "Navbar": {}
+  "Navbar": {},
+  "Terms": {
+    "acceptanceText1": "Durch den Zugriff auf oder die Nutzung der SinoTrade Compliance-Website und -Dienste erklären Sie sich mit diesen Nutzungsbedingungen einverstanden.",
+    "acceptanceText2": "Diese Bedingungen gelten für alle Besucher, Benutzer und Kunden unserer Compliance-Check-Tools, Bewertungsberichte und Beratungsdienste.",
+    "acceptanceTitle": "Annahme der Bedingungen",
+    "accountText1": "Sie sind für die Wahrung der Vertraulichkeit Ihrer Kontodaten und aller Aktivitäten, die unter Ihrem Konto stattfinden, verantwortlich.",
+    "accountText2": "Sie müssen bei der Erstellung eines Kontos genaue und vollständige Angaben machen und etwaige Änderungen umgehend aktualisieren.",
+    "accountTitle": "Benutzerkonten",
+    "changesText": "Wir können diese Nutzungsbedingungen jederzeit ändern.",
+    "changesTitle": "Änderungen der Bedingungen",
+    "contactText": "Wenn Sie Fragen zu diesen Nutzungsbedingungen haben, kontaktieren Sie uns bitte:",
+    "contactTitle": "Kontaktieren Sie uns",
+    "governingText": "Diese Bedingungen unterliegen den Gesetzen der Volksrepublik China und werden in Übereinstimmung mit diesen ausgelegt.",
+    "governingTitle": "Geltendes Recht",
+    "intellectualText1": "Der Inhalt, das Layout, das Design und die Funktionalität dieser Website, einschließlich, aber nicht beschränkt auf alle Texte, Grafiken, Logos und Software, sind Eigentum von SinoTrade Compliance und durch geltende Gesetze zum Schutz des geistigen Eigentums geschützt.",
+    "intellectualText2": "Ohne unsere ausdrückliche schriftliche Genehmigung dürfen Sie unsere Inhalte nicht reproduzieren, verbreiten, modifizieren oder daraus abgeleitete Werke erstellen.",
+    "intellectualTitle": "Geistiges Eigentum",
+    "limitationText": "SinoTrade Compliance haftet nicht für indirekte, zufällige, besondere, Folge- oder Strafschäden, die sich aus Ihrer Nutzung unserer Dienste ergeben.",
+    "limitationTitle": "Haftungsbeschränkung",
+    "metaDescription": "Nutzungsbedingungen für SinoTrade Compliance – Bedingungen für die Nutzung unserer Compliance-Check-Tools, Berichte und Beratungsdienste.",
+    "metaTitle": "Nutzungsbedingungen |",
+    "paymentText1": "Bestimmte Dienste sind kostenpflichtig.",
+    "paymentText2": "Die Berichte werden nach erfolgreicher Zahlung digital zugestellt.",
+    "paymentTitle": "Zahlungsbedingungen",
+    "serviceText1": "SinoTrade Compliance bietet automatisierte Compliance-Bewertungstools, Compliance-Berichte und Expertenberatungsdienste für Unternehmen, die Produkte nach China importieren.",
+    "serviceText2": "Alle Dienstleistungen werden „wie besehen“ und „wie verfügbar“ bereitgestellt.",
+    "serviceTitle": "Beschreibung der Leistungen",
+    "terminationText": "Wir behalten uns das Recht vor, Ihren Zugang zu unseren Diensten jederzeit und ohne Vorankündigung zu sperren oder zu beenden, wenn wir der Ansicht sind, dass ein Verhalten gegen diese Bedingungen verstößt oder anderen Benutzern, Dritten oder unseren Geschäftsinteressen schadet.",
+    "terminationTitle": "Beendigung",
+    "title": "Nutzungsbedingungen"
+  }
 }

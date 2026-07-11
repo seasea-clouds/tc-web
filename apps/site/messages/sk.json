@@ -1343,5 +1343,35 @@
     "title": "Súlad SinoTrade – AI-Assistance (EN)",
     "servicesTitle": "Služby"
   },
-  "Navbar": {}
+  "Navbar": {},
+  "Terms": {
+    "acceptanceText1": "Vstupom alebo používaním webovej stránky a služieb SinoTrade Compliance súhlasíte s tým, že budete viazaní týmito Podmienkami poskytovania služieb. Ak nesúhlasíte, prosím nepoužívajte naše služby.",
+    "acceptanceText2": "Tieto podmienky sa vzťahujú na všetkých návštevníkov, používateľov a zákazníkov našich nástrojov na kontrolu súladu, hodnotiacich správ a konzultačných služieb.",
+    "acceptanceTitle": "Prijatie podmienok",
+    "accountText1": "Zodpovedáte za zachovanie dôvernosti poverení vášho účtu a za všetky aktivity, ktoré sa pod vaším účtom vyskytnú.",
+    "accountText2": "Pri vytváraní účtu musíte poskytnúť presné a úplné informácie a okamžite aktualizovať všetky zmeny. Na vytvorenie účtu musíte mať aspoň 18 rokov.",
+    "accountTitle": "Používateľské účty",
+    "changesText": "Tieto zmluvné podmienky môžeme kedykoľvek upraviť. Zmeny budú účinné ihneď po zverejnení. Vaše ďalšie používanie našich služieb po akýchkoľvek zmenách predstavuje prijatie nových podmienok.",
+    "changesTitle": "Zmeny podmienok",
+    "contactText": "Ak máte akékoľvek otázky týkajúce sa týchto Zmluvných podmienok, kontaktujte nás:",
+    "contactTitle": "Kontaktujte nás",
+    "governingText": "Tieto Podmienky sa budú riadiť a vykladať v súlade so zákonmi Čínskej ľudovej republiky. Akékoľvek spory vyplývajúce z týchto podmienok sa budú riešiť priateľským rokovaním alebo, ak je to potrebné, prostredníctvom súdov príslušnej jurisdikcie.",
+    "governingTitle": "Rozhodujúce právo",
+    "intellectualText1": "Obsah, rozloženie, dizajn a funkčnosť tejto webovej stránky, vrátane, ale nie výlučne, všetkého textu, grafiky, log a softvéru, sú vlastníctvom SinoTrade Compliance a sú chránené platnými zákonmi o duševnom vlastníctve.",
+    "intellectualText2": "Bez nášho výslovného písomného povolenia nesmiete reprodukovať, distribuovať, upravovať alebo vytvárať odvodené diela z nášho obsahu.",
+    "intellectualTitle": "duševné vlastníctvo",
+    "limitationText": "SinoTrade Compliance nezodpovedá za žiadne nepriame, náhodné, špeciálne, následné alebo represívne škody vyplývajúce z vášho používania našich služieb. Naša celková zodpovednosť, ak existuje, bude obmedzená na sumu, ktorú zaplatíte za konkrétnu službu, ktorá viedla k vzniku nároku.",
+    "limitationTitle": "Obmedzenie zodpovednosti",
+    "metaDescription": "Zmluvné podmienky pre dodržiavanie pravidiel SinoTrade — podmienky používania našich nástrojov na kontrolu súladu, správ a konzultačných služieb.",
+    "metaTitle": "Podmienky služby | Súlad SinoTrade",
+    "paymentText1": "Niektoré služby vyžadujú platbu. Ceny sú jasne zobrazené pred nákupom. Platba prebieha prostredníctvom nášho poskytovateľa bezpečných platieb.",
+    "paymentText2": "Správy sa doručujú digitálne po úspešnej platbe. Žiadosti o vrátenie peňazí sa riešia od prípadu k prípadu. Predplatné služby sa automaticky obnovia, pokiaľ nie sú zrušené.",
+    "paymentTitle": "Platobné podmienky",
+    "serviceText1": "SinoTrade Compliance poskytuje automatizované nástroje na hodnotenie súladu, správy o súlade a odborné konzultačné služby pre podniky dovážajúce produkty do Číny. Naše služby zahŕňajú: (a) kontroly súladu s registráciou potravín GACC; b) posúdenie súladu čínskej značky; c) certifikačné hodnotenie CCC; d) hodnotenie registrácie kozmetiky NMPA; e) posúdenie súladu cezhraničného elektronického obchodu; a f) posúdenie ochrany ochrannej známky.",
+    "serviceText2": "Všetky služby sú poskytované „tak ako sú“ a „ako sú dostupné“. Aj keď sa snažíme o presnosť, naše automatizované nástroje poskytujú iba predbežné hodnotenia a nepredstavujú právne alebo regulačné poradenstvo.",
+    "serviceTitle": "Popis Služieb",
+    "terminationText": "Vyhradzujeme si právo kedykoľvek pozastaviť alebo ukončiť váš prístup k našim službám bez upozornenia za správanie, ktoré podľa nás porušuje tieto Podmienky alebo poškodzuje iných používateľov, tretie strany alebo naše obchodné záujmy.",
+    "terminationTitle": "Ukončenie",
+    "title": "Zmluvné podmienky"
+  }
 }

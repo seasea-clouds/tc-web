@@ -66,7 +66,7 @@ https://nextjs.org/telemetry
 ▲ Next.js 16.2.6 (Turbopack)
 
   Creating an optimized production build ...
-✓ Compiled successfully in 2.5s
+✓ Compiled successfully in 2.6s
   Running TypeScript ...
   Finished TypeScript in 2.9s ...
   Collecting page data using 6 workers ...
@@ -74,7 +74,7 @@ https://nextjs.org/telemetry
   Generating static pages using 6 workers (108/434) 
   Generating static pages using 6 workers (216/434) 
   Generating static pages using 6 workers (325/434) 
-✓ Generating static pages using 6 workers (434/434) in 2.4s
+✓ Generating static pages using 6 workers (434/434) in 2.5s
   Finalizing page optimization ...
 
 Route (app)

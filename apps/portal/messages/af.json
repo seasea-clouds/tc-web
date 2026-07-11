@@ -30,7 +30,9 @@
     "securityCheckExpired": "Sekuriteitkontrole het verval. Probeer asseblief weer.",
     "agreeToPrivacy": "Ek stem in tot die",
     "privacyPolicy": "Privaatheidsbeleid",
-    "agreeToPrivacyError": "Stem asseblief in tot die Privaatheidsbeleid"
+    "agreeToPrivacyError": "Stem asseblief in tot die Privaatheidsbeleid en Diensbepalings",
+    "agreeToTermsAnd": "en",
+    "termsOfService": "Diensbepalings"
   },
   "Breadcrumb": {
     "pricing": "Pryse"

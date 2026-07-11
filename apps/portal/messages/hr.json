@@ -30,7 +30,9 @@
     "securityCheckExpired": "Sigurnosna provjera je istekla. Molimo pokušajte ponovo.",
     "agreeToPrivacy": "Slažem se s",
     "privacyPolicy": "Politika privatnosti",
-    "agreeToPrivacyError": "Molimo prihvatite Politiku privatnosti"
+    "agreeToPrivacyError": "Prihvatite Politiku privatnosti i Uvjete usluge",
+    "agreeToTermsAnd": "i",
+    "termsOfService": "Uvjeti usluge"
   },
   "Breadcrumb": {
     "pricing": "Cijene"

@@ -30,7 +30,9 @@
     "securityCheckExpired": "安全检查已过期。请再试一次。",
     "agreeToPrivacy": "我已阅读并同意",
     "privacyPolicy": "隐私政策",
-    "agreeToPrivacyError": "请同意隐私政策"
+    "agreeToPrivacyError": "请同意隐私政策和服务条款",
+    "agreeToTermsAnd": "和",
+    "termsOfService": "服务条款"
   },
   "Breadcrumb": {
     "pricing": "定价"

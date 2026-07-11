@@ -1343,5 +1343,35 @@
     "title": "SinoTrade Compliance: Bantuan AI (EN)",
     "servicesTitle": "Layanan"
   },
-  "Navbar": {}
+  "Navbar": {},
+  "Terms": {
+    "acceptanceText1": "Dengan mengakses atau menggunakan situs web dan layanan Kepatuhan SinoTrade, Anda setuju untuk terikat oleh Ketentuan Layanan ini.",
+    "acceptanceText2": "Ketentuan ini berlaku untuk semua pengunjung, pengguna, dan pelanggan alat pemeriksaan kepatuhan, laporan penilaian, dan layanan konsultasi kami.",
+    "acceptanceTitle": "Penerimaan Persyaratan",
+    "accountText1": "Anda bertanggung jawab untuk menjaga kerahasiaan kredensial akun Anda dan semua aktivitas yang terjadi di bawah akun Anda.",
+    "accountText2": "Anda harus memberikan informasi yang akurat dan lengkap saat membuat akun dan segera memperbarui setiap perubahan.",
+    "accountTitle": "Akun Pengguna",
+    "changesText": "Kami dapat mengubah Ketentuan Layanan ini kapan saja.",
+    "changesTitle": "Perubahan Ketentuan",
+    "contactText": "Jika Anda memiliki pertanyaan tentang Ketentuan Layanan ini, silakan hubungi kami:",
+    "contactTitle": "Hubungi kami",
+    "governingText": "Ketentuan ini diatur oleh dan ditafsirkan sesuai dengan hukum Republik Rakyat Tiongkok.",
+    "governingTitle": "Hukum yang Mengatur",
+    "intellectualText1": "Konten, tata letak, desain, dan fungsi situs web ini, termasuk namun tidak terbatas pada semua teks, grafik, logo, dan perangkat lunak, adalah milik Kepatuhan SinoTrade dan dilindungi oleh undang-undang kekayaan intelektual yang berlaku.",
+    "intellectualText2": "Anda tidak boleh mereproduksi, mendistribusikan, memodifikasi, atau membuat karya turunan dari konten kami tanpa izin tertulis dari kami.",
+    "intellectualTitle": "Kekayaan Intelektual",
+    "limitationText": "Kepatuhan SinoTrade tidak bertanggung jawab atas segala kerugian tidak langsung, insidental, khusus, konsekuensial, atau hukuman yang timbul dari penggunaan Anda atas layanan kami.",
+    "limitationTitle": "Batasan Tanggung Jawab",
+    "metaDescription": "Ketentuan Layanan untuk Kepatuhan SinoTrade — ketentuan untuk menggunakan alat pemeriksaan kepatuhan, laporan, dan layanan konsultasi kami.",
+    "metaTitle": "Ketentuan Layanan |",
+    "paymentText1": "Layanan tertentu memerlukan pembayaran.",
+    "paymentText2": "Laporan dikirimkan secara digital setelah pembayaran berhasil.",
+    "paymentTitle": "Ketentuan Pembayaran",
+    "serviceText1": "SinoTrade Compliance menyediakan alat penilaian kepatuhan otomatis, laporan kepatuhan, dan layanan konsultasi ahli untuk bisnis yang mengimpor produk ke Tiongkok.",
+    "serviceText2": "Semua layanan disediakan atas dasar 'sebagaimana adanya' dan 'sebagaimana tersedia'.",
+    "serviceTitle": "Deskripsi Layanan",
+    "terminationText": "Kami berhak menangguhkan atau menghentikan akses Anda ke layanan kami kapan saja, tanpa pemberitahuan, atas tindakan yang kami yakini melanggar Ketentuan ini atau merugikan pengguna lain, pihak ketiga, atau kepentingan bisnis kami.",
+    "terminationTitle": "Penghentian",
+    "title": "Ketentuan Layanan"
+  }
 }

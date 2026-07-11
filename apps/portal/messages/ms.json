@@ -30,7 +30,9 @@
     "securityCheckExpired": "Semakan keselamatan tamat tempoh. Sila cuba lagi.",
     "agreeToPrivacy": "Saya bersetuju dengan",
     "privacyPolicy": "Dasar Privasi",
-    "agreeToPrivacyError": "Sila bersetuju menerima Dasar Privasi"
+    "agreeToPrivacyError": "Sila bersetuju menerima Dasar Privasi dan Syarat Perkhidmatan",
+    "agreeToTermsAnd": "dan",
+    "termsOfService": "Syarat Perkhidmatan"
   },
   "Breadcrumb": {
     "pricing": "penentuan harga"

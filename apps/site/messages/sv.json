@@ -1343,5 +1343,35 @@
     "title": "SinoTrade Compliance: AI-Assistance (EN)",
     "servicesTitle": "Tjänster"
   },
-  "Navbar": {}
+  "Navbar": {},
+  "Terms": {
+    "acceptanceText1": "Genom att gå in på eller använda webbplatsen och tjänsterna för SinoTrade Compliance accepterar du att vara bunden av dessa användarvillkor. Om du inte accepterar, använd inte våra tjänster.",
+    "acceptanceText2": "Dessa villkor gäller för alla besökare, användare och kunder av våra efterlevnadskontrollverktyg, bedömningsrapporter och konsulttjänster.",
+    "acceptanceTitle": "Godkännande av villkor",
+    "accountText1": "Du är ansvarig för att upprätthålla konfidentialiteten för dina kontouppgifter och för alla aktiviteter som sker under ditt konto.",
+    "accountText2": "Du måste tillhandahålla korrekt och fullständig information när du skapar ett konto och omedelbart uppdatera eventuella ändringar. Du måste vara minst 18 år för att skapa ett konto.",
+    "accountTitle": "Användarkonton",
+    "changesText": "Vi kan ändra dessa användarvillkor när som helst. Ändringar träder i kraft omedelbart efter publicering. Din fortsatta användning av våra tjänster efter eventuella ändringar innebär att du accepterar de nya villkoren.",
+    "changesTitle": "Ändringar av villkor",
+    "contactText": "Om du har några frågor om dessa användarvillkor, vänligen kontakta oss:",
+    "contactTitle": "Kontakta oss",
+    "governingText": "Dessa villkor ska styras av och tolkas i enlighet med lagarna i Folkrepubliken Kina. Eventuella tvister som uppstår från dessa villkor ska lösas genom vänskapliga förhandlingar eller, om nödvändigt, genom domstolar med behörig jurisdiktion.",
+    "governingTitle": "Gällande lag",
+    "intellectualText1": "Innehållet, layouten, designen och funktionaliteten på denna webbplats, inklusive men inte begränsat till all text, grafik, logotyper och programvara, tillhör SinoTrade Compliance och skyddas av tillämpliga immateriella lagar.",
+    "intellectualText2": "Du får inte reproducera, distribuera, modifiera eller skapa härledda verk från vårt innehåll utan vårt uttryckliga skriftliga tillstånd.",
+    "intellectualTitle": "Immateriella rättigheter",
+    "limitationText": "SinoTrade Compliance ska inte hållas ansvarigt för några indirekta, tillfälliga, speciella, följdskador eller straffskador som uppstår från din användning av våra tjänster. Vårt totala ansvar, om något, ska begränsas till det belopp som du betalat för den specifika tjänst som ger upphov till kravet.",
+    "limitationTitle": "Ansvarsbegränsning",
+    "metaDescription": "Användarvillkor för SinoTrade-efterlevnad — villkor för att använda våra efterlevnadskontrollverktyg, rapporter och konsulttjänster.",
+    "metaTitle": "Användarvillkor | SinoTrade efterlevnad",
+    "paymentText1": "Vissa tjänster kräver betalning. Priserna visas tydligt före köp. Betalning behandlas genom vår säkra betalningsleverantör.",
+    "paymentText2": "Rapporter levereras digitalt vid lyckad betalning. Begäran om återbetalning hanteras från fall till fall. Prenumerationstjänster förnyas automatiskt om de inte avbryts.",
+    "paymentTitle": "Betalningsvillkor",
+    "serviceText1": "SinoTrade Compliance tillhandahåller automatiserade verktyg för efterlevnadsbedömning, efterlevnadsrapporter och expertkonsulttjänster för företag som importerar produkter till Kina. Våra tjänster inkluderar: (a) kontroller av efterlevnad av GACC-matregistrering; (b) Bedömning av överensstämmelse med kinesiska etiketter. (c) CCC-certifieringsbedömning. (d) NMPA:s bedömning av ansökningar om kosmetika; e) Gränsöverskridande bedömning av efterlevnad av e-handel. och (f) bedömning av varumärkesskydd.",
+    "serviceText2": "Alla tjänster tillhandahålls \"i befintligt skick\" och \"i befintligt skick\". Medan vi strävar efter noggrannhet, ger våra automatiserade verktyg endast preliminära bedömningar och utgör inte juridisk eller regulatorisk rådgivning.",
+    "serviceTitle": "Beskrivning av tjänster",
+    "terminationText": "Vi förbehåller oss rätten att stänga av eller avsluta din åtkomst till våra tjänster när som helst, utan förvarning, för beteende som vi anser bryter mot dessa villkor eller är skadligt för andra användare, tredje part eller våra affärsintressen.",
+    "terminationTitle": "Uppsägning",
+    "title": "Användarvillkor"
+  }
 }

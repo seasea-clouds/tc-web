@@ -1343,5 +1343,35 @@
     "title": "Sukladnost SinoTrade: AI-Assistance (EN)",
     "servicesTitle": "Usluge"
   },
-  "Navbar": {}
+  "Navbar": {},
+  "Terms": {
+    "acceptanceText1": "Pristupanjem ili korištenjem web-mjesta i usluga SinoTrade Compliance, suglasni ste biti vezani ovim Uvjetima pružanja usluge.",
+    "acceptanceText2": "Ovi se uvjeti odnose na sve posjetitelje, korisnike i klijente naših alata za provjeru sukladnosti, izvješća o procjeni i konzultantskih usluga.",
+    "acceptanceTitle": "Prihvaćanje uvjeta",
+    "accountText1": "Vi ste odgovorni za održavanje povjerljivosti vjerodajnica vašeg računa i za sve aktivnosti koje se odvijaju pod vašim računom.",
+    "accountText2": "Prilikom kreiranja računa morate dati točne i potpune podatke i odmah ažurirati sve promjene.",
+    "accountTitle": "Korisnički računi",
+    "changesText": "U bilo kojem trenutku možemo izmijeniti ove Uvjete pružanja usluge.",
+    "changesTitle": "Promjene Uvjeta",
+    "contactText": "Ako imate bilo kakvih pitanja o ovim Uvjetima usluge, kontaktirajte nas:",
+    "contactTitle": "Kontaktirajte nas",
+    "governingText": "Ovi Uvjeti podliježu i tumače se u skladu sa zakonima Narodne Republike Kine.",
+    "governingTitle": "Mjerodavno pravo",
+    "intellectualText1": "Sadržaj, izgled, dizajn i funkcionalnost ove web stranice, uključujući ali ne ograničavajući se na sav tekst, grafiku, logotipe i softver, vlasništvo su SinoTrade Compliance i zaštićeni su važećim zakonima o intelektualnom vlasništvu.",
+    "intellectualText2": "Ne smijete reproducirati, distribuirati, mijenjati ili stvarati radove izvedene iz našeg sadržaja bez našeg izričitog pismenog dopuštenja.",
+    "intellectualTitle": "Intelektualno vlasništvo",
+    "limitationText": "SinoTrade Compliance neće biti odgovoran za bilo kakvu neizravnu, slučajnu, posebnu, posljedičnu ili kaznenu štetu koja proizlazi iz vašeg korištenja naših usluga.",
+    "limitationTitle": "Ograničenje odgovornosti",
+    "metaDescription": "Uvjeti usluge za usklađenost SinoTrade — uvjeti za korištenje naših alata za provjeru usklađenosti, izvješća i konzultantskih usluga.",
+    "metaTitle": "Uvjeti usluge |",
+    "paymentText1": "Određene usluge zahtijevaju plaćanje.",
+    "paymentText2": "Izvješća se isporučuju digitalno nakon uspješne uplate.",
+    "paymentTitle": "Uvjeti plaćanja",
+    "serviceText1": "SinoTrade Compliance pruža automatizirane alate za procjenu usklađenosti, izvješća o usklađenosti i usluge stručnog savjetovanja za tvrtke koje uvoze proizvode u Kinu.",
+    "serviceText2": "Sve usluge se pružaju na principu \"kakve jesu\" i \"kako su dostupne\".",
+    "serviceTitle": "Opis usluga",
+    "terminationText": "Zadržavamo pravo obustaviti ili ukinuti vaš pristup našim uslugama u bilo kojem trenutku, bez prethodne obavijesti, za ponašanje za koje smatramo da krši ove Uvjete ili je štetno za druge korisnike, treće strane ili naše poslovne interese.",
+    "terminationTitle": "Raskid",
+    "title": "Uvjeti usluge"
+  }
 }

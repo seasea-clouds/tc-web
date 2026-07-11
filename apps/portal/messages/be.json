@@ -30,7 +30,9 @@
     "securityCheckExpired": "Тэрмін праверкі бяспекі скончыўся. Калі ласка, паспрабуйце яшчэ раз.",
     "agreeToPrivacy": "Я згодны з",
     "privacyPolicy": "Палітыка прыватнасці",
-    "agreeToPrivacyError": "Калі ласка, згадзіцеся з Палітыкай прыватнасці"
+    "agreeToPrivacyError": "Калі ласка, прыміце палітыку прыватнасці і ўмовы прадастаўлення паслуг",
+    "agreeToTermsAnd": "і",
+    "termsOfService": "Умовы абслугоўвання"
   },
   "Breadcrumb": {
     "pricing": "Цэнаўтварэнне"

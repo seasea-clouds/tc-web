@@ -30,7 +30,9 @@
     "securityCheckExpired": "Platnost bezpečnostní kontroly vypršela. Zkuste to prosím znovu.",
     "agreeToPrivacy": "souhlasím s",
     "privacyPolicy": "Zásady ochrany osobních údajů",
-    "agreeToPrivacyError": "Souhlaste se Zásadami ochrany osobních údajů"
+    "agreeToPrivacyError": "Souhlaste se Zásadami ochrany osobních údajů a Smluvními podmínkami",
+    "agreeToTermsAnd": "a",
+    "termsOfService": "Podmínky služby"
   },
   "Breadcrumb": {
     "pricing": "Ceny"

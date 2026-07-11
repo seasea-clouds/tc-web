@@ -1343,5 +1343,35 @@
     "title": "Conformité SinoTrade: AI-Assistance (EN)",
     "servicesTitle": "Services"
   },
-  "Navbar": {}
+  "Navbar": {},
+  "Terms": {
+    "acceptanceText1": "En accédant ou en utilisant le site Web et les services de conformité SinoTrade, vous acceptez d'être lié par les présentes Conditions d'utilisation. Si vous n'êtes pas d'accord, veuillez ne pas utiliser nos services.",
+    "acceptanceText2": "Ces conditions s'appliquent à tous les visiteurs, utilisateurs et clients de nos outils de vérification de conformité, rapports d'évaluation et services de conseil.",
+    "acceptanceTitle": "Acceptation des Conditions",
+    "accountText1": "Vous êtes responsable du maintien de la confidentialité des informations d'identification de votre compte et de toutes les activités qui se produisent sous votre compte.",
+    "accountText2": "Vous devez fournir des informations exactes et complètes lors de la création d'un compte et mettre à jour rapidement toute modification. Vous devez avoir au moins 18 ans pour créer un compte.",
+    "accountTitle": "Comptes d'Utilisateurs",
+    "changesText": "Nous pouvons modifier ces Conditions d'utilisation à tout moment. Les modifications entreront en vigueur immédiatement après leur publication. Votre utilisation continue de nos services après toute modification constitue une acceptation des nouvelles conditions.",
+    "changesTitle": "Modifications des Conditions",
+    "contactText": "Si vous avez des questions sur ces Conditions d'utilisation, veuillez nous contacter:",
+    "contactTitle": "Contactez-nous",
+    "governingText": "Les présentes Conditions sont régies et interprétées conformément aux lois de la République populaire de Chine. Tout litige découlant des présentes conditions sera résolu par une négociation amicale ou, si nécessaire, par les tribunaux compétents.",
+    "governingTitle": "Loi Applicable",
+    "intellectualText1": "Le contenu, la mise en page, la conception et les fonctionnalités de ce site Web, y compris, mais sans s'y limiter, tous les textes, graphiques, logos et logiciels, sont la propriété de SinoTrade Compliance et sont protégés par les lois applicables sur la propriété intellectuelle.",
+    "intellectualText2": "Vous ne pouvez pas reproduire, distribuer, modifier ou créer des œuvres dérivées de notre contenu sans notre autorisation écrite expresse.",
+    "intellectualTitle": "Propriété Intellectuelle",
+    "limitationText": "SinoTrade Compliance ne sera pas responsable des dommages indirects, accessoires, spéciaux, consécutifs ou punitifs résultant de votre utilisation de nos services. Notre responsabilité totale, le cas échéant, sera limitée au montant que vous avez payé pour le service spécifique donnant lieu à la réclamation.",
+    "limitationTitle": "Limitation de responsabilité",
+    "metaDescription": "Conditions d'utilisation de la conformité SinoTrade — conditions d'utilisation de nos outils de vérification de la conformité, de nos rapports et de nos services de conseil.",
+    "metaTitle": "Conditions d'utilisation / Conformité SinoTrade",
+    "paymentText1": "Certains services nécessitent un paiement. Les prix sont clairement affichés avant l'achat. Le paiement est traité via notre fournisseur de paiement sécurisé.",
+    "paymentText2": "Les rapports sont livrés numériquement une fois le paiement réussi. Les demandes de remboursement sont traitées au cas par cas. Les services d'abonnement se renouvellent automatiquement sauf annulation.",
+    "paymentTitle": "Conditions de Paiement",
+    "serviceText1": "SinoTrade Compliance fournit des outils automatisés d'évaluation de la conformité, des rapports de conformité et des services de conseil d'experts aux entreprises qui importent des produits en Chine. Nos services comprennent: (a) les contrôles de conformité à l'enregistrement des aliments GACC; (b) évaluation de la conformité des étiquettes chinoises; (c) évaluation de la certification CCC; (d) évaluation du dépôt de cosmétiques NMPA; (e) évaluation de la conformité du commerce électronique transfrontalier; et (f) évaluation de la protection des marques.",
+    "serviceText2": "Tous les services sont fournis \"en l'état\" et \"selon la disponibilité\". Bien que nous nous efforcions d'être précis, nos outils automatisés fournissent uniquement des évaluations préliminaires et ne constituent pas des conseils juridiques ou réglementaires.",
+    "serviceTitle": "Description des Services",
+    "terminationText": "Nous nous réservons le droit de suspendre ou de résilier votre accès à nos services à tout moment, sans préavis, pour une conduite qui, selon nous, enfreint les présentes Conditions ou est préjudiciable à d'autres utilisateurs, à des tiers ou à nos intérêts commerciaux.",
+    "terminationTitle": "Résiliation",
+    "title": "Conditions d'Utilisation"
+  }
 }

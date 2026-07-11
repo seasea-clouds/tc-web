@@ -1343,5 +1343,35 @@
     "title": "SinoTrade megfelelőség – AI-Assistance (EN)",
     "servicesTitle": "Szolgáltatások"
   },
-  "Navbar": {}
+  "Navbar": {},
+  "Terms": {
+    "acceptanceText1": "A SinoTrade Compliance webhely és szolgáltatások elérésével vagy használatával Ön elfogadja, hogy magára nézve kötelezőnek ismeri el a jelen Szolgáltatási feltételeket. Ha nem ért egyet, kérjük, ne vegye igénybe szolgáltatásainkat.",
+    "acceptanceText2": "Ezek a feltételek érvényesek megfelelőség-ellenőrző eszközeink, értékelő jelentéseink és tanácsadói szolgáltatásaink minden látogatójára, felhasználójára és ügyfelére.",
+    "acceptanceTitle": "Feltételek elfogadása",
+    "accountText1": "Ön felelős a fiók hitelesítő adatainak bizalmas kezeléséért és minden olyan tevékenységért, amely a fiókja alatt történik.",
+    "accountText2": "A fiók létrehozásakor pontos és teljes információkat kell megadnia, és haladéktalanul frissítenie kell az esetleges változásokat. Fiók létrehozásához legalább 18 évesnek kell lennie.",
+    "accountTitle": "Felhasználói fiókok",
+    "changesText": "A jelen Szolgáltatási feltételeket bármikor módosíthatjuk. A változtatások a közzétételt követően azonnal hatályba lépnek. Szolgáltatásaink bármely változtatás utáni további használata az új feltételek elfogadását jelenti.",
+    "changesTitle": "Változások a feltételekben",
+    "contactText": "Ha bármilyen kérdése van a jelen Általános Szerződési Feltételekkel kapcsolatban, forduljon hozzánk:",
+    "contactTitle": "Lépjen kapcsolatba velünk",
+    "governingText": "A jelen Feltételekre a Kínai Népköztársaság törvényei az irányadók, és azokkal összhangban értelmezendők. A jelen feltételekből eredő vitás kérdéseket baráti tárgyalások útján, vagy szükség esetén az illetékes bíróságok útján kell megoldani.",
+    "governingTitle": "Irányadó törvény",
+    "intellectualText1": "A weboldal tartalma, elrendezése, kialakítása és funkciói, beleértve, de nem kizárólagosan az összes szöveget, grafikát, logót és szoftvert, a SinoTrade Compliance tulajdonát képezik, és a vonatkozó szellemi tulajdonjogok védik.",
+    "intellectualText2": "Kifejezett írásbeli engedélyünk nélkül nem reprodukálhat, terjeszthet, módosíthat, vagy abból származékos műveket hozhat létre.",
+    "intellectualTitle": "Szellemi tulajdon",
+    "limitationText": "A SinoTrade Compliance nem vállal felelősséget a szolgáltatásaink használatából eredő közvetett, véletlen, különleges, következményes vagy büntető jellegű károkért. Teljes felelősségünk, ha van ilyen, az Ön által a követelést megalapozó konkrét szolgáltatásért fizetett összegre korlátozódik.",
+    "limitationTitle": "A felelősség korlátozása",
+    "metaDescription": "A SinoTrade Compliance szolgáltatási feltételei — megfelelőség-ellenőrző eszközeink, jelentéseink és tanácsadói szolgáltatásaink használatának feltételei.",
+    "metaTitle": "Szolgáltatási feltételek | SinoTrade megfelelőség",
+    "paymentText1": "Bizonyos szolgáltatásokért fizetni kell. Az árak a vásárlás előtt jól láthatóan megjelennek. A fizetés feldolgozása biztonságos fizetési szolgáltatón keresztül történik.",
+    "paymentText2": "Sikeres fizetés esetén a jelentéseket digitálisan kézbesítjük. A visszatérítési kérelmeket eseti alapon kezeljük. Az előfizetési szolgáltatások automatikusan megújulnak, hacsak le nem mondják.",
+    "paymentTitle": "Fizetési feltételek",
+    "serviceText1": "A SinoTrade Compliance automatizált megfelelőségértékelési eszközöket, megfelelőségi jelentéseket és szakértői tanácsadási szolgáltatásokat biztosít a Kínába termékeket importáló vállalkozások számára. Szolgáltatásaink a következők: (a) a GACC élelmiszer-regisztráció megfelelőségi ellenőrzése; b) a kínai címkék megfelelőségének értékelése; c) CCC tanúsítás értékelése; d) NMPA kozmetikai bejelentések értékelése; e) határokon átnyúló e-kereskedelem megfelelőségi értékelése; és (f) védjegyoltalmi értékelés.",
+    "serviceText2": "Minden szolgáltatás „ahogy van” és „ahogy elérhető” alapon történik. Miközben törekszünk a pontosságra, automatizált eszközeink csak előzetes értékelést adnak, és nem minősülnek jogi vagy szabályozási tanácsnak.",
+    "serviceTitle": "Szolgáltatások leírása",
+    "terminationText": "Fenntartjuk a jogot, hogy bármikor, előzetes értesítés nélkül felfüggesztjük vagy megszüntessük szolgáltatásainkhoz való hozzáférését olyan magatartás miatt, amelyről úgy gondoljuk, hogy sérti a jelen Feltételeket, vagy káros más felhasználókra, harmadik felekre vagy üzleti érdekeinkre.",
+    "terminationTitle": "Felmondás",
+    "title": "Szolgáltatási feltételek"
+  }
 }

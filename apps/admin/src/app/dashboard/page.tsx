@@ -92,19 +92,49 @@ export default function DashboardPage() {
 // ── Page path to breadcrumb ──
 // Known segment names for breadcrumb display (en locale common segments)
 const SEGMENT_LABELS: Record<string, string> = {
+  // ── Site (site) ──
   'c': '合规自查',
-  'report': '报告',
-  'check': '自查工具',
   'services': '服务',
+  'gacc': 'GACC 食品注册',
+  'ccc': 'CCC 认证',
+  'label': '中文标签合规',
+  'cosmetics': '化妆品备案',
+  'ecommerce': '跨境电商',
+  'brand': '品牌保护',
+  'industries': '行业',
+  'testimonials': '客户评价',
+  'quote': '报价请求',
+  'packages': '合规套餐',
+  'thank-you': '提交成功',
+  // ── Portal (c/) ──
+  'check': '自查工具',
+  'report': '报告',
+  'preview': '预览',
+  'crossborder': '跨境电商',
+  'trademark': '品牌保护',
+  'nmpa': '化妆品备案',
+  'register': '注册',
+  'login': '登录',
+  'me': '个人中心',
+  'pricing': '定价',
+  'account': '账户',
+  'subscription': '订阅',
+  'dashboard': '数据看板',
+  // ── Blog ──
   'blog': '博客',
+  // ── Admin ──
+  'admin': '管理后台',
+  'users': '用户管理',
+  'logs': '操作日志',
+  'subscriptions': '订阅管理',
+  'reports': '报告管理',
+  'user-detail': '用户详情',
+  'report-detail': '报告详情',
+  'subscription-detail': '订阅详情',
+  // ── Common ──
   'about': '关于我们',
   'contact': '联系方式',
-  'pricing': '定价',
   'faq': '常见问题',
-  'account': '账户',
-  'login': '登录',
-  'register': '注册',
-  'subscription': '订阅',
   'payments': '支付',
 };
 

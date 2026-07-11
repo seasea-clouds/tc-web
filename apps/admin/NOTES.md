@@ -19,6 +19,18 @@
 - `output: 'export'` + `basePath: '/admin'`，产出到 `out/admin/` 目录
 - CF Pages Functions 负责 API 路由（不在 Next.js 路由系统中）
 
+### 数据分析 — CF Analytics GraphQL 直连
+- 所有 PV/UV/地域/路径数据直接从 Cloudflare GraphQL API 拉取，无 D1 中间缓存
+- 库文件：`functions/lib/cf-analytics.ts`
+  - `fetchDailyStats()` — httpRequests1dGroups：PV/UV/国家/浏览器/状态码
+  - `fetchHourlyStats()` — httpRequests1hGroups：每小时 PV/UV
+  - `fetchAggregateStatsRange()` — httpRequestsAdaptiveGroups：路径/OS/设备/项目分布（每日期并发，5 路并行）
+- API 端点：`GET /api/admin/analytics?range=today|7d|30d`（支持自定义 `start_date`/`end_date`）
+- 环境变量（CF Pages 中配置）：
+  - `CLOUDFLARE_ZONE_ID` — sinotradecompliance.com 的 Zone ID
+  - `CLOUDFLARE_API_TOKEN` — 需要 `analytics:read` 权限
+- 注意：httpRequestsAdaptiveGroups 存在采样（~67%），图表数据为采样值
+
 ## 踩坑记录
 
 ### import 路径
@@ -58,14 +70,3 @@ GitHub 推送触发的自动构建持续失败（`clone_repo` 成功但 `build` 
 - 已通过 CF API 更新为精确路径列表
 - 但设置后**构建 Runner 忽略 Admin 的所有构建**（卡在 `queued/idle`），回退到 `['*']` 后恢复
 - ⚠️ CF Pages 免费版对 `path_includes` 的非通配符支持有问题，暂维持 `['*']`
-
-### 分析系统 — D1 自建方案（2026-07-05）
-- 原计划集成 CF Analytics GraphQL API，但现有 CF API Token 缺乏 `analytics:read` 权限
-- 改用 **D1 自建 page_views 表**：
-  - 优势：实时数据、无延迟、无 API 调用限制、可交叉查询
-- 跟踪机制：
-  - 主站 `_middleware.ts` 添加异步 fire-and-forget（`context.waitUntil`）
-  - 仅跟踪 GET + text/html 页面加载，排除静��资源/CSS/JS/API
-  - 请求代理到 admin 的 `/api/admin/track` 端点，写入 D1
-- 管理看板：新增 PV/UV 趋势 + 地域分布 + 热门页面排行
-- 部署后自动开始采集，无需额外配置

@@ -294,7 +294,7 @@ export async function fetchAggregateStatsRange(
                 limit: 10000,
                 filter: {datetime_geq: "${date}T00:00:00Z", datetime_lt: "${date}T23:59:59Z"}
               ) {
-                dimensions { date clientRequestPath userAgentOS clientDeviceType clientRequestHTTPStatus }
+                dimensions { date clientRequestPath userAgentOS clientDeviceType }
                 count
               }
             }

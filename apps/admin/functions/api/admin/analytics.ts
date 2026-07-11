@@ -84,6 +84,7 @@ function emptyResponse() {
     dailyData: [],
     geoData: [],
     pageData: [],
+    pagePaths: [],
     channelData: [],
     projectData: [],
     browserData: [],
@@ -182,6 +183,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
 
       let geoData: { country: string; count: number }[] = [];
       let pageData: { path: string; count: number }[] = [];
+      let pagePaths: { path: string; count: number }[] = [];
       let projectData: { project: string; count: number }[] = [];
       let browserData: { browser: string; pageViews: number }[] = [];
       let osData: { os: string; count: number }[] = [];
@@ -190,6 +192,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
       if (latestComplete) {
         geoData = safeJSON(latestComplete.geo_data, []);
         pageData = safeJSON(latestComplete.page_data, []);
+        pagePaths = safeJSON(latestComplete.page_paths, []);
         projectData = safeJSON(latestComplete.project_data, []);
         browserData = safeJSON(latestComplete.browser_data, []);
         osData = safeJSON(latestComplete.os_data, []);
@@ -215,6 +218,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
             : [],
         geoData,
         pageData,
+        pagePaths,
         channelData: [],
         projectData,
         browserData,
@@ -234,6 +238,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
     // Collect per-dimension arrays for merging
     const geoArrays: { country: string; count: number }[][] = [];
     const pageArrays: { path: string; count: number }[][] = [];
+    const pagePathsArrays: { path: string; count: number }[][] = [];
     const projectArrays: { project: string; count: number }[][] = [];
     const browserArrays: { browser: string; pageViews: number }[][] = [];
     const osArrays: { os: string; count: number }[][] = [];
@@ -251,6 +256,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
 
       if (row.geo_data) geoArrays.push(safeJSON(row.geo_data, []));
       if (row.page_data) pageArrays.push(safeJSON(row.page_data, []));
+      if (row.page_paths) pagePathsArrays.push(safeJSON(row.page_paths, []));
       if (row.project_data) projectArrays.push(safeJSON(row.project_data, []));
       if (row.browser_data) browserArrays.push(safeJSON(row.browser_data, []));
       if (row.os_data) osArrays.push(safeJSON(row.os_data, []));
@@ -287,6 +293,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
     // Merge distribution data
     const geoData = mergeByKey(geoArrays, "country", "count");
     const pageData = mergeByKey(pageArrays, "path", "count");
+    const pagePaths = mergeByKey(pagePathsArrays, "path", "count");
 
     return Response.json({
       allTimeTotal: allTime.pv,
@@ -304,6 +311,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
       dailyData,
       geoData: geoData.slice(0, 20),
       pageData: pageData.slice(0, 30),
+      pagePaths: pagePaths.slice(0, 30),
       channelData: [],
       projectData: mergeByKey(projectArrays, "project", "count"),
       browserData: mergeByKey(browserArrays, "browser", "pageViews"),

@@ -230,7 +230,7 @@ function pathToBreadcrumb(path: string): string {
           <div className="spinner" />
         </div>
       ) : stats ? (() => {
-        const _a = analytics ?? { allTimeTotal: 0, allTimeUV: 0, summary: { today: 0, total: 0, todayUV: 0, uv: 0, countries: 0 } as any, hourlySum: [] as any[], hourlyAvg: [] as any[], dailyData: [] as any[], geoData: [] as any[], browserData: [] as any[], osData: [] as any[], deviceData: [] as any[], projectData: [] as any[], pageData: [] as any[] };
+        const _a = analytics ?? { allTimeTotal: 0, allTimeUV: 0, summary: { today: 0, total: 0, todayUV: 0, uv: 0, countries: 0 } as any, hourlySum: [] as any[], hourlyAvg: [] as any[], dailyData: [] as any[], geoData: [] as any[], browserData: [] as any[], osData: [] as any[], deviceData: [] as any[], projectData: [] as any[], pageData: [] as any[], pagePaths: [] as any[] };
         return (
         <>
           {/* ── Overview stats (range-aware) + cumulative ── */}
@@ -523,8 +523,14 @@ function pathToBreadcrumb(path: string): string {
           <div className="card" style={{ marginBottom: "1.5rem" }}>
             <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "0.5rem" }}>热门页面</h3>
             {(() => {
-              const isRes = (p: string) => /\.(js|ttf|woff2?|css|png|jpe?g|gif|svg|ico|webp|json|map|txt|xml|php|asp|aspx|jsp|cgi)(\?|$)/i.test(p) || p.startsWith('/_next/') || /\/(php_info|wp-|xmlrpc)\./.test(p);
-              const pages = _a.pageData.filter((p: any) => !isRes(p.path)).slice(0, 30);
+              // 使用服务端过滤好的 pagePaths（基于路由架构 isPage + 静态资源排除）
+              // 兼容旧数据：如果 pagePaths 不存在，回退到客户端过滤
+              const pages = _a.pagePaths && _a.pagePaths.length > 0
+                ? _a.pagePaths.slice(0, 30)
+                : _a.pageData.filter((p: any) => {
+                    const isRes = (p: string) => /\.(js|ttf|woff2?|css|png|jpe?g|gif|svg|ico|webp|json|map|txt|xml|php|asp|aspx|jsp|cgi)(\?|$)/i.test(p) || p.startsWith('/_next/') || /\/(php_info|wp-|xmlrpc)\./.test(p);
+                    return !isRes(p.path);
+                  }).slice(0, 30);
               return pages.length > 0 ? (
                 <div>
                   {/* Column headers */}

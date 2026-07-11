@@ -81,15 +81,34 @@ function padStart(s: string, minLen: number): string {
   return s;
 }
 
-/** Infer project name from a request path. */
-function inferProject(path: string): string {
-  if (path.startsWith("/admin/")) return "admin";
-  if (path.startsWith("/api/")) return "api";
-  // Portal: /{locale}/c/... or /c/...
-  if (path.startsWith("/c/") || /^\/[a-z]{2}\/c\//.test(path)) return "portal";
-  // Blog: /{locale}/blog/... or /blog/...
-  if (path.startsWith("/blog/") || /^\/[a-z]{2}\/blog\//.test(path)) return "blog";
-  return "site";
+/**
+ * 路由架构识别 —— 判断一个请求路径属于哪个子站。
+ *
+ * 返回值：
+ *   project  子站标识（admin / api / portal / blog / site）
+ *   isPage   该子站的页面路径是否应计入「热门页面」
+ *     true  → 面向用户的页面（官网/Portal/博客），进入热门页面榜单
+ *     false → 内部或非页面（管理后台/API），不计入热门页面
+ *
+ * 注意：「热门路径」不受 isPage 影响，它展示所有路径（含 admin/API）。
+ *
+ * ════════════════════════════════════════════════════
+ * 【⚠️ 新增子站时必须做的操作】
+ * 加一行 return 时，必须根据该子站是否对外提供页面来决定 isPage 的值。
+ * 如果不确定，与管理者确认。
+ * ════════════════════════════════════════════════════
+ */
+export function inferProject(path: string): { project: string; isPage: boolean } {
+  // 管理后台 — 内部页面，不计入对外热门页面
+  if (path.startsWith("/admin/")) return { project: "admin", isPage: false };
+  // API 端点 — 非页面，不计入热门页面
+  if (path.startsWith("/api/")) return { project: "api", isPage: false };
+  // 用户站（Portal）— 对外页面，计入热门页面
+  if (path.startsWith("/c/") || /^\/[a-z]{2}\/c\//.test(path)) return { project: "portal", isPage: true };
+  // 博客站 — 对外页面，计入热门页面
+  if (path.startsWith("/blog/") || /^\/[a-z]{2}\/blog\//.test(path)) return { project: "blog", isPage: true };
+  // 官网主站（Site）— 对外页面，计入热门页面
+  return { project: "site", isPage: true };
 }
 
 // ── Fetch functions ──────────────────────────────────────────────
@@ -273,7 +292,7 @@ export async function fetchAggregateStatsRange(
             zones(filter: {zoneTag: "${zoneId}"}) {
               httpRequestsAdaptiveGroups(
                 limit: 10000,
-                filter: {datetime_geq: "${date}T00:00:00Z", datetime_lt: "${date}T23:59:59Z"}
+                filter: {datetime_geq: "${date}T00:00:00Z", datetime_lt: "${date}T23:59:59Z", clientRequestHTTPStatus: "200"}
               ) {
                 dimensions { date clientRequestPath userAgentOS clientDeviceType }
                 count
@@ -319,7 +338,7 @@ export async function fetchAggregateStatsRange(
         const path = dims.clientRequestPath || "";
         if (path) {
           pathMap.set(path, (pathMap.get(path) || 0) + cnt);
-          const project = inferProject(path);
+          const { project } = inferProject(path);
           projectMap.set(project, (projectMap.get(project) || 0) + cnt);
         }
 

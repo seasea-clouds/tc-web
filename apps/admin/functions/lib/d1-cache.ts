@@ -109,9 +109,9 @@ export function isPagePath(path: string): boolean {
   const clean = path.replace(/\/+$/, "");
   if (clean.startsWith("/_next/") || clean.startsWith("/__nextjs")) return false;
 
-  // 第 3 步：排除已知的静态资源文件扩展名
+  // 第 3 步：排除已知的静态资源文件扩展名和扫描器文件
   if (
-    /\.(js|css|png|jpe?g|gif|svg|ico|webp|avif|ttf|woff2?|eot|otf|json|xml|map|txt)(\?|$)/i.test(
+    /\.(js|css|png|jpe?g|gif|svg|ico|webp|avif|ttf|woff2?|eot|otf|json|xml|map|txt|php|phar|phtml|asp|aspx|jsp|log|bak|sql|env|conf|ini|yml|yaml|md)(\?|$)/i.test(
       clean,
     )
   ) {
@@ -124,6 +124,19 @@ export function isPagePath(path: string): boolean {
     clean.startsWith("/images/") ||
     clean.startsWith("/assets/") ||
     clean === "/favicon.ico"
+  ) {
+    return false;
+  }
+
+  // 第 5 步：排除隐藏文件和已知扫描器/攻击路径
+  if (
+    clean.startsWith("/.") || // 隐藏文件 /.env, /.ssmtp.conf 等
+    clean.startsWith("/wp-") || // WordPress 扫描
+    clean.startsWith("/php") || // PHP 探针/信息扫描
+    clean.startsWith("/xmlrpc") || // XML-RPC 扫描
+    clean.startsWith("//") || // 双斜杠路径（扫描器常见特征）
+    clean === "/crossdomain.xml" ||
+    clean === "/clientaccesspolicy.xml"
   ) {
     return false;
   }

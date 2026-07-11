@@ -50,8 +50,6 @@ export interface AggregateStats {
   pathData: { path: string; count: number }[];
   /** [{project, count}, …] — inferred from path prefixes */
   projectData: { project: string; count: number }[];
-  /** [{browser, count}, …] — from uaBrowserFamily dimension */
-  browserData: { browser: string; count: number }[];
 }
 
 // ── Helpers ──────────────────────────────────────────────────────
@@ -296,7 +294,7 @@ export async function fetchAggregateStatsRange(
                 limit: 10000,
                 filter: {datetime_geq: "${date}T00:00:00Z", datetime_lt: "${date}T23:59:59Z"}
               ) {
-                dimensions { date clientRequestPath userAgentOS clientDeviceType uaBrowserFamily clientRequestHTTPStatus }
+                dimensions { date clientRequestPath userAgentOS clientDeviceType clientRequestHTTPStatus }
                 count
               }
             }
@@ -331,15 +329,11 @@ export async function fetchAggregateStatsRange(
       const pathMap = new Map<string, number>();
       const osMap = new Map<string, number>();
       const deviceMap = new Map<string, number>();
-      const browserMap = new Map<string, number>();
       const projectMap = new Map<string, number>();
 
       for (const g of groups) {
         const dims = g.dimensions || {};
         const cnt = g.count || 0;
-
-        // 仅统计 HTTP 200 的请求（CF Free 不支持 filter，改在服务端过滤）
-        if (dims.clientRequestHTTPStatus !== "200") continue;
 
         const path = dims.clientRequestPath || "";
         if (path) {
@@ -357,11 +351,6 @@ export async function fetchAggregateStatsRange(
         if (device) {
           deviceMap.set(device, (deviceMap.get(device) || 0) + cnt);
         }
-
-        const browser = dims.uaBrowserFamily || "Unknown";
-        if (browser) {
-          browserMap.set(browser, (browserMap.get(browser) || 0) + cnt);
-        }
       }
 
       result.set(d, {
@@ -371,9 +360,6 @@ export async function fetchAggregateStatsRange(
         deviceData: Array.from(deviceMap.entries())
           .sort((a, b) => b[1] - a[1])
           .map(([device, count]) => ({ device, count })),
-        browserData: Array.from(browserMap.entries())
-          .sort((a, b) => b[1] - a[1])
-          .map(([browser, count]) => ({ browser, count })),
         pathData: Array.from(pathMap.entries())
           .sort((a, b) => b[1] - a[1])
           .slice(0, 30)

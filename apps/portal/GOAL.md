@@ -32,22 +32,9 @@
 | **跨境电商** | 品类、平台 | 合规要求 + 所需材料 |
 | **品牌保护** | 商标、品类 | 保护策略 + 注册建议 |
 
-## 已知问题（待修复）
+## 已知问题
 
-### 1. 多语言不全
-- 6 个 check-client.tsx 中大量文本（标题、label、placeholder）硬编码为英文
-- Check 命名空间下的翻译仅填充了少数字段（zh.json 中 100+ key 仍是英文原文）
-- 表单页面的 `<h1>`、`<p>`、label、placeholder 等使用 `t()` 时 key 在 .json 中未翻译
-
-### 2. 检查流水线未发现问题
-- `check-hardcoded.mjs`：扫描 JSX 文本子节点，但 label 标签外文本或动态渲染可能漏检
-- `check-translations.mjs`：只检查 messages JSON，不检查 .tsx 文件中漏调 `t()` 的地方
-- **两个脚本之间存在盲区：messages 有 key 但值为英文原文 → check-translations 应报 fallback 但 IGNORE_FALLBACK 规则豁免过多**
-
-### 3. 提交后页面不跳转
-- 提交表单后 `handlePayment` 会执行 `window.location.href = "/" + window.location.pathname.split('/')[1] + "/c/report/?id=" + reportId;`
-- 但在 portal 独立域名上，这会导致跳转到 portal 本身而非主站
-- 且在开发模式下 `fetch('/api/report/save')` 可能失败
+- 无
 
 ## 品牌一致
 

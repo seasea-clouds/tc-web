@@ -83,15 +83,12 @@ function padStart(s: string, minLen: number): string {
 
 /** Infer project name from a request path. */
 function inferProject(path: string): string {
-  if (path.startsWith("/c/") || path.includes("/c/")) return "portal";
-  if (path.startsWith("/en/c/") || path.startsWith("/zh/c/")) return "portal";
   if (path.startsWith("/admin/")) return "admin";
-  if (path.startsWith("/blog/")) return "blog";
   if (path.startsWith("/api/")) return "api";
-  // Portal also has paths like /{locale}/c/...
-  if (/^\/[a-z]{2}\/c\//.test(path)) return "portal";
-  // Blog paths: /{locale}/blog/...
-  if (/^\/[a-z]{2}\/blog\//.test(path)) return "blog";
+  // Portal: /{locale}/c/... or /c/...
+  if (path.startsWith("/c/") || /^\/[a-z]{2}\/c\//.test(path)) return "portal";
+  // Blog: /{locale}/blog/... or /blog/...
+  if (path.startsWith("/blog/") || /^\/[a-z]{2}\/blog\//.test(path)) return "blog";
   return "site";
 }
 

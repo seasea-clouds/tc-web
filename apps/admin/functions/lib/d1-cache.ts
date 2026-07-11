@@ -15,6 +15,7 @@ import {
   fetchDailyStats,
   fetchHourlyStats,
   fetchAggregateStatsRange,
+  inferProject,
   type HourlyStats,
 } from "./cf-analytics";
 
@@ -40,6 +41,8 @@ interface DailyRow {
   os_data: string;
   device_data: string;
   page_data: string;
+  /** JSON array of page-only paths (filtered by routing architecture) */
+  page_paths: string;
   project_data: string;
   source: string;
 }
@@ -80,6 +83,54 @@ export function safeJSON<T>(json: string, fallback: T): T {
   }
 }
 
+/**
+ * 判断一个请求路径是否为面向用户的页面路径（用于「热门页面」榜单）。
+ *
+ * 判断逻辑（按顺序）：
+ * 1. 根据 inferProject() 识别路由架构，排除非页面的子站（admin、api）
+ * 2. 排除静态资源文件（带已知后缀的）
+ * 3. 排除 Next.js 内部路径（_next、__nextjs）
+ * 4. 排除常见的静态资源目录（fonts、images）
+ *
+ * 「热门路径」不受此函数影响，它展示所有路径的原始请求次数。
+ * 此函数仅用于从全部路径中筛选出「页面」路径，存入 page_paths 字段。
+ *
+ * ════════════════════════════════════════════════════════
+ * 【⚠️ 新增子站时】不需要改这里，只需在 inferProject()
+ * 中添加一行并正确设置 isPage 即可，此函数自动继承。
+ * ════════════════════════════════════════════════════════
+ */
+export function isPagePath(path: string): boolean {
+  // 第 1 步：路由架构识别 —— 排除非页面子站（admin/api）
+  const { isPage } = inferProject(path);
+  if (!isPage) return false;
+
+  // 第 2 步：排除 Next.js 内部路径
+  const clean = path.replace(/\/+$/, "");
+  if (clean.startsWith("/_next/") || clean.startsWith("/__nextjs")) return false;
+
+  // 第 3 步：排除已知的静态资源文件扩展名
+  if (
+    /\.(js|css|png|jpe?g|gif|svg|ico|webp|avif|ttf|woff2?|eot|otf|json|xml|map|txt)(\?|$)/i.test(
+      clean,
+    )
+  ) {
+    return false;
+  }
+
+  // 第 4 步：排除已知的静态资源目录（这些目录下不可能有页面）
+  if (
+    clean.startsWith("/fonts/") ||
+    clean.startsWith("/images/") ||
+    clean.startsWith("/assets/") ||
+    clean === "/favicon.ico"
+  ) {
+    return false;
+  }
+
+  return true;
+}
+
 // ── D1 Schema Migration ──────────────────────────────────────────
 
 export async function runMigration(env: CacheEnv): Promise<void> {
@@ -114,7 +165,7 @@ export async function runMigration(env: CacheEnv): Promise<void> {
     // Safe ALTER TABLE for columns that might not exist
     `ALTER TABLE daily_page_stats ADD COLUMN page_data TEXT DEFAULT '[]'`,
     `ALTER TABLE daily_page_stats ADD COLUMN project_data TEXT DEFAULT '[]'`,
-    `ALTER TABLE daily_page_stats ADD COLUMN os_data TEXT DEFAULT '[]'`,
+    `ALTER TABLE daily_page_stats ADD COLUMN page_paths TEXT DEFAULT '[]'`,
     `ALTER TABLE daily_page_stats ADD COLUMN device_data TEXT DEFAULT '[]'`,
   ];
   for (const sql of statements) {
@@ -230,13 +281,17 @@ export async function ensureDailyCFCache(env: CacheEnv): Promise<string> {
       const aggMap = await fetchAggregateStatsRange(zoneId, token, firstDate, lastDate);
       for (const [date, agg] of Array.from(aggMap.entries())) {
         try {
+          // 从全部路径中过滤出仅页面路径（基于路由架构 isPage + 静态资源排除）
+          const pagePaths = agg.pathData.filter((p) => isPagePath(p.path));
+
           await env.DB.prepare(
             `UPDATE daily_page_stats
-             SET page_data = ?, os_data = ?, device_data = ?, project_data = ?
+             SET page_data = ?, page_paths = ?, os_data = ?, device_data = ?, project_data = ?
              WHERE date = ? AND source = 'cf_api'`,
           )
             .bind(
               JSON.stringify(agg.pathData),
+              JSON.stringify(pagePaths),
               JSON.stringify(agg.osData),
               JSON.stringify(agg.deviceData),
               JSON.stringify(agg.projectData),

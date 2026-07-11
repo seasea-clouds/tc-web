@@ -59,6 +59,12 @@ function yesterdayUTC(): string {
   return d.toISOString().slice(0, 10);
 }
 
+function nextDate(date: string): string {
+  const d = new Date(date + "T00:00:00Z");
+  d.setUTCDate(d.getUTCDate() + 1);
+  return d.toISOString().slice(0, 10);
+}
+
 function formatISO(date: string, hour: number): string {
   const h = String(hour).padStart(2, "0");
   return `${date}T${h}:00:00Z`;
@@ -346,9 +352,13 @@ export async function ensureHourlyCFCache(env: CacheEnv): Promise<void> {
 
     if (missingHours.length > 0) {
       const startHour = Math.min(...missingHours);
-      const endHour = Math.max(...missingHours) + 1;
       const startISO = formatISO(today, startHour);
-      const endISO = formatISO(today, endHour);
+      const endHour = Math.max(...missingHours) + 1;
+      // Use nextDate() for end hour to avoid T24:00:00Z (invalid ISO 8601)
+      const endISO =
+        endHour < 24
+          ? formatISO(today, endHour)
+          : formatISO(nextDate(today), 0);
 
       try {
         const hourlyStats = await fetchHourlyStats(zoneId, token, startISO, endISO);
@@ -370,6 +380,8 @@ export async function ensureHourlyCFCache(env: CacheEnv): Promise<void> {
 
   // ── Step 2: Historical hourly backfill (within CF ~3-day retention) ──
   // httpRequests1hGroups Free plan retention is ~3 days
+  // We query each date INDIVIDUALLY so a single out-of-retention date
+  // doesn't cause all other dates to fail.
   const retentionDays = 3;
   const cutoff = new Date(now.getTime() - retentionDays * 86400000);
   const cutoffDate = cutoff.toISOString().slice(0, 10);
@@ -386,27 +398,30 @@ export async function ensureHourlyCFCache(env: CacheEnv): Promise<void> {
 
   if (historicalDates.length === 0) return;
 
-  // Batch-fetch all hourly data for the retention window in one call
-  const earliestDate = historicalDates[0];
-  const startISO = formatISO(earliestDate, 0);
-  const endISO = formatISO(today, 0);
+  // Query each date individually so retention-expired dates fail gracefully
+  for (const date of historicalDates) {
+    const startISO = formatISO(date, 0);
+    const endISO = formatISO(nextDate(date), 0);
+    // endISO uses nextDate() because formatISO(date, 24) produces
+    // invalid ISO 8601 (T24:00:00Z)
 
-  try {
-    const hourlyStats = await fetchHourlyStats(zoneId, token, startISO, endISO);
-    for (const hs of hourlyStats) {
-      // INSERT OR REPLACE handles both new and previously-cached rows
-      await env.DB.prepare(
-        `INSERT OR REPLACE INTO hourly_page_stats (date, hour, pv, uv, requests)
-         VALUES (?, ?, ?, ?, ?)`,
-      )
-        .bind(hs.date, hs.hour, hs.pv, hs.uv, hs.requests)
-        .run();
+    try {
+      const hourlyStats = await fetchHourlyStats(zoneId, token, startISO, endISO);
+      for (const hs of hourlyStats) {
+        await env.DB.prepare(
+          `INSERT OR REPLACE INTO hourly_page_stats (date, hour, pv, uv, requests)
+           VALUES (?, ?, ?, ?, ?)`,
+        )
+          .bind(hs.date, hs.hour, hs.pv, hs.uv, hs.requests)
+          .run();
+      }
+      if (hourlyStats.length > 0) {
+        console.log(`[d1-cache] hourly backfill: ${date} → ${hourlyStats.length} hours`);
+      }
+    } catch (err) {
+      // Date outside retention — skip silently
+      console.log(`[d1-cache] hourly backfill skipped for ${date} (out of retention): ${err}`);
     }
-  } catch (err) {
-    console.error(
-      `[d1-cache] historical hourly backfill failed for ${earliestDate}~${today}:`,
-      err,
-    );
   }
 }
 

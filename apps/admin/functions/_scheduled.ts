@@ -5,7 +5,6 @@
  * Environment variables configured in CF Pages Dashboard:
  *   - CLOUDFLARE_API_TOKEN
  *   - CLOUDFLARE_ZONE_ID
- * Last updated: 2026-07-12 15:15 CST
  */
 
 import { ensureDailyCFCache, ensureHourlyCFCache } from "./lib/d1-cache";

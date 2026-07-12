@@ -25,7 +25,7 @@ export default function ContactForm() {
           <input
             type="hidden"
             name="access_key"
-            value="b1e6d34d-9fdc-4dc1-9bb2-6fc9090b361c"
+            value={process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY}
           />
           <input
             type="hidden"

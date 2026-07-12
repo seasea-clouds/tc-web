@@ -5,6 +5,10 @@
  * Environment variables configured in CF Pages Dashboard:
  *   - CLOUDFLARE_API_TOKEN
  *   - CLOUDFLARE_ZONE_ID
+ * NOTE: This file must be deployed via git push (CF Pages build pipeline).
+ * Direct wrangler pages deploy bypasses the build step and will NOT
+ * register the cron schedule export. Cloudflare needs the Pages build
+ * pipeline to extract the schedule config from _scheduled.ts.
  */
 
 import { ensureDailyCFCache, ensureHourlyCFCache } from "./lib/d1-cache";

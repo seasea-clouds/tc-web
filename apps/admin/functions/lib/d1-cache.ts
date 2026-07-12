@@ -292,7 +292,7 @@ export async function ensureDailyCFCache(env: CacheEnv): Promise<string> {
       for (const [date, agg] of Array.from(aggMap.entries())) {
         try {
           // 从全部路径中过滤出仅页面路径（基于路由架构 isPage + 静态资源排除）
-          const pagePaths = agg.pathData.filter((p) => isPagePath(p.path));
+          const pagePaths = agg.pathData.filter((p) => isPagePath(p.path)).slice(0, 30);
 
           await env.DB.prepare(
             `UPDATE daily_page_stats

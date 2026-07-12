@@ -137,16 +137,22 @@ const SEGMENT_LABELS: Record<string, string> = {
   'contact': '联系方式',
   'faq': '常见问题',
   'payments': '支付',
+  // ── Root / Locale-only ──
+  '__home__': '首页',
+  // ── Blog article slugs ──
+  'gacc-registration-guide': 'GACC 注册指南',
+  'ccc-certification-guide': 'CCC 认证指南',
+  'china-import-requirements': '中国进口要求',
 };
 
 /** Parse a URL path into a breadcrumb-like segment array (locale-aware) */
 function pathToBreadcrumb(path: string): string {
   const segs = path.replace(/\/+$/, '').split('/').filter(Boolean);
-  if (segs.length === 0) return 'Home';
+  if (segs.length === 0) return SEGMENT_LABELS['__home__'];
   // Skip locale prefix (en, zh, etc)
   const skipLocale = segs.length > 0 && /^[a-z]{2}$/.test(segs[0]);
   const bc = skipLocale ? segs.slice(1) : segs;
-  if (bc.length === 0) return 'Home';
+  if (bc.length === 0) return SEGMENT_LABELS['__home__'];
   return bc.map(s => SEGMENT_LABELS[s] || s.charAt(0).toUpperCase() + s.slice(1).replace(/[-_]/g, ' ')).join(' › ');
 }
 

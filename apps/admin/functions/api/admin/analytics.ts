@@ -22,7 +22,12 @@ import {
   readAllTimeTotals,
   safeJSON,
 } from "../../lib/d1-cache";
-import { type HourlyStats } from "../../lib/cf-analytics";
+import {
+  type HourlyStats,
+  fetchPageOnlyUniqueVisitors,
+  getZoneId,
+  getApiToken,
+} from "../../lib/cf-analytics";
 
 interface Env {
   DB: any;
@@ -173,6 +178,27 @@ export async function onRequest(context: { request: Request; env: Env }) {
       todayUV += h.uv || 0;
     }
     const hourlySum = fillHourly(hourlyMap);
+
+    // 5a. Override todayUV using page-view-only unique IPs from CF adaptive groups.
+    //     Uses clientIP + clientRequestPath dimensions, excludes scanner/attack/admin/static paths.
+    //     Falls back to hourly-sum UV (which may include scanners) if the query fails.
+    try {
+      const zoneId = getZoneId(context.env);
+      const token = getApiToken(context.env);
+      if (zoneId && token) {
+        const uniqueIps = await fetchPageOnlyUniqueVisitors(
+          zoneId,
+          token,
+          today + "T00:00:00Z",
+          today + "T23:59:59Z",
+        );
+        if (uniqueIps > 0) {
+          todayUV = uniqueIps;
+        }
+      }
+    } catch (e) {
+      console.error("[analytics] page-only UV fetch failed, using hourly sum:", e);
+    }
 
     // ─── RANGE: today ───
     if (range === "today") {

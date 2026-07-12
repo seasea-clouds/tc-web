@@ -90,3 +90,33 @@ GitHub 推送触发的自动构建持续失败（`clone_repo` 成功但 `build` 
 - 已通过 CF API 更新为精确路径列表
 - 但设置后**构建 Runner 忽略 Admin 的所有构建**（卡在 `queued/idle`），回退到 `['*']` 后恢复
 - ⚠️ CF Pages 免费版对 `path_includes` 的非通配符支持有问题，暂维持 `['*']`
+
+### Standalone Worker — `_scheduled.ts` 踩坑（2026-07-12）
+
+**背景：** Analytics cron 定时任务需要每小时同步 CF Analytics → D1。
+
+**第一次尝试：** `functions/_scheduled.ts`（Pages Function，`config.schedule = "0 * * * *"`）
+- 通过 git push → CF Pages 构建部署
+- 构建成功（`uses_functions=True`），cron schedule 看似正确注册
+- **问题：** 新版部署覆盖后，cron schedule **丢失**（08:00 和 09:00 UTC 均未触发）
+- 回滚到旧版后 cron 恢复正常 → 确认新版部署未正确注册 schedule
+- 换用 `wrangler pages deploy` 直接上传 → `fn=False`（函数未编译），更不可靠
+
+**结论：** CF Pages 构建流水线无法可靠地从 `_scheduled.ts` 提取 cron schedule。
+
+**最终方案：** 改用独立 Standalone Worker
+```
+apps/admin/workers/analytics-cron/
+├── package.json
+├── wrangler.toml      # triggers.crons = ["0 * * * *"]
+└── src/index.ts       # 导出 scheduled handler
+```
+- `wrangler deploy` **始终**正确注册 cron schedule
+- 代码与 `_scheduled.ts` 共享相同的 `functions/lib/` 库函数
+- 部署仅需 3 秒，不经过 Pages 构建队列
+- `_scheduled.ts` 保留为无副作用的冗余触发
+- 代码提交到 GitHub 仓库备份，但部署永远用 `wrangler deploy`
+- 修改代码流程：
+  1. 修改 `src/index.ts` 或共享库文件
+  2. `git add/commit/push`（备份到 GitHub）
+  3. `cd apps/admin/workers/analytics-cron && npx wrangler deploy`（部署到生产）

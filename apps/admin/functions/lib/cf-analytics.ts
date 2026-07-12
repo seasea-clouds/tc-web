@@ -362,7 +362,7 @@ export async function fetchAggregateStatsRange(
           .map(([device, count]) => ({ device, count })),
         pathData: Array.from(pathMap.entries())
           .sort((a, b) => b[1] - a[1])
-          .slice(0, 30)
+          .slice(0, 500)
           .map(([path, count]) => ({ path, count })),
         projectData: Array.from(projectMap.entries())
           .sort((a, b) => b[1] - a[1])

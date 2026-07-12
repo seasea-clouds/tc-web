@@ -121,3 +121,24 @@ apps/admin/workers/analytics-cron/
   1. 修改 `src/index.ts` 或共享库文件
   2. `git add/commit/push`（备份到 GitHub）
   3. `cd apps/admin/workers/analytics-cron && npx wrangler deploy`（部署到生产）
+
+## 环境变量管理（2026-07-12）
+
+### 原则
+每个 CF Pages 项目只注入它实际需要的最少环境变量。
+
+### 各项目注入清单
+
+| 项目 | 必要变量 | 说明 |
+|------|---------|------|
+| trade-web-admin | ADMIN_JWT_SECRET, TURNSTILE_SECRET_KEY | 登录认证 |
+| trade-web-portal | CREEM_API_KEY, CREEM_PRODUCT_ID_SINGLE, CREEM_PRODUCT_ID_SUBSCRIBE, CREEM_WEBHOOK_SECRET, EMAIL_FROM, JWT_SECRET, RESEND_API_KEY, TURNSTILE_SECRET_KEY | 支付、邮件、认证 |
+| trade-web-site | NODE_VERSION, UPSTREAM_BLOG, UPSTREAM_PORTAL, NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY | Edge Worker 代理 + 联系表单 |
+| trade-web-blog | NODE_VERSION, NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY | 联系表单 |
+
+### 本地开发
+所有环境变量放在 `~/.openclaw/.env`。.env.example 在 monorepo 根目录，列出所有变量但不含实际值。
+
+### 部署管控
+- Cloudflare Dashboard 中的 CLOUDFLARE_API_TOKEN / CLOUDFLARE_ZONE_ID 仅用于 analytics-cron 独立 Worker（通过 `wrangler secret put` 设置）
+- 代码中已移除硬编码的 Web3Forms access_key，改用 `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` 环境变量注入

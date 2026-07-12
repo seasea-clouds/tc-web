@@ -523,7 +523,7 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
             <h2 className="text-2xl md:text-3xl font-bold text-[#333333] mb-3 text-center">{cf('title', 'Free Compliance Assessment')}</h2>
             <p className="text-[#5F6F7F] mb-8 leading-relaxed">{cf('subtitle', "Tell us about your products and we'll provide a personalized compliance roadmap.")}</p>
             <form className="w-full max-w-lg mx-auto bg-white rounded-xl border border-gray-200 p-6 sm:p-8 shadow-sm" action="https://api.web3forms.com/submit" method="POST">
-              <input type="hidden" name="access_key" value="b1e6d34d-9fdc-4dc1-9bb2-6fc9090b361c" />
+              <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY} />
               <input type="hidden" name="subject" value="🔥 New Inquiry — SinoTrade Website" />
               <input type="hidden" name="from_name" value="SinoTrade Website" />
               <input type="checkbox" className="hidden" style={{ display: 'none' }} name="botcheck" />

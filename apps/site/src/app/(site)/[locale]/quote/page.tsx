@@ -50,7 +50,7 @@ export default async function QuotePage({ params }: { params: Promise<{ locale: 
             method="POST"
             className="bg-white rounded-xl shadow-lg p-6 sm:p-10"
           >
-            <input type="hidden" name="access_key" value="b1e6d34d-9fdc-4dc1-9bb2-6fc9090b361c" />
+            <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY} />
             <input type="hidden" name="from_name" value="SinoTrade Quote Form" />
             <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
             <input type="hidden" name="redirect" value={`https://sinotradecompliance.com/${resolvedParams.locale}/thank-you`} />

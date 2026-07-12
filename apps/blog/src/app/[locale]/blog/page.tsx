@@ -110,7 +110,7 @@ export default async function BlogHome({ params }: { params: Promise<{ locale: s
             {tb('contactDesc', 'Tell us about your products and we\u2019ll provide a personalized compliance roadmap.')}
           </p>
           <form className="w-full max-w-md mx-auto bg-white rounded-xl border border-gray-200 p-6 sm:p-8 shadow-sm" action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="b1e6d34d-9fdc-4dc1-9bb2-6fc9090b361c" />
+            <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY} />
             <input type="hidden" name="subject" value="🔥 New Inquiry — SinoTrade Website" />
             <input type="hidden" name="from_name" value="SinoTrade Website" />
             <input type="checkbox" className="hidden" style={{ display: 'none' }} name="botcheck" />

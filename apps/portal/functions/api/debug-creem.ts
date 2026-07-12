@@ -71,7 +71,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
     status: 200,
     headers: {
       "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Origin": "https://sinotradecompliance.com",
     },
   });
 }

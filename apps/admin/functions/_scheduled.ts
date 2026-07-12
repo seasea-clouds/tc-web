@@ -54,5 +54,3 @@ export async function onRequest(context: { request: Request; env: Env }) {
 export const config = {
   schedule: "0 * * * *",
 };
-
-// Deploy trigger: 2026-07-12T07:42:07Z

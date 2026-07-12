@@ -143,6 +143,16 @@ const SEGMENT_LABELS: Record<string, string> = {
   'gacc-registration-guide': 'GACC 注册指南',
   'ccc-certification-guide': 'CCC 认证指南',
   'china-import-requirements': '中国进口要求',
+  // ── Site pages ──
+  'privacy': '隐私政策',
+  'terms': '服务条款',
+  // ── Industry pages ──
+  'skincare-cosmetics': '护肤与化妆品',
+  // ── Blog articles ──
+  'cosmetics-nmpa-filing': '化妆品 NMPA 备案',
+  'china-label-compliance': '中文标签合规',
+  // ── Industry pages ──
+  'medical-devices': '医疗器械',
 };
 
 /** Parse a URL path into a breadcrumb-like segment array (locale-aware) */

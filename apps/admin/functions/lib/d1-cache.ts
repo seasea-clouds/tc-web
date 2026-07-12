@@ -125,7 +125,22 @@ export function isPagePath(path: string): boolean {
     clean.startsWith("/wp-") || // WordPress 扫描
     clean.startsWith("/php") || // PHP 探针/信息扫描
     clean.startsWith("/xmlrpc") || // XML-RPC 扫描
-    clean.startsWith("//") // 双斜杠路径（扫描器常见特征）
+    clean.startsWith("//") || // 双斜杠路径（扫描器常见特征）
+    clean.startsWith("/components/") || // Joomla 组件路径（扫描）
+    clean.startsWith("/themes/") || // WordPress 主题路径（扫描）
+    clean.startsWith("/plugins/") || // WordPress 插件路径（扫描）
+    clean.startsWith("/modules/") || // CMS 模块路径（扫描）
+    clean.startsWith("/includes/") || // CMS include 路径（扫描）
+    clean.startsWith("/vendor/") || // PHP Vendor 路径（扫描）
+    clean.startsWith("/node_modules/") || // npm 路径（扫描）
+    clean.startsWith("/tmp/") || // 临时目录（扫描）
+    clean.startsWith("/cache/") || // 缓存目录（扫描）
+    clean.startsWith("/backup/") || // 备份目录（扫描）
+    clean.startsWith("/config/") || // 配置文件（扫描）
+    clean.startsWith("/debug/") || // 调试端点（扫描）
+    clean.startsWith("/files/") || // 文件列表（扫描）
+    clean.startsWith("/ALFA_DATA/") || // ALFA 恶意扫描
+    clean.startsWith("/assets/") // 静态资源目录（非页面）
   ) {
     return false;
   }

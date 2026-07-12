@@ -1,0 +1,23 @@
+# wrangler.toml template for trade-web-admin-analytics-cron Worker
+# 
+# To deploy:
+#   1. Copy this file: cp wrangler.toml.example wrangler.toml
+#   2. Fill in the D1 database ID from your Cloudflare Dashboard
+#   3. Run: npx wrangler deploy
+#
+# Or use the deploy script:
+#   ./scripts/deploy-analytics-cron.sh
+
+name = "trade-web-admin-analytics-cron"
+main = "src/index.ts"
+compatibility_date = "2026-05-23"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "trade-web-admin"
+# database_id is set via environment variable D1_DATABASE_ID
+# or manually in the local wrangler.toml (not committed)
+# database_id = "your-d1-database-id-here"
+
+[triggers]
+crons = ["0 * * * *"]

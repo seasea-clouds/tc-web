@@ -22,3 +22,6 @@ apps/site/public/404.html
 apps/site/public/404/
 .turbo/cache/
 .turbo/turbo-build.log
+
+# Cloudflare Worker wrangler.toml with local database_id (not committed)
+apps/admin/workers/analytics-cron/wrangler.toml

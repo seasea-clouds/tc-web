@@ -1,22 +1,19 @@
 /**
- * Analytics API — CF GraphQL with D1 caching.
+ * Analytics API — pure D1 reader.
  * GET /api/admin/analytics?range=today|7d|30d&start_date=&end_date=
  *
  * Data flow:
- *   1. Auto-migrate D1 schema (idempotent)
- *   2. Backfill missing historical daily data from CF → D1 cache
- *   3. Backfill today's completed hours from CF → D1 cache
- *   4. Read all data from D1, build response
+ *   1. Run D1 schema migration (idempotent)
+ *   2. Read all data from D1, build response
  *
- * Historical data is fetched once and cached forever.
- * Today's hourly data is fetched incrementally as hours complete.
+ * Backfill (CF → D1) is handled by trade-web-admin-analytics-cron Worker
+ * (@ 0 * * * * UTC). If data is temporarily stale during cron deployment
+ * window, the API gracefully returns whatever D1 currently has.
  */
 
 import { requireAdmin } from "../../lib/admin-session";
 import {
   runMigration,
-  ensureDailyCFCache,
-  ensureHourlyCFCache,
   readDailyRange,
   readTodayHourly,
   readAllTimeTotals,
@@ -140,27 +137,11 @@ export async function onRequest(context: { request: Request; env: Env }) {
     // 1. Schema migration (idempotent)
     await runMigration(context.env);
 
-    // 2. Backfill — fetch missing historical daily data from CF → cache in D1
-    //    Errors are non-fatal; we still serve whatever D1 already has
-    let cacheError = "";
-    try {
-      cacheError = await ensureDailyCFCache(context.env);
-    } catch (e) {
-      cacheError = String(e);
-      console.error("[analytics] ensureDailyCFCache error:", e);
-    }
-
-    // 3. Backfill — fetch today's missing completed hours from CF → cache in D1
-    try {
-      await ensureHourlyCFCache(context.env);
-    } catch (e) {
-      console.error("[analytics] ensureHourlyCFCache error:", e);
-    }
-
-    // 4. Read all-time totals from D1
+    // 2. Read all-time totals from D1
+    //    Backfill is handled by trade-web-admin-analytics-cron (hourly cron Worker)
     const allTime = await readAllTimeTotals(context.env);
 
-    // 5. Read today's hourly data
+    // 3. Read today's hourly data
     const hourlyRows = await readTodayHourly(context.env, today);
 
     // Build hourly map

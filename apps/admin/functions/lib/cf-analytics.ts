@@ -394,6 +394,57 @@ export function getApiToken(env: any): string {
   return env.CLOUDFLARE_API_TOKEN || "";
 }
 
+/**
+ * Fetch unique visitors who viewed at least one page (excluding scanners/attacks).
+ * Queries httpRequestsAdaptiveGroups with clientIP + clientRequestPath,
+ * filters out scanner paths, non-page routes, and static assets.
+ *
+ * Returns the count of unique IPs from sampled data (~67%).
+ * Use for today's estimate; completed days use daily_page_stats.
+ */
+export async function fetchPageOnlyUniqueVisitors(
+  zoneId: string,
+  token: string,
+  startISO: string,
+  endISO: string,
+): Promise<number> {
+  const query = `{
+    viewer {
+      zones(filter: {zoneTag: "${zoneId}"}) {
+        httpRequestsAdaptiveGroups(
+          limit: 10000,
+          filter: {datetime_geq: "${startISO}", datetime_lt: "${endISO}"}
+        ) {
+          count
+          dimensions { clientIP clientRequestPath }
+        }
+      }
+    }
+  }`;
+
+  const data = await graphql(query, token);
+  const groups = data?.viewer?.zones?.[0]?.httpRequestsAdaptiveGroups || [];
+
+  // Same exclusion patterns as d1-cache.ts isPagePath (duplicated to avoid circular dep)
+  const scannerRe = /(\/v1\/|\/w1php|\/php|\/xmlrpc|\/\/|\/wp-|^\.|\/\.git|\/\.aws|\/\.htaccess|\/wp-includes|\/wp-content)/;
+  const adminApiRe = /(^\/admin\/|^\/api\/)/;
+  const staticRe = /(\.css$|\.js$|\.png$|\.jpg$|\.gif$|\.ico$|\.svg$|\.webp$|\.woff|\.ttf|\.eot|\.pdf$|\.zip$|\.map$|\/_next\/static|\/_next\/fonts|\/_next\/image)/;
+
+  const uniqueIPs = new Set<string>();
+
+  for (const g of groups) {
+    const ip = g?.dimensions?.clientIP;
+    const path = g?.dimensions?.clientRequestPath || "";
+    if (!ip) continue;
+    if (scannerRe.test(path)) continue;
+    if (adminApiRe.test(path)) continue;
+    if (staticRe.test(path)) continue;
+    uniqueIPs.add(ip);
+  }
+
+  return uniqueIPs.size;
+}
+
 export function hasConfig(env: any): boolean {
   return !!(env.CLOUDFLARE_ZONE_ID && env.CLOUDFLARE_API_TOKEN);
 }

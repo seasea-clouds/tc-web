@@ -31,10 +31,15 @@
   - 第一次请求：自动回填所有历史数据（从 2026-06-01 至今）
   - 后续请求：只补充未缓存的新数据（如新的一天或新完成的小时）
 - API 端点：`GET /api/admin/analytics?range=today|7d|30d`（支持自定义 `start_date`/`end_date`）
-- **定时回填**：`functions/_scheduled.ts`（Pages Function，cron: 0 * * * * UTC）
-  - 每小时整点自动补充缺失的小时/天数数据
-  - 随 admin Pages 项目一起自动部署（git push → CF Pages deploy）
-  - 无需独立 Worker，无需额外 CI 配置
+- **定时回填**：
+  - ~~`functions/_scheduled.ts`（Pages Function，cron: 0 * * * * UTC）~~
+  - ⚠️ CF Pages 构建流水线**不会**从 `_scheduled.ts` 的 `config.schedule` 导出中可靠提取 cron schedule
+  - 改用独立 Worker：`workers/analytics-cron/`（standalone Worker，`wrangler deploy`）
+    - 路径：`apps/admin/workers/analytics-cron/`
+    - 部署命令：`cd apps/admin/workers/analytics-cron && npx wrangler deploy`
+    - cron: `0 * * * *` UTC
+    - D1 绑定 + `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ZONE_ID` secrets（通过 `wrangler secret put` 设置）
+  - `_scheduled.ts` 保留在 Pages 项目中作为 fallback/冗余触发（idempotent，重复触发无害）
 - 环境变量（CF Pages 中配置）：
   - `CLOUDFLARE_ZONE_ID` — sinotradecompliance.com 的 Zone ID
   - `CLOUDFLARE_API_TOKEN` — 需要 `analytics:read` 权限

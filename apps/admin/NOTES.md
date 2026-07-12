@@ -116,6 +116,7 @@ apps/admin/workers/analytics-cron/
 - 部署仅需 3 秒，不经过 Pages 构建队列
 - `_scheduled.ts` 保留为无副作用的冗余触发
 - 代码提交到 GitHub 仓库备份，但部署永远用 `wrangler deploy`
+- **踩坑：** `CLOUDFLARE_ZONE_ID` 在 `.env` 中为空 → `wrangler secret put` 设置了空值，导致 Worker 启动 `hasConfig()` 返回 false，cron 静默失败。修复：设置正确的 ZONE_ID 后重新 `wrangler secret put`。
 - 修改代码流程：
   1. 修改 `src/index.ts` 或共享库文件
   2. `git add/commit/push`（备份到 GitHub）

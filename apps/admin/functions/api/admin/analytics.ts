@@ -6,9 +6,10 @@
  *   1. Run D1 schema migration (idempotent)
  *   2. Read all data from D1, build response
  *
- * Backfill (CF → D1) is handled by trade-web-admin-analytics-cron Worker
- * (@ 0 * * * * UTC). If data is temporarily stale during cron deployment
- * window, the API gracefully returns whatever D1 currently has.
+ * Backfill (CF → D1) is handled by the admin Pages Function
+ * (functions/_scheduled.ts, cron: 0 * * * * UTC).
+ * If data is temporarily stale during cron deployment window,
+ * the API gracefully returns whatever D1 currently has.
  */
 
 import { requireAdmin } from "../../lib/admin-session";

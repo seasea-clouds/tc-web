@@ -1256,6 +1256,97 @@ function checkSharedUiMessages(verbose = true) {
 }
 
 // ============================================================
+// 破折号一致性检查
+// 当英文值使用 EM DASH (—) 时，翻译也应使用 EM DASH (—) 或 EN DASH (–)
+// 不应使用 hyphen-minus (-) 替代
+// ============================================================
+
+function checkDashConsistency(verbose = true) {
+  // Only scan portal messages (where the bulk of compliance text lives)
+  if (!fs.existsSync(PORTAL_MESSAGES_DIR)) {
+    if (verbose) console.log(`\n─ 破折号一致性检查: ⏭️ 跳过 (${PORTAL_MESSAGES_DIR} 不存在)`);
+    return 0;
+  }
+
+  const enPath = path.join(PORTAL_MESSAGES_DIR, 'en.json');
+  if (!fs.existsSync(enPath)) return 0;
+  const enData = loadJSON(enPath);
+
+  // Collect EN keys with EM DASH in the Check namespace
+  const enCheck = enData.Check || {};
+  const enDashKeys = [];
+  for (const [k, v] of Object.entries(enCheck)) {
+    if (typeof v === 'string' && v.includes('\u2014')) {
+      enDashKeys.push(k);
+    }
+  }
+
+  if (enDashKeys.length === 0) {
+    if (verbose) console.log('\n─ 破折号一致性检查: ✅ 英文源无 EM DASH');
+    return 0;
+  }
+
+  const allLangs = fs.readdirSync(PORTAL_MESSAGES_DIR)
+    .filter(f => f.endsWith('.json') && f !== 'en.json' && !f.startsWith('_'))
+    .map(f => path.basename(f, '.json'))
+    .sort();
+
+  const HYPHEN = '-';
+  const EM_DASH = '\u2014';
+  const EN_DASH = '\u2013';
+
+  let totalIssues = 0;
+  const details = []; // [lang, key, translation_preview]
+
+  for (const lang of allLangs) {
+    const langPath = path.join(PORTAL_MESSAGES_DIR, `${lang}.json`);
+    if (!fs.existsSync(langPath)) continue;
+    const langData = loadJSON(langPath);
+    const langCheck = langData.Check || {};
+
+    for (const key of enDashKeys) {
+      const langVal = langCheck[key];
+      if (typeof langVal !== 'string' || langVal === '') continue;
+
+      // Already has EM DASH (—) or EN DASH (–) → correct
+      if (langVal.includes(EM_DASH) || langVal.includes(EN_DASH)) continue;
+
+      // Has hyphen-minus (-) → wrong, flag it
+      if (langVal.includes(HYPHEN)) {
+        // Only flag if hyphen is surrounded by spaces (functioning as a dash, not in a compound word)
+        // or if it's the only hyphen-like character
+        const hyphenSpacedCount = (langVal.match(/ - /g) || []).length;
+        const dashContextCount = (langVal.match(/[\s]-[\s]/g) || []).length;
+        if (hyphenSpacedCount > 0 || dashContextCount > 0) {
+          totalIssues++;
+          if (totalIssues <= 50) {
+            const preview = langVal.length > 80 ? langVal.substring(0, 77) + '...' : langVal;
+            details.push([lang, key, preview]);
+          }
+        }
+      }
+    }
+  }
+
+  if (verbose) {
+    console.log(`\n─ 破折号一致性检查 (EM DASH):`);
+    if (totalIssues === 0) {
+      console.log('  ✅ 全部通过 — 无 hyphen-minus 替代问题');
+    } else {
+      console.log(`  ⚠️  ${totalIssues} 处破折号使用了 hyphen-minus (-) 而非 EM DASH (—) 或 EN DASH (–):`);
+      for (const [lang, key, preview] of details.slice(0, 30)) {
+        console.log(`    [${lang}] ${key} → "${preview}"`);
+      }
+      if (details.length > 30) {
+        console.log(`    ... 还有 ${totalIssues - 30} 处`);
+      }
+    }
+  }
+
+  return totalIssues;
+}
+
+// ============================================================
 // 面包屑 key 完整性检查（从 AutoBreadcrumb.tsx 提取映射，验证所有 key 在 48 语言中存在）
 // ============================================================
 function extractBreadcrumbMappings() {
@@ -1410,8 +1501,9 @@ if (jsonOut && result) {
 
 const sharedUiIssues = checkSharedUiMessages(!short);
 const breadcrumbResult = (targetLang || args.includes('--skip-breadcrumb-check')) ? { total: 0, missing: [] } : checkBreadcrumbKeys(!short);
+const dashIssues = checkDashConsistency(!short);
 
-const totalIssues = (result?.total_issues ?? 0) + blogIssues + (localeCheck?.total ?? 0) + industryMetaIssues + portalIssues + sharedUiIssues + breadcrumbResult.total;
+const totalIssues = (result?.total_issues ?? 0) + blogIssues + (localeCheck?.total ?? 0) + industryMetaIssues + portalIssues + sharedUiIssues + breadcrumbResult.total + dashIssues;
 
 if (totalIssues === 0) {
   console.log('\n✅ 全量核验通过！48 种语言无质量问题。');
@@ -1437,6 +1529,9 @@ if (totalIssues === 0) {
   }
   if (breadcrumbResult.total > 0) {
     console.log(`   - 面包屑 key: ${breadcrumbResult.total} 处缺失`);
+  }
+  if (dashIssues > 0) {
+    console.log(`   - 破折号类型: ${dashIssues} 处使用了 hyphen-minus (-) 而非 EM DASH (—) 或 EN DASH (–)`);
   }
   if (process.argv.includes("--ci")) process.exit(1);
 }

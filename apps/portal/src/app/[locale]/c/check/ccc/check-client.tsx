@@ -1,20 +1,25 @@
 "use client";
 
-import { useT, useTradeLocale, WHATSAPP_URL } from '@trade/ui';
+import { useT, useTradeLocale, WHATSAPP_URL, useMessages } from '@trade/ui';
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { checkCcc, CATEGORY_LABELS } from "../../../../../../modules/ccc/rules";
 import { API_BASE } from "@/lib/constants";
 import { useFormValidation, inputClasses, selectClasses } from "@/lib/useFormValidation";
 import { usePathPrefix } from '@/lib/useSubsiteHref';
 import { initiateCheckout } from '@/lib/checkout';
 import { useSubscription } from '@/lib/useSubscription';
+import { setLocaleData } from '../../../../../../modules/shared/i18n';
 
 type Step = "form" | "free-result";
 
 export default function CccCheckClient() {
   const t = useT('Check');
   const locale = useTradeLocale();
+  const messages = useMessages();
+  useEffect(() => {
+    setLocaleData(locale, messages);
+  }, [locale, messages]);
   const [step, setStep] = useState<Step>("form");
   const [input, setInput] = useState<Record<string, string>>({});
   const [email, setEmail] = useState("");
@@ -79,11 +84,11 @@ export default function CccCheckClient() {
             inputData: input,
             resultData: freeData,
             nextSteps: [
-              'Select a CNCA-accredited certification body for your product category',
-              'Submit product samples for type testing (Safety + EMC)',
-              'Prepare factory inspection documentation and QMS',
-              'Receive CCC certificate and mark authorization (4-6 months)',
-              'Maintain annual factory surveillance inspections',
+              t('cccStep1'),
+              t('cccStep2'),
+              t('cccStep3'),
+              t('cccStep4'),
+              t('cccStep5'),
             ],
           }),
         }).catch(e => console.warn('D1 save failed:', e));

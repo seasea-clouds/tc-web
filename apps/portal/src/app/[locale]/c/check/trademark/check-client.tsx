@@ -1,20 +1,25 @@
 "use client";
 
-import { useT, useTradeLocale, WHATSAPP_URL } from '@trade/ui';
+import { useT, useTradeLocale, WHATSAPP_URL, useMessages } from '@trade/ui';
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { checkTrademark, CATEGORY_LABELS } from "../../../../../../modules/trademark/rules";
 import { API_BASE } from "@/lib/constants";
 import { useFormValidation, inputClasses, selectClasses } from "@/lib/useFormValidation";
 import { usePathPrefix } from '@/lib/useSubsiteHref';
 import { initiateCheckout } from '@/lib/checkout';
 import { useSubscription } from '@/lib/useSubscription';
+import { setLocaleData } from '../../../../../../modules/shared/i18n';
 
 type Step = "form" | "free-result";
 
 export default function TrademarkCheckClient() {
   const t = useT('Check');
   const locale = useTradeLocale();
+  const messages = useMessages();
+  useEffect(() => {
+    setLocaleData(locale, messages);
+  }, [locale, messages]);
   const [step, setStep] = useState<Step>("form");
   const [input, setInput] = useState<Record<string, string>>({});
   const [email, setEmail] = useState("");
@@ -79,11 +84,11 @@ export default function TrademarkCheckClient() {
             inputData: input,
             resultData: freeData,
             nextSteps: [
-              'Conduct CNIPA trademark search in relevant Nice classes',
-              'File trademark via direct CNIPA filing (8-14 months)',
-              'Monitor 3-month opposition period',
-              'Register Customs IP recordal for border enforcement',
-              'Set up ongoing trademark monitoring',
+              t('trademarkStep1'),
+              t('trademarkStep2'),
+              t('trademarkStep3'),
+              t('trademarkStep4'),
+              t('trademarkStep5'),
             ],
           }),
         }).catch(e => console.warn('D1 save failed:', e));

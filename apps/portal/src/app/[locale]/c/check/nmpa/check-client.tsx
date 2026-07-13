@@ -1,20 +1,25 @@
 "use client";
 
-import { useT, useTradeLocale, WHATSAPP_URL } from '@trade/ui';
+import { useT, useTradeLocale, WHATSAPP_URL, useMessages } from '@trade/ui';
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { checkCosmetics, CATEGORY_LABELS } from "../../../../../../modules/nmpa/rules";
 import { API_BASE } from "@/lib/constants";
 import { useFormValidation, inputClasses, selectClasses } from "@/lib/useFormValidation";
 import { usePathPrefix } from '@/lib/useSubsiteHref';
 import { initiateCheckout } from '@/lib/checkout';
 import { useSubscription } from '@/lib/useSubscription';
+import { setLocaleData } from '../../../../../../modules/shared/i18n';
 
 type Step = "form" | "free-result";
 
 export default function NmpaCheckClient() {
   const t = useT('Check');
   const locale = useTradeLocale();
+  const messages = useMessages();
+  useEffect(() => {
+    setLocaleData(locale, messages);
+  }, [locale, messages]);
   const [step, setStep] = useState<Step>("form");
   const [input, setInput] = useState<Record<string, string>>({});
   const [email, setEmail] = useState("");
@@ -81,11 +86,11 @@ export default function NmpaCheckClient() {
             inputData: input,
             resultData: freeData,
             nextSteps: [
-              'Designate Chinese responsible person (境内责任人)',
-              'Complete safety assessment per NMPA 2021 guidelines',
-              'Coordinate testing at NMPA-designated laboratory',
-              'File NMPA notification (备案) for ordinary cosmetics',
-              'Set up post-market adverse event monitoring',
+              t('nmpaStep1'),
+              t('nmpaStep2'),
+              t('nmpaStep3'),
+              t('nmpaStep4'),
+              t('nmpaStep5'),
             ],
           }),
         }).catch(e => console.warn('D1 save failed:', e));

@@ -2,16 +2,20 @@
  * Creem Checkout API
  *
  * Creates a checkout session and returns the payment URL.
- * Frontend calls this when user clicks "Get Report — $1"
+ * Frontend calls this when user clicks "Get Report -- $1"
  *
  * POST /api/checkout
  * Body: { productId?, reportId, email?, locale?, metadata }
+ *
+ * NOTE: Uses CREEM_API_PROXY env var to route through a non-Cloudflare proxy
+ * because test-api.creem.io blocks Cloudflare Workers IPs (WAF error 1010).
  */
 
 interface Env {
   CREEM_API_KEY: string;
   CREEM_PRODUCT_ID_SINGLE: string;
   CREEM_PRODUCT_ID_SUBSCRIBE: string;
+  CREEM_API_PROXY: string;
   DB: any; // D1Database
 }
 
@@ -33,10 +37,10 @@ export async function onRequest(context: {
     const pid = productId ?? context.env.CREEM_PRODUCT_ID_SINGLE;
     const loc = locale ?? "en";
 
-    // ── Build Creem checkout session ──────────────────────────────
+    // Build Creem checkout session payload
     const body: Record<string, unknown> = {
       product_id: pid,
-      success_url: `https://sinotradecompliance.com/${loc}/c/report/?id=${reportId}`,
+      success_url: "https://sinotradecompliance.com/" + loc + "/c/report/?id=" + reportId,
       metadata: {
         report_id: reportId,
         locale: loc,
@@ -45,7 +49,10 @@ export async function onRequest(context: {
       },
     };
 
-    const res = await fetch("https://test-api.creem.io/v1/checkouts", {
+    // Route through proxy (or fallback to direct Creem API)
+    const creemApiUrl = context.env.CREEM_API_PROXY || "https://test-api.creem.io/v1/checkouts";
+
+    const res = await fetch(creemApiUrl, {
       method: "POST",
       headers: {
         "x-api-key": context.env.CREEM_API_KEY,

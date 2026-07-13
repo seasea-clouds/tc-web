@@ -19,6 +19,10 @@ export async function onRequest(context: { request: Request; env: Env }) {
     return new Response('Method not allowed', { status: 405 });
   }
 
+  if (!context.env.DB) {
+    return Response.json({ error: 'Server configuration error: database not available' }, { status: 500 });
+  }
+
   try {
     const { email, password, rememberMe, turnstileToken } = await context.request.json();
     if (!email || !password) {

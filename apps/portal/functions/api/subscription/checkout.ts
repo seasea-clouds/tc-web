@@ -25,6 +25,10 @@ export async function onRequest(context: {
     return new Response("Method not allowed", { status: 405 });
   }
 
+  if (!context.env.DB) {
+    return Response.json({ error: 'Server configuration error: database not available' }, { status: 500 });
+  }
+
   try {
     // ── Verify user session ─────────────────────────────────────
     const sessionId = getSessionId(context.request);

@@ -1,11 +1,11 @@
 "use client";
 
-import { useT, useTradeLocale, useMessages } from '@trade/ui';
-import { useState, useEffect } from "react";
+import { useT, useTradeLocale } from '@trade/ui';
+import { useState } from "react";
 import { checkGacc, CATEGORY_LABELS, type GaccCategory, type GaccInput } from "../../../../../../modules/gacc/rules";
-import { setLocaleData } from '../../../../../../modules/shared/i18n';
 import { useFormValidation, inputClasses, selectClasses } from "@/lib/useFormValidation";
 import { usePathPrefix } from '@/lib/useSubsiteHref';
+import { initiateCheckout } from '@/lib/checkout';
 import { useSubscription } from '@/lib/useSubscription';
 
 type Step = "form" | "free-result";
@@ -13,10 +13,6 @@ type Step = "form" | "free-result";
 export default function GaccCheckClient() {
   const t = useT('Check');
   const locale = useTradeLocale();
-  const messages = useMessages();
-  useEffect(() => {
-    setLocaleData(locale, messages);
-  }, [locale, messages]);
   const [step, setStep] = useState<Step>("form");
   const [input, setInput] = useState<Partial<GaccInput>>({});
   const [email, setEmail] = useState("");
@@ -36,41 +32,106 @@ export default function GaccCheckClient() {
 
   const pathPrefix = usePathPrefix();
   const handlePayment = async () => {
+    // If subscribed, skip checkout and go directly to the report page
+    if (subscribed) {
+      try {
+        localStorage.setItem('compli-report-input', JSON.stringify({
+          ...input,
+          productName: input.productName || t('yourProduct'),
+        }));
+      } catch {}
+      const reportId = `GACC-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
+      if (freeData) {
+        fetch('/api/report/save', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            reportId,
+            module: 'GACC Food Registration',
+            inputData: input,
+            resultData: freeData,
+            paymentStatus: 'completed',
+          }),
+        }).catch(e => console.warn('D1 save failed (subscribed):', e));
+      }
+      window.location.href = pathPrefix + "/c/report/?id=" + reportId;
+      return;
+    }
     try {
-      localStorage.setItem('compli-report-input', JSON.stringify({
-        ...input,
+      const reportId = `GACC-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
+
+      // 1. Always save to localStorage first (reliable, no API dependency)
+      try {
+        localStorage.setItem('compli-report-input', JSON.stringify({
+          ...input,
+          productName: input.productName || t('yourProduct'),
+        }));
+      } catch {}
+
+      // 2. Fire-and-forget API calls (don't block redirect)
+      if (freeData) {
+        fetch('/api/report/save', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            reportId,
+            module: 'GACC Food Registration',
+            inputData: input,
+            resultData: freeData,
+            nextSteps: [
+              'Determine product category among 18 GACC-regulated categories',
+              'Register in CIFER system with CRA (Compliance Review Agent) assignment',
+              'Prepare all required documentation with professional Chinese translation',
+              'Complete label compliance review (GB 7718 / GB 28050) before printing',
+              'Submit GACC registration application and track 3-6 month review',
+            ],
+          }),
+        }).catch(e => console.warn('D1 save failed:', e));
+        
+        fetch('/api/report/generate-pdf', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ reportId, module: 'gacc', inputData: input }),
+        }).catch(e => console.warn('PDF generation skipped (dev mode):', e));
+      }
+
+      if (email) {
+        fetch('/api/report/send-email', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ reportId, email, module: 'gacc', inputData: input }),
+        }).catch(e => console.warn('Email send failed (dev mode):', e));
+      }
+
+      // 3. Try checkout API — redirect to Creem checkout
+      const checkoutUrl = await initiateCheckout({
+        reportId,
+        email,
+        locale,
         productName: input.productName || t('yourProduct'),
-      }));
-    } catch {}
-    const reportId = `GACC-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
-    if (freeData) {
-      fetch('/api/report/save', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          reportId,
-          module: 'GACC Food Registration',
-          inputData: input,
-          resultData: freeData,
-          paymentStatus: 'completed',
-          nextSteps: [
-            t('gaccStep1'),
-            t('gaccStep2'),
-            t('gaccStep3'),
-            t('gaccStep4'),
-            t('gaccStep5'),
-          ],
-        }),
-      }).catch(e => console.warn('D1 save failed:', e));
+        category: input.category,
+        originCountry: input.originCountry,
+        module: 'GACC Food Registration',
+        moduleKey: 'gacc',
+      });
+
+      if (checkoutUrl) {
+        window.location.href = checkoutUrl;
+      } else {
+        // Fallback: go to report page directly (free access as before)
+        window.location.href = pathPrefix + "/c/report/?id=" + reportId;
+      }
+    } catch (err) {
+      // Last resort: even if everything fails, try to get the user to the report page
+      try {
+        localStorage.setItem('compli-report-input', JSON.stringify({
+          ...input,
+          productName: input.productName || t('yourProduct'),
+        }));
+      } catch {}
+      setError(String(err));
+      setLoading(false);
     }
-    if (email) {
-      fetch('/api/report/send-email', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ reportId, email, module: 'gacc', inputData: input }),
-      }).catch(e => console.warn('Email send failed:', e));
-    }
-    window.location.href = pathPrefix + "/c/report/?id=" + reportId;
   }
 
   return (
@@ -256,32 +317,62 @@ export default function GaccCheckClient() {
             </div>
 
             <div className="border-t pt-6 text-center space-y-4">
-              <p className="text-lg font-semibold text-primary-navy">{t('viewFullReport')}</p>
-              <p className="text-sm text-gray-500">{t('fullReportDesc')}</p>
+              {subscribed ? (
+                <>
+                  <p className="text-lg font-semibold text-primary-navy">{t('subscribedViewReport')}</p>
+                  <p className="text-sm text-gray-500">{t('subscribedDesc')}</p>
+                  <div className="flex justify-center">
+                    <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
+                      <span>{t('subscribedBadge')}</span>
+                    </div>
+                  </div>
+                  {error && (
+                    <p className="text-sm text-red-500">{error}</p>
+                  )}
+                  <div className="flex justify-center">
+                    <button
+                      onClick={handlePayment}
+                      disabled={loading}
+                      className="w-full max-w-xs bg-gold hover:bg-gold/90 disabled:bg-gray-300 text-primary-navy font-semibold py-3 px-6 rounded-md transition-all text-lg"
+                    >
+                      {loading ? t('redirecting') : t('viewFullReport')}
+                    </button>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <p className="text-lg font-semibold text-primary-navy">{t('paymentTitle')}</p>
+                  <p className="text-sm text-gray-500">{t('fullReportDesc')}</p>
 
-              <div className="max-w-xs mx-auto">
-                <input
-                  type="email"
-                  placeholder={t('emailForPdf')}
-                  className="w-full border border-gray-300 rounded-md p-2.5 text-sm text-center"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </div>
+                  {/* Email input */}
+                  <div className="max-w-xs mx-auto">
+                    <input
+                      type="email"
+                      placeholder={t('emailForPdf')}
+                      className="w-full border border-gray-300 rounded-md p-2.5 text-sm text-center"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                  </div>
 
-              {error && (
-                <p className="text-sm text-red-500">{error}</p>
+                  {error && (
+                    <p className="text-sm text-red-500">{error}</p>
+                  )}
+
+                  <div className="flex flex-col items-center gap-3">
+                    <button
+                      onClick={handlePayment}
+                      disabled={loading}
+                      className="w-full max-w-xs bg-gold hover:bg-gold/90 disabled:bg-gray-300 text-primary-navy font-semibold py-3 px-6 rounded-md transition-all text-lg"
+                    >
+                      {loading ? t('redirecting') : t('fullReport1')}
+                    </button>
+                    <p className="text-xs text-gray-400">
+                      {t('oneTimePaymentDesc')}
+                    </p>
+                  </div>
+                </>
               )}
-
-              <div className="flex flex-col items-center gap-3">
-                <button
-                  onClick={handlePayment}
-                  disabled={loading}
-                  className="w-full max-w-xs bg-gold hover:bg-gold/90 disabled:bg-gray-300 text-primary-navy font-semibold py-3 px-6 rounded-md transition-all text-lg"
-                >
-                  {loading ? t('redirecting') : t('viewFullReport')}
-                </button>
-              </div>
             </div>
           </div>
         )}

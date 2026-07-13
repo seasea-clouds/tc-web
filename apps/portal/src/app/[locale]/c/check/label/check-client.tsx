@@ -1,20 +1,25 @@
 "use client";
 
-import { useT, useTradeLocale, WHATSAPP_URL } from '@trade/ui';
+import { useT, useTradeLocale, WHATSAPP_URL, useMessages } from '@trade/ui';
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { checkLabel, CATEGORY_LABELS } from "../../../../../../modules/label/rules";
 import { API_BASE } from "@/lib/constants";
 import { useFormValidation, inputClasses, selectClasses } from "@/lib/useFormValidation";
 import { usePathPrefix } from '@/lib/useSubsiteHref';
 import { initiateCheckout } from '@/lib/checkout';
 import { useSubscription } from '@/lib/useSubscription';
+import { setLocaleData } from '../../../../../../modules/shared/i18n';
 
 type Step = "form" | "free-result";
 
 export default function LabelCheckClient() {
   const t = useT('Check');
   const locale = useTradeLocale();
+  const messages = useMessages();
+  useEffect(() => {
+    setLocaleData(locale, messages);
+  }, [locale, messages]);
   const [step, setStep] = useState<Step>("form");
   const [input, setInput] = useState<Record<string, string>>({});
   const [email, setEmail] = useState("");
@@ -79,11 +84,11 @@ export default function LabelCheckClient() {
             inputData: input,
             resultData: freeData,
             nextSteps: [
-              'Submit label artwork for GB 7718-2025 compliance audit',
-              'Receive compliant Chinese label design',
-              'Verify all 9 mandatory elements and nutrition panel',
-              'Obtain print-ready label files',
-              'Arrange customs clearance label support',
+              t('labelStep1'),
+              t('labelStep2'),
+              t('labelStep3'),
+              t('labelStep4'),
+              t('labelStep5'),
             ],
           }),
         }).catch(e => console.warn('D1 save failed:', e));

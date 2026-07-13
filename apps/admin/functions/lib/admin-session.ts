@@ -79,6 +79,9 @@ export async function requireAdmin(
   request: Request,
   env: any,
 ): Promise<AdminSessionUser> {
+  if (!env.DB) {
+    throw new AuthError("Database not configured");
+  }
   const sessionId = getAdminSessionId(request);
   if (!sessionId) {
     throw new AuthError("Not authenticated");

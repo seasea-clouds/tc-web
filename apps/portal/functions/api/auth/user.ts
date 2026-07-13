@@ -16,6 +16,10 @@ export async function onRequest(context: { request: Request; env: Env }) {
     return new Response('Method not allowed', { status: 405 });
   }
 
+  if (!context.env.DB) {
+    return Response.json({ error: 'Server configuration error: database not available' }, { status: 500 });
+  }
+
   const auth = context.request.headers.get('Authorization');
   if (!auth || !auth.startsWith('Bearer ')) {
     return Response.json({ error: 'Unauthorized' }, { status: 401 });

@@ -62,26 +62,18 @@ async function proxyToPortal(url: URL, request: Request, env?: Record<string, st
 // ─── Rewrite HTML: replace /_next/static/ with /{prefix}/_next/static/ ───
 
 function rewriteNextStatic(html: string, prefix: string): string {
-  // Remove the _R_ script entirely — the turbopack runtime's `otherChunks`
-  // already includes this chunk (static/chunks/0b1to950elt~g.js) and loads
-  // it dynamically via document.createElement('script'). If we preserve the
-  // async HTML <script> tag for _R_, the runtime's loadChunkCached finds it
-  // via querySelectorAll and does NOT create a new script element. Since the
-  // async HTML script's src attribute matches N()'s resolution (both produce
-  // /_next/static/chunks/...), the dynamic load promise never resolves
-  // (loadChunkCached only adds error listeners to existing scripts), causing
-  // registerChunk's await Promise.all to hang indefinitely.
-  // https://sinotradecompliance.com/zh/blog/ 的反应不渲染问题
-  const R_SCRIPT_RE = /<script[^>]*?src="\/_next\/static\/[^"]*"[^>]*?id="_R_"[^>]*><\/script>/;
-  html = html.replace(R_SCRIPT_RE, '');
-
-  // Rewrite _next/static/ → {prefix}/_next/static/ ONLY in HTML attributes
-  // (src="...", href="..."), NOT inside inline <script> content.
-  // The RSC data inside inline scripts contains _next/static/chunks/... paths
-  // that must NOT be rewritten because the Turbopack runtime uses hardcoded
-  // /_next/ base paths for module resolution. Rewriting them causes chunk URL
-  // mismatch in registerChunk, breaking the module loading chain.
-  html = html.replace(/((?:src|href)=")\/_next\/static\//g, `$1/${prefix}/_next/static/`);
+  // ── Only rewrite `href` attributes ──
+  // DO NOT rewrite `src` on <script> tags — the Turbopack runtime uses
+  // hardcoded /_next/ base paths (N() function) for chunk resolution.
+  // Rewriting script src to /{prefix}/_next/static/chunks/... causes
+  // cache key mismatches in registerChunk (D(e.src).resolve()), breaking
+  // the module loading chain and preventing React hydration.
+  // The Worker handles /_next/static/chunks/* directly → blog upstream.
+  //
+  // Rewrite `href` for CSS, preloads, etc. — these MUST go through
+  // /{prefix}/_next/static/ so proxySubSiteAsset serves the correct
+  // upstream (/blog/_next/static/css/... → blog, /c/_next/static/... → portal).
+  html = html.replace(/(href=")\/_next\/static\//g, `$1/${prefix}/_next/static/`);
 
   return html;
 }

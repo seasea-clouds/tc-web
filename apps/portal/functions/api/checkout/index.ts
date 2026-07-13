@@ -2,19 +2,17 @@
  * Creem Checkout API
  *
  * Creates a checkout session and returns the payment URL.
- * Frontend calls this when user clicks "Get Report -- $1"
+ * Frontend calls this when user clicks "Get Report — $1"
  *
  * POST /api/checkout
  * Body: { productId?, reportId, email?, locale?, metadata }
- *
- * DEBUG: returns actual Creem API error for troubleshooting.
  */
 
 interface Env {
   CREEM_API_KEY: string;
   CREEM_PRODUCT_ID_SINGLE: string;
   CREEM_PRODUCT_ID_SUBSCRIBE: string;
-  DB: any;
+  DB: any; // D1Database
 }
 
 export async function onRequest(context: {
@@ -35,9 +33,10 @@ export async function onRequest(context: {
     const pid = productId ?? context.env.CREEM_PRODUCT_ID_SINGLE;
     const loc = locale ?? "en";
 
-    const body = {
+    // ── Build Creem checkout session ──────────────────────────────
+    const body: Record<string, unknown> = {
       product_id: pid,
-      success_url: "https://sinotradecompliance.com/" + loc + "/c/report/?id=" + reportId,
+      success_url: `https://sinotradecompliance.com/${loc}/c/report/?id=${reportId}`,
       metadata: {
         report_id: reportId,
         locale: loc,
@@ -46,7 +45,7 @@ export async function onRequest(context: {
       },
     };
 
-    const creemRes = await fetch("https://test-api.creem.io/v1/checkouts", {
+    const res = await fetch("https://test-api.creem.io/v1/checkouts", {
       method: "POST",
       headers: {
         "x-api-key": context.env.CREEM_API_KEY,
@@ -55,22 +54,20 @@ export async function onRequest(context: {
       body: JSON.stringify(body),
     });
 
-    const status = creemRes.status;
-    const statusText = creemRes.statusText;
-    const bodyText = await creemRes.text();
+    if (!res.ok) {
+      const err = await res.text();
+      console.error("Creem checkout failed:", err);
+      return Response.json({ error: "Checkout creation failed" }, { status: 502 });
+    }
+
+    const data = await res.json();
 
     return Response.json({
-      debug: true,
-      creemStatus: status,
-      creemStatusText: statusText,
-      creemBody: bodyText,
-    }, { status: 200 });
-
+      checkoutUrl: data.checkout_url,
+      sessionId: data.id,
+    });
   } catch (err) {
-    return Response.json({
-      debug: true,
-      error: String(err),
-      stack: (err as Error).stack,
-    }, { status: 500 });
+    console.error("Checkout error:", err);
+    return Response.json({ error: String(err) }, { status: 500 });
   }
 }

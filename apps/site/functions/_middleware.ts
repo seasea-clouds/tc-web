@@ -80,7 +80,7 @@ function rewriteNextStatic(html: string, prefix: string): string {
   // correct upstream (/blog/_next/static/chunks/...css → blog).
   html = html.replace(
     /<link\s[^>]*href="\/_next\/static\/[^"]*"[^>]*>/g,
-    (m) => /\bas="script"\b/.test(m) ? m : m.replace(/(href=")\/_next\/static\//, `$1/${prefix}/_next/static/`)
+    (m) => /\bas="script"/.test(m) ? m : m.replace(/(href=")\/_next\/static\//, `$1/${prefix}/_next/static/`)
   );
 
   return html;

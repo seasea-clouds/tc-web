@@ -62,13 +62,34 @@ async function proxyToPortal(url: URL, request: Request, env?: Record<string, st
 // ─── Rewrite HTML: replace /_next/static/ with /{prefix}/_next/static/ ───
 
 function rewriteNextStatic(html: string, prefix: string): string {
+  // Preserve the _R_ script src — the turbopack module system uses
+  // the script element's src attribute as a cache key (D(e.src).resolve()
+  // in registerChunk). The module system resolves dynamic chunk loads
+  // via N() which always uses /_next/ base. If _R_'s src is rewritten to
+  // /{prefix}/_next/..., the cache keys mismatch and module 35451 (RSC
+  // consumer) is never evaluated, breaking React hydration entirely.
+  // Match _R_ script regardless of src/id attribute order (Next.js emits src before id)
+  const R_SCRIPT_RE = /<script[^>]*?src="\/_next\/static\/[^"]*"[^>]*?id="_R_"[^>]*><\/script>/;
+  const rScript = html.match(R_SCRIPT_RE);
+  let placeholder = '';
+  if (rScript && rScript[0]) {
+    placeholder = '<!--_R_SCRIPT_PLACEHOLDER_' + Date.now() + '-->';
+    html = html.replace(rScript[0], placeholder);
+  }
+
   // Rewrite _next/static/ → {prefix}/_next/static/ ONLY in HTML attributes
   // (src="...", href="..."), NOT inside inline <script> content.
   // The RSC data inside inline scripts contains _next/static/chunks/... paths
   // that must NOT be rewritten because the Turbopack runtime uses hardcoded
   // /_next/ base paths for module resolution. Rewriting them causes chunk URL
   // mismatch in registerChunk, breaking the module loading chain.
-  return html.replace(/((?:src|href)=")\/_next\/static\//g, `$1/${prefix}/_next/static/`);
+  html = html.replace(/((?:src|href)=")\/_next\/static\//g, `$1/${prefix}/_next/static/`);
+
+  if (rScript && rScript[0]) {
+    html = html.replace(placeholder, rScript[0]);
+  }
+
+  return html;
 }
 
 // ─── Ensure __next_f exists before async modules attempt to consume it ──

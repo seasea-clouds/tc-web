@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { get } from "@/lib/api";
+import { get } from "@/lib/api"
+import { buildAdminT } from "@/lib/i18n";
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
   PieChart, Pie, Cell, LineChart, Line, Legend,
@@ -41,17 +42,17 @@ interface AnalyticsData {
 const COLORS = ["#1B365D", "#D4AF37", "#059669", "#3B82F6", "#F59E0B", "#EF4444", "#8B5CF6", "#EC4899"];
 
 const STATUS_LABELS: Record<string, string> = {
-  pending: "待支付",
-  completed: "已支付",
-  free_with_subscription: "订阅免费",
-  refunded: "已退款",
+  pending: "status.pending",
+  completed: "status.completed",
+  free_with_subscription: "status.free",
+  refunded: "status.refunded",
 };
 
 const COUNTRY_NAMES: Record<string, string> = {
-  CN: "中国", US: "美国", JP: "日本", KR: "韩国", GB: "英国",
-  DE: "德国", FR: "法国", SG: "新加坡", HK: "香港", TW: "台湾",
-  AU: "澳大利亚", CA: "加拿大", IN: "印度", VN: "越南", TH: "泰国",
-  MY: "马来西亚", PH: "菲律宾", IT: "意大利", NL: "荷兰", ES: "西班牙",
+  CN: "country.CN", US: "country.US", JP: "country.JP", KR: "country.KR", GB: "country.GB",
+  DE: "country.DE", FR: "country.FR", SG: "country.SG", HK: "country.HK", TW: "country.TW",
+  AU: "country.AU", CA: "country.CA", IN: "country.IN", VN: "country.VN", TH: "country.TH",
+  MY: "country.MY", PH: "country.PH", IT: "country.IT", NL: "country.NL", ES: "country.ES",
 };
 
 export default function DashboardPage() {
@@ -63,6 +64,7 @@ export default function DashboardPage() {
   const [customStartDate, setCustomStartDate] = useState("");
   const [customEndDate, setCustomEndDate] = useState("");
   const [loading, setLoading] = useState(true);
+  const t = buildAdminT();
   const [refreshKey, setRefreshKey] = useState(0);
   const [toast, setToast] = useState<{ type: "success" | "error"; message: string } | null>(null);
 
@@ -94,76 +96,76 @@ export default function DashboardPage() {
 // Known segment names for breadcrumb display (en locale common segments)
 const SEGMENT_LABELS: Record<string, string> = {
   // ── Site (site) ──
-  'c': '合规自查',
-  'services': '服务',
-  'gacc': 'GACC 食品注册',
-  'ccc': 'CCC 认证',
-  'label': '中文标签合规',
-  'cosmetics': '化妆品备案',
-  'ecommerce': '跨境电商',
-  'brand': '品牌保护',
-  'industries': '行业',
-  'testimonials': '客户评价',
-  'quote': '报价请求',
-  'packages': '合规套餐',
-  'thank-you': '提交成功',
+  'c': 'segment.c',
+  'services': 'segment.services',
+  'gacc': 'segment.gacc',
+  'ccc': 'segment.ccc',
+  'label': 'segment.label',
+  'cosmetics': 'segment.cosmetics',
+  'ecommerce': 'segment.ecommerce',
+  'brand': 'segment.brand',
+  'industries': 'segment.industries',
+  'testimonials': 'segment.testimonials',
+  'quote': 'segment.quote',
+  'packages': 'segment.packages',
+  'thank-you': 'segment.thankYou',
   // ── Portal (c/) ──
-  'check': '自查工具',
-  'report': '报告',
-  'preview': '预览',
-  'crossborder': '跨境电商',
-  'trademark': '品牌保护',
-  'nmpa': '化妆品备案',
-  'register': '注册',
-  'login': '登录',
-  'me': '个人中心',
-  'pricing': '定价',
-  'account': '账户',
-  'subscription': '订阅',
-  'dashboard': '数据看板',
+  'check': 'segment.check',
+  'report': 'segment.report',
+  'preview': 'segment.preview',
+  'crossborder': 'segment.crossborder',
+  'trademark': 'segment.trademark',
+  'nmpa': 'segment.nmpa',
+  'register': 'segment.register',
+  'login': 'segment.login',
+  'me': 'segment.me',
+  'pricing': 'segment.pricing',
+  'account': 'segment.account',
+  'subscription': 'segment.subscription',
+  'dashboard': 'segment.dashboard',
   // ── Blog ──
-  'blog': '博客',
+  'blog': 'segment.blog',
   // ── Admin ──
-  'admin': '管理后台',
-  'users': '用户管理',
-  'logs': '操作日志',
-  'subscriptions': '订阅管理',
-  'reports': '报告管理',
-  'user-detail': '用户详情',
-  'report-detail': '报告详情',
-  'subscription-detail': '订阅详情',
+  'admin': 'segment.admin',
+  'users': 'segment.users',
+  'logs': 'segment.logs',
+  'subscriptions': 'segment.subscriptions',
+  'reports': 'segment.reports',
+  'user-detail': 'segment.userDetail',
+  'report-detail': 'segment.reportDetail',
+  'subscription-detail': 'segment.subscriptionDetail',
   // ── Common ──
-  'about': '关于我们',
-  'contact': '联系方式',
-  'faq': '常见问题',
-  'payments': '支付',
+  'about': 'segment.about',
+  'contact': 'segment.contact',
+  'faq': 'segment.faq',
+  'payments': 'segment.payments',
   // ── Root / Locale-only ──
-  '__home__': '首页',
+  '__home__': 'segment.home',
   // ── Blog article slugs ──
-  'gacc-registration-guide': 'GACC 注册指南',
-  'ccc-certification-guide': 'CCC 认证指南',
-  'china-import-requirements': '中国进口要求',
+  'gacc-registration-guide': 'segment.gaccGuide',
+  'ccc-certification-guide': 'segment.cccGuide',
+  'china-import-requirements': 'segment.chinaImport',
   // ── Site pages ──
-  'privacy': '隐私政策',
-  'terms': '服务条款',
+  'privacy': 'segment.privacy',
+  'terms': 'segment.terms',
   // ── Industry pages ──
-  'skincare-cosmetics': '护肤与化妆品',
+  'skincare-cosmetics': 'segment.skincare',
   // ── Blog articles ──
-  'cosmetics-nmpa-filing': '化妆品 NMPA 备案',
-  'china-label-compliance': '中文标签合规',
+  'cosmetics-nmpa-filing': 'segment.nmpaFiling',
+  'china-label-compliance': 'segment.chinaLabelCompliance',
   // ── Industry pages ──
-  'medical-devices': '医疗器械',
+  'medical-devices': 'segment.medicalDevices',
 };
 
 /** Parse a URL path into a breadcrumb-like segment array (locale-aware) */
 function pathToBreadcrumb(path: string): string {
   const segs = path.replace(/\/+$/, '').split('/').filter(Boolean);
-  if (segs.length === 0) return SEGMENT_LABELS['__home__'];
+  if (segs.length === 0) return t(SEGMENT_LABELS['__home__']);
   // Skip locale prefix (en, zh, etc)
   const skipLocale = segs.length > 0 && /^[a-z]{2}$/.test(segs[0]);
   const bc = skipLocale ? segs.slice(1) : segs;
-  if (bc.length === 0) return SEGMENT_LABELS['__home__'];
-  return bc.map(s => SEGMENT_LABELS[s] || s.charAt(0).toUpperCase() + s.slice(1).replace(/[-_]/g, ' ')).join(' › ');
+  if (bc.length === 0) return t(SEGMENT_LABELS['__home__']);
+  return bc.map(s => t(SEGMENT_LABELS[s]) || s.charAt(0).toUpperCase() + s.slice(1).replace(/[-_]/g, ' ')).join(' › ');
 }
 
   return (
@@ -171,7 +173,7 @@ function pathToBreadcrumb(path: string): string {
       {/* ── Top bar ── */}
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem" }}>
         <p style={{ color: "#6b7280", fontSize: "0.875rem" }}>
-          欢迎使用 SinoTrade Compliance 管理后台
+          {t("welcome")}
         </p>
         <div style={{ display: "flex", gap: "0.375rem", alignItems: "center" }}>
           {(["today" as const, "7d" as const, "30d" as const, "custom" as const]).map((range) => (
@@ -181,7 +183,7 @@ function pathToBreadcrumb(path: string): string {
               style={{ padding: "0.375rem 0.75rem", fontSize: "0.8rem" }}
               onClick={() => setTimeRange(range)}
             >
-              {range === "today" ? "今日" : range === "7d" ? "近7天" : range === "30d" ? "近30天" : "自定义"}
+              {range === "today" ? t("range.today") : range === "7d" ? t("range.7d") : range === "30d" ? t("range.30d") : t("range.custom")}
             </button>
           ))}
           {timeRange === "custom" && (
@@ -197,7 +199,7 @@ function pathToBreadcrumb(path: string): string {
                   borderRadius: "0.375rem",
                 }}
               />
-              <span style={{ fontSize: "0.8rem", color: "#6b7280" }}>至</span>
+              <span style={{ fontSize: "0.8rem", color: "#6b7280" }}>{t("range.to")}</span>
               <input
                 type="date"
                 value={customEndDate}
@@ -254,35 +256,35 @@ function pathToBreadcrumb(path: string): string {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))", gap: "0.75rem", marginBottom: "1.5rem" }}>
             <div className="stat-card">
               <div className="stat-value">{timeRange === "today" ? _a.summary.today : _a.summary.total}</div>
-              <div className="stat-label">{timeRange === "today" ? "今日 PV" : timeRange === "7d" ? "近7天 PV" : timeRange === "30d" ? "近30天 PV" : "所选时段 PV"}</div>
-              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }}>累计 {_a.allTimeTotal}</div>
+              <div className="stat-label">{timeRange === "today" ? t("stat.todayPV") : timeRange === "7d" ? t("stat.7dPV") : timeRange === "30d" ? t("stat.30dPV") : t("stat.customPV")}</div>
+              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }}>{t("stat.cumulative").replace("{n}", String(_a.allTimeTotal))}</div>
             </div>
             <div className="stat-card">
               <div className="stat-value">{timeRange === "today" ? _a.summary.todayUV : _a.summary.uv}</div>
-              <div className="stat-label">{timeRange === "today" ? "今日 UV" : timeRange === "7d" ? "近7天 UV" : timeRange === "30d" ? "近30天 UV" : "所选时段 UV"}</div>
-              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }}>累计 {_a.allTimeUV}</div>
+              <div className="stat-label">{timeRange === "today" ? t("stat.todayUV") : timeRange === "7d" ? t("stat.7dUV") : timeRange === "30d" ? t("stat.30dUV") : t("stat.customUV")}</div>
+              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }}>{t("stat.cumulative").replace("{n}", String(_a.allTimeUV))}</div>
             </div>
             <div className="stat-card">
               <div className="stat-value">{timeRange === "today" ? stats.today.reports : stats.period?.reports || 0}</div>
-              <div className="stat-label">{timeRange === "today" ? "今日报告" : timeRange === "7d" ? "近7天报告" : timeRange === "30d" ? "近30天报告" : "所选时段报告"}</div>
-              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }}>累计 {stats.totalReports}</div>
+              <div className="stat-label">{timeRange === "today" ? t("stat.todayReports") : timeRange === "7d" ? t("stat.7dReports") : timeRange === "30d" ? t("stat.30dReports") : t("stat.customReports")}</div>
+              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }}>{t("stat.cumulative").replace("{n}", String(stats.totalReports))}</div>
             </div>
             <div className="stat-card">
               <div className="stat-value">{timeRange === "today" ? stats.today.newUsers : stats.period?.newUsers || 0}</div>
-              <div className="stat-label">{timeRange === "today" ? "今日新用户" : timeRange === "7d" ? "近7天新用户" : timeRange === "30d" ? "近30天新用户" : "所选时段新用户"}</div>
-              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }}>累计 {stats.totalUsers}</div>
+              <div className="stat-label">{timeRange === "today" ? t("stat.todayNewUsers") : timeRange === "7d" ? t("stat.7dNewUsers") : timeRange === "30d" ? t("stat.30dNewUsers") : t("stat.customNewUsers")}</div>
+              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }}>{t("stat.cumulative").replace("{n}", String(stats.totalUsers))}</div>
             </div>
             <div className="stat-card">
               <div className="stat-value">{stats.activeSubscriptions}</div>
-              <div className="stat-label">活跃订阅</div>
-              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }}>累计 {stats.totalSubscriptions}</div>
+              <div className="stat-label">{t("stat.activeSubscriptions")}</div>
+              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }}>{t("stat.cumulative").replace("{n}", String(stats.totalSubscriptions))}</div>
             </div>
           </div>
 
           {/* ── PV/UV Trend — hourly for today, daily for other ranges ── */}
           <div className="card" style={{ marginBottom: "1.5rem" }}>
             <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>
-              {timeRange === "today" ? "今日每小时页面浏览" : "每日页面浏览趋势"}
+              {timeRange === "today" ? t("chart.todayHourlyPV") : t("chart.dailyPVTrend")}
             </h3>
             <ResponsiveContainer width="100%" height={260}>
               {(() => {
@@ -317,7 +319,7 @@ function pathToBreadcrumb(path: string): string {
                     </LineChart>
                   );
                 }
-                return <div className="empty-state" style={{ padding: "2rem" }}>暂无流量数据 — 部署后自动开始采集</div>;
+                return <div className="empty-state" style={{ padding: "2rem" }}>{t("chart.noTrafficData")}</div>;
               })()}
             </ResponsiveContainer>
           </div>
@@ -325,7 +327,7 @@ function pathToBreadcrumb(path: string): string {
           {/* ── Old D1 trend chart ── */}
           <div className="card" style={{ marginBottom: "1.5rem" }}>
             <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>
-              {timeRange === "today" ? "今日每小时报告数" : "每日报告趋势"}
+              {timeRange === "today" ? t("chart.todayHourlyReports") : t("chart.dailyReportTrend")}
             </h3>
             <ResponsiveContainer width="100%" height={260}>
               {timeRange === "today" && stats.hourlyData.length > 0 ? (
@@ -335,8 +337,8 @@ function pathToBreadcrumb(path: string): string {
                   <YAxis fontSize={12} />
                   <Tooltip labelFormatter={(h) => formatHour(h as number)} />
                   <Legend />
-                  <Bar dataKey="reports" name="报告数" fill="#059669" radius={[3, 3, 0, 0]} />
-                  <Bar dataKey="users" name="新用户" fill="#3B82F6" radius={[3, 3, 0, 0]} />
+                  <Bar dataKey="reports" name={t("chart.reports")} fill="#059669" radius={[3, 3, 0, 0]} />
+                  <Bar dataKey="users" name={t("chart.newUsers")} fill="#3B82F6" radius={[3, 3, 0, 0]} />
                 </BarChart>
               ) : stats.dailyData.length > 0 ? (
                 <LineChart data={stats.dailyData}>
@@ -345,11 +347,11 @@ function pathToBreadcrumb(path: string): string {
                   <YAxis fontSize={12} />
                   <Tooltip />
                   <Legend />
-                  <Line type="monotone" dataKey="reports" name="报告数" stroke="#059669" strokeWidth={2} dot={{ r: 3 }} />
-                  <Line type="monotone" dataKey="unique_users" name="独立用户" stroke="#3B82F6" strokeWidth={2} dot={{ r: 3 }} />
+                  <Line type="monotone" dataKey="reports" name={t("chart.reports")} stroke="#059669" strokeWidth={2} dot={{ r: 3 }} />
+                  <Line type="monotone" dataKey="unique_users" name={t("chart.uniqueUsers")} stroke="#3B82F6" strokeWidth={2} dot={{ r: 3 }} />
                 </LineChart>
               ) : (
-                <div className="empty-state" style={{ padding: "2rem" }}>暂无数据</div>
+                <div className="empty-state" style={{ padding: "2rem" }}>{t("chart.noData")}</div>
               )}
             </ResponsiveContainer>
           </div>
@@ -358,7 +360,7 @@ function pathToBreadcrumb(path: string): string {
           <div className="chart-grid">
             {/* Geographic distribution */}
             <div className="card">
-              <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>地域分布（前 10）</h3>
+              <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>{t("chart.geoDistribution")}</h3>
               {_a.geoData.length > 0 ? (
                 <div>
                   <ResponsiveContainer width="100%" height={280}>
@@ -368,7 +370,7 @@ function pathToBreadcrumb(path: string): string {
                         dataKey="count"
                         nameKey="country"
                         cx="50%" cy="50%" outerRadius={90}
-                        label={({ country, count }: any) => `${COUNTRY_NAMES[country] || country} (${count})`}
+                        label={({ country, count }: any) => `${t(COUNTRY_NAMES[country]) || country} (${count})`}
                         fontSize={10}
                       >
                         {_a.geoData.slice(0, 8).map((_, i) => (
@@ -379,17 +381,17 @@ function pathToBreadcrumb(path: string): string {
                     </PieChart>
                   </ResponsiveContainer>
                   <div style={{ fontSize: "0.75rem", color: "#6b7280", textAlign: "center", marginTop: "0.25rem" }}>
-                    覆盖 {_a.summary.countries} 个国家/地区
+                    {t("chart.countriesCovered").replace("{n}", String(_a.summary.countries))}
                   </div>
                 </div>
               ) : (
-                <div className="empty-state" style={{ padding: "1.5rem" }}>等待数据采集</div>
+                <div className="empty-state" style={{ padding: "1.5rem" }}>{t("chart.waitingData")}</div>
               )}
             </div>
 
             {/* Module breakdown */}
             <div className="card">
-              <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>报告模块分布</h3>
+              <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>{t("chart.moduleDistribution")}</h3>
               {stats.moduleData.length > 0 ? (
                 <ResponsiveContainer width="100%" height={280}>
                   <PieChart>
@@ -409,18 +411,18 @@ function pathToBreadcrumb(path: string): string {
                   </PieChart>
                 </ResponsiveContainer>
               ) : (
-                <div className="empty-state" style={{ padding: "1.5rem" }}>暂无数据</div>
+                <div className="empty-state" style={{ padding: "1.5rem" }}>{t("chart.noData")}</div>
               )}
             </div>
 
             {/* Payment status breakdown */}
             <div className="card">
-              <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>报告支付状态</h3>
+              <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>{t("chart.paymentStatus")}</h3>
               {stats.statusData.length > 0 ? (
                 <ResponsiveContainer width="100%" height={280}>
                   <PieChart>
                     <Pie
-                      data={stats.statusData.map((s) => ({ ...s, label: STATUS_LABELS[s.status] || s.status }))}
+                      data={stats.statusData.map((s) => ({ ...s, label: t(STATUS_LABELS[s.status]) || s.status }))}
                       dataKey="count"
                       nameKey="label"
                       cx="50%" cy="50%" outerRadius={90}
@@ -435,13 +437,13 @@ function pathToBreadcrumb(path: string): string {
                   </PieChart>
                 </ResponsiveContainer>
               ) : (
-                <div className="empty-state" style={{ padding: "1.5rem" }}>暂无数据</div>
+                <div className="empty-state" style={{ padding: "1.5rem" }}>{t("chart.noData")}</div>
               )}
             </div>
 
             {/* Browser distribution */}
             <div className="card">
-              <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>浏览器分布</h3>
+              <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>{t("chart.browserDistribution")}</h3>
               {_a.browserData && _a.browserData.length > 0 ? (
                 <ResponsiveContainer width="100%" height={280}>
                   <PieChart>
@@ -461,13 +463,13 @@ function pathToBreadcrumb(path: string): string {
                   </PieChart>
                 </ResponsiveContainer>
               ) : (
-                <div className="empty-state" style={{ padding: "1.5rem" }}>暂无数据</div>
+                <div className="empty-state" style={{ padding: "1.5rem" }}>{t("chart.noData")}</div>
               )}
             </div>
 
             {/* OS distribution */}
             <div className="card">
-              <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>OS 分布</h3>
+              <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>{t("chart.osDistribution")}</h3>
               {_a.osData && _a.osData.length > 0 ? (
                 <ResponsiveContainer width="100%" height={280}>
                   <BarChart data={_a.osData.slice(0, 8)} layout="vertical">
@@ -479,13 +481,13 @@ function pathToBreadcrumb(path: string): string {
                   </BarChart>
                 </ResponsiveContainer>
               ) : (
-                <div className="empty-state" style={{ padding: "1.5rem" }}>暂无数据</div>
+                <div className="empty-state" style={{ padding: "1.5rem" }}>{t("chart.noData")}</div>
               )}
             </div>
 
             {/* Device type */}
             <div className="card">
-              <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>设备类型</h3>
+              <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>{t("chart.deviceType")}</h3>
               {_a.deviceData && _a.deviceData.length > 0 ? (
                 <ResponsiveContainer width="100%" height={280}>
                   <PieChart>
@@ -505,13 +507,13 @@ function pathToBreadcrumb(path: string): string {
                   </PieChart>
                 </ResponsiveContainer>
               ) : (
-                <div className="empty-state" style={{ padding: "1.5rem" }}>暂无数据</div>
+                <div className="empty-state" style={{ padding: "1.5rem" }}>{t("chart.noData")}</div>
               )}
             </div>
 
             {/* Site breakdown */}
             <div className="card">
-              <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>站点来源分布</h3>
+              <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>{t("chart.siteDistribution")}</h3>
               {_a.projectData && _a.projectData.length > 0 ? (
                 <ResponsiveContainer width="100%" height={280}>
                   <PieChart>
@@ -531,14 +533,14 @@ function pathToBreadcrumb(path: string): string {
                   </PieChart>
                 </ResponsiveContainer>
               ) : (
-                <div className="empty-state" style={{ padding: "1.5rem" }}>等待数据采集</div>
+                <div className="empty-state" style={{ padding: "1.5rem" }}>{t("chart.waitingData")}</div>
               )}
             </div>
           </div>
 
           {/* ── 热门页面 (full-width row, top 30, filtered pages only) ── */}
           <div className="card" style={{ marginBottom: "1.5rem" }}>
-            <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "0.5rem" }}>热门页面</h3>
+            <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "0.5rem" }}>{t("chart.topPages")}</h3>
             {(() => {
               // 使用服务端过滤好的 pagePaths（基于路由架构 isPage + 静态资源排除）
               // 兼容旧数据：如果 pagePaths 不存在，回退到客户端过滤
@@ -552,9 +554,9 @@ function pathToBreadcrumb(path: string): string {
                 <div>
                   {/* Column headers */}
                   <div style={{ display: "flex", padding: "0.3rem 0", fontSize: "0.7rem", fontWeight: 600, color: "#9ca3af", borderBottom: "1px solid #e5e7eb" }}>
-                    <span style={{ flex: "0 0 40%", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>页面路径</span>
-                    <span style={{ flex: "0 0 40%", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", paddingLeft: "0.5rem" }}>URL 路径</span>
-                    <span style={{ flex: "0 0 20%", textAlign: "right" }}>访问次数</span>
+                    <span style={{ flex: "0 0 40%", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{t("chart.pathColumn")}</span>
+                    <span style={{ flex: "0 0 40%", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", paddingLeft: "0.5rem" }}>{t("chart.urlColumn")}</span>
+                    <span style={{ flex: "0 0 20%", textAlign: "right" }}>{t("chart.visitsColumn")}</span>
                   </div>
                   {pages.map((p: any, i: number) => (
                     <div key={p.path} style={{ display: "flex", alignItems: "center", padding: "0.3rem 0", fontSize: "0.8rem", borderBottom: i < pages.length - 1 ? "1px solid #f3f4f6" : "none" }}>
@@ -569,14 +571,14 @@ function pathToBreadcrumb(path: string): string {
                   ))}
                 </div>
               ) : (
-                <div className="empty-state" style={{ padding: "1.5rem" }}>等待数据采集</div>
+                <div className="empty-state" style={{ padding: "1.5rem" }}>{t("chart.waitingData")}</div>
               );
             })()}
           </div>
 
           {/* ── 热门路径 (full-width row, top 30, all paths incl. resources) ── */}
           <div className="card" style={{ marginBottom: "1.5rem" }}>
-            <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "0.75rem" }}>热门路径</h3>
+            <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "0.75rem" }}>{t("chart.topPaths")}</h3>
             {_a.pageData.length > 0 ? (
               <div>
                 {_a.pageData.slice(0, 30).map((p, i) => (
@@ -587,14 +589,14 @@ function pathToBreadcrumb(path: string): string {
                 ))}
               </div>
             ) : (
-              <div className="empty-state" style={{ padding: "1.5rem" }}>等待数据采集</div>
+              <div className="empty-state" style={{ padding: "1.5rem" }}>{t("chart.waitingData")}</div>
             )}
           </div>
         </>
         );
       })() : (
         <div className="empty-state">
-          <p>暂无数据</p>
+          <p>{t("chart.noData")}</p>
         </div>
       )}
 

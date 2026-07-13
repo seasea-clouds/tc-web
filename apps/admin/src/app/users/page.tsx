@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { get, post } from "@/lib/api";
 import { safeDate, safeDateTime } from "@/lib/date";
 import { Search, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+import { buildAdminT } from "@/lib/i18n";
 
 interface User {
   id: string;
@@ -29,11 +30,11 @@ const statusBadge = (s: string) => {
 
 const statusLabel = (s: string) => {
   const map: Record<string, string> = {
-    active: "正常",
-    disabled: "已禁用",
-    past_due: "扣款失败",
-    expired: "已过期",
-    canceled: "已取消",
+    active: "status.active",
+    disabled: "status.disabled",
+    past_due: "status.pastDue",
+    expired: "status.expired",
+    canceled: "status.canceled",
   };
   return map[s] || s;
 };
@@ -41,6 +42,7 @@ const statusLabel = (s: string) => {
 export default function UsersPage() {
   const [users, setUsers] = useState<User[]>([]);
   const [total, setTotal] = useState(0);
+  const t = buildAdminT();
   const [page, setPage] = useState(1);
   const [pageSize] = useState(25);
   const [search, setSearch] = useState("");
@@ -81,7 +83,7 @@ export default function UsersPage() {
           <input
             className="input"
             style={{ paddingLeft: "2.25rem" }}
-            placeholder="搜索邮箱或姓名..."
+            placeholder={t("table.searchEmail")}
             value={search}
             onChange={(e) => {
               setSearch(e.target.value);
@@ -127,7 +129,7 @@ export default function UsersPage() {
                     </td>
                     <td>
                       <span className={`badge ${user.status === "disabled" ? "badge-disabled" : "badge-active"}`}>
-                        {user.status === "disabled" ? "已禁用" : "正常"}
+                        {user.status === "disabled" ? t("status.disabled") : t("status.active")}
                       </span>
                     </td>
                     <td>{user.report_count}</td>
@@ -155,7 +157,7 @@ export default function UsersPage() {
                           style={{ padding: "0.25rem 0.625rem", fontSize: "0.75rem" }}
                           onClick={() => toggleUserStatus(user.id, user.status)}
                         >
-                          {user.status === "disabled" ? "启用" : "禁用"}
+                          {user.status === "disabled" ? t("action.enable") : t("action.disable")}
                         </button>
                       </div>
                     </td>

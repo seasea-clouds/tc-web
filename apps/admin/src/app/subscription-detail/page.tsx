@@ -2,7 +2,8 @@
 
 import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import { get, post } from "@/lib/api";
+import { get, post } from "@/lib/api"
+import { buildAdminT } from "@/lib/i18n";
 import { safeDate, safeDateTime } from "@/lib/date";
 import { ChevronDown, ChevronUp, ArrowLeft } from "lucide-react";
 
@@ -34,7 +35,7 @@ interface SubscriptionDetailData {
 }
 
 const statusLabel = (s: string) =>
-  ({ active: "活跃", past_due: "扣款失败", expired: "已过期", canceled: "已取消" })[s] || s;
+  ({ active: "status.activeShort", past_due: "status.pastDue", expired: "status.expired", canceled: "status.canceled" })[s] || s;
 
 function formatAmount(cents: number, currency: string): string {
   const symbol = currency === "USD" ? "$" : currency === "CNY" ? "¥" : currency + " ";
@@ -44,6 +45,7 @@ function formatAmount(cents: number, currency: string): string {
 function SubscriptionDetailContent() {
   const searchParams = useSearchParams();
   const id = searchParams?.get("id") || "";
+  const t = buildAdminT();
   const [subDetail, setSubDetail] = useState<SubscriptionDetailData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -51,7 +53,7 @@ function SubscriptionDetailContent() {
 
   useEffect(() => {
     if (!id) {
-      setError("缺少订阅 ID");
+      setError(t("error.missingSubscriptionId"));
       setLoading(false);
       return;
     }
@@ -65,7 +67,7 @@ function SubscriptionDetailContent() {
         setLoading(false);
       })
       .catch((err) => {
-        setError(err.message || "无法加载订阅详情");
+        setError(err.message || t("error.loadFailed"));
         setLoading(false);
       });
   }, [id]);
@@ -77,7 +79,7 @@ function SubscriptionDetailContent() {
         prev ? { ...prev, subscription: { ...prev.subscription, status } } : null
       );
     } catch (err: any) {
-      alert("操作失败: " + (err.message || err));
+      alert(t("error.operationFailed") + (err.message || err));
     }
   };
 
@@ -221,7 +223,7 @@ function SubscriptionDetailContent() {
                               p.status === "completed" ? "badge-completed" : "badge-pending"
                             }`}
                           >
-                            {p.status === "completed" ? "已支付" : p.status}
+                            {p.status === "completed" ? t("status.paid") : p.status}
                           </span>
                         </td>
                         <td>{safeDate(p.created_at)}</td>

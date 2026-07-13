@@ -62,7 +62,7 @@ async function proxyToPortal(url: URL, request: Request, env?: Record<string, st
 // ─── Rewrite HTML: replace /_next/static/ with /{prefix}/_next/static/ ───
 
 function rewriteNextStatic(html: string, prefix: string): string {
-  // ── Only rewrite `href` attributes ──
+  // ── Rewrite `href` on <link> tags ONLY for non-script resources ──
   // DO NOT rewrite `src` on <script> tags — the Turbopack runtime uses
   // hardcoded /_next/ base paths (N() function) for chunk resolution.
   // Rewriting script src to /{prefix}/_next/static/chunks/... causes
@@ -70,10 +70,18 @@ function rewriteNextStatic(html: string, prefix: string): string {
   // the module loading chain and preventing React hydration.
   // The Worker handles /_next/static/chunks/* directly → blog upstream.
   //
-  // Rewrite `href` for CSS, preloads, etc. — these MUST go through
-  // /{prefix}/_next/static/ so proxySubSiteAsset serves the correct
-  // upstream (/blog/_next/static/css/... → blog, /c/_next/static/... → portal).
-  html = html.replace(/(href=")\/_next\/static\//g, `$1/${prefix}/_next/static/`);
+  // Similarly, do NOT rewrite `href` on <link rel="preload" as="script">
+  // — the preloaded URL must match the actual `<script src="...">` which
+  // uses /_next/static/chunks/ (no prefix). Rewriting it causes browser
+  // preload warnings (resource loaded but not used, different URL).
+  //
+  // Rewrite `href` for CSS, stylesheet preloads, etc. — these MUST go
+  // through /{prefix}/_next/static/ so proxySubSiteAsset serves the
+  // correct upstream (/blog/_next/static/chunks/...css → blog).
+  html = html.replace(
+    /<link\s[^>]*href="\/_next\/static\/[^"]*"[^>]*>/g,
+    (m) => /\bas="script"\b/.test(m) ? m : m.replace(/(href=")\/_next\/static\//, `$1/${prefix}/_next/static/`)
+  );
 
   return html;
 }

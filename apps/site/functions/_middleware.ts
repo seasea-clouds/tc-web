@@ -62,20 +62,18 @@ async function proxyToPortal(url: URL, request: Request, env?: Record<string, st
 // ─── Rewrite HTML: replace /_next/static/ with /{prefix}/_next/static/ ───
 
 function rewriteNextStatic(html: string, prefix: string): string {
-  // Preserve the _R_ script src — the turbopack module system uses
-  // the script element's src attribute as a cache key (D(e.src).resolve()
-  // in registerChunk). The module system resolves dynamic chunk loads
-  // via N() which always uses /_next/ base. If _R_'s src is rewritten to
-  // /{prefix}/_next/..., the cache keys mismatch and module 35451 (RSC
-  // consumer) is never evaluated, breaking React hydration entirely.
-  // Match _R_ script regardless of src/id attribute order (Next.js emits src before id)
+  // Remove the _R_ script entirely — the turbopack runtime's `otherChunks`
+  // already includes this chunk (static/chunks/0b1to950elt~g.js) and loads
+  // it dynamically via document.createElement('script'). If we preserve the
+  // async HTML <script> tag for _R_, the runtime's loadChunkCached finds it
+  // via querySelectorAll and does NOT create a new script element. Since the
+  // async HTML script's src attribute matches N()'s resolution (both produce
+  // /_next/static/chunks/...), the dynamic load promise never resolves
+  // (loadChunkCached only adds error listeners to existing scripts), causing
+  // registerChunk's await Promise.all to hang indefinitely.
+  // https://sinotradecompliance.com/zh/blog/ 的反应不渲染问题
   const R_SCRIPT_RE = /<script[^>]*?src="\/_next\/static\/[^"]*"[^>]*?id="_R_"[^>]*><\/script>/;
-  const rScript = html.match(R_SCRIPT_RE);
-  let placeholder = '';
-  if (rScript && rScript[0]) {
-    placeholder = '<!--_R_SCRIPT_PLACEHOLDER_' + Date.now() + '-->';
-    html = html.replace(rScript[0], placeholder);
-  }
+  html = html.replace(R_SCRIPT_RE, '');
 
   // Rewrite _next/static/ → {prefix}/_next/static/ ONLY in HTML attributes
   // (src="...", href="..."), NOT inside inline <script> content.
@@ -84,10 +82,6 @@ function rewriteNextStatic(html: string, prefix: string): string {
   // /_next/ base paths for module resolution. Rewriting them causes chunk URL
   // mismatch in registerChunk, breaking the module loading chain.
   html = html.replace(/((?:src|href)=")\/_next\/static\//g, `$1/${prefix}/_next/static/`);
-
-  if (rScript && rScript[0]) {
-    html = html.replace(placeholder, rScript[0]);
-  }
 
   return html;
 }

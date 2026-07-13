@@ -8,15 +8,7 @@ import {
   LayoutDashboard, Users, Repeat, FileText, ClipboardList, CreditCard, LogOut, Menu, X, ChevronLeft, ChevronRight
 } from "lucide-react";
 import { getCurrentAdmin, logout, AdminUser } from "@/lib/auth";
-
-const NAV_ITEMS = [
-  { href: "/dashboard", label: "数据看板", icon: LayoutDashboard },
-  { href: "/users", label: "用户管理", icon: Users },
-  { href: "/subscriptions", label: "订阅管理", icon: Repeat },
-  { href: "/reports", label: "报告管理", icon: FileText },
-  { href: "/logs", label: "操作日志", icon: ClipboardList },
-  { href: "/payments", label: "支付与订单", icon: CreditCard },
-];
+import { buildAdminT } from "@/lib/i18n";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -24,7 +16,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const [admin, setAdmin] = useState<AdminUser | null>(null);
   const [loading, setLoading] = useState(true);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const t = buildAdminT();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const NAV_ITEMS = [
+    { href: "/dashboard", label: t("nav.dashboard"), icon: LayoutDashboard },
+    { href: "/users", label: t("nav.users"), icon: Users },
+    { href: "/subscriptions", label: t("nav.subscriptions"), icon: Repeat },
+    { href: "/reports", label: t("nav.reports"), icon: FileText },
+    { href: "/logs", label: t("nav.logs"), icon: ClipboardList },
+    { href: "/payments", label: t("nav.payments"), icon: CreditCard },
+  ];
 
   const isLoginPage = pathname === "/login" || pathname === "/login/";
 
@@ -55,7 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
       <html lang="zh-CN">
         <head>
-          <title>Admin 登录 — SinoTrade Compliance</title>
+          <title>{t("login.title")}</title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
         </head>
         <body>{children}</body>
@@ -67,7 +69,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
       <html lang="zh-CN">
         <head>
-          <title>Admin — SinoTrade Compliance</title>
+          <title>{t("nav.dashboard")} — SinoTrade Compliance</title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
         </head>
         <body style={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: "100vh" }}>
@@ -80,7 +82,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="zh-CN">
       <head>
-        <title>Admin — SinoTrade Compliance</title>
+        <title>SinoTrade Compliance Admin</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body>
@@ -88,16 +90,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <aside className={`sidebar ${mobileMenuOpen ? "open" : ""} ${sidebarCollapsed ? "collapsed" : ""}`}>
           <div className="brand">
             <h1>SinoTrade Admin</h1>
-            <p>管理后台</p>
+            <p>{t("sidebar.subtitle")}</p>
           </div>
 
           {/* Close button for mobile */}
-          <button className="sidebar-close-btn" onClick={() => setMobileMenuOpen(false)} aria-label="关闭菜单">
+          <button className="sidebar-close-btn" onClick={() => setMobileMenuOpen(false)} aria-label={t("sidebar.closeMenu")}>
             <X size={20} />
           </button>
 
           {/* Collapse toggle for desktop */}
-          <button className="sidebar-collapse-btn" onClick={() => setSidebarCollapsed(!sidebarCollapsed)} aria-label={sidebarCollapsed ? "展开侧栏" : "收起侧栏"}>
+          <button className="sidebar-collapse-btn" onClick={() => setSidebarCollapsed(!sidebarCollapsed)} aria-label={sidebarCollapsed ? t("sidebar.expand") : t("sidebar.collapse")}>
             {sidebarCollapsed ? <ChevronRight size={16} /> : <ChevronLeft size={16} />}
           </button>
 
@@ -129,7 +131,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 className="btn btn-outline mobile-menu-btn"
                 style={{ padding: "0.375rem" }}
                 onClick={() => setMobileMenuOpen(true)}
-                aria-label="打开菜单"
+                aria-label={t("sidebar.openMenu")}
               >
                 <Menu size={18} />
               </button>
@@ -138,7 +140,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 className="btn btn-outline desktop-collapse-btn"
                 style={{ padding: "0.375rem" }}
                 onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
-                aria-label={sidebarCollapsed ? "展开侧栏" : "收起侧栏"}
+                aria-label={sidebarCollapsed ? t("sidebar.expand") : t("sidebar.collapse")}
               >
                 {sidebarCollapsed ? <ChevronRight size={18} /> : <ChevronLeft size={18} />}
               </button>
@@ -153,7 +155,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </span>
               <button className="btn btn-outline" style={{ padding: "0.375rem 0.75rem" }} onClick={handleLogout}>
                 <LogOut size={16} />
-                退出
+              {t("topbar.logout")}
               </button>
             </div>
           </header>

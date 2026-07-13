@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { get } from "@/lib/api";
+import { get } from "@/lib/api"
+import { buildAdminT } from "@/lib/i18n";
 import { safeDate, safeDateTime } from "@/lib/date";
 import { ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -17,12 +18,12 @@ interface Report {
 }
 
 const MODULE_LABELS: Record<string, string> = {
-  "GACC Food Registration": "GACC 食品注册",
-  "Chinese Label Compliance": "中文标签合规",
-  "Cosmetics Filing (NMPA)": "化妆品备案(NMPA)",
-  "CCC Certification": "CCC 认证",
-  "Cross-Border E-commerce": "跨境电商",
-  "Brand Protection": "品牌保护",
+  "GACC Food Registration": "module.gacc",
+  "Chinese Label Compliance": "module.label",
+  "Cosmetics Filing (NMPA)": "module.nmpa",
+  "CCC Certification": "module.ccc",
+  "Cross-Border E-commerce": "module.crossborder",
+  "Brand Protection": "module.trademark",
 };
 
 const MODULE_KEYS = Object.keys(MODULE_LABELS);
@@ -30,10 +31,10 @@ const STATUS_OPTIONS = ["pending", "completed", "free_with_subscription", "refun
 
 const statusLabel = (s: string) =>
   ({
-    pending: "待支付",
-    completed: "已支付",
-    free_with_subscription: "订阅免费",
-    refunded: "已退款",
+    pending: "status.pending",
+    completed: "status.paid",
+    free_with_subscription: "status.free",
+    refunded: "status.refunded",
   })[s] || s;
 
 const statusBadge = (s: string) =>
@@ -46,6 +47,7 @@ const statusBadge = (s: string) =>
 
 export default function ReportsPage() {
   const [reports, setReports] = useState<Report[]>([]);
+  const t = buildAdminT();
   const [total, setTotal] = useState(0);
   const [page, setPage] = useState(1);
   const [pageSize] = useState(25);
@@ -86,10 +88,10 @@ export default function ReportsPage() {
           value={moduleFilter}
           onChange={(e) => handleFilter(e.target.value, statusFilter)}
         >
-          <option value="">全部模块</option>
+          <option value="">{t("table.allModules")}</option>
           {MODULE_KEYS.map((m) => (
             <option key={m} value={m}>
-              {MODULE_LABELS[m]}
+              {t(MODULE_LABELS[m])}
             </option>
           ))}
         </select>
@@ -98,10 +100,10 @@ export default function ReportsPage() {
           value={statusFilter}
           onChange={(e) => handleFilter(moduleFilter, e.target.value)}
         >
-          <option value="">全部状态</option>
+          <option value="">{t("table.allStatus")}</option>
           {STATUS_OPTIONS.map((s) => (
             <option key={s} value={s}>
-              {statusLabel(s)}
+              {t(statusLabel(s))}
             </option>
           ))}
         </select>
@@ -137,7 +139,7 @@ export default function ReportsPage() {
                 reports.map((report) => (
                   <tr key={report.id}>
                     <td style={{ fontWeight: 500 }}>{report.product_name}</td>
-                    <td>{MODULE_LABELS[report.module] || report.module}</td>
+                    <td>{t(MODULE_LABELS[report.module]) || report.module}</td>
                     <td style={{ color: "#6b7280" }}>
                       {report.user_name
                         ? `${report.user_name} (${report.user_email})`
@@ -145,7 +147,7 @@ export default function ReportsPage() {
                     </td>
                     <td>
                       <span className={`badge ${statusBadge(report.payment_status)}`}>
-                        {statusLabel(report.payment_status)}
+                        {t(statusLabel(report.payment_status))}
                       </span>
                     </td>
                     <td>{report.locale}</td>

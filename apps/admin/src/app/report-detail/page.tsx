@@ -2,7 +2,8 @@
 
 import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import { get } from "@/lib/api";
+import { get } from "@/lib/api"
+import { buildAdminT } from "@/lib/i18n";
 import { safeDateTime } from "@/lib/date";
 import { ChevronDown, ChevronUp, Download, ExternalLink, ArrowLeft } from "lucide-react";
 
@@ -23,12 +24,12 @@ interface ReportDetail {
 }
 
 const MODULE_LABELS: Record<string, string> = {
-  "GACC Food Registration": "GACC 食品注册",
-  "Chinese Label Compliance": "中文标签合规",
-  "Cosmetics Filing (NMPA)": "化妆品备案(NMPA)",
-  "CCC Certification": "CCC 认证",
-  "Cross-Border E-commerce": "跨境电商",
-  "Brand Protection": "品牌保护",
+  "GACC Food Registration": "module.gacc",
+  "Chinese Label Compliance": "module.label",
+  "Cosmetics Filing (NMPA)": "module.nmpa",
+  "CCC Certification": "module.ccc",
+  "Cross-Border E-commerce": "module.crossborder",
+  "Brand Protection": "module.trademark",
 };
 
 const statusLabel = (s: string) =>
@@ -60,6 +61,7 @@ function ReportDetailInner() {
   const searchParams = useSearchParams();
   const reportId = searchParams.get("id") || "";
 
+  const t = buildAdminT();
   const [report, setReport] = useState<ReportDetail | null>(null);
   const [loading, setLoading] = useState(true);
   const [expandedInput, setExpandedInput] = useState(true);

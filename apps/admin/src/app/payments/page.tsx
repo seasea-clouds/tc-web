@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { safeDate } from "@/lib/date";
-import { get, post } from "@/lib/api";
+import { get, post } from "@/lib/api"
+import { buildAdminT } from "@/lib/i18n";
 import { Search, DollarSign, TrendingUp, Calendar, CreditCard } from "lucide-react";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip } from "recharts";
 
@@ -30,10 +31,10 @@ interface RevenueSummary {
 }
 
 const STATUS_OPTIONS = [
-  { value: "", label: "全部状态" },
-  { value: "pending", label: "待支付" },
-  { value: "completed", label: "已支付" },
-  { value: "refunded", label: "已退款" },
+  { value: "", label: "table.allActions" },
+  { value: "pending", label: "status.pending" },
+  { value: "completed", label: "status.paid" },
+  { value: "refunded", label: "status.refunded" },
 ];
 
 const STATUS_BADGE: Record<string, string> = {
@@ -43,9 +44,9 @@ const STATUS_BADGE: Record<string, string> = {
 };
 
 const STATUS_LABEL: Record<string, string> = {
-  pending: "待支付",
-  completed: "已支付",
-  refunded: "已退款",
+  pending: "status.pending",
+  completed: "status.paid",
+  refunded: "status.refunded",
 };
 
 function formatAmount(cents: number, currency: string): string {
@@ -59,6 +60,7 @@ function formatRevenue(cents: number): string {
 
 export default function PaymentsPage() {
   const [payments, setPayments] = useState<Payment[]>([]);
+  const t = buildAdminT();
   const [total, setTotal] = useState(0);
   const [page, setPage] = useState(1);
   const [search, setSearch] = useState("");
@@ -108,7 +110,7 @@ export default function PaymentsPage() {
         setPayments(data.payments);
         setTotal(data.total);
       })
-      .catch(() => showToast("error", "加载失败"))
+      .catch(() => showToast("error", t("payment.loadFailed")))
       .finally(() => setLoading(false));
   };
 
@@ -129,13 +131,13 @@ export default function PaymentsPage() {
     setRefunding(paymentId);
     try {
       await post(`/payments/${paymentId}/refund`, {});
-      showToast("success", "退款成功");
+      showToast("success", t("payment.refundSuccess"));
       fetchPayments();
       // Refresh revenue
       const data = await get<RevenueSummary>("/payments/summary");
       setRevenue(data);
     } catch {
-      showToast("error", "退款失败");
+      showToast("error", t("payment.refundFailed"));
     } finally {
       setRefunding(null);
     }
@@ -213,7 +215,7 @@ export default function PaymentsPage() {
                   <XAxis dataKey="month" tick={{ fontSize: 11 }} />
                   <YAxis tick={{ fontSize: 11 }} tickFormatter={(v) => `¥${v}`} />
                   <Tooltip
-                    formatter={(value: unknown) => [`¥${Number(value).toLocaleString()}`, "收入"]}
+                    formatter={(value: unknown) => [`¥${Number(value).toLocaleString()}`, t("payment.earned")]}
                     labelFormatter={(label: unknown) => `${label} 月`}
                   />
                   <Bar dataKey="amountUSD" fill="#D4AF37" radius={[4, 4, 0, 0]} />
@@ -231,14 +233,14 @@ export default function PaymentsPage() {
           <input
             className="input"
             style={{ paddingLeft: "2.25rem" }}
-            placeholder="搜索邮箱、订单号或产品..."
+            placeholder={t("table.searchEmailOrderProduct")}
             value={search}
             onChange={(e) => { setSearch(e.target.value); setPage(1); }}
           />
         </div>
         <select className="select" value={statusFilter} onChange={(e) => { setStatusFilter(e.target.value); setPage(1); }}>
           {STATUS_OPTIONS.map((o) => (
-            <option key={o.value} value={o.value}>{o.label}</option>
+            <option key={o.value} value={o.value}>{t(o.label)}</option>
           ))}
         </select>
         <span style={{ fontSize: "0.8rem", color: "#6b7280" }}>共 {total} 条记录</span>
@@ -248,7 +250,7 @@ export default function PaymentsPage() {
           onClick={handleBackfill}
           disabled={backfilling}
         >
-          {backfilling ? "补录中…" : "⬆ 补录支付"}
+          {backfilling ? t("payment.backfilling") : "⬆ 补录支付"}
         </button>
       </div>
 
@@ -287,7 +289,7 @@ export default function PaymentsPage() {
                     <td style={{ fontWeight: 600 }}>{formatAmount(p.amount_cents, p.currency)}</td>
                     <td>
                       <span className={`badge ${STATUS_BADGE[p.status] || "badge-pending"}`}>
-                        {STATUS_LABEL[p.status] || p.status}
+                        {t(STATUS_LABEL[p.status]) || p.status}
                       </span>
                     </td>
                     <td style={{ fontSize: "0.8rem", color: "#6b7280" }}>{p.provider}</td>
@@ -302,7 +304,7 @@ export default function PaymentsPage() {
                           onClick={() => handleRefund(p.id)}
                           disabled={refunding === p.id}
                         >
-                          {refunding === p.id ? "处理中..." : "退款"}
+                          {refunding === p.id ? t("payment.processing") : t("payment.refund")}
                         </button>
                       ) : (
                         <span style={{ color: "#9ca3af", fontSize: "0.75rem" }}>—</span>

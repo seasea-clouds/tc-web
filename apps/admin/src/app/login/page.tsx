@@ -3,6 +3,7 @@
 import { useState, FormEvent, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { login } from "@/lib/auth";
+import { buildAdminT } from "@/lib/i18n";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -11,6 +12,7 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const t = buildAdminT();
   const [turnstileToken, setTurnstileToken] = useState("");
 
   useEffect(() => {
@@ -39,7 +41,7 @@ export default function LoginPage() {
     setError("");
 
     if (!turnstileToken) {
-      setError("请完成人机验证");
+      setError(t("login.turnstileRequired"));
       return;
     }
 
@@ -49,7 +51,7 @@ export default function LoginPage() {
       await login(username, password, turnstileToken);
       router.replace("/dashboard");
     } catch (err: any) {
-      setError(err.message || "登录失败，请重试");
+      setError(err.message || t("login.failed"));
       window.turnstile?.reset(turnstileRef.current!);
       setTurnstileToken("");
     } finally {
@@ -61,7 +63,7 @@ export default function LoginPage() {
     <div className="login-page">
       <div className="login-card">
         <h1>SinoTrade Admin</h1>
-        <p className="subtitle">管理后台登录</p>
+        <p className="subtitle">{t("login.subtitle")}</p>
 
         {error && (
           <div style={{
@@ -75,14 +77,14 @@ export default function LoginPage() {
         <form onSubmit={handleSubmit}>
           <div style={{ marginBottom: "1rem" }}>
             <label style={{ display: "block", fontSize: "0.875rem", fontWeight: 500, marginBottom: "0.375rem", color: "#374151" }}>
-              用户名
+              {t("login.username")}
             </label>
             <input
               className="input"
               type="text"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              placeholder="请输入用户名"
+              placeholder={t("login.usernamePlaceholder")}
               required
               autoFocus
             />
@@ -90,14 +92,14 @@ export default function LoginPage() {
 
           <div style={{ marginBottom: "1.5rem" }}>
             <label style={{ display: "block", fontSize: "0.875rem", fontWeight: 500, marginBottom: "0.375rem", color: "#374151" }}>
-              密码
+              {t("login.password")}
             </label>
             <input
               className="input"
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="请输入密码"
+              placeholder={t("login.passwordPlaceholder")}
               required
             />
           </div>
@@ -110,7 +112,7 @@ export default function LoginPage() {
             style={{ width: "100%", justifyContent: "center", padding: "0.75rem" }}
             disabled={loading}
           >
-            {loading ? "登录中..." : "登 录"}
+            {loading ? t("login.loggingIn") : t("login.submit")}
           </button>
         </form>
       </div>

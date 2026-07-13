@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { get } from "@/lib/api";
+import { get } from "@/lib/api"
+import { buildAdminT } from "@/lib/i18n";
 import { Search, ChevronDown, ChevronUp } from "lucide-react";
 
 interface LogEntry {
@@ -15,25 +16,25 @@ interface LogEntry {
 }
 
 const ACTION_LABELS: Record<string, string> = {
-  login: "登录",
-  logout: "登出",
-  disable_user: "禁用用户",
-  enable_user: "启用用户",
-  add_subscription: "添加订阅",
-  modify_subscription: "修改订阅",
-  cancel_subscription: "取消订阅",
-  refund_payment: "发起退款",
+  login: "action.login",
+  logout: "action.logout",
+  disable_user: "action.disableUser",
+  enable_user: "action.enableUser",
+  add_subscription: "action.addSubscription",
+  modify_subscription: "action.modifySubscription",
+  cancel_subscription: "action.cancelSubscription",
+  refund_payment: "action.refundPayment",
 };
 
 const ACTION_CATEGORIES: Record<string, string> = {
-  login: "认证",
-  logout: "认证",
-  disable_user: "用户管理",
-  enable_user: "用户管理",
-  add_subscription: "订阅管理",
-  modify_subscription: "订阅管理",
-  cancel_subscription: "订阅管理",
-  refund_payment: "支付",
+  login: "action.login",
+  logout: "action.login",
+  disable_user: "nav.users",
+  enable_user: "nav.users",
+  add_subscription: "nav.subscriptions",
+  modify_subscription: "nav.subscriptions",
+  cancel_subscription: "nav.subscriptions",
+  refund_payment: "nav.payments",
 };
 
 export default function LogsPage() {
@@ -45,6 +46,7 @@ export default function LogsPage() {
   const [actionFilter, setActionFilter] = useState("");
   const [dateFrom, setDateFrom] = useState("");
   const [dateTo, setDateTo] = useState("");
+  const t = buildAdminT();
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
   const pageSize = 30;
 
@@ -85,36 +87,36 @@ export default function LogsPage() {
           <input
             className="input"
             style={{ paddingLeft: "2.25rem" }}
-            placeholder="搜索操作内容..."
+            placeholder={t("table.searchAction")}
             value={search}
             onChange={(e) => { setSearch(e.target.value); setPage(1); }}
           />
         </div>
         <select className="select" value={actionFilter} onChange={(e) => { setActionFilter(e.target.value); setPage(1); }}>
-          <option value="">全部类型</option>
-          <optgroup label="🔐 认证">
-            <option value="login">登录</option>
-            <option value="logout">登出</option>
+          <option value="">{t("table.allActions")}</option>
+          <optgroup label={"🔐 " + t("action.login")}>
+            <option value="login">{t("action.login")}</option>
+            <option value="logout">{t("action.logout")}</option>
           </optgroup>
-          <optgroup label="👥 用户管理">
-            <option value="disable_user">禁用用户</option>
-            <option value="enable_user">启用用户</option>
+          <optgroup label={"👥 " + t("nav.users")}>
+            <option value="disable_user">{t("action.disableUser")}</option>
+            <option value="enable_user">{t("action.enableUser")}</option>
           </optgroup>
-          <optgroup label="🔄 订阅管理">
-            <option value="add_subscription">添加订阅</option>
-            <option value="modify_subscription">修改订阅</option>
-            <option value="cancel_subscription">取消订阅</option>
+          <optgroup label={"🔄 " + t("nav.subscriptions")}>
+            <option value="add_subscription">{t("action.addSubscription")}</option>
+            <option value="modify_subscription">{t("action.modifySubscription")}</option>
+            <option value="cancel_subscription">{t("action.cancelSubscription")}</option>
           </optgroup>
-          <optgroup label="💳 支付">
-            <option value="refund_payment">发起退款</option>
+          <optgroup label={"💳 " + t("nav.payments")}>
+            <option value="refund_payment">{t("action.refundPayment")}</option>
           </optgroup>
         </select>
         <input type="date" className="input" style={{ maxWidth: 160 }} value={dateFrom}
           onChange={(e) => { setDateFrom(e.target.value); setPage(1); }} />
-        <span style={{ color: "#9ca3af" }}>至</span>
+        <span style={{ color: "#9ca3af" }}>{t("table.to")}</span>
         <input type="date" className="input" style={{ maxWidth: 160 }} value={dateTo}
           onChange={(e) => { setDateTo(e.target.value); setPage(1); }} />
-        <span style={{ fontSize: "0.8rem", color: "#6b7280" }}>共 {total} 条</span>
+        <span style={{ fontSize: "0.8rem", color: "#6b7280" }}>{t("table.total", "{n} total").replace("{n}", String(total))}</span>
       </div>
 
       {loading ? (
@@ -127,17 +129,17 @@ export default function LogsPage() {
             <thead>
               <tr>
                 <th style={{ width: 32 }} />
-                <th>时间</th>
-                <th>操作人</th>
-                <th>操作类型</th>
-                <th>操作对象</th>
-                <th>详情</th>
+                <th>{t("table.time")}</th>
+                <th>{t("table.operator")}</th>
+                <th>{t("table.actionType")}</th>
+                <th>{t("table.target")}</th>
+                <th>{t("table.details")}</th>
               </tr>
             </thead>
             <tbody>
               {logs.length === 0 ? (
                 <tr>
-                  <td colSpan={6} className="empty-state">暂无操作日志</td>
+                  <td colSpan={6} className="empty-state">{t("table.emptyLogs")}</td>
                 </tr>
               ) : (
                 logs.map((log) => {
@@ -158,7 +160,7 @@ export default function LogsPage() {
                         <td>{log.admin_name || "—"}</td>
                         <td>
                           <span className="badge badge-completed">
-                            {ACTION_LABELS[log.action] || log.action}
+                            {t(ACTION_LABELS[log.action]) || log.action}
                           </span>
                         </td>
                         <td style={{ color: "#6b7280", fontSize: "0.8rem" }}>
@@ -167,10 +169,10 @@ export default function LogsPage() {
                         <td>
                           {detailObj ? (
                             <span style={{ color: "#3b82f6", fontSize: "0.8rem" }}>
-                              {isExpanded ? "收起" : `${Object.keys(detailObj).length} 项变更`}
+                              {isExpanded ? t("table.collapse") : `${Object.keys(detailObj).length} {t("table.changes").replace("{n}", String(Object.keys(detailObj).length))}`}
                             </span>
                           ) : (
-                            <span style={{ color: "#9ca3af", fontSize: "0.8rem" }}>无</span>
+                            <span style={{ color: "#9ca3af", fontSize: "0.8rem" }}>{t("table.none")}</span>
                           )}
                         </td>
                       </tr>
@@ -192,9 +194,9 @@ export default function LogsPage() {
 
           {totalPages > 1 && (
             <div className="pagination">
-              <button disabled={page <= 1} onClick={() => setPage(page - 1)}>上一页</button>
+              <button disabled={page <= 1} onClick={() => setPage(page - 1)}>{t("table.prevPage")}</button>
               <span style={{ color: "#6b7280", fontSize: "0.8rem" }}>{page} / {totalPages}</span>
-              <button disabled={page >= totalPages} onClick={() => setPage(page + 1)}>下一页</button>
+              <button disabled={page >= totalPages} onClick={() => setPage(page + 1)}>{t("table.nextPage")}</button>
             </div>
           )}
         </div>

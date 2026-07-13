@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { get, post } from "@/lib/api";
 import { safeDate, safeDateTime } from "@/lib/date";
 import { X, ChevronDown, ChevronUp, Eye, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+import { buildAdminT } from "@/lib/i18n";
 
 interface Subscription {
   id: string;
@@ -31,7 +32,7 @@ interface SubscriptionDetailData {
 }
 
 const statusLabel = (s: string) =>
-  ({ active: "活跃", past_due: "扣款失败", expired: "已过期", canceled: "已取消" })[s] || s;
+  ({ active: "status.activeShort", past_due: "status.pastDue", expired: "status.expired", canceled: "status.canceled" })[s] || s;
 
 function formatAmount(cents: number, currency: string): string {
   const symbol = currency === "USD" ? "$" : currency === "CNY" ? "¥" : currency + " ";
@@ -41,6 +42,7 @@ function formatAmount(cents: number, currency: string): string {
 export default function SubscriptionsPage() {
   const [subscriptions, setSubscriptions] = useState<Subscription[]>([]);
   const [total, setTotal] = useState(0);
+  const t = buildAdminT();
   const [page, setPage] = useState(1);
   const [pageSize] = useState(25);
   const [loading, setLoading] = useState(true);
@@ -139,9 +141,9 @@ export default function SubscriptionsPage() {
                       <td style={{ color: "#6b7280" }}>{sub.user_email}</td>
                       <td>
                         {sub.plan === "monthly"
-                          ? "月度订阅"
+                          ? t("subscription.monthly")
                           : sub.plan === "annual"
-                          ? "年度订阅"
+                          ? t("subscription.yearly")
                           : sub.plan}
                       </td>
                       <td>
@@ -242,7 +244,7 @@ export default function SubscriptionsPage() {
                 className="input"
                 value={addEmail}
                 onChange={(e) => setAddEmail(e.target.value)}
-                placeholder="输入用户邮箱"
+                placeholder={t("table.inputUserEmail")}
               />
             </div>
             <div style={{ marginBottom: "0.75rem" }}>

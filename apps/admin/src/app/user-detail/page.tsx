@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { get, post } from "@/lib/api";
 import { safeDate, safeDateTime } from "@/lib/date";
 import { ChevronDown, ChevronUp, ArrowLeft } from "lucide-react";
+import { buildAdminT } from "@/lib/i18n";
 
 interface UserDetailData {
   user: {
@@ -47,11 +48,11 @@ const statusBadge = (s: string) => {
 
 const statusLabel = (s: string) => {
   const map: Record<string, string> = {
-    active: "正常",
-    disabled: "已禁用",
-    past_due: "扣款失败",
-    expired: "已过期",
-    canceled: "已取消",
+    active: "status.active",
+    disabled: "status.disabled",
+    past_due: "status.pastDue",
+    expired: "status.expired",
+    canceled: "status.canceled",
   };
   return map[s] || s;
 };
@@ -60,6 +61,7 @@ function UserDetailInner() {
   const searchParams = useSearchParams();
   const userId = searchParams.get("id") || "";
 
+  const t = buildAdminT();
   const [data, setData] = useState<UserDetailData | null>(null);
   const [loading, setLoading] = useState(true);
   const [expandedReports, setExpandedReports] = useState(true);
@@ -129,7 +131,7 @@ function UserDetailInner() {
           <div>
             <strong>状态:</strong>{" "}
             <span className={`badge ${userStatus === "disabled" ? "badge-disabled" : "badge-active"}`}>
-              {userStatus === "disabled" ? "已禁用" : "活跃"}
+              {userStatus === "disabled" ? "status.disabled" : "活跃"}
             </span>
           </div>
           <div><strong>注册时间:</strong> {safeDateTime(user.created_at)}</div>
@@ -140,7 +142,7 @@ function UserDetailInner() {
               style={{ padding: "0.25rem 0.625rem", fontSize: "0.75rem" }}
               onClick={toggleUserStatus}
             >
-              {userStatus === "disabled" ? "启用用户" : "禁用用户"}
+              {userStatus === "disabled" ? t("action.enableUser") : t("action.disableUser")}
             </button>
           </div>
         </div>
@@ -170,7 +172,7 @@ function UserDetailInner() {
                   <tbody>
                     {data.subscriptions.map((sub) => (
                       <tr key={sub.id}>
-                        <td>{sub.plan === "monthly" ? "月度订阅" : sub.plan === "annual" ? "年度订阅" : sub.plan}</td>
+                        <td>{sub.plan === "monthly" ? t("subscription.monthly") : sub.plan === "annual" ? t("subscription.yearly") : sub.plan}</td>
                         <td><span className={`badge ${statusBadge(sub.status)}`}>{statusLabel(sub.status)}</span></td>
                         <td style={{ fontFamily: "monospace", fontSize: "0.7rem" }}>{sub.provider_subscription_id || "—"}</td>
                         <td>{safeDate(sub.current_period_start)}</td>

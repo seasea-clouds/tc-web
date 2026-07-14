@@ -17,9 +17,11 @@ export default function LoginPage() {
 
   useEffect(() => {
     if (window.turnstile) {
+      const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || "0x4AAAAAADqoEtL5oqrpaf3R";
       window.turnstile!.render(turnstileRef.current!, {
-        sitekey: "0x4AAAAAADqoEtL5oqrpaf3R",
+        sitekey: turnstileSiteKey,
         callback: (token: string) => setTurnstileToken(token),
+        'expired-callback': () => setTurnstileToken(''),
       });
     } else {
       const script = document.createElement("script");
@@ -27,9 +29,11 @@ export default function LoginPage() {
       script.async = true;
       script.defer = true;
       script.onload = () => {
+        const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || "0x4AAAAAADqoEtL5oqrpaf3R";
         window.turnstile!.render(turnstileRef.current!, {
-          sitekey: "0x4AAAAAADqoEtL5oqrpaf3R",
+          sitekey: turnstileSiteKey,
           callback: (token: string) => setTurnstileToken(token),
+          'expired-callback': () => setTurnstileToken(''),
         });
       };
       document.head.appendChild(script);

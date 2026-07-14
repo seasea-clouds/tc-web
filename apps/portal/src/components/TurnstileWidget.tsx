@@ -10,7 +10,7 @@ interface TurnstileWidgetProps {
 }
 
 // CF Turnstile site key for sinotradecompliance.com
-const DEFAULT_SITE_KEY = '0x4AAAAAADqoEtL5oqrpaf3R';
+const DEFAULT_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || '0x4AAAAAADqoEtL5oqrpaf3R';
 
 export default function TurnstileWidget({
   onVerify,

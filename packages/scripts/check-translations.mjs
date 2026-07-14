@@ -1481,6 +1481,184 @@ function deepMergeShared() {
 }
 
 // ============================================================
+// Admin 后台消息完整性检查
+// 检查 admin messages/zh.json 和 en.json：
+//   1. 文件完整性（解析、键名泄漏）
+//   2. 破折号一致性
+//   3. zh.json 和 en.json 键名覆盖率
+// ============================================================
+
+const ADMIN_MESSAGES_DIR = path.join(MONOREPO_ROOT, '..', 'apps', 'admin', 'messages');
+
+function checkAdminMessages(verbose = true) {
+  if (!fs.existsSync(ADMIN_MESSAGES_DIR)) {
+    if (verbose) console.log(`\n🔧 Admin 消息检查: ⏭️ 跳过 (${ADMIN_MESSAGES_DIR} 不存在)`);
+    return { total: 0, missingKeys: [], dashIssues: 0 };
+  }
+
+  const zhPath = path.join(ADMIN_MESSAGES_DIR, 'zh.json');
+  const enPath = path.join(ADMIN_MESSAGES_DIR, 'en.json');
+  let missingKeys = [];
+  let totalIssues = 0;
+
+  if (!fs.existsSync(zhPath)) {
+    if (verbose) console.log(`\n🔧 Admin 消息检查: ❌ zh.json 不存在`);
+    return { total: 1, missingKeys: ['zh.json missing'], dashIssues: 0 };
+  }
+  if (!fs.existsSync(enPath)) {
+    if (verbose) console.log(`\n🔧 Admin 消息检查: ❌ en.json 不存在`);
+    return { total: 1, missingKeys: ['en.json missing'], dashIssues: 0 };
+  }
+
+  const zh = loadJSON(zhPath);
+  const en = loadJSON(enPath);
+
+  // 检查键名泄漏
+  for (const [k, v] of Object.entries(zh)) {
+    if (typeof v === 'string' && v === k) {
+      missingKeys.push(`zh key leak: "${k}" = "${v}"`);
+      totalIssues++;
+    }
+  }
+  for (const [k, v] of Object.entries(en)) {
+    if (typeof v === 'string' && v === k) {
+      missingKeys.push(`en key leak: "${k}" = "${v}"`);
+      totalIssues++;
+    }
+  }
+
+  // 检查 zh keys 在 en 中存在
+  const zhKeys = new Set(Object.keys(zh));
+  const enKeys = new Set(Object.keys(en));
+  const enMissing = [...zhKeys].filter(k => !enKeys.has(k));
+  const zhMissing = [...enKeys].filter(k => !zhKeys.has(k));
+
+  if (enMissing.length > 0) {
+    if (verbose) {
+      console.log(`\n🔧 Admin 消息检查: zh.json 中有 ${enMissing.length} 个 key 在 en.json 中缺失`);
+      for (const k of enMissing.slice(0, 10)) console.log(`  ❌ ${k}`);
+      if (enMissing.length > 10) console.log(`  ... 还有 ${enMissing.length - 10} 条`);
+    }
+    missingKeys.push(`en.json missing ${enMissing.length} keys present in zh.json`);
+    totalIssues += enMissing.length;
+  }
+  if (zhMissing.length > 0) {
+    if (verbose) {
+      console.log(`\n🔧 Admin 消息检查: en.json 中有 ${zhMissing.length} 个 key 在 zh.json 中缺失`);
+      for (const k of zhMissing.slice(0, 10)) console.log(`  ❌ ${k}`);
+      if (zhMissing.length > 10) console.log(`  ... 还有 ${zhMissing.length - 10} 条`);
+    }
+    missingKeys.push(`zh.json missing ${zhMissing.length} keys present in en.json`);
+    totalIssues += zhMissing.length;
+  }
+
+  if (verbose && totalIssues === 0) {
+    console.log(`\n🔧 Admin 消息检查: ✅ 全部通过 (${zhKeys.size} keys zh.json, ${enKeys.size} keys en.json, 无泄漏/缺失)`);
+  } else if (verbose && totalIssues > 0) {
+    console.log(`\n🔧 Admin 消息检查: ⚠️ ${totalIssues} 个问题`);
+  }
+
+  return { total: totalIssues, missingKeys, dashIssues: 0 };
+}
+
+// ============================================================
+// 硬编码密钥/Token 检测
+// 扫描常见硬编码问题：
+//   1. CF Turnstile site key 硬编码
+//   2. 报告 ID 泄露
+//   3. 其他疑似机密的字符串模式
+// ============================================================
+
+// 已知布署到生产环境的 Turnstile site key（公开、安全）
+// 但在源代码中硬编码意味着不同环境无法切换
+const HARDCODED_PATTERNS = [
+  {
+    label: 'Turnstile site key',
+    pattern: /0x4[A-Za-z0-9-_]{20,30}/g,
+    allowFiles: ['.env', '.env.example', 'node_modules', '.git', 'cloudflare-api', '.js'],
+  },
+  {
+    label: '疑似报告/订单 ID',
+    pattern: /CROSSBORDER-[A-Za-z0-9-]{15,}/g,
+    allowFiles: ['.env', 'node_modules', '.git'],
+  },
+];
+
+function checkHardcodedSecrets(verbose = true) {
+  const SRC_DIRS = [
+    path.join(MONOREPO_ROOT, '..', 'apps'),
+    path.join(MONOREPO_ROOT, 'ui', 'src'),
+  ];
+
+  let totalIssues = 0;
+  const issues = [];
+
+  if (verbose) console.log('\n🔒 硬编码密钥扫描:');
+
+  for (const srcDir of SRC_DIRS) {
+    if (!fs.existsSync(srcDir)) continue;
+
+    const files = walkDir(srcDir, ['.ts', '.tsx', '.js', '.jsx', '.mjs']);
+    for (const file of files) {
+      // Skip node_modules and .git
+      const relativePath = path.relative(MONOREPO_ROOT, file);
+      if (relativePath.includes('node_modules') || relativePath.includes('.git')) continue;
+
+      const content = fs.readFileSync(file, 'utf-8');
+
+      for (const rule of HARDCODED_PATTERNS) {
+        // Skip env files for Turnstile check (they should have the key)
+        if (rule.label === 'Turnstile site key' && file.endsWith('.env')) continue;
+        if (rule.label === 'Turnstile site key' && file.endsWith('.env.example')) continue;
+
+        // Check if this file type should be allowed
+        let matches;
+        while ((matches = rule.pattern.exec(content)) !== null) {
+          // Check allowFiles — skip files matching these extensions
+          const ext = path.extname(file);
+          if (rule.allowFiles && rule.allowFiles.some(a => ext.endsWith(a) || file.includes(a))) {
+            continue;
+          }
+
+          totalIssues++;
+          const lineNum = content.substring(0, matches.index).split('\n').length;
+          const snippet = matches[0].length > 30 ? matches[0].substring(0, 30) + '…' : matches[0];
+          issues.push(`  ⚠️ ${relativePath}:L${lineNum} — ${rule.label}: ${snippet}`);
+        }
+      }
+    }
+  }
+
+  if (verbose && totalIssues > 0) {
+    for (const issue of issues.slice(0, 20)) console.log(issue);
+    if (issues.length > 20) console.log(`  ... 还有 ${issues.length - 20} 个`);
+    console.log(`🔒 硬编码密钥扫描: ⚠️ 发现 ${totalIssues} 个可疑位置`);
+  } else if (verbose) {
+    console.log('🔒 硬编码密钥扫描: ✅ 未发现可疑硬编码密钥');
+  }
+
+  return totalIssues;
+}
+
+function walkDir(dir, exts) {
+  const files = [];
+  try {
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+    for (const entry of entries) {
+      const fullPath = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        if (!['node_modules', '.git', '.next', '.wrangler', 'out', 'dist', 'build'].includes(entry.name)) {
+          files.push(...walkDir(fullPath, exts));
+        }
+      } else if (exts.some(e => entry.name.endsWith(e))) {
+        files.push(fullPath);
+      }
+    }
+  } catch {}
+  return files;
+}
+
+// ============================================================
 // CLI
 // ============================================================
 const args = process.argv.slice(2);
@@ -1502,8 +1680,10 @@ if (jsonOut && result) {
 const sharedUiIssues = checkSharedUiMessages(!short);
 const breadcrumbResult = (targetLang || args.includes('--skip-breadcrumb-check')) ? { total: 0, missing: [] } : checkBreadcrumbKeys(!short);
 const dashIssues = checkDashConsistency(!short);
+const adminMsgResult = (targetLang || args.includes('--skip-admin-check')) ? { total: 0, missingKeys: [], dashIssues: 0 } : checkAdminMessages(!short);
+const secretIssues = (targetLang || args.includes('--skip-secret-check')) ? 0 : checkHardcodedSecrets(!short);
 
-const totalIssues = (result?.total_issues ?? 0) + blogIssues + (localeCheck?.total ?? 0) + industryMetaIssues + portalIssues + sharedUiIssues + breadcrumbResult.total + dashIssues;
+const totalIssues = (result?.total_issues ?? 0) + blogIssues + (localeCheck?.total ?? 0) + industryMetaIssues + portalIssues + sharedUiIssues + breadcrumbResult.total + dashIssues + adminMsgResult.total + secretIssues;
 
 if (totalIssues === 0) {
   console.log('\n✅ 全量核验通过！48 种语言无质量问题。');
@@ -1532,6 +1712,12 @@ if (totalIssues === 0) {
   }
   if (dashIssues > 0) {
     console.log(`   - 破折号类型: ${dashIssues} 处使用了 hyphen-minus (-) 而非 EM DASH (—) 或 EN DASH (–)`);
+  }
+  if (adminMsgResult.total > 0) {
+    console.log(`   - Admin 消息: ${adminMsgResult.total} 个问题`);
+  }
+  if (secretIssues > 0) {
+    console.log(`   - 硬编码密钥: ${secretIssues} 个可疑位置`);
   }
   if (process.argv.includes("--ci")) process.exit(1);
 }

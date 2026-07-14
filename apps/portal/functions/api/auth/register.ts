@@ -34,14 +34,15 @@ export async function onRequest(context: { request: Request; env: Env }) {
     }
 
     // Verify Turnstile token
-    const secret = context.env.TURNSTILE_SECRET_KEY;
-    if (secret && turnstileToken) {
-      const verification = await verifyTurnstileToken(turnstileToken, secret);
-      if (!verification.success) {
-        return Response.json({ error: 'Security check failed. Please try again.' }, { status: 403 });
-      }
-    } else if (secret && !turnstileToken) {
+    if (!context.env.TURNSTILE_SECRET_KEY) {
+      return Response.json({ error: 'Server configuration error: Turnstile not configured' }, { status: 500 });
+    }
+    if (!turnstileToken) {
       return Response.json({ error: 'Security check required' }, { status: 400 });
+    }
+    const verification = await verifyTurnstileToken(turnstileToken, context.env.TURNSTILE_SECRET_KEY);
+    if (!verification.success) {
+      return Response.json({ error: 'Security check failed. Please try again.' }, { status: 403 });
     }
 
     // Check if user already exists

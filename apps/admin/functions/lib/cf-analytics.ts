@@ -55,7 +55,7 @@ export interface AggregateStats {
 // ── Helpers ──────────────────────────────────────────────────────
 
 /** Fetch GraphQL from CF. Throws on HTTP error. */
-async function graphql(query: string, token: string): Promise<any> {
+export async function graphql(query: string, token: string): Promise<any> {
   const resp = await fetch(CF_API, {
     method: "POST",
     headers: {

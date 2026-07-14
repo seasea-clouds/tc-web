@@ -92,6 +92,26 @@ export default function DashboardPage() {
 
   const formatHour = (h: number) => `${h.toString().padStart(2, "0")}:00`;
 
+/** Empty state chart placeholder with visual SVG icon */
+function EmptyState({ message, compact = false }: { message: string; compact?: boolean }) {
+  return (
+    <div style={{
+      display: 'flex', flexDirection: 'column', alignItems: 'center',
+      justifyContent: 'center', gap: '0.75rem',
+      padding: compact ? '1.5rem' : '2.5rem',
+      color: '#9ca3af', userSelect: 'none',
+    }}>
+      <svg width={compact ? 36 : 48} height={compact ? 36 : 48} viewBox="0 0 48 48" fill="none" opacity={0.5}>
+        <rect x="6" y="28" width="8" height="14" rx="2" fill="#D4AF37" fillOpacity={0.4} />
+        <rect x="18" y="18" width="8" height="24" rx="2" fill="#1B365D" fillOpacity={0.4} />
+        <rect x="30" y="22" width="8" height="20" rx="2" fill="#D4AF37" fillOpacity={0.4} />
+        <rect x="42" y="12" width="6" height="30" rx="2" fill="#1B365D" fillOpacity={0.4} />
+      </svg>
+      <p style={{ fontSize: compact ? '0.8rem' : '0.875rem', margin: 0, color: '#9ca3af', textAlign: 'center' }}>{message}</p>
+    </div>
+  );
+}
+
 // ── Page path to breadcrumb ──
 // Known segment names for breadcrumb display (en locale common segments)
 const SEGMENT_LABELS: Record<string, string> = {
@@ -225,13 +245,7 @@ function pathToBreadcrumb(path: string): string {
           gap: 1rem;
           margin-bottom: 1.5rem;
         }
-        .chart-grid .empty-state {
-          min-height: 280px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 1.5rem;
-        }
+
         @media (min-width: 768px) {
           .chart-grid {
             grid-template-columns: repeat(2, 1fr);
@@ -319,7 +333,7 @@ function pathToBreadcrumb(path: string): string {
                     </LineChart>
                   );
                 }
-                return <div className="empty-state" style={{ padding: "2rem" }}>{t("chart.noTrafficData")}</div>;
+                return <EmptyState message={t("chart.noTrafficData")} />;
               })()}
             </ResponsiveContainer>
           </div>
@@ -351,7 +365,7 @@ function pathToBreadcrumb(path: string): string {
                   <Line type="monotone" dataKey="unique_users" name={t("chart.uniqueUsers")} stroke="#3B82F6" strokeWidth={2} dot={{ r: 3 }} />
                 </LineChart>
               ) : (
-                <div className="empty-state" style={{ padding: "2rem" }}>{t("chart.noData")}</div>
+                <EmptyState message={t("chart.noData")} />
               )}
             </ResponsiveContainer>
           </div>
@@ -385,7 +399,7 @@ function pathToBreadcrumb(path: string): string {
                   </div>
                 </div>
               ) : (
-                <div className="empty-state" style={{ padding: "1.5rem" }}>{t("chart.waitingData")}</div>
+                <EmptyState message={t("chart.waitingData")} compact />
               )}
             </div>
 
@@ -411,7 +425,7 @@ function pathToBreadcrumb(path: string): string {
                   </PieChart>
                 </ResponsiveContainer>
               ) : (
-                <div className="empty-state" style={{ padding: "1.5rem" }}>{t("chart.noData")}</div>
+                <EmptyState message={t("chart.noData")} compact />
               )}
             </div>
 
@@ -437,7 +451,7 @@ function pathToBreadcrumb(path: string): string {
                   </PieChart>
                 </ResponsiveContainer>
               ) : (
-                <div className="empty-state" style={{ padding: "1.5rem" }}>{t("chart.noData")}</div>
+                <EmptyState message={t("chart.noData")} compact />
               )}
             </div>
 
@@ -463,7 +477,7 @@ function pathToBreadcrumb(path: string): string {
                   </PieChart>
                 </ResponsiveContainer>
               ) : (
-                <div className="empty-state" style={{ padding: "1.5rem" }}>{t("chart.noData")}</div>
+                <EmptyState message={t("chart.noData")} compact />
               )}
             </div>
 
@@ -481,7 +495,7 @@ function pathToBreadcrumb(path: string): string {
                   </BarChart>
                 </ResponsiveContainer>
               ) : (
-                <div className="empty-state" style={{ padding: "1.5rem" }}>{t("chart.noData")}</div>
+                <EmptyState message={t("chart.noData")} compact />
               )}
             </div>
 
@@ -507,7 +521,7 @@ function pathToBreadcrumb(path: string): string {
                   </PieChart>
                 </ResponsiveContainer>
               ) : (
-                <div className="empty-state" style={{ padding: "1.5rem" }}>{t("chart.noData")}</div>
+                <EmptyState message={t("chart.noData")} compact />
               )}
             </div>
 
@@ -533,7 +547,7 @@ function pathToBreadcrumb(path: string): string {
                   </PieChart>
                 </ResponsiveContainer>
               ) : (
-                <div className="empty-state" style={{ padding: "1.5rem" }}>{t("chart.waitingData")}</div>
+                <EmptyState message={t("chart.waitingData")} compact />
               )}
             </div>
           </div>
@@ -571,7 +585,7 @@ function pathToBreadcrumb(path: string): string {
                   ))}
                 </div>
               ) : (
-                <div className="empty-state" style={{ padding: "1.5rem" }}>{t("chart.waitingData")}</div>
+                <EmptyState message={t("chart.waitingData")} compact />
               );
             })()}
           </div>
@@ -589,15 +603,13 @@ function pathToBreadcrumb(path: string): string {
                 ))}
               </div>
             ) : (
-              <div className="empty-state" style={{ padding: "1.5rem" }}>{t("chart.waitingData")}</div>
+              <EmptyState message={t("chart.waitingData")} compact />
             )}
           </div>
         </>
         );
       })() : (
-        <div className="empty-state">
-          <p>{t("chart.noData")}</p>
-        </div>
+        <EmptyState message={t("chart.noData")} />
       )}
 
       {/* ── Toast notification ── */}

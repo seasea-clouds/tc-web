@@ -153,7 +153,7 @@ export async function fetchDailyStats(
     groups = data?.viewer?.zones?.[0]?.httpRequests1dGroups || [];
   } catch (err) {
     console.error(`[cf-analytics] fetchDailyStats range query failed:`, err);
-    // Fall through with empty groups; fill zeros for all requested dates
+    throw err;
   }
 
   // Build a map of date → group for easy lookup

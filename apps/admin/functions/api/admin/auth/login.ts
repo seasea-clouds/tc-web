@@ -29,8 +29,11 @@ export async function onRequest(context: { request: Request; env: Env }) {
     if (!turnstileToken) {
       return Response.json({ error: "请完成人机验证" }, { status: 400 });
     }
+    if (!context.env.TURNSTILE_SECRET_KEY) {
+      return Response.json({ error: "服务器配置错误：人机验证未配置" }, { status: 500 });
+    }
     const turnstileForm = new URLSearchParams();
-    turnstileForm.append("secret", context.env.TURNSTILE_SECRET_KEY || "");
+    turnstileForm.append("secret", context.env.TURNSTILE_SECRET_KEY);
     turnstileForm.append("response", turnstileToken);
     const turnstileResp = await fetch(
       "https://challenges.cloudflare.com/turnstile/v0/siteverify",

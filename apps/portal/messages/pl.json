@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "Narodowa Komisja Zdrowia (NHC)",
     "regAuthority_npc": "Narodowy Kongres Ludowy (NPC)",
     "tmReg_cnipaEdition_name": "Wydanie CNIPA 2021",
-    "tmReg_revision_number": "4. wersja 2019"
+    "tmReg_revision_number": "4. wersja 2019",
+    "cbGlossary_3docTerm": "Dopasowanie 3 dokumentów",
+    "cbGlossary_positiveListTerm": "Lista pozytywna",
+    "documentSeeLabel": "Zobacz dokument",
+    "labelGlossary_allergenTerm": "Alergeny",
+    "labelGlossary_foodSafetyLawTerm": "Prawo dotyczące bezpieczeństwa żywności",
+    "nmpaGlossary_ordinaryTerm": "Zwykłe kosmetyki",
+    "nmpaGlossary_specialTerm": "Specjalne kosmetyki",
+    "tmGlossary_customsRecordalTerm": "Rejestr celny",
+    "tmGlossary_firstToFileTerm": "Pierwszy do zgłoszenia",
+    "tmGlossary_oppositionTerm": "Sprzeciw",
+    "tmGlossary_squattingTerm": "Kucanie znaku towarowego"
   },
   "Cookie": {
     "message": "Ta witryna wykorzystuje wyłącznie niezbędne pliki cookie służące do uwierzytelniania. Nie są używane żadne śledzące ani reklamowe pliki cookie.",

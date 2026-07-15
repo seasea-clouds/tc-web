@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "Nationale Gesundheitskommission (NHC)",
     "regAuthority_npc": "Nationaler Volkskongress (NPC)",
     "tmReg_cnipaEdition_name": "CNIPA 2021 Ausgabe",
-    "tmReg_revision_number": "4. Revision 2019"
+    "tmReg_revision_number": "4. Revision 2019",
+    "cbGlossary_3docTerm": "3-Doc-Matching",
+    "cbGlossary_positiveListTerm": "Positivliste",
+    "documentSeeLabel": "Siehe Dokument",
+    "labelGlossary_allergenTerm": "Allergen",
+    "labelGlossary_foodSafetyLawTerm": "Lebensmittelsicherheitsgesetz",
+    "nmpaGlossary_ordinaryTerm": "Gewöhnliche Kosmetik",
+    "nmpaGlossary_specialTerm": "Spezialkosmetik",
+    "tmGlossary_customsRecordalTerm": "Zollprotokoll",
+    "tmGlossary_firstToFileTerm": "First-to-File",
+    "tmGlossary_oppositionTerm": "Opposition",
+    "tmGlossary_squattingTerm": "Markenbesetzung"
   },
   "Cookie": {
     "message": "Diese Website verwendet nur unbedingt erforderliche Authentifizierungscookies. Es werden keine Tracking- oder Werbecookies verwendet.",

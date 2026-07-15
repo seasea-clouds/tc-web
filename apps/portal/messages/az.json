@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "Milli Səhiyyə Komissiyası (NHC)",
     "regAuthority_npc": "Milli Xalq Konqresi (NPC)",
     "tmReg_cnipaEdition_name": "CNIPA 2021 Buraxılışı",
-    "tmReg_revision_number": "4-cü Baxış 2019"
+    "tmReg_revision_number": "4-cü Baxış 2019",
+    "cbGlossary_3docTerm": "3-Sənəd Uyğunluğu",
+    "cbGlossary_positiveListTerm": "Müsbət Siyahı",
+    "documentSeeLabel": "Sənədə baxın",
+    "labelGlossary_allergenTerm": "Allergen",
+    "labelGlossary_foodSafetyLawTerm": "Qida Təhlükəsizliyi Qanunu",
+    "nmpaGlossary_ordinaryTerm": "Adi Kosmetika",
+    "nmpaGlossary_specialTerm": "Xüsusi Kosmetika",
+    "tmGlossary_customsRecordalTerm": "Gömrük qeydi",
+    "tmGlossary_firstToFileTerm": "İlk Fayl",
+    "tmGlossary_oppositionTerm": "Müxalifət",
+    "tmGlossary_squattingTerm": "Ticarət nişanının squatting"
   },
   "Cookie": {
     "message": "Bu sayt yalnız əsas autentifikasiya kukilərindən istifadə edir. Heç bir izləmə və ya reklam kukilərindən istifadə edilmir.",

@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "Comissão Nacional de Saúde (CNS)",
     "regAuthority_npc": "Congresso Nacional Popular (APN)",
     "tmReg_cnipaEdition_name": "Edição CNIPA 2021",
-    "tmReg_revision_number": "4ª Revisão 2019"
+    "tmReg_revision_number": "4ª Revisão 2019",
+    "cbGlossary_3docTerm": "Correspondência de 3 documentos",
+    "cbGlossary_positiveListTerm": "Lista Positiva",
+    "documentSeeLabel": "Ver documento",
+    "labelGlossary_allergenTerm": "Alérgeno",
+    "labelGlossary_foodSafetyLawTerm": "Lei de Segurança Alimentar",
+    "nmpaGlossary_ordinaryTerm": "Cosméticos Comuns",
+    "nmpaGlossary_specialTerm": "Cosméticos Especiais",
+    "tmGlossary_customsRecordalTerm": "Registro Aduaneiro",
+    "tmGlossary_firstToFileTerm": "Primeiro a arquivar",
+    "tmGlossary_oppositionTerm": "Oposição",
+    "tmGlossary_squattingTerm": "Ocupação de marca registrada"
   },
   "Cookie": {
     "message": "Este site utiliza apenas cookies de autenticação essenciais. Nenhum cookie de rastreamento ou publicidade é usado.",

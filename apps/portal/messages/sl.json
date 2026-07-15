@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "Nacionalna zdravstvena komisija (NHC)",
     "regAuthority_npc": "Nacionalni ljudski kongres (NPC)",
     "tmReg_cnipaEdition_name": "Izdaja CNIPA 2021",
-    "tmReg_revision_number": "4. revizija 2019"
+    "tmReg_revision_number": "4. revizija 2019",
+    "cbGlossary_3docTerm": "Ujemanje 3 dokumentov",
+    "cbGlossary_positiveListTerm": "Pozitivni seznam",
+    "documentSeeLabel": "Glej dokument",
+    "labelGlossary_allergenTerm": "Alergen",
+    "labelGlossary_foodSafetyLawTerm": "Zakon o varni hrani",
+    "nmpaGlossary_ordinaryTerm": "Navadna kozmetika",
+    "nmpaGlossary_specialTerm": "Posebna kozmetika",
+    "tmGlossary_customsRecordalTerm": "Carinska evidenca",
+    "tmGlossary_firstToFileTerm": "Prvi v datoteko",
+    "tmGlossary_oppositionTerm": "Opozicija",
+    "tmGlossary_squattingTerm": "Blagovna znamka Squatting"
   },
   "Cookie": {
     "message": "To spletno mesto uporablja samo bistvene piškotke za preverjanje pristnosti. Piškotki za sledenje ali oglaševanje se ne uporabljajo.",

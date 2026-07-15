@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "Nacionalna zdravstvena komisija (NHC)",
     "regAuthority_npc": "Nacionalni narodni kongres (NPC)",
     "tmReg_cnipaEdition_name": "Izdanje CNIPA 2021",
-    "tmReg_revision_number": "4. revizija 2019"
+    "tmReg_revision_number": "4. revizija 2019",
+    "cbGlossary_3docTerm": "3-Doc podudaranje",
+    "cbGlossary_positiveListTerm": "Pozitivna lista",
+    "documentSeeLabel": "Vidi dokument",
+    "labelGlossary_allergenTerm": "Alergen",
+    "labelGlossary_foodSafetyLawTerm": "Zakon o sigurnosti hrane",
+    "nmpaGlossary_ordinaryTerm": "Obična kozmetika",
+    "nmpaGlossary_specialTerm": "Posebna kozmetika",
+    "tmGlossary_customsRecordalTerm": "Carinska evidencija",
+    "tmGlossary_firstToFileTerm": "Prvi prijavitelj",
+    "tmGlossary_oppositionTerm": "Opozicija",
+    "tmGlossary_squattingTerm": "Zaštitni znak čučanja"
   },
   "Cookie": {
     "message": "Ova stranica koristi samo bitne kolačiće za provjeru autentičnosti. Ne koriste se kolačići za praćenje ili oglašavanje.",

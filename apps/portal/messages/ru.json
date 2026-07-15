@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "Национальная комиссия здравоохранения (NHC)",
     "regAuthority_npc": "Всекитайское собрание народных представителей (ВНП)",
     "tmReg_cnipaEdition_name": "CNIPA, издание 2021 г.",
-    "tmReg_revision_number": "4-я редакция 2019 г."
+    "tmReg_revision_number": "4-я редакция 2019 г.",
+    "cbGlossary_3docTerm": "Сопоставление 3 документов",
+    "cbGlossary_positiveListTerm": "Положительный список",
+    "documentSeeLabel": "См. документ",
+    "labelGlossary_allergenTerm": "Аллерген",
+    "labelGlossary_foodSafetyLawTerm": "Закон о безопасности пищевых продуктов",
+    "nmpaGlossary_ordinaryTerm": "Обычная косметика",
+    "nmpaGlossary_specialTerm": "Специальная косметика",
+    "tmGlossary_customsRecordalTerm": "Таможенный протокол",
+    "tmGlossary_firstToFileTerm": "Первый в файле",
+    "tmGlossary_oppositionTerm": "Оппозиция",
+    "tmGlossary_squattingTerm": "Сквоттинг товарных знаков"
   },
   "Cookie": {
     "message": "Этот сайт использует только необходимые файлы cookie аутентификации. Никакие файлы cookie для отслеживания или рекламы не используются.",

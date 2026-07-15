@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "தேசிய சுகாதார ஆணையம் (NHC)",
     "regAuthority_npc": "தேசிய மக்கள் காங்கிரஸ் (NPC)",
     "tmReg_cnipaEdition_name": "CNIPA 2021 பதிப்பு",
-    "tmReg_revision_number": "4வது திருத்தம் 2019"
+    "tmReg_revision_number": "4வது திருத்தம் 2019",
+    "cbGlossary_3docTerm": "3-டாக் பொருத்தம்",
+    "cbGlossary_positiveListTerm": "நேர்மறை பட்டியல்",
+    "documentSeeLabel": "ஆவணத்தைப் பார்க்கவும்",
+    "labelGlossary_allergenTerm": "ஒவ்வாமை",
+    "labelGlossary_foodSafetyLawTerm": "உணவு பாதுகாப்பு சட்டம்",
+    "nmpaGlossary_ordinaryTerm": "சாதாரண அழகுசாதனப் பொருட்கள்",
+    "nmpaGlossary_specialTerm": "சிறப்பு அழகுசாதனப் பொருட்கள்",
+    "tmGlossary_customsRecordalTerm": "சுங்க பதிவு",
+    "tmGlossary_firstToFileTerm": "முதல்-கோப்பு",
+    "tmGlossary_oppositionTerm": "எதிர்ப்பு",
+    "tmGlossary_squattingTerm": "வர்த்தக முத்திரை குந்துதல்"
   },
   "Cookie": {
     "message": "இந்தத் தளம் அத்தியாவசிய அங்கீகார குக்கீகளை மட்டுமே பயன்படுத்துகிறது. கண்காணிப்பு அல்லது விளம்பர குக்கீகள் பயன்படுத்தப்படவில்லை.",

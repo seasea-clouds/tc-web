@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "Nemzeti Egészségügyi Bizottság (NHC)",
     "regAuthority_npc": "Országos Népi Kongresszus (NPC)",
     "tmReg_cnipaEdition_name": "CNIPA 2021-es kiadás",
-    "tmReg_revision_number": "4. felülvizsgálat, 2019"
+    "tmReg_revision_number": "4. felülvizsgálat, 2019",
+    "cbGlossary_3docTerm": "3 dokumentum egyeztetése",
+    "cbGlossary_positiveListTerm": "Pozitív lista",
+    "documentSeeLabel": "Lásd a dokumentumot",
+    "labelGlossary_allergenTerm": "Allergén",
+    "labelGlossary_foodSafetyLawTerm": "Élelmiszerbiztonsági törvény",
+    "nmpaGlossary_ordinaryTerm": "Közönséges kozmetikumok",
+    "nmpaGlossary_specialTerm": "Speciális kozmetikumok",
+    "tmGlossary_customsRecordalTerm": "Vámjegyzőkönyv",
+    "tmGlossary_firstToFileTerm": "Első bejelentő",
+    "tmGlossary_oppositionTerm": "Ellenzék",
+    "tmGlossary_squattingTerm": "Védjegy Guggolás"
   },
   "Cookie": {
     "message": "Ez az oldal csak alapvető hitelesítési cookie-kat használ. Nem használnak nyomkövető vagy hirdetési sütiket.",

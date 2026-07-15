@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "Tume ya Taifa ya Afya (NHC)",
     "regAuthority_npc": "Bunge la Taifa la Wananchi (NPC)",
     "tmReg_cnipaEdition_name": "Toleo la CNIPA 2021",
-    "tmReg_revision_number": "Marekebisho ya 4 2019"
+    "tmReg_revision_number": "Marekebisho ya 4 2019",
+    "cbGlossary_3docTerm": "3-Doc Kulingana",
+    "cbGlossary_positiveListTerm": "Orodha Chanya",
+    "documentSeeLabel": "Tazama hati",
+    "labelGlossary_allergenTerm": "Alajeni",
+    "labelGlossary_foodSafetyLawTerm": "Sheria ya Usalama wa Chakula",
+    "nmpaGlossary_ordinaryTerm": "Vipodozi vya Kawaida",
+    "nmpaGlossary_specialTerm": "Vipodozi Maalum",
+    "tmGlossary_customsRecordalTerm": "Rekodi ya Forodha",
+    "tmGlossary_firstToFileTerm": "Kwanza-kwa-Faili",
+    "tmGlossary_oppositionTerm": "Upinzani",
+    "tmGlossary_squattingTerm": "Kuchuchumaa kwa Alama ya Biashara"
   },
   "Cookie": {
     "message": "Tovuti hii hutumia vidakuzi muhimu vya uthibitishaji pekee. Hakuna vidakuzi vya ufuatiliaji au utangazaji vinatumika.",

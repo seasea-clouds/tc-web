@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "نیشنل ہیلتھ کمیشن (NHC)",
     "regAuthority_npc": "نیشنل پیپلز کانگریس (NPC)",
     "tmReg_cnipaEdition_name": "CNIPA 2021 ایڈیشن",
-    "tmReg_revision_number": "چوتھی نظرثانی 2019"
+    "tmReg_revision_number": "چوتھی نظرثانی 2019",
+    "cbGlossary_3docTerm": "3-Doc میچنگ",
+    "cbGlossary_positiveListTerm": "مثبت فہرست",
+    "documentSeeLabel": "دستاویز دیکھیں",
+    "labelGlossary_allergenTerm": "الرجین",
+    "labelGlossary_foodSafetyLawTerm": "فوڈ سیفٹی قانون",
+    "nmpaGlossary_ordinaryTerm": "عام کاسمیٹکس",
+    "nmpaGlossary_specialTerm": "خصوصی کاسمیٹکس",
+    "tmGlossary_customsRecordalTerm": "کسٹم ریکارڈل",
+    "tmGlossary_firstToFileTerm": "پہلے سے فائل",
+    "tmGlossary_oppositionTerm": "اپوزیشن",
+    "tmGlossary_squattingTerm": "ٹریڈ مارک اسکواٹنگ"
   },
   "Cookie": {
     "message": "یہ سائٹ صرف ضروری تصدیقی کوکیز استعمال کرتی ہے۔ کوئی ٹریکنگ یا اشتہاری کوکیز استعمال نہیں کی جاتی ہیں۔",

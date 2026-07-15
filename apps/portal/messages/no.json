@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "Den Nasjonale Helsekommisjonen (NHC)",
     "regAuthority_npc": "Den Nasjonale Folkekongressen (NPC)",
     "tmReg_cnipaEdition_name": "CNIPA 2021-utgaven",
-    "tmReg_revision_number": "Fjerde revisjon 2019"
+    "tmReg_revision_number": "Fjerde revisjon 2019",
+    "cbGlossary_3docTerm": "3-Doc-matching",
+    "cbGlossary_positiveListTerm": "Positiv liste",
+    "documentSeeLabel": "Se dokumentet",
+    "labelGlossary_allergenTerm": "Allergen",
+    "labelGlossary_foodSafetyLawTerm": "Mattrygghetslov",
+    "nmpaGlossary_ordinaryTerm": "Vanlig kosmetikk",
+    "nmpaGlossary_specialTerm": "Spesiell kosmetikk",
+    "tmGlossary_customsRecordalTerm": "Tollprotokoll",
+    "tmGlossary_firstToFileTerm": "Først til fil",
+    "tmGlossary_oppositionTerm": "Motstand",
+    "tmGlossary_squattingTerm": "Varemerke huk"
   },
   "Cookie": {
     "message": "Dette nettstedet bruker kun viktige autentiseringsinformasjonskapsler. Ingen sporings- eller reklameinformasjonskapsler brukes.",

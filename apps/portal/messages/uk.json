@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "Національна комісія охорони здоров'я (NHC)",
     "regAuthority_npc": "Національні збори народних представників (ВСНП)",
     "tmReg_cnipaEdition_name": "Видання CNIPA 2021",
-    "tmReg_revision_number": "4-й перегляд 2019"
+    "tmReg_revision_number": "4-й перегляд 2019",
+    "cbGlossary_3docTerm": "Зіставлення 3 документів",
+    "cbGlossary_positiveListTerm": "Позитивний список",
+    "documentSeeLabel": "Дивіться документ",
+    "labelGlossary_allergenTerm": "алерген",
+    "labelGlossary_foodSafetyLawTerm": "Закон про безпечність харчових продуктів",
+    "nmpaGlossary_ordinaryTerm": "Звичайна косметика",
+    "nmpaGlossary_specialTerm": "Спеціальна косметика",
+    "tmGlossary_customsRecordalTerm": "Митний облік",
+    "tmGlossary_firstToFileTerm": "Перший файл",
+    "tmGlossary_oppositionTerm": "Опозиція",
+    "tmGlossary_squattingTerm": "Торгова марка Squatting"
   },
   "Cookie": {
     "message": "Цей сайт використовує лише необхідні файли cookie для автентифікації. Файли cookie для відстеження чи реклами не використовуються.",

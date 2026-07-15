@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "Komisioni Kombëtar i Shëndetësisë (NHC)",
     "regAuthority_npc": "Kongresi Popullor Kombëtar (NPC)",
     "tmReg_cnipaEdition_name": "Botim CNIPA 2021",
-    "tmReg_revision_number": "Rishikimi i 4-të 2019"
+    "tmReg_revision_number": "Rishikimi i 4-të 2019",
+    "cbGlossary_3docTerm": "3-Përputhja e dokumenteve",
+    "cbGlossary_positiveListTerm": "Lista pozitive",
+    "documentSeeLabel": "Shih dokumentin",
+    "labelGlossary_allergenTerm": "Alergjen",
+    "labelGlossary_foodSafetyLawTerm": "Ligji për Sigurinë Ushqimore",
+    "nmpaGlossary_ordinaryTerm": "Kozmetikë e zakonshme",
+    "nmpaGlossary_specialTerm": "Kozmetikë speciale",
+    "tmGlossary_customsRecordalTerm": "Dogana Recordal",
+    "tmGlossary_firstToFileTerm": "Skedari i parë",
+    "tmGlossary_oppositionTerm": "Opozita",
+    "tmGlossary_squattingTerm": "Squatting i markës tregtare"
   },
   "Cookie": {
     "message": "Ky sajt përdor vetëm cookie thelbësore të vërtetimit. Nuk përdoren skedarë gjurmimi ose reklamimi.",

@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "کمیسیون ملی بهداشت (NHC)",
     "regAuthority_npc": "کنگره ملی خلق (NPC)",
     "tmReg_cnipaEdition_name": "نسخه 2021 CNIPA",
-    "tmReg_revision_number": "نسخه چهارم 2019"
+    "tmReg_revision_number": "نسخه چهارم 2019",
+    "cbGlossary_3docTerm": "3-تطبیق سند",
+    "cbGlossary_positiveListTerm": "لیست مثبت",
+    "documentSeeLabel": "سند را ببینید",
+    "labelGlossary_allergenTerm": "آلرژن",
+    "labelGlossary_foodSafetyLawTerm": "قانون ایمنی مواد غذایی",
+    "nmpaGlossary_ordinaryTerm": "لوازم آرایشی معمولی",
+    "nmpaGlossary_specialTerm": "لوازم آرایشی خاص",
+    "tmGlossary_customsRecordalTerm": "ثبت گمرک",
+    "tmGlossary_firstToFileTerm": "اول به فایل",
+    "tmGlossary_oppositionTerm": "مخالفت",
+    "tmGlossary_squattingTerm": "چمباتمه زدن علامت تجاری"
   },
   "Cookie": {
     "message": "این سایت فقط از کوکی های احراز هویت ضروری استفاده می کند. هیچ کوکی ردیابی یا تبلیغاتی استفاده نمی شود.",

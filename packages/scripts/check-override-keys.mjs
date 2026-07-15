@@ -22,14 +22,21 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, '../..');
 
+function getDetectedProject() {
+  const idx = process.argv.findIndex(a => a.startsWith('--project='));
+  if (idx !== -1) return process.argv[idx].split('=')[1];
+  const cwd = process.cwd();
+  const m = cwd.match(/[/]apps[/]([^/]+)/);
+  return m ? m[1] : 'site';
+}
+const detectedProject = getDetectedProject();
+
 const isCi = process.argv.includes('--ci');
 
 const UI_MSG_DIR = path.join(repoRoot, 'packages/ui/messages');
 
 const APP_MSG_DIRS = [
-  { name: 'site', dir: path.join(repoRoot, 'apps/site/messages') },
-  { name: 'portal', dir: path.join(repoRoot, 'apps/portal/messages') },
-  { name: 'blog', dir: path.join(repoRoot, 'apps/blog/messages') },
+  { name: detectedProject, dir: path.join(repoRoot, 'apps', detectedProject, 'messages') },
 ];
 
 // ─── 辅助函数 ──────────────────────────────────────────────────────────

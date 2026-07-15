@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "ჯანდაცვის ეროვნული კომისია (NHC)",
     "regAuthority_npc": "ეროვნული სახალხო კონგრესი (NPC)",
     "tmReg_cnipaEdition_name": "CNIPA 2021 გამოცემა",
-    "tmReg_revision_number": "მე-4 რევიზია 2019"
+    "tmReg_revision_number": "მე-4 რევიზია 2019",
+    "cbGlossary_3docTerm": "3-დოკუმენტის შესატყვისი",
+    "cbGlossary_positiveListTerm": "პოზიტიური სია",
+    "documentSeeLabel": "იხილეთ დოკუმენტი",
+    "labelGlossary_allergenTerm": "ალერგენი",
+    "labelGlossary_foodSafetyLawTerm": "სურსათის უვნებლობის კანონი",
+    "nmpaGlossary_ordinaryTerm": "ჩვეულებრივი კოსმეტიკა",
+    "nmpaGlossary_specialTerm": "სპეციალური კოსმეტიკა",
+    "tmGlossary_customsRecordalTerm": "საბაჟო ჩანაწერი",
+    "tmGlossary_firstToFileTerm": "პირველი ფაილი",
+    "tmGlossary_oppositionTerm": "ოპოზიცია",
+    "tmGlossary_squattingTerm": "სავაჭრო ნიშნის ჩაძირვა"
   },
   "Cookie": {
     "message": "ეს საიტი იყენებს მხოლოდ აუთენტიფიკაციის აუცილებელ ქუქიებს. არ გამოიყენება თვალთვალის ან სარეკლამო ქუქიები.",

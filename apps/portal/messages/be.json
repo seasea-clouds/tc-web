@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "Нацыянальная камісія аховы здароўя (NHC)",
     "regAuthority_npc": "Усекітайскі сход народных прадстаўнікоў (УСНП)",
     "tmReg_cnipaEdition_name": "Выданне CNIPA 2021 г",
-    "tmReg_revision_number": "4-я рэдакцыя 2019 г"
+    "tmReg_revision_number": "4-я рэдакцыя 2019 г",
+    "cbGlossary_3docTerm": "3-супастаўленне дакументаў",
+    "cbGlossary_positiveListTerm": "Пазітыўны спіс",
+    "documentSeeLabel": "Глядзіце дакумент",
+    "labelGlossary_allergenTerm": "Алерген",
+    "labelGlossary_foodSafetyLawTerm": "Закон аб бяспецы харчовых прадуктаў",
+    "nmpaGlossary_ordinaryTerm": "Звычайная касметыка",
+    "nmpaGlossary_specialTerm": "Спецыяльная касметыка",
+    "tmGlossary_customsRecordalTerm": "Мытны ўлік",
+    "tmGlossary_firstToFileTerm": "Першы, хто падасць заяўку",
+    "tmGlossary_oppositionTerm": "Пярэчанне",
+    "tmGlossary_squattingTerm": "Гандлёвая марка, якая сядзіць на кукішках"
   },
   "Cookie": {
     "message": "Гэты сайт выкарыстоўвае толькі неабходныя файлы cookie для аўтэнтыфікацыі. Файлы cookie для адсочвання і рэкламы не выкарыстоўваюцца.",

@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "Comisia Națională de Sănătate (NHC)",
     "regAuthority_npc": "Congresul Național al Poporului (NPC)",
     "tmReg_cnipaEdition_name": "Ediția CNIPA 2021",
-    "tmReg_revision_number": "A patra revizuire 2019"
+    "tmReg_revision_number": "A patra revizuire 2019",
+    "cbGlossary_3docTerm": "3-Potrivirea documentelor",
+    "cbGlossary_positiveListTerm": "Lista pozitivă",
+    "documentSeeLabel": "Vezi documentul",
+    "labelGlossary_allergenTerm": "Alergen",
+    "labelGlossary_foodSafetyLawTerm": "Legea siguranței alimentelor",
+    "nmpaGlossary_ordinaryTerm": "Cosmetice obișnuite",
+    "nmpaGlossary_specialTerm": "Cosmetice speciale",
+    "tmGlossary_customsRecordalTerm": "Înregistrare vamală",
+    "tmGlossary_firstToFileTerm": "Primul la dosar",
+    "tmGlossary_oppositionTerm": "Opoziţie",
+    "tmGlossary_squattingTerm": "Squatting de marcă comercială"
   },
   "Cookie": {
     "message": "Acest site folosește numai cookie-uri de autentificare esențiale. Nu sunt utilizate cookie-uri de urmărire sau de publicitate.",

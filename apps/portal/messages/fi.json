@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "Kansallinen terveyskomissio (NHC)",
     "regAuthority_npc": "Kansallinen kansankongressi (NPC)",
     "tmReg_cnipaEdition_name": "CNIPA 2021 -versio",
-    "tmReg_revision_number": "4. versio 2019"
+    "tmReg_revision_number": "4. versio 2019",
+    "cbGlossary_3docTerm": "Kolmen asiakirjan täsmäytys",
+    "cbGlossary_positiveListTerm": "Positiivinen lista",
+    "documentSeeLabel": "Katso asiakirja",
+    "labelGlossary_allergenTerm": "Allergeeni",
+    "labelGlossary_foodSafetyLawTerm": "Elintarviketurvallisuuslaki",
+    "nmpaGlossary_ordinaryTerm": "Tavallinen kosmetiikka",
+    "nmpaGlossary_specialTerm": "Erikoiskosmetiikka",
+    "tmGlossary_customsRecordalTerm": "Tullin kirjaus",
+    "tmGlossary_firstToFileTerm": "Ensimmäinen hakija",
+    "tmGlossary_oppositionTerm": "Oppositio",
+    "tmGlossary_squattingTerm": "Tavaramerkki kyykky"
   },
   "Cookie": {
     "message": "Tämä sivusto käyttää vain välttämättömiä todennusevästeitä. Mitään seuranta- tai mainosevästeitä ei käytetä.",

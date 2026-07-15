@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "Komisi Kesehatan Nasional (NHC)",
     "regAuthority_npc": "Kongres Rakyat Nasional (NPC)",
     "tmReg_cnipaEdition_name": "CNIPA Edisi 2021",
-    "tmReg_revision_number": "Revisi ke-4 2019"
+    "tmReg_revision_number": "Revisi ke-4 2019",
+    "cbGlossary_3docTerm": "Pencocokan 3 Dokumen",
+    "cbGlossary_positiveListTerm": "Daftar Positif",
+    "documentSeeLabel": "Lihat dokumen",
+    "labelGlossary_allergenTerm": "alergen",
+    "labelGlossary_foodSafetyLawTerm": "Hukum Keamanan Pangan",
+    "nmpaGlossary_ordinaryTerm": "Kosmetik Biasa",
+    "nmpaGlossary_specialTerm": "Kosmetik Khusus",
+    "tmGlossary_customsRecordalTerm": "Pencatatan Bea Cukai",
+    "tmGlossary_firstToFileTerm": "File Pertama",
+    "tmGlossary_oppositionTerm": "Oposisi",
+    "tmGlossary_squattingTerm": "Jongkok Merek Dagang"
   },
   "Cookie": {
     "message": "Situs ini hanya menggunakan cookie otentikasi penting. Tidak ada cookie pelacakan atau iklan yang digunakan.",

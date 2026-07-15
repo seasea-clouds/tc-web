@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "Nationella hälsokommissionen (NHC)",
     "regAuthority_npc": "Nationella folkkongressen (NPC)",
     "tmReg_cnipaEdition_name": "CNIPA 2021 års upplaga",
-    "tmReg_revision_number": "4:e revisionen 2019"
+    "tmReg_revision_number": "4:e revisionen 2019",
+    "cbGlossary_3docTerm": "3-Doc-matchning",
+    "cbGlossary_positiveListTerm": "Positiv lista",
+    "documentSeeLabel": "Se dokument",
+    "labelGlossary_allergenTerm": "Allergen",
+    "labelGlossary_foodSafetyLawTerm": "Lagen om livsmedelssäkerhet",
+    "nmpaGlossary_ordinaryTerm": "Vanlig kosmetika",
+    "nmpaGlossary_specialTerm": "Special kosmetika",
+    "tmGlossary_customsRecordalTerm": "Tullprotokoll",
+    "tmGlossary_firstToFileTerm": "Först till fil",
+    "tmGlossary_oppositionTerm": "Opposition",
+    "tmGlossary_squattingTerm": "Varumärke hukande"
   },
   "Cookie": {
     "message": "Denna webbplats använder endast viktiga autentiseringscookies. Inga spårnings- eller reklamcookies används.",

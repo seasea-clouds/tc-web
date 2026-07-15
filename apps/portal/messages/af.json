@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "Nasionale Gesondheidskommissie (NHC)",
     "regAuthority_npc": "Nasionale Volkskongres (NPC)",
     "tmReg_cnipaEdition_name": "CNIPA 2021-uitgawe",
-    "tmReg_revision_number": "4de Hersiening 2019"
+    "tmReg_revision_number": "4de Hersiening 2019",
+    "cbGlossary_3docTerm": "3-dokumpassing",
+    "cbGlossary_positiveListTerm": "Positiewe lys",
+    "documentSeeLabel": "Sien dokument",
+    "labelGlossary_allergenTerm": "Allergeen",
+    "labelGlossary_foodSafetyLawTerm": "Wet op voedselveiligheid",
+    "nmpaGlossary_ordinaryTerm": "Gewone skoonheidsmiddels",
+    "nmpaGlossary_specialTerm": "Spesiale skoonheidsmiddels",
+    "tmGlossary_customsRecordalTerm": "Doeane-rekord",
+    "tmGlossary_firstToFileTerm": "Eerste-na-lêer",
+    "tmGlossary_oppositionTerm": "Opposisie",
+    "tmGlossary_squattingTerm": "Handelsmerk Squatting"
   },
   "Cookie": {
     "message": "Hierdie webwerf gebruik slegs noodsaaklike verifikasiekoekies. Geen dop- of advertensiekoekies word gebruik nie.",

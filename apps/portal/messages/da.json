@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "Den Nationale Sundhedskommission (NHC)",
     "regAuthority_npc": "Den Nationale Folkekongres (NPC)",
     "tmReg_cnipaEdition_name": "CNIPA 2021 udgave",
-    "tmReg_revision_number": "4. revision 2019"
+    "tmReg_revision_number": "4. revision 2019",
+    "cbGlossary_3docTerm": "3-dokuments matchning",
+    "cbGlossary_positiveListTerm": "Positiv liste",
+    "documentSeeLabel": "Se dokument",
+    "labelGlossary_allergenTerm": "Allergen",
+    "labelGlossary_foodSafetyLawTerm": "Fødevaresikkerhedsloven",
+    "nmpaGlossary_ordinaryTerm": "Almindelig kosmetik",
+    "nmpaGlossary_specialTerm": "Speciel kosmetik",
+    "tmGlossary_customsRecordalTerm": "Toldbog",
+    "tmGlossary_firstToFileTerm": "Førsteansøgerprincippet",
+    "tmGlossary_oppositionTerm": "Modstand",
+    "tmGlossary_squattingTerm": "Varemærke Squatting"
   },
   "Cookie": {
     "message": "Dette websted bruger kun vigtige autentificeringscookies. Der bruges ingen sporings- eller reklamecookies.",

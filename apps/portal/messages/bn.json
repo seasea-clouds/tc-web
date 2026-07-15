@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "জাতীয় স্বাস্থ্য কমিশন (NHC)",
     "regAuthority_npc": "ন্যাশনাল পিপলস কংগ্রেস (NPC)",
     "tmReg_cnipaEdition_name": "CNIPA 2021 সংস্করণ",
-    "tmReg_revision_number": "৪র্থ রিভিশন ২০১৯"
+    "tmReg_revision_number": "৪র্থ রিভিশন ২০১৯",
+    "cbGlossary_3docTerm": "3-ডক ম্যাচিং",
+    "cbGlossary_positiveListTerm": "ইতিবাচক তালিকা",
+    "documentSeeLabel": "নথি দেখুন",
+    "labelGlossary_allergenTerm": "অ্যালার্জেন",
+    "labelGlossary_foodSafetyLawTerm": "খাদ্য নিরাপত্তা আইন",
+    "nmpaGlossary_ordinaryTerm": "সাধারণ প্রসাধনী",
+    "nmpaGlossary_specialTerm": "বিশেষ প্রসাধনী",
+    "tmGlossary_customsRecordalTerm": "কাস্টমস রেকর্ডাল",
+    "tmGlossary_firstToFileTerm": "ফার্স্ট-টু-ফাইল",
+    "tmGlossary_oppositionTerm": "বিরোধী দল",
+    "tmGlossary_squattingTerm": "ট্রেডমার্ক স্কোয়াটিং"
   },
   "Cookie": {
     "message": "এই সাইটটি শুধুমাত্র প্রয়োজনীয় প্রমাণীকরণ কুকি ব্যবহার করে। কোন ট্র্যাকিং বা বিজ্ঞাপন কুকি ব্যবহার করা হয় না.",

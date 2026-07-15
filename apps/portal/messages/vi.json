@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "Ủy ban Y tế Quốc gia (NHC)",
     "regAuthority_npc": "Đại hội đại biểu nhân dân toàn quốc (NPC)",
     "tmReg_cnipaEdition_name": "Phiên bản CNIPA 2021",
-    "tmReg_revision_number": "Sửa đổi lần thứ 4 năm 2019"
+    "tmReg_revision_number": "Sửa đổi lần thứ 4 năm 2019",
+    "cbGlossary_3docTerm": "So khớp 3 tài liệu",
+    "cbGlossary_positiveListTerm": "Danh sách tích cực",
+    "documentSeeLabel": "Xem tài liệu",
+    "labelGlossary_allergenTerm": "chất gây dị ứng",
+    "labelGlossary_foodSafetyLawTerm": "Luật An toàn thực phẩm",
+    "nmpaGlossary_ordinaryTerm": "Mỹ phẩm thông thường",
+    "nmpaGlossary_specialTerm": "Mỹ phẩm đặc biệt",
+    "tmGlossary_customsRecordalTerm": "Hồ sơ hải quan",
+    "tmGlossary_firstToFileTerm": "Nộp hồ sơ đầu tiên",
+    "tmGlossary_oppositionTerm": "Sự phản đối",
+    "tmGlossary_squattingTerm": "Chiếm đoạt nhãn hiệu"
   },
   "Cookie": {
     "message": "Trang web này chỉ sử dụng cookie xác thực cần thiết. Không sử dụng cookie theo dõi hoặc quảng cáo.",

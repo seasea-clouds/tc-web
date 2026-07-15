@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "Национална здравна комисия (NHC)",
     "regAuthority_npc": "Национален народен конгрес (NPC)",
     "tmReg_cnipaEdition_name": "Издание на CNIPA 2021 г",
-    "tmReg_revision_number": "4-та ревизия 2019 г"
+    "tmReg_revision_number": "4-та ревизия 2019 г",
+    "cbGlossary_3docTerm": "Съпоставяне на 3 документа",
+    "cbGlossary_positiveListTerm": "Позитивен списък",
+    "documentSeeLabel": "Вижте документа",
+    "labelGlossary_allergenTerm": "алерген",
+    "labelGlossary_foodSafetyLawTerm": "Закон за безопасност на храните",
+    "nmpaGlossary_ordinaryTerm": "Обикновена козметика",
+    "nmpaGlossary_specialTerm": "Специална козметика",
+    "tmGlossary_customsRecordalTerm": "Митнически протокол",
+    "tmGlossary_firstToFileTerm": "Първи файл",
+    "tmGlossary_oppositionTerm": "Опозиция",
+    "tmGlossary_squattingTerm": "Търговска марка Клякане"
   },
   "Cookie": {
     "message": "Този сайт използва само основни бисквитки за удостоверяване. Не се използват проследяващи или рекламни бисквитки.",

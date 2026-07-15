@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "Национална здравствена комисија (НХЦ)",
     "regAuthority_npc": "Национални народни конгрес (НПЦ)",
     "tmReg_cnipaEdition_name": "ЦНИПА издање 2021",
-    "tmReg_revision_number": "4. ревизија 2019"
+    "tmReg_revision_number": "4. ревизија 2019",
+    "cbGlossary_3docTerm": "3-Доц Матцхинг",
+    "cbGlossary_positiveListTerm": "Позитивна листа",
+    "documentSeeLabel": "Види документ",
+    "labelGlossary_allergenTerm": "алерген",
+    "labelGlossary_foodSafetyLawTerm": "Закон о безбедности хране",
+    "nmpaGlossary_ordinaryTerm": "Обична козметика",
+    "nmpaGlossary_specialTerm": "Специјална козметика",
+    "tmGlossary_customsRecordalTerm": "Царинска евиденција",
+    "tmGlossary_firstToFileTerm": "Први у фајлу",
+    "tmGlossary_oppositionTerm": "Опозиција",
+    "tmGlossary_squattingTerm": "Традемарк Скуаттинг"
   },
   "Cookie": {
     "message": "Овај сајт користи само неопходне колачиће за аутентификацију. Не користе се колачићи за праћење или оглашавање.",

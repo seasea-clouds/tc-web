@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "राष्ट्रिय स्वास्थ्य आयोग (NHC)",
     "regAuthority_npc": "राष्ट्रिय जनता कांग्रेस (NPC)",
     "tmReg_cnipaEdition_name": "CNIPA २०२१ संस्करण",
-    "tmReg_revision_number": "चौथो संशोधन २०१९"
+    "tmReg_revision_number": "चौथो संशोधन २०१९",
+    "cbGlossary_3docTerm": "3-डक मिलान",
+    "cbGlossary_positiveListTerm": "सकारात्मक सूची",
+    "documentSeeLabel": "कागजात हेर्नुहोस्",
+    "labelGlossary_allergenTerm": "एलर्जी",
+    "labelGlossary_foodSafetyLawTerm": "खाद्य सुरक्षा कानून",
+    "nmpaGlossary_ordinaryTerm": "साधारण कस्मेटिक्स",
+    "nmpaGlossary_specialTerm": "विशेष कस्मेटिक्स",
+    "tmGlossary_customsRecordalTerm": "भन्सार अभिलेख",
+    "tmGlossary_firstToFileTerm": "पहिलो-देखि-फाइल",
+    "tmGlossary_oppositionTerm": "विपक्षी",
+    "tmGlossary_squattingTerm": "ट्रेडमार्क स्क्वाटिंग"
   },
   "Cookie": {
     "message": "यो साइटले आवश्यक प्रमाणीकरण कुकीहरू मात्र प्रयोग गर्दछ। कुनै ट्र्याकिङ वा विज्ञापन कुकीहरू प्रयोग गरिँदैन।",

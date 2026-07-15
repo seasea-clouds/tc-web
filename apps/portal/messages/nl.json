@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "Nationale Gezondheidscommissie (NHC)",
     "regAuthority_npc": "Nationaal Volkscongres (NPC)",
     "tmReg_cnipaEdition_name": "CNIPA 2021-editie",
-    "tmReg_revision_number": "4e herziening 2019"
+    "tmReg_revision_number": "4e herziening 2019",
+    "cbGlossary_3docTerm": "Matching van 3 documenten",
+    "cbGlossary_positiveListTerm": "Positieve lijst",
+    "documentSeeLabel": "Zie document",
+    "labelGlossary_allergenTerm": "Allergeen",
+    "labelGlossary_foodSafetyLawTerm": "Voedselveiligheidswet",
+    "nmpaGlossary_ordinaryTerm": "Gewone cosmetica",
+    "nmpaGlossary_specialTerm": "Speciale cosmetica",
+    "tmGlossary_customsRecordalTerm": "Douaneregistratie",
+    "tmGlossary_firstToFileTerm": "Als eerste bestand",
+    "tmGlossary_oppositionTerm": "Oppositie",
+    "tmGlossary_squattingTerm": "Handelsmerk kraken"
   },
   "Cookie": {
     "message": "Deze site gebruikt alleen essentiële authenticatiecookies. Er worden geen tracking- of advertentiecookies gebruikt.",

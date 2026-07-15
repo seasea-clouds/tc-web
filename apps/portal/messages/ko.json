@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "국민건강위원회(NHC)",
     "regAuthority_npc": "전국인민대표대회(NPC)",
     "tmReg_cnipaEdition_name": "CNIPA 2021 에디션",
-    "tmReg_revision_number": "2019년 4차 개정"
+    "tmReg_revision_number": "2019년 4차 개정",
+    "cbGlossary_3docTerm": "3-문서 매칭",
+    "cbGlossary_positiveListTerm": "포지티브 리스트",
+    "documentSeeLabel": "문서 보기",
+    "labelGlossary_allergenTerm": "알레르기 항원",
+    "labelGlossary_foodSafetyLawTerm": "식품안전법",
+    "nmpaGlossary_ordinaryTerm": "일반 화장품",
+    "nmpaGlossary_specialTerm": "특수화장품",
+    "tmGlossary_customsRecordalTerm": "관세 기록",
+    "tmGlossary_firstToFileTerm": "최초 제출",
+    "tmGlossary_oppositionTerm": "반대",
+    "tmGlossary_squattingTerm": "상표권 불법 점유"
   },
   "Cookie": {
     "message": "이 사이트는 필수 인증 쿠키만을 사용합니다. 추적 또는 광고 쿠키는 사용되지 않습니다.",

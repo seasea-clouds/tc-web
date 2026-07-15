@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "Comissió Nacional de Salut (NHC)",
     "regAuthority_npc": "Congrés Nacional del Poble (NPC)",
     "tmReg_cnipaEdition_name": "Edició CNIPA 2021",
-    "tmReg_revision_number": "4a revisió 2019"
+    "tmReg_revision_number": "4a revisió 2019",
+    "cbGlossary_3docTerm": "3-Concordança de documents",
+    "cbGlossary_positiveListTerm": "Llista positiva",
+    "documentSeeLabel": "Veure document",
+    "labelGlossary_allergenTerm": "Al·lèrgens",
+    "labelGlossary_foodSafetyLawTerm": "Llei de seguretat alimentària",
+    "nmpaGlossary_ordinaryTerm": "Cosmètica normal",
+    "nmpaGlossary_specialTerm": "Cosmètica especial",
+    "tmGlossary_customsRecordalTerm": "Registre duaner",
+    "tmGlossary_firstToFileTerm": "Primer a arxiu",
+    "tmGlossary_oppositionTerm": "Oposició",
+    "tmGlossary_squattingTerm": "Ocupació de marques registrades"
   },
   "Cookie": {
     "message": "Aquest lloc només utilitza cookies d'autenticació essencials. No s'utilitzen cookies de seguiment ni de publicitat.",

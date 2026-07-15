@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "国家衛生健康委員会 (NHC)",
     "regAuthority_npc": "全国人民代表大会（全人代）",
     "tmReg_cnipaEdition_name": "CNIPA 2021 年版",
-    "tmReg_revision_number": "2019 年第 4 版改訂"
+    "tmReg_revision_number": "2019 年第 4 版改訂",
+    "cbGlossary_3docTerm": "3-ドキュメントのマッチング",
+    "cbGlossary_positiveListTerm": "ポジティブリスト",
+    "documentSeeLabel": "ドキュメントを参照",
+    "labelGlossary_allergenTerm": "アレルゲン",
+    "labelGlossary_foodSafetyLawTerm": "食品安全法",
+    "nmpaGlossary_ordinaryTerm": "一般化粧品",
+    "nmpaGlossary_specialTerm": "特殊化粧品",
+    "tmGlossary_customsRecordalTerm": "税関記録",
+    "tmGlossary_firstToFileTerm": "先願者",
+    "tmGlossary_oppositionTerm": "反対",
+    "tmGlossary_squattingTerm": "商標の不法占拠"
   },
   "Cookie": {
     "message": "このサイトでは、必須の認証 Cookie のみを使用します。追跡クッキーや広告クッキーは使用されません。",

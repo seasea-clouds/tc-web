@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "Εθνική Επιτροπή Υγείας (NHC)",
     "regAuthority_npc": "Εθνικό Λαϊκό Κογκρέσο (NPC)",
     "tmReg_cnipaEdition_name": "Έκδοση CNIPA 2021",
-    "tmReg_revision_number": "4η αναθεώρηση 2019"
+    "tmReg_revision_number": "4η αναθεώρηση 2019",
+    "cbGlossary_3docTerm": "Αντιστοίχιση 3 εγγράφων",
+    "cbGlossary_positiveListTerm": "Θετική λίστα",
+    "documentSeeLabel": "Βλέπε έγγραφο",
+    "labelGlossary_allergenTerm": "Αλλεργιογόνο",
+    "labelGlossary_foodSafetyLawTerm": "Νόμος για την ασφάλεια των τροφίμων",
+    "nmpaGlossary_ordinaryTerm": "Συνηθισμένα Καλλυντικά",
+    "nmpaGlossary_specialTerm": "Ειδικά Καλλυντικά",
+    "tmGlossary_customsRecordalTerm": "Τελωνειακό αρχείο",
+    "tmGlossary_firstToFileTerm": "Πρώτα-σε-αρχείο",
+    "tmGlossary_oppositionTerm": "Αντιπολίτευση",
+    "tmGlossary_squattingTerm": "Καταληψία εμπορικού σήματος"
   },
   "Cookie": {
     "message": "Αυτός ο ιστότοπος χρησιμοποιεί μόνο απαραίτητα cookies ελέγχου ταυτότητας. Δεν χρησιμοποιούνται cookies παρακολούθησης ή διαφήμισης.",

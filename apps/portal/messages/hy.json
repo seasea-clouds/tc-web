@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "Առողջապահության ազգային հանձնաժողով (ԱՀԿ)",
     "regAuthority_npc": "Ազգային Ժողովրդական Կոնգրես (NPC)",
     "tmReg_cnipaEdition_name": "CNIPA 2021 հրատարակություն",
-    "tmReg_revision_number": "4-րդ վերանայում 2019 թ"
+    "tmReg_revision_number": "4-րդ վերանայում 2019 թ",
+    "cbGlossary_3docTerm": "3 փաստաթղթի համապատասխանեցում",
+    "cbGlossary_positiveListTerm": "Դրական ցուցակ",
+    "documentSeeLabel": "Տես փաստաթուղթ",
+    "labelGlossary_allergenTerm": "Ալերգեն",
+    "labelGlossary_foodSafetyLawTerm": "Սննդի անվտանգության մասին օրենք",
+    "nmpaGlossary_ordinaryTerm": "Սովորական կոսմետիկա",
+    "nmpaGlossary_specialTerm": "Հատուկ կոսմետիկա",
+    "tmGlossary_customsRecordalTerm": "Մաքսային արձանագրություն",
+    "tmGlossary_firstToFileTerm": "Առաջինը դեպի Ֆայլ",
+    "tmGlossary_oppositionTerm": "Ընդդիմություն",
+    "tmGlossary_squattingTerm": "Ապրանքային նշանի կցում"
   },
   "Cookie": {
     "message": "Այս կայքը օգտագործում է միայն վավերացման հիմնական թխուկներ: Հետևելու կամ գովազդային թխուկներ չեն օգտագործվում:",

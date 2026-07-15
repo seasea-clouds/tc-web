@@ -2365,7 +2365,18 @@
     "regAuthority_npc": "National People's Congress (NPC)",
     "regAuthority_nhc": "National Health Commission (NHC)",
     "tmReg_cnipaEdition_name": "CNIPA 2021 Edition",
-    "tmReg_revision_number": "4th Revision 2019"
+    "tmReg_revision_number": "4th Revision 2019",
+    "documentSeeLabel": "See document",
+    "labelGlossary_foodSafetyLawTerm": "Food Safety Law",
+    "labelGlossary_allergenTerm": "Allergen",
+    "nmpaGlossary_ordinaryTerm": "Ordinary Cosmetics",
+    "nmpaGlossary_specialTerm": "Special Cosmetics",
+    "cbGlossary_positiveListTerm": "Positive List",
+    "cbGlossary_3docTerm": "3-Doc Matching",
+    "tmGlossary_firstToFileTerm": "First-to-File",
+    "tmGlossary_customsRecordalTerm": "Customs Recordal",
+    "tmGlossary_squattingTerm": "Trademark Squatting",
+    "tmGlossary_oppositionTerm": "Opposition"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",

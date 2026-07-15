@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "נציבות הבריאות הלאומית (NHC)",
     "regAuthority_npc": "הקונגרס הלאומי העממי (NPC)",
     "tmReg_cnipaEdition_name": "מהדורת CNIPA 2021",
-    "tmReg_revision_number": "הגרסה הרביעית 2019"
+    "tmReg_revision_number": "הגרסה הרביעית 2019",
+    "cbGlossary_3docTerm": "התאמת 3-Doc",
+    "cbGlossary_positiveListTerm": "רשימה חיובית",
+    "documentSeeLabel": "ראה מסמך",
+    "labelGlossary_allergenTerm": "אלרגן",
+    "labelGlossary_foodSafetyLawTerm": "חוק בטיחות מזון",
+    "nmpaGlossary_ordinaryTerm": "קוסמטיקה רגילה",
+    "nmpaGlossary_specialTerm": "קוסמטיקה מיוחדת",
+    "tmGlossary_customsRecordalTerm": "רישום מכס",
+    "tmGlossary_firstToFileTerm": "ראשון לקובץ",
+    "tmGlossary_oppositionTerm": "הִתנַגְדוּת",
+    "tmGlossary_squattingTerm": "סקוואט סימן מסחרי"
   },
   "Cookie": {
     "message": "אתר זה משתמש רק בעוגיות אימות חיוניות. לא נעשה שימוש בעוגיות מעקב או פרסום.",

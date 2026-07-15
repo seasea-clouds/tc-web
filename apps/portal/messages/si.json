@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "ජාතික සෞඛ්‍ය කොමිසම (NHC)",
     "regAuthority_npc": "ජාතික මහජන කොංග්‍රසය (NPC)",
     "tmReg_cnipaEdition_name": "CNIPA 2021 සංස්කරණය",
-    "tmReg_revision_number": "4 වන සංශෝධනය 2019"
+    "tmReg_revision_number": "4 වන සංශෝධනය 2019",
+    "cbGlossary_3docTerm": "3-ලේඛන ගැලපීම",
+    "cbGlossary_positiveListTerm": "ධනාත්මක ලැයිස්තුව",
+    "documentSeeLabel": "ලේඛනය බලන්න",
+    "labelGlossary_allergenTerm": "අසාත්මිකතා",
+    "labelGlossary_foodSafetyLawTerm": "ආහාර සුරක්ෂිතතා නීතිය",
+    "nmpaGlossary_ordinaryTerm": "සාමාන්ය ආලේපන",
+    "nmpaGlossary_specialTerm": "විශේෂ ආලේපන",
+    "tmGlossary_customsRecordalTerm": "රේගු වාර්තා",
+    "tmGlossary_firstToFileTerm": "පළමු ගොනුව",
+    "tmGlossary_oppositionTerm": "විරුද්ධයි",
+    "tmGlossary_squattingTerm": "වෙළඳ ලකුණ Squatting"
   },
   "Cookie": {
     "message": "මෙම වෙබ් අඩවිය අත්‍යවශ්‍ය සත්‍යාපන කුකීස් පමණක් භාවිතා කරයි. ලුහුබැඳීම හෝ ප්‍රචාරණ කුකීස් භාවිතා නොකෙරේ.",

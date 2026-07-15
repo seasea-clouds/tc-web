@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "لجنة الصحة الوطنية (NHC)",
     "regAuthority_npc": "المؤتمر الشعبي الوطني (NPC)",
     "tmReg_cnipaEdition_name": "إصدار CNIPA 2021",
-    "tmReg_revision_number": "المراجعة الرابعة 2019"
+    "tmReg_revision_number": "المراجعة الرابعة 2019",
+    "cbGlossary_3docTerm": "3-مطابقة الوثيقة",
+    "cbGlossary_positiveListTerm": "قائمة إيجابية",
+    "documentSeeLabel": "انظر الوثيقة",
+    "labelGlossary_allergenTerm": "مسبب للحساسية",
+    "labelGlossary_foodSafetyLawTerm": "قانون سلامة الغذاء",
+    "nmpaGlossary_ordinaryTerm": "مستحضرات التجميل العادية",
+    "nmpaGlossary_specialTerm": "مستحضرات التجميل الخاصة",
+    "tmGlossary_customsRecordalTerm": "السجل الجمركي",
+    "tmGlossary_firstToFileTerm": "أول من يصل إلى الملف",
+    "tmGlossary_oppositionTerm": "معارضة",
+    "tmGlossary_squattingTerm": "القرفصاء العلامة التجارية"
   },
   "Cookie": {
     "message": "يستخدم هذا الموقع ملفات تعريف الارتباط الأساسية فقط. لا يتم استخدام ملفات تعريف الارتباط للتتبع أو الإعلانات.",

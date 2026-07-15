@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "Suruhanjaya Kesihatan Kebangsaan (NHC)",
     "regAuthority_npc": "Kongres Rakyat Kebangsaan (NPC)",
     "tmReg_cnipaEdition_name": "CNIPA Edisi 2021",
-    "tmReg_revision_number": "Semakan ke-4 2019"
+    "tmReg_revision_number": "Semakan ke-4 2019",
+    "cbGlossary_3docTerm": "3-Pemadanan Dokumen",
+    "cbGlossary_positiveListTerm": "Senarai Positif",
+    "documentSeeLabel": "Lihat dokumen",
+    "labelGlossary_allergenTerm": "Alergen",
+    "labelGlossary_foodSafetyLawTerm": "Undang-undang Keselamatan Makanan",
+    "nmpaGlossary_ordinaryTerm": "Kosmetik Biasa",
+    "nmpaGlossary_specialTerm": "Kosmetik Khas",
+    "tmGlossary_customsRecordalTerm": "Rekod Kastam",
+    "tmGlossary_firstToFileTerm": "Pertama-untuk-Fail",
+    "tmGlossary_oppositionTerm": "Pembangkang",
+    "tmGlossary_squattingTerm": "Mencangkung Cap Dagangan"
   },
   "Cookie": {
     "message": "Tapak ini hanya menggunakan kuki pengesahan penting. Tiada kuki penjejakan atau pengiklanan digunakan.",

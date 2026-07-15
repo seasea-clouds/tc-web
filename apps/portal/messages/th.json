@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "คณะกรรมการสุขภาพแห่งชาติ (สสช.)",
     "regAuthority_npc": "สภาประชาชนแห่งชาติ (นปช.)",
     "tmReg_cnipaEdition_name": "CNIPA ฉบับปี 2021",
-    "tmReg_revision_number": "ฉบับแก้ไขครั้งที่ 4 ปี 2019"
+    "tmReg_revision_number": "ฉบับแก้ไขครั้งที่ 4 ปี 2019",
+    "cbGlossary_3docTerm": "การจับคู่ 3-Doc",
+    "cbGlossary_positiveListTerm": "รายการเชิงบวก",
+    "documentSeeLabel": "ดูเอกสาร",
+    "labelGlossary_allergenTerm": "สารก่อภูมิแพ้",
+    "labelGlossary_foodSafetyLawTerm": "กฎหมายความปลอดภัยด้านอาหาร",
+    "nmpaGlossary_ordinaryTerm": "เครื่องสำอางธรรมดา",
+    "nmpaGlossary_specialTerm": "เครื่องสำอางชนิดพิเศษ",
+    "tmGlossary_customsRecordalTerm": "บันทึกศุลกากร",
+    "tmGlossary_firstToFileTerm": "สู่ไฟล์แรก",
+    "tmGlossary_oppositionTerm": "ฝ่ายค้าน",
+    "tmGlossary_squattingTerm": "การนั่งยองๆ เครื่องหมายการค้า"
   },
   "Cookie": {
     "message": "ไซต์นี้ใช้คุกกี้การรับรองความถูกต้องที่จำเป็นเท่านั้น ไม่มีการใช้คุกกี้การติดตามหรือการโฆษณา",

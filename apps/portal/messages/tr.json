@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "Ulusal Sağlık Komisyonu (NHC)",
     "regAuthority_npc": "Ulusal Halk Kongresi (NPC)",
     "tmReg_cnipaEdition_name": "CNIPA 2021 Sürümü",
-    "tmReg_revision_number": "4. Revizyon 2019"
+    "tmReg_revision_number": "4. Revizyon 2019",
+    "cbGlossary_3docTerm": "3-Doküman Eşleştirme",
+    "cbGlossary_positiveListTerm": "Pozitif Liste",
+    "documentSeeLabel": "Belgeye bakın",
+    "labelGlossary_allergenTerm": "alerjen",
+    "labelGlossary_foodSafetyLawTerm": "Gıda Güvenliği Hukuku",
+    "nmpaGlossary_ordinaryTerm": "Sıradan Kozmetikler",
+    "nmpaGlossary_specialTerm": "Özel Kozmetikler",
+    "tmGlossary_customsRecordalTerm": "Gümrük Kaydı",
+    "tmGlossary_firstToFileTerm": "İlk Dosyaya Giden",
+    "tmGlossary_oppositionTerm": "Muhalefet",
+    "tmGlossary_squattingTerm": "Marka İşgal Edilmesi"
   },
   "Cookie": {
     "message": "Bu site yalnızca gerekli kimlik doğrulama çerezlerini kullanır. Hiçbir izleme veya reklam çerezi kullanılmaz.",

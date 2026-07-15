@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "राष्ट्रीय स्वास्थ्य आयोग (एनएचसी)",
     "regAuthority_npc": "नेशनल पीपुल्स कांग्रेस (एनपीसी)",
     "tmReg_cnipaEdition_name": "सीएनआईपीए 2021 संस्करण",
-    "tmReg_revision_number": "चौथा संशोधन 2019"
+    "tmReg_revision_number": "चौथा संशोधन 2019",
+    "cbGlossary_3docTerm": "3-डॉक्टर मिलान",
+    "cbGlossary_positiveListTerm": "सकारात्मक सूची",
+    "documentSeeLabel": "दस्तावेज़ देखें",
+    "labelGlossary_allergenTerm": "एलर्जी",
+    "labelGlossary_foodSafetyLawTerm": "खाद्य सुरक्षा कानून",
+    "nmpaGlossary_ordinaryTerm": "साधारण सौंदर्य प्रसाधन",
+    "nmpaGlossary_specialTerm": "विशेष सौंदर्य प्रसाधन",
+    "tmGlossary_customsRecordalTerm": "सीमा शुल्क रिकार्डल",
+    "tmGlossary_firstToFileTerm": "सबसे पहले करने के लिए फ़ाइल",
+    "tmGlossary_oppositionTerm": "विरोध",
+    "tmGlossary_squattingTerm": "ट्रेडमार्क स्क्वैटिंग"
   },
   "Cookie": {
     "message": "यह साइट केवल आवश्यक प्रमाणीकरण कुकीज़ का उपयोग करती है। किसी भी ट्रैकिंग या विज्ञापन कुकीज़ का उपयोग नहीं किया जाता है।",

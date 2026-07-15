@@ -2297,7 +2297,18 @@
     "regAuthority_nhc": "Národní zdravotní komise (NHC)",
     "regAuthority_npc": "Národní lidový kongres (NPC)",
     "tmReg_cnipaEdition_name": "Vydání CNIPA 2021",
-    "tmReg_revision_number": "4. revize 2019"
+    "tmReg_revision_number": "4. revize 2019",
+    "cbGlossary_3docTerm": "Párování 3 dokumentů",
+    "cbGlossary_positiveListTerm": "Pozitivní seznam",
+    "documentSeeLabel": "Viz dokument",
+    "labelGlossary_allergenTerm": "Alergen",
+    "labelGlossary_foodSafetyLawTerm": "Zákon o bezpečnosti potravin",
+    "nmpaGlossary_ordinaryTerm": "Obyčejná kosmetika",
+    "nmpaGlossary_specialTerm": "Speciální kosmetika",
+    "tmGlossary_customsRecordalTerm": "Celní záznam",
+    "tmGlossary_firstToFileTerm": "První do souboru",
+    "tmGlossary_oppositionTerm": "opozice",
+    "tmGlossary_squattingTerm": "Ochranná známka Squatting"
   },
   "Cookie": {
     "message": "Tento web používá pouze nezbytné ověřovací soubory cookie. Nejsou používány žádné sledovací ani reklamní soubory cookie.",

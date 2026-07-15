@@ -75,9 +75,9 @@ Portal 是 **SinoTrade Compliance 主站的获客-教育-转化漏斗第一步**
 
 ## 翻译（i18n）
 
-- **当前状态：** Check 命名空间下部分中文字段未翻译（绝大部分 key 仍为英文原文 fallback）
+- **当前状态：** 48 语言全覆盖，CI 翻译质量检查 0 问题
 - **翻译文件：** `apps/portal/messages/*.json`
-- **硬编码英文：** 6 个 check-client.tsx 中大量英文文本（label/placeholder/h1/title）未使用 `t()` 翻译函数
+- **硬编码英文检测：** `check-hardcoded.mjs` 全量扫描 TSX，CI 零问题
 - **流水线检查：** `check-hardcoded.mjs` 和 `check-translations.mjs` 每次构建时运行，但因为策略问题未覆盖到这些问题
 
 ## 部署

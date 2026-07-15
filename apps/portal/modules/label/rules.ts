@@ -188,10 +188,10 @@ export function checkLabel(input: LabelInput, locale?: string): LabelResult {
     ],
     tariffInfo: { mfnRate: "5-20%", vatRate: "9-13%", consumptionTax: t("na_label"), ftaRate: null, totalTaxBurden: t("varies_by_product") },
     regulations: [
-      { name: "GB 7718-2011", number: t("gb_7718_2011_rev_2025"), effectiveDate: "April 20, 2012", issuingAuthority: "NHC", relevance: "primary", description: t("labeling_of_prepackaged_foods_mandatory_for_all_fo") },
-      { name: "GB 28050-2011", number: "GB 28050-2011", effectiveDate: "January 1, 2013", issuingAuthority: "NHC", relevance: "primary", description: t("nutrition_labeling_kj_format_nrv_mandatory") },
-      { name: "GB 2760-2024", number: "GB 2760-2024", effectiveDate: "February 8, 2025", issuingAuthority: "NHC", relevance: "primary", description: t("food_additives_positive_list_only_listed_additives") },
-      { name: t("food_safety_law_label_articles"), number: "Ch.3 Arts.42-47, Ch.9 Arts.148-149", effectiveDate: "October 1, 2015", issuingAuthority: "NPC", relevance: "primary", description: t("legal_basis_for_all_food_label_requirements_fines_") },
+      { name: "GB 7718-2011", number: t("gb_7718_2011_rev_2025"), effectiveDate: t("date_apr20_2012"), issuingAuthority: "NHC", relevance: "primary", description: t("labeling_of_prepackaged_foods_mandatory_for_all_fo") },
+      { name: "GB 28050-2011", number: "GB 28050-2011", effectiveDate: t("date_jan1_2013"), issuingAuthority: "NHC", relevance: "primary", description: t("nutrition_labeling_kj_format_nrv_mandatory") },
+      { name: "GB 2760-2024", number: "GB 2760-2024", effectiveDate: t("date_feb8_2025"), issuingAuthority: "NHC", relevance: "primary", description: t("food_additives_positive_list_only_listed_additives") },
+      { name: t("food_safety_law_label_articles"), number: "Ch.3 Arts.42-47, Ch.9 Arts.148-149", effectiveDate: t("date_oct1_2015"), issuingAuthority: "NPC", relevance: "primary", description: t("legal_basis_for_all_food_label_requirements_fines_") },
     ],
     classification: { assignedHsChapter: t("varies_label"), ciqCode: t("varies_label"), isHighRisk: false, riskReason: t("standard_gb_7718_28050_compliance_12_mandatory_fie"), alternativeClassificationNote: "" },
     riskMatrix: [

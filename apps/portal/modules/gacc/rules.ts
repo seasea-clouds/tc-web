@@ -733,7 +733,7 @@ function getREGULATIONS(t: (key: string) => string): Regulation[] {
   {
     name: t("gaccReg_decree248_name"),
     number: "Decree 248 (2021)",
-    effectiveDate: "January 1, 2022",
+    effectiveDate: t("date_jan1_2022"),
     issuingAuthority: t("regAuthority_gacc"),
     relevance: 'primary',
     description: t("regulations_on_the_registration_of_overseas_manufa_1"),
@@ -741,7 +741,7 @@ function getREGULATIONS(t: (key: string) => string): Regulation[] {
   {
     name: t("gaccReg_decree249_name"),
     number: "Decree 249 (2021)",
-    effectiveDate: "January 1, 2022",
+    effectiveDate: t("date_jan1_2022"),
     issuingAuthority: t("regAuthority_gacc"),
     relevance: 'primary',
     description: t("gaccReg_decree_249_desc"),
@@ -749,7 +749,7 @@ function getREGULATIONS(t: (key: string) => string): Regulation[] {
   {
     name: t("gaccReg_foodSafetyLaw_name"),
     number: t("prc_food_safety_law_2015_amended_2018_2021"),
-    effectiveDate: "October 1, 2015",
+    effectiveDate: t("date_oct1_2015"),
     issuingAuthority: t("regAuthority_npc"),
     relevance: 'primary',
     description: t("primary_legislation_governing_food_safety_in_china_1"),
@@ -757,7 +757,7 @@ function getREGULATIONS(t: (key: string) => string): Regulation[] {
   {
     name: "GB 7718",
     number: t("gb_7718_2011_under_revision"),
-    effectiveDate: "April 20, 2012",
+    effectiveDate: t("date_apr20_2012"),
     issuingAuthority: t("regAuthority_nhc"),
     relevance: 'primary',
     description: t("national_food_safety_standard_general_rules_for_nu_1"),
@@ -765,7 +765,7 @@ function getREGULATIONS(t: (key: string) => string): Regulation[] {
   {
     name: "GB 28050",
     number: "GB 28050-2011",
-    effectiveDate: "January 1, 2013",
+    effectiveDate: t("date_jan1_2013"),
     issuingAuthority: t("regAuthority_nhc"),
     relevance: 'primary',
     description: t("national_food_safety_standard_general_rules_for_nu_2"),
@@ -773,7 +773,7 @@ function getREGULATIONS(t: (key: string) => string): Regulation[] {
   {
     name: "GB 2760",
     number: "GB 2760-2024",
-    effectiveDate: "February 8, 2025",
+    effectiveDate: t("date_feb8_2025"),
     issuingAuthority: t("regAuthority_nhc"),
     relevance: 'primary',
     description: t("national_food_safety_standard_uses_of_food_additiv_1"),
@@ -781,7 +781,7 @@ function getREGULATIONS(t: (key: string) => string): Regulation[] {
   {
     name: "GB 2762",
     number: "GB 2762-2022",
-    effectiveDate: "June 30, 2023",
+    effectiveDate: t("date_jun30_2023"),
     issuingAuthority: t("regAuthority_nhc"),
     relevance: 'secondary',
     description: t("gaccReg_gb2762_desc"),
@@ -789,7 +789,7 @@ function getREGULATIONS(t: (key: string) => string): Regulation[] {
   {
     name: "GB 2763",
     number: "GB 2763-2021",
-    effectiveDate: "September 3, 2021",
+    effectiveDate: t("date_sep3_2021"),
     issuingAuthority: t("regAuthority_nhc"),
     relevance: 'secondary',
     description: t("maximum_residue_limits_for_pesticides_in_food_10_0_1"),
@@ -797,7 +797,7 @@ function getREGULATIONS(t: (key: string) => string): Regulation[] {
   {
     name: "GB 29921",
     number: "GB 29921-2021",
-    effectiveDate: "November 22, 2021",
+    effectiveDate: t("date_nov22_2021"),
     issuingAuthority: t("regAuthority_nhc"),
     relevance: 'secondary',
     description: t("maximum_levels_of_pathogenic_bacteria_in_prepackag"),
@@ -805,7 +805,7 @@ function getREGULATIONS(t: (key: string) => string): Regulation[] {
   {
     name: t("gaccReg_ciferSystem_name"),
     number: t("gaccReg_ciferSystem_number"),
-    effectiveDate: "January 1, 2022",
+    effectiveDate: t("date_jan1_2022"),
     issuingAuthority: "GACC",
     relevance: 'primary',
     description: t("online_portal_for_overseas_food_manufacturers_to_s_1"),

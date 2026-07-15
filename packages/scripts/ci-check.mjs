@@ -121,7 +121,7 @@ function runScript(projectName, scriptName, cwd, ...extraArgs) {
   }
 
   const scriptArgs = [`--project=${projectName}`, ...extraArgs];
-  const noFailOnIssues = ['clean-rsc.mjs'];
+  const noFailOnIssues = ['clean-rsc.mjs', 'check-report-section-i18n.mjs'];
   if (isCi && !noFailOnIssues.includes(scriptName)) scriptArgs.push('--ci');
 
   console.log(`\n▶ ${scriptName} ${scriptArgs.join(' ')}`);
@@ -196,6 +196,7 @@ const CHECK_LIST = [
   // ── Portal 级数据检查（也跑在所有子站上，只在有相应数据时生效） ──
   { script: 'check-override-keys.mjs' },
   { script: 'check-hardcoded-templates.mjs', guardDir: 'apps/portal/modules' },
+  { script: 'check-report-section-i18n.mjs', guardDir: 'apps/portal/src/core/report/sections' },
   { script: 'check-category-labels.mjs', guardDir: 'apps/portal/modules/gacc' },
   { script: 'check-t-keys.mjs', guardDir: 'apps/portal/messages/en.json' },
   { script: 'check-colon-consistency.mjs', guardDir: 'apps/portal/messages' },

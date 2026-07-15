@@ -702,12 +702,12 @@ SHARED_WORDS_BY_LANG['hu'].add('list');
 // Dutch shared words
 ['nl'].forEach(l => {
   if (!SHARED_WORDS_BY_LANG[l]) SHARED_WORDS_BY_LANG[l] = new Set();
-  ['Controleer', 'registratie', 'certificering', 'direct', 'shipping', 'Bepaal', 'bonded', 'versus'].forEach(w => SHARED_WORDS_BY_LANG[l].add(w));
+  ['Controleer', 'registratie', 'certificering', 'direct', 'shipping', 'Bepaal', 'bonded', 'versus', 'product', 'export'].forEach(w => SHARED_WORDS_BY_LANG[l].add(w));
 });
 // Romanian shared words
 ['ro'].forEach(l => {
   if (!SHARED_WORDS_BY_LANG[l]) SHARED_WORDS_BY_LANG[l] = new Set();
-  ['transport', 'testare', 'conformitate', 'direct', 'format', 'consumer'].forEach(w => SHARED_WORDS_BY_LANG[l].add(w));
+  ['transport', 'testare', 'conformitate', 'direct', 'format', 'consumer', 'pre', 'alert', 'conflict'].forEach(w => SHARED_WORDS_BY_LANG[l].add(w));
 });
 // Portuguese shared words
 SHARED_WORDS_BY_LANG['pt'].add('Utilize');
@@ -718,6 +718,11 @@ SHARED_WORDS_BY_LANG['es'].add('gestión');
 SHARED_WORDS_BY_LANG['es'].add('calidad');
 SHARED_WORDS_BY_LANG['es'].add('sistema');
 SHARED_WORDS_BY_LANG['es'].add('acreditado');
+// Swahili shared words (scientific terms)
+['sw'].forEach(l => {
+  if (!SHARED_WORDS_BY_LANG[l]) SHARED_WORDS_BY_LANG[l] = new Set();
+  ['polarization', 'sucrose', 'microbiological', 'coliforms', 'pathogens'].forEach(w => SHARED_WORDS_BY_LANG[l].add(w));
+});
 
 // Case-insensitive version of SHARED_WORDS_BY_LANG for lowercased lookups
 const SHARED_WORDS_BY_LANG_LC = {};

@@ -135,7 +135,8 @@ export function isPagePath(path: string): boolean {
     clean.startsWith("/node_modules/") || // npm 路径（扫描）
     clean.startsWith("/tmp/") || // 临时目录（扫描）
     clean.startsWith("/cache/") || // 缓存目录（扫描）
-    clean.startsWith("/backup/") || // 备份目录（扫描）
+    clean.startsWith("/backup") || // 备份目录/文件（扫描）
+    clean.startsWith("/old") || // 旧版路径（扫描）
     clean.startsWith("/config/") || // 配置文件（扫描）
     clean.startsWith("/debug/") || // 调试端点（扫描）
     clean.startsWith("/files/") || // 文件列表（扫描）

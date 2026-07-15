@@ -12,7 +12,7 @@
  * Optionally set CRON_SECRET secret for auth protection.
  */
 
-import { ensureDailyCFCache, ensureHourlyCFCache } from "../../../functions/lib/d1-cache";
+import { ensureDailyCFCache, ensureHourlyCFCache, isPagePath, safeJSON } from "../../../functions/lib/d1-cache";
 import { hasConfig } from "../../../functions/lib/cf-analytics";
 import { graphql } from "../../../functions/lib/cf-analytics";
 
@@ -154,6 +154,34 @@ export default {
         status: result.ok ? 200 : 503,
         headers: { "Content-Type": "application/json" },
       });
+    }
+
+    // Cleanup — re-filter existing page_paths with updated isPagePath rules
+    if (url.pathname === "/cleanup") {
+      try {
+        const all: any = await env.DB.prepare(
+          "SELECT date, page_paths FROM daily_page_stats WHERE page_paths IS NOT NULL AND page_paths != '[]'"
+        ).all();
+        let cleaned = 0;
+        for (const row of (all.results || []) as any[]) {
+          const paths: { path: string; count: number }[] = safeJSON(row.page_paths, []);
+          const filtered = paths.filter(p => isPagePath(p.path));
+          if (filtered.length !== paths.length) {
+            await env.DB.prepare(
+              "UPDATE daily_page_stats SET page_paths = ? WHERE date = ?"
+            ).bind(JSON.stringify(filtered), row.date).run();
+            cleaned++;
+          }
+        }
+        return new Response(JSON.stringify({ ok: true, cleanedRows: cleaned }), {
+          headers: { "Content-Type": "application/json" },
+        });
+      } catch (err: any) {
+        return new Response(JSON.stringify({ ok: false, error: (err?.message || String(err)).slice(0, 500) }), {
+          status: 500,
+          headers: { "Content-Type": "application/json" },
+        });
+      }
     }
 
     // Default: sync

@@ -452,7 +452,9 @@ const SHARED_WORDS_ALL = new Set([
 // 建议：吃不准时用这个（范围最小），以后发现所有语言都需要再加 IGNORE 类。
 const SHARED_WORDS_BY_LANG = {
   fr: new Set(['Services', 'Contact', 'Blog', 'Page', 'Message', 'Audit', 'Legal',
-      'Cause', 'Solution', 'Classification', 'Histamine', 'Limitation']),
+      'Cause', 'Solution', 'Classification', 'Histamine', 'Limitation',
+      'Questions', 'Description', 'Conditions', 'Surveillance',
+      'Batteries', 'Ion', 'Transport']),
   de: new Set(['Blog', 'Legal', 'Aflatoxin M1']),
   nl: new Set(['Blog', 'Contact', 'Melamine', 'Histamine']),
   sv: new Set(['Blog', 'Contact', 'Services', 'Aflatoxin M1', 'GB 7718 Revision', 'Special']),
@@ -461,14 +463,15 @@ const SHARED_WORDS_BY_LANG = {
   es: new Set(['Blog', 'Contact', 'Services']),
   it: new Set(['Blog', 'Contact', 'Services']),
   pt: new Set(['Blog', 'Contact', 'Services']),
-  ca: new Set(['Blog', 'Contact', 'Services', 'Client']),
+  ca: new Set(['Blog', 'Contact', 'Services', 'Client', 'Condiments', 'Fruits']),
   cs: new Set(['Blog', 'Aflatoxin M1']),
   hu: new Set(['Blog', 'Aflatoxin M1']),
   sq: new Set(['Blog', 'Melamine', 'Histamine']),
   vi: new Set(['Blog', 'Melamine', 'Aflatoxin M1']),
   sr: new Set(['Opseg', 'tro', 'kova']),
 };
-// Blog is universal
+
+
 for (const lang of ['af','az','ca','cs','el','fi','hr','hu','id','ka','ms','pl','ro','si','sk','sl','sq','sw','tr','vi']) {
   if (!SHARED_WORDS_BY_LANG[lang]) SHARED_WORDS_BY_LANG[lang] = new Set();
   SHARED_WORDS_BY_LANG[lang].add('Blog');
@@ -612,6 +615,26 @@ const ENGLISH_RESIDUAL_ALLOW = new Set([
   'Reports', 'Out', 'Sign', 'SAR',
   // 第十二批残留豁免（CCC profile 专业技术词 + TBD）
   'Chemical', 'radio', 'phthalates', 'flicker', 'Biocompatibility', 'TBD',
+  // 第十三批残留豁免（拉丁语系常用英文借词）
+  'Marketing', 'marketing', 'Software', 'software',
+  'Startup', 'startup', 'Website', 'website',
+  'Blog', 'blog', 'Business', 'business',
+  'Upload', 'upload', 'Download', 'download',
+  'Chat', 'chat', 'Login', 'login', 'Logout', 'logout',
+  'Hosting', 'hosting', 'Shopping', 'shopping',
+  'Streaming', 'streaming', 'Training', 'training',
+  'Meeting', 'meeting', 'Manager', 'manager',
+  'Consulting', 'consulting', 'News', 'news',
+  'Design', 'design', 'Trend', 'trend',
+  'Service', 'service', 'Support', 'support',
+  'Smart', 'smart', 'Mobile', 'mobile',
+  // 第十四批残留豁免（通用专属名词 + 跨语系借词）
+  'Madrid', 'System', 'Questions', 'Description', 'Conditions',
+  'Surveillance', 'Batteries', 'Ion',
+  // 拉丁语系常用英文借词 - 复数形式
+  'Services', 'Platforms', 'Reports', 'Supports',
+  // 第十五批残留豁免（语言名称专有名词 + 分类代码术语）
+  'Sinhala', 'Tamil', 'Condiments', 'Fruits', 'Seasonings',
 ]);
 
 // ─── Cognate exclusions — glossary terms legitimate as loanwords ──
@@ -628,6 +651,14 @@ SHARED_WORDS_BY_LANG['de'].add('First-to-File');
   if (!SHARED_WORDS_BY_LANG[l]) SHARED_WORDS_BY_LANG[l] = new Set();
   SHARED_WORDS_BY_LANG[l].add('Opposition');
 });
+
+// Case-insensitive version of SHARED_WORDS_BY_LANG for lowercased lookups
+const SHARED_WORDS_BY_LANG_LC = {};
+for (const [lang, words] of Object.entries(SHARED_WORDS_BY_LANG)) {
+  SHARED_WORDS_BY_LANG_LC[lang] = new Set([...words].map(w => w.toLowerCase()));
+}
+
+// ============================================================
 
 // ============================================================
 // Helpers
@@ -852,6 +883,68 @@ const SKIP_CHAR_CHECK_PATTERNS = [
 // ============================================================
 // Translation check
 // ============================================================
+// English function words for Latin-script residual detection
+// These are words that are extremely unlikely to be loanwords in European languages
+const ENGLISH_FUNCTION_WORDS = new Set([
+  'the', 'a', 'an',
+  'about', 'above', 'across', 'after', 'against', 'along', 'among', 'around', 'at',
+  'before', 'behind', 'below', 'beneath', 'beside', 'between', 'beyond', 'by',
+  'down', 'during', 'except', 'for', 'from', 'in', 'inside', 'into', 'near',
+  'of', 'off', 'on', 'onto', 'out', 'outside', 'over', 'through', 'to',
+  'toward', 'towards', 'under', 'until', 'up', 'upon', 'with', 'within', 'without',
+  'after', 'although', 'and', 'as', 'because', 'before', 'but', 'if', 'nor',
+  'once', 'or', 'since', 'so', 'than', 'that', 'though', 'till', 'unless',
+  'until', 'when', 'whenever', 'where', 'wherever', 'whether', 'while', 'why',
+  'he', 'her', 'hers', 'herself', 'him', 'himself', 'his', 'it', 'its', 'itself',
+  'me', 'mine', 'my', 'myself', 'our', 'ours', 'ourselves', 'she', 'their',
+  'theirs', 'them', 'themselves', 'they', 'us', 'we', 'you', 'your', 'yours',
+  'yourself', 'yourselves',
+  'am', 'are', 'be', 'been', 'being', 'can', 'could', 'did', 'do', 'does',
+  'doing', 'done', 'has', 'have', 'having', 'is', 'may', 'might', 'must',
+  'shall', 'should', 'was', 'were', 'will', 'would',
+  'all', 'any', 'each', 'either', 'every', 'few', 'both', 'many', 'most',
+  'much', 'neither', 'no', 'none', 'several', 'some', 'such', 'this', 'that',
+  'these', 'those',
+  'again', 'also', 'always', 'anywhere', 'else', 'even', 'ever', 'everywhere',
+  'here', 'how', 'just', 'least', 'less', 'more', 'never', 'nobody', 'nor',
+  'not', 'nothing', 'nowhere', 'now', 'only', 'otherwise', 'perhaps', 'quite',
+  'rather', 'really', 'somewhere', 'still', 'then', 'there', 'therefore',
+  'too', 'very', 'whatever', 'whenever', 'wherever', 'whether', 'whoever', 'yet',
+  'cannot', 'please', 'thanks', 'thank',
+]);
+
+// Case-insensitive version of ENGLISH_RESIDUAL_ALLOW for lowercased lookups
+const ENGLISH_RESIDUAL_ALLOW_LC = new Set([...ENGLISH_RESIDUAL_ALLOW].map(w => w.toLowerCase()));
+
+// Check for untranslated English in Latin-script translations
+// Uses function-word ratio + word overlap with English source
+function hasUntranslatedEnglish(langVal, enVal, lang) {
+  const cleanVal = langVal.replace(/\{[A-Za-z ]+\}/g, '');
+  if (/^[\w.+-]+@[\w-]+(?:\.[\w-]+)+$/.test(cleanVal.trim())) return false;
+  const lower = cleanVal.toLowerCase();
+  const words = (lower.match(/\b[a-z]{3,}\b/g) || []).filter(w => !ENGLISH_RESIDUAL_ALLOW_LC.has(w) && !SHARED_WORDS_BY_LANG_LC[lang]?.has(w));
+  if (words.length < 2) return false;
+
+  // Check 1: English function word ratio
+  const funcWords = words.filter(w => ENGLISH_FUNCTION_WORDS.has(w));
+  if (funcWords.length >= 3 && (funcWords.length / Math.max(words.length, 1)) > 0.3) {
+    return true;
+  }
+
+  // Check 2: word overlap with English source content words
+  const enLower = enVal.toLowerCase();
+  const enWords = new Set((enLower.match(/\b[a-z]{3,}\b/g) || []).filter(w => !ENGLISH_FUNCTION_WORDS.has(w) && !ENGLISH_RESIDUAL_ALLOW_LC.has(w)));
+  if (enWords.size > 0 && words.length > 0) {
+    const overlapWords = words.filter(w => enWords.has(w));
+    const overlapRatio = overlapWords.length / Math.max(enWords.size, 1);
+    if (overlapRatio > 0.5 && overlapWords.length >= 2) {
+    return true;
+  }
+  }
+
+  return false;
+}
+
 function checkTranslations(targetLang = null, verbose = true) {
   const enPath = path.join(MESSAGES_DIR, 'en.json');
   if (!fs.existsSync(enPath)) {
@@ -871,7 +964,7 @@ function checkTranslations(targetLang = null, verbose = true) {
     : allLangs;
 
   // Keys that are intentionally identical across all languages (numbers, names, acronyms, placeholders)
-const totalIssues = { count: 0, byType: { fallback: [], empty: [], wrong_chars: [], no_translate_translated: [], short_word_issues: [], english_residual: [] } };
+const totalIssues = { count: 0, byType: { fallback: [], empty: [], wrong_chars: [], no_translate_translated: [], short_word_issues: [], english_residual: [], extra_keys: [] } };
 
   if (verbose) {
     console.log('🔍 翻译质量核验');
@@ -949,12 +1042,10 @@ const totalIssues = { count: 0, byType: { fallback: [], empty: [], wrong_chars: 
         }
       }
 
-      // 6. english residual in non-latin
+      // English residual in non-latin (word-level check — only works for non-latin scripts
+      // because Latin-script languages have too many false positives)
       if (NON_LATIN_LOCALES.has(lang)) {
-        // Strip variable placeholders like {originCountry} before checking
         const cleanVal = langVal.replace(/\{[A-Za-z ]+\}/g, '');
-        // Skip email addresses entirely — company emails like info@domain.com
-        // should be identical in all languages and are not translatable
         if (/^[\w.+-]+@[\w-]+(?:\.[\w-]+)+$/.test(cleanVal.trim())) continue;
         const engWords = new Set((cleanVal.match(/\b[A-Za-z]{3,}\b/g) || []));
         if (engWords.size) {
@@ -963,7 +1054,6 @@ const totalIssues = { count: 0, byType: { fallback: [], empty: [], wrong_chars: 
             residual = new Set([...residual].filter(w => !SHARED_WORDS_BY_LANG[lang].has(w)));
           }
           if (residual.size) {
-            // Skip keys that are intentionally identical across languages
             const shortKey = key.split('.').pop() || key;
             const isSkipKey = SKIP_ENGLISH_RESIDUAL_PATTERNS.some(p => p.test(shortKey) || p.test(key));
             if (!isSkipKey) {
@@ -972,6 +1062,27 @@ const totalIssues = { count: 0, byType: { fallback: [], empty: [], wrong_chars: 
             }
           }
         }
+      }
+
+      // Latin-script English residual — function-word ratio detection
+      if (!NON_LATIN_LOCALES.has(lang)) {
+        if (hasUntranslatedEnglish(langVal, enVal, lang)) {
+          const shortKey = key.split('.').pop() || key;
+          const isSkipKey = SKIP_ENGLISH_RESIDUAL_PATTERNS.some(p => p.test(shortKey) || p.test(key));
+          if (!isSkipKey) {
+            totalIssues.byType.english_residual.push([lang, key, [langVal.slice(0, 60)]]);
+            langIssues++;
+          }
+        }
+      }
+    }
+
+    // 7. extra keys — keys in this language not in EN source
+    for (const [key, val] of Object.entries(langFlat)) {
+      if (typeof val !== 'string') continue;
+      if (!(key in enFlat)) {
+        totalIssues.byType.extra_keys.push([lang, key, val.slice(0, 60)]);
+        langIssues++;
       }
     }
 
@@ -991,7 +1102,8 @@ const totalIssues = { count: 0, byType: { fallback: [], empty: [], wrong_chars: 
       wrong_chars: '⚠️ 非目标语言字符',
       no_translate_translated: '⚠️ 不应翻译的词被翻译了',
       short_word_issues: '⚠️ 短词翻译可疑',
-      english_residual: '❌ 非拉丁语言英文残留',
+      english_residual: '❌ 英文残留',
+      extra_keys: '❌ 多余的翻译键',
     };
 
     for (const [type, items] of Object.entries(totalIssues.byType)) {
@@ -1004,6 +1116,7 @@ const totalIssues = { count: 0, byType: { fallback: [], empty: [], wrong_chars: 
         else if (type === 'no_translate_translated') console.log(`  [${item[0]}] ${item[1]} → 应保留 '${item[2]}' 但翻译成了 '${item[3].slice(0, 60)}'`);
         else if (type === 'short_word_issues') console.log(`  [${item[0]}] ${item[1]} → EN='${item[2]}' → ${item[3].slice(0, 60)}`);
         else if (type === 'english_residual') console.log(`  [${item[0]}] ${item[1]} → 英文残留: ${item[2].slice(0, 10).join(', ')}`);
+        else if (type === 'extra_keys') console.log(`  [${item[0]}] ${item[1]} → ${item[2].slice(0, 60)}`);
       }
       if (items.length > 30) console.log(`  ... 还有 ${items.length - 30} 条`);
     }
@@ -1162,12 +1275,9 @@ function checkPortalTranslations(verbose = true) {
         }
       }
 
-      // English residual in non-latin
+      // English residual in non-latin (word-level check — only works for non-latin scripts)
       if (NON_LATIN_LOCALES.has(lang)) {
-        // Strip variable placeholders like {originCountry} before checking
         const cleanVal = langVal.replace(/\{[A-Za-z ]+\}/g, '');
-        // Skip email addresses entirely — company emails like info@domain.com
-        // should be identical in all languages and are not translatable
         if (/^[\w.+-]+@[\w-]+(?:\.[\w-]+)+$/.test(cleanVal.trim())) continue;
         const engWords = new Set((cleanVal.match(/\b[A-Za-z]{3,}\b/g) || []));
         if (engWords.size) {
@@ -1180,6 +1290,15 @@ function checkPortalTranslations(verbose = true) {
             if (!isSkipKey) {
               details.english_residual.push([lang, key, [...residual].sort()]); totalIssues++;
             }
+          }
+        }
+      }
+
+      // Latin-script English residual — function-word ratio detection
+      if (!NON_LATIN_LOCALES.has(lang)) {
+        if (hasUntranslatedEnglish(langVal, enVal, lang)) {
+          if (!SKIP_ENGLISH_RESIDUAL_PATTERNS.some(p => p.test(key))) {
+            details.english_residual.push([lang, key, [langVal.slice(0, 60)]]); totalIssues++;
           }
         }
       }

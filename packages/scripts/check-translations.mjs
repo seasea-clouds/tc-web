@@ -1049,7 +1049,7 @@ function hasUntranslatedEnglish(langVal, enVal, lang) {
 }
 
 function checkTranslations(targetLang = null, verbose = true) {
-  const enPath = path.join(MESSAGES_DIR, 'en.json');
+  const enPath = path.join(SITE_MESSAGES_DIR, 'en.json');
   if (!fs.existsSync(enPath)) {
     console.log(`❌ 找不到英文源文件: ${enPath}`);
     return null;
@@ -1057,7 +1057,7 @@ function checkTranslations(targetLang = null, verbose = true) {
 
   const enFlat = flattenKeys(loadJSON(enPath));
 
-  const allLangs = fs.readdirSync(MESSAGES_DIR)
+  const allLangs = fs.readdirSync(SITE_MESSAGES_DIR)
     .filter(f => f.endsWith('.json') && f !== 'en.json' && !f.startsWith('_t6'))
     .map(f => path.basename(f, '.json'))
     .sort();
@@ -1077,7 +1077,7 @@ const totalIssues = { count: 0, byType: { fallback: [], empty: [], wrong_chars: 
   }
 
   for (const lang of langsToCheck) {
-    const langPath = path.join(MESSAGES_DIR, `${lang}.json`);
+    const langPath = path.join(SITE_MESSAGES_DIR, `${lang}.json`);
     if (!fs.existsSync(langPath)) continue;
 
     const langFlat = flattenKeys(loadJSON(langPath));
@@ -1271,7 +1271,7 @@ const totalIssues = { count: 0, byType: { fallback: [], empty: [], wrong_chars: 
 // ============================================================
 
 function checkLocaleConsistency(verbose = true) {
-  const files = fs.readdirSync(MESSAGES_DIR)
+  const files = fs.readdirSync(SITE_MESSAGES_DIR)
     .filter(f => f.endsWith('.json') && f !== 'en.json' && !f.startsWith('_t6'))
     .map(f => path.basename(f, '.json'))
     .sort();

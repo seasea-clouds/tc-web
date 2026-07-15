@@ -125,8 +125,9 @@ export default function NmpaCheckClient() {
       if (checkoutUrl) {
         window.location.href = checkoutUrl;
       } else {
-        // Fallback: go to report page directly
-        window.location.href = pathPrefix + "/c/report/?id=" + reportId;
+        // Checkout failed — show error instead of silently giving access
+        setError(t('checkoutError'));
+        setLoading(false);
       }
     } catch (err) {
       try {

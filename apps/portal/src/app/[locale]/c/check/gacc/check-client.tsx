@@ -123,8 +123,9 @@ export default function GaccCheckClient() {
       if (checkoutUrl) {
         window.location.href = checkoutUrl;
       } else {
-        // Fallback: go to report page directly (free access as before)
-        window.location.href = pathPrefix + "/c/report/?id=" + reportId;
+        // Checkout failed — show error instead of silently giving access
+        setError(t('checkoutError'));
+        setLoading(false);
       }
     } catch (err) {
       // Last resort: even if everything fails, try to get the user to the report page

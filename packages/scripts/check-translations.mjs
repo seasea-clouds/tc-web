@@ -1512,6 +1512,9 @@ function deepMergeShared() {
 // 3. labelDocument - 检查翻译是否为动词形式
 // 4. labelNutr_carb - 检查是否误译为"糖类"而非"碳水化合物"
 // 5. tmRiskReason_registered - 检查是否误译为"医院挂号"
+// 6. ReportSection.valueNo - 检查全大写的非标准形式
+// 7. ReportSection.labelNotes - 检查费用表"笔记"误译
+// 8. ReportSection.valueYes - 检查"是的"冗余表达
 // ============================================================
 
 function checkSemanticQuality(verbose = true) {
@@ -1533,6 +1536,15 @@ function checkSemanticQuality(verbose = true) {
     { ns: 'Check', key: 'tmRiskReason_registered',
       badPatterns: [/^挂号的/],
       desc: 'tmRiskReason_registered 使用了"医院挂号"含义而非"已注册/已备案"' },
+    { ns: 'ReportSection', key: 'valueNo',
+      badPatterns: [/^NEIN$/, /^HAYIR$/, /^NON$/],
+      desc: 'valueNo 全大写看起来不专业，应使用标准大小写' },
+    { ns: 'ReportSection', key: 'labelNotes',
+      badPatterns: [/^笔记$/],
+      desc: 'labelNotes 在费用评估表中应译为"备注"而非"笔记"' },
+    { ns: 'ReportSection', key: 'valueYes',
+      badPatterns: [/^是的$/],
+      desc: 'valueYes 在 Yes/No 选项中应译为"是"而非"是的"' },
   ];
 
   let totalIssues = 0;

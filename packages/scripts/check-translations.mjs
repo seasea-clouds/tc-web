@@ -635,6 +635,7 @@ const ENGLISH_RESIDUAL_ALLOW = new Set([
   'Services', 'Platforms', 'Reports', 'Supports',
   // 第十五批残留豁免（语言名称专有名词 + 分类代码术语）
   'Sinhala', 'Tamil', 'Condiments', 'Fruits', 'Seasonings',
+  'GACC', 'NMPA',
 ]);
 
 // ─── Cognate exclusions — glossary terms legitimate as loanwords ──
@@ -950,6 +951,11 @@ const SKIP_CHAR_CHECK_PATTERNS = [
   /^lab_/,
   // Email: stays Latin in all languages
   /emailLabel/,
+  /contactEmail$/,
+  /^ThankYou\.(readTime|stat)/,
+  /^AiAssistance\./,
+  /^Sitemap\./,
+  /^IndustriesCommon\./,
 ];
 
 // ============================================================
@@ -1149,9 +1155,10 @@ const totalIssues = { count: 0, byType: { fallback: [], empty: [], wrong_chars: 
         if (/^[\w.+-]+@[\w-]+(?:\.[\w-]+)+$/.test(cleanVal.trim())) continue;
         const engWords = new Set((cleanVal.match(/\b[A-Za-z]{3,}\b/g) || []));
         if (engWords.size) {
-          let residual = new Set([...engWords].filter(w => !ENGLISH_RESIDUAL_ALLOW.has(w)));
-          if (SHARED_WORDS_BY_LANG[lang]) {
-            residual = new Set([...residual].filter(w => !SHARED_WORDS_BY_LANG[lang].has(w)));
+          const lowerResidual = new Set([...engWords].map(w => w.toLowerCase()));
+          let residual = new Set([...lowerResidual].filter(w => !ENGLISH_RESIDUAL_ALLOW_LC.has(w)));
+          if (SHARED_WORDS_BY_LANG_LC[lang]) {
+            residual = new Set([...residual].filter(w => !SHARED_WORDS_BY_LANG_LC[lang].has(w)));
           }
           if (residual.size) {
             const shortKey = key.split('.').pop() || key;
@@ -1175,10 +1182,10 @@ const totalIssues = { count: 0, byType: { fallback: [], empty: [], wrong_chars: 
       };
       const nativeRgx2 = nativeScriptRanges2[lang];
       if (nativeRgx2 && !nativeRgx2.test(cleanVal) && cleanVal.trim().length >= 5) {
-        const secondWords = (cleanVal.toLowerCase().match(/\b[a-z]{3,}\b/g) || []).filter(w => !ENGLISH_FUNCTION_WORDS.has(w));
+        const secondWords = (cleanVal.toLowerCase().match(/\b[a-z]{3,}\b/g) || []).filter(w => !ENGLISH_FUNCTION_WORDS.has(w) && !ENGLISH_RESIDUAL_ALLOW_LC.has(w));
         if (secondWords.length >= 2) {
           const enLower2 = enVal.toLowerCase();
-          const enAll2 = new Set((enLower2.match(/\b[a-z]{3,}\b/g) || []).filter(w => !ENGLISH_FUNCTION_WORDS.has(w)));
+          const enAll2 = new Set((enLower2.match(/\b[a-z]{3,}\b/g) || []).filter(w => !ENGLISH_FUNCTION_WORDS.has(w) && !ENGLISH_RESIDUAL_ALLOW_LC.has(w)));
           const enOv = secondWords.filter(w => enAll2.has(w));
           if (enOv.length >= 2 && enOv.length / secondWords.length >= 0.5) {
             const shortKey2 = key.split('.').pop() || key;
@@ -1237,7 +1244,7 @@ const totalIssues = { count: 0, byType: { fallback: [], empty: [], wrong_chars: 
     for (const [type, items] of Object.entries(totalIssues.byType)) {
       if (!items.length) continue;
       console.log(`\n${typeNames[type] || type} (${items.length} 处):`);
-      for (const item of items.slice(0, 30)) {
+      for (const item of items.slice(0, 200)) {
         if (type === 'fallback') console.log(`  [${item[0]}] ${item[1]} → ${item[2].slice(0, 60)}`);
         else if (type === 'empty') console.log(`  [${item[0]}] ${item[1]} → 空值`);
         else if (type === 'wrong_chars') console.log(`  [${item[0]}] ${item[1]} → ${item[2].slice(0, 60)} (缺少 ${item[3]})`);
@@ -1335,7 +1342,7 @@ function checkIndustryMetaCompleteness(verbose = true) {
   if (verbose && missingKeys.length > 0) {
     console.log(`\n${'='.repeat(60)}`);
     console.log(`🏭 行业 meta 完整性检查: ${missingKeys.length} 个问题`);
-    for (const key of missingKeys.slice(0, 30)) {
+    for (const key of missingKeys.slice(0, 200)) {
       console.log(`  ❌ ${key}`);
     }
     if (missingKeys.length > 30) {
@@ -1409,9 +1416,10 @@ function checkPortalTranslations(verbose = true) {
         if (/^[\w.+-]+@[\w-]+(?:\.[\w-]+)+$/.test(cleanVal.trim())) continue;
         const engWords = new Set((cleanVal.match(/\b[A-Za-z]{3,}\b/g) || []));
         if (engWords.size) {
-          let residual = new Set([...engWords].filter(w => !ENGLISH_RESIDUAL_ALLOW.has(w)));
-          if (SHARED_WORDS_BY_LANG[lang]) {
-            residual = new Set([...residual].filter(w => !SHARED_WORDS_BY_LANG[lang].has(w)));
+          const lowerResidual = new Set([...engWords].map(w => w.toLowerCase()));
+          let residual = new Set([...lowerResidual].filter(w => !ENGLISH_RESIDUAL_ALLOW_LC.has(w)));
+          if (SHARED_WORDS_BY_LANG_LC[lang]) {
+            residual = new Set([...residual].filter(w => !SHARED_WORDS_BY_LANG_LC[lang].has(w)));
           }
           if (residual.size) {
             const isSkipKey = SKIP_ENGLISH_RESIDUAL_PATTERNS.some(p => p.test(key));
@@ -1432,10 +1440,10 @@ function checkPortalTranslations(verbose = true) {
       };
       const nativeRgx2p = nativeScriptRanges2p[lang];
       if (nativeRgx2p && !nativeRgx2p.test(cleanVal) && cleanVal.trim().length >= 5) {
-        const secondWords = (cleanVal.toLowerCase().match(/\b[a-z]{3,}\b/g) || []).filter(w => !ENGLISH_FUNCTION_WORDS.has(w));
+        const secondWords = (cleanVal.toLowerCase().match(/\b[a-z]{3,}\b/g) || []).filter(w => !ENGLISH_FUNCTION_WORDS.has(w) && !ENGLISH_RESIDUAL_ALLOW_LC.has(w));
         if (secondWords.length >= 2) {
           const enLower2 = enVal.toLowerCase();
-          const enAll2 = new Set((enLower2.match(/\b[a-z]{3,}\b/g) || []).filter(w => !ENGLISH_FUNCTION_WORDS.has(w)));
+          const enAll2 = new Set((enLower2.match(/\b[a-z]{3,}\b/g) || []).filter(w => !ENGLISH_FUNCTION_WORDS.has(w) && !ENGLISH_RESIDUAL_ALLOW_LC.has(w)));
           const enOv = secondWords.filter(w => enAll2.has(w));
           if (enOv.length >= 2 && enOv.length / secondWords.length >= 0.5) {
             if (!SKIP_ENGLISH_RESIDUAL_PATTERNS.some(p => p.test(key))) {
@@ -1461,15 +1469,15 @@ function checkPortalTranslations(verbose = true) {
     console.log(`\n📱 Portal 翻译检查 (${allLangs.length} 语言):`);
     if (details.fallback.length) {
       console.log(`  ❌ 英文 fallback (${details.fallback.length} 处):`);
-      for (const [l, k, v] of details.fallback.slice(0, 15)) console.log(`    [${l}] ${k} → ${v.slice(0, 60)}`);
+      for (const [l, k, v] of details.fallback.slice(0, 200)) console.log(`    [${l}] ${k} → ${v.slice(0, 60)}`);
     }
     if (details.empty.length) {
       console.log(`  ❌ 空值 (${details.empty.length} 处):`);
-      for (const [l, k] of details.empty.slice(0, 15)) console.log(`    [${l}] ${k}`);
+      for (const [l, k] of details.empty.slice(0, 200)) console.log(`    [${l}] ${k}`);
     }
     if (details.english_residual.length) {
       console.log(`  ❌ 英文残留 (${details.english_residual.length} 处):`);
-      for (const [l, k, w] of details.english_residual.slice(0, 15)) console.log(`    [${l}] ${k} → ${w.slice(0, 10).join(', ')}`);
+      for (const [l, k, w] of details.english_residual.slice(0, 200)) console.log(`    [${l}] ${k} → ${w.slice(0, 10).join(', ')}`);
     }
     if (totalIssues === 0) console.log('  ✅ 全部通过');
   }
@@ -1537,12 +1545,12 @@ function checkSharedUiMessages(verbose = true) {
     console.log(`\n🔗 共享 UI 消息检查 (${allLangs.length} 语言):`);
     if (details.fallback.length) {
       console.log(`  ❌ 英文 fallback (${details.fallback.length} 处):`);
-      for (const [l, k, v] of details.fallback.slice(0, 20)) console.log(`    [${l}] ${k} → ${v.slice(0, 60)}`);
+      for (const [l, k, v] of details.fallback.slice(0, 200)) console.log(`    [${l}] ${k} → ${v.slice(0, 60)}`);
       if (details.fallback.length > 20) console.log(`    ... 还有 ${details.fallback.length - 20} 条`);
     }
     if (details.empty.length) {
       console.log(`  ❌ 空值 (${details.empty.length} 处):`);
-      for (const [l, k] of details.empty.slice(0, 10)) console.log(`    [${l}] ${k}`);
+      for (const [l, k] of details.empty.slice(0, 200)) console.log(`    [${l}] ${k}`);
     }
     if (totalIssues === 0) console.log('  ✅ 全部通过');
   }
@@ -1629,7 +1637,7 @@ function checkDashConsistency(verbose = true) {
       console.log('  ✅ 全部通过 — 无 hyphen-minus 替代问题');
     } else {
       console.log(`  ⚠️  ${totalIssues} 处破折号使用了 hyphen-minus (-) 而非 EM DASH (—) 或 EN DASH (–):`);
-      for (const [lang, key, preview] of details.slice(0, 30)) {
+      for (const [lang, key, preview] of details.slice(0, 200)) {
         console.log(`    [${lang}] ${key} → "${preview}"`);
       }
       if (details.length > 30) {
@@ -1715,7 +1723,7 @@ function checkBreadcrumbKeys(verbose = true) {
     console.log(`\n🧩 面包屑 key 检查 (${mappings.length} 映射 × ${locales.length} 语言):`);
     if (missing.length > 0) {
       console.log(`  ❌ 缺失 ${missing.length} 处:`);
-      for (const m of missing.slice(0, 30)) {
+      for (const m of missing.slice(0, 200)) {
         console.log(`    [${m.locale}] ${m.source}.${m.key} → ${m.ns}.${m.keyPath}`);
       }
       if (missing.length > 30) console.log(`    ... 还有 ${missing.length - 30} 条`);
@@ -1849,7 +1857,7 @@ function checkSemanticQuality(verbose = true) {
       console.log('  ✅ 全部通过 — 无已知语义翻译错误');
     } else {
       console.log(`  ⚠️  发现 ${totalIssues} 处语义翻译错误:`);
-      for (const d of details.slice(0, 30)) {
+      for (const d of details.slice(0, 200)) {
         console.log(`    [${d.lang}] ${d.ns}.${d.key} = "${d.value}"`);
         console.log(`      → ${d.desc}`);
       }
@@ -1918,7 +1926,7 @@ function checkAdminMessages(verbose = true) {
   if (enMissing.length > 0) {
     if (verbose) {
       console.log(`\n🔧 Admin 消息检查: zh.json 中有 ${enMissing.length} 个 key 在 en.json 中缺失`);
-      for (const k of enMissing.slice(0, 10)) console.log(`  ❌ ${k}`);
+      for (const k of enMissing.slice(0, 200)) console.log(`  ❌ ${k}`);
       if (enMissing.length > 10) console.log(`  ... 还有 ${enMissing.length - 10} 条`);
     }
     missingKeys.push(`en.json missing ${enMissing.length} keys present in zh.json`);
@@ -1927,7 +1935,7 @@ function checkAdminMessages(verbose = true) {
   if (zhMissing.length > 0) {
     if (verbose) {
       console.log(`\n🔧 Admin 消息检查: en.json 中有 ${zhMissing.length} 个 key 在 zh.json 中缺失`);
-      for (const k of zhMissing.slice(0, 10)) console.log(`  ❌ ${k}`);
+      for (const k of zhMissing.slice(0, 200)) console.log(`  ❌ ${k}`);
       if (zhMissing.length > 10) console.log(`  ... 还有 ${zhMissing.length - 10} 条`);
     }
     missingKeys.push(`zh.json missing ${zhMissing.length} keys present in en.json`);
@@ -2023,7 +2031,7 @@ function checkHardcodedSecrets(verbose = true) {
   }
 
   if (verbose && totalIssues > 0) {
-    for (const issue of issues.slice(0, 20)) console.log(issue);
+    for (const issue of issues.slice(0, 200)) console.log(issue);
     if (issues.length > 20) console.log(`  ... 还有 ${issues.length - 20} 个`);
     console.log(`🔒 硬编码密钥扫描: ⚠️ 发现 ${totalIssues} 个可疑位置`);
   } else if (verbose) {

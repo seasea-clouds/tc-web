@@ -66,7 +66,7 @@
       "skincarecosmetics": "Nega kože in kozmetika",
       "petfood": "Hrana za hišne ljubljenčke",
       "healthsupplements": "Zdravstveni dodatki",
-      "babymaternal": "Baby & Maternal",
+      "babymaternal": "Dojenčki in materinstvo",
       "consumerelectronics": "Zabavna elektronika",
       "medicaldevices": "Medicinski pripomočki",
       "crossborderecommerce": "Čezmejno e-trgovanje"
@@ -1139,7 +1139,7 @@
       "petfoodDesc": "Registracija GACC in MOA, odobritev sestavin in označevanje.",
       "healthsupplements": "Zdravstveni dodatki",
       "healthsupplementsDesc": "Registracija SAMR, splošna klasifikacija živil in označevanje.",
-      "babymaternal": "Baby & Maternal",
+      "babymaternal": "Dojenčki in materinstvo",
       "babymaternalDesc": "Registracija SAMR za dojenčke, GACC in NMPA.",
       "consumerelectronics": "Zabavna elektronika",
       "consumerelectronicsDesc": "Certificiranje CCC, odobritev SRRC in zaščita IP.",

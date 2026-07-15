@@ -1864,7 +1864,7 @@
     "labelMandatory_dateManufacture": "วันที่ผลิตและควรบริโภคก่อน — รูปแบบ วว/ดด/ปปปป (4.1.8)",
     "labelMandatory_productName": "ชื่อผลิตภัณฑ์ — ต้องสะท้อนถึงลักษณะที่แท้จริงของผลิตภัณฑ์อย่างถูกต้อง (GB 7718 4.1.2)",
     "labelNutr_carb": "คาร์โบไฮเดรต",
-    "labelNutr_fat": "อ้วน",
+    "labelNutr_fat": "ไขมัน",
     "labelNutr_protein": "โปรตีน",
     "labelNutr_sodium": "โซเดียม",
     "labelPhase_design": "การออกแบบฉลากภาษาจีน",

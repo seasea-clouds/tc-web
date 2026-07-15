@@ -33,70 +33,70 @@ Component paths updated: 0
 ==================================================
 Images: 18 converted
 Size: 1138K → 473K (58% saved)
-Apps discovered: blog, portal, site
+Apps discovered: admin, blog, portal, site
 Generating search index for 48 locales...
-  af: 2299 items (6S + 7B + 39F + 2247C)
-  ar: 2299 items (6S + 7B + 39F + 2247C)
-  az: 2299 items (6S + 7B + 39F + 2247C)
-  be: 2299 items (6S + 7B + 39F + 2247C)
-  bg: 2299 items (6S + 7B + 39F + 2247C)
-  bn: 2299 items (6S + 7B + 39F + 2247C)
-  ca: 2299 items (6S + 7B + 39F + 2247C)
-  cs: 2299 items (6S + 7B + 39F + 2247C)
-  da: 2299 items (6S + 7B + 39F + 2247C)
-  de: 2299 items (6S + 7B + 39F + 2247C)
-  el: 2299 items (6S + 7B + 39F + 2247C)
-  en: 2299 items (6S + 7B + 39F + 2247C)
-  es: 2299 items (6S + 7B + 39F + 2247C)
-  fa: 2299 items (6S + 7B + 39F + 2247C)
-  fi: 2299 items (6S + 7B + 39F + 2247C)
-  fr: 2299 items (6S + 7B + 39F + 2247C)
-  he: 2299 items (6S + 7B + 39F + 2247C)
-  hi: 2299 items (6S + 7B + 39F + 2247C)
-  hr: 2299 items (6S + 7B + 39F + 2247C)
-  hu: 2299 items (6S + 7B + 39F + 2247C)
-  hy: 2299 items (6S + 7B + 39F + 2247C)
-  id: 2299 items (6S + 7B + 39F + 2247C)
-  it: 2299 items (6S + 7B + 39F + 2247C)
-  ja: 2299 items (6S + 7B + 39F + 2247C)
-  ka: 2299 items (6S + 7B + 39F + 2247C)
-  ko: 2299 items (6S + 7B + 39F + 2247C)
-  ms: 2299 items (6S + 7B + 39F + 2247C)
-  ne: 2299 items (6S + 7B + 39F + 2247C)
-  nl: 2299 items (6S + 7B + 39F + 2247C)
-  no: 2299 items (6S + 7B + 39F + 2247C)
-  pl: 2299 items (6S + 7B + 39F + 2247C)
-  pt: 2299 items (6S + 7B + 39F + 2247C)
-  ro: 2299 items (6S + 7B + 39F + 2247C)
-  ru: 2299 items (6S + 7B + 39F + 2247C)
-  si: 2299 items (6S + 7B + 39F + 2247C)
-  sk: 2299 items (6S + 7B + 39F + 2247C)
-  sl: 2299 items (6S + 7B + 39F + 2247C)
-  sq: 2299 items (6S + 7B + 39F + 2247C)
-  sr: 2299 items (6S + 7B + 39F + 2247C)
-  sv: 2299 items (6S + 7B + 39F + 2247C)
-  sw: 2299 items (6S + 7B + 39F + 2247C)
-  ta: 2299 items (6S + 7B + 39F + 2247C)
-  th: 2299 items (6S + 7B + 39F + 2247C)
-  tr: 2299 items (6S + 7B + 39F + 2247C)
-  uk: 2299 items (6S + 7B + 39F + 2247C)
-  ur: 2299 items (6S + 7B + 39F + 2247C)
-  vi: 2299 items (6S + 7B + 39F + 2247C)
-  zh: 2299 items (6S + 7B + 39F + 2247C)
+  af: 2320 items (6S + 7B + 39F + 2268C)
+  ar: 2320 items (6S + 7B + 39F + 2268C)
+  az: 2320 items (6S + 7B + 39F + 2268C)
+  be: 2320 items (6S + 7B + 39F + 2268C)
+  bg: 2320 items (6S + 7B + 39F + 2268C)
+  bn: 2320 items (6S + 7B + 39F + 2268C)
+  ca: 2320 items (6S + 7B + 39F + 2268C)
+  cs: 2320 items (6S + 7B + 39F + 2268C)
+  da: 2320 items (6S + 7B + 39F + 2268C)
+  de: 2320 items (6S + 7B + 39F + 2268C)
+  el: 2320 items (6S + 7B + 39F + 2268C)
+  en: 2320 items (6S + 7B + 39F + 2268C)
+  es: 2320 items (6S + 7B + 39F + 2268C)
+  fa: 2320 items (6S + 7B + 39F + 2268C)
+  fi: 2320 items (6S + 7B + 39F + 2268C)
+  fr: 2320 items (6S + 7B + 39F + 2268C)
+  he: 2320 items (6S + 7B + 39F + 2268C)
+  hi: 2320 items (6S + 7B + 39F + 2268C)
+  hr: 2320 items (6S + 7B + 39F + 2268C)
+  hu: 2320 items (6S + 7B + 39F + 2268C)
+  hy: 2320 items (6S + 7B + 39F + 2268C)
+  id: 2320 items (6S + 7B + 39F + 2268C)
+  it: 2320 items (6S + 7B + 39F + 2268C)
+  ja: 2320 items (6S + 7B + 39F + 2268C)
+  ka: 2320 items (6S + 7B + 39F + 2268C)
+  ko: 2320 items (6S + 7B + 39F + 2268C)
+  ms: 2320 items (6S + 7B + 39F + 2268C)
+  ne: 2320 items (6S + 7B + 39F + 2268C)
+  nl: 2320 items (6S + 7B + 39F + 2268C)
+  no: 2320 items (6S + 7B + 39F + 2268C)
+  pl: 2320 items (6S + 7B + 39F + 2268C)
+  pt: 2320 items (6S + 7B + 39F + 2268C)
+  ro: 2320 items (6S + 7B + 39F + 2268C)
+  ru: 2320 items (6S + 7B + 39F + 2268C)
+  si: 2320 items (6S + 7B + 39F + 2268C)
+  sk: 2320 items (6S + 7B + 39F + 2268C)
+  sl: 2320 items (6S + 7B + 39F + 2268C)
+  sq: 2320 items (6S + 7B + 39F + 2268C)
+  sr: 2320 items (6S + 7B + 39F + 2268C)
+  sv: 2320 items (6S + 7B + 39F + 2268C)
+  sw: 2320 items (6S + 7B + 39F + 2268C)
+  ta: 2320 items (6S + 7B + 39F + 2268C)
+  th: 2320 items (6S + 7B + 39F + 2268C)
+  tr: 2320 items (6S + 7B + 39F + 2268C)
+  uk: 2320 items (6S + 7B + 39F + 2268C)
+  ur: 2320 items (6S + 7B + 39F + 2268C)
+  vi: 2320 items (6S + 7B + 39F + 2268C)
+  zh: 2320 items (6S + 7B + 39F + 2268C)
 Done.
 Generated search-widget-translations.json: 48 locales → /root/projects/trade/web/apps/site/public/search-widget-translations.json
 ▲ Next.js 16.2.4 (Turbopack)
 
   Creating an optimized production build ...
-✓ Compiled successfully in 2.5s
+✓ Compiled successfully in 2.7s
   Running TypeScript ...
-  Finished TypeScript in 5.6s ...
+  Finished TypeScript in 5.7s ...
   Collecting page data using 19 workers ...
-  Generating static pages using 19 workers (0/1349) ...
-  Generating static pages using 19 workers (337/1349) 
-  Generating static pages using 19 workers (674/1349) 
-  Generating static pages using 19 workers (1011/1349) 
-✓ Generating static pages using 19 workers (1349/1349) in 7.0s
+  Generating static pages using 19 workers (0/1397) ...
+  Generating static pages using 19 workers (349/1397) 
+  Generating static pages using 19 workers (698/1397) 
+  Generating static pages using 19 workers (1047/1397) 
+✓ Generating static pages using 19 workers (1397/1397) in 27.7s
   Finalizing page optimization ...
 ⚠ Statically exporting a Next.js application via `next export` disables API routes and middleware.
 This command is meant for static-only hosts, and is not necessary to make your application static.
@@ -191,6 +191,11 @@ Route (app)
 │ ├ /zh/sitemap
 │ ├ /es/sitemap
 │ └ [+45 more paths]
+├ ● /[locale]/terms
+│ ├ /en/terms
+│ ├ /zh/terms
+│ ├ /es/terms
+│ └ [+45 more paths]
 ├ ● /[locale]/testimonials
 │ ├ /en/testimonials
 │ ├ /zh/testimonials
@@ -242,67 +247,59 @@ Output:   /root/projects/trade/web/apps/site/out
 ✅ build-all.mjs complete
 
 ═══════════════════════════════════════════════
-  CI 统一检查 — SITE
-  out-dir: out  next-dir: (none)
+  CI 检查 — SITE
+  out-dir: out  sync: 否
 ═══════════════════════════════════════════════
 
 
-▶ check-seo-patterns.mjs 
+▶ check-seo-patterns.mjs --project=site
 
 📁 site/
 
-📁 blog/
-
-📁 portal/
-
 ==================================================
-📊 结果: 163 通过, 0 失败
+📊 结果: 102 通过, 0 失败
 
 ✅ check-seo-patterns.mjs 完成
 
-▶ check-hardcoded-domain.mjs 
+▶ check-hardcoded-domain.mjs --project=site
 ✅ 未发现硬编码的 *.pages.dev 域名引用
 
-▶ check-hardcoded.mjs apps/site/src packages/ui/src
+▶ check-hardcoded.mjs --project=site
 🔍 Scanning for hardcoded English text in JSX/TSX...
 
 ✅ No hardcoded English text found.
 
-▶ check-console.mjs 
-📁 扫描 200 个文件
+▶ check-console.mjs --project=site
+📁 扫描 85 个文件
 ==================================================
-📊 结果: 210 通过, 0 失败
+📊 结果: 86 通过, 0 失败
 
 ✅ check-console.mjs 完成
 
-▶ check-rtl.mjs 
+▶ check-rtl.mjs --project=site
 
 📁 site/
 
-📁 blog/
-
-📁 portal/
-
 ==================================================
-📊 结果: 9 通过, 0 失败
+📊 结果: 3 通过, 0 失败
 
 ✅ check-rtl.mjs 完成
 
-▶ check-map-key.mjs 
-📁 扫描 165 个 TSX 文件
+▶ check-map-key.mjs --project=site
+📁 扫描 69 个 TSX 文件
 ==================================================
-📊 结果: 165 通过, 0 失败
+📊 结果: 69 通过, 0 失败
 
 ✅ check-map-key.mjs 完成
 
-▶ check-jsonld.mjs 
-📁 扫描 24 个含 JSON-LD 的文件
+▶ check-jsonld.mjs --project=site
+📁 扫描 22 个含 JSON-LD 的文件
 ==================================================
-📊 结果: 81 通过, 0 失败
+📊 结果: 70 通过, 0 失败
 
 ✅ check-jsonld.mjs 完成
 
-▶ check-md-format.mjs 
+▶ check-md-format.mjs --project=site
 
 ═══════════════════════════════════════════════
   Markdown 格式质量检查（精细化语言策略）
@@ -312,7 +309,7 @@ Output:   /root/projects/trade/web/apps/site/out
   扫描文件: 336
 
 
-▶ check-locale-prefix.mjs 
+▶ check-locale-prefix.mjs --project=site
 
 ═══════════════════════════════════════════════
   路由 locale 前缀检测 (CI-4)
@@ -321,52 +318,14 @@ Output:   /root/projects/trade/web/apps/site/out
 ✅ 未发现缺少 locale 前缀的 href
 
 
-▶ check-hreflang.mjs --dir=out --skip-pattern=/blog/,404,_not-found,index
-🔍 统一 hreflang 检查
-
-📦 模式: SSG 输出目录检查
-  📄 扫描 1731 个 HTML 文件
-
-  跳过: 1731 文件 (路径匹配 skip-pattern)
-
-  结果: 0 通过, 0 失败
-
-✅ hreflang 全部检查通过
-
-▶ check-llms.mjs --dir=out
-🔍 检查 llms.txt...
-
-  ✅ llms.txt 格式正确
-  ✅ llms-en.txt 格式正确
-
-  48/48 语言版本文件存在
-
-✅ llms.txt 全部检查通过
-
-▶ check-seo-output.mjs --out-dir=out
-
-🔍 SEO 输出检查: /root/projects/trade/web/apps/site/out
-
-📄 扫描 HTML 页面...
-
-🗺️  检查 Sitemap...
-
-==================================================
-📊 结果: 6289 通过, 0 失败
-
-✅ check-seo-output.mjs 完成
-
-▶ check-translations.mjs --short
+▶ check-translations.mjs --project=site --short
 
 ✅ 全量核验通过！48 种语言无质量问题。
 
-▶ check-i18n-keys.mjs --ci
+▶ check-i18n-keys.mjs --project=site
 🔑 i18n key 完整性检查
 
 📦 SITE (0 missing, 0 extra, 0 hardcoded):
-  ✅ 全部通过
-
-📦 PORTAL (0 missing, 0 extra, 0 hardcoded):
   ✅ 全部通过
 
 📦 UI (0 missing, 0 extra, 0 hardcoded):
@@ -376,7 +335,7 @@ Output:   /root/projects/trade/web/apps/site/out
 📊 总计: 0 缺失 + 0 多余 + 0 硬编码英文 + 0 导航翻译不一致
 ✅ 所有 i18n key 完整，无硬编码英文，导航翻译一致
 
-▶ check-i18n-coverage.mjs 
+▶ check-i18n-coverage.mjs --project=site
 
 📊 UI 包
    en.json: 106 键
@@ -432,177 +391,652 @@ Output:   /root/projects/trade/web/apps/site/out
    平均: 100.0%
 
 📊 Site
-   en.json: 1242 键
+   en.json: 1270 键
 
-   af  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   ar  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   az  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   be  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   bg  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   bn  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   ca  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   cs  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   da  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   de  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   el  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   es  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   fa  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   fi  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   fr  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   he  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   hi  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   hr  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   hu  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   hy  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   id  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   it  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   ja  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   ka  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   ko  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   ms  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   ne  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   nl  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   no  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   pl  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   pt  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   ro  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   ru  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   si  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   sk  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   sl  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   sq  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   sr  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   sv  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   sw  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   ta  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   th  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   tr  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   uk  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   ur  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   vi  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   zh  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   ─────────────────────────────────────────
-   平均: 100.0%
-
-📊 Portal
-   en.json: 2940 键
-
-   af  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   ar  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   az  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   be  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   bg  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   bn  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   ca  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   cs  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   da  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   de  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   el  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   es  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   fa  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   fi  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   fr  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   he  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   hi  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   hr  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   hu  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   hy  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   id  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   it  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   ja  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   ka  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   ko  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   ms  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   ne  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   nl  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   no  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   pl  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   pt  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   ro  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   ru  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   si  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   sk  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   sl  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   sq  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   sr  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   sv  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   sw  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   ta  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   th  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   tr  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   uk  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   ur  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   vi  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   zh  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   ─────────────────────────────────────────
-   平均: 100.0%
-
-📊 Blog
-   en.json: 58 键
-
-   af  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   ar  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   az  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   be  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   bg  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   bn  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   ca  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   cs  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   da  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   de  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   el  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   es  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   fa  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   fi  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   fr  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   he  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   hi  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   hr  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   hu  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   hy  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   id  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   it  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   ja  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   ka  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   ko  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   ms  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   ne  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   nl  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   no  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   pl  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   pt  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   ro  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   ru  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   si  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   sk  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   sl  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   sq  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   sr  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   sv  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   sw  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   ta  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   th  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   tr  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   uk  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   ur  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   vi  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   zh  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
+   af  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   ar  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   az  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   be  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   bg  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   bn  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   ca  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   cs  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   da  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   de  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   el  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   es  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   fa  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   fi  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   fr  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   he  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   hi  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   hr  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   hu  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   hy  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   id  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   it  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   ja  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   ka  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   ko  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   ms  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   ne  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   nl  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   no  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   pl  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   pt  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   ro  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   ru  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   si  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   sk  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   sl  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   sq  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   sr  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   sv  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   sw  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   ta  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   th  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   tr  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   uk  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   ur  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   vi  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
+   zh  ████████████████████ 100.0%  (1270/1270  缺失:0  多余:0)
    ─────────────────────────────────────────
    平均: 100.0%
 
 ═══════════════════════════════════════════════
   ✅ UI 包: 100.0%
   ✅ Site: 100.0%
-  ✅ Portal: 100.0%
-  ✅ Blog: 100.0%
 ═══════════════════════════════════════════════
 
 
-▶ clean-rsc.mjs out
+▶ check-report-rules.mjs --project=site
+────────────────────────────────────────────────────────────
+✅ check-report-rules: 未发现硬编码英文问题
+────────────────────────────────────────────────────────────
+
+▶ check-report-dates.mjs --project=site
+⏭️  check-report-dates: site 无模块 rules.ts，跳过
+
+▶ check-t-keys-all.mjs --project=site
+
+🔑 t() 键存在性检查 — SITE
+   en.json: apps/site/messages/en.json
+   扫描目录: apps/site/src, packages/ui/src, apps/site/functions
+
+【A】静态 t("key") — orphan 键检查...
+
+📊  205 unique static keys checked, 0 orphan(s) found
+
+【B】动态 t(`…`) 模板键检查...
+
+  ⚠️  (excluded) `${prefix}Title` — 使用 namespace-aware t()
+  ✅ `${s.key}Industries` — prefix "Industries" has 29 matching key(s)
+  ⚠️  (excluded) `${s.key}PainPoint` — 使用 namespace-aware t()
+  ⚠️  (excluded) `industries.${ind.slug.replace(/-/g, '')}Desc` — 使用 namespace-aware t()
+  ⚠️  (excluded) `industries.${ind.slug.replace(/-/g, '')}` — 使用 namespace-aware t()
+  ⚠️  (excluded) `industry.${ind.slug.replace(/-/g, '')}` — 使用 namespace-aware t()
+  ⚠️  (excluded) `learnMoreNames.${nameKey}` — 使用 namespace-aware t()
+  ⚠️  (excluded) `processStep${i}Desc` — 使用 namespace-aware t()
+  ⚠️  (excluded) `processStep${i}Title` — 使用 namespace-aware t()
+  ⚠️  (excluded) `service_${service.serviceKey}` — 使用 namespace-aware t()
+  ⚠️  (excluded) `whyCard${i}Desc` — 使用 namespace-aware t()
+  ⚠️  (excluded) `whyCard${i}Title` — 使用 namespace-aware t()
+
+📊  17 template patterns checked, 0 issue(s) found
+   (11 pattern(s) excluded as namespace-aware false positives)
+
+✅ All keys verified — no issues found!
+
+
+▶ check-colon-all.mjs --project=site
+═══ 翻译冒号一致性检查 — SITE ═══
+
+扫描 48 个语言文件...
+
+─────────────────────────────
+✅ 所有语言冒号风格一致，无问题
+
+
+▶ check-override-keys.mjs --project=site
+
+═══════════════════════════════════════════════
+  跨 App 消息覆盖检测
+═══════════════════════════════════════════════
+
+─────────────────────────────────────────────
+总计: 0 个覆盖键
+  🔴 0  CRITICAL (与英文源相同)
+  🟡 0  WARNING (值不同)
+  ℹ️  0  INFO (重复)
+─────────────────────────────────────────────
+
+
+▶ check-hardcoded-templates.mjs --project=site
+
+═══════════════════════════════════════════════
+  数据层英文模板检测
+═══════════════════════════════════════════════
+
+✅ 无硬编码英文模板
+
+
+▶ check-category-labels.mjs --project=site
+
+═══════════════════════════════════════════════
+  品类翻译键完整性校验 (CI-2)
+═══════════════════════════════════════════════
+
+📦 GACC — 16 个品类
+  ✅ 全部 16 个品类翻译键完整
+
+📦 CCC — 6 个品类
+  ✅ 全部 6 个品类翻译键完整
+
+📦 NMPA — 6 个品类
+  ✅ 全部 6 个品类翻译键完整
+
+📦 LABEL — 10 个品类
+  ✅ 全部 10 个品类翻译键完整
+
+📦 CROSSBORDER — 8 个品类
+  ✅ 全部 8 个品类翻译键完整
+
+📦 TRADEMARK — 8 个品类
+  ✅ 全部 8 个品类翻译键完整
+
+─────────────────────────────────────────────
+✅ 全部 6 个模块的品类翻译键完整
+
+
+▶ check-t-keys.mjs --project=site
+
+🔍 【A】 Static t("key") — orphaned keys...
+
+📊  2118 unique static keys checked, 0 orphan(s) found
+
+🔍 【B】 Dynamic t(`…`) template keys...
+
+  ✅ `catCb_${input["category"]}` — 8 keys verified
+  ✅ `catCb_${v}` — 8 keys verified
+  ✅ `catCcc_${input["category"]}` — 6 keys verified
+  ✅ `catCcc_${v}` — 6 keys verified
+  ✅ `catGacc_${key}` — 16 keys verified
+  ✅ `catLabel_${input["category"]}` — 10 keys verified
+  ✅ `catLabel_${v}` — 10 keys verified
+  ✅ `catNmpa_${input["category"]}` — 6 keys verified
+  ✅ `catNmpa_${v}` — 6 keys verified
+  ✅ `catTm_${input["category"]}` — 8 keys verified
+  ✅ `catTm_${v}` — 8 keys verified
+  ✅ `cccCat_${cat}_label` — 6 keys verified
+  ✅ `comp${prefix}China` — 10 keys verified
+  ✅ `comp${prefix}EU` — 10 keys verified
+  ✅ `comp${prefix}US` — 10 keys verified
+  ✅ `comp${prefix}` — 10 keys verified
+  ✅ `gaccCat_${input.category!}_label` — 16 keys verified
+  ✅ `gaccCat_${input.category}_label` — 16 keys verified
+  ✅ `gaccCat_${input.category}_riskReason` — 16 keys verified
+  ✅ `nmpaCat_${cat}_label` — 6 keys verified
+  ✅ `step${i}Desc` — 3 keys verified
+  ✅ `step${i}Title` — 3 keys verified
+
+📊  45 template patterns (22 expanded), 0 missing key(s) across 0 pattern(s)
+
+✅ All keys verified — static and dynamic — no issues found!
+
+
+▶ check-colon-consistency.mjs --project=site
+═══ 翻译冒号一致性检查 ═══
+
+扫描 48 个语言文件...
+
+─────────────────────────────
+✅ 所有语言冒号风格一致，无问题
+
+
+▶ check-hreflang.mjs --project=site --dir=out --skip-pattern=404,_not-found
+🔍 统一 hreflang 检查
+
+📦 模式: SSG 输出目录检查
+  📄 扫描 1779 个 HTML 文件
+
+  ❌ af/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ af/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ af/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ af/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ af/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ af/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ af/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ af/blog/index.html: 0 hreflang, x-default=false
+  ❌ ar/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ ar/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ ar/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ ar/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ ar/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ ar/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ ar/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ ar/blog/index.html: 0 hreflang, x-default=false
+  ❌ az/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ az/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ az/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ az/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ az/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ az/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ az/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ az/blog/index.html: 0 hreflang, x-default=false
+  ❌ be/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ be/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ be/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ be/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ be/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ be/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ be/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ be/blog/index.html: 0 hreflang, x-default=false
+  ❌ bg/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ bg/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ bg/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ bg/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ bg/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ bg/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ bg/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ bg/blog/index.html: 0 hreflang, x-default=false
+  ❌ bn/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ bn/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ bn/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ bn/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ bn/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ bn/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ bn/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ bn/blog/index.html: 0 hreflang, x-default=false
+  ❌ ca/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ ca/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ ca/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ ca/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ ca/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ ca/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ ca/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ ca/blog/index.html: 0 hreflang, x-default=false
+  ❌ cs/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ cs/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ cs/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ cs/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ cs/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ cs/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ cs/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ cs/blog/index.html: 0 hreflang, x-default=false
+  ❌ da/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ da/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ da/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ da/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ da/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ da/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ da/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ da/blog/index.html: 0 hreflang, x-default=false
+  ❌ de/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ de/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ de/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ de/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ de/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ de/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ de/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ de/blog/index.html: 0 hreflang, x-default=false
+  ❌ el/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ el/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ el/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ el/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ el/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ el/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ el/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ el/blog/index.html: 0 hreflang, x-default=false
+  ❌ en/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ en/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ en/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ en/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ en/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ en/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ en/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ en/blog/index.html: 0 hreflang, x-default=false
+  ❌ es/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ es/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ es/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ es/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ es/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ es/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ es/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ es/blog/index.html: 0 hreflang, x-default=false
+  ❌ fa/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ fa/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ fa/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ fa/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ fa/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ fa/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ fa/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ fa/blog/index.html: 0 hreflang, x-default=false
+  ❌ fi/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ fi/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ fi/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ fi/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ fi/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ fi/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ fi/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ fi/blog/index.html: 0 hreflang, x-default=false
+  ❌ fr/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ fr/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ fr/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ fr/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ fr/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ fr/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ fr/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ fr/blog/index.html: 0 hreflang, x-default=false
+  ❌ he/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ he/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ he/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ he/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ he/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ he/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ he/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ he/blog/index.html: 0 hreflang, x-default=false
+  ❌ hi/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ hi/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ hi/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ hi/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ hi/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ hi/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ hi/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ hi/blog/index.html: 0 hreflang, x-default=false
+  ❌ hr/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ hr/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ hr/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ hr/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ hr/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ hr/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ hr/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ hr/blog/index.html: 0 hreflang, x-default=false
+  ❌ hu/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ hu/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ hu/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ hu/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ hu/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ hu/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ hu/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ hu/blog/index.html: 0 hreflang, x-default=false
+  ❌ hy/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ hy/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ hy/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ hy/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ hy/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ hy/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ hy/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ hy/blog/index.html: 0 hreflang, x-default=false
+  ❌ id/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ id/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ id/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ id/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ id/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ id/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ id/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ id/blog/index.html: 0 hreflang, x-default=false
+  ❌ index.html: 0 hreflang, x-default=false
+  ❌ it/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ it/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ it/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ it/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ it/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ it/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ it/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ it/blog/index.html: 0 hreflang, x-default=false
+  ❌ ja/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ ja/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ ja/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ ja/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ ja/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ ja/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ ja/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ ja/blog/index.html: 0 hreflang, x-default=false
+  ❌ ka/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ ka/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ ka/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ ka/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ ka/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ ka/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ ka/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ ka/blog/index.html: 0 hreflang, x-default=false
+  ❌ ko/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ ko/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ ko/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ ko/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ ko/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ ko/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ ko/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ ko/blog/index.html: 0 hreflang, x-default=false
+  ❌ ms/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ ms/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ ms/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ ms/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ ms/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ ms/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ ms/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ ms/blog/index.html: 0 hreflang, x-default=false
+  ❌ ne/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ ne/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ ne/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ ne/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ ne/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ ne/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ ne/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ ne/blog/index.html: 0 hreflang, x-default=false
+  ❌ nl/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ nl/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ nl/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ nl/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ nl/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ nl/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ nl/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ nl/blog/index.html: 0 hreflang, x-default=false
+  ❌ no/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ no/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ no/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ no/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ no/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ no/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ no/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ no/blog/index.html: 0 hreflang, x-default=false
+  ❌ pl/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ pl/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ pl/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ pl/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ pl/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ pl/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ pl/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ pl/blog/index.html: 0 hreflang, x-default=false
+  ❌ pt/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ pt/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ pt/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ pt/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ pt/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ pt/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ pt/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ pt/blog/index.html: 0 hreflang, x-default=false
+  ❌ ro/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ ro/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ ro/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ ro/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ ro/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ ro/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ ro/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ ro/blog/index.html: 0 hreflang, x-default=false
+  ❌ ru/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ ru/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ ru/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ ru/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ ru/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ ru/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ ru/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ ru/blog/index.html: 0 hreflang, x-default=false
+  ❌ si/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ si/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ si/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ si/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ si/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ si/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ si/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ si/blog/index.html: 0 hreflang, x-default=false
+  ❌ sk/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ sk/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ sk/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ sk/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ sk/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ sk/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ sk/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ sk/blog/index.html: 0 hreflang, x-default=false
+  ❌ sl/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ sl/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ sl/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ sl/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ sl/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ sl/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ sl/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ sl/blog/index.html: 0 hreflang, x-default=false
+  ❌ sq/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ sq/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ sq/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ sq/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ sq/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ sq/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ sq/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ sq/blog/index.html: 0 hreflang, x-default=false
+  ❌ sr/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ sr/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ sr/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ sr/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ sr/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ sr/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ sr/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ sr/blog/index.html: 0 hreflang, x-default=false
+  ❌ sv/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ sv/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ sv/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ sv/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ sv/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ sv/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ sv/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ sv/blog/index.html: 0 hreflang, x-default=false
+  ❌ sw/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ sw/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ sw/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ sw/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ sw/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ sw/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ sw/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ sw/blog/index.html: 0 hreflang, x-default=false
+  ❌ ta/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ ta/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ ta/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ ta/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ ta/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ ta/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ ta/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ ta/blog/index.html: 0 hreflang, x-default=false
+  ❌ th/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ th/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ th/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ th/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ th/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ th/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ th/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ th/blog/index.html: 0 hreflang, x-default=false
+  ❌ tr/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ tr/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ tr/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ tr/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ tr/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ tr/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ tr/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ tr/blog/index.html: 0 hreflang, x-default=false
+  ❌ uk/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ uk/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ uk/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ uk/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ uk/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ uk/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ uk/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ uk/blog/index.html: 0 hreflang, x-default=false
+  ❌ ur/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ ur/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ ur/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ ur/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ ur/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ ur/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ ur/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ ur/blog/index.html: 0 hreflang, x-default=false
+  ❌ vi/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ vi/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ vi/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ vi/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ vi/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ vi/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ vi/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ vi/blog/index.html: 0 hreflang, x-default=false
+  ❌ zh/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
+  ❌ zh/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
+  ❌ zh/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
+  ❌ zh/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
+  ❌ zh/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
+  ❌ zh/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
+  ❌ zh/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
+  ❌ zh/blog/index.html: 0 hreflang, x-default=false
+  跳过: 2 文件 (路径匹配 skip-pattern)
+
+  结果: 1392 通过, 385 失败
+
+❌ 385 项检查未通过
+
+▶ check-llms.mjs --project=site --dir=out
+🔍 检查 llms.txt...
+
+  ✅ llms.txt 格式正确
+  ✅ llms-en.txt 格式正确
+
+  48/48 语言版本文件存在
+
+✅ llms.txt 全部检查通过
+
+▶ check-seo-output.mjs --project=site --out-dir=out
+
+🔍 SEO 输出检查: /root/projects/trade/web/apps/site/out
+
+📄 扫描 HTML 页面...
+
+🗺️  检查 Sitemap...
+
+==================================================
+📊 结果: 6529 通过, 0 失败
+
+✅ check-seo-output.mjs 完成
+
+▶ clean-rsc.mjs --project=site out
 🧹 Cleaning RSC .txt payload files from out/...
-✅ Deleted 12829 RSC payload files (807.0 MB freed)
+node:fs:1590
+  const result = binding.readdir(
+                         ^
+
+Error: ENOENT: no such file or directory, scandir '--project=site'
+    at readdirSync (node:fs:1590:26)
+    at cleanDir (file:///root/projects/trade/web/packages/scripts/clean-rsc.mjs:22:19)
+    at file:///root/projects/trade/web/packages/scripts/clean-rsc.mjs:39:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:681:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'scandir',
+  path: '--project=site'
+}
+
+Node.js v22.23.1
+
+▶ tsc --noEmit
 
 ═══════════════════════════════════════════════
-✅ 全部检查通过
+❌ 共 1 项检查失败
 ═══════════════════════════════════════════════
 

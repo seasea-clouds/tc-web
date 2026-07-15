@@ -1864,7 +1864,7 @@
     "labelMandatory_dateManufacture": "წარმოების თარიღი და საუკეთესო ადრე — DD/MM/YYYY ფორმატი (4.1.8)",
     "labelMandatory_productName": "პროდუქტის სახელი — ზუსტად უნდა ასახავდეს პროდუქტის ნამდვილ ბუნებას (GB 7718 4.1.2)",
     "labelNutr_carb": "ნახშირწყლები",
-    "labelNutr_fat": "მსუქანი",
+    "labelNutr_fat": "ცხიმი",
     "labelNutr_protein": "პროტეინი",
     "labelNutr_sodium": "ნატრიუმი",
     "labelPhase_design": "ჩინური ეტიკეტის დიზაინი",

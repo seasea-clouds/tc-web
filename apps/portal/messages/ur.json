@@ -1864,7 +1864,7 @@
     "labelMandatory_dateManufacture": "تیاری کی تاریخ اور اس سے پہلے بہترین — DD/MM/YYYY فارمیٹ (4.1.8)",
     "labelMandatory_productName": "پروڈکٹ کا نام — پروڈکٹ کی اصل نوعیت کو درست طریقے سے ظاہر کرنا چاہیے (GB 7718 4.1.2)",
     "labelNutr_carb": "کاربوہائیڈریٹ",
-    "labelNutr_fat": "موٹا",
+    "labelNutr_fat": "چکنائی",
     "labelNutr_protein": "پروٹین",
     "labelNutr_sodium": "سوڈیم",
     "labelPhase_design": "چینی لیبل ڈیزائن",

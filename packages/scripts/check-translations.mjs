@@ -1505,6 +1505,81 @@ function deepMergeShared() {
 }
 
 // ============================================================
+// 语义翻译质量检查
+// 检查已知的翻译歧义/错误（机械规则无法捕捉的语义错误）
+// 1. labelNutr_fat - 检查是否误译为"肥胖"而非"脂肪"
+// 2. labelEstCost - 检查 "Est." 是否被误译为时区
+// 3. labelDocument - 检查翻译是否为动词形式
+// 4. labelNutr_carb - 检查是否误译为"糖类"而非"碳水化合物"
+// 5. tmRiskReason_registered - 检查是否误译为"医院挂号"
+// ============================================================
+
+function checkSemanticQuality(verbose = true) {
+  const PORTAL_MESSAGES_DIR = path.join(MONOREPO_ROOT, '..', 'apps', 'portal', 'messages');
+
+  const CHECKS = [
+    { ns: 'Check', key: 'labelNutr_fat',
+      badPatterns: [/^胖的$/, /^سمين$/, /^موٹا$|^موٹو$|^موتا$/, /^Gordo$/i, /^Lihava$/i, /^मोटा$|^मोटो$/, /^Gemuk$/i, /^მსუქანი$/, /^อ้วน$/, /^Mập$/i, /^Толстый$/i, /^මහత$/],
+      desc: 'labelNutr_fat 被误译为"肥胖/obese"含义而非"脂肪"（食品标签中为营养素）' },
+    { ns: 'ReportSection', key: 'labelEstCost',
+      badPatterns: [/東部基準時|[Ee]astern [Ss]tandard|восточное время|Husa\.|HNE\./],
+      desc: 'labelEstCost 中 "Est." 被误译为时区/地点缩写而非 "Estimated"' },
+    { ns: 'ReportSection', key: 'labelDocument',
+      badPatterns: [/^Dokumentieren$/i, /^Dokumentera$/i],
+      desc: 'labelDocument 使用了动词形式而非名词' },
+    { ns: 'Check', key: 'labelNutr_carb',
+      badPatterns: [/^糖类$|^糖類$/],
+      desc: 'labelNutr_carb 被误译为"糖类/sugars"而非"碳水化合物/carbohydrate"' },
+    { ns: 'Check', key: 'tmRiskReason_registered',
+      badPatterns: [/^挂号的/],
+      desc: 'tmRiskReason_registered 使用了"医院挂号"含义而非"已注册/已备案"' },
+  ];
+
+  let totalIssues = 0;
+  const details = [];
+
+  for (const file of fs.readdirSync(PORTAL_MESSAGES_DIR)) {
+    if (!file.endsWith('.json') || file === 'en.json' || file.startsWith('_')) continue;
+    const lang = file.slice(0, -5);
+    const data = JSON.parse(fs.readFileSync(path.join(PORTAL_MESSAGES_DIR, file), 'utf-8'));
+
+    for (const check of CHECKS) {
+      const value = data[check.ns]?.[check.key];
+      if (typeof value !== 'string') continue;
+
+      for (const pattern of check.badPatterns) {
+        if (pattern.test(value)) {
+          totalIssues++;
+          if (totalIssues <= 50) {
+            const preview = value.length > 60 ? value.substring(0, 57) + '...' : value;
+            details.push({ lang, ns: check.ns, key: check.key, value: preview, desc: check.desc });
+          }
+          break;
+        }
+      }
+    }
+  }
+
+  if (verbose) {
+    console.log(`\n🧪 语义翻译质量检查 (${CHECKS.length} 个检查项):`);
+    if (totalIssues === 0) {
+      console.log('  ✅ 全部通过 — 无已知语义翻译错误');
+    } else {
+      console.log(`  ⚠️  发现 ${totalIssues} 处语义翻译错误:`);
+      for (const d of details.slice(0, 30)) {
+        console.log(`    [${d.lang}] ${d.ns}.${d.key} = "${d.value}"`);
+        console.log(`      → ${d.desc}`);
+      }
+      if (details.length > 30) {
+        console.log(`    ... 还有 ${totalIssues - 30} 处`);
+      }
+    }
+  }
+
+  return totalIssues;
+}
+
+// ============================================================
 // Admin 后台消息完整性检查
 // 检查 admin messages/zh.json 和 en.json：
 //   1. 文件完整性（解析、键名泄漏）
@@ -1704,7 +1779,7 @@ const skipConsistency = args.includes('--skip-locale-check');
 const isAdminProject = getDetectedProject() === 'admin';
 
 let localeCheck, result, blogIssues, industryMetaIssues, portalIssues;
-let sharedUiIssues = 0, breadcrumbResult = { total: 0, missing: [] }, dashIssues = 0;
+let sharedUiIssues = 0, breadcrumbResult = { total: 0, missing: [] }, dashIssues = 0, semanticIssues = 0;
 let adminMsgResult = { total: 0, missingKeys: [], dashIssues: 0 };
 let secretIssues = 0;
 
@@ -1738,9 +1813,10 @@ if (isAdminProject) {
   dashIssues = checkDashConsistency(!short);
   adminMsgResult = (targetLang || args.includes('--skip-admin-check')) ? { total: 0, missingKeys: [], dashIssues: 0 } : checkAdminMessages(!short);
   secretIssues = (targetLang || args.includes('--skip-secret-check')) ? 0 : checkHardcodedSecrets(!short);
+  semanticIssues = checkSemanticQuality(!short);
 }
 
-const totalIssues = (result?.total_issues ?? 0) + blogIssues + (localeCheck?.total ?? 0) + industryMetaIssues + portalIssues + sharedUiIssues + breadcrumbResult.total + dashIssues + adminMsgResult.total + secretIssues;
+const totalIssues = (result?.total_issues ?? 0) + blogIssues + (localeCheck?.total ?? 0) + industryMetaIssues + portalIssues + sharedUiIssues + breadcrumbResult.total + dashIssues + adminMsgResult.total + secretIssues + semanticIssues;
 
 if (totalIssues === 0) {
   console.log('\n✅ 全量核验通过！48 种语言无质量问题。');
@@ -1763,6 +1839,9 @@ if (totalIssues === 0) {
   }
   if (sharedUiIssues > 0) {
     console.log(`   - 共享 UI 消息: ${sharedUiIssues} 个问题`);
+  }
+  if (semanticIssues > 0) {
+    console.log(`   - 语义翻译质量: ${semanticIssues} 个语义错误（误译/意译不当）`);
   }
   if (breadcrumbResult.total > 0) {
     console.log(`   - 面包屑 key: ${breadcrumbResult.total} 处缺失`);

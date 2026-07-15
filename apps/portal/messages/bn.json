@@ -1864,7 +1864,7 @@
     "labelMandatory_dateManufacture": "উত্পাদনের তারিখ এবং এর আগে সেরা — DD/MM/YYYY ফর্ম্যাট (4.1.8)",
     "labelMandatory_productName": "পণ্যের নাম — অবশ্যই পণ্যের প্রকৃত প্রকৃতিকে সঠিকভাবে প্রতিফলিত করতে হবে (GB 7718 4.1.2)",
     "labelNutr_carb": "কার্বোহাইড্রেট",
-    "labelNutr_fat": "মোটা",
+    "labelNutr_fat": "চর্বি",
     "labelNutr_protein": "প্রোটিন",
     "labelNutr_sodium": "সোডিয়াম",
     "labelPhase_design": "চাইনিজ লেবেল ডিজাইন",

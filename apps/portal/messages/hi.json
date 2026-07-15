@@ -1864,7 +1864,7 @@
     "labelMandatory_dateManufacture": "निर्माण की तिथि और सर्वोत्तम बिफोर — DD/MM/YYYY प्रारूप (4.1.8)",
     "labelMandatory_productName": "उत्पाद का नाम — उत्पाद की वास्तविक प्रकृति को सटीक रूप से प्रतिबिंबित करना चाहिए (जीबी 7718 4.1.2)",
     "labelNutr_carb": "कार्बोहाइड्रेट",
-    "labelNutr_fat": "मोटा",
+    "labelNutr_fat": "वसा",
     "labelNutr_protein": "प्रोटीन",
     "labelNutr_sodium": "सोडियम",
     "labelPhase_design": "चीनी लेबल डिज़ाइन",

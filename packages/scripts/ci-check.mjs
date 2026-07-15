@@ -189,6 +189,7 @@ const CHECK_LIST = [
   { script: 'check-i18n-keys.mjs' },
   { script: 'check-i18n-coverage.mjs' },
   { script: 'check-report-rules.mjs' },
+  { script: 'check-report-dates.mjs' },
   { script: 'check-t-keys-all.mjs' },
   { script: 'check-colon-all.mjs' },
 

@@ -21,13 +21,21 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, '../..');
 
+function getDetectedProject() {
+  const idx = process.argv.findIndex(a => a.startsWith('--project='));
+  if (idx !== -1) return process.argv[idx].split('=')[1];
+  const cwd = process.cwd();
+  const m = cwd.match(/[/]apps[/]([^/]+)/);
+  return m ? m[1] : 'site';
+}
+const detectedProject = getDetectedProject();
+
 const DIRS_TO_CHECK = [
-  'apps/site/src',
-  'apps/portal/src',
-  'apps/blog/src',
+  `apps/${detectedProject}/src`,
   'packages/ui/src',
 ];
 
@@ -186,6 +194,15 @@ const customDir = args.find(a => !a.startsWith('--'));
 const dirs = customDir
   ? [customDir]
   : DIRS_TO_CHECK.map(d => path.join(repoRoot, d));
+
+// admin 使用平面路由（无 [locale]），href 不需要 locale 前缀
+if (detectedProject === 'admin') {
+  console.log('\n═══════════════════════════════════════════════');
+  console.log('  路由 locale 前缀检测 (CI-4) — admin');
+  console.log('═══════════════════════════════════════════════\n');
+  console.log('✅ admin 使用平面路由，跳过 locale 前缀检测\n');
+  process.exit(0);
+}
 
 let totalIssues = 0;
 const allIssues = [];

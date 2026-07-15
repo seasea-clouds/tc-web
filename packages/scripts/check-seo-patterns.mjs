@@ -21,11 +21,27 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, '../..');
 
-const APPS = [
-  { name: 'site', dir: 'apps/site/src/app/(site)/[locale]' },
-  { name: 'blog', dir: 'apps/blog/src/app/[locale]' },
-  { name: 'portal', dir: 'apps/portal/src/app/[locale]' },
-];
+function getDetectedProject() {
+  const idx = process.argv.findIndex(a => a.startsWith('--project='));
+  if (idx !== -1) return process.argv[idx].split('=')[1];
+  const cwd = process.cwd();
+  const m = cwd.match(/[/]apps[/]([^/]+)/);
+  return m ? m[1] : 'site';
+}
+const detectedProject = getDetectedProject();
+
+const APP_DIR_MAP = {
+  site: 'apps/site/src/app/(site)/[locale]',
+  blog: 'apps/blog/src/app/[locale]',
+  portal: 'apps/portal/src/app/[locale]',
+};
+
+const appDir = APP_DIR_MAP[detectedProject];
+if (!appDir || !fs.existsSync(path.join(repoRoot, appDir))) {
+  console.log(`  ∎ check-seo-patterns.mjs → ∅ 无 [locale] 路由项目 (${detectedProject})`);
+  process.exit(0);
+}
+const APPS = [{ name: detectedProject, dir: appDir }];
 
 // Page paths that are intentionally exempt from generateMetadata
 const METADATA_EXEMPT = [

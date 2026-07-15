@@ -24,7 +24,7 @@ export default function Channels({ result }: { result: any }) {
             <p className="text-sm text-gray-600 mb-2">{ch.description}</p>
             <div className="grid grid-cols-2 gap-2 text-xs">
               <div><p className="text-green-600 font-medium">{t("labelAdvantages")}</p><ul className="list-disc list-inside text-gray-500">{ch.advantages?.map((a: string, j: number) => <li key={j}>{a}</li>)}</ul></div>
-              <div><p className="text-red-500 font-medium">{t("labelDisadvantages")}</p><ul className="list-disc list-inside text-gray-500">{ch.disadvantages?.map((d: string, j: number) => <li key={j}>{d}</li>)}</ul></div>
+              <div><p className="text-red-500 font-medium">{t("labelDisadvantages")}</p><ul className="list-disc list-inside text-gray-500">{ch.disadvantages?.map((d: string, j: number) => <li key={j}>{localizeTimeline(t, d)}</li>)}</ul></div>
             </div>
             <div className="mt-2 flex gap-4 text-xs text-gray-500">
               <span>{'⏱️'} {localizeTimeline(t, ch.timeline)}</span>

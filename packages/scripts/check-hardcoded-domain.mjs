@@ -15,13 +15,21 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, '../..');
 
+function getDetectedProject() {
+  const idx = process.argv.findIndex(a => a.startsWith('--project='));
+  if (idx !== -1) return process.argv[idx].split('=')[1];
+  const cwd = process.cwd();
+  const m = cwd.match(/[/]apps[/]([^/]+)/);
+  return m ? m[1] : 'site';
+}
+const detectedProject = getDetectedProject();
+
 const DEFAULT_DIRS = [
-  'apps/site/src',
-  'apps/portal/src',
-  'apps/blog/src',
+  `apps/${detectedProject}/src`,
   'packages/ui/src',
 ];
 

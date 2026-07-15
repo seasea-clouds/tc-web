@@ -2,6 +2,9 @@
   "name": "trade-web",
   "version": "6.1.0",
   "private": true,
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "workspaces": [
     "apps/*",
     "packages/*"
@@ -16,7 +19,7 @@
     "build:admin": "turbo build --filter=@trade/admin"
   },
   "devDependencies": {
-    "turbo": "^2"
+    "turbo": "^2.10.5"
   },
   "packageManager": "npm@10.9.7",
   "dependencies": {

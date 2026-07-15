@@ -1,0 +1,27 @@
+#!/bin/sh
+# pre-push hook: 在 git push 前运行 CI 检查
+# 启用: git config core.hooksPath .githooks
+
+echo ""
+echo "═══════════════════════════════════════════════"
+echo "  ⏳ Pre-push: 正在运行 CI 检查..."
+echo "═══════════════════════════════════════════════"
+echo ""
+
+cd "$(git rev-parse --show-toplevel)" || exit 1
+
+node packages/scripts/ci-check.mjs --all --sync --ci
+EXIT_CODE=$?
+
+if [ $EXIT_CODE -ne 0 ]; then
+  echo ""
+  echo "═══════════════════════════════════════════════"
+  echo "  ❌ CI 检查未通过，push 已被阻止"
+  echo "  修复后重新 git push"
+  echo "═══════════════════════════════════════════════"
+  exit 1
+fi
+
+echo ""
+echo "✅ CI 检查通过，push 将继续"
+echo ""

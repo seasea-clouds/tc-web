@@ -17,7 +17,16 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, '../..');
 
-const DIRS = ['apps/site/src', 'apps/blog/src', 'apps/portal/src', 'packages/ui/src'];
+function getDetectedProject() {
+  const idx = process.argv.findIndex(a => a.startsWith('--project='));
+  if (idx !== -1) return process.argv[idx].split('=')[1];
+  const cwd = process.cwd();
+  const m = cwd.match(/[/]apps[/]([^/]+)/);
+  return m ? m[1] : 'site';
+}
+const detectedProject = getDetectedProject();
+
+const DIRS = [`apps/${detectedProject}/src`, 'packages/ui/src'];
 
 // Allow specific known-good locations for console
 const ALLOWED_FILES = [

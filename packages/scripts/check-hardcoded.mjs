@@ -29,13 +29,24 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, '../..');
 
+function getDetectedProject() {
+  const idx = process.argv.findIndex(a => a.startsWith('--project='));
+  if (idx !== -1) return process.argv[idx].split('=')[1];
+  const cwd = process.cwd();
+  const m = cwd.match(/[/]apps[/]([^/]+)/);
+  return m ? m[1] : 'site';
+}
+const detectedProject = getDetectedProject();
+
 const DIRS_TO_CHECK = [
-  'apps/site/src',
-  'apps/portal/src',
-  'apps/portal/modules',
-  'apps/blog/src',
+  `apps/${detectedProject}/src`,
   'packages/ui/src',
 ];
+// 项目内数据层目录（如果有）
+const projectModules = `apps/${detectedProject}/modules`;
+if (fs.existsSync(path.join(repoRoot, projectModules))) {
+  DIRS_TO_CHECK.push(projectModules);
+}
 
 // ─── Patterns ──────────────────────────────────────────────────────────
 
@@ -726,6 +737,11 @@ const LEGIT_ENGLISH = new Set([
   'Health / Dietary Supplements (HS 21.06)',
   // Trademark category labels (data constants)
   'Beverages',
+  // ─── Admin-specific: import names in .tsx without i18n ──────────
+  'BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer',
+  'PieChart, Pie, Cell, LineChart, Line, Legend',
+  'LayoutDashboard, Users, Repeat, FileText, ClipboardList, CreditCard, LogOut, Menu, X, ChevronLeft',
+  'SinoTrade Compliance Admin',
 ]);
 
 // ─── Check A: Exported data-object display labels ──────────────────────

@@ -22,6 +22,7 @@ const ALL_PROJECTS = [
   'apps/site/messages',
   'apps/portal/messages',
   'apps/blog/messages',
+  'apps/admin/messages',
   'packages/ui/messages',  // Shared UI messages (Footer, Search)
 ];
 

@@ -20,8 +20,17 @@ import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const MONOREPO_ROOT = path.resolve(__dirname, '..');
-const SITE_MESSAGES_DIR = path.join(MONOREPO_ROOT, '..', 'apps', 'site', 'messages');
-const PORTAL_MESSAGES_DIR = path.join(MONOREPO_ROOT, '..', 'apps', 'portal', 'messages');
+
+function getDetectedProject() {
+  const idx = process.argv.findIndex(a => a.startsWith('--project='));
+  if (idx !== -1) return process.argv[idx].split('=')[1];
+  const cwd = process.cwd();
+  const m = cwd.match(/[/]apps[/]([^/]+)/);
+  return m ? m[1] : 'site';
+}
+const detectedProject = getDetectedProject();
+
+const PROJECT_MESSAGES_DIR = path.join(MONOREPO_ROOT, '..', 'apps', detectedProject, 'messages');
 const UI_MESSAGES_DIR = path.join(MONOREPO_ROOT, 'ui', 'messages');
 
 // 48 种语言（en 为源语言，不参与检查）
@@ -56,9 +65,7 @@ function flattenKeys(obj, prefix = '') {
 // 加载各站点消息
 // ============================================================
 function loadProjectMessages(projectName) {
-  const dir = projectName === 'site' ? SITE_MESSAGES_DIR
-    : projectName === 'portal' ? PORTAL_MESSAGES_DIR
-    : UI_MESSAGES_DIR;
+  const dir = projectName === 'ui' ? UI_MESSAGES_DIR : PROJECT_MESSAGES_DIR;
   if (!fs.existsSync(dir)) return { en: {}, locales: [] };
   const enRaw = loadJSON(path.join(dir, 'en.json'));
   if (!enRaw) return { en: {}, locales: [] };
@@ -86,9 +93,7 @@ function checkKeyCompleteness(projectName, projectData) {
 
   for (const lang of locales) {
     const langPath = path.join(
-      projectName === 'site' ? SITE_MESSAGES_DIR :
-      projectName === 'portal' ? PORTAL_MESSAGES_DIR :
-      UI_MESSAGES_DIR,
+      projectName === 'ui' ? UI_MESSAGES_DIR : PROJECT_MESSAGES_DIR,
       `${lang}.json`
     );
     const langFlat = loadJSON(langPath);
@@ -391,9 +396,7 @@ function checkHardcodedFallbacks(projectName, projectData) {
 
   for (const lang of locales) {
     const langPath = path.join(
-      projectName === 'site' ? SITE_MESSAGES_DIR :
-      projectName === 'portal' ? PORTAL_MESSAGES_DIR :
-      UI_MESSAGES_DIR,
+      projectName === 'ui' ? UI_MESSAGES_DIR : PROJECT_MESSAGES_DIR,
       `${lang}.json`
     );
     const langFlat = loadJSON(langPath);
@@ -462,23 +465,19 @@ const args = process.argv.slice(2);
 const isCi = args.includes('--ci');
 const missingOnly = args.includes('--missing-only');
 const generateInput = args.includes('--generate-input');
-const skipPortal = args.includes('--skip-portal');
 
-// 加载各站点
-const siteData = loadProjectMessages('site');
-const portalData = skipPortal ? null : loadProjectMessages('portal');
+// 加载当前检测项目 + UI 包的消息
+const projectData = loadProjectMessages(detectedProject);
 const uiData = loadProjectMessages('ui');
 
 // 检查 key 完整性
-const siteResult = checkKeyCompleteness('site', siteData);
-const portalResult = portalData ? checkKeyCompleteness('portal', portalData) : { total: 0, missing: [], extra: [] };
+const projectResult = checkKeyCompleteness(detectedProject, projectData);
 const uiResult = checkKeyCompleteness('ui', uiData);
 
-const missingByProject = { site: siteResult, portal: portalResult, ui: uiResult };
+const missingByProject = { [detectedProject]: projectResult, ui: uiResult };
 
 // 检查硬编码 fallback
-const siteHardcoded = checkHardcodedFallbacks('site', siteData);
-const portalHardcoded = portalData ? checkHardcodedFallbacks('portal', portalData) : { total: 0, missing: [], extra: [], hardcoded: [] };
+const projectHardcoded = checkHardcodedFallbacks(detectedProject, projectData);
 const uiHardcoded = checkHardcodedFallbacks('ui', uiData);
 
 // 检查 Navbar.home vs MobileTab.home 一致性
@@ -493,8 +492,7 @@ if (generateInput) {
 
 if (missingOnly) {
   const result = {
-    site: { missing: siteResult.missing.length, keys: siteResult.missing },
-    portal: { missing: portalResult.missing.length, keys: portalResult.missing },
+    [detectedProject]: { missing: projectResult.missing.length, keys: projectResult.missing },
     ui: { missing: uiResult.missing.length, keys: uiResult.missing },
   };
   console.log(JSON.stringify(result, null, 2));
@@ -505,8 +503,7 @@ if (missingOnly) {
 // 报告
 // ============================================================
 const projects = [
-  { name: 'site', missing: siteResult.missing, extra: siteResult.extra, hardcoded: siteHardcoded },
-  { name: 'portal', missing: portalResult.missing, extra: portalResult.extra, hardcoded: portalHardcoded },
+  { name: detectedProject, missing: projectResult.missing, extra: projectResult.extra, hardcoded: projectHardcoded },
   { name: 'ui', missing: uiResult.missing, extra: uiResult.extra, hardcoded: uiHardcoded },
 ];
 

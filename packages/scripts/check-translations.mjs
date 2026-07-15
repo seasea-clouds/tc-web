@@ -651,6 +651,73 @@ SHARED_WORDS_BY_LANG['de'].add('First-to-File');
   if (!SHARED_WORDS_BY_LANG[l]) SHARED_WORDS_BY_LANG[l] = new Set();
   SHARED_WORDS_BY_LANG[l].add('Opposition');
 });
+// Standards and prominent are common German loanwords
+SHARED_WORDS_BY_LANG['de'].add('Standards');
+SHARED_WORDS_BY_LANG['de'].add('prominent');
+SHARED_WORDS_BY_LANG['de'].add('deutlich');
+// Send is Danish imperative (same spelling as English)
+SHARED_WORDS_BY_LANG['da'].add('Send');
+// French cognates (identical in English and French)
+['fr'].forEach(l => {
+  if (!SHARED_WORDS_BY_LANG[l]) SHARED_WORDS_BY_LANG[l] = new Set();
+  ['Restrictions', 'sur', 'liste', 'positive', 'position', 'information', 'non', 'conforme',
+   'obligations', 'post', 'approbation', 'importante', 'nutritionnelle', 'examen',
+   'formulation', 'Chine', 'CBEC'].forEach(w => SHARED_WORDS_BY_LANG[l].add(w));
+});
+// German cognates
+SHARED_WORDS_BY_LANG['de'].add('sichtbar');
+SHARED_WORDS_BY_LANG['de'].add('Position');
+SHARED_WORDS_BY_LANG['de'].add('sein');
+SHARED_WORDS_BY_LANG['de'].add('oder');
+SHARED_WORDS_BY_LANG['de'].add('muss');
+// Hungarian cognates
+if (!SHARED_WORDS_BY_LANG['hu']) SHARED_WORDS_BY_LANG['hu'] = new Set();
+SHARED_WORDS_BY_LANG['hu'].add('lista');
+SHARED_WORDS_BY_LANG['hu'].add('Kína');
+// Spanish cognates
+SHARED_WORDS_BY_LANG['es'].add('situ');
+// Country names and proper nouns (identical in many languages)
+['de','hu','es','fr','it','no','nl','fi','id','pt','sv','da'].forEach(l => {
+  if (!SHARED_WORDS_BY_LANG[l]) SHARED_WORDS_BY_LANG[l] = new Set();
+  ['China', 'Sri', 'Lanka', 'CBEC'].forEach(w => SHARED_WORDS_BY_LANG[l].add(w));
+});
+SHARED_WORDS_BY_LANG['de'].add('Verhandlung');
+SHARED_WORDS_BY_LANG['hu'].add('listától');
+SHARED_WORDS_BY_LANG['hu'].add('list');
+// Indonesian shared words (identical spelling)
+['id'].forEach(l => {
+  if (!SHARED_WORDS_BY_LANG[l]) SHARED_WORDS_BY_LANG[l] = new Set();
+  ['format', 'diagram', 'Mandarin'].forEach(w => SHARED_WORDS_BY_LANG[l].add(w));
+});
+// Italian shared words (identical spelling)
+['it'].forEach(l => {
+  if (!SHARED_WORDS_BY_LANG[l]) SHARED_WORDS_BY_LANG[l] = new Set();
+  ['pre', 'database', 'INCI', 'ICSC', 'Russia', 'Volume'].forEach(w => SHARED_WORDS_BY_LANG[l].add(w));
+});
+// Norwegian shared words
+['no'].forEach(l => {
+  if (!SHARED_WORDS_BY_LANG[l]) SHARED_WORDS_BY_LANG[l] = new Set();
+  ['pre', 'testing', 'Carbon', 'Footprint', 'Overhead', 'etikett', 'samsvar'].forEach(w => SHARED_WORDS_BY_LANG[l].add(w));
+});
+// Dutch shared words
+['nl'].forEach(l => {
+  if (!SHARED_WORDS_BY_LANG[l]) SHARED_WORDS_BY_LANG[l] = new Set();
+  ['Controleer', 'registratie', 'certificering', 'direct', 'shipping', 'Bepaal', 'bonded', 'versus'].forEach(w => SHARED_WORDS_BY_LANG[l].add(w));
+});
+// Romanian shared words
+['ro'].forEach(l => {
+  if (!SHARED_WORDS_BY_LANG[l]) SHARED_WORDS_BY_LANG[l] = new Set();
+  ['transport', 'testare', 'conformitate', 'direct', 'format', 'consumer'].forEach(w => SHARED_WORDS_BY_LANG[l].add(w));
+});
+// Portuguese shared words
+SHARED_WORDS_BY_LANG['pt'].add('Utilize');
+SHARED_WORDS_BY_LANG['pt'].add('drivers');
+// Spanish shared words
+SHARED_WORDS_BY_LANG['es'].add('auditor');
+SHARED_WORDS_BY_LANG['es'].add('gestión');
+SHARED_WORDS_BY_LANG['es'].add('calidad');
+SHARED_WORDS_BY_LANG['es'].add('sistema');
+SHARED_WORDS_BY_LANG['es'].add('acreditado');
 
 // Case-insensitive version of SHARED_WORDS_BY_LANG for lowercased lookups
 const SHARED_WORDS_BY_LANG_LC = {};

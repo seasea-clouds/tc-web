@@ -7,56 +7,56 @@
 > @trade/blog@6.1.0 build
 > node ../../packages/scripts/build-search-index.mjs && rm -rf .next/cache && next build && node ../../packages/scripts/ci-check.mjs --out-dir=out
 
-Apps discovered: blog, portal, site
+Apps discovered: admin, blog, portal, site
 Generating search index for 48 locales...
-  af: 2299 items (6S + 7B + 39F + 2247C)
-  ar: 2299 items (6S + 7B + 39F + 2247C)
-  az: 2299 items (6S + 7B + 39F + 2247C)
-  be: 2299 items (6S + 7B + 39F + 2247C)
-  bg: 2299 items (6S + 7B + 39F + 2247C)
-  bn: 2299 items (6S + 7B + 39F + 2247C)
-  ca: 2299 items (6S + 7B + 39F + 2247C)
-  cs: 2299 items (6S + 7B + 39F + 2247C)
-  da: 2299 items (6S + 7B + 39F + 2247C)
-  de: 2299 items (6S + 7B + 39F + 2247C)
-  el: 2299 items (6S + 7B + 39F + 2247C)
-  en: 2299 items (6S + 7B + 39F + 2247C)
-  es: 2299 items (6S + 7B + 39F + 2247C)
-  fa: 2299 items (6S + 7B + 39F + 2247C)
-  fi: 2299 items (6S + 7B + 39F + 2247C)
-  fr: 2299 items (6S + 7B + 39F + 2247C)
-  he: 2299 items (6S + 7B + 39F + 2247C)
-  hi: 2299 items (6S + 7B + 39F + 2247C)
-  hr: 2299 items (6S + 7B + 39F + 2247C)
-  hu: 2299 items (6S + 7B + 39F + 2247C)
-  hy: 2299 items (6S + 7B + 39F + 2247C)
-  id: 2299 items (6S + 7B + 39F + 2247C)
-  it: 2299 items (6S + 7B + 39F + 2247C)
-  ja: 2299 items (6S + 7B + 39F + 2247C)
-  ka: 2299 items (6S + 7B + 39F + 2247C)
-  ko: 2299 items (6S + 7B + 39F + 2247C)
-  ms: 2299 items (6S + 7B + 39F + 2247C)
-  ne: 2299 items (6S + 7B + 39F + 2247C)
-  nl: 2299 items (6S + 7B + 39F + 2247C)
-  no: 2299 items (6S + 7B + 39F + 2247C)
-  pl: 2299 items (6S + 7B + 39F + 2247C)
-  pt: 2299 items (6S + 7B + 39F + 2247C)
-  ro: 2299 items (6S + 7B + 39F + 2247C)
-  ru: 2299 items (6S + 7B + 39F + 2247C)
-  si: 2299 items (6S + 7B + 39F + 2247C)
-  sk: 2299 items (6S + 7B + 39F + 2247C)
-  sl: 2299 items (6S + 7B + 39F + 2247C)
-  sq: 2299 items (6S + 7B + 39F + 2247C)
-  sr: 2299 items (6S + 7B + 39F + 2247C)
-  sv: 2299 items (6S + 7B + 39F + 2247C)
-  sw: 2299 items (6S + 7B + 39F + 2247C)
-  ta: 2299 items (6S + 7B + 39F + 2247C)
-  th: 2299 items (6S + 7B + 39F + 2247C)
-  tr: 2299 items (6S + 7B + 39F + 2247C)
-  uk: 2299 items (6S + 7B + 39F + 2247C)
-  ur: 2299 items (6S + 7B + 39F + 2247C)
-  vi: 2299 items (6S + 7B + 39F + 2247C)
-  zh: 2299 items (6S + 7B + 39F + 2247C)
+  af: 2320 items (6S + 7B + 39F + 2268C)
+  ar: 2320 items (6S + 7B + 39F + 2268C)
+  az: 2320 items (6S + 7B + 39F + 2268C)
+  be: 2320 items (6S + 7B + 39F + 2268C)
+  bg: 2320 items (6S + 7B + 39F + 2268C)
+  bn: 2320 items (6S + 7B + 39F + 2268C)
+  ca: 2320 items (6S + 7B + 39F + 2268C)
+  cs: 2320 items (6S + 7B + 39F + 2268C)
+  da: 2320 items (6S + 7B + 39F + 2268C)
+  de: 2320 items (6S + 7B + 39F + 2268C)
+  el: 2320 items (6S + 7B + 39F + 2268C)
+  en: 2320 items (6S + 7B + 39F + 2268C)
+  es: 2320 items (6S + 7B + 39F + 2268C)
+  fa: 2320 items (6S + 7B + 39F + 2268C)
+  fi: 2320 items (6S + 7B + 39F + 2268C)
+  fr: 2320 items (6S + 7B + 39F + 2268C)
+  he: 2320 items (6S + 7B + 39F + 2268C)
+  hi: 2320 items (6S + 7B + 39F + 2268C)
+  hr: 2320 items (6S + 7B + 39F + 2268C)
+  hu: 2320 items (6S + 7B + 39F + 2268C)
+  hy: 2320 items (6S + 7B + 39F + 2268C)
+  id: 2320 items (6S + 7B + 39F + 2268C)
+  it: 2320 items (6S + 7B + 39F + 2268C)
+  ja: 2320 items (6S + 7B + 39F + 2268C)
+  ka: 2320 items (6S + 7B + 39F + 2268C)
+  ko: 2320 items (6S + 7B + 39F + 2268C)
+  ms: 2320 items (6S + 7B + 39F + 2268C)
+  ne: 2320 items (6S + 7B + 39F + 2268C)
+  nl: 2320 items (6S + 7B + 39F + 2268C)
+  no: 2320 items (6S + 7B + 39F + 2268C)
+  pl: 2320 items (6S + 7B + 39F + 2268C)
+  pt: 2320 items (6S + 7B + 39F + 2268C)
+  ro: 2320 items (6S + 7B + 39F + 2268C)
+  ru: 2320 items (6S + 7B + 39F + 2268C)
+  si: 2320 items (6S + 7B + 39F + 2268C)
+  sk: 2320 items (6S + 7B + 39F + 2268C)
+  sl: 2320 items (6S + 7B + 39F + 2268C)
+  sq: 2320 items (6S + 7B + 39F + 2268C)
+  sr: 2320 items (6S + 7B + 39F + 2268C)
+  sv: 2320 items (6S + 7B + 39F + 2268C)
+  sw: 2320 items (6S + 7B + 39F + 2268C)
+  ta: 2320 items (6S + 7B + 39F + 2268C)
+  th: 2320 items (6S + 7B + 39F + 2268C)
+  tr: 2320 items (6S + 7B + 39F + 2268C)
+  uk: 2320 items (6S + 7B + 39F + 2268C)
+  ur: 2320 items (6S + 7B + 39F + 2268C)
+  vi: 2320 items (6S + 7B + 39F + 2268C)
+  zh: 2320 items (6S + 7B + 39F + 2268C)
 Done.
 Attention: Next.js now collects completely anonymous telemetry regarding usage.
 This information is used to shape Next.js' roadmap and prioritize features.
@@ -66,15 +66,15 @@ https://nextjs.org/telemetry
 ▲ Next.js 16.2.6 (Turbopack)
 
   Creating an optimized production build ...
-✓ Compiled successfully in 2.6s
+✓ Compiled successfully in 3.1s
   Running TypeScript ...
-  Finished TypeScript in 2.9s ...
+  Finished TypeScript in 3.0s ...
   Collecting page data using 6 workers ...
   Generating static pages using 6 workers (0/434) ...
   Generating static pages using 6 workers (108/434) 
   Generating static pages using 6 workers (216/434) 
   Generating static pages using 6 workers (325/434) 
-✓ Generating static pages using 6 workers (434/434) in 2.5s
+✓ Generating static pages using 6 workers (434/434) in 2.7s
   Finalizing page optimization ...
 
 Route (app)
@@ -101,67 +101,59 @@ Route (app)
 
 
 ═══════════════════════════════════════════════
-  CI 统一检查 — BLOG
-  out-dir: out  next-dir: (none)
+  CI 检查 — BLOG
+  out-dir: out  sync: 否
 ═══════════════════════════════════════════════
 
 
-▶ check-seo-patterns.mjs 
-
-📁 site/
+▶ check-seo-patterns.mjs --project=blog
 
 📁 blog/
 
-📁 portal/
-
 ==================================================
-📊 结果: 163 通过, 0 失败
+📊 结果: 14 通过, 0 失败
 
 ✅ check-seo-patterns.mjs 完成
 
-▶ check-hardcoded-domain.mjs 
+▶ check-hardcoded-domain.mjs --project=blog
 ✅ 未发现硬编码的 *.pages.dev 域名引用
 
-▶ check-hardcoded.mjs apps/blog/src
+▶ check-hardcoded.mjs --project=blog
 🔍 Scanning for hardcoded English text in JSX/TSX...
 
 ✅ No hardcoded English text found.
 
-▶ check-console.mjs 
-📁 扫描 200 个文件
+▶ check-console.mjs --project=blog
+📁 扫描 33 个文件
 ==================================================
-📊 结果: 210 通过, 0 失败
+📊 结果: 34 通过, 0 失败
 
 ✅ check-console.mjs 完成
 
-▶ check-rtl.mjs 
-
-📁 site/
+▶ check-rtl.mjs --project=blog
 
 📁 blog/
 
-📁 portal/
-
 ==================================================
-📊 结果: 9 通过, 0 失败
+📊 结果: 3 通过, 0 失败
 
 ✅ check-rtl.mjs 完成
 
-▶ check-map-key.mjs 
-📁 扫描 165 个 TSX 文件
+▶ check-map-key.mjs --project=blog
+📁 扫描 24 个 TSX 文件
 ==================================================
-📊 结果: 165 通过, 0 失败
+📊 结果: 24 通过, 0 失败
 
 ✅ check-map-key.mjs 完成
 
-▶ check-jsonld.mjs 
-📁 扫描 24 个含 JSON-LD 的文件
+▶ check-jsonld.mjs --project=blog
+📁 扫描 4 个含 JSON-LD 的文件
 ==================================================
-📊 结果: 81 通过, 0 失败
+📊 结果: 17 通过, 0 失败
 
 ✅ check-jsonld.mjs 完成
 
-▶ check-md-format.mjs 
+▶ check-md-format.mjs --project=blog
 
 ═══════════════════════════════════════════════
   Markdown 格式质量检查（精细化语言策略）
@@ -171,7 +163,7 @@ Route (app)
   扫描文件: 336
 
 
-▶ check-locale-prefix.mjs 
+▶ check-locale-prefix.mjs --project=blog
 
 ═══════════════════════════════════════════════
   路由 locale 前缀检测 (CI-4)
@@ -180,51 +172,24 @@ Route (app)
 ✅ 未发现缺少 locale 前缀的 href
 
 
-▶ check-hreflang.mjs --dir=out --skip-pattern=404,_not-found
-🔍 统一 hreflang 检查
-
-📦 模式: SSG 输出目录检查
-  📄 扫描 434 个 HTML 文件
-
-  跳过: 2 文件 (路径匹配 skip-pattern)
-
-  结果: 432 通过, 0 失败
-
-✅ hreflang 全部检查通过
-
-▶ check-seo-output.mjs --out-dir=out
-
-🔍 SEO 输出检查: /root/projects/trade/web/apps/blog/out
-
-📄 扫描 HTML 页面...
-
-🗺️  检查 Sitemap...
-
-==================================================
-📊 结果: 240 通过, 0 失败
-
-✅ check-seo-output.mjs 完成
-
-▶ check-translations.mjs --short --skip-industry-meta --skip-portal-check
+▶ check-translations.mjs --project=blog --short
 
 ✅ 全量核验通过！48 种语言无质量问题。
 
-▶ check-i18n-keys.mjs --ci --skip-portal
+▶ check-i18n-keys.mjs --project=blog
 🔑 i18n key 完整性检查
 
-📦 SITE (0 missing, 0 extra, 0 hardcoded):
+📦 BLOG (0 missing, 0 extra, 0 hardcoded):
   ✅ 全部通过
-
-📦 PORTAL (0 missing, 0 extra, undefined hardcoded):
 
 📦 UI (0 missing, 0 extra, 0 hardcoded):
   ✅ 全部通过
 
 ✅ 面包屑与移动导航 Navbar.home 翻译一致
-📊 总计: 0 缺失 + 0 多余 + NaN 硬编码英文 + 0 导航翻译不一致
+📊 总计: 0 缺失 + 0 多余 + 0 硬编码英文 + 0 导航翻译不一致
 ✅ 所有 i18n key 完整，无硬编码英文，导航翻译一致
 
-▶ check-i18n-coverage.mjs 
+▶ check-i18n-coverage.mjs --project=blog
 
 📊 UI 包
    en.json: 106 键
@@ -276,112 +241,6 @@ Route (app)
    ur  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
    vi  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
    zh  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   ─────────────────────────────────────────
-   平均: 100.0%
-
-📊 Site
-   en.json: 1242 键
-
-   af  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   ar  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   az  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   be  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   bg  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   bn  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   ca  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   cs  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   da  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   de  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   el  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   es  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   fa  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   fi  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   fr  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   he  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   hi  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   hr  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   hu  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   hy  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   id  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   it  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   ja  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   ka  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   ko  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   ms  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   ne  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   nl  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   no  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   pl  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   pt  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   ro  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   ru  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   si  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   sk  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   sl  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   sq  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   sr  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   sv  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   sw  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   ta  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   th  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   tr  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   uk  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   ur  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   vi  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   zh  ████████████████████ 100.0%  (1242/1242  缺失:0  多余:0)
-   ─────────────────────────────────────────
-   平均: 100.0%
-
-📊 Portal
-   en.json: 2940 键
-
-   af  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   ar  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   az  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   be  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   bg  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   bn  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   ca  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   cs  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   da  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   de  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   el  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   es  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   fa  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   fi  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   fr  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   he  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   hi  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   hr  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   hu  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   hy  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   id  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   it  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   ja  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   ka  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   ko  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   ms  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   ne  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   nl  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   no  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   pl  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   pt  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   ro  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   ru  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   si  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   sk  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   sl  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   sq  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   sr  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   sv  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   sw  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   ta  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   th  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   tr  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   uk  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   ur  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   vi  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
-   zh  ████████████████████ 100.0%  (2940/2940  缺失:0  多余:0)
    ─────────────────────────────────────────
    平均: 100.0%
 
@@ -440,17 +299,191 @@ Route (app)
 
 ═══════════════════════════════════════════════
   ✅ UI 包: 100.0%
-  ✅ Site: 100.0%
-  ✅ Portal: 100.0%
   ✅ Blog: 100.0%
 ═══════════════════════════════════════════════
 
 
-▶ clean-rsc.mjs out
-🧹 Cleaning RSC .txt payload files from out/...
-✅ Deleted 3751 RSC payload files (93.5 MB freed)
+▶ check-report-rules.mjs --project=blog
+────────────────────────────────────────────────────────────
+✅ check-report-rules: 未发现硬编码英文问题
+────────────────────────────────────────────────────────────
+
+▶ check-report-dates.mjs --project=blog
+⏭️  check-report-dates: blog 无模块 rules.ts，跳过
+
+▶ check-t-keys-all.mjs --project=blog
+
+🔑 t() 键存在性检查 — BLOG
+   en.json: apps/blog/messages/en.json
+   扫描目录: apps/blog/src, packages/ui/src
+
+【A】静态 t("key") — orphan 键检查...
+
+📊  44 unique static keys checked, 0 orphan(s) found
+
+【B】动态 t(`…`) 模板键检查...
+
+
+📊  5 template patterns checked, 0 issue(s) found
+
+✅ All keys verified — no issues found!
+
+
+▶ check-colon-all.mjs --project=blog
+═══ 翻译冒号一致性检查 — BLOG ═══
+
+扫描 48 个语言文件...
+
+─────────────────────────────
+✅ 所有语言冒号风格一致，无问题
+
+
+▶ check-override-keys.mjs --project=blog
 
 ═══════════════════════════════════════════════
-✅ 全部检查通过
+  跨 App 消息覆盖检测
+═══════════════════════════════════════════════
+
+─────────────────────────────────────────────
+总计: 0 个覆盖键
+  🔴 0  CRITICAL (与英文源相同)
+  🟡 0  WARNING (值不同)
+  ℹ️  0  INFO (重复)
+─────────────────────────────────────────────
+
+
+▶ check-hardcoded-templates.mjs --project=blog
+
+═══════════════════════════════════════════════
+  数据层英文模板检测
+═══════════════════════════════════════════════
+
+✅ 无硬编码英文模板
+
+
+▶ check-category-labels.mjs --project=blog
+
+═══════════════════════════════════════════════
+  品类翻译键完整性校验 (CI-2)
+═══════════════════════════════════════════════
+
+📦 GACC — 16 个品类
+  ✅ 全部 16 个品类翻译键完整
+
+📦 CCC — 6 个品类
+  ✅ 全部 6 个品类翻译键完整
+
+📦 NMPA — 6 个品类
+  ✅ 全部 6 个品类翻译键完整
+
+📦 LABEL — 10 个品类
+  ✅ 全部 10 个品类翻译键完整
+
+📦 CROSSBORDER — 8 个品类
+  ✅ 全部 8 个品类翻译键完整
+
+📦 TRADEMARK — 8 个品类
+  ✅ 全部 8 个品类翻译键完整
+
+─────────────────────────────────────────────
+✅ 全部 6 个模块的品类翻译键完整
+
+
+▶ check-t-keys.mjs --project=blog
+
+🔍 【A】 Static t("key") — orphaned keys...
+
+📊  2118 unique static keys checked, 0 orphan(s) found
+
+🔍 【B】 Dynamic t(`…`) template keys...
+
+  ✅ `catCb_${input["category"]}` — 8 keys verified
+  ✅ `catCb_${v}` — 8 keys verified
+  ✅ `catCcc_${input["category"]}` — 6 keys verified
+  ✅ `catCcc_${v}` — 6 keys verified
+  ✅ `catGacc_${key}` — 16 keys verified
+  ✅ `catLabel_${input["category"]}` — 10 keys verified
+  ✅ `catLabel_${v}` — 10 keys verified
+  ✅ `catNmpa_${input["category"]}` — 6 keys verified
+  ✅ `catNmpa_${v}` — 6 keys verified
+  ✅ `catTm_${input["category"]}` — 8 keys verified
+  ✅ `catTm_${v}` — 8 keys verified
+  ✅ `cccCat_${cat}_label` — 6 keys verified
+  ✅ `comp${prefix}China` — 10 keys verified
+  ✅ `comp${prefix}EU` — 10 keys verified
+  ✅ `comp${prefix}US` — 10 keys verified
+  ✅ `comp${prefix}` — 10 keys verified
+  ✅ `gaccCat_${input.category!}_label` — 16 keys verified
+  ✅ `gaccCat_${input.category}_label` — 16 keys verified
+  ✅ `gaccCat_${input.category}_riskReason` — 16 keys verified
+  ✅ `nmpaCat_${cat}_label` — 6 keys verified
+  ✅ `step${i}Desc` — 3 keys verified
+  ✅ `step${i}Title` — 3 keys verified
+
+📊  45 template patterns (22 expanded), 0 missing key(s) across 0 pattern(s)
+
+✅ All keys verified — static and dynamic — no issues found!
+
+
+▶ check-colon-consistency.mjs --project=blog
+═══ 翻译冒号一致性检查 ═══
+
+扫描 48 个语言文件...
+
+─────────────────────────────
+✅ 所有语言冒号风格一致，无问题
+
+
+▶ check-hreflang.mjs --project=blog --dir=out --skip-pattern=404,_not-found
+🔍 统一 hreflang 检查
+
+📦 模式: SSG 输出目录检查
+  📄 扫描 434 个 HTML 文件
+
+  跳过: 2 文件 (路径匹配 skip-pattern)
+
+  结果: 432 通过, 0 失败
+
+✅ hreflang 全部检查通过
+  ∎ check-llms.mjs → ∅ 无 llms 文件
+
+▶ check-seo-output.mjs --project=blog --out-dir=out
+
+🔍 SEO 输出检查: /root/projects/trade/web/apps/blog/out
+
+📄 扫描 HTML 页面...
+
+🗺️  检查 Sitemap...
+
+==================================================
+📊 结果: 240 通过, 0 失败
+
+✅ check-seo-output.mjs 完成
+
+▶ clean-rsc.mjs --project=blog out
+🧹 Cleaning RSC .txt payload files from out/...
+node:fs:1590
+  const result = binding.readdir(
+                         ^
+
+Error: ENOENT: no such file or directory, scandir '--project=blog'
+    at readdirSync (node:fs:1590:26)
+    at cleanDir (file:///root/projects/trade/web/packages/scripts/clean-rsc.mjs:22:19)
+    at file:///root/projects/trade/web/packages/scripts/clean-rsc.mjs:39:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:681:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'scandir',
+  path: '--project=blog'
+}
+
+Node.js v22.23.1
+
+▶ tsc --noEmit
+
+═══════════════════════════════════════════════
+❌ 共 1 项检查失败
 ═══════════════════════════════════════════════
 

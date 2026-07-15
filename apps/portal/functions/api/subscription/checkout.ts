@@ -57,7 +57,7 @@ export async function onRequest(context: {
       },
     };
 
-    const res = await fetch("https://test-api.creem.io/v1/checkouts", {
+    const res = await fetch("https://api.creem.io/v1/checkouts", {
       method: "POST",
       headers: {
         "x-api-key": context.env.CREEM_API_KEY,

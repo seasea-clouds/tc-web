@@ -6,9 +6,9 @@ export default function NiceClassification({ result }: { result: any }) {
   const nc = result.niceClasses
   if (!nc) return null
 
-  // Build comparison table: category → Nice class
+  // Build translation rows: category → Nice class
   const rows = Object.entries(nc).filter(([k]) => k !== 'default').map(([key, val]: any) => ({
-    category: key.replace(/_/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase()),
+    category: t(key),
     classes: val,
   }))
 

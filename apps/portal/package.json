@@ -13,25 +13,25 @@
     "postdeploy-check": "sleep 30 && node ../../packages/scripts/check-hreflang-portal.mjs --ci"
   },
   "dependencies": {
-    "@trade/ui": "*",
     "@react-pdf/renderer": "^4.5.1",
+    "@trade/ui": "^from ../../VERSION",
     "jose": "^6.2.3",
-    "lucide-react": "^1.16.0",
+    "lucide-react": "^1.24.0",
     "next": "16.2.6",
-    "next-intl": "^4.12.0",
+    "next-intl": "^4.13.2",
     "pdf-lib": "^1.17.1",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
+    "@tailwindcss/postcss": "^4.3.2",
+    "@types/node": "^20.19.43",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.5",
     "eslint-config-next": "16.2.6",
+    "gray-matter": "^4.0.3",
     "tailwindcss": "^4",
-    "typescript": "^5",
-    "gray-matter": "^4.0.3"
+    "typescript": "^5.9.3"
   }
 }

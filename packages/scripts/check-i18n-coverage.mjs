@@ -18,6 +18,15 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, '../..');
 
+function getDetectedProject() {
+  const idx = process.argv.findIndex(a => a.startsWith('--project='));
+  if (idx !== -1) return process.argv[idx].split('=')[1];
+  const cwd = process.cwd();
+  const m = cwd.match(/[/]apps[/]([^/]+)/);
+  return m ? m[1] : 'site';
+}
+const detectedProject = getDetectedProject();
+
 const isCi = process.argv.includes('--ci');
 const threshold = parseFloat(
   process.argv.find(a => a.startsWith('--threshold='))?.split('=')[1] || '99'
@@ -25,9 +34,7 @@ const threshold = parseFloat(
 
 const MSG_DIRS = [
   { name: 'UI 包', dir: path.join(repoRoot, 'packages/ui/messages') },
-  { name: 'Site', dir: path.join(repoRoot, 'apps/site/messages') },
-  { name: 'Portal', dir: path.join(repoRoot, 'apps/portal/messages') },
-  { name: 'Blog', dir: path.join(repoRoot, 'apps/blog/messages') },
+  { name: detectedProject.charAt(0).toUpperCase() + detectedProject.slice(1), dir: path.join(repoRoot, 'apps', detectedProject, 'messages') },
 ];
 
 // ─── 辅助函数 ──────────────────────────────────────────────────────────

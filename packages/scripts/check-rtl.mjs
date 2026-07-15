@@ -22,13 +22,28 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, '../..');
 
+function getDetectedProject() {
+  const idx = process.argv.findIndex(a => a.startsWith('--project='));
+  if (idx !== -1) return process.argv[idx].split('=')[1];
+  const cwd = process.cwd();
+  const m = cwd.match(/[/]apps[/]([^/]+)/);
+  return m ? m[1] : 'site';
+}
+const detectedProject = getDetectedProject();
+
 const RTL_LOCALES = ['ar', 'he', 'fa', 'ur'];
 
-const LAYOUTS_TO_CHECK = [
-  { name: 'site', file: 'apps/site/src/app/(site)/[locale]/layout.tsx' },
-  { name: 'blog', file: 'apps/blog/src/app/[locale]/layout.tsx' },
-  { name: 'portal', file: 'apps/portal/src/app/[locale]/layout.tsx' },
-];
+// 每个项目的 [locale] layout 路径（admin 无 locale 路由）
+const LAYOUT_FILE_BY_PROJECT = {
+  site: 'apps/site/src/app/(site)/[locale]/layout.tsx',
+  blog: 'apps/blog/src/app/[locale]/layout.tsx',
+  portal: 'apps/portal/src/app/[locale]/layout.tsx',
+};
+
+const layoutFile = LAYOUT_FILE_BY_PROJECT[detectedProject];
+const LAYOUTS_TO_CHECK = layoutFile
+  ? [{ name: detectedProject, file: layoutFile }]
+  : [{ name: detectedProject, file: null }];
 
 const RESULTS = { passed: 0, failed: 0, warnings: [] };
 
@@ -158,17 +173,19 @@ function scanApp(app) {
   console.log(`\n📁 ${app.name}/`);
 
   // Check layout
-  const layoutPath = path.join(repoRoot, app.file);
-  if (fs.existsSync(layoutPath)) {
-    const content = fs.readFileSync(layoutPath, 'utf-8');
-    checkLayoutRtl(content, layoutPath, app.name);
-  } else {
+  if (app.file && fs.existsSync(path.join(repoRoot, app.file))) {
+    const content = fs.readFileSync(path.join(repoRoot, app.file), 'utf-8');
+    checkLayoutRtl(content, path.join(repoRoot, app.file), app.name);
+    // Check CSS (only when [locale] layout exists — RTL applicable)
+    checkRtlCss(app.name);
+    checkLogicalCss(app.name);
+  } else if (app.file) {
     fail(app.name, app.file, 'layout.tsx 文件不存在');
+  } else {
+    // 该项目无 [locale] layout（如 admin），RTL 不适用，完全跳过
+    console.log(`  ∎ 无 [locale] layout — RTL 不适用，跳过`);
+    pass(app.name, '(跳过)', '无 [locale] 路由项目');
   }
-
-  // Check CSS
-  checkRtlCss(app.name);
-  checkLogicalCss(app.name);
 }
 
 const args = process.argv.slice(2);

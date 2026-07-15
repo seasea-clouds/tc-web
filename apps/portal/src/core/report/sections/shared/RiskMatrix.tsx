@@ -2,6 +2,7 @@
 import SectionTitle from '../../components/SectionTitle'
 import DataTable from '../../components/DataTable'
 import { useT } from '@trade/ui';
+import { localizeTimeline } from '../../localize';
 export default function RiskMatrix({ result }: { result: any }) {
     const t = useT('ReportSection');
   if (!result.riskMatrix?.length) return null
@@ -10,7 +11,7 @@ export default function RiskMatrix({ result }: { result: any }) {
       <SectionTitle icon={'📊'} label={t("sectionRiskAssessmentMatrix")} />
       <DataTable
         headers={[t('labelDimension'), t('labelRating'), t('labelExplanation')]}
-        rows={result.riskMatrix.map((r: any) => [r.dimension, r.rating, r.explanation])}
+        rows={result.riskMatrix.map((r: any) => [r.dimension, r.rating, localizeTimeline(t, r.explanation)])}
       />
     </div>
   )

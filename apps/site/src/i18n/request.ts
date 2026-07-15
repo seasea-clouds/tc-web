@@ -25,7 +25,9 @@ export default getRequestConfig(async ({ locale }) => {
       // Return the key itself so callers like getNumberedItems can detect missing
       // keys via `val.includes('.')` and break gracefully.
       if (error.code === 'MISSING_MESSAGE') return;
-      console.error(error);
+      if (process.env.NODE_ENV !== 'production') {
+        console.error(error);
+      }
     },
   };
 });

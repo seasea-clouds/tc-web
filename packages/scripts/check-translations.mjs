@@ -65,17 +65,20 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..', '..'); // monorepo root
 const PROJECT_ROOT = process.cwd();
 
+function getDetectedProject() {
+  const idx = process.argv.findIndex(a => a.startsWith('--project='));
+  if (idx !== -1) return process.argv[idx].split('=')[1];
+  const cwd = process.cwd();
+  const m = cwd.match(/[/]apps[/]([^/]+)/);
+  return m ? m[1] : 'site';
+}
+
 // Auto-detect MESSAGES_DIR: if CWD-based messages/ exists, use it;
-// otherwise fall back to detecting the app from well-known paths.
-// This allows the script to be run from repo root or any app directory.
+// otherwise fall back to the detected project's messages.
 const MESSAGES_DIR_CWD = path.join(PROJECT_ROOT, 'messages');
 const MESSAGES_DIR = fs.existsSync(MESSAGES_DIR_CWD)
   ? MESSAGES_DIR_CWD
-  : [
-      path.join(REPO_ROOT, 'apps', 'site', 'messages'),
-      path.join(REPO_ROOT, 'apps', 'portal', 'messages'),
-      path.join(REPO_ROOT, 'apps', 'blog', 'messages'),
-    ].find(d => fs.existsSync(d)) || MESSAGES_DIR_CWD;
+  : path.join(REPO_ROOT, 'apps', getDetectedProject(), 'messages');
 
 const BLOG_DIR = path.join(PROJECT_ROOT, 'content', 'blog');
 const MONOREPO_ROOT = path.resolve(__dirname, '..');
@@ -1683,22 +1686,44 @@ const targetLang = args.includes('--lang') ? args[args.indexOf('--lang') + 1] : 
 const short = args.includes('--short');
 const jsonOut = args.includes('--json');
 const skipConsistency = args.includes('--skip-locale-check');
+const isAdminProject = getDetectedProject() === 'admin';
 
-const localeCheck = skipConsistency ? null : checkLocaleConsistency(!short);
-const result = checkTranslations(targetLang, !short);
-const blogIssues = checkBlogMdx(targetLang, !short);
-const industryMetaIssues = (targetLang || args.includes('--skip-industry-meta')) ? 0 : checkIndustryMetaCompleteness(!short);
-const portalIssues = (targetLang || args.includes('--skip-portal-check')) ? 0 : checkPortalTranslations(!short);
+let localeCheck, result, blogIssues, industryMetaIssues, portalIssues;
+let sharedUiIssues = 0, breadcrumbResult = { total: 0, missing: [] }, dashIssues = 0;
+let adminMsgResult = { total: 0, missingKeys: [], dashIssues: 0 };
+let secretIssues = 0;
 
-if (jsonOut && result) {
-  console.log(JSON.stringify(result.issues_by_type, null, 2));
+if (isAdminProject) {
+  // Admin 使用平面路由、buildAdminT，仅 en/zh 语言
+  // 不适用标准的 48 语言翻译质量检查和语种一致性检查
+  if (!short) console.log('\n⚠️  Admin 检测: 跳过语种一致性和翻译质量检查（仅 en/zh）');
+  localeCheck = null;
+  result = null;
+  blogIssues = 0;
+  industryMetaIssues = 0;
+  portalIssues = 0;
+  sharedUiIssues = 0;
+  breadcrumbResult = { total: 0, missing: [] };
+  dashIssues = 0;
+  adminMsgResult = checkAdminMessages(!short);
+  secretIssues = (targetLang || args.includes('--skip-secret-check')) ? 0 : checkHardcodedSecrets(!short);
+} else {
+  localeCheck = skipConsistency ? null : checkLocaleConsistency(!short);
+  result = checkTranslations(targetLang, !short);
+  blogIssues = checkBlogMdx(targetLang, !short);
+  industryMetaIssues = (targetLang || args.includes('--skip-industry-meta')) ? 0 : checkIndustryMetaCompleteness(!short);
+  portalIssues = (targetLang || args.includes('--skip-portal-check')) ? 0 : checkPortalTranslations(!short);
+
+  if (jsonOut && result) {
+    console.log(JSON.stringify(result.issues_by_type, null, 2));
+  }
+
+  sharedUiIssues = checkSharedUiMessages(!short);
+  breadcrumbResult = (targetLang || args.includes('--skip-breadcrumb-check')) ? { total: 0, missing: [] } : checkBreadcrumbKeys(!short);
+  dashIssues = checkDashConsistency(!short);
+  adminMsgResult = (targetLang || args.includes('--skip-admin-check')) ? { total: 0, missingKeys: [], dashIssues: 0 } : checkAdminMessages(!short);
+  secretIssues = (targetLang || args.includes('--skip-secret-check')) ? 0 : checkHardcodedSecrets(!short);
 }
-
-const sharedUiIssues = checkSharedUiMessages(!short);
-const breadcrumbResult = (targetLang || args.includes('--skip-breadcrumb-check')) ? { total: 0, missing: [] } : checkBreadcrumbKeys(!short);
-const dashIssues = checkDashConsistency(!short);
-const adminMsgResult = (targetLang || args.includes('--skip-admin-check')) ? { total: 0, missingKeys: [], dashIssues: 0 } : checkAdminMessages(!short);
-const secretIssues = (targetLang || args.includes('--skip-secret-check')) ? 0 : checkHardcodedSecrets(!short);
 
 const totalIssues = (result?.total_issues ?? 0) + blogIssues + (localeCheck?.total ?? 0) + industryMetaIssues + portalIssues + sharedUiIssues + breadcrumbResult.total + dashIssues + adminMsgResult.total + secretIssues;
 

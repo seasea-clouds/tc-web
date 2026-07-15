@@ -995,6 +995,30 @@ function hasUntranslatedEnglish(langVal, enVal, lang) {
   if (/^[\w.+-]+@[\w-]+(?:\.[\w-]+)+$/.test(cleanVal.trim())) return false;
   const lower = cleanVal.toLowerCase();
   const words = (lower.match(/\b[a-z]{3,}\b/g) || []).filter(w => !ENGLISH_RESIDUAL_ALLOW_LC.has(w) && !SHARED_WORDS_BY_LANG_LC[lang]?.has(w));
+
+  // Pre-check for non-Latin locales: pure-English value whose ALLOW-filtered words are < 2
+  // e.g. 'Safety of IT equipment.' — Safety and equipment are in ALLOW, leaving only 'of'
+  const langNativeScripts = {
+    ar: /[\u0600-\u06ff]/, bn: /[\u0980-\u09ff]/, hi: /[\u0900-\u097f]/,
+    ja: /[\u3040-\u309f\u30a0-\u30ff\u4e00-\u9fff]/, ka: /[\u10a0-\u10ff]/,
+    ko: /[\uac00-\ud7af]/, lo: /[\u0e80-\u0eff]/, my: /[\u1000-\u109f]/,
+    ne: /[\u0900-\u097f]/, pa: /[\u0a00-\u0a7f]/, si: /[\u0d80-\u0dff]/,
+    ta: /[\u0b80-\u0bff]/, th: /[\u0e00-\u0e7f]/, ur: /[\u0600-\u06ff]/,
+    zh: /[\u4e00-\u9fff]/
+  };
+  const nativeRegex = langNativeScripts[lang];
+  if (nativeRegex && !nativeRegex.test(cleanVal)) {
+    const allLatinWords = (lower.match(/\b[a-z]{3,}\b/g) || []).filter(w => !ENGLISH_FUNCTION_WORDS.has(w));
+    if (allLatinWords.length >= 2) {
+      const enLower = enVal.toLowerCase();
+      const enAllWords = new Set((enLower.match(/\b[a-z]{3,}\b/g) || []).filter(w => !ENGLISH_FUNCTION_WORDS.has(w)));
+      const enOverlap = allLatinWords.filter(w => enAllWords.has(w));
+      if (enOverlap.length >= 2 && enOverlap.length / allLatinWords.length >= 0.5) {
+        return true;
+      }
+    }
+  }
+
   if (words.length < 2) return false;
 
   // Check 1: English function word ratio
@@ -1013,6 +1037,7 @@ function hasUntranslatedEnglish(langVal, enVal, lang) {
     return true;
   }
   }
+
 
   return false;
 }
@@ -1067,7 +1092,8 @@ const totalIssues = { count: 0, byType: { fallback: [], empty: [], wrong_chars: 
 
       // 2. fallback
       if (langVal === enVal) {
-        if (!NO_TRANSLATE.has(enVal) && !IGNORE_FALLBACK_KEYS.has(key) && !IGNORE_FALLBACK_VALUES.has(enVal)) {
+        const isIgnored = NO_TRANSLATE.has(enVal) || IGNORE_FALLBACK_KEYS.has(key) || IGNORE_FALLBACK_VALUES.has(enVal);
+        if (!isIgnored) {
           let isShared = SHARED_WORDS_ALL.has(enVal);
           if (!isShared && SHARED_WORDS_BY_LANG[lang]?.has(enVal)) isShared = true;
           if (!isShared) {
@@ -1079,9 +1105,11 @@ const totalIssues = { count: 0, byType: { fallback: [], empty: [], wrong_chars: 
           if (!isShared) {
             totalIssues.byType.fallback.push([lang, key, enVal]);
             langIssues++;
+            continue;  // only continue if fallback was detected
           }
         }
-        continue;
+        // Even if fallback is ignored, the langVal still === enVal —
+        // continue to subsequent checks (english_residual, etc.)
       }
 
       // 3. no-translate translated
@@ -1134,6 +1162,34 @@ const totalIssues = { count: 0, byType: { fallback: [], empty: [], wrong_chars: 
             }
           }
         }
+
+      // Second pass for non-latin: catch pure-Latin values where ALL words are in ALLOW
+      // e.g. zh "Safety of IT equipment." — Safety+equipment in ALLOW, so 1st pass missed it
+      const nativeScriptRanges2 = {
+        ar: /[\u0600-\u06ff]/, bn: /[\u0980-\u09ff]/, hi: /[\u0900-\u097f]/,
+        ja: /[\u3040-\u309f\u30a0-\u30ff\u4e00-\u9fff]/, ka: /[\u10a0-\u10ff]/,
+        ko: /[\uac00-\ud7af]/, lo: /[\u0e80-\u0eff]/, my: /[\u1000-\u109f]/,
+        ne: /[\u0900-\u097f]/, pa: /[\u0a00-\u0a7f]/, si: /[\u0d80-\u0dff]/,
+        ta: /[\u0b80-\u0bff]/, th: /[\u0e00-\u0e7f]/, ur: /[\u0600-\u06ff]/,
+        zh: /[\u4e00-\u9fff]/
+      };
+      const nativeRgx2 = nativeScriptRanges2[lang];
+      if (nativeRgx2 && !nativeRgx2.test(cleanVal) && cleanVal.trim().length >= 5) {
+        const secondWords = (cleanVal.toLowerCase().match(/\b[a-z]{3,}\b/g) || []).filter(w => !ENGLISH_FUNCTION_WORDS.has(w));
+        if (secondWords.length >= 2) {
+          const enLower2 = enVal.toLowerCase();
+          const enAll2 = new Set((enLower2.match(/\b[a-z]{3,}\b/g) || []).filter(w => !ENGLISH_FUNCTION_WORDS.has(w)));
+          const enOv = secondWords.filter(w => enAll2.has(w));
+          if (enOv.length >= 2 && enOv.length / secondWords.length >= 0.5) {
+            const shortKey2 = key.split('.').pop() || key;
+            const isSkipKey2 = SKIP_ENGLISH_RESIDUAL_PATTERNS.some(p => p.test(shortKey2) || p.test(key));
+            if (!isSkipKey2) {
+              totalIssues.byType.english_residual.push([lang, key, [...secondWords].sort()]);
+              langIssues++;
+            }
+          }
+        }
+      }
       }
 
       // Latin-script English residual — function-word ratio detection
@@ -1364,6 +1420,30 @@ function checkPortalTranslations(verbose = true) {
             }
           }
         }
+
+      // Second pass for portal non-latin: catch pure-Latin values where ALL words are in ALLOW
+      const nativeScriptRanges2p = {
+        ar: /[\u0600-\u06ff]/, bn: /[\u0980-\u09ff]/, hi: /[\u0900-\u097f]/,
+        ja: /[\u3040-\u309f\u30a0-\u30ff\u4e00-\u9fff]/, ka: /[\u10a0-\u10ff]/,
+        ko: /[\uac00-\ud7af]/, lo: /[\u0e80-\u0eff]/, my: /[\u1000-\u109f]/,
+        ne: /[\u0900-\u097f]/, pa: /[\u0a00-\u0a7f]/, si: /[\u0d80-\u0dff]/,
+        ta: /[\u0b80-\u0bff]/, th: /[\u0e00-\u0e7f]/, ur: /[\u0600-\u06ff]/,
+        zh: /[\u4e00-\u9fff]/
+      };
+      const nativeRgx2p = nativeScriptRanges2p[lang];
+      if (nativeRgx2p && !nativeRgx2p.test(cleanVal) && cleanVal.trim().length >= 5) {
+        const secondWords = (cleanVal.toLowerCase().match(/\b[a-z]{3,}\b/g) || []).filter(w => !ENGLISH_FUNCTION_WORDS.has(w));
+        if (secondWords.length >= 2) {
+          const enLower2 = enVal.toLowerCase();
+          const enAll2 = new Set((enLower2.match(/\b[a-z]{3,}\b/g) || []).filter(w => !ENGLISH_FUNCTION_WORDS.has(w)));
+          const enOv = secondWords.filter(w => enAll2.has(w));
+          if (enOv.length >= 2 && enOv.length / secondWords.length >= 0.5) {
+            if (!SKIP_ENGLISH_RESIDUAL_PATTERNS.some(p => p.test(key))) {
+              details.english_residual.push([lang, key, [...secondWords].sort()]); totalIssues++;
+            }
+          }
+        }
+      }
       }
 
       // Latin-script English residual — function-word ratio detection

@@ -14,7 +14,7 @@ export default function CccStandards({ result }: { result: any }) {
           const [key, val] = item;
           return (
             <div key={key} className="flex gap-2 p-2 bg-gray-50 rounded">
-              <span className="text-xs font-bold text-primary-navy w-32 flex-shrink-0">{key.replace(/([A-Z])/g, ' $1').trim()}</span>
+              <span className="text-xs font-bold text-primary-navy w-32 flex-shrink-0">{t(key)}</span>
               <span className="text-xs text-gray-600">{String(val)}</span>
             </div>
           );

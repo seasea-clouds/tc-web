@@ -554,7 +554,7 @@ const ENGLISH_RESIDUAL_ALLOW = new Set([
   'brandName', 'productName', 'category', 'timeline',
   'address', 'cost', 'name', 'lab', 'packer', 'kcal',
   // 科学术语/标准缩写
-  'Salmonella', 'Vibrio', 'Producer', 'Excel', 'Pdf', 'pdf',
+  'Salmonella', 'Vibrio', 'Producer', 'Excel', 'Pdf', 'pdf', 'Doc',
   'Alibaba', 'RMB',
   'EMC', 'GDA', 'ICSC', 'IECEE', 'MFN', 'QUID', 'QSO', 'WIPO',
   'Engage', 'Test', 'Report',
@@ -613,6 +613,21 @@ const ENGLISH_RESIDUAL_ALLOW = new Set([
   // 第十二批残留豁免（CCC profile 专业技术词 + TBD）
   'Chemical', 'radio', 'phthalates', 'flicker', 'Biocompatibility', 'TBD',
 ]);
+
+// ─── Cognate exclusions — glossary terms legitimate as loanwords ──
+// Allergen = same in German/Danish/Norwegian/Swedish/Azerbaijani/Hebrew/Thai/Urdu
+['de','da','no','sv','az','he','th','ur'].forEach(l => {
+  if (!SHARED_WORDS_BY_LANG[l]) SHARED_WORDS_BY_LANG[l] = new Set();
+  SHARED_WORDS_BY_LANG[l].add('Allergen');
+});
+// First-to-File = loanword in German
+if (!SHARED_WORDS_BY_LANG['de']) SHARED_WORDS_BY_LANG['de'] = new Set();
+SHARED_WORDS_BY_LANG['de'].add('First-to-File');
+// Opposition = same in German/French/Swedish
+['de','fr','sv'].forEach(l => {
+  if (!SHARED_WORDS_BY_LANG[l]) SHARED_WORDS_BY_LANG[l] = new Set();
+  SHARED_WORDS_BY_LANG[l].add('Opposition');
+});
 
 // ============================================================
 // Helpers

@@ -2376,7 +2376,17 @@
     "tmGlossary_firstToFileTerm": "First-to-File",
     "tmGlossary_customsRecordalTerm": "Customs Recordal",
     "tmGlossary_squattingTerm": "Trademark Squatting",
-    "tmGlossary_oppositionTerm": "Opposition"
+    "tmGlossary_oppositionTerm": "Opposition",
+    "date_jan1_2022": "January 1, 2022",
+    "date_oct1_2015": "October 1, 2015",
+    "date_apr20_2012": "April 20, 2012",
+    "date_jan1_2013": "January 1, 2013",
+    "date_feb8_2025": "February 8, 2025",
+    "date_jun30_2023": "June 30, 2023",
+    "date_sep3_2021": "September 3, 2021",
+    "date_nov22_2021": "November 22, 2021",
+    "date_nov1_2019": "November 1, 2019",
+    "date_mar1_2004": "March 1, 2004"
   },
   "Report": {
     "loadingTitle": "Loading Your Report",

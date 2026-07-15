@@ -390,6 +390,26 @@ const IGNORE_FALLBACK_KEYS = new Set([
   'Check.nmpaChannel_cbec_name',
 ]);
 
+// ─── Cognate exclusions: specific lang:key pairs where English = translation ──
+// Format: "lang:namespace.key"
+const COGNATE_EXCLUSIONS = new Set([
+  // Allergen = same in these languages (loanword/scientific term)
+  'az:Check.labelGlossary_allergenTerm',
+  'da:Check.labelGlossary_allergenTerm',
+  'de:Check.labelGlossary_allergenTerm',
+  'he:Check.labelGlossary_allergenTerm',
+  'no:Check.labelGlossary_allergenTerm',
+  'sv:Check.labelGlossary_allergenTerm',
+  'th:Check.labelGlossary_allergenTerm',
+  'ur:Check.labelGlossary_allergenTerm',
+  // First-to-File = loanword in German
+  'de:Check.tmGlossary_firstToFileTerm',
+  // Opposition = same in these languages (loanword)
+  'de:Check.tmGlossary_oppositionTerm',
+  'fr:Check.tmGlossary_oppositionTerm',
+  'sv:Check.tmGlossary_oppositionTerm',
+]);
+
 function checkHardcodedFallbacks(projectName, projectData) {
   const { en, locales } = projectData;
   const issues = [];
@@ -411,6 +431,9 @@ function checkHardcodedFallbacks(projectName, projectData) {
 
       // Skip: global ignore values (value matches across all languages)
       if (langVal === enVal && IGNORE_FALLBACK_VALUES.has(enVal)) continue;
+
+      // Skip: cognate loanword (English = translation in specific language)
+      if (langVal === enVal && COGNATE_EXCLUSIONS.has(`${lang}:${key}`)) continue;
 
       if (langVal === enVal) {
         const shortKey = key.split('.').pop() || key;

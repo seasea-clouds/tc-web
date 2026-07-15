@@ -2308,7 +2308,17 @@
     "tmGlossary_customsRecordalTerm": "Zollprotokoll",
     "tmGlossary_firstToFileTerm": "First-to-File",
     "tmGlossary_oppositionTerm": "Opposition",
-    "tmGlossary_squattingTerm": "Markenbesetzung"
+    "tmGlossary_squattingTerm": "Markenbesetzung",
+    "date_apr20_2012": "20. April 2012",
+    "date_feb8_2025": "8. Februar 2025",
+    "date_jan1_2013": "1. Januar 2013",
+    "date_jan1_2022": "1. Januar 2022",
+    "date_jun30_2023": "30. Juni 2023",
+    "date_mar1_2004": "1. März 2004",
+    "date_nov1_2019": "1. November 2019",
+    "date_nov22_2021": "22. November 2021",
+    "date_oct1_2015": "1. Oktober 2015",
+    "date_sep3_2021": "3. September 2021"
   },
   "Cookie": {
     "message": "Diese Website verwendet nur unbedingt erforderliche Authentifizierungscookies. Es werden keine Tracking- oder Werbecookies verwendet.",

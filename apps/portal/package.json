@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "prebuild": "node ../../packages/scripts/inject-version.mjs",
-    "build": "node ../../packages/scripts/build-search-index.mjs && next build",
+    "build": "node ../../packages/scripts/build-search-index.mjs && next build && node ../../packages/scripts/ci-check.mjs --out-dir=out --ci",
     "build:ci": "node ../../packages/scripts/build-search-index.mjs && next build && node ../../packages/scripts/ci-check.mjs --out-dir=out --ci",
     "start": "next start",
     "lint": "eslint",

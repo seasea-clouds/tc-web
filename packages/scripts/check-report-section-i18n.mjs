@@ -186,9 +186,8 @@ function run() {
   }
 
   console.log(`\n⚠️  发现 ${issues.length} 个未翻译的数据层英文字段`);
-  console.log('   (此检查不阻塞 CI，不会导致 exit 1)\n');
 
-  return true;
+  return false;
 }
 
 const passed = run();

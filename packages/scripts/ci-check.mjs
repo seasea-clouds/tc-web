@@ -111,7 +111,7 @@ function getCwd(p) {
 /**
  * 运行单个检查脚本
  * - 自动追加 --project=<projectName>
- * - 自动追加 --ci（非 nofail 脚本）
+ * - 自动追加 --ci（所有脚本一视同仁，发现问题即阻断构建）
  */
 function runScript(projectName, scriptName, cwd, ...extraArgs) {
   const scriptPath = path.join(SCRIPTS_DIR, scriptName);
@@ -121,8 +121,7 @@ function runScript(projectName, scriptName, cwd, ...extraArgs) {
   }
 
   const scriptArgs = [`--project=${projectName}`, ...extraArgs];
-  const noFailOnIssues = ['clean-rsc.mjs', 'check-report-section-i18n.mjs'];
-  if (isCi && !noFailOnIssues.includes(scriptName)) scriptArgs.push('--ci');
+  if (isCi) scriptArgs.push('--ci');
 
   console.log(`\n▶ ${scriptName} ${scriptArgs.join(' ')}`);
 
@@ -135,7 +134,7 @@ function runScript(projectName, scriptName, cwd, ...extraArgs) {
 
   if (result.status !== 0) {
     totalFailures += result.status ?? 1;
-    if (_currentProject && !noFailOnIssues.includes(scriptName)) {
+    if (_currentProject) {
       if (!failureDetails[_currentProject]) failureDetails[_currentProject] = [];
       failureDetails[_currentProject].push({ script: scriptName, status: result.status ?? 1 });
     }
@@ -205,7 +204,7 @@ const CHECK_LIST = [
   { script: 'check-hreflang.mjs', output: true },
   { script: 'check-llms.mjs', output: true },
   { script: 'check-seo-output.mjs', output: true },
-  { script: 'clean-rsc.mjs', output: true, nofail: true },
+  { script: 'clean-rsc.mjs', output: true },
 
   // ── 类型检查 ────────────────────────────────────────
   { script: 'tsc --noEmit', type: 'tsc' },

@@ -57,7 +57,7 @@ export async function onRequest(context: {
     if (!res.ok) {
       const err = await res.text();
       console.error("Creem checkout failed:", err);
-      return Response.json({ error: `Checkout creation failed: ${res.status} ${err}` }, { status: 502 });
+      return Response.json({ error: "Checkout creation failed" }, { status: 502 });
     }
 
     const data = await res.json();

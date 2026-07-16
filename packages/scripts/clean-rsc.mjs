@@ -12,8 +12,8 @@
 import { readdirSync, statSync, rmSync } from 'fs';
 import { join } from 'path';
 
-// Use provided path argument, or default to <cwd>/out
-const OUT_DIR = process.argv[2] || join(process.cwd(), 'out');
+// Use provided path argument (skip flags), or default to <cwd>/out
+const OUT_DIR = (process.argv.slice(2).find(a => !a.startsWith('--')) || join(process.cwd(), 'out'));
 
 let deletedCount = 0;
 let totalSize = 0;

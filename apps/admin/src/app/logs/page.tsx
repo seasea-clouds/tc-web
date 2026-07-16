@@ -169,7 +169,7 @@ export default function LogsPage() {
                         <td>
                           {detailObj ? (
                             <span style={{ color: "#3b82f6", fontSize: "0.8rem" }}>
-                              {isExpanded ? t("table.collapse") : `${Object.keys(detailObj).length} {t("table.changes").replace("{n}", String(Object.keys(detailObj).length))}`}
+                              {isExpanded ? t("table.collapse") : t("table.changes").replace("{n}", String(Object.keys(detailObj).length))}
                             </span>
                           ) : (
                             <span style={{ color: "#9ca3af", fontSize: "0.8rem" }}>{t("table.none")}</span>

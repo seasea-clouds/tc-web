@@ -2318,7 +2318,10 @@
     "yesLabelArtwork": "بله - با گزارش کامل آزمایشگاه",
     "yesSpecialCosmetics": "بله - لوازم آرایشی ویژه",
     "young_consumers_preference_for_international_brands": "ترجیح مصرف کنندگان جوان برای مارک های بین المللی",
-    "yourProduct": "محصول شما"
+    "yourProduct": "محصول شما",
+    "cccGlossary_factoryAuditTerm": "ممیزی کارخانه",
+    "cccMarket_recoHigh": "گواهینامه CCC مورد نیاز است — برای آزمایش نوع، بازرسی کارخانه و بررسی گواهینامه، یک نهاد گواهی معتبر CNCA را درگیر کنید.",
+    "cccMarket_recoLow": "برای این دسته محصول نیازی به گواهی CCC نیست."
   },
   "Cookie": {
     "accept": "همه را بپذیر",

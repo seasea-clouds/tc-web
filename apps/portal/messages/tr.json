@@ -2318,7 +2318,10 @@
     "yesLabelArtwork": "Evet: tam laboratuvar raporuyla birlikte",
     "yesSpecialCosmetics": "Evet: ÖZEL kozmetikler",
     "young_consumers_preference_for_international_brands": "Genç tüketicilerin uluslararası marka tercihi",
-    "yourProduct": "Ürününüz"
+    "yourProduct": "Ürününüz",
+    "cccGlossary_factoryAuditTerm": "Fabrika Denetimi",
+    "cccMarket_recoHigh": "CCC sertifikası gereklidir — tip testi, fabrika denetimi ve sertifika incelemesi için CNCA onaylı bir sertifikasyon kuruluşuna başvurun.",
+    "cccMarket_recoLow": "Bu ürün kategorisi için CCC sertifikasına gerek yoktur."
   },
   "Cookie": {
     "accept": "Tümünü Kabul Et",

@@ -2318,7 +2318,10 @@
     "yesLabelArtwork": "Ndiyo - na ripoti kamili ya maabara",
     "yesSpecialCosmetics": "Ndiyo - vipodozi MAALUM",
     "young_consumers_preference_for_international_brands": "Upendeleo wa watumiaji wachanga kwa chapa za kimataifa",
-    "yourProduct": "Bidhaa Yako"
+    "yourProduct": "Bidhaa Yako",
+    "cccGlossary_factoryAuditTerm": "Ukaguzi wa Kiwanda",
+    "cccMarket_recoHigh": "Uidhinishaji wa CCC unahitajika — shirikisha shirika la uidhinishaji lililoidhinishwa na CNCA kwa majaribio ya aina, ukaguzi wa kiwandani na ukaguzi wa uthibitishaji.",
+    "cccMarket_recoLow": "Hakuna uthibitisho wa CCC unaohitajika kwa aina hii ya bidhaa."
   },
   "Cookie": {
     "accept": "Kubali Yote",

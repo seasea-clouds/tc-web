@@ -2318,7 +2318,10 @@
     "yesLabelArtwork": "Po - me raportin e plotë të laboratorit",
     "yesSpecialCosmetics": "Po: kozmetikë SPECIALE",
     "young_consumers_preference_for_international_brands": "Preferenca e konsumatorëve të rinj për markat ndërkombëtare",
-    "yourProduct": "Produkti juaj"
+    "yourProduct": "Produkti juaj",
+    "cccGlossary_factoryAuditTerm": "Auditimi i fabrikës",
+    "cccMarket_recoHigh": "Kërkohet certifikimi CCC — angazhoni një organ certifikimi të akredituar nga CNCA për testimin e tipit, inspektimin e fabrikës dhe rishikimin e certifikimit.",
+    "cccMarket_recoLow": "Nuk kërkohet certifikim CCC për këtë kategori produkti."
   },
   "Cookie": {
     "accept": "Prano të gjitha",

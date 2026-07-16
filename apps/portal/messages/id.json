@@ -2318,7 +2318,10 @@
     "yesLabelArtwork": "Ya: dengan laporan lab lengkap",
     "yesSpecialCosmetics": "Ya: kosmetik KHUSUS",
     "young_consumers_preference_for_international_brands": "Preferensi konsumen muda terhadap merek internasional",
-    "yourProduct": "Produk Anda"
+    "yourProduct": "Produk Anda",
+    "cccGlossary_factoryAuditTerm": "Audit Pabrik",
+    "cccMarket_recoHigh": "Sertifikasi CCC diperlukan — libatkan badan sertifikasi terakreditasi CNCA untuk pengujian tipe, inspeksi pabrik, dan tinjauan sertifikasi.",
+    "cccMarket_recoLow": "Tidak diperlukan sertifikasi CCC untuk kategori produk ini."
   },
   "Cookie": {
     "accept": "Terima Semua",

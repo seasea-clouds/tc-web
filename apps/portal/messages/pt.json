@@ -2318,7 +2318,10 @@
     "yesLabelArtwork": "Sim – com relatório de laboratório completo",
     "yesSpecialCosmetics": "Sim - cosméticos ESPECIAIS",
     "young_consumers_preference_for_international_brands": "Preferência dos jovens consumidores por marcas internacionais",
-    "yourProduct": "Seu produto"
+    "yourProduct": "Seu produto",
+    "cccGlossary_factoryAuditTerm": "Auditoria de Fábrica",
+    "cccMarket_recoHigh": "Certificação CCC necessária — contrate um organismo de certificação credenciado pela CNCA para testes de tipo, inspeção de fábrica e revisão de certificação.",
+    "cccMarket_recoLow": "Nenhuma certificação CCC é necessária para esta categoria de produto."
   },
   "Cookie": {
     "accept": "Aceitar tudo",

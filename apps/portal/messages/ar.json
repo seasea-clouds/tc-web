@@ -2318,7 +2318,10 @@
     "yesLabelArtwork": "نعم - مع تقرير المختبر الكامل",
     "yesSpecialCosmetics": "نعم – مستحضرات تجميل خاصة",
     "young_consumers_preference_for_international_brands": "تفضيل المستهلكين الشباب للعلامات التجارية العالمية",
-    "yourProduct": "المنتج الخاص بك"
+    "yourProduct": "المنتج الخاص بك",
+    "cccGlossary_factoryAuditTerm": "تدقيق المصنع",
+    "cccMarket_recoHigh": "يلزم الحصول على شهادة CCC — قم بإشراك هيئة اعتماد معتمدة من CNCA لاختبار النوع وفحص المصنع ومراجعة الشهادات.",
+    "cccMarket_recoLow": "لا توجد شهادة CCC مطلوبة لفئة المنتج هذه."
   },
   "Cookie": {
     "accept": "قبول الكل",

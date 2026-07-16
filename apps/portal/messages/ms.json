@@ -2318,7 +2318,10 @@
     "yesLabelArtwork": "Ya: dengan laporan makmal penuh",
     "yesSpecialCosmetics": "Ya: kosmetik KHAS",
     "young_consumers_preference_for_international_brands": "Keutamaan pengguna muda terhadap jenama antarabangsa",
-    "yourProduct": "Produk Anda"
+    "yourProduct": "Produk Anda",
+    "cccGlossary_factoryAuditTerm": "Audit Kilang",
+    "cccMarket_recoHigh": "Pensijilan CCC diperlukan — hubungi badan pensijilan yang diiktiraf CNCA untuk ujian jenis, pemeriksaan kilang dan semakan pensijilan.",
+    "cccMarket_recoLow": "Tiada pensijilan CCC diperlukan untuk kategori produk ini."
   },
   "Cookie": {
     "accept": "Terima Semua",

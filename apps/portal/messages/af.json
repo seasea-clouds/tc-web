@@ -2318,7 +2318,10 @@
     "yesLabelArtwork": "Ja - met volledige laboratoriumverslag",
     "yesSpecialCosmetics": "Ja: SPESIALE skoonheidsmiddels",
     "young_consumers_preference_for_international_brands": "Jong verbruikers se voorkeur vir internasionale handelsmerke",
-    "yourProduct": "Jou produk"
+    "yourProduct": "Jou produk",
+    "cccGlossary_factoryAuditTerm": "Fabrieksoudit",
+    "cccMarket_recoHigh": "CCC-sertifisering vereis — skakel 'n CNCA-geakkrediteerde sertifiseringsliggaam in vir tipetoetsing, fabrieksinspeksie en sertifiseringsoorsig.",
+    "cccMarket_recoLow": "Geen CCC-sertifisering word vir hierdie produkkategorie vereis nie."
   },
   "Cookie": {
     "accept": "Aanvaar Almal",

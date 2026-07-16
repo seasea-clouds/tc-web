@@ -2318,7 +2318,10 @@
     "yesLabelArtwork": "Ja – met volledig laboratoriumrapport",
     "yesSpecialCosmetics": "Ja – SPECIALE cosmetica",
     "young_consumers_preference_for_international_brands": "Voorkeur van jonge consumenten voor internationale merken",
-    "yourProduct": "Uw product"
+    "yourProduct": "Uw product",
+    "cccGlossary_factoryAuditTerm": "Fabrieksaudit",
+    "cccMarket_recoHigh": "CCC-certificering vereist: schakel een CNCA-geaccrediteerde certificeringsinstantie in voor typetests, fabrieksinspectie en certificeringsbeoordeling.",
+    "cccMarket_recoLow": "Voor deze productcategorie is geen CCC-certificering vereist."
   },
   "Cookie": {
     "accept": "Accepteer alles",

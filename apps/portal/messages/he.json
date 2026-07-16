@@ -2318,7 +2318,10 @@
     "yesLabelArtwork": "כן - עם דוח מעבדה מלא",
     "yesSpecialCosmetics": "כן - מוצרי קוסמטיקה מיוחדים",
     "young_consumers_preference_for_international_brands": "העדפת צרכנים צעירים למותגים בינלאומיים",
-    "yourProduct": "המוצר שלך"
+    "yourProduct": "המוצר שלך",
+    "cccGlossary_factoryAuditTerm": "ביקורת מפעל",
+    "cccMarket_recoHigh": "נדרשת אישור CCC — צור קשר עם גוף הסמכה מוסמך CNCA לבדיקת סוגים, בדיקת מפעל ובדיקת הסמכה. תמיכה מקצועית בציות מומלצת.",
+    "cccMarket_recoLow": "אין צורך באישור CCC עבור קטגוריית מוצר זו. חלים נהלי כניסה סטנדרטיים לשוק."
   },
   "Cookie": {
     "accept": "קבל הכל",

@@ -2318,7 +2318,10 @@
     "yesLabelArtwork": "Ja: med fullständig labbrapport",
     "yesSpecialCosmetics": "Ja: SPECIAL kosmetika",
     "young_consumers_preference_for_international_brands": "Unga konsumenters förkärlek för internationella varumärken",
-    "yourProduct": "Din produkt"
+    "yourProduct": "Din produkt",
+    "cccGlossary_factoryAuditTerm": "Fabriksrevision",
+    "cccMarket_recoHigh": "CCC-certifiering krävs – anlita ett CNCA-ackrediterat certifieringsorgan för typprovning, fabriksinspektion och certifieringsgranskning. Professionell efterlevnadssupport rekommenderas.",
+    "cccMarket_recoLow": "Ingen CCC-certifiering krävs för denna produktkategori. Standardförfaranden för marknadsinträde gäller."
   },
   "Cookie": {
     "accept": "Acceptera alla",

@@ -2318,7 +2318,10 @@
     "yesLabelArtwork": "はい - 完全なラボレポート付き",
     "yesSpecialCosmetics": "はい: 特別な化粧品",
     "young_consumers_preference_for_international_brands": "若い消費者は国際ブランドを好む",
-    "yourProduct": "あなたの製品"
+    "yourProduct": "あなたの製品",
+    "cccGlossary_factoryAuditTerm": "工場監査",
+    "cccMarket_recoHigh": "CCC 認証が必要 — CNCA 認定の認証機関に型式試験、工場検査、認証レビューを依頼してください。",
+    "cccMarket_recoLow": "この製品カテゴリには CCC 認証は必要ありません。"
   },
   "Cookie": {
     "accept": "すべてを受け入れる",

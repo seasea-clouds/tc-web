@@ -58,6 +58,9 @@ const T_CALL_RE = /t\(["']([a-zA-Z_][a-zA-Z0-9_]*)["'](?:\s*,|\))/g;
 // Template-literal t(`...`) calls: captures everything inside backticks
 const T_TEMPLATE_RE = /t\(`([^`]*)`(?:\s*,|\))/g;
 
+// Ternary t() calls: t(condition ? "keyHigh" : "keyLow")
+const T_TERNARY_RE = /t\([^?]+\?\s*["'](\w+)["']\s*:\s*["'](\w+)["']\)/g;
+
 // ─── Known value sources for dynamic key expansion ─────────────────────
 
 // ---- COMPARISON_FIELDS (MandatoryElements.tsx) ----
@@ -323,6 +326,14 @@ function scanFiles() {
                 fallback: hasFallback,
                 ...expanded,
               });
+            }
+
+            // Ternary t(? ...) calls: t(condition ? "keyHigh" : "keyLow")
+            T_TERNARY_RE.lastIndex = 0;
+            while ((match = T_TERNARY_RE.exec(content)) !== null) {
+              const lineNum = content.substring(0, match.index).split("\n").length;
+              staticResults.push({ key: match[1], file: relPath, line: lineNum });
+              staticResults.push({ key: match[2], file: relPath, line: lineNum });
             }
           } catch {
             // skip unreadable

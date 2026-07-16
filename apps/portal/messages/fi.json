@@ -2318,7 +2318,10 @@
     "yesLabelArtwork": "Kyllä – täydellä laboratorioraportilla",
     "yesSpecialCosmetics": "Kyllä – ERIKOISkosmetiikkaa",
     "young_consumers_preference_for_international_brands": "Nuorten kuluttajien suosio kansainvälisiä brändejä kohtaan",
-    "yourProduct": "Tuotteesi"
+    "yourProduct": "Tuotteesi",
+    "cccGlossary_factoryAuditTerm": "Tehdastarkastus",
+    "cccMarket_recoHigh": "CCC-sertifiointi vaaditaan – ota yhteyttä CNCA:n akkreditoituun sertifiointielimeen tyyppitestausta, tehdastarkastusta ja sertifiointitarkastusta varten.",
+    "cccMarket_recoLow": "Tälle tuotekategorialle ei vaadita CCC-sertifikaattia."
   },
   "Cookie": {
     "accept": "Hyväksy kaikki",

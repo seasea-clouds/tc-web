@@ -2318,7 +2318,10 @@
     "yesLabelArtwork": "হ্যাঁ: সম্পূর্ণ ল্যাব রিপোর্ট সহ",
     "yesSpecialCosmetics": "হ্যাঁ: বিশেষ প্রসাধনী",
     "young_consumers_preference_for_international_brands": "আন্তর্জাতিক ব্র্যান্ডের জন্য তরুণ ভোক্তাদের পছন্দ",
-    "yourProduct": "আপনার পণ্য"
+    "yourProduct": "আপনার পণ্য",
+    "cccGlossary_factoryAuditTerm": "কারখানার নিরীক্ষা",
+    "cccMarket_recoHigh": "CCC সার্টিফিকেশন প্রয়োজন — টাইপ টেস্টিং, ফ্যাক্টরি পরিদর্শন, এবং সার্টিফিকেশন পর্যালোচনার জন্য একটি CNCA-স্বীকৃত সার্টিফিকেশন সংস্থাকে নিযুক্ত করুন।",
+    "cccMarket_recoLow": "এই পণ্য বিভাগের জন্য কোন CCC শংসাপত্রের প্রয়োজন নেই।"
   },
   "Cookie": {
     "accept": "সব স্বীকার করুন",

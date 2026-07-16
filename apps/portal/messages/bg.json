@@ -2318,7 +2318,10 @@
     "yesLabelArtwork": "Да: с пълен лабораторен доклад",
     "yesSpecialCosmetics": "Да: СПЕЦИАЛНА козметика",
     "young_consumers_preference_for_international_brands": "Предпочитанията на младите потребители към международни марки",
-    "yourProduct": "Вашият продукт"
+    "yourProduct": "Вашият продукт",
+    "cccGlossary_factoryAuditTerm": "Фабричен одит",
+    "cccMarket_recoHigh": "Изисква се сертификация от CCC — ангажирайте сертифициращ орган, акредитиран от CNCA, за изпитване на типа, фабрична инспекция и преглед на сертифицирането.",
+    "cccMarket_recoLow": "Не се изисква CCC сертифициране за тази продуктова категория."
   },
   "Cookie": {
     "accept": "Приеми всички",

@@ -2318,7 +2318,10 @@
     "yesLabelArtwork": "Áno – s úplnou laboratórnou správou",
     "yesSpecialCosmetics": "Áno: ŠPECIÁLNA kozmetika",
     "young_consumers_preference_for_international_brands": "Preferencia mladých spotrebiteľov pre medzinárodné značky",
-    "yourProduct": "Váš produkt"
+    "yourProduct": "Váš produkt",
+    "cccGlossary_factoryAuditTerm": "Audit továrne",
+    "cccMarket_recoHigh": "Vyžaduje sa certifikácia CCC – zapojte certifikačný orgán akreditovaný CNCA na testovanie typu, inšpekciu vo výrobe a preskúmanie certifikácie. Odporúča sa profesionálna podpora zhody.",
+    "cccMarket_recoLow": "Pre túto kategóriu produktov sa nevyžaduje certifikácia CCC. Platia štandardné postupy vstupu na trh."
   },
   "Cookie": {
     "accept": "Prijať všetko",

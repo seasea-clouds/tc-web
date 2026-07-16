@@ -2318,7 +2318,10 @@
     "yesLabelArtwork": "Da, cu raportul de laborator complet",
     "yesSpecialCosmetics": "Da: cosmetice SPECIALE",
     "young_consumers_preference_for_international_brands": "Preferința tinerilor consumatori pentru mărci internaționale",
-    "yourProduct": "Produsul dvs"
+    "yourProduct": "Produsul dvs",
+    "cccGlossary_factoryAuditTerm": "Auditul fabricii",
+    "cccMarket_recoHigh": "Este necesară certificarea CCC — angajați un organism de certificare acreditat CNCA pentru testarea de tip, inspecția în fabrică și revizuirea certificării.",
+    "cccMarket_recoLow": "Nu este necesară certificarea CCC pentru această categorie de produse."
   },
   "Cookie": {
     "accept": "Acceptați toate",

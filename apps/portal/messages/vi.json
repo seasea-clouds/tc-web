@@ -2318,7 +2318,10 @@
     "yesLabelArtwork": "Có - với báo cáo phòng thí nghiệm đầy đủ",
     "yesSpecialCosmetics": "Có - Mỹ phẩm ĐẶC BIỆT",
     "young_consumers_preference_for_international_brands": "Sự ưa thích của người tiêu dùng trẻ đối với thương hiệu quốc tế",
-    "yourProduct": "Sản phẩm của bạn"
+    "yourProduct": "Sản phẩm của bạn",
+    "cccGlossary_factoryAuditTerm": "Kiểm toán nhà máy",
+    "cccMarket_recoHigh": "Yêu cầu phải có chứng nhận CCC — thuê tổ chức chứng nhận được CNCA công nhận để kiểm tra kiểu, kiểm tra nhà máy và đánh giá chứng nhận.",
+    "cccMarket_recoLow": "Không cần chứng nhận CCC cho danh mục sản phẩm này."
   },
   "Cookie": {
     "accept": "Chấp nhận tất cả",

@@ -2318,7 +2318,10 @@
     "yesLabelArtwork": "Igen – teljes laborjelentéssel",
     "yesSpecialCosmetics": "Igen: SPECIÁLIS kozmetikumok",
     "young_consumers_preference_for_international_brands": "A fiatal fogyasztók preferenciája a nemzetközi márkák iránt",
-    "yourProduct": "Az Ön terméke"
+    "yourProduct": "Az Ön terméke",
+    "cccGlossary_factoryAuditTerm": "Gyári audit",
+    "cccMarket_recoHigh": "CCC-tanúsítvány szükséges – vegyen fel egy CNCA által akkreditált tanúsító szervezetet a típusvizsgálathoz, a gyári ellenőrzéshez és a tanúsítás felülvizsgálatához. Professzionális megfelelőségi támogatás javasolt.",
+    "cccMarket_recoLow": "Ehhez a termékkategóriához nincs szükség CCC-tanúsítványra. Szabványos piacra lépési eljárások érvényesek."
   },
   "Cookie": {
     "accept": "Az összes elfogadása",

@@ -125,7 +125,7 @@ export function getGlossary(module: string, locale?: string): { term: string; de
       {term: "GB 9254", def: t('cccGlossary_gb9254')},
       {term: "CB Report", def: t('cccGlossary_cbReport')},
       {term: "SRRC", def: t('cccGlossary_srrc')},
-      {term: "Factory Audit", def: t('cccGlossary_factoryAudit')},
+      {term: t('cccGlossary_factoryAuditTerm'), def: t('cccGlossary_factoryAudit')},
       {term: "SDOC", def: t('cccGlossary_sdoc')},
     ],
     "Chinese Label Compliance": [

@@ -2318,7 +2318,10 @@
     "yesLabelArtwork": "Ja - med fuld laboratorierapport",
     "yesSpecialCosmetics": "Ja - SPECIAL kosmetik",
     "young_consumers_preference_for_international_brands": "Unge forbrugeres præference for internationale mærker",
-    "yourProduct": "Dit produkt"
+    "yourProduct": "Dit produkt",
+    "cccGlossary_factoryAuditTerm": "Fabriksrevision",
+    "cccMarket_recoHigh": "CCC-certificering påkrævet — engager et CNCA-akkrediteret certificeringsorgan til typeafprøvning, fabriksinspektion og certificeringsgennemgang.",
+    "cccMarket_recoLow": "Der kræves ingen CCC-certificering for denne produktkategori."
   },
   "Cookie": {
     "accept": "Accepter alle",

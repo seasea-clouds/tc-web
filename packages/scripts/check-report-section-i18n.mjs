@@ -15,6 +15,10 @@
  *   测试: NiceClassification.tsx - key.replace(/_/g, ' ').replace(...)
  *   修复: 使用 t() 翻译
  *
+ * Pattern D: {term: "English Text", def: t('...')} 术语硬编码英文
+ *   测试: template.tsx - 术语定义中的硬编码英文术语
+ *   修复: 使用 t('...Term') 翻译
+ *
  * 用法:
  *   node packages/scripts/check-section-data-i18n.mjs [--ci]
  *
@@ -31,6 +35,18 @@ const isCi = process.argv.includes('--ci');
 const hasProject = process.argv.some(a => a.startsWith('--project='));
 
 const SECTIONS_DIR = path.join(repoRoot, 'apps/portal/src/core/report/sections');
+const TEMPLATE_PATH = path.join(repoRoot, 'apps/portal/src/core/report/template.tsx');
+
+/* 术语白名单：这些硬编码术语有理由保持英文（缩写/标准号/品牌名等） */
+const GLOSSARY_ALLOW_TERM_EXACT = [
+  // 缩写/标准号
+  'CCC', 'CNCA', 'GB 4943', 'GB 9254', 'CB Report', 'SRRC', 'SDOC',
+  'GACC', 'CIFER', 'CRA', 'CIQ', 'GB 7718', 'GB 28050', 'Decree 248',
+  'GB 2760', "NRV%", 'NMPA', 'CSAR', 'ICSC', 'Chinese RP', 'GMP',
+  'CBEC', '1210', '9610', 'PIPL', 'Tmall Global',
+  'CNIPA', 'Nice Classification', 'Madrid System',
+  'HS Code',
+];
 const LEGER_ENGLISH_DURATIONS = new Set([
   '1-2 weeks', '2-4 weeks', '4-6 weeks', '4-8 weeks', '6-12 weeks',
   '3-8 weeks', '2-3 weeks', '1-3 weeks',
@@ -113,10 +129,38 @@ function scanDir(dirPath) {
   return all;
 }
 
+function checkGlossaryTerms() {
+  if (!fs.existsSync(TEMPLATE_PATH)) return [];
+  const content = fs.readFileSync(TEMPLATE_PATH, 'utf-8');
+  const lines = content.split('\n');
+  const issues = [];
+  const relPath = path.relative(repoRoot, TEMPLATE_PATH);
+
+  // Find {term: "...", def: t('...')} or {term: '...', def: t('...')}
+  // where term is NOT wrapped in t()
+  const termRe = /\{term:\s*['"]([^'"]+)['"]\s*,\s*def:\s*t\(/g;
+  let match;
+  while ((match = termRe.exec(content)) !== null) {
+    const term = match[1];
+    // Skip if all-caps abbreviation or known allowlist entry
+    if (GLOSSARY_ALLOW_TERM_EXACT.includes(term)) continue;
+    const lineNum = content.substring(0, match.index).split('\n').length;
+    issues.push({
+      file: relPath,
+      line: lineNum,
+      pattern: 'D',
+      text: `术语硬编码英文: "${term}" — 需使用 t('...Term') 翻译`,
+      fix: `替换为 t('someModuleGlossary_${term.replace(/[^a-zA-Z0-9]/g, '_').toLowerCase()}Term')`
+    });
+  }
+
+  return issues;
+}
+
 function run() {
   console.log('🔍 检测报告章节组件中未翻译的数据层英文...\n');
 
-  const issues = scanDir(SECTIONS_DIR);
+  const issues = [...scanDir(SECTIONS_DIR), ...checkGlossaryTerms()];
 
   if (issues.length === 0) {
     console.log('✅ 所有报告章节组件的数据层翻译检查通过\n');
@@ -124,14 +168,14 @@ function run() {
   }
 
   // Group by pattern type
-  const byPattern = { A: [], B: [], C: [] };
+  const byPattern = { A: [], B: [], C: [], D: [] };
   for (const issue of issues) {
     (byPattern[issue.pattern] || []).push(issue);
   }
 
   for (const [pattern, items] of Object.entries(byPattern)) {
     if (items.length === 0) continue;
-    const patternNames = { A: '持续时间字段', B: 'CamelCase键名标签', C: 'SnakeCase键名标签' };
+    const patternNames = { A: '持续时间字段', B: 'CamelCase键名标签', C: 'SnakeCase键名标签', D: '术语硬编码英文' };
     console.log(`\n📋 模式 ${pattern}: ${patternNames[pattern] || pattern} (${items.length} 个问题)`);
     console.log('─'.repeat(60));
     for (const item of items) {

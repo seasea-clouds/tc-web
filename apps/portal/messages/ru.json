@@ -2318,7 +2318,10 @@
     "yesLabelArtwork": "Да: с полным лабораторным отчетом",
     "yesSpecialCosmetics": "Да: СПЕЦИАЛЬНАЯ косметика",
     "young_consumers_preference_for_international_brands": "Предпочтение молодых потребителей международным брендам",
-    "yourProduct": "Ваш продукт"
+    "yourProduct": "Ваш продукт",
+    "cccGlossary_factoryAuditTerm": "Заводской аудит",
+    "cccMarket_recoHigh": "Требуется сертификация CCC — привлеките орган по сертификации, аккредитованный CNCA, для типовых испытаний, заводской проверки и проверки сертификации.",
+    "cccMarket_recoLow": "Для этой категории продуктов сертификация CCC не требуется."
   },
   "Cookie": {
     "accept": "Принять все",

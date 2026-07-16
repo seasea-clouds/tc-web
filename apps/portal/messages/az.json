@@ -2318,7 +2318,10 @@
     "yesLabelArtwork": "Bəli - tam laboratoriya hesabatı ilə",
     "yesSpecialCosmetics": "Bəli: XÜSUSİ kosmetika",
     "young_consumers_preference_for_international_brands": "Gənc istehlakçıların beynəlxalq brendlərə üstünlük verməsi",
-    "yourProduct": "Məhsulunuz"
+    "yourProduct": "Məhsulunuz",
+    "cccGlossary_factoryAuditTerm": "Zavod Auditi",
+    "cccMarket_recoHigh": "CCC sertifikatı tələb olunur — tip testi, zavod yoxlaması və sertifikatlaşdırmanın nəzərdən keçirilməsi üçün CNCA tərəfindən akkreditə olunmuş sertifikatlaşdırma orqanını cəlb edin. Peşəkar uyğunluq dəstəyi tövsiyə olunur.",
+    "cccMarket_recoLow": "Bu məhsul kateqoriyası üçün CCC sertifikatı tələb olunmur. Standart bazara giriş prosedurları tətbiq olunur."
   },
   "Cookie": {
     "accept": "Hamısını qəbul et",

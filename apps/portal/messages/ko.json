@@ -2318,7 +2318,10 @@
     "yesLabelArtwork": "예: 전체 연구 보고서 포함",
     "yesSpecialCosmetics": "예: 특수 화장품",
     "young_consumers_preference_for_international_brands": "해외 브랜드에 대한 젊은 소비자의 선호",
-    "yourProduct": "귀하의 제품"
+    "yourProduct": "귀하의 제품",
+    "cccGlossary_factoryAuditTerm": "공장 감사",
+    "cccMarket_recoHigh": "CCC 인증 필요 — 유형 테스트, 공장 검사 및 인증 검토를 위해 CNCA 공인 인증 기관에 참여하세요.",
+    "cccMarket_recoLow": "이 제품 카테고리에는 CCC 인증이 필요하지 않습니다."
   },
   "Cookie": {
     "accept": "모두 수락",

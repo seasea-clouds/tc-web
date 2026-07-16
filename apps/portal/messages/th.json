@@ -2318,7 +2318,10 @@
     "yesLabelArtwork": "ใช่: พร้อมรายงานห้องปฏิบัติการฉบับเต็ม",
     "yesSpecialCosmetics": "ใช่: เครื่องสำอางพิเศษ",
     "young_consumers_preference_for_international_brands": "ความชอบของผู้บริโภครุ่นใหม่สำหรับแบรนด์ต่างประเทศ",
-    "yourProduct": "สินค้าของคุณ"
+    "yourProduct": "สินค้าของคุณ",
+    "cccGlossary_factoryAuditTerm": "การตรวจสอบโรงงาน",
+    "cccMarket_recoHigh": "ต้องมีการรับรอง CCC — มีส่วนร่วมกับหน่วยรับรองที่ได้รับการรับรองจาก CNCA สำหรับการทดสอบประเภท การตรวจสอบโรงงาน และการตรวจสอบการรับรอง",
+    "cccMarket_recoLow": "ไม่จำเป็นต้องมีการรับรอง CCC สำหรับหมวดหมู่ผลิตภัณฑ์นี้"
   },
   "Cookie": {
     "accept": "ยอมรับทั้งหมด",

@@ -96,6 +96,7 @@ const NO_TRANSLATE = new Set([
   'David Zhang', 'Sarah Chen', 'Mike Wang', 'Leo Liu',
   'GB 7718-2025', 'you@company.com', 'John Smith',
   'GACC', 'NMPA', 'CCC', 'CBEC', 'CIFER', 'MOA', 'CNCA', 'MEE', 'min',
+  'MFDS',
 ]);
 
 // ============================================================

@@ -1373,5 +1373,27 @@
     "terminationText": "Vi förbehåller oss rätten att stänga av eller avsluta din åtkomst till våra tjänster när som helst, utan förvarning, för beteende som vi anser bryter mot dessa villkor eller är skadligt för andra användare, tredje part eller våra affärsintressen.",
     "terminationTitle": "Uppsägning",
     "title": "Användarvillkor"
+  },
+  "BlogFaqKoreanCosmeticsGuide": {
+    "faqQ1": "Behöver ett koreanskt kosmetikamärke NMPA-anmälan för allmän handelsimport?",
+    "faqA1": "Ja. Om du importerar kosmetika genom allmän handel (inte gränsöverskridande e-handel) måste varje produkt antingen registreras (vanlig kosmetika) eller registreras (special kosmetika) hos NMPA före import. Detta gäller alla märken oavsett ursprungsland.",
+    "faqQ2": "Kan jag sälja koreanska kosmetika genom gränsöverskridande e-handel utan NMPA-anmälan?",
+    "faqA2": "Ja, som ett alternativ. CBEC-plattformar som Tmall Global och JD Worldwide tillåter försäljning av kosmetika utan NMPA-anmälan om produkterna finns på positivlistan. CBEC-produkter kan dock inte säljas via offline-detaljhandel eller inhemska e-handelsplattformar. Många koreanska varumärken använder CBEC som en marknadstestkanal samtidigt som de förbereder full NMPA-efterlevnad.",
+    "faqQ3": "Betraktas ett schampo som en vanlig eller speciell kosmetika?",
+    "faqA3": "Ett standardschampo vars primära funktion är rengöring är en vanlig kosmetika, oavsett om den innehåller hårbottenvård eller hårnäring. Men om en schampoprodukt uttryckligen hävdar anti-håravfall (防脱发) eller främjande av hårväxt (育发/生发), passerar den in i ett speciellt kosmetikaterritorium som kräver fullständig registrering.",
+    "faqQ4": "Hur klassificeras produkter för hårbottenvård och hårbottenessens?",
+    "faqA4": "Det beror på påståendena. En hårbottenprodukt är en vanlig kosmetika om påståenden är begränsade till fuktgivande, närande, lugnande, oljekontroll eller mjällkontroll. Det blir en speciell kosmetika om påståenden inkluderar hårväxt, håravfall mot hår eller håråterväxt. Exakt samma formulering kan lämnas in på olika sätt beroende på vilka påståenden du gör.",
+    "faqQ5": "Vad händer om min kosmetikaprodukt marknadsförs för barn eller gravida kvinnor?",
+    "faqA5": "Skärpta krav gäller. Produkter för barn (12 år och yngre) kräver obligatoriska mikrobiologiska och toxikologiska tester utan undantag från djurförsök, en särskild utvärdering av kosmetika för barn, etikettikonen 小金盾 (gyllene sköld) på förpackningen och formulering begränsad till NMPA-godkända barningredienser. Produkter som marknadsförs som graviditetssäkra kräver adekvat stödjande säkerhetsdata.",
+    "faqQ6": "Kan jag använda samma produktformel som jag säljer i Korea för den kinesiska marknaden?",
+    "faqA6": "Inte nödvändigtvis. Vissa ingredienser som godkänts av Koreas MFDS kan vara förbjudna i Kina eller omfattas av andra koncentrationsgränser. En fullständig granskning av ingrediensöverensstämmelse mot NMPA:s förbjudna och begränsade listor är avgörande. Dessutom kräver NMPA i allmänhet testning vid CNAS-ackrediterade kinesiska laboratorier för den slutliga ansökan eller registreringen.",
+    "faqQ7": "Hur lång tid tar ansöknings- eller registreringsprocessen för NMPA kosmetika?",
+    "faqA7": "Tidslinjerna varierar avsevärt. Tidslinjen för inlämning av vanliga kosmetika beror på formelns komplexitet, beredskapen för säkerhetsbedömning och om djurförsök krävs. Särskild kosmetikaregistrering tar avsevärt längre tid på grund av kliniska effektivitetstester vid NMPA-ackrediterade laboratorier, vilket ensamt kan ta flera månader. Den snabbaste vägen är vanlig kosmetikaanmälan med en fullständig säkerhetsbedömning och inga barnanspråk.",
+    "faqQ8": "Vilka dokument krävs för NMPA kosmetikaanmälan?",
+    "faqA8": "Nyckeldokument för vanlig kosmetikaanmälan inkluderar: komplett produktformel med koncentrationer, gratisförsäljningscertifikat från MFDS med attesterad kinesisk översättning, tillverkningslicens eller GMP-certifikat, produktkvalitetsstandard, etikett- och förpackningsmodeller, säkerhetsbedömningsrapport och fullmakt att utse en kinesisk ansvarig person. Specialkosmetika kräver ytterligare kliniska effektivitetstestrapporter.",
+    "faqQ9": "Kan jag lämna in en produkt men sälja flera varianter (olika storlekar, dofter)?",
+    "faqA9": "I allmänhet kräver varje variant en separat arkivering. Produkter som skiljer sig i formulering, doft, färg eller koncentration av aktiv ingrediens behandlas som separata SKU:er. Produkter som endast varierar i förpackningsstorlek (samma formel, olika volymer) kan dock dela en fil under vissa förutsättningar.",
+    "faqQ10": "Behöver jag ett kinesiskt företag för att anmäla kosmetika till NMPA?",
+    "faqA10": "Ja. Varje kosmetikaprodukt som importeras till Kina måste ha en kinesisk inhemsk ansvarig person – en juridisk person registrerad i Kina med kosmetikarelaterad verksamhet. Detta kan vara ditt eget kinesiska dotterbolag, en distributör eller en tredjepartstjänsteleverantör. Den ansvariga personen är juridiskt ansvarig för produktsäkerhet och hanterar all NMPA-kommunikation."
   }
 }

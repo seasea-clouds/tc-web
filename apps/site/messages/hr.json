@@ -1373,5 +1373,27 @@
     "terminationText": "Zadržavamo pravo obustaviti ili ukinuti vaš pristup našim uslugama u bilo kojem trenutku, bez prethodne obavijesti, za ponašanje za koje smatramo da krši ove Uvjete ili je štetno za druge korisnike, treće strane ili naše poslovne interese.",
     "terminationTitle": "Raskid",
     "title": "Uvjeti usluge"
+  },
+  "BlogFaqKoreanCosmeticsGuide": {
+    "faqQ1": "Treba li korejska marka kozmetike NMPA prijavu za opću trgovinu uvoza?",
+    "faqA1": "Da. Ako uvozite kozmetiku kroz opću trgovinu (ne prekograničnu e-trgovinu), svaki proizvod mora biti prijavljen (obična kozmetika) ili registriran (posebna kozmetika) pri NMPA prije uvoza. Ovo se odnosi na sve marke bez obzira na zemlju porijekla.",
+    "faqQ2": "Mogu li prodavati korejsku kozmetiku putem prekogranične e-trgovine bez prijave NMPA?",
+    "faqA2": "Da, kao alternativa. CBEC platforme poput Tmall Global i JD Worldwide dopuštaju prodaju kozmetike bez NMPA prijave ako su proizvodi na Pozitivnoj listi. Međutim, CBEC proizvodi ne mogu se prodavati putem izvanmrežnih maloprodajnih ili domaćih platformi za e-trgovinu. Mnogi korejski brendovi koriste CBEC kao kanal za testiranje tržišta dok pripremaju punu usklađenost s NMPA.",
+    "faqQ3": "Smatra li se šampon običnom ili posebnom kozmetikom?",
+    "faqA3": "Standardni šampon čija je primarna funkcija čišćenje obična je kozmetika, bez obzira uključuje li njegu vlasišta ili njegu kose. Međutim, ako proizvod šampona izričito tvrdi protiv ispadanja kose (防脱发) ili pospješuje rast kose (育发/生发), on prelazi u posebno kozmetičko područje koje zahtijeva punu registraciju.",
+    "faqQ4": "Kako su klasificirani proizvodi za njegu vlasišta i esencije za vlasište?",
+    "faqA4": "Ovisi o tvrdnjama. Proizvod za vlasište obična je kozmetika ako su tvrdnje ograničene na hidrataciju, njegu, umirivanje, kontrolu masnoće ili kontrolu prhuti. Postaje posebna kozmetika ako tvrdnje uključuju rast kose, protiv gubitka kose ili ponovni rast kose. Potpuno ista formulacija može se podnijeti na različite načine, ovisno o tome koje tvrdnje podnosite.",
+    "faqQ5": "Što se događa ako se moj kozmetički proizvod prodaje za djecu ili trudnice?",
+    "faqA5": "Primjenjuju se stroži zahtjevi. Proizvodi za djecu (u dobi od 12 godina i mlađi) zahtijevaju obvezna mikrobiološka i toksikološka testiranja bez izuzeća testiranja na životinjama, posebnu procjenu dječje kozmetike, ikonu oznake 小金盾 (zlatni štit) na pakiranju i formulaciju ograničenu na sastojke za djecu koje je odobrila NMPA. Proizvodi koji se prodaju kao sigurni za trudnoću zahtijevaju odgovarajuće podatke o sigurnosti.",
+    "faqQ6": "Mogu li koristiti istu formulu proizvoda koju prodajem u Koreji za kinesko tržište?",
+    "faqA6": "Nije nužno. Neki sastojci koje je odobrio korejski MFDS mogu biti zabranjeni u Kini ili podliježu drugim ograničenjima koncentracije. Neophodan je potpuni pregled usklađenosti sastojaka s popisima zabranjenih i ograničenih sastojaka NMPA. Osim toga, NMPA općenito zahtijeva testiranje u kineskim laboratorijima akreditiranim od CNAS-a za konačnu prijavu ili registraciju.",
+    "faqQ7": "Koliko dugo traje postupak prijave ili registracije kozmetike NMPA?",
+    "faqA7": "Rokovi se značajno razlikuju. Vremenski okvir za podnošenje običnih kozmetičkih proizvoda ovisi o složenosti formule, spremnosti procjene sigurnosti i je li potrebno testiranje na životinjama. Registracija posebne kozmetike traje znatno dulje zbog testiranja kliničke učinkovitosti u laboratorijima s akreditacijom NMPA, što samo može trajati nekoliko mjeseci. Najbrži put je obična kozmetička turpija s potpunom procjenom sigurnosti i bez dječjih reklamacija.",
+    "faqQ8": "Koji su dokumenti potrebni za prijavu NMPA kozmetike?",
+    "faqA8": "Ključni dokumenti za podnošenje običnih kozmetičkih proizvoda uključuju: potpunu formulu proizvoda s koncentracijama, potvrdu o slobodnoj prodaji od MFDS-a s ovjerenim kineskim prijevodom, licencu za proizvodnju ili GMP potvrdu, standard kvalitete proizvoda, modele etikete i pakiranja, izvješće o procjeni sigurnosti i punomoć za imenovanje kineske odgovorne osobe. Posebna kozmetika zahtijeva dodatna izvješća o ispitivanju kliničke učinkovitosti.",
+    "faqQ9": "Mogu li prijaviti jedan proizvod, ali prodavati više varijanti (različite veličine, mirisi)?",
+    "faqA9": "Općenito, svaka varijanta zahtijeva zasebno podnošenje. Proizvodi koji se razlikuju po formulaciji, mirisu, boji ili koncentraciji aktivnog sastojka tretiraju se kao zasebni SKU-ovi. Međutim, proizvodi koji se razlikuju samo po veličini pakiranja (ista formula, različiti volumeni) mogu dijeliti dokumentaciju pod određenim uvjetima.",
+    "faqQ10": "Trebam li kinesku tvrtku za prijavu kozmetike kod NMPA?",
+    "faqA10": "Da. Svaki kozmetički proizvod koji se uvozi u Kinu mora imati kinesku domaću odgovornu osobu — pravni subjekt registriran u Kini s djelokrugom poslovanja vezanim uz kozmetiku. To može biti vaša kineska podružnica, distributer ili pružatelj usluga treće strane. Odgovorna osoba je zakonski odgovorna za sigurnost proizvoda i upravlja svim NMPA komunikacijama."
   }
 }

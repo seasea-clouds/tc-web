@@ -1373,5 +1373,27 @@
     "terminationText": "Bu Koşulları ihlal ettiğine veya diğer kullanıcılara, üçüncü taraflara veya ticari çıkarlarımıza zarar verdiğine inandığımız davranışlar nedeniyle, hizmetlerimize erişiminizi herhangi bir zamanda önceden bildirimde bulunmaksızın askıya alma veya sonlandırma hakkını saklı tutarız.",
     "terminationTitle": "Fesih",
     "title": "Hizmet Şartları"
+  },
+  "BlogFaqKoreanCosmeticsGuide": {
+    "faqQ1": "Koreli bir kozmetik markasının genel ticari ithalatlar için NMPA başvurusuna ihtiyacı var mı?",
+    "faqA1": "Evet. Kozmetik ürünlerini genel ticaret yoluyla (sınır ötesi e-ticaret değil) ithal ediyorsanız, her ürünün ithalattan önce NMPA'ya dosyalanması (sıradan kozmetikler) veya kaydedilmesi (özel kozmetikler) gerekir. Bu, menşe ülkesine bakılmaksızın tüm markalar için geçerlidir.",
+    "faqQ2": "Kore kozmetik ürünlerini NMPA başvurusu yapmadan sınır ötesi e-ticaret yoluyla satabilir miyim?",
+    "faqA2": "Evet, alternatif olarak. Tmall Global ve JD Worldwide gibi CBEC platformları, ürünlerin Pozitif Listede olması durumunda NMPA başvurusu yapılmadan kozmetik satışına izin verir. Ancak CBEC ürünleri çevrimdışı perakende veya yerel e-ticaret platformları aracılığıyla satılamaz. Birçok Kore markası, tam NMPA uyumluluğuna hazırlanırken CBEC'i pazar test kanalı olarak kullanıyor.",
+    "faqQ3": "Şampuan sıradan mı yoksa özel bir kozmetik olarak mı değerlendiriliyor?",
+    "faqA3": "Temel işlevi temizleme olan standart bir şampuan, ister saç derisi bakımı ister saçı besleme iddiası içersin, sıradan bir kozmetiktir. Bununla birlikte, bir şampuan ürünü açıkça saç dökülmesini önleyici (防脱发) veya saç büyümesini teşvik edici (育发/生发) iddiasında bulunuyorsa, tam kayıt gerektiren özel kozmetik alanına girer.",
+    "faqQ4": "Saç derisi bakımı ve saç derisi özü ürünleri nasıl sınıflandırılır?",
+    "faqA4": "Bu iddialara bağlıdır. Bir saç derisi ürünü, iddiaların nemlendirici, besleyici, yatıştırıcı, yağ kontrolü veya kepek kontrolü ile sınırlı olması durumunda sıradan bir kozmetiktir. İddialar arasında saç büyümesi, saç dökülmesini önleme veya saçların yeniden uzaması yer alıyorsa özel bir kozmetik haline gelir. Tam olarak aynı formülasyon, hangi iddialarda bulunduğunuza bağlı olarak farklı şekilde sunulabilir.",
+    "faqQ5": "Kozmetik ürünüm çocuklara veya hamile kadınlara pazarlanırsa ne olur?",
+    "faqA5": "Daha katı gereksinimler geçerlidir. Çocuklara (12 yaş ve altı) yönelik ürünler, hayvanlar üzerinde test muafiyeti olmaksızın zorunlu mikrobiyolojik ve toksikolojik testler, özel bir çocuk kozmetik değerlendirmesi, ambalaj üzerinde 小金盾 (altın kalkan) etiket simgesi ve NMPA onaylı çocuklara yönelik içeriklerle sınırlı formülasyon gerektirir. Hamilelik açısından güvenli olarak pazarlanan ürünler yeterli destekleyici güvenlik verilerine ihtiyaç duyar.",
+    "faqQ6": "Kore'de sattığım ürün formülünün aynısını Çin pazarı için de kullanabilir miyim?",
+    "faqA6": "Mutlaka değil. Kore'nin MFDS'si tarafından onaylanan bazı bileşenler Çin'de yasaklanmış olabilir veya farklı konsantrasyon sınırlarına tabi olabilir. NMPA'nın yasaklanmış ve kısıtlanmış listelerine karşı tam bir içerik uygunluğu incelemesi esastır. Ek olarak NMPA, son başvuru veya kayıt için genellikle CNAS onaylı Çin laboratuvarlarında test yapılmasını gerektirir.",
+    "faqQ7": "NMPA kozmetik dosyalama veya kayıt işlemi ne kadar sürer?",
+    "faqA7": "Zaman çizelgeleri önemli ölçüde farklılık gösterir. Sıradan kozmetiklerin dosyalama zaman çizelgesi, formülün karmaşıklığına, güvenlik değerlendirmesinin hazır olup olmadığına ve hayvanlar üzerinde test yapılmasının gerekli olup olmadığına bağlıdır. Özel kozmetiklerin tescili, NMPA onaylı laboratuvarlarda yapılan klinik etkinlik testleri nedeniyle önemli ölçüde daha uzun sürer ve bu tek başına birkaç ay sürebilir. En hızlı yol, tam bir güvenlik değerlendirmesiyle ve çocuklara yönelik iddiaların bulunmadığı sıradan kozmetiklerin dosyalanmasıdır.",
+    "faqQ8": "NMPA kozmetik dosyalama için hangi belgeler gereklidir?",
+    "faqA8": "Sıradan kozmetik dosyalama için temel belgeler şunları içerir: konsantrasyonları içeren eksiksiz ürün formülü, noter tasdikli Çince tercümesi ile MFDS'den Ücretsiz Satış Sertifikası, üretim lisansı veya GMP sertifikası, ürün kalite standardı, etiket ve ambalaj modelleri, güvenlik değerlendirme raporu ve Çinli bir sorumlu kişiyi atayan vekaletname. Özel kozmetikler ek klinik etkinlik testi raporları gerektirir.",
+    "faqQ9": "Bir ürünü kayıt edip birden fazla çeşidi (farklı boyutlar, kokular) satabilir miyim?",
+    "faqA9": "Genellikle her varyant ayrı bir başvuru gerektirir. Formülasyon, koku, renk veya aktif madde konsantrasyonu açısından farklılık gösteren ürünler ayrı SKU'lar olarak değerlendirilir. Ancak yalnızca ambalaj boyutunda farklılık gösteren ürünler (aynı formül, farklı hacimler) belirli koşullar altında aynı dosyalamayı paylaşabilir.",
+    "faqQ10": "Kozmetik ürünlerini NMPA'ya dosyalamak için Çinli bir şirkete ihtiyacım var mı?",
+    "faqA10": "Evet. Çin'e ithal edilen her kozmetik ürünün, Çin'de kozmetikle ilgili iş kapsamına sahip kayıtlı bir tüzel kişilik olan bir Çinli yerel sorumlu kişisi olması gerekir. Bu, kendi Çin şubeniz, distribütörünüz veya üçüncü taraf hizmet sağlayıcınız olabilir. Sorumlu kişi, ürün güvenliğinden yasal olarak sorumludur ve tüm NMPA iletişimlerini yönetir."
   }
 }

@@ -1373,5 +1373,27 @@
     "terminationText": "Kami berhak menangguhkan atau menghentikan akses Anda ke layanan kami kapan saja, tanpa pemberitahuan, atas tindakan yang kami yakini melanggar Ketentuan ini atau merugikan pengguna lain, pihak ketiga, atau kepentingan bisnis kami.",
     "terminationTitle": "Penghentian",
     "title": "Ketentuan Layanan"
+  },
+  "BlogFaqKoreanCosmeticsGuide": {
+    "faqQ1": "Apakah merek kosmetik Korea memerlukan pengajuan NMPA untuk impor perdagangan umum?",
+    "faqA1": "Ya. Jika Anda mengimpor kosmetik melalui perdagangan umum (bukan e-commerce lintas batas), setiap produk harus diajukan (kosmetik biasa) atau didaftarkan (kosmetik khusus) ke NMPA sebelum diimpor. Hal ini berlaku untuk semua merek terlepas dari negara asalnya.",
+    "faqQ2": "Bisakah saya menjual kosmetik Korea melalui e-commerce lintas batas tanpa pengajuan NMPA?",
+    "faqA2": "Ya, sebagai alternatif. Platform CBEC seperti Tmall Global dan JD Worldwide mengizinkan penjualan kosmetik tanpa pengajuan NMPA jika produk termasuk dalam Daftar Positif. Namun produk CBEC tidak bisa dijual melalui retail offline atau platform e-commerce dalam negeri. Banyak merek Korea menggunakan CBEC sebagai saluran pengujian pasar sambil mempersiapkan kepatuhan penuh terhadap NMPA.",
+    "faqQ3": "Apakah sampo termasuk kosmetik biasa atau khusus?",
+    "faqA3": "Sampo standar yang fungsi utamanya membersihkan adalah kosmetik biasa, terlepas dari apakah itu mengandung klaim perawatan kulit kepala atau nutrisi rambut. Namun, jika produk sampo secara eksplisit mengklaim anti-rambut rontok (防脱发) atau promosi pertumbuhan rambut (育发/生发), produk tersebut masuk ke wilayah kosmetik khusus yang memerlukan registrasi penuh.",
+    "faqQ4": "Bagaimana klasifikasi produk perawatan kulit kepala dan sari kulit kepala?",
+    "faqA4": "Itu tergantung pada klaimnya. Produk kulit kepala adalah kosmetik biasa jika klaimnya terbatas pada pelembab, nutrisi, menenangkan, pengontrol minyak, atau pengontrol ketombe. Menjadi kosmetik khusus jika klaimnya mencakup penumbuh rambut, anti rambut rontok, atau penumbuh kembali rambut. Formulasi yang sama persis dapat diajukan secara berbeda tergantung pada klaim yang Anda buat.",
+    "faqQ5": "Apa jadinya jika produk kosmetik saya dipasarkan untuk anak-anak atau ibu hamil?",
+    "faqA5": "Persyaratan yang lebih ketat berlaku. Produk untuk anak-anak (usia 12 tahun ke bawah) memerlukan pengujian mikrobiologi dan toksikologi wajib tanpa pengecualian pengujian pada hewan, evaluasi kosmetik khusus anak-anak, ikon label 小金盾 (perisai emas) pada kemasan, dan formulasi terbatas pada bahan-bahan anak-anak yang disetujui NMPA. Produk yang dipasarkan sebagai produk yang aman untuk kehamilan memerlukan data keamanan pendukung yang memadai.",
+    "faqQ6": "Bisakah saya menggunakan formula produk yang sama dengan yang saya jual di Korea untuk pasar Tiongkok?",
+    "faqA6": "Belum tentu. Beberapa bahan yang disetujui oleh MFDS Korea mungkin dilarang di Tiongkok atau tunduk pada batasan konsentrasi yang berbeda. Tinjauan kepatuhan bahan secara menyeluruh terhadap daftar terlarang dan terbatas NMPA sangatlah penting. Selain itu, NMPA umumnya memerlukan pengujian di laboratorium Tiongkok yang terakreditasi CNAS untuk pengajuan atau pendaftaran akhir.",
+    "faqQ7": "Berapa lama proses pengajuan atau pendaftaran kosmetik NMPA?",
+    "faqA7": "Garis waktu sangat bervariasi. Jadwal pengarsipan kosmetik pada umumnya bergantung pada kompleksitas formula, kesiapan penilaian keamanan, dan apakah pengujian pada hewan diperlukan. Registrasi kosmetik khusus membutuhkan waktu jauh lebih lama karena pengujian kemanjuran klinis di laboratorium terakreditasi NMPA, yang bisa memakan waktu beberapa bulan. Jalur tercepat adalah pengarsipan kosmetik biasa dengan penilaian keamanan lengkap dan tidak ada klaim anak-anak.",
+    "faqQ8": "Dokumen apa saja yang diperlukan untuk pengajuan kosmetik NMPA?",
+    "faqA8": "Dokumen-dokumen penting untuk pengajuan kosmetik biasa meliputi: formula produk lengkap dengan konsentrasi, Sertifikat Penjualan Gratis dari MFDS dengan terjemahan bahasa Mandarin yang diaktakan, izin produksi atau sertifikat GMP, standar kualitas produk, maket label dan kemasan, laporan penilaian keamanan, dan surat kuasa yang menunjuk penanggung jawab Tiongkok. Kosmetik khusus memerlukan laporan uji kemanjuran klinis tambahan.",
+    "faqQ9": "Bisakah saya mengajukan satu produk tetapi menjual beberapa varian (ukuran berbeda, wewangian)?",
+    "faqA9": "Umumnya setiap varian memerlukan pengarsipan tersendiri. Produk yang berbeda dalam formulasi, wewangian, warna, atau konsentrasi bahan aktif diperlakukan sebagai SKU terpisah. Namun, produk yang hanya berbeda dalam ukuran kemasan (formula sama, volume berbeda) dapat berbagi pengarsipan dalam kondisi tertentu.",
+    "faqQ10": "Apakah saya memerlukan perusahaan China untuk mengajukan kosmetik ke NMPA?",
+    "faqA10": "Ya. Setiap produk kosmetik yang diimpor ke Tiongkok harus memiliki penanggung jawab domestik Tiongkok — badan hukum yang terdaftar di Tiongkok dengan ruang lingkup bisnis terkait kosmetik. Ini bisa berupa anak perusahaan Anda di Tiongkok, distributor, atau penyedia layanan pihak ketiga. Orang yang bertanggung jawab bertanggung jawab secara hukum atas keamanan produk dan menangani semua komunikasi NMPA."
   }
 }

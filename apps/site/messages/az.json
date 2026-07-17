@@ -1373,5 +1373,27 @@
     "terminationText": "Bu Şərtləri pozduğuna və ya digər istifadəçilərə, üçüncü tərəflərə və ya biznes maraqlarımıza zərərli olduğuna inandığımız hərəkətlərə görə, istənilən vaxt xəbərdarlıq etmədən xidmətlərimizə girişinizi dayandırmaq və ya ləğv etmək hüququmuzu özümüzdə saxlayırıq.",
     "terminationTitle": "Xitam",
     "title": "Xidmət Şərtləri"
+  },
+  "BlogFaqKoreanCosmeticsGuide": {
+    "faqQ1": "Koreya kosmetika markasının ümumi ticarət idxalı üçün NMPA sənədinə ehtiyacı varmı?",
+    "faqA1": "Bəli. Əgər siz kosmetikanı ümumi ticarət (sərhədsiz e-ticarət deyil) yolu ilə idxal edirsinizsə, idxaldan əvvəl hər bir məhsul ya NMPA-da (adi kosmetika) və ya qeydiyyatdan keçməlidir (xüsusi kosmetika). Bu, mənşə ölkəsindən asılı olmayaraq bütün brendlərə aiddir.",
+    "faqQ2": "NMPA sənədi olmadan transsərhəd e-ticarət vasitəsilə Koreya kosmetikasını sata bilərəmmi?",
+    "faqA2": "Bəli, alternativ olaraq. Tmall Global və JD Worldwide kimi CBEC platformaları, məhsullar Müsbət Siyahıda olarsa, NMPA sənədi olmadan kosmetika satışına icazə verir. Bununla belə, CBEC məhsulları oflayn pərakəndə və ya yerli e-ticarət platformaları vasitəsilə satıla bilməz. Bir çox Koreya brendləri tam NMPA uyğunluğunu hazırlayarkən CBEC-dən bazar sınaq kanalı kimi istifadə edirlər.",
+    "faqQ3": "Şampun adi və ya xüsusi kosmetik sayılır?",
+    "faqA3": "Əsas funksiyası təmizləmə olan standart şampun, baş dərisinə qulluq və ya saçın qidalanması iddialarını ehtiva etməsindən asılı olmayaraq, adi bir kosmetik məhsuldur. Bununla belə, şampun məhsulu açıq şəkildə saç tökülməsinə qarşı (防脱发) və ya saç artımının təşviqi (育发/生发) iddia edirsə, o, tam qeydiyyat tələb olunan xüsusi kosmetika ərazisinə keçir.",
+    "faqQ4": "Baş dərisinə qulluq və baş dərisi mahiyyəti məhsulları necə təsnif edilir?",
+    "faqA4": "Bu, iddialardan asılıdır. Əgər iddialar nəmləndirici, qidalandırıcı, sakitləşdirici, yağa nəzarət və ya kəpəyə nəzarətlə məhdudlaşırsa, baş dərisi məhsulu adi bir kosmetik məhsuldur. İddialara saç artımı, saç tökülməsinə qarşı və ya saçların yenidən böyüməsi daxildirsə, o, xüsusi bir kosmetik vasitəyə çevrilir. Təqdim etdiyiniz iddialardan asılı olaraq eyni tərtibat fərqli şəkildə təqdim edilə bilər.",
+    "faqQ5": "Mənim kosmetik məhsulum uşaqlar və ya hamilə qadınlar üçün satışa çıxarılarsa, nə baş verir?",
+    "faqA5": "Daha sərt tələblər tətbiq olunur. Uşaqlar üçün məhsullar (12 yaş və daha aşağı) heyvanlar üzərində sınaqdan azad edilmədən məcburi mikrobioloji və toksikoloji testlər, xüsusi uşaq kosmetikasının qiymətləndirilməsi, qablaşdırmada 小金盾 (qızıl qalxan) etiket işarəsi və NMPA tərəfindən təsdiqlənmiş uşaq inqrediyentləri ilə məhdudlaşan formulasiya tələb edir. Hamiləlik üçün təhlükəsiz kimi bazara çıxarılan məhsullar adekvat dəstəkləyici təhlükəsizlik məlumatları tələb edir.",
+    "faqQ6": "Koreyada satdığım eyni məhsul formulunu Çin bazarı üçün istifadə edə bilərəmmi?",
+    "faqA6": "Mütləq deyil. Koreyanın MFDS tərəfindən təsdiq edilmiş bəzi inqrediyentlər Çində qadağan oluna və ya fərqli konsentrasiya limitlərinə tabe ola bilər. NMPA-nın qadağan edilmiş və məhdudlaşdırılmış siyahılarına qarşı tam tərkib uyğunluğunun nəzərdən keçirilməsi vacibdir. Bundan əlavə, NMPA, ümumiyyətlə, son sənədləşmə və ya qeydiyyat üçün CNAS tərəfindən akkreditə olunmuş Çin laboratoriyalarında sınaq tələb edir.",
+    "faqQ7": "NMPA kosmetikasının verilməsi və ya qeydiyyatı prosesi nə qədər çəkir?",
+    "faqA7": "Vaxt qrafikləri əhəmiyyətli dərəcədə dəyişir. Adi kosmetika təqdim etmə qrafiki formulun mürəkkəbliyindən, təhlükəsizliyin qiymətləndirilməsinin hazırlığından və heyvan testinin tələb olunub-olunmamasından asılıdır. NMPA-da akkreditə olunmuş laboratoriyalarda klinik effektivlik testi aparıldığı üçün xüsusi kosmetika qeydiyyatı əhəmiyyətli dərəcədə uzun çəkir və bu, təkcə bir neçə ay çəkə bilər. Ən sürətli yol, tam təhlükəsizlik qiymətləndirməsi olan və uşaq iddiaları olmayan adi kosmetika müraciətidir.",
+    "faqQ8": "NMPA kosmetik sənədləri üçün hansı sənədlər tələb olunur?",
+    "faqA8": "Adi kosmetika sənədləri üçün əsas sənədlərə aşağıdakılar daxildir: konsentrasiyaları olan tam məhsul formulası, notarial qaydada təsdiq edilmiş Çin tərcüməsi ilə MFDS-dən Pulsuz Satış Sertifikatı, istehsal lisenziyası və ya GMP sertifikatı, məhsulun keyfiyyət standartı, etiket və qablaşdırma maketləri, təhlükəsizliyin qiymətləndirilməsi hesabatı və Çin məsul şəxsi təyin edən etibarnamə. Xüsusi kosmetika əlavə klinik effektivlik test hesabatları tələb edir.",
+    "faqQ9": "Bir məhsulu təqdim edə, lakin bir neçə variantı (müxtəlif ölçülər, ətirlər) sata bilərəmmi?",
+    "faqA9": "Ümumiyyətlə, hər bir variant üçün ayrıca ərizə tələb olunur. Tərkibində, ətirində, rəngində və ya aktiv inqrediyent konsentrasiyasında fərqlənən məhsullar ayrıca SKU kimi qəbul edilir. Bununla belə, yalnız qablaşdırma ölçüsündə (eyni düstur, müxtəlif həcmdə) fərqlənən məhsullar müəyyən şərtlər altında bir sənəd paylaşa bilər.",
+    "faqQ10": "NMPA ilə kosmetika təqdim etmək üçün Çin şirkətinə ehtiyacım varmı?",
+    "faqA10": "Bəli. Çinə idxal edilən hər bir kosmetika məhsulunun Çinli yerli məsul şəxsi - Çində kosmetika ilə bağlı biznes sahəsi ilə qeydiyyatdan keçmiş hüquqi şəxs olmalıdır. Bu, öz Çin filialınız, distribyutorunuz və ya üçüncü tərəf xidmət təminatçınız ola bilər. Məsul şəxs məhsulun təhlükəsizliyi üçün qanuni olaraq cavabdehdir və bütün NMPA kommunikasiyalarını idarə edir."
   }
 }

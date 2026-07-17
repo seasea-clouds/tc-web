@@ -1373,5 +1373,27 @@
     "terminationText": "Vyhradzujeme si právo kedykoľvek pozastaviť alebo ukončiť váš prístup k našim službám bez upozornenia za správanie, ktoré podľa nás porušuje tieto Podmienky alebo poškodzuje iných používateľov, tretie strany alebo naše obchodné záujmy.",
     "terminationTitle": "Ukončenie",
     "title": "Zmluvné podmienky"
+  },
+  "BlogFaqKoreanCosmeticsGuide": {
+    "faqQ1": "Potrebuje kórejská značka kozmetiky pre všeobecný obchodný dovoz registráciu NMPA?",
+    "faqA1": "áno. Ak dovážate kozmetiku prostredníctvom všeobecného obchodu (nie cezhraničného elektronického obchodu), každý výrobok musí byť pred dovozom buď zaregistrovaný (bežná kozmetika) alebo zaregistrovaný (špeciálna kozmetika) na NMPA. To platí pre všetky značky bez ohľadu na krajinu pôvodu.",
+    "faqQ2": "Môžem predávať kórejskú kozmetiku cez cezhraničný elektronický obchod bez podania NMPA?",
+    "faqA2": "Áno, ako alternatíva. Platformy CBEC ako Tmall Global a JD Worldwide umožňujú predaj kozmetiky bez registrácie NMPA, ak sú produkty na Pozitívnom zozname. Produkty CBEC však nemožno predávať prostredníctvom offline maloobchodných platforiem alebo domácich platforiem elektronického obchodu. Mnoho kórejských značiek používa CBEC ako kanál na testovanie trhu pri príprave úplného súladu s NMPA.",
+    "faqQ3": "Považuje sa šampón za bežnú alebo špeciálnu kozmetiku?",
+    "faqA3": "Štandardný šampón, ktorého primárnou funkciou je čistenie, je bežnou kozmetikou, bez ohľadu na to, či zahŕňa starostlivosť o pokožku hlavy alebo výživu vlasov. Ak sa však šampónový produkt výslovne hlási proti vypadávaniu vlasov (防脱发) alebo podporuje rast vlasov (育发/生发), prechádza na špeciálne kozmetické územie vyžadujúce úplnú registráciu.",
+    "faqQ4": "Ako sú klasifikované produkty starostlivosti o pokožku hlavy a esencie na pokožku hlavy?",
+    "faqA4": "Závisí to od nárokov. Produkt na pokožku hlavy je bežným kozmetickým prostriedkom, ak sa tvrdenia obmedzujú na zvlhčenie, výživu, upokojenie, kontrolu mastnoty alebo kontrolu lupín. Stane sa špeciálnou kozmetikou, ak tvrdenia zahŕňajú rast vlasov, boj proti vypadávaniu vlasov alebo opätovný rast vlasov. Presne rovnakú formuláciu možno podať odlišne v závislosti od toho, aké nároky uvádzate.",
+    "faqQ5": "Čo sa stane, ak sa môj kozmetický výrobok predáva pre deti alebo tehotné ženy?",
+    "faqA5": "Platia prísnejšie požiadavky. Výrobky pre deti (vo veku 12 a menej rokov) vyžadujú povinné mikrobiologické a toxikologické testovanie bez výnimky z testovania na zvieratách, špeciálne hodnotenie detskej kozmetiky, ikonu označenia 小金盾 (zlatý štít) na obale a zloženie obmedzené na detské zložky schválené NMPA. Výrobky predávané ako bezpečné pre tehotenstvo si vyžadujú primerané podporné údaje o bezpečnosti.",
+    "faqQ6": "Môžem použiť rovnaký vzorec produktu, aký predávam v Kórei pre čínsky trh?",
+    "faqA6": "Nie nevyhnutne. Niektoré zložky schválené kórejským MFDS môžu byť v Číne zakázané alebo môžu podliehať iným koncentračným limitom. Nevyhnutná je úplná kontrola súladu zložiek so zoznamom zakázaných a obmedzených zoznamov NMPA. Okrem toho NMPA vo všeobecnosti vyžaduje testovanie v čínskych laboratóriách akreditovaných CNAS na konečné podanie alebo registráciu.",
+    "faqQ7": "Ako dlho trvá podanie alebo registrácia kozmetiky NMPA?",
+    "faqA7": "Časové harmonogramy sa výrazne líšia. Časový harmonogram podávania bežnej kozmetiky závisí od zložitosti receptúry, pripravenosti na posúdenie bezpečnosti a od toho, či je potrebné testovanie na zvieratách. Registrácia špeciálnej kozmetiky trvá podstatne dlhšie kvôli testovaniu klinickej účinnosti v laboratóriách akreditovaných NMPA, ktoré samotné môže trvať niekoľko mesiacov. Najrýchlejšou cestou je bežná kozmetická registrácia s kompletným hodnotením bezpečnosti a bez detských nárokov.",
+    "faqQ8": "Aké dokumenty sú potrebné na podanie kozmetiky NMPA?",
+    "faqA8": "Medzi kľúčové dokumenty pre bežné podávanie kozmetických prípravkov patria: kompletný vzorec produktu s koncentráciami, certifikát o voľnom predaji od MFDS s notársky overeným čínskym prekladom, výrobná licencia alebo certifikát GMP, štandard kvality produktu, makety štítkov a obalov, správa o hodnotení bezpečnosti a splnomocnenie na vymenovanie zodpovednej osoby v Číne. Špeciálna kozmetika vyžaduje dodatočné správy o testoch klinickej účinnosti.",
+    "faqQ9": "Môžem podať jeden produkt, ale predávať viacero variantov (rôzne veľkosti, vône)?",
+    "faqA9": "Vo všeobecnosti si každý variant vyžaduje samostatné podanie. Produkty, ktoré sa líšia zložením, vôňou, farbou alebo koncentráciou účinnej látky, sa považujú za samostatné SKU. Avšak produkty, ktoré sa líšia iba veľkosťou balenia (rovnaký vzorec, rôzne objemy), môžu za určitých podmienok zdieľať podanie.",
+    "faqQ10": "Potrebujem čínsku spoločnosť na registráciu kozmetiky s NMPA?",
+    "faqA10": "áno. Každý kozmetický výrobok dovážaný do Číny musí mať čínsku domácu zodpovednú osobu – právnickú osobu registrovanú v Číne s podnikateľským zameraním súvisiacim s kozmetikou. Môže to byť vaša vlastná čínska dcérska spoločnosť, distribútor alebo poskytovateľ služieb tretej strany. Zodpovedná osoba je právne zodpovedná za bezpečnosť produktu a riadi všetku komunikáciu NMPA."
   }
 }

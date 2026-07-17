@@ -1373,5 +1373,27 @@
     "terminationText": "Varaamme oikeuden keskeyttää tai lopettaa pääsysi palveluihimme milloin tahansa ilman erillistä ilmoitusta käytöksestä, jonka uskomme rikkovan näitä ehtoja tai olevan haitallisia muille käyttäjille, kolmansille osapuolille tai liiketoimintaetuillemme.",
     "terminationTitle": "Irtisanominen",
     "title": "Palveluehdot"
+  },
+  "BlogFaqKoreanCosmeticsGuide": {
+    "faqQ1": "Tarvitseeko korealainen kosmetiikkabrändi NMPA-hakemuksen yleisen kaupan tuonnissa?",
+    "faqA1": "Kyllä. Jos tuot kosmetiikkaa yleiskaupan kautta (ei rajat ylittävän sähköisen kaupankäynnin kautta), jokainen tuote on joko rekisteröitävä (tavallinen kosmetiikka) tai rekisteröitävä (erikoiskosmetiikka) NMPA:lle ennen tuontia. Tämä koskee kaikkia merkkejä alkuperämaasta riippumatta.",
+    "faqQ2": "Voinko myydä korealaista kosmetiikkaa rajat ylittävän sähköisen kaupankäynnin kautta ilman NMPA-hakemusta?",
+    "faqA2": "Kyllä, vaihtoehtona. CBEC-alustat, kuten Tmall Global ja JD Worldwide, mahdollistavat kosmetiikan myynnin ilman NMPA-hakemusta, jos tuotteet ovat positiivisten luettelossa. CBEC-tuotteita ei kuitenkaan voi myydä offline-vähittäiskaupan tai kotimaisten verkkokaupan alustojen kautta. Monet korealaiset tuotemerkit käyttävät CBEC:tä markkinatestauskanavana valmistaessaan täyden NMPA-yhteensopivuuden.",
+    "faqQ3": "Onko shampoo tavallinen vai erikoiskosmetiikka?",
+    "faqA3": "Tavallinen shampoo, jonka päätehtävänä on puhdistaa, on tavallinen kosmetiikka riippumatta siitä, sisältääkö se päänahan hoitoa vai hiusten ravitsemusväittämiä. Jos shampootuotteessa kuitenkin nimenomaisesti väitetään estävän hiustenlähtöä (防脱发) tai edistävän hiusten kasvua (育发/生发), se siirtyy erikoiskosmetiikka-alueelle, joka vaatii täyden rekisteröinnin.",
+    "faqQ4": "Miten päänahanhoitotuotteet ja päänahan esanssit luokitellaan?",
+    "faqA4": "Riippuu väitteistä. Päänahan tuote on tavallinen kosmetiikka, jos väitteet rajoittuvat kosteuttamiseen, ravitsemiseen, rauhoittamiseen, öljyntorjuntaan tai hilseentorjuntaan. Siitä tulee erityinen kosmetiikka, jos väitteisiin sisältyy hiusten kasvua, hiustenlähtöä tai hiusten uudelleenkasvua. Täsmälleen sama muotoilu voidaan esittää eri tavalla sen mukaan, mitä väitteitä esität.",
+    "faqQ5": "Mitä tapahtuu, jos kosmetiikkatuotteeni markkinoidaan lapsille tai raskaana oleville naisille?",
+    "faqA5": "Vaatimukset ovat tiukemmat. Lapsille (12-vuotiaat ja sitä nuoremmat) tarkoitetut tuotteet edellyttävät pakollisia mikrobiologisia ja toksikologisia testejä ilman eläinkokeita koskevaa poikkeusta, lasten kosmetiikkaarvioinnin, 小金盾 (kultainen kilpi) -etikettikuvake pakkauksessa ja koostumus on rajoitettu NMPA-hyväksyttyihin lasten ainesosiin. Raskausturvallisina markkinoidut tuotteet edellyttävät riittävät turvallisuustiedot.",
+    "faqQ6": "Voinko käyttää samaa tuotekaavaa, jota myyn Koreassa Kiinan markkinoille?",
+    "faqA6": "Ei välttämättä. Jotkin Korean MFDS:n hyväksymät ainesosat voivat olla kiellettyjä Kiinassa tai niihin voidaan soveltaa erilaisia ​​pitoisuusrajoja. Täydellinen ainesosien vaatimustenmukaisuuden tarkistus NMPA:n kiellettyjen ja rajoitettujen luetteloiden suhteen on välttämätöntä. Lisäksi NMPA vaatii yleensä testauksen CNAS-akkreditoiduissa kiinalaisissa laboratorioissa lopullista rekisteröintiä tai rekisteröintiä varten.",
+    "faqQ7": "Kuinka kauan NMPA-kosmetiikan rekisteröinti- tai rekisteröintiprosessi kestää?",
+    "faqA7": "Aikajanat vaihtelevat huomattavasti. Tavallinen kosmetiikan arkistointiaikataulu riippuu kaavan monimutkaisuudesta, turvallisuusarviointivalmiudesta ja siitä, tarvitaanko eläinkokeita. Erikoiskosmetiikan rekisteröinti kestää huomattavasti kauemmin johtuen kliinisen tehokkuuden testauksesta NMPA-akkreditoiduissa laboratorioissa, mikä voi yksin kestää useita kuukausia. Nopein tie on tavallinen kosmetiikka-arkistointi täydellisellä turvallisuusarviolla ja ilman lasten vaatimuksia.",
+    "faqQ8": "Mitä asiakirjoja tarvitaan NMPA-kosmetiikkahakemukseen?",
+    "faqA8": "Tavanomaisen kosmetiikkahakemuksen tärkeimmät asiakirjat ovat: täydellinen tuotekaava pitoisuuksineen, MFDS:n vapaamyyntitodistus notaarin vahvistamalla kiinankielisellä käännöksellä, valmistuslisenssi tai GMP-todistus, tuotteen laatustandardi, etiketti- ja pakkausmallit, turvallisuusarviointiraportti ja valtakirja kiinalaisen vastuuhenkilön nimittämisestä. Erikoiskosmetiikka vaatii lisää kliinisen tehokkuuden testiraportteja.",
+    "faqQ9": "Voinko jättää yhden tuotteen, mutta myydä useita versioita (eri kokoja, tuoksuja)?",
+    "faqA9": "Yleensä jokainen versio vaatii erillisen arkistoinnin. Tuotteet, jotka eroavat koostumuksen, tuoksun, värin tai vaikuttavan aineen pitoisuuden suhteen, käsitellään erillisinä SKU:ina. Tuotteet, jotka vaihtelevat vain pakkauskoon osalta (sama kaava, erilaiset tilavuudet), voivat kuitenkin jakaa hakemuksen tietyin edellytyksin.",
+    "faqQ10": "Tarvitsenko kiinalaisen yrityksen toimittamaan kosmetiikkaa NMPA:lle?",
+    "faqA10": "Kyllä. Jokaisella Kiinaan tuodulla kosmetiikkatuotteella on oltava Kiinan kotimainen vastuuhenkilö – Kiinaan rekisteröity oikeushenkilö, jolla on kosmetiikkaan liittyvä liiketoiminta. Tämä voi olla oma kiinalainen tytäryhtiösi, jakelija tai kolmannen osapuolen palveluntarjoaja. Vastuuhenkilö on laillisesti vastuussa tuoteturvallisuudesta ja hoitaa kaiken NMPA-viestinnän."
   }
 }

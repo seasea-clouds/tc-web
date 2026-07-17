@@ -1373,5 +1373,27 @@
     "terminationText": "Tunahifadhi haki ya kusimamisha au kusitisha ufikiaji wako kwa huduma zetu wakati wowote, bila taarifa, kwa tabia ambayo tunaamini inakiuka Sheria na Masharti haya au inadhuru watumiaji wengine, washirika wengine, au maslahi yetu ya biashara.",
     "terminationTitle": "Kukomesha",
     "title": "Masharti ya Huduma"
+  },
+  "BlogFaqKoreanCosmeticsGuide": {
+    "faqQ1": "Je, chapa ya vipodozi ya Kikorea inahitaji faili ya NMPA kwa uagizaji wa jumla wa biashara?",
+    "faqA1": "Ndiyo. Ukiagiza vipodozi kupitia biashara ya jumla (sio biashara ya kielektroniki ya kuvuka mipaka), kila bidhaa lazima iwe na faili (vipodozi vya kawaida) au kusajiliwa (vipodozi maalum) na NMPA kabla ya kuagiza. Hii inatumika kwa bidhaa zote bila kujali nchi ya asili.",
+    "faqQ2": "Je, ninaweza kuuza vipodozi vya Kikorea kupitia biashara ya kielektroniki ya mipakani bila kujaza faili za NMPA?",
+    "faqA2": "Ndio, kama mbadala. Mifumo ya CBEC kama vile Tmall Global na JD Worldwide huruhusu mauzo ya vipodozi bila kujaza NMPA ikiwa bidhaa ziko kwenye Orodha Bora. Hata hivyo, bidhaa za CBEC haziwezi kuuzwa kupitia rejareja nje ya mtandao au majukwaa ya ndani ya biashara ya mtandaoni. Chapa nyingi za Kikorea hutumia CBEC kama njia ya kujaribu soko huku zikitayarisha utii kamili wa NMPA.",
+    "faqQ3": "Je, shampoo inachukuliwa kuwa vipodozi vya kawaida au maalum?",
+    "faqA3": "Shampoo ya kawaida ambayo kazi yake ya msingi ni utakaso ni vipodozi vya kawaida, bila kujali ikiwa ni pamoja na huduma ya kichwa au madai ya lishe ya nywele. Hata hivyo, ikiwa bidhaa ya shampoo inadai kwa uwazi kuzuia upotezaji wa nywele (防脱发) au kukuza ukuaji wa nywele (育发/生发), itavuka katika eneo maalum la vipodozi linalohitaji usajili kamili.",
+    "faqQ4": "Je, huduma ya ngozi ya kichwa na bidhaa za asili ya ngozi zimeainishwaje?",
+    "faqA4": "Inategemea madai. Bidhaa ya ngozi ya kichwa ni kipodozi cha kawaida ikiwa madai yanahusu kulainisha, kulisha, kutuliza, kudhibiti mafuta, au kudhibiti mba. Inakuwa kipodozi maalum ikiwa madai yanajumuisha ukuaji wa nywele, kuzuia upotezaji wa nywele, au ukuzaji upya wa nywele. Uundaji sawa kabisa unaweza kuwasilishwa kwa njia tofauti kulingana na madai gani unayotoa.",
+    "faqQ5": "Nini kitatokea ikiwa bidhaa yangu ya vipodozi inauzwa kwa watoto au wajawazito?",
+    "faqA5": "Mahitaji makali yanatumika. Bidhaa za watoto (umri wa miaka 12 na chini) zinahitaji upimaji wa lazima wa kibayolojia na sumu bila ruhusa ya kupima wanyama, tathmini maalum ya vipodozi vya watoto, aikoni ya lebo ya 小金盾 (ngao ya dhahabu) kwenye vifungashio, na uundaji pekee kwa viambato vya watoto vilivyoidhinishwa na NMPA. Bidhaa zinazouzwa kama salama kwa ujauzito zinahitaji data ya kutosha ya usalama.",
+    "faqQ6": "Je, ninaweza kutumia fomula sawa ya bidhaa ninayouza nchini Korea kwa soko la Uchina?",
+    "faqA6": "Si lazima. Baadhi ya viambato vilivyoidhinishwa na MFDS ya Korea vinaweza kupigwa marufuku nchini Uchina au chini ya viwango tofauti vya ukolezi. Mapitio kamili ya kufuata kiambato dhidi ya orodha zilizopigwa marufuku na zilizozuiliwa za NMPA ni muhimu. Zaidi ya hayo, NMPA kwa ujumla inahitaji upimaji katika maabara za Kichina zilizoidhinishwa na CNAS kwa ajili ya uwasilishaji au usajili wa mwisho.",
+    "faqQ7": "Mchakato wa kusajili au kusajili vipodozi vya NMPA huchukua muda gani?",
+    "faqA7": "Muda hutofautiana kwa kiasi kikubwa. Muda wa kuweka vipodozi vya kawaida hutegemea utata wa fomula, utayari wa kutathmini usalama, na kama upimaji wa wanyama unahitajika. Usajili wa vipodozi maalum huchukua muda mrefu zaidi kutokana na upimaji wa ufanisi wa kimatibabu katika maabara zilizoidhinishwa na NMPA, ambayo pekee inaweza kuchukua miezi kadhaa. Njia ya haraka sana ni kujaza vipodozi vya kawaida na tathmini kamili ya usalama na hakuna madai ya watoto.",
+    "faqQ8": "Ni nyaraka gani zinahitajika kwa ajili ya kufungua vipodozi vya NMPA?",
+    "faqA8": "Hati muhimu za uwekaji wa vipodozi vya kawaida ni pamoja na: fomula kamili ya bidhaa iliyo na viwango, Cheti cha Uuzaji Bila Malipo kutoka kwa MFDS chenye tafsiri ya Kichina iliyothibitishwa, leseni ya utengenezaji au cheti cha GMP, kiwango cha ubora wa bidhaa, lebo na vifungashio vya picha, ripoti ya tathmini ya usalama, na uwezo wa wakili kuteua Mchina anayewajibika. Vipodozi maalum vinahitaji ripoti za ziada za mtihani wa ufanisi wa kliniki.",
+    "faqQ9": "Je! ninaweza kuwasilisha bidhaa moja lakini niuze lahaja nyingi (saizi tofauti, manukato)?",
+    "faqA9": "Kwa ujumla, kila lahaja inahitaji faili tofauti. Bidhaa ambazo hutofautiana katika uundaji, harufu, rangi, au ukolezi wa viambato vinavyotumika huchukuliwa kama SKU tofauti. Hata hivyo, bidhaa ambazo hutofautiana tu katika ukubwa wa ufungaji (fomula sawa, kiasi tofauti) zinaweza kushiriki kufungua chini ya hali fulani.",
+    "faqQ10": "Je, ninahitaji kampuni ya Kichina ili kuwasilisha vipodozi na NMPA?",
+    "faqA10": "Ndiyo. Kila bidhaa ya vipodozi inayoingizwa nchini Uchina lazima iwe na Mchina anayewajibika nchini - huluki ya kisheria iliyosajiliwa nchini Uchina iliyo na wigo wa biashara unaohusiana na vipodozi. Hii inaweza kuwa kampuni yako tanzu ya Uchina, msambazaji, au mtoa huduma wa watu wengine. Mtu anayewajibika anawajibika kisheria kwa usalama wa bidhaa na anashughulikia mawasiliano yote ya NMPA."
   }
 }

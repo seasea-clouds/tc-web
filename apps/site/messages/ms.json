@@ -1373,5 +1373,27 @@
     "terminationText": "Kami berhak untuk menggantung atau menamatkan akses anda kepada perkhidmatan kami pada bila-bila masa, tanpa notis, kerana kelakuan yang kami percaya melanggar Syarat ini atau berbahaya kepada pengguna lain, pihak ketiga, atau kepentingan perniagaan kami.",
     "terminationTitle": "Penamatan",
     "title": "Syarat Perkhidmatan"
+  },
+  "BlogFaqKoreanCosmeticsGuide": {
+    "faqQ1": "Adakah jenama kosmetik Korea memerlukan pemfailan NMPA untuk import perdagangan am?",
+    "faqA1": "ya. Jika anda mengimport kosmetik melalui perdagangan am (bukan e-dagang rentas sempadan), setiap produk mesti sama ada difailkan (kosmetik biasa) atau berdaftar (kosmetik khas) dengan NMPA sebelum diimport. Ini terpakai kepada semua jenama tanpa mengira negara asal.",
+    "faqQ2": "Bolehkah saya menjual kosmetik Korea melalui e-dagang rentas sempadan tanpa pemfailan NMPA?",
+    "faqA2": "Ya, sebagai alternatif. Platform CBEC seperti Tmall Global dan JD Worldwide membenarkan jualan kosmetik tanpa pemfailan NMPA jika produk berada dalam Senarai Positif. Walau bagaimanapun, produk CBEC tidak boleh dijual melalui runcit luar talian atau platform e-dagang domestik. Banyak jenama Korea menggunakan CBEC sebagai saluran ujian pasaran sambil menyediakan pematuhan NMPA penuh.",
+    "faqQ3": "Adakah syampu dianggap sebagai kosmetik biasa atau istimewa?",
+    "faqA3": "Syampu standard yang fungsi utamanya ialah pembersihan adalah kosmetik biasa, tidak kira sama ada ia termasuk penjagaan kulit kepala atau tuntutan khasiat rambut. Walau bagaimanapun, jika produk syampu secara eksplisit mendakwa anti-rambut gugur (防脱发) atau promosi pertumbuhan rambut (育发/生发), ia melintasi wilayah kosmetik khas yang memerlukan pendaftaran penuh.",
+    "faqQ4": "Bagaimanakah penjagaan kulit kepala dan produk pati kulit kepala dikelaskan?",
+    "faqA4": "Ia bergantung kepada tuntutan. Produk kulit kepala adalah kosmetik biasa jika tuntutan terhad kepada pelembap, berkhasiat, menenangkan, kawalan minyak, atau kawalan kelemumur. Ia menjadi kosmetik istimewa jika tuntutan termasuk pertumbuhan rambut, anti-rambut gugur, atau pertumbuhan semula rambut. Formulasi yang sama boleh difailkan secara berbeza bergantung pada tuntutan yang anda buat.",
+    "faqQ5": "Apakah yang berlaku jika produk kosmetik saya dipasarkan untuk kanak-kanak atau wanita hamil?",
+    "faqA5": "Keperluan yang lebih ketat dikenakan. Produk untuk kanak-kanak (umur 12 tahun ke bawah) memerlukan ujian mikrobiologi dan toksikologi mandatori tanpa pengecualian ujian haiwan, penilaian kosmetik kanak-kanak yang berdedikasi, ikon label 小金盾 (perisai emas) pada pembungkusan dan formulasi terhad kepada bahan kanak-kanak yang diluluskan oleh NMPA. Produk yang dipasarkan sebagai selamat kehamilan memerlukan data keselamatan sokongan yang mencukupi.",
+    "faqQ6": "Bolehkah saya menggunakan formula produk yang sama yang saya jual di Korea untuk pasaran China?",
+    "faqA6": "Tidak semestinya. Sesetengah bahan yang diluluskan oleh MFDS Korea mungkin dilarang di China atau tertakluk kepada had kepekatan yang berbeza. Semakan pematuhan ramuan penuh terhadap senarai larangan dan larangan NMPA adalah penting. Selain itu, NMPA secara amnya memerlukan ujian di makmal Cina yang diiktiraf CNAS untuk pemfailan atau pendaftaran akhir.",
+    "faqQ7": "Berapa lamakah proses pemfailan atau pendaftaran kosmetik NMPA?",
+    "faqA7": "Garis masa berbeza dengan ketara. Garis masa pemfailan kosmetik biasa bergantung pada kerumitan formula, kesediaan penilaian keselamatan dan sama ada ujian haiwan diperlukan. Pendaftaran kosmetik khas mengambil masa yang lebih lama kerana ujian keberkesanan klinikal di makmal yang diiktiraf NMPA, yang sahaja boleh mengambil masa beberapa bulan. Laluan terpantas ialah pemfailan kosmetik biasa dengan penilaian keselamatan yang lengkap dan tiada tuntutan kanak-kanak.",
+    "faqQ8": "Apakah dokumen yang diperlukan untuk pemfailan kosmetik NMPA?",
+    "faqA8": "Dokumen utama untuk pemfailan kosmetik biasa termasuk: formula produk lengkap dengan kepekatan, Sijil Jualan Percuma daripada MFDS dengan terjemahan bahasa Cina yang disahkan, lesen pembuatan atau sijil GMP, standard kualiti produk, mockup label dan pembungkusan, laporan penilaian keselamatan dan surat kuasa peguam yang melantik orang Cina yang bertanggungjawab. Kosmetik khas memerlukan laporan ujian keberkesanan klinikal tambahan.",
+    "faqQ9": "Bolehkah saya memfailkan satu produk tetapi menjual pelbagai varian (saiz berbeza, wangian)?",
+    "faqA9": "Secara amnya, setiap varian memerlukan pemfailan berasingan. Produk yang berbeza dalam formulasi, pewangi, warna atau kepekatan bahan aktif dianggap sebagai SKU yang berasingan. Walau bagaimanapun, produk yang berbeza hanya dalam saiz pembungkusan (formula yang sama, volum berbeza) mungkin berkongsi pemfailan di bawah syarat tertentu.",
+    "faqQ10": "Adakah saya memerlukan syarikat China untuk memfailkan kosmetik dengan NMPA?",
+    "faqA10": "ya. Setiap produk kosmetik yang diimport ke China mesti mempunyai orang yang bertanggungjawab domestik China — entiti sah yang berdaftar di China dengan skop perniagaan berkaitan kosmetik. Ini boleh menjadi anak syarikat Cina anda sendiri, pengedar atau pembekal perkhidmatan pihak ketiga. Orang yang bertanggungjawab bertanggungjawab secara sah untuk keselamatan produk dan mengendalikan semua komunikasi NMPA."
   }
 }

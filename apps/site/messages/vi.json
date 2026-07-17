@@ -1373,5 +1373,27 @@
     "terminationText": "Chúng tôi có quyền đình chỉ hoặc chấm dứt quyền truy cập của bạn vào các dịch vụ của chúng tôi bất kỳ lúc nào mà không cần thông báo vì hành vi mà chúng tôi cho rằng vi phạm các Điều khoản này hoặc có hại cho người dùng khác, bên thứ ba hoặc lợi ích kinh doanh của chúng tôi.",
     "terminationTitle": "Chấm dứt",
     "title": "Điều khoản dịch vụ"
+  },
+  "BlogFaqKoreanCosmeticsGuide": {
+    "faqQ1": "Thương hiệu mỹ phẩm Hàn Quốc có cần nộp đơn NMPA để nhập khẩu thương mại thông thường không?",
+    "faqA1": "Đúng. Nếu bạn nhập khẩu mỹ phẩm thông qua hình thức thương mại tổng hợp (không phải thương mại điện tử xuyên biên giới), mọi sản phẩm đều phải được nộp đơn (mỹ phẩm thông thường) hoặc đã đăng ký (mỹ phẩm đặc biệt) với NMPA trước khi nhập khẩu. Điều này áp dụng cho tất cả các thương hiệu bất kể nước xuất xứ.",
+    "faqQ2": "Tôi có thể bán mỹ phẩm Hàn Quốc thông qua thương mại điện tử xuyên biên giới mà không cần nộp đơn NMPA không?",
+    "faqA2": "Có, như một sự thay thế. Các nền tảng CBEC như Tmall Global và JD Worldwide cho phép bán mỹ phẩm mà không cần nộp đơn NMPA nếu sản phẩm nằm trong Danh sách Tích cực. Tuy nhiên, sản phẩm CBEC không thể được bán thông qua nền tảng bán lẻ ngoại tuyến hoặc thương mại điện tử trong nước. Nhiều thương hiệu Hàn Quốc sử dụng CBEC làm kênh thử nghiệm thị trường đồng thời chuẩn bị tuân thủ đầy đủ NMPA.",
+    "faqQ3": "Dầu gội được coi là mỹ phẩm thông thường hay đặc biệt?",
+    "faqA3": "Dầu gội thông thường có chức năng chính là làm sạch là một loại mỹ phẩm thông thường, bất kể nó có chứa các công dụng chăm sóc da đầu hay nuôi dưỡng tóc hay không. Tuy nhiên, nếu một sản phẩm dầu gội tuyên bố rõ ràng là chống rụng tóc (防脱发) hoặc thúc đẩy mọc tóc (育发/生发), thì sản phẩm đó sẽ thuộc lĩnh vực mỹ phẩm đặc biệt cần phải đăng ký đầy đủ.",
+    "faqQ4": "Sản phẩm chăm sóc da đầu và tinh chất da đầu được phân loại như thế nào?",
+    "faqA4": "Nó phụ thuộc vào các yêu cầu bồi thường. Sản phẩm dành cho da đầu là một loại mỹ phẩm thông thường nếu yêu cầu chỉ giới hạn ở việc dưỡng ẩm, nuôi dưỡng, làm dịu, kiểm soát dầu hoặc kiểm soát gàu. Nó sẽ trở thành một loại mỹ phẩm đặc biệt nếu có yêu cầu bao gồm mọc tóc, chống rụng tóc hoặc mọc lại tóc. Công thức tương tự có thể được nộp khác nhau tùy thuộc vào những gì bạn đưa ra.",
+    "faqQ5": "Điều gì xảy ra nếu sản phẩm mỹ phẩm của tôi được bán cho trẻ em hoặc phụ nữ mang thai?",
+    "faqA5": "Yêu cầu chặt chẽ hơn được áp dụng. Các sản phẩm dành cho trẻ em (từ 12 tuổi trở xuống) yêu cầu bắt buộc phải thử nghiệm vi sinh và độc tính, không miễn trừ thử nghiệm trên động vật, đánh giá mỹ phẩm dành riêng cho trẻ em, biểu tượng nhãn 小金盾 (lá chắn vàng) trên bao bì và công thức giới hạn ở các thành phần dành cho trẻ em được NMPA phê duyệt. Các sản phẩm được tiếp thị là an toàn cho phụ nữ mang thai cần có đầy đủ dữ liệu hỗ trợ về an toàn.",
+    "faqQ6": "Tôi có thể sử dụng cùng công thức sản phẩm tôi bán ở Hàn Quốc cho thị trường Trung Quốc không?",
+    "faqA6": "Không nhất thiết phải như vậy. Một số thành phần được MFDS của Hàn Quốc phê duyệt có thể bị cấm ở Trung Quốc hoặc phải tuân theo các giới hạn nồng độ khác nhau. Việc đánh giá việc tuân thủ đầy đủ thành phần đối với danh sách bị cấm và hạn chế của NMPA là điều cần thiết. Ngoài ra, NMPA thường yêu cầu thử nghiệm tại các phòng thí nghiệm Trung Quốc được CNAS công nhận để nộp đơn hoặc đăng ký cuối cùng.",
+    "faqQ7": "Quá trình nộp đơn hoặc đăng ký mỹ phẩm NMPA mất bao lâu?",
+    "faqA7": "Các mốc thời gian khác nhau đáng kể. Thời gian nộp hồ sơ mỹ phẩm thông thường phụ thuộc vào độ phức tạp của công thức, mức độ sẵn sàng đánh giá an toàn và liệu có cần thử nghiệm trên động vật hay không. Việc đăng ký mỹ phẩm đặc biệt mất nhiều thời gian hơn đáng kể do thử nghiệm hiệu quả lâm sàng tại các phòng thí nghiệm được NMPA công nhận, riêng việc này có thể mất vài tháng. Con đường nhanh nhất là nộp hồ sơ mỹ phẩm thông thường với đánh giá an toàn đầy đủ và không có yêu cầu bồi thường dành cho trẻ em.",
+    "faqQ8": "Những tài liệu cần thiết để nộp đơn mỹ phẩm NMPA?",
+    "faqA8": "Các tài liệu chính để nộp hồ sơ mỹ phẩm thông thường bao gồm: công thức sản phẩm hoàn chỉnh với nồng độ, Giấy chứng nhận bán hàng miễn phí từ MFDS với bản dịch tiếng Trung có công chứng, giấy phép sản xuất hoặc chứng chỉ GMP, tiêu chuẩn chất lượng sản phẩm, mô hình nhãn và bao bì, báo cáo đánh giá an toàn và giấy ủy quyền chỉ định người chịu trách nhiệm của Trung Quốc. Mỹ phẩm đặc biệt yêu cầu báo cáo thử nghiệm hiệu quả lâm sàng bổ sung.",
+    "faqQ9": "Tôi có thể gửi một sản phẩm nhưng bán nhiều mẫu mã (kích cỡ, mùi hương khác nhau) không?",
+    "faqA9": "Nói chung, mỗi biến thể yêu cầu một hồ sơ riêng. Các sản phẩm khác nhau về công thức, mùi thơm, màu sắc hoặc nồng độ hoạt chất sẽ được coi là SKU riêng biệt. Tuy nhiên, các sản phẩm chỉ khác nhau về kích thước bao bì (cùng công thức, khối lượng khác nhau) có thể chia sẻ một hồ sơ trong một số điều kiện nhất định.",
+    "faqQ10": "Tôi có cần một công ty Trung Quốc nộp hồ sơ mỹ phẩm với NMPA không?",
+    "faqA10": "Đúng. Mọi sản phẩm mỹ phẩm nhập khẩu vào Trung Quốc đều phải có người chịu trách nhiệm trong nước là người Trung Quốc - một pháp nhân được đăng ký tại Trung Quốc với phạm vi kinh doanh liên quan đến mỹ phẩm. Đây có thể là công ty con tại Trung Quốc của bạn, nhà phân phối hoặc nhà cung cấp dịch vụ bên thứ ba. Người chịu trách nhiệm chịu trách nhiệm pháp lý về an toàn sản phẩm và xử lý tất cả các thông tin liên lạc NMPA."
   }
 }

@@ -1280,6 +1280,28 @@
     "faqQ4": "Which platforms support CBEC?",
     "faqA4": "Major platforms include Tmall Global, JD Worldwide, Kaola, Pinduoduo Global, and Douyin (TikTok) Global. You can also set up your own cross-border e-commerce website."
   },
+  "BlogFaqKoreanCosmeticsGuide": {
+    "faqQ1": "Does a Korean cosmetics brand need NMPA filing for general trade imports?",
+    "faqA1": "Yes. If you import cosmetics through general trade (not cross-border e-commerce), every product must be either filed (ordinary cosmetics) or registered (special cosmetics) with the NMPA before import. This applies to all brands regardless of country of origin.",
+    "faqQ2": "Can I sell Korean cosmetics through cross-border e-commerce without NMPA filing?",
+    "faqA2": "Yes, as an alternative. CBEC platforms like Tmall Global and JD Worldwide allow cosmetics sales without NMPA filing if products are on the Positive List. However, CBEC products cannot be sold through offline retail or domestic e-commerce platforms. Many Korean brands use CBEC as a market-testing channel while preparing full NMPA compliance.",
+    "faqQ3": "Is a shampoo considered an ordinary or special cosmetic?",
+    "faqA3": "A standard shampoo whose primary function is cleansing is an ordinary cosmetic, regardless of whether it includes scalp care or hair nourishment claims. However, if a shampoo product explicitly claims anti-hair loss (防脱发) or hair growth promotion (育发/生发), it crosses into special cosmetics territory requiring full registration.",
+    "faqQ4": "How are scalp care and scalp essence products classified?",
+    "faqA4": "It depends on the claims. A scalp product is an ordinary cosmetic if claims are limited to moisturizing, nourishing, soothing, oil control, or dandruff control. It becomes a special cosmetic if claims include hair growth, anti-hair loss, or hair regrowth. The exact same formulation can be filed differently depending on what claims you make.",
+    "faqQ5": "What happens if my cosmetics product is marketed for children or pregnant women?",
+    "faqA5": "Stricter requirements apply. Products for children (age 12 and under) require mandatory microbiological and toxicological testing with no animal testing exemption, a dedicated children's cosmetics evaluation, the 小金盾 (golden shield) label icon on packaging, and formulation limited to NMPA-approved children's ingredients. Products marketed as pregnancy-safe require adequate supporting safety data.",
+    "faqQ6": "Can I use the same product formula I sell in Korea for the Chinese market?",
+    "faqA6": "Not necessarily. Some ingredients approved by Korea's MFDS may be prohibited in China or subject to different concentration limits. A full ingredient compliance review against NMPA's prohibited and restricted lists is essential. Additionally, NMPA generally requires testing at CNAS-accredited Chinese laboratories for the final filing or registration.",
+    "faqQ7": "How long does the NMPA cosmetics filing or registration process take?",
+    "faqA7": "Timelines vary significantly. Ordinary cosmetics filing timeline depends on formula complexity, safety assessment readiness, and whether animal testing is required. Special cosmetics registration takes substantially longer due to clinical efficacy testing at NMPA-accredited labs, which alone can take several months. The fastest path is ordinary cosmetics filing with a complete safety assessment and no children's claims.",
+    "faqQ8": "What documents are required for NMPA cosmetics filing?",
+    "faqA8": "Key documents for ordinary cosmetics filing include: complete product formula with concentrations, Free Sale Certificate from MFDS with notarized Chinese translation, manufacturing license or GMP certificate, product quality standard, label and packaging mockups, safety assessment report, and power of attorney appointing a Chinese responsible person. Special cosmetics require additional clinical efficacy test reports.",
+    "faqQ9": "Can I file one product but sell multiple variants (different sizes, fragrances)?",
+    "faqA9": "Generally, each variant requires a separate filing. Products that differ in formulation, fragrance, color, or active ingredient concentration are treated as separate SKUs. However, products that vary only in packaging size (same formula, different volumes) may share a filing under certain conditions.",
+    "faqQ10": "Do I need a Chinese company to file cosmetics with NMPA?",
+    "faqA10": "Yes. Every cosmetics product imported into China must have a Chinese domestic responsible person — a legal entity registered in China with cosmetics-related business scope. This can be your own Chinese subsidiary, a distributor, or a third-party service provider. The responsible person is legally accountable for product safety and handles all NMPA communications."
+  },
   "Sitemap": {
     "pageTitle": "Site Map",
     "pageSubtitle": "Complete overview of all pages on our website.",

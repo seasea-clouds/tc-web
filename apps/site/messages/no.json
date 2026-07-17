@@ -1373,5 +1373,27 @@
     "terminationText": "Vi forbeholder oss retten til å suspendere eller avslutte din tilgang til tjenestene våre når som helst, uten varsel, for oppførsel som vi mener bryter disse vilkårene eller er skadelig for andre brukere, tredjeparter eller våre forretningsinteresser.",
     "terminationTitle": "Avslutning",
     "title": "Vilkår for bruk"
+  },
+  "BlogFaqKoreanCosmeticsGuide": {
+    "faqQ1": "Trenger et koreansk kosmetikkmerke NMPA-innlevering for generell handelsimport?",
+    "faqA1": "Ja. Hvis du importerer kosmetikk gjennom generell handel (ikke grenseoverskridende e-handel), må hvert produkt enten arkiveres (vanlig kosmetikk) eller registrert (spesiell kosmetikk) hos NMPA før import. Dette gjelder alle merker uavhengig av opprinnelsesland.",
+    "faqQ2": "Kan jeg selge koreansk kosmetikk gjennom grenseoverskridende e-handel uten NMPA-arkivering?",
+    "faqA2": "Ja, som et alternativ. CBEC-plattformer som Tmall Global og JD Worldwide tillater kosmetikksalg uten NMPA-registrering hvis produktene er på positivlisten. Imidlertid kan CBEC-produkter ikke selges via offline detaljhandel eller innenlandske e-handelsplattformer. Mange koreanske merker bruker CBEC som en markedstestkanal mens de forbereder full NMPA-overholdelse.",
+    "faqQ3": "Betraktes en sjampo som en vanlig eller spesiell kosmetikk?",
+    "faqA3": "En standard sjampo hvis primære funksjon er rensing er en vanlig kosmetikk, uavhengig av om den inkluderer hodebunnspleie eller hårnæringskrav. Imidlertid, hvis et sjampoprodukt eksplisitt hevder anti-hårtap (防脱发) eller hårvekstfremmende (育发/生发), krysser det inn i et spesielt kosmetikkområde som krever full registrering.",
+    "faqQ4": "Hvordan klassifiseres produkter for hodebunnspleie og essens for hodebunnen?",
+    "faqA4": "Det avhenger av påstandene. Et hodebunnsprodukt er en vanlig kosmetikk hvis påstander er begrenset til fuktighetsgivende, nærende, beroligende, oljekontroll eller flasskontroll. Det blir en spesiell kosmetikk hvis påstander inkluderer hårvekst, anti-hårtap eller gjenvekst av hår. Den nøyaktige samme formuleringen kan innleveres forskjellig avhengig av hvilke påstander du kommer med.",
+    "faqQ5": "Hva skjer hvis kosmetikkproduktet mitt markedsføres for barn eller gravide?",
+    "faqA5": "Det gjelder strengere krav. Produkter for barn (12 år og yngre) krever obligatorisk mikrobiologisk og toksikologisk testing uten fritak for dyretesting, en dedikert vurdering av kosmetikk for barn, etikettikonet 小金盾 (gyldent skjold) på emballasjen, og formulering begrenset til NMPA-godkjente barneingredienser. Produkter markedsført som graviditetssikre krever tilstrekkelige sikkerhetsdata.",
+    "faqQ6": "Kan jeg bruke den samme produktformelen som jeg selger i Korea for det kinesiske markedet?",
+    "faqA6": "Ikke nødvendigvis. Noen ingredienser godkjent av Koreas MFDS kan være forbudt i Kina eller underlagt andre konsentrasjonsgrenser. En fullstendig gjennomgang av ingrediensoverholdelse mot NMPAs forbudte og begrensede lister er avgjørende. I tillegg krever NMPA generelt testing ved CNAS-akkrediterte kinesiske laboratorier for den endelige innleveringen eller registreringen.",
+    "faqQ7": "Hvor lang tid tar NMPA kosmetikkinnleverings- eller registreringsprosessen?",
+    "faqA7": "Tidslinjene varierer betydelig. Tidslinjen for innlevering av vanlig kosmetikk avhenger av formelens kompleksitet, sikkerhetsvurderingsberedskap og om dyreforsøk er nødvendig. Registrering av spesialkosmetikk tar betydelig lengre tid på grunn av klinisk effekttesting ved NMPA-akkrediterte laboratorier, som alene kan ta flere måneder. Den raskeste veien er vanlig kosmetikkinnlevering med en fullstendig sikkerhetsvurdering og ingen barnekrav.",
+    "faqQ8": "Hvilke dokumenter kreves for innlevering av NMPA kosmetikk?",
+    "faqA8": "Nøkkeldokumenter for innlevering av vanlig kosmetikk inkluderer: komplett produktformel med konsentrasjoner, gratissalgssertifikat fra MFDS med notarisert kinesisk oversettelse, produksjonslisens eller GMP-sertifikat, produktkvalitetsstandard, etikett- og emballasjemodeller, sikkerhetsvurderingsrapport og fullmakt for å utnevne en kinesisk ansvarlig person. Spesialkosmetikk krever ytterligere kliniske effekttestrapporter.",
+    "faqQ9": "Kan jeg arkivere ett produkt, men selge flere varianter (ulike størrelser, dufter)?",
+    "faqA9": "Vanligvis krever hver variant en separat arkivering. Produkter som er forskjellige i formulering, duft, farge eller konsentrasjon av aktiv ingrediens behandles som separate SKU-er. Imidlertid kan produkter som kun varierer i emballasjestørrelse (samme formel, forskjellige volumer) dele en fil under visse betingelser.",
+    "faqQ10": "Trenger jeg et kinesisk selskap for å sende inn kosmetikk til NMPA?",
+    "faqA10": "Ja. Hvert kosmetikkprodukt som importeres til Kina må ha en kinesisk ansvarlig person – en juridisk enhet registrert i Kina med kosmetikkrelatert virksomhetsomfang. Dette kan være ditt eget kinesiske datterselskap, en distributør eller en tredjeparts tjenesteleverandør. Den ansvarlige personen er juridisk ansvarlig for produktsikkerhet og håndterer all NMPA-kommunikasjon."
   }
 }

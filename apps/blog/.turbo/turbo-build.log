@@ -5,58 +5,58 @@
   @trade/blog: version already 6.1.0
 
 > @trade/blog@6.1.0 build
-> node ../../packages/scripts/build-search-index.mjs && rm -rf .next/cache && next build && node ../../packages/scripts/ci-check.mjs --out-dir=out
+> node ../../packages/scripts/build-search-index.mjs && rm -rf .next/cache && next build && node ../../packages/scripts/ci-check.mjs --out-dir=out --ci
 
 Apps discovered: admin, blog, portal, site
 Generating search index for 48 locales...
-  af: 2320 items (6S + 7B + 39F + 2268C)
-  ar: 2320 items (6S + 7B + 39F + 2268C)
-  az: 2320 items (6S + 7B + 39F + 2268C)
-  be: 2320 items (6S + 7B + 39F + 2268C)
-  bg: 2320 items (6S + 7B + 39F + 2268C)
-  bn: 2320 items (6S + 7B + 39F + 2268C)
-  ca: 2320 items (6S + 7B + 39F + 2268C)
-  cs: 2320 items (6S + 7B + 39F + 2268C)
-  da: 2320 items (6S + 7B + 39F + 2268C)
-  de: 2320 items (6S + 7B + 39F + 2268C)
-  el: 2320 items (6S + 7B + 39F + 2268C)
-  en: 2320 items (6S + 7B + 39F + 2268C)
-  es: 2320 items (6S + 7B + 39F + 2268C)
-  fa: 2320 items (6S + 7B + 39F + 2268C)
-  fi: 2320 items (6S + 7B + 39F + 2268C)
-  fr: 2320 items (6S + 7B + 39F + 2268C)
-  he: 2320 items (6S + 7B + 39F + 2268C)
-  hi: 2320 items (6S + 7B + 39F + 2268C)
-  hr: 2320 items (6S + 7B + 39F + 2268C)
-  hu: 2320 items (6S + 7B + 39F + 2268C)
-  hy: 2320 items (6S + 7B + 39F + 2268C)
-  id: 2320 items (6S + 7B + 39F + 2268C)
-  it: 2320 items (6S + 7B + 39F + 2268C)
-  ja: 2320 items (6S + 7B + 39F + 2268C)
-  ka: 2320 items (6S + 7B + 39F + 2268C)
-  ko: 2320 items (6S + 7B + 39F + 2268C)
-  ms: 2320 items (6S + 7B + 39F + 2268C)
-  ne: 2320 items (6S + 7B + 39F + 2268C)
-  nl: 2320 items (6S + 7B + 39F + 2268C)
-  no: 2320 items (6S + 7B + 39F + 2268C)
-  pl: 2320 items (6S + 7B + 39F + 2268C)
-  pt: 2320 items (6S + 7B + 39F + 2268C)
-  ro: 2320 items (6S + 7B + 39F + 2268C)
-  ru: 2320 items (6S + 7B + 39F + 2268C)
-  si: 2320 items (6S + 7B + 39F + 2268C)
-  sk: 2320 items (6S + 7B + 39F + 2268C)
-  sl: 2320 items (6S + 7B + 39F + 2268C)
-  sq: 2320 items (6S + 7B + 39F + 2268C)
-  sr: 2320 items (6S + 7B + 39F + 2268C)
-  sv: 2320 items (6S + 7B + 39F + 2268C)
-  sw: 2320 items (6S + 7B + 39F + 2268C)
-  ta: 2320 items (6S + 7B + 39F + 2268C)
-  th: 2320 items (6S + 7B + 39F + 2268C)
-  tr: 2320 items (6S + 7B + 39F + 2268C)
-  uk: 2320 items (6S + 7B + 39F + 2268C)
-  ur: 2320 items (6S + 7B + 39F + 2268C)
-  vi: 2320 items (6S + 7B + 39F + 2268C)
-  zh: 2320 items (6S + 7B + 39F + 2268C)
+  af: 2324 items (6S + 8B + 39F + 2271C)
+  ar: 2324 items (6S + 8B + 39F + 2271C)
+  az: 2324 items (6S + 8B + 39F + 2271C)
+  be: 2324 items (6S + 8B + 39F + 2271C)
+  bg: 2324 items (6S + 8B + 39F + 2271C)
+  bn: 2324 items (6S + 8B + 39F + 2271C)
+  ca: 2324 items (6S + 8B + 39F + 2271C)
+  cs: 2324 items (6S + 8B + 39F + 2271C)
+  da: 2324 items (6S + 8B + 39F + 2271C)
+  de: 2324 items (6S + 8B + 39F + 2271C)
+  el: 2324 items (6S + 8B + 39F + 2271C)
+  en: 2324 items (6S + 8B + 39F + 2271C)
+  es: 2324 items (6S + 8B + 39F + 2271C)
+  fa: 2324 items (6S + 8B + 39F + 2271C)
+  fi: 2324 items (6S + 8B + 39F + 2271C)
+  fr: 2324 items (6S + 8B + 39F + 2271C)
+  he: 2324 items (6S + 8B + 39F + 2271C)
+  hi: 2324 items (6S + 8B + 39F + 2271C)
+  hr: 2324 items (6S + 8B + 39F + 2271C)
+  hu: 2324 items (6S + 8B + 39F + 2271C)
+  hy: 2324 items (6S + 8B + 39F + 2271C)
+  id: 2324 items (6S + 8B + 39F + 2271C)
+  it: 2324 items (6S + 8B + 39F + 2271C)
+  ja: 2324 items (6S + 8B + 39F + 2271C)
+  ka: 2324 items (6S + 8B + 39F + 2271C)
+  ko: 2324 items (6S + 8B + 39F + 2271C)
+  ms: 2324 items (6S + 8B + 39F + 2271C)
+  ne: 2324 items (6S + 8B + 39F + 2271C)
+  nl: 2324 items (6S + 8B + 39F + 2271C)
+  no: 2324 items (6S + 8B + 39F + 2271C)
+  pl: 2324 items (6S + 8B + 39F + 2271C)
+  pt: 2324 items (6S + 8B + 39F + 2271C)
+  ro: 2324 items (6S + 8B + 39F + 2271C)
+  ru: 2324 items (6S + 8B + 39F + 2271C)
+  si: 2324 items (6S + 8B + 39F + 2271C)
+  sk: 2324 items (6S + 8B + 39F + 2271C)
+  sl: 2324 items (6S + 8B + 39F + 2271C)
+  sq: 2324 items (6S + 8B + 39F + 2271C)
+  sr: 2324 items (6S + 8B + 39F + 2271C)
+  sv: 2324 items (6S + 8B + 39F + 2271C)
+  sw: 2324 items (6S + 8B + 39F + 2271C)
+  ta: 2324 items (6S + 8B + 39F + 2271C)
+  th: 2324 items (6S + 8B + 39F + 2271C)
+  tr: 2324 items (6S + 8B + 39F + 2271C)
+  uk: 2324 items (6S + 8B + 39F + 2271C)
+  ur: 2324 items (6S + 8B + 39F + 2271C)
+  vi: 2324 items (6S + 8B + 39F + 2271C)
+  zh: 2324 items (6S + 8B + 39F + 2271C)
 Done.
 Attention: Next.js now collects completely anonymous telemetry regarding usage.
 This information is used to shape Next.js' roadmap and prioritize features.
@@ -66,15 +66,15 @@ https://nextjs.org/telemetry
 ▲ Next.js 16.2.6 (Turbopack)
 
   Creating an optimized production build ...
-✓ Compiled successfully in 3.1s
+✓ Compiled successfully in 2.6s
   Running TypeScript ...
   Finished TypeScript in 3.0s ...
   Collecting page data using 6 workers ...
-  Generating static pages using 6 workers (0/434) ...
-  Generating static pages using 6 workers (108/434) 
-  Generating static pages using 6 workers (216/434) 
-  Generating static pages using 6 workers (325/434) 
-✓ Generating static pages using 6 workers (434/434) in 2.7s
+  Generating static pages using 6 workers (0/482) ...
+  Generating static pages using 6 workers (120/482) 
+  Generating static pages using 6 workers (240/482) 
+  Generating static pages using 6 workers (361/482) 
+✓ Generating static pages using 6 workers (482/482) in 2.7s
   Finalizing page optimization ...
 
 Route (app)
@@ -93,7 +93,7 @@ Route (app)
   ├ /en/blog/ccc-certification-explained
   ├ /en/blog/china-import-compliance-guide
   ├ /en/blog/china-label-compliance
-  └ [+333 more paths]
+  └ [+381 more paths]
 
 
 ○  (Static)  prerendered as static content
@@ -106,7 +106,7 @@ Route (app)
 ═══════════════════════════════════════════════
 
 
-▶ check-seo-patterns.mjs --project=blog
+▶ check-seo-patterns.mjs --project=blog --ci
 
 📁 blog/
 
@@ -115,22 +115,22 @@ Route (app)
 
 ✅ check-seo-patterns.mjs 完成
 
-▶ check-hardcoded-domain.mjs --project=blog
+▶ check-hardcoded-domain.mjs --project=blog --ci
 ✅ 未发现硬编码的 *.pages.dev 域名引用
 
-▶ check-hardcoded.mjs --project=blog
+▶ check-hardcoded.mjs --project=blog --ci
 🔍 Scanning for hardcoded English text in JSX/TSX...
 
 ✅ No hardcoded English text found.
 
-▶ check-console.mjs --project=blog
+▶ check-console.mjs --project=blog --ci
 📁 扫描 33 个文件
 ==================================================
 📊 结果: 34 通过, 0 失败
 
 ✅ check-console.mjs 完成
 
-▶ check-rtl.mjs --project=blog
+▶ check-rtl.mjs --project=blog --ci
 
 📁 blog/
 
@@ -139,31 +139,55 @@ Route (app)
 
 ✅ check-rtl.mjs 完成
 
-▶ check-map-key.mjs --project=blog
+▶ check-map-key.mjs --project=blog --ci
 📁 扫描 24 个 TSX 文件
 ==================================================
 📊 结果: 24 通过, 0 失败
 
 ✅ check-map-key.mjs 完成
 
-▶ check-jsonld.mjs --project=blog
+▶ check-jsonld.mjs --project=blog --ci
 📁 扫描 4 个含 JSON-LD 的文件
 ==================================================
 📊 结果: 17 通过, 0 失败
 
 ✅ check-jsonld.mjs 完成
 
-▶ check-md-format.mjs --project=blog
+▶ check-md-format.mjs --project=blog --ci
 
 ═══════════════════════════════════════════════
   Markdown 格式质量检查（精细化语言策略）
 ═══════════════════════════════════════════════
 
-✅ 未发现格式问题
-  扫描文件: 336
+┌─ RU (4 文件, 0 错误, 4 警告)
+│  ⚠️  [W02] apps/blog/content/bg/korean-cosmetics-china-guide.mdx(文件级)
+│     俄文文件混用 en-dash 和 em-dash，应统一
+│     > (整个文件) en-dash 和 em-dash 混用
+│  ⚠️  [W02] apps/blog/content/ru/korean-cosmetics-china-guide.mdx(文件级)
+│     俄文文件混用 en-dash 和 em-dash，应统一
+│     > (整个文件) en-dash 和 em-dash 混用
+│  ⚠️  [W02] apps/blog/content/sr/korean-cosmetics-china-guide.mdx(文件级)
+│     俄文文件混用 en-dash 和 em-dash，应统一
+│     > (整个文件) en-dash 和 em-dash 混用
+│  ⚠️  [W02] apps/blog/content/uk/korean-cosmetics-china-guide.mdx(文件级)
+│     俄文文件混用 en-dash 和 em-dash，应统一
+│     > (整个文件) en-dash 和 em-dash 混用
+└─
+
+  扫描文件: 384  错误: 0  警告: 4
 
 
-▶ check-locale-prefix.mjs --project=blog
+▶ check-md-structure.mjs --project=blog --ci
+
+═══════════════════════════════════════════════
+  MDX 内容结构检查 (blog)
+═══════════════════════════════════════════════
+
+✅ 未发现内容结构问题
+  扫描文件: 384
+
+
+▶ check-locale-prefix.mjs --project=blog --ci
 
 ═══════════════════════════════════════════════
   路由 locale 前缀检测 (CI-4)
@@ -172,11 +196,11 @@ Route (app)
 ✅ 未发现缺少 locale 前缀的 href
 
 
-▶ check-translations.mjs --project=blog --short
+▶ check-translations.mjs --project=blog --short --ci
 
 ✅ 全量核验通过！48 种语言无质量问题。
 
-▶ check-i18n-keys.mjs --project=blog
+▶ check-i18n-keys.mjs --project=blog --ci
 🔑 i18n key 完整性检查
 
 📦 BLOG (0 missing, 0 extra, 0 hardcoded):
@@ -189,7 +213,7 @@ Route (app)
 📊 总计: 0 缺失 + 0 多余 + 0 硬编码英文 + 0 导航翻译不一致
 ✅ 所有 i18n key 完整，无硬编码英文，导航翻译一致
 
-▶ check-i18n-coverage.mjs --project=blog
+▶ check-i18n-coverage.mjs --project=blog --ci
 
 📊 UI 包
    en.json: 106 键
@@ -303,15 +327,15 @@ Route (app)
 ═══════════════════════════════════════════════
 
 
-▶ check-report-rules.mjs --project=blog
+▶ check-report-rules.mjs --project=blog --ci
 ────────────────────────────────────────────────────────────
 ✅ check-report-rules: 未发现硬编码英文问题
 ────────────────────────────────────────────────────────────
 
-▶ check-report-dates.mjs --project=blog
+▶ check-report-dates.mjs --project=blog --ci
 ⏭️  check-report-dates: blog 无模块 rules.ts，跳过
 
-▶ check-t-keys-all.mjs --project=blog
+▶ check-t-keys-all.mjs --project=blog --ci
 
 🔑 t() 键存在性检查 — BLOG
    en.json: apps/blog/messages/en.json
@@ -329,7 +353,7 @@ Route (app)
 ✅ All keys verified — no issues found!
 
 
-▶ check-colon-all.mjs --project=blog
+▶ check-colon-all.mjs --project=blog --ci
 ═══ 翻译冒号一致性检查 — BLOG ═══
 
 扫描 48 个语言文件...
@@ -338,7 +362,7 @@ Route (app)
 ✅ 所有语言冒号风格一致，无问题
 
 
-▶ check-override-keys.mjs --project=blog
+▶ check-override-keys.mjs --project=blog --ci
 
 ═══════════════════════════════════════════════
   跨 App 消息覆盖检测
@@ -352,7 +376,7 @@ Route (app)
 ─────────────────────────────────────────────
 
 
-▶ check-hardcoded-templates.mjs --project=blog
+▶ check-hardcoded-templates.mjs --project=blog --ci
 
 ═══════════════════════════════════════════════
   数据层英文模板检测
@@ -361,7 +385,13 @@ Route (app)
 ✅ 无硬编码英文模板
 
 
-▶ check-category-labels.mjs --project=blog
+▶ check-report-section-i18n.mjs --project=blog --ci
+🔍 检测报告章节组件中未翻译的数据层英文...
+
+✅ 所有报告章节组件的数据层翻译检查通过
+
+
+▶ check-category-labels.mjs --project=blog --ci
 
 ═══════════════════════════════════════════════
   品类翻译键完整性校验 (CI-2)
@@ -389,11 +419,11 @@ Route (app)
 ✅ 全部 6 个模块的品类翻译键完整
 
 
-▶ check-t-keys.mjs --project=blog
+▶ check-t-keys.mjs --project=blog --ci
 
 🔍 【A】 Static t("key") — orphaned keys...
 
-📊  2118 unique static keys checked, 0 orphan(s) found
+📊  2160 unique static keys checked, 0 orphan(s) found
 
 🔍 【B】 Dynamic t(`…`) template keys...
 
@@ -425,7 +455,7 @@ Route (app)
 ✅ All keys verified — static and dynamic — no issues found!
 
 
-▶ check-colon-consistency.mjs --project=blog
+▶ check-colon-consistency.mjs --project=blog --ci
 ═══ 翻译冒号一致性检查 ═══
 
 扫描 48 个语言文件...
@@ -434,20 +464,20 @@ Route (app)
 ✅ 所有语言冒号风格一致，无问题
 
 
-▶ check-hreflang.mjs --project=blog --dir=out --skip-pattern=404,_not-found
+▶ check-hreflang.mjs --project=blog --dir=out --skip-pattern=404,_not-found --ci
 🔍 统一 hreflang 检查
 
 📦 模式: SSG 输出目录检查
-  📄 扫描 434 个 HTML 文件
+  📄 扫描 482 个 HTML 文件
 
   跳过: 2 文件 (路径匹配 skip-pattern)
 
-  结果: 432 通过, 0 失败
+  结果: 480 通过, 0 失败
 
 ✅ hreflang 全部检查通过
   ∎ check-llms.mjs → ∅ 无 llms 文件
 
-▶ check-seo-output.mjs --project=blog --out-dir=out
+▶ check-seo-output.mjs --project=blog --out-dir=out --ci
 
 🔍 SEO 输出检查: /root/projects/trade/web/apps/blog/out
 
@@ -460,30 +490,13 @@ Route (app)
 
 ✅ check-seo-output.mjs 完成
 
-▶ clean-rsc.mjs --project=blog out
+▶ clean-rsc.mjs --project=blog out --ci
 🧹 Cleaning RSC .txt payload files from out/...
-node:fs:1590
-  const result = binding.readdir(
-                         ^
-
-Error: ENOENT: no such file or directory, scandir '--project=blog'
-    at readdirSync (node:fs:1590:26)
-    at cleanDir (file:///root/projects/trade/web/packages/scripts/clean-rsc.mjs:22:19)
-    at file:///root/projects/trade/web/packages/scripts/clean-rsc.mjs:39:1
-    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)
-    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:681:26)
-    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5) {
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'scandir',
-  path: '--project=blog'
-}
-
-Node.js v22.23.1
+✅ Deleted 4183 RSC payload files (111.7 MB freed)
 
 ▶ tsc --noEmit
 
 ═══════════════════════════════════════════════
-❌ 共 1 项检查失败
+✅ 全部检查通过
 ═══════════════════════════════════════════════
 

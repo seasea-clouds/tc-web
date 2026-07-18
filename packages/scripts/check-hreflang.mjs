@@ -48,8 +48,8 @@ function checkDir(outDir) {
   return files;
 }
 
-function countHreflangInFile(filePath) {
-  const content = fs.readFileSync(filePath, 'utf-8');
+function countHreflangInFile(filePath, content) {
+  content ??= fs.readFileSync(filePath, 'utf-8');
   // Match both HTML <link> format (hreflang=) and RSC payload format (hrefLang=)
   const count = (content.match(/hreflang=|hrefLang=/g) || []).length;
   const hasXdefault = content.includes('x-default');
@@ -81,7 +81,15 @@ function checkSSGOutput(dir, skipPatterns = []) {
       continue;
     }
 
-    const { count, hasXdefault } = countHreflangInFile(file);
+    const content = fs.readFileSync(file, 'utf-8');
+    
+    // Skip Next.js redirect pages (e.g. i18n root redirect to default locale)
+    if (content.includes('NEXT_REDIRECT')) {
+      skipped++;
+      continue;
+    }
+    
+    const { count, hasXdefault } = countHreflangInFile(file, content);
     
     if (count >= EXPECTED_MIN_LOCALES && hasXdefault) {
       passes++;

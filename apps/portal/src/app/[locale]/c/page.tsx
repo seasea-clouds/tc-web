@@ -1,11 +1,16 @@
 'use client';
 
-import { useState } from 'react';
-import { useT, useAuth } from '@trade/ui';
+import { useT } from '@trade/ui';
 import { useLocale } from 'next-intl';
 import useSubsiteHref from '@/lib/useSubsiteHref';
 import ToolCard from '@/components/ToolCard';
 import { toolCategories } from '@/data/tools';
+
+/**
+ * @deprecated Creem 支付功能已注释（限时免费活动）。
+ * 参见：checkout.ts / useSubscription.ts / creem.ts / functions/api/checkout/ / functions/api/subscription/
+ * 如需恢复支付，请恢复相关文件中的注释代码。
+ */
 
 export default function HomePage() {
   const t = useT('Home');
@@ -13,42 +18,9 @@ export default function HomePage() {
   const tPricing = useT('Pricing');
   const subsiteHref = useSubsiteHref();
   const locale = useLocale();
-  const { isAuthenticated, isLoading: authLoading } = useAuth();
-  const [subLoading, setSubLoading] = useState(false);
-  const [error, setError] = useState('');
 
   const formatPrice = (price: number) =>
     new Intl.NumberFormat(locale, { style: 'currency', currency: 'USD', minimumFractionDigits: 2 }).format(price);
-
-  const handleSubscribe = async () => {
-    if (!isAuthenticated) {
-      window.location.href = subsiteHref(`/login?redirect=/pricing`);
-      return;
-    }
-    setSubLoading(true);
-    setError('');
-    try {
-      const res = await fetch('/api/subscription/checkout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        credentials: 'include',
-        body: JSON.stringify({ locale }),
-      });
-      if (!res.ok) {
-        const err = await res.json();
-        throw new Error(err.error || 'Checkout failed');
-      }
-      const data = await res.json();
-      if (data.checkoutUrl) {
-        window.location.href = data.checkoutUrl;
-      } else {
-        throw new Error('No checkout URL returned');
-      }
-    } catch (err) {
-      setError(tCheck('checkoutError'));
-      setSubLoading(false);
-    }
-  };
 
   const handleGetReport = () => {
     // Scroll to tool cards section on the same page
@@ -124,11 +96,7 @@ export default function HomePage() {
       {/* Pricing — 漏斗底部 */}
       <section className="py-12">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          {error && (
-            <div className="max-w-md mx-auto mb-4 bg-red-50 border border-red-200 text-red-700 text-sm rounded-lg p-3">
-              {error}
-            </div>
-          )}
+          {/* Creem 支付错误提示 — 限时免费期间隐藏 */}
           <h2 className="text-2xl font-bold text-primary-navy mb-2">{tPricing('title')}</h2>
           <p className="text-sm text-gray-500 mb-8">{tPricing('subtitle')}</p>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -155,7 +123,7 @@ export default function HomePage() {
                 {tPricing('popular')}
               </div>
               <h3 className="font-bold text-lg text-primary-navy">{tPricing('single')}</h3>
-              <p className="text-3xl font-bold text-gold my-4">{formatPrice(1.99)}</p>
+              <p className="text-3xl font-bold text-gold my-4">{formatPrice(0)}</p>
               <ul className="text-sm text-gray-500 space-y-2 mb-6 flex-1">
                 <li>{tPricing('singleBullet1')}</li>
                 <li>{tPricing('singleBullet2')}</li>
@@ -169,21 +137,20 @@ export default function HomePage() {
               </button>
             </div>
 
-            {/* Monthly */}
+            {/* Monthly — 限时免费（Creem 订阅支付已注释） */}
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 text-center flex flex-col">
               <h3 className="font-bold text-lg text-primary-navy">{tPricing('monthly')}</h3>
-              <p className="text-3xl font-bold text-primary-navy my-4">{formatPrice(9.9)}</p>
+              <p className="text-3xl font-bold text-primary-navy my-4">{formatPrice(0)}</p>
               <ul className="text-sm text-gray-500 space-y-2 mb-6 flex-1">
                 <li>{tPricing('monthlyBullet1')}</li>
                 <li>{tPricing('monthlyBullet2')}</li>
                 <li>{tPricing('monthlyBullet4')}</li>
               </ul>
               <button
-                onClick={handleSubscribe}
-                disabled={subLoading || authLoading}
-                className="w-full border-2 border-primary-navy text-primary-navy hover:bg-primary-navy hover:text-white font-semibold py-2 rounded-md transition-all text-sm disabled:border-gray-300 disabled:text-gray-400 disabled:cursor-not-allowed"
+                onClick={handleGetReport}
+                className="w-full border-2 border-primary-navy text-primary-navy hover:bg-primary-navy hover:text-white font-semibold py-2 rounded-md transition-all text-sm"
               >
-                {subLoading ? tCheck('redirecting') : tPricing('subscribe')}
+                {tPricing('subscribe')}
               </button>
             </div>
 

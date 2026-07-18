@@ -1,56 +1,27 @@
 'use client';
 
-import { useState } from 'react';
-import { useT, useAuth } from '@trade/ui';
+import { useT } from '@trade/ui';
 import useSubsiteHref from '@/lib/useSubsiteHref';
 import { SITE_URL } from '@/lib/constants';
 import { useLocale } from 'next-intl';
 
+/**
+ * @deprecated Creem 支付功能已注释（限时免费活动）。
+ * 参见：checkout.ts / useSubscription.ts / creem.ts / functions/api/checkout/ / functions/api/subscription/
+ * 如需恢复支付，请恢复相关文件中的注释代码。
+ */
+
 export default function PricingPage() {
   const t = useT('Pricing');
-  const tCheck = useT('Check');
   const subsiteHref = useSubsiteHref();
   const locale = useLocale();
-  const { isAuthenticated, isLoading: authLoading } = useAuth();
-  const [subLoading, setSubLoading] = useState(false);
-  const [singleLoading, setSingleLoading] = useState(false);
-  const [error, setError] = useState('');
+
 
   const formatPrice = (price: number) =>
     new Intl.NumberFormat(locale, { style: 'currency', currency: 'USD', minimumFractionDigits: 2 }).format(price);
 
-  const handleSubscribe = async () => {
-    if (!isAuthenticated) {
-      window.location.href = subsiteHref(`/login?redirect=/pricing`);
-      return;
-    }
-    setSubLoading(true);
-    setError('');
-    try {
-      const res = await fetch('/api/subscription/checkout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        credentials: 'include',
-        body: JSON.stringify({ locale }),
-      });
-      if (!res.ok) {
-        const err = await res.json();
-        throw new Error(err.error || 'Checkout failed');
-      }
-      const data = await res.json();
-      if (data.checkoutUrl) {
-        window.location.href = data.checkoutUrl;
-      } else {
-        throw new Error('No checkout URL returned');
-      }
-    } catch (err) {
-      setError(tCheck('checkoutError'));
-      setSubLoading(false);
-    }
-  };
-
   const handleGetReport = () => {
-    // Redirect to check page — user runs a check first, then pays for full report
+    // Redirect to check page — user runs a check first, then gets free full report
     window.location.href = subsiteHref('/');
   };
 
@@ -62,11 +33,7 @@ export default function PricingPage() {
           {t('subtitle')}
         </p>
 
-        {error && (
-          <div className="max-w-md mx-auto mb-6 bg-red-50 border border-red-200 text-red-700 text-sm rounded-lg p-3">
-            {error}
-          </div>
-        )}
+        {/* Creem 支付错误提示 — 限时免费期间隐藏 */}
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {/* Free */}
@@ -92,7 +59,7 @@ export default function PricingPage() {
               {t('popular')}
             </div>
             <h2 className="text-lg font-semibold text-primary-navy">{t('single')}</h2>
-            <p className="text-4xl font-bold text-gold my-6">{formatPrice(1.99)}</p>
+            <p className="text-4xl font-bold text-gold my-6">{formatPrice(0)}</p>
             <ul className="text-sm text-gray-500 space-y-3 mb-8">
               <li>{t('singleBullet1')}</li>
               <li>{t('singleBullet2')}</li>
@@ -101,17 +68,16 @@ export default function PricingPage() {
             </ul>
             <button
               onClick={handleGetReport}
-              disabled={singleLoading}
-              className="inline-block w-full bg-gold hover:bg-gold/90 disabled:bg-gray-300 text-primary-navy font-semibold py-2.5 rounded-md transition-all"
+              className="inline-block w-full bg-gold hover:bg-gold/90 text-primary-navy font-semibold py-2.5 rounded-md transition-all"
             >
-              {singleLoading ? tCheck('redirecting') || 'Redirecting...' : t('getReport')}
+              {t('getReport')}
             </button>
           </div>
 
-          {/* Monthly */}
+          {/* Monthly — 限时免费（Creem 订阅支付已注释） */}
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 text-center">
             <h2 className="text-lg font-semibold text-primary-navy">{t('monthly')}</h2>
-            <p className="text-4xl font-bold text-primary-navy my-6">{formatPrice(9.9)}</p>
+            <p className="text-4xl font-bold text-primary-navy my-6">{formatPrice(0)}</p>
             <ul className="text-sm text-gray-500 space-y-3 mb-8">
               <li>{t('monthlyBullet1')}</li>
               <li>{t('monthlyBullet2')}</li>
@@ -119,11 +85,10 @@ export default function PricingPage() {
               <li>{t('monthlyBullet4')}</li>
             </ul>
             <button
-              onClick={handleSubscribe}
-              disabled={subLoading || authLoading}
-              className="inline-block w-full border-2 border-primary-navy text-primary-navy font-semibold py-2.5 rounded-md hover:bg-primary-navy hover:text-white transition-all disabled:border-gray-300 disabled:text-gray-400 disabled:cursor-not-allowed"
+              onClick={handleGetReport}
+              className="inline-block w-full border-2 border-primary-navy text-primary-navy font-semibold py-2.5 rounded-md hover:bg-primary-navy hover:text-white transition-all"
             >
-              {subLoading ? tCheck('redirecting') || 'Redirecting...' : t('subscribe')}
+              {t('subscribe')}
             </button>
           </div>
 

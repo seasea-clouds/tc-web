@@ -2,13 +2,19 @@
 
 import { useT, useTradeLocale, WHATSAPP_URL, useMessages } from '@trade/ui';
 
+/**
+ * @deprecated Creem 支付功能已注释（限时免费活动）。
+ * 参见：checkout.ts / useSubscription.ts / creem.ts / functions/api/checkout/ / functions/api/subscription/
+ * 如需恢复支付，请恢复相关文件中的注释代码。
+ */
+
 import { useState, useEffect } from "react";
 import { checkCcc, CATEGORY_LABELS } from "../../../../../../modules/ccc/rules";
 import { API_BASE } from "@/lib/constants";
 import { useFormValidation, inputClasses, selectClasses } from "@/lib/useFormValidation";
 import { usePathPrefix } from '@/lib/useSubsiteHref';
-import { initiateCheckout } from '@/lib/checkout';
-import { useSubscription } from '@/lib/useSubscription';
+// [CREEM-PAYMENT-DISABLED] import { initiateCheckout } from '@/lib/checkout';
+// [CREEM-PAYMENT-DISABLED] import { useSubscription } from '@/lib/useSubscription';
 import { setLocaleData } from '../../../../../../modules/shared/i18n';
 
 type Step = "form" | "free-result";
@@ -27,7 +33,7 @@ export default function CccCheckClient() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const { fieldErrors, validate, clearFieldError } = useFormValidation();
-  const { subscribed } = useSubscription();
+  // [CREEM-PAYMENT-DISABLED] const { subscribed } = useSubscription();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -39,31 +45,6 @@ export default function CccCheckClient() {
 
   const pathPrefix = usePathPrefix();
   const handlePayment = async () => {
-    // If subscribed, skip checkout and go directly to the report page
-    if (subscribed) {
-      try {
-        localStorage.setItem('compli-report-input', JSON.stringify({
-          ...input,
-          productName: input.productName || t('yourProduct'),
-        }));
-      } catch {}
-      const reportId = `CCC-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
-      if (freeData) {
-        fetch('/api/report/save', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            reportId,
-            module: 'CCC Certification',
-            inputData: input,
-            resultData: freeData,
-            paymentStatus: 'completed',
-          }),
-        }).catch(e => console.warn('D1 save failed (subscribed):', e));
-      }
-      window.location.href = pathPrefix + "/c/report/?id=" + reportId;
-      return;
-    }
     try {
       const reportId = `CCC-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
 
@@ -108,25 +89,8 @@ export default function CccCheckClient() {
         }).catch(e => console.warn('Email send failed (dev mode):', e));
       }
 
-      // 3. Try checkout API — redirect to Creem checkout
-      const checkoutUrl = await initiateCheckout({
-        reportId,
-        email,
-        locale,
-        productName: input.productName || t('yourProduct'),
-        category: input.category,
-        originCountry: input.originCountry,
-        module: 'CCC Certification',
-        moduleKey: 'ccc',
-      });
-
-      if (checkoutUrl) {
-        window.location.href = checkoutUrl;
-      } else {
-        // Checkout failed — show error instead of silently giving access
-        setError(t('checkoutError'));
-        setLoading(false);
-      }
+      // [CREEM-PAYMENT-DISABLED] 限时免费：直接访问报告页面（跳过 Creem checkout）
+      window.location.href = pathPrefix + '/c/report/?id=' + reportId;
     } catch (err) {
       try {
         localStorage.setItem('compli-report-input', JSON.stringify({
@@ -322,30 +286,8 @@ export default function CccCheckClient() {
               )}
             </div>
 
-            {/* Payment Section */}
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sm:p-8 text-center space-y-4">
-              {subscribed ? (
-                <>
-                  <p className="text-lg font-semibold text-primary-navy">{t('subscribedViewReport')}</p>
-                  <p className="text-sm text-gray-500">{t('subscribedDesc')}</p>
-                  <div className="flex justify-center">
-                    <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
-                      <span>{t('subscribedBadge')}</span>
-                    </div>
-                  </div>
-                  {error && <p className="text-sm text-red-500">{error}</p>}
-                  <div className="flex justify-center">
-                    <button
-                      onClick={handlePayment}
-                      disabled={loading}
-                      className="w-full max-w-xs bg-gold hover:bg-gold/90 disabled:bg-gray-300 text-primary-navy font-semibold py-3 px-6 rounded-md transition-all text-lg"
-                    >
-                      {loading ? t('redirecting') : t('viewFullReport')}
-                    </button>
-                  </div>
-                </>
-              ) : (
-                <>
+                        {/* Payment Section — 限时免费（Creem 支付已注释） */}
+                <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sm:p-8 text-center space-y-4">
                   <p className="text-lg font-semibold text-primary-navy">{t('paymentTitle')}</p>
                   <p className="text-sm text-gray-500">{t('fullReportDesc')}</p>
 
@@ -371,11 +313,9 @@ export default function CccCheckClient() {
                     </button>
                     <p className="text-xs text-gray-400">{t('oneTimePayment')}</p>
                   </div>
-                </>
-              )}
-            </div>
+                </div>
 
-            {/* Expert CTA */}
+{/* Expert CTA */}
             <div className="bg-primary-navy text-white rounded-lg p-8 text-center">
               <h3 className="text-xl font-bold mb-2">{t('expertCtaTitle')}</h3>
               <p className="text-white/80 mb-6 max-w-lg mx-auto">{t('expertCtaDesc')}</p>

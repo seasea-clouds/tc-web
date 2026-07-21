@@ -3,11 +3,12 @@
  *
  * Prebuild script: reads VERSION from monorepo root (../../VERSION)
  * and injects it into the current app's package.json version field.
+ * Falls back to the app's own package.json version if VERSION file is absent.
  *
  * Usage (in each app's package.json):
  *   "prebuild": "node ../../packages/scripts/inject-version.mjs"
  *
- * The authoritative version source is: <monorepo-root>/VERSION
+ * The authoritative version source is: <monorepo-root>/VERSION (or package.json)
  */
 
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -17,20 +18,19 @@ const cwd = process.cwd();
 const versionFile = resolve(cwd, '../../VERSION');
 const pkgFile = resolve(cwd, 'package.json');
 
+const pkg = JSON.parse(readFileSync(pkgFile, 'utf-8'));
+
 let version;
 try {
   version = readFileSync(versionFile, 'utf-8').trim();
+  if (!/^\d+\.\d+\.\d+/.test(version)) {
+    console.warn(`⚠ VERSION file has invalid format "${version}", falling back to package.json`);
+    version = pkg.version;
+  }
 } catch {
-  console.error(`✗ Cannot read VERSION file at ${versionFile}`);
-  process.exit(1);
+  console.log(`  (VERSION file absent, using package.json version ${pkg.version})`);
+  version = pkg.version;
 }
-
-if (!/^\d+\.\d+\.\d+/.test(version)) {
-  console.error(`✗ Invalid version format in VERSION: "${version}"`);
-  process.exit(1);
-}
-
-const pkg = JSON.parse(readFileSync(pkgFile, 'utf-8'));
 
 if (pkg.version !== version) {
   pkg.version = version;

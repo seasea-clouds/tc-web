@@ -80,14 +80,13 @@ async function main() {
   }
   console.log('  ✅ llms.txt 检查通过');
 
-  // 7. Copy to public/ for source control
+// 7. Copy to public/ for source control (sitemaps, llms, search-indexes shareable across apps)
   console.log('[7/7] Copying to public/...');
   const publicDir = path.join(cwd, 'public');
-  if (fs.existsSync(publicDir)) {
-    for (const f of fs.readdirSync(outDir)) {
-      if (f.startsWith('sitemap') || f.startsWith('llms') || f.startsWith('search-index') || f === 'robots.txt') {
-        fs.copyFileSync(path.join(outDir, f), path.join(publicDir, f));
-      }
+  fs.mkdirSync(publicDir, { recursive: true });
+  for (const f of fs.readdirSync(outDir)) {
+    if (f.startsWith('sitemap') || f.startsWith('llms') || f.startsWith('search-index') || f === 'robots.txt') {
+      fs.copyFileSync(path.join(outDir, f), path.join(publicDir, f));
     }
   }
 

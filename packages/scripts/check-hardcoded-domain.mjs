@@ -141,7 +141,7 @@ export function runDomainCheck(customDirs) {
 const args = process.argv.slice(2);
 const isCI = args.includes('--ci');
 
-if (process.argv[1] === fileURLToPath(import.meta.url) || args.length > 0) {
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const customDir = args.find(a => !a.startsWith('--'));
   let dirs;
   if (customDir) {

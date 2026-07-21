@@ -5,7 +5,7 @@
   @trade/site: version already 6.1.0
 
 > @trade/site@6.1.0 build
-> node ../../packages/scripts/images/convert-webp.mjs && node ../../packages/scripts/build-search-index.mjs && node ../../packages/scripts/build-search-translations.mjs && next build && node ../../packages/scripts/build-all.mjs --base-url=https://sinotradecompliance.com --out-dir=out && node ../../packages/scripts/ci-check.mjs --out-dir=out --ci
+> rm -rf out && node ../../packages/scripts/images/convert-webp.mjs && node ../../packages/scripts/build-search-index.mjs && node ../../packages/scripts/build-search-translations.mjs && next build && node ../../packages/scripts/build-all.mjs --base-url=https://sinotradecompliance.com --out-dir=out && node ../../packages/scripts/ci-check.mjs --out-dir=out --ci
 
 Converting 18 images to WebP...
 
@@ -88,15 +88,15 @@ Generated search-widget-translations.json: 48 locales → /root/projects/trade/w
 ▲ Next.js 16.2.4 (Turbopack)
 
   Creating an optimized production build ...
-✓ Compiled successfully in 2.6s
+✓ Compiled successfully in 2.9s
   Running TypeScript ...
-  Finished TypeScript in 6.7s ...
+  Finished TypeScript in 8.7s ...
   Collecting page data using 19 workers ...
   Generating static pages using 19 workers (0/1397) ...
   Generating static pages using 19 workers (349/1397) 
   Generating static pages using 19 workers (698/1397) 
   Generating static pages using 19 workers (1047/1397) 
-✓ Generating static pages using 19 workers (1397/1397) in 5.9s
+✓ Generating static pages using 19 workers (1397/1397) in 5.7s
   Finalizing page optimization ...
 ⚠ Statically exporting a Next.js application via `next export` disables API routes and middleware.
 This command is meant for static-only hosts, and is not necessary to make your application static.
@@ -305,22 +305,8 @@ Output:   /root/projects/trade/web/apps/site/out
   Markdown 格式质量检查（精细化语言策略）
 ═══════════════════════════════════════════════
 
-┌─ RU (4 文件, 0 错误, 4 警告)
-│  ⚠️  [W02] apps/blog/content/bg/korean-cosmetics-china-guide.mdx(文件级)
-│     俄文文件混用 en-dash 和 em-dash，应统一
-│     > (整个文件) en-dash 和 em-dash 混用
-│  ⚠️  [W02] apps/blog/content/ru/korean-cosmetics-china-guide.mdx(文件级)
-│     俄文文件混用 en-dash 和 em-dash，应统一
-│     > (整个文件) en-dash 和 em-dash 混用
-│  ⚠️  [W02] apps/blog/content/sr/korean-cosmetics-china-guide.mdx(文件级)
-│     俄文文件混用 en-dash 和 em-dash，应统一
-│     > (整个文件) en-dash 和 em-dash 混用
-│  ⚠️  [W02] apps/blog/content/uk/korean-cosmetics-china-guide.mdx(文件级)
-│     俄文文件混用 en-dash 和 em-dash，应统一
-│     > (整个文件) en-dash 和 em-dash 混用
-└─
-
-  扫描文件: 384  错误: 0  警告: 4
+✅ 未发现格式问题
+  扫描文件: 384
 
 
 ▶ check-md-structure.mjs --project=site --ci
@@ -583,7 +569,7 @@ Output:   /root/projects/trade/web/apps/site/out
 
 🔍 【A】 Static t("key") — orphaned keys...
 
-📊  2160 unique static keys checked, 0 orphan(s) found
+📊  2154 unique static keys checked, 0 orphan(s) found
 
 🔍 【B】 Dynamic t(`…`) template keys...
 
@@ -628,398 +614,13 @@ Output:   /root/projects/trade/web/apps/site/out
 🔍 统一 hreflang 检查
 
 📦 模式: SSG 输出目录检查
-  📄 扫描 1779 个 HTML 文件
+  📄 扫描 1395 个 HTML 文件
 
-  ❌ af/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ af/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ af/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ af/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ af/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ af/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ af/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ af/blog/index.html: 0 hreflang, x-default=false
-  ❌ ar/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ ar/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ ar/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ ar/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ ar/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ ar/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ ar/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ ar/blog/index.html: 0 hreflang, x-default=false
-  ❌ az/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ az/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ az/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ az/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ az/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ az/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ az/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ az/blog/index.html: 0 hreflang, x-default=false
-  ❌ be/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ be/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ be/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ be/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ be/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ be/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ be/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ be/blog/index.html: 0 hreflang, x-default=false
-  ❌ bg/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ bg/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ bg/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ bg/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ bg/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ bg/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ bg/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ bg/blog/index.html: 0 hreflang, x-default=false
-  ❌ bn/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ bn/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ bn/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ bn/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ bn/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ bn/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ bn/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ bn/blog/index.html: 0 hreflang, x-default=false
-  ❌ ca/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ ca/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ ca/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ ca/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ ca/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ ca/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ ca/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ ca/blog/index.html: 0 hreflang, x-default=false
-  ❌ cs/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ cs/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ cs/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ cs/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ cs/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ cs/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ cs/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ cs/blog/index.html: 0 hreflang, x-default=false
-  ❌ da/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ da/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ da/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ da/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ da/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ da/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ da/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ da/blog/index.html: 0 hreflang, x-default=false
-  ❌ de/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ de/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ de/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ de/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ de/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ de/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ de/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ de/blog/index.html: 0 hreflang, x-default=false
-  ❌ el/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ el/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ el/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ el/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ el/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ el/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ el/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ el/blog/index.html: 0 hreflang, x-default=false
-  ❌ en/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ en/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ en/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ en/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ en/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ en/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ en/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ en/blog/index.html: 0 hreflang, x-default=false
-  ❌ es/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ es/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ es/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ es/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ es/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ es/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ es/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ es/blog/index.html: 0 hreflang, x-default=false
-  ❌ fa/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ fa/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ fa/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ fa/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ fa/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ fa/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ fa/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ fa/blog/index.html: 0 hreflang, x-default=false
-  ❌ fi/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ fi/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ fi/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ fi/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ fi/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ fi/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ fi/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ fi/blog/index.html: 0 hreflang, x-default=false
-  ❌ fr/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ fr/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ fr/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ fr/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ fr/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ fr/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ fr/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ fr/blog/index.html: 0 hreflang, x-default=false
-  ❌ he/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ he/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ he/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ he/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ he/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ he/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ he/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ he/blog/index.html: 0 hreflang, x-default=false
-  ❌ hi/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ hi/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ hi/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ hi/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ hi/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ hi/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ hi/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ hi/blog/index.html: 0 hreflang, x-default=false
-  ❌ hr/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ hr/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ hr/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ hr/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ hr/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ hr/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ hr/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ hr/blog/index.html: 0 hreflang, x-default=false
-  ❌ hu/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ hu/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ hu/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ hu/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ hu/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ hu/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ hu/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ hu/blog/index.html: 0 hreflang, x-default=false
-  ❌ hy/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ hy/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ hy/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ hy/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ hy/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ hy/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ hy/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ hy/blog/index.html: 0 hreflang, x-default=false
-  ❌ id/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ id/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ id/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ id/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ id/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ id/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ id/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ id/blog/index.html: 0 hreflang, x-default=false
-  ❌ index.html: 0 hreflang, x-default=false
-  ❌ it/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ it/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ it/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ it/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ it/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ it/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ it/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ it/blog/index.html: 0 hreflang, x-default=false
-  ❌ ja/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ ja/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ ja/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ ja/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ ja/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ ja/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ ja/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ ja/blog/index.html: 0 hreflang, x-default=false
-  ❌ ka/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ ka/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ ka/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ ka/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ ka/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ ka/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ ka/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ ka/blog/index.html: 0 hreflang, x-default=false
-  ❌ ko/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ ko/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ ko/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ ko/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ ko/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ ko/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ ko/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ ko/blog/index.html: 0 hreflang, x-default=false
-  ❌ ms/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ ms/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ ms/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ ms/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ ms/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ ms/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ ms/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ ms/blog/index.html: 0 hreflang, x-default=false
-  ❌ ne/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ ne/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ ne/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ ne/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ ne/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ ne/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ ne/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ ne/blog/index.html: 0 hreflang, x-default=false
-  ❌ nl/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ nl/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ nl/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ nl/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ nl/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ nl/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ nl/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ nl/blog/index.html: 0 hreflang, x-default=false
-  ❌ no/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ no/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ no/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ no/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ no/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ no/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ no/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ no/blog/index.html: 0 hreflang, x-default=false
-  ❌ pl/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ pl/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ pl/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ pl/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ pl/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ pl/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ pl/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ pl/blog/index.html: 0 hreflang, x-default=false
-  ❌ pt/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ pt/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ pt/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ pt/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ pt/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ pt/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ pt/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ pt/blog/index.html: 0 hreflang, x-default=false
-  ❌ ro/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ ro/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ ro/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ ro/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ ro/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ ro/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ ro/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ ro/blog/index.html: 0 hreflang, x-default=false
-  ❌ ru/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ ru/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ ru/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ ru/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ ru/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ ru/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ ru/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ ru/blog/index.html: 0 hreflang, x-default=false
-  ❌ si/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ si/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ si/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ si/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ si/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ si/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ si/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ si/blog/index.html: 0 hreflang, x-default=false
-  ❌ sk/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ sk/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ sk/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ sk/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ sk/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ sk/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ sk/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ sk/blog/index.html: 0 hreflang, x-default=false
-  ❌ sl/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ sl/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ sl/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ sl/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ sl/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ sl/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ sl/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ sl/blog/index.html: 0 hreflang, x-default=false
-  ❌ sq/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ sq/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ sq/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ sq/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ sq/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ sq/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ sq/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ sq/blog/index.html: 0 hreflang, x-default=false
-  ❌ sr/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ sr/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ sr/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ sr/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ sr/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ sr/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ sr/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ sr/blog/index.html: 0 hreflang, x-default=false
-  ❌ sv/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ sv/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ sv/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ sv/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ sv/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ sv/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ sv/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ sv/blog/index.html: 0 hreflang, x-default=false
-  ❌ sw/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ sw/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ sw/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ sw/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ sw/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ sw/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ sw/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ sw/blog/index.html: 0 hreflang, x-default=false
-  ❌ ta/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ ta/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ ta/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ ta/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ ta/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ ta/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ ta/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ ta/blog/index.html: 0 hreflang, x-default=false
-  ❌ th/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ th/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ th/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ th/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ th/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ th/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ th/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ th/blog/index.html: 0 hreflang, x-default=false
-  ❌ tr/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ tr/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ tr/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ tr/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ tr/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ tr/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ tr/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ tr/blog/index.html: 0 hreflang, x-default=false
-  ❌ uk/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ uk/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ uk/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ uk/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ uk/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ uk/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ uk/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ uk/blog/index.html: 0 hreflang, x-default=false
-  ❌ ur/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ ur/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ ur/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ ur/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ ur/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ ur/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ ur/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ ur/blog/index.html: 0 hreflang, x-default=false
-  ❌ vi/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ vi/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ vi/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ vi/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ vi/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ vi/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ vi/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ vi/blog/index.html: 0 hreflang, x-default=false
-  ❌ zh/blog/ccc-certification-explained/index.html: 0 hreflang, x-default=false
-  ❌ zh/blog/china-import-compliance-guide/index.html: 0 hreflang, x-default=false
-  ❌ zh/blog/china-label-compliance/index.html: 0 hreflang, x-default=false
-  ❌ zh/blog/china-trademark-registration/index.html: 0 hreflang, x-default=false
-  ❌ zh/blog/cosmetics-nmpa-filing/index.html: 0 hreflang, x-default=false
-  ❌ zh/blog/cross-border-ecommerce-china/index.html: 0 hreflang, x-default=false
-  ❌ zh/blog/gacc-registration-guide/index.html: 0 hreflang, x-default=false
-  ❌ zh/blog/index.html: 0 hreflang, x-default=false
-  跳过: 2 文件 (路径匹配 skip-pattern)
+  跳过: 3 文件 (路径匹配 skip-pattern)
 
-  结果: 1392 通过, 385 失败
+  结果: 1392 通过, 0 失败
 
-❌ 385 项检查未通过
+✅ hreflang 全部检查通过
 
 ▶ check-llms.mjs --project=site --dir=out --ci
 🔍 检查 llms.txt...
@@ -1051,16 +652,6 @@ Output:   /root/projects/trade/web/apps/site/out
 ▶ tsc --noEmit
 
 ═══════════════════════════════════════════════
-┌──────┬────────────────────┬───────┐
-│ 项目   │ 失败的脚本              │ 项数   │
-├──────┼────────────────────┼───────┤
-│ site │ check-hreflang.mjs │     1 │
-└──────┴────────────────────┴───────┘
-❌ 共 1 项检查失败
-npm error Lifecycle script `build` failed with error:
-npm error code 1
-npm error path /root/projects/trade/web/apps/site
-npm error workspace @trade/site@6.1.0
-npm error location /root/projects/trade/web/apps/site
-npm error command failed
-npm error command sh -c node ../../packages/scripts/images/convert-webp.mjs && node ../../packages/scripts/build-search-index.mjs && node ../../packages/scripts/build-search-translations.mjs && next build && node ../../packages/scripts/build-all.mjs --base-url=https://sinotradecompliance.com --out-dir=out && node ../../packages/scripts/ci-check.mjs --out-dir=out --ci
+✅ 全部检查通过
+═══════════════════════════════════════════════
+

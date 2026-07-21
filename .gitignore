@@ -23,5 +23,11 @@ apps/site/public/404/
 .turbo/cache/
 .turbo/turbo-build.log
 
+# Build artifacts generated at web root (by build scripts)
+/robots.txt
+/sitemap.xml
+/sitemap-images.xml
+/sitemap-*.xml
+
 # Cloudflare Worker wrangler.toml with local database_id (not committed)
 apps/admin/workers/analytics-cron/wrangler.toml

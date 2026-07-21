@@ -151,7 +151,7 @@ function repoDirExists(subPath) {
 // 翻译自动同步（--sync 时启用）
 // ============================================================
 function runSync() {
-  const syncScript = path.join(REPO_ROOT, 'scripts/sync-messages.mjs');
+  const syncScript = path.join(SCRIPTS_DIR, 'sync-messages.mjs');
   if (!fs.existsSync(syncScript)) {
     console.log(`  ⚠️ scripts/sync-messages.mjs 不存在，跳过同步`);
     return;

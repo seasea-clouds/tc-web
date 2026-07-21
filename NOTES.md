@@ -1,170 +1,145 @@
-# NOTES.md — 技术决策 & 踩坑记录
+# NOTES.md — 各站参考资料与注意事项
 
-## 2026-07-03 — CopyButton 修复 (commit 753b54e)
+## 官网（site）
 
-### 问题
-博客文章分享区的 CopyButton（最后一个复制链接按钮）点击后无视觉反馈，URL 也未复制。
+### 🌐 翻译铁律
 
-### 根本原因
-`handleCopy` 中 `navigator.clipboard.writeText()` 可因用户手势异步超时而 rejected；fallback 的 `document.execCommand('copy')` 在现代浏览器中已弃用/移除。两个路径都失败时，`setCopied(true)` 从未执行 → 无反馈、无复制。
+- **翻译不怕慢，就怕不准** — 质量永远优先于速度
+- 48 种语言的每一个页面，标题和内容必须翻译完全准确，绝不允许使用英文做后备
+- **🔴 禁止英文 fallback** — 任何字段、任何语言都不允许用英文填充，品牌名除外
+- 品牌名 "SinoTrade Compliance" 所有语言保持英文，不翻译
+- 联系方式所有语言保持一致（邮箱 / WhatsApp / 地址不翻译）
 
-### 修复
-重构逻辑：先试 Clipboard API → 失败再试 textarea + execCommand → **无论能否复制，始终调用 `setCopied(true)`** 显示绿色勾号反馈。用户至少看到反馈，实际复制在 99% 的 HTTPS 场景下工作正常。
+### 禁止翻译词表（NO_TRANSLATE）
 
-## 2026-07-03 — Geo 标签统一 (commit 753b54e)
+| 类别 | 示例 |
+|------|------|
+| **品牌名** | SinoTrade Compliance, WhatsApp, WeChat, Tmall, LinkedIn, Facebook, Twitter, YouTube |
+| **人名** | David Zhang, Sarah Chen, Mike Wang, Leo Liu, John Smith |
+| **机构缩写** | GACC, NMPA, CCC, CBEC, CIFER, MOA, CNCA, MEE |
+| **标准编号** | GB 7718-2025 |
+| **邮箱占位符** | you@company.com |
+| **其他** | FAQ, min |
 
-### 问题
-`geo.region` / `geo.placename` / `ICBM` meta 标签只在主站 (site) layout 中存在，blog 和 portal layout 缺失。用户通过主域名访问 blog/portal 页面时 geo 信息为空。
+### Google Translate 短词修正
 
-### 修复
-在 blog 和 portal 的 `<head>` 中直接添加相同的 geo meta 标签。采用内联方式而非 metadata.other，与主站方式保持一致。
+| 英文 | zh | ja | ko | ar | fr | de | es | ru |
+|------|----|----|----|----|----|----|----|----|
+| Home（导航） | 首页 | ホーム | 홈 | الرئيسية | Accueil | Startseite | Inicio | Главная |
+| Contact（导航） | 联系我们 | お問い合わせ | 문의하기 | اتصل بنا | Contactez-nous | Kontakt | Contacto | Контакты |
+| Services（导航） | 服务 | サービス | 서비스 | الخدمات | Services | Dienstleistungen | Servicios | Услуги |
+| WhatsApp（品牌） | WhatsApp | WhatsApp | WhatsApp | WhatsApp | WhatsApp | WhatsApp | WhatsApp | WhatsApp |
 
-## 2026-07-03 — llms.txt Portal 自查工具名称 (commit 753b54e)
+### 翻译引擎
 
-### 问题
-build-llms.mjs 的 `getDisplayText()` 对所有 `/c/check/*` 路由统一返回 "Compliance Check"，6 个自查工具在 llms.txt 中无法区分。
+翻译调用 `/root/projects/translate-tool/`，双渠道 Google Translate 免费无需 Key。
 
-### 修复
-在 `getDisplayText()` 中添加 `CHECK_LABELS` 映射表，按工具 ID 返回具体名称。
+### 部署验证
 
-## 2026-07-04 — Worker Proxy 博客水合修复 (commit bfc65bd)
+构建时自动注入时间戳到页面 HTML：
+```html
+<meta name="build-commit" content="{commit_sha}" />
+<meta name="build-time" content="{ISO_timestamp}" />
+```
 
-### 问题
-通过主域名 `sinotradecompliance.com/en/blog/...` 访问博客时，React RSC 水合完全失败（`bodyReactKeys: []`），CopyButton 等所有交互功能不可用。直接访问博客独立域名 `trade-web-blog.pages.dev` 则正常。
+验证方法：
+```bash
+curl -s https://sinotradecompliance.com/en/industries/ | grep -oP 'build-commit" content="[^"]*"'
+git log --oneline -1
+```
 
-### 根本原因
-`rewriteNextStatic(html, 'blog')` 将 `/_next/static/` 全部替换为 `/blog/_next/static/`，但对 `<script src>` 标签的还原只写了 `/c/` 前缀（portal），没有 `/blog/` 前缀的还原。
+## Portal
 
-Turbopack 模块系统的 `q()` 生成 chunk key 为 `_next/static/chunks/{name}`（无前缀），但 `registerChunk(script.src)` 注册的是 `/blog/_next/static/chunks/{name}` → key 不匹配 → 模块永不执行 → React 永不初始化。
+### URL 架构
 
-Portal 有同样的问题但提前修复了（`rewriteNextStatic` 中已写入 `/c/` revert）。
+Portal 通过主站边缘 Worker 代理到 `/{locale}/c/*` 路径访问。
+独立域名 `trade-web-portal.pages.dev` 用于直接部署测试。
 
-### 修复
-1. 在 `rewriteNextStatic()` 中添加 `<script src="/blog/_next/static/...">` → `/_next/static/...` 的还原
-2. 扩展 `/_next/static/chunks/` 动态 chunk 处理器，回退到 blog upstream
-3. 为 blog 代理路径添加 `ensureNextF()`（portal 已有）
+- Portal 内部链接用 `useSubsiteHref()` hook 生成
+- API 调用用 `API_BASE` 常量
+- 指向主站的链接用 `/{locale}/...`（导航/页脚）
 
-## 2026-07-04 — `__next._tree.txt` Prefetch 静默处理 (commit ddcc2d0)
+### 架构决策
 
-### 问题
-Next.js App Router 在 mount 后对可见 `<Link>` 发起 `fetch('/__next._tree.txt?_rsc=...')` RSC 预取请求。
-在 `output: 'export'` 静态导出模式下，这些文件不存在，返回 404 导致控制台错误。
+| 决策 | 方案 | 理由 |
+|------|------|------|
+| 路径 | `/c/` 子路径，主站 Worker 代理 | SEO 最优，继承主域权重 |
+| 支付 | Creem（PaymentProvider 抽象） | Merchant of Record，松耦合可换 |
+| 邮件 | Resend（EmailProvider 抽象） | 已测通，松耦合可换 |
+| PDF | @react-pdf/renderer v4.5.1 | React 组件生成 PDF，风格一致 |
+| 人机验证 | CF Turnstile | 免费、无感、CF 原生 |
+| 认证 | httpOnly Cookie Session | 安全，兼容 Pages Functions |
+| 部署 | CF Pages + Worker 路由 | 独立 CI/CD，互不影响 |
+| 多语言 | next-intl + 同主站 locale 列表 | 48 语言特色 |
 
-### 方案选择
-| 方案 | 语义 | 控制台 | 客户端影响 |
-|------|------|--------|-----------|
-| 404 | 资源不存在，诚实 | ❌ 显示 error | 路由器 fallback 到全页导航 |
-| 204 | 端点存在但无内容返回（当前方案） | ✅ 干净 | 路由器拿到空 RSC 流，等价"无预取数据" |
-| 200 + 空 RSC payload | 返回格式正确的空 RSC 树 | ✅ 干净 | 最准确但依赖 Next.js 内部格式，脆弱 |
+### Portal 环境变量
 
-### 结论
-保持 204。这是基础设施层的合理处理方式（并非掩盖问题），路由器处理空 RSC 流无异常。
+`~/.openclaw/.env` 管理。CF Pages 已配置：
+- CREEM_API_KEY / CREEM_WEBHOOK_SECRET
+- CREEM_PRODUCT_ID_SINGLE / CREEM_PRODUCT_ID_SUBSCRIBE
+- RESEND_API_KEY / EMAIL_FROM / JWT_SECRET / NODE_VERSION=22
 
-## 2026-07-04 — Preload as="script" URL 不匹配 (commit ddcc2d0)
+### ⚠️ 当前已知问题
 
-### 问题
-Worker `rewriteNextStatic()` 将 `/_next/static/` 替换为 `/{prefix}/_next/static/` 后，
-对 `<script src>` 做了前缀还原，但 `<link rel="preload" as="script">` 的 `href` 未还原。
+#### 静态资源代理
+主站 Worker 将 HTML 中的 `/_next/static/*` 重写为 `/c/_next/static/*`，然后代理到 portal 独立域名取资源。
 
-结果：
-- preload: `/{prefix}/_next/static/chunks/abc.js` → 浏览器预加载了但用不上
-- script: `/_next/static/chunks/abc.js` → 不同 URL，重新下载一次
+#### Creem API Key 更新需重新部署
+CF Pages secret 必须先 delete 再 put 才能生效，之后需要触发新 deployment。
 
-控制台 warning + 双倍网络下载。
+## Blog
 
-### 修复
-在 `rewriteNextStatic()` 中使用 lookahead 正则（不依赖属性顺序）增加
-`<link rel="preload" as="script">` 的前缀还原。
+### CI 差异
+博客的 CI 检查跳过 industry-meta 和 portal 模块（blog 仅有 Blog+Cookie 命名空间）。
 
-## 2026-06-11 — CI 脚本铁律
+### 搜索索引
+博客内容纳入主站统一搜索索引，通过 `packages/scripts/build-search-index.mjs` 生成。
 
-### 原则 1：不掩盖问题
-发现问题就解决，不能通过跳过目录、放宽正则、随意加 LEGIT_ENGLISH 来绕过 CI 检查。
+### 构建命令
+```bash
+cd apps/blog
+node ../../packages/scripts/build-search-index.mjs \
+  && rm -rf .next/cache \
+  && next build \
+  && node ../../packages/scripts/ci-check.mjs --out-dir=out --ci
+```
 
-### 原则 2：精确匹配
-如果确实必须特殊处理，用精确的字符串或文件名匹配。
+## Admin
 
-## 2026-06-11 — lottie-web 依赖修复
-- lottie-web 在 pnpm workspace 下链接异常 → 移除 `node_modules/lottie-web` 中的 `.pnpm` 目录结构后重新 install 解决
-- 不是 lottie-web 本身的 bug，是脱机安装导致符号链接受损
+### 技术决策
 
-## 2026-07-04 — 翻译冒号风格一致性修复
+#### Proxy 架构
+- Admin 通过主站 `_middleware.ts` 代理访问（`/admin/*` → `trade-web-admin.pages.dev`）
+- API 路径 `/api/admin/*` 通过 `proxyFetch()` 代理
 
-### 问题
-中文翻译文件的 "营养数据可用吗？" 下拉框三个选项冒号风格不一致：
-- `是的：带有完整的实验室报告`（全角冒号）
-- `部分: 已知成分数据`（半角冒号 + 空格 ❌）
-- `否：需要实验室测试`（全角冒号）
+#### D1 数据库
+- 共享 Portal 项目的 D1 数据库（binding name: `DB`）
+- Admin 使用独立的 D1 表（`admin_users`, `admin_logs` 等）
 
-### 全量扫描发现
-`apps/portal/messages/zh.json` 的 Check 命名空间中有 33 个 key 使用了半角冒号 `:`。
-其中 4 个是标准号/代码引用（如 `GB 6675.1-.4:2014`），保留半角；
-其余 27 个正文文案全部改为全角冒号 `：`，并去除冒号后的多余空格。
+#### Turnstile 人机验证
+- Admin 使用独立 Turnstile widget，site key: `0x4AAAAAADqoEtL5oqrpaf3R`
+- 与 Portal 的 Turnstile 不同
 
-### CI 检查
-新增 `check-colon-consistency.mjs` 脚本：
-- 扫描所有 48 语言翻译文件的 Check 命名空间
-- 中文 (zh) 检测半角冒号正文文案（有豁免列表）
-- 所有语言检测同一值内混用全半角冒号
-- 已注册到 `ci-check.mjs`，portal CI 时自动运行
+#### 静态导出
+- `output: 'export'` + `basePath: '/admin'`，产出到 `out/admin/` 目录
+- CF Pages Functions 负责 API 路由
 
-## 2026-07-09: buildT ReportSection namespace 降级修复
+#### 数据分析 — CF Analytics GraphQL + D1 缓存
+- 库文件：`functions/lib/cf-analytics.ts` + `functions/lib/d1-cache.ts`
+- `fetchDailyStats()` — httpRequests1dGroups：PV/UV/国家/浏览器/状态码
+- `fetchHourlyStats()` — httpRequests1hGroups：每小时 PV/UV
+- `fetchAggregateStatsRange()` — httpRequestsAdaptiveGroups：路径/OS/设备/项目分布
+- **缓存策略**：每日数据不可变，从 CF 取一次后永久缓存；每小时数据（今日）逐步缓存
+- API 端点：`GET /api/admin/analytics?range=today|7d|30d`
+- **定时回填**：独立 Worker `workers/analytics-cron/`（cron: `0 * * * *` UTC），`wrangler deploy`
 
-### 问题
-报告页 Summary header 显示 `curUsd3,500-9,500` 和 `4-6 timelineWeeks` 等原始 key 名。
+### 环境变量管理
 
-### 根因
-`modules/shared/i18n.ts` 中的 `buildT` 函数只预缓存了 `Check` namespace 的英文 JSON。当 `localizeServerResult()` 以 `buildT(locale, 'ReportSection')` 调用时：
+| 项目 | 必要变量 |
+|------|---------|
+| trade-web-admin | ADMIN_JWT_SECRET, TURNSTILE_SECRET_KEY |
+| trade-web-portal | CREEM_API_KEY, CREEM_PRODUCT_ID_SINGLE, CREEM_PRODUCT_ID_SUBSCRIBE, CREEM_WEBHOOK_SECRET, EMAIL_FROM, JWT_SECRET, RESEND_API_KEY, TURNSTILE_SECRET_KEY |
+| trade-web-site | NODE_VERSION, UPSTREAM_BLOG, UPSTREAM_PORTAL, NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY |
+| trade-web-blog | NODE_VERSION, NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY |
 
-1. `CACHE['en:ReportSection']` 不存在（从未加载）
-2. `locale === 'en'` 跳过所有 `require` 逻辑
-3. 英文降级到 `CACHE[EN_CACHE_KEY]` 即 `Check` namespace
-4. 在 Check 中找不到 `curUsd` / `timelineWeeks`
-5. 返回原始 raw key
-
-### 修复
-修改 `buildT` 函数：
-- 将 `CACHE[EN_CACHE_KEY]` 存储完整的 enMsgs（所有 namespace）
-- 新增 `CACHE[EN_CACHE_KEY_CHECK]` 存储 Check namespace 用于向后兼容
-- 英文降级先查找 `enFull[namespace][key]`（相同 namespace）
-- 找不到再回退到 `enCheck[key]`（Check namespace 兼容）
-
-### 涉及文件
-- `apps/portal/modules/shared/i18n.ts` — buildT 函数修复
-- `apps/portal/src/app/[locale]/c/report/page.tsx` — 已验证
-- `apps/portal/src/core/report/template.tsx` — localizeServerResult 调用方
-
-### 部署
-commit cc2679a6 → main → Cloudflare Pages 预览 + 生产
-
-## 2026-07-09: Timeline Localization + CNCA Badge (commit 282886d3)
-
-### 问题
-1. ReportShell 报告标题栏的 `estimatedTimeline` (如 "4-6 weeks") 和 `totalCostRange` 未本地化 → 所有语言显示英文
-2. Timeline 组件中 `responsible='CNCA'` 时错误显示为 "📋 Client"（客户负责），实际上 CNCA 是认证机构
-3. Sinhala 语言的 `gaccChannel_cbec_name` 有硬编码英文（commit 157a92b7）
-
-### 修复
-1. ReportShell.tsx:
-   - 导入 `{ localizeTimeline, localizeCost }` + `{ buildT }`
-   - 创建 `lt`/`lc` helper 函数
-   - `estimatedTimeline` → `lt(result.estimatedTimeline)` → ¥3500-9500
-   - `totalCostRange` → `lc(result.totalCostRange)` → "$3,500-9,500"
-2. Timeline.tsx:
-   - 新增 `responsible === 'CNCA'` 判断分支
-   - 显示灰色 "📋 CNCA" 徽章（而非 "📋 Client"）
-3. check-i18n-keys.mjs: 将 `'Cross-Border E-commerce (CBEC)'` 加入 IGNORE_FALLBACK_VALUES
-
-### 数据流
-- **预览报告 (preview)**: 原本就已通过 `localizeServerResult` 在服务端处理了
-- **付费报告**: API 返回 "4-6 weeks" (英文) → ReportShell 现在用 `lt()` 本地化
-- Timeline 子组件的 `lt(p.duration)` 原本就正确处理
-
-### 涉及文件
-- `apps/portal/src/core/report/ReportShell.tsx` — 标题栏本地化
-- `apps/portal/src/core/report/sections/shared/Timeline.tsx` — CNCA 徽章
-- `packages/scripts/check-i18n-keys.mjs` — Sinhala 豁免
-- `TASK.md` — 更新完成列表
-
-### 部署
-commit 282886d3 → main → Cloudflare Pages Active
+所有环境变量放在 `~/.openclaw/.env`。CF Dashboard 中各项目 Settings → Environment Variables 独立配置。

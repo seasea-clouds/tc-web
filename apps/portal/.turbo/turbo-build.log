@@ -62,15 +62,15 @@ Done.
 - Environments: .env
 
   Creating an optimized production build ...
-✓ Compiled successfully in 2.6s
+✓ Compiled successfully in 2.7s
   Running TypeScript ...
-  Finished TypeScript in 7.3s ...
+  Finished TypeScript in 7.9s ...
   Collecting page data using 19 workers ...
   Generating static pages using 19 workers (0/771) ...
   Generating static pages using 19 workers (192/771) 
   Generating static pages using 19 workers (385/771) 
   Generating static pages using 19 workers (578/771) 
-✓ Generating static pages using 19 workers (771/771) in 4.5s
+✓ Generating static pages using 19 workers (771/771) in 4.0s
   Finalizing page optimization ...
 
 Route (app)
@@ -220,22 +220,8 @@ Route (app)
   Markdown 格式质量检查（精细化语言策略）
 ═══════════════════════════════════════════════
 
-┌─ RU (4 文件, 0 错误, 4 警告)
-│  ⚠️  [W02] apps/blog/content/bg/korean-cosmetics-china-guide.mdx(文件级)
-│     俄文文件混用 en-dash 和 em-dash，应统一
-│     > (整个文件) en-dash 和 em-dash 混用
-│  ⚠️  [W02] apps/blog/content/ru/korean-cosmetics-china-guide.mdx(文件级)
-│     俄文文件混用 en-dash 和 em-dash，应统一
-│     > (整个文件) en-dash 和 em-dash 混用
-│  ⚠️  [W02] apps/blog/content/sr/korean-cosmetics-china-guide.mdx(文件级)
-│     俄文文件混用 en-dash 和 em-dash，应统一
-│     > (整个文件) en-dash 和 em-dash 混用
-│  ⚠️  [W02] apps/blog/content/uk/korean-cosmetics-china-guide.mdx(文件级)
-│     俄文文件混用 en-dash 和 em-dash，应统一
-│     > (整个文件) en-dash 和 em-dash 混用
-└─
-
-  扫描文件: 384  错误: 0  警告: 4
+✅ 未发现格式问题
+  扫描文件: 384
 
 
 ▶ check-md-structure.mjs --project=portal --ci
@@ -409,7 +395,7 @@ Route (app)
 
 【A】静态 t("key") — orphan 键检查...
 
-📊  2122 unique static keys checked, 0 orphan(s) found
+📊  2116 unique static keys checked, 0 orphan(s) found
 
 【B】动态 t(`…`) 模板键检查...
 
@@ -513,7 +499,7 @@ Route (app)
 
 🔍 【A】 Static t("key") — orphaned keys...
 
-📊  2160 unique static keys checked, 0 orphan(s) found
+📊  2154 unique static keys checked, 0 orphan(s) found
 
 🔍 【B】 Dynamic t(`…`) template keys...
 

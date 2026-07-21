@@ -32,39 +32,77 @@ SinoTrade 品牌的所有网站代码统一放在此 monorepo 中。三个独立
 - **dev 域名：** `https://trade-web-site.pages.dev`
 - **生产域名：** `sinotradecompliance.com` ✅
 - **用途：** 官网主站，品牌展示、服务介绍、行业页面
+- **技术栈：** Next.js 16 (SSG 静态导出) + next-intl + TypeScript + Tailwind CSS
 - **多语言：** `[locale]` 服务端路由，48 语言 SSG（静态导出）
+- **结构：** `src/`（页面组件）| `messages/`（48 语言翻译）| `content/blog/`（博客 MDX）| `public/`（静态资源）
 - **SSG 输出目录：** `apps/site/out/`
 - **代理功能：** `functions/_middleware.ts` 负责将 `/c/` → portal、`/blog/` → blog 的请求转发
-- **入口：** [PROJECT.md](apps/site/PROJECT.md)
 
 ### 用户站 — portal
 - **目录：** `apps/portal/`
 - **CF Pages 项目名：** `trade-web-portal`
 - **dev 域名：** `https://trade-web-portal.pages.dev`
-- **主站代理域名：** `sinotradecompliance.com/{locale}/c/*`
 - **主站代理路径：** `/{locale}/c/*`
-- **旧名：** 曾用 "compli-service"，**已全面改为 "portal"**；URL 前缀从 `/compli-service/` 改为 `/c/`。
-- **用途：** 合规工具箱 — 6 大合规自查工具（GACC/Label/CCC/NMPA/Cross-border/Trademark）
-- **技术栈：** Next.js `output: 'export'`（SSG）+ next-intl + Pages Functions（API）
-- **数据库：** Cloudflare D1（SQLite）
-- **认证：** httpOnly Cookie Session
-- **支付：** Creem
+- **旧名：** 曾用 "compli-service"，已全面改为 "portal"；URL 前缀从 `/compli-service/` 改为 `/c/`。
+- **用途：** 合规工具箱 — 6 大合规自查工具
+- **技术栈：** Next.js 16 (`output: 'export'` SSG) + next-intl + TypeScript + Tailwind CSS + Pages Functions (API) + Cloudflare D1 (SQLite) + httpOnly Cookie Session + Creem (支付) + Resend (邮件)
 - **API 目录：** `apps/portal/functions/api/`
-- **入口：** [PROJECT.md](apps/portal/PROJECT.md)
+- **六大自查模块：**
+  | 模块 | 路由（经主站） | 说明 |
+  |------|---------------|------|
+  | GACC 食品注册 | `/en/c/check/gacc` | 食品出口中国合规自查 |
+  | 中文标签合规 | `/en/c/check/label` | 中文标签合规自查 |
+  | CCC 认证 | `/en/c/check/ccc` | 中国强制认证自查 |
+  | 化妆品备案 | `/en/c/check/nmpa` | NMPA 备案自查 |
+  | 跨境电商 | `/en/c/check/crossborder` | 跨境电商合规自查 |
+  | 品牌保护 | `/en/c/check/trademark` | 商标保护自查 |
+- **页面路由：**
+  | 页面 | 路径 |
+  |------|------|
+  | 首页 | `/en/c/` |
+  | 自查表单（6 模块） | `/en/c/check/{gacc,label,ccc,nmpa,crossborder,trademark}` |
+  | 报告页 | `/en/c/report?id=xxx` |
+  | 登录/注册 | `/en/c/auth/login` `/en/c/auth/register` |
+  | 仪表盘/历史/订阅 | `/en/c/dashboard` `/en/c/dashboard/reports` `/en/c/dashboard/billing` |
+- **翻译：** 48 语言全覆盖，CI 翻译质量检查 0 问题。翻译文件在 `apps/portal/messages/*.json`
 
 ### 博客站 — blog
 - **目录：** `apps/blog/`
 - **CF Pages 项目名：** `trade-web-blog`
 - **dev 域名：** `https://trade-web-blog.pages.dev`
-- **主站代理域名：** `sinotradecompliance.com/{locale}/blog/*`
-- **主站代理路径：** `/{locale}/blog/*`
-- **用途：** SinoTrade 合规博客
-- **多语言：** `[locale]` 服务端路由，48 语言 SSG
+- **主站代理路径：** `sinotradecompliance.com/{locale}/blog/*`
+- **用途：** SinoTrade Compliance 品牌的多语言合规博客，通过高质量教育内容获客
+- **技术栈：** Next.js 16 (SSG) + next-intl + TypeScript + Tailwind CSS；内容：Markdown + gray-matter 前置元数据
+- **多语言：** 48 语言，内容存放在 `content/{locale}/` 目录，每篇文章对应语言 Markdown 文件
+- **搜索索引：** 通过 `packages/scripts/build-search-index.mjs` 统一生成，在主站 CDN 共享
+- **共享 UI：** `@trade/ui`（Navbar/Footer/LanguageSwitcher）
 
-### 管理后台 — admin（计划中）
-- **目录：** `apps/admin/`（尚未创建）
-- **部署：** CF Pages（计划中）
-- **用途：** 管理员面板（计划中）
+### 管理后台 — admin
+- **目录：** `apps/admin/`
+- **CF Pages 项目名：** `trade-web-admin`
+- **dev 域名：** `https://trade-web-admin.pages.dev`
+- **主站代理路径：** `/{locale}/admin/*`（通过 `_middleware.ts` 代理）
+- **用途：** 内部运营管理面板
+- **路由结构：**
+  | 页面 | 路径 |
+  |------|------|
+  | 登录 | `/{locale}/admin/login` |
+  | 数据看板 | `/{locale}/admin/dashboard` |
+  | 用户管理 | `/{locale}/admin/users` |
+  | 订阅管理 | `/{locale}/admin/subscriptions` |
+  | 报告管理 | `/{locale}/admin/reports` |
+  | 操作日志 | `/{locale}/admin/logs` |
+  | 支付与订单 | `/{locale}/admin/payments` |
+- **功能状态：**
+  - ✅ 管理员登录（独立用户体系 + CF Turnstile 人机验证）
+  - ✅ 数据看板（PV/UV/地域/热门页面 + Recharts 图表 + CF Analytics GraphQL + D1 缓存）
+  - ✅ 用户管理（列表/搜索/分页/启用禁用 + 独立详情页）
+  - ✅ 订阅管理（列表/手动修改状态/手动添加 + 独立详情页）
+  - ✅ 报告管理（列表/模块筛选/状态筛选 + 独立详情页）
+  - ✅ 操作日志（搜索/日期筛选/类型筛选）
+  - ✅ 支付与订单（列表/搜索/退款 + 收入概览 + 月度趋势图）
+  - ✅ Creem 回调集成（Webhook 写入 payments 表）
+- **技术栈：** Next.js 16 + TypeScript + Tailwind CSS + CF Pages Functions (API) + D1 Database + CF Analytics GraphQL + Recharts
 
 ### 共享组件 — ui
 - **目录：** `packages/ui/`
@@ -142,6 +180,15 @@ CF Dashboard → Workers & Pages → trade-web-portal → Settings → Functions
 | 共享常量（WHATSAPP_URL 等） | `packages/ui/src/constants.ts` |
 | Worker 代理规则 | `apps/site/functions/_middleware.ts` |
 | 跨项目文档 | `/root/projects/trade/knowledge/` |
+
+## 部署确认
+
+| 项目 | 状态 | URL |
+|------|------|-----|
+| 官网 (site) | ✅ CI 通过 | https://sinotradecompliance.com |
+| Portal | ✅ CI 通过 | https://trade-web-portal.pages.dev |
+| Admin | ✅ CI 通过 | https://trade-web-admin.pages.dev |
+| Blog | ✅ CI 通过 | https://trade-web-blog.pages.dev |
 
 ## 完整文档索引
 

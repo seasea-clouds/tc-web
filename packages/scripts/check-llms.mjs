@@ -19,7 +19,7 @@ import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-function checkLLMsFile(filePath, isCi) {
+function checkLLMsFile(filePath) {
   const issues = [];
 
   if (!fs.existsSync(filePath)) {
@@ -79,69 +79,75 @@ function checkLLMsFile(filePath, isCi) {
 
 /**
  * runLLMSCheck — 编程接口，供 build-all.mjs 调用
- * @param {string} dir — 输出目录
- * @returns {number} — 问题数
+ * 检查主文件 + 语言版本文件 + llms-ctx.txt + 语言版本文件数
+ * @param {string} checkDir — 输出目录
+ * @returns {number} — 问题数（0 = 通过）
  */
 export function runLLMSCheck(checkDir) {
+  let hasError = false;
+
+  console.log('🔍 检查 llms.txt...\n');
+
+  // 1. 主文件
   const mainFile = path.join(checkDir, 'llms.txt');
-  const issues = checkLLMsFile(mainFile);
-  if (issues.length > 0) {
-    for (const issue of issues) {
+  const mainIssues = checkLLMsFile(mainFile);
+  if (mainIssues.length > 0) {
+    hasError = true;
+    for (const issue of mainIssues) {
       console.log(`  ${issue}`);
     }
+  } else {
+    console.log('  ✅ llms.txt 格式正确');
   }
-  return issues.length;
+
+  // 2. 检查至少一个语言版本文件
+  const localeFile = path.join(checkDir, 'llms-en.txt');
+  if (fs.existsSync(localeFile)) {
+    const localeIssues = checkLLMsFile(localeFile);
+    if (localeIssues.length > 0) {
+      hasError = true;
+      for (const issue of localeIssues) {
+        console.log(`  ${issue} (llms-en.txt)`);
+      }
+    } else {
+      console.log('  ✅ llms-en.txt 格式正确');
+    }
+  }
+
+  // 3. 检查 llms-ctx.txt
+  const ctxFile = path.join(checkDir, 'llms-ctx.txt');
+  if (fs.existsSync(ctxFile)) {
+    const ctxContent = fs.readFileSync(ctxFile, 'utf-8');
+    if (ctxContent.length < 1000) {
+      hasError = true;
+      console.log('  ❌ llms-ctx.txt 过短');
+    } else {
+      console.log(`  ✅ llms-ctx.txt (${(ctxContent.length / 1024).toFixed(0)}KB)`);
+    }
+  }
+
+  // 4. 检查语言版本文件数
+  const allLangFiles = fs.readdirSync(checkDir).filter(f => /^llms-[a-z]{2}\.txt$/.test(f));
+  console.log(`\n  ${allLangFiles.length}/${48} 语言版本文件存在`);
+
+  if (hasError) {
+    console.log('\n❌ llms.txt 检查未通过');
+  } else {
+    console.log('\n✅ llms.txt 全部检查通过');
+  }
+
+  return hasError ? 1 : 0;
 }
 
 // ── CLI Main ───────────────────────────────────────
 
-const args = process.argv.slice(2);
-const isCi = args.includes('--ci');
-const dirArg = args.find(a => a.startsWith('--dir='));
-const dir = dirArg ? dirArg.split('=')[1] : path.resolve(process.cwd(), 'public');
+// 仅在直接作为脚本运行时才解析 CLI 参数
+if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1])) {
+  const args = process.argv.slice(2);
+  const isCi = args.includes('--ci');
+  const dirArg = args.find(a => a.startsWith('--dir='));
+  const dir = dirArg ? dirArg.split('=')[1] : path.resolve(process.cwd(), 'public');
 
-let hasError = false;
-
-console.log('🔍 检查 llms.txt...\n');
-
-// 主文件
-const mainIssues = runLLMSCheck(dir);
-if (mainIssues > 0) hasError = true;
-else console.log('  ✅ llms.txt 格式正确');
-
-// 检查至少一个语言版本文件
-const localeFile = path.join(dir, 'llms-en.txt');
-if (fs.existsSync(localeFile)) {
-  const localeIssues = checkLLMsFile(localeFile);
-  if (localeIssues.length > 0) {
-    hasError = true;
-    for (const issue of localeIssues) {
-      console.log(`  ${issue} (llms-en.txt)`);
-    }
-  } else {
-    console.log('  ✅ llms-en.txt 格式正确');
-  }
-}
-
-// 检查 llms-ctx.txt
-const ctxFile = path.join(dir, 'llms-ctx.txt');
-if (fs.existsSync(ctxFile)) {
-  const ctxContent = fs.readFileSync(ctxFile, 'utf-8');
-  if (ctxContent.length < 1000) {
-    hasError = true;
-    console.log('  ❌ llms-ctx.txt 过短');
-  } else {
-    console.log(`  ✅ llms-ctx.txt (${(ctxContent.length / 1024).toFixed(0)}KB)`);
-  }
-}
-
-// 检查语言版本文件数
-const allLangFiles = fs.readdirSync(dir).filter(f => /^llms-[a-z]{2}\.txt$/.test(f));
-console.log(`\n  ${allLangFiles.length}/${48} 语言版本文件存在`);
-
-if (hasError) {
-  console.log('\n❌ llms.txt 检查未通过');
-  if (isCi) process.exit(1);
-} else {
-  console.log('\n✅ llms.txt 全部检查通过');
+  const issues = runLLMSCheck(dir);
+  if (isCi && issues > 0) process.exit(1);
 }

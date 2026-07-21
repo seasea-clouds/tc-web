@@ -264,3 +264,224 @@ curl -sL -o /dev/null -w "%{http_code}\n" https://trade-web-site.pages.dev/en/bl
 
 # 浏览器对比（见 browser-automation skill）
 ```
+
+---
+
+## 官网翻译流程
+
+翻译引擎调用 `/root/projects/translate-tool/`：
+
+```python
+import sys; sys.path.insert(0, "/root/projects/translate-tool")
+from lib.translation_engine import TranslationEngine
+engine = TranslationEngine(caller="sinotradecompliance")
+result = engine.translate_json(json_str, tgt=locale)
+result = engine.translate(mdx_content, tgt=locale)      # blog MDX
+```
+
+配额查看：
+```bash
+source /root/projects/.venv/bin/activate
+cd /root/projects/translate-tool && python scripts/translate.py quota
+```
+
+### 翻译二次检查
+
+1. **自动化验证**：`npx next build` 确认 0 error、48 语言全部生成、无 `__next_error__`
+2. **人工抽查**（A 级语言：zh/ja/ko/ar/fr/es/de/ru）：Navbar/Footer 短词、人名保持英文、按钮文案
+3. **Key 对齐确认**：用 Python 脚本验证 48 个 `messages/*.json` key 集合是否与 en.json 一致
+
+---
+
+## 官网 — 新增博客文章
+
+### 步骤
+
+1. **写英文原文**：`content/blog/en/{slug}.mdx`（frontmatter：title/slug/date/category/excerpt）
+2. **批量翻译**：
+   ```bash
+   source /root/projects/.venv/bin/activate
+   translate-tool submit -i apps/site/content/blog/en/{slug}.mdx -n "blog-{slug}" -s en -t "af,ar,az,be,bg,bn,ca,cs,da,de,el,es,fa,fi,fr,he,hi,hr,hu,hy,id,it,ja,ka,ko,ms,ne,nl,no,pl,pt,ro,ru,si,sk,sl,sq,sr,sv,sw,ta,th,tr,uk,ur,vi,zh" -R "blog article: {slug}"
+   translate-tool status -n "blog-{slug}"
+   translate-tool results -n "blog-{slug}" -o /tmp/{slug}-translations.json
+   ```
+3. **构建**：`npx next build`
+4. **提交推送**：`git push`
+
+### 踩坑记录
+
+| 坑 | 解决 |
+|----|------|
+| title 超 55 字符 | SEO 截断，宽字符语言更要控制 |
+| 粗体未闭合 | 每行 `**` 数量为偶数 |
+| YAML 双引号嵌套 | excerpt 含引号时外层改用单引号 |
+| 忘记翻译 frontmatter | 列表页显示英文 title/excerpt |
+| translation API 幻觉 | 严格忠实原文，不自行添加数字/价格 |
+
+---
+
+## Portal — Creem 支付接入
+
+### 1. 在 Creem 创建产品
+
+**Product 1: Single Report** — $1 (One-time)
+**Product 2: Monthly Subscription** — $9.9/mo (Recurring)
+
+创建后拿到两个 `product_id`
+
+### 2. 配置 Webhook
+
+Dashboard → Developers → Webhooks → Add Endpoint
+- **URL：** `https://sinotradecompliance.com/api/payment/webhook`
+- **监听事件：** `checkout.completed`, `subscription.created`, `subscription.cancelled`
+
+### 3. 配置环境变量
+
+在 CF Pages Dashboard → trade-web-portal → Settings → Environment Variables 添加：
+```
+CREEM_API_KEY=***
+CREEM_WEBHOOK_SECRET=***
+CREEM_PRODUCT_ID_SINGLE=prod_xxx
+CREEM_PRODUCT_ID_SUBSCRIBE=prod_xxx
+```
+
+### 4. 支付流程
+
+```
+用户点"Full Report — $1"
+  → POST /api/checkout 创建 Creem 会话
+  → 返回 checkout_url，用户跳转 Creem 支付页
+  → 用户填卡付款
+  → Creem 回调 success_url（前端跳转）
+  → Creem 异步发送 Webhook → /api/payment/webhook
+  → Webhook 触发报告生成（PDF 生成 → 上传 → 邮件发送 → D1 更新）
+```
+
+Creem 提供 Test Mode：API 端点是 `https://test-api.creem.io`
+测试卡号：Creem 文档提供的测试卡
+
+---
+
+## Blog — 添加新文章完整工作流
+
+### Step 1: 准备英文原文
+
+在 `apps/blog/content/en/` 下创建 `{slug}.mdx`。gray-matter 前置元数据：
+
+```yaml
+---
+title: "Article Title"
+slug: "{slug}"
+category: "Food & Beverage"     # 影响底部 CTA 卡片映射
+date: "2026-01-01"
+excerpt: "SEO description..."
+references:                      # 可选
+  - title: "Source Name"
+    url: "https://..."
+---
+```
+
+### Step 2: 确认 Category 映射
+
+| category | 服务映射 |
+|----------|---------|
+| Food & Beverage | /services/gacc |
+| Label Compliance | /services/label |
+| Product Certification | /services/ccc |
+| Cosmetics | /services/cosmetics |
+| E-commerce | /services/ecommerce |
+| Brand Protection | /services/brand |
+| Compliance Guide | /services/gacc |
+
+不在上表中的 category 必须先在 `CATEGORY_SERVICE_MAP` 添加映射。
+
+### Step 3: （可选）添加 FAQPage JSON-LD
+
+在 `[slug]/page.tsx` 的 `FAQ_NS` 映射表中添加 slug 条目，并在 `apps/site/messages/{locale}.json` 定义 `BlogFaqXxx` namespace。
+
+### Step 4: 翻译到 47 语言
+
+```bash
+source /root/projects/.venv/bin/activate
+translate-tool submit \
+  -i apps/blog/content/en/{slug}.mdx \
+  -n "blog-{slug}" \
+  -s en \
+  -t "af,ar,az,be,bg,bn,ca,cs,da,de,el,es,fa,fi,fr,he,hi,hr,hu,hy,id,it,ja,ka,ko,ms,ne,nl,no,pl,pt,ro,ru,si,sk,sl,sq,sr,sv,sw,ta,th,tr,uk,ur,vi,zh" \
+  -R "blog article: {slug}"
+translate-tool status -n "blog-{slug}"
+translate-tool results -n "blog-{slug}" -o /tmp/{slug}-translations.json
+```
+
+### Step 5: 本地构建验证
+
+```bash
+cd apps/blog
+node ../../packages/scripts/build-search-index.mjs
+rm -rf .next/cache
+next build
+node ../../packages/scripts/ci-check.mjs --out-dir=out --ci
+```
+
+### Step 6: 推送到 main → 自动部署
+
+```bash
+git add apps/blog/content/
+git commit -m "blog: add {slug} article"
+git push origin main
+```
+
+### Step 7: 部署验证
+
+| 检查项 | URL |
+|---|---|
+| 开发环境 | `https://trade-web-blog.pages.dev/en/blog/{slug}/` |
+| 生产环境 | `https://sinotradecompliance.com/en/blog/{slug}/` |
+| 非英语抽检 | `https://sinotradecompliance.com/zh/blog/{slug}/` |
+
+---
+
+## Admin — 部署与 Analytics Cron Worker
+
+### 手动部署（备用）
+
+```bash
+cd apps/admin
+npm run build     # = next build && bash scripts/postbuild.sh
+npx wrangler pages deploy out --project-name trade-web-admin --branch main
+```
+
+### 验证部署
+
+```bash
+curl -s -o /dev/null -w "%{http_code}" "https://trade-web-admin.pages.dev/admin/dashboard/"
+curl -s -o /dev/null -w "%{http_code}" "https://sinotradecompliance.com/admin/dashboard/"
+```
+
+### Analytics Cron Worker
+
+独立 Worker 用于定时同步 CF Analytics → D1（cron: `0 * * * *` UTC）。
+
+**文件结构：**
+```
+apps/admin/workers/analytics-cron/
+├── package.json
+├── wrangler.toml      # D1 binding + cron
+└── src/index.ts
+```
+
+**首次部署：**
+```bash
+cd apps/admin/workers/analytics-cron
+source ~/.openclaw/.env
+echo "$CLOUDFLARE_API_TOKEN" | npx wrangler secret put CLOUDFLARE_API_TOKEN
+echo "$CLOUDFLARE_ZONE_ID" | npx wrangler secret put CLOUDFLARE_ZONE_ID
+npx wrangler deploy
+```
+
+**修改代码后部署：**
+```bash
+cd apps/admin/workers/analytics-cron
+npx wrangler deploy
+# Secrets 保留在 Worker 中，只需重新 deploy 代码
+```

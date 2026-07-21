@@ -88,6 +88,77 @@
 - localStorage 记忆选择，不再重复弹出
 - 各站 layout 统一引用
 
+## 主站站点结构
+
+| 页面 | URL 路径 |
+|------|----------|
+| 首页 | `/[locale]` |
+| 关于我们 | `/[locale]/about` |
+| 服务总览 | `/[locale]/services` |
+| GACC 食品注册 | `/[locale]/services/gacc` |
+| 中文标签合规 | `/[locale]/services/label` |
+| CCC 认证 | `/[locale]/services/ccc` |
+| 化妆品备案 | `/[locale]/services/cosmetics` |
+| 跨境电商 | `/[locale]/services/ecommerce` |
+| 品牌保护 | `/[locale]/services/brand` |
+| 合规套餐 | `/[locale]/packages` |
+| 行业总览 | `/[locale]/industries` |
+| 行业详情 | `/[locale]/industries/[industry]` |
+| 客户评价 | `/[locale]/testimonials` |
+| 报价请求 | `/[locale]/quote` |
+| 博客列表 | `/[locale]/blog`（Worker → blog 站）|
+| 博客文章 | `/[locale]/blog/[slug]`（Worker → blog 站）|
+| FAQ | `/[locale]/faq` |
+| 提交成功 | `/[locale]/thank-you` |
+| 合规自查工具 | `/{locale}/c/`（Worker → portal 站）|
+
+### Free Check 按钮
+- 位于 Navbar 顶栏右侧，金色按钮
+- 主站点击 → 跳转到 `/{locale}/c/`（portal 首页）
+- 由 `SearchProvider` 的 `freeCheckHref` prop 控制链接生成
+
+## Portal 定位与六大服务模块
+
+**Portal 是主站的获客-教育-转化漏斗第一步，不是一个独立产品。**
+
+```
+用户旅程：
+  免费自查 ($0)  →  付费报告 ($1)  →  联系专家 ($500+)
+  ─────────────     ───────────      ────────────────
+  获客入口           教育转化          商业转化（主站套餐）
+```
+
+### 六大模块
+
+| 模块 | 输入 | 输出 |
+|------|------|------|
+| **GACC 食品注册** | 品类、来源国、产品描述 | 是否需要注册 + 材料清单 |
+| **中文标签合规** | 品类、规格 | 标签要求清单 |
+| **CCC 认证** | 产品类型、HS编码 | 是否需要 CCC + 路径 |
+| **化妆品备案** | 品类、成分 | NMPA 备案分类 + 清单 |
+| **跨境电商** | 品类、平台 | 合规要求 + 所需材料 |
+| **品牌保护** | 商标、品类 | 保护策略 + 注册建议 |
+
+Portal 核心规则：✅ 品牌一致（`@trade/ui` 共享组件）| ✅ 48 语言 | ✅ 不自称独立产品 | ✅ 免费自查免登录 | ✅ 工具注册表 `src/data/tools.ts` 驱动
+
+## Blog 定位
+
+SinoTrade Compliance 主站的获客-教育内容层。通过高质量合规科普文章吸引潜在客户，自然引导到主站和 Portal 免费自查工具。
+
+- ✅ 48 语言，禁止英文 fallback
+- ✅ 品牌一致：Navbar/Footer 与主站一致
+- ✅ 内容导向：每篇文章有独立 title/description/hreflang
+- ✅ SEO：每页 JSON-LD + Open Graph + sitemap
+- ✅ 统一搜索：搜索索引在 `packages/scripts/build-search-index.mjs` 生成并在主站 CDN 共享
+
+## Admin 定位
+
+内部运营管理面板，供管理团队使用。
+
+- 管理 Portal 用户、订阅、报告数据
+- 数据可视化看板辅助运营决策
+- D1 数据库共享 Portal 数据，保持一致性
+
 ## SEO + GEO 要求
 
 - 每页独立 title/description

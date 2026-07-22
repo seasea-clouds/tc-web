@@ -15,6 +15,7 @@ import {
   fetchDailyStats,
   fetchHourlyStats,
   fetchAggregateStatsRange,
+  fetchHourlyAggregateStats,
   inferProject,
   type HourlyStats,
 } from "./cf-analytics";
@@ -193,6 +194,14 @@ export async function runMigration(env: CacheEnv): Promise<void> {
     `ALTER TABLE daily_page_stats ADD COLUMN project_data TEXT DEFAULT '[]'`,
     `ALTER TABLE daily_page_stats ADD COLUMN page_paths TEXT DEFAULT '[]'`,
     `ALTER TABLE daily_page_stats ADD COLUMN device_data TEXT DEFAULT '[]'`,
+    // Hourly distribution columns (added 2026-07-22: today mode charts)
+    `ALTER TABLE hourly_page_stats ADD COLUMN geo_data TEXT DEFAULT '[]'`,
+    `ALTER TABLE hourly_page_stats ADD COLUMN browser_data TEXT DEFAULT '[]'`,
+    `ALTER TABLE hourly_page_stats ADD COLUMN os_data TEXT DEFAULT '[]'`,
+    `ALTER TABLE hourly_page_stats ADD COLUMN device_data TEXT DEFAULT '[]'`,
+    `ALTER TABLE hourly_page_stats ADD COLUMN page_data TEXT DEFAULT '[]'`,
+    `ALTER TABLE hourly_page_stats ADD COLUMN page_paths TEXT DEFAULT '[]'`,
+    `ALTER TABLE hourly_page_stats ADD COLUMN project_data TEXT DEFAULT '[]'`,
   ];
   for (const sql of statements) {
     try {
@@ -388,16 +397,65 @@ export async function ensureHourlyCFCache(env: CacheEnv): Promise<void> {
         const hourlyStats = await fetchHourlyStats(zoneId, token, startISO, endISO);
         for (const hs of hourlyStats) {
           if (missingHours.includes(hs.hour)) {
+            // Store PV/UV + geo/browser from 1hGroups
             await env.DB.prepare(
-              `INSERT OR REPLACE INTO hourly_page_stats (date, hour, pv, uv, requests)
-               VALUES (?, ?, ?, ?, ?)`,
+              `INSERT OR REPLACE INTO hourly_page_stats (date, hour, pv, uv, requests, geo_data, browser_data)
+               VALUES (?, ?, ?, ?, ?, ?, ?)`,
             )
-              .bind(today, hs.hour, hs.pv, hs.uv, hs.requests)
+              .bind(
+                today,
+                hs.hour,
+                hs.pv,
+                hs.uv,
+                hs.requests,
+                JSON.stringify(hs.countryMap?.map((c) => ({
+                  country: c.clientCountryName,
+                  count: c.requests,
+                })) || []),
+                JSON.stringify(hs.browserMap?.map((b) => ({
+                  browser: b.uaBrowserFamily,
+                  pageViews: b.pageViews,
+                })) || []),
+              )
               .run();
           }
         }
       } catch (err) {
         console.error(`[d1-cache] fetchHourlyStats failed for ${today}:`, err);
+      }
+    }
+
+    // ── Step 1b: Fetch distribution data (OS/device/pages/project) for today's completed hours ──
+    const distHours: number[] = [];
+    for (let h = 0; h < currentHour; h++) {
+      if (!existingHours.has(h)) distHours.push(h);
+    }
+
+    for (const h of distHours) {
+      try {
+        const agg = await fetchHourlyAggregateStats(zoneId, token, today, h);
+        if (agg.pathData.length > 0 || agg.osData.length > 0) {
+          // Filter page-only paths
+          const pagePaths = agg.pathData.filter((p) => isPagePath(p.path)).slice(0, 30);
+
+          await env.DB.prepare(
+            `UPDATE hourly_page_stats
+             SET os_data = ?, device_data = ?, page_data = ?, page_paths = ?, project_data = ?
+             WHERE date = ? AND hour = ?`,
+          )
+            .bind(
+              JSON.stringify(agg.osData),
+              JSON.stringify(agg.deviceData),
+              JSON.stringify(agg.pathData),
+              JSON.stringify(pagePaths),
+              JSON.stringify(agg.projectData),
+              today,
+              h,
+            )
+            .run();
+        }
+      } catch (err) {
+        console.error(`[d1-cache] fetchHourlyAggregateStats failed for ${today} hour ${h}:`, err);
       }
     }
   }
@@ -475,11 +533,31 @@ export async function readTodayHourly(
   today: string,
 ): Promise<HourlyStats[]> {
   const rows: any = await env.DB.prepare(
-    "SELECT hour, pv, uv, requests FROM hourly_page_stats WHERE date = ? ORDER BY hour ASC",
+    `SELECT hour, pv, uv, requests, geo_data, browser_data, os_data, device_data, page_data, page_paths, project_data
+     FROM hourly_page_stats WHERE date = ? ORDER BY hour ASC`,
   )
     .bind(today)
     .all();
-  return (rows.results || []) as HourlyStats[];
+  return ((rows.results || []) as any[]).map((r: any) => ({
+    date: today,
+    hour: r.hour,
+    pv: r.pv || 0,
+    uv: r.uv || 0,
+    requests: r.requests || 0,
+    countryMap: safeJSON(r.geo_data, []).map((c: any) => ({
+      clientCountryName: c.country || c.clientCountryName || "",
+      requests: c.count || c.requests || 0,
+    })),
+    browserMap: safeJSON(r.browser_data, []).map((b: any) => ({
+      uaBrowserFamily: b.browser || b.uaBrowserFamily || "",
+      pageViews: b.pageViews || 0,
+    })),
+    osData: safeJSON(r.os_data, []),
+    deviceData: safeJSON(r.device_data, []),
+    pathData: safeJSON(r.page_data, []),
+    pagePaths: safeJSON(r.page_paths, []),
+    projectData: safeJSON(r.project_data, []),
+  }));
 }
 
 /**

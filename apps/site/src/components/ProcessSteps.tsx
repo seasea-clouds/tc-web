@@ -36,9 +36,7 @@ export default function ProcessSteps({ t }: ProcessStepsProps) {
                 <h3 className="text-lg font-bold text-primary-navy mb-2">{step.title}</h3>
                 <p className="text-text-muted text-sm">{step.desc}</p>
               </div>
-              {i < stepList.length - 1 && (
-                <div className="hidden lg:block absolute top-12 -right-4 w-8 border-t-2 border-dashed border-accent-gold" />
-              )}
+
             </div>
           ))}
         </div>

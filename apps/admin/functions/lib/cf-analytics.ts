@@ -34,6 +34,20 @@ export interface HourlyStats {
   pv: number;
   uv: number;
   requests: number;
+  /** [{clientCountryName, requests}] — available from 1hGroups (same schema as 1dGroups) */
+  countryMap?: { clientCountryName: string; requests: number }[];
+  /** [{uaBrowserFamily, pageViews}] — available from 1hGroups */
+  browserMap?: { uaBrowserFamily: string; pageViews: number }[];
+  /** OS distribution from adaptive groups */
+  osData?: { os: string; count: number }[];
+  /** Device type distribution from adaptive groups */
+  deviceData?: { device: string; count: number }[];
+  /** Page path data from adaptive groups */
+  pathData?: { path: string; count: number }[];
+  /** Page-only paths filtered by routing architecture */
+  pagePaths?: { path: string; count: number }[];
+  /** Project distribution inferred from path prefixes */
+  projectData?: { project: string; count: number }[];
 }
 
 export interface PathStat {
@@ -228,7 +242,11 @@ export async function fetchHourlyStats(
           filter: {datetime_geq: "${startISO}", datetime_lt: "${endISO}"}
         ) {
           dimensions { datetime }
-          sum { pageViews requests }
+          sum {
+            pageViews requests
+            countryMap { clientCountryName requests }
+            browserMap { uaBrowserFamily pageViews }
+          }
           uniq { uniques }
         }
       }
@@ -249,8 +267,111 @@ export async function fetchHourlyStats(
       pv: g.sum?.pageViews || 0,
       uv: g.uniq?.uniques || 0,
       requests: g.sum?.requests || 0,
+      countryMap: (g.sum?.countryMap || []).map((c: any) => ({
+        clientCountryName: c.clientCountryName || "",
+        requests: c.requests || 0,
+      })),
+      browserMap: (g.sum?.browserMap || []).map((b: any) => ({
+        uaBrowserFamily: b.uaBrowserFamily || "",
+        pageViews: b.pageViews || 0,
+      })),
     };
   });
+}
+
+/**
+ * Fetch aggregate stats for a single hour using httpRequestsAdaptiveGroups.
+ * Useful for today's completed hours.
+ */
+export async function fetchHourlyAggregateStats(
+  zoneId: string,
+  token: string,
+  date: string,
+  hour: number,
+): Promise<AggregateStats> {
+  const startISO = `${date}T${String(hour).padStart(2, "0")}:00:00Z`;
+  const endISO = `${date}T${String(hour).padStart(2, "0")}:59:59Z`;
+
+  const query = `{
+    viewer {
+      zones(filter: {zoneTag: "${zoneId}"}) {
+        httpRequestsAdaptiveGroups(
+          limit: 10000,
+          filter: {datetime_geq: "${startISO}", datetime_lt: "${endISO}"}
+        ) {
+          dimensions { date clientRequestPath userAgentOS clientDeviceType clientCountryName clientBrowserFamily }
+          count
+        }
+      }
+    }
+  }`;
+
+  try {
+    const resp = await fetch("https://api.cloudflare.com/client/v4/graphql", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ query }),
+    });
+    if (!resp.ok) {
+      console.error(`[cf-analytics] fetchHourlyAggregateStats HTTP ${resp.status} for ${date} hour ${hour}`);
+      return { osData: [], deviceData: [], pathData: [], projectData: [] };
+    }
+    const body = await resp.json();
+    const groups = body?.data?.viewer?.zones?.[0]?.httpRequestsAdaptiveGroups || [];
+
+    if (!groups || groups.length === 0) {
+      return { osData: [], deviceData: [], pathData: [], projectData: [] };
+    }
+
+    const pathMap = new Map<string, number>();
+    const osMap = new Map<string, number>();
+    const deviceMap = new Map<string, number>();
+    const projectMap = new Map<string, number>();
+
+    for (const g of groups) {
+      const dims = g.dimensions || {};
+      const cnt = g.count || 0;
+
+      const path = dims.clientRequestPath || "";
+      if (path) {
+        pathMap.set(path, (pathMap.get(path) || 0) + cnt);
+        const { project } = inferProject(path);
+        projectMap.set(project, (projectMap.get(project) || 0) + cnt);
+      }
+
+      const os = dims.userAgentOS || "Unknown";
+      if (os) {
+        osMap.set(os, (osMap.get(os) || 0) + cnt);
+      }
+
+      const device = dims.clientDeviceType || "unknown";
+      if (device) {
+        deviceMap.set(device, (deviceMap.get(device) || 0) + cnt);
+      }
+    }
+
+    return {
+      osData: Array.from(osMap.entries())
+        .sort((a, b) => b[1] - a[1])
+        .map(([os, count]) => ({ os, count })),
+      deviceData: Array.from(deviceMap.entries())
+        .sort((a, b) => b[1] - a[1])
+        .map(([device, count]) => ({ device, count })),
+      pathData: Array.from(pathMap.entries())
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 500)
+        .map(([path, count]) => ({ path, count })),
+      projectData: Array.from(projectMap.entries())
+        .sort((a, b) => b[1] - a[1])
+        .map(([project, count]) => ({ project, count })),
+    };
+  } catch (err) {
+    console.error(`[cf-analytics] fetchHourlyAggregateStats error for ${date} hour ${hour}:`, err);
+    return { osData: [], deviceData: [], pathData: [], projectData: [] };
+  }
 }
 
 /**

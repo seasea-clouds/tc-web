@@ -158,28 +158,56 @@ export async function onRequest(context: { request: Request; env: Env }) {
 
     // ─── RANGE: today ───
     if (range === "today") {
-      // For geo/browser/page data, use the most recent daily row as a best estimate
-      // (today's adaptive groups data is incomplete/sampled)
-      const dailyRows = await readDailyRange(context.env, "2026-06-01", today);
-      const latestComplete = dailyRows[dailyRows.length - 1];
+      // Merge distribution data from today's completed hours (cached by ensureHourlyCFCache)
+      const geoArrays: { country: string; count: number }[][] = [];
+      const pageArrays: { path: string; count: number }[][] = [];
+      const pagePathsArrays: { path: string; count: number }[][] = [];
+      const projectArrays: { project: string; count: number }[][] = [];
+      const browserArrays: { browser: string; pageViews: number }[][] = [];
+      const osArrays: { os: string; count: number }[][] = [];
+      const deviceArrays: { device: string; count: number }[][] = [];
 
-      let geoData: { country: string; count: number }[] = [];
-      let pageData: { path: string; count: number }[] = [];
-      let pagePaths: { path: string; count: number }[] = [];
-      let projectData: { project: string; count: number }[] = [];
-      let browserData: { browser: string; pageViews: number }[] = [];
-      let osData: { os: string; count: number }[] = [];
-      let deviceData: { device: string; count: number }[] = [];
-
-      if (latestComplete) {
-        geoData = safeJSON(latestComplete.geo_data, []);
-        pageData = safeJSON(latestComplete.page_data, []);
-        pagePaths = safeJSON(latestComplete.page_paths, []);
-        projectData = safeJSON(latestComplete.project_data, []);
-        browserData = safeJSON(latestComplete.browser_data, []);
-        osData = safeJSON(latestComplete.os_data, []);
-        deviceData = safeJSON(latestComplete.device_data, []);
+      for (const h of hourlyRows) {
+        if (h.countryMap && h.countryMap.length > 0)
+          geoArrays.push(h.countryMap.map((c) => ({ country: c.clientCountryName, count: c.requests })));
+        if (h.browserMap && h.browserMap.length > 0)
+          browserArrays.push(h.browserMap.map((b) => ({ browser: b.uaBrowserFamily, pageViews: b.pageViews })));
+        if (h.osData && h.osData.length > 0) osArrays.push(h.osData);
+        if (h.deviceData && h.deviceData.length > 0) deviceArrays.push(h.deviceData);
+        if (h.pathData && h.pathData.length > 0) pageArrays.push(h.pathData);
+        if (h.pagePaths && h.pagePaths.length > 0) pagePathsArrays.push(h.pagePaths);
+        if (h.projectData && h.projectData.length > 0) projectArrays.push(h.projectData);
       }
+
+      // Fallback: if no hourly distribution data yet, use latest complete daily row
+      if (geoArrays.length === 0) {
+        const dailyRows = await readDailyRange(context.env, "2026-06-01", today);
+        const latestComplete = dailyRows[dailyRows.length - 1];
+        if (latestComplete) {
+          const lg = safeJSON(latestComplete.geo_data, []);
+          if (Array.isArray(lg) && lg.length > 0) geoArrays.push(lg);
+          const lb = safeJSON(latestComplete.browser_data, []);
+          if (Array.isArray(lb) && lb.length > 0) browserArrays.push(lb);
+          const lo = safeJSON(latestComplete.os_data, []);
+          if (Array.isArray(lo) && lo.length > 0) osArrays.push(lo);
+          const ld = safeJSON(latestComplete.device_data, []);
+          if (Array.isArray(ld) && ld.length > 0) deviceArrays.push(ld);
+          const lp = safeJSON(latestComplete.page_data, []);
+          if (Array.isArray(lp) && lp.length > 0) pageArrays.push(lp);
+          const lpp = safeJSON(latestComplete.page_paths, []);
+          if (Array.isArray(lpp) && lpp.length > 0) pagePathsArrays.push(lpp);
+          const lpr = safeJSON(latestComplete.project_data, []);
+          if (Array.isArray(lpr) && lpr.length > 0) projectArrays.push(lpr);
+        }
+      }
+
+      const geoData = mergeByKey(geoArrays, "country", "count").slice(0, 20);
+      const browserData = mergeByKey(browserArrays, "browser", "pageViews");
+      const osData = mergeByKey(osArrays, "os", "count");
+      const deviceData = mergeByKey(deviceArrays, "device", "count");
+      const pageData = mergeByKey(pageArrays, "path", "count").slice(0, 30);
+      const pagePaths = mergeByKey(pagePathsArrays, "path", "count").slice(0, 30);
+      const projectData = mergeByKey(projectArrays, "project", "count");
 
       return Response.json({
         allTimeTotal: allTime.pv,

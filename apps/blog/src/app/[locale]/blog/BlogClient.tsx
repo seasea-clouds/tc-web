@@ -13,6 +13,18 @@ interface Props {
   allText: string;
 }
 
+function formatBlogDate(dateStr: string, locale: string): string {
+  if (!dateStr) return '';
+  try {
+    const date = new Date(dateStr);
+    return date.toLocaleDateString(locale === 'zh' ? 'zh-CN' : 'en-US', {
+      year: 'numeric', month: 'long', day: 'numeric',
+    });
+  } catch {
+    return dateStr;
+  }
+}
+
 export default function BlogClient({ posts, categories, locale, readMoreText, readTimeText, noPostsText, allText }: Props) {
   const [category, setCategory] = useState<string | null>(null);
   const filtered = category ? posts.filter(p => p.category === category) : posts;
@@ -64,6 +76,8 @@ export default function BlogClient({ posts, categories, locale, readMoreText, re
                 )}
                 <div className="flex items-center justify-between pt-3 border-t border-[#F4F6F9]">
                   <div className="flex items-center gap-2 text-xs text-[#5F6F7F]">
+                    {post.date && <time dateTime={post.date}>{formatBlogDate(post.date, locale)}</time>}
+                    {post.date && <span>•</span>}
                     <span>{post.readTime} {readTimeText}</span>
                     <span>•</span>
                     <span className="font-semibold text-primary-navy">{post.category}</span>

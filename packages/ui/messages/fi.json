@@ -26,7 +26,8 @@
     "checkNmpa": "Kosmetiikka",
     "checkTm": "Tavaramerkit",
     "email": "Sähköposti",
-    "freeCheckHeader": "Ilmaiset työkalut"
+    "freeCheckHeader": "Ilmaiset työkalut",
+    "getQuote": "Pyydä tarjous"
   },
   "Search": {
     "title": "Haku",

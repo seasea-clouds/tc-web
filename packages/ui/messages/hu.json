@@ -26,7 +26,8 @@
     "checkNmpa": "Kozmetikumok",
     "checkTm": "Védjegyek",
     "email": "E-mail",
-    "freeCheckHeader": "Ingyenes eszközök"
+    "freeCheckHeader": "Ingyenes eszközök",
+    "getQuote": "Kérjen árajánlatot"
   },
   "Search": {
     "title": "Keresés",

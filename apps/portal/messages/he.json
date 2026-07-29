@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "קוֹסמֵטִיקָה",
     "cat_E_commerce": "מסחר אלקטרוני",
     "cat_Food_Beverage": "מזון ומשקאות"
+  },
+  "Footer": {
+    "getQuote": "קבל הצעת מחיר"
   }
 }

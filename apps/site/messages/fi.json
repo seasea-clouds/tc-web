@@ -1395,5 +1395,8 @@
     "faqA9": "Yleensä jokainen versio vaatii erillisen arkistoinnin. Tuotteet, jotka eroavat koostumuksen, tuoksun, värin tai vaikuttavan aineen pitoisuuden suhteen, käsitellään erillisinä SKU:ina. Tuotteet, jotka vaihtelevat vain pakkauskoon osalta (sama kaava, erilaiset tilavuudet), voivat kuitenkin jakaa hakemuksen tietyin edellytyksin.",
     "faqQ10": "Tarvitsenko kiinalaisen yrityksen toimittamaan kosmetiikkaa NMPA:lle?",
     "faqA10": "Kyllä. Jokaisella Kiinaan tuodulla kosmetiikkatuotteella on oltava Kiinan kotimainen vastuuhenkilö – Kiinaan rekisteröity oikeushenkilö, jolla on kosmetiikkaan liittyvä liiketoiminta. Tämä voi olla oma kiinalainen tytäryhtiösi, jakelija tai kolmannen osapuolen palveluntarjoaja. Vastuuhenkilö on laillisesti vastuussa tuoteturvallisuudesta ja hoitaa kaiken NMPA-viestinnän."
+  },
+  "Footer": {
+    "getQuote": "Pyydä tarjous"
   }
 }

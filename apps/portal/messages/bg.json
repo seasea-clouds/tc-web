@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "Козметика",
     "cat_E_commerce": "Електронна търговия",
     "cat_Food_Beverage": "Храна и напитки"
+  },
+  "Footer": {
+    "getQuote": "Получете оферта"
   }
 }

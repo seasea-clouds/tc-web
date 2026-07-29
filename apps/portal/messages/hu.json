@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "Kozmetikumok",
     "cat_E_commerce": "E-kereskedelem",
     "cat_Food_Beverage": "Ételek és italok"
+  },
+  "Footer": {
+    "getQuote": "Kérjen árajánlatot"
   }
 }

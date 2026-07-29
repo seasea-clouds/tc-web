@@ -1395,5 +1395,8 @@
     "faqA9": "Generelt kræver hver variant en separat arkivering. Produkter, der adskiller sig i formulering, duft, farve eller koncentration af aktive ingredienser, behandles som separate SKU'er. Imidlertid kan produkter, der kun varierer i emballagestørrelse (samme formel, forskellige mængder), dele en arkivering under visse betingelser.",
     "faqQ10": "Skal jeg have et kinesisk firma til at indgive kosmetik til NMPA?",
     "faqA10": "Ja. Ethvert kosmetikprodukt, der importeres til Kina, skal have en kinesisk indenlandsk ansvarlig person - en juridisk enhed, der er registreret i Kina med kosmetikrelateret virksomhedsomfang. Dette kan være dit eget kinesiske datterselskab, en distributør eller en tredjepartstjenesteudbyder. Den ansvarlige person er juridisk ansvarlig for produktsikkerhed og håndterer al NMPA-kommunikation."
+  },
+  "Footer": {
+    "getQuote": "Få et tilbud"
   }
 }

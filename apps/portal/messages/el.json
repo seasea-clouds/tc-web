@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "Καλλυντικά",
     "cat_E_commerce": "Ηλεκτρονικό εμπόριο",
     "cat_Food_Beverage": "Τρόφιμα & Ποτά"
+  },
+  "Footer": {
+    "getQuote": "Λάβετε προσφορά"
   }
 }

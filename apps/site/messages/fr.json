@@ -1395,5 +1395,8 @@
     "faqA9": "Généralement, chaque variante nécessite un dépôt distinct. Les produits qui diffèrent par leur formulation, leur parfum, leur couleur ou leur concentration en ingrédients actifs sont traités comme des SKU distincts. Toutefois, les produits qui diffèrent uniquement par la taille du conditionnement (même formule, volumes différents) peuvent partager un dépôt sous certaines conditions.",
     "faqQ10": "Ai-je besoin d’une entreprise chinoise pour déposer des produits cosmétiques auprès de la NMPA ?",
     "faqA10": "Oui. Chaque produit cosmétique importé en Chine doit avoir une personne responsable nationale chinoise – une entité juridique enregistrée en Chine dont l'activité est liée aux cosmétiques. Il peut s'agir de votre propre filiale chinoise, d'un distributeur ou d'un fournisseur de services tiers. La personne responsable est légalement responsable de la sécurité des produits et gère toutes les communications de la NMPA."
+  },
+  "Footer": {
+    "getQuote": "Obtenir un devis"
   }
 }

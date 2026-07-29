@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "Productos cosméticos",
     "cat_E_commerce": "Comercio electrónico",
     "cat_Food_Beverage": "Alimentos y bebidas"
+  },
+  "Footer": {
+    "getQuote": "Obtener presupuesto"
   }
 }

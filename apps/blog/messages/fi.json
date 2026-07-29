@@ -67,5 +67,8 @@
     "accept": "Hyväksy kaikki",
     "reject": "Hylkää Ei-välttämätön",
     "privacyLink": "Tietosuojakäytäntö"
+  },
+  "Footer": {
+    "getQuote": "Pyydä tarjous"
   }
 }

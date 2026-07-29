@@ -1395,5 +1395,8 @@
     "faqA9": "Általában minden változat külön bejelentést igényel. A készítményben, illatban, színben vagy hatóanyag-koncentrációban eltérő termékeket külön cikkszámként kezeljük. Azok a termékek azonban, amelyek csak csomagolási méretükben különböznek (azonos képlet, különböző térfogatok), bizonyos feltételek mellett megoszthatják a bejelentést.",
     "faqQ10": "Szükségem van egy kínai cégre a kozmetikumok NMPA-hoz történő benyújtásához?",
     "faqA10": "Igen. Minden Kínába importált kozmetikai terméknek rendelkeznie kell egy kínai belföldi felelős személyrel – egy Kínában bejegyzett, kozmetikumokkal kapcsolatos tevékenységi körrel rendelkező jogi személy. Ez lehet saját kínai leányvállalata, forgalmazója vagy harmadik fél szolgáltatója. A felelős személy jogilag felelős a termékbiztonságért, és kezeli az összes NMPA kommunikációt."
+  },
+  "Footer": {
+    "getQuote": "Kérjen árajánlatot"
   }
 }

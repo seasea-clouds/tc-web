@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "Cosmétiques",
     "cat_E_commerce": "Commerce électronique",
     "cat_Food_Beverage": "Nourriture et Boissons"
+  },
+  "Footer": {
+    "getQuote": "Obtenir un devis"
   }
 }

@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "Kosmetik",
     "cat_E_commerce": "E-dagang",
     "cat_Food_Beverage": "Makanan & Minuman"
+  },
+  "Footer": {
+    "getQuote": "Dapatkan Sebut Harga"
   }
 }

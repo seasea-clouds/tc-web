@@ -1395,5 +1395,8 @@
     "faqA9": "Over het algemeen vereist elke variant een afzonderlijke indiening. Producten die qua formulering, geur, kleur of concentratie van actieve ingrediënten verschillen, worden behandeld als afzonderlijke SKU's. Producten die alleen qua verpakkingsgrootte variëren (dezelfde formule, verschillende volumes) kunnen echter onder bepaalde voorwaarden een depot delen.",
     "faqQ10": "Heb ik een Chinees bedrijf nodig om cosmetica bij NMPA in te dienen?",
     "faqA10": "Ja. Elk cosmeticaproduct dat in China wordt geïmporteerd, moet een Chinese binnenlandse verantwoordelijke persoon hebben: een in China geregistreerde juridische entiteit met een aan cosmetica gerelateerde bedrijfsactiviteiten. Dit kan uw eigen Chinese dochteronderneming zijn, een distributeur of een externe dienstverlener. De verantwoordelijke persoon is wettelijk verantwoordelijk voor de productveiligheid en handelt alle NMPA-communicatie af."
+  },
+  "Footer": {
+    "getQuote": "Vraag een offerte aan"
   }
 }

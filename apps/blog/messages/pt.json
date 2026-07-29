@@ -67,5 +67,8 @@
     "accept": "Aceitar tudo",
     "reject": "Rejeitar não essencial",
     "privacyLink": "política de Privacidade"
+  },
+  "Footer": {
+    "getQuote": "Obter orçamento"
   }
 }

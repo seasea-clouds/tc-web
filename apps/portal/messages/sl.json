@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "Kozmetika",
     "cat_E_commerce": "E-poslovanje",
     "cat_Food_Beverage": "Hrana in pijača"
+  },
+  "Footer": {
+    "getQuote": "Pridobite ponudbo"
   }
 }

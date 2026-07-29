@@ -1395,5 +1395,8 @@
     "faqA9": "Na splošno je za vsako različico potrebna posebna vložitev. Izdelki, ki se razlikujejo po sestavi, dišavi, barvi ali koncentraciji aktivne sestavine, se obravnavajo kot ločeni SKU. Vendar pa lahko izdelki, ki se razlikujejo le po velikosti embalaže (ista formula, različne prostornine), pod določenimi pogoji delijo isto dokumentacijo.",
     "faqQ10": "Ali potrebujem kitajsko podjetje za prijavo kozmetike pri NMPA?",
     "faqA10": "ja Vsak kozmetični izdelek, uvožen na Kitajsko, mora imeti kitajsko domačo odgovorno osebo – pravno osebo, registrirano na Kitajskem s področjem poslovanja, povezanim s kozmetiko. To je lahko vaša kitajska podružnica, distributer ali tretji ponudnik storitev. Odgovorna oseba je pravno odgovorna za varnost izdelkov in obravnava vso komunikacijo NMPA."
+  },
+  "Footer": {
+    "getQuote": "Pridobite ponudbo"
   }
 }

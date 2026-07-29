@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "Kozmetikë",
     "cat_E_commerce": "e-commerce",
     "cat_Food_Beverage": "Ushqim & Pije"
+  },
+  "Footer": {
+    "getQuote": "Merrni një ofertë"
   }
 }

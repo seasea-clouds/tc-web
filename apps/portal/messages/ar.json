@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "مستحضرات التجميل",
     "cat_E_commerce": "التجارة الإلكترونية",
     "cat_Food_Beverage": "الأطعمة والمشروبات"
+  },
+  "Footer": {
+    "getQuote": "احصل على عرض سعر"
   }
 }

@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "화장품",
     "cat_E_commerce": "전자상거래",
     "cat_Food_Beverage": "음식 및 음료"
+  },
+  "Footer": {
+    "getQuote": "견적 받기"
   }
 }

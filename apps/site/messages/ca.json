@@ -1395,5 +1395,8 @@
     "faqA9": "En general, cada variant requereix una presentació independent. Els productes que difereixen en formulació, fragància, color o concentració d'ingredients actius es tracten com a SKU separades. No obstant això, els productes que només varien en la mida de l'envàs (mateixa fórmula, diferents volums) poden compartir un fitxer sota determinades condicions.",
     "faqQ10": "Necessito una empresa xinesa per presentar cosmètics a NMPA?",
     "faqA10": "Sí. Tots els productes cosmètics importats a la Xina han de tenir una persona responsable nacional xinesa: una entitat legal registrada a la Xina amb un àmbit comercial relacionat amb els cosmètics. Pot ser la vostra pròpia filial xinesa, un distribuïdor o un proveïdor de serveis extern. La persona responsable és legalment responsable de la seguretat del producte i gestiona totes les comunicacions de l'NMPA."
+  },
+  "Footer": {
+    "getQuote": "Obtén un pressupost"
   }
 }

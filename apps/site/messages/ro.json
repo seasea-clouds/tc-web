@@ -1395,5 +1395,8 @@
     "faqA9": "În general, fiecare variantă necesită o înregistrare separată. Produsele care diferă în formă, parfum, culoare sau concentrație de ingredient activ sunt tratate ca SKU-uri separate. Cu toate acestea, produsele care variază doar în dimensiunea ambalajului (aceeași formulă, volume diferite) pot împărtăși o înregistrare în anumite condiții.",
     "faqQ10": "Am nevoie de o companie chineză pentru a depune produse cosmetice la NMPA?",
     "faqA10": "Da. Fiecare produs cosmetic importat în China trebuie să aibă o persoană responsabilă națională chineză - o entitate juridică înregistrată în China cu scop comercial legat de produse cosmetice. Aceasta poate fi propria filială chineză, un distribuitor sau un furnizor de servicii terță parte. Persoana responsabilă este responsabilă din punct de vedere legal pentru siguranța produsului și se ocupă de toate comunicările NMPA."
+  },
+  "Footer": {
+    "getQuote": "Obțineți o ofertă"
   }
 }

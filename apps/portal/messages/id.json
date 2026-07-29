@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "Kosmetik",
     "cat_E_commerce": "perdagangan elektronik",
     "cat_Food_Beverage": "Makanan & Minuman"
+  },
+  "Footer": {
+    "getQuote": "Dapatkan Penawaran"
   }
 }

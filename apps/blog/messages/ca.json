@@ -67,5 +67,8 @@
     "accept": "Acceptar-ho tot",
     "reject": "Rebutja els no essencials",
     "privacyLink": "Política de privadesa"
+  },
+  "Footer": {
+    "getQuote": "Obtén un pressupost"
   }
 }

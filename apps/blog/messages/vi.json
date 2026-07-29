@@ -67,5 +67,8 @@
     "accept": "Chấp nhận tất cả",
     "reject": "Từ chối không cần thiết",
     "privacyLink": "Chính sách bảo mật"
+  },
+  "Footer": {
+    "getQuote": "Nhận báo giá"
   }
 }

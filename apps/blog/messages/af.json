@@ -67,5 +67,8 @@
     "accept": "Aanvaar Almal",
     "reject": "Verwerp Nie-noodsaaklik",
     "privacyLink": "Privaatheidsbeleid"
+  },
+  "Footer": {
+    "getQuote": "Kry 'n Kwotasie"
   }
 }

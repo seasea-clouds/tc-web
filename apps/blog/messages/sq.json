@@ -67,5 +67,8 @@
     "accept": "Prano të gjitha",
     "reject": "Refuzo jo-thelbësoren",
     "privacyLink": "Politika e privatësisë"
+  },
+  "Footer": {
+    "getQuote": "Merrni një ofertë"
   }
 }

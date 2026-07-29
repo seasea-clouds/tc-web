@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "प्रसाधन सामग्री",
     "cat_E_commerce": "ई-कॉमर्स",
     "cat_Food_Beverage": "खाद्य और पेय"
+  },
+  "Footer": {
+    "getQuote": "कोटेशन प्राप्त करें"
   }
 }

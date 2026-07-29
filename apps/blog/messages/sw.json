@@ -67,5 +67,8 @@
     "accept": "Kubali Yote",
     "reject": "Kataa Isiyo Muhimu",
     "privacyLink": "Sera ya Faragha"
+  },
+  "Footer": {
+    "getQuote": "Pata Nukuu"
   }
 }

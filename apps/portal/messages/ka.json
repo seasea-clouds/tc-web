@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "კოსმეტიკა",
     "cat_E_commerce": "ელექტრონული კომერცია",
     "cat_Food_Beverage": "საკვები და სასმელი"
+  },
+  "Footer": {
+    "getQuote": "მიიღეთ შეთავაზება"
   }
 }

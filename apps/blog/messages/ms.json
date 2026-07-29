@@ -67,5 +67,8 @@
     "accept": "Terima Semua",
     "reject": "Tolak Bukan Penting",
     "privacyLink": "Dasar Privasi"
+  },
+  "Footer": {
+    "getQuote": "Dapatkan Sebut Harga"
   }
 }

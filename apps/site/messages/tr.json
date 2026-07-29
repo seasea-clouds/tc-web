@@ -1395,5 +1395,8 @@
     "faqA9": "Genellikle her varyant ayrı bir başvuru gerektirir. Formülasyon, koku, renk veya aktif madde konsantrasyonu açısından farklılık gösteren ürünler ayrı SKU'lar olarak değerlendirilir. Ancak yalnızca ambalaj boyutunda farklılık gösteren ürünler (aynı formül, farklı hacimler) belirli koşullar altında aynı dosyalamayı paylaşabilir.",
     "faqQ10": "Kozmetik ürünlerini NMPA'ya dosyalamak için Çinli bir şirkete ihtiyacım var mı?",
     "faqA10": "Evet. Çin'e ithal edilen her kozmetik ürünün, Çin'de kozmetikle ilgili iş kapsamına sahip kayıtlı bir tüzel kişilik olan bir Çinli yerel sorumlu kişisi olması gerekir. Bu, kendi Çin şubeniz, distribütörünüz veya üçüncü taraf hizmet sağlayıcınız olabilir. Sorumlu kişi, ürün güvenliğinden yasal olarak sorumludur ve tüm NMPA iletişimlerini yönetir."
+  },
+  "Footer": {
+    "getQuote": "Teklif Alın"
   }
 }

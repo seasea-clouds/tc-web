@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "প্রসাধনী",
     "cat_E_commerce": "ই-কমার্স",
     "cat_Food_Beverage": "খাদ্য ও পানীয়"
+  },
+  "Footer": {
+    "getQuote": "একটি উদ্ধৃতি পান"
   }
 }

@@ -1395,5 +1395,8 @@
     "faqA9": "Geralmente, cada variante requer um arquivamento separado. Produtos que diferem em formulação, fragrância, cor ou concentração de ingrediente ativo são tratados como SKUs separados. Porém, produtos que variam apenas no tamanho da embalagem (mesma fórmula, volumes diferentes) podem compartilhar um depósito sob certas condições.",
     "faqQ10": "Preciso que uma empresa chinesa registre cosméticos na NMPA?",
     "faqA10": "Sim. Todo produto cosmético importado para a China deve ter uma pessoa responsável nacional chinesa – uma entidade legal registrada na China com escopo comercial relacionado a cosméticos. Pode ser sua própria subsidiária chinesa, um distribuidor ou um provedor de serviços terceirizado. A pessoa responsável é legalmente responsável pela segurança do produto e trata de todas as comunicações da NMPA."
+  },
+  "Footer": {
+    "getQuote": "Obter orçamento"
   }
 }

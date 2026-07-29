@@ -1395,5 +1395,8 @@
     "faqA9": "Generell ist für jede Variante eine gesonderte Einreichung erforderlich. Produkte, die sich in Formulierung, Duft, Farbe oder Wirkstoffkonzentration unterscheiden, werden als separate SKUs behandelt. Allerdings können Produkte, die sich nur in der Verpackungsgröße unterscheiden (gleiche Rezeptur, unterschiedliche Volumina), unter bestimmten Voraussetzungen eine gemeinsame Ablage haben.",
     "faqQ10": "Benötige ich ein chinesisches Unternehmen, um Kosmetika bei der NMPA einzureichen?",
     "faqA10": "Ja. Für jedes nach China importierte Kosmetikprodukt muss es eine in China verantwortliche Person geben – eine in China registrierte juristische Person mit kosmetikbezogenem Geschäftsumfang. Dies kann Ihre eigene chinesische Tochtergesellschaft, ein Distributor oder ein Drittdienstleister sein. Die verantwortliche Person ist gesetzlich für die Produktsicherheit verantwortlich und kümmert sich um die gesamte NMPA-Kommunikation."
+  },
+  "Footer": {
+    "getQuote": "Angebot einholen"
   }
 }

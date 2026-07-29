@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "Skoonheidsmiddels",
     "cat_E_commerce": "E-handel",
     "cat_Food_Beverage": "Kos en Drank"
+  },
+  "Footer": {
+    "getQuote": "Kry 'n Kwotasie"
   }
 }

@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "Kosmetikk",
     "cat_E_commerce": "E-handel",
     "cat_Food_Beverage": "Mat og drikke"
+  },
+  "Footer": {
+    "getQuote": "Få et tilbud"
   }
 }

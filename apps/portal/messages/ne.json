@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "कस्मेटिक्स",
     "cat_E_commerce": "ई-वाणिज्य",
     "cat_Food_Beverage": "खाना र पेय पदार्थ"
+  },
+  "Footer": {
+    "getQuote": "उद्धरण प्राप्त गर्नुहोस्"
   }
 }

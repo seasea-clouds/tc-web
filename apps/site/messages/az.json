@@ -1395,5 +1395,8 @@
     "faqA9": "Ümumiyyətlə, hər bir variant üçün ayrıca ərizə tələb olunur. Tərkibində, ətirində, rəngində və ya aktiv inqrediyent konsentrasiyasında fərqlənən məhsullar ayrıca SKU kimi qəbul edilir. Bununla belə, yalnız qablaşdırma ölçüsündə (eyni düstur, müxtəlif həcmdə) fərqlənən məhsullar müəyyən şərtlər altında bir sənəd paylaşa bilər.",
     "faqQ10": "NMPA ilə kosmetika təqdim etmək üçün Çin şirkətinə ehtiyacım varmı?",
     "faqA10": "Bəli. Çinə idxal edilən hər bir kosmetika məhsulunun Çinli yerli məsul şəxsi - Çində kosmetika ilə bağlı biznes sahəsi ilə qeydiyyatdan keçmiş hüquqi şəxs olmalıdır. Bu, öz Çin filialınız, distribyutorunuz və ya üçüncü tərəf xidmət təminatçınız ola bilər. Məsul şəxs məhsulun təhlükəsizliyi üçün qanuni olaraq cavabdehdir və bütün NMPA kommunikasiyalarını idarə edir."
+  },
+  "Footer": {
+    "getQuote": "Qiymət təklifi al"
   }
 }

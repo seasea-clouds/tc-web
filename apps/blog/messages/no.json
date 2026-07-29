@@ -67,5 +67,8 @@
     "accept": "Godta alle",
     "reject": "Avvis ikke-essensielt",
     "privacyLink": "Personvernerklæring"
+  },
+  "Footer": {
+    "getQuote": "Få et tilbud"
   }
 }

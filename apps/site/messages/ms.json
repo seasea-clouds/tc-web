@@ -1395,5 +1395,8 @@
     "faqA9": "Secara amnya, setiap varian memerlukan pemfailan berasingan. Produk yang berbeza dalam formulasi, pewangi, warna atau kepekatan bahan aktif dianggap sebagai SKU yang berasingan. Walau bagaimanapun, produk yang berbeza hanya dalam saiz pembungkusan (formula yang sama, volum berbeza) mungkin berkongsi pemfailan di bawah syarat tertentu.",
     "faqQ10": "Adakah saya memerlukan syarikat China untuk memfailkan kosmetik dengan NMPA?",
     "faqA10": "ya. Setiap produk kosmetik yang diimport ke China mesti mempunyai orang yang bertanggungjawab domestik China — entiti sah yang berdaftar di China dengan skop perniagaan berkaitan kosmetik. Ini boleh menjadi anak syarikat Cina anda sendiri, pengedar atau pembekal perkhidmatan pihak ketiga. Orang yang bertanggungjawab bertanggungjawab secara sah untuk keselamatan produk dan mengendalikan semua komunikasi NMPA."
+  },
+  "Footer": {
+    "getQuote": "Dapatkan Sebut Harga"
   }
 }

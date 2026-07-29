@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "Kozmetik",
     "cat_E_commerce": "E-ticaret",
     "cat_Food_Beverage": "Yiyecek ve İçecek"
+  },
+  "Footer": {
+    "getQuote": "Teklif Alın"
   }
 }

@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "Kosmetika",
     "cat_E_commerce": "Elektron ticarət",
     "cat_Food_Beverage": "Qida və İçki"
+  },
+  "Footer": {
+    "getQuote": "Qiymət təklifi al"
   }
 }

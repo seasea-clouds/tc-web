@@ -1395,5 +1395,8 @@
     "faqA9": "Nói chung, mỗi biến thể yêu cầu một hồ sơ riêng. Các sản phẩm khác nhau về công thức, mùi thơm, màu sắc hoặc nồng độ hoạt chất sẽ được coi là SKU riêng biệt. Tuy nhiên, các sản phẩm chỉ khác nhau về kích thước bao bì (cùng công thức, khối lượng khác nhau) có thể chia sẻ một hồ sơ trong một số điều kiện nhất định.",
     "faqQ10": "Tôi có cần một công ty Trung Quốc nộp hồ sơ mỹ phẩm với NMPA không?",
     "faqA10": "Đúng. Mọi sản phẩm mỹ phẩm nhập khẩu vào Trung Quốc đều phải có người chịu trách nhiệm trong nước là người Trung Quốc - một pháp nhân được đăng ký tại Trung Quốc với phạm vi kinh doanh liên quan đến mỹ phẩm. Đây có thể là công ty con tại Trung Quốc của bạn, nhà phân phối hoặc nhà cung cấp dịch vụ bên thứ ba. Người chịu trách nhiệm chịu trách nhiệm pháp lý về an toàn sản phẩm và xử lý tất cả các thông tin liên lạc NMPA."
+  },
+  "Footer": {
+    "getQuote": "Nhận báo giá"
   }
 }

@@ -67,5 +67,8 @@
     "accept": "Accepteer alles",
     "reject": "Niet-essentieel afwijzen",
     "privacyLink": "Privacybeleid"
+  },
+  "Footer": {
+    "getQuote": "Vraag een offerte aan"
   }
 }

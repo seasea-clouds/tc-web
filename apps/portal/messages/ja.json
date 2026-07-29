@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "化粧品",
     "cat_E_commerce": "電子商取引",
     "cat_Food_Beverage": "食べ物と飲み物"
+  },
+  "Footer": {
+    "getQuote": "見積もりを取得"
   }
 }

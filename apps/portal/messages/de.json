@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "Kosmetika",
     "cat_E_commerce": "E-Commerce",
     "cat_Food_Beverage": "Essen und Trinken"
+  },
+  "Footer": {
+    "getQuote": "Angebot einholen"
   }
 }

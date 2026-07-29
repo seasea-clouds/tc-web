@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "அழகுசாதனப் பொருட்கள்",
     "cat_E_commerce": "மின் வணிகம்",
     "cat_Food_Beverage": "உணவு & பானம்"
+  },
+  "Footer": {
+    "getQuote": "மேற்கோளைப் பெறவும்"
   }
 }

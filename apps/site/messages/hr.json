@@ -1395,5 +1395,8 @@
     "faqA9": "Općenito, svaka varijanta zahtijeva zasebno podnošenje. Proizvodi koji se razlikuju po formulaciji, mirisu, boji ili koncentraciji aktivnog sastojka tretiraju se kao zasebni SKU-ovi. Međutim, proizvodi koji se razlikuju samo po veličini pakiranja (ista formula, različiti volumeni) mogu dijeliti dokumentaciju pod određenim uvjetima.",
     "faqQ10": "Trebam li kinesku tvrtku za prijavu kozmetike kod NMPA?",
     "faqA10": "Da. Svaki kozmetički proizvod koji se uvozi u Kinu mora imati kinesku domaću odgovornu osobu — pravni subjekt registriran u Kini s djelokrugom poslovanja vezanim uz kozmetiku. To može biti vaša kineska podružnica, distributer ili pružatelj usluga treće strane. Odgovorna osoba je zakonski odgovorna za sigurnost proizvoda i upravlja svim NMPA komunikacijama."
+  },
+  "Footer": {
+    "getQuote": "Zatražite ponudu"
   }
 }

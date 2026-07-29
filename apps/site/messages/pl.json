@@ -1395,5 +1395,8 @@
     "faqA9": "Generalnie każdy wariant wymaga osobnego zgłoszenia. Produkty różniące się formułą, zapachem, kolorem lub stężeniem substancji czynnej są traktowane jako osobne jednostki SKU. Jednakże produkty, które różnią się jedynie wielkością opakowania (ta sama formuła, różne objętości) mogą mieć wspólne zgłoszenie pod pewnymi warunkami.",
     "faqQ10": "Czy potrzebuję chińskiej firmy, aby zgłosić kosmetyki do NMPA?",
     "faqA10": "Tak. Każdy produkt kosmetyczny importowany do Chin musi mieć chińską osobę odpowiedzialną w kraju – osobę prawną zarejestrowaną w Chinach i prowadzącą działalność związaną z kosmetykami. Może to być Twoja chińska spółka zależna, dystrybutor lub zewnętrzny usługodawca. Osoba odpowiedzialna jest prawnie odpowiedzialna za bezpieczeństwo produktu i zajmuje się całą komunikacją NMPA."
+  },
+  "Footer": {
+    "getQuote": "Uzyskaj wycenę"
   }
 }

@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "เครื่องสำอาง",
     "cat_E_commerce": "อีคอมเมิร์ซ",
     "cat_Food_Beverage": "อาหารและเครื่องดื่ม"
+  },
+  "Footer": {
+    "getQuote": "รับใบเสนอราคา"
   }
 }

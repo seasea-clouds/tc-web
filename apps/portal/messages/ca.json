@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "Cosmètics",
     "cat_E_commerce": "Comerç electrònic",
     "cat_Food_Beverage": "Aliments i begudes"
+  },
+  "Footer": {
+    "getQuote": "Obtén un pressupost"
   }
 }

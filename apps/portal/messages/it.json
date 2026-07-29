@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "Cosmetici",
     "cat_E_commerce": "Commercio elettronico",
     "cat_Food_Beverage": "Cibo e bevande"
+  },
+  "Footer": {
+    "getQuote": "Ottieni un preventivo"
   }
 }

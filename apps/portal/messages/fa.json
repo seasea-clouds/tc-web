@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "لوازم آرایشی",
     "cat_E_commerce": "تجارت الکترونیک",
     "cat_Food_Beverage": "غذا و نوشیدنی"
+  },
+  "Footer": {
+    "getQuote": "دریافت قیمت"
   }
 }

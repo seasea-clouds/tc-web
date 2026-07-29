@@ -1395,5 +1395,8 @@
     "faqA9": "Umumnya setiap varian memerlukan pengarsipan tersendiri. Produk yang berbeda dalam formulasi, wewangian, warna, atau konsentrasi bahan aktif diperlakukan sebagai SKU terpisah. Namun, produk yang hanya berbeda dalam ukuran kemasan (formula sama, volume berbeda) dapat berbagi pengarsipan dalam kondisi tertentu.",
     "faqQ10": "Apakah saya memerlukan perusahaan China untuk mengajukan kosmetik ke NMPA?",
     "faqA10": "Ya. Setiap produk kosmetik yang diimpor ke Tiongkok harus memiliki penanggung jawab domestik Tiongkok — badan hukum yang terdaftar di Tiongkok dengan ruang lingkup bisnis terkait kosmetik. Ini bisa berupa anak perusahaan Anda di Tiongkok, distributor, atau penyedia layanan pihak ketiga. Orang yang bertanggung jawab bertanggung jawab secara hukum atas keamanan produk dan menangani semua komunikasi NMPA."
+  },
+  "Footer": {
+    "getQuote": "Dapatkan Penawaran"
   }
 }

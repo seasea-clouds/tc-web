@@ -67,5 +67,8 @@
     "accept": "すべてを受け入れる",
     "reject": "必須でないものを拒否する",
     "privacyLink": "プライバシーポリシー"
+  },
+  "Footer": {
+    "getQuote": "見積もりを取得"
   }
 }

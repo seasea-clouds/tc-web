@@ -67,5 +67,8 @@
     "accept": "Az összes elfogadása",
     "reject": "Elutasítás Nem alapvető",
     "privacyLink": "Adatvédelmi szabályzat"
+  },
+  "Footer": {
+    "getQuote": "Kérjen árajánlatot"
   }
 }

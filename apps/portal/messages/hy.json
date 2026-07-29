@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "Կոսմետիկա",
     "cat_E_commerce": "Էլեկտրոնային առևտուր",
     "cat_Food_Beverage": "Սնունդ և ըմպելիք"
+  },
+  "Footer": {
+    "getQuote": "Ստանալ գնանշում"
   }
 }

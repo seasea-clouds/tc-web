@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "Mỹ phẩm",
     "cat_E_commerce": "Thương mại điện tử",
     "cat_Food_Beverage": "Thực phẩm & Đồ uống"
+  },
+  "Footer": {
+    "getQuote": "Nhận báo giá"
   }
 }

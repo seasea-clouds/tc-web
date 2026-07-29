@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "Cosmetice",
     "cat_E_commerce": "Comerț electronic",
     "cat_Food_Beverage": "Mâncare și băuturi"
+  },
+  "Footer": {
+    "getQuote": "Obțineți o ofertă"
   }
 }

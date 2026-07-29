@@ -67,5 +67,8 @@
     "accept": "Prijať všetko",
     "reject": "Odmietnuť nepodstatné",
     "privacyLink": "Zásady ochrany osobných údajov"
+  },
+  "Footer": {
+    "getQuote": "Získať cenovú ponuku"
   }
 }

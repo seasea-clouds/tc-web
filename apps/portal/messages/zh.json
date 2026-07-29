@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "化妆品",
     "cat_E_commerce": "电子商务",
     "cat_Food_Beverage": "食品及饮料"
+  },
+  "Footer": {
+    "getQuote": "获取报价"
   }
 }

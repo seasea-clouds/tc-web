@@ -1395,5 +1395,8 @@
     "faqA9": "In genere, ciascuna variante richiede un deposito separato. I prodotti che differiscono per formulazione, fragranza, colore o concentrazione di principio attivo vengono trattati come SKU separati. Tuttavia, i prodotti che variano solo nelle dimensioni della confezione (stessa formula, volumi diversi) possono condividere lo stesso classificazione a determinate condizioni.",
     "faqQ10": "Ho bisogno che un’azienda cinese depositi i cosmetici presso NMPA?",
     "faqA10": "SÌ. Ogni prodotto cosmetico importato in Cina deve avere una persona responsabile nazionale cinese, ovvero un’entità legale registrata in Cina con ambito commerciale correlato ai cosmetici. Può trattarsi della tua filiale cinese, di un distributore o di un fornitore di servizi di terze parti. La persona responsabile è legalmente responsabile della sicurezza del prodotto e gestisce tutte le comunicazioni NMPA."
+  },
+  "Footer": {
+    "getQuote": "Ottieni un preventivo"
   }
 }

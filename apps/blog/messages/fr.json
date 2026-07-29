@@ -67,5 +67,8 @@
     "accept": "Accepter tout",
     "reject": "Rejeter les produits non essentiels",
     "privacyLink": "politique de confidentialité"
+  },
+  "Footer": {
+    "getQuote": "Obtenir un devis"
   }
 }

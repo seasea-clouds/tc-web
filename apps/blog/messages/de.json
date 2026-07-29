@@ -67,5 +67,8 @@
     "accept": "Alle akzeptieren",
     "reject": "Unwesentliches ablehnen",
     "privacyLink": "Datenschutzrichtlinie"
+  },
+  "Footer": {
+    "getQuote": "Angebot einholen"
   }
 }

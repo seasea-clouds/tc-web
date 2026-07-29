@@ -67,5 +67,8 @@
     "accept": "Sprejmi vse",
     "reject": "Zavrni nebistveno",
     "privacyLink": "Politika zasebnosti"
+  },
+  "Footer": {
+    "getQuote": "Pridobite ponudbo"
   }
 }

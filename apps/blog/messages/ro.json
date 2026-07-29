@@ -67,5 +67,8 @@
     "accept": "Acceptați toate",
     "reject": "Respinge neesențiale",
     "privacyLink": "Politica de confidențialitate"
+  },
+  "Footer": {
+    "getQuote": "Obțineți o ofertă"
   }
 }

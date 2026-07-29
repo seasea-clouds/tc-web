@@ -1395,5 +1395,8 @@
     "faqA9": "Vo všeobecnosti si každý variant vyžaduje samostatné podanie. Produkty, ktoré sa líšia zložením, vôňou, farbou alebo koncentráciou účinnej látky, sa považujú za samostatné SKU. Avšak produkty, ktoré sa líšia iba veľkosťou balenia (rovnaký vzorec, rôzne objemy), môžu za určitých podmienok zdieľať podanie.",
     "faqQ10": "Potrebujem čínsku spoločnosť na registráciu kozmetiky s NMPA?",
     "faqA10": "áno. Každý kozmetický výrobok dovážaný do Číny musí mať čínsku domácu zodpovednú osobu – právnickú osobu registrovanú v Číne s podnikateľským zameraním súvisiacim s kozmetikou. Môže to byť vaša vlastná čínska dcérska spoločnosť, distribútor alebo poskytovateľ služieb tretej strany. Zodpovedná osoba je právne zodpovedná za bezpečnosť produktu a riadi všetku komunikáciu NMPA."
+  },
+  "Footer": {
+    "getQuote": "Získať cenovú ponuku"
   }
 }

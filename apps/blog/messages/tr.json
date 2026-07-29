@@ -67,5 +67,8 @@
     "accept": "Tümünü Kabul Et",
     "reject": "Gerekli Olmayanları Reddet",
     "privacyLink": "Gizlilik Politikası"
+  },
+  "Footer": {
+    "getQuote": "Teklif Alın"
   }
 }

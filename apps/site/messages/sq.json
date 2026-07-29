@@ -1395,5 +1395,8 @@
     "faqA9": "Në përgjithësi, çdo variant kërkon një dosje të veçantë. Produktet që ndryshojnë në formulim, aromë, ngjyrë ose përqendrim të përbërësit aktiv trajtohen si SKU të veçanta. Megjithatë, produktet që ndryshojnë vetëm në madhësinë e paketimit (e njëjta formulë, vëllime të ndryshme) mund të ndajnë një dosje në kushte të caktuara.",
     "faqQ10": "A kam nevojë për një kompani kineze për të paraqitur kozmetikë në NMPA?",
     "faqA10": "po. Çdo produkt kozmetik i importuar në Kinë duhet të ketë një person përgjegjës vendas kinez - një person juridik i regjistruar në Kinë me fushëveprimin e biznesit të lidhur me kozmetikën. Ky mund të jetë filiali juaj kinez, një shpërndarës ose një ofrues shërbimi i palës së tretë. Personi përgjegjës është ligjërisht përgjegjës për sigurinë e produktit dhe trajton të gjitha komunikimet NMPA."
+  },
+  "Footer": {
+    "getQuote": "Merrni një ofertë"
   }
 }

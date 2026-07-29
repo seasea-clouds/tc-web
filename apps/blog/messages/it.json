@@ -67,5 +67,8 @@
     "accept": "Accetta tutto",
     "reject": "Rifiuta non essenziale",
     "privacyLink": "politica sulla riservatezza"
+  },
+  "Footer": {
+    "getQuote": "Ottieni un preventivo"
   }
 }

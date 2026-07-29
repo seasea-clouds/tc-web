@@ -1395,5 +1395,8 @@
     "faqA9": "I allmänhet kräver varje variant en separat arkivering. Produkter som skiljer sig i formulering, doft, färg eller koncentration av aktiv ingrediens behandlas som separata SKU:er. Produkter som endast varierar i förpackningsstorlek (samma formel, olika volymer) kan dock dela en fil under vissa förutsättningar.",
     "faqQ10": "Behöver jag ett kinesiskt företag för att anmäla kosmetika till NMPA?",
     "faqA10": "Ja. Varje kosmetikaprodukt som importeras till Kina måste ha en kinesisk inhemsk ansvarig person – en juridisk person registrerad i Kina med kosmetikarelaterad verksamhet. Detta kan vara ditt eget kinesiska dotterbolag, en distributör eller en tredjepartstjänsteleverantör. Den ansvariga personen är juridiskt ansvarig för produktsäkerhet och hanterar all NMPA-kommunikation."
+  },
+  "Footer": {
+    "getQuote": "Få en offert"
   }
 }

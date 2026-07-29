@@ -67,5 +67,8 @@
     "accept": "Acceptera alla",
     "reject": "Avvisa Ej väsentligt",
     "privacyLink": "Sekretesspolicy"
+  },
+  "Footer": {
+    "getQuote": "Få en offert"
   }
 }

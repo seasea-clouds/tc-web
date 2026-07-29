@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "کاسمیٹکس",
     "cat_E_commerce": "ای کامرس",
     "cat_Food_Beverage": "خوراک اور مشروبات"
+  },
+  "Footer": {
+    "getQuote": "کوٹیشن حاصل کریں"
   }
 }

@@ -1395,5 +1395,8 @@
     "faqA9": "Generalmente, cada variante requiere una presentación separada. Los productos que difieren en formulación, fragancia, color o concentración de ingrediente activo se tratan como SKU separados. Sin embargo, los productos que varían únicamente en el tamaño del empaque (misma fórmula, diferentes volúmenes) pueden compartir una presentación bajo ciertas condiciones.",
     "faqQ10": "¿Necesito una empresa china para presentar cosméticos ante la NMPA?",
     "faqA10": "Sí. Cada producto cosmético importado a China debe tener una persona responsable nacional china, una entidad legal registrada en China con ámbito comercial relacionado con los cosméticos. Puede ser su propia filial china, un distribuidor o un proveedor de servicios externo. La persona responsable es legalmente responsable de la seguridad del producto y maneja todas las comunicaciones de NMPA."
+  },
+  "Footer": {
+    "getQuote": "Obtener presupuesto"
   }
 }

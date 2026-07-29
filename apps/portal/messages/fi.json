@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "Kosmetiikka",
     "cat_E_commerce": "Sähköinen kaupankäynti",
     "cat_Food_Beverage": "Ruoka ja juoma"
+  },
+  "Footer": {
+    "getQuote": "Pyydä tarjous"
   }
 }

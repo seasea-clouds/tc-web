@@ -67,5 +67,8 @@
     "accept": "Terima Semua",
     "reject": "Tolak Tidak Penting",
     "privacyLink": "Kebijakan Privasi"
+  },
+  "Footer": {
+    "getQuote": "Dapatkan Penawaran"
   }
 }

@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "Kozmetika",
     "cat_E_commerce": "Elektronický obchod",
     "cat_Food_Beverage": "Jedlo a nápoje"
+  },
+  "Footer": {
+    "getQuote": "Získať cenovú ponuku"
   }
 }

@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "Cosméticos",
     "cat_E_commerce": "Comércio eletrônico",
     "cat_Food_Beverage": "Alimentos e Bebidas"
+  },
+  "Footer": {
+    "getQuote": "Obter orçamento"
   }
 }

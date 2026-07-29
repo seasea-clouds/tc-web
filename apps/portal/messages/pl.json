@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "Kosmetyki",
     "cat_E_commerce": "Handel elektroniczny",
     "cat_Food_Beverage": "Żywność i napoje"
+  },
+  "Footer": {
+    "getQuote": "Uzyskaj wycenę"
   }
 }

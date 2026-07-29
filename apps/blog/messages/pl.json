@@ -67,5 +67,8 @@
     "accept": "Zaakceptuj wszystko",
     "reject": "Odrzuć niepotrzebne",
     "privacyLink": "Polityka prywatności"
+  },
+  "Footer": {
+    "getQuote": "Uzyskaj wycenę"
   }
 }

@@ -182,6 +182,7 @@ const CHECK_LIST = [
   { script: 'check-jsonld.mjs' },
   { script: 'check-md-format.mjs' },
   { script: 'check-md-structure.mjs' },
+  { script: 'check-md-article.mjs' },
   { script: 'check-locale-prefix.mjs' },
 
   // ── 翻译检查（无需编译） ────────────────────────────────

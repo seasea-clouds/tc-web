@@ -2997,5 +2997,14 @@
   "lab_mycotoxins": "Mycotoxins",
   "gaccRej_hsMisclass": "HS 2204 vs 2205 misclassification",
   "gaccReg_decree_249_desc": "Administrative Measures on Import and Export Food Safety. Sets the framework for customs inspection, documentation, and clearance procedures for imported food.",
-  "gaccReg_gb2762_desc": "Maximum levels of contaminants in food. Sets limits for heavy metals, mycotoxins, and other contaminants."
+  "gaccReg_gb2762_desc": "Maximum levels of contaminants in food. Sets limits for heavy metals, mycotoxins, and other contaminants.",
+  "Blog": {
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
+  }
 }

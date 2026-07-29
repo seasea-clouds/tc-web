@@ -53,7 +53,14 @@
     "contactMessage": "Pesan (opsional)",
     "contactTitle": "Penilaian Kepatuhan Gratis",
     "contactEmailPlaceholder": "you@company.com",
-    "shareWhatsapp": "Bagikan di WhatsApp"
+    "shareWhatsapp": "Bagikan di WhatsApp",
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
   },
   "Cookie": {
     "message": "Situs ini hanya menggunakan cookie otentikasi penting. Tidak ada cookie pelacakan atau iklan yang digunakan.",

@@ -53,7 +53,14 @@
     "contactMessage": "|\nپیغام (اختیاری)",
     "contactTitle": "|\nمفت تعمیل کی تشخیص",
     "contactEmailPlaceholder": "you@company.com",
-    "shareWhatsapp": "|\nواٹس ایپ پر شیئر کریں۔"
+    "shareWhatsapp": "|\nواٹس ایپ پر شیئر کریں۔",
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
   },
   "Cookie": {
     "message": "یہ سائٹ صرف ضروری تصدیقی کوکیز استعمال کرتی ہے۔ کوئی ٹریکنگ یا اشتہاری کوکیز استعمال نہیں کی جاتی ہیں۔",

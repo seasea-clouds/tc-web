@@ -2997,5 +2997,14 @@
   "tmSquatting_stats": "外国ブランドの15～25％が中国で不法占拠を経験",
   "tmTotalCostRange": "$600～2,000/クラス",
   "tmWatchService_cost": "クラス数に応じて月額 $200 ～ 500",
-  "varies_label": "さまざま"
+  "varies_label": "さまざま",
+  "Blog": {
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
+  }
 }

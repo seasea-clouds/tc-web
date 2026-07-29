@@ -2997,5 +2997,14 @@
   "tmSquatting_stats": "15-25% das marcas estrangeiras experimentam ocupações na China",
   "tmTotalCostRange": "US$ 600-2.000/aula",
   "tmWatchService_cost": "US$ 200-500/mês dependendo do número de aulas",
-  "varies_label": "Varia"
+  "varies_label": "Varia",
+  "Blog": {
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
+  }
 }

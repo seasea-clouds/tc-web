@@ -2997,5 +2997,14 @@
   "tmSquatting_stats": "แบรนด์ต่างประเทศ 15-25% เคยนั่งยองๆ ในจีน",
   "tmTotalCostRange": "$600-2,000/คลาส",
   "tmWatchService_cost": "$200-500/เดือน ขึ้นอยู่กับจำนวนชั้นเรียน",
-  "varies_label": "แตกต่างกันไป"
+  "varies_label": "แตกต่างกันไป",
+  "Blog": {
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
+  }
 }

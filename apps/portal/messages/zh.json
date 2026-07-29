@@ -2997,5 +2997,14 @@
   "tmSquatting_stats": "15-25%的国外品牌在中国经历过抢注",
   "tmTotalCostRange": "$600-2,000/班",
   "tmWatchService_cost": "$200-500/月取决于课程数量",
-  "varies_label": "各不相同"
+  "varies_label": "各不相同",
+  "Blog": {
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
+  }
 }

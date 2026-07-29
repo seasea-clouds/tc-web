@@ -2997,5 +2997,14 @@
   "tmSquatting_stats": "უცხოური ბრენდების 15-25% ჩინეთში ჩაჯდომას განიცდის",
   "tmTotalCostRange": "600-2000$/კლასში",
   "tmWatchService_cost": "200-500$/თვეში კლასების რაოდენობის მიხედვით",
-  "varies_label": "ცვალებადია"
+  "varies_label": "ცვალებადია",
+  "Blog": {
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
+  }
 }

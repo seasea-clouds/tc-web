@@ -53,7 +53,14 @@
     "contactMessage": "Nachricht (optional)",
     "contactTitle": "Kostenlose Compliance-Bewertung",
     "contactEmailPlaceholder": "you@company.com",
-    "shareWhatsapp": "Auf WhatsApp teilen"
+    "shareWhatsapp": "Auf WhatsApp teilen",
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
   },
   "Cookie": {
     "message": "Diese Website verwendet nur unbedingt erforderliche Authentifizierungscookies. Es werden keine Tracking- oder Werbecookies verwendet.",

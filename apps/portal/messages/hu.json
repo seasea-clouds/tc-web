@@ -2997,5 +2997,14 @@
   "tmSquatting_stats": "A külföldi márkák 15-25%-a tapasztal guggolást Kínában",
   "tmTotalCostRange": "600-2000 dollár/osztály",
   "tmWatchService_cost": "200-500 USD/hó az órák számától függően",
-  "varies_label": "Változó"
+  "varies_label": "Változó",
+  "Blog": {
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
+  }
 }

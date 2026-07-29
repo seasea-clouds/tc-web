@@ -53,7 +53,14 @@
     "contactMessage": "ข้อความ (ไม่บังคับ)",
     "contactTitle": "การประเมินการปฏิบัติตามข้อกำหนดฟรี",
     "contactEmailPlaceholder": "you@company.com",
-    "shareWhatsapp": "แบ่งปันบน WhatsApp"
+    "shareWhatsapp": "แบ่งปันบน WhatsApp",
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
   },
   "Cookie": {
     "message": "ไซต์นี้ใช้คุกกี้การรับรองความถูกต้องที่จำเป็นเท่านั้น ไม่มีการใช้คุกกี้การติดตามหรือการโฆษณา",

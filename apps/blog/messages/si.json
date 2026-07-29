@@ -53,7 +53,14 @@
     "contactMessage": "|\nපණිවිඩය (විකල්ප)",
     "contactTitle": "|\nනොමිලේ අනුකූලතා තක්සේරුව",
     "contactEmailPlaceholder": "you@company.com",
-    "shareWhatsapp": "|\nWhatsApp හි බෙදා ගන්න"
+    "shareWhatsapp": "|\nWhatsApp හි බෙදා ගන්න",
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
   },
   "Cookie": {
     "message": "මෙම වෙබ් අඩවිය අත්‍යවශ්‍ය සත්‍යාපන කුකීස් පමණක් භාවිතා කරයි. ලුහුබැඳීම හෝ ප්‍රචාරණ කුකීස් භාවිතා නොකෙරේ.",

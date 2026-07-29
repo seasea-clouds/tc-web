@@ -53,7 +53,14 @@
     "contactMessage": "Bericht (optioneel)",
     "contactTitle": "Gratis nalevingsbeoordeling",
     "contactEmailPlaceholder": "you@company.com",
-    "shareWhatsapp": "Deel op WhatsApp"
+    "shareWhatsapp": "Deel op WhatsApp",
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
   },
   "Cookie": {
     "message": "Deze site gebruikt alleen essentiële authenticatiecookies. Er worden geen tracking- of advertentiecookies gebruikt.",

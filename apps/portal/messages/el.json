@@ -2997,5 +2997,14 @@
   "tmSquatting_stats": "Το 15-25% των ξένων εμπορικών σημάτων βιώνουν καταλήψεις στην Κίνα",
   "tmTotalCostRange": "600-2.000 $/κατηγορία",
   "tmWatchService_cost": "$200-500/μήνα ανάλογα με τον αριθμό των μαθημάτων",
-  "varies_label": "ποικίλλει"
+  "varies_label": "ποικίλλει",
+  "Blog": {
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
+  }
 }

@@ -53,7 +53,14 @@
     "contactMessage": "Üzenet (opcionális)",
     "contactTitle": "Ingyenes megfelelőségi értékelés",
     "contactEmailPlaceholder": "you@company.com",
-    "shareWhatsapp": "Oszd meg a WhatsApp-on"
+    "shareWhatsapp": "Oszd meg a WhatsApp-on",
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
   },
   "Cookie": {
     "message": "Ez az oldal csak alapvető hitelesítési cookie-kat használ. Nem használnak nyomkövető vagy hirdetési sütiket.",

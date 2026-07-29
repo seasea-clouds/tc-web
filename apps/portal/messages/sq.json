@@ -2997,5 +2997,14 @@
   "tmSquatting_stats": "15-25% e markave të huaja përjetojnë mbledhje në Kinë",
   "tmTotalCostRange": "600-2000 dollarë/klasë",
   "tmWatchService_cost": "200-500 dollarë në muaj në varësi të numrit të klasave",
-  "varies_label": "Ndryshon"
+  "varies_label": "Ndryshon",
+  "Blog": {
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
+  }
 }

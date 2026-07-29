@@ -2997,5 +2997,14 @@
   "tmSquatting_stats": "15-25 % ulkomaisista merkeistä kokee kyykkyn Kiinassa",
   "tmTotalCostRange": "600-2000 dollaria/luokka",
   "tmWatchService_cost": "200-500 dollaria/kk kurssien määrästä riippuen",
-  "varies_label": "Vaihtelee"
+  "varies_label": "Vaihtelee",
+  "Blog": {
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
+  }
 }

@@ -53,7 +53,14 @@
     "contactMessage": "|\nसन्देश (वैकल्पिक)",
     "contactTitle": "|\nनि: शुल्क अनुपालन मूल्याङ्कन",
     "contactEmailPlaceholder": "you@company.com",
-    "shareWhatsapp": "|\nव्हाट्सएपमा साझेदारी गर्नुहोस्"
+    "shareWhatsapp": "|\nव्हाट्सएपमा साझेदारी गर्नुहोस्",
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
   },
   "Cookie": {
     "message": "यो साइटले आवश्यक प्रमाणीकरण कुकीहरू मात्र प्रयोग गर्दछ। कुनै ट्र्याकिङ वा विज्ञापन कुकीहरू प्रयोग गरिँदैन।",

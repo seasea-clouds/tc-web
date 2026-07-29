@@ -2997,5 +2997,14 @@
   "tmSquatting_stats": "15 تا 25 درصد از برندهای خارجی چمباتمه زدن را در چین تجربه می کنند",
   "tmTotalCostRange": "600-2000 دلار در کلاس",
   "tmWatchService_cost": "200-500 دلار در ماه بسته به تعداد کلاس ها",
-  "varies_label": "متفاوت است"
+  "varies_label": "متفاوت است",
+  "Blog": {
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
+  }
 }

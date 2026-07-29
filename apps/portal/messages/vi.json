@@ -2997,5 +2997,14 @@
   "tmSquatting_stats": "15-25% thương hiệu nước ngoài gặp khó khăn ở Trung Quốc",
   "tmTotalCostRange": "$600-2,000/lớp",
   "tmWatchService_cost": "$200-500/tháng tùy theo số lớp",
-  "varies_label": "Khác nhau"
+  "varies_label": "Khác nhau",
+  "Blog": {
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
+  }
 }

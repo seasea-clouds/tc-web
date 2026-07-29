@@ -53,7 +53,14 @@
     "shareFacebook": "Share on Facebook",
     "shareTelegram": "Share on Telegram",
     "shareEmail": "Share via Email",
-    "copyLink": "Copy link"
+    "copyLink": "Copy link",
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
   },
   "Cookie": {
     "message": "This site uses only essential authentication cookies. No tracking or advertising cookies are used.",

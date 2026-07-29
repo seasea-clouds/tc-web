@@ -53,7 +53,14 @@
     "contactMessage": "Mesaj (istəyə görə)",
     "contactTitle": "Pulsuz Uyğunluğun Qiymətləndirilməsi",
     "contactEmailPlaceholder": "you@company.com",
-    "shareWhatsapp": "WhatsApp-da paylaşın"
+    "shareWhatsapp": "WhatsApp-da paylaşın",
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
   },
   "Cookie": {
     "message": "Bu sayt yalnız əsas autentifikasiya kukilərindən istifadə edir. Heç bir izləmə və ya reklam kukilərindən istifadə edilmir.",

@@ -2997,5 +2997,14 @@
   "tmSquatting_stats": "15-25% stranih brendova ima iskustvo skvotiranja u Kini",
   "tmTotalCostRange": "600-2000 dolara po klasi",
   "tmWatchService_cost": "$200-500/mjesečno ovisno o broju sati",
-  "varies_label": "Varira"
+  "varies_label": "Varira",
+  "Blog": {
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
+  }
 }

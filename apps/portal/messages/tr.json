@@ -2997,5 +2997,14 @@
   "tmSquatting_stats": "Yabancı markaların yüzde 15-25'i Çin'de işgal yaşıyor",
   "tmTotalCostRange": "$600-2,000/sınıf",
   "tmWatchService_cost": "Ders sayısına bağlı olarak ayda 200-500$",
-  "varies_label": "Değişir"
+  "varies_label": "Değişir",
+  "Blog": {
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
+  }
 }

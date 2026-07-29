@@ -53,7 +53,14 @@
     "contactMessage": "संदेश (वैकल्पिक)",
     "contactTitle": "निःशुल्क अनुपालन मूल्यांकन",
     "contactEmailPlaceholder": "you@company.com",
-    "shareWhatsapp": "व्हाट्सएप पर शेयर करें"
+    "shareWhatsapp": "व्हाट्सएप पर शेयर करें",
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
   },
   "Cookie": {
     "message": "यह साइट केवल आवश्यक प्रमाणीकरण कुकीज़ का उपयोग करती है। किसी भी ट्रैकिंग या विज्ञापन कुकीज़ का उपयोग नहीं किया जाता है।",

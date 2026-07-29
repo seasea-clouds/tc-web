@@ -2997,5 +2997,14 @@
   "tmSquatting_stats": "15-25% van buitelandse handelsmerke ervaar hurk in China",
   "tmTotalCostRange": "$600-2 000/klas",
   "tmWatchService_cost": "$200-500/maand afhangende van die aantal klasse",
-  "varies_label": "Wissel"
+  "varies_label": "Wissel",
+  "Blog": {
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
+  }
 }

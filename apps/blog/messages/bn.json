@@ -53,7 +53,14 @@
     "contactMessage": "|\nবার্তা (ঐচ্ছিক)",
     "contactTitle": "|\nবিনামূল্যে সম্মতি মূল্যায়ন",
     "contactEmailPlaceholder": "you@company.com",
-    "shareWhatsapp": "|\nহোয়াটসঅ্যাপে শেয়ার করুন"
+    "shareWhatsapp": "|\nহোয়াটসঅ্যাপে শেয়ার করুন",
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
   },
   "Cookie": {
     "message": "এই সাইটটি শুধুমাত্র প্রয়োজনীয় প্রমাণীকরণ কুকি ব্যবহার করে। কোন ট্র্যাকিং বা বিজ্ঞাপন কুকি ব্যবহার করা হয় না.",

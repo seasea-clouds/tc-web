@@ -2997,5 +2997,14 @@
   "tmSquatting_stats": "15-25% বিদেশী ব্র্যান্ড চীনে বসে থাকার অভিজ্ঞতা লাভ করে",
   "tmTotalCostRange": "$600-2,000/শ্রেণী",
   "tmWatchService_cost": "ক্লাসের সংখ্যার উপর নির্ভর করে $200-500/মাস",
-  "varies_label": "পরিবর্তিত হয়"
+  "varies_label": "পরিবর্তিত হয়",
+  "Blog": {
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
+  }
 }

@@ -2997,5 +2997,14 @@
   "tmSquatting_stats": "Արտասահմանյան բրենդների 15-25%-ը Չինաստանում կուչ է գալիս",
   "tmTotalCostRange": "$600-2000/դաս",
   "tmWatchService_cost": "$200-500/ամսական՝ կախված դասերի քանակից",
-  "varies_label": "Տատանվում է"
+  "varies_label": "Տատանվում է",
+  "Blog": {
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
+  }
 }

@@ -2997,5 +2997,14 @@
   "tmSquatting_stats": "외국 브랜드의 15~25%가 중국에서 스쿼트를 경험했습니다.",
   "tmTotalCostRange": "$600-2,000/강좌",
   "tmWatchService_cost": "수업 수에 따라 월 $200-500",
-  "varies_label": "다양함"
+  "varies_label": "다양함",
+  "Blog": {
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
+  }
 }

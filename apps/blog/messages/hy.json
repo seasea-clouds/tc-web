@@ -53,7 +53,14 @@
     "contactMessage": "Հաղորդագրություն (ըստ ցանկության)",
     "contactTitle": "Անվճար Համապատասխանության Գնահատում",
     "contactEmailPlaceholder": "you@company.com",
-    "shareWhatsapp": "Կիսվեք WhatsApp-ով"
+    "shareWhatsapp": "Կիսվեք WhatsApp-ով",
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
   },
   "Cookie": {
     "message": "Այս կայքը օգտագործում է միայն վավերացման հիմնական թխուկներ: Հետևելու կամ գովազդային թխուկներ չեն օգտագործվում:",

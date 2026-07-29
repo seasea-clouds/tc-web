@@ -2997,5 +2997,14 @@
   "tmSquatting_stats": "15-25% غیر ملکی برانڈز چین میں بیٹھنے کا تجربہ کرتے ہیں۔",
   "tmTotalCostRange": "$600-2,000/کلاس",
   "tmWatchService_cost": "کلاسوں کی تعداد کے لحاظ سے $200-500/ماہ",
-  "varies_label": "مختلف ہوتی ہے۔"
+  "varies_label": "مختلف ہوتی ہے۔",
+  "Blog": {
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
+  }
 }

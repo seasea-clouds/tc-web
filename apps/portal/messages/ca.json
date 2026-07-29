@@ -2997,5 +2997,14 @@
   "tmSquatting_stats": "El 15-25% de les marques estrangeres experimenten ocupacions a la Xina",
   "tmTotalCostRange": "$600-2.000/classe",
   "tmWatchService_cost": "200-500 $/mes segons el nombre de classes",
-  "varies_label": "Varia"
+  "varies_label": "Varia",
+  "Blog": {
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
+  }
 }

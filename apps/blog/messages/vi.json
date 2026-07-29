@@ -53,7 +53,14 @@
     "contactMessage": "Tin nhắn (tùy chọn)",
     "contactTitle": "Đánh giá tuân thủ miễn phí",
     "contactEmailPlaceholder": "you@company.com",
-    "shareWhatsapp": "Chia sẻ trên WhatsApp"
+    "shareWhatsapp": "Chia sẻ trên WhatsApp",
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
   },
   "Cookie": {
     "message": "Trang web này chỉ sử dụng cookie xác thực cần thiết. Không sử dụng cookie theo dõi hoặc quảng cáo.",

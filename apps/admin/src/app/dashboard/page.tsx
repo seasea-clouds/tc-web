@@ -7,6 +7,7 @@ import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
   PieChart, Pie, Cell, LineChart, Line, Legend,
 } from "recharts";
+import { BLOG_SEGMENT_LABELS } from "@/lib/segment-mapping";
 
 interface DashboardStats {
   today: { pv: number; uv: number; reports: number; newUsers: number };
@@ -95,6 +96,50 @@ const COUNTRY_NAMES: Record<string, string> = {
   ZA: "country.ZA", ZM: "country.ZM", ZW: "country.ZW",
 };
 
+/** Language codes → Chinese name mapping */
+const LANG_NAMES_ZH: Record<string, string> = {
+  en: '英语', zh: '简体中文', es: '西班牙语', fr: '法语', de: '德语',
+  ja: '日语', pt: '葡萄牙语', ru: '俄语', ar: '阿拉伯语', ko: '韩语',
+  it: '意大利语', nl: '荷兰语', tr: '土耳其语', vi: '越南语', id: '印尼语',
+  th: '泰语', hi: '印地语', pl: '波兰语', sv: '瑞典语', el: '希腊语',
+  cs: '捷克语', ro: '罗马尼亚语', hu: '匈牙利语', fi: '芬兰语', da: '丹麦语',
+  no: '挪威语', uk: '乌克兰语', bg: '保加利亚语', hr: '克罗地亚语', sr: '塞尔维亚语',
+  sk: '斯洛伐克语', sl: '斯洛文尼亚语', ms: '马来语', ka: '格鲁吉亚语',
+  he: '希伯来语', sw: '斯瓦希里语', bn: '孟加拉语', ca: '加泰罗尼亚语',
+  fa: '波斯语', ur: '乌尔都语', ta: '泰米尔语', af: '南非荷兰语',
+  sq: '阿尔巴尼亚语', az: '阿塞拜疆语', hy: '亚美尼亚语', be: '白俄罗斯语',
+  ne: '尼泊尔语', si: '僧伽罗语',
+};
+
+/** Supported 2-letter locale set (48 langs) */
+const SUPPORTED_LOCALES = new Set(Object.keys(LANG_NAMES_ZH));
+
+/**
+ * Extract language distribution from page path data.
+ * Parses locale prefix from first URL segment (e.g., /en/... → en).
+ */
+function extractLangData(
+  pagePaths: { path: string; count: number }[] | undefined,
+  pageData: { path: string; count: number }[] | undefined,
+): { lang: string; count: number }[] {
+  const pages = pagePaths && pagePaths.length > 0 ? pagePaths : (pageData || []);
+  if (pages.length === 0) return [];
+
+  const langMap = new Map<string, number>();
+
+  for (const p of pages) {
+    const segs = p.path.replace(/\/+$/, '').split('/').filter(Boolean);
+    if (segs.length > 0 && SUPPORTED_LOCALES.has(segs[0])) {
+      const lang = segs[0];
+      langMap.set(lang, (langMap.get(lang) || 0) + p.count);
+    }
+  }
+
+  return Array.from(langMap.entries())
+    .map(([lang, count]) => ({ lang, count }))
+    .sort((a, b) => b.count - a.count);
+}
+
 export default function DashboardPage() {
   const [stats, setStats] = useState<DashboardStats | null>(null);
   const [analytics, setAnalytics] = useState<AnalyticsData | null>(null);
@@ -154,7 +199,7 @@ function EmptyState({ message, compact = false }: { message: string; compact?: b
 
 // ── Page path to breadcrumb ──
 // Known segment names for breadcrumb display (en locale common segments)
-const SEGMENT_LABELS: Record<string, string> = {
+const STATIC_SEGMENT_LABELS: Record<string, string> = {
   // ── Site (site) ──
   'c': 'segment.c',
   'services': 'segment.services',
@@ -201,31 +246,32 @@ const SEGMENT_LABELS: Record<string, string> = {
   'payments': 'segment.payments',
   // ── Root / Locale-only ──
   '__home__': 'segment.home',
-  // ── Blog article slugs ──
-  'gacc-registration-guide': 'segment.gaccGuide',
-  'ccc-certification-guide': 'segment.cccGuide',
-  'china-import-requirements': 'segment.chinaImport',
   // ── Site pages ──
   'privacy': 'segment.privacy',
   'terms': 'segment.terms',
   // ── Industry pages ──
   'skincare-cosmetics': 'segment.skincare',
-  // ── Blog articles ──
-  'cosmetics-nmpa-filing': 'segment.nmpaFiling',
-  'china-label-compliance': 'segment.chinaLabelCompliance',
-  // ── Industry pages ──
   'medical-devices': 'segment.medicalDevices',
 };
 
 /** Parse a URL path into a breadcrumb-like segment array (locale-aware) */
 function pathToBreadcrumb(path: string): string {
   const segs = path.replace(/\/+$/, '').split('/').filter(Boolean);
-  if (segs.length === 0) return t(SEGMENT_LABELS['__home__']);
+  if (segs.length === 0) return t(STATIC_SEGMENT_LABELS['__home__']);
   // Skip locale prefix (en, zh, etc)
   const skipLocale = segs.length > 0 && /^[a-z]{2}$/.test(segs[0]);
   const bc = skipLocale ? segs.slice(1) : segs;
-  if (bc.length === 0) return t(SEGMENT_LABELS['__home__']);
-  return bc.map(s => t(SEGMENT_LABELS[s]) || s.charAt(0).toUpperCase() + s.slice(1).replace(/[-_]/g, ' ')).join(' › ');
+  if (bc.length === 0) return t(STATIC_SEGMENT_LABELS['__home__']);
+  return bc.map(s => {
+    // 1. Static segments (site/portal/admin routes) — use translation keys
+    const key = STATIC_SEGMENT_LABELS[s];
+    if (key) return t(key);
+    // 2. Blog article slugs — use auto-generated Chinese title
+    const blogLabel = BLOG_SEGMENT_LABELS[s];
+    if (blogLabel) return blogLabel;
+    // 3. Fallback: English segment name
+    return s.charAt(0).toUpperCase() + s.slice(1).replace(/[-_]/g, ' ');
+  }).join(' › ');
 }
 
   return (
@@ -589,6 +635,35 @@ function pathToBreadcrumb(path: string): string {
               ) : (
                 <EmptyState message={t("chart.waitingData")} compact />
               )}
+            </div>
+
+            {/* Language distribution */}
+            <div className="card">
+              <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "1rem" }}>{t("chart.langDistribution")}</h3>
+              {(() => {
+                const langData = extractLangData(_a.pagePaths, _a.pageData);
+                return langData.length > 0 ? (
+                  <ResponsiveContainer width="100%" height={280}>
+                    <PieChart>
+                      <Pie
+                        data={langData}
+                        dataKey="count"
+                        nameKey="lang"
+                        cx="50%" cy="50%" outerRadius={90}
+                        label={({ lang, count }: any) => `${LANG_NAMES_ZH[lang] || lang} (${count})`}
+                        fontSize={11}
+                      >
+                        {langData.map((_: any, index: number) => (
+                          <Cell key={`lang-${index}`} fill={COLORS[index % COLORS.length]} />
+                        ))}
+                      </Pie>
+                      <Tooltip />
+                    </PieChart>
+                  </ResponsiveContainer>
+                ) : (
+                  <EmptyState message={t("chart.waitingData")} compact />
+                );
+              })()}
             </div>
           </div>
 

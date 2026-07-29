@@ -53,7 +53,14 @@
     "contactMessage": "Ujumbe (si lazima)",
     "contactTitle": "Tathmini ya Uzingatiaji Bila Malipo",
     "contactEmailPlaceholder": "you@company.com",
-    "shareWhatsapp": "Shiriki kwenye WhatsApp"
+    "shareWhatsapp": "Shiriki kwenye WhatsApp",
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
   },
   "Cookie": {
     "message": "Tovuti hii hutumia vidakuzi muhimu vya uthibitishaji pekee. Hakuna vidakuzi vya ufuatiliaji au utangazaji vinatumika.",

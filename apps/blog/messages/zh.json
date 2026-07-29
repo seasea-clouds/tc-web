@@ -53,7 +53,14 @@
     "shareFacebook": "分享到 Facebook",
     "shareTelegram": "分享到 Telegram",
     "shareEmail": "通过邮件分享",
-    "copyLink": "复制链接"
+    "copyLink": "复制链接",
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
   },
   "Cookie": {
     "message": "本网站仅使用必要的身份验证Cookie。不使用跟踪或广告Cookie。",

@@ -2997,5 +2997,14 @@
   "tmSquatting_stats": "15-25% विदेशी ब्रान्डहरूले चीनमा बस्ने अनुभव गर्छन्",
   "tmTotalCostRange": "$600-2,000/वर्ग",
   "tmWatchService_cost": "कक्षाहरूको संख्यामा निर्भर गर्दै $200-500/महिना",
-  "varies_label": "फरक हुन्छ"
+  "varies_label": "फरक हुन्छ",
+  "Blog": {
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
+  }
 }

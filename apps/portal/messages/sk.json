@@ -2997,5 +2997,14 @@
   "tmSquatting_stats": "15-25% zahraničných značiek má skúsenosti s squattingom v Číne",
   "tmTotalCostRange": "600 - 2 000 $/trieda",
   "tmWatchService_cost": "200-500 $/mesiac v závislosti od počtu tried",
-  "varies_label": "Líši sa"
+  "varies_label": "Líši sa",
+  "Blog": {
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
+  }
 }

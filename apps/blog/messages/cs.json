@@ -53,7 +53,14 @@
     "contactMessage": "Zpráva (volitelné)",
     "contactTitle": "Bezplatné posouzení souladu",
     "contactEmailPlaceholder": "you@company.com",
-    "shareWhatsapp": "Sdílejte na WhatsApp"
+    "shareWhatsapp": "Sdílejte na WhatsApp",
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
   },
   "Cookie": {
     "message": "Tento web používá pouze nezbytné ověřovací soubory cookie. Nejsou používány žádné sledovací ani reklamní soubory cookie.",

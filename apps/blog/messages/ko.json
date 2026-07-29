@@ -53,7 +53,14 @@
     "contactMessage": "메시지(선택사항)",
     "contactTitle": "무료 규정 준수 평가",
     "contactEmailPlaceholder": "you@company.com",
-    "shareWhatsapp": "WhatsApp에 공유"
+    "shareWhatsapp": "WhatsApp에 공유",
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
   },
   "Cookie": {
     "message": "이 사이트는 필수 인증 쿠키만을 사용합니다. 추적 또는 광고 쿠키는 사용되지 않습니다.",

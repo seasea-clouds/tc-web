@@ -2997,5 +2997,14 @@
   "tmSquatting_stats": "15-25% வெளிநாட்டு பிராண்டுகள் சீனாவில் குந்துவதை அனுபவிக்கின்றன",
   "tmTotalCostRange": "$600-2,000/வகுப்பு",
   "tmWatchService_cost": "வகுப்புகளின் எண்ணிக்கையைப் பொறுத்து $200-500/மாதம்",
-  "varies_label": "மாறுபடுகிறது"
+  "varies_label": "மாறுபடுகிறது",
+  "Blog": {
+    "cat_Product_Certification": "Product Certification",
+    "cat_Compliance_Guide": "Compliance Guide",
+    "cat_Label_Compliance": "Label Compliance",
+    "cat_Brand_Protection": "Brand Protection",
+    "cat_Cosmetics": "Cosmetics",
+    "cat_E_commerce": "E-commerce",
+    "cat_Food_Beverage": "Food & Beverage"
+  }
 }

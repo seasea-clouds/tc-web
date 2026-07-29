@@ -26,7 +26,8 @@
     "checkNmpa": "เครื่องสำอาง",
     "checkTm": "เครื่องหมายการค้า",
     "email": "อีเมล",
-    "freeCheckHeader": "เครื่องมือฟรี"
+    "freeCheckHeader": "เครื่องมือฟรี",
+    "getQuote": "รับใบเสนอราคา"
   },
   "Search": {
     "title": "ค้นหา",

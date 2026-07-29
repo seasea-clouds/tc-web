@@ -2999,12 +2999,12 @@
   "tmWatchService_cost": "வகுப்புகளின் எண்ணிக்கையைப் பொறுத்து $200-500/மாதம்",
   "varies_label": "மாறுபடுகிறது",
   "Blog": {
-    "cat_Product_Certification": "Product Certification",
-    "cat_Compliance_Guide": "Compliance Guide",
-    "cat_Label_Compliance": "Label Compliance",
-    "cat_Brand_Protection": "Brand Protection",
-    "cat_Cosmetics": "Cosmetics",
-    "cat_E_commerce": "E-commerce",
-    "cat_Food_Beverage": "Food & Beverage"
+    "cat_Product_Certification": "தயாரிப்பு சான்றிதழ்",
+    "cat_Compliance_Guide": "இணக்க வழிகாட்டி",
+    "cat_Label_Compliance": "லேபிள் இணக்கம்",
+    "cat_Brand_Protection": "பிராண்ட் பாதுகாப்பு",
+    "cat_Cosmetics": "அழகுசாதனப் பொருட்கள்",
+    "cat_E_commerce": "மின் வணிகம்",
+    "cat_Food_Beverage": "உணவு & பானம்"
   }
 }

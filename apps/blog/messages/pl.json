@@ -54,13 +54,13 @@
     "contactTitle": "Bezpłatna ocena zgodności",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Udostępnij na WhatsAppie",
-    "cat_Product_Certification": "Product Certification",
-    "cat_Compliance_Guide": "Compliance Guide",
-    "cat_Label_Compliance": "Label Compliance",
-    "cat_Brand_Protection": "Brand Protection",
-    "cat_Cosmetics": "Cosmetics",
-    "cat_E_commerce": "E-commerce",
-    "cat_Food_Beverage": "Food & Beverage"
+    "cat_Product_Certification": "Certyfikacja produktu",
+    "cat_Compliance_Guide": "Przewodnik dotyczący zgodności",
+    "cat_Label_Compliance": "Zgodność z etykietą",
+    "cat_Brand_Protection": "Ochrona marki",
+    "cat_Cosmetics": "Kosmetyki",
+    "cat_E_commerce": "Handel elektroniczny",
+    "cat_Food_Beverage": "Żywność i napoje"
   },
   "Cookie": {
     "message": "Ta witryna wykorzystuje wyłącznie niezbędne pliki cookie służące do uwierzytelniania. Nie są używane żadne śledzące ani reklamowe pliki cookie.",

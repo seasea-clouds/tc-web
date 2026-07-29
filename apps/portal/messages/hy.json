@@ -2999,12 +2999,12 @@
   "tmWatchService_cost": "$200-500/ամսական՝ կախված դասերի քանակից",
   "varies_label": "Տատանվում է",
   "Blog": {
-    "cat_Product_Certification": "Product Certification",
-    "cat_Compliance_Guide": "Compliance Guide",
-    "cat_Label_Compliance": "Label Compliance",
-    "cat_Brand_Protection": "Brand Protection",
-    "cat_Cosmetics": "Cosmetics",
-    "cat_E_commerce": "E-commerce",
-    "cat_Food_Beverage": "Food & Beverage"
+    "cat_Product_Certification": "Ապրանքի հավաստագրում",
+    "cat_Compliance_Guide": "Համապատասխանության ուղեցույց",
+    "cat_Label_Compliance": "Պիտակի համապատասխանություն",
+    "cat_Brand_Protection": "Ապրանքանիշի պաշտպանություն",
+    "cat_Cosmetics": "Կոսմետիկա",
+    "cat_E_commerce": "Էլեկտրոնային առևտուր",
+    "cat_Food_Beverage": "Սնունդ և ըմպելիք"
   }
 }

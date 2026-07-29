@@ -54,13 +54,13 @@
     "contactTitle": "Ilmainen vaatimustenmukaisuuden arviointi",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Jaa WhatsAppissa",
-    "cat_Product_Certification": "Product Certification",
-    "cat_Compliance_Guide": "Compliance Guide",
-    "cat_Label_Compliance": "Label Compliance",
-    "cat_Brand_Protection": "Brand Protection",
-    "cat_Cosmetics": "Cosmetics",
-    "cat_E_commerce": "E-commerce",
-    "cat_Food_Beverage": "Food & Beverage"
+    "cat_Product_Certification": "Tuotteen sertifiointi",
+    "cat_Compliance_Guide": "Vaatimustenmukaisuusopas",
+    "cat_Label_Compliance": "Label-yhteensopivuus",
+    "cat_Brand_Protection": "Brändin suojaus",
+    "cat_Cosmetics": "Kosmetiikka",
+    "cat_E_commerce": "Sähköinen kaupankäynti",
+    "cat_Food_Beverage": "Ruoka ja juoma"
   },
   "Cookie": {
     "message": "Tämä sivusto käyttää vain välttämättömiä todennusevästeitä. Mitään seuranta- tai mainosevästeitä ei käytetä.",

@@ -54,13 +54,13 @@
     "contactTitle": "Besplatna procjena usklađenosti",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Podijelite na WhatsAppu",
-    "cat_Product_Certification": "Product Certification",
-    "cat_Compliance_Guide": "Compliance Guide",
-    "cat_Label_Compliance": "Label Compliance",
-    "cat_Brand_Protection": "Brand Protection",
-    "cat_Cosmetics": "Cosmetics",
-    "cat_E_commerce": "E-commerce",
-    "cat_Food_Beverage": "Food & Beverage"
+    "cat_Product_Certification": "Certifikacija proizvoda",
+    "cat_Compliance_Guide": "Vodič za sukladnost",
+    "cat_Label_Compliance": "Sukladnost naljepnica",
+    "cat_Brand_Protection": "Zaštita marke",
+    "cat_Cosmetics": "Kozmetika",
+    "cat_E_commerce": "E-trgovina",
+    "cat_Food_Beverage": "Hrana i piće"
   },
   "Cookie": {
     "message": "Ova stranica koristi samo bitne kolačiće za provjeru autentičnosti. Ne koriste se kolačići za praćenje ili oglašavanje.",

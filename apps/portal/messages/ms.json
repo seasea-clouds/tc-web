@@ -2999,12 +2999,12 @@
   "tmWatchService_cost": "$200-500/bulan bergantung kepada bilangan kelas",
   "varies_label": "Berbeza-beza",
   "Blog": {
-    "cat_Product_Certification": "Product Certification",
-    "cat_Compliance_Guide": "Compliance Guide",
-    "cat_Label_Compliance": "Label Compliance",
-    "cat_Brand_Protection": "Brand Protection",
-    "cat_Cosmetics": "Cosmetics",
-    "cat_E_commerce": "E-commerce",
-    "cat_Food_Beverage": "Food & Beverage"
+    "cat_Product_Certification": "Pensijilan Produk",
+    "cat_Compliance_Guide": "Panduan Pematuhan",
+    "cat_Label_Compliance": "Pematuhan Label",
+    "cat_Brand_Protection": "Perlindungan Jenama",
+    "cat_Cosmetics": "Kosmetik",
+    "cat_E_commerce": "E-dagang",
+    "cat_Food_Beverage": "Makanan & Minuman"
   }
 }

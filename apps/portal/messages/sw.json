@@ -2999,12 +2999,12 @@
   "tmWatchService_cost": "$200-500/mwezi kulingana na idadi ya madarasa",
   "varies_label": "Inatofautiana",
   "Blog": {
-    "cat_Product_Certification": "Product Certification",
-    "cat_Compliance_Guide": "Compliance Guide",
-    "cat_Label_Compliance": "Label Compliance",
-    "cat_Brand_Protection": "Brand Protection",
-    "cat_Cosmetics": "Cosmetics",
-    "cat_E_commerce": "E-commerce",
-    "cat_Food_Beverage": "Food & Beverage"
+    "cat_Product_Certification": "Uthibitisho wa Bidhaa",
+    "cat_Compliance_Guide": "Mwongozo wa Kuzingatia",
+    "cat_Label_Compliance": "Kuzingatia Lebo",
+    "cat_Brand_Protection": "Ulinzi wa Biashara",
+    "cat_Cosmetics": "Vipodozi",
+    "cat_E_commerce": "Biashara ya kielektroniki",
+    "cat_Food_Beverage": "Chakula na Vinywaji"
   }
 }

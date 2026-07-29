@@ -54,13 +54,13 @@
     "contactTitle": "הערכת תאימות בחינם",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "שתפו בוואטסאפ",
-    "cat_Product_Certification": "Product Certification",
-    "cat_Compliance_Guide": "Compliance Guide",
-    "cat_Label_Compliance": "Label Compliance",
-    "cat_Brand_Protection": "Brand Protection",
-    "cat_Cosmetics": "Cosmetics",
-    "cat_E_commerce": "E-commerce",
-    "cat_Food_Beverage": "Food & Beverage"
+    "cat_Product_Certification": "אישור מוצר",
+    "cat_Compliance_Guide": "מדריך ציות",
+    "cat_Label_Compliance": "תאימות לתווית",
+    "cat_Brand_Protection": "הגנת מותג",
+    "cat_Cosmetics": "קוֹסמֵטִיקָה",
+    "cat_E_commerce": "מסחר אלקטרוני",
+    "cat_Food_Beverage": "מזון ומשקאות"
   },
   "Cookie": {
     "message": "אתר זה משתמש רק בעוגיות אימות חיוניות. לא נעשה שימוש בעוגיות מעקב או פרסום.",

@@ -54,13 +54,13 @@
     "contactTitle": "Bezplatné posúdenie súladu",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Zdieľať na WhatsApp",
-    "cat_Product_Certification": "Product Certification",
-    "cat_Compliance_Guide": "Compliance Guide",
-    "cat_Label_Compliance": "Label Compliance",
-    "cat_Brand_Protection": "Brand Protection",
-    "cat_Cosmetics": "Cosmetics",
-    "cat_E_commerce": "E-commerce",
-    "cat_Food_Beverage": "Food & Beverage"
+    "cat_Product_Certification": "Certifikácia produktu",
+    "cat_Compliance_Guide": "Sprievodca dodržiavaním pravidiel",
+    "cat_Label_Compliance": "Súlad štítkov",
+    "cat_Brand_Protection": "Ochrana značky",
+    "cat_Cosmetics": "Kozmetika",
+    "cat_E_commerce": "Elektronický obchod",
+    "cat_Food_Beverage": "Jedlo a nápoje"
   },
   "Cookie": {
     "message": "Táto stránka používa iba nevyhnutné overovacie súbory cookie. Nepoužívajú sa žiadne sledovacie ani reklamné súbory cookie.",

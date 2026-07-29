@@ -2999,12 +2999,12 @@
   "tmWatchService_cost": "$200-500/mes dependiendo del número de clases",
   "varies_label": "Varía",
   "Blog": {
-    "cat_Product_Certification": "Product Certification",
-    "cat_Compliance_Guide": "Compliance Guide",
-    "cat_Label_Compliance": "Label Compliance",
-    "cat_Brand_Protection": "Brand Protection",
-    "cat_Cosmetics": "Cosmetics",
-    "cat_E_commerce": "E-commerce",
-    "cat_Food_Beverage": "Food & Beverage"
+    "cat_Product_Certification": "Certificación de producto",
+    "cat_Compliance_Guide": "Guía de cumplimiento",
+    "cat_Label_Compliance": "Cumplimiento de etiquetas",
+    "cat_Brand_Protection": "Protección de marca",
+    "cat_Cosmetics": "Productos cosméticos",
+    "cat_E_commerce": "Comercio electrónico",
+    "cat_Food_Beverage": "Alimentos y bebidas"
   }
 }

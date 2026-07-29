@@ -54,13 +54,13 @@
     "contactTitle": "Vlerësimi Falas i Përputhshmërisë",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Shpërndaje në WhatsApp",
-    "cat_Product_Certification": "Product Certification",
-    "cat_Compliance_Guide": "Compliance Guide",
-    "cat_Label_Compliance": "Label Compliance",
-    "cat_Brand_Protection": "Brand Protection",
-    "cat_Cosmetics": "Cosmetics",
+    "cat_Product_Certification": "Certifikimi i produktit",
+    "cat_Compliance_Guide": "Udhëzues përputhshmërie",
+    "cat_Label_Compliance": "Pajtueshmëria e etiketës",
+    "cat_Brand_Protection": "Mbrojtja e markës",
+    "cat_Cosmetics": "Kozmetikë",
     "cat_E_commerce": "E-commerce",
-    "cat_Food_Beverage": "Food & Beverage"
+    "cat_Food_Beverage": "Ushqim & Pije"
   },
   "Cookie": {
     "message": "Ky sajt përdor vetëm cookie thelbësore të vërtetimit. Nuk përdoren skedarë gjurmimi ose reklamimi.",

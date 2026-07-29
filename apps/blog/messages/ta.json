@@ -54,13 +54,13 @@
     "contactTitle": "இலவச இணக்க மதிப்பீடு",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "வாட்ஸ்அப்பில் பகிரவும்",
-    "cat_Product_Certification": "Product Certification",
-    "cat_Compliance_Guide": "Compliance Guide",
-    "cat_Label_Compliance": "Label Compliance",
-    "cat_Brand_Protection": "Brand Protection",
-    "cat_Cosmetics": "Cosmetics",
-    "cat_E_commerce": "E-commerce",
-    "cat_Food_Beverage": "Food & Beverage"
+    "cat_Product_Certification": "தயாரிப்பு சான்றிதழ்",
+    "cat_Compliance_Guide": "இணக்க வழிகாட்டி",
+    "cat_Label_Compliance": "லேபிள் இணக்கம்",
+    "cat_Brand_Protection": "பிராண்ட் பாதுகாப்பு",
+    "cat_Cosmetics": "அழகுசாதனப் பொருட்கள்",
+    "cat_E_commerce": "மின் வணிகம்",
+    "cat_Food_Beverage": "உணவு & பானம்"
   },
   "Cookie": {
     "message": "இந்தத் தளம் அத்தியாவசிய அங்கீகார குக்கீகளை மட்டுமே பயன்படுத்துகிறது. கண்காணிப்பு அல்லது விளம்பர குக்கீகள் பயன்படுத்தப்படவில்லை.",

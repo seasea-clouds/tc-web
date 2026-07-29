@@ -54,13 +54,13 @@
     "contactTitle": "Penilaian Kepatuhan Gratis",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Bagikan di WhatsApp",
-    "cat_Product_Certification": "Product Certification",
-    "cat_Compliance_Guide": "Compliance Guide",
-    "cat_Label_Compliance": "Label Compliance",
-    "cat_Brand_Protection": "Brand Protection",
-    "cat_Cosmetics": "Cosmetics",
-    "cat_E_commerce": "E-commerce",
-    "cat_Food_Beverage": "Food & Beverage"
+    "cat_Product_Certification": "Sertifikasi Produk",
+    "cat_Compliance_Guide": "Panduan Kepatuhan",
+    "cat_Label_Compliance": "Kepatuhan Label",
+    "cat_Brand_Protection": "Perlindungan Merek",
+    "cat_Cosmetics": "Kosmetik",
+    "cat_E_commerce": "perdagangan elektronik",
+    "cat_Food_Beverage": "Makanan & Minuman"
   },
   "Cookie": {
     "message": "Situs ini hanya menggunakan cookie otentikasi penting. Tidak ada cookie pelacakan atau iklan yang digunakan.",

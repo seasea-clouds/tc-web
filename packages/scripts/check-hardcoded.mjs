@@ -732,7 +732,7 @@ const LEGIT_ENGLISH = new Set([
   // ─── Admin-specific: import names in .tsx without i18n ──────────
   'BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer',
   'PieChart, Pie, Cell, LineChart, Line, Legend',
-  'LayoutDashboard, Users, Repeat, FileText, ClipboardList, CreditCard, LogOut, Menu, X, ChevronLeft',
+  'LayoutDashboard, Users, Repeat, FileText, ClipboardList, CreditCard, LogOut, Menu, X, ChevronLeft, ChevronRight, Lock',
   'SinoTrade Compliance Admin',
   // ─── Preview mock data: regulation effective dates in page.tsx ──
   // These are sample data in preview page, not rendered component text

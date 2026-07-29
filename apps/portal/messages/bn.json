@@ -2999,12 +2999,12 @@
   "tmWatchService_cost": "ক্লাসের সংখ্যার উপর নির্ভর করে $200-500/মাস",
   "varies_label": "পরিবর্তিত হয়",
   "Blog": {
-    "cat_Product_Certification": "Product Certification",
-    "cat_Compliance_Guide": "Compliance Guide",
-    "cat_Label_Compliance": "Label Compliance",
-    "cat_Brand_Protection": "Brand Protection",
-    "cat_Cosmetics": "Cosmetics",
-    "cat_E_commerce": "E-commerce",
-    "cat_Food_Beverage": "Food & Beverage"
+    "cat_Product_Certification": "পণ্য সার্টিফিকেশন",
+    "cat_Compliance_Guide": "কমপ্লায়েন্স গাইড",
+    "cat_Label_Compliance": "লেবেল সম্মতি",
+    "cat_Brand_Protection": "ব্র্যান্ড সুরক্ষা",
+    "cat_Cosmetics": "প্রসাধনী",
+    "cat_E_commerce": "ই-কমার্স",
+    "cat_Food_Beverage": "খাদ্য ও পানীয়"
   }
 }

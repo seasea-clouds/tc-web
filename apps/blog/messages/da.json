@@ -54,13 +54,13 @@
     "contactTitle": "Gratis overensstemmelsesvurdering",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Del på WhatsApp",
-    "cat_Product_Certification": "Product Certification",
-    "cat_Compliance_Guide": "Compliance Guide",
-    "cat_Label_Compliance": "Label Compliance",
-    "cat_Brand_Protection": "Brand Protection",
-    "cat_Cosmetics": "Cosmetics",
-    "cat_E_commerce": "E-commerce",
-    "cat_Food_Beverage": "Food & Beverage"
+    "cat_Product_Certification": "Produkt certificering",
+    "cat_Compliance_Guide": "Overholdelsesvejledning",
+    "cat_Label_Compliance": "Overholdelse af etiket",
+    "cat_Brand_Protection": "Brand beskyttelse",
+    "cat_Cosmetics": "Kosmetik",
+    "cat_E_commerce": "E-handel",
+    "cat_Food_Beverage": "Mad & drikke"
   },
   "Cookie": {
     "message": "Dette websted bruger kun vigtige autentificeringscookies. Der bruges ingen sporings- eller reklamecookies.",

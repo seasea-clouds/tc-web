@@ -2999,12 +2999,12 @@
   "tmWatchService_cost": "$ 200-500 al mese a seconda del numero di lezioni",
   "varies_label": "Varia",
   "Blog": {
-    "cat_Product_Certification": "Product Certification",
-    "cat_Compliance_Guide": "Compliance Guide",
-    "cat_Label_Compliance": "Label Compliance",
-    "cat_Brand_Protection": "Brand Protection",
-    "cat_Cosmetics": "Cosmetics",
-    "cat_E_commerce": "E-commerce",
-    "cat_Food_Beverage": "Food & Beverage"
+    "cat_Product_Certification": "Certificazione del prodotto",
+    "cat_Compliance_Guide": "Guida alla conformità",
+    "cat_Label_Compliance": "Conformità dell'etichetta",
+    "cat_Brand_Protection": "Protezione del marchio",
+    "cat_Cosmetics": "Cosmetici",
+    "cat_E_commerce": "Commercio elettronico",
+    "cat_Food_Beverage": "Cibo e bevande"
   }
 }

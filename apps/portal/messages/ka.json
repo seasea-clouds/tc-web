@@ -2999,12 +2999,12 @@
   "tmWatchService_cost": "200-500$/თვეში კლასების რაოდენობის მიხედვით",
   "varies_label": "ცვალებადია",
   "Blog": {
-    "cat_Product_Certification": "Product Certification",
-    "cat_Compliance_Guide": "Compliance Guide",
-    "cat_Label_Compliance": "Label Compliance",
-    "cat_Brand_Protection": "Brand Protection",
-    "cat_Cosmetics": "Cosmetics",
-    "cat_E_commerce": "E-commerce",
-    "cat_Food_Beverage": "Food & Beverage"
+    "cat_Product_Certification": "პროდუქტის სერტიფიცირება",
+    "cat_Compliance_Guide": "შესაბამისობის სახელმძღვანელო",
+    "cat_Label_Compliance": "ეტიკეტების შესაბამისობა",
+    "cat_Brand_Protection": "ბრენდის დაცვა",
+    "cat_Cosmetics": "კოსმეტიკა",
+    "cat_E_commerce": "ელექტრონული კომერცია",
+    "cat_Food_Beverage": "საკვები და სასმელი"
   }
 }

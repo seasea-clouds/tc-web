@@ -54,13 +54,13 @@
     "contactTitle": "Бясплатная ацэнка адпаведнасці",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Падзяліцеся ў WhatsApp",
-    "cat_Product_Certification": "Product Certification",
-    "cat_Compliance_Guide": "Compliance Guide",
-    "cat_Label_Compliance": "Label Compliance",
-    "cat_Brand_Protection": "Brand Protection",
-    "cat_Cosmetics": "Cosmetics",
-    "cat_E_commerce": "E-commerce",
-    "cat_Food_Beverage": "Food & Beverage"
+    "cat_Product_Certification": "Сертыфікацыя прадукцыі",
+    "cat_Compliance_Guide": "Кіраўніцтва па выкананні патрабаванняў",
+    "cat_Label_Compliance": "Адпаведнасць патрабаванням да этыкетак",
+    "cat_Brand_Protection": "Абарона брэнда",
+    "cat_Cosmetics": "Касметыка",
+    "cat_E_commerce": "Электронная камерцыя",
+    "cat_Food_Beverage": "Прадукты харчавання і Напоі"
   },
   "Cookie": {
     "message": "Гэты сайт выкарыстоўвае толькі неабходныя файлы cookie для аўтэнтыфікацыі. Файлы cookie для адсочвання і рэкламы не выкарыстоўваюцца.",

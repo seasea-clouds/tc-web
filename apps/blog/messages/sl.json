@@ -54,13 +54,13 @@
     "contactTitle": "Brezplačna ocena skladnosti",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Delite na WhatsApp",
-    "cat_Product_Certification": "Product Certification",
-    "cat_Compliance_Guide": "Compliance Guide",
-    "cat_Label_Compliance": "Label Compliance",
-    "cat_Brand_Protection": "Brand Protection",
-    "cat_Cosmetics": "Cosmetics",
-    "cat_E_commerce": "E-commerce",
-    "cat_Food_Beverage": "Food & Beverage"
+    "cat_Product_Certification": "Certificiranje izdelka",
+    "cat_Compliance_Guide": "Vodnik za skladnost",
+    "cat_Label_Compliance": "Skladnost etikete",
+    "cat_Brand_Protection": "Zaščita blagovne znamke",
+    "cat_Cosmetics": "Kozmetika",
+    "cat_E_commerce": "E-poslovanje",
+    "cat_Food_Beverage": "Hrana in pijača"
   },
   "Cookie": {
     "message": "To spletno mesto uporablja samo bistvene piškotke za preverjanje pristnosti. Piškotki za sledenje ali oglaševanje se ne uporabljajo.",

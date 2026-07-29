@@ -54,13 +54,13 @@
     "contactTitle": "Evaluare gratuită a conformității",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Distribuie pe WhatsApp",
-    "cat_Product_Certification": "Product Certification",
-    "cat_Compliance_Guide": "Compliance Guide",
-    "cat_Label_Compliance": "Label Compliance",
-    "cat_Brand_Protection": "Brand Protection",
-    "cat_Cosmetics": "Cosmetics",
-    "cat_E_commerce": "E-commerce",
-    "cat_Food_Beverage": "Food & Beverage"
+    "cat_Product_Certification": "Certificarea produsului",
+    "cat_Compliance_Guide": "Ghid de conformitate",
+    "cat_Label_Compliance": "Conformitatea etichetei",
+    "cat_Brand_Protection": "Protecția mărcii",
+    "cat_Cosmetics": "Cosmetice",
+    "cat_E_commerce": "Comerț electronic",
+    "cat_Food_Beverage": "Mâncare și băuturi"
   },
   "Cookie": {
     "message": "Acest site folosește numai cookie-uri de autentificare esențiale. Nu sunt utilizate cookie-uri de urmărire sau de publicitate.",

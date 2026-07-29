@@ -54,13 +54,13 @@
     "contactTitle": "Ücretsiz Uyumluluk Değerlendirmesi",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "WhatsApp'ta paylaş",
-    "cat_Product_Certification": "Product Certification",
-    "cat_Compliance_Guide": "Compliance Guide",
-    "cat_Label_Compliance": "Label Compliance",
-    "cat_Brand_Protection": "Brand Protection",
-    "cat_Cosmetics": "Cosmetics",
-    "cat_E_commerce": "E-commerce",
-    "cat_Food_Beverage": "Food & Beverage"
+    "cat_Product_Certification": "Ürün Sertifikasyonu",
+    "cat_Compliance_Guide": "Uyumluluk Kılavuzu",
+    "cat_Label_Compliance": "Etiket Uyumluluğu",
+    "cat_Brand_Protection": "Marka Koruması",
+    "cat_Cosmetics": "Kozmetik",
+    "cat_E_commerce": "E-ticaret",
+    "cat_Food_Beverage": "Yiyecek ve İçecek"
   },
   "Cookie": {
     "message": "Bu site yalnızca gerekli kimlik doğrulama çerezlerini kullanır. Hiçbir izleme veya reklam çerezi kullanılmaz.",

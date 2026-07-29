@@ -2999,12 +2999,12 @@
   "tmWatchService_cost": "クラス数に応じて月額 $200 ～ 500",
   "varies_label": "さまざま",
   "Blog": {
-    "cat_Product_Certification": "Product Certification",
-    "cat_Compliance_Guide": "Compliance Guide",
-    "cat_Label_Compliance": "Label Compliance",
-    "cat_Brand_Protection": "Brand Protection",
-    "cat_Cosmetics": "Cosmetics",
-    "cat_E_commerce": "E-commerce",
-    "cat_Food_Beverage": "Food & Beverage"
+    "cat_Product_Certification": "製品認証",
+    "cat_Compliance_Guide": "コンプライアンスガイド",
+    "cat_Label_Compliance": "ラベルの遵守",
+    "cat_Brand_Protection": "ブランド保護",
+    "cat_Cosmetics": "化粧品",
+    "cat_E_commerce": "電子商取引",
+    "cat_Food_Beverage": "食べ物と飲み物"
   }
 }

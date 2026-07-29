@@ -2999,12 +2999,12 @@
   "tmWatchService_cost": "$200-500/månad beroende på antal klasser",
   "varies_label": "Varierar",
   "Blog": {
-    "cat_Product_Certification": "Product Certification",
+    "cat_Product_Certification": "Produktcertifiering",
     "cat_Compliance_Guide": "Compliance Guide",
-    "cat_Label_Compliance": "Label Compliance",
-    "cat_Brand_Protection": "Brand Protection",
-    "cat_Cosmetics": "Cosmetics",
-    "cat_E_commerce": "E-commerce",
-    "cat_Food_Beverage": "Food & Beverage"
+    "cat_Label_Compliance": "Etikettefterlevnad",
+    "cat_Brand_Protection": "Varumärkesskydd",
+    "cat_Cosmetics": "Kosmetika",
+    "cat_E_commerce": "E-handel",
+    "cat_Food_Beverage": "Mat & dryck"
   }
 }

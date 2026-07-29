@@ -2999,12 +2999,12 @@
   "tmWatchService_cost": "कक्षाओं की संख्या के आधार पर $200-500/माह",
   "varies_label": "भिन्न",
   "Blog": {
-    "cat_Product_Certification": "Product Certification",
-    "cat_Compliance_Guide": "Compliance Guide",
-    "cat_Label_Compliance": "Label Compliance",
-    "cat_Brand_Protection": "Brand Protection",
-    "cat_Cosmetics": "Cosmetics",
-    "cat_E_commerce": "E-commerce",
-    "cat_Food_Beverage": "Food & Beverage"
+    "cat_Product_Certification": "उत्पाद प्रमाणन",
+    "cat_Compliance_Guide": "अनुपालन मार्गदर्शिका",
+    "cat_Label_Compliance": "लेबल अनुपालन",
+    "cat_Brand_Protection": "ब्रांड संरक्षण",
+    "cat_Cosmetics": "प्रसाधन सामग्री",
+    "cat_E_commerce": "ई-कॉमर्स",
+    "cat_Food_Beverage": "खाद्य और पेय"
   }
 }

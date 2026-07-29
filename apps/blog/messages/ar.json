@@ -54,13 +54,13 @@
     "contactTitle": "تقييم الامتثال مجانا",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "شارك على الواتساب",
-    "cat_Product_Certification": "Product Certification",
-    "cat_Compliance_Guide": "Compliance Guide",
-    "cat_Label_Compliance": "Label Compliance",
-    "cat_Brand_Protection": "Brand Protection",
-    "cat_Cosmetics": "Cosmetics",
-    "cat_E_commerce": "E-commerce",
-    "cat_Food_Beverage": "Food & Beverage"
+    "cat_Product_Certification": "شهادة المنتج",
+    "cat_Compliance_Guide": "دليل الامتثال",
+    "cat_Label_Compliance": "الامتثال التسمية",
+    "cat_Brand_Protection": "حماية العلامة التجارية",
+    "cat_Cosmetics": "مستحضرات التجميل",
+    "cat_E_commerce": "التجارة الإلكترونية",
+    "cat_Food_Beverage": "الأطعمة والمشروبات"
   },
   "Cookie": {
     "message": "يستخدم هذا الموقع ملفات تعريف الارتباط الأساسية فقط. لا يتم استخدام ملفات تعريف الارتباط للتتبع أو الإعلانات.",

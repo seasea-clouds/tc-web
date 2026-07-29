@@ -54,13 +54,13 @@
     "contactTitle": "Gratis samsvarsvurdering",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Del på WhatsApp",
-    "cat_Product_Certification": "Product Certification",
-    "cat_Compliance_Guide": "Compliance Guide",
-    "cat_Label_Compliance": "Label Compliance",
-    "cat_Brand_Protection": "Brand Protection",
-    "cat_Cosmetics": "Cosmetics",
-    "cat_E_commerce": "E-commerce",
-    "cat_Food_Beverage": "Food & Beverage"
+    "cat_Product_Certification": "Produktsertifisering",
+    "cat_Compliance_Guide": "Overholdelsesveiledning",
+    "cat_Label_Compliance": "Overholdelse av etiketter",
+    "cat_Brand_Protection": "Merkebeskyttelse",
+    "cat_Cosmetics": "Kosmetikk",
+    "cat_E_commerce": "E-handel",
+    "cat_Food_Beverage": "Mat og drikke"
   },
   "Cookie": {
     "message": "Dette nettstedet bruker kun viktige autentiseringsinformasjonskapsler. Ingen sporings- eller reklameinformasjonskapsler brukes.",

@@ -54,13 +54,13 @@
     "contactTitle": "Avaluació gratuïta del compliment",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Comparteix al WhatsApp",
-    "cat_Product_Certification": "Product Certification",
-    "cat_Compliance_Guide": "Compliance Guide",
-    "cat_Label_Compliance": "Label Compliance",
-    "cat_Brand_Protection": "Brand Protection",
-    "cat_Cosmetics": "Cosmetics",
-    "cat_E_commerce": "E-commerce",
-    "cat_Food_Beverage": "Food & Beverage"
+    "cat_Product_Certification": "Certificació de producte",
+    "cat_Compliance_Guide": "Guia de compliment",
+    "cat_Label_Compliance": "Compliment de l'etiqueta",
+    "cat_Brand_Protection": "Protecció de marca",
+    "cat_Cosmetics": "Cosmètics",
+    "cat_E_commerce": "Comerç electrònic",
+    "cat_Food_Beverage": "Aliments i begudes"
   },
   "Cookie": {
     "message": "Aquest lloc només utilitza cookies d'autenticació essencials. No s'utilitzen cookies de seguiment ni de publicitat.",

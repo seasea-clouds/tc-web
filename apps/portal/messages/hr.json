@@ -2999,12 +2999,12 @@
   "tmWatchService_cost": "$200-500/mjesečno ovisno o broju sati",
   "varies_label": "Varira",
   "Blog": {
-    "cat_Product_Certification": "Product Certification",
-    "cat_Compliance_Guide": "Compliance Guide",
-    "cat_Label_Compliance": "Label Compliance",
-    "cat_Brand_Protection": "Brand Protection",
-    "cat_Cosmetics": "Cosmetics",
-    "cat_E_commerce": "E-commerce",
-    "cat_Food_Beverage": "Food & Beverage"
+    "cat_Product_Certification": "Certifikacija proizvoda",
+    "cat_Compliance_Guide": "Vodič za sukladnost",
+    "cat_Label_Compliance": "Sukladnost naljepnica",
+    "cat_Brand_Protection": "Zaštita marke",
+    "cat_Cosmetics": "Kozmetika",
+    "cat_E_commerce": "E-trgovina",
+    "cat_Food_Beverage": "Hrana i piće"
   }
 }

@@ -54,13 +54,13 @@
     "contactTitle": "Безплатна оценка на съответствието",
     "contactEmailPlaceholder": "you@company.com",
     "shareWhatsapp": "Споделете в WhatsApp",
-    "cat_Product_Certification": "Product Certification",
-    "cat_Compliance_Guide": "Compliance Guide",
-    "cat_Label_Compliance": "Label Compliance",
-    "cat_Brand_Protection": "Brand Protection",
-    "cat_Cosmetics": "Cosmetics",
-    "cat_E_commerce": "E-commerce",
-    "cat_Food_Beverage": "Food & Beverage"
+    "cat_Product_Certification": "Сертифициране на продукта",
+    "cat_Compliance_Guide": "Ръководство за съответствие",
+    "cat_Label_Compliance": "Съответствие на етикета",
+    "cat_Brand_Protection": "Защита на марката",
+    "cat_Cosmetics": "Козметика",
+    "cat_E_commerce": "Електронна търговия",
+    "cat_Food_Beverage": "Храна и напитки"
   },
   "Cookie": {
     "message": "Този сайт използва само основни бисквитки за удостоверяване. Не се използват проследяващи или рекламни бисквитки.",

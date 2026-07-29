@@ -14,6 +14,13 @@
  *   [R07] missing-48-translation         — 文章在所有 48 个语言中缺少翻译版本
  *   [R08] title-punctuation              — 文章标题含冒号/破折号/- 符号
  *   [R09] category-i18n                  — 文章分立的分类标签缺少 48 语言翻译键
+ *   [R11] cta-format                      — CTA 链接格式异常（非 联系我们/Contact us 文本、/quote/ 路径、zh 用 /en/）
+ *   [R12] body-hr                         — 正文中不应出现分割线 <hr>（---）
+ *   [R13] list-item-blank-line            — 连续列表项之间有空白行（破坏渲染为独立列表）
+ *   [R14] category-unknown                — 文章分类不在预设标签列表中
+ *   [R15] list-items-inline               — 多行列表项混在同一行
+ *   [R16] body-references                 — 正文中不应有 ## References 章节（应使用 frontmatter references）
+ *   [R17] ref-chinese-in-en               — 英文文章参考链接标题含中文（应翻译）
  *
  * 用法：
  *   node check-md-article.mjs                # 检查所有语言
@@ -186,17 +193,18 @@ function checkR02(content, relPath, lang) {
  */
 function checkR03(content, relPath, lang) {
   const lines = content.split('\n');
-  let inFrontmatter = false;
+  let fmStage = 0;
   let inCodeBlock = false;
 
   for (let i = 0; i < lines.length; i++) {
     const trimmed = lines[i].trim();
     if (/^---\s*$/.test(trimmed)) {
-      if (!inFrontmatter) { inFrontmatter = true; continue; }
-      inFrontmatter = false; continue;
+      if (fmStage === 0) { fmStage = 1; continue; }
+      if (fmStage === 1) { fmStage = 2; continue; }
+      continue;
     }
     if (/^```/.test(trimmed)) { inCodeBlock = !inCodeBlock; continue; }
-    if (inFrontmatter || inCodeBlock) continue;
+    if (fmStage < 2 || inCodeBlock) continue;
     if (/^#/.test(trimmed) || /^[\s]*[-*]\s/.test(trimmed) || /^[\s]*\d+\.\s/.test(trimmed)) continue;
 
     const emojis = [];
@@ -230,17 +238,18 @@ function checkR03(content, relPath, lang) {
  */
 function checkR04(content, relPath, lang) {
   const lines = content.split('\n');
-  let inFrontmatter = false;
+  let fmStage = 0;
   let inCodeBlock = false;
 
   for (let i = 0; i < lines.length; i++) {
     const trimmed = lines[i].trim();
     if (/^---\s*$/.test(trimmed)) {
-      if (!inFrontmatter) { inFrontmatter = true; continue; }
-      inFrontmatter = false; continue;
+      if (fmStage === 0) { fmStage = 1; continue; }
+      if (fmStage === 1) { fmStage = 2; continue; }
+      continue;
     }
     if (/^```/.test(trimmed)) { inCodeBlock = !inCodeBlock; continue; }
-    if (inFrontmatter || inCodeBlock) continue;
+    if (fmStage < 2 || inCodeBlock) continue;
     if (!trimmed.startsWith('#')) continue;
 
     // `# Text` — 单个 #（不支持 h1）
@@ -532,6 +541,240 @@ function checkR10(contentDir) {
 // ============================================================
 // 扫描主逻辑
 // ============================================================
+/**
+ * R11: cta-format
+ * CTA 链接格式验证
+ */
+function checkR11(content, relPath, lang) {
+  const lines = content.trim().split('\n');
+  const tailLines = lines.slice(-10);
+
+  let ctaMatch = null;
+  for (const line of tailLines) {
+    const m = line.match(/\[([^\]]+)\]\(([^)]+)\)/);
+    if (m) { ctaMatch = m; break; }
+  }
+
+  if (!ctaMatch) return;
+
+  const [, linkText, linkUrl] = ctaMatch;
+  const urlPath = linkUrl.replace(/^https?:\/\/[^\/]+/, '');
+
+  // 1. URL must use /packages/ not /quote/
+  if (urlPath.includes('/quote/')) {
+    addFinding({ file: relPath, lang, rule: 'R11', severity: 'error', line: lines.length,
+      text: linkUrl, description: 'CTA 链接路径含 /quote/，应使用 /packages/' });
+  }
+
+  // 2. URL locale prefix must match article locale (48-language aware)
+  const expectedPrefix = '/' + lang + '/';
+  if (!urlPath.startsWith(expectedPrefix)) {
+    const wrongLocale = urlPath.match(/^\/(\w{2,5})\//);
+    addFinding({ file: relPath, lang, rule: 'R11', severity: 'error', line: lines.length,
+      text: linkUrl, description: lang + ' CTA 链接应使用 ' + expectedPrefix + ' 前缀，当前: /' + (wrongLocale ? wrongLocale[1] : '??') + '/' });
+  }
+
+  // 3. Link text validation per locale
+  if (lang === 'zh') {
+    if (linkText !== '联系我们') {
+      addFinding({ file: relPath, lang, rule: 'R11', severity: 'error', line: lines.length,
+        text: linkText, description: 'zh CTA 链接文本应为"联系我们"' });
+    }
+  } else if (lang === 'en') {
+    if (!/^Contact us/i.test(linkText)) {
+      addFinding({ file: relPath, lang, rule: 'R11', severity: 'error', line: lines.length,
+        text: linkText, description: 'en CTA 链接文本应以"Contact us"开头' });
+    }
+  } else {
+    // Skip CJK character check for Japanese/Korean (kanji/hanja are legitimate)
+    const isCJKFallback = lang !== 'ja' && lang !== 'ko';
+    if (isCJKFallback && /[\u4e00-\u9fff]/.test(linkText)) {
+      addFinding({ file: relPath, lang, rule: 'R11', severity: 'error', line: lines.length,
+        text: linkText, description: lang + ' CTA 文本含中文字符（疑似未翻译回退）' });
+    }
+    if (/^Contact us/i.test(linkText)) {
+      addFinding({ file: relPath, lang, rule: 'R11', severity: 'error', line: lines.length,
+        text: linkText, description: lang + ' CTA 文本为英语（疑似未翻译回退）' });
+    }
+  }
+}
+
+/**
+ * R12: body-hr
+ * 正文中不应出现分割线 <hr>（--- 行）
+ */
+function checkR12(content, relPath, lang) {
+  const lines = content.split('\n');
+  let fmStage = 0; // 0=before frontmatter, 1=in frontmatter, 2=after frontmatter (body)
+
+  for (let i = 0; i < lines.length; i++) {
+    const trimmed = lines[i].trim();
+    if (/^---\s*$/.test(trimmed)) {
+      if (fmStage === 0) { fmStage = 1; continue; }
+      if (fmStage === 1) { fmStage = 2; continue; }
+      // fmStage === 2: body === <hr>
+      addFinding({ file: relPath, lang, rule: 'R12', severity: 'error', line: i + 1,
+        text: '---', description: '正文中出现分割线（---）渲染为 <hr>' });
+      continue;
+    }
+    if (fmStage < 2) continue;
+  }
+}
+
+/**
+ * R13: list-item-blank-line
+ * 连续列表项之间不应有空白行
+ */
+function checkR13(content, relPath, lang) {
+  const lines = content.split('\n');
+  let fmStage = 0; // 0=before, 1=in, 2=after frontmatter
+  let inCodeBlock = false;
+  let prevIsListItem = false;
+
+  for (let i = 0; i < lines.length; i++) {
+    const trimmed = lines[i].trim();
+    if (/^---\s*$/.test(trimmed)) {
+      if (fmStage === 0) { fmStage = 1; continue; }
+      if (fmStage === 1) { fmStage = 2; continue; }
+      continue; // body ---, skip for list checking
+    }
+    if (/^```/.test(trimmed)) { inCodeBlock = !inCodeBlock; continue; }
+    if (fmStage < 2 || inCodeBlock) continue;
+    if (/^#/.test(trimmed)) { prevIsListItem = false; continue; }
+
+    const isListItem = /^\s*[-*]\s/.test(trimmed);
+    const isEmpty = trimmed === '';
+
+    if (isEmpty && prevIsListItem) {
+      let j = i + 1;
+      while (j < lines.length && lines[j].trim() === '') j++;
+      if (j < lines.length && /^\s*[-*]\s/.test(lines[j].trim())) {
+        addFinding({ file: relPath, lang, rule: 'R13', severity: 'error', line: i + 1,
+          text: '(空行)', description: '连续列表项之间有空白行，移除空行' });
+      }
+    }
+
+    prevIsListItem = isListItem;
+  }
+}
+
+/**
+ * R14: category-unknown
+ * 文章分类不在预设标签列表中
+ */
+function checkR14(content, relPath, lang) {
+  const fmMatch = content.match(/^---\s*\n([\s\S]*?)\n---/);
+  if (!fmMatch) return;
+  const fm = fmMatch[1];
+  const catMatch = fm.match(/^category:\s*(.+)$/m);
+  if (!catMatch) return;
+
+  const category = catMatch[1].trim().replace(/^["']|["']$/g, '');
+  const ALLOWED = ['Brand Protection', 'Compliance Guide', 'Cosmetics', 'E-commerce', 'Food & Beverage', 'Label Compliance', 'Product Certification'];
+
+  if (!ALLOWED.includes(category)) {
+    addFinding({ file: relPath, lang, rule: 'R14', severity: 'error', line: 1,
+      text: category, description: lang + ' 文章分类 "' + category + '" 不在预设列表中，允许值: ' + ALLOWED.join(', ') });
+  }
+}
+
+/**
+ * R15: list-items-inline
+ * 多行列表项混在同一行（无换行）
+ */
+function checkR15(content, relPath, lang) {
+  const lines = content.split('\n');
+  let fmStage = 0;
+  let inCodeBlock = false;
+
+  for (let i = 0; i < lines.length; i++) {
+    const trimmed = lines[i].trim();
+    if (/^---\s*$/.test(trimmed)) {
+      if (fmStage === 0) { fmStage = 1; continue; }
+      if (fmStage === 1) { fmStage = 2; continue; }
+      continue;
+    }
+    if (/^```/.test(trimmed)) { inCodeBlock = !inCodeBlock; continue; }
+    if (fmStage < 2 || inCodeBlock) continue;
+    if (/^#/.test(trimmed)) continue;
+    // Skip proper list items and empty lines
+    if (/^\s*[-*]\s/.test(trimmed)) continue;
+    if (/^\s*\d+\.\s/.test(trimmed)) continue;
+    if (trimmed === '') continue;
+
+    // Check for AI-style em-dash with spaces (space-emdash-space) in body text
+    if (/ — /.test(trimmed)) {
+      addFinding({ file: relPath, lang, rule: 'R15', severity: 'error', line: i + 1,
+        text: trimmed.slice(0, 80), description: lang + ' 正文含 AI 风格破折号（空格+破折号+空格），应移除两侧空格' });
+    }
+
+    // Check for inline list items separated by wide spacing of emoji-like markers
+    // e.g., "✅ Option A   ❌ Option B" (3+ spaces between emoji pairs)
+    // This complements R03 which uses a different detection approach
+    const spacedEmojiRe = /(\p{Emoji_Presentation})\s{3,}(\p{Emoji_Presentation})/u;
+    if (spacedEmojiRe.test(trimmed)) {
+      addFinding({ file: relPath, lang, rule: 'R15', severity: 'error', line: i + 1,
+        text: trimmed.slice(0, 80), description: lang + ' 多图形列表项混在同一行，每个应独占一行' });
+    }
+  }
+}
+
+/**
+ * R16: body-references
+ * 正文中不应有 ## References 章节
+ */
+// Multi-language reference heading patterns
+// Uses generic matching with common reference-related keywords
+const REF_HEADING_RE = /^##\s+(?:Refer|Réf(?:érences?)?|Riferimenti|Hivatkozások|Verwysings|Viitteet|Rujukan|Marejeleo|İstinadlar|Παραπομπές|Αναφορ|Източни|Спасылкі|Референции|Препратки|Посилання|Ссылки|参考文献|참고|参考资料)/i;
+
+function checkR16(content, relPath, lang) {
+  const lines = content.split('\n');
+  let fmStage = 0;
+
+  for (let i = 0; i < lines.length; i++) {
+    const trimmed = lines[i].trim();
+    if (/^---\s*$/.test(trimmed)) {
+      if (fmStage === 0) { fmStage = 1; continue; }
+      if (fmStage === 1) { fmStage = 2; continue; }
+      continue;
+    }
+    if (fmStage < 2) continue;
+
+    if (REF_HEADING_RE.test(trimmed)) {
+      addFinding({ file: relPath, lang, rule: 'R16', severity: 'error', line: i + 1,
+        text: trimmed.slice(0, 40), description: '正文中包含参考文献小节，应使用 frontmatter references' });
+    }
+  }
+}
+
+/**
+ * R17: ref-chinese-in-en
+ * 英文文章参考链接标题含中文
+ */
+function checkR17(content, relPath, lang) {
+  const fmMatch = content.match(/^---\s*\n([\s\S]*?)\n---/);
+  if (!fmMatch) return;
+  const fm = fmMatch[1];
+  const refStart = fm.indexOf('references:');
+  if (refStart < 0) return;
+
+  const refSection = fm.substring(refStart);
+  const titleRe = /- title:\s*"([^"]+)"/g;
+  let m;
+  while ((m = titleRe.exec(refSection)) !== null) {
+    const title = m[1];
+
+    // Chinese character detection for non-CJK locales
+    const isCJK = lang === 'zh' || lang === 'ja' || lang === 'ko';
+    if (isCJK) continue; // Chinese chars expected in zh/ja/ko
+
+    if (/[\u4e00-\u9fff]/.test(title)) {
+      addFinding({ file: relPath, lang, rule: 'R17', severity: 'error', line: 1,
+        text: title.slice(0, 80), description: lang + ' 参考文献标题含中文字符（疑似未翻译），应翻译为对应语言' });
+    }
+  }
+}
+
 function runAllChecks() {
   const contentDir = getContentDir(project);
   if (!contentDir || !fs.existsSync(contentDir)) {
@@ -557,7 +800,7 @@ function runAllChecks() {
   for (const lang of langs) {
     if (filterLang && lang !== filterLang) continue;
 
-    const rulesToRun = ['R01', 'R02', 'R03', 'R04', 'R05', 'R06', 'R08'];
+    const rulesToRun = ['R01', 'R02', 'R03', 'R04', 'R05', 'R06', 'R07', 'R08', 'R09', 'R10', 'R11', 'R12', 'R13', 'R14', 'R16', 'R17'];
     // 如果指定了 filterRule，只运行那一条
     const activeRules = filterRule
       ? (rulesToRun.includes(filterRule) ? [filterRule] : [])
@@ -583,6 +826,12 @@ function runAllChecks() {
           case 'R05': checkR05(content, relPath, lang); break;
           case 'R06': checkR06(content, relPath, lang); break;
           case 'R08': checkR08(content, relPath, lang); break;
+          case 'R11': checkR11(content, relPath, lang); break;
+          case 'R12': checkR12(content, relPath, lang); break;
+          case 'R13': checkR13(content, relPath, lang); break;
+          case 'R14': checkR14(content, relPath, lang); break;
+          case 'R16': checkR16(content, relPath, lang); break;
+          case 'R17': checkR17(content, relPath, lang); break;
         }
       }
     }
@@ -622,6 +871,13 @@ function printResults() {
     R08: { severity: 'error', desc: '标题含冒号/破折号/连字符' },
     R09: { severity: 'error', desc: '分类标签缺少 48 语言翻译键' },
     R10: { severity: 'error', desc: '文章日期在 48 语言中不一致' },
+    R11: { severity: 'error', desc: 'CTA 链接格式异常' },
+    R12: { severity: 'error', desc: '正文中出现 <hr> 分割线' },
+    R13: { severity: 'error', desc: '列表项之间有空白行（破坏渲染）' },
+    R14: { severity: 'error', desc: '文章分类不在预设标签列表中' },
+    R15: { severity: 'error', desc: '列表项混在同一行（暂未启用，需精炼规则）' },
+    R16: { severity: 'error', desc: '正文中有 ## References（应使用 frontmatter）' },
+    R17: { severity: 'error', desc: '英文文章参考含中文未翻译' },
   };
 
   for (const [ruleId, items] of Object.entries(byRule)) {

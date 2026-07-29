@@ -26,7 +26,8 @@
     "checkNmpa": "Productos cosméticos",
     "checkTm": "Marcas registradas",
     "email": "Correo electrónico",
-    "freeCheckHeader": "Herramientas gratuitas"
+    "freeCheckHeader": "Herramientas gratuitas",
+    "getQuote": "Obtener presupuesto"
   },
   "Search": {
     "title": "Buscar",

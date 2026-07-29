@@ -67,5 +67,8 @@
     "accept": "Accept All",
     "reject": "Reject Non-Essential",
     "privacyLink": "Privacy Policy"
+  },
+  "Footer": {
+    "getQuote": "Get a Quote"
   }
 }

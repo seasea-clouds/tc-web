@@ -26,7 +26,8 @@
     "checkNmpa": "化粧品",
     "checkTm": "商標",
     "email": "電子メール",
-    "freeCheckHeader": "無料ツール"
+    "freeCheckHeader": "無料ツール",
+    "getQuote": "見積もりを取得"
   },
   "Search": {
     "title": "検索",

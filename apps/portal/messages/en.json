@@ -3006,5 +3006,8 @@
     "cat_Cosmetics": "Cosmetics",
     "cat_E_commerce": "E-commerce",
     "cat_Food_Beverage": "Food & Beverage"
+  },
+  "Footer": {
+    "getQuote": "Get a Quote"
   }
 }

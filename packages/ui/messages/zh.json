@@ -26,7 +26,8 @@
     "checkNmpa": "化妆品",
     "checkTm": "商标",
     "email": "电子邮件",
-    "freeCheckHeader": "免费工具"
+    "freeCheckHeader": "免费工具",
+    "getQuote": "获取报价"
   },
   "Search": {
     "title": "搜索",

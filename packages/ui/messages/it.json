@@ -26,7 +26,8 @@
     "checkNmpa": "Cosmetici",
     "checkTm": "Marchi",
     "email": "E-mail",
-    "freeCheckHeader": "Strumenti gratuiti"
+    "freeCheckHeader": "Strumenti gratuiti",
+    "getQuote": "Ottieni un preventivo"
   },
   "Search": {
     "title": "Ricerca",

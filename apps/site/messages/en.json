@@ -1395,5 +1395,8 @@
     "governingText": "These Terms shall be governed by and construed in accordance with the laws of the People's Republic of China. Any disputes arising from these terms shall be resolved through friendly negotiation or, if necessary, through the courts of competent jurisdiction.",
     "contactTitle": "Contact Us",
     "contactText": "If you have any questions about these Terms of Service, please contact us:"
+  },
+  "Footer": {
+    "getQuote": "Get a Quote"
   }
 }

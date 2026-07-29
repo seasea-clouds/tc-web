@@ -21,6 +21,8 @@
  *   [R15] list-items-inline               — 多行列表项混在同一行
  *   [R16] body-references                 — 正文中不应有 ## References 章节（应使用 frontmatter references）
  *   [R17] ref-chinese-in-en               — 英文文章参考链接标题含中文（应翻译）
+ *   [R19] cta-link-length                  — CTA 链接文本为整句而非简短联系短语（48 语言）
+ *   [R20] reference-title-translation      — 非英文语种参考文献标题与英文版完全相同（应翻译）
  *
  * 用法：
  *   node check-md-article.mjs                # 检查所有语言
@@ -775,6 +777,125 @@ function checkR17(content, relPath, lang) {
   }
 }
 
+/**
+ * R19: cta-link-length
+ * 48 语言 CTA 链接格式——链接文本应为简短的联系短语，而非整句
+ */
+function checkR19(content, relPath, lang) {
+  const lines = content.trim().split('\n');
+  const tailLines = lines.slice(-10);
+
+  let ctaMatch = null;
+  let ctaLineIdx = -1;
+  for (let i = tailLines.length - 1; i >= 0; i--) {
+    const m = tailLines[i].match(/\[([^\]]+)\]\(([^)]+)\)/);
+    if (m && (m[2].includes('/packages/') || m[2].includes('/quote/'))) {
+      ctaMatch = m;
+      ctaLineIdx = lines.length - tailLines.length + i;
+      break;
+    }
+  }
+
+  if (!ctaMatch) return;
+
+  const linkText = ctaMatch[1];
+  const linkUrl = ctaMatch[2];
+
+  // 1. Check link text length - should be short (contact phrase), not full sentence
+  if (linkText.length > 50) {
+    addFinding({ file: relPath, lang, rule: 'R19', severity: 'error', line: ctaLineIdx + 1,
+      text: linkText.slice(0, 80) + (linkText.length > 80 ? '...' : ''),
+      description: lang + ' CTA 链接文本过长（' + linkText.length + ' 字符），应为简短联系短语而非整句。格式应为 [联系短语](/locale/packages/) 剩余文字' });
+    return;
+  }
+
+  // 2. For non-EN locales, check link text isn't English fallback
+  if (lang !== 'en' && /^Contact us/i.test(linkText)) {
+    addFinding({ file: relPath, lang, rule: 'R19', severity: 'error', line: ctaLineIdx + 1,
+      text: linkText, description: lang + ' CTA 链接文本为英语（疑似未翻译回退）' });
+  }
+}
+
+/**
+ * R20: reference-title-translation
+ * 检测非英文语种的参考文献标题是否未翻译（与英文版本完全一致）
+ * 预计算所有英文文章的 frontmatter 参考文献标题用于对比
+ */
+function precomputeEnReferences(contentDir) {
+  const enRefs = {};
+  const enDir = path.join(contentDir, 'en');
+  if (!fs.existsSync(enDir)) return enRefs;
+
+  const files = fs.readdirSync(enDir).filter(f => f.endsWith('.mdx'));
+  for (const file of files) {
+    const filePath = path.join(enDir, file);
+    const content = fs.readFileSync(filePath, 'utf-8');
+
+    const fmMatch = content.match(/^---\s*\n([\s\S]*?)\n---/);
+    if (!fmMatch) continue;
+
+    const fm = fmMatch[1];
+    const refStart = fm.indexOf('references:');
+    if (refStart < 0) continue;
+
+    const refSection = fm.substring(refStart);
+    const titleRe = /- title:\s*"([^"]+)"/g;
+    const titles = [];
+    let m;
+    while ((m = titleRe.exec(refSection)) !== null) {
+      titles.push(m[1]);
+    }
+
+    if (titles.length > 0) {
+      enRefs[file] = titles;
+    }
+  }
+
+  return enRefs;
+}
+
+function checkR20(content, relPath, lang, enRefs) {
+  // Non-EN only
+  if (lang === 'en' || !enRefs) return;
+
+  const fileName = path.basename(relPath);
+  const enTitles = enRefs[fileName];
+  if (!enTitles || enTitles.length === 0) return;
+
+  // Parse local reference titles
+  const fmMatch = content.match(/^---\s*\n([\s\S]*?)\n---/);
+  if (!fmMatch) return;
+
+  const fm = fmMatch[1];
+  const refStart = fm.indexOf('references:');
+  if (refStart < 0) return;
+
+  const refSection = fm.substring(refStart);
+  const titleRe = /- title:\s*"([^"]+)"/g;
+  const localTitles = [];
+  let m;
+  while ((m = titleRe.exec(refSection)) !== null) {
+    localTitles.push(m[1]);
+  }
+
+  if (localTitles.length === 0 || localTitles.length !== enTitles.length) return;
+
+  // Compare each title against the EN version
+  let matchCount = 0;
+  for (let i = 0; i < enTitles.length; i++) {
+    if (enTitles[i] === localTitles[i]) {
+      matchCount++;
+      // Only flag if the title has substantive text (not just a standard number)
+      const stripped = enTitles[i].replace(/^[A-Z]{2,5}\s+[\d-]+\s*[—\-]?\s*/, '');
+      if (stripped.length > 15) {
+        addFinding({ file: relPath, lang, rule: 'R20', severity: 'error', line: 1,
+          text: localTitles[i].slice(0, 80),
+          description: lang + ' 参考文献标题与英文版完全相同（疑似未翻译），应为 ' + lang + ' 语言版本' });
+      }
+    }
+  }
+}
+
 function runAllChecks() {
   const contentDir = getContentDir(project);
   if (!contentDir || !fs.existsSync(contentDir)) {
@@ -787,6 +908,9 @@ function runAllChecks() {
   );
 
   // ── 全局规则（R07, R09）──
+  // ── 预计算英文参考文献标题用于 R20 对比 ──
+  const enRefs = precomputeEnReferences(contentDir);
+
   if (!filterLang) {
     if (!filterRule || filterRule === 'R07') checkR07(contentDir);
     if (!filterRule || filterRule === 'R09') {
@@ -800,7 +924,7 @@ function runAllChecks() {
   for (const lang of langs) {
     if (filterLang && lang !== filterLang) continue;
 
-    const rulesToRun = ['R01', 'R02', 'R03', 'R04', 'R05', 'R06', 'R07', 'R08', 'R09', 'R10', 'R11', 'R12', 'R13', 'R14', 'R16', 'R17'];
+    const rulesToRun = ['R01', 'R02', 'R03', 'R04', 'R05', 'R06', 'R07', 'R08', 'R09', 'R10', 'R11', 'R12', 'R13', 'R14', 'R16', 'R17', 'R19', 'R20'];
     // 如果指定了 filterRule，只运行那一条
     const activeRules = filterRule
       ? (rulesToRun.includes(filterRule) ? [filterRule] : [])
@@ -832,6 +956,8 @@ function runAllChecks() {
           case 'R14': checkR14(content, relPath, lang); break;
           case 'R16': checkR16(content, relPath, lang); break;
           case 'R17': checkR17(content, relPath, lang); break;
+          case 'R19': checkR19(content, relPath, lang); break;
+          case 'R20': checkR20(content, relPath, lang, enRefs); break;
         }
       }
     }
@@ -878,6 +1004,8 @@ function printResults() {
     R15: { severity: 'error', desc: '列表项混在同一行（暂未启用，需精炼规则）' },
     R16: { severity: 'error', desc: '正文中有 ## References（应使用 frontmatter）' },
     R17: { severity: 'error', desc: '英文文章参考含中文未翻译' },
+    R19: { severity: 'error', desc: 'CTA 链接文本为整句而非简短联系短语' },
+    R20: { severity: 'error', desc: '非英文语种参考文献标题与英文版完全相同（疑似未翻译）' },
   };
 
   for (const [ruleId, items] of Object.entries(byRule)) {

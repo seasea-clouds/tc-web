@@ -143,7 +143,7 @@ const RULES = [
   {
     id: 'W02',
     name: 'ru-en-em-mix',
-    severity: 'warning',
+    severity: 'error',
     description: '俄文文件混用 en-dash 和 em-dash，应统一',
     langs: ['ru', 'uk', 'be', 'bg', 'sr'],
     checkPerFile: (content) => {

@@ -862,6 +862,13 @@ function checkR20(content, relPath, lang, enRefs) {
   const enTitles = enRefs[fileName];
   if (!enTitles || enTitles.length === 0) return;
 
+  // 专有名词前缀白名单——这些已知首字母缩略词/专有名词在不同语种中可保持原文
+  const PROPER_NOUN_PREFIXES = [
+    'CSAR',
+    'NMPA',
+    'KOTRA',
+  ];
+
   // Parse local reference titles
   const fmMatch = content.match(/^---\s*\n([\s\S]*?)\n---/);
   if (!fmMatch) return;
@@ -885,6 +892,13 @@ function checkR20(content, relPath, lang, enRefs) {
   for (let i = 0; i < enTitles.length; i++) {
     if (enTitles[i] === localTitles[i]) {
       matchCount++;
+      // 跳过专有名词前缀的标题（如 CSAR — ..., NMPA — ..., KOTRA — ...）
+      const titleTrimmed = localTitles[i].trim();
+      const isProperNoun = PROPER_NOUN_PREFIXES.some(prefix =>
+        titleTrimmed.startsWith(prefix + ' — ') || titleTrimmed.startsWith(prefix + ' —')
+      );
+      if (isProperNoun) continue;
+
       // Only flag if the title has substantive text (not just a standard number)
       const stripped = enTitles[i].replace(/^[A-Z]{2,5}\s+[\d-]+\s*[—\-]?\s*/, '');
       if (stripped.length > 15) {

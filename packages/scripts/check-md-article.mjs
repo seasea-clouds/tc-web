@@ -1,0 +1,662 @@
+#!/usr/bin/env node
+/**
+ * check-md-article.mjs — 文章 MDX 内容质量检查（48 语言全覆盖）
+ *
+ * 编译流水线中检测新文章常见质量问题。
+ *
+ * 问题类型：
+ *   [R01] heading-excessive-newlines     — 标题之间的空行不应超过 1 行
+ *   [R02] list-excessive-newlines        — 列表项之间的空行不应超过 1 行
+ *   [R03] emoji-list-inline              — Emoji 图形列表各项应分行，不应混在一行
+ *   [R04] hash-heading-syntax            — ##/### 标题语法错误（缺空格、使用 # 或 ####+）
+ *   [R05] char-flowchart                 — 禁止字符类流程图/路线图（框线字符 + 箭头）
+ *   [R06] missing-contact-ending         — 文章末尾缺少联系我们/免费评估链接
+ *   [R07] missing-48-translation         — 文章在所有 48 个语言中缺少翻译版本
+ *   [R08] title-punctuation              — 文章标题含冒号/破折号/- 符号
+ *   [R09] category-i18n                  — 文章分立的分类标签缺少 48 语言翻译键
+ *
+ * 用法：
+ *   node check-md-article.mjs                # 检查所有语言
+ *   node check-md-article.mjs --ci            # CI 模式，有 error 则 exit 1
+ *   node check-md-article.mjs --lang=zh       # 只检查指定语言
+ *   node check-md-article.mjs --rule=R01      # 只运行指定规则
+ *   node check-md-article.mjs --project=blog  # 检查 blog 项目（默认）
+ */
+
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const repoRoot = path.resolve(__dirname, '../..');
+
+const args = process.argv.slice(2);
+const isCi = args.includes('--ci');
+const filterLang = args.find(a => a.startsWith('--lang='))?.split('=')[1] || null;
+const filterRule = args.find(a => a.startsWith('--rule='))?.split('=')[1]?.toUpperCase() || null;
+const project = args.find(a => a.startsWith('--project='))?.split('=')[1] || 'blog';
+
+// 48 种支持的语言（与 locales.json 同步）
+const LOCALES = [
+  'en','zh','es','fr','de','ja','pt','ru',
+  'ar','ko','it','nl','tr','vi','id','th',
+  'hi','pl','sv','el','cs','ro','hu','fi',
+  'da','no','uk','bg','hr','sr','sk','sl',
+  'ms','ka','he','sw','bn','ca',
+  'fa','ur','ta','af','sq','az','hy','be','ne','si',
+];
+
+// 项目内容目录映射
+const PROJECT_CONTENT_DIRS = {
+  blog: 'apps/blog/content',
+};
+
+function getContentDir(p) {
+  return PROJECT_CONTENT_DIRS[p] ? path.join(repoRoot, PROJECT_CONTENT_DIRS[p]) : null;
+}
+
+function getBlogMessagesDir() {
+  return path.join(repoRoot, 'apps/blog/messages');
+}
+
+// ============================================================
+// Emoji 集合（用于图形列表项检测）
+// ============================================================
+// 常见列表标记类 emoji（使用 \u{XXXXX} 语法支持 BMP 外字符）
+const LIST_EMOJI_RE = /[\u2705\u274C\u26A0\u26D4\u{1F6AB}\u{1F534}\u{1F7E1}\u{1F7E2}\u{1F535}\u2795\u2796\u{1F4CC}\u{1F3AF}\u{1F4A1}\u{1F539}\u27A1\uFE0F\u{1F4A0}\u{1F6D1}\u{1F6A8}\u{1F514}\u{1F50D}\u{1F4CB}\u{1F4CA}\u{1F3C6}\u{1F947}\u{1F948}\u{1F949}\u2B50\u2728\u{1F31F}\u{1F525}\u26A1\u{1F4D6}\u{1F4DC}\u{1F4C4}\u270F\uFE0F\u{1F58B}\uFE0F\u{1F4DD}\u{1F3ED}\u{1F3E0}\u{1F3E6}\u{1F3E2}\u{1F3F0}\u{1F310}]/u;
+
+// Unicode 框线字符（用于流程图检测）
+const BOX_DRAWING_RE = /[\u2500-\u257F]/;
+
+// ============================================================
+// Finds 收集（统一扁平结构：每个问题一条记录）
+// ============================================================
+const findings = [];
+let totalFiles = 0;
+let totalErrors = 0;
+let totalWarnings = 0;
+
+function addFinding(opts) {
+  const {
+    file = '',
+    lang = '',
+    rule = 'GLOBAL',
+    severity = 'error',
+    line = 0,
+    text = '',
+    description = '',
+  } = opts;
+
+  findings.push({ file, lang, rule, severity, line, text, description });
+
+  if (severity === 'error') totalErrors++;
+  else totalWarnings++;
+}
+
+// ============================================================
+// 规则实现
+// ============================================================
+
+/**
+ * R01: heading-excessive-newlines
+ * 标题之间不应有过多连续空行（连续 3 行及以上空白）
+ * 当两个标题之间没有任何正文内容时，最多允许 1 个空行
+ */
+function checkR01(content, relPath, lang) {
+  const lines = content.split('\n');
+  let inFrontmatter = false;
+  let inCodeBlock = false;
+
+  // 检测连续 3+ 空行
+  let blankRun = 0;
+  for (let i = 0; i < lines.length; i++) {
+    const trimmed = lines[i].trim();
+
+    if (/^---\s*$/.test(trimmed)) {
+      if (!inFrontmatter) { inFrontmatter = true; continue; }
+      inFrontmatter = false; continue;
+    }
+    if (/^```/.test(trimmed)) { inCodeBlock = !inCodeBlock; continue; }
+    if (inFrontmatter || inCodeBlock) { blankRun = 0; continue; }
+
+    if (trimmed === '') {
+      blankRun++;
+    } else {
+      if (blankRun > 2) {
+        addFinding({
+          file: relPath, lang,
+          rule: 'R01', severity: 'error',
+          line: i + 1,
+          text: `第 ${i - blankRun + 1}-${i} 行连续 ${blankRun} 个空行`,
+          description: `发现连续 ${blankRun} 个空行（最多允许 2 个连续空行）`,
+        });
+      }
+      blankRun = 0;
+    }
+  }
+}
+
+/**
+ * R02: list-excessive-newlines
+ * 列表项之间的空行不应超过 1 行
+ */
+function checkR02(content, relPath, lang) {
+  const lines = content.split('\n');
+  let inFrontmatter = false;
+  let inCodeBlock = false;
+
+  for (let i = 0; i < lines.length; i++) {
+    const trimmed = lines[i].trim();
+
+    if (/^---\s*$/.test(trimmed)) {
+      if (!inFrontmatter) { inFrontmatter = true; continue; }
+      inFrontmatter = false; continue;
+    }
+    if (/^```/.test(trimmed)) { inCodeBlock = !inCodeBlock; continue; }
+    if (inFrontmatter || inCodeBlock) continue;
+
+    const isListItem = /^[\s]*[-*]\s/.test(trimmed) || /^[\s]*\d+\.\s/.test(trimmed);
+    if (!isListItem) continue;
+
+    let blankCount = 0;
+    let j = i + 1;
+    while (j < lines.length) {
+      const nt = lines[j].trim();
+      if (nt === '') { blankCount++; j++; continue; }
+      const isNextLi = /^[\s]*[-*]\s/.test(nt) || /^[\s]*\d+\.\s/.test(nt);
+      if (isNextLi && blankCount > 1) {
+        addFinding({
+          file: relPath,
+          lang,
+          rule: 'R02',
+          severity: 'error',
+          line: j + 1,
+          text: `"${trimmed.slice(0, 40)}…" → 下一列表项`,
+          description: `列表项间有 ${blankCount} 个空行（最多 1 行）`,
+        });
+      }
+      break;
+    }
+  }
+}
+
+/**
+ * R03: emoji-list-inline
+ * Emoji 图形列表项应分行，不应混在一行
+ */
+function checkR03(content, relPath, lang) {
+  const lines = content.split('\n');
+  let inFrontmatter = false;
+  let inCodeBlock = false;
+
+  for (let i = 0; i < lines.length; i++) {
+    const trimmed = lines[i].trim();
+    if (/^---\s*$/.test(trimmed)) {
+      if (!inFrontmatter) { inFrontmatter = true; continue; }
+      inFrontmatter = false; continue;
+    }
+    if (/^```/.test(trimmed)) { inCodeBlock = !inCodeBlock; continue; }
+    if (inFrontmatter || inCodeBlock) continue;
+    if (/^#/.test(trimmed) || /^[\s]*[-*]\s/.test(trimmed) || /^[\s]*\d+\.\s/.test(trimmed)) continue;
+
+    const emojis = [];
+    let match;
+    const re = new RegExp(LIST_EMOJI_RE.source, 'gu');
+    while ((match = re.exec(trimmed)) !== null) {
+      emojis.push({ index: match.index });
+    }
+
+    // 多个 emoji 且间距 >5 字符 = 疑似内联列表
+    if (emojis.length >= 2) {
+      const spaced = emojis.filter((e, idx) => idx === 0 || e.index - emojis[idx - 1].index > 5);
+      if (spaced.length >= 2) {
+        addFinding({
+          file: relPath,
+          lang,
+          rule: 'R03',
+          severity: 'error',
+          line: i + 1,
+          text: trimmed.slice(0, 80),
+          description: `发现 ${emojis.length} 个 emoji 标记混在一行，每个应独占一行`,
+        });
+      }
+    }
+  }
+}
+
+/**
+ * R04: hash-heading-syntax
+ * 标题语法错误（缺空格、不用 # 或 ####+）
+ */
+function checkR04(content, relPath, lang) {
+  const lines = content.split('\n');
+  let inFrontmatter = false;
+  let inCodeBlock = false;
+
+  for (let i = 0; i < lines.length; i++) {
+    const trimmed = lines[i].trim();
+    if (/^---\s*$/.test(trimmed)) {
+      if (!inFrontmatter) { inFrontmatter = true; continue; }
+      inFrontmatter = false; continue;
+    }
+    if (/^```/.test(trimmed)) { inCodeBlock = !inCodeBlock; continue; }
+    if (inFrontmatter || inCodeBlock) continue;
+    if (!trimmed.startsWith('#')) continue;
+
+    // `# Text` — 单个 #（不支持 h1）
+    if (/^# (?!#)/.test(trimmed)) {
+      addFinding({
+        file: relPath, lang,
+        rule: 'R04', severity: 'error',
+        line: i + 1,
+        text: trimmed.slice(0, 80),
+        description: '使用单个 "# "，应改为 "## " 或 "### "',
+      });
+      continue;
+    }
+    // `####+...` — 4 个以上 #
+    if (/^#{4,}\s/.test(trimmed)) {
+      addFinding({
+        file: relPath, lang,
+        rule: 'R04', severity: 'error',
+        line: i + 1,
+        text: trimmed.slice(0, 80),
+        description: '使用 4 个以上 "#"，只支持 "## " 和 "### "',
+      });
+      continue;
+    }
+    // `##Text` 或 `###Text` — 缺少空格（# 后直接跟非空白非 # 字符）
+    if (/^#{2,3}[^\s#]/.test(trimmed)) {
+      addFinding({
+        file: relPath, lang,
+        rule: 'R04', severity: 'error',
+        line: i + 1,
+        text: trimmed.slice(0, 80),
+        description: '##/### 后缺少空格',
+      });
+      continue;
+    }
+  }
+}
+
+/**
+ * R05: char-flowchart
+ * 禁止字符类流程图/路线图
+ */
+function checkR05(content, relPath, lang) {
+  const lines = content.split('\n');
+
+  // 检测包含框线字符的代码块
+  const codeBlockRegex = /```[\s\S]*?```/g;
+  let match;
+  while ((match = codeBlockRegex.exec(content)) !== null) {
+    const codeLines = match[0].split('\n');
+    let boxCount = 0;
+    for (const ln of codeLines) {
+      if (BOX_DRAWING_RE.test(ln)) boxCount++;
+    }
+    if (boxCount >= 3) {
+      const preLines = content.slice(0, match.index).split('\n');
+      addFinding({
+        file: relPath, lang,
+        rule: 'R05', severity: 'error',
+        line: preLines.length,
+        text: `代码块含 ${boxCount} 行框线字符`,
+        description: '代码块内含字符画流程图/路线图（使用 ┌┐└┘│─ 等），应改用 Mermaid 或 SVG',
+      });
+    }
+  }
+
+  // 非代码块正文中的 box-drawing 字符
+  const withoutCode = content.replace(/```[\s\S]*?```/g, '');
+  const nonCodeLines = withoutCode.split('\n');
+  let boxCount = 0;
+  let firstLine = -1;
+  for (let i = 0; i < nonCodeLines.length; i++) {
+    if (BOX_DRAWING_RE.test(nonCodeLines[i])) {
+      boxCount++;
+      if (firstLine === -1) firstLine = i + 1;
+    }
+  }
+  if (boxCount >= 3) {
+    addFinding({
+      file: relPath, lang,
+      rule: 'R05', severity: 'error',
+      line: firstLine,
+      text: `正文含 ${boxCount} 行框线字符`,
+      description: '正文中出现字符画流程图/路线图',
+    });
+  }
+}
+
+/**
+ * R06: missing-contact-ending
+ * 文章末尾缺少联系我们/免费评估链接
+ */
+function checkR06(content, relPath, lang) {
+  const lines = content.trim().split('\n');
+  const tailLines = lines.slice(-10);
+
+  // 语言无关检测：末尾 10 行内是否存在指向 /packages/ 或 /quote/ 的链接
+  let hasCta = false;
+
+  for (const line of tailLines) {
+    const linkUrl = line.match(/\]\(([^)]+)\)/)?.[1] || '';
+    if (!linkUrl) continue;
+
+    if (/\/packages\/|\/quote\//.test(linkUrl)) {
+      hasCta = true;
+      break;
+    }
+  }
+
+  if (!hasCta) {
+    addFinding({
+      file: relPath, lang,
+      rule: 'R06', severity: 'error',
+      line: lines.length,
+      text: '缺少"联系我们/免费评估"结尾链接',
+      description: '文章末尾需包含指向 /packages/ 或 /quote/ 的 CTA 链接，例如 "[联系我们](/locale/packages/) 获取免费评估"',
+    });
+  }
+}
+
+/**
+ * R07: missing-48-translation
+ * 文章在所有 48 个语言中缺少翻译版本
+ */
+function checkR07(contentDir) {
+  const enDir = path.join(contentDir, 'en');
+  if (!fs.existsSync(enDir)) return;
+
+  const enSlugs = fs.readdirSync(enDir)
+    .filter(f => f.endsWith('.mdx'))
+    .map(f => f.replace(/\.mdx$/, ''));
+
+  for (const slug of enSlugs) {
+    const missing = [];
+    for (const locale of LOCALES) {
+      if (!fs.existsSync(path.join(contentDir, locale, `${slug}.mdx`))) {
+        missing.push(locale);
+      }
+    }
+    if (missing.length > 0) {
+      addFinding({
+        file: `content/en/${slug}.mdx`,
+        lang: 'en',
+        rule: 'R07',
+        severity: 'error',
+        line: 1,
+        text: `${slug}`,
+        description: `缺少 ${missing.length} 个语言版本: ${missing.join(', ')}`,
+      });
+    }
+  }
+}
+
+/**
+ * R08: title-punctuation
+ * 文章标题不应含冒号/破折号/连字符
+ */
+function checkR08(content, relPath, lang) {
+  const titleRaw = content.match(/^title:\s*"(.+?)"/m);
+  if (!titleRaw) return;
+  const title = titleRaw[1];
+  const titleLineNum = content.split('\n').findIndex(l => l.startsWith('title:')) + 1;
+
+  if (/[:：]/.test(title)) {
+    addFinding({
+      file: relPath, lang,
+      rule: 'R08', severity: 'error',
+      line: titleLineNum,
+      text: `含半角/全角冒号: "${title.slice(0, 60)}"`,
+      description: '文章标题不应包含半角或全角冒号',
+    });
+  }
+
+  if (/[—–]/.test(title)) {
+    addFinding({
+      file: relPath, lang,
+      rule: 'R08', severity: 'error',
+      line: titleLineNum,
+      text: `含破折号: "${title.slice(0, 60)}"`,
+      description: '文章标题不应包含破折号（— 或 –）',
+    });
+  }
+
+  if (/-/.test(title)) {
+    addFinding({
+      file: relPath, lang,
+      rule: 'R08', severity: 'error',
+      line: titleLineNum,
+      text: `含连字符: "${title.slice(0, 60)}"`,
+      description: '文章标题不应包含连字符 -',
+    });
+  }
+}
+
+/**
+ * R09: category-i18n
+ * 文章分类标签需要 48 语言翻译键
+ * 每个唯一分类生成一条汇总报告，列出所有缺失翻译的语言
+ */
+function checkR09(contentDir, msgDir) {
+  // 只从英文版收集基础分类（作为基线）
+  const enDir = path.join(contentDir, 'en');
+  if (!fs.existsSync(enDir)) return;
+
+  const cats = new Set();
+  for (const f of fs.readdirSync(enDir).filter(f => f.endsWith('.mdx'))) {
+    const c = fs.readFileSync(path.join(enDir, f), 'utf-8');
+    const cat = c.match(/^category:\s*"(.+?)"/m)?.[1];
+    if (cat) cats.add(cat);
+  }
+
+  for (const cat of cats) {
+    const key = 'cat_' + cat.replace(/[^a-zA-Z0-9]/g, '_').replace(/_+/g, '_').replace(/^_|_$/g, '');
+    const missingLangs = [];
+
+    for (const locale of LOCALES) {
+      const mf = path.join(msgDir, `${locale}.json`);
+      if (!fs.existsSync(mf)) {
+        missingLangs.push(`${locale}(file missing)`);
+        continue;
+      }
+      const msgs = JSON.parse(fs.readFileSync(mf, 'utf-8'));
+      if (!(msgs?.Blog?.[key])) {
+        missingLangs.push(locale);
+      }
+    }
+
+    if (missingLangs.length > 0) {
+      addFinding({
+        file: `messages/*.json`,
+        lang: '-',
+        rule: 'R09',
+        severity: 'error',
+        line: 1,
+        text: `分类 "${cat}" → 键 "Blog.${key}" 在 ${missingLangs.length} 个语言中缺失`,
+        description: `需要在以下语言的 Blog 命名空间添加 "${key}" 键: ${missingLangs.join(', ')}`,
+      });
+    }
+  }
+}
+
+/**
+ * R10: date-consistency
+ * 同一文章的所有语言版本中的 date 字段必须一致
+ */
+function checkR10(contentDir) {
+  const slugs = {};
+  const LOCALES = [
+    "en","zh","es","fr","de","ja","pt","ru",
+    "ar","ko","it","nl","tr","vi","id","th",
+    "hi","pl","sv","el","cs","ro","hu","fi",
+    "da","no","uk","bg","hr","sr","sk","sl",
+    "ms","ka","he","sw","bn","ca",
+    "fa","ur","ta","af","sq","az","hy","be","ne","si"
+  ];
+
+  for (const loc of LOCALES) {
+    const dir = path.join(contentDir, loc);
+    if (!fs.existsSync(dir)) continue;
+    for (const f of fs.readdirSync(dir).filter(f => f.endsWith(".mdx"))) {
+      const c = fs.readFileSync(path.join(dir, f), "utf-8");
+      const m = c.match(/^date:\s*"(.+?)"/m);
+      if (m) {
+        const slug = f.replace(/\.mdx$/, "");
+        if (!slugs[slug]) slugs[slug] = {};
+        slugs[slug][loc] = m[1];
+      }
+    }
+  }
+
+  for (const [slug, dates] of Object.entries(slugs)) {
+    const uniqueDates = [...new Set(Object.values(dates))];
+    if (uniqueDates.length > 1) {
+      const first = uniqueDates[0];
+      const mismatches = Object.entries(dates)
+        .filter(([, d]) => d !== first)
+        .map(([loc, d]) => `${loc}:${d}`);
+      addFinding({
+        file: `apps/blog/content/*/${slug}.mdx`,
+        lang: "-",
+        rule: "R10",
+        severity: "error",
+        text: `日期不一致 - 多数为 "${first}", 差异: ${mismatches.join(", ")}`,
+      });
+    }
+  }
+}
+
+// ============================================================
+// 扫描主逻辑
+// ============================================================
+function runAllChecks() {
+  const contentDir = getContentDir(project);
+  if (!contentDir || !fs.existsSync(contentDir)) {
+    console.log(`⚠️  Content directory for "${project}" not found.`);
+    return;
+  }
+
+  const langs = fs.readdirSync(contentDir).filter(d =>
+    fs.statSync(path.join(contentDir, d)).isDirectory(),
+  );
+
+  // ── 全局规则（R07, R09）──
+  if (!filterLang) {
+    if (!filterRule || filterRule === 'R07') checkR07(contentDir);
+    if (!filterRule || filterRule === 'R09') {
+      const msgDir = getBlogMessagesDir();
+      if (fs.existsSync(msgDir)) checkR09(contentDir, msgDir);
+    }
+    if (!filterRule || filterRule === 'R10') checkR10(contentDir);
+  }
+
+  // ── 每文件规则（R01-R06, R08）──
+  for (const lang of langs) {
+    if (filterLang && lang !== filterLang) continue;
+
+    const rulesToRun = ['R01', 'R02', 'R03', 'R04', 'R05', 'R06', 'R08'];
+    // 如果指定了 filterRule，只运行那一条
+    const activeRules = filterRule
+      ? (rulesToRun.includes(filterRule) ? [filterRule] : [])
+      : rulesToRun;
+
+    if (activeRules.length === 0) continue;
+
+    const langDir = path.join(contentDir, lang);
+    const files = fs.readdirSync(langDir).filter(f => f.endsWith('.mdx'));
+
+    for (const file of files) {
+      const filePath = path.join(langDir, file);
+      const content = fs.readFileSync(filePath, 'utf-8');
+      const relPath = path.relative(repoRoot, filePath);
+      totalFiles++;
+
+      for (const ruleId of activeRules) {
+        switch (ruleId) {
+          case 'R01': checkR01(content, relPath, lang); break;
+          case 'R02': checkR02(content, relPath, lang); break;
+          case 'R03': checkR03(content, relPath, lang); break;
+          case 'R04': checkR04(content, relPath, lang); break;
+          case 'R05': checkR05(content, relPath, lang); break;
+          case 'R06': checkR06(content, relPath, lang); break;
+          case 'R08': checkR08(content, relPath, lang); break;
+        }
+      }
+    }
+  }
+}
+
+// ============================================================
+// 输出
+// ============================================================
+function printResults() {
+  console.log(`\n═══════════════════════════════════════════════`);
+  console.log(`  文章 MDX 内容质量检查 (${project})`);
+  console.log(`═══════════════════════════════════════════════\n`);
+
+  if (findings.length === 0) {
+    console.log('✅ 未发现问题');
+    console.log(`  扫描文件: ${totalFiles}`);
+    return true;
+  }
+
+  // 按规则分组
+  const byRule = {};
+  for (const f of findings) {
+    const r = f.rule || 'GLOBAL';
+    if (!byRule[r]) byRule[r] = [];
+    byRule[r].push(f);
+  }
+
+  const RULE_META = {
+    R01: { severity: 'error', desc: '标题间过多空行（最多 1 行）' },
+    R02: { severity: 'error', desc: '列表项间过多空行（最多 1 行）' },
+    R03: { severity: 'error', desc: 'Emoji 图形列表项混在一行' },
+    R04: { severity: 'error', desc: '标题语法错误（# 或 ####+ 或缺少空格）' },
+    R05: { severity: 'error', desc: '禁止字符画流程图/路线图' },
+    R06: { severity: 'error', desc: '缺少联系我们/免费评估结尾' },
+    R07: { severity: 'error', desc: '48 语言翻译版本不完整' },
+    R08: { severity: 'error', desc: '标题含冒号/破折号/连字符' },
+    R09: { severity: 'error', desc: '分类标签缺少 48 语言翻译键' },
+    R10: { severity: 'error', desc: '文章日期在 48 语言中不一致' },
+  };
+
+  for (const [ruleId, items] of Object.entries(byRule)) {
+    const meta = RULE_META[ruleId];
+    const icon = meta?.severity === 'error' ? '❌' : '⚠️';
+    const errCount = items.filter(i => i.severity === 'error').length;
+    const warnCount = items.filter(i => i.severity === 'warning').length;
+
+    console.log(`\n┌─ ${icon} [${ruleId}] ${meta?.desc || ''}`);
+    console.log(`│  共 ${items.length} 条（${errCount} 错误${warnCount > 0 ? `, ${warnCount} 警告` : ''}）`);
+
+    // 每个规则最多显示 20 条
+    const displayItems = items.length > 20 ? items.slice(0, 20) : items;
+    for (const item of displayItems) {
+      const loc = item.line ? `:${item.line}` : '';
+      console.log(`│  ${icon} ${item.file}${loc}`);
+      if (item.text) console.log(`│     ${item.text}`);
+    }
+    if (items.length > 20) {
+      console.log(`│  … 还有 ${items.length - 20} 条`);
+    }
+    console.log(`└─`);
+  }
+
+  console.log(`\n  扫描文件: ${totalFiles}  错误: ${totalErrors}  警告: ${totalWarnings}`);
+  return totalErrors === 0;
+}
+
+// ============================================================
+// 主入口
+// ============================================================
+runAllChecks();
+const passed = printResults();
+console.log('');
+
+if (isCi && !passed) {
+  process.exit(1);
+}

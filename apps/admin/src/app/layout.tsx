@@ -5,10 +5,11 @@ import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import {
-  LayoutDashboard, Users, Repeat, FileText, ClipboardList, CreditCard, LogOut, Menu, X, ChevronLeft, ChevronRight
+  LayoutDashboard, Users, Repeat, FileText, ClipboardList, CreditCard, LogOut, Menu, X, ChevronLeft, ChevronRight, Lock
 } from "lucide-react";
 import { getCurrentAdmin, logout, AdminUser } from "@/lib/auth";
 import { buildAdminT } from "@/lib/i18n";
+import ChangePasswordModal from "@/components/ChangePasswordModal";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -18,6 +19,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const t = buildAdminT();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showChangePassword, setShowChangePassword] = useState(false);
+  const [toast, setToast] = useState<{ type: "success" | "error"; message: string } | null>(null);
+
+  const showToast = (type: "success" | "error", message: string) => {
+    setToast({ type, message });
+    setTimeout(() => setToast(null), 4000);
+  };
 
   const NAV_ITEMS = [
     { href: "/dashboard", label: t("nav.dashboard"), icon: LayoutDashboard },
@@ -149,10 +157,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </h2>
             </div>
 
-            <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
               <span style={{ fontSize: "0.875rem", color: "#6b7280" }}>
                 {admin?.name || admin?.username}
               </span>
+              <button className="btn btn-outline" style={{ padding: "0.375rem 0.5rem", fontSize: "0.8rem" }} onClick={() => setShowChangePassword(true)} title={t("topbar.changePassword")}>
+                <Lock size={14} />
+                <span style={{ marginLeft: "0.25rem" }}>{t("topbar.changePassword")}</span>
+              </button>
               <button className="btn btn-outline" style={{ padding: "0.375rem 0.75rem" }} onClick={handleLogout}>
                 <LogOut size={16} />
               {t("topbar.logout")}
@@ -168,6 +180,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* Mobile overlay backdrop */}
         <div className={`sidebar-overlay ${mobileMenuOpen ? "visible" : ""}`} onClick={() => setMobileMenuOpen(false)} />
+
+        {/* Change Password Modal */}
+        <ChangePasswordModal
+          show={showChangePassword}
+          onClose={() => setShowChangePassword(false)}
+          onResult={showToast}
+        />
+
+        {/* Toast notification */}
+        {toast && (
+          <div className={`toast toast-${toast.type}`} style={{ position: "fixed", top: "1rem", right: "1rem", zIndex: 999 }}>
+            {toast.message}
+          </div>
+        )}
       </body>
     </html>
   );

@@ -35,7 +35,7 @@ cd apps/blog   && npx next build   # 博客站
 | Portal | `trade-web-portal` | `apps/portal` | — | trade-web-portal.pages.dev |
 | Blog | `trade-web-blog` | `apps/blog` | — | trade-web-blog.pages.dev |
 
-**当前阶段：** 开发模式，使用 CF 自带的 `.pages.dev` 域名。未来将 `sinotradecompliance.com` CNAME 到 `trade-web-site.pages.dev` 后手动切换。
+**当前阶段：** 已切换至正式域名 `sinotradecompliance.com`（2026-06-09）。生产部署由 GitHub push → CF Pages 自动构建部署。
 
 ### CF Pages 构建设置
 
@@ -80,18 +80,24 @@ curl -s -X POST "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/
 
 ### 主站代理转发
 
-主站 `functions/_middleware.ts`（CF Pages 边缘 Worker）处理子站代理：
+主站 `functions/_middleware.ts`（CF Pages 边缘 Worker）处理子站代理。**统一策略：CSS 改写专用路由 + JS catch-all 兜底。**
 
-| 模式 | 操作 |
-|------|------|
-| `/{locale}/c/*` | Worker 转发到 portal（保留 locale 前缀）|
-| `/{locale}/blog/*` | Worker 转发到 blog（保留 locale 前缀）|
-| `/c/`（裸路径） | Worker 根据浏览器语言 302 → `/{locale}/c/` |
-| `/blog/`（裸路径） | Worker 根据浏览器语言 302 → `/{locale}/blog/` |
-| `/`（根路径） | Worker 根据浏览器语言 302 → `/{locale}/` |
-| `/c/_next/static/*` | Worker 直接 fetch portal 的静态资源 |
-| `/blog/_next/static/*` | Worker 直接 fetch blog 的静态资源 |
-| `/api/*` | Worker 转发到 portal 的 Pages Functions |
+| 模式 | 操作 | 说明 |
+|------|------|------|
+| `/{locale}/c/*` | 转发到 portal | HTML 中 CSS 路径改写为 `/c/_next/static/*` + 注入 search widget + ensureNextF |
+| `/{locale}/blog/*` | 转发到 blog | CSS 路径改写为 `/blog/_next/static/*` + 注入 + ensureNextF |
+| `/admin/*` | 转发到 admin | basePath 原生隔离，CSS/JS 路径天然带 `/admin/` 前缀 |
+| `/api/admin/*` | 转发到 admin API | |
+| `/api/*` | 转发到 portal Pages Functions | |
+| `/c/_next/static/*` | `proxySubSiteAsset` 直连 portal | CSS 等非 script 资源 |
+| `/blog/_next/static/*` | `proxySubSiteAsset` 直连 blog | |
+| `/admin/_next/static/*` | `proxySubSiteAsset` 直连 admin | basePath 已内置 |
+| `/_next/static/chunks/*` | catch-all 试 portal → blog | JS chunk（script 路径不改写，因为 Turbopack N() 硬编码） |
+| `__next._tree.txt` | 返回 204 | SSG 无 RSC 服务器，避免 Worker 反复 404 |
+| `/c/`（裸路径） | 302 → `/{locale}/c/` | 浏览器语言检测 |
+| `/blog/`（裸路径） | 302 → `/{locale}/blog/` | |
+| `/`（根路径） | 302 → `/{locale}/` | |
+| www / .pages.dev | 301 → `sinotradecompliance.com` | 规范主机名 |
 
 ### Portal D1 配置
 1. CF Dashboard → Workers & Pages → trade-web-portal → Settings → Functions

@@ -190,6 +190,10 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
 
   const headings = parseHeadings(raw);
 
+  /** Convert raw category string to its translation key. */
+  const categoryKey = (cat: string): string =>
+    'cat_' + cat.replace(/-/g, '_').replace(/ & /g, '_').replace(/ /g, '_');
+
   // Safety: replace any hardcoded /en/ links in MDX content with current locale
   let safeContent = content;
   if (locale !== 'en') {
@@ -329,7 +333,7 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
                   <span>{tb('author', 'David Zhang')}</span>
                 </div>
                 {category && (<><span className="text-white/30">•</span>
-                  <span className="inline-block px-3 py-1 text-xs font-semibold text-primary-navy bg-[#B8960C] rounded-full">{category}</span>
+                  <span className="inline-block px-3 py-1 text-xs font-semibold text-primary-navy bg-[#B8960C] rounded-full">{tb(categoryKey(category), category)}</span>
                 </>)}
               </div>
               <div className="mt-4">
@@ -489,7 +493,7 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
                             <div className="flex items-center gap-2 mt-1 text-xs text-[#5F6F7F]">
                               {rp.date && <time dateTime={rp.date}>{formatDate(rp.date, locale)}</time>}
                               {rp.date && <span>•</span>}
-                              {rp.category && <span className="px-2 py-0.5 bg-primary-navy/10 rounded-full text-[#1B365D]">{rp.category}</span>}
+                              {rp.category && <span className="px-2 py-0.5 bg-primary-navy/10 rounded-full text-[#1B365D]">{tb(categoryKey(rp.category), rp.category)}</span>}
                               <span>{rp.readTime} {tb('readTime', 'min read')}</span>
                             </div>
                           </div>

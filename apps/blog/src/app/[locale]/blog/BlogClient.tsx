@@ -6,6 +6,7 @@ import type { PostMeta } from '@/lib/posts';
 interface Props {
   posts: PostMeta[];
   categories: string[];
+  categoryLabels: Record<string, string>;
   locale: string;
   readMoreText: string;
   readTimeText: string;
@@ -25,7 +26,7 @@ function formatBlogDate(dateStr: string, locale: string): string {
   }
 }
 
-export default function BlogClient({ posts, categories, locale, readMoreText, readTimeText, noPostsText, allText }: Props) {
+export default function BlogClient({ posts, categories, categoryLabels, locale, readMoreText, readTimeText, noPostsText, allText }: Props) {
   const [category, setCategory] = useState<string | null>(null);
   const filtered = category ? posts.filter(p => p.category === category) : posts;
 
@@ -50,7 +51,7 @@ export default function BlogClient({ posts, categories, locale, readMoreText, re
                 category === cat ? 'bg-[#B8960C] text-white' : 'bg-[#F4F6F9] text-[#333333] hover:bg-primary-navy/10'
               }`}
             >
-              {cat}
+              {categoryLabels[cat] || cat}
             </button>
           ))}
         </div>
@@ -80,7 +81,7 @@ export default function BlogClient({ posts, categories, locale, readMoreText, re
                     {post.date && <span>•</span>}
                     <span>{post.readTime} {readTimeText}</span>
                     <span>•</span>
-                    <span className="font-semibold text-primary-navy">{post.category}</span>
+                    <span className="font-semibold text-primary-navy">{categoryLabels[post.category] || post.category}</span>
                   </div>
                   <span className="text-sm font-semibold text-[#B8960C] group-hover:text-[#1B365D] transition-colors">
                     {readMoreText}

@@ -252,6 +252,14 @@ const STATIC_SEGMENT_LABELS: Record<string, string> = {
   // ── Industry pages ──
   'skincare-cosmetics': 'segment.skincare',
   'medical-devices': 'segment.medicalDevices',
+  'dairy-milk-products': 'segment.dairyMilk',
+  'meat-seafood': 'segment.meatSeafood',
+  'wine-spirits': 'segment.wineSpirits',
+  'pet-food': 'segment.petFood',
+  'health-supplements': 'segment.healthSupplements',
+  'baby-maternal': 'segment.babyMaternal',
+  'consumer-electronics': 'segment.consumerElectronics',
+  'cross-border-ecommerce': 'segment.crossBorderEcommerce',
 };
 
 /** Parse a URL path into a breadcrumb-like segment array (locale-aware) */
@@ -712,7 +720,9 @@ function pathToBreadcrumb(path: string): string {
               <div>
                 {_a.pageData.slice(0, 30).map((p, i) => (
                   <div key={p.path} style={{ display: "flex", justifyContent: "space-between", padding: "0.3rem 0", fontSize: "0.8rem", borderBottom: i < 29 ? "1px solid #f3f4f6" : "none" }}>
-                    <span style={{ color: "#374151", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{p.path}</span>
+                    <span style={{ color: "#374151", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }} title={p.path}>
+                      {pathToBreadcrumb(p.path)}
+                    </span>
                     <span style={{ fontWeight: 600, color: "#1B365D", whiteSpace: "nowrap", marginLeft: "1rem" }}>{p.count}</span>
                   </div>
                 ))}

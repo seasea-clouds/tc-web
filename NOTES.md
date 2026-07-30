@@ -34,20 +34,6 @@
 
 翻译调用 `/root/projects/translate-tool/`，双渠道 Google Translate 免费无需 Key。
 
-### 部署验证
-
-构建时自动注入时间戳到页面 HTML：
-```html
-<meta name="build-commit" content="{commit_sha}" />
-<meta name="build-time" content="{ISO_timestamp}" />
-```
-
-验证方法：
-```bash
-curl -s https://sinotradecompliance.com/en/industries/ | grep -oP 'build-commit" content="[^"]*"'
-git log --oneline -1
-```
-
 ## Portal
 
 ### URL 架构
@@ -79,10 +65,23 @@ Portal 通过主站边缘 Worker 代理到 `/{locale}/c/*` 路径访问。
 - CREEM_PRODUCT_ID_SINGLE / CREEM_PRODUCT_ID_SUBSCRIBE
 - RESEND_API_KEY / EMAIL_FROM / JWT_SECRET / NODE_VERSION=22
 
-### ⚠️ 当前已知问题
+### 静态资源代理架构（统一方案）
 
-#### 静态资源代理
-主站 Worker 将 HTML 中的 `/_next/static/*` 重写为 `/c/_next/static/*`，然后代理到 portal 独立域名取资源。
+三站统一使用同一种代理策略：**CSS 改写专用路由 + JS catch-all 兜底**。
+
+| 站 | CSS 路径 | JS 路径 | 原因 |
+|---|---|---|---|
+| **Portal** `/c/` | `<link href>` → 改写为 `/c/_next/static/*` → `proxySubSiteAsset` 直连 portal upstream | `<script src>` 保持 `/_next/static/chunks/*` → catch-all 先试 portal | Turbopack 运行时 `N()` 函数用硬编码基路径加载 JS chunk，改写会导致 hydration 失败 |
+| **Blog** `/blog/` | 同上，前缀 `/blog/` → `proxySubSiteAsset` 直连 blog upstream | 同上，catch-all 先试 portal 后试 blog | 同上 |
+| **Admin** `/admin/` | 原生 `basePath='/admin'`，HTML 路径天然带 `/admin/` 前缀 → `proxySubSiteAsset` 直连 | 同上，但不走 catch-all（basePath 天然隔离） | Admin 无需 locale 路由，basePath 是最干净的方案 |
+
+**核心规则：**
+- `<link href="/_next/static/...">` → 改写为 `/{prefix}/_next/static/...`（CSS、preload as=style 等非 script 资源）
+- `<link rel="preload" as="script">` → **不改写**（预加载 URL 必须匹配实际 script 标签）
+- `<script src="/_next/static/chunks/...">` → **不改写**（Turbopack N() 缓存键依赖原始路径）
+- `/_next/static/chunks/*` → catch-all 自动路由到正确的 upstream（JS 资源必须经过此通道）
+
+### 已知问题
 
 #### Creem API Key 更新需重新部署
 CF Pages secret 必须先 delete 再 put 才能生效，之后需要触发新 deployment。

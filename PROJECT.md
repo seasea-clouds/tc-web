@@ -22,7 +22,12 @@ SinoTrade 品牌的所有网站代码统一放在此 monorepo 中。三个独立
 
 三站在 CF Pages 各自独立部署，通过主站的 `functions/_middleware.ts`（边缘 Worker）做代理转发。所有导航/页脚/语言切换由 `@trade/ui` 共享组件实现，用户感知上是一个完整的网站。
 
-**当前阶段：** 已切换至正式域名 `sinotradecompliance.com`（2026-06-09）。三站通过 CF Pages 各自动部署，主站 Worker 统一代理门户和博客。
+**代理策略（统一方案）：** CSS 路径改写 + JS catch-all 兜底。
+- `<link href>` 非 script 资源 → 改写为 `/{prefix}/_next/static/*` → `proxySubSiteAsset` 直连上游
+- `<script src>` 和 `<link preload as="script">` → **不改写**（Turbopack N() 硬编码限制）
+- `/_next/static/chunks/*` → catch-all 依次尝试 portal → blog
+
+**当前阶段：** 已切换至正式域名 `sinotradecompliance.com`（2026-06-09）。三站通过 CF Pages 各自动部署，主站 Worker 统一代理门户、博客和管理后台。
 
 ## 子项目
 
@@ -36,7 +41,7 @@ SinoTrade 品牌的所有网站代码统一放在此 monorepo 中。三个独立
 - **多语言：** `[locale]` 服务端路由，48 语言 SSG（静态导出）
 - **结构：** `src/`（页面组件）| `messages/`（48 语言翻译）| `content/blog/`（博客 MDX）| `public/`（静态资源）
 - **SSG 输出目录：** `apps/site/out/`
-- **代理功能：** `functions/_middleware.ts` 负责将 `/c/` → portal、`/blog/` → blog 的请求转发
+- **代理功能：** `functions/_middleware.ts` 负责将 `/c/` → portal、`/blog/` → blog、`/admin/` → admin 的请求转发，以及子站静态资源代理
 
 ### 用户站 — portal
 - **目录：** `apps/portal/`
@@ -117,10 +122,7 @@ SinoTrade 品牌的所有网站代码统一放在此 monorepo 中。三个独立
 | 主站 | `/{locale}/...` | `/zh/services/gacc/` |
 | Portal | `/{locale}/c/...` | `/zh/c/check/gacc` |
 | Blog | `/{locale}/blog/...` | `/zh/blog/article-slug/` |
-| Admin（未来） | `/{locale}/admin/...` | `/zh/admin/` |
-
-Portal 不使用 `basePath`，Worker 代理透传完整路径。
-共享组件用 `freeCheckHref` prop 决定 Free Check 按钮的跳转。
+| Admin | `/{locale}/admin/...` | `/zh/admin/` |
 
 ## 部署方式
 
@@ -143,13 +145,23 @@ Portal 不使用 `basePath`，Worker 代理透传完整路径。
 ### 主站代理转发
 
 主站 `functions/_middleware.ts`（边缘 Worker）处理：
-1. `/{locale}/c/*` → 转发到 portal（保留 locale 前缀）
-2. `/{locale}/blog/*` → 转发到 blog（保留 locale 前缀）
-3. `/c/`（裸路径无 locale）→ 302 重定向到 `/{locale}/c/`（根据浏览器语言）
-4. `/blog/`（裸路径无 locale）→ 302 重定向到 `/{locale}/blog/`
-5. `/` 根路径 → 302 重定向到 `/{locale}/`（根据浏览器语言）
-6. `/_next/static/` 在 HTML 中被重写为 `/c/_next/static/`（portal）和 `/blog/_next/static/`（blog）
-7. `/api/*` → 转发到 portal 的 Pages Functions
+
+| 模式 | 操作 |
+|------|------|
+| `/{locale}/c/*` | 转发到 portal（HTML 中 CSS 路径改写为 `/c/_next/static/*` + 注入 search widget + ensureNextF）|
+| `/{locale}/blog/*` | 转发到 blog（CSS 路径改写为 `/blog/_next/static/*` + 注入 search widget + ensureNextF）|
+| `/admin/*` | 转发到 admin（basePath 原生隔离，不重写）|
+| `/api/admin/*` | 转发到 admin API |
+| `/api/*` | 转发到 portal Pages Functions |
+| `/c/_next/static/*` | `proxySubSiteAsset` 直连 portal 上游 |
+| `/blog/_next/static/*` | `proxySubSiteAsset` 直连 blog 上游 |
+| `/admin/_next/static/*` | `proxySubSiteAsset` 直连 admin 上游 |
+| `/_next/static/chunks/*` | catch-all 依次尝试 portal → blog，返回第一个 200 |
+| `__next._tree.txt` | 返回 204（SSG 无 RSC 服务器）|
+| `/c/`（裸路径） | 302 → `/{locale}/c/`（浏览器语言检测）|
+| `/blog/`（裸路径） | 302 → `/{locale}/blog/` |
+| `/`（根路径） | 302 → `/{locale}/` |
+| www / .pages.dev | 301 → `sinotradecompliance.com`
 
 ### 共享 UI 组件
 

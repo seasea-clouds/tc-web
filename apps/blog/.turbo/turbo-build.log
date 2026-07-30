@@ -1,62 +1,65 @@
 
-> @trade/blog@6.1.0 prebuild
+> @trade/blog@6.4.0 prebuild
 > node ../../packages/scripts/inject-version.mjs
 
-  @trade/blog: version already 6.1.0
+  (VERSION file absent, using package.json version 6.4.0)
+  @trade/blog: version already 6.4.0
 
-> @trade/blog@6.1.0 build
+> @trade/blog@6.4.0 build
 > node ../../packages/scripts/build-search-index.mjs && rm -rf .next/cache && next build && node ../../packages/scripts/ci-check.mjs --out-dir=out --ci
 
 Apps discovered: admin, blog, portal, site
 Generating search index for 48 locales...
-  af: 2324 items (6S + 8B + 39F + 2271C)
-  ar: 2324 items (6S + 8B + 39F + 2271C)
-  az: 2324 items (6S + 8B + 39F + 2271C)
-  be: 2324 items (6S + 8B + 39F + 2271C)
-  bg: 2324 items (6S + 8B + 39F + 2271C)
-  bn: 2324 items (6S + 8B + 39F + 2271C)
-  ca: 2324 items (6S + 8B + 39F + 2271C)
-  cs: 2324 items (6S + 8B + 39F + 2271C)
-  da: 2324 items (6S + 8B + 39F + 2271C)
-  de: 2324 items (6S + 8B + 39F + 2271C)
-  el: 2324 items (6S + 8B + 39F + 2271C)
-  en: 2324 items (6S + 8B + 39F + 2271C)
-  es: 2324 items (6S + 8B + 39F + 2271C)
-  fa: 2324 items (6S + 8B + 39F + 2271C)
-  fi: 2324 items (6S + 8B + 39F + 2271C)
-  fr: 2324 items (6S + 8B + 39F + 2271C)
-  he: 2324 items (6S + 8B + 39F + 2271C)
-  hi: 2324 items (6S + 8B + 39F + 2271C)
-  hr: 2324 items (6S + 8B + 39F + 2271C)
-  hu: 2324 items (6S + 8B + 39F + 2271C)
-  hy: 2324 items (6S + 8B + 39F + 2271C)
-  id: 2324 items (6S + 8B + 39F + 2271C)
-  it: 2324 items (6S + 8B + 39F + 2271C)
-  ja: 2324 items (6S + 8B + 39F + 2271C)
-  ka: 2324 items (6S + 8B + 39F + 2271C)
-  ko: 2324 items (6S + 8B + 39F + 2271C)
-  ms: 2324 items (6S + 8B + 39F + 2271C)
-  ne: 2324 items (6S + 8B + 39F + 2271C)
-  nl: 2324 items (6S + 8B + 39F + 2271C)
-  no: 2324 items (6S + 8B + 39F + 2271C)
-  pl: 2324 items (6S + 8B + 39F + 2271C)
-  pt: 2324 items (6S + 8B + 39F + 2271C)
-  ro: 2324 items (6S + 8B + 39F + 2271C)
-  ru: 2324 items (6S + 8B + 39F + 2271C)
-  si: 2324 items (6S + 8B + 39F + 2271C)
-  sk: 2324 items (6S + 8B + 39F + 2271C)
-  sl: 2324 items (6S + 8B + 39F + 2271C)
-  sq: 2324 items (6S + 8B + 39F + 2271C)
-  sr: 2324 items (6S + 8B + 39F + 2271C)
-  sv: 2324 items (6S + 8B + 39F + 2271C)
-  sw: 2324 items (6S + 8B + 39F + 2271C)
-  ta: 2324 items (6S + 8B + 39F + 2271C)
-  th: 2324 items (6S + 8B + 39F + 2271C)
-  tr: 2324 items (6S + 8B + 39F + 2271C)
-  uk: 2324 items (6S + 8B + 39F + 2271C)
-  ur: 2324 items (6S + 8B + 39F + 2271C)
-  vi: 2324 items (6S + 8B + 39F + 2271C)
-  zh: 2324 items (6S + 8B + 39F + 2271C)
+  af: 2325 items (6S + 9B + 39F + 2271C)
+  ar: 2325 items (6S + 9B + 39F + 2271C)
+  az: 2325 items (6S + 9B + 39F + 2271C)
+  be: 2325 items (6S + 9B + 39F + 2271C)
+  bg: 2325 items (6S + 9B + 39F + 2271C)
+  bn: 2325 items (6S + 9B + 39F + 2271C)
+  ca: 2325 items (6S + 9B + 39F + 2271C)
+  cs: 2325 items (6S + 9B + 39F + 2271C)
+  da: 2325 items (6S + 9B + 39F + 2271C)
+  de: 2325 items (6S + 9B + 39F + 2271C)
+  el: 2325 items (6S + 9B + 39F + 2271C)
+  en: 2325 items (6S + 9B + 39F + 2271C)
+  es: 2325 items (6S + 9B + 39F + 2271C)
+  fa: 2325 items (6S + 9B + 39F + 2271C)
+  fi: 2325 items (6S + 9B + 39F + 2271C)
+  fr: 2325 items (6S + 9B + 39F + 2271C)
+  he: FAILED - bad indentation of a sequence entry at line 8, column 64:
+     ... ינהל רישום יצרני מזון מיובא בחו"ל"
+                                         ^
+  hi: 2325 items (6S + 9B + 39F + 2271C)
+  hr: 2325 items (6S + 9B + 39F + 2271C)
+  hu: 2325 items (6S + 9B + 39F + 2271C)
+  hy: 2325 items (6S + 9B + 39F + 2271C)
+  id: 2325 items (6S + 9B + 39F + 2271C)
+  it: 2325 items (6S + 9B + 39F + 2271C)
+  ja: 2325 items (6S + 9B + 39F + 2271C)
+  ka: 2325 items (6S + 9B + 39F + 2271C)
+  ko: 2325 items (6S + 9B + 39F + 2271C)
+  ms: 2325 items (6S + 9B + 39F + 2271C)
+  ne: 2325 items (6S + 9B + 39F + 2271C)
+  nl: 2325 items (6S + 9B + 39F + 2271C)
+  no: 2325 items (6S + 9B + 39F + 2271C)
+  pl: 2325 items (6S + 9B + 39F + 2271C)
+  pt: 2325 items (6S + 9B + 39F + 2271C)
+  ro: 2325 items (6S + 9B + 39F + 2271C)
+  ru: 2325 items (6S + 9B + 39F + 2271C)
+  si: 2325 items (6S + 9B + 39F + 2271C)
+  sk: 2325 items (6S + 9B + 39F + 2271C)
+  sl: 2325 items (6S + 9B + 39F + 2271C)
+  sq: 2325 items (6S + 9B + 39F + 2271C)
+  sr: 2325 items (6S + 9B + 39F + 2271C)
+  sv: 2325 items (6S + 9B + 39F + 2271C)
+  sw: 2325 items (6S + 9B + 39F + 2271C)
+  ta: 2325 items (6S + 9B + 39F + 2271C)
+  th: 2325 items (6S + 9B + 39F + 2271C)
+  tr: 2325 items (6S + 9B + 39F + 2271C)
+  uk: 2325 items (6S + 9B + 39F + 2271C)
+  ur: 2325 items (6S + 9B + 39F + 2271C)
+  vi: 2325 items (6S + 9B + 39F + 2271C)
+  zh: 2325 items (6S + 9B + 39F + 2271C)
 Done.
 Attention: Next.js now collects completely anonymous telemetry regarding usage.
 This information is used to shape Next.js' roadmap and prioritize features.
@@ -66,423 +69,66 @@ https://nextjs.org/telemetry
 ▲ Next.js 16.2.6 (Turbopack)
 
   Creating an optimized production build ...
-✓ Compiled successfully in 2.3s
+✓ Compiled successfully in 1486ms
   Running TypeScript ...
-  Finished TypeScript in 2.9s ...
+  Finished TypeScript in 1966ms ...
   Collecting page data using 6 workers ...
-  Generating static pages using 6 workers (0/482) ...
-  Generating static pages using 6 workers (120/482) 
-  Generating static pages using 6 workers (240/482) 
-  Generating static pages using 6 workers (361/482) 
-✓ Generating static pages using 6 workers (482/482) in 2.9s
-  Finalizing page optimization ...
-
-Route (app)
-┌ ○ /_not-found
-├ ● /[locale]
-│ ├ /en
-│ ├ /zh
-│ ├ /es
-│ └ [+45 more paths]
-├ ● /[locale]/blog
-│ ├ /en/blog
-│ ├ /zh/blog
-│ ├ /es/blog
-│ └ [+45 more paths]
-└ ● /[locale]/blog/[slug]
-  ├ /en/blog/ccc-certification-explained
-  ├ /en/blog/china-import-compliance-guide
-  ├ /en/blog/china-label-compliance
-  └ [+381 more paths]
-
-
-○  (Static)  prerendered as static content
-●  (SSG)     prerendered as static HTML (uses generateStaticParams)
-
-
-═══════════════════════════════════════════════
-  CI 检查 — BLOG
-  out-dir: out  sync: 否
-═══════════════════════════════════════════════
-
-
-▶ check-seo-patterns.mjs --project=blog --ci
-
-📁 blog/
-
-==================================================
-📊 结果: 14 通过, 0 失败
-
-✅ check-seo-patterns.mjs 完成
-
-▶ check-hardcoded-domain.mjs --project=blog --ci
-✅ 未发现硬编码的 *.pages.dev 域名引用
-
-▶ check-hardcoded.mjs --project=blog --ci
-🔍 Scanning for hardcoded English text in JSX/TSX...
-
-✅ No hardcoded English text found.
-
-▶ check-console.mjs --project=blog --ci
-📁 扫描 33 个文件
-==================================================
-📊 结果: 34 通过, 0 失败
-
-✅ check-console.mjs 完成
-
-▶ check-rtl.mjs --project=blog --ci
-
-📁 blog/
-
-==================================================
-📊 结果: 3 通过, 0 失败
-
-✅ check-rtl.mjs 完成
-
-▶ check-map-key.mjs --project=blog --ci
-📁 扫描 24 个 TSX 文件
-==================================================
-📊 结果: 24 通过, 0 失败
-
-✅ check-map-key.mjs 完成
-
-▶ check-jsonld.mjs --project=blog --ci
-📁 扫描 4 个含 JSON-LD 的文件
-==================================================
-📊 结果: 17 通过, 0 失败
-
-✅ check-jsonld.mjs 完成
-
-▶ check-md-format.mjs --project=blog --ci
-
-═══════════════════════════════════════════════
-  Markdown 格式质量检查（精细化语言策略）
-═══════════════════════════════════════════════
-
-✅ 未发现格式问题
-  扫描文件: 384
-
-
-▶ check-md-structure.mjs --project=blog --ci
-
-═══════════════════════════════════════════════
-  MDX 内容结构检查 (blog)
-═══════════════════════════════════════════════
-
-✅ 未发现内容结构问题
-  扫描文件: 384
-
-
-▶ check-locale-prefix.mjs --project=blog --ci
-
-═══════════════════════════════════════════════
-  路由 locale 前缀检测 (CI-4)
-═══════════════════════════════════════════════
-
-✅ 未发现缺少 locale 前缀的 href
-
-
-▶ check-translations.mjs --project=blog --short --ci
-
-✅ 全量核验通过！48 种语言无质量问题。
-
-▶ check-i18n-keys.mjs --project=blog --ci
-🔑 i18n key 完整性检查
-
-📦 BLOG (0 missing, 0 extra, 0 hardcoded):
-  ✅ 全部通过
-
-📦 UI (0 missing, 0 extra, 0 hardcoded):
-  ✅ 全部通过
-
-✅ 面包屑与移动导航 Navbar.home 翻译一致
-📊 总计: 0 缺失 + 0 多余 + 0 硬编码英文 + 0 导航翻译不一致
-✅ 所有 i18n key 完整，无硬编码英文，导航翻译一致
-
-▶ check-i18n-coverage.mjs --project=blog --ci
-
-📊 UI 包
-   en.json: 106 键
-
-   af  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   ar  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   az  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   be  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   bg  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   bn  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   ca  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   cs  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   da  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   de  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   el  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   es  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   fa  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   fi  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   fr  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   he  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   hi  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   hr  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   hu  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   hy  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   id  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   it  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   ja  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   ka  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   ko  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   ms  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   ne  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   nl  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   no  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   pl  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   pt  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   ro  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   ru  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   si  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   sk  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   sl  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   sq  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   sr  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   sv  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   sw  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   ta  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   th  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   tr  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   uk  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   ur  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   vi  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   zh  ████████████████████ 100.0%  (106/106  缺失:0  多余:0)
-   ─────────────────────────────────────────
-   平均: 100.0%
-
-📊 Blog
-   en.json: 58 键
-
-   af  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   ar  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   az  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   be  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   bg  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   bn  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   ca  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   cs  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   da  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   de  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   el  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   es  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   fa  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   fi  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   fr  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   he  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   hi  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   hr  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   hu  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   hy  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   id  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   it  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   ja  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   ka  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   ko  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   ms  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   ne  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   nl  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   no  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   pl  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   pt  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   ro  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   ru  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   si  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   sk  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   sl  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   sq  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   sr  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   sv  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   sw  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   ta  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   th  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   tr  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   uk  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   ur  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   vi  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   zh  ████████████████████ 100.0%  (58/58  缺失:0  多余:0)
-   ─────────────────────────────────────────
-   平均: 100.0%
-
-═══════════════════════════════════════════════
-  ✅ UI 包: 100.0%
-  ✅ Blog: 100.0%
-═══════════════════════════════════════════════
-
-
-▶ check-report-rules.mjs --project=blog --ci
-────────────────────────────────────────────────────────────
-✅ check-report-rules: 未发现硬编码英文问题
-────────────────────────────────────────────────────────────
-
-▶ check-report-dates.mjs --project=blog --ci
-⏭️  check-report-dates: blog 无模块 rules.ts，跳过
-
-▶ check-t-keys-all.mjs --project=blog --ci
-
-🔑 t() 键存在性检查 — BLOG
-   en.json: apps/blog/messages/en.json
-   扫描目录: apps/blog/src, packages/ui/src
-
-【A】静态 t("key") — orphan 键检查...
-
-📊  44 unique static keys checked, 0 orphan(s) found
-
-【B】动态 t(`…`) 模板键检查...
-
-
-📊  5 template patterns checked, 0 issue(s) found
-
-✅ All keys verified — no issues found!
-
-
-▶ check-colon-all.mjs --project=blog --ci
-═══ 翻译冒号一致性检查 — BLOG ═══
-
-扫描 48 个语言文件...
-
-─────────────────────────────
-✅ 所有语言冒号风格一致，无问题
-
-
-▶ check-override-keys.mjs --project=blog --ci
-
-═══════════════════════════════════════════════
-  跨 App 消息覆盖检测
-═══════════════════════════════════════════════
-
-─────────────────────────────────────────────
-总计: 0 个覆盖键
-  🔴 0  CRITICAL (与英文源相同)
-  🟡 0  WARNING (值不同)
-  ℹ️  0  INFO (重复)
-─────────────────────────────────────────────
-
-
-▶ check-hardcoded-templates.mjs --project=blog --ci
-
-═══════════════════════════════════════════════
-  数据层英文模板检测
-═══════════════════════════════════════════════
-
-✅ 无硬编码英文模板
-
-
-▶ check-report-section-i18n.mjs --project=blog --ci
-🔍 检测报告章节组件中未翻译的数据层英文...
-
-✅ 所有报告章节组件的数据层翻译检查通过
-
-
-▶ check-category-labels.mjs --project=blog --ci
-
-═══════════════════════════════════════════════
-  品类翻译键完整性校验 (CI-2)
-═══════════════════════════════════════════════
-
-📦 GACC — 16 个品类
-  ✅ 全部 16 个品类翻译键完整
-
-📦 CCC — 6 个品类
-  ✅ 全部 6 个品类翻译键完整
-
-📦 NMPA — 6 个品类
-  ✅ 全部 6 个品类翻译键完整
-
-📦 LABEL — 10 个品类
-  ✅ 全部 10 个品类翻译键完整
-
-📦 CROSSBORDER — 8 个品类
-  ✅ 全部 8 个品类翻译键完整
-
-📦 TRADEMARK — 8 个品类
-  ✅ 全部 8 个品类翻译键完整
-
-─────────────────────────────────────────────
-✅ 全部 6 个模块的品类翻译键完整
-
-
-▶ check-t-keys.mjs --project=blog --ci
-
-🔍 【A】 Static t("key") — orphaned keys...
-
-📊  2154 unique static keys checked, 0 orphan(s) found
-
-🔍 【B】 Dynamic t(`…`) template keys...
-
-  ✅ `catCb_${input["category"]}` — 8 keys verified
-  ✅ `catCb_${v}` — 8 keys verified
-  ✅ `catCcc_${input["category"]}` — 6 keys verified
-  ✅ `catCcc_${v}` — 6 keys verified
-  ✅ `catGacc_${key}` — 16 keys verified
-  ✅ `catLabel_${input["category"]}` — 10 keys verified
-  ✅ `catLabel_${v}` — 10 keys verified
-  ✅ `catNmpa_${input["category"]}` — 6 keys verified
-  ✅ `catNmpa_${v}` — 6 keys verified
-  ✅ `catTm_${input["category"]}` — 8 keys verified
-  ✅ `catTm_${v}` — 8 keys verified
-  ✅ `cccCat_${cat}_label` — 6 keys verified
-  ✅ `comp${prefix}China` — 10 keys verified
-  ✅ `comp${prefix}EU` — 10 keys verified
-  ✅ `comp${prefix}US` — 10 keys verified
-  ✅ `comp${prefix}` — 10 keys verified
-  ✅ `gaccCat_${input.category!}_label` — 16 keys verified
-  ✅ `gaccCat_${input.category}_label` — 16 keys verified
-  ✅ `gaccCat_${input.category}_riskReason` — 16 keys verified
-  ✅ `nmpaCat_${cat}_label` — 6 keys verified
-  ✅ `step${i}Desc` — 3 keys verified
-  ✅ `step${i}Title` — 3 keys verified
-
-📊  45 template patterns (22 expanded), 0 missing key(s) across 0 pattern(s)
-
-✅ All keys verified — static and dynamic — no issues found!
-
-
-▶ check-colon-consistency.mjs --project=blog --ci
-═══ 翻译冒号一致性检查 ═══
-
-扫描 48 个语言文件...
-
-─────────────────────────────
-✅ 所有语言冒号风格一致，无问题
-
-
-▶ check-hreflang.mjs --project=blog --dir=out --skip-pattern=404,_not-found --ci
-🔍 统一 hreflang 检查
-
-📦 模式: SSG 输出目录检查
-  📄 扫描 482 个 HTML 文件
-
-  跳过: 2 文件 (路径匹配 skip-pattern)
-
-  结果: 480 通过, 0 失败
-
-✅ hreflang 全部检查通过
-  ∎ check-llms.mjs → ∅ 无 llms 文件
-
-▶ check-seo-output.mjs --project=blog --out-dir=out --ci
-
-🔍 SEO 输出检查: /root/projects/trade/web/apps/blog/out
-
-📄 扫描 HTML 页面...
-
-🗺️  检查 Sitemap...
-
-==================================================
-📊 结果: 240 通过, 0 失败
-
-✅ check-seo-output.mjs 完成
-
-▶ clean-rsc.mjs --project=blog out --ci
-🧹 Cleaning RSC .txt payload files from out/...
-✅ Deleted 4183 RSC payload files (111.7 MB freed)
-
-▶ tsc --noEmit
-
-═══════════════════════════════════════════════
-✅ 全部检查通过
-═══════════════════════════════════════════════
-
+  Generating static pages using 6 workers (0/530) ...
+Error occurred prerendering page "/he/blog". Read more: https://nextjs.org/docs/messages/prerender-error
+YAMLException: bad indentation of a sequence entry at line 8, column 64:
+     ... ינהל רישום יצרני מזון מיובא בחו"ל"
+                                         ^
+    at K (.next/server/chunks/ssr/[root-of-the-server]__0qs8xo4._.js:1:156402)
+    at L (.next/server/chunks/ssr/[root-of-the-server]__0qs8xo4._.js:1:156500)
+    at $ (.next/server/chunks/ssr/[root-of-the-server]__0qs8xo4._.js:1:164264)
+    at ad (.next/server/chunks/ssr/[root-of-the-server]__0qs8xo4._.js:1:168058)
+    at _ (.next/server/chunks/ssr/[root-of-the-server]__0qs8xo4._.js:1:165463)
+    at ad (.next/server/chunks/ssr/[root-of-the-server]__0qs8xo4._.js:1:168066)
+    at ae (.next/server/chunks/ssr/[root-of-the-server]__0qs8xo4._.js:1:170175)
+    at af (.next/server/chunks/ssr/[root-of-the-server]__0qs8xo4._.js:1:170918)
+    at ah (.next/server/chunks/ssr/[root-of-the-server]__0qs8xo4._.js:1:171127)
+    at Object.aj [as safeLoad] (.next/server/chunks/ssr/[root-of-the-server]__0qs8xo4._.js:1:171388) {
+  reason: 'bad indentation of a sequence entry',
+  mark: e {
+    name: null,
+    buffer: '\n' +
+      'title: "תוספי בריאות ומזון פונקציונלי בסין GACC, NMPA או חוצה גבולות בחירת המסלול הנכון"\n' +
+      'slug: "health-supplements-china-import-route"\n' +
+      'date: "2026-07-28"\n' +
+      'category: "Food & Beverage"\n' +
+      'excerpt: "תוספי בריאות ומזונות פונקציונליים מתמודדים עם אחד מהנופים הרגולטוריים המורכבים ביותר בסין. האם עליך לייבא כמזון כללי תחת GACC, להגיש בקשה לאישור NMPA Blue Hat, או לקחת את מסלול המסחר האלקטרוני חוצה הגבולות? מדריך זה מפרק כל אפשרות."\n' +
+      'references:\n' +
+      `  - title: "צו GACC מס' 248 - מינהל רישום יצרני מזון מיובא בחו"ל"\n` +
+      '    url: "https://www.customs.gov.cn/"\n' +
+      '  - title: "SAMR — אמצעים מנהליים לרישום והגשת מזון בריאות"\n' +
+      '    url: "https://www.samr.gov.cn/"\n' +
+      '  - title: "NMPA — רישום והגשת מזון בריאות"\n' +
+      '    url: "https://www.nmpa.gov.cn/"\n' +
+      '  - title: "רשימת ייבוא ​​קמעונאי של מסחר אלקטרוני חוצה גבולות (רשימה חיובית)"\n' +
+      '    url: "https://www.customs.gov.cn/"\n' +
+      '  - title: "GB 16740-2014 — תקן לאומי למזון בריאות"\n' +
+      '    url: "https://openstd.samr.gov.cn/"\n' +
+      '  - title: "GB 28050-2011 — תקן לאומי לבטיחות מזון לסימון תזונתי של מזונות ארוזים מראש"\n' +
+      '    url: "https://openstd.samr.gov.cn/"\n' +
+      '  - title: "GB 7718-2011 — תקן לאומי לבטיחות מזון לתיוג מזון ארוז מראש"\n' +
+      '    url: "https://openstd.samr.gov.cn/"\n' +
+      '  - title: "“Food Safety Law” — מזון בריאות, מזון למטרות רפואיות מיוחדות ופורמולה לתינוקות"\n' +
+      '    url: "https://www.npc.gov.cn/"\n' +
+      '\x00',
+    position: 501,
+    line: 7,
+    column: 63
+  },
+  digest: '1204400190',
+  constructor: [Function: d],
+  toString: [Function (anonymous)]
+}
+Export encountered an error on /[locale]/blog/page: /he/blog, exiting the build.
+⨯ Next.js build worker exited with code: 1 and signal: null
+npm error Lifecycle script `build` failed with error:
+npm error code 1
+npm error path /root/projects/trade/web/apps/blog
+npm error workspace @trade/blog@6.4.0
+npm error location /root/projects/trade/web/apps/blog
+npm error command failed
+npm error command sh -c node ../../packages/scripts/build-search-index.mjs && rm -rf .next/cache && next build && node ../../packages/scripts/ci-check.mjs --out-dir=out --ci

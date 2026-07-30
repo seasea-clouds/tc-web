@@ -243,7 +243,6 @@ const STATIC_SEGMENT_LABELS: Record<string, string> = {
   'about': 'segment.about',
   'contact': 'segment.contact',
   'faq': 'segment.faq',
-  'info': 'segment.info',
   'payments': 'segment.payments',
   // ── Root / Locale-only ──
   '__home__': 'segment.home',
@@ -683,10 +682,15 @@ function pathToBreadcrumb(path: string): string {
               // 使用服务端过滤好的 pagePaths（基于路由架构 isPage + 静态资源排除）
               // 兼容旧数据：如果 pagePaths 不存在，回退到客户端过滤
               const pages = _a.pagePaths && _a.pagePaths.length > 0
-                ? _a.pagePaths.slice(0, 30)
+                ? _a.pagePaths.filter((p: any) => {
+                    const path = typeof p === 'string' ? p : p.path;
+                    return !/\.(js|ttf|woff2?|css|png|jpe?g|gif|svg|ico|webp|json|map|txt|xml|php|asp|aspx|jsp|cgi)(\?|$)/i.test(path)
+                      && !path.startsWith('/_next/')
+                      && !['/info'].includes(path);
+                  }).slice(0, 30)
                 : _a.pageData.filter((p: any) => {
                     const isRes = (p: string) => /\.(js|ttf|woff2?|css|png|jpe?g|gif|svg|ico|webp|json|map|txt|xml|php|asp|aspx|jsp|cgi)(\?|$)/i.test(p) || p.startsWith('/_next/') || /\/(php_info|wp-|xmlrpc)\./.test(p);
-                    return !isRes(p.path);
+                    return !isRes(p.path) && !['/info'].includes(p.path);
                   }).slice(0, 30);
               return pages.length > 0 ? (
                 <div>

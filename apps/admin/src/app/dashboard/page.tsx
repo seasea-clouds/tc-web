@@ -140,6 +140,15 @@ function extractLangData(
     .sort((a, b) => b.count - a.count);
 }
 
+/** Extract locale string in Chinese from a URL path */
+function localeFromPath(path: string): string {
+  const segs = path.replace(/\/+$/, '').split('/').filter(Boolean);
+  if (segs.length > 0 && SUPPORTED_LOCALES.has(segs[0])) {
+    return LANG_NAMES_ZH[segs[0]];
+  }
+  return '-';
+}
+
 export default function DashboardPage() {
   const [stats, setStats] = useState<DashboardStats | null>(null);
   const [analytics, setAnalytics] = useState<AnalyticsData | null>(null);
@@ -696,19 +705,23 @@ function pathToBreadcrumb(path: string): string {
                 <div>
                   {/* Column headers */}
                   <div style={{ display: "flex", padding: "0.3rem 0", fontSize: "0.7rem", fontWeight: 600, color: "#9ca3af", borderBottom: "1px solid #e5e7eb" }}>
-                    <span style={{ flex: "0 0 40%", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{t("chart.pathColumn")}</span>
-                    <span style={{ flex: "0 0 40%", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", paddingLeft: "0.5rem" }}>{t("chart.urlColumn")}</span>
-                    <span style={{ flex: "0 0 20%", textAlign: "right" }}>{t("chart.visitsColumn")}</span>
+                    <span style={{ flex: "0 0 35%", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{t("chart.pathColumn")}</span>
+                    <span style={{ flex: "0 0 12%", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", paddingLeft: "0.5rem" }}>语言</span>
+                    <span style={{ flex: "0 0 35%", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", paddingLeft: "0.5rem" }}>{t("chart.urlColumn")}</span>
+                    <span style={{ flex: "0 0 18%", textAlign: "right" }}>{t("chart.visitsColumn")}</span>
                   </div>
                   {pages.map((p: any, i: number) => (
                     <div key={p.path} style={{ display: "flex", alignItems: "center", padding: "0.3rem 0", fontSize: "0.8rem", borderBottom: i < pages.length - 1 ? "1px solid #f3f4f6" : "none" }}>
-                      <span style={{ flex: "0 0 40%", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", color: "#374151", fontSize: "0.75rem" }} title={pathToBreadcrumb(p.path)}>
+                      <span style={{ flex: "0 0 35%", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", color: "#374151", fontSize: "0.75rem" }} title={pathToBreadcrumb(p.path)}>
                         {pathToBreadcrumb(p.path)}
                       </span>
-                      <span style={{ flex: "0 0 40%", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", color: "#6b7280", fontSize: "0.7rem", paddingLeft: "0.5rem" }} title={p.path}>
+                      <span style={{ flex: "0 0 12%", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", color: "#6b7280", fontSize: "0.7rem", paddingLeft: "0.5rem" }} title={p.path}>
+                        {localeFromPath(p.path)}
+                      </span>
+                      <span style={{ flex: "0 0 35%", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", color: "#6b7280", fontSize: "0.7rem", paddingLeft: "0.5rem" }} title={p.path}>
                         {p.path}
                       </span>
-                      <span style={{ flex: "0 0 20%", textAlign: "right", fontWeight: 600, color: "#1B365D", whiteSpace: "nowrap" }}>{p.count}</span>
+                      <span style={{ flex: "0 0 18%", textAlign: "right", fontWeight: 600, color: "#1B365D", whiteSpace: "nowrap" }}>{p.count}</span>
                     </div>
                   ))}
                 </div>

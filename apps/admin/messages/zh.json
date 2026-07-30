@@ -417,6 +417,14 @@
   "segment.skincare": "护肤品",
   "segment.nmpaFiling": "NMPA 备案",
   "segment.medicalDevices": "医疗器械",
+  "segment.dairyMilk": "乳制品与奶制品",
+  "segment.meatSeafood": "肉类与海鲜",
+  "segment.wineSpirits": "酒类与烈酒",
+  "segment.petFood": "宠物食品",
+  "segment.healthSupplements": "保健品",
+  "segment.babyMaternal": "母婴用品",
+  "segment.consumerElectronics": "消费电子产品",
+  "segment.crossBorderEcommerce": "跨境电商",
   "chart.langDistribution": "访问语言分布",
   "chart.hoursCovered": "覆盖 {n} 小时"
 }

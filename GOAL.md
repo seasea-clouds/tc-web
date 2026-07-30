@@ -35,7 +35,7 @@
 ### 路由规则
 - **主站：** `/{locale}/...`（例如 `/zh/services/gacc/`）
 - **Portal：** `/{locale}/c/...`（例如 `/zh/c/check/gacc`）
-- **Admin（未来）：** `/{locale}/admin/...`
+- **Admin：** `/{locale}/admin/...`
 - Portal 不使用 `basePath`，Worker 代理透传完整路径
 
 ### 多语言

@@ -1,7 +1,7 @@
 'use client';
 
 import { WHATSAPP_URL } from './constants';
-import { Mail, MapPin } from 'lucide-react';
+import { FileText, Mail, MapPin } from 'lucide-react';
 import { useT, useTradeLocale } from './TranslationProvider';
 
 const serviceLinks = [
@@ -107,6 +107,7 @@ export default function Footer({ locale: propLocale }: { locale?: string } = {})
                 href={href('/quote/')}
                 className="flex items-center gap-2 text-white/70 hover:text-white transition-colors text-sm"
               >
+                <FileText className="w-4 h-4 text-white/70" />
                 <span>{t('getQuote')}</span>
               </a>
               <a

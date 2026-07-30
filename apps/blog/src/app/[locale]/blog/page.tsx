@@ -39,6 +39,17 @@ function getCategories(posts: { category: string }[]): string[] {
   return [...cats].sort();
 }
 
+/**
+ * Convert a raw category string (e.g. "Brand Protection") to its translation key
+ * (e.g. "cat_Brand_Protection") by normalizing special chars to underscores.
+ */
+function categoryKey(cat: string): string {
+  return 'cat_' + cat
+    .replace(/-/g, '_')
+    .replace(/ & /g, '_')
+    .replace(/ /g, '_');
+}
+
 export default async function BlogHome({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const posts = getPosts(locale);
@@ -49,6 +60,13 @@ export default async function BlogHome({ params }: { params: Promise<{ locale: s
 
   const readTimeText = tb('readTime', 'min read');
   const href = (p: string) => `/${locale}${p}`;
+
+  // Build a map from raw category → translated label
+  const categoryLabels: Record<string, string> = {};
+  for (const cat of categories) {
+    const key = categoryKey(cat);
+    categoryLabels[cat] = tb(key, cat);
+  }
 
   return (
     <>
@@ -86,6 +104,7 @@ export default async function BlogHome({ params }: { params: Promise<{ locale: s
           <BlogClient
             posts={posts}
             categories={categories}
+            categoryLabels={categoryLabels}
             locale={locale}
             readMoreText={tb('readMore', 'Read More')}
             readTimeText={readTimeText}

@@ -48,7 +48,7 @@ async function proxyToPortal(url: URL, request: Request, env?: Record<string, st
   if (accept.includes('text/html')) {
     const response = await fetch(upstreamUrl);
     const body = await response.text();
-    const patched = injectSearchWidget(ensureNextF(body));
+    const patched = injectSearchWidget(ensureNextF(rewriteNextStatic(body, 'c')));
     return new Response(patched, {
       status: response.status,
       statusText: response.statusText,

@@ -417,6 +417,14 @@
   "segment.skincare": "Skincare",
   "segment.nmpaFiling": "NMPA Filing",
   "segment.medicalDevices": "Medical Devices",
+  "segment.dairyMilk": "Dairy & Milk Products",
+  "segment.meatSeafood": "Meat & Seafood",
+  "segment.wineSpirits": "Wine & Spirits",
+  "segment.petFood": "Pet Food",
+  "segment.healthSupplements": "Health Supplements",
+  "segment.babyMaternal": "Baby & Maternal",
+  "segment.consumerElectronics": "Consumer Electronics",
+  "segment.crossBorderEcommerce": "Cross-border E-commerce",
   "chart.langDistribution": "Language Distribution",
   "chart.hoursCovered": "Covering {n} hours"
 }

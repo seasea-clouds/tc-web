@@ -243,6 +243,7 @@ const STATIC_SEGMENT_LABELS: Record<string, string> = {
   'about': 'segment.about',
   'contact': 'segment.contact',
   'faq': 'segment.faq',
+  'info': 'segment.info',
   'payments': 'segment.payments',
   // ── Root / Locale-only ──
   '__home__': 'segment.home',

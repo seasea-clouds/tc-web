@@ -20,6 +20,20 @@ import {
   type HourlyStats,
 } from "./cf-analytics";
 
+import { KNOWN_ROUTES } from "./known-routes";
+
+// 归一化后的路由集合（去尾斜杠），用于 O(1) 存在性查找
+const KNOWN_ROUTE_SET = new Set(KNOWN_ROUTES);
+
+/**
+ * 路径归一化：去尾斜杠，保留 locale 前缀，与 known-routes 名单匹配。
+ * /en/about/ → /en/about；/  → /（根路径特殊保留）
+ */
+export function normalizeRoute(path: string): string {
+  const clean = path.replace(/\/+$/, "");
+  return clean === "" ? "/" : clean;
+}
+
 interface CacheEnv {
   DB: any;
   CLOUDFLARE_API_TOKEN?: string;
@@ -116,10 +130,15 @@ export function safeJSON<T>(json: string, fallback: T): T {
  * 2. 排除 Next.js 内部路径（_next、__nextjs）
  * 3. 排除所有带扩展名的路径（自动覆盖全部扩展名）
  * 4. 排除隐藏文件（以点开头的段）
+ * 5. 路由存在性校验：路径必须存在于构建时动态生成的 known-routes 名单
+ *    （扫描 src/app 全部 page.tsx + content 动态实例 + 48 locale 展开）
  *
  * 【扫描器噪音不在这里处理】—— 非法路径统一返回 404，已在数据源
  * （fetchAggregateStatsRange / fetchHourlyAggregateStats）按 HTTP 状态码
  * 2xx/3xx 过滤，动态排除，无需静态名单。
+ *
+ * 【known-routes 名单是动态生成的】每次部署构建时由 discover-routes.mjs
+ * 重新扫描全部子站，新增页面/子站/博客文章自动纳入，无需手动维护。
  *
  * 「热门路径」不受此函数影响，它展示所有路径的原始请求次数。
  * 此函数仅用于从全部路径中筛选出「页面」路径，存入 page_paths 字段。
@@ -144,6 +163,10 @@ export function isPagePath(path: string): boolean {
 
   // 第 4 步：排除隐藏文件（以点开头的路径段）
   if (clean.split("/").some((seg) => seg.startsWith("."))) return false;
+
+  // 第 5 步：路由存在性校验 —— 必须是真实存在的页面路由
+  // （构建时动态生成的 known-routes 名单，含 48 locale 全量展开）
+  if (!KNOWN_ROUTE_SET.has(normalizeRoute(path))) return false;
 
   return true;
 }

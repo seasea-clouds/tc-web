@@ -167,8 +167,8 @@ export default {
           "SELECT date, page_data, page_paths FROM daily_page_stats WHERE page_data IS NOT NULL OR page_paths IS NOT NULL"
         ).all();
         for (const row of (daily.results || []) as any[]) {
-          const data: { path: string; count: number }[] = safeJSON(row.page_data, []);
-          const paths: { path: string; count: number }[] = safeJSON(row.page_paths, []);
+          const data: { path: string; count: number }[] = safeJSON(row.page_data, []) ?? [];
+          const paths: { path: string; count: number }[] = safeJSON(row.page_paths, []) ?? [];
           const cleanData = data.filter((p) => inferProject(p.path).project !== "unknown");
           const cleanPaths = paths.filter((p) => isPagePath(p.path));
           if (cleanData.length !== data.length || cleanPaths.length !== paths.length) {
@@ -185,8 +185,8 @@ export default {
           "SELECT date, hour, page_data, page_paths FROM hourly_page_stats WHERE page_data IS NOT NULL OR page_paths IS NOT NULL"
         ).all();
         for (const row of (hourly.results || []) as any[]) {
-          const data: { path: string; count: number }[] = safeJSON(row.page_data, []);
-          const paths: { path: string; count: number }[] = safeJSON(row.page_paths, []);
+          const data: { path: string; count: number }[] = safeJSON(row.page_data, []) ?? [];
+          const paths: { path: string; count: number }[] = safeJSON(row.page_paths, []) ?? [];
           const cleanData = data.filter((p) => inferProject(p.path).project !== "unknown");
           const cleanPaths = paths.filter((p) => isPagePath(p.path));
           if (cleanData.length !== data.length || cleanPaths.length !== paths.length) {

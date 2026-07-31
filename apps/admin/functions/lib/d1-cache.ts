@@ -82,6 +82,24 @@ function dateRange(start: string, end: string): string[] {
   return dates;
 }
 
+/**
+ * 面包屑语法路径判定（用于「热门路径」page_data 的写入过滤）。
+ *
+ * 要求：
+ * - 属于已知子站架构（site/portal/blog/admin/api），排除 unknown 噪音
+ * - 无文件扩展名（排除静态资源 / RSC tree 等非页面路径）
+ * - 非 Next.js 内部路径（_next）
+ *
+ * 注意：扫描器噪音不在这里处理——数据源已按 HTTP 状态码 2xx/3xx
+ * 动态过滤（404 探测请求不会进入聚合）。
+ */
+export function isBreadcrumbPath(path: string): boolean {
+  if (inferProject(path).project === "unknown") return false;
+  if (path.includes(".")) return false;
+  if (path.includes("_next")) return false;
+  return true;
+}
+
 export function safeJSON<T>(json: string, fallback: T): T {
   try {
     return JSON.parse(json) as T;
@@ -288,10 +306,9 @@ export async function ensureDailyCFCache(env: CacheEnv): Promise<string> {
       const aggMap = await fetchAggregateStatsRange(zoneId, token, firstDate, lastDate);
       for (const [date, agg] of Array.from(aggMap.entries())) {
         try {
-          // 结构过滤：仅保留已知子站架构下的路径（site/portal/blog/admin/api），
-          // 排除 _next/静态资源等非面包屑路径；扫描器噪音已由数据源
-          // 状态码 2xx/3xx 动态过滤，无需静态名单。
-          const knownPaths = agg.pathData.filter((p) => inferProject(p.path).project !== "unknown");
+          // 面包屑语法过滤：仅保留已知子站架构、无扩展名、非 _next 的路径；
+          // 扫描器噪音已由数据源状态码 2xx/3xx 动态过滤，无需静态名单。
+          const knownPaths = agg.pathData.filter((p) => isBreadcrumbPath(p.path));
           const pagePaths = knownPaths.filter((p) => isPagePath(p.path)).slice(0, 30);
 
           await env.DB.prepare(
@@ -410,8 +427,8 @@ export async function ensureHourlyCFCache(env: CacheEnv): Promise<void> {
       try {
         const agg = await fetchHourlyAggregateStats(zoneId, token, today, h);
         if (agg.pathData.length > 0 || agg.osData.length > 0) {
-          // 结构过滤：仅保留已知子站架构下的路径（同 daily 写入）。
-          const knownPaths = agg.pathData.filter((p) => inferProject(p.path).project !== "unknown");
+          // 面包屑语法过滤（同 daily 写入）。
+          const knownPaths = agg.pathData.filter((p) => isBreadcrumbPath(p.path));
           const pagePaths = knownPaths.filter((p) => isPagePath(p.path)).slice(0, 30);
 
           await env.DB.prepare(

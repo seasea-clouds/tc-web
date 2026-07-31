@@ -13,7 +13,7 @@
  */
 
 import { ensureDailyCFCache, ensureHourlyCFCache, isPagePath, safeJSON } from "../../../functions/lib/d1-cache";
-import { hasConfig } from "../../../functions/lib/cf-analytics";
+import { hasConfig, inferProject } from "../../../functions/lib/cf-analytics";
 import { graphql } from "../../../functions/lib/cf-analytics";
 
 interface Env {
@@ -156,24 +156,49 @@ export default {
       });
     }
 
-    // Cleanup — re-filter existing page_paths with updated isPagePath rules
+    // Cleanup — re-filter existing page_data + page_paths with the current
+    // routing-architecture rules (inferProject + isPagePath).
     if (url.pathname === "/cleanup") {
       try {
-        const all: any = await env.DB.prepare(
-          "SELECT date, page_paths FROM daily_page_stats WHERE page_paths IS NOT NULL AND page_paths != '[]'"
+        const out: any = { ok: true, daily: { cleanedData: 0, cleanedPaths: 0 }, hourly: { cleanedData: 0, cleanedPaths: 0 } };
+
+        // ── daily_page_stats ──
+        const daily: any = await env.DB.prepare(
+          "SELECT date, page_data, page_paths FROM daily_page_stats WHERE page_data IS NOT NULL OR page_paths IS NOT NULL"
         ).all();
-        let cleaned = 0;
-        for (const row of (all.results || []) as any[]) {
+        for (const row of (daily.results || []) as any[]) {
+          const data: { path: string; count: number }[] = safeJSON(row.page_data, []);
           const paths: { path: string; count: number }[] = safeJSON(row.page_paths, []);
-          const filtered = paths.filter(p => isPagePath(p.path));
-          if (filtered.length !== paths.length) {
+          const cleanData = data.filter((p) => inferProject(p.path).project !== "unknown");
+          const cleanPaths = paths.filter((p) => isPagePath(p.path));
+          if (cleanData.length !== data.length || cleanPaths.length !== paths.length) {
             await env.DB.prepare(
-              "UPDATE daily_page_stats SET page_paths = ? WHERE date = ?"
-            ).bind(JSON.stringify(filtered), row.date).run();
-            cleaned++;
+              "UPDATE daily_page_stats SET page_data = ?, page_paths = ? WHERE date = ?"
+            ).bind(JSON.stringify(cleanData), JSON.stringify(cleanPaths), row.date).run();
+            if (cleanData.length !== data.length) out.daily.cleanedData++;
+            if (cleanPaths.length !== paths.length) out.daily.cleanedPaths++;
           }
         }
-        return new Response(JSON.stringify({ ok: true, cleanedRows: cleaned }), {
+
+        // ── hourly_page_stats ──
+        const hourly: any = await env.DB.prepare(
+          "SELECT date, hour, page_data, page_paths FROM hourly_page_stats WHERE page_data IS NOT NULL OR page_paths IS NOT NULL"
+        ).all();
+        for (const row of (hourly.results || []) as any[]) {
+          const data: { path: string; count: number }[] = safeJSON(row.page_data, []);
+          const paths: { path: string; count: number }[] = safeJSON(row.page_paths, []);
+          const cleanData = data.filter((p) => inferProject(p.path).project !== "unknown");
+          const cleanPaths = paths.filter((p) => isPagePath(p.path));
+          if (cleanData.length !== data.length || cleanPaths.length !== paths.length) {
+            await env.DB.prepare(
+              "UPDATE hourly_page_stats SET page_data = ?, page_paths = ? WHERE date = ? AND hour = ?"
+            ).bind(JSON.stringify(cleanData), JSON.stringify(cleanPaths), row.date, row.hour).run();
+            if (cleanData.length !== data.length) out.hourly.cleanedData++;
+            if (cleanPaths.length !== paths.length) out.hourly.cleanedPaths++;
+          }
+        }
+
+        return new Response(JSON.stringify(out), {
           headers: { "Content-Type": "application/json" },
         });
       } catch (err: any) {

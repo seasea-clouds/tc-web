@@ -142,7 +142,22 @@ export function isPagePath(path: string): boolean {
     clean.startsWith("/debug/") || // 调试端点（扫描）
     clean.startsWith("/files/") || // 文件列表（扫描）
     clean.startsWith("/ALFA_DATA/") || // ALFA 恶意扫描
-    clean.startsWith("/assets/") // 静态资源目录（非页面）
+    clean.startsWith("/assets/") || // 静态资源目录（非页面）
+    clean.startsWith("/_profiler") || // Symfony profiler 扫描
+    clean.startsWith("/env") || // .env 文件泄露扫描
+    clean.startsWith("/git/") || // Git 仓库扫描
+    clean.startsWith("/.git") || // Git 目录扫描
+    clean.startsWith("/adminer") || // Adminer DB 工具扫描
+    clean.startsWith("/phpMyAdmin") || // phpMyAdmin 扫描
+    clean.startsWith("/actuator") || // Spring Boot Actuator 扫描
+    clean.startsWith("/joomla") || // Joomla 扫描
+    clean.startsWith("/drupal") || // Drupal 扫描
+    clean.startsWith("/magento") || // Magento 扫描
+    clean.startsWith("/solr/") || // Apache Solr 扫描
+    clean.startsWith("/.DS_Store") || // macOS 元文件扫描
+    clean.startsWith("/.vscode/") || // IDE 配置扫描
+    clean.startsWith("/.idea/") || // IDE 配置扫描
+    clean.startsWith("/sftp-config") // SFTP 配置扫描
   ) {
     return false;
   }

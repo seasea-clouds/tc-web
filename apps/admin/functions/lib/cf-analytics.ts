@@ -321,7 +321,7 @@ export async function fetchHourlyAggregateStats(
           limit: 10000,
           filter: {datetime_geq: "${startISO}", datetime_lt: "${endISO}"}
         ) {
-          dimensions { date clientRequestPath userAgentOS clientDeviceType clientCountryName clientBrowserFamily edgeResponseStatus }
+          dimensions { date clientRequestPath userAgentOS clientDeviceType edgeResponseStatus }
           count
         }
       }

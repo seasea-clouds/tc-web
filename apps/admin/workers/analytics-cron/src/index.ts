@@ -12,8 +12,8 @@
  * Optionally set CRON_SECRET secret for auth protection.
  */
 
-import { ensureDailyCFCache, ensureHourlyCFCache, isPagePath, safeJSON } from "../../../functions/lib/d1-cache";
-import { hasConfig, inferProject } from "../../../functions/lib/cf-analytics";
+import { ensureDailyCFCache, ensureHourlyCFCache, isBreadcrumbPath, isPagePath, safeJSON } from "../../../functions/lib/d1-cache";
+import { hasConfig } from "../../../functions/lib/cf-analytics";
 import { graphql } from "../../../functions/lib/cf-analytics";
 
 interface Env {
@@ -169,7 +169,7 @@ export default {
         for (const row of (daily.results || []) as any[]) {
           const data: { path: string; count: number }[] = safeJSON(row.page_data, []) ?? [];
           const paths: { path: string; count: number }[] = safeJSON(row.page_paths, []) ?? [];
-          const cleanData = data.filter((p) => inferProject(p.path).project !== "unknown");
+          const cleanData = data.filter((p) => isBreadcrumbPath(p.path));
           const cleanPaths = paths.filter((p) => isPagePath(p.path));
           if (cleanData.length !== data.length || cleanPaths.length !== paths.length) {
             await env.DB.prepare(
@@ -187,7 +187,7 @@ export default {
         for (const row of (hourly.results || []) as any[]) {
           const data: { path: string; count: number }[] = safeJSON(row.page_data, []) ?? [];
           const paths: { path: string; count: number }[] = safeJSON(row.page_paths, []) ?? [];
-          const cleanData = data.filter((p) => inferProject(p.path).project !== "unknown");
+          const cleanData = data.filter((p) => isBreadcrumbPath(p.path));
           const cleanPaths = paths.filter((p) => isPagePath(p.path));
           if (cleanData.length !== data.length || cleanPaths.length !== paths.length) {
             await env.DB.prepare(

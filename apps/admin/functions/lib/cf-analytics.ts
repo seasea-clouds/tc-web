@@ -138,9 +138,9 @@ export function inferProject(path: string): { project: string; isPage: boolean }
     return { project: "blog", isPage: true };
   }
   // 官网主站（Site）— 对外页面，计入热门页面
-  // 必须是 /{locale}/... 格式（语言前缀），或者纯根路径；
-  // 具体路径是否存在由 HTTP 状态码判定，不在此处枚举。
-  if (/^\/[a-z]{2}\//.test(path) || path === "/" || path === "") {
+  // 必须是 /{locale}/... 格式（语言前缀，含无尾斜杠的 locale-only 首页 /en），
+  // 或者纯根路径；具体路径是否存在由 HTTP 状态码判定，不在此处枚举。
+  if (/^\/[a-z]{2}(\/|$)/.test(path) || path === "/" || path === "") {
     return { project: "site", isPage: true };
   }
   // 不匹配任何已知路由架构 → 扫描器噪音 / 非法路径

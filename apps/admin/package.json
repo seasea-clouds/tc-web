@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node ../../packages/scripts/generate-segment-mapping.mjs && npx next build && bash scripts/postbuild.sh",
+    "build": "node ../../packages/scripts/generate-segment-mapping.mjs && node ../../packages/scripts/discover-routes.mjs --emit-json && npx next build && bash scripts/postbuild.sh",
     "start": "next start",
     "lint": "eslint",
     "deploy": "npx wrangler pages deploy ./out --project-name=trade-web-admin"

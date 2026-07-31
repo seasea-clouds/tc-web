@@ -226,60 +226,9 @@ async function proxySubSiteAsset(url: URL, request: Request, env?: Record<string
 
 // ─── Main handler ────────────────────────────────────────────────
 
-
-// ── Security: Block known vulnerability scanner probes ──────────
-// Automated scanners probe for PHP/Symfony/WordPress etc. vulnerabilities.
-// This is a Next.js SSG site — none of these paths exist. Returning 404
-// at the edge prevents them from hitting upstream or polluting analytics.
-
-const SCANNER_PROBE_PATTERNS: RegExp[] = [
-  // Symfony profiler / debug
-  /\b_profiler\b/i,
-  // PHP info / test pages
-  /\bphpinfo\b/i,
-  /\.php$/i,
-  // Config / env exposure
-  /\.env$/i,
-  /\.env\./i,
-  /\.git\//i,
-  /\.svn\//i,
-  /\.htaccess/i,
-  /wp-config\.php/i,
-  // WordPress probes
-  /\bwp-admin\b/i,
-  /\bwp-login\b/i,
-  /\bwp-content\b/i,
-  /\bwp-includes\b/i,
-  /xmlrpc\.php/i,
-  // Database admin tools
-  /\badminer\b/i,
-  /\bphpmyadmin\b/i,
-  /\bphpMyAdmin\b/,
-  // CMS probes
-  /\bjoomla\b/i,
-  /\bdrupal\b/i,
-  /\bmagento\b/i,
-  // Spring Boot actuator
-  /\bactuator\b/i,
-  // Editor/IDE artifacts
-  /sftp-config\.json/i,
-  /\.DS_Store/i,
-  /\.vscode\//i,
-  /\.idea\//i,
-];
-
-function isScannerProbe(pathname: string): boolean {
-  return SCANNER_PROBE_PATTERNS.some((p) => p.test(pathname));
-}
-
 export async function onRequest(context: { request: Request; next: () => Promise<Response>; env?: Record<string, string> }): Promise<Response> {
   const { request, env } = context;
   const url = new URL(request.url);
-
-  // ── Scanner probe: block before any routing logic ──
-  if (isScannerProbe(url.pathname)) {
-    return new Response('Not Found', { status: 404 });
-  }
 
   // ── RSC prefetch tree (__next._tree.txt) — static export, no server → 204 ──
   // Next.js App Router client prefetches __next._tree.txt for visible <Link>

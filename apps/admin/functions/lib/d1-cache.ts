@@ -97,7 +97,11 @@ export function safeJSON<T>(json: string, fallback: T): T {
  * 1. 根据 inferProject() 识别路由架构，排除非页面的子站（admin、api）
  * 2. 排除 Next.js 内部路径（_next、__nextjs）
  * 3. 排除所有带扩展名的路径（自动覆盖全部扩展名）
- * 4. 排除隐藏文件和已知扫描器/攻击路径
+ * 4. 排除隐藏文件（以点开头的段）
+ *
+ * 【扫描器噪音不在这里处理】—— 非法路径统一返回 404，已在数据源
+ * （fetchAggregateStatsRange / fetchHourlyAggregateStats）按 HTTP 状态码
+ * 2xx/3xx 过滤，动态排除，无需静态名单。
  *
  * 「热门路径」不受此函数影响，它展示所有路径的原始请求次数。
  * 此函数仅用于从全部路径中筛选出「页面」路径，存入 page_paths 字段。
@@ -112,7 +116,7 @@ export function isPagePath(path: string): boolean {
   const { isPage } = inferProject(path);
   if (!isPage) return false;
 
-  // 第 2 步：排除 Next.js 内部路径、隐藏文件和扫描器
+  // 第 2 步：排除 Next.js 内部路径
   const clean = path.replace(/\/+$/, "");
   if (clean.startsWith("/_next/") || clean.startsWith("/__nextjs")) return false;
 
@@ -120,55 +124,8 @@ export function isPagePath(path: string): boolean {
   // 对于 Next.js SSG 站点，所有页面路径均为无点号的纯路由
   if (clean.includes(".")) return false;
 
-  // 第 4 步：排除隐藏文件和已知扫描器/攻击路径（不含扩展名的前缀式扫描）
-  if (
-    clean.startsWith("/.") || // 隐藏文件
-    clean.startsWith("/wp-") || // WordPress 扫描
-    clean.startsWith("/php") || // PHP 探针/信息扫描
-    clean.startsWith("/xmlrpc") || // XML-RPC 扫描
-    clean.startsWith("//") || // 双斜杠路径（扫描器常见特征）
-    clean.startsWith("/components/") || // Joomla 组件路径（扫描）
-    clean.startsWith("/themes/") || // WordPress 主题路径（扫描）
-    clean.startsWith("/plugins/") || // WordPress 插件路径（扫描）
-    clean.startsWith("/modules/") || // CMS 模块路径（扫描）
-    clean.startsWith("/includes/") || // CMS include 路径（扫描）
-    clean.startsWith("/vendor/") || // PHP Vendor 路径（扫描）
-    clean.startsWith("/node_modules/") || // npm 路径（扫描）
-    clean.startsWith("/tmp/") || // 临时目录（扫描）
-    clean.startsWith("/cache/") || // 缓存目录（扫描）
-    clean.startsWith("/backup") || // 备份目录/文件（扫描）
-    clean.startsWith("/old") || // 旧版路径（扫描）
-    clean.startsWith("/config/") || // 配置文件（扫描）
-    clean.startsWith("/debug/") || // 调试端点（扫描）
-    clean.startsWith("/files/") || // 文件列表（扫描）
-    clean.startsWith("/ALFA_DATA/") || // ALFA 恶意扫描
-    clean.startsWith("/assets/") || // 静态资源目录（非页面）
-    clean.startsWith("/_profiler") || // Symfony profiler 扫描
-    clean.startsWith("/env") || // .env 文件泄露扫描
-    clean.startsWith("/git/") || // Git 仓库扫描
-    clean.startsWith("/.git") || // Git 目录扫描
-    clean.startsWith("/adminer") || // Adminer DB 工具扫描
-    clean.startsWith("/phpMyAdmin") || // phpMyAdmin 扫描
-    clean.startsWith("/actuator") || // Spring Boot Actuator 扫描
-    clean.startsWith("/joomla") || // Joomla 扫描
-    clean.startsWith("/drupal") || // Drupal 扫描
-    clean.startsWith("/magento") || // Magento 扫描
-    clean.startsWith("/solr/") || // Apache Solr 扫描
-    clean.startsWith("/.DS_Store") || // macOS 元文件扫描
-    clean.startsWith("/.vscode/") || // IDE 配置扫描
-    clean.startsWith("/.idea/") || // IDE 配置扫描
-    clean.startsWith("/sftp-config") // SFTP 配置扫描
-  ) {
-    return false;
-  }
-
-  // 第 5 步：排除无扩展名的 API 版本路径和扫描器
-  if (
-    /^\/v\d+\//.test(clean) || // /v1/onboarding/config 等 API 版本路径
-    /^\/[a-z]+\d+(?:php|asp|jsp|aspx|pl|cgi)/i.test(clean) // /w1php 等扫描器
-  ) {
-    return false;
-  }
+  // 第 4 步：排除隐藏文件（以点开头的路径段）
+  if (clean.split("/").some((seg) => seg.startsWith("."))) return false;
 
   return true;
 }
@@ -331,7 +288,9 @@ export async function ensureDailyCFCache(env: CacheEnv): Promise<string> {
       const aggMap = await fetchAggregateStatsRange(zoneId, token, firstDate, lastDate);
       for (const [date, agg] of Array.from(aggMap.entries())) {
         try {
-          // 过滤：仅保留已知路由模式的路径，排除扫描器噪音
+          // 结构过滤：仅保留已知子站架构下的路径（site/portal/blog/admin/api），
+          // 排除 _next/静态资源等非面包屑路径；扫描器噪音已由数据源
+          // 状态码 2xx/3xx 动态过滤，无需静态名单。
           const knownPaths = agg.pathData.filter((p) => inferProject(p.path).project !== "unknown");
           const pagePaths = knownPaths.filter((p) => isPagePath(p.path)).slice(0, 30);
 
@@ -451,7 +410,7 @@ export async function ensureHourlyCFCache(env: CacheEnv): Promise<void> {
       try {
         const agg = await fetchHourlyAggregateStats(zoneId, token, today, h);
         if (agg.pathData.length > 0 || agg.osData.length > 0) {
-          // 过滤：仅保留已知路由模式的路径，排除扫描器噪音
+          // 结构过滤：仅保留已知子站架构下的路径（同 daily 写入）。
           const knownPaths = agg.pathData.filter((p) => inferProject(p.path).project !== "unknown");
           const pagePaths = knownPaths.filter((p) => isPagePath(p.path)).slice(0, 30);
 

@@ -331,8 +331,9 @@ export async function ensureDailyCFCache(env: CacheEnv): Promise<string> {
       const aggMap = await fetchAggregateStatsRange(zoneId, token, firstDate, lastDate);
       for (const [date, agg] of Array.from(aggMap.entries())) {
         try {
-          // 从全部路径中过滤出仅页面路径（基于路由架构 isPage + 静态资源排除）
-          const pagePaths = agg.pathData.filter((p) => isPagePath(p.path)).slice(0, 30);
+          // 过滤：仅保留已知路由模式的路径，排除扫描器噪音
+          const knownPaths = agg.pathData.filter((p) => inferProject(p.path).project !== "unknown");
+          const pagePaths = knownPaths.filter((p) => isPagePath(p.path)).slice(0, 30);
 
           await env.DB.prepare(
             `UPDATE daily_page_stats
@@ -340,7 +341,7 @@ export async function ensureDailyCFCache(env: CacheEnv): Promise<string> {
              WHERE date = ? AND source = 'cf_api'`,
           )
             .bind(
-              JSON.stringify(agg.pathData),
+              JSON.stringify(knownPaths),
               JSON.stringify(pagePaths),
               JSON.stringify(agg.osData),
               JSON.stringify(agg.deviceData),
@@ -450,8 +451,9 @@ export async function ensureHourlyCFCache(env: CacheEnv): Promise<void> {
       try {
         const agg = await fetchHourlyAggregateStats(zoneId, token, today, h);
         if (agg.pathData.length > 0 || agg.osData.length > 0) {
-          // Filter page-only paths
-          const pagePaths = agg.pathData.filter((p) => isPagePath(p.path)).slice(0, 30);
+          // 过滤：仅保留已知路由模式的路径，排除扫描器噪音
+          const knownPaths = agg.pathData.filter((p) => inferProject(p.path).project !== "unknown");
+          const pagePaths = knownPaths.filter((p) => isPagePath(p.path)).slice(0, 30);
 
           await env.DB.prepare(
             `UPDATE hourly_page_stats
@@ -461,7 +463,7 @@ export async function ensureHourlyCFCache(env: CacheEnv): Promise<void> {
             .bind(
               JSON.stringify(agg.osData),
               JSON.stringify(agg.deviceData),
-              JSON.stringify(agg.pathData),
+              JSON.stringify(knownPaths),
               JSON.stringify(pagePaths),
               JSON.stringify(agg.projectData),
               today,

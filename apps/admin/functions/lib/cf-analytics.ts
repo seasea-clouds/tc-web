@@ -96,10 +96,136 @@ function padStart(s: string, minLen: number): string {
 }
 
 /**
+ * 已知路由段白名单（面包屑语法）。
+ * 与前端 pathToBreadcrumb 的 STATIC_SEGMENT_LABELS 以及
+ * site / portal / blog / admin 的真实路由保持一致。
+ *
+ * 【新增页面时】在此添加新段；【扫描器路径】无需维护——
+ * 不在白名单中的路径自动归为 unknown 被排除。
+ */
+
+/** 站点支持的 48 个语言前缀（与 packages/ui/src/locales.json 一致） */
+const KNOWN_LOCALES: ReadonlySet<string> = new Set([
+  "en", "zh", "es", "fr", "de", "ja", "pt", "ru", "ar", "ko", "it",
+  "nl", "tr", "vi", "id", "th", "hi", "pl", "sv", "el", "cs", "ro",
+  "hu", "fi", "da", "no", "uk", "bg", "hr", "sr", "sk", "sl", "ms",
+  "ka", "he", "sw", "bn", "ca", "fa", "ur", "ta", "af", "sq", "az",
+  "hy", "be", "ne", "si",
+]);
+
+const KNOWN_SEGMENTS: ReadonlySet<string> = new Set([
+  // ── site 顶层页 ──
+  "about",
+  "ai-assistance",
+  "faq",
+  "industries",
+  "packages",
+  "privacy",
+  "quote",
+  "services",
+  "sitemap",
+  "terms",
+  "testimonials",
+  "thank-you",
+  // ── services 子页 ──
+  "brand",
+  "ccc",
+  "cosmetics",
+  "ecommerce",
+  "gacc",
+  "label",
+  // ── industries 品类（静态段）──
+  "skincare-cosmetics",
+  "medical-devices",
+  "dairy-milk-products",
+  "meat-seafood",
+  "wine-spirits",
+  "pet-food",
+  "health-supplements",
+  "baby-maternal",
+  "consumer-electronics",
+  "cross-border-ecommerce",
+  // ── portal（c/）──
+  "c",
+  "check",
+  "crossborder",
+  "trademark",
+  "nmpa",
+  "register",
+  "login",
+  "me",
+  "reports",
+  "settings",
+  "subscription",
+  "pricing",
+  "report",
+  "preview",
+  "account",
+  "dashboard",
+  "payments",
+  "contact",
+  // ── blog ──
+  "blog",
+  // ── admin ──
+  "admin",
+  "users",
+  "logs",
+  "subscriptions",
+  "user-detail",
+  "report-detail",
+  "subscription-detail",
+]);
+
+/**
+ * 动态段验证：/blog/{slug} 的 slug 格式。
+ * 博客文章 slug 为小写字母/数字/连字符，且由构建时生成、数量不定。
+ * 其他父段（services、industries、admin 等）的子段必须全在白名单中。
+ */
+function isValidDynamicSegment(parent: string, seg: string): boolean {
+  if (parent !== "blog") return false;
+  return /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(seg);
+}
+
+/**
+ * 路径是否匹配已知路由（面包屑语法白名单）。
+ * 仅用于 site / portal / blog / admin 子站路径。
+ *
+ * 规则：
+ * 1. 路径第一段必须是 48 个 locale 之一（如 /en/...），或根路径 /
+ * 2. 剥离 locale 后，剩余段必须都是已知静态段或合法动态段（blog 下的 slug）
+ * 3. 无 locale 前缀的裸路径（/c/...、/blog/...、/admin/...）第一段必须在白名单中
+ */
+export function matchesKnownRoute(path: string): boolean {
+  const clean = path.replace(/\/+$/, "");
+  if (clean === "" || clean === "/") return true;
+  const segs = clean.split("/").filter(Boolean);
+
+  let start = 0;
+  // 有 locale 前缀：剥离之（如 /en/about → about）
+  if (KNOWN_LOCALES.has(segs[0])) {
+    start = 1;
+    // 纯 locale 路径（如 /en）→ 首页，合法
+    if (segs.length === 1) return true;
+  }
+
+  // 第一段必须是已知静态段
+  if (!KNOWN_SEGMENTS.has(segs[start])) return false;
+
+  // 剩余段：已知静态段 或 合法动态段（blog 下的 slug）
+  for (let i = start + 1; i < segs.length; i++) {
+    const seg = segs[i];
+    if (KNOWN_SEGMENTS.has(seg)) continue;
+    if (isValidDynamicSegment(segs[i - 1], seg)) continue;
+    return false;
+  }
+  return true;
+}
+
+/**
  * 路由架构识别 —— 判断一个请求路径属于哪个子站。
  *
  * 返回值：
- *   project  子站标识（admin / api / portal / blog / site）
+ *   project  子站标识（admin / api / portal / blog / site / unknown）
  *   isPage   该子站的页面路径是否应计入「热门页面」
  *     true  → 面向用户的页面（官网/Portal/博客），进入热门页面榜单
  *     false → 内部或非页面（管理后台/API），不计入热门页面
@@ -118,11 +244,26 @@ export function inferProject(path: string): { project: string; isPage: boolean }
   // API 端点 — 非页面，不计入热门页面
   if (path.startsWith("/api/")) return { project: "api", isPage: false };
   // 用户站（Portal）— 对外页面，计入热门页面
-  if (path.startsWith("/c/") || /^\/[a-z]{2}\/c\//.test(path)) return { project: "portal", isPage: true };
+  if (path.startsWith("/c/") || /^\/[a-z]{2}\/c\//.test(path)) {
+    return matchesKnownRoute(path)
+      ? { project: "portal", isPage: true }
+      : { project: "unknown", isPage: false };
+  }
   // 博客站 — 对外页面，计入热门页面
-  if (path.startsWith("/blog/") || /^\/[a-z]{2}\/blog\//.test(path)) return { project: "blog", isPage: true };
+  if (path.startsWith("/blog/") || /^\/[a-z]{2}\/blog\//.test(path)) {
+    return matchesKnownRoute(path)
+      ? { project: "blog", isPage: true }
+      : { project: "unknown", isPage: false };
+  }
   // 官网主站（Site）— 对外页面，计入热门页面
-  return { project: "site", isPage: true };
+  // 必须是 /{locale}/... 格式（48 个语言前缀），或者纯根路径
+  if (/^\/[a-z]{2}\//.test(path) || path === "/" || path === "") {
+    return matchesKnownRoute(path)
+      ? { project: "site", isPage: true }
+      : { project: "unknown", isPage: false };
+  }
+  // 不匹配任何已知路由架构 → 扫描器噪音 / 非法路径
+  return { project: "unknown", isPage: false };
 }
 
 // ── Fetch functions ──────────────────────────────────────────────

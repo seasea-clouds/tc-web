@@ -736,7 +736,7 @@ function pathToBreadcrumb(path: string): string {
             <h3 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: "0.75rem" }}>{t("chart.topPaths")}</h3>
             {_a.pageData.length > 0 ? (
               <div>
-                {_a.pageData.filter((p: any) => !/\b_profiler\b|\bphpinfo\b|\.php$|\.env[.$]|wp-config|\.git\/|\.svn\/|\.htaccess|\bwp-(admin|login|content|includes)\b|xmlrpc|\badminer\b|\bphpmyadmin\b|\bjoomla\b|\bdrupal\b|\bmagento\b|\bactuator\b|sftp-config|\.DS_Store|\.vscode\/|\.idea\//i.test(p.path)).slice(0, 30).map((p, i) => (
+                {_a.pageData.slice(0, 30).map((p, i) => (
                   <div key={p.path} style={{ display: "flex", justifyContent: "space-between", padding: "0.3rem 0", fontSize: "0.8rem", borderBottom: i < 29 ? "1px solid #f3f4f6" : "none" }}>
                     <span style={{ color: "#374151", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{p.path}</span>
                     <span style={{ fontWeight: 600, color: "#1B365D", whiteSpace: "nowrap", marginLeft: "1rem" }}>{p.count}</span>

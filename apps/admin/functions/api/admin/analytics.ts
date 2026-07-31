@@ -19,44 +19,8 @@ import {
   readTodayHourly,
   readAllTimeTotals,
   safeJSON,
-  isPagePath,
 } from "../../lib/d1-cache";
 import { type HourlyStats } from "../../lib/cf-analytics";
-
-// Reuse the same scanner patterns from the middleware for consistency.
-// These match known vulnerability scanner probes that should never
-// appear in analytics data for a Next.js SSG site.
-const SCANNER_PROBE_PATTERNS: RegExp[] = [
-  /\b_profiler\b/i,
-  /\bphpinfo\b/i,
-  /\.php$/i,
-  /\.env$/i,
-  /\.env\./i,
-  /\.git\//i,
-  /\.svn\//i,
-  /\.htaccess/i,
-  /wp-config\.php/i,
-  /\bwp-admin\b/i,
-  /\bwp-login\b/i,
-  /\bwp-content\b/i,
-  /\bwp-includes\b/i,
-  /xmlrpc\.php/i,
-  /\badminer\b/i,
-  /\bphpmyadmin\b/i,
-  /\bphpMyAdmin\b/,
-  /\bjoomla\b/i,
-  /\bdrupal\b/i,
-  /\bmagento\b/i,
-  /\bactuator\b/i,
-  /sftp-config\.json/i,
-  /\.DS_Store/i,
-  /\.vscode\//i,
-  /\.idea\//i,
-];
-
-function isScannerOrNoise(path: string): boolean {
-  return SCANNER_PROBE_PATTERNS.some((p) => p.test(path));
-}
 
 interface Env {
   DB: any;
@@ -241,9 +205,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
       const browserData = mergeByKey(browserArrays, "browser", "pageViews");
       const osData = mergeByKey(osArrays, "os", "count");
       const deviceData = mergeByKey(deviceArrays, "device", "count");
-      const pageData = mergeByKey(pageArrays, "path", "count")
-        .filter((p: any) => !isScannerOrNoise(p.path))
-        .slice(0, 30);
+      const pageData = mergeByKey(pageArrays, "path", "count").slice(0, 30);
       const pagePaths = mergeByKey(pagePathsArrays, "path", "count").slice(0, 30);
       const projectData = mergeByKey(projectArrays, "project", "count");
 
@@ -340,8 +302,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
 
     // Merge distribution data
     const geoData = mergeByKey(geoArrays, "country", "count");
-    const pageData = mergeByKey(pageArrays, "path", "count")
-      .filter((p: any) => !isScannerOrNoise(p.path));
+    const pageData = mergeByKey(pageArrays, "path", "count");
     const pagePaths = mergeByKey(pagePathsArrays, "path", "count");
 
     return Response.json({

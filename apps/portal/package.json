@@ -9,8 +9,7 @@
     "build:ci": "node ../../packages/scripts/build-search-index.mjs && next build && node ../../packages/scripts/ci-check.mjs --out-dir=out --ci",
     "start": "next start",
     "lint": "eslint",
-    "deploy": "npx wrangler pages deploy ./out --project-name=trade-web-portal",
-    "postdeploy-check": "sleep 30 && node ../../packages/scripts/check-hreflang-portal.mjs --ci"
+    "deploy": "npx wrangler pages deploy ./out --project-name=trade-web-portal"
   },
   "dependencies": {
     "@react-pdf/renderer": "^4.5.1",

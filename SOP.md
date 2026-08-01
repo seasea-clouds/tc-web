@@ -170,7 +170,7 @@ curl -s -X POST "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/
 
 # Portal (apps/portal)
   build-search-index → next build → ci-check.mjs --project=portal --out-dir=out --ci
-  → deploy → postdeploy-check (远程 hreflang 验证)
+  （hreflang 由 buildAlternates SSG 生成，构建时 check-hreflang.mjs --dir=out 检查，无需部署后验证）
 
 # Blog (apps/blog)
   lint → build-search-index → next build → ci-check.mjs --project=blog --out-dir=out --ci

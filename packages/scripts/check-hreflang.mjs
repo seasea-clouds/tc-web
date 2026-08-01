@@ -5,21 +5,18 @@
  * ⚠️ 项目选择指南：
  *   site  (SSG, 直接托管)    → --dir=out
  *   blog  (SSG, 直接托管)    → --next-dir=.next
- *   portal(SSG+Worker边缘路由) → --url=... 检查已部署实例
- *
- * Portal 的 hreflang 由 site 的 Cloudflare Worker 中间件在边缘端注入，
- * SSG 静态输出中不含 hreflang 标签，因此不能用 --dir=out 检查。
- * 必须部署后通过 --url 模式进行远程验证。
+ *   portal(SSG, 直接托管)    → --dir=out（hreflang 由 buildAlternates SSG 生成，
+ *                              静态输出含 hrefLang 标签，构建时即可检查）
  *
  * 支持 3 种模式：
- *   --dir=out         → 扫描 SSG 输出目录（site）
+ *   --dir=out         → 扫描 SSG 输出目录（site / portal）
  *   --next-dir=.next  → 扫描 Next.js build 输出（blog）
- *   --url=...         → curl 远程检查（portal 部署后）
+ *   --url=...         → curl 远程检查（特殊场景）
  *
  * 用法:
- *   node check-hreflang.mjs --dir=out --ci       # site
+ *   node check-hreflang.mjs --dir=out --ci       # site / portal
  *   node check-hreflang.mjs --next-dir=.next --ci # blog
- *   node check-hreflang.mjs --url=https://sinotradecompliance.com/en/c/ --ci  # portal deploy
+ *   node check-hreflang.mjs --url=https://sinotradecompliance.com/en/c/ --ci  # 远程
  *
  * 退出码: 0 通过, 1 失败
  */
@@ -70,7 +67,7 @@ function checkSSGOutput(dir, skipPatterns = []) {
   for (const file of files) {
     const rel = path.relative(dir, file);
     
-    // Skip files matching skip patterns (e.g., /c/ in portal SSG which gets Worker-level hreflang)
+    // Skip files matching skip patterns (e.g., 404 / _not-found pages with no hreflang)
     // Pattern matching: remove leading / from pattern since rel is relative without leading /
     const normalizedPattern = (p) => {
       const clean = p.startsWith('/') ? p.slice(1) : p;

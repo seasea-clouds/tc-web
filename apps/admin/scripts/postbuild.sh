@@ -31,6 +31,13 @@ for f in "$OUT_DIR"/*.html "$OUT_DIR"/*.txt "$OUT_DIR"/404; do
   fi
 done
 
+# Step 3.5: Move root-level icon files (favicon.ico, icon.png) under /admin/ basePath
+for f in "$OUT_DIR"/favicon.ico "$OUT_DIR"/icon.png; do
+  if [ -f "$f" ]; then
+    mv "$f" "$TARGET/"
+  fi
+done
+
 # Step 4: Create a redirect at root level (/ → /admin/)
 cat > "$OUT_DIR/index.html" << 'EOF'
 <!DOCTYPE html>

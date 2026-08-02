@@ -24,7 +24,11 @@ apps/site/public/404/
 .turbo/turbo-build.log
 
 # Build artifacts: sitemaps, llms, search indexes (regenerated per build)
-public/
+# Note: do NOT ignore the whole public/ dir, or icons can't be tracked.
+# Ignore specific generated files instead.
+**/public/sitemap*.xml
+**/public/llms*.txt
+**/public/llms-*.txt
 /robots.txt
 /sitemap.xml
 /sitemap-images.xml

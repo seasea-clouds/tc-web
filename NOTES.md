@@ -103,6 +103,24 @@ node ../../packages/scripts/build-search-index.mjs \
   && node ../../packages/scripts/ci-check.mjs --out-dir=out --ci
 ```
 
+### 站点图标统一方案（2026-08-02）
+
+**单一真源**：`packages/brand/`（icon.png 512×512 透明 PNG + favicon.ico 多尺寸 16/32/48/64/128/256）
+
+**同步脚本**：`packages/scripts/sync-icons.mjs` — 真源复制到各项目 `public/`，同时清理 `src/app/` 旧约定文件。改图标只改真源 + 跑脚本 + 提交。
+
+**各项目处理**：
+- site/portal/blog：`public/icon.png + favicon.ico`，Next.js 自动输出 3 条引用（favicon.ico sizes=any + icon.png PNG + apple-touch-icon）
+- admin：**client 组件手写 `<head>`，Next.js 不会自动注入 icon** → layout.tsx 3 处 head 手动加 `<link>`（路径 `/admin/icon.png`），postbuild.sh 需把根目录 icon 文件移入 `out/admin/`
+
+**踩坑**：
+1. `src/app/` 约定文件会输出带 hash 的重复引用（如 `/icon.png?icon.xxx.png`），统一用 `public/` 即可避免
+2. `.gitignore` 原用 `public/` 整目录忽略 → git 无法跟踪子文件（经典坑：父目录被忽略后 `!` 反规则不生效）→ 改为只忽略具体构建产物（sitemap/llms/search-index），图标可正常跟踪
+3. JPEG 原图去白底要用 **flood fill 从边缘填充**（内部白色元素不连通边缘，安全），不能简单白色→透明（会破坏内部白色字母）
+4. 图片处理：1310×1310 JPEG → flood fill 去白底 → 512×512 透明 PNG（LANCZOS 缩放）
+
+**标准尺寸**：icon.png 512×512（PWA 标准，可降级）；favicon.ico 多尺寸 ICO。
+
 ### 客户故事文章翻译踩坑（2026-08-02，pet-food-brand-gacc-registration）
 
 翻译工具输出到 MDX 重组后必须过 3 个 MDX 检查，常见问题：

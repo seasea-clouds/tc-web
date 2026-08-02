@@ -103,6 +103,21 @@ node ../../packages/scripts/build-search-index.mjs \
   && node ../../packages/scripts/ci-check.mjs --out-dir=out --ci
 ```
 
+### 客户故事文章翻译踩坑（2026-08-02，pet-food-brand-gacc-registration）
+
+翻译工具输出到 MDX 重组后必须过 3 个 MDX 检查，常见问题：
+
+1. **YAML 双引号嵌套**：翻译后标题可能含 `"`（如希伯来语 `ארה"ב`），破坏 frontmatter 解析 → 改用单引号包裹该字段。构建报错表现为 `/he/blog` 页面 Export error。
+2. **E07 手动编号**：翻译引擎把 `### Step 1:` 译成 `### 1. lépés:`（数字开头）→ 与 CSS 自动编号冲突 → 改为 `### Lépés 1:`（词在前数字在后，不匹配 E07 正则 `/^###\s*(?:[1-9]|1[0-9]|20|30)[.、]/`）。
+3. **R08 标题连字符**：全语言禁止标题含 `-`（如 az `ABŞ-ın`、de `US-amerikanische`）→ 改写标题措辞。
+4. **R04 标题级别**：翻译引擎可能把 `##` 译成 `#`（be）→ 恢复为 `##`。
+5. **ref 标准号未翻译**：`GB 10648 — Feed Label Standard` 含标准号，翻译引擎直接跳过（10 个语言保持英文）→ R20 报错 → 手动翻译各语言版本。
+6. **CTA URL 本地化**：翻译引擎会：a) 把 `/en/packages/` 的 locale 前缀保留为 en；b) 把 URL 里的 packages 也翻译（cs/sk 变 `/en/balíčky/`）；c) 在 markdown 链接中插入空格 `] (/fr / packages/)`；d) 西里尔语言把 URL 译成西里尔字母（sr `/ен/пацкагес/`）→ 重组后必须统一替换 CTA URL 为 `/{locale}/packages/` 并修复破损链接。
+7. **zh refs 双破折号**：`——` 被 check-md-format E02 禁止 → 改冒号 `：`（与现有 zh 文章 refs 风格一致）。
+8. **CF Pages 部署状态误读**：`wrangler pages deployment list` 显示新部署 Status=Active 但部署专属 URL 404 → 实际是 build stage 仍在进行（构建 480 页面需数分钟），deploy stage 未开始。用 CF API 查 stages 确认：`GET /accounts/{account_id}/pages/projects/{project}/deployments`（account_id 可从 zone API 取）。生产域名在构建完成前仍指向旧部署，属正常。
+
+翻译输入 JSON 必须用**扁平 dict**（`{"key": "text"}`），`{"items": [...]}` 结构会被 scanner 忽略（dict 分支只取字符串值）。
+
 ## Admin
 
 ### 技术决策

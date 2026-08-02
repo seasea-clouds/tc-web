@@ -67,6 +67,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <head>
           <title>{t("login.title")}</title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="icon" href="/admin/favicon.ico" sizes="any" />
+          <link rel="icon" href="/admin/icon.png" type="image/png" />
+          <link rel="apple-touch-icon" href="/admin/icon.png" />
         </head>
         <body>{children}</body>
       </html>
@@ -79,6 +82,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <head>
           <title>{t("nav.dashboard")} — SinoTrade Compliance</title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="icon" href="/admin/favicon.ico" sizes="any" />
+          <link rel="icon" href="/admin/icon.png" type="image/png" />
+          <link rel="apple-touch-icon" href="/admin/icon.png" />
         </head>
         <body style={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: "100vh" }}>
           <div className="spinner" />
@@ -92,6 +98,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <title>SinoTrade Compliance Admin</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/admin/favicon.ico" sizes="any" />
+        <link rel="icon" href="/admin/icon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/admin/icon.png" />
       </head>
       <body>
         {/* Sidebar */}

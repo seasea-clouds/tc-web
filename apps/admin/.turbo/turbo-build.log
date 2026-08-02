@@ -1,20 +1,30 @@
 
-> @trade/admin@6.1.0 build
-> next build && bash scripts/postbuild.sh
+> @trade/admin@6.6.0 prebuild
+> node ../../packages/scripts/generate-segment-mapping.mjs && node ../../packages/scripts/discover-routes.mjs --emit-json
+
+
+✅ Generated /root/projects/trade/web/apps/admin/src/lib/segment-mapping.ts
+   10 blog article mappings (slug → Chinese title)
+
+✅ Generated /root/projects/trade/web/apps/admin/functions/lib/known-routes.ts
+   2689 known routes (48 locales, includePrivate=true)
+
+> @trade/admin@6.6.0 build
+> npx next build && bash scripts/postbuild.sh
 
 ▲ Next.js 16.2.6 (Turbopack)
 - Environments: .env
 
   Creating an optimized production build ...
-✓ Compiled successfully in 3.6s
+✓ Compiled successfully in 1972ms
   Running TypeScript ...
-  Finished TypeScript in 3.8s ...
+  Finished TypeScript in 2.5s ...
   Collecting page data using 14 workers ...
   Generating static pages using 14 workers (0/13) ...
   Generating static pages using 14 workers (3/13) 
   Generating static pages using 14 workers (6/13) 
   Generating static pages using 14 workers (9/13) 
-✓ Generating static pages using 14 workers (13/13) in 604ms
+✓ Generating static pages using 14 workers (13/13) in 352ms
   Finalizing page optimization ...
 
 Route (app)

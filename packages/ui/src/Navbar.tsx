@@ -187,8 +187,9 @@ export default function Navbar(props: NavbarProps) {
       {/* 第一行：Logo + WhatsApp */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14">
-          <a href={href('/')} className="text-white font-bold text-lg sm:text-xl">
-            {t('logo')}
+          <a href={href('/')} className="flex items-center gap-2 text-white font-bold text-lg sm:text-xl">
+            <img src="/icon.png" alt="SinoTrade Compliance" className="h-7 w-7 sm:h-8 sm:w-8 rounded-full object-contain" />
+            <span>{t('logo')}</span>
           </a>
           <div className="flex items-center gap-2">
             {onSearchOpen && (

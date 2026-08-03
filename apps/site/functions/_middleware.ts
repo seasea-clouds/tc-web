@@ -242,6 +242,15 @@ export async function onRequest(context: { request: Request; next: () => Promise
     return new Response(null, { status: 204 });
   }
 
+  // ── Canonical host redirect ──
+  // Must run before any sub-site proxy logic: otherwise www./pages.dev requests
+  // to /{locale}/blog/, /{locale}/c/ or /admin/ get proxied (200) instead of
+  // 301-ing to the canonical domain, creating duplicate-content signals.
+  const canonical = getCanonicalHost(url.toString());
+  if (canonical && url.hostname !== canonical) {
+    return Response.redirect(url.toString().replace(url.hostname, canonical), 301);
+  }
+
   // ── Sub-site static assets ──
   const assetResp = await proxySubSiteAsset(url, request, env);
   if (assetResp) return assetResp;
@@ -356,12 +365,6 @@ export async function onRequest(context: { request: Request; next: () => Promise
   if (url.pathname === '/blog' || url.pathname === '/blog/') {
     const locale = matchBrowserLanguage(request.headers.get('accept-language'));
     return Response.redirect(url.origin + '/' + locale + '/blog/', 302);
-  }
-
-  // ── Canonical host redirect ──
-  const canonical = getCanonicalHost(url.toString());
-  if (canonical && url.hostname !== canonical) {
-    return Response.redirect(url.toString().replace(url.hostname, canonical), 301);
   }
 
   // ── Language auto-detect for root path ──

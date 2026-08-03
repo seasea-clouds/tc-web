@@ -408,15 +408,18 @@
 6. **it 页面**：registrare un dispositivo medico in cina 已排 26.33（最好），heroTitle 融入 "registrazione dispositivi medici" 冲前 10
 7. **es 页面**：subcontratación dispositivos médicos（1）→ es metaDescription 融入
 
-### L2 新增博客文章（本周可做，48 语言，长期流量）
+### L2 新增博客文章（执行中 2026-08-03）
 
 - **文章**：Medical Device Import License in China: NMPA Registration Guide
-- **日期**：**2025-08-20**（详见下方日期规划）
-- **分类**：Compliance Guide（或 Product Certification）
+- **日期**：**2025-08-20**（与 pet-food→health-supplements 的 6 个月节奏衔接，不与现有日期冲突）
+- **分类**：Compliance Guide
 - **理由**：fa/fr gacc 博客证明博客能排前 10；"import license" 是真实需求（15+1 展示）；现有博客无医疗器械主题
 - **内容**：NMPA 进口许可证流程、Class I/II/III 分类、临床评估豁免、标签要求、常见坑
+- **状态**：✅ en 源文已写（10 section，~2000 词）→ ✅ 翻译已提交（blog-medical-device-20260803，47 语言，752 项）→ ⏳ 翻译进行中 → 待：重组 47 MDX → CI 检查 → 构建部署验证
 - **流程**：en 源文 → translate-tool 提交 47 语言 → 合并 locale → CI 检查 → 构建部署验证
+- **翻译输入格式**：扁平 dict 16 keys（fm_title/fm_excerpt/ref_1-4/sec_intro~sec_help），参考宠物食品/健康食品模式
 - **注意**：日期必须在当前日期之前（网站品牌 2010s 成立），且不与现有 10 篇冲突
+- **坑（参考 NOTES.md）**：YAML 双引号嵌套（希伯来语）、E07 手动编号、R08 标题连字符、R04 标题级别、ref 标准号翻译、CTA URL 本地化为 /{locale}/packages/、zh 双破折号
 
 ### L3 GSC 操作（配合）
 
@@ -453,3 +456,5 @@
 1. 短期：不处理（默认 E）
 2. 中期：全站评估 si/sl/sq/sr/sv/sw/ta/uk/ur 等低流量语言是否 noindex（问题 2 的解决方案 1），medical-devices 小语种随大流处理
 3. 不做单页验证（方案 A 无效）
+
+**✅ 已决定（2026-08-03）：此项工作忽略，不处理。**

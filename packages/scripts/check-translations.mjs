@@ -503,6 +503,11 @@ SHARED_WORDS_BY_LANG['ro'].add('Special');
 if (!SHARED_WORDS_BY_LANG['th']) SHARED_WORDS_BY_LANG['th'] = new Set();
 SHARED_WORDS_BY_LANG['th'].add('TISI');
 
+// Hindi: 'BIS' is the official abbreviation of the Bureau of Indian Standards
+// (भारतीय मानक ब्यूरो) — India's national standards body.
+if (!SHARED_WORDS_BY_LANG['hi']) SHARED_WORDS_BY_LANG['hi'] = new Set();
+SHARED_WORDS_BY_LANG['hi'].add('BIS');
+
 // Swahili keeps international scientific terms in English
 SHARED_WORDS_BY_LANG['sw'].add('Melamine');
 SHARED_WORDS_BY_LANG['sw'].add('Tetracycline antibiotics');

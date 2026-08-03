@@ -266,6 +266,14 @@
   - 豁免：ru(EAC/Taobao/MARA) 精确豁免
   - 验证：48 语言翻译质量 0 问题 / CI 全通过 / 线上 5 语言服务页+行业页 h1 全部确认（nl 首查遇 CDN 缓存，加参数后正常）
 - ⏳ **批 4（T4）**：其余 37 语言轻量差异化（heroTitle/Subtitle + metaTitle 本地视角，保持 FAQ 翻译）
+  - ✅ **T4-1 完成（commit 9d0b11d0 已部署）**：ko/zh/ar/tr/vi/th × 16 namespace = 96 页面组合
+    - ko：韩国视角（K-뷰티、电子、泡菜/红参）；zh：海外华商视角；ar：海湾视角（椰枣、清真、G-Mark vs CCC）
+    - tr：土耳其视角（榛子、白电、TSE vs CCC）；vi：越南视角（海鲜、咖啡、热带水果）；th：泰国视角（榴莲、大米、TISI vs CCC）
+    - 豁免：th(TISI) 精确豁免
+    - 验证：48 语言翻译质量 0 问题 / CI 全通过 / 线上 6 语言 ccc+gacc+dairy+skincare h1 全部确认
+  - ⏳ **T4-2**：id/ms/hi/he/sv/no/da/fi（8 语言）
+  - ⏳ **T4-3**：cs/hu/ro/uk/el/bg/sr/hr/sk/sl（10 语言）
+  - ⏳ **T4-4**：et/lt/lv/mk/sq/hy/ka/ne/si/bn/ur/ta/sw/az/be/ca/af（13 语言）
 
 ---
 

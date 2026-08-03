@@ -482,6 +482,12 @@ for (const lang of ['af','az','ca','cs','el','fi','hr','hu','id','ka','ms','pl',
 // Japanese: 'PSE' is the standard abbreviation for the Denki Yōhinshi Anzen-hō
 // (Product Safety Electrical Appliances) mark — a real term in Japanese context.
 SHARED_WORDS_BY_LANG['ja'].add('PSE');
+SHARED_WORDS_BY_LANG['ja'].add('WTO');
+SHARED_WORDS_BY_LANG['ja'].add('Amazon');
+
+// Persian/Farsi: 'Amazon' is a brand name used as-is in Persian text
+if (!SHARED_WORDS_BY_LANG['fa']) SHARED_WORDS_BY_LANG['fa'] = new Set();
+SHARED_WORDS_BY_LANG['fa'].add('Amazon');
 
 // Romanian: 'Special' is same as English (loanword)
 SHARED_WORDS_BY_LANG['ro'].add('Special');

@@ -500,3 +500,32 @@ de 三项（gacc lebensmittel registrierung/zertifizierung、regulatorische anfo
 3. 不做单页验证（方案 A 无效）
 
 **✅ 已决定（2026-08-03）：此项工作忽略，不处理。**
+
+---
+
+## ✅ FAQ 48 语言同步 + P4 heroSubtitle（已完成 2026-08-03）
+
+**commit:** 943c50f4（已 push main，CF Pages 自动部署，线上验证通过）
+
+### 完成内容
+1. **FAQ 6 组跨语言主题不一致修复**（48 语言全部一致）：
+   - ServiceCcc.faq3: clinical trials → 申请流程（apply + duration）
+   - ServiceCcc.faq5: SDOC → 费用（cost）
+   - ServiceBrand.faq4: 防伪 → Alibaba 平台品牌保护
+   - ServiceGacc.faq1: Decreto 248 → GACC + 食品注册
+   - IndustryMedical.faq3 / ServiceCcc.faq2: en 基准主题保留
+2. **翻译方式**：translate-tool 任务停掉，251 条由 AI 人工翻译（47 语言）+ 工具已完成 310 条合并，en 更新 8 key
+3. **P4 heroSubtitle 4 处**（it/nl）：
+   - it ServiceCcc: import-export componenti elettronici ✅
+   - it IndustryMedical: registrare un dispositivo medico ✅
+   - nl ServiceCcc: elektronica certificeringsadvies ✅
+   - nl IndustryMedical: importvergunning voor China ✅
+
+### 验证
+- CI 翻译质量检查 48 语言 0 问题 ✅
+- site 构建 6529 页面 ✅
+- 线上 it/nl/zh/en FAQ 新主题全部生效 ✅
+- P4 4 处关键词线上命中 ✅
+
+### 待观察
+- GSC 后续排名变化（2-4 周后复查 ccc certificaat china aanvragen / componenti 系列）

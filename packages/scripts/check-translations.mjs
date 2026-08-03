@@ -470,6 +470,7 @@ const SHARED_WORDS_BY_LANG = {
   sq: new Set(['Blog', 'Melamine', 'Histamine']),
   vi: new Set(['Blog', 'Melamine', 'Aflatoxin M1']),
   sr: new Set(['Opseg', 'tro', 'kova']),
+  ja: new Set(['PSE']),
 };
 
 
@@ -477,6 +478,10 @@ for (const lang of ['af','az','ca','cs','el','fi','hr','hu','id','ka','ms','pl',
   if (!SHARED_WORDS_BY_LANG[lang]) SHARED_WORDS_BY_LANG[lang] = new Set();
   SHARED_WORDS_BY_LANG[lang].add('Blog');
 }
+
+// Japanese: 'PSE' is the standard abbreviation for the Denki Yōhinshi Anzen-hō
+// (Product Safety Electrical Appliances) mark — a real term in Japanese context.
+SHARED_WORDS_BY_LANG['ja'].add('PSE');
 
 // Romanian: 'Special' is same as English (loanword)
 SHARED_WORDS_BY_LANG['ro'].add('Special');

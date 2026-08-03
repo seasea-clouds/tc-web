@@ -120,6 +120,15 @@
 
 ### 方案 1：德语 CCC 关键词攻坚（目标排名 71 → 前 20）
 
+**状态：** ✅ 已完成（2026-08-03）
+- ✅ 步骤 1：heroTitle 已含 "China"（"CCC-Zertifizierung für China"，此前已有）
+- ✅ 步骤 2：heroSubtitle 融入 "China Compulsory Certification" 全称
+- ✅ 步骤 3：faq3q 改为 "Wie beantrage ich ein CCC-Zertifikat für China und wie lange dauert es?"（覆盖 beantragen 长尾，与已有 kosten/pflicht 互补），faq3a 同步更新（申请流程 + 3-6 个月）
+- ✅ 步骤 4：coverItems3 融入 "CCC-Zeichen"（已有 CCC-Verzeichnis + CNCA）
+- ✅ 步骤 5：RelatedResources 组件自动拉取同分类博客（无需改）
+- ✅ 步骤 6：de 博客 ccc-certification-explained 已含 13 处关键词，标题已过 R08
+- ✅ 步骤 7：构建 + 部署（73b788cc）+ 线上验证（heroSubtitle/faq3q/faq3a/coverItems3 全部新值已上线）
+
 **背景数据：**
 - `ccc zertifizierung`：154 展示，排名 71.67
 - `ccc zertifikat`：139 展示，排名 74.45

@@ -223,19 +223,26 @@
 
 ---
 
-## 问题 4：技术 bug（3 处，代码改动）
+## 问题 4：技术 bug（3 处，代码改动）✅ 已全部修复（commit a5b428bb，2026-08-03）
 
-### 4a. www 域 /blog/ 不重定向
+### 4a. www 域 /blog/ 不重定向 ✅
 - www.sinotradecompliance.com/en/blog/ 返回 200（应 301 到主域），其他路径正常 301
 - 根因：apps/site/functions/_middleware.ts 中 Blog/Portal 代理逻辑在 canonical host 检查之前执行
-- **方案：** 将 canonical host 检查（getCanonicalHost）移到所有 proxy 逻辑之前（RSC 204 之后）
+- **修复：** canonical host 检查已移到所有 proxy 逻辑之前（RSC 204 之后）✅
 - 影响：消除 www 重复内容信号，65 个备用网页中的 www 变体归位
+- 验证：线上 www /en/blog/、/en/c/、/admin/ 全部 301 → 主域 ✅
 
-### 4b. compli-service 无 301（同问题 3b）
+### 4b. compli-service 无 301（同问题 3b）✅
+- **修复：** apps/site/public/_redirects 添加 48 条 `/{locale}/compli-service/* → /{locale}/c/* 301`（同时解决 4 个"重复网页无 canonical"）
+- 验证：线上 en/nl/hi/fa 全部 301 → /c/ ✅
 
-### 4c. 认证页被收录
+### 4c. 认证页被收录 ✅
 - /c/login、/c/register、thank-you 页多语言版本进索引（sq/c/login、id/thank-you 等）
-- **方案：** c/login、c/register、thank-you 加 noindex（c/pricing 保留，有商业价值）
+- **修复：**
+  - portal login/register：新增服务端 layout.tsx 导出 robots noindex（`{ index: false, follow: false }`）
+  - site thank-you：generateMetadata 加 robots noindex
+  - c/pricing 保留（有商业价值）
+- 验证：线上 en/c/login、en/c/register、en/thank-you 均返回 `<meta name="robots" content="noindex, nofollow">` ✅
 
 ---
 
@@ -398,15 +405,17 @@
 
 ## 三层方案
 
-### L1 现有行业页优化（快，今天可做，覆盖 ~39 展示）
+### L1 现有行业页优化（✅ 已完成 2026-08-03，commit a5b428bb）
 
-1. **en heroTitle**："China Compliance for Medical Device Exporters" → **"Medical Device Import & NMPA Registration in China"**（对齐 import license 15 展示）
-2. **en heroSubtitle**：融入 "import license"（当前无）
-3. **en FAQ**：faq5q（跨境电商）保留，改 faq3q 或新增覆盖 "How do I get an import license for medical devices in China?"（保持 6 条结构，替换无搜索量的）
-4. **de heroTitle**："China-Konformität für Exporteure medizinischer Geräte" → **"Medizinprodukte China Import: NMPA-Registrierung"**（对齐 medizinprodukte china 7 + china medizintechnik 5）
-5. **it/es/ru metaTitle 方向修正**："从中国进口" → "进口到中国"
-6. **it 页面**：registrare un dispositivo medico in cina 已排 26.33（最好），heroTitle 融入 "registrazione dispositivi medici" 冲前 10
-7. **es 页面**：subcontratación dispositivos médicos（1）→ es metaDescription 融入
+1. **en heroTitle**："China Compliance for Medical Device Exporters" → **"Medical Device Import & NMPA Registration in China"**（对齐 import license 15 展示）✅
+2. **en heroSubtitle**：融入 "import license"（当前无）✅
+3. **en FAQ**：faq5q（跨境电商）保留，改 faq3q 覆盖 "How do I get an import license for medical devices in China?"（faq3a 答案同步改为 NMPA 注册证书即进口许可流程）✅
+4. **de heroTitle**：→ **"Medizinprodukte China Import: NMPA-Registrierung"**（对齐 medizinprodukte china 7 + china medizintechnik 5）✅
+5. **it/es/ru metaTitle 方向修正**："从中国进口" → "进口到中国" ✅
+6. **it 页面**：heroTitle 融入 "registrazione dispositivi medici" 冲前 10 ✅
+7. **es 页面**：metaDescription 融入 "subcontratación dispositivos médicos" ✅
+
+**验证：** 构建 6529 项 SEO 检查 0 失败；线上 en/de/it/es/ru/fr 标题/内容全部生效（2026-08-03）
 
 ### L2 新增博客文章（执行中 2026-08-03）
 

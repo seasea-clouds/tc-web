@@ -730,6 +730,11 @@ SHARED_WORDS_BY_LANG['es'].add('acreditado');
   if (!SHARED_WORDS_BY_LANG[l]) SHARED_WORDS_BY_LANG[l] = new Set();
   ['polarization', 'sucrose', 'microbiological', 'coliforms', 'pathogens'].forEach(w => SHARED_WORDS_BY_LANG[l].add(w));
 });
+// Indonesian & Malay shared words (loanwords)
+['id', 'ms'].forEach(l => {
+  if (!SHARED_WORDS_BY_LANG[l]) SHARED_WORDS_BY_LANG[l] = new Set();
+  ['formula'].forEach(w => SHARED_WORDS_BY_LANG[l].add(w));
+});
 
 // Case-insensitive version of SHARED_WORDS_BY_LANG for lowercased lookups
 const SHARED_WORDS_BY_LANG_LC = {};

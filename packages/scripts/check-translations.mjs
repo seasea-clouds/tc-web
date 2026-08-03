@@ -489,6 +489,12 @@ SHARED_WORDS_BY_LANG['ja'].add('Amazon');
 if (!SHARED_WORDS_BY_LANG['fa']) SHARED_WORDS_BY_LANG['fa'] = new Set();
 SHARED_WORDS_BY_LANG['fa'].add('Amazon');
 
+// Russian: 'EAC' (Eurasian Conformity mark), 'Taobao' (platform), 'MARA' (China ag ministry) are standard terms
+if (!SHARED_WORDS_BY_LANG['ru']) SHARED_WORDS_BY_LANG['ru'] = new Set();
+SHARED_WORDS_BY_LANG['ru'].add('EAC');
+SHARED_WORDS_BY_LANG['ru'].add('Taobao');
+SHARED_WORDS_BY_LANG['ru'].add('MARA');
+
 // Romanian: 'Special' is same as English (loanword)
 SHARED_WORDS_BY_LANG['ro'].add('Special');
 

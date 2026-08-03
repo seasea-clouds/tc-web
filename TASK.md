@@ -349,11 +349,11 @@
 | norma ccc (es) | 1 | 保持 | ✅ 无需改 |
 | ccc маркировка (ru) | 11.5 | ru 服务页融入 "маркировка CCC" | ✅ heroSubtitle → "нанесения маркировки CCC" |
 | трансграничная платформа (ru) | 12 | ru 电商页融入 | ✅ 已覆盖（"трансграничных платформах" 词根），无需改 |
-| gacc lebensmittel registrierung (de) | 14 | de gacc 页确认覆盖 | ⏳ 待确认 |
-| gacc lebensmittel zertifizierung (de) | 19.8 | 同上 | ⏳ 待确认 |
+| gacc lebensmittel registrierung (de) | 14 | de gacc 页确认覆盖 | ✅ 已覆盖（heroTitle "GACC-Lebensmittelregistrierung" + heroSubtitle "Lebensmittelregistrierungsanforderungen" + metaTitle），无需改 |
+| gacc lebensmittel zertifizierung (de) | 19.8 | 同上 | ✅ 已覆盖（heroSubtitle "Von der GACC-Zertifizierung bis zur CIFER-Einreichung"），无需改 |
 | proteccion de marca en alibaba (es) | 18 | es 品牌页融入 | ✅ faq4q → "¿Cómo protejo mi marca en Alibaba...?" |
 | 中国 健康食品 規制 (ja) | 21.7 | ja 保健品相关 | ✅ 已覆盖（IndustrySupplements.heroSubtitle 含 "健康食品規制"），无需改 |
-| regulatorische anforderungen (de) | 23-32 | de 电商页融入 | ⏳ 待确认 |
+| regulatorische anforderungen (de) | 23-32 | de 电商页融入 | ✅ 已覆盖（heroSubtitle "Erfüllen Sie die regulatorischen Anforderungen..." + metaDescription），无需改 |
 | enregistrer une marque (fr) | 28.2 | fr 品牌页融入 | ✅ heroSubtitle → "Apprenez à enregistrer une marque..." |
 
 **P3 执行（commit 9d47d5b4）：** ru/es/fr 3 处修改 + 构建 + 部署（c64376b2）+ 线上验证全部生效。

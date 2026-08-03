@@ -256,7 +256,16 @@
   - 每页：heroTitle/Subtitle + metaTitle/Description + 6 FAQ + coverItems + howtoTitle
   - 豁免：ja(WTO/Amazon)、fa(Amazon) 精确豁免；ja 用 Jビューティー 替代 J-beauty（更地道）
   - 验证：48 语言翻译质量 0 问题 / CI 全通过 / 线上 4 语言服务页+行业页 h1 全部确认
-- ⏳ **批 3（T3）**：fr + ru + nl + pl + pt × 16 namespace = 80 页面组合（待执行）
+- ✅ **批 3 完成（commit 5ab3b328 已部署）**：fr + ru + nl + pl + pt × 16 namespace = 80 页面组合
+  - fr：法语区出口商视角（全部 16：波尔多/勃艮第/香槟葡萄酒、奶酪、法式美妆、奢侈品防伪）
+  - ru：俄罗斯/中亚视角（全部 16：EAC vs CCC 对比、中俄贸易通道、肉/奶/伏特加）
+  - nl：荷兰出口商视角（全部 16：Gouda/Edam、婴儿配方奶粉、宠物食品、鹿特丹通道）
+  - pl：波兰/东欧视角（全部 16：乳制品、肉类、苹果、伏特加、糖果）
+  - pt：巴西/葡语区视角（全部 16：牛肉/禽肉、咖啡、INMETRO vs CCC 对比）
+  - 每页：heroTitle/Subtitle + metaTitle/Description + 6 FAQ + coverItems
+  - 豁免：ru(EAC/Taobao/MARA) 精确豁免
+  - 验证：48 语言翻译质量 0 问题 / CI 全通过 / 线上 5 语言服务页+行业页 h1 全部确认（nl 首查遇 CDN 缓存，加参数后正常）
+- ⏳ **批 4（T4）**：其余 37 语言轻量差异化（heroTitle/Subtitle + metaTitle 本地视角，保持 FAQ 翻译）
 
 ---
 

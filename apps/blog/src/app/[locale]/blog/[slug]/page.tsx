@@ -207,11 +207,12 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
   let relatedPosts: PostMeta[];
   if (category) {
     const sameCat = allPosts.filter(p => p.slug !== slug && p.category === category);
-    if (sameCat.length >= 3) {
+    if (sameCat.length > 0) {
+      // Show same-category posts whenever available (no minimum count)
       relatedPosts = sameCat.slice(0, 3);
     } else {
       const others = allPosts.filter(p => p.slug !== slug && p.category !== category);
-      relatedPosts = [...sameCat, ...others].slice(0, 3);
+      relatedPosts = others.slice(0, 3);
     }
   } else {
     relatedPosts = allPosts.filter(p => p.slug !== slug).slice(0, 3);

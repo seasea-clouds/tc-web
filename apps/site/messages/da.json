@@ -159,8 +159,8 @@
     "metaDescription": "One-stop Kina-importoverholdelse: GACC-fødevareregistrering, CCC-certificering, NMPA-kosmetikarkivering, etiketoverholdelse og brandbeskyttelse. 15+ års ekspertise."
   },
   "ServiceGacc": {
-    "heroTitle": "GACC fødevareregistrering",
-    "heroSubtitle": "Naviger i Kinas dekret 248/249 fødevareregistreringskrav med ekspertvejledning.",
+    "heroTitle": "GACC-fødevareregistrering – for danske eksportører",
+    "heroSubtitle": "Kinas toldadministration kræver i henhold til forordning 248, at alle udenlandske fødevareproducenter registrerer sig før eksport til Kina. Mejeriprodukter, svinekød og øl er omfattet. Vi håndterer hele CIFER-sagen.",
     "cta": "Få gratis vurdering",
     "coverTitle": "Hvad vi dækker",
     "howTitle": "Hvordan det virker",
@@ -204,12 +204,12 @@
     "coverItems4": "Fuldstændig udarbejdelse og oversættelse af dokumentation",
     "coverItems5": "Gennemgang af overensstemmelse med etiket (GB 7718 / GB 28050)",
     "coverItems6": "Registreringsfornyelse og 5-års gyldighedssporing",
-    "metaTitle": "GACC Fødevareregistrering Kina | Dekret 248/249 CIFER Vejledning",
-    "metaDescription": "Professionelle GACC-registreringstjenester til oversøiske fødevareproducenter. CIFER-systemsupport, CRA-agent, overensstemmelse med dekret 248/249. Få gratis konsultation."
+    "metaTitle": "GACC-fødevareregistrering | Guide for danske eksportører",
+    "metaDescription": "GACC-registrering for danske fødevareeksportører: forordning 248, CIFER-systemet, nødvendige dokumenter, tid. Support på dansk."
   },
   "ServiceLabel": {
-    "heroTitle": "Overholdelse af kinesiske etiketter",
-    "heroSubtitle": "Sørg for, at dine produktetiketter opfylder Kinas obligatoriske mærkningsstandarder.",
+    "heroTitle": "Kinesisk mærkningskrav – for danske produkter",
+    "heroSubtitle": "Importerede emballerede fødevarer skal have en kinesisk etiket i henhold til GB 7718 og GB 28050. Forkert mærkning fører til, at varer holdes i tolden. Vi designer og gennemgår jeres etiketter.",
     "cta": "Få gratis vurdering",
     "coverTitle": "Hvad vi dækker",
     "howTitle": "Hvordan det virker",
@@ -251,12 +251,12 @@
     "coverItems4": "Brugerdefineret kinesisk etiketdesign",
     "coverItems5": "Oprettelse af etiketskabelon til produktion",
     "coverItems6": "Understøttelse af toldklarering etiket",
-    "metaTitle": "Overholdelse af kinesisk fødevaremærke | GB 7718 & GB 28050-gennemgang",
-    "metaDescription": "Kinesisk etiketdesign og overensstemmelsesgennemgang for færdigpakkede fødevarer. GB 7718-2025, GB 28050 standarder. Undgå toldafvisning. Ekspertvurderingstjeneste."
+    "metaTitle": "Kinesisk mærkning | Guide GB 7718",
+    "metaDescription": "Kinesisk mærkningskrav for danske produkter: GB 7718, GB 28050 næringstabel, allergenadvarsler."
   },
   "ServiceCcc": {
-    "heroTitle": "CCC certificering",
-    "heroSubtitle": "Kina obligatorisk certificering for elektronik, apparater, legetøj og bilkomponenter.",
+    "heroTitle": "CCC-certificering – Guide for danske eksportører til Kina",
+    "heroSubtitle": "Elektronik, husholdningsapparater og legetøj, der eksporteres til Kina, skal have CCC-certificering. CE-mærkning eller dansk certificering er ikke nok; vi koordinerer testning og fabriksaudit med CNCA-akkrediterede organer.",
     "cta": "Få gratis vurdering",
     "coverTitle": "Hvad vi dækker",
     "howTitle": "Hvordan det virker",
@@ -300,12 +300,12 @@
     "coverItems4": "Forberedelse til fabriksinspektion",
     "coverItems5": "Årlig støtte til overholdelse af overvågning",
     "coverItems6": "Nye 2025-kategorier inklusive lithium-ion-batterier",
-    "metaTitle": "Kina CCC-certificering | Obligatorisk produktcertificeringsvejledning",
-    "metaDescription": "Kina Compulsory Certification (CCC) rådgivning for elektronik, apparater, legetøj, bildele. Testkoordinering, fabriksrevisionsforberedelse, hurtig godkendelse."
+    "metaTitle": "CCC-certificering | Guide for danske eksportører til Kina",
+    "metaDescription": "CCC-certificering for danske eksportører: forskel fra CE, certificeringsproces, tests, fabriksaudit, tid og omkostning. Support på dansk."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Kosmetikarkivering",
-    "heroSubtitle": "Fuldfør NMPA-registrering og arkivering for importeret kosmetik i Kina.",
+    "heroTitle": "NMPA-kosmetikregistrering – for danske brands",
+    "heroSubtitle": "Indtræden på det kinesiske marked kræver NMPA-anmeldelse for kosmetik: anmeldelse for almindelige produkter og registrering for særlige, med krav om ansvarlig part i Kina. Vi håndterer hele processen.",
     "cta": "Få gratis vurdering",
     "coverTitle": "Hvad vi dækker",
     "howTitle": "Hvordan det virker",
@@ -349,12 +349,12 @@
     "coverItems4": "Koordinering af sikkerhedsevaluering",
     "coverItems5": "Understøttelse af effektivitetstest for påståede funktioner",
     "coverItems6": "Overholdelse efter markedsføring (overvågning af uønskede hændelser, årsrapporter)",
-    "metaTitle": "Kina NMPA Kosmetikarkivering | Import Kosmetik registrering",
-    "metaDescription": "NMPA kosmetik arkivering og registrering for importeret hudpleje, makeup, hårpleje. Almindelige og specielle kategorier. Kinesisk ansvarlig agent support."
+    "metaTitle": "NMPA-kosmetikregistrering | Danske brands på det kinesiske marked",
+    "metaDescription": "NMPA-registrering for danske kosmetikmærker: klassificering, fritagelse for dyreforsøg, ansvarlig part i Kina, tid."
   },
   "ServiceEcommerce": {
-    "heroTitle": "Grænseoverskridende e-handel",
-    "heroSubtitle": "Start dit brand på Kinas førende grænseoverskridende e-handelsplatforme.",
+    "heroTitle": "Grænseoverskridende e-handel – for danske brands",
+    "heroSubtitle": "Sælg jeres danske brand via Tmall Global, JD Worldwide og Douyin: grænseoverskridende kanaler giver indtræden i Kina uden lokalt selskab. Vi ordner hele opsætningen.",
     "cta": "Få gratis vurdering",
     "coverTitle": "Hvad vi dækker",
     "howTitle": "Hvordan det virker",
@@ -396,12 +396,12 @@
     "coverItems4": "Grænseoverskridende skatteoptimering (0% takst inden for grænser)",
     "coverItems5": "Vejledning om fritagelse for kinesiske mærker for grænseoverskridende salg",
     "coverItems6": "Data compliance (PIPL) for grænseoverskridende operationer",
-    "metaTitle": "Kina Grænseoverskridende e-handel | Tmall, JD, Douyin-opsætning",
-    "metaDescription": "End-to-end grænseoverskridende e-handel Kina opsætning. Tmall Global, JD Worldwide, Douyin onboarding. Toldlager, skatteoptimering, compliance."
+    "metaTitle": "Grænseoverskridende e-handel | Guide Tmall·JD for danske brands",
+    "metaDescription": "Danske brands ind i Kina via grænseoverskridende e-handel: Tmall Global, JD Worldwide, CBEC-overholdelse, logistik, betaling."
   },
   "ServiceBrand": {
-    "heroTitle": "Brand beskyttelse",
-    "heroSubtitle": "Beskyt din intellektuelle ejendomsret og brandidentitet på det kinesiske marked.",
+    "heroTitle": "Varemærkeregistrering i Kina – beskyt danske brands",
+    "heroSubtitle": "Kina følger \"først til mølle\"-princippet: et varemærke registreret i Danmark (Patent- og Varemærkestyrelsen) beskyttes ikke i Kina. Registrer jeres brand hos CNIPA før markedsindtræden for at undgå kapring.",
     "cta": "Få gratis vurdering",
     "coverTitle": "Hvad vi dækker",
     "howTitle": "Hvordan det virker",
@@ -443,8 +443,8 @@
     "coverItems4": "Toldregistrering af intellektuel ejendomsret",
     "coverItems5": "Gennemgang af overholdelse af annoncering (kinesisk reklamelov)",
     "coverItems6": "Brandbeskyttelsesstrategi og håndhævelsesvejledning",
-    "metaTitle": "Kina varemærkeregistrering og brandbeskyttelse | IP-arkivering",
-    "metaDescription": "Varemærkeregistrering, told IP-registrering, overholdelse af reklamer for det kinesiske marked. Madrid-system, første-til-fil-beskyttelse. Sikre dit brand."
+    "metaTitle": "Varemærkeregistrering i Kina | Guide for danske brands",
+    "metaDescription": "Varemærkeregistrering i Kina for danske brands: CNIPA, Madrid-systemet, forfalskning, platformbeskyttelse."
   },
   "ServiceCommon": {
     "whoTitle": "Hvem er dette til",
@@ -825,8 +825,8 @@
     "ctaButton": "Få et gratis tilbud"
   },
   "IndustryDairy": {
-    "heroTitle": "Kinas overholdelse af mejeri- og mælkeprodukteksportører",
-    "heroSubtitle": "Naviger i GACC-registrering, kinesisk mærkning og importregler for mejeriprodukter, der kommer ind i Kina.",
+    "heroTitle": "Kina-overholdelse for danske mejerieksportører",
+    "heroSubtitle": "Eksport af mælk, ost og yoghurt til Kina kræver GACC-registrering. Vi håndterer registrering og etiketter for danske mejerier.",
     "heroCta": "Få gratis vurdering",
     "coverTitle": "Hvad vi dækker for mejerieksportører",
     "coverItems": "GACC-dekret 248 registrering for mejeriproducenter, Overholdelse af kinesiske mærker for mælkeprodukter, Importlicensvejledning for mejerikategorier, Fortoldningsstøtte til kølet og frosset mejeri, Formelregistrering for spædbørnsmælkspulver, Løbende overvågning af overholdelse af lovgivningsmæssige opdateringer",
@@ -854,12 +854,12 @@
     "coverItems5": "Kølekæde og temperaturkrav",
     "coverItems6": "Løbende reguleringsovervågning og fornyelsesstøtte",
     "coverItems7": "Uddannelse og rådgivning om overholdelse af mejeriindustrien",
-    "metaDescription": "Ekspert GACC-registrering, kinesisk mærkning og importoverholdelse for mejeri- og mælkeprodukter, der kommer ind i Kina. 15+ år med at hjælpe mejerieksportører.",
-    "metaTitle": "Kinas overholdelse af mejeri- og mælkeprodukteksportører | GACC-registreringsvejledning"
+    "metaDescription": "Danske mejeriprodukter til Kina: GACC-registrering, GB 7718-etiketter, kølekæde, modermælkserstatning SAMR.",
+    "metaTitle": "Mejeriprodukter til Kina | Guide GACC-registrering"
   },
   "IndustryMeat": {
-    "heroTitle": "Kinas overholdelse af kød- og skaldyrseksportører",
-    "heroSubtitle": "GACC CIFER-registrering, toldbehandling og importoverholdelse for kød og skaldyr, der kommer ind i Kina.",
+    "heroTitle": "Kina-overholdelse for danske kødeksportører",
+    "heroSubtitle": "Eksport af svinekød fra Danmark til Kina kræver GACC-registrering og sundhedskontrol. Vi håndterer registrering og sundhedscertifikater for danske anlæg.",
     "heroCta": "Få gratis vurdering",
     "coverTitle": "Hvad vi dækker for eksportører af kød og skaldyr",
     "questionsTitle": "Ofte stillede spørgsmål om eksport af kød og skaldyr",
@@ -886,12 +886,12 @@
     "coverItems5": "Landespecifikke krav til markedsadgang",
     "coverItems6": "Løbende reguleringsovervågning og fornyelsesstøtte",
     "coverItems7": "Træning i overholdelse af lovgivning for importører af kød og skaldyr",
-    "metaDescription": "Professionel GACC CIFER-registrering, kølekædeoverholdelse og toldstøtte til kød- og skaldyrseksportører til Kina.",
-    "metaTitle": "Overholdelse af import af kød og skaldyr Kina | GACC-registreringsvejledning"
+    "metaDescription": "Dansk svinekød til Kina: GACC-registrering, sundhedscertifikater, bilateral aftale, etiketter.",
+    "metaTitle": "Kødeksport til Kina | Guide GACC og sundhed"
   },
   "IndustryWine": {
-    "heroTitle": "Kinas overholdelse af vin- og spirituseksportører",
-    "heroSubtitle": "GACC-registrering, kinesisk mærkning og brandbeskyttelse for vin og spiritus, der kommer ind på det kinesiske marked.",
+    "heroTitle": "Kina-overholdelse for danske drikkevareeksportører",
+    "heroSubtitle": "Eksport af øl, vin og drikkevarer kræver korrekt kinesisk etiket og GACC-registrering. Vi hjælper danske producenter med etiketter og import.",
     "heroCta": "Få gratis vurdering",
     "coverTitle": "Hvad vi dækker for eksportører af vin og spiritus",
     "coverItems": "GACC-registrering for vin- og spiritusproducenter, Overholdelse af kinesiske etiketter for alkoholholdige drikkevarer, Varemærkeregistrering i Kina, Importafgifts- og skattevejledning, Landespecifikke krav til markedsadgang, Fortoldning og inspektionsstøtte",
@@ -919,12 +919,12 @@
     "coverItems5": "Landespecifikke vinimportkrav",
     "coverItems6": "Løbende reguleringsovervågning og fornyelsesstøtte",
     "coverItems7": "Uddannelse og rådgivning om overholdelse af vinindustrien",
-    "metaDescription": "Fuldstændig importoverholdelse for vin og spiritus, der kommer ind i Kina. GACC-registrering, brandbeskyttelse og pligtoptimering.",
-    "metaTitle": "Import af vin og spiritus til Kina | GACC-registrering og brandbeskyttelse"
+    "metaDescription": "Danske drikkevarer (øl, vin) til Kina: kinesisk etiket, GACC-registrering, importtold, salgskanaler.",
+    "metaTitle": "Drikkevareeksport til Kina | Guide etiketter og GACC"
   },
   "IndustrySkincare": {
-    "heroTitle": "Kinas overholdelse af hudpleje- og kosmetikmærker",
-    "heroSubtitle": "Naviger i NMPA-arkivering, ingrediensgennemgang og CSAR-regler for kosmetik, der kommer ind på det kinesiske marked.",
+    "heroTitle": "Danske hudplejemærker på det kinesiske marked",
+    "heroSubtitle": "Hudplejemærker har brug for NMPA-anmeldelse for indtræden i Kina. Vi håndterer anmeldelse og markedsstrategi for danske mærker.",
     "heroCta": "Få gratis vurdering",
     "coverTitle": "Hvad vi dækker for hudpleje- og kosmetikmærker",
     "coverItems": "NMPA-ansøgning i henhold til Kinas CSAR-bestemmelser, Ingredienssikkerhedsvurdering og dokumentation, Undtagelsesvejledning for dyreforsøg, Overholdelse af kinesisk etiket for kosmetik, Varemærkeregistrering for skønhedsmærker, Løbende overholdelse af overvågning efter markedsføring",
@@ -945,12 +945,12 @@
     "jsonldName": "Kina Compliance-tjenester for hudpleje og kosmetik",
     "jsonldDescription": "NMPA-ansøgning under CSAR, ingredienssikkerhedsvurdering, vejledning om fritagelse for dyreforsøg og importrådgivning for kosmetikmærker, der kommer ind i Kina.",
     "cta": "Få gratis vurdering",
-    "metaDescription": "NMPA kosmetikansøgning, ingredienssikkerhedsgennemgang og CSAR-overholdelse for internationale hudpleje- og kosmetikmærker, der kommer ind i Kina.",
-    "metaTitle": "Kosmetik Import Kina | NMPA Filing & CSAR Compliance Guide"
+    "metaDescription": "Danske hudplejemærker i Kina: NMPA-anmeldelse, fritagelse for dyreforsøg, CBEC-kanaler.",
+    "metaTitle": "Hudpleje i Kina | Guide NMPA-anmeldelse"
   },
   "IndustryPetFood": {
-    "heroTitle": "Kinas overholdelse af dyrefodereksportører",
-    "heroSubtitle": "GACC-registrering, foderimportlicenser og mærkning af kæledyrsfoder, der kommer ind i Kina.",
+    "heroTitle": "Kina-overholdelse for danske eksportører af dyrefoder",
+    "heroSubtitle": "Eksport af dyrefoder kræver GACC-registrering; animalske ingredienser kan kræve godkendelse fra landbrugsministeriet. Vi håndterer registreringen for jeres anlæg.",
     "heroCta": "Få gratis vurdering",
     "coverTitle": "Hvad vi dækker for eksportører af dyrefoder",
     "coverItems": "GACC-registrering for producenter af foder til kæledyr, Vejledning i foderimportlicens (MOA), Overholdelse af kinesisk etiket for kæledyrsfoderprodukter, Ingrediensgodkendelse af nye foderingredienser, Fortoldningsstøtte til forsendelser af foder til kæledyr, Markedsadgangsstrategi for den voksende kæledyrsindustri",
@@ -971,12 +971,12 @@
     "jsonldName": "Kina Compliance-tjenester for kæledyrsfoder",
     "jsonldDescription": "GACC-registrering, foderimportlicens, ingrediensgodkendelse og overholdelse af mærkning for dyrefodereksportører, der kommer ind på det kinesiske marked.",
     "cta": "Få gratis vurdering",
-    "metaDescription": "End-to-end GACC- og MOA-registrering for eksportører af dyrefoder. Ingrediensgodkendelse, mærkning og importtilladelser til Kina.",
-    "metaTitle": "Pet Food Import Kina | GACC & MOA registreringsvejledning"
+    "metaDescription": "Dansk dyrefoder til Kina: GACC-registrering, godkendelse fra landbrugsministeriet, etiketter, dokumenter.",
+    "metaTitle": "Dyrefoder til Kina | Guide GACC-registrering"
   },
   "IndustrySupplements": {
-    "heroTitle": "Kinas overholdelse af sundheds- og kosttilskudseksportører",
-    "heroSubtitle": "Naviger i SAMR-registrering, sundhedsfødevareregler og importoverholdelse for kosttilskud, der kommer ind i Kina.",
+    "heroTitle": "Kina-overholdelse for danske eksportører af kosttilskud",
+    "heroSubtitle": "Kosttilskud med sundhedsanprisninger kræver SAMR-registrering. Vi håndterer importprocessen for producenter af vitaminer og probiotika.",
     "heroCta": "Få gratis vurdering",
     "coverTitle": "Hvad vi dækker for sundheds- og kosttilskudseksportører",
     "coverItems": "SAMR sundhedsfødevareregistrering og arkivering,Generel fødevareklassificeringsvejledning for kosttilskud,Overholdelse af kinesisk etiket for kosttilskud,Ingredienssikkerhedsvurdering og dokumentation,Fortoldning af kosttilskudsforsendelser,Markedsadgangsstrategi for sundhedsprodukter",
@@ -997,12 +997,12 @@
     "jsonldName": "Kina Compliance-tjenester for kosttilskud",
     "jsonldDescription": "SAMR sundhedsfødevareregistrering, ingrediensvurdering, mærkningsoverholdelse og importrådgivning for kosttilskudseksportører, der kommer ind i Kina.",
     "cta": "Få gratis vurdering",
-    "metaDescription": "SAMR-helsekostregistrering, GACC-arkivering og overholdelse af mærkning for kosttilskud, der kommer ind på det kinesiske marked.",
-    "metaTitle": "Sundhedstilskud Kina Import | SAMR registreringsvejledning"
+    "metaDescription": "Danske kosttilskud til Kina: SAMR-registrering, etiketter, CBEC-kanaler, dokumenter.",
+    "metaTitle": "Kosttilskud til Kina | Guide SAMR-registrering"
   },
   "IndustryBaby": {
-    "heroTitle": "Kinas overholdelse af baby- og mødreprodukteksportører",
-    "heroSubtitle": "Naviger i registrering af modermælkserstatning, kosmetikarkivering og sikkerhedsbestemmelser for babyprodukter i Kina.",
+    "heroTitle": "Kina-overholdelse for danske eksportører af børneprodukter",
+    "heroSubtitle": "Børneprodukter kræver forskellige certificeringer: modermælkserstatning SAMR, legetøj GB 6675, børnekosmetik NMPA. Vi håndterer hele processen.",
     "heroCta": "Få gratis vurdering",
     "coverTitle": "Hvad vi dækker for eksportører af baby- og mødreprodukter",
     "coverItems": "SAMR registrering af modermælkserstatning (strengeste kategori), GACC-registrering for babymadprodukter, NMPA-kosmetikansøgning for babyhudplejeprodukter, Overholdelse af kinesisk etiket for babyprodukter, Sikkerhedstest og dokumentationsstøtte, Markedsadgangsvejledning for mødre- og spædbørnskategorier",
@@ -1023,12 +1023,12 @@
     "jsonldName": "Kina Compliance-tjenester for baby- og moderprodukter",
     "jsonldDescription": "SAMR registrering af modermælkserstatning, GACC-fødevareregistrering, registrering af NMPA-kosmetik og sikkerhedsoverholdelse for baby- og mødreprodukteksportører, der kommer ind i Kina.",
     "cta": "Få gratis vurdering",
-    "metaDescription": "SAMR-registrering for modermælkserstatning, GACC-overholdelse og NMPA-ansøgning for baby- og moderprodukter, der kommer ind i Kina.",
-    "metaTitle": "Babyprodukter og modermælkserstatning Kina Import | SAMR & GACC guide"
+    "metaDescription": "Danske børneprodukter til Kina: modermælkserstatning SAMR, legetøj GB 6675, børnekosmetik NMPA.",
+    "metaTitle": "Børneprodukter til Kina | Guide certificering"
   },
   "IndustryElectronics": {
-    "heroTitle": "Kinas overholdelse for forbrugerelektronikeksportører",
-    "heroSubtitle": "CCC-certificering, importoverholdelse og markedsadgang for elektronik, der kommer ind på det kinesiske marked.",
+    "heroTitle": "Dansk elektronik til Kina – CCC-certificering",
+    "heroSubtitle": "Eksport af elektronik og husholdningsapparater til Kina kræver CCC-certificering. Vi koordinerer tests med CNCA-akkrediterede organer for danske producenter.",
     "heroCta": "Få gratis vurdering",
     "coverTitle": "Hvad vi dækker for elektronikeksportører",
     "coverItems": "CCC-certificering for elektronik i det obligatoriske katalog, Overholdelse af kinesiske etiketter for elektroniske produkter, Krav til energieffektivitetsmærkning, Typegodkendelse af trådløst udstyr (SRRC), Fortoldning af elektronikimport, Varemærke- og patentbeskyttelse i Kina",
@@ -1049,12 +1049,12 @@
     "jsonldName": "Kina Compliance-tjenester for forbrugerelektronik",
     "jsonldDescription": "CCC-certificering, SRRC-godkendelse, overholdelse af kinesisk mærkning og IP-beskyttelse for elektronikeksportører, der kommer ind på det kinesiske marked.",
     "cta": "Få gratis vurdering",
-    "metaDescription": "CCC-certificering, SRRC-godkendelse og IP-beskyttelse for forbrugerelektronikmærker, der kommer ind på det kinesiske marked.",
-    "metaTitle": "Forbrugerelektronik Kina Import | CCC-certificeringsvejledning"
+    "metaDescription": "Dansk elektronik til Kina: CCC-certificering, tests, fabriksaudit, tid.",
+    "metaTitle": "Elektronik til Kina | Guide CCC-certificering"
   },
   "IndustryMedical": {
-    "heroTitle": "Kinas overholdelse for eksportører af medicinsk udstyr",
-    "heroSubtitle": "NMPA-registrering, importlicens og overholdelse af lovgivning for medicinsk udstyr, der kommer ind i Kina.",
+    "heroTitle": "Dansk medicinsk udstyr til Kina – NMPA-registrering",
+    "heroSubtitle": "Eksport af medicinsk udstyr til Kina kræver NMPA-registrering og importlicens. Vi håndterer registrering og klassificering for danske virksomheder.",
     "heroCta": "Få gratis vurdering",
     "coverTitle": "Hvad vi dækker for eksportører af medicinsk udstyr",
     "coverItems": "NMPA registrering af medicinsk udstyr (Klasse I/II/III), Ansøgning om importlicens til medicinsk udstyr, Support til klinisk evaluering og test, Overholdelse af kinesisk etiket for medicinsk udstyr, vejledning om kvalitetsstyringssystem (QMS), Løbende overholdelse af overvågning efter markedsføring",
@@ -1082,12 +1082,12 @@
     "coverItems5": "Efter-markedsovervågning og overholdelsesovervågning",
     "coverItems6": "Løbende reguleringsovervågning og fornyelsesstøtte",
     "coverItems7": "Træning og rådgivning om overholdelse af medicinsk udstyr",
-    "metaDescription": "NMPA registrering af medicinsk udstyr, klinisk evaluering og CCC-certificering for internationale producenter af medicinsk udstyr.",
-    "metaTitle": "Medicinsk udstyr Kina Import | NMPA klasse I/II/III registrering"
+    "metaDescription": "Dansk medicinsk udstyr til Kina: NMPA-registrering, risikoklassificering, kliniske undersøgelser, importlicens.",
+    "metaTitle": "Medicinsk udstyr til Kina | Guide NMPA"
   },
   "IndustryEcommerce": {
-    "heroTitle": "Kinas overholdelse af grænseoverskridende e-handelsmærker",
-    "heroSubtitle": "Naviger i CBEC-regler, platformkrav og importoverholdelse for onlinesælgere i Kina.",
+    "heroTitle": "E-handel i Kina – overholdelse for danske brands",
+    "heroSubtitle": "Sælg jeres danske brand via Tmall Global og JD Worldwide: grænseoverskridende kanaler giver indtræden i Kina uden lokalt selskab. Vi ordner hele opsætningen.",
     "heroCta": "Få gratis vurdering",
     "coverTitle": "Hvad vi dækker for e-handelsmærker",
     "coverItems": "Lovgivningsvejledning for grænseoverskridende e-handel (CBEC), Overholdelse af platforme for Tmall Global, JD Worldwide og mere, Vurdering af produktkategori, optimering af importafgifter og afgifter, Mærkningskrav til CBEC-produkter, Brandbeskyttelse og varemærkeregistrering",
@@ -1115,8 +1115,8 @@
     "coverItems5": "Vurdering af berettigelse til fritagelse for kinesiske mærker",
     "coverItems6": "Løbende reguleringsovervågning og compliance support",
     "coverItems7": "E-handelsplatform compliance træning og rådgivning",
-    "metaDescription": "Overholdelse af grænseoverskridende e-handel for Tmall Global, JD Worldwide og Douyin. Platform onboarding, toldlager og skatteoptimering.",
-    "metaTitle": "Grænseoverskridende e-handel Kina | Tmall, JD, Douyin Compliance"
+    "metaDescription": "Danske brands ind i Kina via grænseoverskridende e-handel: Tmall Global, JD Worldwide, CBEC, logistik, betaling.",
+    "metaTitle": "E-handel i Kina | Guide overholdelse for danske brands"
   },
   "IndustriesCommon": {
     "heroTitle": "Brancher, vi betjener",

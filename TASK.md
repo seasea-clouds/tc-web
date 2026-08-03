@@ -156,6 +156,24 @@
 
 ---
 
+### 方案 1b：英语 CCC + 商标攻坚（P2，~200 展示）
+
+**状态：** ✅ 已完成（2026-08-03）
+
+**核查结论：**
+- de 商标部分**已达标**（heroTitle="Markenschutz in China" 精确命中 markenschutz china 54；heroSubtitle 含 "Markenrecht" 命中 markenrecht china 33；metaTitle 含 Markenregistrierung + Markenschutz；FAQ 6 条全覆盖；de 博客 CTA 已指向 /de/packages/）→ 无需改动
+- en CCC 部分有缺口：heroSubtitle 缺 "mark requirements"（英语最大词 24 展示）；FAQ 无专门问题；en 博客 0 处 "mark requirement"
+
+**执行（en 方向，4 处）：**
+1. en.json ServiceCcc.heroSubtitle → 融入 "mark requirements" + "entering the Chinese market"
+2. en.json ServiceCcc.faq2q → "What are the CCC mark requirements for my product?"（faq2a 目录评估答案完美匹配）
+3. en 博客 ccc-certification-explained 标题 → "CCC Mark Requirements in China What Foreign Brands Need to Know"（无冒号/破折号/连字符，过 R08）
+4. en 博客正文第一段 → "mark requirements define China's mandatory safety certification system..."
+
+**验证：** site 构建 25s 通过 + blog 构建通过 + 部署（site f9430c28 / blog 806461e5）+ 线上 heroSubtitle/faq2q/标题/正文全部生效（commit 7d29b8cc）
+
+---
+
 ### 方案 2：复制 fa/fr 博客成功模式到大流量语言
 
 **背景数据：**

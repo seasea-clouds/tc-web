@@ -498,6 +498,11 @@ SHARED_WORDS_BY_LANG['ru'].add('MARA');
 // Romanian: 'Special' is same as English (loanword)
 SHARED_WORDS_BY_LANG['ro'].add('Special');
 
+// Thai: 'TISI' is the official abbreviation of the Thai Industrial Standards
+// Institute (มาตรฐานผลิตภัณฑ์อุตสาหกรรม) — the Thai certification body.
+if (!SHARED_WORDS_BY_LANG['th']) SHARED_WORDS_BY_LANG['th'] = new Set();
+SHARED_WORDS_BY_LANG['th'].add('TISI');
+
 // Swahili keeps international scientific terms in English
 SHARED_WORDS_BY_LANG['sw'].add('Melamine');
 SHARED_WORDS_BY_LANG['sw'].add('Tetracycline antibiotics');

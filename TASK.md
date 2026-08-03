@@ -228,6 +228,16 @@
 保留已上线的隐私页面 noindex（portal login/register + site thank-you，这是正常 SEO 做法，与低流量语言方案无关）。
 收录率下滑问题后续通过内容差异化 + 聚焦高需求语言解决，不做 noindex 处理。
 
+**✅ 内容差异化试点（2026-08-03，commit e75b63d7 已部署）**
+- 方案文档：DIFFERENTIATION_PILOT.md
+- 试点 1 🇩🇪 de ServiceCcc：德国出口商视角（CE vs CCC 对比、远程申请、metaTitle 本地化）
+- 试点 2 🇯🇵 ja ServiceCcc：日本制造商视角（日本からの申請、PSE 制度对比）
+- 试点 3 🇪🇸 es ServiceGacc：拉美食品出口商视角（Decreto 248 对拉美影响）
+- CI 可行性确认：check-i18n-coverage 只查 key 覆盖率（不查内容一致），差异化只改值不增删 key 即可
+- 技术细节：ja 的 PSE 术语加入 SHARED_WORDS_BY_LANG 精确豁免（日文真实术语）
+- 验证：6529 SEO 检查通过、翻译质量 0 问题、i18n coverage 100%、线上 HTML 已确认
+- ⏳ 观察期：2-4 周后 GSC 复查收录率/排名，对比试点 vs 未试点语言（fr/it 作对照）
+
 ---
 
 ## 问题 3：404 历史遗留（57 个 URL）

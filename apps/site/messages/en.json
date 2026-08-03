@@ -1053,8 +1053,8 @@
     "metaDescription": "CCC certification, SRRC approval, and IP protection for consumer electronics brands entering the Chinese market."
   },
   "IndustryMedical": {
-    "heroTitle": "China Compliance for Medical Device Exporters",
-    "heroSubtitle": "NMPA registration, import licensing, and regulatory compliance for medical devices entering China.",
+    "heroTitle": "Medical Device Import & NMPA Registration in China",
+    "heroSubtitle": "How to get an import license for medical devices in China: NMPA registration, clinical evaluation, and regulatory compliance.",
     "heroCta": "Get Free Assessment",
     "coverTitle": "What We Cover for Medical Device Exporters",
     "coverItems": "NMPA medical device registration (Class I/II/III),Import medical device license application,Clinical evaluation and testing support,Chinese label compliance for medical devices,Quality management system (QMS) guidance,Ongoing post-market surveillance compliance",
@@ -1064,8 +1064,8 @@
     "faq1a": "China classifies medical devices into three classes: Class I (low risk, filing required), Class II (moderate risk, registration required), and Class III (high risk, strictest registration). Each class has different requirements and timelines.",
     "faq2q": "How long does NMPA registration take?",
     "faq2a": "Class I filing takes 2-4 weeks. Class II registration typically takes 6-12 months. Class III registration can take 12-24 months, including clinical evaluation. We manage the complete registration process.",
-    "faq3q": "Do I need clinical trials for medical device registration?",
-    "faq3a": "Clinical trials are required for many Class II and most Class III devices unless your product is on the clinical trial exemption list. We assess whether your device qualifies for exemption or requires clinical data.",
+    "faq3q": "How do I get an import license for medical devices in China?",
+    "faq3a": "To import medical devices into China, your product must first obtain NMPA registration (Class I filing, or Class II/III registration) and receive the Import Medical Device Registration Certificate. The process covers classification, technical documentation, type testing, clinical evaluation (when required), and quality system review. Once registered, the registration certificate serves as the import license — no separate import permit is needed. We manage the full application on your behalf.",
     "faq4q": "What labeling is required for imported medical devices?",
     "faq4a": "Medical device labels must be in Chinese and include: product name, model, manufacturer, registration number, indications, contraindications, storage conditions, and production date. Labels must be approved as part of the registration process.",
     "faq5q": "Can medical devices be sold through cross-border e-commerce?",
@@ -1083,7 +1083,7 @@
     "coverItems6": "Ongoing regulatory monitoring and renewal support",
     "coverItems7": "Medical device compliance training and advisory",
     "metaTitle": "Medical Devices China Import | NMPA Class I/II/III Registration",
-    "metaDescription": "NMPA medical device registration, clinical evaluation, and CCC certification for international medical device manufacturers."
+    "metaDescription": "Get a medical device import license in China: NMPA registration (Class I/II/III), clinical evaluation, and CCC certification for international manufacturers."
   },
   "IndustriesCommon": {
     "heroTitle": "Industries We Serve",

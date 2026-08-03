@@ -2,3 +2,53 @@
 # Cloudflare Pages supports Language-based redirects via dashboard
 # This fallback redirects / to /en/ for unmatched languages
 /	/en/	302
+
+# compli-service legacy paths → /c/ (fix 3b/4b: 8 个 404 + 4 个 duplicate-canonical)
+/af/compli-service/*	/af/c/:splat	301
+/ar/compli-service/*	/ar/c/:splat	301
+/az/compli-service/*	/az/c/:splat	301
+/be/compli-service/*	/be/c/:splat	301
+/bg/compli-service/*	/bg/c/:splat	301
+/bn/compli-service/*	/bn/c/:splat	301
+/ca/compli-service/*	/ca/c/:splat	301
+/cs/compli-service/*	/cs/c/:splat	301
+/da/compli-service/*	/da/c/:splat	301
+/de/compli-service/*	/de/c/:splat	301
+/el/compli-service/*	/el/c/:splat	301
+/en/compli-service/*	/en/c/:splat	301
+/es/compli-service/*	/es/c/:splat	301
+/fa/compli-service/*	/fa/c/:splat	301
+/fi/compli-service/*	/fi/c/:splat	301
+/fr/compli-service/*	/fr/c/:splat	301
+/he/compli-service/*	/he/c/:splat	301
+/hi/compli-service/*	/hi/c/:splat	301
+/hr/compli-service/*	/hr/c/:splat	301
+/hu/compli-service/*	/hu/c/:splat	301
+/hy/compli-service/*	/hy/c/:splat	301
+/id/compli-service/*	/id/c/:splat	301
+/it/compli-service/*	/it/c/:splat	301
+/ja/compli-service/*	/ja/c/:splat	301
+/ka/compli-service/*	/ka/c/:splat	301
+/ko/compli-service/*	/ko/c/:splat	301
+/ms/compli-service/*	/ms/c/:splat	301
+/ne/compli-service/*	/ne/c/:splat	301
+/nl/compli-service/*	/nl/c/:splat	301
+/no/compli-service/*	/no/c/:splat	301
+/pl/compli-service/*	/pl/c/:splat	301
+/pt/compli-service/*	/pt/c/:splat	301
+/ro/compli-service/*	/ro/c/:splat	301
+/ru/compli-service/*	/ru/c/:splat	301
+/si/compli-service/*	/si/c/:splat	301
+/sk/compli-service/*	/sk/c/:splat	301
+/sl/compli-service/*	/sl/c/:splat	301
+/sq/compli-service/*	/sq/c/:splat	301
+/sr/compli-service/*	/sr/c/:splat	301
+/sv/compli-service/*	/sv/c/:splat	301
+/sw/compli-service/*	/sw/c/:splat	301
+/ta/compli-service/*	/ta/c/:splat	301
+/th/compli-service/*	/th/c/:splat	301
+/tr/compli-service/*	/tr/c/:splat	301
+/uk/compli-service/*	/uk/c/:splat	301
+/ur/compli-service/*	/ur/c/:splat	301
+/vi/compli-service/*	/vi/c/:splat	301
+/zh/compli-service/*	/zh/c/:splat	301

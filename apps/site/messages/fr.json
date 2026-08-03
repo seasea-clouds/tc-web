@@ -400,8 +400,8 @@
     "metaDescription": "Configuration de bout en bout du commerce électronique transfrontalier en Chine. Intégration de Tmall Global, JD Worldwide, Douyin. Entrepôt douanier, optimi..."
   },
   "ServiceBrand": {
-    "heroTitle": "Protection de la marque",
-    "heroSubtitle": "Protégez votre propriété intellectuelle et votre identité de marque sur le marché chinois.",
+    "heroTitle": "Enregistrement de marque en Chine",
+    "heroSubtitle": "Protégez votre propriété intellectuelle et votre identité de marque sur le marché chinois. Enregistrement de marque auprès de la CNIPA, système de Madrid et protection contre la contrefaçon.",
     "cta": "Obtenez une évaluation gratuite",
     "coverTitle": "Ce que nous couvrons",
     "howTitle": "Comment ça marche",
@@ -420,10 +420,10 @@
     "faq5a": "Non, les droits des marques sont territoriaux. Un enregistrement de marque aux États-Unis ou dans l’Union européenne n’offre aucune protection en Chine. Vous devez déposer votre demande séparément auprès de la CNIPA chinoise ou étendre votre demande via le système de Madrid. Nous recommandons le dépôt direct auprès de la CNIPA pour une protection optimale.",
     "faq6q": "Comment puis-je surveiller les contrefaçons de marque en Chine ?",
     "faq6a": "Après l'enregistrement, nous fournissons des services de surveillance continue des marques qui recherchent les demandes conflictuelles, les produits contrefaits sur les plateformes de commerce électronique et l'utilisation non autorisée de votre marque dans la publicité.",
-    "jsonldName": "Protection de la marque",
+    "jsonldName": "Enregistrement de marque en Chine",
     "jsonldDescription": "Service de protection de marque pour l’entrée sur le marché chinois par SinoTrade Compliance.",
     "jsonldServiceType": "Protection de la marque",
-    "serviceType": "Protection de la marque",
+    "serviceType": "Enregistrement de marque en Chine",
     "howtoTitle": "Comment protéger votre marque et votre marque déposée en Chine",
     "howtoDescription": "Guide étape par étape pour l'enregistrement et la protection des marques sur le marché chinois.",
     "howtoStep1Name": "Effectuer une recherche de marque",
@@ -444,7 +444,7 @@
     "coverItems5": "Examen de la conformité de la publicité (loi chinoise sur la publicité)",
     "coverItems6": "Stratégie de protection de la marque et conseils d’application",
     "metaTitle": "Enregistrement de marque en Chine et protection de la marque | Dépôt IP",
-    "metaDescription": "Enregistrement de marque, enregistrement IP douanier, conformité publicitaire pour le marché chinois. Système de Madrid, protection du premier déposant. Sécu..."
+    "metaDescription": "Enregistrement de marque en Chine et protection de la marque: dépôt auprès de la CNIPA, enregistrement IP douanier, système de Madrid, surveillance des contrefaçons."
   },
   "ServiceCommon": {
     "whoTitle": "À qui s'adresse-t-il",

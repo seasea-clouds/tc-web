@@ -400,8 +400,8 @@
     "metaDescription": "Configuración de comercio electrónico transfronterizo de extremo a extremo en China. Incorporación de Tmall Global, JD Worldwide y Douyin. Depósito fiscal, o..."
   },
   "ServiceBrand": {
-    "heroTitle": "Protección de marca",
-    "heroSubtitle": "Proteja su propiedad intelectual e identidad de marca en el mercado chino.",
+    "heroTitle": "Protección de marca en China",
+    "heroSubtitle": "Proteja su propiedad intelectual e identidad de marca en el mercado chino. Registro de marca ante la CNIPA, sistema de Madrid y protección contra falsificaciones.",
     "cta": "Obtenga una evaluación gratuita",
     "coverTitle": "Lo que cubrimos",
     "howTitle": "Cómo funciona",
@@ -420,10 +420,10 @@
     "faq5a": "No, los derechos de marca son territoriales. Un registro de marca de EE. UU. o de la UE no proporciona protección en China. Debe presentar por separado ante la CNIPA de China o extender a través del Sistema de Madrid. Recomendamos la presentación directa al CNIPA para obtener la protección más sólida.",
     "faq6q": "¿Cómo puedo controlar la infracción de marcas registradas en China?",
     "faq6a": "Después del registro, brindamos servicios continuos de monitoreo de marcas que analizan en busca de aplicaciones conflictivas, productos falsificados en plataformas de comercio electrónico y uso no autorizado de su marca en publicidad.",
-    "jsonldName": "Protección de marca",
+    "jsonldName": "Protección de marca en China",
     "jsonldDescription": "Servicio de protección de marca para la entrada al mercado chino por parte de SinoTrade Compliance.",
     "jsonldServiceType": "Protección de marca",
-    "serviceType": "Protección de marca",
+    "serviceType": "Protección de marca en China",
     "howtoTitle": "Cómo proteger su marca y su marca comercial en China",
     "howtoDescription": "Guía paso a paso para el registro de marcas y la protección de marcas en el mercado chino.",
     "howtoStep1Name": "Realizar búsqueda de marcas comerciales",
@@ -444,7 +444,7 @@
     "coverItems5": "Revisión del cumplimiento de la publicidad (Ley de publicidad china)",
     "coverItems6": "Estrategia de protección de marca y orientación para hacer cumplir la ley",
     "metaTitle": "Registro de marcas comerciales y protección de marcas en China | Presentación de propiedad intelectual",
-    "metaDescription": "Registro de marcas, registro de propiedad intelectual en aduanas, cumplimiento de publicidad para el mercado chino. Sistema de Madrid, protección del primero..."
+    "metaDescription": "Registro de marca en China y protección de marca: registro ante la CNIPA, registro de propiedad intelectual en aduanas, sistema de Madrid, monitoreo de infracciones."
   },
   "ServiceCommon": {
     "whoTitle": "¿Para quién es esto?",

@@ -341,18 +341,23 @@
 
 ### 🥇 第一层：快赢（已排名 < 30 的词，轻改即可突破）
 
-| 关键词 | 排名 | 动作 |
-|--------|------|------|
-| gacc que es (es) | 4.5 | 保持，确认 es 页可点击性 |
-| norma ccc (es) | 1 | 保持 |
-| ccc маркировка (ru) | 11.5 | ru 服务页融入 "маркировка CCC" |
-| трансграничная платформа (ru) | 12 | ru 电商页融入 |
-| gacc lebensmittel registrierung (de) | 14 | de gacc 页确认覆盖 |
-| gacc lebensmittel zertifizierung (de) | 19.8 | 同上 |
-| proteccion de marca en alibaba (es) | 18 | es 品牌页融入 |
-| 中国 健康食品 規制 (ja) | 21.7 | ja 保健品相关 |
-| regulatorische anforderungen (de) | 23-32 | de 电商页融入 |
-| enregistrer une marque (fr) | 28.2 | fr 品牌页融入 |
+**状态：** ✅ 全部完成（2026-08-03）
+
+| 关键词 | 排名 | 动作 | 状态 |
+|--------|------|------|------|
+| gacc que es (es) | 4.5 | 保持，确认 es 页可点击性 | ✅ 已覆盖（faq1q "¿Qué es el GACC..."），无需改 |
+| norma ccc (es) | 1 | 保持 | ✅ 无需改 |
+| ccc маркировка (ru) | 11.5 | ru 服务页融入 "маркировка CCC" | ✅ heroSubtitle → "нанесения маркировки CCC" |
+| трансграничная платформа (ru) | 12 | ru 电商页融入 | ✅ 已覆盖（"трансграничных платформах" 词根），无需改 |
+| gacc lebensmittel registrierung (de) | 14 | de gacc 页确认覆盖 | ⏳ 待确认 |
+| gacc lebensmittel zertifizierung (de) | 19.8 | 同上 | ⏳ 待确认 |
+| proteccion de marca en alibaba (es) | 18 | es 品牌页融入 | ✅ faq4q → "¿Cómo protejo mi marca en Alibaba...?" |
+| 中国 健康食品 規制 (ja) | 21.7 | ja 保健品相关 | ✅ 已覆盖（IndustrySupplements.heroSubtitle 含 "健康食品規制"），无需改 |
+| regulatorische anforderungen (de) | 23-32 | de 电商页融入 | ⏳ 待确认 |
+| enregistrer une marque (fr) | 28.2 | fr 品牌页融入 | ✅ heroSubtitle → "Apprenez à enregistrer une marque..." |
+
+**P3 执行（commit 9d47d5b4）：** ru/es/fr 3 处修改 + 构建 + 部署（c64376b2）+ 线上验证全部生效。
+de 三项（gacc lebensmittel registrierung/zertifizierung、regulatorische anforderungen）非 P3 范围，待后续确认。
 
 ### 🥈 第二层：主力攻坚（大展示 + 排名 60-90）
 

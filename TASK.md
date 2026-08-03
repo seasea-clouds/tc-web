@@ -248,7 +248,15 @@
   - en：英语母语出口商视角（US/UK/AU/NZ）
   - 附带修复：id/ms 'formula' 借词误报（SHARED_WORDS_BY_LANG 精确豁免）
   - 验证：CI 全通过 / 构建成功 / 线上 de+en 服务页+行业页 h1 全部确认
-- ⏳ **批 2（T2）**：es + it + ja + fa × 16 namespace = 64 页面组合（待执行）
+- ✅ **批 2 完成（commit 31610c29 已部署）**：es + it + ja + fa × 16 namespace = 64 页面组合
+  - es：拉美出口商视角（15 namespace，GACC 试点保留；智利/阿根廷葡萄酒 FTA 角度）
+  - it：意大利制造商视角（全部 16：Parmigiano、Chianti、Made in Italy）
+  - ja：日本制造商视角（15 namespace，CCC 试点保留；Jビューティー、先願主義）
+  - fa：伊朗出口商视角（全部 16：زعفران 藏红花、پسته 开心果、خرما 椰枣）
+  - 每页：heroTitle/Subtitle + metaTitle/Description + 6 FAQ + coverItems + howtoTitle
+  - 豁免：ja(WTO/Amazon)、fa(Amazon) 精确豁免；ja 用 Jビューティー 替代 J-beauty（更地道）
+  - 验证：48 语言翻译质量 0 问题 / CI 全通过 / 线上 4 语言服务页+行业页 h1 全部确认
+- ⏳ **批 3（T3）**：fr + ru + nl + pl + pt × 16 namespace = 80 页面组合（待执行）
 
 ---
 

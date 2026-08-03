@@ -366,3 +366,90 @@
 | **P3** | 小语种快赢（es/ru/ja/fr 已排名 < 30 的词） | ~60 |
 | **P4** | 荷兰/意大利语（ccc certificaat/componenti 78 展示） | ~80 |
 | **P5** | 博客内容补齐（医疗设备/GB 标准缺口） | ~30 |
+
+---
+
+# 医疗器械 SEO 方案（2026-08-03 新增）
+
+## 背景：GSC 医疗器械相关关键词（9 个，~39 展示）
+
+| 关键词 | 展示 | 排名 | 语言 |
+|--------|------|------|------|
+| import license for medical devices in china | 15 | 85.67 | en |
+| medizinprodukte china | 7 | 92.29 | de |
+| china medizintechnik | 5 | 77 | de |
+| registrare un dispositivo medico in cina | 3 | **26.33** | it |
+| medical devices certification in thailand | 3 | 61.67 | en（泰国，不相关） |
+| nmpa medical device commercialization | 3 | 96.67 | en |
+| subcontratación dispositivos médicos | 1 | 79 | es |
+| representante autorizado para dispositivos medicos | 1 | 85 | es |
+| medical device import licenses in china | 1 | 100 | en |
+
+## 现状诊断
+
+- **页面存在**：/industries/medical-devices/ 行业页已有（src/data/industries.ts → packages/ui/src/data/industries.ts，namespace: IndustryMedical），内容完整（NMPA Class I/II/III 注册、进口许可证、临床评估、标签、跨境电商、创新器械快速通道，6 条 FAQ，JSON-LD，metaTitle 含 "Medical Devices China Import"）
+- **收录正常**：en/de/it/es/fr/ru 主流语言已收录；仅 9 个小语种未收录（si/sl/sq/sr/sv/sw/ta/uk/ur，符合低流量语言整体模式）
+- **排名差主因 = 内容-搜索词匹配度错位**：搜索词是 "import license"（进口许可证视角），heroTitle 是 "China Compliance for Medical Device Exporters"（出口商合规视角）
+- **metaTitle 方向错误**：it/es/ru 的 metaTitle 是"从中国进口"（反了）
+  - it: "Importazione di dispositivi medici dalla Cina" ❌（应为进口到中国）
+  - es: "Importación de dispositivos médicos de China" ❌
+  - ru: "Медицинское оборудование Импорт из Китая" ❌
+  - fr: "Importation de dispositifs médicaux en Chine" ✅ 正确
+
+## 三层方案
+
+### L1 现有行业页优化（快，今天可做，覆盖 ~39 展示）
+
+1. **en heroTitle**："China Compliance for Medical Device Exporters" → **"Medical Device Import & NMPA Registration in China"**（对齐 import license 15 展示）
+2. **en heroSubtitle**：融入 "import license"（当前无）
+3. **en FAQ**：faq5q（跨境电商）保留，改 faq3q 或新增覆盖 "How do I get an import license for medical devices in China?"（保持 6 条结构，替换无搜索量的）
+4. **de heroTitle**："China-Konformität für Exporteure medizinischer Geräte" → **"Medizinprodukte China Import: NMPA-Registrierung"**（对齐 medizinprodukte china 7 + china medizintechnik 5）
+5. **it/es/ru metaTitle 方向修正**："从中国进口" → "进口到中国"
+6. **it 页面**：registrare un dispositivo medico in cina 已排 26.33（最好），heroTitle 融入 "registrazione dispositivi medici" 冲前 10
+7. **es 页面**：subcontratación dispositivos médicos（1）→ es metaDescription 融入
+
+### L2 新增博客文章（本周可做，48 语言，长期流量）
+
+- **文章**：Medical Device Import License in China: NMPA Registration Guide
+- **日期**：**2025-08-20**（详见下方日期规划）
+- **分类**：Compliance Guide（或 Product Certification）
+- **理由**：fa/fr gacc 博客证明博客能排前 10；"import license" 是真实需求（15+1 展示）；现有博客无医疗器械主题
+- **内容**：NMPA 进口许可证流程、Class I/II/III 分类、临床评估豁免、标签要求、常见坑
+- **流程**：en 源文 → translate-tool 提交 47 语言 → 合并 locale → CI 检查 → 构建部署验证
+- **注意**：日期必须在当前日期之前（网站品牌 2010s 成立），且不与现有 10 篇冲突
+
+### L3 GSC 操作（配合）
+
+- 9 个小语种未收录 → 见下方"小语种未收录方案"
+- L1 后观察 2-4 周排名变化，若 import license 仍在 50+ 再启动 L2
+
+## 执行顺序
+
+1. 先做 **L1**（页面优化，成本低、今天完成）
+2. 观察 2-4 周排名
+3. 排名未提升 → 启动 **L2**（博客文章）
+4. **L3** 配合 GSC 处理
+
+---
+
+## 9 个小语种 medical-devices 未收录：方案分析
+
+**涉及 URL（9 个，均在 dir7 已发现-未编入列表）：**
+- si/sl/sq/sr/sv/sw/ta/uk/ur /industries/medical-devices/
+
+**根因（与全站诊断一致）：** Google 质量判断——低流量语言 + 模板化页面，非技术问题（页面 200、canonical 正确、sitemap 规范）
+
+**方案选项：**
+
+| 方案 | 动作 | 成本 | 效果 | 建议 |
+|------|------|------|------|------|
+| A. GSC 手动验证 | 9 个 URL 逐个 "验证修复" | 低 | 低——Google 已抓取但主动选择不编入，验证通常无效 | 不优先 |
+| B. noindex 这 9 页 | 加 noindex | 低 | 释放抓取预算给高价值页面；但这 9 页本身无搜索需求（0 展示），影响≈0 | 可做，但应并入全站低流量语言策略 |
+| C. 全站低流量语言 noindex 评估 | 对 si/sl/sq/sr/sv/sw/ta/uk/ur 等 ~300 页整体评估 | 中 | 释放大量抓取预算，聚焦 de/en/fa/fr/es；与问题 2 方案一致 | **推荐**（并入问题 2） |
+| D. 内容差异化 | 优化小语种页面内容使其非模板化 | 高 | 低——这些语言无搜索需求，投入产出比差 | 不推荐 |
+| E. 忽略 | 不处理，等 Google 自然淘汰 | 0 | 无害——0 展示 0 点击，无业务影响 | 短期默认 |
+
+**结论：** 这 9 页未收录对业务零影响（无搜索需求）。推荐并入全站低流量语言策略（方案 C）：
+1. 短期：不处理（默认 E）
+2. 中期：全站评估 si/sl/sq/sr/sv/sw/ta/uk/ur 等低流量语言是否 noindex（问题 2 的解决方案 1），medical-devices 小语种随大流处理
+3. 不做单页验证（方案 A 无效）

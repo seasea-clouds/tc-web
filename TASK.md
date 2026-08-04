@@ -618,8 +618,8 @@ de 三项（gacc lebensmittel registrierung/zertifizierung、regulatorische anfo
 
 | 批次 | 内容 | 范围 | 状态 |
 |------|------|------|------|
-| **D1** | 服务页全字段差异化 | 6 服务 × 48 语言 × ~41 字段（FAQ/cover/howto/jsonld/quick/cta） | ⏳ 进行中 |
-| **D2** | 行业页全字段差异化 | 16 行业 × 48 语言 × ~27 字段 | ⏳ 待做 |
+| **D1** | 服务页全字段差异化 | 6 服务 × 48 语言 × ~41 字段（FAQ/cover/howto/jsonld/quick/cta） | ✅ 完成（2026-08-04） |
+| **D2** | 行业页全字段差异化 | 10 行业 × 48 语言 × ~27 字段 | ⏳ 待做 |
 | **D3** | ServiceCommon + Home 差异化 | 22 + 66 keys × 48 语言 | ⏳ 待做 |
 | **D4** | FAQ 页 + 次级页差异化 | Faq(97) + About/Packages/Quote/ThankYou/Testimonials/Services/Sitemap × 48 | ⏳ 待做 |
 | **D5** | Blog namespace + 文章标题/excerpt | Blog(61) × 48 + 528 文章 frontmatter | ⏳ 待做 |
@@ -656,3 +656,19 @@ de 三项（gacc lebensmittel registrierung/zertifizierung、regulatorische anfo
 | D1-7a | sr/hr/sk/sl（子代理） | 8a72dabb | ✅ | ✅ 线上验证通过 |
 | D1-7b | af/az/be/bn/ca/hy（子代理） | 5a2f8c4d | ✅ | ✅ 线上验证通过 |
 | D1-7c | ka/ne/si/sq/sw/ta/ur（子代理） | a4a2c161 | ✅ | ✅ 线上验证通过 |
+
+## D2 详细：行业页全字段差异化（2026-08-04 启动）
+
+**涉及 namespace（10）：** IndustryDairy / IndustryMeat / IndustryWine / IndustrySkincare / IndustryPetFood / IndustrySupplements / IndustryBaby / IndustryElectronics / IndustryMedical / IndustryEcommerce
+
+**已差异化（T4）：** heroTitle / heroSubtitle / metaTitle / metaDescription（含 metaDescription 的 8 个行业）
+
+**本次新增（每行业 ~20-27 字段）：**
+- `faq1q-faq6q + faq1a-faq6a`（12）：FAQ 问答按国家视角重写
+- `coverTitle + coverItems1-7`（8，24-key 行业无 coverItems1-7）：覆盖范围本地化
+- `heroCta + cta`（2）：CTA 本地化
+- `questionsTitle + questionsSubtitle`（2）：咨询区标题本地化
+- `jsonldName + jsonldDescription`（2）：JSON-LD 本地化
+- `coverItems`（1，24-key 行业）：描述文本
+
+**执行方式：** 延续 D1 "一国一脚本"模式，每语言 2 个脚本，分批（4-5 语言/批）→ CI → 构建 → 提交 → 部署 → 线上验证。

@@ -672,3 +672,9 @@ de 三项（gacc lebensmittel registrierung/zertifizierung、regulatorische anfo
 - `coverItems`（1，24-key 行业）：描述文本
 
 **执行方式：** 延续 D1 "一国一脚本"模式，每语言 2 个脚本，分批（4-5 语言/批）→ CI → 构建 → 提交 → 部署 → 线上验证。
+
+## D2 执行日志
+
+| 子批 | 语言 | commit | 部署 | 验证 |
+|------|------|--------|------|------|
+| D2-1 | de/es/it/ja（子代理） | 6ed52dcd | ✅ | ✅ 线上验证通过（de BVL / es INV / it UIBM / ja 和牛） |

@@ -601,3 +601,50 @@ de 三项（gacc lebensmittel registrierung/zertifizierung、regulatorische anfo
 
 ### 待观察
 - GSC 后续排名变化（2-4 周后复查 ccc certificaat china aanvragen / componenti 系列）
+
+---
+
+# 🚀 深度差异化方案 D1-D7（2026-08-04 启动）
+
+**背景：** Token 免费期间全量执行。Portal/Admin 是工具/后台，**不差异化**；面向客户的**主站（site）+ 博客站（blog）**全部深度差异化。
+
+**核心原则：**
+1. 事实不能变：GACC 注册流程、CCC 测试项目、5 年有效期等硬事实 48 语言一致
+2. 视角可以变：举例/语境/关键词/信任元素按国家差异化（延续 T4 已确立的国家视角）
+3. SEO 关键词驱动：每语言嵌入本土搜索词
+4. 质量优先，禁止英文 fallback
+
+## 各批次计划
+
+| 批次 | 内容 | 范围 | 状态 |
+|------|------|------|------|
+| **D1** | 服务页全字段差异化 | 6 服务 × 48 语言 × ~41 字段（FAQ/cover/howto/jsonld/quick/cta） | ⏳ 进行中 |
+| **D2** | 行业页全字段差异化 | 16 行业 × 48 语言 × ~27 字段 | ⏳ 待做 |
+| **D3** | ServiceCommon + Home 差异化 | 22 + 66 keys × 48 语言 | ⏳ 待做 |
+| **D4** | FAQ 页 + 次级页差异化 | Faq(97) + About/Packages/Quote/ThankYou/Testimonials/Services/Sitemap × 48 | ⏳ 待做 |
+| **D5** | Blog namespace + 文章标题/excerpt | Blog(61) × 48 + 528 文章 frontmatter | ⏳ 待做 |
+| **D6** | 博客正文本地化增强 + 本地市场新文章 | 528 篇增强 + 48-100 篇新文章 | ⏳ 待做 |
+| **D7** | 技术 SEO 体检 | hreflang/sitemap/OG/JSON-LD/内链/canonical | ⏳ 待做 |
+
+## D1 详细：服务页全字段差异化
+
+**涉及 namespace（6）：** ServiceCcc / ServiceGacc / ServiceLabel / ServiceCosmetics / ServiceEcommerce / ServiceBrand
+
+**已差异化（T4）：** heroTitle / heroSubtitle / metaTitle / metaDescription
+
+**本次新增（每服务 ~41 字段）：**
+- `faq1q-faq6q + faq1a-faq6a`（12）：FAQ 问答按国家视角重写（问题措辞本地化 + 答案含本土语境）
+- `coverTitle + coverItems1-6`（7）：服务覆盖范围本地化
+- `howtoTitle + howtoDescription + howtoStep1-5Name/Text`（12，Label/Ecommerce/Brand 为 4 步 10 个）：HowTo 结构化数据本地化
+- `jsonldName + jsonldDescription + jsonldServiceType + serviceType`（4）：JSON-LD 结构化数据本地化
+- `howTitle + howSteps`（2）：流程标题本地化
+- `quickAnswerTitle + quickAnswer`（2）：快速答案本地化
+- `cta + questionsTitle + questionsSubtitle + ctaUrgency`（4）：CTA 本地化
+
+**执行方式：** 延续 T4 "一国一脚本"模式，每语言脚本处理 6 服务 × 全字段，分批（3-4 语言/批）→ 验证 → 提交 → 部署 → 线上验证。
+
+## D1 执行日志
+
+| 子批 | 语言 | commit | 部署 | 验证 |
+|------|------|--------|------|------|
+| D1-1 | 待定 | | | |

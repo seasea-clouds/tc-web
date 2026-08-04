@@ -271,7 +271,13 @@
     - tr：土耳其视角（榛子、白电、TSE vs CCC）；vi：越南视角（海鲜、咖啡、热带水果）；th：泰国视角（榴莲、大米、TISI vs CCC）
     - 豁免：th(TISI) 精确豁免
     - 验证：48 语言翻译质量 0 问题 / CI 全通过 / 线上 6 语言 ccc+gacc+dairy+skincare h1 全部确认
-  - ⏳ **T4-2**：id/ms/hi/he/sv/no/da/fi（8 语言）
+  - ✅ **T4-2 完成（commit 065a4804 已部署）**：id/ms/hi/he/sv/no/da/fi × 16 namespace = 128 页面组合
+    - id：印尼视角（棕榈油、香料、SNI vs CCC）；ms：马来视角（棕榈油、清真、SIRIM vs CCC）
+    - hi：印度视角（香料、茶、BIS vs CCC）；he：以色列视角（医疗科技、椰枣、高科技）
+    - sv/no/da/fi：北欧视角（三文鱼、乳制品、设计、CE vs CCC）
+    - 豁免：hi(BIS) 精确豁免
+    - 验证：48 语言翻译质量 0 问题 / CI 全通过 / 线上 8 语言 ccc+dairy+skincare h1 全部确认
+  - ⏳ **T4-3**：cs/hu/ro/uk/el/bg/sr/hr/sk/sl（10 语言）
   - ⏳ **T4-3**：cs/hu/ro/uk/el/bg/sr/hr/sk/sl（10 语言）
   - ⏳ **T4-4**：et/lt/lv/mk/sq/hy/ka/ne/si/bn/ur/ta/sw/az/be/ca/af（13 语言）
 

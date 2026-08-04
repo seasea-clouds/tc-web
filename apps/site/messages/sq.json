@@ -159,8 +159,8 @@
     "metaDescription": "Pajtueshmëria e importit të Kinës me një ndalesë: regjistrimi i ushqimit GACC, certifikimi CCC, depozitimi i kozmetikës NMPA, pajtueshmëria e etiketës dhe mbrojtja e markës. Ekspertizë mbi 15 vjet."
   },
   "ServiceGacc": {
-    "heroTitle": "Regjistrimi i Ushqimit GACC",
-    "heroSubtitle": "Lundroni kërkesat e regjistrimit të ushqimit të Dekretit 248/249 të Kinës me udhëzime të ekspertëve.",
+    "heroTitle": "Regjistrimi GACC i ushqimeve – për eksportuesit shqiptarë",
+    "heroSubtitle": "Administrata Doganore Kineze (GACC) sipas Rregullores 248 kërkon që të gjithë prodhuesit e huaj të ushqimeve të regjistrohen para eksportit në Kinë. Vaji i ullirit, mjalti dhe produktet e qumështit përfshihen. Përgatisim dosjen e plotë CIFER.",
     "cta": "Merrni vlerësim falas",
     "coverTitle": "Ajo që Ne Mbulojmë",
     "howTitle": "Si funksionon",
@@ -204,12 +204,12 @@
     "coverItems4": "Përgatitja dhe përkthimi i plotë i dokumentacionit",
     "coverItems5": "Rishikimi i pajtueshmërisë së etiketës (7718 GB / 28050 GB)",
     "coverItems6": "Rinovimi i regjistrimit dhe gjurmimi i vlefshmërisë 5-vjeçare",
-    "metaTitle": "Regjistrimi i Ushqimit GACC Kinë | Dekreti 248/249 CIFER Guide",
-    "metaDescription": "Shërbime profesionale të regjistrimit të GACC për prodhuesit e ushqimeve jashtë shtetit. Mbështetja e sistemit CIFER, agjenti CRA, pajtueshmëria me Dekretin 248/249. Merrni konsultë falas."
+    "metaTitle": "Regjistrimi GACC i ushqimeve | udhëzues për eksportuesit shqiptarë",
+    "metaDescription": "Regjistrimi GACC për eksportuesit shqiptarë: Rregullorja 248, sistemi CIFER, dokumentet e nevojshme, koha. Mbështetje në shqip."
   },
   "ServiceLabel": {
-    "heroTitle": "Pajtueshmëria me etiketën kineze",
-    "heroSubtitle": "Sigurohuni që etiketat e produkteve tuaja të përmbushin standardet e detyrueshme të etiketimit të Kinës.",
+    "heroTitle": "Kërkesat kineze të etiketimit – për produktet shqiptare",
+    "heroSubtitle": "Ushqimet e paketuara të importuara duhet të kenë etiketë kineze sipas GB 7718 dhe GB 28050. Etiketimi i gabuar shkakton mbajtjen e mallit në doganë. Ne dizajnojmë dhe kontrollojmë etiketat.",
     "cta": "Merrni vlerësim falas",
     "coverTitle": "Ajo që Ne Mbulojmë",
     "howTitle": "Si funksionon",
@@ -251,12 +251,12 @@
     "coverItems4": "Dizajni i personalizuar i etiketës kineze",
     "coverItems5": "Krijimi i shabllonit të etiketës për prodhim",
     "coverItems6": "Mbështetja e etiketës së zhdoganimit",
-    "metaTitle": "Pajtueshmëria e etiketës së ushqimit në Kinë | Rishikimi GB 7718 & GB 28050",
-    "metaDescription": "Dizajni kinez i etiketës dhe rishikimi i pajtueshmërisë për ushqimet e parapaketuara. GB 7718-2025, standardet GB 28050. Shmangni refuzimin doganor. Shërbimi i rishikimit të ekspertëve."
+    "metaTitle": "Etiketimi kinez | udhëzues GB 7718",
+    "metaDescription": "Kërkesat kineze të etiketimit për produktet shqiptare: GB 7718, GB 28050 tabela ushqyese, paralajmërimet për alergjenët."
   },
   "ServiceCcc": {
-    "heroTitle": "Certifikimi CCC",
-    "heroSubtitle": "Çertifikimi i detyrueshëm i Kinës për elektronikën, pajisjet, lodrat dhe komponentët e automobilave.",
+    "heroTitle": "Certifikimi CCC – udhëzues eksporti në Kinë për prodhuesit shqiptarë",
+    "heroSubtitle": "Elektronika, pajisjet shtëpiake dhe lodrat që eksportohen në Kinë duhet të kenë certifikim CCC. Shenja CE ose certifikimi shqiptar nuk mjaftojnë; ne organizojmë testimin dhe auditimin e fabrikës në organe të akredituara nga CNCA.",
     "cta": "Merrni vlerësim falas",
     "coverTitle": "Ajo që Ne Mbulojmë",
     "howTitle": "Si funksionon",
@@ -300,12 +300,12 @@
     "coverItems4": "Përgatitja e inspektimit të fabrikës",
     "coverItems5": "Mbështetje vjetore e përputhshmërisë së mbikëqyrjes",
     "coverItems6": "Kategoritë e reja 2025 duke përfshirë bateritë litium-jon",
-    "metaTitle": "Certifikimi KKK i Kinës | Udhëzues i detyrueshëm i certifikimit të produktit",
-    "metaDescription": "Konsulencë për Çertifikimin e Detyrueshëm të Kinës (CCC) për elektronikë, pajisje, lodra, pjesë automobilistike. Koordinimi i testimit, përgatitja e auditimit të fabrikës, miratimi i shpejtë."
+    "metaTitle": "Certifikimi CCC | udhëzues eksporti në Kinë për prodhuesit shqiptarë",
+    "metaDescription": "Certifikimi CCC për prodhuesit shqiptarë: ndryshimi nga CE, procesi i certifikimit, testet, auditimi i fabrikës, koha dhe kostoja. Mbështetje në shqip."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Regjistrimi i kozmetikës",
-    "heroSubtitle": "Plotësoni regjistrimin dhe depozitimin e NMPA për kozmetikë të importuar në Kinë.",
+    "heroTitle": "Regjistrimi i kozmetikës NMPA – për markat shqiptare",
+    "heroSubtitle": "Hyrja në tregun kinez kërkon njoftim NMPA për kozmetikën: njoftim për produktet e zakonshme dhe regjistrim për ato të veçanta, me person përgjegjës në Kinë. Ne menaxhojmë të gjithë procesin.",
     "cta": "Merrni vlerësim falas",
     "coverTitle": "Ajo që Ne Mbulojmë",
     "howTitle": "Si funksionon",
@@ -349,12 +349,12 @@
     "coverItems4": "Koordinimi i vlerësimit të sigurisë",
     "coverItems5": "Mbështetje për testimin e efikasitetit për funksionet e pretenduara",
     "coverItems6": "Pajtueshmëria pas tregtimit (monitorimi i ngjarjeve të padëshiruara, raportet vjetore)",
-    "metaTitle": "Kina NMPA Kozmetikë Regjistrimi | Regjistrimi i kozmetikës së importit",
-    "metaDescription": "Dorëzimi dhe regjistrimi i kozmetikës NMPA për kujdesin e lëkurës, grimin, kujdesin e flokëve të importuara. Kategoritë e zakonshme dhe të veçanta. Mbështetje e agjentëve përgjegjës kinezë."
+    "metaTitle": "Regjistrimi i kozmetikës NMPA | markat shqiptare në tregun kinez",
+    "metaDescription": "Regjistrimi NMPA për markat kozmetike shqiptare: klasifikimi, përjashtimi nga testimi te kafshët, personi përgjegjës në Kinë, koha."
   },
   "ServiceEcommerce": {
-    "heroTitle": "E-commerce ndërkufitare",
-    "heroSubtitle": "Nisni markën tuaj në platformat kryesore të tregtisë elektronike ndërkufitare të Kinës.",
+    "heroTitle": "Tregti elektronike ndërkufitare – për markat shqiptare",
+    "heroSubtitle": "Shisni markën tuaj shqiptare përmes Tmall Global, JD Worldwide dhe Douyin: kanalet ndërkufitare lejojnë hyrjen në Kinë pa kompani lokale. Ne sigurojmë konfigurimin e plotë.",
     "cta": "Merrni vlerësim falas",
     "coverTitle": "Ajo që Ne Mbulojmë",
     "howTitle": "Si funksionon",
@@ -396,12 +396,12 @@
     "coverItems4": "Optimizimi i taksave ndërkufitare (tarifa 0% brenda kufijve)",
     "coverItems5": "Udhëzime për përjashtimin e etiketave kineze për shitjet ndërkufitare",
     "coverItems6": "Pajtueshmëria e të dhënave (PIPL) për operacionet ndërkufitare",
-    "metaTitle": "Kina Ndërkufitare E-commerce | Tmall, JD, Douyin Setup",
-    "metaDescription": "Konfigurimi i tregtisë elektronike ndërkufitare nga fundi në fund në Kinë. Tmall Global, JD Worldwide, Douyin inboarding. Magazina e lidhur, optimizimi i taksave, pajtueshmëria."
+    "metaTitle": "Tregti elektronike ndërkufitare | udhëzues Tmall·JD për markat shqiptare",
+    "metaDescription": "Markat shqiptare në Kinë përmes tregtisë elektronike ndërkufitare: Tmall Global, JD Worldwide, përputhja CBEC, logjistika, pagesat."
   },
   "ServiceBrand": {
-    "heroTitle": "Mbrojtja e markës",
-    "heroSubtitle": "Mbroni pronën tuaj intelektuale dhe identitetin e markës në tregun kinez.",
+    "heroTitle": "Regjistrimi i markës në Kinë – mbrojtja e markave shqiptare",
+    "heroSubtitle": "Kina zbaton parimin \"kush regjistrohet i pari\": një markë e regjistruar në Shqipëri (DPIM) nuk mbrohet në Kinë. Regjistroni markën tuaj në CNIPA para hyrjes në treg për të shmangur uzurpimin.",
     "cta": "Merrni vlerësim falas",
     "coverTitle": "Ajo që Ne Mbulojmë",
     "howTitle": "Si funksionon",
@@ -443,8 +443,8 @@
     "coverItems4": "Regjistrimi i pronësisë intelektuale doganore",
     "coverItems5": "Rishikimi i pajtueshmërisë së reklamave (Ligji kinez i reklamave)",
     "coverItems6": "Strategjia e mbrojtjes së markës dhe udhëzimet e zbatimit",
-    "metaTitle": "Regjistrimi i Markës Tregtare në Kinë dhe Mbrojtja e Markës | Regjistrimi IP",
-    "metaDescription": "Regjistrimi i markës tregtare, regjistrimi i IP doganore, pajtueshmëria e reklamave për tregun e Kinës. Sistemi i Madridit, mbrojtja e parë në dosje. Siguroni markën tuaj."
+    "metaTitle": "Regjistrimi i markës në Kinë | mbrojtja e markave shqiptare",
+    "metaDescription": "Regjistrimi i markës në Kinë për markat shqiptare: CNIPA, sistemi i Madridit, falsifikimet, mbrojtja në platforma."
   },
   "ServiceCommon": {
     "whoTitle": "Për kë është ky",
@@ -825,8 +825,8 @@
     "ctaButton": "Merrni një ofertë falas"
   },
   "IndustryDairy": {
-    "heroTitle": "Pajtueshmëria e Kinës për eksportuesit e produkteve të qumështit dhe qumështit",
-    "heroSubtitle": "Navigoni regjistrimin e GACC, etiketimin kinez dhe rregulloret e importit për produktet e qumështit që hyjnë në Kinë.",
+    "heroTitle": "Përputhja me Kinën për eksportuesit shqiptarë të qumështit",
+    "heroSubtitle": "Eksporti i qumështit, djathit dhe jogurtit në Kinë kërkon regjistrim GACC. Ne menaxhojmë regjistrimin dhe etiketat për fabrikat shqiptare të qumështit.",
     "heroCta": "Merrni vlerësim falas",
     "coverTitle": "Çfarë mbulojmë për eksportuesit e qumështit",
     "coverItems": "Dekreti 248 i GACC regjistrimi për prodhuesit e qumështit, pajtueshmëria me etiketën kineze për produktet e qumështit, Udhëzimet e licencës së importit për kategoritë e qumështit, Mbështetja e zhdoganimit për qumështin e ftohtë dhe të ngrirë, Regjistrimi i formulave për qumështin pluhur për foshnjat, Monitorimi i vazhdueshëm i pajtueshmërisë për përditësimet rregullatore",
@@ -854,12 +854,12 @@
     "coverItems5": "Kërkesat për zinxhirin e ftohtë dhe temperaturën",
     "coverItems6": "Monitorimi i vazhdueshëm rregullator dhe mbështetja e rinovimit",
     "coverItems7": "Trajnim dhe këshillim për pajtueshmërinë e industrisë së qumështit",
-    "metaDescription": "Regjistrimi ekspert GACC, etiketimi kinez dhe pajtueshmëria e importit për produktet e qumështit dhe qumështit që hyjnë në Kinë. 15+ vite duke ndihmuar eksportuesit e qumështit.",
-    "metaTitle": "Pajtueshmëria e Kinës për eksportuesit e produkteve të qumështit dhe qumështit | Udhëzuesi i Regjistrimit të GACC"
+    "metaDescription": "Produktet e qumështit shqiptar në Kinë: regjistrimi GACC, etiketat GB 7718, zinxhiri i ftohtë, formula për foshnja SAMR.",
+    "metaTitle": "Produkte qumështi në Kinë | udhëzues regjistrimi GACC"
   },
   "IndustryMeat": {
-    "heroTitle": "Pajtueshmëria e Kinës për eksportuesit e mishit dhe ushqimeve të detit",
-    "heroSubtitle": "Regjistrimi, zhdoganimi dhe pajtueshmëria me importin e GACC CIFER për mishin dhe ushqimet e detit që hyjnë në Kinë.",
+    "heroTitle": "Përputhja me Kinën për eksportuesit shqiptarë të mishit",
+    "heroSubtitle": "Eksporti i mishit në Kinë kërkon regjistrim GACC dhe kontrolle higjienike. Ne menaxhojmë regjistrimin dhe certifikatat shëndetësore për fabrikat shqiptare.",
     "heroCta": "Merrni vlerësim falas",
     "coverTitle": "Çfarë mbulojmë për eksportuesit e mishit dhe ushqimeve të detit",
     "questionsTitle": "Pyetjet e shpeshta për eksportin e mishit dhe ushqimeve të detit",
@@ -886,12 +886,12 @@
     "coverItems5": "Kërkesat për akses në treg për një vend",
     "coverItems6": "Monitorimi i vazhdueshëm rregullator dhe mbështetja e rinovimit",
     "coverItems7": "Trajnim për pajtueshmërinë rregullatore për importuesit e mishit dhe ushqimeve të detit",
-    "metaDescription": "Regjistrim profesional GACC CIFER, pajtueshmëri me zinxhirin e ftohtë dhe mbështetje doganore për eksportuesit e mishit dhe ushqimeve të detit në Kinë.",
-    "metaTitle": "Pajtueshmëria e importit të mishit dhe ushqimeve të detit në Kinë | Udhëzuesi i Regjistrimit të GACC"
+    "metaDescription": "Mishi shqiptar në Kinë: regjistrimi GACC, certifikatat shëndetësore, marrëveshjet dypalëshe, etiketat.",
+    "metaTitle": "Eksporti i mishit në Kinë | udhëzues GACC dhe higjiene"
   },
   "IndustryWine": {
-    "heroTitle": "Pajtueshmëria e Kinës për eksportuesit e verërave dhe pijeve alkoolike",
-    "heroSubtitle": "Regjistrimi GACC, etiketimi kinez dhe mbrojtja e markës për verën dhe pijet alkoolike që hyjnë në tregun kinez.",
+    "heroTitle": "Përputhja me Kinën për eksportuesit shqiptarë të pijeve",
+    "heroSubtitle": "Eksporti i verës dhe pijeve kërkon etiketë kineze të saktë dhe regjistrim GACC. Ne ndihmojmë prodhuesit shqiptarë me etiketat dhe importin.",
     "heroCta": "Merrni vlerësim falas",
     "coverTitle": "Çfarë mbulojmë për eksportuesit e verërave dhe pijeve alkoolike",
     "coverItems": "Regjistrimi GACC për prodhuesit e verës dhe pijeve alkoolike, pajtueshmëria me etiketën kineze për pijet alkoolike, Regjistrimi i markës tregtare në Kinë, Udhëzimet për detyrimet e importit dhe taksat, kërkesat specifike të vendit për akses në treg, zhdoganimi dhe mbështetja e inspektimit",
@@ -919,12 +919,12 @@
     "coverItems5": "Kërkesat specifike për importin e verës për vendin",
     "coverItems6": "Monitorimi i vazhdueshëm rregullator dhe mbështetja e rinovimit",
     "coverItems7": "Trajnim dhe këshillim për pajtueshmërinë e industrisë së verës",
-    "metaDescription": "Pajtueshmëria e plotë e importit për verën dhe pijet alkoolike që hyjnë në Kinë. Regjistrimi i GACC, mbrojtja e markës dhe optimizimi i detyrës.",
-    "metaTitle": "Importi i verërave dhe pijeve alkoolike në Kinë | Regjistrimi i GACC dhe Mbrojtja e Markës"
+    "metaDescription": "Pijet shqiptare (vera, raki) në Kinë: etiketa kineze, regjistrimi GACC, taksat e importit, kanalet e shitjes.",
+    "metaTitle": "Eksporti i pijeve në Kinë | udhëzues etiketash dhe GACC"
   },
   "IndustrySkincare": {
-    "heroTitle": "Pajtueshmëria e Kinës për markat e kujdesit për lëkurën dhe kozmetikën",
-    "heroSubtitle": "Navigoni regjistrimin e NMPA, rishikimin e përbërësve dhe rregulloret CSAR për kozmetikën që hyjnë në tregun kinez.",
+    "heroTitle": "Markat shqiptare të kujdesit për lëkurën në tregun kinez",
+    "heroSubtitle": "Markat e kujdesit për lëkurën kanë nevojë për njoftim NMPA për të hyrë në Kinë. Ne menaxhojmë njoftimin dhe strategjinë e tregut për markat shqiptare.",
     "heroCta": "Merrni vlerësim falas",
     "coverTitle": "Çfarë mbulojmë për markat e kujdesit të lëkurës dhe kozmetikës",
     "coverItems": "Dorëzimi NMPA sipas rregulloreve CSAR të Kinës, vlerësimi dhe dokumentacioni i sigurisë së përbërësve, udhëzimet e përjashtimit nga testimi i kafshëve, pajtueshmëria me etiketën kineze për kozmetikën, regjistrimi i markave tregtare për markat e bukurisë, pajtueshmëria e vazhdueshme e mbikëqyrjes pas tregtimit",
@@ -945,12 +945,12 @@
     "jsonldName": "Shërbime të përputhshmërisë për kujdesin e lëkurës dhe kozmetikë në Kinë",
     "jsonldDescription": "Dorëzimi i NMPA sipas CSAR, vlerësimi i sigurisë së përbërësve, udhëzimet për përjashtimin e testimit të kafshëve dhe këshillimi i importit për markat e kozmetikës që hyjnë në Kinë.",
     "cta": "Merrni vlerësim falas",
-    "metaDescription": "Regjistrimi i kozmetikës NMPA, rishikimi i sigurisë së përbërësve dhe pajtueshmëria me CSAR për markat ndërkombëtare të kujdesit të lëkurës dhe kozmetikës që hyjnë në Kinë.",
-    "metaTitle": "Kozmetikë Import Kina | Udhëzuesi i Pajtueshmërisë së Regjistrimit dhe CSAR NMPA"
+    "metaDescription": "Markat shqiptare të kujdesit për lëkurën në Kinë: njoftimi NMPA, përjashtimi nga testimi te kafshët, kanalet CBEC.",
+    "metaTitle": "Kujdesi për lëkurën në Kinë | udhëzues njoftimi NMPA"
   },
   "IndustryPetFood": {
-    "heroTitle": "Pajtueshmëria e Kinës për eksportuesit e ushqimit për kafshët shtëpiake",
-    "heroSubtitle": "Regjistrimi i GACC, licencimi i importit të ushqimit dhe pajtueshmëria me etiketimin për ushqimin për kafshët shtëpiake që hyjnë në Kinë.",
+    "heroTitle": "Përputhja me Kinën për eksportuesit shqiptarë të ushqimit për kafshë",
+    "heroSubtitle": "Eksporti i ushqimit për kafshë shtëpiake kërkon regjistrim GACC; përbërësit me origjinë shtazore mund të kërkojnë miratim nga ministria e bujqësisë. Ne menaxhojmë regjistrimin për fabrikën tuaj.",
     "heroCta": "Merrni vlerësim falas",
     "coverTitle": "Çfarë mbulojmë për eksportuesit e ushqimit për kafshët shtëpiake",
     "coverItems": "Regjistrimi GACC për prodhuesit e ushqimeve për kafshë, udhëzime për licencën e importit të ushqimit (MOA), pajtueshmëria me etiketën kineze për produktet ushqimore për kafshët shtëpiake, miratimi i përbërësve për përbërësit e rinj të ushqimit për kafshët shtëpiake, Mbështetja e doganës për dërgesat e ushqimit për kafshët shtëpiake, Strategjia e hyrjes në treg për industrinë në rritje të kafshëve shtëpiake",
@@ -971,12 +971,12 @@
     "jsonldName": "Shërbime të përputhshmërisë për ushqim kafshësh shtëpiake në Kinë",
     "jsonldDescription": "Regjistrimi i GACC, licencimi i importit të ushqimit, miratimi i përbërësve dhe pajtueshmëria me etiketimin për eksportuesit e ushqimit për kafshët shtëpiake që hyjnë në tregun kinez.",
     "cta": "Merrni vlerësim falas",
-    "metaDescription": "Regjistrimi nga fundi në fund i GACC dhe MOA për eksportuesit e ushqimit për kafshët shtëpiake. Miratimi i përbërësve, pajtueshmëria e etiketimit dhe lejet e importit për Kinën.",
-    "metaTitle": "Importi i ushqimit për kafshë në Kinë | Udhëzuesi i Regjistrimit të GACC dhe MOA"
+    "metaDescription": "Ushqimi për kafshë shqiptar në Kinë: regjistrimi GACC, miratimi i ministrisë së bujqësisë, etiketat, dokumentet.",
+    "metaTitle": "Ushqim për kafshë në Kinë | udhëzues regjistrimi GACC"
   },
   "IndustrySupplements": {
-    "heroTitle": "Pajtueshmëria e Kinës për eksportuesit e shëndetit dhe suplementeve",
-    "heroSubtitle": "Navigoni regjistrimin e SAMR, rregulloret e ushqimit të shëndetshëm dhe pajtueshmërinë e importit për suplementet që hyjnë në Kinë.",
+    "heroTitle": "Përputhja me Kinën për eksportuesit shqiptarë të suplementeve",
+    "heroSubtitle": "Suplementet me pretendime shëndetësore kërkojnë regjistrim SAMR. Ne menaxhojmë procesin e importit për prodhuesit e vitaminave dhe probiotikëve.",
     "heroCta": "Merrni vlerësim falas",
     "coverTitle": "Çfarë mbulojmë për eksportuesit e shëndetit dhe suplementeve",
     "coverItems": "Regjistrimi dhe depozitimi i ushqimit të shëndetshëm SAMR, Udhëzues i përgjithshëm i klasifikimit të ushqimit për suplementet, pajtueshmëria me etiketën kineze për shtesat dietike, Vlerësimi dhe dokumentacioni i sigurisë së përbërësve, Zhdoganimi për dërgesat e suplementeve, Strategjia e hyrjes në treg për produktet shëndetësore",
@@ -997,12 +997,12 @@
     "jsonldName": "Shërbime të përputhshmërisë për suplemente shëndetësore në Kinë",
     "jsonldDescription": "Regjistrimi i ushqimit të shëndetshëm SAMR, vlerësimi i përbërësve, pajtueshmëria e etiketimit dhe konsultimi i importit për eksportuesit e suplementeve që hyjnë në Kinë.",
     "cta": "Merrni vlerësim falas",
-    "metaDescription": "Regjistrimi i ushqimit të shëndetshëm SAMR, regjistrimi i GACC dhe pajtueshmëria e etiketimit për shtesat dietike që hyjnë në tregun kinez.",
-    "metaTitle": "Suplemente Shëndetësore Import Kina | Udhëzues për regjistrimin e SAMR"
+    "metaDescription": "Suplementet shqiptare në Kinë: regjistrimi SAMR, etiketat, kanalet CBEC, dokumentet.",
+    "metaTitle": "Suplemente në Kinë | udhëzues regjistrimi SAMR"
   },
   "IndustryBaby": {
-    "heroTitle": "Pajtueshmëria e Kinës për eksportuesit e produkteve për fëmijë dhe nëna",
-    "heroSubtitle": "Navigoni regjistrimin e formulave për foshnjat, depozitimin e kozmetikës dhe rregulloret e sigurisë për produktet e bebeve në Kinë.",
+    "heroTitle": "Përputhja me Kinën për eksportuesit shqiptarë të produkteve për fëmijë",
+    "heroSubtitle": "Produktet për fëmijë kërkojnë certifikata të ndryshme: formula për foshnja SAMR, lodrat GB 6675, kozmetika për fëmijë NMPA. Ne menaxhojmë të gjithë procesin.",
     "heroCta": "Merrni vlerësim falas",
     "coverTitle": "Çfarë mbulojmë për eksportuesit e produkteve për fëmijë dhe nëna",
     "coverItems": "Regjistrimi i formulës për foshnjat SAMR (kategoria më e rreptë), regjistrimi GACC për produktet ushqimore për fëmijë, arkivimi i kozmetikës NMPA për produktet e kujdesit për lëkurën e foshnjave, pajtueshmëria me etiketën kineze për produktet e foshnjave, Testimi i sigurisë dhe mbështetja e dokumentacionit, Udhëzimet për hyrjen në treg për kategoritë e nënave dhe foshnjave",
@@ -1023,12 +1023,12 @@
     "jsonldName": "Shërbime të përputhshmërisë për produkte fëmijësh dhe nënash në Kinë",
     "jsonldDescription": "Regjistrimi i formulave për foshnjat SAMR, regjistrimi i ushqimit GACC, depozitimi i kozmetikës NMPA dhe pajtueshmëria me sigurinë për eksportuesit e produkteve të foshnjave dhe nënave që hyjnë në Kinë.",
     "cta": "Merrni vlerësim falas",
-    "metaDescription": "Regjistrimi i formulave për foshnjat SAMR, pajtueshmëria me GACC dhe regjistrimi NMPA për produktet e foshnjave dhe të nënës që hyjnë në Kinë.",
-    "metaTitle": "Produkte për Bebe & Formula për Foshnjat Import Kina | Udhëzues SAMR & GACC"
+    "metaDescription": "Produktet për fëmijë shqiptare në Kinë: formula për foshnja SAMR, lodrat GB 6675, kozmetika për fëmijë NMPA.",
+    "metaTitle": "Produkte për fëmijë në Kinë | udhëzues certifikimi"
   },
   "IndustryElectronics": {
-    "heroTitle": "Pajtueshmëria e Kinës për eksportuesit e elektronikës së konsumatorit",
-    "heroSubtitle": "Certifikimi CCC, pajtueshmëria me importin dhe aksesi në treg për pajisjet elektronike që hyjnë në tregun kinez.",
+    "heroTitle": "Elektronika shqiptare në Kinë – certifikimi CCC",
+    "heroSubtitle": "Eksporti i elektronikës dhe pajisjeve shtëpiake në Kinë kërkon certifikim CCC. Ne organizojmë testimin në organe të akredituara nga CNCA për prodhuesit shqiptarë.",
     "heroCta": "Merrni vlerësim falas",
     "coverTitle": "Çfarë mbulojmë për eksportuesit e elektronikës",
     "coverItems": "Certifikimi CCC për elektronikën në katalogun e detyrueshëm, pajtueshmëria me etiketën kineze për produktet elektronike, kërkesat e etiketimit të efikasitetit të energjisë, miratimi i llojit të pajisjeve pa tela (SRRC), zhdoganimi për importet e elektronikës, mbrojtja e markave tregtare dhe patentave në Kinë",
@@ -1049,12 +1049,12 @@
     "jsonldName": "Shërbime të përputhshmërisë për elektronikë konsumatore në Kinë",
     "jsonldDescription": "Certifikimi CCC, miratimi SRRC, pajtueshmëria me etiketimin kinez dhe mbrojtja e IP për eksportuesit e elektronikës që hyjnë në tregun kinez.",
     "cta": "Merrni vlerësim falas",
-    "metaDescription": "Certifikimi CCC, miratimi SRRC dhe mbrojtja IP për markat e elektronikës së konsumit që hyjnë në tregun kinez.",
-    "metaTitle": "Elektronikë Konsumatore Import në Kinë | Udhëzuesi i Çertifikimit të KKK-së"
+    "metaDescription": "Elektronika shqiptare në Kinë: certifikimi CCC, testet, auditimi i fabrikës, koha.",
+    "metaTitle": "Elektronika në Kinë | udhëzues certifikimi CCC"
   },
   "IndustryMedical": {
-    "heroTitle": "Pajtueshmëria e Kinës për eksportuesit e pajisjeve mjekësore",
-    "heroSubtitle": "Regjistrimi i NMPA, licencimi i importit dhe pajtueshmëria rregullatore për pajisjet mjekësore që hyjnë në Kinë.",
+    "heroTitle": "Pajisjet mjekësore shqiptare në Kinë – regjistrimi NMPA",
+    "heroSubtitle": "Eksporti i pajisjeve mjekësore në Kinë kërkon regjistrim NMPA dhe licencë importi. Ne menaxhojmë regjistrimin dhe klasifikimin për kompanitë shqiptare.",
     "heroCta": "Merrni vlerësim falas",
     "coverTitle": "Çfarë mbulojmë për eksportuesit e pajisjeve mjekësore",
     "coverItems": "Regjistrimi i pajisjes mjekësore NMPA (Klasa I/II/III), Aplikimi për licencën e pajisjes mjekësore për import, mbështetje për vlerësimin klinik dhe testimin, pajtueshmërinë me etiketën kineze për pajisjet mjekësore, udhëzimet e sistemit të menaxhimit të cilësisë (QMS), pajtueshmërinë e vazhdueshme të mbikëqyrjes pas tregut",
@@ -1082,12 +1082,12 @@
     "coverItems5": "Mbikëqyrja pas tregtimit dhe monitorimi i pajtueshmërisë",
     "coverItems6": "Monitorimi i vazhdueshëm rregullator dhe mbështetja e rinovimit",
     "coverItems7": "Trajnim dhe këshillim për pajtueshmërinë e pajisjeve mjekësore",
-    "metaDescription": "Regjistrimi i pajisjeve mjekësore NMPA, vlerësimi klinik dhe certifikimi CCC për prodhuesit ndërkombëtarë të pajisjeve mjekësore.",
-    "metaTitle": "Pajisje Mjekësore Import Kina | NMPA Klasa I/II/III Regjistrimi"
+    "metaDescription": "Pajisjet mjekësore shqiptare në Kinë: regjistrimi NMPA, klasifikimi i rrezikut, studimet klinike, licenca e importit.",
+    "metaTitle": "Pajisje mjekësore në Kinë | udhëzues NMPA"
   },
   "IndustryEcommerce": {
-    "heroTitle": "Pajtueshmëria e Kinës për markat e tregtisë elektronike ndërkufitare",
-    "heroSubtitle": "Navigoni rregulloret CBEC, kërkesat e platformës dhe pajtueshmërinë e importit për shitësit në internet në Kinë.",
+    "heroTitle": "Tregti elektronike në Kinë – përputhja për markat shqiptare",
+    "heroSubtitle": "Shisni markën tuaj shqiptare përmes Tmall Global dhe JD Worldwide: kanalet ndërkufitare lejojnë hyrjen në Kinë pa kompani lokale. Ne sigurojmë konfigurimin e plotë.",
     "heroCta": "Merrni vlerësim falas",
     "coverTitle": "Çfarë mbulojmë për markat e tregtisë elektronike",
     "coverItems": "Udhëzimet rregullatore të tregtisë elektronike ndërkufitare (CBEC), Pajtueshmëria me platformën për Tmall Global, JD Worldwide dhe më shumë, Vlerësimi i përshtatshmërisë së kategorisë së produkteve, optimizimi i taksave dhe detyrimeve të importit, kërkesat e etiketimit për produktet CBEC, Mbrojtja e markës dhe regjistrimi i markës tregtare",
@@ -1115,8 +1115,8 @@
     "coverItems5": "Vlerësimi i përshtatshmërisë së përjashtimit nga etiketa kineze",
     "coverItems6": "Monitorimi i vazhdueshëm rregullator dhe mbështetja e pajtueshmërisë",
     "coverItems7": "Trajnim dhe këshillim për pajtueshmërinë me platformën e tregtisë elektronike",
-    "metaDescription": "Pajtueshmëria ndërkufitare e tregtisë elektronike për Tmall Global, JD Worldwide dhe Douyin. Futja e platformës, magazina e lidhur dhe optimizimi i taksave.",
-    "metaTitle": "E-commerce ndërkufitare Kinë | Pajtueshmëria e Tmall, JD, Douyin"
+    "metaDescription": "Markat shqiptare në Kinë përmes tregtisë elektronike ndërkufitare: Tmall Global, JD Worldwide, CBEC, logjistika, pagesat.",
+    "metaTitle": "Tregti elektronike në Kinë | udhëzues përputhjeje për markat shqiptare"
   },
   "IndustriesCommon": {
     "heroTitle": "Industritë që i shërbejmë",

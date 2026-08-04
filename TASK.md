@@ -649,7 +649,7 @@ de 三项（gacc lebensmittel registrierung/zertifizierung、regulatorische anfo
 |------|------|--------|------|------|
 | D1-1 | de + es/it/ja/fa/fr（子代理） | dc0e3f87 / bc1b0d3a | ✅ | ✅ 线上验证通过 |
 | D1-2 | ru/nl/pl/pt/ko（子代理） | 852a5ab6 | ✅ | ✅ 线上验证通过 |
-| D1-3 | ar/tr/vi/th/uk（子代理） | 7cf2fdac | ✅ | ⏳ 线上验证 |
+| D1-3 | ar/tr/vi/th/uk（子代理） | 7cf2fdac | ✅ | ✅ 线上验证通过（2026-08-05 复核 5/5 在线） |
 | D1-4 | no/da/fi/sv/he（子代理） | 86341f40 | ✅ | ✅ 线上验证通过 |
 | D1-5 | en/zh/id/ms/hi（子代理） | 6f917d8c | ✅ | ✅ 线上验证通过 |
 | D1-6 | cs/hu/ro/el/bg（子代理） | b0becaa4 | ✅ | ✅ 线上验证通过 |

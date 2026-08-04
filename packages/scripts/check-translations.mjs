@@ -488,6 +488,11 @@ SHARED_WORDS_BY_LANG['ja'].add('Amazon');
 // abbreviation used as-is in Japanese food labeling contexts — real Japanese term.
 SHARED_WORDS_BY_LANG['ja'].add('JAS');
 
+// Korean: 'KIPRIS' (Korea Intellectual Property Rights Information Service, 특허정보검색서비스)
+// is the official trademark database used as-is in Korean business contexts.
+if (!SHARED_WORDS_BY_LANG['ko']) SHARED_WORDS_BY_LANG['ko'] = new Set();
+SHARED_WORDS_BY_LANG['ko'].add('KIPRIS');
+
 // Persian/Farsi: 'Amazon' is a brand name used as-is in Persian text
 if (!SHARED_WORDS_BY_LANG['fa']) SHARED_WORDS_BY_LANG['fa'] = new Set();
 SHARED_WORDS_BY_LANG['fa'].add('Amazon');

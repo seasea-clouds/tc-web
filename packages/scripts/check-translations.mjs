@@ -462,7 +462,7 @@ const SHARED_WORDS_BY_LANG = {
   da: new Set(['Blog', 'Contact', 'Services']),
   no: new Set(['Blog', 'Contact', 'Services']),
   es: new Set(['Blog', 'Contact', 'Services']),
-  it: new Set(['Blog', 'Contact', 'Services']),
+  it: new Set(['Blog', 'Contact', 'Services', 'Export', 'Skincare', 'UIBM', 'EUIPO', 'Made in Italy', 'IoT', 'INCI', 'WTO', 'ISO 13485', 'DOP', 'IGP', 'DOCG']),
   pt: new Set(['Blog', 'Contact', 'Services']),
   ca: new Set(['Blog', 'Contact', 'Services', 'Client', 'Condiments', 'Fruits']),
   cs: new Set(['Blog', 'Aflatoxin M1']),
@@ -478,7 +478,7 @@ const SHARED_WORDS_BY_LANG = {
   si: new Set(['SLSI', 'NIPO', 'EUIPO']),
   ta: new Set(['APEDA', 'FSSAI', 'BIS', 'CGPDTM']),
   ur: new Set(['PSQCA', 'IPO', 'Pakistan', 'EUIPO']),
-  ja: new Set(['PSE']),
+  ja: new Set(['PSE', 'JPO', 'PMDA', 'JAS', 'HACCP', 'WTO']),
   bg: new Set(['BFSA', 'BPO', 'EUIPO']),
   el: new Set(['EUIPO']),
 };

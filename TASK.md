@@ -679,3 +679,4 @@ de 三项（gacc lebensmittel registrierung/zertifizierung、regulatorische anfo
 |------|------|--------|------|------|
 | D2-1 | de/es/it/ja（子代理） | 6ed52dcd | ✅ | ✅ 线上验证通过（de BVL / es INV / it UIBM / ja 和牛） |
 | D2-2 | ko/ru/nl/pl/pt（子代理） | db77ba49 | ✅ | ✅ 线上验证通过（ko 유제품 / ru Кубан / nl Gouda / pl twaróg / pt Porto） |
+| D2-3 | fr/tr/vi/th/ar（子代理） | 58fd2065 | ✅ | ✅ 线上验证通过（fr Comté / tr rakı / vi cá tra / th กุ้ง / ar حليب الإبل） |

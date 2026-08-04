@@ -469,7 +469,7 @@ const SHARED_WORDS_BY_LANG = {
   hu: new Set(['Blog', 'Aflatoxin M1']),
   sq: new Set(['Blog', 'Melamine', 'Histamine']),
   vi: new Set(['Blog', 'Melamine', 'Aflatoxin M1']),
-  sr: new Set(['Opseg', 'tro', 'kova']),
+  sr: new Set(['Opseg', 'tro', 'kova', 'EUIPO']),
   ja: new Set(['PSE']),
   bg: new Set(['BFSA', 'BPO', 'EUIPO']),
   el: new Set(['EUIPO']),

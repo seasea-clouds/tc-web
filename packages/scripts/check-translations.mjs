@@ -523,6 +523,9 @@ SHARED_WORDS_BY_LANG['th'].add('TISI');
 // (भारतीय मानक ब्यूरो) — India's national standards body.
 if (!SHARED_WORDS_BY_LANG['hi']) SHARED_WORDS_BY_LANG['hi'] = new Set();
 SHARED_WORDS_BY_LANG['hi'].add('BIS');
+// Hindi: 'FSSAI' is the official abbreviation of the Food Safety and Standards
+// Authority of India (भारतीय खाद्य सुरक्षा एवं मानक प्राधिकरण) — India's food regulator.
+SHARED_WORDS_BY_LANG['hi'].add('FSSAI');
 
 // Swahili keeps international scientific terms in English
 SHARED_WORDS_BY_LANG['sw'].add('Melamine');

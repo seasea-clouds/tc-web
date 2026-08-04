@@ -688,6 +688,9 @@ const ENGLISH_RESIDUAL_ALLOW = new Set([
   if (!SHARED_WORDS_BY_LANG[l]) SHARED_WORDS_BY_LANG[l] = new Set();
   SHARED_WORDS_BY_LANG[l].add('Allergen');
 });
+// Hebrew shared words (Israel Standards Institute — SII, commonly kept in Latin in Hebrew text)
+if (!SHARED_WORDS_BY_LANG['he']) SHARED_WORDS_BY_LANG['he'] = new Set();
+SHARED_WORDS_BY_LANG['he'].add('SII');
 // First-to-File = loanword in German
 if (!SHARED_WORDS_BY_LANG['de']) SHARED_WORDS_BY_LANG['de'] = new Set();
 SHARED_WORDS_BY_LANG['de'].add('First-to-File');

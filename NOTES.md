@@ -175,3 +175,9 @@ node ../../packages/scripts/build-search-index.mjs \
 | trade-web-blog | NODE_VERSION, NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY |
 
 所有环境变量放在 `~/.openclaw/.env`。CF Dashboard 中各项目 Settings → Environment Variables 独立配置。
+
+## tr 语言 GB 标准误译残留（2026-08-04，d1-tr 子代理发现）
+tr.json 其他 namespace（非 D1 范围）存在 "Büyük Britanya"（英国标准误译，应为 GB 中国标准）：
+- DefinitionSchema.gb7718Name: "Büyük Britanya 7718-2025"
+- Faq.labelA4a、About.teamMember3Desc、BlogFaqChinaLabelCompliance.faqA4
+→ 待后续 pass 统一修复（D4 FAQ 页差异化时顺带处理）

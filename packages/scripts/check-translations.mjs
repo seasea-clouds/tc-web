@@ -481,7 +481,7 @@ const SHARED_WORDS_BY_LANG = {
   ja: new Set(['PSE', 'JPO', 'PMDA', 'JAS', 'HACCP', 'WTO']),
   ko: new Set(['KIPO', 'MFDS', 'IT']),
   ru: new Set(['Ozon', 'Wildberries']),
-  bg: new Set(['BFSA', 'BPO', 'EUIPO']),
+  bg: new Set(['BFSA', 'BPO', 'EUIPO', 'EFSA']),
   el: new Set(['EUIPO']),
 };
 

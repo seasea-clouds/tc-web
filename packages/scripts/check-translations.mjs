@@ -484,6 +484,9 @@ for (const lang of ['af','az','ca','cs','el','fi','hr','hu','id','ka','ms','pl',
 SHARED_WORDS_BY_LANG['ja'].add('PSE');
 SHARED_WORDS_BY_LANG['ja'].add('WTO');
 SHARED_WORDS_BY_LANG['ja'].add('Amazon');
+// Japanese: 'JAS' (Japanese Agricultural Standards, 日本農林規格) is the official
+// abbreviation used as-is in Japanese food labeling contexts — real Japanese term.
+SHARED_WORDS_BY_LANG['ja'].add('JAS');
 
 // Persian/Farsi: 'Amazon' is a brand name used as-is in Persian text
 if (!SHARED_WORDS_BY_LANG['fa']) SHARED_WORDS_BY_LANG['fa'] = new Set();

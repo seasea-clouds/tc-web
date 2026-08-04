@@ -476,8 +476,8 @@ const SHARED_WORDS_BY_LANG = {
   ka: new Set(['NFA', 'EUIPO']),
   ne: new Set(['DFTQC', 'NBSM', 'WTO']),
   si: new Set(['SLSI', 'NIPO', 'EUIPO', 'WTO']),
-  ta: new Set(['APEDA', 'FSSAI', 'BIS', 'CGPDTM']),
-  ur: new Set(['PSQCA', 'IPO', 'Pakistan', 'EUIPO']),
+  ta: new Set(['APEDA', 'FSSAI', 'BIS', 'CGPDTM', 'CDSCO']),
+  ur: new Set(['PSQCA', 'IPO', 'Pakistan', 'EUIPO', 'DRAP']),
   ja: new Set(['PSE', 'JPO', 'PMDA', 'JAS', 'HACCP', 'WTO']),
   ko: new Set(['KIPO', 'MFDS', 'IT']),
   ru: new Set(['Ozon', 'Wildberries']),
@@ -506,9 +506,11 @@ SHARED_WORDS_BY_LANG['ja'].add('JAS');
 if (!SHARED_WORDS_BY_LANG['ko']) SHARED_WORDS_BY_LANG['ko'] = new Set();
 SHARED_WORDS_BY_LANG['ko'].add('KIPRIS');
 
-// Persian/Farsi: 'Amazon' is a brand name used as-is in Persian text
+// Persian/Farsi: 'Amazon' is a brand name used as-is in Persian text;
+// 'IRIPO' is the Iranian Intellectual Property Office (سازمان ثبت اسناد و املاک کشور).
 if (!SHARED_WORDS_BY_LANG['fa']) SHARED_WORDS_BY_LANG['fa'] = new Set();
 SHARED_WORDS_BY_LANG['fa'].add('Amazon');
+SHARED_WORDS_BY_LANG['fa'].add('IRIPO');
 
 // Arabic: 'GCC' (Gulf Cooperation Council), 'GSO' (GCC Standardization Organization)
 // and 'SASO' (Saudi Standards, Metrology and Quality Organization) are real
@@ -719,9 +721,12 @@ const ENGLISH_RESIDUAL_ALLOW = new Set([
   if (!SHARED_WORDS_BY_LANG[l]) SHARED_WORDS_BY_LANG[l] = new Set();
   SHARED_WORDS_BY_LANG[l].add('Allergen');
 });
-// Hebrew shared words (Israel Standards Institute — SII, commonly kept in Latin in Hebrew text)
+// Hebrew shared words (Israel Standards Institute — SII, commonly kept in Latin in Hebrew text;
+// ILPO = Israel Patent Office; WTO = standard trade acronym)
 if (!SHARED_WORDS_BY_LANG['he']) SHARED_WORDS_BY_LANG['he'] = new Set();
 SHARED_WORDS_BY_LANG['he'].add('SII');
+SHARED_WORDS_BY_LANG['he'].add('ILPO');
+SHARED_WORDS_BY_LANG['he'].add('WTO');
 // First-to-File = loanword in German
 if (!SHARED_WORDS_BY_LANG['de']) SHARED_WORDS_BY_LANG['de'] = new Set();
 SHARED_WORDS_BY_LANG['de'].add('First-to-File');

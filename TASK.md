@@ -647,4 +647,6 @@ de 三项（gacc lebensmittel registrierung/zertifizierung、regulatorische anfo
 
 | 子批 | 语言 | commit | 部署 | 验证 |
 |------|------|--------|------|------|
-| D1-1 | 待定 | | | |
+| D1-1 | de + es/it/ja/fa/fr（子代理） | dc0e3f87 / bc1b0d3a | ✅ | ✅ 线上验证通过 |
+| D1-2 | ru/nl/pl/pt/ko（子代理） | 852a5ab6 | ✅ | ✅ 线上验证通过 |
+| D1-3 | ar/tr/vi/th/uk（子代理） | ⏳ 运行中 | | |

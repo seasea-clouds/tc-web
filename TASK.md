@@ -682,3 +682,4 @@ de 三项（gacc lebensmittel registrierung/zertifizierung、regulatorische anfo
 | D2-3 | fr/tr/vi/th/ar（子代理） | 58fd2065 | ✅ | ✅ 线上验证通过（fr Comté / tr rakı / vi cá tra / th กุ้ง / ar حليب الإبل） |
 | D2-4 | en/zh/id/ms/hi（子代理） | d0314774 | ✅ | ✅ 线上验证通过（en Stilton / zh 保健食品 / id BPJPH / ms sarang / hi APEDA） |
 | D2-5 | bg/cs/ro/hu/el（子代理） | 2827d3bc | ✅ | ✅ 线上验证通过（bg кисело / cs Pilsner / ro propolis / hu libamáj / el Φέτα） |
+| D2-6 | sr/hr/sk/sl/uk（子代理） | 4221359c | ✅ | ✅ 线上验证通过（sr шљивовица / hr Malvazije / sk bryndze / sl Teran / uk шипшина） |

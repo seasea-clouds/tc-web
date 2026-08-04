@@ -547,6 +547,12 @@ SHARED_WORDS_BY_LANG['hi'].add('BIS');
 // Hindi: 'FSSAI' is the official abbreviation of the Food Safety and Standards
 // Authority of India (भारतीय खाद्य सुरक्षा एवं मानक प्राधिकरण) — India's food regulator.
 SHARED_WORDS_BY_LANG['hi'].add('FSSAI');
+// Hindi: 'APEDA' (Agricultural and Processed Food Products Export Development
+// Authority), 'CGPDTM' (Controller General of Patents, Designs and Trade Marks),
+// 'CDSCO' (Central Drugs Standard Control Organisation) — Indian agencies.
+SHARED_WORDS_BY_LANG['hi'].add('APEDA');
+SHARED_WORDS_BY_LANG['hi'].add('CGPDTM');
+SHARED_WORDS_BY_LANG['hi'].add('CDSCO');
 
 // Swahili keeps international scientific terms in English
 SHARED_WORDS_BY_LANG['sw'].add('Melamine');

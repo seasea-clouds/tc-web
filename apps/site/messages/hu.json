@@ -159,8 +159,8 @@
     "metaDescription": "Egyablakos kínai import megfelelőség: GACC élelmiszer-regisztráció, CCC tanúsítás, NMPA kozmetikai bejelentés, címkemegfelelőség és márkavédelem. 15+ év tapasztalat."
   },
   "ServiceGacc": {
-    "heroTitle": "GACC élelmiszer regisztráció",
-    "heroSubtitle": "Szakértői útmutatással tájékozódjon a 248/249. számú kínai rendelet élelmiszer-nyilvántartási követelményeiről.",
+    "heroTitle": "GACC élelmiszer-regisztráció – magyar exportőröknek",
+    "heroSubtitle": "A kínai vámigazgatás (GACC) a 248. rendelet értelmében megköveteli, hogy minden külföldi élelmiszergyártó regisztráljon a Kínába történő export előtt. A paprika, a libamáj és a bor is érintett. Elkészítjük a teljes CIFER-anyagot.",
     "cta": "Kérjen ingyenes értékelést",
     "coverTitle": "Amit fedezünk",
     "howTitle": "Hogyan működik",
@@ -204,12 +204,12 @@
     "coverItems4": "Teljes körű dokumentáció elkészítése és fordítása",
     "coverItems5": "Címkemegfelelőségi felülvizsgálat (GB 7718 / GB 28050)",
     "coverItems6": "Regisztráció megújítása és 5 éves érvényességi követés",
-    "metaTitle": "GACC élelmiszer-regisztráció Kína | 248/249 CIFER Útmutató rendelet",
-    "metaDescription": "Professzionális GACC regisztrációs szolgáltatások tengerentúli élelmiszergyártók számára. CIFER rendszertámogatás, CRA ügynök, 248/249 rendelet megfelelősége. Kérjen ingyenes konzultációt."
+    "metaTitle": "GACC élelmiszer-regisztráció | útmutató magyar exportőröknek",
+    "metaDescription": "GACC-regisztráció magyar élelmiszer-exportőröknek: 248. rendelet, CIFER-rendszer, szükséges dokumentumok, idő. Magyar nyelvű támogatás."
   },
   "ServiceLabel": {
-    "heroTitle": "A kínai címkék megfelelősége",
-    "heroSubtitle": "Győződjön meg arról, hogy termékcímkéi megfelelnek a kínai kötelező címkézési szabványoknak.",
+    "heroTitle": "Kínai címkézési követelmények – magyar termékekhez",
+    "heroSubtitle": "Az importált csomagolt élelmiszereknek a GB 7718 és GB 28050 szabványok szerinti kínai címkével kell rendelkezniük. A hibás címkézés vámkezelési visszatartáshoz vezet. Címkéket tervezünk és ellenőrzünk.",
     "cta": "Kérjen ingyenes értékelést",
     "coverTitle": "Amit fedezünk",
     "howTitle": "Hogyan működik",
@@ -251,12 +251,12 @@
     "coverItems4": "Egyedi kínai címke design",
     "coverItems5": "Címkesablon létrehozása a gyártáshoz",
     "coverItems6": "Vámkezelési címke támogatás",
-    "metaTitle": "A kínai élelmiszercímkék megfelelősége | GB 7718 és GB 28050 áttekintés",
-    "metaDescription": "Kínai címketervezés és megfelelőségi felülvizsgálat az előrecsomagolt élelmiszereknél. GB 7718-2025, GB 28050 szabványok. Kerülje el a vámelutasítást. Szakértői felülvizsgálati szolgáltatás."
+    "metaTitle": "Kínai címkézés | GB 7718 útmutató",
+    "metaDescription": "Kínai címkézési követelmények magyar termékekhez: GB 7718, GB 28050 tápértéktáblázat, allergénfigyelmeztetés."
   },
   "ServiceCcc": {
-    "heroTitle": "CCC tanúsítás",
-    "heroSubtitle": "Kína kötelező tanúsítása elektronikai cikkekre, készülékekre, játékokra és autóalkatrészekre.",
+    "heroTitle": "CCC-tanúsítás – útmutató kínai exportáláshoz magyar gyártóknak",
+    "heroSubtitle": "A Kínába exportált elektronikai cikkeknek, háztartási gépeknek és játékoknak CCC-tanúsítvánnyal kell rendelkezniük. A CE-jelölés vagy a magyar tanúsítás nem elegendő; a CNCA által akkreditált szervezetekkel végeztetjük el a vizsgálatokat és a gyári auditot.",
     "cta": "Kérjen ingyenes értékelést",
     "coverTitle": "Amit fedezünk",
     "howTitle": "Hogyan működik",
@@ -300,12 +300,12 @@
     "coverItems4": "Gyári ellenőrzés előkészítése",
     "coverItems5": "Éves felügyeleti megfelelőségi támogatás",
     "coverItems6": "Új 2025-ös kategóriák, beleértve a lítium-ion akkumulátorokat",
-    "metaTitle": "Kína CCC tanúsítás | Kötelező terméktanúsítási útmutató",
-    "metaDescription": "Kínai kötelező tanúsítási (CCC) tanácsadás elektronikával, készülékekkel, játékokkal és autóalkatrészekkel kapcsolatban. Tesztkoordináció, gyári audit előkészítés, gyors jóváhagyás."
+    "metaTitle": "CCC-tanúsítás | útmutató kínai exportáláshoz magyar gyártóknak",
+    "metaDescription": "CCC-tanúsítás magyar gyártóknak: különbség a CE-jelöléshez képest, tanúsítási folyamat, vizsgálatok, gyári audit, idő és költség. Magyar nyelvű támogatás."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Kozmetikai reszelő",
-    "heroSubtitle": "A Kínában importált kozmetikumok NMPA regisztrációjának és bejelentésének kitöltése.",
+    "heroTitle": "NMPA kozmetikai regisztráció – magyar márkáknak",
+    "heroSubtitle": "A kínai piacra lépés NMPA-bejelentést igényel a kozmetikumoknál: bejelentést a hagyományos termékeknél és regisztrációt a különleges termékeknél, felelős személy kijelölésével Kínában. A teljes folyamatot intézzük.",
     "cta": "Kérjen ingyenes értékelést",
     "coverTitle": "Amit fedezünk",
     "howTitle": "Hogyan működik",
@@ -349,12 +349,12 @@
     "coverItems4": "Biztonsági értékelés koordinálása",
     "coverItems5": "Hatékonysági tesztelési támogatás az igényelt funkciókhoz",
     "coverItems6": "Forgalomba hozatalt követő megfelelőség (mellékesemények megfigyelése, éves jelentések)",
-    "metaTitle": "Kína NMPA Cosmetics Filing | Import Cosmetics Regisztráció",
-    "metaDescription": "NMPA kozmetikai bejelentés és regisztráció import bőrápoló, smink, hajápoló termékekhez. Szokásos és különleges felhasználású kategóriák. Kínai felelős ügynök támogatása."
+    "metaTitle": "NMPA kozmetikai regisztráció | magyar márkák a kínai piacon",
+    "metaDescription": "NMPA-regisztráció magyar kozmetikai márkáknak: besorolás, állatkísérlet-mentesség, felelős személy Kínában, idő."
   },
   "ServiceEcommerce": {
-    "heroTitle": "Határokon átnyúló e-kereskedelem",
-    "heroSubtitle": "Indítsa el márkáját Kína vezető határokon átnyúló e-kereskedelmi platformjain.",
+    "heroTitle": "Határon átnyúló e-kereskedelem – magyar márkáknak",
+    "heroSubtitle": "Adja el magyar márkáját a Tmall Global, JD Worldwide és Douyin felületein: a határon átnyúló csatornák helyi cég nélkül teszik lehetővé a kínai piacra lépést. A teljes beállítást intézzük.",
     "cta": "Kérjen ingyenes értékelést",
     "coverTitle": "Amit fedezünk",
     "howTitle": "Hogyan működik",
@@ -396,12 +396,12 @@
     "coverItems4": "Határon átnyúló adóoptimalizálás (0% tarifa határokon belül)",
     "coverItems5": "Útmutató a kínai címkementességhez a határokon átnyúló értékesítéshez",
     "coverItems6": "Adatmegfelelőség (PIPL) a határokon átnyúló műveletekhez",
-    "metaTitle": "Kína határokon átnyúló e-kereskedelem | Tmall, JD, Douyin beállítás",
-    "metaDescription": "Végpontok közötti határokon átnyúló e-kereskedelem Kína beállítása. Tmall Global, JD Worldwide, Douyin felvétele. Vámraktár, adóoptimalizálás, megfelelés."
+    "metaTitle": "Határon átnyúló e-kereskedelem | Tmall·JD útmutató magyar márkáknak",
+    "metaDescription": "Magyar márkák Kínában határon átnyúló e-kereskedelem révén: Tmall Global, JD Worldwide, CBEC-megfelelés, logisztika, fizetés."
   },
   "ServiceBrand": {
-    "heroTitle": "Márkavédelem",
-    "heroSubtitle": "Védje szellemi tulajdonát és márkaidentitását a kínai piacon.",
+    "heroTitle": "Védjegybejegyzés Kínában – magyar márkák védelme",
+    "heroSubtitle": "Kína a \"ki előbb regisztrál\" elvét alkalmazza: a Magyarországon (SZTNH) bejegyzett védjegy Kínában nem védett. Regisztrálja márkáját a CNIPA-nál a piacra lépés előtt, hogy megakadályozza a kisajátítást.",
     "cta": "Kérjen ingyenes értékelést",
     "coverTitle": "Amit fedezünk",
     "howTitle": "Hogyan működik",
@@ -443,8 +443,8 @@
     "coverItems4": "Szellemi tulajdonjog vámnyilvántartása",
     "coverItems5": "A hirdetések megfelelőségének felülvizsgálata (kínai reklámtörvény)",
     "coverItems6": "Márkavédelmi stratégia és végrehajtási útmutató",
-    "metaTitle": "Kínai védjegyregisztráció és márkavédelem | IP iktatás",
-    "metaDescription": "Védjegyregisztráció, vám-IP nyilvántartás, hirdetési megfelelés a kínai piac számára. Madrid rendszer, first-to-file védelem. Biztosítsa márkáját."
+    "metaTitle": "Védjegybejegyzés Kínában | magyar márkák védelme",
+    "metaDescription": "Védjegybejegyzés Kínában magyar márkák számára: CNIPA, Madridi rendszer, hamisítás, platformvédelem."
   },
   "ServiceCommon": {
     "whoTitle": "Kinek szól",
@@ -825,8 +825,8 @@
     "ctaButton": "Kérjen ingyenes árajánlatot"
   },
   "IndustryDairy": {
-    "heroTitle": "Kínai megfelelőség a tej- és tejtermék-exportőrök számára",
-    "heroSubtitle": "Keresse meg a GACC regisztrációját, a kínai címkézést és a Kínába belépő tejtermékek importszabályait.",
+    "heroTitle": "Kínai megfelelés magyar tejtermék-exportőröknek",
+    "heroSubtitle": "A tej, sajt és joghurt Kínába történő exportjához GACC-regisztráció szükséges. Magyar tejüzemek regisztrációját és címkéit intézzük.",
     "heroCta": "Kérjen ingyenes értékelést",
     "coverTitle": "Amit biztosítunk a tejtermék-exportőrök számára",
     "coverItems": "GACC 248-as rendelet a tejtermékek gyártóinak regisztrációja, a tejtermékek kínai címkéinek megfelelősége, a tejtermékek kategóriáinak behozatali engedélyével kapcsolatos útmutatás, a hűtött és fagyasztott tejtermékek vámkezelésének támogatása, a csecsemőtejpor tápszer-regisztrációja, Folyamatos megfelelőség-ellenőrzés a szabályozás frissítéséhez",
@@ -854,12 +854,12 @@
     "coverItems5": "Hideglánc és hőmérsékleti követelmények",
     "coverItems6": "Folyamatos szabályozási monitoring és megújítási támogatás",
     "coverItems7": "Tejipari megfelelőségi képzés és tanácsadás",
-    "metaDescription": "Szakértői GACC-regisztráció, kínai címkézés, valamint a Kínába belépő tej- és tejtermékek behozatalának megfelelősége. 15+ éve segíti a tejexportőröket.",
-    "metaTitle": "Kínai megfelelés a tej- és tejtermék-exportőrök számára | GACC regisztrációs útmutató"
+    "metaDescription": "Magyar tejtermékek Kínába: GACC-regisztráció, GB 7718 címkék, hűtőlánc, csecsemőtápszer SAMR.",
+    "metaTitle": "Tejtermékek Kínába | GACC-regisztrációs útmutató"
   },
   "IndustryMeat": {
-    "heroTitle": "Kínai megfelelőség a hús- és tenger gyümölcsei exportőrei számára",
-    "heroSubtitle": "GACC CIFER regisztráció, vámkezelés és behozatali megfelelőség a Kínába érkező hús és tenger gyümölcsei esetében.",
+    "heroTitle": "Kínai megfelelés magyar húsexportőröknek",
+    "heroSubtitle": "A hús Kínába történő exportjához GACC-regisztráció és higiéniai ellenőrzések szükségesek. Magyar üzemek regisztrációját és egészségügyi bizonyítványait intézzük.",
     "heroCta": "Kérjen ingyenes értékelést",
     "coverTitle": "Amit hús- és tenger gyümölcsei exportőröknek nyújtunk",
     "questionsTitle": "Hús- és tenger gyümölcsei exporttal kapcsolatos GYIK",
@@ -886,12 +886,12 @@
     "coverItems5": "Országspecifikus piacra jutási követelmények",
     "coverItems6": "Folyamatos szabályozási monitoring és megújítási támogatás",
     "coverItems7": "Szabályozási megfelelőségi képzés hús- és tenger gyümölcsei importőrök számára",
-    "metaDescription": "Professzionális GACC CIFER regisztráció, hűtőlánc-megfelelőség és vámtámogatás a Kínába irányuló hús- és tengeri termékek exportőrei számára.",
-    "metaTitle": "Hús és tenger gyümölcsei kínai import megfelelőség | GACC regisztrációs útmutató"
+    "metaDescription": "Magyar hús Kínába: GACC-regisztráció, egészségügyi bizonyítványok, kétoldalú megállapodások, címkék.",
+    "metaTitle": "Húsexport Kínába | GACC és higiéniai útmutató"
   },
   "IndustryWine": {
-    "heroTitle": "Kínai megfelelőség a bor- és szeszesital-exportőrök számára",
-    "heroSubtitle": "GACC regisztráció, kínai címkézés, valamint a kínai piacra kerülő borok és szeszes italok márkavédelme.",
+    "heroTitle": "Kínai megfelelés magyar italexportőröknek",
+    "heroSubtitle": "A bor és italok exportjához megfelelő kínai címke és GACC-regisztráció szükséges. Segítünk a magyar termelőknek a címkékben és az importban.",
     "heroCta": "Kérjen ingyenes értékelést",
     "coverTitle": "Amit bor- és szeszesital-exportőröknek nyújtunk",
     "coverItems": "GACC-regisztráció bor- és szeszesital-gyártók számára, alkoholos italok kínai címkéinek megfelelősége, márkavédjegy-regisztráció Kínában, behozatali vám- és adózási útmutatás, országspecifikus piacra jutási követelmények, vámkezelés és ellenőrzés támogatása",
@@ -919,12 +919,12 @@
     "coverItems5": "Országspecifikus borimport követelmények",
     "coverItems6": "Folyamatos szabályozási monitoring és megújítási támogatás",
     "coverItems7": "Boripari megfelelőségi képzés és tanácsadás",
-    "metaDescription": "A Kínába belépő borok és szeszes italok teljes behozatali megfelelősége. GACC regisztráció, márkavédelem és kötelességoptimalizálás.",
-    "metaTitle": "Bor és szeszes italok importja Kínába | GACC regisztráció és márkavédelem"
+    "metaDescription": "Magyar italok (tokaji bor, pálinka) Kínába: kínai címke, GACC-regisztráció, importvámok, értékesítési csatornák.",
+    "metaTitle": "Italexport Kínába | címke- és GACC-útmutató"
   },
   "IndustrySkincare": {
-    "heroTitle": "Kínai megfelelőség a bőrápoló és kozmetikai márkák számára",
-    "heroSubtitle": "Navigáljon a kínai piacra kerülő kozmetikumok NMPA-nyilvántartási, összetevő-ellenőrzési és CSAR-előírásai között.",
+    "heroTitle": "Magyar bőrápolási márkák a kínai piacon",
+    "heroSubtitle": "A bőrápolási márkáknak NMPA-bejelentésre van szükségük a Kínába való belépéshez. Magyar márkák bejelentését és piaci stratégiáját intézzük.",
     "heroCta": "Kérjen ingyenes értékelést",
     "coverTitle": "Amit a bőrápoló és kozmetikai márkák számára biztosítunk",
     "coverItems": "NMPA bejelentés a kínai CSAR-előírások szerint, Összetevők biztonsági értékelése és dokumentációja, Állatkísérletek alóli mentességre vonatkozó útmutatás, A kozmetikumok kínai címkéinek megfelelősége, szépségápolási márkák védjegybejegyzése, Folyamatos forgalomba hozatalt követő felügyeleti megfelelés",
@@ -945,12 +945,12 @@
     "jsonldName": "Kínai bőrápolás és kozmetikum megfelelőségi szolgáltatások",
     "jsonldDescription": "A CSAR szerinti NMPA bejelentés, az összetevők biztonsági értékelése, az állatkísérletek alóli mentességre vonatkozó útmutatás, valamint import tanácsadás a Kínába belépő kozmetikai márkák számára.",
     "cta": "Kérjen ingyenes értékelést",
-    "metaDescription": "NMPA kozmetikai bejelentések, összetevők biztonsági felülvizsgálata és CSAR-megfelelés a Kínába belépő nemzetközi bőrápoló és kozmetikai márkák esetében.",
-    "metaTitle": "Kozmetikai import Kína | NMPA bejelentési és CSAR-megfelelőségi útmutató"
+    "metaDescription": "Magyar bőrápolási márkák Kínában: NMPA-bejelentés, állatkísérlet-mentesség, CBEC-csatornák.",
+    "metaTitle": "Bőrápolás Kínában | NMPA-bejelentési útmutató"
   },
   "IndustryPetFood": {
-    "heroTitle": "Kínai megfelelőség az állateledel-exportőrök számára",
-    "heroSubtitle": "GACC regisztráció, takarmányimport engedélyezése és címkézési megfelelősége a Kínába érkező állateledel esetében.",
+    "heroTitle": "Kínai megfelelés magyar állateledel-exportőröknek",
+    "heroSubtitle": "Az állateledel exportjához GACC-regisztráció szükséges; az állati eredetű összetevők a mezőgazdasági minisztérium jóváhagyását igényelhetik. Üzemének regisztrációját intézzük.",
     "heroCta": "Kérjen ingyenes értékelést",
     "coverTitle": "Amit biztosítunk az állateledel-exportőrök számára",
     "coverItems": "GACC regisztráció kisállateledel-gyártók számára, takarmánybehozatali engedély (MOA) útmutatás, állateledel-termékek kínai címkéinek megfelelősége, új takarmány-összetevők összetevőinek jóváhagyása, kisállateledel-szállítmányok vámkezelési támogatása, piacra lépési stratégia a növekvő kisállat-ipar számára",
@@ -971,12 +971,12 @@
     "jsonldName": "Kínai állateledel megfelelőségi szolgáltatások",
     "jsonldDescription": "GACC-regisztráció, takarmányimport-engedélyezés, összetevő-jóváhagyás és címkézési megfelelés a kínai piacra belépő állateledel-exportőrök számára.",
     "cta": "Kérjen ingyenes értékelést",
-    "metaDescription": "Teljes körű GACC és MOA regisztráció kisállateledel-exportőrök számára. Összetevők jóváhagyása, címkézési megfelelőség és importengedélyek Kínában.",
-    "metaTitle": "Pet Food Import Kína | GACC és MOA regisztrációs útmutató"
+    "metaDescription": "Magyar állateledel Kínába: GACC-regisztráció, mezőgazdasági minisztérium jóváhagyása, címkék, dokumentumok.",
+    "metaTitle": "Állateledel Kínába | GACC-regisztrációs útmutató"
   },
   "IndustrySupplements": {
-    "heroTitle": "Kínai megfelelőség az egészségügyi és étrend-kiegészítő exportőrök számára",
-    "heroSubtitle": "Keresse meg a SAMR-regisztrációt, az egészséges élelmiszerekre vonatkozó előírásokat és a Kínába érkező étrend-kiegészítők importjának megfelelőségét.",
+    "heroTitle": "Kínai megfelelés magyar étrend-kiegészítő exportőröknek",
+    "heroSubtitle": "Az egészségre vonatkozó állításokat tartalmazó étrend-kiegészítők SAMR-regisztrációt igényelnek. Vitamin- és probiotikumgyártók importfolyamatát intézzük.",
     "heroCta": "Kérjen ingyenes értékelést",
     "coverTitle": "Amit egészségügyi és étrend-kiegészítő exportőröknek nyújtunk",
     "coverItems": "SAMR egészségügyi élelmiszerek regisztrációja és bejelentése, Általános élelmiszer-besorolási útmutató étrend-kiegészítők számára, Kínai címkék megfelelősége az étrend-kiegészítők számára, Összetevők biztonsági értékelése és dokumentációja, Kiegészítő szállítmányok vámkezelése, Egészségügyi termékek piacra lépési stratégiája",
@@ -997,12 +997,12 @@
     "jsonldName": "Kínai egészségügyi kiegészítő megfelelőségi szolgáltatások",
     "jsonldDescription": "SAMR egészségügyi élelmiszerek regisztrálása, összetevők értékelése, címkézési megfelelőség és import tanácsadás Kínába belépő kiegészítő exportőrök számára.",
     "cta": "Kérjen ingyenes értékelést",
-    "metaDescription": "SAMR egészségügyi élelmiszerek regisztrációja, GACC bejelentése és címkézési megfelelősége a kínai piacra kerülő étrend-kiegészítők esetében.",
-    "metaTitle": "Egészség-kiegészítők Kínai import | SAMR regisztrációs útmutató"
+    "metaDescription": "Magyar étrend-kiegészítők Kínába: SAMR-regisztráció, címkék, CBEC-csatornák, dokumentumok.",
+    "metaTitle": "Étrend-kiegészítők Kínába | SAMR-regisztrációs útmutató"
   },
   "IndustryBaby": {
-    "heroTitle": "Kínai megfelelőség a baba- és anyatermék-exportőrök számára",
-    "heroSubtitle": "Keresse meg a csecsemőtápszer regisztrációját, a kozmetikai termékek bejelentését és a bébitermékekre vonatkozó biztonsági előírásokat Kínában.",
+    "heroTitle": "Kínai megfelelés magyar babaáru-exportőröknek",
+    "heroSubtitle": "A babaáruk különféle tanúsítványokat igényelnek: csecsemőtápszer SAMR, játékok GB 6675, babakozmetikum NMPA. A teljes folyamatot intézzük.",
     "heroCta": "Kérjen ingyenes értékelést",
     "coverTitle": "Amit biztosítunk a baba- és anyatermék-exportőrök számára",
     "coverItems": "SAMR anyatej-helyettesítő tápszer regisztráció (legszigorúbb kategória), GACC regisztráció a bébiételekhez, NMPA kozmetikumok bejelentése baba bőrápoló termékekhez, bébitermékek kínai címkéinek való megfelelés, Biztonsági tesztelés és dokumentáció támogatása, Piacra lépési útmutatás anyák és csecsemők kategóriái számára",
@@ -1023,12 +1023,12 @@
     "jsonldName": "Kínai baba és anya termék megfelelőségi szolgáltatások",
     "jsonldDescription": "SAMR anyatej-helyettesítő tápszer-regisztráció, GACC élelmiszer-regisztráció, NMPA kozmetikai termékek bejelentése és biztonsági megfelelés a Kínába belépő baba- és anyatermék-exportőrök számára.",
     "cta": "Kérjen ingyenes értékelést",
-    "metaDescription": "A csecsemőtápszer SAMR-regisztrációja, a GACC-megfelelőség és az NMPA bejelentése a Kínába érkező baba- és anyáknak szánt termékekre vonatkozóan.",
-    "metaTitle": "Babatermékek és csecsemőtápszer kínai import | SAMR és GACC útmutató"
+    "metaDescription": "Magyar babaáruk Kínába: csecsemőtápszer SAMR, játékok GB 6675, babakozmetikum NMPA.",
+    "metaTitle": "Babaáruk Kínába | tanúsítási útmutató"
   },
   "IndustryElectronics": {
-    "heroTitle": "Kínai megfelelés a szórakoztatóelektronikai exportőrök számára",
-    "heroSubtitle": "CCC-tanúsítvány, import-megfelelőség és piacra jutás a kínai piacra belépő elektronika számára.",
+    "heroTitle": "Magyar elektronika Kínába – CCC-tanúsítás",
+    "heroSubtitle": "Az elektronika és háztartási gépek Kínába történő exportjához CCC-tanúsítás szükséges. A CNCA által akkreditált szervezetekkel végeztetjük a vizsgálatokat magyar gyártók számára.",
     "heroCta": "Kérjen ingyenes értékelést",
     "coverTitle": "Amit biztosítunk az elektronikai exportőrök számára",
     "coverItems": "CCC-tanúsítvány az elektronikára a kötelező katalógusban,Kínai címkemegfelelőség az elektronikai termékeknél,Energiahatékonysági címkézési követelmények,Vezeték nélküli berendezések típusjóváhagyása (SRRC),Vámkezelés elektronikai termékek importjára,Védjegy- és szabadalmi oltalom Kínában",
@@ -1049,12 +1049,12 @@
     "jsonldName": "Kínai fogyasztói elektronika megfelelőségi szolgáltatások",
     "jsonldDescription": "CCC-tanúsítvány, SRRC-jóváhagyás, kínai címkézési megfelelőség és IP-védelem a kínai piacra belépő elektronikai exportőrök számára.",
     "cta": "Kérjen ingyenes értékelést",
-    "metaDescription": "CCC tanúsítás, SRRC jóváhagyás és IP-védelem a kínai piacra belépő fogyasztói elektronikai márkák számára.",
-    "metaTitle": "Consumer Electronics China Import | CCC tanúsítási útmutató"
+    "metaDescription": "Magyar elektronika Kínába: CCC-tanúsítás, vizsgálatok, gyári audit, idő.",
+    "metaTitle": "Elektronika Kínába | CCC-tanúsítási útmutató"
   },
   "IndustryMedical": {
-    "heroTitle": "Kínai megfelelőség orvostechnikai eszköz-exportőrök számára",
-    "heroSubtitle": "NMPA-regisztráció, importengedélyezés és a Kínába belépő orvostechnikai eszközök szabályozási megfelelősége.",
+    "heroTitle": "Magyar orvostechnikai eszközök Kínába – NMPA-regisztráció",
+    "heroSubtitle": "Az orvostechnikai eszközök Kínába történő exportjához NMPA-regisztráció és importengedély szükséges. Magyar vállalatok regisztrációját és besorolását intézzük.",
     "heroCta": "Kérjen ingyenes értékelést",
     "coverTitle": "Amit biztosítunk az orvosi eszközök exportőreinek",
     "coverItems": "NMPA orvostechnikai eszközök regisztrációja (I/II/III osztály), Orvostechnikai eszköz importengedély-kérelme, Klinikai értékelés és tesztelés támogatása, Orvostechnikai eszközök kínai címkéjének megfelelősége, Minőségirányítási rendszer (QMS) útmutatása, Folyamatos forgalomba hozatalt követő felügyeleti megfelelés",
@@ -1082,12 +1082,12 @@
     "coverItems5": "Forgalomba hozatalt követő felügyelet és megfelelőség ellenőrzése",
     "coverItems6": "Folyamatos szabályozási monitoring és megújítási támogatás",
     "coverItems7": "Orvosi eszközök megfelelőségi képzés és tanácsadás",
-    "metaDescription": "NMPA orvostechnikai eszközök regisztrációja, klinikai értékelése és CCC-tanúsítvány nemzetközi orvostechnikai eszközök gyártói számára.",
-    "metaTitle": "Orvosi eszközök Kína import | NMPA I/II/III osztály Regisztráció"
+    "metaDescription": "Magyar orvostechnikai eszközök Kínába: NMPA-regisztráció, kockázati besorolás, klinikai vizsgálatok, importengedély.",
+    "metaTitle": "Orvostechnikai eszközök Kínába | NMPA-útmutató"
   },
   "IndustryEcommerce": {
-    "heroTitle": "Kínai megfelelőség a határokon átnyúló e-kereskedelmi márkák számára",
-    "heroSubtitle": "Navigáljon a CBEC-szabályok, a platformkövetelmények és a kínai online eladók importjának megfelelőségei között.",
+    "heroTitle": "E-kereskedelem Kínában – megfelelés magyar márkáknak",
+    "heroSubtitle": "Adja el magyar márkáját a Tmall Global és JD Worldwide felületein: a határon átnyúló csatornák helyi cég nélkül teszik lehetővé a kínai piacra lépést. A teljes beállítást intézzük.",
     "heroCta": "Kérjen ingyenes értékelést",
     "coverTitle": "Mit biztosítunk az e-kereskedelmi márkák számára",
     "coverItems": "Határokon átnyúló e-kereskedelem (CBEC) szabályozási útmutatója, Platformmegfelelőség a Tmall Global, JD Worldwide és egyebek számára, Termékkategóriák alkalmasságának értékelése, Importadó- ​​és vámoptimalizálás, CBEC-termékek címkézési követelményei, Márkavédelem és védjegyregisztráció",
@@ -1115,8 +1115,8 @@
     "coverItems5": "A kínai címkementességre való alkalmasság értékelése",
     "coverItems6": "Folyamatos szabályozási ellenőrzés és megfelelőségi támogatás",
     "coverItems7": "E-kereskedelmi platform megfelelőségi képzés és tanácsadás",
-    "metaDescription": "Határokon átnyúló e-kereskedelem megfelelősége a Tmall Global, a JD Worldwide és a Douyin számára. Platform bevezetés, vámraktár és adóoptimalizálás.",
-    "metaTitle": "Határokon átnyúló e-kereskedelem Kína | Tmall, JD, Douyin megfelelőség"
+    "metaDescription": "Magyar márkák Kínában határon átnyúló e-kereskedelem révén: Tmall Global, JD Worldwide, CBEC, logisztika, fizetés.",
+    "metaTitle": "E-kereskedelem Kínában | megfelelési útmutató magyar márkáknak"
   },
   "IndustriesCommon": {
     "heroTitle": "Iparágak, amelyeket kiszolgálunk",

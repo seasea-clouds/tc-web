@@ -159,8 +159,8 @@
     "metaDescription": "Usklađenost uvoza u Kinu na jednom mjestu: GACC registracija hrane, CCC certifikacija, NMPA prijava kozmetike, usklađenost s etiketama i zaštita robne marke. 15+ godina stručnosti."
   },
   "ServiceGacc": {
-    "heroTitle": "GACC Registracija hrane",
-    "heroSubtitle": "Krećite se prema zahtjevima kineske Uredbe 248/249 o registraciji hrane uz stručno vodstvo.",
+    "heroTitle": "GACC registracija hrane – za hrvatske izvoznike",
+    "heroSubtitle": "Kineska carinska uprava (GACC) prema Uredbi 248 zahtijeva da se svi strani proizvođači hrane registriraju prije izvoza u Kinu. Maslinovo ulje, vino i morski plodovi su obuhvaćeni. Pripremamo kompletan CIFER dosje.",
     "cta": "Dobijte besplatnu procjenu",
     "coverTitle": "Što pokrivamo",
     "howTitle": "Kako to radi",
@@ -204,12 +204,12 @@
     "coverItems4": "Kompletna priprema i prijevod dokumentacije",
     "coverItems5": "Pregled sukladnosti naljepnice (GB 7718 / GB 28050)",
     "coverItems6": "Obnova registracije i praćenje valjanosti od 5 godina",
-    "metaTitle": "GACC Registracija hrane Kina | Uredba 248/249 CIFER Vodič",
-    "metaDescription": "Profesionalne usluge registracije GACC-a za inozemne proizvođače hrane. Podrška CIFER sustavu, CRA agent, usklađenost s Uredbom 248/249. Dobijte besplatne konzultacije."
+    "metaTitle": "GACC registracija hrane | vodič za hrvatske izvoznike",
+    "metaDescription": "GACC registracija za hrvatske izvoznike hrane: Uredba 248, sustav CIFER, potrebni dokumenti, vrijeme. Podrška na hrvatskom."
   },
   "ServiceLabel": {
-    "heroTitle": "Sukladnost kineskih oznaka",
-    "heroSubtitle": "Osigurajte da oznake vaših proizvoda zadovoljavaju obvezne kineske standarde označavanja.",
+    "heroTitle": "Kineski zahtjevi za označavanje – za hrvatske proizvode",
+    "heroSubtitle": "Uvezena pakirana hrana mora imati kinesku etiketu prema GB 7718 i GB 28050. Pogrešno označavanje dovodi do zadržavanja robe na carini. Dizajniramo i provjeravamo etikete.",
     "cta": "Dobijte besplatnu procjenu",
     "coverTitle": "Što pokrivamo",
     "howTitle": "Kako to radi",
@@ -251,12 +251,12 @@
     "coverItems4": "Dizajn kineske etikete po narudžbi",
     "coverItems5": "Izrada predloška naljepnice za proizvodnju",
     "coverItems6": "Podrška za carinske naljepnice",
-    "metaTitle": "Usklađenost kineske oznake hrane | Pregled GB 7718 i GB 28050",
-    "metaDescription": "Dizajn kineske etikete i pregled sukladnosti za pretpakiranu hranu. GB 7718-2025, GB 28050 standardi. Izbjegnite odbijanje na carini. Usluga stručnog pregleda."
+    "metaTitle": "Kinesko označavanje | vodič GB 7718",
+    "metaDescription": "Kineski zahtjevi za označavanje za hrvatske proizvode: GB 7718, GB 28050 tablica hranjivosti, upozorenja o alergenima."
   },
   "ServiceCcc": {
-    "heroTitle": "CCC certifikat",
-    "heroSubtitle": "Kineska obavezna certifikacija za elektroniku, uređaje, igračke i automobilske komponente.",
+    "heroTitle": "CCC certifikat – vodič za izvoz u Kinu za hrvatske proizvođače",
+    "heroSubtitle": "Elektronika, kućanski aparati i igračke koji se izvoze u Kinu moraju imati CCC certifikat. CE oznaka ili hrvatska certifikacija nisu dovoljni; organiziramo ispitivanja i reviziju tvornice kod tijela akreditiranih od CNCA.",
     "cta": "Dobijte besplatnu procjenu",
     "coverTitle": "Što pokrivamo",
     "howTitle": "Kako to radi",
@@ -300,12 +300,12 @@
     "coverItems4": "Priprema tvorničke inspekcije",
     "coverItems5": "Godišnja podrška za usklađenost nadzora",
     "coverItems6": "Nove kategorije 2025. uključujući litij-ionske baterije",
-    "metaTitle": "Kina CCC certifikacija | Obvezni vodič za certifikaciju proizvoda",
-    "metaDescription": "Kinesko savjetovanje o obveznoj certifikaciji (CCC) za elektroniku, uređaje, igračke, automobilske dijelove. Koordinacija testiranja, priprema za reviziju tvornice, brzo odobrenje."
+    "metaTitle": "CCC certifikat | vodič za izvoz u Kinu za hrvatske proizvođače",
+    "metaDescription": "CCC certifikat za hrvatske proizvođače: razlika od CE, proces certificiranja, ispitivanja, revizija tvornice, vrijeme i trošak. Podrška na hrvatskom."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Kozmetička dokumentacija",
-    "heroSubtitle": "Dovršite NMPA registraciju i podnošenje zahtjeva za uvezenu kozmetiku u Kini.",
+    "heroTitle": "NMPA registracija kozmetike – za hrvatske brendove",
+    "heroSubtitle": "Ulazak na kinesko tržište zahtijeva NMPA obavijest za kozmetiku: obavijest za obične proizvode i registraciju za posebne, s odgovornom osobom u Kini. Vodimo cijeli proces.",
     "cta": "Dobijte besplatnu procjenu",
     "coverTitle": "Što pokrivamo",
     "howTitle": "Kako to radi",
@@ -349,12 +349,12 @@
     "coverItems4": "Koordinacija procjene sigurnosti",
     "coverItems5": "Podrška testiranju učinkovitosti za navedene funkcije",
     "coverItems6": "Sukladnost nakon stavljanja na tržište (praćenje neželjenih događaja, godišnja izvješća)",
-    "metaTitle": "Kina NMPA Cosmetics Prijava | Registracija uvozne kozmetike",
-    "metaDescription": "Prijava i registracija NMPA kozmetike za uvezenu njegu kože, šminku, njegu kose. Kategorije obične i posebne uporabe. Podrška kineskog odgovornog agenta."
+    "metaTitle": "NMPA registracija kozmetike | hrvatski brendovi na kineskom tržištu",
+    "metaDescription": "NMPA registracija za hrvatske kozmetičke brendove: klasifikacija, oslobađanje od testiranja na životinjama, odgovorna osoba u Kini, vrijeme."
   },
   "ServiceEcommerce": {
-    "heroTitle": "Prekogranična e-trgovina",
-    "heroSubtitle": "Lansirajte svoj brend na vodećim kineskim prekograničnim platformama za e-trgovinu.",
+    "heroTitle": "Prekogranična e-trgovina – za hrvatske brendove",
+    "heroSubtitle": "Prodajte svoj hrvatski brend putem Tmall Global, JD Worldwide i Douyin: prekogranični kanali omogućuju ulazak u Kinu bez lokalne tvrtke. Osiguravamo potpuno postavljanje.",
     "cta": "Dobijte besplatnu procjenu",
     "coverTitle": "Što pokrivamo",
     "howTitle": "Kako to radi",
@@ -396,12 +396,12 @@
     "coverItems4": "Optimizacija prekograničnog poreza (0% tarifa unutar ograničenja)",
     "coverItems5": "Smjernice za izuzeće kineske oznake za prekograničnu prodaju",
     "coverItems6": "Sukladnost podataka (PIPL) za prekogranične operacije",
-    "metaTitle": "Kina Prekogranična e-trgovina | Tmall, JD, postavljanje Douyina",
-    "metaDescription": "Postavljanje prekogranične e-trgovine u Kini od kraja do kraja. Tmall Global, JD Worldwide, Douyin onboarding. Carinsko skladište, porezna optimizacija, usklađenost."
+    "metaTitle": "Prekogranična e-trgovina | vodič Tmall·JD za hrvatske brendove",
+    "metaDescription": "Hrvatski brendovi u Kini putem prekogranične e-trgovine: Tmall Global, JD Worldwide, usklađenost CBEC, logistika, plaćanja."
   },
   "ServiceBrand": {
-    "heroTitle": "Zaštita marke",
-    "heroSubtitle": "Zaštitite svoje intelektualno vlasništvo i identitet robne marke na kineskom tržištu.",
+    "heroTitle": "Registracija žiga u Kini – zaštita hrvatskih brendova",
+    "heroSubtitle": "Kina primjenjuje načelo \"tko prvi registrira\": žig registriran u Hrvatskoj (DZIV) nije zaštićen u Kini. Registrirajte brend kod CNIPA prije ulaska na tržište kako biste izbjegli prisvajanje.",
     "cta": "Dobijte besplatnu procjenu",
     "coverTitle": "Što pokrivamo",
     "howTitle": "Kako to radi",
@@ -443,8 +443,8 @@
     "coverItems4": "Carinska evidencija intelektualnog vlasništva",
     "coverItems5": "Pregled usklađenosti oglašavanja (kineski zakon o oglašavanju)",
     "coverItems6": "Strategija zaštite marke i smjernice za provedbu",
-    "metaTitle": "Registracija žiga u Kini i zaštita marke | IP prijava",
-    "metaDescription": "Registracija zaštitnog znaka, carinski IP zapis, usklađenost oglašavanja za kinesko tržište. Madridski sustav, zaštita prvog do datoteke. Osigurajte svoj brend."
+    "metaTitle": "Registracija žiga u Kini | zaštita hrvatskih brendova",
+    "metaDescription": "Registracija žiga u Kini za hrvatske brendove: CNIPA, Madridski sustav, krivotvorine, zaštita na platformama."
   },
   "ServiceCommon": {
     "whoTitle": "Za koga je ovo",
@@ -825,8 +825,8 @@
     "ctaButton": "Zatražite besplatnu ponudu"
   },
   "IndustryDairy": {
-    "heroTitle": "Kineska usklađenost za izvoznike mliječnih i mliječnih proizvoda",
-    "heroSubtitle": "Krećite se registracijom GACC-a, kineskim označavanjem i uvoznim propisima za mliječne proizvode koji ulaze u Kinu.",
+    "heroTitle": "Usklađenost s Kinom za hrvatske izvoznike mliječnih proizvoda",
+    "heroSubtitle": "Izvoz mlijeka, sira i jogurta u Kinu zahtijeva GACC registraciju. Vodimo registraciju i etikete za hrvatske mljekare.",
     "heroCta": "Dobijte besplatnu procjenu",
     "coverTitle": "Što pokrivamo za izvoznike mliječnih proizvoda",
     "coverItems": "Registracija prema Uredbi GACC-a 248 za proizvođače mliječnih proizvoda, usklađenost kineskih oznaka za mliječne proizvode, smjernice za uvozne dozvole za kategorije mliječnih proizvoda, podrška pri carinjenju za rashlađene i smrznute mliječne proizvode, registracija formule za mlijeko u prahu za dojenčad, kontinuirano praćenje usklađenosti za regulatorna ažuriranja",
@@ -854,12 +854,12 @@
     "coverItems5": "Zahtjevi za hladni lanac i temperaturu",
     "coverItems6": "Stalno regulatorno praćenje i podrška za obnovu",
     "coverItems7": "Obuka i savjetovanje o usklađenosti mliječne industrije",
-    "metaDescription": "Stručna GACC registracija, kinesko označavanje i usklađenost uvoza za mliječne i mliječne proizvode koji ulaze u Kinu. 15+ godina pomaže izvoznicima mliječnih proizvoda.",
-    "metaTitle": "Usklađenost Kine za izvoznike mliječnih i mliječnih proizvoda | GACC Vodič za registraciju"
+    "metaDescription": "Hrvatski mliječni proizvodi u Kini: GACC registracija, GB 7718 etikete, hladni lanac, dječja formula SAMR.",
+    "metaTitle": "Mliječni proizvodi u Kini | vodič GACC registracije"
   },
   "IndustryMeat": {
-    "heroTitle": "Kineska usklađenost za izvoznike mesa i plodova mora",
-    "heroSubtitle": "GACC CIFER registracija, carinjenje i usklađenost uvoza za meso i plodove mora koji ulaze u Kinu.",
+    "heroTitle": "Usklađenost s Kinom za hrvatske izvoznike morskih plodova",
+    "heroSubtitle": "Izvoz ribe i morskih plodova u Kinu zahtijeva GACC registraciju i karantenske kontrole. Vodimo registraciju i zdravstvene potvrde za hrvatske pogone.",
     "heroCta": "Dobijte besplatnu procjenu",
     "coverTitle": "Što pokrivamo za izvoznike mesa i plodova mora",
     "questionsTitle": "Česta pitanja o izvozu mesa i plodova mora",
@@ -886,12 +886,12 @@
     "coverItems5": "Zahtjevi za pristup tržištu specifični za pojedinu zemlju",
     "coverItems6": "Stalno regulatorno praćenje i podrška za obnovu",
     "coverItems7": "Obuka o usklađenosti s propisima za uvoznike mesa i plodova mora",
-    "metaDescription": "Profesionalna GACC CIFER registracija, usklađenost s hladnim lancem i carinska podrška za izvoznike mesa i plodova mora u Kinu.",
-    "metaTitle": "Sukladnost uvoza mesa i morskih plodova iz Kine | GACC Vodič za registraciju"
+    "metaDescription": "Hrvatski morski plodovi u Kini: GACC registracija, zdravstvene potvrde, karantena, etikete.",
+    "metaTitle": "Izvoz morskih plodova u Kinu | vodič GACC i karantene"
   },
   "IndustryWine": {
-    "heroTitle": "Kineska usklađenost za izvoznike vina i alkoholnih pića",
-    "heroSubtitle": "Registracija GACC-a, kinesko označavanje i zaštita robne marke za vino i alkoholna pića koja ulaze na kinesko tržište.",
+    "heroTitle": "Usklađenost s Kinom za hrvatske izvoznike pića",
+    "heroSubtitle": "Izvoz vina i pića zahtijeva ispravnu kinesku etiketu i GACC registraciju. Pomažemo hrvatskim proizvođačima oko etiketa i uvoza.",
     "heroCta": "Dobijte besplatnu procjenu",
     "coverTitle": "Što pokrivamo za izvoznike vina i alkoholnih pića",
     "coverItems": "GACC registracija za proizvođače vina i jakih alkoholnih pića, usklađenost kineskih etiketa za alkoholna pića, registracija robne marke u Kini, smjernice za uvozne carine i poreze, zahtjevi za pristup tržištu za pojedine zemlje, podrška pri carinjenju i inspekciji",
@@ -919,12 +919,12 @@
     "coverItems5": "Zahtjevi za uvoz vina specifični za zemlju",
     "coverItems6": "Stalno regulatorno praćenje i podrška za obnovu",
     "coverItems7": "Obuka i savjetovanje o usklađenosti vinske industrije",
-    "metaDescription": "Potpuna usklađenost uvoza vina i žestokih pića koja ulaze u Kinu. GACC registracija, zaštita brenda i optimizacija dužnosti.",
-    "metaTitle": "Uvoz vina i alkoholnih pića u Kinu | GACC Registracija i zaštita marke"
+    "metaDescription": "Hrvatska pića (vino, rakija) u Kini: kineska etiketa, GACC registracija, uvozne carine, kanali prodaje.",
+    "metaTitle": "Izvoz pića u Kinu | vodič etikete i GACC"
   },
   "IndustrySkincare": {
-    "heroTitle": "Kineska usklađenost za marke za njegu kože i kozmetiku",
-    "heroSubtitle": "Krećite se prema NMPA dokumentaciji, pregledu sastojaka i CSAR propisima za kozmetiku koja ulazi na kinesko tržište.",
+    "heroTitle": "Hrvatski brendovi za njegu kože na kineskom tržištu",
+    "heroSubtitle": "Brendovi za njegu kože trebaju NMPA obavijest za ulazak u Kinu. Vodimo obavijest i tržišnu strategiju za hrvatske brendove.",
     "heroCta": "Dobijte besplatnu procjenu",
     "coverTitle": "Što pokrivamo za marke za njegu kože i kozmetiku",
     "coverItems": "NMPA prijava prema kineskim CSAR propisima, procjena i dokumentacija o sigurnosti sastojaka, smjernice za izuzeće od testiranja na životinjama, usklađenost kineskih etiketa za kozmetiku, registracija zaštitnih znakova za kozmetičke marke, usklađenost s stalnim nadzorom nakon stavljanja na tržište",
@@ -945,12 +945,12 @@
     "jsonldName": "Kineske usluge usklađenosti za njegu kože i kozmetiku",
     "jsonldDescription": "NMPA prijava pod CSAR, procjena sigurnosti sastojaka, smjernice za izuzeće od testiranja na životinjama i savjetovanje o uvozu kozmetičkih marki koje ulaze u Kinu.",
     "cta": "Dobijte besplatnu procjenu",
-    "metaDescription": "NMPA kozmetička prijava, pregled sigurnosti sastojaka i usklađenost s CSAR-om za međunarodne brendove za njegu kože i kozmetiku koji ulaze u Kinu.",
-    "metaTitle": "Uvoz kozmetike Kina | NMPA podnošenje i Vodič za usklađenost s CSAR-om"
+    "metaDescription": "Hrvatski brendovi za njegu kože u Kini: NMPA obavijest, oslobađanje od testiranja na životinjama, CBEC kanali.",
+    "metaTitle": "Njega kože u Kini | vodič NMPA obavijesti"
   },
   "IndustryPetFood": {
-    "heroTitle": "Usklađenost Kine za izvoznike hrane za kućne ljubimce",
-    "heroSubtitle": "Registracija GACC-a, licenciranje uvoza stočne hrane i usklađenost označavanja hrane za kućne ljubimce koja ulazi u Kinu.",
+    "heroTitle": "Usklađenost s Kinom za hrvatske izvoznike hrane za životinje",
+    "heroSubtitle": "Izvoz hrane za kućne ljubimce zahtijeva GACC registraciju; sastojci životinjskog podrijetla mogu zahtijevati odobrenje Ministarstva poljoprivrede. Vodimo registraciju za vaš pogon.",
     "heroCta": "Dobijte besplatnu procjenu",
     "coverTitle": "Što pokrivamo za izvoznike hrane za kućne ljubimce",
     "coverItems": "GACC registracija za proizvođače hrane za kućne ljubimce, Smjernice za licencu za uvoz hrane za životinje (MOA), Sukladnost kineskih oznaka za proizvode hrane za kućne ljubimce, Odobrenje sastojaka za nove sastojke hrane za životinje, Podrška pri carinjenju pošiljki hrane za kućne ljubimce, Strategija ulaska na tržište za rastuću industriju kućnih ljubimaca",
@@ -971,12 +971,12 @@
     "jsonldName": "Kineske usluge usklađenosti za hranu za kućne ljubimce",
     "jsonldDescription": "Registracija GACC-a, licenciranje uvoza hrane za životinje, odobrenje sastojaka i usklađenost s označavanjem za izvoznike hrane za kućne ljubimce koji ulaze na kinesko tržište.",
     "cta": "Dobijte besplatnu procjenu",
-    "metaDescription": "Sveobuhvatna GACC i MOA registracija za izvoznike hrane za kućne ljubimce. Odobrenje sastojaka, sukladnost označavanja i uvozne dozvole za Kinu.",
-    "metaTitle": "Uvoz hrane za kućne ljubimce iz Kine | GACC & MOA Vodič za registraciju"
+    "metaDescription": "Hrvatska hrana za životinje u Kini: GACC registracija, odobrenje Ministarstva poljoprivrede, etikete, dokumenti.",
+    "metaTitle": "Hrana za životinje u Kini | vodič GACC registracije"
   },
   "IndustrySupplements": {
-    "heroTitle": "Kineska usklađenost za izvoznike zdravlja i dodataka prehrani",
-    "heroSubtitle": "Krećite se SAMR registracijom, propisima o zdravoj hrani i usklađenosti uvoza dodataka koji ulaze u Kinu.",
+    "heroTitle": "Usklađenost s Kinom za hrvatske izvoznike dodataka prehrani",
+    "heroSubtitle": "Dodaci prehrani sa zdravstvenim tvrdnjama zahtijevaju SAMR registraciju. Vodimo proces uvoza za proizvođače vitamina i probiotika.",
     "heroCta": "Dobijte besplatnu procjenu",
     "coverTitle": "Što pokrivamo za izvoznike zdravlja i dodataka prehrani",
     "coverItems": "SAMR registracija zdrave hrane i arhiviranje, Opće smjernice za klasifikaciju hrane za dodatke prehrani, Usklađenost s kineskim oznakama za dodatke prehrani, Procjena sigurnosti sastojaka i dokumentacija, Carinjenje za pošiljke dodataka prehrani, Strategija ulaska na tržište zdravstvenih proizvoda",
@@ -997,12 +997,12 @@
     "jsonldName": "Kineske usluge usklađenosti za zdravstvene dodatke",
     "jsonldDescription": "SAMR registracija zdrave hrane, procjena sastojaka, sukladnost označavanja i uvozno savjetovanje za izvoznike dodataka koji ulaze u Kinu.",
     "cta": "Dobijte besplatnu procjenu",
-    "metaDescription": "SAMR registracija zdrave hrane, GACC prijava i usklađenost označavanja dodataka prehrani koji ulaze na kinesko tržište.",
-    "metaTitle": "Zdravstveni dodaci Kina uvoz | Vodič za registraciju SAMR-a"
+    "metaDescription": "Hrvatski dodaci prehrani u Kini: SAMR registracija, etikete, CBEC kanali, dokumenti.",
+    "metaTitle": "Dodaci prehrani u Kini | vodič SAMR registracije"
   },
   "IndustryBaby": {
-    "heroTitle": "Kineska usklađenost za izvoznike proizvoda za bebe i majke",
-    "heroSubtitle": "Krećite se registracijom formule za dojenčad, arhiviranjem kozmetike i sigurnosnim propisima za proizvode za bebe u Kini.",
+    "heroTitle": "Usklađenost s Kinom za hrvatske izvoznike dječjih proizvoda",
+    "heroSubtitle": "Dječji proizvodi zahtijevaju različite certifikate: dječja formula SAMR, igračke GB 6675, dječja kozmetika NMPA. Vodimo cijeli proces.",
     "heroCta": "Dobijte besplatnu procjenu",
     "coverTitle": "Što pokrivamo za izvoznike proizvoda za bebe i majke",
     "coverItems": "SAMR registracija formule za dojenčad (najstroža kategorija), GACC registracija za proizvode dječje hrane, NMPA kozmetička prijava za proizvode za njegu kože beba, Sukladnost kineskih oznaka za proizvode za bebe, Sigurnosno testiranje i podrška dokumentaciji, Smjernice za ulazak na tržište za kategorije majki i dojenčadi",
@@ -1023,12 +1023,12 @@
     "jsonldName": "Kineske usluge usklađenosti za dječje i majčinske proizvode",
     "jsonldDescription": "SAMR registracija formule za dojenčad, GACC registracija hrane, NMPA prijava kozmetike i sigurnosna usklađenost za izvoznike proizvoda za bebe i majke koji ulaze u Kinu.",
     "cta": "Dobijte besplatnu procjenu",
-    "metaDescription": "SAMR registracija formule za dojenčad, usklađenost s GACC-om i prijava NMPA za proizvode za bebe i majke koji ulaze u Kinu.",
-    "metaTitle": "Proizvodi za bebe i mliječna mlijeka za dojenčad Uvoz iz Kine | Vodič SAMR & GACC"
+    "metaDescription": "Hrvatski dječji proizvodi u Kini: dječja formula SAMR, igračke GB 6675, dječja kozmetika NMPA.",
+    "metaTitle": "Dječji proizvodi u Kini | vodič certificiranja"
   },
   "IndustryElectronics": {
-    "heroTitle": "Kineska usklađenost za izvoznike potrošačke elektronike",
-    "heroSubtitle": "CCC certifikacija, usklađenost uvoza i pristup tržištu za elektroniku koja ulazi na kinesko tržište.",
+    "heroTitle": "Hrvatska elektronika u Kini – CCC certifikat",
+    "heroSubtitle": "Izvoz elektronike i kućanskih aparata u Kinu zahtijeva CCC certifikat. Organiziramo ispitivanja kod tijela akreditiranih od CNCA za hrvatske proizvođače.",
     "heroCta": "Dobijte besplatnu procjenu",
     "coverTitle": "Što pokrivamo za izvoznike elektronike",
     "coverItems": "CCC certifikacija za elektroniku u obveznom katalogu, Sukladnost kineskih oznaka za elektroničke proizvode, Zahtjevi za označavanje energetske učinkovitosti, Odobrenje tipa bežične opreme (SRRC), Carinjenje za uvoz elektronike, Zaštita zaštitnih znakova i patenata u Kini",
@@ -1049,12 +1049,12 @@
     "jsonldName": "Kineske usluge usklađenosti za potrošačku elektroniku",
     "jsonldDescription": "CCC certifikat, SRRC odobrenje, usklađenost s kineskim oznakama i IP zaštita za izvoznike elektronike koji ulaze na kinesko tržište.",
     "cta": "Dobijte besplatnu procjenu",
-    "metaDescription": "CCC certifikat, SRRC odobrenje i IP zaštita za robne marke potrošačke elektronike koje ulaze na kinesko tržište.",
-    "metaTitle": "Potrošačka elektronika Kina uvoz | CCC Vodič za certifikaciju"
+    "metaDescription": "Hrvatska elektronika u Kini: CCC certifikat, ispitivanja, revizija tvornice, vrijeme.",
+    "metaTitle": "Elektronika u Kini | vodič CCC certifikata"
   },
   "IndustryMedical": {
-    "heroTitle": "Kineska usklađenost za izvoznike medicinskih uređaja",
-    "heroSubtitle": "NMPA registracija, licenciranje uvoza i usklađenost s propisima za medicinske uređaje koji ulaze u Kinu.",
+    "heroTitle": "Hrvatski medicinski proizvodi u Kini – NMPA registracija",
+    "heroSubtitle": "Izvoz medicinskih proizvoda u Kinu zahtijeva NMPA registraciju i uvoznu dozvolu. Vodimo registraciju i klasifikaciju za hrvatske tvrtke.",
     "heroCta": "Dobijte besplatnu procjenu",
     "coverTitle": "Što pokrivamo za izvoznike medicinskih uređaja",
     "coverItems": "NMPA registracija medicinskih uređaja (Klasa I/II/III), Zahtjev za licencu za uvoz medicinskih uređaja, Podrška za kliničku procjenu i testiranje, Usklađenost s kineskim oznakama za medicinske uređaje, Smjernice za sustav upravljanja kvalitetom (QMS), Usklađenost s stalnim nadzorom nakon stavljanja na tržište",
@@ -1082,12 +1082,12 @@
     "coverItems5": "Postmarketinški nadzor i praćenje usklađenosti",
     "coverItems6": "Stalno regulatorno praćenje i podrška za obnovu",
     "coverItems7": "Obuka i savjetovanje o usklađenosti medicinskih uređaja",
-    "metaDescription": "NMPA registracija medicinskih uređaja, klinička procjena i CCC certifikacija za međunarodne proizvođače medicinskih uređaja.",
-    "metaTitle": "Medicinski uređaji Kina uvoz | Registracija NMPA klase I/II/III"
+    "metaDescription": "Hrvatski medicinski proizvodi u Kini: NMPA registracija, klasifikacija rizika, kliničke studije, uvozna dozvola.",
+    "metaTitle": "Medicinski proizvodi u Kini | vodič NMPA"
   },
   "IndustryEcommerce": {
-    "heroTitle": "Usklađenost Kine za robne marke prekogranične e-trgovine",
-    "heroSubtitle": "Krećite se CBEC propisima, zahtjevima platforme i usklađenošću uvoza za online prodavače u Kini.",
+    "heroTitle": "E-trgovina u Kini – usklađenost za hrvatske brendove",
+    "heroSubtitle": "Prodajte svoj hrvatski brend putem Tmall Global i JD Worldwide: prekogranični kanali omogućuju ulazak u Kinu bez lokalne tvrtke. Osiguravamo potpuno postavljanje.",
     "heroCta": "Dobijte besplatnu procjenu",
     "coverTitle": "Što pokrivamo za marke e-trgovine",
     "coverItems": "Regulatorne smjernice za prekograničnu e-trgovinu (CBEC), Sukladnost platformi za Tmall Global, JD Worldwide i više, Procjena prihvatljivosti kategorije proizvoda, Optimizacija uvoznih poreza i carina, Zahtjevi za označavanje za CBEC proizvode, Zaštita robne marke i registracija robne marke",
@@ -1115,8 +1115,8 @@
     "coverItems5": "Procjena podobnosti za izuzeće kineske oznake",
     "coverItems6": "Stalno regulatorno praćenje i podrška usklađenosti",
     "coverItems7": "Obuka i savjetovanje o usklađenosti s platformom e-trgovine",
-    "metaDescription": "Sukladnost prekogranične e-trgovine za Tmall Global, JD Worldwide i Douyin. Uključivanje platforme, carinsko skladište i porezna optimizacija.",
-    "metaTitle": "Prekogranična e-trgovina Kina | Tmall, JD, Douyin usklađenost"
+    "metaDescription": "Hrvatski brendovi u Kini putem prekogranične e-trgovine: Tmall Global, JD Worldwide, CBEC, logistika, plaćanja.",
+    "metaTitle": "E-trgovina u Kini | vodič usklađenosti za hrvatske brendove"
   },
   "IndustriesCommon": {
     "heroTitle": "Industrije kojima služimo",

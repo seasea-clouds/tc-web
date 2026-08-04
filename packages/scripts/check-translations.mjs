@@ -497,6 +497,14 @@ SHARED_WORDS_BY_LANG['ko'].add('KIPRIS');
 if (!SHARED_WORDS_BY_LANG['fa']) SHARED_WORDS_BY_LANG['fa'] = new Set();
 SHARED_WORDS_BY_LANG['fa'].add('Amazon');
 
+// Arabic: 'GCC' (Gulf Cooperation Council), 'GSO' (GCC Standardization Organization)
+// and 'SASO' (Saudi Standards, Metrology and Quality Organization) are real
+// standards-regulator abbreviations used as-is in Arabic regulatory/export text.
+if (!SHARED_WORDS_BY_LANG['ar']) SHARED_WORDS_BY_LANG['ar'] = new Set();
+SHARED_WORDS_BY_LANG['ar'].add('GCC');
+SHARED_WORDS_BY_LANG['ar'].add('GSO');
+SHARED_WORDS_BY_LANG['ar'].add('SASO');
+
 // Russian: 'EAC' (Eurasian Conformity mark), 'Taobao' (platform), 'MARA' (China ag ministry) are standard terms
 if (!SHARED_WORDS_BY_LANG['ru']) SHARED_WORDS_BY_LANG['ru'] = new Set();
 SHARED_WORDS_BY_LANG['ru'].add('EAC');

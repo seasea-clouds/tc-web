@@ -685,3 +685,4 @@ de 三项（gacc lebensmittel registrierung/zertifizierung、regulatorische anfo
 | D2-6 | sr/hr/sk/sl/uk（子代理） | 4221359c | ✅ | ✅ 线上验证通过（sr шљивовица / hr Malvazije / sk bryndze / sl Teran / uk шипшина） |
 | D2-7 | af/az/be/bn/ca（子代理） | a33de566 | ✅ | ✅ 线上验证通过（af Stellenbosch / az Gəncə / be сіняя шапка / bn চিংড়ি / ca Cava） |
 | D2-8 | hy/ka/ne/si/sq（子代理） | db35d6d2 | ✅ | ✅ 线上验证通过（hy Արենի / ka ქვევრი / ne ढिंडो / si අරක්කු / sq raki+sherebelë） |
+| D2-9 | sw/ta/ur/fa/he（子代理） | d28f75a1 | ✅ | ✅ 线上验证通过（sw Dodoma+kofia / ta எருமை / ur حلال / fa زعفران / he גולן+ים המלח） |

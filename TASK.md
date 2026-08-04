@@ -654,3 +654,4 @@ de 三项（gacc lebensmittel registrierung/zertifizierung、regulatorische anfo
 | D1-5 | en/zh/id/ms/hi（子代理） | 6f917d8c | ✅ | ✅ 线上验证通过 |
 | D1-6 | cs/hu/ro/el/bg（子代理） | b0becaa4 | ✅ | ✅ 线上验证通过 |
 | D1-7a | sr/hr/sk/sl（子代理） | 8a72dabb | ✅ | ✅ 线上验证通过 |
+| D1-7b | af/az/be/bn/ca/hy（子代理） | 5a2f8c4d | ✅ | ✅ 线上验证通过 |

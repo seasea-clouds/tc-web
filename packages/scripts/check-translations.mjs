@@ -479,6 +479,8 @@ const SHARED_WORDS_BY_LANG = {
   ta: new Set(['APEDA', 'FSSAI', 'BIS', 'CGPDTM']),
   ur: new Set(['PSQCA', 'IPO', 'Pakistan', 'EUIPO']),
   ja: new Set(['PSE', 'JPO', 'PMDA', 'JAS', 'HACCP', 'WTO']),
+  ko: new Set(['KIPO', 'MFDS', 'IT']),
+  ru: new Set(['Ozon', 'Wildberries']),
   bg: new Set(['BFSA', 'BPO', 'EUIPO']),
   el: new Set(['EUIPO']),
 };

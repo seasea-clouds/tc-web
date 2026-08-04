@@ -516,6 +516,9 @@ if (!SHARED_WORDS_BY_LANG['ar']) SHARED_WORDS_BY_LANG['ar'] = new Set();
 SHARED_WORDS_BY_LANG['ar'].add('GCC');
 SHARED_WORDS_BY_LANG['ar'].add('GSO');
 SHARED_WORDS_BY_LANG['ar'].add('SASO');
+// Arabic: 'SAIP' is the Saudi Authority for Intellectual Property
+// (الهيئة السعودية للملكية الفكرية) — the Saudi IP office.
+SHARED_WORDS_BY_LANG['ar'].add('SAIP');
 
 // Russian: 'EAC' (Eurasian Conformity mark), 'Taobao' (platform), 'MARA' (China ag ministry) are standard terms
 if (!SHARED_WORDS_BY_LANG['ru']) SHARED_WORDS_BY_LANG['ru'] = new Set();
@@ -530,6 +533,12 @@ SHARED_WORDS_BY_LANG['ro'].add('Special');
 // Institute (มาตรฐานผลิตภัณฑ์อุตสาหกรรม) — the Thai certification body.
 if (!SHARED_WORDS_BY_LANG['th']) SHARED_WORDS_BY_LANG['th'] = new Set();
 SHARED_WORDS_BY_LANG['th'].add('TISI');
+// Thai: 'DIP' is the Department of Intellectual Property (กรมทรัพย์สินทางปัญญา),
+// 'CP Group' is Charoen Pokphand, 'WTO' is the World Trade Organization.
+SHARED_WORDS_BY_LANG['th'].add('DIP');
+SHARED_WORDS_BY_LANG['th'].add('CP Group');
+SHARED_WORDS_BY_LANG['th'].add('group');
+SHARED_WORDS_BY_LANG['th'].add('WTO');
 
 // Hindi: 'BIS' is the official abbreviation of the Bureau of Indian Standards
 // (भारतीय मानक ब्यूरो) — India's national standards body.

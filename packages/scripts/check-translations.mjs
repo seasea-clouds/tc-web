@@ -483,6 +483,7 @@ const SHARED_WORDS_BY_LANG = {
   ru: new Set(['Ozon', 'Wildberries']),
   bg: new Set(['BFSA', 'BPO', 'EUIPO', 'EFSA']),
   el: new Set(['EUIPO']),
+  uk: new Set(['EUIPO']),
 };
 
 

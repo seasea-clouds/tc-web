@@ -755,4 +755,5 @@ de 三项（gacc lebensmittel registrierung/zertifizierung、regulatorische anfo
 | D4-3 | vi/tr/ar/th（子代理） | a52e2a30 | ✅ | ✅ 线上验证通过（vi cá tra+thương hiệu Việt / tr GB 7718-2025 / ar التمور والعسل / th ทุเรียน）+ tr Büyük Britanya 残留清零 |
 | D4-4 | en/zh/id/ms/hi（子代理） | 58db9dec | ✅ | ✅ 线上验证通过（en Custom Solutions+Do I really need Chinese labels / zh 一单受理 / id Registrasi Pangan GACC / ms Soalan Lazim / hi डिक्री 248）| en 顺带修复 generalA4/values2 截断 |
 | D4-5 | cs/hu/ro/el/bg/hr/sl/uk/sk/sr（子代理） | 4c229da8+85dc6389+6d257b38+99aae80e | ✅ | ✅ 线上验证通过（cs nařízení 248 / hu Gyakran Ismételt / ro Regulamentul 248 / el Φέτα / bg Наредба 248 / hr Uredba 248 / sl Teran / uk Указ 248 / sk nariadenie 248 / sr Увоз у Кину） |
+| D4-6 | af/az/be/bn/ca（子代理） | 5b23089d+d37b179f | ✅ | ✅ 线上验证通过（af GACC-regulasie 248 / az Fərman 248 / be пытанні / bn ডিক্রি ২৪৮ / ca Decret 248）+ bn readTime 修复 |
 | D4-5 | hu/bg/el/cs/ro（子代理） | 4c229da8 | ✅ | ✅ 线上验证通过（hu NÉBIH+GYIK / bg Наредба 248 / el ΕΦΕΤ+ελαιόλαδο / cs nařízení 248+Pilsner / ro Regulamentul 248+ANSVSA）| ro 修 {price} 双重货币 bug；cs 修 expspirace 错别字；bg/hu readTime 修正 |

@@ -33,6 +33,7 @@
 | D5-1 | de/es/fr/it/ja | 2a42d96b | ✅ | ✅ 线上验证通过（ja 食品輸出企業のためのGACC登録 / fr exportateurs / it Approfondimenti 等，ja CDN 缓存延迟后确认）| 修复 it cat_E_commerce fallback |
 | D5-2 | ru/nl/pl/pt/ko | 54458c9f | ✅ | ✅ 线上验证通过 | 修复 nl/pl cat_E_commerce fallback |
 | D5-3 | vi/tr/ar/th/uk | 7a2976a3 | ✅ | ✅ 线上验证通过（vi hướng dẫn / tr fındık / ar التجارة الإلكترونية / th อีคอมเมิร์ซ / uk електронна комерція） |
+| D5-4 | en/zh/id/ms/hi | b814e90c | ✅ | ⏳ 验证中 | 修复 id 6 篇 MDX frontmatter 被脚本 bug 污染 |
 
 ## 背景与现状（已调研）
 

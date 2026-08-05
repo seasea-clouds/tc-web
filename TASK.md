@@ -723,4 +723,6 @@ de 三项（gacc lebensmittel registrierung/zertifizierung、regulatorische anfo
 
 | D3-7 | af/az/be/bn/ca（子代理） | 1019d631 | ✅ | ✅ 线上验证通过（af GACC-regulasie 248 / az 248 saylı / be Дэкрэт GACC 248 / bn ডিক্রি ২৪৮ / ca Decret 248） |
 
-| D3-8 | hy/ka/ne/si/sw/ta/ur（子代理） | （进行中） | ⏳ | ⏳ |
+| D3-8 | hy/ka/ne/si/sw/ta/ur（子代理） | 6492b165 | ✅ | ✅ 线上验证通过（hy GACC-ի 248 / ka GACC-ის 248 / ne डिक्री 248 / si නියෝගය 248 / sw Amri ya GACC 248 / ta ஆணை 248 / ur فرمان 248） |
+
+| D3-9 | cs/hu/ro/el/bg（子代理） | （进行中） | ⏳ | ⏳ |

@@ -751,3 +751,4 @@ de 三项（gacc lebensmittel registrierung/zertifizierung、regulatorische anfo
 | 子批 | 语言 | commit | 部署 | 验证 |
 |------|------|--------|------|------|
 | D4-1 | de/es/fr/it/ja（子代理） | 5d83145b | ✅ | ✅ 线上验证通过（de GACC-Dekret 248 / es Decreto 248 / fr décret GACC 248 / it Decreto 248 della GACC / ja 248号令） |
+| D4-2 | ru/nl/pl/pt/ko（子代理） | ec987d59 | ✅ | ✅ 线上验证通过（ru Указ 248 / nl Veelgestelde vragen / pl Często zadawane pytania / pt Decreto 248 / ko 248호 법령） |

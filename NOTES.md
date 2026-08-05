@@ -181,3 +181,9 @@ tr.json 其他 namespace（非 D1 范围）存在 "Büyük Britanya"（英国标
 - DefinitionSchema.gb7718Name: "Büyük Britanya 7718-2025"
 - Faq.labelA4a、About.teamMember3Desc、BlogFaqChinaLabelCompliance.faqA4
 → 待后续 pass 统一修复（D4 FAQ 页差异化时顺带处理）
+
+## D2 周期数值铁律（2026-08-04）
+**官方周期/数值必须以 en 基线（apps/site/messages/en.json）为准，guide 仅提供 FAQ 主题参考。**
+- 教训：D2 guide 初版写了 Dairy GACC 3-6 个月（en 实为 2-6）、Supplements 12-24（en 实为 12-24 正确，guide 错写 6-12），ja 子代理遵循 guide 写入错误值，主 agent 已修正 ja.json。
+- 处理：任何 guide 数值与 en 冲突时，以 en 为准；子代理任务中已加"以 en 基线为周期权威"提醒。
+- es 子代理自行核对 en 基线（2-6/12-24 正确），未犯此错。

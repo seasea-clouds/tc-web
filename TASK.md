@@ -26,6 +26,13 @@
 
 # D5 详细方案：Blog namespace + 文章标题/excerpt 差异化（2026-08-05 新增）
 
+## D5 执行日志
+
+| 子批 | 语言 | commit | 部署 | 验证 |
+|------|------|--------|------|------|
+| D5-1 | de/es/fr/it/ja | 2a42d96b | ✅ | ✅ 线上验证通过（ja 食品輸出企業のためのGACC登録 / fr exportateurs / it Approfondimenti 等，ja CDN 缓存延迟后确认）| 修复 it cat_E_commerce fallback |
+| D5-2 | ru/nl/pl/pt/ko | 54458c9f | ✅ | ⏳ 验证中 | 修复 nl/pl cat_E_commerce fallback |
+
 ## 背景与现状（已调研）
 
 - **博客已迁移至独立 blog app**（apps/blog），site 通过 Worker 代理 `/blog/` 到 blog 站

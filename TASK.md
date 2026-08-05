@@ -717,4 +717,6 @@ de 三项（gacc lebensmittel registrierung/zertifizierung、regulatorische anfo
 
 | D3-4 | en/zh/id/ms/hi（子代理） | 13363a07 | ✅ | ✅ 线上验证通过（en From Compliance to Commerce / zh 一单受理 / id Satu Atap / ms sarang burung / hi एक ही स्थान） |
 
-| D3-5 | bg/cs/ro/hu/el（子代理） | （进行中） | ⏳ | ⏳ |
+| D3-5 | hu/bg/el/cs/ro（子代理） | 1101460c | ✅ | ✅ 线上验证通过（hu Globális márkák / bg Наредба 248 / el σε ένα βήμα / cs nařízení 248 / ro Regulamentul 248） |
+
+| D3-6 | sr/hr/sk/sl/uk（子代理） | （进行中） | ⏳ | ⏳ |

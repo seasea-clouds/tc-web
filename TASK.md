@@ -725,4 +725,10 @@ de 三项（gacc lebensmittel registrierung/zertifizierung、regulatorische anfo
 
 | D3-8 | hy/ka/ne/si/sw/ta/ur（子代理） | 6492b165 | ✅ | ✅ 线上验证通过（hy GACC-ի 248 / ka GACC-ის 248 / ne डिक्री 248 / si නියෝගය 248 / sw Amri ya GACC 248 / ta ஆணை 248 / ur فرمان 248） |
 
-| D3-9 | da/fa/fi/he/no/sq/sv（子代理） | （进行中） | ⏳ | ⏳ |
+| D3-9 | da/fa/fi/he/no/sq/sv（子代理） | ee49febb | ✅ | ✅ 线上验证通过（sv varumärken världen över / he מהימן על ידי / da Betroet af globale mærker / fi Kansainväliset brändit / no Merkevarer fra hele verden / sq Markat ndërkombëtare / fa مشاوره رایگان） |
+
+## ✅ D3 全部完成（2026-08-05）
+
+**D3 ServiceCommon + Home 差异化 48/48 语言全部完成并部署验证！** ServiceCommon 22 keys + Home 62 可差异化字段 + industry dict 10 值全部差异化，4 保护字段（heroTitle/heroSubtitle/metaTitle/metaDescription）逐字节保留。所有硬事实（GACC 248 / 5 年有效期 + 6 个月续期 / stat 数字 / jsonldServiceType 语义）48 语言一致，无价格数字，无英文残留（仅真实缩写豁免）。
+
+**下一步：D4 FAQ 页 + 次级页差异化（Faq 97 keys + About/Packages/Quote/ThankYou/Testimonials/Services/Sitemap × 48 语言）。** 顺带修复 NOTES.md 记录的 tr 残留（Büyük Britanya 等，D4 FAQ 页差异化时处理）。

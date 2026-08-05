@@ -754,3 +754,4 @@ de 三项（gacc lebensmittel registrierung/zertifizierung、regulatorische anfo
 | D4-2 | ru/nl/pl/pt/ko（子代理） | ec987d59 | ✅ | ✅ 线上验证通过（ru Указ 248 / nl Veelgestelde vragen / pl Często zadawane pytania / pt Decreto 248 / ko 248호 법령） |
 | D4-3 | vi/tr/ar/th（子代理） | a52e2a30 | ✅ | ✅ 线上验证通过（vi cá tra+thương hiệu Việt / tr GB 7718-2025 / ar التمور والعسل / th ทุเรียน）+ tr Büyük Britanya 残留清零 |
 | D4-4 | en/zh/id/ms/hi（子代理） | 58db9dec | ✅ | ✅ 线上验证通过（en Custom Solutions+Do I really need Chinese labels / zh 一单受理 / id Registrasi Pangan GACC / ms Soalan Lazim / hi डिक्री 248）| en 顺带修复 generalA4/values2 截断 |
+| D4-5 | hu/bg/el/cs/ro（子代理） | 4c229da8 | ✅ | ✅ 线上验证通过（hu NÉBIH+GYIK / bg Наредба 248 / el ΕΦΕΤ+ελαιόλαδο / cs nařízení 248+Pilsner / ro Regulamentul 248+ANSVSA）| ro 修 {price} 双重货币 bug；cs 修 expspirace 错别字；bg/hu readTime 修正 |

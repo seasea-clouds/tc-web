@@ -731,4 +731,23 @@ de 三项（gacc lebensmittel registrierung/zertifizierung、regulatorische anfo
 
 **D3 ServiceCommon + Home 差异化 48/48 语言全部完成并部署验证！** ServiceCommon 22 keys + Home 62 可差异化字段 + industry dict 10 值全部差异化，4 保护字段（heroTitle/heroSubtitle/metaTitle/metaDescription）逐字节保留。所有硬事实（GACC 248 / 5 年有效期 + 6 个月续期 / stat 数字 / jsonldServiceType 语义）48 语言一致，无价格数字，无英文残留（仅真实缩写豁免）。
 
-**下一步：D4 FAQ 页 + 次级页差异化（Faq 97 keys + About/Packages/Quote/ThankYou/Testimonials/Services/Sitemap × 48 语言）。** 顺带修复 NOTES.md 记录的 tr 残留（Büyük Britanya 等，D4 FAQ 页差异化时处理）。
+## D4 详细：FAQ 页 + 次级页全字段差异化（2026-08-05 启动）
+
+**涉及 namespace（8）：** Faq（97 keys）/ About（57）/ Packages（52）/ Quote（17）/ ThankYou（30）/ Testimonials（8）/ Services（78）/ Sitemap（15）
+
+**保护字段（逐字节保留）：**
+- 人名：expertName/teamMember1-4Name = David Zhang / Sarah Chen / Mike Wang / Leo Liu
+- 硬事实：gaccA1（Decree 248 / 2022-01-01）/ gaccA4（5 年 + 3-6 个月续期）/ labelA2（GB 7718-2025 九项）/ cccA1（17 类 + 锂电 2024）/ brandA3（3+ 年）/ generalA9（近 100%）/ 专家数字（15+/500+/50+/98%/18 类/400+/40%/300+）
+- 数字：ThankYou stat1-4Number（500+/50+/10+/100%，与 D3 Home stat 模式一致）
+- 标准号/术语：GB 7718-2025 / GB 28050-2025 / CIFER / HS/CIQ / Decree 248/249 / CCC / NMPA / CSAR
+- 占位符：Packages basicPriceFrom/advancedPriceFrom/premiumPriceFrom 含 {price}
+
+**残留修复：** tr "Büyük Britanya"（英国误译→GB 中国标准）4 处：DefinitionSchema.gb7718Name / Faq.labelA4a / About.teamMember3Desc / BlogFaqChinaLabelCompliance.faqA4（D4-3 tr 批处理）
+
+**执行方式：** 延续 D3 "一国一脚本"模式，guide /tmp/d4_guide.md，5 语言/批 → CI → key 集合 → 保护字段 → build → commit → push → 部署 → 线上验证。
+
+## D4 执行日志
+
+| 子批 | 语言 | commit | 部署 | 验证 |
+|------|------|--------|------|------|
+| D4-1 | de/es/fr/it/ja（子代理） | 5d83145b | ✅ | ✅ 线上验证通过（de GACC-Dekret 248 / es Decreto 248 / fr décret GACC 248 / it Decreto 248 della GACC / ja 248号令） |

@@ -33,6 +33,22 @@
 | D5-1 | de/es/fr/it/ja | 2a42d96b | ✅ | ✅ 线上验证通过（ja 食品輸出企業のためのGACC登録 / fr exportateurs / it Approfondimenti 等，ja CDN 缓存延迟后确认）| 修复 it cat_E_commerce fallback |
 | D5-2 | ru/nl/pl/pt/ko | 54458c9f | ✅ | ✅ 线上验证通过 | 修复 nl/pl cat_E_commerce fallback |
 | D5-3 | vi/tr/ar/th/uk | 7a2976a3 | ✅ | ✅ 线上验证通过（vi hướng dẫn / tr fındık / ar التجارة الإلكترونية / th อีคอมเมิร์ซ / uk електронна комерція） |
+| D5-4 | en/zh/id/ms/hi | b814e90c | ✅ | ✅ 已部署 | 修复 id mdx frontmatter |
+| D5-5 | cs/bg/ro | 9d5b4f92 | ✅ | ✅ 已部署 | 修复 bg dash 混用（W02） |
+| D5-6 | el/hu/sr/hr/sk | bea8a5f3 | ✅ | ✅ 已部署 | sr 由并行批次处理 |
+| D5-7 | da/fi | 00597c75 | ✅ | ✅ 线上验证通过（da fødevareeksportører / fi suomalaisille+verkkokauppa） |
+
+## ✅ D5 全部完成（2026-08-05）
+
+**D5 Blog namespace + 文章标题/excerpt 差异化 48/48 语言全部完成并部署验证！**
+
+- **Blog namespace**（blog 61 keys + site 37 keys 同步）全部差异化
+- **BlogFaq\* 6 namespace**（62 keys）全部差异化
+- **528 篇文章 title/excerpt**（48 语言 × 11 篇）全部本地视角改写
+- 保护字段逐字节保留：slug/date/category/references、author=David Zhang、readTime='min'、ctaResponse 24h 语义、contactEmailPlaceholder
+- 修复：cat_E_commerce 英文 fallback（it/nl/pl）、bg dash 混用（W02）、各语言 site/blog metaTitle 不同步、机翻错误（viilaus 锉刀、izpilvane 指甲锉、viilaus 等）
+
+**下一步：D6 博客正文本地化增强 + 本地市场新文章（528 篇增强 + 48-100 篇新文章）。**
 | D5-4 | en/zh/id/ms/hi | b814e90c | ✅ | ⏳ 验证中 | 修复 id 6 篇 MDX frontmatter 被脚本 bug 污染 |
 
 ## 背景与现状（已调研）

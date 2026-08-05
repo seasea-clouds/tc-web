@@ -36,54 +36,54 @@ Images: 18 converted
 Size: 1138K → 473K (58% saved)
 Apps discovered: admin, blog, portal, site
 Generating search index for 48 locales...
-  af: 2326 items (6S + 10B + 39F + 2271C)
-  ar: 2326 items (6S + 10B + 39F + 2271C)
-  az: 2326 items (6S + 10B + 39F + 2271C)
-  be: 2326 items (6S + 10B + 39F + 2271C)
-  bg: 2326 items (6S + 10B + 39F + 2271C)
-  bn: 2326 items (6S + 10B + 39F + 2271C)
-  ca: 2326 items (6S + 10B + 39F + 2271C)
-  cs: 2326 items (6S + 10B + 39F + 2271C)
-  da: 2326 items (6S + 10B + 39F + 2271C)
-  de: 2326 items (6S + 10B + 39F + 2271C)
-  el: 2326 items (6S + 10B + 39F + 2271C)
-  en: 2326 items (6S + 10B + 39F + 2271C)
-  es: 2326 items (6S + 10B + 39F + 2271C)
-  fa: 2326 items (6S + 10B + 39F + 2271C)
-  fi: 2326 items (6S + 10B + 39F + 2271C)
-  fr: 2326 items (6S + 10B + 39F + 2271C)
-  he: 2326 items (6S + 10B + 39F + 2271C)
-  hi: 2326 items (6S + 10B + 39F + 2271C)
-  hr: 2326 items (6S + 10B + 39F + 2271C)
-  hu: 2326 items (6S + 10B + 39F + 2271C)
-  hy: 2326 items (6S + 10B + 39F + 2271C)
-  id: 2326 items (6S + 10B + 39F + 2271C)
-  it: 2326 items (6S + 10B + 39F + 2271C)
-  ja: 2326 items (6S + 10B + 39F + 2271C)
-  ka: 2326 items (6S + 10B + 39F + 2271C)
-  ko: 2326 items (6S + 10B + 39F + 2271C)
-  ms: 2326 items (6S + 10B + 39F + 2271C)
-  ne: 2326 items (6S + 10B + 39F + 2271C)
-  nl: 2326 items (6S + 10B + 39F + 2271C)
-  no: 2326 items (6S + 10B + 39F + 2271C)
-  pl: 2326 items (6S + 10B + 39F + 2271C)
-  pt: 2326 items (6S + 10B + 39F + 2271C)
-  ro: 2326 items (6S + 10B + 39F + 2271C)
-  ru: 2326 items (6S + 10B + 39F + 2271C)
-  si: 2326 items (6S + 10B + 39F + 2271C)
-  sk: 2326 items (6S + 10B + 39F + 2271C)
-  sl: 2326 items (6S + 10B + 39F + 2271C)
-  sq: 2326 items (6S + 10B + 39F + 2271C)
-  sr: 2326 items (6S + 10B + 39F + 2271C)
-  sv: 2326 items (6S + 10B + 39F + 2271C)
-  sw: 2326 items (6S + 10B + 39F + 2271C)
-  ta: 2326 items (6S + 10B + 39F + 2271C)
-  th: 2326 items (6S + 10B + 39F + 2271C)
-  tr: 2326 items (6S + 10B + 39F + 2271C)
-  uk: 2326 items (6S + 10B + 39F + 2271C)
-  ur: 2326 items (6S + 10B + 39F + 2271C)
-  vi: 2326 items (6S + 10B + 39F + 2271C)
-  zh: 2326 items (6S + 10B + 39F + 2271C)
+  af: 2327 items (6S + 11B + 39F + 2271C)
+  ar: 2327 items (6S + 11B + 39F + 2271C)
+  az: 2327 items (6S + 11B + 39F + 2271C)
+  be: 2327 items (6S + 11B + 39F + 2271C)
+  bg: 2327 items (6S + 11B + 39F + 2271C)
+  bn: 2327 items (6S + 11B + 39F + 2271C)
+  ca: 2327 items (6S + 11B + 39F + 2271C)
+  cs: 2327 items (6S + 11B + 39F + 2271C)
+  da: 2327 items (6S + 11B + 39F + 2271C)
+  de: 2327 items (6S + 11B + 39F + 2271C)
+  el: 2327 items (6S + 11B + 39F + 2271C)
+  en: 2327 items (6S + 11B + 39F + 2271C)
+  es: 2327 items (6S + 11B + 39F + 2271C)
+  fa: 2327 items (6S + 11B + 39F + 2271C)
+  fi: 2327 items (6S + 11B + 39F + 2271C)
+  fr: 2327 items (6S + 11B + 39F + 2271C)
+  he: 2327 items (6S + 11B + 39F + 2271C)
+  hi: 2327 items (6S + 11B + 39F + 2271C)
+  hr: 2327 items (6S + 11B + 39F + 2271C)
+  hu: 2327 items (6S + 11B + 39F + 2271C)
+  hy: 2327 items (6S + 11B + 39F + 2271C)
+  id: 2327 items (6S + 11B + 39F + 2271C)
+  it: 2327 items (6S + 11B + 39F + 2271C)
+  ja: 2327 items (6S + 11B + 39F + 2271C)
+  ka: 2327 items (6S + 11B + 39F + 2271C)
+  ko: 2327 items (6S + 11B + 39F + 2271C)
+  ms: 2327 items (6S + 11B + 39F + 2271C)
+  ne: 2327 items (6S + 11B + 39F + 2271C)
+  nl: 2327 items (6S + 11B + 39F + 2271C)
+  no: 2327 items (6S + 11B + 39F + 2271C)
+  pl: 2327 items (6S + 11B + 39F + 2271C)
+  pt: 2327 items (6S + 11B + 39F + 2271C)
+  ro: 2327 items (6S + 11B + 39F + 2271C)
+  ru: 2327 items (6S + 11B + 39F + 2271C)
+  si: 2327 items (6S + 11B + 39F + 2271C)
+  sk: 2327 items (6S + 11B + 39F + 2271C)
+  sl: 2327 items (6S + 11B + 39F + 2271C)
+  sq: 2327 items (6S + 11B + 39F + 2271C)
+  sr: 2327 items (6S + 11B + 39F + 2271C)
+  sv: 2327 items (6S + 11B + 39F + 2271C)
+  sw: 2327 items (6S + 11B + 39F + 2271C)
+  ta: 2327 items (6S + 11B + 39F + 2271C)
+  th: 2327 items (6S + 11B + 39F + 2271C)
+  tr: 2327 items (6S + 11B + 39F + 2271C)
+  uk: 2327 items (6S + 11B + 39F + 2271C)
+  ur: 2327 items (6S + 11B + 39F + 2271C)
+  vi: 2327 items (6S + 11B + 39F + 2271C)
+  zh: 2327 items (6S + 11B + 39F + 2271C)
 Done.
 Generated search-widget-translations.json: 48 locales → /root/projects/trade/web/apps/site/public/search-widget-translations.json
 ▲ Next.js 16.2.4 (Turbopack)
@@ -91,13 +91,13 @@ Generated search-widget-translations.json: 48 locales → /root/projects/trade/w
   Creating an optimized production build ...
 ✓ Compiled successfully in 3.2s
   Running TypeScript ...
-  Finished TypeScript in 5.6s ...
+  Finished TypeScript in 6.2s ...
   Collecting page data using 19 workers ...
   Generating static pages using 19 workers (0/1395) ...
   Generating static pages using 19 workers (348/1395) 
   Generating static pages using 19 workers (697/1395) 
   Generating static pages using 19 workers (1046/1395) 
-✓ Generating static pages using 19 workers (1395/1395) in 6.5s
+✓ Generating static pages using 19 workers (1395/1395) in 9.9s
   Finalizing page optimization ...
 ⚠ Statically exporting a Next.js application via `next export` disables API routes and middleware.
 This command is meant for static-only hosts, and is not necessary to make your application static.
@@ -304,8 +304,13 @@ Output:   /root/projects/trade/web/apps/site/out
   Markdown 格式质量检查（精细化语言策略）
 ═══════════════════════════════════════════════
 
-✅ 未发现格式问题
-  扫描文件: 480
+┌─ RU (1 文件, 0 错误, 1 警告)
+│  ⚠️  [W01] apps/blog/content/ru/medical-device-import-license.mdx:78
+│     单行出现过多 em-dash（超过 2 个）
+│     > Каталог льгот периодически обновляется. Проверьте статус освобождения вашего устройства заранее — это может сэкономить 6
+└─
+
+  扫描文件: 528  错误: 0  警告: 1
 
 
 ▶ check-md-structure.mjs --project=site --ci
@@ -661,7 +666,7 @@ Output:   /root/projects/trade/web/apps/site/out
 
 ▶ clean-rsc.mjs --project=site out --ci
 🧹 Cleaning RSC .txt payload files from out/...
-✅ Deleted 13261 RSC payload files (877.2 MB freed)
+✅ Deleted 13261 RSC payload files (892.3 MB freed)
 
 ▶ tsc --noEmit
 

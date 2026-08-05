@@ -715,4 +715,6 @@ de 三项（gacc lebensmittel registrierung/zertifizierung、regulatorische anfo
 
 | D3-3 | vi/tr/ar/th（子代理，fr 已在第一批） | 6ff290cc | ✅ | ✅ 线上验证通过（vi ngành hàng / tr Hâlâ / ar الإلكترونيات / th ทุเรียน） |
 
-| D3-4 | en/zh/id/ms/hi（子代理） | （进行中） | ⏳ | ⏳ |
+| D3-4 | en/zh/id/ms/hi（子代理） | 13363a07 | ✅ | ✅ 线上验证通过（en From Compliance to Commerce / zh 一单受理 / id Satu Atap / ms sarang burung / hi एक ही स्थान） |
+
+| D3-5 | bg/cs/ro/hu/el（子代理） | （进行中） | ⏳ | ⏳ |

@@ -755,6 +755,18 @@ de 三项（gacc lebensmittel registrierung/zertifizierung、regulatorische anfo
 | D4-3 | vi/tr/ar/th（子代理） | a52e2a30 | ✅ | ✅ 线上验证通过（vi cá tra+thương hiệu Việt / tr GB 7718-2025 / ar التمور والعسل / th ทุเรียน）+ tr Büyük Britanya 残留清零 |
 | D4-4 | en/zh/id/ms/hi（子代理） | 58db9dec | ✅ | ✅ 线上验证通过（en Custom Solutions+Do I really need Chinese labels / zh 一单受理 / id Registrasi Pangan GACC / ms Soalan Lazim / hi डिक्री 248）| en 顺带修复 generalA4/values2 截断 |
 | D4-5 | cs/hu/ro/el/bg/hr/sl/uk/sk/sr（子代理） | 4c229da8+85dc6389+6d257b38+99aae80e | ✅ | ✅ 线上验证通过（cs nařízení 248 / hu Gyakran Ismételt / ro Regulamentul 248 / el Φέτα / bg Наредба 248 / hr Uredba 248 / sl Teran / uk Указ 248 / sk nariadenie 248 / sr Увоз у Кину） |
+| D4-6 | af/az/be/bn/ca（子代理） | 5b23089d+d37b179f+1e10083b | ✅ | ✅ 已部署 |
+| D4-7 | hy/ka/ne/si/sw/ta/ur（子代理） | fb196f35+615c3874 | ✅ | ✅ 已部署 |
+| D4-8 | da/fa/he/no/fi（子代理） | b8f3214c+36517eb8 | ✅ | ✅ 已部署 |
+| D4-9 | sq/sv（子代理） | a8d102e8 | ✅ | ✅ 线上验证通过（sq Dekreti 248 / sv Livsmedelsverket+Kontakt） |
+
+## ✅ D4 全部完成（2026-08-05）
+
+**D4 FAQ 页 + 次级页差异化 48/48 语言全部完成并部署验证！** Faq（97 keys）/ About（57）/ Packages（52）/ Quote（17）/ ThankYou（30）/ Testimonials（8）/ Services（78）/ Sitemap（15）8 个 namespace 全部差异化。保护字段逐字节保留（人名/stat 数字/readTime/{price} 占位符/标准号/硬事实数值/24h 语义），无英文残留（仅真实缩写/品牌名豁免）。
+
+**顺带修复：** tr "Büyük Britanya" 残留 4 处（DefinitionSchema.gb7718Name/Faq.labelA4a/About.teamMember3Desc/BlogFaqChinaLabelCompliance.faqA4）→ GB 清零；en generalA4/values2 截断；各语言 Sitemap Contact/FAQ 英文残留；readTime 误译（ar/si/hy 已修回 min）。
+
+**下一步：D5 Blog namespace + 文章标题/excerpt 差异化（Blog 61 keys × 48 + 528 文章 frontmatter）。**
 | D4-6 | af/az/be/bn/ca（子代理） | 5b23089d+d37b179f | ✅ | ✅ 线上验证通过（af GACC-regulasie 248 / az Fərman 248 / be пытанні / bn ডিক্রি ২৪৮ / ca Decret 248）+ bn readTime 修复 |
 | D4-7 | hy/ka/ne/si/sw/ta/ur（子代理） | fb196f35+615c3874 | ✅ | ✅ 线上验证通过（hy ներմուծման / ka იმპორტის / ne आयात अनुपालन / si ආනයන / sw Maswali / ta இறக்குமதி / ur اکثر پوچھے گئے）+ si readTime 修复 |
 | D4-8a | da/fa/he/no/fi（子代理） | b8f3214c+36517eb8 | ✅ | ✅ 线上验证通过（da dansk smør / fa زعفران / he צור קשר / no laks / fi maitotuotteista）+ da role 修复 |

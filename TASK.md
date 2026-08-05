@@ -691,3 +691,24 @@ de 三项（gacc lebensmittel registrierung/zertifizierung、regulatorische anfo
 ## ✅ D2 全部完成（2026-08-05）
 
 **D2 行业页差异化 48/48 语言全部完成并部署验证！** 10 个 Industry* namespace × 48 语言，每语言 234 非保护字段全差异化，40 保护字段逐字节保留。所有硬事实（周期/额度/法规）对齐 en 基线，无价格数字，无英文残留（仅真实缩写豁免）。
+
+## D3 详细：ServiceCommon + Home 全字段差异化（2026-08-05 启动）
+
+**涉及 namespace（2）：** ServiceCommon（22 keys）+ Home（66 keys）
+
+**字段结构：**
+- ServiceCommon 22 keys 全部可差异化：whoTitle / whyTitle / whyCard1-4Title+Desc / questionsTitle+Subtitle / ctaTitle+Subtitle+Button+Urgency / relatedResourcesTitle+Subtitle / portalCtaTitle+Link+GenericTitle+GenericLink
+- Home 66 keys，4 保护字段（heroTitle / heroSubtitle / metaTitle / metaDescription，T4 已确立逐字节保留）+ 62 可差异化 + industry dict 10 值
+
+**硬事实（48 语言一致）：** faqPreviewQ1-3/A1-3（GACC 248 / 时长因品类而异 / 5 年有效期提前 6 个月续期）；stat1-4Number（500+/50+/10+/100%）；ctaUrgency（免费咨询 → 24h 响应，与 D1 各语言模式一致）；jsonldServiceType 语义不变。
+
+**已知残留修复目标：** el whyCard2Title "One-Stop" / socialProofTitle "Brands"；hy socialProofTitle "Global Brands"；si/th faqPreview "Decree"；各语言 ctaUrgency 与 D1 模式不一致、industry dict 直译腔（如 it "Bambino e materno"、fr "Bébé et maternelle"、de "Gesundheitszusätze"）。
+
+**执行方式：** 延续 D1/D2 "一国一脚本"模式，每语言 1 个脚本，分批（5 语言/批）→ CI → 构建 → 提交 → 部署 → 线上验证。
+
+## D3 执行日志
+
+| 子批 | 语言 | commit | 部署 | 验证 |
+|------|------|--------|------|------|
+| D3-1 | de/es/fr/it/ja（子代理） | 09efb34b | ✅ | ✅ 线上验证通过（de Heimtiernahrung / es superalimentos / fr passeport / it Made in Italy / ja 進出） |
+| D3-2 | ru/nl/pl/pt/ko（子代理） | （进行中） | ⏳ | ⏳ |

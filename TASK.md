@@ -721,4 +721,6 @@ de 三项（gacc lebensmittel registrierung/zertifizierung、regulatorische anfo
 
 | D3-6 | sr/hr/sk/sl/uk（子代理） | 72dc8387 | ✅ | ✅ 线上验证通过（sr Уредба 248 / hr Zatražite / sk Zdravotnícke pomôcky / sl odgovor v 24 urah / uk Указ GACC 248） |
 
-| D3-7 | af/az/be/bn/ca（子代理） | （进行中） | ⏳ | ⏳ |
+| D3-7 | af/az/be/bn/ca（子代理） | 1019d631 | ✅ | ✅ 线上验证通过（af GACC-regulasie 248 / az 248 saylı / be Дэкрэт GACC 248 / bn ডিক্রি ২৪৮ / ca Decret 248） |
+
+| D3-8 | hy/ka/ne/si/sw/ta/ur（子代理） | （进行中） | ⏳ | ⏳ |

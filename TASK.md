@@ -713,4 +713,6 @@ de 三项（gacc lebensmittel registrierung/zertifizierung、regulatorische anfo
 | D3-1 | de/es/fr/it/ja（子代理） | 09efb34b | ✅ | ✅ 线上验证通过（de Heimtiernahrung / es superalimentos / fr passeport / it Made in Italy / ja 進出） |
 | D3-2 | ru/nl/pl/pt/ko（子代理） | d69f59cf | ✅ | ✅ 线上验证通过（ru Паспорт / nl Alles-in-één / pl zgodności / pt passaporte / ko 진출） |
 
-| D3-3 | fr/tr/vi/th/ar（子代理） | （进行中） | ⏳ | ⏳ |
+| D3-3 | vi/tr/ar/th（子代理，fr 已在第一批） | 6ff290cc | ✅ | ✅ 线上验证通过（vi ngành hàng / tr Hâlâ / ar الإلكترونيات / th ทุเรียน） |
+
+| D3-4 | en/zh/id/ms/hi（子代理） | （进行中） | ⏳ | ⏳ |

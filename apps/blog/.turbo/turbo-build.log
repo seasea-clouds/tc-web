@@ -10,54 +10,54 @@
 
 Apps discovered: admin, blog, portal, site
 Generating search index for 48 locales...
-  af: 2326 items (6S + 10B + 39F + 2271C)
-  ar: 2326 items (6S + 10B + 39F + 2271C)
-  az: 2326 items (6S + 10B + 39F + 2271C)
-  be: 2326 items (6S + 10B + 39F + 2271C)
-  bg: 2326 items (6S + 10B + 39F + 2271C)
-  bn: 2326 items (6S + 10B + 39F + 2271C)
-  ca: 2326 items (6S + 10B + 39F + 2271C)
-  cs: 2326 items (6S + 10B + 39F + 2271C)
-  da: 2326 items (6S + 10B + 39F + 2271C)
-  de: 2326 items (6S + 10B + 39F + 2271C)
-  el: 2326 items (6S + 10B + 39F + 2271C)
-  en: 2326 items (6S + 10B + 39F + 2271C)
-  es: 2326 items (6S + 10B + 39F + 2271C)
-  fa: 2326 items (6S + 10B + 39F + 2271C)
-  fi: 2326 items (6S + 10B + 39F + 2271C)
-  fr: 2326 items (6S + 10B + 39F + 2271C)
-  he: 2326 items (6S + 10B + 39F + 2271C)
-  hi: 2326 items (6S + 10B + 39F + 2271C)
-  hr: 2326 items (6S + 10B + 39F + 2271C)
-  hu: 2326 items (6S + 10B + 39F + 2271C)
-  hy: 2326 items (6S + 10B + 39F + 2271C)
-  id: 2326 items (6S + 10B + 39F + 2271C)
-  it: 2326 items (6S + 10B + 39F + 2271C)
-  ja: 2326 items (6S + 10B + 39F + 2271C)
-  ka: 2326 items (6S + 10B + 39F + 2271C)
-  ko: 2326 items (6S + 10B + 39F + 2271C)
-  ms: 2326 items (6S + 10B + 39F + 2271C)
-  ne: 2326 items (6S + 10B + 39F + 2271C)
-  nl: 2326 items (6S + 10B + 39F + 2271C)
-  no: 2326 items (6S + 10B + 39F + 2271C)
-  pl: 2326 items (6S + 10B + 39F + 2271C)
-  pt: 2326 items (6S + 10B + 39F + 2271C)
-  ro: 2326 items (6S + 10B + 39F + 2271C)
-  ru: 2326 items (6S + 10B + 39F + 2271C)
-  si: 2326 items (6S + 10B + 39F + 2271C)
-  sk: 2326 items (6S + 10B + 39F + 2271C)
-  sl: 2326 items (6S + 10B + 39F + 2271C)
-  sq: 2326 items (6S + 10B + 39F + 2271C)
-  sr: 2326 items (6S + 10B + 39F + 2271C)
-  sv: 2326 items (6S + 10B + 39F + 2271C)
-  sw: 2326 items (6S + 10B + 39F + 2271C)
-  ta: 2326 items (6S + 10B + 39F + 2271C)
-  th: 2326 items (6S + 10B + 39F + 2271C)
-  tr: 2326 items (6S + 10B + 39F + 2271C)
-  uk: 2326 items (6S + 10B + 39F + 2271C)
-  ur: 2326 items (6S + 10B + 39F + 2271C)
-  vi: 2326 items (6S + 10B + 39F + 2271C)
-  zh: 2326 items (6S + 10B + 39F + 2271C)
+  af: 2327 items (6S + 11B + 39F + 2271C)
+  ar: 2327 items (6S + 11B + 39F + 2271C)
+  az: 2327 items (6S + 11B + 39F + 2271C)
+  be: 2327 items (6S + 11B + 39F + 2271C)
+  bg: 2327 items (6S + 11B + 39F + 2271C)
+  bn: 2327 items (6S + 11B + 39F + 2271C)
+  ca: 2327 items (6S + 11B + 39F + 2271C)
+  cs: 2327 items (6S + 11B + 39F + 2271C)
+  da: 2327 items (6S + 11B + 39F + 2271C)
+  de: 2327 items (6S + 11B + 39F + 2271C)
+  el: 2327 items (6S + 11B + 39F + 2271C)
+  en: 2327 items (6S + 11B + 39F + 2271C)
+  es: 2327 items (6S + 11B + 39F + 2271C)
+  fa: 2327 items (6S + 11B + 39F + 2271C)
+  fi: 2327 items (6S + 11B + 39F + 2271C)
+  fr: 2327 items (6S + 11B + 39F + 2271C)
+  he: 2327 items (6S + 11B + 39F + 2271C)
+  hi: 2327 items (6S + 11B + 39F + 2271C)
+  hr: 2327 items (6S + 11B + 39F + 2271C)
+  hu: 2327 items (6S + 11B + 39F + 2271C)
+  hy: 2327 items (6S + 11B + 39F + 2271C)
+  id: 2327 items (6S + 11B + 39F + 2271C)
+  it: 2327 items (6S + 11B + 39F + 2271C)
+  ja: 2327 items (6S + 11B + 39F + 2271C)
+  ka: 2327 items (6S + 11B + 39F + 2271C)
+  ko: 2327 items (6S + 11B + 39F + 2271C)
+  ms: 2327 items (6S + 11B + 39F + 2271C)
+  ne: 2327 items (6S + 11B + 39F + 2271C)
+  nl: 2327 items (6S + 11B + 39F + 2271C)
+  no: 2327 items (6S + 11B + 39F + 2271C)
+  pl: 2327 items (6S + 11B + 39F + 2271C)
+  pt: 2327 items (6S + 11B + 39F + 2271C)
+  ro: 2327 items (6S + 11B + 39F + 2271C)
+  ru: 2327 items (6S + 11B + 39F + 2271C)
+  si: 2327 items (6S + 11B + 39F + 2271C)
+  sk: 2327 items (6S + 11B + 39F + 2271C)
+  sl: 2327 items (6S + 11B + 39F + 2271C)
+  sq: 2327 items (6S + 11B + 39F + 2271C)
+  sr: 2327 items (6S + 11B + 39F + 2271C)
+  sv: 2327 items (6S + 11B + 39F + 2271C)
+  sw: 2327 items (6S + 11B + 39F + 2271C)
+  ta: 2327 items (6S + 11B + 39F + 2271C)
+  th: 2327 items (6S + 11B + 39F + 2271C)
+  tr: 2327 items (6S + 11B + 39F + 2271C)
+  uk: 2327 items (6S + 11B + 39F + 2271C)
+  ur: 2327 items (6S + 11B + 39F + 2271C)
+  vi: 2327 items (6S + 11B + 39F + 2271C)
+  zh: 2327 items (6S + 11B + 39F + 2271C)
 Done.
 Attention: Next.js now collects completely anonymous telemetry regarding usage.
 This information is used to shape Next.js' roadmap and prioritize features.
@@ -67,15 +67,15 @@ https://nextjs.org/telemetry
 ▲ Next.js 16.2.6 (Turbopack)
 
   Creating an optimized production build ...
-✓ Compiled successfully in 2.7s
+✓ Compiled successfully in 3.1s
   Running TypeScript ...
-  Finished TypeScript in 3.7s ...
+  Finished TypeScript in 3.1s ...
   Collecting page data using 6 workers ...
-  Generating static pages using 6 workers (0/578) ...
-  Generating static pages using 6 workers (144/578) 
-  Generating static pages using 6 workers (288/578) 
-  Generating static pages using 6 workers (433/578) 
-✓ Generating static pages using 6 workers (578/578) in 3.6s
+  Generating static pages using 6 workers (0/626) ...
+  Generating static pages using 6 workers (156/626) 
+  Generating static pages using 6 workers (312/626) 
+  Generating static pages using 6 workers (469/626) 
+✓ Generating static pages using 6 workers (626/626) in 4.1s
   Finalizing page optimization ...
 
 Route (app)
@@ -94,7 +94,7 @@ Route (app)
   ├ /en/blog/ccc-certification-explained
   ├ /en/blog/china-import-compliance-guide
   ├ /en/blog/china-label-compliance
-  └ [+477 more paths]
+  └ [+525 more paths]
 
 
 ○  (Static)  prerendered as static content
@@ -160,8 +160,13 @@ Route (app)
   Markdown 格式质量检查（精细化语言策略）
 ═══════════════════════════════════════════════
 
-✅ 未发现格式问题
-  扫描文件: 480
+┌─ RU (1 文件, 0 错误, 1 警告)
+│  ⚠️  [W01] apps/blog/content/ru/medical-device-import-license.mdx:78
+│     单行出现过多 em-dash（超过 2 个）
+│     > Каталог льгот периодически обновляется. Проверьте статус освобождения вашего устройства заранее — это может сэкономить 6
+└─
+
+  扫描文件: 528  错误: 0  警告: 1
 
 
 ▶ check-md-structure.mjs --project=blog --ci
@@ -171,7 +176,7 @@ Route (app)
 ═══════════════════════════════════════════════
 
 ✅ 未发现内容结构问题
-  扫描文件: 480
+  扫描文件: 528
 
 
 ▶ check-md-article.mjs --project=blog --ci
@@ -181,7 +186,7 @@ Route (app)
 ═══════════════════════════════════════════════
 
 ✅ 未发现问题
-  扫描文件: 480
+  扫描文件: 528
 
 
 ▶ check-locale-prefix.mjs --project=blog --ci
@@ -469,11 +474,11 @@ Route (app)
 🔍 统一 hreflang 检查
 
 📦 模式: SSG 输出目录检查
-  📄 扫描 578 个 HTML 文件
+  📄 扫描 626 个 HTML 文件
 
   跳过: 2 文件 (路径匹配 skip-pattern)
 
-  结果: 576 通过, 0 失败
+  结果: 624 通过, 0 失败
 
 ✅ hreflang 全部检查通过
   ∎ check-llms.mjs → ∅ 无 llms 文件
@@ -493,7 +498,7 @@ Route (app)
 
 ▶ clean-rsc.mjs --project=blog out --ci
 🧹 Cleaning RSC .txt payload files from out/...
-✅ Deleted 5047 RSC payload files (141.6 MB freed)
+✅ Deleted 5479 RSC payload files (153.1 MB freed)
 
 ▶ tsc --noEmit
 

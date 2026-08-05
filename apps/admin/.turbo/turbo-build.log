@@ -4,10 +4,10 @@
 
 
 ✅ Generated /root/projects/trade/web/apps/admin/src/lib/segment-mapping.ts
-   10 blog article mappings (slug → Chinese title)
+   11 blog article mappings (slug → Chinese title)
 
 ✅ Generated /root/projects/trade/web/apps/admin/functions/lib/known-routes.ts
-   2689 known routes (48 locales, includePrivate=true)
+   2737 known routes (48 locales, includePrivate=true)
 
 > @trade/admin@6.6.0 build
 > npx next build && bash scripts/postbuild.sh
@@ -16,15 +16,15 @@
 - Environments: .env
 
   Creating an optimized production build ...
-✓ Compiled successfully in 1972ms
+✓ Compiled successfully in 4.2s
   Running TypeScript ...
-  Finished TypeScript in 2.5s ...
+  Finished TypeScript in 4.0s ...
   Collecting page data using 14 workers ...
   Generating static pages using 14 workers (0/13) ...
   Generating static pages using 14 workers (3/13) 
   Generating static pages using 14 workers (6/13) 
   Generating static pages using 14 workers (9/13) 
-✓ Generating static pages using 14 workers (13/13) in 352ms
+✓ Generating static pages using 14 workers (13/13) in 697ms
   Finalizing page optimization ...
 
 Route (app)

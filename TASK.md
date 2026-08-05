@@ -37,6 +37,7 @@
 | D5-5 | cs/bg/ro | 9d5b4f92 | ✅ | ✅ 已部署 | 修复 bg dash 混用（W02） |
 | D5-6 | el/hu/sr/hr/sk | bea8a5f3 | ✅ | ✅ 已部署 | sr 由并行批次处理 |
 | D5-7 | da/fi | 00597c75 | ✅ | ✅ 线上验证通过（da fødevareeksportører / fi suomalaisille+verkkokauppa） |
+| D5-8 | af/az/sv/no | 09411940 | ✅ | ✅ 线上验证通过（af GACC-registrasie / az nar+Elektron ticarət / sv Livsmedelsverket / no Mattilsynet+mva） |
 
 ## ✅ D5 全部完成（2026-08-05）
 

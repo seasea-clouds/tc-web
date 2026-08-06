@@ -157,7 +157,17 @@
 | D6-2g | sv/no/sl/sq/ca 正文本地化增强（5 语言 × 4 核心篇） | d9bfa2cf | ✅ 线上验证通过（sv sill/mejeriproducenter、no torsk/Patentstyret、sl jabolka/čebelarjev、sq shqiptarë、ca cava/OEPM 均命中） |
 | D6-2h | be/bn/fa/he/hy 正文本地化增强（5 语言 × 4 核心篇） | c235a7d8 | ✅ 线上验证通过（be бульба、bn চিংড়ি/DPDT、fa زعفران、he הפטנטים、hy Հայաստանից 均命中） |
 | D6-2i | ka/ne/si/sw/ta/ur 正文本地化增强（6 语言 × 4 核心篇） | db4e990c | ✅ 线上验证通过（ka ქართველი/საქპატენტში、ne नेपाली/पश्मिना、si ලාංකික、sw karafuu/KEBS、ta தமிழ்நாடு、ur پاکستانی 均命中） |
-| D6-2j | en 基准文增强 + zh 同步（4 核心篇） | 78a16aff | ⏳ 线上验证中 |
+| D6-2j | en 基准文增强 + zh 同步（4 核心篇） | 78a16aff | ✅ 线上验证通过（en SRRC/RMB 26,000/GB 7718-2025、zh GB 7718-2025/SRRC 均命中） |
+
+## ✅ D6 第二步全部完成（2026-08-06）
+
+**48/48 语言正文本地化增强全部完成并部署验证：**
+
+- D6-2a~i：46 语言 × 4 核心篇（gacc/ccc/trademark/cross-border）本土化增强 + 机翻硬伤修复
+- D6-2j：en 基准文硬事实补强（时限/成本/标准号/限额）+ zh 同步（保持 en 同步，不单独增强）
+- 博客页已有 Related Articles + Related Service Card 模块，内链体系自动覆盖
+- zh 决策：仅自己看，保持与 en 同步（en 优化后 zh 同步更新）
+- 剩余：D7 技术 SEO 体检（hreflang/sitemap/OG/JSON-LD/内链/canonical）待做 |
 
 ## ✅ D6-2 第一批完成（2026-08-06）
 

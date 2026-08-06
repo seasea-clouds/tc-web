@@ -231,7 +231,7 @@
 |----|------|--------|------|
 | 批 1（en 基准批） | en | ff50cdee | ✅ CI 全绿（site 17 title + 9 desc、blog 2 keys、frontmatter 2 title + 11 excerpt；⚠️ 后修复 frontmatter --- 粘连 bug，见 47fa2a71） |
 | 批 2 | de/es/fr/it/ja（高流量） | 47fa2a71 | ✅ 2026-08-07 部署验证通过（site+blog 全量 curl 200，metaTitle 新值线上确认） |
-| 批 3 | ru/ar/pt/ko/tr/vi/th | ⏳ 待做 | |
+| 批 3 | ru/ar/pt/ko/tr/vi/th | 5d2a9c09 | ✅ 2026-08-07 部署验证通过（7 语言 blog 新 metaTitle 线上确认；ko 308 重定向正常） |
 | 批 4 | id/ms/pl/nl/cs/ro/el/hu | ⏳ 待做 | |
 | 批 5 | 其余 27 语言 | ⏳ 待做 | |
 
@@ -263,7 +263,14 @@
 - **顺带修复**：ff50cdee 遗留 bug —— 11 个 en mdx frontmatter 的 `---` 结束符粘连在 excerpt 行尾（导致 Next.js 构建失败），补换行修复
 - **验证**：check-translations 48 语言 0 问题；md-article/format/structure 6 语言全过；site+blog 构建成功；线上 curl 全部 200 + 新 metaTitle 确认
 
-## 批 3 计划（ru/ar/pt/ko/tr/vi/th）
+## 批 3 完成记录（2026-08-07）
 
-- ru: T13/D12、ar: T6/D3、pt: T18/D15、ko: T1/D0、tr: T3/D4、vi: T13/D4、th: T5/D3（site messages 超长数，2026-08-07 扫描）
-- 方式：延续批 2 模式，7 语言并行子代理
+- **ru**：site 25 处（13 title + 12 desc）+ blog 2 处 + frontmatter 18 处（7 title + 11 excerpt）→ commit 5d2a9c09
+- **ar**：site 9 处（6 title + 3 desc）+ blog 1 处 + frontmatter 12 处（1 title + 11 excerpt）→ commit 5d2a9c09
+- **pt**：site 33 处（18 title + 15 desc）+ blog 1 处 + frontmatter 20 处（9 title + 11 excerpt）→ commit 5d2a9c09
+- **ko**：site 2 处（IndustriesCommon metaTitle 70→33 + 顺带修复 metaDescription 英文残留 151→81）+ blog/frontmatter 已达标未动 → commit 5d2a9c09
+- **tr**：site 7 处（3 title + 4 desc）+ blog 2 处 + frontmatter 16 处（5 title + 11 excerpt）→ commit 5d2a9c09
+- **vi**：site 17 处（13 title + 4 desc）+ blog 2 处 + frontmatter 16 处（7 title + 9 excerpt，9/11 篇超长）→ commit 5d2a9c09
+- **th**：site 8 处（5 title + 3 desc）+ blog 2 处 + frontmatter 10 处（2 title + 8 excerpt，8/11 篇超长）→ commit 5d2a9c09
+- **验证**：check-translations 48 语言 0 问题；md-article/format/structure 7 语言全过（ru W01 em-dash 为 HEAD 历史遗留，非本轮引入）；site+blog 构建 4/4 成功；线上 7 语言 curl 200 + 新 metaTitle 确认
+- **备注**：IndustriesCommon.metaDescription 英文残留（151 字符，未超长）为全语言模板遗留（de/es/fr/it/ko/pt/tr/ru/ar 等均有），ko 已顺带本地化（81），其余保留，后续可统一处理

@@ -151,6 +151,7 @@
 | D6-2a | de/es/fr/it/ja 正文本地化增强（5 语言 × 4 核心篇：gacc/ccc/trademark/cross-border） | a6562249 | ✅ 线上验证通过（de VDE/BVL、es SENASA/INAPI、fr DGAL/INPI、it ICQRF/UIBM、ja 和牛/PSE 均命中） |
 | D6-2b | ru/nl/pl/pt/ko 正文本地化增强（5 语言 × 4 核心篇） | e438669d | ✅ 线上验证通过（ru Wildberries/Роспатенте、nl Benelux/varkensvlees、pl wódka/drobiu、pt Alentejo/INMETRO、ko KIPRIS 均命中） |
 | D6-2c | vi/tr/ar/th/uk 正文本地化增强（5 语言 × 4 核心篇） | d16d6242 | ✅ 线上验证通过（vi thanh long/NOIP、tr kayısı/fındık、ar الإمارات/التمور、th กรมทรัพย์สิน/TISI、uk УкрСЕПРО/соняшникова 均命中） |
+| D6-2d | id/ms/hi/cs/ro 正文本地化增强（5 语言 × 4 核心篇） | 29d65355 | ⏳ 线上验证中（已提交已 push） |
 
 ## ✅ D6-2 第一批完成（2026-08-06）
 

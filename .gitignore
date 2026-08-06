@@ -20,8 +20,8 @@ apps/site/public/*/blog/
 apps/site/public/blog/
 apps/site/public/404.html
 apps/site/public/404/
-.turbo/cache/
-.turbo/turbo-build.log
+**/.turbo/cache/
+**/.turbo/turbo-build.log
 
 # Build artifacts: sitemaps, llms, search indexes (regenerated per build)
 # Note: do NOT ignore the whole public/ dir, or icons can't be tracked.

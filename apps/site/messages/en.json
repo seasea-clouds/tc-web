@@ -204,8 +204,8 @@
     "coverItems4": "Complete documentation preparation and translation",
     "coverItems5": "Label compliance review (GB 7718 / GB 28050)",
     "coverItems6": "Registration renewal and 5-year validity tracking",
-    "metaTitle": "GACC Food Registration for US, UK & Global Exporters | Decree 248 Guide",
-    "metaDescription": "GACC food registration for US, UK, Canadian and Australian exporters. Decree 248/249, CIFER system, customs clearance. Export food to China without border rejection."
+    "metaTitle": "GACC Food Registration for Global Exporters | Decree 248",
+    "metaDescription": "GACC food registration for global exporters. Decree 248/249, CIFER system, and customs clearance — export food to China without border rejection."
   },
   "ServiceLabel": {
     "heroTitle": "Chinese Label Compliance for US, UK & Global Brands",
@@ -251,8 +251,8 @@
     "coverItems4": "Custom Chinese label design",
     "coverItems5": "Label template creation for production",
     "coverItems6": "Customs clearance label support",
-    "metaTitle": "Chinese Label Compliance for US & UK Brands | GB 7718 & GB 28050",
-    "metaDescription": "China food label compliance for US, UK and global brands. GB 7718-2025, GB 28050-2025 standards. Avoid customs rejection. Expert label review and design service."
+    "metaTitle": "China Label Compliance for Global Brands | GB 7718-2025",
+    "metaDescription": "China food label compliance for global brands. GB 7718-2025 and GB 28050-2025 standards to avoid customs rejection, with expert label review and design."
   },
   "ServiceCcc": {
     "heroTitle": "CCC Certification in China",
@@ -300,8 +300,8 @@
     "coverItems4": "Factory inspection preparation",
     "coverItems5": "Annual surveillance compliance support",
     "coverItems6": "New 2025 categories including lithium-ion batteries",
-    "metaTitle": "China CCC Certification | Compulsory Product Certification Guide",
-    "metaDescription": "China Compulsory Certification (CCC) consulting for electronics, appliances, toys, automotive parts. Learn the CCC mark requirements, testing coordination, factory audit prep, fast approval."
+    "metaTitle": "China CCC Certification | Compulsory Product Certification",
+    "metaDescription": "CCC consulting for electronics, appliances, toys, and automotive parts. CCC mark requirements, testing coordination, factory audit prep, and fast approval."
   },
   "ServiceCosmetics": {
     "heroTitle": "NMPA Cosmetics Filing for US, UK & Global Beauty Brands",
@@ -349,8 +349,8 @@
     "coverItems4": "Safety evaluation coordination under CSAR",
     "coverItems5": "Efficacy testing support for claimed functions",
     "coverItems6": "Post-market compliance (adverse event monitoring, annual reports)",
-    "metaTitle": "NMPA Cosmetics Filing for US, UK & Global Brands | China Import Guide",
-    "metaDescription": "NMPA cosmetics filing and registration for US, UK and global beauty brands. CSAR compliance, safety assessment, responsible agent. Sell your cosmetics in China legally."
+    "metaTitle": "NMPA Cosmetics Filing for Global Brands | China Import",
+    "metaDescription": "NMPA cosmetics filing for global beauty brands. CSAR compliance, safety assessment, and responsible agent — sell your cosmetics in China legally."
   },
   "ServiceEcommerce": {
     "heroTitle": "Cross-Border E-commerce for US, UK & Global Brands in China",
@@ -396,8 +396,8 @@
     "coverItems4": "Cross-border tax optimization (0% tariff within limits)",
     "coverItems5": "Chinese label exemption guidance for cross-border sales",
     "coverItems6": "Data compliance (PIPL) for cross-border operations",
-    "metaTitle": "Cross-Border E-commerce China for US, UK & Global Brands | Tmall, JD, Douyin",
-    "metaDescription": "Cross-border e-commerce for Western brands in China: Tmall Global, JD Worldwide, Douyin Global onboarding. Bonded warehouse, tax optimization. Sell in China without a local entity."
+    "metaTitle": "Cross-Border E-commerce China | Tmall, JD, Douyin Guide",
+    "metaDescription": "Cross-border e-commerce for global brands: Tmall, JD, and Douyin onboarding, bonded warehouse, and tax optimization — sell in China without a local entity."
   },
   "ServiceBrand": {
     "heroTitle": "China Trademark Registration & Brand Protection for US, UK & Global Brands",
@@ -443,8 +443,8 @@
     "coverItems4": "Customs intellectual property recordal",
     "coverItems5": "Advertising compliance review (Chinese Advertising Law)",
     "coverItems6": "Brand protection strategy and enforcement guidance",
-    "metaTitle": "China Trademark Registration for US & UK Brands | Stop Squatters",
-    "metaDescription": "China trademark registration and brand protection for US, UK and global brands. CNIPA filing, Madrid system, customs IP recordal. Protect your brand from squatters."
+    "metaTitle": "China Trademark Registration | Stop Brand Squatters",
+    "metaDescription": "China trademark registration and brand protection for global brands. CNIPA filing, Madrid system, and customs IP recordal — protect your brand from squatters."
   },
   "ServiceCommon": {
     "whoTitle": "Who Is This Service For?",
@@ -522,7 +522,7 @@
     "premiumItems4": "PIPL Data Compliance Assessment",
     "premiumItems5": "Ongoing Compliance Advisory",
     "metaTitle": "China Compliance Packages & Pricing | GACC, CCC & NMPA Plans",
-    "metaDescription": "Compare China import compliance packages: GACC registration, CCC certification and NMPA filing plans with transparent, fixed-fee pricing. Find the right fit for your brand."
+    "metaDescription": "Compare China compliance packages: GACC, CCC and NMPA plans with transparent fixed-fee pricing. Find the right fit for your brand."
   },
   "Faq": {
     "heroTitle": "China Import Compliance: Frequently Asked Questions",
@@ -629,7 +629,7 @@
       "brandName": "Brand Protection"
     },
     "metaTitle": "China Import Compliance FAQ for Exporters | GACC, CCC, NMPA",
-    "metaDescription": "China import compliance FAQ: GACC Decree 248 registration, CCC certification, NMPA cosmetics filing and Chinese label requirements — answered for US, UK, Australian and New Zealand exporters."
+    "metaDescription": "China import compliance FAQ: GACC Decree 248, CCC certification, NMPA cosmetics filing, and label requirements answered for global exporters."
   },
   "About": {
     "heroTitle": "About SinoTrade Compliance",
@@ -687,7 +687,7 @@
     "partners7": "🔬 Research Institutes",
     "partners8": "🤝 Industry Associations",
     "values5": "Excellence: Delivering the highest quality compliance solutions with attention to every detail.",
-    "metaTitle": "About SinoTrade Compliance | 15+ Years China Import Expertise",
+    "metaTitle": "SinoTrade Compliance | 15+ Years China Import Expertise",
     "metaDescription": "Meet the SinoTrade Compliance team — 15+ years of China import compliance experience, 500+ successful projects and clients in 50+ countries."
   },
   "ThankYou": {
@@ -815,7 +815,7 @@
     "privacy": "We respect your privacy. No spam, ever."
   },
   "Testimonials": {
-    "metaTitle": "Client Testimonials | SinoTrade Compliance Export Success Stories",
+    "metaTitle": "Client Testimonials | SinoTrade Compliance Success Stories",
     "metaDescription": "Read what food, cosmetics and electronics exporters say about SinoTrade's China import compliance services — real stories from brands now selling in China.",
     "ogTitle": "Client Testimonials: SinoTrade Compliance",
     "heroTitle": "What Exporters Say About Us",
@@ -886,7 +886,7 @@
     "coverItems5": "Country-specific market access requirements",
     "coverItems6": "Ongoing regulatory monitoring and renewal support",
     "coverItems7": "Regulatory compliance training for meat and seafood importers",
-    "metaTitle": "Meat & Seafood Export to China for US, UK & Global | GACC Guide",
+    "metaTitle": "Meat & Seafood Export to China for Global Brands | GACC",
     "metaDescription": "China export for US, UK and global meat & seafood producers: CIFER registration, labeling, customs clearance, cold chain. Expert guidance."
   },
   "IndustryWine": {
@@ -919,7 +919,7 @@
     "coverItems5": "Country-specific wine import requirements",
     "coverItems6": "Ongoing regulatory monitoring and renewal support",
     "coverItems7": "Wine industry compliance training and advisory",
-    "metaTitle": "Wine Export to China for US, UK, AU & NZ | GACC & Brand Protection",
+    "metaTitle": "Wine Export to China for Global Brands | GACC & Brand",
     "metaDescription": "China export for US, UK, Australian and NZ wineries: GACC registration, GB 10344 labels, brand protection, customs clearance. Expert guidance."
   },
   "IndustrySkincare": {
@@ -945,7 +945,7 @@
     "jsonldName": "Skincare & Cosmetics China Compliance Services",
     "jsonldDescription": "NMPA filing under CSAR, ingredient safety assessment, animal testing exemption guidance and import consulting for UK and US cosmetics brands entering the Chinese market.",
     "cta": "Get Free Assessment",
-    "metaTitle": "Skincare Export to China for US, UK & Global | NMPA & CSAR Guide",
+    "metaTitle": "Skincare Export to China for Global Brands | NMPA & CSAR",
     "metaDescription": "China export for US, UK and global skincare brands: NMPA filing, CSAR compliance, ingredient review. From filing to market access."
   },
   "IndustryPetFood": {
@@ -971,7 +971,7 @@
     "jsonldName": "Pet Food China Compliance Services",
     "jsonldDescription": "GACC registration, feed import licensing, ingredient approval and labeling compliance for UK and US pet food exporters entering the Chinese market.",
     "cta": "Get Free Assessment",
-    "metaTitle": "Pet Food Export to China for US, UK & Global | GACC & MOA Guide",
+    "metaTitle": "Pet Food Export to China for Global Brands | GACC & MOA",
     "metaDescription": "China export for US, UK and global pet food producers: GACC registration, MOA approval, formulation review, labeling. Enter the booming market."
   },
   "IndustrySupplements": {
@@ -1023,7 +1023,7 @@
     "jsonldName": "Baby & Maternal Product China Compliance Services",
     "jsonldDescription": "SAMR infant formula registration, GACC food registration, NMPA cosmetics filing and safety compliance for UK and US baby and maternal product exporters entering the Chinese market.",
     "cta": "Get Free Assessment",
-    "metaTitle": "Baby Products Export to China for US, UK & Global | SAMR, GACC & NMPA",
+    "metaTitle": "Baby Product Export to China for Global Brands | SAMR, GACC",
     "metaDescription": "China export for US, UK and global baby brands: SAMR registration for infant formula, GACC, NMPA filing for baby cosmetics. Expert guidance."
   },
   "IndustryElectronics": {
@@ -1049,7 +1049,7 @@
     "jsonldName": "Consumer Electronics China Compliance Services",
     "jsonldDescription": "CCC certification, SRRC approval, Chinese labeling compliance and IP protection for UK and US consumer electronics exporters entering the Chinese market.",
     "cta": "Get Free Assessment",
-    "metaTitle": "Electronics Export to China for US, UK & Global | CCC & SRRC Guide",
+    "metaTitle": "Electronics Export to China for Global Brands | CCC & SRRC",
     "metaDescription": "China export for US, UK and global electronics brands: CCC certification, SRRC radio approval, labeling, brand protection. From application to approval."
   },
   "IndustryMedical": {
@@ -1082,7 +1082,7 @@
     "coverItems5": "Post-market surveillance and compliance monitoring",
     "coverItems6": "Ongoing regulatory monitoring and renewal support",
     "coverItems7": "Medical device compliance training and advisory",
-    "metaTitle": "Medical Device Import to China for US, UK & Global | NMPA Registration",
+    "metaTitle": "Medical Device Import to China for Global Brands | NMPA",
     "metaDescription": "China import for US, UK and global medical device manufacturers: NMPA registration (Class I/II/III), clinical evaluation, import license. Get expert guidance."
   },
   "IndustriesCommon": {
@@ -1115,7 +1115,7 @@
       "crossborderecommerce": "Cross-border E-commerce",
       "crossborderecommerceDesc": "CBEC regulations, platform compliance, and tax optimization."
     },
-    "metaTitle": "China Import Compliance by Industry | GACC, CCC, NMPA Services",
+    "metaTitle": "China Import Compliance by Industry | GACC, CCC & NMPA",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryEcommerce": {
@@ -1148,7 +1148,7 @@
     "coverItems5": "Chinese label exemption eligibility assessment",
     "coverItems6": "Ongoing regulatory monitoring and compliance support",
     "coverItems7": "E-commerce platform compliance training and advisory",
-    "metaTitle": "Cross-Border E-commerce China for US, UK & Global Brands | Tmall, JD, Douyin",
+    "metaTitle": "Cross-Border E-commerce China | Tmall, JD, Douyin Guide",
     "metaDescription": "Cross-border e-commerce for US, UK and global brands: CBEC compliance, platform onboarding, bonded warehouse, tax optimization. Expert guidance."
   },
   "IndustryCCC": {
@@ -1342,7 +1342,7 @@
   },
   "AiAssistance": {
     "metaTitle": "SinoTrade Compliance | China Import Compliance Data for AI",
-    "metaDescription": "Structured data for AI about SinoTrade Compliance: China import regulations, GACC registration, CCC certification, NMPA cosmetics filing, label compliance, cross-border e-commerce.",
+    "metaDescription": "Structured data for AI about SinoTrade Compliance: China import regulations, GACC registration, CCC certification, NMPA filing, and label compliance.",
     "title": "SinoTrade Compliance: AI-Assistance",
     "intro": "This page provides structured information about SinoTrade Compliance for AI and language model assistance.",
     "aboutTitle": "Company Overview",

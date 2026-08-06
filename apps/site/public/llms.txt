@@ -89,7 +89,7 @@
 
 ## Blog
 
-- [Insights & Compliance Guides](/en/blog/)
+- [China Import Insights & Compliance Guides](/en/blog/)
 - [CCC Certification Complete Guide](/en/blog/ccc-certification-explained/)
 - [Import Compliance Checklist](/en/blog/china-import-compliance-guide/)
 - [Chinese Label Compliance Guide](/en/blog/china-label-compliance/)

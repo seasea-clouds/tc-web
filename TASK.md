@@ -148,6 +148,19 @@
 | D6-1a | zh 补全 11 篇（段落比 100%，修复 220 处格式）+ en 3-well bug 修复 | b828bacd | ✅ 线上验证通过（分类错误是备案延误最常见等） |
 | D6-1b | ja 补全 11 篇（字符比 55-63%，段落比 98-107%，修复机翻残留） | 855e2385 | ✅ 线上验证通过（18 の高リスク / ブルーハット 等） |
 | D6-1c | th 确认无需补全（字符比 95-105%，之前"552 词"为泰文分词误判） | - | ✅ 无需处理 |
+| D6-2a | de/es/fr/it/ja 正文本地化增强（5 语言 × 4 核心篇：gacc/ccc/trademark/cross-border） | a6562249 | ⏳ 线上验证中 |
+
+## ✅ D6-2 第一批完成（2026-08-06）
+
+**de/es/fr/it/ja 正文本地化增强完成并提交（a6562249）：**
+
+- 4 篇核心文章（gacc-registration-guide / ccc-certification-explained / china-trademark-registration / cross-border-ecommerce-china）正文纯追加式增强，每语言 5-13 处
+- 本土视角：de BVL/GS/VDE/TÜV、es SENASA/SAG/INV、fr DGAL/INPI、it UIBM/ICQRF/Consorzio、ja 厚労省/農水省/PSE/JPO
+- 修复翻译硬伤（对齐 en 硬事实 3-6 个月）：fr "3 bien avant"→"3 à 6 mois"、es "3 veces"→"3 a 6 meses"、de "3-mal"→"3-6 Monate"（ja 已在 D6-1 修复）
+- 修复 it ccc 弯引号回归 un'ampia（U+2019）
+- 保护字段逐字节不变：frontmatter（slug/date/category/excerpt/references）+ 章节结构
+- 伴生生成文件再生成：segment-mapping.ts / llms.txt / known-routes.ts
+- 清理：删除未引用调试脚本 check-debug.mjs；.turbo 日志移出 git 跟踪（.gitignore 修复根锚定 bug → **/.turbo/）
 
 ## ✅ D6 第一步完成（2026-08-05）
 

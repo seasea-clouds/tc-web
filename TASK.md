@@ -148,7 +148,7 @@
 | D6-1a | zh 补全 11 篇（段落比 100%，修复 220 处格式）+ en 3-well bug 修复 | b828bacd | ✅ 线上验证通过（分类错误是备案延误最常见等） |
 | D6-1b | ja 补全 11 篇（字符比 55-63%，段落比 98-107%，修复机翻残留） | 855e2385 | ✅ 线上验证通过（18 の高リスク / ブルーハット 等） |
 | D6-1c | th 确认无需补全（字符比 95-105%，之前"552 词"为泰文分词误判） | - | ✅ 无需处理 |
-| D6-2a | de/es/fr/it/ja 正文本地化增强（5 语言 × 4 核心篇：gacc/ccc/trademark/cross-border） | a6562249 | ⏳ 线上验证中 |
+| D6-2a | de/es/fr/it/ja 正文本地化增强（5 语言 × 4 核心篇：gacc/ccc/trademark/cross-border） | a6562249 | ✅ 线上验证通过（de VDE/BVL、es SENASA/INAPI、fr DGAL/INPI、it ICQRF/UIBM、ja 和牛/PSE 均命中） |
 
 ## ✅ D6-2 第一批完成（2026-08-06）
 

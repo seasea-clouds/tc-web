@@ -20,7 +20,7 @@
 | **D4** | FAQ 页 + 次级页差异化 | Faq(97) + About/Packages/Quote/ThankYou/Testimonials/Services/Sitemap × 48 | ✅ 完成（2026-08-05） |
 | **D5** | Blog namespace + 文章标题/excerpt | Blog(61) × 48 + BlogFaq(62) × 48 + 528 文章 frontmatter | ⏳ 待做（本轮） |
 | **D6** | 博客正文本地化增强 + 本地市场新文章 | 528 篇增强 + 48-100 篇新文章 | ⏳ 待做 |
-| **D7** | 技术 SEO 体检 | hreflang/sitemap/OG/JSON-LD/内链/canonical | ⏳ 待做 |
+| **D7** | 技术 SEO 体检 | hreflang/sitemap/OG/JSON-LD/内链/canonical + metaTitle/desc/frontmatter 精写 | ⏳ 进行中（D7-SEO 手动改写） |
 
 ---
 
@@ -197,3 +197,58 @@
 
 - hreflang / sitemap / OG / JSON-LD / 内链 / canonical 全站体检
 - 修复发现的技术问题
+
+---
+
+# D7-SEO 手动改写方案：metaTitle/metaDescription/frontmatter（2026-08-06 启动）
+
+## 问题（已全量扫描，48 语言）
+
+| 项 | 位置 | 超长数（全 48 语言） |
+|----|------|---------------------|
+| metaTitle > 60 | site/blog messages | ~426 页 |
+| metaDescription > 160 | site messages | ~383 页 |
+| 文章 title > 60 | blog frontmatter | 280 个 |
+| 文章 excerpt > 160 | blog frontmatter | 447 个 |
+
+## 处理原则（用户确认，2026-08-06）
+
+1. **不截断**（不用 "…" 切）
+2. **不走翻译工具**（逐条人工改写：模型逐条本地化撰写，不调 translate-tool）
+3. 压缩冗余：删地区枚举（"for US, UK, Canadian, Australian, AU, NZ" → "for Global"）、合并重复后缀（"| Decree 248 Guide" + "| GACC, CCC, NMPA" 只留 1 个）
+4. **保留核心 SEO 关键词**（GACC / CCC / NMPA / GB 7718-2025 / CNIPA / Decree 248 / SRRC）
+5. title ≤ 60、desc ≤ 160，语义完整自然
+
+## 保护字段（逐字节不变）
+
+- blog frontmatter：slug / date / category / references（URL + 标准号）不变
+- 硬事实数值：Decree 248/249、2022-01-01、CIFER、GB 7718-2025、17 类、5 年有效期等不变
+- Blog namespace：author=David Zhang、readTime='min'、contactEmailPlaceholder 等不变
+
+## 执行日志
+
+| 批 | 语言 | commit | 验证 |
+|----|------|--------|------|
+| 批 1（en 基准批） | en | ff50cdee | ✅ CI 全绿（site 17 title + 9 desc、blog 2 keys、frontmatter 2 title + 11 excerpt） |
+| 批 2 | de/es/fr/it/ja（高流量） | ⏳ 进行中 | |
+| 批 3 | ru/ar/pt/ko/tr/vi/th | ⏳ 待做 | |
+| 批 4 | id/ms/pl/nl/cs/ro/el/hu | ⏳ 待做 | |
+| 批 5 | 其余 27 语言 | ⏳ 待做 | |
+
+## 批次计划
+
+| 批 | 语言 | 内容量 |
+|----|------|--------|
+| 批 2 | de/es/fr/it/ja（高流量） | 每语言 site 超长 keys + blog 2 keys + 11 frontmatter（ja 仅 1 个 site key） |
+| 批 3 | ru/ar/pt/ko/tr/vi/th | × 7 |
+| 批 4 | id/ms/pl/nl/cs/ro/el/hu | × 8 |
+| 批 5 | 其余 27 语言 | × 27 |
+
+每批 = 手动改写 → CI → build → commit → push → 部署验证。
+
+## 执行方式（延续 D5/D6 模式）
+
+- en 新值作为**母版**（/tmp/d7_en_fixes.json + /tmp/d7_en_fm_fixes.json，commit ff50cdee）
+- 每语言 1 个子代理，逐条人工本地化改写（不直译 en，按该语言已有 D1-D6 本土视角措辞）
+- 每语言处理范围：site messages 超长 metaTitle/metaDescription + blog messages Blog.metaTitle/metaDescription + blog frontmatter title/excerpt（11 篇）
+- 子代理完成后：父代理统一 CI → build（site+blog）→ commit → push → 部署 → 线上验证

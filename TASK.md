@@ -153,6 +153,7 @@
 | D6-2c | vi/tr/ar/th/uk 正文本地化增强（5 语言 × 4 核心篇） | d16d6242 | ✅ 线上验证通过（vi thanh long/NOIP、tr kayısı/fındık、ar الإمارات/التمور、th กรมทรัพย์สิน/TISI、uk УкрСЕПРО/соняшникова 均命中） |
 | D6-2d | id/ms/hi/cs/ro 正文本地化增强（5 语言 × 4 核心篇） | 29d65355 | ✅ 线上验证通过（id kelapa/sawit、ms durian/MyIPO、hi मसाले/बासमती、cs pivo/průmyslového、ro OSIM/mierea 均命中） |
 | D6-2e | bg/el/hu/sr/hr 正文本地化增强（5 语言 × 4 核心篇） | 2b7c4dee | ✅ 线上验证通过（bg розовото、el Έλληνες/ελληνικές、hu NÉBIH/SZTNH、sr малина、hr kozmetike 均命中） |
+| D6-2f | da/fi/sk/af/az 正文本地化增强（5 语言 × 4 核心篇） | 65de47f4 | ⏳ 线上验证中（已提交已 push） |
 
 ## ✅ D6-2 第一批完成（2026-08-06）
 

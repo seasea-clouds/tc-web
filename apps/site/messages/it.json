@@ -74,8 +74,8 @@
     "trustedByTitle": "La fiducia dei nostri partner",
     "processDesc": "Un processo in 6 passaggi collaudati per portare il tuo marchio in Cina",
     "trustedByDesc": "Unisciti ai produttori italiani e internazionali che esportano già in Cina con noi",
-    "metaTitle": "Conformità SinoTrade | Servizi di conformità alle importazioni dalla Cina",
-    "metaDescription": "Conformità delle importazioni dalla Cina con uno sportello unico: registrazione GACC, certificazione CCC, archiviazione di cosmetici NMPA, conformità delle etichette. Scelto dagli esportatori in oltre 50 paesi.",
+    "metaTitle": "Conformità SinoTrade | Servizi di importazione dalla Cina",
+    "metaDescription": "Conformità import Cina a sportello unico: registrazione GACC, certificazione CCC, notifica NMPA cosmetici ed etichette. Scelto da esportatori in 50+ paesi.",
     "heroPortalCta": "Prova il nostro strumento di autovalutazione della conformità in 3 passaggi →"
   },
   "Services": {
@@ -155,8 +155,8 @@
     "cosmeticsPoints7": "Aggiornamenti normativi continui e consulenza sulla conformità",
     "ecommercePoints7": "Aggiornamenti normativi continui e consulenza sulla conformità",
     "brandPoints7": "Aggiornamenti normativi continui e consulenza sulla conformità",
-    "metaTitle": "Servizi di conformità alle importazioni in Cina | GACC, CCC, NMPA ed etichette",
-    "metaDescription": "Conformità alle importazioni in Cina a sportello unico: registrazione alimentare GACC, certificazione CCC, notifica cosmetici NMPA, conformità etichette e protezione del marchio. Oltre 15 anni di esperienza."
+    "metaTitle": "Servizi di conformità per la Cina | GACC, CCC, NMPA",
+    "metaDescription": "Servizi di conformità per la Cina: registrazione GACC, certificazione CCC, notifica NMPA cosmetici, etichette e protezione del marchio. 15 anni di esperienza."
   },
   "ServiceGacc": {
     "heroTitle": "Registrazione GACC per esportatori italiani di alimenti",
@@ -204,7 +204,7 @@
     "coverItems4": "Preparazione e traduzione completa della documentazione",
     "coverItems5": "Verifica di conformità delle etichette (GB 7718 / GB 28050)",
     "coverItems6": "Rinnovo della registrazione e monitoraggio della validità di 5 anni",
-    "metaTitle": "Registrazione GACC per esportatori italiani | Decreto 248/249 Guida",
+    "metaTitle": "Registrazione GACC per esportatori italiani | Decreto 248",
     "metaDescription": "Registrazione alimentare GACC per esportatori italiani: prosciutto, formaggio, olio, pasta, vino. Decreto 248/249, sistema CIFER, dogana. Valutazione gratuita."
   },
   "ServiceLabel": {
@@ -251,8 +251,8 @@
     "coverItems4": "Progettazione personalizzata di etichette cinesi",
     "coverItems5": "Creazione di modelli di etichette per la produzione",
     "coverItems6": "Supporto all’etichettatura per lo sdoganamento",
-    "metaTitle": "Conformità etichetta cinese per prodotti italiani | GB 7718 & GB 28050",
-    "metaDescription": "Conformità etichette per il mercato cinese: GB 7718-2025, GB 28050-2025. Verifica, progettazione e sdoganamento per produttori italiani. Evitate il respingimento in dogana."
+    "metaTitle": "Conformità etichette per la Cina | GB 7718-2025 e GB 28050",
+    "metaDescription": "Conformità etichette per il mercato cinese: GB 7718-2025 e GB 28050-2025. Verifica e progettazione etichette per evitare il respingimento in dogana."
   },
   "ServiceCcc": {
     "heroTitle": "Certificazione CCC per produttori italiani",
@@ -300,8 +300,8 @@
     "coverItems4": "Preparazione all’ispezione di fabbrica (anche a distanza)",
     "coverItems5": "Supporto alla conformità di sorveglianza annuale",
     "coverItems6": "Nuove categorie dal 2025, incluse le batterie agli ioni di litio",
-    "metaTitle": "Certificazione CCC per produttori italiani | Import-export in Cina",
-    "metaDescription": "Certificazione CCC per produttori italiani di componenti elettronici e elettrodomestici. Test, audit di fabbrica, certificato. Valutazione gratuita del catalogo CCC."
+    "metaTitle": "Certificazione CCC in Cina | Guida per produttori italiani",
+    "metaDescription": "Certificazione CCC per produttori italiani: componenti elettronici ed elettrodomestici. Test, audit di fabbrica e approvazione rapida."
   },
   "ServiceCosmetics": {
     "heroTitle": "Registrazione NMPA cosmetici per marchi italiani",
@@ -349,8 +349,8 @@
     "coverItems4": "Coordinamento della valutazione di sicurezza ai sensi del CSAR",
     "coverItems5": "Supporto alle prove di efficacia per le funzioni dichiarate",
     "coverItems6": "Conformità post-commercializzazione (monitoraggio eventi avversi, relazioni annuali)",
-    "metaTitle": "Registrazione NMPA cosmetici per marchi italiani | Import Cina",
-    "metaDescription": "Notifica e registrazione NMPA per marchi cosmetici italiani: cura pelle, make-up, capelli. CSAR, valutazione sicurezza, agente responsabile. Valutazione gratuita."
+    "metaTitle": "Notifica NMPA cosmetici per marchi italiani | Import Cina",
+    "metaDescription": "Notifica e registrazione NMPA per marchi cosmetici italiani: pelle, make-up e capelli. Conformità CSAR e agente responsabile. Valutazione gratuita."
   },
   "ServiceEcommerce": {
     "heroTitle": "E-commerce transfrontaliero per marchi italiani in Cina",
@@ -396,8 +396,8 @@
     "coverItems4": "Ottimizzazione fiscale transfrontaliera (dazio 0% entro i limiti)",
     "coverItems5": "Consulenza sull’esenzione dalle etichette per le vendite transfrontaliere",
     "coverItems6": "Conformità dei dati (PIPL) per le operazioni transfrontaliere",
-    "metaTitle": "E-commerce transfrontaliero Cina per marchi italiani | Tmall, JD, Douyin",
-    "metaDescription": "E-commerce transfrontaliero per marchi italiani in Cina: Tmall Global, JD Worldwide, Douyin Global. Onboarding, magazzino doganale, ottimizzazione fiscale. Vendete senza società locale."
+    "metaTitle": "E-commerce transfrontaliero per la Cina | Tmall, JD, Douyin",
+    "metaDescription": "E-commerce transfrontaliero per marchi italiani: Tmall Global, JD e Douyin, magazzino doganale e ottimizzazione fiscale. Vendete in Cina senza società locale."
   },
   "ServiceBrand": {
     "heroTitle": "Protezione del marchio per aziende italiane in Cina",
@@ -443,7 +443,7 @@
     "coverItems4": "Registrazione doganale della proprietà intellettuale",
     "coverItems5": "Verifica di conformità pubblicitaria (legge cinese sulla pubblicità)",
     "coverItems6": "Strategia di protezione del marchio e guida all’enforcement",
-    "metaTitle": "Protezione marchio per aziende italiane | Registrazione CNIPA in Cina",
+    "metaTitle": "Registrazione marchio in Cina per aziende italiane | CNIPA",
     "metaDescription": "Registrazione e protezione del marchio in Cina per aziende italiane: CNIPA, Sistema Madrid, registrazione doganale. Fermate la pirateria del marchio."
   },
   "ServiceCommon": {
@@ -521,8 +521,8 @@
     "premiumItems3": "Notifica cosmetici NMPA (se applicabile)",
     "premiumItems4": "Valutazione della conformità dei dati PIPL",
     "premiumItems5": "Consulenza continua sulla conformità",
-    "metaTitle": "Pacchetti di servizi di conformità per la Cina | Prezzi e piani",
-    "metaDescription": "Prezzi trasparenti per i servizi di conformità alle importazioni in Cina. Pacchetti per registrazione GACC, certificazione CCC e notifica NMPA. Scegliete il piano più adatto alle vostre esigenze."
+    "metaTitle": "Pacchetti di conformità per la Cina | Prezzi e piani",
+    "metaDescription": "Prezzi trasparenti per i pacchetti di conformità in Cina: registrazione GACC, certificazione CCC e notifica NMPA. Trova il piano giusto per il tuo marchio."
   },
   "Faq": {
     "heroTitle": "Domande frequenti",
@@ -628,8 +628,8 @@
       "ecommerceName": "E-commerce transfrontaliero",
       "brandName": "Protezione del marchio"
     },
-    "metaTitle": "Domande frequenti sulla conformità alle importazioni in Cina | GACC, CCC, NMPA",
-    "metaDescription": "Domande frequenti sulla conformità alle importazioni in Cina. Registrazione GACC, certificazione CCC, notifica cosmetici NMPA e requisiti delle etichette: risposte degli esperti."
+    "metaTitle": "FAQ sulla conformità in Cina | GACC, CCC, NMPA",
+    "metaDescription": "FAQ sulla conformità in Cina: registrazione GACC, certificazione CCC, notifica NMPA cosmetici e requisiti etichette, con risposte degli esperti."
   },
   "About": {
     "heroTitle": "Chi siamo: SinoTrade Compliance",
@@ -687,8 +687,8 @@
     "partners7": "🔬 Istituti di ricerca",
     "partners8": "🤝 Associazioni di categoria",
     "values5": "Eccellenza: soluzioni di conformità della massima qualità, con attenzione a ogni dettaglio.",
-    "metaTitle": "Chi siamo: SinoTrade Compliance | Oltre 15 anni di esperienza nelle importazioni in Cina",
-    "metaDescription": "Scoprite SinoTrade Compliance – il vostro partner di fiducia per la conformità alle importazioni in Cina. Oltre 15 anni di esperienza, oltre 50 paesi serviti. Incontrate il nostro team di esperti."
+    "metaTitle": "SinoTrade Compliance | 15+ anni di esperienza in Cina",
+    "metaDescription": "SinoTrade Compliance: oltre 15 anni di esperienza nella conformità alle importazioni in Cina. Oltre 50 paesi serviti, un unico partner di fiducia."
   },
   "ThankYou": {
     "title": "Grazie!",
@@ -758,8 +758,8 @@
     "next": "Successivo",
     "pageInfo": "",
     "of": " di ",
-    "metaTitle": "Approfondimenti sulla conformità alle importazioni in Cina | Guide GACC, CCC, NMPA",
-    "metaDescription": "Guide esperte sulla conformità alle importazioni in Cina. Consigli sulla registrazione GACC, aggiornamenti sulla certificazione CCC, novità sulla notifica NMPA e approfondimenti sulla conformità delle etichette. Resta informato."
+    "metaTitle": "Approfondimenti conformità Cina | Guide GACC, CCC, NMPA",
+    "metaDescription": "Guide esperte sulla conformità in Cina: registrazione GACC, certificazione CCC, notifica NMPA cosmetici e conformità etichette. Resta aggiornato."
   },
   "OrganizationJsonLd": {
     "description": "Servizi di consulenza normativa unica sull'importazione per la Cina: registrazione GACC, etichettatura cinese, certificazione CCC, archiviazione di cosmetici NMPA, commercio elettronico transfrontaliero e protezione del marchio.",
@@ -789,8 +789,8 @@
     "samrDefinition": "SAMR è l'Amministrazione statale cinese per la regolamentazione del mercato. Supervisiona la qualità dei prodotti, gli standard di sicurezza alimentare, l’applicazione delle norme antimonopolio e la supervisione del mercato. SAMR collabora con GACC sulla regolamentazione di alimenti e cosmetici."
   },
   "Quote": {
-    "metaTitle": "Preventivo gratuito per la conformità in Cina | SinoTrade Compliance",
-    "metaDescription": "Richiedi una consulenza gratuita per la conformità alle importazioni in Cina. Registrazione GACC, certificazione CCC, notifica NMPA, revisione delle etichette. Risposta entro 24 ore.",
+    "metaTitle": "Preventivo gratuito per la conformità in Cina | SinoTrade",
+    "metaDescription": "Consulenza gratuita per la conformità in Cina: registrazione GACC, certificazione CCC, notifica NMPA e revisione etichette. Risposta entro 24 ore.",
     "ogTitle": "Richiedi un preventivo gratuito: SinoTrade Compliance",
     "heroTitle": "Richiedi un preventivo gratuito",
     "heroSubtitle": "Indicateci i servizi di cui avete bisogno e vi risponderemo entro 24 ore con un piano personalizzato.",
@@ -815,8 +815,8 @@
     "privacy": "Rispettiamo la vostra privacy. Nessuno spam, mai."
   },
   "Testimonials": {
-    "metaTitle": "Testimonianze dei clienti | Storie di successo con SinoTrade Compliance",
-    "metaDescription": "Leggete cosa dicono i nostri clienti sui nostri servizi di conformità alle importazioni in Cina. Storie di successo reali di esportatori di alimenti, cosmetici ed elettronica in tutto il mondo.",
+    "metaTitle": "Testimonianze | SinoTrade Compliance, storie di successo",
+    "metaDescription": "Cosa dicono i nostri clienti sulla conformità in Cina: storie di successo reali di esportatori di alimenti, cosmetici ed elettronica.",
     "ogTitle": "Testimonianze dei clienti: SinoTrade Compliance",
     "heroTitle": "Cosa dicono i nostri clienti",
     "heroSubtitle": "La scelta degli esportatori in oltre 50 paesi. Ecco cosa raccontano di aver lavorato con noi.",
@@ -855,7 +855,7 @@
     "coverItems6": "Monitoraggio normativo continuo e supporto al rinnovo GACC",
     "coverItems7": "Consulenza strategica con i Consorzi di tutela DOP italiani",
     "metaDescription": "Export Cina per caseifici italiani: registrazione GACC, etichette GB 7718, registrazione SAMR per formule. Consulenza per latticini DOP.",
-    "metaTitle": "Esportare latticini in Cina | Registrazione GACC per caseifici italiani"
+    "metaTitle": "Esportare latticini in Cina | GACC per caseifici italiani"
   },
   "IndustryMeat": {
     "heroTitle": "Conformità Cina per esportatori italiani di carni e salumi",
@@ -887,7 +887,7 @@
     "coverItems6": "Monitoraggio normativo continuo e supporto al rinnovo",
     "coverItems7": "Consulenza strategica per salumi DOP e IGP italiani",
     "metaDescription": "Export Cina per produttori italiani di carne e salumi: registrazione CIFER, etichettatura, sdoganamento, catena del freddo. Consulenza esperta.",
-    "metaTitle": "Esportare carne e salumi in Cina | GACC per esportatori italiani"
+    "metaTitle": "Carne e salumi in Cina | GACC per esportatori italiani"
   },
   "IndustryWine": {
     "heroTitle": "Conformità Cina per esportatori italiani di vino",
@@ -920,7 +920,7 @@
     "coverItems6": "Monitoraggio normativo continuo e supporto al rinnovo",
     "coverItems7": "Consulenza strategica per vini DOP e DOCG italiani",
     "metaDescription": "Export Cina per cantine italiane: registrazione GACC, etichette GB 10344, protezione del marchio, sdoganamento. Chianti & Barolo in Cina.",
-    "metaTitle": "Esportare vino italiano in Cina | GACC e protezione del marchio"
+    "metaTitle": "Vino italiano in Cina | GACC e protezione del marchio"
   },
   "IndustrySkincare": {
     "heroTitle": "Conformità Cina per marchi italiani di skincare e cosmesi",
@@ -972,7 +972,7 @@
     "jsonldDescription": "Registrazione GACC dei mangimi, approvazione MOA, verifica degli ingredienti e conformità dell'etichettatura per i produttori italiani di alimenti per animali domestici che entrano in Cina.",
     "cta": "Richiedi una consulenza pet food",
     "metaDescription": "Export Cina per produttori italiani di cibo per animali: registrazione GACC, approvazione MOA, verifica formulazione, etichettatura.",
-    "metaTitle": "Esportare pet food in Cina | GACC e MOA per produttori italiani"
+    "metaTitle": "Pet food in Cina | GACC e MOA per produttori italiani"
   },
   "IndustrySupplements": {
     "heroTitle": "Conformità Cina per esportatori italiani di integratori",
@@ -1024,7 +1024,7 @@
     "jsonldDescription": "Registrazione SAMR del latte artificiale, registrazione GACC degli alimenti, notifica NMPA dei cosmetici e conformità di sicurezza per i marchi italiani di prodotti per neonati e maternità che entrano in Cina.",
     "cta": "Richiedi una consulenza per prodotti baby",
     "metaDescription": "Export Cina per marchi italiani di prodotti per bambini: registrazione SAMR per formule, GACC, notifica NMPA per cosmetici baby. Consulenza esperta.",
-    "metaTitle": "Esportare prodotti baby in Cina | SAMR, GACC e NMPA per marchi italiani"
+    "metaTitle": "Esportare prodotti baby in Cina | SAMR, GACC e NMPA"
   },
   "IndustryElectronics": {
     "heroTitle": "Conformità Cina per esportatori italiani di elettronica",
@@ -1050,7 +1050,7 @@
     "jsonldDescription": "Certificazione CCC, approvazione SRRC, conformità dell'etichettatura cinese e protezione IP presso il CNIPA per i produttori italiani di elettronica che entrano nel mercato cinese.",
     "cta": "Richiedi una consulenza per l’elettronica",
     "metaDescription": "Export Cina per produttori italiani di elettronica: certificazione CCC, approvazione SRRC, etichettatura, protezione del marchio. Consulenza esperta.",
-    "metaTitle": "Esportare elettronica in Cina | CCC e SRRC per produttori italiani"
+    "metaTitle": "Elettronica in Cina | CCC e SRRC per produttori italiani"
   },
   "IndustryMedical": {
     "heroTitle": "Importare dispositivi medici in Cina: registrazione NMPA per produttori italiani",
@@ -1083,7 +1083,7 @@
     "coverItems6": "Monitoraggio normativo continuo e supporto al rinnovo",
     "coverItems7": "Consulenza strategica dal distretto biomedicale di Mirandola alla Cina",
     "metaDescription": "Import Cina per la tecnologia medica italiana: registrazione NMPA (Classe I/II/III), valutazione clinica, licenza di importazione. Consulenza esperta.",
-    "metaTitle": "Importare dispositivi medici in Cina | Registrazione NMPA per produttori italiani"
+    "metaTitle": "Import dispositivi medici in Cina | Registrazione NMPA"
   },
   "IndustryEcommerce": {
     "heroTitle": "Conformità Cina per marchi italiani di e-commerce transfrontaliero",
@@ -1116,7 +1116,7 @@
     "coverItems6": "Monitoraggio normativo continuo e supporto alla conformità",
     "coverItems7": "Strategia di crescita dal CBEC all’approvazione completa del mercato",
     "metaDescription": "E-commerce transfrontaliero per marchi italiani: conformità CBEC, onboarding piattaforme, magazzino doganale, ottimizzazione fiscale.",
-    "metaTitle": "E-commerce transfrontaliero Cina per marchi italiani | Tmall, JD, Douyin"
+    "metaTitle": "E-commerce transfrontaliero in Cina | Tmall, JD, Douyin"
   },
   "IndustriesCommon": {
     "heroTitle": "Industrie che serviamo",
@@ -1148,7 +1148,7 @@
       "crossborderecommerce": "Commercio elettronico transfrontaliero",
       "crossborderecommerceDesc": "Normative CBEC, conformità della piattaforma e ottimizzazione fiscale."
     },
-    "metaTitle": "Conformità alle importazioni dalla Cina per settore | Servizi GACC, CCC, NMPA: guide alla conformità del settore | Conformità SinoTrade",
+    "metaTitle": "Conformità per settore in Cina | GACC, CCC e NMPA",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
@@ -1362,7 +1362,7 @@
     "intellectualTitle": "Proprietà intellettuale",
     "limitationText": "SinoTrade Compliance non sarà responsabile per eventuali danni indiretti, incidentali, speciali, consequenziali o punitivi derivanti dall'utilizzo dei nostri servizi.",
     "limitationTitle": "Limitazione di responsabilità",
-    "metaDescription": "Termini di servizio per la conformità di SinoTrade: condizioni per l'utilizzo dei nostri strumenti di controllo della conformità, rapporti e servizi di consulenza.",
+    "metaDescription": "Termini di servizio SinoTrade: condizioni per l'utilizzo dei nostri strumenti di controllo della conformità, rapporti e consulenza.",
     "metaTitle": "Termini di servizio |",
     "paymentText1": "Alcuni servizi richiedono un pagamento.",
     "paymentText2": "I report vengono consegnati digitalmente dopo il pagamento andato a buon fine.",

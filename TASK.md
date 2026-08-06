@@ -154,6 +154,7 @@
 | D6-2d | id/ms/hi/cs/ro 正文本地化增强（5 语言 × 4 核心篇） | 29d65355 | ✅ 线上验证通过（id kelapa/sawit、ms durian/MyIPO、hi मसाले/बासमती、cs pivo/průmyslového、ro OSIM/mierea 均命中） |
 | D6-2e | bg/el/hu/sr/hr 正文本地化增强（5 语言 × 4 核心篇） | 2b7c4dee | ✅ 线上验证通过（bg розовото、el Έλληνες/ελληνικές、hu NÉBIH/SZTNH、sr малина、hr kozmetike 均命中） |
 | D6-2f | da/fi/sk/af/az 正文本地化增强（5 语言 × 4 核心篇） | 65de47f4 | ✅ 线上验证通过（da smør/DKPTO、fi kaura/Suomalaisille、sk pivovary/slovenské、af rooibostee/CIPC、az AZPATENT 均命中） |
+| D6-2g | sv/no/sl/sq/ca 正文本地化增强（5 语言 × 4 核心篇） | d9bfa2cf | ⏳ 线上验证中（已提交已 push） |
 
 ## ✅ D6-2 第一批完成（2026-08-06）
 

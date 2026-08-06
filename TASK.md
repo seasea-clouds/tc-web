@@ -229,8 +229,8 @@
 
 | 批 | 语言 | commit | 验证 |
 |----|------|--------|------|
-| 批 1（en 基准批） | en | ff50cdee | ✅ CI 全绿（site 17 title + 9 desc、blog 2 keys、frontmatter 2 title + 11 excerpt） |
-| 批 2 | de/es/fr/it/ja（高流量） | ⏳ 进行中 | |
+| 批 1（en 基准批） | en | ff50cdee | ✅ CI 全绿（site 17 title + 9 desc、blog 2 keys、frontmatter 2 title + 11 excerpt；⚠️ 后修复 frontmatter --- 粘连 bug，见 47fa2a71） |
+| 批 2 | de/es/fr/it/ja（高流量） | 47fa2a71 | ✅ 2026-08-07 部署验证通过（site+blog 全量 curl 200，metaTitle 新值线上确认） |
 | 批 3 | ru/ar/pt/ko/tr/vi/th | ⏳ 待做 | |
 | 批 4 | id/ms/pl/nl/cs/ro/el/hu | ⏳ 待做 | |
 | 批 5 | 其余 27 语言 | ⏳ 待做 | |
@@ -252,3 +252,18 @@
 - 每语言 1 个子代理，逐条人工本地化改写（不直译 en，按该语言已有 D1-D6 本土视角措辞）
 - 每语言处理范围：site messages 超长 metaTitle/metaDescription + blog messages Blog.metaTitle/metaDescription + blog frontmatter title/excerpt（11 篇）
 - 子代理完成后：父代理统一 CI → build（site+blog）→ commit → push → 部署 → 线上验证
+
+## 批 2 完成记录（2026-08-07）
+
+- **de**：site 31 处（19 title + 12 desc）+ blog 2 处 + frontmatter 11 篇 → commit 47fa2a71
+- **es**：site 34 处（21 title + 13 desc）+ blog 2 处 + frontmatter 18 处 → commit 47fa2a71
+- **fr**：site 44 处（20 title + 24 desc）+ blog 2 处 + frontmatter 11 篇 → commit 47fa2a71
+- **it**：site 36 处（23 title + 13 desc）+ blog 2 处 + frontmatter 20 处 → commit 47fa2a71
+- **ja**：site 1 处（IndustriesCommon.metaTitle 69→41）+ blog/frontmatter 已达标未动 → commit 47fa2a71
+- **顺带修复**：ff50cdee 遗留 bug —— 11 个 en mdx frontmatter 的 `---` 结束符粘连在 excerpt 行尾（导致 Next.js 构建失败），补换行修复
+- **验证**：check-translations 48 语言 0 问题；md-article/format/structure 6 语言全过；site+blog 构建成功；线上 curl 全部 200 + 新 metaTitle 确认
+
+## 批 3 计划（ru/ar/pt/ko/tr/vi/th）
+
+- ru: T13/D12、ar: T6/D3、pt: T18/D15、ko: T1/D0、tr: T3/D4、vi: T13/D4、th: T5/D3（site messages 超长数，2026-08-07 扫描）
+- 方式：延续批 2 模式，7 语言并行子代理

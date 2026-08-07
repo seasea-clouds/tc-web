@@ -234,7 +234,8 @@
 | 批 3 | ru/ar/pt/ko/tr/vi/th | 5d2a9c09 | ✅ 2026-08-07 部署验证通过（7 语言 blog 新 metaTitle 线上确认；ko 308 重定向正常） |
 | 批 4 | id/ms/pl/nl/cs/ro/el/hu | 27fbcef9 | ✅ 2026-08-07 部署验证通过（8 语言 blog 新 metaTitle 线上确认） |
 | 批 5-1 | af/az/be/bg/bn/ca/da/fa/fi | d45194e3 | ✅ 2026-08-07 部署验证通过（9 语言 blog 新 metaTitle 线上确认；zh 已达标跳过） |
-| 批 5-2 | he/hi/hr/hy/ka/ne/no/si/sk/sl/sq/sr/sv/sw/ta/uk/ur | ⏳ 待做 | |
+| 批 5-2a | he/hi/hr/hy/ka/ne/no/si/sk | 7543daca | ✅ 2026-08-07 部署验证通过（9 语言 blog 新 metaTitle 线上确认） |
+| 批 5-2b | sl/sq/sr/sv/sw/ta/uk/ur | ⏳ 待做 | |
 
 ## 批次计划
 
@@ -244,7 +245,8 @@
 | 批 3 | ru/ar/pt/ko/tr/vi/th | × 7 |
 | 批 4 | id/ms/pl/nl/cs/ro/el/hu | × 8 ✅ |
 | 批 5-1 | af/az/be/bg/bn/ca/da/fa/fi（zh 达标跳过） | × 9 ✅ |
-| 批 5-2 | he/hi/hr/hy/ka/ne/no/si/sk/sl/sq/sr/sv/sw/ta/uk/ur | × 17 ⏳ |
+| 批 5-2a | he/hi/hr/hy/ka/ne/no/si/sk | × 9 ✅ |
+| 批 5-2b | sl/sq/sr/sv/sw/ta/uk/ur | × 8 ⏳ |
 
 每批 = 手动改写 → CI → build → commit → push → 部署验证。
 
@@ -303,3 +305,17 @@
 - **fi**：site 21（14 title + 7 desc）+ blog 2 + frontmatter 15 处（11 篇，title 3 处）→ commit d45194e3
 - **zh**：扫描 0 超长，已达标跳过
 - **验证**：check-translations 48 语言 0 问题；md-article/format/structure 9 语言全过；tsc 通过；site+blog 构建 4/4（check-seo-output 6529 通过 0 失败）；线上 9 语言 curl 200 + 新 metaTitle 确认
+
+## 批 5-2a 完成记录（2026-08-07）
+
+- **he**：site 5 title（Blog 99→54 清除重复段 + 零宽空格 U+200B 残留）+ frontmatter 7 处（5/11 篇）；blog 已达标未改 → commit 7543daca
+- **hi**：site 5（3 title + 2 desc）+ blog 1 + frontmatter 10 处（7/11 篇）→ commit 7543daca
+- **hr**：site 14（8 title + 6 desc）+ blog 1 + frontmatter 15 处（4 title + 11 excerpt）；IndustriesCommon 修正语义 "uvoza iz Kine"→"u Kinu" → commit 7543daca
+- **hy**：site 24（15 title + 9 desc）+ blog 2 + frontmatter 20 处（11/11 篇）；Blog 176→53 清除重复段 → commit 7543daca
+- **ka**：site 18（13 title + 5 desc）+ blog 2 + frontmatter 20 处（11/11 篇）；Blog 137→54 清除重复段 → commit 7543daca
+- **ne**：site 8（5 title + 3 desc）+ blog 0（已达标）+ frontmatter 10 篇 → commit 7543daca
+- **no**：site 10（7 title + 3 desc）+ blog 1 + frontmatter 17 处（6 title + 11 excerpt）；复合词连字符改空格（GACC registrering 等）→ commit 7543daca
+- **si**：site 11（8 title + 3 desc）+ blog 1 + frontmatter 12 处（10/11 篇）→ commit 7543daca
+- **sk**：site 16（11 title + 5 desc）+ blog 2 + frontmatter 14 处（11/11 篇）；IndustriesCommon 修正语义 "dovoz z Číny"→"do Číny" → commit 7543daca
+- **验证**：check-translations 48 语言 0 问题；md checks 9 语言全过；tsc 通过；build 2/2（check-seo-output 6529 通过 0 失败）；线上 9 语言 curl 200 + 新 metaTitle 确认
+- **附带修复**：he Home.metaTitle 零宽空格 U+200B 清理（达标字段垃圾字符）

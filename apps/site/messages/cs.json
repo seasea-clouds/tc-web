@@ -75,7 +75,7 @@
     "processDesc": "Jednoduchý 6krokový proces, jak dostat vaši značku do Číny",
     "trustedByDesc": "Připojte se k českým i mezinárodním značkám, které s námi rostou",
     "metaTitle": "Soulad SinoTrade | Čína Import Compliance Services",
-    "metaDescription": "Soulad s čínským dovozem na jednom místě: registrace GACC, certifikace CCC, archivace kosmetiky NMPA, dodržování štítků. Důvěřují exportéři ve více než 50 zemích.",
+    "metaDescription": "Soulad s čínským dovozem na jednom místě: registrace GACC, certifikace CCC, kosmetika NMPA a etikety. Důvěřují exportéři ve více než 50 zemích.",
     "heroPortalCta": "Vyzkoušejte náš 3-krokový nástroj pro kontrolu shody →"
   },
   "Services": {
@@ -155,8 +155,8 @@
     "cosmeticsPoints7": "Průběžné aktualizace předpisů a poradenství ke shodě",
     "ecommercePoints7": "Průběžné aktualizace předpisů a poradenství ke shodě",
     "brandPoints7": "Průběžné aktualizace předpisů a poradenství ke shodě",
-    "metaTitle": "Služby shody s čínským dovozem | GACC, CCC, NMPA a etikety – SinoTrade Compliance",
-    "metaDescription": "Shoda s čínským dovozem na jednom místě: registrace potravin GACC, certifikace CCC, oznámení kosmetiky u NMPA, shoda etiket a ochrana značky. 15+ let zkušeností."
+    "metaTitle": "Služby shody s čínským dovozem | GACC, CCC, NMPA",
+    "metaDescription": "Shoda s čínským dovozem na jednom místě: registrace GACC, certifikace CCC, kosmetika NMPA, etikety a ochrana značky. 15+ let zkušeností."
   },
   "ServiceGacc": {
     "heroTitle": "Registrace GACC potravin – pro české vývozce",
@@ -521,8 +521,8 @@
     "premiumItems3": "Oznámení kosmetiky u NMPA (pokud se týká)",
     "premiumItems4": "Posouzení shody s PIPL",
     "premiumItems5": "Průběžné poradenství ke shodě",
-    "metaTitle": "Balíčky shody a ceny | GACC, CCC a NMPA – SinoTrade Compliance",
-    "metaDescription": "Porovnejte balíčky shody s čínským dovozem: registrace GACC, certifikace CCC a oznámení u NMPA s transparentními fixními cenami. Najděte ten pravý pro svou značku."
+    "metaTitle": "Balíčky shody a ceny | GACC, CCC, NMPA",
+    "metaDescription": "Porovnejte balíčky shody s čínským dovozem: registrace GACC, certifikace CCC a NMPA s transparentními fixními cenami. Najděte ten pravý pro svou značku."
   },
   "Faq": {
     "heroTitle": "Často kladené otázky",
@@ -628,8 +628,8 @@
       "ecommerceName": "Přeshraniční e-commerce",
       "brandName": "Ochrana značky"
     },
-    "metaTitle": "Časté dotazy ke shodě s čínským dovozem | GACC, CCC, NMPA – SinoTrade Compliance",
-    "metaDescription": "Časté dotazy ke shodě s čínským dovozem: registrace GACC podle nařízení 248, certifikace CCC, oznámení kosmetiky u NMPA a požadavky na čínské etikety – odpovědi pro české exportéry."
+    "metaTitle": "Časté dotazy ke shodě s čínským dovozem | GACC, CCC, NMPA",
+    "metaDescription": "Časté dotazy ke shodě s čínským dovozem: registrace GACC (nařízení 248), certifikace CCC, kosmetika NMPA a čínské etikety – odpovědi pro české exportéry."
   },
   "About": {
     "heroTitle": "O SinoTrade Compliance",
@@ -687,7 +687,7 @@
     "partners7": "🔬 Výzkumné ústavy",
     "partners8": "🤝 Průmyslová sdružení",
     "values5": "Dokonalost: Dodáváme řešení shody nejvyšší kvality s důrazem na každý detail.",
-    "metaTitle": "O SinoTrade Compliance | 15+ let zkušeností s dovozem do Číny",
+    "metaTitle": "SinoTrade Compliance | 15+ let zkušeností s dovozem do Číny",
     "metaDescription": "Seznamte se s týmem SinoTrade Compliance – 15+ let zkušeností se shodou s čínským dovozem, 500+ úspěšných projektů a klienti z 50+ zemí."
   },
   "ThankYou": {
@@ -758,8 +758,8 @@
     "next": "Další",
     "pageInfo": "",
     "of": " z ",
-    "metaTitle": "Přehledy a průvodci shody při dovozu do Číny | GACC, CCC, NMPA",
-    "metaDescription": "Odborné průvodce shodou při dovozu do Číny. Registrace GACC podle nařízení 248, certifikace CCC, oznámení kosmetiky u NMPA a čínské etikety. Sledujte změny předpisů a připravte svůj vstup na čínský trh."
+    "metaTitle": "Průvodci shodou při dovozu do Číny | GACC, CCC, NMPA",
+    "metaDescription": "Odborné průvodce shodou při dovozu do Číny: registrace GACC (nařízení 248), certifikace CCC, kosmetika NMPA a etikety. Připravte svůj vstup na čínský trh."
   },
   "OrganizationJsonLd": {
     "description": "Komplexní poradenské služby týkající se regulace dovozu pro Čínu – registrace GACC, čínské značení, certifikace CCC, archivace kosmetiky NMPA, přeshraniční elektronický obchod a ochrana značky.",
@@ -789,7 +789,7 @@
     "samrDefinition": "SAMR je čínská státní správa pro tržní regulaci. Dohlíží na kvalitu produktů, normy bezpečnosti potravin, antimonopolní vymáhání a dozor nad trhem. SAMR spolupracuje s GACC na regulaci potravin a kosmetiky."
   },
   "Quote": {
-    "metaTitle": "Získejte bezplatnou nabídku shody s Čínou | SinoTrade Compliance",
+    "metaTitle": "Získejte bezplatnou nabídku shody s Čínou",
     "metaDescription": "Vyžádejte si bezplatnou nabídku shody s čínským dovozem – registrace GACC, certifikace CCC, oznámení u NMPA, kontrola etiket. Odpovíme do 24 hodin.",
     "ogTitle": "Získejte bezplatnou nabídku: SinoTrade Compliance",
     "heroTitle": "Získejte bezplatnou nabídku shody",
@@ -816,7 +816,7 @@
   },
   "Testimonials": {
     "metaTitle": "Reference klientů | SinoTrade Compliance",
-    "metaDescription": "Přečtěte si, co říkají exportéři potravin, kosmetiky a elektroniky o službách shody s čínským dovozem od SinoTrade – skutečné příběhy značek, které nyní prodávají v Číně.",
+    "metaDescription": "Přečtěte si reference exportérů potravin, kosmetiky a elektroniky o službách SinoTrade – skutečné příběhy značek, které nyní prodávají v Číně.",
     "ogTitle": "Reference klientů: SinoTrade Compliance",
     "heroTitle": "Co o nás říkají exportéři",
     "heroSubtitle": "Exportéři z 50+ zemí svěřují SinoTrade svou shodu s Čínou. Přečtěte si, co říkají o spolupráci s námi.",
@@ -1148,7 +1148,7 @@
       "crossborderecommerce": "Přeshraniční elektronický obchod",
       "crossborderecommerceDesc": "Předpisy CBEC, dodržování platforem a daňová optimalizace."
     },
-    "metaTitle": "Shoda s dovozem z Číny podle odvětví | GACC, CCC, NMPA Services - Industry Compliance Guides | Soulad se SinoTrade",
+    "metaTitle": "Shoda s dovozem do Číny podle odvětví | GACC, CCC, NMPA",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {

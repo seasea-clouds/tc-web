@@ -74,8 +74,8 @@
     "trustedByTitle": "Nasi partnerzy",
     "processDesc": "Prosty, 6-etapowy proces wejścia Twojej marki na rynek chiński",
     "trustedByDesc": "Dołącz do marek, które już rozwijają sprzedaż w Chinach",
-    "metaTitle": "Zgodność z przepisami chińskiego handlu | Usługi w zakresie zgodności z przepisami importowymi w Chinach",
-    "metaDescription": "Kompleksowa zgodność importu z Chin: rejestracja GACC, certyfikacja CCC, archiwizacja kosmetyków NMPA, zgodność z etykietami. Zaufali nam eksporterzy w ponad 50 krajach.",
+    "metaTitle": "SinoTrade Compliance | Zgodność importowa z Chinami",
+    "metaDescription": "Kompleksowa zgodność importowa z Chinami: rejestracja GACC, certyfikacja CCC, zgłoszenia kosmetyków NMPA i etykiety. Zaufali nam eksporterzy z 50+ krajów.",
     "heroPortalCta": "Sprawdź zgodność swoich produktów w 3 krokach →"
   },
   "Services": {
@@ -155,8 +155,8 @@
     "cosmeticsPoints7": "Ciągłe aktualizacje przepisów i doradztwo w zakresie zgodności",
     "ecommercePoints7": "Ciągłe aktualizacje przepisów i doradztwo w zakresie zgodności",
     "brandPoints7": "Ciągłe aktualizacje przepisów i doradztwo w zakresie zgodności",
-    "metaTitle": "Usługi zgodności importowej do Chin | GACC, CCC, NMPA i etykiety",
-    "metaDescription": "Kompleksowa zgodność importowa z Chinami: rejestracja żywności GACC, certyfikacja CCC, zgłoszenia kosmetyków NMPA, etykiety i ochrona marki. 15+ lat doświadczenia."
+    "metaTitle": "Usługi zgodności importowej do Chin | GACC, CCC, NMPA",
+    "metaDescription": "Zgodność importowa z Chinami: rejestracja żywności GACC, certyfikacja CCC, zgłoszenia kosmetyków NMPA, etykiety i ochrona marki. 15+ lat doświadczenia."
   },
   "ServiceGacc": {
     "heroTitle": "Rejestracja GACC dla polskich eksporterów żywności",
@@ -205,7 +205,7 @@
     "coverItems5": "Weryfikacja zgodności etykiet (GB 7718 / GB 28050)",
     "coverItems6": "Odnowienie rejestracji i monitoring 5-letniego okresu ważności",
     "metaTitle": "Rejestracja GACC dla polskich eksporterów | Dekret 248/249",
-    "metaDescription": "Rejestracja GACC dla polskich producentów i eksporterów żywności: mleczarstwo, mięso, jabłka, słodycze. Prowadzenie dossier CIFER, dekret 248/249, tłumaczenia dokumentów."
+    "metaDescription": "Rejestracja GACC dla polskich eksporterów żywności: mleczarstwo, mięso, jabłka, słodycze. Dossier CIFER, dekret 248/249, tłumaczenia dokumentów."
   },
   "ServiceLabel": {
     "heroTitle": "Zgodność chińskich etykiet dla polskich produktów",
@@ -350,7 +350,7 @@
     "coverItems5": "Wsparcie testów skuteczności dla deklarowanych funkcji",
     "coverItems6": "Zgodność po wprowadzeniu do obrotu (monitorowanie zdarzeń niepożądanych, raporty roczne)",
     "metaTitle": "Rejestracja kosmetyków NMPA dla polskich marek | Chiny",
-    "metaDescription": "Rejestracja i zgłoszenie kosmetyków NMPA dla polskich marek (pielęgnacja, makijaż, perfumy) przy eksporcie do Chin. Kategoryzacja, badania, odpowiedzialna osoba w Chinach."
+    "metaDescription": "Zgłoszenie kosmetyków NMPA dla polskich marek: pielęgnacja, makijaż, perfumy. Kategoryzacja, badania, odpowiedzialna osoba w Chinach."
   },
   "ServiceEcommerce": {
     "heroTitle": "E-commerce transgraniczny dla polskich marek",
@@ -443,7 +443,7 @@
     "coverItems4": "Rejestracja własności intelektualnej w urzędzie celnym",
     "coverItems5": "Weryfikacja zgodności reklam (chińska ustawa o reklamie)",
     "coverItems6": "Strategia ochrony marki i doradztwo w egzekwowaniu praw",
-    "metaTitle": "Rejestracja znaku towarowego w Chinach dla polskich firm | CNIPA",
+    "metaTitle": "Rejestracja znaku towarowego w Chinach | CNIPA",
     "metaDescription": "Rejestracja i ochrona znaku towarowego w Chinach dla polskich firm: CNIPA, System Madrycki, celna rejestracja IP, walka z podróbkami."
   },
   "ServiceCommon": {
@@ -522,7 +522,7 @@
     "premiumItems4": "Ocena zgodności danych PIPL",
     "premiumItems5": "Bieżące doradztwo zgodnościowe",
     "metaTitle": "Pakiety usług zgodności importowej do Chin | Ceny i plany",
-    "metaDescription": "Przejrzyste ceny usług zgodności importowej do Chin. Pakiety z rejestracją GACC, certyfikacją CCC i zgłoszeniami NMPA. Wybierz plan dopasowany do Twoich potrzeb."
+    "metaDescription": "Przejrzyste ceny zgodności importowej do Chin. Pakiety z rejestracją GACC, certyfikacją CCC i zgłoszeniami NMPA. Wybierz plan dopasowany do Twoich potrzeb."
   },
   "Faq": {
     "heroTitle": "Często zadawane pytania",
@@ -628,8 +628,8 @@
       "ecommerceName": "E-commerce transgraniczny",
       "brandName": "Ochrona marki"
     },
-    "metaTitle": "FAQ: zgodność importowa z Chinami | Pytania o GACC, CCC i NMPA",
-    "metaDescription": "Najczęstsze pytania o zgodność importową z Chinami. Rejestracja GACC, certyfikacja CCC, zgłoszenia kosmetyków NMPA i wymogi etykiet — odpowiedzi ekspertów SinoTrade."
+    "metaTitle": "FAQ: zgodność importowa z Chinami | GACC, CCC i NMPA",
+    "metaDescription": "Najczęstsze pytania o zgodność importową z Chinami. Rejestracja GACC, certyfikacja CCC, zgłoszenia NMPA i wymogi etykiet — odpowiedzi ekspertów SinoTrade."
   },
   "About": {
     "heroTitle": "O SinoTrade Compliance",
@@ -687,8 +687,8 @@
     "partners7": "🔬 Instytuty badawcze",
     "partners8": "🤝 Stowarzyszenia branżowe",
     "values5": "Doskonałość: najwyższa jakość rozwiązań zgodnościowych z dbałością o każdy szczegół.",
-    "metaTitle": "O SinoTrade Compliance | 15+ lat doświadczenia w imporcie z Chin",
-    "metaDescription": "Poznaj SinoTrade Compliance — zaufanego partnera w zakresie zgodności importowej z Chinami. 15+ lat doświadczenia, klienci z 50+ krajów. Poznaj nasz zespół ekspertów."
+    "metaTitle": "SinoTrade Compliance | 15+ lat w imporcie z Chin",
+    "metaDescription": "Poznaj SinoTrade Compliance — zaufanego partnera w zgodności importowej z Chinami. 15+ lat doświadczenia, klienci z 50+ krajów, zespół ekspertów."
   },
   "ThankYou": {
     "title": "Dziękujemy!",
@@ -758,8 +758,8 @@
     "next": "Następny",
     "pageInfo": "",
     "of": " z ",
-    "metaTitle": "Zgodność z chińskimi przepisami | Poradniki GACC, CCC i NMPA dla polskich eksporterów",
-    "metaDescription": "Eksperckie poradniki o zgodności z przepisami przy imporcie do Chin. Wskazówki dotyczące rejestracji GACC, aktualności o certyfikacji CCC, informacje o zgłoszeniach NMPA i o zgodności etykiet. Bądź na bieżąco."
+    "metaTitle": "Zgodność importowa z Chinami | Poradniki GACC, CCC i NMPA",
+    "metaDescription": "Eksperckie poradniki o zgodności importowej z Chinami: rejestracja GACC, certyfikacja CCC, zgłoszenia kosmetyków NMPA i zgodność etykiet. Bądź na bieżąco."
   },
   "OrganizationJsonLd": {
     "description": "Kompleksowe usługi doradztwa w zakresie regulacji importu dla Chin — rejestracja GACC, chińskie etykietowanie, certyfikacja CCC, rejestracja kosmetyków NMPA, transgraniczny handel elektroniczny i ochrona marki.",
@@ -789,8 +789,8 @@
     "samrDefinition": "SAMR to chińska administracja państwowa ds. regulacji rynku. Nadzoruje jakość produktów, standardy bezpieczeństwa żywności, egzekwowanie przepisów antymonopolowych i nadzór rynku. SAMR współpracuje z GACC w zakresie regulacji dotyczących żywności i kosmetyków."
   },
   "Quote": {
-    "metaTitle": "Bezpłatna wycena zgodności importowej do Chin | SinoTrade Compliance",
-    "metaDescription": "Poproś o bezpłatną konsultację w sprawie zgodności importowej z Chinami. Rejestracja GACC, certyfikacja CCC, zgłoszenia NMPA, przegląd etykiet. Odpowiedź w ciągu 24 godzin.",
+    "metaTitle": "Bezpłatna wycena zgodności importowej do Chin | SinoTrade",
+    "metaDescription": "Poproś o bezpłatną wycenę zgodności importowej z Chinami: rejestracja GACC, certyfikacja CCC, zgłoszenia NMPA, przegląd etykiet. Odpowiedź w ciągu 24 godzin.",
     "ogTitle": "Uzyskaj bezpłatną wycenę | SinoTrade Compliance",
     "heroTitle": "Uzyskaj bezpłatną wycenę",
     "heroSubtitle": "Powiedz nam, jakich usług potrzebujesz, a my odpowiemy w ciągu 24 godzin spersonalizowanym planem.",
@@ -816,7 +816,7 @@
   },
   "Testimonials": {
     "metaTitle": "Opinie klientów | Historie sukcesu SinoTrade Compliance",
-    "metaDescription": "Zobacz, co mówią nasi klienci o usługach zgodności importowej do Chin. Prawdziwe historie sukcesu eksporterów żywności, kosmetyków i elektroniki z całego świata.",
+    "metaDescription": "Zobacz, co mówią klienci o usługach zgodności importowej z Chinami. Prawdziwe historie sukcesu eksporterów żywności, kosmetyków i elektroniki z całego świata.",
     "ogTitle": "Opinie klientów: SinoTrade Compliance",
     "heroTitle": "Co mówią nasi klienci",
     "heroSubtitle": "Zaufali nam eksporterzy z 50+ krajów. Oto, co mówią o współpracy z nami.",
@@ -945,7 +945,7 @@
     "jsonldName": "Usługi zgodności dla polskich marek kosmetycznych w Chinach",
     "jsonldDescription": "Zgłoszenie do NMPA zgodnie z CSAR, ocena bezpieczeństwa składników, wytyczne dotyczące zwolnienia z testów na zwierzętach oraz doradztwo importowe dla polskich marek kosmetyków naturalnych i dermokosmetyków wchodzących na rynek chiński.",
     "cta": "Bezpłatna ocena zgodności kosmetyków",
-    "metaDescription": "Eksport polskiej kosmetyki pielęgnacyjnej do Chin: zgłoszenie i rejestracja NMPA, ocena bezpieczeństwa, zwolnienie z testów na zwierzętach. Dla polskich producentów.",
+    "metaDescription": "Eksport polskiej kosmetyki pielęgnacyjnej do Chin: zgłoszenie NMPA, ocena bezpieczeństwa, zgodność z CSAR, zwolnienie z testów na zwierzętach.",
     "metaTitle": "Polska kosmetyka w Chinach | Zgłoszenie NMPA CSAR"
   },
   "IndustryPetFood": {
@@ -1116,7 +1116,7 @@
     "coverItems6": "Bieżący monitoring regulacyjny i wsparcie zgodności dla polskich marek",
     "coverItems7": "Szkolenia i doradztwo w zakresie zgodności platform e-commerce dla polskich marek",
     "metaDescription": "Uruchomienie e-commerce w Chinach dla polskich marek: Tmall Global, JD Worldwide, Douyin, zgodność CBEC, logistyka, płatności. Obsługa w języku polskim.",
-    "metaTitle": "E-commerce transgraniczny dla polskich marek | Tmall, JD, Douyin"
+    "metaTitle": "E-commerce transgraniczny w Chinach | Tmall, JD, Douyin"
   },
   "IndustriesCommon": {
     "heroTitle": "Branże, które obsługujemy",
@@ -1148,7 +1148,7 @@
       "crossborderecommerce": "Transgraniczny handel elektroniczny",
       "crossborderecommerceDesc": "Regulacje CBEC, zgodność platform i optymalizacja podatkowa."
     },
-    "metaTitle": "Zgodność importu z Chin według branży | Usługi GACC, CCC, NMPA — przewodniki dotyczące zgodności branżowej | Zgodność z przepisami chińskiego handlu",
+    "metaTitle": "Zgodność importu z Chin według branży | GACC, CCC i NMPA",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
@@ -1304,7 +1304,7 @@
     "privacyLink": "Polityka prywatności"
   },
   "Privacy": {
-    "metaTitle": "Polityka prywatności | Zgodność z przepisami chińskiego handlu",
+    "metaTitle": "Polityka prywatności | SinoTrade Compliance",
     "metaDescription": "Polityka prywatności dotycząca zgodności z przepisami SinoTrade — w jaki sposób gromadzimy, wykorzystujemy i chronimy Twoje dane osobowe.",
     "title": "Polityka prywatności",
     "infoTitle": "Informacje, które zbieramy",
@@ -1362,7 +1362,7 @@
     "intellectualTitle": "Własność intelektualna",
     "limitationText": "SinoTrade Compliance nie ponosi odpowiedzialności za jakiekolwiek szkody pośrednie, przypadkowe, szczególne, wynikowe lub karne wynikające z korzystania z naszych usług.",
     "limitationTitle": "Ograniczenie odpowiedzialności",
-    "metaDescription": "Warunki świadczenia usług w zakresie zgodności z przepisami SinoTrade — warunki korzystania z naszych narzędzi do sprawdzania zgodności, raportów i usług doradczych.",
+    "metaDescription": "Warunki świadczenia usług SinoTrade Compliance — korzystanie z narzędzi do sprawdzania zgodności, raportów i usług doradczych.",
     "metaTitle": "Warunki świadczenia usług |",
     "paymentText1": "Niektóre usługi wymagają zapłaty.",
     "paymentText2": "Raporty są dostarczane cyfrowo po pomyślnej płatności.",

@@ -75,7 +75,7 @@
     "processDesc": "Een eenvoudig zesstappenproces om uw merk in China te krijgen",
     "trustedByDesc": "Sluit u aan bij internationale merken die al met ons meegroeien",
     "metaTitle": "SinoTrade Compliance | China Importnalevingsdiensten",
-    "metaDescription": "One-stop China-importnaleving: GACC-registratie, CCC-certificering, NMPA-cosmetica-aanvraag, naleving van labels. Vertrouwd door exporteurs in meer dan 50 landen.",
+    "metaDescription": "One-stop China-importnaleving: GACC-registratie, CCC-certificering, NMPA-cosmetica-aanvraag, etiketnaleving. Vertrouwd door exporteurs in meer dan 50 landen.",
     "heroPortalCta": "Probeer onze nalevingscontrole in 3 stappen →"
   },
   "Services": {
@@ -204,7 +204,7 @@
     "coverItems4": "Volledige documentatievoorbereiding en -vertaling",
     "coverItems5": "Etiketconformiteitsbeoordeling (GB 7718 / GB 28050)",
     "coverItems6": "Registratieverlenging en 5-jaars geldigheidstoezicht",
-    "metaTitle": "GACC-registratie voor Nederlandse exporteurs | Decreet 248/249",
+    "metaTitle": "GACC-registratie voor exporteurs | Decreet 248/249",
     "metaDescription": "GACC-registratie voor Nederlandse voedselexporteurs: zuivel, vlees, veevoer. Volledige CIFER-dossierbegeleiding, Decreet 248/249, documentvertaling."
   },
   "ServiceLabel": {
@@ -251,7 +251,7 @@
     "coverItems4": "Aangepast ontwerp van Chinese etiketten",
     "coverItems5": "Etikettemplates voor de productie",
     "coverItems6": "Ondersteuning bij de inklaring van geëtiketteerde goederen",
-    "metaTitle": "Chinese etiketten volgens GB 7718 | Voor Nederlandse producten",
+    "metaTitle": "Chinese etiketten volgens GB 7718-2025 | Voor merken",
     "metaDescription": "Ontwerp en controle van Chinese etiketten voor Nederlandse voedingsproducten: GB 7718-2025, GB 28050, voedingswaardetabel. Voorkom douaneafwijzingen."
   },
   "ServiceCcc": {
@@ -301,7 +301,7 @@
     "coverItems5": "Jaarlijkse nalevingscontrole voor ononderbroken markttoegang",
     "coverItems6": "Nieuwe categorieën vanaf 2025, waaronder lithium-ionbatterijen",
     "metaTitle": "CCC-certificering voor Nederlandse exporteurs | CE vs CCC",
-    "metaDescription": "CCC-certificering voor Nederlandse fabrikanten en exporteurs: het verschil met CE, hoe u het certificaat verkrijgt, kosten en doorlooptijden. Begeleiding in het Nederlands."
+    "metaDescription": "CCC-certificering voor Nederlandse fabrikanten en exporteurs: verschil met CE, certificaat verkrijgen, kosten en doorlooptijden. Begeleiding in het Nederlands."
   },
   "ServiceCosmetics": {
     "heroTitle": "NMPA-cosmetica-registratie voor Nederlandse merken",
@@ -350,7 +350,7 @@
     "coverItems5": "Ondersteuning bij werkzaamheidstesten voor geclaimde functies",
     "coverItems6": "Naleving na het op de markt brengen (bewaking van bijwerkingen, jaarverslagen)",
     "metaTitle": "NMPA-cosmetica-registratie voor Nederlandse merken | China",
-    "metaDescription": "NMPA-registratie en -aanmelding van cosmetica voor Nederlandse merken (verzorging, make-up, parfum) bij export naar China. Categorisering, testen, verantwoordelijke persoon in China."
+    "metaDescription": "NMPA-aanmelding en -registratie van cosmetica voor Nederlandse merken: CSAR-naleving, categorisering, testen en verantwoordelijke persoon in China."
   },
   "ServiceEcommerce": {
     "heroTitle": "Grensoverschrijdende e-commerce voor Nederlandse merken",
@@ -396,8 +396,8 @@
     "coverItems4": "Cross-border belastingoptimalisatie (0% invoerrechten binnen limieten)",
     "coverItems5": "Advies over etiketvrijstelling voor cross-border verkopen",
     "coverItems6": "Gegevensbescherming (PIPL) voor grensoverschrijdende activiteiten",
-    "metaTitle": "Grensoverschrijdende e-commerce voor Nederlandse merken | Tmall, JD",
-    "metaDescription": "E-commerce-lancering in China voor Nederlandse merken: Tmall Global, JD Worldwide, Douyin, CBEC-conformiteit, logistiek, betalingen. Begeleiding in het Nederlands."
+    "metaTitle": "Grensoverschrijdende e-commerce China | Tmall, JD, Douyin",
+    "metaDescription": "E-commerce-lancering in China voor Nederlandse merken: Tmall Global, JD Worldwide, Douyin en CBEC-conformiteit. Begeleiding in het Nederlands."
   },
   "ServiceBrand": {
     "heroTitle": "Merkbescherming in China voor Nederlandse bedrijven",
@@ -628,7 +628,7 @@
       "ecommerceName": "Grensoverschrijdende e-commerce",
       "brandName": "Merkbescherming"
     },
-    "metaTitle": "Veelgestelde vragen over China-importnaleving | GACC, CCC, NMPA",
+    "metaTitle": "Veelgestelde vragen China-importnaleving | GACC, CCC, NMPA",
     "metaDescription": "Veelgestelde vragen over China-importnaleving. GACC-registratie, CCC-certificering, NMPA-cosmetica-aanmelding en etiketvereisten – beantwoord door experts."
   },
   "About": {
@@ -758,8 +758,8 @@
     "next": "Volgende",
     "pageInfo": "",
     "of": " van ",
-    "metaTitle": "China-importnaleving | GACC-, CCC- en NMPA-gidsen voor exporteurs",
-    "metaDescription": "Deskundige gidsen voor China-importnaleving. Tips voor GACC-registratie, updates over CCC-certificering, nieuws over NMPA-cosmetica-aanmelding en inzichten in etiketnaleving. Blijf op de hoogte."
+    "metaTitle": "China-importnaleving | GACC-, CCC- en NMPA-gidsen",
+    "metaDescription": "Deskundige gidsen over China-importnaleving: GACC-registratie, CCC-certificering, NMPA-aanmelding en etiketnaleving. Blijf op de hoogte."
   },
   "OrganizationJsonLd": {
     "description": "One-stop adviesdiensten op het gebied van importregelgeving voor China: GACC-registratie, Chinese etikettering, CCC-certificering, NMPA-cosmetica-aanvraag, grensoverschrijdende e-commerce en merkbescherming.",
@@ -789,7 +789,7 @@
     "samrDefinition": "SAMR is de Chinese staatsadministratie voor marktregulering. Het houdt toezicht op de productkwaliteit, voedselveiligheidsnormen, anti-monopoliehandhaving en markttoezicht. SAMR werkt samen met GACC aan de regulering van voedsel en cosmetica."
   },
   "Quote": {
-    "metaTitle": "Vraag een gratis China-nalevingsofferte aan | SinoTrade Compliance",
+    "metaTitle": "Gratis China-nalevingsofferte | SinoTrade Compliance",
     "metaDescription": "Vraag een gratis adviesgesprek aan over China-importnaleving. GACC-registratie, CCC-certificering, NMPA-aanmelding, etiketbeoordeling. Reactie binnen 24 uur.",
     "ogTitle": "Vraag een gratis offerte aan: SinoTrade Compliance",
     "heroTitle": "Vraag een gratis offerte aan",
@@ -816,7 +816,7 @@
   },
   "Testimonials": {
     "metaTitle": "Klantbeoordelingen | Succesverhalen van SinoTrade Compliance",
-    "metaDescription": "Lees wat onze klanten zeggen over onze China-importnalevingsdiensten. Echte succesverhalen van exporteurs van levensmiddelen, cosmetica en elektronica wereldwijd – ook uit Nederland.",
+    "metaDescription": "Lees wat onze klanten zeggen over onze China-importnalevingsdiensten. Echte succesverhalen van exporteurs wereldwijd, ook uit Nederland.",
     "ogTitle": "Klantbeoordelingen: SinoTrade Compliance",
     "heroTitle": "Wat onze klanten zeggen",
     "heroSubtitle": "Vertrouwd door exporteurs in meer dan 50 landen. Dit zeggen zij over de samenwerking met ons.",
@@ -854,7 +854,7 @@
     "coverItems5": "Koudeketen- en temperatuurvereisten voor gekoelde en bevroren zuivel",
     "coverItems6": "Doorlopende monitoring van regelgeving en verlengingsondersteuning",
     "coverItems7": "Conformiteitstraining en advies voor de zuivelindustrie",
-    "metaDescription": "Export van Nederlandse zuivelproducten naar China: GACC-registratie, GB 7718-etiketten, koelketen, SAMR-registratie voor zuigelingenvoeding. Begeleiding in het Nederlands.",
+    "metaDescription": "Export van Nederlandse zuivel naar China: GACC-registratie, GB 7718-etiketten, koelketen en SAMR-registratie voor zuigelingenvoeding. Persoonlijke begeleiding.",
     "metaTitle": "Nederlandse zuivelexport naar China | GACC-registratie"
   },
   "IndustryMeat": {
@@ -886,8 +886,8 @@
     "coverItems5": "Controle van landspecifieke markttoegangsvereisten",
     "coverItems6": "Doorlopende monitoring van regelgeving en verlengingsondersteuning",
     "coverItems7": "Conformiteitstraining voor importeurs van vlees en zeevruchten",
-    "metaDescription": "Export van Nederlands varkensvlees, rundvlees en pluimvee naar China: exportvergunningen, GACC-registratie, veterinaire certificaten. Begeleiding voor Nederlandse producenten.",
-    "metaTitle": "Export van Nederlands vlees naar China | Vergunningen en GACC"
+    "metaDescription": "Export van Nederlands varkensvlees, rundvlees en pluimvee naar China: vergunningen, GACC-registratie en veterinaire certificaten. Begeleiding voor producenten.",
+    "metaTitle": "Export van Nederlands vlees naar China | GACC-vergunningen"
   },
   "IndustryWine": {
     "heroTitle": "Export van Nederlandse wijn en dranken naar China",
@@ -945,7 +945,7 @@
     "jsonldName": "China-conformiteitsdiensten voor huidverzorging en cosmetica",
     "jsonldDescription": "NMPA-aanmelding volgens CSAR, veiligheidsbeoordeling van ingrediënten, begeleiding bij de vrijstelling van dierproeven en importadvies voor Nederlandse cosmeticamerken die China betreden.",
     "cta": "Gratis CSAR-controle voor uw cosmeticamerk",
-    "metaDescription": "Export van Nederlandse huidverzorgingscosmetica naar China: NMPA-aanmelding en -registratie, veiligheidsbeoordeling, vrijstelling van dierproeven. Voor Nederlandse producenten.",
+    "metaDescription": "Export van Nederlandse huidverzorging naar China: NMPA-aanmelding en -registratie, veiligheidsbeoordeling en dierproefvrijstelling. Voor Nederlandse merken.",
     "metaTitle": "Nederlandse huidverzorging in China | NMPA-aanmelding CSAR"
   },
   "IndustryPetFood": {
@@ -972,7 +972,7 @@
     "jsonldDescription": "GACC-registratie, importlicenties voor diervoeders, goedkeuring van ingrediënten en etiketteringsconformiteit voor Nederlandse exporteurs van huisdiervoeding die de Chinese markt betreden.",
     "cta": "Gratis controle van uw diervoeding voor China",
     "metaDescription": "Export van diervoeding uit Nederland naar China: GACC-registratie, importvergunning, etiketteringseisen. Begeleiding voor Nederlandse producenten.",
-    "metaTitle": "Export van Nederlands diervoeding naar China | GACC-registratie"
+    "metaTitle": "Nederlandse diervoeding exporteren naar China | GACC"
   },
   "IndustrySupplements": {
     "heroTitle": "Nederlandse voedingssupplementen in China: conformiteit",
@@ -998,7 +998,7 @@
     "jsonldDescription": "SAMR-registratie van gezondheidsvoeding, beoordeling van ingrediënten, etiketteringsconformiteit en importadvies voor Nederlandse exporteurs van supplementen die China betreden.",
     "cta": "Gratis registratieadvies voor uw supplementen",
     "metaDescription": "Export van Nederlandse voedingssupplementen naar China: registratie van gezondheidsvoeding, etiketteringseisen, importkanalen. Voor Nederlandse producenten.",
-    "metaTitle": "Nederlandse voedingssupplementen in China | Importconformiteit"
+    "metaTitle": "Nederlandse voedingssupplementen | Importconformiteit China"
   },
   "IndustryBaby": {
     "heroTitle": "Nederlandse babyproducten in China: conformiteit",
@@ -1083,7 +1083,7 @@
     "coverItems6": "Doorlopende monitoring van regelgeving en verlengingsondersteuning",
     "coverItems7": "Conformiteitstraining en advies voor medische hulpmiddelen",
     "metaDescription": "Export van Nederlandse medische hulpmiddelen naar China: NMPA-classificatie, registratie klasse I/II/III, importlicentie, klinische tests indien vereist.",
-    "metaTitle": "Nederlandse medische hulpmiddelen in China | NMPA-registratie"
+    "metaTitle": "Nederlandse medische hulpmiddelen | NMPA-registratie China"
   },
   "IndustryEcommerce": {
     "heroTitle": "E-commerce in China voor Nederlandse merken",
@@ -1115,8 +1115,8 @@
     "coverItems5": "Beoordeling van vrijstelling van Chinese etiketten",
     "coverItems6": "Doorlopende monitoring van regelgeving en nalevingsondersteuning",
     "coverItems7": "Conformiteitstraining en advies voor e-commerceplatforms",
-    "metaDescription": "E-commerce-lancering in China voor Nederlandse merken: Tmall Global, JD Worldwide, Douyin, CBEC-conformiteit, logistiek, betalingen. Begeleiding in het Nederlands.",
-    "metaTitle": "Grensoverschrijdende e-commerce voor Nederlandse merken | Tmall, JD, Douyin"
+    "metaDescription": "E-commerce-lancering in China voor Nederlandse merken: Tmall Global, JD Worldwide, Douyin en CBEC-conformiteit. Begeleiding in het Nederlands.",
+    "metaTitle": "Grensoverschrijdende e-commerce China | Tmall, JD, Douyin"
   },
   "IndustriesCommon": {
     "heroTitle": "Industrieën die wij bedienen",
@@ -1148,7 +1148,7 @@
       "crossborderecommerce": "Grensoverschrijdende e-commerce",
       "crossborderecommerceDesc": "CBEC-regelgeving, platformnaleving en belastingoptimalisatie."
     },
-    "metaTitle": "China-importnaleving per sector | GACC, CCC, NMPA Services - Gidsen voor naleving van de industrie | SinoTrade Compliance",
+    "metaTitle": "China-importnaleving per sector | GACC, CCC, NMPA",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {

@@ -74,8 +74,8 @@
     "trustedByTitle": "Parteneri de încredere",
     "processDesc": "Un proces simplu, în 6 pași, pentru a vă duce marca în China",
     "trustedByDesc": "Alăturați-vă exportatorilor care dezvoltă deja vânzări în China alături de noi",
-    "metaTitle": "Conformitate SinoTrade | Servicii de conformitate a importurilor din China",
-    "metaDescription": "Conformitatea unică a importurilor din China: înregistrare GACC, certificare CCC, depunere a produselor cosmetice NMPA, conformitate cu etichete. Exportatorii din peste 50 de țări au încredere.",
+    "metaTitle": "Conformitate SinoTrade | Importuri din China",
+    "metaDescription": "Conformitate completă pentru importul în China: înregistrare GACC, certificare CCC, depunere NMPA și etichete conforme. Exportatori din 50 de țări au încredere.",
     "heroPortalCta": "Verificați conformitatea produselor dvs. în 3 pași →"
   },
   "Services": {
@@ -155,8 +155,8 @@
     "cosmeticsPoints7": "Actualizări continue de reglementare și consultanță de conformitate",
     "ecommercePoints7": "Actualizări continue de reglementare și consultanță de conformitate",
     "brandPoints7": "Actualizări continue de reglementare și consultanță de conformitate",
-    "metaTitle": "Servicii de conformitate pentru importul în China | GACC, CCC, NMPA și etichete",
-    "metaDescription": "Conformitate completă la import în China: înregistrarea alimentelor GACC, certificarea CCC, depunerea produselor cosmetice la NMPA, conformitatea etichetelor și protecția mărcii. Peste 15 ani de experiență."
+    "metaTitle": "Servicii de conformitate China | GACC, CCC, NMPA",
+    "metaDescription": "Conformitate completă la import în China: înregistrare GACC, certificare CCC, depunere NMPA, etichete și protecția mărcii. Peste 15 ani de experiență."
   },
   "ServiceGacc": {
     "heroTitle": "Înregistrare GACC alimente – pentru exportatorii români",
@@ -300,7 +300,7 @@
     "coverItems4": "Pregătirea auditului de fabrică (inclusiv varianta digitală)",
     "coverItems5": "Monitorizarea conformității anuale pentru acces neîntrerupt pe piață",
     "coverItems6": "Categorii noi din 2025, inclusiv bateriile litiu-ion",
-    "metaTitle": "Certificare CCC | ghid de export în China pentru producătorii români",
+    "metaTitle": "Certificare CCC | Export în China pentru producători",
     "metaDescription": "Certificare CCC pentru producătorii români: diferența față de CE, procesul de certificare, teste, audit de fabrică, durată și cost. Suport în limba română."
   },
   "ServiceCosmetics": {
@@ -349,7 +349,7 @@
     "coverItems4": "Coordonarea evaluării siguranței conform cerințelor NMPA",
     "coverItems5": "Asistență pentru testarea eficacității declarațiilor",
     "coverItems6": "Conformitate post-lansare (raportarea evenimentelor adverse, raport anual)",
-    "metaTitle": "Înregistrare cosmetice NMPA | mărci românești pe piața chineză",
+    "metaTitle": "Notificare cosmetice NMPA | Mărci pe piața chineză",
     "metaDescription": "Înregistrare cosmetice NMPA pentru mărci românești: clasificare, scutire de testare pe animale, persoană responsabilă în China, durată."
   },
   "ServiceEcommerce": {
@@ -396,7 +396,7 @@
     "coverItems4": "Optimizarea taxelor transfrontaliere (cotă zero în limita plafonului)",
     "coverItems5": "Îndrumare privind scutirea de etichetare pentru produsele transfrontaliere",
     "coverItems6": "Conformitatea datelor pentru operațiunile transfrontaliere (PIPL)",
-    "metaTitle": "E-commerce transfrontalier | ghid Tmall·JD pentru mărci românești",
+    "metaTitle": "Comerț electronic transfrontalier China | Ghid Tmall și JD",
     "metaDescription": "Mărci românești în China prin e-commerce transfrontalier: Tmall Global, JD Worldwide, conformitate CBEC, logistică, plăți."
   },
   "ServiceBrand": {
@@ -443,7 +443,7 @@
     "coverItems4": "Înregistrarea proprietății intelectuale în vamă",
     "coverItems5": "Verificarea conformității publicității conform Legii chineze a publicității",
     "coverItems6": "Strategia de brand și îndrumare pentru aplicare",
-    "metaTitle": "Înregistrarea mărcii în China | protejarea mărcilor românești",
+    "metaTitle": "Înregistrare marcă în China | Protecția mărcii",
     "metaDescription": "Înregistrarea mărcii în China pentru mărci românești: CNIPA, sistemul Madrid, contrafacere, protecție pe platforme."
   },
   "ServiceCommon": {
@@ -521,8 +521,8 @@
     "premiumItems3": "Depunerea produselor cosmetice la NMPA (dacă este cazul)",
     "premiumItems4": "Evaluarea conformității datelor PIPL",
     "premiumItems5": "Consultanță continuă de conformitate",
-    "metaTitle": "Pachete de conformitate pentru China și prețuri | Planuri GACC, CCC și NMPA",
-    "metaDescription": "Comparați pachetele de conformitate pentru importul în China: planuri de înregistrare GACC, certificare CCC și depunere NMPA, cu prețuri transparente și onorarii fixe. Găsiți pachetul potrivit pentru marca dvs."
+    "metaTitle": "Pachete conformitate China | Planuri GACC, CCC, NMPA",
+    "metaDescription": "Comparați pachetele de conformitate pentru importul în China: planuri GACC, CCC și NMPA, cu prețuri transparente și onorarii fixe. Alegeți pachetul potrivit."
   },
   "Faq": {
     "heroTitle": "Conformitatea importurilor în China: Întrebări frecvente",
@@ -628,8 +628,8 @@
       "ecommerceName": "Comerț electronic transfrontalier",
       "brandName": "Protecția mărcii"
     },
-    "metaTitle": "Conformitatea importurilor în China: Întrebări frecvente | GACC, CCC, NMPA",
-    "metaDescription": "Răspunsuri la cele mai frecvente întrebări despre conformitatea importurilor în China: înregistrarea GACC (Regulamentul 248), certificarea CCC, depunerea produselor cosmetice la NMPA și cerințele pentru etichetele chinezești — pentru exportatorii români."
+    "metaTitle": "Întrebări frecvente import China | GACC, CCC, NMPA",
+    "metaDescription": "Răspunsuri la întrebările frecvente despre conformitatea importurilor în China: înregistrare GACC (Decretul 248), certificare CCC, depunere NMPA și etichete."
   },
   "About": {
     "heroTitle": "Despre SinoTrade Compliance",
@@ -687,8 +687,8 @@
     "partners7": "🔬 Institute de cercetare",
     "partners8": "🤝 Asociații de industrie",
     "values5": "Excelență: soluții de conformitate de cea mai înaltă calitate, cu atenție la fiecare detaliu.",
-    "metaTitle": "Despre SinoTrade Compliance | Peste 15 ani de expertiză în importul din China",
-    "metaDescription": "Cunoașteți echipa SinoTrade Compliance — peste 15 ani de experiență în conformitatea importurilor din China, peste 500 de proiecte de succes și clienți din peste 50 de țări."
+    "metaTitle": "SinoTrade Compliance | 15+ ani de expertiză în import China",
+    "metaDescription": "Echipa SinoTrade Compliance: peste 15 ani de experiență în conformitatea importurilor din China, 500 de proiecte și clienți din 50 de țări."
   },
   "ThankYou": {
     "title": "Vă mulțumim!",
@@ -758,8 +758,8 @@
     "next": "Următorul",
     "pageInfo": "",
     "of": " din ",
-    "metaTitle": "Analize privind conformitatea importurilor din China | Ghiduri GACC, CCC și NMPA pentru exportatorii români",
-    "metaDescription": "Ghiduri de specialitate privind conformitatea importurilor din China: înregistrare GACC, certificare CCC, notificare NMPA pentru cosmetice și conformitatea etichetelor. Rămâneți la curent cu schimbările de reglementare."
+    "metaTitle": "Blog conformitate import China | Ghiduri GACC, CCC, NMPA",
+    "metaDescription": "Ghiduri despre conformitatea importurilor în China: înregistrare GACC, certificare CCC, notificare NMPA și etichete conforme. Rămâneți la curent."
   },
   "OrganizationJsonLd": {
     "description": "Servicii unice de consultanță privind reglementarea importurilor pentru China — înregistrare GACC, etichetare chineză, certificare CCC, depunere a produselor cosmetice NMPA, comerț electronic transfrontalier și protecție a mărcii.",
@@ -789,8 +789,8 @@
     "samrDefinition": "SAMR este Administrația de Stat pentru Reglementarea Pieței din China. Acesta supraveghează calitatea produselor, standardele de siguranță alimentară, aplicarea anti-monopol și supravegherea pieței. SAMR lucrează cu GACC în reglementarea produselor alimentare și cosmetice."
   },
   "Quote": {
-    "metaTitle": "Obțineți o cotație gratuită pentru conformitatea în China | SinoTrade Compliance",
-    "metaDescription": "Solicitați o cotație gratuită pentru conformitatea importurilor în China — înregistrare GACC, certificare CCC, depunere NMPA, revizuirea etichetei. Răspundem în termen de 24 de ore.",
+    "metaTitle": "Cotație gratuită conformitate China | SinoTrade",
+    "metaDescription": "Solicitați o cotație gratuită pentru conformitatea importurilor în China: înregistrare GACC, certificare CCC, revizuire etichetă. Răspundem în 24 de ore.",
     "ogTitle": "Obțineți o cotație gratuită: SinoTrade Compliance",
     "heroTitle": "Obțineți cotația gratuită de conformitate",
     "heroSubtitle": "Spuneți-ne de ce servicii aveți nevoie și vă vom reveni în termen de 24 de ore cu un plan personalizat.",
@@ -815,8 +815,8 @@
     "privacy": "Vă respectăm confidențialitatea. Fără spam, niciodată."
   },
   "Testimonials": {
-    "metaTitle": "Testimoniale ale clienților | Povești de succes ale exportatorilor cu SinoTrade Compliance",
-    "metaDescription": "Citiți ce spun exportatorii de produse alimentare, cosmetice și electronice despre serviciile SinoTrade de conformitate pentru importul în China — povești reale ale unor mărci care vând deja în China, de la vin și miere românească până la electronice.",
+    "metaTitle": "Testimoniale clienți | Povești de succes SinoTrade",
+    "metaDescription": "Exportatorii de alimente, cosmetice și electronice împărtășesc povești reale despre serviciile SinoTrade de conformitate pentru importul în China.",
     "ogTitle": "Testimoniale ale clienților: SinoTrade Compliance",
     "heroTitle": "Ce spun exportatorii despre noi",
     "heroSubtitle": "Exportatorii din peste 50 de țări au încredere în SinoTrade pentru conformitatea cu China. Iată ce spun despre colaborarea cu noi.",
@@ -1116,7 +1116,7 @@
     "coverItems6": "Monitorizarea permanentă a reglementărilor și suport pentru conformitate",
     "coverItems7": "Instruire și consiliere privind conformitatea platformelor de comerț electronic",
     "metaDescription": "Mărci românești în China prin e-commerce transfrontalier: Tmall Global, JD Worldwide, CBEC, logistică, plăți.",
-    "metaTitle": "E-commerce în China | ghid conformitate pentru mărci românești"
+    "metaTitle": "Comerț electronic China | Ghid de conformitate pentru mărci"
   },
   "IndustriesCommon": {
     "heroTitle": "Industrii pe care le deservim",
@@ -1148,7 +1148,7 @@
       "crossborderecommerce": "Comerț electronic transfrontalier",
       "crossborderecommerceDesc": "Reglementări CBEC, conformitatea platformei și optimizarea fiscală."
     },
-    "metaTitle": "Conformitatea importurilor din China de către industrie | Servicii GACC, CCC, NMPA - Ghiduri de conformitate în industrie | Conformitatea SinoTrade",
+    "metaTitle": "Conformitate import China pe industrii | GACC, CCC, NMPA",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
@@ -1362,7 +1362,7 @@
     "intellectualTitle": "Proprietate intelectuală",
     "limitationText": "SinoTrade Compliance nu va fi responsabil pentru nicio daune indirecte, incidentale, speciale, consecutive sau punitive care decurg din utilizarea serviciilor noastre.",
     "limitationTitle": "Limitarea răspunderii",
-    "metaDescription": "Termeni și condiții pentru conformitatea SinoTrade — condiții pentru utilizarea instrumentelor noastre de verificare a conformității, a rapoartelor și a serviciilor de consultanță.",
+    "metaDescription": "Termeni și condiții SinoTrade Compliance pentru utilizarea instrumentelor de verificare a conformității, a rapoartelor și a serviciilor de consultanță.",
     "metaTitle": "Termeni și condiții |",
     "paymentText1": "Anumite servicii necesită plată.",
     "paymentText2": "Rapoartele sunt livrate digital la plata cu succes.",

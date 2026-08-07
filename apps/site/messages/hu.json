@@ -74,8 +74,8 @@
     "trustedByTitle": "Megbízható partnerek",
     "processDesc": "Egy egyszerű, 6 lépésből álló folyamat, amellyel márkája Kínába kerülhet",
     "trustedByDesc": "Csatlakozzon a már velünk növekvő magyar és nemzetközi márkákhoz",
-    "metaTitle": "SinoTrade megfelelőség | Kínai import megfelelőségi szolgáltatások",
-    "metaDescription": "Egyablakos kínai import megfelelőség: GACC regisztráció, CCC tanúsítás, NMPA kozmetikai bejelentés, címke megfelelőség. Több mint 50 ország exportőrei bíznak meg benne.",
+    "metaTitle": "Kínai import-megfelelőségi szolgáltatások | SinoTrade",
+    "metaDescription": "Egyablakos kínai import-megfelelőség: GACC-regisztráció, CCC-tanúsítás, NMPA-bejelentés és címke-megfelelőség. 50+ ország exportőrei bíznak bennünk.",
     "heroPortalCta": "Próbálja ki 3 lépésből álló megfelelőség-ellenőrzőnket →"
   },
   "Services": {
@@ -155,8 +155,8 @@
     "cosmeticsPoints7": "Folyamatos szabályozási frissítések és megfelelőségi tanácsadás",
     "ecommercePoints7": "Folyamatos szabályozási frissítések és megfelelőségi tanácsadás",
     "brandPoints7": "Folyamatos szabályozási frissítések és megfelelőségi tanácsadás",
-    "metaTitle": "Kínai import-megfelelőségi szolgáltatások | GACC, CCC, NMPA és címke",
-    "metaDescription": "Egyablakos kínai import-megfelelőség: GACC élelmiszer-regisztráció, CCC-tanúsítás, NMPA kozmetikai bejelentés, címke-megfelelőség és márkavédelem. 15+ év tapasztalat."
+    "metaTitle": "Kínai import-megfelelőségi szolgáltatások | GACC, CCC, NMPA",
+    "metaDescription": "Egyablakos kínai import-megfelelőség: GACC élelmiszer-regisztráció, CCC-tanúsítás, NMPA-bejelentés, címke-megfelelőség és márkavédelem. 15+ év tapasztalat."
   },
   "ServiceGacc": {
     "heroTitle": "GACC élelmiszer-regisztráció – magyar exportőröknek",
@@ -300,7 +300,7 @@
     "coverItems4": "Gyári auditra való felkészítés (digitális auditot is beleértve)",
     "coverItems5": "Éves megfelelőségi nyomon követés a zavartalan piaci hozzáférésért",
     "coverItems6": "2025-ös új kategóriák, köztük a lítium-ion akkumulátorok",
-    "metaTitle": "CCC-tanúsítás | útmutató kínai exportáláshoz magyar gyártóknak",
+    "metaTitle": "CCC-tanúsítás Kínában | kötelező terméktanúsítás",
     "metaDescription": "CCC-tanúsítás magyar gyártóknak: különbség a CE-jelöléshez képest, tanúsítási folyamat, vizsgálatok, gyári audit, idő és költség. Magyar nyelvű támogatás."
   },
   "ServiceCosmetics": {
@@ -396,7 +396,7 @@
     "coverItems4": "Vámoptimalizálás (nulla vám a keretösszegen belül)",
     "coverItems5": "Címke-mentességi útmutató határon átnyúló termékekhez",
     "coverItems6": "Adatmegfelelőség a határon átnyúló működéshez (PIPL)",
-    "metaTitle": "Határon átnyúló e-kereskedelem | Tmall·JD útmutató magyar márkáknak",
+    "metaTitle": "Határon átnyúló e-kereskedelem Kínában | Tmall, JD, Douyin",
     "metaDescription": "Magyar márkák Kínában határon átnyúló e-kereskedelem révén: Tmall Global, JD Worldwide, CBEC-megfelelés, logisztika, fizetés."
   },
   "ServiceBrand": {
@@ -521,8 +521,8 @@
     "premiumItems3": "NMPA kozmetikai bejelentés (ha releváns)",
     "premiumItems4": "PIPL adatmegfelelőségi értékelés",
     "premiumItems5": "Folyamatos megfelelőségi tanácsadás",
-    "metaTitle": "Kínai megfelelőségi csomagok és árak | GACC, CCC és NMPA tervek",
-    "metaDescription": "Hasonlítsa össze a kínai import-megfelelőségi csomagokat: GACC-regisztráció, CCC-tanúsítás és NMPA-bejelentés tervek átlátható, rögzített díjszabással. Találja meg a márkájának legmegfelelőbbet."
+    "metaTitle": "Kínai megfelelőségi csomagok | GACC, CCC, NMPA",
+    "metaDescription": "Hasonlítsa össze a kínai megfelelőségi csomagokat: GACC, CCC és NMPA tervek átlátható, rögzített díjszabással. Találja meg a legmegfelelőbbet márkájának."
   },
   "Faq": {
     "heroTitle": "Kínai import-megfelelőség: gyakran ismételt kérdések",
@@ -628,8 +628,8 @@
       "ecommerceName": "Határon átnyúló e-kereskedelem",
       "brandName": "Márkavédelem"
     },
-    "metaTitle": "Kínai import-megfelelőség GYIK exportőröknek | GACC, CCC, NMPA",
-    "metaDescription": "Kínai import-megfelelőségi GYIK: GACC 248-as rendelet szerinti regisztráció, CCC-tanúsítás, NMPA kozmetikai bejelentés és kínai címke-követelmények – magyar exportőröknek megválaszolva."
+    "metaTitle": "Import-megfelelőségi GYIK exportőröknek | GACC, CCC, NMPA",
+    "metaDescription": "Kínai import-megfelelőségi GYIK: GACC 248-as rendelet, CCC-tanúsítás, NMPA-bejelentés és címke-követelmények magyar exportőröknek."
   },
   "About": {
     "heroTitle": "A SinoTrade Compliance-ről",
@@ -687,7 +687,7 @@
     "partners7": "🔬 Kutatóintézetek",
     "partners8": "🤝 Iparági szövetségek",
     "values5": "Kiválóság: A legmagasabb színvonalú megfelelőségi megoldások, minden részletre kiterjedő figyelemmel.",
-    "metaTitle": "A SinoTrade Compliance-ről | 15+ éves kínai importszakértelem",
+    "metaTitle": "SinoTrade Compliance | 15+ éves kínai importszakértelem",
     "metaDescription": "Ismerje meg a SinoTrade Compliance csapatát – 15+ év kínai import-megfelelőségi tapasztalat, 500+ sikeres projekt és ügyfelek 50+ országban."
   },
   "ThankYou": {
@@ -759,7 +759,7 @@
     "pageInfo": "",
     "of": " / ",
     "metaTitle": "Kínai import-megfelelőségi útmutatók | GACC, CCC, NMPA",
-    "metaDescription": "Szakértői útmutatók a kínai import megfelelőségéről. GACC regisztrációs tippek, CCC-tanúsítvány frissítések, NMPA bejelentési hírek, címkemegfelelőségi információk. Legyen tájékozott."
+    "metaDescription": "Szakértői útmutatók a kínai import-megfelelőségről: GACC-regisztráció, CCC-tanúsítás, NMPA-bejelentés és címke-megfelelőség. Legyen naprakész."
   },
   "OrganizationJsonLd": {
     "description": "Egyablakos importszabályozási tanácsadó szolgáltatások Kínában – GACC regisztráció, kínai címkézés, CCC tanúsítás, NMPA kozmetikai bejelentések, határokon átnyúló e-kereskedelem és márkavédelem.",
@@ -789,7 +789,7 @@
     "samrDefinition": "A SAMR Kína piacszabályozási államigazgatása. Felügyeli a termékminőséget, az élelmiszer-biztonsági szabványokat, a monopóliumellenes betartatást és a piacfelügyeletet. A SAMR együttműködik a GACC-vel az élelmiszer- és kozmetikai szabályozás terén."
   },
   "Quote": {
-    "metaTitle": "Kérjen ingyenes kínai megfelelőségi árajánlatot | SinoTrade Compliance",
+    "metaTitle": "Kínai megfelelőségi árajánlat | SinoTrade Compliance",
     "metaDescription": "Kérjen ingyenes kínai import-megfelelőségi árajánlatot – GACC-regisztráció, CCC-tanúsítás, NMPA-bejelentés, címke-ellenőrzés. 24 órán belül válaszolunk.",
     "ogTitle": "Kérjen ingyenes árajánlatot: SinoTrade Compliance",
     "heroTitle": "Kérjen ingyenes megfelelőségi árajánlatot",
@@ -815,8 +815,8 @@
     "privacy": "Tiszteletben tartjuk a magánéletét. Nincs spam, soha."
   },
   "Testimonials": {
-    "metaTitle": "Ügyfélbeszámolók | SinoTrade Compliance export-sikertörténetek",
-    "metaDescription": "Olvassa el, mit mondanak az élelmiszer-, kozmetikai és elektronikai exportőrök a SinoTrade kínai import-megfelelőségi szolgáltatásairól – valódi történetek a Kínában már sikeresen értékesítő márkáktól.",
+    "metaTitle": "Ügyfélbeszámolók | SinoTrade Compliance sikertörténetek",
+    "metaDescription": "Olvassa el, mit mondanak az élelmiszer-, kozmetikai és elektronikai exportőrök a SinoTrade kínai megfelelőségi szolgáltatásairól – valódi sikertörténetek.",
     "ogTitle": "Ügyfélbeszámolók: SinoTrade Compliance",
     "heroTitle": "Mit mondanak rólunk az exportőrök",
     "heroSubtitle": "50+ ország exportőrei bíznak a SinoTrade-re kínai megfelelőségi ügyeikben. Íme, mit mondanak a velünk való együttműködésről.",
@@ -1116,7 +1116,7 @@
     "coverItems6": "Folyamatos szabályozási monitoring és megfelelőségi támogatás",
     "coverItems7": "E-kereskedelmi platform-megfelelőségi képzés és tanácsadás",
     "metaDescription": "Magyar márkák Kínában határon átnyúló e-kereskedelem révén: Tmall Global, JD Worldwide, CBEC, logisztika, fizetés.",
-    "metaTitle": "E-kereskedelem Kínában | megfelelési útmutató magyar márkáknak"
+    "metaTitle": "E-kereskedelem Kínában | megfelelés magyar márkáknak"
   },
   "IndustriesCommon": {
     "heroTitle": "Iparágak, amelyeket kiszolgálunk",
@@ -1148,7 +1148,7 @@
       "crossborderecommerce": "Határokon átnyúló e-kereskedelem",
       "crossborderecommerceDesc": "CBEC előírások, platformmegfelelőség és adóoptimalizálás."
     },
-    "metaTitle": "A kínai import megfelelősége iparágonként | GACC, CCC, NMPA szolgáltatások – Iparági megfelelőségi útmutatók | SinoTrade megfelelőség",
+    "metaTitle": "Kínai import-megfelelőség iparágonként | GACC, CCC, NMPA",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {

@@ -235,7 +235,7 @@
 | 批 4 | id/ms/pl/nl/cs/ro/el/hu | 27fbcef9 | ✅ 2026-08-07 部署验证通过（8 语言 blog 新 metaTitle 线上确认） |
 | 批 5-1 | af/az/be/bg/bn/ca/da/fa/fi | d45194e3 | ✅ 2026-08-07 部署验证通过（9 语言 blog 新 metaTitle 线上确认；zh 已达标跳过） |
 | 批 5-2a | he/hi/hr/hy/ka/ne/no/si/sk | 7543daca | ✅ 2026-08-07 部署验证通过（9 语言 blog 新 metaTitle 线上确认） |
-| 批 5-2b | sl/sq/sr/sv/sw/ta/uk/ur | ⏳ 待做 | |
+| 批 5-2b | sl/sq/sr/sv/sw/ta/uk/ur | 875458dc | ✅ 2026-08-07 部署验证通过（8 语言 blog 新 metaTitle 线上确认） |
 
 ## 批次计划
 
@@ -246,7 +246,7 @@
 | 批 4 | id/ms/pl/nl/cs/ro/el/hu | × 8 ✅ |
 | 批 5-1 | af/az/be/bg/bn/ca/da/fa/fi（zh 达标跳过） | × 9 ✅ |
 | 批 5-2a | he/hi/hr/hy/ka/ne/no/si/sk | × 9 ✅ |
-| 批 5-2b | sl/sq/sr/sv/sw/ta/uk/ur | × 8 ⏳ |
+| 批 5-2b | sl/sq/sr/sv/sw/ta/uk/ur | × 8 ✅ |
 
 每批 = 手动改写 → CI → build → commit → push → 部署验证。
 
@@ -319,3 +319,16 @@
 - **sk**：site 16（11 title + 5 desc）+ blog 2 + frontmatter 14 处（11/11 篇）；IndustriesCommon 修正语义 "dovoz z Číny"→"do Číny" → commit 7543daca
 - **验证**：check-translations 48 语言 0 问题；md checks 9 语言全过；tsc 通过；build 2/2（check-seo-output 6529 通过 0 失败）；线上 9 语言 curl 200 + 新 metaTitle 确认
 - **附带修复**：he Home.metaTitle 零宽空格 U+200B 清理（达标字段垃圾字符）
+
+## 批 5-2b 完成记录（2026-08-07）
+
+- **sl**：site 17（11 title + 6 desc）+ blog 2 + frontmatter 17 处（9/11 篇）；Blog title 方向修正 "s Kitajske"→"na Kitajsko" → commit 875458dc
+- **sq**：site 22（14 title + 8 desc）+ blog 2 + frontmatter 20 处（11/11 篇）；Blog desc 错误译词 "KKK-së"→CCC → commit 875458dc
+- **sr**：site 12（7 title + 5 desc）+ blog 1 + frontmatter 14 处（9/11 篇）；Blog desc 方向修正 "iz Kine"→"u Kinu" → commit 875458dc
+- **sv**：site 12（7 title + 5 desc）+ blog 2 + frontmatter 14 处（11/11 篇）；复合词连字符改空格（GACC registrering 等）→ commit 875458dc
+- **sw**：site 20（14 title + 6 desc）+ blog 2 + frontmatter 15 处（11/11 篇）；Blog title 拼写修正 Insightsu→Maarifa → commit 875458dc
+- **ta**：site 12（7 title + 5 desc）+ blog 2 + frontmatter 19 处（11/11 篇）；pet-food title "பிராண்ட் பிராண்ட்" 重复修复 → commit 875458dc
+- **uk**：site 21（14 title + 7 desc）+ blog 2 + frontmatter 20 处（11/11 篇）→ commit 875458dc
+- **ur**：site 9（5 title + 4 desc）+ blog 0（已达标）+ frontmatter 12 处（10/11 篇）；Home desc 缩写统一为 GACC/CCC/NMPA 官方形式 → commit 875458dc
+- **验证**：check-translations 48 语言 0 问题；md checks 8 语言全过；tsc 通过；build 2/2；线上 8 语言 curl 200 + 新 metaTitle 确认
+- **至此 D7-SEO 全部 48 语言收官完成！**

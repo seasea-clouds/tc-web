@@ -332,3 +332,15 @@
 - **ur**：site 9（5 title + 4 desc）+ blog 0（已达标）+ frontmatter 12 处（10/11 篇）；Home desc 缩写统一为 GACC/CCC/NMPA 官方形式 → commit 875458dc
 - **验证**：check-translations 48 语言 0 问题；md checks 8 语言全过；tsc 通过；build 2/2；线上 8 语言 curl 200 + 新 metaTitle 确认
 - **至此 D7-SEO 全部 48 语言收官完成！**
+
+## D9 行业详情页 meta fallback bug 修复（2026-08-07）
+
+**背景**：D7/D8 完成后线上验证发现 /industries/[industry] 页面 description 仍超长（de 221 / fr 201 / en 205），D7/D8 精写的行业 metaDescription 未生效。
+
+**根因**：`apps/site/src/app/(site)/[locale]/industries/[industry]/page.tsx` 的 fallback 逻辑用 `!rawDesc.includes('.')` 判断 key 缺失——所有含句号的正常 metaDescription（410/480）被误判为缺失，fallback 到 heroSubtitle（超长）。
+
+**修复**：改为 `t.has('metaTitle')` / `t.has('metaDescription')`（next-intl 标准 key 存在性检查）→ commit 025034c
+- 验证：本地 build 6529 checks 0 fail；修复前 141 个行业 desc 超长 → 修复后 0 个
+- 部署：CF Pages 构建队列卡住（025034c queued 40+ 分钟），push 空 commit 11084022 触发后 025034c 部署成功（build/deploy success）
+- 线上验证：生产 + pages.dev 全部语言 metaDescription 生效（de 221→146 / fr 201→142 / en 205→152 / es 236→138 / uk 164→83）；10 行业 × 48 语言真实字符数全部 ≤160（fr/pet-food HTML 实体 172 为假象，解码后 157 合规）
+- heroTitle/heroSubtitle 超长（148+79 个）仅影响页面正文 hero 区文本，不影响 meta/SEO，暂不处理

@@ -155,8 +155,8 @@
     "cosmeticsPoints7": "Kontinuerlige regelverksoppdateringer og samsvarsrådgivning",
     "ecommercePoints7": "Kontinuerlige regelverksoppdateringer og samsvarsrådgivning",
     "brandPoints7": "Kontinuerlige regelverksoppdateringer og samsvarsrådgivning",
-    "metaTitle": "Tjenester for importsamsvar i Kina | GACC, CCC, NMPA og etikett",
-    "metaDescription": "Alt-i-ett-importsamsvar for Kina: GACC-matregistrering, CCC-sertifisering, NMPA-melding av kosmetikk, etikettsamsvar og merkevarebeskyttelse. 15+ års ekspertise."
+    "metaTitle": "Tjenester for importsamsvar i Kina | GACC, CCC, NMPA",
+    "metaDescription": "Alt i ett importsamsvar for Kina: GACC matregistrering, CCC sertifisering, NMPA kosmetikkmelding, etikettsamsvar og merkevarebeskyttelse. 15+ års erfaring."
   },
   "ServiceGacc": {
     "heroTitle": "GACC-matregistrering – for norske eksportører",
@@ -349,7 +349,7 @@
     "coverItems4": "Koordinering av sikkerhetsvurdering etter CSAR",
     "coverItems5": "Støtte til effekttesting for dokumenterte egenskaper",
     "coverItems6": "Oppfølging etter markedsføring (rapportering av bivirkninger, årsrapporter)",
-    "metaTitle": "NMPA-kosmetikkregistrering | Norske merkevarer på det kinesiske markedet",
+    "metaTitle": "NMPA kosmetikkregistrering | Norske merker i Kina",
     "metaDescription": "NMPA-registrering for norske kosmetikkmerker: klassifisering, unntak fra dyreforsøk, ansvarlig part i Kina, tid."
   },
   "ServiceEcommerce": {
@@ -396,7 +396,7 @@
     "coverItems4": "Grenseoverskridende skatteoptimalisering (0 % toll innenfor grensene)",
     "coverItems5": "Veiledning om etikettfritak for grenseoverskridende produkter",
     "coverItems6": "Datasamsvar (PIPL) for grenseoverskridende virksomhet",
-    "metaTitle": "Grenseoverskridende netthandel | Guide Tmall·JD for norske merker",
+    "metaTitle": "Grenseoverskridende netthandel | Tmall, JD og Douyin",
     "metaDescription": "Norske merker inn i Kina via grenseoverskridende netthandel: Tmall Global, JD Worldwide, CBEC-samsvar, logistikk, betaling."
   },
   "ServiceBrand": {
@@ -521,8 +521,8 @@
     "premiumItems3": "NMPA-kosmetikkmelding (hvis aktuelt)",
     "premiumItems4": "PIPL-samsvarsvurdering",
     "premiumItems5": "Løpende samsvarsrådgivning",
-    "metaTitle": "Samsvarspakker for Kina og priser | GACC-, CCC- og NMPA-planer",
-    "metaDescription": "Sammenlign samsvarspakker for import til Kina: GACC-registrering, CCC-sertifisering og NMPA-melding med transparente, faste priser. Finn den rette pakken for merkevaren din."
+    "metaTitle": "Samsvarspakker for import til Kina | GACC, CCC, NMPA",
+    "metaDescription": "Sammenlign samsvarspakker for import til Kina: GACC registrering, CCC sertifisering og NMPA melding med faste priser. Finn riktig pakke for merkevaren din."
   },
   "Faq": {
     "heroTitle": "Kina-importsamsvar: Ofte stilte spørsmål",
@@ -629,7 +629,7 @@
       "brandName": "Merkevarebeskyttelse"
     },
     "metaTitle": "Kina-importsamsvar: FAQ for eksportører | GACC, CCC, NMPA",
-    "metaDescription": "FAQ om importsamsvar i Kina: GACC-dekret 248-registrering, CCC-sertifisering, NMPA-melding av kosmetikk og kinesiske etikettkrav – besvart for norske og internasjonale eksportører."
+    "metaDescription": "FAQ om importsamsvar i Kina: GACC dekret 248, CCC sertifisering, NMPA kosmetikkmelding og etikettkrav, besvart for norske og internasjonale eksportører."
   },
   "About": {
     "heroTitle": "Om SinoTrade Compliance",
@@ -758,7 +758,7 @@
     "next": "Neste",
     "pageInfo": "",
     "of": " av ",
-    "metaTitle": "Innsikt og samsvarsveiledninger for Kinaimport | GACC, CCC, NMPA",
+    "metaTitle": "Innsikt og veiledninger for Kinaimport | GACC, CCC, NMPA",
     "metaDescription": "Ekspertguider om Kinas importregler. Alt om GACC-registrering, CCC-sertifisering, NMPA-melding av kosmetikk og kinesiske merkekrav for norske eksportører."
   },
   "OrganizationJsonLd": {
@@ -789,7 +789,7 @@
     "samrDefinition": "SAMR er Kinas statlige administrasjon for markedsregulering. Den fører tilsyn med produktkvalitet, mattrygghetsstandarder, anti-monopolhåndhevelse og markedstilsyn. SAMR samarbeider med GACC om mat- og kosmetikkregulering."
   },
   "Quote": {
-    "metaTitle": "Få et gratis tilbud på importsamsvar i Kina | SinoTrade Compliance",
+    "metaTitle": "Gratis tilbud på importsamsvar | SinoTrade Compliance",
     "metaDescription": "Be om et gratis tilbud på importsamsvar i Kina – GACC-registrering, CCC-sertifisering, NMPA-melding og etikettgjennomgang. Vi svarer innen 24 timer.",
     "ogTitle": "Få et gratis tilbud: SinoTrade Compliance",
     "heroTitle": "Få ditt gratis samsvarstilbud",
@@ -1148,7 +1148,7 @@
       "crossborderecommerce": "E-handel på tvers av landegrensene",
       "crossborderecommerceDesc": "CBEC-forskrifter, plattformoverholdelse og skatteoptimalisering."
     },
-    "metaTitle": "Kina importoverholdelse etter industri | GACC, CCC, NMPA Services - Bransjeoverholdelsesveiledninger | SinoTrade-overholdelse",
+    "metaTitle": "Kina importoverholdelse etter industri | GACC, CCC, NMPA",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {

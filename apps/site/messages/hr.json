@@ -75,7 +75,7 @@
     "processDesc": "Jednostavan postupak u 6 koraka za uvođenje vašeg brenda u Kinu",
     "trustedByDesc": "Pridružite se međunarodnim brendovima koji već rastu s nama",
     "metaTitle": "Usklađenost sa SinoTrade | Usluge usklađenosti uvoza iz Kine",
-    "metaDescription": "Usklađenost uvoza u Kinu na jednom mjestu: GACC registracija, CCC certifikacija, NMPA kozmetička prijava, usklađenost s etiketama. Vjeruju mu izvoznici u više od 50 zemalja.",
+    "metaDescription": "Usklađenost uvoza u Kinu na jednom mjestu: GACC registracija, CCC certifikacija, NMPA prijava i usklađenost oznaka. Vjeruju mu izvoznici iz 50+ zemalja.",
     "heroPortalCta": "Isprobajte našu provjeru usklađenosti u 3 koraka →"
   },
   "Services": {
@@ -156,7 +156,7 @@
     "ecommercePoints7": "Kontinuirana ažuriranja propisa i savjetovanje o usklađenosti",
     "brandPoints7": "Kontinuirana ažuriranja propisa i savjetovanje o usklađenosti",
     "metaTitle": "Usluge usklađenosti uvoza u Kinu | GACC, CCC, NMPA i oznake",
-    "metaDescription": "Usklađenost uvoza u Kinu na jednom mjestu: GACC registracija hrane, CCC certifikacija, NMPA prijava kozmetike, usklađenost oznaka i zaštita robne marke. 15+ godina stručnosti."
+    "metaDescription": "Usklađenost uvoza u Kinu na jednom mjestu: GACC registracija hrane, CCC certifikacija, NMPA prijava kozmetike i zaštita robne marke. 15+ godina stručnosti."
   },
   "ServiceGacc": {
     "heroTitle": "GACC registracija hrane – za hrvatske izvoznike",
@@ -300,7 +300,7 @@
     "coverItems4": "Priprema tvorničke revizije (uključujući digitalnu)",
     "coverItems5": "Godišnje praćenje usklađenosti za nesmetan pristup tržištu",
     "coverItems6": "Nove kategorije 2025., uključujući litij-ionske baterije",
-    "metaTitle": "CCC certifikat | vodič za izvoz u Kinu za hrvatske proizvođače",
+    "metaTitle": "CCC certifikat za Kinu | vodič za hrvatske proizvođače",
     "metaDescription": "CCC certifikat za hrvatske proizvođače: razlika od CE, proces certificiranja, ispitivanja, revizija tvornice, vrijeme i trošak. Podrška na hrvatskom."
   },
   "ServiceCosmetics": {
@@ -349,7 +349,7 @@
     "coverItems4": "Koordinacija procjene sigurnosti prema CSAR-u",
     "coverItems5": "Podrška za ispitivanje učinkovitosti deklariranih funkcija",
     "coverItems6": "Usklađenost nakon stavljanja na tržište (prijava štetnih događaja, godišnja izvješća)",
-    "metaTitle": "NMPA registracija kozmetike | hrvatski brendovi na kineskom tržištu",
+    "metaTitle": "NMPA registracija kozmetike | vodič za hrvatske brendove",
     "metaDescription": "NMPA registracija za hrvatske kozmetičke brendove: klasifikacija, oslobađanje od testiranja na životinjama, odgovorna osoba u Kini, vrijeme."
   },
   "ServiceEcommerce": {
@@ -396,7 +396,7 @@
     "coverItems4": "Optimizacija prekograničnog poreza (povlaštene stope unutar limita)",
     "coverItems5": "Smjernice za izuzeće oznaka za prekogranične proizvode",
     "coverItems6": "Usklađenost podataka (PIPL) za prekogranično poslovanje",
-    "metaTitle": "Prekogranična e-trgovina | vodič Tmall·JD za hrvatske brendove",
+    "metaTitle": "Prekogranična e-trgovina u Kini | vodič Tmall i JD",
     "metaDescription": "Hrvatski brendovi u Kini putem prekogranične e-trgovine: Tmall Global, JD Worldwide, usklađenost CBEC, logistika, plaćanja."
   },
   "ServiceBrand": {
@@ -521,8 +521,8 @@
     "premiumItems3": "NMPA prijava kozmetike (ako je primjenjivo)",
     "premiumItems4": "Procjena usklađenosti s PIPL-om",
     "premiumItems5": "Stalno savjetovanje o usklađenosti",
-    "metaTitle": "Paketi usklađenosti za Kinu i cijene | GACC, CCC i NMPA planovi",
-    "metaDescription": "Usporedite pakete usklađenosti uvoza u Kinu: GACC registracija, CCC certifikacija i NMPA prijava uz transparentne fiksne naknade. Pronađite pravi paket za svoju robnu marku."
+    "metaTitle": "Paketi i cijene usklađenosti za Kinu | GACC, CCC i NMPA",
+    "metaDescription": "Usporedite pakete usklađenosti za uvoz u Kinu: GACC, CCC i NMPA planovi uz transparentne fiksne naknade. Pronađite pravi paket za svoju robnu marku."
   },
   "Faq": {
     "heroTitle": "Usklađenost uvoza u Kinu: često postavljana pitanja",
@@ -628,8 +628,8 @@
       "ecommerceName": "Prekogranična e-trgovina",
       "brandName": "Zaštita robne marke"
     },
-    "metaTitle": "Česta pitanja o usklađenosti uvoza u Kinu za izvoznike | GACC, CCC, NMPA",
-    "metaDescription": "Česta pitanja o usklađenosti uvoza u Kinu: GACC Dekret 248, CCC certifikacija, NMPA prijava kozmetike i zahtjevi za kineske oznake — odgovori za hrvatske i europske izvoznike."
+    "metaTitle": "Česta pitanja o uvozu u Kinu | GACC, CCC, NMPA",
+    "metaDescription": "Česta pitanja o usklađenosti uvoza u Kinu: GACC Dekret 248, CCC certifikacija, NMPA prijava kozmetike i zahtjevi za oznake — odgovori za hrvatske izvoznike."
   },
   "About": {
     "heroTitle": "O tvrtki SinoTrade Compliance",
@@ -687,7 +687,7 @@
     "partners7": "🔬 Istraživački instituti",
     "partners8": "🤝 Industrijske udruge",
     "values5": "Izvrsnost: isporuka najkvalitetnijih rješenja usklađenosti s pažnjom na svaki detalj.",
-    "metaTitle": "O tvrtki SinoTrade Compliance | 15+ godina stručnosti za uvoz u Kinu",
+    "metaTitle": "O tvrtki SinoTrade | 15+ godina stručnosti za uvoz u Kinu",
     "metaDescription": "Upoznajte tim SinoTrade Compliance — 15+ godina iskustva u usklađenosti uvoza u Kinu, 500+ uspješnih projekata i klijenti u 50+ zemalja."
   },
   "ThankYou": {
@@ -759,7 +759,7 @@
     "pageInfo": "",
     "of": " od ",
     "metaTitle": "Uvidi i vodiči za usklađenost uvoza u Kinu | GACC, CCC, NMPA",
-    "metaDescription": "Stručni vodiči o usklađenosti uvoza u Kinu. GACC registracija prema Uredbi 248, CCC certifikacija, NMPA prijava kozmetike i sukladnost kineskih oznaka. Budite korak ispred regulatornih promjena i pripremite svoj ulazak na kinesko tržište."
+    "metaDescription": "Stručni vodiči o usklađenosti uvoza u Kinu: GACC registracija, CCC certifikacija, NMPA prijava i sukladnost oznaka. Pratite regulatorne promjene."
   },
   "OrganizationJsonLd": {
     "description": "Regulatorne konzultantske usluge uvoza na jednom mjestu za Kinu — GACC registracija, kinesko označavanje, CCC certifikacija, NMPA prijava kozmetike, prekogranična e-trgovina i zaštita robne marke.",
@@ -789,7 +789,7 @@
     "samrDefinition": "SAMR je kineska državna uprava za regulaciju tržišta. Nadzire kvalitetu proizvoda, standarde sigurnosti hrane, antimonopolsku provedbu i nadzor tržišta. SAMR surađuje s GACC-om na regulaciji hrane i kozmetike."
   },
   "Quote": {
-    "metaTitle": "Zatražite besplatnu ponudu za usklađenost uvoza u Kinu | SinoTrade Compliance",
+    "metaTitle": "Zatražite besplatnu ponudu | SinoTrade Compliance",
     "metaDescription": "Zatražite besplatnu ponudu za usklađenost uvoza u Kinu — GACC registracija, CCC certifikacija, NMPA prijava, pregled oznaka. Odgovaramo u roku od 24 sata.",
     "ogTitle": "Zatražite besplatnu ponudu: SinoTrade Compliance",
     "heroTitle": "Zatražite besplatnu ponudu za usklađenost",
@@ -816,7 +816,7 @@
   },
   "Testimonials": {
     "metaTitle": "Iskustva klijenata | Priče o uspjehu SinoTrade Compliance",
-    "metaDescription": "Pročitajte što izvoznici hrane, kozmetike i elektronike kažu o uslugama usklađenosti uvoza u Kinu tvrtke SinoTrade — stvarne priče robnih marki koje već prodaju u Kini.",
+    "metaDescription": "Pročitajte iskustva izvoznika hrane, kozmetike i elektronike o usklađenosti uvoza u Kinu tvrtke SinoTrade — stvarne priče brendova koji već prodaju u Kini.",
     "ogTitle": "Iskustva klijenata: SinoTrade Compliance",
     "heroTitle": "Što izvoznici kažu o nama",
     "heroSubtitle": "Izvoznici u 50+ zemalja vjeruju SinoTradeu za svoju usklađenost s Kinom. Evo što kažu o suradnji s nama.",
@@ -1148,7 +1148,7 @@
       "crossborderecommerce": "Prekogranična e-trgovina",
       "crossborderecommerceDesc": "CBEC propisi, usklađenost platforme i porezna optimizacija."
     },
-    "metaTitle": "Usklađenost uvoza iz Kine prema industriji | GACC, CCC, NMPA usluge - Vodiči za usklađenost industrije | Sukladnost SinoTrade",
+    "metaTitle": "Usklađenost uvoza u Kinu po industrijama | GACC, CCC, NMPA",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {

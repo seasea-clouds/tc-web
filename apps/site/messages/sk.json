@@ -74,8 +74,8 @@
     "trustedByTitle": "Dôveryhodní partneri",
     "processDesc": "Jednoduchý 6-krokový proces, ako dostať vašu značku do Číny",
     "trustedByDesc": "Pridajte sa k medzinárodným značkám, ktoré s nami už rastú",
-    "metaTitle": "Súlad SinoTrade | Služby dodržiavania pravidiel dovozu do Číny",
-    "metaDescription": "Súlad s dovozom z Číny na jednom mieste: registrácia GACC, certifikácia CCC, registrácia kozmetiky NMPA, dodržiavanie štítkov. Dôverujú exportéri vo viac ako 50 krajinách.",
+    "metaTitle": "Súlad SinoTrade | Služby pre dovoz do Číny",
+    "metaDescription": "Súlad s dovozom do Číny na jednom mieste: registrácia GACC, certifikácia CCC a podanie kozmetiky NMPA.",
     "heroPortalCta": "Vyskúšajte našu 3-krokovú kontrolu súladu →"
   },
   "Services": {
@@ -156,7 +156,7 @@
     "ecommercePoints7": "Priebežné aktualizácie predpisov a poradenstvo o súlade",
     "brandPoints7": "Priebežné aktualizácie predpisov a poradenstvo o súlade",
     "metaTitle": "Služby súladu pre dovoz do Číny | GACC, CCC, NMPA a etikety",
-    "metaDescription": "Súlad s dovozom do Číny na jednom mieste: registrácia potravín GACC, certifikácia CCC, podanie kozmetiky NMPA, súlad etikiet a ochrana značky. 15+ rokov skúseností."
+    "metaDescription": "Súlad s dovozom do Číny na jednom mieste: registrácia GACC, certifikácia CCC, podanie kozmetiky NMPA a súlad etikiet."
   },
   "ServiceGacc": {
     "heroTitle": "Registrácia GACC potravín – pre slovenských vývozcov",
@@ -204,7 +204,7 @@
     "coverItems4": "Kompletná príprava dokumentácie, preklady a podanie",
     "coverItems5": "Kontrola zhody etikiet (GB 7718 / GB 28050)",
     "coverItems6": "Obnovenie registrácie a sledovanie 5-ročnej platnosti",
-    "metaTitle": "Registrácia GACC potravín | sprievodca pre slovenských vývozcov",
+    "metaTitle": "Registrácia GACC potravín | vyhláška 248",
     "metaDescription": "Registrácia GACC pre slovenských vývozcov potravín: nariadenie 248, systém CIFER, potrebné dokumenty, čas. Podpora v slovenčine."
   },
   "ServiceLabel": {
@@ -300,7 +300,7 @@
     "coverItems4": "Príprava na továrenskú inšpekciu (vrátane digitálnej formy)",
     "coverItems5": "Ročná podpora dohľadu pre neprerušený prístup na trh",
     "coverItems6": "Nové kategórie 2025 vrátane lítium-iónových batérií",
-    "metaTitle": "Certifikácia CCC | sprievodca vývozom do Číny pre slovenských výrobcov",
+    "metaTitle": "Certifikácia CCC | povinná certifikácia výrobkov",
     "metaDescription": "Certifikácia CCC pre slovenských výrobcov: rozdiel od CE, proces certifikácie, testy, audit závodu, čas a náklady. Podpora v slovenčine."
   },
   "ServiceCosmetics": {
@@ -349,7 +349,7 @@
     "coverItems4": "Koordinácia hodnotenia bezpečnosti podľa CSAR",
     "coverItems5": "Podpora testovania účinnosti deklarovaných funkcií",
     "coverItems6": "Súlad po uvedení na trh (monitorovanie nežiaducich udalostí, výročné správy)",
-    "metaTitle": "Registrácia kozmetiky NMPA | slovenské značky na čínskom trhu",
+    "metaTitle": "Registrácia kozmetiky NMPA | pre slovenské značky",
     "metaDescription": "Registrácia kozmetiky NMPA pre slovenské značky: klasifikácia, oslobodenie od testov na zvieratách, zodpovedná osoba v Číne, čas."
   },
   "ServiceEcommerce": {
@@ -396,7 +396,7 @@
     "coverItems4": "Cezhraničná daňová optimalizácia (nulová tarifa v rámci limitov)",
     "coverItems5": "Usmernenie k výnimkám z čínskych etikiet",
     "coverItems6": "Súlad s údajmi (PIPL) pre cezhraničné operácie",
-    "metaTitle": "Cezhraničný e-commerce | sprievodca Tmall·JD pre slovenské značky",
+    "metaTitle": "Cezhraničný e-commerce do Číny | Tmall, JD, Douyin",
     "metaDescription": "Slovenské značky do Číny cez cezhraničný e-commerce: Tmall Global, JD Worldwide, súlad s CBEC, logistika, platby."
   },
   "ServiceBrand": {
@@ -443,7 +443,7 @@
     "coverItems4": "Colná evidencia duševného vlastníctva",
     "coverItems5": "Kontrola súladu reklamy (čínsky zákon o reklame)",
     "coverItems6": "Stratégia ochrany značky a vymáhanie práv",
-    "metaTitle": "Registrácia ochrannej známky v Číne | ochrana slovenských značiek",
+    "metaTitle": "Registrácia ochrannej známky v Číne | pre slovenské značky",
     "metaDescription": "Registrácia ochrannej známky v Číne pre slovenské značky: CNIPA, Madridský systém, falzifikáty, ochrana na platformách."
   },
   "ServiceCommon": {
@@ -522,7 +522,7 @@
     "premiumItems4": "Posúdenie súladu s PIPL",
     "premiumItems5": "Priebežné poradenstvo o súlade",
     "metaTitle": "Balíky zhody a ceny | plány GACC, CCC a NMPA",
-    "metaDescription": "Porovnajte balíky zhody pre dovoz do Číny: registrácia GACC, certifikácia CCC a podanie NMPA s transparentnými fixnými cenami. Nájdite ten správny pre vašu značku."
+    "metaDescription": "Porovnajte balíky zhody pre dovoz do Číny: plány GACC, CCC a NMPA s transparentnými fixnými cenami."
   },
   "Faq": {
     "heroTitle": "Súlad s dovozom do Číny: často kladené otázky",
@@ -628,8 +628,8 @@
       "ecommerceName": "Cezhraničný e-commerce",
       "brandName": "Ochrana značky"
     },
-    "metaTitle": "Často kladené otázky k dovozu do Číny pre vývozcov | GACC, CCC, NMPA",
-    "metaDescription": "Časté otázky k dovozu do Číny: registrácia GACC podľa vyhlášky 248, certifikácia CCC, podanie kozmetiky NMPA a požiadavky na čínske etikety – odpovede pre slovenských a európskych vývozcov."
+    "metaTitle": "Časté otázky k dovozu do Číny | GACC, CCC, NMPA",
+    "metaDescription": "Časté otázky k dovozu do Číny: registrácia GACC podľa vyhlášky 248, certifikácia CCC, podanie kozmetiky NMPA a požiadavky na etikety."
   },
   "About": {
     "heroTitle": "O spoločnosti SinoTrade Compliance",
@@ -687,7 +687,7 @@
     "partners7": "🔬 Výskumné inštitúty",
     "partners8": "🤝 Odvetvové asociácie",
     "values5": "Dokonalosť: najkvalitnejšie riešenia zhody s dôrazom na každý detail.",
-    "metaTitle": "O spoločnosti SinoTrade Compliance | 15+ rokov skúseností s dovozom do Číny",
+    "metaTitle": "SinoTrade Compliance | 15+ rokov s dovozom do Číny",
     "metaDescription": "Spoznajte tím SinoTrade Compliance – 15+ rokov skúseností s čínskym dovozom, 500+ úspešných projektov a klienti z 50+ krajín."
   },
   "ThankYou": {
@@ -758,8 +758,8 @@
     "next": "Ďalší",
     "pageInfo": "",
     "of": " z ",
-    "metaTitle": "Prehľady a sprievodcovia súladom pri dovoze do Číny | GACC, CCC, NMPA",
-    "metaDescription": "Odborné sprievodcovia súladom pri dovoze do Číny. Registrácia GACC podľa nariadenia 248, certifikácia CCC, oznámenie kozmetiky NMPA a čínske etikety. Sledujte zmeny predpisov a pripravte svoj vstup na čínsky trh."
+    "metaTitle": "Prehľady a sprievodcovia súladom do Číny | GACC, CCC, NMPA",
+    "metaDescription": "Odborné články o súlade pri dovoze do Číny: registrácia GACC, certifikácia CCC, oznámenie kozmetiky NMPA a čínske etikety."
   },
   "OrganizationJsonLd": {
     "description": "Komplexné poradenské služby týkajúce sa regulácie dovozu pre Čínu – registrácia GACC, čínske označovanie, certifikácia CCC, registrácia kozmetiky NMPA, cezhraničný elektronický obchod a ochrana značky.",
@@ -789,7 +789,7 @@
     "samrDefinition": "SAMR je čínska štátna správa pre reguláciu trhu. Dohliada na kvalitu výrobkov, normy bezpečnosti potravín, presadzovanie antimonopolných pravidiel a dohľad nad trhom. SAMR spolupracuje s GACC na regulácii potravín a kozmetiky."
   },
   "Quote": {
-    "metaTitle": "Bezplatná cenová ponuka na súlad s Čínou | SinoTrade Compliance",
+    "metaTitle": "Cenová ponuka na súlad s Čínou | SinoTrade",
     "metaDescription": "Požiadajte o bezplatnú cenovú ponuku na súlad s dovozom do Číny – registrácia GACC, certifikácia CCC, podanie NMPA, kontrola etikiet. Odpovedáme do 24 hodín.",
     "ogTitle": "Bezplatná cenová ponuka: SinoTrade Compliance",
     "heroTitle": "Získajte bezplatnú cenovú ponuku na súlad",
@@ -1148,7 +1148,7 @@
       "crossborderecommerce": "Cezhraničný elektronický obchod",
       "crossborderecommerceDesc": "Predpisy CBEC, dodržiavanie platforiem a daňová optimalizácia."
     },
-    "metaTitle": "Súlad s dovozom z Číny podľa odvetvia | Služby GACC, CCC, NMPA – Sprievodcovia dodržiavaním predpisov v odvetví | Súlad SinoTrade",
+    "metaTitle": "Súlad s dovozom do Číny podľa odvetvia | GACC, CCC, NMPA",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {

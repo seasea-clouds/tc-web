@@ -232,7 +232,7 @@
 | 批 1（en 基准批） | en | ff50cdee | ✅ CI 全绿（site 17 title + 9 desc、blog 2 keys、frontmatter 2 title + 11 excerpt；⚠️ 后修复 frontmatter --- 粘连 bug，见 47fa2a71） |
 | 批 2 | de/es/fr/it/ja（高流量） | 47fa2a71 | ✅ 2026-08-07 部署验证通过（site+blog 全量 curl 200，metaTitle 新值线上确认） |
 | 批 3 | ru/ar/pt/ko/tr/vi/th | 5d2a9c09 | ✅ 2026-08-07 部署验证通过（7 语言 blog 新 metaTitle 线上确认；ko 308 重定向正常） |
-| 批 4 | id/ms/pl/nl/cs/ro/el/hu | ⏳ 待做 | |
+| 批 4 | id/ms/pl/nl/cs/ro/el/hu | 27fbcef9 | ✅ 2026-08-07 部署验证通过（8 语言 blog 新 metaTitle 线上确认） |
 | 批 5 | 其余 27 语言 | ⏳ 待做 | |
 
 ## 批次计划
@@ -241,7 +241,7 @@
 |----|------|--------|
 | 批 2 | de/es/fr/it/ja（高流量） | 每语言 site 超长 keys + blog 2 keys + 11 frontmatter（ja 仅 1 个 site key） |
 | 批 3 | ru/ar/pt/ko/tr/vi/th | × 7 |
-| 批 4 | id/ms/pl/nl/cs/ro/el/hu | × 8 |
+| 批 4 | id/ms/pl/nl/cs/ro/el/hu | × 8 ✅ |
 | 批 5 | 其余 27 语言 | × 27 |
 
 每批 = 手动改写 → CI → build → commit → push → 部署验证。
@@ -274,3 +274,16 @@
 - **th**：site 8 处（5 title + 3 desc）+ blog 2 处 + frontmatter 10 处（2 title + 8 excerpt，8/11 篇超长）→ commit 5d2a9c09
 - **验证**：check-translations 48 语言 0 问题；md-article/format/structure 7 语言全过（ru W01 em-dash 为 HEAD 历史遗留，非本轮引入）；site+blog 构建 4/4 成功；线上 7 语言 curl 200 + 新 metaTitle 确认
 - **备注**：IndustriesCommon.metaDescription 英文残留（151 字符，未超长）为全语言模板遗留（de/es/fr/it/ko/pt/tr/ru/ar 等均有），ko 已顺带本地化（81），其余保留，后续可统一处理
+
+## 批 4 完成记录（2026-08-07）
+
+- **id**：site 12 处（10 title + 2 desc）+ blog 2 处 + frontmatter 22 处（4 title + 10 excerpt 超长改写）→ commit 27fbcef9
+- **ms**：site 13 处（8 title + 5 desc）+ blog 2 处 + frontmatter 18 处（7 title + 11 excerpt）→ commit 27fbcef9
+- **pl**：site 22 处（10 title + 12 desc）+ blog 2 处 + frontmatter 18 处（9 title + 9 excerpt）→ commit 27fbcef9
+- **nl**：site 22 处（12 title + 10 desc）+ blog 2 处 + frontmatter 19 处（9 title + 10 excerpt）→ commit 27fbcef9
+- **cs**：site 13 处（7 title + 6 desc）+ blog 2 处 + frontmatter 16 处（6 title + 10 excerpt）→ commit 27fbcef9
+- **ro**：site 23 处（14 title + 9 desc）+ blog 2 处 + frontmatter 22 处（10 title + 11 excerpt）→ commit 27fbcef9
+- **el**：site 22 处（14 title + 8 desc）+ blog 2 处 + frontmatter 20 处（9 title + 11 excerpt）→ commit 27fbcef9
+- **hu**：site 17 处（11 title + 6 desc）+ blog 1 处 + frontmatter 15 处（6 title + 9 excerpt）→ commit 27fbcef9
+- **修复**：nl 子代理 6 个 blog title 含连字符（R08 违规，荷兰语复合词习惯如 GACC-registratie），父代理改写为空格分隔（GACC registratie、e-commerce → onlinehandel）后通过
+- **验证**：check-translations 48 语言 0 问题；md-article/format/structure 8 语言全过；site+blog 构建 4/4 成功（check-seo-output 6529 通过 0 失败）；线上 8 语言 curl 200 + 新 metaTitle 确认

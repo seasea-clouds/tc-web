@@ -75,7 +75,7 @@
     "processDesc": "Brendinizi Çinə gətirmək üçün sadə 6 addımlı proses",
     "trustedByDesc": "Artıq bizimlə böyüyən beynəlxalq brendlərə qoşulun",
     "metaTitle": "SinoTrade Uyğunluğu | Çin İdxal Uyğunluğu Xidmətləri",
-    "metaDescription": "Bir pəncərəli Çin idxalına uyğunluq: GACC qeydiyyatı, CCC sertifikatı, NMPA kosmetik sənədləri, etiket uyğunluğu. 50+ ölkədə ixracatçılar tərəfindən etibar edilir.",
+    "metaDescription": "Bir pəncərəli Çin idxal uyğunluğu: GACC qeydiyyatı, CCC sertifikatı, NMPA kosmetik sənədləri və etiket uyğunluğu. 50+ ölkədə ixracatçılar etibar edir.",
     "heroPortalCta": "3 addımlı uyğunluq yoxlayıcımızı sınayın →"
   },
   "Services": {
@@ -204,7 +204,7 @@
     "coverItems4": "Tam sənəd hazırlığı, tərcümə və təqdimat",
     "coverItems5": "Etiket uyğunluğunun yoxlanması (GB 7718 / GB 28050)",
     "coverItems6": "Qeydiyyatın yenilənməsi və 5 illik etibarlılıq izlənməsi",
-    "metaTitle": "GACC ərzaq qeydiyyatı | Azərbaycan ixracatçıları üçün bələdçi",
+    "metaTitle": "GACC ərzaq qeydiyyatı | Azərbaycan ixracatçıları üçün",
     "metaDescription": "Azərbaycan ərzaq ixracatçıları üçün GACC qeydiyyatı: 248 saylı Əsasnamə, CIFER sistemi, tələb olunan sənədlər, müddət. Azərbaycanca dəstək."
   },
   "ServiceLabel": {
@@ -300,7 +300,7 @@
     "coverItems4": "Zavod auditinə hazırlıq (rəqəmsal audit daxil)",
     "coverItems5": "Kəsilməz bazar girişi üçün illik uyğunluq monitorinqi",
     "coverItems6": "2025-ci ilin yeni kateqoriyaları, o cümlədən litium-ion batareyalar",
-    "metaTitle": "CCC sertifikatı | Azərbaycan istehsalçıları üçün Çin ixrac bələdçisi",
+    "metaTitle": "CCC sertifikatı | Azərbaycan istehsalçıları üçün bələdçi",
     "metaDescription": "Azərbaycan istehsalçıları üçün CCC sertifikatı: CE-dən fərqi, sertifikatlaşdırma prosesi, testlər, zavod auditi, müddət və xərc. Azərbaycanca dəstək."
   },
   "ServiceCosmetics": {
@@ -349,7 +349,7 @@
     "coverItems4": "2025-ci il tam təhlükəsizlik qiymətləndirməsi qaydalarına uyğun koordinasiya",
     "coverItems5": "İddia edilən funksiyalar üçün effektivlik testlərinə dəstək",
     "coverItems6": "Satışdan sonrakı uyğunluq (mənfi hadisələrin bildirilməsi, illik hesabat)",
-    "metaTitle": "NMPA kosmetika qeydiyyatı | Azərbaycan brendləri Çin bazarında",
+    "metaTitle": "NMPA kosmetika qeydiyyatı | Azərbaycan brendləri üçün",
     "metaDescription": "Azərbaycan kosmetika brendləri üçün NMPA qeydiyyatı: təsnifat, heyvan testlərindən azad olma, Çində məsul şəxs, müddət."
   },
   "ServiceEcommerce": {
@@ -396,7 +396,7 @@
     "coverItems4": "Transsərhəd vergi optimallaşdırması (limit daxilində güzəştli tariflər)",
     "coverItems5": "Transsərhəd məhsullar üçün etiket azadolması üzrə rəhbərlik",
     "coverItems6": "Transsərhəd əməliyyatlar üçün məlumat uyğunluğu (PIPL)",
-    "metaTitle": "Transsərhəd e-ticarət | Azərbaycan brendləri üçün Tmall·JD bələdçisi",
+    "metaTitle": "Transsərhəd e-ticarət | Azərbaycan brendləri üçün bələdçi",
     "metaDescription": "Azərbaycan brendləri transsərhəd e-ticarət vasitəsilə Çində: Tmall Global, JD Worldwide, CBEC uyğunluğu, logistika, ödəniş."
   },
   "ServiceBrand": {
@@ -443,7 +443,7 @@
     "coverItems4": "Gömrük əqli mülkiyyət qeydiyyatı",
     "coverItems5": "Çin reklam qanununa uyğun reklam uyğunluğunun yoxlanması",
     "coverItems6": "Brend strategiyası və icra üzrə rəhbərlik",
-    "metaTitle": "Çində ticarət nişanının qeydiyyatı | Azərbaycan brendlərinin qorunması",
+    "metaTitle": "Çində ticarət nişanı qeydiyyatı | Azərbaycan brendləri üçün",
     "metaDescription": "Azərbaycan brendləri üçün Çində ticarət nişanı qeydiyyatı: CNIPA, Madrid sistemi, saxtakarlıq, platforma qoruması."
   },
   "ServiceCommon": {
@@ -521,7 +521,7 @@
     "premiumItems3": "NMPA Kosmetika Bildirişi (tətbiq olunarsa)",
     "premiumItems4": "PIPL Məlumat Uyğunluğu Qiymətləndirməsi",
     "premiumItems5": "Davamlı Uyğunluq Məsləhəti",
-    "metaTitle": "Çin Uyğunluq Paketləri və Qiymətləri | GACC, CCC və NMPA Planları",
+    "metaTitle": "Çin Uyğunluq Paketləri | GACC, CCC və NMPA Planları",
     "metaDescription": "Çin idxal uyğunluq paketlərini müqayisə edin: GACC qeydiyyatı, CCC sertifikatı və NMPA bildirişi planları şəffaf, sabit haqlarla. Brendinizə uyğun paketi seçin."
   },
   "Faq": {
@@ -628,8 +628,8 @@
       "ecommerceName": "Transsərhəd E-ticarət",
       "brandName": "Brend Mühafizəsi"
     },
-    "metaTitle": "Çin İdxal Uyğunluğu üzrə Tez-tez Verilən Suallar | GACC, CCC, NMPA",
-    "metaDescription": "Çin idxal uyğunluğu üzrə tez-tez verilən suallar: GACC 248 saylı Fərman qeydiyyatı, CCC sertifikatı, NMPA kosmetika bildirişi və Çin etiket tələbləri — Azərbaycan ixracatçıları üçün ekspert cavabları."
+    "metaTitle": "Çin İdxal Uyğunluğu üzrə Suallar | GACC, CCC, NMPA",
+    "metaDescription": "Çin idxal uyğunluğu sualları: GACC 248 saylı Fərman qeydiyyatı, CCC sertifikatı, NMPA kosmetika bildirişi və etiket tələbləri — ekspert cavabları ilə."
   },
   "About": {
     "heroTitle": "SinoTrade Uyğunluğu Haqqında",
@@ -687,7 +687,7 @@
     "partners7": "🔬 Elmi-Tədqiqat İnstitutları",
     "partners8": "🤝 Sənaye Birlikləri",
     "values5": "Mükəmməllik: Hər detalına diqqət yetirilən ən yüksək keyfiyyətli uyğunluq həlləri.",
-    "metaTitle": "Haqqımızda | SinoTrade Uyğunluğu – 15+ İllik Çin İdxal Ekspertizası",
+    "metaTitle": "Haqqımızda | SinoTrade: 15+ illik Çin idxal təcrübəsi",
     "metaDescription": "SinoTrade Compliance komandası ilə tanış olun — 15+ illik Çin idxal uyğunluğu təcrübəsi, 500+ uğurlu layihə və 50+ ölkədə müştərilər."
   },
   "ThankYou": {
@@ -758,8 +758,8 @@
     "next": "Növbəti",
     "pageInfo": "",
     "of": " / ",
-    "metaTitle": "Çin İdxal Uyğunluğu Anlayışları | GACC, CCC və NMPA Bələdçiləri",
-    "metaDescription": "Çin idxal uyğunluğu üzrə ekspert bələdçiləri: GACC qeydiyyatı, CCC sertifikatlaşdırması, NMPA kosmetika bildirişi və etiket uyğunluğu. Azərbaycan ixracatçıları üçün aktual qaydalardan xəbərdar olun."
+    "metaTitle": "Çin İdxal Uyğunluğu | GACC, CCC və NMPA Bələdçiləri",
+    "metaDescription": "Çin idxal uyğunluğu üzrə ekspert bələdçiləri: GACC qeydiyyatı, CCC sertifikatı, NMPA kosmetika bildirişi və etiket uyğunluğu. Azərbaycan ixracatçıları üçün."
   },
   "OrganizationJsonLd": {
     "description": "Çin üçün bir pəncərəli idxal tənzimləyici məsləhət xidmətləri — GACC qeydiyyatı, Çin etiketləməsi, CCC sertifikatı, NMPA kosmetika sənədləri, transsərhəd e-ticarət və brendin qorunması.",
@@ -816,7 +816,7 @@
   },
   "Testimonials": {
     "metaTitle": "Müştəri Rəyləri | SinoTrade Uyğunluğu Uğur Hekayələri",
-    "metaDescription": "Qida, kosmetika və elektronika ixracatçılarının SinoTrade-nin Çin idxal uyğunluğu xidmətləri haqqında nə dediyini oxuyun — Çində satılan brendlərin real uğur hekayələri.",
+    "metaDescription": "Qida, kosmetika və elektronika ixracatçılarının SinoTrade haqqında rəylərini oxuyun. Çin bazarına çıxan brendlərin real uğur hekayələri.",
     "ogTitle": "Müştəri Rəyləri: SinoTrade Uyğunluğu",
     "heroTitle": "İxracatçılar Bizim Haqqımızda Nə Deyir",
     "heroSubtitle": "50+ ölkədən ixracatçılar Çin uyğunluğu üçün SinoTrade-ə etibar edir. Onların bizimlə işləmək təcrübəsi haqqında dedikləri budur.",
@@ -1116,7 +1116,7 @@
     "coverItems6": "Davamlı tənzimləyici monitorinq və uyğunluq dəstəyi",
     "coverItems7": "E-ticarət platforması uyğunluğu üzrə təlim və məsləhət",
     "metaDescription": "Azərbaycan brendləri transsərhəd e-ticarət vasitəsilə Çində: Tmall Global, JD Worldwide, CBEC, logistika, ödəniş.",
-    "metaTitle": "Çində e-ticarət | Azərbaycan brendləri üçün uyğunluq bələdçisi"
+    "metaTitle": "Çində e-ticarət | Azərbaycan brendləri üçün bələdçi"
   },
   "IndustriesCommon": {
     "heroTitle": "Xidmət etdiyimiz Sənayelər",
@@ -1148,7 +1148,7 @@
       "crossborderecommerce": "Transsərhəd e-ticarət",
       "crossborderecommerceDesc": "CBEC qaydaları, platforma uyğunluğu və vergi optimallaşdırılması."
     },
-    "metaTitle": "Sənaye tərəfindən Çin İdxal Uyğunluğu | GACC, CCC, NMPA Xidmətləri - Sənaye Uyğunluq Bələdçiləri | SinoTrade Uyğunluğu",
+    "metaTitle": "Sənaye üzrə Çin İdxal Uyğunluğu | GACC, CCC və NMPA",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {

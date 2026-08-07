@@ -155,8 +155,8 @@
     "cosmeticsPoints7": "Løbende regulatoriske opdateringer og overholdelsesrådgivning",
     "ecommercePoints7": "Løbende regulatoriske opdateringer og overholdelsesrådgivning",
     "brandPoints7": "Løbende regulatoriske opdateringer og overholdelsesrådgivning",
-    "metaTitle": "Tjenester inden for Kina-importoverholdelse | GACC, CCC, NMPA & etiketter",
-    "metaDescription": "One-stop Kina-importoverholdelse: GACC-fødevareregistrering, CCC-certificering, NMPA-kosmetikanmeldelse, etiketoverholdelse og brandbeskyttelse. 15+ års ekspertise."
+    "metaTitle": "Tjenester for Kina-importoverholdelse | GACC, CCC, NMPA",
+    "metaDescription": "One-stop Kina-importoverholdelse: GACC-fødevareregistrering, CCC-certificering, NMPA-kosmetikanmeldelse, etiketter, brandbeskyttelse. 15+ års erfaring."
   },
   "ServiceGacc": {
     "heroTitle": "GACC-fødevareregistrering – for danske eksportører",
@@ -349,7 +349,7 @@
     "coverItems4": "Koordinering af sikkerhedsvurdering efter CSAR",
     "coverItems5": "Support til effektdokumentation for markedsførte egenskaber",
     "coverItems6": "Markedsovervågning (bivirkningsrapportering, årsrapporter)",
-    "metaTitle": "NMPA-kosmetikregistrering | Danske brands på det kinesiske marked",
+    "metaTitle": "NMPA-kosmetikanmeldelse | Guide for danske kosmetikmærker",
     "metaDescription": "NMPA-registrering for danske kosmetikmærker: klassificering, fritagelse for dyreforsøg, ansvarlig part i Kina, tid."
   },
   "ServiceEcommerce": {
@@ -396,7 +396,7 @@
     "coverItems4": "Grænseoverskridende skatteoptimering (0 % told inden for grænserne)",
     "coverItems5": "Rådgivning om etiketfritagelse for grænseoverskridende salg",
     "coverItems6": "Dataoverholdelse (PIPL) for grænseoverskridende drift",
-    "metaTitle": "Grænseoverskridende e-handel | Guide Tmall·JD for danske brands",
+    "metaTitle": "Grænseoverskridende e-handel | Tmall & JD for danske brands",
     "metaDescription": "Danske brands ind i Kina via grænseoverskridende e-handel: Tmall Global, JD Worldwide, CBEC-overholdelse, logistik, betaling."
   },
   "ServiceBrand": {
@@ -521,8 +521,8 @@
     "premiumItems3": "NMPA-kosmetikanmeldelse (hvis relevant)",
     "premiumItems4": "PIPL-databeskyttelsesvurdering",
     "premiumItems5": "Løbende overholdelsesrådgivning",
-    "metaTitle": "Overholdelsespakker & priser til Kina | GACC-, CCC- og NMPA-planer",
-    "metaDescription": "Sammenlign overholdelsespakker til Kina-import: GACC-registrering, CCC-certificering og NMPA-anmeldelse med gennemsigtige faste priser. Find den rette løsning for dit brand."
+    "metaTitle": "Overholdelsespakker & priser til Kina | GACC, CCC, NMPA",
+    "metaDescription": "Sammenlign overholdelsespakker: GACC-, CCC- og NMPA-planer med faste, gennemsigtige priser. Find den rette løsning for dit brand."
   },
   "Faq": {
     "heroTitle": "Kina-importoverholdelse: Ofte stillede spørgsmål",
@@ -628,8 +628,8 @@
       "ecommerceName": "Grænseoverskridende e-handel",
       "brandName": "Brandbeskyttelse"
     },
-    "metaTitle": "Kina-importoverholdelse: FAQ for eksportører | GACC, CCC, NMPA",
-    "metaDescription": "FAQ om Kinas importoverholdelse: GACC-dekret 248-registrering, CCC-certificering, NMPA-kosmetikanmeldelse og krav til kinesiske etiketter – besvaret for danske og internationale eksportører."
+    "metaTitle": "FAQ om Kina-importoverholdelse | GACC, CCC, NMPA",
+    "metaDescription": "FAQ om Kinas importoverholdelse: GACC-dekret 248, CCC-certificering, NMPA-anmeldelse og etiketkrav – besvaret for danske og internationale eksportører."
   },
   "About": {
     "heroTitle": "Om SinoTrade Compliance",
@@ -758,8 +758,8 @@
     "next": "Næste",
     "pageInfo": "",
     "of": " af ",
-    "metaTitle": "Indsigt i Kinas importoverholdelse | GACC, CCC og NMPA vejledninger",
-    "metaDescription": "Ekspertguider til Kinas importoverholdelse: GACC registrering, CCC certificering, NMPA kosmetikanmeldelse og etiketoverholdelse. Hold dig opdateret på regelændringer."
+    "metaTitle": "Kina importoverholdelse | GACC, CCC og NMPA vejledninger",
+    "metaDescription": "Ekspertguider til Kinas importoverholdelse: GACC-registrering, CCC-certificering, NMPA-anmeldelse og etiketoverholdelse. Hold dig opdateret på regelændringer."
   },
   "OrganizationJsonLd": {
     "description": "One-stop import regulatoriske konsulenttjenester til Kina - GACC-registrering, kinesisk mærkning, CCC-certificering, NMPA-kosmetikarkivering, grænseoverskridende e-handel og brandbeskyttelse.",
@@ -815,8 +815,8 @@
     "privacy": "Vi respekterer dit privatliv. Ingen spam, aldrig."
   },
   "Testimonials": {
-    "metaTitle": "Kundeudtalelser | SinoTrade Compliance – succeshistorier fra eksportører",
-    "metaDescription": "Læs, hvad eksportører af fødevarer, kosmetik og elektronik siger om SinoTrades overholdelsestjenester for Kina-import – rigtige historier fra mærker, der nu sælger i Kina.",
+    "metaTitle": "Kundeudtalelser | SinoTrade Compliance succeshistorier",
+    "metaDescription": "Læs, hvad eksportører af fødevarer, kosmetik og elektronik siger om SinoTrades overholdelsestjenester – historier fra mærker, der sælger i Kina.",
     "ogTitle": "Kundeudtalelser: SinoTrade Compliance",
     "heroTitle": "Hvad eksportører siger om os",
     "heroSubtitle": "Eksportører i 50+ lande stoler på SinoTrade, når det gælder overholdelse i Kina. Her er, hvad de siger om at arbejde med os.",
@@ -1148,7 +1148,7 @@
       "crossborderecommerce": "Grænseoverskridende e-handel",
       "crossborderecommerceDesc": "CBEC-regler, platformsoverholdelse og skatteoptimering."
     },
-    "metaTitle": "Kinas importoverholdelse efter industri | GACC, CCC, NMPA Services - Vejledninger om overholdelse af industrien | Overholdelse af SinoTrade",
+    "metaTitle": "Kinas importoverholdelse efter industri | GACC, CCC og NMPA",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {

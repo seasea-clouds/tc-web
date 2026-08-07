@@ -300,7 +300,7 @@
     "coverItems4": "Voorbereiding vir fabrieksoudit (insluitend digitale oudits)",
     "coverItems5": "Jaarlikse voldoeningsmonitering vir ononderbroke marktoegang",
     "coverItems6": "Nuwe 2025-kategorieë, insluitend litiumioonbatterye",
-    "metaTitle": "CCC-sertifisering | gids vir uitvoer na China vir SA vervaardigers",
+    "metaTitle": "CCC-sertifisering | verpligte produksertifisering",
     "metaDescription": "CCC-sertifisering vir Suid-Afrikaanse vervaardigers: verskil van CE/SABS, sertifiseringsproses, toetse, fabrieksoudit, tyd en koste. Ondersteuning in Afrikaans."
   },
   "ServiceCosmetics": {
@@ -349,7 +349,7 @@
     "coverItems4": "Koördinering van veiligheidsbeoordeling volgens die 2025-riglyne",
     "coverItems5": "Doeltreffendheidstoetsing vir beweerde funksies",
     "coverItems6": "Na-mark-voldoening (newe-effekverslagdoening, jaarlikse verslae)",
-    "metaTitle": "NMPA-kosmetiekregistrasie | SA handelsmerke in die Chinese mark",
+    "metaTitle": "NMPA-kosmetiekregistrasie | gids vir invoer na China",
     "metaDescription": "NMPA-registrasie vir SA kosmetiekhandelsmerke: klassifikasie, vrystelling van dieretoetse, verantwoordelike persoon in China, tyd."
   },
   "ServiceEcommerce": {
@@ -396,7 +396,7 @@
     "coverItems4": "Tariefoptimalisering (nul-tarief binne die persoonlike kwota)",
     "coverItems5": "Etiketvrystellingsleiding vir grensoorskrydende produkte",
     "coverItems6": "Datavoldoening vir grensoorskrydende bedrywighede (PIPL)",
-    "metaTitle": "Grensoorskrydende e-handel | Tmall·JD-gids vir SA handelsmerke",
+    "metaTitle": "Grensoorskrydende e-handel na China | Tmall, JD, Douyin",
     "metaDescription": "SA handelsmerke na China via grensoorskrydende e-handel: Tmall Global, JD Worldwide, CBEC-voldoening, logistiek, betaling."
   },
   "ServiceBrand": {
@@ -443,7 +443,7 @@
     "coverItems4": "Doeneregistrasie van intellektuele eiendom",
     "coverItems5": "Advertensievoldoeningshersiening volgens die Chinese Advertensiewet",
     "coverItems6": "Handelsmerkstrategie en afdwingingsleiding",
-    "metaTitle": "Handelsmerkregistrasie in China | beskerming van SA handelsmerke",
+    "metaTitle": "Handelsmerkregistrasie in China | beskerm jou handelsmerk",
     "metaDescription": "Handelsmerkregistrasie in China vir SA handelsmerke: CNIPA, Madrid-stelsel, vervalsing, platformbeskerming."
   },
   "ServiceCommon": {
@@ -521,8 +521,8 @@
     "premiumItems3": "NMPA-kosmetiekliassering (indien van toepassing)",
     "premiumItems4": "PIPL-datavoldoeningsassessering",
     "premiumItems5": "Deurlopende voldoeningsadvies",
-    "metaTitle": "China-voldoeningspakkette en pryse | GACC-, CCC- en NMPA-planne",
-    "metaDescription": "Vergelyk China-invoervoldoeningspakkette: GACC-registrasie-, CCC-sertifiserings- en NMPA-liasseringsplanne met deursigtige vaste fooie. Vind die regte pas vir jou handelsmerk."
+    "metaTitle": "China-voldoeningspakkette en pryse | GACC, CCC, NMPA",
+    "metaDescription": "Vergelyk China-invoervoldoeningspakkette: GACC-, CCC- en NMPA-planne met deursigtige vaste fooie. Vind die regte pas vir jou handelsmerk."
   },
   "Faq": {
     "heroTitle": "China-invoernakoming: gereelde vrae",
@@ -629,7 +629,7 @@
       "brandName": "Handelsmerkbeskerming"
     },
     "metaTitle": "Gereelde vrae oor China-invoernakoming | GACC, CCC, NMPA",
-    "metaDescription": "Gereelde vrae oor China-invoernakoming: GACC-Regulasie 248-registrasie, CCC-sertifisering, NMPA-kosmetiekliassering en Chinese etiketvereistes – beantwoord vir Suid-Afrikaanse uitvoerders."
+    "metaDescription": "Gereelde vrae oor China-invoernakoming: GACC Regulasie 248, CCC-sertifisering, NMPA-kosmetiekliassering en etiketvereistes vir Suid-Afrikaanse uitvoerders."
   },
   "About": {
     "heroTitle": "Oor SinoTrade-nakoming",
@@ -759,7 +759,7 @@
     "pageInfo": "",
     "of": " van ",
     "metaTitle": "Invoernakomingsinsigte oor China | GACC, CCC en NMPA gidse",
-    "metaDescription": "Kundige gidse oor China-invoernakoming: GACC-registrasie, CCC-sertifisering, NMPA-skoonheidsmiddelliassering en etiketnakoming. Bly voor op regulatoriese veranderinge."
+    "metaDescription": "Kundige gidse oor China-invoernakoming: GACC-registrasie, CCC-sertifisering, NMPA-skoonheidsmiddelliassering en etiketnakoming. Bly voor op nuwe regulasies."
   },
   "OrganizationJsonLd": {
     "description": "Eenstop-invoer regulatoriese konsultasiedienste vir China - GACC-registrasie, Chinese etikettering, CCC-sertifisering, NMPA-skoonheidsmiddelliassering, oorgrens-e-handel en handelsmerkbeskerming.",
@@ -815,8 +815,8 @@
     "privacy": "Ons respekteer jou privaatheid. Geen strooipos, ooit nie."
   },
   "Testimonials": {
-    "metaTitle": "Kliëntgetuigskrifte | Suksesverhale van uitvoerders met SinoTrade-nakoming",
-    "metaDescription": "Lees wat kos-, kosmetiek- en elektronika-uitvoerders oor SinoTrade se China-invoernakomingsdienste sê – regte verhale van handelsmerke wat nou in China verkoop, insluitend uit Suid-Afrika.",
+    "metaTitle": "Kliëntgetuigskrifte | SinoTrade-nakoming se suksesverhale",
+    "metaDescription": "Lees wat kos-, kosmetiek- en elektronika-uitvoerders oor SinoTrade se China-invoernakomingsdienste sê. Regte verhale van handelsmerke wat in China verkoop.",
     "ogTitle": "Kliëntgetuigskrifte: SinoTrade-nakoming",
     "heroTitle": "Wat uitvoerders oor ons sê",
     "heroSubtitle": "Uitvoerders in 50+ lande vertrou SinoTrade met hul China-nakoming. Hier is wat hulle oor die werk met ons sê.",
@@ -1148,7 +1148,7 @@
       "crossborderecommerce": "Oorgrens e-handel",
       "crossborderecommerceDesc": "CBEC-regulasies, platformvoldoening en belastingoptimalisering."
     },
-    "metaTitle": "China-invoervoldoening volgens industrie | GACC, CCC, NMPA Services - Bedryfsvoldoeningsgidse | SinoTrade-nakoming",
+    "metaTitle": "China-invoervoldoening per industrie | GACC, CCC, NMPA",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {

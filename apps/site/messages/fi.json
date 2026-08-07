@@ -74,8 +74,8 @@
     "trustedByTitle": "Luotetut yhteistyökumppanit",
     "processDesc": "Yksinkertainen 6-vaiheinen prosessi, jolla tuotemerkkisi saadaan Kiinaan",
     "trustedByDesc": "Liity kansainvälisten brändien joukkoon, jotka jo kasvavat kanssamme",
-    "metaTitle": "SinoTrade Compliance | Kiinan tuonnin vaatimustenmukaisuuspalvelut",
-    "metaDescription": "Yhden luukun Kiinan tuontivaatimustenmukaisuus: GACC-rekisteröinti, CCC-sertifiointi, NMPA-kosmetiikka-arkistointi, etikettien noudattaminen. Viejät luottavat yli 50 maassa.",
+    "metaTitle": "SinoTrade Compliance | Kiinan tuonnin vaatimustenmukaisuus",
+    "metaDescription": "Yhden luukun Kiinan tuontivaatimustenmukaisuus: GACC-rekisteröinti, CCC-sertifiointi, NMPA-kosmetiikkailmoitus ja etiketit. Luotettu 50+ maassa.",
     "heroPortalCta": "Kokeile 3-vaiheista vaatimustenmukaisuuden tarkistusta →"
   },
   "Services": {
@@ -155,8 +155,8 @@
     "cosmeticsPoints7": "Jatkuvat sääntelypäivitykset ja vaatimustenmukaisuusneuvonta",
     "ecommercePoints7": "Jatkuvat sääntelypäivitykset ja vaatimustenmukaisuusneuvonta",
     "brandPoints7": "Jatkuvat sääntelypäivitykset ja vaatimustenmukaisuusneuvonta",
-    "metaTitle": "Kiinan tuonnin vaatimustenmukaisuuspalvelut | GACC, CCC, NMPA ja etiketit",
-    "metaDescription": "Yhden luukun Kiinan tuonnin vaatimustenmukaisuus: GACC-elintarvikerekisteröinti, CCC-sertifiointi, NMPA-kosmetiikkailmoitus, etikettien vaatimustenmukaisuus ja brändisuojaus. Yli 15 vuoden kokemus."
+    "metaTitle": "Kiinan tuonnin vaatimustenmukaisuus | GACC, CCC, NMPA",
+    "metaDescription": "Yhden luukun Kiinan tuonnin vaatimustenmukaisuus: GACC-rekisteröinti, CCC-sertifiointi, NMPA-kosmetiikkailmoitus ja etiketit. 15+ vuoden kokemus."
   },
   "ServiceGacc": {
     "heroTitle": "GACC-elintarvikerekisteröinti – suomalaisille vientiyrityksille",
@@ -204,7 +204,7 @@
     "coverItems4": "Täydellinen dokumentointi, käännökset ja jättäminen",
     "coverItems5": "Etikettien tarkistus standardien GB 7718 / GB 28050 mukaan",
     "coverItems6": "Rekisteröinnin uusiminen ja 5 vuoden voimassaolon seuranta",
-    "metaTitle": "GACC-elintarvikerekisteröinti | Opas suomalaisille vientiyrityksille",
+    "metaTitle": "GACC-elintarvikerekisteröinti viejille | Asetus 248",
     "metaDescription": "GACC-rekisteröinti suomalaisille elintarvikeviejille: asetus 248, CIFER-järjestelmä, tarvittavat asiakirjat, aika. Suomeksi."
   },
   "ServiceLabel": {
@@ -300,7 +300,7 @@
     "coverItems4": "Tehdastarkastuksen valmistelu (myös etänä)",
     "coverItems5": "Vuotuinen valvonta vaatimustenmukaisuuden ylläpitämiseksi",
     "coverItems6": "Uudet 2025 luokat, mukaan lukien litiumioniakut",
-    "metaTitle": "CCC-sertifiointi | Opas suomalaisille Kiinaan vieville yrityksille",
+    "metaTitle": "CCC-sertifiointi Kiinaan | Pakollinen tuotesertifiointi",
     "metaDescription": "CCC-sertifiointi suomalaisille yrityksille: ero CE-merkintään, sertifiointiprosessi, testit, tehdasauditointi, aika ja kustannus. Suomeksi."
   },
   "ServiceCosmetics": {
@@ -349,7 +349,7 @@
     "coverItems4": "Turvallisuusarvioinnin koordinointi CSAR:n mukaan",
     "coverItems5": "Tehokkuustestauksen tuki luvatuille toiminnoille",
     "coverItems6": "Markkinoille tulon jälkeinen vaatimustenmukaisuus (haittavaikutusseuranta, vuosiraportit)",
-    "metaTitle": "NMPA-kosmetiikkarekisteröinti | Suomalaiset brändit Kiinan markkinoilla",
+    "metaTitle": "NMPA-kosmetiikkailmoitus brändeille | Kiinan tuonti",
     "metaDescription": "NMPA-rekisteröinti suomalaisille kosmetiikkabrändeille: luokittelu, eläinkoevapautus, vastuuhenkilö Kiinassa, aika."
   },
   "ServiceEcommerce": {
@@ -396,7 +396,7 @@
     "coverItems4": "Rajat ylittävän verotuksen optimointi (0 % tulli rajojen puitteissa)",
     "coverItems5": "Etikettivapautuksen neuvonta rajat ylittävään myyntiin",
     "coverItems6": "Tietosuojavaatimusten noudattaminen (PIPL) rajat ylittävässä toiminnassa",
-    "metaTitle": "Rajavälinen verkkokauppa | Opas Tmall·JD suomalaisille brändeille",
+    "metaTitle": "Rajavälinen verkkokauppa Kiinaan | Tmall, JD, Douyin",
     "metaDescription": "Suomalaiset brändit Kiinaan rajatylittävän verkkokaupan kautta: Tmall Global, JD Worldwide, CBEC-vaatimukset, logistiikka, maksut."
   },
   "ServiceBrand": {
@@ -443,7 +443,7 @@
     "coverItems4": "Immateriaalioikeuksien tullirekisteröinti",
     "coverItems5": "Mainonnan vaatimustenmukaisuuden tarkistus Kiinan mainontalain mukaan",
     "coverItems6": "Brändisuojausstrategia ja täytäntöönpanoneuvonta",
-    "metaTitle": "Tavaramerkkirekisteröinti Kiinassa | Opas suomalaisille brändeille",
+    "metaTitle": "Tavaramerkkirekisteröinti Kiinassa | CNIPA, Madrid",
     "metaDescription": "Tavaramerkkirekisteröinti Kiinassa suomalaisille brändeille: CNIPA, Madrid-järjestelmä, väärennökset, alustasuojaus."
   },
   "ServiceCommon": {
@@ -521,8 +521,8 @@
     "premiumItems3": "NMPA-kosmetiikkailmoitus (tarvittaessa)",
     "premiumItems4": "PIPL-tietosuojavaatimustenmukaisuusarviointi",
     "premiumItems5": "Jatkuva vaatimustenmukaisuusneuvonta",
-    "metaTitle": "Kiinan vaatimustenmukaisuuspaketit ja hinnoittelu | GACC-, CCC- ja NMPA-paketit",
-    "metaDescription": "Vertaa Kiinan tuonnin vaatimustenmukaisuuspaketteja: GACC-rekisteröinti, CCC-sertifiointi ja NMPA-kosmetiikkailmoitus läpinäkyvällä kiinteällä hinnoittelulla. Löydä oikea paketti brändillesi."
+    "metaTitle": "Kiinan vaatimustenmukaisuuspaketit | GACC, CCC ja NMPA",
+    "metaDescription": "Vertaa Kiinan tuonnin vaatimustenmukaisuuspaketteja: GACC-rekisteröinti, CCC-sertifiointi ja NMPA-ilmoitus kiinteään hintaan. Löydä oikea paketti brändillesi."
   },
   "Faq": {
     "heroTitle": "Kiinan tuonnin vaatimustenmukaisuus: usein kysytyt kysymykset",
@@ -629,7 +629,7 @@
       "brandName": "Brändisuojaus"
     },
     "metaTitle": "Kiinan tuonnin vaatimustenmukaisuus – UKK | GACC, CCC, NMPA",
-    "metaDescription": "Kiinan tuonnin vaatimustenmukaisuuden UKK: GACC:n asetuksen 248 rekisteröinti, CCC-sertifiointi, NMPA-kosmetiikkailmoitus ja kiinankieliset merkintävaatimukset – vastattu suomalaisille ja pohjoismaisille viejille."
+    "metaDescription": "Kiinan tuonnin vaatimustenmukaisuuden UKK: GACC:n asetus 248, CCC-sertifiointi, NMPA-kosmetiikkailmoitus ja merkintävaatimukset viejille."
   },
   "About": {
     "heroTitle": "Tietoja SinoTrade Compliancesta",
@@ -687,7 +687,7 @@
     "partners7": "🔬 Tutkimuslaitokset",
     "partners8": "🤝 Toimialajärjestöt",
     "values5": "Erinomaisuus: korkealaatuisimmat vaatimustenmukaisuusratkaisut huolellisella yksityiskohtien viimeistelyllä.",
-    "metaTitle": "Tietoja SinoTrade Compliancesta | Yli 15 vuotta Kiinan tuonnin asiantuntemusta",
+    "metaTitle": "SinoTrade Compliance | 15 vuotta Kiinan tuonnissa",
     "metaDescription": "Tapaa SinoTrade Compliance -tiimi – yli 15 vuotta Kiinan tuonnin vaatimustenmukaisuuskokemusta, yli 500 onnistunutta projektia ja asiakkaita yli 50 maassa."
   },
   "ThankYou": {
@@ -758,8 +758,8 @@
     "next": "Seuraava",
     "pageInfo": "",
     "of": " / ",
-    "metaTitle": "Kiinan tuonnin vaatimustenmukaisuusartikkelit ja oppaat | GACC, CCC, NMPA",
-    "metaDescription": "Asiantuntijaoppaita Kiinan tuonnin vaatimustenmukaisuudesta: GACC-rekisteröinti, CCC-sertifiointi, NMPA-kosmetiikkailmoitus ja etikettien vaatimustenmukaisuus. Pysy ajan tasalla sääntelymuutoksista."
+    "metaTitle": "Kiinan tuonnin vaatimustenmukaisuusoppaat | GACC, CCC, NMPA",
+    "metaDescription": "Asiantuntijaoppaita Kiinan tuonnin vaatimustenmukaisuudesta: GACC-rekisteröinti, CCC-sertifiointi, NMPA-ilmoitus ja etikettien vaatimustenmukaisuus."
   },
   "OrganizationJsonLd": {
     "description": "Yhden luukun tuontisääntelyn konsultointipalvelut Kiinalle – GACC-rekisteröinti, kiinalainen merkintä, CCC-sertifiointi, NMPA-kosmetiikka-arkistointi, rajat ylittävä sähköinen kaupankäynti ja tuotemerkin suojaus.",
@@ -789,8 +789,8 @@
     "samrDefinition": "SAMR on Kiinan valtion markkinoiden sääntelyviranomainen. Se valvoo tuotteiden laatua, elintarviketurvallisuusstandardeja, monopolien vastaista täytäntöönpanoa ja markkinavalvontaa. SAMR tekee yhteistyötä GACC:n kanssa elintarvike- ja kosmetiikkasäädösten parissa."
   },
   "Quote": {
-    "metaTitle": "Hanki ilmainen Kiinan vaatimustenmukaisuustarjous | SinoTrade Compliance",
-    "metaDescription": "Pyydä ilmainen Kiinan tuonnin vaatimustenmukaisuustarjous – GACC-rekisteröinti, CCC-sertifiointi, NMPA-kosmetiikkailmoitus ja etikettien tarkistus. Vastaamme 24 tunnin kuluessa.",
+    "metaTitle": "Ilmainen Kiinan vaatimustenmukaisuustarjous | SinoTrade",
+    "metaDescription": "Pyydä ilmainen Kiinan tuonnin vaatimustenmukaisuustarjous: GACC-rekisteröinti, CCC-sertifiointi, NMPA-ilmoitus ja etikettien tarkistus. Vastaamme 24 tunnissa.",
     "ogTitle": "Hanki ilmainen tarjous: SinoTrade Compliance",
     "heroTitle": "Pyydä ilmainen vaatimustenmukaisuustarjous",
     "heroSubtitle": "Kerro meille, mitä palveluita tarvitset, niin palaamme sinulle 24 tunnin kuluessa henkilökohtaisella suunnitelmalla.",
@@ -815,8 +815,8 @@
     "privacy": "Kunnioitamme yksityisyyttäsi. Ei roskapostia, koskaan."
   },
   "Testimonials": {
-    "metaTitle": "Asiakaskokemukset | SinoTrade Compliance -menestystarinat Kiinan markkinoilta",
-    "metaDescription": "Lue, mitä elintarvike-, kosmetiikka- ja elektroniikkaviejät kertovat SinoTraden Kiinan tuonnin vaatimustenmukaisuuspalveluista – aitoja tarinoita brändeiltä, jotka myyvät jo Kiinassa.",
+    "metaTitle": "Asiakaskokemukset | SinoTraden menestystarinat Kiinassa",
+    "metaDescription": "Lue elintarvike-, kosmetiikka- ja elektroniikkaviejien kokemuksia SinoTraden vaatimustenmukaisuuspalveluista. Aitoja tarinoita Kiinassa myyviltä brändeiltä.",
     "ogTitle": "Asiakaskokemukset: SinoTrade Compliance",
     "heroTitle": "Mitä viejät sanovat meistä",
     "heroSubtitle": "Viejät yli 50 maassa luottavat SinoTradeen Kiinan vaatimustenmukaisuudessa. Tässä heidän kokemuksiaan kanssamme työskentelystä.",
@@ -1116,7 +1116,7 @@
     "coverItems6": "Jatkuva sääntelyn seuranta ja vaatimustenmukaisuustuki",
     "coverItems7": "Verkkokauppa-alustan vaatimustenmukaisuuskoulutus ja -neuvonta",
     "metaDescription": "Suomalaiset brändit Kiinaan rajatylittävän verkkokaupan kautta: Tmall Global, JD Worldwide, CBEC, logistiikka, maksut.",
-    "metaTitle": "Verkkokauppa Kiinassa | Opas vaatimustenmukaisuus suomalaisille brändeille"
+    "metaTitle": "Rajatylittävä verkkokauppa Kiinassa | Tmall, JD, Douyin"
   },
   "IndustriesCommon": {
     "heroTitle": "Palvelemme toimialat",
@@ -1148,7 +1148,7 @@
       "crossborderecommerce": "Rajat ylittävä sähköinen kaupankäynti",
       "crossborderecommerceDesc": "CBEC-säännökset, alustan noudattaminen ja verotuksen optimointi."
     },
-    "metaTitle": "Kiinan tuonnin vaatimustenmukaisuus toimialan mukaan | GACC-, CCC-, NMPA-palvelut - Toimialan vaatimustenmukaisuusoppaat | SinoTrade-yhteensopivuus",
+    "metaTitle": "Kiinan tuontivaatimukset toimialoittain | GACC, CCC, NMPA",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {

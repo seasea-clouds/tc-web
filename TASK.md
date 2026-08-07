@@ -1,6 +1,6 @@
 # TASK.md — 任务清单
 
-# 🚀 深度差异化方案 D1-D7（2026-08-04 启动，2026-08-05 执行中）
+# 🚀 深度差异化方案 D1-D9（2026-08-04 启动，2026-08-07 全部完成）
 
 **背景：** Token 免费期间全量执行。Portal/Admin 是工具/后台，**不差异化**；面向客户的**主站（site）+ 博客站（blog）**全部深度差异化。
 
@@ -18,9 +18,11 @@
 | **D2** | 行业页全字段差异化 | 10 行业 × 48 语言 × ~27 字段 | ✅ 完成（2026-08-05） |
 | **D3** | ServiceCommon + Home 差异化 | 22 + 66 keys × 48 语言 | ✅ 完成（2026-08-05） |
 | **D4** | FAQ 页 + 次级页差异化 | Faq(97) + About/Packages/Quote/ThankYou/Testimonials/Services/Sitemap × 48 | ✅ 完成（2026-08-05） |
-| **D5** | Blog namespace + 文章标题/excerpt | Blog(61) × 48 + BlogFaq(62) × 48 + 528 文章 frontmatter | ⏳ 待做（本轮） |
-| **D6** | 博客正文本地化增强 + 本地市场新文章 | 528 篇增强 + 48-100 篇新文章 | ⏳ 待做 |
-| **D7** | 技术 SEO 体检 | hreflang/sitemap/OG/JSON-LD/内链/canonical + metaTitle/desc/frontmatter 精写 | ⏳ 进行中（D7-SEO 手动改写） |
+| **D5** | Blog namespace + 文章标题/excerpt | Blog(61) × 48 + BlogFaq(62) × 48 + 528 文章 frontmatter | ✅ 完成（2026-08-05） |
+| **D6** | 博客正文本地化增强 | 528 篇 × 核心篇本地化增强（新文章暂缓） | ✅ 完成（2026-08-06） |
+| **D7** | 技术 SEO：metaTitle/metaDescription/frontmatter 精写 | 48 语言全量手动改写 | ✅ 完成（2026-08-07） |
+| **D8** | IndustriesCommon.metaDescription 本地化 | 46 语言英文残留精写（en 母版 + ko 原有） | ✅ 完成（2026-08-07） |
+| **D9** | 行业详情页 meta fallback bug 修复 | `[industry]/page.tsx` includes('.') → t.has() | ✅ 完成（2026-08-07） |
 
 ---
 

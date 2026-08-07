@@ -275,10 +275,10 @@ curl -sL -o /dev/null -w "%{http_code}\n" https://trade-web-site.pages.dev/en/bl
 
 ## 官网翻译流程
 
-翻译引擎调用 `/root/projects/translate-tool/`：
+翻译引擎调用 `/root/projects/tool/translate/`：
 
 ```python
-import sys; sys.path.insert(0, "/root/projects/translate-tool")
+import sys; sys.path.insert(0, "/root/projects/tool/translate")
 from lib.translation_engine import TranslationEngine
 engine = TranslationEngine(caller="sinotradecompliance")
 result = engine.translate_json(json_str, tgt=locale)
@@ -288,7 +288,7 @@ result = engine.translate(mdx_content, tgt=locale)      # blog MDX
 配额查看：
 ```bash
 source /root/projects/.venv/bin/activate
-cd /root/projects/translate-tool && python scripts/translate.py quota
+cd /root/projects/tool/translate && python scripts/translate.py quota
 ```
 
 ### 翻译二次检查
@@ -307,9 +307,9 @@ cd /root/projects/translate-tool && python scripts/translate.py quota
 2. **批量翻译**：
    ```bash
    source /root/projects/.venv/bin/activate
-   translate-tool submit -i apps/site/content/blog/en/{slug}.mdx -n "blog-{slug}" -s en -t "af,ar,az,be,bg,bn,ca,cs,da,de,el,es,fa,fi,fr,he,hi,hr,hu,hy,id,it,ja,ka,ko,ms,ne,nl,no,pl,pt,ro,ru,si,sk,sl,sq,sr,sv,sw,ta,th,tr,uk,ur,vi,zh" -R "blog article: {slug}"
-   translate-tool status -n "blog-{slug}"
-   translate-tool results -n "blog-{slug}" -o /tmp/{slug}-translations.json
+   t-translate submit -i apps/site/content/blog/en/{slug}.mdx -n "blog-{slug}" -s en -t "af,ar,az,be,bg,bn,ca,cs,da,de,el,es,fa,fi,fr,he,hi,hr,hu,hy,id,it,ja,ka,ko,ms,ne,nl,no,pl,pt,ro,ru,si,sk,sl,sq,sr,sv,sw,ta,th,tr,uk,ur,vi,zh" -R "blog article: {slug}"
+   t-translate status -n "blog-{slug}"
+   t-translate results -n "blog-{slug}" -o /tmp/{slug}-translations.json
    ```
 3. **构建**：`npx next build`
 4. **提交推送**：`git push`
@@ -409,14 +409,14 @@ references:                      # 可选
 
 ```bash
 source /root/projects/.venv/bin/activate
-translate-tool submit \
+t-translate submit \
   -i apps/blog/content/en/{slug}.mdx \
   -n "blog-{slug}" \
   -s en \
   -t "af,ar,az,be,bg,bn,ca,cs,da,de,el,es,fa,fi,fr,he,hi,hr,hu,hy,id,it,ja,ka,ko,ms,ne,nl,no,pl,pt,ro,ru,si,sk,sl,sq,sr,sv,sw,ta,th,tr,uk,ur,vi,zh" \
   -R "blog article: {slug}"
-translate-tool status -n "blog-{slug}"
-translate-tool results -n "blog-{slug}" -o /tmp/{slug}-translations.json
+t-translate status -n "blog-{slug}"
+t-translate results -n "blog-{slug}" -o /tmp/{slug}-translations.json
 ```
 
 ### Step 5: 本地构建验证

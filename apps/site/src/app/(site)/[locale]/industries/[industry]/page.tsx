@@ -34,10 +34,10 @@ export async function generateMetadata({
 
   const t = await getTranslations({ locale, namespace: industry.namespace });
   // Use metaTitle/metaDescription when available, fall back to heroTitle/heroSubtitle
-  const rawTitle = t('metaTitle');
-  const title = rawTitle && !rawTitle.includes('.') ? rawTitle : t('heroTitle');
-  const rawDesc = t('metaDescription');
-  const description = rawDesc && !rawDesc.includes('.') ? rawDesc : t('heroSubtitle');
+  // (t.has() checks key existence — the old includes('.') check wrongly treated
+  //  any sentence-ending period as a missing key and fell back to heroSubtitle)
+  const title = t.has('metaTitle') ? t('metaTitle') : t('heroTitle');
+  const description = t.has('metaDescription') ? t('metaDescription') : t('heroSubtitle');
   const url = `https://sinotradecompliance.com/${locale}/industries/${industrySlug}/`;
 
   return {

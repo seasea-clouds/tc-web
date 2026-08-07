@@ -32,7 +32,7 @@
 
 ### 翻译引擎
 
-翻译调用 `/root/projects/translate-tool/`，双渠道 Google Translate 免费无需 Key。
+翻译调用 `/root/projects/tool/translate/`，双渠道 Google Translate 免费无需 Key。
 
 ## Portal
 

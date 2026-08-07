@@ -74,8 +74,8 @@
     "trustedByTitle": "Partnerë që na besojnë",
     "processDesc": "Një proces i thjeshtë me 6 hapa për ta sjellë markën tuaj në Kinë",
     "trustedByDesc": "Bashkohuni me markat ndërkombëtare që tashmë po rriten me ne – përfshirë eksportuesit shqiptarë të vajit të ullirit dhe mjaltit.",
-    "metaTitle": "Pajtueshmëria SinoTrade | Shërbimet e pajtueshmërisë së importit të Kinës",
-    "metaDescription": "Pajtueshmëria e importit të Kinës me një ndalesë: regjistrimi GACC, certifikimi CCC, depozitimi i kozmetikës NMPA, pajtueshmëria e etiketës. I besuar nga eksportuesit në 50+ vende.",
+    "metaTitle": "SinoTrade Compliance | Pajtueshmëri e importit kinez",
+    "metaDescription": "Pajtueshmëri e plotë për importin kinez: regjistrimi GACC, certifikimi CCC, depozitimi i kozmetikës NMPA, etiketimi. E besuar nga eksportues në 50+ vende.",
     "heroPortalCta": "Provoni kontrolluesin tonë të pajtueshmërisë në 3 hapa →"
   },
   "Services": {
@@ -155,8 +155,8 @@
     "cosmeticsPoints7": "Përditësime të vazhdueshme rregullatore dhe këshillim pajtueshmërie",
     "ecommercePoints7": "Përditësime të vazhdueshme rregullatore dhe këshillim pajtueshmërie",
     "brandPoints7": "Përditësime të vazhdueshme rregullatore dhe këshillim pajtueshmërie",
-    "metaTitle": "Shërbimet e pajtueshmërisë së importit kinez | GACC, CCC, NMPA & Etiketimi",
-    "metaDescription": "Pajtueshmëri importi kineze me një ndalesë: regjistrimi GACC i ushqimeve, certifikimi CCC, regjistrimi i kozmetikës NMPA, pajtueshmëria e etiketës dhe mbrojtja e markës. Mbi 15 vjet ekspertizë."
+    "metaTitle": "Shërbime pajtueshmërie kineze | GACC, CCC, NMPA & Etiketa",
+    "metaDescription": "Pajtueshmëri importi kineze: regjistrimi GACC i ushqimeve, certifikimi CCC, depozitimi NMPA, etiketimi dhe mbrojtja e markës. Mbi 15 vjet ekspertizë."
   },
   "ServiceGacc": {
     "heroTitle": "Regjistrimi GACC i ushqimeve – për eksportuesit shqiptarë",
@@ -204,7 +204,7 @@
     "coverItems4": "Përgatitja e plotë e dokumentacionit, përkthimi dhe dorëzimi",
     "coverItems5": "Shqyrtimi i përputhshmërisë së etiketës (GB 7718 / GB 28050)",
     "coverItems6": "Rinovimi i regjistrimit dhe gjurmimi i vlefshmërisë 5-vjeçare",
-    "metaTitle": "Regjistrimi GACC i ushqimeve | udhëzues për eksportuesit shqiptarë",
+    "metaTitle": "Regjistrimi GACC i ushqimeve | Dekreti 248 për eksportues",
     "metaDescription": "Regjistrimi GACC për eksportuesit shqiptarë: Rregullorja 248, sistemi CIFER, dokumentet e nevojshme, koha. Mbështetje në shqip."
   },
   "ServiceLabel": {
@@ -300,7 +300,7 @@
     "coverItems4": "Përgatitja për inspektimin e fabrikës (përfshirë atë dixhital)",
     "coverItems5": "Monitorimi vjetor i përputhshmërisë për akses të pandërprerë në treg",
     "coverItems6": "Kategoritë e reja të vitit 2025, përfshirë bateritë litium-jon",
-    "metaTitle": "Certifikimi CCC | udhëzues eksporti në Kinë për prodhuesit shqiptarë",
+    "metaTitle": "Certifikimi CCC | Certifikim i detyrueshëm për produktin",
     "metaDescription": "Certifikimi CCC për prodhuesit shqiptarë: ndryshimi nga CE, procesi i certifikimit, testet, auditimi i fabrikës, koha dhe kostoja. Mbështetje në shqip."
   },
   "ServiceCosmetics": {
@@ -349,7 +349,7 @@
     "coverItems4": "Koordinimi i vlerësimit të sigurisë sipas CSAR",
     "coverItems5": "Mbështetje për testimin e efikasitetit për funksionet e deklaruara",
     "coverItems6": "Përputhshmëria pas tregtimit (raportimi i ngjarjeve të padëshiruara, raportet vjetore)",
-    "metaTitle": "Regjistrimi i kozmetikës NMPA | markat shqiptare në tregun kinez",
+    "metaTitle": "Regjistrimi i kozmetikës NMPA | hyrje në tregun kinez",
     "metaDescription": "Regjistrimi NMPA për markat kozmetike shqiptare: klasifikimi, përjashtimi nga testimi te kafshët, personi përgjegjës në Kinë, koha."
   },
   "ServiceEcommerce": {
@@ -396,7 +396,7 @@
     "coverItems4": "Optimizimi i taksave ndërkufitare (tarifë zero brenda kufijve)",
     "coverItems5": "Udhëzime për përjashtimin nga etiketimi për produktet ndërkufitare",
     "coverItems6": "Përputhshmëria e të dhënave (PIPL) për operacionet ndërkufitare",
-    "metaTitle": "Tregti elektronike ndërkufitare | udhëzues Tmall·JD për markat shqiptare",
+    "metaTitle": "E-commerce ndërkufitare në Kinë | Tmall, JD, Douyin",
     "metaDescription": "Markat shqiptare në Kinë përmes tregtisë elektronike ndërkufitare: Tmall Global, JD Worldwide, përputhja CBEC, logjistika, pagesat."
   },
   "ServiceBrand": {
@@ -521,8 +521,8 @@
     "premiumItems3": "Regjistrimi i kozmetikës NMPA (nëse është e aplikueshme)",
     "premiumItems4": "Vlerësimi i pajtueshmërisë së të dhënave PIPL",
     "premiumItems5": "Këshillim i vazhdueshëm pajtueshmërie",
-    "metaTitle": "Paketat e pajtueshmërisë së Kinës dhe çmimet | Planet GACC, CCC & NMPA",
-    "metaDescription": "Krahasoni paketat e pajtueshmërisë së importit kinez: regjistrimi GACC, certifikimi CCC dhe regjistrimi i kozmetikës NMPA me çmime transparente me tarifë fikse. Gjeni paketën e duhur për markën tuaj."
+    "metaTitle": "Paketat e pajtueshmërisë kineze | Planet GACC, CCC & NMPA",
+    "metaDescription": "Krahasoni paketat e pajtueshmërisë kineze: planet GACC, CCC dhe NMPA me çmime transparente me tarifë fikse. Gjeni paketën e duhur për markën tuaj."
   },
   "Faq": {
     "heroTitle": "Pajtueshmëria e importit kinez: pyetjet më të shpeshta",
@@ -628,8 +628,8 @@
       "ecommerceName": "Tregtia elektronike ndërkufitare",
       "brandName": "Mbrojtja e markës"
     },
-    "metaTitle": "FAQ: pajtueshmëria e importit kinez për eksportuesit | GACC, CCC, NMPA",
-    "metaDescription": "FAQ për pajtueshmërinë e importit kinez: regjistrimi GACC sipas Dekretit 248, certifikimi CCC, regjistrimi i kozmetikës NMPA dhe kërkesat e etiketës kineze — përgjigje për eksportuesit shqiptarë."
+    "metaTitle": "FAQ për pajtueshmërinë e importit kinez | GACC, CCC, NMPA",
+    "metaDescription": "FAQ për importin kinez: regjistrimi GACC sipas Dekretit 248, certifikimi CCC, depozitimi NMPA dhe kërkesat e etiketës. Përgjigje për eksportuesit shqiptarë."
   },
   "About": {
     "heroTitle": "Rreth SinoTrade Compliance",
@@ -687,7 +687,7 @@
     "partners7": "🔬 Institute Kërkimore",
     "partners8": "🤝 Shoqata të Industrisë",
     "values5": "Përsosmëria: Zgjidhje pajtueshmërie me cilësinë më të lartë, me vëmendje ndaj çdo detaji.",
-    "metaTitle": "Rreth SinoTrade Compliance | 15+ vjet ekspertizë në importet kineze",
+    "metaTitle": "Rreth SinoTrade Compliance | 15+ vjet ekspertizë në Kinë",
     "metaDescription": "Njihuni me ekipin e SinoTrade Compliance — 15+ vjet përvojë në pajtueshmërinë e importeve kineze, 500+ projekte të suksesshme dhe klientë në 50+ vende."
   },
   "ThankYou": {
@@ -758,8 +758,8 @@
     "next": "Tjetra",
     "pageInfo": "",
     "of": " nga ",
-    "metaTitle": "Vështrime të pajtueshmërisë së importit të Kinës | Udhëzues GACC, CCC, NMPA - Vështrime të pajtueshmërisë së importit të Kinës | Pajtueshmëria e SinoTrade",
-    "metaDescription": "Udhëzues ekspertësh për pajtueshmërinë e importeve të Kinës. Këshilla për regjistrimin e GACC, përditësime të certifikimit të KKK-së, lajme për paraqitjen e NMPA, njohuri për pajtueshmërinë e etiketës. Qëndroni të informuar."
+    "metaTitle": "Vështrime pajtueshmërie kineze | Udhëzues GACC, CCC, NMPA",
+    "metaDescription": "Udhëzues ekspertësh për pajtueshmërinë e importit kinez: regjistrimi GACC, certifikimi CCC, depozitimi i kozmetikës NMPA dhe etiketimi. Qëndroni të informuar."
   },
   "OrganizationJsonLd": {
     "description": "Shërbimet e konsulencës rregullatore të importit me një ndalesë për Kinën — regjistrimi GACC, etiketimi kinez, certifikimi CCC, depozitimi i kozmetikës NMPA, tregtia elektronike ndërkufitare dhe mbrojtja e markës.",
@@ -789,8 +789,8 @@
     "samrDefinition": "SAMR është Administrata Shtetërore e Kinës për Rregullimin e Tregut. Ai mbikëqyr cilësinë e produktit, standardet e sigurisë ushqimore, zbatimin e antimonopolit dhe mbikëqyrjen e tregut. SAMR punon me GACC për rregullimin e ushqimit dhe kozmetikës."
   },
   "Quote": {
-    "metaTitle": "Merrni një ofertë falas për pajtueshmërinë e Kinës | SinoTrade Compliance",
-    "metaDescription": "Kërkoni një ofertë falas për pajtueshmërinë e importit kinez — regjistrimi GACC, certifikimi CCC, regjistrimi i kozmetikës NMPA, rishikimi i etiketës. Përgjigjemi brenda 24 orëve.",
+    "metaTitle": "Ofertë falas për pajtueshmëri kineze | SinoTrade Compliance",
+    "metaDescription": "Kërkoni ofertë falas për importin kinez: regjistrimi GACC, certifikimi CCC, depozitimi NMPA, rishikimi i etiketës. Përgjigjemi brenda 24 orëve.",
     "ogTitle": "Merrni një ofertë falas: SinoTrade Compliance",
     "heroTitle": "Merrni ofertën tuaj falas të pajtueshmërisë",
     "heroSubtitle": "Na tregoni se cilat shërbime ju nevojiten dhe ne do t’ju kthehemi brenda 24 orëve me një plan të personalizuar.",
@@ -815,8 +815,8 @@
     "privacy": "E respektojmë privatësinë tuaj. Asnjë spam, kurrë."
   },
   "Testimonials": {
-    "metaTitle": "Dëshmi klientësh | Histori suksesi eksporti të SinoTrade Compliance",
-    "metaDescription": "Lexoni çfarë thonë eksportuesit e ushqimeve, kozmetikës dhe elektronikës për shërbimet e pajtueshmërisë së importit kinez të SinoTrade — histori reale nga markat që tashmë shesin në Kinë.",
+    "metaTitle": "Dëshmi klientësh | Histori suksesi të SinoTrade Compliance",
+    "metaDescription": "Eksportuesit e ushqimeve, kozmetikës dhe elektronikës flasin për shërbimet e SinoTrade. Histori reale nga markat që tashmë shesin në Kinë.",
     "ogTitle": "Dëshmi klientësh: SinoTrade Compliance",
     "heroTitle": "Çfarë thonë eksportuesit për ne",
     "heroSubtitle": "Eksportuesit në 50+ vende i besojnë SinoTrade pajtueshmërinë e tyre kineze. Ja çfarë thonë ata për punën me ne — nga prodhuesit shqiptarë të vajit të ullirit te markat evropiane.",
@@ -1116,7 +1116,7 @@
     "coverItems6": "Monitorim i vazhdueshëm rregullator dhe mbështetje pajtueshmërie",
     "coverItems7": "Trajnim dhe këshillim për pajtueshmërinë me platformën e tregtisë elektronike",
     "metaDescription": "Markat shqiptare në Kinë përmes tregtisë elektronike ndërkufitare: Tmall Global, JD Worldwide, CBEC, logjistika, pagesat.",
-    "metaTitle": "Tregti elektronike në Kinë | udhëzues përputhjeje për markat shqiptare"
+    "metaTitle": "E-commerce ndërkufitare në Kinë | Tmall, JD, Douyin"
   },
   "IndustriesCommon": {
     "heroTitle": "Industritë që i shërbejmë",
@@ -1148,7 +1148,7 @@
       "crossborderecommerce": "E-commerce ndërkufitare",
       "crossborderecommerceDesc": "Rregulloret CBEC, pajtueshmëria me platformën dhe optimizimi i taksave."
     },
-    "metaTitle": "Pajtueshmëria e importit të Kinës sipas industrisë | Shërbimet GACC, CCC, NMPA - Udhëzues për pajtueshmërinë e industrisë | Pajtueshmëria e SinoTrade",
+    "metaTitle": "Pajtueshmëria sipas industrisë në Kinë | GACC, CCC & NMPA",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {
@@ -1362,7 +1362,7 @@
     "intellectualTitle": "Pronësia Intelektuale",
     "limitationText": "SinoTrade Compliance nuk do të jetë përgjegjës për ndonjë dëm të tërthortë, të rastësishëm, të veçantë, pasues ose ndëshkues që rrjedh nga përdorimi juaj i shërbimeve tona.",
     "limitationTitle": "Kufizimi i Përgjegjësisë",
-    "metaDescription": "Kushtet e shërbimit për pajtueshmërinë me SinoTrade - kushtet për përdorimin e mjeteve, raporteve dhe shërbimeve tona të konsulencës për kontrollin e pajtueshmërisë.",
+    "metaDescription": "Kushtet e shërbimit të SinoTrade Compliance: kushtet për përdorimin e mjeteve, raporteve dhe shërbimeve tona të konsulencës.",
     "metaTitle": "Kushtet e Shërbimit |",
     "paymentText1": "Disa shërbime kërkojnë pagesë.",
     "paymentText2": "Raportet dorëzohen në mënyrë dixhitale pas pagesës së suksesshme.",

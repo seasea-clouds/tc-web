@@ -74,8 +74,8 @@
     "trustedByTitle": "Zaupanja vredni partnerji",
     "processDesc": "Preprost postopek v 6 korakih za uvedbo vaše blagovne znamke na Kitajsko",
     "trustedByDesc": "Pridružite se mednarodnim blagovnim znamkam, ki že rastejo z nami",
-    "metaTitle": "Skladnost s predpisi SinoTrade | Storitve skladnosti uvoza na Kitajskem",
-    "metaDescription": "Skladnost pri uvozu na Kitajsko na enem mestu: registracija GACC, certificiranje CCC, vložitev kozmetičnih izdelkov NMPA, skladnost etiket. Zaupajo mu izvozniki v več kot 50 državah.",
+    "metaTitle": "SinoTrade Compliance | Skladnost pri uvozu na Kitajsko",
+    "metaDescription": "Celovita skladnost pri uvozu na Kitajsko: registracija GACC, certificiranje CCC, prijava kozmetike NMPA, skladnost etiket. Zaupajo nam izvozniki v 50+ državah.",
     "heroPortalCta": "Preizkusite naš 3-stopenjski preverjevalnik skladnosti →"
   },
   "Services": {
@@ -155,8 +155,8 @@
     "cosmeticsPoints7": "Sprotne posodobitve predpisov in svetovanje o skladnosti",
     "ecommercePoints7": "Sprotne posodobitve predpisov in svetovanje o skladnosti",
     "brandPoints7": "Sprotne posodobitve predpisov in svetovanje o skladnosti",
-    "metaTitle": "Storitve skladnosti pri uvozu na Kitajsko | GACC, CCC, NMPA in etikete",
-    "metaDescription": "Skladnost pri uvozu na Kitajsko na enem mestu: registracija živil GACC, certificiranje CCC, prijava kozmetike NMPA, skladnost etiket in zaščita blagovne znamke. 15+ let izkušenj."
+    "metaTitle": "Storitve skladnosti pri uvozu na Kitajsko | GACC, CCC, NMPA",
+    "metaDescription": "Skladnost pri uvozu na Kitajsko: registracija GACC, certificiranje CCC, prijava kozmetike NMPA, skladnost etiket in zaščita blagovne znamke. 15+ let izkušenj."
   },
   "ServiceGacc": {
     "heroTitle": "Registracija GACC živil – za slovenske izvoznike",
@@ -300,7 +300,7 @@
     "coverItems4": "Priprava na tovarniški pregled (vključno z oddaljenim pregledom)",
     "coverItems5": "Letni nadzor skladnosti za nemoten dostop do trga",
     "coverItems6": "Nove kategorije 2025, vključno z litij-ionskimi baterijami",
-    "metaTitle": "CCC certificiranje | vodnik za izvoz na Kitajsko za slovenske proizvajalce",
+    "metaTitle": "CCC certificiranje na Kitajskem | vodnik za proizvajalce",
     "metaDescription": "CCC certificiranje za slovenske proizvajalce: razlika od CE, postopek certificiranja, testiranja, revizija tovarne, čas in stroški. Podpora v slovenščini."
   },
   "ServiceCosmetics": {
@@ -349,7 +349,7 @@
     "coverItems4": "Usklajevanje ocene varnosti (vključno s celovito oceno od leta 2025)",
     "coverItems5": "Podpora pri testiranju učinkovitosti za navedene funkcije",
     "coverItems6": "Skladnost po vstopu na trg (spremljanje neželenih dogodkov, letna poročila)",
-    "metaTitle": "Registracija kozmetike NMPA | slovenske znamke na kitajskem trgu",
+    "metaTitle": "Prijava kozmetike NMPA | slovenske znamke na Kitajskem",
     "metaDescription": "Registracija kozmetike NMPA za slovenske znamke: klasifikacija, oprostitev testiranja na živalih, odgovorna oseba na Kitajskem, čas."
   },
   "ServiceEcommerce": {
@@ -521,8 +521,8 @@
     "premiumItems3": "Prijava kozmetike NMPA (če je ustrezno)",
     "premiumItems4": "Ocena skladnosti podatkov PIPL",
     "premiumItems5": "Stalno svetovanje o skladnosti",
-    "metaTitle": "Paketi skladnosti za Kitajsko in cene | načrti GACC, CCC in NMPA",
-    "metaDescription": "Primerjajte pakete skladnosti pri uvozu na Kitajsko: registracija GACC, certificiranje CCC in prijava NMPA s preglednimi fiksnimi cenami. Poiščite pravi načrt za svojo znamko."
+    "metaTitle": "Paketi skladnosti za Kitajsko | cene GACC, CCC in NMPA",
+    "metaDescription": "Primerjajte pakete skladnosti za Kitajsko: GACC, CCC in NMPA po preglednih fiksnih cenah. Poiščite pravi paket za svojo znamko."
   },
   "Faq": {
     "heroTitle": "Skladnost pri uvozu na Kitajsko: pogosta vprašanja",
@@ -628,8 +628,8 @@
       "ecommerceName": "Čezmejna e-trgovina",
       "brandName": "Zaščita blagovne znamke"
     },
-    "metaTitle": "Pogosta vprašanja o skladnosti pri uvozu na Kitajsko | GACC, CCC, NMPA",
-    "metaDescription": "Pogosta vprašanja o skladnosti pri uvozu na Kitajsko: registracija po odloku GACC 248, certificiranje CCC, prijava kozmetike NMPA in zahteve za kitajske etikete — odgovori za slovenske izvoznike."
+    "metaTitle": "Pogosta vprašanja o uvozu na Kitajsko | GACC, CCC, NMPA",
+    "metaDescription": "Pogosta vprašanja o skladnosti: odlok GACC 248, certificiranje CCC, prijava kozmetike NMPA in zahteve za kitajske etikete. Odgovori za slovenske izvoznike."
   },
   "About": {
     "heroTitle": "O SinoTrade Compliance",
@@ -687,7 +687,7 @@
     "partners7": "🔬 Raziskovalni inštituti",
     "partners8": "🤝 Industrijska združenja",
     "values5": "Odličnost: najkakovostnejše rešitve skladnosti s pozornostjo do vsake podrobnosti.",
-    "metaTitle": "O SinoTrade Compliance | 15+ let izkušenj z uvozom na Kitajsko",
+    "metaTitle": "SinoTrade Compliance | 15+ let izkušenj s Kitajsko",
     "metaDescription": "Spoznajte ekipo SinoTrade Compliance — 15+ let izkušenj s skladnostjo pri uvozu na Kitajsko, 500+ uspešnih projektov in stranke v več kot 50 državah."
   },
   "ThankYou": {
@@ -758,8 +758,8 @@
     "next": "Naslednja",
     "pageInfo": "",
     "of": " od ",
-    "metaTitle": "Vpogled v skladnost uvoza s Kitajske | Vodniki GACC, CCC, NMPA – Vpogled v skladnost uvoza na Kitajskem | Skladnost s predpisi SinoTrade",
-    "metaDescription": "Strokovni vodniki o skladnosti uvoza na Kitajsko. Nasveti za registracijo GACC, posodobitve certifikatov CCC, novice o vložitvi NMPA, vpogled v skladnost oznak. Ostanite obveščeni."
+    "metaTitle": "Vpogledi v skladnost pri uvozu na Kitajsko | GACC, CCC, NMPA",
+    "metaDescription": "Strokovni vodniki o skladnosti pri uvozu na Kitajsko: registracija GACC, certificiranje CCC, prijava kozmetike NMPA in skladnost etiket. Ostanite obveščeni."
   },
   "OrganizationJsonLd": {
     "description": "Regulatorne svetovalne storitve za Kitajsko na enem mestu – registracija GACC, kitajsko označevanje, certificiranje CCC, prijava kozmetičnih izdelkov NMPA, čezmejno e-trgovanje in zaščita blagovne znamke.",
@@ -789,7 +789,7 @@
     "samrDefinition": "SAMR je kitajska državna uprava za regulacijo trga. Nadzira kakovost izdelkov, standarde varnosti hrane, protimonopolno uveljavljanje in nadzor trga. SAMR sodeluje z GACC pri regulaciji hrane in kozmetike."
   },
   "Quote": {
-    "metaTitle": "Brezplačna ponudba za skladnost pri uvozu na Kitajsko | SinoTrade Compliance",
+    "metaTitle": "Brezplačna ponudba za skladnost | SinoTrade Compliance",
     "metaDescription": "Zahtevajte brezplačno ponudbo za skladnost pri uvozu na Kitajsko — registracija GACC, certificiranje CCC, prijava NMPA, pregled etiket. Odgovorimo v 24 urah.",
     "ogTitle": "Brezplačna ponudba: SinoTrade Compliance",
     "heroTitle": "Pridobite brezplačno ponudbo za skladnost",
@@ -816,7 +816,7 @@
   },
   "Testimonials": {
     "metaTitle": "Izjave strank | Zgodbe o uspehu izvoznikov SinoTrade",
-    "metaDescription": "Preberite, kaj o storitvah SinoTrade za skladnost pri uvozu na Kitajsko povedo izvozniki hrane, kozmetike in elektronike — resnične zgodbe znamk, ki že prodajajo na Kitajskem.",
+    "metaDescription": "Preberite izjave izvoznikov hrane, kozmetike in elektronike o skladnosti SinoTrade. Zgodbe znamk, ki že prodajajo na Kitajskem.",
     "ogTitle": "Izjave strank: SinoTrade Compliance",
     "heroTitle": "Kaj o nas povedo izvozniki",
     "heroSubtitle": "Izvozniki v več kot 50 državah — od slovenskih proizvajalcev medu in vina do azijskih znamk elektronike — zaupajo SinoTrade skladnost s Kitajsko. Preberite, kaj pravijo o sodelovanju z nami.",
@@ -1116,7 +1116,7 @@
     "coverItems6": "Stalno spremljanje predpisov in podpora skladnosti",
     "coverItems7": "Usposabljanje in svetovanje o skladnosti platforme za e-trgovino",
     "metaDescription": "Slovenske znamke na Kitajskem prek čezmejne e-trgovine: Tmall Global, JD Worldwide, CBEC, logistika, plačila.",
-    "metaTitle": "E-trgovina na Kitajskem | vodnik skladnosti za slovenske znamke"
+    "metaTitle": "E-trgovina na Kitajskem | vodnik za slovenske znamke"
   },
   "IndustriesCommon": {
     "heroTitle": "Panoge, ki jih opravljamo",
@@ -1148,7 +1148,7 @@
       "crossborderecommerce": "Čezmejno e-trgovanje",
       "crossborderecommerceDesc": "Predpisi CBEC, skladnost platforme in davčna optimizacija."
     },
-    "metaTitle": "Kitajska skladnost pri uvozu po panogah | Storitve GACC, CCC, NMPA – Vodniki za skladnost v industriji | Skladnost s predpisi SinoTrade",
+    "metaTitle": "Skladnost pri uvozu na Kitajsko po panogah | GACC, CCC, NMPA",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {

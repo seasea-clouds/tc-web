@@ -74,8 +74,8 @@
     "trustedByTitle": "Washirika Wanaoaminika",
     "processDesc": "Mchakato rahisi wa hatua 6 wa kupeleka chapa yako Uchina",
     "trustedByDesc": "Jiunge na chapa za kimataifa ambazo tayari zinakua nasi",
-    "metaTitle": "Uzingatiaji wa SinoTrade | Huduma za Uzingatiaji wa Uagizaji wa China",
-    "metaDescription": "Utiifu wa uagizaji wa bidhaa kutoka China mara moja: usajili wa GACC, uidhinishaji wa CCC, uwekaji faili wa vipodozi vya NMPA, kufuata lebo. Inaaminiwa na wauzaji bidhaa nje katika nchi zaidi ya 50.",
+    "metaTitle": "Uzingatiaji wa SinoTrade | Huduma za Uagizaji wa China",
+    "metaDescription": "Utiifu wa uagizaji wa China mara moja: usajili wa GACC, uidhinishaji wa CCC, uwekaji faili wa NMPA na kufuata lebo. Inaaminika na wauzaji nje wa nchi 50+.",
     "heroPortalCta": "Jaribu ukaguzi wetu wa hatua 3 wa utiifu →"
   },
   "Services": {
@@ -155,8 +155,8 @@
     "cosmeticsPoints7": "Masasisho ya mara kwa mara ya udhibiti na ushauri wa utiifu",
     "ecommercePoints7": "Masasisho ya mara kwa mara ya udhibiti na ushauri wa utiifu",
     "brandPoints7": "Masasisho ya mara kwa mara ya udhibiti na ushauri wa utiifu",
-    "metaTitle": "Huduma za Utiifu wa Uagizaji wa China | GACC, CCC, NMPA na Lebo",
-    "metaDescription": "Utiifu wa uagizaji wa China wa mara moja: usajili wa chakula wa GACC, uidhinishaji wa CCC, taarifa ya vipodozi ya NMPA, utiifu wa lebo na ulinzi wa chapa. Utaalamu wa miaka 15+."
+    "metaTitle": "Huduma za Utiifu nchini China | GACC, CCC, NMPA na Lebo",
+    "metaDescription": "Utiifu wa uagizaji wa China: usajili wa GACC, uidhinishaji wa CCC, taarifa ya NMPA, utiifu wa lebo na ulinzi wa chapa. Utaalamu wa miaka 15+."
   },
   "ServiceGacc": {
     "heroTitle": "Usajili wa GACC wa chakula – kwa wauzaji nje wa Tanzania",
@@ -204,7 +204,7 @@
     "coverItems4": "Maandalizi kamili ya nyaraka, tafsiri na uwasilishaji",
     "coverItems5": "Ukaguzi wa uzingatiaji wa lebo (GB 7718 / GB 28050)",
     "coverItems6": "Usasishaji wa usajili na ufuatiliaji wa uhalali wa miaka 5",
-    "metaTitle": "Usajili wa GACC wa chakula | mwongozo kwa wauzaji nje wa Tanzania",
+    "metaTitle": "Usajili wa GACC wa Chakula kwa Wauzaji Nje | Amri ya 248",
     "metaDescription": "Usajili wa GACC kwa wauzaji nje wa chakula wa Tanzania: Kanuni 248, mfumo wa CIFER, nyaraka zinazohitajika, muda. Msaada kwa Kiswahili."
   },
   "ServiceLabel": {
@@ -300,7 +300,7 @@
     "coverItems4": "Maandalizi ya ukaguzi wa kiwanda (ikiwa ni pamoja na wa kidijitali)",
     "coverItems5": "Ufuatiliaji wa uzingatiaji wa kila mwaka kwa ufikiaji endelevu wa soko",
     "coverItems6": "Kategoria mpya za 2025 ikiwa ni pamoja na betri za lithiamu-ioni",
-    "metaTitle": "Uthibiti wa CCC | mwongozo wa kuuza nje China kwa watengenezaji wa Tanzania",
+    "metaTitle": "Uidhinishaji wa CCC | Uthibitisho wa Bidhaa za China",
     "metaDescription": "Uthibiti wa CCC kwa watengenezaji wa Tanzania: tofauti na CE, mchakato wa uthibiti, upimaji, ukaguzi wa kiwanda, muda na gharama. Msaada kwa Kiswahili."
   },
   "ServiceCosmetics": {
@@ -396,7 +396,7 @@
     "coverItems4": "Uboreshaji wa ushuru wa kuvuka mipaka (ushuru wa sifuri ndani ya kikomo)",
     "coverItems5": "Mwongozo wa kuachiliwa kwa lebo kwa bidhaa za kuvuka mipaka",
     "coverItems6": "Uzingatiaji wa data kwa shughuli za kuvuka mipaka (PIPL)",
-    "metaTitle": "Biashara ya mtandaoni ya kuvuka mipaka | mwongozo wa Tmall·JD kwa chapa za Tanzania",
+    "metaTitle": "Biashara ya Mtandaoni ya Mipakani | Mwongozo wa Tmall na JD",
     "metaDescription": "Chapa za Tanzania China kupitia biashara ya mtandaoni ya kuvuka mipaka: Tmall Global, JD Worldwide, kufuata CBEC, usafirishaji, malipo."
   },
   "ServiceBrand": {
@@ -443,7 +443,7 @@
     "coverItems4": "Usajili wa haki miliki forodhani",
     "coverItems5": "Ukaguzi wa uzingatiaji wa utangazaji kwa mujibu wa Sheria ya Utangazaji ya China",
     "coverItems6": "Mkakati wa chapa na mwongozo wa utekelezaji",
-    "metaTitle": "Usajili wa alama ya biashara China | ulinzi wa chapa za Tanzania",
+    "metaTitle": "Usajili wa Alama ya Biashara China | Ulinzi wa Chapa",
     "metaDescription": "Usajili wa alama ya biashara China kwa chapa za Tanzania: CNIPA, mfumo wa Madrid, bidhaa ghushi, ulinzi wa majukwaa."
   },
   "ServiceCommon": {
@@ -521,8 +521,8 @@
     "premiumItems3": "Taarifa ya Vipodozi ya NMPA (ikiwa inatumika)",
     "premiumItems4": "Tathmini ya Utiifu wa Data ya PIPL",
     "premiumItems5": "Ushauri Endelevu wa Utiifu",
-    "metaTitle": "Vifurushi vya Utiifu vya Uagizaji wa China na Bei | Mipango ya GACC, CCC na NMPA",
-    "metaDescription": "Linganisha vifurushi vya utiifu wa uagizaji wa China: mipango ya usajili wa GACC, uidhinishaji wa CCC na taarifa za NMPA kwa bei ya uwazi na isiyobadilika. Tafuta kifurushi kinachofaa chapa yako."
+    "metaTitle": "Vifurushi vya Utiifu vya China na Bei | GACC, CCC na NMPA",
+    "metaDescription": "Linganisha vifurushi vya utiifu wa China: mipango ya GACC, CCC na NMPA kwa bei ya uwazi na isiyobadilika. Tafuta kifurushi kinachofaa chapa yako."
   },
   "Faq": {
     "heroTitle": "Maswali Yanayoulizwa Mara kwa Mara kuhusu Uagizaji wa China",
@@ -628,8 +628,8 @@
       "ecommerceName": "Biashara ya Kuvuka Mipaka",
       "brandName": "Ulinzi wa Chapa"
     },
-    "metaTitle": "Maswali ya Utiifu wa Uagizaji wa China kwa Wauzaji Nje | GACC, CCC, NMPA",
-    "metaDescription": "Maswali ya kawaida kuhusu utiifu wa uagizaji wa China: usajili wa Amri ya 248 ya GACC, uidhinishaji wa CCC, taarifa za vipodozi za NMPA na mahitaji ya lebo za Kichina — yamejibiwa kwa wauzaji nje wa Tanzania, Kenya na Afrika Mashariki."
+    "metaTitle": "Maswali ya Utiifu wa Uagizaji wa China | GACC, CCC, NMPA",
+    "metaDescription": "Maswali ya kawaida kuhusu utiifu wa uagizaji wa China: Amri ya 248 ya GACC, uidhinishaji wa CCC, taarifa za NMPA na lebo kwa wauzaji nje wa Afrika Mashariki."
   },
   "About": {
     "heroTitle": "Kuhusu SinoTrade Compliance",
@@ -687,7 +687,7 @@
     "partners7": "🔬 Taasisi za Utafiti",
     "partners8": "🤝 Vyama vya Sekta",
     "values5": "Ubora: Kutoa suluhu za utiifu za kiwango cha juu kwa makini kwa kila undani.",
-    "metaTitle": "Kuhusu SinoTrade Compliance | Utaalam wa Miaka 15+ wa Uagizaji wa China",
+    "metaTitle": "SinoTrade Compliance | Miaka 15+ ya Uagizaji wa China",
     "metaDescription": "Kutana na timu ya SinoTrade Compliance — uzoefu wa miaka 15+ wa utiifu wa uagizaji wa China, miradi 500+ yenye mafanikio na wateja katika nchi 50+."
   },
   "ThankYou": {
@@ -758,8 +758,8 @@
     "next": "Inayofuata",
     "pageInfo": "",
     "of": " ya ",
-    "metaTitle": "Maarifa ya Uzingatiaji wa Uagizaji wa China | Miongozo ya GACC, CCC, NMPA - Maarifa ya Uzingatiaji Uagizaji wa China | Uzingatiaji wa SinoTrade",
-    "metaDescription": "Miongozo ya kitaalam juu ya kufuata Uchina kutoka nje. Vidokezo vya usajili wa GACC, masasisho ya uidhinishaji wa CCC, habari za uwekaji faili za NMPA, maarifa ya kufuata lebo. Endelea kufahamishwa."
+    "metaTitle": "Maarifa ya Utiifu wa Uagizaji wa China | GACC, CCC, NMPA",
+    "metaDescription": "Miongozo ya kitaalam juu ya kufuata Uchina kutoka nje: usajili wa GACC, uidhinishaji wa CCC, uwekaji faili wa NMPA na kufuata lebo. Endelea kufahamishwa."
   },
   "OrganizationJsonLd": {
     "description": "Huduma za ushauri wa udhibiti wa uagizaji wa mara moja kwa Uchina - usajili wa GACC, uwekaji lebo za Kichina, uthibitishaji wa CCC, uwekaji faili wa vipodozi vya NMPA, biashara ya kielektroniki ya mipakani, na ulinzi wa chapa.",
@@ -789,7 +789,7 @@
     "samrDefinition": "SAMR ni Utawala wa Jimbo la Uchina wa Udhibiti wa Soko. Inasimamia ubora wa bidhaa, viwango vya usalama wa chakula, utekelezaji wa kupinga ukiritimba, na usimamizi wa soko. SAMR inafanya kazi na GACC juu ya udhibiti wa chakula na vipodozi."
   },
   "Quote": {
-    "metaTitle": "Pata Nukuu Bila Malipo ya Utiifu wa Uagizaji wa China | SinoTrade Compliance",
+    "metaTitle": "Pata Nukuu Bila Malipo | Utiifu wa Uagizaji wa China",
     "metaDescription": "Omba nukuu bila malipo ya utiifu wa uagizaji wa China — usajili wa GACC, uidhinishaji wa CCC, taarifa ya NMPA, ukaguzi wa lebo. Tunajibu ndani ya saa 24.",
     "ogTitle": "Pata Nukuu Bila Malipo: SinoTrade Compliance",
     "heroTitle": "Pata Nukuu Yako ya Utiifu Bila Malipo",
@@ -815,8 +815,8 @@
     "privacy": "Tunaheshimu faragha yako. Hakuna barua taka, kamwe."
   },
   "Testimonials": {
-    "metaTitle": "Ushuhuda wa Wateja | Hadithi za Mafanikio za Wauzaji Nje wa SinoTrade Compliance",
-    "metaDescription": "Soma kile wauzaji nje wa chakula, vipodozi na vifaa vya elektroniki wanasema kuhusu huduma za utiifu wa uagizaji wa China za SinoTrade — hadithi halisi za chapa zinazouza nchini China leo.",
+    "metaTitle": "Ushuhuda wa Wateja | Hadithi za Mafanikio za SinoTrade",
+    "metaDescription": "Soma maoni ya wauzaji nje wa chakula, vipodozi na vifaa vya elektroniki kuhusu huduma za SinoTrade. Hadithi halisi za chapa zinazouza nchini China.",
     "ogTitle": "Ushuhuda wa Wateja: SinoTrade Compliance",
     "heroTitle": "Wauzaji Nje Wanasema Nini Kuhusu Sisi",
     "heroSubtitle": "Wauzaji nje katika nchi 50+ wanaiamini SinoTrade na utiifu wao wa Uchina. Hivi ndivyo wanasema kuhusu kufanya kazi nasi.",
@@ -1116,7 +1116,7 @@
     "coverItems6": "Ufuatiliaji unaoendelea wa udhibiti na usaidizi wa utiifu",
     "coverItems7": "Mafunzo na ushauri wa utiifu wa majukwaa ya biashara ya mtandaoni",
     "metaDescription": "Chapa za Tanzania China kupitia biashara ya mtandaoni ya kuvuka mipaka: Tmall Global, JD Worldwide, CBEC, usafirishaji, malipo.",
-    "metaTitle": "Biashara ya mtandaoni China | mwongozo wa kufuata kwa chapa za Tanzania"
+    "metaTitle": "Biashara ya Mtandaoni China | Mwongozo wa Tmall na JD"
   },
   "IndustriesCommon": {
     "heroTitle": "Viwanda Tunachohudumia",
@@ -1148,7 +1148,7 @@
       "crossborderecommerce": "Biashara ya kielektroniki ya mpakani",
       "crossborderecommerceDesc": "Kanuni za CBEC, kufuata jukwaa, na uboreshaji wa kodi."
     },
-    "metaTitle": "Uchina Uzingatiaji wa Uagizaji kwa Viwanda | GACC, CCC, Huduma za NMPA - Miongozo ya Uzingatiaji Sekta | Uzingatiaji wa SinoTrade",
+    "metaTitle": "Uzingatiaji wa Uagizaji China kwa Viwanda | GACC, CCC, NMPA",
     "metaDescription": "Industry-specific China import compliance solutions. GACC registration for food, CCC certification for electronics, NMPA filing for cosmetics and more."
   },
   "IndustryCCC": {

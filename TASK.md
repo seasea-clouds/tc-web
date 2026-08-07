@@ -214,7 +214,7 @@
 ## 处理原则（用户确认，2026-08-06）
 
 1. **不截断**（不用 "…" 切）
-2. **不走翻译工具**（逐条人工改写：模型逐条本地化撰写，不调 translate-tool）
+2. **不走翻译工具**（逐条人工改写：模型逐条本地化撰写，不调 t-translate）
 3. 压缩冗余：删地区枚举（"for US, UK, Canadian, Australian, AU, NZ" → "for Global"）、合并重复后缀（"| Decree 248 Guide" + "| GACC, CCC, NMPA" 只留 1 个）
 4. **保留核心 SEO 关键词**（GACC / CCC / NMPA / GB 7718-2025 / CNIPA / Decree 248 / SRRC）
 5. title ≤ 60、desc ≤ 160，语义完整自然
@@ -233,7 +233,8 @@
 | 批 2 | de/es/fr/it/ja（高流量） | 47fa2a71 | ✅ 2026-08-07 部署验证通过（site+blog 全量 curl 200，metaTitle 新值线上确认） |
 | 批 3 | ru/ar/pt/ko/tr/vi/th | 5d2a9c09 | ✅ 2026-08-07 部署验证通过（7 语言 blog 新 metaTitle 线上确认；ko 308 重定向正常） |
 | 批 4 | id/ms/pl/nl/cs/ro/el/hu | 27fbcef9 | ✅ 2026-08-07 部署验证通过（8 语言 blog 新 metaTitle 线上确认） |
-| 批 5 | 其余 27 语言 | ⏳ 待做 | |
+| 批 5-1 | af/az/be/bg/bn/ca/da/fa/fi | d45194e3 | ✅ 2026-08-07 部署验证通过（9 语言 blog 新 metaTitle 线上确认；zh 已达标跳过） |
+| 批 5-2 | he/hi/hr/hy/ka/ne/no/si/sk/sl/sq/sr/sv/sw/ta/uk/ur | ⏳ 待做 | |
 
 ## 批次计划
 
@@ -242,7 +243,8 @@
 | 批 2 | de/es/fr/it/ja（高流量） | 每语言 site 超长 keys + blog 2 keys + 11 frontmatter（ja 仅 1 个 site key） |
 | 批 3 | ru/ar/pt/ko/tr/vi/th | × 7 |
 | 批 4 | id/ms/pl/nl/cs/ro/el/hu | × 8 ✅ |
-| 批 5 | 其余 27 语言 | × 27 |
+| 批 5-1 | af/az/be/bg/bn/ca/da/fa/fi（zh 达标跳过） | × 9 ✅ |
+| 批 5-2 | he/hi/hr/hy/ka/ne/no/si/sk/sl/sq/sr/sv/sw/ta/uk/ur | × 17 ⏳ |
 
 每批 = 手动改写 → CI → build → commit → push → 部署验证。
 
@@ -287,3 +289,17 @@
 - **hu**：site 17 处（11 title + 6 desc）+ blog 1 处 + frontmatter 15 处（6 title + 9 excerpt）→ commit 27fbcef9
 - **修复**：nl 子代理 6 个 blog title 含连字符（R08 违规，荷兰语复合词习惯如 GACC-registratie），父代理改写为空格分隔（GACC registratie、e-commerce → onlinehandel）后通过
 - **验证**：check-translations 48 语言 0 问题；md-article/format/structure 8 语言全过；site+blog 构建 4/4 成功（check-seo-output 6529 通过 0 失败）；线上 8 语言 curl 200 + 新 metaTitle 确认
+
+## 批 5-1 完成记录（2026-08-07）
+
+- **af**：site 11（7 title + 4 desc）+ blog 1 + frontmatter 16 处（10/11 篇；china-import-compliance-guide excerpt 208>160 按硬性标准改写）→ commit d45194e3
+- **az**：site 15（11 title + 4 desc）+ blog 2 + frontmatter 13 处（11 篇 excerpt + 2 title）→ commit d45194e3
+- **be**：site 21（14 title + 7 desc）+ blog 2 + frontmatter 20 处（含 Blog.metaTitle 垃圾串 138→54 清理）→ commit d45194e3
+- **bg**：site 20（13 title + 7 desc）+ blog 1 + frontmatter 20 处（9 title + 11 excerpt）→ commit d45194e3
+- **bn**：site 8 + blog 0（已达标）+ frontmatter 11 处（8/11 篇）→ commit d45194e3
+- **ca**：site 22（13 title + 9 desc）+ blog 2 + frontmatter 18 处（9 title + 9 excerpt；Blog.metaTitle 混杂串 135→47 清理）→ commit d45194e3
+- **da**：site 13（8 title + 5 desc）+ blog 2 + frontmatter 13 处（10/11 篇）→ commit d45194e3
+- **fa**：site 14（12 title + 2 desc）+ blog 0（已达标）+ frontmatter 11 处（8/11 篇）→ commit d45194e3
+- **fi**：site 21（14 title + 7 desc）+ blog 2 + frontmatter 15 处（11 篇，title 3 处）→ commit d45194e3
+- **zh**：扫描 0 超长，已达标跳过
+- **验证**：check-translations 48 语言 0 问题；md-article/format/structure 9 语言全过；tsc 通过；site+blog 构建 4/4（check-seo-output 6529 通过 0 失败）；线上 9 语言 curl 200 + 新 metaTitle 确认

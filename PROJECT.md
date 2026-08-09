@@ -135,7 +135,7 @@ SinoTrade 品牌的所有网站代码统一放在此 monorepo 中。三个独立
 | Blog | `tc-web-blog` | `apps/blog` | `npx next build` | `out` |
 
 **当前状态：** 已切换至正式域名 `sinotradecompliance.com`。`tc-web-site` 绑定主域名，portal 和 blog 通过主站 Worker 代理访问，无需直接绑定域名。
-**Git 连接：** 三个项目都连接到 GitHub `seasea-clouds/tc-web` 仓库。
+**Git 连接：** 四个项目都连接到 GitHub `seasea-clouds/tc-web` 仓库（2026-08-09 迁移，原 trade-web 前缀改为 tc-）。
 **自动部署：** push 到 `main` 分支触发所有项目构建。
 - 改 `apps/site/**` → 触发主站
 - 改 `apps/portal/**` → 触发 Portal

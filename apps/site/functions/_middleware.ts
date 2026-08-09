@@ -10,7 +10,7 @@
  *
  * Upstream URLs (for server-side proxy) resolved via:
  *   - Environment variables: UPSTREAM_PORTAL, UPSTREAM_BLOG, UPSTREAM_ADMIN
- *   - Auto-derivation on .pages.dev: trade-web-site → trade-web-portal / trade-web-blog / trade-web-admin
+ *   - Auto-derivation on .pages.dev: tc-web-site → tc-web-portal / tc-web-blog / tc-web-admin
  */
 
 // LanguageSwitcher + Navbar dropdowns: CSS group-hover, no React state
@@ -141,14 +141,14 @@ function resolveUpstream(hostname: string, subProject: string, env?: Record<stri
   // Auto-derive for .pages.dev using naming convention
   if (hostname.endsWith('.pages.dev')) {
     const projectName = hostname.replace('.pages.dev', '');
-    // trade-web-site → trade-web-blog / trade-web-portal
+    // tc-web-site → tc-web-blog / tc-web-portal
     const derived = projectName.replace(/-site$/, `-${subProject}`);
     if (derived !== projectName) return `https://${derived}.pages.dev`;
     return `https://${projectName}-${subProject}.pages.dev`;
   }
 
   // Final fallback
-  return `https://trade-web-${subProject}.pages.dev`;
+  return `https://tc-web-${subProject}.pages.dev`;
 }
 
 // ─── Proxy request with header sanitation ────────────────────────

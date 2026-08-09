@@ -139,7 +139,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
     await runMigration(context.env);
 
     // 2. Read all-time totals from D1
-    //    Backfill is handled by trade-web-admin-analytics-cron (hourly cron Worker)
+    //    Backfill is handled by tc-web-admin-analytics-cron (hourly cron Worker)
     const allTime = await readAllTimeTotals(context.env);
 
     // 3. Read today's hourly data

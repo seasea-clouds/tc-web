@@ -39,7 +39,7 @@
 ### URL 架构
 
 Portal 通过主站边缘 Worker 代理到 `/{locale}/c/*` 路径访问。
-独立域名 `trade-web-portal.pages.dev` 用于直接部署测试。
+独立域名 `tc-web-portal.pages.dev` 用于直接部署测试。
 
 - Portal 内部链接用 `useSubsiteHref()` hook 生成
 - API 调用用 `API_BASE` 常量
@@ -141,7 +141,7 @@ node ../../packages/scripts/build-search-index.mjs \
 ### 技术决策
 
 #### Proxy 架构
-- Admin 通过主站 `_middleware.ts` 代理访问（`/admin/*` → `trade-web-admin.pages.dev`）
+- Admin 通过主站 `_middleware.ts` 代理访问（`/admin/*` → `tc-web-admin.pages.dev`）
 - API 路径 `/api/admin/*` 通过 `proxyFetch()` 代理
 
 #### D1 数据库
@@ -169,10 +169,10 @@ node ../../packages/scripts/build-search-index.mjs \
 
 | 项目 | 必要变量 |
 |------|---------|
-| trade-web-admin | ADMIN_JWT_SECRET, TURNSTILE_SECRET_KEY |
-| trade-web-portal | CREEM_API_KEY, CREEM_PRODUCT_ID_SINGLE, CREEM_PRODUCT_ID_SUBSCRIBE, CREEM_WEBHOOK_SECRET, EMAIL_FROM, JWT_SECRET, RESEND_API_KEY, TURNSTILE_SECRET_KEY |
-| trade-web-site | NODE_VERSION, UPSTREAM_BLOG, UPSTREAM_PORTAL, NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY |
-| trade-web-blog | NODE_VERSION, NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY |
+| tc-web-admin | ADMIN_JWT_SECRET, TURNSTILE_SECRET_KEY |
+| tc-web-portal | CREEM_API_KEY, CREEM_PRODUCT_ID_SINGLE, CREEM_PRODUCT_ID_SUBSCRIBE, CREEM_WEBHOOK_SECRET, EMAIL_FROM, JWT_SECRET, RESEND_API_KEY, TURNSTILE_SECRET_KEY |
+| tc-web-site | NODE_VERSION, UPSTREAM_BLOG, UPSTREAM_PORTAL, NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY |
+| tc-web-blog | NODE_VERSION, NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY |
 
 所有环境变量放在 `~/.openclaw/.env`。CF Dashboard 中各项目 Settings → Environment Variables 独立配置。
 

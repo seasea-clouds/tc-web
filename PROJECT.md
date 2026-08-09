@@ -1,9 +1,9 @@
-# trade-web — SinoTrade 网站 Monorepo
+# tc-web — SinoTrade 网站 Monorepo
 
 > **新会话指引：** 读此文件了解网站项目全貌，然后按需读取子项目的 4 文件。
 >
-> **目录：** `/root/projects/trade/web/`
-> **GitHub：** `seasea-clouds/trade-web`
+> **目录：** `/root/projects/tradecompliance/web/`
+> **GitHub：** `seasea-clouds/tc-web`
 
 ## 项目定位
 
@@ -33,8 +33,8 @@ SinoTrade 品牌的所有网站代码统一放在此 monorepo 中。三个独立
 
 ### 主站 — site
 - **目录：** `apps/site/`
-- **CF Pages 项目名：** `trade-web-site`
-- **dev 域名：** `https://trade-web-site.pages.dev`
+- **CF Pages 项目名：** `tc-web-site`
+- **dev 域名：** `https://tc-web-site.pages.dev`
 - **生产域名：** `sinotradecompliance.com` ✅
 - **用途：** 官网主站，品牌展示、服务介绍、行业页面
 - **技术栈：** Next.js 16 (SSG 静态导出) + next-intl + TypeScript + Tailwind CSS
@@ -45,8 +45,8 @@ SinoTrade 品牌的所有网站代码统一放在此 monorepo 中。三个独立
 
 ### 用户站 — portal
 - **目录：** `apps/portal/`
-- **CF Pages 项目名：** `trade-web-portal`
-- **dev 域名：** `https://trade-web-portal.pages.dev`
+- **CF Pages 项目名：** `tc-web-portal`
+- **dev 域名：** `https://tc-web-portal.pages.dev`
 - **主站代理路径：** `/{locale}/c/*`
 - **旧名：** 曾用 "compli-service"，已全面改为 "portal"；URL 前缀从 `/compli-service/` 改为 `/c/`。
 - **用途：** 合规工具箱 — 6 大合规自查工具
@@ -73,8 +73,8 @@ SinoTrade 品牌的所有网站代码统一放在此 monorepo 中。三个独立
 
 ### 博客站 — blog
 - **目录：** `apps/blog/`
-- **CF Pages 项目名：** `trade-web-blog`
-- **dev 域名：** `https://trade-web-blog.pages.dev`
+- **CF Pages 项目名：** `tc-web-blog`
+- **dev 域名：** `https://tc-web-blog.pages.dev`
 - **主站代理路径：** `sinotradecompliance.com/{locale}/blog/*`
 - **用途：** SinoTrade Compliance 品牌的多语言合规博客，通过高质量教育内容获客
 - **技术栈：** Next.js 16 (SSG) + next-intl + TypeScript + Tailwind CSS；内容：Markdown + gray-matter 前置元数据
@@ -84,8 +84,8 @@ SinoTrade 品牌的所有网站代码统一放在此 monorepo 中。三个独立
 
 ### 管理后台 — admin
 - **目录：** `apps/admin/`
-- **CF Pages 项目名：** `trade-web-admin`
-- **dev 域名：** `https://trade-web-admin.pages.dev`
+- **CF Pages 项目名：** `tc-web-admin`
+- **dev 域名：** `https://tc-web-admin.pages.dev`
 - **主站代理路径：** `/{locale}/admin/*`（通过 `_middleware.ts` 代理）
 - **用途：** 内部运营管理面板
 - **路由结构：**
@@ -130,12 +130,12 @@ SinoTrade 品牌的所有网站代码统一放在此 monorepo 中。三个独立
 
 | 项目 | CF Pages 项目名 | Root dir | Build cmd | Build output |
 |------|----------------|----------|-----------|-------------|
-| 主站 | `trade-web-site` | `apps/site` | `npx next build` | `out` |
-| Portal | `trade-web-portal` | `apps/portal` | `npx next build` | `out` |
-| Blog | `trade-web-blog` | `apps/blog` | `npx next build` | `out` |
+| 主站 | `tc-web-site` | `apps/site` | `npx next build` | `out` |
+| Portal | `tc-web-portal` | `apps/portal` | `npx next build` | `out` |
+| Blog | `tc-web-blog` | `apps/blog` | `npx next build` | `out` |
 
-**当前状态：** 已切换至正式域名 `sinotradecompliance.com`。`trade-web-site` 绑定主域名，portal 和 blog 通过主站 Worker 代理访问，无需直接绑定域名。
-**Git 连接：** 三个项目都连接到 GitHub `seasea-clouds/trade-web` 仓库。
+**当前状态：** 已切换至正式域名 `sinotradecompliance.com`。`tc-web-site` 绑定主域名，portal 和 blog 通过主站 Worker 代理访问，无需直接绑定域名。
+**Git 连接：** 三个项目都连接到 GitHub `seasea-clouds/tc-web` 仓库。
 **自动部署：** push 到 `main` 分支触发所有项目构建。
 - 改 `apps/site/**` → 触发主站
 - 改 `apps/portal/**` → 触发 Portal
@@ -180,7 +180,7 @@ import { SearchProvider } from '@trade/ui';
 
 ### Portal D1 配置
 
-CF Dashboard → Workers & Pages → trade-web-portal → Settings → Functions → D1 database bindings
+CF Dashboard → Workers & Pages → tc-web-portal → Settings → Functions → D1 database bindings
 - Variable name: `DB`
 - Database: 选择或创建 D1 数据库
 
@@ -191,16 +191,16 @@ CF Dashboard → Workers & Pages → trade-web-portal → Settings → Functions
 | 品牌色 Tailwind tokens | `packages/ui/src/theme.css` |
 | 共享常量（WHATSAPP_URL 等） | `packages/ui/src/constants.ts` |
 | Worker 代理规则 | `apps/site/functions/_middleware.ts` |
-| 跨项目文档 | `/root/projects/trade/knowledge/` |
+| 跨项目文档 | `/root/projects/tradecompliance/knowledge/` |
 
 ## 部署确认
 
 | 项目 | 状态 | URL |
 |------|------|-----|
 | 官网 (site) | ✅ CI 通过 | https://sinotradecompliance.com |
-| Portal | ✅ CI 通过 | https://trade-web-portal.pages.dev |
-| Admin | ✅ CI 通过 | https://trade-web-admin.pages.dev |
-| Blog | ✅ CI 通过 | https://trade-web-blog.pages.dev |
+| Portal | ✅ CI 通过 | https://tc-web-portal.pages.dev |
+| Admin | ✅ CI 通过 | https://tc-web-admin.pages.dev |
+| Blog | ✅ CI 通过 | https://tc-web-blog.pages.dev |
 
 ## 完整文档索引
 

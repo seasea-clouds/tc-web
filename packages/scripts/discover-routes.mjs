@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * discover-routes.mjs - 自动发现 trade-web 所有子站路由
+ * discover-routes.mjs - 自动发现 tc-web 所有子站路由
  */
 
 import fs from 'fs';

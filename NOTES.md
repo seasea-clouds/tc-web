@@ -187,3 +187,57 @@ tr.json 其他 namespace（非 D1 范围）存在 "Büyük Britanya"（英国标
 - 教训：D2 guide 初版写了 Dairy GACC 3-6 个月（en 实为 2-6）、Supplements 12-24（en 实为 12-24 正确，guide 错写 6-12），ja 子代理遵循 guide 写入错误值，主 agent 已修正 ja.json。
 - 处理：任何 guide 数值与 en 冲突时，以 en 为准；子代理任务中已加"以 en 基线为周期权威"提醒。
 - es 子代理自行核对 en 基线（2-6/12-24 正确），未犯此错。
+
+## CF Pages/Worker 全量迁移踩坑记录（2026-08-09，trade- → tc-）
+
+### 背景
+GitHub 仓库从 `seasea-clouds/trade-web` 切换到 `seasea-clouds/tc-web`（空仓库）。Cloudflare 侧 4 个 Pages 项目 + 1 个 Worker 无法直接改 repo（见下），最终走「重建 + 迁移 + 清理」全量流程，全程 API 自动化，无需 Dashboard。
+
+### 踩坑 1：Pages 项目无法 PATCH 修改 GitHub source
+- `PATCH /accounts/{acct}/pages/projects/{name}` 传 `source` 对象：字符串 repo_id 被静默忽略（success:true 但 source 不变）；数字 repo_id 报 **8000006** "invalid JSON type or missing required keys"。
+- API 文档 PATCH 示例只有 name/production_branch，没有 source 字段。
+- **结论**：GitHub 连接绑定在账户级 OAuth/App 授权上，API Token 无法改。想换仓库只能删了重建。
+- **但是**：`POST /accounts/{acct}/pages/projects` **create 时支持 `source` 字段**（type: "github", config: {owner, repo_name, production_branch}），全自动重建可行！这是本次迁移的关键突破口。
+
+### 踩坑 2：删除 Pages 项目前必须先清空部署历史
+- 直接 DELETE 项目报 **8000076**（too many deployments）。
+- 必须先把所有 deployments 逐个 DELETE，清空后才能删项目。
+- 本次清理量：site 837 + portal 849 + blog 808 + admin 430 ≈ 2924 个部署。
+
+### 踩坑 3：deployments API 分页与限流
+- `GET .../deployments` 的 `per_page` 最大 **25**（传 50 报 HTTP 400），分页用 `page` 参数，总数在 `result_info.total_count`。
+- 批量 DELETE 部署易触发 **429 限流**：需低并发（2 线程）+ 指数退避重试（429 时 sleep 8s×(attempt+1)）。
+- 个别部署 DELETE 报 400 是 **current/production 部署**，属正常，忽略即可。
+
+### 踩坑 4：Worker script 无法通过 API Token 读取
+- `GET /accounts/{acct}/workers/scripts/{name}` 返回 **405** "Method not allowed for this authentication scheme"。
+- **结论**：Worker 源码必须保留在本地仓库（`apps/admin/workers/analytics-cron/src/index.ts`），重建时用本地源 `wrangler deploy`。
+- secrets 通过 `npx wrangler secret put` 设置成功（直接 PUT API 会 405 method_not_allowed，code 1001）。
+
+### 踩坑 5：webhook 触发部署可能卡队列
+- 首次 git push 触发的部署全部卡在 queued（stages idle，status None，~10 分钟不动），webhook 和 GitHub App 覆盖其实正常（deployment_trigger 显示正确 commit）。
+- **解法**：`POST /accounts/{acct}/pages/projects/{name}/deployments/{id}/retry` 手动重试，立即被构建队列接走。
+- CF 构建队列是**串行**的（一次一个项目，每个约 2 分钟），4 个项目全量构建约 8-10 分钟。
+
+### 踩坑 6：secret_text 环境变量值 API 不可读
+- 生产/预览环境的 `secret_text` 变量值全部返回空，**无法通过 API 导出**。
+- 重建时需手动重新输入（本地 `~/.openclaw/.env` 有 key 名但值已掩码，除 UPSTREAM_* 外）。plain_text 值可读。
+
+### 踩坑 7：WSL 网络对 Cloudflare 边缘 TLS 不稳定
+- 清理期间出现瞬时 `000` / exit 35（SSL handshake failure），api.cloudflare.com、pages.dev 全挂，但 github.com/baidu.com 正常；几秒后自动恢复。
+- **结论**：本地（WSL）到 CF 边缘的网络/TLS 路径间歇抖动，不是 CF 侧问题。遇到先重试、不要误判。
+
+### 踩坑 8：Pages cron（_scheduled.ts）必须走 git push 部署
+- `apps/admin/functions/_scheduled.ts` 定义每小时回填 cron（`0 * * * *` UTC），**必须通过 git push 触发 CF Pages 构建**才能注册调度；直接 `wrangler pages deploy` 会绕过构建管线，cron 不生效。
+- 独立 Worker 的 cron（analytics-cron）则在 wrangler.toml `[triggers] crons` 定义，`wrangler deploy` 直接生效。
+
+### 踩坑 9：域名迁移顺序
+1. 先给新项目（tc-web-site）添加自定义域名 → 等 SSL 签发（Google CA，<1 分钟）→ 验证完整链路
+2. 再 PATCH DNS CNAME 指向新 pages.dev 主机
+3. 最后删旧项目（此时旧项目上的自定义域名已被回收）
+- 顺序反了会有一段域名解析到已删除项目。apex CNAME（sinotradecompliance.com → tc-web-site.pages.dev）是唯一需要改的 DNS 记录（www/m 指向 apex 不用动）。
+
+### 遗留事项
+- D1 数据库 `trade-web-portal-db`（uuid e84f0762-...）**刻意保留原名**，所有项目/Wranger 配置的 `database_name` 也是这个名字，未重建（数据零丢失）。
+- `.env.example` 和 `wrangler.toml.example` 已同步更新为 tc- 前缀。
+- PROJECT.md 中保留迁移历史说明（唯一合法的 trade-web 引用）。

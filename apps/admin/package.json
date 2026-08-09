@@ -7,7 +7,7 @@
     "build": "npx next build && bash scripts/postbuild.sh",
     "start": "next start",
     "lint": "eslint",
-    "deploy": "npx wrangler pages deploy ./out --project-name=trade-web-admin",
+    "deploy": "npx wrangler pages deploy ./out --project-name=tc-web-admin",
     "prebuild": "node ../../packages/scripts/generate-segment-mapping.mjs && node ../../packages/scripts/discover-routes.mjs --emit-json"
   },
   "dependencies": {

@@ -1,10 +1,10 @@
-# trade-web 标准操作流程
+# tc-web 标准操作流程
 
 ## 本地开发
 
 ```bash
 # 安装依赖
-cd /root/projects/trade/web
+cd /root/projects/tradecompliance/web
 npm install
 
 # 同时启动所有站
@@ -31,9 +31,9 @@ cd apps/blog   && npx next build   # 博客站
 
 | 项目 | 项目名 | Root dir | 生产域名（未来）| dev 域名 |
 |------|--------|----------|----------------|----------|
-| 主站 | `trade-web-site` | `apps/site` | sinotradecompliance.com | trade-web-site.pages.dev |
-| Portal | `trade-web-portal` | `apps/portal` | — | trade-web-portal.pages.dev |
-| Blog | `trade-web-blog` | `apps/blog` | — | trade-web-blog.pages.dev |
+| 主站 | `tc-web-site` | `apps/site` | sinotradecompliance.com | tc-web-site.pages.dev |
+| Portal | `tc-web-portal` | `apps/portal` | — | tc-web-portal.pages.dev |
+| Blog | `tc-web-blog` | `apps/blog` | — | tc-web-blog.pages.dev |
 
 **当前阶段：** 已切换至正式域名 `sinotradecompliance.com`（2026-06-09）。生产部署由 GitHub push → CF Pages 自动构建部署。
 
@@ -64,15 +64,15 @@ cd apps/blog   && npx next build   # 博客站
 
 **部署方法（已有）**
 1. **✅ GitHub auto-build（推荐）：** 推送到 `main` 分支 → CF Pages 自动从 GitHub 构建+部署。CF 环境的构建管线能通过 Worker 大小限制。
-2. **❌ wrangler CLI 直接部署：** 使用 `npx wrangler pages deploy ./out --project-name=trade-web-portal` 会因 Worker 超限失败。
+2. **❌ wrangler CLI 直接部署：** 使用 `npx wrangler pages deploy ./out --project-name=tc-web-portal` 会因 Worker 超限失败。
 
 **紧急回滚（如用无 Functions 的部署覆盖了生产环境）：**
 ```bash
 # 1. 找到最近的 GitHub auto-build deployment ID
-npx wrangler pages deployment list --project-name=trade-web-portal | grep -v "Failure"
+npx wrangler pages deployment list --project-name=tc-web-portal | grep -v "Failure"
 
 # 2. 通过 CF API 回滚到该 deployment
-curl -s -X POST "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/pages/projects/trade-web-portal/deployments/${DEPLOYMENT_ID}/rollback" \
+curl -s -X POST "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/pages/projects/tc-web-portal/deployments/${DEPLOYMENT_ID}/rollback" \
   -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}"
 ```
 
@@ -100,7 +100,7 @@ curl -s -X POST "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/
 | www / .pages.dev | 301 → `sinotradecompliance.com` | 规范主机名 |
 
 ### Portal D1 配置
-1. CF Dashboard → Workers & Pages → trade-web-portal → Settings → Functions
+1. CF Dashboard → Workers & Pages → tc-web-portal → Settings → Functions
 2. D1 database bindings → 添加绑定
    - Variable name: `DB`
    - Database: 选择或创建 D1 数据库
@@ -264,9 +264,9 @@ curl -sL -o /dev/null -w "%{http_code}\n" "http://localhost:3003/en/c/"
 curl -sL -o /dev/null -w "%{http_code}\n" "http://localhost:3004/en/"
 
 # 线上验证
-curl -sL -o /dev/null -w "%{http_code}\n" https://trade-web-site.pages.dev/en/
-curl -sL -o /dev/null -w "%{http_code}\n" https://trade-web-site.pages.dev/en/c/
-curl -sL -o /dev/null -w "%{http_code}\n" https://trade-web-site.pages.dev/en/blog/
+curl -sL -o /dev/null -w "%{http_code}\n" https://tc-web-site.pages.dev/en/
+curl -sL -o /dev/null -w "%{http_code}\n" https://tc-web-site.pages.dev/en/c/
+curl -sL -o /dev/null -w "%{http_code}\n" https://tc-web-site.pages.dev/en/blog/
 
 # 浏览器对比（见 browser-automation skill）
 ```
@@ -343,7 +343,7 @@ Dashboard → Developers → Webhooks → Add Endpoint
 
 ### 3. 配置环境变量
 
-在 CF Pages Dashboard → trade-web-portal → Settings → Environment Variables 添加：
+在 CF Pages Dashboard → tc-web-portal → Settings → Environment Variables 添加：
 ```
 CREEM_API_KEY=***
 CREEM_WEBHOOK_SECRET=***
@@ -441,7 +441,7 @@ git push origin main
 
 | 检查项 | URL |
 |---|---|
-| 开发环境 | `https://trade-web-blog.pages.dev/en/blog/{slug}/` |
+| 开发环境 | `https://tc-web-blog.pages.dev/en/blog/{slug}/` |
 | 生产环境 | `https://sinotradecompliance.com/en/blog/{slug}/` |
 | 非英语抽检 | `https://sinotradecompliance.com/zh/blog/{slug}/` |
 
@@ -454,13 +454,13 @@ git push origin main
 ```bash
 cd apps/admin
 npm run build     # = next build && bash scripts/postbuild.sh
-npx wrangler pages deploy out --project-name trade-web-admin --branch main
+npx wrangler pages deploy out --project-name tc-web-admin --branch main
 ```
 
 ### 验证部署
 
 ```bash
-curl -s -o /dev/null -w "%{http_code}" "https://trade-web-admin.pages.dev/admin/dashboard/"
+curl -s -o /dev/null -w "%{http_code}" "https://tc-web-admin.pages.dev/admin/dashboard/"
 curl -s -o /dev/null -w "%{http_code}" "https://sinotradecompliance.com/admin/dashboard/"
 ```
 

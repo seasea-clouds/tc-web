@@ -56,18 +56,15 @@ const CLIENT_COMPONENT_EXEMPT = [
   'check-client.tsx',
   'pricing-client.tsx',
   'BlogClient.tsx',
-];
-
-// Portal route patterns that are intentionally auth-only (no SEO metadata needed)
-const PORTAL_AUTH_ROUTES = [
-  '/c/login/',
-  '/c/register/',
-  '/c/me/',
-  '/c/me/reports/',
-  '/c/me/settings/',
-  '/c/me/subscription/',
-  '/c/report/',
-  '/c/report/preview/',
+  'login-client.tsx',
+  'register-client.tsx',
+  'me-client.tsx',
+  'reports-client.tsx',
+  'settings-client.tsx',
+  'subscription-client.tsx',
+  'report-client.tsx',
+  'preview-client.tsx',
+  'root-redirect-client.tsx',
 ];
 
 // Portal pages that inherit metadata from parent layout
@@ -93,15 +90,14 @@ function isExemptRoute(appName, relativePath) {
   if (METADATA_EXEMPT.includes(basename)) return true;
   if (CLIENT_COMPONENT_EXEMPT.includes(basename)) return true;
 
-  // Portal auth routes are intentionally private (noindex needed)
+  // Portal pages that inherit metadata from parent layout
   if (appName === 'portal') {
     const normalized = '/' + relativePath.replace(/\/page\.tsx$/, '/').replace(/\\/g, '/');
-    if (PORTAL_AUTH_ROUTES.includes(normalized)) return true;
     if (PORTAL_LAYOUT_INHERIT.includes(normalized)) return true;
   }
 
-  // Blog page.tsx and [slug] inherit metadata from layout — only check if they override
-  if (appName === 'blog' && (relativePath === 'page.tsx' || relativePath.startsWith('blog/'))) {
+  // Blog pages have their own generateMetadata (list + article + root redirect wrapper)
+  if (appName === 'blog' && relativePath.startsWith('blog/')) {
     return true;  // Inherits from blog/[locale]/layout.tsx
   }
 

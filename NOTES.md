@@ -260,7 +260,26 @@ GitHub 仓库从 `seasea-clouds/trade-web` 切换到 `seasea-clouds/tc-web`（�
 3. 最后删旧项目（此时旧项目上的自定义域名已被回收）
 - 顺序反了会有一段域名解析到已删除项目。apex CNAME（sinotradecompliance.com → tc-web-site.pages.dev）是唯一需要改的 DNS 记录（www/m 指向 apex 不用动）。
 
+### 踩坑 10：子页面 canonical fallback 到父级 → GSC 备用网页（2026-08-11）
+- **现象**：GSC 71 条 `备用网页（有适当的规范标记）`（/c/pricing/、/quote/?package=*、blog 无斜杠等）。
+- **根因**：`apps/portal/src/app/[locale]/c/pricing/page.tsx` 是纯 `'use client'` 组件、无自己的 `generateMetadata`，fallback 到 `[locale]/c/layout.tsx` 硬编码的 `/c/` canonical → 每语言 pricing 都 canonical 到对应语言首页，Google 视为重复页丢弃。login/register 同理（未在 GSC 列表内，后续可同法修）。
+- **修复**：① pricing 拆 server wrapper（`page.tsx` 持 `generateMetadata`，canonical 指向自身）+ `pricing-client.tsx`；② `_middleware.ts` blog 分支补尾斜杠 308（`/ko/blog` → `/ko/blog/`）。
+- **CI 联动**：`check-seo-patterns.mjs` 会把 page 路径下任意 .tsx 当页面检查 —— 拆出的 `pricing-client.tsx` 需加入 `CLIENT_COMPONENT_EXEMPT`，同时把 `/c/pricing/` 从 `PORTAL_LAYOUT_INHERIT` 移除（已有独立 metadata 后必须真检查）。
+- **验证**：部署专属 URL 404 属正常（NOTES 踩坑 8），等 stages `deploy=success` 后生产域名验证；CF 边缘节点收敛有延迟，同一 URL 前几次可能旧版 200/新版 308 混出，多请求复验（3×8 语言全 308、10 语言 pricing canonical 全自指）确认生效。
+
 ### 遗留事项
 - D1 数据库 `trade-web-portal-db`（uuid e84f0762-...）**刻意保留原名**，所有项目/Wranger 配置的 `database_name` 也是这个名字，未重建（数据零丢失）。
 - `.env.example` 和 `wrangler.toml.example` 已同步更新为 tc- 前缀。
 - PROJECT.md 中保留迁移历史说明（唯一合法的 trade-web 引用）。
+
+### 踩坑 11：portal auth 子页面 canonical fallback 全面修复（2026-08-11 续）
+- **背景**：踩坑 10 修复后，login/register/me/report 8 个页面仍 fallback 到 `/c/` canonical（与 pricing 同 bug 模式，未在 GSC 71 列表内）。
+- **修复**：
+  - login/register/me/*（4）/report/*（2）共 8 个页面全部拆 server wrapper + `xxx-client.tsx`，`generateMetadata` canonical 指向自身，不再 fallback 到 `/c/`。
+  - login/register 保持 noindex（`c/login/layout.tsx`、`c/register/layout.tsx` 静态 `robots: { index: false }`，项目既有决策 GSC issue 4c，勿删）；me/report 页面 wrapper 内加 `robots: { index: false, follow: false }`（登录后隐私页）。
+  - **title 修复**：next-intl `onError` 静默时 `t('metaTitle')` 返回 truthy 的 `Auth.metaTitle` 字面量导致 `||` fallback 失效 —— wrapper 改用已有 key：Auth 用 `signInTitle/signInDesc/registerTitle/registerDesc`，Pricing 用 `title/subtitle`（48 语言已有翻译）。
+- **布局链接补斜杠**：site/portal/blog 三个 `layout.tsx` 的 `loginHref`/`logoutRedirect` 从 `/${locale}/c/login` → `/${locale}/c/login/`；login/register 页面内 `/${locale}/c/me`、`/${locale}/privacy`、`/${locale}/terms`、`/${locale}/c/register`、`/${locale}/c/login` 全部补 `/`。
+- **blog layout fallback**：`buildAlternates(validLocale, [...locales], '')` → `'/blog/'`（消除无斜杠 canonical fallback）；blog 首页 `[locale]/page.tsx`（client redirect）拆 server wrapper，canonical 指向 `/{locale}/` + noindex（redirect 页），`root-redirect-client.tsx` 加入 `CLIENT_COMPONENT_EXEMPT`。
+- **CI 联动**：`check-seo-patterns.mjs` —— 8 个新 client 文件 + `root-redirect-client.tsx` 加入 `CLIENT_COMPONENT_EXEMPT`；删除 `PORTAL_AUTH_ROUTES` 豁免（8 页面已有独立 metadata，必须真检查）；blog 分支移除 `page.tsx` 豁免；`check-console.mjs` 的 `ALLOWED_FILES` 中 `report/page.tsx` → `report-client.tsx`。
+- **check-hardcoded 陷阱**：metadata description 含逗号会被 `ENGLISH_PROSE_RE` 当 JSX prose 报错（正则以 `,`/`<` 结尾匹配）—— description 文案避免逗号。
+- **验证**：三项目构建全绿（portal 240 页、blog 全绿、site 全绿）；产物 canonical 全部自指（login/register/me/report 8 页面 + pricing + blog 首页/列表/文章），noindex 正确，hreflang 49 条目完整。

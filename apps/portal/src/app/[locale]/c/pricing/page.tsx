@@ -8,8 +8,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const validLocale = locales.includes(locale as any) ? locale : defaultLocale;
   const t = await getTranslations({ locale: validLocale, namespace: 'Pricing' });
 
-  const title = t('metaTitle') || `${t('title')} | SinoTrade Compliance`;
-  const description = t('metaDescription') || t('subtitle') || 'Flexible pricing for China compliance services. Free assessment included.';
+  const title = `${t('title')} | SinoTrade Compliance`;
+  const description = t('subtitle') || 'Flexible pricing for China compliance services. Free assessment included.';
   const path = '/c/pricing/';
   const alternates = buildAlternates(validLocale, [...locales], path);
 

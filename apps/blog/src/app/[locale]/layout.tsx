@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
   const title = t('metaTitle') || 'China Import Compliance';
   const description = t('metaDescription') || 'China import compliance guides: GACC registration, CCC certification, NMPA cosmetics filing, and cross-border e-commerce.';
-  const alternates = buildAlternates(validLocale, [...locales], '');
+  const alternates = buildAlternates(validLocale, [...locales], '/blog/');
   return {
     title,
     description,
@@ -48,8 +48,8 @@ export default async function Layout({
         <NextIntlClientProvider messages={messages} locale={validLocale} timeZone="Asia/Shanghai">
           <TradeTranslationProvider messages={messages} locale={validLocale}>
             <OrganizationJsonLd />
-          <AuthProvider logoutRedirect={`/${validLocale}/c/login`}>
-            <SearchProvider freeCheckHref="/{locale}/c/" loginHref={`/${validLocale}/c/login`} />
+          <AuthProvider logoutRedirect={`/${validLocale}/c/login/`}>
+            <SearchProvider freeCheckHref="/{locale}/c/" loginHref={`/${validLocale}/c/login/`} />
                         <main className="flex-1">
               {children}
             </main>

@@ -37,7 +37,7 @@ const ALLOWED_FILES = [
   'convert-webp.mjs',       // Build script
   'clean-rsc.js',           // Build script
   'check-client.tsx',       // Portal dev-mode console.warn (D1/PDF/email, intentionally marked)
-  'report/page.tsx',        // Portal report rebuild error handler
+  'report-client.tsx',      // Portal report rebuild error handler
 ];
 
 const RESULTS = { passed: 0, failed: 0, warnings: [] };

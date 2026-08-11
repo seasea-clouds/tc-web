@@ -66,8 +66,8 @@ export const LOCALE_NAMES: Record<string, string> = {
 };
 
 /**
- * Locale → flag country code mapping for flagcdn.com images.
- * Used for CSS flag sprites in LanguageSwitcher.
+ * Locale → flag country code mapping for the self-hosted flags sprite
+ * (public/flags.svg, symbols id="flag-<code>") used in LanguageSwitcher.
  */
 export const LOCALE_FLAG_CODES: Record<string, string> = {
   en: 'gb', zh: 'cn', es: 'es', fr: 'fr', de: 'de', ja: 'jp', pt: 'br', ru: 'ru',

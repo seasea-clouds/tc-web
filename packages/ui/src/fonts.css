@@ -12,8 +12,8 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('https://sinotradecompliance.com/fonts/Inter-400.ttf') format('truetype'),
-         url('/fonts/Inter-400.ttf') format('truetype');
+  src: url('https://sinotradecompliance.com/fonts/Inter-400.woff2') format('woff2'),
+         url('/fonts/Inter-400.woff2') format('woff2');
 }
 
 @font-face {
@@ -21,8 +21,8 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url('https://sinotradecompliance.com/fonts/Inter-500.ttf') format('truetype'),
-         url('/fonts/Inter-500.ttf') format('truetype');
+  src: url('https://sinotradecompliance.com/fonts/Inter-500.woff2') format('woff2'),
+         url('/fonts/Inter-500.woff2') format('woff2');
 }
 
 @font-face {
@@ -30,8 +30,8 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url('https://sinotradecompliance.com/fonts/Inter-600.ttf') format('truetype'),
-         url('/fonts/Inter-600.ttf') format('truetype');
+  src: url('https://sinotradecompliance.com/fonts/Inter-600.woff2') format('woff2'),
+         url('/fonts/Inter-600.woff2') format('woff2');
 }
 
 @font-face {
@@ -39,8 +39,8 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url('https://sinotradecompliance.com/fonts/Inter-700.ttf') format('truetype'),
-         url('/fonts/Inter-700.ttf') format('truetype');
+  src: url('https://sinotradecompliance.com/fonts/Inter-700.woff2') format('woff2'),
+         url('/fonts/Inter-700.woff2') format('woff2');
 }
 
 @font-face {
@@ -48,8 +48,8 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url('https://sinotradecompliance.com/fonts/Montserrat-600.ttf') format('truetype'),
-         url('/fonts/Montserrat-600.ttf') format('truetype');
+  src: url('https://sinotradecompliance.com/fonts/Montserrat-600.woff2') format('woff2'),
+         url('/fonts/Montserrat-600.woff2') format('woff2');
 }
 
 @font-face {
@@ -57,8 +57,8 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url('https://sinotradecompliance.com/fonts/Montserrat-700.ttf') format('truetype'),
-         url('/fonts/Montserrat-700.ttf') format('truetype');
+  src: url('https://sinotradecompliance.com/fonts/Montserrat-700.woff2') format('woff2'),
+         url('/fonts/Montserrat-700.woff2') format('woff2');
 }
 
 @font-face {
@@ -66,8 +66,8 @@
   font-style: normal;
   font-weight: 800;
   font-display: swap;
-  src: url('https://sinotradecompliance.com/fonts/Montserrat-800.ttf') format('truetype'),
-         url('/fonts/Montserrat-800.ttf') format('truetype');
+  src: url('https://sinotradecompliance.com/fonts/Montserrat-800.woff2') format('woff2'),
+         url('/fonts/Montserrat-800.woff2') format('woff2');
 }
 
 /* Thai script support — Noto Sans Thai / Noto Serif Thai */
@@ -76,30 +76,30 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('https://sinotradecompliance.com/fonts/NotoSansThai-400.ttf') format('truetype'),
-         url('/fonts/NotoSansThai-400.ttf') format('truetype');
+  src: url('https://sinotradecompliance.com/fonts/NotoSansThai-400.woff2') format('woff2'),
+         url('/fonts/NotoSansThai-400.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Noto Sans Thai';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url('https://sinotradecompliance.com/fonts/NotoSansThai-700.ttf') format('truetype'),
-         url('/fonts/NotoSansThai-700.ttf') format('truetype');
+  src: url('https://sinotradecompliance.com/fonts/NotoSansThai-700.woff2') format('woff2'),
+         url('/fonts/NotoSansThai-700.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Noto Serif Thai';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('https://sinotradecompliance.com/fonts/NotoSerifThai-400.ttf') format('truetype'),
-         url('/fonts/NotoSerifThai-400.ttf') format('truetype');
+  src: url('https://sinotradecompliance.com/fonts/NotoSerifThai-400.woff2') format('woff2'),
+         url('/fonts/NotoSerifThai-400.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Noto Serif Thai';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url('https://sinotradecompliance.com/fonts/NotoSerifThai-700.ttf') format('truetype'),
-         url('/fonts/NotoSerifThai-700.ttf') format('truetype');
+  src: url('https://sinotradecompliance.com/fonts/NotoSerifThai-700.woff2') format('woff2'),
+         url('/fonts/NotoSerifThai-700.woff2') format('woff2');
 }

@@ -65,8 +65,8 @@ export default function ServicesGrid({ headingLevel = 'h2' }: { headingLevel?: '
                 href={`/${locale}/services/${s.key}`}
                 className="inline-flex items-center gap-1 text-accent-blue font-semibold hover:text-primary-navy transition-colors"
               >
-                {s.link}
-                <ExternalLink className="w-4 h-4" />
+                {s.link} → {s.title}
+                <ExternalLink className="w-4 h-4 flex-shrink-0" />
               </Link>
             </div>
           ))}

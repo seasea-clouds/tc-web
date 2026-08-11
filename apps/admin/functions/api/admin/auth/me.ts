@@ -14,6 +14,9 @@ export async function onRequest(context: { request: Request; env: Env }) {
     const admin = await requireAdmin(context.request, context.env);
     return Response.json({ admin });
   } catch {
-    return Response.json({ error: "Not authenticated" }, { status: 401 });
+    // 200 + {admin: null} (not 401) so unauthenticated browser calls don't
+    // log a console error (PageSpeed "browser errors were logged to the
+    // console" audit). Client getCurrentAdmin() treats null the same way.
+    return Response.json({ admin: null });
   }
 }

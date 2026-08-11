@@ -86,6 +86,19 @@ Portal 通过主站边缘 Worker 代理到 `/{locale}/c/*` 路径访问。
 #### Creem API Key 更新需重新部署
 CF Pages secret 必须先 delete 再 put 才能生效，之后需要触发新 deployment。
 
+#### PageSpeed 控制台错误：RSC 404 + auth 401（2026-08-11）
+
+**症状：** PageSpeed 审计"控制台日志中已记录浏览器错误"报告两类错误：
+1. `/api/auth/me` 返回 401（AuthProvider 每次页面加载都请求它检查登录态）
+2. `/en/__next.*.txt?_rsc=...` 返回 404（Next.js 16 `output: export` 客户端导航/prefetch 请求 RSC flight payload，已被 clean-rsc.mjs 删除）
+
+**修复：**
+- `apps/portal/functions/api/auth/me.ts` + `apps/admin/functions/api/admin/auth/me.ts`：未登录从 401 改为 **200 + `{user:null}`/`{admin:null}`**（客户端 `data.user===null` 与 `setUser(null)` 等价，逻辑不变；浏览器不再记录 401 错误）
+- `apps/site/functions/_middleware.ts`：RSC 204 短路从 `__next._tree.txt` 扩展为**所有 `/__next.*.txt`**（正则以 `$` 结尾防误伤），客户端拿到 204 后静默放弃 prefetch/导航请求
+
+**验证：** curl 确认 auth/me 200、RSC 204；浏览器新标签页 console 无错误。
+**注意：** 不要轻易恢复被 clean-rsc 删除的 .txt 文件——site 的 RSC payload 达 888MB/13261 个文件，会显著拖慢部署。
+
 ## Blog
 
 ### CI 差异

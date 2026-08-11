@@ -1,40 +1,21 @@
-'use client';
-import { useT } from '@trade/ui';
+import { locales, defaultLocale } from '@/i18n/routing';
+import { buildAlternates } from '@trade/ui';
+import SettingsClient from './settings-client';
 
-import { useAuth } from '@trade/ui';
-import Link from 'next/link';
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const validLocale = locales.includes(locale as any) ? locale : defaultLocale;
+  const path = '/c/me/settings/';
+  const alternates = buildAlternates(validLocale, [...locales], path);
 
-export default function SettingsPage() {
-  const t = useT('Report');
-  const { user, isLoading } = useAuth();
-
-  if (isLoading) return <Loading />;
-  if (!user) return <NotLoggedIn />;
-
-  return (
-    <div className="bg-bg-ice py-12">
-      <div className="max-w-3xl mx-auto px-4">
-        <Link href="./" className="text-sm text-gray-500 hover:text-primary-navy transition-colors">{t('backToAccount')}</Link>
-        <h1 className="text-2xl font-bold text-primary-navy mt-4 mb-6">{t('settings')}</h1>
-
-        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 space-y-6">
-          <div>
-            <h2 className="font-semibold text-primary-navy mb-2">{t('profile')}</h2>
-            <p className="text-sm text-gray-500">{t('nameLabel')}: {user.name}</p>
-            <p className="text-sm text-gray-500">{t('emailLabel')}: {user.email}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+  return {
+    title: 'Account Settings | SinoTrade Compliance',
+    description: 'Manage your SinoTrade Compliance account settings',
+    robots: { index: false, follow: false },
+    alternates,
+  };
 }
 
-function Loading() {
-  const t = useT('Report');
-  return <div className="bg-bg-ice py-16"><div className="text-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gold mx-auto" /></div></div>;
-}
-
-function NotLoggedIn() {
-  const t = useT('Report');
-  return <div className="bg-bg-ice py-16"><div className="max-w-md mx-auto px-4 text-center"><h1 className="text-xl font-bold text-primary-navy mb-4">{t('pleaseLogIn')}</h1><Link href="../login" className="inline-block bg-gold hover:bg-gold/90 text-primary-navy font-semibold px-6 py-2.5 rounded-md transition-all">{t('logIn')}</Link></div></div>;
+export default function Page() {
+  return <SettingsClient />;
 }

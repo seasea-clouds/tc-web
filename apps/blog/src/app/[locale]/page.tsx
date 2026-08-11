@@ -1,21 +1,21 @@
-'use client';
+import { locales, defaultLocale } from '@/i18n/routing';
+import { buildAlternates } from '@trade/ui';
+import RootRedirectClient from './root-redirect-client';
 
-import { useEffect } from 'react';
-import { useParams } from 'next/navigation';
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const validLocale = locales.includes(locale as any) ? locale : defaultLocale;
+  const path = '/';
+  const alternates = buildAlternates(validLocale, [...locales], path);
 
-/**
- * Root locale page — client-side redirect to /blog/
- * The blog app's content now lives at /[locale]/blog/ after route restructuring.
- */
-export default function RootRedirect() {
-  const params = useParams();
-  const locale = params.locale as string;
+  return {
+    title: 'China Import Compliance Blog | SinoTrade Compliance',
+    description: 'Expert guides on China import compliance for your products',
+    robots: { index: false, follow: true },
+    alternates,
+  };
+}
 
-  useEffect(() => {
-    if (locale) {
-      window.location.replace(`/${locale}/blog/`);
-    }
-  }, [locale]);
-
-  return null;
+export default function Page() {
+  return <RootRedirectClient />;
 }

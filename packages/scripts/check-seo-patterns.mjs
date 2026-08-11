@@ -54,6 +54,7 @@ const METADATA_EXEMPT = [
 // Client-component files that are NOT page routes (helpers, hooks, providers)
 const CLIENT_COMPONENT_EXEMPT = [
   'check-client.tsx',
+  'pricing-client.tsx',
   'BlogClient.tsx',
 ];
 
@@ -72,7 +73,6 @@ const PORTAL_AUTH_ROUTES = [
 // Portal pages that inherit metadata from parent layout
 const PORTAL_LAYOUT_INHERIT = [
   '/c/',        // inherits from portal/[locale]/layout.tsx → path=/c/
-  '/c/pricing/',
 ];
 
 const RESULTS = { passed: 0, failed: 0, warnings: [] };

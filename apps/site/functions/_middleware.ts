@@ -334,6 +334,13 @@ export async function onRequest(context: { request: Request; next: () => Promise
   if (blogPathMatch && SUPPORTED_LOCALES.includes(blogPathMatch[1])) {
     const locale = blogPathMatch[1];
     const rest = blogPathMatch[2] || '/';
+
+    // ── Trailing-slash normalization (SEO) ──
+    // /ko/blog → 308 /ko/blog/ so Google doesn't treat the slash-less URL
+    // as an alternate copy of the canonical (slash) version.
+    if (!url.pathname.endsWith('/')) {
+      return Response.redirect(url.origin + url.pathname + '/', 308);
+    }
     const upstream = resolveUpstream(url.hostname, 'blog', env);
     const blogUrl = upstream + '/' + locale + '/blog' + rest;
 

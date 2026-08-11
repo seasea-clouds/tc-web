@@ -230,15 +230,18 @@ export async function onRequest(context: { request: Request; next: () => Promise
   const { request, env } = context;
   const url = new URL(request.url);
 
-  // ── RSC prefetch tree (__next._tree.txt) — static export, no server → 204 ──
-  // Next.js App Router client prefetches __next._tree.txt for visible <Link>
-  // elements on mount. With output: 'export', these RSC tree files don't exist
-  // because there's no running Next.js server to generate them dynamically.
-  // In Cloudflare Pages Workers, requesting a non-existent file (404) causes a
-  // full Worker invocation. For every visible <Link> on every page load, the
-  // Worker is called just to return a 404. Instead, short-circuit to 204 No Content
-  // so the client bails out of the prefetch without error.
-  if (url.pathname.endsWith('/__next._tree.txt')) {
+  // ── RSC payload files (__next.*.txt) — static export, no server → 204 ──
+  // Next.js App Router client requests __next.*.txt RSC flight payloads for
+  // both prefetch (__next._tree.txt for visible <Link> elements on mount) and
+  // client-side navigation (__next._index.txt / __next._head.txt /
+  // __next.<encoded>.txt / __next.<segment>.__PAGE__.txt). With output:
+  // 'export' these files don't exist because there's no running Next.js server
+  // to generate them dynamically (they are stripped by clean-rsc.mjs to keep
+  // the deploy artifact small). In Cloudflare Pages Workers, requesting a
+  // non-existent file (404) causes a full Worker invocation and a console
+  // error in the browser. Instead, short-circuit to 204 No Content so the
+  // client bails out without error.
+  if (/\/__next\..*\.txt$/.test(url.pathname)) {
     return new Response(null, { status: 204 });
   }
 

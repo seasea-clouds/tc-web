@@ -26,15 +26,9 @@ function localeToName(locale: string, names: Record<string, string>): string {
 function FlagImage({ locale, className }: { locale: string; className?: string }) {
   const code = LOCALE_FLAG_CODES[locale] || locale.slice(0, 2);
   return (
-    <img
-      src={`https://flagcdn.com/w20/${code}.png`}
-      srcSet={`https://flagcdn.com/w40/${code}.png 2x`}
-      alt=""
-      className={className || 'inline-block w-5 h-auto rounded-sm'}
-      width={20}
-      height={15}
-      loading="lazy"
-    />
+    <svg className={className || 'inline-block w-5 h-auto rounded-sm'} aria-hidden="true">
+      <use href={`/flags.svg#flag-${code}`} />
+    </svg>
   );
 }
 

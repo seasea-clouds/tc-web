@@ -99,6 +99,16 @@ CF Pages secret 必须先 delete 再 put 才能生效，之后需要触发新 de
 **验证：** curl 确认 auth/me 200、RSC 204；浏览器新标签页 console 无错误。
 **注意：** 不要轻易恢复被 clean-rsc 删除的 .txt 文件——site 的 RSC payload 达 888MB/13261 个文件，会显著拖慢部署。
 
+#### CF Pages _headers 多路径块不生效（2026-08-11）
+
+**坑：** `_headers` 每个块只支持**一个** URL pattern。多个路径写在同一个块（如 `/icon.png\n/icon.webp\n/favicon.ico`）会导致**整块不生效**，回退到 CF 默认缓存（`max-age=28800`）。
+
+**修复：** 每个路径单独成块，中间空行分隔。
+
+**验证方法：** `curl -sI "https://sinotradecompliance.com/icon.webp?v=2" | grep cache-control`——immutable 生效应返回 `max-age=31536000, immutable`。带 `?v=` 参数可绕过边缘缓存。
+
+**背景：** 之前 icon.png/favicon.ico 的 immutable 缓存实际从未生效（多路径块），2026-08-11 发现并修复。
+
 ## Blog
 
 ### CI 差异

@@ -74,7 +74,7 @@ export default function LanguageSwitcher({
       return;
     }
     // Save locale preference for portal (works when JS available)
-    try { localStorage.setItem('compli-service-locale', newLocale); } catch {}
+    try { localStorage.setItem('stc-locale', newLocale); } catch {}
 
     if (onLocaleChange) {
       e.preventDefault();

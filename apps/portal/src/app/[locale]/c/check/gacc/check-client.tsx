@@ -48,7 +48,7 @@ export default function GaccCheckClient() {
 
       // 1. Always save to localStorage first (reliable, no API dependency)
       try {
-        localStorage.setItem('compli-report-input', JSON.stringify({
+        localStorage.setItem('stc-report-input', JSON.stringify({
           ...input,
           productName: input.productName || t('yourProduct'),
         }));
@@ -94,7 +94,7 @@ export default function GaccCheckClient() {
     } catch (err) {
       // Last resort: even if everything fails, try to get the user to the report page
       try {
-        localStorage.setItem('compli-report-input', JSON.stringify({
+        localStorage.setItem('stc-report-input', JSON.stringify({
           ...input,
           productName: input.productName || t('yourProduct'),
         }));

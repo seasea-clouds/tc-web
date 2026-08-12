@@ -50,7 +50,7 @@ export default function NmpaCheckClient() {
 
       // 1. Always save to localStorage first
       try {
-        localStorage.setItem('compli-report-input', JSON.stringify({
+        localStorage.setItem('stc-report-input', JSON.stringify({
           ...input,
           productName: input.productName || t('yourProduct'),
         }));
@@ -95,7 +95,7 @@ export default function NmpaCheckClient() {
       window.location.href = pathPrefix + '/c/report/?id=' + reportId;
     } catch (err) {
       try {
-        localStorage.setItem('compli-report-input', JSON.stringify({
+        localStorage.setItem('stc-report-input', JSON.stringify({
           ...input,
           productName: input.productName || t('yourProduct'),
         }));

@@ -49,7 +49,7 @@ export default function CrossborderCheckClient() {
       const reportId = `CROSSBORDER-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
 
       try {
-        localStorage.setItem('compli-report-input', JSON.stringify({
+        localStorage.setItem('stc-report-input', JSON.stringify({
           ...input,
           productName: input.productName || t('yourProduct'),
         }));
@@ -93,7 +93,7 @@ export default function CrossborderCheckClient() {
       window.location.href = pathPrefix + '/c/report/?id=' + reportId;
     } catch (err) {
       try {
-        localStorage.setItem('compli-report-input', JSON.stringify({
+        localStorage.setItem('stc-report-input', JSON.stringify({
           ...input,
           productName: input.productName || t('yourProduct'),
         }));

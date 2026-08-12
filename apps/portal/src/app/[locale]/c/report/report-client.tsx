@@ -113,7 +113,7 @@ function ReportContent() {
       })
       .catch(err => {
         try {
-          const storedInput = localStorage.getItem('compli-report-input');
+          const storedInput = localStorage.getItem('stc-report-input');
           if (storedInput) {
             const prefix = id.split('-')[0].toUpperCase();
             const fallbackSteps: Record<string, string[]> = {

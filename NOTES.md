@@ -283,3 +283,11 @@ GitHub 仓库从 `seasea-clouds/trade-web` 切换到 `seasea-clouds/tc-web`（�
 - **CI 联动**：`check-seo-patterns.mjs` —— 8 个新 client 文件 + `root-redirect-client.tsx` 加入 `CLIENT_COMPONENT_EXEMPT`；删除 `PORTAL_AUTH_ROUTES` 豁免（8 页面已有独立 metadata，必须真检查）；blog 分支移除 `page.tsx` 豁免；`check-console.mjs` 的 `ALLOWED_FILES` 中 `report/page.tsx` → `report-client.tsx`。
 - **check-hardcoded 陷阱**：metadata description 含逗号会被 `ENGLISH_PROSE_RE` 当 JSX prose 报错（正则以 `,`/`<` 结尾匹配）—— description 文案避免逗号。
 - **验证**：三项目构建全绿（portal 240 页、blog 全绿、site 全绿）；产物 canonical 全部自指（login/register/me/report 8 页面 + pricing + blog 首页/列表/文章），noindex 正确，hreflang 49 条目完整。
+
+### 踩坑 12：compli-service 旧路径彻底移除（2026-08-12）
+- **背景**：GSC 报"重复网页，用户未选定规范网页"3 个 URL（`/nl/compli-service/check/trademark`、`/nl/compli-service/check/label`、`/fa/compli-service/`），6 月初抓取的旧状态。此前 8/3 fix 3b/4b（commit a5b428bb）已在 `apps/site/public/_redirects` 加 48 语言 `compli-service → /c/` 301。
+- **用户决策**：`/compli-service` 是旧网站路径，新网站已无此路径，**不需要 301 跳转、不需要 Google 收录** → 直接删规则让旧路径 404，Google 抓取 404 后自动从索引移除。
+- **操作**：`apps/site/public/_redirects` 删除全部 98 行 compli-service 规则（48 带斜杠通配 + 48 无斜杠精确 + 2 注释），只保留 `/ → /en/ 302`（commit 1543d2bf）。
+- **顺手修复（上一条 abb745c1）**：发现 `/{locale}/compli-service` 无斜杠版本 404（通配规则匹配不到），补过 48 条精确规则——随后被本条整体移除替代，无需保留。
+- **验证**：8 个 compli-service URL 全部 404（fa/nl/en/zh/ar × 带/不带斜杠/子路径），新路径 `/c/` 全部 200，首页 302 正常。
+- **注意**：`packages/ui/src/LanguageSwitcher.tsx:77` 的 localStorage key `compli-service-locale` 保留未改（纯本地存储键名，与 URL 无关，改需全站重建不值当）。

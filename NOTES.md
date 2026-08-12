@@ -291,3 +291,7 @@ GitHub 仓库从 `seasea-clouds/trade-web` 切换到 `seasea-clouds/tc-web`（�
 - **顺手修复（上一条 abb745c1）**：发现 `/{locale}/compli-service` 无斜杠版本 404（通配规则匹配不到），补过 48 条精确规则——随后被本条整体移除替代，无需保留。
 - **验证**：8 个 compli-service URL 全部 404（fa/nl/en/zh/ar × 带/不带斜杠/子路径），新路径 `/c/` 全部 200，首页 302 正常。
 - **注意**：`packages/ui/src/LanguageSwitcher.tsx:77` 的 localStorage key `compli-service-locale` 保留未改（纯本地存储键名，与 URL 无关，改需全站重建不值当）。
+- **延续清理（2026-08-12 09:56）**：用户要求 compli-service 彻底去掉 → 清理 localStorage key：
+  - `compli-service-locale`（`packages/ui/src/LanguageSwitcher.tsx`，语言偏好，仅写无读）→ `stc-locale`
+  - `compli-report-input`（6 个 check-client 写 + report-client 读，报告草稿）→ `stc-report-input`
+  - 共 8 文件 14 处替换，portal 构建全绿（240 页），线上 JS bundle 无残留；注意：改 key 后老用户本地旧 key 数据不再读取（语言偏好/未提交草稿会丢一次，无害）

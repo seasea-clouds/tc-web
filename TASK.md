@@ -21,7 +21,12 @@
   - 批 D 亚太 9：ja ko vi th id ms sw af ca
   - 手动补写 2：el tr（分批清单遗漏，已补齐）
 - [x] 全量 CI 验证：576 文件 0 错误（含 R07 48 语言齐全 / R10 date 一致 / R21 CTA 前缀）
-- [ ] 构建 + 部署验证
+- [x] 构建 + 部署验证（2026-08-14）
+  - 本地构建通过（format/structure/article/seo 全部 0 错误）
+  - 修复构建报错：zh 双破折号"——"×2（E02）、hu 手动编号标题×5（E07）
+  - git commit 8740d3e6 push main → CF Pages 自动构建部署成功
+  - 线上验证：48 语言页面全部 200，多语言标题正确（en/zh/ja/ko/id/th/vi/es/fr/de/ru/ar 抽查通过）
+  - 踩坑：CF 构建+部署分两个阶段，部署完成前线上是旧版；早期 404 会被 CF 边缘缓存，需等缓存刷新
 
 ### 验收标准
 - `node packages/scripts/check-md-article.mjs --project=blog` 全量 0 错误

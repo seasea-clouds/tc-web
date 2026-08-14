@@ -817,6 +817,41 @@ function checkR19(content, relPath, lang) {
 }
 
 /**
+ * R21: cta-locale-match
+ * 文末 CTA 链接的语言前缀必须与文章语言一致
+ * （例如 en 文章的 CTA 必须指向 /en/packages/，不能是 /zh/packages/ 等其它语言页面）
+ */
+function checkR21(content, relPath, lang) {
+  const lines = content.trim().split('\n');
+  const tailLines = lines.slice(-10);
+  const expectedPrefix = '/' + lang + '/';
+
+  for (const line of tailLines) {
+    const linkRe = /\[([^\]]+)\]\(([^)]+)\)/g;
+    let m;
+    while ((m = linkRe.exec(line)) !== null) {
+      const linkUrl = m[2];
+      const urlPath = linkUrl.replace(/^https?:\/\/[^\/]+/, '');
+      // 只检查 CTA 类链接（/packages/ 或 /quote/）
+      if (!/\/packages\/|\/quote\//.test(urlPath)) continue;
+
+      if (!urlPath.startsWith(expectedPrefix)) {
+        const wrongLocale = urlPath.match(/^\/([a-z]{2,5})\//);
+        addFinding({
+          file: relPath,
+          lang,
+          rule: 'R21',
+          severity: 'error',
+          line: lines.length,
+          text: linkUrl,
+          description: lang + ' 文末 CTA 链接语言前缀不匹配，期望 ' + expectedPrefix + 'packages/，当前: /' + (wrongLocale ? wrongLocale[1] : '??') + '/packages/' + '（CTA 应链接到对应语言的页面）',
+        });
+      }
+    }
+  }
+}
+
+/**
  * R20: reference-title-translation
  * 检测非英文语种的参考文献标题是否未翻译（与英文版本完全一致）
  * 预计算所有英文文章的 frontmatter 参考文献标题用于对比
@@ -938,7 +973,7 @@ function runAllChecks() {
   for (const lang of langs) {
     if (filterLang && lang !== filterLang) continue;
 
-    const rulesToRun = ['R01', 'R02', 'R03', 'R04', 'R05', 'R06', 'R07', 'R08', 'R09', 'R10', 'R11', 'R12', 'R13', 'R14', 'R16', 'R17', 'R19', 'R20'];
+    const rulesToRun = ['R01', 'R02', 'R03', 'R04', 'R05', 'R06', 'R07', 'R08', 'R09', 'R10', 'R11', 'R12', 'R13', 'R14', 'R16', 'R17', 'R19', 'R20', 'R21'];
     // 如果指定了 filterRule，只运行那一条
     const activeRules = filterRule
       ? (rulesToRun.includes(filterRule) ? [filterRule] : [])
@@ -972,6 +1007,7 @@ function runAllChecks() {
           case 'R17': checkR17(content, relPath, lang); break;
           case 'R19': checkR19(content, relPath, lang); break;
           case 'R20': checkR20(content, relPath, lang, enRefs); break;
+          case 'R21': checkR21(content, relPath, lang); break;
         }
       }
     }
@@ -1020,6 +1056,7 @@ function printResults() {
     R17: { severity: 'error', desc: '英文文章参考含中文未翻译' },
     R19: { severity: 'error', desc: 'CTA 链接文本为整句而非简短联系短语' },
     R20: { severity: 'error', desc: '非英文语种参考文献标题与英文版完全相同（疑似未翻译）' },
+    R21: { severity: 'error', desc: '文末 CTA 链接语言前缀与文章语言不匹配' },
   };
 
   for (const [ruleId, items] of Object.entries(byRule)) {

@@ -295,3 +295,34 @@ GitHub 仓库从 `seasea-clouds/trade-web` 切换到 `seasea-clouds/tc-web`（�
   - `compli-service-locale`（`packages/ui/src/LanguageSwitcher.tsx`，语言偏好，仅写无读）→ `stc-locale`
   - `compli-report-input`（6 个 check-client 写 + report-client 读，报告草稿）→ `stc-report-input`
   - 共 8 文件 14 处替换，portal 构建全绿（240 页），线上 JS bundle 无残留；注意：改 key 后老用户本地旧 key 数据不再读取（语言偏好/未提交草稿会丢一次，无害）
+
+## 内容差异化方案归档（2026-08-03，原 DIFFERENTIATION_*.md 合并至此）
+
+> 原文件 `DIFFERENTIATION_FULL_PLAN.md` / `DIFFERENTIATION_PILOT.md` 已删除，核心信息归档于此（git 历史可恢复，commit a9cfffb1 / e75b63d7）。
+
+### 背景
+- Google 判定 48 语言页面为「模板化/机器翻译副本」→ 收录率下滑（1,231 页未编入，60% 新增页未被编入）。
+- 已取消 noindex 方案，改为**内容差异化**：各语言页面从「逐字翻译模板」→「为本地用户视角定制的内容」。
+- CI 可行性：`check-i18n-coverage.mjs` 只查 key 覆盖率（≥99%），`check-translations.mjs` 只查英文 fallback/不应翻译词，**均不要求逐字翻译** → 差异化可行，约束：key 数量/结构 48 语言一致、不引入英文残留/fallback、保持翻译铁律。
+
+### GSC 语言需求（决定投入优先级）
+| 语言 | 展示 | 点击 | 投入级别 |
+|------|------|------|---------|
+| de | 854 (45%) | 0 | T1 重点 |
+| en | 347 | 0 | T1 重点 |
+| es | 121 | 0 | T2 |
+| it | 86 | 0 | T2 |
+| ja | 73 | 0 | T2 |
+| fa | 28 | **6** | T2（有转化） |
+| fr/ru/nl/pl/pt | 少量 | 0 | T3 |
+| 其余 37 语言 | ~0 | 0 | T4 轻量 |
+
+### 试点对象（3 个高价值组合）
+1. de ServiceCcc — ccc zertifizierung（293 展示）— 德国出口商视角（CE vs CCC 对比）
+2. ja ServiceCcc — ccc 認証 取得（11 展示）— 日本制造商视角（JIS vs CCC、海外申请）
+3. es ServiceGacc — gacc que es（4.5-19 排名）— 拉美食品出口商视角
+
+### 差异化 3 层方法
+1. **heroTitle / heroSubtitle**：按本地用户搜索习惯 + 本地视角重写（如 de 强调 CE vs CCC 对比），非翻译 en。
+2. **FAQ / howSteps / coverItems**：本地化场景与提问方式。
+3. **metaTitle / metaDescription**：本地关键词习惯（后续 D7-SEO 系列批量优化）。

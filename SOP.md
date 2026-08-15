@@ -301,28 +301,11 @@ cd /root/projects/tool/translate && python scripts/translate.py quota
 
 ## 官网 — 新增博客文章
 
-### 步骤
-
-1. **写英文原文**：`content/blog/en/{slug}.mdx`（frontmatter：title/slug/date/category/excerpt）
-2. **批量翻译**：
-   ```bash
-   source /root/projects/.venv/bin/activate
-   t-translate submit -i apps/site/content/blog/en/{slug}.mdx -n "blog-{slug}" -s en -t "af,ar,az,be,bg,bn,ca,cs,da,de,el,es,fa,fi,fr,he,hi,hr,hu,hy,id,it,ja,ka,ko,ms,ne,nl,no,pl,pt,ro,ru,si,sk,sl,sq,sr,sv,sw,ta,th,tr,uk,ur,vi,zh" -R "blog article: {slug}"
-   t-translate status -n "blog-{slug}"
-   t-translate results -n "blog-{slug}" -o /tmp/{slug}-translations.json
-   ```
-3. **构建**：`npx next build`
-4. **提交推送**：`git push`
-
-### 踩坑记录
-
-| 坑 | 解决 |
-|----|------|
-| title 超 55 字符 | SEO 截断，宽字符语言更要控制 |
-| 粗体未闭合 | 每行 `**` 数量为偶数 |
-| YAML 双引号嵌套 | excerpt 含引号时外层改用单引号 |
-| 忘记翻译 frontmatter | 列表页显示英文 title/excerpt |
-| translation API 幻觉 | 严格忠实原文，不自行添加数字/价格 |
+> **已迁移（2026-08-14）：** 博客文章统一在 `apps/blog/content/` 管理，完整流程见下方「[Blog — 添加新文章完整工作流](#blog--添加新文章完整工作流)」。
+>
+> 流程变更：**不再用 t-translate 机器翻译 47 语言**，改为 **48 语言个性化本地化撰写（不用翻译工具）**，每个语言按目标读者习惯单独撰写，而非直译。
+>
+> 旧路径 `apps/site/content/blog/` 已废弃（site 目录不再有博客内容）。
 
 ---
 
@@ -370,7 +353,10 @@ Creem 提供 Test Mode：API 端点是 `https://test-api.creem.io`
 
 ## Blog — 添加新文章完整工作流
 
-### Step 1: 准备英文原文
+> **当前流程（2026-08-14 起）：** 48 语言个性化本地化撰写，**不用 t-translate 翻译工具**。
+> 参考实施：`gacc-decree-280`（8740d3e6，48 语言全人工本地化，576 文件 0 错误）。
+
+### Step 1: 写英文原文
 
 在 `apps/blog/content/en/` 下创建 `{slug}.mdx`。gray-matter 前置元数据：
 
@@ -378,8 +364,8 @@ Creem 提供 Test Mode：API 端点是 `https://test-api.creem.io`
 ---
 title: "Article Title"
 slug: "{slug}"
-category: "Food & Beverage"     # 影响底部 CTA 卡片映射
-date: "2026-01-01"
+category: "Food & Beverage"     # 影响底部 CTA 卡片映射（支持中英文双套）
+date: "2026-08-14"              # 48 语言必须一致（R10）
 excerpt: "SEO description..."
 references:                      # 可选
   - title: "Source Name"
@@ -387,63 +373,87 @@ references:                      # 可选
 ---
 ```
 
+注意：
+- title 不超过 55 字符（SEO 截断，宽字符语言更要控制）
+- 标题禁止含冒号/破折号/`-`（R08）
+- excerpt 含引号时外层改用单引号包裹（YAML 双引号嵌套坑）
+- 粗体未闭合：每行 `**` 数量为偶数
+
 ### Step 2: 确认 Category 映射
 
-| category | 服务映射 |
+| category（英文 / 中文） | 服务映射 |
 |----------|---------|
-| Food & Beverage | /services/gacc |
-| Label Compliance | /services/label |
-| Product Certification | /services/ccc |
-| Cosmetics | /services/cosmetics |
-| E-commerce | /services/ecommerce |
-| Brand Protection | /services/brand |
-| Compliance Guide | /services/gacc |
+| Food & Beverage / 食品及饮料 | /services/gacc |
+| Label Compliance / 标签合规性 | /services/label |
+| Product Certification / 产品认证 | /services/ccc |
+| Cosmetics / 化妆品 | /services/cosmetics |
+| E-commerce / 电子商务 | /services/ecommerce |
+| Brand Protection / 品牌保护 | /services/brand |
+| Compliance Guide / 合规指南 | /services/gacc |
 
-不在上表中的 category 必须先在 `CATEGORY_SERVICE_MAP` 添加映射。
+映射表在 `apps/blog/src/app/[locale]/blog/[slug]/page.tsx` 的 `CATEGORY_SERVICE_MAP`（含中英文双套 key）。不在表中的 category 必须先在映射表中添加条目。
 
 ### Step 3: （可选）添加 FAQPage JSON-LD
 
-在 `[slug]/page.tsx` 的 `FAQ_NS` 映射表中添加 slug 条目，并在 `apps/site/messages/{locale}.json` 定义 `BlogFaqXxx` namespace。
+在 `[slug]/page.tsx` 的 `FAQ_NS` 映射表中添加 slug 条目，并在 `apps/blog/messages/{locale}.json` 定义 `BlogFaqXxx` namespace。
 
-### Step 4: 翻译到 47 语言
+### Step 4: 48 语言个性化本地化撰写（核心步骤，不用翻译工具）
 
-```bash
-source /root/projects/.venv/bin/activate
-t-translate submit \
-  -i apps/blog/content/en/{slug}.mdx \
-  -n "blog-{slug}" \
-  -s en \
-  -t "af,ar,az,be,bg,bn,ca,cs,da,de,el,es,fa,fi,fr,he,hi,hr,hu,hy,id,it,ja,ka,ko,ms,ne,nl,no,pl,pt,ro,ru,si,sk,sl,sq,sr,sv,sw,ta,th,tr,uk,ur,vi,zh" \
-  -R "blog article: {slug}"
-t-translate status -n "blog-{slug}"
-t-translate results -n "blog-{slug}" -o /tmp/{slug}-translations.json
-```
+为全部 48 个语言目录各创建 `apps/blog/content/{locale}/{slug}.mdx`，**每个语言个性化撰写，不是机器直译**：
 
-### Step 5: 本地构建验证
+- **按目标读者习惯撰写**：句式、用词、案例叙述贴合该语言读者的表达习惯，不逐句对应英文版
+- **标题本地化**：各语言本地化标题，**不加括号说明**（如不加「（中文版）」）
+- **本地化 SEO/GEO**：excerpt 按语言重写，参考文献标题逐语言翻译（R20：非英文语种 ref 标题不得与英文版完全相同）
+- **文末 CTA**：`[Contact us](/{locale}/packages/) ...`，语言前缀必须与文章语言一致（R21），链接文本用简短联系短语（R19）
+- **date 一致**：48 语言 `date` 与英文版相同（R10）
+- **内容红线**：不提价格/官方免费、不写客户自助注册教程（按文章主题确认）
+
+推荐分批用子代理并行撰写（参考 8740d3e6）：
+
+| 批次 | 语言 |
+|------|------|
+| 批 A 欧西 6 | es fr de it pt nl |
+| 批 B 北欧东欧 14 | sv no da fi pl cs ro hu bg hr sr sk sl uk ru |
+| 批 C 中东南亚 14 | ar he fa ur hi bn ta si ne ka hy az sq be |
+| 批 D 亚太 9 | ja ko vi th id ms sw af ca |
+| 手动补写 | el tr（分批清单易遗漏，收尾时核对 48 语言齐全） |
+
+### Step 5: MDX 内容质量检查（本地）
 
 ```bash
 cd apps/blog
-node ../../packages/scripts/build-search-index.mjs
-rm -rf .next/cache
-next build
-node ../../packages/scripts/ci-check.mjs --out-dir=out --ci
+node ../../packages/scripts/check-md-article.mjs --project=blog --ci
 ```
 
-### Step 6: 推送到 main → 自动部署
+全量 48 语言必须 0 错误（R01-R21，重点规则）：
+- **R07**：文章在全部 48 个语言中都有版本
+- **R10**：48 语言 date 一致
+- **R20**：非英文语种参考文献标题已翻译（不得与英文版相同）
+- **R21**：文末 CTA 链接语言前缀与文章语言匹配
+
+### Step 6: 构建验证
+
+```bash
+cd apps/blog
+npm run build
+# = build-search-index → rm -rf .next/cache → next build → ci-check.mjs --out-dir=out --ci
+```
+
+### Step 7: 推送到 main → 自动部署
 
 ```bash
 git add apps/blog/content/
-git commit -m "blog: add {slug} article"
+git commit -m "feat(blog): add {slug} article in 48 languages"
 git push origin main
 ```
 
-### Step 7: 部署验证
+### Step 8: 部署验证
 
 | 检查项 | URL |
 |---|---|
 | 开发环境 | `https://tc-web-blog.pages.dev/en/blog/{slug}/` |
 | 生产环境 | `https://sinotradecompliance.com/en/blog/{slug}/` |
-| 非英语抽检 | `https://sinotradecompliance.com/zh/blog/{slug}/` |
+| 非英语抽检 | `https://sinotradecompliance.com/zh/blog/{slug}/`（建议多抽几门语言） |
 
 ---
 

@@ -39,7 +39,7 @@ SinoTrade 品牌的所有网站代码统一放在此 monorepo 中。三个独立
 - **用途：** 官网主站，品牌展示、服务介绍、行业页面
 - **技术栈：** Next.js 16 (SSG 静态导出) + next-intl + TypeScript + Tailwind CSS
 - **多语言：** `[locale]` 服务端路由，48 语言 SSG（静态导出）
-- **结构：** `src/`（页面组件）| `messages/`（48 语言翻译）| `content/blog/`（博客 MDX）| `public/`（静态资源）
+- **结构：** `src/`（页面组件）| `messages/`（48 语言翻译）| `public/`（静态资源）（博客 MDX 已迁移至 `apps/blog/content/`）
 - **SSG 输出目录：** `apps/site/out/`
 - **代理功能：** `functions/_middleware.ts` 负责将 `/c/` → portal、`/blog/` → blog、`/admin/` → admin 的请求转发，以及子站静态资源代理
 

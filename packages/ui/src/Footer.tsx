@@ -35,7 +35,7 @@ export default function Footer({ locale: propLocale }: { locale?: string } = {})
         <div className="grid md:grid-cols-4 gap-8 mb-10">
           {/* Services */}
           <div>
-            <h4 className="text-white font-bold mb-4">{t('services')}</h4>
+            <h2 className="text-white font-bold mb-4">{t('services')}</h2>
             <ul className="space-y-2">
               {serviceLinks.map((s) => (
                 <li key={s.key}>
@@ -52,7 +52,7 @@ export default function Footer({ locale: propLocale }: { locale?: string } = {})
 
           {/* Free Check — 新增列 */}
           <div>
-            <h4 className="text-white font-bold mb-4">{t('freeCheckHeader')}</h4>
+            <h2 className="text-white font-bold mb-4">{t('freeCheckHeader')}</h2>
             <ul className="space-y-2">
               {checkLinks.map((c) => (
                 <li key={c.key}>
@@ -69,7 +69,7 @@ export default function Footer({ locale: propLocale }: { locale?: string } = {})
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-bold mb-4">{t('quickLinks')}</h4>
+            <h2 className="text-white font-bold mb-4">{t('quickLinks')}</h2>
             <ul className="space-y-2">
               <li>
                 <a href={href('/about/')} className="text-white/70 hover:text-white transition-colors text-sm">
@@ -101,7 +101,7 @@ export default function Footer({ locale: propLocale }: { locale?: string } = {})
 
           {/* Contact */}
           <div>
-            <h4 className="text-white font-bold mb-4">{t('contact')}</h4>
+            <h2 className="text-white font-bold mb-4">{t('contact')}</h2>
             <div className="flex flex-col gap-3">
               <a
                 href={href('/quote/')}

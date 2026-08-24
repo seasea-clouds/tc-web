@@ -224,6 +224,38 @@ async function proxySubSiteAsset(url: URL, request: Request, env?: Record<string
   return null;
 }
 
+// ─── Resolve browser language with zh gating ───────────────────
+// Requirement: Chinese (zh) visitors must be redirected to English, and any
+// language outside the supported 48 locales defaults to English as well.
+function resolveLocale(request: Request): string {
+  const locale = matchBrowserLanguage(request.headers.get('accept-language'));
+  return locale === 'zh' ? 'en' : locale;
+}
+
+// ─── Verify admin session (admin_sid cookie → D1) ─────────────────
+// Only authenticated admins may view Chinese (/zh/) pages. Reads the admin
+// session cookie and validates it against the shared D1 database.
+const ADMIN_SESSION_COOKIE = 'admin_sid';
+
+async function verifyAdminSession(request: Request, env: any): Promise<boolean> {
+  if (!env || !env.DB) return false;
+  const cookie = request.headers.get('Cookie');
+  if (!cookie) return false;
+  const match = cookie.match(new RegExp(`(?:^|;\\s*)${ADMIN_SESSION_COOKIE}=([^;]+)`));
+  if (!match) return false;
+  const sessionId = match[1];
+  try {
+    const row: any = await env.DB.prepare(
+      'SELECT s.id, s.expires_at FROM admin_sessions s WHERE s.id = ?',
+    ).bind(sessionId).first();
+    if (!row) return false;
+    if (new Date(row.expires_at) < new Date()) return false;
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 // ─── Main handler ────────────────────────────────────────────────
 
 export async function onRequest(context: { request: Request; next: () => Promise<Response>; env?: Record<string, string> }): Promise<Response> {
@@ -252,6 +284,19 @@ export async function onRequest(context: { request: Request; next: () => Promise
   const canonical = getCanonicalHost(url.toString());
   if (canonical && url.hostname !== canonical) {
     return Response.redirect(url.toString().replace(url.hostname, canonical), 301);
+  }
+
+  // ── zh locale gating: only authenticated admins may view Chinese ──
+  // Runs after canonical-host redirect and before all sub-site proxying so
+  // /zh/, /zh/c/ (portal) and /zh/blog/ (blog) are all gated at the edge.
+  // Static assets are not affected: site assets live at /_next/static and
+  // sub-site assets at /c/_next/static, /blog/_next/static (no locale prefix).
+  if (/^\/zh(?:\/|$)/.test(url.pathname)) {
+    const isAdmin = await verifyAdminSession(request, env);
+    if (!isAdmin) {
+      const enPath = '/en' + url.pathname.slice(3);
+      return Response.redirect(url.origin + enPath + url.search, 302);
+    }
   }
 
   // ── Sub-site static assets ──
@@ -295,7 +340,7 @@ export async function onRequest(context: { request: Request; next: () => Promise
   }
 
   if (url.pathname === '/c' || url.pathname === '/c/') {
-    const locale = matchBrowserLanguage(request.headers.get('accept-language'));
+    const locale = resolveLocale(request);
     return Response.redirect(url.origin + '/' + locale + '/c/', 302);
   }
 
@@ -325,7 +370,7 @@ export async function onRequest(context: { request: Request; next: () => Promise
   }
 
   if (url.pathname === '/api' || url.pathname === '/api/') {
-    const locale = matchBrowserLanguage(request.headers.get('accept-language'));
+    const locale = resolveLocale(request);
     return Response.redirect(url.origin + '/' + locale + url.pathname + '/', 302);
   }
 
@@ -373,14 +418,14 @@ export async function onRequest(context: { request: Request; next: () => Promise
   }
 
   if (url.pathname === '/blog' || url.pathname === '/blog/') {
-    const locale = matchBrowserLanguage(request.headers.get('accept-language'));
+    const locale = resolveLocale(request);
     return Response.redirect(url.origin + '/' + locale + '/blog/', 302);
   }
 
   // ── Language auto-detect for root path ──
   if (url.pathname === '/' || url.pathname === '') {
     const acceptLang = request.headers.get('accept-language');
-    const locale = matchBrowserLanguage(acceptLang);
+    const locale = resolveLocale(request);
     const target = '/' + locale + '/';
     return Response.redirect(new URL(target, url.origin).toString(), 302);
   }

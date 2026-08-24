@@ -14,6 +14,36 @@ interface LanguageSwitcherProps {
 
 const DEFAULT_LOCALES = [...LOCALES];
 
+// Module-level cache of admin auth state — checked once per page load.
+// When not authenticated (or when the check fails), the Chinese (zh)
+// option is hidden from the language switcher; the edge Worker still
+// enforces this server-side, so this is a UX improvement only.
+let adminAuthed: boolean | null = null;
+let adminCheckStarted = false;
+
+function checkAdminAuthed(): Promise<boolean> {
+  if (adminAuthed !== null) return Promise.resolve(adminAuthed);
+  if (adminCheckStarted) return new Promise((resolve) => {
+    const timer = setInterval(() => {
+      if (adminAuthed !== null) {
+        clearInterval(timer);
+        resolve(adminAuthed);
+      }
+    }, 100);
+  });
+  adminCheckStarted = true;
+  return fetch('/api/admin/auth/me', { credentials: 'include' })
+    .then((res) => {
+      if (!res.ok) return false;
+      return res.json().then((data) => !!data?.admin).catch(() => false);
+    })
+    .catch(() => false)
+    .then((authed) => {
+      adminAuthed = authed;
+      return authed;
+    });
+}
+
 const DEFAULT_LOCALE_NAMES: Record<string, string> = LOCALE_NAMES;
 
 
@@ -43,6 +73,17 @@ export default function LanguageSwitcher({
   const locale = propLocale || ctxLocale || 'en';
   const pathname = usePathname();
   const [searchParams, setSearchParams] = useState('');
+  const [visibleLocales, setVisibleLocales] = useState<string[] | null>(
+    // SSR + initial render: hide zh until admin auth is confirmed
+    () => locales.filter((l) => l !== 'zh'),
+  );
+
+  // Hide zh from the switcher until we confirm the visitor is an admin.
+  useEffect(() => {
+    checkAdminAuthed().then((authed) => {
+      setVisibleLocales(authed ? locales : locales.filter((l) => l !== 'zh'));
+    });
+  }, [locales]);
 
   // After hydration, read query params from the actual URL
   useEffect(() => {
@@ -54,7 +95,8 @@ export default function LanguageSwitcher({
   const currentDisplayName = localeToName(locale, localeNames);
 
   // Build locale → href map using Next.js pathname (works in SSR and client)
-  const localeHrefs = locales.reduce<Record<string, string>>((acc, l) => {
+  const activeLocales = visibleLocales ?? locales;
+  const localeHrefs = activeLocales.reduce<Record<string, string>>((acc, l) => {
     if (pathname && pathname.startsWith(`/${locale}`)) {
       acc[l] = pathname.replace(`/${locale}`, `/${l}`);
     } else if (pathname) {
@@ -99,7 +141,7 @@ export default function LanguageSwitcher({
       {/* CSS hover/focus dropdown: works even without React hydration */}
       <div className="absolute right-0 top-full invisible group-hover:visible group-focus-within:visible opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-all duration-150 bg-white rounded-md shadow-lg border border-gray-200 pt-2 pb-1 min-w-[140px] max-h-[32rem] overflow-y-auto z-50"
         style={{ scrollbarWidth: 'thin', scrollbarColor: '#D4AF37 #f1f1f1' }}>
-        {locales.map((l: string) => (
+        {activeLocales.map((l: string) => (
           <a
             key={l}
             href={localeHrefs[l] || `/${l}/`}

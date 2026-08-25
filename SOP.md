@@ -99,6 +99,35 @@ curl -s -X POST "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/
 | `/`（根路径） | 302 → `/{locale}/` | |
 | www / .pages.dev | 301 → `sinotradecompliance.com` | 规范主机名 |
 
+### 中文访问控制（WAF 屏蔽 + 登录门禁，2026-08-25）
+
+**背景**：用户决策——中文页面仅 admin 登录可见，且大中华区（CN/HK/MO/TW）IP 全部屏蔽。海外访客看 46 种语言，中文页 302 弹回英文。
+
+**双层防线：**
+
+| 层 | 规则 | 效果 |
+|----|------|------|
+| WAF（IP 级） | `(ip.geoip.country in {"CN" "HK" "MO" "TW"})` → block | 大中华区任何路径 403 |
+| Worker（登录级） | `/zh/*` 未登录 → 302 `/en/*` | 海外访客中文页弹回英文；admin 登录可见 |
+
+**WAF 规则维护（zone `48516c3e...`，ruleset `3964577d...`）：**
+- ⚠️ 规则列表里有一条全局 skip 规则（description「允许」，`ruleset: current`）——**block 规则必须保持在 skip 规则之前（index 0）**，否则被跳过不生效。
+- 修改：CF Dashboard → Security → WAF → Custom rules；或 API `PUT /zones/{zone}/rulesets/{ruleset}`（body 带完整 rules 数组，两条都保留）。
+- 作用范围仅主站 zone；*.pages.dev dev 域名不受影响（生产流量全走主站）。
+
+**Worker 门禁（commit `ba3dfb7c`）：**
+- `apps/site/functions/_middleware.ts`：`verifyAdminSession()` 查 D1 `admin_sessions` 表验证 `admin_sid` cookie；`resolveLocale()` 把 zh/未知语言映射到 en。
+- 前置条件：tc-web-site Pages 项目需有 D1 binding（`DB` → `trade-web-portal-db`，production + preview）。
+- `packages/ui/src/LanguageSwitcher.tsx`：未登录隐藏中文选项（SSR 首屏直接过滤 zh，避免 hydration mismatch；`useEffect` 查 `/api/admin/auth/me` 确认 admin 后显示全部）。
+
+**验证命令：**
+```bash
+# 未登录访问中文页（预期 302 → /en/...）
+curl -s -o /dev/null -w "%{http_code} -> %{redirect_url}\n" https://sinotradecompliance.com/zh/
+# 大中华区代理访问（预期 403；代理可用 geonode proxylist 找，免费代理不稳多试几个）
+curl -s -o /dev/null -w "%{http_code}\n" -x "http://<CN代理>" https://sinotradecompliance.com/en/
+```
+
 ### Portal D1 配置
 1. CF Dashboard → Workers & Pages → tc-web-portal → Settings → Functions
 2. D1 database bindings → 添加绑定

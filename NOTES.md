@@ -34,6 +34,50 @@
 
 翻译调用 `/root/projects/tool/translate/`，双渠道 Google Translate 免费无需 Key。
 
+## 中文访问门禁 + WAF 屏蔽大中华区（2026-08-25）
+
+**需求**（用户决策）：中文页面仅 admin 登录用户可见；大陆/港澳台（CN/HK/MO/TW）IP 全部屏蔽。海外访客看 46 种语言，中文页 302 弹回英文。
+
+### 双层架构
+
+| 层 | 作用 | 位置 |
+|----|------|------|
+| **WAF 规则**（第一道，IP 级） | CN/HK/MO/TW 全部 403，任何路径/语言都进不来 | Cloudflare zone ruleset `http_request_firewall_custom` |
+| **Worker 门禁**（第二道，登录级） | 非 CN IP 访问 `/zh/*` 未登录 → 302 到对应英文路径 | `apps/site/functions/_middleware.ts` |
+
+### WAF 规则要点
+
+- 表达式：`(ip.geoip.country in {"CN" "HK" "MO" "TW"})` → action `block`（403）
+- Zone：`sinotradecompliance.com`（id `48516c3e...`），ruleset id `3964577d...`（`http_request_firewall_custom` phase）
+- ⚠️ **规则顺序铁律**：zone 里有一条 2026-05-02 创建的全局 skip 规则（description「允许」，`ruleset: current` 会跳过当前 ruleset 后续规则）——**CN block 规则必须放在 skip 规则之前**，否则被跳过不生效。改规则时保持 block 在 index 0。
+- 作用范围：仅主站 zone。dev 域名（*.pages.dev）不受影响（生产流量全走主站，无实际影响）。
+- 修改方式：CF Dashboard → Security → WAF → Custom rules，或 API PUT `/zones/{zone}/rulesets/{ruleset}`（body 需带完整 rules 数组，保留 skip 规则）。
+
+### Worker 门禁要点（commit `ba3dfb7c`）
+
+- `verifyAdminSession(request, env)`：读 `admin_sid` cookie → 查 D1 `admin_sessions` 表（24h 过期）→ 有效才放行
+- 需要 **tc-web-site Pages 项目加 D1 binding**（`DB` → `trade-web-portal-db`，production + preview 都要）——site 项目原本没有 D1
+- 拦截位置：canonical-host 301 之后、所有子站代理之前，匹配 `^/zh(?:/|$)` → 302 到 `/en` + 原路径其余部分
+- `resolveLocale()`：浏览器语言检测统一改走它，zh → en，48 语言之外 → en（覆盖 `/`、`/c`、`/blog`、`/api` 重定向）
+- `LanguageSwitcher.tsx`：SSR 首屏 `visibleLocales` 直接过滤掉 zh（避免 hydration mismatch），`useEffect` 里 fetch `/api/admin/auth/me` 确认 admin 后显示全部；模块级缓存单次 fetch
+- 前端隐藏只是 UX 辅助，真正门禁在边缘 Worker
+
+### 线上验证记录
+
+| 场景 | 结果 |
+|------|------|
+| 中国代理访问 `/en/` `/zh/` `/en/c/` | 403 ✅ |
+| 香港代理访问 `/en/` | 403 ✅ |
+| 未登录访问 `/zh/` `/zh/c/` `/zh/blog/*` | 302 → 对应 `/en/...` ✅ |
+| 浏览器语言 zh-CN 访问 `/` | 302 → `/en/` ✅ |
+| 非 48 语言（xh）访问 `/` | 302 → `/en/` ✅ |
+| 已登录 admin（海外 IP）访问 `/zh/` `/zh/c/` `/zh/blog/*` | 200 真实中文 ✅ |
+| 无效 `admin_sid` 访问 `/zh/` | 302 → `/en/` ✅ |
+| 语言切换器（未登录） | 无中文选项（47 语言正常）✅ |
+
+- 测试 session 直接 INSERT 到 D1 `admin_sessions`（`id`=hex32、`admin_id`、`expires_at`），用完 DELETE 清理。
+- 免费代理（geonode proxylist 按 country=CN/HK 过滤）不稳，多试几个；`000` 是代理本身挂了，不代表规则未生效。
+
 ## Portal
 
 ### URL 架构

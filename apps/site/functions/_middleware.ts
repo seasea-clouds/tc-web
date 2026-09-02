@@ -180,6 +180,65 @@ function sanitizeHeaders(headers: Headers): Headers {
   return h;
 }
 
+// ─── Bare-path English serving (no locale prefix → English 200) ──
+// Site pages are SSG-exported only under /{locale}/. URLs without a locale
+// prefix (/, /about/, /services/gacc/, ...) previously 302-redirected or 404'd.
+// Now they are served directly with the English (/en/) version, HTTP 200, while
+// the bare URL stays in the address bar. The served HTML keeps its own
+// canonical/x-default pointing at the /en/ URL, so search engines consolidate
+// there (no duplicate content). Locale-prefixed paths and static assets are
+// untouched; sub-site proxy branches (c/blog/admin/api) already returned above.
+
+// Distinguish a "page-like" bare path from locale-prefixed paths and static
+// files that must be served as-is by Cloudflare's static asset pipeline.
+function isBarePagePath(pathname: string): boolean {
+  if (pathname === '/' || pathname === '') return true;
+  const seg = pathname.split('/')[1] || '';
+  // Locale-prefixed (/en/..., /de/...) → normal request, serve as-is
+  if (seg && (SUPPORTED_LOCALES as string[]).includes(seg)) return false;
+  // Static asset trees and special files → let Cloudflare serve them
+  if (/^\/(_next|images|fonts|\.well-known)\//.test(pathname)) return false;
+  if (/^\/_/.test(pathname)) return false; // _next, _not-found, _headers, _redirects...
+  if (/^\/404/.test(pathname)) return false; // custom 404 page
+  if (/\.[a-z0-9]{1,8}$/i.test(pathname)) return false; // files w/ extension
+  return true;
+}
+
+// Fetch the English version of a bare path from this deployment's static
+// assets (ASSETS binding), with a same-origin fallback. Returns null when the
+// English page does not exist (caller falls through to the default 404 path).
+async function serveEnglishBarePath(request: Request, url: URL, env?: Record<string, string>): Promise<Response | null> {
+  let enPath = '/en' + url.pathname; // /about/ → /en/about/, / → /en/
+  if (url.pathname === '/' || url.pathname === '') {
+    enPath = '/en/';
+  } else if (!enPath.endsWith('/')) {
+    enPath += '/';
+  }
+  const target = new URL(enPath + url.search, url.origin);
+
+  // 1) ASSETS binding (Cloudflare Pages Functions) — direct static fetch
+  try {
+    const assets = (env as any)?.ASSETS;
+    if (assets && typeof assets.fetch === 'function') {
+      const resp = await assets.fetch(new Request(target.toString(), request));
+      if (resp && resp.status === 200) {
+        return resp;
+      }
+    }
+  } catch { /* fall through to same-origin fallback */ }
+
+  // 2) Same-origin fetch — the rewritten path starts with /en/, so it will not
+  // re-enter the bare-path branch (safe, no redirect loop).
+  try {
+    const resp = await fetch(target.toString(), request);
+    if (resp && resp.status === 200) {
+      return resp;
+    }
+  } catch { /* fall through */ }
+
+  return null;
+}
+
 // ─── Sub-site static assets ─────────────────────────────────────
 
 async function proxySubSiteAsset(url: URL, request: Request, env?: Record<string, string>): Promise<Response | null> {
@@ -422,12 +481,12 @@ export async function onRequest(context: { request: Request; next: () => Promise
     return Response.redirect(url.origin + '/' + locale + '/blog/', 302);
   }
 
-  // ── Language auto-detect for root path ──
-  if (url.pathname === '/' || url.pathname === '') {
-    const acceptLang = request.headers.get('accept-language');
-    const locale = resolveLocale(request);
-    const target = '/' + locale + '/';
-    return Response.redirect(new URL(target, url.origin).toString(), 302);
+  // ── Bare path (no locale prefix) → English content, HTTP 200 ──
+  // Covers /, /about/, /faq/, /services/... and any other unprefixed site page.
+  // (GET/HEAD only; other methods fall through to default handling.)
+  if (isBarePagePath(url.pathname) && (request.method === 'GET' || request.method === 'HEAD')) {
+    const english = await serveEnglishBarePath(request, url, env);
+    if (english) return english;
   }
 
   // ── Default: serve main site ──

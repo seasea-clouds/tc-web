@@ -98,10 +98,22 @@ export default function LanguageSwitcher({
   const activeLocales = visibleLocales ?? locales;
   const localeHrefs = activeLocales.reduce<Record<string, string>>((acc, l) => {
     if (pathname && pathname.startsWith(`/${locale}`)) {
+      // Canonical case: path already carries the current locale prefix
       acc[l] = pathname.replace(`/${locale}`, `/${l}`);
     } else if (pathname) {
-      // Fallback: try current path with just the locale segment replaced
-      acc[l] = pathname.replace(/^\/\w+(?:-\w+)?(?=\/|$)/, `/${l}`);
+      // No current-locale prefix on the path. Two sub-cases:
+      // 1) The first segment is a known locale (defensive) → swap it.
+      // 2) Bare path without any locale prefix (e.g. /about/ served as English
+      //    via the edge rewrite) → prepend the target locale.
+      const first = pathname.split('/')[1];
+      const known = (locales as string[]) ?? DEFAULT_LOCALES;
+      if (first && known.includes(first)) {
+        acc[l] = pathname.replace(`/${first}`, `/${l}`);
+      } else if (pathname === '/') {
+        acc[l] = `/${l}/`;
+      } else {
+        acc[l] = `/${l}${pathname}`;
+      }
     }
     // Preserve query params for all paths
     if (searchParams) {

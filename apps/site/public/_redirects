@@ -1,4 +1,2 @@
-# Root path: redirect based on visitor language
-# Cloudflare Pages supports Language-based redirects via dashboard
-# This fallback redirects / to /en/ for unmatched languages
-/	/en/	302
+# Root path and unprefixed URLs are served directly with English content (HTTP 200)
+# by functions/_middleware.ts (bare-path English rewrite). No redirects needed.

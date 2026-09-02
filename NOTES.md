@@ -78,6 +78,31 @@
 - 测试 session 直接 INSERT 到 D1 `admin_sessions`（`id`=hex32、`admin_id`、`expires_at`），用完 DELETE 清理。
 - 免费代理（geonode proxylist 按 country=CN/HK 过滤）不稳，多试几个；`000` 是代理本身挂了，不代表规则未生效。
 
+### 裸路径 URL 英文直出（commit `fcfdd3b7`，2026-09-02）
+
+**需求：** URL 不带语言编码时默认展示英文内容（HTTP 200），不 302 跳转、不 404。
+
+**实现（方案 A：middleware rewrite，无重复内容风险）：**
+- `apps/site/functions/_middleware.ts` 新增 `isBarePagePath()` + `serveEnglishBarePath()`：
+  - 无语言前缀路径（`/`、`/about/`、`/services/gacc/`、`/faq/` 等）→ 内部 fetch `/en/...` 静态页（优先 `env.ASSETS` binding，回退同源 fetch），返回 200，地址栏 URL 不变
+  - SEO 安全：返回的 HTML 自带 canonical/hreflang x-default 指向 `/en/...` 规范版，搜索引擎归并到 /en/，无 duplicate content
+  - 排除：静态资源（`/_next/`、images、fonts、带扩展名文件）、locale 前缀路径、zh 门禁、子站代理（c/blog/admin/api 前面已 return）
+- `apps/site/public/_redirects`：删除 `/ /en/ 302` 规则（改由 middleware 处理）
+- `packages/ui/src/LanguageSwitcher.tsx`：修复裸路径下语言切换 href——原 fallback 把首个词段当 locale 替换会丢路径（`/about/`→`/de/`），改为识别：首段是已知 locale 则换，否则 prepend（`/about/`→`/de/about/`）
+
+**线上验证（全过）：**
+| 场景 | 结果 |
+|------|------|
+| `/` | 200 英文（canonical → /en/）✅ |
+| `/about/` `/faq/` `/services/gacc/` | 200 英文（canonical → /en/...）✅ |
+| `/zh/about/` | 302 → /en/about/（门禁不回归）✅ |
+| `/en/about/` `/de/faq/` | 200（正常路径不回归）✅ |
+| `/blog/` `/c/` | 302 语言检测（子站入口保留）✅ |
+| robots.txt / 404 | 200 / 404 ✅ |
+| 页面内语言切换链接 | 全语言正确（浏览器实测无 hydration 报错）✅ |
+
+**注意：** `packages/ui` 改动触发所有 app 重建；portal/blog 全部页面都带 `/{locale}/` 前缀，走 LanguageSwitcher 第一分支，不受影响。
+
 ## Portal
 
 ### URL 架构

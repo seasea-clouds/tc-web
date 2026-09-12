@@ -27,10 +27,9 @@
 ## 关键规则
 
 ### 目录原则
-- `web/` 是 monorepo 根，同级有 `crm/`、`prospect/`、`knowledge/`
+- `web/` 是 monorepo 根（项目目录：`/root/.pi/agent/worker/workspaces/tc-web/project/`；`crm/`、`prospect/` 已各自迁到对应 bot 工作区）
 - `apps/*` 各应用独立可部署
 - `packages/*` 共享代码包
-- 原始目录 `sinotradecompliance/`、`compli-service/` 保留未改动
 
 ### 路由规则
 - **主站：** `/{locale}/...`（例如 `/zh/services/gacc/`）

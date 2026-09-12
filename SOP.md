@@ -4,7 +4,7 @@
 
 ```bash
 # 安装依赖
-cd /root/projects/tradecompliance/web
+cd /root/.pi/agent/worker/workspaces/tc-web/project
 npm install
 
 # 同时启动所有站
@@ -304,10 +304,10 @@ curl -sL -o /dev/null -w "%{http_code}\n" https://tc-web-site.pages.dev/en/blog/
 
 ## 官网翻译流程
 
-翻译引擎调用 `/root/projects/tool/translate/`：
+翻译引擎调用 `/root/.pi/agent/worker/workspaces/t-translate/project/`：
 
 ```python
-import sys; sys.path.insert(0, "/root/projects/tool/translate")
+import sys; sys.path.insert(0, "/root/.pi/agent/worker/workspaces/t-translate/project")
 from lib.translation_engine import TranslationEngine
 engine = TranslationEngine(caller="sinotradecompliance")
 result = engine.translate_json(json_str, tgt=locale)
@@ -316,8 +316,8 @@ result = engine.translate(mdx_content, tgt=locale)      # blog MDX
 
 配额查看：
 ```bash
-source /root/projects/.venv/bin/activate
-cd /root/projects/tool/translate && python scripts/translate.py quota
+source /root/.venv/bin/activate
+cd /root/.pi/agent/worker/workspaces/t-translate/project && python scripts/translate.py quota
 ```
 
 ### 翻译二次检查

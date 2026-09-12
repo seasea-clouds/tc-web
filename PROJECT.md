@@ -2,7 +2,7 @@
 
 > **新会话指引：** 读此文件了解网站项目全貌，然后按需读取子项目的 4 文件。
 >
-> **目录：** `/root/projects/tradecompliance/web/`
+> **目录：** `/root/.pi/agent/worker/workspaces/tc-web/project/`
 > **GitHub：** `seasea-clouds/tc-web`
 
 ## 项目定位
@@ -191,7 +191,6 @@ CF Dashboard → Workers & Pages → tc-web-portal → Settings → Functions �
 | 品牌色 Tailwind tokens | `packages/ui/src/theme.css` |
 | 共享常量（WHATSAPP_URL 等） | `packages/ui/src/constants.ts` |
 | Worker 代理规则 | `apps/site/functions/_middleware.ts` |
-| 跨项目文档 | `/root/projects/tradecompliance/knowledge/` |
 
 ## 部署确认
 

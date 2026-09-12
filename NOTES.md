@@ -32,7 +32,7 @@
 
 ### 翻译引擎
 
-翻译调用 `/root/projects/tool/translate/`，双渠道 Google Translate 免费无需 Key。
+翻译调用 `/root/.pi/agent/worker/workspaces/t-translate/project/`，双渠道 Google Translate 免费无需 Key。
 
 ## 中文访问门禁 + WAF 屏蔽大中华区（2026-08-25）
 

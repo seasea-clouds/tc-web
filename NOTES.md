@@ -120,8 +120,9 @@ Portal 通过主站边缘 Worker 代理到 `/{locale}/c/*` 路径访问。
 |------|------|------|
 | 路径 | `/c/` 子路径，主站 Worker 代理 | SEO 最优，继承主域权重 |
 | 支付 | Creem（Functions 内直连 `test-api.creem.io`，测试密钥） | Merchant of Record；旧 `core/payment` 抽象层已删除（2026-09-13，零引用） |
-| 邮件 | Resend（EmailProvider 抽象） | 已测通，松耦合可换 |
-| PDF | @react-pdf/renderer v4.5.1 | React 组件生成 PDF，风格一致 |
+| 邮件 | Resend + **人工审核队列**（免费流程先入 `email_queue` 待审，后台 `/admin/emails` 通过后由 portal 定时函数投递） | 原 `/api/report/send-email` 无鉴权、收件人由请求体决定 = 开放邮件源；2026-09-13 加固 |
+| PDF | @react-pdf/renderer v4.5.1，**按需现生成**（不再落 R2） | React 组件生成 PDF，风格一致；账户未开通 R2（10042），R2 路径已删（2026-09-13） |
+| 报告访问 | `reports.guest_token`（32 字节 hex）+ 登录邮箱匹配；否则 404 | 报告 ID 由前端生成可枚举，仅凭 ID 放行 = IDOR（2026-09-13 加固） |
 | 人机验证 | CF Turnstile | 免费、无感、CF 原生 |
 | 认证 | httpOnly Cookie Session | 安全，兼容 Pages Functions |
 | 部署 | CF Pages + Worker 路由 | 独立 CI/CD，互不影响 |
@@ -151,6 +152,36 @@ Portal 通过主站边缘 Worker 代理到 `/{locale}/c/*` 路径访问。
 - `<link rel="preload" as="script">` → **不改写**（预加载 URL 必须匹配实际 script 标签）
 - `<script src="/_next/static/chunks/...">` → **不改写**（Turbopack N() 缓存键依赖原始路径）
 - `/_next/static/chunks/*` → catch-all 自动路由到正确的 upstream（JS 资源必须经过此通道）
+
+### 报告访问控制 + 邮件审核队列（2026-09-13 安全加固）
+
+三处线上问题一次修完（commit 见 git log，安全相关勿回退）：
+
+**1. IDOR：`GET /api/report/:id` 原先只凭 ID 放行**
+- 报告 ID 由前端生成（`CCC-${Date.now()}-${随机4位}`）→ 可枚举，任意人可读完整报告。
+- 现在是令牌制：`reports.guest_token`（32 字节 hex，服务端生成，列已存在、索引 `idx_reports_guest_token`）。
+- 放行条件（见 `functions/lib/report-access.ts`）：`?t=<token>` 常量时间比较命中 **或** 登录会话邮箱 == `reports.user_email`；否则一律 **404**（不区分「不存在/无权限」，防存在性探测）。
+- 令牌流转：`save`/`generate-pdf` 返回 `guestToken` → 前端存 `localStorage['stc-report-token-<reportId>']` 并拼到跳转 URL `&t=` → 报告页 `report-client.tsx` 从 URL 或 localStorage 取出带上；邮件链接由 `buildReportUrl()` 带 `t`。
+- 存量 49 条报告已回填令牌（关闭遗留开放行）；**旧邮件里的无令牌链接会失效**，这是有意的收紧。
+- 前端有 localStorage 草稿兜底（`stc-report-input`），令牌缺失时报告页仍能在原浏览器本地重建。
+
+**2. 开放邮件接口：`POST /api/report/send-email` 无鉴权、收件人自定**
+- 免费流程改为**入队待审**（D1 `email_queue`，迁移 `apps/admin/migrations/002-email-review.sql`），后台 **`/admin/emails`** 审核：`pending → approved → sent`，或 `rejected`；失败 `failed` 可 retry。
+- 投递由 `apps/portal/functions/_scheduled.ts`（每 5 分钟）执行；公开端点每次被调时也会 `waitUntil` 顺带 drain 一小批（定时函数失效时的兜底）。
+- 付费/内部邮件（Creem webhook 调用，带 `x-stc-internal: <CREEM_WEBHOOK_SECRET>`）**不进队列**，即时发送——付费交付不能等人工。
+- 防滥用：报告必须已存在；同报告+收件人 24h 去重；单报告 24h 最多 5 条；发送前 `attempts` 占位防 cron/请求并发重发。
+
+**3. 免费流程污染支付状态**
+- 免费自查写 `payment_status='free_campaign'`（原来无条件写 `'completed'`，导致 23 条 completed 里 14 条无支付记录）。
+- 公开路径（`save`）只接受 `free_campaign`/`free_with_subscription`/`pending`，**不能伪造 completed**；`completed` 只由 Creem webhook 写（webhook 的 WHERE 已加入 `free_campaign`）。
+- `generate-pdf` 不再触碰 `payment_status`（付费报告不会被免费流程改写）。
+
+**4. 删除 `POST /api/report/generate`**
+- 无前端调用方，且它是新防护的绕过路径（可直接生成报告行跳过令牌流程）。
+
+**5. R2 空转已清除**
+- 账户未开通 R2（错误码 10042），原 R2 上传/读取代码全为空转；`generate-pdf` 的 R2 分支删除，PDF 由下载/邮件附件实时生成。
+- Creem 仍为**测试模式**（`creem_test_` 密钥 + `test-api.creem.io`）——业务上要求保持，勿改成生产密钥。
 
 ### 已知问题
 

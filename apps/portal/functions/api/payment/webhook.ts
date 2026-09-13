@@ -218,7 +218,11 @@ async function handleCheckoutCompleted(
       // baseUrl already derived above
       const emailRes = await fetch(`${baseUrl}/api/report/send-email`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          // 内部标识：付费邮件立即发送，不走人工审核队列
+          "x-stc-internal": env.CREEM_WEBHOOK_SECRET,
+        },
         body: JSON.stringify({
           reportId,
           email,
@@ -596,7 +600,7 @@ async function recordPaymentFromCheckout(
     // Also update the report's payment_status if applicable
     if (reportId) {
       await env.DB.prepare(
-        "UPDATE reports SET payment_status = 'completed' WHERE id = ? AND (payment_status IS NULL OR payment_status = 'pending')"
+        "UPDATE reports SET payment_status = 'completed' WHERE id = ? AND (payment_status IS NULL OR payment_status IN ('pending','free_campaign'))"
       ).bind(reportId).run();
     }
 

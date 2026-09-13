@@ -30,7 +30,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
   if (reportId) {
     const row: any = await context.env.DB.prepare(`
       SELECT r.id, r.module, r.product_name, r.hs_code, r.origin_country,
-        r.payment_status, r.pdf_path, r.locale, r.created_at,
+        r.payment_status, r.pdf_path, r.locale, r.created_at, r.guest_token,
         r.user_email, u.name as user_name,
         r.input_data, r.result_data
       FROM reports r
@@ -65,7 +65,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
   const offset = (page - 1) * pageSize;
 
   let countQuery = `SELECT COUNT(*) as total FROM reports r WHERE 1=1`;
-  let query = `SELECT r.id, r.module, r.product_name, r.payment_status, r.locale, r.created_at,
+  let query = `SELECT r.id, r.module, r.product_name, r.payment_status, r.locale, r.created_at, r.guest_token,
     r.user_email, u.name as user_name
     FROM reports r
     LEFT JOIN users u ON u.email = r.user_email

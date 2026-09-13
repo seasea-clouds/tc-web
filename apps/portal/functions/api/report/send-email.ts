@@ -1,37 +1,42 @@
 /**
- * Send compliance report email with PDF attachment.
+ * 报告邮件 —— 发送请求入口
  *
  * POST /api/report/send-email
- * Body: { reportId, email, module, inputData, locale? }
+ * Body: { reportId, email, module, inputData?, locale? }
  *
- * Does ONE thing:
- *   1. Look up report from D1
- *   2. Fetch PDF from R2 (or regenerate)
- *   3. Build and send email via Resend with PDF attachment
+ * 两种模式（2026-09-13 加固）：
+ *   1) 内部/付费：请求头 `x-stc-internal` 等于 CREEM_WEBHOOK_SECRET → 立即发送
+ *      （Creem webhook 调用；付费交付不能等人工审核）
+ *   2) 公开（免费自查流程）→ **不直接发送**，写入 email_queue 等管理后台人工审核
+ *      返回 { ok:true, queued:true, reviewStatus:'pending' }
  *
- * Does NOT generate PDF (use /api/report/generate-pdf for that).
+ * 背景：本端点无鉴权、收件人由请求体决定，原先等于把我们域名当开放邮件发送源。
+ * 审核后台：apps/admin → /admin/emails
+ * 实际发送逻辑：functions/lib/email-send.ts（审核通过后由 functions/_scheduled.ts 投递）
  */
 
-import { runModule, buildEmailHtml, bufferToBase64 } from "../../lib/report-common";
+import { enqueueEmail, drainApprovedQueue } from "../../lib/email-queue";
+import { sendReportEmail } from "../../lib/email-send";
 
 interface Env {
   DB: any; // D1Database
-  R2?: any; // R2Bucket
-  RESEND_API_KEY: string;
-  EMAIL_FROM: string;
+  RESEND_API_KEY?: string;
+  EMAIL_FROM?: string;
+  CREEM_WEBHOOK_SECRET?: string;
 }
 
 export async function onRequest(context: {
   request: Request;
   env: Env;
-}): Promise<Response> {
+  waitUntil?: (promise: Promise<any>) => void;
+}) {
   if (context.request.method !== "POST") {
     return new Response("Method not allowed", { status: 405 });
   }
 
   try {
-    const { reportId, email, module: moduleKey, inputData, locale } =
-      await context.request.json();
+    const body: any = await context.request.json().catch(() => null);
+    const { reportId, email, module: moduleKey, inputData, locale } = body || {};
 
     if (!reportId || !email) {
       return Response.json(
@@ -40,121 +45,56 @@ export async function onRequest(context: {
       );
     }
 
-    if (!context.env.RESEND_API_KEY) {
-      return Response.json(
-        { error: "RESEND_API_KEY not configured" },
-        { status: 500 }
-      );
+    const internalSecret = context.env.CREEM_WEBHOOK_SECRET;
+    const isInternal =
+      !!internalSecret && context.request.headers.get("x-stc-internal") === internalSecret;
+
+    // ── 1. 内部/付费：立即发送 ─────────────────────────────────────
+    if (isInternal) {
+      const send = await sendReportEmail(context.env, {
+        reportId,
+        email,
+        module: moduleKey,
+        inputData,
+        locale,
+      });
+      return Response.json({
+        ok: send.ok,
+        reportId,
+        mode: "immediate",
+        emailSent: send.ok,
+        pdfAttached: send.pdfAttached,
+        error: send.error,
+      });
     }
 
-    // ── 1. Get module label ─────────────────────────────────────────
-    const mod = moduleKey?.toLowerCase() ?? "";
-    let moduleLabel = "Compliance Report";
-    let productName = inputData?.productName ?? "your product";
-    let pdfBytes: Uint8Array | null = null;
-
-    // Try fetching from D1 / regenerating
-    if (mod && inputData) {
-      try {
-        const { moduleLabel: ml } = await runModule(mod, inputData);
-        moduleLabel = ml;
-      } catch {}
-    }
-
-    // ── 2. Fetch PDF from R2 (preferred) ────────────────────────────
-    if (context.env.R2) {
-      try {
-        const obj = await context.env.R2.get(`reports/${reportId}.pdf`);
-        if (obj) {
-          const ab = await obj.arrayBuffer();
-          pdfBytes = new Uint8Array(ab);
-        }
-      } catch (r2Err) {
-        console.error("R2 fetch failed, will try to regenerate:", r2Err);
-      }
-    }
-
-    // Fallback: regenerate PDF from D1 data
-    if (!pdfBytes && context.env.DB) {
-      try {
-        const row = await context.env.DB.prepare(
-          "SELECT module, input_data FROM reports WHERE id = ?"
-        ).bind(reportId).first() as any;
-
-        if (row) {
-          const storedInput = row.input_data ? JSON.parse(row.input_data) : inputData;
-          const storedMod = row.module ?? mod;
-
-          const { moduleLabel: ml, result, nextSteps } = await runModule(
-            storedMod, storedInput
-          );
-          moduleLabel = ml;
-          productName = storedInput.productName ?? productName;
-
-          const { generateReportPdf } = await import("../../lib/pdf");
-          pdfBytes = await generateReportPdf({
-            reportId,
-            module: moduleLabel,
-            generatedAt: new Date().toISOString().split("T")[0],
-            productInfo: {
-              name: storedInput.productName ?? "",
-              category: storedInput.category ?? "",
-              hsCode: storedInput.hsCode,
-              originCountry: storedInput.originCountry ?? "",
-            },
-            result,
-            nextSteps,
-          });
-        }
-      } catch (dbErr) {
-        console.error("PDF regeneration from D1 failed:", dbErr);
-      }
-    }
-
-    // ── 3. Build and send email ─────────────────────────────────────
-    const reportUrl = `https://sinotradecompliance.com/${locale ?? "en"}/c/report/?id=${reportId}`;
-
-    const attachments = pdfBytes
-      ? [
-          {
-            filename: `compliance-report-${reportId}.pdf`,
-            content: bufferToBase64(pdfBytes),
-            content_type: "application/pdf" as const,
-          },
-        ]
-      : [];
-
-    const emailRes = await fetch("https://api.resend.com/email", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${context.env.RESEND_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from: context.env.EMAIL_FROM || "send@sinotradecompliance.com",
-        to: email,
-        subject: `Your Compliance Report — ${moduleLabel} — SinoTrade Compliance`,
-        html: buildEmailHtml({
-          productName,
-          reportId,
-          reportUrl,
-          module: moduleLabel,
-        }),
-        attachments,
-      }),
+    // ── 2. 公开：入队待审 ─────────────────────────────────────────
+    const queued = await enqueueEmail(context.env.DB, {
+      reportId,
+      toEmail: email,
+      module: moduleKey,
+      locale,
+      ip: context.request.headers.get("CF-Connecting-IP") || undefined,
+      source: "free_check",
     });
 
-    const emailSent = emailRes.ok;
-    if (!emailSent) {
-      const errText = await emailRes.text();
-      console.error(`Email send failed for ${reportId}: ${errText}`);
+    if (!queued.ok) {
+      const status = queued.error === "Report not found" ? 404 : 400;
+      return Response.json({ ok: false, error: queued.error }, { status });
     }
 
+    // 顺带投递一小批已审核通过的邮件（定时函数失效时的兜底，不阻塞响应）
+    try {
+      context.waitUntil?.(drainApprovedQueue(context.env, 3));
+    } catch {}
+
     return Response.json({
-      ok: emailSent,
+      ok: true,
       reportId,
-      emailSent,
-      pdfAttached: !!pdfBytes,
+      queued: true,
+      reviewStatus: queued.status,
+      duplicate: !!queued.duplicate,
+      emailSent: false,
     });
   } catch (err) {
     console.error("send-email error:", err);

@@ -1,0 +1,13 @@
+name = "tc-web-portal-email-cron"
+main = "src/index.ts"
+compatibility_date = "2026-05-23"
+
+# 每 5 分钟触发：投递 email_queue 中已审核通过（approved）的报告邮件
+[triggers]
+crons = ["*/5 * * * *"]
+
+[vars]
+PORTAL_URL = "https://tc-web-portal.pages.dev"
+
+# 需要的 secret（与 portal Pages 项目同一个值）：
+#   npx wrangler secret put CREEM_WEBHOOK_SECRET <<< "<值>"

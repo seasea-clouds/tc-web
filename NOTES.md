@@ -167,7 +167,8 @@ Portal 通过主站边缘 Worker 代理到 `/{locale}/c/*` 路径访问。
 
 **2. 开放邮件接口：`POST /api/report/send-email` 无鉴权、收件人自定**
 - 免费流程改为**入队待审**（D1 `email_queue`，迁移 `apps/admin/migrations/002-email-review.sql`），后台 **`/admin/emails`** 审核：`pending → approved → sent`，或 `rejected`；失败 `failed` 可 retry。
-- 投递由 `apps/portal/functions/_scheduled.ts`（每 5 分钟）执行；公开端点每次被调时也会 `waitUntil` 顺带 drain 一小批（定时函数失效时的兜底）。
+- 投递由独立 Worker `tc-web-portal-email-cron`（cron 每 5 分钟 → POST portal `/api/report/drain`，带 `x-stc-internal`）执行；公开端点每次被调时也会 `waitUntil` 顺带 drain 一小批（兜底）。
+  ⚠️ 初版写成 `apps/portal/functions/_scheduled.ts`，但 **Pages Functions 不支持 cron**（见踩坑 8 更正），已改为独立 Worker。
 - 付费/内部邮件（Creem webhook 调用，带 `x-stc-internal: <CREEM_WEBHOOK_SECRET>`）**不进队列**，即时发送——付费交付不能等人工。
 - 防滥用：报告必须已存在；同报告+收件人 24h 去重；单报告 24h 最多 5 条；发送前 `attempts` 占位防 cron/请求并发重发。
 
@@ -354,9 +355,11 @@ GitHub 仓库从 `seasea-clouds/trade-web` 切换到 `seasea-clouds/tc-web`（�
 - 清理期间出现瞬时 `000` / exit 35（SSL handshake failure），api.cloudflare.com、pages.dev 全挂，但 github.com/baidu.com 正常；几秒后自动恢复。
 - **结论**：本地（WSL）到 CF 边缘的网络/TLS 路径间歇抖动，不是 CF 侧问题。遇到先重试、不要误判。
 
-### 踩坑 8：Pages cron（_scheduled.ts）必须走 git push 部署
-- `apps/admin/functions/_scheduled.ts` 定义每小时回填 cron（`0 * * * *` UTC），**必须通过 git push 触发 CF Pages 构建**才能注册调度；直接 `wrangler pages deploy` 会绕过构建管线，cron 不生效。
-- 独立 Worker 的 cron（analytics-cron）则在 wrangler.toml `[triggers] crons` 定义，`wrangler deploy` 直接生效。
+### 踩坑 8：Pages cron（_scheduled.ts）—— 更正：Pages Functions 根本不支持 cron（2026-09-13）
+- ⚠️ **更正（2026-09-13）**：Cloudflare Pages Functions **不支持 cron trigger**，`export const config = { schedule }` 不会被注册。**`apps/admin/functions/_scheduled.ts` 从未按计划运行过**，历史上每小时的数据是独立的 `tc-web-admin-analytics-cron` Worker（wrangler.toml `[triggers] crons`）写的。
+- 结论：**任何需要定时执行的任务都必须做成独立 Worker**（参考 `apps/admin/workers/analytics-cron`、`apps/portal/workers/email-cron`），不要写 `functions/_scheduled.ts`。
+- 下面的旧记录保留供对照：`_scheduled.ts` 必须通过 git push 触发 CF Pages 构建才能注册调度（实际上即使走了构建管线也不会注册）。
+- 独立 Worker 的 cron 在 wrangler.toml `[triggers] crons` 定义，`wrangler deploy` 直接生效。
 
 ### 踩坑 9：域名迁移顺序
 1. 先给新项目（tc-web-site）添加自定义域名 → 等 SSL 签发（Google CA，<1 分钟）→ 验证完整链路

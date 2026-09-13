@@ -130,6 +130,8 @@ Portal 通过主站边缘 Worker 代理到 `/{locale}/c/*` 路径访问。
 ### Portal 环境变量
 
 `~/.openclaw/.env` 管理。CF Pages 已配置：
+> ⚠️ 2026-09-13 更新：旧环境已下线，集中密钥库改为仓库根 `.env`（600，gitignored）+ 各 app `.env`，详见 SOP.md「本地密钥库（.env）」。
+> ⚠️ 另注：旧环境里的 `UPSTREAM_PORTAL/UPSTREAM_BLOG` 指向已废弃的 `trade-web-*.pages.dev`，2026-09-13 已纠正为 `tc-web-*.pages.dev`。
 - CREEM_API_KEY / CREEM_WEBHOOK_SECRET
 - CREEM_PRODUCT_ID_SINGLE / CREEM_PRODUCT_ID_SUBSCRIBE
 - RESEND_API_KEY / EMAIL_FROM / JWT_SECRET / NODE_VERSION=22
@@ -267,6 +269,7 @@ node ../../packages/scripts/build-search-index.mjs \
 | tc-web-blog | NODE_VERSION, NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY |
 
 所有环境变量放在 `~/.openclaw/.env`。CF Dashboard 中各项目 Settings → Environment Variables 独立配置。
+> ⚠️ 2026-09-13 更新：旧环境下线，本地密钥库改为 `<repo>/.env`（600）+ 各 app `.env`；生产变量仍在 CF Dashboard。
 
 ## tr 语言 GB 标准误译残留（2026-08-04，d1-tr 子代理发现）
 tr.json 其他 namespace（非 D1 范围）存在 "Büyük Britanya"（英国标准误译，应为 GB 中国标准）：
@@ -314,6 +317,7 @@ GitHub 仓库从 `seasea-clouds/trade-web` 切换到 `seasea-clouds/tc-web`（�
 ### 踩坑 6：secret_text 环境变量值 API 不可读
 - 生产/预览环境的 `secret_text` 变量值全部返回空，**无法通过 API 导出**。
 - 重建时需手动重新输入（本地 `~/.openclaw/.env` 有 key 名但值已掩码，除 UPSTREAM_* 外）。plain_text 值可读。
+> ⚠️ 2026-09-13 更新：已从旧环境完整拉取全部 tc-web 变量到 `<repo>/.env`（来源：旧机 `/root/.openclaw/.env`，值未掩码），并已用 CF API 验证 CLOUDFLARE_API_TOKEN/ZONE_ID 有效、D1 `trade-web-portal-db` 存在。
 
 ### 踩坑 7：WSL 网络对 Cloudflare 边缘 TLS 不稳定
 - 清理期间出现瞬时 `000` / exit 35（SSL handshake failure），api.cloudflare.com、pages.dev 全挂，但 github.com/baidu.com 正常；几秒后自动恢复。

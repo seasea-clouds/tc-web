@@ -12,7 +12,10 @@
  *
  * 背景：本端点无鉴权、收件人由请求体决定，原先等于把我们域名当开放邮件发送源。
  * 审核后台：apps/admin → /admin/emails
- * 实际发送逻辑：functions/lib/email-send.ts（审核通过后由 functions/_scheduled.ts 投递）
+ * 实际发送逻辑：functions/lib/email-send.ts
+ * 投递触发：独立 Worker `tc-web-portal-email-cron`（每 5 分钟）调 /api/report/drain；
+ *          本端点被调用时也会 waitUntil 顺带 drain 一小批作为兜底
+ *          （Pages Functions 不支持 cron，故不能用 _scheduled.ts）
  */
 
 import { enqueueEmail, drainApprovedQueue } from "../../lib/email-queue";
@@ -83,7 +86,7 @@ export async function onRequest(context: {
       return Response.json({ ok: false, error: queued.error }, { status });
     }
 
-    // 顺带投递一小批已审核通过的邮件（定时函数失效时的兜底，不阻塞响应）
+    // 顺带投递一小批已审核通过的邮件（cron Worker 之外的兜底，不阻塞响应）
     try {
       context.waitUntil?.(drainApprovedQueue(context.env, 3));
     } catch {}

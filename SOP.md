@@ -164,7 +164,7 @@ curl -s -o /dev/null -w "%{http_code}\n" -x "http://<CN代理>" https://sinotrad
 ### 邮件审核流程（`/admin/emails`）
 ```
 免费自查 → POST /api/report/send-email → email_queue(pending)
-        → 后台「通过」(approved) → portal 定时函数（每 5 分钟）投递 → sent / failed(可重试)
+        → 后台「通过」(approved) → Worker tc-web-portal-email-cron（每 5 分钟）投递 → sent / failed(可重试)
 付费交付 → Creem webhook 带 x-stc-internal 调同一端点 → 直接发送（不入队）
 ```
 - 迁移：`apps/admin/migrations/002-email-review.sql`（已应用到生产 D1）。
@@ -176,9 +176,20 @@ curl -sS -X POST -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
   -H "Content-Type: application/json" -d '{"sql":"CREATE TABLE IF NOT EXISTS ..."}' \
   "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/d1/database/$D1_DATABASE_ID/query"
 ```
-- 定时投递函数：`apps/portal/functions/_scheduled.ts`（`schedule: "*/5 * * * *"`）。
-  **必须走 git push 触发 CF Pages 构建**才注册 cron（`wrangler pages deploy` 不算，见 NOTES 踩坑 8）。
-- 验证定时函数生效：`npx wrangler pages deployment tail --project-name tc-web-portal` 看 `[email-queue-cron]` 日志；或查 `email_queue` 里 approved 的 `attempts` 是否在涨。
+- 定时投递：独立 Worker **`tc-web-portal-email-cron`**（`apps/portal/workers/email-cron/`，wrangler.toml `crons = ["*/5 * * * *"]`）。
+  ⚠️ **Pages Functions 不支持 cron**（`_scheduled.ts` 的 schedule 不会被注册）——定时任务一律做成 Worker。
+```bash
+cd apps/portal/workers/email-cron
+set -a && . ../../../.env && set +a
+npx wrangler secret put CREEM_WEBHOOK_SECRET <<< "$CREEM_WEBHOOK_SECRET"   # 首次
+npx wrangler deploy
+# 验证
+curl "https://tc-web-portal-email-cron.<subdomain>.workers.dev/health"
+curl -X POST -H "x-stc-internal: $CREEM_WEBHOOK_SECRET" \
+  "https://tc-web-portal-email-cron.<subdomain>.workers.dev/run?limit=5"   # 手动排空
+npx wrangler tail tc-web-portal-email-cron                                  # 看 5 分钟一次 scheduled run
+```
+- portal 侧内部端点：`POST /api/report/drain`（需 `x-stc-internal`，返回 `{processed,sent,failed}`）
 - 入队规则：报告必须已存在；同报告+收件人 24h 去重；单报告 24h 最多 5 条。
 - 待审队列查询：`SELECT status, count(*) FROM email_queue GROUP BY status;`
 

@@ -6,8 +6,10 @@
  *   1. Run D1 schema migration (idempotent)
  *   2. Read all data from D1, build response
  *
- * Backfill (CF → D1) is handled by the admin Pages Function
- * (functions/_scheduled.ts, cron: 0 * * * * UTC).
+ * Backfill (CF → D1) is handled by the standalone Worker
+ * `tc-web-admin-analytics-cron` (apps/admin/workers/analytics-cron, cron: 0 * * * * UTC).
+ * 注意：Pages Functions 不支持 cron trigger，原 functions/_scheduled.ts 从未运行过，
+ * 已于 2026-09-13 删除；定时任务一律用 Worker。
  * If data is temporarily stale during cron deployment window,
  * the API gracefully returns whatever D1 currently has.
  */

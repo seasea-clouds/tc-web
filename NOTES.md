@@ -356,7 +356,7 @@ GitHub 仓库从 `seasea-clouds/trade-web` 切换到 `seasea-clouds/tc-web`（�
 - **结论**：本地（WSL）到 CF 边缘的网络/TLS 路径间歇抖动，不是 CF 侧问题。遇到先重试、不要误判。
 
 ### 踩坑 8：Pages cron（_scheduled.ts）—— 更正：Pages Functions 根本不支持 cron（2026-09-13）
-- ⚠️ **更正（2026-09-13）**：Cloudflare Pages Functions **不支持 cron trigger**，`export const config = { schedule }` 不会被注册。**`apps/admin/functions/_scheduled.ts` 从未按计划运行过**，历史上每小时的数据是独立的 `tc-web-admin-analytics-cron` Worker（wrangler.toml `[triggers] crons`）写的。
+- ⚠️ **更正（2026-09-13）**：Cloudflare Pages Functions **不支持 cron trigger**，`export const config = { schedule }` 不会被注册。**`apps/admin/functions/_scheduled.ts`（admin 每小时分析回填）从未按计划运行过**，历史上每小时的数据是独立的 `tc-web-admin-analytics-cron` Worker（wrangler.toml `[triggers] crons`）写的。该文件已于 2026-09-13 删除；admin Pages 项目本来也没有 `CLOUDFLARE_API_TOKEN`/`CLOUDFLARE_ZONE_ID`，即便触发也是空转。
 - 结论：**任何需要定时执行的任务都必须做成独立 Worker**（参考 `apps/admin/workers/analytics-cron`、`apps/portal/workers/email-cron`），不要写 `functions/_scheduled.ts`。
 - 下面的旧记录保留供对照：`_scheduled.ts` 必须通过 git push 触发 CF Pages 构建才能注册调度（实际上即使走了构建管线也不会注册）。
 - 独立 Worker 的 cron 在 wrangler.toml `[triggers] crons` 定义，`wrangler deploy` 直接生效。

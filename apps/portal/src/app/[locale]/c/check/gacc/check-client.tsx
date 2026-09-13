@@ -43,6 +43,7 @@ export default function GaccCheckClient() {
 
   const pathPrefix = usePathPrefix();
   const handlePayment = async () => {
+    let reportToken = '';
     try {
       const reportId = `GACC-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
 
@@ -56,24 +57,34 @@ export default function GaccCheckClient() {
 
       // 2. Fire-and-forget API calls (don't block redirect)
       if (freeData) {
-        fetch('/api/report/save', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            reportId,
-            module: 'GACC Food Registration',
-            inputData: input,
-            resultData: freeData,
-            nextSteps: [
+        // 先落库并取回报告访问令牌（guest_token）再跳转：
+        // 报告页 API 现在校验归属，无令牌/非本人会返回 404
+        try {
+          const saveRes = await fetch('/api/report/save', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              reportId,
+              module: 'GACC Food Registration',
+              inputData: input,
+              resultData: freeData,
+              nextSteps: [
               t('gaccStep1'),
               t('gaccStep2'),
               t('gaccStep3'),
               t('gaccStep4'),
               t('gaccStep5'),
-            ],
-          }),
-        }).catch(e => console.warn('D1 save failed:', e));
-        
+              ],
+            }),
+          }).then(r => r.json());
+          if (saveRes?.guestToken) {
+            try { localStorage.setItem('stc-report-token-' + reportId, saveRes.guestToken); } catch {}
+            reportToken = saveRes.guestToken;
+          }
+        } catch (e) {
+          console.warn('D1 save failed:', e);
+        }
+
         fetch('/api/report/generate-pdf', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -82,6 +93,7 @@ export default function GaccCheckClient() {
       }
 
       if (email) {
+        // 免费自查邮件需管理员审核后再发送（后台 /admin/emails），这里只入队
         fetch('/api/report/send-email', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -90,7 +102,9 @@ export default function GaccCheckClient() {
       }
 
       // [CREEM-PAYMENT-DISABLED] 限时免费：直接访问报告页面（跳过 Creem checkout）
-      window.location.href = pathPrefix + '/c/report/?id=' + reportId;
+      window.location.href =
+        pathPrefix + '/c/report/?id=' + reportId + (reportToken ? '&t=' + reportToken : '');
+
     } catch (err) {
       // Last resort: even if everything fails, try to get the user to the report page
       try {

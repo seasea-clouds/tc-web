@@ -45,6 +45,7 @@ export default function LabelCheckClient() {
 
   const pathPrefix = usePathPrefix();
   const handlePayment = async () => {
+    let reportToken = '';
     try {
       const reportId = `LABEL-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
 
@@ -56,24 +57,34 @@ export default function LabelCheckClient() {
       } catch {}
 
       if (freeData) {
-        fetch('/api/report/save', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            reportId,
-            module: 'Chinese Label Compliance',
-            inputData: input,
-            resultData: freeData,
-            nextSteps: [
+        // 先落库并取回报告访问令牌（guest_token）再跳转：
+        // 报告页 API 现在校验归属，无令牌/非本人会返回 404
+        try {
+          const saveRes = await fetch('/api/report/save', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              reportId,
+              module: 'Chinese Label Compliance',
+              inputData: input,
+              resultData: freeData,
+              nextSteps: [
               t('labelStep1'),
               t('labelStep2'),
               t('labelStep3'),
               t('labelStep4'),
               t('labelStep5'),
-            ],
-          }),
-        }).catch(e => console.warn('D1 save failed:', e));
-        
+              ],
+            }),
+          }).then(r => r.json());
+          if (saveRes?.guestToken) {
+            try { localStorage.setItem('stc-report-token-' + reportId, saveRes.guestToken); } catch {}
+            reportToken = saveRes.guestToken;
+          }
+        } catch (e) {
+          console.warn('D1 save failed:', e);
+        }
+
         fetch('/api/report/generate-pdf', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -82,6 +93,7 @@ export default function LabelCheckClient() {
       }
 
       if (email) {
+        // 免费自查邮件需管理员审核后再发送（后台 /admin/emails），这里只入队
         fetch('/api/report/send-email', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -90,7 +102,9 @@ export default function LabelCheckClient() {
       }
 
       // [CREEM-PAYMENT-DISABLED] 限时免费：直接访问报告页面（跳过 Creem checkout）
-      window.location.href = pathPrefix + '/c/report/?id=' + reportId;
+      window.location.href =
+        pathPrefix + '/c/report/?id=' + reportId + (reportToken ? '&t=' + reportToken : '');
+
     } catch (err) {
       try {
         localStorage.setItem('stc-report-input', JSON.stringify({

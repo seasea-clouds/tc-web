@@ -79,6 +79,30 @@ CREATE TABLE IF NOT EXISTS payments (
   FOREIGN KEY (report_id) REFERENCES reports(id)
 );
 
+-- email review queue (2026-09)：免费自查报告邮件先入队，管理后台人工审核后才投递
+-- 详见 apps/admin/migrations/002-email-review.sql
+CREATE TABLE IF NOT EXISTS email_queue (
+  id TEXT PRIMARY KEY,
+  report_id TEXT NOT NULL,
+  to_email TEXT NOT NULL,
+  module TEXT,
+  locale TEXT DEFAULT 'en',
+  source TEXT NOT NULL DEFAULT 'free_check',
+  status TEXT NOT NULL DEFAULT 'pending',
+  attempts INTEGER DEFAULT 0,
+  error TEXT,
+  ip TEXT,
+  created_at TEXT DEFAULT (datetime('now')),
+  reviewed_at TEXT,
+  reviewed_by TEXT,
+  sent_at TEXT,
+  FOREIGN KEY (report_id) REFERENCES reports(id)
+);
+
+CREATE INDEX IF NOT EXISTS idx_email_queue_status ON email_queue(status, created_at);
+CREATE INDEX IF NOT EXISTS idx_email_queue_report ON email_queue(report_id);
+CREATE INDEX IF NOT EXISTS idx_reports_guest_token ON reports(guest_token);
+
 -- daily aggregated page stats (powered by CF GraphQL Analytics, 1 row per day)
 CREATE TABLE IF NOT EXISTS daily_page_stats (
   date TEXT PRIMARY KEY,

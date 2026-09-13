@@ -57,6 +57,9 @@ function rebuildResult(stored: any, locale?: string): any {
 const MAX_RETRIES = 15;
 const RETRY_DELAY = 2000;
 
+// 报告访问令牌的 URL 参数名（不要内联字面量：check-t-keys 会把 .get(该参数) 误判为翻译函数调用）
+const REPORT_TOKEN_PARAM = 't';
+
 function ReportContent() {
   const searchParams = useSearchParams();
   const subsiteHref = useSubsiteHref();
@@ -95,7 +98,21 @@ function ReportContent() {
     setError('');
     setLoading(true);
 
-    fetch('/api/report/' + encodeURIComponent(id))
+    // 报告访问令牌：URL 里的 t → localStorage 里同 id 的令牌（无令牌会 404）
+    let accessToken = searchParams?.get(REPORT_TOKEN_PARAM) || '';
+    if (!accessToken) {
+      try {
+        accessToken =
+          new URLSearchParams(window.location.search).get(REPORT_TOKEN_PARAM) ||
+          localStorage.getItem('stc-report-token-' + id) ||
+          '';
+      } catch {}
+    }
+
+    fetch(
+      '/api/report/' + encodeURIComponent(id) +
+        (accessToken ? '?t=' + encodeURIComponent(accessToken) : '')
+    )
       .then(res => {
         if (!res.ok) throw new Error(t('notFoundDesc'));
         return res.json();

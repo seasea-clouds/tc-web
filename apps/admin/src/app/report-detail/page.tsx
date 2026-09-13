@@ -21,6 +21,7 @@ interface ReportDetail {
   created_at: string;
   input_data: Record<string, string> | null;
   result_data: { result?: Record<string, unknown>; nextSteps?: string[] } | null;
+  guest_token?: string | null;
 }
 
 const MODULE_LABELS: Record<string, string> = {
@@ -111,7 +112,7 @@ function ReportDetailInner() {
           </h3>
           <div style={{ display: "flex", gap: "0.5rem" }}>
             <a
-              href={`https://sinotradecompliance.com/${report.locale || "en"}/c/report/?id=${report.id}`}
+              href={`https://sinotradecompliance.com/${report.locale || "en"}/c/report/?id=${report.id}${report.guest_token ? `&t=${report.guest_token}` : ""}`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-outline"

@@ -119,7 +119,7 @@ Portal 通过主站边缘 Worker 代理到 `/{locale}/c/*` 路径访问。
 | 决策 | 方案 | 理由 |
 |------|------|------|
 | 路径 | `/c/` 子路径，主站 Worker 代理 | SEO 最优，继承主域权重 |
-| 支付 | Creem（PaymentProvider 抽象） | Merchant of Record，松耦合可换 |
+| 支付 | Creem（Functions 内直连 `test-api.creem.io`，测试密钥） | Merchant of Record；旧 `core/payment` 抽象层已删除（2026-09-13，零引用） |
 | 邮件 | Resend（EmailProvider 抽象） | 已测通，松耦合可换 |
 | PDF | @react-pdf/renderer v4.5.1 | React 组件生成 PDF，风格一致 |
 | 人机验证 | CF Turnstile | 免费、无感、CF 原生 |

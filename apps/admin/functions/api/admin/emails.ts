@@ -8,9 +8,9 @@
  *
  * 设计要点：
  *   - 免费自查的报告邮件一律先入队（email_queue.status='pending'），人工审核后才发。
- *   - 「通过」只是把状态置为 approved；真正的投递由 portal 的定时函数
- *     （apps/portal/functions/_scheduled.ts，每 5 分钟）或公开端点顺带 drain 完成，
- *     因为 Resend key 与报告生成逻辑都在 portal 项目里。
+ *   - 「通过」只是把状态置为 approved；真正的投递由独立 Worker
+ *     `tc-web-portal-email-cron`（每 5 分钟，调 portal /api/report/drain）完成，
+ *     因为 Resend key 与报告生成逻辑都在 portal 项目里（admin 侧没有发信能力）。
  *   - 「拒绝」直接置 rejected，不再投递。失败（failed）可 retry 重排。
  *   - 所有动作写 admin_logs 审计。
  */

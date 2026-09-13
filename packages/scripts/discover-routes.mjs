@@ -20,6 +20,20 @@ const PRIVATE_SEGMENTS = ['/login','/register','/me/','/report','/api','/auth','
 const PRIVATE_PATHS = ['/c/login','/c/register','/c/me','/c/report','/c/report/preview','/thank-you','/testimonials','/sitemap','/ai-assistance'];
 const ROUTE_GROUP_RE = /\([^)]+\)\//g;
 
+/**
+ * 仅在内容（忽略头部日期戳）真正变化时写文件。
+ * 日期戳语义 = 「最后一次内容变更日期」，避免每次构建都把自动生成文件改脏。
+ */
+function writeIfChanged(file, content) {
+  const stripDate = (s) => s.replace(/ at \d{4}-\d{2}-\d{2}/, ' at <DATE>');
+  if (fs.existsSync(file) && stripDate(fs.readFileSync(file, 'utf-8')) === stripDate(content)) {
+    console.log('  (内容无变化，保留原日期戳，跳过写入)');
+    return false;
+  }
+  fs.writeFileSync(file, content, 'utf-8');
+  return true;
+}
+
 function scanPageTsx(appDir) {
   const pages = [];
   const srcApp = path.join(appDir, 'src', 'app');
@@ -257,7 +271,7 @@ export function emitKnownRoutes() {
   ];
 
   fs.mkdirSync(path.dirname(OUTPUT_FILE), { recursive: true });
-  fs.writeFileSync(OUTPUT_FILE, lines.join('\n'), 'utf-8');
+  writeIfChanged(OUTPUT_FILE, lines.join('\n'));
   console.log(`\n✅ Generated ${OUTPUT_FILE}`);
   console.log(`   ${sorted.length} known routes (${LOCALES.length} locales, includePrivate=true)`);
 }

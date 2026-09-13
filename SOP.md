@@ -7,6 +7,9 @@
 cd /root/.pi/agent/worker/workspaces/tc-web/project
 npm install
 
+# 加载本地密钥（仓库根 .env，600，gitignored；2026-09-13 从旧环境迁移）
+set -a && . ./.env && set +a
+
 # 同时启动所有站
 npm run dev
 
@@ -68,6 +71,9 @@ cd apps/blog   && npx next build   # 博客站
 
 **紧急回滚（如用无 Functions 的部署覆盖了生产环境）：**
 ```bash
+# 0. 加载密钥（CLOUDFLARE_API_TOKEN / CLOUDFLARE_ZONE_ID）
+set -a && . ./.env && set +a
+
 # 1. 找到最近的 GitHub auto-build deployment ID
 npx wrangler pages deployment list --project-name=tc-web-portal | grep -v "Failure"
 
@@ -127,6 +133,19 @@ curl -s -o /dev/null -w "%{http_code} -> %{redirect_url}\n" https://sinotradecom
 # 大中华区代理访问（预期 403；代理可用 geonode proxylist 找，免费代理不稳多试几个）
 curl -s -o /dev/null -w "%{http_code}\n" -x "http://<CN代理>" https://sinotradecompliance.com/en/
 ```
+
+### 本地密钥库（.env）
+
+| 位置 | 内容 | 说明 |
+|------|------|------|
+| `<repo>/.env` | 全部 tc-web 变量（16 项） | 600 权限、gitignored；`set -a && . ./.env && set +a` 后即可 `npx wrangler` / curl CF API |
+| `<repo>/apps/portal/.env` | 支付/邮件/JWT/Turnstile | 本地 `npm run dev:portal` 用 |
+| `<repo>/apps/admin/.env` | Turnstile + 生产变量副本 | 本地 dev 用 |
+| `<repo>/apps/site/.env`、`apps/blog/.env` | `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`（site 另含 `UPSTREAM_*`） | 本地 dev 用 |
+
+- 生产/预览变量在 CF Pages Dashboard 独立配置，`secret_text` 类型**无法通过 API 导出**
+- 旧环境的集中密钥库 `~/.openclaw/.env` 已下线；值已于 2026-09-13 迁移到上表，另存一份备份在工作区 `.secrets/old-openclaw-env-20260913.bak`(600)
+- **`UPSTREAM_PORTAL` = `https://tc-web-portal.pages.dev`、`UPSTREAM_BLOG` = `https://tc-web-blog.pages.dev`**（旧环境里是已废弃的 `trade-web-*.pages.dev`，已纠正）
 
 ### Portal D1 配置
 1. CF Dashboard → Workers & Pages → tc-web-portal → Settings → Functions
@@ -304,21 +323,22 @@ curl -sL -o /dev/null -w "%{http_code}\n" https://tc-web-site.pages.dev/en/blog/
 
 ## 官网翻译流程
 
-翻译引擎调用 `/root/.pi/agent/worker/workspaces/t-translate/project/`：
+**只能调用 t-translate CLI**（包装脚本，shebang 指向 `/root/.venv/bin/python`）。禁止自写脚本调用其内部模块（`t_translate.*`）、禁止修改工具代码/配置/pyproject.toml。
 
-```python
-import sys; sys.path.insert(0, "/root/.pi/agent/worker/workspaces/t-translate/project")
-from lib.translation_engine import TranslationEngine
-engine = TranslationEngine(caller="sinotradecompliance")
-result = engine.translate_json(json_str, tgt=locale)
-result = engine.translate(mdx_content, tgt=locale)      # blog MDX
-```
-
-配额查看：
 ```bash
-source /root/.venv/bin/activate
-cd /root/.pi/agent/worker/workspaces/t-translate/project && python scripts/translate.py quota
+TT=/root/.pi/agent/worker/workspaces/t-translate/project/t-translate
+
+# 1) 提交（-t 目标语言列表，-s 源语言，-n 任务名，-R 备注，-F 后续说明）
+$TT submit -i ./input.json -n stc-<任务> -s en -t "de,fr,es,..." -R "备注" -F "follow-up"
+# 2) 查进度（可加 --bar）
+$TT status -n stc-<任务>          # 或 $TT list
+# 3) 取回结果
+$TT results -n stc-<任务> -o ./out.json
 ```
+
+- 子命令：`submit / status / results / list / pause / resume / cancel / retry / channel`（**没有 `quota`**）
+- `daemon` 由 `/etc/cron.d/pi-jobs` 每分钟拉起，勿手动叠起
+- 提交前必须先验 `en.json` 源文本（占位符/大写 key 名翻出去就废了）；提交后 48 语言全覆盖，禁止英文 fallback
 
 ### 翻译二次检查
 
@@ -491,6 +511,7 @@ git push origin main
 ### 手动部署（备用）
 
 ```bash
+set -a && . ../../.env && set +a     # 先在仓库根加载密钥
 cd apps/admin
 npm run build     # = next build && bash scripts/postbuild.sh
 npx wrangler pages deploy out --project-name tc-web-admin --branch main
@@ -518,7 +539,7 @@ apps/admin/workers/analytics-cron/
 **首次部署：**
 ```bash
 cd apps/admin/workers/analytics-cron
-source ~/.openclaw/.env
+set -a && . ../../../.env && set +a      # 仓库根 .env（含 CLOUDFLARE_API_TOKEN/ZONE_ID）
 echo "$CLOUDFLARE_API_TOKEN" | npx wrangler secret put CLOUDFLARE_API_TOKEN
 echo "$CLOUDFLARE_ZONE_ID" | npx wrangler secret put CLOUDFLARE_ZONE_ID
 npx wrangler deploy

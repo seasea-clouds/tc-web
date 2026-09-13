@@ -23,6 +23,20 @@ const BLOG_ZH_DIR = path.join(ROOT, 'apps/blog/content/zh');
 const OUTPUT_FILE = path.join(ROOT, 'apps/admin/src/lib/segment-mapping.ts');
 
 /**
+ * 仅在内容（忽略头部日期戳）真正变化时写文件。
+ * 日期戳语义 = 「最后一次内容变更日期」，避免每次构建都把自动生成文件改脏。
+ */
+function writeIfChanged(file, content) {
+  const stripDate = (s) => s.replace(/ at \d{4}-\d{2}-\d{2}/, ' at <DATE>');
+  if (fs.existsSync(file) && stripDate(fs.readFileSync(file, 'utf-8')) === stripDate(content)) {
+    console.log('  (内容无变化，保留原日期戳，跳过写入)');
+    return false;
+  }
+  fs.writeFileSync(file, content, 'utf-8');
+  return true;
+}
+
+/**
  * Parse frontmatter from an MDX file.
  * Returns the frontmatter fields as a map, or null if file doesn't exist / can't be parsed.
  */
@@ -117,7 +131,7 @@ const output = lines.join('\n') + '\n';
 // ── Write output ──
 
 fs.mkdirSync(path.dirname(OUTPUT_FILE), { recursive: true });
-fs.writeFileSync(OUTPUT_FILE, output, 'utf-8');
+writeIfChanged(OUTPUT_FILE, output);
 
 console.log(`\n✅ Generated ${OUTPUT_FILE}`);
 console.log(`   ${entries.length} blog article mappings (slug → Chinese title)`);

@@ -21,7 +21,6 @@ interface Env {
   EMAIL_FROM: string;
   CREEM_WEBHOOK_SECRET: string;
   DB: any;  // D1Database
-  R2?: any; // R2Bucket
 }
 
 // ─── HMAC-SHA256 签名验证 ──────────────────────────────────────────────

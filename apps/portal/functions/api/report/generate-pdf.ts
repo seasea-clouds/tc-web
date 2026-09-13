@@ -7,17 +7,20 @@
  * Does ONE thing:
  *   1. Run rules check + generate report data
  *   2. Generate PDF (pdf-lib)
- *   3. Upload PDF to R2
- *   4. Update D1 record with result_data, pdf_path, payment_status
+ *   3. 更新 D1（免费自查写 payment_status='free_campaign'，不覆盖已有付费状态）
+ *   4. 返回 guest_token（报告访问令牌）
+ *
+ * 注意：账户未开通 R2（错误码 10042），R2 上传/读取代码已移除（2026-09-13）；
+ * PDF 由前端下载接口/邮件附件实时生成，不落对象存储。
  *
  * Does NOT send email (use /api/report/send-email for that).
  */
 
 import { runModule } from "../../lib/report-common";
+import { ensureGuestToken } from "../../lib/report-access";
 
 interface Env {
   DB: any; // D1Database
-  R2?: any; // R2Bucket
 }
 
 export async function onRequest(context: {
@@ -62,19 +65,8 @@ export async function onRequest(context: {
       console.error("PDF generation failed:", pdfErr);
     }
 
-    // ── 3. Upload PDF to R2 ──────────────────────────────────────────
-    let pdfPath = "";
-    if (pdfBytes && context.env.R2) {
-      try {
-        const key = `reports/${reportId}.pdf`;
-        await context.env.R2.put(key, pdfBytes, {
-          httpMetadata: { contentType: "application/pdf" },
-        });
-        pdfPath = key;
-      } catch (r2Err) {
-        console.error("R2 upload failed:", r2Err);
-      }
-    }
+    // ── 3. 写 D1（已移除 R2 上传）─────────────────────────────────
+    const pdfPath = "";
 
     // ── 4. Update D1 ────────────────────────────────────────────────
     if (context.env.DB) {
@@ -84,11 +76,11 @@ export async function onRequest(context: {
         ).bind(reportId).first();
 
         if (existing) {
+          // 注意：不触碰 payment_status —— 付费报告不能被免费自查流程改写
           await context.env.DB.prepare(
             `UPDATE reports SET
               result_data = ?,
-              pdf_path = ?,
-              payment_status = 'completed'
+              pdf_path = ?
             WHERE id = ?`
           )
             .bind(
@@ -102,7 +94,7 @@ export async function onRequest(context: {
             `INSERT INTO reports
               (id, module, product_name, hs_code, origin_country,
                input_data, result_data, pdf_path, payment_status, locale)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'completed', ?)`
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'free_campaign', ?)`
           )
             .bind(
               reportId,
@@ -128,6 +120,7 @@ export async function onRequest(context: {
       moduleLabel,
       pdfGenerated: !!pdfBytes,
       pdfPath,
+      guestToken: context.env.DB ? await ensureGuestToken(context.env.DB, reportId) : "",
     });
   } catch (err) {
     console.error("generate-pdf error:", err);

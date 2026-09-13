@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import {
-  LayoutDashboard, Users, Repeat, FileText, ClipboardList, CreditCard, LogOut, Menu, X, ChevronLeft, ChevronRight, Lock
+  LayoutDashboard, Users, Repeat, FileText, ClipboardList, CreditCard, Mail, LogOut, Menu, X, ChevronLeft, ChevronRight, Lock
 } from "lucide-react";
 import { getCurrentAdmin, logout, AdminUser } from "@/lib/auth";
 import { buildAdminT } from "@/lib/i18n";
@@ -32,6 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     { href: "/users", label: t("nav.users"), icon: Users },
     { href: "/subscriptions", label: t("nav.subscriptions"), icon: Repeat },
     { href: "/reports", label: t("nav.reports"), icon: FileText },
+    { href: "/emails", label: t("nav.emails"), icon: Mail },
     { href: "/logs", label: t("nav.logs"), icon: ClipboardList },
     { href: "/payments", label: t("nav.payments"), icon: CreditCard },
   ];

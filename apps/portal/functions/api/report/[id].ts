@@ -1,13 +1,27 @@
 /**
  * Get single report by ID
- * GET /api/report/:id
+ * GET /api/report/:id?t=<guest_token>
  *
- * Note: Report data is stored in localStorage by the frontend
- * before redirecting to Creem. This API is a backup/fallback
- * and will work once D1 binding is configured.
+ * 访问控制（2026-09-13 加固）：报告 ID 可被枚举，不能只凭 ID 放行。
+ *   1) `?t=` 令牌与库里的 guest_token 一致 → 放行
+ *   2) 或登录会话邮箱 == 报告 user_email → 放行
+ *   3) 其余一律 404（不区分「不存在」与「无权限」，避免存在性探测）
+ *
+ * 前端：报告页会把 URL 里的 t 或 localStorage 里同 id 的令牌一并带上（见 report-client.tsx）。
+ * 邮件里的报告链接也带 t（见 functions/lib/email-send.ts buildReportUrl）。
  */
 
-export async function onRequest(context: { request: Request; env: any; params: { id: string } }) {
+import { getSessionId, verifySession } from '../../lib/session';
+import { canAccessReport } from '../../lib/report-access';
+
+interface Env {
+  DB: any; // D1Database
+}
+
+// 访问令牌的 URL 参数名（避免内联字面量触发 check-t-keys 的 t('...') 误判）
+const REPORT_TOKEN_PARAM = 't';
+
+export async function onRequest(context: { request: Request; env: Env; params: { id: string } }) {
   if (context.request.method !== 'GET') {
     return new Response('Method not allowed', { status: 405 });
   }
@@ -18,11 +32,27 @@ export async function onRequest(context: { request: Request; env: any; params: {
     return Response.json({ error: 'Missing report ID' }, { status: 400 });
   }
 
+  const url = new URL(context.request.url);
+  const providedToken = url.searchParams.get(REPORT_TOKEN_PARAM);
+
+  // 登录会话（可选）
+  let sessionEmail: string | null = null;
+  try {
+    const sessionId = getSessionId(context.request);
+    if (sessionId && context.env?.DB) {
+      const user = await verifySession(context.env.DB, sessionId);
+      if (user) sessionEmail = user.email;
+    }
+  } catch {}
+
   // If D1 is available, try to fetch from DB
   if (context.env?.DB) {
     try {
-      const row = await context.env.DB.prepare('SELECT * FROM reports WHERE id = ?').bind(id).first();
+      const row: any = await context.env.DB.prepare('SELECT * FROM reports WHERE id = ?').bind(id).first();
       if (row) {
+        if (!canAccessReport({ id: row.id, guest_token: row.guest_token, user_email: row.user_email }, providedToken, sessionEmail)) {
+          return Response.json({ error: 'Report not found' }, { status: 404 });
+        }
         // Parse stored result data (the full compliance report)
         let resultData = { requiresRegistration: false, isHighRisk: false, riskCategory: '', summary: '', requiredDocuments: [] };
         let nextStepsData: string[] = [];

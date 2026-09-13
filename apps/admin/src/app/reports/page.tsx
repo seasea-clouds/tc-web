@@ -15,6 +15,7 @@ interface Report {
   user_name: string;
   locale: string;
   created_at: string;
+  guest_token?: string | null;
 }
 
 const MODULE_LABELS: Record<string, string> = {
@@ -164,7 +165,7 @@ export default function ReportsPage() {
                           详情
                         </a>
                         <a
-                          href={`https://sinotradecompliance.com/${report.locale || "en"}/c/report/?id=${report.id}`}
+                          href={`https://sinotradecompliance.com/${report.locale || "en"}/c/report/?id=${report.id}${report.guest_token ? `&t=${report.guest_token}` : ""}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="btn btn-outline"

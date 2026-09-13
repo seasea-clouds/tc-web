@@ -154,6 +154,44 @@ curl -s -o /dev/null -w "%{http_code}\n" -x "http://<CN代理>" https://sinotrad
    - Database: 选择或创建 D1 数据库
 3. Environments variables → 添加需要的变量
 
+## 报告访问控制 + 邮件审核队列（2026-09-13）
+
+### 报告访问令牌（`guest_token`）
+- 报告 ID 可枚举，因此 `/api/report/:id` 需带令牌：`?t=<guest_token>`；或登录会话邮箱 == `reports.user_email`。否则 **404**。
+- 令牌由 `save` / `generate-pdf` 返回，前端存 `localStorage['stc-report-token-<reportId>']`，邮件链接由 `buildReportUrl()` 拼好。
+- 排障：某用户“报告打不开”时，先查 `SELECT guest_token FROM reports WHERE id = '...'`，再让他在同浏览器打开（localStorage 草稿兜底）或从后台复制带令牌链接。
+
+### 邮件审核流程（`/admin/emails`）
+```
+免费自查 → POST /api/report/send-email → email_queue(pending)
+        → 后台「通过」(approved) → portal 定时函数（每 5 分钟）投递 → sent / failed(可重试)
+付费交付 → Creem webhook 带 x-stc-internal 调同一端点 → 直接发送（不入队）
+```
+- 迁移：`apps/admin/migrations/002-email-review.sql`（已应用到生产 D1）。
+- 手工应用/重跑（幂等，全部 IF NOT EXISTS）：
+```bash
+set -a && . ./.env && set +a
+# 把 SQL 拆成单条语句逐条 POST（D1 REST /query 每次一条）
+curl -sS -X POST -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+  -H "Content-Type: application/json" -d '{"sql":"CREATE TABLE IF NOT EXISTS ..."}' \
+  "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/d1/database/$D1_DATABASE_ID/query"
+```
+- 定时投递函数：`apps/portal/functions/_scheduled.ts`（`schedule: "*/5 * * * *"`）。
+  **必须走 git push 触发 CF Pages 构建**才注册 cron（`wrangler pages deploy` 不算，见 NOTES 踩坑 8）。
+- 验证定时函数生效：`npx wrangler pages deployment tail --project-name tc-web-portal` 看 `[email-queue-cron]` 日志；或查 `email_queue` 里 approved 的 `attempts` 是否在涨。
+- 入队规则：报告必须已存在；同报告+收件人 24h 去重；单报告 24h 最多 5 条。
+- 待审队列查询：`SELECT status, count(*) FROM email_queue GROUP BY status;`
+
+### 支付状态取值约定
+| 取值 | 含义 | 写入方 |
+|------|------|--------|
+| `free_campaign` | 限时免费自查 | 前端公开路径（`save`/`generate-pdf`） |
+| `pending` | 待支付/待确认 | 公开路径（白名单） |
+| `completed` | 已支付 | **仅** Creem webhook |
+| `refunded` | 已退款 | 仅 webhook/后台 |
+
+公开路径不能写 `completed`；`generate-pdf` 不改 `payment_status`。Creem 仍为测试模式（业务要求）。
+
 ### Portal 环境变量
 | 变量 | 说明 |
 |------|------|

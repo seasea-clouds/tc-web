@@ -1,0 +1,50 @@
+{
+  "$schema": "https://agentskills.io/schema/v0.2.0",
+  "name": "SinoTrade Compliance",
+  "description": "China regulatory compliance consulting - GACC registration, Chinese label compliance, CCC certification, NMPA cosmetics filing, cross-border e-commerce, and trademark registration services.",
+  "homepage": "https://sinotradecompliance.com",
+  "skills": [
+    {
+      "name": "GACC Registration",
+      "type": "service",
+      "description": "General Administration of Customs of China Decree 248/249 registration for overseas food manufacturers. Covers all 18 regulated product categories including dairy, meat, seafood, and health supplements.",
+      "url": "https://sinotradecompliance.com/en/services/gacc/",
+      "tags": ["gacc", "decree-248", "food-safety", "china-import", "registration"]
+    },
+    {
+      "name": "Chinese Label Compliance",
+      "type": "service",
+      "description": "GB 7718-2025 compliant Chinese label review and design for imported prepackaged foods. Includes ingredient lists, nutrition facts, allergen declarations, and production-ready files.",
+      "url": "https://sinotradecompliance.com/en/services/label/",
+      "tags": ["gb-7718", "labeling", "food-safety", "china-import", "compliance"]
+    },
+    {
+      "name": "CCC Certification",
+      "type": "service",
+      "description": "China Compulsory Certification for electronics, automotive parts, toys, and other regulated products. Covers testing, factory audit, and certificate issuance.",
+      "url": "https://sinotradecompliance.com/en/services/ccc/",
+      "tags": ["ccc", "certification", "china-compulsory", "product-safety"]
+    },
+    {
+      "name": "NMPA Cosmetics Filing",
+      "type": "service",
+      "description": "National Medical Products Administration cosmetics notification and registration for imported cosmetics. Covers ingredient safety assessment, efficacy evaluation, and filing submission.",
+      "url": "https://sinotradecompliance.com/en/services/cosmetics/",
+      "tags": ["nmpa", "cosmetics", "beauty", "china-import", "filing"]
+    },
+    {
+      "name": "Cross-Border E-Commerce",
+      "type": "service",
+      "description": "CBEC consulting for selling into China via platforms like Tmall Global and JD Worldwide. Covers PIPL compliance, customs clearance, and positive list navigation.",
+      "url": "https://sinotradecompliance.com/en/services/ecommerce/",
+      "tags": ["cbec", "cross-border", "ecommerce", "pipl", "china-market"]
+    },
+    {
+      "name": "Trademark Registration",
+      "type": "service",
+      "description": "China trademark registration and brand protection. Covers trademark search, application filing, opposition monitoring, and Chinese brand name development.",
+      "url": "https://sinotradecompliance.com/en/services/brand/",
+      "tags": ["trademark", "ip", "brand", "china", "registration"]
+    }
+  ]
+}

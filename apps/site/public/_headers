@@ -1,0 +1,33 @@
+/*
+  X-Content-Type-Options: nosniff
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Link: </llms.txt>; rel="alternate"; type="text/markdown"; title="LLM Sitemap"
+  Link: </sitemap.xml>; rel="sitemap"; type="application/xml"; title="XML Sitemap"
+  Link: </.well-known/agent-skills/index.json>; rel="service-desc"; type="application/json"; title="Agent Skills"
+  Link: </.well-known/agent-skills/index.json>; rel="skills"; type="application/json"
+
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/flags.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+/icon.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/icon.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/favicon.ico
+  Cache-Control: public, max-age=31536000, immutable
+
+/sitemap*.xml
+  Cache-Control: no-cache, s-maxage=0
+
+/.well-known/agent-skills/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=86400
+
+/.well-known/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=3600

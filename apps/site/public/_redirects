@@ -1,0 +1,2 @@
+# Root path and unprefixed URLs are served directly with English content (HTTP 200)
+# by functions/_middleware.ts (bare-path English rewrite). No redirects needed.

@@ -374,6 +374,16 @@ GitHub 仓库从 `seasea-clouds/trade-web` 切换到 `seasea-clouds/tc-web`（�
 - **CI 联动**：`check-seo-patterns.mjs` 会把 page 路径下任意 .tsx 当页面检查 —— 拆出的 `pricing-client.tsx` 需加入 `CLIENT_COMPONENT_EXEMPT`，同时把 `/c/pricing/` 从 `PORTAL_LAYOUT_INHERIT` 移除（已有独立 metadata 后必须真检查）。
 - **验证**：部署专属 URL 404 属正常（NOTES 踩坑 8），等 stages `deploy=success` 后生产域名验证；CF 边缘节点收敛有延迟，同一 URL 前几次可能旧版 200/新版 308 混出，多请求复验（3×8 语言全 308、10 语言 pricing canonical 全自指）确认生效。
 
+### 踩坑 13：博客文章发布日 vs 正文事实冲突（2026-09-30 审计与修复）
+- **审计口径**：比对英文与各语言正文的「年份集合」找冲突。**必须先归一化非 ASCII 数字**（ne 天城文 २०२१、fa/ur 波斯数字、bn 孟加拉数字、th 泰文数字），否则会误判成"该语言漏译"。th 用佛历（2567=2024）也属正常。
+- **修正 5 篇 `date`**（48 语言 frontmatter，共 240 文件）：gacc-registration-guide→2025-06-18、ccc-certification-explained→2025-02-10、china-label-compliance→2025-04-22、cosmetics-nmpa-filing→2025-01-20、health-supplements-china-import-route→2026-02-18。原则：`date` ≥ 正文引用的最新事实且不晚于当天。
+- **GB 标准事实**：GB 7718-2025 / GB 28050-2025 = **2025-03-16 发布、2027-03-16 实施**（两年过渡）。原来正文写"must use/mandates"（现在时）属错误表述 → 在 china-label-compliance、gacc-registration-guide 首次提及处的小节末尾插入 48 语言本地化 blockquote 注记（blockquote 前后各留**一个**空行）。
+- **内容缺口**：gacc-registration-guide 有 15 语言漏译「2025 修订」条款（句子截断在 konform）；health-supplements-china-import-route 的 az/hr/sl 第 28 节把决策树整段复制去、丢了 CBEC 正面清单段落。
+- **表格坏损**：`fr`/`be` 各 3 个文件（health-supplements-china-import-route、medical-device-import-license、pet-food-brand-gacc-registration）的表格分隔符被写成 `/`（夹带 `|`），线上渲染为乱文本。排查手法：扫「以 `/` 开头且含 `|`」或「行尾 `|` 但行首非 `|`」的行；修完核对每张表**列数一致**、`grep -o '<tr' out/<locale>/blog/<slug>/index.html | wc -l` 与英文原表行数一致。
+- **线上 URL 形态（常记错）**：`https://sinotradecompliance.com/{locale}/blog/{slug}/`。`/blog/{locale}/...` → 404；`/blog/...` → 302 到 `/en/blog/...`（无 locale 前缀路径以英文内容 200 返回）。
+- **zh 是"仅管理员可见"的有意设计**：`apps/site/functions/_middleware.ts` 对 `/zh*` 校验 `admin_sid`（D1 `admin_sessions`），非管理员 302 到 `/en`；`resolveLocale()` 把 zh 映射成 en。所以**线上 `/zh/blog/...` 一定 302**，核验 zh 要用 `tc-web-blog.pages.dev/zh/blog/...`。
+- 交接：`fr`/`be` 之外暂无其它语言出现同类表格坏损（全库扫过），但新增本地化内容时建议沿用同样的扫表脚本。
+
 ### 遗留事项
 - D1 数据库 `trade-web-portal-db`（uuid e84f0762-...）**刻意保留原名**，所有项目/Wranger 配置的 `database_name` 也是这个名字，未重建（数据零丢失）。
 - `.env.example` 和 `wrangler.toml.example` 已同步更新为 tc- 前缀。

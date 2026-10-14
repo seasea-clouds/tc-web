@@ -74,6 +74,7 @@ const BLOG_TITLES = {
   'china-trademark-registration': 'Trademark Registration in China',
   'cosmetics-nmpa-filing': 'NMPA Cosmetics Filing Guide',
   'cross-border-ecommerce-china': 'Cross-Border E-Commerce in China',
+  'green-coffee-beans-china': 'Exporting Green Coffee Beans to China',
 };
 
 function filterSummaryKeys(msgs) {

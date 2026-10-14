@@ -384,6 +384,15 @@ GitHub 仓库从 `seasea-clouds/trade-web` 切换到 `seasea-clouds/tc-web`（�
 - **zh 是"仅管理员可见"的有意设计**：`apps/site/functions/_middleware.ts` 对 `/zh*` 校验 `admin_sid`（D1 `admin_sessions`），非管理员 302 到 `/en`；`resolveLocale()` 把 zh 映射成 en。所以**线上 `/zh/blog/...` 一定 302**，核验 zh 要用 `tc-web-blog.pages.dev/zh/blog/...`。
 - 交接：`fr`/`be` 之外暂无其它语言出现同类表格坏损（全库扫过），但新增本地化内容时建议沿用同样的扫表脚本。
 
+### 踩坑 14：新增博客文章（48 语言）与 check-md-article 两条硬规则（2026-10-14）
+- **R07**：一篇新文章必须 **48 个语言版本一次性齐全**（缺一个即 error），不能"先上英文再补"。
+- **R08**：`title` 里**不能出现任何连字符 `-`**——包括年份后缀（hu `2026-ban`、az `2026-cı` 都会挂）→ 标题里年份直接写 `2026`。
+- **R11**：CTA 校验只看**文件最后 10 行里的第一个链接**。正文/FAQ 内链若落进这个窗口，会被当成 CTA 校验（报"非 Contact us"）→ 本次把 FAQ 的"包装与标签"问答从第 5 条挪到第 3 条，链接即退出窗口。
+- **W02**：同一文件内 **en-dash(`–`) 与 em-dash(`—`) 不得混用**（按文字系统分组判定，Cyrillic 组最敏感）→ 新增句子的破折号必须与文件既有风格一致。
+- 手写 48 语言内容后必跑自建扫描：脚本混入、拉丁文泄漏（`scan_latin_leaks.py`，`GACC-`/`CIFER-` 是白名单内误报）、U+FFFD、以及**拉丁字母混入西里尔/希腊/希伯来/格鲁吉亚/亚美尼亚**。
+- 篇幅核对别用 `\S+` 数词：**th/zh/ja/ko 不用空格分词**，只有字符数有意义（th 词数只有英文 19%，字符数 0.95）。
+- 接线清单：`build-llms.mjs` 的 `BLOG_TITLES` 加一行 + 在相关旧文（本次 `gacc-decree-280` 48 语言）回链新文。
+
 ### 遗留事项
 - D1 数据库 `trade-web-portal-db`（uuid e84f0762-...）**刻意保留原名**，所有项目/Wranger 配置的 `database_name` 也是这个名字，未重建（数据零丢失）。
 - `.env.example` 和 `wrangler.toml.example` 已同步更新为 tc- 前缀。

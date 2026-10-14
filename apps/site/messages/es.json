@@ -1396,6 +1396,18 @@
     "faqQ10": "¿Necesito una empresa en China para notificar cosméticos?",
     "faqA10": "Sí. Todo cosmético importado a China debe contar con una persona responsable nacional: una entidad registrada en China cuyo objeto social incluya los cosméticos. Puede ser su filial china, un distribuidor o un proveedor de servicios. La persona responsable responde legalmente por la seguridad del producto y gestiona todas las comunicaciones con la NMPA."
   },
+  "BlogFaqGreenCoffeeBeansChina": {
+    "faqQ1": "¿El café verde necesita registro alimentario GACC?",
+    "faqA1": "No. Los granos sin tostar están fuera del sistema de registro alimentario y se gestionan como productos agrícolas conforme al Anuncio 219.",
+    "faqQ2": "¿El establecimiento sigue necesitando la aprobación de la autoridad del país exportador?",
+    "faqA2": "Para los orígenes cubiertos por un protocolo de café, sí. El establecimiento productor o transformador debe ser auditado por la autoridad competente del país exportador y aprobado por el GACC, y la lista aprobada se publica antes de que empiece el comercio.",
+    "faqQ3": "¿Y el embalaje y el etiquetado?",
+    "faqA3": "El café verde a granel se marca a nivel de bulto como exige el protocolo. Los envases de venta al por menor de café tostado que se venden en China necesitan además etiquetas en chino conformes con las normas nacionales, que tratamos en nuestra guía de cumplimiento del etiquetado chino.",
+    "faqQ4": "¿Cuánto tarda un registro?",
+    "faqA4": "En nuestros expedientes, la aprobación por la vía alimentaria llegó en unas semanas una vez que el expediente estaba correcto. Los retrasos que vemos casi nunca son retrasos del sistema: son problemas de clasificación, de entidad y de traducción detectados después de la presentación.",
+    "faqQ5": "¿Mi registro de café tostado cubre el café verde?",
+    "faqA5": "No. Granos tostados y granos verdes están en sistemas distintos, y ambos se declaran y verifican de manera diferente."
+  },
   "Footer": {
     "getQuote": "Obtener presupuesto"
   }

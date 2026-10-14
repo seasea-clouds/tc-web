@@ -1396,6 +1396,18 @@
     "faqQ10": "Có cần công ty tại Trung Quốc để thông báo mỹ phẩm với NMPA không?",
     "faqA10": "Có. Mọi mỹ phẩm nhập khẩu vào Trung Quốc phải có người chịu trách nhiệm nội địa, một pháp nhân đăng ký tại Trung Quốc có ngành nghề kinh doanh liên quan mỹ phẩm. Đó có thể là công ty con, nhà phân phối hoặc đơn vị dịch vụ thứ ba của bạn. Người chịu trách nhiệm chịu trách nhiệm pháp lý về an toàn sản phẩm và xử lý mọi thủ tục với NMPA."
   },
+  "BlogFaqGreenCoffeeBeansChina": {
+    "faqQ1": "Cà phê nhân xanh có cần đăng ký thực phẩm GACC không?",
+    "faqA1": "Không. Cà phê chưa rang nằm ngoài hệ thống đăng ký thực phẩm và được quản lý như nông sản theo Thông báo 219.",
+    "faqQ2": "Cơ sở có còn cần phê duyệt của cơ quan nước xuất khẩu không?",
+    "faqA2": "Với nguồn gốc thuộc một nghị định thư cà phê, có. Cơ sở sản xuất hoặc chế biến phải được cơ quan có thẩm quyền nước xuất khẩu thẩm tra và được GACC phê duyệt, và danh sách phê duyệt được công bố trước khi thương mại bắt đầu.",
+    "faqQ3": "Còn bao bì và nhãn mác thì sao?",
+    "faqA3": "Cà phê nhân xanh đóng rời được ghi nhãn ở cấp kiện như nghị định thư yêu cầu. Bao bì bán lẻ cà phê rang bán tại Trung Quốc còn cần nhãn tiếng Trung đáp ứng tiêu chuẩn quốc gia, chúng tôi trình bày trong hướng dẫn tuân thủ nhãn tiếng Trung.",
+    "faqQ4": "Đăng ký mất bao lâu?",
+    "faqA4": "Trong các hồ sơ chúng tôi thực hiện, phê duyệt theo tuyến thực phẩm thường có sau vài tuần khi hồ sơ đã chính xác. Độ trễ chúng tôi thấy hầu như không phải độ trễ của hệ thống, mà là vấn đề phân loại, chủ thể và dịch thuật phát hiện sau khi nộp.",
+    "faqQ5": "Đăng ký cà phê rang của tôi có bao gồm cà phê nhân xanh không?",
+    "faqA5": "Không. Cà phê rang và cà phê nhân xanh ở hai hệ thống khác nhau, và cả hai được khai báo, kiểm tra theo cách khác nhau."
+  },
   "Footer": {
     "getQuote": "Nhận báo giá"
   }

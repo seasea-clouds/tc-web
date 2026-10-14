@@ -1396,6 +1396,18 @@
     "faqQ10": "Heb ik een Chinees bedrijf nodig om cosmetica bij de NMPA aan te melden?",
     "faqA10": "Ja. Elk cosmeticaproduct dat in China wordt geïmporteerd, heeft een binnenlandse verantwoordelijke in China nodig: een in China geregistreerde rechtspersoon met een op cosmetica gerichte bedrijfsactiviteit. Dat kan uw eigen Chinese dochteronderneming zijn, een distributeur of een externe dienstverlener. De verantwoordelijke is wettelijk aansprakelijk voor de productveiligheid en voert alle communicatie met de NMPA."
   },
+  "BlogFaqGreenCoffeeBeansChina": {
+    "faqQ1": "Heeft groene koffie een GACC-levensmiddelenregistratie nodig?",
+    "faqA1": "Nee. Ongebrande bonen vallen buiten het levensmiddelenregistratiesysteem en worden onder bekendmaking 219 als landbouwproduct behandeld.",
+    "faqQ2": "Heeft de vestiging nog steeds goedkeuring van de autoriteit van het exportland nodig?",
+    "faqA2": "Voor herkomsten die onder een koffieprotocol vallen, ja. De producerende of verwerkende vestiging moet door de bevoegde autoriteit van het exportland worden geauditeerd en door de GACC worden goedgekeurd, en de goedgekeurde lijst wordt vóór de start van de handel gepubliceerd.",
+    "faqQ3": "Hoe zit het met verpakking en etiketten?",
+    "faqA3": "Losse groene bonen worden op verpakkingsniveau gemarkeerd zoals het protocol vereist. Detailverpakkingen van gebrande koffie die in China worden verkocht, hebben daarnaast Chinese etiketten nodig die aan de nationale normen voldoen; zie onze gids voor Chinese etikettering.",
+    "faqQ4": "Hoe lang duurt een registratie?",
+    "faqA4": "In onze dossiers kwam de goedkeuring via de levensmiddelenroute binnen enkele weken door zodra het dossier klopte. De vertragingen die wij zien zijn bijna nooit systeemvertragingen: het zijn classificatie-, entiteits- en vertaalproblemen die na indiening aan het licht komen.",
+    "faqQ5": "Dekt mijn registratie voor gebrande koffie ook groene bonen?",
+    "faqA5": "Nee. Gebrande en ongebrande bonen zitten in verschillende systemen, en beide worden anders aangegeven en gecontroleerd."
+  },
   "Footer": {
     "getQuote": "Vraag een offerte aan"
   }

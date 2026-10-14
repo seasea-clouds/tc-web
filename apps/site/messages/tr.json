@@ -1396,6 +1396,18 @@
     "faqQ10": "Kozmetikleri NMPA'ya dosyalamak için Çinli bir şirkete ihtiyacım var mı?",
     "faqA10": "Evet. Çin'e ithal edilen her kozmetik ürünün, Çin'de kozmetik iş kapsamıyla kayıtlı bir tüzel kişilik olan bir Çinli yerel sorumlu kişisi olmalıdır. Bu, kendi Çin şubeniz, bir distribütör veya üçüncü taraf hizmet sağlayıcısı olabilir. Sorumlu kişi ürün güvenliğinden yasal olarak sorumludur ve tüm NMPA iletişimlerini yönetir."
   },
+  "BlogFaqGreenCoffeeBeansChina": {
+    "faqQ1": "Yeşil kahve GACC gıda kaydı gerektirir mi?",
+    "faqA1": "Hayır. Kavrulmamış çekirdekler gıda kayıt sistemi dışındadır ve duyuru 219 uyarınca tarım ürünü olarak yönetilir.",
+    "faqQ2": "Tesisin ihracatçı ülke otoritesinden onayı hâlâ gerekli mi?",
+    "faqA2": "Kahve protokolü kapsamındaki menşeler için evet. Üreten veya işleyen tesis, ihracatçı ülkenin yetkili otoritesi tarafından denetlenmeli ve GACC tarafından onaylanmalıdır; onaylı liste ticaret başlamadan önce yayımlanır.",
+    "faqQ3": "Ambalaj ve etiketler ne olacak?",
+    "faqA3": "Dökme yeşil çekirdek, protokolün gerektirdiği gibi paket düzeyinde işaretlenir. Çin'de satılan perakende kavrulmuş kahve ambalajları ayrıca ulusal standartlara uygun Çince etiket gerektirir; bunu Çince etiket uyum rehberimizde ele alıyoruz.",
+    "faqQ4": "Kayıt ne kadar sürer?",
+    "faqA4": "Başvurularımızda dosya doğru olduğunda gıda yolundaki onay birkaç hafta içinde geldi. Gördüğümüz gecikmeler neredeyse hiç sistem gecikmesi değil: başvurudan sonra ortaya çıkan sınıflandırma, kuruluş ve çeviri sorunlarıdır.",
+    "faqQ5": "Kavrulmuş kahve kaydım yeşil çekirdeği kapsar mı?",
+    "faqA5": "Hayır. Kavrulmuş ve kavrulmamış çekirdekler ayrı sistemlerdedir ve ikisi farklı şekilde beyan edilir ve doğrulanır."
+  },
   "Footer": {
     "getQuote": "Teklif Alın"
   }

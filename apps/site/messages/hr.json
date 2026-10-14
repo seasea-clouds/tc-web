@@ -1396,6 +1396,18 @@
     "faqQ10": "Trebam li kinesku tvrtku za prijavu kozmetike kod NMPA-e?",
     "faqA10": "Da. Svaki kozmetički proizvod koji se uvozi u Kinu mora imati kinesku domaću odgovornu osobu, odnosno pravni subjekt registriran u Kini s djelatnošću vezanom uz kozmetiku. To može biti vaša kineska podružnica, distributer ili pružatelj usluga treće strane. Odgovorna osoba zakonski odgovara za sigurnost proizvoda i vodi svu komunikaciju s NMPA-om."
   },
+  "BlogFaqGreenCoffeeBeansChina": {
+    "faqQ1": "Treba li zelena kava registraciju hrane GACC?",
+    "faqA1": "Ne. Nepržena zrna izvan su sustava registracije hrane i vode se kao poljoprivredni proizvod prema obavijesti 219.",
+    "faqQ2": "Treba li pogon još odobrenje tijela države izvoznice?",
+    "faqA2": "Za podrijetla obuhvaćena protokolom o kavi, da. Proizvodni ili prerađivački pogon mora pregledati nadležno tijelo države izvoznice i odobriti GACC, a odobreni popis objavljuje se prije početka trgovine.",
+    "faqQ3": "A pakiranje i oznake?",
+    "faqA3": "Zelena kava u rasutom stanju označava se na razini pakiranja kako protokol zahtijeva. Maloprodajna pakiranja pržene kave koja se prodaje u Kini dodatno zahtijevaju kineske oznake u skladu s nacionalnim normama, što obrađujemo u vodiču kroz usklađenost kineskog označavanja.",
+    "faqQ4": "Koliko traje registracija?",
+    "faqA4": "U našim predmetima odobrenje preko puta hrane stizalo je u nekoliko tjedana kada je spis bio točan. Kašnjenja koja vidimo gotovo nikada nisu kašnjenja sustava: to su problemi klasifikacije, subjekta i prijevoda otkriveni nakon podnošenja.",
+    "faqQ5": "Obuhvaća li moja registracija pržene kave zelena zrna?",
+    "faqA5": "Ne. Pržena i nepržena zrna nalaze se u različitim sustavima i oba se deklariraju i provjeravaju na različit način."
+  },
   "Footer": {
     "getQuote": "Zatražite ponudu"
   }

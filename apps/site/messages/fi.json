@@ -1396,6 +1396,18 @@
     "faqQ10": "Tarvitsenko kiinalaisen yrityksen kosmetiikan ilmoittamiseen?",
     "faqA10": "Kyllä. Jokaisella Kiinaan tuotavalla kosmetiikkatuotteella on oltava kiinalainen kotimainen vastuuhenkilö: Kiinaan rekisteröity oikeushenkilö, jonka toimialaan kuuluu kosmetiikka. Se voi olla oma kiinalainen tytäryhtiö, jakelija tai kolmannen osapuolen palveluntarjoaja. Vastuuhenkilö on laillisesti vastuussa tuoteturvallisuudesta ja hoitaa kaiken NMPA-viestinnän."
   },
+  "BlogFaqGreenCoffeeBeansChina": {
+    "faqQ1": "Tarvitseeko vihreä kahvi GACC-elintarvikerekisteröinnin?",
+    "faqA1": "Ei. Paahtamattomat pavut ovat elintarvikerekisteröintijärjestelmän ulkopuolella ja niitä hallinnoidaan maataloustuotteena tiedonannon 219 mukaisesti.",
+    "faqQ2": "Tarvitseeko laitos edelleen viejämaan viranomaisen hyväksynnän?",
+    "faqA2": "Kahvipöytäkirjan kattamien alkuperien osalta kyllä. Tuottava tai jalostava laitos on viejämaan toimivaltaisen viranomaisen tarkastettava ja GACC:n hyväksyttävä, ja hyväksytty luettelo julkaistaan ennen kaupan alkamista.",
+    "faqQ3": "Entä pakkaus ja merkinnät?",
+    "faqA3": "Irtotavarana toimitettava vihreä kahvi merkitään pakkaustasolla pöytäkirjan edellyttämällä tavalla. Kiinassa myytävien paahdetun kahvin vähittäispakkausten on lisäksi täytettävä kansalliset standardit kinesinkielisten merkintöjen osalta, mitä käsittelemme kiinalaisten merkintöjen vaatimustenmukaisuusoppaassamme.",
+    "faqQ4": "Kauanko rekisteröinti kestää?",
+    "faqA4": "Hakemuksissamme elintarvikereitin hyväksyntä tuli muutamassa viikossa, kun asiakirjat olivat kunnossa. Näkemämme viivästykset eivät lähes koskaan ole järjestelmän viivästyksiä: ne ovat luokittelu-, yksikkö- ja käännösongelmia, jotka havaitaan lähettämisen jälkeen.",
+    "faqQ5": "Kattaako paahtetun kahvin rekisteröintini vihreät pavut?",
+    "faqA5": "Ei. Paahdetut ja paahtamattomat pavut kuuluvat eri järjestelmiin, ja molemmat ilmoitetaan ja tarkistetaan eri tavoin."
+  },
   "Footer": {
     "getQuote": "Pyydä tarjous"
   }

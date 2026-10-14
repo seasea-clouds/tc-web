@@ -1396,6 +1396,18 @@
     "faqQ10": "Necessito una empresa xinesa per presentar cosmètics a NMPA?",
     "faqA10": "Sí. Tots els productes cosmètics importats a la Xina han de tenir una persona responsable nacional xinesa: una entitat legal registrada a la Xina amb un àmbit comercial relacionat amb els cosmètics. Pot ser la vostra pròpia filial xinesa, un distribuïdor o un proveïdor de serveis extern. La persona responsable és legalment responsable de la seguretat del producte i gestiona totes les comunicacions de l'NMPA."
   },
+  "BlogFaqGreenCoffeeBeansChina": {
+    "faqQ1": "El cafè verd necessita registre alimentari del GACC?",
+    "faqA1": "No. Els grans sense torrar són fora del sistema de registre alimentari i es gestionen com a producte agrícola segons l'avís 219.",
+    "faqQ2": "La instal·lació encara necessita l'aprovació de l'autoritat del país exportador?",
+    "faqA2": "Per als orígens coberts per un protocol de cafè, sí. La instal·lació productora o transformadora ha de ser auditada per l'autoritat competent del país exportador i aprovada pel GACC, i la llista aprovada es publica abans que comenci el comerç.",
+    "faqQ3": "I l'embalatge i les etiquetes?",
+    "faqA3": "El cafè verd a granel es marca a nivell de paquet com exigeix el protocol. Els envasos al detall de cafè torrat venuts a la Xina necessiten a més etiquetes en xinès conformes amb les normes nacionals, que tractem a la nostra guia de compliment de l'etiquetatge xinès.",
+    "faqQ4": "Quant dura un registre?",
+    "faqA4": "En els nostres expedients, l'aprovació per la via alimentària va arribar en unes setmanes un cop l'expedient era correcte. Els retards que veiem gairebé mai són retards del sistema: són problemes de classificació, d'entitat i de traducció detectats després de la presentació.",
+    "faqQ5": "El meu registre de cafè torrat cobreix els grans verds?",
+    "faqA5": "No. Els grans torrats i els verds són en sistemes diferents, i tots dos es declaren i es verifiquen de manera diferent."
+  },
   "Footer": {
     "getQuote": "Obtén un pressupost"
   }

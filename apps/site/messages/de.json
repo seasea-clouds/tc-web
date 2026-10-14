@@ -1396,6 +1396,18 @@
     "faqQ10": "Brauche ich ein chinesisches Unternehmen, um Kosmetika bei der NMPA anzumelden?",
     "faqA10": "Ja. Jedes nach China importierte Kosmetikum benötigt eine verantwortliche Person in China – eine in China registrierte juristische Person mit kosmetikbezogenem Geschäftszweck. Das kann eine eigene chinesische Tochtergesellschaft, ein Distributor oder ein externer Dienstleister sein. Die verantwortliche Person haftet rechtlich für die Produktsicherheit und führt die gesamte Kommunikation mit der NMPA."
   },
+  "BlogFaqGreenCoffeeBeansChina": {
+    "faqQ1": "Braucht Rohkaffee eine GACC-Lebensmittelregistrierung?",
+    "faqA1": "Nein. Ungebrannte Bohnen stehen außerhalb des Lebensmittelregistrierungssystems und werden nach Bekanntmachung 219 als Agrarprodukte geführt.",
+    "faqQ2": "Braucht der Betrieb weiterhin die Zustimmung der Behörde des Ausfuhrlandes?",
+    "faqA2": "Bei Ursprüngen, die ein Kaffeeprotokoll erfasst, ja. Der produzierende oder verarbeitende Betrieb muss von der zuständigen Behörde des Ausfuhrlandes auditiert und von der GACC zugelassen werden; die zugelassene Liste wird vor Handelsbeginn veröffentlicht.",
+    "faqQ3": "Was gilt für Verpackung und Etiketten?",
+    "faqA3": "Massengeschäft mit Rohkaffee wird auf Packungsebene gekennzeichnet, wie es das Protokoll verlangt. Einzelhandelspackungen mit geröstetem Kaffee, die in China verkauft werden, brauchen zusätzlich chinesische Etiketten nach den nationalen Standards; dazu finden Sie mehr in unserem Leitfaden zur chinesischen Kennzeichnung.",
+    "faqQ4": "Wie lange dauert eine Registrierung?",
+    "faqA4": "In unseren Anmeldungen kam die Genehmigung auf dem Lebensmittelweg innerhalb weniger Wochen durch, sobald die Unterlagen korrekt waren. Die Verzögerungen, die wir sehen, sind fast nie Systemverzögerungen, sondern Klassifizierungs-, Einheiten- und Übersetzungsprobleme, die nach der Einreichung auffallen.",
+    "faqQ5": "Erfasst meine Registrierung für gerösteten Kaffee auch Rohkaffee?",
+    "faqA5": "Nein. Geröstete und ungebrannte Bohnen liegen in verschiedenen Systemen, und beide werden unterschiedlich erklärt und geprüft."
+  },
   "Footer": {
     "getQuote": "Angebot einholen"
   }

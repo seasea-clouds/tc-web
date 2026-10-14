@@ -1396,6 +1396,18 @@
     "faqQ10": "Am nevoie de o companie chineză pentru notificarea cosmeticelor la NMPA?",
     "faqA10": "Da. Fiecare cosmetic importat în China trebuie să aibă o persoană responsabilă națională chineză: o entitate juridică înregistrată în China, cu obiect de activitate legat de cosmetice. Poate fi propria filială din China, un distribuitor sau un furnizor terț de servicii. Persoana responsabilă răspunde legal pentru siguranța produsului și gestionează toate comunicările cu NMPA."
   },
+  "BlogFaqGreenCoffeeBeansChina": {
+    "faqQ1": "Cafeaua verde are nevoie de înregistrare alimentară GACC?",
+    "faqA1": "Nu. Boabele neprăjite sunt în afara sistemului de înregistrare alimentară și sunt gestionate ca produs agricol conform anunțului 219.",
+    "faqQ2": "Unitatea mai are nevoie de aprobarea autorității din țara exportatoare?",
+    "faqA2": "Pentru originile acoperite de un protocol privind cafeaua, da. Unitatea producătoare sau de procesare trebuie audiată de autoritatea competentă din țara exportatoare și aprobată de GACC, iar lista aprobată este publicată înainte de începerea comerțului.",
+    "faqQ3": "Ce se întâmplă cu ambalarea și etichetele?",
+    "faqA3": "Cafeaua verde în vrac este marcată la nivel de pachet, cum cere protocolul. Ambalajele de vânzare cu amănuntul pentru cafeaua prăjită vândută în China au nevoie suplimentar de etichete în chineză conforme standardelor naționale, pe care le acoperim în ghidul de conformitate privind etichetarea în chineză.",
+    "faqQ4": "Cât durează o înregistrare?",
+    "faqA4": "În dosarele noastre, aprobarea pe calea alimentară a venit în câteva săptămâni, odată ce dosarul a fost corect. Întârzierile pe care le vedem aproape niciodată nu sunt întârzieri ale sistemului: sunt probleme de clasificare, de entitate și de traducere descoperite după depunere.",
+    "faqQ5": "Înregistrarea mea pentru cafea prăjită acoperă boabele verzi?",
+    "faqA5": "Nu. Boabele prăjite și cele verzi se află în sisteme diferite, iar ambele se declară și se verifică diferit."
+  },
   "Footer": {
     "getQuote": "Obțineți o ofertă"
   }

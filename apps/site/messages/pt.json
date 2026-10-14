@@ -1396,6 +1396,18 @@
     "faqQ10": "Preciso de uma empresa chinesa para registrar cosméticos na NMPA?",
     "faqA10": "Sim. Todo cosmético importado para a China deve ter uma pessoa responsável nacional — uma entidade registrada na China com objeto social relacionado a cosméticos. Pode ser a sua própria subsidiária chinesa, um distribuidor ou um prestador de serviços terceirizado. A pessoa responsável responde legalmente pela segurança do produto e conduz toda a comunicação com a NMPA."
   },
+  "BlogFaqGreenCoffeeBeansChina": {
+    "faqQ1": "O café verde precisa de registo alimentar GACC?",
+    "faqA1": "Não. Os grãos não torrados estão fora do sistema de registo alimentar e são geridos como produtos agrícolas ao abrigo do Aviso 219.",
+    "faqQ2": "O estabelecimento continua a precisar da aprovação da autoridade do país exportador?",
+    "faqA2": "Para as origens abrangidas por um protocolo de café, sim. O estabelecimento de produção ou transformação tem de ser auditado pela autoridade competente do país exportador e aprovado pelo GACC, e a lista aprovada é publicada antes do início do comércio.",
+    "faqQ3": "E quanto a embalagem e rotulagem?",
+    "faqA3": "O café verde a granel é marcado ao nível do volume como exige o protocolo. As embalagens de retalho de café torrado vendidas na China precisam ainda de rótulos em chinês conformes com as normas nacionais, que tratamos no nosso guia de conformidade de rotulagem chinesa.",
+    "faqQ4": "Quanto tempo demora um registo?",
+    "faqA4": "Nos nossos processos, a aprovação pela via alimentar saiu em poucas semanas depois de o dossiê estar correto. Os atrasos que vemos quase nunca são atrasos do sistema: são problemas de classificação, de entidade e de tradução detetados depois da submissão.",
+    "faqQ5": "O meu registo de café torrado cobre o café verde?",
+    "faqA5": "Não. Grãos torrados e grãos verdes estão em sistemas distintos, e ambos são declarados e verificados de forma diferente."
+  },
   "Footer": {
     "getQuote": "Obter orçamento"
   }

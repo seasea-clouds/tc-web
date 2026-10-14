@@ -1396,6 +1396,18 @@
     "faqQ10": "NMPA-da kosmetika bildirişi üçün Çin şirkətinə ehtiyacım varmı?",
     "faqA10": "Bəli. Çinə idxal edilən hər kosmetika məhsulunun Çin məsul şəxsi — Çində kosmetika ilə bağlı fəaliyyət sahəsi ilə qeydiyyatdan keçmiş hüquqi şəxs olmalıdır. Bu, öz Çin filialınız, distribyutorunuz və ya üçüncü tərəf xidmət təminatçınız ola bilər. Məsul şəxs məhsul təhlükəsizliyinə görə qanuni cavabdehdir və bütün NMPA kommunikasiyalarını idarə edir."
   },
+  "BlogFaqGreenCoffeeBeansChina": {
+    "faqQ1": "Yaşıl qəhvə GACC ərzaq qeydiyyatı tələb edirmi?",
+    "faqA1": "Xeyr. Qovrulmamış dənələr ərzaq qeydiyyatı sistemindən kənardır və 219 nömrəli bildirişə uyğun olaraq kənd təsərrüfatı məhsulu kimi idarə olunur.",
+    "faqQ2": "Müəssisə hələ də ixrac edən ölkənin orqanının təsdiqinə ehtiyac duyurmu?",
+    "faqA2": "Qəhvə protokolu ilə əhatə olunan mənşələr üçün bəli. İstehsal və ya emal edən müəssisə ixrac edən ölkənin səlahiyyətli orqanı tərəfindən yoxlanılmalı və GACC tərəfindən təsdiqlənməlidir; təsdiqlənmiş siyahı ticarət başlamazdan əvvəl dərc olunur.",
+    "faqQ3": "Qablaşdırma və etiketlər necədir?",
+    "faqA3": "Toplu yaşıl qəhvə protokolun tələb etdiyi kimi qablaşdırma səviyyəsində işarələnir. Çində satılan qovrulmuş qəhvənin pərakəndə qablaşdırması əlavə olaraq milli standartlara uyğun Çin dilində etiket tələb edir; bunu Çin etiket uyğunluğu bələdçimizdə izah edirik.",
+    "faqQ4": "Qeydiyyat nə qədər çəkir?",
+    "faqA4": "Bizim müraciətlərimizdə sənədlər düzgün olduqda ərzaq yolu üzrə təsdiq bir neçə həftə içində gəldi. Gördüyümüz gecikmələr demək olar ki, heç vaxt sistem gecikməsi deyil: bunlar təqdimatdan sonra aşkarlanan təsnifat, subyekt və tərcümə problemləridir.",
+    "faqQ5": "Qovrulmuş qəhvə qeydiyyatım yaşıl dənələri əhatə edirmi?",
+    "faqA5": "Xeyr. Qovrulmuş və qovrulmamış dənələr fərqli sistemlərdədir və ikisi də fərqli şəkildə bəyan edilir və yoxlanılır."
+  },
   "Footer": {
     "getQuote": "Qiymət təklifi al"
   }

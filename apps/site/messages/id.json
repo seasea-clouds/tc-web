@@ -1396,6 +1396,18 @@
     "faqQ10": "Apakah saya perlu perusahaan Tiongkok untuk mengarsipkan kosmetik ke NMPA?",
     "faqA10": "Ya. Setiap produk kosmetik yang diimpor ke Tiongkok harus memiliki penanggung jawab domestik Tiongkok — badan hukum yang terdaftar di Tiongkok dengan lingkup usaha terkait kosmetik. Ini dapat berupa anak perusahaan Anda di Tiongkok, distributor, atau penyedia layanan pihak ketiga. Penanggung jawab bertanggung jawab secara hukum atas keamanan produk dan menangani semua komunikasi NMPA."
   },
+  "BlogFaqGreenCoffeeBeansChina": {
+    "faqQ1": "Apakah green bean memerlukan registrasi pangan GACC?",
+    "faqA1": "Tidak. Biji yang belum disangrai berada di luar sistem registrasi pangan dan dikelola sebagai produk pertanian berdasarkan Pengumuman 219.",
+    "faqQ2": "Apakah fasilitas masih memerlukan persetujuan otoritas negara pengekspor?",
+    "faqA2": "Untuk asal yang tercakup protokol kopi, ya. Fasilitas produksi atau pengolahan harus diaudit otoritas berwenang negara pengekspor dan disetujui GACC, dan daftar yang disetujui diumumkan sebelum perdagangan dimulai.",
+    "faqQ3": "Bagaimana dengan kemasan dan label?",
+    "faqA3": "Green bean curah ditandai pada tingkat kemasan sesuai ketentuan protokol. Kemasan ritel kopi sangrai yang dijual di Tiongkok juga memerlukan label berbahasa Tionghoa yang memenuhi standar nasional, yang kami bahas dalam panduan kepatuhan label Tionghoa.",
+    "faqQ4": "Berapa lama registrasi memakan waktu?",
+    "faqA4": "Dalam berkas yang kami tangani, persetujuan melalui jalur pangan diperoleh dalam beberapa minggu setelah berkasnya benar. Keterlambatan yang kami lihat hampir tidak pernah keterlambatan sistem, melainkan masalah klasifikasi, entitas, dan penerjemahan yang baru ditemukan setelah pengajuan.",
+    "faqQ5": "Apakah registrasi kopi sangrai saya mencakup green bean?",
+    "faqA5": "Tidak. Biji sangrai dan biji mentah berada di sistem berbeda, dan keduanya diberitahukan serta diverifikasi dengan cara yang berbeda."
+  },
   "Footer": {
     "getQuote": "Dapatkan Penawaran"
   }

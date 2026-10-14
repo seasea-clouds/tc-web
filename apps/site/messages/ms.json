@@ -1396,6 +1396,18 @@
     "faqQ10": "Adakah saya memerlukan syarikat China untuk memfailkan kosmetik dengan NMPA?",
     "faqA10": "Ya. Setiap produk kosmetik yang diimport ke China mesti mempunyai orang bertanggungjawab domestik China — entiti sah yang berdaftar di China dengan skop perniagaan berkaitan kosmetik. Ini boleh menjadi anak syarikat Cina anda sendiri, pengedar atau pembekal perkhidmatan pihak ketiga. Orang yang bertanggungjawab bertanggungjawab secara sah untuk keselamatan produk dan mengendalikan semua komunikasi NMPA."
   },
+  "BlogFaqGreenCoffeeBeansChina": {
+    "faqQ1": "Adakah biji hijau memerlukan pendaftaran makanan GACC?",
+    "faqA1": "Tidak. Biji yang belum dipanggang berada di luar sistem pendaftaran makanan dan diuruskan sebagai produk pertanian di bawah Pengumuman 219.",
+    "faqQ2": "Adakah premis masih memerlukan kelulusan pihak berkuasa negara pengeksport?",
+    "faqA2": "Bagi asal yang diliputi protokol kopi, ya. Premis pengeluaran atau pemprosesan mesti diaudit oleh pihak berkuasa berwibawa negara pengeksport dan diluluskan oleh GACC, dan senarai yang diluluskan diumumkan sebelum perdagangan bermula.",
+    "faqQ3": "Bagaimana dengan pembungkusan dan label?",
+    "faqA3": "Biji hijau pukal ditanda pada peringkat bungkusan seperti yang dikehendaki protokol. Bungkusan runcit kopi panggang yang dijual di China juga memerlukan label bahasa Cina yang memenuhi piawaian nasional, yang kami bincangkan dalam panduan pematuhan label bahasa Cina.",
+    "faqQ4": "Berapa lama pendaftaran mengambil masa?",
+    "faqA4": "Dalam permohonan kami, kelulusan melalui laluan makanan diperoleh dalam beberapa minggu setelah dokumen betul. Kelewatan yang kami lihat hampir tidak pernah kelewatan sistem, sebaliknya masalah klasifikasi, entiti dan terjemahan yang ditemui selepas penyerahan.",
+    "faqQ5": "Adakah pendaftaran kopi panggang saya meliputi biji hijau?",
+    "faqA5": "Tidak. Biji panggang dan biji hijau berada dalam sistem berbeza, dan kedua-duanya diperakukan serta disahkan dengan cara yang berbeza."
+  },
   "Footer": {
     "getQuote": "Dapatkan Sebut Harga"
   }

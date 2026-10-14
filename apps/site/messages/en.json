@@ -1302,6 +1302,18 @@
     "faqQ10": "Do I need a Chinese company to file cosmetics with NMPA?",
     "faqA10": "Yes. Every cosmetics product imported into China must have a Chinese domestic responsible person: a legal entity registered in China with a cosmetics-related business scope. This can be your own Chinese subsidiary, a distributor, or a third-party service provider. The responsible person is legally accountable for product safety and handles all NMPA communications."
   },
+  "BlogFaqGreenCoffeeBeansChina": {
+    "faqQ1": "Does green coffee need GACC food registration?",
+    "faqA1": "No. Unroasted beans are outside the food registration system and are managed as agricultural products under Announcement 219.",
+    "faqQ2": "Does the facility still need approval from the exporting country's authority?",
+    "faqA2": "For origins covered by a coffee protocol, yes. The producing or processing facility must be audited by the exporting country's competent authority and approved by GACC, and the approved list is published before trade starts.",
+    "faqQ3": "What about packaging and labels?",
+    "faqA3": "Bulk green beans are marked at package level as the protocol requires. Retail packs of roasted coffee sold in China additionally need Chinese labels that meet the national standards, which we cover in our guide to Chinese label compliance.",
+    "faqQ4": "How long does registration take?",
+    "faqA4": "In our filings, approval under the food route has come through in a few weeks once the dossier is correct. The delays we see are almost never system delays; they are classification, entity and translation problems found after submission.",
+    "faqQ5": "Does my roasted coffee registration cover green beans?",
+    "faqA5": "No. Roasted beans and green beans sit in different systems, and the two are declared and verified differently."
+  },
   "Sitemap": {
     "pageTitle": "Site Map",
     "pageSubtitle": "A complete overview of every page on our website.",

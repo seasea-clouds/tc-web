@@ -1396,6 +1396,18 @@
     "faqQ10": "Je, ninahitaji kampuni ya Kichina ili kuwasilisha vipodozi na NMPA?",
     "faqA10": "Ndiyo. Kila bidhaa ya vipodozi inayoingizwa nchini Uchina lazima iwe na Mchina anayewajibika nchini - huluki ya kisheria iliyosajiliwa nchini Uchina iliyo na wigo wa biashara unaohusiana na vipodozi. Hii inaweza kuwa kampuni yako tanzu ya Uchina, msambazaji, au mtoa huduma wa watu wengine. Mtu anayewajibika anawajibika kisheria kwa usalama wa bidhaa na anashughulikia mawasiliano yote ya NMPA."
   },
+  "BlogFaqGreenCoffeeBeansChina": {
+    "faqQ1": "Kahawa mbichi inahitaji usajili wa chakula wa GACC?",
+    "faqA1": "Hapana. Mbegu zisizokaangwa ziko nje ya mfumo wa usajili wa chakula na zinasimamiwa kama mazao ya kilimo chini ya Tangazo 219.",
+    "faqQ2": "Kiwanda bado kinahitaji idhini ya mamlaka ya nchi inayouza?",
+    "faqA2": "Kwa nchi za asili zilizo chini ya itifaki ya kahawa, ndiyo. Kiwanda kinachozalisha au kuchakata kinapaswa kukaguliwa na mamlaka husika ya nchi inayouza na kuidhinishwa na GACC, na orodha iliyoidhinishwa hutangazwa kabla biashara kuanza.",
+    "faqQ3": "Vipi kuhusu ufungashaji na lebo?",
+    "faqA3": "Kahawa mbichi kwa wingi huwekwa alama katika ngazi ya kifungashio kama itifaki inavyotaka. Vifungashio vya rejareja vya kahawa iliyokaangwa vinavyozwa China vinahitaji zaidi lebo za Kichina zinazokidhi viwango vya kitaifa, ambayo tunaeleza katika mwongozo wa kufuata lebo za Kichina.",
+    "faqQ4": "Usajili huchukua muda gani?",
+    "faqA4": "Katika maombi yetu, idhini kupitia njia ya chakula ilikuja ndani ya wiki chache mara hati zilipokuwa sahihi. Ucheleweshaji tunaouona mara nyingi si wa mfumo, bali matatizo ya uainishaji, chombo na tafsiri yanayopatikana baada ya kuwasilisha.",
+    "faqQ5": "Usajili wangu wa kahawa iliyokaangwa unafunika kahawa mbichi?",
+    "faqA5": "Hapana. Mbegu zilizokaangwa na mbichi ziko katika mifumo tofauti, na zote mbili hutambulishwa na kuhakikiwa kwa njia tofauti."
+  },
   "Footer": {
     "getQuote": "Pata Nukuu"
   }

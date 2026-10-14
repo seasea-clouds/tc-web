@@ -12,6 +12,7 @@ const FAQ_NS: Record<string, string> = {
   'cosmetics-nmpa-filing': 'BlogFaqCosmeticsNmpaFiling',
   'cross-border-ecommerce-china': 'BlogFaqCrossBorderEcommerceChina',
   'korean-cosmetics-china-guide': 'BlogFaqKoreanCosmeticsGuide',
+  'green-coffee-beans-china': 'BlogFaqGreenCoffeeBeansChina',
 };
 
 import { WHATSAPP_URL, LOCALES, buildLanguages, SITE_URL, sharedOpenGraph, sharedTwitter } from '@trade/ui';

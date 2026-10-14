@@ -1396,6 +1396,18 @@
     "faqQ10": "Potřebuji čínskou společnost k oznámení kosmetiky u NMPA?",
     "faqA10": "Ano. Každý kosmetický výrobek dovážený do Číny musí mít čínskou tuzemskou odpovědnou osobu, tedy právnickou osobu registrovanou v Číně s obchodním zaměřením souvisejícím s kosmetikou. Může to být vaše vlastní čínská pobočka, distributor nebo poskytovatel služeb třetí strany. Odpovědná osoba právně odpovídá za bezpečnost výrobku a zajišťuje veškerou komunikaci s NMPA."
   },
+  "BlogFaqGreenCoffeeBeansChina": {
+    "faqQ1": "Potřebuje zelená káva registraci potraviny GACC?",
+    "faqA1": "Ne. Nepražená zrna stojí mimo systém registrace potravin a jsou vedena jako zemědělský produkt podle oznámení 219.",
+    "faqQ2": "Potřebuje provozovna stále schválení úřadu vyvážející země?",
+    "faqA2": "Pro země původu pokryté kávovým protokolem ano. Výrobní nebo zpracovatelská provozovna musí projít kontrolou příslušného úřadu vyvážející země a být schválena GACC a schválený seznam se zveřejňuje před zahájením obchodu.",
+    "faqQ3": "A co balení a etikety?",
+    "faqA3": "Zelená káva ve velkém se značí na úrovni balení, jak protokol vyžaduje. Maloobchodní balení pražené kávy prodávané v Číně navíc vyžadují čínské etikety podle národních norem, čemuž se věnujeme v průvodci souladem čínského značení.",
+    "faqQ4": "Jak dlouho registrace trvá?",
+    "faqA4": "V našich spisech přicházelo schválení potravinovou cestou v řádu týdnů, jakmile byl spis správný. Zpoždění, která vidíme, téměř nikdy nejsou zpoždění systému: jde o problémy klasifikace, subjektu a překladu zjištěné po podání.",
+    "faqQ5": "Vztahuje se moje registrace pražené kávy i na zelená zrna?",
+    "faqA5": "Ne. Pražená a nepražená zrna patří do různých systémů a obě se deklarují a ověřují odlišně."
+  },
   "Footer": {
     "getQuote": "Získat cenovou nabídku"
   }

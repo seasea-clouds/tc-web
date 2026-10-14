@@ -1396,6 +1396,18 @@
     "faqQ10": "Serve una società cinese per notificare i cosmetici NMPA?",
     "faqA10": "Sì. Ogni cosmetico importato in Cina deve avere una persona responsabile domestica, cioè un soggetto giuridico registrato in Cina con oggetto sociale compatibile con i cosmetici. Può essere la vostra filiale cinese, un distributore o un fornitore di servizi terzo. La persona responsabile risponde legalmente della sicurezza dei prodotti e gestisce tutte le comunicazioni con l'NMPA."
   },
+  "BlogFaqGreenCoffeeBeansChina": {
+    "faqQ1": "Il caffè verde richiede la registrazione alimentare GACC?",
+    "faqA1": "No. I chicchi non tostati sono fuori dal sistema di registrazione alimentare e sono gestiti come prodotti agricoli ai sensi dell'avviso 219.",
+    "faqQ2": "Lo stabilimento ha comunque bisogno dell'approvazione dell'autorità del Paese esportatore?",
+    "faqA2": "Per le origini coperte da un protocollo caffè, sì. Lo stabilimento di produzione o trasformazione deve essere verificato dall'autorità competente del Paese esportatore e approvato dal GACC, e l'elenco approvato è pubblicato prima dell'inizio del commercio.",
+    "faqQ3": "E per imballaggio ed etichette?",
+    "faqA3": "Il caffè verde sfuso è marcato a livello di collo come richiede il protocollo. Le confezioni al dettaglio di caffè tostato vendute in Cina richiedono inoltre etichette in cinese conformi alle norme nazionali, che trattiamo nella nostra guida alla conformità dell'etichettatura cinese.",
+    "faqQ4": "Quanto dura una registrazione?",
+    "faqA4": "Nei nostri fascicoli l'approvazione per la via alimentare è arrivata in poche settimane, una volta corretto il dossier. I ritardi che vediamo quasi mai sono ritardi di sistema: sono problemi di classificazione, di soggetto e di traduzione scoperti dopo la presentazione.",
+    "faqQ5": "La mia registrazione per caffè tostato copre il caffè verde?",
+    "faqA5": "No. Chicchi tostati e chicchi verdi appartengono a sistemi diversi, e i due si dichiarano e si verificano in modo differente."
+  },
   "Footer": {
     "getQuote": "Ottieni un preventivo"
   }

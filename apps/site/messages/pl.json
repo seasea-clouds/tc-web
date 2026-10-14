@@ -1396,6 +1396,18 @@
     "faqQ10": "Czy potrzebuję chińskiej firmy, aby zgłosić kosmetyki do NMPA?",
     "faqA10": "Tak. Każdy importowany do Chin kosmetyk musi mieć chiński podmiot odpowiedzialny — osobę prawną zarejestrowaną w Chinach z kosmetycznym zakresem działalności. Może to być własna chińska spółka zależna, dystrybutor lub zewnętrzny usługodawca. Podmiot odpowiedzialny odpowiada prawnie za bezpieczeństwo produktu i prowadzi całą komunikację z NMPA."
   },
+  "BlogFaqGreenCoffeeBeansChina": {
+    "faqQ1": "Czy zielona kawa potrzebuje rejestracji żywności GACC?",
+    "faqA1": "Nie. Niepalone ziarna są poza systemem rejestracji żywności i podlegają zarządzaniu jako produkty rolne na podstawie ogłoszenia 219.",
+    "faqQ2": "Czy zakład nadal potrzebuje zgody władz kraju eksportującego?",
+    "faqA2": "Dla krajów objętych protokołem kawowym tak. Zakład produkujący lub przetwarzający musi zostać poddany audytowi właściwych władz kraju eksportującego i zatwierdzony przez GACC, a zatwierdzona lista jest publikowana przed rozpoczęciem handlu.",
+    "faqQ3": "A co z opakowaniem i etykietami?",
+    "faqA3": "Kawa niepalona luzem jest oznakowana na poziomie opakowania, jak wymaga protokół. Opakowania detaliczne kawy palonej sprzedawanej w Chinach wymagają dodatkowo chińskich etykiet zgodnych z normami krajowymi, co omawiamy w naszym przewodniku po chińskim oznakowaniu.",
+    "faqQ4": "Ile trwa rejestracja?",
+    "faqA4": "W naszych wnioskach zatwierdzenie ścieżką żywnościową przychodziło w ciągu kilku tygodni, gdy dokumentacja była poprawna. Opóźnienia, które widzimy, prawie nigdy nie są opóźnieniami systemu: to problemy klasyfikacyjne, podmiotowe i tłumaczeniowe wykryte po złożeniu.",
+    "faqQ5": "Czy moja rejestracja na kawę paloną obejmuje zieloną?",
+    "faqA5": "Nie. Ziarna palone i niepalone należą do różnych systemów i oba deklaruje się oraz weryfikuje inaczej."
+  },
   "Footer": {
     "getQuote": "Uzyskaj wycenę"
   }

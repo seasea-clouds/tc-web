@@ -1396,6 +1396,18 @@
     "faqQ10": "Faut-il une entreprise chinoise pour déposer des cosmétiques auprès de la NMPA ?",
     "faqA10": "Oui. Chaque produit cosmétique importé en Chine doit avoir une personne responsable nationale chinoise — une entité juridique enregistrée en Chine dont l'objet social couvre les cosmétiques. Il peut s'agir de votre propre filiale chinoise, d'un distributeur ou d'un prestataire de services tiers. La personne responsable est légalement tenue de la sécurité des produits et gère toutes les communications avec la NMPA."
   },
+  "BlogFaqGreenCoffeeBeansChina": {
+    "faqQ1": "Le café vert doit-il un enregistrement alimentaire GACC ?",
+    "faqA1": "Non. Les grains non torréfiés sont hors du système d'enregistrement alimentaire et relèvent des produits agricoles au titre de l'avis 219.",
+    "faqQ2": "L'établissement a-t-il encore besoin de l'accord de l'autorité du pays exportateur ?",
+    "faqA2": "Pour les origines couvertes par un protocole café, oui. L'établissement de production ou de transformation doit être audité par l'autorité compétente du pays exportateur et approuvé par le GACC, et la liste approuvée est publiée avant le début du commerce.",
+    "faqQ3": "Qu'en est-il de l'emballage et de l'étiquetage ?",
+    "faqA3": "Le café vert en vrac est marqué au niveau du colis comme l'exige le protocole. Les emballages de détail de café torréfié vendus en Chine nécessitent en plus des étiquettes chinoises conformes aux normes nationales, que nous détaillons dans notre guide de conformité de l'étiquetage chinois.",
+    "faqQ4": "Combien de temps prend un enregistrement ?",
+    "faqA4": "Dans nos dossiers, l'approbation par la voie alimentaire est intervenue en quelques semaines une fois le dossier correct. Les retards que nous constatons ne sont presque jamais des retards de système : ce sont des problèmes de classification, d'entité et de traduction découverts après le dépôt.",
+    "faqQ5": "Mon enregistrement de café torréfié couvre-t-il le café vert ?",
+    "faqA5": "Non. Grains torréfiés et grains verts relèvent de régimes distincts, et les deux se déclarent et se vérifient différemment."
+  },
   "Footer": {
     "getQuote": "Obtenir un devis"
   }

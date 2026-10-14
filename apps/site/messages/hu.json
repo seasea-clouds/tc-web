@@ -1396,6 +1396,18 @@
     "faqQ10": "Szükségem van kínai cégre a kozmetikumok NMPA-ba történő bejelentéséhez?",
     "faqA10": "Igen. Minden Kínába importált kozmetikai termékhez kínai belföldi felelős személyre van szükség: egy Kínában bejegyzett, kozmetikumokhoz kapcsolódó tevékenységi körrel rendelkező jogi személyre. Ez lehet a saját kínai leányvállalata, egy forgalmazó vagy egy harmadik fél szolgáltató. A felelős személy jogilag felelős a termékbiztonságért, és minden NMPA-kommunikációt ő intéz."
   },
+  "BlogFaqGreenCoffeeBeansChina": {
+    "faqQ1": "Kell a zöld kávénak GACC élelmiszer-nyilvántartás?",
+    "faqA1": "Nem. A nem pörkölt bab az élelmiszer-nyilvántartási rendszeren kívül van, és a 219. közlemény szerint agrártermékként kezelik.",
+    "faqQ2": "Kell a létesítménynek továbbra is az exportáló ország hatóságának jóváhagyása?",
+    "faqA2": "A kávéjegyzőkönyv hatálya alá tartozó származási helyek esetében igen. A termelő vagy feldolgozó létesítményt az exportáló ország illetékes hatóságának kell ellenőriznie, és a GACC-nak jóvá kell hagynia, a jóváhagyott jegyzéket pedig a kereskedelem megkezdése előtt teszik közzé.",
+    "faqQ3": "Mi a helyzet a csomagolással és a címkékkel?",
+    "faqA3": "Az ömlesztett zöld kávét a jegyzőkönyv által előírt módon, csomagszinten jelölik. A Kínában értékesített pörkölt kávé kiskereskedelmi csomagolásához ezen felül a nemzeti szabványoknak megfelelő kínai címke szükséges, amelyet a kínai címkézési megfelelőségi útmutatónkban tárgyalunk.",
+    "faqQ4": "Mennyi ideig tart egy nyilvántartás?",
+    "faqA4": "Az általunk benyújtott esetekben az élelmiszer-útvonalon a jóváhagyás néhány héten belül megérkezett, ha a dokumentáció helyes volt. A látott késedelmek szinte soha nem rendszerkésedelmek: besorolási, szervezeti és fordítási problémák, amelyek a benyújtás után derülnek ki.",
+    "faqQ5": "A pörkölt kávéra szóló nyilvántartásom lefedi a zöld babot?",
+    "faqA5": "Nem. A pörkölt és a nem pörkölt bab különböző rendszerekben van, és mindkettőt másképp jelentik be és ellenőrzik."
+  },
   "Footer": {
     "getQuote": "Kérjen árajánlatot"
   }

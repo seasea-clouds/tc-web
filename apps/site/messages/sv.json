@@ -1396,6 +1396,18 @@
     "faqQ10": "Behöver jag ett kinesiskt företag för att anmäla kosmetika hos NMPA?",
     "faqA10": "Ja. Varje kosmetisk produkt som importeras till Kina måste ha en kinesisk inhemsk ansvarig person: en juridisk person registrerad i Kina med kosmetikarelaterad verksamhetsinriktning. Det kan vara ditt eget kinesiska dotterbolag, en distributör eller en extern tjänsteleverantör. Den ansvariga personen är juridiskt ansvarig för produktsäkerheten och sköter all kommunikation med NMPA."
   },
+  "BlogFaqGreenCoffeeBeansChina": {
+    "faqQ1": "Kräver grönt kaffe GACC-livsmedelsregistrering?",
+    "faqA1": "Nej. Orostade bönor ligger utanför livsmedelsregistreringssystemet och hanteras som jordbruksprodukt enligt meddelande 219.",
+    "faqQ2": "Behöver anläggningen fortfarande godkännande från exportlandets myndighet?",
+    "faqA2": "För ursprung som omfattas av ett kaffeprotokoll, ja. Den producerande eller bearbetande anläggningen måste granskas av exportlandets behöriga myndighet och godkännas av GACC, och den godkända listan publiceras innan handeln börjar.",
+    "faqQ3": "Hur är det med förpackning och etiketter?",
+    "faqA3": "Grönt kaffe i bulk märks på förpackningsnivå enligt protokollet. Detaljförpackningar med rostat kaffe som säljs i Kina kräver dessutom kinesiska etiketter enligt de nationella standarderna, vilket vi behandlar i vår guide till efterlevnad av kinesisk märkning.",
+    "faqQ4": "Hur lång tid tar en registrering?",
+    "faqA4": "I våra ärenden kom godkännandet via livsmedelsspåret inom några veckor när ärendet var korrekt. De förseningar vi ser är nästan aldrig systemförseningar: det är klassificerings-, enhets- och översättningsproblem som upptäcks efter inlämnandet.",
+    "faqQ5": "Omfattar min registrering för rostat kaffe gröna bönor?",
+    "faqA5": "Nej. Rostade och orostade bönor ligger i olika system, och båda deklareras och kontrolleras på olika sätt."
+  },
   "Footer": {
     "getQuote": "Få en offert"
   }

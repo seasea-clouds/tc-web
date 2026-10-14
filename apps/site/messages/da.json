@@ -1396,6 +1396,18 @@
     "faqQ10": "Skal jeg have et kinesisk selskab til at anmelde kosmetik hos NMPA?",
     "faqA10": "Ja. Ethvert kosmetikprodukt, der importeres til Kina, skal have en kinesisk indenlandsk ansvarlig person – en juridisk enhed registreret i Kina med kosmetikrelateret forretningsområde. Det kan være dit eget kinesiske datterselskab, en distributør eller en tredjepartsudbyder. Den ansvarlige person er juridisk ansvarlig for produktsikkerheden og håndterer al NMPA-kommunikation."
   },
+  "BlogFaqGreenCoffeeBeansChina": {
+    "faqQ1": "Kræver grøn kaffe GACC-fødeværeregistrering?",
+    "faqA1": "Nej. Ubrændte bønner ligger uden for fødeværeregistreringssystemet og administreres som landbrugsprodukt efter meddelelse 219.",
+    "faqQ2": "Kræver anlægget stadig godkendelse fra eksportlandets myndighed?",
+    "faqA2": "For oprindelser omfattet af en kaffeprotokol, ja. Det producerende eller forarbejdende anlæg skal auditeres af eksportlandets kompetente myndighed og godkendes af GACC, og den godkendte liste offentliggøres, før handlen begynder.",
+    "faqQ3": "Hvad med emballage og etiketter?",
+    "faqA3": "Grøn kaffe i bulk mærkes på pakningsniveau, som protokollen kræver. Detailpakker med brændt kaffe, der sælges i Kina, kræver desuden kinesiske etiketter i overensstemmelse med de nationale standarder, hvilket vi dækker i vores guide til overensstemmelse med kinesisk etikettering.",
+    "faqQ4": "Hvor lang tid tager en registrering?",
+    "faqA4": "I vores sager kom godkendelsen ad fødevarevejen inden for få uger, når sagen var korrekt. De forsinkelser, vi ser, er næsten aldrig systemforsinkelser: det er klassificerings-, enheds- og oversættelsesproblemer, der opdages efter indsendelsen.",
+    "faqQ5": "Dækker min registrering for brændt kaffe grønne bønner?",
+    "faqA5": "Nej. Brændte og ubrændte bønner ligger i forskellige systemer, og begge deklareres og kontrolleres forskelligt."
+  },
   "Footer": {
     "getQuote": "Få et tilbud"
   }

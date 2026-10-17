@@ -67,7 +67,7 @@ export default async function GaccPage({ params }: { params: Promise<{ locale: s
 
 
   const definitionTerms = [    { nameKey: "gaccName", definitionKey: "gaccDefinition" },
-    { nameKey: "decree248Name", definitionKey: "decree248Definition" },
+    { nameKey: "decree280Name", definitionKey: "decree280Definition" },
     { nameKey: "ciferName", definitionKey: "ciferDefinition" },
     { nameKey: "samrName", definitionKey: "samrDefinition" },
   ];

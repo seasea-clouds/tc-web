@@ -593,7 +593,7 @@ const ENGLISH_RESIDUAL_ALLOW = new Set([
   'David', 'Sarah', 'Mike', 'Leo', 'John', 'Zhang', 'Jing',
   'Decree', 'SAMR', 'CNCA', 'MEE', 'CNIPA', 'SRRC', 'QMS', 'FSSC', 'SDS',
   'CIQ', 'HACCP', 'CNAS', 'SDOC', 'GMP', 'CRA', 'FMCG',
-  'PIPL', 'CSAR', 'CIFER', 'MOA', 'FTAs', 'INCI', 'Big', 'Four',
+  'PIPL', 'CSAR', 'CIFER', 'MARA', 'FTAs', 'INCI', 'Big', 'Four',
   'III', 'GDPR', 'IP', 'SKU', 'ISBN', 'SGS', 'ISO', 'HTML',
   'VIP', 'CEO', 'CTO', 'COO', 'CFO',
   'Onboarding', 'onboarding', 'substantiation',

@@ -58,11 +58,11 @@ const SAMPLE_RESULT: GaccResult = {
     assignedHsChapter: "1704, 1806",
     ciqCode: "105",
     isHighRisk: false,
-    riskReason: "18 categories outside — low risk. Standard GACC registration.",
+    riskReason: "17 categories outside — low risk. Standard GACC registration.",
     alternativeClassificationNote: "HS code appears consistent with product category.",
   },
   riskMatrix: [
-    { dimension: "品类风险 Product Category", rating: "🟢", explanation: "18 categories outside — low risk. Standard GACC registration." },
+    { dimension: "品类风险 Product Category", rating: "🟢", explanation: "17 categories outside — low risk. Standard GACC registration." },
     { dimension: "产地风险 Origin Country", rating: "🟡", explanation: "USA — moderate compliance pathway" },
     { dimension: "成分风险 Ingredients", rating: "🟢", explanation: "Standard ingredient risk" },
     { dimension: "加工风险 Processing", rating: "🟢", explanation: "Processed/shelf-stable — low quarantine risk" },

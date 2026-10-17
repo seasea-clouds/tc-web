@@ -108,7 +108,7 @@ export default async function FAQPage({ params }: { params: Promise<{ locale: st
           { nameKey: 'cbecName', definitionKey: 'cbecDefinition' },
           { nameKey: 'ciferName', definitionKey: 'ciferDefinition' },
           { nameKey: 'csarName', definitionKey: 'csarDefinition' },
-          { nameKey: 'decree248Name', definitionKey: 'decree248Definition' },
+          { nameKey: 'decree280Name', definitionKey: 'decree280Definition' },
           { nameKey: 'decree243Name', definitionKey: 'decree243Definition' },
           { nameKey: 'samrName', definitionKey: 'samrDefinition' },
         ]}

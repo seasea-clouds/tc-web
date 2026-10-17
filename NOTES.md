@@ -452,3 +452,7 @@ GitHub 仓库从 `seasea-clouds/trade-web` 切换到 `seasea-clouds/tc-web`（�
 1. **heroTitle / heroSubtitle**：按本地用户搜索习惯 + 本地视角重写（如 de 强调 CE vs CCC 对比），非翻译 en。
 2. **FAQ / howSteps / coverItems**：本地化场景与提问方式。
 3. **metaTitle / metaDescription**：本地关键词习惯（后续 D7-SEO 系列批量优化）。
+
+## 踩坑 15：法令编号批量替换（2026-10-17）
+- 想省事直接 `248→280` 会留下两类雷：①「Decrees 248 and 249」「248 og 249」等联合引用变半截；②把 248 的生效日 2022-01-01 错挂到 280 名下
+- 正确顺序：先吃掉联合引用（slash / 连词两种），再单点替换，最后全量扫 `2022` 同现并逐语言改日期；改完 grep 一次 `280.{0,18}249` 确认零残留

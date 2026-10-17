@@ -5,7 +5,7 @@
     "heroCta": "Získejte bezplatné posouzení shody",
     "heroExplore": "Prozkoumat naše služby",
     "servicesTitle": "Komplexní služby pro shodu s čínskými předpisy",
-    "servicesSubtitle": "Regulační podpora na každém kroku – od registrace výrobku až po celní odbavení.",
+    "servicesSubtitle": "Registrace, označování, certifikace, ochranná známka a e-commerce: vše, co váš výrobek potřebuje pro vstup na čínský trh, s podporou pro české výrobce a exportéry.",
     "whyTitle": "Proč české značky volí SinoTrade Compliance",
     "whySubtitle": "Váš důvěryhodný partner pro orientaci v čínských dovozních předpisech – s podporou v češtině.",
     "whyCard1Title": "Pokrytí všech kategorií",
@@ -73,7 +73,7 @@
     },
     "trustedByTitle": "Partneři, kteří nám důvěřují",
     "processDesc": "Jednoduchý 6krokový proces, jak dostat vaši značku do Číny",
-    "trustedByDesc": "Připojte se k českým i mezinárodním značkám, které s námi rostou",
+    "trustedByDesc": "Přidejte se k českým i mezinárodním značkám, které s námi už vyvážejí do Číny",
     "metaTitle": "SinoTrade Compliance | Export do Číny: GACC, CCC a NMPA",
     "metaDescription": "Kompletní compliance pro export do Číny: registrace GACC, certifikace CCC, kosmetická notifikace NMPA a čínské etikety. Důvěřují nám vývozci z více než 50 zemí.",
     "heroPortalCta": "Vyzkoušejte náš 3-krokový nástroj pro kontrolu shody →"
@@ -159,7 +159,7 @@
     "metaDescription": "Kompletní compliance pro vstup na čínský trh: registrace potravin GACC, certifikace CCC, kosmetická notifikace NMPA, čínské etikety a ochrana značky. Více než 15 let zkušeností."
   },
   "ServiceGacc": {
-    "heroTitle": "Registrace GACC potravin – pro české vývozce",
+    "heroTitle": "Registrace GACC pro české vývozce potravin",
     "heroSubtitle": "Vyvážíte potraviny do Číny? Nařízení 280 vyžaduje, aby se každý zahraniční výrobce zaregistroval u GACC před první zásilkou. Zajistíme celou vaši registraci CIFER a udržíme export v chodu.",
     "cta": "Získejte bezplatné posouzení registrace GACC",
     "coverTitle": "Naše služby pro české vývozce potravin",
@@ -208,7 +208,7 @@
     "metaDescription": "Registrace GACC pro české vývozce potravin: nařízení 280, systém CIFER, potřebné dokumenty, doba. Podpora v češtině."
   },
   "ServiceLabel": {
-    "heroTitle": "Čínské požadavky na označování – pro české výrobky",
+    "heroTitle": "Čínské označování pro české výrobky",
     "heroSubtitle": "Dovážené balené potraviny musí mít čínský štítek podle GB 7718-2025 a GB 28050-2025. Nesprávné označení vede k zadržení zboží v celním řízení. Navrhujeme a kontrolujeme štítky.",
     "cta": "Získejte bezplatnou revizi etikety",
     "coverTitle": "Naše služby pro shodu etiket",
@@ -255,7 +255,7 @@
     "metaDescription": "Čínské požadavky na označování pro české výrobky: GB 7718-2025, GB 28050-2025 nutriční tabulka, upozornění na alergeny."
   },
   "ServiceCcc": {
-    "heroTitle": "Certifikace CCC – průvodce vývozem do Číny pro české výrobce",
+    "heroTitle": "Certifikace CCC pro české výrobce",
     "heroSubtitle": "Elektronika, domácí spotřebiče a hračky vyvážené do Číny musí mít certifikaci CCC. CE označení nebo česká certifikace nestačí; zajišťujeme testování a audit továrny u orgánů akreditovaných CNCA.",
     "cta": "Získejte bezplatné posouzení katalogu CCC",
     "coverTitle": "Naše služby pro české výrobce",
@@ -286,7 +286,7 @@
     "howtoStep2Name": "Zvolte určený certifikační orgán",
     "howtoStep2Text": "Vyberte certifikační orgán schválený CNCA pro zkoušky a certifikaci vaší kategorie výrobku.",
     "howtoStep3Name": "Podání žádosti a vzorků",
-    "howtoStep3Text": "Vyplňte žádost a odešlete vzorky výrobku do určené zkušební laboratoře – dopravu zajistíme z České republiky.",
+    "howtoStep3Text": "Vyplňte žádost a odešlete vzorky výrobku z České republiky do určené zkušební laboratoře.",
     "howtoStep4Name": "Audit továrny a zkoušky",
     "howtoStep4Text": "Absolvujte audit továrny a zkoušky výrobku podle čínských národních norem.",
     "howtoStep5Name": "Získejte certifikát CCC",
@@ -304,7 +304,7 @@
     "metaDescription": "Certifikace CCC pro české výrobce: rozdíl od CE, proces certifikace, testy, audit továrny, doba a náklady. Podpora v češtině."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Registrace kosmetiky NMPA – pro české značky",
+    "heroTitle": "Registrace kosmetiky NMPA pro české značky",
     "heroSubtitle": "Vstup na čínský trh vyžaduje oznámení NMPA pro kosmetiku: oznámení pro běžné výrobky a registraci pro zvláštní výrobky, s povinnou odpovědnou osobou v Číně. Zajišťujeme celý proces.",
     "cta": "Získejte bezplatnou klasifikaci NMPA",
     "coverTitle": "Naše služby pro české kosmetické značky",
@@ -353,7 +353,7 @@
     "metaDescription": "Registrace kosmetiky NMPA pro české značky: klasifikace, osvobození od testů na zvířatech, odpovědná osoba v Číně, doba."
   },
   "ServiceEcommerce": {
-    "heroTitle": "Přeshraniční e-commerce – pro české značky",
+    "heroTitle": "Přeshraniční e-commerce pro české značky v Číně",
     "heroSubtitle": "Prodávejte svou českou značku přes Tmall Global, JD Worldwide a Douyin: přeshraniční kanály umožňují vstup do Číny bez místní společnosti. Zajišťujeme kompletní nastavení.",
     "cta": "Získejte bezplatnou konzultaci k platformám",
     "coverTitle": "Naše služby pro české značky",
@@ -400,7 +400,7 @@
     "metaDescription": "České značky do Číny přes přeshraniční e-commerce: Tmall Global, JD Worldwide, soulad s CBEC, logistika, platby."
   },
   "ServiceBrand": {
-    "heroTitle": "Registrace ochranné známky v Číně – ochrana českých značek",
+    "heroTitle": "Ochrana ochranné známky v Číně pro české firmy",
     "heroSubtitle": "Čína uplatňuje princip \"kdo dřív přijde\": ochranná známka registrovaná v ČR (ÚPV) není v Číně chráněna. Zaregistrujte svou značku u CNIPA před vstupem na trh, abyste zabránili jejímu zcizení.",
     "cta": "Získejte bezplatnou rešerši ochranné známky",
     "coverTitle": "Naše služby pro ochranu značky v Číně",
@@ -529,7 +529,7 @@
     "heroSubtitle": "Srozumitelné odpovědi pro vývozce z celého světa — registrace GACC, certifikace CCC, čínské etikety, kosmetická notifikace NMPA a přeshraniční e-commerce.",
     "gaccTitle": "Registrace potravin GACC",
     "gaccQ1": "Co je nařízení GACC 280?",
-    "gaccA1": "Nařízení GACC č. 280 je čínská úprava registrace zahraničních výrobců, zpracovatelů a skladů potravin. Platí od 1. června 2026 a nahrazuje nařízení 248 a 249; registrace v systému CIFER je pro potraviny zasílané do Číny povinná od roku 2022.",
+    "gaccA1": "Nařízení GACC č. 280 je čínská úprava registrace zahraničních výrobců, zpracovatelů a skladů potravin. Platí od 1. června 2026; registrace v systému CIFER je pro potraviny zasílané do Číny povinná od roku 2022.",
     "gaccQ2": "Jak dlouho trvá registrace GACC u mých výrobků?",
     "gaccA2": "Záleží na kategorii výrobku. Nízce rizikové výrobky lze registrovat přímo přes systém CIFER. Vysoce rizikové – jako mléčné výrobky, maso a mořské plody – potřebují doporučení příslušného úřadu vaší země (např. SZPI v Česku). Celý proces za vás řídíme.",
     "gaccQ3": "Je registrace GACC opravdu povinná pro každý potravinářský výrobek?",
@@ -782,7 +782,7 @@
     "csarName": "CSAR (Cosmetic Supervision and Administration Regulation)",
     "csarDefinition": "CSAR je čínské nařízení pro dohled a správu kosmetiky. Řídí registraci, evidenci, výrobu a dovoz kosmetiky v Číně a vyžaduje posouzení bezpečnosti produktů a zveřejnění přísad.",
     "decree280Name": "vyhláška 280 (vyhláška o registraci GACC)",
-    "decree280Definition": "Nařízení 280 je předpis GACC o registraci zahraničních výrobců potravin; platí od 1. června 2026 a nahrazuje nařízení 248 a 249. Zachovává povinnou registraci, stanoví pětiletou platnost s automatickým prodloužením a vyžaduje žádost o prodloužení 3 až 12 měsíců před vypršením.",
+    "decree280Definition": "Nařízení 280 je předpis GACC o registraci zahraničních výrobců potravin; platí od 1. června 2026. Zachovává povinnou registraci, stanoví pětiletou platnost s automatickým prodloužením a vyžaduje žádost o prodloužení 3 až 12 měsíců před vypršením.",
     "decree243Name": "Vyhláška 243 (vyhláška GACC o bezpečnosti dovozu/vývozu potravin)",
     "decree243Definition": "Vyhláška 243 je správním opatřením GACC pro bezpečnost dovážených a vyvážených potravin. Stanovuje požadavky na řízení bezpečnosti potravin, označování a sledovatelnost pro dovozce a vývozce potravin v Číně.",
     "samrName": "SAMR (Státní správa pro regulaci trhu)",
@@ -825,8 +825,8 @@
     "ctaButton": "Získat bezplatnou nabídku"
   },
   "IndustryDairy": {
-    "heroTitle": "Soulad s Čínou pro české vývozce mléčných výrobků",
-    "heroSubtitle": "Vývoz mléka, sýra a jogurtů do Číny vyžaduje registraci GACC. Zajišťujeme registraci a štítky pro české mlékárny.",
+    "heroTitle": "Soulad s Čínou pro české mlékárny a vývozce mléčných výrobků",
+    "heroSubtitle": "Sýry, máslo, tvaroh a sušené mléko: poptávka po kvalitních mléčných výrobcích v Číně roste. Registrace GACC, čínské označování a soulad při dovozu jsou povinné; provedeme vás každým krokem.",
     "heroCta": "Vyžádejte si bezplatné posouzení GACC pro vaši mlékárnu",
     "coverTitle": "Co zajišťujeme pro vývozce mléčných výrobků",
     "coverItems": "Registrace podle dekretu GACC 280 pro mlékárny a zpracovatelské závody,Shoda čínských etiket pro mléčné výrobky (GB 7718-2025, GB 28050-2025),Poradenství k dovozním licencím pro kategorie mléčných výrobků,Celní odbavení chlazených a mražených mléčných výrobků,Registrace receptur kojenecké výživy (SAMR),Průběžné sledování regulačních změn a obnova registrace",
@@ -858,8 +858,8 @@
     "metaTitle": "Mléčné výrobky do Číny | průvodce registrací GACC"
   },
   "IndustryMeat": {
-    "heroTitle": "Soulad s Čínou pro české vývozce masa",
-    "heroSubtitle": "Vývoz masa do Číny vyžaduje registraci GACC a hygienické kontroly. Zajišťujeme registraci a zdravotní osvědčení pro české závody.",
+    "heroTitle": "Soulad s Čínou pro české vývozce masa a mořských plodů",
+    "heroSubtitle": "Vepřové, hovězí, drůbež a ryby: Čína je trh s vysokou hodnotou a přísnými pravidly vstupu. Koordinujeme registraci GACC CIFER, označování i celní odbavení od začátku do konce.",
     "heroCta": "Ověřte si bezplatně přístup na trh pro vaše maso",
     "coverTitle": "Co zajišťujeme pro vývozce masa a mořských plodů",
     "questionsTitle": "Časté dotazy k vývozu masa a mořských plodů do Číny",
@@ -867,7 +867,7 @@
     "faq1q": "Co je registrace CIFER?",
     "faq1a": "CIFER je online registrační systém GACC pro zahraniční výrobce potravin. Masné závody a zpracovatelé ryb – včetně českých jatek a masokombinátů – se musí zaregistrovat dříve, než mohou vyvážet do Číny.",
     "faq2q": "Které země mohou vyvážet maso do Číny?",
-    "faq2a": "Pouze země s bilaterální dohodou o přístupu na trh s Čínou. Česká republika má v rámci protokolů mezi EU a Čínou otevřený přístup pro vybrané druhy – zejména vepřové a drůbeží maso – s omezeními, která se mění v čase. Ověříme aktuální status pro vaše závody.",
+    "faq2a": "Čína otevírá dovoz masa a mořských plodů prostřednictvím dvoustranných protokolů sjednávaných po jednotlivých zemích a druzích. Ověříme aktuální stav pro vepřové, hovězí, drůbeží maso a ryby z České republiky a ještě před startem shrneme požadavky.",
     "faq3q": "Jak dlouho trvá registrace masných výrobků?",
     "faq3a": "Registrace CIFER obvykle trvá 3–8 měsíců. Mohou se uplatnit i protokoly o přístupu na trh specifické pro danou zemi mezi českou vládou a Čínou. Naplánujeme časový harmonogram vašeho vstupu na trh.",
     "faq4q": "Jaké označování je u dováženého masa povinné?",
@@ -890,8 +890,8 @@
     "metaTitle": "Vývoz masa do Číny | průvodce GACC a hygienou"
   },
   "IndustryWine": {
-    "heroTitle": "Soulad s Čínou pro české vývozce nápojů",
-    "heroSubtitle": "Vývoz piva, vína a nápojů vyžaduje správný čínský štítek a registraci GACC. Pomáháme českým výrobcům se štítky a dovozem.",
+    "heroTitle": "Soulad s Čínou pro česká vinařství a vývozce vína",
+    "heroSubtitle": "Moravská bílá vína, Pálava i ledová vína: čínští spotřebitelé oceňují kvalitní vína. Registrace GACC, čínské označování a ochrana značky otevírají dveře; doprovázíme vaše vinařství až k prvnímu prodeji.",
     "heroCta": "Bezplatná konzultace vstupu na trh pro vaše vinařství",
     "coverTitle": "Co zajišťujeme pro vývozce vína a lihovin",
     "coverItems": "Registrace GACC CIFER pro vinařství a stáčírny,Shoda čínských etiket pro alkoholické nápoje (GB 10344),Registrace ochranné známky u CNIPA,Poradenství k dovozním clům a daním,Požadavky na přístup na trh pro víno, šumivé víno a pivo,Celní odbavení a podpora inspekcí",

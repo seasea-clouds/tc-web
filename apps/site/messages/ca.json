@@ -5,7 +5,7 @@
     "heroCta": "Obteniu una avaluació gratuïta",
     "heroExplore": "Exploreu els serveis",
     "servicesTitle": "Serveis integrals de compliment",
-    "servicesSubtitle": "Suport regulador a cada pas: del registre del producte fins al despatx duaner.",
+    "servicesSubtitle": "Registre, etiquetatge, certificació, marca i comerç electrònic: tot el que el vostre producte necessita per entrar al mercat xinès, amb acompanyament per a empreses catalanes.",
     "whyTitle": "Per què escollir SinoTrade Compliance",
     "whySubtitle": "El vostre soci de confiança per navegar per les regulacions d'importació de la Xina.",
     "whyCard1Title": "Cobertura completa de totes les categories",
@@ -73,7 +73,7 @@
     },
     "trustedByTitle": "Socis de confiança",
     "processDesc": "Un procés senzill de 6 passos per portar la vostra marca a la Xina",
-    "trustedByDesc": "Uniu-vos a les marques internacionals que ja creixen amb nosaltres",
+    "trustedByDesc": "Uniu-vos a les marques catalanes i internacionals que ja exporten a la Xina amb nosaltres",
     "metaTitle": "SinoTrade Compliance | Exportar a la Xina: GACC, CCC i NMPA",
     "metaDescription": "Compliment integral per exportar a la Xina: registre GACC, certificació CCC, notificació cosmètica NMPA i etiquetatge xinès. La confiança d'exportadors de més de 50 països.",
     "heroPortalCta": "Proveu el nostre verificador de compliment en 3 passos →"
@@ -159,7 +159,7 @@
     "metaDescription": "Compliment complet per a l'entrada al mercat xinès: registre GACC, certificació CCC, notificació cosmètica NMPA, etiquetatge xinès i protecció de marca. 15+ anys."
   },
   "ServiceGacc": {
-    "heroTitle": "Registre GACC d'aliments – per a exportadors catalans",
+    "heroTitle": "Registre GACC per a exportadors d'aliments catalans",
     "heroSubtitle": "Exporteu aliments a la Xina? El Decret 280 exigeix que cada fabricant estranger es registri davant la GACC abans del primer enviament. Ens encarreguem del vostre registre CIFER complet i mantenim les exportacions en marxa.",
     "cta": "Obteniu una avaluació gratuïta del registre",
     "coverTitle": "Què cobrim",
@@ -208,7 +208,7 @@
     "metaDescription": "Registre GACC per a exportadors catalans: Reglament 280, sistema CIFER, documents necessaris, temps. Suport en català."
   },
   "ServiceLabel": {
-    "heroTitle": "Requisits d'etiquetatge xinès – per a productes catalans",
+    "heroTitle": "Etiquetatge xinès per a productes catalans",
     "heroSubtitle": "Els aliments envasats importats han de portar una etiqueta xinesa segons GB 7718-2025 i GB 28050-2025. L'etiquetatge incorrecte comporta la retenció de la mercaderia a duana. Dissenyem i revisem etiquetes.",
     "cta": "Obteniu una revisió gratuïta de l'etiqueta",
     "coverTitle": "Què cobrim",
@@ -255,7 +255,7 @@
     "metaDescription": "Requisits d'etiquetatge xinès per a productes catalans: GB 7718-2025, GB 28050-2025 taula nutricional, avisos d'al·lèrgens."
   },
   "ServiceCcc": {
-    "heroTitle": "Certificació CCC – guia d'exportació a la Xina per a fabricants catalans",
+    "heroTitle": "Certificació CCC per a fabricants catalans",
     "heroSubtitle": "Els electrònics, electrodomèstics i joguines exportats a la Xina han de tenir certificació CCC. El marcatge CE o la certificació catalana no són suficients; organitzem proves i auditoria de fàbrica en organismes acreditats per CNCA.",
     "cta": "Obteniu una avaluació gratuïta del catàleg CCC",
     "coverTitle": "Què cobrim",
@@ -304,7 +304,7 @@
     "metaDescription": "Certificació CCC per a fabricants catalans: diferència amb CE, procés de certificació, proves, auditoria de fàbrica, temps i cost. Suport en català."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Registre de cosmètics NMPA – per a marques catalanes",
+    "heroTitle": "Registre NMPA de cosmètics per a marques catalanes",
     "heroSubtitle": "L'entrada al mercat xinès requereix notificació NMPA per a cosmètics: notificació per a productes ordinaris i registre per a especials, amb persona responsable a la Xina. Gestionem tot el procés.",
     "cta": "Obteniu una classificació gratuïta del producte",
     "coverTitle": "Què cobrim",
@@ -353,7 +353,7 @@
     "metaDescription": "Registre NMPA per a marques catalanes de cosmètics: classificació, exempció de proves amb animals, persona responsable a la Xina, temps."
   },
   "ServiceEcommerce": {
-    "heroTitle": "Comerç electrònic transfronterer – per a marques catalanes",
+    "heroTitle": "Comerç electrònic transfronterer per a marques catalanes a la Xina",
     "heroSubtitle": "Ven la teva marca catalana a través de Tmall Global, JD Worldwide i Douyin: els canals transfronterers permeten entrar a la Xina sense empresa local. Gestionem la configuració completa.",
     "cta": "Obteniu una consulta gratuïta de plataforma",
     "coverTitle": "Què cobrim",
@@ -400,7 +400,7 @@
     "metaDescription": "Marques catalanes a la Xina via comerç electrònic transfronterer: Tmall Global, JD Worldwide, compliment CBEC, logística, pagaments."
   },
   "ServiceBrand": {
-    "heroTitle": "Registre de marca a la Xina – protecció de marques catalanes",
+    "heroTitle": "Protecció de marca a la Xina per a empreses catalanes",
     "heroSubtitle": "La Xina aplica el principi \"qui primer registra\": una marca registrada a Espanya (OEPM) no està protegida a la Xina. Registreu la marca a CNIPA abans d'entrar al mercat per evitar-ne l'apropiació.",
     "cta": "Obteniu una cerca gratuïta de marques",
     "coverTitle": "Què cobrim",
@@ -529,7 +529,7 @@
     "heroSubtitle": "Respostes clares per a exportadors de tot el món: registre GACC, certificació CCC, etiquetatge xinès, notificació cosmètica NMPA i comerç electrònic transfronterer.",
     "gaccTitle": "Registre d'aliments GACC",
     "gaccQ1": "Què és el Decret 280 del GACC?",
-    "gaccA1": "El Decret 280 de la GACC és la normativa xinesa sobre el registre de fabricants, transformadors i magatzems d'aliments estrangers. És vigent des de l'1 de juny de 2026 i substitueix els decrets 248 i 249; el registre mitjançant CIFER és obligatori per als aliments enviats a la Xina des del 2022.",
+    "gaccA1": "El Decret 280 de la GACC és la normativa xinesa sobre el registre de fabricants, transformadors i magatzems d'aliments estrangers. És vigent des de l'1 de juny de 2026; el registre mitjançant CIFER és obligatori per als aliments enviats a la Xina des del 2022.",
     "gaccQ2": "Quant de temps triga el registre GACC per als meus productes?",
     "gaccA2": "Depèn de la categoria del vostre producte. Els productes de baix risc es poden registrar directament a través del CIFER. Els productes d'alt risc — com ara lactis, carn i marisc — requereixen la recomanació de l'autoritat competent del vostre país (per exemple, el Ministeri d'Agricultura, Pesca i Alimentació —MAPA— a Espanya). Gestionem tot el procés per a vosaltres.",
     "gaccQ3": "És realment obligatori el registre GACC per a tots els productes alimentaris?",
@@ -782,7 +782,7 @@
     "csarName": "CSAR (Reglament de Supervisió i Administració Cosmètica)",
     "csarDefinition": "CSAR és el Reglament de supervisió i administració de cosmètics de la Xina. Rega el registre, la presentació, la producció i la importació de cosmètics a la Xina, i requereix una avaluació de la seguretat del producte i la divulgació dels ingredients.",
     "decree280Name": "Decret 280 (Decret de registre GACC)",
-    "decree280Definition": "El Decret 280 és la norma de la GACC sobre el registre d'empreses estrangeres de producció alimentària; és vigent des de l'1 de juny de 2026 i substitueix els decrets 248 i 249. Manté el règim de registre obligatori, fixa una validesa de cinc anys amb renovació automàtica i exigeix presentar la renovació entre 3 i 12 mesos abans del venciment.",
+    "decree280Definition": "El Decret 280 és la norma de la GACC sobre el registre d'empreses estrangeres de producció alimentària; és vigent des de l'1 de juny de 2026. Manté el règim de registre obligatori, fixa una validesa de cinc anys amb renovació automàtica i exigeix presentar la renovació entre 3 i 12 mesos abans del venciment.",
     "decree243Name": "Decret 243 (Decret de seguretat alimentària d'importació/exportació del GACC)",
     "decree243Definition": "El Decret 243 és la mesura administrativa del GACC per a la seguretat dels aliments importats i exportats. Estableix requisits per a la gestió de la seguretat alimentària, l'etiquetatge i la traçabilitat per als importadors i exportadors d'aliments a la Xina.",
     "samrName": "SAMR (Administració Estatal de Regulació del Mercat)",
@@ -825,8 +825,8 @@
     "ctaButton": "Obteniu un pressupost gratuït"
   },
   "IndustryDairy": {
-    "heroTitle": "Compliment xinès per a exportadors catalans de làctics",
-    "heroSubtitle": "L'exportació de llet, formatge i iogurt a la Xina requereix registre GACC. Gestionem el registre i les etiquetes per a lleteries catalanes.",
+    "heroTitle": "Conformitat amb la Xina per a formatgeries i exportadors làctics catalans",
+    "heroSubtitle": "Formatges artesans, mató, mantega i llet en pols: la demanda xinesa de làctics de qualitat creix. El registre GACC, l'etiquetatge xinès i el compliment en la importació són obligatoris; us acompanyem en cada pas.",
     "heroCta": "Obteniu una avaluació gratuïta",
     "coverTitle": "Què cobrim per als exportadors catalans de productes lactis",
     "coverItems": "Registre GACC (Decret 280) per a lleteries i fabricants de productes lactis, Compliment de l'etiqueta xinesa per a productes lactis, Orientació sobre la llicència d'importació per a categories làcties, Suport al despatx duaner per a lactis refrigerats i congelats, Registre de fórmules per a llet en pols infantil, Supervisió normativa contínua per a exportadors catalans",
@@ -858,8 +858,8 @@
     "metaTitle": "Làctics a la Xina | guia de registre GACC"
   },
   "IndustryMeat": {
-    "heroTitle": "Compliment xinès per a exportadors catalans de carn",
-    "heroSubtitle": "L'exportació de carn a la Xina requereix registre GACC i controls sanitaris. Gestionem el registre i els certificats sanitaris per a escorxadors catalans.",
+    "heroTitle": "Conformitat amb la Xina per a exportadors de carn i marisc catalans",
+    "heroSubtitle": "Porc, vedella, pollastre i marisc: la Xina és un mercat d'alt valor amb regles d'entrada exigents. Coordinem el registre GACC CIFER, l'etiquetatge i el despatx duaner de principi a fi.",
     "heroCta": "Obteniu una avaluació gratuïta",
     "coverTitle": "Què cobrim per als exportadors catalans de carn i marisc",
     "questionsTitle": "PMF: exportació de carn i marisc a la Xina",
@@ -867,7 +867,7 @@
     "faq1q": "Què és el registre CIFER?",
     "faq1a": "CIFER és el sistema en línia del GACC per registrar els fabricants d'aliments estrangers. Totes les instal·lacions de carn i marisc —com ara escorxadors i plantes de processament de pernil catalanes— s'han de registrar a CIFER abans d'exportar a la Xina.",
     "faq2q": "Quins països poden exportar carn a la Xina?",
-    "faq2a": "Només els països amb un acord bilateral d'accés al mercat amb la Xina poden exportar carn. Espanya disposa d'accés per a diverses espècies —per exemple el porcí, clau per al pernil— amb restriccions que canvien amb el temps. Verifiquem l'estat actual d'accés per a cada producte i categoria.",
+    "faq2a": "La Xina obre la importació de carn i marisc mitjançant protocols bilaterals negociats país a país i espècie per espècie. Verifiquem l'estat actual per al porc, la vedella, el xai i el marisc de l'Estat espanyol i definim els requisits abans de començar.",
     "faq3q": "Quant de temps triga el registre de productes carnis?",
     "faq3a": "El registre CIFER per a instal·lacions de carn i marisc sol trigar entre 3 i 8 mesos. També poden aplicar-se protocols d'accés al mercat negociats entre el govern espanyol i la Xina. Gestionem tot el procés de registre per a vosaltres.",
     "faq4q": "Quin etiquetatge cal per a la carn importada?",
@@ -890,8 +890,8 @@
     "metaTitle": "Exportació de carn a la Xina | guia GACC i sanitat"
   },
   "IndustryWine": {
-    "heroTitle": "Compliment xinès per a exportadors catalans de begudes",
-    "heroSubtitle": "L'exportació de cava, vi i begudes requereix una etiqueta xinesa correcta i registre GACC. Ajudem productors catalans amb etiquetes i importació.",
+    "heroTitle": "Conformitat amb la Xina per a cellers i exportadors de vi catalans",
+    "heroSubtitle": "Cava, Priorat, Penedès i Montsant: el consumidor xinès valora els vins de qualitat. El registre GACC, l'etiquetatge xinès i la protecció de marca obren la porta; acompanyem el vostre celler fins a la primera venda.",
     "heroCta": "Obteniu una avaluació gratuïta",
     "coverTitle": "Què cobrim per als cellers i productors catalans de begudes",
     "coverItems": "Registre GACC (CIFER) per a cellers i embotelladores, Compliment de l'etiqueta xinesa per a begudes alcohòliques (GB 10344), Registre de marques a la CNIPA, Protecció de denominacions com Priorat, Penedès i Cava, Orientació sobre aranzels i impostos d'importació, Suport al despatx i la inspecció duanera",

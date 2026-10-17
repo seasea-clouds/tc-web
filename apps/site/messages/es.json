@@ -5,7 +5,7 @@
     "heroCta": "Solicite su evaluación gratuita",
     "heroExplore": "Conozca nuestros servicios",
     "servicesTitle": "Servicios de cumplimiento para América Latina",
-    "servicesSubtitle": "Acompañamiento regulatorio completo, en español, para marcas de la región que quieren vender en China.",
+    "servicesSubtitle": "Registro, etiquetado, certificación, marca y comercio electrónico: todo lo que su producto necesita para entrar en el mercado chino, con acompañamiento en español para empresas de España y América Latina.",
     "whyTitle": "¿Por qué los exportadores latinoamericanos confían en nosotros?",
     "whySubtitle": "Su socio en China para navegar las regulaciones de importación y llevar sus productos al mercado chino.",
     "whyCard1Title": "Cobertura completa de categorías",
@@ -73,7 +73,7 @@
     },
     "trustedByTitle": "Confían en nosotros",
     "processDesc": "Seis pasos comprobados para que su marca entre a China",
-    "trustedByDesc": "Únase a los exportadores de América Latina que ya crecen en China",
+    "trustedByDesc": "Únase a las marcas españolas y latinoamericanas que ya exportan a China con nosotros",
     "metaTitle": "SinoTrade Compliance | Exportar a China: GACC, CCC y NMPA",
     "metaDescription": "Cumplimiento integral para exportar a China: registro GACC, certificación CCC, registro cosmético NMPA y etiquetado chino. La confianza de exportadores en más de 50 países.",
     "heroPortalCta": "Pruebe nuestro autodiagnóstico de cumplimiento en 3 pasos →"
@@ -159,7 +159,7 @@
     "metaDescription": "Cumplimiento integral para su entrada en el mercado chino: registro alimentario GACC, certificación CCC, registro cosmético NMPA, etiquetado chino y protección de marca. 15+ años."
   },
   "ServiceGacc": {
-    "heroTitle": "Registro GACC para exportadores latinoamericanos",
+    "heroTitle": "Registro GACC para exportadores de alimentos de España y América Latina",
     "heroSubtitle": "¿Exporta alimentos a China? El Decreto 280 exige que cada fabricante extranjero se registre ante la GACC antes de su primer envío. Nos ocupamos de todo su registro CIFER y mantenemos sus exportaciones en marcha.",
     "cta": "Obtenga una evaluación gratuita del registro",
     "coverTitle": "Nuestros servicios para productores de alimentos latinoamericanos",
@@ -208,7 +208,7 @@
     "metaDescription": "Registro GACC de alimentos para exportadores latinoamericanos. El Decreto 280 exige registro ante la GACC para exportar a China. Gestión completa del CIFER."
   },
   "ServiceLabel": {
-    "heroTitle": "Conformidad de etiquetas chinas para productos latinoamericanos",
+    "heroTitle": "Etiquetado chino para productos de España y América Latina",
     "heroSubtitle": "Aguacate, café, frutas, vino y alimentos procesados: sus productos latinoamericanos son apreciados en China, pero la aduana exige etiquetas conforme a GB 7718-2025 y GB 28050-2025. Verificamos, corregimos y diseñamos etiquetas conformes para sus productos.",
     "cta": "Obtenga una revisión gratuita de etiquetas",
     "coverTitle": "Nuestros servicios de cumplimiento de etiquetas",
@@ -255,7 +255,7 @@
     "metaDescription": "Conformidad de etiquetas para el mercado chino: GB 7718-2025, GB 28050-2025. Verificación, diseño y despacho aduanero para exportadores latinoamericanos."
   },
   "ServiceCcc": {
-    "heroTitle": "Certificación CCC para fabricantes latinoamericanos",
+    "heroTitle": "Certificación CCC para fabricantes de España y América Latina",
     "heroSubtitle": "De componentes electrónicos a electrodomésticos: la certificación CCC es obligatoria para vender en China. Para fabricantes latinoamericanos de electrónica, gestionamos todo el proceso: pruebas, auditoría de fábrica y emisión del certificado.",
     "cta": "Obtenga una evaluación gratuita",
     "coverTitle": "Nuestros servicios para fabricantes latinoamericanos",
@@ -286,7 +286,7 @@
     "howtoStep2Name": "Seleccionar un organismo de certificación designado",
     "howtoStep2Text": "Elija un organismo aprobado por la CNCA autorizado para probar y certificar su categoría de producto.",
     "howtoStep3Name": "Enviar solicitud y muestras",
-    "howtoStep3Text": "Complete el formulario de solicitud y envíe muestras del producto al laboratorio de pruebas designado – organizamos el envío desde América Latina.",
+    "howtoStep3Text": "Complete el formulario de solicitud y envíe muestras del producto desde España o América Latina al laboratorio de pruebas designado.",
     "howtoStep4Name": "Auditoría de fábrica y pruebas",
     "howtoStep4Text": "Someta su planta a la inspección de fábrica y a las pruebas del producto según las normas nacionales chinas.",
     "howtoStep5Name": "Recibir el certificado CCC",
@@ -304,7 +304,7 @@
     "metaDescription": "Certificación CCC para fabricantes latinoamericanos. Pruebas, auditoría de fábrica y certificado para electrónica y electrodomésticos."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Registro NMPA de cosméticos para marcas latinoamericanas",
+    "heroTitle": "Registro NMPA de cosméticos para marcas de España y América Latina",
     "heroSubtitle": "La belleza latinoamericana – del cuidado natural a la cosmética de color – está ganando terreno en China. Pero sin registro o notificación NMPA no hay acceso al mercado. Guiamos a las marcas latinoamericanas a través de la aprobación cosmética china.",
     "cta": "Obtenga una clasificación NMPA gratuita",
     "coverTitle": "Nuestros servicios para marcas de cosméticos latinoamericanas",
@@ -353,7 +353,7 @@
     "metaDescription": "Notificación y registro NMPA para marcas de cosméticos latinoamericanas. CSAR, evaluación de seguridad y agente responsable en China."
   },
   "ServiceEcommerce": {
-    "heroTitle": "Comercio electrónico transfronterizo para marcas latinoamericanas en China",
+    "heroTitle": "Comercio electrónico transfronterizo para marcas de España y América Latina",
     "heroSubtitle": "Café, superfoods, artesanías y moda latinoamericana tienen demanda en China. Las marcas latinoamericanas pueden vender sin empresa local. Gestionamos onboarding, aduana y optimización fiscal.",
     "cta": "Obtenga una consultoría de plataforma gratuita",
     "coverTitle": "Nuestros servicios para marcas latinoamericanas",
@@ -400,7 +400,7 @@
     "metaDescription": "Comercio electrónico transfronterizo para marcas latinoamericanas: Tmall, JD y Douyin, almacén aduanero y optimización fiscal sin empresa local."
   },
   "ServiceBrand": {
-    "heroTitle": "Protección de marca para empresas latinoamericanas en China",
+    "heroTitle": "Protección de marca en China para empresas de España y América Latina",
     "heroSubtitle": "China sigue el principio de first-to-file: quien registra primero gana, incluso contra el dueño legítimo. Las marcas latinoamericanas, del café a la moda, suelen ser registradas por piratas. Registre su marca antes de que sea demasiado tarde.",
     "cta": "Obtenga una búsqueda de marca gratuita",
     "coverTitle": "Nuestros servicios de protección de marca en China",
@@ -529,7 +529,7 @@
     "heroSubtitle": "Respuestas claras para exportadores de todo el mundo: registro GACC, certificación CCC, etiquetado chino, registro cosmético NMPA y comercio electrónico transfronterizo.",
     "gaccTitle": "Registro GACC de alimentos (Decreto 280)",
     "gaccQ1": "¿Qué es el Decreto 280 de la GACC?",
-    "gaccA1": "El Decreto 280 de la GACC es la normativa china sobre el registro de fabricantes, procesadores y almacenes de alimentos extranjeros. Está en vigor desde el 1 de junio de 2026 y sustituye a los Decretos 248 y 249; el registro en CIFER es obligatorio para los alimentos enviados a China desde 2022.",
+    "gaccA1": "El Decreto 280 de la GACC es la normativa china sobre el registro de fabricantes, procesadores y almacenes de alimentos extranjeros. Está en vigor desde el 1 de junio de 2026; el registro en CIFER es obligatorio para los alimentos enviados a China desde 2022.",
     "gaccQ2": "¿Cuánto tarda el registro GACC?",
     "gaccA2": "Depende de la categoría del producto. Los de bajo riesgo se registran directamente en el sistema CIFER; los de alto riesgo (carnes, lácteos, mariscos) requieren la recomendación del gobierno a través de la autoridad sanitaria de su país, como el SENASA en Argentina o el SAG en Chile. Lo acompañamos en cada paso.",
     "gaccQ3": "¿El registro GACC es obligatorio para todos los alimentos?",
@@ -782,7 +782,7 @@
     "csarName": "CSAR (Reglamento de Administración y Supervisión de Cosméticos)",
     "csarDefinition": "CSAR es el Reglamento de Administración y Supervisión de Cosméticos de China. Regula el registro, presentación, producción e importación de cosméticos en China y exige una evaluación de la seguridad del producto y la divulgación de ingredientes.",
     "decree280Name": "Decreto 280 (Decreto de Registro GACC)",
-    "decree280Definition": "El Decreto 280 es la norma de la GACC sobre el registro de empresas extranjeras de producción alimentaria; está vigente desde el 1 de junio de 2026 y sustituye a los Decretos 248 y 249. Mantiene el régimen de registro obligatorio, fija una validez de cinco años con renovación automática y exige presentar la renovación entre 3 y 12 meses antes del vencimiento.",
+    "decree280Definition": "El Decreto 280 es la norma de la GACC sobre el registro de empresas extranjeras de producción alimentaria; está vigente desde el 1 de junio de 2026. Mantiene el régimen de registro obligatorio, fija una validez de cinco años con renovación automática y exige presentar la renovación entre 3 y 12 meses antes del vencimiento.",
     "decree243Name": "Decreto 243 (Decreto GACC de Inocuidad de Alimentos de Importación/Exportación)",
     "decree243Definition": "El Decreto 243 es la medida administrativa del GACC para la inocuidad de alimentos importados y exportados. Establece requisitos para la gestión, el etiquetado y la trazabilidad de la seguridad alimentaria para los importadores y exportadores de alimentos en China.",
     "samrName": "SAMR (Administración Estatal de Regulación del Mercado)",
@@ -825,8 +825,8 @@
     "ctaButton": "Solicite su cotización gratuita"
   },
   "IndustryDairy": {
-    "heroTitle": "Cumplimiento en China para exportadores latinoamericanos de lácteos",
-    "heroSubtitle": "Argentina, Uruguay y Chile son grandes exportadores de lácteos a China: leche en polvo, quesos, mantequilla. La registración GACC, el etiquetado chino y el cumplimiento de importación son obligatorios. Guiamos a las industrias lácteas latinoamericanas en China.",
+    "heroTitle": "Conformidad con China para queserías y exportadores lácteos de España y América Latina",
+    "heroSubtitle": "Manchego, Idiazábal, quesos frescos y leche en polvo: la demanda china de lácteos de calidad crece. El registro GACC, el etiquetado chino y el cumplimiento en la importación son obligatorios; le acompañamos en cada paso.",
     "heroCta": "Solicite su evaluación gratuita de lácteos",
     "coverTitle": "Qué cubrimos para exportadores de lácteos de América Latina y España",
     "coverItems": "Registro GACC (Decreto 280) para plantas lácteas latinoamericanas y españolas, Cumplimiento del etiquetado chino para productos lácteos (GB 7718-2025), Orientación sobre licencias de importación para categorías lácteas, Apoyo al despacho aduanero de lácteos refrigerados y congelados, Registro SAMR de fórmulas infantiles, Monitoreo continuo del cumplimiento normativo",
@@ -858,8 +858,8 @@
     "metaTitle": "Exportar lácteos a China | Registro GACC"
   },
   "IndustryMeat": {
-    "heroTitle": "Cumplimiento en China para exportadores latinoamericanos de carnes y mariscos",
-    "heroSubtitle": "La carne argentina y brasileña, el camarón ecuatoriano y el salmón chileno son estrellas en China. Pero solo con registro GACC CIFER, etiquetado correcto y despacho aduanero. Guiamos a los productores latinoamericanos de carne y mariscos.",
+    "heroTitle": "Conformidad con China para exportadores de carne y marisco de España y América Latina",
+    "heroSubtitle": "Jamón ibérico, cerdo, vacuno, pollo y marisco: China es un mercado de alto valor con reglas de entrada exigentes. Coordinamos el registro GACC CIFER, el etiquetado y el despacho aduanero de principio a fin.",
     "heroCta": "Solicite su evaluación gratuita de carnes y mariscos",
     "coverTitle": "Qué cubrimos para exportadores de carnes y mariscos de América Latina",
     "questionsTitle": "Preguntas frecuentes sobre exportación de carnes y mariscos a China",
@@ -867,7 +867,7 @@
     "faq1q": "¿Qué es el registro CIFER?",
     "faq1a": "CIFER es el sistema en línea de la GACC para registrar a los productores de alimentos extranjeros. Las plantas de carne y mariscos de Argentina, Uruguay, Brasil, Chile y Ecuador deben registrarse antes de exportar a China, con el respaldo de su autoridad sanitaria local (SENASA, SAG y equivalentes).",
     "faq2q": "¿Qué países pueden exportar carne a China?",
-    "faq2a": "Solo los países con un acuerdo bilateral de acceso al mercado con China. Argentina, Brasil y Uruguay están autorizados para la carne bovina; Chile para cerdo y aves; Ecuador para camarón. Las restricciones cambian con cada revisión sanitaria: verificamos el estado actual de su país y su producto.",
+    "faq2a": "China abre la importación de carne y marisco mediante protocolos bilaterales negociados país a país y especie por especie. Verificamos la situación actual para porcino, vacuno, ovino y marisco de España y América Latina, y definimos los requisitos antes de empezar.",
     "faq3q": "¿Cuánto tarda el registro de productos cárnicos?",
     "faq3a": "El registro CIFER tarda generalmente de 3 a 8 meses. Según el país pueden aplicarse protocolos específicos de acceso al mercado entre su gobierno y China; coordinamos el proceso con las autoridades locales.",
     "faq4q": "¿Qué etiquetado se requiere para la carne importada?",
@@ -890,8 +890,8 @@
     "metaTitle": "Exportar carne y mariscos a China | GACC"
   },
   "IndustryWine": {
-    "heroTitle": "Cumplimiento en China para exportadores latinoamericanos de vino",
-    "heroSubtitle": "Chile y Argentina son gigantes del vino en China, beneficiados por tratados de libre comercio. Pero sin registro GACC, etiqueta china y protección de marca, el acceso al mercado sigue bloqueado. Guiamos a las bodegas latinoamericanas en China.",
+    "heroTitle": "Conformidad con China para bodegas y exportadores de vino de España y América Latina",
+    "heroSubtitle": "Rioja, Ribera del Duero, cava, Malbec y Carmenère: el consumidor chino aprecia los vinos de calidad. El registro GACC, el etiquetado chino y la protección de marca abren la puerta; guiamos a su bodega hasta la primera venta.",
     "heroCta": "Solicite su evaluación gratuita de vino",
     "coverTitle": "Qué cubrimos para bodegas de Chile, Argentina y España",
     "coverItems": "Registro GACC CIFER para bodegas y embotelladoras, Cumplimiento de etiquetas chinas para bebidas alcohólicas (GB 10344), Registro de marca en China ante la CNIPA, Orientación sobre aranceles e impuestos de importación, Requisitos de acceso al mercado por país según los TLC de Chile y Perú, Apoyo en despacho aduanero e inspección",

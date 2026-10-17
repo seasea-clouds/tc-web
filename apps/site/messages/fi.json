@@ -5,7 +5,7 @@
     "heroCta": "Hanki ilmainen arviointi",
     "heroExplore": "Tutustu palveluihin",
     "servicesTitle": "Kattavat vaatimustenmukaisuuspalvelut",
-    "servicesSubtitle": "Sääntelytukea joka vaiheessa – tuoterekisteröinnistä tulliselvitykseen.",
+    "servicesSubtitle": "Rekisteröinti, merkinnät, sertifiointi, tavaramerkki ja verkkokauppa: kaikki, mitä tuotteesi tarvitsee päästäkseen Kiinan markkinoille, suomalaisille valmistajille ja viejille räätälöitynä.",
     "whyTitle": "Miksi valita SinoTrade Compliance",
     "whySubtitle": "Luotettu kumppanisi Kiinan tuontimääräysten selvittämisessä – maitotuotteista elektroniikkaan.",
     "whyCard1Title": "Täysi tuoteryhmäkattavuus",
@@ -73,7 +73,7 @@
     },
     "trustedByTitle": "Luotetut yhteistyökumppanit",
     "processDesc": "Yksinkertainen 6-vaiheinen prosessi, jolla tuotemerkkisi saadaan Kiinaan",
-    "trustedByDesc": "Liity kansainvälisten brändien joukkoon, jotka jo kasvavat kanssamme",
+    "trustedByDesc": "Liity suomalaisten ja kansainvälisten brändien joukkoon, jotka jo vievät Kiinaan kanssamme",
     "metaTitle": "SinoTrade Compliance | Vienti Kiinaan: GACC, CCC ja NMPA",
     "metaDescription": "Täysi vaatimustenmukaisuus Kiinan-viennille: GACC-rekisteröinti, CCC-sertifiointi, NMPA-kosmetiikkailmoitus ja kiinankieliset pakkausmerkinnät. Yli 50 maan viejien luottama.",
     "heroPortalCta": "Kokeile 3-vaiheista vaatimustenmukaisuuden tarkistusta →"
@@ -159,7 +159,7 @@
     "metaDescription": "Täysi vaatimustenmukaisuus Kiinan-markkinoille: GACC-elintarvikerekisteröinti, CCC-sertifiointi, NMPA-kosmetiikkailmoitus, kiinankieliset pakkausmerkinnät ja brändinsuojaus. 15+ vuotta."
   },
   "ServiceGacc": {
-    "heroTitle": "GACC-elintarvikerekisteröinti – suomalaisille vientiyrityksille",
+    "heroTitle": "GACC-rekisteröinti suomalaisille elintarvikeviejille",
     "heroSubtitle": "Vietkö elintarvikkeita Kiinaan? Asetus 280 edellyttää jokaiselta ulkomaiselta valmistajalta GACC-rekisteröintiä ennen ensimmäistä toimitusta. Hoidamme koko CIFER-rekisteröintisi ja pidämme vientisi liikkeessä.",
     "cta": "Pyydä ilmainen rekisteröintiarviointi",
     "coverTitle": "Palvelumme suomalaisille elintarvikevalmistajille",
@@ -208,7 +208,7 @@
     "metaDescription": "GACC-rekisteröinti suomalaisille elintarvikeviejille: asetus 280, CIFER-järjestelmä, tarvittavat asiakirjat, aika. Suomeksi."
   },
   "ServiceLabel": {
-    "heroTitle": "Kiinalainen merkintävaatimus – suomalaisille tuotteille",
+    "heroTitle": "Kiinankieliset merkinnät suomalaisille tuotteille",
     "heroSubtitle": "Maahantuoduissa pakatuissa elintarvikkeissa on oltava kiinankielinen etiketti GB 7718-2025:n ja GB 28050-2025:n mukaan. Virheellinen merkintä johtaa tavaran pysäyttämiseen tullissa. Suunnittelemme ja tarkistamme etiketit.",
     "cta": "Pyydä ilmainen etikettitarkistus",
     "coverTitle": "Palvelumme etikettien vaatimustenmukaisuuteen",
@@ -255,7 +255,7 @@
     "metaDescription": "Kiinalainen merkintävaatimus suomalaisille tuotteille: GB 7718-2025, GB 28050-2025 ravintoarvotaulukko, allergeenivaroitukset."
   },
   "ServiceCcc": {
-    "heroTitle": "CCC-sertifiointi – Opas suomalaisille Kiinaan vieville yrityksille",
+    "heroTitle": "CCC-sertifiointi suomalaisille valmistajille",
     "heroSubtitle": "Kiinaan vietävät elektroniikka, kodinkoneet ja lelut vaativat CCC-sertifioinnin. CE-merkintä tai suomalainen sertifiointi ei riitä; hoidamme testauksen ja tehdasauditoinnin CNCA:n hyväksymien tahojen kanssa.",
     "cta": "Pyydä ilmainen arviointi",
     "coverTitle": "Palvelumme suomalaisille valmistajille",
@@ -286,7 +286,7 @@
     "howtoStep2Name": "Valitse nimetty sertifiointielin",
     "howtoStep2Text": "Valitse CNCA:n hyväksymä sertifiointielin, jolla on oikeus testata ja sertifioida tuoteluokkasi.",
     "howtoStep3Name": "Jätä hakemus ja lähetä näytteet",
-    "howtoStep3Text": "Täytä hakulomake ja toimita tuotenäytteet nimettyyn testauslaboratorioon – järjestämme kuljetuksen Suomesta.",
+    "howtoStep3Text": "Täytä hakulomake ja toimita tuotenäytteet Suomesta nimettyyn testauslaboratorioon.",
     "howtoStep4Name": "Tehdasauditointi ja testaus",
     "howtoStep4Text": "Suorita tehdastarkastus ja tuotetestaus Kiinan kansallisten standardien mukaisesti.",
     "howtoStep5Name": "Vastaanota CCC-sertifikaatti",
@@ -304,7 +304,7 @@
     "metaDescription": "CCC-sertifiointi suomalaisille yrityksille: ero CE-merkintään, sertifiointiprosessi, testit, tehdasauditointi, aika ja kustannus. Suomeksi."
   },
   "ServiceCosmetics": {
-    "heroTitle": "NMPA-kosmetiikkarekisteröinti – suomalaisille brändeille",
+    "heroTitle": "NMPA-kosmetiikkarekisteröinti suomalaisille brändeille",
     "heroSubtitle": "Kiinan markkinoille pääsy vaatii NMPA-ilmoituksen kosmetiikalle: ilmoitus tavallisille tuotteille ja rekisteröinti erityistuotteille, ja vastuuhenkilö Kiinassa on pakollinen. Hoidamme koko prosessin.",
     "cta": "Pyydä ilmainen NMPA-luokittelu",
     "coverTitle": "Palvelumme suomalaisille kosmetiikkabrändeille",
@@ -353,7 +353,7 @@
     "metaDescription": "NMPA-rekisteröinti suomalaisille kosmetiikkabrändeille: luokittelu, eläinkoevapautus, vastuuhenkilö Kiinassa, aika."
   },
   "ServiceEcommerce": {
-    "heroTitle": "Rajavälinen verkkokauppa – suomalaisille brändeille",
+    "heroTitle": "Rajanylittävä verkkokauppa suomalaisille brändeille Kiinassa",
     "heroSubtitle": "Myy suomalainen brändi Tmall Globalin, JD Worldwiden ja Douynin kautta: rajatylittävä verkkokauppa mahdollistaa Kiinaan pääsyn ilman paikallista yritystä. Hoidamme koko asennuksen.",
     "cta": "Pyydä ilmainen alustaneuvonta",
     "coverTitle": "Palvelumme suomalaisille brändeille",
@@ -400,7 +400,7 @@
     "metaDescription": "Suomalaiset brändit Kiinaan rajatylittävän verkkokaupan kautta: Tmall Global, JD Worldwide, CBEC-vaatimukset, logistiikka, maksut."
   },
   "ServiceBrand": {
-    "heroTitle": "Tavaramerkkirekisteröinti Kiinassa – suojaa suomalaiset brändit",
+    "heroTitle": "Tavaramerkkisuoja Kiinassa suomalaisille yrityksille",
     "heroSubtitle": "Kiina noudattaa \"ensiksi rekisteröinyt saa\" -periaatetta: Suomessa (PRH) rekisteröity tavaramerkki ei ole suojattu Kiinassa. Rekisteröi brändi CNIPA:ssa ennen markkinoille menoa estääksesi kaappauksen.",
     "cta": "Pyydä ilmainen tavaramerkkihaku",
     "coverTitle": "Palvelumme tavaramerkkisuojaukseen Kiinassa",
@@ -529,7 +529,7 @@
     "heroSubtitle": "Selkeitä vastauksia vientiyrityksille kaikkialla maailmassa — GACC-rekisteröinti, CCC-sertifiointi, kiinankieliset pakkausmerkinnät, NMPA-kosmetiikkailmoitus ja rajat ylittävä verkkokauppa.",
     "gaccTitle": "GACC-elintarvikerekisteröinti",
     "gaccQ1": "Mikä on GACC:n asetus 280?",
-    "gaccA1": "GACC:n asetus 280 on Kiinan sääntely ulkomaisten elintarvikkeiden valmistajien, jalostajien ja varastojen rekisteröinnistä. Se on ollut voimassa 1.6.2026 alkaen ja korvaa asetukset 248 ja 249; CIFER-rekisteröinti on ollut pakollinen Kiinaan vietäville elintarvikkeille vuodesta 2022.",
+    "gaccA1": "GACC:n asetus 280 on Kiinan sääntely ulkomaisten elintarvikkeiden valmistajien, jalostajien ja varastojen rekisteröinnistä. Se on ollut voimassa 1.6.2026 alkaen; CIFER-rekisteröinti on ollut pakollinen Kiinaan vietäville elintarvikkeille vuodesta 2022.",
     "gaccQ2": "Kuinka kauan GACC-rekisteröinti kestää tuotteilleni?",
     "gaccA2": "Se riippuu tuoteryhmästäsi. Matalan riskin tuotteet voidaan rekisteröidä suoraan CIFER-järjestelmässä. Korkean riskin tuotteet – kuten maitotuotteet, liha ja kala – edellyttävät kotimaasi toimivaltaisen viranomaisen suositusta (Suomessa Ruokavirasto). Hoidamme koko prosessin puolestasi.",
     "gaccQ3": "Onko GACC-rekisteröinti todella pakollinen jokaiselle elintarvikkeelle?",
@@ -782,7 +782,7 @@
     "csarName": "CSAR (kosmeettisten tuotteiden valvonta- ja hallintosäännöstö)",
     "csarDefinition": "CSAR on Kiinan kosmetiikan valvonta- ja hallintoasetus. Se säätelee kosmetiikan rekisteröintiä, arkistointia, tuotantoa ja tuontia Kiinaan, mikä edellyttää tuoteturvallisuusarviointia ja ainesosien paljastamista.",
     "decree280Name": "Asetus 280 (GACC:n rekisteröintiasetus)",
-    "decree280Definition": "Asetus 280 on GACC:n säädös ulkomaisten elintarvikkeiden tuotantoyritysten rekisteröinnistä; se on ollut voimassa 1.6.2026 alkaen ja korvaa asetukset 248 ja 249. Se säilyttää pakollisen rekisteröinnin, vahvistaa viiden vuoden voimassaolon automaattisine uusimisineen ja edellyttää uusimishakemus 3–12 kuukautta ennen päättymistä.",
+    "decree280Definition": "Asetus 280 on GACC:n säädös ulkomaisten elintarvikkeiden tuotantoyritysten rekisteröinnistä; se on ollut voimassa 1.6.2026 alkaen. Se säilyttää pakollisen rekisteröinnin, vahvistaa viiden vuoden voimassaolon automaattisine uusimisineen ja edellyttää uusimishakemus 3–12 kuukautta ennen päättymistä.",
     "decree243Name": "Asetus 243 (GACC:n tuonti-/vientielintarviketurvallisuusasetus)",
     "decree243Definition": "Asetus 243 on GACC:n hallinnollinen toimenpide tuonti- ja vientielintarvikkeiden turvallisuuden varmistamiseksi. Se asettaa vaatimuksia elintarviketurvallisuuden hallinnasta, merkinnöistä ja jäljitettävyydestä elintarviketuojille ja viejille Kiinassa.",
     "samrName": "SAMR (State Administration for Market Regulation)",
@@ -825,8 +825,8 @@
     "ctaButton": "Hanki ilmainen tarjous"
   },
   "IndustryDairy": {
-    "heroTitle": "Kiina-vaatimustenmukaisuus suomalaisille meijeriviejille",
-    "heroSubtitle": "Maidon, juuston ja jogurtin vienti Kiinaan vaatii GACC-rekisteröinnin. Hoidamme rekisteröinnin ja etiketit suomalaisille meijereille.",
+    "heroTitle": "Kiina-vaatimustenmukaisuus suomalaisille meijereille ja meijerituotteiden viejille",
+    "heroSubtitle": "Juustot, voi, kerma ja maitojauhe: kiinalaisten kysyntä laadukkaille meijerituotteille kasvaa. GACC-rekisteröinti, kiinankieliset merkinnät ja maahantuonnin vaatimustenmukaisuus ovat pakollisia; kuljemme kanssanne jokaisen vaiheen.",
     "heroCta": "Hanki ilmainen GACC-arviointi meijerillesi",
     "coverTitle": "Mitä tarjoamme meijeriviejille",
     "coverItems": "GACC:n asetus 280 -rekisteröinti meijerilaitoksille,Kiinalaisten merkintöjen vaatimustenmukaisuus maitotuotteille (GB 7718-2025, GB 28050-2025),Tuontilisenssiohjaus maitotuoteluokille,Tulliselvitystuki jäähdytetyille ja pakastetuille maitotuotteille,Äidinmaidonkorvikkeen SAMR-kaavarekisteröinti,Jatkuva sääntelyn seuranta",
@@ -858,8 +858,8 @@
     "metaTitle": "Maitotuotteet Kiinaan | Opas GACC-rekisteröinti"
   },
   "IndustryMeat": {
-    "heroTitle": "Kiina-vaatimustenmukaisuus suomalaisille kalaviejille",
-    "heroSubtitle": "Kalan vienti Suomesta Kiinaan vaatii GACC-rekisteröinnin ja karanteenitarkastukset. Hoidamme rekisteröinnin ja terveystodistukset suomalaisille laitoksille.",
+    "heroTitle": "Kiina-vaatimustenmukaisuus suomalaisille lihan ja kalan viejille",
+    "heroSubtitle": "Sianliha, naudanliha, siipikarja ja kala: Kiina on korkean arvon markkina, jolla on tiukat tulovaatimukset. Koordinoimme GACC CIFER -rekisteröinnin, merkinnät ja tulliselvityksen alusta loppuun.",
     "heroCta": "Hanki ilmainen markkinoillepääsyarviointi",
     "coverTitle": "Palveluvalikoimamme lihan ja äyriäisten viejille",
     "questionsTitle": "Usein kysytyt kysymykset lihan ja äyriäisten viennistä Kiinaan",
@@ -867,7 +867,7 @@
     "faq1q": "Mitä CIFER-rekisteröinti tarkoittaa?",
     "faq1a": "CIFER on Kiinan verkkojärjestelmä ulkomaisten elintarviketuottajien rekisteröintiin. Kaikkien liha- ja äyriäislaitosten – suomalaisista sikatiloista kalastamoihin ja poroteurastamoihin – on rekisteröidyttävä CIFERissä ennen vientiä Kiinaan.",
     "faq2q": "Mitkä maat saavat viedä lihaa Kiinaan?",
-    "faq2a": "Vain maat, joilla on kahdenvälinen markkinoillepääsysopimus Kiinan kanssa, voivat viedä lihaa. Suomella on markkinoillepääsy sianlihalle, ja käytännöt muuttuvat ajan myötä – tarkistamme aina ajantasaisen tilanteen juuri sinun tuotteellesi, myös poronlihan kaltaisille pohjoisille erikoisuuksille.",
+    "faq2a": "Kiina avaa lihan ja merenelävien tuonnin kahdenvälisillä protokollilla, joista neuvotellaan maa- ja lajikohtaisesti. Tarkistamme sianlihan, naudanlihan, siipikarjan ja kalan nykytilan Suomesta ja listaamme vaatimukset ennen aloitusta.",
     "faq3q": "Kuinka kauan lihaviennin rekisteröinti tyypillisesti kestää?",
     "faq3a": "CIFER-rekisteröinti kestää tyypillisesti 3-8 kuukautta. Lisäksi Suomen ja Kiinan väliset maakohtaiset markkinoillepääsyprotokollat voivat vaikuttaa aikatauluun. Suunnittelemme markkinoilletulon aikataulusi kokonaisuudessaan.",
     "faq4q": "Mitä merkintöjä Kiina edellyttää tuontilihan pakkauksiin?",
@@ -975,8 +975,8 @@
     "metaTitle": "Lemmikkieläinten ruoka Kiinaan | Opas GACC-rekisteröinti"
   },
   "IndustrySupplements": {
-    "heroTitle": "Kiina-vaatimustenmukaisuus suomalaisille ravintolisäviejille",
-    "heroSubtitle": "Ravintolisät, joissa on terveysväittämiä, vaativat SAMR-rekisteröinnin. Hoidamme tuontiprosessin vitamiini- ja probioottivalmistajille.",
+    "heroTitle": "Kiina-vaatimustenmukaisuus suomalaisille ravintolisien valmistajille",
+    "heroSubtitle": "Vitaamiinit, omega-3 ja luonnonuutteet: kiinalaiset kuluttajat arvostavat dokumentoituja raaka-aineita. Hoidamme GACC-rekisteröinnin siltä osin kuin se koskee, NMPA-vaatimukset ja kiinankieliset merkinnät.",
     "heroCta": "Hanki ilmainen luokitteluarviointi tuotteellesi",
     "coverTitle": "Palveluvalikoimamme terveys- ja lisäravinteiden viejille",
     "coverItems": "SAMR-terveysruokien rekisteröinti ja ilmoitus,Yleisten elintarvikkeiden luokitteluohjeet lisäravinteille,Kiinalaisten merkintöjen vaatimustenmukaisuus lisäravinteille,Ainesosien turvallisuusarviointi ja dokumentaatio,Tulliselvitys lisäravinnelähetyksille,Markkinoilletulostrategia terveystuotteille",

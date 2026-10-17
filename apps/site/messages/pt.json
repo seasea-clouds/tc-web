@@ -5,7 +5,7 @@
     "heroCta": "Obtenha avaliação gratuita",
     "heroExplore": "Explorar serviços",
     "servicesTitle": "Serviços abrangentes de conformidade",
-    "servicesSubtitle": "Suporte regulatório completo para marcas brasileiras que entram no mercado chinês.",
+    "servicesSubtitle": "Registo, rotulagem, certificação, marca e comércio eletrónico: tudo o que o seu produto precisa para entrar no mercado chinês, com acompanhamento em português para marcas do Brasil e de Portugal.",
     "whyTitle": "Por que exportadores brasileiros escolhem a SinoTrade Compliance",
     "whySubtitle": "O parceiro ideal para navegar pelas regulamentações de importação da China, com atendimento em português.",
     "whyCard1Title": "Cobertura completa de categorias",
@@ -73,7 +73,7 @@
     },
     "trustedByTitle": "Parceiros de confiança",
     "processDesc": "Um processo simples em 6 etapas para colocar a sua marca na China",
-    "trustedByDesc": "Junte-se a marcas internacionais que já crescem conosco",
+    "trustedByDesc": "Junte-se às marcas brasileiras e portuguesas que já exportam para a China com a nossa equipa",
     "metaTitle": "SinoTrade Compliance | Exportar para a China: GACC, CCC e NMPA",
     "metaDescription": "Conformidade completa para exportar para a China: registro GACC, certificação CCC, registro cosmético NMPA e rotulagem chinesa. A confiança de exportadores em mais de 50 países.",
     "heroPortalCta": "Experimente o nosso verificador de conformidade em três etapas →"
@@ -159,7 +159,7 @@
     "metaDescription": "Conformidade completa para a entrada no mercado chinês: registro alimentar GACC, certificação CCC, registro cosmético NMPA, rotulagem chinesa e proteção de marca. 15+ anos."
   },
   "ServiceGacc": {
-    "heroTitle": "Registro GACC para exportadores brasileiros de alimentos",
+    "heroTitle": "Registo GACC para exportadores de alimentos do Brasil e de Portugal",
     "heroSubtitle": "Exporta alimentos para a China? O Decreto 280 exige que cada fabricante estrangeiro se registre na GACC antes do primeiro embarque. Cuidamos de todo o seu registro CIFER e mantemos suas exportações em movimento.",
     "cta": "Solicite uma verificação gratuita de registro",
     "coverTitle": "Nossos serviços para produtores brasileiros de alimentos",
@@ -208,7 +208,7 @@
     "metaDescription": "Registro GACC de alimentos para exportadores brasileiros: Decreto 280, sistema CIFER e desembaraço aduaneiro — exporte para a China sem rejeição."
   },
   "ServiceLabel": {
-    "heroTitle": "Conformidade de rótulos chineses para produtos brasileiros",
+    "heroTitle": "Rotulagem chinesa para produtos do Brasil e de Portugal",
     "heroSubtitle": "Café, açúcar, sucos, carnes: os rótulos devem atender às normas GB 7718-2025 e GB 28050-2025. Criamos e verificamos rótulos chineses para produtores brasileiros.",
     "cta": "Solicite uma revisão gratuita de rótulos",
     "coverTitle": "Nossos serviços de conformidade de rótulos",
@@ -255,7 +255,7 @@
     "metaDescription": "Design e verificação de rótulos chineses para produtos alimentícios brasileiros: GB 7718-2025, GB 28050-2025, tabela nutricional. Evite recusas na alfândega."
   },
   "ServiceCcc": {
-    "heroTitle": "Certificação CCC para exportadores brasileiros",
+    "heroTitle": "Certificação CCC para fabricantes do Brasil e de Portugal",
     "heroSubtitle": "Eletrônicos, eletrodomésticos, brinquedos: a certificação CCC é obrigatória para vender na China. O INMETRO não substitui o CCC — organizamos testes e auditorias para fabricantes brasileiros.",
     "cta": "Solicite uma avaliação gratuita",
     "coverTitle": "Nossos serviços para fabricantes brasileiros",
@@ -286,7 +286,7 @@
     "howtoStep2Name": "Escolher um organismo de certificação designado",
     "howtoStep2Text": "Escolha um organismo aprovado pela CNCA, autorizado a ensaiar e certificar a sua categoria de produto.",
     "howtoStep3Name": "Enviar inscrição e amostras",
-    "howtoStep3Text": "Preencha o formulário de inscrição e envie amostras do produto ao laboratório de ensaios designado – organizamos o envio a partir do Brasil.",
+    "howtoStep3Text": "Preencha o formulário de inscrição e envie as amostras do produto do Brasil ou de Portugal ao laboratório de ensaios designado.",
     "howtoStep4Name": "Auditoria de fábrica e ensaios",
     "howtoStep4Text": "Passe pela inspeção de fábrica e pelos ensaios do produto conforme as normas nacionais chinesas.",
     "howtoStep5Name": "Receber o certificado CCC",
@@ -304,7 +304,7 @@
     "metaDescription": "Certificação CCC para fabricantes brasileiros: marca CCC, testes, auditoria de fábrica e aprovação rápida. Diferenças em relação ao INMETRO."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Registro de cosméticos NMPA para marcas brasileiras",
+    "heroTitle": "Registo NMPA de cosméticos para marcas do Brasil e de Portugal",
     "heroSubtitle": "A beleza brasileira (cabelos, skincare, produtos naturais) conquista a China. Conduzimos o registro e a notificação NMPA para seus produtos.",
     "cta": "Solicite uma classificação NMPA gratuita",
     "coverTitle": "Nossos serviços para marcas brasileiras de beleza",
@@ -353,7 +353,7 @@
     "metaDescription": "Registro e notificação NMPA de cosméticos para marcas brasileiras: categorização, testes e pessoa responsável na China. Venda com conformidade CSAR."
   },
   "ServiceEcommerce": {
-    "heroTitle": "E-commerce transfronteiriço para marcas brasileiras",
+    "heroTitle": "Comércio eletrónico transfronteiriço para marcas do Brasil e de Portugal",
     "heroSubtitle": "Tmall Global, JD Worldwide, Douyin: lance sua marca brasileira para consumidores chineses. Café, cosméticos, alimentos — gerenciamos toda a configuração.",
     "cta": "Solicite uma consultoria gratuita de plataforma",
     "coverTitle": "Nossos serviços para marcas brasileiras",
@@ -400,7 +400,7 @@
     "metaDescription": "E-commerce transfronteiriço para marcas brasileiras: Tmall, JD e Douyin, conformidade CBEC, logística e otimização fiscal — venda na China sem entidade local."
   },
   "ServiceBrand": {
-    "heroTitle": "Registro de marca na China para empresas brasileiras",
+    "heroTitle": "Proteção de marca na China para empresas do Brasil e de Portugal",
     "heroSubtitle": "Marcas brasileiras (alimentos, café, cosméticos) crescem na China. Registre sua marca na CNIPA e proteja-se contra a apropriação indevida.",
     "cta": "Solicite uma busca gratuita de marca",
     "coverTitle": "Nossos serviços de proteção de marca na China",
@@ -529,7 +529,7 @@
     "heroSubtitle": "Respostas diretas para exportadores de todo o mundo — registro GACC, certificação CCC, rotulagem chinesa, registro cosmético NMPA e comércio eletrônico transfronteiriço.",
     "gaccTitle": "Registro GACC de alimentos",
     "gaccQ1": "O que é o Decreto 280 da GACC?",
-    "gaccA1": "O Decreto 280 da GACC é a norma chinesa sobre o registro de fabricantes, processadores e armazéns de alimentos estrangeiros. Está em vigor desde 1 de junho de 2026 e substitui os Decretos 248 e 249; o registro via CIFER é obrigatório para alimentos enviados à China desde 2022.",
+    "gaccA1": "O Decreto 280 da GACC é a norma chinesa sobre o registro de fabricantes, processadores e armazéns de alimentos estrangeiros. Está em vigor desde 1 de junho de 2026; o registro via CIFER é obrigatório para alimentos enviados à China desde 2022.",
     "gaccQ2": "Quanto tempo demora o registro no GACC?",
     "gaccA2": "O prazo varia conforme a categoria do produto. Produtos de baixo risco podem ser registrados diretamente no CIFER. Produtos de alto risco exigem recomendação do governo por meio da autoridade competente do seu país — no caso do Brasil, o MAPA. Orientamos você em cada etapa do processo.",
     "gaccQ3": "O registro GACC é obrigatório para todos os alimentos?",
@@ -782,7 +782,7 @@
     "csarName": "CSAR (Regulamento de Supervisão e Administração de Cosméticos)",
     "csarDefinition": "CSAR é o Regulamento de Supervisão e Administração de Cosméticos da China. Ela rege o registro, arquivamento, produção e importação de cosméticos na China, exigindo avaliação de segurança do produto e divulgação de ingredientes.",
     "decree280Name": "Decreto 280 (Decreto de Registro GACC)",
-    "decree280Definition": "O Decreto 280 é o regulamento da GACC sobre o registro de empresas estrangeiras de produção de alimentos; está em vigor desde 1º de junho de 2026 e substitui os Decretos 248 e 249. Mantém o regime de registro obrigatório, define validade de cinco anos com renovação automática e exige o pedido de renovação de 3 a 12 meses antes do vencimento.",
+    "decree280Definition": "O Decreto 280 é o regulamento da GACC sobre o registro de empresas estrangeiras de produção de alimentos; está em vigor desde 1º de junho de 2026. Mantém o regime de registro obrigatório, define validade de cinco anos com renovação automática e exige o pedido de renovação de 3 a 12 meses antes do vencimento.",
     "decree243Name": "Decreto 243 (Decreto de Segurança Alimentar de Importação/Exportação do GACC)",
     "decree243Definition": "O Decreto 243 é a medida administrativa do GACC para a segurança de alimentos importados e exportados. Estabelece requisitos para gestão, rotulagem e rastreabilidade da segurança alimentar para importadores e exportadores de alimentos na China.",
     "samrName": "SAMR (Administração Estatal de Regulação do Mercado)",
@@ -825,8 +825,8 @@
     "ctaButton": "Obtenha um orçamento gratuito"
   },
   "IndustryDairy": {
-    "heroTitle": "Conformidade na China para exportadores brasileiros de lácteos",
-    "heroSubtitle": "Leite em pó, queijos, manteiga: o Brasil expande as exportações de lácteos para a China. Conduzimos o registro GACC e os rótulos para laticínios brasileiros.",
+    "heroTitle": "Conformidade com a China para laticínios e exportadores de produtos lácteos do Brasil e de Portugal",
+    "heroSubtitle": "Queijo da Serra, queijos curados, leite em pó e manteiga: a procura chinesa por lácteos de qualidade cresce. O registo GACC, a rotulagem chinesa e o cumprimento na importação são obrigatórios; acompanhamos cada etapa.",
     "heroCta": "Obtenha avaliação gratuita",
     "coverTitle": "O que cobrimos para exportadores de laticínios",
     "coverItems": "Registro GACC (Decreto 280) para fabricantes de laticínios, Conformidade com o rótulo chinês para produtos lácteos, Orientação de licença de importação para categorias de laticínios, Apoio ao desembaraço aduaneiro para laticínios refrigerados e congelados, Registro de fórmula para leite em pó infantil, Monitoramento contínuo da conformidade regulatória",
@@ -858,8 +858,8 @@
     "metaTitle": "Exportação de lácteos brasileiros para a China | GACC"
   },
   "IndustryMeat": {
-    "heroTitle": "Exportação de carne brasileira para a China: conformidade",
-    "heroSubtitle": "Carne bovina e de frango: o Brasil é o maior exportador mundial de carne para a China. Conduzimos autorizações de exportação, registro GACC e documentos sanitários.",
+    "heroTitle": "Conformidade com a China para exportadores de carne e pescado do Brasil e de Portugal",
+    "heroSubtitle": "Carne bovina, frango, porco, bacalhau e pescado: a China é um mercado de alto valor com regras de entrada exigentes. Coordenamos o registo GACC CIFER, a rotulagem e o desembaraço aduaneiro de ponta a ponta.",
     "heroCta": "Obtenha avaliação gratuita",
     "coverTitle": "O que cobrimos para exportadores de carne e frutos do mar",
     "questionsTitle": "Perguntas frequentes sobre exportação de carne e frutos do mar",
@@ -867,7 +867,7 @@
     "faq1q": "O que é o registro CIFER?",
     "faq1a": "O CIFER é o sistema eletrônico da China para registrar fabricantes estrangeiros de alimentos. Instalações de carne e frutos do mar devem se registrar antes de exportar para a China. O MAPA (Ministério da Agricultura e Pecuária) apoia os exportadores brasileiros nesse processo.",
     "faq2q": "Quais países podem exportar carne para a China?",
-    "faq2a": "Apenas países com acordo bilateral de acesso ao mercado com a China podem exportar carne. O Brasil é o maior exportador mundial de carne bovina e um dos principais de frango, com habilitação vigente para bovinos, aves e suínos — grupos como JBS e BRF já exportam para a China. Portugal também possui acesso para determinadas espécies. As restrições mudam; verificamos a situação atual para você.",
+    "faq2a": "A China abre a importação de carne e pescado através de protocolos bilaterais negociados país a país e espécie a espécie. Verificamos a situação atual para bovinos, suínos, aves e pescado do Brasil e de Portugal e detalhamos os requisitos antes de começar.",
     "faq3q": "Quanto tempo leva o registro de produtos cárneos?",
     "faq3a": "O registro CIFER normalmente leva de 3 a 8 meses. Protocolos de acesso ao mercado entre seu governo e a China também podem se aplicar.",
     "faq4q": "Quais requisitos de rotulagem se aplicam à carne importada?",
@@ -890,8 +890,8 @@
     "metaTitle": "Exportação de carne brasileira para a China | GACC"
   },
   "IndustryWine": {
-    "heroTitle": "Exportação de vinhos do Brasil e de Portugal para a China",
-    "heroSubtitle": "Vinhos brasileiros do Vale dos Vinhedos e portugueses do Douro e Alentejo conquistam a China. Conduzimos rótulos, importação e registro GACC.",
+    "heroTitle": "Conformidade com a China para vinícolas e exportadores de vinho do Brasil e de Portugal",
+    "heroSubtitle": "Vinho do Porto, Douro, Vinho Verde e espumantes brasileiros: o consumidor chinês valoriza vinhos de qualidade. O registo GACC, a rotulagem chinesa e a proteção de marca abrem a porta; guiamos a sua vinícola até à primeira venda.",
     "heroCta": "Obtenha avaliação gratuita",
     "coverTitle": "O que cobrimos para exportadores de vinhos e destilados",
     "coverItems": "Registro GACC para produtores de vinho e destilados, Conformidade com o rótulo chinês para bebidas alcoólicas, Registro de marca registrada na China, Orientação de impostos de importação, Requisitos de acesso ao mercado específicos do país, Desembaraço aduaneiro e apoio à inspeção",

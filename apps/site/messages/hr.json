@@ -5,7 +5,7 @@
     "heroCta": "Zatražite besplatnu procjenu",
     "heroExplore": "Istražite usluge",
     "servicesTitle": "Sveobuhvatne usluge usklađenosti",
-    "servicesSubtitle": "Regulatorna podrška u svakom koraku — od registracije proizvoda do carinjenja, za hrvatske izvoznike.",
+    "servicesSubtitle": "Registracija, označavanje, certifikacija, žig i e-trgovina: sve što vaš proizvod treba za ulazak na kinesko tržište, uz podršku za hrvatske proizvođače i izvoznike.",
     "whyTitle": "Zašto odabrati SinoTrade usklađenost",
     "whySubtitle": "Vaš pouzdani partner za navigaciju u kineskim uvoznim propisima.",
     "whyCard1Title": "Potpuna pokrivenost kategorije",
@@ -73,7 +73,7 @@
     },
     "trustedByTitle": "Partneri od povjerenja",
     "processDesc": "Jednostavan postupak u 6 koraka za uvođenje vašeg brenda u Kinu",
-    "trustedByDesc": "Pridružite se međunarodnim brendovima koji već rastu s nama",
+    "trustedByDesc": "Pridružite se hrvatskim i međunarodnim brendovima koji već izvoze u Kinu s nama",
     "metaTitle": "SinoTrade Compliance | Izvoz u Kinu: GACC, CCC i NMPA",
     "metaDescription": "Cjelovita usklađenost za izvoz u Kinu: GACC registracija, CCC certifikacija, NMPA prijava kozmetike i kineske oznake. Vjeruju nam izvoznici iz više od 50 zemalja.",
     "heroPortalCta": "Isprobajte našu provjeru usklađenosti u 3 koraka →"
@@ -159,7 +159,7 @@
     "metaDescription": "Cjelovita usklađenost za ulazak na kinesko tržište: GACC registracija hrane, CCC certifikacija, NMPA prijava kozmetike, kineske oznake i zaštita marke. Više od 15 godina iskustva."
   },
   "ServiceGacc": {
-    "heroTitle": "GACC registracija hrane – za hrvatske izvoznike",
+    "heroTitle": "GACC registracija za hrvatske izvoznike hrane",
     "heroSubtitle": "Izvozite hranu u Kinu? Uredba 280 zahtijeva da se svaki strani proizvođač registrira kod GACC-a prije prve pošiljke. Vodimo cijelu vašu CIFER registraciju i održavamo izvoz u tijeku.",
     "cta": "Dobijte besplatnu procjenu registracije",
     "coverTitle": "Naše usluge za hrvatske izvoznike hrane",
@@ -208,7 +208,7 @@
     "metaDescription": "GACC registracija za hrvatske izvoznike hrane: Uredba 280, sustav CIFER, potrebni dokumenti, vrijeme. Podrška na hrvatskom."
   },
   "ServiceLabel": {
-    "heroTitle": "Kineski zahtjevi za označavanje – za hrvatske proizvode",
+    "heroTitle": "Kineske oznake za hrvatske proizvode",
     "heroSubtitle": "Uvezena pakirana hrana mora imati kinesku etiketu prema GB 7718-2025 i GB 28050-2025. Pogrešno označavanje dovodi do zadržavanja robe na carini. Dizajniramo i provjeravamo etikete.",
     "cta": "Dobijte besplatnu provjeru oznake",
     "coverTitle": "Naše usluge za usklađenost oznaka",
@@ -255,7 +255,7 @@
     "metaDescription": "Kineski zahtjevi za označavanje za hrvatske proizvode: GB 7718-2025, GB 28050-2025 tablica hranjivosti, upozorenja o alergenima."
   },
   "ServiceCcc": {
-    "heroTitle": "CCC certifikat – vodič za izvoz u Kinu za hrvatske proizvođače",
+    "heroTitle": "CCC certifikacija za hrvatske proizvođače",
     "heroSubtitle": "Elektronika, kućanski aparati i igračke koji se izvoze u Kinu moraju imati CCC certifikat. CE oznaka ili hrvatska certifikacija nisu dovoljni; organiziramo ispitivanja i reviziju tvornice kod tijela akreditiranih od CNCA.",
     "cta": "Dobijte besplatnu CCC procjenu",
     "coverTitle": "Naše usluge za hrvatske proizvođače",
@@ -286,7 +286,7 @@
     "howtoStep2Name": "Odaberite imenovano certifikacijsko tijelo",
     "howtoStep2Text": "Odaberite tijelo koje je odobrio CNCA i ovlašteno za ispitivanje i certifikaciju vaše kategorije proizvoda.",
     "howtoStep3Name": "Podnesite zahtjev i uzorke",
-    "howtoStep3Text": "Ispunite obrazac zahtjeva i pošaljite uzorke proizvoda u određeni ispitni laboratorij — organiziramo otpremu iz Hrvatske.",
+    "howtoStep3Text": "Ispunite obrazac zahtjeva i pošaljite uzorke proizvoda iz Hrvatske u određeni ispitni laboratorij.",
     "howtoStep4Name": "Tvornička revizija i ispitivanje",
     "howtoStep4Text": "Provedite tvorničku reviziju i ispitivanje proizvoda prema kineskim nacionalnim standardima.",
     "howtoStep5Name": "Primite CCC certifikat",
@@ -304,7 +304,7 @@
     "metaDescription": "CCC certifikat za hrvatske proizvođače: razlika od CE, proces certificiranja, ispitivanja, revizija tvornice, vrijeme i trošak. Podrška na hrvatskom."
   },
   "ServiceCosmetics": {
-    "heroTitle": "NMPA registracija kozmetike – za hrvatske brendove",
+    "heroTitle": "NMPA registracija kozmetike za hrvatske brendove",
     "heroSubtitle": "Ulazak na kinesko tržište zahtijeva NMPA obavijest za kozmetiku: obavijest za obične proizvode i registraciju za posebne, s odgovornom osobom u Kini. Vodimo cijeli proces.",
     "cta": "Dobijte besplatnu NMPA procjenu",
     "coverTitle": "Naše usluge za hrvatske kozmetičke brendove",
@@ -353,7 +353,7 @@
     "metaDescription": "NMPA registracija za hrvatske kozmetičke brendove: klasifikacija, oslobađanje od testiranja na životinjama, odgovorna osoba u Kini, vrijeme."
   },
   "ServiceEcommerce": {
-    "heroTitle": "Prekogranična e-trgovina – za hrvatske brendove",
+    "heroTitle": "Prekogranična e-trgovina za hrvatske brendove u Kini",
     "heroSubtitle": "Prodajte svoj hrvatski brend putem Tmall Global, JD Worldwide i Douyin: prekogranični kanali omogućuju ulazak u Kinu bez lokalne tvrtke. Osiguravamo potpuno postavljanje.",
     "cta": "Dobijte besplatno savjetovanje o platformi",
     "coverTitle": "Naše usluge za hrvatske brendove",
@@ -400,7 +400,7 @@
     "metaDescription": "Hrvatski brendovi u Kini putem prekogranične e-trgovine: Tmall Global, JD Worldwide, usklađenost CBEC, logistika, plaćanja."
   },
   "ServiceBrand": {
-    "heroTitle": "Registracija žiga u Kini – zaštita hrvatskih brendova",
+    "heroTitle": "Zaštita žiga u Kini za hrvatske tvrtke",
     "heroSubtitle": "Kina primjenjuje načelo \"tko prvi registrira\": žig registriran u Hrvatskoj (DZIV) nije zaštićen u Kini. Registrirajte brend kod CNIPA prije ulaska na tržište kako biste izbjegli prisvajanje.",
     "cta": "Dobijte besplatnu pretragu žigova",
     "coverTitle": "Naše usluge za zaštitu brenda u Kini",
@@ -529,7 +529,7 @@
     "heroSubtitle": "Jasni odgovori za izvoznike diljem svijeta — GACC registracija, CCC certifikacija, kineske oznake, NMPA prijava kozmetike i prekogranična e-trgovina.",
     "gaccTitle": "GACC registracija hrane",
     "gaccQ1": "Što je GACC Dekret 280?",
-    "gaccA1": "Uredba GACC br. 280 kineski je propis o registraciji stranih proizvođača, prerađivača i skladišta hrane. Primjenjuje se od 1. lipnja 2026. i zamjenjuje uredbe 248 i 249; registracija putem sustava CIFER obvezna je za hranu poslanu u Kinu od 2022.",
+    "gaccA1": "Uredba GACC br. 280 kineski je propis o registraciji stranih proizvođača, prerađivača i skladišta hrane. Primjenjuje se od 1. lipnja 2026. Registracija putem sustava CIFER obvezna je za hranu poslanu u Kinu od 2022.",
     "gaccQ2": "Koliko traje GACC registracija za moje proizvode?",
     "gaccA2": "Ovisi o kategoriji proizvoda. Proizvodi niskog rizika — poput maslinovog ulja i vina — mogu se registrirati izravno putem CIFER-a. Proizvodi visokog rizika, poput mliječnih proizvoda, mesa i morskih plodova, zahtijevaju preporuku nadležnog tijela vaše zemlje (primjerice Ministarstva poljoprivrede u Hrvatskoj). Cijeli proces vodimo umjesto vas.",
     "gaccQ3": "Je li GACC registracija doista obvezna za svaki prehrambeni proizvod?",
@@ -782,7 +782,7 @@
     "csarName": "CSAR (Uredba o nadzoru i administraciji kozmetike)",
     "csarDefinition": "CSAR je kineska Uredba o nadzoru i administraciji kozmetike. Uređuje registraciju, arhiviranje, proizvodnju i uvoz kozmetike u Kini, zahtijevajući procjenu sigurnosti proizvoda i otkrivanje sastojaka.",
     "decree280Name": "Dekret 280 (GACC Dekret o registraciji)",
-    "decree280Definition": "Uredba 280 je GACC-ov propis o registraciji stranih poduzeća za proizvodnju hrane; na snazi je od 1. lipnja 2026. i zamjenjuje uredbe 248 i 249. Zadržava obveznu registraciju, utvrđuje valjanost od pet godina s automatskim produljenjem i zahtijeva podnošenje zahtjeva 3 do 12 mjeseci prije isteka.",
+    "decree280Definition": "Uredba 280 je GACC-ov propis o registraciji stranih poduzeća za proizvodnju hrane; na snazi je od 1. lipnja 2026. Zadržava obveznu registraciju, utvrđuje valjanost od pet godina s automatskim produljenjem i zahtijeva podnošenje zahtjeva 3 do 12 mjeseci prije isteka.",
     "decree243Name": "Uredba 243 (GACC Uredba o sigurnosti hrane za uvoz/izvoz)",
     "decree243Definition": "Dekret 243 administrativna je mjera GACC-a za sigurnost uvezene i izvezene hrane. Postavlja zahtjeve za upravljanje sigurnošću hrane, označavanje i sljedivost za uvoznike i izvoznike hrane u Kini.",
     "samrName": "SAMR (Državna uprava za regulaciju tržišta)",
@@ -825,8 +825,8 @@
     "ctaButton": "Zatražite besplatnu ponudu"
   },
   "IndustryDairy": {
-    "heroTitle": "Usklađenost s Kinom za hrvatske izvoznike mliječnih proizvoda",
-    "heroSubtitle": "Izvoz mlijeka, sira i jogurta u Kinu zahtijeva GACC registraciju. Vodimo registraciju i etikete za hrvatske mljekare.",
+    "heroTitle": "Usklađenost s Kinom za hrvatske mljekare i izvoznike mliječnih proizvoda",
+    "heroSubtitle": "Paški sir, svježi sir, maslac i mlijeko u prahu: potražnja za kvalitetnim mliječnim proizvodima u Kini raste. GACC registracija, kineske oznake i usklađenost pri uvozu obvezni su; vodimo vas kroz svaki korak.",
     "heroCta": "Dobijte besplatnu procjenu",
     "coverTitle": "Što radimo za hrvatske izvoznike mliječnih proizvoda",
     "coverItems": "GACC registracija prema Uredbi 280 za hrvatske proizvođače mliječnih proizvoda, usklađenost kineskih oznaka za mlijeko, sir i jogurt, smjernice za uvozne dozvole za mliječne kategorije, podrška pri carinjenju rashlađenih i smrznutih proizvoda, registracija formule za dojenčad u prahu, kontinuirano praćenje usklađenosti uz regulatorne novosti",
@@ -858,8 +858,8 @@
     "metaTitle": "Mliječni proizvodi u Kini | vodič GACC registracije"
   },
   "IndustryMeat": {
-    "heroTitle": "Usklađenost s Kinom za hrvatske izvoznike morskih plodova",
-    "heroSubtitle": "Izvoz ribe i morskih plodova u Kinu zahtijeva GACC registraciju i karantenske kontrole. Vodimo registraciju i zdravstvene potvrde za hrvatske pogone.",
+    "heroTitle": "Usklađenost s Kinom za hrvatske izvoznike mesa i morskih plodova",
+    "heroSubtitle": "Svinjetina, junetina, perad i riba: Kina je tržište visoke vrijednosti sa strogim pravilima ulaska. Koordiniramo GACC CIFER registraciju, označavanje i carinsku proceduru od početka do kraja.",
     "heroCta": "Dobijte besplatnu procjenu",
     "coverTitle": "Što radimo za izvoznike mesa i plodova mora",
     "questionsTitle": "Česta pitanja: izvoz mesa i plodova mora u Kinu",
@@ -867,7 +867,7 @@
     "faq1q": "Što je CIFER registracija i kome je potrebna?",
     "faq1a": "CIFER je kineski online sustav za registraciju inozemnih proizvođača hrane. Svi pogoni koji proizvode meso i plodove mora — uključujući hrvatske pogone za preradu ribe iz Jadrana — moraju se registrirati putem CIFER-a prije izvoza u Kinu.",
     "faq2q": "Koje zemlje smiju izvoziti meso u Kinu?",
-    "faq2a": "Samo zemlje s bilateralnim sporazumom o pristupu tržištu s Kinom mogu izvoziti meso. Hrvatska, kao članica EU-a, izvozi u okviru protokola EU-a koji pokrivaju pojedine vrste — od govedine i svinjetine do peradi. Status pristupa tržištu mijenja se tijekom vremena; provjeravamo aktualno stanje za vaše proizvode.",
+    "faq2a": "Kina otvara uvoz mesa i morskih plodova kroz bilateralne protokole koji se pregovaraju zemlja po zemlja i vrsta po vrsta. Provjeravamo trenutačni status za svinjetinu, junetinu, perad i ribu iz Hrvatske te utvrđujemo zahtjeve prije početka.",
     "faq3q": "Koliko traje registracija pogona za meso i plodove mora?",
     "faq3a": "CIFER registracija obično traje 3-8 mjeseci. Mogu se primijeniti i protokoli o pristupu tržištu specifični za zemlju, dogovoreni između vaše vlade i Kine. Vodimo cijeli postupak registracije za vas.",
     "faq4q": "Koje je označavanje potrebno za uvezeno meso?",
@@ -890,8 +890,8 @@
     "metaTitle": "Izvoz morskih plodova u Kinu | vodič GACC i karantene"
   },
   "IndustryWine": {
-    "heroTitle": "Usklađenost s Kinom za hrvatske izvoznike pića",
-    "heroSubtitle": "Izvoz vina i pića zahtijeva ispravnu kinesku etiketu i GACC registraciju. Pomažemo hrvatskim proizvođačima oko etiketa i uvoza.",
+    "heroTitle": "Usklađenost s Kinom za hrvatske vinarije i izvoznike vina",
+    "heroSubtitle": "Graševina, Plavac mali i pjenušci: kineski potrošači cijene kvalitetna vina. GACC registracija, kineske oznake i zaštita žiga otvaraju vrata; pratimo vašu vinariju do prve prodaje.",
     "heroCta": "Dobijte besplatnu procjenu",
     "coverTitle": "Što radimo za izvoznike vina i alkoholnih pića",
     "coverItems": "GACC registracija za proizvođače vina i jakih alkoholnih pića, usklađenost kineskih etiketa za alkoholna pića, registracija zaštitnog znaka u Kini, smjernice za uvozne carine i poreze, zahtjevi za pristup tržištu specifični za pojedinu zemlju, podrška pri carinjenju i inspekciji",

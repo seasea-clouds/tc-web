@@ -5,7 +5,7 @@
     "heroCta": "Begär kostnadsfri bedömning",
     "heroExplore": "Utforska tjänster",
     "servicesTitle": "Omfattande efterlevnadstjänster för den kinesiska marknaden",
-    "servicesSubtitle": "Regulatoriskt stöd i varje steg – från produktregistrering till tullklarering.",
+    "servicesSubtitle": "Registrering, märkning, certifiering, varumärke och e-handel: allt din produkt behöver för att nå den kinesiska marknaden, anpassat för svenska tillverkare och exportörer.",
     "whyTitle": "Varför välja SinoTrade Compliance",
     "whySubtitle": "Din pålitliga partner för att navigera i Kinas importregler.",
     "whyCard1Title": "Komplett kategoritäckning",
@@ -73,7 +73,7 @@
     },
     "trustedByTitle": "Betrodda partners",
     "processDesc": "En enkel 6-stegsprocess för att få ditt varumärke till Kina",
-    "trustedByDesc": "Anslut till internationella varumärken som redan växer med oss",
+    "trustedByDesc": "Anslut till svenska och internationella varumärken som redan exporterar till Kina med oss",
     "metaTitle": "SinoTrade Compliance | Export till Kina: GACC, CCC och NMPA",
     "metaDescription": "Compliance hela vägen för din export till Kina: GACC-registrering, CCC-certifiering, NMPA-anmälan för kosmetika och kinesisk märkning. Betrodd av exportörer i över 50 länder.",
     "heroPortalCta": "Prova vår 3-stegs efterlevnadskontroll →"
@@ -159,7 +159,7 @@
     "metaDescription": "Compliance hela vägen för din etablering i Kina: GACC-registrering av livsmedel, CCC-certifiering, NMPA-anmälan för kosmetika, kinesisk märkning och varumärkesskydd. 15+ år."
   },
   "ServiceGacc": {
-    "heroTitle": "GACC-livsmedelsregistrering – för svenska exportörer",
+    "heroTitle": "GACC-registrering för svenska livsmedelsexportörer",
     "heroSubtitle": "Exporterar du livsmedel till Kina? Dekret 280 kräver att varje utländsk tillverkare registrerar sig hos GACC före första sändningen. Vi sköter hela din CIFER-registrering och håller exporten igång.",
     "cta": "Begär kostnadsfri registreringsbedömning",
     "coverTitle": "Våra tjänster för svenska livsmedelsproducenter",
@@ -208,7 +208,7 @@
     "metaDescription": "GACC-registrering för svenska livsmedelsexportörer: förordning 280, CIFER-systemet, nödvändiga handlingar, tidsåtgång. Support på svenska."
   },
   "ServiceLabel": {
-    "heroTitle": "Kinesisk märkningskompatibilitet – för svenska produkter",
+    "heroTitle": "Kinesisk märkning för svenska produkter",
     "heroSubtitle": "Importerade förpackade livsmedel måste ha en kinesisk etikett enligt GB 7718-2025 och GB 28050-2025. Felaktig märkning leder till att varor hålls kvar i tullen. Vi designar och granskar era etiketter.",
     "cta": "Begär kostnadsfri etikettgranskning",
     "coverTitle": "Våra tjänster för etiketter och märkning",
@@ -255,7 +255,7 @@
     "metaDescription": "Kinesisk märkningskompatibilitet för svenska produkter: GB 7718-2025, GB 28050-2025 näringstabell, allergenvarningar."
   },
   "ServiceCcc": {
-    "heroTitle": "CCC-certifiering – Guide för svenska exportörer till Kina",
+    "heroTitle": "CCC-certifiering för svenska tillverkare",
     "heroSubtitle": "Elektronik, hushållsapparater och leksaker som exporteras till Kina måste ha CCC-certifiering. CE-märkning eller svensk certifiering räcker inte; vi samordnar testning och fabriksrevision med CNCA-ackrediterade organ.",
     "cta": "Begär kostnadsfri bedömning",
     "coverTitle": "Våra tjänster för svenska tillverkare",
@@ -286,7 +286,7 @@
     "howtoStep2Name": "Välj certifieringsorgan",
     "howtoStep2Text": "Välj ett av CNCA godkänt certifieringsorgan som har rätt att testa och certifiera er produktkategori.",
     "howtoStep3Name": "Lämna in ansökan och prover",
-    "howtoStep3Text": "Fyll i ansökningsformuläret och skicka produktprover till det utsedda testlaboratoriet – vi organiserar transporten från Sverige.",
+    "howtoStep3Text": "Fyll i ansökningsformuläret och skicka produktprover från Sverige till det utsedda testlaboratoriet.",
     "howtoStep4Name": "Fabriksrevision och provning",
     "howtoStep4Text": "Genomför fabriksinspektionen och produkttestningen enligt kinesiska nationella standarder.",
     "howtoStep5Name": "Få ert CCC-certifikat",
@@ -304,7 +304,7 @@
     "metaDescription": "CCC-certifiering för svenska exportörer: skillnad mot CE, certifieringsprocess, tester, fabriksrevision, tid och kostnad. Support på svenska."
   },
   "ServiceCosmetics": {
-    "heroTitle": "NMPA-kosmetikregistrering – för svenska varumärken",
+    "heroTitle": "NMPA-kosmetikregistrering för svenska varumärken",
     "heroSubtitle": "För inträde på den kinesiska marknaden krävs NMPA-anmälan för kosmetika: anmälan för vanliga produkter och registrering för särskilda produkter, med krav på ansvarig part i Kina. Vi hanterar hela processen.",
     "cta": "Begär kostnadsfri NMPA-klassificering",
     "coverTitle": "Våra tjänster för svenska kosmetikvarumärken",
@@ -353,7 +353,7 @@
     "metaDescription": "NMPA-registrering för svenska kosmetikvarumärken: klassificering, undantag från djurförsök, ansvarig part i Kina, tid."
   },
   "ServiceEcommerce": {
-    "heroTitle": "Gränsöverskridande e-handel – för svenska varumärken",
+    "heroTitle": "Gränsöverskridande e-handel för svenska varumärken i Kina",
     "heroSubtitle": "Sälj ert svenska varumärke via Tmall Global, JD Worldwide och Douyin: gränsöverskridande e-handel möjliggör inträde i Kina utan lokalt bolag. Vi sköter hela uppsättningen.",
     "cta": "Begär kostnadsfri plattformsrådgivning",
     "coverTitle": "Våra tjänster för svenska varumärken",
@@ -400,7 +400,7 @@
     "metaDescription": "Svenska varumärken in i Kina via gränsöverskridande e-handel: Tmall Global, JD Worldwide, CBEC-efterlevnad, logistik, betalning."
   },
   "ServiceBrand": {
-    "heroTitle": "Varumärkesregistrering i Kina – skydda svenska varumärken",
+    "heroTitle": "Varumärkesskydd i Kina för svenska företag",
     "heroSubtitle": "Kina tillämpar \"först till kvarn\"-principen: ett varumärke registrerat i Sverige (PRV) skyddas inte i Kina. Registrera ert varumärke hos CNIPA innan ni går in på marknaden för att undvika kapning.",
     "cta": "Begär kostnadsfri varumärkesundersökning",
     "coverTitle": "Våra tjänster för varumärkesskydd i Kina",
@@ -529,7 +529,7 @@
     "heroSubtitle": "Tydliga svar för exportörer världen över — GACC-registrering, CCC-certifiering, kinesisk märkning, NMPA-anmälan för kosmetika och gränsöverskridande e-handel.",
     "gaccTitle": "GACC-livsmedelsregistrering",
     "gaccQ1": "Vad är GACC-dekret 280?",
-    "gaccA1": "GACC:s dekret 280 är Kinas regelverk för registrering av utländska livsmedelstillverkare, -förädlare och -lager. Det gäller från 1 juni 2026 och ersätter dekret 248 och 249; registrering via CIFER har varit obligatorisk för livsmedel till Kina sedan 2022.",
+    "gaccA1": "GACC:s dekret 280 är Kinas regelverk för registrering av utländska livsmedelstillverkare, -förädlare och -lager. Det gäller från 1 juni 2026; registrering via CIFER har varit obligatorisk för livsmedel till Kina sedan 2022.",
     "gaccQ2": "Hur lång tid tar GACC-registrering för mina produkter?",
     "gaccA2": "Det beror på produktkategori. Lågriskprodukter kan registreras direkt via CIFER. Högriskprodukter – som mejeriprodukter, kött och skaldjur – kräver en rekommendation från ditt lands behöriga myndighet, exempelvis Livsmedelsverket i Sverige eller FSA i Storbritannien. Vi sköter hela processen åt dig.",
     "gaccQ3": "Är GACC-registrering verkligen obligatorisk för alla livsmedel?",
@@ -782,7 +782,7 @@
     "csarName": "CSAR (Cosmetic Supervision and Administration Regulation)",
     "csarDefinition": "CSAR är Kinas förordning om kosmetisk övervakning och administration. Det reglerar registrering, registrering, produktion och import av kosmetika i Kina, vilket kräver produktsäkerhetsbedömning och avslöjande av ingredienser.",
     "decree280Name": "Dekret 280 (GACC-registreringsdekret)",
-    "decree280Definition": "Dekret 280 är GACC:s förordning om registrering av utländska livsmedelsproducerande företag; den gäller sedan 1 juni 2026 och ersätter dekret 248 och 249. Den behåller den obligatoriska registreringen, fastställer fem års giltighet med automatisk förnyelse och kräver förnyelseansökan 3 till 12 månader före utgång.",
+    "decree280Definition": "Dekret 280 är GACC:s förordning om registrering av utländska livsmedelsproducerande företag; den gäller sedan 1 juni 2026. Den behåller den obligatoriska registreringen, fastställer fem års giltighet med automatisk förnyelse och kräver förnyelseansökan 3 till 12 månader före utgång.",
     "decree243Name": "Dekret 243 (GACC Import/Export Food Safety Decreet)",
     "decree243Definition": "Dekret 243 är GACC:s administrativa åtgärd för säkerheten för importerade och exporterade livsmedel. Den ställer krav på livsmedelssäkerhetshantering, märkning och spårbarhet för livsmedelsimportörer och exportörer i Kina.",
     "samrName": "SAMR (Statsförvaltningen för marknadsreglering)",
@@ -825,8 +825,8 @@
     "ctaButton": "Få en kostnadsfri offert"
   },
   "IndustryDairy": {
-    "heroTitle": "Kina-efterlevnad för svenska mejeriexportörer",
-    "heroSubtitle": "Export av mjölk, ost och yoghurt till Kina kräver GACC-registrering. Vi hanterar registrering och etiketter för svenska mejerier.",
+    "heroTitle": "Kinaanpassning för svenska mejerier och mejeriproduktexportörer",
+    "heroSubtitle": "Hårdost, smör, grädde och mjölkpulver: efterfrågan på kvalitetsmejeriprodukter i Kina växer. GACC-registrering, kinesisk märkning och importefterlevnad är obligatoriskt; vi följer er genom varje steg.",
     "heroCta": "Få gratis bedömning",
     "coverTitle": "Vad vi täcker för svenska mejeriexportörer",
     "coverItems": "GACC-dekret 280-registrering för mejeritillverkare, Kinesisk märkningsöverensstämmelse för mjölkprodukter (GB 7718-2025), Importlicensvägledning för mejerikategorier, Tullklarering för kylda och frysta mejeriprodukter, Formelregistrering för spädbarnsmjölkspulver (SAMR), Löpande efterlevnadsövervakning för regeländringar",
@@ -858,8 +858,8 @@
     "metaTitle": "Mejeriprodukter till Kina | Guide GACC-registrering"
   },
   "IndustryMeat": {
-    "heroTitle": "Kina-efterlevnad för svenska fiskexportörer",
-    "heroSubtitle": "Export av lax och fisk från Sverige till Kina kräver GACC-registrering och karantänkontroller. Vi hanterar registrering och hälsocertifikat för svenska anläggningar.",
+    "heroTitle": "Kinaanpassning för svenska exportörer av kött och skaldjur",
+    "heroSubtitle": "Fläsk, nöt, fågel och skaldjur: Kina är en högvärdemarknad med strikta inträdesregler. Vi samordnar GACC CIFER-registrering, märkning och tullklarering från start till mål.",
     "heroCta": "Få gratis bedömning",
     "coverTitle": "Vad vi täcker för svenska exportörer av kött och skaldjur",
     "questionsTitle": "Vanliga frågor om kött- och skaldjursexport till Kina",
@@ -867,7 +867,7 @@
     "faq1q": "Vad är CIFER-registrering?",
     "faq1a": "CIFER (China Import Food Enterprise Registration) är GACCs webbaserade system för registrering av utländska livsmedelsföretag. Alla kött- och skaldjursanläggningar, exempelvis svenska fiskberedningar som hanterar strömming och sill, måste registreras i CIFER innan export till Kina.",
     "faq2q": "Vilka länder kan exportera kött till Kina?",
-    "faq2a": "Endast länder med bilaterala marknadstillträdesavtal med Kina får exportera kött. EU-länder inklusive Sverige har marknadstillträde för vissa arter – svensk lax och strömming – med begränsningar som ändras över tid. Vi verifierar aktuell status för er.",
+    "faq2a": "Kina öppnar import av kött och skaldjur genom bilaterala protokoll som förhandlas land för land och art för art. Vi kontrollerar aktuell status för fläsk, nöt, fågel och fisk från Sverige och listar kraven innan ni börjar.",
     "faq3q": "Hur lång tid tar registrering av köttprodukter?",
     "faq3a": "CIFER-registrering tar vanligtvis 3–8 månader. Landsspecifika marknadstillträdesprotokoll mellan svenska myndigheter och Kina kan tillkomma, exempelvis hälsocertifikat för fisk och kött.",
     "faq4q": "Vilken märkning krävs för importerat kött?",
@@ -975,8 +975,8 @@
     "metaTitle": "Djurfoder till Kina | Guide GACC-registrering"
   },
   "IndustrySupplements": {
-    "heroTitle": "Kina-efterlevnad för svenska exportörer av kosttillskott",
-    "heroSubtitle": "Kosttillskott med hälsopåståenden kräver SAMR-registrering. Vi hanterar importprocessen för tillverkare av vitaminer och probiotika.",
+    "heroTitle": "Kinaanpassning för svenska tillverkare av kosttillskott",
+    "heroSubtitle": "Omega-3, vitaminer och naturliga extrakt: kinesiska konsumenter efterfrågar dokumenterade råvaror. Vi hanterar GACC-registrering där den gäller, NMPA-krav och kinesisk märkning.",
     "heroCta": "Få gratis bedömning",
     "coverTitle": "Vad vi täcker för svenska exportörer av kosttillskott",
     "coverItems": "SAMR-registrering och anmälan av hälsokost, Vägledning om klassificering som allmänt livsmedel, Kinesisk märkning av kosttillskott, Ingredienssäkerhetsbedömning och dokumentation, Tullklarering för tillskottsförsändelser, Marknadsinträdesstrategi för hälsoprodukter",

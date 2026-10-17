@@ -5,7 +5,7 @@
     "heroCta": "Få gratis vurdering",
     "heroExplore": "Utforsk tjenester",
     "servicesTitle": "Komplette samsvarstjenester for Kina",
-    "servicesSubtitle": "Fra GACC-registrering til CCC-sertifisering og NMPA-melding – komplett støtte for norske eksportører.",
+    "servicesSubtitle": "Registrering, merking, sertifisering, varemerker og e-handel: alt produktet trenger for å komme inn på det kinesiske markedet, tilpasset norske produsenter og eksportører.",
     "whyTitle": "Hvorfor velge SinoTrade Compliance",
     "whySubtitle": "Vi guider deg steg for steg gjennom Kinas importregler – fra første spørsmål til første levering.",
     "whyCard1Title": "Alle produktkategorier dekket",
@@ -73,7 +73,7 @@
     },
     "trustedByTitle": "Betrodde partnere",
     "processDesc": "En enkel 6-trinns prosess som tar merkevaren din inn i Kina",
-    "trustedByDesc": "Bli med blant merkevarene som allerede vokser i Kina sammen med oss",
+    "trustedByDesc": "Bli med blant norske og internasjonale merkevarer som allerede eksporterer til Kina med oss",
     "metaTitle": "SinoTrade Compliance | Eksport til Kina: GACC, CCC og NMPA",
     "metaDescription": "Compliance fra start til mål for eksporten din til Kina: GACC-registrering, CCC-sertifisering, NMPA-kosmetikkmelding og kinesisk merking. Betrodd av eksportører i over 50 land.",
     "heroPortalCta": "Prøv vår 3-trinns samsvarskontroll →"
@@ -159,7 +159,7 @@
     "metaDescription": "Compliance fra start til mål for din etablering i Kina: GACC-registrering av næringsmidler, CCC-sertifisering, NMPA-kosmetikkmelding, kinesisk merking og merkevarebeskyttelse. 15+ år."
   },
   "ServiceGacc": {
-    "heroTitle": "GACC-matregistrering – for norske eksportører",
+    "heroTitle": "GACC-registrering for norske matvareeksportører",
     "heroSubtitle": "Eksporterer du mat til Kina? Dekret 280 krever at hver utenlandsk produsent registrerer seg hos GACC før første forsendelse. Vi tar oss av hele CIFER-registreringen din og holder eksporten i gang.",
     "cta": "Be om gratis vurdering av registreringen",
     "coverTitle": "Våre tjenester for norske matprodusenter",
@@ -208,7 +208,7 @@
     "metaDescription": "GACC-registrering for norske mateksportører: forordning 280, CIFER-systemet, nødvendige dokumenter, tid. Støtte på norsk."
   },
   "ServiceLabel": {
-    "heroTitle": "Kinesisk merkekrav – for norske produkter",
+    "heroTitle": "Kinesisk merking for norske produkter",
     "heroSubtitle": "Importerte emballerte matvarer må ha kinesisk etikett i henhold til GB 7718-2025 og GB 28050-2025. Feil merking fører til at varer holdes i tollen. Vi designer og gjennomgår etikettene deres.",
     "cta": "Be om gratis etikettgjennomgang",
     "coverTitle": "Våre tjenester for etikettsamsvar",
@@ -255,7 +255,7 @@
     "metaDescription": "Kinesisk merking for norske produkter: GB 7718-2025, GB 28050-2025 næringstabell, allergenvarsler."
   },
   "ServiceCcc": {
-    "heroTitle": "CCC-sertifisering – Guide for norske eksportører til Kina",
+    "heroTitle": "CCC-sertifisering for norske produsenter",
     "heroSubtitle": "Elektronikk, husholdningsapparater og leker som eksporteres til Kina må ha CCC-sertifisering. CE-merking er ikke nok; vi koordinerer testing og fabrikkrevisjon med CNCA-akkrediterte organer.",
     "cta": "Be om gratis vurdering av produktet",
     "coverTitle": "Våre tjenester for norske produsenter",
@@ -286,7 +286,7 @@
     "howtoStep2Name": "Velg et utpekt sertifiseringsorgan",
     "howtoStep2Text": "Velg et CNCA-godkjent sertifiseringsorgan som har rett til å teste og sertifisere produktkategorien din.",
     "howtoStep3Name": "Send inn søknad og prøver",
-    "howtoStep3Text": "Fyll ut søknadsskjemaet og send produktprøver til det utpekte testlaboratoriet – vi organiserer frakten fra Norge.",
+    "howtoStep3Text": "Fyll ut søknadsskjemaet og send produktprøver fra Norge til det utpekte testlaboratoriet.",
     "howtoStep4Name": "Fabrikkrevisjon og testing",
     "howtoStep4Text": "Gjennomgå fabrikkinspeksjon og produkttesting mot kinesiske nasjonale standarder.",
     "howtoStep5Name": "Motta CCC-sertifikatet",
@@ -304,7 +304,7 @@
     "metaDescription": "CCC-sertifisering for norske eksportører: forskjell fra CE, sertifiseringsprosess, tester, fabrikkrevisjon, tid og kostnad. Støtte på norsk."
   },
   "ServiceCosmetics": {
-    "heroTitle": "NMPA-kosmetikkregistrering – for norske merkevarer",
+    "heroTitle": "NMPA-kosmetikkregistrering for norske merkevarer",
     "heroSubtitle": "Inntreden på det kinesiske markedet krever NMPA-melding for kosmetikk: melding for vanlige produkter og registrering for spesielle, med krav om ansvarlig part i Kina. Vi håndterer hele prosessen.",
     "cta": "Be om gratis NMPA-klassifisering",
     "coverTitle": "Våre tjenester for norske kosmetikkmerker",
@@ -353,7 +353,7 @@
     "metaDescription": "NMPA-registrering for norske kosmetikkmerker: klassifisering, unntak fra dyreforsøk, ansvarlig part i Kina, tid."
   },
   "ServiceEcommerce": {
-    "heroTitle": "Grenseoverskridende netthandel – for norske merkevarer",
+    "heroTitle": "Grensekryssende e-handel for norske merkevarer i Kina",
     "heroSubtitle": "Selg det norske merket via Tmall Global, JD Worldwide og Douyin: grenseoverskridende kanaler gir inntreden i Kina uten lokalt selskap. Vi ordner hele oppsettet.",
     "cta": "Be om gratis plattformrådgivning",
     "coverTitle": "Våre tjenester for norske merker",
@@ -400,7 +400,7 @@
     "metaDescription": "Norske merker inn i Kina via grenseoverskridende netthandel: Tmall Global, JD Worldwide, CBEC-samsvar, logistikk, betaling."
   },
   "ServiceBrand": {
-    "heroTitle": "Varemerkeregistrering i Kina – beskytt norske merkevarer",
+    "heroTitle": "Varemerkebeskyttelse i Kina for norske selskaper",
     "heroSubtitle": "Kina følger \"førstemann til mølla\"-prinsippet: et varemerke registrert i Norge (Patentstyret) beskyttes ikke i Kina. Registrer merket hos CNIPA før markedsinntreden for å unngå kapring.",
     "cta": "Be om gratis varemerkesøk",
     "coverTitle": "Våre tjenester for merkevarebeskyttelse i Kina",
@@ -529,7 +529,7 @@
     "heroSubtitle": "Tydelige svar for eksportører over hele verden — GACC-registrering, CCC-sertifisering, kinesisk merking, NMPA-kosmetikkmelding og grenseoverskridende e-handel.",
     "gaccTitle": "GACC-matregistrering",
     "gaccQ1": "Hva er GACC-dekret 280?",
-    "gaccA1": "GACC-dekret 280 er Kinas regelverk for registrering av utenlandske matvareprodusenter, -foredlere og -lagre. Det gjelder fra 1. juni 2026 og erstatter dekret 248 og 249; registrering via CIFER har vært obligatorisk for matvarer til Kina siden 2022.",
+    "gaccA1": "GACC-dekret 280 er Kinas regelverk for registrering av utenlandske matvareprodusenter, -foredlere og -lagre. Det gjelder fra 1. juni 2026; registrering via CIFER har vært obligatorisk for matvarer til Kina siden 2022.",
     "gaccQ2": "Hvor lang tid tar GACC-registrering for produktene mine?",
     "gaccA2": "Det avhenger av produktkategorien din. Lavrisikoprodukter kan registreres direkte gjennom CIFER. Høyrisikoprodukter – som meieriprodukter, kjøtt og sjømat – krever en anbefaling fra ditt lands kompetente myndighet (for norske produsenter er det Mattilsynet). Vi håndterer hele prosessen for deg.",
     "gaccQ3": "Er GACC-registrering virkelig obligatorisk for alle matvarer?",
@@ -782,7 +782,7 @@
     "csarName": "CSAR (Cosmetic Supervision and Administration Regulation)",
     "csarDefinition": "CSAR er Kinas forskrift om kosmetisk tilsyn og administrasjon. Den regulerer registrering, arkivering, produksjon og import av kosmetikk i Kina, og krever produktsikkerhetsvurdering og avsløring av ingredienser.",
     "decree280Name": "Dekret 280 (GACC-registreringsdekret)",
-    "decree280Definition": "Dekret 280 er GACC-forskriften om registrering av utenlandske næringsmiddelprodusenter; den gjelder fra 1. juni 2026 og erstatter dekret 248 og 249. Den beholder den obligatoriske registreringen, fastsetter fem års gyldighet med automatisk fornyelse og krever fornyelse 3 til 12 måneder før utløp.",
+    "decree280Definition": "Dekret 280 er GACC-forskriften om registrering av utenlandske næringsmiddelprodusenter; den gjelder fra 1. juni 2026. Den beholder den obligatoriske registreringen, fastsetter fem års gyldighet med automatisk fornyelse og krever fornyelse 3 til 12 måneder før utløp.",
     "decree243Name": "Dekret 243 (GACC Import/Export Food Safety Decreet)",
     "decree243Definition": "Dekret 243 er GACCs administrative tiltak for sikkerheten til importert og eksportert mat. Den stiller krav til matsikkerhetsstyring, merking og sporbarhet for matimportører og -eksportører i Kina.",
     "samrName": "SAMR (Statens administrasjon for markedsregulering)",
@@ -825,8 +825,8 @@
     "ctaButton": "Få et gratis tilbud"
   },
   "IndustryDairy": {
-    "heroTitle": "Kina-samsvar for norske meerieksportører",
-    "heroSubtitle": "Eksport av melk, ost og yoghurt til Kina krever GACC-registrering. Vi håndterer registrering og etiketter for norske meierier.",
+    "heroTitle": "Kinasamsvar for norske meierier og eksportører av meieriprodukter",
+    "heroSubtitle": "Jarlsberg, brunost, smør og tørrmelk: etterspørselen etter kvalitetsmeieriprodukter i Kina vokser. GACC-registrering, kinesisk merking og importetterlevelse er obligatorisk; vi følger dere gjennom hvert steg.",
     "heroCta": "Få gratis vurdering",
     "coverTitle": "Hva vi dekker for meierieksportører",
     "coverItems": "GACC-dekret 280-registrering for norske meierier, Kinesisk etikettsamsvar for melkeprodukter, Veiledning om importlisenser for meierikategorier, Fortollingsstøtte for kjølte og frosne meieriprodukter, SAMR-registrering av morsmelkerstatning, Løpende overvåking av regelverksendringer",
@@ -858,8 +858,8 @@
     "metaTitle": "Meieriprodukter til Kina | Guide GACC-registrering"
   },
   "IndustryMeat": {
-    "heroTitle": "Kina-samsvar for norske fiskeksportører",
-    "heroSubtitle": "Eksport av laks og sjømat fra Norge til Kina krever GACC-registrering og karantenekontroller. Vi håndterer registrering og helsesertifikater for norske anlegg.",
+    "heroTitle": "Kinasamsvar for norske eksportører av sjømat og kjøtt",
+    "heroSubtitle": "Laks, torsk, makrell og skalldyr: Kina er et høyverdimarked med strenge inngangsregler. Vi koordinerer GACC CIFER-registrering, merking og tollbehandling fra start til slutt.",
     "heroCta": "Få gratis vurdering",
     "coverTitle": "Hva vi dekker for kjøtt- og sjømateksportører",
     "questionsTitle": "Vanlige spørsmål om eksport av kjøtt og sjømat",
@@ -867,7 +867,7 @@
     "faq1q": "Hva er CIFER-registrering?",
     "faq1a": "CIFER er Kinas nettbaserte system for registrering av utenlandske matvareprodusenter. Kjøtt- og sjømatanlegg – inkludert norske lakseslakterier og torskeforedlingsanlegg – må registreres før de kan eksportere til Kina.",
     "faq2q": "Hvilke land kan eksportere kjøtt til Kina?",
-    "faq2a": "Bare land med en bilateral markedsadgangsavtale med Kina kan eksportere kjøtt. Norge har markedsadgang for flere arter, blant annet laks, gjennom etablerte protokoller, men vilkårene kan endres over tid – vi verifiserer gjeldende status for deg.",
+    "faq2a": "Kina åpner import av kjøtt og sjømat gjennom bilaterale protokoller som forhandles land for land og art for art. Vi sjekker statusen for svin, storfe, fjørfe og fisk fra Norge og skisserer kravene før dere setter i gang.",
     "faq3q": "Hvor lang tid tar registrering av kjøtt- og sjømatprodukter?",
     "faq3a": "CIFER-registrering tar vanligvis 3–8 måneder. Landsspesifikke markedsadgangsprotokoller mellom din regjering og Kina kan også komme til anvendelse – vi administrerer hele registreringsprosessen for deg.",
     "faq4q": "Hvilken merking kreves for importert kjøtt?",
@@ -975,8 +975,8 @@
     "metaTitle": "Dyrefôr til Kina | Guide GACC-registrering"
   },
   "IndustrySupplements": {
-    "heroTitle": "Kina-samsvar for norske eksportører av kosttilskudd",
-    "heroSubtitle": "Kosttilskudd med helsepåstander krever SAMR-registrering. Vi håndterer importprosessen for produsenter av vitaminer og probiotika.",
+    "heroTitle": "Kinasamsvar for norske produsenter av kosttilskudd",
+    "heroSubtitle": "Marine oljer, omega-3 og vitaminprodukter: kinesiske forbrukere etterspør dokumenterte råvarer. Vi håndterer GACC-registrering der den gjelder, NMPA-krav og kinesisk merking.",
     "heroCta": "Få gratis vurdering",
     "coverTitle": "Hva vi dekker for eksportører av helsekost og kosttilskudd",
     "coverItems": "SAMR-registrering og innlevering av helsekost, Veiledning om klassifisering av generell mat for kosttilskudd, Kinesisk etikettsamsvar for kosttilskudd, Sikkerhetsvurdering og dokumentasjon av ingredienser, Fortolling av tilskuddsforsendelser, Markedsinntredenstrategi for helseprodukter",

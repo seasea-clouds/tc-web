@@ -5,7 +5,7 @@
     "heroCta": "Obțineți o evaluare gratuită",
     "heroExplore": "Explorați serviciile",
     "servicesTitle": "Servicii complete de conformitate pentru China",
-    "servicesSubtitle": "De la înregistrarea GACC la certificarea CCC și depunerile NMPA — suport complet pentru exportatorii români.",
+    "servicesSubtitle": "Înregistrare, etichetare, certificare, marcă și comerț electronic: tot ce are nevoie produsul dumneavoastră pentru a intra pe piața chineză, cu sprijin pentru producătorii și exportatorii români.",
     "whyTitle": "De ce să alegeți SinoTrade Compliance",
     "whySubtitle": "Vă ghidăm pas cu pas prin reglementările chineze de import — de la prima întrebare până la prima livrare.",
     "whyCard1Title": "Toate categoriile de produse",
@@ -73,7 +73,7 @@
     },
     "trustedByTitle": "Parteneri de încredere",
     "processDesc": "Un proces simplu, în 6 pași, pentru a vă duce marca în China",
-    "trustedByDesc": "Alăturați-vă exportatorilor care dezvoltă deja vânzări în China alături de noi",
+    "trustedByDesc": "Alăturați-vă brandurilor românești și internaționale care deja exportă în China împreună cu noi",
     "metaTitle": "SinoTrade Compliance | Export către China: GACC, CCC și NMPA",
     "metaDescription": "Conformitate completă pentru exportul în China: înregistrare GACC, certificare CCC, notificare cosmetică NMPA și etichetare chinezească. Alegerea exportatorilor din peste 50 de țări.",
     "heroPortalCta": "Verificați conformitatea produselor dvs. în 3 pași →"
@@ -159,7 +159,7 @@
     "metaDescription": "Conformitate completă pentru intrarea pe piața chineză: înregistrare alimentară GACC, certificare CCC, notificare cosmetică NMPA, etichete chinezești și protecția mărcii. 15+ ani."
   },
   "ServiceGacc": {
-    "heroTitle": "Înregistrare GACC alimente – pentru exportatorii români",
+    "heroTitle": "Înregistrare GACC pentru exportatorii români de alimente",
     "heroSubtitle": "Exportați alimente în China? Decretul 280 cere fiecărui producător străin să se înregistreze la GACC înainte de prima expediere. Ne ocupăm de întreaga înregistrare CIFER și menținem exporturile în mișcare.",
     "cta": "Obțineți o evaluare gratuită a înregistrării",
     "coverTitle": "Serviciile noastre pentru exportatorii români de alimente",
@@ -208,7 +208,7 @@
     "metaDescription": "Înregistrare GACC pentru exportatorii români: Regulamentul 280, sistemul CIFER, documente necesare, durată. Suport în limba română."
   },
   "ServiceLabel": {
-    "heroTitle": "Cerințe de etichetare chineză – pentru produse românești",
+    "heroTitle": "Etichetare chinezească pentru produsele românești",
     "heroSubtitle": "Alimentele ambalate importate trebuie să aibă etichetă în chineză conform GB 7718-2025 și GB 28050-2025. Etichetarea greșită duce la reținerea mărfii în vamă. Proiectăm și verificăm etichete.",
     "cta": "Obțineți o revizuire gratuită a etichetei",
     "coverTitle": "Serviciile noastre pentru conformitatea etichetelor",
@@ -255,7 +255,7 @@
     "metaDescription": "Cerințe de etichetare chineză pentru produse românești: GB 7718-2025, GB 28050-2025 tabel nutrițional, avertismente alergeni."
   },
   "ServiceCcc": {
-    "heroTitle": "Certificare CCC – ghid de export în China pentru producătorii români",
+    "heroTitle": "Certificare CCC pentru producătorii români",
     "heroSubtitle": "Electronicele, electrocasnicele și jucăriile exportate în China trebuie să aibă certificare CCC. Marcajul CE sau certificarea românească nu sunt suficiente; organizăm testarea și auditul fabricii la organisme acreditate CNCA.",
     "cta": "Obțineți o evaluare gratuită CCC",
     "coverTitle": "Serviciile noastre pentru producătorii români",
@@ -286,7 +286,7 @@
     "howtoStep2Name": "Alegeți organismul de certificare",
     "howtoStep2Text": "Selectați un organism de certificare autorizat de CNCA pentru testarea și certificarea categoriei dvs. de produs.",
     "howtoStep3Name": "Depuneți cererea și probele",
-    "howtoStep3Text": "Completați cererea și trimiteți probele de produs la laboratorul de testare desemnat – organizăm transportul din România.",
+    "howtoStep3Text": "Completați cererea și trimiteți probele de produs din România la laboratorul de testare desemnat.",
     "howtoStep4Name": "Audit de fabrică și testare",
     "howtoStep4Text": "Finalizați auditul de fabrică și testarea produsului în conformitate cu standardele naționale chineze.",
     "howtoStep5Name": "Primiți certificatul CCC",
@@ -304,7 +304,7 @@
     "metaDescription": "Certificare CCC pentru producătorii români: diferența față de CE, procesul de certificare, teste, audit de fabrică, durată și cost. Suport în limba română."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Înregistrare cosmetice NMPA – pentru mărcile românești",
+    "heroTitle": "Înregistrare NMPA pentru cosmeticile brandurilor românești",
     "heroSubtitle": "Intrarea pe piața chineză necesită notificare NMPA pentru cosmetice: notificare pentru produse obișnuite și înregistrare pentru produse speciale, cu persoană responsabilă în China. Gestionăm întregul proces.",
     "cta": "Obțineți o clasificare gratuită NMPA",
     "coverTitle": "Serviciile noastre pentru mărcile românești de cosmetice",
@@ -353,7 +353,7 @@
     "metaDescription": "Înregistrare cosmetice NMPA pentru mărci românești: clasificare, scutire de testare pe animale, persoană responsabilă în China, durată."
   },
   "ServiceEcommerce": {
-    "heroTitle": "E-commerce transfrontalier – pentru mărcile românești",
+    "heroTitle": "Comerț electronic transfrontalier pentru brandurile românești în China",
     "heroSubtitle": "Vindeți marca românească prin Tmall Global, JD Worldwide și Douyin: canalele transfrontaliere permit intrarea în China fără companie locală. Gestionăm configurarea completă.",
     "cta": "Obțineți o consultare gratuită pentru platformă",
     "coverTitle": "Serviciile noastre pentru mărcile românești",
@@ -400,7 +400,7 @@
     "metaDescription": "Mărci românești în China prin e-commerce transfrontalier: Tmall Global, JD Worldwide, conformitate CBEC, logistică, plăți."
   },
   "ServiceBrand": {
-    "heroTitle": "Înregistrarea mărcii în China – protejarea mărcilor românești",
+    "heroTitle": "Protecția mărcii în China pentru firmele românești",
     "heroSubtitle": "China aplică principiul \"cine înregistrează primul\": marca înregistrată în România (OSIM) nu este protejată în China. Înregistrați-vă marca la CNIPA înainte de intrarea pe piață pentru a evita uzurparea.",
     "cta": "Obțineți o căutare gratuită de marcă",
     "coverTitle": "Serviciile noastre pentru protejarea mărcilor în China",
@@ -529,7 +529,7 @@
     "heroSubtitle": "Răspunsuri clare pentru exportatorii din întreaga lume — înregistrare GACC, certificare CCC, etichete chinezești, notificare cosmetică NMPA și comerț electronic transfrontalier.",
     "gaccTitle": "Înregistrarea alimentelor GACC",
     "gaccQ1": "Ce este Regulamentul 280 al GACC?",
-    "gaccA1": "Decretul GACC nr. 280 este reglementarea chineză privind înregistrarea producătorilor, procesatorilor și depozitelor străine de alimente. Se aplică din 1 iunie 2026 și înlocuiește decretele 248 și 249; înregistrarea prin CIFER este obligatorie pentru alimentele expediate în China din 2022.",
+    "gaccA1": "Decretul GACC nr. 280 este reglementarea chineză privind înregistrarea producătorilor, procesatorilor și depozitelor străine de alimente. Se aplică din 1 iunie 2026; înregistrarea prin CIFER este obligatorie pentru alimentele expediate în China din 2022.",
     "gaccQ2": "Cât durează înregistrarea GACC pentru produsele mele?",
     "gaccA2": "Depinde de categoria de produs. Produsele cu risc scăzut pot fi înregistrate direct prin sistemul CIFER. Produsele cu risc ridicat — precum lactatele, carnea și fructele de mare — necesită o recomandare din partea autorității competente din țara dvs. (de exemplu, ANSVSA în România). Gestionăm întregul proces în numele dvs.",
     "gaccQ3": "Este înregistrarea GACC obligatorie cu adevărat pentru fiecare produs alimentar?",
@@ -782,7 +782,7 @@
     "csarName": "CSAR (Regulament de Supraveghere și Administrare Cosmetică)",
     "csarDefinition": "CSAR este regulamentul de supraveghere și administrare a produselor cosmetice din China. Acesta guvernează înregistrarea, depunerea, producția și importul de produse cosmetice în China, necesitând evaluarea siguranței produselor și dezvăluirea ingredientelor.",
     "decree280Name": "Decretul 280 (Decretul de înregistrare GACC)",
-    "decree280Definition": "Decretul 280 este regulamentul GACC privind înregistrarea întreprinderilor străine de producție alimentară; este în vigoare din 1 iunie 2026 și înlocuiește decretele 248 și 249. Menține regimul de înregistrare obligatorie, stabilește o valabilitate de cinci ani cu reînnoire automată și cere depunerea reînnoirii cu 3 până la 12 luni înainte de expirare.",
+    "decree280Definition": "Decretul 280 este regulamentul GACC privind înregistrarea întreprinderilor străine de producție alimentară; este în vigoare din 1 iunie 2026. Menține regimul de înregistrare obligatorie, stabilește o valabilitate de cinci ani cu reînnoire automată și cere depunerea reînnoirii cu 3 până la 12 luni înainte de expirare.",
     "decree243Name": "Decretul 243 (Decretul privind siguranța alimentelor de import/export GACC)",
     "decree243Definition": "Decretul 243 este măsura administrativă a GACC pentru siguranța alimentelor importate și exportate. Acesta stabilește cerințe pentru managementul siguranței alimentare, etichetare și trasabilitate pentru importatorii și exportatorii de alimente din China.",
     "samrName": "SAMR (Administrația de Stat pentru Reglementarea Pieței)",
@@ -825,8 +825,8 @@
     "ctaButton": "Obțineți o cotație gratuită"
   },
   "IndustryDairy": {
-    "heroTitle": "Conformitate China pentru exportatorii români de lactate",
-    "heroSubtitle": "Exportul de lapte, brânză și iaurt în China necesită înregistrare GACC. Gestionăm înregistrarea și etichetele pentru producătorii români de lactate.",
+    "heroTitle": "Conformitate cu China pentru procesatorii de lactate și exportatorii români",
+    "heroSubtitle": "Telemea, brânză de burduf, unt și lapte praf: cererea pentru lactate de calitate în China crește. Înregistrarea GACC, etichetarea chinezească și conformitatea la import sunt obligatorii; vă însoțim la fiecare pas.",
     "heroCta": "Obțineți o evaluare gratuită",
     "coverTitle": "Ce acoperim pentru exportatorii români de lactate",
     "coverItems": "Înregistrare GACC (Decretul 280) pentru producătorii de lactate,Conformitatea etichetei chinezești pentru produsele lactate,Consultanță privind licența de import pentru categoriile de lactate,Sprijin pentru vămuirea lactatelor refrigerate și congelate,Înregistrarea formulelor pentru sugari la SAMR,Monitorizarea continuă a conformității pentru actualizările de reglementare",
@@ -858,8 +858,8 @@
     "metaTitle": "Lactate în China | ghid înregistrare GACC"
   },
   "IndustryMeat": {
-    "heroTitle": "Conformitate China pentru exportatorii români de carne",
-    "heroSubtitle": "Exportul de carne în China necesită înregistrare GACC și controale de igienă. Gestionăm înregistrarea și certificatele de sănătate pentru fabricile românești.",
+    "heroTitle": "Conformitate cu China pentru exportatorii români de carne și pește",
+    "heroSubtitle": "Porc, vită, pasăre și pește: China este o piață de mare valoare cu reguli stricte de intrare. Coordonăm înregistrarea GACC CIFER, etichetarea și vămuirea de la început până la final.",
     "heroCta": "Obțineți o evaluare gratuită",
     "coverTitle": "Ce acoperim pentru exportatorii români de carne și fructe de mare",
     "questionsTitle": "Întrebări frecvente privind exportul de carne și fructe de mare în China",
@@ -867,7 +867,7 @@
     "faq1q": "Ce este înregistrarea CIFER?",
     "faq1a": "CIFER este sistemul de înregistrare a producătorilor străini de alimente gestionat de GACC. Unitățile de carne și fructe de mare – inclusiv fabricile românești de porc, vită sau pui – trebuie să se înregistreze înainte de a putea exporta în China.",
     "faq2q": "Ce țări pot exporta carne în China?",
-    "faq2a": "Doar țările cu un acord bilateral de acces pe piață cu China pot exporta carne. Uniunea Europeană are acces pentru anumite specii, cu restricții care se schimbă în timp – verificăm pentru dumneavoastră statutul curent al accesului și certificatele emise de ANSVSA.",
+    "faq2a": "China deschide importul de carne și pește prin protocoale bilaterale negociate țară cu țară și specie cu specie. Verificăm situația actuală pentru porc, vită, pasăre și pește din România și stabilim cerințele înainte de a începe.",
     "faq3q": "Cât durează înregistrarea produselor din carne?",
     "faq3a": "Înregistrarea CIFER durează de obicei 3-8 luni. Pot fi aplicabile și protocoalele de acces pe piață specifice fiecărei țări, negociate între guvernul dumneavoastră și China.",
     "faq4q": "Ce etichetare este necesară pentru carnea importată?",
@@ -890,8 +890,8 @@
     "metaTitle": "Export carne în China | ghid GACC și igienă"
   },
   "IndustryWine": {
-    "heroTitle": "Conformitate China pentru exportatorii români de băuturi",
-    "heroSubtitle": "Exportul de vin și băuturi necesită etichetă chineză corectă și înregistrare GACC. Ajutăm producătorii români cu etichetele și importul.",
+    "heroTitle": "Conformitate cu China pentru cramele și exportatorii români de vin",
+    "heroSubtitle": "Fetească neagră, Tămâioasă românească și vinuri spumante: consumatorii chinezi apreciază vinurile de calitate. Înregistrarea GACC, etichetarea chinezească și protecția mărcii deschid ușa; vă ghidăm crama până la prima vânzare.",
     "heroCta": "Obțineți o evaluare gratuită",
     "coverTitle": "Ce acoperim pentru exportatorii români de vin și băuturi spirtoase",
     "coverItems": "Înregistrare GACC pentru producătorii de vin și băuturi spirtoase,Conformitatea etichetei chinezești pentru băuturile alcoolice,Înregistrarea mărcii comerciale în China,Consultanță privind taxele de import,Cerințe de acces pe piață specifice țării,Suport pentru vămuire și inspecție",

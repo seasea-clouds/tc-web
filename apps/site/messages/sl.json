@@ -5,7 +5,7 @@
     "heroCta": "Pridobite brezplačno oceno",
     "heroExplore": "Raziščite storitve",
     "servicesTitle": "Celovite storitve skladnosti za Kitajsko",
-    "servicesSubtitle": "Regulativna podpora na vsakem koraku – od registracije izdelka do carinjenja.",
+    "servicesSubtitle": "Registracija, označevanje, certifikacija, blagovna znamka in e-trgovina: vse, kar vaš izdelek potrebuje za vstop na kitajski trg, s podporo slovenskim proizvajalcem in izvoznikom.",
     "whyTitle": "Zakaj izbrati SinoTrade Compliance",
     "whySubtitle": "Vaš zaupanja vreden partner za krmarjenje po kitajskih uvoznih predpisih – od slovenskega medu in vina do elektronike.",
     "whyCard1Title": "Popolna pokritost kategorij",
@@ -73,7 +73,7 @@
     },
     "trustedByTitle": "Zaupanja vredni partnerji",
     "processDesc": "Preprost postopek v 6 korakih za uvedbo vaše blagovne znamke na Kitajsko",
-    "trustedByDesc": "Pridružite se mednarodnim blagovnim znamkam, ki že rastejo z nami",
+    "trustedByDesc": "Pridružite se slovenskim in mednarodnim blagovnim znamkam, ki z nami že izvažajo na Kitajsko",
     "metaTitle": "SinoTrade Compliance | Izvoz na Kitajsko: GACC, CCC in NMPA",
     "metaDescription": "Celovita skladnost za izvoz na Kitajsko: registracija GACC, certifikacija CCC, kozmetična prijava NMPA in kitajske oznake. Zaupa nam več kot 50 držav izvoznic.",
     "heroPortalCta": "Preizkusite naš 3-stopenjski preverjevalnik skladnosti →"
@@ -159,7 +159,7 @@
     "metaDescription": "Celovita skladnost za vstop na kitajski trg: registracija živil GACC, certifikacija CCC, kozmetična prijava NMPA, kitajske oznake in zaščita blagovne znamke. Več kot 15 let izkušenj."
   },
   "ServiceGacc": {
-    "heroTitle": "Registracija GACC živil – za slovenske izvoznike",
+    "heroTitle": "Registracija GACC za slovenske izvoznike hrane",
     "heroSubtitle": "Izvažate živila na Kitajsko? Uredba 280 zahteva, da se vsak tuji proizvajalec registrira pri GACC pred prvo pošiljko. Poskrbimo za celotno registracijo CIFER in ohranjamo vaš izvoz v teku.",
     "cta": "Pridobite brezplačno oceno registracije",
     "coverTitle": "Naše storitve za slovenske izvoznike živil",
@@ -208,7 +208,7 @@
     "metaDescription": "Registracija GACC za slovenske izvoznike živil: Uredba 280, sistem CIFER, potrebni dokumenti, čas. Podpora v slovenščini."
   },
   "ServiceLabel": {
-    "heroTitle": "Kitajske zahteve za označevanje – za slovenske izdelke",
+    "heroTitle": "Kitajsko označevanje za slovenske izdelke",
     "heroSubtitle": "Uvožena pakirana živila morajo imeti kitajsko etiketo v skladu z GB 7718-2025 in GB 28050-2025. Nepravilno označevanje vodi do zadržanja blaga na carini. Oblikujemo in preverjamo etikete.",
     "cta": "Pridobite brezplačen pregled etikete",
     "coverTitle": "Naše storitve za skladnost etiket",
@@ -255,7 +255,7 @@
     "metaDescription": "Kitajske zahteve za označevanje za slovenske izdelke: GB 7718-2025, GB 28050-2025 prehranska tabela, opozorila o alergenih."
   },
   "ServiceCcc": {
-    "heroTitle": "CCC certificiranje – vodnik za izvoz na Kitajsko za slovenske proizvajalce",
+    "heroTitle": "Certifikacija CCC za slovenske proizvajalce",
     "heroSubtitle": "Elektronika, gospodinjski aparati in igrače, ki se izvažajo na Kitajsko, morajo imeti CCC certificiranje. Oznaka CE ali slovensko certificiranje ni dovolj; organiziramo testiranje in revizijo tovarne pri organih, akreditiranih pri CNCA.",
     "cta": "Pridobite brezplačno oceno CCC",
     "coverTitle": "Naše storitve za slovenske proizvajalce",
@@ -286,7 +286,7 @@
     "howtoStep2Name": "Izberite pooblaščeni certifikacijski organ",
     "howtoStep2Text": "Izberite certifikacijski organ, ki ga je odobril CNCA in je pooblaščen za testiranje in certificiranje vaše kategorije izdelkov.",
     "howtoStep3Name": "Oddajte vlogo in vzorce",
-    "howtoStep3Text": "Izpolnite vlogo in pošljite vzorce izdelkov v imenovani preskusni laboratorij – poskrbimo za pošiljanje iz Slovenije.",
+    "howtoStep3Text": "Izpolnite vlogo in pošljite vzorce izdelkov iz Slovenije v imenovani preskusni laboratorij.",
     "howtoStep4Name": "Tovarniški pregled in testiranje",
     "howtoStep4Text": "Opravite tovarniški pregled in testiranje izdelkov v skladu s kitajskimi nacionalnimi standardi.",
     "howtoStep5Name": "Prejmite certifikat CCC",
@@ -304,7 +304,7 @@
     "metaDescription": "CCC certificiranje za slovenske proizvajalce: razlika od CE, postopek certificiranja, testiranja, revizija tovarne, čas in stroški. Podpora v slovenščini."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Registracija kozmetike NMPA – za slovenske znamke",
+    "heroTitle": "Registracija kozmetike NMPA za slovenske blagovne znamke",
     "heroSubtitle": "Vstop na kitajski trg zahteva obvestilo NMPA za kozmetiko: obvestilo za običajne izdelke in registracijo za posebne, z odgovorno osebo na Kitajskem. Vodimo celoten postopek.",
     "cta": "Pridobite brezplačno klasifikacijo NMPA",
     "coverTitle": "Naše storitve za slovenske kozmetične znamke",
@@ -353,7 +353,7 @@
     "metaDescription": "Registracija kozmetike NMPA za slovenske znamke: klasifikacija, oprostitev testiranja na živalih, odgovorna oseba na Kitajskem, čas."
   },
   "ServiceEcommerce": {
-    "heroTitle": "Čezmejna e-trgovina – za slovenske znamke",
+    "heroTitle": "Čezmejna e-trgovina za slovenske blagovne znamke na Kitajskem",
     "heroSubtitle": "Prodajajte svojo slovensko znamko prek Tmall Global, JD Worldwide in Douyin: čezmejni kanali omogočajo vstop na Kitajsko brez lokalnega podjetja. Poskrbimo za popolno nastavitev.",
     "cta": "Pridobite brezplačno svetovanje o platformi",
     "coverTitle": "Naše storitve za slovenske znamke",
@@ -400,7 +400,7 @@
     "metaDescription": "Slovenske znamke na Kitajskem prek čezmejne e-trgovine: Tmall Global, JD Worldwide, skladnost CBEC, logistika, plačila."
   },
   "ServiceBrand": {
-    "heroTitle": "Registracija znamke na Kitajskem – zaščita slovenskih blagovnih znamk",
+    "heroTitle": "Zaščita blagovne znamke na Kitajskem za slovenska podjetja",
     "heroSubtitle": "Kitajska uporablja načelo \"kdor prvi registrira\": znamka, registrirana v Sloveniji (UIL), ni zaščitena na Kitajskem. Registrirajte znamko pri CNIPA pred vstopom na trg, da preprečite prisvojitev.",
     "cta": "Pridobite brezplačno iskanje blagovne znamke",
     "coverTitle": "Naše storitve za zaščito blagovne znamke na Kitajskem",
@@ -529,7 +529,7 @@
     "heroSubtitle": "Jasni odgovori za izvoznike po vsem svetu — registracija GACC, certifikacija CCC, kitajske oznake, kozmetična prijava NMPA in čezmejno e-poslovanje.",
     "gaccTitle": "Registracija živil GACC",
     "gaccQ1": "Kaj je odlok GACC 280?",
-    "gaccA1": "Uredba GACC št. 280 je kitajska ureditev registracije tujih proizvajalcev, predelovalcev in skladišč hrane. Velja od 1. junija 2026 in nadomešča uredbi 248 in 249; registracija prek sistema CIFER je za hrano, poslano na Kitajsko, obvezna od leta 2022.",
+    "gaccA1": "Uredba GACC št. 280 je kitajska ureditev registracije tujih proizvajalcev, predelovalcev in skladišč hrane. Velja od 1. junija 2026; registracija prek sistema CIFER je za hrano, poslano na Kitajsko, obvezna od leta 2022.",
     "gaccQ2": "Kako dolgo traja registracija GACC za moje izdelke?",
     "gaccA2": "Odvisno je od kategorije izdelka. Izdelke z nizkim tveganjem lahko registrirate neposredno prek sistema CIFER. Izdelki z visokim tveganjem — mlečni izdelki, meso in morski sadeži — potrebujejo priporočilo pristojnega organa vaše države (v Sloveniji na primer UVHVVR). Celoten postopek vodimo namesto vas.",
     "gaccQ3": "Ali je registracija GACC res obvezna za vsak živilski izdelek?",
@@ -782,7 +782,7 @@
     "csarName": "CSAR (Uredba o kozmetičnem nadzoru in upravljanju)",
     "csarDefinition": "CSAR je kitajska uredba o nadzoru in upravljanju kozmetičnih izdelkov. Ureja registracijo, vložitev, proizvodnjo in uvoz kozmetičnih izdelkov na Kitajskem, ter zahteva oceno varnosti izdelkov in razkritje sestavin.",
     "decree280Name": "Odlok 280 (Odlok o registraciji GACC)",
-    "decree280Definition": "Uredba 280 je predpis GACC o registraciji tujih proizvajalcev živil; velja od 1. junija 2026 in nadomešča uredbi 248 in 249. Ohranja obvezno registracijo, določa petletno veljavnost s samodejnim podaljšanjem in zahteva vlogo za podaljšanje 3 do 12 mesecev pred potekom.",
+    "decree280Definition": "Uredba 280 je predpis GACC o registraciji tujih proizvajalcev živil; velja od 1. junija 2026. Ohranja obvezno registracijo, določa petletno veljavnost s samodejnim podaljšanjem in zahteva vlogo za podaljšanje 3 do 12 mesecev pred potekom.",
     "decree243Name": "Odlok 243 (GACC uvoz/izvoz odlok o varnosti hrane)",
     "decree243Definition": "Odlok 243 je upravni ukrep GACC za varnost uvožene in izvožene hrane. Določa zahteve za upravljanje varnosti hrane, označevanje in sledljivost za uvoznike in izvoznike hrane na Kitajskem.",
     "samrName": "SAMR (Državna uprava za regulacijo trga)",
@@ -825,8 +825,8 @@
     "ctaButton": "Pridobite brezplačno ponudbo"
   },
   "IndustryDairy": {
-    "heroTitle": "Skladnost s Kitajsko za slovenske izvoznike mlečnih izdelkov",
-    "heroSubtitle": "Izvoz mleka, sira in jogurta na Kitajsko zahteva registracijo GACC. Vodimo registracijo in etikete za slovenske mlekarne.",
+    "heroTitle": "Skladnost s Kitajsko za slovenske mlekarne in izvoznike mlečnih izdelkov",
+    "heroSubtitle": "Trdi in poltrdi siri, maslo ter mleko v prahu: povpraševanje po kakovostnih mlečnih izdelkih na Kitajskem raste. Registracija GACC, kitajsko označevanje in skladnost pri uvozu so obvezni; vodimo vas skozi vsak korak.",
     "heroCta": "Pridobite brezplačno oceno",
     "coverTitle": "Kaj pokrivamo za izvoznike mlečnih izdelkov",
     "coverItems": "Registracija GACC po odloku 280 za proizvajalce mlečnih izdelkov, skladnost kitajskih etiket za mleko in mlečne izdelke, vodenje uvoznih dovoljenj za mlečne kategorije, carinska podpora za ohlajene in zamrznjene mlečne izdelke, registracija formule za dojenčke, stalno spremljanje predpisov in skladnosti",
@@ -858,8 +858,8 @@
     "metaTitle": "Mlečni izdelki na Kitajsko | vodnik registracije GACC"
   },
   "IndustryMeat": {
-    "heroTitle": "Skladnost s Kitajsko za slovenske izvoznike mesa",
-    "heroSubtitle": "Izvoz mesa na Kitajsko zahteva registracijo GACC in higienske preglede. Vodimo registracijo in zdravstvena potrdila za slovenske obrate.",
+    "heroTitle": "Skladnost s Kitajsko za slovenske izvoznike mesa in morskih sadežev",
+    "heroSubtitle": "Svinjina, govedina, perutnina in ribe: Kitajska je trg z visoko vrednostjo in strogimi pravili vstopa. Koordiniramo registracijo GACC CIFER, označevanje in carinsko poslovanje od začetka do konca.",
     "heroCta": "Pridobite brezplačno oceno",
     "coverTitle": "Kaj pokrivamo za izvoznike mesa in morske hrane",
     "questionsTitle": "Pogosta vprašanja o izvozu mesa in morskih sadežev",
@@ -867,7 +867,7 @@
     "faq1q": "Kaj je registracija CIFER?",
     "faq1a": "CIFER je kitajski spletni sistem GACC za registracijo čezmorskih proizvajalcev živil. Obrati za meso in morsko hrano – vključno s slovenskimi klavnicami in obrati za predelavo svinjine, govedine in perutnine – se morajo registrirati, preden lahko izvažajo na Kitajsko.",
     "faq2q": "Katere države lahko izvažajo meso na Kitajsko?",
-    "faq2a": "Samo države z dvostranskim sporazumom o dostopu do trga s Kitajsko lahko izvažajo meso. Slovenija izvaža v okviru protokolov, ki jih s Kitajsko usklajuje Evropska unija – odobrene vrste in omejitve se sčasoma spreminjajo. Za vas preverimo trenutni status.",
+    "faq2a": "Kitajska odpira uvoz mesa in morskih sadežev z dvostranskimi protokoli, dogovorjenimi po državah in vrstah. Preverimo trenutni status za svinjino, govedino, perutnino in ribe iz Slovenije ter pred začetkom opredelimo zahteve.",
     "faq3q": "Koliko časa traja registracija mesnih izdelkov?",
     "faq3a": "Registracija CIFER običajno traja 3–8 mesecev. Veljajo lahko tudi protokoli o dostopu do trga, specifični za posamezno državo, ki jih med vladama usklajujeta EU in Kitajska.",
     "faq4q": "Kakšno označevanje je potrebno za uvoženo meso?",
@@ -890,8 +890,8 @@
     "metaTitle": "Izvoz mesa na Kitajsko | vodnik GACC in higiene"
   },
   "IndustryWine": {
-    "heroTitle": "Skladnost s Kitajsko za slovenske izvoznike pijač",
-    "heroSubtitle": "Izvoz vina in pijač zahteva pravilno kitajsko etiketo in registracijo GACC. Slovenskim proizvajalcem pomagamo pri etiketah in uvozu.",
+    "heroTitle": "Skladnost s Kitajsko za slovenske vinske kleti in izvoznike vina",
+    "heroSubtitle": "Teran, Rebula in penine: kitajski potrošniki cenijo kakovostna vina. Registracija GACC, kitajsko označevanje in zaščita znamke odpirajo vrata; spremljamo vašo klet do prve prodaje.",
     "heroCta": "Pridobite brezplačno oceno",
     "coverTitle": "Kaj pokrivamo za izvoznike vina in žganih pijač",
     "coverItems": "Registracija GACC za proizvajalce vina in žganih pijač, skladnost kitajskih etiket za alkoholne pijače, registracija blagovne znamke na Kitajskem, svetovanje o uvoznih carinah in davkih, zahteve za dostop do trga po državah, podpora pri carinjenju in pregledih",

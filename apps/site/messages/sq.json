@@ -5,7 +5,7 @@
     "heroCta": "Merrni vlerësim falas",
     "heroExplore": "Eksploroni shërbimet tona",
     "servicesTitle": "Shërbime gjithëpërfshirëse pajtueshmërie për eksportuesit shqiptarë",
-    "servicesSubtitle": "Mbështetje rregullatore në çdo hap – nga regjistrimi i produktit te zhdoganimi – për markat shqiptare që hyjnë në tregun kinez.",
+    "servicesSubtitle": "Regjistrim, etiketim, certifikim, markë dhe tregti elektronike: gjithçka që produkti juaj ka nevojë për të hyrë në tregun kinez, me mbështetje për prodhuesit dhe eksportuesit shqiptarë.",
     "whyTitle": "Pse eksportuesit shqiptarë zgjedhin SinoTrade Compliance",
     "whySubtitle": "Partneri juaj i besuar për të lundruar në rregulloret kineze të importit – nga vaji i ullirit te elektronika.",
     "whyCard1Title": "Mbulim i plotë i kategorive",
@@ -73,7 +73,7 @@
     },
     "trustedByTitle": "Partnerë që na besojnë",
     "processDesc": "Një proces i thjeshtë me 6 hapa për ta sjellë markën tuaj në Kinë",
-    "trustedByDesc": "Bashkohuni me markat ndërkombëtare që tashmë po rriten me ne – përfshirë eksportuesit shqiptarë të vajit të ullirit dhe mjaltit.",
+    "trustedByDesc": "Bashkohuni me markat shqiptare dhe ndërkombëtare që tashmë eksportojnë në Kinë me ne",
     "metaTitle": "SinoTrade Compliance | Eksport drejt Kinës: GACC, CCC dhe NMPA",
     "metaDescription": "Përputhshmëri e plotë për eksportin tuaj drejt Kinës: regjistrimi GACC, certifikimi CCC, njoftimi kozmetik NMPA dhe etiketat kineze. Të besuar nga eksportues në mbi 50 vende.",
     "heroPortalCta": "Provoni kontrolluesin tonë të pajtueshmërisë në 3 hapa →"
@@ -159,7 +159,7 @@
     "metaDescription": "Përputhshmëri e plotë për hyrjen në tregun kinez: regjistrimi i ushqimit GACC, certifikimi CCC, njoftimi kozmetik NMPA, etiketat kineze dhe mbrojtja e markës. Mbi 15 vjet përvojë."
   },
   "ServiceGacc": {
-    "heroTitle": "Regjistrimi GACC i ushqimeve – për eksportuesit shqiptarë",
+    "heroTitle": "Regjistrim GACC për eksportuesit shqiptarë të ushqimit",
     "heroSubtitle": "Eksportoni ushqim drejt Kinës? Dekreti 280 kërkon që çdo prodhues i huaj të regjistrohet në GACC para dërgesës së parë. Ne kryejmë regjistrimin tuaj të plotë CIFER dhe e mbajmë eksportin në lëvizje.",
     "cta": "Merrni vlerësim falas të regjistrimit",
     "coverTitle": "Shërbimet tona për eksportuesit shqiptarë të ushqimeve",
@@ -208,7 +208,7 @@
     "metaDescription": "Regjistrimi GACC për eksportuesit shqiptarë: Rregullorja 280, sistemi CIFER, dokumentet e nevojshme, koha. Mbështetje në shqip."
   },
   "ServiceLabel": {
-    "heroTitle": "Kërkesat kineze të etiketimit – për produktet shqiptare",
+    "heroTitle": "Etiketim kinez për produktet shqiptare",
     "heroSubtitle": "Ushqimet e paketuara të importuara duhet të kenë etiketë kineze sipas GB 7718-2025 dhe GB 28050-2025. Etiketimi i gabuar shkakton mbajtjen e mallit në doganë. Ne dizajnojmë dhe kontrollojmë etiketat.",
     "cta": "Merrni rishikim falas të etiketës",
     "coverTitle": "Shërbimet tona për përputhshmërinë e etiketave",
@@ -255,7 +255,7 @@
     "metaDescription": "Kërkesat kineze të etiketimit për produktet shqiptare: GB 7718-2025, GB 28050-2025 tabela ushqyese, paralajmërimet për alergjenët."
   },
   "ServiceCcc": {
-    "heroTitle": "Certifikimi CCC – udhëzues eksporti në Kinë për prodhuesit shqiptarë",
+    "heroTitle": "Certifikim CCC për prodhuesit shqiptarë",
     "heroSubtitle": "Elektronika, pajisjet shtëpiake dhe lodrat që eksportohen në Kinë duhet të kenë certifikim CCC. Shenja CE ose certifikimi shqiptar nuk mjaftojnë; ne organizojmë testimin dhe auditimin e fabrikës në organe të akredituara nga CNCA.",
     "cta": "Merrni vlerësim falas CCC",
     "coverTitle": "Shërbimet tona për prodhuesit shqiptarë",
@@ -286,7 +286,7 @@
     "howtoStep2Name": "Zgjidhni organin e certifikimit",
     "howtoStep2Text": "Zgjidhni një organ certifikimi të miratuar nga CNCA, i autorizuar për testimin dhe certifikimin e kategorisë së produktit tuaj.",
     "howtoStep3Name": "Dorëzoni aplikimin dhe mostrat",
-    "howtoStep3Text": "Plotësoni formularin e aplikimit dhe dërgoni mostrat e produktit në laboratorin e caktuar të testimit – ne organizojmë transportin nga Shqipëria.",
+    "howtoStep3Text": "Plotësoni formularin e aplikimit dhe dërgoni mostrat e produktit nga Shqipëria në laboratorin e caktuar të testimit.",
     "howtoStep4Name": "Auditimi i fabrikës dhe testimi",
     "howtoStep4Text": "Kryeni inspektimin e fabrikës dhe testimin e produktit sipas standardeve kombëtare kineze.",
     "howtoStep5Name": "Merrni certifikatën CCC",
@@ -304,7 +304,7 @@
     "metaDescription": "Certifikimi CCC për prodhuesit shqiptarë: ndryshimi nga CE, procesi i certifikimit, testet, auditimi i fabrikës, koha dhe kostoja. Mbështetje në shqip."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Regjistrimi i kozmetikës NMPA – për markat shqiptare",
+    "heroTitle": "Regjistrim NMPA i kozmetikës për markat shqiptare",
     "heroSubtitle": "Hyrja në tregun kinez kërkon njoftim NMPA për kozmetikën: njoftim për produktet e zakonshme dhe regjistrim për ato të veçanta, me person përgjegjës në Kinë. Ne menaxhojmë të gjithë procesin.",
     "cta": "Merrni klasifikim falas NMPA",
     "coverTitle": "Shërbimet tona për markat shqiptare të kozmetikës",
@@ -353,7 +353,7 @@
     "metaDescription": "Regjistrimi NMPA për markat kozmetike shqiptare: klasifikimi, përjashtimi nga testimi te kafshët, personi përgjegjës në Kinë, koha."
   },
   "ServiceEcommerce": {
-    "heroTitle": "Tregti elektronike ndërkufitare – për markat shqiptare",
+    "heroTitle": "Tregti elektronike ndërkufitare për markat shqiptare në Kinë",
     "heroSubtitle": "Shisni markën tuaj shqiptare përmes Tmall Global, JD Worldwide dhe Douyin: kanalet ndërkufitare lejojnë hyrjen në Kinë pa kompani lokale. Ne sigurojmë konfigurimin e plotë.",
     "cta": "Merrni konsultim falas për platformën",
     "coverTitle": "Shërbimet tona për markat shqiptare",
@@ -400,7 +400,7 @@
     "metaDescription": "Markat shqiptare në Kinë përmes tregtisë elektronike ndërkufitare: Tmall Global, JD Worldwide, përputhja CBEC, logjistika, pagesat."
   },
   "ServiceBrand": {
-    "heroTitle": "Regjistrimi i markës në Kinë – mbrojtja e markave shqiptare",
+    "heroTitle": "Mbrojtja e markës në Kinë për kompanitë shqiptare",
     "heroSubtitle": "Kina zbaton parimin \"kush regjistrohet i pari\": një markë e regjistruar në Shqipëri (DPIM) nuk mbrohet në Kinë. Regjistroni markën tuaj në CNIPA para hyrjes në treg për të shmangur uzurpimin.",
     "cta": "Merrni kërkim falas të markës",
     "coverTitle": "Shërbimet tona për mbrojtjen e markës në Kinë",
@@ -529,7 +529,7 @@
     "heroSubtitle": "Përgjigje të qarta për eksportues në mbarë botën — regjistrimi GACC, certifikimi CCC, etiketat kineze, njoftimi kozmetik NMPA dhe tregtia elektronike ndërkufitare.",
     "gaccTitle": "Regjistrimi GACC i ushqimeve",
     "gaccQ1": "Çfarë është Dekreti 280 i GACC?",
-    "gaccA1": "Dekreti GACC 280 është rregullorja kineze për regjistrimin e prodhuesve, përpunuesve dhe magazinave të huaja të ushqimit. Është në fuqi nga 1 qershor 2026 dhe zëvendëson dekretet 248 dhe 249; regjistrimi përmes CIFER është i detyrueshëm për ushqimin e dërguar në Kinë që nga 2022.",
+    "gaccA1": "Dekreti GACC 280 është rregullorja kineze për regjistrimin e prodhuesve, përpunuesve dhe magazinave të huaja të ushqimit. Është në fuqi nga 1 qershor 2026; regjistrimi përmes CIFER është i detyrueshëm për ushqimin e dërguar në Kinë që nga 2022.",
     "gaccQ2": "Sa kohë zgjat regjistrimi GACC për produktet e mia?",
     "gaccA2": "Varet nga kategoria e produktit. Produktet me rrezik të ulët mund të regjistrohen drejtpërdrejt përmes CIFER. Produktet me rrezik të lartë — si qumështi, mishi dhe prodhimet e detit — kanë nevojë për rekomandimin e autoritetit kompetent të vendit tuaj (në Shqipëri, Autoriteti Kombëtar i Ushqimit – AKU). Ne e menaxhojmë të gjithë procesin për ju.",
     "gaccQ3": "A është regjistrimi GACC vërtet i detyrueshëm për çdo produkt ushqimor?",
@@ -782,7 +782,7 @@
     "csarName": "CSAR (Rregullorja e Mbikëqyrjes dhe Administrimit të Kozmetikës)",
     "csarDefinition": "CSAR është Rregullorja e Mbikëqyrjes dhe Administrimit të Kozmetikës së Kinës. Ai rregullon regjistrimin, depozitimin, prodhimin dhe importin e kozmetikës në Kinë, duke kërkuar vlerësimin e sigurisë së produktit dhe zbulimin e përbërësve.",
     "decree280Name": "Dekreti 280 (Dekreti i Regjistrimit të GACC)",
-    "decree280Definition": "Dekreti 280 është rregullorja e GACC për regjistrimin e ndërmarrjeve të huaja të prodhimit të ushqimit; është në fuqi nga 1 qershori 2026 dhe zëvendëson dekretet 248 dhe 249. Ruan regjimin e detyrueshëm të regjistrimit, përcakton vlefshmëri pesëvjeçare me rinovim automatik dhe kërkon aplikimin për rinovim 3 deri 12 muaj përpara skadimit.",
+    "decree280Definition": "Dekreti 280 është rregullorja e GACC për regjistrimin e ndërmarrjeve të huaja të prodhimit të ushqimit; është në fuqi nga 1 qershori 2026. Ruan regjimin e detyrueshëm të regjistrimit, përcakton vlefshmëri pesëvjeçare me rinovim automatik dhe kërkon aplikimin për rinovim 3 deri 12 muaj përpara skadimit.",
     "decree243Name": "Dekreti 243 (Dekreti i GACC për sigurinë ushqimore për import/eksport)",
     "decree243Definition": "Dekreti 243 është masa administrative e GACC për sigurinë e ushqimeve të importuara dhe të eksportuara. Ai vendos kërkesat për menaxhimin e sigurisë ushqimore, etiketimin dhe gjurmueshmërinë për importuesit dhe eksportuesit e ushqimit në Kinë.",
     "samrName": "SAMR (Administrata Shtetërore për Rregullimin e Tregut)",
@@ -825,8 +825,8 @@
     "ctaButton": "Merrni një ofertë falas"
   },
   "IndustryDairy": {
-    "heroTitle": "Përputhja me Kinën për eksportuesit shqiptarë të qumështit",
-    "heroSubtitle": "Eksporti i qumështit, djathit dhe jogurtit në Kinë kërkon regjistrim GACC. Ne menaxhojmë regjistrimin dhe etiketat për fabrikat shqiptare të qumështit.",
+    "heroTitle": "Përputhshmëri me Kinën për prodhuesit shqiptarë të produkteve të qumështit",
+    "heroSubtitle": "Djathë i bardhë, kaçkavall, kos dhe gjalpë: kërkesa për produkte cilësore të qumështit në Kinë po rritet. Regjistrimi GACC, etiketimi kinez dhe përputhshmëria në import janë të detyrueshme; ju shoqërojmë në çdo hap.",
     "heroCta": "Merrni vlerësim falas",
     "coverTitle": "Çfarë mbulojmë për eksportuesit shqiptarë të qumështit",
     "coverItems": "Regjistrimi GACC sipas Dekretit 280 për prodhuesit e qumështit,Pajtueshmëria me etiketën kineze për produktet e qumështit,Udhëzime për licencën e importit për kategoritë e qumështit,Mbështetje për zhdoganimin e qumështit të ftohtë dhe të ngrirë,Regjistrimi i formulës për pluhurin e qumështit për foshnja,Monitorim i vazhdueshëm i pajtueshmërisë për përditësimet rregullatore",
@@ -858,8 +858,8 @@
     "metaTitle": "Produkte qumështi në Kinë | udhëzues regjistrimi GACC"
   },
   "IndustryMeat": {
-    "heroTitle": "Përputhja me Kinën për eksportuesit shqiptarë të mishit",
-    "heroSubtitle": "Eksporti i mishit në Kinë kërkon regjistrim GACC dhe kontrolle higjienike. Ne menaxhojmë regjistrimin dhe certifikatat shëndetësore për fabrikat shqiptare.",
+    "heroTitle": "Përputhshmëri me Kinën për eksportuesit shqiptarë të mishit dhe produkteve të detit",
+    "heroSubtitle": "Mish derri, viçi, shpendë dhe peshk: Kina është treg me vlerë të lartë dhe rregulla të rrepta hyrjeje. Koordinojmë regjistrimin GACC CIFER, etiketimin dhe zhdoganimin nga fillimi në fund.",
     "heroCta": "Merrni vlerësim falas",
     "coverTitle": "Çfarë mbulojmë për eksportuesit shqiptarë të mishit dhe ushqimeve të detit",
     "questionsTitle": "Pyetje të shpeshta për eksportin e mishit dhe ushqimeve të detit",
@@ -867,7 +867,7 @@
     "faq1q": "Çfarë është regjistrimi CIFER?",
     "faq1a": "CIFER është sistemi online i Kinës për regjistrimin e prodhuesve të huaj të ushqimit. Objektet e mishit dhe ushqimeve të detit — përfshirë përpunuesit shqiptarë të mishit të qengjit dhe viçit — duhet të regjistrohen përpara se të eksportojnë në Kinë.",
     "faq2q": "Cilat vende mund të eksportojnë mish në Kinë?",
-    "faq2a": "Vetëm vendet me marrëveshje dypalëshe për akses në treg me Kinën mund të eksportojnë mish. Statusi i aksesit ndryshon sipas specieve dhe përditësohet me kalimin e kohës. Ne verifikojmë statusin aktual për produktet tuaja shqiptare.",
+    "faq2a": "Kina hap importin e mishit dhe prodhimeve të detit përmes protokolleve dypalëshe që negociohen shtet për shtet dhe specie për specie. Verifikojmë statusin aktual për mishin e gjedhit, të derrit, shpendët dhe peshkun nga Shqipëria dhe përcaktojmë kërkesat para se të nisni.",
     "faq3q": "Sa kohë zgjat regjistrimi i produkteve të mishit?",
     "faq3a": "Regjistrimi CIFER zakonisht zgjat 3-8 muaj. Mund të zbatohen edhe protokollet specifike të aksesit në treg midis qeverisë shqiptare dhe asaj kineze.",
     "faq4q": "Cilat etiketa kërkohen për mishin e importuar?",
@@ -890,8 +890,8 @@
     "metaTitle": "Eksporti i mishit në Kinë | udhëzues GACC dhe higjiene"
   },
   "IndustryWine": {
-    "heroTitle": "Përputhja me Kinën për eksportuesit shqiptarë të pijeve",
-    "heroSubtitle": "Eksporti i verës dhe pijeve kërkon etiketë kineze të saktë dhe regjistrim GACC. Ne ndihmojmë prodhuesit shqiptarë me etiketat dhe importin.",
+    "heroTitle": "Përputhshmëri me Kinën për kantinat dhe eksportuesit shqiptarë të verës",
+    "heroSubtitle": "Kallmet, Shesh i Zi dhe verëra të vjetra: konsumatorët kinezë vlerësojnë verërat e cilësisë. Regjistrimi GACC, etiketimi kinez dhe mbrojtja e markës hapin derën; e shoqërojmë kantinën tuaj deri në shitjen e parë.",
     "heroCta": "Merrni vlerësim falas",
     "coverTitle": "Çfarë mbulojmë për eksportuesit shqiptarë të verës dhe pijeve alkoolike",
     "coverItems": "Regjistrim GACC për prodhuesit e verës dhe pijeve alkoolike,Pajtueshmëri me etiketën kineze për pijet alkoolike,Regjistrim i markës tregtare në Kinë,Udhëzime për taksat dhe detyrimet e importit,Kërkesa specifike të aksesit në treg për vendin,Mbështetje për zhdoganimin dhe inspektimin",

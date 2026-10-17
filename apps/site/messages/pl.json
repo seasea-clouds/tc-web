@@ -5,7 +5,7 @@
     "heroCta": "Poproś o bezpłatną ocenę",
     "heroExplore": "Zobacz nasze usługi",
     "servicesTitle": "Kompleksowe usługi zgodności",
-    "servicesSubtitle": "Od rejestracji GACC po certyfikację CCC — wspieramy marki na każdym etapie wejścia do Chin.",
+    "servicesSubtitle": "Rejestracja, etykietowanie, certyfikacja, znak towarowy i e-commerce: wszystko, czego Twój produkt potrzebuje, by wejść na rynek chiński, z myślą o polskich producentach i eksporterach.",
     "whyTitle": "Dlaczego warto wybrać SinoTrade Compliance",
     "whySubtitle": "Partner, który poprowadzi Cię przez chińskie przepisy importowe — od pierwszego pytania po pierwszą wysyłkę.",
     "whyCard1Title": "Wszystkie kategorie produktów",
@@ -73,7 +73,7 @@
     },
     "trustedByTitle": "Nasi partnerzy",
     "processDesc": "Prosty, 6-etapowy proces wejścia Twojej marki na rynek chiński",
-    "trustedByDesc": "Dołącz do marek, które już rozwijają sprzedaż w Chinach",
+    "trustedByDesc": "Dołącz do polskich i międzynarodowych marek, które już eksportują z nami do Chin",
     "metaTitle": "SinoTrade Compliance | Eksport do Chin: GACC, CCC i NMPA",
     "metaDescription": "Kompleksowa zgodność z przepisami przy eksporcie do Chin: rejestracja GACC, certyfikacja CCC, zgłoszenie kosmetyków NMPA i chińskie etykiety. Zaufali nam eksporterzy z ponad 50 krajów.",
     "heroPortalCta": "Sprawdź zgodność swoich produktów w 3 krokach →"
@@ -208,7 +208,7 @@
     "metaDescription": "Rejestracja GACC dla polskich eksporterów żywności: mleczarstwo, mięso, jabłka, słodycze. Dossier CIFER, dekret 280, tłumaczenia dokumentów."
   },
   "ServiceLabel": {
-    "heroTitle": "Zgodność chińskich etykiet dla polskich produktów",
+    "heroTitle": "Chińskie etykiety dla polskich produktów",
     "heroSubtitle": "Słodycze, nabiał, napoje: etykiety muszą spełniać normy GB 7718-2025 i GB 28050-2025. Tworzymy i weryfikujemy chińskie etykiety dla polskich producentów.",
     "cta": "Uzyskaj bezpłatny audyt etykiet",
     "coverTitle": "Zakres usług zgodności etykiet",
@@ -255,7 +255,7 @@
     "metaDescription": "Projektowanie i weryfikacja chińskich etykiet dla polskich produktów spożywczych: GB 7718-2025, GB 28050-2025, tabela wartości odżywczych. Unikaj odmów na granicy."
   },
   "ServiceCcc": {
-    "heroTitle": "Certyfikacja CCC dla polskich eksporterów",
+    "heroTitle": "Certyfikacja CCC dla polskich producentów",
     "heroSubtitle": "Elektronika, AGD, zabawki: certyfikacja CCC jest obowiązkowa, aby sprzedawać w Chinach. Znak CE nie wystarczy — organizujemy testy i audyty dla polskich producentów.",
     "cta": "Uzyskaj bezpłatną ocenę zgodności",
     "coverTitle": "Zakres naszych usług dla polskich producentów",
@@ -286,7 +286,7 @@
     "howtoStep2Name": "Wybierz wyznaczoną jednostkę certyfikującą",
     "howtoStep2Text": "Wybierz jednostkę certyfikującą zatwierdzoną przez CNCA, uprawnioną do badania i certyfikacji Twojej kategorii produktów.",
     "howtoStep3Name": "Złóż wniosek i wyślij próbki",
-    "howtoStep3Text": "Wypełnij formularz zgłoszeniowy i wyślij próbki produktów do wyznaczonego laboratorium badawczego — organizujemy wysyłkę z Polski.",
+    "howtoStep3Text": "Wypełnij formularz zgłoszeniowy i wyślij próbki produktów z Polski do wyznaczonego laboratorium badawczego.",
     "howtoStep4Name": "Audyt fabryki i badania",
     "howtoStep4Text": "Przejdź inspekcję fabryczną i badania produktu zgodnie z chińskimi normami krajowymi.",
     "howtoStep5Name": "Odbierz certyfikat CCC",
@@ -353,7 +353,7 @@
     "metaDescription": "Zgłoszenie kosmetyków NMPA dla polskich marek: pielęgnacja, makijaż, perfumy. Kategoryzacja, badania, odpowiedzialna osoba w Chinach."
   },
   "ServiceEcommerce": {
-    "heroTitle": "E-commerce transgraniczny dla polskich marek",
+    "heroTitle": "E-commerce transgraniczny dla polskich marek w Chinach",
     "heroSubtitle": "Tmall Global, JD Worldwide, Douyin: wprowadź polską markę na chiński rynek. Żywność, kosmetyki, artykuły dla domu — zarządzamy całym procesem.",
     "cta": "Uzyskaj bezpłatne doradztwo platformowe",
     "coverTitle": "Zakres usług dla polskich marek",
@@ -400,7 +400,7 @@
     "metaDescription": "Uruchomienie e-commerce w Chinach dla polskich marek: Tmall Global, JD Worldwide, Douyin, zgodność CBEC, logistyka, płatności. Obsługa w języku polskim."
   },
   "ServiceBrand": {
-    "heroTitle": "Rejestracja znaku towarowego w Chinach dla polskich firm",
+    "heroTitle": "Ochrona znaku towarowego w Chinach dla polskich firm",
     "heroSubtitle": "Polskie marki (żywność, kosmetyki, meble) wchodzą na rynek chiński. Zarejestruj znak w CNIPA, aby chronić się przed kradzieżą marki.",
     "cta": "Uzyskaj bezpłatne badanie znaku towarowego",
     "coverTitle": "Zakres usług ochrony marki w Chinach",
@@ -529,7 +529,7 @@
     "heroSubtitle": "Konkretne odpowiedzi dla eksporterów z całego świata — rejestracja GACC, certyfikacja CCC, chińskie etykiety, zgłoszenie kosmetyków NMPA i e-commerce transgraniczny.",
     "gaccTitle": "Rejestracja żywności GACC",
     "gaccQ1": "Co to jest dekret 280 GACC?",
-    "gaccA1": "Dekret GACC nr 280 to chińskie przepisy o rejestracji zagranicznych producentów, przetwórców i magazynów żywności. Obowiązuje od 1 czerwca 2026 r. i zastępuje dekrety 248 i 249; rejestracja w systemie CIFER jest wymagana dla żywności wysyłanej do Chin od 2022 r.",
+    "gaccA1": "Dekret GACC nr 280 to chińskie przepisy o rejestracji zagranicznych producentów, przetwórców i magazynów żywności. Obowiązuje od 1 czerwca 2026 r.; rejestracja w systemie CIFER jest wymagana dla żywności wysyłanej do Chin od 2022 r.",
     "gaccQ2": "Jak długo trwa rejestracja GACC?",
     "gaccA2": "Termin zależy od kategorii produktu. Produkty niskiego ryzyka rejestruje się bezpośrednio w systemie CIFER. Produkty wysokiego ryzyka wymagają rekomendacji właściwego organu w kraju producenta — w przypadku polskiego nabiału i mięsa jest to m.in. Główny Inspektorat Weterynarii (GIW). Prowadzimy Cię przez każdy krok.",
     "gaccQ3": "Czy rejestracja GACC jest obowiązkowa dla wszystkich produktów spożywczych?",
@@ -782,7 +782,7 @@
     "csarName": "CSAR (rozporządzenie dotyczące nadzoru i administracji kosmetycznej)",
     "csarDefinition": "CSAR to chińskie rozporządzenie dotyczące nadzoru i administracji kosmetyków. Reguluje rejestrację, archiwizację, produkcję i import kosmetyków w Chinach, wymagając oceny bezpieczeństwa produktu i ujawnienia składników.",
     "decree280Name": "Dekret 280 (dekret rejestracyjny GACC)",
-    "decree280Definition": "Dekret 280 to rozporządzenie GACC o rejestracji zagranicznych przedsiębiorstw produkujących żywność; obowiązuje od 1 czerwca 2026 r. i zastępuje dekrety 248 i 249. Utrzymuje obowiązkową rejestrację, ustala pięcioletnią ważność z automatycznym przedłużaniem i wymaga złożenia wniosku 3–12 miesięcy przed wygaśnięciem.",
+    "decree280Definition": "Dekret 280 to rozporządzenie GACC o rejestracji zagranicznych przedsiębiorstw produkujących żywność; obowiązuje od 1 czerwca 2026 r.. Utrzymuje obowiązkową rejestrację, ustala pięcioletnią ważność z automatycznym przedłużaniem i wymaga złożenia wniosku 3–12 miesięcy przed wygaśnięciem.",
     "decree243Name": "Dekret 243 (dekret dotyczący bezpieczeństwa żywności importowanej/eksportowanej przez GACC)",
     "decree243Definition": "Dekret 243 to środek administracyjny GACC dotyczący bezpieczeństwa importowanej i eksportowanej żywności. Określa wymagania dotyczące zarządzania bezpieczeństwem żywności, etykietowania i identyfikowalności dla importerów i eksporterów żywności w Chinach.",
     "samrName": "SAMR (Państwowa Administracja ds. Regulacji Rynku)",
@@ -825,8 +825,8 @@
     "ctaButton": "Poproś o bezpłatną wycenę"
   },
   "IndustryDairy": {
-    "heroTitle": "Zgodność z Chinami dla polskich eksporterów nabiału",
-    "heroSubtitle": "Sery, mleko w proszku, twarogi, masło: Polska jest jednym z największych eksporterów nabiału do Chin. Prowadzimy rejestrację GACC i etykiety dla polskich mleczarni.",
+    "heroTitle": "Zgodność z przepisami Chin dla polskich mleczarni i eksporterów nabiału",
+    "heroSubtitle": "Sery dojrzewające, twaróg, masło i mleko w proszku: popyt na wysokiej jakości nabiał w Chinach rośnie. Rejestracja GACC, chińskie etykiety i zgodność przy imporcie są obowiązkowe; prowadzimy przez każdy etap.",
     "heroCta": "Bezpłatna ocena eksportu nabiału",
     "coverTitle": "Co obejmujemy dla eksporterów produktów mlecznych",
     "coverItems": "Dekret GACC nr 280 rejestracja polskich mleczarni i przetwórni, zgodność chińskich etykiet dla nabiału (GB 7718-2025), wytyczne dotyczące licencji importowych dla kategorii mleczarskich, pomoc w odprawie celnej serów, twarogów i mrożonego nabiału, rejestracja receptury mleka w proszku dla niemowląt, bieżący monitoring zmian regulacyjnych",
@@ -858,8 +858,8 @@
     "metaTitle": "Eksport polskiego nabiału do Chin | Rejestracja GACC"
   },
   "IndustryMeat": {
-    "heroTitle": "Eksport polskiego mięsa do Chin: zgodność",
-    "heroSubtitle": "Wołowina, wieprzowina, drób: Chiny to ważny rynek dla polskiego mięsa. Prowadzimy zezwolenia eksportowe, rejestrację GACC i dokumenty weterynaryjne.",
+    "heroTitle": "Zgodność z przepisami Chin dla polskich eksporterów mięsa i owoców morza",
+    "heroSubtitle": "Wieprzowina, drób, wołowina i ryby: Chiny to rynek o wysokiej wartości i surowych zasadach wjazdu. Koordynujemy rejestrację GACC CIFER, etykietowanie i odprawę celną od początku do końca.",
     "heroCta": "Bezpłatna ocena eksportu mięsa",
     "coverTitle": "Co obejmujemy dla eksporterów mięsa i owoców morza",
     "questionsTitle": "Często zadawane pytania dotyczące eksportu mięsa i owoców morza",
@@ -867,7 +867,7 @@
     "faq1q": "Co to jest rejestracja CIFER?",
     "faq1a": "CIFER to chiński system internetowy rejestracji zagranicznych producentów żywności. Zakłady mięsne i rybne muszą zarejestrować się w systemie GACC przed pierwszą wysyłką do Chin. Bez rejestracji kontenery zostaną odrzucone na granicy. Prowadzimy pełne dossier dla polskich zakładów.",
     "faq2q": "Jakie polskie mięso można eksportować do Chin?",
-    "faq2a": "Chiny dopuszczają import mięsa tylko z krajów objętych dwustronnymi porozumieniami o dostępie do rynku. Dla polskich zakładów kluczowe są protokoły weterynaryjne między UE a Chinami; lista dozwolonych kategorii zmienia się wraz z decyzjami sanitarnymi. Sprawdzamy aktualne uprawnienia Twojego zakładu i produktów.",
+    "faq2a": "Chiny otwierają import mięsa i owoców morza poprzez protokoły dwustronne negocjowane kraj po kraju i gatunek po gatunku. Sprawdzamy bieżący status dla wieprzowiny, wołowiny, drobiu i ryb z Polski i jeszcze przed startem opisujemy wymagania.",
     "faq3q": "Jak długo trwa rejestracja GACC dla mięsa?",
     "faq3a": "Rejestracja w systemie CIFER trwa zwykle 3–8 miesięcy. Dodatkowo mogą obowiązywać protokoły dostępu do rynku między UE a Chinami, a świadectwa weterynaryjne potwierdza polski GIW (Główny Inspektorat Weterynarii). Ustalamy realistyczny harmonogram dla Twojego zakładu.",
     "faq4q": "Jakie etykiety są wymagane dla importowanego mięsa?",
@@ -890,8 +890,8 @@
     "metaTitle": "Eksport polskiego mięsa do Chin | Zezwolenia i GACC"
   },
   "IndustryWine": {
-    "heroTitle": "Eksport polskich alkoholi do Chin",
-    "heroSubtitle": "Polska wódka, cydr i wina owocowe wchodzą na chiński rynek. Prowadzimy etykiety, import i rejestrację GACC dla polskich producentów.",
+    "heroTitle": "Zgodność z przepisami Chin dla polskich winnic i eksporterów wina",
+    "heroSubtitle": "Wina z Małopolski, miody pitne i wina musujące: chińscy konsumenci cenią dobre wina. Rejestracja GACC, chińskie etykiety i ochrona znaku otwierają drzwi; prowadzimy winnicę aż do pierwszej sprzedaży.",
     "heroCta": "Bezpłatna ocena eksportu alkoholi",
     "coverTitle": "Co obejmujemy dla eksporterów win i napojów spirytusowych",
     "coverItems": "Rejestracja GACC CIFER dla polskich gorzelni, browarów i rozlewni, Zgodność chińskich etykiet napojów alkoholowych (GB 10344), Rejestracja znaku towarowego w CNIPA, Wytyczne dotyczące ceł importowych i podatków, Wymogi dostępu do rynku dla polskiej wódki, piwa i cydru, Wsparcie w zakresie odpraw celnych i inspekcji",

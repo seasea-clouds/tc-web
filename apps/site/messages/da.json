@@ -5,7 +5,7 @@
     "heroCta": "Få gratis vurdering",
     "heroExplore": "Udforsk tjenester",
     "servicesTitle": "Omfattende overholdelsestjenester",
-    "servicesSubtitle": "Regulatorisk støtte i hvert led – fra produktregistrering til toldbehandling – for danske og internationale mærker.",
+    "servicesSubtitle": "Registrering, mærkning, certificering, varemærke og e-handel: alt hvad din produkt har brug for for at komme ind på det kinesiske marked, tilpasset danske producenter og eksportører.",
     "whyTitle": "Hvorfor vælge SinoTrade Compliance",
     "whySubtitle": "Din betroede partner til at navigere i Kinas importregler – med support på dansk.",
     "whyCard1Title": "Fuld kategoridækning",
@@ -73,7 +73,7 @@
     },
     "trustedByTitle": "Betroede partnere",
     "processDesc": "En simpel 6-trins proces til at få dit brand ind i Kina",
-    "trustedByDesc": "Slut dig til internationale mærker, der allerede vokser med os",
+    "trustedByDesc": "Slut dig til de danske og internationale mærker, der allerede eksporterer til Kina med os",
     "metaTitle": "SinoTrade Compliance | Eksport til Kina: GACC, CCC og NMPA",
     "metaDescription": "Compliance fra ende til anden til din eksport til Kina: GACC-registrering, CCC-certificering, NMPA-kosmetikanmeldelse og kinesisk mærkning. Betroet af eksportører i over 50 lande.",
     "heroPortalCta": "Prøv vores 3-trins overholdelsestjek →"
@@ -159,7 +159,7 @@
     "metaDescription": "Compliance fra ende til anden til det kinesiske marked: GACC-fødevaregodkendelse, CCC-certificering, NMPA-kosmetikanmeldelse, kinesisk mærkning og mærkebeskyttelse. 15+ år."
   },
   "ServiceGacc": {
-    "heroTitle": "GACC-fødevareregistrering – for danske eksportører",
+    "heroTitle": "GACC-registrering for danske fødevareeksportører",
     "heroSubtitle": "Eksporterer du fødevarer til Kina? Dekret 280 kræver, at hver udenlandsk producent registrerer sig hos GACC før første forsendelse. Vi står for hele din CIFER-registrering og holder eksporten kørende.",
     "cta": "Få gratis registreringsvurdering",
     "coverTitle": "Vores ydelser til danske fødevareproducenter",
@@ -208,7 +208,7 @@
     "metaDescription": "GACC-registrering for danske fødevareeksportører: forordning 280, CIFER-systemet, nødvendige dokumenter, tid. Support på dansk."
   },
   "ServiceLabel": {
-    "heroTitle": "Kinesisk mærkningskrav – for danske produkter",
+    "heroTitle": "Kinesisk mærkning for danske produkter",
     "heroSubtitle": "Importerede emballerede fødevarer skal have en kinesisk etiket i henhold til GB 7718-2025 og GB 28050-2025. Forkert mærkning fører til, at varer holdes i tolden. Vi designer og gennemgår jeres etiketter.",
     "cta": "Få gratis etiketgennemgang",
     "coverTitle": "Vores ydelser inden for etiketoverholdelse",
@@ -255,7 +255,7 @@
     "metaDescription": "Kinesisk mærkningskrav for danske produkter: GB 7718-2025, GB 28050-2025 næringstabel, allergenadvarsler."
   },
   "ServiceCcc": {
-    "heroTitle": "CCC-certificering – Guide for danske eksportører til Kina",
+    "heroTitle": "CCC-certificering for danske producenter",
     "heroSubtitle": "Elektronik, husholdningsapparater og legetøj, der eksporteres til Kina, skal have CCC-certificering. CE-mærkning eller dansk certificering er ikke nok; vi koordinerer testning og fabriksaudit med CNCA-akkrediterede organer.",
     "cta": "Få gratis screening af dit produkt",
     "coverTitle": "Vores ydelser til danske producenter",
@@ -286,7 +286,7 @@
     "howtoStep2Name": "Vælg et udpeget certificeringsorgan",
     "howtoStep2Text": "Vælg et CNCA-godkendt certificeringsorgan, der er autoriseret til at teste og certificere din produktkategori.",
     "howtoStep3Name": "Indsend ansøgning og prøver",
-    "howtoStep3Text": "Udfyld ansøgningsformularen, og send produktprøver til det udpegede prøvningslaboratorium – vi arrangerer forsendelsen fra Danmark.",
+    "howtoStep3Text": "Udfyld ansøgningsformularen, og send produktprøver fra Danmark til det udpegede prøvningslaboratorium.",
     "howtoStep4Name": "Fabriksaudit og prøvning",
     "howtoStep4Text": "Gennemgå fabriksinspektion og produktprøvning mod kinesiske nationale standarder.",
     "howtoStep5Name": "Modtag CCC-certifikatet",
@@ -304,7 +304,7 @@
     "metaDescription": "CCC-certificering for danske eksportører: forskel fra CE, certificeringsproces, tests, fabriksaudit, tid og omkostning. Support på dansk."
   },
   "ServiceCosmetics": {
-    "heroTitle": "NMPA-kosmetikregistrering – for danske brands",
+    "heroTitle": "NMPA-kosmetikregistrering for danske mærker",
     "heroSubtitle": "Indtræden på det kinesiske marked kræver NMPA-anmeldelse for kosmetik: anmeldelse for almindelige produkter og registrering for særlige, med krav om ansvarlig part i Kina. Vi håndterer hele processen.",
     "cta": "Få gratis NMPA-klassificering",
     "coverTitle": "Vores ydelser til danske kosmetikmærker",
@@ -353,7 +353,7 @@
     "metaDescription": "NMPA-registrering for danske kosmetikmærker: klassificering, fritagelse for dyreforsøg, ansvarlig part i Kina, tid."
   },
   "ServiceEcommerce": {
-    "heroTitle": "Grænseoverskridende e-handel – for danske brands",
+    "heroTitle": "Grænseoverskridende e-handel for danske mærker i Kina",
     "heroSubtitle": "Sælg jeres danske brand via Tmall Global, JD Worldwide og Douyin: grænseoverskridende kanaler giver indtræden i Kina uden lokalt selskab. Vi ordner hele opsætningen.",
     "cta": "Få gratis platformrådgivning",
     "coverTitle": "Vores ydelser til danske brands",
@@ -400,7 +400,7 @@
     "metaDescription": "Danske brands ind i Kina via grænseoverskridende e-handel: Tmall Global, JD Worldwide, CBEC-overholdelse, logistik, betaling."
   },
   "ServiceBrand": {
-    "heroTitle": "Varemærkeregistrering i Kina – beskyt danske brands",
+    "heroTitle": "Varemærkebeskyttelse i Kina for danske virksomheder",
     "heroSubtitle": "Kina følger \"først til mølle\"-princippet: et varemærke registreret i Danmark (Patent- og Varemærkestyrelsen) beskyttes ikke i Kina. Registrer jeres brand hos CNIPA før markedsindtræden for at undgå kapring.",
     "cta": "Få gratis varemærkesøgning",
     "coverTitle": "Vores ydelser til varemærkebeskyttelse i Kina",
@@ -529,7 +529,7 @@
     "heroSubtitle": "Klare svar til eksportører verden over — GACC-registrering, CCC-certificering, kinesisk mærkning, NMPA-kosmetikanmeldelse og grænseoverskridende e-handel.",
     "gaccTitle": "GACC-fødevareregistrering",
     "gaccQ1": "Hvad er GACC-dekret 280?",
-    "gaccA1": "GACC-dekret 280 er Kinas regler om registrering af udenlandske fødevareproducenter, -forarbejdningsvirksomheder og -lagre. Det gælder fra 1. juni 2026 og erstatter dekret 248 og 249; registrering via CIFER har været obligatorisk for fødevarer til Kina siden 2022.",
+    "gaccA1": "GACC-dekret 280 er Kinas regler om registrering af udenlandske fødevareproducenter, -forarbejdningsvirksomheder og -lagre. Det gælder fra 1. juni 2026; registrering via CIFER har været obligatorisk for fødevarer til Kina siden 2022.",
     "gaccQ2": "Hvor lang tid tager GACC-registrering for mine produkter?",
     "gaccA2": "Det afhænger af din produktkategori. Lavrisikoprodukter kan registreres direkte via CIFER. Højrisikoprodukter – fx mejeriprodukter, kød og fisk og skaldyr – kræver en anbefaling fra dit lands kompetente myndighed (i Danmark fx Fødevarestyrelsen). Vi styrer hele processen for dig.",
     "gaccQ3": "Er GACC-registrering virkelig obligatorisk for alle fødevarer?",
@@ -782,7 +782,7 @@
     "csarName": "CSAR (Cosmetic Supervision and Administration Regulation)",
     "csarDefinition": "CSAR er Kinas forordning om kosmetisk tilsyn og administration. Det regulerer registrering, arkivering, produktion og import af kosmetik i Kina, hvilket kræver produktsikkerhedsvurdering og offentliggørelse af ingredienser.",
     "decree280Name": "Dekret 280 (GACC-registreringsdekret)",
-    "decree280Definition": "Dekret 280 er GACC's regulativ om registrering af udenlandske fødevareproduktionsvirksomheder; det gælder fra 1. juni 2026 og erstatter dekret 248 og 249. Det fastholder den obligatoriske registrering, fastsætter fem års gyldighed med automatisk fornyelse og kræver fornyelse 3 til 12 måneder før udløb.",
+    "decree280Definition": "Dekret 280 er GACC's regulativ om registrering af udenlandske fødevareproduktionsvirksomheder; det gælder fra 1. juni 2026. Det fastholder den obligatoriske registrering, fastsætter fem års gyldighed med automatisk fornyelse og kræver fornyelse 3 til 12 måneder før udløb.",
     "decree243Name": "Dekret 243 (GACC Import/Export Food Safety Decreet)",
     "decree243Definition": "Dekret 243 er GACCs administrative foranstaltning til sikkerhed for importerede og eksporterede fødevarer. Den stiller krav til fødevaresikkerhedsstyring, mærkning og sporbarhed for fødevareimportører og -eksportører i Kina.",
     "samrName": "SAMR (Statens administration for markedsregulering)",
@@ -825,8 +825,8 @@
     "ctaButton": "Få et gratis tilbud"
   },
   "IndustryDairy": {
-    "heroTitle": "Kina-overholdelse for danske mejerieksportører",
-    "heroSubtitle": "Eksport af mælk, ost og yoghurt til Kina kræver GACC-registrering. Vi håndterer registrering og etiketter for danske mejerier.",
+    "heroTitle": "Kina-overensstemmelse for danske mejerier og mejeriproduktexportører",
+    "heroSubtitle": "Ost, smør, fløde og mælkepulver: efterspørgslen efter mejeriprodukter af høj kvalitet i Kina vokser. GACC-registrering, kinesisk mærkning og importoverensstemmelse er obligatorisk; vi følger jer gennem hvert trin.",
     "heroCta": "Få gratis vurdering",
     "coverTitle": "Hvad vi dækker for mejerieksportører",
     "coverItems": "GACC-dekret 280-registrering for danske mejerivirksomheder, Overholdelse af kinesisk mærkning for mælkeprodukter, Importlicensvejledning for mejerikategorier, Fortoldningsstøtte til kølede og frosne mejerivarer, Formelregistrering for modermælkserstatning, Løbende overvågning af ændringer i reglerne",
@@ -858,8 +858,8 @@
     "metaTitle": "Mejeriprodukter til Kina | Guide GACC-registrering"
   },
   "IndustryMeat": {
-    "heroTitle": "Kina-overholdelse for danske kødeksportører",
-    "heroSubtitle": "Eksport af svinekød fra Danmark til Kina kræver GACC-registrering og sundhedskontrol. Vi håndterer registrering og sundhedscertifikater for danske anlæg.",
+    "heroTitle": "Kina-overensstemmelse for danske eksportører af kød og fisk",
+    "heroSubtitle": "Svinekød, oksekød, fjerkræ og fisk: Kina er et højværdimarked med strenge indgangsregler. Vi koordinerer GACC CIFER-registrering, mærkning og toldbehandling fra start til slut.",
     "heroCta": "Få gratis vurdering",
     "coverTitle": "Hvad vi dækker for eksportører af kød og skaldyr",
     "questionsTitle": "Ofte stillede spørgsmål om kød- og skaldyrseksport",
@@ -867,7 +867,7 @@
     "faq1q": "Hvad er CIFER-registrering?",
     "faq1a": "CIFER er Kinas online-system til registrering af udenlandske fødevareproducenter. Kød- og skaldyrsanlæg – herunder danske svineslagterier og Danish Crown – skal registreres, før de kan eksportere til Kina.",
     "faq2q": "Hvilke lande kan eksportere kød til Kina?",
-    "faq2a": "Kun lande med en bilateral markedsadgangsaftale med Kina kan eksportere kød. Danmark er en af verdens største svinekødseksportører og har markedsadgang for svinekød, ligesom USA, Storbritannien, Canada og Australien har adgang for visse arter – med restriktioner, der ændrer sig over tid. Vi verificerer den aktuelle status for dig.",
+    "faq2a": "Kina åbner import af kød og skaldyr gennem bilaterale protokoller, der forhandles land for land og art for art. Vi tjekker den aktuelle status for svinekød, oksekød, fjerkræ og fisk fra Danmark og skitserer kravene, før I går i gang.",
     "faq3q": "Hvor lang tid tager registrering af kødprodukter?",
     "faq3a": "CIFER-registrering tager typisk 3-8 måneder. Derudover kan landespecifikke markedsadgangsprotokoller mellem din regering og Kina – som de protokoller, der er forhandlet for danske svinekødsanlæg – gøre sig gældende.",
     "faq4q": "Hvilken mærkning kræves for importeret kød?",
@@ -975,8 +975,8 @@
     "metaTitle": "Dyrefoder til Kina | Guide GACC-registrering"
   },
   "IndustrySupplements": {
-    "heroTitle": "Kina-overholdelse for danske eksportører af kosttilskud",
-    "heroSubtitle": "Kosttilskud med sundhedsanprisninger kræver SAMR-registrering. Vi håndterer importprocessen for producenter af vitaminer og probiotika.",
+    "heroTitle": "Kina-overensstemmelse for danske producenter af kosttilskud",
+    "heroSubtitle": "Omega-3, vitaminer og marine olier: kinesiske forbrugere efterspørger dokumenterede råvarer. Vi håndterer GACC-registrering, hvor den gælder, NMPA-krav og kinesisk mærkning.",
     "heroCta": "Få gratis vurdering",
     "coverTitle": "Hvad vi dækker for sundheds- og kosttilskudseksportører",
     "coverItems": "SAMR-registrering og -anmeldelse af sundhedsfødevarer, Vejledning om klassificering som almindelig fødevare, Overholdelse af kinesisk mærkning for kosttilskud, Sikkerhedsvurdering af ingredienser og dokumentation, Fortoldning af kosttilskudsforsendelser, Markedsadgangsstrategi for sundhedsprodukter",

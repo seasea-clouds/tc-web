@@ -5,7 +5,7 @@
     "heroCta": "Získajte bezplatné posúdenie",
     "heroExplore": "Preskúmajte služby",
     "servicesTitle": "Komplexné služby zhody pre vstup na čínsky trh",
-    "servicesSubtitle": "Regulačná podpora na každom kroku – od registrácie výrobku až po colné odbavenie.",
+    "servicesSubtitle": "Registrácia, označovanie, certifikácia, ochranná známka a e-commerce: všetko, čo váš výrobok potrebuje na vstup na čínsky trh, s podporou pre slovenských výrobcov a exportérov.",
     "whyTitle": "Prečo si vybrať SinoTrade Compliance",
     "whySubtitle": "Váš dôveryhodný partner pre orientáciu v čínskych dovozných predpisoch.",
     "whyCard1Title": "Pokrytie všetkých kategórií",
@@ -73,7 +73,7 @@
     },
     "trustedByTitle": "Dôveryhodní partneri",
     "processDesc": "Jednoduchý 6-krokový proces, ako dostať vašu značku do Číny",
-    "trustedByDesc": "Pridajte sa k medzinárodným značkám, ktoré s nami už rastú",
+    "trustedByDesc": "Pridajte sa k slovenským aj medzinárodným značkám, ktoré s nami už vyvážajú do Číny",
     "metaTitle": "SinoTrade Compliance | Export do Číny: GACC, CCC a NMPA",
     "metaDescription": "Komplexný compliance pre export do Číny: registrácia GACC, certifikácia CCC, kozmetická notifikácia NMPA a čínske etikety. Dôverujú nám vývozcovia z viac ako 50 krajín.",
     "heroPortalCta": "Vyskúšajte našu 3-krokovú kontrolu súladu →"
@@ -159,7 +159,7 @@
     "metaDescription": "Komplexný compliance pre vstup na čínsky trh: registrácia potravín GACC, certifikácia CCC, kozmetická notifikácia NMPA, čínske etikety a ochrana značky. Viac ako 15 rokov skúseností."
   },
   "ServiceGacc": {
-    "heroTitle": "Registrácia GACC potravín – pre slovenských vývozcov",
+    "heroTitle": "Registrácia GACC pre slovenských exportérov potravín",
     "heroSubtitle": "Vyvážate potraviny do Číny? Nariadenie 280 vyžaduje, aby sa každý zahraničný výrobca zaregistroval u GACC pred prvou zásielkou. Zabezpečíme celú vašu registráciu CIFER a udržíme export v chode.",
     "cta": "Získajte bezplatné posúdenie registrácie GACC",
     "coverTitle": "Čo pokrývame",
@@ -208,7 +208,7 @@
     "metaDescription": "Registrácia GACC pre slovenských vývozcov potravín: nariadenie 280, systém CIFER, potrebné dokumenty, čas. Podpora v slovenčine."
   },
   "ServiceLabel": {
-    "heroTitle": "Čínske požiadavky na označovanie – pre slovenské výrobky",
+    "heroTitle": "Čínske označovanie pre slovenské výrobky",
     "heroSubtitle": "Dovážané balené potraviny musia mať čínsky štítok podľa GB 7718-2025 a GB 28050-2025. Nesprávne označenie vedie k zadržaniu tovaru v colnom konaní. Navrhujeme a kontrolujeme štítky.",
     "cta": "Získajte bezplatnú kontrolu etikety",
     "coverTitle": "Čo pokrývame",
@@ -255,7 +255,7 @@
     "metaDescription": "Čínske požiadavky na označovanie pre slovenské výrobky: GB 7718-2025, GB 28050-2025 nutričná tabuľka, upozornenia na alergény."
   },
   "ServiceCcc": {
-    "heroTitle": "Certifikácia CCC – sprievodca vývozom do Číny pre slovenských výrobcov",
+    "heroTitle": "Certifikácia CCC pre slovenských výrobcov",
     "heroSubtitle": "Elektronika, domáce spotrebiče a hračky vyvážané do Číny musia mať certifikáciu CCC. Označenie CE alebo slovenská certifikácia nestačia; zabezpečujeme testovanie a audit závodu u orgánov akreditovaných CNCA.",
     "cta": "Získajte bezplatné posúdenie CCC",
     "coverTitle": "Čo pokrývame",
@@ -286,7 +286,7 @@
     "howtoStep2Name": "Vyberte certifikačný orgán",
     "howtoStep2Text": "Vyberte certifikačný orgán schválený CNCA, ktorý je oprávnený testovať a certifikovať vašu kategóriu výrobkov.",
     "howtoStep3Name": "Podajte žiadosť a vzorky",
-    "howtoStep3Text": "Vyplňte žiadosť a odošlite vzorky výrobkov do určeného skúšobného laboratória – prepravu zo Slovenska zabezpečíme.",
+    "howtoStep3Text": "Vyplňte žiadosť a odošlite vzorky výrobkov zo Slovenska do určeného skúšobného laboratória.",
     "howtoStep4Name": "Továrenská inšpekcia a testovanie",
     "howtoStep4Text": "Absolvujte továrenskú inšpekciu a testovanie výrobkov podľa čínskych národných noriem.",
     "howtoStep5Name": "Získajte certifikát CCC",
@@ -304,7 +304,7 @@
     "metaDescription": "Certifikácia CCC pre slovenských výrobcov: rozdiel od CE, proces certifikácie, testy, audit závodu, čas a náklady. Podpora v slovenčine."
   },
   "ServiceCosmetics": {
-    "heroTitle": "Registrácia kozmetiky NMPA – pre slovenské značky",
+    "heroTitle": "Kozmetická registrácia NMPA pre slovenské značky",
     "heroSubtitle": "Vstup na čínsky trh vyžaduje oznámenie NMPA pre kozmetiku: oznámenie pre bežné výrobky a registráciu pre osobitné výrobky, s povinnou zodpovednou osobou v Číne. Zabezpečujeme celý proces.",
     "cta": "Získajte bezplatnú klasifikáciu NMPA",
     "coverTitle": "Čo pokrývame",
@@ -353,7 +353,7 @@
     "metaDescription": "Registrácia kozmetiky NMPA pre slovenské značky: klasifikácia, oslobodenie od testov na zvieratách, zodpovedná osoba v Číne, čas."
   },
   "ServiceEcommerce": {
-    "heroTitle": "Cezhraničný e-commerce – pre slovenské značky",
+    "heroTitle": "Cezhraničný e-commerce pre slovenské značky v Číne",
     "heroSubtitle": "Predávajte svoju slovenskú značku cez Tmall Global, JD Worldwide a Douyin: cezhraničné kanály umožňujú vstup do Číny bez miestnej spoločnosti. Zabezpečujeme kompletné nastavenie.",
     "cta": "Získajte bezplatnú konzultáciu o platforme",
     "coverTitle": "Čo pokrývame",
@@ -400,7 +400,7 @@
     "metaDescription": "Slovenské značky do Číny cez cezhraničný e-commerce: Tmall Global, JD Worldwide, súlad s CBEC, logistika, platby."
   },
   "ServiceBrand": {
-    "heroTitle": "Registrácia ochrannej známky v Číne – ochrana slovenských značiek",
+    "heroTitle": "Ochrana značky v Číne pre slovenské firmy",
     "heroSubtitle": "Čína uplatňuje princíp \"kto prvý príde\": ochranná známka registrovaná na Slovensku (ÚPV) nie je v Číne chránená. Zaregistrujte svoju značku u CNIPA pred vstupom na trh, aby ste zabránili jej zcudzeniu.",
     "cta": "Získajte bezplatnú rešerš ochrannej známky",
     "coverTitle": "Čo pokrývame",
@@ -529,7 +529,7 @@
     "heroSubtitle": "Zrozumiteľné odpovede pre vývozcov z celého sveta — registrácia GACC, certifikácia CCC, čínske etikety, kozmetická notifikácia NMPA a cezhraničný e-commerce.",
     "gaccTitle": "Registrácia potravín GACC",
     "gaccQ1": "Čo je vyhláška GACC 280?",
-    "gaccA1": "Nariadenie GACC č. 280 je čínska úprava registrácie zahraničných výrobcov, spracovateľov a skladov potravín. Platí od 1. júna 2026 a nahrádza nariadenia 248 a 249; registrácia v systéme CIFER je pre potraviny zasielané do Číny povinná od roku 2022.",
+    "gaccA1": "Nariadenie GACC č. 280 je čínska úprava registrácie zahraničných výrobcov, spracovateľov a skladov potravín. Platí od 1. júna 2026; registrácia v systéme CIFER je pre potraviny zasielané do Číny povinná od roku 2022.",
     "gaccQ2": "Ako dlho trvá registrácia GACC pre moje výrobky?",
     "gaccA2": "Závisí to od kategórie výrobku. Nízkorizikové výrobky je možné registrovať priamo cez CIFER. Vysokorizikové kategórie – napríklad mliečne výrobky, mäso a morské plody – vyžadujú odporúčanie príslušného orgánu vašej krajiny (na Slovensku je to Štátna veterinárna a potravinová správa SR, ŠVPS SR). Celý proces vrátane dokumentácie a prekladov vybavíme za vás.",
     "gaccQ3": "Je registrácia GACC naozaj povinná pre každý potravinový výrobok?",
@@ -782,7 +782,7 @@
     "csarName": "CSAR (Cosmetic Supervision and Administration Regulation)",
     "csarDefinition": "CSAR je čínske nariadenie o dohľade a správe o kozmetike. Upravuje registráciu, registráciu, výrobu a dovoz kozmetiky v Číne, pričom vyžaduje posúdenie bezpečnosti výrobkov a zverejnenie zložiek.",
     "decree280Name": "vyhláška 280 (vyhláška o registrácii GACC)",
-    "decree280Definition": "Nariadenie 280 je predpis GACC o registrácii zahraničných výrobcov potravín; platí od 1. júna 2026 a nahrádza nariadenia 248 a 249. Zachováva povinnú registráciu, stanovuje päťročnú platnosť s automatickým predĺžením a vyžaduje žiadosť o predĺženie 3 až 12 mesiacov pred vypršaním.",
+    "decree280Definition": "Nariadenie 280 je predpis GACC o registrácii zahraničných výrobcov potravín; platí od 1. júna 2026. Zachováva povinnú registráciu, stanovuje päťročnú platnosť s automatickým predĺžením a vyžaduje žiadosť o predĺženie 3 až 12 mesiacov pred vypršaním.",
     "decree243Name": "Vyhláška 243 (Vyhláška GACC o bezpečnosti dovozu/vývozu potravín)",
     "decree243Definition": "Vyhláška 243 je administratívnym opatrením GACC pre bezpečnosť dovážaných a vyvážaných potravín. Stanovuje požiadavky na riadenie bezpečnosti potravín, označovanie a sledovateľnosť pre dovozcov a vývozcov potravín v Číne.",
     "samrName": "SAMR (Štátna správa pre reguláciu trhu)",
@@ -825,8 +825,8 @@
     "ctaButton": "Získať bezplatnú cenovú ponuku"
   },
   "IndustryDairy": {
-    "heroTitle": "Súlad s Čínou pre slovenských vývozcov mliečnych výrobkov",
-    "heroSubtitle": "Vývoz mlieka, syra a jogurtov do Číny vyžaduje registráciu GACC. Zabezpečujeme registráciu a štítky pre slovenské mliekarne.",
+    "heroTitle": "Súlad s Čínou pre slovenské mliekarne a exportérov mliečnych výrobkov",
+    "heroSubtitle": "Bryndza, syry, maslo a sušené mlieko: dopyt po kvalitných mliečnych výrobkoch v Číne rastie. Registrácia GACC, čínske označovanie a súlad pri dovoze sú povinné; prevedieme vás každým krokom.",
     "heroCta": "Získajte bezplatné posúdenie registrácie GACC pre vašu mliekareň",
     "coverTitle": "Čo vybavíme pre vývozcov mlieka a mliečnych výrobkov",
     "coverItems": "Registrácia podľa dekrétu GACC 280 pre mliekarne a spracovateľské závody,Dodržiavanie čínskych etikiet pre mliečne výrobky (GB 7718-2025, GB 28050-2025),Poradenstvo k dovozným licenciám pre kategórie mliečnych výrobkov,Colné odbavenie chladených a mrazených mliečnych výrobkov,Registrácia receptúr dojčenskej výživy (SAMR),Priebežné monitorovanie zmien predpisov a obnova registrácie",
@@ -858,8 +858,8 @@
     "metaTitle": "Mliečne výrobky do Číny | sprievodca registráciou GACC"
   },
   "IndustryMeat": {
-    "heroTitle": "Súlad s Čínou pre slovenských vývozcov mäsa",
-    "heroSubtitle": "Vývoz mäsa do Číny vyžaduje registráciu GACC a hygienické kontroly. Zabezpečujeme registráciu a zdravotné osvedčenia pre slovenské závody.",
+    "heroTitle": "Súlad s Čínou pre slovenských exportérov mäsa a morských plodov",
+    "heroSubtitle": "Bravčové, hovädzie, hydina a ryby: Čína je trh s vysokou hodnotou a prísnymi pravidlami vstupu. Koordinujeme registráciu GACC CIFER, označovanie aj colné odbavenie od začiatku do konca.",
     "heroCta": "Bezplatne overíme prístup na trh pre vaše mäso",
     "coverTitle": "Čo vybavíme pre vývozcov mäsa a morských plodov",
     "questionsTitle": "Časté otázky k vývozu mäsa a morských plodov",
@@ -867,7 +867,7 @@
     "faq1q": "Čo je registrácia CIFER?",
     "faq1a": "CIFER je online systém GACC na registráciu zahraničných výrobcov potravín. Závody na výrobu mäsa a spracovanie rýb – vrátane slovenských bitúnkov a mäsokombinátov – sa musia zaregistrovať skôr, než môžu vyvážať do Číny.",
     "faq2q": "Ktoré krajiny môžu vyvážať mäso do Číny?",
-    "faq2a": "Do Číny môžu vyvážať mäso len krajiny s bilaterálnou dohodou o prístupe na trh. Slovensko vyváža v rámci protokolov medzi EÚ a Čínou – najmä bravčové a hydinové mäso – s obmedzeniami, ktoré sa v čase menia. O overenie aktuálneho stavu sa postaráme za vás.",
+    "faq2a": "Čína otvára dovoz mäsa a morských plodov prostredníctvom dvojstranných protokolov dohodnutých po jednotlivých krajinách a druhoch. Overíme aktuálny stav pre bravčové, hovädzie, hydinu a ryby zo Slovenska a ešte pred začiatkom zhrnieme požiadavky.",
     "faq3q": "Ako dlho trvá registrácia mäsových výrobkov?",
     "faq3a": "Registrácia CIFER zvyčajne trvá 3–8 mesiacov. Uplatniť sa môžu aj protokoly o prístupe na trh špecifické pre danú krajinu medzi slovenskou vládou a Čínou. Naplánujeme vám časový harmonogram vstupu na trh.",
     "faq4q": "Aké označenie sa vyžaduje pre dovážané mäso?",
@@ -890,8 +890,8 @@
     "metaTitle": "Vývoz mäsa do Číny | sprievodca GACC a hygienou"
   },
   "IndustryWine": {
-    "heroTitle": "Súlad s Čínou pre slovenských vývozcov nápojov",
-    "heroSubtitle": "Vývoz piva, vína a nápojov vyžaduje správny čínsky štítok a registráciu GACC. Pomáhame slovenským výrobcom so štítkami a dovozom.",
+    "heroTitle": "Súlad s Čínou pre slovenské vinárstva a exportérov vína",
+    "heroSubtitle": "Tokajské vína, Frankovka modrá a sekt: čínski spotrebitelia oceňujú kvalitné vína. Registrácia GACC, čínske označovanie a ochrana značky otvárajú dvere; sprevádzame vaše vinárstvo až k prvej objednávke.",
     "heroCta": "Bezplatná konzultácia vstupu na trh pre vaše vinárstvo",
     "coverTitle": "Čo vybavíme pre vývozcov vína a liehovín",
     "coverItems": "Registrácia GACC CIFER pre vinárstva a stáčiarne,Dodržiavanie čínskych etikiet pre alkoholické nápoje (GB 10344),Registrácia ochrannej známky u CNIPA,Poradenstvo k dovozným clám a daniam,Požiadavky na prístup na trh pre víno a liehoviny,Colné odbavenie a podpora kontrol",

@@ -5,7 +5,7 @@
     "heroCta": "Kérjen ingyenes értékelést",
     "heroExplore": "Fedezze fel a szolgáltatásokat",
     "servicesTitle": "Átfogó megfelelőségi szolgáltatások",
-    "servicesSubtitle": "Szabályozási támogatás minden lépésnél – a termékregisztrációtól a vámkezelésig.",
+    "servicesSubtitle": "Regisztráció, címkézés, tanúsítás, védjegy és e-kereskedelem: minden, ami a termékének a kínai piacra lépéshez kell, magyar gyártókra és exportőrökre szabva.",
     "whyTitle": "Miért válassza a SinoTrade Compliance-t?",
     "whySubtitle": "Az Ön megbízható partnere a kínai importszabályozás útvesztőiben.",
     "whyCard1Title": "Teljes termékkategória-lefedettség",
@@ -73,7 +73,7 @@
     },
     "trustedByTitle": "Megbízható partnerek",
     "processDesc": "Egy egyszerű, 6 lépésből álló folyamat, amellyel márkája Kínába kerülhet",
-    "trustedByDesc": "Csatlakozzon a már velünk növekvő magyar és nemzetközi márkákhoz",
+    "trustedByDesc": "Csatlakozzon a magyar és nemzetközi márkákhoz, amelyek már velünk exportálnak Kínába",
     "metaTitle": "SinoTrade Compliance | Export Kínába: GACC, CCC és NMPA",
     "metaDescription": "Teljes körű megfelelés a Kínába irányuló exporthoz: GACC-regisztráció, CCC-tanúsítás, NMPA-kozmetikai bejelentés és kínai címkék. Több mint 50 ország exportőreinek bizalmával.",
     "heroPortalCta": "Próbálja ki 3 lépésből álló megfelelőség-ellenőrzőnket →"
@@ -159,7 +159,7 @@
     "metaDescription": "Teljes körű megfelelés a kínai piacra lépéshez: GACC-élelmiszerregisztráció, CCC-tanúsítás, NMPA-kozmetikai bejelentés, kínai címkék és márkavédelem. Több mint 15 év tapasztalat."
   },
   "ServiceGacc": {
-    "heroTitle": "GACC élelmiszer-regisztráció – magyar exportőröknek",
+    "heroTitle": "GACC élelmiszer-regisztráció magyar exportőröknek",
     "heroSubtitle": "Élelmiszert exportál Kínába? A 280. rendelet előírja, hogy minden külföldi gyártó az első szállítmány előtt regisztráljon a GACC-nál. Elvégezzük a teljes CIFER-regisztrációt, és mozgásban tartjuk az exportját.",
     "cta": "Kérjen ingyenes regisztrációs felmérést",
     "coverTitle": "Szolgáltatásaink magyar élelmiszerexportőröknek",
@@ -208,7 +208,7 @@
     "metaDescription": "GACC-regisztráció magyar élelmiszer-exportőröknek: 280. rendelet, CIFER-rendszer, szükséges dokumentumok, idő. Magyar nyelvű támogatás."
   },
   "ServiceLabel": {
-    "heroTitle": "Kínai címkézési követelmények – magyar termékekhez",
+    "heroTitle": "Kínai címkézés magyar termékekhez",
     "heroSubtitle": "Az importált csomagolt élelmiszereknek a GB 7718-2025 és GB 28050-2025 szabványok szerinti kínai címkével kell rendelkezniük. A hibás címkézés vámkezelési visszatartáshoz vezet. Címkéket tervezünk és ellenőrzünk.",
     "cta": "Kérjen ingyenes címkeellenőrzést",
     "coverTitle": "Címke-megfelelőségi szolgáltatásaink",
@@ -255,7 +255,7 @@
     "metaDescription": "Kínai címkézési követelmények magyar termékekhez: GB 7718-2025, GB 28050-2025 tápértéktáblázat, allergénfigyelmeztetés."
   },
   "ServiceCcc": {
-    "heroTitle": "CCC-tanúsítás – útmutató kínai exportáláshoz magyar gyártóknak",
+    "heroTitle": "CCC-tanúsítás magyar gyártóknak",
     "heroSubtitle": "A Kínába exportált elektronikai cikkeknek, háztartási gépeknek és játékoknak CCC-tanúsítvánnyal kell rendelkezniük. A CE-jelölés vagy a magyar tanúsítás nem elegendő; a CNCA által akkreditált szervezetekkel végeztetjük el a vizsgálatokat és a gyári auditot.",
     "cta": "Kérjen ingyenes CCC-felmérést",
     "coverTitle": "Szolgáltatásaink magyar gyártóknak",
@@ -286,7 +286,7 @@
     "howtoStep2Name": "Válasszon kijelölt tanúsító szervezetet",
     "howtoStep2Text": "Válassza ki a CNCA által jóváhagyott tanúsító szervezetet, amely a termékkategóriájának vizsgálatát és tanúsítását végzi.",
     "howtoStep3Name": "Nyújtsa be a kérelmet és a mintákat",
-    "howtoStep3Text": "Töltse ki a kérelem űrlapot, és küldje el a termékmintákat a kijelölt vizsgálólaboratóriumba – mi intézzük a szállítást Magyarországról.",
+    "howtoStep3Text": "Töltse ki a kérelem űrlapot, és küldje el a termékmintákat Magyarországról a kijelölt vizsgálólaboratóriumba.",
     "howtoStep4Name": "Gyári audit és vizsgálat",
     "howtoStep4Text": "Teljesítse a gyári auditot és a termékvizsgálatot a kínai nemzeti szabványok szerint.",
     "howtoStep5Name": "Kapja meg a CCC-tanúsítványt",
@@ -304,7 +304,7 @@
     "metaDescription": "CCC-tanúsítás magyar gyártóknak: különbség a CE-jelöléshez képest, tanúsítási folyamat, vizsgálatok, gyári audit, idő és költség. Magyar nyelvű támogatás."
   },
   "ServiceCosmetics": {
-    "heroTitle": "NMPA kozmetikai regisztráció – magyar márkáknak",
+    "heroTitle": "NMPA-kozmetikaregisztráció magyar márkáknak",
     "heroSubtitle": "A kínai piacra lépés NMPA-bejelentést igényel a kozmetikumoknál: bejelentést a hagyományos termékeknél és regisztrációt a különleges termékeknél, felelős személy kijelölésével Kínában. A teljes folyamatot intézzük.",
     "cta": "Kérjen ingyenes NMPA-besorolást",
     "coverTitle": "Szolgáltatásaink magyar kozmetikai márkáknak",
@@ -353,7 +353,7 @@
     "metaDescription": "NMPA-regisztráció magyar kozmetikai márkáknak: besorolás, állatkísérlet-mentesség, felelős személy Kínában, idő."
   },
   "ServiceEcommerce": {
-    "heroTitle": "Határon átnyúló e-kereskedelem – magyar márkáknak",
+    "heroTitle": "Határokon átnyúló e-kereskedelem magyar márkáknak Kínában",
     "heroSubtitle": "Adja el magyar márkáját a Tmall Global, JD Worldwide és Douyin felületein: a határon átnyúló csatornák helyi cég nélkül teszik lehetővé a kínai piacra lépést. A teljes beállítást intézzük.",
     "cta": "Kérjen ingyenes platform-tanácsadást",
     "coverTitle": "Szolgáltatásaink magyar márkáknak",
@@ -400,7 +400,7 @@
     "metaDescription": "Magyar márkák Kínában határon átnyúló e-kereskedelem révén: Tmall Global, JD Worldwide, CBEC-megfelelés, logisztika, fizetés."
   },
   "ServiceBrand": {
-    "heroTitle": "Védjegybejegyzés Kínában – magyar márkák védelme",
+    "heroTitle": "Márkavédelem Kínában magyar vállalatoknak",
     "heroSubtitle": "Kína a \"ki előbb regisztrál\" elvét alkalmazza: a Magyarországon (SZTNH) bejegyzett védjegy Kínában nem védett. Regisztrálja márkáját a CNIPA-nál a piacra lépés előtt, hogy megakadályozza a kisajátítást.",
     "cta": "Kérjen ingyenes védjegykeresést",
     "coverTitle": "Márkavédelmi szolgáltatásaink Kínában",
@@ -529,7 +529,7 @@
     "heroSubtitle": "Egyértelmű válaszok exportőröknek világszerte — GACC-regisztráció, CCC-tanúsítás, kínai címkék, NMPA-kozmetikai bejelentés és határokon átnyúló e-kereskedelem.",
     "gaccTitle": "GACC élelmiszer-regisztráció",
     "gaccQ1": "Mi az a GACC 280-as rendelet?",
-    "gaccA1": "A GACC 280. rendelete a külföldi élelmiszer-gyártók, -feldolgozók és -raktárak nyilvántartásba vételéről szóló kínai szabályozás. 2026. június 1-jétől hatályos, és a 248. és 249. rendeletet váltja fel; a CIFER-en keresztüli regisztráció 2022 óta kötelező a Kínába szállított élelmiszereknél.",
+    "gaccA1": "A GACC 280. rendelete a külföldi élelmiszer-gyártók, -feldolgozók és -raktárak nyilvántartásba vételéről szóló kínai szabályozás. 2026. június 1-jétől hatályos; a CIFER-en keresztüli regisztráció 2022 óta kötelező a Kínába szállított élelmiszereknél.",
     "gaccQ2": "Mennyi ideig tart a GACC-regisztráció a termékeimnél?",
     "gaccA2": "A termékkategóriától függ. Az alacsony kockázatú termékek – például a csokoládé vagy a fűszerpaprika – közvetlenül a CIFER-rendszeren keresztül regisztrálhatók. A magas kockázatú termékekhez – tejtermékek, hús (így a libamáj) és tengeri áruk – az Ön országa illetékes hatóságának (Magyarországon a NÉBIH) ajánlása szükséges. A teljes folyamatot mi intézzük.",
     "gaccQ3": "Tényleg minden élelmiszerterméknél kötelező a GACC-regisztráció?",
@@ -782,7 +782,7 @@
     "csarName": "CSAR (kozmetikai felügyeleti és adminisztrációs rendelet)",
     "csarDefinition": "A CSAR Kína kozmetikai felügyeleti és igazgatási rendelete. Ez szabályozza a kozmetikumok regisztrálását, benyújtását, gyártását és importját Kínában, amely előírja a termékbiztonsági értékelést és az összetevők közzétételét.",
     "decree280Name": "280. rendelet (GACC regisztrációs rendelet)",
-    "decree280Definition": "A 280. rendelet a GACC rendelete a külföldi élelmiszer-termelő vállalkozások regisztrációjáról; 2026. június 1-je óta hatályos, és a 248. és 249. rendeletet váltja fel. Fenntartja a kötelező regisztrációt, ötéves érvényességet állapít meg automatikus megújítással, és a lejárat előtt 3–12 hónappal kéri a megújítási kérelmet.",
+    "decree280Definition": "A 280. rendelet a GACC rendelete a külföldi élelmiszer-termelő vállalkozások regisztrációjáról; 2026. június 1-je óta hatályos. Fenntartja a kötelező regisztrációt, ötéves érvényességet állapít meg automatikus megújítással, és a lejárat előtt 3–12 hónappal kéri a megújítási kérelmet.",
     "decree243Name": "243. rendelet (GACC import/export élelmiszerbiztonsági rendelet)",
     "decree243Definition": "A 243. számú rendelet a GACC adminisztratív intézkedése az importált és exportált élelmiszerek biztonsága érdekében. Követelményeket határoz meg az élelmiszer-biztonsági menedzsment, a címkézés és a nyomon követhetőség terén a kínai élelmiszerimportőrök és -exportőrök számára.",
     "samrName": "SAMR (Állami Piacszabályozási Hivatal)",
@@ -825,8 +825,8 @@
     "ctaButton": "Kérjen ingyenes árajánlatot"
   },
   "IndustryDairy": {
-    "heroTitle": "Kínai megfelelés magyar tejtermék-exportőröknek",
-    "heroSubtitle": "A tej, sajt és joghurt Kínába történő exportjához GACC-regisztráció szükséges. Magyar tejüzemek regisztrációját és címkéit intézzük.",
+    "heroTitle": "Kínai megfelelés magyar tejfeldolgozóknak és tejtermék-exportőröknek",
+    "heroSubtitle": "Trappista, márványsajt, vaj és tejpor: nő a kereslet a minőségi tejtermékek iránt Kínában. A GACC-regisztráció, a kínai címkézés és a behozatali megfelelés kötelező; minden lépésben végigkísérjük.",
     "heroCta": "Kérjen ingyenes értékelést",
     "coverTitle": "Amit a magyar tejtermék-exportőröknek nyújtunk",
     "coverItems": "GACC 280-as rendelet szerinti regisztráció magyar tejüzemeknek, a tejtermékek kínai címkéinek megfelelősége (GB 7718-2025, GB 28050-2025), behozatali engedélyezési útmutatás tejtermék-kategóriákhoz, hűtött és fagyasztott tejtermékek vámkezelési támogatása, csecsemőtápszer SAMR-regisztrációja, folyamatos megfelelőség-ellenőrzés a szabályozási változásokhoz",
@@ -858,8 +858,8 @@
     "metaTitle": "Tejtermékek Kínába | GACC-regisztrációs útmutató"
   },
   "IndustryMeat": {
-    "heroTitle": "Kínai megfelelés magyar húsexportőröknek",
-    "heroSubtitle": "A hús Kínába történő exportjához GACC-regisztráció és higiéniai ellenőrzések szükségesek. Magyar üzemek regisztrációját és egészségügyi bizonyítványait intézzük.",
+    "heroTitle": "Kínai megfelelés magyar hús- és haltermék-exportőröknek",
+    "heroSubtitle": "Sertés, marha, baromfi és hal: Kína magas értékű piac szigorú belépési szabályokkal. A GACC CIFER regisztrációt, a címkézést és a vámkezelést elejétől a végéig koordináljuk.",
     "heroCta": "Kérjen ingyenes értékelést",
     "coverTitle": "Amit a magyar hús- és tengeri termék-exportőröknek nyújtunk",
     "questionsTitle": "Hús- és tengeri termék-export Kínába – GYIK",
@@ -867,7 +867,7 @@
     "faq1q": "Mi az a CIFER-regisztráció?",
     "faq1a": "A CIFER a GACC online rendszere a külföldi élelmiszer-gyártók regisztrálására. Minden hús- és tengeri termék-előállító létesítménynek – köztük a magyar sertés-, baromfi- és libamájfeldolgozó üzemeknek – regisztrálnia kell a CIFER-en keresztül, mielőtt Kínába exportálhatna.",
     "faq2q": "Mely országok exportálhatnak húst Kínába?",
-    "faq2a": "Csak azok az országok exportálhatnak húst, amelyek kétoldalú piacra jutási megállapodást kötöttek Kínával. Magyarország az EU tagjaként az uniós szintű egyezmények alapján juthat piacra meghatározott állatfajokra; a hozzáférést biztosító fajok köre idővel változhat. Ellenőrizzük az aktuális státuszt az Ön számára.",
+    "faq2a": "Kína a hús- és halimportot országonként és fajonként tárgyalt kétoldalú protokollokon keresztül nyitja meg. Ellenőrizzük a sertés, marha, baromfi és hal jelenlegi helyzetét Magyarországról, és a kezdés előtt összefoglaljuk a követelményeket.",
     "faq3q": "Mennyi ideig tart a húskészítmények regisztrációja?",
     "faq3a": "A CIFER-regisztráció jellemzően 3-8 hónapot vesz igénybe. Emellett országspecifikus piacra jutási protokollok is vonatkozhatnak az Ön termékeire, amelyeket a magyar és az uniós hatóságok Kínával kötött megállapodásai határoznak meg.",
     "faq4q": "Milyen címkézés szükséges az importált húshoz?",
@@ -890,8 +890,8 @@
     "metaTitle": "Húsexport Kínába | GACC és higiéniai útmutató"
   },
   "IndustryWine": {
-    "heroTitle": "Kínai megfelelés magyar italexportőröknek",
-    "heroSubtitle": "A bor és italok exportjához megfelelő kínai címke és GACC-regisztráció szükséges. Segítünk a magyar termelőknek a címkékben és az importban.",
+    "heroTitle": "Kínai megfelelés magyar borászatoknak és borexportőröknek",
+    "heroSubtitle": "Tokaji aszú, egri bikavér és pezsgő: a kínai fogyasztók értékelik a minőségi borokat. A GACC-regisztráció, a kínai címkézés és a márkavédelem nyitja az ajtót; az első megrendelésig kísérjük borászatát.",
     "heroCta": "Kérjen ingyenes értékelést",
     "coverTitle": "Amit a magyar bor- és szeszesital-exportőröknek nyújtunk",
     "coverItems": "GACC-regisztráció magyar borászatoknak és palackozóüzemeknek, alkoholos italok kínai címkézési megfelelősége (GB 10344), márkavédjegy-regisztráció Kínában (CNIPA), behozatali vám- és adótanácsadás, a Tokaji Aszú és az Egri Bikavér földrajzi árujelző-védelme, vámkezelés és ellenőrzés támogatása",

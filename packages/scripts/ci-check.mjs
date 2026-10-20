@@ -180,6 +180,7 @@ const CHECK_LIST = [
   { script: 'check-rtl.mjs' },
   { script: 'check-map-key.mjs' },
   { script: 'check-jsonld.mjs' },
+  { script: 'check-perspective.mjs' },
   { script: 'check-md-format.mjs' },
   { script: 'check-md-structure.mjs' },
   { script: 'check-md-article.mjs' },

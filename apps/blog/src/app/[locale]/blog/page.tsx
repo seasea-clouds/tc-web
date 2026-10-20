@@ -15,8 +15,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const msgs = getMessages(locale);
   const B = msgs?.Blog || {};
-  const title = B.metaTitle || 'China Import Compliance Blog';
-  const description = B.metaDescription || 'Expert guides on China import compliance.';
+  const title = B.metaTitle || 'Exporting to China Blog';
+  const description = B.metaDescription || 'Expert guides on exporting to China.';
   const path = '/blog/';
   const url = `https://sinotradecompliance.com/${locale}${path}`;
   return {
@@ -79,7 +79,7 @@ export default async function BlogHome({ params }: { params: Promise<{ locale: s
             '@context': 'https://schema.org',
             '@type': 'Blog',
             name: tb('title', 'Insights & Compliance Guides'),
-            description: tb('subtitle', 'Expert articles on China import regulations, market entry, and compliance best practices.'),
+            description: tb('subtitle', 'Expert articles on taking your product to China: market entry, registration, labeling and certification.'),
             url: `${SITE_URL}/${locale}/blog/`,
             publisher: { '@type': 'Organization', name: 'SinoTrade Compliance', url: 'https://sinotradecompliance.com' },
           }),
@@ -93,7 +93,7 @@ export default async function BlogHome({ params }: { params: Promise<{ locale: s
             {tb('title', 'Insights & Compliance Guides')}
           </h1>
           <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto">
-            {tb('subtitle', 'Expert articles on China import regulations, market entry, and compliance best practices.')}
+            {tb('subtitle', 'Expert articles on taking your product to China: market entry, registration, labeling and certification.')}
           </p>
         </div>
       </section>

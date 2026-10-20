@@ -329,7 +329,7 @@ const IGNORE_FALLBACK_KEYS = new Set([
 const IGNORE_FALLBACK_VALUES = new Set([
   'NMPA Cosmetics Filing', 'NMPA cosmetics filing and registration support',
   'PIPL Data Compliance Assessment', 'GACC Food Registration',
-  'China Import Compliance Services', 'Medical device compliance training and advisory',
+  'China Market Entry Compliance Services', 'Medical device compliance training and advisory',
   'Baby & Maternal', 'Free Check', 'FAQ', 'WhatsApp',
   'Sign Out', 'My Reports', 'Settings', 'Subscription',
   'Pricing', 'Dashboard', 'Billing', 'Login', 'Register', 'Report',

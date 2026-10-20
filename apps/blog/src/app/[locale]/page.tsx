@@ -9,8 +9,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const alternates = buildAlternates(validLocale, [...locales], path);
 
   return {
-    title: 'China Import Compliance Blog | SinoTrade Compliance',
-    description: 'Expert guides on China import compliance for your products',
+    title: 'Exporting to China Blog | SinoTrade Compliance',
+    description: 'Expert guides on exporting your products to China',
     robots: { index: false, follow: true },
     alternates,
   };

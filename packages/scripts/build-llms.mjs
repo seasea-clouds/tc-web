@@ -69,7 +69,7 @@ const SKIP_KEYS = [
 const BLOG_TITLES = {
   'gacc-registration-guide': 'GACC Registration Guide',
   'ccc-certification-explained': 'CCC Certification Complete Guide',
-  'china-import-compliance-guide': 'Import Compliance Checklist',
+  'china-market-entry-compliance-guide': 'China Market Entry Checklist',
   'china-label-compliance': 'Chinese Label Compliance Guide',
   'china-trademark-registration': 'Trademark Registration in China',
   'cosmetics-nmpa-filing': 'NMPA Cosmetics Filing Guide',

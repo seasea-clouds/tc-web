@@ -1,5 +1,8 @@
 # 博客投稿工具包（Blog Submission Kit v1.0）
 
+下载地址：https://github.com/seasea-clouds/tc-web/blob/main/docs/blog-submission/dist/blog-submission-kit.zip
+（仓库路径 `docs/blog-submission/dist/blog-submission-kit.zip`，更新规范后用 `npm run blog:kit` 重新打包并推送）
+
 这是 sinotradecompliance.com 博客的投稿工具包。你写 **48 个语言**的同一篇文章 + 配图，
 用本包里的脚本自检通过后，把 zip 交回即可直接上线——我们不做二次润色，**脚本通过即定稿**。
 

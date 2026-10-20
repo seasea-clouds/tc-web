@@ -23,8 +23,8 @@ export async function generateMetadata({
   const validLocale = locales.includes(locale as any) ? locale : defaultLocale;
   const t = await getTranslations({ locale: validLocale, namespace: 'Home' });
 
-  const title = t('metaTitle') || t('heroTitle') || 'SinoTrade Compliance | China Import Compliance Services';
-  const description = t('metaDescription') || t('heroSubtitle') || "One-stop China import compliance: GACC registration, CCC certification, NMPA cosmetics filing, label compliance, and cross-border e-commerce.";
+  const title = t('metaTitle') || t('heroTitle') || 'SinoTrade Compliance | China Market Entry Compliance Services';
+  const description = t('metaDescription') || t('heroSubtitle') || "One-stop compliance for exporting to China: GACC registration, CCC certification, NMPA cosmetics filing, label compliance, and cross-border e-commerce.";
   const path = '/';
   const alternates = buildAlternates(validLocale, [...locales], path);
 

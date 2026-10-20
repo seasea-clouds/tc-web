@@ -124,7 +124,7 @@ export function getBlogMetadata(
   slug: string,
   publishDate?: string
 ) {
-  const title = safeTitle(articleTitle, 'China Import Compliance Guide');
+  const title = safeTitle(articleTitle, 'China Market Entry Compliance Guide');
   const description = articleSummary.length > 160
     ? articleSummary.slice(0, 157) + '...'
     : articleSummary;

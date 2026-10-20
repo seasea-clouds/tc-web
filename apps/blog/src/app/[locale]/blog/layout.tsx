@@ -19,8 +19,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
   const t = await getTranslations({ locale: validLocale, namespace: 'Blog' });
 
-  const title = t('metaTitle') || 'China Import Compliance Blog | SinoTrade Compliance';
-  const description = t('metaDescription') || 'Expert guides on China import compliance. GACC registration, CCC certification, NMPA cosmetics filing, and cross-border e-commerce.';
+  const title = t('metaTitle') || 'Exporting to China Blog | SinoTrade Compliance';
+  const description = t('metaDescription') || 'Expert guides on exporting to China. GACC registration, CCC certification, NMPA cosmetics filing, and cross-border e-commerce.';
   const path = '/blog/';
   const alternates = buildAlternates(validLocale, [...locales], path);
 

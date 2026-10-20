@@ -74,7 +74,7 @@ export default async function IndustryPage({
     description: t('heroSubtitle'),
     url,
     provider: { '@type': 'Organization', name: 'SinoTrade Compliance' },
-    serviceType: 'China Import Compliance Consulting',
+    serviceType: 'China Market Entry Compliance Consulting',
     areaServed: 'Worldwide',
   };
 

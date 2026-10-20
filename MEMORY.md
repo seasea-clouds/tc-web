@@ -17,3 +17,10 @@
 - `translators`（Yandex）可用但只覆盖 ~27 个欧洲语种，ja/ko/ar/zh/th/vi/hi/fa/si/ka/hy/ne/bn/ta/ur/sw/af/az 全部报「不支持语言」
 - 结论：**非欧洲语种当前无可用翻译渠道**；应急做法是人工写 47 语言（本轮 H1+副标题+3 条法规答案已人工落盘）
 - 恢复后仍需补：Home/Services/Faq/About/Blog 的 metaTitle/metaDescription、Services/Faq 页头、Services.gaccSubtitle 等 ~27 键 × 47 语言
+
+## 博客投稿流水线（2026-10-17 定稿）
+- 工具包：`docs/blog-submission/`（README/SPEC/locales.json/submitter_check.py/template/sample）→ `npm run blog:kit` 出 `dist/blog-submission-kit.zip`
+- 投稿包结构：`articles/<slug>/{submission.json, content/<48 lang>/<slug>.mdx, images/<slug>/*.webp}`；作者自译 48 语言，作者固定署名 David Zhang，图片只收 webp（cover 1200×630，其余宽 ≥1200、≤400KB）
+- 入库：`npm run blog:intake -- <zip>`（默认只检查）→ `--write` 落盘到 `apps/blog/content/*` 与 `apps/blog/public/images/blog/<slug>/`；之后 `check-md-article --ci` + `turbo build --force` + push + 线上逐语言验证
+- 规则红线已机器化：248/249、MOA/CFDA、价格、交付周期、绝对否定、寄样/时限承诺、title 含冒号连字符、CTA 必须是 `/<lang>/packages/`
+- 站点侧不改稿：脚本通过即定稿，error 一律退回作者

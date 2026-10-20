@@ -553,7 +553,8 @@ function checkR11(content, relPath, lang) {
 
   let ctaMatch = null;
   for (const line of tailLines) {
-    const m = line.match(/\[([^\]]+)\]\(([^)]+)\)/);
+    // 跳过图片语法 ![alt](src)，只认真正的 markdown 链接
+    const m = line.match(/(?<!!)\[([^\]]+)\]\(([^)]+)\)/);
     if (m) { ctaMatch = m; break; }
   }
 

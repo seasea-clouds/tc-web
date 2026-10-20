@@ -1,0 +1,11 @@
+{
+  "slug": "your-article-slug",
+  "title": "Your Article Title Without Colons Or Hyphens",
+  "date": "2026-10-20",
+  "category": "Compliance Guide",
+  "author": "David Zhang",
+  "excerpt": "One or two sentences, max 185 characters, written separately for each of the 48 languages.",
+  "locales": ["en", "zh", "es", "fr", "de", "ja", "pt", "ru", "ar", "ko", "it", "nl", "tr", "vi", "id", "th", "hi", "pl", "sv", "el", "cs", "ro", "hu", "fi", "da", "no", "uk", "bg", "hr", "sr", "sk", "sl", "ms", "ka", "he", "sw", "bn", "ca", "fa", "ur", "ta", "af", "sq", "az", "hy", "be", "ne", "si"],
+  "images": ["cover.webp", "fig-01.webp"],
+  "imageRights": "All images are original or licensed for commercial use; no third-party copyrighted material."
+}

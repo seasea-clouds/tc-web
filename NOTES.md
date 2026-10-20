@@ -465,3 +465,9 @@ GitHub 仓库从 `seasea-clouds/trade-web` 切换到 `seasea-clouds/tc-web`（�
 ## 踩坑 17：批量写多语言时语言代码别串（2026-10-17）
 - `si` = 僧伽罗语、`sl` = 斯洛文尼亚语；把斯洛文尼亚语写进 `si` 后 CI 立刻报「英文残留: blagovna, certifikacija…」
 - 教训：`check-translations.mjs` 的英文残留检测能兜住「语言错位」，批量写入后必须第一时间跑它
+
+## 踩坑 18：博客投稿工具包（2026-10-17）
+- 投稿流程做成「作者交 48 语言 + 图片 → 作者自检 → 我端同一脚本复检 → 直接落盘」，规则只写一份：`docs/blog-submission/submitter_check.py`，`packages/scripts/blog-intake.mjs` 只做编排（解压/调用/落盘），避免两套规则漂移
+- **CI 误判**：`check-md-article` 的 R11 取「最后 10 行第一个 markdown 链接」，正文末尾有配图时会把 `![alt](src)` 当成 CTA 报错 → 改为 `(?<!!)\[...\]\(...\)`，只认真正链接
+- 校验脚本自身也踩过同样坑：CTA 检测要先排除图片语法，`cover.webp` 不要求正文引用（它只用于列表卡片与分享图）
+- 图片尺寸解析用纯标准库手写 WebP/PNG/JPEG 头解析（VP8 / VP8L / VP8X 三种分块），作者端无需装 Pillow

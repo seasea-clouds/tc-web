@@ -2,8 +2,8 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { MessageCircle } from 'lucide-react';
-import { WHATSAPP_URL } from '@/lib/constants';
+import { MessageCircle, Mail } from 'lucide-react';
+import { WHATSAPP_URL, CONTACT_EMAIL_URL } from '@/lib/constants';
 
 export default function Expert() {
   const t = useTranslations('About');
@@ -32,15 +32,24 @@ export default function Expert() {
             <h3 className="text-xl font-bold text-[#333333]">{name}</h3>
             <p className="text-[#2563EB] font-medium mb-3">{role}</p>
             <p className="text-[#5F6F7F] leading-relaxed mb-4">{desc}</p>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#2563EB] hover:bg-[#2563EB]/90 text-white font-semibold px-6 py-3 rounded-md transition-all hover:shadow-md"
-            >
-              <MessageCircle className="w-4 h-4" />
-              {t('cta')}
-            </a>
+            <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#2563EB] hover:bg-[#2563EB]/90 text-white font-semibold px-6 py-3 rounded-md transition-all hover:shadow-md"
+              >
+                <MessageCircle className="w-4 h-4" />
+                {t('cta')}
+              </a>
+              <a
+                href={CONTACT_EMAIL_URL}
+                className="inline-flex items-center gap-2 bg-white hover:bg-[#F4F6F9] text-[#2563EB] font-semibold px-6 py-3 rounded-md border-2 border-[#2563EB] transition-all hover:shadow-md"
+              >
+                <Mail className="w-4 h-4" />
+                {t('ctaEmail')}
+              </a>
+            </div>
           </div>
         </div>
       </div>

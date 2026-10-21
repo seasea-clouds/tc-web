@@ -1,5 +1,9 @@
 export const WHATSAPP_URL = 'https://wa.me/message/HPPZ5X6XZSMLM1';
 
+/** Public contact mailbox (same address as the floating action dock) */
+export const CONTACT_EMAIL = 'info@sinotradecompliance.com';
+export const CONTACT_EMAIL_URL = `mailto:${CONTACT_EMAIL}`;
+
 /** Shared brand identity for all SinoTrade Compliance websites */
 export const BRAND_NAME = 'SinoTrade Compliance';
 export const SITE_URL = 'https://sinotradecompliance.com';

@@ -91,7 +91,8 @@
     "pricing": "Pricing",
     "login": "Log In",
     "register": "Register",
-    "report": "Report"
+    "report": "Report",
+    "email": "Email"
   },
   "MobileTab": {
     "home": "Home",

@@ -91,7 +91,8 @@
     "pricing": "定价",
     "login": "登录",
     "register": "注册",
-    "report": "报告"
+    "report": "报告",
+    "email": "邮箱"
   },
   "MobileTab": {
     "home": "首页",

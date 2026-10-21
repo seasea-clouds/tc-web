@@ -221,7 +221,7 @@ export default function Navbar(props: NavbarProps) {
             <a
               href={CONTACT_EMAIL_URL}
               aria-label={t('email') || 'Email'}
-              className="flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/25 text-white font-semibold px-3 py-1.5 rounded-md transition-all hover:shadow-md text-sm"
+              className="flex items-center gap-2 bg-accent-blue hover:bg-accent-blue/90 text-white font-semibold px-3 py-1.5 rounded-md transition-all hover:shadow-md text-sm"
             >
               <Mail className="w-4 h-4" />
               <span className="sr-only sm:not-sr-only">{t('email')}</span>

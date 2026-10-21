@@ -44,7 +44,7 @@ export default function Expert() {
               </a>
               <a
                 href={CONTACT_EMAIL_URL}
-                className="inline-flex items-center gap-2 bg-white hover:bg-[#F4F6F9] text-[#2563EB] font-semibold px-6 py-3 rounded-md border-2 border-[#2563EB] transition-all hover:shadow-md"
+                className="inline-flex items-center gap-2 bg-[#2563EB] hover:bg-[#2563EB]/90 text-white font-semibold px-6 py-3 rounded-md transition-all hover:shadow-md"
               >
                 <Mail className="w-4 h-4" />
                 {t('ctaEmail')}

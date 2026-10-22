@@ -1,0 +1,158 @@
+---
+title: Teljes útmutató az étrendkiegészítők kínai exportjához a bonded 1210 csatornán
+slug: bonded-ecommerce-export-china-guide
+date: 2026-10-22
+category: E-commerce
+excerpt: Az étrendkiegészítők blue hat bejegyzés nélkül is legálisan eladhatók a kínai fogyasztóknak a bonded 1210 csatornán. Jogosultság, 9,1% összesített adó, kvóták és belépési lépések.
+references:
+  - title: Cai Guan Shui [2016] 18. számú körlevél, a határon átnyúló e kereskedelmi kiskereskedelmi import adópolitikája
+    url: https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html
+  - title: Cai Guan Shui [2018] 49. számú körlevél, a határon átnyúló kiskereskedelmi import adópolitikájának tökéletesítése
+    url: https://czt.hlj.gov.cn/czt/c110905/202001/c00_30603063.shtml
+  - title: A hat minisztérium 2018. évi 486. számú közleménye, a határon átnyúló kiskereskedelmi import felügyeletének tökéletesítése
+    url: https://cws.mofcom.gov.cn/gztz/art/2018/art_b7becbacb58a4d0d8bf17b91a168f044.html
+  - title: A nyolc minisztérium 2022. évi 7. számú közleménye, a kiskereskedelmi import pozitív listájának módosítása
+    url: https://www.gov.cn/zhengce/zhengceku/2022-02/21/content_5674854.htm
+  - title: A vámhatóság 2018. évi 194. számú közleménye, az e kereskedelmi kiskereskedelmi import és export felügyelete
+    url: https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html
+  - title: A vámhatóság 2020. évi 45. számú közleménye, az e kereskedelmi kiskereskedelmi import visszaküldései
+    url: https://www.customs.gov.cn/customs/2020-03/30/article_2025121220594047423.html
+---
+
+A blue hat bejegyzés nélküli étrendkiegészítők legálisan eladhatók a kínai szárazföld fogyasztóinak a 1210-es vámfelügyeleti kódú váme-kereskedelmi csatornán, a pénzügyminisztériumot és a vámhatóságot is magában foglaló hat hatóság 2018. évi 486. számú közleménye alapján. Három előfeltétel: a termék vámterminális kódja a kínai határon átnyúló e kereskedelmi kiskereskedelmi import pozitív listáján van, a vásárló saját használatra vásárló magánszemély, és a megrendelés értéke a kvótakereten belül van. Ha mindhárom feltétel egyidejűleg teljesül, a csatorna az első naptól fogva legális; ha egyetlen feltétel sem teljesül, álljon meg a diagnosztikai szakaszban, és ne erőltesse az áthatolást.
+
+Ez a cikk elejétől a végéig elmeséli a teljes csatornát: mit fed le a megoldás, mik a következtetések, hogyan számolják az adót és a kvótákat, mit szállít a tizennégy munkacsomag mindegyike, hogyan néz ki a belépés három lépésben és hogyan lehet kilépni. Minden kulcsszám mellett ott a forrásdokumentum száma.
+
+## Mi az a vámcsatorna 1210
+
+A vámhatóság minden vámkezelési útvonalat négyjegyű felügyeleti kóddal kódol; a 1210-es kód hivatalos neve váme-kereskedelmi kiskereskedelmi import. Az import szó a hivatalos névben a mozgásnak azt a szakaszát írja le, amikor az áru a vámraktárba lép Kínai vámterületén belül; az exportőr oldaláról nézve az irány nem változik: Ön a saját országa piacáról küldi az árut, a vásárló Kínán belül rendel. A 486 sz. 2018. évi közlemény ennek a csatornának az alapító dokumentuma: a csatornán keresztül értékesített áruk személyes használatra importált holmiként felügyeltek, így a hagyományos kereskedelmi útvonal első behozatali engedélyére, bejegyzésére és bejelentésére vonatkozó követelmények itt nem alkalmazandók.
+
+Működési szinten az eladatlan áru vámfelügyelet alatt álló különleges zónán belüli vámraktárban tárolódik, a raktárba lépéskor behozatali vámfeladatot nem kell fizetni. Amikor a fogyasztó rendel, a platform három dokumentumot küld a vámhatóságnak: megrendelést, fizetési bizonylatot és logisztikai bizonylatot. A vám a hármat összeveti, csomagonként engedi ki, és a platform a fogyasztói oldali adót már a fizetés lépésében levonja.
+
+## A megoldás kilenc blokkja
+
+Először nézze meg a megoldás teljes terjedelmét. Kilenc blokkra szerveződik, minden blokk egy problémaréteget old meg:
+
+- 01 Következtetések és ajánlások: minden következtetés elöl, három induló döntés egy helyen.
+- 02 Belépés: osztályozás, adó, kvóták, útvonal, minden pont dokumentumokkal igazolható.
+- 03 A biztonság megtartása: a modell átrendezése, a kijelentések határai, adatmegfelelés, jogi alap a rendszer nyomaival együtt.
+- 04 Tiszta pénzeszközök: forrásszétválasztás, három szakaszos elszámolás és külföldre utalás, a pénz útja világosan megírva.
+- 05 Működtetés: hét folyamat gerince és az S0–S5 pilotmodul, kockáról kockára nyitva.
+- 06 Növekedésre felkészülés: a skálázási fázis S6–S13 működése, ügyfélszerzés, értékesítés utáni szolgáltatás, tagság pontról pontra kidolgozva.
+- 07 Tiszta számok: ütemterv sávok, költségstruktúra, számítási eszközök, paraméterek a megoldással együtt szállítva.
+- 08 Teljes védelem: felelősség pontról pontra kiosztva, az eszközök egésze az Öné, begyakorolt kilépés.
+- 09 Indulás: hatfázisos ütemterv, hét felkészülés, 30/60/90 napos ritmus.
+
+![A megoldás kilenc blokkja 01-től 05-ig](/images/blog/bonded-ecommerce-export-china-guide/fig-01.webp)
+
+![A megoldás kilenc blokkja 06-tól 09-ig](/images/blog/bonded-ecommerce-export-china-guide/fig-02.webp)
+
+A kilenc blokk az exportőr számára legfontosabb négy kérdésben tömörül:
+
+- Döntéshez következtetések: egymondatos következtetés, ütemterv költség hozam, döntési idővonal.
+- Megfelelési alap: felügyeleti állandók és dokumentumszámok, három mentesség három határ, a felelősség megosztása.
+- Költség és hozam: egységközgazdaságtan, három számlázási mód, első éves működési modell.
+- A növekedés végrehajtása: promóciós modell, hét folyamat és egy megrendelés teljes útja, ügyfélszerzési architektúra.
+
+![Kilenc blokk és négy kulcskérdés](/images/blog/bonded-ecommerce-export-china-guide/fig-05.webp)
+
+Az induló értekezleten csak három dologról kell közösen dönteni, mindegyiknek határideje és a késés ára van:
+
+- Elindítsuk-e most a fizetős S0 diagnosztikát. Döntsön azonnal, ellenkező esetben nem készíthető el a jogosultsági rétegezés és nem jön pontos ütemterv.
+- A belföldi jogalany útja. Teljesen külföldi tulajdon, közös vállalat, vagy átmeneti megoldás, amelyben a platform oldal a belföldi jogalany. Döntsön S1 előtt, közvetlenül érinti az üzlet megnyitását és a pénzügyi számlákat.
+- Az élelmiszerkategória elhelyezése. Hétköznapi élelmiszer (blue hat nélkül, egészségügyi állítások nélkül) vagy blue hat kiegészítő (funkcionális állítások lehetségesek, a hétköznapi költség nő). Döntsön S3 előtt, meghatározza a kategóriát és a piacra lépés idejét.
+
+Emellett még három pontot kell megerősíteni: az előnyben részesített kikötő, a kereskedelmi fázis számlázási módja, és a második beszerzési forrás belép-e a második fázisba.
+
+## Három megítélés, öt következtetés
+
+A vezetői összefoglaló három megítélést és öt következtetést ad, mindegyik forrással. Három megítélés:
+
+- Belépési megítélés: az út járható. Alap három dokumentum: a Cai Guan Shui [2016] 18. sz. körlevél (összesített adórendszer), a 486 sz. 2018. évi közlemény (felügyeleti mód és pilotvárosok), a nyolc szerve 2022. évi 7. sz. közleménye (a pozitív lista optimalizálása, 1476 nyolcjegyű vámkód).
+- Termék megítélés: az étrendkiegészítők a listán vannak. A tejfehérje por csoport a 0404.9000 vámkód alatt osztályozott, a W2020-29 vám osztályozási döntés támogatja ezt az utat.
+- Felügyeleti megítélés: a 280-as dekrétum (2026. június 1-jétől hatályos) a hétköznapi kereskedelmi importot szabályozza, és nem változtatja meg ennek a határon átnyúló e kereskedelmi csatornának a szabályait. A közvetlen értékesítésről szóló rendelet kerete szerint ez a modell nem közvetlen értékesítés, és nem szükséges közvetlen értékesítési engedély (az Államtanács 443. sz. dekrétumának rendszere).
+
+Öt következtetés:
+
+- Megfelelés: három mentesség áll, a személyes használatra importált holmiként való felügyelet mentesíti a formális kereskedelmi belépési engedélyek alól, az összesített adórendszer mentesíti a váma alól, a határon átnyúló modell mentesíti a blue hat bejegyzés alól. Három mentességgel nem járó pont is áll: a termékminőségi felelősség nem mentes, a reklámhatár nem mentes, a fogyasztóvédelem nem mentes.
+- Adó: az összesített kulcs 9,1 százalék, a platform vonja le és fizeti be, a fogyasztó minden levonást lát a mobilon lévő hivatalos csatornában.
+- Kvóták: 5000 yuan megrendelésenként (körülbelül 700 US dollars), 26000 yuan személyenként évente (körülbelül 3600 US dollars), a vámkezelő rendszer megrendelésenként von le.
+- Pénzeszközök: három szakaszos körforgás plusz kétszintű szétválasztás, egy megrendelésre eső külföldi átutalás nem létezik.
+- Ritmus: diagnosztika 2–4 hét, egy SKU pilot 6–10 hét; az intervallum úgy áll, ha a diagnosztikai fázis zárolta a változókat.
+
+## Két számítás: adó és kvóta
+
+A 9,1 százalékos összesített kulcs felépítésének módja: a vámadó ideiglenesen nulla, az áfa a törvényi összeg 70 százalékán kerül beszedésre, a tejfehérje por áfája 13 százalék, így 13 százalék szorozva 70 százalékkal egyenlő 9,1 százalékkal, alap: a Cai Guan Shui [2016] 18. sz. körlevél. A kulcs csak a listán lévő árukra és a kvótakereten belüli megrendelésekre érvényes. A kvótakereten felüli, oszthatatlan darab a hétköznapi kereskedelem teljes kulcsán adózik, a 9,1 százalék már nem alkalmazandó.
+
+A kvóta két száma: 5000 yuan megrendelésenként (körülbelül 700 US dollars) és 26000 yuan személyenként évente (körülbelül 3600 US dollars), alap: a Cai Guan Shui [2018] 49. sz. körlevél. A kvótakönyv a vámkezeléskor megrendelésenként vonódik le (a vámhatóság 2018. évi 194. sz. közleménye), és maga a fogyasztó minden levonást lát a mobilon lévő hivatalos csatornában.
+
+Számoljon ki egy konkrét esetet. Egy tejfehérje por doboz 50 US dollars áron, 7,2 yuan per US dollars árfolyamon kb. 360 yuan, a kvótán belül; a fizetendő összesített adó 360 szorozva 9,1 százalékkal egyenlő 32,8 yuan, kb. 4,5 US dollars, a platform vonja le; egyidejűleg a vásárló éves kvótája 360 yuannal csökken. Az adó jog szerint a fogyasztó kötelezettsége, de a kiskereskedelmi árunkban ül, az árrögzítés első napjától számoljon ezzel a réteggel.
+
+## Szolgáltatási keret áttekintése
+
+A teljes megoldás szerkezete egy ház képe. A tető a felelősség: egy jogalany felel az eredményért, az áru zónába lépésétől a fogyasztó aláírásáig. A gerendafák a politikai alap: a vámcsatorna 1210, három dokumentumon nyugvó: a Cai Guan Shui [2016] 18. sz. körlevél, a 486 sz. 2018. évi közlemény és a 2022. évi 7. sz. közlemény. A négy oszlop négy szolgáltatási vonal: belépési megfelelés (S0 diagnosztika, S1 jogalany, S3 bejegyzések), platform és teljesítés (S2 üzlet, S4 vámraktár, S5 vámkezelés), pénzeszközök és elszámolás (S6 elszámolás, jutalékok, külföldi utalások), működés és növekedés (S7 promóció, S8 értékesítés utáni, S13 tagság); a szolgáltatást átszövő S0–S13 tizennégy munkacsomag e négy oszlopban lakik. Az alap hét folyamat egy könyven: kereskedelmi, áru, logisztika, pénzeszközök, információ, megfelelés, számlázás; hét folyamat fut ugyanazon könyvkészleten, minden megrendelés minden szinten nyomot hagy, ha egy folyamat megszakad, minden másik megáll.
+
+![Szolgáltatási keret: egy megoldás, egy felelős jogalany](/images/blog/bonded-ecommerce-export-china-guide/fig-03.webp)
+
+Hogyan olvassuk a képet: a tető arra válaszol, ki felel, a négy oszlop arra, ki csinálja a munka minden rétegét, az alap arra, miért hihető. A megrendelés szintű nyomokat hagyó könyv minden láncszemet visszafelé ellenőrizhetővé tesz, és ez minden megfelelési megítélés bizonyítéki alapja.
+
+## Tizennégy munkacsomag, csomagonkénti szállítmányok
+
+Az S0–S13 a szolgáltatást átszövő 14 munkacsomag, mindegyik világos szállítmánnyal:
+
+- S0 Diagnosztika és belépés: négy jelentés egyszerre szállítva, jogosultsági értékelési jelentés (be lehet lépni vagy sem), megfelelési alap jelentés (vannak súlyos hiányosságok), végrehajtási lista (hogyan lépjen be), kikötői gyakorlati ellenőrző lista (a kikötő standardja).
+- S1 Jogalany létrehozása: engedély plusz vámbejegyzés.
+- S2 Platform üzlet: indítás, számlák, fizetések.
+- S3 Termék bejegyzés: rétegezés, osztályozás, dokumentumok.
+- S4 Első szállítás vámraktárba: vámkönyv plusz készletláthatóság.
+- S5 Háromdokumentumos vámkezelés: három dokumentum összevetése plusz első kiengedés.
+- S6 Pénzeszköz elszámolás: elszámolási lap plusz alátámasztó dokumentumok.
+- S7 Promóció: ügyfélszerzési és növekedési architektúra.
+- S8 Értékesítés utáni: szolgáltatás és visszaküldés kezelés.
+- S9 Adatkockázat kontroll: adatmegfelelés és határon átnyúló átvitel.
+- S10 Megfelelési audit: önvizsgálat, nyilvántartás, kérdésre válasz.
+- S11 Beszállítói lánc láthatóság: megrendelések, készlet, vámkezelés, logisztika az út egészén látható.
+- S12 Tartalom megfelelés: termékoldalak és élő közvetítések átvizsgálása.
+- S13 Tagság: tagsági szintek és előfizetések.
+
+Az első fázis egyúttal két bővítési csatlakozási pontot tartogat: a 9610 közvetlen küldéses csatornát és a második beszerzési forrás csatlakoztatását; a második fázis indulásakor az első fázis architektúráját nem kell átépíteni.
+
+![Tizennégy munkacsomag és a három lépéses belépés](/images/blog/bonded-ecommerce-export-china-guide/fig-04.webp)
+
+## Három lépés: hogyan menni, hogyan kilépni
+
+A három belépési lépés a kereskedelmi ritmus, nem részletekre bontott szállítás. Bármely lépésnél kiléphet, a már leszállított eredmények az Önéi.
+
+Első lépés, diagnosztika (S0-t lefedi), 2–4 hét. Négy jelentés egyszerre szállítva, aztán Ön dönt, folytatja-e. Az S0 fix áron számlázott, a vizsgálati és utazási költségek a tényleges kiadások után, a költség a szállítmányoknak megfelel, döntés a jelentések kézbe vétele után. Az intervallum feltételes, feltétele, hogy az S0 zárolta a változókat.
+
+Második lépés, egy SKU pilot (S1–S5-öt lefedi), 6–10 hét. Öt láncszem sorrendben süllyed le: jogalany létrehozása, platform üzlet, termék bejegyzés, első szállítás vámraktárba, háromdokumentumos vámkezelés. Elszámolás és jutalék csak akkor kapcsol be, amikor a lánc átesett. Kilépés: a pilot megbukik vagy a költség messze eltér, visszagörgetés, a leszállított eredmények az Önéi. Ajánlat egy SKU-val kezdeni, először az egész láncot vezetni stabilan, csak utána beszélni a skálázásról.
+
+Harmadik lépés, skálázás (S6–S13-at lefedi), teljes választék. Nyolc modul kapcsol be egyenként: pénzeszköz elszámolás, promóció, értékesítés utáni, adatkockázat, megfelelési audit, beszállítói lánc láthatóság, tartalom megfelelés, tagság; a bekapcsolási sorrend a munkacsomagok elrendezését követi, szállítás kockáról kockára. Skálázás előtt négy ellenőrzés van:
+
+- Az első megrendelés átmegy az egész láncon.
+- A költségmodell és a valós mérések eltérése a tűrési sávon belül van.
+- Az újravásárlás jele megerősítést nyer.
+- A megfelelési nyilvántartás teljes.
+
+Ha a négy ellenőrzés nem megy át, maradjon a pilot szinten. Kilépés: bármely szinten megállhat, teljes átadás a hatpontos lista szerint.
+
+Miért érdemes most lépni: az ablak értéke három előnyt élvező eszközben van, a vámkönyvben és a kikötői bejegyzési helyeken, a platform kategória iránti bizalmában, és a fogyasztók összetevők iránti tudatosságában. Mindhárom időt igényel, a később jövők nem kapják meg az előbb jövők pozícióját.
+
+## Egy 2000 dobozos tétel teljes útja
+
+Vigye a folyamatot egy konkrét tételre. 2000 doboz tejfehérje por, 50 US dollars kiskereskedelmi áron dobozonként.
+
+Első szállítás a zónába: az áru vámstátusszal lép be a vámfelügyelet alatt álló különleges zónába, a vámkönyv megnyílik, ekkor még nem kell behozatali vámfeladatot fizetni. Jogalany és bejegyzés: a belföldi jogalany már birtokában van az engedélynek és a vámbejegyzésnek (S1), az SKU átesett a rétegezésen és az osztályozás ellenőrzésén (S3), a 0404.9000 vámkód alatt osztályozva, a W2020-29 döntésre hivatkozással. Megrendelés és vámkezelés: a fogyasztó rendel, a platform három dokumentumot küld (megrendelés, fizetés, logisztika), a vám a hármat összeveti (S5), megrendelésenként vonja le a kvótát, az összesített adót 9,1 százalékon vonja le. Egy 50 US dollars megrendelés kb. 4,5 US dollars (32,8 yuan) adót von le, az éves kvóta 360 yuannal csökken. Leszállítás és értékesítés utáni: a vámraktárból a fogyasztó aláírásáig. A visszaküldéseket a vámhatóság 2020. évi 45. sz. közleményének ablaka szerint kezelik: a fogyasztó a kézhezvétel megerősítésétől számított 30 napon belül kérhet visszaküldést, az árunak 45 napon belül vissza kell érnie a vámraktárba, sikeres visszaküldés esetén a kvóta visszatér. Az egész lánc hét folyamat egy könyvén rétegről rétegre nyomot hagy: melyik megrendelés, melyik tétel, melyik pénz, melyik folyamat, minden visszafelé ellenőrizhető.
+
+## Mit nem fed le ez a csatorna
+
+Négy határ, nézze át mindet megrendelések és gyártásütemezés előtt:
+
+- Kvóta feletti megrendelések: a 5000 yuan tranzakciónkénti keretet meghaladó és oszthatatlan megrendelés, vagy a 26000 yuan éves keretet meghaladó személy, a vámkezelő rendszer közvetlenül blokkolja.
+- B2B nagy tételek: a vámkiskereskedelem csak egyéni fogyasztóknak szól, a disztribúció, a nagykereskedelem, a vállalati beszerzés nem ide tartozik.
+- Funkcionális állítások: az étrendkiegészítők nem állíthatják betegségmegelőző vagy gyógyító hatásukat, a reklámtörvény határa a határon átnyúló árukra is ugyanúgy vonatkozik.
+- Kikötői különbségek: a pilotkikötők működési standardjai különböznek; melyik kikötőn lép be az áru, melyik standard szerint ellenőrzik, diagnosztikai fázisban kikötőnként tisztázandó. Ezért van a kikötői gyakorlati ellenőrző lista a négy jelentésben.
+
+Ez a cikk a csatorna szabályait és a végrehajtás módszereit ismerteti, nem jogi tanácsadás; az egyedi döntés előtt végezzen formális diagnosztikát a termékére és a kikötői standardjára nézve.
+
+[Vegye fel velünk a kapcsolatot](/hu/packages/), hogy formális diagnosztikát szervezzen a termékére és a célkikötőjére nézve, és az S0 négy jelentése pontról pontra megválaszolja, az út járható-e, melyik standard szerint és melyik lépés az első.

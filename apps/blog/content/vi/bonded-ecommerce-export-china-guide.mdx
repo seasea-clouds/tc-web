@@ -1,0 +1,158 @@
+---
+title: Cẩm nang xuất khẩu thực phẩm chức năng sang Trung Quốc qua kênh bonded 1210
+slug: bonded-ecommerce-export-china-guide
+date: 2026-10-22
+category: E-commerce
+excerpt: Thực phẩm chức năng có thể bán hợp pháp cho người tiêu dùng Trung Quốc qua kênh bonded 1210 mà không cần đăng ký blue hat. Điều kiện, thuế gộp 9,1%, hạn mức, các bước vào sân.
+references:
+  - title: Thông tư Cai Guan Shui [2016] số 18, chính sách thuế nhập khẩu lẻ thương mại điện tử xuyên biên giới
+    url: https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html
+  - title: Thông tư Cai Guan Shui [2018] số 49, hoàn thiện chính sách thuế nhập khẩu lẻ thương mại điện tử xuyên biên giới
+    url: https://czt.hlj.gov.cn/czt/c110905/202001/c00_30603063.shtml
+  - title: Công bố số 486 năm 2018 của sáu bộ ngành, hoàn thiện giám sát nhập khẩu lẻ thương mại điện tử xuyên biên giới
+    url: https://cws.mofcom.gov.cn/gztz/art/2018/art_b7becbacb58a4d0d8bf17b91a168f044.html
+  - title: Công bố số 7 năm 2022 của tám bộ ngành, điều chỉnh danh mục tích cực nhập khẩu lẻ
+    url: https://www.gov.cn/zhengce/zhengceku/2022-02/21/content_5674854.htm
+  - title: Công bố số 194 năm 2018 của Tổng cục Hải quan, giám sát xuất nhập khẩu lẻ thương mại điện tử
+    url: https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html
+  - title: Công bố số 45 năm 2020 của Tổng cục Hải quan, trả hàng nhập khẩu lẻ thương mại điện tử
+    url: https://www.customs.gov.cn/customs/2020-03/30/article_2025121220594047423.html
+---
+
+Thực phẩm chức năng không cần đăng ký blue hat vẫn có thể bán hợp pháp cho người tiêu dùng Trung Quốc, qua kênh thương mại điện tử ngoại quan mang mã giám sát hải quan 1210, theo công bố số 486 năm 2018 của sáu bộ ngành gồm Bộ Tài chính và Tổng cục Hải quan. Ba điều kiện tiên quyết: mã thuế của sản phẩm nằm trong danh mục tích cực đối với hàng nhập khẩu lẻ thương mại điện tử xuyên biên giới của Trung Quốc, người mua là cá nhân mua để tự sử dụng, và giá trị đơn hàng nằm trong hạn mức. Cả ba điều kiện cùng thỏa mãn thì kênh này hợp pháp ngay từ ngày đầu tiên; chỉ một điều kiện không thỏa mãn thì dừng lại ở giai đoạn chẩn đoán, đừng cố vượt qua.
+
+Bài viết này kể trọn con kênh từ đầu đến cuối: giải pháp bao phủ những gì, kết luận là gì, thuế và hạn mức tính thế nào, mười bốn gói công việc mỗi gói bàn giao gì, ba bước vào sân đi thế nào và rút lui thế nào. Mọi con số then chốt đều kèm văn bản gốc làm căn cứ.
+
+## mã 1210 là gì
+
+Hải quan mã hóa mỗi kênh thông quan thành một mã giám sát bốn chữ số; mã 1210 có tên chính thức là nhập khẩu lẻ thương mại điện tử tại kho ngoại quan. Hai chữ nhập khẩu trong tên chính thức mô tả đoạn di chuyển của hàng hóa vào kho ngoại quan trong phạm vi hải quan Trung Quốc; nhìn từ phía nhà xuất khẩu thì hướng không hề thay đổi: bạn gửi hàng từ thị trường nước mình, người mua đặt đơn trong nội địa Trung Quốc. Công bố số 486 năm 2018 là văn bản nền móng của kênh này: hàng bán theo kênh được giám sát như hàng cá nhân tự sử dụng khi nhập cảnh, các yêu cầu về giấy phép nhập lần đầu, đăng ký và khai báo của con đường thương mại thông thường tại đây đều không áp dụng.
+
+Về vận hành, hàng chưa bán được lưu tại kho ngoại quan trong khu vực đặc biệt do hải quan giám sát, lúc nhập kho chưa nộp thuế nhập khẩu. Người tiêu dùng đặt đơn xong, nền tảng đẩy ba chứng từ cho hải quan: đơn hàng, chứng từ thanh toán và chứng từ logistics. Hải quan đối chiếu ba chứng từ, thông quan từng đơn, nền tảng khấu trừ thuế phía người tiêu dùng ngay tại khâu thanh toán.
+
+## Chín khối của giải pháp
+
+Trước hết nhìn phạm vi trọn vẹn của giải pháp. Nó được tổ chức theo chín khối, mỗi khối giải một lớp vấn đề:
+
+- 01 Kết luận và đề xuất: mọi kết luận đặt phía trước, ba quyết định khởi động tập trung tại một nơi.
+- 02 Vào sân: phân loại, thuế, hạn mức, đường đi, mỗi hạng mục đều tra cứu được căn cứ.
+- 03 Giữ an toàn: tái cấu trúc mô hình, ranh giới công bố, tuân thủ dữ liệu, căn cứ pháp lý kèm dấu vết hệ thống.
+- 04 Dòng tiền sạch: tách biệt quỹ, thanh toán ba đoạn và chuyển tiền ra nước ngoài, lộ trình tiền được viết rõ ràng.
+- 05 Chạy được: xương sống bảy dòng và mô-đun thí điểm S0–S5, mở rộng từng ô.
+- 06 Chuẩn bị tăng trưởng: vận hành giai đoạn phóng đại S6–S13, zí khách, hậu mãi, hội viên được chi tiết hóa từng hạng mục.
+- 07 Số liệu rõ: khoảng thời gian, cơ cấu chi phí, công cụ tính toán, tham số giao kèm giải pháp.
+- 08 Bảo vệ trọn vẹn: trách nhiệm quy về từng hạng mục, tài sản hoàn toàn thuộc bạn, lối thoát đã qua diễn tập.
+- 09 Bắt đầu: lộ trình sáu giai đoạn, bảy hạng mục chuẩn bị, nhịp độ 30/60/90 ngày.
+
+![Chín khối của giải pháp từ 01 đến 05](/images/blog/bonded-ecommerce-export-china-guide/fig-01.webp)
+
+![Chín khối của giải pháp từ 06 đến 09](/images/blog/bonded-ecommerce-export-china-guide/fig-02.webp)
+
+Chín khối gói gọn thành bốn câu hỏi mà nhà xuất khẩu quan tâm nhất:
+
+- Cần kết luận để quyết định: kết luận một câu, thời gian cùng chi phí lợi nhuận, dòng thời gian ra quyết định.
+- Cần căn cứ tuân thủ: hằng số giám sát và số văn bản, ba miễn trừ cùng ba ranh giới, cách quy trách nhiệm.
+- Cần chi phí và lợi nhuận: kinh tế đơn vị, ba cách tính phí, mô hình vận hành năm đầu.
+- Cần thực thi tăng trưởng: mô hình quảng bá, bảy dòng và đường đi trọn vẹn của một đơn hàng, kiến trúc zí khách.
+
+![Chín khối và bốn câu hỏi then chốt](/images/blog/bonded-ecommerce-export-china-guide/fig-05.webp)
+
+Buổi họp khởi động chỉ cần cùng chốt ba việc, mỗi việc đều có thời hạn và cái giá của việc trễ hạn:
+
+- Có khởi động chẩn đoán S0 trả phí ngay bây giờ hay không. Chốt ngay tại chỗ, nếu không sẽ không làm được phân tầng đủ điều kiện, cũng không có được lịch trình chính xác.
+- Đường đi của chủ thể trong nước. Vốn ngoại toàn phần, liên doanh, hoặc phương án giai đoạn chuyển tiếp lấy bên nền tảng làm chủ thể trong nước. Chốt trước S1, vì nó ảnh hưởng trực tiếp đến việc mở cửa hàng và tài khoản tiền.
+- Định vị ngành hàng thực phẩm. Thực phẩm thông thường (không blue hat, chưa được công bố công năng) hoặc thực phẩm chức năng blue hat (được công bố công năng, chi phí thông thường tăng lên). Chốt trước S3, vì nó quyết định ngành hàng và thời gian lên kệ.
+
+Cần xác nhận thêm ba hạng mục kèm theo: cảng ưu tiên, cách tính phí ở giai đoạn thương mại, nguồn hàng thứ hai có vào giai đoạn hai hay không.
+
+## Ba phán định, năm kết luận
+
+Phần tóm tắt điều hành đưa ra ba phán định và năm kết luận, mỗi điều đều kèm căn cứ. Ba phán định:
+
+- Phán định vào sân: đi được. Căn cứ vào ba văn bản: Thông tư Cai Guan Shui [2016] số 18 (chế độ thuế gộp), công bố số 486 năm 2018 của sáu bộ ngành (phương thức giám sát và thành phố thí điểm), công bố số 7 năm 2022 của tám bộ ngành (tối ưu danh mục tích cực, 1476 mã thuế 8 chữ số).
+- Phán định sản phẩm: thực phẩm chức năng nằm trong danh mục. Nhóm bột đạm whey phân loại theo mã thuế 0404.9000, phán quyết phân loại hải quan W2020-29 ủng hộ đường đi này.
+- Phán định giám sát: Nghị định 280 (có hiệu lực từ 1 tháng 6 năm 2026) điều chỉnh nhập khẩu thương mại thông thường, không làm thay đổi quy tắc của kênh thương mại điện tử xuyên biên giới này. Theo nguyên tắc của Điều lệ Quản lý Bán hàng trực tiếp, mô hình này không cấu thành bán hàng trực tiếp, chưa cần giấy phép kinh doanh bán hàng trực tiếp (thuộc hệ thống Nghị định số 443 của Quốc vụ viện).
+
+Năm kết luận:
+
+- Tuân thủ: ba miễn trừ thành lập, theo giám sát hàng cá nhân tự sử dụng nhập cảnh thì miễn trừ giấy phép gia nhập thương mại chính thức, theo chế độ thuế gộp thì miễn trừ thuế quan, theo mô hình xuyên biên giới thì miễn trừ đăng ký blue hat. Ba điểm không miễn trừ cũng thành lập: trách nhiệm chất lượng sản phẩm không miễn trừ, ranh giới quảng cáo không miễn trừ, bảo vệ quyền lợi người tiêu dùng không miễn trừ.
+- Thuế: thuế suất gộp 9,1%, nền tảng khấu trừ và nộp thay, người tiêu dùng xem được từng lần khấu trừ thuế trên kênh chính thức cài trên di động.
+- Hạn mức: mỗi đơn 5000 yuan (khoảng 700 đô la Mỹ), mỗi cá nhân 26000 yuan mỗi năm (khoảng 3600 đô la Mỹ), hệ thống thông quan trừ từng đơn.
+- Dòng tiền: ba đoạn luân chuyển cộng hai tầng tách biệt, chưa có chuyện chuyển tiền ra nước ngoài từng đơn một.
+- Nhịp độ: chẩn đoán 2–4 tuần, thí điểm một SKU 6–10 tuần, khoảng thời gian này thành lập với điều kiện giai đoạn chẩn đoán đã khóa các biến số.
+
+## Hai bài toán thuế và hạn mức
+
+Cách tính thuế suất gộp 9,1%: thuế quan tạm đặt bằng 0, thuế giá trị gia tăng thu theo 70% số thuế pháp định, thuế GTGT của bột đạm whey là 13%, 13% nhân 70% bằng 9,1%, căn cứ Thông tư Cai Guan Shui [2016] số 18. Thuế suất này chỉ có hiệu lực với hàng trong danh mục, đơn hàng trong hạn mức. Hàng đơn chiếc không thể tách rời mà vượt hạn mức thì thu theo mức đầy đủ của thương mại thông thường, 9,1% không còn áp dụng.
+
+Hai con số của hạn mức: mỗi đơn 5000 yuan (khoảng 700 đô la Mỹ), mỗi cá nhân 26000 yuan mỗi năm (khoảng 3600 đô la Mỹ), căn cứ Thông tư Cai Guan Shui [2018] số 49. Sổ hạn mức được trừ từng đơn lúc thông quan (công bố số 194 năm 2018 của Tổng cục Hải quan), chính người tiêu dùng tra được từng lần trừ trên kênh chính thức cài trên di động.
+
+Tính một bài toán cụ thể. Một hũ bột đạm whey định giá 50 đô la Mỹ, quy đổi theo tỷ giá 7,2 yuan mỗi đô la Mỹ vào khoảng 360 yuan, nằm trong hạn mức; thuế gộp phải nộp là 360 nhân 9,1% bằng 32,8 yuan, khoảng 4,5 đô la Mỹ, do nền tảng khấu trừ thay; đồng thời hạn mức năm của người mua bị trừ 360 yuan. Thuế theo pháp luật là nghĩa vụ của người tiêu dùng, nhưng nó nằm trong giá bán lẻ của bạn, nên ngay ngày định giá đầu tiên đã phải tính lớp này vào.
+
+## Toàn cảnh khung dịch vụ
+
+Cấu trúc cả giải pháp là một bức tranh ngôi nhà. Mái nhà là trách nhiệm: một chủ thể chịu trách nhiệm về kết quả, từ lúc hàng vào khu đến khi người tiêu dùng ký nhận. Xà ngang là nền tảng chính sách: kênh ngoại quan thương mại điện tử 1210, chống trên ba văn bản gồm Thông tư Cai Guan Shui [2016] số 18, công bố số 486 năm 2018 của sáu bộ ngành và công bố số 7 năm 2022. Bốn cây cột là bốn tuyến dịch vụ: tuân thủ vào sân (chẩn đoán S0, chủ thể S1, khai báo S3), nền tảng và hoàn tất (cửa hàng S2, kho ngoại quan S4, thông quan S5), tiền và thanh toán (thanh toán S6, hoa hồng, chuyển tiền ra nước ngoài), vận hành và tăng trưởng (quảng bá S7, hậu mãi S8, hội viên S13); mười bốn gói công việc S0–S13 xuyên suốt dịch vụ đều nằm trong bốn cây cột này. Nền móng là bảy dòng một sổ: thương vụ, hàng hóa, logistics, quỹ, thông tin, tuân thủ, hóa đơn, bảy dòng chạy trên cùng một bộ sổ, mỗi đơn hàng để lại dấu vết từng tầng, một dòng đứt thì các dòng còn lại dừng hết.
+
+![Toàn cảnh khung dịch vụ: một giải pháp, một chủ thể chịu trách nhiệm](/images/blog/bonded-ecommerce-export-china-guide/fig-03.webp)
+
+Cách đọc bức tranh này: mái nhà trả lời ai chịu trách nhiệm, bốn cột trả lời mỗi lớp việc do ai làm, nền móng trả lời tại sao đáng tin. Bộ sổ ghi vết cấp đơn hàng khiến mọi khâu đều tra ngược được, đây chính là cơ sở chứng cứ của mọi phán định tuân thủ.
+
+## Mười bốn gói công việc, bàn giao từng gói
+
+S0–S13 là 14 gói công việc xuyên suốt dịch vụ, mỗi gói có sản phẩm bàn giao rõ ràng:
+
+- S0 Chẩn đoán và vào sân: bốn báo cáo giao một lần, gồm báo cáo đánh giá đủ điều kiện (đi được hay không), báo cáo nền tảng tuân thủ (có lỗi nặng hay không), danh mục thực thi (vào thế nào), danh mục kiểm chứng thực chiến cảng (chuẩn của cảng).
+- S1 Thành lập chủ thể: giấy phép kinh doanh cộng khai báo hải quan.
+- S2 Cửa hàng nền tảng: lên kệ, tài khoản, thanh toán.
+- S3 Khai báo sản phẩm: phân tầng, phân loại, hồ sơ.
+- S4 Đầu tuyến kho ngoại quan: sổ ngoại quan cộng hàng tồn kho nhìn thấy được.
+- S5 Thông quan ba chứng từ: đối chiếu ba chứng từ cộng lần thông quan đầu tiên.
+- S6 Thanh toán quỹ: phiếu thanh toán cộng hồ sơ chứng minh kèm theo.
+- S7 Quảng bá: kiến trúc zí khách và tăng trưởng.
+- S8 Hậu mãi: dịch vụ và xử lý trả hàng.
+- S9 Kiểm soát rủi ro dữ liệu: tuân thủ dữ liệu và truyền dữ liệu xuyên biên giới.
+- S10 Kiểm toán tuân thủ: tự tra, ghi chép, phản hồi truy vấn.
+- S11 Chuỗi cung ứng nhìn thấy được: đơn hàng, tồn kho, thông quan, logistics toàn trình nhìn thấy.
+- S12 Tuân thủ nội dung: rà soát trang chi tiết và livestream.
+- S13 Hội viên: hạng thành viên và đăng ký thuê bao.
+
+Giai đoạn một đồng thời chừa sẵn hai điểm nối mở rộng: kênh gửi thẳng 9610 và kết nối nguồn hàng thứ hai, khi giai đoạn hai khởi động sẽ không cần tái cấu trúc kiến trúc của giai đoạn một.
+
+![Mười bốn gói công việc và ba bước vào sân](/images/blog/bonded-ecommerce-export-china-guide/fig-04.webp)
+
+## Ba bước đi thế nào, thoát thế nào
+
+Ba bước vào sân là nhịp độ thương mại, không phải bàn giao theo từng kỳ. Rút lui ở bất kỳ bước nào, thành quả đã bàn giao đều thuộc về bạn.
+
+Bước một, chẩn đoán (bao phủ S0), 2–4 tuần. Bốn báo cáo giao một lần, sau đó quyết định có tiếp tục hay không. S0 thu phí theo giá cố định, phí kiểm nghiệm và công tác phí đi lại thanh toán theo thực tế, chi phí ứng với sản phẩm bàn giao, có báo cáo trong tay rồi mới ra quyết định. Khoảng thời gian là khoảng có điều kiện, tiền đề là S0 đã khóa các biến số.
+
+Bước hai, thí điểm một SKU (bao phủ S1–S5), 6–10 tuần. Năm khâu hạ theo trình tự: thành lập chủ thể, cửa hàng nền tảng, khai báo sản phẩm, đầu tuyến kho ngoại quan, thông quan ba chứng từ. Chuỗi chạy thông suốt rồi mới mở thanh toán và hoa hồng. Lối thoát: thí điểm thất bại hoặc chi phí lệch xa kỳ vọng thì quay lại, sản phẩm đã bàn giao thuộc về bạn. Nên bắt đầu từ một SKU, đi cho vững cả chuỗi rồi mới bàn đến phóng đại.
+
+Bước ba, phóng đại (bao phủ S6–S13), toàn bộ SKU. Tám mô-đun mở từng cái: thanh toán quỹ, quảng bá, hậu mãi, rủi ro dữ liệu, kiểm toán tuân thủ, chuỗi cung ứng nhìn thấy được, tuân thủ nội dung, hội viên; thứ tự mở khớp với cách xếp gói công việc, bàn giao từng ô. Trước khi phóng đại có bốn phép kiểm tra:
+
+- Đơn đầu tiên chạy thông toàn chuỗi.
+- Chênh lệch giữa mô hình chi phí và số đo thực tế nằm trong dải dung sai.
+- Tín hiệu mua lại thành lập.
+- Hồ sơ tuân thủ đầy đủ.
+
+Bốn điều không qua thì dừng ở tầng thí điểm. Lối thoát: dừng ở tầng nào, bàn giao trọn vẹn theo danh mục sáu hạng mục.
+
+Vì sao đáng để động ngay bây giờ: giá trị của cửa sổ cơ hội nằm ở ba tài sản đi trước, gồm sổ ngoại quan và vị trí khai báo cảng, niềm tin ngành hàng trên nền tảng, nhận biết của người tiêu dùng về thành phần. Cả ba thứ này đều cần thời gian tích lũy, người đến sau không lấy được vị trí của người đi trước.
+
+## Đường đi trọn vẹn của một lô 2000 hũ
+
+Đưa quy trình xuống một lô hàng cụ thể. 2000 hũ bột đạm whey, giá bán lẻ mỗi hũ 50 đô la Mỹ.
+
+Đầu tuyến vào khu: hàng vào khu vực đặc biệt do hải quan giám sát với trạng thái ngoại quan, lập sổ ngoại quan, lúc này chưa nộp thuế nhập khẩu. Chủ thể và khai báo: chủ thể trong nước đã giữ giấy phép kinh doanh và khai báo hải quan (S1), SKU hoàn thành phân tầng và kiểm chứng phân loại (S3), phân loại theo mã thuế 0404.9000, tham chiếu phán quyết W2020-29. Đơn hàng và thông quan: người tiêu dùng đặt đơn xong, nền tảng đẩy ba chứng từ (đơn hàng, chứng từ thanh toán, chứng từ logistics), hải quan đối chiếu ba chứng từ (S5), trừ hạn mức từng đơn, thuế gộp khấu trừ thay theo 9,1%. Một đơn 50 đô la Mỹ bị trừ thuế khoảng 4,5 đô la Mỹ (tức 32,8 yuan), hạn mức năm bị trừ 360 yuan. Giao hàng và hậu mãi: từ kho ngoại quan xuất hàng đến khi người tiêu dùng ký nhận. Trả hàng được xử lý theo cửa sổ của công bố số 45 năm 2020 của Tổng cục Hải quan, người tiêu dùng có thể nộp đơn trả hàng trong vòng 30 ngày sau khi xác nhận đã nhận hàng, hàng phải về đến kho ngoại quan trong vòng 45 ngày, trả hàng thành công thì hạn mức hoàn về. Toàn trình ghi vết từng tầng trên bảy dòng một sổ: đơn nào, lô nào, khoản tiền nào, dòng nào, tất cả đều tra ngược được.
+
+## Kênh này không bao phủ những gì
+
+Bốn ranh giới, hãy đối chiếu từng điều trước khi đặt đơn và xếp lịch sản xuất:
+
+- Đơn vượt hạn mức: đơn vượt 5000 yuan mỗi lần mà không thể tách rời, hoặc cá nhân vượt 26000 yuan mỗi năm, hệ thống thông quan sẽ chặn trực tiếp.
+- Hàng lớn B2B: bán lẻ thương mại điện tử ngoại quan chỉ dành cho người tiêu dùng cá nhân, phân phối, bán sỉ, mua sắm doanh nghiệp chưa nằm trong phạm vi này.
+- Công bố công năng: thực phẩm chức năng chưa được phép công bố công năng phòng ngừa và điều trị bệnh, ranh giới của Luật Quảng cáo áp dụng như nhau với hàng xuyên biên giới.
+- Khác biệt cảng: chuẩn thực chiến của các cảng thí điểm có sự khác nhau, hàng vào khu ở cảng nào, kiểm tra theo chuẩn nào, bắt buộc phải làm rõ từng cảng trong giai đoạn chẩn đoán S0. Đây cũng chính là lý do danh mục kiểm chứng thực chiến cảng tồn tại trong bốn báo cáo.
+
+Bài viết này kể về quy tắc của kênh và phương pháp thực thi, không cấu thành ý kiến pháp lý; trước khi quyết định từng vụ, nên làm chẩn đoán chính thức với sản phẩm cụ thể và chuẩn cảng cụ thể.
+
+Hãy [liên hệ với chúng tôi](/vi/packages/) để đặt một buổi chẩn đoán chính thức cho sản phẩm và cảng mục tiêu của bạn, bốn báo cáo S0 sẽ lần lượt trả lời đi được hay không, theo chuẩn nào, và nên làm bước nào trước.

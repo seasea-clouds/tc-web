@@ -17,6 +17,9 @@ __pycache__/
 
 # Blog files merged during site build
 apps/site/public/*/blog/
+# 例外：博客正文图片是手工入库的静态资源，不是构建合并产物
+!apps/site/public/images/blog/
+!apps/site/public/images/blog/**
 apps/site/public/blog/
 apps/site/public/404.html
 apps/site/public/404/

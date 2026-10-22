@@ -491,3 +491,23 @@ GitHub 仓库从 `seasea-clouds/trade-web` 切换到 `seasea-clouds/tc-web`（�
   `mapping values are not allowed here`、整站构建失败——本地检查全绿也拦不住。收稿后建议顺手跑一次
   `yaml.safe_load(frontmatter)` 复验（本次仅 hy 命中，加双引号修复）。
 - 首篇带图投稿才暴露这类问题，说明"图片"是投稿工具包里没有被真实验证过的路径。
+
+## 踩坑 20：面包屑点「Insights」跳到 /en/blog/index.txt/ 报 404（2026-10-22）
+
+**现象**：文章页面包屑的「Insights」（href 正确是 `/en/blog/`）点下去，URL 变成
+`/en/blog/index.txt/`，落到 Next 的 404 页。
+
+**根因**：`packages/ui/src/AutoBreadcrumb.tsx` 用的是 `next/link`。App Router 客户端导航会先取
+RSC flight payload，blog 子站的页面级 payload 文件名是 `<route>/index.txt`（site 主站那套叫
+`__next.*.txt`），而两者都被 `clean-rsc.mjs` 从静态导出产物里剥离了 → blog 上游 404，CF 又对
+`/index.txt` 做 308 加尾斜杠 → 浏览器停在 `index.txt/` 上。`/en/blog/` 恰好是边缘代理到 blog 站
+的路径，跨 app 导航触发这条链路。
+
+**修法**（三处）：
+1. `AutoBreadcrumb` 的 `Link` 换成普通 `<a>`——面包屑天然是跨 app 跳转，整页导航最稳，HTML 输出不变。
+2. `SearchModal` 搜索结果项的 `Link` 同理换 `<a>`（搜索结果本来就混合 site/blog/portal 三类）。
+3. `_middleware.ts` 兜底：`/{locale}/blog/**/*.txt` 返回 204（排除 robots/llms/sitemap），与既有
+   `__next.*.txt` 204 同一套路，让残留的 `Link`/`router.push` 优雅回退整页导航。
+
+**验证**：headless chromium 真实点击面包屑 → 落在 `/en/blog/`（此前会停在 `index.txt/`）。
+注意 headless 会被 CF 人机验证拦成 "Attention Required!"，这是无指纹浏览器的特例，正常浏览器无影响。

@@ -1,0 +1,19 @@
+# Reddit 采集链路的哑存储 Worker（契约见 docs/reddit-plan-v2/01-CONTRACT.md）
+# 对外不直接暴露：主域 https://sinotradecompliance.com/reddit/* 由 site 的边缘 worker 转发进来
+# Secrets（不写在这里）：REDDIT_PUBKEYS（两角色公钥 JSON）、REDDIT_GATEWAY_SECRET（与 Pages 变量同值）
+
+name = "tc-web-reddit"
+main = "src/index.ts"
+compatibility_date = "2026-10-22"
+
+# 未 ack 30 天 / 已 ack 7 天物理删 / nonce 与限流桶清理
+[triggers]
+crons = ["20 3 * * *"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "tc-web-reddit-db"
+database_id = "5d37f0b4-3be2-494d-9fc2-868a29ae7bb2"
+
+[observability]
+enabled = true

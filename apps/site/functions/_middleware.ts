@@ -378,6 +378,39 @@ export async function onRequest(context: { request: Request; next: () => Promise
     return Response.redirect(url.toString().replace(url.hostname, canonical), 301);
   }
 
+  // ── Reddit 采集链路转发：/reddit/<win>/(push|pull|ack) → 独立 Worker ──
+  // 契约见 Reddit 采集链路方案包（CRM 维护）01-CONTRACT.md §8。这里必须**原样透传**：
+  // method / path（含 <win> 段）/ query / body 原始字节 / 状态码 / 响应头。
+  // 签名原文含 PATH 与 sha256hex(body)，任何改写都会让两端签名对不上 → 全站 404。
+  // 另注入两个头（都不参与签名）：X-RD-Gateway（网关口令）、X-RD-Client-IP（真实 IP，供 Worker 限流）。
+  if (url.pathname.startsWith('/reddit/')) {
+    const workerBase = (env?.UPSTREAM_REDDIT as string) || 'https://tc-web-reddit.sea-clouds.workers.dev';
+    const fwdHeaders = new Headers(request.headers);
+    fwdHeaders.delete('host');
+    const gw = (env?.REDDIT_GATEWAY_SECRET as string) || '';
+    if (gw) fwdHeaders.set('X-RD-Gateway', gw);
+    const clientIp = request.headers.get('CF-Connecting-IP') || '';
+    if (clientIp) fwdHeaders.set('X-RD-Client-IP', clientIp);
+
+    // body 用原始字节转发（不 parse、不重序列化），GET 无 body
+    const bodyBytes = request.method === 'GET' || request.method === 'HEAD'
+      ? undefined
+      : await request.arrayBuffer();
+
+    const upReq = new Request(workerBase + url.pathname + url.search, {
+      method: request.method,
+      headers: fwdHeaders,
+      body: bodyBytes,
+      redirect: 'manual',
+    });
+    const upResp = await fetch(upReq);
+    return new Response(upResp.body, {
+      status: upResp.status,
+      statusText: upResp.statusText,
+      headers: sanitizeHeaders(upResp.headers),
+    });
+  }
+
   // ── zh locale gating: only authenticated admins may view Chinese ──
   // Runs after canonical-host redirect and before all sub-site proxying so
   // /zh/, /zh/c/ (portal) and /zh/blog/ (blog) are all gated at the edge.

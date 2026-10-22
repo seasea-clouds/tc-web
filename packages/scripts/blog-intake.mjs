@@ -27,10 +27,9 @@ const repoRoot = path.resolve(__dirname, '../..');
 const checker = path.join(repoRoot, 'docs/blog-submission/submitter_check.py');
 const blogRoot = path.join(repoRoot, 'apps/blog');
 const contentRoot = path.join(blogRoot, 'content');
+// 正文图片只存 blog 项目一份：生产域 /images/blog/* 由 site 的
+// functions/_middleware.ts 代理到 blog 上游，不再在 site 里放副本。
 const imagesRoot = path.join(blogRoot, 'public/images/blog');
-// 生产域是 site（sinotradecompliance.com），/blog 只是边缘代理；
-// 正文图片走站点根路径 /images/...，因此 site 的 public 也必须有一份。
-const siteImagesRoot = path.join(repoRoot, 'apps/site/public/images/blog');
 const locales = JSON.parse(fs.readFileSync(path.join(repoRoot, 'packages/ui/locales.json'), 'utf8'));
 
 const args = process.argv.slice(2);
@@ -163,12 +162,10 @@ for (const slug of slugs) {
   }
   const imgSrc = path.join(artDir, 'images', slug);
   if (fs.existsSync(imgSrc)) {
-    for (const root of [imagesRoot, siteImagesRoot]) {
-      const imgDst = path.join(root, slug);
-      fs.mkdirSync(imgDst, { recursive: true });
-      for (const f of fs.readdirSync(imgSrc)) {
-        fs.copyFileSync(path.join(imgSrc, f), path.join(imgDst, f));
-      }
+    const imgDst = path.join(imagesRoot, slug);
+    fs.mkdirSync(imgDst, { recursive: true });
+    for (const f of fs.readdirSync(imgSrc)) {
+      fs.copyFileSync(path.join(imgSrc, f), path.join(imgDst, f));
     }
   }
   console.log(`✓ ${slug}: 48 语言 + ${fs.existsSync(imgSrc) ? fs.readdirSync(imgSrc).length : 0} 张图`);

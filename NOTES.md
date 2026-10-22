@@ -479,7 +479,12 @@ GitHub 仓库从 `seasea-clouds/trade-web` 切换到 `seasea-clouds/tc-web`（�
 
 **两个独立原因**：
 1. `apps/blog/src/lib/posts.ts` 的 `applyInlineFormatting()` 只处理 `[text](url)`，`![alt](src)` 里的链接部分被当普通链接替换，`!` 残留。修法：在图/链接替换顺序上**先图后链接**，图片输出 `<img src alt loading="lazy" class="rounded-lg w-full my-6 …">`。
-2. 生产域是 site，`/blog/` 只是边缘代理；blog 项目 `public/images/blog/` 在 sinotradecompliance.com 下不可达。修法：图片**同时**写 `apps/blog/public/images/blog/<slug>/`（dev 域 tc-web-blog.pages.dev 用）和 `apps/site/public/images/blog/<slug>/`（生产域用），`blog-intake.mjs` 已改为两处同步写。
+2. 生产域是 site，`/blog/` 只是边缘代理；blog 项目 `public/images/blog/` 在 sinotradecompliance.com 下不可达。
+   **最终方案（用户选 B，2026-10-22）**：图片只存 blog 一份，site 的 `functions/_middleware.ts` 在 `proxySubSiteAsset()` 里加
+   `/images/blog/*` → blog 上游代理（透传 method/headers，支持 Range 与条件请求；上游 cache-control/etag 原样透传，
+   不加额外边缘缓存，换图立即生效）。`blog-intake.mjs` 只写 blog 一处，site 不再留副本。
+   注意 `.gitignore` 有 `apps/site/public/*/blog/`（本意忽略 site 构建合并的 blog 产物），它也会命中 `images/blog/`——
+   将来若再往 site 放这类文件，必须 `git ls-files` 复查是否真入库，别信 `git add` 无报错。
 
 **其它教训**：
 - `check-md-article.mjs` 不解析 YAML frontmatter，`hy` 的 excerpt 里带 `: ` 导致 CF 构建报

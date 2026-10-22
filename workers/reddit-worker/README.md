@@ -29,8 +29,10 @@ ECDSA P-256 + 5 分钟时间窗路径 + nonce 防重放（D1），验签**只收
 | `POST /reddit/<win>/ack` | crm | `{capture_ids:[...]}` 幂等；返回 `{acked,rev}` |
 
 `pull` 响应：`{ok, rev, items, has_more, next_since_rev}`。
-**翻页必须用 `next_since_rev`（本页最后一条的 rev），不要用顶层 `rev`（全局 MAX）** —— 用 `rev`
-当 `since_rev` 会一次跳到底，没返回的条目永远拉不到。
+
+**顶层 `rev` 是游标**（本页最后一条的 rev；空页原样返回 `since_rev`），可以直接当下一轮的 `since_rev`。
+契约写明「CRM 用它当水位落盘」，所以它**不能**是全局 `MAX(rev)` —— 那会让 CRM 一次跳到底，
+没返回的条目永远拉不到。`next_since_rev` 是同值的兼容别名；`ack` 返回的 `rev` 才是全局 `MAX`（只用于日志）。
 
 ## 存储
 

@@ -525,13 +525,17 @@ RSC flight payload，blog 子站的页面级 payload 文件名是 `<route>/index
 **3. Worker 不能放 `apps/`**：`ci-check.mjs` 的 `ALL_PROJECTS` 按 `apps/<x>/{src,package.json,…}`
 判定「项目」，会给 Worker 套 `check-i18n-keys`（找不到 `messages/en.json`）和 `check-console`
 （禁 `console.log`）。移到 `workers/` 顶目录 —— 分类正确，规则一字未放宽。
+注意 `apps/portal/workers/email-cron/` 那种嵌法**没事**：判定只看 `apps/<x>` 这一层，
+`workers/` 子目录不算项目。所以「跟 app 强耦合就嵌在 `<app>/workers/`，独立的放顶层 `workers/`」。
+（两个 Worker 的完整对比见 `workers/README.md`）
 
 **4. `robots.txt` 是构建产物**：`packages/scripts/build-robots.mjs` 会覆盖 `apps/site/public/robots.txt`，
 改 public 里的文件等于白改，规则只能在脚本模板里维护（`Disallow: /reddit/` 就加在那）。
 
-**5. `pull` 不能拿响应顶层 `rev` 当翻页游标**：顶层 `rev` 是全局 `MAX(rev)`，用它当 `since_rev`
-会一次跳到底 → 未返回的条目永远拉不到（`has_more=true` 也翻不过去）。响应额外给
-`next_since_rev`（= 本页最后一条的 rev），纯增量字段、不改 `rev` 的契约语义。
+**5. `pull` 的顶层 `rev` 必须是游标，不能是全局 `MAX`**：契约写明「CRM 用它当水位（`pull-state`
+落盘）」，若返回 `MAX(rev)`，CRM 一次跳到底 → 没返回的条目**永远**拉不到（`has_more=true` 也翻不过去，
+数据卡在队列里）。正确语义：本页最后一条的 rev；空页原样返回 `since_rev`。`next_since_rev` 为同值别名；
+`ack` 返回的才是全局 `MAX`（只用于日志）。实测：7 条数据 limit=3 三页拉完，无漏无重。
 
 **6. 测试会真写库**：selftest 跑完要 `DELETE FROM rd_envelope / rd_nonce / rd_rate` 再交给 CRM；
 `rev` 走 AUTOINCREMENT 不回退（无影响，CRM 只要求单调递增）。

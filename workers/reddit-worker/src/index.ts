@@ -323,13 +323,13 @@ async function handlePull(env: Env, url: URL): Promise<Response> {
     hasMore = !!more;
   }
 
-  const rev = await currentRev(env);
-  // next_since_rev = 本页最后一条的 rev（游标）。翻页必须用它，不能用顶层 rev：
-  // 顶层 rev 是全局 MAX，拿它当 since_rev 会一次跳到底 → 未返回的条目永远拉不到。
-  // 这是对契约的**纯增量**字段（不改 rev 语义），CRM 可选使用。
-  const nextSince = rows.results?.length ? lastRev : since;
+  // 顶层 rev = **游标**（本页最后一条的 rev；空页原样返回 since_rev）。
+  // 契约写明「CRM 用它当水位（pull-state 落盘）」——那就只能是游标：
+  // 返回全局 MAX(rev) 会让 CRM 一次跳到底，没返回的条目**永远**拉不到（数据卡死）。
+  // next_since_rev 是同一值的兼容别名（早期按 MAX 理解时加的），保留不删。
+  const rev = rows.results?.length ? lastRev : since;
   log({ ev: 'pull', status: 200, items: items.length, has_more: hasMore, rev });
-  return json(200, { ok: true, rev, items, has_more: hasMore, next_since_rev: nextSince });
+  return json(200, { ok: true, rev, items, has_more: hasMore, next_since_rev: rev });
 }
 
 // ── ack ───────────────────────────────────────────────────────────────

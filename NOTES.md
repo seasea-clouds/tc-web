@@ -471,3 +471,18 @@ GitHub 仓库从 `seasea-clouds/trade-web` 切换到 `seasea-clouds/tc-web`（�
 - **CI 误判**：`check-md-article` 的 R11 取「最后 10 行第一个 markdown 链接」，正文末尾有配图时会把 `![alt](src)` 当成 CTA 报错 → 改为 `(?<!!)\[...\]\(...\)`，只认真正链接
 - 校验脚本自身也踩过同样坑：CTA 检测要先排除图片语法，`cover.webp` 不要求正文引用（它只用于列表卡片与分享图）
 - 图片尺寸解析用纯标准库手写 WebP/PNG/JPEG 头解析（VP8 / VP8L / VP8X 三种分块），作者端无需装 Pillow
+
+## 踩坑 19：博客正文图片不渲染 + 生产域 404（2026-10-22）
+
+**现象**：首篇带图投稿（bonded-ecommerce-export-china-guide）上线后，正文 `![alt](/images/blog/x/fig-01.webp)`
+在 HTML 里变成 `!<a href="/images/...">`——感叹号当文本、图变成链接；且 `/images/blog/...` 在生产域 404。
+
+**两个独立原因**：
+1. `apps/blog/src/lib/posts.ts` 的 `applyInlineFormatting()` 只处理 `[text](url)`，`![alt](src)` 里的链接部分被当普通链接替换，`!` 残留。修法：在图/链接替换顺序上**先图后链接**，图片输出 `<img src alt loading="lazy" class="rounded-lg w-full my-6 …">`。
+2. 生产域是 site，`/blog/` 只是边缘代理；blog 项目 `public/images/blog/` 在 sinotradecompliance.com 下不可达。修法：图片**同时**写 `apps/blog/public/images/blog/<slug>/`（dev 域 tc-web-blog.pages.dev 用）和 `apps/site/public/images/blog/<slug>/`（生产域用），`blog-intake.mjs` 已改为两处同步写。
+
+**其它教训**：
+- `check-md-article.mjs` 不解析 YAML frontmatter，`hy` 的 excerpt 里带 `: ` 导致 CF 构建报
+  `mapping values are not allowed here`、整站构建失败——本地检查全绿也拦不住。收稿后建议顺手跑一次
+  `yaml.safe_load(frontmatter)` 复验（本次仅 hy 命中，加双引号修复）。
+- 首篇带图投稿才暴露这类问题，说明"图片"是投稿工具包里没有被真实验证过的路径。

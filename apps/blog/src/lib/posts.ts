@@ -104,6 +104,12 @@ function applyInlineFormatting(text: string): string {
   result = result.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
   // Italic
   result = result.replace(/\*(.+?)\*/g, '<em>$1</em>');
+  // Images — must run before links, otherwise the leading "!" is left behind
+  result = result.replace(
+    /!\[([^\]]*)\]\(([^)]+)\)/g,
+    (_m, alt: string, src: string) =>
+      `<img src="${src.replace(/"/g, '&quot;')}" alt="${alt.replace(/"/g, '&quot;')}" loading="lazy" decoding="async" class="rounded-lg w-full my-6 border border-gray-200" />`,
+  );
   // Links
   result = result.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-[#2563EB] hover:underline font-medium">$1</a>');
   return result;

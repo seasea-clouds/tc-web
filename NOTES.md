@@ -511,3 +511,27 @@ RSC flight payload，blog 子站的页面级 payload 文件名是 `<route>/index
 
 **验证**：headless chromium 真实点击面包屑 → 落在 `/en/blog/`（此前会停在 `index.txt/`）。
 注意 headless 会被 CF 人机验证拦成 "Attention Required!"，这是无指纹浏览器的特例，正常浏览器无影响。
+
+## 踩坑 21：Reddit 采集 Worker 上线（2026-10-22）
+
+**1. D1 的 `INSERT ... RETURNING` 走 `.all()` 拿不到行**（`results` 为空）→ 限流计数永远读成 0，
+429 永不触发。改成「先 upsert（`.run()`）再单独 `SELECT n`」两步。另：`prepare()` 里写了占位符却
+忘 `.bind()` → `D1_ERROR: Wrong number of parameter bindings`（对外是 500 / `error code: 1101`）。
+
+**2. Cloudflare 拦 `Python-urllib` 默认 UA**：主域与 `*.workers.dev` 都直接 403 `error code: 1010`，
+请求根本到不了 Worker。CRM 侧**任何** Python HTTP 客户端（含 `worker_selftest.py`）必须显式设
+`User-Agent`；Node 的 `fetch` 默认 UA 不受影响（16/16 原样跑通）。用 curl 验也要带 UA。
+
+**3. Worker 不能放 `apps/`**：`ci-check.mjs` 的 `ALL_PROJECTS` 按 `apps/<x>/{src,package.json,…}`
+判定「项目」，会给 Worker 套 `check-i18n-keys`（找不到 `messages/en.json`）和 `check-console`
+（禁 `console.log`）。移到 `workers/` 顶目录 —— 分类正确，规则一字未放宽。
+
+**4. `robots.txt` 是构建产物**：`packages/scripts/build-robots.mjs` 会覆盖 `apps/site/public/robots.txt`，
+改 public 里的文件等于白改，规则只能在脚本模板里维护（`Disallow: /reddit/` 就加在那）。
+
+**5. `pull` 不能拿响应顶层 `rev` 当翻页游标**：顶层 `rev` 是全局 `MAX(rev)`，用它当 `since_rev`
+会一次跳到底 → 未返回的条目永远拉不到（`has_more=true` 也翻不过去）。响应额外给
+`next_since_rev`（= 本页最后一条的 rev），纯增量字段、不改 `rev` 的契约语义。
+
+**6. 测试会真写库**：selftest 跑完要 `DELETE FROM rd_envelope / rd_nonce / rd_rate` 再交给 CRM；
+`rev` 走 AUTOINCREMENT 不回退（无影响，CRM 只要求单调递增）。

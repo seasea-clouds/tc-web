@@ -60,6 +60,10 @@ Allow: /
 
 Sitemap: ${baseUrl}/sitemap.xml
 Sitemap: ${baseUrl}/llms.txt
+
+# Reddit 采集接口（机器端点，不是页面；由边缘 worker 转发给独立 Worker）
+User-agent: *
+Disallow: /reddit/
 `;
 
   fs.writeFileSync(path.join(outDir, 'robots.txt'), content, 'utf-8');

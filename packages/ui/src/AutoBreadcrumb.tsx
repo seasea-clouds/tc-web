@@ -1,7 +1,6 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import Link from 'next/link';
 import { useT, useTradeLocale } from './TranslationProvider';
 import { createContext, useContext, type ReactNode } from 'react';
 
@@ -242,12 +241,16 @@ export default function AutoBreadcrumb({ locale, title }: AutoBreadcrumbProps) {
                   {item.label}
                 </span>
               ) : (
-                <Link
+                // 面包屑常跨 app（site /en/blog/ 由边缘代理到 blog 站），
+                // next/link 的客户端路由会去取 RSC payload（*index.txt），
+                // 而静态导出产物里这些 .txt 已被 clean-rsc 剥离 → 404 后
+                // router 直接把 URL 落到 index.txt/ 报错。改普通 <a> 强制整页导航。
+                <a
                   href={item.href}
                   className="hover:text-primary-navy transition-colors truncate max-w-[200px] sm:max-w-none"
                 >
                   {item.label}
-                </Link>
+                </a>
               )}
             </li>
           );

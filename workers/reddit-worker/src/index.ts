@@ -245,11 +245,13 @@ async function handlePush(
   // 每 IP 每分钟（IP 由转发层注入；拿不到时退回按 dev 计数，dev 在签名内不可伪造）
   const ip = request.headers.get('X-RD-Client-IP') || `dev:${dev}`;
   const bucket = `${ip}:${Math.floor(now / 60)}`;
-  const rateRes = await env.DB
-    .prepare('INSERT INTO rd_rate (k, n) VALUES (?, 1) ON CONFLICT(k) DO UPDATE SET n = n + 1 RETURNING n')
+  // 注意：D1 的 `INSERT ... RETURNING` 走 .all() 拿不到行（results 为空），
+  // 所以先 upsert 再单独 SELECT 读计数 —— 两步都廉价，别图省事。
+  await env.DB
+    .prepare('INSERT INTO rd_rate (k, n) VALUES (?, 1) ON CONFLICT(k) DO UPDATE SET n = n + 1')
     .bind(bucket)
-    .all<{ n: number }>();
-  const rate = rateRes.results?.[0];
+    .run();
+  const rate = await env.DB.prepare('SELECT n FROM rd_rate WHERE k = ?').bind(bucket).first<{ n: number }>();
   if ((rate?.n ?? 0) > IP_PER_MIN) {
     log({ ev: 'push', status: 429, reason: 'rate' });
     return tooMany();
@@ -322,8 +324,12 @@ async function handlePull(env: Env, url: URL): Promise<Response> {
   }
 
   const rev = await currentRev(env);
+  // next_since_rev = 本页最后一条的 rev（游标）。翻页必须用它，不能用顶层 rev：
+  // 顶层 rev 是全局 MAX，拿它当 since_rev 会一次跳到底 → 未返回的条目永远拉不到。
+  // 这是对契约的**纯增量**字段（不改 rev 语义），CRM 可选使用。
+  const nextSince = rows.results?.length ? lastRev : since;
   log({ ev: 'pull', status: 200, items: items.length, has_more: hasMore, rev });
-  return json(200, { ok: true, rev, items, has_more: hasMore });
+  return json(200, { ok: true, rev, items, has_more: hasMore, next_since_rev: nextSince });
 }
 
 // ── ack ───────────────────────────────────────────────────────────────

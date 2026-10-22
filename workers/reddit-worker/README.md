@@ -20,6 +20,18 @@ Worker 自身在 `https://tc-web-reddit.<account>.workers.dev`，但**没有网�
 ECDSA P-256 + 5 分钟时间窗路径 + nonce 防重放（D1），验签**只收 64 字节 `r||s`**。
 失败一律 `404 {"ok":false}`，不返回 401/403、不给原因。
 
+## 接口
+
+| 端点 | 角色 | 说明 |
+|---|---|---|
+| `POST /reddit/<win>/push` | script | 收信封；`capture_id` 幂等，重复 → `{ok,dup:true,rev}` |
+| `GET /reddit/<win>/pull?since_rev=N&limit=M` | crm | 未 ack 按 rev 升序；`limit` 默认 50、上限 200 |
+| `POST /reddit/<win>/ack` | crm | `{capture_ids:[...]}` 幂等；返回 `{acked,rev}` |
+
+`pull` 响应：`{ok, rev, items, has_more, next_since_rev}`。
+**翻页必须用 `next_since_rev`（本页最后一条的 rev），不要用顶层 `rev`（全局 MAX）** —— 用 `rev`
+当 `since_rev` 会一次跳到底，没返回的条目永远拉不到。
+
 ## 存储
 
 D1 `tc-web-reddit-db`（`migrations/0001-init.sql`）：`rd_envelope` / `rd_nonce` / `rd_rate`。

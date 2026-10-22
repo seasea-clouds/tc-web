@@ -75,6 +75,7 @@ const BLOG_TITLES = {
   'cosmetics-nmpa-filing': 'NMPA Cosmetics Filing Guide',
   'cross-border-ecommerce-china': 'Cross-Border E-Commerce in China',
   'green-coffee-beans-china': 'Exporting Green Coffee Beans to China',
+  'bonded-ecommerce-export-china-guide': 'Bonded E-Commerce Exports to China (Mode 1210)',
 };
 
 function filterSummaryKeys(msgs) {

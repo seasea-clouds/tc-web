@@ -1,0 +1,158 @@
+---
+title: Komplet guide til eksport af kosttilskud til Kina via bonded kanalen 1210
+slug: bonded-ecommerce-export-china-guide
+date: 2026-10-22
+category: E-commerce
+excerpt: Kosttilskud kan sælges lovligt til kinesiske forbrugere via bonded kanalen 1210 uden blue hat registrering. Kvalifikation, den samlede skat 9,1 procent, kvoter og indgangstrin.
+references:
+  - title: Cirkulære Cai Guan Shui [2016] nr. 18, skattepolitik for grænseoverskridende e handels detailimport
+    url: https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html
+  - title: Cirkulære Cai Guan Shui [2018] nr. 49, forbedring af skattepolitikken for grænseoverskridende detailimport
+    url: https://czt.hlj.gov.cn/czt/c110905/202001/c00_30603063.shtml
+  - title: Bekendtgørelse nr. 486 fra 2018 fra seks ministerier, forbedring af tilsynet med grænseoverskridende detailimport
+    url: https://cws.mofcom.gov.cn/gztz/art/2018/art_b7becbacb58a4d0d8bf17b91a168f044.html
+  - title: Bekendtgørelse nr. 7 fra 2022 fra otte ministerier, justering af positivlisten for detailimport
+    url: https://www.gov.cn/zhengce/zhengceku/2022-02/21/content_5674854.htm
+  - title: Bekendtgørelse nr. 194 fra 2018 fra toldvæsenet, tilsyn med detailimport og eksport i e handel
+    url: https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html
+  - title: Bekendtgørelse nr. 45 fra 2020 fra toldvæsenet, returneringer i detailimport via e handel
+    url: https://www.customs.gov.cn/customs/2020-03/30/article_2025121220594047423.html
+---
+
+Kosttilskud uden blue hat registrering kan sælges lovligt til forbrugere på det kinesiske fastland via told-e-handelskanalen med toldtilsynskoden 1210, i henhold til bekendtgørelse nr. 486 fra 2018 fra seks myndigheder inklusive finansministeriet og toldvæsenet. Tre forudsætninger: produktets toldtarifkode er på den positive liste for grænseoverskridende e handels detailimport i Kina, køberen er en privatperson, der køber til eget brug, og ordreværdien ligger inden for kvotegrænserne. Når alle tre betingelser er opfyldt samtidig, er kanalen lovlig fra første dag; hvis blot én ikke er opfyldt, stop i diagnostikfasen og tving dig ikke igennem.
+
+Denne artikel fortæller hele kanalen fra start til slut: hvad løsningen dækker, hvilke konklusioner der gælder, hvordan skat og kvoter beregnes, hvad hver af de fjorten arbejdspakker leverer, hvordan indgangen i tre trin forløber, og hvordan man forlader dem. Hvert nøgletal har sit kildedokumentnummer med.
+
+## Hvad kode 1210 er
+
+Toldvæsenet koder hver toldbehandlingsrute med en firesifret tilsynskode; kode 1210 har det officielle navn detailimport via told-e-handel. Ordet import i det officielle navn beskriver strækningen, hvor varen bevæger sig ind i et toldlager inden for Kinas toldområde; set fra eksportørens side ændres retningen ikke: du sender varen fra dit lands marked, køberen bestiller inde i Kina. Bekendtgørelse 486 fra 2018 er kanalens grundlæggende dokument: varer solgt via kanalen overvåges som importerede genstande til personligt brug, så kravene om første importtilladelse, registrering og anmeldelse, som den ordinære handelsrute stiller, gælder ikke her.
+
+Operationelt opbevares usolgte varer i et toldlager i en særlig zone under toldtilsyn, og ved lagring betales ingen importtold. Når en forbruger bestiller, sender platformen tre dokumenter til toldvæsenet: ordre, betalingskvittering og logistikdokument. Toldvæsenet matcher de tre, slipper pakke for pakke igennem, og platformen trækker skatten på forbrugersiden allerede i betalingstrinnet.
+
+## Løsningens ni blokke
+
+Se først løsningens fulde omfang. Den er organiseret i ni blokke, hver blok løser ét lag af problemer:
+
+- 01 Konklusioner og anbefalinger: alle konklusioner forrest, tre opstartbeslutninger samlet ét sted.
+- 02 Indgang: klassificering, skat, kvoter, rute, hvert punkt med dokumentbaseret bevis.
+- 03 Bevare sikkerheden: modelens ombygning, påstandenes grænser, dataoverholdelse, juridisk grund plus systemets spor.
+- 04 Rene midler: midlernes adskillelse, afregning i tre afsnit og overførsel til udlandet, pengenes rute skrevet klart.
+- 05 Få det til at køre: rygraden af syv strømme og S0–S5 pilotmodulet, åbnet felt for felt.
+- 06 Forberede vækst: drift i skaleringsfasen S6–S13, kundeanskaffelse, eftersalg, medlemskab uddybet punkt for punkt.
+- 07 Klare tal: tidsplanintervaller, omkostningsstruktur, beregningsværktøjer, parametre leveret med løsningen.
+- 08 Fuld beskyttelse: ansvar tildelt punkt for punkt, aktiverne helt dine, indøvet exit.
+- 09 Start: køreplan i seks faser, syv forberedelser, rytmen 30/60/90 dage.
+
+![Løsningens ni blokke 01 til 05](/images/blog/bonded-ecommerce-export-china-guide/fig-01.webp)
+
+![Løsningens ni blokke 06 til 09](/images/blog/bonded-ecommerce-export-china-guide/fig-02.webp)
+
+De ni blokke samles i de fire spørgsmål, der betyder mest for eksportøren:
+
+- Konklusioner til beslutning: konklusion i én sætning, tidsplan for omkostninger og afkast, beslutningens tidslinje.
+- Grundlag for overholdelse: tilsynskonstanter og dokumentnumre, tre fritagelser tre grænser, ansvarets fordeling.
+- Omkostning og afkast: enhedsøkonomi, tre faktureringsmåder, driftsmodellen for det første år.
+- Vækstens udførelse: promoveringsmodel, syv strømme og én ordres fulde vej, arkitekturen for kundeanskaffelse.
+
+![Ni blokke og fire nøglespørgsmål](/images/blog/bonded-ecommerce-export-china-guide/fig-05.webp)
+
+Ved opstartsmødet skal der kun besluttes tre ting i fællesskab, hver med frist og pris for forsinkelse:
+
+- Skal den betalte S0 diagnose startes nu. Beslut straks, ellers kan kvalifikationslagene ikke opbygges, og ingen præcis tidsplan kommer frem.
+- Vejen for den indenlandske enhed. Helt udenlandsk ejet, joint venture, eller en overgangsordning, hvor platformsiden er den indenlandske enhed. Beslut før S1, det påvirker butiksåbningen og midlerkonti direkte.
+- Positionering af fødevarekategorien. Almindelig fødevare (uden blue hat, uden sundheds påstande) eller blue hat kosttilskud (funktionspåstande mulige, almindelig omkostning stiger). Beslut før S3, det afgør kategorien og tidspunktet for markedintræden.
+
+Derudover skal tre punkter bekræftes: foretrukken havn, faktureringsmetoden i den kommercielle fase, og om den anden forsyningskilde kommer med i fase to.
+
+## Tre vurderinger, fem konklusioner
+
+Ledelsesresuméet giver tre vurderinger og fem konklusioner, hver med kilde. Tre vurderinger:
+
+- Vurdering af indgang: vejen er farbar. Grundlag i tre dokumenter: cirkulære Cai Guan Shui [2016] nr. 18 (det samlede skattesystem), bekendtgørelse 486 fra 2018 (tilsynsform og pilotbyer), bekendtgørelse nr. 7 fra 2022 fra otte myndigheder (optimering af positivlisten, 1476 ottecifrede toldkoder).
+- Vurdering af produktet: kosttilskud er på listen. Gruppen mælkeproteinpulver klassificeres under toldtarifkoden 0404.9000, toldvæsenets klassificeringsafgørelse W2020-29 understøtter denne vej.
+- Vurdering af tilsynet: dekret 280 (i kraft fra 1. juni 2026) regulerer import via ordinær handel og ændrer ikke reglerne for denne grænseoverskridende e handelskanal. Ifølge rammerne i forordningen om direkte salg udgør modellen ikke direkte salg, og licens til direkte salg kræves ikke (systemet under dekret nr. 443 fra statsrådet).
+
+Fem konklusioner:
+
+- Overholdelse: tre fritagelser står, tilsynet som importerede genstande til personligt brug fritager for formelle handelsindgangstilladelser, det samlede skattesystem fritager for told, den grænseoverskridende model fritager for blue hat registrering. Tre punkter uden fritagelse står også: produktkvalitetsansvaret fritages ikke, reklamegrænsen fritages ikke, forbrugerbeskyttelsen fritages ikke.
+- Skat: den samlede skattesats 9,1 procent, tilbageholdt og indbetalt af platformen, forbrugeren ser hver tilbageholdelse i den officielle kanal på telefonen.
+- Kvoter: 5000 yuan per ordre (omkring 700 US dollars), 26000 yuan per person om året (omkring 3600 US dollars), toldbehandlingssystemet trækker ordre for ordre.
+- Midler: tre strækningers omløb plus separation på to niveauer, udlandsoverførsel per enkelt ordre findes ikke.
+- Rytme: diagnose 2–4 uger, pilot med én SKU 6–10 uger; intervallet gælder på betingelse af, at diagnosfasen har låst variablerne.
+
+## To udregninger: skat og kvote
+
+Måden den samlede sats på 9,1 procent bygges: told midlertidigt sat til nul, moms opkrævet til 70 procent af det lovmæssige beløb, momsen på mælkeproteinpulver er 13 procent, altså 13 procent gange 70 procent lig med 9,1 procent, grundlag: cirkulære Cai Guan Shui [2016] nr. 18. Satserne gælder kun varer på listen og ordrer inden for kvoten. En udelelig enhed over grænsen beskattes med den fulde ordinære handelssats, 9,1 procent gælder ikke længere.
+
+Kvotens to tal: 5000 yuan per ordre (omkring 700 US dollars) og 26000 yuan per person om året (omkring 3600 US dollars), grundlag: cirkulære Cai Guan Shui [2018] nr. 49. Kvotekontoen trækkes ordre for ordre ved toldbehandlingen (bekendtgørelse 194 fra 2018), og forbrugeren selv ser hver fradrag i den officielle kanal på telefonen.
+
+Udregn et konkret eksempel. En dåse mælkeproteinpulver prissat til 50 US dollars, omregnet til 7,2 yuan per US dollars bliver det omkring 360 yuan, inden for kvoten; den skyldige samlede skat 360 gange 9,1 procent lig med 32,8 yuan, omkring 4,5 US dollars, tilbageholdt af platformen; samtidig falder køberens årskvote med 360 yuan. Skatten er efter loven forbrugerens pligt, men den sidder i din detailpris, medregn dette lag fra den første prismærkningsdag.
+
+## Oversigt over servicekredsen
+
+Hele løsningens struktur er et billede af et hus. Taget er ansvaret: én enhed svarer for resultatet, fra varens indgang i zonen til forbrugerens modtagelsessignatur. Bjælken er politikfundamentet: toldkanalen 1210, hvilende på tre dokumenter: cirkulære Cai Guan Shui [2016] nr. 18, bekendtgørelse 486 fra 2018 og bekendtgørelse nr. 7 fra 2022. De fire søjler er fire servicelinjer: overholdelse ved indgang (diagnose S0, enhed S1, registreringer S3), platform og opfyldelse (butik S2, toldlager S4, toldbehandling S5), midler og afstemning (afstemning S6, provisioner, overførsler ud), drift og vækst (promovering S7, eftersalg S8, medlemskab S13); de fjorten arbejdspakker S0–S13, der løber gennem servicen, bor i disse fire søjler. Fundamentet er syv strømme på én bog: handel, gods, logistik, midler, information, overholdelse, fakturering; syv strømme løber på det samme sæt bøger, hver ordre efterlader spor på hvert lag, brister én strøm, standser alle de øvrige.
+
+![Servicekreds: én løsning, én ansvarlig enhed](/images/blog/bonded-ecommerce-export-china-guide/fig-03.webp)
+
+Hvordan billedet læses: taget svarer hvem der svarer, fire søjler svarer hvem der udfører hvert lag af arbejdet, fundamentet svarer hvorfor det kan troværdiggøres. Kontoen med spor på ordreniveau gør hvert led efterprøvbart bagud, og det er bevisgrundlaget for alle overholdelsesvurderinger.
+
+## Fjorten arbejdspakker, leverancer pakke for pakke
+
+S0–S13 er 14 arbejdspakker, der løber gennem hele servicen, hver med klar leverance:
+
+- S0 Diagnose og indgang: fire rapporter leveret på én gang, kvalifikationsvurderingsrapport (kan man komme ind eller ej), overholdelsesgrundrapport (er der alvorlige mangler), udførelsesliste (hvordan man kommer ind), havnpraksis tjekliste (havne standard).
+- S1 Etablering af enhed: tilladelse plus toldregistrering.
+- S2 Platformbutik: lancering, konti, betalinger.
+- S3 Produktregistrering: lagdeling, klassificering, dokumenter.
+- S4 Første forsendelse til toldlager: toldbog plus lagersynlighed.
+- S5 Toldbehandling med tre dokumenter: match af tre dokumenter plus første frigørelse.
+- S6 Midlerafregning: afregningsark plus støttedokumenter.
+- S7 Promovering: arkitektur for kundeanskaffelse og vækst.
+- S8 Eftersalg: service og returneringshåndtering.
+- S9 Datarisikokontrol: dataoverholdelse og grænseoverskridende overførsel.
+- S10 Overholdelsesrevision: selvkontrol, registre, svar på henvendelser.
+- S11 Indsyn i forsyningskæden: ordrer, lager, toldbehandling, logistik synlige hele vejen.
+- S12 Indholdsoverholdelse: gennemgang af produktopsider og liveudsendelser.
+- S13 Medlemskab: medlemsniveauer og abonnementer.
+
+Fase én reserverer samtidig to tilslutningspunkter for udvidelse: kanalen for direkte afsendelse 9610 og kobling af den anden forsyningskilde; når fase to starter, behøver fase ét arkitektur ikke genopbygges.
+
+![Fjorten arbejdspakker og indgang i tre trin](/images/blog/bonded-ecommerce-export-china-guide/fig-04.webp)
+
+## Tre trin: hvordan man går, hvordan man forlader
+
+De tre indgangstrin er den kommercielle rytme, ikke levering i rater. Forlader du ved hvilket som helst trin, er de allerede leverede resultater dine.
+
+Trin ét, diagnose (dækker S0), 2–4 uger. Fire rapporter leveret på én gang, så beslutter du, om du fortsætter. S0 opkræves til fast pris, test og rejseomkostninger efter faktiske udgifter, omkostningen svarer til leverancerne, beslutning når rapporterne er i hånden. Intervallet er betinget, betingelsen er, at S0 har låst variablerne.
+
+Trin to, pilot med én SKU (dækker S1–S5), 6–10 uger. Fem led ned i rækkefølge: etablering af enhed, platformbutik, produktregistrering, første forsendelse til toldlager, toldbehandling med tre dokumenter. Afregning og provision aktiveres først, når kæden har gennemgået prøven. Udgang: pilot fejler eller omkostninger afviger kraftigt, tilbagetrækning, de leverede resultater er dine. Anbefalingen er at starte med én SKU, føre hele kæden stabilt først, derefter tale om skalering.
+
+Trin tre, skalering (dækker S6–S13), hele sortimentet. Otte moduler aktiveres én ad gangen: midlerafregning, promovering, eftersalg, datarisiko, overholdelsesrevision, forsyningskædeindsyn, indholdsoverholdelse, medlemskab; aktiveringsrækkefølgen følger arbejdspakkerne rækkefølge, leverance felt for felt. Før skalering er der fire kontroller:
+
+- Den første ordre passerer hele kæden.
+- Afvigelsen mellem omkostningsmodellen og de faktiske målinger ligger inden for tolerancebåndet.
+- Signalet om genkøb bekræftes.
+- Overholdelsesregistrene er komplette.
+
+Går de fire kontroller ikke igennem, forbliv på pilotniveau. Udgang: stop på ethvert niveau, komplet overdragelse efter listens seks punkter.
+
+Hvorfor det er værd at bevæge sig nu: vinduets værdi ligger i tre aktiver af førstekommenhed, toldbogen og havnregistreringspladserne, platformens tillid til kategorien, og forbrugernes bevidsthed om ingredienser. Alle tre kræver tid, de der kommer senere får ikke de tidliges position.
+
+## Den fulde vej for en forsendelse på 2000 dåser
+
+Sæt processen ned på en konkret forsendelse. 2000 dåser mælkeproteinpulver, detailpris 50 US dollars per dåse.
+
+Første forsendelse ind i zonen: varen går ind i den særlige zone under toldtilsyn i toldstatus, toldbogen åbnes, på dette tidspunkt betales ingen importtold. Enhed og registrering: den indenlandske enhed har allerede tilladelse og toldregistrering (S1), SKU har gennemgået lagdeling og klassificeringsverifikation (S3), klassificeret under toldtarifkoden 0404.9000, med henvisning til afgørelsen W2020-29. Ordre og toldbehandling: forbrugeren bestiller, platformen sender tre dokumenter (ordre, betaling, logistik), toldvæsenet matcher de tre (S5), kvoten trækkes ordre for ordre, den samlede skat tilbageholdes ved 9,1 procent. Én ordre på 50 US dollars får skat på omkring 4,5 US dollars (32,8 yuan), årskvoten falder med 360 yuan. Levering og eftersalg: fra toldlageret til forbrugerens modtagelsessignatur. Returneringer håndteres inden for vinduet i bekendtgørelse nr. 45 fra 2020: forbrugeren kan anmode om returnering inden for 30 dage efter kvitteringsbekræftelsen, varen skal være tilbage ved toldlageret inden for 45 dage, efter vellykket returnering vendes kvoten tilbage. Hele kæden efterlader spor lag for lag på syv strømme én bog: hvilken ordre, hvilken forsendelse, hvilke penge, hvilken strøm, alt kan efterprøves bagud.
+
+## Hvad kanalen ikke dækker
+
+Fire grænser, gennemgå hver enkelt inden bestillinger og produktionsplanlægning:
+
+- Ordrer over grænsen: ordre over 5000 yuan per transaktion og udelelig, eller person over 26000 yuan om året, toldbehandlingssystemet blokerer direkte.
+- B2B store forsendelser: tolddetailhandel kun for individuelle forbrugere, distribution, grossist, virksomhedsindkøb hører ikke hertil.
+- Funktionspåstande: kosttilskud må ikke påstå sygdomsforebyggende eller helbredende funktion, reklamelovens grænse gælder grænseoverskridende varer ligeledes.
+- Havneforskelle: de operationelle standarder i pilothavnene adskiller sig; gennem hvilken havn varen går ind, efter hvilken standard den kontrolleres, skal afklares havn for havn i diagnosfasen S0. Derfor findes havnpraksis tjeklisten blandt de fire rapporter.
+
+Denne artikel beskriver kanalens regler og gennemførelsesmetoder og er ikke juridisk rådgivning; før beslutning i den enkelte sag, tag en formel diagnose for dit produkt og din havnstandard.
+
+[Kontakt os](/da/packages/) for at bestille en formel diagnose af dit produkt og din målthavn, og de fire S0 rapporter svarer punkt for punkt, om vejen er farbar, efter hvilken standard og hvilket trin der tages først.

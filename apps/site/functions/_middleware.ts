@@ -280,6 +280,26 @@ async function proxySubSiteAsset(url: URL, request: Request, env?: Record<string
     return new Response(resp.body, { status: resp.status, statusText: resp.statusText, headers: h });
   }
 
+  // Match /images/blog/* → blog upstream
+  // Blog body images live in the blog project only (single copy). The site
+  // project no longer keeps a duplicate tree, so these paths are proxied here.
+  // Method + headers are forwarded so Range / conditional (If-None-Match)
+  // requests keep working; upstream cache-control / etag are passed through
+  // untouched (no extra edge caching, so replacing an image takes effect at once).
+  const blogImgMatch = url.pathname.match(/^\/images\/blog\/(.+)/);
+  if (blogImgMatch) {
+    const upstream = resolveUpstream(url.hostname, 'blog', env);
+    const imgUrl = `${upstream}/images/blog/${blogImgMatch[1]}`;
+    const headers = new Headers(request.headers);
+    headers.delete('host');
+    const resp = await fetch(new Request(imgUrl, { method: request.method, headers }));
+    return new Response(resp.body, {
+      status: resp.status,
+      statusText: resp.statusText,
+      headers: sanitizeHeaders(resp.headers),
+    });
+  }
+
   return null;
 }
 

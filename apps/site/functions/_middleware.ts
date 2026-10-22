@@ -356,6 +356,19 @@ export async function onRequest(context: { request: Request; next: () => Promise
     return new Response(null, { status: 204 });
   }
 
+  // ── Blog sub-site RSC payload files (*.txt) — same short-circuit ──
+  // Blog page-level flight payloads are named <route>/index.txt (the site app
+  // uses __next.*.txt above) and are stripped by clean-rsc.mjs as well. A
+  // next/link click would request one, get 404, and next/router would land the
+  // browser on .../index.txt/. Answer 204 so the client bails out and falls
+  // back to a normal navigation. Real text assets are excluded.
+  if (
+    /^\/[a-z]{2}\/blog\/(?:.*\/)?[^/]*\.txt$/.test(url.pathname) &&
+    !/(?:^|\/)(?:robots|llms|sitemap[a-z-]*)\.txt$/.test(url.pathname)
+  ) {
+    return new Response(null, { status: 204 });
+  }
+
   // ── Canonical host redirect ──
   // Must run before any sub-site proxy logic: otherwise www./pages.dev requests
   // to /{locale}/blog/, /{locale}/c/ or /admin/ get proxied (200) instead of

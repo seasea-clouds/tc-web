@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { Search, X, FileText, BookOpen, HelpCircle } from 'lucide-react';
-import Link from 'next/link';
 import { useT, useTradeLocale } from './TranslationProvider';
 import type { SearchResultItem } from './search';
 
@@ -171,7 +170,10 @@ export default function SearchModal({ open, onClose, searchFn }: SearchModalProp
                       globalIdx += i;
 
                       return (
-                        <Link
+                        // 搜索结果跨 app（site / blog / portal 混合），
+                        // next/link 会去取 RSC payload（*.txt，静态导出已剥离）
+                        // → 404 后 URL 落到 index.txt/。改普通 <a> 整页导航。
+                        <a
                           key={`${item.type}-${item.href}`}
                           href={`/${locale}${item.href}`}
                           onClick={onClose}
@@ -194,7 +196,7 @@ export default function SearchModal({ open, onClose, searchFn }: SearchModalProp
                               </div>
                             )}
                           </div>
-                        </Link>
+                        </a>
                       );
                     })}
                   </div>

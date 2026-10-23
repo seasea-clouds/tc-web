@@ -144,7 +144,7 @@ curl -s -o /dev/null -w "%{http_code}\n" -x "http://<CN代理>" https://sinotrad
 | `<repo>/apps/site/.env`、`apps/blog/.env` | `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`（site 另含 `UPSTREAM_*`） | 本地 dev 用 |
 
 - 生产/预览变量在 CF Pages Dashboard 独立配置，`secret_text` 类型**无法通过 API 导出**
-- 旧环境的集中密钥库 `~/.openclaw/.env` 已下线；值已于 2026-09-13 迁移到上表，备份文件已于 2026-10-23 清理（仅剩两把唯一 newapi 密钥移至 `worker/credentials/newapi/legacy-20260913.env`，600）
+- 旧环境的集中密钥库 `~/.openclaw/.env` 已下线；值已于 2026-09-13 迁移到上表，备份文件已于 2026-10-23 清理（22 项逐条核对：重复/变更/废弃，剩余两把 opcode/mimo 确认无用一并删除）
 - **`UPSTREAM_PORTAL` = `https://tc-web-portal.pages.dev`、`UPSTREAM_BLOG` = `https://tc-web-blog.pages.dev`**（旧环境里是已废弃的 `trade-web-*.pages.dev`，已纠正）
 
 ### Portal D1 配置

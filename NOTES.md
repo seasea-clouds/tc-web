@@ -555,8 +555,12 @@ RSC flight payload，blog 子站的页面级 payload 文件名是 `<route>/index
 - 提交时若无 token，先补渲染一次再提示。
 
 **症状二：登录成功但被踢回登录页（"登录失败"）。**
-`/api/admin/auth/me` 是全站 504 排第一的路径（24h 39 次）。登录 POST 成功 → 前端立刻打 `/me` →
-一次超时就判未登录。这是**长期存在**的（近 7 天全站 5xx 占比 8–26%，非某次部署引入）。修法：
+~~`/api/admin/auth/me` 是全站 504 排第一的路径，一次超时就判未登录~~ ← **这个推断是错的，已由日志推翻**：
+按 UA 交叉统计（24h），`/api/admin/auth/me` 的 504 **100% 来自扫描器**（UA 含 `early hints`，
+如 `nginx-ssl early hints` / `bastion early hints`；这类探针只要 103 Early Hints，
+拿到响应头就断开，边缘因此记 504）；**真实浏览器的 `/me` 请求 100% 是 200**。
+所以 504 与登录无关，登录的真因只有症状一（验证码渲染）。
+超时重试仍保留 —— 它对"上游偶发慢"是有效防御，只是别把它当登录问题的解药。修法：
 - site 边缘 `proxyFetch` 改为 `fetchUpstream`：单次 **8s** 超时；
 - **GET/HEAD/OPTIONS** 失败或 5xx → **重试一次**（6s）；POST 等非幂等**不重试**（上游可能已执行副作用）；
 - 全部失败返回 **504 + Retry-After**，不再把异常抛成 CF 1101；

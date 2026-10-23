@@ -46,7 +46,7 @@ async function proxyToPortal(url: URL, request: Request, env?: Record<string, st
   // For HTML responses, inject search widget and fix chunk paths
   const accept = request.headers.get('accept') || '';
   if (accept.includes('text/html')) {
-    const response = await fetch(upstreamUrl);
+    const response = await fetchUpstream(upstreamUrl, new Request(upstreamUrl, { method: 'GET', headers: request.headers }));
     const body = await response.text();
     const patched = injectSearchWidget(ensureNextF(rewriteNextStatic(body, 'c')));
     return new Response(patched, {
@@ -153,23 +153,79 @@ function resolveUpstream(hostname: string, subProject: string, env?: Record<stri
 
 // ─── Proxy request with header sanitation ────────────────────────
 
+// ── 上游超时与重试 ───────────────────────────────────────────────────
+// 背景：边缘偶发 504（`/api/admin/auth/me`、`/en/` 等），登录后前端立刻打 /me，
+// 一次超时就被判成"未登录"，表现为"登录失败 / 跳回登录页"。
+// 这里给上游 fetch 加超时，并对**幂等请求**重试一次。
+const UPSTREAM_TIMEOUT_MS = 8000;
+const UPSTREAM_RETRY_TIMEOUT_MS = 6000;
+
+function isIdempotentMethod(method: string): boolean {
+  const m = method.toUpperCase();
+  return m === 'GET' || m === 'HEAD' || m === 'OPTIONS';
+}
+
+function sleepMs(ms: number): Promise<void> {
+  return new Promise<void>((resolve) => setTimeout(resolve, ms));
+}
+
+async function fetchWithTimeout(upstreamUrl: string, init: RequestInit, timeoutMs: number): Promise<Response> {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    return await fetch(upstreamUrl, { ...init, signal: controller.signal });
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+/**
+ * 上游 fetch：单次 8s 超时；GET/HEAD/OPTIONS 失败或 5xx 再重试一次（6s）。
+ * POST 等**不重试** —— 上游可能已经执行了副作用（发信、写库、支付），重放是错的。
+ * 全部失败时返回 504（带 Retry-After），而不是把异常抛给 CF 变成 1101。
+ */
+async function fetchUpstream(upstreamUrl: string, request: Request, bodyText?: string): Promise<Response> {
+  const method = request.method.toUpperCase();
+  const headers = new Headers(request.headers);
+  headers.delete('host'); // let fetch() derive it from upstreamUrl
+  const attempts = isIdempotentMethod(method) ? 2 : 1;
+  let lastError = '';
+
+  for (let i = 0; i < attempts; i++) {
+    const timeoutMs = i === 0 ? UPSTREAM_TIMEOUT_MS : UPSTREAM_RETRY_TIMEOUT_MS;
+    try {
+      const res = await fetchWithTimeout(upstreamUrl, {
+        method,
+        headers,
+        body: bodyText,
+        redirect: 'manual',
+      }, timeoutMs);
+
+      if (i === 0 && attempts > 1 && res.status >= 500) {
+        try { await res.body?.cancel(); } catch { /* ignore */ }
+        await sleepMs(120);
+        continue;
+      }
+      return res;
+    } catch (err) {
+      lastError = String(err).slice(0, 160);
+      if (i + 1 < attempts) await sleepMs(120);
+    }
+  }
+
+  console.error(JSON.stringify({ ev: 'upstream_fail', method, url: upstreamUrl.slice(0, 140), err: lastError }));
+  return new Response('Upstream timeout', {
+    status: 504,
+    headers: { 'content-type': 'text/plain; charset=utf-8', 'cache-control': 'no-store', 'retry-after': '5' },
+  });
+}
+
 async function proxyFetch(upstreamUrl: string, request: Request): Promise<Response> {
   const bodyText = (request.method !== 'GET' && request.method !== 'HEAD')
     ? await request.clone().text()
     : undefined;
 
-  // Strip Host from incoming headers and let fetch() set it from upstreamUrl
-  const headers = new Headers(request.headers);
-  headers.delete('host');
-
-  const upstreamReq = new Request(upstreamUrl, {
-    method: request.method,
-    headers,
-    body: bodyText,
-    redirect: 'manual',
-  });
-
-  return fetch(upstreamReq);
+  return fetchUpstream(upstreamUrl, request, bodyText);
 }
 
 function sanitizeHeaders(headers: Headers): Headers {
@@ -230,7 +286,7 @@ async function serveEnglishBarePath(request: Request, url: URL, env?: Record<str
   // 2) Same-origin fetch — the rewritten path starts with /en/, so it will not
   // re-enter the bare-path branch (safe, no redirect loop).
   try {
-    const resp = await fetch(target.toString(), request);
+    const resp = await fetchUpstream(target.toString(), request);
     if (resp && resp.status === 200) {
       return resp;
     }
@@ -515,7 +571,7 @@ export async function onRequest(context: { request: Request; next: () => Promise
     const blogUrl = upstream + '/' + locale + '/blog' + rest;
 
     try {
-      const resp = await fetch(blogUrl);
+      const resp = await fetchUpstream(blogUrl, new Request(blogUrl, { method: 'GET', headers: request.headers }));
       const contentType = resp.headers.get('content-type') || '';
 
       if (contentType.includes('text/html')) {

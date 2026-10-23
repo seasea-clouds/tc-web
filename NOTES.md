@@ -539,3 +539,29 @@ RSC flight payload，blog 子站的页面级 payload 文件名是 `<route>/index
 
 **6. 测试会真写库**：selftest 跑完要 `DELETE FROM rd_envelope / rd_nonce / rd_rate` 再交给 CRM；
 `rev` 走 AUTOINCREMENT 不回退（无影响，CRM 只要求单调递增）。
+
+## 踩坑 22：admin 登录"失败"是两件独立的事叠在一起（2026-10-23）
+
+**症状一：打开 `/admin/login/` 有时不显示人机验证，点一次登录报失败后才出现。**
+根因是 `window.turnstile.render()` **静默失败**：`api.js` 刚加载完（或页面里 `window.turnstile`
+已存在但内部未 ready）时调用 render，拿不到 widget，也不抛错。原代码只在 `script.onload`
+里调一次，失败后再无补救；用户点一次登录 → 报「请完成人机验证」→ 触发 React 重渲染/错误态，
+第二次才偶然渲染成功。修法：
+- 走 `turnstile.ready(cb)` 再 render；
+- 渲染失败按 `400ms + 300ms×n` 退避重试，最多 8 次；
+- 渲染前检查容器是否已有子节点（避免重复渲染）；
+- 记 `widgetId`，`reset(widgetId)` —— 不要拿容器去 reset；
+- `script.onerror` 明确提示，不要静默；
+- 提交时若无 token，先补渲染一次再提示。
+
+**症状二：登录成功但被踢回登录页（"登录失败"）。**
+`/api/admin/auth/me` 是全站 504 排第一的路径（24h 39 次）。登录 POST 成功 → 前端立刻打 `/me` →
+一次超时就判未登录。这是**长期存在**的（近 7 天全站 5xx 占比 8–26%，非某次部署引入）。修法：
+- site 边缘 `proxyFetch` 改为 `fetchUpstream`：单次 **8s** 超时；
+- **GET/HEAD/OPTIONS** 失败或 5xx → **重试一次**（6s）；POST 等非幂等**不重试**（上游可能已执行副作用）；
+- 全部失败返回 **504 + Retry-After**，不再把异常抛成 CF 1101；
+- 接入 4 处：`proxyFetch`、portal HTML 分支、locale 回退、blog HTML 分支。
+  资源类（`_next/static`、图片）保持原样。
+
+**教训**：504 是边缘超时，CF 默认给约 100s；自己的 fetch 不设超时，就会让慢上游拖到 100s
+才 504，重试更无从谈起。**所有跨项目 fetch 都该显式超时**。

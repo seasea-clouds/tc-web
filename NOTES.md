@@ -603,18 +603,19 @@ frontmatter 无字段、`posts.ts` 不读、列表页纯文字卡片、详情页
 - `apps/blog/src/lib/posts.ts`：新增 `getCoverPath(slug)`，探测
   `public/images/blog/<slug>/cover.webp` 是否存在，存在返回 `/images/blog/<slug>/cover.webp`，
   否则 undefined；`PostMeta.cover?: string` 由 `parsePost` 填充。
-- 详情页：正文前加封面块（`<figure>`，`width/height=1200/630`、`rounded-xl`、
-  `loading="eager"` + `fetchPriority="high"`，`alt={title}`），无封面则整块不渲染。
+- **详情页 = 封面做 hero 背景**（用户要求，第一版放正文前卡片的方案已废弃）：
+  hero `<section>` 内绝对定位 `<img>`（`object-cover scale-110` + **`blur-[6px]`**，
+  `alt="" aria-hidden`）+ **`bg-primary-navy/80` 蒙版** + 原有
+  `from-primary-navy/35 via-primary-navy/60 to-primary-navy` 渐变。
+  **为什么必须模糊**：封面多是信息图/带大字标题，不模糊就出现「两层文字打架」
+  （实测 3px 仍能读出图里的标题，6px 才变成纯纹理）。无封面 → 保持纯深蓝 hero。
 - 详情页 `generateMetadata`：`openGraph`/`twitter` 传封面，**fallback 回 `og-image.png`**；
   `BlogPosting` JSON-LD 补 `image: [SITE_URL+cover]`。
-- 列表页卡片：`aspect-[1200/630]` 缩略图 + hover 轻微放大，**无封面不留白**（卡片顶到文字）。
-- `packages/ui/src/seo.ts`：`sharedOpenGraph` / `sharedTwitter` 新增可选 `image`（绝对 URL 或站内相对路径），
+- 列表页卡片：`aspect-[1200/630]` 缩略图 + hover 轻微放大，**无封面不留白**。
+- `packages/ui/src/seo.ts`：`sharedOpenGraph` / `sharedTwitter` 新增可选 `image`，
   不传则维持原品牌图 —— 全站其它页面行为不变。
 
-**坑**：JSX 属性位置不能写 `// @ts-expect-error` 注释，改用 React 19 的 `fetchPriority`
-（React 会输出 `fetchPriority` 到 HTML，HTML 属性名大小写不敏感，浏览器照认）。
-
-**验证**：本地 `next build` 818 页通过；线上 48 语言 × 2 篇 = **96/96** 页面都带封面；
+**验证**：本地 `next build` 818 页通过 + chromium 本地截图核对（桌面/移动/RTL 三档）；线上 48 语言 × 2 篇 = **96/96** 页面 hero 都带封面/蒙版；
 无封面文章（ccc / green-coffee 等 8 语言抽查）不误显示；封面图 200 + `image/webp`
 （主域 `/images/blog/*` 走边缘代理）；og:image / JSON-LD 均指向对应封面；`__next_error__` 为 0。
-提交 `3af7fe0`。
+提交 `3af7fe0` → `705afbe`（hero 背景版）。

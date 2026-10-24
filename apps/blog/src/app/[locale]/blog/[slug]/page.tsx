@@ -2,7 +2,7 @@ import fs from 'fs';
 import { headers } from 'next/headers';
 import path from 'path';
 import matter from 'gray-matter';
-import { getPosts, parseHeadings, mdToHtml, type PostMeta } from '@/lib/posts';
+import { getPosts, parseHeadings, mdToHtml, getCoverPath, type PostMeta } from '@/lib/posts';
 
 /** Map blog slug → FAQ translation namespace (from old site messages) */
 const FAQ_NS: Record<string, string> = {
@@ -43,11 +43,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const title = data.title || slug.replace(/-/g, ' ');
   const description = data.excerpt || '';
   const url = `https://sinotradecompliance.com/${locale}/blog/${slug}/`;
+  const cover = getCoverPath(slug);
   return {
     title,
     description,
-    openGraph: sharedOpenGraph({ title, description, locale, url }),
-    twitter: sharedTwitter({ title, description }),
+    openGraph: sharedOpenGraph({ title, description, locale, url, type: 'article', image: cover, imageAlt: title }),
+    twitter: sharedTwitter({ title, description, image: cover }),
     alternates: {
       canonical: url,
       languages: buildLanguages(locale, [...LOCALES], `/blog/${slug}/`),
@@ -184,6 +185,7 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
   const date = data.date || '';
   const category = data.category || '';
   const excerpt = data.excerpt || '';
+  const cover = getCoverPath(slug);
   const references: { title: string; url: string }[] = data.references || [];
 
   const wordCount = content.split(/\s+/).length;
@@ -256,6 +258,7 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
     description: excerpt,
     datePublished: date,
     dateModified: date,
+    ...(cover ? { image: [`${SITE_URL}${cover}`] } : {}),
     author: { '@type': 'Person', name: 'David Zhang' },
     publisher: {
       '@type': 'Organization',
@@ -411,6 +414,20 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
               </aside>
             )}
             <article className="flex-1 min-w-0">
+              {cover && (
+                <figure className="mb-10 -mt-2">
+                  <img
+                    src={cover}
+                    alt={title}
+                    width={1200}
+                    height={630}
+                    className="w-full h-auto rounded-xl shadow-md ring-1 ring-black/5"
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
+                  />
+                </figure>
+              )}
               <div id="article-content"
                 className="prose prose-lg max-w-none
                   prose-headings:text-[#1B365D] prose-headings:font-bold

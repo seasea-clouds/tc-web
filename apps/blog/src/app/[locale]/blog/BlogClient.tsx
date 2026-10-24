@@ -66,6 +66,19 @@ export default function BlogClient({ posts, categories, categoryLabels, locale, 
               href={`/${locale}/blog/${post.slug}/`}
               className="group flex flex-col bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden no-underline text-inherit"
             >
+              {post.cover && (
+                <div className="aspect-[1200/630] overflow-hidden bg-[#F4F6F9]">
+                  <img
+                    src={post.cover}
+                    alt={post.title}
+                    width={1200}
+                    height={630}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              )}
               <div className="flex flex-col flex-1 p-5">
                 <h3 className="text-lg font-bold text-[#333333] mb-2 line-clamp-2 group-hover:text-primary-navy transition-colors">
                   {post.title}

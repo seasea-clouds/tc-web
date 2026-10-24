@@ -9,7 +9,19 @@ export interface PostMeta {
   category: string;
   excerpt: string;
   readTime: number;
+  cover?: string;
   references?: { title: string; url: string }[];
+}
+
+/**
+ * Cover image by convention: public/images/blog/<slug>/cover.webp (1200x630).
+ * Returns the public path when the file exists, otherwise undefined so pages can
+ * degrade gracefully (no hero block, no card thumbnail, default og:image).
+ */
+export function getCoverPath(slug: string): string | undefined {
+  const file = path.join(process.cwd(), 'public', 'images', 'blog', slug, 'cover.webp');
+  if (!fs.existsSync(file)) return undefined;
+  return `/images/blog/${slug}/cover.webp`;
 }
 
 export interface Heading {
@@ -48,6 +60,7 @@ export function parsePost(slug: string, raw: string): PostMeta {
   const references = data.references || [];
   const wordCount = content.split(/\s+/).length;
   const readTime = Math.max(1, Math.ceil(wordCount / 200));
+  const cover = getCoverPath(slug);
 
   return {
     slug,
@@ -56,6 +69,7 @@ export function parsePost(slug: string, raw: string): PostMeta {
     category,
     excerpt,
     readTime,
+    cover,
     references,
   };
 }

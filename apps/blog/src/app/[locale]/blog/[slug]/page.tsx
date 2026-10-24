@@ -305,15 +305,15 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
                 aria-hidden="true"
                 width={1200}
                 height={630}
-                className="absolute inset-0 w-full h-full object-cover object-center scale-110 blur-[6px]"
+                className="absolute inset-0 w-full h-full object-cover object-center scale-110 blur-[3px] brightness-[0.55] contrast-[1.15]"
                 loading="eager"
                 fetchPriority="high"
                 decoding="async"
               />
             )}
-            {/* navy veil: keeps the white headline readable while the artwork stays visible */}
-            {cover && <div className="absolute inset-0 bg-primary-navy/80" />}
-            <div className="absolute inset-0 bg-gradient-to-b from-primary-navy/35 via-primary-navy/60 to-primary-navy" />
+            {/* navy tint keeps the white headline readable; image stays legible as artwork */}
+            {cover && <div className="absolute inset-0 bg-primary-navy/45" />}
+            <div className="absolute inset-0 bg-gradient-to-b from-primary-navy/25 via-primary-navy/55 to-primary-navy" />
           </div>
           <div className="relative z-10 w-full">
             <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 sm:pt-20">

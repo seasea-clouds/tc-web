@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-submitter_check.py — 博客投稿包自检与打包工具 (v1.14)
+submitter_check.py — 博客投稿包自检与打包工具 (v1.26)
 
 用法:
     python3 submitter_check.py <package.zip | 目录>
@@ -9,6 +9,10 @@ submitter_check.py — 博客投稿包自检与打包工具 (v1.14)
     python3 submitter_check.py <package.zip> --quiet
     python3 submitter_check.py <package.zip> --no-parity   # 跳过跨语言一致性（P/L06）
     python3 submitter_check.py <package.zip> --master=zh   # 指定跨语言比对基准（默认中文优先）
+    python3 submitter_check.py <package.zip> --glossary=<术语表.json>   # 块级术语契约（S08）
+    # v1.26 起 --glossary 可省略：自动加载工具包内建通用术语表
+    # glossary.json（跨文章积累，锚点在某文章母版找不到的条款自动跳过）；
+    # 显式传参则只用指定文件（覆盖内建表）。
     python3 submitter_check.py <draft.md> --body [--until=<标记>]   # 单篇草稿只跑 ST 写作纪律
     python3 submitter_check.py <目录> --pack[=输出.zip]    # 检查通过后由本脚本打包（0 error 才出 zip）
 
@@ -30,13 +34,129 @@ P33 = 金额不得用货币符号或 ISO 代码，只能写「元」「美元」
 数字词表（中文「十四」↔ 英文 fourteen，v1.7 起内嵌）；
 P31 增加 Mode 1210 术语（监管方式代码必须用本土说法，v1.13）；
 P08 放行「编号/俗称 + 连字符 + 本地格后缀」（S1-ից、ל-US、blue hat-ის），
-P10 加重叠副词白名单（tr ayrı ayrı 等词典化副词，站方改法用语，v1.14）。
+P10 加重叠副词白名单（tr ayrı ayrı 等词典化副词，站方改法用语，v1.14）；
+F09 = frontmatter 必须能被 YAML 解析：装了 PyYAML 用 safe_load 权威校验，
+没装则用内置增强校验（tab 缩进 / 文档分隔符 / 未闭合引号 / 裸 ': '），报 error（v1.15）；
+P05/P06/P07/P08/P09/P10/P12/P14/P15 = 单文件命中从「只报首个」改为全量枚举，
+按规则聚合为一条（列前 4 处 + 等共 N 处），消除「修一处冒一处」的逐轮死循环（v1.16）。
+S07 = 文本文件行尾/编码卫生：mdx 与 submission.json 必须 LF、无 BOM（v1.18）——
+CRLF 会让 _blocks() 的 "\\n\\n" 分块失效，整篇正文粘成一块，P21/P22/P23/P27
+随之全线误报（F1 实测：一次行尾污染产出 168 个假 error，根因与内容无关）；
+F09 增强（v1.18）：PyYAML 报错时附内置子集校验定位到的具体病因
+（裸 ': ' / 未闭合引号 / tab 缩进），原始 PyYAML 消息不带可操作信息。
+S08 = 块级术语契约（v1.19，`--glossary=<file>` 可选）：以 zh 锚点定位母版
+块序号，校验各语言同一块内「必须出现 / 不得出现」的短语。专治译反方向
+（监管↔准入、固体饮料↔即饮、不会丢↔会丢）——这类错语法结构全对，
+P 族与 ST 族一条都拦不住。
+P35 = 整块照抄（v1.20）：正文某一块与基准（或英文）同序号块逐字相同即报错。
+P22/P23 只比块类型与规模、P25–P27 只比标记、L05 只算全篇相似度，
+单段未译（其余段落正常）此前无规则覆盖。
+S09 = 摘要术语契约（v1.20，`--glossary=<file>` 的 "excerpt" 段）：对
+frontmatter.excerpt 做「必须出现 / 不得出现」校验。摘要是读者第一眼看到的
+内容，此前只受长度约束（F07）；母版按「四层框架」罗列而译文漏掉一层
+（F1 实证：15 语漏掉「政策依据」层、瑞典语漏掉后只剩三项）时，
+正文全对、长度合规，无规则可拦。
+S08 的 scope 扩展（v1.21）：条款可写 "scope": "all"，表示母版中**每一处**
+含锚点的块都校验（默认只校验首次出现的那一块）。默认口径适合「某一句译反了」；
+而「同一概念首现正确、后文换词」（申报→公告、合规流→追踪、验收→移交）
+必须逐块覆盖才抓得到（F1 实证：af/sw 各 7 处、th 7 处把「申报」写成「公告」，
+b17 是对的、b6/b22/b24/b41 全错）。
+S10 = 路径白名单（v1.22）：包内只允许 submission.json、images/**.webp、
+content/<lang>/<slug>.mdx 三种位置。抓到过：临时脚本把 900KB 的 _blocks.json
+落在 content/ 下——不是 mdx（S04 不管）、.json 又在 S05 白名单里，
+一路进包且官方检查 0 error，直到 zip 文件数从 51 变 52 才暴露。
+P36 = 标识型数字一致（v1.23）：母版块内的监管代码、税号、文号、限值必须原样
+出现在各语同一块。只收「含小数点」或「≥3 位」的数字，1–2 位纯数字不收
+（three documents 属正常数词化）。比对前把各文字系统的数字折叠成 ASCII，
+fa 的 ۱۲۱۰、ar 的 ١٢١٠ 属正字法。缺 → error，多 → warning。
+（v1.23 曾同时加过 P37「括注组数」并撤回：实测 P0 包 158 处命中，抽查为
+「普通食品（无蓝帽子…）→ Ordinary food, without the blue hat…」这类标点改写，
+内容并未丢失。括注是标点不是内容，故不作为规则。）
+S08 的 count 扩展（v1.25）：条款写 "count": true 时，校验 require 词形在
+该块的出现次数 ≥ 母版锚点在该块的出现次数。抓「同一概念首两处译对、
+第三处退成代词/弱词」——F1 实证：ko「HS 코드」在 b17 前两处正确、
+第三处退成「번호」（编号），th/vi 同型；require 的「有没有」判断
+完全拦不住，只有次数下限能抓。多词形（upokeaji/kupokelewa/kupokea）
+按命中区间并集计数，一个位置只算一次。
+S08 的自动加载（v1.26）：术语表升级为工具包内建的**跨文章通用资产**
+（<kit>/glossary.json，随审读积累），未显式传 --glossary 时自动加载；
+条款锚点在某文章母版中找不到时自动跳过（各文章覆盖的概念不同）。
+同概念的合理异形以 OR 词形收录（如阿拉伯语正面清单 الموجبة/الإيجابية）；
+对未审读文章，S08 的输出是待人工判定清单而非自动裁决。
+积累实录（v1.28）：通用表 27 → 35 条（主体/兜底/代运营/限值/预售/佣金/
+体温计/会员），并抓到两类真错：hy 把「佣金」写成 հանձնաժողով（委员会，
+应为 միջնորդավճառ）、sq 在 b20 同块内把佣金先写 provizion 后写 honorar
+（同概念换词，统一为 provizion）。词干经验：乌克兰语 членські 的词干是
+членськ（带软音 ь），«членск» 不是它的子串。
+积累实录（v1.29）：通用表 35 → 47 条（拣货/错发漏发/营业执照/海关注册登记/
+保税仓账开放/保证金/类目/服务费/汇出/核销凭证/屋顶接住/门槛在结构），
+并修掉一类系统性错误：zh b20 第二句「哪笔是货款、哪笔是服务费」在
+bg/hr/ru/sl/sr/uk/hy/ka 八语被写成「哪笔是佣金」——与首句的佣金撞词，
+各自改回本语「服务费」自然表述；sq 上轮统一方向反了（honorar 是服务费
+的合理意译，已恢复）。词干续记：芬兰语辅音级变 katto→katolle（双 t 弱化）、
+id/ms 的 me-/peŋ- 鼻化前缀使 'pilih'/'kutip' 不是 'pemilihan'/'pengutipan'
+的子串、sv tröskeln 词干是 tröskel 不是 tröskl。
+积累实录（v1.30）：通用表 47 → 56 条（四家供应商各管一段/报关行角色/梁上
+三份文件/梁的高度/最先断的流=信息流/十四个交付物/两个预留/四件事不回答/
+三问筛方案）。本轮为纯积累轮：批 A/B/C 三批全量窗口逐语复核，47 语方向
+与词形一致，未发现需改稿的内容错误（一度怀疑 sv b31 写成丹麦语 betaler，
+脚本复核原文是 betalar，系人工误读——结论必须脚本复核，不凭肉眼）。
+工具教训：导出候选块窗口必须与检查器同构——S08 用的是剥 YAML 后 body 的
+_blocks（strip+去空块），直接对 raw 文件 split('\n\n') 会因「zh 的 YAML
+后有空行、各语 YAML 与正文首段粘连成块」产生系统性 +1 偏移，窗口内容
+看起来全错位。词干续记：罗马尼亚语 grindă 的属格变形 grindii（d 脱落），
+BEAM 词形须用 grinzii；阿塞拜疆语 tir（梁）仅 3 字母，用 tirin（属格）。
+积累实录（v1.31）：通用表 56 → 59 条（「主体」责任链三条：b4 品牌方与一家
+主体签协议 / b7 海关约谈的是境内主体 / b17 然后是主体）。scope=all 评估
+结论（上轮遗留的最险一条）：zh「主体」9 块 11 处，45/47 语在三个核心块内
+同词、无漂移——唯独 en/nl 设计性分工（b4=party/partij，b7/b17=entity/
+entiteit），ru b7 用 юрлицо（当地法人，语义等价，OR 收录）。故按块锁
+词形而非 scope=all：强行同词会误伤合理分工。其余 6 块（b0/b22/b33/b36/
+b41/b44）已有相邻契约覆盖语义，不再立条。词干续记：塞尔维亚语 субјект
+的 ekavian 变体 субјекат（к 脱落），词干 субјек；泰米尔语 தரப்பு 的
+宾格 தரப்பை（合字变化），词干 தரப்。
+积累实录（v1.32）：P0 全量复核轮。通用表 4 条共享契约（清关/税号/台账/
+正面清单）在 P0 上命中 99 处——判定为两类：34 处真错改稿（he/sw 清关词
+与 ja/ko/th/vi 税号词，与 F1 round9/10 修复同源——**教训：通用表改词形
+后必须回头跑全部历史文章**，同类错误不会自动修复）；65 处合理异形
+（P0 原译用本语同族正常词：fi kirja、hi लेजर、ja 台帳、ko 대장、
+be станоўчы、bn পজিটিভ、sv positivlistan 复合词等）→ P0 文章自带
+glossary 覆盖（require=通用词形 OR P0 实际词形，文章自带优先机制首次
+实战）。P0 机检 99 → 0。词干三记：sw 词干 uondoshaji（"三单清关"拆分
+形式 Uondoshaji wa hati tatu za forodha 不含完整组合）、be станоўч
+（станоўчага/станоўчым 同词干）、th เชิงบวก（รายการสินค้าเชิงบวก 中插
+名词）。人工复读新增发现并修复 7 处（标题层 + 尾段，机检盲区）：
+hu 标题 vámcsatorna 与正文 vámfelügyeleti kód 术语不一致、sq 标题
+"si ecet"（=醋，应为 si ecen「如何走」）、sl 标题截断词 Popot→
+Popolna pot、vi/sw 标题首字母小写与全篇不一致、uk 尾段动词变位错
+（звіти відповімо→відповідатимуть，主谓人称不一致）。**标题层与尾段
+是机检盲区的人工复读重点**——标题意译合法，查的是「与正文术语一致」
+与拼写完整性。
+
+【v1.33】文章专属词全部融合进通用底表（用户指令）。通用表 59 条不变，
+但 ledger-consistency / positive-list-consistency 两条款并入 P0 文章
+glossary 的 25 语 OR 词形（da konto/bog、de Konto、fi kirja、hi लेजर、
+ja 台帳、ko 대장、sv/sw/th/ur 等本语同族正常词）——P0 检查改走通用表
+auto 加载，文章级 glossary 文件删除。F1 文章 glossary 的 terms 段本就是
+通用表滞后子集（sw/ar/ja 3 处旧词形），整体替换为通用表最新快照（20 条，
+build_package 与 3 个负向测试显式传参用），excerpt 段（S09 摘要契约
+policy-basis-layer）绑定单篇摘要结构，按设计保留文章级。**两层加载机制
+不变**：文章自带仍优先，通用表兜底——文章级文件从此只承载真正绑定单篇
+结构的内容（如 S09），词形一律进通用表，杜绝双源漂移。融合后验证：
+F1/P0 命令行（auto）双 0 error、F1 build 显式快照 PASS、5 负向 PASS、
+双向校验 CLEAN + 126 ALL PRESENT。
 """
 
 import io
 import json
 import os
 import re
+
+# F09（v1.15）：优先用 PyYAML 做 YAML 权威解析；未安装则回退内置增强校验。
+try:
+    import yaml as _pyyaml
+except ImportError:
+    _pyyaml = None
 
 NUMBER_WORDS = {
     "en": {3: "three", 4: "four", 5: "five", 6: "six", 7: "seven", 8: "eight",
@@ -375,6 +495,10 @@ AUTHOR = "David Zhang"
 
 MAX_TITLE = 85
 MAX_EXCERPT = 185
+# P35 整块照抄：低于该字符数的块不判（短句、编号、代码片段天然跨语言同形）
+COPY_BLOCK_MIN = 40
+# P35 与英文比对时要求的词数下限（避免把 "S0 S1 S3" 类枚举判成未译）
+COPY_BLOCK_WORDS = 5
 MAX_MDX_BYTES = 100 * 1024
 MAX_IMAGE_BYTES = 400 * 1024
 MAX_PACKAGE_BYTES = 60 * 1024 * 1024
@@ -681,6 +805,7 @@ def latin_residue(body):
 
 _NO_PARITY = False  # --no-parity：跳过 P02/P03/P04/P11/P18–P33/L06 跨语言一致性（精简包/样例用）
 _MASTER_LANG = None  # --master=<lang>：显式指定基准语言（默认中文优先，其次英文）
+_GLOSSARY = None     # --glossary=<file>：可选的块级术语契约（S08，v1.19）
 
 # 红线（SPEC 第 5 节）
 PRICE_RES = [
@@ -688,6 +813,21 @@ PRICE_RES = [
     r"\b\d[\d.,]*\s?(?:USD|EUR|GBP|CNY|RMB|dollars?|euros?)\b",
     r"\b(?:USD|EUR|GBP|CNY|RMB)\s?\d",
 ]
+# R03 豁免「约数换算」：母版写「约 700 美元」这类换算（限额折算、税额折算），
+# 是内容不是报价。带约数标记的金额先剔除再匹配，避免「约 700 美元」被当成报价；
+# 无标记的「500 dollars」仍然拦。P33 已单独禁止货币符号与 ISO 代码形态。
+APPROX_RES = re.compile(
+    r"(?:about|around|approximately|approx\.?|roughly|some|nearly|"
+    r"environ|rund|etwa|circa|ca\.|ungef\u00e4hr|"
+    r"unos|aproximadamente|cerca\s+de|alrededor\s+de|"
+    r"environ|omtrent|ongeveer|onge|noin|noin|l\u00e4hes|"
+    r"около|примерно|приблизительно|приблизно|близько|"
+    r"okoli|přibližně|približne|približno|przybliżeniu|körülbelül|mintegy|"
+    r"yaklaşık|təxminən|մոտավորապես|בערך|حوالي|نحو|تقریبا|حدود|"
+    r"करीब|लगभग|প্রায়|আনুমানিক|පමණ|ประมาณ|khoảng|sekitar|kira-kira|"
+    r"takriban|umbes|ligikaudu|apie|aptuveni|maždaug|qiyaastii|"
+    r"balpark|um\s+fyrir|um\s\u00fea\s\u00f0|nagyjából)\s*\d[\d.,]*",
+    re.I)
 DELIVERY_RES = [
     r"(?is)\b(?:delivery|lead\s*time|turnaround|shipping\s*time)\b[^.]{0,60}?\b\d+\s*[-–to]*\s*\d*\s*(?:days?|weeks?)\b",
 ]
@@ -839,6 +979,111 @@ AI_PHRASES_ZH = [
     "综上所述", "总而言之", "众所周知", "毋庸置疑", "不得不说",
     "对了一半", "另一半", "答案是", "一分为二",
 ]
+# v1.17 ST08：其余 46 语言的 LLM 高频套话（en/zh 由 ST03/ST04 覆盖）。
+# 选词标准：该语言母语编辑一眼就能认出「这是机器写的」的填充式套语；
+# 不含任何实义术语。warning 级——命中后人工判断是删掉还是改成具体陈述。
+AI_PHRASES_LOCALES = {
+    "es": ["es importante tener en cuenta", "cabe destacar", "cabe señalar",
+           "en resumen", "en conclusión", "es fundamental", "hoy en día",
+           "en el mundo actual", "juega un papel fundamental", "sin duda alguna"],
+    "fr": ["il convient de noter", "il est important de noter", "il est essentiel de",
+           "en résumé", "en conclusion", "dans le monde actuel",
+           "joue un rôle crucial", "sans aucun doute"],
+    "de": ["es ist wichtig zu beachten", "es ist erwähnenswert", "es ist entscheidend",
+           "zusammenfassend", "abschließend", "in der heutigen Zeit",
+           "spielt eine entscheidende rolle", "zweifellos"],
+    "it": ["è importante notare", "è fondamentale", "in conclusione", "in sintesi",
+           "nel mondo attuale", "gioca un ruolo cruciale", "senza dubbio"],
+    "pt": ["é importante notar", "vale destacar", "em conclusão", "em resumo",
+           "no mundo atual", "desempenha um papel crucial", "sem dúvida"],
+    "nl": ["het is belangrijk om te noteren", "het is vermeldenswaard",
+           "samenvattend", "afsluitend", "in de huidige wereld",
+           "speelt een cruciale rol", "ongetwijfeld"],
+    "ca": ["cal tenir en compte", "és important destacar", "en resum", "en conclusió",
+           "al món actual", "desempenya un paper crucial", "sens dubte"],
+    "sv": ["det är viktigt att notera", "det är värt att nämna", "sammanfattningsvis",
+           "avslutningsvis", "i dagens värld", "spelar en avgörande roll", "utan tvekan"],
+    "da": ["det er vigtigt at bemærke", "det er værd at nævne", "opsummerende",
+           "afslutningsvis", "i dagens verden", "spiller en afgørende rolle", "uden tvivl"],
+    "no": ["det er verdt å merke seg", "det er viktig å legge merke til", "oppsummert",
+           "avslutningsvis", "i dagens verden", "spiller en avgjørende rolle", "uten tvil"],
+    "fi": ["on syytä huomata", "on tärkeää huomata", "yhteenvetona",
+           "nykymaailmassa", "on ratkaisevan tärkeä", "epäilemättä"],
+    "pl": ["warto zauważyć", "należy podkreślić", "podsumowując",
+           "w dzisiejszym świecie", "odgrywa kluczową rolę", "bez wątpienia"],
+    "cs": ["je třeba poznamenat", "stojí za zmínku", "shrnutím", "závěrem",
+           "v dnešním světě", "hrají klíčovou roli", "bezpochyby"],
+    "sk": ["stojí za poznamenanie", "treba poznamenať", "shrnutím", "na záver",
+           "v dnešnom svete", "zohrávajú kľúčovú rolu", "bezpochyby"],
+    "sl": ["treba omeniti", "vredno je omeniti", "v povzetku",
+           "v današnjem svetu", "igra ključno vlogo", "brez dvoma"],
+    "hr": ["treba napomenuti", "vrijedi spomenuti", "u zaključku",
+           "u današnjem svetu", "igra ključnu ulogu", "bez sumnje"],
+    "sr": ["треба напоменути", "вреди споменути", "у закључку",
+           "у данашњем свету", "игра кључну улогу", "без сумње"],
+    "bg": ["заслужава да се отбележи", "трябва да се отбележи", "в заключение",
+           "като заключение", "в днешния свят", "играе ключова роля", "без съмнение"],
+    "ro": ["este important de menționat", "trebuie menționat că", "în concluzie",
+           "pe scurt", "în lumea actuală", "joacă un rol crucial", "fără îndoială"],
+    "hu": ["érdemes megjegyezni", "fontos megjegyezni", "összefoglalva",
+           "a mai világban", "kulcsszerepet játszik", "kétségtelenül"],
+    "el": ["αξίζει να σημειωθεί", "είναι σημαντικό να σημειωθεί", "συμπερασματικά",
+           "στο σημερινό κόσμο", "διαδραματίζει καθοριστικό ρόλο", "αναμφίβολα"],
+    "ru": ["стоит отметить", "следует отметить", "важно отметить", "в заключение",
+           "в современном мире", "играет ключевую роль", "несомненно"],
+    "uk": ["варто зазначити", "слід зазначити", "варто відзначити",
+           "у сучасному світі", "відіграє ключову роль", "безсумнівно"],
+    "be": ["варта адзначыць", "следуе адзначыць", "у заключэнні",
+           "у сучасным свеце", "адыгрывае ключавую ролю", "несумненна"],
+    "ka": ["ღირს შენიშვნის", "დასკვნაში", "თანამედროვე სამყაროში",
+           "მნიშვნელოვან როლს ასრულებს", "ეჭვგარეშეა"],
+    "hy": ["նշելու արժե", "կարևոր է նշել", "ամփոփում", "ժամանակակից աշխարհում",
+           "կարևոր դեր է խաղում", "կասկածելի չէ"],
+    "tr": ["belirtmek gerekir", "dikkat çekmek gerekir", "sonuç olarak",
+           "günümüz dünyasında", "kritik bir rol oynar", "şüphesiz"],
+    "sq": ["ia vlen të nënvizohet", "duhet të theksohet",
+           "përmbledhëse", "në botën e sotme", "luan një rol kyç", "padyshim"],
+    "az": ["qeyd etmək lazımdır", "vurğulamaq lazımdır", "nəticə etibarı ilə",
+           "müasir dünyada", "həyati rol oynayır", "şübhəsiz"],
+    "ja": ["重要なのは", "注目すべきは", "結論として", "要するに",
+           "現代社会において", "重要な役割を果たしている", "間違いなく"],
+    "ko": ["주목할 점은", "중요한 것은", "결론적으로", "요약하면",
+           "오늘날 세계에서", "중요한 역할을 한다", "의심할 여지없이"],
+    "vi": ["đáng chú ý", "cần lưu ý", "kết luận lại", "tóm lại",
+           "trong thế giới hiện đại", "đóng vai trò quan trọng", "chắc chắn"],
+    "id": ["perlu dicatat", "penting untuk dicatat", "kesimpulannya", "ringkasnya",
+           "di dunia modern", "memainkan peran penting", "tidak diragukan lagi"],
+    "ms": ["perlu diperhatikan", "adalah penting untuk", "kesimpulannya",
+           "secara ringkasnya", "dunia moden", "memainkan peranan penting",
+           "tidak dapat disangkal"],
+    "th": ["สิ่งสำคัญที่ต้องทราบ", "ควรทราบว่า", "โดยสรุป", "ในโลกปัจจุบัน",
+           "มีบทบาทสำคัญ", "ไม่มีข้อสงสัย"],
+    "hi": ["ध्यान देने योग्य", "उल्लेखनीय", "निष्कर्ष में", "संक्षेप में",
+           "आज की दुनिया में", "महत्वपूर्ण भूमिका निभाता है", "निस्संदेह"],
+    "bn": ["উল্লেখযোগ্য", "মনে রাখতে হবে", "উপসংহারে", "সারসংক্ষেপে",
+           "আজকের বিশ্বে", "গুরুত্বপূর্ণ ভূমিকা রাখে", "সন্দেহ নেই"],
+    "ta": ["கவனிக்கத்தக்கது", "கவனிக்க வேண்டும்", "சுருக்கமாக",
+           "இன்றைய உலகில்", "முக்கிய பங்கு வகுக்கிறது", "சந்தேகம் இல்லை"],
+    "ur": ["شایان ذکر ہے", "قابل ذکر ہے", "مختصراً",
+           "اہم کردار ادا کرتا ہے", "بلا شبہ"],
+    "fa": ["شایان ذکر است", "قابل ذکر است", "به طور خلاصه",
+           "جهان امروز", "نقش مهمی ایفا می‌کند", "بدون شک"],
+    "ne": ["उल्लेखनीय", "यो उल्लेख गर्न योग्य", "निष्कर्षमा", "सारांशमा",
+           "आजको संसारमा", "महत्वपूर्ण भूमिका खेल्छ", "निश्चित हुन्छ"],
+    "si": ["සටහන් කිරීම වටිනායි", "සටහන් කළ යුතුයි", "නිගමනය ලෙස",
+           "සාරාංශයක් ලෙස", "වැදගත් කාර්යයක්", "සැකයක් නැත"],
+    "sw": ["inastahili kutajwa", "ni muhimu kutambua", "kwa muhtasari",
+           "ulimwengu wa leo", "inacheza jukumu muhimu", "hakuna shaka"],
+    "af": ["die moeite werd om te noem", "dis belangrik om te let op",
+           "kortliks", "in die hedendaagse wêreld", "speel 'n belangrike rol",
+           "sonder enige twyfel"],
+    "ar": ["من الجدير بالذكر", "يجدر الذكر", "في الختام", "باختصار",
+           "في عالم اليوم", "يلعب دورًا مهمًا", "بلا شك"],
+    "he": ["ראוי לציין", "יש לציין כי", "לסיכום", "בקצרה",
+           "בעולם המודרני", "ממלא תפקיד חשוב", "אין ספק"],
+}
+# P34：全角标点（CJK 正字法之外的残留）
+FULLWIDTH_PUNCT_RE = re.compile(r"[\uFF0C\u3002\uFF1B\uFF1A\uFF1F\uFF01\u3001\uFF08\uFF09\u300C\u300D\u300E\u300F\u3010\u3011\u300A\u300B\u3008\u3009]")
 REVERSAL_RES = [
     r"看似[^。？！\n]{0,30}实则",
     r"不是[^。？！\n]{0,24}而是",
@@ -1020,6 +1265,88 @@ def unquote(v):
     return v
 
 
+def extract_fm_raw(src):
+    """提取 frontmatter 原始 YAML 文本（--- 之间的内容）；无则返回 None。"""
+    m = re.match(r"^---[ \t]*\r?\n(.*?)\r?\n---[ \t]*\r?\n?", src, re.S)
+    return m.group(1) if m else None
+
+
+def yaml_check(raw):
+    """F09（v1.15）：frontmatter 必须能被 YAML 解析。
+    有 PyYAML → safe_load 权威校验；没有 → 内置增强校验（覆盖会让
+    gray-matter / js-yaml 抛异常的常见致命语法）。返回错误串或 None。"""
+    if _pyyaml is not None:
+        try:
+            _pyyaml.safe_load(raw)
+            return None
+        except Exception as e:
+            msg = str(e).strip().splitlines()
+            head = msg[0][:120] if msg else "YAML 解析失败"
+            # v1.18：附内置子集校验定位到的具体病因（裸 ': ' / 未闭合引号 / tab）。
+            # PyYAML 的原始消息（"mapping values are not allowed here"）不带
+            # 可操作信息；裸值含 ': ' 是最高频根因（excerpt 规范化引入枚举式
+            # " Vier lae: ..." 时曾一次性击中 42 个语言）。
+            hint = _yaml_subset_check(raw)
+            if hint:
+                return "PyYAML: %s；%s" % (head, hint)
+            return "PyYAML: " + head
+    return _yaml_subset_check(raw)
+
+
+def line_ending_issues(data):
+    """S07（v1.18）：文本文件行尾 / 编码卫生。返回问题列表（空 = 干净）。
+
+    CRLF 会让 _blocks() 按 "\\n\\n" 的分块失效——整篇正文粘成一个块，
+    P21/P22/P23/P27 对比基准时全线误报（F1 实测一次行尾污染产出 168 个
+    假 error，根因与内容完全无关）；UTF-8 BOM 会让 frontmatter 的起始
+    判定（src.startswith("---")）偏移，诱发 F01 假错。
+    流水线应在打包前把 mdx / json 规范化为 LF；本规则在检查层兜底。
+    """
+    issues = []
+    if data.startswith(b"\xef\xbb\xbf"):
+        issues.append("带头 UTF-8 BOM")
+    crlf = data.count(b"\r\n")
+    cr = data.count(b"\r") - crlf
+    if crlf:
+        issues.append("CRLF 行尾 %d 处" % crlf)
+    if cr:
+        issues.append("单独 CR 行尾 %d 处" % cr)
+    return issues
+
+
+def _yaml_subset_check(raw):
+    """无 PyYAML 时的内置校验。只做『危险模式』检测（不模拟完整 YAML 文法）：
+    tab 缩进 / 文档分隔符 / 键值行结构 / 未闭合引号 / 裸 ': '。"""
+    for i, line in enumerate(raw.splitlines(), 1):
+        indent = line[:len(line) - len(line.lstrip())]
+        if "\t" in indent:
+            return "第 %d 行: YAML 不允许 tab 缩进" % i
+        s = line.strip()
+        if not s or s.startswith("#"):
+            continue
+        if s in ("---", "..."):
+            return "第 %d 行: frontmatter 内出现文档分隔符 %s" % (i, s)
+        # 列表项：- key: value 或 - 纯标量
+        if s.startswith("- ") or s == "-":
+            payload = s[1:].strip()
+            km = re.match(r"^([A-Za-z_][A-Za-z0-9_]*)\s*:(\s|$)(.*)$", payload)
+            val = km.group(3) if km else payload
+        else:
+            km = re.match(r"^([A-Za-z_][A-Za-z0-9_]*)\s*:(\s|$)(.*)$", s)
+            if not km:
+                return "第 %d 行: 无法解析为 YAML 键值行: %s" % (i, s[:60])
+            val = km.group(3)
+        q = val.strip()
+        if q[:1] in "\"'":
+            # 值以引号开头：引号必须成对闭合（引号内的冒号合法）
+            if len(q) < 2 or q[-1] != q[0]:
+                return "第 %d 行: 引号未闭合: %s" % (i, s[:60])
+        elif re.search(r":\s", q):
+            # 裸值里再出现 '冒号+空白' → YAML 报 "mapping values are not allowed here"
+            return "第 %d 行: 值内含未加引号的 ': '，YAML 无法解析（请给值加引号）: %s" % (i, s[:60])
+    return None
+
+
 def webp_size(data):
     """解析 webp 宽高；失败返回 None。"""
     if len(data) < 30 or data[:4] != b"RIFF" or data[8:12] != b"WEBP":
@@ -1116,6 +1443,82 @@ def _block_kind(b):
     if _UL_RE.match(b) or _OL_RE.match(b):
         return "LIST"
     return "PARA"
+
+
+def _norm_copy(b):
+    """P35 归一化：折叠空白、去掉行首列表符、统一大小写。
+
+    只做这三步，不做词形与标点模糊处理——P35 判的是「逐字相同」，
+    任何相似度计算都会把「恰好接近」误判成「未翻译」，与 L05 的职责重叠。
+    """
+    s = re.sub(r"\s+", " ", b.strip())
+    s = re.sub(r"^(?:[-*+]|\d+[.)])\s+", "", s)
+    return s.casefold()
+
+
+def _ascii_digits(s):
+    """把任意文字系统的十进制数字折叠成 ASCII，供 P36 比对。
+
+    fa 用 ۱۲۱۰、ar 用 ١٢١٠、hi 用 १२१० 都是正字法，不算改数字；
+    折叠后与母版一致即可。
+    """
+    out = []
+    for ch in s:
+        d = unicodedata.digit(ch, None)
+        out.append(str(d) if d is not None else ch)
+    return "".join(out)
+
+
+def _norm_num(tok):
+    """把 1,200 / 1.200 / 32,8 / 32.8 统一成同一种写法。
+
+    千分位与小数点在不同语言里正好互换，直接删逗号会把 af 的 32,8 读成 328。
+    判定顺序：两种符号都有 → 最后出现的那个是小数点；只有一种且右侧恰好 3 位
+    且左侧 1–3 位 → 视为千分位，否则视为小数点。
+    """
+    s = tok.strip(".,")
+    if "," in s and "." in s:
+        if s.rfind(",") > s.rfind("."):
+            return s.replace(".", "").replace(",", ".")
+        return s.replace(",", "")
+    sep = "," if "," in s else ("." if "." in s else None)
+    if not sep:
+        return s
+    left, right = s.split(sep, 1)
+    if sep in right:                      # 多个分隔符 → 全部按千分位去掉
+        return s.replace(sep, "")
+    if len(right) == 3 and 1 <= len(left) <= 3:
+        return left + right               # 1,200 / 1.200 → 1200
+    return left + "." + right             # 32,8 → 32.8
+
+
+def _id_numbers(b):
+    """P36：块内「标识型数字」集合。
+
+    只收两类：含小数点的编码（0404.9000、2106.12）、≥3 位的数字（1210、9610、
+    486 属 3 位、1200、2016）。1–2 位纯数字不收——「三单」「七条流」这类在
+    很多语言里本就写成数词，收进来会制造假阳性。
+    """
+    out = set()
+    for tok in re.findall(r"\d[\d.,]*", _ascii_digits(b)):
+        tok = _norm_num(tok)
+        if "." in tok or len(re.sub(r"\D", "", tok)) >= 3:
+            out.add(tok)
+    return out
+
+
+def _gloss_pats(d, lg):
+    """S08/S09 共用：取某个语言适用的短语（`*` 兜底 + 该语言专属）。"""
+    out = []
+    for key in ("*", lg):
+        v = d.get(key)
+        if isinstance(v, str):
+            v = [v]
+        for x in (v or []):
+            s = str(x).strip()
+            if s:
+                out.append(s)
+    return out
 
 
 def _list_items(b):
@@ -1420,8 +1823,9 @@ def _line_of(src, pos):
     return src.count("\n", 0, pos) + 1
 
 
-def check_style(tag, src, add):
-    """ST01–ST07：去 AI 味与格式纪律。方案 3.1（禁用词/破折号）与 3.1a（序号段落列表化）的可执行版。"""
+def check_style(tag, src, add, lang=None):
+    """ST01–ST08：去 AI 味与格式纪律。方案 3.1（禁用词/破折号）与 3.1a（序号段落列表化）的可执行版。
+    v1.17：ST08 各语言 AI 套话需 lang 上下文（--body 草稿模式 lang=None 时跳过）。"""
     lines = src.split("\n")
     # ST01 em dash 清零
     for i, ln in enumerate(lines, 1):
@@ -1446,6 +1850,13 @@ def check_style(tag, src, add):
         if m:
             add("ST04", "error", tag,
                 "第 %d 行 AI 高频词（zh）: %r" % (_line_of(src, m.start()), w))
+    # ST08 其余 46 语言 AI 套话（v1.17；warning，逐词报首现）
+    if lang:
+        for w in AI_PHRASES_LOCALES.get(lang, ()):
+            m = re.search(re.escape(w).replace(r"\ ", r"\s+"), src)
+            if m:
+                add("ST08", "warning", tag,
+                    "第 %d 行 AI 套话（%s）: %r" % (_line_of(src, m.start()), lang, w))
     # ST05 反转钩子 / 设问自答
     for pat in REVERSAL_RES:
         m = re.search(pat, src, re.I)
@@ -1473,7 +1884,10 @@ def check_style(tag, src, add):
 
 # ---------------------------------------------------------------- 主检查
 
-def check(path):
+def check(path, glossary=None):
+    global _GLOSSARY
+    if glossary is not None:
+        _GLOSSARY = glossary
     findings = []
 
     def add(rule, severity, slug, detail):
@@ -1518,8 +1932,237 @@ def check(path):
     return findings
 
 
+def _term_hits(blk, pats):
+    """S08 count：require 词形在块内的去重命中位置数。
+
+    一个概念常配多个词形（upokeaji/kupokelewa/kupokea），逐词形取 max 会
+    漏算「两个词形各出现一次」；直接求和又会让嵌套子串（'kupokea' 命中
+    'kupokelewa' 内部）重复计数。按命中区间排序合并，一个位置只算一次。
+    """
+    spans = []
+    for p in pats:
+        if not p:
+            continue
+        start = 0
+        while True:
+            j = blk.find(p, start)
+            if j < 0:
+                break
+            spans.append((j, j + len(p)))
+            start = j + 1
+    spans.sort()
+    n = 0
+    last_end = -1
+    for a, b in spans:
+        if a >= last_end:
+            n += 1
+            last_end = b
+        elif b > last_end:
+            last_end = b
+    return n
+
+
+def _auto_glossaries(path):
+    """--glossary 未显式给出时自动加载通用术语表（v1.26）。
+
+    术语表是工具包内建的**跨文章通用资产**（<kit>/glossary.json），
+    随审读不断积累；检查时自动引用，无需传参。加载顺序
+    （terms 按 id 去重，先加载者优先）：
+
+      1. <work 上级>/pipeline/glossary.json   文章自带（若有，优先）
+      2. <kit>/glossary.json                  通用术语表（跨文章）
+
+    通用条款的锚点在某文章母版中找不到时**跳过**而非报错——不是每篇
+    文章都覆盖全部概念（出口文没有「正面清单」，检查不该炸）；找得到
+    则照常逐块校验。文章自带术语表的锚点找不到仍然是配置 error。
+    """
+    out_terms, out_excerpt = [], []
+    seen = set()
+
+    def load(fp, shared=False):
+        if not os.path.isfile(fp):
+            return
+        try:
+            with open(fp, "rb") as fh:
+                spec = json.loads(text(fh.read()))
+        except Exception:
+            return
+        for t in spec.get("terms") or []:
+            tid = str(t.get("id") or "")
+            if tid in seen:
+                continue
+            seen.add(tid)
+            if shared:
+                t = dict(t)
+                t["_shared"] = True
+            out_terms.append(t)
+        # S09 摘要契约绑定「该篇摘要的具体结构」（F1 的四层框架摘要是
+        # F1 特有的），跨文章套用必然错配——只认文章自带或显式传参，
+        # 通用表的 excerpt 段不加载。
+        if not shared:
+            out_excerpt.extend(spec.get("excerpt") or [])
+
+    root = path if os.path.isdir(path) else os.path.dirname(os.path.abspath(path))
+    load(os.path.join(os.path.dirname(os.path.abspath(root)),
+                      "pipeline", "glossary.json"))
+    load(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                      "glossary.json"), shared=True)
+    if out_terms or out_excerpt:
+        return {"terms": out_terms, "excerpt": out_excerpt}
+    return None
+
+
+def _glossary_check(spec, parsed, master_lang, slug, add):
+    """S08（v1.19）：块级术语契约。
+
+    数据来自调用方传入的 glossary（--glossary=<file>），格式：
+        {"terms": [{"id": "...", "zh": "<母版锚点短语>",
+                    "require": {"ko": ["감독"], "*": ["..."]},
+                    "forbid":  {"ko": ["진입 요건"]}}]}
+    以 zh 锚点在母版中的**块序号**定位，取各语言同一块序号的正文再判短语：
+    术语表因此不依赖行号，也不受翻译后句子切分差异影响（P23 已保证逐块同构）。
+
+    存在的理由：译反方向（监管↔准入、固体饮料↔即饮、不会丢↔会丢）时，
+    语法、结构、字数、AI 腔全部正常，P 族与 ST 族一条都拦不住——只有把
+    母版语义固化成「该块必须出现的词 / 不得出现的词」才能机检。
+    """
+    terms = spec.get("terms") if isinstance(spec, dict) else spec
+    if not isinstance(terms, list):
+        add("S08", "error", slug, "术语契约结构应为 {\"terms\": [...]} 或数组")
+        return
+    if master_lang not in parsed:
+        return
+    base_blocks = _blocks(parsed[master_lang][1])
+    loc_blocks = dict((lg, _blocks(parsed[lg][1])) for lg in parsed)
+
+    for t in terms:
+        if not isinstance(t, dict) or not str(t.get("zh", "")).strip():
+            continue
+        tid = str(t.get("id") or t["zh"])[:40]
+        anchor = str(t["zh"]).strip()
+        # v1.21：scope="all" 时，母版中**每一处**含锚点的块都要校验。
+        # 默认（block）只校验首次出现的那一块——适合「某一句译反了」；
+        # 而「同一概念在后文换了词」（申报→广告、合规流→追踪、验收→移交）
+        # 只在首次出现处正确，必须逐块覆盖才能抓到。
+        scope = str(t.get("scope") or "block").strip().lower()
+        if scope == "all":
+            idxs = [i for i, b in enumerate(base_blocks) if anchor in b]
+        else:
+            first = next((i for i, b in enumerate(base_blocks) if anchor in b), None)
+            idxs = [] if first is None else [first]
+        if not idxs:
+            if t.get("_shared"):
+                continue  # 共享库条款：该文章不涉及此概念，跳过而非报错
+            add("S08", "error", slug,
+                "术语 %s 的 zh 锚点在母版中找不到：%s" % (tid, anchor[:50]))
+            continue
+        req = t.get("require") or {}
+        forb = t.get("forbid") or {}
+        targets = set(k for k in list(req) + list(forb) if k != "*")
+        if "*" in req or "*" in forb:
+            targets |= set(lg for lg in parsed if lg != master_lang)
+        for lg in sorted(targets):
+            if lg == master_lang or lg not in loc_blocks:
+                continue
+            need = _gloss_pats(req, lg)
+            banned = _gloss_pats(forb, lg)
+            for idx in idxs:
+                if idx >= len(loc_blocks[lg]):
+                    continue
+                blk = loc_blocks[lg][idx].casefold()
+                where = ("（第%d块，母版锚点：%s）" % (idx + 1, anchor[:40])
+                         if scope == "all" else "（母版锚点：%s）" % anchor[:40])
+                if need and not any(p.casefold() in blk for p in need):
+                    add("S08", "error", "%s/%s" % (lg, slug),
+                        "术语 %s 缺失：该块应含「%s」%s"
+                        % (tid, " / ".join(need[:3]), where))
+                hit = [p for p in banned if p.casefold() in blk]
+                if hit:
+                    add("S08", "error", "%s/%s" % (lg, slug),
+                        "术语 %s 出现反向表述「%s」%s"
+                        % (tid, " / ".join(hit[:3]), where))
+                # v1.25：出现次数下限（条款级 "count": true 开启）。
+                # 母版锚点在该块出现 zn 次，各语 require 词形（多词形取
+                # 命中区间并集）至少命中 zn 次。抓「同一概念首两处译对、
+                # 第三处退成代词/弱词」——F1 实证：ko「HS 코드」在 b17
+                # 前两处正确、第三处退成「번호」（编号），th/vi 同型。
+                if t.get("count") and need:
+                    zn = base_blocks[idx].count(anchor)
+                    m = _term_hits(blk, [p.casefold() for p in need])
+                    if m < zn:
+                        add("S08", "error", "%s/%s" % (lg, slug),
+                            "术语 %s 出现次数不足：母版 %d 次、译文 %d 次%s"
+                            % (tid, zn, m, where))
+
+
+def _glossary_excerpt_check(spec, parsed, master_lang, slug, add):
+    """S09（v1.20）：摘要术语契约。
+
+    glossary 里可选的 "excerpt" 数组，每项：
+        {"id": "...", "note": "<人读的说明，可选>",
+         "require": {"*": ["..."], "de": ["..."]},
+         "forbid":  {"de": ["..."]}}
+    对 frontmatter.excerpt 判「必须出现 / 不得出现」，`*` 为所有语言的兜底。
+
+    存在的理由：摘要是读者第一眼看到的内容，此前只受长度约束（F07）。
+    母版摘要按「四层框架」逐层罗列时，译文漏掉其中一层（F1 实证：15 语漏掉
+    「政策依据」层，瑞典语漏掉后只剩三项），正文完全正确、长度也合规，
+    P 族、F 族、L 族一条都不报错——只能把「每层该怎么写」落到术语表。
+    """
+    items = spec.get("excerpt") if isinstance(spec, dict) else None
+    if not isinstance(items, list) or not items:
+        return
+    for it in items:
+        if not isinstance(it, dict):
+            continue
+        tid = str(it.get("id") or "").strip() or "<unnamed>"
+        req = it.get("require") or {}
+        forb = it.get("forbid") or {}
+        targets = set(k for k in list(req) + list(forb) if k != "*")
+        if "*" in req or "*" in forb:
+            targets |= set(lg for lg in parsed if lg != master_lang)
+        for lg in sorted(targets):
+            if lg == master_lang or lg not in parsed:
+                continue
+            fm = parsed[lg][0] or {}
+            excerpt = str(fm.get("excerpt") or "").strip()
+            if not excerpt:
+                add("S09", "error", "%s/%s" % (lg, slug),
+                    "摘要为空，无法满足术语 %s" % tid)
+                continue
+            hay = excerpt.casefold()
+            need = _gloss_pats(req, lg)
+            banned = _gloss_pats(forb, lg)
+            if need and not any(p.casefold() in hay for p in need):
+                add("S09", "error", "%s/%s" % (lg, slug),
+                    "摘要缺少术语 %s：应含「%s」" % (tid, " / ".join(need[:3])))
+            hit = [p for p in banned if p.casefold() in hay]
+            if hit:
+                add("S09", "error", "%s/%s" % (lg, slug),
+                    "摘要出现反向表述「%s」（术语 %s）" % (" / ".join(hit[:3]), tid))
+
+
 def check_article(slug, art, add):
     rel = lambda k: k.split("/", 2)[2] if k.count("/") >= 2 else k
+
+    # S10 路径白名单（v1.22）：包内只允许三种位置，其余一律报错。
+    # 抓到过：临时脚本/子代理把 900KB 的 _blocks.json 落在 content/ 下——它不是
+    # mdx（S04 不管）、后缀 .json 又在 S05 白名单里，于是顺利进包，
+    # 官方检查 0 error，直到打包后文件数从 51 变成 52 才暴露。
+    for full in art:
+        tail = rel(full)
+        parts = tail.split("/")
+        ok = (
+            tail == "submission.json"
+            or (parts[0] == "images" and 2 <= len(parts) <= 3
+                and parts[-1].lower().endswith(".webp"))
+            or (parts[0] == "content" and len(parts) == 3
+                and parts[2] == slug + ".mdx")
+        )
+        if not ok:
+            add("S10", "error", slug,
+                "包内多余文件（不在规定位置）: %s（只允许 submission.json、"
+                "images/**.webp、content/<lang>/%s.mdx）" % (tail, slug))
 
     # --- 文件白名单 & 命名
     mdx_files = {}
@@ -1542,6 +2185,11 @@ def check_article(slug, art, add):
                 add("S03", "error", slug, "未知语言目录: %s" % lang)
             if len(data) > MAX_MDX_BYTES:
                 add("S06", "error", slug, "%s/%s.mdx 超过 100KB" % (lang, slug))
+            # S07（v1.18）：行尾/编码卫生。CRLF 会让正文分块全线误报，必须 LF
+            for iss in line_ending_issues(data):
+                add("S07", "error", slug,
+                    "%s %s（必须为 LF、无 BOM；CRLF 会使正文分块检查 P21-P24/P27 全线误报）"
+                    % (tail, iss))
             mdx_files[lang] = text(data)
         elif suffix == ".webp":
             m = re.match(r"^images/([^/]+)/([^/]+\.webp)$", tail)
@@ -1560,6 +2208,10 @@ def check_article(slug, art, add):
     if sub_key not in art:
         add("M01", "error", slug, "缺少 submission.json")
     else:
+        # S07（v1.18）：submission.json 同样要求 LF、无 BOM
+        for iss in line_ending_issues(art[sub_key]):
+            add("S07", "error", slug,
+                "submission.json %s（必须为 LF、无 BOM）" % iss)
         try:
             meta = json.loads(text(art[sub_key]))
         except Exception as exc:
@@ -1613,6 +2265,13 @@ def check_article(slug, art, add):
         if err:
             add("F01", "error", tag, err)
             continue
+        # F09（v1.15）：frontmatter 必须能被 YAML 解析（站方 gray-matter 同口径）
+        yraw = extract_fm_raw(src)
+        if yraw is not None:
+            yerr = yaml_check(yraw)
+            if yerr:
+                add("F09", "error", tag, "frontmatter 无法被 YAML 解析（%s）: %s" %
+                    ("PyYAML" if _pyyaml is not None else "内置校验", yerr))
         missing = [k for k in FRONTMATTER_KEYS if k not in fm]
         if missing:
             add("F02", "error", tag, "frontmatter 缺字段: %s" % ", ".join(missing))
@@ -1649,6 +2308,10 @@ def check_article(slug, art, add):
         for w in AI_PHRASES_ZH:
             if w in te:
                 add("ST04", "error", tag, "title/excerpt 出现 AI 高频词（zh）: %r" % w)
+        for w in AI_PHRASES_LOCALES.get(lang, ()):
+            if w in te:
+                add("ST08", "warning", tag,
+                    "title/excerpt 出现 AI 套话（%s）: %r" % (lang, w))
         for pat in REVERSAL_RES:
             if re.search(pat, te, re.I):
                 add("ST05", "error", tag, "title/excerpt 出现反转钩子句式")
@@ -1874,6 +2537,71 @@ def check_article(slug, art, add):
             add("P23", "error", "%s/%s" % (lg, slug),
                 "逐块结构与 %s 不一致（%d 处）: %s" %
                 (master_lang, len(diffs), "; ".join(diffs[:8])))
+
+        # P35 整块照抄：某一块与基准（或英文）同一序号的块逐字相同，即未本地化。
+        # 抓到过的问题：单段落沿用英文原文、非中文语言里整段粘贴中文母版。
+        # P22/P23 只比块类型与规模、P25–P27 只比标记、L05 只算全篇相似度，
+        # 「一篇里只有一段没译」此前无规则覆盖。只比同序号块（P23 已保证逐块同构），
+        # 因此不会因段落错位误报；短块与图片/表格/代码块不判。
+        p35_base = [_norm_copy(x) for x in _blocks(m_body)]
+        p35_en = ([_norm_copy(x) for x in _blocks(parsed["en"][1])]
+                  if "en" in parsed else None)
+        for lg in sorted(parsed):
+            if lg == master_lang:
+                continue
+            for bi, blk in enumerate(_blocks(parsed[lg][1])):
+                if _block_kind(blk) in ("IMG", "TABLE", "CODE"):
+                    continue
+                nb = _norm_copy(blk)
+                if len(nb) < COPY_BLOCK_MIN:
+                    continue
+                if bi < len(p35_base) and nb == p35_base[bi]:
+                    add("P35", "error", "%s/%s" % (lg, slug),
+                        "第%d块与基准 %s 逐字相同（疑似未翻译）: %s"
+                        % (bi + 1, master_lang, blk[:40]))
+                    continue
+                if (p35_en and lg != "en" and bi < len(p35_en)
+                        and nb == p35_en[bi]
+                        and _block_kind(blk) != "QUOTE"
+                        and len(re.findall(r"\w+", blk)) >= COPY_BLOCK_WORDS):
+                    add("P35", "error", "%s/%s" % (lg, slug),
+                        "第%d块与英文逐字相同（疑似未翻译）: %s" % (bi + 1, blk[:40]))
+
+        # P36 标识型数字一致（v1.23）：母版块内的监管代码、税号、文号、限值，
+        # 必须原样出现在各语同一块里。P 族此前只管结构（块数/块型/标记数），
+        # L 族只管全篇相似度，「结构全对、把 1210 写成 1021」无人拦。
+        # 判定只收「含小数点」或「≥3 位」的数字：1–2 位纯数字在不少语言里写成
+        # 数词（three documents），收进来会制造假阳性。数字先折叠成 ASCII，
+        # 波斯语 ۱۲۱۰、阿拉伯语 ١٢١٠ 属正字法，不算改数字。
+        p36_base = [_id_numbers(re.sub(r"\]\([^)]*\)", "]", x)) for x in _blocks(m_body)]
+        for lg in sorted(parsed):
+            if lg == master_lang:
+                continue
+            for bi, blk in enumerate(_blocks(parsed[lg][1])):
+                if bi >= len(p36_base) or _block_kind(blk) in ("TABLE", "CODE", "IMG"):
+                    continue
+                want = p36_base[bi]
+                if not want:
+                    continue
+                got = _id_numbers(re.sub(r"\]\([^)]*\)", "]", blk))
+                miss = sorted(want - got)
+                extra = sorted(got - want)
+                if miss:
+                    add("P36", "error", "%s/%s" % (lg, slug),
+                        "第%d块缺少母版中的编号/代码 %s（块内实际：%s）"
+                        % (bi + 1, " / ".join(miss[:5]),
+                           " / ".join(sorted(got)[:6]) or "无"))
+                if extra:
+                    add("P36", "warning", "%s/%s" % (lg, slug),
+                        "第%d块多出母版没有的数字 %s（可能是译者补的年份/汇率，需确认）"
+                        % (bi + 1, " / ".join(extra[:5])))
+
+        # S08 块级术语契约：只在调用方传了术语表（--glossary）时生效。
+        # 挂在这里是因为它依赖 P23 的逐块同构前提：块序号对齐才谈得上
+        # 「同一块在每种语言里说了什么」。
+        if _GLOSSARY:
+            _glossary_check(_GLOSSARY, parsed, master_lang, slug, add)
+            _glossary_excerpt_check(_GLOSSARY, parsed, master_lang, slug, add)
 
         # P24 表格几何一致：表格的列数、每行列数必须与基准完全相同。
         # 抓到过的问题：某个语言少写一列，或某一行漏了一个单元格，表格渲染后
@@ -2120,32 +2848,43 @@ def check_article(slug, art, add):
 
 # ---------------------------------------------------------------- P 系列：单文件文本健壮性（v1.2）
 
+def _fmt_hits(items, limit=4):
+    """v1.16：把 [(行号, 显示文本), ...] 聚合为人读消息。
+    例：第 5 行 'the the'；第 9 行 'и и'；等共 7 处。
+    图片/链接占位符不含换行，bare 与 body 行号逐一对齐，行号精确。"""
+    parts = ["第 %d 行 %s" % (ln, it) for ln, it in items[:limit]]
+    if len(items) > limit:
+        parts.append("等共 %d 处" % len(items))
+    return "；".join(parts)
+
+
 def check_text_health(tag, lang, body, add):
-    """P05–P13：残句/标点/混文字系统/重复词/CTA 文风等单文件检查。
-    lang=None 时（--body 草稿模式）跳过依赖语言上下文的规则。"""
+    """P05–P17/P34：残句/标点/混文字系统/重复词/CTA 文风/全角标点残留等单文件检查。
+    lang=None 时（--body 草稿模式）跳过依赖语言上下文的规则。
+    v1.16 起各命中型规则全量枚举，按规则聚合为一条。"""
     lines = body.split("\n")
     # 剥离 markdown 图片/链接结构，避免 alt 文字与路径粘连成假 token（RTL 语言尤甚）
     bare = re.sub(r"!\[[^\]]*\]\([^)]*\)", _MD_PH, body)
     bare = re.sub(r"\[[^\]]*\]\([^)]*\)", _MD_PH, bare)
     bare_lines = bare.split("\n")
-    # P05 省略号（正式文章罕见，多为残句/机翻事故）
-    m = ELLIPSIS_RE.search(bare)
-    if m:
-        add("P05", "warning", tag,
-            "第 %d 行出现省略号（%r），疑似残句，请通读该句" % (_line_of(body, m.start()), m.group(0)))
+    # P05 省略号（正式文章罕见，多为残句/机翻事故）—— v1.16 全量枚举
+    hits = [(_line_of(body, m.start()), "%r（疑似残句，请通读该句）" % m.group(0))
+            for m in ELLIPSIS_RE.finditer(bare)]
+    if hits:
+        add("P05", "warning", tag, "出现省略号: " + _fmt_hits(hits))
     # P06 重复标点
-    m = DBLPUNCT_RE.search(bare)
-    if m:
-        add("P06", "warning", tag,
-            "第 %d 行出现重复标点 %r" % (_line_of(body, m.start()), m.group(0)))
+    hits = [(_line_of(body, m.start()), "%r" % m.group(0)) for m in DBLPUNCT_RE.finditer(bare)]
+    if hits:
+        add("P06", "warning", tag, "出现重复标点: " + _fmt_hits(hits))
     # P07 行内连续多空格
-    m = DBLSPACE_RE.search(bare)
-    if m:
-        add("P07", "warning", tag, "第 %d 行出现连续空格" % _line_of(body, m.start()))
+    hits = [(_line_of(body, m.start()), "连续空格") for m in DBLSPACE_RE.finditer(bare)]
+    if hits:
+        add("P07", "warning", tag, "出现连续空格: " + _fmt_hits(hits))
     # P08 混文字系统 token（如阿拉伯词中夹拉丁字母，多为漏改事故；
     # 排除 URL/路径；ko/ja 的助词黏着不涉及此处覆盖的脚本）
+    # v1.16：全量枚举（此前只报首个命中，修一处冒一处）
+    p08 = []
     for i, ln in enumerate(bare_lines, 1):
-        hit = None
         for tok in re.findall(r"\S+", ln):
             if "://" in tok or tok.startswith(("http", "/images")):
                 continue
@@ -2154,41 +2893,36 @@ def check_text_health(tag, lang, body, add):
             sc = _token_scripts(tok)
             others = sc - {"LATIN"}
             if ("LATIN" in sc and others) or len(others) >= 2:
-                hit = tok
-                break
-        if hit:
-            add("P08", "warning", tag, "第 %d 行混文字系统词: %r" % (i, hit))
-            break
+                p08.append((i, "%r" % tok))
+    if p08:
+        add("P08", "warning", tag, "混文字系统词: " + _fmt_hits(p08))
     # P09 韩语正文出现汉字（现代韩语正文应为谚文；如「무역准入」混入）
     if lang == "ko":
-        m = re.search(r"[\u4E00-\u9FFF]", body)
-        if m:
+        hits = [(_line_of(body, m.start()), "汉字 %r" % m.group(0))
+                for m in re.finditer(r"[\u4E00-\u9FFF]+", body)]
+        if hits:
             add("P09", "warning", tag,
-                "第 %d 行韩语正文出现汉字（应改写为谚文）" % _line_of(body, m.start()))
+                "韩语正文出现汉字（应改写为谚文）: " + _fmt_hits(hits))
     # P10 相邻重复单词（the the / и и / los los）。
     # v1.14 白名单：部分语言的重叠副词（reduplication）是固定搭配——
     # tr "ayrı ayrı"（分别）、ur "باری باری"（轮流）等，站方回执的改法
     # 本身就使用这类形式，逐词组放行，不做整类豁免。
     redup = REDUPLICATION_OK.get(lang, ())
-    m = None
-    for cand in REPEAT_WORD_RE.finditer(bare):
-        if cand.group(0).lower() not in redup:
-            m = cand
-            break
-    if m:
-        add("P10", "warning", tag,
-            "第 %d 行出现重复单词: %r" % (_line_of(body, m.start()), m.group(0)))
+    hits = [(_line_of(body, m.start()), "%r" % m.group(0))
+            for m in REPEAT_WORD_RE.finditer(bare) if m.group(0).lower() not in redup]
+    if hits:
+        add("P10", "warning", tag, "出现重复单词: " + _fmt_hits(hits))
     # P12 CTA 冒号引出（应为自然融入式，链接内嵌句中；检查原始行含链接结构）
-    for i, ln in enumerate(lines, 1):
-        if CTA_COLON_RE.search(ln):
-            add("P12", "warning", tag,
-                "第 %d 行 CTA 用冒号引出链接（应为自然融入句式）" % i)
-            break
+    hits = [(i, "CTA 用冒号引出链接") for i, ln in enumerate(lines, 1)
+            if CTA_COLON_RE.search(ln)]
+    if hits:
+        add("P12", "warning", tag, _fmt_hits(hits))
     # P13 三连空行
     m = TRIPLE_NL_RE.search(body)
     if m:
         add("P13", "warning", tag, "存在三连及以上空行（%d 处）" % len(TRIPLE_NL_RE.findall(body)))
     # P14 隐形/零宽字符（软连字符、零宽空格、BOM、双向控制符、替换字符）
+    p14 = []
     for i, ln in enumerate(lines, 1):
         bad = [name for ch, name in INVISIBLE_ALWAYS.items() if ch in ln]
         if "\u200c" in ln and lang not in ZWNJ_OK_LANGS:
@@ -2196,14 +2930,20 @@ def check_text_health(tag, lang, body, add):
         if "\u200d" in ln and lang not in ZWJ_OK_LANGS:
             bad.append("ZWJ")
         if bad:
-            add("P14", "warning", tag,
-                "第 %d 行含隐形字符 %s（多为编辑器/复制残留，应删除）" % (i, sorted(set(bad))))
-            break
+            p14.append((i, "%s" % sorted(set(bad))))
+    if p14:
+        add("P14", "warning", tag,
+            "含隐形字符（多为编辑器/复制残留，应删除）: " + _fmt_hits(p14))
     # P15 标点前多余空格（不含法语分号/问号等合法前置空格的标点）
-    m = SPACE_PUNCT_RE.search(bare)
-    if m:
-        add("P15", "warning", tag,
-            "第 %d 行标点前有空格: %r" % (_line_of(body, m.start()), m.group(0)))
+    hits = [(_line_of(body, m.start()), "%r" % m.group(0)) for m in SPACE_PUNCT_RE.finditer(bare)]
+    if hits:
+        add("P15", "warning", tag, "标点前有空格: " + _fmt_hits(hits))
+    # P34 非 CJK 语言出现全角标点（v1.17：翻译/编辑器残留；ja/ko/zh 全角标点是正字法）
+    if lang and lang not in CJK_LANGS:
+        hits = [(_line_of(body, m.start()), "%r" % m.group(0))
+                for m in FULLWIDTH_PUNCT_RE.finditer(bare)]
+        if hits:
+            add("P34", "warning", tag, "非 CJK 语言出现全角标点: " + _fmt_hits(hits))
     # P16 强调符/圆括号不配对（多为漏改或截断）
     if body.count("**") % 2:
         add("P16", "warning", tag, "** 强调符数量为奇数（不配对）")
@@ -2317,8 +3057,9 @@ def check_body(tag, lang, body, image_files, slug, add):
         add("R01", "error", tag, "正文出现 248/249（现行法条一律写 280 号令）")
     if re.search(r"\b(MOA|CFDA)\b", body):
         add("R02", "error", tag, "正文出现旧机构名 MOA/CFDA（应为 MARA/SAMR）")
+    price_body = APPROX_RES.sub("", body)
     for pat in PRICE_RES:
-        if re.search(pat, body, re.I):
+        if re.search(pat, price_body, re.I):
             add("R03", "error", tag, "正文出现价格/金额（不写报价）")
             break
     for pat in DELIVERY_RES:
@@ -2335,7 +3076,7 @@ def check_body(tag, lang, body, image_files, slug, add):
             break
 
     # ST 写作纪律（方案 3.1 / 3.1a）
-    check_style(tag, body, add)
+    check_style(tag, body, add, lang=lang)
 
     # P 系列单文件文本健壮性（v1.2）
     check_text_health(tag, lang, body, add)
@@ -2399,13 +3140,26 @@ def main(argv):
         return 2
     path = args[0]
 
-    global _NO_PARITY, _MASTER_LANG
+    global _NO_PARITY, _MASTER_LANG, _GLOSSARY
     if "--no-parity" in flags:
         _NO_PARITY = True
     for a in argv[1:]:
         m = re.match(r"--master=([A-Za-z]{2})$", a)
         if m:
             _MASTER_LANG = m.group(1).lower()
+        m = re.match(r"--glossary=(.+)$", a)
+        if m:
+            try:
+                with open(m.group(1), "rb") as fh:
+                    _GLOSSARY = json.loads(text(fh.read()))
+            except Exception as e:
+                print("术语契约读取失败 %s: %s" % (m.group(1), e))
+                return 2
+    # v1.26：未显式传 --glossary 且非 --body 模式时，自动加载
+    # 文章自带 / 工具包积累库 / 共享库三层术语表（见 _auto_glossaries）。
+    if _GLOSSARY is None and "--body" not in flags and \
+            not any(re.match(r"--glossary=", a) for a in argv[1:]):
+        _GLOSSARY = _auto_glossaries(path)
 
     # --body 模式：对单篇 markdown 草稿只跑 ST 写作纪律（ST01–ST07）
     # 用法: python3 submitter_check.py <draft.md> --body [--until=<标记>]

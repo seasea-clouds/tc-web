@@ -1,0 +1,112 @@
+---
+title: Khung dịch vụ và trách nhiệm thương mại điện tử xuyên biên giới kho ngoại quan
+slug: service-framework-bonded-ecommerce-china-plan
+date: 2026-10-24
+category: E-commerce
+excerpt: 'Dự án kho ngoại quan chạy được khi một bên chịu trách nhiệm kết quả từ nhập kho đến giao hàng đã ký. Khung bốn tầng: căn cứ pháp lý, bốn tuyến dịch vụ, mười bốn gói và bảy luồng một sổ.'
+references:
+  - title: Cai Guan Shui [2016] số 18, chính sách thuế nhập khẩu bán lẻ xuyên biên giới
+    url: https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html
+  - title: Công bố số 486 năm 2018 của sáu bộ, giám sát nhập khẩu bán lẻ xuyên biên giới
+    url: https://cws.mofcom.gov.cn/gztz/art/2018/art_b7becbacb58a4d0d8bf17b91a168f044.html
+  - title: Công bố số 7 năm 2022 của tám bộ, danh sách tích cực nhập khẩu bán lẻ xuyên biên giới
+    url: https://www.gov.cn/zhengce/zhengceku/2022-02/21/content_5674854.htm
+  - title: Công bố số 194 năm 2018 của Hải quan, giám sát xuất nhập khẩu bán lẻ xuyên biên giới
+    url: https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html
+---
+Bán thực phẩm chức năng, thực phẩm và mỹ phẩm sang Trung Quốc qua kho ngoại quan là con đường đi được với ba điều kiện: ngành hàng nằm trong danh sách tích cực, người mua là cá nhân mua để tự dùng, và trị giá đơn trong hạn mức. Khi cả ba điều kiện đều đúng, chỉ còn lại một câu hỏi rất mộc: từ lúc hàng vào khu ngoại quan đến khi người tiêu dùng ký nhận, có một bên duy nhất chịu trách nhiệm cho toàn bộ hay không. Bốn nhà cung cấp mỗi bên gánh một chặng, mỗi bên chỉ chịu trách nhiệm cho chặng của mình, và khi có gì gãy thì không ai trả lời được trọn vẹn. Hợp đồng ký chi tiết đến đâu thì sau sự cố, điều khoản bồi thường cũng không tìm được ai thực sự đỡ cả chuỗi.
+
+Đây là bản vẽ khung mà chúng tôi dùng trong các dự án kho ngoại quan. Mái là trách nhiệm, dầm là cơ sở pháp lý, bốn cột là bốn tuyến dịch vụ, nền móng là bảy dòng chảy trên một sổ cái. Dự án gồm những chi tiết chịu lực nào, chi tiết hỏng nứt từ đâu trước, sửa thì gọi ai, bản vẽ đánh dấu hết. Thuế và hạn ngạch là sổ khác, ngoài bản vẽ này.
+
+![Khung dịch vụ trong một cái nhìn, mái trách nhiệm, ba văn bản pháp lý, bốn tuyến dịch vụ, nền từ bảy dòng chảy trên một sổ](/images/blog/service-framework-bonded-ecommerce-china-plan/fig-01.webp)
+
+## Trách nhiệm trước, vì mọi thứ còn lại đều nằm dưới nó
+
+Hàng trong khu ngoại quan chưa làm thủ tục nộp thuế nhập khẩu, và đơn của người tiêu dùng được khai từng đơn một. Cấu trúc này ép trách nhiệm thành một đường thẳng, không thể chia khúc. Thương hiệu ký một thỏa thuận với một chủ thể; chủ thể đó chịu trách nhiệm cả chuỗi: nhập kho, lưu kho, thông quan, giao hàng và hậu mãi; khi có sự cố thì tìm đến nó, còn nó truy ngược bên trong qua các gói công việc.
+
+Mở phần phân công giữa các nhà cung cấp ra, đây là ba cách cắt hay sinh tai biến nhất tôi từng thấy:
+
+- Đại lý hải quan chỉ chịu trách nhiệm về dữ liệu khai báo; hai tháng phí lưu kho cho hàng nằm trong kho ngoại quan không phải chuyện của nó;
+- Đơn vị kho chỉ chịu trách nhiệm về số lượng; soạn hàng chậm, giao sai hay sót đều đổ cho giao diện hệ thống;
+- Đơn vị vận hành hộ chỉ chịu trách nhiệm về doanh số; gian hàng bị gỡ vì vi phạm quy định quảng bá được đổ là do tư liệu của chính thương hiệu.
+
+Mỗi lời nói riêng nghe đều hợp lý; gộp lại thì không còn đáp án. Người tiêu dùng chờ hàng không tới, sàn trừ điểm gian hàng, hải quan mời chủ thể trong nước làm việc, và áp lực dồn cả về thương hiệu, nơi tay chỉ nắm bốn hợp đồng mà không ai chịu trách nhiệm.
+
+## Dầm mang ba văn bản, chép lại các số hiệu
+
+Mái tựa vào dầm. Mã giám sát hải quan của kênh này là 1210, tên chính thức là thương mại điện tử xuyên biên giới theo hình thức kho ngoại quan, thường gọi gọn là kênh kho ngoại quan. Ba văn bản tạo thành dầm, mỗi văn bản cai quản một ranh giới, và ai dựng kế hoạch nên nhớ thuộc ít nhất các số hiệu.
+
+Cai Guan Shui [2016] số 18 do Bộ Tài chính, Tổng cục Hải quan và Tổng cục Thuế ban hành quy định về thuế: hạn mức giao dịch theo đơn và theo năm, và cách thu thuế nhập khẩu cùng thuế ở khâu nhập. Việc tiền bạc thì xem văn bản này.
+
+Công bố số 486 năm 2018 của sáu bộ do Bộ Thương mại dẫn đầu quy định giám sát: hàng nào được nhập như đồ dùng cá nhân, chứng từ nào để thông quan và xử lý hoàn trả ra sao. Hàng có vào được không thì xem văn bản này.
+
+Chính công bố đó định tiêu chuẩn kỹ thuật của việc thông quan: đơn, chứng từ thanh toán và chứng từ logistics phải khớp, kiện chỉ được thả sau khi hệ thống đối chiếu qua; hoàn trả đi theo lộ trình Công bố số 45 năm 2020 của Hải quan.
+
+Công bố số 7 năm 2022 của tám bộ do Bộ Tài chính dẫn đầu viết lại danh mục hàng nhập khẩu bán lẻ xuyên biên giới, trong nghề gọi là danh sách tích cực. Ngành của bạn nằm trong cửa không, chỉ đi được mua thẳng hay dùng được cả kho ngoại quan, câu trả lời nằm trong văn bản này.
+
+Chiều cao của dầm là chiều cao mà ngôi nhà với tới được. Ngành của bạn không nằm trong danh sách thì không khung vẽ nào, dù trọn vẹn thế nào, nâng nổi tòa nhà. Vì vậy bước đầu tiên của mọi hợp tác là đối chiếu danh sách và mã HS, đưa sản phẩm qua cửa trước khi nói chuyện khác. Bước đó xong mới đến lượt các cột.
+
+## Bốn cột, mỗi cột một chặng, nhưng truyền lực cho nhau
+
+Mười bốn gói công việc, từ S0 đến S13, treo trên bốn cột.
+
+Cột tiếp cận mang S0, S1 và S3. Trước là chẩn đoán: trải sản phẩm, mã HS, kênh mục tiêu ra bàn và quyết định con đường có đi được không; giai đoạn này không chạm đất thì mọi báo giá sau đều dựng trên không khí. Sau là chủ thể: giấy phép kinh doanh và đăng ký hải quan, thiếu một trong hai thì hệ thống không mở tài khoản. Cuối cùng đăng ký và phân loại. Mã HS sai thì mọi tờ khai sau phải chỉnh. Phân loại là bước bị đánh giá thấp nhất: trong nhóm sản phẩm đạm, sữa whey bột đi theo 0404.9000, còn nước uống hòa tan bổ sung thành phần khác có thể rơi xuống 2106; mã HS dời thì tư cách danh sách và thuế suất dời theo.
+
+Cột thứ hai bắt đầu từ mở gian hàng, nhưng áp lực thật đến đêm thông quan. Đơn, chứng từ thanh toán và chứng từ logistics phải khớp từng đơn; một dấu thời gian lệch là kiện nằm nguyên tại chỗ. Sổ của kho ngoại quan cũng phải hiển thị cho thương hiệu; không thấy tồn kho thì bán trước là đánh cược vào kho chưa xác minh.
+
+Khối lượng ẩn của chặng gian hàng nằm ở điều kiện: phạm vi trên giấy phép, giấy phép kinh doanh thực phẩm, và tiền đặt cọc sàn; đủ cả ba thì ngành hàng mới mở.
+
+Cột thứ ba quản tiền, và lỗi hay gặp nhất là hoa hồng và tiền hàng đi chung một túi. Hai dòng trộn vào nhau thì đối soát không phân nổi chuyển nào trả hàng, chuyển nào là phí dịch vụ, và đến lúc ngân hàng đòi chứng từ cho chuyển tiền ra nước ngoài thì lúng túng. Năm giấy cần sẵn trước khi chuyển: hợp đồng, hóa đơn, tờ khai hải quan hoặc chứng đối chiếu, chứng từ logistics hoặc chứng từ đơn hàng, và tài liệu bổ sung của ngân hàng; thiếu một thì đi lại thêm một chuyến.
+
+Cột thứ tư là vận hành: S7 quảng bá, S8 hậu mãi, S13 hội viên. Dễ bị coi là phần trang trí nhất, nhưng quy trình hoàn trả chưa dựng thì dữ liệu hội viên bẩn, và mọi tỉ lệ mua lại đều là con số giả. Tỉ lệ hoàn trả của S8 là nhiệt kế của vận hành; phân loại lý do hoàn không tinh thì S7 cứ tiếp tục nạp ngân sách vào nhầm đối tượng.
+
+Các cột truyền lực cho nhau; bản vẽ không vẽ được điều đó, nhưng dự án sống nó hằng ngày. Ba chứng từ của S5 không khớp thì S6 không ra được bản thanh toán; mã HS của S3 sai thì S5 chỉnh tờ khai, và các chỉnh kéo vòng quay tồn kho của S2; quy trình hoàn trả của S8 không có thì hạng hội viên của S13 không có dữ liệu đáng tin. Một cột gãy, cột bên cạnh chịu lực trước, và cuối cùng lực truyền lên mái, nơi chủ thể trách nhiệm đỡ lấy.
+
+## Nền móng là bảy dòng trên một sổ, và chỗ đứt hiện trên sổ trước
+
+Bảy dòng không phải bảy hệ thống, mà là bảy kiểu ghi chép. Dòng thương mại ghi đơn và hợp đồng, dòng hàng ghi lô và hạn dùng, dòng logistics ghi hành trình và bàn giao, dòng tiền ghi thu chi và số dư, dòng thông tin ghi giao diện và trạng thái đơn, dòng tuân thủ ghi khai báo, đăng ký và điểm kiểm, dòng hóa đơn ghi hóa đơn và chứng từ ghi có. Một sổ nghĩa là bảy kiểu ghi chung một số đơn, và dòng nào đứt cũng truy ngược được từ số đó. Trên bản vẽ bảy dòng đổ về cùng một sổ; dòng đứt chỉ để lại một dòng thiếu.
+
+Dưới nền móng có bốn mô-đun chống đỡ: S9 rủi ro dữ liệu, S10 kiểm toán, S11 nhìn thấy chuỗi cung ứng, S12 tuân thủ nội dung. Chúng không sinh doanh thu trực tiếp, nhưng quyết định cái sổ ấy tự chứng mình được không khi có chuyện.
+
+Trong bảy dòng, đứt trước thường không phải dòng hàng mà là dòng thông tin và dòng hóa đơn. Hàng nằm trong kho không mất, nhưng đồng bộ trạng thái đơn chậm nửa nhịp là chăm sóc khách trả lời không nổi người mua; hóa đơn không ra thì đối soát không cân, và người mua muốn chứng cứ thì tay không.
+
+Một chuyện thật. Một lô 1200 chai dầu cá, người tiêu dùng xin hoàn trả ngày thứ bảy sau khi ký nhận, vì ngày trên nhãn đọc không rõ. Có ghi chép đủ bảy dòng thì việc khép trong nửa giờ: dòng tuân thủ rút phiên bản nhãn điện tử tiếng Trung dùng lúc đăng bán, dòng hàng kiểm lô và hạn dùng, logistics xác nhận giờ giao, tài chính xác minh tiền hoàn, dòng hóa đơn xuất chứng từ ghi có, S8 sắp xếp gửi lại, và mọi thao tác treo trên cùng một số đơn.
+
+Phiên bản không có sổ tôi cũng thấy. Kho nói giấy xác nhận giao ở bên chuyển phát, bên chuyển phát nói dữ kiện vận đơn phải hỏi sàn, sàn nói hoàn tiền cần chủ gian đồng ý trước, chủ gian nói nhãn do nhà máy in. Một vòng điện thoại, cửa sổ bảy ngày khép lại, người tiêu dùng khiếu nại lên sàn, gian bị trừ điểm, và chỗ trong đợt sale lớn kế tiếp mất trắng. Cùng một chuyện; khác nhau không ở năng lực, khác nhau ở cái sổ ấy có tồn tại hay không.
+
+## Vì sao mười bốn gói được cắt như vậy
+
+Mười bốn gói công việc không cắt theo hệ thống mà theo quyền ký. Mỗi gói ứng với một sản phẩm bàn giao có thể nghiệm thu và truy trách riêng: báo cáo chẩn đoán có chữ ký, giấy phép có chữ ký, biên nhận đăng ký có chữ ký, bản thanh toán cũng có chữ ký. Người ký là người chịu trách nhiệm của gói đó.
+
+Cắt vậy thì báo giá và nghiệm thu đều đổ xuống gói. Bạn trả tiền cho mười bốn sản phẩm bàn giao, không phải cho thứ mờ nhạt gọi là dịch vụ; sản phẩm nào thiếu thì gói đó không nghiệm. Định vị lỗi cũng có tọa độ: có sự cố là gọi tên gói trước, rồi mới bàn người của ai.
+
+Giữa các gói có thứ tự: S0 chưa khép thì S1 và S3 chưa khởi động được; mã HS của S3 chưa chốt thì dự báo nhập kho của S4 sai; S5 đi sạch một lô hàng thì S6 mới nói được đối soát. Thứ tự sai, chi phí làm lại đắt hơn nhiều thời gian tiết kiệm.
+
+Trong đó có hai phần dự phòng nên để sẵn từ giai đoạn thiết kế. Một là giao diện của kênh mua thẳng 9610: ngành nào chỉ đi được mua thẳng, hoặc kho ngoại quan tạm hết chỗ, thì đơn đi ra qua kênh đó, còn sổ vẫn ghi vào sổ cũ. Hai là nguồn hàng thứ hai: cùng một SKU được chứng thực với hai chủ thể gửi hàng ở nước ngoài, bên nào vấp về tư cách hay logistics thì bên kia vào.
+
+## Bản vẽ này không phủ những gì
+
+Khung cai quản cấu trúc, không cai quản lựa chọn. Bốn câu hỏi nó không trả lời:
+
+- Sản phẩm đi con đường đăng ký nào, cân nhắc đăng ký blue hat, kho ngoại quan và thương mại thường ra sao, tùy ngành, thành phần và ngân sách;
+- Giá và kênh, chọn sàn nào, đặt dải giá thế nào, xếp chiến dịch ra sao;
+- Cơ cấu cổ phần và thuế của chủ thể trong nước;
+- Nhận định tiếp cận cho một ngành cụ thể, nơi mỗi mã HS cần đối chiếu riêng với danh sách và điều kiện giám sát.
+
+Nhét bốn việc này vào bàn khung là đánh mất sợi chỉ. Khung đứng vững trước, bốn việc lấp sau, từng việc một.
+
+## Ba câu hỏi sàng những kế hoạch không đáng tin
+
+Năm ngoái có khách đem ba báo giá hỏi gói nào rẻ hơn. Ba phạm vi dịch vụ vốn chẳng so sánh được: một gói chỉ có thông quan, một gói có kho và giao nhưng không có đăng ký, một gói nghe tưởng trọn gói đến khi thấy thanh toán cần hợp đồng riêng. Giá không so trực tiếp được.
+
+Trước bất kỳ kế hoạch kho ngoại quan nào, ba câu hỏi là đủ:
+
+- Ai chịu trách nhiệm: hợp đồng có chỉ vào một chủ thể không, và phạm vi của nó có phủ từ nhập kho đến giao hàng;
+- Chỗ nào gãy: bảy dòng thì dòng nào không có ghi chép theo đơn, cột nào không có tiêu chuẩn nghiệm thu;
+- Ai sửa: khi lỗi xảy ra, ai có quyền chỉnh tờ khai, chỉnh tồn kho, khởi hoàn tiền, và bao lâu thì khép lại được.
+
+Ba câu có đáp án rõ thì khung là thật. Một câu lửng lơ thì kế hoạch còn nằm trên giấy.
+
+Nội bộ chúng tôi gọi bản vẽ này là hình ngôi nhà. Trình kế hoạch là vẽ nó trước, mười lần thì tám lần phản ứng đầu là hỏi đội ngũ bên mình phải cử bao nhiêu người. Câu trả lời tùy dự án, nhưng ở giai đoạn S0 cần ít nhất một người có quyền quyết có mặt suốt.
+
+Ngưỡng của thương mại điện tử xuyên biên giới qua kho ngoại quan không nằm ở chính sách; chính sách công khai, số hiệu văn bản ghi rõ phía trên. Ngưỡng nằm ở cấu trúc: có một bên chịu trách nhiệm cho cả tuyến hay không, có một sổ nối được bảy dòng hay không, và danh sách gói công việc buộc được từng đơn vị chi phí vào một sản phẩm bàn giao hay không. Đủ ba thứ, dự án mới khởi động được. Dòng sản phẩm của bạn trải qua nhiều ngành và đang so sánh nhà cung cấp, chúng tôi có thể làm trước một đánh giá tuân thủ miễn phí, ngành, mã HS và kênh mục tiêu gom vào một danh sách tiếp cận, rồi mới phán con đường nào đáng đầu tư. [Liên hệ với chúng tôi](/vi/packages/) cho biết sản phẩm và thời gian ra mắt dự kiến.

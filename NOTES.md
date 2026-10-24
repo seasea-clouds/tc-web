@@ -624,3 +624,32 @@ frontmatter 无字段、`posts.ts` 不读、列表页纯文字卡片、详情页
 无封面文章（ccc / green-coffee 等 8 语言抽查）不误显示；封面图 200 + `image/webp`
 （主域 `/images/blog/*` 走边缘代理）；og:image / JSON-LD 均指向对应封面；`__next_error__` 为 0。
 提交 `3af7fe0` → `705afbe`（hero 背景）→ `f2d702b`（调亮可见度）。
+
+## 列表页杂志式排版 2026-10-24（1 张有图卡 + 2 张无图卡成行）
+
+**问题**：列表页是 2 列等高网格，有图卡（图 264px + 文字）比无图卡（~200px）高很多，
+同一行一篇有图一篇没图就参差；封面刚上线后这个差距被放大。
+
+**做法**：`BlogClient.tsx` 里 `buildRows()` 先分组再渲染：
+- 有图卡 → `feature` 行：占左列，右侧一列放**恰好 2 张**无图卡（`lg:grid-rows-2`），
+  每张 `h-full` 拉伸 → 整行末齐平。
+- **必须恰好 2 张**：只凑到 1 张时退化成普通两列行，否则半行那张会被拉伸成大空盒。
+- 其余无图卡两两成行（`plain`）。
+- 无图卡不够（如筛「E-commerce」只剩 3 篇）→ 全部退化成两列，不出现半边空列。
+**关键调参**：封面缩略图从 `aspect-[1200/630]`（约 264px 高）改成固定 `h-56`（224px）。
+图太高会让右侧两张小卡被迫拉成 ~230px，而摘要只有 2–3 行 → 俗称「空盒子」。
+压到 224 后整行约 455px，两张小卡各 ~210px，空白可接受。
+
+**顺手修的既有 bug**：卡片底栏 `flex items-center justify-between` 在 390px 下
+「日期 • 时长 • 分类」和「Read Full Article」会重叠 → 改 `flex-wrap` + `gap`。
+
+**CI 坑**：`check-map-key.mjs` 只做文本匹配，`{row.posts.map(p => renderCard(p))}`
+这种「key 在函数返回的 JSX 里」的写法它认不出来 → 必须把卡片抽成
+`function BlogCard(...)` 组件，调用处 `key={p.slug}` 显式可见。**规则不放宽**。
+
+**验证**：本地截图 1400/768/390 三档 + CDP 点分类按钮验证筛选态 + RTL；
+线上 48/48 列表页新布局生效、`__next_error__` 为 0。提交 `fc80a36`。
+
+**残留（既有问题，未动）**：390px 下顶部导航 6 个控件（搜索/WhatsApp/Email/Sign In/Free Check）
+挤爆 6px，导致 `document.scrollWidth=396 > 390`，底部固定导航跟着撑到 396。
+属 Navbar 组件问题，不是列表页，需单独确认后再改。

@@ -604,11 +604,16 @@ frontmatter 无字段、`posts.ts` 不读、列表页纯文字卡片、详情页
   `public/images/blog/<slug>/cover.webp` 是否存在，存在返回 `/images/blog/<slug>/cover.webp`，
   否则 undefined；`PostMeta.cover?: string` 由 `parsePost` 填充。
 - **详情页 = 封面做 hero 背景**（用户要求，第一版放正文前卡片的方案已废弃）：
-  hero `<section>` 内绝对定位 `<img>`（`object-cover scale-110` + **`blur-[6px]`**，
-  `alt="" aria-hidden`）+ **`bg-primary-navy/80` 蒙版** + 原有
-  `from-primary-navy/35 via-primary-navy/60 to-primary-navy` 渐变。
-  **为什么必须模糊**：封面多是信息图/带大字标题，不模糊就出现「两层文字打架」
-  （实测 3px 仍能读出图里的标题，6px 才变成纯纹理）。无封面 → 保持纯深蓝 hero。
+  hero `<section>` 内绝对定位 `<img>`（`object-cover object-center scale-110`，
+  filter `blur-[3px] brightness-[0.55] contrast-[1.15]`，`alt="" aria-hidden`）
+  + **`bg-primary-navy/45` 色调层** + 渐变 `from-primary-navy/25 via-primary-navy/55 to-primary-navy`。
+  **调参过程（两轮，都实测过截图）**：
+  ① 首版 veil 70%、不模糊 → 图里的大字与页面标题「两层文字打架」，读不下去；
+  ② veil 80% + blur 6px → 干净了，但用户反馈「背景图看不太出来」；
+  ③ 现版 veil 45% + blur 3px + **给图整体压亮度（brightness 0.55）** → 图清楚可见，
+     白字对比度靠「压暗图」而不是「糊平图」保住，两层文字也不会读出。
+  **经验**：信息图当 hero 背景，靠 `brightness` 压暗比靠加厚蒙版/大模糊更能兼顾可见度与可读性。
+  无封面 → 保持纯深蓝 hero。
 - 详情页 `generateMetadata`：`openGraph`/`twitter` 传封面，**fallback 回 `og-image.png`**；
   `BlogPosting` JSON-LD 补 `image: [SITE_URL+cover]`。
 - 列表页卡片：`aspect-[1200/630]` 缩略图 + hover 轻微放大，**无封面不留白**。
@@ -618,4 +623,4 @@ frontmatter 无字段、`posts.ts` 不读、列表页纯文字卡片、详情页
 **验证**：本地 `next build` 818 页通过 + chromium 本地截图核对（桌面/移动/RTL 三档）；线上 48 语言 × 2 篇 = **96/96** 页面 hero 都带封面/蒙版；
 无封面文章（ccc / green-coffee 等 8 语言抽查）不误显示；封面图 200 + `image/webp`
 （主域 `/images/blog/*` 走边缘代理）；og:image / JSON-LD 均指向对应封面；`__next_error__` 为 0。
-提交 `3af7fe0` → `705afbe`（hero 背景版）。
+提交 `3af7fe0` → `705afbe`（hero 背景）→ `f2d702b`（调亮可见度）。

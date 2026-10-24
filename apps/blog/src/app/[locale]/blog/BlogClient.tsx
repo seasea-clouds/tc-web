@@ -31,34 +31,29 @@ type ListRow =
   | { kind: 'plain'; posts: PostMeta[] };
 
 /**
- * Magazine flow: a post with a cover gets a wide card, and exactly two cover-less
- * posts fill the column beside it, so every row ends flush instead of leaving one
- * card taller than its neighbour. Everything else is paired two by two.
+ * Group posts into rows **without reordering them**. Posts arrive sorted newest
+ * first, and DOM order is reading order (left to right, top to bottom), so the
+ * visual order always matches the date order.
+ *
+ * A cover card may only take a wide slot when the next two posts have no cover —
+ * that keeps the 1 + 2 flow and the date order at the same time. Any other
+ * sequence falls back to two even cards. Rows stretch, so a row that happens to
+ * mix a cover card with a text card still ends flush.
  */
 function buildRows(posts: PostMeta[]): ListRow[] {
-  const pool = [...posts];
   const rows: ListRow[] = [];
-  while (pool.length > 0) {
-    const head = pool[0];
-    if (head.cover) {
-      // Pairing only works with two cover-less cards: a lone card in a half-row
-      // would just be stretched to the tall card's height and read as an empty box.
-      const spare: number[] = [];
-      for (let k = 1; k < pool.length && spare.length < 2; k += 1) {
-        if (!pool[k].cover) spare.push(k);
-      }
-      if (spare.length === 2) {
-        const smalls = spare.map(k => pool[k]);
-        for (let j = spare.length - 1; j >= 0; j -= 1) pool.splice(spare[j], 1);
-        pool.shift();
-        rows.push({ kind: 'feature', big: head, smalls });
-      } else {
-        pool.shift();
-        const next = pool.shift();
-        rows.push({ kind: 'plain', posts: next ? [head, next] : [head] });
-      }
+  let i = 0;
+  while (i < posts.length) {
+    const head = posts[i];
+    const second = posts[i + 1];
+    const third = posts[i + 2];
+    if (head.cover && second && third && !second.cover && !third.cover) {
+      rows.push({ kind: 'feature', big: head, smalls: [second, third] });
+      i += 3;
     } else {
-      rows.push({ kind: 'plain', posts: pool.splice(0, 2) });
+      const pair = posts.slice(i, i + 2);
+      rows.push({ kind: 'plain', posts: pair });
+      i += pair.length;
     }
   }
   return rows;
@@ -164,7 +159,14 @@ export default function BlogClient({ posts, categories, categoryLabels, locale, 
               </div>
             ) : (
               <div key={`plain-${ri}`} className="grid gap-8 lg:grid-cols-2">
-                {row.posts.map(p => <BlogCard key={p.slug} post={p} heightClass="lg:h-[240px]" {...cardProps} />)}
+                {row.posts.map(p => (
+                  <BlogCard
+                    key={p.slug}
+                    post={p}
+                    heightClass={p.cover ? 'lg:h-[512px]' : 'lg:h-[240px]'}
+                    {...cardProps}
+                  />
+                ))}
               </div>
             )
           )}

@@ -592,3 +592,29 @@ fig-01 与 P0 的 fig-03 是同一张框架图（用户确认可复用），两�
 
 **验证**：48 语言文章页全 200、`__next_error__` 为 0、48/48 页面都引用了配图；
 图片 200 + `image/webp`；列表页/llms.txt/sitemap-<lang>.xml 均含新文章。
+
+## 功能 2026-10-24：博客封面图渲染（此前收了但没用）
+
+**问题**：投稿包每篇带 `cover.webp`（1200×630），但博客代码里没有 cover 概念 ——
+frontmatter 无字段、`posts.ts` 不读、列表页纯文字卡片、详情页 hero 是纯深蓝、
+`og:image` 全站统一 `og-image.png`。**15 篇文章只有 2 篇有图片目录，封面一个都没显示。**
+
+**实现（约定路径，不动 48 语言 mdx）**：
+- `apps/blog/src/lib/posts.ts`：新增 `getCoverPath(slug)`，探测
+  `public/images/blog/<slug>/cover.webp` 是否存在，存在返回 `/images/blog/<slug>/cover.webp`，
+  否则 undefined；`PostMeta.cover?: string` 由 `parsePost` 填充。
+- 详情页：正文前加封面块（`<figure>`，`width/height=1200/630`、`rounded-xl`、
+  `loading="eager"` + `fetchPriority="high"`，`alt={title}`），无封面则整块不渲染。
+- 详情页 `generateMetadata`：`openGraph`/`twitter` 传封面，**fallback 回 `og-image.png`**；
+  `BlogPosting` JSON-LD 补 `image: [SITE_URL+cover]`。
+- 列表页卡片：`aspect-[1200/630]` 缩略图 + hover 轻微放大，**无封面不留白**（卡片顶到文字）。
+- `packages/ui/src/seo.ts`：`sharedOpenGraph` / `sharedTwitter` 新增可选 `image`（绝对 URL 或站内相对路径），
+  不传则维持原品牌图 —— 全站其它页面行为不变。
+
+**坑**：JSX 属性位置不能写 `// @ts-expect-error` 注释，改用 React 19 的 `fetchPriority`
+（React 会输出 `fetchPriority` 到 HTML，HTML 属性名大小写不敏感，浏览器照认）。
+
+**验证**：本地 `next build` 818 页通过；线上 48 语言 × 2 篇 = **96/96** 页面都带封面；
+无封面文章（ccc / green-coffee 等 8 语言抽查）不误显示；封面图 200 + `image/webp`
+（主域 `/images/blog/*` 走边缘代理）；og:image / JSON-LD 均指向对应封面；`__next_error__` 为 0。
+提交 `3af7fe0`。

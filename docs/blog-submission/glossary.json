@@ -1,0 +1,3767 @@
+{
+  "note": "工具包通用术语表（跨文章积累，v1.26 起内建）。只含块级术语契约（S08）——S09 摘要契约绑定单篇摘要结构，不进通用表。检查脚本未显式传 --glossary 时自动加载本文件；条款锚点在某文章母版中找不到时自动跳过（各文章覆盖的概念不同），找得到则逐块校验 require/forbid/count。同概念合理异形以 OR 词形收录（require 数组）。新文章审读出新术语后把条款追加到 terms 数组即可积累。",
+  "terms": [
+    {
+      "id": "supervision-not-access",
+      "zh": "定的是监管",
+      "require": {
+        "ko": [
+          "감독"
+        ],
+        "vi": [
+          "giám sát"
+        ],
+        "id": [
+          "pengawasan"
+        ],
+        "ms": [
+          "pengawasan"
+        ],
+        "th": [
+          "กำกับดูแล"
+        ],
+        "hi": [
+          "निगरानी"
+        ],
+        "bn": [
+          "তদারকি"
+        ],
+        "ur": [
+          "نگرانی"
+        ],
+        "fa": [
+          "نظارت"
+        ],
+        "ne": [
+          "अनुगमन"
+        ],
+        "si": [
+          "අධීක්ෂණ"
+        ],
+        "af": [
+          "toesig"
+        ],
+        "az": [
+          "nəzarət"
+        ],
+        "hu": [
+          "felügyelet"
+        ]
+      },
+      "forbid": {
+        "ko": [
+          "진입 요건을 정한다"
+        ]
+      }
+    },
+    {
+      "id": "timestamp-not-single-order",
+      "zh": "时间戳",
+      "require": {
+        "ko": [
+          "타임스탬프"
+        ],
+        "vi": [
+          "dấu thời gian"
+        ],
+        "id": [
+          "penanda waktu"
+        ],
+        "ms": [
+          "penanda masa"
+        ],
+        "th": [
+          "ประทับเวลา"
+        ],
+        "hi": [
+          "टाइमस्टैम्प"
+        ],
+        "bn": [
+          "সময়মুদ্রা"
+        ],
+        "ur": [
+          "ٹائم اسٹامپ"
+        ],
+        "fa": [
+          "مهر زمانی"
+        ],
+        "ne": [
+          "समयछाप"
+        ],
+        "si": [
+          "කාල මුද්‍රාව"
+        ],
+        "af": [
+          "tydstempel"
+        ],
+        "az": [
+          "zaman möhürü"
+        ],
+        "hu": [
+          "időbélyeg"
+        ]
+      },
+      "forbid": {
+        "ko": [
+          "한 건이라도 안 맞으면"
+        ]
+      }
+    },
+    {
+      "id": "stock-does-not-get-lost",
+      "zh": "不会丢",
+      "require": {
+        "ko": [
+          "사라지지 않"
+        ],
+        "vi": [
+          "không mất"
+        ],
+        "id": [
+          "tidak lenyap"
+        ],
+        "ms": [
+          "tidak lenyap"
+        ],
+        "th": [
+          "ไม่หาย"
+        ],
+        "hi": [
+          "गायब नहीं"
+        ],
+        "bn": [
+          "হারায় না"
+        ],
+        "fa": [
+          "گم نمی"
+        ],
+        "ne": [
+          "हराउँदैन"
+        ],
+        "si": [
+          "නැති වන්නේ නැත"
+        ],
+        "af": [
+          "verdwyn nie"
+        ],
+        "az": [
+          "itmir"
+        ],
+        "hu": [
+          "nem tűnik el"
+        ]
+      },
+      "forbid": {}
+    },
+    {
+      "id": "policy-is-public",
+      "zh": "政策是公开的",
+      "require": {
+        "fa": [
+          "سیاست عمومی"
+        ],
+        "ne": [
+          "नीति सार्वजनिक"
+        ],
+        "si": [
+          "ප්‍රතිපත්තිය ප්‍රසිද්ධ"
+        ],
+        "af": [
+          "beleid is openbaar"
+        ]
+      },
+      "forbid": {}
+    },
+    {
+      "id": "filing-not-declaration",
+      "zh": "最后是备案与归类",
+      "require": {
+        "ar": [
+          "التسجيل"
+        ],
+        "bn": [
+          "ফাইলিং"
+        ],
+        "de": [
+          "Registrierung"
+        ],
+        "hi": [
+          "फाइलिंग"
+        ],
+        "hu": [
+          "nyilvántartásba vétel"
+        ],
+        "id": [
+          "pendaftaran"
+        ],
+        "ko": [
+          "등록"
+        ],
+        "ms": [
+          "pendaftaran"
+        ],
+        "ne": [
+          "फाइलिङ"
+        ],
+        "ro": [
+          "înregistrarea"
+        ],
+        "si": [
+          "ගොනුකිරීම"
+        ],
+        "ta": [
+          "கோப்புப் பதிவு"
+        ],
+        "th": [
+          "การขึ้นทะเบียน"
+        ],
+        "vi": [
+          "đăng ký"
+        ],
+        "ur": [
+          "رجسٹریشن"
+        ],
+        "fa": [
+          "ثبت"
+        ],
+        "ru": [
+          "постановка на учёт"
+        ],
+        "be": [
+          "пастаноўка на ўлік"
+        ],
+        "bg": [
+          "вписване"
+        ],
+        "sr": [
+          "евидентирање"
+        ],
+        "hr": [
+          "evidentiranje"
+        ],
+        "sl": [
+          "evidentiranje"
+        ],
+        "sk": [
+          "evidencia"
+        ],
+        "pl": [
+          "ewidencja"
+        ],
+        "tr": [
+          "kayıt"
+        ],
+        "az": [
+          "qeydiyyat"
+        ],
+        "ka": [
+          "აღრიცხვა"
+        ],
+        "hy": [
+          "գրանցում"
+        ],
+        "sq": [
+          "regjistrim"
+        ],
+        "el": [
+          "καταχώριση"
+        ],
+        "af": [
+          "registrasie"
+        ],
+        "sw": [
+          "usajili wa bidhaa"
+        ],
+        "cs": [
+          "evidence"
+        ]
+      },
+      "forbid": {
+        "bg": [
+          "регистрация и класификация"
+        ],
+        "sr": [
+          "регистрација и класификација"
+        ],
+        "hr": [
+          "registracija i klasifikacija"
+        ],
+        "sl": [
+          "registracija in klasifikacija"
+        ],
+        "sk": [
+          "registrácia a klasifikácia"
+        ],
+        "pl": [
+          "rejestracja i klasyfikacja"
+        ],
+        "ka": [
+          "რეგისტრაცია და კლასიფიკაცია"
+        ],
+        "hi": [
+          "पंजीकरण और वर्गीकरण"
+        ],
+        "bn": [
+          "নিবন্ধন ও শ্রেণিবিন্যাস"
+        ],
+        "ne": [
+          "दर्ता र वर्गीकरण"
+        ],
+        "si": [
+          "ලියාපදිංචිය හා වර්ගීකරණය"
+        ],
+        "ta": [
+          "இறுதியில் பதிவு,"
+        ],
+        "sw": [
+          "Hatimaye usajili na uainishaji"
+        ]
+      }
+    },
+    {
+      "id": "declaration-not-announcement",
+      "zh": "申报",
+      "scope": "all",
+      "require": {
+        "af": [
+          "verklaring",
+          "verklaar"
+        ],
+        "sw": [
+          "tamko",
+          "tamkwa"
+        ],
+        "th": [
+          "การสำแดง",
+          "สำแดง",
+          "ใบขนสินค้า"
+        ]
+      },
+      "forbid": {
+        "af": [
+          "aankondig"
+        ],
+        "sw": [
+          "tangazo",
+          "matangazo"
+        ],
+        "th": [
+          "ประกาศ"
+        ]
+      },
+      "count": true
+    },
+    {
+      "id": "compliance-flow-consistency",
+      "zh": "合规流",
+      "scope": "all",
+      "require": {
+        "sw": [
+          "mkondo wa uzingatiaji"
+        ]
+      },
+      "forbid": {
+        "sw": [
+          "ufuatilio"
+        ]
+      },
+      "count": true
+    },
+    {
+      "id": "acceptance-not-handover",
+      "zh": "验收",
+      "scope": "all",
+      "require": {
+        "sr": [
+          "пријем",
+          "примити"
+        ],
+        "sw": [
+          "upokeaji",
+          "kupokelewa",
+          "kupokea"
+        ]
+      },
+      "forbid": {
+        "sw": [
+          "kukabidhi"
+        ]
+      },
+      "count": true
+    },
+    {
+      "id": "customs-clearance-consistency",
+      "zh": "清关",
+      "scope": "all",
+      "require": {
+        "he": [
+          "שחרור"
+        ],
+        "sw": [
+          "uondoshaji wa forodha",
+          "uondoshaji"
+        ]
+      },
+      "forbid": {
+        "he": [
+          "ניקוי"
+        ],
+        "sw": [
+          "utatuzi wa forodha"
+        ]
+      },
+      "count": true
+    },
+    {
+      "id": "cross-border-not-borderland",
+      "zh": "保税跨境贸易电子商务",
+      "require": {
+        "az": [
+          "transsərhəd"
+        ],
+        "hy": [
+          "անդրսահմանային"
+        ]
+      },
+      "forbid": {
+        "az": [
+          "sərhədətrafı"
+        ],
+        "hy": [
+          "սահմանամերձ"
+        ]
+      }
+    },
+    {
+      "id": "bonded-ecommerce-short-name",
+      "zh": "平时就叫保税电商",
+      "require": {
+        "uk": [
+          "митного складу"
+        ],
+        "it": [
+          "deposito doganale"
+        ],
+        "az": [
+          "elektron ticarəti"
+        ],
+        "hy": [
+          "պահեստի ռեժիմով"
+        ]
+      }
+    },
+    {
+      "id": "who-repairs-not-assembles",
+      "zh": "谁修：",
+      "require": {
+        "ka": [
+          "შეაკეთებს"
+        ]
+      },
+      "forbid": {
+        "ka": [
+          "ააწყობს"
+        ]
+      }
+    },
+    {
+      "id": "break-shows-in-ledger",
+      "zh": "断在哪账上先看得出来",
+      "require": {
+        "si": [
+          "කැඩීම"
+        ]
+      },
+      "forbid": {
+        "si": [
+          "ඇදීම"
+        ]
+      }
+    },
+    {
+      "id": "warehouse-not-mountain",
+      "zh": "仓库说签收记录",
+      "require": {
+        "af": [
+          "pakhuis"
+        ]
+      },
+      "forbid": {
+        "af": [
+          "Die berg"
+        ]
+      }
+    },
+    {
+      "id": "tariff-code-standard",
+      "zh": "税号",
+      "scope": "all",
+      "require": {
+        "ja": [
+          "HSコード"
+        ],
+        "ko": [
+          "HS 코드"
+        ],
+        "th": [
+          "รหัสภาษีศุลกากร"
+        ],
+        "vi": [
+          "mã HS",
+          "Mã HS"
+        ]
+      },
+      "count": true
+    },
+    {
+      "id": "reconciliation-not-agreement",
+      "zh": "对账",
+      "scope": "all",
+      "require": {
+        "el": [
+          "αντιπαραβολή"
+        ]
+      },
+      "count": true
+    },
+    {
+      "id": "load-transfer-verb",
+      "zh": "传力",
+      "scope": "all",
+      "require": {
+        "ms": [
+          "menyalurkan"
+        ],
+        "sw": [
+          "kuhamishiana",
+          "zinahamishiana"
+        ]
+      },
+      "forbid": {
+        "ms": [
+          "mengerahkan"
+        ]
+      },
+      "count": true
+    },
+    {
+      "id": "three-documents-consistency",
+      "zh": "三单对不上",
+      "note": "b22 传力链：S5 的三份文件（订单/支付/物流）必须以「三」开头；这是 1210 三单一致在正文里的复现",
+      "require": {
+        "af": [
+          "drie dokumente"
+        ],
+        "ar": [
+          "الثلاثة"
+        ],
+        "az": [
+          "üç sənəd"
+        ],
+        "be": [
+          "тры дакументы"
+        ],
+        "bg": [
+          "трите документа"
+        ],
+        "bn": [
+          "তিন দলিল"
+        ],
+        "ca": [
+          "tres documents"
+        ],
+        "cs": [
+          "tři dokumenty"
+        ],
+        "da": [
+          "tre dokumenter"
+        ],
+        "de": [
+          "drei Dokumente"
+        ],
+        "el": [
+          "τρία έγγραφα"
+        ],
+        "en": [
+          "three documents"
+        ],
+        "es": [
+          "tres documentos"
+        ],
+        "fa": [
+          "سه سند"
+        ],
+        "fi": [
+          "kolme asiakirjaa"
+        ],
+        "fr": [
+          "trois documents"
+        ],
+        "he": [
+          "שלושת המסמכים"
+        ],
+        "hi": [
+          "तीन दस्तावेज़"
+        ],
+        "hr": [
+          "tri dokumenta"
+        ],
+        "hu": [
+          "három dokumentum"
+        ],
+        "hy": [
+          "երեք փաստաթուղթ"
+        ],
+        "id": [
+          "iga dokumen"
+        ],
+        "it": [
+          "tre documenti"
+        ],
+        "ja": [
+          "三書類"
+        ],
+        "ka": [
+          "სამი დოკუმენტი"
+        ],
+        "ko": [
+          "세 서류"
+        ],
+        "ms": [
+          "iga dokumen"
+        ],
+        "ne": [
+          "तीन कागजात"
+        ],
+        "nl": [
+          "drie documenten"
+        ],
+        "no": [
+          "tre dokumentene"
+        ],
+        "pl": [
+          "rzy dokumenty"
+        ],
+        "pt": [
+          "três documentos"
+        ],
+        "ro": [
+          "trei documente"
+        ],
+        "ru": [
+          "три документа"
+        ],
+        "si": [
+          "ලේඛන තුනක්"
+        ],
+        "sk": [
+          "tri dokumenty"
+        ],
+        "sl": [
+          "trije dokumenti"
+        ],
+        "sq": [
+          "tri dokumentet"
+        ],
+        "sr": [
+          "три документа"
+        ],
+        "sv": [
+          "tre dokumenten"
+        ],
+        "sw": [
+          "Hati tatu"
+        ],
+        "ta": [
+          "மூன்று ஆவணங்கள்"
+        ],
+        "th": [
+          "เอกสารสามฉบับ"
+        ],
+        "tr": [
+          "üç belgesi"
+        ],
+        "uk": [
+          "три документи"
+        ],
+        "ur": [
+          "تین دستاویز"
+        ],
+        "vi": [
+          "Ba chứng từ"
+        ]
+      }
+    },
+    {
+      "id": "positive-list-consistency",
+      "zh": "正面清单",
+      "note": "跨文章通用：阿拉伯语两译法（الموجبة=F1 / الإيجابية=P0）与日语两译法（ポジティブリスト=F1 / 正面リスト=P0）均为合理异形，OR 收录。",
+      "require": {
+        "af": [
+          "positiewe lys"
+        ],
+        "ar": [
+          "القائمة الموجبة",
+          "القائمة الإيجابية"
+        ],
+        "az": [
+          "müsbət siyahı"
+        ],
+        "be": [
+          "пазітыўн",
+          "станоўч"
+        ],
+        "bg": [
+          "позитив",
+          "положител"
+        ],
+        "bn": [
+          "ইতিবাচক তালিকা",
+          "পজিটিভ"
+        ],
+        "ca": [
+          "llista positiva"
+        ],
+        "cs": [
+          "pozitivn"
+        ],
+        "da": [
+          "positive liste",
+          "positivliste"
+        ],
+        "de": [
+          "ositivliste"
+        ],
+        "el": [
+          "θετική"
+        ],
+        "en": [
+          "positive list"
+        ],
+        "es": [
+          "lista positiva"
+        ],
+        "fa": [
+          "فهرست مثبت"
+        ],
+        "fi": [
+          "positiiv"
+        ],
+        "fr": [
+          "liste positive"
+        ],
+        "he": [
+          "החיובית"
+        ],
+        "hi": [
+          "सकारात्मक सूची",
+          "पॉजिटिव"
+        ],
+        "hr": [
+          "pozitivn"
+        ],
+        "hu": [
+          "pozitív list"
+        ],
+        "hy": [
+          "դրական ցանկ"
+        ],
+        "id": [
+          "daftar positif"
+        ],
+        "it": [
+          "lista positiva",
+          "elenco positivo"
+        ],
+        "ja": [
+          "ポジティブリスト",
+          "正面リスト"
+        ],
+        "ka": [
+          "დადებით სია",
+          "დადებით"
+        ],
+        "ko": [
+          "긍정목록",
+          "포지티브"
+        ],
+        "ms": [
+          "senarai positif"
+        ],
+        "ne": [
+          "सकारात्मक सूची"
+        ],
+        "nl": [
+          "positieve lijst"
+        ],
+        "no": [
+          "positive listen",
+          "positivlisten"
+        ],
+        "pl": [
+          "pozytywn"
+        ],
+        "pt": [
+          "lista positiva"
+        ],
+        "ro": [
+          "pozitiv"
+        ],
+        "ru": [
+          "позитивн"
+        ],
+        "si": [
+          "ධනාත්මක ලැයිස්තු"
+        ],
+        "sk": [
+          "pozitív"
+        ],
+        "sl": [
+          "pozitivn"
+        ],
+        "sq": [
+          "pozitive"
+        ],
+        "sr": [
+          "позитивн"
+        ],
+        "sv": [
+          "positiva listan",
+          "positivlist"
+        ],
+        "sw": [
+          "orodha chanya"
+        ],
+        "ta": [
+          "நேர்மறை"
+        ],
+        "th": [
+          "บัญชีรายการที่อนุญาต",
+          "รายการเชิงบวก",
+          "เชิงบวก"
+        ],
+        "tr": [
+          "pozitif list"
+        ],
+        "uk": [
+          "позитивн"
+        ],
+        "ur": [
+          "مثبت فہرست"
+        ],
+        "vi": [
+          "danh sách tích cực",
+          "danh mục tích cực"
+        ]
+      },
+      "scope": "all"
+    },
+    {
+      "id": "delivery-receipt-consistency",
+      "zh": "物流记轨迹和签收",
+      "note": "b24 七条流定义句：物流流记录的「轨迹+签收/交付」动词，各语用自己已定的词形（hi/bn/ne/si/ta 为「签字领取」族，其余为「交付」族）",
+      "require": {
+        "af": [
+          "aflewering"
+        ],
+        "ar": [
+          "التسليم"
+        ],
+        "az": [
+          "çatdırılma"
+        ],
+        "be": [
+          "дастаўку"
+        ],
+        "bg": [
+          "доставка"
+        ],
+        "bn": [
+          "সইসহ গ্রহণ"
+        ],
+        "ca": [
+          "lliurament"
+        ],
+        "cs": [
+          "dodání"
+        ],
+        "da": [
+          "levering"
+        ],
+        "de": [
+          "Auslieferung"
+        ],
+        "el": [
+          "παράδοση"
+        ],
+        "en": [
+          "delivery"
+        ],
+        "es": [
+          "entrega"
+        ],
+        "fa": [
+          "تحویل"
+        ],
+        "fi": [
+          "toimituksen"
+        ],
+        "fr": [
+          "livraison"
+        ],
+        "he": [
+          "מסירה"
+        ],
+        "hi": [
+          "हस्ताक्षरित प्राप्ति"
+        ],
+        "hr": [
+          "dostavu"
+        ],
+        "hu": [
+          "kézbesítést"
+        ],
+        "hy": [
+          "առաքում"
+        ],
+        "id": [
+          "serah terima"
+        ],
+        "it": [
+          "consegna"
+        ],
+        "ja": [
+          "引渡し"
+        ],
+        "ka": [
+          "მიწოდება"
+        ],
+        "ko": [
+          "인도"
+        ],
+        "ms": [
+          "penghantaran"
+        ],
+        "ne": [
+          "हस्ताक्षरसहित प्राप्ति"
+        ],
+        "nl": [
+          "levering"
+        ],
+        "no": [
+          "levering"
+        ],
+        "pl": [
+          "dostawę"
+        ],
+        "pt": [
+          "entrega"
+        ],
+        "ro": [
+          "livrarea"
+        ],
+        "ru": [
+          "доставку"
+        ],
+        "si": [
+          "අත්සන් සහිත ලැබීම"
+        ],
+        "sk": [
+          "dodanie"
+        ],
+        "sl": [
+          "dostavo"
+        ],
+        "sq": [
+          "dorëzimin"
+        ],
+        "sr": [
+          "доставу"
+        ],
+        "sv": [
+          "leverans"
+        ],
+        "sw": [
+          "kufikisha"
+        ],
+        "ta": [
+          "கையொப்ப"
+        ],
+        "th": [
+          "ส่งมอบ"
+        ],
+        "tr": [
+          "teslimat"
+        ],
+        "uk": [
+          "доставку"
+        ],
+        "ur": [
+          "ترسیل"
+        ],
+        "vi": [
+          "bàn giao"
+        ]
+      }
+    },
+    {
+      "id": "batch-tracking",
+      "zh": "货流记批次和效期",
+      "note": "b24 七条流定义：货流记录的对象之一是批次（lot/cherga 族）",
+      "require": {
+        "af": [
+          "lotte"
+        ],
+        "ar": [
+          "الدفعات"
+        ],
+        "az": [
+          "partiyaları"
+        ],
+        "be": [
+          "партыі"
+        ],
+        "bg": [
+          "партиди"
+        ],
+        "bn": [
+          "ব্যাচ"
+        ],
+        "ca": [
+          "lots"
+        ],
+        "cs": [
+          "šarže"
+        ],
+        "da": [
+          "partier"
+        ],
+        "de": [
+          "Chargen"
+        ],
+        "el": [
+          "παρτίδες"
+        ],
+        "en": [
+          "batches"
+        ],
+        "es": [
+          "lotes"
+        ],
+        "fa": [
+          "دسته"
+        ],
+        "fi": [
+          "erät"
+        ],
+        "fr": [
+          "lots"
+        ],
+        "he": [
+          "אצווה"
+        ],
+        "hi": [
+          "बैच"
+        ],
+        "hr": [
+          "serije"
+        ],
+        "hu": [
+          "tételeket"
+        ],
+        "hy": [
+          "խմբաքանակներ"
+        ],
+        "id": [
+          "partai"
+        ],
+        "it": [
+          "lotti"
+        ],
+        "ja": [
+          "ロット"
+        ],
+        "ka": [
+          "პარტიებსა"
+        ],
+        "ko": [
+          "로트"
+        ],
+        "ms": [
+          "lot"
+        ],
+        "ne": [
+          "ब्याच"
+        ],
+        "nl": [
+          "partijen"
+        ],
+        "no": [
+          "partier"
+        ],
+        "pl": [
+          "partie"
+        ],
+        "pt": [
+          "lotes"
+        ],
+        "ro": [
+          "loturi"
+        ],
+        "ru": [
+          "партии"
+        ],
+        "si": [
+          "කාණ්ඩ"
+        ],
+        "sk": [
+          "šarže"
+        ],
+        "sl": [
+          "partije"
+        ],
+        "sq": [
+          "partitë"
+        ],
+        "sr": [
+          "серије"
+        ],
+        "sv": [
+          "satser"
+        ],
+        "sw": [
+          "kundi"
+        ],
+        "ta": [
+          "தொகுதி"
+        ],
+        "th": [
+          "ล็อต"
+        ],
+        "tr": [
+          "partileri"
+        ],
+        "uk": [
+          "партії"
+        ],
+        "ur": [
+          "بیچ"
+        ],
+        "vi": [
+          "lô"
+        ]
+      }
+    },
+    {
+      "id": "shelf-life-tracking",
+      "zh": "货流记批次和效期",
+      "note": "b24 七条流定义：货流记录的另一对象是效期（shelf life/срок годности 族）",
+      "require": {
+        "af": [
+          "geldigheid"
+        ],
+        "ar": [
+          "صلاحية"
+        ],
+        "az": [
+          "saxlanma müddət"
+        ],
+        "be": [
+          "прыдатнасці"
+        ],
+        "bg": [
+          "годност"
+        ],
+        "bn": [
+          "মেয়াদ"
+        ],
+        "ca": [
+          "caducitat"
+        ],
+        "cs": [
+          "trvanlivost"
+        ],
+        "da": [
+          "holdbarhed"
+        ],
+        "de": [
+          "Mindesthaltbarkeit"
+        ],
+        "el": [
+          "διάρκεια ζωής"
+        ],
+        "en": [
+          "shelf life"
+        ],
+        "es": [
+          "caducidad"
+        ],
+        "fa": [
+          "مهلت"
+        ],
+        "fi": [
+          "säilyvyyden"
+        ],
+        "fr": [
+          "péremption"
+        ],
+        "he": [
+          "תוקף"
+        ],
+        "hi": [
+          "उपयोग अवधि"
+        ],
+        "hr": [
+          "rok trajanja"
+        ],
+        "hu": [
+          "eltarthatóság"
+        ],
+        "hy": [
+          "պահման ժամկետ"
+        ],
+        "id": [
+          "masa kedaluwarsa"
+        ],
+        "it": [
+          "scadenze"
+        ],
+        "ja": [
+          "賞味期限"
+        ],
+        "ka": [
+          "ვადას"
+        ],
+        "ko": [
+          "유효기간"
+        ],
+        "ms": [
+          "jangka hayat"
+        ],
+        "ne": [
+          "म्याद"
+        ],
+        "nl": [
+          "houdbaarheid"
+        ],
+        "no": [
+          "holdbarhet"
+        ],
+        "pl": [
+          "przydatności"
+        ],
+        "pt": [
+          "prazo de validade"
+        ],
+        "ro": [
+          "valabilitate"
+        ],
+        "ru": [
+          "срок годности"
+        ],
+        "si": [
+          "කල් තබන"
+        ],
+        "sk": [
+          "trvanlivosť"
+        ],
+        "sl": [
+          "rok trajanja"
+        ],
+        "sq": [
+          "afatin"
+        ],
+        "sr": [
+          "рок трајања"
+        ],
+        "sv": [
+          "hållbarhet"
+        ],
+        "sw": [
+          "muda wa matumizi"
+        ],
+        "ta": [
+          "காலம"
+        ],
+        "th": [
+          "หมดอายุ"
+        ],
+        "tr": [
+          "raf"
+        ],
+        "uk": [
+          "придатності"
+        ],
+        "ur": [
+          "مدت"
+        ],
+        "vi": [
+          "hạn dùng"
+        ]
+      }
+    },
+    {
+      "id": "credit-note-flow",
+      "zh": "开票流记发票和冲红",
+      "note": "b24 开票流：冲红 = 贷记凭证（赤伝/대변표/credit note/Gutschrift 族）；b27 的复现由断言决定 scope",
+      "require": {
+        "af": [
+          "kredietnotas"
+        ],
+        "ar": [
+          "إشعارات الدائن"
+        ],
+        "az": [
+          "kredit qeydləri"
+        ],
+        "be": [
+          "крэдытовыя запісы"
+        ],
+        "bg": [
+          "кредитни известия"
+        ],
+        "bn": [
+          "ক্রেডিট নোট"
+        ],
+        "ca": [
+          "abonaments"
+        ],
+        "cs": [
+          "opravné doklady"
+        ],
+        "da": [
+          "kreditnotaer"
+        ],
+        "de": [
+          "Gutschriften"
+        ],
+        "el": [
+          "πιστωτικά"
+        ],
+        "en": [
+          "credit notes"
+        ],
+        "es": [
+          "abonos"
+        ],
+        "fa": [
+          "یادداشت‌های اعتباری"
+        ],
+        "fi": [
+          "hyvityslaskut"
+        ],
+        "fr": [
+          "avoirs"
+        ],
+        "he": [
+          "זיכויים"
+        ],
+        "hi": [
+          "क्रेडिट नोट"
+        ],
+        "hr": [
+          "knjižna odobrenja"
+        ],
+        "hu": [
+          "jóváírásokat"
+        ],
+        "hy": [
+          "վարկային ծանուցումներ"
+        ],
+        "id": [
+          "nota kredit"
+        ],
+        "it": [
+          "note di credito"
+        ],
+        "ja": [
+          "赤伝"
+        ],
+        "ka": [
+          "კრედიტო შენიშვნებს"
+        ],
+        "ko": [
+          "대변표"
+        ],
+        "ms": [
+          "nota kredit"
+        ],
+        "ne": [
+          "क्रेडिट नोट"
+        ],
+        "nl": [
+          "creditnota"
+        ],
+        "no": [
+          "kreditnotaer"
+        ],
+        "pl": [
+          "noty korygujące"
+        ],
+        "pt": [
+          "notas de crédito"
+        ],
+        "ro": [
+          "notele de credit"
+        ],
+        "ru": [
+          "кредитные авизо"
+        ],
+        "si": [
+          "සටහන්"
+        ],
+        "sk": [
+          "opravné doklady"
+        ],
+        "sl": [
+          "dobropisi"
+        ],
+        "sq": [
+          "notat e kreditit"
+        ],
+        "sr": [
+          "кредитне исправе"
+        ],
+        "sv": [
+          "kreditnotor"
+        ],
+        "sw": [
+          "noti za mkopo"
+        ],
+        "ta": [
+          "கடன் குறிப்பு"
+        ],
+        "th": [
+          "ใบลดหนี้"
+        ],
+        "tr": [
+          "alacak pusulalarını"
+        ],
+        "uk": [
+          "сторно"
+        ],
+        "ur": [
+          "کریڈٹ نوٹ"
+        ],
+        "vi": [
+          "chứng từ ghi có"
+        ]
+      }
+    },
+    {
+      "id": "ledger-consistency",
+      "zh": "台账",
+      "note": "b28 没有台账的版本 / b33 账还记在同一套台账上：同一套账概念两处同词（book/ledger/帳簿 族）",
+      "require": {
+        "af": [
+          "boek"
+        ],
+        "ar": [
+          "دفتر"
+        ],
+        "az": [
+          "Kitab"
+        ],
+        "be": [
+          "кніг"
+        ],
+        "bg": [
+          "книг"
+        ],
+        "bn": [
+          "বই"
+        ],
+        "ca": [
+          "llibre"
+        ],
+        "cs": [
+          "knih"
+        ],
+        "da": [
+          "regnskab",
+          "konto",
+          "bog"
+        ],
+        "de": [
+          "Buch",
+          "Konto"
+        ],
+        "el": [
+          "βιβλίο"
+        ],
+        "en": [
+          "ledger"
+        ],
+        "es": [
+          "libro"
+        ],
+        "fa": [
+          "دفتر"
+        ],
+        "fi": [
+          "kirjanpito",
+          "kirja"
+        ],
+        "fr": [
+          "registre"
+        ],
+        "he": [
+          "ספר"
+        ],
+        "hi": [
+          "बही",
+          "लेजर"
+        ],
+        "hr": [
+          "knjig"
+        ],
+        "hu": [
+          "könyv"
+        ],
+        "hy": [
+          "գրք",
+          "գիրք"
+        ],
+        "id": [
+          "buku"
+        ],
+        "it": [
+          "registro"
+        ],
+        "ja": [
+          "帳簿",
+          "台帳"
+        ],
+        "ka": [
+          "წიგნ"
+        ],
+        "ko": [
+          "장부",
+          "대장"
+        ],
+        "ms": [
+          "buku"
+        ],
+        "ne": [
+          "किताब"
+        ],
+        "nl": [
+          "boek"
+        ],
+        "no": [
+          "regnskap",
+          "konto",
+          "bok"
+        ],
+        "pl": [
+          "księg"
+        ],
+        "pt": [
+          "livro",
+          "conta"
+        ],
+        "ro": [
+          "registru",
+          "registre"
+        ],
+        "ru": [
+          "книг"
+        ],
+        "si": [
+          "පොත"
+        ],
+        "sk": [
+          "knih"
+        ],
+        "sl": [
+          "knjig"
+        ],
+        "sq": [
+          "libër",
+          "libri"
+        ],
+        "sr": [
+          "књиг"
+        ],
+        "sv": [
+          "räkenskap",
+          "bok"
+        ],
+        "sw": [
+          "daftari",
+          "kitabu"
+        ],
+        "ta": [
+          "புத்தகம்"
+        ],
+        "th": [
+          "สมุด",
+          "บัญชี"
+        ],
+        "tr": [
+          "Defter"
+        ],
+        "uk": [
+          "книг"
+        ],
+        "ur": [
+          "کھات",
+          "کتاب"
+        ],
+        "vi": [
+          "sổ"
+        ]
+      },
+      "scope": "all"
+    },
+    {
+      "id": "work-package-term",
+      "zh": "挂着十四个工作包",
+      "note": "b4 按工作包往回查 / b16 十四个工作包 / b30 按签字权切 / b44 尾段：同一概念全文同词",
+      "require": {
+        "af": [
+          "werkpak"
+        ],
+        "ar": [
+          "حزمة عمل"
+        ],
+        "az": [
+          "iş paketi"
+        ],
+        "be": [
+          "працоўных пакетаў"
+        ],
+        "bg": [
+          "работни пакета"
+        ],
+        "bn": [
+          "কাজের প্যাকেজ"
+        ],
+        "ca": [
+          "paquets de treball"
+        ],
+        "cs": [
+          "pracovních balíčků"
+        ],
+        "da": [
+          "arbejdspakker"
+        ],
+        "de": [
+          "Arbeitspakete"
+        ],
+        "el": [
+          "πακέτα εργασίας"
+        ],
+        "en": [
+          "work packages"
+        ],
+        "es": [
+          "paquetes de trabajo"
+        ],
+        "fa": [
+          "بسته کار"
+        ],
+        "fi": [
+          "työpaketti"
+        ],
+        "fr": [
+          "lots de travail"
+        ],
+        "he": [
+          "חבילות עבודה"
+        ],
+        "hi": [
+          "कार्य पैकेज"
+        ],
+        "hr": [
+          "radnih paketa"
+        ],
+        "hu": [
+          "munkacsomag"
+        ],
+        "hy": [
+          "աշխատանքային փաթեթ"
+        ],
+        "id": [
+          "paket kerja"
+        ],
+        "it": [
+          "pacchetti di lavoro"
+        ],
+        "ja": [
+          "ワークパッケージ"
+        ],
+        "ka": [
+          "სამუშაო პაკეტი"
+        ],
+        "ko": [
+          "워크패키지"
+        ],
+        "ms": [
+          "pakej kerja"
+        ],
+        "ne": [
+          "कार्य प्याकेज"
+        ],
+        "nl": [
+          "werkpakketten"
+        ],
+        "no": [
+          "arbeidspakker"
+        ],
+        "pl": [
+          "pakietów roboczych"
+        ],
+        "pt": [
+          "pacotes de trabalho"
+        ],
+        "ro": [
+          "pachete de lucru"
+        ],
+        "ru": [
+          "рабочих пакетов"
+        ],
+        "si": [
+          "වැඩ පැකේජ"
+        ],
+        "sk": [
+          "pracovných balíčkov"
+        ],
+        "sl": [
+          "delovnih paketov"
+        ],
+        "sq": [
+          "paketa pune"
+        ],
+        "sr": [
+          "радних пакета"
+        ],
+        "sv": [
+          "arbetspaket"
+        ],
+        "sw": [
+          "Vifurushi vya kazi"
+        ],
+        "ta": [
+          "பணித் தொகுப்பு"
+        ],
+        "th": [
+          "แพ็กเกจงาน"
+        ],
+        "tr": [
+          "iş paketi"
+        ],
+        "uk": [
+          "робочих пакетів"
+        ],
+        "ur": [
+          "ورک پیکجز"
+        ],
+        "vi": [
+          "gói công việc"
+        ]
+      },
+      "scope": "all"
+    },
+    {
+      "id": "signing-authority",
+      "zh": "按签字权切",
+      "note": "b30 切包依据：签字权（tekenreg/Zeichnungsbefugnis/署名権限 族）",
+      "require": {
+        "af": [
+          "tekenreg"
+        ],
+        "ar": [
+          "سلطة التوقيع"
+        ],
+        "az": [
+          "imza səlahiyyət"
+        ],
+        "be": [
+          "праву подпісу"
+        ],
+        "bg": [
+          "право на подпис"
+        ],
+        "bn": [
+          "সইয়ের ক্ষমতা"
+        ],
+        "ca": [
+          "poder de firma"
+        ],
+        "cs": [
+          "pravomoci podpisu"
+        ],
+        "da": [
+          "tegningsbeføjelse"
+        ],
+        "de": [
+          "Zeichnungsbefugnis"
+        ],
+        "el": [
+          "εξουσία υπογραφής"
+        ],
+        "en": [
+          "signing authority"
+        ],
+        "es": [
+          "poder de firma"
+        ],
+        "fa": [
+          "اختیار امضا"
+        ],
+        "fi": [
+          "allekirjoitusoikeuden"
+        ],
+        "fr": [
+          "pouvoir de signature"
+        ],
+        "he": [
+          "סמכות חתימה"
+        ],
+        "hi": [
+          "हस्ताक्षर अधिकार"
+        ],
+        "hr": [
+          "pravu potpisa"
+        ],
+        "hu": [
+          "aláírási jog"
+        ],
+        "hy": [
+          "ստորագրման իրավունք"
+        ],
+        "id": [
+          "kewenangan tanda tangan"
+        ],
+        "it": [
+          "potere di firma"
+        ],
+        "ja": [
+          "署名権限"
+        ],
+        "ka": [
+          "ხელმოწერის უფლებით"
+        ],
+        "ko": [
+          "서명 권한"
+        ],
+        "ms": [
+          "kuasa tandatangan"
+        ],
+        "ne": [
+          "हस्ताक्षरको अधिकार"
+        ],
+        "nl": [
+          "tekenbevoegdheid"
+        ],
+        "no": [
+          "tegningsmyndighet"
+        ],
+        "pl": [
+          "prawa podpisu"
+        ],
+        "pt": [
+          "poder de assinatura"
+        ],
+        "ro": [
+          "dreptul de semnătură"
+        ],
+        "ru": [
+          "праву подписи"
+        ],
+        "si": [
+          "අත්සන් බලය"
+        ],
+        "sk": [
+          "právomoci podpisu"
+        ],
+        "sl": [
+          "pristojnosti podpisa"
+        ],
+        "sq": [
+          "nënshkrimit"
+        ],
+        "sr": [
+          "праву потписа"
+        ],
+        "sv": [
+          "signaturbehörighet"
+        ],
+        "sw": [
+          "mamlaka ya kusaini"
+        ],
+        "ta": [
+          "கையொப்ப அதிகார"
+        ],
+        "th": [
+          "อำนาจเซ็น"
+        ],
+        "tr": [
+          "imza yetkisi"
+        ],
+        "uk": [
+          "правом підпису"
+        ],
+        "ur": [
+          "دستخط کے اختیار"
+        ],
+        "vi": [
+          "quyền ký"
+        ]
+      }
+    },
+    {
+      "id": "blue-hat-registration",
+      "zh": "蓝帽子、保税、一般贸易",
+      "note": "b36 注册路径取舍：蓝帽子为中文监管俗称，48 语中 42 语保留 blue hat、de Blue-Hat、nl blauwe hoed、ja ブルーハット、ko 블루햇",
+      "require": {
+        "af": [
+          "blue hat"
+        ],
+        "ar": [
+          "blue hat"
+        ],
+        "az": [
+          "blue hat"
+        ],
+        "be": [
+          "blue hat"
+        ],
+        "bg": [
+          "blue hat"
+        ],
+        "bn": [
+          "blue hat"
+        ],
+        "ca": [
+          "blue hat"
+        ],
+        "cs": [
+          "blue hat"
+        ],
+        "da": [
+          "blue hat"
+        ],
+        "el": [
+          "blue hat"
+        ],
+        "en": [
+          "blue hat"
+        ],
+        "es": [
+          "blue hat"
+        ],
+        "fa": [
+          "blue hat"
+        ],
+        "fi": [
+          "blue hat"
+        ],
+        "fr": [
+          "blue hat"
+        ],
+        "he": [
+          "blue hat"
+        ],
+        "hi": [
+          "blue hat"
+        ],
+        "hr": [
+          "blue hat"
+        ],
+        "hu": [
+          "blue hat"
+        ],
+        "hy": [
+          "blue hat"
+        ],
+        "id": [
+          "blue hat"
+        ],
+        "it": [
+          "blue hat"
+        ],
+        "ka": [
+          "blue hat"
+        ],
+        "ms": [
+          "blue hat"
+        ],
+        "ne": [
+          "blue hat"
+        ],
+        "no": [
+          "blue hat"
+        ],
+        "pl": [
+          "blue hat"
+        ],
+        "pt": [
+          "blue hat"
+        ],
+        "ro": [
+          "blue hat"
+        ],
+        "ru": [
+          "blue hat"
+        ],
+        "si": [
+          "blue hat"
+        ],
+        "sk": [
+          "blue hat"
+        ],
+        "sl": [
+          "blue hat"
+        ],
+        "sq": [
+          "blue hat"
+        ],
+        "sr": [
+          "blue hat"
+        ],
+        "sv": [
+          "blue hat"
+        ],
+        "sw": [
+          "blue hat"
+        ],
+        "ta": [
+          "blue hat"
+        ],
+        "th": [
+          "blue hat"
+        ],
+        "tr": [
+          "blue hat"
+        ],
+        "uk": [
+          "blue hat"
+        ],
+        "ur": [
+          "blue hat"
+        ],
+        "vi": [
+          "blue hat"
+        ],
+        "de": [
+          "blue-hat"
+        ],
+        "nl": [
+          "blauwe hoed"
+        ],
+        "ja": [
+          "ブルーハット"
+        ],
+        "ko": [
+          "블루햇"
+        ]
+      }
+    },
+    {
+      "id": "responsible-party-b0",
+      "zh": "有没有一个主体愿意为整件事负责",
+      "require": {
+        "af": "party",
+        "ar": "طرف",
+        "az": "tərəf",
+        "be": "бок",
+        "bg": "страна",
+        "bn": "পক্ষ",
+        "ca": "part",
+        "cs": "strana",
+        "da": "part",
+        "de": "Partei",
+        "el": "μέρος",
+        "en": "party",
+        "es": "parte",
+        "fa": "طرف",
+        "fi": "osapuol",
+        "fr": "partie",
+        "he": "צד",
+        "hi": "पक्ष",
+        "hr": "strana",
+        "hu": "fél",
+        "hy": "կողմ",
+        "id": "pihak",
+        "it": "parte",
+        "ja": "主体",
+        "ka": "მხარე",
+        "ko": "주체",
+        "ms": "pihak",
+        "ne": "पक्ष",
+        "nl": "partij",
+        "no": "part",
+        "pl": "strona",
+        "pt": "parte",
+        "ro": "parte",
+        "ru": "сторона",
+        "si": "පාර්ශ්ව",
+        "sk": "strana",
+        "sl": "stran",
+        "sq": "palë",
+        "sr": "страна",
+        "sv": "part",
+        "sw": "upande",
+        "ta": "தரப்பு",
+        "th": "ฝ่าย",
+        "tr": "taraf",
+        "uk": "сторона",
+        "ur": "فریق",
+        "vi": "bên"
+      }
+    },
+    {
+      "id": "backstop-chain-b0",
+      "zh": "找不到一个真正兜底的主体",
+      "require": {
+        "af": "ketting",
+        "ar": "السلسلة",
+        "az": "zəncir",
+        "be": "ланцуг",
+        "bg": "верига",
+        "bn": "শৃঙ্খল",
+        "ca": "cadena",
+        "cs": "konečn",
+        "da": "kæd",
+        "de": "Kette",
+        "el": "αλυσίδα",
+        "en": "chain",
+        "es": "cadena",
+        "fa": "زنجیره",
+        "fi": "ketju",
+        "fr": "chaîne",
+        "he": "שרשרת",
+        "hi": "शृंखला",
+        "hr": "krajnj",
+        "hu": "lánc",
+        "hy": "շղթա",
+        "id": "rantai",
+        "it": "filiera",
+        "ja": "チェーン",
+        "ka": "ჯაჭვ",
+        "ko": "사슬",
+        "ms": "rantaian",
+        "ne": "शृंखला",
+        "nl": "keten",
+        "no": "kjed",
+        "pl": "końcow",
+        "pt": "cadeia",
+        "ro": "lanț",
+        "ru": "цепочк",
+        "si": "දාමය",
+        "sk": "konečn",
+        "sl": "končno",
+        "sq": "zinxhir",
+        "sr": "ланац",
+        "sv": "kedj",
+        "sw": "mnyororo",
+        "ta": "சங்கிலி",
+        "th": "ทั้งสาย",
+        "tr": "zincir",
+        "uk": "ланцюг",
+        "ur": "زنجیر",
+        "vi": "chuỗi"
+      }
+    },
+    {
+      "id": "agency-operation-b6",
+      "zh": "代运营只对销售额负责",
+      "require": {
+        "af": "agentskap",
+        "ar": "وكالة",
+        "az": "agentliyi",
+        "be": "агентств",
+        "bg": "Агенци",
+        "bn": "এজেন্সি",
+        "ca": "agència",
+        "cs": "agentura",
+        "da": "bureau",
+        "de": "Agentur",
+        "el": "πρακτορείο",
+        "en": "agency",
+        "es": "agencia",
+        "fa": "آژانس",
+        "fi": "toimisto",
+        "fr": "agence",
+        "he": "סוכנות",
+        "hi": "एजेंसी",
+        "hr": "agencija",
+        "hu": "ügynökség",
+        "hy": "գործակալ",
+        "id": "Agensi",
+        "it": "agenzia",
+        "ja": "EC運営代行",
+        "ka": "სააგენტო",
+        "ko": "대행사",
+        "ms": "Agensi",
+        "ne": "एजेन्सी",
+        "nl": "bureau",
+        "no": "byrå",
+        "pl": "Agencja",
+        "pt": "agência",
+        "ro": "Agenția",
+        "ru": "Агентство",
+        "si": "නියෝජිත",
+        "sk": "agentúra",
+        "sl": "agencija",
+        "sq": "Agjencia",
+        "sr": "Агенција",
+        "sv": "byrån",
+        "sw": "Shirika",
+        "ta": "முகமை",
+        "th": "ผู้ให้บริการบริหารร้าน",
+        "tr": "ajansı",
+        "uk": "Агентство",
+        "ur": "ایجنسی",
+        "vi": "vận hành hộ"
+      }
+    },
+    {
+      "id": "transaction-limits-b10",
+      "zh": "单次与年度交易限值",
+      "require": {
+        "af": "grense",
+        "ar": "حدود",
+        "az": "limit",
+        "be": "ліміт",
+        "bg": "лимит",
+        "bn": "সীমা",
+        "ca": "límit",
+        "cs": "limit",
+        "da": "grænser",
+        "de": "Grenzen",
+        "el": "όρια",
+        "en": "limits",
+        "es": "límite",
+        "fa": "سقف",
+        "fi": "rajat",
+        "fr": "limites",
+        "he": "מגבלות",
+        "hi": "सीमाएँ",
+        "hr": "limite",
+        "hu": "limit",
+        "hy": "սահման",
+        "id": "batas",
+        "it": "limiti",
+        "ja": "限度",
+        "ka": "ლიმიტ",
+        "ko": "한도",
+        "ms": "had",
+        "ne": "सीमा",
+        "nl": "grenzen",
+        "no": "grens",
+        "pl": "limity",
+        "pt": "limites",
+        "ro": "limit",
+        "ru": "лимит",
+        "si": "සීමා",
+        "sk": "limity",
+        "sl": "omejitve",
+        "sq": "kufi",
+        "sr": "лимит",
+        "sv": "gränser",
+        "sw": "paka",
+        "ta": "வரம்பு",
+        "th": "เพดาน",
+        "tr": "sınır",
+        "uk": "ліміт",
+        "ur": "حد",
+        "vi": "hạn mức"
+      }
+    },
+    {
+      "id": "presale-risk-b18",
+      "zh": "预售就是拿库存赌运气",
+      "require": {
+        "af": "voorverkoop",
+        "ar": "البيع المسبق",
+        "az": "ön satış",
+        "be": "прадпродаж",
+        "bg": "предпродажб",
+        "bn": "প্রি সেল",
+        "ca": "prevenda",
+        "cs": "předprodej",
+        "da": "forsalg",
+        "de": "Vorverkauf",
+        "el": "προσπώληση",
+        "en": "preselling",
+        "es": "preventa",
+        "fa": "پیش‌فروش",
+        "fi": "ennakkomyynti",
+        "fr": "prévente",
+        "he": "מכירה מוקדמת",
+        "hi": "प्रीसेल",
+        "hr": "predprodaja",
+        "hu": "előértékesítés",
+        "hy": "նախավաճառք",
+        "id": "presale",
+        "it": "prevendita",
+        "ja": "先行販売",
+        "ka": "წინასწარი გაყიდვა",
+        "ko": "선판매",
+        "ms": "prajualan",
+        "ne": "पूर्वबिक्री",
+        "nl": "voorverkoop",
+        "no": "forsalg",
+        "pl": "presprzedaż",
+        "pt": "pré venda",
+        "ro": "prevânz",
+        "ru": "предпродажа",
+        "si": "පූර්ව විකිණීම",
+        "sk": "predpredaj",
+        "sl": "predprodaja",
+        "sq": "shitja paraprake",
+        "sr": "предпродаја",
+        "sv": "förhandsförsälj",
+        "sw": "mauzo ya awali",
+        "ta": "முன்விற்பனை",
+        "th": "ขายล่วงหน้า",
+        "tr": "ön satış",
+        "uk": "передпродаж",
+        "ur": "پری سیل",
+        "vi": "bán trước"
+      }
+    },
+    {
+      "id": "funds-commission-b20",
+      "zh": "佣金和货款走了同一个口袋",
+      "count": true,
+      "require": {
+        "af": "kommissie",
+        "ar": "العمولة",
+        "az": "komissiya",
+        "be": "камісія",
+        "bg": "комисион",
+        "bn": "কমিশন",
+        "ca": "comissi",
+        "cs": "provize",
+        "da": "provision",
+        "de": "Provision",
+        "el": "προμήθεια",
+        "en": "commission",
+        "es": "comision",
+        "fa": "کارمزد",
+        "fi": "palkki",
+        "fr": "commission",
+        "he": "עמלה",
+        "hi": "कमीशन",
+        "hr": "provizija",
+        "hu": "jutalék",
+        "hy": "միջնորդավճառ",
+        "id": "komisi",
+        "it": "provvigion",
+        "ja": "コミッション",
+        "ka": "საკომისიო",
+        "ko": "커미션",
+        "ms": "komisen",
+        "ne": "कमिसन",
+        "nl": "commissie",
+        "no": "provisjon",
+        "pl": "prowizja",
+        "pt": "comissõ",
+        "ro": "comision",
+        "ru": "комиссия",
+        "si": "කොමිස්",
+        "sk": "provízia",
+        "sl": "provizija",
+        "sq": "provizion",
+        "sr": "провизија",
+        "sv": "provision",
+        "sw": "kamisheni",
+        "ta": "கமிஷன்",
+        "th": "คอมมิชชัน",
+        "tr": "komisyon",
+        "uk": "комісія",
+        "ur": "کمیشن",
+        "vi": "hoa hồng"
+      }
+    },
+    {
+      "id": "return-rate-thermometer-b21",
+      "zh": "S8 的退货率是运营的体温计",
+      "require": {
+        "af": "termometer",
+        "ar": "ميزان حرارة",
+        "az": "termometr",
+        "be": "тэрмометр",
+        "bg": "термометър",
+        "bn": "থার্মোমিটার",
+        "ca": "termòmetre",
+        "cs": "teploměr",
+        "da": "termometer",
+        "de": "thermom",
+        "el": "θερμόμετρο",
+        "en": "thermometer",
+        "es": "termómetro",
+        "fa": "دماسنج",
+        "fi": "kuumemittari",
+        "fr": "thermomètre",
+        "he": "מדחום",
+        "hi": "थर्मामीटर",
+        "hr": "termometar",
+        "hu": "lázmérő",
+        "hy": "ջերմաչափ",
+        "id": "termometer",
+        "it": "termometro",
+        "ja": "体温計",
+        "ka": "თერმომე",
+        "ko": "체온계",
+        "ms": "termometer",
+        "ne": "तापमापक",
+        "nl": "thermom",
+        "no": "termometer",
+        "pl": "termometr",
+        "pt": "termómetr",
+        "ro": "termometr",
+        "ru": "термометр",
+        "si": "උෂ්ණත්වමාන",
+        "sk": "teplomer",
+        "sl": "termometer",
+        "sq": "termometri",
+        "sr": "термометар",
+        "sv": "termometer",
+        "sw": "thermometri",
+        "ta": "அளவி",
+        "th": "เทอร์โมมิเตอร์",
+        "tr": "ateşölçer",
+        "uk": "термометр",
+        "ur": "تھرمامیٹر",
+        "vi": "nhiệt kế"
+      }
+    },
+    {
+      "id": "membership-data-b21",
+      "zh": "退货流程没建好，会员数据就是脏的",
+      "require": {
+        "af": "lidmaatskap",
+        "ar": "العضوية",
+        "az": "üzvlük",
+        "be": "членск",
+        "bg": "членство",
+        "bn": "সদস্যপদ",
+        "ca": "pertinença",
+        "cs": "členství",
+        "da": "medlemsdat",
+        "de": "Mitglied",
+        "el": "μέλους",
+        "en": "membership",
+        "es": "membresía",
+        "fa": "عضویت",
+        "fi": "jäsen",
+        "fr": "adhésion",
+        "he": "חברות",
+        "hi": "सदस्यता",
+        "hr": "člansk",
+        "hu": "tagság",
+        "hy": "անդամակցության",
+        "id": "keanggotaan",
+        "it": "membership",
+        "ja": "会員",
+        "ka": "წევრობა",
+        "ko": "멤버십",
+        "ms": "keahlian",
+        "ne": "सदस्यता",
+        "nl": "leden",
+        "no": "medlemsd",
+        "pl": "członkostw",
+        "pt": "associação",
+        "ro": "apartenență",
+        "ru": "членск",
+        "si": "සාමාජිකත්ව",
+        "sk": "člensk",
+        "sl": "članski",
+        "sq": "anëtarësi",
+        "sr": "чланск",
+        "sv": "medlemsdat",
+        "sw": "uanachama",
+        "ta": "உறுப்பினர்",
+        "th": "สมาชิก",
+        "tr": "üyelik",
+        "uk": "членськ",
+        "ur": "رکنیت",
+        "vi": "hội viên"
+      }
+    },
+    {
+      "id": "picking-slow-b6",
+      "zh": "订单来了拣货慢、错发漏发",
+      "require": {
+        "af": "samestel",
+        "ar": "الجمع",
+        "az": "yığıl",
+        "be": "камплектаван",
+        "bg": "комплектован",
+        "bn": "সংগ্রহ",
+        "ca": "preparaci",
+        "cs": "vybír",
+        "da": "pluk",
+        "de": "Kommissionier",
+        "el": "συλλογή",
+        "en": "picking",
+        "es": "recogida",
+        "fa": "چیدن",
+        "fi": "keräil",
+        "fr": "préparat",
+        "he": "איסוף",
+        "hi": "उठाई",
+        "hr": "kompletiran",
+        "hu": "kiválaszt",
+        "hy": "հավաքում",
+        "id": "pemilihan",
+        "it": "preparazion",
+        "ja": "ピッキング",
+        "ka": "შეგროვ",
+        "ko": "피킹",
+        "ms": "pengutip",
+        "ne": "टिपाइ",
+        "nl": "pluk",
+        "no": "plukk",
+        "pl": "kompletowan",
+        "pt": "separaç",
+        "ro": "strâng",
+        "ru": "сбор",
+        "si": "ගැනීම",
+        "sk": "vybera",
+        "sl": "kompletniran",
+        "sq": "mbledh",
+        "sr": "комплетира",
+        "sv": "plock",
+        "sw": "ukusanyaj",
+        "ta": "எடுப்பு",
+        "th": "เก็บของ",
+        "tr": "toplam",
+        "uk": "комплектац",
+        "ur": "چنن",
+        "vi": "soạn"
+      }
+    },
+    {
+      "id": "wrong-shipment-b6",
+      "zh": "订单来了拣货慢、错发漏发",
+      "require": {
+        "af": "versend",
+        "ar": "شحنات",
+        "az": "göndəriş",
+        "be": "адпраўлен",
+        "bg": "пратк",
+        "bn": "চালান",
+        "ca": "enviam",
+        "cs": "zásilk",
+        "da": "afsendels",
+        "de": "sendungen",
+        "el": "αποστολ",
+        "en": "shipments",
+        "es": "envío",
+        "fa": "ارسال",
+        "fi": "lähetyks",
+        "fr": "envoi",
+        "he": "משלוח",
+        "hi": "शिपमेंट",
+        "hr": "pošiljk",
+        "hu": "küldemény",
+        "hy": "առաքում",
+        "id": "kiriman",
+        "it": "spedizion",
+        "ja": "出荷",
+        "ka": "გზავნილ",
+        "ko": "오배송",
+        "ms": "hantaran",
+        "ne": "शिपमेन्ट",
+        "nl": "zending",
+        "no": "utsendels",
+        "pl": "wysyłk",
+        "pt": "envio",
+        "ro": "expedieri",
+        "ru": "отправлен",
+        "si": "ප්‍රවාහනය",
+        "sk": "zásielk",
+        "sl": "pošiljk",
+        "sq": "dërgesa",
+        "sr": "пошиљк",
+        "sv": "utskick",
+        "sw": "vifurushi",
+        "ta": "அனுப்புதல்",
+        "th": "ส่งผิด",
+        "tr": "sevkiyat",
+        "uk": "відправлен",
+        "ur": "شپمنٹ",
+        "vi": "giao sai"
+      }
+    },
+    {
+      "id": "business-license-b17",
+      "zh": "营业执照与海关注册登记",
+      "require": {
+        "af": "lisensie",
+        "ar": "رخصة",
+        "az": "lisenziya",
+        "be": "ліцэнз",
+        "bg": "лицензия",
+        "bn": "লাইসেন্স",
+        "ca": "llicència",
+        "cs": "licence",
+        "da": "licens",
+        "de": "Lizenz",
+        "el": "άδεια",
+        "en": "licence",
+        "es": "licencia",
+        "fa": "مجوز",
+        "fi": "lupa",
+        "fr": "licence",
+        "he": "רישיון",
+        "hi": "लाइसेंस",
+        "hr": "licenca",
+        "hu": "engedély",
+        "hy": "արտոնագիր",
+        "id": "izin",
+        "it": "licenza",
+        "ja": "営業許可",
+        "ka": "ლიცენზია",
+        "ko": "영업허가",
+        "ms": "lesen",
+        "ne": "इजाजत",
+        "nl": "licentie",
+        "no": "lisens",
+        "pl": "licencja",
+        "pt": "licença",
+        "ro": "licenț",
+        "ru": "лицензия",
+        "si": "බලපත්",
+        "sk": "licencia",
+        "sl": "licenca",
+        "sq": "licencë",
+        "sr": "лиценца",
+        "sv": "licens",
+        "sw": "leseni",
+        "ta": "உரிமம்",
+        "th": "ใบอนุญาต",
+        "tr": "ruhsat",
+        "uk": "ліцензія",
+        "ur": "لائسنس",
+        "vi": "giấy phép"
+      }
+    },
+    {
+      "id": "customs-registration-b17",
+      "zh": "营业执照与海关注册登记",
+      "require": {
+        "af": "registrasie",
+        "ar": "تسجيل",
+        "az": "qeydiyyat",
+        "be": "рэгістрац",
+        "bg": "регистрация",
+        "bn": "নিবন্ধন",
+        "ca": "registre",
+        "cs": "registrace",
+        "da": "registrering",
+        "de": "Registrierung",
+        "el": "εγγραφή",
+        "en": "registration",
+        "es": "registro",
+        "fa": "ثبت",
+        "fi": "rekisteröint",
+        "fr": "enregistrement",
+        "he": "רישום",
+        "hi": "पंजीकरण",
+        "hr": "registracija",
+        "hu": "regisztráció",
+        "hy": "գրանցում",
+        "id": "pendaftaran",
+        "it": "registrazione",
+        "ja": "税関登録",
+        "ka": "რეგისტრაცია",
+        "ko": "등록",
+        "ms": "pendaftaran",
+        "ne": "दर्ता",
+        "nl": "registratie",
+        "no": "registrering",
+        "pl": "rejestracja",
+        "pt": "registo",
+        "ro": "înregistr",
+        "ru": "регистрация",
+        "si": "ලියාපදිංචි",
+        "sk": "registrácia",
+        "sl": "registracija",
+        "sq": "regjistrim",
+        "sr": "регистрација",
+        "sv": "registrering",
+        "sw": "usajili",
+        "ta": "பதிவு",
+        "th": "ขึ้นทะเบียน",
+        "tr": "kayd",
+        "uk": "реєстрація",
+        "ur": "رجسٹریشن",
+        "vi": "đăng ký"
+      }
+    },
+    {
+      "id": "warehouse-ledger-visible-b18",
+      "zh": "保税仓的账也要对品牌方开放",
+      "require": {
+        "af": "boek",
+        "ar": "دفتر",
+        "az": "kitab",
+        "be": "кніг",
+        "bg": "книг",
+        "bn": "খাতা",
+        "ca": "llibre",
+        "cs": "kniha",
+        "da": "regnskab",
+        "de": "Buch",
+        "el": "βιβλίο",
+        "en": "ledger",
+        "es": "libro",
+        "fa": "دفتر",
+        "fi": "kirjanpito",
+        "fr": "registre",
+        "he": "ספר",
+        "hi": "बही",
+        "hr": "knjig",
+        "hu": "könyv",
+        "hy": [
+          "գիրք",
+          "գրք"
+        ],
+        "id": "Buku",
+        "it": "registro",
+        "ja": "帳簿",
+        "ka": "წიგნ",
+        "ko": "장부",
+        "ms": "Buku",
+        "ne": "किताब",
+        "nl": "boek",
+        "no": "regnskap",
+        "pl": "księg",
+        "pt": "livro",
+        "ro": "regist",
+        "ru": "книг",
+        "si": "පොත",
+        "sk": "kniha",
+        "sl": "knjig",
+        "sq": "libr",
+        "sr": "књиг",
+        "sv": "räkenskap",
+        "sw": "daftar",
+        "ta": "புத்தகம்",
+        "th": "สมุด",
+        "tr": "defter",
+        "uk": "книг",
+        "ur": "کھات",
+        "vi": "Sổ"
+      }
+    },
+    {
+      "id": "platform-deposit-b19",
+      "zh": "平台保证金，三样齐了才能开类目",
+      "require": {
+        "af": "deposit",
+        "ar": "تأمين",
+        "az": "depozit",
+        "be": "дэпазіт",
+        "bg": "депозит",
+        "bn": "জামানত",
+        "ca": "dipòs",
+        "cs": "vklad",
+        "da": "kaution",
+        "de": "Kaution",
+        "el": "εγγύηση",
+        "en": "deposit",
+        "es": "depósito",
+        "fa": "تضمین",
+        "fi": "talletus",
+        "fr": "dépôt",
+        "he": "פיקדון",
+        "hi": "जमा",
+        "hr": "polog",
+        "hu": "letét",
+        "hy": "ավանդ",
+        "id": "deposit",
+        "it": "deposito",
+        "ja": "保証金",
+        "ka": "დეპოზიტ",
+        "ko": "보증금",
+        "ms": "deposit",
+        "ne": "जमानत",
+        "nl": "borgsom",
+        "no": "kausjon",
+        "pl": "depozyt",
+        "pt": "depósito",
+        "ro": "depozit",
+        "ru": "депозит",
+        "si": "තැන්පතු",
+        "sk": "vklad",
+        "sl": "depozit",
+        "sq": "depozit",
+        "sr": "депозит",
+        "sv": "deposition",
+        "sw": "amana",
+        "ta": "வைப்புத்தொகை",
+        "th": "ประกัน",
+        "tr": "teminat",
+        "uk": "депозит",
+        "ur": "جمع",
+        "vi": "đặt cọc"
+      }
+    },
+    {
+      "id": "category-opening-b19",
+      "zh": "三样齐了才能开类目",
+      "require": {
+        "af": "kategori",
+        "ar": "الفئة",
+        "az": "kateqoriya",
+        "be": "катэгорыя",
+        "bg": "категори",
+        "bn": "বিভাগ",
+        "ca": "categori",
+        "cs": "kategori",
+        "da": "kategor",
+        "de": "Kategori",
+        "el": "κατηγορία",
+        "en": "categor",
+        "es": "categorí",
+        "fa": "دسته",
+        "fi": "tuoteluok",
+        "fr": "catégori",
+        "he": "קטגוריה",
+        "hi": "श्रेणी",
+        "hr": "kategorij",
+        "hu": "kategóri",
+        "hy": "կատեգորիա",
+        "id": "kategori",
+        "it": "categori",
+        "ja": "カテゴリ",
+        "ka": "კატეგორია",
+        "ko": "카테고리",
+        "ms": "kategori",
+        "ne": "वर्ग",
+        "nl": "categori",
+        "no": "kategor",
+        "pl": "kategori",
+        "pt": "categori",
+        "ro": "categori",
+        "ru": "категория",
+        "si": "කාණ්ඩ",
+        "sk": "kategóri",
+        "sl": "kategorij",
+        "sq": "kategori",
+        "sr": "категориј",
+        "sv": "kategor",
+        "sw": "aina",
+        "ta": "வகை",
+        "th": "หมวด",
+        "tr": "kategori",
+        "uk": "категорія",
+        "ur": "کیٹیگری",
+        "vi": "ngành hàng"
+      }
+    },
+    {
+      "id": "service-fee-split-b20",
+      "zh": "说不清哪笔是货款、哪笔是服务费",
+      "require": {
+        "af": "diensfoo",
+        "ar": "أجر خدمة",
+        "az": "xidmət haqqı",
+        "be": "паслуг",
+        "bg": "такса за услуга",
+        "bn": "সেবার ফি",
+        "ca": "honorari",
+        "cs": "odměn",
+        "da": "honorar",
+        "de": "Dienstentgelt",
+        "el": "αμοιβ",
+        "en": "service fee",
+        "es": "honorarios",
+        "fa": "دستمزد خدمت",
+        "fi": "palvelumaks",
+        "fr": "honoraires",
+        "he": "שכר",
+        "hi": "सेवा शुल्क",
+        "hr": "naknada za uslugu",
+        "hu": "szolgáltatási",
+        "hy": "ծառայության վճար",
+        "id": "jasa",
+        "it": "compensi",
+        "ja": "報酬",
+        "ka": "მომსახურების საფასურ",
+        "ko": "요금",
+        "ms": "perkhidmatan",
+        "ne": "सेवा शुल्क",
+        "nl": "dienstvergoeding",
+        "no": "honorar",
+        "pl": "honorari",
+        "pt": "honorári",
+        "ro": "onorari",
+        "ru": "плата за услугу",
+        "si": "ගාස්තු",
+        "sk": "odmen",
+        "sl": "nadomestilo za storitev",
+        "sq": "honorar",
+        "sr": "накнада за услугу",
+        "sv": "arvoden",
+        "sw": "huduma",
+        "ta": "கூலி",
+        "th": "ค่าบริการ",
+        "tr": "ücret",
+        "uk": "плата за послугу",
+        "ur": "سروس فیس",
+        "vi": "dịch vụ"
+      }
+    },
+    {
+      "id": "remittance-docs-b20",
+      "zh": "汇出前要备的五份文件",
+      "require": {
+        "af": "oordrag",
+        "ar": "التحويل",
+        "az": "köçürmə",
+        "be": "пераклад",
+        "bg": "превод",
+        "bn": "স্থানান্তর",
+        "ca": "remetre",
+        "cs": "převod",
+        "da": "overførsel",
+        "de": "Überweisung",
+        "el": "μεταφορά",
+        "en": "remittance",
+        "es": "remitir",
+        "fa": "انتقال",
+        "fi": "siirto",
+        "fr": "transfert",
+        "he": "העברה",
+        "hi": "हस्तांतरण",
+        "hr": "uplat",
+        "hu": "átutalás",
+        "hy": "փոխանցում",
+        "id": "transfer",
+        "it": "bonifico",
+        "ja": "送金",
+        "ka": "გადარიცხვ",
+        "ko": "송금",
+        "ms": "pemindahan",
+        "ne": "पठाउन",
+        "nl": "overmaking",
+        "no": "overføring",
+        "pl": "przelew",
+        "pt": "remessa",
+        "ro": "transfer",
+        "ru": "перевод",
+        "si": "හුවමාරු",
+        "sk": "prevod",
+        "sl": "nakazil",
+        "sq": "transfert",
+        "sr": "уплат",
+        "sv": "utbetalning",
+        "sw": "uhamisho",
+        "ta": "மாற்ற",
+        "th": "โอน",
+        "tr": "havale",
+        "uk": "переказ",
+        "ur": "منتقلی",
+        "vi": "chuyển"
+      }
+    },
+    {
+      "id": "verification-voucher-b20",
+      "zh": "报关或核销凭证",
+      "require": {
+        "af": "verifikasie",
+        "ar": "التحقق",
+        "az": "şəhadətnamə",
+        "be": "верыфікац",
+        "bg": "верификац",
+        "bn": "যাচাই",
+        "ca": "verificació",
+        "cs": "ověřovací",
+        "da": "verifikations",
+        "de": "Verifizierung",
+        "el": "επαλήθευ",
+        "en": "verification",
+        "es": "verificación",
+        "fa": "تأیید",
+        "fi": "varmennus",
+        "fr": "vérification",
+        "he": "אימות",
+        "hi": "सत्यापन",
+        "hr": "potvrdn",
+        "hu": "hitelesít",
+        "hy": "ստուգման",
+        "id": "verifikasi",
+        "it": "verifica",
+        "ja": "消込",
+        "ka": "დამოწმებ",
+        "ko": "소멸",
+        "ms": "pengesahan",
+        "ne": "प्रमाणीकरण",
+        "nl": "verificatie",
+        "no": "verifiserings",
+        "pl": "weryfikacj",
+        "pt": "verificação",
+        "ro": "verificare",
+        "ru": "верификацион",
+        "si": "තහවුරු",
+        "sk": "overovací",
+        "sl": "potrditven",
+        "sq": "verifikim",
+        "sr": "потврдн",
+        "sv": "verifikations",
+        "sw": "uhakiki",
+        "ta": "சரிபார்ப்பு",
+        "th": "ตรวจสอบ",
+        "tr": "doğrulama",
+        "uk": "верифікаційн",
+        "ur": "تصدیق",
+        "vi": "đối chiếu"
+      }
+    },
+    {
+      "id": "roof-catch-b22",
+      "zh": "最后传到屋顶，由那个责任主体接住",
+      "require": {
+        "af": "dak",
+        "ar": "السقف",
+        "az": "dama",
+        "be": "даху",
+        "bg": "покрив",
+        "bn": "ছাদ",
+        "ca": "sostre",
+        "cs": "střeš",
+        "da": "taget",
+        "de": "Dach",
+        "el": "στέγη",
+        "en": "roof",
+        "es": "techo",
+        "fa": "سقف",
+        "fi": "katolle",
+        "fr": "toit",
+        "he": "גג",
+        "hi": "छत",
+        "hr": "krov",
+        "hu": "tető",
+        "hy": "տանիք",
+        "id": "atap",
+        "it": "tetto",
+        "ja": "屋根",
+        "ka": "სახურავ",
+        "ko": "지붕",
+        "ms": "bumbung",
+        "ne": "छानो",
+        "nl": "dak",
+        "no": "tak",
+        "pl": "dach",
+        "pt": "teto",
+        "ro": "acoperiș",
+        "ru": "крыш",
+        "si": "වහල",
+        "sk": "strech",
+        "sl": "streh",
+        "sq": "kulm",
+        "sr": "кров",
+        "sv": "tak",
+        "sw": "paa",
+        "ta": "கூரை",
+        "th": "หลังคา",
+        "tr": "çatı",
+        "uk": "даху",
+        "ur": "چھت",
+        "vi": "mái"
+      }
+    },
+    {
+      "id": "threshold-structure-b44",
+      "zh": "门槛在结构",
+      "require": {
+        "af": "drempel",
+        "ar": "عتب",
+        "az": "çətin",
+        "be": "парог",
+        "bg": "праг",
+        "bn": "বাধা",
+        "ca": "barre",
+        "cs": "práh",
+        "da": "tærskl",
+        "de": "Hürd",
+        "el": "κατώφλι",
+        "en": "barri",
+        "es": "barre",
+        "fa": "آستانه",
+        "fi": "kynnys",
+        "fr": "barriè",
+        "he": "סף",
+        "hi": "बाधा",
+        "hr": "prag",
+        "hu": "küszöb",
+        "hy": "շեմ",
+        "id": "ambang",
+        "it": "barrier",
+        "ja": "敷居",
+        "ka": "ზღვარ",
+        "ko": "문턱",
+        "ms": "ambang",
+        "ne": "बाधा",
+        "nl": "drempel",
+        "no": "terskel",
+        "pl": "próg",
+        "pt": "barreir",
+        "ro": "prag",
+        "ru": "порог",
+        "si": "බාධක",
+        "sk": "prah",
+        "sl": "prag",
+        "sq": "Prag",
+        "sr": "праг",
+        "sv": "tröskel",
+        "sw": "izingit",
+        "ta": "வாசல்",
+        "th": "อุปสรรค",
+        "tr": "eşik",
+        "uk": "поріг",
+        "ur": "حد",
+        "vi": "ngưỡng"
+      }
+    },
+    {
+      "id": "four-suppliers-split-b0",
+      "zh": "四家供应商各管一段",
+      "require": {
+        "af": "Vier verskaffers",
+        "ar": "أربعة مزودين",
+        "az": "Dörd təchizatçı",
+        "be": "Чатыры пастаўшчыкі",
+        "bg": "Четири доставчика",
+        "bn": "চার সরবরাহকারী",
+        "ca": "Quatre proveïdors",
+        "cs": "Čtyři dodavatelé",
+        "da": "Fire leverandører",
+        "de": "Vier Anbieter",
+        "el": "Τέσσερις προμηθευτές",
+        "en": "Four suppliers",
+        "es": "Cuatro proveedores",
+        "fa": "چهار تأمین",
+        "fi": "Neljä toimittajaa",
+        "fr": "Quatre fournisseurs",
+        "he": "ארבעה ספקים",
+        "hi": "चार आपूर्तिकर्ता",
+        "hr": "Četiri dobavljača",
+        "hu": "Négy beszállító",
+        "hy": "Չորս մատակարար",
+        "id": "Empat pemasok",
+        "it": "Quattro fornitori",
+        "ja": "四社のサプライヤー",
+        "ka": "ოთხი მომწოდებელ",
+        "ko": "네 공급사",
+        "ms": "Empat pembekal",
+        "ne": "चार आपूर्तिकर्ता",
+        "nl": "Vier leveranciers",
+        "no": "Fire leverandører",
+        "pl": "Czterech dostawców",
+        "pt": "Quatro fornecedores",
+        "ro": "Patru furnizori",
+        "ru": "Четыре поставщика",
+        "si": "සැපයුම්කරුවන් හතර",
+        "sk": "Štyria dodávatelia",
+        "sl": "Štirje dobavitelji",
+        "sq": "Katër furnitorë",
+        "sr": "Четири добављача",
+        "sv": "Fyra leverantörer",
+        "sw": "Watoaji wanne",
+        "ta": "நான்கு வழங்குநர்கள்",
+        "th": "ผู้ให้บริการสี่ราย",
+        "tr": "Dört tedarikçi",
+        "uk": "Чотири постачальники",
+        "ur": "چار فراہم کنندگان",
+        "vi": "Bốn nhà cung cấp"
+      }
+    },
+    {
+      "id": "customs-broker-role-b6",
+      "zh": "报关行只对申报数据负责",
+      "require": {
+        "af": "doeaneagent",
+        "ar": "وكيل الجمارك",
+        "az": "gömrük agenti",
+        "be": "мытны агент",
+        "bg": "митническият агент",
+        "bn": "শুল্ক এজেন্ট",
+        "ca": "agent de duanes",
+        "cs": "celní agent",
+        "da": "toldagenten",
+        "de": "zollagent",
+        "el": "τελωνειακός πράκτορας",
+        "en": "customs broker",
+        "es": "agente de aduanas",
+        "fa": "عامل گمرک",
+        "fi": "tulliedustaja",
+        "fr": "commissionnaire en douane",
+        "he": "סוכן המכס",
+        "hi": "शुल्क एजेंट",
+        "hr": "carinski agent",
+        "hu": "vámügynök",
+        "hy": "մաքսայական գործակալ",
+        "id": "agen bea cukai",
+        "it": "sdoganatore",
+        "ja": "通関業者",
+        "ka": "საბაჟო აგენტი",
+        "ko": "통관 대행",
+        "ms": "ejen kastam",
+        "ne": "भन्सार एजेन्ट",
+        "nl": "douane-expediteur",
+        "no": "tollagenten",
+        "pl": "agencja celna",
+        "pt": "despachante",
+        "ro": "agentul vamal",
+        "ru": "таможенный агент",
+        "si": "රේගු නියෝජිතයා",
+        "sk": "colný agent",
+        "sl": "carinski agent",
+        "sq": "agjenti doganor",
+        "sr": "царински агент",
+        "sv": "tullagenten",
+        "sw": "wakala wa forodha",
+        "ta": "சுங்க முகவர்",
+        "th": "ตัวแทนศุลกากร",
+        "tr": "gümrük ajanı",
+        "uk": "митний агент",
+        "ur": "کسٹم ایجنٹ",
+        "vi": "đại lý hải quan"
+      }
+    },
+    {
+      "id": "beam-three-documents-b9",
+      "zh": "梁上是三份文件",
+      "require": {
+        "af": "Drie dokumente",
+        "ar": "ثلاث وثائق",
+        "az": "Üç sənəd",
+        "be": "Тры дакументы",
+        "bg": "Три документа",
+        "bn": "তিনটি দলিল",
+        "ca": "Tres documents",
+        "cs": "Tři dokumenty",
+        "da": "Tre dokumenter",
+        "de": "Drei Dokumente",
+        "el": "Τρία έγγραφα",
+        "en": "Three documents",
+        "es": "Tres documentos",
+        "fa": "سه سند",
+        "fi": "Kolme asiakirjaa",
+        "fr": "Trois textes",
+        "he": "שלושה מסמכים",
+        "hi": "तीन दस्तावेज़",
+        "hr": "Tri dokumenta",
+        "hu": "Három dokumentum",
+        "hy": "Երեք փաստաթուղթ",
+        "id": "Tiga dokumen",
+        "it": "Tre documenti",
+        "ja": "三つの文書",
+        "ka": "სამი დოკუმენტი",
+        "ko": "세 개의 문서",
+        "ms": "Tiga dokumen",
+        "ne": "तीन कागजात",
+        "nl": "Drie documenten",
+        "no": "Tre dokumenter",
+        "pl": "Trzy dokumenty",
+        "pt": "Três documentos",
+        "ro": "Trei documente",
+        "ru": "Три документа",
+        "si": "ලේඛන තුනක්",
+        "sk": "Tri dokumenty",
+        "sl": "Trije dokumenti",
+        "sq": "Tri dokumente",
+        "sr": "Три документа",
+        "sv": "Tre dokument",
+        "sw": "Hati tatu",
+        "ta": "மூன்று ஆவணங்கள்",
+        "th": "เอกสารสามฉบับ",
+        "tr": "Üç belge",
+        "uk": "Три документи",
+        "ur": "تین دستاویز",
+        "vi": "Ba văn bản"
+      }
+    },
+    {
+      "id": "beam-height-metaphor-b14",
+      "zh": "梁的高度就是房子能盖的高度",
+      "require": {
+        "af": "balk",
+        "ar": "العارضة",
+        "az": "tirin",
+        "be": "бэльк",
+        "bg": "гред",
+        "bn": "কড়িকাঠ",
+        "ca": "biga",
+        "cs": "trám",
+        "da": "bjælken",
+        "de": "träger",
+        "el": "δοκ",
+        "en": "beam",
+        "es": "viga",
+        "fa": "تیر",
+        "fi": "parru",
+        "fr": "poutre",
+        "he": "הקורה",
+        "hi": "धरन",
+        "hr": "gred",
+        "hu": "gerenda",
+        "hy": "հեծան",
+        "id": "balok",
+        "it": "trave",
+        "ja": "梁",
+        "ka": "ბალკ",
+        "ko": "보의",
+        "ms": "rasuk",
+        "ne": "बिम",
+        "nl": "balk",
+        "no": "bjelk",
+        "pl": "belk",
+        "pt": "viga",
+        "ro": "grinzii",
+        "ru": "балк",
+        "si": "බාල්ක",
+        "sk": "trám",
+        "sl": "nosilc",
+        "sq": "trar",
+        "sr": "гред",
+        "sv": "balk",
+        "sw": "boriti",
+        "ta": "உத்தர",
+        "th": "คาน",
+        "tr": "kiriş",
+        "uk": "балк",
+        "ur": "بیم",
+        "vi": "dầm"
+      }
+    },
+    {
+      "id": "first-break-info-flow-b26",
+      "zh": "七条流里最先断的通常不是货流",
+      "require": {
+        "af": "informasie",
+        "ar": "المعلومات",
+        "az": "informasiya",
+        "be": "інфармац",
+        "bg": "информац",
+        "bn": "তথ্য",
+        "ca": "informació",
+        "cs": "informač",
+        "da": "informationen",
+        "de": "information",
+        "el": "πληροφορ",
+        "en": "information",
+        "es": "información",
+        "fa": "اطلاعات",
+        "fi": "tieto-",
+        "fr": "information",
+        "he": "המידע",
+        "hi": "सूचना",
+        "hr": "informacijsk",
+        "hu": "informáci",
+        "hy": "տեղեկատվ",
+        "id": "informasi",
+        "it": "informazione",
+        "ja": "情報流",
+        "ka": "ინფორმაც",
+        "ko": "정보류",
+        "ms": "maklumat",
+        "ne": "सूचना",
+        "nl": "informatie",
+        "no": "informasjon",
+        "pl": "informacyj",
+        "pt": "informação",
+        "ro": "informațional",
+        "ru": "информац",
+        "si": "තොරතුරු",
+        "sk": "informač",
+        "sl": "informacijsk",
+        "sq": "informacion",
+        "sr": "информац",
+        "sv": "information",
+        "sw": "habari",
+        "ta": "தகவல",
+        "th": "ข้อมูล",
+        "tr": "bilgi",
+        "uk": "інформац",
+        "ur": "معلومات",
+        "vi": "thông tin"
+      }
+    },
+    {
+      "id": "fourteen-deliverables-b31",
+      "zh": "你付费的对象是十四个交付物",
+      "require": {
+        "af": "veertien",
+        "ar": "أربع عشر",
+        "az": "On dörd",
+        "be": "чатырнаццаць",
+        "bg": "четиринадесет",
+        "bn": "চৌদ্দ",
+        "ca": "catorze",
+        "cs": "čtrnáct",
+        "da": "fjorten",
+        "de": "vierzehn",
+        "el": "δεκατέσσερις",
+        "en": "fourteen",
+        "es": "catorce",
+        "fa": "چهارده",
+        "fi": "neljästätoista",
+        "fr": "quatorze",
+        "he": "ארבעה עשר",
+        "hi": "चौदह",
+        "hr": "četrnaest",
+        "hu": "Tizennégy",
+        "hy": "տասնչորս",
+        "id": "empat belas",
+        "it": "quattordici",
+        "ja": "十四の成果物",
+        "ka": "თოთხმეტ",
+        "ko": "열네",
+        "ms": "empat belas",
+        "ne": "चौध",
+        "nl": "veertien",
+        "no": "fjorten",
+        "pl": "czternaście",
+        "pt": "catorze",
+        "ro": "paisprezece",
+        "ru": "четырнадцать",
+        "si": "දහහතර",
+        "sk": "štrnásť",
+        "sl": "štirinajst",
+        "sq": "katërmbëdhjetë",
+        "sr": "четрнаест",
+        "sv": "fjorton",
+        "sw": "kumi na vinne",
+        "ta": "பதினான்கு",
+        "th": "สิบสี่",
+        "tr": "On dört",
+        "uk": "чотирнадцять",
+        "ur": "چودہ",
+        "vi": "mười bốn"
+      }
+    },
+    {
+      "id": "two-reserved-slots-b33",
+      "zh": "里面有两个预留",
+      "require": {
+        "af": "Twee voorbehoude",
+        "ar": "احتياط",
+        "az": "İki ehtiyat",
+        "be": "Дзве рэзервовыя",
+        "bg": "Две резерви",
+        "bn": "দুটি ব্যাকআপ",
+        "ca": "dues reserves",
+        "cs": "Dvě rezervy",
+        "da": "To reservationer",
+        "de": "Zwei Reserven",
+        "el": "Δύο εφεδρείες",
+        "en": "Two reservations",
+        "es": "dos reservas",
+        "fa": "دو ذخیره",
+        "fi": "Kaksi varautumista",
+        "fr": "deux réserves",
+        "he": "שתי שמורות",
+        "hi": "दो आरक्षण",
+        "hr": "Dvije rezerve",
+        "hu": "Két tartalék",
+        "hy": "Երկու վերապահում",
+        "id": "Dua cadangan",
+        "it": "due riserve",
+        "ja": "二つの予備枠",
+        "ka": "ორი რეზერვი",
+        "ko": "두 가지 예비",
+        "ms": "Dua simpanan",
+        "ne": "दुई आरक्षण",
+        "nl": "Twee reserveringen",
+        "no": "To reservasjoner",
+        "pl": "Dwie rezerwy",
+        "pt": "duas reservas",
+        "ro": "două rezerve",
+        "ru": "Два резерва",
+        "si": "විකල්ප සැලසුම් දෙකක්",
+        "sk": "Dve rezervy",
+        "sl": "Dve rezervi",
+        "sq": "Dy rezerva",
+        "sr": "Две резерве",
+        "sv": "Två reservationer",
+        "sw": "Hifadhi mbili",
+        "ta": "இரண்டு இருப்புகள்",
+        "th": "สองเรื่อง",
+        "tr": "İki rezerv",
+        "uk": "Два резерви",
+        "ur": "دو تحفظات",
+        "vi": "hai phần dự phòng"
+      }
+    },
+    {
+      "id": "four-unanswered-b35",
+      "zh": "四件事它不回答",
+      "require": {
+        "af": "Vier vrae",
+        "ar": "أربعة أسئلة",
+        "az": "dörd sual",
+        "be": "Чатыры пытанні",
+        "bg": "Четири въпроса",
+        "bn": "চারটি প্রশ্ন",
+        "ca": "Quatre preguntes",
+        "cs": "Čtyři otázky",
+        "da": "Fire spørgsmål",
+        "de": "Vier Fragen",
+        "el": "Τέσσερις ερωτήσεις",
+        "en": "Four questions",
+        "es": "Cuatro preguntas",
+        "fa": "چهار پرسش",
+        "fi": "Neljä kysymystä",
+        "fr": "Quatre questions",
+        "he": "ארבע שאלות",
+        "hi": "चार सवाल",
+        "hr": "Četiri pitanja",
+        "hu": "Négy kérdés",
+        "hy": "Չորս հարց",
+        "id": "Empat pertanyaan",
+        "it": "Quattro domande",
+        "ja": "四つの問い",
+        "ka": "ოთხი კითხვა",
+        "ko": "네 가지 물음",
+        "ms": "Empat soalan",
+        "ne": "चार प्रश्न",
+        "nl": "Vier vragen",
+        "no": "Fire spørsmål",
+        "pl": "Cztery pytania",
+        "pt": "Quatro perguntas",
+        "ro": "Patru întrebări",
+        "ru": "Четыре вопроса",
+        "si": "හතරක් ප්‍රශ්න",
+        "sk": "Štyri otázky",
+        "sl": "Štiri vprašanja",
+        "sq": "Katër pyetje",
+        "sr": "Четири питања",
+        "sv": "Fyra frågor",
+        "sw": "Maswali manne",
+        "ta": "நான்கு கேள்விகள்",
+        "th": "สี่คำถาม",
+        "tr": "dört soru",
+        "uk": "Чотири питання",
+        "ur": "چار سوال",
+        "vi": "Bốn câu hỏi"
+      }
+    },
+    {
+      "id": "three-questions-filter-b40",
+      "zh": "问三个问题就够了",
+      "require": {
+        "af": "drie vrae",
+        "ar": "ثلاثة أسئلة",
+        "az": "üç sual",
+        "be": "трох пытанняў",
+        "bg": "три въпроса",
+        "bn": "তিনটি প্রশ্ন",
+        "ca": "tres preguntes",
+        "cs": "tři otázky",
+        "da": "tre spørgsmål",
+        "de": "drei Fragen",
+        "el": "τρεις ερωτήσεις",
+        "en": "three questions",
+        "es": "tres preguntas",
+        "fa": "سه پرسش",
+        "fi": "kolme kysymystä",
+        "fr": "trois questions",
+        "he": "שלוש שאלות",
+        "hi": "तीन सवाल",
+        "hr": "tri pitanja",
+        "hu": "három kérdés",
+        "hy": "երեք հարց",
+        "id": "tiga pertanyaan",
+        "it": "tre domande",
+        "ja": "三つの質問",
+        "ka": "სამი კითხვა",
+        "ko": "세 질문",
+        "ms": "tiga soalan",
+        "ne": "तीन प्रश्न",
+        "nl": "drie vragen",
+        "no": "tre spørsmål",
+        "pl": "trzy pytania",
+        "pt": "três perguntas",
+        "ro": "trei întrebări",
+        "ru": "трёх вопросов",
+        "si": "ප්‍රශ්න තුනක්",
+        "sk": "tri otázky",
+        "sl": "tri vprašanja",
+        "sq": "tri pyetje",
+        "sr": "три питања",
+        "sv": "tre frågor",
+        "sw": "maswali matatu",
+        "ta": "மூன்று கேள்விகள்",
+        "th": "สามคำถาม",
+        "tr": "üç soru",
+        "uk": "трьох питань",
+        "ur": "تین سوال",
+        "vi": "ba câu hỏi"
+      }
+    },
+    {
+      "id": "single-party-agreement-b4",
+      "zh": "品牌方与一家主体签协议",
+      "require": {
+        "af": "party",
+        "ar": "كيان",
+        "az": "tərəf",
+        "be": "суб'ект",
+        "bg": "субект",
+        "bn": "পক্ষ",
+        "ca": "entitat",
+        "cs": "subjekt",
+        "da": "enhed",
+        "de": "einheit",
+        "el": "μέρος",
+        "en": "party",
+        "es": "entidad",
+        "fa": "طرف",
+        "fi": "taho",
+        "fr": "entité",
+        "he": "ישות",
+        "hi": "पक्ष",
+        "hr": "subjekt",
+        "hu": "féllel",
+        "hy": "սուբյեկտ",
+        "id": "pihak",
+        "it": "entità",
+        "ja": "主体",
+        "ka": "სუბიექტ",
+        "ko": "주체",
+        "ms": "pihak",
+        "ne": "पक्ष",
+        "nl": "partij",
+        "no": "enhet",
+        "pl": "podmiot",
+        "pt": "entidade",
+        "ro": "subiect",
+        "ru": "субъект",
+        "si": "පාර්ශ්ව",
+        "sk": "subjekt",
+        "sl": "subjekt",
+        "sq": "subjekt",
+        "sr": "субјек",
+        "sv": "enhet",
+        "sw": "taasisi",
+        "ta": "தரப்",
+        "th": "นิติบุคคล",
+        "tr": "taraf",
+        "uk": "суб'єкт",
+        "ur": "فریق",
+        "vi": "chủ thể"
+      }
+    },
+    {
+      "id": "domestic-entity-b7",
+      "zh": "海关约谈的是境内主体",
+      "require": {
+        "af": "party",
+        "ar": "كيان",
+        "az": "tərəf",
+        "be": "суб'ект",
+        "bg": "субект",
+        "bn": "পক্ষ",
+        "ca": "entitat",
+        "cs": "subjekt",
+        "da": "enhed",
+        "de": "einheit",
+        "el": "μέρος",
+        "en": "entity",
+        "es": "entidad",
+        "fa": "طرف",
+        "fi": "taho",
+        "fr": "entité",
+        "he": "ישות",
+        "hi": "पक्ष",
+        "hr": "subjekt",
+        "hu": "felet",
+        "hy": "սուբյեկտ",
+        "id": "pihak",
+        "it": "entità",
+        "ja": "主体",
+        "ka": "სუბიექტ",
+        "ko": "주체",
+        "ms": "pihak",
+        "ne": "पक्ष",
+        "nl": "entiteit",
+        "no": "enhet",
+        "pl": "podmiot",
+        "pt": "entidade",
+        "ro": "subiect",
+        "ru": [
+          "юрлицо",
+          "субъект"
+        ],
+        "si": "පාර්ශ්ව",
+        "sk": "subjekt",
+        "sl": "subjekt",
+        "sq": "subjekt",
+        "sr": "субјек",
+        "sv": "enhet",
+        "sw": "taasisi",
+        "ta": "தரப்",
+        "th": "นิติบุคคล",
+        "tr": "taraf",
+        "uk": "суб'єкт",
+        "ur": "فریق",
+        "vi": "chủ thể"
+      }
+    },
+    {
+      "id": "operating-entity-b17",
+      "zh": "然后是主体，营业执照与海关注册登记",
+      "require": {
+        "af": "party",
+        "ar": "كيان",
+        "az": "tərəf",
+        "be": "суб'ект",
+        "bg": "субект",
+        "bn": "পক্ষ",
+        "ca": "entitat",
+        "cs": "subjekt",
+        "da": "enhed",
+        "de": "einheit",
+        "el": "μέρος",
+        "en": "entity",
+        "es": "entidad",
+        "fa": "طرف",
+        "fi": "taho",
+        "fr": "entité",
+        "he": "ישות",
+        "hi": "पक्ष",
+        "hr": "subjekt",
+        "hu": "a fél",
+        "hy": "սուբյեկտ",
+        "id": "pihak",
+        "it": "entità",
+        "ja": "主体",
+        "ka": "სუბიექტ",
+        "ko": "주체",
+        "ms": "pihak",
+        "ne": "पक्ष",
+        "nl": "entiteit",
+        "no": "enhet",
+        "pl": "podmiot",
+        "pt": "entidade",
+        "ro": "subiect",
+        "ru": "субъект",
+        "si": "පාර්ශ්ව",
+        "sk": "subjekt",
+        "sl": "subjekt",
+        "sq": "subjekt",
+        "sr": "субјек",
+        "sv": "enhet",
+        "sw": "taasisi",
+        "ta": "தரப்",
+        "th": "นิติบุคคล",
+        "tr": "taraf",
+        "uk": "суб'єкт",
+        "ur": "فریق",
+        "vi": "chủ thể"
+      }
+    }
+  ],
+  "version": "1.33"
+}

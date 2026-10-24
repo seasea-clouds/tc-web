@@ -76,6 +76,7 @@ const BLOG_TITLES = {
   'cross-border-ecommerce-china': 'Cross-Border E-Commerce in China',
   'green-coffee-beans-china': 'Exporting Green Coffee Beans to China',
   'bonded-ecommerce-export-china-guide': 'Bonded E-Commerce Exports to China (Mode 1210)',
+  'service-framework-bonded-ecommerce-china-plan': 'Service Framework for a Bonded E-Commerce China Plan',
 };
 
 function filterSummaryKeys(msgs) {

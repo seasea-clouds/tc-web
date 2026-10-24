@@ -36,13 +36,19 @@ export function sharedOpenGraph({
   locale,
   url,
   type = 'website',
+  image,
+  imageAlt,
 }: {
   title: string;
   description: string;
   locale: string;
   url: string;
   type?: string;
+  /** Optional page-specific image (absolute URL or site-relative path). Falls back to the brand og image. */
+  image?: string;
+  imageAlt?: string;
 }) {
+  const resolved = image ? (image.startsWith('http') ? image : `${SITE_URL}${image}`) : `${SITE_URL}/og-image.png`;
   return {
     title,
     description,
@@ -52,10 +58,10 @@ export function sharedOpenGraph({
     siteName: BRAND_NAME,
     images: [
       {
-        url: `${SITE_URL}/og-image.png`,
+        url: resolved,
         width: 1200,
         height: 630,
-        alt: BRAND_NAME,
+        alt: imageAlt || BRAND_NAME,
       },
     ],
   };
@@ -67,14 +73,18 @@ export function sharedOpenGraph({
 export function sharedTwitter({
   title,
   description,
+  image,
 }: {
   title: string;
   description: string;
+  /** Optional page-specific image (absolute URL or site-relative path). */
+  image?: string;
 }) {
+  const resolved = image ? (image.startsWith('http') ? image : `${SITE_URL}${image}`) : `${SITE_URL}/og-image.png`;
   return {
     card: 'summary_large_image',
     title,
     description,
-    images: [`${SITE_URL}/og-image.png`],
+    images: [resolved],
   };
 }

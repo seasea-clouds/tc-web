@@ -70,16 +70,18 @@ interface CardProps {
   readMoreText: string;
   readTimeText: string;
   categoryLabels: Record<string, string>;
+  /** Height is pinned per row on desktop so the grid reads as a brick wall. */
+  heightClass?: string;
 }
 
-function BlogCard({ post, locale, readMoreText, readTimeText, categoryLabels }: CardProps) {
+function BlogCard({ post, locale, readMoreText, readTimeText, categoryLabels, heightClass = '' }: CardProps) {
   return (
     <a
       href={`/${locale}/blog/${post.slug}/`}
-      className="group flex flex-col bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden no-underline text-inherit h-full"
+      className={`group relative flex flex-col bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden no-underline text-inherit ${heightClass}`}
     >
       {post.cover && (
-        <div className="h-56 overflow-hidden bg-[#F4F6F9]">
+        <div className="h-56 sm:h-64 lg:h-72 overflow-hidden bg-[#F4F6F9]">
           <img
             src={post.cover}
             alt={post.title}
@@ -92,11 +94,11 @@ function BlogCard({ post, locale, readMoreText, readTimeText, categoryLabels }: 
         </div>
       )}
       <div className="flex flex-col flex-1 p-5">
-        <h3 className="text-lg font-bold text-[#333333] mb-2 line-clamp-2 group-hover:text-primary-navy transition-colors">
+        <h3 className="text-lg font-bold text-[#333333] mb-2 line-clamp-2 min-h-0 group-hover:text-primary-navy transition-colors">
           {post.title}
         </h3>
         {post.excerpt && (
-          <p className="text-[#5F6F7F] text-sm mb-4 line-clamp-3 flex-1">
+          <p className="text-[#5F6F7F] text-sm mb-4 line-clamp-3 flex-1 min-h-0">
             {post.excerpt}
           </p>
         )}
@@ -155,14 +157,14 @@ export default function BlogClient({ posts, categories, categoryLabels, locale, 
           {buildRows(filtered).map((row, ri) =>
             row.kind === 'feature' ? (
               <div key={`feature-${ri}`} className="grid gap-8 lg:grid-cols-2">
-                <BlogCard key={row.big.slug} post={row.big} {...cardProps} />
+                <BlogCard key={row.big.slug} post={row.big} heightClass="lg:h-[512px]" {...cardProps} />
                 <div className="grid gap-8 lg:grid-rows-2">
-                  {row.smalls.map(p => <BlogCard key={p.slug} post={p} {...cardProps} />)}
+                  {row.smalls.map(p => <BlogCard key={p.slug} post={p} heightClass="h-full" {...cardProps} />)}
                 </div>
               </div>
             ) : (
               <div key={`plain-${ri}`} className="grid gap-8 lg:grid-cols-2">
-                {row.posts.map(p => <BlogCard key={p.slug} post={p} {...cardProps} />)}
+                {row.posts.map(p => <BlogCard key={p.slug} post={p} heightClass="lg:h-[240px]" {...cardProps} />)}
               </div>
             )
           )}

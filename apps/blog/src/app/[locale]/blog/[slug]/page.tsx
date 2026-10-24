@@ -295,10 +295,25 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
       </div>
 
       <main>
-        {/* Hero Section */}
-        <section className="relative min-h-[400px] flex items-end overflow-hidden bg-primary-navy">
+        {/* Hero Section — cover image as background with a translucent navy mask */}
+        <section className="relative min-h-[400px] sm:min-h-[440px] flex items-end overflow-hidden bg-primary-navy">
           <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary-navy/60 to-primary-navy" />
+            {cover && (
+              <img
+                src={cover}
+                alt=""
+                aria-hidden="true"
+                width={1200}
+                height={630}
+                className="absolute inset-0 w-full h-full object-cover object-center scale-110 blur-[6px]"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+              />
+            )}
+            {/* navy veil: keeps the white headline readable while the artwork stays visible */}
+            {cover && <div className="absolute inset-0 bg-primary-navy/80" />}
+            <div className="absolute inset-0 bg-gradient-to-b from-primary-navy/35 via-primary-navy/60 to-primary-navy" />
           </div>
           <div className="relative z-10 w-full">
             <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 sm:pt-20">
@@ -414,20 +429,6 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
               </aside>
             )}
             <article className="flex-1 min-w-0">
-              {cover && (
-                <figure className="mb-10 -mt-2">
-                  <img
-                    src={cover}
-                    alt={title}
-                    width={1200}
-                    height={630}
-                    className="w-full h-auto rounded-xl shadow-md ring-1 ring-black/5"
-                    loading="eager"
-                    fetchPriority="high"
-                    decoding="async"
-                  />
-                </figure>
-              )}
               <div id="article-content"
                 className="prose prose-lg max-w-none
                   prose-headings:text-[#1B365D] prose-headings:font-bold

@@ -569,3 +569,26 @@ RSC flight payload，blog 子站的页面级 payload 文件名是 `<route>/index
 
 **教训**：504 是边缘超时，CF 默认给约 100s；自己的 fetch 不设超时，就会让慢上游拖到 100s
 才 504，重试更无从谈起。**所有跨项目 fetch 都该显式超时**。
+
+## 收稿记录 2026-10-24：工具包 v1.33 + P0 更新 + F1 新稿
+
+**工具包 v1.14 → v1.33**（投稿方 v1.15–v1.33 二十版累积，已替换仓库并新增 `glossary.json`）：
+- S10 路径白名单（堵杂项文件静默进包）、P36 标识型数字一致（监管代码/文号不得改）、
+  S08 支持 `scope=all` 与 `"count": true`、通用术语表 59 条跨文章自动加载；
+- **R03 约数豁免**：带 `about/environ/rund/circa` 等标记的金额先剥离再匹配，无标记金额照拦。
+  实现是 `price_body = APPROX_RES.sub("", body)`，逐语白名单 —— 精确豁免，不是放宽。
+  **不升级会误杀**：旧 v1.14 把 P0 的 `fr`「environ 700 dollars」判成报价（1 error）。
+
+**P0 `bonded-ecommerce-export-china-guide`（--force 覆盖，0 error / 49 warning）**：
+改动仅 3 处 —— 日期保持 2026-10-22（不回改历史）、法定限额补美元约数换算
+（`5000 yuan (about 700 US dollars)` / `26000 yuan (about 3600 US dollars)`）、
+税额补人民币换算（`about 4.5 US dollars (32.8 yuan)`）；48 语言同步；6 张图逐字节未变。
+
+**F1 `service-framework-bonded-ecommerce-china-plan`（新稿，0 error / 45 warning，date 2026-10-24）**：
+服务框架/责任结构（责任链、梁的三份文件、四条服务线、七条流一台账、14 个工作包 S0–S13、
+"这张图不覆盖什么"免责段）。与 P0 英文正文相似度 38.7%（配套深度文，非重复）。
+`submission.json` 的 title 与 frontmatter 不一致时**站点以 frontmatter 为准**。
+fig-01 与 P0 的 fig-03 是同一张框架图（用户确认可复用），两篇各自独立存一份。
+
+**验证**：48 语言文章页全 200、`__next_error__` 为 0、48/48 页面都引用了配图；
+图片 200 + `image/webp`；列表页/llms.txt/sitemap-<lang>.xml 均含新文章。

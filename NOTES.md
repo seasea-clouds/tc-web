@@ -706,6 +706,19 @@ DOM 顺序 = 阅读顺序 = 日期倒序，**永远不被布局需求改动**。
   否则 `output: export` 报 `missing generateStaticParams`）；page/1 的 canonical 与 hreflang
   都指向 `/{locale}/blog/`；正文不显示页码标识。
 
+**配套（SEO / GEO / admin）**：
+- 分页页面包屑 `Home › Insights › Page N` + `BreadcrumbList`；`CollectionPage` + `ItemList`。
+  `check-jsonld.mjs` 原本不认 `ItemList`，已补 `REQUIRED_FIELDS`（`ListItem` 必须写 `item` 字段）。
+- `AutoBreadcrumb` 加规则：`/xxx/page/{n}/` 的数字段跳过（否则渲染成单独的英文 "2"）。
+- `known-routes.ts` 新增 `KNOWN_ROUTE_PATTERNS`（正则），`d1-cache.ts` 的 `isPagePath` 名单 miss 后走模式，
+  否则 admin 热门页面会把 `/blog/page/2/` 当无效路径丢掉。
+- `build-llms.mjs`：博客标题改为现读 `content/<locale>/*.mdx` frontmatter；`getDisplayText` 的
+  `replace('/en/')` 改为按 locale —— 这修掉了一个老 bug：47 个 `llms-{locale}.txt` 的标题
+  全是 "Ja Blog bonded-ecommerce-…" 这类 slug 拼接。
+- 详情页 `datePublished` / `<time datetime>` 统一 `YYYY-MM-DD`。
+- 核对过没问题的：sitemap 无 `/blog/page/` 污染；robots.txt 对 AI 爬虫全 Allow；
+  llms.txt 不含分页页（llms 是内容索引）；48 语言 title ≤85 / description ≤185 全部合规。
+
 **踩坑 1（构建，最坑）**：`apps/blog` 原来只 `rm -rf .next/cache`。保留 `.next` 时，Next 增量构建
 **不输出新动态路由的 index.html**，`/blog/page/1/` 本地与 CF Pages 都 404，而 build 日志显示
 "866 页生成成功"。修法：build 脚本改成 `rm -rf .next out`。本地复现：保留 `.next` 连续 build 两次。

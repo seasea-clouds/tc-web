@@ -56,6 +56,7 @@ const REQUIRED_FIELDS = {
   'AggregateOffer':        ['lowPrice', 'priceCurrency'],
   'PostalAddress':         ['addressCountry'],
   'ContactPoint':          ['telephone'],
+  'ItemList':              ['itemListElement'],
   'ListItem':              ['position', 'item'],
   'BlogPosting':           ['headline'],
   'ImageObject':           ['url'],

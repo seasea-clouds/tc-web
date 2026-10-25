@@ -107,7 +107,8 @@ export default async function BlogPageN({ params }: { params: Promise<Params> })
               itemListElement: pagePosts.map((post, idx) => ({
                 '@type': 'ListItem',
                 position: idx + 1,
-                url: `https://sinotradecompliance.com/${locale}/blog/${post.slug}/`,
+                // ListItem.item 用 URL 字符串即可（也吃检查器的必填字段规则）
+                item: `https://sinotradecompliance.com/${locale}/blog/${post.slug}/`,
                 name: post.title,
               })),
             },

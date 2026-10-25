@@ -94,6 +94,22 @@ function loadBlogTitles(locale) {
   return map;
 }
 
+const LANG_LABELS = {
+      en: 'English', zh: '中文', ja: '日本語', ko: '한국어', fr: 'Français',
+      de: 'Deutsch', es: 'Español', pt: 'Português', ru: 'Русский', ar: 'العربية',
+      hi: 'हिन्दी', th: 'ไทย', vi: 'Tiếng Việt', id: 'Bahasa Indonesia',
+      ms: 'Bahasa Melayu', tl: 'Filipino', fa: 'فارسی', ur: 'اردو',
+      bn: 'বাংলা', pa: 'ਪੰਜਾਬੀ', te: 'తెలుగు', mr: 'मराठी',
+      gu: 'ગુજરાતી', kn: 'ಕನ್ನಡ', ml: 'മലയാളം', ta: 'தமிழ்',
+      fi: 'Suomi', sv: 'Svenska', no: 'Norsk', da: 'Dansk',
+      nl: 'Nederlands', pl: 'Polski', cs: 'Čeština', sk: 'Slovenčina',
+      hu: 'Magyar', ro: 'Română', bg: 'Български', hr: 'Hrvatski',
+      sl: 'Slovenščina', sr: 'Srpski', uk: 'Українська', el: 'Ελληνικά',
+      tr: 'Türkçe', he: 'עברית', az: 'Azərbaycan', ka: 'ქართული',
+      hy: 'Հայերեն', be: 'Беларуская', af: 'Afrikaans', sq: 'Shqip',
+  sw: 'Kiswahili', ne: 'नेपाली', si: 'සිංහල', ca: 'Català',
+};
+
 const BLOG_TITLES = {
   'gacc-registration-guide': 'GACC Registration Guide',
   'ccc-certification-explained': 'CCC Certification Complete Guide',
@@ -209,23 +225,9 @@ export function buildLLMs(baseUrl, outDir) {
     const locale = localeEntry.locale;
     const routes = sortRoutes([...localeEntry.routes]);
 
-    // 语言标签
-    const langMap = {
-      en: 'English', zh: '中文', ja: '日本語', ko: '한국어', fr: 'Français',
-      de: 'Deutsch', es: 'Español', pt: 'Português', ru: 'Русский', ar: 'العربية',
-      hi: 'हिन्दी', th: 'ไทย', vi: 'Tiếng Việt', id: 'Bahasa Indonesia',
-      ms: 'Bahasa Melayu', tl: 'Filipino', fa: 'فارسی', ur: 'اردو',
-      bn: 'বাংলা', pa: 'ਪੰਜਾਬੀ', te: 'తెలుగు', mr: 'मराठी',
-      gu: 'ગુજરાતી', kn: 'ಕನ್ನಡ', ml: 'മലയാളം', ta: 'தமிழ்',
-      fi: 'Suomi', sv: 'Svenska', no: 'Norsk', da: 'Dansk',
-      nl: 'Nederlands', pl: 'Polski', cs: 'Čeština', sk: 'Slovenčina',
-      hu: 'Magyar', ro: 'Română', bg: 'Български', hr: 'Hrvatski',
-      sl: 'Slovenščina', sr: 'Srpski', uk: 'Українська', el: 'Ελληνικά',
-      tr: 'Türkçe', he: 'עברית', az: 'Azərbaycan', ka: 'ქართული',
-      hy: 'Հայերեն', be: 'Беларуская', af: 'Afrikaans', sq: 'Shqip',
-      sw: 'Kiswahili', ne: 'नेपाली', si: 'සිංහල', ca: 'Català',
-    };
-    const label = langMap[locale] || locale;
+    const label = LANG_LABELS[locale] || locale;
+
+    const localeMsgs = loadMessages(path.join(ROOT, 'apps/site'), locale) || siteEnMsgs;
 
     let content = `# SinoTrade Compliance - ${label}\n\n`;
     content += `> SinoTrade Compliance provides one-stop regulatory consulting services for China market entry.\n\n`;
@@ -244,7 +246,7 @@ export function buildLLMs(baseUrl, outDir) {
 
       if (parts.length === 1) {
         // 一级路由：作为 section 标题
-        rootItem = { path: route, display: getDisplayText(route, siteEnMsgs, locale) };
+        rootItem = { path: route, display: getDisplayText(route, localeMsgs, locale) };
         if (!navSections[parts[0]]) {
           navSections[parts[0]] = { group: parts[0], children: [rootItem] };
         }
@@ -256,7 +258,7 @@ export function buildLLMs(baseUrl, outDir) {
         }
         navSections[group].children.push({
           path: route,
-          display: getDisplayText(route, siteEnMsgs, locale),
+          display: getDisplayText(route, localeMsgs, locale),
         });
       }
     }
@@ -265,7 +267,7 @@ export function buildLLMs(baseUrl, outDir) {
     const sectionOrder = Object.keys(navSections);
     for (const group of sectionOrder) {
       const section = navSections[group];
-      const sectionTitle = GROUP_LABELS[group] || getDisplayText(`/${group}/`, siteEnMsgs);
+      const sectionTitle = GROUP_LABELS[group] || getDisplayText(`/${group}/`, localeMsgs, locale);
       content += `## ${sectionTitle}\n\n`;
 
       for (const child of section.children) {
@@ -276,7 +278,8 @@ export function buildLLMs(baseUrl, outDir) {
 
     // ── Key Content Summary ─────────────────────
     content += `## Key Content\n\n`;
-    const summaries = filterSummaryKeys(siteEnMsgs);
+    // 本语言文案优先：否则 47 个非英文文件里塞的是英文卖点
+    const summaries = filterSummaryKeys(localeMsgs);
     for (const s of summaries.slice(0, 15)) {
       content += `- ${s}\n`;
     }
@@ -285,7 +288,7 @@ export function buildLLMs(baseUrl, outDir) {
     // ── Language Links ──────────────────────────
     content += `## Languages\n\n`;
     for (const l of LOCALES) {
-      content += `- [${l}](${baseUrl}/${l}/)\n`;
+      content += `- [${LANG_LABELS[l] || l}](${baseUrl}/${l}/)\n`;
     }
     content += '\n';
 

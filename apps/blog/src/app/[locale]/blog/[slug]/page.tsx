@@ -2,7 +2,7 @@ import fs from 'fs';
 import { headers } from 'next/headers';
 import path from 'path';
 import matter from 'gray-matter';
-import { getPosts, parseHeadings, mdToHtml, getCoverPath, type PostMeta } from '@/lib/posts';
+import { getPosts, parseHeadings, mdToHtml, getCoverPath, formatPostDate, type PostMeta } from '@/lib/posts';
 
 /** Map blog slug → FAQ translation namespace (from old site messages) */
 const FAQ_NS: Record<string, string> = {
@@ -57,15 +57,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 function formatDate(dateStr: string, locale: string): string {
-  if (!dateStr) return '';
-  try {
-    const date = new Date(dateStr);
-    return date.toLocaleDateString(locale === 'zh' ? 'zh-CN' : 'en-US', {
-      year: 'numeric', month: 'long', day: 'numeric',
-    });
-  } catch {
-    return dateStr;
-  }
+  return formatPostDate(dateStr, locale);
 }
 
 /** DefinitionSchema — JSON-LD structured data for compliance terms */
@@ -516,7 +508,7 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
                           <div className="flex-1 min-w-0">
                             <h3 className="text-base font-semibold text-[#1B365D] group-hover:text-[#B8960C] transition-colors line-clamp-2">{rp.title}</h3>
                             <div className="flex items-center gap-2 mt-1 text-xs text-[#5F6F7F]">
-                              {rp.date && <time dateTime={rp.date}>{formatDate(rp.date, locale)}</time>}
+                              {rp.date && <time dateTime={rp.date}>{rp.dateLabel}</time>}
                               {rp.date && <span>•</span>}
                               {rp.category && <span className="px-2 py-0.5 bg-primary-navy/10 rounded-full text-[#1B365D]">{tb(categoryKey(rp.category), rp.category)}</span>}
                               <span>{rp.readTime} {tb('readTime', 'min read')}</span>

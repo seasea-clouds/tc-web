@@ -6,6 +6,8 @@ export interface PostMeta {
   slug: string;
   title: string;
   date: string;
+  /** Localised date string (built once at SSG time so server and client agree). */
+  dateLabel: string;
   category: string;
   excerpt: string;
   readTime: number;
@@ -42,7 +44,7 @@ export function getPosts(locale: string): PostMeta[] {
     .map(f => {
       const slug = f.replace(/\.mdx$/, '');
       const raw = fs.readFileSync(path.join(contentDir, f), 'utf-8');
-      return parsePost(slug, raw);
+      return parsePost(slug, raw, locale);
     })
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
@@ -50,7 +52,29 @@ export function getPosts(locale: string): PostMeta[] {
 /**
  * Parse a single post from MDX content.
  */
-export function parsePost(slug: string, raw: string): PostMeta {
+/**
+ * Locale tag for Intl. Chinese needs an explicit region, the other 47 codes
+ * work as-is in Node's ICU and in browsers.
+ */
+function intlTag(locale: string): string {
+  return locale === 'zh' ? 'zh-CN' : locale;
+}
+
+/** Long-form localised date: "24. Oktober 2026", "2026年10月24日", … */
+export function formatPostDate(dateStr: string, locale: string): string {
+  if (!dateStr) return '';
+  const d = new Date(`${dateStr}T00:00:00Z`);
+  if (Number.isNaN(d.getTime())) return dateStr;
+  try {
+    return d.toLocaleDateString(intlTag(locale), {
+      year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC',
+    });
+  } catch {
+    return dateStr;
+  }
+}
+
+export function parsePost(slug: string, raw: string, locale = 'en'): PostMeta {
   const { data, content } = matter(raw);
 
   const title = data.title || slug.replace(/-/g, ' ');
@@ -71,6 +95,7 @@ export function parsePost(slug: string, raw: string): PostMeta {
     slug,
     title,
     date,
+    dateLabel: formatPostDate(date, locale),
     category,
     excerpt,
     readTime,

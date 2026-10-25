@@ -8,18 +8,6 @@ export interface BlogCardTexts {
   categoryLabels: Record<string, string>;
 }
 
-function formatBlogDate(dateStr: string, locale: string): string {
-  if (!dateStr) return '';
-  try {
-    const date = new Date(dateStr);
-    return date.toLocaleDateString(locale === 'zh' ? 'zh-CN' : 'en-US', {
-      year: 'numeric', month: 'long', day: 'numeric',
-    });
-  } catch {
-    return dateStr;
-  }
-}
-
 function BlogCard({ post, locale, readMoreText, readTimeText, categoryLabels, heightClass = '' }: {
   post: PostMeta;
   heightClass?: string;
@@ -53,7 +41,7 @@ function BlogCard({ post, locale, readMoreText, readTimeText, categoryLabels, he
         )}
         <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2 pt-3 border-t border-[#F4F6F9]">
           <div className="flex flex-wrap items-center gap-2 text-xs text-[#5F6F7F]">
-            {post.date && <time dateTime={post.date}>{formatBlogDate(post.date, locale)}</time>}
+            {post.date && <time dateTime={post.date}>{post.dateLabel}</time>}
             {post.date && <span>•</span>}
             <span>{post.readTime} {readTimeText}</span>
             <span>•</span>

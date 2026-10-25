@@ -4,6 +4,8 @@ import path from 'path';
 import { getPosts } from '@/lib/posts';
 import { getMessages } from '@/lib/messages';
 import BlogClient from './BlogClient';
+import BlogPager from '@/components/BlogPager';
+import { paginate, getCategories, categoryKey } from '@/lib/blog-list';
 
 
 
@@ -31,28 +33,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-function getCategories(posts: { category: string }[]): string[] {
-  const cats = new Set<string>();
-  for (const p of posts) {
-    if (p.category) cats.add(p.category);
-  }
-  return [...cats].sort();
-}
-
-/**
- * Convert a raw category string (e.g. "Brand Protection") to its translation key
- * (e.g. "cat_Brand_Protection") by normalizing special chars to underscores.
- */
-function categoryKey(cat: string): string {
-  return 'cat_' + cat
-    .replace(/-/g, '_')
-    .replace(/ & /g, '_')
-    .replace(/ /g, '_');
-}
-
 export default async function BlogHome({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const posts = getPosts(locale);
+  const pages = paginate(posts);
   const categories = getCategories(posts);
   const msgs = getMessages(locale);
   const B = msgs?.Blog || {};
@@ -102,7 +86,8 @@ export default async function BlogHome({ params }: { params: Promise<{ locale: s
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlogClient
-            posts={posts}
+            pagePosts={pages[0] ?? []}
+            allPosts={posts}
             categories={categories}
             categoryLabels={categoryLabels}
             locale={locale}
@@ -110,6 +95,11 @@ export default async function BlogHome({ params }: { params: Promise<{ locale: s
             readTimeText={readTimeText}
             noPostsText={tb('noPosts', 'No posts found.')}
             allText={tb('all', 'All')}
+          />
+          <BlogPager
+            locale={locale}
+            currentPage={1}
+            totalPages={pages.length}
             paginationText={tb('pagination', 'Page')}
             prevText={tb('prev', 'Previous')}
             nextText={tb('next', 'Next')}

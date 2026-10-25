@@ -54,7 +54,12 @@ export function parsePost(slug: string, raw: string): PostMeta {
   const { data, content } = matter(raw);
 
   const title = data.title || slug.replace(/-/g, ' ');
-  const date = data.date || '';
+  // YAML parses an unquoted `date: 2026-10-24` into a Date object; normalise it
+  // back to a plain YYYY-MM-DD string so <time datetime> and JSON-LD stay valid.
+  const rawDate = data.date;
+  const date = rawDate instanceof Date
+    ? `${rawDate.getUTCFullYear()}-${String(rawDate.getUTCMonth() + 1).padStart(2, '0')}-${String(rawDate.getUTCDate()).padStart(2, '0')}`
+    : (rawDate ? String(rawDate) : '');
   const category = data.category || 'Uncategorized';
   const excerpt = data.excerpt || '';
   const references = data.references || [];

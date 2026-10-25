@@ -147,6 +147,9 @@ export function discoverAll(includePrivate = false) {
       if (isDynamicRoute(clean)) {
         const paramMatch = clean.match(/\[(\w+)\]/);
         if (!paramMatch) continue;
+        // 分页路由（/blog/page/[page]）不是内容路由：参数是页码而非内容 slug，
+        // 实例化只能靠运行时页数 → 不进 sitemap / known-routes，靠页面内链发现。
+        if (paramMatch[1] === 'page' && /\/page\/\[page\]$/.test(clean)) continue;
         const subdir = extractContentSubdir(raw);
         const instances = discoverDynamicInstances(appDir, subdir);
         // 只保留有实例的动态路由

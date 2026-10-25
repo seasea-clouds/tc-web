@@ -227,15 +227,19 @@ export default function Navbar(props: NavbarProps) {
               <span className="sr-only sm:not-sr-only">{t('email')}</span>
             </a>
 
-            {/* User menu — 自动处理登录态 */}
-            <UserMenu loginHref={props.loginHref} locale={locale} />
+            {/* User menu + Free Check：≥768px 显示。
+                390px 下 6 个控件会把一行撑到 396px（溢出 6px），
+                所以小屏收起这两个，移到下方第二行（那里是 flex-wrap，不会横向溢出）。 */}
+            <div className="hidden md:flex items-center gap-2">
+              <UserMenu loginHref={props.loginHref} locale={locale} />
 
-            <a
-              href={fcHref}
-              className="bg-gold hover:bg-gold/90 text-primary-navy font-semibold px-3 py-1.5 rounded-md text-sm transition-all hover:shadow-md"
-            >
-              {t('freeCheck')}
-            </a>
+              <a
+                href={fcHref}
+                className="bg-gold hover:bg-gold/90 text-primary-navy font-semibold px-3 py-1.5 rounded-md text-sm transition-all hover:shadow-md"
+              >
+                {t('freeCheck')}
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -277,26 +281,31 @@ export default function Navbar(props: NavbarProps) {
           </div>
 
           {/* 手机端：flex-wrap 允许换行 */}
-          <div className="md:hidden flex flex-wrap items-center justify-center gap-x-5 gap-y-1 py-2 text-sm">
-            <a href={href('/services/')} className="inline-flex items-center text-white/80 hover:text-white transition-colors">
+          {/* 小屏导航：inline 布局而不是 flex-wrap。
+              RTL（ar/fa/he/ur）下 flex-wrap + justify-center 会把某一行整体推出容器
+              （实测 ur 390px → scrollWidth 461、ar 320px → 377），改回 inline 流式换行后正常。 */}
+          <div className="md:hidden py-2 text-center text-sm leading-loose">
+            <a href={href('/services/')} className="inline-flex items-center mx-2.5 text-white/80 hover:text-white transition-colors">
               {t('services')}
             </a>
-            <a href={href('/industries/')} className="inline-flex items-center text-white/80 hover:text-white transition-colors">
+            <a href={href('/industries/')} className="inline-flex items-center mx-2.5 text-white/80 hover:text-white transition-colors">
               {t('industries')}
             </a>
-            <a href={href('/about/')} className="inline-flex items-center text-white/80 hover:text-white transition-colors">
+            <a href={href('/about/')} className="inline-flex items-center mx-2.5 text-white/80 hover:text-white transition-colors">
               {t('about')}
             </a>
-            <a href={href('/packages/')} className="inline-flex items-center text-white/80 hover:text-white transition-colors">
+            <a href={href('/packages/')} className="inline-flex items-center mx-2.5 text-white/80 hover:text-white transition-colors">
               {t('packages')}
             </a>
-            <a href={href('/faq/')} className="inline-flex items-center text-white/80 hover:text-white transition-colors">
+            <a href={href('/faq/')} className="inline-flex items-center mx-2.5 text-white/80 hover:text-white transition-colors">
               {t('faq')}
             </a>
-            <a href={blogHref} className="inline-flex items-center text-white/80 hover:text-white transition-colors">
+            <a href={blogHref} className="inline-flex items-center mx-2.5 text-white/80 hover:text-white transition-colors">
               {t('blog')}
             </a>
-            <LanguageSwitcher locale={locale} />
+            <span className="inline-flex items-center mx-2.5 align-middle">
+              <LanguageSwitcher locale={locale} />
+            </span>
           </div>
         </div>
       </div>

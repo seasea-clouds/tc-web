@@ -3,6 +3,7 @@
 import { WHATSAPP_URL } from './constants';
 import { FileText, Mail, MapPin } from 'lucide-react';
 import { useT, useTradeLocale } from './TranslationProvider';
+import { useAuth } from './AuthContext';
 
 const serviceLinks = [
   { key: 'gaccRegistration', href: '/services/gacc/' },
@@ -24,6 +25,9 @@ const checkLinks = [
 
 export default function Footer({ locale: propLocale }: { locale?: string } = {}) {
   const t = useT('Footer');
+  // 登录入口：小屏导航收起 Sign In 后，footer 是移动端唯一入口。
+  const tNav = useT('Navbar');
+  const { isAuthenticated } = useAuth();
   const ctxLocale = useTradeLocale();
   const locale = propLocale || ctxLocale || 'en';
 
@@ -94,6 +98,11 @@ export default function Footer({ locale: propLocale }: { locale?: string } = {})
               <li>
                 <a href={href('/faq/')} className="text-white/70 hover:text-white transition-colors text-sm">
                   {t('faq')}
+                </a>
+              </li>
+              <li>
+                <a href={href(isAuthenticated ? '/c/me/' : '/c/login/')} className="text-white/70 hover:text-white transition-colors text-sm">
+                  {isAuthenticated ? tNav('dashboard') : tNav('signIn')}
                 </a>
               </li>
             </ul>

@@ -151,7 +151,10 @@ export default function LanguageSwitcher({
         </svg>
       </button>
       {/* CSS hover/focus dropdown: works even without React hydration */}
-      <div className="absolute right-0 top-full invisible group-hover:visible group-focus-within:visible opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-all duration-150 bg-white rounded-md shadow-lg border border-gray-200 pt-2 pb-1 min-w-[140px] max-h-[32rem] overflow-y-auto z-50"
+      {/* display 切换（hidden ↔ block）而不是 visibility：`invisible` 的元素仍然参与
+          布局宽度计算，48 个语言的下拉会撑大文档 scrollWidth —— 在 RTL 小屏
+          实测把 320px 视口撑到 377px、390px 撑到 461px。 */}
+      <div className="absolute right-0 top-full hidden group-hover:block group-focus-within:block bg-white rounded-md shadow-lg border border-gray-200 pt-2 pb-1 min-w-[140px] max-h-[32rem] overflow-y-auto z-50"
         style={{ scrollbarWidth: 'thin', scrollbarColor: '#D4AF37 #f1f1f1' }}>
         {activeLocales.map((l: string) => (
           <a

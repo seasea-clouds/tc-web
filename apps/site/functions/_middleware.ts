@@ -434,6 +434,16 @@ export async function onRequest(context: { request: Request; next: () => Promise
     return Response.redirect(url.toString().replace(url.hostname, canonical), 301);
   }
 
+  // ── 博客分页副本归并 ──
+  // /{locale}/blog/page/1/ 与 /{locale}/blog/ 内容完全相同（page/1 只是
+  // `output: export` 对动态路由的技术副产品）。这里直接 301 到第 1 页，
+  // 不必回源，也让「一个列表只有一份 URL」这件事在边缘层就成立。
+  const pageOne = url.pathname.match(/^\/([a-z]{2})\/blog\/page\/1\/$/);
+  if (pageOne) {
+    url.pathname = `/${pageOne[1]}/blog/`;
+    return Response.redirect(url.toString(), 301);
+  }
+
   // ── Reddit 采集链路转发：/reddit/<win>/(push|pull|ack) → 独立 Worker ──
   // 契约见 Reddit 采集链路方案包（CRM 维护）01-CONTRACT.md §8。这里必须**原样透传**：
   // method / path（含 <win> 段）/ query / body 原始字节 / 状态码 / 响应头。

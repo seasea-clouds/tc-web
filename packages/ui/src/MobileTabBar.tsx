@@ -36,14 +36,14 @@ export default function MobileTabBar() {
             <Link
               key={key}
               href={href === '/' ? `/${locale}` : `/${locale}${href}`}
-              className={`flex flex-col items-center justify-center gap-0.5 flex-1 h-full transition-colors ${
+              className={`flex min-w-0 flex-col items-center justify-center gap-0.5 flex-1 h-full px-1 transition-colors ${
                 isActive
                   ? 'text-[#B8960C]'
                   : 'text-[#5F6F7F] active:bg-bg-ice'
               }`}
             >
               <Icon className="w-5 h-5" />
-              <span className="text-[10px] font-medium">{label}</span>
+              <span className="w-full truncate text-center text-[10px] font-medium leading-tight">{label}</span>
             </Link>
           );
         })}

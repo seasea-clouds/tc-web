@@ -27,6 +27,9 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', 'Noto Serif Thai', 'Noto Serif', system-ui, sans-serif;
   font-weight: 700;
+  /* 长单词语言（亚美尼亚语 համապատասխանության、乌尔都语 …）在 390px 下会顶出视口，
+     只影响真正放不下的单词，正常文本不受影响 */
+  overflow-wrap: break-word;
 }
 
 /* RTL support for Arabic, Hebrew, Persian/Farsi, Urdu */

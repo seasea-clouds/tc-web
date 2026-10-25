@@ -66,6 +66,34 @@ const SKIP_KEYS = [
 ];
 
 // 博客 slug → 真实标题映射（从 discover-routes 补充）
+/**
+ * slug → frontmatter title 映射，按语言从 content 目录现读。
+ * 硬编码清单只作为兜底：新增文章无需有人记得来这里补一行。
+ */
+const BLOG_TITLE_CACHE = {};
+function loadBlogTitles(locale) {
+  if (BLOG_TITLE_CACHE[locale]) return BLOG_TITLE_CACHE[locale];
+  const map = {};
+  const dir = path.join(ROOT, 'apps/blog/content', locale);
+  if (fs.existsSync(dir)) {
+    for (const file of fs.readdirSync(dir)) {
+      if (!file.endsWith('.mdx')) continue;
+      const raw = fs.readFileSync(path.join(dir, file), 'utf-8');
+      const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+      if (!m) continue;
+      const t = m[1].match(/^title:\s*(.+)$/m);
+      if (!t) continue;
+      let value = t[1].trim();
+      if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
+        value = value.slice(1, -1);
+      }
+      map[file.replace(/\.mdx$/, '')] = value;
+    }
+  }
+  BLOG_TITLE_CACHE[locale] = map;
+  return map;
+}
+
 const BLOG_TITLES = {
   'gacc-registration-guide': 'GACC Registration Guide',
   'ccc-certification-explained': 'CCC Certification Complete Guide',
@@ -92,17 +120,20 @@ function filterSummaryKeys(msgs) {
   return result;
 }
 
-function getDisplayText(route, enMsgs) {
-  // 根据路由路径推断显示文本
-  const rel = route.replace('/en/', '/').replace(/\/$/, '');
+function getDisplayText(route, enMsgs, locale = 'en') {
+  // 根据路由路径推断显示文本（必须按当前 locale 去前缀，硬编码 /en/ 会让
+  // 所有非英文 llms-{locale}.txt 的标题退化成 slug 拼接）
+  const rel = route.replace(`/${locale}/`, '/').replace(/\/$/, '');
   const parts = rel.split('/').filter(Boolean);
 
   if (parts[0] === 'services' && parts[1]) {
     return SERVICE_LABELS[parts[1]] || parts[1].replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
   }
   if (parts[0] === 'blog' && parts.length > 1) {
-    // 优先用预定义标题，其次用 slug 转标题
+    // 优先用该语言的 frontmatter 标题，其次硬编码清单，最后 slug 转标题
     const slug = parts[1];
+    const localized = loadBlogTitles(locale)[slug];
+    if (localized) return localized;
     if (BLOG_TITLES[slug]) return BLOG_TITLES[slug];
     return slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
   }
@@ -213,7 +244,7 @@ export function buildLLMs(baseUrl, outDir) {
 
       if (parts.length === 1) {
         // 一级路由：作为 section 标题
-        rootItem = { path: route, display: getDisplayText(route, siteEnMsgs) };
+        rootItem = { path: route, display: getDisplayText(route, siteEnMsgs, locale) };
         if (!navSections[parts[0]]) {
           navSections[parts[0]] = { group: parts[0], children: [rootItem] };
         }
@@ -225,7 +256,7 @@ export function buildLLMs(baseUrl, outDir) {
         }
         navSections[group].children.push({
           path: route,
-          display: getDisplayText(route, siteEnMsgs),
+          display: getDisplayText(route, siteEnMsgs, locale),
         });
       }
     }

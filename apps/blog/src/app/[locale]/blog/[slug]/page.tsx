@@ -182,7 +182,12 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
   const { data, content } = matter(raw);
 
   const title = data.title || slug.replace(/-/g, ' ');
-  const date = data.date || '';
+  // YAML 把无引号的 `date: 2026-10-22` 解析成 Date；统一规范成 YYYY-MM-DD，
+  // 保证 JSON-LD datePublished 与 Related posts 的 <time datetime> 都是纯日期。
+  const rawDate = data.date;
+  const date = rawDate instanceof Date
+    ? `${rawDate.getUTCFullYear()}-${String(rawDate.getUTCMonth() + 1).padStart(2, '0')}-${String(rawDate.getUTCDate()).padStart(2, '0')}`
+    : (rawDate ? String(rawDate) : '');
   const category = data.category || '';
   const excerpt = data.excerpt || '';
   const cover = getCoverPath(slug);

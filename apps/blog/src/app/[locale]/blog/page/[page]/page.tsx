@@ -1,4 +1,4 @@
-import { LOCALES, buildLanguages, sharedOpenGraph, sharedTwitter } from '@trade/ui';
+import { LOCALES, buildLanguages, sharedOpenGraph, sharedTwitter, AutoBreadcrumb } from '@trade/ui';
 import { getPosts } from '@/lib/posts';
 import { getMessages } from '@/lib/messages';
 import { paginate, getCategories, categoryKey } from '@/lib/blog-list';
@@ -78,8 +78,42 @@ export default async function BlogPageN({ params }: { params: Promise<Params> })
     categoryLabels,
   };
 
+  const pageLabel = `${tb('pagination', 'Page')} ${pageNumber}`;
+  const canonical = pageNumber === 1
+    ? `https://sinotradecompliance.com/${locale}/blog/`
+    : `https://sinotradecompliance.com/${locale}/blog/page/${pageNumber}/`;
+
   return (
     <>
+      <AutoBreadcrumb locale={locale} title={pageLabel} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'CollectionPage',
+            name: pageLabel,
+            url: canonical,
+            inLanguage: locale,
+            isPartOf: {
+              '@type': 'Blog',
+              name: tb('title', 'Insights & Compliance Guides'),
+              url: `https://sinotradecompliance.com/${locale}/blog/`,
+            },
+            mainEntity: {
+              '@type': 'ItemList',
+              numberOfItems: pagePosts.length,
+              itemListOrder: 'https://schema.org/ItemListOrderDescending',
+              itemListElement: pagePosts.map((post, idx) => ({
+                '@type': 'ListItem',
+                position: idx + 1,
+                url: `https://sinotradecompliance.com/${locale}/blog/${post.slug}/`,
+                name: post.title,
+              })),
+            },
+          }),
+        }}
+      />
       <section className="bg-primary-navy py-16">
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <h1 className="mb-6 text-3xl font-bold text-white md:text-4xl lg:text-5xl">
@@ -89,9 +123,7 @@ export default async function BlogPageN({ params }: { params: Promise<Params> })
             {tb('subtitle', 'Expert articles on taking your product to China: market entry, registration, labeling and certification.')}
           </p>
           {pageNumber > 1 && (
-            <p className="mt-4 text-sm font-semibold uppercase tracking-wider text-[#B8960C]">
-              {tb('pagination', 'Page')} {pageNumber}
-            </p>
+            <p className="mt-4 text-sm font-semibold uppercase tracking-wider text-[#B8960C]">{pageLabel}</p>
           )}
         </div>
       </section>

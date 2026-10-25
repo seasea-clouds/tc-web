@@ -135,6 +135,7 @@ export function discoverAll(includePrivate = false) {
       hasContent: fs.existsSync(path.join(appDir, 'content')),
       staticRoutes: [],
       dynamicRoutes: [],
+      pagePatterns: [],
     };
 
     for (const pagePath of pages) {
@@ -148,8 +149,12 @@ export function discoverAll(includePrivate = false) {
         const paramMatch = clean.match(/\[(\w+)\]/);
         if (!paramMatch) continue;
         // 分页路由（/blog/page/[page]）不是内容路由：参数是页码而非内容 slug，
-        // 实例化只能靠运行时页数 → 不进 sitemap / known-routes，靠页面内链发现。
-        if (paramMatch[1] === 'page' && /\/page\/\[page\]$/.test(clean)) continue;
+        // 实例化只能靠运行时页数 → 不进 sitemap（靠页面内链发现），
+        // 但要作为「模式」记进 known-routes，否则 admin 热门页面会把分页页当无效路径丢弃。
+        if (paramMatch[1] === 'page' && /\/page\/\[page\]$/.test(clean)) {
+          app.pagePatterns.push(clean);
+          continue;
+        }
         const subdir = extractContentSubdir(raw);
         const instances = discoverDynamicInstances(appDir, subdir);
         // 只保留有实例的动态路由
@@ -256,6 +261,20 @@ export function emitKnownRoutes() {
     }
   }
 
+  // 分页模式（/blog/page/[page]）→ 正则，页码必须是纯数字，其它一律不匹配
+  const patterns = new Set();
+  for (const app of apps) {
+    for (const pat of app.pagePatterns ?? []) {
+      const regex = pat
+        .replace(/^\//, '')
+        .split('/')
+        .map((seg) => (seg === '[page]' ? '\\d+' : seg.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')))
+        .join('\\/');
+      patterns.add(`/^\\/[a-z]{2}\\/${regex}$/`);
+    }
+  }
+  const patternLines = [...patterns].map((p) => `  ${p},`);
+
   const sorted = [...routes].sort();
   const OUTPUT_FILE = path.join(ROOT, 'apps/admin/functions/lib/known-routes.ts');
   const lines = [
@@ -269,6 +288,12 @@ export function emitKnownRoutes() {
     '//',
     "export const KNOWN_ROUTES: string[] = [",
     ...sorted.map((r) => `  '${r}',`),
+    '];',
+    '',
+    '// 分页路由模式（/blog/page/{n}/）：参数是页码，实例数量随文章增长，',
+    '// 无法在构建时枚举 → 用正则模式校验（页码必须是纯数字）。',
+    'export const KNOWN_ROUTE_PATTERNS: RegExp[] = [',
+    ...patternLines,
     '];',
     '',
   ];

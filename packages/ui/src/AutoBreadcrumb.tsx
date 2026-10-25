@@ -139,6 +139,12 @@ export default function AutoBreadcrumb({ locale, title }: AutoBreadcrumbProps) {
       continue;
     }
 
+    // Paginated lists: /blog/page/{n}/ → the numeric segment adds nothing,
+    // the previous "page" segment already carries the translated label.
+    if (/^\d+$/.test(seg) && pathSegments[i - 1] === 'page') {
+      continue;
+    }
+
     // Blog posts: /blog/{slug} → use title prop or override
     if (pathSegments[i - 1] === 'blog' && i > 0) {
       if (override) {

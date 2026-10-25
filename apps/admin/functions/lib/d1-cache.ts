@@ -20,10 +20,15 @@ import {
   type HourlyStats,
 } from "./cf-analytics";
 
-import { KNOWN_ROUTES } from "./known-routes";
+import { KNOWN_ROUTES, KNOWN_ROUTE_PATTERNS } from "./known-routes";
 
 // 归一化后的路由集合（去尾斜杠），用于 O(1) 存在性查找
 const KNOWN_ROUTE_SET = new Set(KNOWN_ROUTES);
+
+/** 分页路由（/blog/page/{n}/）实例随文章增长，按正则校验而非枚举。 */
+function matchesKnownPattern(route: string): boolean {
+  return KNOWN_ROUTE_PATTERNS.some((re) => re.test(route));
+}
 
 /**
  * 路径归一化：去尾斜杠，保留 locale 前缀，与 known-routes 名单匹配。
@@ -166,7 +171,8 @@ export function isPagePath(path: string): boolean {
 
   // 第 5 步：路由存在性校验 —— 必须是真实存在的页面路由
   // （构建时动态生成的 known-routes 名单，含 48 locale 全量展开）
-  if (!KNOWN_ROUTE_SET.has(normalizeRoute(path))) return false;
+  const normalized = normalizeRoute(path);
+  if (!KNOWN_ROUTE_SET.has(normalized) && !matchesKnownPattern(normalized)) return false;
 
   return true;
 }

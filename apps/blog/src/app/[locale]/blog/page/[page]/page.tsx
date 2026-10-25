@@ -39,6 +39,8 @@ export async function generateMetadata({ params }: { params: Promise<Params> }) 
   const path = `/blog/page/${page}/`;
   const url = `https://sinotradecompliance.com/${locale}${path}`;
   const canonical = page === '1' ? `https://sinotradecompliance.com/${locale}/blog/` : url;
+  // Page 1 duplicates /blog/, so its hreflang cluster points there too.
+  const langPath = page === '1' ? '/blog/' : path;
   const title = page === '1'
     ? tb('metaTitle', 'Exporting to China Blog')
     : `${tb('metaTitle', 'Exporting to China Blog')} — ${tb('pagination', 'Page')} ${page}`;
@@ -50,7 +52,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }) 
     twitter: sharedTwitter({ title, description }),
     alternates: {
       canonical,
-      languages: buildLanguages(locale, [...LOCALES], path),
+      languages: buildLanguages(locale, [...LOCALES], langPath),
     },
   };
 }

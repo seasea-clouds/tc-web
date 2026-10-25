@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { PostMeta } from '@/lib/posts';
 
 interface Props {
@@ -12,6 +12,9 @@ interface Props {
   readTimeText: string;
   noPostsText: string;
   allText: string;
+  paginationText: string;
+  prevText: string;
+  nextText: string;
 }
 
 function formatBlogDate(dateStr: string, locale: string): string {
@@ -24,6 +27,27 @@ function formatBlogDate(dateStr: string, locale: string): string {
   } catch {
     return dateStr;
   }
+}
+
+/** Page budget: a text card costs 1, a cover card costs 2 (it occupies a double-height slot). */
+const PAGE_CAPACITY = 20;
+
+function paginate(posts: PostMeta[]): PostMeta[][] {
+  const pages: PostMeta[][] = [];
+  let current: PostMeta[] = [];
+  let cost = 0;
+  for (const post of posts) {
+    const weight = post.cover ? 2 : 1;
+    if (cost + weight > PAGE_CAPACITY && current.length > 0) {
+      pages.push(current);
+      current = [];
+      cost = 0;
+    }
+    current.push(post);
+    cost += weight;
+  }
+  if (current.length > 0) pages.push(current);
+  return pages.length > 0 ? pages : [[]];
 }
 
 type ListRow =
@@ -114,10 +138,27 @@ function BlogCard({ post, locale, readMoreText, readTimeText, categoryLabels, he
   );
 }
 
-export default function BlogClient({ posts, categories, categoryLabels, locale, readMoreText, readTimeText, noPostsText, allText }: Props) {
+export default function BlogClient({ posts, categories, categoryLabels, locale, readMoreText, readTimeText, noPostsText, allText, paginationText, prevText, nextText }: Props) {
   const [category, setCategory] = useState<string | null>(null);
+  const [page, setPage] = useState(0);
+  const listRef = useRef<HTMLDivElement>(null);
   const filtered = category ? posts.filter(p => p.category === category) : posts;
+  const pages = paginate(filtered);
+  const totalPages = pages.length;
+  const safePage = Math.min(page, totalPages - 1);
   const cardProps = { locale, readMoreText, readTimeText, categoryLabels };
+
+  // A new filter always starts from the newest page.
+  useEffect(() => { setPage(0); }, [category]);
+
+  const goTo = (target: number) => {
+    const next = Math.max(0, Math.min(target, totalPages - 1));
+    setPage(next);
+    if (listRef.current) {
+      const top = listRef.current.getBoundingClientRect().top + window.scrollY - 96;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  };
 
   return (
     <>
@@ -146,34 +187,81 @@ export default function BlogClient({ posts, categories, categoryLabels, locale, 
         </div>
       )}
 
-      {/* Posts — magazine rows, every row ends flush */}
-      {filtered.length > 0 ? (
-        <div className="space-y-8">
-          {buildRows(filtered).map((row, ri) =>
-            row.kind === 'feature' ? (
-              <div key={`feature-${ri}`} className="grid gap-8 lg:grid-cols-2">
-                <BlogCard key={row.big.slug} post={row.big} heightClass="lg:h-[512px]" {...cardProps} />
-                <div className="grid gap-8 lg:grid-rows-2">
-                  {row.smalls.map(p => <BlogCard key={p.slug} post={p} heightClass="h-full" {...cardProps} />)}
-                </div>
+      {/* Posts — one block per page; inactive pages stay in the DOM (hidden) so
+          crawlers still see every article link, only the viewport changes. */}
+      <div ref={listRef}>
+        {filtered.length > 0 ? (
+          <>
+            {pages.map((pagePosts, pi) => (
+              <div key={`page-${pi}`} className={`space-y-8 ${pi === safePage ? '' : 'hidden'}`}>
+                {buildRows(pagePosts).map((row, ri) =>
+                  row.kind === 'feature' ? (
+                    <div key={`feature-${pi}-${ri}`} className="grid gap-8 lg:grid-cols-2">
+                      <BlogCard key={row.big.slug} post={row.big} heightClass="lg:h-[512px]" {...cardProps} />
+                      <div className="grid gap-8 lg:grid-rows-2">
+                        {row.smalls.map(p => <BlogCard key={p.slug} post={p} heightClass="h-full" {...cardProps} />)}
+                      </div>
+                    </div>
+                  ) : (
+                    <div key={`plain-${pi}-${ri}`} className="grid gap-8 lg:grid-cols-2">
+                      {row.posts.map(p => (
+                        <BlogCard
+                          key={p.slug}
+                          post={p}
+                          heightClass={p.cover ? 'lg:h-[512px]' : 'lg:h-[240px]'}
+                          {...cardProps}
+                        />
+                      ))}
+                    </div>
+                  )
+                )}
               </div>
-            ) : (
-              <div key={`plain-${ri}`} className="grid gap-8 lg:grid-cols-2">
-                {row.posts.map(p => (
-                  <BlogCard
-                    key={p.slug}
-                    post={p}
-                    heightClass={p.cover ? 'lg:h-[512px]' : 'lg:h-[240px]'}
-                    {...cardProps}
-                  />
+            ))}
+
+            {totalPages > 1 && (
+              <nav aria-label={paginationText} className="mt-12 flex flex-wrap items-center justify-center gap-2">
+                <button
+                  onClick={() => goTo(safePage - 1)}
+                  disabled={safePage === 0}
+                  aria-label={prevText}
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-[#E5E9EF] text-[#5F6F7F] transition-colors hover:border-[#B8960C] hover:text-[#B8960C] disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-[#E5E9EF] disabled:hover:text-[#5F6F7F]"
+                >
+                  <svg className="h-4 w-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+                {Array.from({ length: totalPages }, (_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => goTo(i)}
+                    aria-current={i === safePage ? 'page' : undefined}
+                    aria-label={`${paginationText} ${i + 1}`}
+                    className={`h-10 min-w-10 rounded-full px-3 text-sm font-semibold transition-colors ${
+                      i === safePage
+                        ? 'bg-[#B8960C] text-white'
+                        : 'border border-[#E5E9EF] text-[#333333] hover:border-[#B8960C] hover:text-[#B8960C]'
+                    }`}
+                  >
+                    {i + 1}
+                  </button>
                 ))}
-              </div>
-            )
-          )}
-        </div>
-      ) : (
-        <p className="text-[#5F6F7F] text-center py-16">{noPostsText}</p>
-      )}
+                <button
+                  onClick={() => goTo(safePage + 1)}
+                  disabled={safePage === totalPages - 1}
+                  aria-label={nextText}
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-[#E5E9EF] text-[#5F6F7F] transition-colors hover:border-[#B8960C] hover:text-[#B8960C] disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-[#E5E9EF] disabled:hover:text-[#5F6F7F]"
+                >
+                  <svg className="h-4 w-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </nav>
+            )}
+          </>
+        ) : (
+          <p className="text-[#5F6F7F] text-center py-16">{noPostsText}</p>
+        )}
+      </div>
     </>
   );
 }

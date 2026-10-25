@@ -110,6 +110,9 @@ export default async function BlogHome({ params }: { params: Promise<{ locale: s
             readTimeText={readTimeText}
             noPostsText={tb('noPosts', 'No posts found.')}
             allText={tb('all', 'All')}
+            paginationText={tb('pagination', 'Page')}
+            prevText={tb('prev', 'Previous')}
+            nextText={tb('next', 'Next')}
           />
         </div>
       </section>

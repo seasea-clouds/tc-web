@@ -67,7 +67,10 @@ function checkLLMsFile(filePath) {
   }
 
   // 6. 有语言链接
-  const langLinks = content.match(/\[[a-z]{2}\]/g) || [];
+  // 只统计 "## Languages" 段里的链接，按 href 判定 —— 显示文本是可读语言名
+  // （English / 日本語），不再用 [en] 这种代码写法。
+  const langSection = content.split(/^## Languages$/m)[1] || '';
+  const langLinks = langSection.match(/^\s*-\s*\[[^\]]+\]\([^)]+\)/gm) || [];
   if (langLinks.length < 40) {
     issues.push(`❌ 其他语言链接不足 40 个（${langLinks.length} 个）`);
   }

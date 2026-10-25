@@ -689,7 +689,41 @@ DOM 顺序 = 阅读顺序 = 日期倒序，**永远不被布局需求改动**。
 **验证**：CDP 对 48 个语言逐页取每张卡的 `time[datetime]` + 位置，按阅读顺序比对 →
 **逆序 0**、溢出 0、高度组合恒为 `{240,512}`；线上 48/48 生效。提交 `eb7154e`。
 
-## 洞察页分页 2026-10-25（20 单位/页，有图卡按 2 计）
+## 洞察页分页 2026-10-25（真实 URL 分页，20 单位/页）
+
+**口径变更（用户决定）**：放弃客户端 `hidden` 藏页方案，改为**每页一个真 URL**
+（`/{locale}/blog/page/N/`，第 1 页仍是 `/{locale}/blog/`）。理由：刷新 / 分享 / 前进后退 /
+无 JS 全都要正常，且 URL 可被索引。**用户明示分页页正常索引，不要 noindex。**
+
+**实现**：
+- `lib/blog-list.ts`：`PAGE_CAPACITY=20`、`paginate()`（无图 1 单位 / 有图 2 单位，就地切页不重排）、
+  `buildRows()`、`getCategories()`、`categoryKey()`、`blogPagePath()`（page 1 → `/blog/`）。
+- `components/BlogRows.tsx`：纯组件，服务端页面与客户端筛选共用同一套渲染（卡片抽 `BlogCard`，
+  `key` 在 `.map` 调用处可见，满足 `check-map-key`）。
+- `components/BlogPager.tsx`：`<a href>` 链接式翻页，首末页用 `<span>` 禁用，`rtl:rotate-180`。
+- 第 1 页 `page.tsx`：服务端渲染第 1 页卡片；`BlogClient` 只保留分类筛选（筛选时展示该分类全部）。
+- 深层页 `page/[page]/page.tsx`：`generateStaticParams` 生成 **1..N**（不能只生成 2..N，
+  否则 `output: export` 报 `missing generateStaticParams`）；page/1 的 canonical 与 hreflang
+  都指向 `/{locale}/blog/`；正文不显示页码标识。
+
+**踩坑 1（构建，最坑）**：`apps/blog` 原来只 `rm -rf .next/cache`。保留 `.next` 时，Next 增量构建
+**不输出新动态路由的 index.html**，`/blog/page/1/` 本地与 CF Pages 都 404，而 build 日志显示
+"866 页生成成功"。修法：build 脚本改成 `rm -rf .next out`。本地复现：保留 `.next` 连续 build 两次。
+
+**踩坑 2（路由发现）**：`discover-routes.mjs` 把 `/blog/page/[page]` 当内容动态路由，实例化时读
+`content/blog/*.mdx`，于是生成 `/blog/page/<文章slug>/`（15×48 条垃圾 URL）并会写进 sitemap 与
+known-routes。修法：`param === 'page'` 且路径以 `/page/[page]` 结尾时精确跳过。
+
+**踩坑 3（日期）**：YAML `date: 2026-10-24` 无引号 → gray-matter 返回 **Date 对象** →
+`dateTime={post.date}` 输出 `Sat Oct 24 2026 08:00:00 GMT+0800`。`parsePost()` 统一规范成
+`YYYY-MM-DD`（取 UTC 分量）。
+
+**验证**：本地 `PAGE_CAPACITY=6` 三页实测（4/6/5 篇，合计 15 无漏无重、页内日期递减、pager `‹ 1 [2] 3 ›`）；
+改回 20 后线上 47 个可访问语言（zh 被站点层 302 到 en，属既有策略）列表页 200 / 0 错误 / 15 卡；
+`/page/1/` 全部 200、canonical 与 hreflang 指向各自 `/blog/`；`/page/2/` 404（当前仅 1 页）；
+`sitemap-en.xml` 无 `blog/page`。提交 `dd70ccd` → `3ad5b2c` → `5b830cc`。
+
+
 
 **规则**（用户口径）：每页 20 个「行单位」；无图卡 1 单位，有图卡 2 单位（它占的是双高格），
 累计超 20 就开新页。文章顺序跨页保持严格日期倒序。

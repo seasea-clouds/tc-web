@@ -719,6 +719,20 @@ DOM 顺序 = 阅读顺序 = 日期倒序，**永远不被布局需求改动**。
 - 核对过没问题的：sitemap 无 `/blog/page/` 污染；robots.txt 对 AI 爬虫全 Allow；
   llms.txt 不含分页页（llms 是内容索引）；48 语言 title ≤85 / description ≤185 全部合规。
 
+**配套修订 2（2026-10-25 全面复查发现）**：
+- **日期本地化**：列表/详情/相关文章日期此前一律 `en-US` → 47 个语言全显示英文月份。
+  改为 `formatPostDate()`，在 `parsePost` 里预算成 `dateLabel`（SSG 与客户端同一字符串，避免 ICU 差异）。
+- **图片 sitemap 严重错误**：旧版 `<loc>` 直接放图片 URL（无效条目），域名 `blog.sinotradecompliance.com`
+  无 DNS（48 条死链）→ 重写为「`<loc>` = 文章页 + `<image:image>` = 图片」、域名用主域。
+- **llms 多语言**：Key Content 换本语言文案、Languages 段用语言名；
+  同步修 `check-llms.mjs`（按 Languages 段的 href 统计，原正则只认 `[en]` 代码写法，
+  改文本后 site 构建直接失败 —— 一次真实事故）。
+- **page/1 的 og:url 对齐 canonical**（/blog/）。
+- **URL 边界实测**：page/0、page/abc、page/999、page/02、大写路径 → 404；无尾斜杠 → 308 到带斜杠。
+- **48 语言线上复查**：47 个可访问语言 ×（列表页 / page/1 / 详情页）= 141 请求，状态全 200、零 `__next_error__`。
+- **未修待定**：① 404 页是 Next 默认英文（无导航、无内链）；② 移动端 390px 下 header 溢出 6px（`scrollWidth=396`，既有）；
+  ③ `/blog/page/1/` 是 `output: export` 的技术副本，无内链指向它，canonical 已归并到 `/blog/`。
+
 **踩坑 1（构建，最坑）**：`apps/blog` 原来只 `rm -rf .next/cache`。保留 `.next` 时，Next 增量构建
 **不输出新动态路由的 index.html**，`/blog/page/1/` 本地与 CF Pages 都 404，而 build 日志显示
 "866 页生成成功"。修法：build 脚本改成 `rm -rf .next out`。本地复现：保留 `.next` 连续 build 两次。

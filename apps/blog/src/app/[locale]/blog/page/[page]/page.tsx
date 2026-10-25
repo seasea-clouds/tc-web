@@ -48,7 +48,8 @@ export async function generateMetadata({ params }: { params: Promise<Params> }) 
   return {
     title,
     description,
-    openGraph: sharedOpenGraph({ title, description, locale, url }),
+    // og:url 与 canonical 保持一致（page/1 归并到 /blog/），避免分享统计被拆成两个 URL
+    openGraph: sharedOpenGraph({ title, description, locale, url: canonical }),
     twitter: sharedTwitter({ title, description }),
     alternates: {
       canonical,

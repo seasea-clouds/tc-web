@@ -52,8 +52,17 @@ ECDSA P-256 + 5 分钟时间窗路径 + nonce 防重放（D1），验签**只收
 
 D1 `tc-web-media-db`（`migrations/0001-init.sql`）：`media_envelope` / `media_nonce` / `media_rate`。
 
-`rev` 是**全局** `AUTOINCREMENT` 主键（保证单调、不复用、不因删行回退），渠道内过滤后仍然单调。
-新渠道的 rev 接着现有最大值继续，不从 1 开始。
+`rev` **按渠道独立递增，每渠道从 1 开始**。取号的唯一真相是 `media_meta(channel, last_rev)`：
+
+- **不能用 `SELECT MAX(rev)+1`** —— 已 ack 的行 7 天后被物理删，`MAX` 会退化到更小值，
+  下一条 push 就复用历史 rev；消费端水位已经更高 → 那些数据**永远拉不到**（静默丢数据）。
+- 取号走 `INSERT … ON CONFLICT DO UPDATE SET last_rev = last_rev + 1` + `SELECT last_rev`，
+  两条放进同一个 `batch()`（D1 batch = 单事务）保证原子。
+- 重复提交在取号**之前**用 `capture_id` 查掉，不消耗号（否则序列里会留空洞）。
+- 写入失败只对约束错误重试，其余抛回（别把 body 超限、写入限流归因成并发撞车）。
+
+**运维红线**：换库 / 重建表 / 清空 `media_envelope` 之后，**所有消费端必须把 `since_rev` 归零**，
+否则旧水位（如 324）永远匹配不上新库的 `rev=1` —— 同样是静默丢数据。
 
 `channel` 列 `NOT NULL` 且无默认值：漏传或非法渠道在 Worker 层就已 404，不会写进库。
 

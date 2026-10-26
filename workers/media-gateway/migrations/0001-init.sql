@@ -30,6 +30,19 @@ CREATE TABLE IF NOT EXISTS media_nonce (
 );
 CREATE INDEX IF NOT EXISTS media_nonce_exp ON media_nonce (expires_at);
 
+-- 渠道 rev 分配器：唯一真相。
+-- 不能从 media_envelope 的 MAX(rev) 取号 —— 已 ack 的行 7 天后会被物理删，
+-- MAX 会退化到更小值，下一条 push 就会复用历史 rev（消费端水位更高 → 静默丢数据）。
+CREATE TABLE IF NOT EXISTS media_meta (
+  channel  TEXT PRIMARY KEY,
+  last_rev INTEGER NOT NULL
+);
+
+-- 已有数据时用现有最大值播种（新库为空则无行）
+INSERT INTO media_meta (channel, last_rev)
+SELECT channel, MAX(rev) FROM media_envelope GROUP BY channel
+ON CONFLICT(channel) DO NOTHING;
+
 -- 限流桶：k = "<channel>:<ip>:<minute>"
 CREATE TABLE IF NOT EXISTS media_rate (
   k TEXT    PRIMARY KEY,

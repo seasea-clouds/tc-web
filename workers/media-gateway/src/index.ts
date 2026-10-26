@@ -293,7 +293,23 @@ async function handlePush(
     return deny();
   }
 
-  const ins = await insertWithRev(env, channel, captureId, now, dev, role, text);
+  // 先查幂等：重复提交直接返回原 rev，**不消耗 rev 号**
+  // （否则每次重推都在序列里留一个空洞，也会白白占用一次写）
+  const existed = await env.DB
+    .prepare('SELECT rev FROM media_envelope WHERE channel = ? AND capture_id = ?')
+    .bind(channel, captureId)
+    .first<{ rev: number }>();
+  if (existed) {
+    log({ ev: 'push', channel, status: 200, dup: true, rev: existed.rev, capture_id: captureId });
+    return json(200, { ok: true, dup: true, rev: existed.rev, channel });
+  }
+
+  const ins = await insertWithRev(env, channel, captureId, now, dev, role, text).catch((err) => {
+    // 非约束类错误（字段超限、写入限流…）不要归因成 rev 竞争，直接失败
+    log({ ev: 'push', channel, status: 500, reason: 'insert_failed', err: String(err).slice(0, 200) });
+    return 'error' as const;
+  });
+  if (ins === 'error') return json(500, { ok: false });
   if (ins === 'exhausted') {
     log({ ev: 'push', channel, status: 429, reason: 'rev_contention' });
     return tooMany();
@@ -309,12 +325,29 @@ async function handlePush(
 }
 
 /**
+ * 渠道内 rev 分配器：media_meta 是唯一真相。
+ *
+ * 不能从 media_envelope 的 MAX(rev) 取号 —— 已 ack 的行 7 天后被物理删，
+ * MAX 会退化到更小值，下一条 push 就复用历史 rev；而消费端水位已经更高，
+ * 那些新数据永远拉不到（日志里 pull 一切正常，只是没数据）。
+ *
+ * upsert 与读取放进同一个 batch（D1 batch = 单事务），保证拿号原子，
+ * 并发请求不会拿到同一个号。
+ */
+async function nextRev(env: Env, channel: string): Promise<number> {
+  const [, sel] = await env.DB.batch([
+    env.DB
+      .prepare('INSERT INTO media_meta (channel, last_rev) VALUES (?, 1) ON CONFLICT(channel) DO UPDATE SET last_rev = last_rev + 1')
+      .bind(channel),
+    env.DB.prepare('SELECT last_rev FROM media_meta WHERE channel = ?').bind(channel),
+  ]);
+  const row = (sel?.results as Array<{ last_rev: number }> | undefined)?.[0];
+  return row?.last_rev ?? 1;
+}
+
+/**
  * 写入一条信封，返回分配到的 rev；capture_id 已存在则返回 { rev }；
  * 多次撞 (channel, rev) 主键则返回 'exhausted'。
- *
- * rev 按渠道独立递增（每渠道从 1 开始），所以不能用 last_row_id：
- * 先取 MAX(rev)+1，再插；并发下两个请求可能拿到同一个 next，
- * 后到的那个撞主键 → 重试一次即可（D1 单库串行写，撞车窗口极小）。
  */
 async function insertWithRev(
   env: Env,
@@ -326,25 +359,23 @@ async function insertWithRev(
   body: string,
 ): Promise<number | { rev: number } | 'exhausted'> {
   for (let attempt = 0; attempt < 4; attempt++) {
-    const row = await env.DB
-      .prepare('SELECT COALESCE(MAX(rev), 0) + 1 AS next FROM media_envelope WHERE channel = ?')
-      .bind(channel)
-      .first<{ next: number }>();
-    const next = row?.next ?? 1;
+    const rev = await nextRev(env, channel);
     try {
       const ins = await env.DB
         .prepare('INSERT INTO media_envelope (rev, channel, capture_id, received_at, device, role, body) VALUES (?, ?, ?, ?, ?, ?, ?)')
-        .bind(next, channel, captureId, now, dev, role, body)
+        .bind(rev, channel, captureId, now, dev, role, body)
         .run();
-      if ((ins.meta?.changes ?? 0) === 1) return next;
-    } catch {
-      // 撞了 (channel, capture_id) 或 (channel, rev)：先看是不是 dup
+      if ((ins.meta?.changes ?? 0) === 1) return rev;
+    } catch (err) {
+      // 重复提交：capture_id 已存在（比 (channel,rev) 竞争更常见）
       const dup = await env.DB
         .prepare('SELECT rev FROM media_envelope WHERE channel = ? AND capture_id = ?')
         .bind(channel, captureId)
         .first<{ rev: number }>();
       if (dup) return { rev: dup.rev };
-      // 否则是 rev 撞车，重试
+      // 只有约束冲突才重试；其余错误抛回上层（不把真错误吞成 429）
+      const msg = String((err as Error)?.message ?? err);
+      if (!/SQLITE_CONSTRAINT|UNIQUE constraint/i.test(msg)) throw err;
     }
   }
   return 'exhausted';

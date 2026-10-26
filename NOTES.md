@@ -802,6 +802,12 @@ AUTOINCREMENT 的语义）。实现是「`SELECT MAX(rev)+1 WHERE channel=?` →
    顺序也不能反：先删旧变量会让当前线上的旧 middleware 注入空口令 → 采集立刻全 404。
 5. `pull` 返回的 `items` 是**信封原文**，不含 `rev` —— 游标只能取顶层 `rev`；改 `items` 结构会连带
    影响 CRM 解析。
+6. **`SELECT MAX(rev)+1` 分配号会被「已 ack 清理」打回**：高 rev 行 7 天后被删 → MAX 退化 →
+   下一条 push 复用历史 rev → 消费端水位更高，永远拉不到（日志里 pull 正常，只是没数据，
+   上线一周后才爆）。改用独立计数器表 `media_meta` + `batch()` 内 upsert+select 原子取号。
+7. **`catch` 一律当并发冲突重试**会把 body 超限、写入限流这类真错误吞成 429，归因错、排查走偏。
+   只对 `SQLITE_CONSTRAINT` / `UNIQUE constraint` 重试，其余抛回上层。
+8. **换库/清表后消费端水位必须归零**：rev 每渠道从 1 开始，旧水位（324）对不上新库的 1。
 
 **验收**：用户明确不要 `/media/_health`。查状态一律走 D1：
 `SELECT channel, COUNT(*), MAX(rev), SUM(acked_at IS NULL) FROM media_envelope GROUP BY channel`。

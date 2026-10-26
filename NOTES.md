@@ -777,3 +777,39 @@ known-routes。修法：`param === 'page'` 且路径以 `/page/[page]` 结尾时
 
 **注**：当前文章量撑不满 2 页，所以线上看不到翻页条 —— 第 21 个单位（例如再加 2 篇无图卡）
 就会出现第 2 页。若用户本意是「20 行 × 2 列 = 40 篇/页」，改 `PAGE_CAPACITY` 一个数即可。
+
+---
+
+## 媒体网关改造（Reddit → tc-web-media，2026-10-26）
+
+**目标**：`tc-web-reddit`（`/reddit/<win>/*`）一次性硬切换成 `tc-web-media`（`/media/<channel>/<win>/*`），
+多渠道参数化（当前 `reddit`、`x`），不留任何兼容代码与旧命名。
+
+**与 CRM 方案的差异（我们改的）**：
+- **主键不改**。CRM 原方案想改成 `(channel, capture_id)` + `UNIQUE(channel, rev)`，但 Worker 靠
+  `INSERT … meta.last_row_id` 取 `rev`（`INSERT … RETURNING` 在 D1 走 `.all()` 拿不到行，踩过）。
+  改主键会废掉这条链路，还要在无事务的 D1 上手动分配每渠道 rev。**保留 `rev` 为
+  `INTEGER PRIMARY KEY AUTOINCREMENT`，`channel` 只是普通列**，零数据搬迁、rev 不断。
+- 代价：`rev` 全局单调，x 渠道不从 1 开始（接着 reddit 的最大值）。渠道内过滤后仍单调，CRM 水位逻辑等价。
+- `channel` 列 **NOT NULL 无默认值**（用户要求，不许靠 DEFAULT 掩盖遗漏）→ 必须建新库新表，
+  不能对已有表 `ALTER TABLE ADD COLUMN … NOT NULL`（SQLite 报错）。
+- 库名也改：`tc-web-reddit-db` → `tc-web-media-db`，表名 `rd_*` → `media_*`。
+
+**踩坑记录**：
+
+1. **D1 导入大 body 只能走 HTTP API 带参数绑定**。`wrangler d1 execute --file` 按语句下发，
+   单条 SQL 超过 API 上限就 400；信封 body 最大 977 KB，10 条超过 100 KB。改用
+   `POST /accounts/<acc>/d1/database/<db>/query` + `{"sql": "... ?, ?", "params": [...]}` 逐条导入
+   （params 单值上限 2 MB），34 条全部成功。Python 客户端必须显式设 `User-Agent`。
+2. **本地 selftest 必须先清库**，否则上一轮的 capture 会残留，`pull` 条数断言全错
+   （表现为「expected 2 got 5」这种莫名其妙的数字）。跑之前
+   `DELETE FROM media_envelope; DELETE FROM media_nonce; DELETE FROM media_rate;`。
+3. **`pkill -f "wrangler dev"` 会杀掉执行它的那个 shell** —— 命令行里含同样的字符串，
+   `pkill -f` 自匹配。改用 `lsof -ti:8787 | xargs -r kill`。
+4. **Pages 的 `secret_text` 变量用 API PATCH 时要先 GET 存档**：读不出值，PATCH 时没带上的
+   secret 会被覆盖成空值 → 全站转发失败。
+5. `pull` 返回的 `items` 是**信封原文**，不含 `rev` —— 游标只能取顶层 `rev`。测试别假设 items 里有 rev。
+
+**验证**：本地 `wrangler dev` + 自建 ECDSA 测试密钥 20 例全过（push/dup/pull 游标/ack 可见性/
+跨渠道公钥隔离/非法渠道/角色错配/过期窗口/无网关头/DER 签名/nonce 重放/老路径 404/无 _health）。
+线上 `tc-web-media.sea-clouds.workers.dev` 9 项探测全部 404（网关头、白名单、旧路径、_health）。

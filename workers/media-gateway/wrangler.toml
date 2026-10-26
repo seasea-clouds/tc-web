@@ -1,0 +1,19 @@
+# 媒体网关 —— 多渠道采集链路的哑存储 Worker
+# 对外不直接暴露：主域 https://sinotradecompliance.com/media/* 由 site 的边缘 worker 转发进来
+# Secrets（不写在这里）：MEDIA_PUBKEYS（各渠道各角色公钥 JSON）、MEDIA_GATEWAY_SECRET、MEDIA_CHANNELS
+
+name = "tc-web-media"
+main = "src/index.ts"
+compatibility_date = "2026-10-22"
+
+# 未 ack 30 天 / 已 ack 7 天物理删 / nonce 与限流桶清理
+[triggers]
+crons = ["20 3 * * *"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "tc-web-media-db"
+database_id = "59d68ba0-85c4-4cb3-863c-8ad09967553d"
+
+[observability]
+enabled = true

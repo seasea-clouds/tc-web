@@ -61,7 +61,7 @@ Allow: /
 Sitemap: ${baseUrl}/sitemap.xml
 Sitemap: ${baseUrl}/llms.txt
 
-# Reddit 采集接口（机器端点，不是页面；由边缘 worker 转发给独立 Worker）
+# 媒体网关接口（机器端点，不是页面；由边缘 worker 转发给独立 Worker）
 User-agent: *
 Disallow: /media/
 `;

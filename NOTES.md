@@ -537,7 +537,7 @@ RSC flight payload，blog 子站的页面级 payload 文件名是 `<route>/index
 数据卡在队列里）。正确语义：本页最后一条的 rev；空页原样返回 `since_rev`。`next_since_rev` 为同值别名；
 `ack` 返回的才是全局 `MAX`（只用于日志）。实测：7 条数据 limit=3 三页拉完，无漏无重。
 
-**6. 测试会真写库**：selftest 跑完要 `DELETE FROM rd_envelope / rd_nonce / rd_rate` 再交给 CRM；
+**6. 测试会真写库**：selftest 跑完要 `DELETE FROM media_envelope / media_nonce / media_rate` 再交给 CRM；
 `rev` 走 AUTOINCREMENT 不回退（无影响，CRM 只要求单调递增）。
 
 ## 踩坑 22：admin 登录"失败"是两件独立的事叠在一起（2026-10-23）
@@ -782,8 +782,7 @@ known-routes。修法：`param === 'page'` 且路径以 `/page/[page]` 结尾时
 
 ## 媒体网关（tc-web-media，2026-10-26）
 
-`/media/<channel>/<win>/(push|pull|ack)`，渠道白名单 `MEDIA_CHANNELS`。旧 `tc-web-reddit` /
-`/reddit/*` / `X-RD-*` / `rd_*` 全部删除，不留兼容。
+`/media/<channel>/<win>/(push|pull|ack)`，渠道白名单 `MEDIA_CHANNELS`。
 
 **rev 按渠道独立递增（每渠道从 1 开始）**，所以**不能**用 `INSERT … last_row_id` 当 rev（那是全局
 AUTOINCREMENT 的语义）。实现是「`SELECT MAX(rev)+1 WHERE channel=?` → INSERT」，

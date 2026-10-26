@@ -1,8 +1,8 @@
 -- 媒体网关 · 哑存储（多渠道）
--- channel 无默认值：Worker 层已在路径白名单里拦截非法渠道，写库时不允许空值
+-- rev 按渠道独立递增（每渠道从 1 开始）；channel 无默认值，非法渠道在路由层就已 404
 
 CREATE TABLE IF NOT EXISTS media_envelope (
-  rev         INTEGER PRIMARY KEY AUTOINCREMENT,   -- 全局单调，按渠道过滤后仍单调
+  rev         INTEGER NOT NULL,
   channel     TEXT    NOT NULL,
   capture_id  TEXT    NOT NULL,
   received_at INTEGER NOT NULL,                    -- unix 秒
@@ -10,6 +10,7 @@ CREATE TABLE IF NOT EXISTS media_envelope (
   device      TEXT,
   role        TEXT,
   body        TEXT    NOT NULL,                    -- 信封原始字符串（不改写）
+  PRIMARY KEY (channel, rev),
   UNIQUE (channel, capture_id)
 );
 

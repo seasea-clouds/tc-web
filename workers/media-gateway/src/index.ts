@@ -293,24 +293,61 @@ async function handlePush(
     return deny();
   }
 
-  const ins = await env.DB
-    .prepare('INSERT INTO media_envelope (channel, capture_id, received_at, device, role, body) VALUES (?, ?, ?, ?, ?, ?) ON CONFLICT(channel, capture_id) DO NOTHING')
-    .bind(channel, captureId, now, dev, role, text)
-    .run();
-
-  const rev = ins.meta.last_row_id;
-  if ((ins.meta?.changes ?? 0) === 0) {
-    // 已存在 → dup，rev 不变
-    const row = await env.DB.prepare('SELECT rev FROM media_envelope WHERE channel = ? AND capture_id = ?')
-      .bind(channel, captureId)
-      .first<{ rev: number }>();
-    const dupRev = row?.rev ?? (await currentRev(env, channel));
-    log({ ev: 'push', channel, status: 200, dup: true, rev: dupRev, capture_id: captureId });
-    return json(200, { ok: true, dup: true, rev: dupRev, channel });
+  const ins = await insertWithRev(env, channel, captureId, now, dev, role, text);
+  if (ins === 'exhausted') {
+    log({ ev: 'push', channel, status: 429, reason: 'rev_contention' });
+    return tooMany();
+  }
+  if (typeof ins === 'number') {
+    log({ ev: 'push', channel, status: 200, rev: ins, capture_id: captureId, device: dev });
+    return json(200, { ok: true, rev: ins, channel });
   }
 
-  log({ ev: 'push', channel, status: 200, rev, capture_id: captureId, device: dev });
-  return json(200, { ok: true, rev, channel });
+  // 已存在 → dup，rev 不变
+  log({ ev: 'push', channel, status: 200, dup: true, rev: ins.rev, capture_id: captureId });
+  return json(200, { ok: true, dup: true, rev: ins.rev, channel });
+}
+
+/**
+ * 写入一条信封，返回分配到的 rev；capture_id 已存在则返回 { rev }；
+ * 多次撞 (channel, rev) 主键则返回 'exhausted'。
+ *
+ * rev 按渠道独立递增（每渠道从 1 开始），所以不能用 last_row_id：
+ * 先取 MAX(rev)+1，再插；并发下两个请求可能拿到同一个 next，
+ * 后到的那个撞主键 → 重试一次即可（D1 单库串行写，撞车窗口极小）。
+ */
+async function insertWithRev(
+  env: Env,
+  channel: string,
+  captureId: string,
+  now: number,
+  dev: string,
+  role: string,
+  body: string,
+): Promise<number | { rev: number } | 'exhausted'> {
+  for (let attempt = 0; attempt < 4; attempt++) {
+    const row = await env.DB
+      .prepare('SELECT COALESCE(MAX(rev), 0) + 1 AS next FROM media_envelope WHERE channel = ?')
+      .bind(channel)
+      .first<{ next: number }>();
+    const next = row?.next ?? 1;
+    try {
+      const ins = await env.DB
+        .prepare('INSERT INTO media_envelope (rev, channel, capture_id, received_at, device, role, body) VALUES (?, ?, ?, ?, ?, ?, ?)')
+        .bind(next, channel, captureId, now, dev, role, body)
+        .run();
+      if ((ins.meta?.changes ?? 0) === 1) return next;
+    } catch {
+      // 撞了 (channel, capture_id) 或 (channel, rev)：先看是不是 dup
+      const dup = await env.DB
+        .prepare('SELECT rev FROM media_envelope WHERE channel = ? AND capture_id = ?')
+        .bind(channel, captureId)
+        .first<{ rev: number }>();
+      if (dup) return { rev: dup.rev };
+      // 否则是 rev 撞车，重试
+    }
+  }
+  return 'exhausted';
 }
 
 // ── pull ──────────────────────────────────────────────────────────────

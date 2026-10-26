@@ -335,10 +335,14 @@ async function handlePush(
  * 并发请求不会拿到同一个号。
  */
 async function nextRev(env: Env, channel: string): Promise<number> {
+  // 首次插入时用 envelope 现有最大值 +1 播种 —— 这样即使忘了手工播种（换库/重建表后常见），
+  // 也不会撞已有 rev 而 500；之后走 DO UPDATE 正常递增。
   const [, sel] = await env.DB.batch([
     env.DB
-      .prepare('INSERT INTO media_meta (channel, last_rev) VALUES (?, 1) ON CONFLICT(channel) DO UPDATE SET last_rev = last_rev + 1')
-      .bind(channel),
+      .prepare(
+        'INSERT INTO media_meta (channel, last_rev) VALUES (?, COALESCE((SELECT MAX(rev) FROM media_envelope WHERE channel = ?), 0) + 1) ON CONFLICT(channel) DO UPDATE SET last_rev = last_rev + 1',
+      )
+      .bind(channel, channel),
     env.DB.prepare('SELECT last_rev FROM media_meta WHERE channel = ?').bind(channel),
   ]);
   const row = (sel?.results as Array<{ last_rev: number }> | undefined)?.[0];

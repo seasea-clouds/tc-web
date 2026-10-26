@@ -58,6 +58,8 @@ D1 `tc-web-media-db`（`migrations/0001-init.sql`）：`media_envelope` / `media
   下一条 push 就复用历史 rev；消费端水位已经更高 → 那些数据**永远拉不到**（静默丢数据）。
 - 取号走 `INSERT … ON CONFLICT DO UPDATE SET last_rev = last_rev + 1` + `SELECT last_rev`，
   两条放进同一个 `batch()`（D1 batch = 单事务）保证原子。
+  首次插入时用 `COALESCE((SELECT MAX(rev) FROM media_envelope WHERE channel = ?), 0) + 1` 播种，
+  所以**忘了手工播种也不会撞车**；但迁移过历史数据时仍应显式播种（见 wrangler 部署步骤）。
 - 重复提交在取号**之前**用 `capture_id` 查掉，不消耗号（否则序列里会留空洞）。
 - 写入失败只对约束错误重试，其余抛回（别把 body 超限、写入限流归因成并发撞车）。
 

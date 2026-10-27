@@ -1,0 +1,40 @@
+{
+  "Regulations": {
+    "metaTitle": "Reglementări chineze și decrete GACC",
+    "metaDescription": "Documente oficiale ale autorităților vamale și de reglementare din China pentru exportatori, urmărite și rezumate.",
+    "title": "Reglementări chineze și decrete GACC",
+    "subtitle": "Documente oficiale ale autorităților vamale și de reglementare din China, urmărite și rezumate pentru exportatori.",
+    "colDocNumber": "Nr. document",
+    "colTitle": "Titlu",
+    "colPublished": "Publicat",
+    "colEffective": "În vigoare de la",
+    "colStatus": "Stare",
+    "statusInForce": "În vigoare",
+    "statusUpcoming": "Încă nu este în vigoare",
+    "statusAmended": "Modificat",
+    "statusRepealed": "Abrogat",
+    "statusDraft": "Proiect",
+    "noDocs": "Nu există încă documente publicate.",
+    "pagination": "Pagina",
+    "prev": "Anterior",
+    "next": "Următor",
+    "ctaTitle": "Aveți nevoie de ajutor pentru aplicarea acestei reguli?",
+    "ctaDesc": "Solicitați o evaluare de conformitate gratuită adaptată produselor dumneavoastră.",
+    "ctaButton": "Evaluare gratuită",
+    "issuerLabel": "Autoritatea emitentă",
+    "sourceLabel": "Textul original în chineză",
+    "disclaimer": "Acesta este un rezumat neoficial destinat exportatorilor. Prevalează textul original în chineză publicat de autoritate. Verificați întotdeauna textul oficial înainte de a acționa.",
+    "relatedServiceLabel": "Serviciu asociat",
+    "backToList": "Toate reglementările",
+    "copyLink": "Copiază linkul"
+  },
+  "Cookie": {
+    "message": "Acest site folosește numai cookie-uri de autentificare esențiale. Nu sunt utilizate cookie-uri de urmărire sau de publicitate.",
+    "accept": "Acceptați toate",
+    "reject": "Respinge neesențiale",
+    "privacyLink": "Politica de confidențialitate"
+  },
+  "Footer": {
+    "getQuote": "Obțineți o ofertă"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "Regulations": {
+    "metaTitle": "Peraturan Tiongkok dan Dekret GACC",
+    "metaDescription": "Dokumen resmi otoritas bea cukai dan regulator Tiongkok untuk eksportir, dipantau dan diringkas.",
+    "title": "Peraturan Tiongkok dan Dekret GACC",
+    "subtitle": "Dokumen resmi otoritas bea cukai dan regulator Tiongkok, dipantau dan diringkas untuk eksportir.",
+    "colDocNumber": "No. dokumen",
+    "colTitle": "Judul",
+    "colPublished": "Diterbitkan",
+    "colEffective": "Berlaku sejak",
+    "colStatus": "Keadaan",
+    "statusInForce": "Berlaku",
+    "statusUpcoming": "Belum berlaku",
+    "statusAmended": "Diubah",
+    "statusRepealed": "Dicabut",
+    "statusDraft": "Rancangan",
+    "noDocs": "Belum ada dokumen yang diterbitkan.",
+    "pagination": "Halaman",
+    "prev": "Sebelumnya",
+    "next": "Berikutnya",
+    "ctaTitle": "Butuh bantuan menerapkan aturan ini?",
+    "ctaDesc": "Dapatkan penilaian kepatuhan gratis yang disesuaikan dengan produk Anda.",
+    "ctaButton": "Penilaian gratis",
+    "issuerLabel": "Otoritas penerbit",
+    "sourceLabel": "Teks asli bahasa Tiongkok",
+    "disclaimer": "Ini adalah ringkasan tidak resmi yang disiapkan untuk eksportir. Teks asli bahasa Tiongkok yang diterbitkan otoritas yang berlaku. Selalu verifikasi dengan teks resmi sebelum bertindak.",
+    "relatedServiceLabel": "Layanan terkait",
+    "backToList": "Semua peraturan",
+    "copyLink": "Salin tautan"
+  },
+  "Cookie": {
+    "message": "Situs ini hanya menggunakan cookie otentikasi penting. Tidak ada cookie pelacakan atau iklan yang digunakan.",
+    "accept": "Terima Semua",
+    "reject": "Tolak Tidak Penting",
+    "privacyLink": "Kebijakan Privasi"
+  },
+  "Footer": {
+    "getQuote": "Dapatkan Penawaran"
+  }
+}

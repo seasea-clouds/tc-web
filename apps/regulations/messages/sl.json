@@ -1,0 +1,40 @@
+{
+  "Regulations": {
+    "metaTitle": "Kitajski predpisi in uredbe GACC",
+    "metaDescription": "Uradni dokumenti kitajskih carinskih in nadzornih organov za izvoznike – spremljani in povzeti.",
+    "title": "Kitajski predpisi in uredbe GACC",
+    "subtitle": "Uradni dokumenti kitajskih carinskih in nadzornih organov, spremljani in povzeti za izvoznike.",
+    "colDocNumber": "Št. dokumenta",
+    "colTitle": "Naslov",
+    "colPublished": "Objavljeno",
+    "colEffective": "Velja od",
+    "colStatus": "Stanje",
+    "statusInForce": "Velja",
+    "statusUpcoming": "Še ni v veljavi",
+    "statusAmended": "Spremenjeno",
+    "statusRepealed": "Razveljavljeno",
+    "statusDraft": "Osnutek",
+    "noDocs": "Objavljenih dokumentov še ni.",
+    "pagination": "Stran",
+    "prev": "Prejšnja",
+    "next": "Naslednja",
+    "ctaTitle": "Potrebujete pomoč pri uporabi tega predpisa?",
+    "ctaDesc": "Pridobite brezplačno oceno skladnosti, prilagojeno vašim izdelkom.",
+    "ctaButton": "Brezplačna ocena",
+    "issuerLabel": "Organ izdajatelj",
+    "sourceLabel": "Izvirno besedilo v kitajščini",
+    "disclaimer": "To je neuradni povzetek, pripravljen za izvoznike. Prevladuje izvirno kitajsko besedilo, ki ga je objavil organ. Pred ukrepanjem vedno preverite uradno besedilo.",
+    "relatedServiceLabel": "Povezana storitev",
+    "backToList": "Vsi predpisi",
+    "copyLink": "Kopiraj povezavo"
+  },
+  "Cookie": {
+    "message": "To spletno mesto uporablja samo bistvene piškotke za preverjanje pristnosti. Piškotki za sledenje ali oglaševanje se ne uporabljajo.",
+    "accept": "Sprejmi vse",
+    "reject": "Zavrni nebistveno",
+    "privacyLink": "Politika zasebnosti"
+  },
+  "Footer": {
+    "getQuote": "Pridobite ponudbo"
+  }
+}

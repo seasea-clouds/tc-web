@@ -1,0 +1,43 @@
+/* Self-hosted fonts — replaces Google Fonts external dependency */
+@import "../../../../packages/ui/src/fonts.css";
+
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@source "../../../../packages";
+
+@theme inline {
+  --color-primary-navy: #1B365D;
+  --color-accent-gold: #B8960C;
+  --color-gold: #D4AF37;
+  --color-accent-blue: #2563EB;
+  --color-bg-ice: #F4F6F9;
+  --color-text-charcoal: #333333;
+  --color-text-muted: #5F6F7F;
+  --font-sans: 'Inter', 'Noto Sans Thai', 'Noto Sans', 'Open Sans', system-ui, sans-serif;
+  --font-heading: 'Montserrat', 'Noto Serif Thai', 'Noto Serif', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: #ffffff;
+  color: #333333;
+  font-family: 'Inter', 'Noto Sans Thai', 'Noto Sans', 'Open Sans', system-ui, sans-serif;
+  line-height: 1.75;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', 'Noto Serif Thai', 'Noto Serif', system-ui, sans-serif;
+  font-weight: 700;
+  /* 长单词语言（亚美尼亚语 համապատասխանության、乌尔都语 …）在 390px 下会顶出视口，
+     只影响真正放不下的单词，正常文本不受影响 */
+  overflow-wrap: break-word;
+}
+
+/* RTL support for Arabic, Hebrew, Persian/Farsi, Urdu */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .lucide {
+  transform: scaleX(-1);
+}

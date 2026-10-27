@@ -1,0 +1,40 @@
+{
+  "Regulations": {
+    "metaTitle": "중국 법규 및 해관총서령",
+    "metaDescription": "수출 기업을 위해 중국 세관 및 규제 당국의 문서를 추적하고 요약해 제공합니다.",
+    "title": "중국 법규 및 해관총서령",
+    "subtitle": "수출 기업을 위해 중국 세관 및 규제 문서를 추적·요약합니다.",
+    "colDocNumber": "문서 번호",
+    "colTitle": "제목",
+    "colPublished": "공포일",
+    "colEffective": "시행일",
+    "colStatus": "상태",
+    "statusInForce": "시행 중",
+    "statusUpcoming": "미시행",
+    "statusAmended": "개정됨",
+    "statusRepealed": "폐지",
+    "statusDraft": "초안",
+    "noDocs": "아직 게시된 문서가 없습니다.",
+    "pagination": "페이지",
+    "prev": "이전",
+    "next": "다음",
+    "ctaTitle": "이 규정 적용에 도움이 필요하십니까?",
+    "ctaDesc": "귀사 제품에 맞춘 무료 컴플라이언스 평가를 받아보세요.",
+    "ctaButton": "무료 평가 받기",
+    "issuerLabel": "발행 기관",
+    "sourceLabel": "중국어 원문",
+    "disclaimer": "본 문서는 수출 기업을 위해 작성한 비공식 요약입니다. 발행 기관이 공포한 중국어 원문이 우선합니다. 조치 전 반드시 공식 원문을 확인하십시오.",
+    "relatedServiceLabel": "관련 서비스",
+    "backToList": "전체 법규",
+    "copyLink": "링크 복사"
+  },
+  "Cookie": {
+    "message": "이 사이트는 필수 인증 쿠키만을 사용합니다. 추적 또는 광고 쿠키는 사용되지 않습니다.",
+    "accept": "모두 수락",
+    "reject": "필수적이지 않은 것은 거부",
+    "privacyLink": "개인 정보 보호 정책"
+  },
+  "Footer": {
+    "getQuote": "견적 받기"
+  }
+}

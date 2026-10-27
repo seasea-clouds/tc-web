@@ -1,0 +1,40 @@
+{
+  "Regulations": {
+    "metaTitle": "Kínai előírások és GACC-rendeletek",
+    "metaDescription": "A kínai vám- és felügyeleti hatóságok hivatalos dokumentumai exportőröknek – nyomon követve és összefoglalva.",
+    "title": "Kínai előírások és GACC-rendeletek",
+    "subtitle": "A kínai vám- és felügyeleti hatóságok hivatalos dokumentumai, nyomon követve és összefoglalva exportőröknek.",
+    "colDocNumber": "Dokumentumszám",
+    "colTitle": "Cím",
+    "colPublished": "Közzétéve",
+    "colEffective": "Hatályos ettől",
+    "colStatus": "Állapot",
+    "statusInForce": "Hatályos",
+    "statusUpcoming": "Még nem hatályos",
+    "statusAmended": "Módosítva",
+    "statusRepealed": "Hatályon kívül",
+    "statusDraft": "Tervezet",
+    "noDocs": "Még nincs közzétett dokumentum.",
+    "pagination": "Oldal",
+    "prev": "Előző",
+    "next": "Következő",
+    "ctaTitle": "Segítségre van szüksége a szabály alkalmazásában?",
+    "ctaDesc": "Kérjen ingyenes megfelelőségi értékelést termékeire szabva.",
+    "ctaButton": "Ingyenes értékelés",
+    "issuerLabel": "Kibocsátó hatóság",
+    "sourceLabel": "Kínai eredeti szöveg",
+    "disclaimer": "Ez egy exportőröknek készült, nem hivatalos összefoglaló. A hatóság által közzétett kínai eredeti szöveg az irányadó. Cselekvés előtt mindig ellenőrizze a hivatalos szöveget.",
+    "relatedServiceLabel": "Kapcsolódó szolgáltatás",
+    "backToList": "Összes előírás",
+    "copyLink": "Link másolása"
+  },
+  "Cookie": {
+    "message": "Ez az oldal csak alapvető hitelesítési cookie-kat használ. Nem használnak nyomkövető vagy hirdetési sütiket.",
+    "accept": "Az összes elfogadása",
+    "reject": "Elutasítás Nem alapvető",
+    "privacyLink": "Adatvédelmi szabályzat"
+  },
+  "Footer": {
+    "getQuote": "Kérjen árajánlatot"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "Regulations": {
+    "metaTitle": "Kanuni za China na amri za GACC",
+    "metaDescription": "Nyaraka rasmi za mamlaka ya forodha na udhibiti ya China kwa wauzaji nje, zikifuatiliwa na kufupishwa.",
+    "title": "Kanuni za China na amri za GACC",
+    "subtitle": "Nyaraka rasmi za mamlaka ya forodha na udhibiti ya China, zikifuatiliwa na kufupishwa kwa wauzaji nje.",
+    "colDocNumber": "Namba ya hati",
+    "colTitle": "Kichwa",
+    "colPublished": "Imechapishwa",
+    "colEffective": "Inaanza kutumika",
+    "colStatus": "Hali",
+    "statusInForce": "Inatumika",
+    "statusUpcoming": "Bado haijaanza kutumika",
+    "statusAmended": "Imerekebishwa",
+    "statusRepealed": "Imebatilishwa",
+    "statusDraft": "Rasimu",
+    "noDocs": "Hakuna hati zilizochapishwa bado.",
+    "pagination": "Ukurasa",
+    "prev": "Iliyotangulia",
+    "next": "Ifuatayo",
+    "ctaTitle": "Unahitaji msaada kutumia kanuni hii?",
+    "ctaDesc": "Pata tathmini ya bure ya uzingatiaji inayolingana na bidhaa zako.",
+    "ctaButton": "Tathmini ya bure",
+    "issuerLabel": "Mamlaka iliyotoa",
+    "sourceLabel": "Maandishi rasmi ya Kichina",
+    "disclaimer": "Huu ni muhtasari usio rasmi ulioandaliwa kwa wauzaji nje. Maandishi ya awali ya Kichina yaliyochapishwa na mamlaka ndiyo yenye nguvu. Daima hakiki maandishi rasmi kabla ya kuchukua hatua.",
+    "relatedServiceLabel": "Huduma inayohusiana",
+    "backToList": "Kanuni zote",
+    "copyLink": "Nakili kiungo"
+  },
+  "Cookie": {
+    "message": "Tovuti hii hutumia vidakuzi muhimu vya uthibitishaji pekee. Hakuna vidakuzi vya ufuatiliaji au utangazaji vinatumika.",
+    "accept": "Kubali Yote",
+    "reject": "Kataa Isiyo Muhimu",
+    "privacyLink": "Sera ya Faragha"
+  },
+  "Footer": {
+    "getQuote": "Pata Nukuu"
+  }
+}

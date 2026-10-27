@@ -1,0 +1,40 @@
+{
+  "Regulations": {
+    "metaTitle": "Chińskie przepisy i dekrety GACC",
+    "metaDescription": "Oficjalne dokumenty chińskich organów celnych i regulacyjnych dla eksporterów — śledzone i streszczane.",
+    "title": "Chińskie przepisy i dekrety GACC",
+    "subtitle": "Oficjalne dokumenty chińskich organów celnych i regulacyjnych, śledzone i streszczane dla eksporterów.",
+    "colDocNumber": "Nr dokumentu",
+    "colTitle": "Tytuł",
+    "colPublished": "Opublikowano",
+    "colEffective": "Obowiązuje od",
+    "colStatus": "Stan",
+    "statusInForce": "Obowiązuje",
+    "statusUpcoming": "Jeszcze nie obowiązuje",
+    "statusAmended": "Zmieniony",
+    "statusRepealed": "Uchylony",
+    "statusDraft": "Projekt",
+    "noDocs": "Brak opublikowanych dokumentów.",
+    "pagination": "Strona",
+    "prev": "Poprzednia",
+    "next": "Następna",
+    "ctaTitle": "Potrzebujesz pomocy w zastosowaniu tej zasady?",
+    "ctaDesc": "Zamów bezpłatną ocenę zgodności dopasowaną do Twoich produktów.",
+    "ctaButton": "Bezpłatna ocena",
+    "issuerLabel": "Organ wydający",
+    "sourceLabel": "Chiński tekst oryginalny",
+    "disclaimer": "To nieoficjalne streszczenie przygotowane dla eksporterów. Rozstrzygający jest chiński tekst oryginalny opublikowany przez organ. Przed podjęciem działań zawsze weryfikuj tekst oficjalny.",
+    "relatedServiceLabel": "Powiązana usługa",
+    "backToList": "Wszystkie przepisy",
+    "copyLink": "Kopiuj link"
+  },
+  "Cookie": {
+    "message": "Ta witryna wykorzystuje wyłącznie niezbędne pliki cookie służące do uwierzytelniania. Nie są używane żadne śledzące ani reklamowe pliki cookie.",
+    "accept": "Zaakceptuj wszystko",
+    "reject": "Odrzuć niepotrzebne",
+    "privacyLink": "Polityka prywatności"
+  },
+  "Footer": {
+    "getQuote": "Uzyskaj wycenę"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "Regulations": {
+    "metaTitle": "Peraturan China dan Dekri GACC",
+    "metaDescription": "Dokumen rasmi pihak berkuasa kastam dan pengawalseliaan China untuk pengeksport, dipantau dan diringkaskan.",
+    "title": "Peraturan China dan Dekri GACC",
+    "subtitle": "Dokumen rasmi pihak berkuasa kastam dan pengawalseliaan China, dipantau dan diringkaskan untuk pengeksport.",
+    "colDocNumber": "No. dokumen",
+    "colTitle": "Tajuk",
+    "colPublished": "Diterbitkan",
+    "colEffective": "Berkuat kuasa mulai",
+    "colStatus": "Keadaan",
+    "statusInForce": "Berkuat kuasa",
+    "statusUpcoming": "Belum berkuat kuasa",
+    "statusAmended": "Dipinda",
+    "statusRepealed": "Dimansuhkan",
+    "statusDraft": "Draf",
+    "noDocs": "Belum ada dokumen diterbitkan.",
+    "pagination": "Halaman",
+    "prev": "Sebelumnya",
+    "next": "Seterusnya",
+    "ctaTitle": "Perlukan bantuan menggunakan peraturan ini?",
+    "ctaDesc": "Dapatkan penilaian pematuhan percuma yang disesuaikan dengan produk anda.",
+    "ctaButton": "Penilaian percuma",
+    "issuerLabel": "Pihak berkuasa pengeluar",
+    "sourceLabel": "Teks asal bahasa Cina",
+    "disclaimer": "Ini ialah ringkasan tidak rasmi yang disediakan untuk pengeksport. Teks asal bahasa Cina yang diterbitkan oleh pihak berkuasa mengatasi. Sentiasa sahkan dengan teks rasmi sebelum bertindak.",
+    "relatedServiceLabel": "Perkhidmatan berkaitan",
+    "backToList": "Semua peraturan",
+    "copyLink": "Salin pautan"
+  },
+  "Cookie": {
+    "message": "Tapak ini hanya menggunakan kuki pengesahan penting. Tiada kuki penjejakan atau pengiklanan digunakan.",
+    "accept": "Terima Semua",
+    "reject": "Tolak Bukan Penting",
+    "privacyLink": "Dasar Privasi"
+  },
+  "Footer": {
+    "getQuote": "Dapatkan Sebut Harga"
+  }
+}

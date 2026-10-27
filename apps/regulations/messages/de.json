@@ -1,0 +1,40 @@
+{
+  "Regulations": {
+    "metaTitle": "Chinesische Vorschriften & GACC-Dekrete",
+    "metaDescription": "Amtliche Dokumente von Chinas Zoll- und Aufsichtsbehörden für Exporteure – verfolgt, zusammengefasst und aktuell gehalten.",
+    "title": "Chinesische Vorschriften & GACC-Dekrete",
+    "subtitle": "Amtliche Dokumente von Chinas Zoll- und Aufsichtsbehörden für Exporteure – verfolgt und zusammengefasst.",
+    "colDocNumber": "Dokumentnr.",
+    "colTitle": "Titel",
+    "colPublished": "Veröffentlicht",
+    "colEffective": "In Kraft ab",
+    "colStatus": "Rechtsstand",
+    "statusInForce": "In Kraft",
+    "statusUpcoming": "Noch nicht in Kraft",
+    "statusAmended": "Geändert",
+    "statusRepealed": "Aufgehoben",
+    "statusDraft": "Entwurf",
+    "noDocs": "Noch keine Dokumente veröffentlicht.",
+    "pagination": "Seite",
+    "prev": "Zurück",
+    "next": "Weiter",
+    "ctaTitle": "Brauchen Sie Hilfe bei der Anwendung dieser Regel?",
+    "ctaDesc": "Fordern Sie eine kostenlose Compliance-Bewertung für Ihre Produkte an.",
+    "ctaButton": "Kostenlose Bewertung",
+    "issuerLabel": "Erlassende Behörde",
+    "sourceLabel": "Chinesischer Originaltext",
+    "disclaimer": "Dies ist eine inoffizielle Zusammenfassung für Exporteure. Maßgeblich ist der von der Behörde veröffentlichte chinesische Originaltext. Prüfen Sie vor Maßnahmen stets das amtliche Dokument.",
+    "relatedServiceLabel": "Verwandte Leistung",
+    "backToList": "Alle Vorschriften",
+    "copyLink": "Link kopieren"
+  },
+  "Cookie": {
+    "message": "Diese Website verwendet nur unbedingt erforderliche Authentifizierungscookies. Es werden keine Tracking- oder Werbecookies verwendet.",
+    "accept": "Alle akzeptieren",
+    "reject": "Unwesentliches ablehnen",
+    "privacyLink": "Datenschutzrichtlinie"
+  },
+  "Footer": {
+    "getQuote": "Angebot einholen"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "Regulations": {
+    "metaTitle": "Kinesiska föreskrifter och GACC-förordningar",
+    "metaDescription": "Officiella dokument från Kinas tull- och tillsynsmyndigheter för exportörer – bevakade och sammanfattade.",
+    "title": "Kinesiska föreskrifter och GACC-förordningar",
+    "subtitle": "Officiella dokument från Kinas tull- och tillsynsmyndigheter, bevakade och sammanfattade för exportörer.",
+    "colDocNumber": "Dokumentnr",
+    "colTitle": "Titel",
+    "colPublished": "Publicerad",
+    "colEffective": "Gäller från",
+    "colStatus": "Giltighet",
+    "statusInForce": "Gäller",
+    "statusUpcoming": "Ännu inte i kraft",
+    "statusAmended": "Ändrad",
+    "statusRepealed": "Upphävd",
+    "statusDraft": "Utkast",
+    "noDocs": "Inga dokument publicerade ännu.",
+    "pagination": "Sida",
+    "prev": "Föregående",
+    "next": "Nästa",
+    "ctaTitle": "Behöver du hjälp att tillämpa regeln?",
+    "ctaDesc": "Få en kostnadsfri compliance-bedömning anpassad till dina produkter.",
+    "ctaButton": "Kostnadsfri bedömning",
+    "issuerLabel": "Utfärdande myndighet",
+    "sourceLabel": "Kinesisk originaltext",
+    "disclaimer": "Detta är en inofficiell sammanfattning för exportörer. Den kinesiska originaltext som myndigheten publicerat gäller. Kontrollera alltid den officiella texten innan du agerar.",
+    "relatedServiceLabel": "Relaterad tjänst",
+    "backToList": "Alla föreskrifter",
+    "copyLink": "Kopiera länk"
+  },
+  "Cookie": {
+    "message": "Denna webbplats använder endast viktiga autentiseringscookies. Inga spårnings- eller reklamcookies används.",
+    "accept": "Acceptera alla",
+    "reject": "Avvisa Ej väsentligt",
+    "privacyLink": "Sekretesspolicy"
+  },
+  "Footer": {
+    "getQuote": "Få en offert"
+  }
+}

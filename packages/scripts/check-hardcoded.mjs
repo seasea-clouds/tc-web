@@ -64,6 +64,15 @@ const SKIP_TRANSLATION_CALL = /\b(t|getTranslations|useTranslations|useT)\s*\(/;
 
 // Known legitimate English strings that don't need translation
 const LEGIT_ENGLISH = new Set([
+  'Document Not Found',
+  'Legislation',
+  'AdministrativeArea',
+  'GovernmentOrganization',
+  'General Administration of Customs of China',
+  'This is an unofficial summary prepared for exporters. The Chinese original published by the issuing authority prevails. Always verify against the official text before acting.',
+  'Official Chinese customs and regulatory documents for exporters, tracked and summarised.',
+  'Chinese customs and regulatory documents for exporters',
+  'Official Chinese customs and regulatory documents for exporters, tracked and summarised in 48 languages.',
   'About',
   'About Us',
   'AboutPage',

@@ -1,0 +1,40 @@
+{
+  "Regulations": {
+    "metaTitle": "Čínske predpisy a dekréty GACC",
+    "metaDescription": "Oficiálne dokumenty čínskych colných a dozorných orgánov pre vývozcov – sledované a zhrnuté.",
+    "title": "Čínske predpisy a dekréty GACC",
+    "subtitle": "Oficiálne dokumenty čínskych colných a dozorných orgánov, sledované a zhrnuté pre vývozcov.",
+    "colDocNumber": "Č. dokumentu",
+    "colTitle": "Názov",
+    "colPublished": "Zverejnené",
+    "colEffective": "Účinnosť od",
+    "colStatus": "Stav",
+    "statusInForce": "V účinnosti",
+    "statusUpcoming": "Zatiaľ nie je v účinnosti",
+    "statusAmended": "Zmenené",
+    "statusRepealed": "Zrušené",
+    "statusDraft": "Návrh",
+    "noDocs": "Zatiaľ nie sú zverejnené žiadne dokumenty.",
+    "pagination": "Strana",
+    "prev": "Predchádzajúca",
+    "next": "Ďalšia",
+    "ctaTitle": "Potrebujete pomoc s uplatnením tohto pravidla?",
+    "ctaDesc": "Získajte bezplatné posúdenie zhody prispôsobené vašim produktom.",
+    "ctaButton": "Bezplatné posúdenie",
+    "issuerLabel": "Vydávajúci orgán",
+    "sourceLabel": "Čínsky originálny text",
+    "disclaimer": "Toto je neoficiálne zhrnutie pre vývozcov. Rozhodujúci je čínsky originálny text zverejnený orgánom. Pred konaním vždy overte oficiálny text.",
+    "relatedServiceLabel": "Súvisiaca služba",
+    "backToList": "Všetky predpisy",
+    "copyLink": "Kopírovať odkaz"
+  },
+  "Cookie": {
+    "message": "Táto stránka používa iba nevyhnutné overovacie súbory cookie. Nepoužívajú sa žiadne sledovacie ani reklamné súbory cookie.",
+    "accept": "Prijať všetko",
+    "reject": "Odmietnuť nepodstatné",
+    "privacyLink": "Zásady ochrany osobných údajov"
+  },
+  "Footer": {
+    "getQuote": "Získať cenovú ponuku"
+  }
+}

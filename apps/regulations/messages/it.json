@@ -1,0 +1,40 @@
+{
+  "Regulations": {
+    "metaTitle": "Normativa cinese e decreti GACC",
+    "metaDescription": "Documenti ufficiali delle autorità doganali e regolatorie cinesi per gli esportatori, monitorati e riassunti.",
+    "title": "Normativa cinese e decreti GACC",
+    "subtitle": "Documenti ufficiali delle autorità doganali e regolatorie cinesi, monitorati e riassunti per gli esportatori.",
+    "colDocNumber": "N. documento",
+    "colTitle": "Titolo",
+    "colPublished": "Pubblicato il",
+    "colEffective": "In vigore dal",
+    "colStatus": "Stato",
+    "statusInForce": "In vigore",
+    "statusUpcoming": "Non ancora in vigore",
+    "statusAmended": "Modificato",
+    "statusRepealed": "Abrogato",
+    "statusDraft": "Bozza",
+    "noDocs": "Nessun documento pubblicato.",
+    "pagination": "Pagina",
+    "prev": "Precedente",
+    "next": "Successivo",
+    "ctaTitle": "Serve aiuto per applicare questa norma?",
+    "ctaDesc": "Richiedi una valutazione di conformità gratuita su misura per i tuoi prodotti.",
+    "ctaButton": "Valutazione gratuita",
+    "issuerLabel": "Autorità emittente",
+    "sourceLabel": "Testo originale in cinese",
+    "disclaimer": "Questa è una sintesi non ufficiale redatta per gli esportatori. Prevale il testo originale in cinese pubblicato dall'autorità. Verificare sempre il testo ufficiale prima di agire.",
+    "relatedServiceLabel": "Servizio correlato",
+    "backToList": "Tutta la normativa",
+    "copyLink": "Copia link"
+  },
+  "Cookie": {
+    "message": "Questo sito utilizza solo cookie di autenticazione essenziali. Non vengono utilizzati cookie di tracciamento o pubblicitari.",
+    "accept": "Accetta tutto",
+    "reject": "Rifiuta non essenziale",
+    "privacyLink": "politica sulla riservatezza"
+  },
+  "Footer": {
+    "getQuote": "Ottieni un preventivo"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "Regulations": {
+    "metaTitle": "Réglementations chinoises et décrets de la GACC",
+    "metaDescription": "Documents officiels des douanes et des autorités réglementaires chinoises pour les exportateurs, suivis et résumés.",
+    "title": "Réglementations chinoises et décrets de la GACC",
+    "subtitle": "Documents officiels des douanes et des autorités réglementaires chinoises, suivis et résumés pour les exportateurs.",
+    "colDocNumber": "N° de document",
+    "colTitle": "Titre",
+    "colPublished": "Publié le",
+    "colEffective": "En vigueur le",
+    "colStatus": "Statut",
+    "statusInForce": "En vigueur",
+    "statusUpcoming": "Pas encore en vigueur",
+    "statusAmended": "Modifié",
+    "statusRepealed": "Abrogé",
+    "statusDraft": "Projet",
+    "noDocs": "Aucun document publié pour le moment.",
+    "pagination": "Page nº",
+    "prev": "Précédent",
+    "next": "Suivant",
+    "ctaTitle": "Besoin d'aide pour appliquer cette règle ?",
+    "ctaDesc": "Obtenez une évaluation de conformité gratuite adaptée à vos produits.",
+    "ctaButton": "Évaluation gratuite",
+    "issuerLabel": "Autorité émettrice",
+    "sourceLabel": "Texte original chinois",
+    "disclaimer": "Ceci est un résumé non officiel destiné aux exportateurs. Le texte chinois original publié par l'autorité fait foi. Vérifiez toujours le texte officiel avant d'agir.",
+    "relatedServiceLabel": "Service associé",
+    "backToList": "Toutes les réglementations",
+    "copyLink": "Copier le lien"
+  },
+  "Cookie": {
+    "message": "Ce site utilise uniquement des cookies d'authentification essentiels. Aucun cookie de suivi ou publicitaire n'est utilisé.",
+    "accept": "Accepter tout",
+    "reject": "Rejeter les produits non essentiels",
+    "privacyLink": "politique de confidentialité"
+  },
+  "Footer": {
+    "getQuote": "Obtenir un devis"
+  }
+}

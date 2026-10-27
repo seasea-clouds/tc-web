@@ -1,0 +1,40 @@
+{
+  "Regulations": {
+    "metaTitle": "中国法规与海关总署令",
+    "metaDescription": "面向出口企业的中国海关与监管文件，持续跟踪、摘要与更新。",
+    "title": "中国法规与海关总署令",
+    "subtitle": "面向出口企业的中国海关与监管文件，持续跟踪并摘要。",
+    "colDocNumber": "文号",
+    "colTitle": "标题",
+    "colPublished": "发布日期",
+    "colEffective": "施行日期",
+    "colStatus": "状态",
+    "statusInForce": "现行有效",
+    "statusUpcoming": "尚未施行",
+    "statusAmended": "已修订",
+    "statusRepealed": "已废止",
+    "statusDraft": "草案",
+    "noDocs": "暂无文件。",
+    "pagination": "页",
+    "prev": "上一页",
+    "next": "下一页",
+    "ctaTitle": "需要协助适用这条规定？",
+    "ctaDesc": "获取针对您产品的免费合规评估。",
+    "ctaButton": "获取免费评估",
+    "issuerLabel": "发布机关",
+    "sourceLabel": "中文原文",
+    "disclaimer": "本文为面向出口企业整理的非官方摘要，以发布机关公布的中文原文为准。请务必在据以行动前核对官方文本。",
+    "relatedServiceLabel": "相关服务",
+    "backToList": "全部法规",
+    "copyLink": "复制链接"
+  },
+  "Cookie": {
+    "message": "本网站仅使用必要的身份验证Cookie。不使用跟踪或广告Cookie。",
+    "accept": "接受全部",
+    "reject": "拒绝非必要",
+    "privacyLink": "隐私政策"
+  },
+  "Footer": {
+    "getQuote": "获取报价"
+  }
+}

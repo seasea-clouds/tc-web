@@ -1,0 +1,40 @@
+{
+  "Regulations": {
+    "metaTitle": "Normativa xinesa i decrets de la GACC",
+    "metaDescription": "Documents oficials de les autoritats duaneres i reguladores de la Xina per a exportadors, seguides i resumides.",
+    "title": "Normativa xinesa i decrets de la GACC",
+    "subtitle": "Documents oficials de les autoritats duaneres i reguladores de la Xina, seguides i resumides per a exportadors.",
+    "colDocNumber": "Núm. de document",
+    "colTitle": "Títol",
+    "colPublished": "Publicat",
+    "colEffective": "En vigor des de",
+    "colStatus": "Estat",
+    "statusInForce": "En vigor",
+    "statusUpcoming": "Encara no en vigor",
+    "statusAmended": "Modificat",
+    "statusRepealed": "Derogat",
+    "statusDraft": "Esborrany",
+    "noDocs": "Encara no hi ha documents publicats.",
+    "pagination": "Pàgina",
+    "prev": "Anterior",
+    "next": "Següent",
+    "ctaTitle": "Necessiteu ajuda per aplicar aquesta norma?",
+    "ctaDesc": "Obteniu una avaluació de compliment gratuïta adaptada als vostres productes.",
+    "ctaButton": "Avaluació gratuïta",
+    "issuerLabel": "Autoritat emissora",
+    "sourceLabel": "Text original en xinès",
+    "disclaimer": "Aquest és un resum no oficial preparat per a exportadors. Prevaleix el text original en xinès publicat per l'autoritat. Verifiqueu sempre el text oficial abans d'actuar.",
+    "relatedServiceLabel": "Servei relacionat",
+    "backToList": "Tota la normativa",
+    "copyLink": "Copia l'enllaç"
+  },
+  "Cookie": {
+    "message": "Aquest lloc només utilitza cookies d'autenticació essencials. No s'utilitzen cookies de seguiment ni de publicitat.",
+    "accept": "Acceptar-ho tot",
+    "reject": "Rebutja els no essencials",
+    "privacyLink": "Política de privadesa"
+  },
+  "Footer": {
+    "getQuote": "Obtén un pressupost"
+  }
+}

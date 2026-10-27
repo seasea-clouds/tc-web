@@ -2,6 +2,7 @@
  * Cloudflare Pages Middleware:
  * 1. Route /{locale}/c/* → portal site (user compliance portal)
  * 2. Route /{locale}/blog/* → blog site
+ * 2b. Route /{locale}/regulations/* → regulations site
  * 3. Route /api/admin/* → admin API
  * 4. Route /admin/* → admin dashboard (HTML + static assets)
  * 5. Serve sub-site static assets at /blog/_next/static/*, /c/_next/static/*, /admin/_next/static/*
@@ -9,8 +10,8 @@
  * 7. Canonical host redirect: www / pages.dev → main domain
  *
  * Upstream URLs (for server-side proxy) resolved via:
- *   - Environment variables: UPSTREAM_PORTAL, UPSTREAM_BLOG, UPSTREAM_ADMIN
- *   - Auto-derivation on .pages.dev: tc-web-site → tc-web-portal / tc-web-blog / tc-web-admin
+ *   - Environment variables: UPSTREAM_PORTAL, UPSTREAM_BLOG, UPSTREAM_REGULATIONS, UPSTREAM_ADMIN
+ *   - Auto-derivation on .pages.dev: tc-web-site → tc-web-portal / tc-web-blog / tc-web-regulations / tc-web-admin
  */
 
 // LanguageSwitcher + Navbar dropdowns: CSS group-hover, no React state
@@ -336,6 +337,20 @@ async function proxySubSiteAsset(url: URL, request: Request, env?: Record<string
     return new Response(resp.body, { status: resp.status, statusText: resp.statusText, headers: h });
   }
 
+  // Match /regulations/_next/static/* → regulations upstream
+  const regStaticMatch = url.pathname.match(/^\/regulations\/_next\/static\/(.+)/);
+  if (regStaticMatch) {
+    const upstream = resolveUpstream(url.hostname, 'regulations', env);
+    const assetUrl = `${upstream}/_next/static/${regStaticMatch[1]}`;
+    const assetResp = await fetch(assetUrl);
+    if (assetResp.ok) {
+      const h = sanitizeHeaders(assetResp.headers);
+      if (url.pathname.endsWith('.js')) h.set('content-type', 'application/javascript');
+      else if (url.pathname.endsWith('.css')) h.set('content-type', 'text/css');
+      return new Response(assetResp.body, { status: 200, headers: h });
+    }
+  }
+
   // Match /images/blog/* → blog upstream
   // Blog body images live in the blog project only (single copy). The site
   // project no longer keeps a duplicate tree, so these paths are proxied here.
@@ -419,7 +434,7 @@ export async function onRequest(context: { request: Request; next: () => Promise
   // browser on .../index.txt/. Answer 204 so the client bails out and falls
   // back to a normal navigation. Real text assets are excluded.
   if (
-    /^\/[a-z]{2}\/blog\/(?:.*\/)?[^/]*\.txt$/.test(url.pathname) &&
+    /^\/[a-z]{2}\/(?:blog|regulations)\/(?:.*\/)?[^/]*\.txt$/.test(url.pathname) &&
     !/(?:^|\/)(?:robots|llms|sitemap[a-z-]*)\.txt$/.test(url.pathname)
   ) {
     return new Response(null, { status: 204 });
@@ -441,6 +456,13 @@ export async function onRequest(context: { request: Request; next: () => Promise
   const pageOne = url.pathname.match(/^\/([a-z]{2})\/blog\/page\/1\/$/);
   if (pageOne) {
     url.pathname = `/${pageOne[1]}/blog/`;
+    return Response.redirect(url.toString(), 301);
+  }
+
+  // 法规库同理：/{locale}/regulations/page/1/ → /{locale}/regulations/
+  const regPageOne = url.pathname.match(/^\/([a-z]{2})\/regulations\/page\/1\/$/);
+  if (regPageOne) {
+    url.pathname = `/${regPageOne[1]}/regulations/`;
     return Response.redirect(url.toString(), 301);
   }
 
@@ -502,8 +524,8 @@ export async function onRequest(context: { request: Request; next: () => Promise
   // their modules use un-prefixed `/_next/static/chunks/*` URLs.
   // This handler serves those chunks from the correct upstream.
   if (url.pathname.startsWith('/_next/static/chunks/')) {
-    // Try portal first, then blog
-    for (const sub of ['portal', 'blog']) {
+    // Try portal first, then blog, then regulations
+    for (const sub of ['portal', 'blog', 'regulations']) {
       const upstream = resolveUpstream(url.hostname, sub, env);
       const fwdUrl = `${upstream}/_next/static/chunks/${url.pathname.replace('/_next/static/chunks/', '')}`;
       const resp = await fetch(fwdUrl);
@@ -611,6 +633,52 @@ export async function onRequest(context: { request: Request; next: () => Promise
   if (url.pathname === '/blog' || url.pathname === '/blog/') {
     const locale = resolveLocale(request);
     return Response.redirect(url.origin + '/' + locale + '/blog/', 302);
+  }
+
+  // ── Regulations proxy ──────────────────────────────────────────
+  const regPathMatch = url.pathname.match(/^\/([a-z]{2})\/regulations(\/.*)?$/);
+  if (regPathMatch && SUPPORTED_LOCALES.includes(regPathMatch[1])) {
+    const locale = regPathMatch[1];
+    const rest = regPathMatch[2] || '/';
+
+    // Trailing-slash normalization (SEO), same rule as the blog.
+    if (!url.pathname.endsWith('/')) {
+      return Response.redirect(url.origin + url.pathname + '/', 308);
+    }
+    const upstream = resolveUpstream(url.hostname, 'regulations', env);
+    const regUrl = upstream + '/' + locale + '/regulations' + rest;
+
+    try {
+      const resp = await fetchUpstream(regUrl, new Request(regUrl, { method: 'GET', headers: request.headers }));
+      const contentType = resp.headers.get('content-type') || '';
+
+      if (contentType.includes('text/html')) {
+        let html = await resp.text();
+        html = rewriteNextStatic(html, 'regulations');
+        html = ensureNextF(html);
+        html = injectSearchWidget(html);
+
+        const headers = sanitizeHeaders(resp.headers);
+        return new Response(html, {
+          status: resp.status,
+          statusText: resp.statusText,
+          headers,
+        });
+      }
+
+      return new Response(resp.body, {
+        status: resp.status,
+        statusText: resp.statusText,
+        headers: sanitizeHeaders(resp.headers),
+      });
+    } catch (err) {
+      return new Response('Regulations proxy error: ' + err, { status: 502 });
+    }
+  }
+
+  if (url.pathname === '/regulations' || url.pathname === '/regulations/') {
+    const locale = resolveLocale(request);
+    return Response.redirect(url.origin + '/' + locale + '/regulations/', 302);
   }
 
   // ── Bare path (no locale prefix) → English content, HTTP 200 ──

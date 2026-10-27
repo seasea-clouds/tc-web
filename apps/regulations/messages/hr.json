@@ -1,0 +1,40 @@
+{
+  "Regulations": {
+    "metaTitle": "Kineski propisi i uredbe GACC-a",
+    "metaDescription": "Službeni dokumenti kineskih carinskih i nadzornih tijela za izvoznike – praćeni i sažeti.",
+    "title": "Kineski propisi i uredbe GACC-a",
+    "subtitle": "Službeni dokumenti kineskih carinskih i nadzornih tijela, praćeni i sažeti za izvoznike.",
+    "colDocNumber": "Br. dokumenta",
+    "colTitle": "Naslov",
+    "colPublished": "Objavljeno",
+    "colEffective": "Na snazi od",
+    "colStatus": "Stanje",
+    "statusInForce": "Na snazi",
+    "statusUpcoming": "Još nije na snazi",
+    "statusAmended": "Izmijenjeno",
+    "statusRepealed": "Stavljeno izvan snage",
+    "statusDraft": "Nacrt",
+    "noDocs": "Još nema objavljenih dokumenata.",
+    "pagination": "Stranica",
+    "prev": "Prethodna",
+    "next": "Sljedeća",
+    "ctaTitle": "Trebate pomoć u primjeni ovog propisa?",
+    "ctaDesc": "Zatražite besplatnu procjenu usklađenosti prilagođenu vašim proizvodima.",
+    "ctaButton": "Besplatna procjena",
+    "issuerLabel": "Tijelo izdavatelj",
+    "sourceLabel": "Izvorni tekst na kineskom",
+    "disclaimer": "Ovo je neslužbeni sažetak pripremljen za izvoznike. Prevladava izvorni tekst na kineskom koji je objavilo tijelo. Uvijek provjerite službeni tekst prije postupanja.",
+    "relatedServiceLabel": "Povezana usluga",
+    "backToList": "Svi propisi",
+    "copyLink": "Kopiraj poveznicu"
+  },
+  "Cookie": {
+    "message": "Ova stranica koristi samo bitne kolačiće za provjeru autentičnosti. Ne koriste se kolačići za praćenje ili oglašavanje.",
+    "accept": "Prihvati sve",
+    "reject": "Odbaci nebitno",
+    "privacyLink": "Politika privatnosti"
+  },
+  "Footer": {
+    "getQuote": "Zatražite ponudu"
+  }
+}

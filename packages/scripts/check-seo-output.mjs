@@ -112,10 +112,15 @@ function checkHtmlFile(filePath, outDir) {
   }
 
   // 5. Canonical via RSC — only accept absolute https:// URLs
-  const canonMatch = html.match(/canonical[^}]*href="(https:\/\/[^"]+)"/);
+  // 优先读真正的 <link rel="canonical">，RSC 负载里的字符串只作兜底
+  // （RSC 中 canonical 与 hreflang 相邻，正则容易抓到别的 URL）。
+  const linkMatch = html.match(/<link[^>]+rel="canonical"[^>]+href="(https:\/\/[^"]+)"/);
+  const canonMatch = linkMatch || html.match(/canonical[^}]*href="(https:\/\/[^"]+)"/);
   if (canonMatch) {
     const canonHref = canonMatch[1];
-    if (canonHref === pageUrl || canonHref === pageUrl.replace(/\/$/, '') || canonHref + '/' === pageUrl || canonHref === pageUrl + '/') {
+    // /{locale}/<seg>/page/1/ 是列表首页的副本（边缘 301 归并），canonical 指向第 1 页
+    const pageOneBase = pageUrl.replace(/page\/1\/?$/, '');
+    if (canonHref === pageUrl || canonHref === pageUrl.replace(/\/$/, '') || canonHref + '/' === pageUrl || canonHref === pageUrl + '/' || canonHref === pageOneBase) {
       pass(filePath, '✅ canonical 匹配');
     } else if (canonHref.includes(SITE_URL) && canonHref.split('/')[3] !== locale) {
       warn(filePath, );

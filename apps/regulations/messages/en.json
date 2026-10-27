@@ -1,0 +1,40 @@
+{
+  "Regulations": {
+    "metaTitle": "China Regulations & GACC Decrees",
+    "metaDescription": "Official Chinese customs and regulatory documents for exporters, tracked, summarised and kept up to date.",
+    "title": "China Regulations & GACC Decrees",
+    "subtitle": "Official Chinese customs and regulatory documents for exporters, tracked and summarised.",
+    "colDocNumber": "Document No.",
+    "colTitle": "Title",
+    "colPublished": "Published",
+    "colEffective": "In force from",
+    "colStatus": "Status",
+    "statusInForce": "In force",
+    "statusUpcoming": "Not yet in force",
+    "statusAmended": "Amended",
+    "statusRepealed": "Repealed",
+    "statusDraft": "Draft",
+    "noDocs": "No documents published yet.",
+    "pagination": "Page",
+    "prev": "Previous",
+    "next": "Next",
+    "ctaTitle": "Need help applying this rule?",
+    "ctaDesc": "Get a free compliance assessment tailored to your products.",
+    "ctaButton": "Get Free Assessment",
+    "issuerLabel": "Issuing authority",
+    "sourceLabel": "Official Chinese text",
+    "disclaimer": "This is an unofficial summary prepared for exporters. The Chinese original published by the issuing authority prevails. Always verify against the official text before acting.",
+    "relatedServiceLabel": "Related service",
+    "backToList": "All regulations",
+    "copyLink": "Copy link"
+  },
+  "Cookie": {
+    "message": "This site uses only essential authentication cookies. No tracking or advertising cookies are used.",
+    "accept": "Accept All",
+    "reject": "Reject Non-Essential",
+    "privacyLink": "Privacy Policy"
+  },
+  "Footer": {
+    "getQuote": "Get a Quote"
+  }
+}

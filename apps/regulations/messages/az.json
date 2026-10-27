@@ -1,0 +1,40 @@
+{
+  "Regulations": {
+    "metaTitle": "Çin qaydaları və GACC fərmanları",
+    "metaDescription": "İxracatçılar üçün Çin gömrük və tənzimləyici orqanlarının rəsmi sənədləri — izlənir və xülasə edilir.",
+    "title": "Çin qaydaları və GACC fərmanları",
+    "subtitle": "İxracatçılar üçün Çin gömrük və tənzimləyici orqanlarının rəsmi sənədləri — izlənir və xülasə olunur.",
+    "colDocNumber": "Sənəd №",
+    "colTitle": "Ad",
+    "colPublished": "Dərc edilib",
+    "colEffective": "Qüvvədədir",
+    "colStatus": "Vəziyyət",
+    "statusInForce": "Qüvvədədir",
+    "statusUpcoming": "Hələ qüvvədə deyil",
+    "statusAmended": "Dəyişdirilib",
+    "statusRepealed": "Ləğv edilib",
+    "statusDraft": "Layihə",
+    "noDocs": "Hələ dərc edilmiş sənəd yoxdur.",
+    "pagination": "Səhifə",
+    "prev": "Əvvəlki",
+    "next": "Növbəti",
+    "ctaTitle": "Bu qaydanın tətbiqində kömək lazımdır?",
+    "ctaDesc": "Məhsullarınıza uyğun pulsuz uyğunluq qiymətləndirməsi alın.",
+    "ctaButton": "Pulsuz qiymətləndirmə",
+    "issuerLabel": "Verən orqan",
+    "sourceLabel": "Rəsmi Çin mətni",
+    "disclaimer": "Bu, ixracatçılar üçün hazırlanmış qeyri-rəsmi xülasədir. Orqanın dərc etdiyi Çin dilindəki orijinal mətn üstünlük təşkil edir. Fəaliyyətdən əvvəl həmişə rəsmi mətni yoxlayın.",
+    "relatedServiceLabel": "Əlaqəli xidmət",
+    "backToList": "Bütün qaydalar",
+    "copyLink": "Linki kopyala"
+  },
+  "Cookie": {
+    "message": "Bu sayt yalnız əsas autentifikasiya kukilərindən istifadə edir. Heç bir izləmə və ya reklam kukilərindən istifadə edilmir.",
+    "accept": "Hamısını qəbul et",
+    "reject": "Vacib olmayanı rədd edin",
+    "privacyLink": "Məxfilik Siyasəti"
+  },
+  "Footer": {
+    "getQuote": "Qiymət təklifi al"
+  }
+}

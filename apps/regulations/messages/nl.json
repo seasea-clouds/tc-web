@@ -1,0 +1,40 @@
+{
+  "Regulations": {
+    "metaTitle": "Chinese regelgeving en GACC-decreten",
+    "metaDescription": "Officiële documenten van de Chinese douane- en toezichthouders voor exporteurs, gevolgd en samengevat.",
+    "title": "Chinese regelgeving en GACC-decreten",
+    "subtitle": "Officiële documenten van de Chinese douane- en toezichthouders, gevolgd en samengevat voor exporteurs.",
+    "colDocNumber": "Documentnr.",
+    "colTitle": "Titel",
+    "colPublished": "Gepubliceerd",
+    "colEffective": "Van kracht vanaf",
+    "colStatus": "Toestand",
+    "statusInForce": "Van kracht",
+    "statusUpcoming": "Nog niet van kracht",
+    "statusAmended": "Gewijzigd",
+    "statusRepealed": "Ingetrokken",
+    "statusDraft": "Ontwerp",
+    "noDocs": "Nog geen documenten gepubliceerd.",
+    "pagination": "Pagina",
+    "prev": "Vorige",
+    "next": "Volgende",
+    "ctaTitle": "Hulp nodig bij het toepassen van deze regel?",
+    "ctaDesc": "Vraag een gratis compliance-beoordeling aan, afgestemd op uw producten.",
+    "ctaButton": "Gratis beoordeling",
+    "issuerLabel": "Uitgevende instantie",
+    "sourceLabel": "Chinese originele tekst",
+    "disclaimer": "Dit is een niet-officiële samenvatting voor exporteurs. De door de autoriteit gepubliceerde Chinese originele tekst prevaleert. Controleer altijd de officiële tekst voordat u handelt.",
+    "relatedServiceLabel": "Gerelateerde dienst",
+    "backToList": "Alle regelgeving",
+    "copyLink": "Link kopiëren"
+  },
+  "Cookie": {
+    "message": "Deze site gebruikt alleen essentiële authenticatiecookies. Er worden geen tracking- of advertentiecookies gebruikt.",
+    "accept": "Accepteer alles",
+    "reject": "Niet-essentieel afwijzen",
+    "privacyLink": "Privacybeleid"
+  },
+  "Footer": {
+    "getQuote": "Vraag een offerte aan"
+  }
+}

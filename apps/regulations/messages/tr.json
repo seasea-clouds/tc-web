@@ -1,0 +1,40 @@
+{
+  "Regulations": {
+    "metaTitle": "Çin mevzuatı ve GACC kararnameleri",
+    "metaDescription": "İhracatçılar için Çin gümrük ve düzenleyici makamlarının resmî belgeleri; takip edilir ve özetlenir.",
+    "title": "Çin mevzuatı ve GACC kararnameleri",
+    "subtitle": "İhracatçılar için Çin gümrük ve düzenleyici makamlarının resmî belgeleri; takip edilir ve özetlenir.",
+    "colDocNumber": "Belge no.",
+    "colTitle": "Başlık",
+    "colPublished": "Yayım tarihi",
+    "colEffective": "Yürürlük tarihi",
+    "colStatus": "Durum",
+    "statusInForce": "Yürürlükte",
+    "statusUpcoming": "Henüz yürürlükte değil",
+    "statusAmended": "Değiştirildi",
+    "statusRepealed": "Yürürlükten kaldırıldı",
+    "statusDraft": "Taslak",
+    "noDocs": "Henüz yayımlanmış belge yok.",
+    "pagination": "Sayfa",
+    "prev": "Önceki",
+    "next": "Sonraki",
+    "ctaTitle": "Bu kuralı uygulamak için yardım ister misiniz?",
+    "ctaDesc": "Ürünlerinize özel ücretsiz bir uyumluluk değerlendirmesi alın.",
+    "ctaButton": "Ücretsiz değerlendirme",
+    "issuerLabel": "Yayımlayan makam",
+    "sourceLabel": "Resmî Çince metin",
+    "disclaimer": "Bu, ihracatçılar için hazırlanmış resmî olmayan bir özettir. Makamın yayımladığı Çince asıl metin esas alınır. İşlem yapmadan önce her zaman resmî metni doğrulayın.",
+    "relatedServiceLabel": "İlgili hizmet",
+    "backToList": "Tüm mevzuat",
+    "copyLink": "Bağlantıyı kopyala"
+  },
+  "Cookie": {
+    "message": "Bu site yalnızca gerekli kimlik doğrulama çerezlerini kullanır. Hiçbir izleme veya reklam çerezi kullanılmaz.",
+    "accept": "Tümünü Kabul Et",
+    "reject": "Gerekli Olmayanları Reddet",
+    "privacyLink": "Gizlilik Politikası"
+  },
+  "Footer": {
+    "getQuote": "Teklif Alın"
+  }
+}

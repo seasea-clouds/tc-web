@@ -1,0 +1,40 @@
+{
+  "Regulations": {
+    "metaTitle": "中国の法規・税関総署令",
+    "metaDescription": "輸出企業向けに、中国の税関・規制当局の文書を追跡し要約して掲載しています。",
+    "title": "中国の法規・税関総署令",
+    "subtitle": "輸出企業向けに、中国の税関・規制当局の文書を追跡・要約しています。",
+    "colDocNumber": "文書番号",
+    "colTitle": "件名",
+    "colPublished": "公布日",
+    "colEffective": "施行日",
+    "colStatus": "状態",
+    "statusInForce": "施行中",
+    "statusUpcoming": "未施行",
+    "statusAmended": "改正済み",
+    "statusRepealed": "廃止",
+    "statusDraft": "草案",
+    "noDocs": "文書はまだありません。",
+    "pagination": "ページ",
+    "prev": "前へ",
+    "next": "次へ",
+    "ctaTitle": "この規則の適用でお困りですか？",
+    "ctaDesc": "貴社製品に合わせた無料のコンプライアンス評価をご案内します。",
+    "ctaButton": "無料評価を依頼",
+    "issuerLabel": "発出機関",
+    "sourceLabel": "中国語原文",
+    "disclaimer": "本文は輸出企業向けに作成した非公式の要約です。発出機関が公布した中国語原文が優先します。行動の前に必ず公式文書でご確認ください。",
+    "relatedServiceLabel": "関連サービス",
+    "backToList": "法規一覧",
+    "copyLink": "リンクをコピー"
+  },
+  "Cookie": {
+    "message": "このサイトでは、必須の認証 Cookie のみを使用します。追跡クッキーや広告クッキーは使用されません。",
+    "accept": "すべてを受け入れる",
+    "reject": "必須でないものを拒否する",
+    "privacyLink": "プライバシーポリシー"
+  },
+  "Footer": {
+    "getQuote": "見積もりを取得"
+  }
+}

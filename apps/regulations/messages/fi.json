@@ -1,0 +1,40 @@
+{
+  "Regulations": {
+    "metaTitle": "Kiinan säädökset ja GACC-asetukset",
+    "metaDescription": "Kiinan tulli- ja valvontaviranomaisten viralliset asiakirjat vientiyrityksille – seurataan ja tiivistetään.",
+    "title": "Kiinan säädökset ja GACC-asetukset",
+    "subtitle": "Kiinan tulli- ja valvontaviranomaisten viralliset asiakirjat, seurataan ja tiivistetään vientiyrityksille.",
+    "colDocNumber": "Asiakirjanro",
+    "colTitle": "Otsikko",
+    "colPublished": "Julkaistu",
+    "colEffective": "Voimassa alkaen",
+    "colStatus": "Tila",
+    "statusInForce": "Voimassa",
+    "statusUpcoming": "Ei vielä voimassa",
+    "statusAmended": "Muutettu",
+    "statusRepealed": "Kumottu",
+    "statusDraft": "Luonnos",
+    "noDocs": "Ei vielä julkaistuja asiakirjoja.",
+    "pagination": "Sivu",
+    "prev": "Edellinen",
+    "next": "Seuraava",
+    "ctaTitle": "Tarvitsetko apua säännön soveltamisessa?",
+    "ctaDesc": "Pyydä ilmainen vaatimustenmukaisuuden arviointi tuotteillesi.",
+    "ctaButton": "Ilmainen arviointi",
+    "issuerLabel": "Antava viranomainen",
+    "sourceLabel": "Kiinankielinen alkuperäisteksti",
+    "disclaimer": "Tämä on vientiyrityksille laadittu epävirallinen tiivistelmä. Viranomaisen julkaisema kiinankielinen alkuperäisteksti on ratkaiseva. Tarkista aina virallinen teksti ennen toimenpiteitä.",
+    "relatedServiceLabel": "Liittyvä palvelu",
+    "backToList": "Kaikki säädökset",
+    "copyLink": "Kopioi linkki"
+  },
+  "Cookie": {
+    "message": "Tämä sivusto käyttää vain välttämättömiä todennusevästeitä. Mitään seuranta- tai mainosevästeitä ei käytetä.",
+    "accept": "Hyväksy kaikki",
+    "reject": "Hylkää Ei-välttämätön",
+    "privacyLink": "Tietosuojakäytäntö"
+  },
+  "Footer": {
+    "getQuote": "Pyydä tarjous"
+  }
+}

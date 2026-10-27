@@ -1,0 +1,40 @@
+{
+  "Regulations": {
+    "metaTitle": "Chinese regulasies en GACC-dekrete",
+    "metaDescription": "Amptelike dokumente van China se doeane- en reguleringsowerhede vir uitvoerders, gemonitor en opgesom.",
+    "title": "Chinese regulasies en GACC-dekrete",
+    "subtitle": "Amptelike dokumente van China se doeane- en reguleringsowerhede, gemonitor en opgesom vir uitvoerders.",
+    "colDocNumber": "Dokumentnr.",
+    "colTitle": "Titel",
+    "colPublished": "Gepubliseer",
+    "colEffective": "Van krag vanaf",
+    "colStatus": "Stand",
+    "statusInForce": "Van krag",
+    "statusUpcoming": "Nog nie van krag nie",
+    "statusAmended": "Gewysig",
+    "statusRepealed": "Herroep",
+    "statusDraft": "Konsep",
+    "noDocs": "Nog geen dokumente gepubliseer nie.",
+    "pagination": "Bladsy",
+    "prev": "Vorige",
+    "next": "Volgende",
+    "ctaTitle": "Hulp nodig om hierdie reël toe te pas?",
+    "ctaDesc": "Kry 'n gratis voldoeningsbeoordeling wat by jou produkte pas.",
+    "ctaButton": "Gratis beoordeling",
+    "issuerLabel": "Uitreikende owerheid",
+    "sourceLabel": "Chinese oorspronklike teks",
+    "disclaimer": "Dit is 'n nie-amptelike opsomming vir uitvoerders. Die Chinese oorspronklike teks wat deur die owerheid gepubliseer is, geld. Verifieer altyd die amptelike teks voordat jy optree.",
+    "relatedServiceLabel": "Verwante diens",
+    "backToList": "Alle regulasies",
+    "copyLink": "Kopieer skakel"
+  },
+  "Cookie": {
+    "message": "Hierdie webwerf gebruik slegs noodsaaklike verifikasiekoekies. Geen dop- of advertensiekoekies word gebruik nie.",
+    "accept": "Aanvaar Almal",
+    "reject": "Verwerp Nie-noodsaaklik",
+    "privacyLink": "Privaatheidsbeleid"
+  },
+  "Footer": {
+    "getQuote": "Kry 'n Kwotasie"
+  }
+}

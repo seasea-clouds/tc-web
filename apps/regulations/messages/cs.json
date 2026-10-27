@@ -1,0 +1,40 @@
+{
+  "Regulations": {
+    "metaTitle": "Čínské předpisy a dekrety GACC",
+    "metaDescription": "Oficiální dokumenty čínských celních a dozorových orgánů pro vývozce – sledované a shrnuté.",
+    "title": "Čínské předpisy a dekrety GACC",
+    "subtitle": "Oficiální dokumenty čínských celních a dozorových orgánů, sledované a shrnuté pro vývozce.",
+    "colDocNumber": "Č. dokumentu",
+    "colTitle": "Název",
+    "colPublished": "Zveřejněno",
+    "colEffective": "Účinnost od",
+    "colStatus": "Stav",
+    "statusInForce": "V účinnosti",
+    "statusUpcoming": "Zatím nevstoupilo v účinnost",
+    "statusAmended": "Změněno",
+    "statusRepealed": "Zrušeno",
+    "statusDraft": "Návrh",
+    "noDocs": "Zatím nebyly zveřejněny žádné dokumenty.",
+    "pagination": "Strana",
+    "prev": "Předchozí",
+    "next": "Další",
+    "ctaTitle": "Potřebujete pomoc s uplatněním tohoto pravidla?",
+    "ctaDesc": "Získejte bezplatné posouzení shody přizpůsobené vašim produktům.",
+    "ctaButton": "Bezplatné posouzení",
+    "issuerLabel": "Vydávající orgán",
+    "sourceLabel": "Čínský originální text",
+    "disclaimer": "Toto je neoficiální shrnutí pro vývozce. Rozhodující je čínský originální text zveřejněný orgánem. Před jednáním vždy ověřte oficiální text.",
+    "relatedServiceLabel": "Související služba",
+    "backToList": "Všechny předpisy",
+    "copyLink": "Kopírovat odkaz"
+  },
+  "Cookie": {
+    "message": "Tento web používá pouze nezbytné ověřovací soubory cookie. Nejsou používány žádné sledovací ani reklamní soubory cookie.",
+    "accept": "Přijmout vše",
+    "reject": "Odmítnout nepodstatné",
+    "privacyLink": "Zásady ochrany osobních údajů"
+  },
+  "Footer": {
+    "getQuote": "Získat cenovou nabídku"
+  }
+}

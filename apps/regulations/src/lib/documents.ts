@@ -26,6 +26,8 @@ export interface DocMeta {
   excerpt: string;
   /** 关联的服务页，如 /services/gacc/ */
   relatedService?: string;
+  /** 是否收录了官方原文（content/_source/<slug>.md） */
+  hasOriginal?: boolean;
 }
 
 const CONTENT_DIR = () => path.join(process.cwd(), 'content');
@@ -118,6 +120,33 @@ export function parseDocument(slug: string, raw: string, locale = 'en'): DocMeta
     category: data.category || 'general',
     excerpt: data.excerpt || '',
     relatedService: data.related_service || undefined,
+    hasOriginal: fs.existsSync(path.join(CONTENT_DIR(), '_source', `${slug}.md`)),
+  };
+}
+
+/**
+ * 官方原文：所有语言共用一份中文原文，放在 content/_source/<slug>.md。
+ * 原文是这一栏目的主体内容，译文只是附属，所以只存一份、不进 locale 目录。
+ */
+export function getOriginalMarkdown(slug: string): string | null {
+  const file = path.join(CONTENT_DIR(), '_source', `${slug}.md`);
+  if (!fs.existsSync(file)) return null;
+  return fs.readFileSync(file, 'utf-8');
+}
+
+/**
+ * 正文按 `<!-- original -->` 切成两段：
+ *   第 1 段 = 本站分析（analysis），第 2 段 = 原文的本地语言译文（translation）。
+ * 没有分隔标记时整篇都算分析，页面上就不会出现译文区。
+ */
+export function splitBody(raw: string): { analysis: string; translation: string } {
+  const { content } = matter(raw);
+  const MARKER = '<!-- original -->';
+  const idx = content.indexOf(MARKER);
+  if (idx === -1) return { analysis: content.trim(), translation: '' };
+  return {
+    analysis: content.slice(0, idx).trim(),
+    translation: content.slice(idx + MARKER.length).trim(),
   };
 }
 

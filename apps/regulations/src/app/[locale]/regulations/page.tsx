@@ -2,7 +2,7 @@ import { WHATSAPP_URL, LOCALES, SITE_URL, buildLanguages, sharedOpenGraph, share
 import { getDocuments } from '@/lib/documents';
 import { getMessages } from '@/lib/messages';
 import { paginate, pagePath } from '@/lib/doc-list';
-import RegulationRows from '@/components/RegulationRows';
+import RegulationFilter from '@/components/RegulationFilter';
 import RegulationPager from '@/components/RegulationPager';
 
 export async function generateStaticParams() {
@@ -77,8 +77,9 @@ export default async function RegulationsHome({ params }: { params: Promise<{ lo
 
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <RegulationRows
-            docs={pages[0] ?? []}
+          <RegulationFilter
+            docs={docs}
+            pageDocs={pages[0] ?? []}
             locale={locale}
             texts={{
               colDocNumber: t('colDocNumber', 'Document No.'),
@@ -88,16 +89,23 @@ export default async function RegulationsHome({ params }: { params: Promise<{ lo
               colStatus: t('colStatus', 'Status'),
               noDocs: t('noDocs', 'No documents yet.'),
               statusLabels,
+              filterIssuer: t('filterIssuer', 'Issuing authority'),
+              filterCategory: t('filterCategory', 'Category'),
+              filterStatus: t('filterStatus', 'Status'),
+              filterAll: t('filterAll', 'All'),
+              filterReset: t('filterReset', 'Reset'),
+              filterEmpty: t('filterEmpty', 'No documents match these filters.'),
             }}
-          />
-          <RegulationPager
-            locale={locale}
-            currentPage={1}
-            totalPages={pages.length}
-            paginationText={t('pagination', 'Page')}
-            prevText={t('prev', 'Previous')}
-            nextText={t('next', 'Next')}
-          />
+          >
+            <RegulationPager
+              locale={locale}
+              currentPage={1}
+              totalPages={pages.length}
+              paginationText={t('pagination', 'Page')}
+              prevText={t('prev', 'Previous')}
+              nextText={t('next', 'Next')}
+            />
+          </RegulationFilter>
         </div>
       </section>
 

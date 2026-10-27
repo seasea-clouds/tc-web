@@ -467,5 +467,6 @@
   "emails.toastRejected": "已拒绝",
   "emails.toastRetried": "已重新排队",
   "emails.actionFailed": "操作失败，请重试",
-  "emails.loadFailed": "加载失败"
+  "emails.loadFailed": "加载失败",
+  "login.redirecting": "会话已失效，正在前往登录页…"
 }

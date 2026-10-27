@@ -467,5 +467,6 @@
   "emails.toastRejected": "Rejected",
   "emails.toastRetried": "Re-queued",
   "emails.actionFailed": "Action failed, please retry",
-  "emails.loadFailed": "Failed to load"
+  "emails.loadFailed": "Failed to load",
+  "login.redirecting": "Session expired. Redirecting to sign in…"
 }

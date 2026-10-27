@@ -277,6 +277,9 @@ export default function Navbar(props: NavbarProps) {
             <a href={blogHref} className="inline-flex items-center text-white/80 hover:text-white transition-colors text-sm font-medium">
               {t('blog')}
             </a>
+            <a href={href('/regulations/')} className="inline-flex items-center text-white/80 hover:text-white transition-colors text-sm font-medium">
+              {t('regulations')}
+            </a>
             <LanguageSwitcher locale={locale} />
           </div>
 
@@ -302,6 +305,9 @@ export default function Navbar(props: NavbarProps) {
             </a>
             <a href={blogHref} className="inline-flex items-center mx-2.5 text-white/80 hover:text-white transition-colors">
               {t('blog')}
+            </a>
+            <a href={href('/regulations/')} className="inline-flex items-center mx-2.5 text-white/80 hover:text-white transition-colors">
+              {t('regulations')}
             </a>
             <span className="inline-flex items-center mx-2.5 align-middle">
               <LanguageSwitcher locale={locale} />

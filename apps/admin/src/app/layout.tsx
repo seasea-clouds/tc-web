@@ -76,7 +76,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     );
   }
 
-  if (loading) {
+  // 未登录（或会话已过期）时**不能**渲染后台骨架：getCurrentAdmin() 是异步的，
+  // router.replace('/login') 要等下一帧才生效，中间这一帧会把侧边栏和看板壳子
+  // 暴露给未登录用户（cookie 过期后直接打开 /admin 就是这个现象）。
+  // 因此 loading 与「非登录页且没有 admin」都只给一个门屏。
+  if (loading || !admin) {
     return (
       <html lang="zh-CN">
         <head>
@@ -86,8 +90,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <link rel="icon" href="/admin/icon.png" type="image/png" />
           <link rel="apple-touch-icon" href="/admin/icon.png" />
         </head>
-        <body style={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: "100vh" }}>
+        <body style={{ display: "flex", flexDirection: "column", gap: "1rem", alignItems: "center", justifyContent: "center", minHeight: "100vh" }}>
           <div className="spinner" />
+          {!loading && <p style={{ fontSize: "0.875rem", color: "#64748b" }}>{t("login.redirecting")}</p>}
         </body>
       </html>
     );

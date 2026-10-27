@@ -73,6 +73,7 @@ const LEGIT_ENGLISH = new Set([
   'Official Chinese customs and regulatory documents for exporters, tracked and summarised.',
   'Chinese customs and regulatory documents for exporters',
   'Official Chinese customs and regulatory documents for exporters, tracked and summarised in 48 languages.',
+  'SinoTrade Regulations',
   'About',
   'About Us',
   'AboutPage',

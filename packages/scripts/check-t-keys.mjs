@@ -28,7 +28,7 @@ const LEGIT_SKIP = new Set([
   "about", "address", "backToTop", "blog", "contact", "contactWhatsapp",
   "freeCheckHeader",
   "disclaimer", "faq", "freeCheck", "hint", "home", "industries",
-  "noResults", "packages", "placeholder", "quickLinks", "rights",
+  "noResults", "packages", "placeholder", "quickLinks", "regulations", "rights",
   "searching", "sendEmail", "services", "whatsapp", "logo",
   // Dynamic category enum keys resolved at runtime (used as literal t() args)
   "baby", "electronics", "fragrance", "haircare", "home_appliance",

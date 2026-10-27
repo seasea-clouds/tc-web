@@ -10,7 +10,7 @@ import {
   sharedTwitter,
   AutoBreadcrumb,
 } from '@trade/ui';
-import { mdToHtml, parseDocument, splitBody, getOriginalMarkdown } from '@/lib/documents';
+import { mdToHtml, parseDocument, splitBody } from '@/lib/documents';
 import { getMessages } from '@/lib/messages';
 import CopyButton from '@/components/CopyButton';
 
@@ -80,10 +80,8 @@ export default async function RegulationPage({ params }: { params: Promise<{ loc
   const t = (key: string, fallback = ''): string => (R as Record<string, string | undefined>)[key] ?? fallback;
 
   const { analysis, translation } = splitBody(raw);
-  const originalMd = getOriginalMarkdown(slug);
   const analysisHtml = mdToHtml(analysis);
   const translationHtml = translation ? mdToHtml(translation) : '';
-  const originalHtml = originalMd ? mdToHtml(originalMd) : '';
 
   const serviceKey = (doc.relatedService || '').match(/\/services\/([^/]+)\//)?.[1] || '';
   const serviceName = serviceKey ? services[serviceKey] || '' : '';
@@ -200,39 +198,9 @@ export default async function RegulationPage({ params }: { params: Promise<{ loc
             <div className={PROSE_CLASS} dangerouslySetInnerHTML={{ __html: analysisHtml }} />
           </div>
 
-          {/* ── 官方原文（中文，全语言共用一份） ── */}
-          {originalHtml && (
-            <div id="original" className="mt-14 overflow-hidden rounded-2xl border border-[#E1E6EC] bg-[#F7F8FA]">
-              <div className="flex flex-col gap-2 border-b border-[#E1E6EC] bg-white px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-[#5F6F7F]">
-                    {t('originalKicker')}
-                  </p>
-                  <h2 className="text-xl font-bold text-[#1B365D]">{t('originalHeading')}</h2>
-                </div>
-                {doc.sourceUrl && (
-                  <a
-                    href={doc.sourceUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm font-semibold text-primary-navy hover:text-gold transition-colors"
-                  >
-                    gov.cn ↗
-                  </a>
-                )}
-              </div>
-              <div
-                lang="zh-CN"
-                className="max-h-[620px] overflow-y-auto px-5 py-5 text-[15px] leading-8 text-[#333333] sm:px-7 [&_h2]:mt-6 [&_h2]:mb-3 [&_h2]:text-base [&_h2]:font-bold [&_h2]:text-[#1B365D] [&_p]:mb-3 [&_p:first-child]:text-center [&_p:first-child]:font-bold [&_p:first-child]:text-lg [&_strong]:font-semibold [&_strong]:text-[#1B365D]"
-                dangerouslySetInnerHTML={{ __html: originalHtml }}
-              />
-              <p className="border-t border-[#E1E6EC] px-5 py-3 text-xs leading-relaxed text-[#5F6F7F] sm:px-7">
-                {t('originalNote')}
-              </p>
-            </div>
-          )}
-
-          {/* ── 原文译文（本地语言，节选） ── */}
+          {/* ── 全文译本（本地语言） ──
+              这一栏是页面主体：中文原文不上页面，只提供官方原文链接；
+              读者看到的是本地语言下的完整译本（33 条全文） */}
           {translationHtml && (
             <div id="translation" className="mt-12">
               <div className="mb-6 flex flex-wrap items-center gap-3 border-l-4 border-primary-navy pl-4">

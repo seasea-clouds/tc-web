@@ -247,8 +247,9 @@ export default function Navbar(props: NavbarProps) {
       {/* 第二行：导航菜单 */}
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* 桌面端：单行 */}
-          <div className="hidden md:flex items-center justify-center h-12 space-x-8">
+          {/* 桌面端：单行。md（768–1023）放不下全部 7 个入口，改到 lg 以上启用，
+              该区间退回下面的两行 inline 布局，保证所有菜单都可见 */}
+          <div className="hidden lg:flex items-center justify-center h-12 gap-x-6 xl:gap-x-8">
             <DropdownMenu
               label={t('services')}
               items={serviceLinks.map((s) => ({
@@ -277,11 +278,7 @@ export default function Navbar(props: NavbarProps) {
             <a href={blogHref} className="inline-flex items-center text-white/80 hover:text-white transition-colors text-sm font-medium">
               {t('blog')}
             </a>
-            {/* md–lg 之间一行放不下第 7 个入口（实测 768px 溢出 16px），法规改到 lg 以上才进顶栏 */}
-            <a
-              href={href('/regulations/')}
-              className="hidden lg:inline-flex items-center text-white/80 hover:text-white transition-colors text-sm font-medium"
-            >
+            <a href={href('/regulations/')} className="inline-flex items-center text-white/80 hover:text-white transition-colors text-sm font-medium">
               {t('regulations')}
             </a>
             <LanguageSwitcher locale={locale} />
@@ -291,7 +288,7 @@ export default function Navbar(props: NavbarProps) {
           {/* 小屏导航：inline 布局而不是 flex-wrap。
               RTL（ar/fa/he/ur）下 flex-wrap + justify-center 会把某一行整体推出容器
               （实测 ur 390px → scrollWidth 461、ar 320px → 377），改回 inline 流式换行后正常。 */}
-          <div className="md:hidden py-2 text-center text-sm leading-loose">
+          <div className="lg:hidden py-2 text-center text-sm leading-loose">
             <a href={href('/services/')} className="inline-flex items-center mx-2.5 text-white/80 hover:text-white transition-colors">
               {t('services')}
             </a>

@@ -811,3 +811,47 @@ AUTOINCREMENT 的语义）。实现是「`SELECT MAX(rev)+1 WHERE channel=?` →
 
 **验收**：用户明确不要 `/media/_health`。查状态一律走 D1：
 `SELECT channel, COUNT(*), MAX(rev), SUM(acked_at IS NULL) FROM media_envelope GROUP BY channel`。
+
+---
+
+## 法规库应用（apps/regulations，2026-10-27）
+
+**来源**：用户要求「参照 blog 应用直接复制一份，以后按个体情况优化」。
+从 `apps/blog` 整体复制（排除 node_modules/.next/out/.turbo/content/public/images/search-index），
+再按政策文档语义改名：`posts.ts→documents.ts`、`blog-list.ts→doc-list.ts`、
+`BlogRows→RegulationRows`、`BlogPager→RegulationPager`、`app/[locale]/blog→app/[locale]/regulations`。
+
+**保留了 blog 的哪些机制**（后续维护别破坏）：
+- `output: 'export'` SSG + next-intl，`rm -rf .next out` 后再 build（增量产物会混进旧路由）
+- 真实 URL 分页、`page/1` 301 归并、自指 canonical、generateStaticParams 生成 1..N
+- `_redirects` 48 条（直连 pages.dev 时的 page/1 归并）
+- `ci-check.mjs --out-dir=out --ci` 作为构建最后一道门
+
+**改造要点**：
+1. 列表页 = 表格（桌面 5 列：文号/标题/发布日/施行日/状态）＋ 移动端堆叠卡片，
+   没有封面图、没有阅读时间、没有分类 tab（首版条目少，不做筛选）。
+2. 详情页 = 元信息条（文号/机关/发布日/施行日/状态）＋ 官方原文外链 ＋
+   摘要正文（mdToHtml，支持 h2/h3/列表/表格/blockquote）＋ 免责框 ＋ 相关服务 ＋ 返回列表。
+   去掉 blog 的封面 hero、分享按钮、相关文章、FAQ JSON-LD。
+3. JSON-LD：列表 `CollectionPage`，分页页 `CollectionPage + ItemList`，详情 `Legislation`。
+
+**踩过的坑**：
+1. **元信息标签另造 key 导致 48 语言静默回退英文**：`docNumberLabel / publishedLabel /
+   effectiveLabel / statusLabel` 没进 messages，页面照常渲染 → 日文页写着 "DOCUMENT NO."。
+   修法：复用列表页已有的 `col*` key。**新增 key 后必须构建 + 抓非英文页 grep 英文串**。
+2. **`t('disclaimer', '英文兜底')` 的多行写法骗过自己**：diff 里看不出来，只有渲染才暴露。
+3. **正文 blockquote 与页面免责框重复**：内容侧删掉 blockquote，免责只在页面层出现一次。
+4. **CF Pages 新项目接 GitHub 只能一次成型**：`source` 只能在创建时给，且不能带
+   `owner_id/repo_id/path_includes/path_excludes/preview_*`（400 `8000006`）；
+   建成 Direct Upload 之后 PATCH 报 `8000069 You cannot update the source object` → 只能删了重建。
+5. **检查器的三处真 bug**（不是放宽，是修正）：
+   - `check-jsonld` 不认 `Legislation / AdministrativeArea / GovernmentOrganization`（都是 schema.org 标准类型）
+   - `check-seo-output` 的 canonical 正则先命中 RSC 负载里的相邻 URL，报假错 →
+     改为优先解析 `<link rel="canonical">`，并对 `/{locale}/<seg>/page/1/` 放行指向列表首页
+   - `check-hardcoded` 会把同一行里两个字符串字面量连起来当一句英文 →
+     JSON-LD 的 `@type` 与 `name` 拆行写即可，不必进白名单
+
+**第一篇收录**：海关总署令第 280 号《进口食品境外生产企业注册管理规定》
+（2025-10-14 公布，2026-06-01 施行，废止 248 号令）。选它的理由：与站点核心业务
+（进口食品境外生产企业注册）直接对应、原文可核实、已生效。
+slug：`gacc-decree-280-imported-food-registration`，48 语言内容全部手写。

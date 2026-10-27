@@ -277,7 +277,11 @@ export default function Navbar(props: NavbarProps) {
             <a href={blogHref} className="inline-flex items-center text-white/80 hover:text-white transition-colors text-sm font-medium">
               {t('blog')}
             </a>
-            <a href={href('/regulations/')} className="inline-flex items-center text-white/80 hover:text-white transition-colors text-sm font-medium">
+            {/* md–lg 之间一行放不下第 7 个入口（实测 768px 溢出 16px），法规改到 lg 以上才进顶栏 */}
+            <a
+              href={href('/regulations/')}
+              className="hidden lg:inline-flex items-center text-white/80 hover:text-white transition-colors text-sm font-medium"
+            >
               {t('regulations')}
             </a>
             <LanguageSwitcher locale={locale} />

@@ -52,19 +52,31 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-/** 分析区与译文区共用的正文排版 */
-const PROSE_CLASS = `prose prose-lg max-w-none
+/** 分析摘要卡（暖底）里的排版：比正文略紧凑，读起来像「编辑点评」 */
+const ANALYSIS_PROSE_CLASS = `prose prose-base max-w-none
   prose-headings:text-[#1B365D] prose-headings:font-bold
-  prose-h2:text-2xl prose-h3:text-xl
-  prose-h2:mt-10 prose-h2:mb-4 prose-h3:mt-8 prose-h3:mb-3
-  prose-a:text-[#B8960C] prose-a:no-underline hover:prose-a:underline
-  prose-strong:text-[#333333] prose-li:text-[#333333] prose-p:text-[#333333] prose-p:leading-relaxed
-  prose-ul:list-[disc] prose-ul:ml-6 prose-ol:list-decimal prose-ol:ml-6
+  prose-h3:mt-6 prose-h3:mb-2 prose-h3:text-base
+  prose-h2:mt-7 prose-h2:mb-3 prose-h2:text-lg
+  prose-p:mt-0 prose-p:mb-4 prose-p:text-[15px] prose-p:leading-[1.85] prose-p:text-[#3A3A3A]
+  prose-li:text-[15px] prose-li:leading-[1.8] prose-li:my-1
+  prose-ul:my-3 prose-ul:ps-5 prose-ol:my-3 prose-ol:ps-5
   prose-ul:marker:text-[#B8960C] prose-ol:marker:text-[#B8960C]
-  prose-blockquote:border-l-4 prose-blockquote:border-l-[#B8960C] prose-blockquote:bg-[#F4F6F9]/50 prose-blockquote:py-3 prose-blockquote:px-6 prose-blockquote:rounded-r-lg prose-blockquote:not-italic
-  prose-img:rounded-xl prose-img:shadow-md
-  prose-table:border-collapse prose-th:bg-primary-navy prose-th:text-white prose-th:px-4 prose-th:py-2
-  prose-td:border prose-td:border-[#E5E9EE] prose-td:px-4 prose-td:py-2`;
+  prose-strong:text-[#1B365D]
+  prose-a:text-[#8A6D1F] prose-a:no-underline hover:prose-a:underline`;
+
+/** 文书正文排版：照官方公布文本的观感——章标题居中、条文起段、行距宽松 */
+const DOCUMENT_PROSE_CLASS = `prose prose-base max-w-none
+  prose-h2:mt-12 prose-h2:mb-6 prose-h2:pb-3 prose-h2:text-center prose-h2:text-xl prose-h2:font-bold
+  prose-h2:tracking-[0.06em] prose-h2:text-[#1B365D] prose-h2:border-b prose-h2:border-[#E1E6EC]
+  prose-h2:first:mt-0
+  prose-h3:mt-9 prose-h3:mb-4 prose-h3:text-base prose-h3:font-bold prose-h3:text-[#1B365D]
+  prose-p:mt-0 prose-p:mb-5 prose-p:text-[15px] prose-p:leading-[1.95] prose-p:text-[#2A2A2A]
+  prose-p:text-justify
+  prose-strong:font-bold prose-strong:text-[#1B365D]
+  prose-ul:my-4 prose-ul:ps-6 prose-ol:my-4 prose-ol:ps-6
+  prose-li:text-[15px] prose-li:leading-[1.9] prose-li:text-[#2A2A2A] prose-li:my-1.5
+  prose-ul:marker:text-[#8A8A8A] prose-ol:marker:text-[#8A8A8A]
+  prose-a:text-[#B8960C] prose-a:no-underline hover:prose-a:underline`;
 
 export default async function RegulationPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
@@ -123,14 +135,25 @@ export default async function RegulationPage({ params }: { params: Promise<{ loc
       draft: t('statusDraft'),
     }[doc.status] || doc.status;
 
+  // 官方链接显示的文本用来源域名（gov.cn 之类），不需要翻译
+  let sourceHost = '';
+  try {
+    sourceHost = doc.sourceUrl ? new URL(doc.sourceUrl).hostname.replace(/^www\./, '') : '';
+  } catch {
+    sourceHost = '';
+  }
+
+  // 六个字段固定顺序：文号 / 发布机关 / 发布日期 / 施行日期 / 状态 / 官方链接
+  // 字体一律走正文同一套，不用等宽字体——等宽在小字号下会显得比其它字段细
   const meta = [
-    { label: t('colDocNumber'), value: doc.docNumber, mono: true },
-    { label: t('issuerLabel'), value: doc.issuer, mono: false },
-    { label: t('colPublished'), value: doc.publishedLabel, mono: false },
-    ...(doc.effectiveLabel
-      ? [{ label: t('colEffective'), value: doc.effectiveLabel, mono: false }]
+    { label: t('colDocNumber'), value: doc.docNumber },
+    { label: t('issuerLabel'), value: doc.issuer },
+    { label: t('colPublished'), value: doc.publishedLabel },
+    ...(doc.effectiveLabel ? [{ label: t('colEffective'), value: doc.effectiveLabel }] : []),
+    { label: t('colStatus'), value: statusLabel },
+    ...(doc.sourceUrl
+      ? [{ label: t('sourceLabel'), value: sourceHost, href: doc.sourceUrl }]
       : []),
-    { label: t('colStatus'), value: statusLabel, mono: false },
   ].filter((m) => m.value);
 
   return (
@@ -159,69 +182,65 @@ export default async function RegulationPage({ params }: { params: Promise<{ loc
             {meta.map((m) => (
               <div key={m.label}>
                 <dt className="text-xs font-semibold uppercase tracking-wide text-[#5F6F7F]">{m.label}</dt>
-                <dd className={`mt-1 text-sm text-[#333333] ${m.mono ? 'font-mono break-words' : 'break-words'}`}>
-                  {m.value}
+                <dd className="mt-1 break-words text-sm text-[#333333]">
+                  {'href' in m && m.href ? (
+                    <a
+                      href={m.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 font-semibold text-primary-navy underline decoration-[#B8960C] decoration-2 underline-offset-2 transition-colors hover:text-gold"
+                    >
+                      {m.value}
+                      <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        />
+                      </svg>
+                    </a>
+                  ) : (
+                    m.value
+                  )}
                 </dd>
               </div>
             ))}
           </dl>
 
-          {doc.sourceUrl && (
-            <p className="mb-10 text-sm">
-              <a
-                href={doc.sourceUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 font-semibold text-primary-navy hover:text-gold transition-colors"
-              >
-                {t('sourceLabel')}
-                <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
-              </a>
-            </p>
-          )}
-
-          {/* ── 我们的分析 ── */}
-          <div id="analysis">
-            <div className="mb-6 border-l-4 border-[#B8960C] pl-4">
-              <p className="text-xs font-semibold uppercase tracking-wider text-[#5F6F7F]">
+          {/* ── 分析摘要（我们的价值，暖色卡片与下方官方文书区明确区分） ── */}
+          <div
+            id="analysis"
+            className="rounded-2xl border border-[#EADFC0] border-s-4 border-s-[#B8960C] bg-[#FDFBF4] p-6 sm:p-8"
+          >
+            <div className="mb-5">
+              <p className="text-xs font-semibold uppercase tracking-wider text-[#8A6D1F]">
                 {t('analysisKicker')}
               </p>
-              <h2 className="text-2xl font-bold text-[#1B365D]">{t('analysisHeading')}</h2>
+              <h2 className="mt-1 text-2xl font-bold text-[#1B365D]">{t('analysisHeading')}</h2>
             </div>
-            <div className={PROSE_CLASS} dangerouslySetInnerHTML={{ __html: analysisHtml }} />
+            <div className={ANALYSIS_PROSE_CLASS} dangerouslySetInnerHTML={{ __html: analysisHtml }} />
           </div>
 
-          {/* ── 全文译本（本地语言） ──
-              这一栏是页面主体：中文原文不上页面，只提供官方原文链接；
-              读者看到的是本地语言下的完整译本（33 条全文） */}
+          {/* ── 文书正文（本地语言全文译本）──
+              排版按官方公布文本的观感走：章标题居中、条文号加粗独立起段、
+              行距宽松，外面套一层细边框白卡，读起来像正式文书；字体字号仍沿用本站正文。 */}
           {translationHtml && (
             <div id="translation" className="mt-12">
-              <div className="mb-6 flex flex-wrap items-center gap-3 border-l-4 border-primary-navy pl-4">
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-[#5F6F7F]">
-                    {t('translationKicker')}
-                  </p>
-                  <h2 className="text-2xl font-bold text-[#1B365D]">
-                    {t('translationHeading')}
-                  </h2>
-                </div>
+              <div className="mb-5">
+                <p className="text-xs font-semibold uppercase tracking-wider text-[#5F6F7F]">
+                  {t('translationKicker')}
+                </p>
+                <h2 className="text-2xl font-bold text-[#1B365D]">{t('translationHeading')}</h2>
               </div>
-              <div className={PROSE_CLASS} dangerouslySetInnerHTML={{ __html: translationHtml }} />
-              <p className="mt-6 rounded-lg border-l-4 border-[#B8960C] bg-[#FDFAF0] p-4 text-sm leading-relaxed text-[#5F6F7F]">
-                {t('translationNote')}
-              </p>
+              <div className="rounded-xl border border-[#DDE3EA] bg-white px-5 py-8 shadow-sm sm:px-10 sm:py-10">
+                <div className={DOCUMENT_PROSE_CLASS} dangerouslySetInnerHTML={{ __html: translationHtml }} />
+              </div>
             </div>
           )}
 
-          {/* ── 免责 ── */}
-          <p className="mt-10 text-sm leading-relaxed text-[#5F6F7F]">
+          {/* ── 免责（译本说明 + 摘要说明合并成一段，沿用译本提示的黄框） ── */}
+          <p className="mt-8 rounded-lg border-s-4 border-s-[#B8960C] bg-[#FDFAF0] p-4 text-sm leading-relaxed text-[#5F6F7F]">
             {t('disclaimer')}
           </p>
 

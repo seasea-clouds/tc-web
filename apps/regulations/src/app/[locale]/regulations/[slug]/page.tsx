@@ -213,12 +213,7 @@ export default async function RegulationPage({ params }: { params: Promise<{ loc
             id="analysis"
             className="rounded-2xl border border-[#EADFC0] border-s-4 border-s-[#B8960C] bg-[#FDFBF4] p-6 sm:p-8"
           >
-            <div className="mb-5">
-              <p className="text-xs font-semibold uppercase tracking-wider text-[#8A6D1F]">
-                {t('analysisKicker')}
-              </p>
-              <h2 className="mt-1 text-2xl font-bold text-[#1B365D]">{t('analysisHeading')}</h2>
-            </div>
+            <h2 className="mb-5 text-2xl font-bold text-[#1B365D]">{t('analysisHeading')}</h2>
             <div className={ANALYSIS_PROSE_CLASS} dangerouslySetInnerHTML={{ __html: analysisHtml }} />
           </div>
 
@@ -227,12 +222,8 @@ export default async function RegulationPage({ params }: { params: Promise<{ loc
               行距宽松，外面套一层细边框白卡，读起来像正式文书；字体字号仍沿用本站正文。 */}
           {translationHtml && (
             <div id="translation" className="mt-12">
-              <div className="mb-5">
-                <p className="text-xs font-semibold uppercase tracking-wider text-[#5F6F7F]">
-                  {t('translationKicker')}
-                </p>
-                <h2 className="text-2xl font-bold text-[#1B365D]">{t('translationHeading')}</h2>
-              </div>
+              {/* 视觉上不设标题，直接是文书本体；h2 保留给读屏与搜索引擎 */}
+              <h2 className="sr-only">{doc.title}</h2>
               <div className="rounded-xl border border-[#DDE3EA] bg-white px-5 py-8 shadow-sm sm:px-10 sm:py-10">
                 <div className={DOCUMENT_PROSE_CLASS} dangerouslySetInnerHTML={{ __html: translationHtml }} />
               </div>

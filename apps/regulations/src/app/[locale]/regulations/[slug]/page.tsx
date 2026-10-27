@@ -104,13 +104,13 @@ export default async function RegulationPage({ params }: { params: Promise<{ loc
     }[doc.status] || doc.status;
 
   const meta = [
-    { label: t('docNumberLabel', 'Document No.'), value: doc.docNumber, mono: true },
+    { label: t('colDocNumber', 'Document No.'), value: doc.docNumber, mono: true },
     { label: t('issuerLabel', 'Issuer'), value: doc.issuer, mono: false },
-    { label: t('publishedLabel', 'Published'), value: doc.publishedLabel, mono: false },
+    { label: t('colPublished', 'Published'), value: doc.publishedLabel, mono: false },
     ...(doc.effectiveLabel
-      ? [{ label: t('effectiveLabel', 'In force from'), value: doc.effectiveLabel, mono: false }]
+      ? [{ label: t('colEffective', 'In force from'), value: doc.effectiveLabel, mono: false }]
       : []),
-    { label: t('statusLabel', 'Status'), value: statusLabel, mono: false },
+    { label: t('colStatus', 'Status'), value: statusLabel, mono: false },
   ].filter((m) => m.value);
 
   return (

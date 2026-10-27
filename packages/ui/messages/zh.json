@@ -92,7 +92,8 @@
     "login": "登录",
     "register": "注册",
     "report": "报告",
-    "email": "邮箱"
+    "email": "邮箱",
+    "regulations": "法规库"
   },
   "MobileTab": {
     "home": "首页",

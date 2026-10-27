@@ -46,6 +46,7 @@ const GROUP_LABELS = {
   packages: 'Packages',
   privacy: 'Privacy Policy',
   quote: 'Get a Quote',
+  regulations: 'Regulations',
   services: 'Services',
 };
 
@@ -71,10 +72,11 @@ const SKIP_KEYS = [
  * 硬编码清单只作为兜底：新增文章无需有人记得来这里补一行。
  */
 const BLOG_TITLE_CACHE = {};
-function loadBlogTitles(locale) {
-  if (BLOG_TITLE_CACHE[locale]) return BLOG_TITLE_CACHE[locale];
+function loadBlogTitles(locale, app = 'blog') {
+  const cacheKey = `${app}:${locale}`;
+  if (BLOG_TITLE_CACHE[cacheKey]) return BLOG_TITLE_CACHE[cacheKey];
   const map = {};
-  const dir = path.join(ROOT, 'apps/blog/content', locale);
+  const dir = path.join(ROOT, `apps/${app}/content`, locale);
   if (fs.existsSync(dir)) {
     for (const file of fs.readdirSync(dir)) {
       if (!file.endsWith('.mdx')) continue;
@@ -90,7 +92,7 @@ function loadBlogTitles(locale) {
       map[file.replace(/\.mdx$/, '')] = value;
     }
   }
-  BLOG_TITLE_CACHE[locale] = map;
+  BLOG_TITLE_CACHE[cacheKey] = map;
   return map;
 }
 
@@ -153,6 +155,12 @@ function getDisplayText(route, enMsgs, locale = 'en') {
     if (BLOG_TITLES[slug]) return BLOG_TITLES[slug];
     return slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
   }
+  if (parts[0] === 'regulations' && parts.length > 1) {
+    const slug = parts[1];
+    const localized = loadBlogTitles(locale, 'regulations')[slug];
+    if (localized) return localized;
+    return slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+  }
   if (parts[0] === 'industries' && parts.length > 1) {
     const slug = parts[1].replace(/-/g, ' ');
     return slug.charAt(0).toUpperCase() + slug.slice(1);
@@ -197,7 +205,7 @@ function getDisplayText(route, enMsgs, locale = 'en') {
 }
 
 function sortRoutes(routes) {
-  const order = ['about', 'services', 'industries', 'blog', 'faq', 'quote', 'c', 'packages', 'privacy'];
+  const order = ['about', 'services', 'industries', 'blog', 'regulations', 'faq', 'quote', 'c', 'packages', 'privacy'];
   return routes.sort((a, b) => {
     const relA = a.replace('/en/', '').replace(/\/$/, '');
     const relB = b.replace('/en/', '').replace(/\/$/, '');

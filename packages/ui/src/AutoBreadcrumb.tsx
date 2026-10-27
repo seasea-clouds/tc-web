@@ -28,6 +28,7 @@ const SEGMENT_LABELS: Record<string, string> = {
   'industries': 'industries',
   'packages': 'packages',
   'blog': 'blog',
+  'regulations': 'regulations',
   'quote': 'quote',
   'testimonials': 'testimonials',
   'privacy': 'privacy',
@@ -145,8 +146,8 @@ export default function AutoBreadcrumb({ locale, title }: AutoBreadcrumbProps) {
       continue;
     }
 
-    // Blog posts: /blog/{slug} → use title prop or override
-    if (pathSegments[i - 1] === 'blog' && i > 0) {
+    // Blog posts / regulation documents: /<section>/{slug} → use title prop or override
+    if ((pathSegments[i - 1] === 'blog' || pathSegments[i - 1] === 'regulations') && i > 0) {
       if (override) {
         items.push({ label: override.label });
         continue;

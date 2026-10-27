@@ -26,7 +26,8 @@
     "disclaimer": "Ovo je neslužbeni sažetak pripremljen za izvoznike. Prevladava izvorni tekst na kineskom koji je objavilo tijelo. Uvijek provjerite službeni tekst prije postupanja.",
     "relatedServiceLabel": "Povezana usluga",
     "backToList": "Svi propisi",
-    "copyLink": "Kopiraj poveznicu"
+    "copyLink": "Kopiraj poveznicu",
+    "viewService": "Kako pomažemo"
   },
   "Cookie": {
     "message": "Ova stranica koristi samo bitne kolačiće za provjeru autentičnosti. Ne koriste se kolačići za praćenje ili oglašavanje.",

@@ -26,7 +26,8 @@
     "disclaimer": "Tämä on vientiyrityksille laadittu epävirallinen tiivistelmä. Viranomaisen julkaisema kiinankielinen alkuperäisteksti on ratkaiseva. Tarkista aina virallinen teksti ennen toimenpiteitä.",
     "relatedServiceLabel": "Liittyvä palvelu",
     "backToList": "Kaikki säädökset",
-    "copyLink": "Kopioi linkki"
+    "copyLink": "Kopioi linkki",
+    "viewService": "Katso miten autamme"
   },
   "Cookie": {
     "message": "Tämä sivusto käyttää vain välttämättömiä todennusevästeitä. Mitään seuranta- tai mainosevästeitä ei käytetä.",

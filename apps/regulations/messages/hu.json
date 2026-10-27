@@ -26,7 +26,8 @@
     "disclaimer": "Ez egy exportőröknek készült, nem hivatalos összefoglaló. A hatóság által közzétett kínai eredeti szöveg az irányadó. Cselekvés előtt mindig ellenőrizze a hivatalos szöveget.",
     "relatedServiceLabel": "Kapcsolódó szolgáltatás",
     "backToList": "Összes előírás",
-    "copyLink": "Link másolása"
+    "copyLink": "Link másolása",
+    "viewService": "Így segítünk"
   },
   "Cookie": {
     "message": "Ez az oldal csak alapvető hitelesítési cookie-kat használ. Nem használnak nyomkövető vagy hirdetési sütiket.",

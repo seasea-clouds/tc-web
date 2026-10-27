@@ -26,7 +26,8 @@
     "disclaimer": "Bu, ihracatçılar için hazırlanmış resmî olmayan bir özettir. Makamın yayımladığı Çince asıl metin esas alınır. İşlem yapmadan önce her zaman resmî metni doğrulayın.",
     "relatedServiceLabel": "İlgili hizmet",
     "backToList": "Tüm mevzuat",
-    "copyLink": "Bağlantıyı kopyala"
+    "copyLink": "Bağlantıyı kopyala",
+    "viewService": "Nasıl yardımcı oluyoruz"
   },
   "Cookie": {
     "message": "Bu site yalnızca gerekli kimlik doğrulama çerezlerini kullanır. Hiçbir izleme veya reklam çerezi kullanılmaz.",

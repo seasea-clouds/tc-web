@@ -92,7 +92,8 @@
     "login": "Log In",
     "register": "Register",
     "report": "Report",
-    "email": "Email"
+    "email": "Email",
+    "regulations": "Regulations"
   },
   "MobileTab": {
     "home": "Home",

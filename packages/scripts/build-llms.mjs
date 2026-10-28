@@ -13,6 +13,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { discoverAll, expandLocales, LOCALES } from './discover-routes.mjs';
+import { isFilePublished } from './lib/publish-gate.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '../..');

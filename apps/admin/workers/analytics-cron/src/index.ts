@@ -22,6 +22,47 @@ interface Env {
   CLOUDFLARE_ZONE_ID?: string;
   /** Secret key for manual HTTP trigger (optional) */
   CRON_SECRET?: string;
+  /**
+   * 定时发布兜底：每天对博客站「重跑一次最新生产部署」。
+   * Deploy Hook 在这里没用——同一 commit 会被 CF 判 304 直接跳过，
+   * 而定时发布恰恰是"代码没变、只是日期到了"，必须走 retry 接口强制重建。
+   */
+  PAGES_ACCOUNT_ID?: string;
+}
+
+/**
+ * 每日触发一次博客重建（定时发布兜底）。
+ *
+ * 为什么用 retry 而不是 Deploy Hook：Deploy Hook 走的是"同分支新的构建"，
+ * 对同一个 commit 会返回 304 跳过；而定时发布的场景正是「代码没变、日期到了」，
+ * 必须对现有部署强制重建一次。
+ *
+ * 只在 UTC 01:00（= 北京时间 09:00）那一跑执行；构建失败只记日志，不影响分析同步。
+ */
+async function triggerBlogRebuild(env: Env): Promise<void> {
+  const token = env.CLOUDFLARE_API_TOKEN;
+  const account = env.PAGES_ACCOUNT_ID;
+  if (!token || !account) return;
+  const base = `https://api.cloudflare.com/client/v4/accounts/${account}/pages/projects`;
+  const headers = { Authorization: `Bearer ${token}`, "Content-Type": "application/json" };
+  try {
+    for (const project of ["tc-web-blog", "tc-web-regulations"]) {
+      const listRes = await fetch(`${base}/${project}/deployments?per_page=1&env=production`, { headers });
+      const list = (await listRes.json()) as any;
+      const latest = list?.result?.[0];
+      if (!latest?.id) {
+        console.error(`[analytics-cron] ${project}: no production deployment found`);
+        continue;
+      }
+      const res = await fetch(`${base}/${project}/deployments/${latest.id}/retry`, {
+        method: "POST",
+        headers,
+      });
+      console.log(`[analytics-cron] ${project} rebuild:`, res.status);
+    }
+  } catch (err: any) {
+    console.error("[analytics-cron] daily rebuild failed:", err?.message || String(err));
+  }
 }
 
 async function runAnalyticsSync(env: Env): Promise<{ ok: boolean; message: string }> {
@@ -123,7 +164,13 @@ async function healthCheck(env: Env): Promise<{ ok: boolean; message: string; de
 }
 
 export default {
-  async scheduled(_event: ScheduledEvent, env: Env, _ctx: ExecutionContext) {
+  async scheduled(event: ScheduledEvent, env: Env, _ctx: ExecutionContext) {
+    // 定时发布：每天 UTC 01:00 触发一次博客重建，把当天到日期的文章放出来
+    const hourUtc = new Date(event.scheduledTime ?? Date.now()).getUTCHours();
+    if (hourUtc === 1) {
+      await triggerBlogRebuild(env);
+    }
+
     const result = await runAnalyticsSync(env);
     console.log("[analytics-cron] result:", JSON.stringify(result));
 

@@ -1,0 +1,19 @@
+{
+  "kind": "regulation",
+  "slug": "your-regulation-slug",
+  "title": "Official Title Of The Regulation",
+  "date": "2026-11-20",
+  "category": "food-registration",
+  "author": "David Zhang",
+  "excerpt": "One or two sentences, max 185 characters, written separately for each of the 48 languages.",
+  "locales": ["en", "zh", "es", "fr", "de", "ja", "pt", "ru", "ar", "ko", "it", "nl", "tr", "vi", "id", "th", "hi", "pl", "sv", "el", "cs", "ro", "hu", "fi", "da", "no", "uk", "bg", "hr", "sr", "sk", "sl", "ms", "ka", "he", "sw", "bn", "ca", "fa", "ur", "ta", "af", "sq", "az", "hy", "be", "ne", "si"],
+  "images": [],
+  "imageRights": "No images submitted.",
+  "docNumber": "GACC Decree No. 297",
+  "issuer": "GACC",
+  "publishedAt": "2026-11-10",
+  "effectiveAt": "2027-01-01",
+  "status": "upcoming",
+  "sourceUrl": "https://www.gov.cn/gongbao/example/content_0000000.html",
+  "relatedService": "/services/gacc/"
+}

@@ -3878,6 +3878,8 @@ def check_article(slug, art, add):
         except Exception as exc:
             add("M01", "error", slug, "submission.json 不是合法 JSON: %s" % exc)
             meta = {}
+    # v1.59：类型 = submission.json 的 kind（缺省 blog）。必须在下面所有 M/F/R 判断之前算好
+    is_reg = str(meta.get("kind") or "").strip().lower() == "regulation"
     if meta:
         for req in ["slug", "title", "date", "category", "author", "excerpt", "locales", "images", "imageRights"]:
             if req not in meta:
@@ -3897,7 +3899,12 @@ def check_article(slug, art, add):
                     add("M04", "error", slug, "date 超出一年以后，请确认是否为笔误")
             except ValueError:
                 add("M04", "error", slug, "date 不是合法日期")
-        if meta.get("category") not in CATEGORIES:
+        if is_reg:
+            cat = str(meta.get("category") or "")
+            if cat and not re.match(r"^[a-z0-9]+(?:-[a-z0-9]+)*$", cat):
+                add("M05", "error", slug,
+                    "法规 category 必须是小写连字符（如 food-registration / cosmetics / labelling）")
+        elif meta.get("category") not in CATEGORIES:
             add("M05", "error", slug, "category 必须是: %s" % " / ".join(CATEGORIES))
         if meta.get("author") != AUTHOR:
             add("M06", "error", slug, "author 必须固定为 %s（当前: %r）" % (AUTHOR, meta.get("author")))
@@ -3941,9 +3948,6 @@ def check_article(slug, art, add):
     for lang in LOCALES:
         if lang not in mdx_files:
             add("S02", "error", slug, "缺少语言: %s" % lang)
-
-    # v1.59：类型 = submission.json 的 kind（缺省 blog）
-    is_reg = str(meta.get("kind") or "").strip().lower() == "regulation"
 
     # --- 法规专属：submission.json 字段（R13/R14/R12）
     if is_reg:

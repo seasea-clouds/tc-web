@@ -188,10 +188,10 @@ export default async function RegulationPage({ params }: { params: Promise<{ loc
                       href={m.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 font-semibold text-primary-navy underline decoration-[#B8960C] decoration-2 underline-offset-2 transition-colors hover:text-gold"
+                      className="inline-flex items-center gap-1 text-[#333333] transition-colors hover:text-gold"
                     >
                       {m.value}
-                      <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="h-3.5 w-3.5 text-[#5F6F7F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"

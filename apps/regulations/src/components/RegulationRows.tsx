@@ -61,9 +61,6 @@ export default function RegulationRows({
                   >
                     {doc.title}
                   </a>
-                  {doc.excerpt && (
-                    <p className="mt-1 text-sm text-[#5F6F7F] leading-relaxed line-clamp-2">{doc.excerpt}</p>
-                  )}
                 </td>
                 <td className="px-4 py-4 text-sm text-[#5F6F7F] whitespace-nowrap align-top">{doc.publishedLabel}</td>
                 <td className="px-4 py-4 text-sm text-[#5F6F7F] whitespace-nowrap align-top">
@@ -98,8 +95,7 @@ export default function RegulationRows({
                 {texts.statusLabels[doc.status] || doc.status}
               </span>
             </div>
-            <h2 className="font-semibold text-primary-navy leading-snug mb-2">{doc.title}</h2>
-            {doc.excerpt && <p className="text-sm text-[#5F6F7F] leading-relaxed line-clamp-3">{doc.excerpt}</p>}
+            <h2 className="font-semibold text-primary-navy leading-snug">{doc.title}</h2>
             <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-[#5F6F7F]">
               <span>{texts.colPublished}: {doc.publishedLabel}</span>
               {doc.effectiveLabel && <span>{texts.colEffective}: {doc.effectiveLabel}</span>}

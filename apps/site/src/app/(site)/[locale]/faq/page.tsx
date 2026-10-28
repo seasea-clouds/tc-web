@@ -137,7 +137,7 @@ export default async function FAQPage({ params }: { params: Promise<{ locale: st
 
       <PortalCTASection t={ctaT} href={`/${locale}/c/`} generic />
 
-      <ContactForm />
+      <ContactForm source="faq" />
       <CTASection t={ctaT} />
     </main>
   );

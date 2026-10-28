@@ -86,7 +86,7 @@ export default async function CosmeticsPage({ params }: { params: Promise<{ loca
       <ServiceFAQ namespace="ServiceCosmetics" />
       <RelatedResources locale={locale} category={getBlogCategoryForService('cosmetics', locale)} />
       <PortalCTASection t={commonT} href={`/${locale}/c/check/nmpa`} />
-      <ContactForm />
+      <ContactForm source="services-cosmetics" />
       <CTASection t={ctaT} />
           <script id="jsonld-cosmetics" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
           <script id="jsonld-local-cosmetics" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }} />

@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { locales } from '@/i18n/routing';
 import { sharedOpenGraph, sharedTwitter, buildLanguages } from '@trade/ui/seo';
+import { SITE_URL } from '@trade/ui';
 import { Suspense } from 'react';
 import ServiceCheckboxes from '@/components/ServiceCheckboxes';
 import CTASection from '@/components/CTASection';
@@ -53,7 +54,7 @@ export default async function QuotePage({ params }: { params: Promise<{ locale: 
             <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY} />
             <input type="hidden" name="from_name" value="SinoTrade Quote Form" />
             <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
-            <input type="hidden" name="redirect" value={`https://sinotradecompliance.com/${resolvedParams.locale}/thank-you`} />
+            <input type="hidden" name="redirect" value={`${SITE_URL}/${resolvedParams.locale}/thank-you`} />
 
             {/* Service Selector */}
             <div className="mb-8">

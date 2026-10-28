@@ -54,7 +54,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <AboutExpert />
       <CTASection t={homeT} />
       <FAQPreview locale={locale} t={homeT} />
-      <ContactForm />
+      <ContactForm source="home" />
       <script id="jsonld-homepage" type="application/ld+json">
         {JSON.stringify({
           '@context': 'https://schema.org',

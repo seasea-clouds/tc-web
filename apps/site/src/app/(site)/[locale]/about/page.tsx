@@ -143,7 +143,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         </div>
       </section>
       <PortalCTASection t={commonT} href={`/${locale}/c/`} generic />
-      <ContactForm />
+      <ContactForm source="about" />
       <CTASection t={ctaT} />
       <script id="jsonld-about" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     </main>

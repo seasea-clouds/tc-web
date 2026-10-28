@@ -1,10 +1,9 @@
-import { LOCALES, buildLanguages, sharedOpenGraph, sharedTwitter, AutoBreadcrumb } from '@trade/ui';
+import { LOCALES, buildLanguages, sharedOpenGraph, sharedTwitter, AutoBreadcrumb, ComplianceForm } from '@trade/ui';
 import { getDocuments } from '@/lib/documents';
 import { getMessages } from '@/lib/messages';
 import { paginate } from '@/lib/doc-list';
 import RegulationRows from '@/components/RegulationRows';
 import RegulationPager from '@/components/RegulationPager';
-import ComplianceForm from '@/components/ComplianceForm';
 
 interface Params {
   locale: string;

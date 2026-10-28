@@ -1,10 +1,9 @@
-import { WHATSAPP_URL, LOCALES, SITE_URL, buildLanguages, sharedOpenGraph, sharedTwitter, AutoBreadcrumb } from '@trade/ui';
+import { WHATSAPP_URL, LOCALES, SITE_URL, buildLanguages, sharedOpenGraph, sharedTwitter, AutoBreadcrumb, ComplianceForm } from '@trade/ui';
 import { getDocuments } from '@/lib/documents';
 import { getMessages } from '@/lib/messages';
 import { paginate, pagePath } from '@/lib/doc-list';
 import RegulationFilter from '@/components/RegulationFilter';
 import RegulationPager from '@/components/RegulationPager';
-import ComplianceForm from '@/components/ComplianceForm';
 
 export async function generateStaticParams() {
   return LOCALES.map((l) => ({ locale: l }));

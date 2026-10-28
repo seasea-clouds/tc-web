@@ -90,7 +90,7 @@ export default async function IndustryPage({
       <ProcessSteps t={homeT} />
       <WhyUsCards count={4} t={commonT} />
       <ServiceFAQ namespace={industry.namespace} services={industry.services} />
-      <ContactForm />
+      <ContactForm source="industries-detail" />
       <CTASection t={commonT} />
       <script
         id={`jsonld-industry-${industrySlug}`}

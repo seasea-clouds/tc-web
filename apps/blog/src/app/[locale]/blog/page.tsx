@@ -1,4 +1,4 @@
-import { WHATSAPP_URL, LOCALES, SITE_URL, buildLanguages, sharedOpenGraph, sharedTwitter, AutoBreadcrumb } from '@trade/ui';
+import { WHATSAPP_URL, LOCALES, SITE_URL, buildLanguages, sharedOpenGraph, sharedTwitter, AutoBreadcrumb, ComplianceForm } from '@trade/ui';
 import fs from 'fs';
 import path from 'path';
 import { getPosts } from '@/lib/posts';
@@ -41,6 +41,8 @@ export default async function BlogHome({ params }: { params: Promise<{ locale: s
   const msgs = getMessages(locale);
   const B = msgs?.Blog || {};
   const tb = (key: string, fb?: string) => B[key] ?? fb ?? key;
+  const CF = msgs?.ContactForm || {};
+  const cf = (key: string, fb?: string) => (msgs?.ContactForm?.[key] ?? fb ?? key);
 
   const readTimeText = tb('readTime', 'min read');
   const href = (p: string) => `/${locale}${p}`;
@@ -108,46 +110,22 @@ export default async function BlogHome({ params }: { params: Promise<{ locale: s
       </section>
 
       {/* Contact Form */}
-      <section className="py-16 bg-[#F4F6F9]">
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg className="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-          </div>
-          <h2 className="text-2xl md:text-3xl font-bold text-[#333333] mb-3 text-center">
-            {tb('contactTitle', 'Free Compliance Assessment')}
-          </h2>
-          <p className="text-[#5F6F7F] mb-8 leading-relaxed">
-            {tb('contactDesc', 'Tell us about your products and we\u2019ll provide a personalized compliance roadmap.')}
-          </p>
-          <form className="w-full max-w-md mx-auto bg-white rounded-xl border border-gray-200 p-6 sm:p-8 shadow-sm" action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY} />
-            <input type="hidden" name="subject" value="🔥 New Inquiry — SinoTrade Website" />
-            <input type="hidden" name="from_name" value="SinoTrade Website" />
-            <input type="checkbox" className="hidden" style={{ display: 'none' }} name="botcheck" />
-            <input type="hidden" name="redirect" value={`${SITE_URL}/${locale}/thank-you`} />
-            <div className="mb-4 relative">
-              <label htmlFor="email" className="block text-sm font-semibold text-[#333333] mb-1 text-left">{tb('contactEmail', 'Business Email')}</label>
-              <div className="relative">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-mail absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#5F6F7F]" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
-                <input type="email" id="email" placeholder={tb('contactEmailPlaceholder', 'you@company.com')} required className="w-full pl-10 pr-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1B365D] focus:border-transparent transition-all shadow-sm text-[#333333]" name="email" />
-              </div>
-            </div>
-            <div className="mb-4 relative">
-              <label htmlFor="message" className="block text-sm font-semibold text-[#333333] mb-1 text-left">{tb('contactMessage', 'Message (optional)')}</label>
-              <div className="relative">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-message-square absolute left-3 top-3.5 w-5 h-5 text-[#5F6F7F]" aria-hidden="true"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path></svg>
-                <textarea name="message" id="message" rows={3} placeholder={tb('contactMessagePlaceholder', 'Describe your products or compliance needs...')} className="w-full pl-10 pr-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1B365D] focus:border-transparent transition-all shadow-sm text-[#333333]" />
-              </div>
-            </div>
-            <button type="submit" className="w-full mt-2 bg-gold hover:bg-gold/90 text-primary-navy font-bold py-3.5 px-4 rounded-lg transition-all duration-300 shadow-md flex justify-center items-center gap-2">
-              {tb('contactSubmit', 'Submit Free Assessment')}
-            </button>
-            <p className="text-xs text-[#5F6F7F] text-center mt-3">{tb('contactPrivacy', 'We respect your privacy. No spam, ever.')}</p>
-          </form>
-        </div>
-      </section>
+      <ComplianceForm
+        locale={locale}
+        subject={`🔥 New Inquiry — SinoTrade Blog List`}
+        fromName="SinoTrade Website"
+        idPrefix="blog-list"
+        texts={{
+          title: cf('title', "Free Compliance Assessment"),
+          subtitle: cf('subtitle', "Tell us about your products and we'll provide a personalized compliance roadmap."),
+          emailLabel: cf('emailLabel', "Business Email"),
+          emailPlaceholder: cf('emailPlaceholder', "you@company.com"),
+          messageLabel: cf('messageLabel', "Message (optional)"),
+          messagePlaceholder: cf('messagePlaceholder', "Describe your products or compliance needs..."),
+          button: cf('button', "Submit Free Assessment"),
+          privacy: cf('privacy', "We respect your privacy. No spam, ever."),
+        }}
+      />
 
       {/* CTA */}
       <section className="py-16 bg-primary-navy">

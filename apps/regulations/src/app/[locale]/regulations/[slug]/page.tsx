@@ -1,19 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import {
-  WHATSAPP_URL,
-  LOCALES,
-  SITE_URL,
-  buildLanguages,
-  sharedOpenGraph,
-  sharedTwitter,
-  AutoBreadcrumb,
-} from '@trade/ui';
+import { WHATSAPP_URL, LOCALES, SITE_URL, buildLanguages, sharedOpenGraph, sharedTwitter, AutoBreadcrumb, ComplianceForm } from '@trade/ui';
 import { mdToHtml, parseDocument, splitBody } from '@/lib/documents';
 import { getMessages } from '@/lib/messages';
 import CopyButton from '@/components/CopyButton';
-import ComplianceForm from '@/components/ComplianceForm';
+
 
 const LEGAL_FORCE: Record<string, string> = {
   in_force: 'https://schema.org/InForce',

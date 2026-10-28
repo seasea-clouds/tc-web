@@ -86,7 +86,7 @@ export default async function LabelPage({ params }: { params: Promise<{ locale: 
       <ServiceFAQ namespace="ServiceLabel" />
       <RelatedResources locale={locale} category={getBlogCategoryForService('label', locale)} />
       <PortalCTASection t={commonT} href={`/${locale}/c/check/label`} />
-      <ContactForm />
+      <ContactForm source="services-label" />
       <CTASection t={ctaT} />
           <script id="jsonld-label" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
           <script id="jsonld-local-label" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }} />

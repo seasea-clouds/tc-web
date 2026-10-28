@@ -86,7 +86,7 @@ export default async function IndustriesPage({ params }: { params: Promise<{ loc
       </section>
 
       <PortalCTASection t={commonT} href={`/${locale}/c/`} generic />
-      <ContactForm />
+      <ContactForm source="industries" />
       <CTASection t={ctaT} />
     </div>
   );

@@ -8,6 +8,8 @@ export { default as SearchProvider } from './SearchProvider';
 export { default as OrganizationJsonLd } from './OrganizationJsonLd';
 export { default as SearchModal } from './SearchModal';
 export { default as CookieConsent } from './CookieConsent';
+export { default as ComplianceForm } from './ComplianceForm';
+export type { ComplianceFormTexts } from './ComplianceForm';
 export { AuthContext, useAuth } from './AuthContext';
 export type { AuthUser, AuthContextType } from './AuthContext';
 export { AuthProvider } from './AuthProvider';

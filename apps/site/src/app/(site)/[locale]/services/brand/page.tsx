@@ -85,7 +85,7 @@ export default async function BrandPage({ params }: { params: Promise<{ locale: 
       <ServiceFAQ namespace="ServiceBrand" />
       <RelatedResources locale={locale} category={getBlogCategoryForService('brand', locale)} />
       <PortalCTASection t={commonT} href={`/${locale}/c/check/trademark`} />
-      <ContactForm />
+      <ContactForm source="services-brand" />
       <CTASection t={ctaT} />
           <script id="jsonld-brand" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
           <script id="jsonld-local-brand" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }} />

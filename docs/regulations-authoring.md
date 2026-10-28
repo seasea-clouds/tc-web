@@ -70,11 +70,12 @@ related_service: "/services/gacc/"              # 底部「相关服务」块，
 | `related_service: "/services/ecommerce/"` | 跨境电商 |
 | `related_service: "/services/brand/"` | 品牌保护 |
 | `related_service: "/services/label/"` | 中国标签合规 |
-| 不写 `related_service` | **整块不渲染**（不留空壳） |
+| 不写 `related_service` | 服务名显示「服务 / Services」+ 按钮跳 `/{locale}/services/` 总览 |
+| key 写错 / 站上不存在 | 同上，兜底到 `/{locale}/services/` 总览 |
 
 服务名取自 `packages/ui/messages/<locale>.json` 的 `Navbar.servicesDropdown.<key>`，48 语言现成，不需要为新法规补文案。
 
-⚠️ `related_service` 的 key 必须是上面六个之一（`gacc` / `ccc` / `cosmetics` / `ecommerce` / `brand` / `label`）。写错或写一个没有服务页的 key，服务名取不到，整块会静默消失——所以要新增服务类型时，先建 `apps/site` 的服务页 + 补 `servicesDropdown` 语言键。
+**这一块永远会渲染**，不会留空壳，也不会静默消失：key 命中就给精确服务和对应页面，没命中就给服务总览页。所以要新增服务类型时，先建 `apps/site` 的服务页 + 补 `servicesDropdown` 语言键，命中才会精确跳转。
 
 那个大标题「需要办理中国合规业务？」（`ctaSectionTitle`）是全站通用文案，不随法规变化；随法规变化的是它上面那块「相关服务」卡片。
 

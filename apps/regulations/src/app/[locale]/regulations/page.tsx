@@ -4,6 +4,7 @@ import { getMessages } from '@/lib/messages';
 import { paginate, pagePath } from '@/lib/doc-list';
 import RegulationFilter from '@/components/RegulationFilter';
 import RegulationPager from '@/components/RegulationPager';
+import ComplianceForm from '@/components/ComplianceForm';
 
 export async function generateStaticParams() {
   return LOCALES.map((l) => ({ locale: l }));
@@ -32,8 +33,10 @@ export default async function RegulationsHome({ params }: { params: Promise<{ lo
   const { locale } = await params;
   const docs = getDocuments(locale);
   const pages = paginate(docs);
-  const R = getMessages(locale)?.Regulations || {};
+  const msgs = getMessages(locale);
+  const R = msgs?.Regulations || {};
   const t = (key: string, fallback: string) => R[key] ?? fallback;
+  const CF = msgs?.ContactForm || {};
 
   const statusLabels: Record<string, string> = {
     in_force: t('statusInForce', 'In force'),
@@ -123,6 +126,22 @@ export default async function RegulationsHome({ params }: { params: Promise<{ lo
           </a>
         </div>
       </section>
+
+      <ComplianceForm
+        locale={locale}
+        subject={`🔥 New Inquiry — Regulations List`}
+        idPrefix="list"
+        texts={{
+          title: CF.title,
+          subtitle: CF.subtitle,
+          emailLabel: CF.emailLabel,
+          emailPlaceholder: CF.emailPlaceholder,
+          messageLabel: CF.messageLabel,
+          messagePlaceholder: CF.messagePlaceholder,
+          button: CF.button,
+          privacy: CF.privacy,
+        }}
+      />
     </>
   );
 }

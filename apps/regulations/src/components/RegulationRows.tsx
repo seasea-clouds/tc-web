@@ -53,8 +53,8 @@ export default function RegulationRows({
           <tbody>
             {docs.map((doc) => (
               <tr key={doc.slug} className="border-t border-gray-100 hover:bg-[#FAFBFD] transition-colors">
-                <td className="px-4 py-4 text-sm text-[#5F6F7F] whitespace-nowrap align-top">{doc.docNumber}</td>
-                <td className="px-4 py-4 align-top">
+                <td className="px-4 py-4 text-sm text-[#5F6F7F] whitespace-nowrap align-middle">{doc.docNumber}</td>
+                <td className="px-4 py-4 align-middle">
                   <a
                     href={`/${locale}/regulations/${doc.slug}/`}
                     className="font-semibold text-primary-navy hover:text-gold transition-colors"
@@ -62,11 +62,11 @@ export default function RegulationRows({
                     {doc.title}
                   </a>
                 </td>
-                <td className="px-4 py-4 text-sm text-[#5F6F7F] whitespace-nowrap align-top">{doc.publishedLabel}</td>
-                <td className="px-4 py-4 text-sm text-[#5F6F7F] whitespace-nowrap align-top">
+                <td className="px-4 py-4 text-sm text-[#5F6F7F] whitespace-nowrap align-middle">{doc.publishedLabel}</td>
+                <td className="px-4 py-4 text-sm text-[#5F6F7F] whitespace-nowrap align-middle">
                   {doc.effectiveLabel || '—'}
                 </td>
-                <td className="px-4 py-4 align-top">
+                <td className="px-4 py-4 align-middle">
                   <span
                     className={`inline-block whitespace-nowrap rounded-full border px-2.5 py-0.5 text-xs font-medium ${STATUS_STYLE[doc.status] || STATUS_STYLE.in_force}`}
                   >

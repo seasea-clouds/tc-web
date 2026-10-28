@@ -4,6 +4,7 @@ import { getMessages } from '@/lib/messages';
 import { paginate } from '@/lib/doc-list';
 import RegulationRows from '@/components/RegulationRows';
 import RegulationPager from '@/components/RegulationPager';
+import ComplianceForm from '@/components/ComplianceForm';
 
 interface Params {
   locale: string;
@@ -34,6 +35,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<Params> }) {
   const { locale, page } = await params;
   const msgs = getMessages(locale);
+  const CF = msgs?.ContactForm || {};
   const B = msgs?.Regulations || {};
   const tb = (key: string, fallback?: string) => B[key] ?? fallback ?? key;
   const path = `/regulations/page/${page}/`;
@@ -65,6 +67,7 @@ export default async function RegulationsPageN({ params }: { params: Promise<Par
   const pages = paginate(docs);
   const pageDocs = pages[pageNumber - 1] ?? [];
   const msgs = getMessages(locale);
+  const CF = msgs?.ContactForm || {};
   const B = msgs?.Regulations || {};
   const tb = (key: string, fallback?: string) => B[key] ?? fallback ?? key;
 
@@ -149,6 +152,22 @@ export default async function RegulationsPageN({ params }: { params: Promise<Par
           />
         </div>
       </section>
+
+      <ComplianceForm
+        locale={locale}
+        subject={`🔥 New Inquiry — Regulations Page ${pageNumber}`}
+        idPrefix="page"
+        texts={{
+          title: CF.title,
+          subtitle: CF.subtitle,
+          emailLabel: CF.emailLabel,
+          emailPlaceholder: CF.emailPlaceholder,
+          messageLabel: CF.messageLabel,
+          messagePlaceholder: CF.messagePlaceholder,
+          button: CF.button,
+          privacy: CF.privacy,
+        }}
+      />
     </>
   );
 }

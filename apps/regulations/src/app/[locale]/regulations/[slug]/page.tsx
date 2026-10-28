@@ -13,6 +13,7 @@ import {
 import { mdToHtml, parseDocument, splitBody } from '@/lib/documents';
 import { getMessages } from '@/lib/messages';
 import CopyButton from '@/components/CopyButton';
+import ComplianceForm from '@/components/ComplianceForm';
 
 const LEGAL_FORCE: Record<string, string> = {
   in_force: 'https://schema.org/InForce',
@@ -95,8 +96,12 @@ export default async function RegulationPage({ params }: { params: Promise<{ loc
   const analysisHtml = mdToHtml(analysis);
   const translationHtml = translation ? mdToHtml(translation) : '';
 
+  // 底部「相关服务」卡：key 命中就用该服务名与它自己的页面；
+  // 没写 related_service、或写了站上不存在的 key，一律落到该语言的 /services/ 总览页
   const serviceKey = (doc.relatedService || '').match(/\/services\/([^/]+)\//)?.[1] || '';
-  const serviceName = serviceKey ? services[serviceKey] || '' : '';
+  const matchedServiceName = serviceKey ? services[serviceKey] || '' : '';
+  const serviceName = matchedServiceName || msgs?.Navbar?.services || 'Services';
+  const serviceHref = matchedServiceName ? `/${locale}${doc.relatedService}` : `/${locale}/services/`;
 
   const url = `${SITE_URL}/${locale}/regulations/${slug}/`;
 
@@ -244,40 +249,37 @@ export default async function RegulationPage({ params }: { params: Promise<{ loc
         </div>
       </section>
 
-      {/* ── 相关服务（与博客文章详情页同款） ── */}
-      {serviceName && doc.relatedService && (
-        <section className="pb-16">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-            <div
-              className="rounded-xl p-6 text-white"
-              style={{ background: 'linear-gradient(to right, #1B365D, rgba(27,54,93,0.9))' }}
-            >
-              <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-                <div
-                  className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg"
-                  style={{ backgroundColor: 'rgba(184,150,12,0.2)' }}
-                >
-                  <svg className="h-6 w-6 text-[#B8960C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div className="flex-1">
-                  <p className="mb-1 text-sm text-white/60">
-                    {t('serviceCtaLabel')}
-                  </p>
-                  <h3 className="text-lg font-bold">{serviceName}</h3>
-                </div>
-                <a
-                  href={`/${locale}${doc.relatedService}`}
-                  className="inline-flex items-center gap-2 whitespace-nowrap rounded-lg bg-[#B8960C] px-6 py-3 font-semibold text-white shadow-lg transition-colors hover:bg-[#B8960C]/90"
-                >
-                  {t('ctaButton')}
-                </a>
+      {/* ── 相关服务（与博客文章详情页同款）──
+          命中 related_service 就指向该服务页；没写 / key 对不上则落到 /services/ 总览 */}
+      <section className="pb-16">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div
+            className="rounded-xl p-6 text-white"
+            style={{ background: 'linear-gradient(to right, #1B365D, rgba(27,54,93,0.9))' }}
+          >
+            <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+              <div
+                className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg"
+                style={{ backgroundColor: 'rgba(184,150,12,0.2)' }}
+              >
+                <svg className="h-6 w-6 text-[#B8960C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
               </div>
+              <div className="flex-1">
+                <p className="mb-1 text-sm text-white/60">{t('serviceCtaLabel')}</p>
+                <h3 className="text-lg font-bold">{serviceName}</h3>
+              </div>
+              <a
+                href={serviceHref}
+                className="inline-flex items-center gap-2 whitespace-nowrap rounded-lg bg-[#B8960C] px-6 py-3 font-semibold text-white shadow-lg transition-colors hover:bg-[#B8960C]/90"
+              >
+                {t('ctaButton')}
+              </a>
             </div>
           </div>
-        </section>
-      )}
+        </div>
+      </section>
 
       {/* ── CTA：需要办理中国合规业务？（与博客底部同款） ── */}
       <section className="bg-primary-navy py-16">
@@ -312,66 +314,21 @@ export default async function RegulationPage({ params }: { params: Promise<{ loc
         </div>
       </section>
 
-      {/* ── 免费合规评估表单（与博客底部同款） ── */}
-      <section className="bg-[#F4F6F9] py-16">
-        <div className="mx-auto max-w-2xl px-4 text-center sm:px-6 lg:px-8">
-          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gold/10">
-            <svg className="h-6 w-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-          </div>
-          <h2 className="mb-3 text-2xl font-bold text-[#333333] md:text-3xl">{CF.title}</h2>
-          <p className="mb-8 leading-relaxed text-[#5F6F7F]">{CF.subtitle}</p>
-          <form
-            className="mx-auto w-full max-w-lg rounded-xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8"
-            action="https://api.web3forms.com/submit"
-            method="POST"
-          >
-            <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY} />
-            <input type="hidden" name="subject" value={`🔥 New Inquiry — Regulations: ${slug}`} />
-            <input type="hidden" name="from_name" value="SinoTrade Regulations" />
-            <input type="checkbox" className="hidden" style={{ display: 'none' }} name="botcheck" />
-            <input type="hidden" name="redirect" value={`${SITE_URL}/${locale}/thank-you`} />
-            <div className="relative mb-4">
-              <label htmlFor="ct-email" className="mb-1 block text-left text-sm font-semibold text-[#333333]">
-                {CF.emailLabel}
-              </label>
-              <div className="relative">
-                <svg className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-[#5F6F7F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                <input
-                  type="email"
-                  id="ct-email"
-                  placeholder={CF.emailPlaceholder}
-                  required
-                  className="w-full rounded-md border border-gray-300 py-3 pl-10 pr-4 text-[#333333] focus:border-transparent focus:outline-none focus:ring-2 focus:ring-[#1B365D]"
-                  name="email"
-                />
-              </div>
-            </div>
-            <div className="relative mb-4">
-              <label htmlFor="ct-message" className="mb-1 block text-left text-sm font-semibold text-[#333333]">
-                {CF.messageLabel}
-              </label>
-              <textarea
-                name="message"
-                id="ct-message"
-                rows={3}
-                placeholder={CF.messagePlaceholder}
-                className="w-full rounded-md border border-gray-300 py-3 pl-4 pr-4 text-[#333333] focus:border-transparent focus:outline-none focus:ring-2 focus:ring-[#1B365D]"
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full rounded-lg bg-gold px-4 py-3.5 font-bold text-primary-navy shadow-md transition-all hover:bg-gold/90"
-            >
-              {CF.button}
-            </button>
-            <p className="mt-3 text-center text-xs text-[#5F6F7F]">{CF.privacy}</p>
-          </form>
-        </div>
-      </section>
+      <ComplianceForm
+        locale={locale}
+        subject={`🔥 New Inquiry — Regulations: ${slug}`}
+        idPrefix="detail"
+        texts={{
+          title: CF.title,
+          subtitle: CF.subtitle,
+          emailLabel: CF.emailLabel,
+          emailPlaceholder: CF.emailPlaceholder,
+          messageLabel: CF.messageLabel,
+          messagePlaceholder: CF.messagePlaceholder,
+          button: CF.button,
+          privacy: CF.privacy,
+        }}
+      />
 
       {/* ── 需要这项服务？ ── */}
       <section className="bg-primary-navy py-16">

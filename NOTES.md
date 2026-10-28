@@ -467,7 +467,7 @@ GitHub 仓库从 `seasea-clouds/trade-web` 切换到 `seasea-clouds/tc-web`（�
 - 教训：`check-translations.mjs` 的英文残留检测能兜住「语言错位」，批量写入后必须第一时间跑它
 
 ## 踩坑 18：博客投稿工具包（2026-10-17）
-- 投稿流程做成「作者交 48 语言 + 图片 → 作者自检 → 我端同一脚本复检 → 直接落盘」，规则只写一份：`docs/blog-submission/submitter_check.py`，`packages/scripts/blog-intake.mjs` 只做编排（解压/调用/落盘），避免两套规则漂移
+- 投稿流程做成「作者交 48 语言 + 图片 → 作者自检 → 我端同一脚本复检 → 直接落盘」，规则只写一份：`docs/blog-submission/submitter_check.py`，`packages/scripts/submission-intake.mjs` 只做编排（解压/调用/落盘），避免两套规则漂移
 - **CI 误判**：`check-md-article` 的 R11 取「最后 10 行第一个 markdown 链接」，正文末尾有配图时会把 `![alt](src)` 当成 CTA 报错 → 改为 `(?<!!)\[...\]\(...\)`，只认真正链接
 - 校验脚本自身也踩过同样坑：CTA 检测要先排除图片语法，`cover.webp` 不要求正文引用（它只用于列表卡片与分享图）
 - 图片尺寸解析用纯标准库手写 WebP/PNG/JPEG 头解析（VP8 / VP8L / VP8X 三种分块），作者端无需装 Pillow
@@ -482,7 +482,7 @@ GitHub 仓库从 `seasea-clouds/trade-web` 切换到 `seasea-clouds/tc-web`（�
 2. 生产域是 site，`/blog/` 只是边缘代理；blog 项目 `public/images/blog/` 在 sinotradecompliance.com 下不可达。
    **最终方案（用户选 B，2026-10-22）**：图片只存 blog 一份，site 的 `functions/_middleware.ts` 在 `proxySubSiteAsset()` 里加
    `/images/blog/*` → blog 上游代理（透传 method/headers，支持 Range 与条件请求；上游 cache-control/etag 原样透传，
-   不加额外边缘缓存，换图立即生效）。`blog-intake.mjs` 只写 blog 一处，site 不再留副本。
+   不加额外边缘缓存，换图立即生效）。`submission-intake.mjs` 按 kind 决定落 blog 或 regulations，site 不再留副本。
    注意 `.gitignore` 有 `apps/site/public/*/blog/`（本意忽略 site 构建合并的 blog 产物），它也会命中 `images/blog/`——
    将来若再往 site 放这类文件，必须 `git ls-files` 复查是否真入库，别信 `git add` 无报错。
 

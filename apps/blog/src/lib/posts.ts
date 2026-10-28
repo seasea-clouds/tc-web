@@ -33,11 +33,32 @@ export interface Heading {
 }
 
 /**
+ * 站点"今天"（UTC+8）。定时发布以此为准：日期在未来的文章视为尚未发布。
+ * 用构建时刻判定，所以文章到日子后需要一次重新构建才会出现在列表里
+ * （每日有定时构建兜底，见 workers/... 的 cron）。
+ */
+export function siteToday(): string {
+  const now = new Date();
+  const cst = new Date(now.getTime() + 8 * 3600 * 1000);
+  return cst.toISOString().slice(0, 10);
+}
+
+/** 该日期是否已到发布日（当天即算已发布） */
+export function isPublished(date: string, today = siteToday()): boolean {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return true; // 日期异常时不隐藏，避免文章凭空消失
+  return date <= today;
+}
+
+/**
  * Get all posts for a locale, sorted by date descending.
+ *
+ * 只返回**已到发布日**的文章：未来日期的稿子不进列表、不上首页、不进 sitemap、
+ * 也不生成详情页（见 [slug]/generateStaticParams），到日子重新构建后自动出现。
  */
 export function getPosts(locale: string): PostMeta[] {
   const contentDir = path.join(process.cwd(), 'content', locale);
   if (!fs.existsSync(contentDir)) return [];
+  const today = siteToday();
 
   return fs.readdirSync(contentDir)
     .filter(f => f.endsWith('.mdx'))
@@ -45,6 +66,20 @@ export function getPosts(locale: string): PostMeta[] {
       const slug = f.replace(/\.mdx$/, '');
       const raw = fs.readFileSync(path.join(contentDir, f), 'utf-8');
       return parsePost(slug, raw, locale);
+    })
+    .filter(p => isPublished(p.date, today))
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}
+
+/** 含未来稿在内的全部文章——只给 build 期做"为什么不生成这页"的诊断用，不要用于渲染 */
+export function getAllPostsUnfiltered(locale: string): PostMeta[] {
+  const contentDir = path.join(process.cwd(), 'content', locale);
+  if (!fs.existsSync(contentDir)) return [];
+  return fs.readdirSync(contentDir)
+    .filter(f => f.endsWith('.mdx'))
+    .map(f => {
+      const slug = f.replace(/\.mdx$/, '');
+      return parsePost(slug, fs.readFileSync(path.join(contentDir, f), 'utf-8'), locale);
     })
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }

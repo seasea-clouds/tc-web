@@ -435,13 +435,19 @@ function checkR08(content, relPath, lang) {
     });
   }
 
-  if (/-/.test(title)) {
+  // 连字符分两种形态，只有第二种是排版问题：
+  //   ① 复合词连接符（两侧紧贴字母/数字）：Números-chave、Zolllager-Starts、
+  //      doeaneberg-aanvang、E-commerce —— 这是葡语/荷兰语/南非荷兰语/英语的
+  //      正字法，投稿包 F03 也是允许的，站点不该判错（曾误报 3 语）。
+  //   ② 分隔符式（两侧有空格，或单独占位）：China - The Guide —— 真问题。
+  const isSeparatorDash = /(^|\s)[-](?=\s|$)/.test(title);
+  if (isSeparatorDash) {
     addFinding({
       file: relPath, lang,
       rule: 'R08', severity: 'error',
       line: titleLineNum,
-      text: `含连字符: "${title.slice(0, 60)}"`,
-      description: '文章标题不应包含连字符 -',
+      text: `含分隔符式连字符: "${title.slice(0, 60)}"`,
+      description: '文章标题不应把连字符当分隔符用（复合词如 Números-chave 不受影响）',
     });
   }
 }

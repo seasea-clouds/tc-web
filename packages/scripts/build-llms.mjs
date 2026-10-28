@@ -80,6 +80,8 @@ function loadBlogTitles(locale, app = 'blog') {
   if (fs.existsSync(dir)) {
     for (const file of fs.readdirSync(dir)) {
       if (!file.endsWith('.mdx')) continue;
+      // 定时发布：未到日期的稿子不进 llms.txt
+      if (!isFilePublished(path.join(dir, file))) continue;
       const raw = fs.readFileSync(path.join(dir, file), 'utf-8');
       const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
       if (!m) continue;

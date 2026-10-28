@@ -2,7 +2,7 @@ import fs from 'fs';
 import { headers } from 'next/headers';
 import path from 'path';
 import matter from 'gray-matter';
-import { getPosts, parseHeadings, mdToHtml, getCoverPath, formatPostDate, type PostMeta } from '@/lib/posts';
+import { getPosts, parseHeadings, mdToHtml, getCoverPath, formatPostDate, isPublished, siteToday, type PostMeta } from '@/lib/posts';
 
 /** Map blog slug → FAQ translation namespace (from old site messages) */
 const FAQ_NS: Record<string, string> = {
@@ -22,14 +22,28 @@ import CopyButton from '@/components/CopyButton';
 
 export async function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];
+  const today = siteToday();
   for (const locale of LOCALES) {
     const dir = path.join(process.cwd(), 'content', locale);
     if (!fs.existsSync(dir)) continue;
     for (const f of fs.readdirSync(dir)) {
-      if (f.endsWith('.mdx')) params.push({ locale, slug: f.replace(/\.mdx$/, '') });
+      if (!f.endsWith('.mdx')) continue;
+      const slug = f.replace(/\.mdx$/, '');
+      // 定时发布：日期未到的稿子连页面都不生成（不进 sitemap、不可被访问），
+      // 到日子重新构建后才出现。判断与 getPosts 共用同一套 isPublished。
+      const raw = fs.readFileSync(path.join(dir, f), 'utf-8');
+      const date = normaliseDateForGate(raw);
+      if (!isPublished(date, today)) continue;
+      params.push({ locale, slug });
     }
   }
   return params;
+}
+
+/** 只读 date 字段用于发布门禁，不解析整篇（generateStaticParams 会跑 48×N 次） */
+function normaliseDateForGate(raw: string): string {
+  const m = raw.match(/^date:\s*"?([0-9]{4}-[0-9]{2}-[0-9]{2})"?/m);
+  return m ? m[1] : '';
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }) {

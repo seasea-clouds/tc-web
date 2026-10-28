@@ -4,6 +4,7 @@
  */
 
 import fs from 'fs';
+import { isFilePublished } from './lib/publish-gate.mjs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -94,7 +95,10 @@ function discoverDynamicInstances(appDir, subdir) {
         const localeDir = path.join(subContentDir, locale);
         if (!fs.statSync(localeDir).isDirectory()) continue;
         for (const file of fs.readdirSync(localeDir)) {
-          if (file.endsWith('.mdx')) instances.push(file.replace(/\.mdx$/, ''));
+          if (!file.endsWith('.mdx')) continue;
+          // 定时发布：未到日期的稿子不进 sitemap / llms / known-routes
+          if (!isFilePublished(path.join(localeDir, file))) continue;
+          instances.push(file.replace(/\.mdx$/, ''));
         }
       }
       return [...new Set(instances)];
@@ -107,7 +111,9 @@ function discoverDynamicInstances(appDir, subdir) {
     const localeDir = path.join(contentBase, locale);
     if (!fs.statSync(localeDir).isDirectory()) continue;
     for (const file of fs.readdirSync(localeDir)) {
-      if (file.endsWith('.mdx')) instances.push(file.replace(/\.mdx$/, ''));
+      if (!file.endsWith('.mdx')) continue;
+      if (!isFilePublished(path.join(localeDir, file))) continue;
+      instances.push(file.replace(/\.mdx$/, ''));
     }
   }
   return [...new Set(instances)];

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-submitter_check.py — 博客投稿包自检与打包工具 (v1.26)
+submitter_check.py — 博客投稿包自检与打包工具 (v1.58)
 
 用法:
     python3 submitter_check.py <package.zip | 目录>
@@ -71,7 +71,12 @@ P36 = 标识型数字一致（v1.23）：母版块内的监管代码、税号、
 fa 的 ۱۲۱۰、ar 的 ١٢١٠ 属正字法。缺 → error，多 → warning。
 （v1.23 曾同时加过 P37「括注组数」并撤回：实测 P0 包 158 处命中，抽查为
 「普通食品（无蓝帽子…）→ Ordinary food, without the blue hat…」这类标点改写，
-内容并未丢失。括注是标点不是内容，故不作为规则。）
+内容并未丢失。括注是标点不是内容，故不作为规则。P37 编号就此空置，不复用。）
+P38 = 孟加拉文裸辅音 + CANDRABINDU（v1.37）：ঁ（U+0981）紧跟裸辅音字母
+（U+0995..U+09B9）的形状。ঁ 标的是前一个元音的鼻化，孟加拉正字法里只能跟在
+元音字母/元音符号（কার）之后，辅音后面要写的是 ং（anusvara）⇒ 不成立，error。
+分母自证：本仓 3 份 bn 稿 37 处 ঁ 的前一位全是元音。同一形状在 Devanagari
+里合法（ne सँग / hi महँगा），实测误伤 29 处，故只读 Bengali 区段。
 S08 的 count 扩展（v1.25）：条款写 "count": true 时，校验 require 词形在
 该块的出现次数 ≥ 母版锚点在该块的出现次数。抓「同一概念首两处译对、
 第三处退成代词/弱词」——F1 实证：ko「HS 코드」在 b17 前两处正确、
@@ -145,6 +150,458 @@ policy-basis-layer）绑定单篇摘要结构，按设计保留文章级。**两
 结构的内容（如 S09），词形一律进通用表，杜绝双源漂移。融合后验证：
 F1/P0 命令行（auto）双 0 error、F1 build 显式快照 PASS、5 负向 PASS、
 双向校验 CLEAN + 126 ALL PRESENT。
+
+【v1.34】两条检查补强（用户指令，源自 P0/F1 复检发现）：
+① 新增 **M09** submission.json 元数据对齐：submission.json 的 title/excerpt
+必须与 en frontmatter 完全一致——站方列表页读 submission.json、文章页读
+mdx frontmatter，F1 实测两者漂移（submission 残留旧标题 "The Service
+Framework Behind a Bonded E Commerce China Plan" vs en 正式标题），列表
+与文章会展示不同标题。error 级；缺 en 语言或缺字段时静默跳过。
+② **ST08 补全**（用户指令：总结套话「共 3 处」都要能识别告警）：匹配改为
+大小写不敏感（此前 "Kesimpulannya"/"Ամփոփումը" 词首大写会漏）；正文从
+「逐词报首现」改为逐处报告；总结套话族新增词形——hy ամփոփելով、
+id/ms sebagai kesimpulan/singkatnya、sw kwa ufupi、th สรุปได้ว่า。
+**不收裸词 kesimpulan/สรุป/kết luận**：P0 id/th/vi 的「五条结论」小节
+把这些词当实义名词用，收裸词会大量误报。规则总数 107 → 108（M09）。
+
+【v1.35】新增 **R07** 制作工具痕迹（用户指令）：对外文案不得暴露配图的
+制作来源——图是用 deck PPTX 管线做的，但文章只说「这是文章的图」，
+正文/图注不得出现「PPT」「幻灯片」「第 15 页」「p15」一类话术。
+分层口径（先实测 P0/F1/F2 全量再定案）：
+  error ① 来源页码引用：p15 / page 15 / slide 3 / 第 15 页 / スライド3；
+        ② 图片 alt 内出现任何工具词——图注点名来源是最典型的泄漏形状；
+        ③ title/excerpt 出现工具词或页码（元数据没有「修辞」空间）。
+  warning ④ 散文里的工具词：可能是合法修辞，不阻塞、人工判定（F2 实证
+        en "Nor are the four reports four slide decks"、ja スライド資料、
+        ko 슬라이드，对应 zh「四份报告也不是四份演示文稿」——这类句子
+        讲的是报告不是幻灯片，不暴露本文配图来源）。zh「演示文稿」
+        不进散文词表；散文词表 slide/deck 小写限定（de "Deck"=甲板属
+        正常词，alt 内不受此限）。扫描前剥链接目标与外链 URL。
+规则总数 108 → 109（R07）。
+
+【v1.36】**P31 术语本地化映射表扩容**（用户指令）：把 F2 十四个工作包名
+14 组 + 进场关键词 12 组（诊断/主体/店铺/备案/头程/清关/结算/推广/售后/
+数据/审计/会员——供应链可视、内容合规两键与包名键同串并入包名条目）
+登记进 TERM_LOCALIZATION。词形来源与口径：
+  包名 = F2 r2 48 语表格单元格逐字（全量术语审校后的地面真值），46 语
+        全登记（en 不登记）；
+  关键词 = 只登记拉丁字母语言（非拉丁语言的英文残留 P30 按字符集已
+        覆盖），词形经逐语人工校订（vi 双音节、az/tr 去格尾、ms/id/sw
+        组件修正），casefold 与英文键同形的语言豁免不登记（fr/it audit、
+        sv/fi data、de promotion 等）；回归实测再豁免同形假阳性语言——
+        ca/it/pt/ro 的本族词 data=「日期」、nl data 为已验收本族用法，
+        单词键 "data" 对这五语不登记。
+收割方法：结构化收割 48 语表格中列单元格 + 全单元格人工校订 + 逐语
+断言（词形必须出现在该语正文，词干前缀放行），断言失败 0 条后写入。
+写入后 P0/F1/F2 回归：命中数持平（该三篇正文本就用本土词形，无英文
+残留——命中若出现即为真发现，人工判定）。规则总数不变（P31 口径扩容，
+先例 v1.24）。
+
+【v1.37】新增两条判据（用户指令：改稿标准＝中文母版，能代码化的偏移一律进
+检查脚本）。两条都来自 F2《十四个工作包与三步进场》47 语人工逐篇审校。
+  S11 = **标题术语契约**：glossary 可选 "title" 段，对 frontmatter.title 判
+        「必须出现 / 不得出现」词形（`*` 兜底所有语言）。与 S09 摘要契约同理，
+        **只从文章级表加载**——标题承载哪几层是单篇决定，跨文章套用必然错配。
+        存在的理由：标题此前只受 F03 长度约束，于是「母版后半句整层丢失」在
+        45 语里一路绿灯（「把保税项目拆成可验收的交付物」只在 ja/ko 以别的
+        内容出现），「三步进场」的宾语被 8 语换成「中国海关仓／海关市场」也
+        没有任何一条规则出声。标题是列表页里读者唯一必读的一行，漏一层＝
+        整层承诺对外消失，而长度、结构、语言纯度三条轴都不沾边。
+  R08 = **签字人归属反模式**：把「签字的人就是这个包的责任人」写成
+        「签字人拥有这个包」的形状（同句内 签字人主语 + 所有权谓语 +
+        包/交付物宾语 三要素齐备才判，error）。只挂 en/zh 两个母版语向：
+        本族语里「责任」与「所有」是两个词，但没有词表就无从在 46 个语向上
+        判定用了哪一个（de verantworten / pl właścicielem 的差别只有登记过
+        才知道）；而 en 是这批偏移实际的出发语言（F2 的 ar/fa/he/ur 摘要与
+        en 逐短语同形，连母版没有的 "an exit gate at every stage" 都照搬），
+        zh 是唯一基准——在源头两语设卡才拦得住扩散。其余语向由文章级 S08
+        条款（require 责任词形 / forbid 所有权词形）逐语兜住，两条臂各盖
+        一侧，不重叠也不互相顶替。zh 词形单独一条正则：CJK 连写切不开句，
+        不许拿 DUP_SENT_SPLIT_RE 当中文切句器。
+规则总数 109 → 112（S11、R08、P38）。
+  P38 = **孟加拉文裸辅音 + CANDRABINDU**（error）：ঁ（U+0981）标的是前一个
+        元音的鼻化，正字法上只能跟在元音字母/元音符号（কার）之后，辅音后面
+        要写的是 ং（anusvara）——所以「裸辅音字母 + ঁ」不是「不太顺眼的写法」，
+        而是不成立的形状。它抓的是**批量替换打错码位**这一类事故：F2 r3 的
+        工单把 অনু（0985 09A8 09C1）写成 অনঁ（0985 09A8 0981），12 行同形，
+        词形看着像孟加拉文、P31 只判「英文原词有没有残留」（登记词形本身对不对
+        无人管）、P14 只管隐形字符，全链绿灯，只有逐字读码位才看得见。
+        分母自证：本仓 3 份 bn 稿共 37 处 ঁ，前一位 100% 是元音
+        （09BE/09BF/09C1/09C7/09CB/09CC/0986）。同一 predicate 打到 Devanagari
+        实测误伤 29 处（尼泊尔语后置词 सँग 的 स、印地语 महँगा 的 ह、बँटवारा 的 ब
+        都是合法形），故本条只读 Bengali 区段，不许顺手扩到 hi/ne。
+        射程声明：只判「ঁ 紧跟裸辅音字母」这一形状；ঁ 用错了但前一位恰好是
+        元音（例如该写别的元音符号）不在射程内。
+
+【v1.38】R07 补元数据面（无新规则号，总数仍 112；先例＝v1.36 P31 口径扩容）。
+  v1.35 立 R07 时把射程写在「正文散文 / 图片 alt / 标题 / 摘要」四处，
+  submission.json 整片不在内——而它是直接发给平台的对外文案。实证：P0/F1/F2
+  三个包的 imageRights 逐字相同，都写着 "All figures are exports from the
+  author's own SinoTrade proposal deck"：「deck」正是 R07 词表里的制作来源词，
+  三个包一起漏，且没有任何一条规则出声。这条盲区是在给 F2 打包 r3 时才被撞
+  见的（build_package 写 submission.json → 官方检查），不是审校读出来的——
+  说明「同一原则只在正文设卡」＝把原则的适用范围当成了原则本身。
+  现在逐字段扫 submission.json 的字符串值（title/excerpt/imageRights/author/
+  category/slug/date 一视同仁），命中 R07 词表或页码引用形状即 error，并指名
+  「哪个字段·命中什么」。列表值（locales 语言码、images 文件名）故意不进射程：
+  它们是结构枚举、不对外成句，文件名里一个 p15/deck 只会造出假泄漏——这一条
+  由控制组 E 钉住（清单与文件不符 ⇒ M08 出声，证明值被读到，而 R07 不出声）。
+  正/负对照 5 条见 tmp/f2_r3_r07meta_control.py（A 现文案 0 红 / B「page 15」/
+  C「第 15 页」/ D 泄漏在 title 而非 imageRights → 各 1 红 / E 只在列表值 0 红）；
+  端到端证据＝同一批真包改词前后两份读数（tmp/f2_r3_r07meta-*.log 三红 →
+  tmp/f2_r3_reg3-*.log 归零，命中数其余持平）。
+
+【v1.39】新增两条字段级判据（用户指令：F2 全字段逐条人工审查，能代码化的
+偏移一律进检查脚本）。两条都来自 F2 r4 逐语复审（title/excerpt/references/
+CTA/alt/元数据全查）：
+  P39 = **电商复合词 e- 前缀被空格拆开**（error，v1.40 由 warning 升级）：
+        正字法为 e-commerce / e-handel / e-ticaret（连字符，不是空格；v1.41
+        起标题同样直接用连字符形）。正则要求后接
+        commerce|handel|ticaret 并带 \w* 词尾（覆盖 tr 的 e ticarette 与
+        da/no/sv 的 e handelskanal）；挂 en/de/nl/da/sv/no/tr/af/cs/sk/id/pl
+        十二语——it/pt/ro/es 的 e 是连词（e commercio 合法），不收。
+        判 title/excerpt/references[].title/正文四处（元数据同口径）。
+        v1.40 用户指令：不按 P0/F1 的历史写法放宽——P0 43 处、F1 12 处
+        已逐处改成连字符形或本地语词，P39 因此升 error。
+        射程：只判「e + 空格 + 词干」；「electronic commerce」不在此列。
+  P40 = **摘要终止标点**（error）：frontmatter.excerpt 剥尾部空白与收尾
+        引号/括号后，末字符必须是 .。！？!?।۔։…؟ 之一。摘要是列表页
+        唯一的一段完整文案，缺句末标点会让相邻两篇的摘要粘成一句；F2 r4
+        实测 en 摘要在 "the brand's" 后直接结束（S09 的 14 契约照样全绿）、
+        pl 同理。th 整语豁免：泰文不以句末标点断句（三包 th 摘要末字符
+        全是泰文字母/符号）。v1.40 起 hy 也一视同仁：P0 摘要与正文的
+        ASCII ":" 已改为亚美尼亚句号 ։，不再保留历史豁免。
+规则总数 112 → 114（P39、P40）。
+
+【v1.41】F03 标题分隔符改精确口径（无新规则号，总数仍 114）。旧口径一律
+  禁 `: ： - — –`，把「词内连字符」和「标题分隔符」当成同一件事：
+  e-commerce、cross-border 这类正字法被判红，v1.40 只能把标题写成
+  ecommerce / 本地语词。新口径只禁「作分隔用」的形状：
+    - 冒号：只放行数字之间（9:1、10:30）；
+    - em dash / 横线（— ― －）：任何位置都禁；
+    - en dash / figure dash / 减号（– ‒ −）：只放行数字或编号区间
+      （2–4、2020–2025、S0–S13）；
+    - 连字符族（- ‐ ‑ ﹣）：只放行词内形（两侧不是空白、不在首尾、不连写），
+      e-commerce / cross-border / U.S.-China 合法；
+    - 亚美尼亚 ֊、希伯来 ־ 等文字系统自带的词内连字符不在射程。
+  无空格的 `Title-Subtitle` 与词内连字符同形，无法靠字形区分，按词内放行；
+  标题分句用逗号/句号，不用连字符。标题长度/空值仍归 F03。
+  同批恢复被旧口径逼改的标题：P0 en/tr、F1 en/id/pl/pt。
+
+【v1.42】F2 r5 全量审读回填，新增四条（112/114 → 118）：
+  P41 = **工作包表格 vs 表前包名列表**（error）：文章若有 S0–S13 十四行
+        表格，则表前最近 13 条带标签列表项必须与表格 S1–S13 的包名逐字
+        相同。F2 实证 29 语共 44 个单元格两边不一致，另有 hy 表前只剩
+        5 条带标签列表项（同一份对外承诺的两种陈列）。
+        标签分隔符收 `:` / `：` / 亚美尼亚 `՝`；没有该表的文章跳过。
+  P42 = **亚美尼亚文 ASCII 句点**（error）：hy 句末应为 ։（U+0589）。
+        豁免小数（9.1）、 թվական 缩写「թ.」、链接/图片目的地、行内代码。
+        r5 修 P0/F1/F2 正文共 221 处；修前 hy 正文里的 ASCII "." 全是
+        句末误写（亚美尼亚语借用了拉丁句号），元数据只剩 թվական թ. 与 URL。
+  P43 = **文章级禁用译法**（error，glossary 的 "banned" 段）：对指定语的
+        正文/title/excerpt/references 标题做全篇子串匹配。F2 实证：vi
+        vào sân（「进场」字面义）、ta நோயறிதல் / si රෝග විනිශ්චය
+        （疾病诊断）——词形合法、语法通顺，只有本篇语义能判。只认文章
+        自带表（同类词形在别的文章可能正确，P0 的 vi 就有 7 处字面义）。
+  P44 = **韩语阿拉伯数字与量词 개 的空格**（error）：14개 合法，14 개 是
+        逐词硬拆。只收阿拉伯数字；固有数词「열네 개」不收。
+  P47 = **描述位数字**（error，v1.52）：母版块内「N 位」（8 位税号）的 N 只有
+        1–2 位，P36 只收「含小数点或 ≥3 位」、P19 只收 ≥10，两族都看不见；
+        ta 曾把「八位」整个丢成无义音译。各语同一块须以数字、P47 词干
+        （achtstellige / восьмизначных 等复合屈折形）或 NUMBER_WORDS 数词
+        写出 N。防整段丢失的粗粒度契约：块内已有别的同数值词（「八部门」）
+        时不追单点错写。
+
+【v1.43】F3 r1 全量语义审计回填，一条新规则 + 两条既有规则收形（118 → 119）：
+  P45 = **称呼语域混用**（warning）：同一文件内非尊/尊第二人称标记并存。
+        实证缺陷：hu te/Ön 断裂、ro să te miști 对块31 的 dumneavoastră 形、
+        ca moure't 对块31 的 vosaltres 形（F2 r6、F3 r2 各修过一轮，机检
+        全绿放行，属「结构全对、语义层错」类）。词表 REGISTER_MARKERS 只收
+        单侧无歧义的代词/物主限定词（hu ro ca fr es de it el pt 九语）；
+        动词形态（hu -sz、ro 祈使）不在射程；北欧语不收——其 CTA 末块
+        du→I/ni/dere 复数切换是管线既定约定（F2 实证）。
+  P10 补德语关系从句豁免：逗号引出的关系代词+定冠词同形（…, das das
+        Fenster …）是语法必需形状，v1.14 的白名单只认词组不认句位，曾把
+        de 「ein Urteil ohne Handlung, das das Fenster …」误报。只放行
+        逗号紧跟的命中；无逗号的 das das 仍报。
+  P30 补单次出现疑残留：原门槛 ≥2 曾放过 el 正文单次 brands（第二轮
+        改稿引入第二处才暴露，属门槛盲区）。新增登记制词表
+        LATIN_SINGLE_SUSPECT（brands/brand/health/wellness/supplement/
+        supplements），命中一次即随 P30 报 warning；词表加词须附实证。
+
+【v1.45】域摘除（条款不再钉住各自的文章）：v1.44 的条款级 "articles" 域
+  废止——同一专业术语在全部文章上统一检查，不许「审计条款只管出产地那篇」。
+  实测（域全摘 + 四篇全检）：S08/P43 的跨篇新增红逐条核过全是真不一致
+  （P0 的 10 语乳清误作奶蛋白、th/id/sl 一罐误作瓶/杯、S1 主体写成 osoba/
+  chombo/структура，F1/P0/F2 的 hi 保税写成 सीमाशुल्क，F3 撞上 F2 审出的
+  si/ta/sw/uk 同族误译——域钉住把同族错译挡在了各篇之外）。
+  1. _term_in_scope 与四处消费点的域判断删除；terms/banned 全文章生效。
+  2. S09/S11 结构契约改条款级可选 "zh" 锚：锚在该篇**自己的** zh 摘要/
+     标题里才激活（与 S08 的 zh 块锚同一模式，内容驱动，不认 slug）——
+     「标题承载哪几层」本来就逐篇不同，无锚套用是构造性错配。
+  3. 六条 excerpt/title 条款补 zh 锚落表；P46 文案同步（不再提 articles 域）。
+  跨篇真冲突按裁定修文章（hi bonded 音译、whey 词形、主体术语、容器量词、
+  巴葡 CTA 等），不许重新加域。
+
+【v1.44】术语表单轨制（文章级术语表全部废止）：三张文章表
+  （F1/F2/F3 的 <包上级>/pipeline/glossary.json）删除——同一份对外承诺的
+  词形契约分放两处，改一处漏一处（F3 r2 实证：审计术语先落文章表，kit 表
+  不知情；F1 的 20 条合并时已与底表逐字重复）。
+  1. 新增 P46（warning）：检查时发现文章级术语表即提示「请把条目合并进
+     工具包术语表 kit/glossary.json 后删除该文件」。只认文件存在，
+     不挑内容好坏（空骨架同样提示）。
+  2. 共享表加载全部四段（terms/banned/excerpt/title）：P43 的禁用译法与
+     S09/S11 契约此前只认文章自带表（同词形在他篇可能正当）——并入共享表
+     后由条款级 "articles" 域限定生效范围（缺省=全文章生效）。
+  3. S08/S09/S11/P43 四个消费点统一走 _term_in_scope：条款支持可选
+     "articles": ["<slug>"…] 域，命中域才校验。F2/F3 审计条款以此各自
+     钉在本文；日后确认为跨篇通则时删域即可放开。
+  共享表终值 terms 69 / banned 32 / excerpt 4 / title 3；连带修 P31 提示表
+  hi bonded 两处教禁用词的自相矛盾（सीमाशुल्क→बॉन्डेड，U6 交叉臂抓出）。
+  正文包不含 pipeline/，官方检查口径不变（四包 0 error）。
+
+【v1.47】R07 页码形状收窄（无新规则号，总数仍 120；先例＝v1.36/v1.38 口径调整）。
+  触发：F4 中文母版写「4 个 P0 前提」，deck p09 原文就是 "P0 prerequisites"；
+  R07 的 `(?<!\w)p\d{1,3}(?!\w)` 把 "P0" 读成页码引用，48 语全判 error——
+  这不是文案要改：P0 是优先级档位名（本系列首篇代号也是 P0），而页码从 1 起，
+  "第 0 页"本来就不成立。
+  修法是**收窄**不是放宽：只放行命中串整词等于 p0 的那一种形状。
+  P01 / p007 / p15 / page 12 / Slide 7 / 第 3 页 / スライド 5 / 슬라이드 4
+  照旧判红；粘在 CJK 后的 "P0前提" 本来就因 (?![\w]) 不落射程，行为不变。
+  search→finditer：跳过被放行的 p0 后继续找下一个命中，因此同一句里
+  "P0 … p15" 仍然出声（命中串换成 p15），检测面只减掉「整词是 P0」这一类。
+  四个面（正文/alt/title+excerpt/submission.json）共用 _origin_page_hit，
+  一处改全体生效。
+  电池 posts/F4-*/pipeline/negative_test_r07_p0.py：U1 九个页码形状逐个必须
+  命中、U2 六个档位形状逐个必须放行、U3 单列 P01 自证豁免没写宽；包级臂 P0
+  基线 0 红 + P1 en 追加 "p15" 只多 en、P2 zh 追加 "P01" 只多 zh（要等 48 语
+  齐了跑）。回归：P0/F1/F2/F3 四包 0 error、警告 49/45/58/63 持平；
+  tmp/f2_r3_r07meta_control.py 控制组 5/5；规则号两把尺 120=120。
+
+【v1.48】F4 装配前口径修正（无新规则号，仍 120）：三处判据的**口径不对称**
+  把同一事实记成缺陷，逐条给基准侧与目标侧同一把尺。
+  1. P19 基准侧先折千分位（_fold_thousands）。母版「18,000 / 129,600 /
+     1,638」切成 129 与 600、638，47 语各判缺两段——目标侧变体早折过，
+     基准侧没折。整组匹配首段 1–3 位 + 一组以上**同种**分隔符，`1,234,567`
+     一次折完；`1,234.567` 只折千分位段、小数逗号/点保留。
+  2. P36 认空格分组与「N 万」。母版 `100,000` 与译文 `100 000`（af/es 等）
+     互判缺失/多出；`_id_numbers` 先折空格分组再收数。母版写「N 万」时
+     授权两种数字面：整值 N*10^4 与千位读法 N*10^3（az 100 min / tr 100
+     bin / ka 100 ათას 的数字面是 100；ko「10만 명」的 만 与汉字万同义，
+     一并收）。缺号按组放行（_wan_face_groups），多出仍出声；母版块无标识
+     数字时整块跳过（`if not want: continue` 不变）。
+  3. S08 新增可选 "forbid_licensed_by": {语种: 母版来源词}。th 的 ประกาศ
+     既是「公告」也是「宣布」的合法译形：母版同块自己出现「公告」n 次时，
+     该禁用形按 n 封顶放行，超出才判红且红面写清 n 与实测次数；n=0 时
+     与旧行为逐字一致（F2 形误用照旧判红）。
+  术语表新增两条 F4 备案条款（filing-not-registration-f4-s3 / -flow，40 行
+  逐语核过）；-flow 的锚点取 F4 独有句「七条流是同一套账的七个面」——同一句
+  「合规流记申报、备案与检查点」也出现在 F1 第25块，而 F1 全篇仍按旧口径用
+  注册族词形，用该句当锚会整篇判红；备案跨篇统一待裁定，届时另立 F1 条款。
+  电池：negative_test_v148_caliber.py（11 臂，A2/B2/C1 现状绿 + A3/B3 反证
+  复红 + B4 正对照 + C2 越界/C3 无授权）与 negative_test_f4_filing_terms.py
+  （22 语逐语回退旧形，每语恰 2 条）。回归：P0/F1/F2/F3 0 error、警告
+  49/45/58/63 持平；F4 1 error（M01 缺 submission.json，待装配）/62 warning，
+  比修正前少 92 条告警（逐条对账＝旧口径的假红，非放水）。
+
+【v1.49】R06 补 48 语承诺句形（无新规则号，仍 120）。R06 原来只认英文承诺词
+  （guarantee / we arrange shipping / within 24 hours），非英文语向一条都不判
+  ——各语译者实际在自觉避用本语承诺词，契约靠散文活着。裸词干普查在已入库
+  语料取到 14 处合法用法（F1 五处「平台保证金」的 deposit 义、F4 九处母版自己
+  引用「保证/garantido」词本身，上下文见 tmp/f4_r06_ctx_run1.txt），所以口径
+  只能取**第一人称/本方案 + 保证·承诺动词**的句形：PROMISE_BY_LANG 逐语一条，
+  键集合 == LOCALES（48 语）。旧英文 PROMISE_RES 原样保留、先判；窄臂只在旧表
+  没命中时补判，英文行为逐字不变。红面带上命中原文（%r，不可打印字符转义，
+  如 fa 的 ZWNJ 显示成 \u200c）。
+  电池 posts/F4-*/pipeline/negative_test_r06_promise.py：A 表↔语向 48 且 48 臂
+  夹具全命中（死臂自证）、B F4/F1 基线 0 条、C 48 语逐语注入各恰 1 条且只挂
+  本语、D 12 条真实合法裸词干全部放行、E 语向数棘轮。回归：五包 0 error
+  （警告 49/45/58/61/62 持平），五篇 zh 母版 0 命中。
+
+【v1.50】F4 备案族条款补 23 语（纯术语表增量，无代码/规则号变化，仍 120）。
+  业主裁定「备案留 F3 冻结底形，申报换第二词」在 23 语落盘（de nl sv ru uk be
+  bg sr hr cs sk pl hu fi sl he ka bn ta az tr ko vi，88 处：b17 备案、b18 申报+
+  备案、b16 数据申报句、b11/b23 申报清单）。两条 S08 条款随之扩容：
+  filing-not-registration-f4-s3 21→44 语、-flow 19→42 语，forbid 收被替换的
+  注册族旧形（de/vi 的 b17 原就正确，forbid 是回归棘轮形；de/nl/pl/az 的
+  申报清单改词，cs/sk/hu/ko/vi 按既有固定复合形保留，均记在条款 note）。
+  bn 的申报词 ঘোষণা 与本块「486 নং ঘোষণা」（公告）同形异义：F3 全篇公告亦作
+  ঘোষণা，改一处会造成跨篇不一致，故保留（工单 tmp/f4_r8_workorder.tsv 标
+  撞形豁免）。电池 negative_test_f4_filing_terms.py 语种棘轮 44/42，45 语逐语
+  回退旧形：每条回注恰出「缺失+反向」2 条且只挂本语；F4 回归 0 error /
+  62 warning 持平。
+
+【v1.51】g82 五语 bonded 收口 + nl douanemagazijn 全篇禁旧词（纯术语表增量，
+  无代码/规则号变化，仍 120）。业主裁定「fi/nl/no/sv/da 正文里的英文 bonded
+  换成各自保税仓/海关仓词（含 1210 渠道名）；综合保税区逐语定名后写入术语
+  表」：P0 title/excerpt 十处改 1210 渠道名（fi 因超长统一为复合形
+  1210-tullivarastokanavan，F03/F07 契约内），F3 no/sv/da b87 三处、P0/F2/F3/F4
+  的 nl douanemagazijn 18 处改 douanelager（P0 6 / F2 5 / F4 7）。术语表六处：
+  blue-hat-registration 补五语 forbid（nl 另禁 douanemagazijn 作回归棘轮）；
+  新条款 comprehensive-bonded-zone（F2+F3 综保区五语定名：fi kattava
+  tullivarastoalue / nl omvattende douanelagerzone / no omfattende
+  tollagerzone / sv omfattande tullagerområde / da omfattende toldlagerzone，
+  与各语海关特殊监管区域译形刻意区分；其余 43 语未定名、不在射程，note 写明）；
+  online-bonded-goods-only 的 nl 词对收口 douanelager；新增 banned
+  nl-douanemagazijn-banned（全篇禁旧词，slug 与图片路径不在射程）；
+  S11/S09 各增五语 1210 渠道名条目。terms 101→102、banned 58→59、title 3→4、
+  excerpt 4→5。电池 posts/F3-*/pipeline/negative_test_g82_bonded_zone.py
+  21 臂：五语综保区回注（nl forbid 是 require 超集、缺失半发不出，期望 1）、
+  blue-hat 五语回注、P0 title/excerpt 回注、P0 nl 正文 douanemagazijn 回注
+  （S08+P43 双红）。回归：P0 r6 / F2 r7 / F3 r4 / F4 r2 重打包 0 error
+  （警告 49/58/58/62；F3 61→58 是 no/sv/da 的 P31 bonded 残留提示随修复消失，
+  逐条归因非连带）。
+
+【v1.52】r79 第三轮数字/文号对账回填，一条新规则 + P36 分级收形（120 → 121）。
+  F3/F4 全 48 语逐块数字对账（双向：译文多出 + 近形错写；口径：千分位/小数
+  逗号统一、URL 剥离、空格分组、「N 万」同义面、母版汉字数词授权面），结论
+  E=0/N=0，唯一真缺陷＝F4 ta「8 位」描述位整段丢失（எண்படி 无义音译；8 是
+  一位数字、P36 只收 ≥3 位、P19 只收 ≥10，两族都看不见）→ 已修 எட்டு இலக்க。
+  文号对账另行全绿：W2020-29 连字符、六/八部门数词、486/194/443/280/7 号、
+  2016-18 与 2018-49 财关税对、2020-45、280 号令↔2026-06-01 均逐语在位。
+  两条固化：
+  P47 = 描述位数字（error）：母版块内「N 位」的 N 须在各语同一块以数字/
+        P47 词干/NUMBER_WORDS 数词在场。词干表 47 语按 144 个锚块（P0 b18 /
+        F3 b9 / F4 b6+b22 × 48 语）实测收集（ro 走双边界词表防 opt×
+        optimizarea 误中；th/ja 无空格文字免左边界）；验收 bad=0，ta 整段
+        丢失、de achtstellige→siebenstellige 变异均点火。粗粒度契约：块内
+        已有别的同数值词（「八部门」的 acht/åtte/eight）时不追单点错写。
+  P36 = extra 近形分级（warning→error）：extra 与块内任一母版数字等长差一位
+        或差一个数量级位时升 error（1476↔1477、100000↔10000），抓「同块
+        两处同数改一漏一」——miss 半边不点火时 extra 近形是唯一信号。五篇
+        干净态 extras=0、近形=0，升级不碰现状。
+  附带：NUMBER_WORDS ur 8「آٹ」补足为「آٹھ」（截形从未命中过，纯词表勘误）。
+  电池 posts/F4-*/pipeline/negative_test_v152_num_blindspot.py 五臂：
+  ta 实缺陷回归、de 复合词错数、en 量词位 5→6、ta 混合漏改（P36 近形升级
+  单独点火）、ta 全量替换（P04 一条 + P36 六条：三个含 1476 的块各
+  miss+近形）。
+
+【v1.53】M1 写作暴露 P36「N 万」收数假阳性：`0.43 万亿` 的 43 被读成
+  43 万，母版凭空多出 430000/430；`0.6 万亿` 同理多出 60000/60；`3,600 万元`
+  多出 600/6000000。译文的「0.43 trillion」永远判缺 ⇒ 47 语全红，是口径
+  不对称而非译文缺陷。修法：`_WAN_RE` 左界由 `(?<!\d)` 收紧为
+  `(?<![\d.,])`——「N 万」的 N 必须是独立整数，小数点/千分位的尾段不算。
+  规则数不变（121），只改 P36 的收数口径。电池
+  posts/M1-*/pipeline/negative_test_v153_decimal_wan.py：单元臂（小数万亿
+  无 万 组、0.6 万亿、3,600 万元、整数 10 万仍授权 {100000,100}、韩文 만）
+  ＋端到端臂（M1 包内 en 保留 0.36–0.43 trillion 应 0 条 P36；改写成
+  0.43 万亿的英文面不应再产生缺口）。
+
+【v1.54】M1 47 语人工审校的两类语义缺陷固化（121 → 123，P37 仍空置）。
+  ① P48 长级差单位：长级差语言里 万亿=10^12（biljoen/bilioni/biliões/
+  bilioane/bilionë/Billion/billion/billones/…），tri- 词形是 10^18。
+  af/it/pt/ro/sq 五语实把 0.36/0.43/0.6 万亿写成 triljoen/trilioni/trilhão/
+  trilioane/trilionë——数字原样、单位放大一百万倍，P36 只比数字看不见。
+  触发：母版块或摘要含「万亿」；在对应译文里命中本语 tri- 词形即 error。
+  ② P49 清单缩减矛盾：2022「清单收紧」不是「清单缩小」。全篇含 1476
+  （清单扩至 1476 个税号）时，译文任一块出现该语的清单缩小/变窄短语即
+  error；be/bg/ca/cs/de/fa/hr/ko/ro/sr/uk/ur 十二语审校实抓（时间轴摘要与
+  条目各一处，所以按全篇判、不按同块判）。
+  ③ ru/uk/be 32 处「X 这是 Y」系词句暴露两难：东斯拉夫语正字需要系词破折号，而
+  本工具包 ST01（正文禁 em dash，改冒号/拆句/动词）与 B10（同篇不得混用 — 与
+  –）把它全部挡死——首稿于是集体漏写。按 ST01 口径改写：系词行换成动词
+  （означает / служит / является / становить / утворюють / з'яўляецца …）
+  或冒号化，不引入 em dash；规则不变。
+  电池 posts/M1-*/pipeline/negative_test_v154_longscale_shrink.py（39 臂：
+  30 单元＋词表覆盖＋M1 基线＋af/pt/ko/uk/de 端到端＋em dash 反证＋跨篇）。
+
+【v1.55】M1 47 语人工审校第三批（余 14 语通读＋三档全修）固化，123 → 127。
+  新增四条**同篇内部一致性**规则（不与母版比对，只看一种语言自己前后是否
+  矛盾）：
+  ① P50 CTA 末行终止标点（error）：M1 实抓 th/he/fa/af/ca/sw/bn/ta/vi/nl/
+  tr/it/ur 十四语末行以链接收尾却没有句点。th 整语向豁免（泰文无句点惯例，
+  六篇一致缺，属正字法）；hi 系用 ।、hy 用 ։、ur/ar/fa 用 ۔。
+  ② P51 百分号体例混用（warning）：同篇同时出现「N%」与「N %」（或前缀型
+  与后缀型并存）。sv/cs/el/ro 列表写 21.4% 而正文写 20 %，ka 反向。
+  存量 P0 az、F3 cs 各一处，故先出 warning——升 error 前要清存量并重打两包。
+  ③ P52 拉丁语向英文残词（error/warning 两级）：P30 只看非拉丁文字里的
+  拉丁残留，拉丁语向互看全是"像英语的词"，盲区。de「die zuerst compliant
+  sind」、da「compliant sælgere」实抓。词表按"本地必须有对应词形"筛：
+  compliance/timing/traffic/launch/sku/quota 等已在该语自然化的借词不入表
+  （六篇存量命中即证明是既定用法，不是漏译）。
+  ④ P53 葡语变体混用（error）：成对判据（connosco×conosco、registo×registro、
+  utilizador×usuário、contacto×contato、actividade×atividade、óptimo×ótimo、
+  acção×ação）——同篇两个变体同时出现才出声，单边一律放过。替换掉 v1.45
+  的全局 banned pt-connosco：M1 pt 整篇欧葡一致，禁掉正确词形不是规则。
+  术语表 terms 102 → 119（十七条语义契约：图指代/清退份额/窗口时限/三单
+  处理/口服美容/备注词形/流量词形/节奏转化/来源非供应商/自建需求/试点铺满/
+  综保区/效果投放/内容口径/直连消费者/插图计数/驱动面指向），banned 59 →
+  282（+224 条本轮实测错形，每条由 fix_audit_20261028〔f/g/h〕.py 的
+  (旧形→新形) 对自动导出）。条款锚点一律扩到 M1 独有：共享表全域生效，
+  锚点若也落在 F3/F4 母版里，就会用 M1 收的词形去判别篇的同义异形
+  （实测 af prent、de Abbildung、bg бележки 全被判红）。
+  电池 posts/M1-*/pipeline/negative_test_v155_semantic_audit.py。
+
+【v1.56】P51 判据对称化 ＋ 清存量 ＋ warning → error，规则数不变（127）。
+  ① 判据修正（不是放宽）：v1.55 给后缀形加了右侧 (?!\\s*[\\d])、前缀形却不加
+  左界，两侧口径不对称。az「13% vurulmuş 70% 9,1%-ə」里那个「70%」被右界挡掉
+  不算后缀，同一个 % 又因后面接「 9,1」被算成前缀，于是**全篇零前缀形**的
+  阿塞拜疆语被报「前缀型与后缀型并存」。与 v1.53 的「N 万」同型——口径不对称
+  产生的假阳性，不是稿件缺陷。现按位置判定：% 贴数字＝后缀，% 前不贴数字＝前缀。
+  ② 存量收口：F3 cs 后缀形 5 处「9,1%／13%／70%」改捷克正字法的疏形「9,1 %」，
+  与本系列 M1 cs 的 16 处疏形统一（捷克/捷克标准化组织口径是数字后空一格）。
+  ③ P51 升 **error**：六包读数 0 之后升档（v1.55 那条「升 error 前要清存量并
+  重打两包」的前置条件已满足；P0 az 那一处经①证实是假阳性，无需改稿）。
+
+【v1.57】跨篇统一改稿 ＋ 新增 P54 丹/挪文号引用介词，127 → 128（P37 仍空置）。
+  此前记为「跨篇差异，不能全局禁」的两处，本轮按**先改稿、后立规**收口：
+  ① da/no 的文号年份介词六包统一为 af（丹）／av（挪），fra 只留给颁发机关——
+  旧稿把年份和机关都写成 fra，一句两个 fra（「来自 2018 来自六个部门」）。
+  落盘 65 处（da 37／no 28），顺带消掉 43 处 fra…fra 双写；no 的 F1/F2 与 M1
+  题录行本来就是 av/af 形，是语料里的既证正确写法，不是新发明。
+  ② it 引用海关总署的机构名统一为 Amministrazione Generale delle Dogane（9 处）；
+  ta 统一为 சுங்க நிர்வாக(த்தின்)（12 处），M1 的逐字硬译形退役。
+  ③ 新增 **P54**（error）＝①的机器化：「文号＋fra＋年份」与双 fra 两种形状，
+  射程含正文/摘要/标题/题录。双写臂以「nr.＋编号」为锚而非以文号词形为锚：
+  散文里「rapporten fra 2018 fra seks ministerier」两个 fra 都合法，无界就会误红；
+  锚在 nr. 上既缩掉射程，又顺带兜住词表外的文号名（lov／forordning）。
+  **为什么这一版才敢判红**：改稿之前 fra 形在别篇是自洽写法，全局禁用会把正确
+  稿件判红（同 P53 撤掉全局 banned pt-connosco 的教训）；改完之后它在每一篇都
+  不成形，规则才成立。
+  ④ 术语表 banned 282 → 284：it la Dogana di Cina／Amministrazione generale
+  della dogana，ta சுங்கியாய்வுத் தலைமை இயக்ககம் 与 சுங்கத்தின்＋年份的引用形。
+  ta 只禁「属格＋年份」，通用属格 சுங்கத்தின் 整词禁用会重犯 P53 那一类错。
+  登记前逐条回扫六包（it/ta 全部语向文件）：旧形命中数必须为 0、定稿形必须在位，
+  两者缺一就不许入表——banned 是全域生效的，进表前它就是「别篇还合法」的判据。
+
+【v1.58】五篇 warning 收口 ＋ P10 升 error ＋ 四处判据射程修正，规则数不变（128）。
+  这一轮先把「人工读得见」的 warning 全部落盘，再让机器看见人读不到的那一片。
+  ① P10 存量：新切词器下 v1.57 发货面六包共 **126 处**相邻重复（P0 29／F1 9／
+  F2 10／F3 39／F4 33／M1 6），现行面 **0**。同一个面交给 v1.57 判据报 67 处，
+  三方对账闭合：**交集 57**（两判都看见＝真缺陷，逐条改写，脚本 56 条——F3 有一处
+  重叠三元组，一次改写消掉 2 处）、**仅新 69**（旧判据盲区：P0 29／F1 9／F2 3／F3 15／
+  F4 7／M1 6，第二批落盘）、**仅旧 10**（旧判据假阳性：sq/vi/ur 的 lexeme 与 matra 词内
+  切分，本版修判据、不改稿）。67＝57＋10、126＝57＋69。改法是换成该语本有的
+  「逐一／各自」形（si සෑම…-ක්ම、ur ایک کے بعد ایک／الگ、sw kila／ileile、
+  tr 已登记的 tek tek／ayrı ayrı、ar على حدة、fa 半角 ZWNJ、hy հերթով），
+  不是删字——叠写在多数语向里承担「一个一个来」的分配语义，删掉就丢信息。
+  顺带 F4 fi data→tiedot/tietojen 3 处（P31）＋ zh 残留英文 practice 1 处（P30）。
+  ② P10 里「词」的定义改掉（判据错，不是稿件错）：旧写法 `\b(\w{2,})[ \t]+\1\b`
+  两头都错。假阳性——`\b` 在印度系文字的母音记号处断开，`करीब` 被读成「कर कर」；
+  盲区——以母音记号收尾的词（`चार`）连 `\w{2,}` 都进不去，**真**重复一条不报。
+  现按 Unicode 类别切词（字母与结合字母连片，词长只数非结合字母，≥2 保持旧口径）。
+  盲区里的 69 处第二批落盘（脚本条目与命中一一对应）：
+  bn 31／ar 11／si 20／ne 5／hi 1／ta 1，其中 M1 的 ar 4／bn 2 走 bundle 重装配＋
+  47 语重导。bn 用连字符形（ঘরে-ঘরে）、ar 用 ف 插入形（بنداً فبنداً），与 M1 既有的
+  `এক-এক`／`एक-एक` 同一条设备，不新造写法。
+  ③ lexeme 续词改按**原文**取下一个空白词：hi「कोटेशन से पहले पहले दो देखिए」里
+  `दो`＝单元音＋母音记号，core=1 进不了词表，续词判断永远拿到后面的动词，
+  「पहले＋数词」这条放行形同虚设——F4 重打包时才炸出来。放行表本身不动，
+  取词口径跟着修（电池 A2c 臂两条：`पहले पहले दो` 沉默、`पहले पहले देखिए` 仍报）。
+  ④ ST08 射程收窄：登记过的「总结套话」开场词必须落在句首（`_ST8_EDGE_RE`），
+  整串被引号包住的算提及不算使用；hy `ամփոփում`（就是名词「摘要」）、ne
+  `निश्चित हुन्छ`（母语常规断定）从表里删掉。**ST08 仍留 warning**：是不是机器腔
+  本质要人工裁量，升 error 只会逼人绕开判据而不是改稿。
+  ⑤ P08 放行「大写拉丁代号＋本地词尾／前附连接词」（SKUها、Cով、وS3؛）——与
+  v1.14 已放行的带连字符一侧同源的正字法；小写词根仍报（marketها／compliance-ով／
+  bondedها），反证臂进电池。
+  ⑥ P10 升 **error**，前置条件与 P51（v1.56）同一套，逐条核过：六包＋sample 存量
+  归零、判据两头（假阳性与盲区）先修平、站方 v1.14 的口径本来就是 error。
+
+  ⑦ **升档当天就照出发货模板自己有一处缺陷**：`sample/` 的 si CTA 写着
+  «එක් එක් අයිතමයට»，按本版同一手法改成 «සෑම අයිතමයටම»（语料里的既证「逐一」形）。
+  sample 是别人照着抄的模板——模板过不了自己的检查，交付出去的就是缺陷。
+  这一条不是补充说明，是升 error 的直接理由。
 """
 
 import io
@@ -264,7 +721,7 @@ NUMBER_WORDS = {
            18: "अठारह", 19: "उन्नीस", 20: "बीस", 30: "तीस",
            40: "चालीस", 50: "पचास", 60: "साठ", 70: "सत्तर", 80: "अस्सी",
            90: "नब्बे", 100: "सय"},
-    "ur": {3: "تین", 4: "چار", 5: "پانچ", 6: "چھ", 7: "سات", 8: "آٹ",
+    "ur": {3: "تین", 4: "چار", 5: "پانچ", 6: "چھ", 7: "سات", 8: "آٹھ",
            9: "نو", 10: "دس", 11: "گیارہ", 12: "بارہ", 13: "تیرہ",
            14: "چودہ", 15: "پندرہ", 16: "سولہ", 17: "سترہ",
            18: "اٹھارہ", 19: "انیس", 20: "بیس", 30: "تیس",
@@ -491,10 +948,125 @@ CATEGORIES = ["Brand Protection", "Compliance Guide", "Cosmetics", "E-commerce",
 
 FRONTMATTER_KEYS = ["title", "slug", "date", "category", "excerpt", "references"]
 
+# v1.59：法规（kind="regulation"）用另一套 frontmatter / 必填字段。
+# 两类共用同一个检查脚本与其余全部规则，只有以下差异。
+FRONTMATTER_KEYS_REG = ["title", "slug", "date", "category", "excerpt",
+                        "doc_number", "issuer", "published_at", "effective_at",
+                        "status", "source_url", "related_service"]
+# related_service 允许缺省；其余必须齐
+FRONTMATTER_REQUIRED_REG = [k for k in FRONTMATTER_KEYS_REG if k != "related_service"]
+SUB_REQUIRED_REG = ["docNumber", "issuer", "publishedAt", "effectiveAt", "status", "sourceUrl"]
+STATUS_ENUM = ("in_force", "upcoming", "amended", "repealed", "draft")
+ORIGINAL_MARKER = "<!-- original -->"
+
 AUTHOR = "David Zhang"
 
 MAX_TITLE = 85
 MAX_EXCERPT = 185
+# P48（v1.54）长级差语言的「万亿」：正确词形给 10^12，本语 tri- 词形是 10^18。
+# 只在母版块/摘要含「万亿」时生效；命中 tri- 词形即 error（数字不变、单位放大）。
+P48_BAD_UNITS = {
+    "af": (r"triljoen\w*", "biljoen"),
+    "ca": (r"trili[óo]\w*", "bilió"),
+    "cs": (r"trilion\w*", "bilion"),
+    "da": (r"trillion\w*", "billioner"),
+    "de": (r"Trillion\w*", "Billion"),
+    "es": (r"trill[óo]n\w*", "billones"),
+    "fi": (r"triljoona\w*", "biljoona"),
+    "fr": (r"trillion\w*", "billion"),
+    "hr": (r"trilijun\w*", "bilijun"),
+    "hu": (r"trilli[óo]\w*", "billió"),
+    "it": (r"trilion[ei]\b", "bilione/bilioni"),
+    "nl": (r"triljoen\w*", "biljoen"),
+    "no": (r"trillion\w*", "billioner"),
+    "pl": (r"trylion\w*", "bilion"),
+    "pt": (r"trilh(?:ão|ões)\w*", "bilião/biliões"),
+    "ro": (r"trili(?:on|oan)\w*", "bilion/bilioane"),
+    "sk": (r"trili[óo]n\w*", "bilión"),
+    "sl": (r"trilijon\w*", "bilijon"),
+    "sq": (r"trilion\w*", "bilion/bilionë"),
+    "sr": (r"трили(?:он|јун)\w*", "билион"),
+    "sv": (r"triljon\w*", "biljoner"),
+}
+# P49（v1.54）清单缩减矛盾：母版块含 1476（清单扩容）时，译文不得把
+# 清单说成缩小/变窄（收紧≠缩减）。词条取自 M1 47 语审校实测旧串。
+P49_SHRINK = {
+    "be": ["пералік звужаецца"],
+    "bg": ["списъкът се стеснява"],
+    "ca": ["la llista s'estreny"],
+    "cs": ["se zužuje seznam"],
+    "de": ["liste wird enger", "die liste enger"],
+    "fa": ["تنگ‌تر شدن فهرست"],
+    "hr": ["popis se sužava"],
+    "ko": ["목록 축소"],
+    "ro": ["lista se strânge"],
+    "sr": ["списак се сужава"],
+    "uk": ["перелік звузився"],
+    "ur": ["فہرست کی تنگی"],
+}
+# P50（v1.55）CTA 末行终止标点：末块是给读者落地的一步，句号缺失在页面上
+# 表现为「句子没写完」。M1 47 语审校实测 th/he/fa/af/ca/sw/bn/ta/vi/nl/tr/it/ur
+# 十四语缺终止标点（bn 用 ।、hy 用 ։、ur 用 ۔、he 用 。→.、其余用 .）。
+# 泰文没有句点惯例（th 六篇一致缺，属正字法而非漏写），整语向豁免。
+P50_TERMINAL = ".!?。！？．…؟۔।॥։"
+P50_NO_TERM_LANGS = {"th"}
+# P51（v1.55，v1.56 升 error ＋判据对称化）同篇百分号体例混用：M1 实测 sv/cs/
+# el/ro 把列表项写成「21.4%」而正文写「20 %」——同一种语言里两套排版，读者会为
+# 它们来自两个来源。ka 反向：正文一律「20 %」，列表混进「17.6%」。判据只比
+# **同侧**（后缀型/前缀型）内部是否一致；跨侧（tr/pl 前缀 %20 与后缀 20%）也登记，
+# 因为同一篇文章里两种方位并写就是排版事故。
+# v1.56 把两侧边界对齐：一个 % 归后缀还是前缀，只看它左面贴不贴数字。旧写法
+# 只给后缀加了右界、前缀没有左界，az「70% 9,1%-ə」的 % 两头不算、反被读成
+# 「% 9,1」前缀，零前缀形的语向就这样被判了「前后缀并存」。
+P51_NUM = r"[0-9]+(?:[.,][0-9]+)?"
+P51_SP = r"[ \u00a0\u202f]"
+# P52（v1.55）拉丁语向的英文残词：M1 实测 de「die zuerst compliant sind」、
+# da「compliant sælgere」把英语形容词原样留在译文里。与 P30（非拉丁文体的
+# 拉丁残留）互补：P30 看不见拉丁语向，本条专盯拉丁语向。
+# 词表按「本地必须有对应词形」筛选——compliance/timing/traffic/launch/sku/
+# quota 等已在本语自然化的借词不入表（六篇存量命中即证明它们是既定用法，
+# 不是漏译）。HARD＝语法词形（形容词/名词原级），error；
+# SOFT＝行业借词，按语向可能合法，warning 交人工裁定。
+P52_RESIDUE_HARD = ["compliant", "complying", "stakeholder", "shopper",
+                    "funnel", "touchpoint", "onboarding"]
+P52_RESIDUE_SOFT = ["sourcing", "benchmark", "leverage", "pipeline",
+                    "insight", "campaign", "loyalty", "checkout",
+                    "cleansing", "purging", "screening"]
+P52_LATIN_LANGS = ["es", "fr", "de", "it", "nl", "pt", "pl", "sv", "da", "no",
+                   "fi", "cs", "sk", "sl", "hr", "sr", "hu", "ro", "ca", "af",
+                   "sq", "tr", "az", "ms", "id", "vi", "el", "hy"]
+# P53（v1.55）葡语变体混用：pt 侧欧葡/巴葡两套正字法各自成篇合法，**同篇
+# 混写**才是事故。此前共享表用全局 banned「connosco」一刀切（v1.45），把
+# 整篇一致的欧葡文 M1 判成 error——禁掉正确词形不是规则。改成成对判据：
+# 只有同一篇里同一概念的两个变体同时出现才出声（单边命中一律放过）。
+P53_VARIANT_PAIRS = [("connosco", "conosco"), ("registo", "registro"),
+                     ("utilizador", "usuário"), ("contacto", "contato"),
+                     ("actividade", "atividade"), ("óptimo", "ótimo"),
+                     ("acção", "ação")]
+# P54（v1.57）丹/挪「文号＋年份」的引用介词：丹麦语法源引用写 af
+# （bekendtgørelse nr. 486 af 2018），挪威书写 av（kunngjøring nr. 486 av
+# 2018），`fra` 留给**颁发机关**（… fra seks ministerier）。旧稿把年份与机关
+# 都写成 fra，一句里两个 fra，读成「来自 2018 来自六个部门」。
+# 为什么 v1.56 之前不判、这一版才判：跨篇差异不是缺陷——统一改稿（六包 86 处）
+# 之前 `fra` 形在别篇是自洽写法，全局禁用会把正确稿件判红（与 P53 撤掉全局
+# banned pt-connosco 同一条教训）。改完之后「文号＋fra＋年份」在每一篇都不
+# 成形，本条才可以点火。**先改稿、后立规**，不是先禁再改。
+# 变体口径要跟 fra 无关：ø 可写 o、æ 可写 ae（无本地键盘的正字法转写），
+# 判据是介词写错，文号词怎么拼不该决定它能不能被看见。
+P54_DOC = (r"(?:bekendtg[øo]relse|meddelelse|kunngj[øo]ring|cirkul(?:æ|ae|a)re|"
+           r"sirkul(?:æ|ae|a)re|forskrift)")
+P54_PREP = {"da": "af", "no": "av"}
+P54_CIT_RES = dict(
+    (lg, re.compile(r"(?:%s)(?:\s+nr\.?)?\s*\d{1,4}\s+fra\s+20\d\d" % P54_DOC,
+                    re.I)) for lg in P54_PREP)
+# fra…fra 双写是本条的第二种形状（年份与机关同用一个介词，中间只隔一个年份）。
+# 不加界就会误红：丹麦语自然句「rapporten fra 2018 fra seks ministerier」（2018
+# 年出自六个部门的报告）两个 fra 都合法。所以双写只在**同一行的文号射程内**才算
+# 缺陷——以「nr. + 编号」为锚，而不是以 P54_DOC 词形为锚：锚在 nr. 上还能兜住
+# 词表外的文号名（lov / forordning / 未收的复合词），锚在文号词上则漏。
+# 与 P51 左右界不对称同型的假阳性，宁可在立规这一版就收掉。
+P54_DOUBLE_RE = re.compile(r"\bnr\.?\s*\d{1,4}[^\n]{0,40}?\bfra\s+20\d\d\s+fra\b",
+                           re.I)
 # P35 整块照抄：低于该字符数的块不判（短句、编号、代码片段天然跨语言同形）
 COPY_BLOCK_MIN = 40
 # P35 与英文比对时要求的词数下限（避免把 "S0 S1 S3" 类枚举判成未译）
@@ -515,9 +1087,102 @@ MAX_PARAGRAPH_CHARS_DENSE = 300
 MAX_IMAGES_WARN = 6
 SIMILARITY_LIMIT = 0.95
 
+# F03 标题分隔符（v1.41）：只禁「作分隔用」的形状，词内连字符放行。
+# 连字符族（含非断行连字符/小连字符）＝词内合法；en/figure dash 与减号
+# ＝只放行数字或编号区间；em dash/横线/全角连字符＝任何位置都禁。
+# 亚美尼亚 ֊（U+058A）、希伯来 ־（U+05BE）等文字系统自带的词内连字符
+# 不在这些集合里，刻意不碰。
+TITLE_COLONS = ":\uff1a"
+TITLE_HYPHENS = "-\u2010\u2011\ufe63"
+TITLE_RANGE_DASHES = "\u2012\u2013"
+TITLE_MINUS_SIGNS = "\u2212"
+TITLE_BAR_DASHES = "\u2014\u2015\uff0d"
+
 SLUG_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 IMAGE_EXTS = {".webp", ".jpg", ".jpeg", ".png", ".gif", ".avif", ".svg"}
 ALLOWED_SUFFIX = {".mdx", ".webp", ".json"}
+
+
+def _title_is_range(title, i):
+    """title[i] 是否是合法的数字/编号区间连接符。
+
+    2–4 / 2020–2025 / 10:30：两侧都是数字。
+    S0–S13 / A1–A5：前一位是数字，后一位是「字母 + 数字」——编号区间的
+    右端常带字母前缀（S0–S13），只按 digit–digit 判会漏掉整族。
+    其余（Title–Subtitle、2020–Outlook）一律不是区间。
+    """
+    if i == 0 or i + 1 >= len(title):
+        return False
+    if not title[i - 1].isdigit():
+        return False
+    if title[i + 1].isdigit():
+        return True
+    return (title[i + 1].isalpha()
+            and i + 2 < len(title) and title[i + 2].isdigit())
+
+
+def _title_bad_colon(title):
+    """冒号只放行数字之间；其余都是副标题分隔。"""
+    for i, ch in enumerate(title):
+        if ch not in TITLE_COLONS:
+            continue
+        prev = title[i - 1] if i else ""
+        nxt = title[i + 1] if i + 1 < len(title) else ""
+        if not (prev.isdigit() and nxt.isdigit()):
+            return True
+    return False
+
+
+def _title_bad_range_dash(title):
+    """en/figure dash 与减号都只放行数字或编号区间。"""
+    for i, ch in enumerate(title):
+        if ch in TITLE_RANGE_DASHES or ch in TITLE_MINUS_SIGNS:
+            if not _title_is_range(title, i):
+                return True
+    return False
+
+
+def _title_bad_hyphen(title):
+    """连字符只放行词内形：两侧非空白、不在首尾、不与其他连字符连写。
+
+    这样 e-commerce / cross-border / U.S.-China / COVID-19 合法，
+    `Title - Subtitle` / `Title- Subtitle` / `-Title` / `Title-` / `A--B`
+    都会被判红。无空格的 `Title-Subtitle` 与词内连字符同形，按词内放行
+    （没有词典就无法可靠区分），标题分句请用逗号/句号。
+    """
+    for i, ch in enumerate(title):
+        if ch not in TITLE_HYPHENS:
+            continue
+        prev = title[i - 1] if i else ""
+        nxt = title[i + 1] if i + 1 < len(title) else ""
+        if (not prev or not nxt or prev.isspace() or nxt.isspace()
+                or prev in TITLE_HYPHENS or nxt in TITLE_HYPHENS):
+            return True
+    return False
+
+
+def title_shape_errors(title):
+    """F03 标题形态（v1.41）：空值 / 超长 / 分隔符形状。
+
+    只禁「作分隔用」的标点，词内连字符与数字区间放行；亚美尼亚 ֊、
+    希伯来 ־ 等文字系统自带的词内连字符不在射程内。
+    """
+    errs = []
+    if not title.strip():
+        errs.append("title 不能为空")
+        return errs
+    if len(title) > MAX_TITLE:
+        errs.append("title 超长（%d > %d）" % (len(title), MAX_TITLE))
+    if _title_bad_colon(title):
+        errs.append("title 不得用冒号作副标题分隔（数字间的比例/时间除外）")
+    if any(ch in TITLE_BAR_DASHES for ch in title):
+        errs.append("title 不得含破折号/横线（— ― －）")
+    if _title_bad_range_dash(title):
+        errs.append("title 的 en dash/减号只能用于数字或编号区间（如 2–4、S0–S13）")
+    if _title_bad_hyphen(title):
+        errs.append("title 不得用连字符作分隔（不得贴空白、在首尾或连写；"
+                    "词内连字符如 e-commerce 合法）")
+    return errs
 
 SCRIPT_TESTS = {
     "ar": r"[\u0600-\u06FF]", "fa": r"[\u0600-\u06FF]", "ur": r"[\u0600-\u06FF]",
@@ -566,6 +1231,13 @@ LATIN_ALLOWLIST = {
 
 _LATIN_WORD_RE = re.compile(r"\b[A-Za-z][A-Za-z\-']{2,}\b")
 
+# v1.43：单次出现也拦的疑英文残留词（登记制，加词须附实证）。
+# 门槛 ≥2 的盲区：el 正文单次 brands 直到第二轮改稿引入第二处才暴露。
+# 这些词是普通英文内容词，在任何受监控非拉丁文字正文里出现即属夹用。
+LATIN_SINGLE_SUSPECT = {
+    "brands", "brand", "health", "wellness", "supplement", "supplements",
+}
+
 
 # 英文术语 -> 各语言的本土写法。
 # 登记的是本次实际修复过的对应关系：中文母版写「保税 / 元 / 美元」，
@@ -579,7 +1251,7 @@ TERM_LOCALIZATION = {
         "fi": "koodi 1210",        "he": "קוד 1210",        "hi": "कोड 1210",        "hr": "kod 1210",
         "hu": "vámcsatorna 1210",        "hy": "կոդ 1210",        "id": "kode 1210",        "it": "modalità 1210",
         "ja": "モード1210",        "ka": "კოდი 1210",        "ko": "모드 1210",        "ms": "kod 1210",
-        "ne": "कोड 1210",        "nl": "douanemode 1210",        "no": "kode 1210",        "pl": "kod 1210",
+        "ne": "कोड 1210",        "nl": "douanemodus 1210",        "no": "kode 1210",        "pl": "kod 1210",
         "pt": "Modo 1210",        "ro": "codul 1210",        "ru": "режим 1210",        "si": "කේතය 1210",
         "sk": "kód 1210",        "sl": "koda 1210",        "sq": "kodi 1210",        "sr": "код 1210",
         "sv": "kod 1210",        "sw": "kodi 1210",        "ta": "குறியீடு 1210",        "th": "รหัส 1210",
@@ -590,7 +1262,7 @@ TERM_LOCALIZATION = {
         "af": "doeane", "az": "gömrük", "be": "мытны", "bg": "митнически",
         "ca": "duaner", "cs": "celní", "da": "told", "de": "Zoll",
         "el": "τελωνειακ", "es": "depósito franco", "fa": "گمرکی",
-        "fi": "tulli", "fr": "douanier", "he": "מכס", "hi": "सीमाशुल्क",
+        "fi": "tulli", "fr": "douanier", "he": "מכס", "hi": "बॉन्डेड",
         "hr": "carinski", "hu": "vám", "hy": "մաքսային", "id": "berikat",
         "it": "doganale", "ja": "保税", "ka": "საბაჟო", "ko": "보세",
         "ms": "berikat", "nl": "douane", "no": "toll", "pl": "celny",
@@ -610,6 +1282,323 @@ TERM_LOCALIZATION = {
         "hy": "դոլար", "ka": "დოლარ", "ru": "доллар", "sr": "долар",
         "th": "ดอลลาร์", "uk": "долар", "ur": "ڈالر", "zh": "美元",
         "bn": "ডলার", "si": "ඩොලර්", "ta": "டாலர்", "ne": "डलर",
+    },
+    # ---- F2 十四个工作包与进场关键词（v1.36，用户指令）----
+    # 包名 14 组：词形 = F2 表格单元格（全量术语审校后的地面真值），
+    # 全 46 语登记；S1 六语与 S0 三语在 v1.42 按 r5 审读校正（旧值是
+    # 从稿面收割的错形：主体写成 osoba/лице/особа/структура/chombo，
+    # S0 写成 P43 禁用词）。关键词 12 组：只登记拉丁字母语言（非拉丁语言的英文
+    # 残留 P30 按字符集已覆盖），词形经逐语人工校订（vi 双音节、az/tr 去格尾、
+    # ms/id/sw 组件修正）；供应链可视/内容合规两键与包名键同串，并入包名条目。
+    # casefold 与英文键同形的语言豁免不登记（fr/it audit、sv/fi data 等）。
+    # 电池 U6 会拿本篇 banned 表反查本表：提示不得教人写禁用词。
+    "Diagnosis and access": {
+        "zh": "诊断与准入", "es": "Diagnóstico y acceso", "fr": "Diagnostic et accès", "de": "Diagnose und Zugang",
+        "ja": "診断と参入", "pt": "Diagnóstico e acesso", "ru": "Диагностика и допуск", "ar": "تشخيص ووصول",
+        "ko": "진단과 접근", "it": "Diagnosi e accesso", "nl": "Diagnose en toegang", "tr": "Tanı ve giriş",
+        "vi": "Chẩn đoán và vào thị trường", "id": "Diagnosis dan akses", "th": "การวินิจฉัยและการเข้าตลาด", "hi": "डायग्नोस्टिक और प्रवेश",
+        "pl": "Diagnostyka i wejście", "sv": "Diagnos och inträde", "el": "Διάγνωση και είσοδος", "cs": "Diagnostika a vstup",
+        "ro": "Diagnosticare și intrare", "hu": "Diagnosztika és belépés", "fi": "Diagnoosi ja sisääntulo", "da": "Diagnose og indgang",
+        "no": "Diagnose og inntrinn", "uk": "Діагностика та вхід", "bg": "Диагностика и влизане", "hr": "Dijagnoza i ulazak",
+        "sr": "Дијагноза и улазак", "sk": "Diagnostika a vstup", "sl": "Diagnostika in vstop", "ms": "Diagnosis dan kemasukan",
+        "ka": "დიაგნოსტიკა და შესვლა", "he": "אבחון וכניסה", "sw": "Utambuzi na kuingia", "bn": "নির্ণয় ও প্রবেশ",
+        "ca": "Diagnòstic i entrada", "fa": "تشخیص و ورود", "ur": "تشخیص اور داخلہ", "ta": "பகுப்பாய்வு மற்றும் நுழைவு",
+        "af": "Diagnose en intree", "sq": "Diagnostikimi dhe hyrja", "az": "Diaqnostika və giriş", "hy": "Ախտորոշում և մուտք",
+        "be": "Дыягностыка і ўваход", "ne": "निदान र प्रवेश", "si": "විග්‍රහය සහ පිවිසුම",
+    },
+    "Entity setup": {
+        "zh": "主体设立", "es": "Constitución de la entidad", "fr": "Constitution de l'entité", "de": "Errichtung der Gesellschaft",
+        "ja": "現地法人設立", "pt": "Constituição de entidade", "ru": "Создание субъекта", "ar": "تأسيس الكيان",
+        "ko": "현지 법인 설립", "it": "Costituzione dell'entità", "nl": "Oprichting van de entiteit", "tr": "Tüzel kişi kuruluşu",
+        "vi": "Thành lập chủ thể", "id": "Pendirian badan hukum", "th": "การจัดตั้งนิติบุคคล", "hi": "इकाई स्थापना",
+        "pl": "Ustanowienie podmiotu", "sv": "Upprättande av enhet", "el": "Ίδρυση οντότητας", "cs": "Zřízení entity",
+        "ro": "Înființarea entității", "hu": "Jogalany létrehozása", "fi": "Yksikön perustaminen", "da": "Etablering af enhed",
+        "no": "Etablering av enhet", "uk": "Заснування суб'єкта", "bg": "Учреждаване на субект", "hr": "Osnivanje subjekta",
+        "sr": "Оснивање субјекта", "sk": "Zriadenie entity", "sl": "Ustanovitev subjekta", "ms": "Penubuhan entiti",
+        "ka": "სუბიექტის დაარსება", "he": "הקמת הישות", "sw": "Kuanzisha taasisi", "bn": "সত্তা স্থাপন",
+        "ca": "Constitució de l'entitat", "fa": "تأسیس نهاد", "ur": "ادارے کا قیام", "ta": "நிறுவன அமைப்பு",
+        "af": "Stigting van die entiteit", "sq": "Krijimi i subjektit", "az": "Subyektin təsisi", "hy": "Սուբյեկտի հիմնում",
+        "be": "Устанаўленне суб'екта", "ne": "संस्था स्थापना", "si": "ආයතනය පිහිටුවීම",
+    },
+    "Compliance audit": {
+        "zh": "合规审计", "es": "Auditoría de cumplimiento", "fr": "Audit de conformité", "de": "Konformitätsaudit",
+        "ja": "コンプライアンス監査", "pt": "Auditoria de conformidade", "ru": "Аудит соответствия", "ar": "تدقيق الامتثال",
+        "ko": "컴플라이언스 감사", "it": "Audit di conformità", "nl": "Nalevingsaudit", "tr": "Uyum denetimi",
+        "vi": "Kiểm toán tuân thủ", "id": "Audit kepatuhan", "th": "การตรวจสอบความถูกต้อง", "hi": "अनुपालन ऑडिट",
+        "pl": "Audyt zgodności", "sv": "Efterlevnadsrevision", "el": "Έλεγχος συμμόρφωσης", "cs": "Audit souladu",
+        "ro": "Audit de conformitate", "hu": "Megfelelési audit", "fi": "Vaatimustenmukaisuuden tarkastus", "da": "Overholdelsesrevision",
+        "no": "Etterlevelsesrevisjon", "uk": "Аудит відповідності", "bg": "Одит за съответствие", "hr": "Revizija usklađenosti",
+        "sr": "Ревизија усклађености", "sk": "Audit súladu", "sl": "Revizija skladnosti", "ms": "Audit pematuhan",
+        "ka": "შესაბამისობის აუდიტი", "he": "ביקורת ציות", "sw": "Ukaguzi wa utii", "bn": "অনুপালন অডিট",
+        "ca": "Auditoria de conformitat", "fa": "حسابرسی انطباق", "ur": "تعمیل آڈٹ", "ta": "இணக்க தணிக்கை",
+        "af": "Nakomingsoudit", "sq": "Auditimi i përputhjes", "az": "Uyğunluq auditi", "hy": "Համապատասխանության աուդիտ",
+        "be": "Аудыт адпаведнасці", "ne": "अनुपालन अडिट", "si": "අනුකූලතා අධ්‍යයනය",
+    },
+    "Supply chain visibility": {
+        "zh": "供应链可视化", "es": "Visibilidad de la cadena", "fr": "Visibilité de la chaîne", "de": "Lieferkettentransparenz",
+        "ja": "サプライチェーン可視化", "pt": "Visibilidade de cadeia", "ru": "Видимость цепочки", "ar": "رؤية سلسلة التوريد",
+        "ko": "공급망 가시화", "it": "Visibilità della filiera", "nl": "Zichtbaarheid van de keten", "tr": "Tedarik zinciri görünürlüğü",
+        "vi": "Chuỗi cung ứng hiển thị", "id": "Visibilitas rantai pasok", "th": "ห่วงโซ่อุปทานมองเห็นได้", "hi": "सप्लाई चेन दृश्यता",
+        "pl": "Widoczność łańcucha dostaw", "sv": "Insyn i leveranskedjan", "el": "Ορατότητα εφοδιαστικής αλυσίδας", "cs": "Viditelnost dodavatelského řetězce",
+        "ro": "Vizibilitatea lanțului de aprovizionare", "hu": "Beszállítói lánc láthatóság", "fi": "Toimitusketjun näkyvyys", "da": "Indsyn i forsyningskæden",
+        "no": "Innsyn i forsyningskjeden", "uk": "Видимість ланцюга постачання", "bg": "Видимост на веригата за снабдяване", "hr": "Vidljivost lanca opskrbe",
+        "sr": "Видљивост ланца снабдевања", "sk": "Viditeľnosť dodávateľského reťazca", "sl": "Vidljivost oskrbovalne verige", "ms": "Keterlihatan rantaian bekalan",
+        "ka": "მიწოდების ჯაჭვის ხილვადობა", "he": "נראות שרשרת האספקה", "sw": "Kuonekana kwa mnyororo wa ugavi", "bn": "সরবরাহ চেইন দৃশ্যমানতা",
+        "ca": "Visibilitat de la cadena de subministrament", "fa": "دیدپذیری زنجیره تأمین", "ur": "سپلائی زنجیر کی نظر", "ta": "விநியோக சங்கிலி தெரிவுநிலை",
+        "af": "Sigbaarheid van die toevoerketting", "sq": "Dukshmëria e zinxhirit të furnizimit", "az": "Təchizat zəncirinin görünüşlüyü", "hy": "Մատակարարման շղթայի տեսանելիություն",
+        "be": "Бачнасць ланцуга забеспячэння", "ne": "आपूर्ति शृंखला दृश्यता", "si": "සැපයුම් දාම දෘශ්‍යතාව",
+    },
+    "Content compliance": {
+        "zh": "内容合规", "es": "Cumplimiento de contenidos", "fr": "Conformité des contenus", "de": "Inhaltskonformität",
+        "ja": "コンテンツコンプライアンス", "pt": "Conformidade de conteúdo", "ru": "Соответствие контента", "ar": "امتثال المحتوى",
+        "ko": "콘텐츠 컴플라이언스", "it": "Conformità dei contenuti", "nl": "Inhoudsnaleving", "tr": "İçerik uyumu",
+        "vi": "Tuân thủ nội dung", "id": "Kepatuhan konten", "th": "ความถูกต้องของเนื้อหา", "hi": "कंटेंट अनुपालन",
+        "pl": "Zgodność treści", "sv": "Innehållsefterlevnad", "el": "Συμμόρφωση περιεχομένου", "cs": "Soulad obsahu",
+        "ro": "Conformitatea conținutului", "hu": "Tartalom megfelelés", "fi": "Sisällön vaatimustenmukaisuus", "da": "Indholdsoverholdelse",
+        "no": "Innholdsetterlevelse", "uk": "Відповідність контенту", "bg": "Съответствие на съдържанието", "hr": "Usklađenost sadržaja",
+        "sr": "Усклађеност садржаја", "sk": "Súlad obsahu", "sl": "Skladnost vsebine", "ms": "Pematuhan kandungan",
+        "ka": "კონტენტის შესაბამისობა", "he": "ציות תוכן", "sw": "Utii wa maudhui", "bn": "কনটেন্ট অনুপালন",
+        "ca": "Conformitat de contingut", "fa": "انطباق محتوا", "ur": "مواد کی تعمیل", "ta": "உள்ளடக்க இணக்கம்",
+        "af": "Inhoud nakoming", "sq": "Përputhja e përmbajtjes", "az": "Kontent uyğunluğu", "hy": "Բովանդակության համապատասխանություն",
+        "be": "Адпаведнасць кантэнту", "ne": "सामग्री अनुपालन", "si": "අන්තර්ගත අනුකූලතාව",
+    },
+    "Membership operations": {
+        "zh": "会员运营", "es": "Membresía", "fr": "Adhésion", "de": "Mitgliedschaft",
+        "ja": "会員運営", "pt": "Adesão", "ru": "Членство", "ar": "عمليات العضوية",
+        "ko": "멤버십 운영", "it": "Programma di adesione", "nl": "Lidmaatschap", "tr": "Üyelik",
+        "vi": "Vận hành hội viên", "id": "Keanggotaan", "th": "การดำเนินงานสมาชิก", "hi": "सदस्यता संचालन",
+        "pl": "Członkostwo", "sv": "Medlemskap", "el": "Λειτουργία μελών", "cs": "Členství",
+        "ro": "Membri", "hu": "Tagság", "fi": "Jäsenyys", "da": "Medlemskab",
+        "no": "Medlemskap", "uk": "Членство", "bg": "Членство", "hr": "Članstvo",
+        "sr": "Чланство", "sk": "Členstvo", "sl": "Članstvo", "ms": "Keahlian",
+        "ka": "წევრობა", "he": "תפעול חברות", "sw": "Uanachama", "bn": "সদস্যপদ পরিচালনা",
+        "ca": "Pertinença", "fa": "عملیات عضویت", "ur": "رکنیت کی کارروائیاں", "ta": "உறுப்பினர் செயல்பாடு",
+        "af": "Lidmaatskap", "sq": "Anëtarësia", "az": "Üzvlük", "hy": "Անդամակցություն",
+        "be": "Членства", "ne": "सदस्यता सञ्चालन", "si": "සාමාජිකත්ව සංචාලනය",
+    },
+    "Platform store": {
+        "zh": "平台店铺", "es": "Tienda en plataforma", "fr": "Boutique sur plateforme", "de": "Shop auf der Plattform",
+        "ja": "プラットフォーム店舗", "pt": "Loja em plataforma", "ru": "Магазин на платформе", "ar": "متجر على المنصة",
+        "ko": "플랫폼 스토어", "it": "Negozio sulla piattaforma", "nl": "Winkel op het platform", "tr": "Platform mağazası",
+        "vi": "Cửa hàng nền tảng", "id": "Toko platform", "th": "ร้านค้าบนแพลตฟอร์ม", "hi": "प्लेटफॉर्म स्टोर",
+        "pl": "Sklep na platformie", "sv": "Plattformsbutik", "el": "Κατάστημα πλατφόρμας", "cs": "Obchod na platformě",
+        "ro": "Magazin pe platformă", "hu": "Platform üzlet", "fi": "Alustan kauppa", "da": "Platformbutik",
+        "no": "Plattformbutikk", "uk": "Магазин на платформі", "bg": "Магазин на платформата", "hr": "Trgovina na platformi",
+        "sr": "Продавница на платформи", "sk": "Obchod na platforme", "sl": "Trgovina na platformi", "ms": "Kedai di platform",
+        "ka": "პლატფორმის მაღაზია", "he": "חנות בפלטפורמה", "sw": "Duka la jukwaa", "bn": "প্ল্যাটফর্মে দোকান",
+        "ca": "Botiga a la plataforma", "fa": "فروشگاه در پلتفرم", "ur": "پلیٹ فارم دکان", "ta": "தளக் கடை",
+        "af": "Winkel op die platform", "sq": "Dyqani në platformë", "az": "Platformada mağaza", "hy": "Հարթակի խանութ",
+        "be": "Крама на платформе", "ne": "प्लेटफर्ममा पसल", "si": "වේදිකාවේ කඩය",
+    },
+    "Product filing": {
+        "zh": "商品备案", "es": "Registro de producto", "fr": "Enregistrement produit", "de": "Produktanmeldung",
+        "ja": "製品登録", "pt": "Registo de produto", "ru": "Регистрация продукта", "ar": "تسجيل المنتج",
+        "ko": "제품 등록", "it": "Registrazione del prodotto", "nl": "Productregistratie", "tr": "Ürün kaydı",
+        "vi": "Khai báo sản phẩm", "id": "Pendaftaran produk", "th": "การจดแจ้งผลิตภัณฑ์", "hi": "उत्पाद फाइलिंग",
+        "pl": "Rejestracja produktu", "sv": "Produktregistrering", "el": "Καταχώρηση προϊόντος", "cs": "Registrace produktu",
+        "ro": "Înregistrarea produsului", "hu": "Termék bejegyzés", "fi": "Tuotteen rekisteröinti", "da": "Produktregistrering",
+        "no": "Produktregistrering", "uk": "Реєстрація продукту", "bg": "Регистрация на продукта", "hr": "Registracija proizvoda",
+        "sr": "Регистрација производа", "sk": "Registrácia produktu", "sl": "Registracija izdelka", "ms": "Pendaftaran produk",
+        "ka": "პროდუქტის რეგისტრაცია", "he": "רישום מוצר", "sw": "Usajili wa bidhaa", "bn": "পণ্য নিবন্ধন",
+        "ca": "Registre del producte", "fa": "ثبت محصول", "ur": "پروڈکٹ رجسٹریشن", "ta": "தயாரிப்பு பதிவு",
+        "af": "Produkregistrasie", "sq": "Regjistrimi i produktit", "az": "Məhsul qeydiyyatı", "hy": "Ապրանքի գրանցում",
+        "be": "Рэгістрацыя прадукту", "ne": "उत्पादन दर्ता", "si": "නිෂ්පාදන ලියාපදිංචිය",
+    },
+    "Bonded warehouse first leg": {
+        "zh": "保税仓头程", "es": "Primer tramo en depósito franco", "fr": "Premier tronçon sous douane", "de": "Zoll-Erststrecke",
+        "ja": "保税倉庫の一次運送", "pt": "Primeira perna em armazém alfandegário", "ru": "Таможенное первое плечо", "ar": "الرحلة الأولى إلى المستودع الجمركي",
+        "ko": "보세창고 첫 구간", "it": "Primo tratto in magazzino doganale", "nl": "Eerste been naar het douanelager", "tr": "Gümrük antrepo ilk bacak",
+        "vi": "Đầu tuyến kho ngoại quan", "id": "Kirim perdana gudang berikat", "th": "การขนส่งช่วงแรกเข้าคลังสินค้าทัณฑ์บน", "hi": "बॉन्डेड वेयरहाउस पहली चाल",
+        "pl": "Pierwsza wysyłka do magazynu celnego", "sv": "Första transporten till tullager", "el": "Πρώτη μεταφορά τελωνειακής αποθήκης", "cs": "První doprava do celního skladu",
+        "ro": "Prima expediție către depozitul vamal", "hu": "Első szállítás vámraktárba", "fi": "Ensimmäinen kuljetus tullivarastoon", "da": "Første forsendelse til toldlager",
+        "no": "Første forsendelse til tollager", "uk": "Перша поставка на митний склад", "bg": "Първа доставка в митнически склад", "hr": "Prva pošiljka u carinsko skladište",
+        "sr": "Прва пошиљка у царинско складиште", "sk": "Prvá doprava do colného skladu", "sl": "Prvi prevoz v carinsko skladišče", "ms": "Penghantaran awal ke gudang berikat",
+        "ka": "პირველი მიწოდება საბაჟო საწყობში", "he": "המשלוח הראשון למחסן מכס", "sw": "Usafiri wa kwanza kwenda ghala la forodha", "bn": "বন্ডেড গুদামে প্রথম প্রেরণ",
+        "ca": "Primer enviament al magatzem duaner", "fa": "محموله نخست به انبار گمرکی", "ur": "گودام کی پہلی شپمنٹ", "ta": "பாண்டட் கிடங்கு முதல் அனுப்புகை",
+        "af": "Eerste versending na die doeanepakhuis", "sq": "Dërgesa e parë në magazinën doganore", "az": "Gömrük anbara ilk göndəriş", "hy": "Առաջին առաքումը մաքսային պահեստ",
+        "be": "Першая пастаўка на мытны склад", "ne": "बन्डेड गोदाममा पहिलो चाल", "si": "බොන්ඩඩ් ගබඩාවට පළමු ප්‍රවාහනය",
+    },
+    "Three-document clearance": {
+        "zh": "三单清关", "es": "Despacho de tres documentos", "fr": "Dédouanement à trois documents", "de": "Dreidokumentenabfertigung",
+        "ja": "三書類通関", "pt": "Desembaraço de três documentos", "ru": "Оформление по трём документам", "ar": "التخليص بثلاثة وثائق",
+        "ko": "삼서류 통관", "it": "Sdoganamento a tre documenti", "nl": "Inklaring met drie documenten", "tr": "Üç belgeli gümrükleme",
+        "vi": "Thông quan ba chứng từ", "id": "Kepabeanan tiga dokumen", "th": "พิธีศุลกากรสามเอกสาร", "hi": "तीन दस्तावेज़ क्लियरेंस",
+        "pl": "Odprawa trzech dokumentów", "sv": "Klarering med tre dokument", "el": "Εκτελωνισμός τριών εγγράφων", "cs": "Odbavení tří dokumentů",
+        "ro": "Vămăluirea celor trei documente", "hu": "Háromdokumentumos vámkezelés", "fi": "Kolmen asiakirjan tullaus", "da": "Toldbehandling med tre dokumenter",
+        "no": "Tollbehandling med tre dokumenter", "uk": "Митне оформлення трьох документів", "bg": "Митническо оформление на три документа", "hr": "Carinska obrada triju dokumenata",
+        "sr": "Царинска обрада три документа", "sk": "Odbavenie troch dokumentov", "sl": "Carinska obravnava treh dokumentov", "ms": "Urusan kastam tiga dokumen",
+        "ka": "სამი დოკუმენტის განბაჟება", "he": "שחרור ממכס של שלושה מסמכים", "sw": "Uondoshaji wa hati tatu za forodha", "bn": "তিন নথির ক্লিয়ারেন্স",
+        "ca": "Despatx de tres documents", "fa": "ترخیص سه سند", "ur": "تین دستاویزات کی کلیئرنس", "ta": "மூன்று ஆவண விடுவிப்பு",
+        "af": "Doeane hantering van drie dokumente", "sq": "Doganimi i tre dokumenteve", "az": "Üç sənədin rəsmiləşdirilməsi", "hy": "Երեք փաստաթղթի մաքրում",
+        "be": "Мытнае афармленне трох дакументаў", "ne": "तीन दस्तावेजको क्लियरेन्स", "si": "ලේඛන තුනක ක්ලියරන්ස්",
+    },
+    "Funds settlement": {
+        "zh": "资金结算", "es": "Liquidación de fondos", "fr": "Règlement des fonds", "de": "Mittelabrechnung",
+        "ja": "資金精算", "pt": "Liquidação de fundos", "ru": "Расчёты по средствам", "ar": "تسوية الأموال",
+        "ko": "자금 정산", "it": "Regolamento dei fondi", "nl": "Middelenafrekening", "tr": "Fon mutabakatı",
+        "vi": "Thanh toán quỹ", "id": "Penyelesaian dana", "th": "การชำระบัญชีเงินทุน", "hi": "धन सेटलमेंट",
+        "pl": "Rozliczenia środków", "sv": "Medelsavstämning", "el": "Διακανονισμός κεφαλαίων", "cs": "Vyrovnání prostředků",
+        "ro": "Decontarea fondurilor", "hu": "Pénzeszköz elszámolás", "fi": "Varojen tilitys", "da": "Midlerafregning",
+        "no": "Midleravregning", "uk": "Розрахунок коштів", "bg": "Разплащане на средства", "hr": "Obračun sredstava",
+        "sr": "Обрачун средстава", "sk": "Vyrovnanie prostriedkov", "sl": "Poravnava sredstev", "ms": "Penyelesaian dana",
+        "ka": "სახსრების ანგარიშსწორება", "he": "סליקת כספים", "sw": "Malipo ya fedha", "bn": "তহবিল নিষ্পত্তি",
+        "ca": "Liquidació de fons", "fa": "تسویه وجوه", "ur": "فنڈز کی تصفیہ", "ta": "நிதி தீர்வு",
+        "af": "Vereffening van fondse", "sq": "Shlyerja e fondeve", "az": "Vəsaitlərin hesablaşması", "hy": "Միջոցների հաշվարկ",
+        "be": "Разлік сродкаў", "ne": "कोष भुक्तानी", "si": "අරමුදල් පියවර",
+    },
+    "Promotion and distribution": {
+        "zh": "推广分销", "es": "Promoción y distribución", "fr": "Promotion et distribution", "de": "Promotion",
+        "ja": "販促と流通", "pt": "Promoção e distribuição", "ru": "Продвижение", "ar": "الترويج والتوزيع",
+        "ko": "판촉과 유통", "it": "Promozione e distribuzione", "nl": "Promotie", "tr": "Tanıtım ve dağıtım",
+        "vi": "Quảng bá và phân phối", "id": "Promosi", "th": "การส่งเสริมการขายและการกระจายสินค้า", "hi": "प्रचार और वितरण",
+        "pl": "Promocja", "sv": "Kampanj", "el": "Προώθηση και διανομή", "cs": "Propagace",
+        "ro": "Promovare", "hu": "Promóció", "fi": "Mainonta ja jakelu", "da": "Promovering",
+        "no": "Kampanje og distribusjon", "uk": "Просування", "bg": "Популяризация", "hr": "Promocija",
+        "sr": "Промоција", "sk": "Propagácia", "sl": "Promocija", "ms": "Promosi",
+        "ka": "პოპულარიზაცია და დისტრიბუცია", "he": "קידום והפצה", "sw": "Kuhamasisha", "bn": "প্রচার ও বিতরণ",
+        "ca": "Promoció", "fa": "ترویج و توزیع", "ur": "تشہیر اور تقسیم", "ta": "விளம்பரமும் விநியோகமும்",
+        "af": "Promosie", "sq": "Promovimi", "az": "Təşviqat", "hy": "Առաջխաղացում և բաշխում",
+        "be": "Прасоўванне", "ne": "प्रचार र वितरण", "si": "ප්‍රවර්ධනය සහ බෙදාහැරීම",
+    },
+    "Customer service and after-sales": {
+        "zh": "客服售后", "es": "Servicio al cliente y posventa", "fr": "Service client et après-vente", "de": "After Sales",
+        "ja": "カスタマーサービスとアフターセールス", "pt": "Apoio ao cliente e pós-venda", "ru": "Постпродажа", "ar": "خدمة العملاء وما بعد البيع",
+        "ko": "고객 서비스와 애프터서비스", "it": "Servizio clienti e post-vendita", "nl": "Nazorg", "tr": "Satış sonrası",
+        "vi": "Chăm sóc khách hàng và hậu mãi", "id": "Purna jual", "th": "บริการลูกค้าและหลังการขาย", "hi": "ग्राहक सेवा और बिक्री उपरांत",
+        "pl": "Posprzedaż", "sv": "Efterservice", "el": "Μετά την πώληση", "cs": "Poprodejní služba",
+        "ro": "Postvânzare", "hu": "Értékesítés utáni", "fi": "Jälkimyynti", "da": "Eftersalg",
+        "no": "Ettersalg", "uk": "Післяпродаж", "bg": "Следпродажба", "hr": "Nakon prodaje",
+        "sr": "Након продаје", "sk": "Popredajná služba", "sl": "Po prodaji", "ms": "Selepas jualan",
+        "ka": "მომხმარებელთა სერვისი და გაყიდვის შემდეგ", "he": "שירות לקוחות ולאחר מכירה", "sw": "Baada ya mauzo", "bn": "গ্রাহক সেবা ও বিক্রির পরে",
+        "ca": "Postvenda", "fa": "خدمات مشتری و پس از فروش", "ur": "کسٹمر سروس اور فروخت کے بعد", "ta": "வாடிக்கையாளர் சேவையும் விற்பனைக்குப் பின்னும்",
+        "af": "Na verkope", "sq": "Pas shitjes", "az": "Satışdan sonra", "hy": "Վաճառքից հետո",
+        "be": "Пасляпродаж", "ne": "ग्राहक सेवा र बिक्री पछि", "si": "පාරිභෝගික සේවය සහ විකුණුමෙන් පසු",
+    },
+    "Data risk control": {
+        "zh": "数据风控", "es": "Control de riesgo de datos", "fr": "Maîtrise du risque données", "de": "Datenrisikokontrolle",
+        "ja": "データリスク管理", "pt": "Controlo de risco de dados", "ru": "Контроль риска данных", "ar": "ضبط مخاطر البيانات",
+        "ko": "데이터 리스크 관리", "it": "Controllo del rischio dati", "nl": "Datarisicobeheersing", "tr": "Veri risk kontrolü",
+        "vi": "Kiểm soát rủi ro dữ liệu", "id": "Kendali risiko data", "th": "การควบคุมความเสี่ยงข้อมูล", "hi": "डेटा जोखिम नियंत्रण",
+        "pl": "Kontrola ryzyka danych", "sv": "Datariskkontroll", "el": "Έλεγχος κινδύνου δεδομένων", "cs": "Kontrola rizik dat",
+        "ro": "Controlul riscului de date", "hu": "Adatkockázat kontroll", "fi": "Tietoriskin kontrolli", "da": "Datarisikokontrol",
+        "no": "Datarisikokontroll", "uk": "Контроль ризику даних", "bg": "Контрол на риска от данни", "hr": "Kontrola rizika podataka",
+        "sr": "Контрола ризика података", "sk": "Kontrola rizík dát", "sl": "Nadzor tveganja podatkov", "ms": "Kawalan risiko data",
+        "ka": "მონაცემთა რისკის კონტროლი", "he": "בקרת סיכוני נתונים", "sw": "Kudhibiti hatari ya data", "bn": "ডেটা ঝুঁকি নিয়ন্ত্রণ",
+        "ca": "Control de risc de dades", "fa": "کنترل ریسک داده", "ur": "ڈیٹا رسک کنٹرول", "ta": "தரவு இடர் கட்டுப்பாடு",
+        "af": "Data risikobeheer", "sq": "Kontrolli i rrezikut të të dhënave", "az": "Məlumat riski nəzarəti", "hy": "Տվյալների ռիսկի վերահսկում",
+        "be": "Кантроль рызыкі даных", "ne": "तथ्याङ्क जोखिम नियन्त्रण", "si": "දත්ත අවදානම් පාලනය",
+    },
+    "diagnostic": {
+        # ro 豁免：罗马尼亚语本族词 diagnostic（diagnostic cu semnătură），
+        # 与英文键 casefold 同形，同形豁免原则同上。
+        "zh": "诊断", "es": "Diagnóstico", "de": "Diagnose", "pt": "Diagnóstico",
+        "it": "Diagnosi", "nl": "Diagnose", "tr": "Tanı", "vi": "Chẩn đoán",
+        "id": "Diagnosis", "pl": "Diagnostyka", "sv": "Diagnos", "cs": "Diagnostika",
+        "hu": "Diagnosztika", "fi": "Diagnoosi", "da": "Diagnose",
+        "no": "Diagnose", "hr": "Dijagnoza", "sk": "Diagnostika", "sl": "Diagnostika",
+        "ms": "Diagnosis", "sw": "Utambuzi", "ca": "Diagnòstic", "af": "Diagnose",
+        "sq": "Diagnostikimi", "az": "Diaqnostika",
+    },
+    "entity": {
+        "zh": "主体", "es": "entidad", "fr": "entité", "de": "Gesellschaft",
+        "pt": "entidade", "it": "entità", "nl": "entiteit", "tr": "tüzel kişi",
+        "vi": "chủ thể", "id": "badan hukum", "pl": "podmiot", "sv": "enhet",
+        "ro": "entitate", "hu": "Jogalany", "fi": "yksikkö", "da": "enhed",
+        "no": "enhet", "hr": "osoba", "sl": "oseba", "ms": "entiti",
+        "sw": "chombo", "ca": "entitat", "af": "entiteit", "sq": "subjekt",
+        "az": "subyekt",
+    },
+    "store": {
+        # da/no 豁免：本族词 store=「大的」（B2B store forsendelser=大额发货），
+        # 单词键无法消歧。数据义同形豁免原则见 "data" 条目注释。
+        "zh": "店铺", "es": "Tienda", "fr": "Boutique", "de": "Shop",
+        "pt": "Loja", "it": "Negozio", "nl": "Winkel", "tr": "mağaza",
+        "vi": "cửa hàng", "id": "Toko", "pl": "Sklep", "sv": "butik",
+        "cs": "Obchod", "ro": "Magazin", "hu": "üzlet", "fi": "kauppa",
+        "hr": "Trgovina", "sk": "Obchod",
+        "sl": "Trgovina", "ms": "Kedai", "sw": "Duka", "ca": "Botiga",
+        "af": "Winkel", "sq": "dyqan", "az": "mağaza",
+    },
+    "filing": {
+        "zh": "备案", "es": "Registro", "fr": "Enregistrement", "de": "Anmeldung",
+        "pt": "Registo", "it": "Registrazione", "nl": "registratie", "tr": "kayıt",
+        "vi": "Khai báo", "id": "Pendaftaran", "pl": "rejestracja", "sv": "registrering",
+        "cs": "Registrace", "ro": "înregistrare", "hu": "bejegyzés", "fi": "rekisteröinti",
+        "da": "registrering", "no": "registrering", "hr": "Registracija", "sk": "Registrácia",
+        "sl": "Registracija", "ms": "Pendaftaran", "sw": "Usajili", "ca": "Registre",
+        "af": "registrasie", "sq": "regjistrim", "az": "qeydiyyat",
+    },
+    "first leg": {
+        "zh": "头程", "es": "tramo", "fr": "tronçon", "de": "Erststrecke",
+        "pt": "perna", "it": "tratto", "nl": "eerste been", "tr": "ilk bacak",
+        "vi": "Đầu tuyến", "id": "perdana", "pl": "wysyłka", "sv": "transport",
+        "cs": "první doprava", "ro": "expediție", "hu": "szállítás", "fi": "kuljetus",
+        "da": "forsendelse", "no": "forsendelse", "hr": "pošiljka", "sk": "doprava",
+        "sl": "prevoz", "ms": "penghantaran awal", "sw": "usafiri wa kwanza", "ca": "enviament",
+        "af": "versending", "sq": "dërgesa", "az": "göndəriş",
+    },
+    "clearance": {
+        "zh": "清关", "es": "Despacho", "fr": "Dédouanement", "de": "Abfertigung",
+        "pt": "Desembaraço", "it": "Sdoganamento", "nl": "Inklaring", "tr": "gümrükleme",
+        "vi": "Thông quan", "id": "Kepabeanan", "pl": "Odprawa", "sv": "Klarering",
+        "cs": "Odbavení", "ro": "vămăluire", "hu": "vámkezelés", "fi": "tullaus",
+        "da": "toldbehandling", "no": "tollbehandling", "hr": "carinska obrada", "sk": "Odbavenie",
+        "sl": "carinska obravnava", "ms": "urusan kastam", "sw": "Uondoshaji", "ca": "Despatx",
+        "af": "doeane hantering", "sq": "Doganimi", "az": "rəsmiləşdirilmə",
+    },
+    "settlement": {
+        "zh": "结算", "es": "Liquidación", "fr": "Règlement", "de": "Abrechnung",
+        "pt": "Liquidação", "it": "regolamento", "nl": "afrekening", "tr": "mutabakat",
+        "vi": "Thanh toán", "id": "Penyelesaian", "pl": "Rozliczenia", "sv": "avstämning",
+        "cs": "Vyrovnání", "ro": "decontare", "hu": "elszámolás", "fi": "tilitys",
+        "da": "afregning", "no": "avregning", "hr": "Obračun", "sk": "Vyrovnanie",
+        "sl": "Poravnava", "ms": "Penyelesaian", "sw": "Malipo", "ca": "Liquidació",
+        "af": "Vereffening", "sq": "Shlyerja", "az": "hesablaşma",
+    },
+    "promotion": {
+        "zh": "推广", "es": "Promoción", "pt": "Promoção", "it": "Promozione",
+        "nl": "Promotie", "tr": "Tanıtım", "vi": "Quảng bá", "id": "Promosi",
+        "pl": "Promocja", "sv": "Kampanj", "cs": "Propagace", "ro": "Promovare",
+        "hu": "Promóció", "fi": "Mainonta", "da": "Promovering", "no": "Kampanje",
+        "hr": "Promocija", "sk": "Propagácia", "sl": "Promocija", "ms": "Promosi",
+        "sw": "Kuhamasisha", "ca": "Promoció", "af": "Promosie", "sq": "Promovimi",
+        "az": "Təşviqat",
+    },
+    "after-sales": {
+        # de 豁免：德语标准外来词拼写 After-Sales（P0 实用），登记即假阳性。
+        "zh": "售后", "es": "posventa", "fr": "après-vente",
+        "pt": "pós-venda", "it": "post-vendita", "nl": "Nazorg", "tr": "satış sonrası",
+        "vi": "hậu mãi", "id": "purna jual", "pl": "Posprzedaż", "sv": "Efterservice",
+        "cs": "poprodejní služba", "ro": "Postvânzare", "hu": "értékesítés utáni", "fi": "Jälkimyynti",
+        "da": "Eftersalg", "no": "Ettersalg", "hr": "nakon prodaje", "sk": "popredajná služba",
+        "sl": "po prodaji", "ms": "selepas jualan", "sw": "baada ya mauzo", "ca": "Postvenda",
+        "af": "na verkope", "sq": "pas shitjes", "az": "satışdan sonra",
+    },
+    "data": {
+        # ca/it/pt/ro 豁免：本族词 data=「日期」（la data di lancio），
+        # 单词键无法消歧，登记即假阳性；nl data 为 F2 r2 已验收的本族
+        # 复数用法，同此豁免；pl/sq data 同为「日期」义；da/no data 本就是
+        # 该语「数据」的规范词形。数据义另见包名键 "Data risk control"。
+        "zh": "数据", "es": "datos", "fr": "données", "de": "Daten",
+        "tr": "Veri",
+        "vi": "dữ liệu", "hu": "Adat",
+        "fi": "tieto", "hr": "podaci", "sk": "dáta", "sl": "podatki",
+        "az": "Məlumat",
+    },
+    "audit": {
+        "zh": "审计", "es": "Auditoría", "pt": "Auditoria", "tr": "denetim",
+        "vi": "Kiểm toán", "pl": "Audyt", "sv": "revision", "fi": "tarkastus",
+        "da": "revision", "no": "revisjon", "hr": "Revizija", "sl": "Revizija",
+        "sw": "Ukaguzi", "ca": "Auditoria", "af": "oudit", "sq": "Auditimi",
+    },
+    "membership": {
+        "zh": "会员", "es": "Membresía", "fr": "Adhésion", "de": "Mitgliedschaft",
+        "pt": "Associação", "nl": "Lidmaatschap", "tr": "Üyelik", "vi": "hội viên",
+        "id": "Keanggotaan", "pl": "Członkostwo", "sv": "Medlemskap", "cs": "Členství",
+        "ro": "membri", "hu": "Tagság", "fi": "Jäsenyys", "da": "Medlemskab",
+        "no": "Medlemskap", "hr": "Članstvo", "sk": "Členstvo", "sl": "Članstvo",
+        "ms": "Keahlian", "sw": "Uanachama", "ca": "Pertinença", "af": "Lidmaatskap",
+        "sq": "Anëtarësia", "az": "Üzvlük",
     },
 }
 
@@ -784,12 +1773,12 @@ def currency_symbol_hits(body):
     return uniq
 
 
-def latin_residue(body):
+def latin_residue(body, min_count=2):
     """Latin-alphabet words left in a non-Latin-script body.
 
     Image references, URLs and inline code are stripped first: a slug like
     bonded-ecommerce-export-china-guide legitimately contains English.
-    Returns a {word: count} dict for words seen at least twice.
+    Returns a {word: count} dict for words seen at least min_count times.
     """
     t = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", body)
     t = re.sub(r"https?://\S+", "", t)
@@ -800,12 +1789,13 @@ def latin_residue(body):
         if w in LATIN_ALLOWLIST:
             continue
         freq[w] = freq.get(w, 0) + 1
-    return dict((w, n) for w, n in freq.items() if n >= 2)
+    return dict((w, n) for w, n in freq.items() if n >= min_count)
 
 
 _NO_PARITY = False  # --no-parity：跳过 P02/P03/P04/P11/P18–P33/L06 跨语言一致性（精简包/样例用）
 _MASTER_LANG = None  # --master=<lang>：显式指定基准语言（默认中文优先，其次英文）
 _GLOSSARY = None     # --glossary=<file>：可选的块级术语契约（S08，v1.19）
+_ARTICLE_GLOSSARY_SEEN = None  # v1.44：发现的文章级术语表路径（P46 提示用）
 
 # 红线（SPEC 第 5 节）
 PRICE_RES = [
@@ -846,7 +1836,164 @@ PROMISE_RES = [
     r"(?is)\bnear[- ]100\s*%",
     r"(?is)\bwithin\s*24\s*hours\b",
 ]
+# v1.49：R06 的 48 语**承诺句形**（第一人称/本方案 + 保证·承诺动词），按语种
+# 生效；裸词干一律不收——语料里有 14 处合法用法（平台保证金 / 母版引用词本身），
+# 裸词干臂会当场误红。每条词形配电池夹具（negative_test_r06_promise.py），
+# 夹具命不中 = 死臂。实测连带范围：P0/F1/F2/F3/F4 五包 + 五篇 zh 母版 0 处。
+PROMISE_BY_LANG = {
+    "en": r"\b(?:we|this plan)\s+(?:guarantee|promise|assure)\b",
+    "zh": r"(?:我们|我方|本方案|本公告?)\s*(?:都?保证|承诺|担保)",
+    "fr": r"\b(?:nous|ce plan)\s+garanti(?:ssons|sse|rons)\b|\bnous\s+promettons\b",
+    "de": r"\bwir\s+(?:garantieren|versprechen)\b|\bdieser\s+Plan\s+garantiert\b",
+    "es": r"\b(?:nosotros|este plan)\s+garantizamos\b|\bgarantizamos\b",
+    "pt": r"\b(?:nós|este plano)\s+garantimos\b|\bgarantimos\b",
+    "it": r"\b(?:noi|questo piano)\s+garantiamo\b|\bgarantiamo\b",
+    "nl": r"\bwij\s+garanderen\b|\bdit\s+plan\s+garandeert\b",
+    "pl": r"\bgwarantujemy\b|\bmy\s+gwarantujemy\b",
+    "cs": r"\bgarantujeme\b",
+    "sk": r"\bgarantujeme\b",
+    "sl": r"\bgarantiramo\b",
+    "hr": r"\bgarantiramo\b",
+    "sr": r"\bgarantova(?:ćemo|mo)\b",
+    "bg": r"\bгаранти(?:раме|раме)\b",
+    "ro": r"\b(?:noi|acest\s+plan)\s+garant(?:ăm|ezi)\b|\bgarantăm\b",
+    "hu": r"\bgarant(?:áljuk|áljuk)\b|\bgarantálunk\b",
+    "sv": r"\bvi\s+garanterar\b",
+    "da": r"\bvi\s+garanterer\b",
+    "no": r"\bvi\s+garanterer\b",
+    "fi": r"\b(?:me|tämä\s+suunnitelma)\s+takaamme\b|\btakaamme\b",
+    "ru": r"\bгарантируем\b|\bмы\s+гарантируем\b",
+    "uk": r"\bгаранту(?:ємо)\b",
+    "be": r"\bгаранту(?:ем)\b",
+    "tr": r"\b(?:biz|bu\s+plan)\s+garanti\s+(?:ediyoruz|veriyoruz)\b|\bgaranti\s+ediyoruz\b",
+    "az": r"\bzəmanət\s+veririk\b",
+    "ka": r"\bვპირდებით\b|გარანტიას\s+ვ[\w]+",
+    "hy": r"\bերաշխավորում\s+ենք\b",
+    "ar": r"\bنضمن\b|\bنعهد\b",
+    "he": r"\bאנו\s+מבטיחים\b|\bאנחנו\s+מבטיחים\b",
+    "fa": r"\bتضمین\s+می(?:‌)?کنیم\b|\bگارانتی\s+می(?:‌)?دهیم\b",
+    "ur": r"\bضمانت\s+دیتے\s+ہیں\b",
+    "hi": r"गारंटी\s+देते|वचन\s+देते",
+    "bn": r"\bগ্যারান্টি\s+দি(?:ই|ব)\b",
+    "ne": r"ग्यारेन्टी\s+दि(?:न्छौं|ँदैछौं)",
+    "si": r"ගැරන්ටි\s+දෙන්නෙමු|හඟුන්\s+දෙන්නෙමු",
+    "ta": r"உத்தரவாதம்\s+அளிக்கிறோம்",
+    "th": r"(?:เรา|แผนนี้)รับประกัน|(?:เรา|แผนนี้)\s*ยืนยันว่า",
+    "vi": r"\b(?:chúng\s+tôi|kế\s+hoạch\s+này)\s+(?:bảo\s+đảm|cam\s+kết)\b",
+    "id": r"\b(?:kami|rencana\s+ini)\s+menjamin\b",
+    "ms": r"\b(?:kami|pelan\s+ini)\s+jamin\b|\bkami\s+menjamin\b",
+    "ko": r"\b(?:저희|우리|본\s+방안(?:은|는))\s*[^\.]{0,12}?(?:보증합니다|약속합니다)\b",
+    "ja": r"\b(?:私たちは|本方案は|当社は)[^。]{0,12}?(?:保証します|お約束します)\b",
+    "el": r"\bεγγυόμαστε\b",
+    "ca": r"\b(?:nosaltres|aquest\s+plà)\s+garantim\b|\bgarantim\b",
+    "sq": r"\bgarantojmë\b",
+    "sw": r"\b(?:tunahakikisha|tunadhama)\b",
+    "af": r"\bons\s+garandeer\b",
+}
 LEGACY_DECREE_RE = None  # 用数字归一化后匹配
+
+# R07（v1.35）制作工具痕迹：对外文案不得暴露配图的制作来源（deck PPTX 管线、
+# 页码）。口径见 docstring【v1.35】：页码引用 / alt 内工具词 / 元数据工具词
+# = error；散文工具词 = warning（可能是合法修辞，人工判定）。
+# 边界用 (?<![\w]) / (?![\w])：不放行 slideshow/slideshare，也不让 p15 咬到
+# 「2p15」这类粘写；de "stoppt" 内含 ppt、de "Deck"=甲板属正常词——拉丁词
+# 全部加边界（实测 F2 de 三处 "stoppt" 无边界全会误报），CJK 连续文本里 \b
+# 不成立，CJK 词形保持裸写。
+ORIGIN_TOOL_ALT_RE = re.compile(
+    r"(?i:(?<![\w])pptx?(?![\w])|(?<![\w])powerpoint(?![\w])|(?<![\w])keynote(?![\w])"
+    r"|(?<![\w])slides?(?![\w])|(?<![\w])deck(?![\w]))"
+    r"|幻灯片|演示文稿|スライド|슬라이드")
+ORIGIN_TOOL_META_RE = ORIGIN_TOOL_ALT_RE  # title/excerpt 与 alt 同口径（error）
+ORIGIN_TOOL_PROSE_RE = re.compile(
+    r"(?i:(?<![\w])pptx?(?![\w])|(?<![\w])powerpoint(?![\w])|(?<![\w])keynote(?![\w]))"
+    r"|幻灯片|スライド|슬라이드"
+    r"|(?<![\w])slides?(?![\w])|(?<![\w])deck(?![\w])")
+ORIGIN_PAGE_RES = [
+    re.compile(r"(?i)(?<![\w])p\d{1,3}(?![\w])"),
+    re.compile(r"(?i)(?<![\w])(?:page|slide)\s*\d+(?![\w])"),
+    re.compile(r"第\s*\d+\s*页"),
+    re.compile(r"スライド\s*\d+"),
+    re.compile(r"슬라이드\s*\d+"),
+]
+# v1.47 豁免（F4 触发）：整词恰好是 P0 时不是页码引用，是优先级档位名。
+# 实证：F4 中文母版「4 个 P0 前提」沿用 deck p09 原文 "P0 prerequisites"，
+# 而本系列首篇代号也是 P0；R07 的 p\d{1,3} 把 48 语全部判 error。
+# 页码从 1 起，P0 作为页码本来就不成立。
+# 这是**收窄**不是放宽：只放行命中串整词等于 "p0" 的那一种形状，
+# P01 / p007 / p15 / page 12 / Slide 7 / 第 3 页 / スライド 5 / 슬라이드 4
+# 全部照旧判红（电池见 posts/F4-*/pipeline/negative_test_r07_p0.py U1/U3）。
+# 粘在 CJK 后面的 "P0前提" 本来就因 (?![\w]) 不落射程，行为不变。
+P0_TIER_TOKEN = "p0"
+
+
+def _origin_page_hit(text):
+    for pat in ORIGIN_PAGE_RES:
+        for m in pat.finditer(text):
+            if m.group(0).lower() == P0_TIER_TOKEN:
+                continue
+            return m.group(0)
+    return None
+
+# R08（v1.37）签字人归属反模式（用户指令：修改标准＝以中文母版为准）。
+# 实证来源：F2 线 85「签字的人就是这个包的责任人」在 en 母版写成
+# "The signer owns the package"，并从 en 母版派生进 24 个语向（实测 47 语中
+# 24 语用「拥有/主人」、4 语用「拿着」、19 语正确）；同一篇摘要又承诺
+# 「已交付件归品牌方」——两句话在译稿里直接对撞。
+# 为什么只判 en/zh：本族语里「责任」与「所有」是两个词，但**没有词表就无法
+# 在 46 个语向上判定哪个词被用了**（de "verantworten" / pl "właścicielem" 这种
+# 差别只有登记过才知道）；而 en 是实际的第二母版（F2 的 ar/fa/he/ur 摘要与 en
+# 逐短语同形，连母版没有的 "an exit gate at every stage" 都照搬），zh 是唯一
+# 基准——偏移都是从这两语出发扩散的，所以在这两语设卡＝卡住源头。
+# 其余语向由文章级 glossary 的 S08 条款（require 责任词形 / forbid 所有权词形）
+# 逐语兜住，两条臂各盖一侧，不重叠也不互相顶替。
+# 形状要窄：主语必须是「签字人」，谓语必须是「拥有」，宾语必须是「包/交付物」——
+# 合法句 "the deliverables belong to the brand"（交付件归品牌方）没有签字人主语，
+# "who signs off on the report"（谁来签这份报告）没有所有权谓语，都不落卡。
+SIGNER_AGENT_RES = [
+    re.compile(r"(?i)\bthe signer\b|\bsigners\b"),
+    # 「谁签＝谁拥有」这一类没有 the signer 名词、直接由代词 + 动名词起的句子
+    # （反证 U1 实测漏掉过 "Whoever signs it is the owner of the deliverable"），
+    # 所以把 who 变成可选、时态展开；三个要素仍须同句，放宽只在这一维。
+    re.compile(r"(?i)\b(?:whoever|anyone|everyone|the person|the one|those|he|she)"
+               r"\s+(?:who\s+)?(?:signs?|signed|signing)\b"),
+]
+OWNERSHIP_PRED_RES = [
+    re.compile(r"(?i)\bowns?\b"),
+    re.compile(r"(?i)\bis the owner of\b|\bare the owners? of\b|\bthe owner\b"),
+    re.compile(r"(?i)\bpossesses?\b|\bpossess\b"),
+    re.compile(r"(?i)\bhas\b[^.]{0,20}\bownership of\b|\bhave ownership of\b"),
+    re.compile(r"(?i)\btakes? (?:on |the )?ownership of\b"),
+    re.compile(r"(?i)\bbelongs? to (?:him|her|them|the signer)\b"),
+]
+OWNED_OBJECT_RES = [
+    re.compile(r"(?i)\b(?:work )?packages?\b"),
+    re.compile(r"(?i)\bdeliverables?\b"),
+    re.compile(r"(?i)\blot\b|\blots\b"),
+]
+SIGNER_OWN_ZH_RES = [
+    re.compile(r"签字[^。！？!?；\n]{0,24}(拥有|是[^。！？\n]{0,8}的主人|归[^。！？\n]{0,6}自己)"),
+]
+
+
+def _r08_hit(text, lang):
+    """R08：返回首个「签字人被写成包的所有者」的句子（没有则 None）。
+
+    en 按句切（主语＋谓语＋宾语三要素必须同句，跨句不成形状）；zh 的词形
+    本身不许跨过句末标点，整段直接判即可——DUP_SENT_SPLIT_RE 要求终止符后
+    有空白，CJK 连写切不开，别拿它当 CJK 切句器用。
+    """
+    if lang == "zh":
+        for pat in SIGNER_OWN_ZH_RES:
+            m = pat.search(text)
+            if m:
+                return m.group(0)
+        return None
+    for sent in DUP_SENT_SPLIT_RE.split(text):
+        if (any(p.search(sent) for p in SIGNER_AGENT_RES)
+                and any(p.search(sent) for p in OWNERSHIP_PRED_RES)
+                and any(p.search(sent) for p in OWNED_OBJECT_RES)):
+            return sent.strip()
+    return None
 
 # ---------------------------------------------------------------- P 系列常量（v1.2，QA 回填）
 
@@ -860,7 +2007,90 @@ ELLIPSIS_RE = re.compile(r"\.\.\.|…")
 DBLPUNCT_RE = re.compile(r"(?<!\.)\.\.(?!\.)|,,|\?\?|!!|、、|。。|，，|،،|؛؛")
 DBLSPACE_RE = re.compile(r"(?m)\S(  +)\S")
 TRIPLE_NL_RE = re.compile(r"\n{3,}")
-REPEAT_WORD_RE = re.compile(r"(?i)\b(\w{2,})[ \t]+\1\b")
+# P10 的旧写法是 `\b(\w{2,})[ \t]+\1\b`。v1.58 弃用，因为它对「词」的定义
+# 跟文字系统不一致——Python 的 `\w` 不含结合字母（天城文元音符 U+0900–U+0955、
+# 僧伽罗独立元音符、孟加拉/古尔穆基同理），于是同一个正则两头都错：
+#   · 假阳性：「समेकित कर करीब 1638」（合并税**约** 1638）——`कर` 其实是
+#     `करीब` 的前半，词在元音符处被 `\b` 切开，读成「कर कर」重复；
+#     锡兰文「හතරෙන් එක එකේ අර්ථය」（四个前提各自的意义）同型。
+#   · 盲区：以元音符收尾的词根本进不了 `\w{2,}`——「चार चार」「सभी सभी」
+#     这种**真**相邻重复一条不报。v1.58 的电池臂 A1b 就是被这条照出来的
+#     （注入「एक एक」前先试「चार चार」，零点火才暴露盲区）。
+# 现在按 Unicode 类别切词：字母（Lu/Ll/Lt/Lm/Lo/N*）与结合字母（Mn/Mc/Me）
+# 连成一片，词长只数非结合字母（≥2，保持旧口径不误伤单字母）。
+REPEAT_MARK_CATS = ("Mn", "Mc", "Me")
+# 同形词连写的多词 lexeme：第二个同形词其实是**更长词组的首词**，不是写重。
+# sq 属格冠词 `të` 撞「të dhëna」（数据）／「të njëjti」（同一个）；
+# vi `văn` 撞「văn bản」（文书/文本）；ur `پہلے`（之前）撞 `پہلے دو`（前两个）。
+# 逐 (语言, 词, 续词前缀) 登记——与 REDUPLICATION_OK/LATIN_ALLOWLIST 同一口径。
+REPEAT_LEXEME_NEXT = {
+    "sq": {"të": ("dhën", "njëjt")},
+    "vi": {"văn": ("bản",)},
+    "ur": {"پہلے": ("دو", "تین", "پہلا", "پہلے")},
+    # hi 与 ur 同型：「कोटेशन से पहले पहले दो देखिए」＝「报价之前先看前两个」，
+    # 第二个 पहले 是 `पहले दो`（前两个）的首词，不是写重（v1.58 六包复扫实测）
+    "hi": {"पहले": ("दो", "तीन", "तीसरा", "तीसरे", "चार")},
+}
+
+
+def _repeat_is_word_ch(ch):
+    cat = unicodedata.category(ch)
+    return cat[0] in ("L", "N", "M") or ch.isalnum()
+
+
+_REPEAT_NEXT_RE = re.compile(r"\s*([^\s]+)")
+
+
+def repeat_words(src):
+    """切出「字母＋结合段」成串的词，返回 [(词, 起, 止), ...]；非结合字母满 2 个才算词。"""
+    out = []
+    i, n = 0, len(src)
+    while i < n:
+        if _repeat_is_word_ch(src[i]):
+            j, core = i, 0
+            while j < n and _repeat_is_word_ch(src[j]):
+                if not unicodedata.category(src[j]).startswith("M"):
+                    core += 1
+                j += 1
+            if core >= 2:
+                out.append((src[i:j], i, j))
+            i = j
+        else:
+            i += 1
+    return out
+
+
+def repeat_pair_hits(src, lang):
+    """相邻同形词 ⇒ [(起, 止, 词形), ...]；白名单、de 逗号关系从句、续词 lexeme 放行。"""
+    words = repeat_words(src)
+    redup = REDUPLICATION_OK.get(lang, ())
+    lex = REPEAT_LEXEME_NEXT.get(lang, {})
+    out = []
+    for k in range(len(words) - 1):
+        w1, a1, b1 = words[k]
+        w2, a2, b2 = words[k + 1]
+        if w1.casefold() != w2.casefold():
+            continue
+        gap = src[b1:a2]
+        if not gap or gap.strip(" \t"):
+            continue          # 只认空格/制表符分隔；ZWNJ/连字符相连的不算两词
+        shape = w1 + gap + w2
+        if shape.casefold() in redup:
+            continue
+        if lang == "de" and w1.casefold() in ("das", "die", "der") \
+                and src[:a1].rstrip().endswith(","):
+            continue
+        nxt_m = _REPEAT_NEXT_RE.match(src, b2)
+        # 续词必须按**原文**取下一个空白分隔词，不能取词表里的下一条：
+        # hi「पहले पहले दो देखिए」的 दो＝单元音＋母音记号，core=1 进不了词表，
+        # 用 words[k+2] 会拿到 देखिए，lexeme 放行永远不生效（v1.58b F4 hi 实测）。
+        nxt = nxt_m.group(1) if nxt_m else ""
+        prefs = lex.get(w1.casefold())
+        if prefs and nxt.casefold().startswith(tuple(
+                p.casefold() for p in prefs)):
+            continue
+        out.append((a1, b2, shape))
+    return out
 
 # 重叠副词白名单（P10）：精确词组，逐条登记
 REDUPLICATION_OK = {
@@ -868,6 +2098,38 @@ REDUPLICATION_OK = {
     "ur": {"باری باری"},
     "id": {"satu satu"},
     "ms": {"satu satu"},
+    # v1.58：vi `song song`（平行）是词典化重叠形容词（từ láy），F4 vi 正文
+    # 「đặt song song trong giai đoạn chẩn đoán」（在诊断阶段并行安排）实抓。
+    # 逐词组放行、不做整类豁免——同一口径沿用 v1.14 与 M1 收官批「不扩白名单」的
+    # 判据：能改写的重叠（he/si/sw/ur 的逐一形）本轮一律改稿，只有词典里作为
+    # 一个词存在的重叠才进这张表。
+    "vi": {"song song"},
+}
+
+# v1.43 P45 称呼语域混用：同一文件内非尊/尊第二人称标记并存。
+# 实证缺陷：hu te/Ön 断裂、ro să te miști vs 块31 rezolvați、ca moure't vs
+# vosaltres（F2 r6、F3 r2 各修过）。只收单侧无歧义的代词/物主限定词；
+# 动词形态不在射程；北欧语不收（CTA 末块复数切换是既定约定）。
+# de/it 的尊形标记大小写敏感（Sie/Lei），勿改小写。
+REGISTER_MARKERS = {
+    "hu": (re.compile(r"\b(?:te|téged|neked|magad)\b"),
+           re.compile(r"\b(?:Ön|Önt|önnek|önök|maguk)\b")),
+    "ro": (re.compile(r"\b(?:tu|tine|ție|tău|tăi|tale|ta)\b"),
+           re.compile(r"\b(?:dumneavoastră|dumneata|voastră|voștri)\b")),
+    "ca": (re.compile(r"\b(?:tu|et|teu|teva|teus|teves)\b|\bt'[a-zàéíóúïüç·]+|\w+'t\b"),
+           re.compile(r"\b(?:vostè|vostes|vostre|vostres)\b")),
+    "fr": (re.compile(r"\b(?:tu|te|tes|ton|ta|toi)\b"),
+           re.compile(r"\b(?:vous|votre|vos)\b")),
+    "es": (re.compile(r"\b(?:tú|ti|tu|tus|te)\b"),
+           re.compile(r"\b(?:usted|ustedes)\b")),
+    "de": (re.compile(r"\b(?:du|dich|dir|dein|deine|deinen|deinem|deiner)\b"),
+           re.compile(r"\b(?:Sie|Ihnen)\b")),
+    "it": (re.compile(r"\b(?:tu|ti|te|tuo|tua|tuoi|tue)\b"),
+           re.compile(r"\b(?:Lei|Loro)\b")),
+    "el": (re.compile(r"\b(?:εσύ|εσένα|εσέναν|σου)\b"),
+           re.compile(r"\b(?:εσείς|εσάς|σας)\b")),
+    "pt": (re.compile(r"\b(?:tu|ti|teu|tua|teus|tuas)\b"),
+           re.compile(r"\b(?:vocês?|seus?)\b")),
 }
 CTA_COLON_RE = re.compile(r"[:：]\s*\[[^\]]+\]\([^)]*/packages/")
 
@@ -980,6 +2242,8 @@ AI_PHRASES_ZH = [
     "对了一半", "另一半", "答案是", "一分为二",
 ]
 # v1.17 ST08：其余 46 语言的 LLM 高频套话（en/zh 由 ST03/ST04 覆盖）。
+# v1.34：匹配大小写不敏感、正文逐处报告；总结套话族补 hy/id/ms/sw/th 变体。
+# 不收裸词（如 id kesimpulan、th สรุป）——它们在文内常作实义名词（「五条结论」）。
 # 选词标准：该语言母语编辑一眼就能认出「这是机器写的」的填充式套语；
 # 不含任何实义术语。warning 级——命中后人工判断是删掉还是改成具体陈述。
 AI_PHRASES_LOCALES = {
@@ -1037,7 +2301,11 @@ AI_PHRASES_LOCALES = {
            "у сучасным свеце", "адыгрывае ключавую ролю", "несумненна"],
     "ka": ["ღირს შენიშვნის", "დასკვნაში", "თანამედროვე სამყაროში",
            "მნიშვნელოვან როლს ასრულებს", "ეჭვგარეშეა"],
-    "hy": ["նշելու արժե", "կարևոր է նշել", "ամփոփում", "ժամանակակից աշխարհում",
+    # v1.58：删掉裸词「ամփոփում」（＝「摘要」这个名词本身）。它按 v1.34 的选词
+    # 标准本来就不该在册——「不收裸词，因为它们在文内常作实义名词」，hy 是漏网的一处：
+    # P0 hy「Գործադիր ամփոփումը տալիս է երեք գնահատական」＝「执行摘要给出三个评估」，
+    # 是标题层实义名词。套话形「ամփոփելով」（"summarising, …"）留在表内继续判。
+    "hy": ["նշելու արժե", "կարևոր է նշել", "ամփոփելով", "ժամանակակից աշխարհում",
            "կարևոր դեր է խաղում", "կասկածելի չէ"],
     "tr": ["belirtmek gerekir", "dikkat çekmek gerekir", "sonuç olarak",
            "günümüz dünyasında", "kritik bir rol oynar", "şüphesiz"],
@@ -1051,12 +2319,14 @@ AI_PHRASES_LOCALES = {
            "오늘날 세계에서", "중요한 역할을 한다", "의심할 여지없이"],
     "vi": ["đáng chú ý", "cần lưu ý", "kết luận lại", "tóm lại",
            "trong thế giới hiện đại", "đóng vai trò quan trọng", "chắc chắn"],
-    "id": ["perlu dicatat", "penting untuk dicatat", "kesimpulannya", "ringkasnya",
+    "id": ["perlu dicatat", "penting untuk dicatat", "kesimpulannya", "sebagai kesimpulan",
+           "ringkasnya", "singkatnya",
            "di dunia modern", "memainkan peran penting", "tidak diragukan lagi"],
     "ms": ["perlu diperhatikan", "adalah penting untuk", "kesimpulannya",
-           "secara ringkasnya", "dunia moden", "memainkan peranan penting",
+           "sebagai kesimpulan", "secara ringkasnya", "singkatnya",
+           "dunia moden", "memainkan peranan penting",
            "tidak dapat disangkal"],
-    "th": ["สิ่งสำคัญที่ต้องทราบ", "ควรทราบว่า", "โดยสรุป", "ในโลกปัจจุบัน",
+    "th": ["สิ่งสำคัญที่ต้องทราบ", "ควรทราบว่า", "โดยสรุป", "สรุปได้ว่า", "ในโลกปัจจุบัน",
            "มีบทบาทสำคัญ", "ไม่มีข้อสงสัย"],
     "hi": ["ध्यान देने योग्य", "उल्लेखनीय", "निष्कर्ष में", "संक्षेप में",
            "आज की दुनिया में", "महत्वपूर्ण भूमिका निभाता है", "निस्संदेह"],
@@ -1068,11 +2338,17 @@ AI_PHRASES_LOCALES = {
            "اہم کردار ادا کرتا ہے", "بلا شبہ"],
     "fa": ["شایان ذکر است", "قابل ذکر است", "به طور خلاصه",
            "جهان امروز", "نقش مهمی ایفا می‌کند", "بدون شک"],
+    # v1.58：删掉「निश्चित हुन्छ」。表的标准是「母语编辑一眼认出机器写的填充套语、
+    # 不含任何实义术语」（v1.34 选词标准），而这串在尼泊尔语里是正常被动动词
+    # 「是确定的／被敲定」：F3 ne「पैसाको बाटो … कसरी निश्चित हुन्छ」＝
+    # 「资金路径如何确定」是本篇问题清单的谓语，不是套话。留着一个会咬正文的
+    # 词条，等于把「收口语」判成缺陷。（同表的「निष्कर्षमा」是套话开场形，
+    # 留在表内、改由句首射程判定。）
     "ne": ["उल्लेखनीय", "यो उल्लेख गर्न योग्य", "निष्कर्षमा", "सारांशमा",
-           "आजको संसारमा", "महत्वपूर्ण भूमिका खेल्छ", "निश्चित हुन्छ"],
+           "आजको संसारमा", "महत्वपूर्ण भूमिका खेल्छ"],
     "si": ["සටහන් කිරීම වටිනායි", "සටහන් කළ යුතුයි", "නිගමනය ලෙස",
            "සාරාංශයක් ලෙස", "වැදගත් කාර්යයක්", "සැකයක් නැත"],
-    "sw": ["inastahili kutajwa", "ni muhimu kutambua", "kwa muhtasari",
+    "sw": ["inastahili kutajwa", "ni muhimu kutambua", "kwa muhtasari", "kwa ufupi",
            "ulimwengu wa leo", "inacheza jukumu muhimu", "hakuna shaka"],
     "af": ["die moeite werd om te noem", "dis belangrik om te let op",
            "kortliks", "in die hedendaagse wêreld", "speel 'n belangrike rol",
@@ -1082,6 +2358,75 @@ AI_PHRASES_LOCALES = {
     "he": ["ראוי לציין", "יש לציין כי", "לסיכום", "בקצרה",
            "בעולם המודרני", "ממלא תפקיד חשוב", "אין ספק"],
 }
+# ST08 句首射程表（v1.58）：只有登记过的「总结套话开场词」才要求落在句首。
+# 逐条登记、不做整类豁免——同一个语向里的其它词条（hedge/强调类）本来就常出现在
+# 句中，一律要求句首会把它们判哑。加词条之前先要在语料里证明：该词形确有句首套话
+# 用法**且**确有句中实义用法（否则不需要这条豁免）。
+AI_PHRASES_OPENERS = {
+    "id": {"kesimpulannya"},
+    "ms": {"kesimpulannya"},
+    "cs": {"závěrem"},
+    "ne": {"निष्कर्षमा"},
+}
+# 句首＝行首，或跟在句末标点／冒号／列表标记／引号之后
+_ST8_EDGE_RE = re.compile(
+    r"(?:^|[\n.!?։।۔؟:;؛：—–])\s*(?:[-*>#\d.)\]]\s*)*[\"'“”‘’«»「『\[(*]*\s*$")
+_ST8_QUOTE_PAIRS = (("“", "”"), ("「", "」"), ("『", "』"), ("«", "»"),
+                    ('"', '"'), ("\"", "\""))
+
+
+def _st8_at_sentence_start(src, a):
+    return bool(_ST8_EDGE_RE.search(src[:a]))
+
+
+def _st8_quoted_mention(src, a, b):
+    """整个命中被一对引号包住 ⇒ 文中在讨论这个词本身，不是在使用套话。"""
+    prev = src[a - 1] if a > 0 else ""
+    nxt = src[b] if b < len(src) else ""
+    return any(prev == o and nxt == c for o, c in _ST8_QUOTE_PAIRS)
+
+
+# P08 拉丁代号＋本地词尾／前附连接词（v1.58）。v1.14 只放行带连字符的一侧
+# （S1-ից、ל-US、blue hat-ის），但波斯语与阿拉伯语的正字法本来就是**直接黏着**：
+# 「SKUها／SKUهای」（复数）、「C-ով」（亚美尼亚语工具格）、阿拉伯语连接词 و 必须
+# 前粘（「وS3」）。这些不是漏改，是外来缩写在目标语里正常变形。
+# 判据收紧在两点：① 拉丁侧必须是**全大写缩写/编号/单字母代号**（SKU、S3、C、P0），
+# 小写英文词＋本地词尾（marketها、compliance-ով）照旧判红——那才是 P08 要抓的形状；
+# ② 本地侧必须命中登记录在案的词尾/前附形，不接受任意非拉丁串。
+P08_ACRONYM_RE = re.compile(r"^[A-Z][A-Z0-9]{0,5}$")
+P08_LOCAL_SUFFIX = {
+    "fa": ("های", "ها", "ی", "تر", "ترین", "ام", "ایت"),
+    "ar": ("ات", "ين", "ة", "ها"),
+    "hy": ("ով", "ի", "ում", "եր", "ան", "ովի"),
+    "ka": ("ის", "მა", "ში"),
+}
+P08_LOCAL_PREFIX = {
+    "ar": ("و", "ال", "بال", "وال", "ف", "ب", "ل", "ال"),
+    "he": ("ל", "ב", "ו", "ה", "של"),
+}
+
+
+def _p08_affix_ok(tok, lang):
+    cores = re.findall(r"[A-Za-z0-9]+", tok)
+    if not cores:
+        return False
+    core = max(cores, key=len)
+    if not P08_ACRONYM_RE.match(core):
+        return False
+    rest = tok.replace(core, "")
+    rest = re.sub(r"[-\u05be\u2013\s]", "", rest)
+    rest = rest.strip("()[]{}.,:!?«»“”‘’؛،۔؟ًٌٍَُِْ")
+    if not rest:
+        return True
+    sfx = P08_LOCAL_SUFFIX.get(lang, ())
+    pfx = P08_LOCAL_PREFIX.get(lang, ())
+    if any(rest == s or rest.startswith(s) for s in sfx):
+        return True
+    if any(rest == p or rest.startswith(p) for p in pfx):
+        return True
+    return False
+
+
 # P34：全角标点（CJK 正字法之外的残留）
 FULLWIDTH_PUNCT_RE = re.compile(r"[\uFF0C\u3002\uFF1B\uFF1A\uFF1F\uFF01\u3001\uFF08\uFF09\u300C\u300D\u300E\u300F\u3010\u3011\u300A\u300B\u3008\u3009]")
 REVERSAL_RES = [
@@ -1492,19 +2837,150 @@ def _norm_num(tok):
     return left + "." + right             # 32,8 → 32.8
 
 
+# 整组匹配：首段 1–3 位 + 一组以上同种分隔符（都接 3 位）。
+# 不能写成 `(\d{1,3})[,.](\d{3})` 再循环——折过第一段后 `1234,567`
+# 的前一位是数字，`(?<!\d)` 挡住第二折，循环到不动点也到不了 `1234567`。
+# 同种分隔符才折：`1,234.567` 只折 `1,234`，保留小数逗号/点的语义。
+_TH_GROUP = re.compile(
+    r"(?<!\d)(\d{1,3}(?:([,.])\d{3})(?:\2\d{3})*)(?!\d)")
+
+
+def _fold_thousands(s):
+    """折掉千分位分隔符：`129,600` / `129.600` → `129600`。
+    `1,234,567` / `1.234.567` 一次整组折完。只做这一件事，不改数字本身。
+    P19 专用：基准侧原先没折、目标侧 8 个变体早折过，口径不对称 ⇒
+    母版 `129,600` 被切成 129 与 600，每个译语都判缺三段中的两段。
+    """
+    prev = None
+    while prev != s:
+        prev = s
+        s = _TH_GROUP.sub(lambda m: re.sub(r"[,.]", "", m.group(1)), s)
+    return s
+
+
+def _near_num(a, b):
+    """数字近形：等长恰差一位，或长度差一且互为前/后缀。
+
+    1476↔1477、0404.9000↔0404.9900（等长错一位）；100000↔10000、
+    26000↔2600（差一个数量级位）。P36 extra 侧分级用。
+    """
+    if a == b:
+        return False
+    if len(a) == len(b):
+        return sum(1 for x, y in zip(a, b) if x != y) == 1
+    if abs(len(a) - len(b)) == 1:
+        s, t = (a, b) if len(a) < len(b) else (b, a)
+        return t.startswith(s) or t.endswith(s)
+    return False
+
+
+_SP_GROUP = re.compile(r"(?<!\d)(\d{1,3})[ \u00a0\u202f](\d{3})(?!\d)")
+# v1.53：左界补排除小数点/千分位——「0.43 万亿」的 43 不是「43 万」。
+# 旧式 `(?<!\d)` 只挡左邻数字，小数点/逗号放行，于是 43 被读成
+# 43 万 ⇒ 母版凭空多出 430000/430（0.6 万亿 → 60000/60），47 语译文的
+# 「0.43 trillion」永远判缺，是口径假阳性而非译文缺陷。
+_WAN_RE = re.compile(r"(?<![\d.,])(\d+)[ \u00a0\u202f]?[万만]")
+
+
+def _p48_hits(lang, text):
+    """P48：长级差语言里误用的 10^18 tri- 词形，返回命中原文。"""
+    ent = P48_BAD_UNITS.get(lang)
+    if not ent:
+        return []
+    return [m.group(0) for m in re.finditer(ent[0], text)]
+
+
+def _p49_hits(lang, text):
+    """P49：清单缩减短语（仅在母版同块含 1476 时由调用方触发）。"""
+    low = text.casefold()
+    return [p for p in P49_SHRINK.get(lang, []) if p.casefold() in low]
+
+
 def _id_numbers(b):
     """P36：块内「标识型数字」集合。
 
     只收两类：含小数点的编码（0404.9000、2106.12）、≥3 位的数字（1210、9610、
     486 属 3 位、1200、2016）。1–2 位纯数字不收——「三单」「七条流」这类在
     很多语言里本就写成数词，收进来会制造假阳性。
+
+    v1.48 两处口径修正：
+      - 空格分组（`100 000` / `100 000` / `100 000`）先折叠再收，与目标侧
+        千分位变体同口径；否则母版 `100,000` 与译文 `100 000` 互判缺失/多出。
+      - 母版写「N 万」时授权两种读法：整值 N*10^4 与千位读法 N*10^3 的数字面
+        （az 100 min / tr 100 bin / ka 100 ათას 的数字面都是 100）。两侧同一个
+        函数 ⇒ 基准与目标对称；不授权就把同一事实记成「母版没有的数字」。
+        汉字「万」与韩文「만」同义（ko 10만 명 ＝ 10 万人），一并收。
+      - v1.53：「N 万」的 N 必须是独立整数，小数点/千分位左侧的数字不算
+        （`0.43 万亿` 不是 `43 万`；`3,600 万元` 不是 `600 万`）。
     """
     out = set()
-    for tok in re.findall(r"\d[\d.,]*", _ascii_digits(b)):
+    s = _ascii_digits(b)
+    prev = None
+    while prev != s:                       # 空格分组：`100 000` → `100000`
+        prev = s
+        s = _SP_GROUP.sub(r"\1\2", s)
+    for tok in re.findall(r"\d[\d.,]*", s):
         tok = _norm_num(tok)
         if "." in tok or len(re.sub(r"\D", "", tok)) >= 3:
             out.add(tok)
+    for m in _WAN_RE.finditer(_ascii_digits(b)):
+        v = int(m.group(1))
+        out.add(str(v * 10000))
+        out.add(str(v * 10))               # v*10 ＝ 千位读法（100 万 → 1000）
     return out
+
+
+def _wan_face_groups(b):
+    """「N 万」的同义数字面分组：{N*10^4, N*10^3}（P36 缺号判定按组放行）。"""
+    out = []
+    for m in _WAN_RE.finditer(_ascii_digits(b)):
+        v = int(m.group(1))
+        out.append({str(v * 10000), str(v * 10)})
+    return out
+
+
+# P47（v1.52）：母版「N 位」的位数锚。「1476 个 8 位税号」的 8 是一位数字，
+# P36/P19 的收数口径都看不见它。
+_DIGIT_DESC = re.compile(r"(?<!\d)(\d{1,2})[ \u00a0\u202f]?位")
+
+# 「八」在各语的复合/屈折词干（右开：左边界 + 词干，屈折后缀放行）。
+# r79 对账从 144 个锚块实测收集：de achtstellige、ru восьмизначных、
+# cs osmimístných、no åttisifrede……裸数词边界匹配抓不到这些形。
+# ro 不进词干表——「opt」右开会误中 optimizarea，走双边界词表。
+_P47_STEMS = {
+    "af": ["agt"], "ar": ["ثمان"], "az": ["səkkiz"], "be": ["васьмі"],
+    "bg": ["осем"], "bn": ["আট"], "ca": ["vuit"], "cs": ["osm"],
+    "da": ["otte"], "de": ["acht"], "el": ["οκτ"], "en": ["eight"],
+    "es": ["ocho"], "fa": ["هشت"], "fi": ["kahdeksan"], "fr": ["huit"],
+    "he": ["שמונ"], "hi": ["आठ"], "hr": ["osm"], "hu": ["nyolc"],
+    "hy": ["ութ"], "id": ["delapan"], "it": ["otto"], "ja": ["八"],
+    "ka": ["რვა"], "ko": ["팔"], "ms": ["lapan"], "ne": ["आठ"],
+    "nl": ["acht"], "no": ["ått"], "pl": ["ośmi"], "pt": ["oito"],
+    "ru": ["восьми"], "si": ["අට"], "sk": ["osem"],
+    "sl": ["osm", "osem"], "sq": ["tetë"], "sr": ["осм", "осам"],
+    "sv": ["ått"], "sw": ["nane"], "ta": ["எட்டு"], "th": ["แปด"],
+    "tr": ["sekiz"], "uk": ["восьми"], "ur": ["آٹھ"], "vi": ["tám"],
+}
+_P47_WORDS = {"ro": ["opt"]}
+# 无空格文字（th/ja）词间不设界，左边界失灵，词干免边界匹配。
+_P47_FREE_STEM = {"th", "ja"}
+
+
+def _p47_has_number(lg, n, folded, low):
+    """P47：块内 N 是否以数字/词干/数词任一形态在场。"""
+    if re.search(r"(?<!\d)%d(?!\d)" % n, folded):
+        return True
+    for s in _P47_STEMS.get(lg, ()):
+        lb = "" if lg in _P47_FREE_STEM else r"(?<!\w)"
+        if re.search(lb + re.escape(s), low):
+            return True
+    for w in _P47_WORDS.get(lg, ()):
+        if re.search(r"(?<!\w)%s(?!\w)" % re.escape(w), low):
+            return True
+    w = NUMBER_WORDS.get(lg, {}).get(n)
+    if w and re.search(r"(?<!\w)%s(?!\w)" % re.escape(w), low):
+        return True
+    return False
 
 
 def _gloss_pats(d, lg):
@@ -1850,13 +3326,28 @@ def check_style(tag, src, add, lang=None):
         if m:
             add("ST04", "error", tag,
                 "第 %d 行 AI 高频词（zh）: %r" % (_line_of(src, m.start()), w))
-    # ST08 其余 46 语言 AI 套话（v1.17；warning，逐词报首现）
+    # ST08 其余 46 语言 AI 套话（v1.17；warning；v1.34 改为大小写不敏感、逐处报告）
+    # v1.58 两处射程修正（口径收窄，不是放宽——判据仍逐条命中，只是先问「这是套话
+    # 形状吗」）：
+    #   (a) 总结套话族的缺陷形状是**句首填充语**（"Kesimpulannya, …"／"Závěrem, …"）。
+    #       同一串词落在句中是本语言的正常实义形：id/ms「apa kesimpulannya」＝
+    #       「它的结论是什么」、cs「závěr za závěrem」＝「结论跟着结论」、
+    #       ne「पाँच निष्कर्षमा」＝「归入五条结论」。五篇实测 12 处全是这类。
+    #       按语言逐条登记（与 REDUPLICATION_OK/LATIN_ALLOWLIST 同一口径：不做整类豁免），
+    #       只有登记过的词形才受句首限制，其余词条照旧全文命中。
+    #   (b) 整个命中被一对引号包住＝文中在**讨论这个词本身**（F4 vi：进度表不要把
+    #       "thường lệ" 写成 "chắc chắn"），不是套话使用。
     if lang:
         for w in AI_PHRASES_LOCALES.get(lang, ()):
-            m = re.search(re.escape(w).replace(r"\ ", r"\s+"), src)
-            if m:
+            pat = re.compile(re.escape(w).replace(r"\ ", r"\s+"), re.I)
+            for m in pat.finditer(src):
+                if _st8_quoted_mention(src, m.start(), m.end()):
+                    continue
+                if m.group(0).lower() in AI_PHRASES_OPENERS.get(lang, ()) \
+                        and not _st8_at_sentence_start(src, m.start()):
+                    continue
                 add("ST08", "warning", tag,
-                    "第 %d 行 AI 套话（%s）: %r" % (_line_of(src, m.start()), lang, w))
+                    "第 %d 行 AI 套话（%s）: %r" % (_line_of(src, m.start()), lang, m.group(0)))
     # ST05 反转钩子 / 设问自答
     for pat in REVERSAL_RES:
         m = re.search(pat, src, re.I)
@@ -1963,25 +3454,38 @@ def _term_hits(blk, pats):
 
 
 def _auto_glossaries(path):
-    """--glossary 未显式给出时自动加载通用术语表（v1.26）。
+    """--glossary 未显式给出时自动加载术语表（v1.26；v1.44 单轨制）。
 
     术语表是工具包内建的**跨文章通用资产**（<kit>/glossary.json），
     随审读不断积累；检查时自动引用，无需传参。加载顺序
-    （terms 按 id 去重，先加载者优先）：
+    （terms/banned 按 id 去重，先加载者优先）：
 
-      1. <work 上级>/pipeline/glossary.json   文章自带（若有，优先）
+      1. <work 上级>/pipeline/glossary.json   文章自带（v1.44 废止，见下）
       2. <kit>/glossary.json                  通用术语表（跨文章）
+
+    【v1.44 单轨制】文章级术语表废止：发现 <包上级>/pipeline/glossary.json
+    即置 _ARTICLE_GLOSSARY_SEEN，由 P46 出 warning 提示把条目合并进
+    工具包术语表后删除该文件（只认文件存在，不挑内容好坏）。
 
     通用条款的锚点在某文章母版中找不到时**跳过**而非报错——不是每篇
     文章都覆盖全部概念（出口文没有「正面清单」，检查不该炸）；找得到
     则照常逐块校验。文章自带术语表的锚点找不到仍然是配置 error。
+    【v1.45】域摘除：条款不再支持 "articles" 域——专业术语对全部文章
+    统一检查；S09/S11 结构契约用条款级 "zh" 锚按内容绑定（该篇自己的
+    标题/摘要含锚短语才激活），不再按 slug 钉住。
     """
-    out_terms, out_excerpt = [], []
+    global _ARTICLE_GLOSSARY_SEEN
+    out_terms, out_excerpt, out_title, out_banned = [], [], [], []
     seen = set()
 
     def load(fp, shared=False):
+        global _ARTICLE_GLOSSARY_SEEN
         if not os.path.isfile(fp):
             return
+        if not shared:
+            # P46（v1.44）：文章级术语表一出现就提示合并，无论内容
+            # 能否解析（空骨架、坏 JSON 同样提示）。
+            _ARTICLE_GLOSSARY_SEEN = fp
         try:
             with open(fp, "rb") as fh:
                 spec = json.loads(text(fh.read()))
@@ -1996,19 +3500,27 @@ def _auto_glossaries(path):
                 t = dict(t)
                 t["_shared"] = True
             out_terms.append(t)
-        # S09 摘要契约绑定「该篇摘要的具体结构」（F1 的四层框架摘要是
-        # F1 特有的），跨文章套用必然错配——只认文章自带或显式传参，
-        # 通用表的 excerpt 段不加载。
-        if not shared:
-            out_excerpt.extend(spec.get("excerpt") or [])
+        # S09 摘要契约 / S11 标题契约（v1.44 起共享表也加载，单轨制）：
+        # 绑定「该篇摘要/标题承载哪几层」的契约用条款级 "zh" 锚按内容
+        # 绑定（v1.45，该篇自己的标题/摘要含锚短语才激活）。
+        out_excerpt.extend(spec.get("excerpt") or [])
+        out_title.extend(spec.get("title") or [])
+        # P43 禁用译法（v1.44 起共享表也加载）：v1.45 域摘除，全文章
+        # 生效——同一误译词族在哪个文章出现都要出声。
+        for b in (spec.get("banned") or []):
+            if isinstance(b, dict) and shared:
+                b = dict(b)
+                b["_shared"] = True
+            out_banned.append(b)
 
     root = path if os.path.isdir(path) else os.path.dirname(os.path.abspath(path))
     load(os.path.join(os.path.dirname(os.path.abspath(root)),
                       "pipeline", "glossary.json"))
     load(os.path.join(os.path.dirname(os.path.abspath(__file__)),
                       "glossary.json"), shared=True)
-    if out_terms or out_excerpt:
-        return {"terms": out_terms, "excerpt": out_excerpt}
+    if out_terms or out_excerpt or out_title or out_banned:
+        return {"terms": out_terms, "excerpt": out_excerpt,
+                "title": out_title, "banned": out_banned}
     return None
 
 
@@ -2018,7 +3530,11 @@ def _glossary_check(spec, parsed, master_lang, slug, add):
     数据来自调用方传入的 glossary（--glossary=<file>），格式：
         {"terms": [{"id": "...", "zh": "<母版锚点短语>",
                     "require": {"ko": ["감독"], "*": ["..."]},
-                    "forbid":  {"ko": ["진입 요건"]}}]}
+                    "forbid":  {"ko": ["진입 요건"]},
+                    "forbid_licensed_by": {"th": "公告"}}]}
+    可选 "forbid_licensed_by"（v1.48）：{语种: 母版来源词}。同一块里母版
+    自己出现该来源词时，译文的禁用形按来源词出现数封顶放行（公告→ประกาศ）；
+    超出才判红，红面同时写授权数与实测数。
     以 zh 锚点在母版中的**块序号**定位，取各语言同一块序号的正文再判短语：
     术语表因此不依赖行号，也不受翻译后句子切分差异影响（P23 已保证逐块同构）。
 
@@ -2077,10 +3593,25 @@ def _glossary_check(spec, parsed, master_lang, slug, add):
                         "术语 %s 缺失：该块应含「%s」%s"
                         % (tid, " / ".join(need[:3]), where))
                 hit = [p for p in banned if p.casefold() in blk]
+                # v1.48：禁用形按母版另一来源词授权。同一块里母版**自己**有
+                # 「公告」时，泰语 ประกาศ 是公告的合法译形，不是把「申报」写成
+                # 「宣布」；授权上限＝母版同块该来源词出现数（n=0 时与旧行为
+                # 完全一致，F2 形误用照旧判红）。红面写清 n 与实测次数。
+                lic = (t.get("forbid_licensed_by") or {}).get(lg)
+                extra = ""
+                if hit and isinstance(lic, str) and lic:
+                    n = base_blocks[idx].count(lic)
+                    got = sum(blk.count(p.casefold()) for p in hit)
+                    if got > n:
+                        if n:  # n=0 时红面与旧行为逐字一致，只多授权配置不影响
+                            extra = ("（母版同块「%s」%d 次，实测 %d 次，超出授权）"
+                                     % (lic, n, got))
+                    else:
+                        hit = []
                 if hit:
                     add("S08", "error", "%s/%s" % (lg, slug),
-                        "术语 %s 出现反向表述「%s」%s"
-                        % (tid, " / ".join(hit[:3]), where))
+                        "术语 %s 出现反向表述「%s」%s%s"
+                        % (tid, " / ".join(hit[:3]), where, extra))
                 # v1.25：出现次数下限（条款级 "count": true 开启）。
                 # 母版锚点在该块出现 zn 次，各语 require 词形（多词形取
                 # 命中区间并集）至少命中 zn 次。抓「同一概念首两处译对、
@@ -2100,9 +3631,15 @@ def _glossary_excerpt_check(spec, parsed, master_lang, slug, add):
 
     glossary 里可选的 "excerpt" 数组，每项：
         {"id": "...", "note": "<人读的说明，可选>",
+         "zh": "<可选：母版摘要锚短语，v1.45>",
          "require": {"*": ["..."], "de": ["..."]},
          "forbid":  {"de": ["..."]}}
     对 frontmatter.excerpt 判「必须出现 / 不得出现」，`*` 为所有语言的兜底。
+
+    【v1.45】条款可带可选 "zh" 锚：锚短语出现在**该篇自己的** zh 摘要里才
+    激活（与 S08 的 zh 块锚同一模式，内容驱动、不认 slug）——「该篇摘要
+    承载哪几层」逐篇不同，摘要没承诺这一层的文章不应被别篇的契约套住。
+    缺省（无 zh）= 全文章生效（forbid-only 条款这样用最稳）。
 
     存在的理由：摘要是读者第一眼看到的内容，此前只受长度约束（F07）。
     母版摘要按「四层框架」逐层罗列时，译文漏掉其中一层（F1 实证：15 语漏掉
@@ -2112,8 +3649,13 @@ def _glossary_excerpt_check(spec, parsed, master_lang, slug, add):
     items = spec.get("excerpt") if isinstance(spec, dict) else None
     if not isinstance(items, list) or not items:
         return
+    zh_fm = parsed.get(master_lang, (None, None))[0] or {}
+    zh_excerpt = str(zh_fm.get("excerpt") or "")
     for it in items:
         if not isinstance(it, dict):
+            continue
+        zha = str(it.get("zh") or "").strip()
+        if zha and zha not in zh_excerpt:
             continue
         tid = str(it.get("id") or "").strip() or "<unnamed>"
         req = it.get("require") or {}
@@ -2140,6 +3682,125 @@ def _glossary_excerpt_check(spec, parsed, master_lang, slug, add):
             if hit:
                 add("S09", "error", "%s/%s" % (lg, slug),
                     "摘要出现反向表述「%s」（术语 %s）" % (" / ".join(hit[:3]), tid))
+
+
+def _glossary_title_check(spec, parsed, master_lang, slug, add):
+    """S11（v1.37）：标题术语契约。
+
+    glossary 里可选的 "title" 数组，每项：
+        {"id": "...", "note": "<人读的说明，可选>",
+         "zh": "<可选：母版标题锚短语，v1.45>",
+         "require": {"*": ["..."], "de": ["..."]},
+         "forbid":  {"de": ["..."]}}
+    对 frontmatter.title 判「必须出现 / 不得出现」，`*` 为所有语言的兜底。
+
+    【v1.45】条款可带可选 "zh" 锚：锚短语出现在**该篇自己的** zh 标题里才
+    激活（与 S08 的 zh 块锚同一模式，内容驱动、不认 slug）——「该篇标题
+    承载哪几层」逐篇不同，标题没承诺这一层的文章不应被别篇的契约套住。
+    缺省（无 zh）= 全文章生效（forbid-only 条款这样用最稳）。
+
+    存在的理由：F2 47 语人工审校实证——标题此前只受长度约束（F03 ≤85），
+    于是「后半句整层丢失」在 45 语里一路绿灯（母版第二分句「把保税项目拆成
+    可验收的交付物」只有 ja/ko 换了别的第二分句，其余全部只剩主句），
+    而「三步进场」的宾语被 8 语写成「中国海关仓/海关市场」也没有任何一条
+    规则会出声。标题是列表页与检索结果里读者唯一必读的一行，漏一层＝整层
+    承诺对外消失。把「母版标题承载哪几层」固化成逐语 require/forbid，
+    是本轮唯一能机检这类偏移的位置（长度、结构、语言纯度都不沾边）。
+    """
+    items = spec.get("title") if isinstance(spec, dict) else None
+    if not isinstance(items, list) or not items:
+        return
+    zh_fm = parsed.get(master_lang, (None, None))[0] or {}
+    zh_title = str(zh_fm.get("title") or "")
+    for it in items:
+        if not isinstance(it, dict):
+            continue
+        zha = str(it.get("zh") or "").strip()
+        if zha and zha not in zh_title:
+            continue
+        tid = str(it.get("id") or "").strip() or "<unnamed>"
+        req = it.get("require") or {}
+        forb = it.get("forbid") or {}
+        targets = set(k for k in list(req) + list(forb) if k != "*")
+        if "*" in req or "*" in forb:
+            targets |= set(lg for lg in parsed if lg != master_lang)
+        for lg in sorted(targets):
+            if lg == master_lang or lg not in parsed:
+                continue
+            fm = parsed[lg][0] or {}
+            title = str(fm.get("title") or "").strip()
+            if not title:
+                add("S11", "error", "%s/%s" % (lg, slug),
+                    "标题为空，无法满足术语 %s" % tid)
+                continue
+            hay = title.casefold()
+            need = _gloss_pats(req, lg)
+            banned = _gloss_pats(forb, lg)
+            if need and not any(p.casefold() in hay for p in need):
+                add("S11", "error", "%s/%s" % (lg, slug),
+                    "标题缺少术语 %s：应含「%s」" % (tid, " / ".join(need[:3])))
+            hit = [p for p in banned if p.casefold() in hay]
+            if hit:
+                add("S11", "error", "%s/%s" % (lg, slug),
+                    "标题出现反向表述「%s」（术语 %s）" % (" / ".join(hit[:3]), tid))
+
+
+def _glossary_banned_check(spec, parsed, slug, add):
+    """P43（v1.42）：文章级禁用译法。
+
+    glossary 里可选的 "banned" 数组，每项：
+        {"id": "...", "lang": "vi", "terms": ["vào sân"],
+         "note": "<人读的说明，可选>"}
+    对该语正文、title、excerpt、references 标题做**全篇**子串匹配（不分块），
+    命中即 error。存在的理由：r5 审读实证 vi 把「进场」写成 vào sân（进场
+    院子的字面义）、ta 把「诊断」写成 நோயறிதல்（疾病诊断）、si 写成
+    රෝග විනිශ්චය（疾病判别）——三处都是词形合法、语法通顺、其余判据全绿，
+    只有「这个概念在本篇只能用哪个词」能拦。v1.44 起共享表也加载 banned
+    （单轨制）。【v1.45】域摘除：禁用译法全文章生效、不再按篇钉住——同一
+    误译词族（osoba 主体、комерції 电商、 connosco 欧葡）在别的文章出现
+    同样要出声（域摘实测：P0 一篇就撞上 21 条 F2/F3 审出的禁用形，全是真
+    误译）。r5 复核又补六条 S1 主体误译形（hr/sl/sr/uk 写成自然人、
+    ru 写成 структура、sw 写成 chombo），由 U5 真实数据面逐条反证。
+    """
+    items = spec.get("banned") if isinstance(spec, dict) else None
+    if not isinstance(items, list) or not items:
+        return
+    for it in items:
+        if not isinstance(it, dict):
+            continue
+        lg = str(it.get("lang") or "").strip()
+        if lg not in parsed:
+            continue
+        tid = str(it.get("id") or "").strip() or "<unnamed>"
+        terms = it.get("terms")
+        if isinstance(terms, str):
+            terms = [terms]
+        if not isinstance(terms, list):
+            continue
+        fm, body = parsed[lg]
+        fields = [("title", str(fm.get("title") or "")),
+                  ("excerpt", str(fm.get("excerpt") or "")),
+                  ("references",
+                   " \n".join(str(r.get("title") or "")
+                              for r in (fm.get("references") or [])
+                              if isinstance(r, dict))),
+                  ("正文", body)]
+        for term in terms:
+            word = str(term).strip()
+            if not word:
+                continue
+            hits = []
+            for fname, fld in fields:
+                pos = fld.casefold().find(word.casefold())
+                if pos >= 0:
+                    a = max(0, pos - 24)
+                    b = min(len(fld), pos + len(word) + 24)
+                    hits.append("%s: …%s…" % (fname,
+                                              fld[a:b].replace("\n", " ")))
+            if hits:
+                add("P43", "error", "%s/%s" % (lg, slug),
+                    "禁用译法「%s」（%s）：%d 处；%s"
+                    % (word, tid, len(hits), hits[0]))
 
 
 def check_article(slug, art, add):
@@ -2230,8 +3891,10 @@ def check_article(slug, art, add):
             try:
                 d = datetime.strptime(date, "%Y-%m-%d").date()
                 tz8 = timezone(timedelta(hours=8))
-                if d > datetime.now(tz8).date():
-                    add("M04", "error", slug, "date 不得晚于今天（UTC+8）")
+                # v1.59：允许未来日期（站方按 date 定时上架，未到日期的稿子不显示）。
+                # 只挡明显写错的：超过一年以后。
+                if (d - datetime.now(tz8).date()).days > 400:
+                    add("M04", "error", slug, "date 超出一年以后，请确认是否为笔误")
             except ValueError:
                 add("M04", "error", slug, "date 不是合法日期")
         if meta.get("category") not in CATEGORIES:
@@ -2250,11 +3913,53 @@ def check_article(slug, art, add):
                 (sorted(imgs), sorted(image_files.keys())))
         if not str(meta.get("imageRights", "")).strip():
             add("M02", "error", slug, "imageRights 不能为空（需确认可商用）")
+        # R07 元数据面（v1.38）：submission.json 的每一个字符串同样是要发给
+        # 平台的对外文案。实证：P0/F1/F2 三个包的 imageRights 都写着
+        # "All figures are exports from the author's own SinoTrade proposal deck"
+        # ——「deck」正是 R07 词表里的制作来源词，而 R07 在 v1.35 只挂
+        # 正文/alt/title/excerpt，元数据层是整片盲区（三个包一起漏）。
+        # 逐字段扫字符串值。列表值（locales 的语言码、images 的文件名）是结构
+        # 枚举、不是对外文案，故意不进射程：文件名里一个 "p15"/"deck" 会被
+        # 读成泄漏，而真正的对外文案（title/excerpt/imageRights/author/
+        # category/slug/date）都是字符串，一个不漏。
+        leak7 = []
+        for k in sorted(meta):
+            x = meta[k]
+            if not isinstance(x, str) or not x.strip():
+                continue
+            mm = ORIGIN_TOOL_META_RE.search(x)
+            tok = _origin_page_hit(x) or (mm.group(0) if mm else None)
+            if tok:
+                leak7.append("%s 段「%s」" % (k, tok))
+        if leak7:
+            add("R07", "error", slug,
+                "submission.json 暴露配图制作来源/页码引用（对外文案不得说明图来自 "
+                "PPT/幻灯片/第几页，见【v1.35】口径；改写成只讲权利的说法）: "
+                + "; ".join(leak7[:6]))
 
     # --- 语言齐备
     for lang in LOCALES:
         if lang not in mdx_files:
             add("S02", "error", slug, "缺少语言: %s" % lang)
+
+    # v1.59：类型 = submission.json 的 kind（缺省 blog）
+    is_reg = str(meta.get("kind") or "").strip().lower() == "regulation"
+
+    # --- 法规专属：submission.json 字段（R13/R14/R12）
+    if is_reg:
+        for req in SUB_REQUIRED_REG:
+            if req not in meta:
+                add("R13", "error", slug, "法规 submission.json 缺字段 %s" % req)
+        st = str(meta.get("status") or "")
+        if st and st not in STATUS_ENUM:
+            add("R14", "error", slug,
+                "status 必须是 %s 之一（当前 %r）" % (" / ".join(STATUS_ENUM), st))
+        imgs_reg = meta.get("images")
+        if isinstance(imgs_reg, list) and imgs_reg:
+            add("R12", "error", slug, "法规不使用配图，images 必须为空数组")
+        if image_files:
+            add("R12", "error", slug,
+                "法规不使用配图，包内不应有 images/：%s" % ", ".join(sorted(image_files)))
 
     # --- 每篇 frontmatter / 正文
     parsed = {}
@@ -2272,34 +3977,63 @@ def check_article(slug, art, add):
             if yerr:
                 add("F09", "error", tag, "frontmatter 无法被 YAML 解析（%s）: %s" %
                     ("PyYAML" if _pyyaml is not None else "内置校验", yerr))
-        missing = [k for k in FRONTMATTER_KEYS if k not in fm]
+        fm_keys = FRONTMATTER_KEYS_REG if is_reg else FRONTMATTER_KEYS
+        fm_required = FRONTMATTER_REQUIRED_REG if is_reg else FRONTMATTER_KEYS
+        missing = [k for k in fm_required if k not in fm]
         if missing:
             add("F02", "error", tag, "frontmatter 缺字段: %s" % ", ".join(missing))
-        extra = [k for k in fm if k not in FRONTMATTER_KEYS]
+        extra = [k for k in fm if k not in fm_keys]
         if extra:
             add("F02", "error", tag, "frontmatter 多出字段: %s（只允许 %s）" %
-                (", ".join(extra), ", ".join(FRONTMATTER_KEYS)))
+                (", ".join(extra), ", ".join(fm_keys)))
 
         title = fm.get("title", "")
-        if len(title) > MAX_TITLE:
-            add("F03", "error", tag, "title 超长（%d > %d）" % (len(title), MAX_TITLE))
-        if re.search(r"[:：\-—–]", title):
-            add("F03", "error", tag, "title 不得含冒号或连字符/破折号")
-        if not title.strip():
-            add("F03", "error", tag, "title 不能为空")
+        for msg in title_shape_errors(title):
+            add("F03", "error", tag, msg)
+
+        # v1.59 法规专属
+        if is_reg:
+            # R15：标题不得重复写文号（页面第一列已单独展示 doc_number）
+            docn = str(fm.get("doc_number") or "").strip()
+            if docn and docn.casefold() in title.casefold():
+                add("R15", "error", tag,
+                    "title 里不要重复写文号（%r 已在 doc_number 字段）；列表页会重复展示" % docn)
+            # R10/R11：正文必须用 <!-- original --> 分隔「解读」与「全文译本」
+            cnt = body.count(ORIGINAL_MARKER)
+            if cnt == 0:
+                add("R10", "warning", tag,
+                    "正文缺少 %s：该篇只有解读、页面不会出现全文译本" % ORIGINAL_MARKER)
+            elif cnt > 1:
+                add("R11", "error", tag,
+                    "%s 出现 %d 次（只能出现一次）" % (ORIGINAL_MARKER, cnt))
+            else:
+                head, tail = body.split(ORIGINAL_MARKER, 1)
+                if not head.strip():
+                    add("R11", "error", tag, "%s 之前的「解读」段为空" % ORIGINAL_MARKER)
+                if not tail.strip():
+                    add("R11", "error", tag, "%s 之后的「全文译本」段为空" % ORIGINAL_MARKER)
         if fm.get("slug") != slug:
             add("F04", "error", tag, "frontmatter slug 必须等于 %s" % slug)
         if meta.get("date") and fm.get("date") != meta.get("date"):
             add("F05", "error", tag, "frontmatter date 与 submission.json 不一致")
         if meta.get("category") and fm.get("category") != meta.get("category"):
             add("F06", "error", tag, "frontmatter category 与 submission.json 不一致")
-        if fm.get("category") and fm.get("category") not in CATEGORIES:
+        if (not is_reg) and fm.get("category") and fm.get("category") not in CATEGORIES:
             add("F06", "error", tag, "category 不在白名单")
         excerpt = fm.get("excerpt", "")
         if len(excerpt) > MAX_EXCERPT:
             add("F07", "error", tag, "excerpt 超长（%d > %d）" % (len(excerpt), MAX_EXCERPT))
         if excerpt and excerpt.strip() == title.strip():
             add("F07", "error", tag, "excerpt 不能与 title 相同")
+        # P40（v1.39）摘要终止标点：剥尾空白与收尾引号/括号后必须有句末标点。
+        # th 整语豁免（泰文不以句末标点断句）；v1.40 起 hy 也按 ։ 判，不再
+        # 豁免 ASCII ":"。空摘要由 F02/F07 与 S09 管，这里不重复出声。
+        if lang != "th" and excerpt.strip():
+            bad40, last40 = _p40_bad_end(lang, excerpt)
+            if bad40:
+                add("P40", "error", tag,
+                    "摘要末尾缺少句末标点（剥收尾引号/括号后末字符为 %r；"
+                    "允许 .。！？!?।۔։…؟；v1.39）" % last40)
         # ST03/ST04/ST05 亦适用于 title 与 excerpt
         te = title + "\n" + excerpt
         for w in AI_PHRASES_EN:
@@ -2309,12 +4043,35 @@ def check_article(slug, art, add):
             if w in te:
                 add("ST04", "error", tag, "title/excerpt 出现 AI 高频词（zh）: %r" % w)
         for w in AI_PHRASES_LOCALES.get(lang, ()):
-            if w in te:
+            if w.casefold() in te.casefold():
                 add("ST08", "warning", tag,
                     "title/excerpt 出现 AI 套话（%s）: %r" % (lang, w))
         for pat in REVERSAL_RES:
             if re.search(pat, te, re.I):
                 add("ST05", "error", tag, "title/excerpt 出现反转钩子句式")
+        # R07（v1.35）同样适用于 title 与 excerpt：元数据没有「修辞」空间，
+        # 工具词与页码引用一律 error。
+        ph = _origin_page_hit(te)
+        if ph:
+            add("R07", "error", tag, "title/excerpt 出现来源页码引用: %r" % ph)
+        else:
+            mm = ORIGIN_TOOL_META_RE.search(te)
+            if mm:
+                add("R07", "error", tag, "title/excerpt 出现制作工具词: %r" % mm.group(0))
+        # R08（v1.37）元数据同口径：en/zh 母版的标题或摘要里不许出现
+        # 「签字人拥有包」这一形状（其余语向由 S08 条款逐语兜）。
+        if lang in ("en", "zh"):
+            h8 = _r08_hit(te, lang)
+            if h8:
+                add("R08", "error", tag,
+                    "title/excerpt 把签字人写成包/交付物的所有者: %r" % h8[:70])
+        # P38（v1.37）元数据同口径：标题/摘要里的错拼一样对外可见，且列表页里
+        # 读者第一眼读到的就是这两行。词形不对，长度与语言纯度都不会出声。
+        cb38m = _bn_chandrabindu_hits(te)
+        if cb38m:
+            add("P38", "error", tag,
+                "title/excerpt 孟加拉文 CANDRABINDU(U+0981) 紧跟裸辅音字母"
+                "（正字法不成立，见【v1.37】）: " + _fmt_p38(cb38m))
         refs = fm.get("references")
         if refs is None:
             refs = []
@@ -2325,11 +4082,84 @@ def check_article(slug, art, add):
                 add("F08", "error", tag, "references 条目缺 title: %r" % r)
             if not re.match(r"^https://", str(r.get("url", ""))):
                 add("F08", "error", tag, "references url 必须 https:// 开头: %r" % r.get("url"))
+        # P39（v1.39）元数据同口径：电商复合词的 e- 前缀被空格拆开。
+        # v1.40 起判 error（用户指令：不按 P0/F1 历史写法放宽）。
+        if lang in E_COMMERCE_SPACED_LANGS:
+            p39m = [("title", w) for _ln, w in _p39_hits(str(title))]
+            p39m += [("excerpt", w) for _ln, w in _p39_hits(str(excerpt))]
+            for i, r in enumerate(refs):
+                p39m += [("references 第 %d 条" % (i + 1), w)
+                         for _ln, w in _p39_hits(str(r.get("title") or ""))]
+            if p39m:
+                add("P39", "error", tag,
+                    "电商复合词的 e- 前缀被空格拆开（正字法：e-commerce / e-handel / "
+                    "e-ticaret；标题同样用连字符形；v1.40）: "
+                    + "；".join("%s 处 %r" % (f, w) for f, w in p39m[:4])
+                    + ("；等共 %d 处" % len(p39m) if len(p39m) > 4 else ""))
+
+        # P42（v1.42）元数据同口径：hy 的句末是 ։，ASCII "." 只允许出现在
+        # 小数、 թվական 缩写「թ.」、链接/代码里。标题/摘要/参考题名都对外。
+        if lang == "hy":
+            p42m = [("title", h) for h in _p42_hy_ascii_periods(str(title))]
+            p42m += [("excerpt", h) for h in _p42_hy_ascii_periods(str(excerpt))]
+            for i, r in enumerate(refs):
+                p42m += [("references 第 %d 条" % (i + 1), h)
+                         for h in _p42_hy_ascii_periods(str(r.get("title") or ""))]
+            if p42m:
+                add("P42", "error", tag,
+                    "亚美尼亚文出现 ASCII 句点「.」（句末应为 ։；仅允许小数、"
+                    " թվական 缩写「թ.」与链接/代码）: "
+                    + "；".join("%s 处 …%s…" % (f, h)
+                               for f, h in p42m[:3])
+                    + ("；等共 %d 处" % len(p42m) if len(p42m) > 3 else ""))
+        # P44（v1.42）元数据同口径：阿拉伯数字与量词 개 之间不能空格。
+        if lang == "ko":
+            p44m = [("title", w) for _ln, w in _p44_ko_counter_hits(str(title))]
+            p44m += [("excerpt", w) for _ln, w in _p44_ko_counter_hits(str(excerpt))]
+            if p44m:
+                add("P44", "error", tag,
+                    "韩语阿拉伯数字与量词「개」之间不应空格（应写作 14개）: "
+                    + "；".join("%s 处 %r" % (f, w) for f, w in p44m[:4]))
 
         check_body(tag, lang, body, image_files, slug, add)
 
+        # P41（v1.42）表格/列表同字：每条语言的表前 13 条包名必须与
+        # 表格 S1–S13 逐字一致。没有 S0–S13 表的文章直接跳过。
+        for msg41 in _p41_table_bullet_errors(body):
+            add("P41", "error", tag, msg41)
+        # P42（v1.42）正文同口径（alt 文字也扫；链接目的地已掩掉）。
+        if lang == "hy":
+            p42b = _p42_hy_ascii_periods(body)
+            if p42b:
+                add("P42", "error", tag,
+                    "正文出现 ASCII 句点「.」（句末应为 ։；仅允许小数、"
+                    " թվական 缩写「թ.」与链接/代码）: "
+                    + "；".join("…%s…" % h for h in p42b[:3])
+                    + ("；等共 %d 处" % len(p42b) if len(p42b) > 3 else ""))
+        # P44（v1.42）正文同口径。
+        if lang == "ko":
+            p44b = _p44_ko_counter_hits(body)
+            if p44b:
+                add("P44", "error", tag,
+                    "韩语阿拉伯数字与量词「개」之间不应空格（应写作 14개）: "
+                    + _fmt_hits([(ln, "%r" % w) for ln, w in p44b]))
+
     # --- 本地化真实性
     en_fm, en_body = parsed.get("en", ({}, ""))
+    # M09（v1.34）：submission.json 的 title/excerpt 必须与 en frontmatter 一致。
+    # 站方列表页读 submission.json、文章页读 mdx frontmatter；两者漂移会让
+    # 列表与文章展示不同标题/摘要（F1 实测发生过：submission 残留旧标题）。
+    if meta and en_fm:
+        sub_title = str(meta.get("title", "")).strip()
+        sub_excerpt = str(meta.get("excerpt", "")).strip()
+        en_t = str(en_fm.get("title", "")).strip()
+        en_e = str(en_fm.get("excerpt", "")).strip()
+        if sub_title and en_t and sub_title != en_t:
+            add("M09", "error", slug,
+                "submission.json title 与 en frontmatter 不一致（列表页与文章页将展示不同标题）")
+        if sub_excerpt and en_e and sub_excerpt != en_e:
+            add("M09", "error", slug,
+                "submission.json excerpt 与 en frontmatter 不一致（列表页与文章页将展示不同摘要）")
     en_title = en_fm.get("title", "")
     en_excerpt = en_fm.get("excerpt", "")
     en_ng = ngrams(en_body)
@@ -2435,9 +4265,13 @@ def check_article(slug, art, add):
                     "配图引用顺序与 %s 不一致（%d 张图）" % (master_lang, len(base_seq)))
 
         # P19 基准语言的关键事实编号（≥10 的非年份整数：文号/税率/限额/窗口）
-        # 在各语言齐全；数字书写变体（本族数字、千分位、空格分组）均归一后比对
+        # 在各语言齐全；数字书写变体（本族数字、千分位、空格分组）均归一后比对。
+        # v1.48：基准侧先折千分位再抽数字——目标侧 variants 早就折过 `,`/空格，
+        # 基准侧不折时母版 `129,600` 会被切成 129 与 600 两段事实，每个译语
+        # 都判缺（口径不对称，不是译文缺陷）。
         fact_ints = sorted({m.group(1) for m in
-                            re.finditer(r"(?<![\w.])(\d+)(?![\w.])", m_body)
+                            re.finditer(r"(?<![\w.])(\d+)(?![\w.])",
+                                        _fold_thousands(m_body))
                             if int(m.group(1)) >= DOC_NUMBER_MIN
                             and not DOC_NUMBER_YEAR_MIN <= int(m.group(1)) <= DOC_NUMBER_YEAR_MAX},
                            key=int)
@@ -2573,7 +4407,12 @@ def check_article(slug, art, add):
         # 判定只收「含小数点」或「≥3 位」的数字：1–2 位纯数字在不少语言里写成
         # 数词（three documents），收进来会制造假阳性。数字先折叠成 ASCII，
         # 波斯语 ۱۲۱۰、阿拉伯语 ١٢١٠ 属正字法，不算改数字。
-        p36_base = [_id_numbers(re.sub(r"\]\([^)]*\)", "]", x)) for x in _blocks(m_body)]
+        p36_src = [re.sub(r"\]\([^)]*\)", "]", x) for x in _blocks(m_body)]
+        p36_base = [_id_numbers(x) for x in p36_src]
+        # v1.48：「N 万」是一组同义数字面（整值 N*10^4 / 千位读法 N*10^3），
+        # 缺号判定按组放行——译文出现任一面即算该事实在场。不分组就会
+        # 逼每篇同时写出两个面（10 万 ⇒ 100000 与 100 都算缺，47 语全红）。
+        p36_wan = [_wan_face_groups(x) for x in p36_src]
         for lg in sorted(parsed):
             if lg == master_lang:
                 continue
@@ -2584,17 +4423,183 @@ def check_article(slug, art, add):
                 if not want:
                     continue
                 got = _id_numbers(re.sub(r"\]\([^)]*\)", "]", blk))
-                miss = sorted(want - got)
+                miss = sorted(v for v in want - got
+                              if not any(v in g and (g & got)
+                                         for g in p36_wan[bi]))
                 extra = sorted(got - want)
+                # v1.52：extra 近形分级——extra 与块内任一母版数字等长差一位
+                # 或差一个数量级位（1476↔1477、100000↔10000）时升 error。
+                # r79 对账实证的漏改形态：同块两处同数改一漏一，miss 半边
+                # 不点火，只剩 warning 会被淹没在年份/汇率类噪声里。
+                near_extra = sorted(e for e in extra
+                                    if any(_near_num(e, w) for w in want))
                 if miss:
                     add("P36", "error", "%s/%s" % (lg, slug),
                         "第%d块缺少母版中的编号/代码 %s（块内实际：%s）"
                         % (bi + 1, " / ".join(miss[:5]),
                            " / ".join(sorted(got)[:6]) or "无"))
-                if extra:
+                if near_extra:
+                    add("P36", "error", "%s/%s" % (lg, slug),
+                        "第%d块多出与母版数字近形的 %s（疑为错写/漏改一处，逐字核对）"
+                        % (bi + 1, " / ".join(near_extra[:5])))
+                other_extra = [e for e in extra if e not in near_extra]
+                if other_extra:
                     add("P36", "warning", "%s/%s" % (lg, slug),
                         "第%d块多出母版没有的数字 %s（可能是译者补的年份/汇率，需确认）"
-                        % (bi + 1, " / ".join(extra[:5])))
+                        % (bi + 1, " / ".join(other_extra[:5])))
+
+        # P47（v1.52）描述位数字：母版块内「N 位」的 N 只有 1–2 位，P36 只收
+        # 「含小数点或 ≥3 位」、P19 只收 ≥10 的非年份整数，两族都看不见。
+        # r79 全量数字对账抓到的真缺陷就在这里：母版「正面清单 1476 个 8 位
+        # 税号」，清单规模 1476 三族全查，修饰它的「8 位」在 ta 译文被写成
+        # 无义的 எண்படி，「八位」整段丢失。契约：母版块出现「N 位」，各语同一
+        # 块必须把 N 写出来——独立数字（本族数字折叠）、P47 词干（右开左界
+        # 子串，覆盖 achtstellige / восьмизначных / osmimístných 等复合屈折
+        # 形）、或 NUMBER_WORDS 数词。量词读法（「5 位买家」）同样要求 N 存活，
+        # 两种语义共用「数字不丢」这一条契约。边界：块内已有别的同数值词
+        # （「八部门」的 acht/åtte/eight）时会放过单点错写——本条定位是防
+        # 整段丢失，不做逐事实归属。
+        p47_want = [sorted({int(m.group(1))
+                            for m in _DIGIT_DESC.finditer(x)})
+                    for x in _blocks(m_body)]
+        if any(p47_want):
+            for lg in sorted(parsed):
+                if lg == master_lang:
+                    continue
+                for bi, blk in enumerate(_blocks(parsed[lg][1])):
+                    if bi >= len(p47_want) or not p47_want[bi]:
+                        continue
+                    if _block_kind(blk) in ("TABLE", "CODE", "IMG"):
+                        continue
+                    fb = _ascii_digits(blk)
+                    miss_n = [n for n in p47_want[bi]
+                              if not _p47_has_number(lg, n, fb, fb.casefold())]
+                    if miss_n:
+                        add("P47", "error", "%s/%s" % (lg, slug),
+                            "第%d块母版「%s 位」的位数 %s 在译文缺失（须以数字或数词写出）"
+                            % (bi + 1,
+                               "、".join(str(n) for n in p47_want[bi]),
+                               "、".join(str(n) for n in miss_n)))
+
+        # P48（v1.54）长级差单位：母版块含「万亿」时，长级差语言的译文不得
+        # 出现本语 10^18 的 tri- 词形（万亿 = 10^12）。M1 审校实证 af/it/
+        # pt/ro/sq 五语把 0.36/0.43/0.6 写成 triljoen/trilioni/trilhão/
+        # trilioane/trilionë——数字原样、单位放大一百万倍，P36 看不见。
+        p48_blocks = _blocks(m_body)
+        if any("万亿" in x for x in p48_blocks):
+            m_ex48 = (parsed[master_lang][0] or {}).get("excerpt", "")
+            for lg in sorted(parsed):
+                if lg == master_lang or lg not in P48_BAD_UNITS:
+                    continue
+                good48 = P48_BAD_UNITS[lg][1]
+                for bi, blk in enumerate(_blocks(parsed[lg][1])):
+                    if bi >= len(p48_blocks) or "万亿" not in p48_blocks[bi]:
+                        continue
+                    hit48 = _p48_hits(lg, blk)
+                    if hit48:
+                        add("P48", "error", "%s/%s" % (lg, slug),
+                            "第%d块万亿单位误用 %r（10^18），应用 %s"
+                            % (bi + 1, hit48[0], good48))
+                if "万亿" in m_ex48:
+                    hit48 = _p48_hits(
+                        lg, (parsed[lg][0] or {}).get("excerpt", ""))
+                    if hit48:
+                        add("P48", "error", "%s/%s" % (lg, slug),
+                            "摘要万亿单位误用 %r（10^18），应用 %s"
+                            % (hit48[0], good48))
+
+        # P49（v1.54）清单缩减矛盾：母版既写「清单扩至 1476」，全篇就不得
+        # 把清单说成缩小/变窄。bg/ca/cs/fa/hr/ko/ro/sr/uk/ur/de/be 十二语在
+        # M1 审校中实抓：2022「清单收紧」被译成清单缩减（de 两处、be 两处、
+        # ko/uk/bg/…各两处＝时间轴摘要＋条目），与 1476 扩容自相矛盾
+        # （收紧的是要求，不是清单规模）。
+        if "1476" in m_body:
+            for lg in sorted(parsed):
+                if lg == master_lang or lg not in P49_SHRINK:
+                    continue
+                for bi, blk in enumerate(_blocks(parsed[lg][1])):
+                    hit49 = _p49_hits(lg, blk)
+                    if hit49:
+                        add("P49", "error", "%s/%s" % (lg, slug),
+                            "第%d块清单扩至 1476，却写成清单缩减 %r（收紧≠缩减）"
+                            % (bi + 1, hit49[0]))
+
+        # P50–P53（v1.55）M1 47 语人工审校第三批：末行标点、百分号体例、
+        # 英文残词、葡语变体。四条都是「同篇内部自相矛盾」型——不涉及
+        # 与母版的比对，只在单语种全篇范围内判一致性。
+        for lg in sorted(parsed):
+            fm_lg, body_lg = parsed[lg]
+            whole = body_lg + "\n" + str((fm_lg or {}).get("excerpt", "")) + \
+                "\n" + str((fm_lg or {}).get("title", ""))
+            # P50 CTA 末行终止标点
+            if lg not in P50_NO_TERM_LANGS:
+                tail_lines = [x.strip() for x in body_lg.split("\n")
+                              if x.strip() and not x.lstrip().startswith("#")]
+                if tail_lines:
+                    last = tail_lines[-1].rstrip()
+                    if last[-1] not in P50_TERMINAL:
+                        add("P50", "error", "%s/%s" % (lg, slug),
+                            "末行结尾缺终止标点（当前收尾 %r，应加 %s 之一）"
+                            % (last[-24:], "/".join(P50_TERMINAL[:6])))
+            # P51 同篇百分号体例混用
+            # v1.56 判据按位置对称：同一个 % 归后缀还是前缀，只看它左边贴不贴数字。
+            # 旧写法只给后缀形加了右侧 (?!\s*[\d])、前缀形却不加左界，于是
+            # az「13% vurulmuş 70% 9,1%-ə」里的「70% 9,1%」两头都不算后缀（右界挡掉）、
+            # 反倒算成「% 9,1」前缀——全篇零前缀形的阿塞拜疆语被报「前后缀并存」。
+            # 与 v1.53 的「N 万」同型：口径不对称产生的假阳性，不是稿件缺陷。
+            post_ns = len(re.findall(r"(?<![%\d.,])" + P51_NUM + r"%", body_lg))
+            post_sp = len(re.findall(r"(?<![%\d.,])" + P51_NUM + P51_SP + r"%",
+                                     body_lg))
+            pre_ns = len(re.findall(r"(?<![\d.,%])%" + P51_NUM, body_lg))
+            pre_sp = len(re.findall(r"(?<![\d.,%])%" + P51_SP + P51_NUM, body_lg))
+            mix = []
+            if post_ns and post_sp:
+                mix.append("后缀「N%%」%d 处 × 「N %%」%d 处" % (post_ns, post_sp))
+            if pre_ns and pre_sp:
+                mix.append("前缀「%%N」%d 处 × 「%% N」%d 处" % (pre_ns, pre_sp))
+            if (post_ns or post_sp) and (pre_ns or pre_sp):
+                mix.append("前缀型与后缀型并存")
+            if mix:
+                add("P51", "error", "%s/%s" % (lg, slug),
+                    "同篇百分号体例混用：" + "；".join(mix))
+            # P52 拉丁语向英文残词
+            if lg in P52_LATIN_LANGS and lg != master_lang:
+                scan = re.sub(r"!?\[[^\]]*\]\([^)]*\)", " ", whole).lower()
+                for tier, words in (("error", P52_RESIDUE_HARD),
+                                    ("warning", P52_RESIDUE_SOFT)):
+                    for w in words:
+                        n = len(re.findall(r"(?<![a-z])" + w + r"(?![a-z])", scan))
+                        if n:
+                            add("P52", tier, "%s/%s" % (lg, slug),
+                                "拉丁语向残留英文词 %r ×%d（本语应有词形；"
+                                "行业借词请人工裁定，语法词形必须翻）" % (w, n))
+            # P53 葡语变体同篇混用
+            if lg == "pt":
+                low = whole.lower()
+                both = [(eu, br) for eu, br in P53_VARIANT_PAIRS
+                        if eu in low and br in low]
+                if both:
+                    add("P53", "error", "%s/%s" % (lg, slug),
+                        "葡语变体同篇混用：" +
+                        "、".join("%s×%s" % p for p in both) +
+                        "（欧葡/巴葡各自成篇合法，混写才是事故）")
+            # P54 丹/挪文号引用的年份介词（v1.57）：射程含正文、摘要、标题与
+            # 题录——旧形正是在题录里成片的（Bekendtgørelse nr. 486 fra 2018
+            # fra seks ministerier）。
+            if lg in P54_PREP:
+                scan54 = whole + "\n" + "\n".join(
+                    str(r.get("title", ""))
+                    for r in ((fm_lg or {}).get("references") or [])
+                    if isinstance(r, dict))
+                bad54 = [m.group(0) for m in P54_CIT_RES[lg].finditer(scan54)]
+                dbl54 = [m.group(0) for m in P54_DOUBLE_RE.finditer(scan54)]
+                if bad54 or dbl54:
+                    add("P54", "error", "%s/%s" % (lg, slug),
+                        "文号年份介词写成 fra（%s 应写 %s，fra 留给颁发机关）"
+                        "%d 处：%s%s"
+                        % (lg, P54_PREP[lg], len(bad54),
+                           "；".join(x[:52] for x in bad54[:2]),
+                           "；另 fra…fra 双写 %d 处" % len(dbl54) if dbl54 else ""))
 
         # S08 块级术语契约：只在调用方传了术语表（--glossary）时生效。
         # 挂在这里是因为它依赖 P23 的逐块同构前提：块序号对齐才谈得上
@@ -2602,6 +4607,19 @@ def check_article(slug, art, add):
         if _GLOSSARY:
             _glossary_check(_GLOSSARY, parsed, master_lang, slug, add)
             _glossary_excerpt_check(_GLOSSARY, parsed, master_lang, slug, add)
+            _glossary_title_check(_GLOSSARY, parsed, master_lang, slug, add)
+            _glossary_banned_check(_GLOSSARY, parsed, slug, add)
+
+        # P46（v1.44）：文章级术语表已废止。发现 <包上级>/pipeline/
+        # glossary.json 即提示合并进工具包术语表——同一份词形契约分放
+        # 两处，改一处漏一处（F3 r2 实证）。
+        if _ARTICLE_GLOSSARY_SEEN:
+            add("P46", "warning", slug,
+                "发现文章级术语表 %s（文章级术语表已废止）：请把其中条目"
+                "合并进工具包术语表 kit/blog-submission-kit/glossary.json"
+                "（专业术语全文章生效；标题/摘要结构契约用条款级 zh 锚"
+                "按内容绑定），然后删除该文件"
+                % os.path.relpath(_ARTICLE_GLOSSARY_SEEN))
 
         # P24 表格几何一致：表格的列数、每行列数必须与基准完全相同。
         # 抓到过的问题：某个语言少写一列，或某一行漏了一个单元格，表格渲染后
@@ -2799,6 +4817,9 @@ def check_article(slug, art, add):
                 continue
             _fm30, body30 = parsed[lg]
             res = latin_residue(body30)
+            for w in LATIN_SINGLE_SUSPECT:
+                if w in latin_residue(body30, 1):
+                    res.setdefault(w, 1)
             if res:
                 top = sorted(res.items(), key=lambda x: -x[1])[:5]
                 add("P30", "warning", "%s/%s" % (lg, slug),
@@ -2848,6 +4869,64 @@ def check_article(slug, art, add):
 
 # ---------------------------------------------------------------- P 系列：单文件文本健壮性（v1.2）
 
+# --- P38（v1.37）孟加拉文裸辅音 + CANDRABINDU ----------------------------
+# 判据依据、分母自证与射程声明写在 docstring【v1.37】，这里只留口径本身。
+BN_CANDRABINDU = chr(0x981)        # CANDRABINDU：标前一元音的鼻化
+BN_CONSONANT_LO = (0x0995, 0x09B9)  # ক..হ 裸辅音字母（category Lo）
+# 空表＝当前无豁免。每条豁免都是盲区入口：加条目之前必须先在语料里证明该词形
+# 真出现、且属合法异形，并把它写进电池的正/负对照两格里（否则豁免机制本身
+# 就是一张没人验过的空白通行证）。
+BN_CB_ALLOW = ()
+
+
+def _bn_word_at(line, i):
+    """第 i 位所在的「词」：按 Unicode 类别（Lo/Mn/Mc）连成一片。
+    不用 \\w —— 它会在元音符号处把孟加拉词切碎，报告里的词形不可读，
+    而词形正是这一条要给人眼复核的东西（v1.37 踩过：切碎的词形让审计脚本
+    把「无第二例」报成了假绿）。"""
+    lo = i
+    while lo > 0 and unicodedata.category(line[lo - 1]) in ("Lo", "Mn", "Mc"):
+        lo -= 1
+    hi = i
+    while hi + 1 < len(line) and unicodedata.category(line[hi + 1]) in ("Lo", "Mn", "Mc"):
+        hi += 1
+    return line[lo:hi + 1]
+
+
+def _bn_chandrabindu_hits(src):
+    """P38：返回 [(行号, 码位序号, 词形, 前一位码点串), ...]。
+
+    形状：CANDRABINDU(U+0981) 紧跟在裸辅音字母（U+0995..U+09B9, Lo）之后。
+   孟加拉文里ঁ 只能跟在元音字母/元音符号之后（辅音无কার时要写 ং），所以这
+    个形状不是风格问题而是**不成立**；它几乎总意味着一个元音符号（如 U+09C1）
+    被批量替换打成了 U+0981。
+    只管 Bengali 区段：同一形状在 Devanagari 里合法（ne 后置词 सँग、hi
+    महँगा），实测会误伤 29 处，所以不许扩到 hi/ne。
+    """
+    out = []
+    for i, ln in enumerate(src.split("\n"), 1):
+        for k, ch in enumerate(ln):
+            if ch != BN_CANDRABINDU or k == 0:
+                continue
+            prev = ln[k - 1]
+            o = ord(prev)
+            if not (BN_CONSONANT_LO[0] <= o <= BN_CONSONANT_LO[1]):
+                continue
+            if unicodedata.category(prev) != "Lo":
+                continue
+            w = _bn_word_at(ln, k)
+            if w in BN_CB_ALLOW:
+                continue
+            out.append((i, k, w, "U+%04X" % o))
+    return out
+
+
+def _fmt_p38(hits):
+    return "；".join("第 %d 行 %r（裸辅音 %s 后紧跟 CANDRABINDU，该行第 %d 码位）"
+                     % (ln, w, pred, k) for ln, k, w, pred in hits[:4]) + \
+        ("；等共 %d 处" % len(hits) if len(hits) > 4 else "")
+
+
 def _fmt_hits(items, limit=4):
     """v1.16：把 [(行号, 显示文本), ...] 聚合为人读消息。
     例：第 5 行 'the the'；第 9 行 'и и'；等共 7 处。
@@ -2856,6 +4935,167 @@ def _fmt_hits(items, limit=4):
     if len(items) > limit:
         parts.append("等共 %d 处" % len(items))
     return "；".join(parts)
+
+
+# --- P39（v1.39）电商复合词的 e- 前缀被空格拆开 ---------------------------
+# 正字法：e-commerce / e-handel / e-ticaret（连字符）。\w* 是必需的：土耳其语
+# 的格后缀（e ticarette）、北欧语的复合词（e handelskanal）都靠它接住；
+# 只按词边界写会整族漏判（r4 普查实证：tr 的 "e ticarette" 不在简单边界里）。
+E_COMMERCE_SPACED_RE = re.compile(
+    r"(?i)(?<![\w-])e[ \u00a0\u202f]+(?:commerce|handel|ticaret)\w*")
+# 只挂「e- 是正字法前缀」的语言。it/pt/ro/es 的 e 是连词（e commercio
+# 合法），不收；af/cs/sk/id/pl 借用同一前缀（e-handel / e-commerce），v1.40
+# 扩闸时实测 P0/F1 各有存量错形，收进来才不会让修好的地方再次失守。
+E_COMMERCE_SPACED_LANGS = frozenset(
+    ("en", "de", "nl", "da", "sv", "no", "tr", "af", "cs", "sk", "id", "pl"))
+
+
+def _p39_hits(src):
+    """P39：返回 [(行号, 命中文本), ...]。元数据与正文共用同一 predicate。"""
+    out = []
+    for ln, line in enumerate(src.split("\n"), 1):
+        for m in E_COMMERCE_SPACED_RE.finditer(line):
+            out.append((ln, m.group(0)))
+    return out
+
+
+# --- P40（v1.39）摘要终止标点 -------------------------------------------
+# 允许的句末标点：拉丁/中日韩句号、感叹号/问号（半角+全角）、天城文 danda、
+# 阿拉伯文句号、亚美尼亚句号、省略号、阿拉伯/乌尔都问号。
+EXCERPT_TERMINAL = frozenset(".。！？!?।۔։…؟")
+# 收尾引号/括号不属于句子内容：摘要末尾的 "…brand's." / 「…」/ (…) 先剥再判。
+EXCERPT_CLOSERS = "\"'”’»›)]）】」』》>"
+
+
+def _p40_bad_end(lang, excerpt):
+    """P40：返回 (是否不合格, 剥完收尾符后的末字符)。
+
+    th 整语豁免（泰文不以句末标点断句）。v1.40 起 hy 不再允许 ASCII ":"：
+    P0 的摘要已改用亚美尼亚句号 ։。空摘要返回 (False, "")，由 F02/F07
+    与 S09 管，本条不重复出声。
+    """
+    if lang == "th" or not excerpt.strip():
+        return (False, "")
+    s = excerpt.rstrip()
+    while s and s[-1] in EXCERPT_CLOSERS:
+        s = s[:-1].rstrip()
+    last = s[-1:] if s else ""
+    if last in EXCERPT_TERMINAL:
+        return (False, last)
+    return (True, last)
+
+
+# --- P41（v1.42）工作包表格 vs 表前包名列表 ------------------------------
+# F2 实证：表格 S1–S13 的包名与正文两条列表（S1–S5 / S6–S13）是同一份
+# 对外承诺的两种陈列；r5 逐语核对，29 语共 44 个单元格两边不一致（每语
+# 1–2 格），另有 hy 表前只剩 5 条带标签列表项；表格/列表各自内部自洽，
+# P24/P21 都不管「两处名字是否同字」。
+P41_ROW_RE = re.compile(r"^\|\s*(S\d{1,2})\s*\|")
+P41_LIST_RE = re.compile(r"^\s*(?:[-*+]|\d+[.)])\s+(.+?)\s*$")
+P41_LABEL_SEP_RE = re.compile(r"\s*[:：՝]\s*")
+
+
+def _p41_norm(s):
+    return re.sub(r"\s+", " ", s).strip()
+
+
+def _p41_table_bullet_errors(body):
+    """P41：返回错误串列表；没有 S0–S13 表时返回 []（该文章不适用）。
+
+    口径：表必须是连续、顺序完整的 S0–S13 十四行；表前最近 13 条「带标签
+    列表项」必须与 S1–S13 的表格名逐字相同。标签 = 列表项正文到第一个
+    `:` / `：` / 亚美尼亚 `՝` 之前的部分（英/日/亚美尼亚三种现有分隔形状）。
+    """
+    lines = body.split("\n")
+    start = next((i for i, l in enumerate(lines)
+                  if re.match(r"^\|\s*S0\s*\|", l)), None)
+    if start is None:
+        return []
+    rows = []
+    i = start
+    while i < len(lines) and lines[i].lstrip().startswith("|"):
+        cells = [c.strip() for c in lines[i].strip().strip("|").split("|")]
+        if cells and re.fullmatch(r"S\d{1,2}", cells[0]):
+            rows.append(cells)
+        i += 1
+    codes = [r[0] for r in rows]
+    want = ["S%d" % n for n in range(14)]
+    if codes != want:
+        return ["工作包表格行不完整或乱序（应有 S0–S13，实得 %s）"
+                % (", ".join(codes) or "无")]
+    names = []
+    for r in rows[1:]:
+        if len(r) < 2 or not _p41_norm(r[1]):
+            return ["工作包表格 %s 行缺少包名列" % r[0]]
+        names.append(_p41_norm(r[1]))
+    labels = []
+    for l in lines[:start]:
+        m = P41_LIST_RE.match(l)
+        if not m:
+            continue
+        sep = P41_LABEL_SEP_RE.search(m.group(1))
+        if not sep:
+            continue
+        label = m.group(1)[:sep.start()].strip().strip("*_ ").strip()
+        if label:
+            labels.append(_p41_norm(label))
+    if len(labels) < 13:
+        return ["表前带标签的列表项只有 %d 条，无法对应 S1–S13（应为 13 条包名）"
+                % len(labels)]
+    tail = labels[-13:]
+    bad = [(n, names[n - 1], tail[n - 1]) for n in range(1, 14)
+           if names[n - 1] != tail[n - 1]]
+    if not bad:
+        return []
+    msg = "工作包表格 S1–S13 与表前最近 13 条包名列表不一致："
+    msg += "；".join("S%d 表格「%s」/ 列表「%s」" % x for x in bad[:4])
+    if len(bad) > 4:
+        msg += "；等共 %d 处" % len(bad)
+    return [msg]
+
+
+# --- P42（v1.42）亚美尼亚文 ASCII 句点 --------------------------------
+# hy 的句末是 ։（U+0589），缩写 թվական 写「թ.」；正文里 ASCII "." 只剩
+# 小数、文件名/URL、代码三种合法来源。r5 全量修了 P0/F1/F2 共 221 处
+# ASCII 句点（其余命中全是这些豁免形）。掩码按等长空白替换，保留行号。
+P42_MDLINK_DEST_RE = re.compile(r"(?<=\])\([^)]*\)")
+P42_URL_RE = re.compile(r"https?://\S+")
+P42_CODE_RE = re.compile(r"`[^`\n]*`")
+P42_DECIMAL_RE = re.compile(r"\d\.\d")
+P42_TH_RE = re.compile(r"(?<!\S)թ\.(?=\s|\d|$)")
+
+
+def _p42_mask(text):
+    chars = list(text)
+    for rx in (P42_MDLINK_DEST_RE, P42_URL_RE, P42_CODE_RE,
+               P42_DECIMAL_RE, P42_TH_RE):
+        for m in rx.finditer(text):
+            for i in range(m.start(), m.end()):
+                if chars[i] != "\n":
+                    chars[i] = " "
+    return "".join(chars)
+
+
+def _p42_hy_ascii_periods(text):
+    """返回仍裸露的 ASCII 句点上下文列表（已掩掉链接/代码/小数/թ.）。"""
+    masked = _p42_mask(text)
+    out = []
+    for m in re.finditer(r"\.", masked):
+        a, b = max(0, m.start() - 24), min(len(text), m.end() + 24)
+        out.append(text[a:b].replace("\n", " "))
+    return out
+
+
+# --- P44（v1.42）韩语阿拉伯数字与量词「개」之间的空格 -----------------
+# 14개 是正字法；14 개 是逐词硬拆。只收阿拉伯数字 + 개（고유어 수사
+# 「열네 개」的写法合法，不在此列）。F2 实证一处。韩语标题里的「열네 개」
+# 不属本形状。
+P44_KO_COUNTER_RE = re.compile(r"\d+[ \t\u00a0\u202f]+개")
+
+
+def _p44_ko_counter_hits(src):
+    return [(ln, m.group(0)) for ln, line in enumerate(src.split("\n"), 1)
+            for m in P44_KO_COUNTER_RE.finditer(line)]
 
 
 def check_text_health(tag, lang, body, add):
@@ -2890,6 +5130,8 @@ def check_text_health(tag, lang, body, add):
                 continue
             if _code_hyphen_ok(tok):
                 continue  # v1.14：编号/代码-连字符-本地后缀（S1-ից、ל-US）是正当构词
+            if _p08_affix_ok(tok, lang):
+                continue  # v1.58：SKUها／C-ով／وS3 这类「大写代号＋本地词尾」同属正当构词
             sc = _token_scripts(tok)
             others = sc - {"LATIN"}
             if ("LATIN" in sc and others) or len(others) >= 2:
@@ -2907,11 +5149,33 @@ def check_text_health(tag, lang, body, add):
     # v1.14 白名单：部分语言的重叠副词（reduplication）是固定搭配——
     # tr "ayrı ayrı"（分别）、ur "باری باری"（轮流）等，站方回执的改法
     # 本身就使用这类形式，逐词组放行，不做整类豁免。
-    redup = REDUPLICATION_OK.get(lang, ())
-    hits = [(_line_of(body, m.start()), "%r" % m.group(0))
-            for m in REPEAT_WORD_RE.finditer(bare) if m.group(0).lower() not in redup]
+    # v1.43 德语关系从句：逗号引出的关系代词+定冠词同形（…, das das …）
+    # 是语法必需形状；只放行「逗号紧跟」的命中，无逗号的 das das 仍报。
+    # v1.58 切词改按 Unicode 类别（定义见 repeat_words）：假阳性（词内被 `\b`
+    # 切开）与盲区（元音符结尾的词进不了 `\w{2,}`）同源于「词」定义不一致，
+    # 一次改平；续词 lexeme 表也在这一层（REPEAT_LEXEME_NEXT）。
+    hits = [(_line_of(bare, a), "%r" % shape)
+            for a, b, shape in repeat_pair_hits(bare, lang)]
     if hits:
-        add("P10", "warning", tag, "出现重复单词: " + _fmt_hits(hits))
+        # v1.58 升 **error**。前置条件与 P51（v1.56）同一套，逐条核过：
+        # ① 六包＋sample 存量归零（改写 F2 7／F3 24／F4 26 处，另有 fi data、
+        #    zh practice；P0/F1/M1 本来就 0）；
+        # ② 判据两头先修平再升——一边消掉结合字母切词的假阳性，一边补上
+        #    元音符结尾词的盲区，否则升档要么判红正确稿件、要么根本抓不全；
+        # ③ 站方回执 v1.14 的口径本来就是「相邻重复词一律改写，即使语法成立」
+        #    （M1 收官批据此改了 21 处），warning 只是当时的存量过渡，不是判据留白。
+        add("P10", "error", tag, "出现重复单词: " + _fmt_hits(hits))
+    # P45 称呼语域混用（v1.43）：同一文件内非尊/尊第二人称标记并存。
+    # 口径：只认 REGISTER_MARKERS 词表内的代词/物主限定词层标记；
+    # 动词形态（hu -sz、ro 祈使）不在射程。报 warning 交人工终审。
+    pair = REGISTER_MARKERS.get(lang)
+    if pair:
+        lo_hits = pair[0].findall(body)
+        hi_hits = pair[1].findall(body)
+        if lo_hits and hi_hits:
+            add("P45", "warning", tag,
+                "称呼语域混用（非尊 %r × 尊 %r）；全文应统一尊形" %
+                (sorted(set(lo_hits))[:4], sorted(set(hi_hits))[:4]))
     # P12 CTA 冒号引出（应为自然融入式，链接内嵌句中；检查原始行含链接结构）
     hits = [(i, "CTA 用冒号引出链接") for i, ln in enumerate(lines, 1)
             if CTA_COLON_RE.search(ln)]
@@ -2944,6 +5208,24 @@ def check_text_health(tag, lang, body, add):
                 for m in FULLWIDTH_PUNCT_RE.finditer(bare)]
         if hits:
             add("P34", "warning", tag, "非 CJK 语言出现全角标点: " + _fmt_hits(hits))
+    # P38 孟加拉文裸辅音 + CANDRABINDU（v1.37）：码位形状，不判语义，error 级。
+    # 扫 body（含 alt 文字）而不是 bare：alt 也是对外文案，剥掉图片结构会漏。
+    cb38 = _bn_chandrabindu_hits(body)
+    if cb38:
+        add("P38", "error", tag,
+            "孟加拉文 CANDRABINDU(U+0981) 紧跟裸辅音字母，该形状在孟加拉正字法里"
+            "不成立（ঁ 只标前一元音的鼻化，须跟在元音字母/元音符号后；辅音后该写"
+            " anusvara U+0982）。多为批量替换把元音符号打成了 U+0981："
+            + _fmt_p38(cb38))
+    # P39（v1.39）正文同口径：e- 前缀被空格拆开是正字法问题。v1.40 起判
+    # error（P0/F1 的历史写法已在同批改净，不再留 warning 档）。
+    if lang in E_COMMERCE_SPACED_LANGS:
+        p39b = _p39_hits(body)
+        if p39b:
+            add("P39", "error", tag,
+                "正文电商复合词的 e- 前缀被空格拆开（正字法：e-commerce / "
+                "e-handel / e-ticaret；v1.40）: "
+                + _fmt_hits([(ln, "%r" % w) for ln, w in p39b]))
     # P16 强调符/圆括号不配对（多为漏改或截断）
     if body.count("**") % 2:
         add("P16", "warning", tag, "** 强调符数量为奇数（不配对）")
@@ -3070,10 +5352,50 @@ def check_body(tag, lang, body, image_files, slug, add):
         if re.search(pat, body, re.I):
             add("R05", "error", tag, "正文出现绝对否定表述（改写为建设性说法）")
             break
+    promise_hit = None
     for pat in PROMISE_RES:
-        if re.search(pat, body):
-            add("R06", "error", tag, "正文出现过度承诺（寄样安排/保证/时限）")
+        m = re.search(pat, body)
+        if m:
+            promise_hit = m.group(0)
             break
+    if not promise_hit and lang in PROMISE_BY_LANG:
+        m = re.search(PROMISE_BY_LANG[lang], body, re.I)
+        if m:
+            promise_hit = m.group(0)
+    if promise_hit:
+        add("R06", "error", tag,
+            "正文出现过度承诺（寄样安排/保证/时限）: %r" % promise_hit)
+
+    # R07 制作工具痕迹（v1.35）：对外文案不得暴露配图制作来源（PPT/页码）。
+    # 扫描前剥链接/图片目标与外链 URL（URL 里没有泄漏，别制造假命中），
+    # alt 文字与链接文字保留——泄漏恰恰藏在这些地方。
+    scan = re.sub(r"\]\([^)]+\)", "]()", body)
+    scan = re.sub(r"https?://\S+", " ", scan)
+    page_hit = _origin_page_hit(scan)
+    if page_hit:
+        add("R07", "error", tag, "正文出现来源页码引用（p15/第N页/page N 一类）: %r" % page_hit)
+    alt_hit = None
+    for m in re.finditer(r"!\[([^\]]*)\]", scan):
+        mm = ORIGIN_TOOL_ALT_RE.search(m.group(1))
+        if mm:
+            alt_hit = mm.group(0)
+            add("R07", "error", tag, "图片 alt 出现制作工具词（图注不得点名来源）: %r" % alt_hit)
+            break
+    if not page_hit and not alt_hit:
+        prose = re.sub(r"!\[[^\]]*\]", "![]", scan)
+        m = ORIGIN_TOOL_PROSE_RE.search(prose)
+        if m:
+            add("R07", "warning", tag,
+                "正文散文出现制作工具词（可能是合法修辞，人工判定）: %r" % m.group(0))
+
+    # R08（v1.37）签字人归属反模式（en/zh 母版口径，见常量处说明）：
+    # 与 R07 一样先剥链接目标与外链 URL，避免把 URL 里的英文当正文判。
+    if lang in ("en", "zh"):
+        h8 = _r08_hit(scan, lang)
+        if h8:
+            add("R08", "error", tag,
+                "正文把签字人写成包/交付物的所有者（母版口径：签字人＝责任人，"
+                "已交付件归品牌方）: %r" % h8[:70])
 
     # ST 写作纪律（方案 3.1 / 3.1a）
     check_style(tag, body, add, lang=lang)

@@ -14,6 +14,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import matter from 'gray-matter';
+import { isFilePublished } from './lib/publish-gate.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '../..');
@@ -71,6 +72,8 @@ function extractBlog(blogDir, locale, msg) {
   const posts = [];
 
   for (const file of fs.readdirSync(localeBlogDir).filter(f => f.endsWith('.mdx'))) {
+    // 定时发布：未到日期的稿子不进搜索索引
+    if (!isFilePublished(path.join(localeBlogDir, file))) continue;
     const content = fs.readFileSync(path.join(localeBlogDir, file), 'utf-8');
     const { data } = matter(content);
     const slug = data.slug || file.replace('.mdx', '');

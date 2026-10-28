@@ -188,6 +188,8 @@ const CHECK_LIST = [
 
   // ── 翻译检查（无需编译） ────────────────────────────────
   { script: 'check-translations.mjs', args: ['--short'] },
+  // 缺 key = 运行时会静默回退英文（同值 fallback 检查发现不了），必须卡在 CI
+  { script: 'check-message-keys.mjs', args: ['--quiet'] },
   { script: 'check-i18n-keys.mjs' },
   { script: 'check-i18n-coverage.mjs' },
   { script: 'check-report-rules.mjs' },

@@ -60,7 +60,8 @@
     "cat_Brand_Protection": "Handelsmerkbeskerming",
     "cat_Cosmetics": "Skoonheidsmiddels",
     "cat_E_commerce": "E-handel",
-    "cat_Food_Beverage": "Kos en drank"
+    "cat_Food_Beverage": "Kos en drank",
+    "service_brand": "Handelsmerkbeskerming"
   },
   "Cookie": {
     "message": "Hierdie webwerf gebruik slegs noodsaaklike verifikasiekoekies. Geen dop- of advertensiekoekies word gebruik nie.",

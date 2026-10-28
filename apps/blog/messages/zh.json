@@ -60,7 +60,8 @@
     "cat_Brand_Protection": "品牌保护",
     "cat_Cosmetics": "化妆品",
     "cat_E_commerce": "电子商务",
-    "cat_Food_Beverage": "食品饮料"
+    "cat_Food_Beverage": "食品饮料",
+    "service_brand": "品牌保护"
   },
   "Cookie": {
     "message": "本网站仅使用必要的身份验证Cookie。不使用跟踪或广告Cookie。",

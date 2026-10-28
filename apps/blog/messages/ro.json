@@ -60,7 +60,8 @@
     "cat_Brand_Protection": "Protecția mărcii",
     "cat_Cosmetics": "Cosmetice",
     "cat_E_commerce": "Comerț electronic",
-    "cat_Food_Beverage": "Alimente și băuturi"
+    "cat_Food_Beverage": "Alimente și băuturi",
+    "service_brand": "Protecția mărcii"
   },
   "Cookie": {
     "message": "Acest site folosește numai cookie-uri de autentificare esențiale. Nu sunt utilizate cookie-uri de urmărire sau de publicitate.",

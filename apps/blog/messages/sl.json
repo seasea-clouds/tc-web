@@ -60,7 +60,8 @@
     "cat_Brand_Protection": "Zaščita blagovne znamke",
     "cat_Cosmetics": "Kozmetika",
     "cat_E_commerce": "E-poslovanje",
-    "cat_Food_Beverage": "Hrana in pijača"
+    "cat_Food_Beverage": "Hrana in pijača",
+    "service_brand": "Zaščita blagovne znamke"
   },
   "Cookie": {
     "message": "To spletno mesto uporablja samo bistvene piškotke za preverjanje pristnosti. Piškotki za sledenje ali oglaševanje se ne uporabljajo.",

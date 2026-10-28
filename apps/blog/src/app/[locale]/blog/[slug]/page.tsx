@@ -247,6 +247,12 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
     '品牌保护': { href: '/services/brand', serviceKey: 'brand', icon: 'shield' },
   };
   const serviceInfo = CATEGORY_SERVICE_MAP[category];
+  // 服务名以 Navbar.servicesDropdown 为唯一来源（48 语言 × 6 个服务都齐，导航在用）；
+  // Blog.service_* 只是历史副本、曾有缺键（service_brand 漏过 → 回退英文分类名），仅作兜底
+  const serviceName = serviceInfo
+    ? msgs?.Navbar?.servicesDropdown?.[serviceInfo.serviceKey] ||
+      tb('service_' + serviceInfo.serviceKey, category)
+    : '';
 
   const articleJsonLd = {
     '@context': 'https://schema.org',
@@ -471,7 +477,7 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
                     </div>
                     <div className="flex-1">
                       <p className="text-sm mb-1 text-white/60">{tb('relatedServiceLabel', 'Need Help With This?')}</p>
-                      <h3 className="text-lg font-bold">{tb('service_' + serviceInfo.serviceKey, category)}</h3>
+                      <h3 className="text-lg font-bold">{serviceName}</h3>
                     </div>
                     <a
                       href={href(serviceInfo.href)}

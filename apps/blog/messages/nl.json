@@ -60,7 +60,8 @@
     "cat_Brand_Protection": "Merkbescherming",
     "cat_Cosmetics": "Cosmetica",
     "cat_E_commerce": "E-handel",
-    "cat_Food_Beverage": "Levensmiddelen en dranken"
+    "cat_Food_Beverage": "Levensmiddelen en dranken",
+    "service_brand": "Merkbescherming"
   },
   "Cookie": {
     "message": "Deze site gebruikt alleen essentiële authenticatiecookies. Er worden geen tracking- of advertentiecookies gebruikt.",

@@ -60,7 +60,8 @@
     "cat_Brand_Protection": "Brändinsuojaus",
     "cat_Cosmetics": "Kosmetiikka",
     "cat_E_commerce": "Verkkokauppa",
-    "cat_Food_Beverage": "Ruoka ja juoma"
+    "cat_Food_Beverage": "Ruoka ja juoma",
+    "service_brand": "Brändin suojaus"
   },
   "Cookie": {
     "message": "Tämä sivusto käyttää vain välttämättömiä todennusevästeitä. Mitään seuranta- tai mainosevästeitä ei käytetä.",

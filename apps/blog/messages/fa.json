@@ -60,7 +60,8 @@
     "cat_Brand_Protection": "حفاظت از برند",
     "cat_Cosmetics": "لوازم آرایشی",
     "cat_E_commerce": "تجارت الکترونیک",
-    "cat_Food_Beverage": "غذا و نوشیدنی"
+    "cat_Food_Beverage": "غذا و نوشیدنی",
+    "service_brand": "حفاظت از برند"
   },
   "Cookie": {
     "message": "این سایت فقط از کوکی های احراز هویت ضروری استفاده می کند. هیچ کوکی ردیابی یا تبلیغاتی استفاده نمی شود.",

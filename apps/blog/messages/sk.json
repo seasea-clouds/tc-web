@@ -60,7 +60,8 @@
     "cat_Brand_Protection": "Ochrana značky",
     "cat_Cosmetics": "Kozmetika",
     "cat_E_commerce": "Elektronický obchod",
-    "cat_Food_Beverage": "Potraviny a nápoje"
+    "cat_Food_Beverage": "Potraviny a nápoje",
+    "service_brand": "Ochrana značky"
   },
   "Cookie": {
     "message": "Táto stránka používa iba nevyhnutné overovacie súbory cookie. Nepoužívajú sa žiadne sledovacie ani reklamné súbory cookie.",

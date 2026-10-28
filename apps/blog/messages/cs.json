@@ -60,7 +60,8 @@
     "cat_Brand_Protection": "Ochrana značky",
     "cat_Cosmetics": "Kosmetika",
     "cat_E_commerce": "Elektronický obchod",
-    "cat_Food_Beverage": "Potraviny a nápoje"
+    "cat_Food_Beverage": "Potraviny a nápoje",
+    "service_brand": "Ochrana značky"
   },
   "Cookie": {
     "message": "Tento web používá pouze nezbytné ověřovací soubory cookie. Nejsou používány žádné sledovací ani reklamní soubory cookie.",

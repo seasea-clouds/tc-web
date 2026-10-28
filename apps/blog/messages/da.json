@@ -60,7 +60,8 @@
     "cat_Brand_Protection": "Brandbeskyttelse",
     "cat_Cosmetics": "Kosmetik",
     "cat_E_commerce": "E-handel",
-    "cat_Food_Beverage": "Mad & drikke"
+    "cat_Food_Beverage": "Mad & drikke",
+    "service_brand": "Brand beskyttelse"
   },
   "Cookie": {
     "message": "Dette websted bruger kun vigtige autentificeringscookies. Der bruges ingen sporings- eller reklamecookies.",

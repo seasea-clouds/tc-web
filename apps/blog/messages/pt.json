@@ -60,7 +60,8 @@
     "cat_Brand_Protection": "Proteção de Marca",
     "cat_Cosmetics": "Cosméticos",
     "cat_E_commerce": "Comércio Eletrônico",
-    "cat_Food_Beverage": "Alimentos e Bebidas"
+    "cat_Food_Beverage": "Alimentos e Bebidas",
+    "service_brand": "Proteção da marca"
   },
   "Cookie": {
     "message": "Este site utiliza apenas cookies de autenticação essenciais. Nenhum cookie de rastreamento ou publicidade é usado.",

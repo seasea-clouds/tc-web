@@ -60,7 +60,8 @@
     "cat_Brand_Protection": "Márkavédelem",
     "cat_Cosmetics": "Kozmetikumok",
     "cat_E_commerce": "E-kereskedelem",
-    "cat_Food_Beverage": "Élelmiszer és ital"
+    "cat_Food_Beverage": "Élelmiszer és ital",
+    "service_brand": "Márkavédelem"
   },
   "Cookie": {
     "message": "Ez az oldal csak alapvető hitelesítési cookie-kat használ. Nem használnak nyomkövető vagy hirdetési sütiket.",

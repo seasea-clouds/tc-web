@@ -4625,7 +4625,7 @@ def check_article(slug, art, add):
         if _ARTICLE_GLOSSARY_SEEN:
             add("P46", "warning", slug,
                 "发现文章级术语表 %s（文章级术语表已废止）：请把其中条目"
-                "合并进工具包术语表 kit/blog-submission-kit/glossary.json"
+                "合并进工具包术语表 docs/submission-kit/glossary.json"
                 "（专业术语全文章生效；标题/摘要结构契约用条款级 zh 锚"
                 "按内容绑定），然后删除该文件"
                 % os.path.relpath(_ARTICLE_GLOSSARY_SEEN))

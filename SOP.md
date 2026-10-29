@@ -164,7 +164,7 @@ curl -s -o /dev/null -w "%{http_code}\n" -x "http://<CN代理>" https://sinotrad
 ### 邮件审核流程（`/admin/emails`）
 ```
 免费自查 → POST /api/report/send-email → email_queue(pending)
-        → 后台「通过」(approved) → Worker tc-web-portal-email-cron（每 5 分钟）投递 → sent / failed(可重试)
+        → 后台「通过」(approved) → Worker tc-web-cron（每 5 分钟）投递 → sent / failed(可重试)
 付费交付 → Creem webhook 带 x-stc-internal 调同一端点 → 直接发送（不入队）
 ```
 - 迁移：`apps/admin/migrations/002-email-review.sql`（已应用到生产 D1）。
@@ -176,18 +176,20 @@ curl -sS -X POST -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
   -H "Content-Type: application/json" -d '{"sql":"CREATE TABLE IF NOT EXISTS ..."}' \
   "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/d1/database/$D1_DATABASE_ID/query"
 ```
-- 定时投递：独立 Worker **`tc-web-portal-email-cron`**（`apps/portal/workers/email-cron/`，wrangler.toml `crons = ["*/5 * * * *"]`）。
-  ⚠️ **Pages Functions 不支持 cron**（`_scheduled.ts` 的 schedule 不会被注册）——定时任务一律做成 Worker。
+- 定时投递：**`tc-web-cron`**（`workers/cron/`，wrangler.toml `crons = ["0 * * * *", "*/5 * * * *"]`，每 5 分钟那一跑负责邮件投递）。
+  原独立 Worker `tc-web-portal-email-cron` 已于 2026-10-29 并入 `tc-web-cron`。
+  ⚠️ **Pages Functions 不支持 cron**（`_scheduled.ts` 的 schedule 不会被注册）——定时任务一律放 `workers/cron/`。
 ```bash
-cd apps/portal/workers/email-cron
-set -a && . ../../../.env && set +a
+cd workers/cron
+set -a && . ../../.env && set +a
 npx wrangler secret put CREEM_WEBHOOK_SECRET <<< "$CREEM_WEBHOOK_SECRET"   # 首次
 npx wrangler deploy
 # 验证
-curl "https://tc-web-portal-email-cron.<subdomain>.workers.dev/health"
-curl -X POST -H "x-stc-internal: $CREEM_WEBHOOK_SECRET" \
-  "https://tc-web-portal-email-cron.<subdomain>.workers.dev/run?limit=5"   # 手动排空
-npx wrangler tail tc-web-portal-email-cron                                  # 看 5 分钟一次 scheduled run
+curl -H "Authorization: Bearer $CRON_SECRET" \
+  "https://tc-web-cron.sea-clouds.workers.dev/email/health"
+curl -H "Authorization: Bearer $CRON_SECRET" \
+  "https://tc-web-cron.sea-clouds.workers.dev/email/run?limit=5"           # 手动排空
+npx wrangler tail tc-web-cron                                              # 看 5 分钟一次 scheduled run
 ```
 - portal 侧内部端点：`POST /api/report/drain`（需 `x-stc-internal`，返回 `{processed,sent,failed}`）
 - 入队规则：报告必须已存在；同报告+收件人 24h 去重；单报告 24h 最多 5 条。

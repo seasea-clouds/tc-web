@@ -13,7 +13,7 @@
  *
  * 类型判定：读 submission.json 的 `kind` 字段（"blog" 默认 / "regulation"），
  * 决定落盘到 apps/blog 还是 apps/regulations。两类共用同一个检查脚本
- * （docs/blog-submission/submitter_check.py），站方不回改内容。
+ * （docs/submission-kit/submitter_check.py），站方不回改内容。
  */
 
 import fs from 'node:fs';
@@ -24,7 +24,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, '../..');
-const checker = path.join(repoRoot, 'docs/blog-submission/submitter_check.py');
+const checker = path.join(repoRoot, 'docs/submission-kit/submitter_check.py');
 
 const TARGETS = {
   blog: {

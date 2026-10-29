@@ -5,10 +5,11 @@
 #
 # 部署：cd workers/cron && npx wrangler deploy
 # secrets（部署前设一次）：
-#   CLOUDFLARE_API_TOKEN  — Analytics 读 + Pages 重建
-#   CLOUDFLARE_ZONE_ID    — Analytics 读的 zone
-#   PAGES_ACCOUNT_ID      — CF 账号 id（Pages 部署接口用）
-#   CRON_SECRET           — HTTP 手动触发的 Bearer 校验
+#   CLOUDFLARE_API_TOKEN   — Analytics 读 + Pages 重建
+#   CLOUDFLARE_ZONE_ID     — Analytics 读的 zone
+#   PAGES_ACCOUNT_ID       — CF 账号 id（Pages 部署接口用）
+#   CRON_SECRET            — HTTP 手动触发的 Bearer 校验
+#   CREEM_WEBHOOK_SECRET   — 调 portal /api/report/drain 的内部口令（与 portal Pages 同值）
 
 name = "tc-web-cron"
 main = "src/index.ts"
@@ -19,5 +20,10 @@ binding = "DB"
 database_name = "trade-web-portal-db"
 database_id = "e84f0762-9a93-4ede-ac19-aef7325e7ebd"
 
+[vars]
+PORTAL_URL = "https://tc-web-portal.pages.dev"
+
 [triggers]
-crons = ["0 * * * *"]
+# 0 * * * *   → Analytics 同步（UTC 01:00 那一跑顺带重建 blog/regulations）
+# 每 5 分钟   → 报告邮件投递
+crons = ["0 * * * *", "*/5 * * * *"]

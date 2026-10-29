@@ -167,8 +167,8 @@ Portal 通过主站边缘 Worker 代理到 `/{locale}/c/*` 路径访问。
 
 **2. 开放邮件接口：`POST /api/report/send-email` 无鉴权、收件人自定**
 - 免费流程改为**入队待审**（D1 `email_queue`，迁移 `apps/admin/migrations/002-email-review.sql`），后台 **`/admin/emails`** 审核：`pending → approved → sent`，或 `rejected`；失败 `failed` 可 retry。
-- 投递由独立 Worker `tc-web-portal-email-cron`（cron 每 5 分钟 → POST portal `/api/report/drain`，带 `x-stc-internal`）执行；公开端点每次被调时也会 `waitUntil` 顺带 drain 一小批（兜底）。
-  ⚠️ 初版写成 `apps/portal/functions/_scheduled.ts`，但 **Pages Functions 不支持 cron**（见踩坑 8 更正），已改为独立 Worker。
+- 投递由定时任务 Worker `tc-web-cron`（cron 每 5 分钟 → POST portal `/api/report/drain`，带 `x-stc-internal`；2026-10-29 由 `tc-web-portal-email-cron` 并入）执行；公开端点每次被调时也会 `waitUntil` 顺带 drain 一小批（兜底）。
+  ⚠️ 初版写成 `apps/portal/functions/_scheduled.ts`，但 **Pages Functions 不支持 cron**（见踩坑 8 更正），已改为 Worker（现统一在 `workers/cron/`）。
 - 付费/内部邮件（Creem webhook 调用，带 `x-stc-internal: <CREEM_WEBHOOK_SECRET>`）**不进队列**，即时发送——付费交付不能等人工。
 - 防滥用：报告必须已存在；同报告+收件人 24h 去重；单报告 24h 最多 5 条；发送前 `attempts` 占位防 cron/请求并发重发。
 
@@ -357,7 +357,7 @@ GitHub 仓库从 `seasea-clouds/trade-web` 切换到 `seasea-clouds/tc-web`（�
 
 ### 踩坑 8：Pages cron（_scheduled.ts）—— 更正：Pages Functions 根本不支持 cron（2026-09-13）
 - ⚠️ **更正（2026-09-13）**：Cloudflare Pages Functions **不支持 cron trigger**，`export const config = { schedule }` 不会被注册。**`apps/admin/functions/_scheduled.ts`（admin 每小时分析回填）从未按计划运行过**，历史上每小时的数据是独立的定时任务 Worker（当时名 `tc-web-admin-analytics-cron`，2026-10-29 改名 `tc-web-cron`）写的。该文件已于 2026-09-13 删除；admin Pages 项目本来也没有 `CLOUDFLARE_API_TOKEN`/`CLOUDFLARE_ZONE_ID`，即便触发也是空转。
-- 结论：**任何需要定时执行的任务都必须做成独立 Worker**（统一放 `workers/cron/` = `tc-web-cron`；`apps/portal/workers/email-cron` 属 portal 强耦合例外），不要写 `functions/_scheduled.ts`。
+- 结论：**任何需要定时执行的任务都必须做成独立 Worker**（统一放 `workers/cron/` = `tc-web-cron`，含原 portal 的邮件投递），不要写 `functions/_scheduled.ts`。
 - 下面的旧记录保留供对照：`_scheduled.ts` 必须通过 git push 触发 CF Pages 构建才能注册调度（实际上即使走了构建管线也不会注册）。
 - 独立 Worker 的 cron 在 wrangler.toml `[triggers] crons` 定义，`wrangler deploy` 直接生效。
 
@@ -467,7 +467,7 @@ GitHub 仓库从 `seasea-clouds/trade-web` 切换到 `seasea-clouds/tc-web`（�
 - 教训：`check-translations.mjs` 的英文残留检测能兜住「语言错位」，批量写入后必须第一时间跑它
 
 ## 踩坑 18：博客投稿工具包（2026-10-17）
-- 投稿流程做成「作者交 48 语言 + 图片 → 作者自检 → 我端同一脚本复检 → 直接落盘」，规则只写一份：`docs/blog-submission/submitter_check.py`，`packages/scripts/submission-intake.mjs` 只做编排（解压/调用/落盘），避免两套规则漂移
+- 投稿流程做成「作者交 48 语言 + 图片 → 作者自检 → 我端同一脚本复检 → 直接落盘」，规则只写一份：`docs/submission-kit/submitter_check.py`，`packages/scripts/submission-intake.mjs` 只做编排（解压/调用/落盘），避免两套规则漂移
 - **CI 误判**：`check-md-article` 的 R11 取「最后 10 行第一个 markdown 链接」，正文末尾有配图时会把 `![alt](src)` 当成 CTA 报错 → 改为 `(?<!!)\[...\]\(...\)`，只认真正链接
 - 校验脚本自身也踩过同样坑：CTA 检测要先排除图片语法，`cover.webp` 不要求正文引用（它只用于列表卡片与分享图）
 - 图片尺寸解析用纯标准库手写 WebP/PNG/JPEG 头解析（VP8 / VP8L / VP8X 三种分块），作者端无需装 Pillow
@@ -525,7 +525,7 @@ RSC flight payload，blog 子站的页面级 payload 文件名是 `<route>/index
 **3. Worker 不能放 `apps/`**：`ci-check.mjs` 的 `ALL_PROJECTS` 按 `apps/<x>/{src,package.json,…}`
 判定「项目」，会给 Worker 套 `check-i18n-keys`（找不到 `messages/en.json`）和 `check-console`
 （禁 `console.log`）。移到 `workers/` 顶目录 —— 分类正确，规则一字未放宽。
-注意 `apps/portal/workers/email-cron/` 那种嵌法**没事**：判定只看 `apps/<x>` 这一层，
+注意 `apps/<x>/workers/<name>/` 那种嵌法**没事**：判定只看 `apps/<x>` 这一层，
 `workers/` 子目录不算项目。所以「跟 app 强耦合就嵌在 `<app>/workers/`，独立的放顶层 `workers/`」。
 （两个 Worker 的完整对比见 `workers/README.md`）
 

@@ -1,4 +1,4 @@
-# 投稿工具包（Submission Kit · 博客 + 法规 · 自检脚本 v1.59）
+# 投稿工具包（Submission Kit · 博客 + 法规 · 自检脚本 v1.60）
 
 这是 sinotradecompliance.com 的投稿工具包，**博客文章与法规文章共用同一个包、同一套检查脚本**。
 你写 **48 个语言**的同一篇内容（+ 博客需要配图），用本包里的脚本自检通过后，把 zip 交回即可直接上线——我们不做二次润色，**脚本通过即定稿**。
@@ -9,7 +9,7 @@
 > **文档分工，各司其职**：
 > **SPEC.md = 全部验收规则**（目录结构 / frontmatter / 48 语言 / 正文 / 图片 / 红线 / ST 写作纪律 / P 一致性，含完整规则表）——查"规则是什么、为什么被判错"去那里；
 > **本 README = 使用说明**（上手步骤、脚本命令、输出解读、流程、避坑）——不重复规则正文。
-> 两份文档均为 v1.58。
+> 两份文档均为 v1.60。
 
 ---
 
@@ -17,7 +17,7 @@
 
 ```bash
 # 1) 复制模板
-cp -r template my-article
+cp -r template-blog my-article
 # 2) 改 submission.json 与 content/en/<slug>.mdx，再把 48 个语言都写齐
 # 3) 制图（webp），放到 my-article/images/<slug>/
 # 4) 自检；通过后让脚本直接打包（0 error 才出 zip）
@@ -36,8 +36,9 @@ python3 submitter_check.py my-article --pack=my-article-submission.zip
 README.md              本文件（使用说明）
 SPEC.md                全部验收规则（含 ST/P 规则表，被判错先查这里）
 locales.json           48 语言代码 / 目录名 / 语言名
+glossary.json          术语表（改词形前先查这里，避免同一概念各语言写法不一致）
 submitter_check.py     自检与打包脚本（纯 Python 标准库，无需安装依赖）
-template/              空白模板：博客用（submission.json + 一个 en 骨架）
+template-blog/         空白模板：博客用（submission.json + 一个 en 骨架）
 template-regulation/   空白模板：法规用（多出 docNumber/issuer/status 等字段、正文带原文分隔标记）
 sample/                一篇**完整合格**的 48 语言样例（含 2 张标准图）
 ```

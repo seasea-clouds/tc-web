@@ -8,7 +8,7 @@
  *                                              → 发送 → 'sent' / 'failed'
  *   付费/内部（Creem webhook，带 x-stc-internal）→ 跳过审核，即时发送
  *
- * 发送时机：独立 Worker `tc-web-portal-email-cron`（cron 每 5 分钟，调 /api/report/drain）
+ * 发送时机：定时任务 Worker `tc-web-cron`（cron 每 5 分钟，调 /api/report/drain）
  *         + 公开端点被调用时 waitUntil 顺带 drain 一小批（兜底）。
  *         Pages Functions 不支持 cron，故不用 _scheduled.ts。
  */

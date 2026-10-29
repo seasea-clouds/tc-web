@@ -5,7 +5,7 @@
  * Header: x-stc-internal: <CREEM_WEBHOOK_SECRET>
  *
  * 取出 email_queue 里已由管理员审核通过（status='approved'）的报告邮件并发送。
- * 调用方：独立 Worker `tc-web-portal-email-cron`（每 5 分钟，wrangler cron trigger）。
+ * 调用方：定时任务 Worker `tc-web-cron`（每 5 分钟，wrangler cron trigger）。
  *
  * 为什么用独立 Worker 而不是 Pages Functions 的 _scheduled.ts：
  *   Cloudflare Pages Functions **不支持** cron trigger（schedule 导出不会注册），

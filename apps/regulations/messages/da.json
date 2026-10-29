@@ -38,7 +38,14 @@
     "filterStatus": "Tilstand",
     "filterAll": "Alle",
     "filterReset": "Nulstil",
-    "filterEmpty": "Ingen dokumenter matcher disse filtre."
+    "filterEmpty": "Ingen dokumenter matcher disse filtre.",
+    "cat_food_registration": "Fødeværeregistrering",
+    "cat_label": "Mærkning",
+    "cat_cosmetics": "Kosmetik",
+    "cat_medical_device": "Medicinsk udstyr",
+    "cat_ecommerce": "Grænseoverskridende e-handel",
+    "cat_brand": "Varemærke og IP",
+    "cat_other": "Andet"
   },
   "Cookie": {
     "message": "Dette websted bruger kun vigtige autentificeringscookies. Der bruges ingen sporings- eller reklamecookies.",

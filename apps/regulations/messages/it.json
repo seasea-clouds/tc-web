@@ -38,7 +38,14 @@
     "filterStatus": "Stato",
     "filterAll": "Tutti",
     "filterReset": "Reimposta",
-    "filterEmpty": "Nessun documento corrisponde a questi filtri."
+    "filterEmpty": "Nessun documento corrisponde a questi filtri.",
+    "cat_food_registration": "Registrazione alimentare",
+    "cat_label": "Etichettatura",
+    "cat_cosmetics": "Cosmetici",
+    "cat_medical_device": "Dispositivi medici",
+    "cat_ecommerce": "E-commerce transfrontaliero",
+    "cat_brand": "Marchio e PI",
+    "cat_other": "Altro"
   },
   "Cookie": {
     "message": "Questo sito utilizza solo cookie di autenticazione essenziali. Non vengono utilizzati cookie di tracciamento o pubblicitari.",

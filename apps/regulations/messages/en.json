@@ -38,7 +38,14 @@
     "filterStatus": "Status",
     "filterAll": "All",
     "filterReset": "Reset",
-    "filterEmpty": "No documents match these filters."
+    "filterEmpty": "No documents match these filters.",
+    "cat_food_registration": "Food registration",
+    "cat_label": "Labeling",
+    "cat_cosmetics": "Cosmetics",
+    "cat_medical_device": "Medical devices",
+    "cat_ecommerce": "Cross-border e-commerce",
+    "cat_brand": "Brand and IP",
+    "cat_other": "Other"
   },
   "Cookie": {
     "message": "This site uses only essential authentication cookies. No tracking or advertising cookies are used.",

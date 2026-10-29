@@ -38,7 +38,14 @@
     "filterStatus": "Vəziyyət",
     "filterAll": "Hamısı",
     "filterReset": "Sıfırla",
-    "filterEmpty": "Bu filtrlərə uyğun sənəd yoxdur."
+    "filterEmpty": "Bu filtrlərə uyğun sənəd yoxdur.",
+    "cat_food_registration": "Qida qeydiyyatı",
+    "cat_label": "Etiketləmə",
+    "cat_cosmetics": "Kosmetika",
+    "cat_medical_device": "Tibbi cihazlar",
+    "cat_ecommerce": "Transsərhəd e-ticarət",
+    "cat_brand": "Brend və ƏM",
+    "cat_other": "Digər"
   },
   "Cookie": {
     "message": "Bu sayt yalnız əsas autentifikasiya kukilərindən istifadə edir. Heç bir izləmə və ya reklam kukilərindən istifadə edilmir.",

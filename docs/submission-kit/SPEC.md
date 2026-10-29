@@ -603,6 +603,31 @@ R01 号位保留空置，不复用。
 
 一句话：**解读段按我方作者标准查，官方译本按「排版 + 术语 + 数字」标准查，只有标点文风与历史机构名不追究。**
 
+### 12.6 法规字段一律落进固定集合（v1.65）
+
+法规页面是**结构化数据**，不是自由文本。所有能枚举的字段都限定死，投稿者不能自创值，
+脚本逐条校验（R16–R21）：
+
+| 字段 | 允许值 | 说明 |
+|---|---|---|
+| `date` | **必须等于 `publishedAt`** | 法规自身发布日，不是我方上站日（R16） |
+| `publishedAt` | `YYYY-MM-DD` | 法规发布日（页面元信息第一列以外的主时间） |
+| `effectiveAt` | `YYYY-MM-DD` | 施行日；与发布日相同就写相同日期 |
+| `status` | `in_force` / `upcoming` / `amended` / `repealed` / `draft` | 现行/未生效/已修订/已废止/草案 |
+| `category` | `food-registration` / `label` / `cosmetics` / `medical-device` / `ecommerce` / `brand` / `other` | kebab-case slug，前端按 `Regulations.cat_<slug>` 本地化 |
+| `issuer` | `GACC` / `SAMR` / `NMPA` / `MARA` / `MOFCOM` / `STA` / `CNIPA` / `NPC` / `SC` / `MIIT` / `MEE` / `NHFPC` | 官方英文缩写，全站不翻译 |
+| `relatedService` | `/services/gacc/` `/label/` `/ccc/` `/cosmetics/` `/ecommerce/` `/brand/` | 站内真实存在的服务页，指错就 404 |
+| `images` | 必须是 `[]` | 法规不使用配图 |
+| frontmatter 键 | **恰好 12 个**：title / slug / date / category / excerpt / doc_number / issuer / published_at / effective_at / status / source_url / related_service | 多一个少一个都报错（F02） |
+
+**标题格式（R20）**：中文母版标题翻成译文后，**标点与空格必须一模一样**——
+首尾空格、连续空格、末尾标点都不行；括号/引号/书名号/冒号/逗号/句号/分号/问号/
+感叹号/破折号/斜杠/竖线/等号各类的**数量**要跟 zh 母版逐类相同。
+中文写《办法》译文就得有对应书名号或引号，中文没标点译文也不许自己加。
+
+**解读篇幅（R21）**：解读段（`<!-- original -->` 之前）不得超过全文译本（之后）的**一半**。
+法规页的主角是官方文本，解读只做提要；把解读写成半篇文章的稿子会被退回。
+
 ### 12.5 法规样例
 
 `sample/regulation/sample-import-food-producer-registration/` 是一篇法规样例（48 语言）：
@@ -628,6 +653,12 @@ R01 号位保留空置，不复用。
 | R13 | error | 法规 submission.json 缺 `docNumber` / `issuer` / `publishedAt` / `effectiveAt` / `status` / `sourceUrl` 之一 |
 | R14 | error | `status` 不在 5 个枚举值内 |
 | R15 | error | `title` 里出现 `docNumber` 的字号字样（文号应只出现在 `doc_number` 字段） |
+| R16 | error | **`date` 必须等于 `publishedAt`（法规自身的发布日期）** —— 不是我方上站的日子。排序、元信息、sitemap 全部以 `published_at` 为准，两者不一致会出现「站内说某日发布、法规实际另一日发布」 |
+| R17 | error | `category` 必须是固定枚举：`food-registration` / `label` / `cosmetics` / `medical-device` / `ecommerce` / `brand` / `other`（kebab-case slug，前端筛选下拉直接用 `Regulations.cat_<slug>` 本地化） |
+| R18 | error | `issuer` 必须是固定枚举：`GACC` / `SAMR` / `NMPA` / `MARA` / `MOFCOM` / `STA` / `CNIPA` / `NPC` / `SC` / `MIIT` / `MEE` / `NHFPC`（官方英文缩写，全站不翻译） |
+| R19 | error | `relatedService` 必须是站内真实存在的服务页：`/services/gacc/` `/label/` `/ccc/` `/cosmetics/` `/ecommerce/` `/brand/` |
+| R20 | error | **译文标题的标点与空格式必须与中文母版一致**：首尾不得有空格、不得连续空格、不得以标点收尾；各类标点（括号/引号/书名号/冒号/逗号/句号/分号/问号/感叹号/破折号/斜杠/竖线/等号）的**数量**必须与 zh 母版逐类相同 |
+| R21 | error | **解读段不得超过全文译本的一半**：法规页主体是官方文本，解读只做提要。按可见字符计（剔除空白与 markdown 标记），`解读字符数 × 2 > 全文译本字符数` 即判不合格 |
 
 ---
 
@@ -645,6 +676,7 @@ R01 号位保留空置，不复用。
 
 | 版本 | 日期 | 内容 |
 |---|---|---|
+| v1.65 | 2026-10-29 | **法规字段全面集合化 + 五条新规则（规则 128 → 133）**。用户指令：所有能限定到具体集合的一律限定。①**R16** `date` 必须等于 `publishedAt` —— 法规日期是法规自己的发布日，不是我方上站日（REG2 实证：包内 date 写 2026-10-29、法规实际 2026-10-23，站内排序与元信息全以 published_at 为准，两者不一致就会出现"站内说某日发布、法规并非那日"）。②**R17** category 固定枚举 7 类（food-registration/label/cosmetics/medical-device/ecommerce/brand/other，kebab-case slug）。③**R18** issuer 固定枚举 12 个官方缩写。④**R19** relatedService 限定为站内真实存在的 6 个服务页。⑤**R20** 译文标题标点与空格式必须与中文母版逐类一致（首尾空格/连续空格/末尾标点/13 类标点计数）。⑥**R21** 解读段字符数不得超过全文译本的一半。配套：§12.6 新增「法规字段一律落进固定集合」字段表；站内补 48 语言法规分类标签（`Regulations.cat_*` × 7），筛选下拉不再露出英文 slug。 |
 | v1.64 | 2026-10-29 | **REG1 法规线首轮回填：判据精化与根因提示，规则号不变（仍 128 条）＋ pack.py 条目级自适应（用户指令：43 条 W02 属翻译自然膨胀要优化进脚本、本次问题和经验固化到检查脚本与术语表、统一使用打包脚本）**。①W02 膨胀感知（判据变更）：与母版逐块对齐成功时段长 ≤ 母版段长 × 膨胀系数（拉丁 5.0 / CJK 1.5 / dense 3.0）放行，REG1 实测法律条文拉丁膨胀 2.9-5.5x 中位 3.86x；对齐失败退回纯绝对阈值；每语言汇总式报告。REG1 warning 43 → 5，剩余 5 条均为超膨胀比的真实提醒。②P21/P26/R10/S08 报错附根因提示（判据不变）：`_block_misalign_hints` 探测条文号孤儿块（加粗标记行行尾 NBSP＋空行）/ 开场段「数字. 」误判列表 / H2 粘连三类 REG1 实证根因；R10 探测含非 ASCII 的 HTML 注释（sr 转写把 `<!-- original -->` 转成 оригинал 的实证）；S08 锚点块为 H2 时写明「标题也受契约约束」。③P10 白名单收口两条：sw 指示词强调重叠 hiyo hiyo / huo huo（改写丢义，同 si එක් එක් 限定词口径）；fr 反身结构 nous nous / vous vous（语法必需形状，同 de „das das" 口径）。④glossary 升 1.58：terms 123 → 125，新增 gacc150-filing-instrument（REG1 第十条「备案」20 语词形实测定稿，ru/pl 收词干覆盖屈折形态——首版主格词形被格变化打红即时修正）与 gacc150-two-track-registration（解读段两制度并存，ja/ko/vi 注册侧词形钉位；多语同形靠语境区分不设 require）。⑤pack.py 升级条目级自适应：候选条目先单独预检（checker 单跑，~3s/条），0 error 才进包，半成品自动跳过并给首条 error（不再卡死整包、不再需要手工 staging 绕行）；新增 --only=blog|regulation / --slug（可多次）/ --strict。验证：sample 两类 + REG1 + 博客线 7 篇（含 M2 存量 83 warning 与本次改动无关）全部 PASS 0 error；假半成品注入臂（48 error 缺语言）正确跳过；--only=regulation / --only=blog 两路出包正常。 |
 | v1.63 | 2026-10-29 | **三条指令落地**。①**删除 R01**：「一律写 280 号令」不是通用规则（用户裁定），号令编号属事实引用；R01 号位空置不复用。②**R02 改为语境判断**：禁的是「把已撤销机构当现行机构」，同段出现 `formerly`/`原…改组为`/`renamed` 等沿革词即放行（同时修正事实错误：CFDA 的现行承接机构是 **NMPA**，不是 SAMR）。③**布局硬切换**：只认 `blog/<slug>/` 与 `regulation/<slug>/`，旧的 `articles/<slug>/` 出现即报 S01 并停止支持（checker 与 intake 两侧一致，不留兼容层）。站点侧同步修正：`pet-food-brand-gacc-registration` 与 `china-market-entry-compliance-guide` 共 547 处把 MOA 当现行机构的写法改为 MARA（46 语言），此外 ar 6 处、be 2 处旧全称补为「农业与农村事务部」，ko 1 处误用韩国部门名 `농림축산부` 改为 `농업농촌부`；历史文件标题（2014 年农业部令）按原名保留不改，`cosmetics-nmpa-filing` 的 `NMPA, formerly CFDA` 本就正确不动。 |
 | v1.62 | 2026-10-29 | **法规检查口径修正 + 样例分目录**。①`sample/` 改为按类型分目录：`sample/blog/<slug>/` 与 `sample/regulation/<slug>/`，每类可放任意多篇；checker 的 S01 同时认 `articles/<slug>/`（交付格式）与 `blog|regulation/<slug>/`（分类格式），新增 **M11** 校验「目录类型 vs submission.json 的 kind」；②R01 改判定口径：原本一刀切禁 248/249，改为扫全文但同段含沿革词（replaces/取代/废止…）放行 —— 它是「不许把旧号令当现行依据」，不是禁用数字，且对博客同样生效；③§12.4 重写并明确：**官方译本段照查段落格式（B 全系列）与术语一致性（S08/P43/S09/S11）与数字（P19/P36/P26）**，只放宽 ST01/ST02（破折号）与 R02（历史机构名），B09/I02 整篇不要求；④README 显式写明样例正文是压缩的、真实投稿必须交全文。验证：sample 两类同跑 PASS（0 error, 2 warning）；负向电池 4 组全中（B01/B02 注入官方译本段 → 报错、R01 沿革语境 → 放行、R01 当现行依据 → 报错、M11 把法规放 blog/ → 报错）；blog/ 放两篇正确识别。 |

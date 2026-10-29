@@ -38,7 +38,14 @@
     "filterStatus": "Stav",
     "filterAll": "Všetko",
     "filterReset": "Obnoviť",
-    "filterEmpty": "Žiadny dokument nezodpovedá týmto filtrom."
+    "filterEmpty": "Žiadny dokument nezodpovedá týmto filtrom.",
+    "cat_food_registration": "Registrácia potravín",
+    "cat_label": "Označovanie",
+    "cat_cosmetics": "Kozmetika",
+    "cat_medical_device": "Zdravotnícke pomôcky",
+    "cat_ecommerce": "Cezhraničný e-commerce",
+    "cat_brand": "Značka a duševné vlastníctvo",
+    "cat_other": "Ostatné"
   },
   "Cookie": {
     "message": "Táto stránka používa iba nevyhnutné overovacie súbory cookie. Nepoužívajú sa žiadne sledovacie ani reklamné súbory cookie.",

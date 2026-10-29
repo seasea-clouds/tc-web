@@ -38,7 +38,14 @@
     "filterStatus": "Toestand",
     "filterAll": "Alle",
     "filterReset": "Herstel",
-    "filterEmpty": "Geen dokumente stem ooreen met hierdie filters nie."
+    "filterEmpty": "Geen dokumente stem ooreen met hierdie filters nie.",
+    "cat_food_registration": "Voedselregistrasie",
+    "cat_label": "Etikettering",
+    "cat_cosmetics": "Kosmetika",
+    "cat_medical_device": "Mediese toestelle",
+    "cat_ecommerce": "Grensoverskrydende e-handel",
+    "cat_brand": "Handelsmerk en IP",
+    "cat_other": "Ander"
   },
   "Cookie": {
     "message": "Hierdie webwerf gebruik slegs noodsaaklike verifikasiekoekies. Geen dop- of advertensiekoekies word gebruik nie.",

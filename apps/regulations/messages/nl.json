@@ -38,7 +38,14 @@
     "filterStatus": "Toestand",
     "filterAll": "Alle",
     "filterReset": "Herstellen",
-    "filterEmpty": "Geen documenten die aan deze filters voldoen."
+    "filterEmpty": "Geen documenten die aan deze filters voldoen.",
+    "cat_food_registration": "Levensmiddelenregistratie",
+    "cat_label": "Etikettering",
+    "cat_cosmetics": "Cosmetica",
+    "cat_medical_device": "Medische hulpmiddelen",
+    "cat_ecommerce": "Grensoverschrijdende e-commerce",
+    "cat_brand": "Merk en IP",
+    "cat_other": "Overige"
   },
   "Cookie": {
     "message": "Deze site gebruikt alleen essentiële authenticatiecookies. Er worden geen tracking- of advertentiecookies gebruikt.",

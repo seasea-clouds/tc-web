@@ -38,7 +38,14 @@
     "filterStatus": "Stand",
     "filterAll": "Alle",
     "filterReset": "Zurücksetzen",
-    "filterEmpty": "Keine Dokumente entsprechen diesen Filtern."
+    "filterEmpty": "Keine Dokumente entsprechen diesen Filtern.",
+    "cat_food_registration": "Lebensmittelregistrierung",
+    "cat_label": "Kennzeichnung",
+    "cat_cosmetics": "Kosmetik",
+    "cat_medical_device": "Medizinprodukte",
+    "cat_ecommerce": "Grenzüberschreitender E-Commerce",
+    "cat_brand": "Marke und IP",
+    "cat_other": "Sonstiges"
   },
   "Cookie": {
     "message": "Diese Website verwendet nur unbedingt erforderliche Authentifizierungscookies. Es werden keine Tracking- oder Werbecookies verwendet.",

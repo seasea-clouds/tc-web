@@ -38,7 +38,14 @@
     "filterStatus": "Estat",
     "filterAll": "Tots",
     "filterReset": "Restableix",
-    "filterEmpty": "Cap document no coincideix amb aquests filtres."
+    "filterEmpty": "Cap document no coincideix amb aquests filtres.",
+    "cat_food_registration": "Registre alimentari",
+    "cat_label": "Etiquetatge",
+    "cat_cosmetics": "Cosmètica",
+    "cat_medical_device": "Dispositius mèdics",
+    "cat_ecommerce": "Comerç electrònic transfronterer",
+    "cat_brand": "Marca i PI",
+    "cat_other": "Altres"
   },
   "Cookie": {
     "message": "Aquest lloc només utilitza cookies d'autenticació essencials. No s'utilitzen cookies de seguiment ni de publicitat.",

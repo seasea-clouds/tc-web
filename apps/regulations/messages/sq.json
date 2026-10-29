@@ -38,7 +38,14 @@
     "filterStatus": "Gjendja",
     "filterAll": "Të gjitha",
     "filterReset": "Rivendos",
-    "filterEmpty": "Asnjë dokument nuk përputhet me këto filtra."
+    "filterEmpty": "Asnjë dokument nuk përputhet me këto filtra.",
+    "cat_food_registration": "Regjistrimi i ushqimit",
+    "cat_label": "Etiketimi",
+    "cat_cosmetics": "Kozmetika",
+    "cat_medical_device": "Pajisje mjekësore",
+    "cat_ecommerce": "E-tregti ndërkufitare",
+    "cat_brand": "Marka dhe pronësia intelektuale",
+    "cat_other": "Tjetër"
   },
   "Cookie": {
     "message": "Ky sajt përdor vetëm cookie thelbësore të vërtetimit. Nuk përdoren skedarë gjurmimi ose reklamimi.",

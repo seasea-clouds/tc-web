@@ -38,7 +38,14 @@
     "filterStatus": "Trạng thái",
     "filterAll": "Tất cả",
     "filterReset": "Đặt lại",
-    "filterEmpty": "Không có văn bản nào khớp với bộ lọc này."
+    "filterEmpty": "Không có văn bản nào khớp với bộ lọc này.",
+    "cat_food_registration": "Đăng ký thực phẩm",
+    "cat_label": "Ghi nhãn",
+    "cat_cosmetics": "Mỹ phẩm",
+    "cat_medical_device": "Thiết bị y tế",
+    "cat_ecommerce": "Thương mại điện tử xuyên biên giới",
+    "cat_brand": "Thương hiệu và SHTT",
+    "cat_other": "Khác"
   },
   "Cookie": {
     "message": "Trang web này chỉ sử dụng cookie xác thực cần thiết. Không sử dụng cookie theo dõi hoặc quảng cáo.",

@@ -38,7 +38,14 @@
     "filterStatus": "Durum",
     "filterAll": "Tümü",
     "filterReset": "Sıfırla",
-    "filterEmpty": "Bu filtrelerle eşleşen belge yok."
+    "filterEmpty": "Bu filtrelerle eşleşen belge yok.",
+    "cat_food_registration": "Gıda kaydı",
+    "cat_label": "Etiketleme",
+    "cat_cosmetics": "Kozmetik",
+    "cat_medical_device": "Tıbbi cihazlar",
+    "cat_ecommerce": "Sınır ötesi e-ticaret",
+    "cat_brand": "Marka ve Fikri Mülkiyet",
+    "cat_other": "Diğer"
   },
   "Cookie": {
     "message": "Bu site yalnızca gerekli kimlik doğrulama çerezlerini kullanır. Hiçbir izleme veya reklam çerezi kullanılmaz.",

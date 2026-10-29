@@ -38,7 +38,14 @@
     "filterStatus": "Keadaan",
     "filterAll": "Semua",
     "filterReset": "Set semula",
-    "filterEmpty": "Tiada dokumen sepadan dengan penapis ini."
+    "filterEmpty": "Tiada dokumen sepadan dengan penapis ini.",
+    "cat_food_registration": "Pendaftaran makanan",
+    "cat_label": "Pelabelan",
+    "cat_cosmetics": "Kosmetik",
+    "cat_medical_device": "Peranti perubatan",
+    "cat_ecommerce": "E-dagang rentas sempadan",
+    "cat_brand": "Jenama dan Harta Intelek",
+    "cat_other": "Lain-lain"
   },
   "Cookie": {
     "message": "Tapak ini hanya menggunakan kuki pengesahan penting. Tiada kuki penjejakan atau pengiklanan digunakan.",

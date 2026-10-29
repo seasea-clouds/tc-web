@@ -38,7 +38,14 @@
     "filterStatus": "Situação",
     "filterAll": "Todos",
     "filterReset": "Reiniciar",
-    "filterEmpty": "Nenhum documento corresponde a estes filtros."
+    "filterEmpty": "Nenhum documento corresponde a estes filtros.",
+    "cat_food_registration": "Registo alimentar",
+    "cat_label": "Rotulagem",
+    "cat_cosmetics": "Cosméticos",
+    "cat_medical_device": "Dispositivos médicos",
+    "cat_ecommerce": "Comércio eletrónico transfronteiriço",
+    "cat_brand": "Marca e PI",
+    "cat_other": "Outros"
   },
   "Cookie": {
     "message": "Este site utiliza apenas cookies de autenticação essenciais. Nenhum cookie de rastreamento ou publicidade é usado.",

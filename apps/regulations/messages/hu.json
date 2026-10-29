@@ -38,7 +38,14 @@
     "filterStatus": "Állapot",
     "filterAll": "Összes",
     "filterReset": "Visszaállítás",
-    "filterEmpty": "Egyetlen dokumentum sem felel meg ezeknek a szűrőknek."
+    "filterEmpty": "Egyetlen dokumentum sem felel meg ezeknek a szűrőknek.",
+    "cat_food_registration": "Élelmiszer-regisztráció",
+    "cat_label": "Címkézés",
+    "cat_cosmetics": "Kozmetikumok",
+    "cat_medical_device": "Orvostechnikai eszközök",
+    "cat_ecommerce": "Határon átnyúló e-kereskedelem",
+    "cat_brand": "Márka és szellemi tulajdon",
+    "cat_other": "Egyéb"
   },
   "Cookie": {
     "message": "Ez az oldal csak alapvető hitelesítési cookie-kat használ. Nem használnak nyomkövető vagy hirdetési sütiket.",

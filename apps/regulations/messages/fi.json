@@ -38,7 +38,14 @@
     "filterStatus": "Tila",
     "filterAll": "Kaikki",
     "filterReset": "Palauta",
-    "filterEmpty": "Mikään asiakirja ei vastaa näitä suodattimia."
+    "filterEmpty": "Mikään asiakirja ei vastaa näitä suodattimia.",
+    "cat_food_registration": "Elintarvikerekisteröinti",
+    "cat_label": "Merkinnät",
+    "cat_cosmetics": "Kosmetiikka",
+    "cat_medical_device": "Lääkinnälliset laitteet",
+    "cat_ecommerce": "Rajatylittävä verkkokauppa",
+    "cat_brand": "Brändi ja IP",
+    "cat_other": "Muu"
   },
   "Cookie": {
     "message": "Tämä sivusto käyttää vain välttämättömiä todennusevästeitä. Mitään seuranta- tai mainosevästeitä ei käytetä.",

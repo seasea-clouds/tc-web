@@ -38,7 +38,14 @@
     "filterStatus": "Situación",
     "filterAll": "Todos",
     "filterReset": "Restablecer",
-    "filterEmpty": "Ningún documento coincide con estos filtros."
+    "filterEmpty": "Ningún documento coincide con estos filtros.",
+    "cat_food_registration": "Registro alimentario",
+    "cat_label": "Etiquetado",
+    "cat_cosmetics": "Cosmética",
+    "cat_medical_device": "Productos sanitarios",
+    "cat_ecommerce": "Comercio electrónico transfronterizo",
+    "cat_brand": "Marca y PI",
+    "cat_other": "Otros"
   },
   "Cookie": {
     "message": "Este sitio utiliza sólo cookies de autenticación esenciales. No se utilizan cookies de seguimiento ni publicidad.",

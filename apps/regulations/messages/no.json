@@ -38,7 +38,14 @@
     "filterStatus": "Tilstand",
     "filterAll": "Alle",
     "filterReset": "Tilbakestill",
-    "filterEmpty": "Ingen dokumenter samsvarer med disse filtrene."
+    "filterEmpty": "Ingen dokumenter samsvarer med disse filtrene.",
+    "cat_food_registration": "Næringsmiddelregistrering",
+    "cat_label": "Merking",
+    "cat_cosmetics": "Kosmetikk",
+    "cat_medical_device": "Medisinsk utstyr",
+    "cat_ecommerce": "Grenseoverskridende e-handel",
+    "cat_brand": "Merkevare og IP",
+    "cat_other": "Annet"
   },
   "Cookie": {
     "message": "Dette nettstedet bruker kun viktige autentiseringsinformasjonskapsler. Ingen sporings- eller reklameinformasjonskapsler brukes.",

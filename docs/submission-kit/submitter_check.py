@@ -999,6 +999,17 @@ FRONTMATTER_KEYS_REG = ["title", "slug", "date", "category", "excerpt",
 FRONTMATTER_REQUIRED_REG = [k for k in FRONTMATTER_KEYS_REG if k != "related_service"]
 SUB_REQUIRED_REG = ["docNumber", "issuer", "publishedAt", "effectiveAt", "status", "sourceUrl"]
 STATUS_ENUM = ("in_force", "upcoming", "amended", "repealed", "draft")
+# v1.65：法规所有「能限定成集合」的字段一律限定死，不接受自由文本。
+# category 必须是 kebab-case slug —— 前端筛选下拉直接把值显示出来，
+# 必须能在 messages 里找到 Regulations.cat_<slug> 的本地化标签。
+REG_CATEGORIES = ("food-registration", "label", "cosmetics", "medical-device",
+                  "ecommerce", "brand", "other")
+# 发文机关用官方英文缩写（全站统一，不翻译）
+REG_ISSUERS = ("GACC", "SAMR", "NMPA", "MARA", "MOFCOM", "STA", "CNIPA",
+               "NPC", "SC", "MIIT", "MEE", "NHFPC")
+# 相关服务限定为站内真实存在的服务页（apps/site/.../services/<slug>/）
+REG_SERVICES = ("/services/gacc/", "/services/label/", "/services/ccc/",
+                "/services/cosmetics/", "/services/ecommerce/", "/services/brand/")
 # R02 沿革语境（v1.63）：同段出现这些词说明在写"机构改名/撤并"，是正确表述
 ORG_RENAMED_RE = re.compile(
     r"(?i)former|formerly|renamed|restructur|reorganis|reorganiz|predecessor|succeeded"
@@ -1224,6 +1235,61 @@ def _title_bad_hyphen(title):
             return True
     return False
 
+
+
+_REG_PUNCT_GROUPS = [
+    ("paren", "()（）\[\]【】{}｛｝"),
+    ("quote", "\"\u201c\u201d\u201e\u2018\u2019\u00ab\u00bb'`"),
+    ("book", "《》〈〉「」『』"),
+    ("colon", ":："),
+    ("comma", ",，"),
+    ("stop", ".。"),
+    ("semi", ";；"),
+    ("quest", "?？"),
+    ("excl", "!！"),
+    ("dash", "\u2014\u2013\u2015\u2212-"),
+    ("slash", "/／"),
+    ("bar", "|｜"),
+    ("eq", "=＝"),
+]
+
+
+def _punct_profile(text):
+    """把标题里的标点按类别计数（v1.65 R20 用）。"""
+    prof = {}
+    for name, chars in _REG_PUNCT_GROUPS:
+        n = sum(1 for ch in text if ch in chars)
+        if n:
+            prof[name] = n
+    return prof
+
+
+def reg_title_shape_errors(title, base_title):
+    """R20 法规标题形态（v1.65）。
+
+    用户要求：中文母版标题翻成译文标题后**格式要一样** —— 多一个冒号、
+    多一对括号、末尾多一个句号、多打一个空格，都算不合格。
+    做法：以 zh 母版标题的标点类别计数为基准，逐类比对；空白与末尾标点单独判。
+    """
+    errs = []
+    if title != title.strip():
+        errs.append("标题首尾不得有空格")
+    if re.search(r"\s{2,}", title):
+        errs.append("标题不得出现连续空格")
+    if "\n" in title or "\t" in title:
+        errs.append("标题不得含换行/制表符")
+    if title.strip() and title.strip()[-1] in ".。;；,，:：、":
+        errs.append("标题末尾不得有标点（当前以 %r 结尾）" % title.strip()[-1])
+    if base_title:
+        base = _punct_profile(base_title)
+        cur = _punct_profile(title.strip())
+        for name in sorted(set(base) | set(cur)):
+            b, c = base.get(name, 0), cur.get(name, 0)
+            if b != c:
+                errs.append(
+                    "标题标点与中文母版不一致：%s 类 母版 %d 个 / 译文 %d 个"
+                    "（母版 %r）" % (name, b, c, base_title[:40]))
+    return errs
 
 def title_shape_errors(title):
     """F03 标题形态（v1.41）：空值 / 超长 / 分隔符形状。
@@ -4108,6 +4174,33 @@ def check_article(slug, art, add, expected_kind=None, prefix="articles/%s/"):
         if st and st not in STATUS_ENUM:
             add("R14", "error", slug,
                 "status 必须是 %s 之一（当前 %r）" % (" / ".join(STATUS_ENUM), st))
+        # R16（v1.65）：date 必须是**法规本身的发布日期**，不是我方发布文章的日期。
+        # 页面排序、元信息、sitemap 全部以 publishedAt 为准；date 只是投稿约定字段，
+        # 一旦与 publishedAt 不一致就会出现「站内说 10-29 发布、法规其实是 10-23 发布」。
+        d_val = str(meta.get("date") or "").strip()
+        p_val = str(meta.get("publishedAt") or "").strip()
+        if d_val and p_val and d_val != p_val:
+            add("R16", "error", slug,
+                'date 必须是法规发布日期（publishedAt），当前 date=%r / publishedAt=%r —— '
+                "这里要写法规生效文件的发布日，不是我们上站的日子" % (d_val, p_val))
+        # R17：category 固定集合 + 必须有对应本地化标签
+        cat_val = str(meta.get("category") or "").strip()
+        if cat_val and cat_val not in REG_CATEGORIES:
+            add("R17", "error", slug,
+                "法规 category 必须是 %s 之一（当前 %r）"
+                % (" / ".join(REG_CATEGORIES), cat_val))
+        # R18：issuer 固定集合
+        iss_val = str(meta.get("issuer") or "").strip()
+        if iss_val and iss_val not in REG_ISSUERS:
+            add("R18", "error", slug,
+                "issuer 必须是 %s 之一（当前 %r）"
+                % (" / ".join(REG_ISSUERS), iss_val))
+        # R19：relatedService 限定为站内真实服务页
+        svc_val = str(meta.get("relatedService") or "").strip()
+        if svc_val and svc_val not in REG_SERVICES:
+            add("R19", "error", slug,
+                "relatedService 必须是 %s 之一（当前 %r）—— 指向不存在的服务页会 404"
+                % (" / ".join(REG_SERVICES), svc_val))
         imgs_reg = meta.get("images")
         if isinstance(imgs_reg, list) and imgs_reg:
             add("R12", "error", slug, "法规不使用配图，images 必须为空数组")
@@ -4152,6 +4245,12 @@ def check_article(slug, art, add, expected_kind=None, prefix="articles/%s/"):
             if docn and docn.casefold() in title.casefold():
                 add("R15", "error", tag,
                     "title 里不要重复写文号（%r 已在 doc_number 字段）；列表页会重复展示" % docn)
+            # R20（v1.65）：译文标题的标点/空格式必须与中文母版一致
+            base_title = ""
+            if "zh" in parsed and parsed["zh"][0]:
+                base_title = str(parsed["zh"][0].get("title") or "")
+            for msg in reg_title_shape_errors(title, base_title if lang != "zh" else ""):
+                add("R20", "error", tag, msg)
             # R10/R11：正文必须用 <!-- original --> 分隔「解读」与「全文译本」
             cnt = body.count(ORIGINAL_MARKER)
             if cnt == 0:
@@ -4176,6 +4275,16 @@ def check_article(slug, art, add, expected_kind=None, prefix="articles/%s/"):
                     add("R11", "error", tag, "%s 之前的「解读」段为空" % ORIGINAL_MARKER)
                 if not tail.strip():
                     add("R11", "error", tag, "%s 之后的「全文译本」段为空" % ORIGINAL_MARKER)
+                # R21（v1.65）：解读不能喧宾夺主 —— 法规页的主体是官方文本，
+                # 解读不得超过全文译本的一半（用户要求）。按正文可见字符计，
+                # 剔除标记符号与空白，避免 markdown 装饰影响判定。
+                if head.strip() and tail.strip():
+                    h_len = len(re.sub(r"[\s\*_`#>\-\[\]()]", "", head))
+                    t_len = len(re.sub(r"[\s\*_`#>\-\[\]()]", "", tail))
+                    if t_len and h_len * 2 > t_len:
+                        add("R21", "error", tag,
+                            "解读段过长：%d 字符 > 全文译本 %d 字符的一半"
+                            "（法规页主体是官方文本，解读只做提要）" % (h_len, t_len))
         if fm.get("slug") != slug:
             add("F04", "error", tag, "frontmatter slug 必须等于 %s" % slug)
         if meta.get("date") and fm.get("date") != meta.get("date"):

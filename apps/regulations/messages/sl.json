@@ -38,7 +38,14 @@
     "filterStatus": "Stanje",
     "filterAll": "Vse",
     "filterReset": "Ponastavi",
-    "filterEmpty": "Noben dokument ne ustreza tem filtrom."
+    "filterEmpty": "Noben dokument ne ustreza tem filtrom.",
+    "cat_food_registration": "Registracija hrane",
+    "cat_label": "Označevanje",
+    "cat_cosmetics": "Kozmetika",
+    "cat_medical_device": "Medicinski pripomočki",
+    "cat_ecommerce": "Čezmejno e-poslovanje",
+    "cat_brand": "Blagovna znamka in IP",
+    "cat_other": "Drugo"
   },
   "Cookie": {
     "message": "To spletno mesto uporablja samo bistvene piškotke za preverjanje pristnosti. Piškotki za sledenje ali oglaševanje se ne uporabljajo.",

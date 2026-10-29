@@ -5,6 +5,8 @@ import type { DocMeta } from '@/lib/documents';
 import RegulationRows, { type RegulationRowTexts } from './RegulationRows';
 
 export interface RegulationFilterTexts extends RegulationRowTexts {
+  /** category slug → 本地化标签（Regulations.cat_<slug>，48 语言齐） */
+  catLabels?: Record<string, string>;
   filterIssuer: string;
   filterCategory: string;
   filterStatus: string;
@@ -95,7 +97,7 @@ export default function RegulationFilter({
                 <option value="">{texts.filterAll}</option>
                 {categories.map((v) => (
                   <option key={v} value={v}>
-                    {v}
+                    {texts.catLabels?.[v] || v}
                   </option>
                 ))}
               </select>

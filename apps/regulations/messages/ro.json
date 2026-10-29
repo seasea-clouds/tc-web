@@ -38,7 +38,14 @@
     "filterStatus": "Stare",
     "filterAll": "Toate",
     "filterReset": "Resetează",
-    "filterEmpty": "Niciun document nu corespunde acestor filtre."
+    "filterEmpty": "Niciun document nu corespunde acestor filtre.",
+    "cat_food_registration": "Înregistrare alimentară",
+    "cat_label": "Etichetare",
+    "cat_cosmetics": "Cosmetice",
+    "cat_medical_device": "Dispozitive medicale",
+    "cat_ecommerce": "Comerț electronic transfrontalier",
+    "cat_brand": "Marcă și PI",
+    "cat_other": "Altele"
   },
   "Cookie": {
     "message": "Acest site folosește numai cookie-uri de autentificare esențiale. Nu sunt utilizate cookie-uri de urmărire sau de publicitate.",

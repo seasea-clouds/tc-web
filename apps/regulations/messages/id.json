@@ -38,7 +38,14 @@
     "filterStatus": "Keadaan",
     "filterAll": "Semua",
     "filterReset": "Atur ulang",
-    "filterEmpty": "Tidak ada dokumen yang cocok dengan filter ini."
+    "filterEmpty": "Tidak ada dokumen yang cocok dengan filter ini.",
+    "cat_food_registration": "Registrasi pangan",
+    "cat_label": "Pelabelan",
+    "cat_cosmetics": "Kosmetik",
+    "cat_medical_device": "Alat kesehatan",
+    "cat_ecommerce": "E-commerce lintas batas",
+    "cat_brand": "Merek dan KI",
+    "cat_other": "Lainnya"
   },
   "Cookie": {
     "message": "Situs ini hanya menggunakan cookie otentikasi penting. Tidak ada cookie pelacakan atau iklan yang digunakan.",

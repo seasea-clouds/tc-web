@@ -38,7 +38,14 @@
     "filterStatus": "Stav",
     "filterAll": "Vše",
     "filterReset": "Obnovit",
-    "filterEmpty": "Žádný dokument neodpovídá těmto filtrům."
+    "filterEmpty": "Žádný dokument neodpovídá těmto filtrům.",
+    "cat_food_registration": "Registrace potravin",
+    "cat_label": "Označování",
+    "cat_cosmetics": "Kosmetika",
+    "cat_medical_device": "Zdravotnické prostředky",
+    "cat_ecommerce": "Přeshraniční e-commerce",
+    "cat_brand": "Značka a duševní vlastnictví",
+    "cat_other": "Ostatní"
   },
   "Cookie": {
     "message": "Tento web používá pouze nezbytné ověřovací soubory cookie. Nejsou používány žádné sledovací ani reklamní soubory cookie.",

@@ -6586,9 +6586,94 @@
     ]
    },
    "note": "M1 47 语人工审校（2026-10-28 第三批）固化：四个驱动方向一致"
+  },
+  {
+   "id": "gacc150-filing-instrument",
+   "zh": "海关可以对进出口商备案情况进行监督",
+   "scope": "block",
+   "note": "（v1.58 glossary，自 REG1）「进出口商备案」各语统一词形（REG1 第十条实测定稿）：en filing／es registro／fr enregistrement／de Registrierung／pt registro／ru регистрац（词干，覆盖 регистрации 等各格）／ja 届出／ko 신고／ar تسجيل／vi khai báo／th การขึ้นทะเบียน／id pencatatan／ms pendaftaran／hi पंजीकरण／sw usajili／af registrasie／tr kayıt／pl rejestrac（词干，覆盖 rejestracyjną 等形态）／nl registratie／it registrazione。与「境外生产企业注册」（海关总署令第 280 号，REG2 主体）是两套制度；多语两概念同词形、靠语境区分，机检只锚 require 词形在场，双词形区分见 gacc150-two-track-registration。锚点仅 REG1 第十条，其他文章不激活。",
+   "require": {
+    "en": [
+     "filing"
+    ],
+    "es": [
+     "registro"
+    ],
+    "fr": [
+     "enregistrement"
+    ],
+    "de": [
+     "Registrierung"
+    ],
+    "pt": [
+     "registro"
+    ],
+    "ru": [
+     "регистрац"
+    ],
+    "ja": [
+     "届出"
+    ],
+    "ko": [
+     "신고"
+    ],
+    "ar": [
+     "تسجيل"
+    ],
+    "vi": [
+     "khai báo"
+    ],
+    "th": [
+     "การขึ้นทะเบียน"
+    ],
+    "id": [
+     "pencatatan"
+    ],
+    "ms": [
+     "pendaftaran"
+    ],
+    "hi": [
+     "पंजीकरण"
+    ],
+    "sw": [
+     "usajili"
+    ],
+    "af": [
+     "registrasie"
+    ],
+    "tr": [
+     "kayıt"
+    ],
+    "pl": [
+     "rejestrac"
+    ],
+    "nl": [
+     "registratie"
+    ],
+    "it": [
+     "registrazione"
+    ]
+   }
+  },
+  {
+   "id": "gacc150-two-track-registration",
+   "zh": "它与境外生产企业的注册是两回事",
+   "scope": "block",
+   "note": "（v1.58 glossary，自 REG1 解读段）同一块内「进出口商备案」与「境外生产企业注册（280 号令）」两制度并存——注册侧词形必须本位（ja 登録／ko 등록／vi đăng ký），不得混写成备案词形（混淆高危方向）；备案侧词形由 gacc150-filing-instrument（第十条）覆盖。require 数组是 OR 语义，双词形 AND 区分拆成两条条款实现。多语两概念同词形（es registro／ru регистрация／ar تسجيل 等靠语境区分）不设 require——同形是语言现实，机检无法区分，由 P23 逐块同构保证语境。",
+   "require": {
+    "ja": [
+     "登録"
+    ],
+    "ko": [
+     "등록"
+    ],
+    "vi": [
+     "đăng ký"
+    ]
+   }
   }
  ],
- "version": "1.57",
+ "version": "1.58",
  "banned": [
   {
    "id": "sq-wholesale-import",
@@ -8885,6 +8970,64 @@
     "சுங்கத்தின் 2020"
    ],
    "note": "跨篇统一（2026-10-28 v1.57）：机构名一律 சுங்க நிர்வாகம்；只禁「属格＋年份」的引用形，通用属格 சுங்கத்தின் 不禁"
+  },
+  {
+   "id": "ar-redup-idiom",
+   "lang": "ar",
+   "terms": [
+    "واحدا واحدا",
+    "قطعة قطعة"
+   ],
+   "note": "M2 实证：逐一/逐块的重叠副词习语（P10 同抓，本表冗余执法并覆盖 title/excerpt/题录射程）；改写 تباعاً／واحدة تلو الأخرى。"
+  },
+  {
+   "id": "bn-redup-idiom",
+   "lang": "bn",
+   "terms": [
+    "ধাপে ধাপে",
+    "একটা একটা"
+   ],
+   "note": "M2 实证：逐步/逐一重叠习语；改写 ক্রমান্বয়ে／একের পর এক。P10 同抓。"
+  },
+  {
+   "id": "el-redup-idiom",
+   "lang": "el",
+   "terms": [
+    "μία μία"
+   ],
+   "note": "M2 实证：逐一重叠副词；改写 διαδοχικά。P10 同抓。"
+  },
+  {
+   "id": "he-redup-idiom",
+   "lang": "he",
+   "terms": [
+    "אחד אחד"
+   ],
+   "note": "M2 实证：逐一重叠（口语逐一形）；改写 בזה אחר זה。P10 同抓。"
+  },
+  {
+   "id": "sw-redup-idiom",
+   "lang": "sw",
+   "terms": [
+    "moja moja"
+   ],
+   "note": "M2 实证：非标准重叠形；标准形本就是 moja kwa moja（三词，不触 P10）。P10 同抓。"
+  },
+  {
+   "id": "tr-redup-idiom",
+   "lang": "tr",
+   "terms": [
+    "aşama aşama"
+   ],
+   "note": "M2 实证：分步重叠副词；改写 kademeli olarak。注意 tr 词典化副词 ayrı ayrı/tek tek 在 P10 白名单（REDUPLICATION_OK），不在禁列。"
+  },
+  {
+   "id": "ur-redup-idiom",
+   "lang": "ur",
+   "terms": [
+    "ایک ایک"
+   ],
+   "note": "M2 实证：逐一重叠；改写 ایک کے بعد ایک。注意 ur باری باری 在 P10 白名单，不在禁列。"
   }
  ],
  "excerpt": [

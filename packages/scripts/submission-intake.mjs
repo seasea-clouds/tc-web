@@ -209,7 +209,7 @@ if (!doWrite) {
 
 let written = 0;
 for (const it of items) {
-  const { slug, artDir, target, date } = it;
+  const { slug, artDir, target, date, kind } = it;
   const dateChanged = date !== it.meta.date;
   for (const lang of locales) {
     const src = path.join(artDir, 'content', lang, `${slug}.mdx`);
@@ -217,6 +217,11 @@ for (const it of items) {
     let body = fs.readFileSync(src, 'utf8');
     if (dateChanged) {
       body = body.replace(/^date:\s*("?)[0-9]{4}-[0-9]{2}-[0-9]{2}\1/m, `date: "${date}"`);
+    }
+    // 法规站内以文件名为 slug、以 published_at 为排序键，不需要 date/slug 字段：
+    // 与既有法规文件 frontmatter 保持一致（避免同一个站里两种字段风格）
+    if (kind === 'regulation') {
+      body = body.replace(/^slug:\s*"[^"]*"\s*\n/m, '').replace(/^date:\s*"[^"]*"\s*\n/m, '');
     }
     fs.mkdirSync(path.dirname(dst), { recursive: true });
     fs.writeFileSync(dst, body);

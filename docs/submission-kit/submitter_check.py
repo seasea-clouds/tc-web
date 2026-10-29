@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-submitter_check.py — 博客投稿包自检与打包工具 (v1.58)
+submitter_check.py — 博客投稿包自检与打包工具 (v1.59)
 
 用法:
     python3 submitter_check.py <package.zip | 目录>
@@ -602,6 +602,48 @@ CTA/alt/元数据全查）：
   «එක් එක් අයිතමයට»，按本版同一手法改成 «සෑම අයිතමයටම»（语料里的既证「逐一」形）。
   sample 是别人照着抄的模板——模板过不了自己的检查，交付出去的就是缺陷。
   这一条不是补充说明，是升 error 的直接理由。
+
+【v1.59】（2026-10-29，REG1 法规线首轮回填；规则数不变 128——全部是判据
+  精化与报错提示，无新增编号）REG1（GACC 150 号公告，48 语）首轮翻译三批
+  修复暴露的四类坑，逐条固化进判据与报错信息：
+  ① W02 膨胀感知：W02 原是纯绝对阈值（拉丁 400 / CJK 340 / dense 300），
+  法规线全文译本段（中文法律条文 100-150 字符，译文 400-650 字符）被整批
+  误报——REG1 实测拉丁膨胀 2.9-5.5x（中位 3.86x），43 语全中、235 处超长段。
+  现与母版逐块对齐后按膨胀系数放行（拉丁 5.0 / CJK 1.5 / dense 3.0），
+  对齐失败（块数不同，P23 会另行报）退回纯绝对阈值；同时从「每语言只报
+  首个」改为汇总式全量枚举（P05-P15 同口径）。
+  ② P21/P26 结构错位报错附根因提示（_block_misalign_hints）：REG1 首轮
+  173 error 里 3/4 是「条文号孤儿块」（加粗标记行行尾 NBSP＋空行，标记行
+  独立成块 → P26/P21-P23/P36 全线错位）与「开场段『23. 』日期开头被识别为
+  有序列表」（cs/fi/hu/sk/sl 解读段整段错一位）与「H2 标题与正文粘连」。
+  三种根因可从正文直接探测，命中即在报错尾部附加提示，判据不变。
+  ③ R10 缺 original 标记时探测「含非 ASCII 的 HTML 注释」：sr 西里尔转写
+  把 `<!-- original -->` 一并转成 `<!-- оригинал -->`，R10 只说「缺标记」
+  不指根因。命中即提示转写须绕开注释标记。
+  ④ S08 报错注明「母版锚点块是小节标题」：scope=all 条款的锚点落在 H2 上
+  时（REG1「申报环节的刚性要求」），报错看不出为什么标题也要含术语词形。
+  ⑤ P10 白名单按既有判据收口两条：sw 指示词强调重叠 hiyo hiyo / huo huo
+  （「正是那天/与此同时」，词典语法形态、改写丢义，同 si එක් එක් 限定词
+  用法口径）；fr 反身结构 nous nous / vous vous（主语＋反身代词同形是语法
+  必需形状，同 de „das das" 关系从句口径——只放行反身代词侧，名词重复仍报）。
+
+【v1.58-local-1】（2026-10-29，M2 翻译批次回填；本地补丁，规则数不变 128）
+  背景：M2 首轮 48 语官方检查 13 error——9 处 P10（ar/bn/el/he/si/sw/tr/ur
+  的「逐一/分步」重叠习语）+ 2 处 P42（hy references ASCII 句点）+ 4 处
+  P43（sq me shumicë／si රෝග විනිශ්චය／ru создание структуры／bg платната，
+  四条全部已在共享表 banned，属「翻译前没查表」的操作层失误，判据无误）。
+  ① P10 报错附改写词形（REDUPLICATION_REWRITE_HINT 八语）：重叠习语是
+  翻译的自然生成物，M1 收官批与 M2 各改过一轮，把已验证词形挂进报错，
+  报错即给改法。白名单纪律不变——能改写的一律改稿，不扩 REDUPLICATION_OK。
+  ② banned 284 → 291：七语重叠习语入表（ar×2/bn×2/el/he/sw/tr/ur）。
+  入表前按准入纪律全库回扫（六包＋sample，旧形命中必须为 0）——si
+  එක් එක් 因此禁入：F2/M1 图注（alt）各有 1 处合法限定词用法存量，且
+  එක් එක්＋名词＝「每个」是正字法，全局禁用会判红已验收包。alt 不在
+  P10 射程（bare 剥离图片/链接结构防 RTL 假 token），这两处属已知射程外
+  存量，待 F2/M1 下一轮改稿顺带清（改 සෑම …කම 形）。
+  ③ P42/P43 判据核实无需改：P42 报错文案已写明 ։ 与豁免；P43 匹配大小写
+  不敏感（casefold），banned/26 的大写「Создание структуры」能抓 M2 的
+  小写实例。
 """
 
 import io
@@ -1099,6 +1141,13 @@ MIN_EN_WORDS = 400
 MAX_PARAGRAPH_CHARS = 400
 MAX_PARAGRAPH_CHARS_CJK = 340
 MAX_PARAGRAPH_CHARS_DENSE = 300
+# v1.59 W02 膨胀感知系数：译文段长 ≤ 母版段长 × 系数时视为自然膨胀放行。
+# REG1（法律条文，中文高度浓缩）实测拉丁膨胀 2.9-5.5x（中位 3.86x），
+# 系数取 5.0 覆盖全部自然膨胀；普通博客正文膨胀 1.5-2.5x 更在射程内。
+# ja/ko 与 zh 同属 CJK 阈值档、膨胀小（1.5）；th 等高密度文字居中（3.0）。
+W02_EXPANSION_LATIN = 5.0
+W02_EXPANSION_CJK = 1.5
+W02_EXPANSION_DENSE = 3.0
 MAX_IMAGES_WARN = 6
 SIMILARITY_LIMIT = 0.95
 
@@ -2095,6 +2144,11 @@ def repeat_pair_hits(src, lang):
         if lang == "de" and w1.casefold() in ("das", "die", "der") \
                 and src[:a1].rstrip().endswith(","):
             continue
+        # v1.59 法语反身结构：主语＋反身代词同形（nous nous / vous vous，
+        # REG1 首轮实抓）是语法必需形状——je me / tu te / il se 都不同形，
+        # 同形的只有这两个；同 de „das das" 关系从句口径，整词对放行。
+        if lang == "fr" and w1.casefold() in ("nous", "vous"):
+            continue
         nxt_m = _REPEAT_NEXT_RE.match(src, b2)
         # 续词必须按**原文**取下一个空白分隔词，不能取词表里的下一条：
         # hi「पहले पहले दो देखिए」的 दो＝单元音＋母音记号，core=1 进不了词表，
@@ -2118,7 +2172,32 @@ REDUPLICATION_OK = {
     # 逐词组放行、不做整类豁免——同一口径沿用 v1.14 与 M1 收官批「不扩白名单」的
     # 判据：能改写的重叠（he/si/sw/ur 的逐一形）本轮一律改稿，只有词典里作为
     # 一个词存在的重叠才进这张表。
+    # v1.59：sw `hiyo hiyo` / `huo huo`（指示词强调重叠，「正是那天／就在那时」，
+    # REG1 首轮实抓）——改写丢义（siku hiyo hiyo＝on that very day，删重叠就
+    # 丢掉「正是」语义），与 si එක් එක් 限定词用法合法的判据同源：这是词典语法
+    # 形态，不是「逐一/分步」习语。
     "vi": {"song song"},
+    "sw": {"hiyo hiyo", "huo huo"},
+}
+
+# M2（2026-10-29）实证：八种语言的「逐一/分步」重叠习语是翻译的自然生成物，
+# 首轮 48 语就出现 10 处（ar/bn/el/he/si/sw/tr/ur），改稿词形已逐一验证。
+# 把改写词形挂进 P10 报错信息——报错即给改法，不必回查会话记忆。
+# 白名单纪律不变：能改写的一律改稿，不扩 REDUPLICATION_OK（与 v1.58 收口批
+# 「he/si/sw/ur 的逐一形本轮一律改稿」同一口径）。
+# 注意射程：P10 扫 bare 正文（图片/链接连 alt 一起剥离，防 RTL 假 token），
+# alt 文本里的重叠不在射程——F2/M1 的 si 图注各有 1 处 එක් එක් 残留，属
+# 已知射程外存量；且 එක් එක්＋名词＝「每个」是限定词正字法，故 si 不入
+# banned（准入预扫旧形非 0，全局禁用会判红已验收包），只在本表提示改写。
+REDUPLICATION_REWRITE_HINT = {
+    "ar": "تباعاً / واحدة تلو الأخرى",
+    "bn": "ক্রমান্বয়ে / একের পর এক",
+    "el": "διαδοχικά",
+    "he": "בזה אחר זה",
+    "si": "එකිනෙකාට වෙන්ව（副词用法；එක් එක්＋名词＝每个，限定词用法合法）",
+    "sw": "moja kwa moja",
+    "tr": "kademeli olarak",
+    "ur": "ایک کے بعد ایک",
 }
 
 # v1.43 P45 称呼语域混用：同一文件内非尊/尊第二人称标记并存。
@@ -3177,6 +3256,33 @@ def _link_shape(t):
     return tuple(out)
 
 
+# v1.59 P21/P26 结构错位根因探测（REG1 首轮 173 error 中约四分之三是这三类
+# 根因的连锁反应：孤儿块 → P26/P21-P23/P36 全线错位）。判据不变，只在报错
+# 文本尾部附提示，把逐块人工比对缩到一步。
+_BLOCK_MISALIGN_ORPHAN_RE = re.compile(
+    r"(?m)^\*\*[^*\n]+\*\*[ \t\u00a0\u3000]*\r?\n\r?\n")
+_BLOCK_MISALIGN_H2_RE = re.compile(r"(?m)^## [^\n]+\r?\n[^\r\n#>-]")
+_BLOCK_MISALIGN_ORPHAN_HINT = (
+    "检测到加粗标记行后紧跟空行（条文号孤儿块，行尾 NBSP/全角空格尾随常见）——"
+    "标记行应与内容合并为同一块")
+_BLOCK_MISALIGN_NUM_HINT = (
+    "开场段以「数字. 」开头会被识别为有序列表——自然语段落请改以词语开头")
+_BLOCK_MISALIGN_H2_HINT = "检测到 H2 标题与正文之间缺空行（粘连成块）"
+
+
+def _block_misalign_hints(body):
+    """P21/P26 报「块结构错位」时，从正文直接探测高频根因（v1.59）。"""
+    hints = []
+    if _BLOCK_MISALIGN_ORPHAN_RE.search(body):
+        hints.append(_BLOCK_MISALIGN_ORPHAN_HINT)
+    if _BLOCK_MISALIGN_H2_RE.search(body):
+        hints.append(_BLOCK_MISALIGN_H2_HINT)
+    first = next((b for b in body.split("\n\n") if b.strip()), "")
+    if re.match(r"\s*\d+[.、]\s", first):
+        hints.append(_BLOCK_MISALIGN_NUM_HINT)
+    return ("〔根因提示：" + "；".join(hints) + "〕") if hints else ""
+
+
 def block_outline(body):
     """One-to-one outline of a body: one entry per block.
 
@@ -3617,6 +3723,10 @@ def _glossary_check(spec, parsed, master_lang, slug, add):
                 blk = loc_blocks[lg][idx].casefold()
                 where = ("（第%d块，母版锚点：%s）" % (idx + 1, anchor[:40])
                          if scope == "all" else "（母版锚点：%s）" % anchor[:40])
+                # v1.59：锚点落在小节标题上时点明「标题也受契约」——REG1 实证
+                #（zh「申报环节的刚性要求」为 H2），报错看不出标题为何也要改。
+                if base_blocks[idx].lstrip().startswith("##"):
+                    where += "〔母版锚点块是小节标题——H2 标题块同样受术语契约约束，标题措辞也要含规定词形〕"
                 if need and not any(p.casefold() in blk for p in need):
                     add("S08", "error", "%s/%s" % (lg, slug),
                         "术语 %s 缺失：该块应含「%s」%s"
@@ -4045,8 +4155,18 @@ def check_article(slug, art, add, expected_kind=None, prefix="articles/%s/"):
             # R10/R11：正文必须用 <!-- original --> 分隔「解读」与「全文译本」
             cnt = body.count(ORIGINAL_MARKER)
             if cnt == 0:
+                # v1.59：sr 等西里尔/阿拉伯转写会把注释标记一并转写
+                #（<!-- original --> → <!-- оригинал -->），探测非 ASCII
+                # 注释提示根因，避免「明明转过写却报缺标记」的迷惑。
+                _m_nonascii = re.search(r"<!--\s*[^<>]*[^\x00-\x7F][^<>]*-->", body)
+                extra = ""
+                if _m_nonascii:
+                    extra = ("；检测到含非 ASCII 字符的 HTML 注释 %r——"
+                             "转写正文时 %s 标记须保持 ASCII 原样"
+                             % (_m_nonascii.group(0)[:40], ORIGINAL_MARKER))
                 add("R10", "warning", tag,
-                    "正文缺少 %s：该篇只有解读、页面不会出现全文译本" % ORIGINAL_MARKER)
+                    "正文缺少 %s：该篇只有解读、页面不会出现全文译本%s"
+                    % (ORIGINAL_MARKER, extra))
             elif cnt > 1:
                 add("R11", "error", tag,
                     "%s 出现 %d 次（只能出现一次）" % (ORIGINAL_MARKER, cnt))
@@ -4239,7 +4359,23 @@ def check_article(slug, art, add, expected_kind=None, prefix="articles/%s/"):
         score = jaccard(ngrams(body), en_ng)
         if score > SIMILARITY_LIMIT:
             add("L05", "error", tag, "正文与英文相似度过高（%.2f），疑似未翻译" % score)
-        for para in [p for p in body.split("\n\n") if p.strip()]:
+        # W02 超长段落（v1.59 膨胀感知）：绝对阈值仍按文字系统分档，但译文
+        # 比母版长是翻译的自然膨胀——REG1 实证法律条文中文 100-150 字符、
+        # 拉丁译文 400-650 字符（膨胀 2.9-5.5x，中位 3.86x），全是合规内容。
+        # 与母版逐块对齐成功时，长度 ≤ 母版段长 × 膨胀系数的段落放行；
+        # 对齐失败（块数不同，P23 会另行报错）退回纯绝对阈值。zh 母版自身
+        # 与无 zh 的包不启用膨胀感知。同时从「每语言只报首个」改为汇总式
+        # 全量枚举（P05-P15 同口径）。
+        w02_master = _MASTER_LANG or ("zh" if "zh" in parsed else None)
+        w02_zh = ([p for p in parsed[w02_master][1].split("\n\n") if p.strip()]
+                  if w02_master and w02_master != lang else None)
+        paras_w02 = [p for p in body.split("\n\n") if p.strip()]
+        aligned = bool(w02_zh) and len(paras_w02) == len(w02_zh)
+        ratio = (W02_EXPANSION_CJK if lang in CJK_LANGS
+                 else W02_EXPANSION_DENSE if lang in DENSE_SCRIPT_LANGS
+                 else W02_EXPANSION_LATIN)
+        over = []
+        for pi, para in enumerate(paras_w02):
             if para.strip().startswith("-"):
                 continue
             if lang in CJK_LANGS:
@@ -4248,10 +4384,17 @@ def check_article(slug, art, add, expected_kind=None, prefix="articles/%s/"):
                 limit = MAX_PARAGRAPH_CHARS_DENSE
             else:
                 limit = MAX_PARAGRAPH_CHARS
-            if len(para) > limit:
-                add("W02", "warning", tag,
-                    "存在超长段落（%d 字符，上限 %d）" % (len(para), limit))
-                break
+            if len(para) <= limit:
+                continue
+            if aligned and len(para) <= len(w02_zh[pi].strip()) * ratio:
+                continue          # 自然膨胀（v1.59）：未超出母版段长×系数
+            over.append((pi + 1, len(para), limit))
+        if over:
+            detail = "; ".join("第%d段 %d 字符(上限 %d)" % o for o in over[:3])
+            add("W02", "warning", tag,
+                "存在超长段落 %d 处: %s%s" % (
+                    len(over), detail,
+                    "" if aligned else "；未与母版对齐，按绝对阈值判"))
 
     en_words = len(re.findall(r"\w+", en_body, re.UNICODE))
     if parsed.get("en") and en_words < MIN_EN_WORDS:
@@ -4365,14 +4508,17 @@ def check_article(slug, art, add, expected_kind=None, prefix="articles/%s/"):
             cur_map = section_list_counts(parsed[lg][1])
             if set(base_map) != set(cur_map):
                 add("P21", "error", "%s/%s" % (lg, slug),
-                    "小节结构与 %s 不一致（章节集合不同）" % master_lang)
+                    "小节结构与 %s 不一致（章节集合不同）%s"
+                    % (master_lang, _block_misalign_hints(parsed[lg][1])))
                 continue
             off = [(sec, base_map[sec], cur_map[sec]) for sec in base_map
                    if base_map[sec] != cur_map[sec]]
             if off:
                 add("P21", "error", "%s/%s" % (lg, slug),
-                    "分节列表项数与 %s 不一致: %s" %
-                    (master_lang, ", ".join("第%s节 %d≠%d" % o for o in off[:6])))
+                    "分节列表项数与 %s 不一致: %s%s" %
+                    (master_lang,
+                     ", ".join("第%s节 %d≠%d" % o for o in off[:6]),
+                     _block_misalign_hints(parsed[lg][1])))
 
         # P22 正文块顺序一致：段落 / 列表 / 图片 / 表格 的排布次序必须与基准一致。
         # 抓到过的问题：同一份内容在部分语言里图片出现在列表之前，讲解顺序与
@@ -4745,16 +4891,18 @@ def check_article(slug, art, add, expected_kind=None, prefix="articles/%s/"):
                             continue
                         if d[j] != cd[j]:
                             add("P26", "error", "%s/%s" % (lg, slug),
-                                "第%d个%s块 的%s与 %s 不一致：基准 %s，本语言 %s"
-                                % (n + 1, k, lab, master_lang, d[j], cd[j]))
+                                "第%d个%s块 的%s与 %s 不一致：基准 %s，本语言 %s%s"
+                                % (n + 1, k, lab, master_lang, d[j], cd[j],
+                                   _block_misalign_hints(parsed[lg][1])))
                     # 列表：加粗必须落在同一条目上。整块总数相同并不够——
                     # 加粗从第 2 项挪到第 5 项，总数不变，视觉重点却错了。
                     if k == "LIST" and "逐项加粗分布" in labels:
                         j = labels.index("逐项加粗分布")
                         if j < len(d) and j < len(cd) and d[j] != cd[j]:
                             add("P26", "error", "%s/%s" % (lg, slug),
-                                "第%d个列表 的逐项加粗分布与 %s 不一致"
-                                % (n + 1, master_lang))
+                                "第%d个列表 的逐项加粗分布与 %s 不一致%s"
+                                % (n + 1, master_lang,
+                                   _block_misalign_hints(parsed[lg][1])))
 
         # P27 行内链接目标一致：去掉语言前缀后的链接路径必须与基准相同。
         # 抓到过问题：CTA 链接指向了错误的语言路径，导致点进去是另一种语言。
@@ -5208,7 +5356,13 @@ def check_text_health(tag, lang, body, add):
         #    元音符结尾词的盲区，否则升档要么判红正确稿件、要么根本抓不全；
         # ③ 站方回执 v1.14 的口径本来就是「相邻重复词一律改写，即使语法成立」
         #    （M1 收官批据此改了 21 处），warning 只是当时的存量过渡，不是判据留白。
-        add("P10", "error", tag, "出现重复单词: " + _fmt_hits(hits))
+        # v1.58-local-1：报错附本域实证改写词形（M2 批次回填，见
+        # REDUPLICATION_REWRITE_HINT）——报错即给改法。
+        _p10_hint = REDUPLICATION_REWRITE_HINT.get(lang)
+        _p10_msg = "出现重复单词: " + _fmt_hits(hits)
+        if _p10_hint:
+            _p10_msg += "（本域「逐一/分步」重叠习语实证改写: %s）" % _p10_hint
+        add("P10", "error", tag, _p10_msg)
     # P45 称呼语域混用（v1.43）：同一文件内非尊/尊第二人称标记并存。
     # 口径：只认 REGISTER_MARKERS 词表内的代词/物主限定词层标记；
     # 动词形态（hu -sz、ro 祈使）不在射程。报 warning 交人工终审。

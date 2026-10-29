@@ -40,7 +40,7 @@ execFileSync(python, [path.join(kitDir, 'submitter_check.py'), path.join(kitDir,
 fs.rmSync(zipPath, { force: true });
 fs.mkdirSync(distDir, { recursive: true });
 
-const entries = ['README.md', 'SPEC.md', 'locales.json', 'glossary.json', 'submitter_check.py', 'template-blog', 'template-regulation', 'sample'];
+const entries = ['README.md', 'SPEC.md', 'VERSION', 'locales.json', 'glossary.json', 'submitter_check.py', 'template-blog', 'template-regulation', 'sample'];
 console.log('▶ 打包');
 execFileSync(
   python,

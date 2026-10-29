@@ -39,13 +39,14 @@
     "filterAll": "Усі",
     "filterReset": "Скинути",
     "filterEmpty": "Немає документів, що відповідають цим фільтрам.",
-    "cat_food_registration": "Реєстрація харчової продукції",
-    "cat_label": "Маркування",
-    "cat_cosmetics": "Косметика",
-    "cat_medical_device": "Медичні вироби",
-    "cat_ecommerce": "Транскордонна інтернет-торгівля",
-    "cat_brand": "Бренд та ІВ",
-    "cat_other": "Інше"
+    "cat_Product_Certification": "Сертифікація продукції",
+    "cat_Compliance_Guide": "Посібник з відповідності",
+    "cat_Label_Compliance": "Відповідність етикетці",
+    "cat_Brand_Protection": "Захист бренду",
+    "cat_Cosmetics": "Косметика",
+    "cat_E_commerce": "Електронна комерція",
+    "cat_Food_Beverage": "Продукти харчування та напої",
+    "filterYear": "Рік публікації"
   },
   "Cookie": {
     "message": "Цей сайт використовує лише необхідні файли cookie для автентифікації. Файли cookie для відстеження чи реклами не використовуються.",

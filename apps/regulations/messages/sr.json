@@ -39,13 +39,14 @@
     "filterAll": "Све",
     "filterReset": "Поништи",
     "filterEmpty": "Ниједан документ не одговара овим филтерима.",
-    "cat_food_registration": "Регистрација хране",
-    "cat_label": "Обележавање",
-    "cat_cosmetics": "Козметика",
-    "cat_medical_device": "Медицинска средства",
-    "cat_ecommerce": "Прекогранична е-трговина",
-    "cat_brand": "Бренд и ИС",
-    "cat_other": "Остало"
+    "cat_Product_Certification": "Сертификација производа",
+    "cat_Compliance_Guide": "Водич за усклађеност",
+    "cat_Label_Compliance": "Усклађеност са етикетом",
+    "cat_Brand_Protection": "Заштита бренда",
+    "cat_Cosmetics": "Козметика",
+    "cat_E_commerce": "Е-трговина",
+    "cat_Food_Beverage": "Храна и пиће",
+    "filterYear": "Година објаве"
   },
   "Cookie": {
     "message": "Овај сајт користи само неопходне колачиће за аутентификацију. Не користе се колачићи за праћење или оглашавање.",

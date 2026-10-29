@@ -39,13 +39,14 @@
     "filterAll": "Hamısı",
     "filterReset": "Sıfırla",
     "filterEmpty": "Bu filtrlərə uyğun sənəd yoxdur.",
-    "cat_food_registration": "Qida qeydiyyatı",
-    "cat_label": "Etiketləmə",
-    "cat_cosmetics": "Kosmetika",
-    "cat_medical_device": "Tibbi cihazlar",
-    "cat_ecommerce": "Transsərhəd e-ticarət",
-    "cat_brand": "Brend və ƏM",
-    "cat_other": "Digər"
+    "cat_Product_Certification": "Məhsul Sertifikatlaşdırması",
+    "cat_Compliance_Guide": "Uyğunluq Bələdçisi",
+    "cat_Label_Compliance": "Etiket Uyğunluğu",
+    "cat_Brand_Protection": "Brend Mühafizəsi",
+    "cat_Cosmetics": "Kosmetika",
+    "cat_E_commerce": "Elektron ticarət",
+    "cat_Food_Beverage": "Qida və İçki",
+    "filterYear": "Dərc ili"
   },
   "Cookie": {
     "message": "Bu sayt yalnız əsas autentifikasiya kukilərindən istifadə edir. Heç bir izləmə və ya reklam kukilərindən istifadə edilmir.",

@@ -39,13 +39,14 @@
     "filterAll": "الكل",
     "filterReset": "إعادة تعيين",
     "filterEmpty": "لا توجد مستندات مطابقة لهذه المرشحات.",
-    "cat_food_registration": "تسجيل الأغذية",
-    "cat_label": "وضع العلامات",
-    "cat_cosmetics": "مستحضرات التجميل",
-    "cat_medical_device": "الأجهزة الطبية",
-    "cat_ecommerce": "التجارة الإلكترونية العابرة للحدود",
-    "cat_brand": "العلامات التجارية والملكية الفكرية",
-    "cat_other": "أخرى"
+    "cat_Product_Certification": "شهادة المنتج",
+    "cat_Compliance_Guide": "دليل الامتثال",
+    "cat_Label_Compliance": "الامتثال للملصقات",
+    "cat_Brand_Protection": "حماية العلامة التجارية",
+    "cat_Cosmetics": "مستحضرات التجميل",
+    "cat_E_commerce": "التجارة الإلكترونية",
+    "cat_Food_Beverage": "الأغذية والمشروبات",
+    "filterYear": "سنة النشر"
   },
   "Cookie": {
     "message": "يستخدم هذا الموقع ملفات تعريف الارتباط الأساسية فقط. لا يتم استخدام ملفات تعريف الارتباط للتتبع أو الإعلانات.",

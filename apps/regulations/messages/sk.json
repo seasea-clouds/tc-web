@@ -39,13 +39,14 @@
     "filterAll": "Všetko",
     "filterReset": "Obnoviť",
     "filterEmpty": "Žiadny dokument nezodpovedá týmto filtrom.",
-    "cat_food_registration": "Registrácia potravín",
-    "cat_label": "Označovanie",
-    "cat_cosmetics": "Kozmetika",
-    "cat_medical_device": "Zdravotnícke pomôcky",
-    "cat_ecommerce": "Cezhraničný e-commerce",
-    "cat_brand": "Značka a duševné vlastníctvo",
-    "cat_other": "Ostatné"
+    "cat_Product_Certification": "Certifikácia produktu",
+    "cat_Compliance_Guide": "Sprievodca súladom",
+    "cat_Label_Compliance": "Súlad etikiet",
+    "cat_Brand_Protection": "Ochrana značky",
+    "cat_Cosmetics": "Kozmetika",
+    "cat_E_commerce": "Elektronický obchod",
+    "cat_Food_Beverage": "Potraviny a nápoje",
+    "filterYear": "Rok zverejnenia"
   },
   "Cookie": {
     "message": "Táto stránka používa iba nevyhnutné overovacie súbory cookie. Nepoužívajú sa žiadne sledovacie ani reklamné súbory cookie.",

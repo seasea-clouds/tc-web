@@ -158,14 +158,18 @@ for (const { slug, artDir, expected } of entries) {
   }
 
   // 替换场景：保留仓库原日期
-  let date = meta.date;
-  if (keepDate && exists) {
+  // v1.66：法规没有 date 字段 —— 日期就是法规自己的 published_at，
+  // 由稿件决定，排期参数（--date / --keep-date）对法规一律不生效。
+  let date = kind === 'regulation' ? String(meta.publishedAt || '') : meta.date;
+  if (keepDate && exists && kind !== 'regulation') {
     const m = fs.readFileSync(dstEn, 'utf8').match(/^date:\s*"?(\d{4}-\d{2}-\d{2})"?/m);
     if (m) date = m[1];
   }
   if (forcedDate) {
     if (!/^\d{4}-\d{2}-\d{2}$/.test(forcedDate)) repoProblems.push(`--date 格式应为 YYYY-MM-DD`);
-    else date = forcedDate;
+    else if (kind === 'regulation') {
+      repoProblems.push(`${slug}: 法规日期取稿件 publishedAt，不接受 --date 覆盖`);
+    } else date = forcedDate;
   }
   if (keepDate && !exists) {
     repoProblems.push(`${slug}: --keep-date 只能用于替换已存在的文章（新文章请给 --date）`);
@@ -210,7 +214,8 @@ if (!doWrite) {
 let written = 0;
 for (const it of items) {
   const { slug, artDir, target, date, kind } = it;
-  const dateChanged = date !== it.meta.date;
+  // 法规没有 date 字段（v1.66），只有 published_at，无需改写日期
+  const dateChanged = kind !== 'regulation' && date !== it.meta.date;
   for (const lang of locales) {
     const src = path.join(artDir, 'content', lang, `${slug}.mdx`);
     const dst = path.join(target.contentRoot, lang, `${slug}.mdx`);

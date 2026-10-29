@@ -39,13 +39,14 @@
     "filterAll": "Всички",
     "filterReset": "Нулиране",
     "filterEmpty": "Няма документи, отговарящи на тези филтри.",
-    "cat_food_registration": "Регистрация на храни",
-    "cat_label": "Етикетиране",
-    "cat_cosmetics": "Козметика",
-    "cat_medical_device": "Медицински изделия",
-    "cat_ecommerce": "Трансгранична е-търговия",
-    "cat_brand": "Марка и ИС",
-    "cat_other": "Друго"
+    "cat_Product_Certification": "Сертифициране на продукта",
+    "cat_Compliance_Guide": "Ръководство за съответствие",
+    "cat_Label_Compliance": "Съответствие на етикета",
+    "cat_Brand_Protection": "Защита на марката",
+    "cat_Cosmetics": "Козметика",
+    "cat_E_commerce": "Електронна търговия",
+    "cat_Food_Beverage": "Храна и напитки",
+    "filterYear": "Година на публикуване"
   },
   "Cookie": {
     "message": "Този сайт използва само основни бисквитки за удостоверяване. Не се използват проследяващи или рекламни бисквитки.",

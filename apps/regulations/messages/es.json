@@ -39,13 +39,14 @@
     "filterAll": "Todos",
     "filterReset": "Restablecer",
     "filterEmpty": "Ningún documento coincide con estos filtros.",
-    "cat_food_registration": "Registro alimentario",
-    "cat_label": "Etiquetado",
-    "cat_cosmetics": "Cosmética",
-    "cat_medical_device": "Productos sanitarios",
-    "cat_ecommerce": "Comercio electrónico transfronterizo",
-    "cat_brand": "Marca y PI",
-    "cat_other": "Otros"
+    "cat_Product_Certification": "Certificación de producto",
+    "cat_Compliance_Guide": "Guía de cumplimiento",
+    "cat_Label_Compliance": "Cumplimiento de etiquetas",
+    "cat_Brand_Protection": "Protección de marca",
+    "cat_Cosmetics": "Cosméticos",
+    "cat_E_commerce": "Comercio electrónico",
+    "cat_Food_Beverage": "Alimentos y bebidas",
+    "filterYear": "Año de publicación"
   },
   "Cookie": {
     "message": "Este sitio utiliza sólo cookies de autenticación esenciales. No se utilizan cookies de seguimiento ni publicidad.",

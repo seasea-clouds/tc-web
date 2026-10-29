@@ -39,13 +39,14 @@
     "filterAll": "সব",
     "filterReset": "রিসেট",
     "filterEmpty": "এই ফিল্টারগুলোর সঙ্গে কোনো নথি মেলে না।",
-    "cat_food_registration": "খাদ্য নিবন্ধন",
-    "cat_label": "লেবেলিং",
-    "cat_cosmetics": "প্রসাধনী",
-    "cat_medical_device": "চিকিৎসা যন্ত্র",
-    "cat_ecommerce": "সীমান্ত-পার ই-বাণিজ্য",
-    "cat_brand": "ব্র্যান্ড ও মেধাস্বত্ব",
-    "cat_other": "অন্যান্য"
+    "cat_Product_Certification": "পণ্য সার্টিফিকেশন",
+    "cat_Compliance_Guide": "কমপ্লায়েন্স গাইড",
+    "cat_Label_Compliance": "লেবেল সম্মতি",
+    "cat_Brand_Protection": "ব্র্যান্ড সুরক্ষা",
+    "cat_Cosmetics": "প্রসাধনী",
+    "cat_E_commerce": "ই-কমার্স",
+    "cat_Food_Beverage": "খাদ্য ও পানীয়",
+    "filterYear": "প্রকাশের বছর"
   },
   "Cookie": {
     "message": "এই সাইটটি শুধুমাত্র প্রয়োজনীয় প্রমাণীকরণ কুকি ব্যবহার করে। কোন ট্র্যাকিং বা বিজ্ঞাপন কুকি ব্যবহার করা হয় না.",

@@ -992,18 +992,25 @@ FRONTMATTER_KEYS = ["title", "slug", "date", "category", "excerpt", "references"
 
 # v1.59：法规（kind="regulation"）用另一套 frontmatter / 必填字段。
 # 两类共用同一个检查脚本与其余全部规则，只有以下差异。
-FRONTMATTER_KEYS_REG = ["title", "slug", "date", "category", "excerpt",
+# v1.66（用户裁定）：法规只有两个日期 —— 发布日 published_at、施行日 effective_at。
+# 原来那个 date（「投稿日期」）与 published_at 语义重复，是 R16 报错的根源，直接删掉。
+FRONTMATTER_KEYS_REG = ["title", "slug", "category", "excerpt",
                         "doc_number", "issuer", "published_at", "effective_at",
                         "status", "source_url", "related_service"]
 # related_service 允许缺省；其余必须齐
 FRONTMATTER_REQUIRED_REG = [k for k in FRONTMATTER_KEYS_REG if k != "related_service"]
 SUB_REQUIRED_REG = ["docNumber", "issuer", "publishedAt", "effectiveAt", "status", "sourceUrl"]
 STATUS_ENUM = ("in_force", "upcoming", "amended", "repealed", "draft")
-# v1.65：法规所有「能限定成集合」的字段一律限定死，不接受自由文本。
-# category 必须是 kebab-case slug —— 前端筛选下拉直接把值显示出来，
-# 必须能在 messages 里找到 Regulations.cat_<slug> 的本地化标签。
-REG_CATEGORIES = ("food-registration", "label", "cosmetics", "medical-device",
-                  "ecommerce", "brand", "other")
+# R21（v1.66）：解读篇幅硬上限。用户裁定以「已发布法规（GACC 150 号公告）解读字数
+# 的一半」为基准固定下来：中文 698 字 → 一半 349 → 取整 **300 字**。
+# 其他语言按同一篇实测等义篇幅折算（非 CJK 中位 2215 / 中文 698 ≈ 3.17 倍）→ **1000 字符**。
+REG_INTERPRET_MAX_CJK = 300
+REG_INTERPRET_MAX_OTHER = 1000
+# v1.66：法规所有「能限定成集合」的字段一律限定死，不接受自由文本。
+# category 直接沿用博客那 7 个分类（用户 2026-10-29：「分类是否可以参照文章的分类」），
+# 站内只有一套分类体系，48 语言标签也共用（cat_* 已存在，无需新翻）。
+REG_CATEGORIES = ("Product Certification", "Compliance Guide", "Label Compliance",
+                  "Brand Protection", "Cosmetics", "E-commerce", "Food & Beverage")
 # 发文机关用官方英文缩写（全站统一，不翻译）
 REG_ISSUERS = ("GACC", "SAMR", "NMPA", "MARA", "MOFCOM", "STA", "CNIPA",
                "NPC", "SC", "MIIT", "MEE", "NHFPC")
@@ -4097,14 +4104,27 @@ def check_article(slug, art, add, expected_kind=None, prefix="articles/%s/"):
             '目录 %s/ 下的稿件 kind 必须是 "%s"（当前: %r）'
             % (expected_kind, expected_kind, meta.get("kind")))
     if meta:
-        for req in ["kind", "slug", "title", "date", "category", "author", "excerpt", "locales", "images", "imageRights"]:
+        # v1.66：法规没有 date（只有 publishedAt / effectiveAt），必填集按 kind 分支
+        _req = ["kind", "slug", "title", "category", "author", "excerpt", "locales", "images", "imageRights"]
+        if not is_reg:
+            _req.insert(3, "date")
+        for req in _req:
             if req not in meta:
                 add("M02", "error", slug, "submission.json 缺少字段 %s" % req)
         if meta.get("slug") not in (None, slug):
             add("M03", "error", slug, "submission.json 的 slug 与目录名不一致")
+        # v1.66：法规没有 date 字段了，日期格式改为校验 publishedAt / effectiveAt
         date = str(meta.get("date", ""))
+        if is_reg:
+            date = str(meta.get("publishedAt", ""))
+            for _k, _label in (("publishedAt", "publishedAt（法规发布日）"),
+                               ("effectiveAt", "effectiveAt（施行日）")):
+                _v = str(meta.get(_k, "")).strip()
+                if _v and not re.match(r"^\d{4}-\d{2}-\d{2}$", _v):
+                    add("M04", "error", slug, "%s 应为 YYYY-MM-DD（当前 %r）" % (_label, _v))
         if not re.match(r"^\d{4}-\d{2}-\d{2}$", date):
-            add("M04", "error", slug, "date 应为 YYYY-MM-DD")
+            if not is_reg:
+                add("M04", "error", slug, "date 应为 YYYY-MM-DD")
         else:
             try:
                 d = datetime.strptime(date, "%Y-%m-%d").date()
@@ -4117,9 +4137,12 @@ def check_article(slug, art, add, expected_kind=None, prefix="articles/%s/"):
                 add("M04", "error", slug, "date 不是合法日期")
         if is_reg:
             cat = str(meta.get("category") or "")
-            if cat and not re.match(r"^[a-z0-9]+(?:-[a-z0-9]+)*$", cat):
+            # v1.66：法规分类与博客同一套（7 个固定值，带空格与 &），
+            # 不再要求 kebab-case —— 校验值本身即可，格式交给 R17。
+            if cat and cat not in REG_CATEGORIES:
                 add("M05", "error", slug,
-                    "法规 category 必须是小写连字符（如 food-registration / cosmetics / labelling）")
+                    "法规 category 必须是 %s 之一（当前 %r）"
+                    % (" / ".join(REG_CATEGORIES), cat))
         elif meta.get("category") not in CATEGORIES:
             add("M05", "error", slug, "category 必须是: %s" % " / ".join(CATEGORIES))
         if meta.get("author") != AUTHOR:
@@ -4174,15 +4197,13 @@ def check_article(slug, art, add, expected_kind=None, prefix="articles/%s/"):
         if st and st not in STATUS_ENUM:
             add("R14", "error", slug,
                 "status 必须是 %s 之一（当前 %r）" % (" / ".join(STATUS_ENUM), st))
-        # R16（v1.65）：date 必须是**法规本身的发布日期**，不是我方发布文章的日期。
-        # 页面排序、元信息、sitemap 全部以 publishedAt 为准；date 只是投稿约定字段，
-        # 一旦与 publishedAt 不一致就会出现「站内说 10-29 发布、法规其实是 10-23 发布」。
-        d_val = str(meta.get("date") or "").strip()
-        p_val = str(meta.get("publishedAt") or "").strip()
-        if d_val and p_val and d_val != p_val:
+        # R16（v1.66）：法规只保留两个日期 —— publishedAt（法规发布日）与 effectiveAt
+        # （施行日）。原来那个 date 与 publishedAt 语义重复，是「日期对不上」的根源
+        # （v1.65 只能靠 R16 比对，v1.66 在字段层面直接删掉，写多了就报错）。
+        if str(meta.get("date") or "").strip():
             add("R16", "error", slug,
-                'date 必须是法规发布日期（publishedAt），当前 date=%r / publishedAt=%r —— '
-                "这里要写法规生效文件的发布日，不是我们上站的日子" % (d_val, p_val))
+                "法规不要写 date 字段 —— 只保留 publishedAt（法规发布日）与 "
+                "effectiveAt（施行日）两个日期（当前 date=%r）" % meta.get("date"))
         # R17：category 固定集合 + 必须有对应本地化标签
         cat_val = str(meta.get("category") or "").strip()
         if cat_val and cat_val not in REG_CATEGORIES:
@@ -4275,16 +4296,18 @@ def check_article(slug, art, add, expected_kind=None, prefix="articles/%s/"):
                     add("R11", "error", tag, "%s 之前的「解读」段为空" % ORIGINAL_MARKER)
                 if not tail.strip():
                     add("R11", "error", tag, "%s 之后的「全文译本」段为空" % ORIGINAL_MARKER)
-                # R21（v1.65）：解读不能喧宾夺主 —— 法规页的主体是官方文本，
-                # 解读不得超过全文译本的一半（用户要求）。按正文可见字符计，
-                # 剔除标记符号与空白，避免 markdown 装饰影响判定。
-                if head.strip() and tail.strip():
+                # R21（v1.66）：解读篇幅硬上限，按绝对字数判，不再用「全文一半」。
+                # 基准：已发布条款解读 698 字的一半 ≈ 349 → 固定 300 字（CJK）/
+                # 1000 字符（其他语言，按同篇实测等义篇幅折算）。按可见字符计，
+                # 剔除空白与 markdown 标记，避免装饰符号影响判定。
+                if head.strip():
                     h_len = len(re.sub(r"[\s\*_`#>\-\[\]()]", "", head))
-                    t_len = len(re.sub(r"[\s\*_`#>\-\[\]()]", "", tail))
-                    if t_len and h_len * 2 > t_len:
+                    limit = (REG_INTERPRET_MAX_CJK if lang in ("zh", "ja", "ko")
+                             else REG_INTERPRET_MAX_OTHER)
+                    if h_len > limit:
                         add("R21", "error", tag,
-                            "解读段过长：%d 字符 > 全文译本 %d 字符的一半"
-                            "（法规页主体是官方文本，解读只做提要）" % (h_len, t_len))
+                            "解读段过长：%d 字符 > 上限 %d 字符"
+                            "（法规页主体是官方文本，解读只做提要）" % (h_len, limit))
         if fm.get("slug") != slug:
             add("F04", "error", tag, "frontmatter slug 必须等于 %s" % slug)
         if meta.get("date") and fm.get("date") != meta.get("date"):

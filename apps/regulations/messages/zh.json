@@ -39,13 +39,14 @@
     "filterAll": "全部",
     "filterReset": "重置",
     "filterEmpty": "没有符合这些筛选条件的文件。",
-    "cat_food_registration": "食品注册备案",
-    "cat_label": "标签标识",
-    "cat_cosmetics": "化妆品",
-    "cat_medical_device": "医疗器械",
-    "cat_ecommerce": "跨境电商",
-    "cat_brand": "品牌与知识产权",
-    "cat_other": "其他"
+    "cat_Product_Certification": "产品认证",
+    "cat_Compliance_Guide": "合规指南",
+    "cat_Label_Compliance": "标签合规",
+    "cat_Brand_Protection": "品牌保护",
+    "cat_Cosmetics": "化妆品",
+    "cat_E_commerce": "电子商务",
+    "cat_Food_Beverage": "食品饮料",
+    "filterYear": "发布年份"
   },
   "Cookie": {
     "message": "本网站仅使用必要的身份验证Cookie。不使用跟踪或广告Cookie。",

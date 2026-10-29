@@ -39,13 +39,14 @@
     "filterAll": "Alle",
     "filterReset": "Herstellen",
     "filterEmpty": "Geen documenten die aan deze filters voldoen.",
-    "cat_food_registration": "Levensmiddelenregistratie",
-    "cat_label": "Etikettering",
-    "cat_cosmetics": "Cosmetica",
-    "cat_medical_device": "Medische hulpmiddelen",
-    "cat_ecommerce": "Grensoverschrijdende e-commerce",
-    "cat_brand": "Merk en IP",
-    "cat_other": "Overige"
+    "cat_Product_Certification": "Productcertificering",
+    "cat_Compliance_Guide": "Nalevingsgids",
+    "cat_Label_Compliance": "Etiketnaleving",
+    "cat_Brand_Protection": "Merkbescherming",
+    "cat_Cosmetics": "Cosmetica",
+    "cat_E_commerce": "E-handel",
+    "cat_Food_Beverage": "Levensmiddelen en dranken",
+    "filterYear": "Publicatiejaar"
   },
   "Cookie": {
     "message": "Deze site gebruikt alleen essentiële authenticatiecookies. Er worden geen tracking- of advertentiecookies gebruikt.",

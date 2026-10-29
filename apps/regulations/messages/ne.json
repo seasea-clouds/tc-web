@@ -39,13 +39,14 @@
     "filterAll": "सबै",
     "filterReset": "रिसेट",
     "filterEmpty": "यी फिल्टरसँग कुनै पनि कागजात मेल खाँदैन।",
-    "cat_food_registration": "खाद्य दर्ता",
-    "cat_label": "लेबलिङ",
-    "cat_cosmetics": "सौन्दर्य प्रसाधन",
-    "cat_medical_device": "चिकित्सा उपकरण",
-    "cat_ecommerce": "सीमापार ई-कमर्स",
-    "cat_brand": "ब्रान्ड र बौद्धिक सम्पत्ति",
-    "cat_other": "अन्य"
+    "cat_Product_Certification": "उत्पादन प्रमाणीकरण",
+    "cat_Compliance_Guide": "अनुपालन गाइड",
+    "cat_Label_Compliance": "लेबल अनुपालन",
+    "cat_Brand_Protection": "ब्रान्ड संरक्षण",
+    "cat_Cosmetics": "कस्मेटिक्स",
+    "cat_E_commerce": "ई-वाणिज्य",
+    "cat_Food_Beverage": "खाना र पेय पदार्थ",
+    "filterYear": "प्रकाशन वर्ष"
   },
   "Cookie": {
     "message": "यो साइटले आवश्यक प्रमाणीकरण कुकीहरू मात्र प्रयोग गर्दछ। कुनै ट्र्याकिङ वा विज्ञापन कुकीहरू प्रयोग गरिँदैन।",

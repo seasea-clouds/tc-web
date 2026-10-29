@@ -39,13 +39,14 @@
     "filterAll": "Semua",
     "filterReset": "Set semula",
     "filterEmpty": "Tiada dokumen sepadan dengan penapis ini.",
-    "cat_food_registration": "Pendaftaran makanan",
-    "cat_label": "Pelabelan",
-    "cat_cosmetics": "Kosmetik",
-    "cat_medical_device": "Peranti perubatan",
-    "cat_ecommerce": "E-dagang rentas sempadan",
-    "cat_brand": "Jenama dan Harta Intelek",
-    "cat_other": "Lain-lain"
+    "cat_Product_Certification": "Pensijilan Produk",
+    "cat_Compliance_Guide": "Panduan Pematuhan",
+    "cat_Label_Compliance": "Pematuhan Label",
+    "cat_Brand_Protection": "Perlindungan Jenama",
+    "cat_Cosmetics": "Kosmetik",
+    "cat_E_commerce": "E-dagang",
+    "cat_Food_Beverage": "Makanan & Minuman",
+    "filterYear": "Tahun penerbitan"
   },
   "Cookie": {
     "message": "Tapak ini hanya menggunakan kuki pengesahan penting. Tiada kuki penjejakan atau pengiklanan digunakan.",

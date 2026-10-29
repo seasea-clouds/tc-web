@@ -39,13 +39,14 @@
     "filterAll": "Tots",
     "filterReset": "Restableix",
     "filterEmpty": "Cap document no coincideix amb aquests filtres.",
-    "cat_food_registration": "Registre alimentari",
-    "cat_label": "Etiquetatge",
-    "cat_cosmetics": "Cosmètica",
-    "cat_medical_device": "Dispositius mèdics",
-    "cat_ecommerce": "Comerç electrònic transfronterer",
-    "cat_brand": "Marca i PI",
-    "cat_other": "Altres"
+    "cat_Product_Certification": "Certificació de producte",
+    "cat_Compliance_Guide": "Guia de compliment",
+    "cat_Label_Compliance": "Compliment de l'etiqueta",
+    "cat_Brand_Protection": "Protecció de marca",
+    "cat_Cosmetics": "Cosmètics",
+    "cat_E_commerce": "Comerç electrònic",
+    "cat_Food_Beverage": "Aliments i begudes",
+    "filterYear": "Any de publicació"
   },
   "Cookie": {
     "message": "Aquest lloc només utilitza cookies d'autenticació essencials. No s'utilitzen cookies de seguiment ni de publicitat.",

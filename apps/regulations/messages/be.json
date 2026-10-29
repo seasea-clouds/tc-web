@@ -39,13 +39,14 @@
     "filterAll": "Усе",
     "filterReset": "Скінуць",
     "filterEmpty": "Няма дакументаў, якія адпавядаюць гэтым фільтрам.",
-    "cat_food_registration": "Рэгістрацыя харчавання",
-    "cat_label": "Маркіроўка",
-    "cat_cosmetics": "Касметыка",
-    "cat_medical_device": "Медыцынскія вырабы",
-    "cat_ecommerce": "Транскордонны гандаль",
-    "cat_brand": "Брэнд і ІС",
-    "cat_other": "Іншае"
+    "cat_Product_Certification": "Сертыфікацыя прадукцыі",
+    "cat_Compliance_Guide": "Кіраўніцтва па выкананні патрабаванняў",
+    "cat_Label_Compliance": "Адпаведнасць патрабаванням да этыкетак",
+    "cat_Brand_Protection": "Абарона брэнда",
+    "cat_Cosmetics": "Касметыка",
+    "cat_E_commerce": "Электронная камерцыя",
+    "cat_Food_Beverage": "Прадукты харчавання і Напоі",
+    "filterYear": "Год публікацыі"
   },
   "Cookie": {
     "message": "Гэты сайт выкарыстоўвае толькі неабходныя файлы cookie для аўтэнтыфікацыі. Файлы cookie для адсочвання і рэкламы не выкарыстоўваюцца.",

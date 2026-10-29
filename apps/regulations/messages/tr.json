@@ -39,13 +39,14 @@
     "filterAll": "Tümü",
     "filterReset": "Sıfırla",
     "filterEmpty": "Bu filtrelerle eşleşen belge yok.",
-    "cat_food_registration": "Gıda kaydı",
-    "cat_label": "Etiketleme",
-    "cat_cosmetics": "Kozmetik",
-    "cat_medical_device": "Tıbbi cihazlar",
-    "cat_ecommerce": "Sınır ötesi e-ticaret",
-    "cat_brand": "Marka ve Fikri Mülkiyet",
-    "cat_other": "Diğer"
+    "cat_Product_Certification": "Ürün Sertifikasyonu",
+    "cat_Compliance_Guide": "Uyumluluk Kılavuzu",
+    "cat_Label_Compliance": "Etiket Uyumluluğu",
+    "cat_Brand_Protection": "Marka Koruması",
+    "cat_Cosmetics": "Kozmetik",
+    "cat_E_commerce": "E-ticaret",
+    "cat_Food_Beverage": "Gıda ve İçecek",
+    "filterYear": "Yayım yılı"
   },
   "Cookie": {
     "message": "Bu site yalnızca gerekli kimlik doğrulama çerezlerini kullanır. Hiçbir izleme veya reklam çerezi kullanılmaz.",

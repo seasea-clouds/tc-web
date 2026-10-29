@@ -39,13 +39,14 @@
     "filterAll": "Zote",
     "filterReset": "Weka upya",
     "filterEmpty": "Hakuna hati inayolingana na vichujio hivi.",
-    "cat_food_registration": "Usajili wa chakula",
-    "cat_label": "Uwekaji lebo",
-    "cat_cosmetics": "Vipodozi",
-    "cat_medical_device": "Vifaa vya matibabu",
-    "cat_ecommerce": "Biashara mtandaoni ya mipakani",
-    "cat_brand": "Chapa na Haki Miliki",
-    "cat_other": "Nyingine"
+    "cat_Product_Certification": "Uthibitisho wa Bidhaa",
+    "cat_Compliance_Guide": "Mwongozo wa Kuzingatia",
+    "cat_Label_Compliance": "Kuzingatia Lebo",
+    "cat_Brand_Protection": "Ulinzi wa Biashara",
+    "cat_Cosmetics": "Vipodozi",
+    "cat_E_commerce": "Biashara ya kielektroniki",
+    "cat_Food_Beverage": "Chakula na Vinywaji",
+    "filterYear": "Mwaka wa uchapishaji"
   },
   "Cookie": {
     "message": "Tovuti hii hutumia vidakuzi muhimu vya uthibitishaji pekee. Hakuna vidakuzi vya ufuatiliaji au utangazaji vinatumika.",

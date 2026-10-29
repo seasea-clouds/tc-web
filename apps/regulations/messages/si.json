@@ -39,13 +39,14 @@
     "filterAll": "සියල්ල",
     "filterReset": "යළි සකසන්න",
     "filterEmpty": "මෙම පෙරහන් සමඟ ගැළපෙන ලේඛන නැත.",
-    "cat_food_registration": "ආහාර ලියාපදිංචිය",
-    "cat_label": "ලේබල්කරණය",
-    "cat_cosmetics": "රූපලාවණ්‍ය",
-    "cat_medical_device": "වෛද්‍ය උපකරණ",
-    "cat_ecommerce": "දේශසීමා ඉක්මවන ඊ-වාණිජ්‍යය",
-    "cat_brand": "සන්නාම සහ බුද්ධිමය දේපළ",
-    "cat_other": "වෙනත්"
+    "cat_Product_Certification": "නිෂ්පාදන සහතිකය",
+    "cat_Compliance_Guide": "අනුකූලතා මාර්ගෝපදේශය",
+    "cat_Label_Compliance": "ලේබල් අනුකූලතාව",
+    "cat_Brand_Protection": "වෙළඳ නාම ආරක්ෂණය",
+    "cat_Cosmetics": "විලවුන්",
+    "cat_E_commerce": "ඊ-වාණිජ්යය",
+    "cat_Food_Beverage": "ආහාර සහ බීම",
+    "filterYear": "ප්‍රකාශන වර්ෂය"
   },
   "Cookie": {
     "message": "මෙම වෙබ් අඩවිය අත්‍යවශ්‍ය සත්‍යාපන කුකීස් පමණක් භාවිතා කරයි. ලුහුබැඳීම හෝ ප්‍රචාරණ කුකීස් භාවිතා නොකෙරේ.",

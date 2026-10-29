@@ -39,13 +39,14 @@
     "filterAll": "همه",
     "filterReset": "بازنشانی",
     "filterEmpty": "هیچ سندی با این فیلترها مطابقت ندارد.",
-    "cat_food_registration": "ثبت مواد غذایی",
-    "cat_label": "برچسب‌گذاری",
-    "cat_cosmetics": "لوازم آرایشی",
-    "cat_medical_device": "تجهیزات پزشکی",
-    "cat_ecommerce": "تجارت الکترونیک فرامرزی",
-    "cat_brand": "برند و مالکیت فکری",
-    "cat_other": "سایر"
+    "cat_Product_Certification": "گواهی محصول",
+    "cat_Compliance_Guide": "راهنمای انطباق",
+    "cat_Label_Compliance": "مطابقت با برچسب",
+    "cat_Brand_Protection": "حفاظت از برند",
+    "cat_Cosmetics": "لوازم آرایشی",
+    "cat_E_commerce": "تجارت الکترونیک",
+    "cat_Food_Beverage": "غذا و نوشیدنی",
+    "filterYear": "سال انتشار"
   },
   "Cookie": {
     "message": "این سایت فقط از کوکی های احراز هویت ضروری استفاده می کند. هیچ کوکی ردیابی یا تبلیغاتی استفاده نمی شود.",

@@ -39,13 +39,14 @@
     "filterAll": "Όλα",
     "filterReset": "Επαναφορά",
     "filterEmpty": "Κανένα έγγραφο δεν ταιριάζει με αυτά τα φίλτρα.",
-    "cat_food_registration": "Καταχώριση τροφίμων",
-    "cat_label": "Επισήμανση",
-    "cat_cosmetics": "Καλλυντικά",
-    "cat_medical_device": "Ιατροτεχνολογικά προϊόντα",
-    "cat_ecommerce": "Διασυνοριακό ηλεκτρονικό εμπόριο",
-    "cat_brand": "Εμπορικό σήμα και ΔΠ",
-    "cat_other": "Άλλα"
+    "cat_Product_Certification": "Πιστοποίηση προϊόντος",
+    "cat_Compliance_Guide": "Οδηγός Συμμόρφωσης",
+    "cat_Label_Compliance": "Συμμόρφωση ετικέτας",
+    "cat_Brand_Protection": "Προστασία επωνυμίας",
+    "cat_Cosmetics": "Καλλυντικά",
+    "cat_E_commerce": "Ηλεκτρονικό εμπόριο",
+    "cat_Food_Beverage": "Τρόφιμα & Ποτά",
+    "filterYear": "Έτος δημοσίευσης"
   },
   "Cookie": {
     "message": "Αυτός ο ιστότοπος χρησιμοποιεί μόνο απαραίτητα cookies ελέγχου ταυτότητας. Δεν χρησιμοποιούνται cookies παρακολούθησης ή διαφήμισης.",

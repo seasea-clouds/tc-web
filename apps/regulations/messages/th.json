@@ -39,13 +39,14 @@
     "filterAll": "ทั้งหมด",
     "filterReset": "รีเซ็ต",
     "filterEmpty": "ไม่มีเอกสารที่ตรงกับตัวกรองเหล่านี้",
-    "cat_food_registration": "การขึ้นทะเบียนอาหาร",
-    "cat_label": "การติดฉลาก",
-    "cat_cosmetics": "เครื่องสำอาง",
-    "cat_medical_device": "เครื่องมือแพทย์",
-    "cat_ecommerce": "พาณิชย์อิเล็กทรอนิกส์ข้ามพรมแดน",
-    "cat_brand": "แบรนด์และทรัพย์สินทางปัญญา",
-    "cat_other": "อื่นๆ"
+    "cat_Product_Certification": "การรับรองผลิตภัณฑ์",
+    "cat_Compliance_Guide": "คู่มือการปฏิบัติตามข้อกำหนด",
+    "cat_Label_Compliance": "การปฏิบัติตามฉลาก",
+    "cat_Brand_Protection": "การคุ้มครองแบรนด์",
+    "cat_Cosmetics": "เครื่องสำอาง",
+    "cat_E_commerce": "อีคอมเมิร์ซ",
+    "cat_Food_Beverage": "อาหารและเครื่องดื่ม",
+    "filterYear": "ปีที่ประกาศ"
   },
   "Cookie": {
     "message": "ไซต์นี้ใช้คุกกี้การรับรองความถูกต้องที่จำเป็นเท่านั้น ไม่มีการใช้คุกกี้การติดตามหรือการโฆษณา",

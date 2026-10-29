@@ -39,13 +39,14 @@
     "filterAll": "Összes",
     "filterReset": "Visszaállítás",
     "filterEmpty": "Egyetlen dokumentum sem felel meg ezeknek a szűrőknek.",
-    "cat_food_registration": "Élelmiszer-regisztráció",
-    "cat_label": "Címkézés",
-    "cat_cosmetics": "Kozmetikumok",
-    "cat_medical_device": "Orvostechnikai eszközök",
-    "cat_ecommerce": "Határon átnyúló e-kereskedelem",
-    "cat_brand": "Márka és szellemi tulajdon",
-    "cat_other": "Egyéb"
+    "cat_Product_Certification": "Terméktanúsítás",
+    "cat_Compliance_Guide": "Megfelelőségi útmutató",
+    "cat_Label_Compliance": "Címke-megfelelőség",
+    "cat_Brand_Protection": "Márkavédelem",
+    "cat_Cosmetics": "Kozmetikumok",
+    "cat_E_commerce": "E-kereskedelem",
+    "cat_Food_Beverage": "Élelmiszer és ital",
+    "filterYear": "Közzététel éve"
   },
   "Cookie": {
     "message": "Ez az oldal csak alapvető hitelesítési cookie-kat használ. Nem használnak nyomkövető vagy hirdetési sütiket.",

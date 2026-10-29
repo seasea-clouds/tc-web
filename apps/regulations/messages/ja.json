@@ -39,13 +39,14 @@
     "filterAll": "すべて",
     "filterReset": "リセット",
     "filterEmpty": "この条件に一致する文書はありません。",
-    "cat_food_registration": "食品登録",
-    "cat_label": "表示・ラベル",
-    "cat_cosmetics": "化粧品",
-    "cat_medical_device": "医療機器",
-    "cat_ecommerce": "越境EC",
-    "cat_brand": "ブランド・知財",
-    "cat_other": "その他"
+    "cat_Product_Certification": "製品認証",
+    "cat_Compliance_Guide": "コンプライアンスガイド",
+    "cat_Label_Compliance": "ラベルコンプライアンス",
+    "cat_Brand_Protection": "ブランド保護",
+    "cat_Cosmetics": "化粧品",
+    "cat_E_commerce": "電子商取引",
+    "cat_Food_Beverage": "食品・飲料",
+    "filterYear": "公布年"
   },
   "Cookie": {
     "message": "このサイトでは、必須の認証 Cookie のみを使用します。追跡クッキーや広告クッキーは使用されません。",

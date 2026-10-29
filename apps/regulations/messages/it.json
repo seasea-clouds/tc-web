@@ -39,13 +39,14 @@
     "filterAll": "Tutti",
     "filterReset": "Reimposta",
     "filterEmpty": "Nessun documento corrisponde a questi filtri.",
-    "cat_food_registration": "Registrazione alimentare",
-    "cat_label": "Etichettatura",
-    "cat_cosmetics": "Cosmetici",
-    "cat_medical_device": "Dispositivi medici",
-    "cat_ecommerce": "E-commerce transfrontaliero",
-    "cat_brand": "Marchio e PI",
-    "cat_other": "Altro"
+    "cat_Product_Certification": "Certificazione prodotto",
+    "cat_Compliance_Guide": "Guida alla conformità",
+    "cat_Label_Compliance": "Conformità etichetta",
+    "cat_Brand_Protection": "Protezione del marchio",
+    "cat_Cosmetics": "Cosmetici",
+    "cat_E_commerce": "E-commerce transfrontaliero",
+    "cat_Food_Beverage": "Alimenti e bevande",
+    "filterYear": "Anno di pubblicazione"
   },
   "Cookie": {
     "message": "Questo sito utilizza solo cookie di autenticazione essenziali. Non vengono utilizzati cookie di tracciamento o pubblicitari.",

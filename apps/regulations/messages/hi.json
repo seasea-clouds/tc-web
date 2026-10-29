@@ -39,13 +39,14 @@
     "filterAll": "सभी",
     "filterReset": "रीसेट",
     "filterEmpty": "इन फ़िल्टरों से कोई दस्तावेज़ मेल नहीं खाता।",
-    "cat_food_registration": "खाद्य पंजीकरण",
-    "cat_label": "लेबलिंग",
-    "cat_cosmetics": "सौंदर्य प्रसाधन",
-    "cat_medical_device": "चिकित्सा उपकरण",
-    "cat_ecommerce": "सीमा-पार ई-कॉमर्स",
-    "cat_brand": "ब्रांड और बौद्धिक संपदा",
-    "cat_other": "अन्य"
+    "cat_Product_Certification": "उत्पाद प्रमाणन",
+    "cat_Compliance_Guide": "अनुपालन मार्गदर्शिका",
+    "cat_Label_Compliance": "लेबल अनुपालन",
+    "cat_Brand_Protection": "ब्रांड संरक्षण",
+    "cat_Cosmetics": "सौंदर्य प्रसाधन",
+    "cat_E_commerce": "ई-कॉमर्स",
+    "cat_Food_Beverage": "खाद्य और पेय",
+    "filterYear": "प्रकाशन वर्ष"
   },
   "Cookie": {
     "message": "यह साइट केवल आवश्यक प्रमाणीकरण कुकीज़ का उपयोग करती है। किसी भी ट्रैकिंग या विज्ञापन कुकीज़ का उपयोग नहीं किया जाता है।",

@@ -39,13 +39,14 @@
     "filterAll": "הכול",
     "filterReset": "איפוס",
     "filterEmpty": "אין מסמכים המתאימים למסננים אלה.",
-    "cat_food_registration": "רישום מזון",
-    "cat_label": "סימון",
-    "cat_cosmetics": "קוסמטיקה",
-    "cat_medical_device": "מכשירים רפואיים",
-    "cat_ecommerce": "מסחר אלקטרוני חוצה גבולות",
-    "cat_brand": "מותג וקניין רוחני",
-    "cat_other": "אחר"
+    "cat_Product_Certification": "אישור מוצר",
+    "cat_Compliance_Guide": "מדריך ציות",
+    "cat_Label_Compliance": "תאימות לתווית",
+    "cat_Brand_Protection": "הגנת מותג",
+    "cat_Cosmetics": "קוֹסמֵטִיקָה",
+    "cat_E_commerce": "מסחר אלקטרוני",
+    "cat_Food_Beverage": "מזון ומשקאות",
+    "filterYear": "שנת פרסום"
   },
   "Cookie": {
     "message": "אתר זה משתמש רק בעוגיות אימות חיוניות. לא נעשה שימוש בעוגיות מעקב או פרסום.",

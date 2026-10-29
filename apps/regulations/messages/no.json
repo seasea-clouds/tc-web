@@ -39,13 +39,14 @@
     "filterAll": "Alle",
     "filterReset": "Tilbakestill",
     "filterEmpty": "Ingen dokumenter samsvarer med disse filtrene.",
-    "cat_food_registration": "Næringsmiddelregistrering",
-    "cat_label": "Merking",
-    "cat_cosmetics": "Kosmetikk",
-    "cat_medical_device": "Medisinsk utstyr",
-    "cat_ecommerce": "Grenseoverskridende e-handel",
-    "cat_brand": "Merkevare og IP",
-    "cat_other": "Annet"
+    "cat_Product_Certification": "Produktsertifisering",
+    "cat_Compliance_Guide": "Samsvarsveiledning",
+    "cat_Label_Compliance": "Etikettsamsvar",
+    "cat_Brand_Protection": "Merkevarebeskyttelse",
+    "cat_Cosmetics": "Kosmetikk",
+    "cat_E_commerce": "E-handel",
+    "cat_Food_Beverage": "Mat og drikke",
+    "filterYear": "Publiseringsår"
   },
   "Cookie": {
     "message": "Dette nettstedet bruker kun viktige autentiseringsinformasjonskapsler. Ingen sporings- eller reklameinformasjonskapsler brukes.",

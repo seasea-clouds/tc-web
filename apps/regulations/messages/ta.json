@@ -39,13 +39,14 @@
     "filterAll": "அனைத்தும்",
     "filterReset": "மீட்டமை",
     "filterEmpty": "இந்த வடிகட்டிகளுடன் எந்த ஆவணமும் பொருந்தவில்லை.",
-    "cat_food_registration": "உணவுப் பதிவு",
-    "cat_label": "லேபிளிடல்",
-    "cat_cosmetics": "அழகுசாதனப் பொருட்கள்",
-    "cat_medical_device": "மருத்துவச் சாதனங்கள்",
-    "cat_ecommerce": "எல்லை தாண்டிய இ-வணிகம்",
-    "cat_brand": "பிராண்ட் மற்றும் அறிவுசார் சொத்து",
-    "cat_other": "பிற"
+    "cat_Product_Certification": "தயாரிப்பு சான்றிதழ்",
+    "cat_Compliance_Guide": "இணக்க வழிகாட்டி",
+    "cat_Label_Compliance": "லேபிள் இணக்கம்",
+    "cat_Brand_Protection": "பிராண்ட் பாதுகாப்பு",
+    "cat_Cosmetics": "அழகுசாதனப் பொருட்கள்",
+    "cat_E_commerce": "மின் வணிகம்",
+    "cat_Food_Beverage": "உணவு & பானம்",
+    "filterYear": "வெளியீட்டு ஆண்டு"
   },
   "Cookie": {
     "message": "இந்தத் தளம் அத்தியாவசிய அங்கீகார குக்கீகளை மட்டுமே பயன்படுத்துகிறது. கண்காணிப்பு அல்லது விளம்பர குக்கீகள் பயன்படுத்தப்படவில்லை.",

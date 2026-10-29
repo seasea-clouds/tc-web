@@ -39,13 +39,14 @@
     "filterAll": "Kaikki",
     "filterReset": "Palauta",
     "filterEmpty": "Mikään asiakirja ei vastaa näitä suodattimia.",
-    "cat_food_registration": "Elintarvikerekisteröinti",
-    "cat_label": "Merkinnät",
-    "cat_cosmetics": "Kosmetiikka",
-    "cat_medical_device": "Lääkinnälliset laitteet",
-    "cat_ecommerce": "Rajatylittävä verkkokauppa",
-    "cat_brand": "Brändi ja IP",
-    "cat_other": "Muu"
+    "cat_Product_Certification": "Tuotesertifiointi",
+    "cat_Compliance_Guide": "Vaatimustenmukaisuusopas",
+    "cat_Label_Compliance": "Etikettien vaatimustenmukaisuus",
+    "cat_Brand_Protection": "Brändinsuojaus",
+    "cat_Cosmetics": "Kosmetiikka",
+    "cat_E_commerce": "Verkkokauppa",
+    "cat_Food_Beverage": "Ruoka ja juoma",
+    "filterYear": "Julkaisuvuosi"
   },
   "Cookie": {
     "message": "Tämä sivusto käyttää vain välttämättömiä todennusevästeitä. Mitään seuranta- tai mainosevästeitä ei käytetä.",

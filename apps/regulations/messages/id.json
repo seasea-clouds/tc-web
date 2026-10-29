@@ -39,13 +39,14 @@
     "filterAll": "Semua",
     "filterReset": "Atur ulang",
     "filterEmpty": "Tidak ada dokumen yang cocok dengan filter ini.",
-    "cat_food_registration": "Registrasi pangan",
-    "cat_label": "Pelabelan",
-    "cat_cosmetics": "Kosmetik",
-    "cat_medical_device": "Alat kesehatan",
-    "cat_ecommerce": "E-commerce lintas batas",
-    "cat_brand": "Merek dan KI",
-    "cat_other": "Lainnya"
+    "cat_Product_Certification": "Sertifikasi Produk",
+    "cat_Compliance_Guide": "Panduan Kepatuhan",
+    "cat_Label_Compliance": "Kepatuhan Label",
+    "cat_Brand_Protection": "Perlindungan Merek",
+    "cat_Cosmetics": "Kosmetik",
+    "cat_E_commerce": "E-niaga",
+    "cat_Food_Beverage": "Makanan & Minuman",
+    "filterYear": "Tahun terbit"
   },
   "Cookie": {
     "message": "Situs ini hanya menggunakan cookie otentikasi penting. Tidak ada cookie pelacakan atau iklan yang digunakan.",

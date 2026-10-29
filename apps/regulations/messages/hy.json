@@ -39,13 +39,14 @@
     "filterAll": "Բոլորը",
     "filterReset": "Վերականգնել",
     "filterEmpty": "Այս զտիչներին ոչ մի փաստաթուղթ չի համապատասխանում։",
-    "cat_food_registration": "Սննդի գրանցում",
-    "cat_label": "Մակնշում",
-    "cat_cosmetics": "Կոսմետիկա",
-    "cat_medical_device": "Բժշկական սարքեր",
-    "cat_ecommerce": "Անդրսահմանային էլ. առևտուր",
-    "cat_brand": "Բրենդ և ՄՍ",
-    "cat_other": "Այլ"
+    "cat_Product_Certification": "Ապրանքի հավաստագրում",
+    "cat_Compliance_Guide": "Համապատասխանության ուղեցույց",
+    "cat_Label_Compliance": "Պիտակի համապատասխանություն",
+    "cat_Brand_Protection": "Ապրանքանիշի պաշտպանություն",
+    "cat_Cosmetics": "Կոսմետիկա",
+    "cat_E_commerce": "Էլեկտրոնային առևտուր",
+    "cat_Food_Beverage": "Սնունդ և ըմպելիք",
+    "filterYear": "Հրապարակման տարի"
   },
   "Cookie": {
     "message": "Այս կայքը օգտագործում է միայն վավերացման հիմնական թխուկներ: Հետևելու կամ գովազդային թխուկներ չեն օգտագործվում:",

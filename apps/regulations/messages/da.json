@@ -39,13 +39,14 @@
     "filterAll": "Alle",
     "filterReset": "Nulstil",
     "filterEmpty": "Ingen dokumenter matcher disse filtre.",
-    "cat_food_registration": "Fødeværeregistrering",
-    "cat_label": "Mærkning",
-    "cat_cosmetics": "Kosmetik",
-    "cat_medical_device": "Medicinsk udstyr",
-    "cat_ecommerce": "Grænseoverskridende e-handel",
-    "cat_brand": "Varemærke og IP",
-    "cat_other": "Andet"
+    "cat_Product_Certification": "Produktcertificering",
+    "cat_Compliance_Guide": "Overholdelsesvejledning",
+    "cat_Label_Compliance": "Etiketoverholdelse",
+    "cat_Brand_Protection": "Brandbeskyttelse",
+    "cat_Cosmetics": "Kosmetik",
+    "cat_E_commerce": "E-handel",
+    "cat_Food_Beverage": "Mad & drikke",
+    "filterYear": "Offentliggørelsesår"
   },
   "Cookie": {
     "message": "Dette websted bruger kun vigtige autentificeringscookies. Der bruges ingen sporings- eller reklamecookies.",

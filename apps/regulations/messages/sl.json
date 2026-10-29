@@ -39,13 +39,14 @@
     "filterAll": "Vse",
     "filterReset": "Ponastavi",
     "filterEmpty": "Noben dokument ne ustreza tem filtrom.",
-    "cat_food_registration": "Registracija hrane",
-    "cat_label": "Označevanje",
-    "cat_cosmetics": "Kozmetika",
-    "cat_medical_device": "Medicinski pripomočki",
-    "cat_ecommerce": "Čezmejno e-poslovanje",
-    "cat_brand": "Blagovna znamka in IP",
-    "cat_other": "Drugo"
+    "cat_Product_Certification": "Certificiranje izdelka",
+    "cat_Compliance_Guide": "Vodnik za skladnost",
+    "cat_Label_Compliance": "Skladnost etikete",
+    "cat_Brand_Protection": "Zaščita blagovne znamke",
+    "cat_Cosmetics": "Kozmetika",
+    "cat_E_commerce": "E-poslovanje",
+    "cat_Food_Beverage": "Hrana in pijača",
+    "filterYear": "Leto objave"
   },
   "Cookie": {
     "message": "To spletno mesto uporablja samo bistvene piškotke za preverjanje pristnosti. Piškotki za sledenje ali oglaševanje se ne uporabljajo.",

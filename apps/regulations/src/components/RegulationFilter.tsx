@@ -9,6 +9,7 @@ export interface RegulationFilterTexts extends RegulationRowTexts {
   catLabels?: Record<string, string>;
   filterIssuer: string;
   filterCategory: string;
+  filterYear: string;
   filterStatus: string;
   filterAll: string;
   filterReset: string;
@@ -41,6 +42,7 @@ export default function RegulationFilter({
 }) {
   const [issuer, setIssuer] = useState('');
   const [category, setCategory] = useState('');
+  const [year, setYear] = useState('');
   const [status, setStatus] = useState('');
 
   const issuers = useMemo(
@@ -55,8 +57,16 @@ export default function RegulationFilter({
     () => Array.from(new Set(docs.map((d) => d.status).filter(Boolean))),
     [docs],
   );
+  /** 发布年份：取自 published_at，倒序（新的在前） */
+  const years = useMemo(
+    () =>
+      Array.from(
+        new Set(docs.map((d) => (d.publishedAt || '').slice(0, 4)).filter((y) => /^\d{4}$/.test(y))),
+      ).sort().reverse(),
+    [docs],
+  );
 
-  const active = Boolean(issuer || category || status);
+  const active = Boolean(issuer || category || year || status);
 
   const filtered = useMemo(() => {
     if (!active) return pageDocs;
@@ -64,9 +74,10 @@ export default function RegulationFilter({
       (d) =>
         (!issuer || d.issuer === issuer) &&
         (!category || d.category === category) &&
+        (!year || (d.publishedAt || '').startsWith(year)) &&
         (!status || d.status === status),
     );
-  }, [active, docs, pageDocs, issuer, category, status]);
+  }, [active, docs, pageDocs, issuer, category, year, status]);
 
   const selectClass =
     'rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-[#333333] focus:border-primary-navy focus:outline-none focus:ring-1 focus:ring-primary-navy';
@@ -74,7 +85,7 @@ export default function RegulationFilter({
   return (
     <>
       {/* 筛选栏：只有存在可筛选项时才出现，条目太少的早期阶段不打扰用户 */}
-      {(issuers.length > 1 || categories.length > 1 || statuses.length > 1) && (
+      {(issuers.length > 1 || categories.length > 1 || years.length > 1 || statuses.length > 1) && (
         <div className="mb-6 flex flex-wrap items-center gap-3">
           {issuers.length > 1 && (
             <label className="flex items-center gap-2 text-sm text-[#5F6F7F]">
@@ -104,6 +115,20 @@ export default function RegulationFilter({
             </label>
           )}
 
+          {years.length > 1 && (
+            <label className="flex items-center gap-2 text-sm text-[#5F6F7F]">
+              <span className="font-medium">{texts.filterYear}</span>
+              <select className={selectClass} value={year} onChange={(e) => setYear(e.target.value)}>
+                <option value="">{texts.filterAll}</option>
+                {years.map((v) => (
+                  <option key={v} value={v}>
+                    {v}
+                  </option>
+                ))}
+              </select>
+            </label>
+          )}
+
           {statuses.length > 1 && (
             <label className="flex items-center gap-2 text-sm text-[#5F6F7F]">
               <span className="font-medium">{texts.filterStatus}</span>
@@ -124,6 +149,7 @@ export default function RegulationFilter({
               onClick={() => {
                 setIssuer('');
                 setCategory('');
+                setYear('');
                 setStatus('');
               }}
               className="rounded-lg border border-gray-300 px-3 py-2 text-sm font-medium text-primary-navy transition-colors hover:border-primary-navy"

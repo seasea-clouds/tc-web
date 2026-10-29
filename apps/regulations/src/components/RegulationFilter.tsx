@@ -85,9 +85,12 @@ export default function RegulationFilter({
   return (
     <>
       {/* 筛选栏：只有存在可筛选项时才出现，条目太少的早期阶段不打扰用户 */}
-      {(issuers.length > 1 || categories.length > 1 || years.length > 1 || statuses.length > 1) && (
+      {(issuers.length > 0 ||
+        years.length > 0 ||
+        categories.length > 1 ||
+        statuses.length > 1) && (
         <div className="mb-6 flex flex-wrap items-center gap-3">
-          {issuers.length > 1 && (
+          {issuers.length > 0 && (
             <label className="flex items-center gap-2 text-sm text-[#5F6F7F]">
               <span className="font-medium">{texts.filterIssuer}</span>
               <select className={selectClass} value={issuer} onChange={(e) => setIssuer(e.target.value)}>
@@ -115,7 +118,7 @@ export default function RegulationFilter({
             </label>
           )}
 
-          {years.length > 1 && (
+          {years.length > 0 && (
             <label className="flex items-center gap-2 text-sm text-[#5F6F7F]">
               <span className="font-medium">{texts.filterYear}</span>
               <select className={selectClass} value={year} onChange={(e) => setYear(e.target.value)}>

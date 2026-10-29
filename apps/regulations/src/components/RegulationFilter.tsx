@@ -84,11 +84,9 @@ export default function RegulationFilter({
 
   return (
     <>
-      {/* 筛选栏：只有存在可筛选项时才出现，条目太少的早期阶段不打扰用户 */}
-      {(issuers.length > 0 ||
-        years.length > 0 ||
-        categories.length > 1 ||
-        statuses.length > 1) && (
+      {/* 筛选栏：四个维度只要该字段有值就出现 —— 即便只有一个可选值也保留下拉
+          （用户 2026-10-29 裁定：所有筛选只有一个值也要有下拉） */}
+      {(issuers.length > 0 || categories.length > 0 || years.length > 0 || statuses.length > 0) && (
         <div className="mb-6 flex flex-wrap items-center gap-3">
           {issuers.length > 0 && (
             <label className="flex items-center gap-2 text-sm text-[#5F6F7F]">
@@ -104,7 +102,7 @@ export default function RegulationFilter({
             </label>
           )}
 
-          {categories.length > 1 && (
+          {categories.length > 0 && (
             <label className="flex items-center gap-2 text-sm text-[#5F6F7F]">
               <span className="font-medium">{texts.filterCategory}</span>
               <select className={selectClass} value={category} onChange={(e) => setCategory(e.target.value)}>
@@ -132,7 +130,7 @@ export default function RegulationFilter({
             </label>
           )}
 
-          {statuses.length > 1 && (
+          {statuses.length > 0 && (
             <label className="flex items-center gap-2 text-sm text-[#5F6F7F]">
               <span className="font-medium">{texts.filterStatus}</span>
               <select className={selectClass} value={status} onChange={(e) => setStatus(e.target.value)}>

@@ -957,6 +957,21 @@ FRONTMATTER_KEYS_REG = ["title", "slug", "date", "category", "excerpt",
 FRONTMATTER_REQUIRED_REG = [k for k in FRONTMATTER_KEYS_REG if k != "related_service"]
 SUB_REQUIRED_REG = ["docNumber", "issuer", "publishedAt", "effectiveAt", "status", "sourceUrl"]
 STATUS_ENUM = ("in_force", "upcoming", "amended", "repealed", "draft")
+# R01 沿革语境（v1.62）：出现这些词说明是在讲"旧号令被取代"，不是在引用现行依据
+R01_HISTORY_RE = re.compile(
+    r"(?i)replac|supersed|repeal|amend|abolish|predecessor"
+    r"|取代|替代|代替|废止|废除|不再|旧版|新版|沿革|前身"
+    r"|remplac|abrog|derog|ersetz|aufgehoben|置き換|廃止|대체|폐지",
+)
+
+
+def _enclosing_paragraph(text, pos):
+    """取 pos 所在的段落（以空行为界），用于判断"这段在讲什么"。"""
+    start = text.rfind("\n\n", 0, pos)
+    end = text.find("\n\n", pos)
+    return text[(start + 2 if start >= 0 else 0):(end if end >= 0 else len(text))]
+
+
 ORIGINAL_MARKER = "<!-- original -->"
 
 AUTHOR = "David Zhang"
@@ -3389,7 +3404,9 @@ def check(path, glossary=None):
     if total_bytes is not None and total_bytes > MAX_PACKAGE_BYTES:
         add("S06", "error", "-", "压缩包总大小 %.1f MB > 60 MB" % (total_bytes / 1048576.0))
 
-    # --- 顶层结构：articles/<slug>/...
+    # --- 顶层结构（v1.62 支持两种布局）
+    #   articles/<slug>/                 投稿交付格式（kind 由 submission.json 决定）
+    #   blog/<slug>/ + regulation/<slug>/ 样例/分批整理格式（kind 由目录决定，须与 submission.json 一致）
     names = list(files.keys())
     articles = {}
     for n in names:
@@ -3400,22 +3417,26 @@ def check(path, glossary=None):
             add("S05", "error", "-", "压缩包内含隐藏文件: %s" % n)
             continue
         parts = n.split("/")
-        if parts[0] != "articles":
-            add("S01", "error", "-", "顶层必须是 articles/ 目录，发现: %s" % n)
+        if parts[0] not in ("articles", "blog", "regulation"):
+            add("S01", "error", "-",
+                "顶层必须是 articles/（或样例用的 blog/ 与 regulation/），发现: %s" % n)
             continue
         if len(parts) < 2:
             continue
-        articles.setdefault(parts[1], []).append("/".join(parts[2:]))
+        # (目录类别, slug) -> 文件列表；articles 的类别为 None（由 kind 决定）
+        kind_dir = None if parts[0] == "articles" else parts[0]
+        articles.setdefault((kind_dir, parts[1]), []).append("/".join(parts[2:]))
 
     if not articles:
         add("S01", "error", "-", "压缩包内没有 articles/<slug>/ 结构")
         return findings
 
     slugs = set()
-    for slug in sorted(articles):
-        prefix = "articles/%s/" % slug
+    for (kind_dir, slug) in sorted(articles, key=lambda x: (x[0] or "", x[1])):
+        top = kind_dir or "articles"
+        prefix = "%s/%s/" % (top, slug)
         art = {k: v for k, v in files.items() if k.startswith(prefix)}
-        check_article(slug, art, add)
+        check_article(slug, art, add, expected_kind=kind_dir, prefix=prefix)
         if slug in slugs:
             add("M03", "error", slug, "slug 重复")
         slugs.add(slug)
@@ -3803,7 +3824,7 @@ def _glossary_banned_check(spec, parsed, slug, add):
                     % (word, tid, len(hits), hits[0]))
 
 
-def check_article(slug, art, add):
+def check_article(slug, art, add, expected_kind=None, prefix="articles/%s/"):
     rel = lambda k: k.split("/", 2)[2] if k.count("/") >= 2 else k
 
     # S10 路径白名单（v1.22）：包内只允许三种位置，其余一律报错。
@@ -3864,7 +3885,7 @@ def check_article(slug, art, add):
             add("I01", "error", slug, "图片必须为 webp，发现: %s" % tail)
 
     # --- submission.json
-    sub_key = "articles/%s/submission.json" % slug
+    sub_key = prefix + "submission.json"
     meta = {}
     if sub_key not in art:
         add("M01", "error", slug, "缺少 submission.json")
@@ -3885,6 +3906,12 @@ def check_article(slug, art, add):
     if meta and kind_val not in ("blog", "regulation"):
         add("M10", "error", slug,
             'kind 必填且只能是 "blog" 或 "regulation"（当前: %r）' % (meta.get("kind"),))
+    # v1.62：按目录整理时（blog/<slug>、regulation/<slug>），目录就是类型声明，
+    # 与 submission.json 的 kind 不符说明放错了文件夹
+    if expected_kind and meta and kind_val and kind_val != expected_kind:
+        add("M11", "error", slug,
+            '目录 %s/ 下的稿件 kind 必须是 "%s"（当前: %r）'
+            % (expected_kind, expected_kind, meta.get("kind")))
     if meta:
         for req in ["kind", "slug", "title", "date", "category", "author", "excerpt", "locales", "images", "imageRights"]:
             if req not in meta:
@@ -5352,9 +5379,17 @@ def check_body(tag, lang, body, image_files, slug, add, is_reg=False):
             add("I06", "error", tag, "图片 %s 未被正文引用" % name)
 
     # 红线
-    norm = normalize_digits(style_body)
-    if re.search(r"(?<!\d)(248|249)(?!\d)", norm):
-        add("R01", "error", tag, "正文出现 248/249（现行法条一律写 280 号令）")
+    # R01（v1.62 改口径）：本意是「不得把已被替代的旧号令当作现行依据」，不是禁用这两个数字。
+    # 沿革叙述（replaces / superseded / 取代 / 废止 …）是事实，应当放行；
+    # 因此这里扫全文（含法规的官方译本段），但同段内出现沿革词就跳过。
+    norm = normalize_digits(body)
+    for m in re.finditer(r"(?<!\d)(248|249)(?!\d)", norm):
+        para = _enclosing_paragraph(norm, m.start())
+        if R01_HISTORY_RE.search(para):
+            continue
+        add("R01", "error", tag,
+            "把 248/249 当作现行依据（已由 280 号令取代；叙述沿革时请写明 replaces / 取代 等）")
+        break
     if re.search(r"\b(MOA|CFDA)\b", style_body):
         add("R02", "error", tag, "正文出现旧机构名 MOA/CFDA（应为 MARA/SAMR）")
     price_body = APPROX_RES.sub("", body)

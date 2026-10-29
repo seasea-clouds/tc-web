@@ -109,20 +109,36 @@ console.log(`✓ 规则检查通过（0 error, ${warnings.length} warning）`);
 
 // ---------------------------------------------------------------- 3. 仓库侧校验
 
-const articlesDir = path.join(workRoot, 'articles');
-const slugs = fs.existsSync(articlesDir)
-  ? fs.readdirSync(articlesDir).filter((d) => fs.statSync(path.join(articlesDir, d)).isDirectory())
-  : [];
-
-const repoProblems = [];
+// 包内两种布局都收（与 submitter_check.py 一致）：
+//   articles/<slug>/                  交付格式，kind 由 submission.json 决定
+//   blog/<slug>/ + regulation/<slug>/ 分类格式，目录即类型声明
+const layoutDirs = [
+  { dir: 'articles', expected: null },
+  { dir: 'blog', expected: 'blog' },
+  { dir: 'regulation', expected: 'regulation' },
+];
+const entries = [];
+for (const { dir, expected } of layoutDirs) {
+  const abs = path.join(workRoot, dir);
+  if (!fs.existsSync(abs)) continue;
+  for (const name of fs.readdirSync(abs)) {
+    if (!fs.statSync(path.join(abs, name)).isDirectory()) continue;
+    entries.push({ slug: name, artDir: path.join(abs, name), expected });
+  }
+}
+const dup = entries.map((e) => e.slug).filter((s, i, a) => a.indexOf(s) !== i);
+const repoProblems = [...new Set(dup)].map((s) => `${s}: 同一包里 slug 重复`);
 const items = [];
 
-for (const slug of slugs) {
-  const artDir = path.join(articlesDir, slug);
+for (const { slug, artDir, expected } of entries) {
   const meta = JSON.parse(fs.readFileSync(path.join(artDir, 'submission.json'), 'utf8'));
   const kindVal = String(meta.kind || '').trim().toLowerCase();
   if (kindVal !== 'blog' && kindVal !== 'regulation') {
     repoProblems.push(`${slug}: submission.json 的 kind 必须是 "blog" 或 "regulation"（当前 ${JSON.stringify(meta.kind)}）`);
+    continue;
+  }
+  if (expected && kindVal !== expected) {
+    repoProblems.push(`${slug}: 放在 ${expected}/ 目录下但 kind 是 "${kindVal}"（应为 "${expected}"）`);
     continue;
   }
   const kind = kindVal;

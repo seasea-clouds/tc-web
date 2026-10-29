@@ -1,4 +1,4 @@
-# 投稿工具包（Submission Kit · 博客 + 法规 · 自检脚本 v1.61）
+# 投稿工具包（Submission Kit · 博客 + 法规 · 自检脚本 v1.62）
 
 这是 sinotradecompliance.com 的投稿工具包，**博客文章与法规文章共用同一个包、同一套检查脚本**。
 你写 **48 个语言**的同一篇内容（+ 博客需要配图），用本包里的脚本自检通过后，把 zip 交回即可直接上线——我们不做二次润色，**脚本通过即定稿**。
@@ -9,7 +9,7 @@
 > **文档分工，各司其职**：
 > **SPEC.md = 全部验收规则**（目录结构 / frontmatter / 48 语言 / 正文 / 图片 / 红线 / ST 写作纪律 / P 一致性，含完整规则表）——查"规则是什么、为什么被判错"去那里；
 > **本 README = 使用说明**（上手步骤、脚本命令、输出解读、流程、避坑）——不重复规则正文。
-> 两份文档均为 v1.61。
+> 两份文档均为 v1.62。
 
 ---
 
@@ -40,19 +40,30 @@ glossary.json          术语表（改词形前先查这里，避免同一概念
 submitter_check.py     自检与打包脚本（纯 Python 标准库，无需安装依赖）
 template-blog/         空白模板：博客用（submission.json + 一个 en 骨架）
 template-regulation/   空白模板：法规用（多出 docNumber/issuer/status 等字段、正文带原文分隔标记）
-sample/                两篇**完整合格**的 48 语言样例（一篇博客 + 一篇法规，同一包里共存）
+sample/                两篇**完整合格**的 48 语言样例：sample/blog/ 与 sample/regulation/ 各一篇
 ```
 
 **投法规**：从 `template-regulation/` 起步，正文用 `<!-- original -->` 一行把「解读」与「全文译本」隔开
 （分隔线前＝我们的分析，分隔线后＝该语言的官方文本全文）。法规不使用配图。
 字段含义与法规专属规则（R10–R15）见 SPEC.md 第 12 节。
 
-`sample/` 就是最终该长什么样的唯一标准。里面**并排放着两篇**，同一个包、同一套规则：
+`sample/` 就是最终该长什么样的唯一标准。**按类型分成两个子目录**，每个子目录可以放任意多篇：
 
 ```
-sample/articles/sample-china-entry-checklist/          博客（kind: blog，带 2 张配图与结尾 CTA）
-sample/articles/sample-import-food-producer-registration/  法规（kind: regulation，无配图、有 original 分隔标记）
+sample/
+├── blog/                                    博客（kind: blog，带 2 张配图与结尾 CTA）
+│   └── sample-china-entry-checklist/
+│       └── another-blog-slug/               ← 想放几篇放几篇
+└── regulation/                              法规（kind: regulation，无配图、有 original 分隔标记）
+    └── sample-import-food-producer-registration/
+        └── another-regulation-slug/
 ```
+
+每篇的内部结构与投稿包完全一样（`submission.json` + `content/<48 语言>/<slug>.mdx` + 可选 `images/`）。
+放在 `blog/` 下的稿件其 `kind` 必须是 `"blog"`，放在 `regulation/` 下的必须是 `"regulation"` —— 放错文件夹会报 M11。
+
+> **样例的正文是压缩过的**：法规样例的官方译本段只保留两条，真实投稿**必须交全文**
+> （整部法规的每一条，不是节选）。样例只为示范结构与字段，篇幅不代表实际要求。
 
 想看某一类怎么写，就打开对应那篇。**建议先跑一遍样例，确认你的环境正常：**
 

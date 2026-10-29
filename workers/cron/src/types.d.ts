@@ -1,5 +1,5 @@
 /**
- * Minimal Cloudflare Workers types for analytics-cron Worker.
+ * Minimal Cloudflare Workers types for tc-web-cron Worker.
  */
 interface ScheduledEvent {
   readonly cron: string;

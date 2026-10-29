@@ -1,6 +1,9 @@
 # Workers —— 独立 Worker 清单与统一约定
 
-本仓库目前有**两个**独立 Worker（都不是 Pages Functions，deploy 各自跑 `wrangler deploy`）。
+本仓库目前有**三个**独立 Worker（都不是 Pages Functions，deploy 各自跑 `wrangler deploy`）。
+
+> **所有定时/cron 任务都归 `tc-web-cron`（`workers/cron/`）**——以后新增定时任务往它里面加，
+> 不要再为单个任务新建 Worker。原 `tc-web-admin-analytics-cron` 已于 2026-10-29 并入并改名。
 
 ---
 
@@ -8,6 +11,7 @@
 
 | Worker | 目录 | 触发 | 干什么 |
 |---|---|---|---|
+| `tc-web-cron` | `workers/cron/` | cron `0 * * * *` + `GET /health`、`GET /sync` | **统一定时任务 Worker**：每小时 CF Analytics → D1；每天 UTC 01:00 重跑 blog + regulations 生产部署（定时发布上架） |
 | `tc-web-portal-email-cron` | `apps/portal/workers/email-cron/` | cron `*/5 * * * *` + `GET /health`、`GET /run` | 每 5 分钟调 portal 的 `POST /api/report/drain`，把已审核的报告邮件投出去 |
 | `tc-web-media` | `workers/media-gateway/` | cron `20 3 * * *` + `/media/<channel>/<win>/{push,pull,ack}` | 多渠道采集信封的**哑存储**：收 / 发未 ack / 删已 ack / 每日清理（当前渠道 `reddit`、`x`） |
 
@@ -21,7 +25,7 @@ Cloudflare **Pages Functions 不支持 cron trigger** —— `_scheduled.ts` 导
 
 ---
 
-## 3. 共同的架构约定（两个 Worker 都遵守）
+## 3. 共同的架构约定（三个 Worker 都遵守）
 
 1. **零依赖单文件 TS**：不引 npm 包（D1 类型也自己写最小接口），靠 wrangler esbuild 打包。
 2. **弱口令共享**：不在 Worker 里另建一套鉴权体系，而是复用「同名同值口令」——

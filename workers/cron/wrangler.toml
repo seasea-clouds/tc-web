@@ -1,0 +1,23 @@
+# tc-web-cron — 站点统一定时任务 Worker
+#
+# 以后所有 timed/cron 任务都加到这个 Worker 里（新增 cron 表达式直接往
+# crons 数组加，记得在 src/index.ts 的 scheduled() 里按 event.cron 分流）。
+#
+# 部署：cd workers/cron && npx wrangler deploy
+# secrets（部署前设一次）：
+#   CLOUDFLARE_API_TOKEN  — Analytics 读 + Pages 重建
+#   CLOUDFLARE_ZONE_ID    — Analytics 读的 zone
+#   PAGES_ACCOUNT_ID      — CF 账号 id（Pages 部署接口用）
+#   CRON_SECRET           — HTTP 手动触发的 Bearer 校验
+
+name = "tc-web-cron"
+main = "src/index.ts"
+compatibility_date = "2026-05-23"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "trade-web-portal-db"
+database_id = "e84f0762-9a93-4ede-ac19-aef7325e7ebd"
+
+[triggers]
+crons = ["0 * * * *"]

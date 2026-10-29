@@ -7,7 +7,7 @@
  *   2. Read all data from D1, build response
  *
  * Backfill (CF → D1) is handled by the standalone Worker
- * `tc-web-admin-analytics-cron` (apps/admin/workers/analytics-cron, cron: 0 * * * * UTC).
+ * `tc-web-cron` (workers/cron, cron: 0 * * * * UTC).
  * 注意：Pages Functions 不支持 cron trigger，原 functions/_scheduled.ts 从未运行过，
  * 已于 2026-09-13 删除；定时任务一律用 Worker。
  * If data is temporarily stale during cron deployment window,
@@ -141,7 +141,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
     await runMigration(context.env);
 
     // 2. Read all-time totals from D1
-    //    Backfill is handled by tc-web-admin-analytics-cron (hourly cron Worker)
+    //    Backfill is handled by tc-web-cron (hourly cron Worker)
     const allTime = await readAllTimeTotals(context.env);
 
     // 3. Read today's hourly data

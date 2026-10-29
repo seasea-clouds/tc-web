@@ -573,30 +573,48 @@ curl -s -o /dev/null -w "%{http_code}" "https://tc-web-admin.pages.dev/admin/das
 curl -s -o /dev/null -w "%{http_code}" "https://sinotradecompliance.com/admin/dashboard/"
 ```
 
-### Analytics Cron Worker
+### 定时任务 Worker（tc-web-cron）
 
-独立 Worker 用于定时同步 CF Analytics → D1（cron: `0 * * * *` UTC）。
+**站点所有定时任务都在这一个 Worker 里**（原 `tc-web-admin-analytics-cron` 已并入并改名）。
+不要为单个定时任务再新建 Worker。
+
+**当前承担的定时任务：**
+
+| 频率 | 任务 |
+|---|---|
+| 每小时（`0 * * * *` UTC） | CF Analytics → D1 同步（`daily_page_stats` / `hourly_page_stats`） |
+| 每天 UTC 01:00（北京 09:00） | 重跑 blog + regulations 最新生产部署，让当天到日期的定时发布文章上线 |
 
 **文件结构：**
 ```
-apps/admin/workers/analytics-cron/
+workers/cron/
 ├── package.json
-├── wrangler.toml      # D1 binding + cron
-└── src/index.ts
+├── wrangler.toml      # D1 binding + crons
+└── src/index.ts       # scheduled() 按 event.cron 分流
 ```
 
-**首次部署：**
+**首次部署 / 换机器：**
 ```bash
-cd apps/admin/workers/analytics-cron
-set -a && . ../../../.env && set +a      # 仓库根 .env（含 CLOUDFLARE_API_TOKEN/ZONE_ID）
+cd workers/cron
+set -a && . ../../.env && set +a      # 仓库根 .env
 echo "$CLOUDFLARE_API_TOKEN" | npx wrangler secret put CLOUDFLARE_API_TOKEN
-echo "$CLOUDFLARE_ZONE_ID" | npx wrangler secret put CLOUDFLARE_ZONE_ID
+echo "$CLOUDFLARE_ZONE_ID"   | npx wrangler secret put CLOUDFLARE_ZONE_ID
+echo "$CRON_SECRET"          | npx wrangler secret put CRON_SECRET
+echo "<CF 账号 id>"          | npx wrangler secret put PAGES_ACCOUNT_ID
 npx wrangler deploy
 ```
 
 **修改代码后部署：**
 ```bash
-cd apps/admin/workers/analytics-cron
-npx wrangler deploy
+cd workers/cron && npx wrangler deploy
 # Secrets 保留在 Worker 中，只需重新 deploy 代码
 ```
+
+**自测：**
+```bash
+curl -H "Authorization: Bearer $CRON_SECRET" https://tc-web-cron.sea-clouds.workers.dev/health
+curl -H "Authorization: Bearer $CRON_SECRET" https://tc-web-cron.sea-clouds.workers.dev/sync
+```
+
+**新增定时任务的方式**：`wrangler.toml` 的 `crons` 数组加表达式 →
+`src/index.ts` 的 `scheduled()` 里按 `event.cron` 分流 → 部署。

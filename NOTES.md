@@ -289,7 +289,7 @@ node ../../packages/scripts/build-search-index.mjs \
 - `fetchAggregateStatsRange()` — httpRequestsAdaptiveGroups：路径/OS/设备/项目分布
 - **缓存策略**：每日数据不可变，从 CF 取一次后永久缓存；每小时数据（今日）逐步缓存
 - API 端点：`GET /api/admin/analytics?range=today|7d|30d`
-- **定时回填**：独立 Worker `workers/analytics-cron/`（cron: `0 * * * *` UTC），`wrangler deploy`
+- **定时回填**：独立 Worker `workers/cron/`（`tc-web-cron`，cron: `0 * * * *` UTC），`wrangler deploy`
 
 ### 环境变量管理
 
@@ -338,7 +338,7 @@ GitHub 仓库从 `seasea-clouds/trade-web` 切换到 `seasea-clouds/tc-web`（�
 
 ### 踩坑 4：Worker script 无法通过 API Token 读取
 - `GET /accounts/{acct}/workers/scripts/{name}` 返回 **405** "Method not allowed for this authentication scheme"。
-- **结论**：Worker 源码必须保留在本地仓库（`apps/admin/workers/analytics-cron/src/index.ts`），重建时用本地源 `wrangler deploy`。
+- **结论**：Worker 源码必须保留在本地仓库（现为 `workers/cron/src/index.ts`，原名 tc-web-admin-analytics-cron），重建时用本地源 `wrangler deploy`。
 - secrets 通过 `npx wrangler secret put` 设置成功（直接 PUT API 会 405 method_not_allowed，code 1001）。
 
 ### 踩坑 5：webhook 触发部署可能卡队列
@@ -356,8 +356,8 @@ GitHub 仓库从 `seasea-clouds/trade-web` 切换到 `seasea-clouds/tc-web`（�
 - **结论**：本地（WSL）到 CF 边缘的网络/TLS 路径间歇抖动，不是 CF 侧问题。遇到先重试、不要误判。
 
 ### 踩坑 8：Pages cron（_scheduled.ts）—— 更正：Pages Functions 根本不支持 cron（2026-09-13）
-- ⚠️ **更正（2026-09-13）**：Cloudflare Pages Functions **不支持 cron trigger**，`export const config = { schedule }` 不会被注册。**`apps/admin/functions/_scheduled.ts`（admin 每小时分析回填）从未按计划运行过**，历史上每小时的数据是独立的 `tc-web-admin-analytics-cron` Worker（wrangler.toml `[triggers] crons`）写的。该文件已于 2026-09-13 删除；admin Pages 项目本来也没有 `CLOUDFLARE_API_TOKEN`/`CLOUDFLARE_ZONE_ID`，即便触发也是空转。
-- 结论：**任何需要定时执行的任务都必须做成独立 Worker**（参考 `apps/admin/workers/analytics-cron`、`apps/portal/workers/email-cron`），不要写 `functions/_scheduled.ts`。
+- ⚠️ **更正（2026-09-13）**：Cloudflare Pages Functions **不支持 cron trigger**，`export const config = { schedule }` 不会被注册。**`apps/admin/functions/_scheduled.ts`（admin 每小时分析回填）从未按计划运行过**，历史上每小时的数据是独立的定时任务 Worker（当时名 `tc-web-admin-analytics-cron`，2026-10-29 改名 `tc-web-cron`）写的。该文件已于 2026-09-13 删除；admin Pages 项目本来也没有 `CLOUDFLARE_API_TOKEN`/`CLOUDFLARE_ZONE_ID`，即便触发也是空转。
+- 结论：**任何需要定时执行的任务都必须做成独立 Worker**（统一放 `workers/cron/` = `tc-web-cron`；`apps/portal/workers/email-cron` 属 portal 强耦合例外），不要写 `functions/_scheduled.ts`。
 - 下面的旧记录保留供对照：`_scheduled.ts` 必须通过 git push 触发 CF Pages 构建才能注册调度（实际上即使走了构建管线也不会注册）。
 - 独立 Worker 的 cron 在 wrangler.toml `[triggers] crons` 定义，`wrangler deploy` 直接生效。
 

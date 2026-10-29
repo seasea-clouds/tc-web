@@ -1,5 +1,10 @@
 /**
- * Analytics Cron — standalone Worker that syncs CF Analytics → D1 hourly.
+ * tc-web-cron — 站点的**统一定时任务 Worker**。
+ *
+ * 以后所有定时任务都加在这里（不要再为每个任务单独建 Worker）：
+ *   1. 每小时：CF Analytics → D1 同步（原 tc-web-admin-analytics-cron）
+ *   2. 每天 UTC 01:00（北京 09:00）：重跑 blog + regulations 最新生产部署，
+ *      把当天到日期的定时发布文章放出来
  *
  * Deployed with: npx wrangler deploy
  *
@@ -12,9 +17,9 @@
  * Optionally set CRON_SECRET secret for auth protection.
  */
 
-import { ensureDailyCFCache, ensureHourlyCFCache, isBreadcrumbPath, isPagePath, safeJSON } from "../../../functions/lib/d1-cache";
-import { hasConfig } from "../../../functions/lib/cf-analytics";
-import { graphql } from "../../../functions/lib/cf-analytics";
+import { ensureDailyCFCache, ensureHourlyCFCache, isBreadcrumbPath, isPagePath, safeJSON } from "../../../apps/admin/functions/lib/d1-cache";
+import { hasConfig } from "../../../apps/admin/functions/lib/cf-analytics";
+import { graphql } from "../../../apps/admin/functions/lib/cf-analytics";
 
 interface Env {
   DB: any;
@@ -51,32 +56,32 @@ async function triggerBlogRebuild(env: Env): Promise<void> {
       const list = (await listRes.json()) as any;
       const latest = list?.result?.[0];
       if (!latest?.id) {
-        console.error(`[analytics-cron] ${project}: no production deployment found`);
+        console.error(`[tc-web-cron] ${project}: no production deployment found`);
         continue;
       }
       const res = await fetch(`${base}/${project}/deployments/${latest.id}/retry`, {
         method: "POST",
         headers,
       });
-      console.log(`[analytics-cron] ${project} rebuild:`, res.status);
+      console.log(`[tc-web-cron] ${project} rebuild:`, res.status);
     }
   } catch (err: any) {
-    console.error("[analytics-cron] daily rebuild failed:", err?.message || String(err));
+    console.error("[tc-web-cron] daily rebuild failed:", err?.message || String(err));
   }
 }
 
 async function runAnalyticsSync(env: Env): Promise<{ ok: boolean; message: string }> {
-  console.log("[analytics-cron] started");
+  console.log("[tc-web-cron] started");
 
   if (!hasConfig(env)) {
     const msg = "Analytics not configured — check CLOUDFLARE_API_TOKEN and CLOUDFLARE_ZONE_ID";
-    console.error("[analytics-cron]", msg);
+    console.error("[tc-web-cron]", msg);
     return { ok: false, message: msg };
   }
 
   const dailyResult = await ensureDailyCFCache(env);
   if (dailyResult) {
-    console.error("[analytics-cron] daily error:", dailyResult);
+    console.error("[tc-web-cron] daily error:", dailyResult);
     return { ok: false, message: "daily: " + dailyResult };
   }
 
@@ -84,7 +89,7 @@ async function runAnalyticsSync(env: Env): Promise<{ ok: boolean; message: strin
     await ensureHourlyCFCache(env);
   } catch (err: any) {
     const msg = "hourly: " + (err?.message || err);
-    console.error("[analytics-cron]", msg);
+    console.error("[tc-web-cron]", msg);
     return { ok: false, message: msg };
   }
 
@@ -172,12 +177,12 @@ export default {
     }
 
     const result = await runAnalyticsSync(env);
-    console.log("[analytics-cron] result:", JSON.stringify(result));
+    console.log("[tc-web-cron] result:", JSON.stringify(result));
 
     // Log health diagnostics regardless of sync result
     const health = await healthCheck(env);
     if (!health.ok) {
-      console.error("[analytics-cron] health check failed:", JSON.stringify(health.details));
+      console.error("[tc-web-cron] health check failed:", JSON.stringify(health.details));
     }
   },
 

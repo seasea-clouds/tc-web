@@ -109,14 +109,17 @@ console.log(`✓ 规则检查通过（0 error, ${warnings.length} warning）`);
 
 // ---------------------------------------------------------------- 3. 仓库侧校验
 
-// 包内两种布局都收（与 submitter_check.py 一致）：
-//   articles/<slug>/                  交付格式，kind 由 submission.json 决定
-//   blog/<slug>/ + regulation/<slug>/ 分类格式，目录即类型声明
+// 包内布局（v1.63 硬切换，只认分类布局，旧 articles/ 不再支持）：
+//   blog/<slug>/        博客，kind 必须 "blog"
+//   regulation/<slug>/  法规，kind 必须 "regulation"
 const layoutDirs = [
-  { dir: 'articles', expected: null },
   { dir: 'blog', expected: 'blog' },
   { dir: 'regulation', expected: 'regulation' },
 ];
+if (fs.existsSync(path.join(workRoot, 'articles'))) {
+  console.error('✗ 包内出现旧的 articles/ 布局 —— 已停止支持，请改为 blog/<slug>/ 与 regulation/<slug>/');
+  process.exit(1);
+}
 const entries = [];
 for (const { dir, expected } of layoutDirs) {
   const abs = path.join(workRoot, dir);

@@ -957,11 +957,11 @@ FRONTMATTER_KEYS_REG = ["title", "slug", "date", "category", "excerpt",
 FRONTMATTER_REQUIRED_REG = [k for k in FRONTMATTER_KEYS_REG if k != "related_service"]
 SUB_REQUIRED_REG = ["docNumber", "issuer", "publishedAt", "effectiveAt", "status", "sourceUrl"]
 STATUS_ENUM = ("in_force", "upcoming", "amended", "repealed", "draft")
-# R01 沿革语境（v1.62）：出现这些词说明是在讲"旧号令被取代"，不是在引用现行依据
-R01_HISTORY_RE = re.compile(
-    r"(?i)replac|supersed|repeal|amend|abolish|predecessor"
-    r"|取代|替代|代替|废止|废除|不再|旧版|新版|沿革|前身"
-    r"|remplac|abrog|derog|ersetz|aufgehoben|置き換|廃止|대체|폐지",
+# R02 沿革语境（v1.63）：同段出现这些词说明在写"机构改名/撤并"，是正确表述
+ORG_RENAMED_RE = re.compile(
+    r"(?i)former|formerly|renamed|restructur|reorganis|reorganiz|predecessor|succeeded"
+    r"|原|前身|改组|更名|撤销|合并|并入|现为|改为"
+    r"|ex-|ehemalig|früher|ancien|anciennement|anterior|antes|antes de|ex\b|旧|元|改組|廃止|개편|전신",
 )
 
 
@@ -3404,11 +3404,13 @@ def check(path, glossary=None):
     if total_bytes is not None and total_bytes > MAX_PACKAGE_BYTES:
         add("S06", "error", "-", "压缩包总大小 %.1f MB > 60 MB" % (total_bytes / 1048576.0))
 
-    # --- 顶层结构（v1.62 支持两种布局）
-    #   articles/<slug>/                 投稿交付格式（kind 由 submission.json 决定）
-    #   blog/<slug>/ + regulation/<slug>/ 样例/分批整理格式（kind 由目录决定，须与 submission.json 一致）
+    # --- 顶层结构（v1.63 硬切换：只认 blog/ 与 regulation/）
+    #   blog/<slug>/        博客，kind 必须是 "blog"
+    #   regulation/<slug>/  法规，kind 必须是 "regulation"
+    # 旧的 articles/<slug>/ 布局已废弃，出现即报 S01（不做兼容）。
     names = list(files.keys())
     articles = {}
+    legacy_hits = 0
     for n in names:
         if n.startswith("__MACOSX/") or n.endswith("/.DS_Store") or n == ".DS_Store":
             add("S05", "error", "-", "压缩包内含系统垃圾文件: %s" % n)
@@ -3417,18 +3419,24 @@ def check(path, glossary=None):
             add("S05", "error", "-", "压缩包内含隐藏文件: %s" % n)
             continue
         parts = n.split("/")
-        if parts[0] not in ("articles", "blog", "regulation"):
+        if parts[0] == "articles":
+            legacy_hits += 1
+            continue
+        if parts[0] not in ("blog", "regulation"):
             add("S01", "error", "-",
-                "顶层必须是 articles/（或样例用的 blog/ 与 regulation/），发现: %s" % n)
+                "顶层只有 blog/ 与 regulation/ 两个目录，发现: %s" % n)
             continue
         if len(parts) < 2:
             continue
-        # (目录类别, slug) -> 文件列表；articles 的类别为 None（由 kind 决定）
-        kind_dir = None if parts[0] == "articles" else parts[0]
-        articles.setdefault((kind_dir, parts[1]), []).append("/".join(parts[2:]))
+        articles.setdefault((parts[0], parts[1]), []).append("/".join(parts[2:]))
 
+    if legacy_hits:
+        add("S01", "error", "-",
+            "包内出现旧的 articles/ 布局（%d 个文件）—— 已停止支持。"
+            "请改为 blog/<slug>/ 与 regulation/<slug>/，按 kind 分目录" % legacy_hits)
     if not articles:
-        add("S01", "error", "-", "压缩包内没有 articles/<slug>/ 结构")
+        add("S01", "error", "-",
+            "压缩包内没有 blog/<slug>/ 或 regulation/<slug>/ 结构")
         return findings
 
     slugs = set()
@@ -5379,19 +5387,19 @@ def check_body(tag, lang, body, image_files, slug, add, is_reg=False):
             add("I06", "error", tag, "图片 %s 未被正文引用" % name)
 
     # 红线
-    # R01（v1.62 改口径）：本意是「不得把已被替代的旧号令当作现行依据」，不是禁用这两个数字。
-    # 沿革叙述（replaces / superseded / 取代 / 废止 …）是事实，应当放行；
-    # 因此这里扫全文（含法规的官方译本段），但同段内出现沿革词就跳过。
-    norm = normalize_digits(body)
-    for m in re.finditer(r"(?<!\d)(248|249)(?!\d)", norm):
-        para = _enclosing_paragraph(norm, m.start())
-        if R01_HISTORY_RE.search(para):
+    # R01：v1.63 按用户要求整条移除（"一律写 280 号令"不是通用规则，号令编号属事实引用）。
+    #      R01 号位保留空置，不复用。
+    # R02（v1.63 改判定口径）：禁的不是这两个字母，而是「把已撤销机构当作现行机构」。
+    #      沿革叙述（NMPA, formerly CFDA / 原 MOA 改组为 MARA …）是正确写法，必须放行；
+    #      因此扫全文（含法规的官方译本段），同段内出现沿革词则跳过。
+    for m in re.finditer(r"\b(MOA|CFDA)\b", body):
+        para = _enclosing_paragraph(body, m.start())
+        if ORG_RENAMED_RE.search(para):
             continue
-        add("R01", "error", tag,
-            "把 248/249 当作现行依据（已由 280 号令取代；叙述沿革时请写明 replaces / 取代 等）")
+        add("R02", "error", tag,
+            "把已撤销机构 %s 当作现行机构（现为 MARA / NMPA；叙述沿革请写明 formerly / 原 … 改组为）"
+            % m.group(1))
         break
-    if re.search(r"\b(MOA|CFDA)\b", style_body):
-        add("R02", "error", tag, "正文出现旧机构名 MOA/CFDA（应为 MARA/SAMR）")
     price_body = APPROX_RES.sub("", body)
     for pat in PRICE_RES:
         if re.search(pat, price_body, re.I):

@@ -21,23 +21,28 @@
 
 ## 1. 目录结构（必须逐字节照此布局）
 
-单个 zip 可含**多篇文章**，每篇一个 `<slug>` 目录。同一个包既能投博客文章，也能投法规文章——由 `submission.json` 里**必填**的 `kind` 决定（`"blog"` / `"regulation"`），两类共用**同一套检查规则**：
+单个 zip 可含**多篇文章**，每篇一个 `<slug>` 目录。**按类型分两个顶层目录**：
+`blog/` 放博客文章、`regulation/` 放法规文章，两类共用**同一套检查规则**，
+`submission.json` 里**必填**的 `kind` 必须与所在目录一致（`"blog"` / `"regulation"`）。
 
 ```
 <anything>.zip
-└── articles/
-    ├── <slug>/                        ← 小写字母/数字/连字符，3–60 字符
-    │   ├── submission.json            ← 元数据
-    │   ├── content/
-    │   │   ├── en/<slug>.mdx
-    │   │   ├── zh/<slug>.mdx
-    │   │   └── …（共 48 个语言目录，见第 4 节清单）
-    │   └── images/
-    │       └── <slug>/
-    │           ├── cover.webp          ← 必需，1200×630
-    │           └── fig-01.webp …       ← 可选，正文配图
-    └── <second-slug>/
-        └── …（同上）
+├── blog/
+│   ├── <slug>/                        ← 小写字母/数字/连字符，3–60 字符
+│   │   ├── submission.json            ← 元数据（kind 必须是 "blog"）
+│   │   ├── content/
+│   │   │   ├── en/<slug>.mdx
+│   │   │   ├── zh/<slug>.mdx
+│   │   │   └── …（共 48 个语言目录，见第 4 节清单）
+│   │   └── images/
+│   │       └── <slug>/
+│   │           ├── cover.webp          ← 博客必需，1200×630
+│   │           └── fig-01.webp …       ← 可选，正文配图
+│   └── <second-slug>/
+│       └── …（同上）
+└── regulation/
+    └── <slug>/                        ← 结构同上，但 kind 必须是 "regulation"、images 必须是 []
+        └── …
 ```
 
 **禁止**（S05）：包内出现 `.DS_Store`、`__MACOSX`、任何隐藏文件（`.` 开头）、`.pyc`、`.md`/`.txt`/`.docx` 说明文件、原始 `jpg/png/psd/ai` 素材、任何未在 `content/` 与 `images/` 下的文件。
@@ -47,7 +52,7 @@
 
 | 规则 | 级别 | 判定 |
 |---|---|---|
-| S01 | error | 压缩包顶层必须是 `articles/` 目录 |
+| S01 | error | 压缩包顶层只允许 `blog/` 与 `regulation/` 两个目录（旧的 `articles/` 已停止支持，出现即报错） |
 | S02 | error | 缺少第 4 节清单里的语言目录 |
 | S03 | error | 出现清单之外的未知语言目录 |
 | S04 | error | mdx 路径必须为 `content/<lang>/<slug>.mdx` |
@@ -226,8 +231,7 @@ references:
 
 | 规则 | 级别 | 判定 |
 |---|---|---|
-| R01 | error | 正文出现 `248` / `249`（任何数字形式）——现行法条一律写 **280 号令**；历史沿革不作为正文内容 |
-| R02 | error | 正文出现旧机构名 `MOA` / `CFDA`——现行机构名：**MARA**（原 MOA）、**SAMR**（原 CFDA） |
+| R02 | error | 把已撤销机构当作现行机构：`MOA`（现为 **MARA**）、`CFDA`（现为 **NMPA**）。同段内写 `NMPA, formerly CFDA` / `原 MOA 改组为 MARA` 这类沿革叙述**放行** —— 禁的是「拿旧机构当现行」，不是禁用这几个字母 |
 | R03 | error | 正文出现**符号或代码形态**的金额（`$` `€` `£` `¥` 加数字，或 `USD/EUR/CNY/RMB` 加数字）；不写报价、不写预算。v1.24 起豁免**带约数标记的换算**（about/environ/rund/circa/unos/около/약/约 等 + 数字），因为「约 700 美元」这类限额/税额折算是内容而非报价；无标记的「500 dollars」仍拦 |
 | R04 | error | 出现交付周期承诺：`delivery` / `lead time` / `turnaround` 附近出现 `N days/weeks` |
 | R05 | error | 绝对否定：`cannot be exported`、`cannot export to China`、`not possible to export`、`impossible to export`、`无法出口`、`不能出口` 等 |
@@ -458,7 +462,7 @@ python3 submitter_check.py your-package --pack=your-package.zip   # 全绿才出
 2. 非英文文件里 title/excerpt 还是英文（回退，L01/L02），或两语言之间完全相同（L06）。
 3. 图片是 jpg/png，或 cover 尺寸不是 1200×630。
 4. 结尾 CTA 写成 `/quote/` 或没带语言前缀（B09）。
-5. 引用了 248/249 号令，或写了 MOA/CFDA（R01/R02）。
+5. 把 MOA / CFDA 当作现行机构写（R02）。历史文件标题、`formerly` 沿革叙述不算。
 6. 列表项之间留了空行（B07，渲染会碎成多个列表）。
 7. 标题里用冒号或破折号作分隔（F03；词内连字符 `e-commerce`、数字区间 `2–4` / `S0–S13` 合法，分句用逗号/句号）。
 8. 图片没被正文引用（I06，cover 除外），或同一图片被引用多次（P01）。
@@ -571,10 +575,13 @@ related_service: "/services/gacc/"
 | ST01 / ST02（禁 em dash；en dash 只能表区间） | 只查 `<!-- original -->` 之前的「解读」段 | 官方文本里的破折号是原文的，改了就不是忠实译本 |
 | R02（禁旧机构名 MOA/CFDA） | 只查解读段 | 历史文本保留历史机构名 |
 
-**R01 改了判定口径（不是豁免，是修正）**：本意是「不得把已被替代的旧号令当作现行依据」，
-不是禁用 248/249 这两个数字。现在扫**全文**（含官方译本段），但同一段内出现沿革词
-（replaces / superseded / repealed / 取代 / 废止 / 不再 …）就放行 ——「Decree No. 248 被 280 取代」
-是事实陈述，「按 Decree No. 248 办理」才是错的。这条对博客与法规一视同仁。
+**R02 同样按语境判断（v1.63）**：它禁的是「把已撤销机构当作现行机构」，不是禁用 `MOA` / `CFDA`
+这几个字母。同一段内出现 `formerly` / `原…改组为` / `renamed` / `撤销后并入` 等沿革表述就放行。
+法规的官方译本若原文写 "formerly CFDA"，译文照写即可；若原文把 MOA 当现行机构，那是原文的事实
+（2018 年前生效的规范性文件），译文照译 —— 这种情况请在该篇 `submission.json` 的 `notes` 里说明一句。
+
+**R01 已移除（v1.63）**：「一律写 280 号令」不是通用规则，号令编号属事实引用，不由投稿包统一约束。
+R01 号位保留空置，不复用。
 
 **整篇不要求的**
 
@@ -606,8 +613,8 @@ related_service: "/services/gacc/"
 **样例正文是压缩的**：法规样例的官方译本段只保留两条，真实投稿必须交该语言的全文本
 （整部法规的每一条）。样例只示范结构与字段。
 
-> 投稿交付格式仍是 `articles/<slug>/`（S01）；`blog/` + `regulation/` 是为了在一份包里
-> 按类型分装多篇（样例、分批交付都用它），两种布局 checker 都认。
+> 交付格式就是 `blog/<slug>/` 与 `regulation/<slug>/`（S01）。旧的 `articles/<slug>/` 布局
+> 已于 v1.63 硬切换下掉，不再兼容 —— 收到会直接退回。
 
 ### 12.4 法规专属检查项（R 系列，与博客规则并行）
 
@@ -636,8 +643,9 @@ related_service: "/services/gacc/"
 
 | 版本 | 日期 | 内容 |
 |---|---|---|
+| v1.63 | 2026-10-29 | **三条指令落地**。①**删除 R01**：「一律写 280 号令」不是通用规则（用户裁定），号令编号属事实引用；R01 号位空置不复用。②**R02 改为语境判断**：禁的是「把已撤销机构当现行机构」，同段出现 `formerly`/`原…改组为`/`renamed` 等沿革词即放行（同时修正事实错误：CFDA 的现行承接机构是 **NMPA**，不是 SAMR）。③**布局硬切换**：只认 `blog/<slug>/` 与 `regulation/<slug>/`，旧的 `articles/<slug>/` 出现即报 S01 并停止支持（checker 与 intake 两侧一致，不留兼容层）。站点侧同步修正：`pet-food-brand-gacc-registration` 与 `china-market-entry-compliance-guide` 共 547 处把 MOA 当现行机构的写法改为 MARA（46 语言），此外 ar 6 处、be 2 处旧全称补为「农业与农村事务部」，ko 1 处误用韩国部门名 `농림축산부` 改为 `농업농촌부`；历史文件标题（2014 年农业部令）按原名保留不改，`cosmetics-nmpa-filing` 的 `NMPA, formerly CFDA` 本就正确不动。 |
 | v1.62 | 2026-10-29 | **法规检查口径修正 + 样例分目录**。①`sample/` 改为按类型分目录：`sample/blog/<slug>/` 与 `sample/regulation/<slug>/`，每类可放任意多篇；checker 的 S01 同时认 `articles/<slug>/`（交付格式）与 `blog|regulation/<slug>/`（分类格式），新增 **M11** 校验「目录类型 vs submission.json 的 kind」；②R01 改判定口径：原本一刀切禁 248/249，改为扫全文但同段含沿革词（replaces/取代/废止…）放行 —— 它是「不许把旧号令当现行依据」，不是禁用数字，且对博客同样生效；③§12.4 重写并明确：**官方译本段照查段落格式（B 全系列）与术语一致性（S08/P43/S09/S11）与数字（P19/P36/P26）**，只放宽 ST01/ST02（破折号）与 R02（历史机构名），B09/I02 整篇不要求；④README 显式写明样例正文是压缩的、真实投稿必须交全文。验证：sample 两类同跑 PASS（0 error, 2 warning）；负向电池 4 组全中（B01/B02 注入官方译本段 → 报错、R01 沿革语境 → 放行、R01 当现行依据 → 报错、M11 把法规放 blog/ → 报错）；blog/ 放两篇正确识别。 |
-| v1.61 | 2026-10-29 | **法规样例 + 法规豁免**。①新增法规样例 `sample/articles/sample-import-food-producer-registration/`（48 语言全手写，12 字段 frontmatter + original 标记 + 2 条官方文本），与博客样例同包共存；②`check_body()` 增加 `is_reg` 分支：ST01/ST02/R01/R02 对法规只查「解读」段（官方文本是要忠实翻译的，不能为了过检查改原文措辞），B09/CTA 与 I02/封面图对法规整篇豁免；③新增 §12.4 豁免表与 §12.5 样例说明。回归：sample 两类同跑 PASS（0 error, 2 warning），博客包分支行为不变。 |
+| v1.61 | 2026-10-29 | **法规样例 + 法规豁免**。①新增法规样例 `sample/articles/sample-import-food-producer-registration/`（48 语言全手写，12 字段 frontmatter + original 标记 + 2 条官方文本），与博客样例同包共存；②`check_body()` 增加 `is_reg` 分支：ST01/ST02 对法规只查「解读」段（官方文本是要忠实翻译的，不能为了过检查改原文措辞），B09/CTA 与 I02/封面图对法规整篇豁免；③新增 §12.4 豁免表与 §12.5 样例说明。回归：sample 两类同跑 PASS（0 error, 2 warning），博客包分支行为不变。 |
 | v1.60 | 2026-10-29 | **`kind` 改为必填**（用户指令：博客也要写，不要默认）。`submission.json` 缺 `kind` 或取值不是 `blog`/`regulation` 一律 error（新增 M10），不再按缺省值猜落库位置。模板与 sample 已补 `"kind": "blog"`。 |
 | v1.59 | 2026-10-29 | **法规与博客合并为同一投稿包**：`submission.json` 新增 `kind`（`blog` 缺省 / `regulation`），两类共用同一个检查脚本与同一套 S/F/M/L/B/R/W/I/P/ST 规则；新增 §12 法规字段与正文结构（含 R10–R15）、§13 定时发布。**M04 放开未来日期**（站方按 `date` 定时上架，未到日期不显示、不生成页面；只挡一年以后）。`title` 不得重复写文号（R15）。 |
 | v1.33 | 2026-10-24 | 文章专属词全部融合进通用底表：P0 文章 glossary 的 25 语 OR 词形（ledger/positive 两条款本语同族正常词）union 并入通用表，P0 文章 glossary 文件删除、检查改走通用表 auto 加载；F1 文章 glossary terms 段（通用表滞后子集）整体同步为通用表最新快照（build_package 与 3 个负向测试显式传参用），excerpt 段（S09 摘要契约）按设计保留文章级。**词形一律进通用表，文章级文件只承载绑定单篇结构的内容（如 S09）**，杜绝双源漂移。条款总数 59 不变 |

@@ -1,4 +1,4 @@
-# 投稿工具包（Submission Kit · 博客 + 法规 · 自检脚本 v1.62）
+# 投稿工具包（Submission Kit · 博客 + 法规 · 自检脚本 v1.63）
 
 这是 sinotradecompliance.com 的投稿工具包，**博客文章与法规文章共用同一个包、同一套检查脚本**。
 你写 **48 个语言**的同一篇内容（+ 博客需要配图），用本包里的脚本自检通过后，把 zip 交回即可直接上线——我们不做二次润色，**脚本通过即定稿**。
@@ -9,7 +9,7 @@
 > **文档分工，各司其职**：
 > **SPEC.md = 全部验收规则**（目录结构 / frontmatter / 48 语言 / 正文 / 图片 / 红线 / ST 写作纪律 / P 一致性，含完整规则表）——查"规则是什么、为什么被判错"去那里；
 > **本 README = 使用说明**（上手步骤、脚本命令、输出解读、流程、避坑）——不重复规则正文。
-> 两份文档均为 v1.62。
+> 两份文档均为 v1.63。
 
 ---
 
@@ -78,20 +78,24 @@ python3 submitter_check.py sample
 
 ```
 <你的包>.zip
-└── articles/
-    └── <slug>/
-        ├── submission.json
-        ├── content/
-        │   ├── en/<slug>.mdx
-        │   ├── zh/<slug>.mdx
-        │   └── …共 48 个语言目录（缺一即拒）
-        └── images/
-            └── <slug>/
-                ├── cover.webp      ← 必需，精确 1200×630
-                └── fig-01.webp …   ← 正文配图，宽 ≥1200，单张 ≤400KB
+├── blog/
+│   └── <slug>/
+│       ├── submission.json        ← kind 必须是 "blog"
+│       ├── content/
+│       │   ├── en/<slug>.mdx
+│       │   ├── zh/<slug>.mdx
+│       │   └── …共 48 个语言目录（缺一即拒）
+│       └── images/
+│           └── <slug>/
+│               ├── cover.webp      ← 博客必需，精确 1200×630
+│               └── fig-01.webp …   ← 正文配图，宽 ≥1200，单张 ≤400KB
+└── regulation/
+    └── <slug>/                     ← kind 必须是 "regulation"，images 必须是 []
+        └── …（结构与博客相同）
 ```
 
-一个 zip 可以放**多篇**：`articles/` 下并列多个 `<slug>/` 即可。
+一个 zip 可以放**任意多篇**：`blog/` 与 `regulation/` 下各自并列多个 `<slug>/` 即可。
+**只认这两个目录**（v1.63 硬切换）：旧的 `articles/` 布局会直接退回，不再兼容。
 逐字节要求见 SPEC 第 1 节。
 
 ---
@@ -129,12 +133,12 @@ python3 submitter_check.py sample
 
 | 看到的前缀 | 查什么 | SPEC 章节 |
 |---|---|---|
-| S01–S11 | 包与目录层级（顶层 articles/、语言目录、mdx 路径、垃圾文件、包体积、行尾/编码卫生）＋术语契约三兄弟（S08 块级 / S09 摘要 / S11 标题，均由 glossary.json 供词形）＋S10 路径白名单 | 第 1 节 |
+| S01–S11 | 包与目录层级（顶层 blog/ + regulation/、语言目录、mdx 路径、垃圾文件、包体积、行尾/编码卫生）＋术语契约三兄弟（S08 块级 / S09 摘要 / S11 标题，均由 glossary.json 供词形）＋S10 路径白名单 | 第 1 节 |
 | M01–M09 | submission.json（缺字段、slug 重复、date 格式、category、author、locales 48 个、images 清单、title/excerpt 与 en frontmatter 对齐） | 第 2 节 |
 | F01–F08 | frontmatter（解析、字段、title/excerpt 长度、slug/date/category 一致性、references 条数） | 第 3 节 |
 | L01–L05 | 语言回退检测（title/excerpt/正文是否真的写成了本语言） | 第 4 节 |
 | B01–B11 | 正文结构（标题层级、分隔线、HTML、列表排版、CTA、破折号统一、emoji 混排） | 第 5 节 |
-| R01–R08 | 内容红线（248/249、MOA/CFDA、报价、交付周期、绝对否定、过度承诺、制作工具痕迹、签字人归属反模式） | 第 5 节 |
+| R02–R08 | 内容红线（旧机构名 MOA/CFDA 当现行、报价、交付周期、绝对否定、过度承诺、制作工具痕迹、签字人归属反模式） | 第 5 节 |
 | W01–W03 | 篇幅与配图密度（英文词数、超长段落、图片数量） | 第 5 节 |
 | I01–I08 | 图片（格式、cover、宽度、体积、路径、引用、外链、alt） | 第 6 节 |
 | ST01–ST07 | 写作声音纪律（破折号、AI 高频词、反转钩子） | 第 7 节 |
@@ -154,7 +158,7 @@ python3 submitter_check.py sample
 2. **非英文文件里 title/excerpt 还是英文** → 每篇都要真翻译；任意两语言之间也不得完全相同（L06）。
 3. **图片是 jpg/png** → 只收 webp；cover 必须 1200×630。
 4. **CTA 写成 `/quote/` 或没带语言前缀** → 必须是 `[本语言的联系我们](/<lang>/packages/)`。
-5. **正文提到 248/249 号令，或写了 MOA/CFDA** → 现行写 280 号令、MARA、SAMR。
+5. **正文把 MOA / CFDA 当作现行机构** → 现为 MARA / NMPA；写沿革时注明 `formerly`。
 6. **列表项之间留空行** → 渲染会碎成多个列表。
 7. **标题里用冒号或破折号作分隔** → F03 报错；词内连字符 `e-commerce` 与数字区间 `2–4` / `S0–S13` 合法，分句用逗号/句号。
 8. **图片没被正文引用**（cover 除外）→ 一律判错；同一图片被引用多次同样判错（P01）。

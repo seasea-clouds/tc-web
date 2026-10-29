@@ -4130,7 +4130,7 @@ def check_article(slug, art, add):
                     "韩语阿拉伯数字与量词「개」之间不应空格（应写作 14개）: "
                     + "；".join("%s 处 %r" % (f, w) for f, w in p44m[:4]))
 
-        check_body(tag, lang, body, image_files, slug, add)
+        check_body(tag, lang, body, image_files, slug, add, is_reg=is_reg)
 
         # P41（v1.42）表格/列表同字：每条语言的表前 13 条包名必须与
         # 表格 S1–S13 逐字一致。没有 S0–S13 表的文章直接跳过。
@@ -4858,7 +4858,7 @@ def check_article(slug, art, add):
                     "title/excerpt 完全相同（疑似未翻译）: %s" % ",".join(lgs))
 
     # --- 图片
-    if "cover.webp" not in image_files:
+    if "cover.webp" not in image_files and not is_reg:
         add("I02", "error", slug, "缺少 cover.webp")
     for name, data in sorted(image_files.items()):
         if len(data) > MAX_IMAGE_BYTES:
@@ -5249,8 +5249,15 @@ def check_text_health(tag, lang, body, add):
             break
 
 
-def check_body(tag, lang, body, image_files, slug, add):
+def check_body(tag, lang, body, image_files, slug, add, is_reg=False):
     lines = body.split("\n")
+
+    # 法规的「官方文本译本」段不是我们写的文字：风格纪律（ST）、红线（R01/R02）
+    # 一律只对 marker 之前的「解读」段生效 —— 译文必须忠实原文，不能因为
+    # 「禁 em dash / 不许提旧号令」去改动官方文本。
+    style_body = body
+    if is_reg and ORIGINAL_MARKER in body:
+        style_body = body.split(ORIGINAL_MARKER, 1)[0]
 
     # B01 一级标题
     for i, ln in enumerate(lines, 1):
@@ -5297,7 +5304,7 @@ def check_body(tag, lang, body, image_files, slug, add):
             add("B11", "error", tag, "第 %d 行 emoji 列表混排" % i)
             break
 
-    # B09 CTA
+    # B09 CTA（法规豁免：法规详情页底部由站点固定渲染 CTA 与评估表单）
     tail = [ln for ln in lines[-10:] if ln.strip()]
     link = None
     for ln in tail:
@@ -5305,9 +5312,11 @@ def check_body(tag, lang, body, image_files, slug, add):
         if m:
             link = (m.group(1), m.group(2))
             break
-    if not link:
+    if is_reg:
+        link = None
+    if not link and not is_reg:
         add("B09", "error", tag, "结尾缺少 CTA 链接 [Contact us](/<lang>/packages/)")
-    else:
+    elif link:
         txt, url = link
         expected_path = "/%s/packages/" % lang
         if url.rstrip("/") != expected_path.rstrip("/"):
@@ -5343,10 +5352,10 @@ def check_body(tag, lang, body, image_files, slug, add):
             add("I06", "error", tag, "图片 %s 未被正文引用" % name)
 
     # 红线
-    norm = normalize_digits(body)
+    norm = normalize_digits(style_body)
     if re.search(r"(?<!\d)(248|249)(?!\d)", norm):
         add("R01", "error", tag, "正文出现 248/249（现行法条一律写 280 号令）")
-    if re.search(r"\b(MOA|CFDA)\b", body):
+    if re.search(r"\b(MOA|CFDA)\b", style_body):
         add("R02", "error", tag, "正文出现旧机构名 MOA/CFDA（应为 MARA/SAMR）")
     price_body = APPROX_RES.sub("", body)
     for pat in PRICE_RES:
@@ -5407,7 +5416,7 @@ def check_body(tag, lang, body, image_files, slug, add):
                 "已交付件归品牌方）: %r" % h8[:70])
 
     # ST 写作纪律（方案 3.1 / 3.1a）
-    check_style(tag, body, add, lang=lang)
+    check_style(tag, style_body, add, lang=lang)
 
     # P 系列单文件文本健壮性（v1.2）
     check_text_health(tag, lang, body, add)

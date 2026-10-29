@@ -120,7 +120,12 @@ const items = [];
 for (const slug of slugs) {
   const artDir = path.join(articlesDir, slug);
   const meta = JSON.parse(fs.readFileSync(path.join(artDir, 'submission.json'), 'utf8'));
-  const kind = meta.kind === 'regulation' ? 'regulation' : 'blog';
+  const kindVal = String(meta.kind || '').trim().toLowerCase();
+  if (kindVal !== 'blog' && kindVal !== 'regulation') {
+    repoProblems.push(`${slug}: submission.json 的 kind 必须是 "blog" 或 "regulation"（当前 ${JSON.stringify(meta.kind)}）`);
+    continue;
+  }
+  const kind = kindVal;
   const target = TARGETS[kind];
   const dstEn = path.join(target.contentRoot, 'en', `${slug}.mdx`);
   const exists = fs.existsSync(dstEn);

@@ -3878,10 +3878,15 @@ def check_article(slug, art, add):
         except Exception as exc:
             add("M01", "error", slug, "submission.json 不是合法 JSON: %s" % exc)
             meta = {}
-    # v1.59：类型 = submission.json 的 kind（缺省 blog）。必须在下面所有 M/F/R 判断之前算好
-    is_reg = str(meta.get("kind") or "").strip().lower() == "regulation"
+    # v1.60：kind 必填（不再默认 blog）——"这是博客还是法规"必须由投稿者写明，
+    # 不写就没有可靠依据判断落库位置与字段集，宁可报错也不猜。
+    kind_val = str(meta.get("kind") or "").strip().lower()
+    is_reg = kind_val == "regulation"
+    if meta and kind_val not in ("blog", "regulation"):
+        add("M10", "error", slug,
+            'kind 必填且只能是 "blog" 或 "regulation"（当前: %r）' % (meta.get("kind"),))
     if meta:
-        for req in ["slug", "title", "date", "category", "author", "excerpt", "locales", "images", "imageRights"]:
+        for req in ["kind", "slug", "title", "date", "category", "author", "excerpt", "locales", "images", "imageRights"]:
             if req not in meta:
                 add("M02", "error", slug, "submission.json 缺少字段 %s" % req)
         if meta.get("slug") not in (None, slug):

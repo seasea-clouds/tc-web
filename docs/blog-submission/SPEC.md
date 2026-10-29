@@ -21,7 +21,7 @@
 
 ## 1. 目录结构（必须逐字节照此布局）
 
-单个 zip 可含**多篇文章**，每篇一个 `<slug>` 目录。同一个包既能投博客文章，也能投法规文章——由 `submission.json` 的 `kind` 决定（缺省 `blog`），两类共用**同一套检查规则**：
+单个 zip 可含**多篇文章**，每篇一个 `<slug>` 目录。同一个包既能投博客文章，也能投法规文章——由 `submission.json` 里**必填**的 `kind` 决定（`"blog"` / `"regulation"`），两类共用**同一套检查规则**：
 
 ```
 <anything>.zip
@@ -65,6 +65,7 @@
 
 ```json
 {
+  "kind": "blog",
   "slug": "green-coffee-beans-china",
   "title": "Green Coffee Beans Import Requirements for China",
   "date": "2026-10-20",
@@ -78,7 +79,7 @@
 ```
 
 - `slug` 由投稿者自拟，但必须：全小写、只用 `a-z0-9-`、3–60 字符、不与站内已有文章重复（脚本会查重，M03）。
-- `kind`（v1.59）：`"blog"`（缺省，进博客站）或 `"regulation"`（进法规库）。法规要求的额外字段见第 12 节。
+- `kind`（**必填**，v1.60 起不再默认）：`"blog"`（进博客站）或 `"regulation"`（进法规库）。不写或写别的值一律 error（M10）——站方按它决定字段集与落库位置，不做猜测。法规要求的额外字段见第 12 节。
 - `date` 为 `YYYY-MM-DD`。**允许未来日期**：站方按该日期定时上架，未到日期的稿子不出现在列表/首页/搜索/sitemap，也不生成页面（v1.59；上限一年以后，明显笔误仍会报错）。
 - `author` 固定写 `David Zhang`。
 - `locales` 必须列出实际提交的语言，且必须**正好是第 4 节的 48 个**（上例为节选，多一个少一个都判错）。
@@ -96,6 +97,7 @@
 | M06 | error | `author` 不是固定的 `David Zhang` |
 | M07 | error | `locales` 不是正好 48 个 |
 | M08 | error | `images` 清单与实际文件不一致 |
+| M10 | error | `kind` 缺失或不是 `"blog"` / `"regulation"`（v1.60 必填，不再默认 blog） |
 | M09 | error | `submission.json` 的 `title`/`excerpt` 与 en frontmatter 不一致（v1.34）：站方列表页读 submission.json、文章页读 mdx frontmatter，两者漂移会让列表与文章展示不同标题/摘要（F1 实测：submission 残留旧标题）。缺 en 语言或缺字段时静默跳过 |
 
 ---
@@ -584,6 +586,7 @@ related_service: "/services/gacc/"
 
 | 版本 | 日期 | 内容 |
 |---|---|---|
+| v1.60 | 2026-10-29 | **`kind` 改为必填**（用户指令：博客也要写，不要默认）。`submission.json` 缺 `kind` 或取值不是 `blog`/`regulation` 一律 error（新增 M10），不再按缺省值猜落库位置。模板与 sample 已补 `"kind": "blog"`。 |
 | v1.59 | 2026-10-29 | **法规与博客合并为同一投稿包**：`submission.json` 新增 `kind`（`blog` 缺省 / `regulation`），两类共用同一个检查脚本与同一套 S/F/M/L/B/R/W/I/P/ST 规则；新增 §12 法规字段与正文结构（含 R10–R15）、§13 定时发布。**M04 放开未来日期**（站方按 `date` 定时上架，未到日期不显示、不生成页面；只挡一年以后）。`title` 不得重复写文号（R15）。 |
 | v1.33 | 2026-10-24 | 文章专属词全部融合进通用底表：P0 文章 glossary 的 25 语 OR 词形（ledger/positive 两条款本语同族正常词）union 并入通用表，P0 文章 glossary 文件删除、检查改走通用表 auto 加载；F1 文章 glossary terms 段（通用表滞后子集）整体同步为通用表最新快照（build_package 与 3 个负向测试显式传参用），excerpt 段（S09 摘要契约）按设计保留文章级。**词形一律进通用表，文章级文件只承载绑定单篇结构的内容（如 S09）**，杜绝双源漂移。条款总数 59 不变 |
 | v1.34 | 2026-10-24 | 两条检查补强（用户指令）：①新增 **M09** submission.json title/excerpt 与 en frontmatter 对齐（error，F1 实测漂移后修复，submission.json 已对齐 en frontmatter）；②**ST08 补全**：大小写不敏感 + 正文逐处报告 + 总结套话族新增 hy/id/ms/sw/th 变体（P0 的 3 处总结套话保持 warning 可见、内容按「我端不润色」不改）。**不收裸词** kesimpulan/สรุป/kết luận（P0 实义名词误报）。规则总数 107 → 108 |

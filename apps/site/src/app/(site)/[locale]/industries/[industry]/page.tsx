@@ -90,7 +90,8 @@ export default async function IndustryPage({
       <ProcessSteps t={homeT} />
       <WhyUsCards count={4} t={commonT} />
       <ServiceFAQ namespace={industry.namespace} services={industry.services} />
-      <ContactForm source="industries-detail" />
+      {/* sourceRef 用行业 slug，邮件里能直接看出是乳制品还是肉类 */}
+      <ContactForm source="industries-detail" sourceRef={industrySlug} />
       <CTASection t={commonT} />
       <script
         id={`jsonld-industry-${industrySlug}`}

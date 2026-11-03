@@ -112,7 +112,7 @@ export default async function BlogHome({ params }: { params: Promise<{ locale: s
       {/* Contact Form */}
       <ComplianceForm
         locale={locale}
-        subject={`🔥 New Inquiry — SinoTrade Blog List`}
+        source="blog-list"
         fromName="SinoTrade Website"
         idPrefix="blog-list"
         texts={{

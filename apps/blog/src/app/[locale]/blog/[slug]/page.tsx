@@ -188,6 +188,18 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
   const { data, content } = matter(raw);
 
   const title = data.title || slug.replace(/-/g, ' ');
+  // 询盘来源标识用中文标题：读同一篇的 zh 版本，保证与中文站一字不差
+  // （运营收到邮件要看到中文，而不是当前语言标题）
+  let zhTitle = '';
+  try {
+    const zhPath = path.join(process.cwd(), 'content', 'zh', `${slug}.mdx`);
+    if (fs.existsSync(zhPath)) {
+      const zhData = matter(fs.readFileSync(zhPath, 'utf-8')).data;
+      zhTitle = String(zhData.title || '');
+    }
+  } catch {
+    /* 没有 zh 版本时退回 FORM_PAGE_TITLES 兜底 */
+  }
   // YAML 把无引号的 `date: 2026-10-22` 解析成 Date；统一规范成 YYYY-MM-DD，
   // 保证 JSON-LD datePublished 与 Related posts 的 <time datetime> 都是纯日期。
   const rawDate = data.date;
@@ -569,7 +581,9 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
         {/* Contact Form */}
         <ComplianceForm
           locale={locale}
-          subject={`🔥 New Inquiry — SinoTrade Blog: ${slug}`}
+          source="blog-post"
+          sourceRef={slug}
+          pageTitle={zhTitle || title}
           fromName="SinoTrade Website"
           idPrefix="blog-post"
           texts={{

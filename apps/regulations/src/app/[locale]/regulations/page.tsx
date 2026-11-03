@@ -138,7 +138,7 @@ export default async function RegulationsHome({ params }: { params: Promise<{ lo
 
       <ComplianceForm
         locale={locale}
-        subject={`🔥 New Inquiry — Regulations List`}
+        source="regulations-list"
         idPrefix="list"
         texts={{
           title: CF.title,

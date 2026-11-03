@@ -1,4 +1,14 @@
+'use client';
+
+import { usePathname } from 'next/navigation';
 import { SITE_URL } from './constants';
+import { localeNameZh } from './localeNames';
+import {
+  FORM_MODULES,
+  FORM_PAGE_TITLES,
+  FORM_MODULE_FALLBACK,
+  FORM_PAGE_TITLE_FALLBACK,
+} from './formSources';
 
 export interface ComplianceFormTexts {
   title: string;
@@ -25,18 +35,45 @@ export interface ComplianceFormTexts {
 export default function ComplianceForm({
   locale,
   texts,
-  subject,
+  source,
+  sourceRef,
+  pageTitle,
+  pagePath,
   fromName = 'SinoTrade Website',
   idPrefix = 'cf',
 }: {
   locale: string;
   texts: ComplianceFormTexts;
-  /** 收件主题，用来区分询盘来自哪个页面 */
-  subject: string;
+  /**
+   * 来源 slug（见 formSources.ts 的 FORM_MODULES）：决定邮件里的「页面模块」中文名，
+   * 也决定主题里的模块部分。不传就落到「站内页面」。
+   */
+  source?: string;
+  /** 稳定标识的附加段，如文章/法规 slug → 来源标识 `blog-post:<slug>` */
+  sourceRef?: string;
+  /** 中文页面标题；不传则用 FORM_PAGE_TITLES[source]（文章/法规详情应传 zh 标题） */
+  pageTitle?: string;
+  /** 覆盖自动探测的路径（默认用 usePathname，静态导出时已含 /<locale>/） */
+  pagePath?: string;
   /** web3forms 来信显示名 */
   fromName?: string;
   idPrefix?: string;
 }) {
+  const pathname = usePathname();
+  const moduleName = (source && FORM_MODULES[source]) || FORM_MODULE_FALLBACK;
+  const title = pageTitle || (source && FORM_PAGE_TITLES[source]) || FORM_PAGE_TITLE_FALLBACK;
+  const langLabel = localeNameZh(locale);
+  const pageUrl = pagePath
+    ? `${SITE_URL}${pagePath}`
+    : pathname
+      ? `${SITE_URL}${pathname}`
+      : `${SITE_URL}/${locale}/`;
+  const sourceTag = source ? (sourceRef ? `${source}:${sourceRef}` : source) : '';
+  // 标题已被模块名涵盖时（首页 / 服务 · CCC认证 vs CCC认证）不重复写
+  const subject = moduleName.includes(title)
+    ? `🔥 询盘 · ${moduleName} · ${langLabel}`
+    : `🔥 询盘 · ${moduleName} · ${langLabel} · ${title}`;
+
   return (
     <section id="contact" className="bg-[#F4F6F9] px-4 py-16 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-2xl text-center">
@@ -60,6 +97,13 @@ export default function ComplianceForm({
           <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY} />
           <input type="hidden" name="subject" value={subject} />
           <input type="hidden" name="from_name" value={fromName} />
+          {/* 来源标识（2026-10-29）：字段名用中文，web3forms 邮件按「字段名: 值」渲染，
+              运营一眼看出语言/模块/页面/URL，不必再翻译英文 slug */}
+          <input type="hidden" name="语言" value={langLabel} />
+          <input type="hidden" name="页面模块" value={moduleName} />
+          <input type="hidden" name="页面标题" value={title} />
+          <input type="hidden" name="页面地址" value={pageUrl} />
+          <input type="hidden" name="来源标识" value={sourceTag} />
           <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
           <input type="hidden" name="redirect" value={`${SITE_URL}/${locale}/thank-you`} />
 

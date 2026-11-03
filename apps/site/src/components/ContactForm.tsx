@@ -12,14 +12,26 @@ import { ComplianceForm } from '@trade/ui';
  * `source` 用来区分询盘来自哪个页面（Home / FAQ / Packages / Services: CCC …），
  * 不传就是默认的「SinoTrade Website」。
  */
-export default function ContactForm({ source }: { source?: string }) {
+export default function ContactForm({
+  source,
+  sourceRef,
+  pageTitle,
+}: {
+  source?: string;
+  /** 附加标识（如行业 slug），用于「来源标识」 */
+  sourceRef?: string;
+  /** 中文页面标题（动态页用；固定页留空，由 FORM_PAGE_TITLES 兜底） */
+  pageTitle?: string;
+}) {
   const t = useTranslations('ContactForm');
   const locale = useLocale();
 
   return (
     <ComplianceForm
       locale={locale}
-      subject={`🔥 New Inquiry — SinoTrade Website${source ? ` (${source})` : ''}`}
+      source={source}
+      sourceRef={sourceRef}
+      pageTitle={pageTitle}
       fromName="SinoTrade Website"
       idPrefix="site-contact"
       texts={{

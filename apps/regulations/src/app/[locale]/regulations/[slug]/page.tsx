@@ -84,6 +84,17 @@ export default async function RegulationPage({ params }: { params: Promise<{ loc
   const services = msgs?.Navbar?.servicesDropdown || {};
   const t = (key: string, fallback = ''): string => (R as Record<string, string | undefined>)[key] ?? fallback;
 
+  // 询盘来源标识用中文标题（只放标题，不带文号 —— 用户 2026-10-29 确认）
+  let zhTitle = '';
+  try {
+    const zhPath = path.join(process.cwd(), 'content', 'zh', `${slug}.mdx`);
+    if (fs.existsSync(zhPath)) {
+      zhTitle = String(matter(fs.readFileSync(zhPath, 'utf-8')).data.title || '');
+    }
+  } catch {
+    /* 缺 zh 版本时退回 FORM_PAGE_TITLES 兜底 */
+  }
+
   const { analysis, translation } = splitBody(raw);
   const analysisHtml = mdToHtml(analysis);
   const translationHtml = translation ? mdToHtml(translation) : '';
@@ -308,7 +319,9 @@ export default async function RegulationPage({ params }: { params: Promise<{ loc
 
       <ComplianceForm
         locale={locale}
-        subject={`🔥 New Inquiry — Regulations: ${slug}`}
+        source="regulations-detail"
+        sourceRef={slug}
+        pageTitle={zhTitle || doc.title}
         idPrefix="detail"
         texts={{
           title: CF.title,

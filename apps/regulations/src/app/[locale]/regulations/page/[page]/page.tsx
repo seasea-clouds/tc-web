@@ -154,7 +154,8 @@ export default async function RegulationsPageN({ params }: { params: Promise<Par
 
       <ComplianceForm
         locale={locale}
-        subject={`🔥 New Inquiry — Regulations Page ${pageNumber}`}
+        source="regulations-list-page"
+        pageTitle={`法规库列表第 ${pageNumber} 页`}
         idPrefix="page"
         texts={{
           title: CF.title,

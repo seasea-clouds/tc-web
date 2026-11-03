@@ -10,6 +10,8 @@ export { default as SearchModal } from './SearchModal';
 export { default as CookieConsent } from './CookieConsent';
 export { default as ComplianceForm } from './ComplianceForm';
 export type { ComplianceFormTexts } from './ComplianceForm';
+export { FORM_MODULES, FORM_PAGE_TITLES } from './formSources';
+export { LOCALE_NAMES_ZH, localeNameZh } from './localeNames';
 export { AuthContext, useAuth } from './AuthContext';
 export type { AuthUser, AuthContextType } from './AuthContext';
 export { AuthProvider } from './AuthProvider';

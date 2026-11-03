@@ -22,7 +22,7 @@ export {
   useMessages,
 } from './TranslationProvider';
 export type { Messages } from './TranslationProvider';
-export { WHATSAPP_URL, CONTACT_EMAIL, CONTACT_EMAIL_URL, BRAND_NAME, SITE_URL, LOCALES, DEFAULT_LOCALE, matchBrowserLanguage } from './constants';
+export { WHATSAPP_URL, CONTACT_EMAIL, CONTACT_EMAIL_URL, BRAND_NAME, SITE_URL, LOCALES, DEFAULT_LOCALE, matchBrowserLanguage, WEB3FORMS_ACCESS_KEY_FALLBACK } from './constants';
 export { buildAlternates, buildLanguages, sharedOpenGraph, sharedTwitter } from './seo';
 export { default as Favicon } from './Favicon';
 export { default as GeoMeta } from './GeoMeta';

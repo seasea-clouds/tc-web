@@ -1,7 +1,7 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import { SITE_URL } from './constants';
+import { SITE_URL, WEB3FORMS_ACCESS_KEY_FALLBACK } from './constants';
 import { localeNameZh } from './localeNames';
 import {
   FORM_MODULES,
@@ -60,6 +60,8 @@ export default function ComplianceForm({
   idPrefix?: string;
 }) {
   const pathname = usePathname();
+  // 环境变量优先；CF Pages 部分项目未注入该变量时用兜底值（见 constants.ts 说明）
+  const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || WEB3FORMS_ACCESS_KEY_FALLBACK;
   const moduleName = (source && FORM_MODULES[source]) || FORM_MODULE_FALLBACK;
   const title = pageTitle || (source && FORM_PAGE_TITLES[source]) || FORM_PAGE_TITLE_FALLBACK;
   const langLabel = localeNameZh(locale);
@@ -94,7 +96,7 @@ export default function ComplianceForm({
           method="POST"
           className="mx-auto w-full max-w-md rounded-xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8"
         >
-          <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY} />
+          <input type="hidden" name="access_key" value={accessKey} />
           <input type="hidden" name="subject" value={subject} />
           <input type="hidden" name="from_name" value={fromName} />
           {/* 来源标识（2026-10-29）：字段名用中文，web3forms 邮件按「字段名: 值」渲染，

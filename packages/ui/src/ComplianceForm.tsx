@@ -41,6 +41,7 @@ export default function ComplianceForm({
   pagePath,
   fromName = 'SinoTrade Website',
   idPrefix = 'cf',
+  children,
 }: {
   locale: string;
   texts: ComplianceFormTexts;
@@ -58,6 +59,11 @@ export default function ComplianceForm({
   /** web3forms 来信显示名 */
   fromName?: string;
   idPrefix?: string;
+  /**
+   * 自定义字段区（渲染在 email 之前）—— 供 quote 页放服务多选等额外字段，
+   * 保证全站只有这一份表单代码，来源标识/access_key 兜底对所有表单一致生效。
+   */
+  children?: React.ReactNode;
 }) {
   const pathname = usePathname();
   // 环境变量优先；CF Pages 部分项目未注入该变量时用兜底值（见 constants.ts 说明）
@@ -108,6 +114,8 @@ export default function ComplianceForm({
           <input type="hidden" name="来源标识" value={sourceTag} />
           <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
           <input type="hidden" name="redirect" value={`${SITE_URL}/${locale}/thank-you`} />
+
+          {children}
 
           <div className="relative mb-4">
             <label

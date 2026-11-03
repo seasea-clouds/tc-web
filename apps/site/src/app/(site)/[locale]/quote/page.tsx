@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { locales } from '@/i18n/routing';
 import { sharedOpenGraph, sharedTwitter, buildLanguages } from '@trade/ui/seo';
-import { SITE_URL } from '@trade/ui';
+import { ComplianceForm } from '@trade/ui';
 import { Suspense } from 'react';
 import ServiceCheckboxes from '@/components/ServiceCheckboxes';
 import CTASection from '@/components/CTASection';
@@ -32,6 +32,7 @@ export default async function QuotePage({ params }: { params: Promise<{ locale: 
   const bcT = await getTranslations({ locale, namespace: 'breadcrumb' });
   const ctaT = await getTranslations({ locale, namespace: 'CTA' });
   const commonT = await getTranslations({ locale, namespace: 'ServiceCommon' });
+  const cf = await getTranslations({ locale, namespace: 'ContactForm' });
 
   return (
     <div className="bg-[#F4F6F9]">
@@ -43,78 +44,41 @@ export default async function QuotePage({ params }: { params: Promise<{ locale: 
         </div>
       </section>
 
-      {/* Quote Form */}
-      <section className="py-12 sm:py-16 px-4">
-        <div className="max-w-2xl mx-auto">
-          <form
-            action="https://api.web3forms.com/submit"
-            method="POST"
-            className="bg-white rounded-xl shadow-lg p-6 sm:p-10"
-          >
-            <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY} />
-            <input type="hidden" name="from_name" value="SinoTrade Quote Form" />
-            <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
-            <input type="hidden" name="redirect" value={`${SITE_URL}/${resolvedParams.locale}/thank-you`} />
-
-            {/* Service Selector */}
-            <div className="mb-8">
-              <label className="block text-sm font-semibold text-[#333333] mb-3">{t('serviceLabel')}</label>
-              <Suspense>
-                <ServiceCheckboxes
-                  labels={[
-                    { id: 'gacc', icon: '📋', label: t('services.gacc') },
-                    { id: 'label', icon: '🏷️', label: t('services.label') },
-                    { id: 'ccc', icon: '🔌', label: t('services.ccc') },
-                    { id: 'cosmetics', icon: '💄', label: t('services.cosmetics') },
-                    { id: 'ecommerce', icon: '🛒', label: t('services.ecommerce') },
-                    { id: 'brand', icon: '🛡️', label: t('services.brand') },
-                  ]}
-                />
-              </Suspense>
-            </div>
-
-            {/* Email */}
-            <div className="mb-4">
-              <label htmlFor="email" className="block text-sm font-semibold text-[#333333] mb-1">
-                {t('emailLabel')} <span className="text-red-500">*</span>
-              </label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder={t('emailPlaceholder')}
-                required
-                className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1B365D] focus:border-transparent transition-all shadow-sm text-[#333333]"
-              />
-            </div>
-
-            {/* Message */}
-            <div className="mb-6">
-              <label htmlFor="message" className="block text-sm font-semibold text-[#333333] mb-1">
-                {t('messageLabel')} <span className="text-red-500">*</span>
-              </label>
-              <textarea
-                name="message"
-                id="message"
-                rows={4}
-                placeholder={t('messagePlaceholder')}
-                required
-                className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1B365D] focus:border-transparent transition-all shadow-sm text-[#333333] resize-none"
-              />
-            </div>
-
-            {/* Submit */}
-            <button
-              type="submit"
-              className="w-full bg-[#1B365D] hover:bg-[#1B365D]/90 text-white font-bold py-3.5 px-4 rounded-md transition-colors duration-300 shadow-md flex justify-center items-center gap-2"
-            >
-              {t('button')}
-            </button>
-
-            <p className="text-xs text-[#5F6F7F] text-center mt-3">{t('privacy')}</p>
-          </form>
+      {/* Quote Form —— 用全站的 ComplianceForm（唯一一份表单代码）：
+          children 放服务多选，来源标识字段因此与其它页面完全一致 */}
+      <ComplianceForm
+        locale={locale}
+        source="quote"
+        pageTitle="报价单"
+        fromName="SinoTrade Quote Form"
+        idPrefix="quote"
+        texts={{
+          title: cf('title'),
+          subtitle: cf('subtitle'),
+          emailLabel: t('emailLabel'),
+          emailPlaceholder: t('emailPlaceholder'),
+          messageLabel: t('messageLabel'),
+          messagePlaceholder: t('messagePlaceholder'),
+          button: t('button'),
+          privacy: t('privacy'),
+        }}
+      >
+        <div className="mb-6 text-left">
+          <label className="mb-3 block text-sm font-semibold text-[#333333]">{t('serviceLabel')}</label>
+          <Suspense>
+            <ServiceCheckboxes
+              labels={[
+                { id: 'gacc', icon: '📋', label: t('services.gacc') },
+                { id: 'label', icon: '🏷️', label: t('services.label') },
+                { id: 'ccc', icon: '🔌', label: t('services.ccc') },
+                { id: 'cosmetics', icon: '💄', label: t('services.cosmetics') },
+                { id: 'ecommerce', icon: '🛒', label: t('services.ecommerce') },
+                { id: 'brand', icon: '🛡️', label: t('services.brand') },
+              ]}
+            />
+          </Suspense>
         </div>
-      </section>
+      </ComplianceForm>
 
       <PortalCTASection t={commonT} href={`/${locale}/c/`} generic />
       <CTASection t={ctaT} />

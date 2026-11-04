@@ -855,3 +855,24 @@ AUTOINCREMENT 的语义）。实现是「`SELECT MAX(rev)+1 WHERE channel=?` →
 （2025-10-14 公布，2026-06-01 施行，废止 248 号令）。选它的理由：与站点核心业务
 （进口食品境外生产企业注册）直接对应、原文可核实、已生效。
 slug：`gacc-decree-280-imported-food-registration`，48 语言内容全部手写。
+
+## CF Pages 构建期变量（2026-11-04 实证）
+
+**规则**：Pages 项目里只要有含 `pages_build_output_dir` 的 `wrangler.toml`，
+CF 就走「配置即代码」模式 —— **Dashboard 和 API 里设的环境变量不会注入构建环境**。
+构建日志会打印 `Build environment variables:`（空）而不是变量列表，
+`next build` 内联 `NEXT_PUBLIC_*` 时得到 `undefined`，产物里就是空字符串。
+
+**现状**：
+- `tc-web-site` 没有 wrangler.toml → Dashboard 变量正常生效
+- `tc-web-blog` / `tc-web-regulations` / `tc-web-portal` / `tc-web-admin` 都有
+  wrangler.toml → 构建期变量**必须写进 `[vars]`**（已补）
+
+**实证**：在 blog 的 build 脚本前加 `console.log(process.env.NEXT_PUBLIC_...)` 探针，
+`[vars]` 声明后构建日志输出 `SET`；声明前是 `MISSING`。
+
+**坑**：
+- `wrangler pages project` 只有 list/create/delete，**没有**设置构建变量的子命令；
+  `wrangler pages secret put` 设的是 Functions 运行时 secret（构建期读不到）
+- CF Pages 的 PATCH API 是**合并**语义，删键要单独处理（置空不等同删除）
+- 加了 `[vars]` 后，Dashboard 里同名的旧变量不会生效，别两边都改

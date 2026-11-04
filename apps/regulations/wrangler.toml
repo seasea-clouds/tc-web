@@ -1,3 +1,10 @@
 name = "tc-web-regulations"
 compatibility_date = "2026-10-26"
 pages_build_output_dir = "out"
+
+# 构建期变量（2026-11-04）：本文件存在 pages_build_output_dir 时，CF Pages 走
+# 「配置即代码」模式 —— Dashboard / API 里设的变量**不会注入构建环境**
+# （构建日志 `Build environment variables:` 为空），必须在 [vars] 里声明，
+# 否则 next build 内联 NEXT_PUBLIC_* 时得到 undefined（表单 access_key 变空）。
+[vars]
+NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY = "b1e6d34d-9fdc-4dc1-9bb2-6fc9090b361c"

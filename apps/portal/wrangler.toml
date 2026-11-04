@@ -2,6 +2,12 @@ name = "tc-web-portal"
 compatibility_date = "2026-05-23"
 pages_build_output_dir = "out"
 
+
+# 构建期变量（2026-11-04）：有 wrangler.toml 时 CF 忽略 Dashboard 变量，
+# NEXT_PUBLIC_* 必须写在这里才会被 next build 内联。
+[vars]
+NEXT_PUBLIC_TURNSTILE_SITE_KEY = "0x4AAAAAADqoEtL5oqrpaf3R"
+
 [[d1_databases]]
 binding = "DB"
 database_name = "trade-web-portal-db"

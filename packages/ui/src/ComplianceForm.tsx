@@ -77,10 +77,9 @@ export default function ComplianceForm({
       ? `${SITE_URL}${pathname}`
       : `${SITE_URL}/${locale}/`;
   const sourceTag = source ? (sourceRef ? `${source}:${sourceRef}` : source) : '';
-  // 标题已被模块名涵盖时（首页 / 服务 · CCC认证 vs CCC认证）不重复写
-  const subject = moduleName.includes(title)
-    ? `🔥 询盘 · ${moduleName} · ${langLabel}`
-    : `🔥 询盘 · ${moduleName} · ${langLabel} · ${title}`;
+  // 邮件主题统一（用户 2026-11-04 定）：一律「网站表单询盘」。
+  // 区分来源靠正文的 5 个中文字段（语言 / 页面模块 / 页面标题 / 页面地址 / 来源标识）。
+  const subject = '网站表单询盘';
 
   return (
     <section id="contact" className="bg-[#F4F6F9] px-4 py-16 sm:px-6 lg:px-8">

@@ -4559,6 +4559,17 @@ def check_article(slug, art, add, expected_kind=None, prefix="articles/%s/"):
                     "%s 图片集与 %s 不一致（缺 %s，多 %s）" %
                     (lg, master_lang, sorted(base - figs[lg]), sorted(figs[lg] - base)))
 
+        # M12（v1.67）：正文图片文件名必须语义化——fig-01 / image1 / img-2 这类编号名
+        # 既拿不到 Google 图片搜索的文件名信号，也无法用来核对多语言配图是否错位。
+        img_bad_re = re.compile(r"^(?:fig-\d+|image\d*|img-?\d+)\.[A-Za-z0-9]+$")
+        for lg in sorted(parsed):
+            for ref in re.findall(img_re, parsed[lg][1]):
+                if img_bad_re.match(ref):
+                    add("M12", "error", "%s/%s" % (lg, slug),
+                        "图片必须用有语义的英文文件名（如 gacc-registration-flow.webp），"
+                        "不要 fig-01.webp 这类编号: %s" % ref)
+                    break
+
         # P01 同一图片在同一语言内被引用多次
         for lg in sorted(parsed):
             names = re.findall(img_re, parsed[lg][1])

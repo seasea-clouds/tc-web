@@ -1,0 +1,3 @@
+# 管理后台不参与搜索引擎索引；pages.dev 域名同样如此。
+/*
+  X-Robots-Tag: noindex, nofollow

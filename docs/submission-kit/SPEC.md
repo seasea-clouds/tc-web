@@ -104,6 +104,7 @@
 | M08 | error | `images` 清单与实际文件不一致 |
 | M10 | error | `kind` 缺失或不是 `"blog"` / `"regulation"`（v1.60 必填，不再默认 blog） |
 | M09 | error | `submission.json` 的 `title`/`excerpt` 与 en frontmatter 不一致（v1.34）：站方列表页读 submission.json、文章页读 mdx frontmatter，两者漂移会让列表与文章展示不同标题/摘要（F1 实测：submission 残留旧标题）。缺 en 语言或缺字段时静默跳过 |
+| M12 | error | 正文图片文件名必须是有语义的英文名（如 `gacc-registration-flow.webp`）；`fig-01.webp` / `image1.webp` / `img-2.webp` 这类编号名判错（v1.67） |
 
 ---
 
@@ -751,3 +752,9 @@ R01 号位保留空置，不复用。
 | v1.9 | 2026-10-21 | 新增 P30 非拉丁语言正文夹用英文原词检查；本地化 47 个语言的 bonded（502 处）与货币单位 |
 | v1.8 | 2026-10-21 | 结构一致性升级为多维逐块比对：P23 的 detail 由标量升级为元组；新增 P24（表格列数与各行列数）、P25（列表符号与缩进层级）、P26（行内强调计数 + 逐条目加粗分布）、P27（链接目标）、P28（frontmatter 结构：references / date / category）、P29（链接语言前缀）。修正 `_block_kind` / `_list_items` 只认 `- ` 前缀的缺陷。13 个反例全部命中 |
 | v1.7 | 2026-10-21 | 基准语言改为中文优先（`--master=<lang>` 可指定）；新增 P23 逐块一一对应（段落/标题/列表/图片/表格的位置与规模全部对齐，报错精确到块号）；P22 图片比对改用文件名；新增 `number_words.py` 数字词表，中文「十四」与各语言 “fourteen” 归一可比对 |
+
+### v1.67
+
+- **新增 M12**：正文图片文件名必须语义化（英文小写连字符），禁用 `fig-01` / `image1` / `img-2` 这类编号名。
+  理由：文件名是 Google 图片搜索的弱信号；编号名也无法用于核对多语言配图是否错位。
+- sample 的 `fig-01.webp` 改为 `chengdu-office-checklist.webp`（48 语言引用同步）。

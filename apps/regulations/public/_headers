@@ -1,5 +1,9 @@
+# 子站域名（<project>.pages.dev）不进搜索引擎：主域才是正式入口，
+# 子站被索引会和主域形成重复内容。主域由 site 的 robots.txt 统一放开。
+# 注：这个 _headers 随子站产物部署，只作用于 *.pages.dev。
 /*
   X-Content-Type-Options: nosniff
+  X-Robots-Tag: noindex, nofollow
 
 /fonts/*
   Cache-Control: public, max-age=31536000, immutable

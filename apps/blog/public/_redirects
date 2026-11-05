@@ -48,17 +48,3 @@
 /ur/blog/page/1/  /ur/blog/  301
 /vi/blog/page/1/  /vi/blog/  301
 /zh/blog/page/1/  /zh/blog/  301
-
-# 图片改名（2026-11-05）：旧 fig-NN.webp → 语义化文件名，保留已索引的旧地址。
-/images/blog/bonded-ecommerce-export-china-guide/fig-01.webp  /images/blog/bonded-ecommerce-export-china-guide/program-modules-01-05.webp  301
-/images/blog/bonded-ecommerce-export-china-guide/fig-02.webp  /images/blog/bonded-ecommerce-export-china-guide/program-modules-06-09.webp  301
-/images/blog/bonded-ecommerce-export-china-guide/fig-03.webp  /images/blog/bonded-ecommerce-export-china-guide/service-framework-one-responsible-party.webp  301
-/images/blog/bonded-ecommerce-export-china-guide/fig-04.webp  /images/blog/bonded-ecommerce-export-china-guide/fourteen-work-packages-s0-s13.webp  301
-/images/blog/bonded-ecommerce-export-china-guide/fig-05.webp  /images/blog/bonded-ecommerce-export-china-guide/nine-chapters-four-key-questions.webp  301
-/images/blog/china-health-product-market-scale-structure-timing/fig-01.webp  /images/blog/china-health-product-market-scale-structure-timing/market-scale-structure-data-groups.webp  301
-/images/blog/china-health-product-market-scale-structure-timing/fig-02.webp  /images/blog/china-health-product-market-scale-structure-timing/policy-market-timeline-2016-2026.webp  301
-/images/blog/five-conclusions-exporting-health-products-china/fig-01.webp  /images/blog/five-conclusions-exporting-health-products-china/chapter-divider-three-questions.webp  301
-/images/blog/five-conclusions-exporting-health-products-china/fig-02.webp  /images/blog/five-conclusions-exporting-health-products-china/executive-summary-five-conclusions.webp  301
-/images/blog/fourteen-work-packages-three-steps-china-market/fig-01.webp  /images/blog/fourteen-work-packages-three-steps-china-market/three-step-entry-stair-diagram.webp  301
-/images/blog/key-numbers-bonded-launch-china/fig-01.webp  /images/blog/key-numbers-bonded-launch-china/key-numbers-eleven-cards.webp  301
-/images/blog/service-framework-bonded-ecommerce-china-plan/fig-01.webp  /images/blog/service-framework-bonded-ecommerce-china-plan/service-framework-seven-flows-ledger.webp  301

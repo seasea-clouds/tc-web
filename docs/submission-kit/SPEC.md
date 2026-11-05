@@ -37,7 +37,7 @@
 │   │   └── images/
 │   │       └── <slug>/
 │   │           ├── cover.webp          ← 博客必需，1200×630
-│   │           └── fig-01.webp …       ← 可选，正文配图
+│   │           └── <描述性名字>.webp    ← 可选，正文配图
 │   └── <second-slug>/
 │       └── …（同上）
 └── regulation/
@@ -78,7 +78,7 @@
   "author": "David Zhang",
   "excerpt": "How green coffee beans enter China: GACC registration under Decree 280, the announcement 219 route for raw agricultural products, labeling and the paperwork that clears customs.",
   "locales": ["en", "zh", "es", "fr", "de", "…（此处省略，实际必须正好是第 4 节的 48 个）"],
-  "images": ["cover.webp", "fig-01.webp"],
+  "images": ["cover.webp", "gacc-registration-flow.webp"],
   "imageRights": "All images are original or licensed for commercial use; no third-party copyrighted material."
 }
 ```
@@ -209,7 +209,8 @@ references:
 - 不得使用 JSX / HTML 标签（`<div>`、`<img>`、`<br>` 等），不得使用 `{...}` 表达式。
 - 不得用框线字符（`┌ ─ │ └`）或箭头画流程图，流程图请写成列表或普通段落。
 - 列表项必须以 `- ` 开头、**每项独占一行**，项与项之间**不留空行**（B07，会导致渲染成多个列表）；一行不得写多个列表项（B08）。
-- 正文里的图片单独成行：`![说明文字](/images/blog/<slug>/fig-01.webp)`。
+- 正文里的图片单独成行：`![说明文字](/images/blog/<slug>/gacc-registration-flow.webp)`。
+  **图片文件名必须是有语义的英文小写连字符名**（如 `gacc-registration-flow.webp`），不要用 `fig-01.webp` / `image1.webp` 这类无意义编号：文件名是 Google 图片搜索的弱信号，同时也是我们核对多语言配图是否错位的依据。
 - **破折号（ST01/ST02，error 级）**：正文不用 em dash（`——` / `—`），改冒号、拆句或括号；en dash（`–`）仅用于数字/编号区间（`2–4`、`S0–S13`），全篇一致。
 - 各语言小节数与图片引用必须与 en 对齐（P02/P03，见第 8 节）；同一图片不得在一篇内重复引用（P01）。
 - **逐块结构必须与基准语言一比一对应**（P21/P22/P23，见第 8 节）：同一份内容在所有语言里应当以相同的结构呈现。列表不得在某些语言里被压成散文段落，图片不得在某些语言里跑到列表前面，表格行数、列表条目数也必须一致。

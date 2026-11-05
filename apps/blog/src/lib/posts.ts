@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import imageManifest from './image-manifest.json';
 
 export interface PostMeta {
   slug: string;
@@ -183,11 +184,23 @@ function applyInlineFormatting(text: string): string {
   result = result.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
   // Italic
   result = result.replace(/\*(.+?)\*/g, '<em>$1</em>');
-  // Images — must run before links, otherwise the leading "!" is left behind
+  // Images — must run before links, otherwise the leading "!" is left behind.
+  // width/height 来自构建期清单（build-image-manifest.mjs），让浏览器提前按比例预留
+  // 高度，避免图片加载时页面跳动（CLS）；figure/figcaption 给图片一层可索引的可见说明。
   result = result.replace(
     /!\[([^\]]*)\]\(([^)]+)\)/g,
-    (_m, alt: string, src: string) =>
-      `<img src="${src.replace(/"/g, '&quot;')}" alt="${alt.replace(/"/g, '&quot;')}" loading="lazy" decoding="async" class="rounded-lg w-full my-6 border border-gray-200" />`,
+    (_m, alt: string, src: string) => {
+      const safeAlt = alt.replace(/"/g, '&quot;');
+      const safeSrc = src.replace(/"/g, '&quot;');
+      const size = (imageManifest as Record<string, number[]>)[src];
+      const dims = size ? ` width="${size[0]}" height="${size[1]}"` : '';
+      const caption = alt.trim()
+        ? `<figcaption class="mt-2 px-1 text-sm leading-relaxed text-gray-500">${safeAlt}</figcaption>`
+        : '';
+      return `<figure class="my-6">` +
+        `<img src="${safeSrc}" alt="${safeAlt}"${dims} loading="lazy" decoding="async" class="rounded-lg w-full border border-gray-200" />` +
+        `${caption}</figure>`;
+    },
   );
   // Links
   result = result.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-[#2563EB] hover:underline font-medium">$1</a>');

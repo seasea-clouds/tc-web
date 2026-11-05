@@ -48,10 +48,20 @@ function parseFrontmatter(filePath) {
 
   const fields = {};
   for (const line of match[1].split('\n')) {
-    const keyMatch = line.match(/^(\w+):\s+"(.*)"$/);
-    if (keyMatch) {
-      fields[keyMatch[1]] = keyMatch[2];
+    // 只取顶层 key: value（缩进行是多行值/列表项，跳过）
+    const keyMatch = line.match(/^(\w+):\s*(.*)$/);
+    if (!keyMatch) continue;
+    let value = keyMatch[2].trim();
+    // YAML 里 title 可以带引号也可以不带（投稿包两种都出现过）。
+    // 旧版只认双引号写法，遇到无引号 title 就返回 undefined，
+    // 进而让 cleanTitle 崩溃、整个 admin 构建失败（2026-11-05 实际发生）。
+    if (
+      (value.startsWith('"') && value.endsWith('"') && value.length >= 2) ||
+      (value.startsWith("'") && value.endsWith("'") && value.length >= 2)
+    ) {
+      value = value.slice(1, -1);
     }
+    if (value) fields[keyMatch[1]] = value;
   }
   return fields;
 }
@@ -60,6 +70,7 @@ function parseFrontmatter(filePath) {
  * Clean colons and em-dashes from a title (consistent with R08 rule).
  */
 function cleanTitle(title) {
+  if (typeof title !== 'string') return '';
   return title
     .replace(/\s*[:：]\s*/g, ' ')     // Replace colons (full/half-width) with space
     .replace(/\s*—\s*/g, ' ')          // Em-dash

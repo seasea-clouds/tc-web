@@ -17,7 +17,7 @@ Worker 自身在 `https://tc-web-media.<account>.workers.dev`，但**没有网�
 
 ## 渠道
 
-`<channel>` 来自环境变量 `MEDIA_CHANNELS`（逗号分隔），当前为 `reddit,x`。
+`<channel>` 来自环境变量 `MEDIA_CHANNELS`（逗号分隔），当前为 `reddit,x,quora`。
 **不在名单内一律 404**，与非法路径同样处理，不提示原因。
 
 以后加渠道：`MEDIA_CHANNELS` 加一项 + `MEDIA_PUBKEYS` 加该渠道的 `script`/`crm` 公钥，改完重新部署。
@@ -77,7 +77,7 @@ D1 `tc-web-media-db`（`migrations/0001-init.sql`）：`media_envelope` / `media
 | `DB` | wrangler.toml | D1 binding |
 | `MEDIA_PUBKEYS` | Worker secret | `{"<channel>":{"script":{jwk},"crm":{jwk}}}`，只放公钥 |
 | `MEDIA_GATEWAY_SECRET` | Worker secret + site 的 Pages 变量 | 两端**同名同值** |
-| `MEDIA_CHANNELS` | Worker secret | `reddit,x` |
+| `MEDIA_CHANNELS` | Worker secret | `reddit,x,quora` |
 
 ```bash
 set -a && . ../../.env && set +a
@@ -86,6 +86,25 @@ npx wrangler secret put MEDIA_GATEWAY_SECRET --config workers/media-gateway/wran
 npx wrangler secret put MEDIA_CHANNELS --config workers/media-gateway/wrangler.toml
 npx wrangler deploy --config workers/media-gateway/wrangler.toml
 ```
+
+## 怎么验证「渠道已开通」
+
+**不要用主域 curl 判 404/403** —— 网关有两道前置校验，任何一道不过都返回同样的 `404 {"ok":false}`：
+
+1. 网关头 `X-MG-Gateway` 不匹配 → 404（主域由 site 边缘 worker 注入；外部直连必须自己带）
+2. 渠道不在 `MEDIA_CHANNELS` → 404；验签失败 → 也是 404
+
+所以「渠道没开通」和「签名不对」在响应上完全一样，`curl` 是分不出来的。
+
+**正确做法**：用该渠道自己的私钥签一个 `GET /media/<channel>/<win>/pull`（走主域）：
+
+- 返回 `200 {"ok":true,"channel":"<channel>",...}` → 渠道已开通、公钥配对正确
+- 返回 `404` → 渠道没进白名单，或公钥配错
+
+再把同一个请求换成**另一个渠道的私钥**签，应当 404 —— 这一步验证的是「渠道与角色公钥绑定」没串。
+
+> 注意：Python `urllib` 请求主域会被 WAF 拦（`403 error code: 1010`），必须显式带
+> `User-Agent`（如 `tc-web-media-selftest/1.0`），否则连不到 worker 就误判成配置问题。
 
 ## 自测
 

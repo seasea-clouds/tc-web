@@ -363,11 +363,20 @@ async function proxySubSiteAsset(url: URL, request: Request, env?: Record<string
     const imgUrl = `${upstream}/images/blog/${blogImgMatch[1]}`;
     const headers = new Headers(request.headers);
     headers.delete('host');
-    const resp = await fetch(new Request(imgUrl, { method: request.method, headers }));
+    // redirect: 'manual' —— 上游 301（图片改名后的旧地址）必须原样透传，
+    // 否则客户端只看到 200 + 新内容，搜索引擎无法确认这是同一张图的新位置。
+    // location 里的上游域名要换回主域，避免暴露 pages.dev 内部地址。
+    const resp = await fetch(new Request(imgUrl, { method: request.method, headers, redirect: 'manual' }));
+    const respHeaders = sanitizeHeaders(resp.headers);
+    const location = respHeaders.get('location');
+    if (location) {
+      const origin = url.origin;
+      respHeaders.set('location', location.replace(upstream, origin));
+    }
     return new Response(resp.body, {
       status: resp.status,
       statusText: resp.statusText,
-      headers: sanitizeHeaders(resp.headers),
+      headers: respHeaders,
     });
   }
 

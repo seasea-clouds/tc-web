@@ -5,14 +5,11 @@ import type { DocMeta } from '@/lib/documents';
 import RegulationRows, { type RegulationRowTexts } from './RegulationRows';
 
 export interface RegulationFilterTexts extends RegulationRowTexts {
-  /** status 枚举 → 本地化标签（只给「状态」筛选下拉用，列表表格已不展示状态列） */
-  statusLabels: Record<string, string>;
   /** category slug → 本地化标签（Regulations.cat_<slug>，48 语言齐） */
   catLabels?: Record<string, string>;
   filterIssuer: string;
   filterCategory: string;
   filterYear: string;
-  filterStatus: string;
   filterAll: string;
   filterReset: string;
   filterEmpty: string;
@@ -45,7 +42,6 @@ export default function RegulationFilter({
   const [issuer, setIssuer] = useState('');
   const [category, setCategory] = useState('');
   const [year, setYear] = useState('');
-  const [status, setStatus] = useState('');
 
   const issuers = useMemo(
     () => Array.from(new Set(docs.map((d) => d.issuer).filter(Boolean))).sort(),
@@ -53,10 +49,6 @@ export default function RegulationFilter({
   );
   const categories = useMemo(
     () => Array.from(new Set(docs.map((d) => d.category).filter(Boolean))).sort(),
-    [docs],
-  );
-  const statuses = useMemo(
-    () => Array.from(new Set(docs.map((d) => d.status).filter(Boolean))),
     [docs],
   );
   /** 发布年份：取自 published_at，倒序（新的在前） */
@@ -68,7 +60,7 @@ export default function RegulationFilter({
     [docs],
   );
 
-  const active = Boolean(issuer || category || year || status);
+  const active = Boolean(issuer || category || year);
 
   const filtered = useMemo(() => {
     if (!active) return pageDocs;
@@ -76,19 +68,19 @@ export default function RegulationFilter({
       (d) =>
         (!issuer || d.issuer === issuer) &&
         (!category || d.category === category) &&
-        (!year || (d.publishedAt || '').startsWith(year)) &&
-        (!status || d.status === status),
+        (!year || (d.publishedAt || '').startsWith(year)),
     );
-  }, [active, docs, pageDocs, issuer, category, year, status]);
+  }, [active, docs, pageDocs, issuer, category, year]);
 
   const selectClass =
     'rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-[#333333] focus:border-primary-navy focus:outline-none focus:ring-1 focus:ring-primary-navy';
 
   return (
     <>
-      {/* 筛选栏：四个维度只要该字段有值就出现 —— 即便只有一个可选值也保留下拉
-          （用户 2026-10-29 裁定：所有筛选只有一个值也要有下拉） */}
-      {(issuers.length > 0 || categories.length > 0 || years.length > 0 || statuses.length > 0) && (
+      {/* 筛选栏：三个维度（机构 / 分类 / 年份）只要该字段有值就出现 ——
+          即便只有一个可选值也保留下拉（用户 2026-10-29 裁定）。
+          状态维度已移除（用户 2026-11-17：目前先不考虑状态字段）。 */}
+      {(issuers.length > 0 || categories.length > 0 || years.length > 0) && (
         <div className="mb-6 flex flex-wrap items-center gap-3">
           {issuers.length > 0 && (
             <label className="flex items-center gap-2 text-sm text-[#5F6F7F]">
@@ -132,20 +124,6 @@ export default function RegulationFilter({
             </label>
           )}
 
-          {statuses.length > 0 && (
-            <label className="flex items-center gap-2 text-sm text-[#5F6F7F]">
-              <span className="font-medium">{texts.filterStatus}</span>
-              <select className={selectClass} value={status} onChange={(e) => setStatus(e.target.value)}>
-                <option value="">{texts.filterAll}</option>
-                {statuses.map((v) => (
-                  <option key={v} value={v}>
-                    {texts.statusLabels[v] || v}
-                  </option>
-                ))}
-              </select>
-            </label>
-          )}
-
           {active && (
             <button
               type="button"
@@ -153,7 +131,6 @@ export default function RegulationFilter({
                 setIssuer('');
                 setCategory('');
                 setYear('');
-                setStatus('');
               }}
               className="rounded-lg border border-gray-300 px-3 py-2 text-sm font-medium text-primary-navy transition-colors hover:border-primary-navy"
             >

@@ -37,13 +37,6 @@ export default async function RegulationsHome({ params }: { params: Promise<{ lo
   const t = (key: string, fallback: string) => R[key] ?? fallback;
   const CF = msgs?.ContactForm || {};
 
-  const statusLabels: Record<string, string> = {
-    in_force: t('statusInForce', 'In force'),
-    upcoming: t('statusUpcoming', 'Not yet in force'),
-    amended: t('statusAmended', 'Amended'),
-    repealed: t('statusRepealed', 'Repealed'),
-    draft: t('statusDraft', 'Draft'),
-  };
 
   return (
     <>
@@ -89,7 +82,6 @@ export default async function RegulationsHome({ params }: { params: Promise<{ lo
               colPublished: t('colPublished', 'Published'),
               colEffective: t('colEffective', 'In force'),
               noDocs: t('noDocs', 'No documents yet.'),
-              statusLabels,
               catLabels: {
                 'Product Certification': t('cat_Product_Certification', 'Product Certification'),
                 'Compliance Guide': t('cat_Compliance_Guide', 'Compliance Guide'),
@@ -102,7 +94,6 @@ export default async function RegulationsHome({ params }: { params: Promise<{ lo
               filterIssuer: t('filterIssuer', 'Issuing authority'),
               filterCategory: t('filterCategory', 'Category'),
               filterYear: t('filterYear', 'Publication year'),
-              filterStatus: t('filterStatus', 'Status'),
               filterAll: t('filterAll', 'All'),
               filterReset: t('filterReset', 'Reset'),
               filterEmpty: t('filterEmpty', 'No documents match these filters.'),

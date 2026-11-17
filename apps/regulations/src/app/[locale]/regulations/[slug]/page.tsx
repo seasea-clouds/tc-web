@@ -134,15 +134,6 @@ export default async function RegulationPage({ params }: { params: Promise<{ loc
     },
   };
 
-  const statusLabel =
-    {
-      in_force: t('statusInForce'),
-      upcoming: t('statusUpcoming'),
-      amended: t('statusAmended'),
-      repealed: t('statusRepealed'),
-      draft: t('statusDraft'),
-    }[doc.status] || doc.status;
-
   // 官方链接显示的文本用来源域名（gov.cn 之类），不需要翻译
   let sourceHost = '';
   try {
@@ -151,14 +142,15 @@ export default async function RegulationPage({ params }: { params: Promise<{ loc
     sourceHost = '';
   }
 
-  // 六个字段固定顺序：文号 / 发布机关 / 发布日期 / 施行日期 / 状态 / 官方链接
+  // 五个字段固定顺序：文号 / 发布机关 / 发布日期 / 施行日期 / 官方链接
+  // 状态字段暂不展示（用户 2026-11-17 裁定：目前先不考虑状态）；
+  // frontmatter 的 status 仍保留 —— 投稿包与 CI 规则都要它，且 JSON-LD 用得上
   // 字体一律走正文同一套，不用等宽字体——等宽在小字号下会显得比其它字段细
   const meta = [
     { label: t('colDocNumber'), value: doc.docNumber },
     { label: t('issuerLabel'), value: doc.issuer },
     { label: t('colPublished'), value: doc.publishedLabel },
     ...(doc.effectiveLabel ? [{ label: t('colEffective'), value: doc.effectiveLabel }] : []),
-    { label: t('colStatus'), value: statusLabel },
     ...(doc.sourceUrl
       ? [{ label: t('sourceLabel'), value: sourceHost, href: doc.sourceUrl }]
       : []),

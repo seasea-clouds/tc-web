@@ -70,20 +70,12 @@ export default async function RegulationsPageN({ params }: { params: Promise<Par
   const B = msgs?.Regulations || {};
   const tb = (key: string, fallback?: string) => B[key] ?? fallback ?? key;
 
-  const statusLabels: Record<string, string> = {
-    in_force: tb('statusInForce', 'In force'),
-    upcoming: tb('statusUpcoming', 'Not yet in force'),
-    amended: tb('statusAmended', 'Amended'),
-    repealed: tb('statusRepealed', 'Repealed'),
-    draft: tb('statusDraft', 'Draft'),
-  };
   const texts = {
     colDocNumber: tb('colDocNumber', 'Document No.'),
     colTitle: tb('colTitle', 'Title'),
     colPublished: tb('colPublished', 'Published'),
     colEffective: tb('colEffective', 'In force'),
     noDocs: tb('noDocs', 'No documents yet.'),
-    statusLabels,
   };
 
   const pageLabel = `${tb('pagination', 'Page')} ${pageNumber}`;

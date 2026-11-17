@@ -14,6 +14,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { discoverAll, expandLocales, LOCALES } from './discover-routes.mjs';
+import { paginatedRoutes } from './lib/pagination-routes.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -40,11 +41,14 @@ export function generateSitemaps(baseUrl, outDir) {
 
   // 1. 生成各语言 sitemap（含 xhtml:link hreflang 交叉引用）
   for (const { locale, routes } of localeRoutes) {
+    // 列表分页（/blog/page/2/、/regulations/page/2/…）是动态路由实例，不在
+    // page.tsx 扫描结果里 —— 按当前内容量现算补上（第 1 页已由列表页覆盖）。
+    const allRoutes = [...routes, ...paginatedRoutes(locale)];
     let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
     xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n`;
     xml += `        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n`;
 
-    for (const route of routes) {
+    for (const route of allRoutes) {
       const loc = `${baseUrl}${route}`;
       // Extract locale-independent path (remove /{locale} prefix)
       const pathPart = route.replace(/^\/[a-z]{2}(-[a-z]{2})?\//, '/');

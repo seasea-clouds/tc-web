@@ -37,8 +37,9 @@
     "hint": "සේවා, ලිපි සහ නිතර අසන පැන හරහා සෙවීමට ටයිප් කරන්න",
     "types": {
       "service": "සේවා",
-      "blog": "Insights",
-      "faq": "FAQ"
+      "blog": "තීක්ෂ්ණ බුද්ධිය",
+      "faq": "FAQ",
+      "regulation": "රෙගුලාසි"
     }
   },
   "Navbar": {

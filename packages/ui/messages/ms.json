@@ -37,8 +37,9 @@
     "hint": "Taip untuk mencari merentas perkhidmatan, artikel dan Soalan Lazim",
     "types": {
       "service": "Perkhidmatan",
-      "blog": "Insights",
-      "faq": "FAQ"
+      "blog": "Blog",
+      "faq": "FAQ",
+      "regulation": "Peraturan"
     }
   },
   "Navbar": {

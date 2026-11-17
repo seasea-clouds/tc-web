@@ -37,8 +37,9 @@
     "hint": "Skriv for at søge på tværs af tjenester, artikler og ofte stillede spørgsmål",
     "types": {
       "service": "Tjenester",
-      "blog": "Insights",
-      "faq": "FAQ"
+      "blog": "Indsigt",
+      "faq": "FAQ",
+      "regulation": "Regler"
     }
   },
   "Navbar": {

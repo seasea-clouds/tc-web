@@ -37,8 +37,9 @@
     "hint": "পরিষেবা, নিবন্ধ এবং FAQ জুড়ে অনুসন্ধান করতে টাইপ করুন",
     "types": {
       "service": "সেবাসমূহ",
-      "blog": "Insights",
-      "faq": "FAQ"
+      "blog": "অন্তর্দৃষ্টি",
+      "faq": "FAQ",
+      "regulation": "বিধিমালা"
     }
   },
   "Navbar": {

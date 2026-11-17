@@ -37,8 +37,9 @@
     "hint": "Hizmetler, makaleler ve SSS'ler arasında arama yapmak için yazın",
     "types": {
       "service": "Hizmetler",
-      "blog": "Insights",
-      "faq": "FAQ"
+      "blog": "İçgörüler",
+      "faq": "FAQ",
+      "regulation": "Mevzuat"
     }
   },
   "Navbar": {

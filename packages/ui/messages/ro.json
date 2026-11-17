@@ -37,8 +37,9 @@
     "hint": "Tastați pentru a căuta în servicii, articole și întrebări frecvente",
     "types": {
       "service": "Servicii",
-      "blog": "Insights",
-      "faq": "FAQ"
+      "blog": "Perspective",
+      "faq": "FAQ",
+      "regulation": "Reglementări"
     }
   },
   "Navbar": {

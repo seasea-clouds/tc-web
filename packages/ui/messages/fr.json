@@ -37,8 +37,9 @@
     "hint": "Tapez pour effectuer une recherche parmi les services, articles et FAQ",
     "types": {
       "service": "Services",
-      "blog": "Insights",
-      "faq": "FAQ"
+      "blog": "Articles",
+      "faq": "FAQ",
+      "regulation": "Réglementation"
     }
   },
   "Navbar": {

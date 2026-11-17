@@ -37,8 +37,9 @@
     "hint": "Ketik untuk mencari di seluruh layanan, artikel, dan FAQ",
     "types": {
       "service": "Layanan",
-      "blog": "Insights",
-      "faq": "FAQ"
+      "blog": "Wawasan",
+      "faq": "FAQ",
+      "regulation": "Peraturan"
     }
   },
   "Navbar": {

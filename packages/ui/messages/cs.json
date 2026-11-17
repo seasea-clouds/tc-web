@@ -37,8 +37,9 @@
     "hint": "Pište pro vyhledávání ve službách, článcích a často kladených dotazech",
     "types": {
       "service": "Služby",
-      "blog": "Insights",
-      "faq": "FAQ"
+      "blog": "Postřehy",
+      "faq": "FAQ",
+      "regulation": "Předpisy"
     }
   },
   "Navbar": {

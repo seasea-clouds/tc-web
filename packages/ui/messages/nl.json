@@ -37,8 +37,9 @@
     "hint": "Typ om te zoeken in services, artikelen en veelgestelde vragen",
     "types": {
       "service": "Diensten",
-      "blog": "Insights",
-      "faq": "FAQ"
+      "blog": "Inzichten",
+      "faq": "FAQ",
+      "regulation": "Regelgeving"
     }
   },
   "Navbar": {

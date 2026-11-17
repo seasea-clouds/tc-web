@@ -37,8 +37,9 @@
     "hint": "Skriv for å søke på tvers av tjenester, artikler og vanlige spørsmål",
     "types": {
       "service": "Tjenester",
-      "blog": "Insights",
-      "faq": "FAQ"
+      "blog": "Blogg",
+      "faq": "FAQ",
+      "regulation": "Forskrifter"
     }
   },
   "Navbar": {

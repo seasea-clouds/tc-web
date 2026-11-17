@@ -37,8 +37,9 @@
     "hint": "برای جستجو در سرویس‌ها، مقالات و پرسش‌های متداول تایپ کنید",
     "types": {
       "service": "خدمات",
-      "blog": "Insights",
-      "faq": "FAQ"
+      "blog": "بینش ها",
+      "faq": "FAQ",
+      "regulation": "مقررات"
     }
   },
   "Navbar": {

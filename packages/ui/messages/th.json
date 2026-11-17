@@ -37,8 +37,9 @@
     "hint": "พิมพ์เพื่อค้นหาบริการ บทความ และคำถามที่พบบ่อย",
     "types": {
       "service": "บริการ",
-      "blog": "Insights",
-      "faq": "FAQ"
+      "blog": "บล็อก",
+      "faq": "FAQ",
+      "regulation": "กฎระเบียบ"
     }
   },
   "Navbar": {

@@ -37,8 +37,9 @@
     "hint": "Xidmətlər, məqalələr və tez-tez verilən suallar arasında axtarış etmək üçün yazın",
     "types": {
       "service": "Xidmətlər",
-      "blog": "Insights",
-      "faq": "FAQ"
+      "blog": "Anlayışlar",
+      "faq": "FAQ",
+      "regulation": "Qaydalar"
     }
   },
   "Navbar": {

@@ -2,8 +2,8 @@
 /**
  * build-search-index.mjs — 生成统一搜索索引
  *
- * 读取 site + portal + blog 各 app 的 messages 和 content
- * 输出 {services, blog, faq, checks, generated} 格式的 search-index-{locale}.json
+ * 读取 site + portal + blog + regulations 各 app 的 messages 和 content
+ * 输出 {services, blog, faq, regulations, checks, generated} 格式的 search-index-{locale}.json
  *
  * 用法: node packages/scripts/build-search-index.mjs [--out-dir=<path>]
  *   默认输出到当前工作目录的 public/ (支持所有项目)
@@ -96,22 +96,61 @@ function extractBlog(blogDir, locale, msg) {
   return posts;
 }
 
+/**
+ * 合规自查页（apps/portal/src/app/[locale]/c/check/<slug>/）。
+ *
+ * 真值 = 磁盘上真实存在的页面目录 —— 曾经按 msg.Check 的 *Title 键反推 slug，
+ * 结果把 2284 个文案键（step1 / checkbtn / freeresult …）当成页面，
+ * 往索引里塞了 2271 条 /c/check/step1/ 这类 404 链接，把真结果全淹了。
+ */
 function extractCheckPages(msg) {
+  const dir = path.join(APPS_DIR, 'portal', 'src', 'app', '[locale]', 'c', 'check');
+  if (!fs.existsSync(dir)) return [];
+
   const check = msg.Check || {};
-  const seen = new Set();
   const items = [];
-  for (const [key, val] of Object.entries(check)) {
-    const slug = key.replace(/(Title|Desc)$/, '').toLowerCase();
-    if (seen.has(slug)) continue;
-    seen.add(slug);
+  for (const slug of fs.readdirSync(dir).sort()) {
+    if (!fs.existsSync(path.join(dir, slug, 'page.tsx'))) continue;
+    const title = check[`${slug}Title`] || slug;
     items.push({
       type: 'check',
-      title: check[slug + 'Title'] || slug,
-      desc: check[slug + 'Desc'] || '',
-      href: '/c/check/' + slug + '/',
+      title,
+      desc: check[`${slug}Desc`] || '',
+      href: `/c/check/${slug}/`,
+      searchable: `${title} ${check[`${slug}Desc`] || ''} ${slug}`.toLowerCase(),
     });
   }
   return items;
+}
+
+/**
+ * 法规（apps/regulations）。法规不排期（全部即时可见），故不过 publish-gate。
+ * 文号与发布机构也拼进 searchable —— 用户常直接搜「GACC Announcement No. 156」「SC」。
+ */
+function extractRegulations(regDir, locale) {
+  const localeDir = path.join(regDir, locale);
+  if (!fs.existsSync(localeDir)) return [];
+
+  const docs = [];
+  for (const file of fs.readdirSync(localeDir).filter((f) => f.endsWith('.mdx'))) {
+    const content = fs.readFileSync(path.join(localeDir, file), 'utf-8');
+    const { data } = matter(content);
+    const title = data.title || '';
+    if (!title) continue;
+    const excerpt = data.excerpt || '';
+    const docNumber = data.doc_number || '';
+    const issuer = data.issuer || '';
+    const category = data.category || '';
+    docs.push({
+      type: 'regulation',
+      title,
+      desc: excerpt.slice(0, 200),
+      href: `/regulations/${file.replace(/\.mdx$/, '')}/`,
+      category,
+      searchable: `${title} ${excerpt} ${category} ${docNumber} ${issuer}`.toLowerCase(),
+    });
+  }
+  return docs;
 }
 
 function extractFAQ(msg) {
@@ -151,7 +190,7 @@ function extractFAQ(msg) {
   return items;
 }
 
-function generateIndex(messagesDir, blogDir, locale) {
+function generateIndex(messagesDir, blogDir, regDir, locale) {
   const msg = loadMessages(messagesDir, locale);
   // Load portal messages to extract check page titles
   const portalMsgDir = path.join(APPS_DIR, 'portal', 'messages');
@@ -163,6 +202,7 @@ function generateIndex(messagesDir, blogDir, locale) {
     services: extractServices(msg),
     blog: extractBlog(blogDir, locale, msg),
     faq: extractFAQ(msg),
+    regulations: extractRegulations(regDir, locale),
     checks: extractCheckPages(msg),
     generated: new Date().toISOString(),
   };
@@ -177,18 +217,18 @@ function parseArgs() {
   return args;
 }
 
-export function buildSearchIndexes(messagesDir, blogDir, outDir) {
+export function buildSearchIndexes(messagesDir, blogDir, regDir, outDir) {
   const locales = getLocaleFiles(messagesDir).map(f => f.replace('.json', ''));
   console.log(`Generating search index for ${locales.length} locales...`);
 
   for (const locale of locales) {
     try {
-      const index = generateIndex(messagesDir, blogDir, locale);
+      const index = generateIndex(messagesDir, blogDir, regDir, locale);
       const outFile = path.join(outDir, `search-index-${locale}.json`);
       fs.mkdirSync(outDir, { recursive: true });
       fs.writeFileSync(outFile, JSON.stringify(index), 'utf-8');
-      const total = index.services.length + index.blog.length + index.faq.length + index.checks.length;
-      console.log('  ' + locale + ': ' + total + ' items (' + index.services.length + 'S + ' + index.blog.length + 'B + ' + index.faq.length + 'F + ' + index.checks.length + 'C)');
+      const total = index.services.length + index.blog.length + index.faq.length + index.regulations.length + index.checks.length;
+      console.log('  ' + locale + ': ' + total + ' items (' + index.services.length + 'S + ' + index.blog.length + 'B + ' + index.faq.length + 'F + ' + index.regulations.length + 'R + ' + index.checks.length + 'C)');
     } catch (err) {
       console.error('  ' + locale + ': FAILED - ' + err.message);
     }
@@ -203,11 +243,12 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   // Read blog content from blog app, not site
   const messagesDir = path.join(ROOT, 'apps', 'site', 'messages');
   const blogDir = path.join(ROOT, 'apps', 'blog', 'content');
+  const regDir = path.join(ROOT, 'apps', 'regulations', 'content');
 
   // Default outDir: project's public/ directory (derived from cwd)
   const defaultOutDir = path.join(process.cwd(), 'public');
   const outDir = outDirArg ? path.resolve(ROOT, outDirArg) : defaultOutDir;
 
   console.log('Apps discovered:', discoverApps().join(', '));
-  buildSearchIndexes(messagesDir, blogDir, outDir);
+  buildSearchIndexes(messagesDir, blogDir, regDir, outDir);
 }

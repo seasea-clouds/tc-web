@@ -37,8 +37,9 @@
     "hint": "Shkruani për të kërkuar nëpër shërbime, artikuj dhe FAQ",
     "types": {
       "service": "Shërbime",
-      "blog": "Insights",
-      "faq": "FAQ"
+      "blog": "Vështrime",
+      "faq": "FAQ",
+      "regulation": "Rregulloret"
     }
   },
   "Navbar": {

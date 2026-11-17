@@ -37,8 +37,9 @@
     "hint": "サービス、記事、FAQ を検索するために入力します",
     "types": {
       "service": "サービス",
-      "blog": "Insights",
-      "faq": "FAQ"
+      "blog": "洞察",
+      "faq": "FAQ",
+      "regulation": "法規"
     }
   },
   "Navbar": {

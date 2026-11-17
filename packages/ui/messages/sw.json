@@ -37,8 +37,9 @@
     "hint": "Andika ili kutafuta katika huduma, makala na Maswali Yanayoulizwa Mara kwa Mara",
     "types": {
       "service": "Huduma",
-      "blog": "Insights",
-      "faq": "FAQ"
+      "blog": "Maarifa",
+      "faq": "FAQ",
+      "regulation": "Kanuni"
     }
   },
   "Navbar": {

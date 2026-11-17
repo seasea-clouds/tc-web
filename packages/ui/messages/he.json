@@ -37,8 +37,9 @@
     "hint": "הקלד כדי לחפש בין שירותים, מאמרים ושאלות נפוצות",
     "types": {
       "service": "שירותים",
-      "blog": "Insights",
-      "faq": "FAQ"
+      "blog": "תובנות",
+      "faq": "FAQ",
+      "regulation": "תקנות"
     }
   },
   "Navbar": {

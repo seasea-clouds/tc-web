@@ -37,8 +37,9 @@
     "hint": "서비스, ​​기사, FAQ를 검색하려면 입력하세요.",
     "types": {
       "service": "서비스",
-      "blog": "Insights",
-      "faq": "FAQ"
+      "blog": "통찰력",
+      "faq": "FAQ",
+      "regulation": "법규"
     }
   },
   "Navbar": {

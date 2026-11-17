@@ -37,8 +37,9 @@
     "hint": "اكتب للبحث عبر الخدمات والمقالات والأسئلة الشائعة",
     "types": {
       "service": "خدمات",
-      "blog": "Insights",
-      "faq": "FAQ"
+      "blog": "رؤى",
+      "faq": "FAQ",
+      "regulation": "اللوائح"
     }
   },
   "Navbar": {

@@ -37,8 +37,9 @@
     "hint": "Nhập để tìm kiếm trên các dịch vụ, bài viết và Câu hỏi thường gặp",
     "types": {
       "service": "Dịch vụ",
-      "blog": "Insights",
-      "faq": "FAQ"
+      "blog": "Bài viết",
+      "faq": "FAQ",
+      "regulation": "Quy định"
     }
   },
   "Navbar": {

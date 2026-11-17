@@ -37,8 +37,9 @@
     "hint": "Tik om oor dienste, artikels en algemene vrae te soek",
     "types": {
       "service": "Dienste",
-      "blog": "Insights",
-      "faq": "FAQ"
+      "blog": "Insigte",
+      "faq": "FAQ",
+      "regulation": "Regulasies"
     }
   },
   "Navbar": {

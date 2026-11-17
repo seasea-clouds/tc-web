@@ -37,8 +37,9 @@
     "hint": "Escriba para buscar entre servicios, artículos y preguntas frecuentes",
     "types": {
       "service": "Servicios",
-      "blog": "Insights",
-      "faq": "FAQ"
+      "blog": "Perspectivas",
+      "faq": "FAQ",
+      "regulation": "Normativa"
     }
   },
   "Navbar": {

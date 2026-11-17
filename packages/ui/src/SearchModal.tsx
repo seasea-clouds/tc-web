@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { Search, X, FileText, BookOpen, HelpCircle } from 'lucide-react';
+import { Search, X, FileText, BookOpen, HelpCircle, ScrollText, ClipboardCheck } from 'lucide-react';
 import { useT, useTradeLocale } from './TranslationProvider';
 import type { SearchResultItem } from './search';
 
@@ -13,7 +13,12 @@ const TYPE_ICONS: Record<string, React.ReactNode> = {
   service: <FileText className="w-4 h-4 text-accent-blue" />,
   blog: <BookOpen className="w-4 h-4 text-accent-gold" />,
   faq: <HelpCircle className="w-4 h-4 text-text-muted" />,
+  regulation: <ScrollText className="w-4 h-4 text-primary-navy" />,
+  check: <ClipboardCheck className="w-4 h-4 text-accent-blue" />,
 };
+
+/** 分组展示顺序：自查工具 → 服务 → 法规 → 洞察 → FAQ（越靠前越"可操作"） */
+const TYPE_ORDER = ['check', 'service', 'regulation', 'blog', 'faq'];
 
 interface SearchModalProps {
   open: boolean;
@@ -90,12 +95,16 @@ export default function SearchModal({ open, onClose, searchFn }: SearchModalProp
 
   if (!open) return null;
 
-  // Group results by type
+  // Group results by type, then emit groups in TYPE_ORDER so the panel is stable
   const grouped: Record<string, SearchResultItem[]> = {};
   for (const r of results) {
     if (!grouped[r.type]) grouped[r.type] = [];
     grouped[r.type].push(r);
   }
+  const orderedGroups = [
+    ...TYPE_ORDER.filter((k) => grouped[k]?.length).map((k) => [k, grouped[k]] as const),
+    ...Object.entries(grouped).filter(([k]) => !TYPE_ORDER.includes(k)),
+  ];
 
   return (
     <>
@@ -155,17 +164,17 @@ export default function SearchModal({ open, onClose, searchFn }: SearchModalProp
 
             {!loading && results.length > 0 && (
               <div className="py-2">
-                {Object.entries(grouped).map(([type, items], groupIdx) => (
+                {orderedGroups.map(([type, items], groupIdx) => (
                   <div key={type}>
                     <div className="px-5 py-2 text-xs font-semibold uppercase tracking-wider text-text-muted/70">
                       {t(`types.${type}`)} ({items.length})
                     </div>
                     {items.map((item, i) => {
                       // Calculate global index across all grouped items
+                      // （顺序必须跟渲染顺序一致，所以用 orderedGroups 而不是 Object.keys(grouped)）
                       let globalIdx = 0;
-                      const groupKeys = Object.keys(grouped);
                       for (let g = 0; g < groupIdx; g++) {
-                        globalIdx += grouped[groupKeys[g]].length;
+                        globalIdx += orderedGroups[g][1].length;
                       }
                       globalIdx += i;
 

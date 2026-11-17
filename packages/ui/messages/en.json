@@ -38,7 +38,8 @@
     "types": {
       "service": "Services",
       "blog": "Insights",
-      "faq": "FAQ"
+      "faq": "FAQ",
+      "regulation": "Regulations"
     }
   },
   "Navbar": {

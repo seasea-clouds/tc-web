@@ -37,8 +37,9 @@
     "hint": "Digite para pesquisar serviços, artigos e perguntas frequentes",
     "types": {
       "service": "Serviços",
-      "blog": "Insights",
-      "faq": "FAQ"
+      "blog": "Artigos",
+      "faq": "FAQ",
+      "regulation": "Regulamentos"
     }
   },
   "Navbar": {

@@ -37,8 +37,9 @@
     "hint": "Vnesite za iskanje po storitvah, člankih in pogostih vprašanjih",
     "types": {
       "service": "Storitve",
-      "blog": "Insights",
-      "faq": "FAQ"
+      "blog": "Vpogledi",
+      "faq": "FAQ",
+      "regulation": "Predpisi"
     }
   },
   "Navbar": {

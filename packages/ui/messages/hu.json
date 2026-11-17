@@ -37,8 +37,9 @@
     "hint": "Gépelje be a keresést a szolgáltatások, cikkek és GYIK között",
     "types": {
       "service": "Szolgáltatások",
-      "blog": "Insights",
-      "faq": "FAQ"
+      "blog": "Bepillantások",
+      "faq": "FAQ",
+      "regulation": "Előírások"
     }
   },
   "Navbar": {

@@ -37,8 +37,9 @@
     "hint": "Hae palveluista, artikkeleista ja usein kysytyistä kysymyksistä kirjoittamalla",
     "types": {
       "service": "Palvelut",
-      "blog": "Insights",
-      "faq": "FAQ"
+      "blog": "Näkemyksiä",
+      "faq": "FAQ",
+      "regulation": "Säädökset"
     }
   },
   "Navbar": {

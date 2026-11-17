@@ -3,8 +3,10 @@
  * Loads search-index-{locale}.json and performs case-insensitive substring matching.
  */
 
+export type SearchItemType = 'service' | 'blog' | 'faq' | 'regulation' | 'check';
+
 export interface SearchItem {
-  type: 'service' | 'blog' | 'faq';
+  type: SearchItemType;
   title: string;
   desc: string;
   href: string;
@@ -16,6 +18,8 @@ export interface SearchIndex {
   services: SearchItem[];
   blog: SearchItem[];
   faq: SearchItem[];
+  regulations?: SearchItem[];
+  checks?: SearchItem[];
   generated: string;
 }
 
@@ -48,16 +52,25 @@ export function search(
   if (!index || !query.trim()) return [];
   const q = query.toLowerCase().trim();
   const results: SearchResult[] = [];
-  const allItems: SearchItem[] = [...index.services, ...index.blog, ...index.faq];
+  const allItems: SearchItem[] = [
+    ...index.services,
+    ...index.blog,
+    ...index.faq,
+    ...(index.regulations ?? []),
+    ...(index.checks ?? []),
+  ];
 
   for (const item of allItems) {
     const inTitle = item.title.toLowerCase().includes(q);
     const inDesc = item.desc.toLowerCase().includes(q);
     const inCategory = item.category?.toLowerCase().includes(q);
+    // searchable 里另外拼了法规文号与发布机构（GACC Announcement No. 156 / SC），
+    // 这些用户会直接搜，但页面正文摘要里没有。
+    const inExtra = (item.searchable || '').includes(q);
 
     if (inTitle) {
       results.push({ item, matchIn: 'title' });
-    } else if (inDesc) {
+    } else if (inDesc || inExtra) {
       results.push({ item, matchIn: 'desc' });
     } else if (inCategory) {
       results.push({ item, matchIn: 'category' });
@@ -90,7 +103,7 @@ export async function defaultSearch(
 }
 
 export interface SearchResultItem {
-  type: 'service' | 'blog' | 'faq';
+  type: SearchItemType;
   title: string;
   desc: string;
   href: string;

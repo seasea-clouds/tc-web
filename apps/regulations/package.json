@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "rm -rf .next out && npx next build && node ../../packages/scripts/ci-check.mjs --out-dir=out --ci",
-    "build:ci": "rm -rf .next out && next build && node ../../packages/scripts/ci-check.mjs --out-dir=out --ci",
+    "build": "node ../../packages/scripts/build-search-index.mjs && rm -rf .next out && npx next build && node ../../packages/scripts/ci-check.mjs --out-dir=out --ci",
+    "build:ci": "node ../../packages/scripts/build-search-index.mjs && rm -rf .next out && next build && node ../../packages/scripts/ci-check.mjs --out-dir=out --ci",
     "start": "next start",
     "deploy": "npx wrangler pages deploy ./out --project-name=tc-web-regulations",
     "lint": "next lint"

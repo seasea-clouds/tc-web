@@ -28,20 +28,49 @@ export interface SearchResult {
   matchIn: 'title' | 'desc' | 'category';
 }
 
-let cache: Record<string, SearchIndex | null> = {};
+let cache: Record<string, SearchIndex> = {};
+/** 同一个 locale 的并发请求共享一个 Promise，避免每次按键都打一次网络 */
+let inflight: Record<string, Promise<SearchIndex | null> | undefined> = {};
+/** 上次失败的时间戳：失败不永久缓存，30 秒后可重试 */
+let failedAt: Record<string, number> = {};
+const RETRY_AFTER_MS = 30_000;
 
+/**
+ * 索引加载。
+ *
+ * 曾经的写法是「失败 → cache[locale] = null → 永久返回 null」，
+ * 结果 CF 边缘偶发 403（页面刚加载时并发请求多，WAF 会拦）一次之后，
+ * 本次会话的站内搜索就彻底空了，用户只能刷新页面。
+ * 现在：失败只记时间戳，30 秒后自动重试；成功的索引长期缓存。
+ */
 export async function loadSearchIndex(locale: string): Promise<SearchIndex | null> {
-  if (cache[locale] !== undefined) return cache[locale];
-  try {
-    const res = await fetch(`/search-index-${locale}.json`);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-    cache[locale] = data;
-    return data;
-  } catch {
-    cache[locale] = null;
-    return null;
-  }
+  const hit = cache[locale];
+  if (hit) return hit;
+
+  const failed = failedAt[locale];
+  if (failed && Date.now() - failed < RETRY_AFTER_MS) return null;
+
+  const pending = inflight[locale];
+  if (pending) return pending;
+
+  const task = (async (): Promise<SearchIndex | null> => {
+    try {
+      const res = await fetch(`/search-index-${locale}.json`, { cache: 'force-cache' });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = (await res.json()) as SearchIndex;
+      cache[locale] = data;
+      delete failedAt[locale];
+      return data;
+    } catch {
+      failedAt[locale] = Date.now();
+      return null;
+    } finally {
+      delete inflight[locale];
+    }
+  })();
+
+  inflight[locale] = task;
+  return task;
 }
 
 export function search(
@@ -84,6 +113,8 @@ export function search(
 
 export function clearCache() {
   cache = {};
+  inflight = {};
+  failedAt = {};
 }
 
 /** Default search function: loads search index and searches. */

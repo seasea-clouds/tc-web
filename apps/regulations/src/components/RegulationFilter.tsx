@@ -5,6 +5,8 @@ import type { DocMeta } from '@/lib/documents';
 import RegulationRows, { type RegulationRowTexts } from './RegulationRows';
 
 export interface RegulationFilterTexts extends RegulationRowTexts {
+  /** status 枚举 → 本地化标签（只给「状态」筛选下拉用，列表表格已不展示状态列） */
+  statusLabels: Record<string, string>;
   /** category slug → 本地化标签（Regulations.cat_<slug>，48 语言齐） */
   catLabels?: Record<string, string>;
   filterIssuer: string;

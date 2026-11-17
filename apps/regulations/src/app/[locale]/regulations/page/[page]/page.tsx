@@ -82,7 +82,6 @@ export default async function RegulationsPageN({ params }: { params: Promise<Par
     colTitle: tb('colTitle', 'Title'),
     colPublished: tb('colPublished', 'Published'),
     colEffective: tb('colEffective', 'In force'),
-    colStatus: tb('colStatus', 'Status'),
     noDocs: tb('noDocs', 'No documents yet.'),
     statusLabels,
   };

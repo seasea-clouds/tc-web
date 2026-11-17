@@ -88,7 +88,6 @@ export default async function RegulationsHome({ params }: { params: Promise<{ lo
               colTitle: t('colTitle', 'Title'),
               colPublished: t('colPublished', 'Published'),
               colEffective: t('colEffective', 'In force'),
-              colStatus: t('colStatus', 'Status'),
               noDocs: t('noDocs', 'No documents yet.'),
               statusLabels,
               catLabels: {

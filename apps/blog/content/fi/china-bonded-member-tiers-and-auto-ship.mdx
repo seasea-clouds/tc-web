@@ -1,0 +1,77 @@
+---
+title: "Jäsentasot ja kausitoimitukset, neljän radan rivikohtainen poikkeusseuranta"
+date: "2027-06-29"
+category: "E-commerce"
+excerpt: "Jäsentasot ja kausitoimitukset jakavat jäsennumeron kohdennusrekisterin kanssa. Ohjauspaneeli näyttää radat ja hälytykset näytöllä. Käy jakso läpi ja täsmää rivit rivikohtaisesti."
+references:
+  - title: "Kiinan kansantasavallan henkilötietojen suojalaki (hyväksytty 20,8.2021, 13 ja 23 artikla)"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+  - title: "Kiinan tullihallituksen tiedonanto nro 194 vuodelta 2018 (rajat ylittävän sähköisen kaupankäynnin vähittäistuonti- ja vientitavaroiden valvonnasta)"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Säännökset rajat ylittävien tietovirtojen edistämisestä ja sääntelystä (Kiinan internetviranomaisen määräys nro 16, voimassa 22,3.2024 alkaen)"
+    url: "https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm"
+---
+
+Jäsentasot ja kausitoimitukset pitävät uusintaostokset mukana vain, jos kaksi taustajärjestelmää täsmäävät jokaisella rivillä. Toinen on toiminnan ohjauspaneeli, joka kokoaa yhdelle näytölle kuusi riviä eli kuljetuksessa olevat tilaukset, tullivarastossa olevat erät, tämän päivän luovutukset, kuljetuksessa olevat lähetykset, keskimääräisen tulliselvitysajan ja säilyvyyshälytyksen erät. Toinen on jäsentasojen ja kausitoimitusten taustajärjestelmä, joka luettelee kuudella rivillä jäsennumeron, tason, kausitoimituksen tuotteen, toimitusjakson, seuraavan toimituspäivän ja kertyneen ostossumman. Molemmat käyttävät samaa jäsennumeroa ja jokainen tilan muutos kirjataan lokiin, jotta uusintaostos voidaan kohdistaa samalle jäsenelle. Kun otat työn vastaan, katso ensin poikkeusrivejä, sillä demokäyttöliittymässä kaksi riviä on käynnissä ja yksi on korjattava, ja niillä on 2 ilmoitusta odottamassa, 3 poikkeusta ja 2 erää vanhenemassa.
+
+![Neljän radan toiminnan ohjauspaneelin käyttöliittymädemo, jonka sarakeotsikot ovat rata, avaintunnusluku, nykyarvo, tavoitearvo, toteutumisaste, hälytys, tila ja toiminto, ja jonka kuudella rivillä luetellaan tilausrata, varastorata, tulliselvitysrata, logistiikkarata, aikarata ja säilyvyysrata; alareunassa merkintä yhteensä 6 tietuetta ja 20 tietuetta sivulla](/images/blog/china-bonded-member-tiers-and-auto-ship/four-tracks-dashboard-system-demo.webp)
+
+## Kuusi riviä yhdellä näytöllä, neljällä palveluprosessilla on oma vastuuhenkilö
+
+Toiminnan ohjauspaneeli on päänäkymä, yhtä rataa kohden on yksi rivi ja välilehdet ovat tämä päivä, tämä viikko ja tämä kuukausi. Jokainen rivi luettelee avaintunnusluvun, nykyarvon, tavoitearvon, toteutumisasteen, hälytyksen ja tilan, ja rivin lopussa ovat kaksi linkkiä eli tiedot ja loki. Solu, jossa ei ole lauennut hälytystä, saa lyhyen viivan eikä nollaa, ettei hälytyksen puuttumista luettaisi tunnusluvun nollaksi. Ohjauspaneeli sivutetaan 20 tietuetta sivulla, demossa on yhteensä 6 tietuetta ja ne mahtuvat yhdelle näytölle.
+
+Neljällä palveluprosessilla S10:stä S13:een on kullakin oma vastuuhenkilö, ja niiden tunnusluvut ja nykyiset vaiheet on koottu tälle yhdelle ohjauspaneelille. Kuka hoitaa minkä radan ja missä vaiheessa työ nyt on, sen näkee täältä eikä useita muita rekistereitä tarvitse enää selata. Vastuu sijaitsee rivillä, joten luovutus allekirjoitetaan rivikohtaisesti.
+
+Sarakkeita on kahdeksan ja niiden otsikot ovat järjestyksessä rata, avaintunnusluku, nykyarvo, tavoitearvo, toteutumisaste, hälytys, tila ja toiminto. Kuusi riviä kirjoitetaan kokonaan seuraavassa järjestyksessä:
+
+- Tilausrata, kuljetuksessa olevat tilaukset, nykyarvo 128, tavoite 150, toteutumisaste 85%, hälytys tyhjä, tila normaali;
+- Varastorata, tullivarastossa olevat erät, nykyarvo 36, tavoite 40, toteutumisaste 90%, hälytys tyhjä, tila normaali;
+- Tulliselvitysrata, tämän päivän luovutukset, nykyarvo 86, tavoite 100, toteutumisaste 86%, hälytys 2 ilmoitusta odottamassa, tila käynnissä;
+- Logistiikkarata, kuljetuksessa olevat lähetykset, nykyarvo 214, tavoite ja toteutumisaste tyhjät, hälytys 3 poikkeusta, tila käynnissä;
+- Aikarata, keskimääräinen tulliselvitysaika, nykyarvo 6,8 tuntia, tavoite 8 tuntia, toteutumisasteen sarakkeessa tavoite saavutettu, hälytys tyhjä, tila normaali;
+- Säilyvyysrata, säilyvyyshälytyksen erät, nykyarvo 2, tavoite 0, toteutumisaste tyhjä, hälytys 2 erää vanhenemassa, tila korjattava.
+
+Muistilaput nostavat esiin kaksi lukua, jotka on helpoin lukea väärin: tilausradalla kuljetuksessa olevien tilausten nykyarvo on 128, tavoite on 150 ja toteutumisaste on 85%, ja varastoradalla tullivarastossa olevien erien nykyarvo on 36, tavoite on 40 ja toteutumisaste on 90%. Kortissa sanotaan myös, että solu näyttää lyhyen viivan, kun hälytystä ei ole lauennut. Viiva ei siis merkitse puuttuvaa tietoa. Se kirjaa johtopäätöksen, jonka mukaan tällä kertaa ei ollut hälytystä.
+
+Kolme tilaa käsitellään erikseen. Normaaleja rivejä on kolme eli tilausrata, varastorata ja aikarata, ja aikaradan nykyarvo 6,8 tuntia alittaa tavoitteen 8 tuntia, joten toteutumisasteen sarakkeeseen kirjoitetaan suoraan tavoite saavutettu. Käynnissä olevilla kahdella rivillä on kummallakin yksi tehtävä, sillä tulliselvitysradalla on 2 ilmoitusta odottamassa ja logistiikkaradalla on 3 poikkeusta. Korjattava on säilyvyysrata, jonka nykyarvo on 2 säilyvyyshälytyksen erää, tavoite on 0 ja hälytyssarakkeessa lukee 2 erää vanhenemassa. Käsittelyjärjestys määräytyy vaikutuksen mukaan, joten vanhenevat erät selvitetään ensin, ilmoitukset täydennetään seuraavaksi ja poikkeuksia jäljitetään viimeisenä.
+
+## Jäsentasojen ja kausitoimitusten taustajärjestelmä on tarkistettavissa rivikohtaisesti
+
+![Jäsentasojen ja kausitoimitusten taustajärjestelmän käyttöliittymädemo, jonka sarakeotsikot ovat jäsennumero, taso, kausitoimituksen tuote, toimitusjakso, seuraava toimituspäivä, kertynyt ostossumma, kausitoimituksen tila ja toiminto, ja jonka kuudella rivillä esitetään jäsennumerosta M-100238 jäsennumeroon M-100419 ulottuvat tasot ja toimitustiedot; alareunassa merkintä yhteensä 6 tietuetta ja 20 tietuetta sivulla](/images/blog/china-bonded-member-tiers-and-auto-ship/member-tiers-subscriptions-system-demo.webp)
+
+Jäsenpuolen taustajärjestelmä sijaitsee verkkokauppamoduulin alla, ja välilehdet jakautuvat tason mukaan mustaan korttiin, kultakorttiin ja hopeakorttiin, minkä lisäksi yksi välilehti näyttää vain voimassa olevat kausitoimitukset. Jokainen rivi luettelee jäsennumeron, tason, kausitoimituksen tuotteen, toimitusjakson, seuraavan toimituspäivän ja kertyneen ostossumman, ja rivin lopussa ovat samoin tiedot ja loki. Demoaineistossa on yhteensä 6 tietuetta ja sivulla näytetään 20 tietuetta.
+
+Taso, kausitoimitus ja kertynyt ostossumma pidetään yhdessä paikassa, ja jäsennumerot käyttävät samaa tietolähdettä kuin kohdennusrekisteri. Näin uusintaostosta ei lasketa kerran jäsenpuolella ja toista kertaa kohdennuspuolella, ja kun haluat kohdistaa jonkin tason uusintaostokset tiettyyn kampanjaan, riittää, että haet jäsennumerolla. Jäsennumero ja kertynyt ostossumma ovat henkilötietoja, joten niiden käsittely ja jakaminen vaativat selkeän perusteen, ja kotimaisen taustajärjestelmän ja ulkomaisten raporttien välillä siirretään vain tarpeelliset yhteenvedot.
+
+Sarakkeita on kahdeksan ja niiden otsikot ovat järjestyksessä jäsennumero, taso, kausitoimituksen tuote, toimitusjakso, seuraava toimituspäivä, kertynyt ostossumma, kausitoimituksen tila ja toiminto. Kuusi riviä kirjoitetaan kokonaan seuraavassa järjestyksessä, ja jokainen summa ilmoitetaan yuanina:
+
+- M-100238, musta kortti, koentsyymi Q10 -pehmeäkapselit x2, kuukausittain, 2026-10-22, 15800,00 yuan, käynnissä;
+- M-101204, kultakortti, kalaöljypehmeäkapselit x1, kuukausittain, 2026-10-05, 8640,00 yuan, käynnissä;
+- M-100571, hopeakortti, heraproteiinijauhe x1, 2 kuukauden välein, 2026-11-19, 4320,00 yuan, käynnissä;
+- M-100872, musta kortti, probioottijauhe x2, kuukausittain, 2026-10-08, 22100,00 yuan, käynnissä;
+- M-101466, kultakortti, kollageenipeptidijuoma x1, kuukausittain, 2026-10-15, 6980,00 yuan, keskeytetty;
+- M-100419, hopeakortti, kalsium- ja D-vitamiinitabletit x1, neljännesvuosittain, 2026-12-01, 1560,00 yuan, käynnissä.
+
+Muistilaput mainitsevat kaksi jäsennumeroa. M-100238 on mustan kortin jäsen, jolle toimitetaan automaattisesti kuukausittain kaksi pulloa koentsyymi Q10 -pehmeäkapseleita, seuraava toimituspäivä on 2026-10-22 ja kertynyt ostossumma on 15800,00 yuan, ja M-101204 on kultakortin jäsen. Kortissa sanotaan lisäksi, että jäsennumerot ja kohdennusrekisteri ovat samasta lähteestä. Kun luet nämä kaksi lausetta rinnakkain taulukon kuuden rivin kanssa, tasojen kynnysarvot tulevat näkyviin: hopeakortin kahdella rivillä on 4320,00 yuan ja 1560,00 yuan, kultakortin kahdella rivillä on 8640,00 yuan ja 6980,00 yuan ja mustan kortin kahdella rivillä on 15800,00 yuan ja 22100,00 yuan, eikä kolmen tason välillä ole päällekkäisyyttä. Kertynyt ostossumma on siksi sekä näyttökenttä että tason määräytymisen perusta.
+
+Toimitusjaksot jakautuvat kolmeen muotoon eli kuukausittaiseen, 2 kuukauden välein tapahtuvaan ja neljännesvuosittaiseen, ja taulukossa viisi riviä on käynnissä ja yksi on keskeytetty. Keskeytetty on M-101466, jonka kertynyt ostossumma on 6980,00 yuan ja jonka tila on merkitty omaan kenttäänsä, joten keskeytystä ei ilmaista poistamalla riviä. Aikaisin seuraava toimituspäivä on 2026-10-05 ja myöhäisin on 2026-12-01, ja ne ovat molemmat samassa taulukossa.
+
+## Käy yhden mustan kortin jäsenen kanssa läpi yksi toimitusjakso
+
+Ota mustan kortin jäsen M-100238 ja käy se läpi. Taustajärjestelmä kirjaa sen voimassa olevaksi, yhdeksi tilaukseksi kuukaudessa, tuotteeksi koentsyymi Q10 -pehmeäkapselit x2, seuraavaksi toimituspäiväksi 2026-10-22 ja kertyneeksi ostossummaksi 15800,00 yuan. Sama rivi näkyy samanaikaisesti kahdella välilehdellä eli jäsentasojen ja kausitoimitusten puolella, eikä uutta jäsennumeroa luoda.
+
+Kun toimituspäivä koittaa, järjestelmä luo tilauksen jakson mukaisesti, lähettää tavaran tullivarastossa olevista eristä, käy läpi tulliselvityksen ja luovutuksen vyöhykkeeltä ja kirjoittaa rahtikirjan numeron takaisin tälle riville. Tilausradan nykyarvo muuttuu sen myötä, säilyvyysrata vähenee eräkohtaisesti ja aikarata kirjaa tämän tulliselvitysajan. Kun takaisinkirjoitus on valmis, kertynyt ostossumma kasvaa tosiasiallisesti maksetulla määrällä ja seuraava toimituspäivä siirtyy yhden jakson eteenpäin; tiedot näyttävät kentät ja loki näyttää, kuka teki minkäkin muutoksen ja milloin.
+
+Keskeytys kesken jakson kulkee samalla rivillä. Kausitoimituksen tila on keskeytetty jäsenellä M-101466, ja tuote ja kertynyt ostossumma pysyvät taulukossa, mutta seuraavaa tilausta ei enää luoda; kun toimitus palautetaan, se jatkuu lokin merkintöjen mukaisesti eikä uutta jäsennumeroa synny. Jos keskeytys kirjoitettaisiin rivin poistamisena, kohdennusrekisteristä jäisi pois pätkä historiaa eikä tasojen kynnysarvoja voitaisi enää laskea.
+
+Rahamäärien käytäntö on sovittava heti alussa. Kaikki kuuden rivin kertyneet ostossummat ilmoitetaan yuanina kahdella desimaalilla ilman valuuttamerkkiä, eikä demoaineistoon lisätä muunnosmerkintää. Käyttöliittymän alareunassa todetaan, että kyse on demoaineistosta, ja poikkeukset ja korjaukset jäävät jäljitettäviksi ja tarkistettaviksi; siksi näillä luvuilla tarkistetaan laskenta ja kentät, eikä niitä pidetä ulospäin julkaistuina liiketoiminnan lukuina.
+
+## Kohdista kaksi taustajärjestelmää ennen käyttöönottoa
+
+Demosivun otsikossa lukee neljä rataa, mutta taulukossa luetellaan todellisuudessa kuusi riviä eli tilausrata, varastorata, tulliselvitysrata, logistiikkarata, aikarata ja säilyvyysrata. Ristiriitaa ei ole, sillä neljä palveluprosessia S10:stä S13:een ovat vastuunjako ja kuusi riviä ovat tämän näytön tunnuslukurivejä, ja yksi vastuuhenkilö voi seurata useampaa kuin yhtä riviä. Lue taulukosta tunnusluvut rivin mukaan ja etsi vastuuhenkilö prosessin mukaan, äläkä pidä sivun otsikkoa rivimääränä.
+
+Tee ennen käyttöönottoa kolme asiaa. Käy ensin läpi yksi kokonainen toimitusjakso ja tarkista, siirtyvätkö seuraava toimituspäivä ja kertynyt ostossumma yhdessä eteenpäin. Tarkista sitten rivikohtaisesti jäsennumerot ja tilat kahdessa taustajärjestelmässä sekä se, ovatko tasojen kynnysarvot, keskeytysmerkinnät ja lokit yhdenmukaisia. Kirjoita lopuksi poikkeusrivien käsittelyn tulokset takaisin ohjauspaneeliin, jotta 2 ilmoitusta odottamassa, 3 poikkeusta ja 2 erää vanhenemassa saavat kukin oman paikkansa. Vasta kun nämä kolme vaihetta on käyty läpi, säilytysrekisteri on otettu asianmukaisesti haltuun.
+
+Se, pysyvätkö uusintaostokset mukana, näkyy järjestelmässä vain kahdessa kohdassa: ovatko poikkeukset heti näkyvissä ja jättävätkö tilan muutokset jäljen. Demosivulla kuusi rataa näkyy yhdellä näytöllä, kuusi jäsenriviä on tarkistettavissa kenttä kerrallaan ja jokaisella rivillä on tiedot ja loki, joten molemmat kohdat saavat paikkansa. Siihen, kuinka kauan käyttöönotto kestää, vaikuttavat nykyisen järjestelmäsi kenttien kohdistus ja rinnakkaisajon jakso, ja vastaavat integraatiot avoimilla markkinoilla mitataan viikkoina, joten luku toimii vain suuruusluokan ohjeena eikä sitä pidä pitää lupauksena.
+
+Jos haluat liittää jäsentasot ja kausitoimitukset nykyiseen tullivarastotoiminnan taustajärjestelmääsi, [Ota yhteyttä](/fi/packages/).

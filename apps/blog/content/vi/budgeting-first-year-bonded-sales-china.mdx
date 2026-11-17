@@ -1,0 +1,91 @@
+---
+title: "Lập ngân sách năm đầu bán hàng qua kho ngoại quan theo ba cấp"
+date: "2027-08-10"
+category: "E-commerce"
+excerpt: "Ba cấp ngân sách năm đầu bán qua kho ngoại quan. Một bảng tham số, chỉ đổi đầu vào, cấp theo thẩm định. Bốn khoản khấu trừ tăng theo sản lượng. Phí chỉ theo báo giá chính thức."
+references:
+  - title: "Thông báo của Bộ Tài chính, Tổng cục Hải quan và Tổng cục Thuế về chính sách thuế với hàng nhập khẩu bán lẻ thương mại điện tử xuyên biên giới (Cai Guan Shui [2016] số 18; thuế suất thuế quan tạm thời ở mức 0%, thuế giá trị gia tăng và thuế tiêu thụ đặc biệt ở khâu nhập khẩu thu theo 70% số thuế phải nộp theo luật định)"
+    url: "https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html"
+  - title: "Thông báo của Bộ Tài chính, Tổng cục Hải quan và Tổng cục Thuế về hoàn thiện chính sách thuế với hàng nhập khẩu bán lẻ thương mại điện tử xuyên biên giới (Cai Guan Shui [2018] số 49; hạn mức một giao dịch 5000 nhân dân tệ, hạn mức cả năm 26000 nhân dân tệ)"
+    url: "https://czt.hlj.gov.cn/czt/c110905/202001/c00_30603063.shtml"
+  - title: "Thông báo của sáu cơ quan về hoàn thiện giám sát hàng nhập khẩu bán lẻ thương mại điện tử xuyên biên giới (Shang Cai Fa [2018] số 486)"
+    url: "https://www.mofcom.gov.cn/article/b/fwzl/201811/20181102812004.shtml"
+  - title: "Thông báo số 194 năm 2018 của Tổng cục Hải quan về giám sát hàng hóa xuất nhập khẩu bán lẻ thương mại điện tử xuyên biên giới"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+---
+
+Năm đầu bán hàng qua kho ngoại quan gọn lại thành một phép tính: với mỗi 100 nhân dân tệ doanh thu, bốn khoản gồm phí xử lý, hoàn tất đơn và vận chuyển chặng đầu, thuế, hoa hồng trừ đi tổng cộng 37.1 nhân dân tệ, còn lại 62.9 nhân dân tệ lợi nhuận đóng góp; dùng phần này trang trải đầu tư cố định để ra thời gian hoàn vốn. Ba kịch bản chỉ đổi giá trị đầu vào, không đổi phép tính này.
+
+## Ba kịch bản, trước hết định ranh giới SKU
+
+Cấp thận trọng giữ 3 đến 5 SKU, ưu tiên thẩm định và uy tín. Chạy trọn vẹn một SKU từ đầu đến cuối, khi số liệu về mới sang cấp cơ sở; theo dõi bốn hạng mục, với tỷ lệ chuyển đổi và mua lại đứng trước.
+
+Cấp cơ sở giữ 8 đến 12 SKU, nhắm tới gần điểm hòa vốn trong năm đầu. Bảng tham số vẫn là một, chỉ đổi giá trị đầu vào, cấp bậc đi theo kết quả thẩm định; mô hình tỷ lệ thực thu áp dụng trực tiếp được.
+
+Cấp lạc quan giữ toàn bộ SKU, dựa vào tăng sản lượng để phân tán chi phí cố định. Chỉ mở rộng khi đã sẵn sàng tồn kho toàn SKU và hệ thống quảng bá; mười sáu khâu chuẩn bị trước khi lên sàn là điều kiện tiên quyết. Việc chuyển cấp không dựa vào cảm tính: mỗi cấp có điều kiện vào riêng, chưa đáp ứng thì ở lại cấp trước.
+
+![Ba kịch bản năm đầu và tham số điều chỉnh: ba thẻ cho cấp thận trọng, cơ sở và lạc quan, ghi từ ba đến năm SKU, từ tám đến mười hai SKU và toàn bộ SKU cùng điều kiện vào của từng cấp; bên dưới là năm đoạn khấu trừ trên mỗi 100 nhân dân tệ doanh thu và 62.9 nhân dân tệ lợi nhuận đóng góp; đáy là chuỗi sáu mắt xích từ giả định đầu vào, GMV, khấu trừ, lợi nhuận đóng góp, đầu tư cố định đến thời gian hoàn vốn](/images/blog/budgeting-first-year-bonded-sales-china/year-one-model-three-scenarios.webp)
+
+## Ba giả định do bạn điền
+
+Mô hình chỉ cần ba giả định từ bạn: giá trị đơn hàng trung bình, tỷ lệ mua lại, trần hoa hồng quảng bá. Chúng tôi cung cấp cấu trúc và công cụ; con số ra từ tham số của bạn, giao dưới dạng bảng tính tương tác, không đặt sẵn mục tiêu.
+
+Chuỗi mô hình có sáu mắt xích. Giả định đầu vào quy đổi số SKU, giá trị đơn trung bình và số lượt mua lại thành GMV; mỗi cấp tự tính tổng doanh thu của mình. Rồi trừ bốn khoản: thuế tổng hợp, hoa hồng sàn, hoàn tất đơn, hoa hồng quảng bá. GMV trừ bốn khoản đó là lợi nhuận đóng góp. Đầu tư cố định gồm tích hợp hệ thống, phân bổ vận chuyển chặng đầu theo lô và duy trì sổ sách. Lợi nhuận lũy kế trang trải được đầu tư cố định thì ra thời gian hoàn vốn.
+
+Bạn tự chạy chuỗi này. Đổi một giả định bất kỳ, mọi con số phía sau đổi theo; phép tính để ngỏ, nên đem vào phê duyệt nội bộ không cần tin vào giọng nói của ai.
+
+## Mỗi 100 nhân dân tệ doanh thu, bốn khoản trừ 37.1 nhân dân tệ
+
+Cấu thành lợi nhuận trên mỗi 100 nhân dân tệ GMV: phí xử lý 6.0 nhân dân tệ, hoàn tất đơn và chặng đầu 7.0 nhân dân tệ, thuế 9.1 nhân dân tệ, hoa hồng 15.0 nhân dân tệ, tổng 37.1 nhân dân tệ và 62.9 nhân dân tệ lợi nhuận đóng góp. Năm đoạn cộng đúng 100%; cấu trúc giống nhau ở ba cấp, khác biệt nằm ở quy mô và mức phân tán chi phí cố định.
+
+Mức 9.1% trong đoạn thuế là gánh nặng thuế tổng hợp của hàng nhập khẩu bán lẻ thương mại điện tử xuyên biên giới: thuế suất thuế quan tạm thời ở mức 0%, thuế giá trị gia tăng và thuế tiêu thụ đặc biệt ở khâu nhập khẩu thu theo 70% số thuế phải nộp theo luật định. Đó là con số tính từ toàn bộ cơ cấu thuế, nên đừng cộng trực tiếp thuế suất của một sắc thuế đơn lẻ vào đó.
+
+Các khoản khấu trừ đi theo tỷ lệ sản lượng. Sản lượng tăng gấp đôi, bốn khoản tăng gấp đôi, lợi nhuận đóng góp cũng theo cùng tỷ lệ; đầu tư cố định không đổi theo sản lượng, nên thứ tăng quy mô phân tán thật sự là phần cố định này. Tỷ lệ nêu trên là cách tính minh họa, không phải báo giá, cũng không phải cam kết lợi nhuận.
+
+## Đi một vòng cấp thận trọng
+
+Lấy cấp thận trọng làm một phép tính. 3 SKU, mỗi SKU bình quân 25 đơn mỗi tháng, khoảng 900 đơn một năm; giá trị đơn trung bình 300 nhân dân tệ, doanh thu năm 270,000 nhân dân tệ. Với mức khấu trừ 37.1%, bốn khoản tổng 100,170 nhân dân tệ: phí xử lý 16,200 nhân dân tệ, hoàn tất đơn và chặng đầu 18,900 nhân dân tệ, thuế 24,570 nhân dân tệ, hoa hồng 40,500 nhân dân tệ.
+
+Lợi nhuận đóng góp là 169,830 nhân dân tệ. Ước đầu tư cố định 150,000 nhân dân tệ, đã gồm tích hợp hệ thống, phân bổ vận chuyển chặng đầu theo lô và duy trì sổ sách; lợi nhuận đóng góp bình quân tháng khoảng 14,153 nhân dân tệ, lũy kế đến khoảng tháng 11 thì trang trải được đầu tư cố định, hoàn vốn trong năm đầu. Đổi giá trị đơn trung bình hay số lượt mua lại, kết quả đổi theo; bạn điền tham số, chúng tôi giữ nguyên cách tính.
+
+## Có ba cách tính phí
+
+Theo đơn: quyết toán theo số lượng đơn, hợp với giai đoạn sản lượng dự báo được và cơ cấu SKU ổn định.
+
+Theo tỷ lệ GMV: quyết toán theo tỷ lệ doanh thu, hợp với giai đoạn mở rộng, quy mô càng lớn càng phân tán được chi phí trên mỗi đơn.
+
+Phí dịch vụ hằng tháng cộng theo đơn: phí cố định trang trải nhân sự và hệ thống nền, phần vượt cộng dồn theo đơn, nên ngân sách lập trước được.
+
+Cả ba cách đều đối chiếu theo năm yếu tố: quy mô đơn, số SKU, yêu cầu thời gian, đơn vị tiền tệ quyết toán, dịch vụ giá trị gia tăng. Năm yếu tố khác đi thì cấu trúc báo giá đổi theo.
+
+![Cách tính phí và phần đóng góp phía bạn: nửa trên gồm theo đơn, theo tỷ lệ GMV, phí hằng tháng cộng theo đơn cùng năm yếu tố tính phí, bên phải là tám mục báo giá; nửa dưới gồm người, vốn, hồ sơ và thời gian với mốc của từng phần, ghi chú rằng khởi đầu bán thời gian không tạo thêm biên chế thường trực và bốn mẫu danh mục đi kèm sản phẩm bàn giao S0](/images/blog/budgeting-first-year-bonded-sales-china/billing-options-and-budget-inputs.webp)
+
+## Khoản ngoài phạm vi và điều kiện trước báo giá
+
+Khoản ngoài phạm vi được vạch rõ trước, ví dụ kích hoạt kênh 9610 về sau, cải tạo hệ thống tại trụ sở, thù lao IBO ở nước ngoài; phí dịch vụ của chúng tôi được liệt kê riêng trong báo giá chính thức, không gộp vào ba cách tính phí.
+
+Báo giá chính thức cần đủ năm điều kiện trước: danh mục SKU và quy mô, mức sẵn sàng của CoA (báo cáo thử nghiệm) cùng lô, xu hướng lộ trình pháp nhân, ưu tiên cửa khẩu đích, xu hướng chiến lược công bố. Đủ năm điều kiện thì báo giá chính thức ra ngay sau đó.
+
+Chưa có số liệu vẫn ra được bản đầu: tính theo giá trị kinh nghiệm ngành, ghi rõ căn cứ cho từng giá trị, rồi thay bằng số liệu đo được của bạn khi về.
+
+## Báo giá chính thức gồm tám mục
+
+Báo giá chính thức triển khai theo tám mục: ranh giới phạm vi, đối chiếu cách tính phí, cấu trúc thu phí, tách chi phí, nhịp thanh toán, thuế và xuất hóa đơn, trách nhiệm bồi thường, điều kiện ranh giới. Phần chi tiết là phụ lục thương mại, mọi số tiền lấy theo báo giá chính thức; một con số nói miệng trong cuộc họp không có giá trị.
+
+## Bốn phần đóng góp phía bạn
+
+Người: 1 đến 2 nhân sự tài chính và tuân thủ, có thể khởi đầu bán thời gian, thêm 1 đầu mối nghiệp vụ; khởi đầu bán thời gian không tạo thêm biên chế thường trực. Cần ngay từ lúc khởi động, chạy song song với giai đoạn khởi động S0.
+
+Vốn: lô hàng đầu định mức theo lượng SKU thí điểm và 2 đến 3 tháng quay vòng, chi quảng bá thử từng bước nhỏ, bảo lãnh thuế làm theo yêu cầu của cửa khẩu. Phải sẵn sàng trước khi nhập hàng và lên sàn.
+
+Hồ sơ: bốn nhóm gồm hàng hóa, thử nghiệm, tư cách, thương hiệu được lập thành danh mục, bổ sung dần theo từng mốc tiếp nhận; bốn mẫu danh mục đi kèm sản phẩm bàn giao S0.
+
+Thời gian: ba quyết định gồm lộ trình pháp nhân, cửa khẩu đích và chiến lược công bố ảnh hưởng trực tiếp đến tiến độ; chốt trước S0 là khóa được tiến độ, quyết định xong là công việc bước sang giai đoạn thực thi M1.
+
+Nhân sự và vốn là khoảng thực tế; báo giá lập theo điều kiện đo được, báo giá chính thức ra khi hồ sơ đầy đủ, chi tiết phí chỉ liệt kê trong báo giá.
+
+## Dựng trước phần đầu bảng
+
+Ngân sách năm đầu gói trong một bảng: cột cho ba kịch bản, dòng cho ba giả định, bốn khoản khấu trừ, một dòng đầu tư cố định, một dòng thời gian hoàn vốn. Điền giá trị đầu vào trước, rồi mới bàn báo giá; phí chỉ theo báo giá chính thức, số liệu minh họa chỉ để giải thích cách tính.
+
+Bước tiếp theo là đưa danh mục SKU, giá trị đơn trung bình và số lượt mua lại của bạn vào bảng đó. Còn giá trị đầu vào nào chưa chốt, mời [Liên hệ với chúng tôi](/vi/packages/).

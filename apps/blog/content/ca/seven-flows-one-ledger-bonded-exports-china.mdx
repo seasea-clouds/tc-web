@@ -1,0 +1,111 @@
+---
+title: "Set fluxos en un informe diari, catorze mòduls i una interfície per a la Xina"
+date: "2027-04-27"
+category: "E-commerce"
+excerpt: "Set fluxos comparteixen un número de comanda; catorze mòduls per poder de firma; un back office genera l'informe diari sense ajuntar taules. Un responsable, de l'entrada al lliurament."
+references:
+  - title: "Caishuiguan [2016] núm. 18 del Ministeri de Finances, l'Administració General de Duanes i l'Administració Estatal de Tributació, política fiscal d'importació minorista per comerç electrònic transfronterer"
+    url: "https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html"
+  - title: "Anunci núm. 486 de 2018 de sis ministeris encapçalats pel Ministeri de Comerç, sobre la millora de la supervisió de les importacions minoristes per comerç electrònic transfronterer"
+    url: "https://cws.mofcom.gov/gztz/art/2018/art_b7becbacb58a4d0d8bf17b91a168f044.html"
+  - title: "Anunci núm. 194 de 2018 de l'Administració General de Duanes sobre la supervisió de les importacions i exportacions minoristes per comerç electrònic transfronterer"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+---
+
+Vendre a la Xina en règim de dipòsit duaner funciona quan els set fluxos de negoci pengen d'un únic llibre, no quan s'han connectat més interfícies de proveïdors. Les condicions són concretes: des del pagament fins al lliurament signat, cada comanda escriu el flux comercial, el de mercaderies, el logístic, el de fons, el d'informació, el de compliment i el de facturació sota un mateix número de comanda; les catorze capacitats es tallen en lliurables que es poden acceptar un a un, i un únic responsable respon del resultat des de l'entrada a la zona fins al lliurament signat. Sense aquell llibre, l'informe diari s'ha d'ajuntar a mà: una vegada surt bé, un mes sencer surt malament.
+
+## Per què un informe diari arrenca pel número de comanda
+
+En fer el projecte, a la pàgina de separació del capítol cinc només vam deixar tres preguntes d'acceptació: com els set fluxos de negoci formen una sola cadena; quins passos recorre una comanda des de la comanda fins al lliurament signat; si l'operació diària i els pics de grans campanyes es poden sostenir alhora. Totes tres apunten al mateix: quan alguna cosa falla, si un número de comanda permet treure els registres dels set fluxos. Si ho permet, l'informe diari és un subproducte; si no, Quatre proveïdors han de lliurar cadascun una taula i cal quadrar-les a mà.
+
+![Separador del capítol cinc amb tres preguntes d'acceptació sobre com encadenar els set fluxos, els passos d'una comanda i si l'operació diària i els pics de grans campanyes es sostenen alhora](/images/blog/seven-flows-one-ledger-bonded-exports-china/chapter-05-running-it-divider.webp)
+
+El separador afegeix una línia sobre l'esquelet: set fluxos i un llibre són el tronc, i la cadena de prova es desplega cel·la per cel·la. Una cel·la aquí és la fila que cadascuna de les catorze capacitats deixa al llibre.
+
+## Els set fluxos no són set sistemes
+
+La pàgina de resum posa els set fluxos en una fila: flux comercial, flux de mercaderies, flux logístic, flux de fons, flux d'informació, flux de compliment i flux de facturació. No són set sistemes que calgui comprar, sinó set tipus de registres que cal conservar. El flux comercial registra comandes i contractes; el de mercaderies, lots i caducitat; el logístic, traçabilitat i lliurament signat; el de fons, cobraments, pagaments i saldos; el d'informació, interfícies i estat de la comanda; el de compliment, declaracions, notificacions i punts de control; el de facturació, factures i abonaments. Que els set tipus de registres comparteixin un número de comanda és aquell llibre.
+
+El codi de modalitat de supervisió duanera d'aquest canal és 1210, el nom complet del qual és comerç electrònic transfronterer en règim de dipòsit duaner; la comanda només s'allibera després de contrastar un a un els tres documents de comanda, pagament i logística, i els criteris de verificació i despatx figuren a l'Anunci núm. 486 de 2018 de sis ministeris encapçalats pel Ministeri de Comerç. El que el flux de compliment ha d'anotar cada dia són justament aquestes traces per comanda.
+
+El que fa funcionar aquesta estructura és set fluxos en un llibre, no passos de diferents proveïdors cosits entre si. Una solució cosida no es distingeix en un dia normal i es delata al primer reemborsament o canvi de comanda: la botiga ja ha cancel·lat la comanda, el pagament continua obert, l'enviament ja ha sortit del magatzem, els tres registres diuen coses diferents i ningú no té la resposta completa.
+
+![Resum de set fluxos i un llibre amb els set fluxos de negoci, catorze mòduls, tres targetes explicatives i un extracte de l'informe dels últims tres dies](/images/blog/seven-flows-one-ledger-bonded-exports-china/seven-flows-14-modules-overview.webp)
+
+L'estructura improvisada té una conseqüència més dura: ningú no respon del conjunt del compliment, les dades i la facturació. Si es talla un flux, tot el que ve al darrere s'atura, i el més freqüent és que s'encalli la remesa o el despatx duaner. Per això la primera targeta de la pàgina de resum és blau fosc i diu «un únic subjecte orquestra», i les altres set porten els noms dels fluxos.
+
+## Com es tallen catorze mòduls per poder de firma
+
+Els catorze mòduls van de S0 a S13 i corresponen a catorze peces del catàleg de serveis que es poden lliurar i acceptar per separat. El tall es fa per poder de firma, no per sistema: cada mòdul lliura un lliurable que algú signa. Els set primers arriben fins al despatx i la liquidació; els set últims cobreixen l'operació i les traces conservades.
+
+- S0 Diagnòstic i accés: el judici d'accés i la seva base, amb la categoria, el codi aranzelari i el canal objectiu desplegats primer.
+- S1 Constitució de l'entitat: llicència comercial i registre duaner; si en falta un, el sistema no pot obrir compte.
+- S2 Botiga a la plataforma: posada en marxa i activació del pagament, on es materialitzen les qualificacions de categoria.
+- S3 Notificació del producte: classificació i documents; un codi aranzelari erroni obliga a rectificar cada declaració posterior.
+- S4 Magatzem de dipòsit duaner: vista del llibre de dipòsit duaner, amb l'estoc visible per a la marca.
+- S5 Despatx i alliberament: la comanda s'allibera després de contrastar un a un els tres documents de comanda, pagament i logística.
+- S6 Liquidació de fons: conciliacions i comprovants, amb els pagaments de mercaderia i les comissions de servei anotats per separat.
+- S7 Distribució: atribució de captació i promoció, recalculada a partir del número de comanda.
+- S8 Postvenda: tractament de devolucions; com es classifiquen els motius de devolució decideix si les dades de membres estan netes.
+- S9 Control de riscos de dades: compliment de dades, on es fixen les regles de transferència transfronterera i conservació.
+- S10 Auditoria de compliment: autocontrols i registres, per demostrar què va passar quan alguna cosa falla.
+- S11 Cadena de subministrament: vistes de comandes i estoc, perquè la prevenda no depengui de conjectures.
+- S12 Revisió de continguts: pàgines i guions de retransmissió en directe, amb etiquetes i declaracions en xinès revisades lot per lot.
+- S13 Membres i subscripcions: les dades de nivells surten del mateix llibre.
+
+Tres targetes fixen com fer-les servir. La primera explica per què els set fluxos han de ser un sol conjunt: en un muntatge ningú no és propietari del compliment, les dades o la facturació, un flux trencat frena els altres i la remesa o el despatx s'encallen primer. La segona explica els catorze mòduls: S0 a S13 corresponen als lliurables del catàleg de serveis, mentre que el canal de compra directa 9610 i una segona font de subministrament són elements futurs amb el buit reservat, no part de l'acceptació d'avui. La tercera fixa la responsabilitat: de l'entrada a la zona al lliurament signat hi ha un únic responsable, la A de RACI; les capacitats es poden canviar, la responsabilitat no es mou.
+
+Sota la pàgina de resum hi ha una altra instrucció a seguir: les catorze capacitats s'enumeren una a una, sense comparar proveïdor per proveïdor ni integrar diverses parts. Els lliurables i els mètodes segueixen el catàleg de serveis; el que entra al contracte són aquelles catorze peces signades, no una llista d'interfícies.
+
+## Per què les tres files del racó només cobreixen tres dies
+
+A la cantonada inferior dreta de la pàgina de resum hi ha una targeta de resum de dades marcada com a demostració d'interfície del sistema i dades diàries. Només mostra els tres dies més recents, i cada fila porta una data, el nombre de comandes pagades, l'import pagat i dos accessos d'acció.
+
+| Data | Comandes pagades | Import pagat (yuan) | Acció |
+| --- | --- | --- | --- |
+| 09-24 | 128 | 62.400,00 | detall, registre |
+| 09-23 | 141 | 68.120,00 | detall, registre |
+| 09-22 | 132 | 64.152,00 | detall, registre |
+
+Les tres files són un extracte; l'informe diari complet és a la pàgina següent de la mateixa demostració, amb sis files i set camps a cadascuna. Els accessos de detall i registre no són decoració: el detall obre la composició de comandes d'aquell dia, el registre mostra quina tasca va generar la taula. L'extracte pot quedar-se en tres dies només perquè la taula completa genera una fila nova cada dia per si sola.
+
+## Sis files diàries que es generen soles
+
+La pàgina de l'informe porta aquesta estructura a una sola pantalla. Tres targetes diuen de quin pas es tracta, què registra i on es mapeja.
+
+- De quin pas: l'informe diari de transaccions del mòdul de dades, una fila per dia, que registra el nombre de comandes pagades, l'import pagat, el valor mitjà de la comanda, els compradors que paguen i la taxa de reemborsament.
+- Què registra: prenent el 09-24, 128 comandes pagades, 62.400,00 yuan i un valor mitjà de la comanda de 487,50 yuan; la taula es genera sola cada dia, sense ajuntar taules a mà.
+- On es mapeja: en l'operació diària de catorze mòduls en una interfície, les dades de comandes, productes i membres surten totes del mateix back office.
+
+A l'esquerra de la interfície hi ha un tauler de dades on Públic, Botiga, Trànsit, Màrqueting, Distribució, CRM i Anàlisi d'autoservei comparteixen un mateix menú; la barra superior va de Botiga i Centre comercial fins a Dades, Atenció al client, Contingut i Serveis de valor afegit. Les dades de comandes, productes i membres surten del mateix back office en lloc d'un sistema per a cada tipus, que és el que significa catorze mòduls en una interfície. L'informe diari no necessita prendre dades de diversos sistemes i, per tant, no cal ajuntar taules a mà.
+
+- 09-24, 128 comandes pagades, 62.400,00 yuan, valor mitjà de la comanda 487,50 yuan, 121 compradors que paguen, taxa de reemborsament 1,8%, detall i registre;
+- 09-23, 141 comandes pagades, 68.120,00 yuan, valor mitjà de la comanda 483,12 yuan, 132 compradors que paguen, taxa de reemborsament 2,1%, detall i registre;
+- 09-22, 132 comandes pagades, 64.152,00 yuan, valor mitjà de la comanda 486,00 yuan, 126 compradors que paguen, taxa de reemborsament 1,6%, detall i registre;
+- 09-21, 147 comandes pagades, 72.604,00 yuan, valor mitjà de la comanda 493,90 yuan, 139 compradors que paguen, taxa de reemborsament 2,4%, detall i registre;
+- 09-20, 139 comandes pagades, 68.455,00 yuan, valor mitjà de la comanda 492,48 yuan, 131 compradors que paguen, taxa de reemborsament 1,9%, detall i registre;
+- 09-19, 124 comandes pagades, 60.752,00 yuan, valor mitjà de la comanda 489,94 yuan, 117 compradors que paguen, taxa de reemborsament 2,2%, detall i registre.
+
+Sota la llista es llegeix 6 registres en total i 20 per pàgina, el paginador es queda a 1 i les dues fletxes de pàgina hi són. També hi ha la nota de dades de demostració: els indicadors clau de negoci es resumeixen per dia, amb tendències i detall a la mateixa pantalla. En els sis dies la taxa de reemborsament culmina en 2,4% el 09-21 i toca fons en 1,6% el 09-22; aquesta columna està lligada als registres de motius de devolució del mòdul de postvenda, no a un càlcul decoratiu.
+
+![Demostració de l'informe diari amb tres targetes explicatives, sis files de set camps, un paginador de sis registres a vint per pàgina i la nota de dades de demostració](/images/blog/seven-flows-one-ledger-bonded-exports-china/daily-operations-report-demo.webp)
+
+## Recórrer la fila del 09-24
+
+Prenem la fila del 09-24 com una cosa a investigar. 128 comandes pagades i 62.400,00 yuan, en dividir-los donen exactament un valor mitjà de la comanda de 487,50 yuan; els 121 compradors que paguen són 7 menys que el nombre de comandes, així que algú va fer més d'una comanda aquell dia; una taxa de reemborsament de l'1,8% correspon a les devolucions encara obertes al mòdul de postvenda.
+
+Des d'aquesta fila es remunten els set fluxos: el comercial treu els contractes i l'atribució d'aquelles 128 comandes; el de mercaderies dóna lots i caducitat; el logístic dóna les hores de sortida i de lliurament signat; el de fons dóna cobraments, pagaments i saldos; el d'informació dóna els canvis d'estat de la comanda i els acusos de recepció de les interfícies; el de compliment dóna les declaracions per comanda i el resultat del contrast dels tres documents; el de facturació dóna factures i abonaments. Els set comparteixen el número de comanda, així que una sola cerca ho troba tot; si la devolució de crida d'una interfície arriba tard, la fila del flux d'informació queda buida primer, l'import pagat i el valor mitjà de la comanda continuen quadrats, però atenció al client no sap dir on és aquella comanda.
+
+El mapeig de la tercera targeta es sosté aquí: amb les dades de comandes, productes i membres sortint d'un mateix back office, els compradors que paguen es poden conciliar amb els nivells de membres. Repartits en tres back offices, la xifra 121 exigeix una unió entre bases de dades, i tan aviat com canvia la regla d'unió l'informe de demà deixa de ser comparable amb el d'avui.
+
+## Quin flux es trenca primer en un dia de grans campanyes
+
+La tercera pregunta del separador és si l'operació diària i els pics de grans campanyes es poden sostenir alhora. Amb aquesta estructura es poden, sempre que abans del pic quedin fixades tres coses: un número de comanda que travessa els set fluxos, un únic responsable des de l'entrada a la zona fins al lliurament signat i un informe que genera el back office en lloc de muntar-se amb exportacions. El pic carrega les devolucions de crida de les interfícies i la sincronització d'inventari; el número de comanda no canvia, així que el llibre continua sent el mateix llibre. Amb un informe ajuntat a mà, el que afegeix el dia del pic no és més feina, sinó més ocasions d'ajuntar les files equivocades.
+
+Abans del llançament es fixen els camps: data, nombre de comandes pagades, import pagat, valor mitjà de la comanda, compradors que paguen, taxa de reemborsament i accessos d'acció, les set columnes llegeixen de les mateixes taules de dades. Després es decideix qui signa els catorze lliurables. La resta es pot afegir més endavant; els buits per al canal de compra directa 9610 i una segona font de subministrament ja són al mapeig de S0 a S13, i el responsable no canvia quan s'omplen.
+
+Les dates, els imports i els nombres de comandes a la pantalla són dades de demostració, incloses per mostrar com es genera una fila i com es remunta. Les xifres reals segueixen les factures del període, les exportacions de la plataforma i els requisits de l'autoritat competent; la taxa de reemborsament i el valor mitjà de la comanda segueixen el càlcul del sistema per a aquell dia.
+
+Set fluxos en un llibre, sobre el paper són catorze lliurables que algú signa; a la pantalla és un informe diari que creix una fila al dia, amb cada fila rastrejable. Fixeu primer el número de comanda i el responsable, i després trieu proveïdors. Invertiu aquest ordre i cada conciliació posterior s'haurà de refer.
+
+Per connectar els set fluxos en un únic llibre amb la vostra botiga, magatzem i entitat de liquidació actuals, [contacteu-nos](/ca/packages/).

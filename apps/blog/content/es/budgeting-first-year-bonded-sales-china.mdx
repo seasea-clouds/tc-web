@@ -1,0 +1,91 @@
+---
+title: "Presupuesto del primer año de ventas en depósito aduanero en tres escenarios"
+date: "2027-08-10"
+category: "E-commerce"
+excerpt: "Primer año en depósito aduanero, tres niveles. Una tabla, cambian los valores y el nivel sigue a la validación. Cuatro deducciones escalan por volumen. Tarifas solo en la cotización."
+references:
+  - title: "Notificación del Ministerio de Hacienda, la Administración General de Aduanas y la Administración Tributaria del Estado sobre la política fiscal para las importaciones minoristas de comercio electrónico transfronterizo (Cai Guan Shui [2016] n.º 18; tipo arancelario fijado provisionalmente en el 0%; IVA e impuesto sobre el consumo de importación liquidados al 70% del importe legalmente devengado)"
+    url: "https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html"
+  - title: "Notificación del Ministerio de Hacienda, la Administración General de Aduanas y la Administración Tributaria del Estado sobre la mejora de la política fiscal para las importaciones minoristas de comercio electrónico transfronterizo (Cai Guan Shui [2018] n.º 49; límite por operación de 5000 yuan y límite anual de 26000 yuan)"
+    url: "https://czt.hlj.gov.cn/czt/c110905/202001/c00_30603063.shtml"
+  - title: "Notificación de seis organismos sobre la mejora de la supervisión de las importaciones minoristas de comercio electrónico transfronterizo (Shang Cai Fa [2018] n.º 486)"
+    url: "https://www.mofcom.gov.cn/article/b/fwzl/201811/20181102812004.shtml"
+  - title: "Anuncio n.º 194 de 2018 de la Administración General de Aduanas sobre la supervisión de las mercancías de importación y exportación minorista de comercio electrónico transfronterizo"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+---
+
+Un primer año en depósito aduanero se resume en una sola cuenta: por cada 100 yuan de GMV, las tarifas de gestión, el cumplimiento de pedidos y el flete del primer tramo, los impuestos y la comisión restan en conjunto 37.1 yuan y dejan 62.9 yuan de margen de contribución; con ese margen se cubre la inversión fija y se obtiene el plazo de recuperación. Los tres escenarios cambian los valores de entrada, no este método.
+
+## Tres escenarios, primero el alcance de SKU
+
+El escenario conservador trabaja con 3 a 5 SKU y prioriza la validación y la reputación. Primero se lleva un solo SKU de principio a fin y, cuando vuelven los datos, se pasa al escenario base; se observan cuatro aspectos, con la conversión y la recompra por delante.
+
+El escenario base trabaja con 8 a 12 SKU y apunta a acercarse al punto de equilibrio dentro del primer año. La hoja de parámetros sigue siendo la misma, solo cambian los valores de entrada y el nivel sigue a los resultados de la validación; el modelo de tasa neta se puede aplicar directamente.
+
+El escenario optimista trabaja con todos los SKU y se apoya en el volumen para diluir los costes fijos. Solo se escala cuando están listos el aprovisionamiento de todos los SKU y el sistema de promoción; los dieciséis preparativos previos al lanzamiento son la condición previa. Cada escenario tiene sus condiciones de entrada y el paso entre niveles no es automático: si no se cumplen, se permanece en el anterior.
+
+![Escenarios del primer año y parámetros ajustables: a la izquierda, tres tarjetas para los escenarios conservador, base y optimista, marcadas con 3 a 5 SKU, 8 a 12 SKU y todos los SKU junto a sus condiciones de entrada; abajo, los cinco segmentos de deducción por cada 100 yuan de GMV y los 62.9 yuan de margen de contribución; al pie, la cadena de seis eslabones desde los supuestos de entrada, GMV, deducciones, margen de contribución e inversión fija hasta el plazo de recuperación](/images/blog/budgeting-first-year-bonded-sales-china/year-one-model-three-scenarios.webp)
+
+## Tres supuestos que usted rellena
+
+El modelo solo necesita tres supuestos suyos: el valor medio del pedido, la tasa de recompra y el tope de la comisión de promoción. Nosotros aportamos la estructura y las herramientas; los números salen de sus parámetros, entregados en una hoja de cálculo interactiva, sin objetivos prefijados.
+
+La cadena del modelo tiene seis eslabones. Los supuestos de entrada convierten el número de SKU, el valor medio del pedido y las recompras en GMV; cada escenario calcula su propio volumen de ventas. Después se restan cuatro partidas: el impuesto consolidado, la comisión de plataforma, el cumplimiento y la comisión de promoción. El GMV menos esas cuatro es el margen de contribución. La inversión fija cubre la integración de sistemas, la amortización del primer tramo por lotes y el mantenimiento del libro de registros. Cuando el margen acumulado cubre la inversión fija se obtiene el plazo de recuperación.
+
+Usted maneja la cadena. Cambie un solo supuesto y todas las cifras posteriores se mueven; el método queda a la vista, así que puede llevarlo a una aprobación interna sin fiarse del tono de nadie.
+
+## Cada 100 yuan de GMV, 37.1 yuan en cuatro deducciones
+
+La composición del margen, por cada 100 yuan de GMV: tarifas de gestión 6.0 yuan, cumplimiento y primer tramo 7.0 yuan, impuestos 9.1 yuan, comisión 15.0 yuan, en total 37.1 yuan y un margen de contribución de 62.9 yuan. Los cinco segmentos suman exactamente el 100%; la estructura es la misma en los tres escenarios y la diferencia está en la magnitud y en la dilución de los costes fijos.
+
+El 9.1% del segmento de impuestos es la carga fiscal combinada de las importaciones minoristas de comercio electrónico transfronterizo: el tipo arancelario se aplica provisionalmente al 0%, y el IVA y el impuesto sobre el consumo de importación se liquidan al 70% de la cuota legalmente devengada. Es una cifra calculada con toda la estructura fiscal, así que no sume directamente el tipo de un solo impuesto.
+
+Las deducciones crecen en proporción al volumen de pedidos. Si el volumen se duplica, las cuatro deducciones se duplican y el margen de contribución sigue la misma proporción; la inversión fija no varía con el volumen, así que lo que el escalado diluye de verdad es ese lado fijo. Las proporciones mostradas son un criterio ilustrativo: no son una cotización ni una promesa de rentabilidad.
+
+## Recorramos el escenario conservador
+
+Tomemos el escenario conservador para un cálculo. 3 SKU, 25 pedidos al mes por SKU, unos 900 pedidos al año; con un valor medio de pedido de 300 yuan, el GMV anual es de 270,000 yuan. Al 37.1%, las cuatro deducciones suman 100,170 yuan: tarifas de gestión 16,200 yuan, cumplimiento y primer tramo 18,900 yuan, impuestos 24,570 yuan, comisión 40,500 yuan.
+
+El margen de contribución es de 169,830 yuan. Estime la inversión fija en 150,000 yuan, que incluye la integración de sistemas, la amortización del primer tramo por lotes y el mantenimiento del libro de registros; el margen de contribución mensual ronda los 14,153 yuan y el margen acumulado cubre la inversión fija hacia el mes 11, con la recuperación dentro del primer año. Cambie el valor medio del pedido o la tasa de recompra y el resultado se mueve; usted rellena los parámetros y nosotros mantenemos el método sin cambios.
+
+## Tres formas de facturación
+
+Por pedido: se liquida según el número de pedidos y conviene en etapas con volumen previsible y una combinación de SKU estable.
+
+Por porcentaje del GMV: se liquida como proporción de las ventas y conviene en la fase de escalado, donde mayor volumen permite diluir más el coste unitario.
+
+Cuota mensual más importe por pedido: una cuota fija cubre el personal y los sistemas básicos, y el exceso se suma por pedido, de modo que el presupuesto se puede fijar por adelantado.
+
+Las tres formas se cotizan contra cinco factores: volumen de pedidos, número de SKU, requisitos de plazo, moneda de liquidación y servicios de valor añadido. Cambien los cinco y la estructura de la cotización cambia con ellos.
+
+![Opciones de facturación y aportaciones de su lado: arriba, cobro por pedido, porcentaje del GMV y cuota mensual más importe por pedido, con los cinco factores de tarifa y las ocho secciones de la cotización a la derecha; abajo, personas, fondos, documentación y tiempo con sus hitos, con la nota de que empezar a tiempo parcial no crea puestos fijos nuevos y de que las cuatro plantillas de lista se entregan con los entregables de S0](/images/blog/budgeting-first-year-bonded-sales-china/billing-options-and-budget-inputs.webp)
+
+## Partidas fuera de alcance y requisitos previos
+
+Las partidas fuera de alcance se delimitan primero, por ejemplo la activación posterior del canal 9610, la adaptación de los sistemas de la matriz o la remuneración de IBO en el extranjero; nuestros honorarios figuran aparte en la cotización formal y no se mezclan con las tres formas de facturación.
+
+La cotización formal exige cinco requisitos previos: la lista de SKU y sus volúmenes, la disponibilidad del CoA (informe de ensayo) del mismo lote, la inclinación por la vía de la entidad, la preferencia de puerto de destino y la orientación de la estrategia de alegaciones. Con los cinco listos, llega la cotización formal.
+
+Si aún no hay datos, también se puede emitir una primera versión con valores de referencia del sector, indicando la base de cada valor, y sustituirlos cuando lleguen sus datos medidos.
+
+## Las ocho secciones de la cotización
+
+La cotización formal se desarrolla en ocho secciones: límites del alcance, correspondencia de tarifas, estructura de cargos, desglose de costes, calendario de pagos, impuestos y facturación, responsabilidad e indemnización, y condiciones de contorno. El detalle va como anexo comercial y todos los importes se rigen por la cotización formal; una cifra dicha de palabra en una reunión no cuenta.
+
+## Cuatro aportaciones de su lado
+
+Personas: 1 a 2 personas en finanzas y cumplimiento, con inicio a tiempo parcial, más 1 contacto comercial; empezar a tiempo parcial no crea puestos fijos nuevos. Se necesitan desde el arranque, en paralelo con la fase de inicio S0.
+
+Fondos: el primer aprovisionamiento se dimensiona según los SKU piloto y 2 a 3 meses de rotación, la inversión publicitaria se valida en etapas cortas y la garantía de impuestos se tramita según lo que exija el puerto. Debe estar todo listo antes del aprovisionamiento y la puesta en venta.
+
+Documentación: los documentos de producto, ensayo, cualificación y marca se organizan en cuatro listas que se completan de forma escalonada en cada hito de admisión; las cuatro plantillas de lista se entregan con los entregables de S0.
+
+Tiempo: tres decisiones, la vía de la entidad, el puerto de destino y la estrategia de alegaciones, afectan directamente al calendario; cerrarlas antes de S0 fija el calendario y, con las decisiones tomadas, el trabajo entra en la fase de ejecución M1.
+
+Las cifras de personal y fondos son rangos prácticos; la cotización se emite según las condiciones medidas, la cotización formal sale cuando la documentación está completa y el detalle de tarifas figura solo en ella.
+
+## Empiece por la cabecera de la tabla
+
+El presupuesto del primer año cabe en una tabla: columnas para tres escenarios, filas para tres supuestos, las cuatro deducciones, una fila de inversión fija y una fila de plazo de recuperación. Primero se rellenan los valores y después se habla de la cotización; las tarifas valen solo en la cotización formal y las cifras de ejemplo explican el método.
+
+El siguiente paso es volcar en esa tabla su lista de SKU, el valor medio del pedido y las recompras. Si aún queda algún valor por definir, [Hable con nosotros](/es/packages/).

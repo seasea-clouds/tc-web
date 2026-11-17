@@ -1,0 +1,67 @@
+---
+title: "Pridobivanje strank na Kitajskem, arhitektura pretvorbe po fazah in kanalih"
+date: "2027-07-06"
+category: "E-commerce"
+excerpt: "Proračun gre tja, kjer pretvorba uspeva: izobraževanje na startu, glavni kanal v zagonu, nakupi članov. Skladnost od prvega dne, trije pregledi, članstvo po lokalnih pravilih."
+references:
+  - title: "Zakon o oglaševanju LRK (redakcija 2015, spremembe 2018, čl. 17, 18, 46)"
+    url: "https://www.gov.cn/guoqing/2021-10/29/content_5647620.htm"
+  - title: "Pravila upravljanja internetnega oglaševanja (uredba št. 72 SAMR, v veljavi od 1. maja 2023)"
+    url: "https://www.gov.cn/gongbao/2023/issue_10506/202306/content_6885261.html"
+  - title: "Zakon LRK o varstvu osebnih podatkov (sprejet 20. avgusta 2021, čl. 38, 39)"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+---
+
+Kam usmeriti proračun pridobivanja in koliko se vrne, določa to, na katerem kanalu so izpolnjeni pogoji pretvorbe, ne zasenčenje vseh štirih kanalov naenkrat. Arhitektura iz modula S7 izhodiščnih gradiv so tri faze rasti proti štirim kanalom: hladen start od nič do šestega meseca, razpenjanje od šestega do osemnajstega, ohranjanje po osemnajstem mesecu, pri čemer Xiaohongshu, Tmall Global in JD Worldwide, Douyin ter zasebni krog WeChat nosijo različno breme v vsaki fazi. Skladnost je pripravljena od prvega dne: oglaševalski materiali gredo skozi tri preglede, članski program se preziduje po pravilih celine, podatki članov ostanejo v Kitajski. Poleg arhitekture deluje mesečna nadzorna plošča plačanega prometa po kanalih: kam so šli denar in kaj se je vrnilo, je vidno v eni vrstici.
+
+![Arhitektura pridobivanja in rasti S7: mehurčkasta matrika treh faz in štirih kanalov, desno panel skladnosti in struktura stroškov, spodaj tri noge rasti in koraki zasebnega kroga, v desnem spodnjem kotu sličica nadzorne plošče](/images/blog/customer-acquisition-china-converting-demand/s7-acquisition-growth-channel-matrix.webp)
+
+Ta stran prihaja iz šestega poglavja gradiv blagovne znamke, poglavje Ready to Grow, modul S7, naslov Acquisition and Growth: Architecture for Converting Demand. Levo je matrika razdelitve kanalov, desno zgoraj panel skladnosti in struktura stroškov, levo spodaj tri noge rasti in trije koraki zasebnega kroga, v desnem spodnjem kotu je vstavljena sličica predstavitve plošče. Ta članek razčleni S7 skupaj s predstavitvijo čez cel zaslon na naslednji strani, ni treba prej brati drugih modulov poglavja.
+
+## Matrika razdelitve treh faz in štirih kanalov
+
+Matrika postavi tri faze rasti navpično in štiri kanale vodoravno, ena celica, en mehurček, velikost mehurčka kaže intenzivnost vlaganj faze v kanal: velik pomeni glavni sunek, srednji podporo, majhen počasen vstop. Branje celico za celico razkriva, da se proračun ne deli enakovredno, ampak menja glavno bojišče po fazah.
+
+Hladen start, meseci od nič do šestega: Xiaohongshu drži velik mehurček izobraževanja o sestavi, Tmall Global in JD Worldwide srednji mehurček pretvorbe zaupanja, Douyin še brez izdatkov, zasebni krog WeChat velik mehurček prvega nakupa prek preizkusnega kompleta. Dokazov o prodaji v tej fazi ni, zato vsebina najprej razloži sestavo, trgovine ujamejo zaupanje tistih, ki iščejo, zasebni krog pa zapre prvo naročilo z vzorcem.
+
+Razpenjanje, meseci od šestega do osemnajstega: Xiaohongshu pade na srednji mehurček razvijanja vsebine, Tmall Global in JD Worldwide vzletita do največjega mehurčka kot glavni kanal pretvorbe, Douyin vzleti do največjega mehurčka obsežnih prenosov, zasebni krog WeChat drži srednji mehurček opomnikov ponovnega nakupa. Glavno bojišče se preseli z Xiaohongshu na tržnice in Douyin, naloga vsebine se spremeni iz izobraževanja v obseg.
+
+Ohranjanje, po osemnajstem mesecu: priporočila, ponovni nakupi na zalogu, nadaljevanje produkta hitov in ponovni nakupi članov sedijo v srednjih in velikih mehurčkih, pri čemer je ponovni nakup članov v zasebnem krogu največji. Rast v tej fazi ne prihaja iz novega prometa, ampak od tistih, ki so kupili in se vračajo govoriti.
+
+## Panel skladnosti pripravljen od prvega dne
+
+Desno od matrike je panel skladnosti s štirimi točkami, vse se utrdijo na dan zagona, ne dograjujejo se po razpenjanju.
+
+Stopnja promotorjev: brez skladišča, brez predprodaje, ne globlje kot dve stopnji. Pripis in poravnave: pripis GMV na jasnih temeljih, pogodbe podpiše domača pravna oseba, odvod davka vodi celina. Materiali: vsak oglaševalski in vplivnežski scenarij gre skozi tri preglede pred objavo. Članski program: se ne prenese v celoti iz tuje ureditve, ampak se preziduje po pravilih celine, v skladu s podlago „nič incidentov“ cele knjige; podatki članov ostanejo na celini, vsak izvoz se oceni točko po točki po mejnih členih zakona o varstvu osebnih podatkov.
+
+## Struktura stroškov v redih iz odprtih virov
+
+Struktura stroškov nosi tri vrstice. Provizija platforme gre v razponu 0.5%–5% po kategoriji, številke usmerjalnega reda iz odprtih virov; ostale točke krijejo plačilne takse, plačani promet, izdelavo vsebine in provizije; preverjanje pomeni male korake in tedenski pregled donosa. Vse tri hranijo poznejšo analizo občutljivosti enotne ekonomije: proračun sproščen ali stisnjen za stopnjo, številke morajo iti za njim.
+
+## Tri noge rasti in trije koraki zasebnega kroga
+
+Arhitektura se skrči na tri noge: sejanje vsebine vodi prepoznavnost, pretvorba na platformi zapre posle, ponovni nakupi v zasebnem krogu držijo ohranjanje. Zasebni krog gre v treh korakih: uradna miniaplikacija blagovne znamke plus sledilci iz vsebine plus preizkusni komplet za prvo naročilo; orodij tri, skupine WeCom, članska kartica v miniaplikaciji in opomniki ponovnega nakupa.
+
+Zvezba rasti in skladnosti leži v istem bloku: oglaševalska vsebina gre skozi tri preglede pred objavo in druga pozicija dobave je rezervirana, da razpenjanje dodaja kanale brez prezidave dobave. O ritmu povedano naravnost: ne odpreti vseh kanalov naenkrat, najprej dokazati vsebino in pretvorbo v enem kanalu, potom ponoviti na drugem.
+
+## Nadzorna plošča plačanega prometa bere izdatek in donos po kanalih drug ob drugem
+
+Matrika odgovarja, kam vlagati; plošča odgovarja, kako preveriti po vlaganju. V predstavitvi vmesnika nadzorna plošča plačanega prometa da vsakemu kanalu eno vrstico, z zavihki tekočega meseca, prejšnjega in kumulativne vsote, stolpci pa gredo izdatek, prikazi, CTR, naročila, promet GMV, ROI in status, tako da vlaganje in donos se uredita v eni vrstici.
+
+| Kanal | Izdatek (yuan) | Prikazi | CTR | Naročila | Promet GMV (yuan) | ROI | Stanje |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Sejanje vsebine | 42000.00 | 486000 | 3.2% | 208 | 187200.00 | 4.5 | V teku |
+| Kratki video | 58000.00 | 724000 | 2.6% | 186 | 167400.00 | 2.9 | V teku |
+| Skupnost zasebnega kroga | 18000.00 | 96400 | 8.1% | 242 | 217800.00 | 12.1 | V teku |
+| Delo s člani | 12000.00 | 52100 | 11.4% | 296 | 266400.00 | 22.2 | V teku |
+| Skupaj | 130000.00 | 1358500 | 3.9% | 932 | 838800.00 | 6.5 | V teku |
+
+Preidimo prikazne podatke z enim celim branjem. Začnimo z vrstico vsote za glavno številko: štirje kanali so izdatkovali 130000.00 yuan v mesecu in dobili 1358500 prikazov, 932 naročil in 838800.00 yuan prometa GMV, skupni ROI 6.5.
+
+Potom beremo razdelitev vlog po vrsticah: sejanje vsebine za 42000.00 yuan in kratki video za 58000.00 yuan vzameta okoli šestdeset procentov izdatka, dajeta 486000 in 724000 prikazov pri ROI 4.5 in 2.9 ter vlečeta doseg; skupnost zasebnega kroga za 18000.00 yuan in delo s člani za 12000.00 yuan porabita dosti manj, klikata na 8.1% in 11.4%, vračata ROI 12.1 in 22.2 ter vlečeta pretvorbo in ohranjanje, pri čemer delo s člani spremeni najmanjši izdatek v največji promet GMV 266400.00 yuan. V eni vrstici kam so šli denar in kaj se je vrnilo soglaša na prvi pogled, odločitev dodati ali zadržati celico sprejme sama vrstica.
+
+![Predstavitev vmesnika nadzorne plošče plačanega prometa: zaledje čezmejnega blaga za zdravje, štiri vrstice kanalov in vrstica vsote na enem zaslonu, zavihki tekočega meseca, prejšnjega in kumulativne vsote](/images/blog/customer-acquisition-china-converting-demand/paid-media-dashboard-four-channel-ledger.webp)
+
+Dva podrobnosti na zaslonu stojita za prevzem: spodaj je označeno, da so številke prikazne, register plačanega prometa štirih kanalov z vrstico vsote in vrstičnim ROI na enem zaslonu, stolpec stanja pa obesi „v teku“ na vsako vrstico z vhodi v podrobnosti in dnevnik, tako da podlaga vsake številke se lahko odpre s klikom.
+
+Zapriimo z zadržki: razdelitev kanalov in provizija platforme 0.5%–5% prihajajo iz odprtih virov in so usmerjalni redi, ne ponudbami; številke na plošči so prikazni podatki, ki kažejo, kako brati tablo, ne rezultati katerekoli prave trgovine; članski program se preziduje po pravilih celine, ne prenese se v celoti. Da zgradite svojo arhitekturo pridobivanja, hodite v istem redu: nastavite razdelitev kanalov po treh fazah, utrdite štiri točke skladnosti v prvem dne, potom kontrolujte izdatek in donos na plošči tedensko. V naših paketih za kitajski trg so pripravljena delovna gradva k tej matriki in plošči, prinesite seznam produktov in cilj izdatkov za mesec, [stopite v stik z nami](/sl/packages/).

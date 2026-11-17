@@ -1,0 +1,113 @@
+---
+title: "Nou interfícies al dipòsit duaner xinès, llums de salut i marge de pic promocional"
+date: "2027-06-22"
+category: "E-commerce"
+excerpt: "Les interfícies estàndard van primer i el middleware cobreix la resta; les llums de salut registren crides i reenviaments. Les dades queden al país i es reserva marge de pic."
+references:
+  - title: "Anunci 194 de 2018 de l'Administració General de Duanes de la Xina sobre la supervisió de les mercaderies d'importació i exportació al detall en el comerç electrònic transfronterer"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Llei de protecció de la informació personal de la República Popular de la Xina, aprovada el 20 d'agost de 2021, articles 38, 39 i 55"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+  - title: "Disposicions sobre la promoció i la regulació dels fluxos transfronterers de dades, Ordre 16 de l'Administració del Ciberespai de la Xina, en vigor des del 22 de març de 2024"
+    url: "https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm"
+---
+
+Les nou famílies d'interfícies connecten els vostres sistemes actuals a la plataforma de dipòsit duaner de la Xina, sempre que les interfícies estàndard tinguin prioritat, les dades romanguin al territori nacional i la capacitat per al pic promocional es dimensioni amb un marge de 10 vegades. On hi ha una interfície estàndard, la connexió és directa; on no n'hi ha, el middleware fa el mapeig. Les llums de salut registren, per tipus d'interfície, el volum de crides, la taxa d'èxit, la latència i el reenviament d'errors, i les dues files d'enviament de comandes i de retorn del rebut de pagament deixen constància del retorn dels tres documents. Les referències de mercat públic per a la integració són de 3 a 7 dies per a interfícies estàndard i de 8 a 12 setmanes per a la integració completa, i només valen com a referència d'ordre de magnitud; el que realment determina la data d'entrada en producció són les proves conjuntes i un cicle de liquidació en paral·lel.
+
+![Demostració de la taula de mapeig de les nou famílies d'interfícies, amb les columnes el vostre sistema, l'element d'integració, la direcció i el destí, nou files de béns i estoc, comandes, dades de membres, liquidació de comissions, inventari, duanes, execució, devolucions i finances, i a sota quatre principis de flux de dades i les quatre llums de salut del monitor de proves conjuntes de l'API](/images/blog/china-bonded-platforms-nine-interfaces/nine-interface-families-mapping.webp)
+
+## En quina taula acaba cadascuna de les nou famílies d'interfícies
+
+La taula d'interfícies s'escriu en quatre columnes: de quin costat del vostre sistema es tracta, quin és l'element d'integració, qui lidera la direcció i on acaben finalment les dades. La direcció només pren tres formes, bidireccional, d'entrada i liderada per vós; les files sense direcció indicada són assumides pel nostre costat. La columna del destí indica a quin conjunt de registres pertany cada camp, perquè qui prengui el relleu ho pugui comprovar amb la taula.
+
+- Béns i estoc: estoc i preus per SKU, bidireccional, coherents amb el sistema de gestió de magatzem i amb el registre duaner.
+- Comandes: dades de comandes, d'entrada, que acaben als camps dels tres documents.
+- Dades de membres: relacions de promotors, liderades per vós, les dades són vostres i nosaltres les tractem com a encarregat del tractament per compte d'altri.
+- Liquidació de comissions: pagament de comissions, bidireccional, amb el tram nacional executat per l'entitat nacional.
+- Inventari: el sistema de dipòsit duaner, sense direcció indicada, acaba al sistema d'operacions de dipòsit duaner i comparteix l'origen amb el registre.
+- Duanes: la declaració dels tres documents, sense direcció indicada, la declaració va a càrrec nostre i és una qüestió sota el nostre control.
+- Execució: retorn del trajecte, sense direcció indicada, les dades del trajecte logístic es reescriuen a la vista de comandes.
+- Devolucions: documents de devolució, sense direcció indicada, les devolucions tornen a entrar a la zona sota supervisió duanera a través del centre de devolucions.
+- Finances: liquidació, de sortida, incloent-hi moneda i canvi.
+
+Cap a on circulen les dades decideix com es construeixen les interfícies. Els registres del costat nacional i el tauler del costat estranger han de romandre separats; altrament, durant les proves conjuntes els dos costats acabarien sobreescrivint els mateixos camps.
+
+- Les dades de promoció recollides i liquidades al territori nacional romanen al territori nacional.
+- A la vostra matriu a l'estranger només tornen dades agregades desidentificades, sense relacions de comissions nacionals.
+- El sistema de la banda estrangera mai no accedeix a les dades brutes dels consumidors de la Xina; les rutes transfrontereres només s'obren després de superar l'avaluació d'impacte sobre la protecció de dades personals.
+- Les dades nacionals de promoció i de comissions admeten exportació íntegra i us són lliurades amb els registres en el moment del traspàs.
+
+El monitor de proves conjuntes de l'API disposa les llums de salut en quatre files per tipus d'interfície i per contrapart, i cada comprovació de salut i cada reenviament deixa un registre. La pàgina de demostració escriu tres elements, tipus d'interfície, contrapart i llum de salut, corresponents al mateix conjunt que s'usa a la demostració de la interfície del sistema, i les files es revisen una a una cada dia durant les proves conjuntes.
+
+- Enviament de comandes, connectat a la botiga, llum de salut normal.
+- Retorn del rebut de pagament, connectat al canal de pagament, llum de salut normal.
+- Retorn de la guia de tramesa, connectat a l'empresa de missatgeria, llum de salut d'alerta.
+- Declaració de la llista, connectada al canal de declaració, llum de salut normal.
+
+Les condicions d'integració es fixen primer al voltant de les interfícies estàndard: on hi ha una interfície estàndard, s'hi connecta directament, i on no n'hi ha, el middleware fa el mapeig. Les referències de mercat públic per a la integració són de 3 a 7 dies per a interfícies estàndard i de 8 a 12 setmanes per a la integració completa, i el pic promocional es dimensiona amb un marge de 10 vegades. Cada banda designa un contacte tècnic i manté una reunió diària durant les proves conjuntes. Després de l'entrada en producció es corre primer un cicle de liquidació complet en paral·lel abans de la transició, perquè les dades dels dos sistemes no divergeixin durant el període de doble execució.
+
+## Com llegir les llums de salut i on queden registrats els reenviaments fallits
+
+El registre de salut de les interfícies dóna una fila per tipus d'interfície, amb pestanyes per a totes les interfícies, normals i anormals, i cada fila anota contrapart, volum de crides, taxa d'èxit, latència, errors, reenviament i llum de salut. Prenem l'enviament de comandes com a exemple desenvolupat: 1284 crides avui, una taxa d'èxit del 100%, una latència mitjana de 186 mil·lisegons, 0 errors i una llum de salut normal; el retorn del rebut de pagament també va registrar 1284 crides, amb una taxa d'èxit del 99,9%, 1 error reenviat amb èxit i la llum de salut encara normal. Aquestes dues files són la prova que el retorn dels tres documents és al sistema.
+
+Un cop mapejats els nou tipus d'interfície, els volums de crides i les dades de salut en temps d'execució són tots en aquest registre, i les dues files d'enviament de comandes i de retorn del rebut de pagament anoten com ha aterrat el retorn dels tres documents. A la part inferior de la interfície de demostració s'hi indiquen 12 registres en total i 20 per pàgina, i cada fila acaba amb dues entrades, detalls i registre; les nou files segueixen totes el mateix conjunt de columnes.
+
+![Demostració de la interfície del sistema del registre de salut de les interfícies, amb nou files en nou columnes: tipus d'interfície, contrapart, crides d'avui, taxa d'èxit, latència mitjana, errors, reenviament, llum de salut i operacions, amb 12 registres en total i 20 per pàgina a la part inferior](/images/blog/china-bonded-platforms-nine-interfaces/interface-health-log-system-demo.webp)
+
+- Enviament de comandes, botiga, 1284 crides avui, taxa d'èxit 100%, latència mitjana 186 mil·lisegons, 0 errors, sense reenviament, llum de salut normal, detalls i registre;
+- Retorn del rebut de pagament, canal de pagament, 1284, 99,9%, 210 mil·lisegons, 1 error, reenviat, normal, detalls i registre;
+- Retorn de la guia de tramesa, empresa de missatgeria, 1266, 99,2%, 340 mil·lisegons, 10 errors, reenviament en curs, alerta, detalls i registre;
+- Declaració de la llista, canal de declaració, 1266, 99,8%, 520 mil·lisegons, 3 errors, reenviat, normal, detalls i registre;
+- Consulta de quota, canal de consulta, 1284, 100%, 150 mil·lisegons, 0 errors, sense reenviament, normal, detalls i registre;
+- Sincronització del registre, dipòsit duaner, 96, 100%, 430 mil·lisegons, 0 errors, sense reenviament, normal, detalls i registre;
+- Reescriptura de l'estat d'alliberament, canal de declaració, 1240, 99,6%, 610 mil·lisegons, 5 errors, reenviat, normal, detalls i registre;
+- Dades del trajecte logístic, empresa de missatgeria, 1240, 98,7%, 720 mil·lisegons, 16 errors, reenviament en curs, alerta, detalls i registre;
+- Fitxer de reconciliació, sistema financer, 12, 100%, 980 mil·lisegons, 0 errors, sense reenviament, normal, detalls i registre.
+
+## Com es jutja el pic promocional i quanta capacitat cal reservar
+
+El judici del pic es divideix en quatre casos per volum i per necessitat de resposta: volum baix amb resposta alta mira l'elasticitat, volum alt amb resposta alta mira el termini previ, volum baix amb resposta baixa mira la capacitat bàsica i volum alt amb resposta baixa mira la capacitat estable. La corba de capacitat respecte a la capacitat diària té tres nivells: 1 vegada a les operacions diàries, 4 a 5 vegades en una campanya promocional i 10 vegades al pic, i el costat del pic es reserva amb un marge de 10 vegades. Com més aviat ens lliureu els volums preregistrats, més marge hi ha per planificar l'ampliació i el personal; si els volums arriben una setmana abans de la campanya, només queda afegir personal.
+
+- Volum baix i necessitat de resposta alta van a l'elasticitat de pic: els casos públics corren a 4 a 5 vegades el volum diari, els pics van de desenes de milers a centenars de milers d'unitats i el personal a la campanya és aproximadament 3 vegades el normal; són valors de referència de casos públics.
+- Volum alt i necessitat de resposta alta està condicionat pel termini previ: els pics ultraalts exigeixen antelació, el creixement de SKU amplia alhora el magatzem i el registre, la campanya reserva un pic de 10 vegades i els valors de volum els proporcioneu vós.
+- Volum baix i necessitat de resposta baixa és capacitat bàsica: botiga de marca amb pagaments llicenciats, documents incorporats, més de 50 punts duaners i més de 70 sistemes ERP connectats, certificació AEO avançada i despatx duaner propi; el nostre costat està a punt.
+- Volum alt i necessitat de resposta baixa és capacitat estable: dimensionada per les comandes diàries, amb entrada anticipada al magatzem i emmagatzematge per zones, personal fix i temporal plegats, volums preregistrats al davant i devolucions de tornada a la zona sota supervisió duanera; el nostre costat segueix el procés.
+
+Els candidats a magatzem són quatre emplaçaments en zones duaneres integrals més el magatzem de Hong Kong, la Xina. Quatre emplaçaments en paral·lel donen redundància de diversos punts duaners; el punt final el decidiu vós i la llista de candidats us és lliurada ja a la fase inicial, sense haver d'esperar que la mercaderia arribi al port. El magatzem de Hong Kong, la Xina figura al costat estranger i s'anota per separat dels quatre emplaçaments nacionals.
+
+![Demostració de la plataforma i la capacitat d'execució per al pic promocional, a l'esquerra quatre quadrants per volum i necessitat de resposta, a la part superior dreta la corba de capacitat de tres nivells respecte a la capacitat diària, a la part inferior dreta el tauler de volum preregistrat de la campanya i a sota quatre emplaçaments en zones duaneres integrals i el magatzem de Hong Kong, la Xina](/images/blog/china-bonded-platforms-nine-interfaces/mega-sale-peak-capacity-verdict.webp)
+
+- Yiwu, Zhejiang, dipòsit duaner amb règim 1210.
+- Hangzhou, Zhejiang, dipòsit duaner amb règim 1210.
+- Guangzhou Huangpu, Guangdong, dipòsit duaner amb règim 1210.
+- Shenzhen Qianhai, Guangdong, dipòsit duaner amb règim 1210.
+- Hong Kong, la Xina, a l'estranger, un dipòsit duaner de Hong Kong, la Xina.
+
+El tauler de volum preregistrat de la campanya promocional llista quatre files en set columnes: SKU, volum preregistrat, ja registrat, progrés, finalització prevista, estat i operació, amb dues entrades, detalls i registre, a cada fila. El progrés i la data de finalització prevista determinen l'ordre d'aprovisionament de cada SKU, i els dèficits se segueixen fila a fila a la taula de seguiment del volum preregistrat.
+
+- Càpsules toves de coenzim Q10, volum preregistrat 12000, ja registrat 8400, progrés 70%, finalització prevista 10-12, en curs, detalls i registre;
+- Càpsules d'oli de peix d'aigües profundes, 8000, 6400, 80%, 10-08, en curs, detalls i registre;
+- Beguda sòlida en pols de proteïna, 6000, 2400, 40%, 10-18, en curs, detalls i registre;
+- Pols liofilitzada de probiòtics, 5000, 5000, 100%, sense data de finalització indicada, completat, detalls i registre.
+
+## Com se segueixen fila a fila els dèficits del volum preregistrat
+
+La taula de seguiment del volum preregistrat del mòdul d'inventari dóna una fila per SKU i escriu volum preregistrat, ja registrat, progrés, dèficit, finalització prevista i estat. Prenem les càpsules toves de coenzim Q10 com a exemple desenvolupat: volum preregistrat 12000, ja registrat 8400, progrés 70%, un dèficit de 3600, amb finalització prevista el 10-12; les càpsules d'oli de peix d'aigües profundes estan al 80% de progrés, amb un dèficit de 1600 i finalització prevista el 10-08. La corba de capacitat de tres nivells es tradueix aquí en accions d'aprovisionament, de manera que la magnitud del dèficit i el dia en què es tanca es veuen per endavant.
+
+A la part inferior de la interfície s'hi indiquen 7 registres en total i 20 per pàgina, i cada fila acaba amb dues entrades, detalls i registre; les pestanyes de seguiment del volum preregistrat i d'avís d'arribada són una al costat de l'altra, perquè la primera línia canviï de pestanya sense tornar a filtrar. Les set files segueixen totes el mateix conjunt de columnes.
+
+![Demostració de la interfície del sistema de seguiment del volum preregistrat, set files de productes en vuit columnes: SKU, volum preregistrat, ja registrat, progrés, dèficit, finalització prevista, estat i operacions, amb 7 registres en total i 20 per pàgina a la part inferior](/images/blog/china-bonded-platforms-nine-interfaces/pre-filed-volume-tracking-system-demo.webp)
+
+- Càpsules toves de coenzim Q10, 12000, 8400, 70%, dèficit 3600, 10-12, en curs, detalls i registre;
+- Càpsules d'oli de peix d'aigües profundes, 8000, 6400, 80%, dèficit 1600, 10-08, en curs, detalls i registre;
+- Beguda sòlida en pols de proteïna, 6000, 2400, 40%, dèficit 3600, 10-18, en curs, detalls i registre;
+- Pols liofilitzada de probiòtics, 5000, 5000, 100%, dèficit 0, sense data de finalització indicada, completat, detalls i registre;
+- Pols de pèptids de col·lagen de peix, 6000, 3000, 50%, dèficit 3000, 10-15, en curs, detalls i registre;
+- Comprimits masticables de vitamina C, 9000, 8100, 90%, dèficit 900, 10-06, en curs, detalls i registre;
+- Gominoles de melatonina, 4000, 4000, 100%, dèficit 0, sense data de finalització indicada, completat, detalls i registre.
+
+## Què cal fixar abans de l'entrada en producció a les interfícies i la transició
+
+Abans de l'entrada en producció es fixen tres punts: les interfícies estàndard i el mapeig per middleware s'escriuen a la taula d'interfícies, els llindars de les llums de salut, els reenviaments d'errors i els responsables s'assignen a files concretes, i els volums preregistrats i els nivells de capacitat s'alineen al mateix conjunt de SKU. Si falta qualsevol dels tres, les proves conjuntes quedaran encallades en els reenviaments. Els volums de crides, les taxes d'èxit, els volums preregistrats i les dates de finalització de la interfície de demostració són només il·lustratius; les xifres de pic i de personal provenen de casos públics i mostren només l'ordre de magnitud, mentre que els volums reals els proporcioneu vós. La pràctica real de declaració segueix els requisits de l'autoritat competent i les rutes transfrontereres de dades segueixen el resultat de l'avaluació d'impacte sobre la protecció de dades personals. Abans de la transició es corre un cicle de liquidació complet en paral·lel, es confirma que les dades dels dos sistemes no han divergit i només aleshores es desvia el trànsit.
+
+Si voleu connectar les nou famílies d'interfícies a l'execució en dipòsit duaner segons el vostre stack de sistemes actual i el pla de punts duaners, amb les llums de salut i els volums preregistrats comprovats fila a fila, [Contacteu-nos](/ca/packages/).

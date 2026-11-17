@@ -1,0 +1,77 @@
+---
+title: "Poziomy członkostwa i dostawy cykliczne, tory panelu i wyjątki wiersz po wierszu"
+date: "2027-06-29"
+category: "E-commerce"
+excerpt: "Poziomy członkostwa i dostawy cykliczne dzielą numer z rejestrem atrybucji. Panel trzyma wiersze na jednym ekranie z ostrzeżeniami. Przejdź pełny cykl i uzgodnij wiersz po wierszu."
+references:
+  - title: "Ustawa o ochronie danych osobowych Chińskiej Republiki Ludowej (uchwalona 20 sierpnia 2021 r., art. 13 i 23)"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+  - title: "Obwieszczenie nr 194 z 2018 r. Generalnej Administracji Ceł Chin dotyczące nadzoru nad detalicznymi towarami przywozu i wywozu w transgranicznym handlu elektronicznym"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Przepisy o promowaniu i regulowaniu transgranicznego przepływu danych (zarządzenie nr 16 Państwowego Biura Informacji Internetowej, obowiązujące od 22 marca 2024 r.)"
+    url: "https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm"
+---
+
+Poziomy członkostwa i dostawy cykliczne potrafią zatrzymać ponowne zakupy, o ile dwa zaplecza zgadzają się wiersz po wierszu. Jednym jest panel operacyjny, który na jednym ekranie zbiera w sześć wierszy zamówienia w drodze, partie w składzie celnym, wydania ze strefy dzisiaj, przesyłki w drodze, średni czas odprawy celnej i partie z ostrzeżeniem o terminie ważności. Drugim jest zaplecze poziomów członkostwa i dostaw cyklicznych, które w sześć wierszy układa numer członka, poziom, produkt dostawy cyklicznej, cykl dostawy, następną datę dostawy i łączne wydatki. Obie strony korzystają z jednego zestawu numerów członków, a każda zmiana statusu zostawia wpis w dzienniku, dzięki czemu ponowny zakup daje się przypisać temu samemu członkowi. Gdy przejmujesz pracę, najpierw spójrz na wiersze wyjątków. W interfejsie demonstracyjnym dwa wiersze są w toku i jeden do poprawy, a towarzyszą im 2 oczekujące zgłoszenia, 3 wyjątki i 2 partie bliskie terminowi ważności.
+
+![Demonstracja interfejsu panelu operacyjnego czterech torów z nagłówkiem tor, kluczowy wskaźnik, wartość bieżąca, wartość docelowa, wskaźnik realizacji, ostrzeżenie, status i akcja, sześć wierszy dla toru zamówień, toru zapasów, toru odprawy celnej, toru logistyki, toru czasu i toru terminu ważności, oraz adnotacją u dołu o 6 rekordach i 20 na stronę](/images/blog/china-bonded-member-tiers-and-auto-ship/four-tracks-dashboard-system-demo.webp)
+
+## Sześć wierszy na jednym ekranie, cztery strumienie obsługi z własnymi właścicielami
+
+Panel operacyjny jest widokiem głównym, jeden tor na wiersz, a zakładki dzielą się na dziś, bieżący tydzień i bieżący miesiąc. Każdy wiersz wymienia kluczowy wskaźnik, wartość bieżącą, wartość docelową, wskaźnik realizacji, ostrzeżenie i status, a na końcu wiersza wiszą dwa wejścia, szczegóły i dziennik. Komórka bez wyzwolonego ostrzeżenia dostaje krótką kreskę zamiast zera, żeby braku alarmu nie odczytać jako wskaźnika równego zero. Panel stronicuje po 20 rekordów na stronę, danych demonstracyjnych jest 6 i mieszczą się na jednym ekranie.
+
+Każdy z czterech strumieni obsługi od S10 do S13 ma swojego właściciela, a ich wskaźniki i bieżące kroki skupiają się na tym jednym panelu. Kto przejmuje który tor i na jakim etapie jest teraz, można tu odczytać bez sięgania po kilka innych rejestrów. Odpowiedzialność spoczywa na wierszu, więc przy przekazaniu wystarczy podpisać wiersz po wierszu.
+
+Osiem kolumn nagłówka to po kolei tor, kluczowy wskaźnik, wartość bieżąca, wartość docelowa, wskaźnik realizacji, ostrzeżenie, status i akcja. Sześć wierszy wypisano poniżej w tej kolejności.
+
+- Tor zamówień, zamówienia w drodze, bieżąca 128, docelowa 150, wskaźnik realizacji 85%, ostrzeżenie puste, status normalny;
+- Tor zapasów, partie w składzie celnym, bieżąca 36, docelowa 40, wskaźnik realizacji 90%, ostrzeżenie puste, status normalny;
+- Tor odprawy celnej, wydania ze strefy dzisiaj, bieżąca 86, docelowa 100, wskaźnik realizacji 86%, ostrzeżenie 2 oczekujące zgłoszenia, status w toku;
+- Tor logistyki, przesyłki w drodze, bieżąca 214, docelowa i wskaźnik realizacji puste, ostrzeżenie 3 wyjątki, status w toku;
+- Tor czasu, średni czas odprawy celnej, bieżąca 6,8 godziny, docelowa 8 godzin, w kolumnie wskaźnika realizacji wpisano osiągnięty, ostrzeżenie puste, status normalny;
+- Tor terminu ważności, partie z ostrzeżeniem o terminie ważności, bieżąca 2, docelowa 0, wskaźnik realizacji pusty, ostrzeżenie 2 partie bliskie terminowi ważności, status do poprawy.
+
+Karta informacyjna wskazuje dwie wartości, które najłatwiej odczytać błędnie. Tor zamówień ma 128 zamówień w drodze przy wartości docelowej 150 i wskaźniku realizacji 85%; tor zapasów ma 36 partii w składzie celnym przy wartości docelowej 40 i wskaźniku realizacji 90%. Karta podaje też, że komórka bez wyzwolonego ostrzeżenia pokazuje krótką kreskę. Innymi słowy, kreska nie oznacza braku danych. Zapisuje sam wniosek, że tym razem nie było alarmu.
+
+Trzy statusy trzeba obsługiwać osobno. Trzy wiersze normalne to tor zamówień, tor zapasów i tor czasu, a tor czasu notuje bieżącą wartość 6,8 godziny, poniżej docelowej 8 godzin, więc w kolumnie wskaźnika realizacji wpisano wprost osiągnięty. Dwa wiersze w toku niosą po jednym zadaniu, tor odprawy celnej ma 2 oczekujące zgłoszenia, a tor logistyki 3 wyjątki. Wierszem do poprawy jest tor terminu ważności, z bieżącymi 2 partiami z ostrzeżeniem o terminie ważności, wartością docelową 0 i ostrzeżeniem 2 partie bliskie terminowi ważności. Kolejność działań ustala zakres wpływu, najpierw usuń partie bliskie terminowi ważności, potem uzupełnij zgłoszenia, na końcu zajmij się wyjątkami.
+
+## Poziomy członkostwa i dostawy cykliczne w zapleczu, do sprawdzenia wiersz po wierszu
+
+![Demonstracja interfejsu zaplecza poziomów członkostwa i dostaw cyklicznych z nagłówkiem numer członka, poziom, produkt dostawy cyklicznej, cykl dostawy, następna data dostawy, łączne wydatki, status dostawy cyklicznej i akcja, sześć wierszy z poziomami i danymi dostaw od M-100238 do M-100419, oraz adnotacją u dołu o 6 rekordach i 20 na stronę](/images/blog/china-bonded-member-tiers-and-auto-ship/member-tiers-subscriptions-system-demo.webp)
+
+Zaplecze po stronie członków wisi pod modułem sklepu, a zakładki dzielą się według poziomów na czarną kartę, złotą kartę i srebrną kartę, z osobną stroną wyłącznie dla aktywnych dostaw cyklicznych. Każdy wiersz wymienia numer członka, poziom, produkt dostawy cyklicznej, cykl dostawy, następną datę dostawy i łączne wydatki, a na końcu wiersza znowu są szczegóły i dziennik. Danych demonstracyjnych jest 6, po 20 na stronę.
+
+Poziomy, dostawy cykliczne i łączne wydatki utrzymuje się w jednym miejscu, a numery członków dzielą jedno źródło danych z rejestrem atrybucji. Dzięki temu ponowny zakup nie liczy się raz po stronie członka i jeszcze raz po stronie atrybucji, a gdy trzeba przypisać ponowne zakupy danego poziomu do konkretnej kampanii, wystarczy wrócić do numeru. Numery członków i łączne wydatki są danymi osobowymi, więc ich przetwarzanie i udostępnianie wymaga wyraźnej podstawy, a między krajowym zapleczem a zagranicznymi raportami przechodzą tylko niezbędne ujęcia zbiorcze.
+
+Osiem kolumn nagłówka to po kolei numer członka, poziom, produkt dostawy cyklicznej, cykl dostawy, następna data dostawy, łączne wydatki, status dostawy cyklicznej i akcja. Sześć wierszy wypisano poniżej w tej kolejności, a wszystkie kwoty podano w juanach.
+
+- M-100238, czarna karta, kapsułki miękkie z koenzymem Q10 x2, co miesiąc, 2026-10-22, 15800,00 juanów, w toku;
+- M-101204, złota karta, kapsułki miękkie z olejem rybim x1, co miesiąc, 2026-10-05, 8640,00 juanów, w toku;
+- M-100571, srebrna karta, białko serwatkowe w proszku x1, co 2 miesiące, 2026-11-19, 4320,00 juanów, w toku;
+- M-100872, czarna karta, proszek probiotyczny x2, co miesiąc, 2026-10-08, 22100,00 juanów, w toku;
+- M-101466, złota karta, napój z peptydami kolagenu x1, co miesiąc, 2026-10-15, 6980,00 juanów, wstrzymany;
+- M-100419, srebrna karta, tabletki wapnia z witaminą D x1, co kwartał, 2026-12-01, 1560,00 juanów, w toku.
+
+Karta informacyjna podaje dwa numery. M-100238 to czarna karta, co miesiąc automatycznie dostarcza dwie butelki kapsułek miękkich z koenzymem Q10, z następną datą dostawy 2026-10-22 i łącznymi wydatkami 15800,00 juanów; M-101204 to złota karta. Karta stwierdza też, że numery członków mają jedno źródło z rejestrem atrybucji. Gdy zestawisz te dwa zdania z sześcioma wierszami tabeli, progi poziomów wychodzą na jaw, dwa wiersze srebrnej karty mają 4320,00 juanów i 1560,00 juanów, dwa wiersze złotej karty 8640,00 juanów i 6980,00 juanów, a dwa wiersze czarnej karty 15800,00 juanów i 22100,00 juanów, bez przecięcia między trzema poziomami. Łączne wydatki są zatem zarówno polem wyświetlanym, jak i podstawą podziału na poziomy.
+
+Cykle dostawy dzielą się na trzy warianty, co miesiąc, co 2 miesiące i co kwartał, a w tabeli pięć wierszy jest w toku i jeden wstrzymany. Wstrzymany jest M-101466, z łącznymi wydatkami 6980,00 juanów, a status zaznaczono w osobnym polu, bez usuwania wiersza dla oznaczenia wyłączenia. Najwcześniejsza następna data dostawy to 2026-10-05, najpóźniejsza to 2026-12-01, obie stoją w tej samej tabeli.
+
+## Jeden członek czarnej karty przez pełny cykl dostawy
+
+Weź członka czarnej karty M-100238 i przejdź go raz. Zaplecze odnotowuje, że jest aktywny, składa jedno zamówienie miesięcznie, produktem są kapsułki miękkie z koenzymem Q10 x2, następna data dostawy to 2026-10-22, a łączne wydatki to 15800,00 juanów. Ten sam wiersz wisi jednocześnie pod dwiema zakładkami, poziomów członkostwa i dostaw cyklicznych, i nie generuje się dla niego drugiego numeru.
+
+Gdy nadchodzi data dostawy, system tworzy zamówienie według cyklu, wydaje towar z partii w składzie celnym, przechodzi odprawę celną i wydanie ze strefy, a numer listu przewozowego wpisuje z powrotem do tego wiersza. Wartość bieżąca toru zamówień zmienia się w ślad za tym, tor terminu ważności odejmuje według partii, a tor czasu zapisuje czas tej odprawy celnej. Po zakończeniu wpisu zwrotnego łączne wydatki rosną o kwotę faktycznie zapłaconą, a następna data dostawy przesuwa się o jeden cykl; szczegóły pokazują pola, a dziennik pokazuje, kto i kiedy wprowadził każdą zmianę.
+
+Wstrzymanie w trakcie też idzie tym samym wierszem. Status dostawy cyklicznej M-101466 jest wstrzymany, produkt i łączne wydatki zostają w tabeli, po prostu nie tworzy się następnego zamówienia; przy wznowieniu ciągnie się od dziennika i nie zakłada nowego numeru członka. Gdyby wstrzymanie zapisać jako usunięty wiersz, rejestr atrybucji straciłby odcinek historii, a progów poziomów nie dałoby się policzyć.
+
+Konwencję kwot trzeba ustalić sztywno na starcie. Wszystkie sześć wartości łącznych wydatków podano w juanach, z dwoma miejscami po przecinku, bez symbolu waluty i bez dopisywania uwagi o przeliczeniu do danych demonstracyjnych. Stopka interfejsu oznacza je jako dane demonstracyjne, a wyjątki i korekty pozostają udokumentowane i możliwe do sprawdzenia; te wartości służą więc do weryfikacji arytmetyki i pól, nie stanowią ujawnianych na zewnątrz danych operacyjnych.
+
+## Przed przełączeniem wyrównaj dwa zaplecza
+
+Tytuł strony demonstracyjnej mówi o czterech torach, a tabela faktycznie wypisuje sześć wierszy, tor zamówień, tor zapasów, tor odprawy celnej, tor logistyki, tor czasu i tor terminu ważności. Nie ma tu sprzeczności, cztery strumienie obsługi od S10 do S13 są podziałem odpowiedzialności, a sześć wierszy to wiersze wskaźników na tym ekranie; jeden właściciel może pilnować więcej niż jednego wiersza. Czytaj tabelę wierszami po wskaźniki i strumieniami po ludzi. Nie bierz tytułu strony za liczbę wierszy.
+
+Przed przełączeniem zrób trzy rzeczy. Najpierw przeprowadź pełny cykl dostawy i sprawdź, czy następna data dostawy i łączne wydatki przesuwają się razem. Potem wiersz po wierszu uzgodnij numery członków i statusy w dwóch zapleczach, czy progi poziomów, zapisy wstrzymań i dzienniki są zgodne. Na końcu wpisz wyniki obsługi wierszy wyjątków z powrotem do panelu, żeby 2 oczekujące zgłoszenia, 3 wyjątki i 2 partie bliskie terminowi ważności miały każde swoje miejsce. Dopiero po przejściu tych trzech kroków rejestr utrzymania jest naprawdę przejęty.
+
+To, czy ponowne zakupy da się utrzymać, sprowadza się w systemie do dwóch miejsc, czy wyjątki są widoczne od razu i czy zmiany statusów zostawiają ślad. Na stronie demonstracyjnej sześć wierszy torów widać na jednym ekranie, sześć wierszy członków da się sprawdzić pole po polu, a każdy wiersz ma szczegóły i dziennik, więc oba miejsca mają swoje oparcie. Jeśli chodzi o czas przełączenia, zależy on od dopasowania pól w Twoim obecnym systemie i od cyklu równoległego biegu, podobne integracje na otwartym rynku liczy się w tygodniach, co służy wyłącznie jako rząd wielkości i nie powinno uchodzić za zobowiązanie.
+
+Jeśli chcesz podłączyć poziomy członkostwa i dostawy cykliczne do Twojego obecnego zaplecza operacyjnego składu celnego, [Skontaktuj się z nami](/pl/packages/).

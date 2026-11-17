@@ -1,0 +1,96 @@
+---
+title: "Hat mozzanat egy vámraktári rendelés útján és ki mit ad át minden lépésnél"
+date: "2027-06-01"
+category: "E-commerce"
+excerpt: "Vámraktári rendelés hat kapus mozzanaton halad az átvételtől az elszámolásig; márkát, platformot, végrehajtást és felügyeletet négy interfész választja el, két tábla mutatja a réseket."
+references:
+  - title: "A Kereskedelmi Minisztérium és további 5 minisztérium közleménye a határon átnyúló e-kereskedelem kiskereskedelmi importfelügyeletének javításáról (Shang Cai Fa, 2018. évi 486. szám)"
+    url: "https://www.gov.cn/zhengce/zhengceku/2018-12/31/content_5437823.htm"
+  - title: "A Vámhatóság 2018. évi 194. számú közleménye a határon átnyúló e-kereskedelem kiskereskedelmi import- és exportfelügyeletéről"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "A Pénzügyminisztérium, a Vámhatóság és az Adóhatóság Cai Guan Shui 2016. évi 18. számú közleménye a határon átnyúló e-kereskedelem kiskereskedelmi importjának adószabályairól"
+    url: "https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html"
+---
+
+Egy vámraktári rendelés a termékátvételtől az elszámolásig és kifizetésig hat mozzanaton halad át; a zónán belüli kiengedéstől a fogyasztóhoz történő kézbesítésig a demóadatok leggyorsabb rendelése egy nap tizennégy óra negyvennyolc percet vett igénybe, a lassabbak még úton vannak.
+
+Minden mozzanatnak saját kiváltója, kiengedési kapuja és átadandója van; ha az előző kapu nem teljesül, a következő nem indul. Az átvételi szakaszban a dokumentumoknak teljesnek kell lenniük, kiengedés után pedig figyelni kell a kézbesítést; ez a két vég viszi a legtöbb időt, és ezeket a legkönnyebb elhallgatni.
+
+Ahhoz, hogy eldöntse, elakadt-e egy rendelés, nem kell a csevegési előzményeket böngészni; két táblázat elég: van-e eltérés a három dokumentum idővonalán, és milyen messze van a kiengedés a kézbesítéstől. Mindkét táblázatban egy sor egy rendelés, az eltérés konkrét mozzanathoz kerül, és az átvevő a rendelésszám alapján visszakeresheti.
+
+![A hat mozzanat és a felelősség megosztásának képe egy rendelésnél az elejétől a végéig, a termékátvételtől az elszámolásig és kifizetésig, minden lépésnél kiváltóval, kapuval és átadandóval; alul négy interfész húzza meg a határt a márka, a platform, a végrehajtó és a felügyelet között, két demótáblázat pedig rögzíti a rendelés és a fizetés időzítését, valamint a kiengedés és a kézbesítés állapotát](/images/blog/one-order-end-to-end-six-moments-bonded-shipment/six-moments-responsibility-splits.webp)
+
+## Melyik kapu mögött áll a hat mozzanat
+
+Ezen az úton három számot tartunk szem előtt: hat lépéses rendelési pálya, négy kulcsfontosságú interfész és egy felelős A szerep. A hat mozzanat sorrendben halad; a kiváltó dönti el, mikor kezdődik egy lépés, a kapu azt, hogy kiengedhető-e, az átadandó pedig azt, mit hagy maga után a lépés.
+
+- M1 Termékválasztás és átvétel: kiváltó a teljes bemenet, kapu a dokumentumok, átadandó a bevallási lista és a HS-kód; mi hajtjuk végre, a bemenetet Ön adja.
+- M2 Zónába lépés: kiváltó az M1 jóváhagyása, kapu a vámraktári nyilvántartás, átadandó a nyilvántartás és a készletnézet; mi hajtjuk végre.
+- M3 Listázás: kiváltó az M2 befejezése, kapu az állítások felülvizsgálata, átadandó a felülvizsgálati következtetés és a közzétételi szöveg; mi hajtjuk végre.
+- M4 Rendelés: kiváltó a listázás élesítése, kapu az identitás és közzététel, átadandó az identitás- és közzétételi nyilvántartás; mi hajtjuk végre.
+- M5 Vámkezelés: kiváltó a fizetés befejezése, kapu a három dokumentum keresztellenőrzése és a keret, átadandó az ellenőrzési következtetés és a keretlevonás; mi hajtjuk végre.
+- M6 Elszámolás és fizetés: kiváltó a kiengedés, kapu a fizetési megfelelés, átadandó a kifizetési lista; mi hajtjuk végre, a szabályokat Ön hagyja jóvá.
+
+A hat mozzanat rendelés szerint rendeződik, nem osztály szerint. A Shang Cai Fa [2018] No. 486 meghatározza a határon átnyúló e-kereskedelmi kiskereskedelmi import szabályozási keretét; a GACC 2018. évi 194. közleménye a bevallási lista kiengedését, a három dokumentum adategyeztetését és az identitásellenőrzést írja a bevallási folyamatba; a Cai Guan Shui [2016] No. 18 az adóalapot egyetlen rendelés szintjén rögzíti. A három dokumentum a szabályokat kezeli; a hat mozzanat azt kezeli, hogy az egyes szabályok a rendelés melyik lépésére esnek, és ki mit ad át.
+
+Az M1 és M2 keverhető össze legkönnyebben. Az M1 kapuja a dokumentumok; a bevallási lista és a HS-kód csak teljes bemenet esetén adható ki. Az M2 kapuja a vámraktári nyilvántartás; miután az áru bekerül a vámraktárba, ha a nyilvántartás és a készletnézet nem egyezik, a zónába lépés nem tekinthető befejezettnek. Az M3 és M4 egyaránt online műveletnek tűnik, de a kapuk eltérnek: listázás előtt az állítások felülvizsgálata, rendeléskor az identitás és a közzététel. Az M5 hozza a három dokumentum keresztellenőrzését és a keretet, az M6 kapuja a fizetési megfelelés; a szabályokat egyszer, az elején hagyja jóvá, utána ugyanúgy érvényesülnek.
+
+## A felelősség csak a két végén cserél gazdát, a közepét egy fél hangolja össze
+
+A teljes láncnak csak egyetlen összehangoló szereplője van, és a felelősségmátrixban is csak egy felelős A szerep található. A négy kulcsfontosságú interfész határait a terv rögzíti: az Ön cége birtokolja a terméket és a döntéseket, a platform a rendeléseket és az elszámolást, a végrehajtó a raktározást és a vámkezelést, a felügyelet pedig a bevallást és az ellenőrzést. Ha az interfészek rögzítettek, az átadásban nem marad üres hely.
+
+Az út második fele két demótáblázatban van: egyezik-e a rendelés és a fizetési dokumentum időzítése, és hol áll a küldemény követési száma a bevallási lista kiengedése után. A táblázatok részlet- és naplóbejegyzései visszavezetnek minden rendelés eredeti rekordjához; ezek a mozzanatok nem papíron létező folyamatok.
+
+Ön csak az M1-nél ad bemenetet és csak az M6-nál hagyja jóvá a szabályokat; közte nincs szükség lépésenkénti interfészre. Ennek a mondatnak a visszafelé olvasása fontosabb: ha a csapata minden lépésnél egyszerre akar egyeztetni a platformmal, a végrehajtóval és a felügyelettel, ez az elrendezés nem éri meg Önnek; a több kézen átadott üzenetek időköltsége felemészti a mozzanatok nyújtotta biztonságot. A fiókok és adatok Önnél maradnak, az összehangolás és a nyilvántartás nálunk; ez a munkamegosztás teszi a hat mozzanatot egyetlen vonallá.
+
+## A három dokumentum idővonala minden eltérést egy lépéshez rögzít
+
+A három dokumentum idővonalán egy sor egy rendelés; az oszlopok a rendelésszám, a fizetési dokumentum, a fuvarlevél és a bevallási lista, majd az időzítés, az eltérési elem és a lokalizációs eredmény. A fülek: minden rendelés, egyező, eltérő; a napi munkában először az eltérő fület nézze, majd térjen vissza a teljes listához ellenőrizni. A hat demósorból négyben a három dokumentum egyezik, kettőben eltérés van; az eltérést nem írják le homályos következtetésként, hogy lassú a vámkezelés, hanem egy lépéshez rendelik.
+
+A képernyőn a hat sor szintén egy sor egy rendelés, soronként hét elem: rendelésszám, fizetési dokumentum, fuvarlevél, bevallási lista, időzítés, eltérési elem és lokalizációs eredmény.
+
+- SO260922-0417: fizetési dokumentum PAY260922-0417, fuvarlevél SF7726001, bevallási lista QD260922-0417; az időzítés normális, nincs eltérés, az eredmény egyezik.
+- SO260921-0088: fizetési dokumentum PAY260921-0088, fuvarlevél SF7725880, bevallási lista QD260921-0088; az időzítés 2 órával késik, az eltérés a bevallási lista a fuvarlevél után, a lokalizációs eredmény a bevallási sor.
+- SO260919-0305: fizetési dokumentum PAY260919-0305, fuvarlevél SF7725312, bevallási lista QD260919-0305; az időzítés normális, nincs eltérés, az eredmény egyezik.
+- SO260918-0210: fizetési dokumentum PAY260918-0210, fuvarlevél SF7725210, bevallási lista QD260918-0210; az időzítés normális, nincs eltérés, az eredmény egyezik.
+- SO260917-0158: fizetési dokumentum PAY260917-0158, fuvarlevél SF7725158, bevallási lista QD260917-0158; az időzítés normális, nincs eltérés, az eredmény egyezik.
+- SO260916-0127: fizetési dokumentum PAY260916-0127, fuvarlevél SF7725127, bevallási lista QD260916-0127; az időzítés 1 órával késik, az eltérés a fizetési dokumentum a rendelés után, a lokalizációs eredmény a csatorna visszahívása.
+
+Egy rendelés sorban áthalad a fizetési dokumentumon, a fuvarlevélen és a bevallási listán; amikor a három dokumentum egymás mellett van, az eltérés ugyanabban a sorban látszik. Annál a rendelésnél, amelynek bevallási listája két órával a fuvarlevél után érkezett, a lokalizációs eredmény a bevallási sor, vagyis az áru és a dokumentum is megérkezett, a várakozás a bevallásnál van; annál a rendelésnél, amelynek fizetési dokumentuma egy órával a rendelés után érkezett, az eredmény a csatorna visszahívása, vagyis a probléma a fizetési csatorna lassú visszajelzése, nem a raktár és nem a bevallás. Ha a kivételt idáig visszakövetik, a kezelő tudja, kit kérdezzen, és nem kell újra végigkérdezni az egész láncot.
+
+![A három dokumentum idővonalának demóoldala, egy sor egy rendelés, a fizetési dokumentum, a fuvarlevél és a bevallási lista párhuzamos oszlopokban, majd az időzítés, az eltérési elem és a lokalizációs eredmény; a hat sorból négy normális és egyező, egy bevallási lista két órával a fuvarlevél után a bevallási sorhoz, egy fizetési dokumentum egy órával a rendelés után a csatorna visszahívásához rendelve](/images/blog/one-order-end-to-end-six-moments-bonded-shipment/three-document-timeline-demo.webp)
+
+## A kiengedést és a kézbesítést külön rögzítse, csak akkor látszik tisztán az idő
+
+A kiengedés és a kézbesítés két időpont, nem egy állapot. A kiengedés lezárja a vámoldalt, a kézbesítés a fogyasztói oldalt, közte pedig a szállítás van. A kiengedés és kézbesítés állapottáblázata egy sor egy rendelés; az oszlopok a bevallási lista száma, a kiengedés időpontja, a küldemény követési száma, a fuvarozó, a kézbesítés ideje és a kézbesítés állapota; a fülek: mind, kiengedett, kézbesített. Csak a két időbélyeg külön rögzítésével látszik, hogy az idő a zónában vagy az úton telik-e.
+
+A képernyőn a hat sor szintén egy sor egy rendelés, hat elem: a bevallási lista száma, a kiengedés időpontja, a küldemény követési száma, a fuvarozó, a kézbesítés ideje és a kézbesítés állapota.
+
+- QD260922-0417: kiengedés 2026-09-22 18:41, követési szám EX7726001, belföldi szakasz, kézbesítés 2026-09-24 10:12, kézbesítve.
+- QD260921-0088: kiengedés 2026-09-21 21:07, követési szám EX7725880, belföldi szakasz, még nincs kézbesítve, úton.
+- QD260919-0305: kiengedés 2026-09-19 16:22, követési szám EX7725312, fő szakasz, kézbesítés 2026-09-21 09:48, kézbesítve.
+- QD260918-0210: kiengedés 2026-09-18 17:52, követési szám EX7725210, belföldi szakasz, még nincs kézbesítve, úton.
+- QD260917-0158: kiengedés 2026-09-17 19:08, követési szám EX7725158, belföldi szakasz, kézbesítés 2026-09-19 14:26, kézbesítve.
+- QD260916-0127: kiengedés 2026-09-16 20:15, követési szám EX7725127, fő szakasz, kézbesítés 2026-09-18 11:03, kézbesítve.
+
+![A kiengedés és kézbesítés állapotának demóoldala, egy sor egy bevallási lista, a kiengedés időpontjával, a küldemény követési számával, a fuvarozóval, a kézbesítés idejével és állapotával; négy sor kézbesítve, kettő úton, a kiengedés és a kézbesítés két külön időpontként megjelenítve](/images/blog/one-order-end-to-end-six-moments-bonded-shipment/release-delivery-status-demo.webp)
+
+A négy kézbesített rendelésnél a kiengedéstől a kézbesítésig eltelt idő rendre egy nap tizenöt óra harmincegy perc, egy nap tizenhét óra huszonhat perc, egy nap tizenkilenc óra tizennyolc perc és egy nap tizennégy óra negyvennyolc perc; a leggyorsabb és a leglassabb négy és fél órával tér el. A két úton lévő rendelésnek már van kiengedési ideje, a kézbesítés ideje üres, az állapot pedig őszintén az úton marad. Ezeket a számokat nem lehet ígéretként venni; csak egy dolgot mutatnak: ugyanabban a folyamatban minden rendelés más időt vesz igénybe, és az egyedi áttekintés hasznosabb, mint az átlag.
+
+Az út az átvétellel kezdődik és a kézbesítéssel végződik, ezt a két utolsó pontot fogja meg ez a táblázat. Ha a zónából való kilépéstől a fogyasztó kezéig tartó időt szeretné csökkenteni, először nézze meg, hogy a kiengedés idejét nem húzta-e meg az előző kapu, majd hogy mennyi ideig tartott a kézbesítési szakasz; csak a két rész külön számításával tudja, mit kell változtatni.
+
+## Végigvezetés egy rendelésen az elejétől a végéig
+
+Vegye a demótáblázat SO260922-0417 rendelését, és vezesse végig egyszer. Az M1-nél a bemenet teljes, a dokumentumok átjutnak a kapun, megkapja a bevallási listát és a HS-kódot; az M2-nél az áru bekerül a vámraktárba, létrejön a vámraktári nyilvántartás, a készletnézet mutatja ezt a tételt; az M3-nál listázás előtt megtörténik az állítások felülvizsgálata, a felülvizsgálati következtetés és a közzétételi szöveg együtt archiválódik; az M4-nél a fogyasztó rendel, létrejön az identitás- és közzétételi nyilvántartás; az M5-nél a fizetés befejeződik, a fizetési dokumentum, a fuvarlevél és a bevallási lista keresztellenőrzése megtörténik, a keret ennek megfelelően csökken; az M6-nál a kiengedés után a rendelés elszámolásba és fizetésbe kerül, a kifizetési lista az elején jóváhagyott szabályok szerint készül. A teljes úton csak az M1-nél ad át dokumentumot és csak az M6-nál hagyja jóvá a szabályokat; a közepét mi hangoljuk össze.
+
+Ennek a rendelésnek a három dokumentum idővonalán mindhárom dokumentum egyezik, nincs eltérés; a kiengedés időpontja 2026-09-22 18:41, a kézbesítés ideje 2026-09-24 10:12, a kiengedéstől a kézbesítésig egy nap tizenöt óra harmincegy perc.
+
+A SO260921-0088 ugyanabból a táblázatból más utat jár: a bevallási listája két órával később van, mint a fuvarlevél, a lokalizációs eredmény a bevallási sor; a kiengedési táblázatban már 2026-09-21 21:07-kor kiengedték, a kézbesítés ideje még nem érkezett meg, az állapot úton van. A kivétel a bevallási lépésre esik; csak azért látszik, hogy a bevallásnál akadt el, nem a kézbesítésnél, mert a kiengedést és a kézbesítést külön rögzítik.
+
+## Indítás előtt kösse be a két táblázatot a napi munkába
+
+A hat mozzanat értéke, hogy rögzíti minden rendelés kiváltóját, kapuját és átadandóját; hiába szép a folyamatábra, nem pótolja ezt a két táblázatot. Indítás előtt kösse be a három dokumentum idővonalát és a kiengedés-kézbesítés táblázatot a napi ellenőrzésekbe, egy sor egy rendelés, a kivétel konkrét mozzanathoz rendelve, így a műszakátadás nem szóbeli ismétlésen alapul. A fiókok és adatok Önnél vannak, az összehangolás és a nyilvántartás nálunk, a két vég felelősségét a két táblázat hangolja össze.
+
+Ha a csapata inkább minden lépést személyesen figyel, először rögzítse a négy interfész felelősségét és a két táblázat olvasási módját, csak utána beszéljen mennyiségről; különben minél teljesebb a folyamat, annál több láncszemen kell üzenetet átadni. A demófelület rendelésszámai, időzítése és kézbesítési állapota csak szemléltetés; a tényleges alap a platform exportja és az illetékes hatóságok adott időszaki követelményei.
+
+Ha szeretné a hat mozzanatot a jelenlegi üzletére és teljesítési rendjére szabott, rendelésenként visszakövethető úttáblázattá alakítani, [lépjen kapcsolatba velünk](/hu/packages/).

@@ -1,0 +1,113 @@
+---
+title: "Nouă interfețe în platformele vamale chineze, sănătate și marjă de vârf"
+date: "2027-06-22"
+category: "E-commerce"
+excerpt: "Interfețele standard au prioritate, restul e mapat prin middleware; indicatorii notează apelurile și eșecurile. Datele rămân în țară, marja se rezervă, deficitele se urmăresc pe SKU."
+references:
+  - title: "Anunțul nr. 194 din 2018 al Administrației Generale a Vămilor din China privind supravegherea mărfurilor de import și export cu amănuntul în comerțul electronic transfrontalier"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Legea Republicii Populare Chineze privind protecția informațiilor personale, adoptată la 20 august 2021, articolele 38, 39 și 55"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+  - title: "Dispozițiile privind promovarea și reglementarea fluxurilor transfrontaliere de date, Ordinul nr. 16 al Administrației Cibernetice a Chinei, în vigoare de la 22 martie 2024"
+    url: "https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm"
+---
+
+Cele nouă familii de interfețe pot conecta sistemele dumneavoastră existente la platformele vamale din China, cu condiția ca interfețele standard să aibă prioritate, datele să rămână în țară, iar pentru vârful promoțional să se rezerve o marjă de 10 ori la vârf. Acolo unde există o interfață standard, ea se conectează direct, iar unde nu există, se mapează prin middleware; indicatorii de sănătate notează pentru fiecare tip volumul apelurilor, rata de succes, latența și retransmiterea eșecurilor, iar două rânduri, trimiterea comenzii și returnarea plății, consemnează fluxul celor trei documente. Reperele publice de piață plasează integrarea standard la 3 până la 7 zile și integrarea completă la 8 până la 12 săptămâni și sunt doar valori de ordin de mărime; data reală a lansării o decid testul comun și ciclul de decontare în paralel.
+
+![Demonstrația de integrare de sistem prezintă tabelul celor nouă familii de interfețe, cu coloanele sistemul dumneavoastră, elementul de integrare, direcția și destinația, nouă rânduri de la produse și stoc până la finanțe, patru principii ale fluxului de date și cei patru indicatori de sănătate ai monitorului de test comun](/images/blog/china-bonded-platforms-nine-interfaces/nine-interface-families-mapping.webp)
+
+## În ce tabel ajunge fiecare dintre cele nouă familii de interfețe
+
+Tabelul interfețelor se scrie pe patru coloane: pe ce parte se află sistemul dumneavoastră, care este elementul de integrare, cine conduce direcția și unde ajung în final datele. Direcția are doar trei forme, bidirecțională, de intrare și la inițiativa dumneavoastră, iar rândurile fără direcție marcată sunt preluate de partea noastră; coloana de destinație arată cărui registru îi aparține fiecare câmp, astfel încât oricine preia lucrarea poate verifica după tabel.
+
+- Produse și stoc: stocuri și prețuri SKU, bidirecțional, menținute în concordanță cu sistemul de management al depozitului și cu registrul vamal.
+- Comenzi: datele comenzilor, de intrare, ajung în câmpurile celor trei documente.
+- Datele membrilor: relațiile de promovare, la inițiativa dumneavoastră, datele vă aparțin, iar noi le prelucrăm ca împuternicit.
+- Decontarea comisioanelor: plata comisioanelor, bidirecțională, segmentul din țară este executat de entitatea din țară.
+- Stoc: sistemul de antrepozit vamal, fără direcție marcată, ajunge în sistemul de operare vamală și împarte sursa cu registrul.
+- Vamă: declarația celor trei documente, fără direcție marcată, declarația este asumată de noi și rămâne un element sub controlul nostru.
+- Execuția: returnarea traseului, fără direcție marcată, traseul logistic este rescris în vizualizarea comenzii.
+- Retururi: documentele de retur, fără direcție marcată, retururile reintră în zona de supraveghere prin centrul de retururi.
+- Finanțe: decontarea, de ieșire, include moneda și schimbul valutar.
+
+Unde circulă datele decide cum se construiesc interfețele. Registrele de pe partea din țară și panourile de pe partea din afara țării trebuie ținute separat, altfel, la testul comun, ambele părți vor suprascrie aceleași câmpuri.
+
+- Datele de promovare colectate în țară și decontate în țară rămân în țară.
+- Către societatea-mamă din afara țării ajung doar date agregate de-identificate, fără relațiile de comision din țară.
+- Biroul din străinătate nu atinge datele brute ale consumatorilor chinezi, iar rutele transfrontaliere se deschid numai după ce evaluarea de impact asupra protecției datelor personale este trecută.
+- Datele de promovare și de comision din țară permit exportul integral și, la predare, vă sunt înmânate împreună cu registrele.
+
+Monitorul de test comun al interfețelor așază indicatorii de sănătate în patru rânduri, după tipul interfeței și partener, iar fiecare verificare de sănătate și fiecare retransmitere lasă câte o înregistrare. Pagina de demonstrație scrie trei elemente, tipul interfeței, partenerul și indicatorul de sănătate, care corespund aceleiași serii din demonstrația interfeței de sistem, iar în timpul testului comun rândurile sunt parcurse zilnic, unul câte unul.
+
+- Trimiterea comenzii, partener frontul magazinului, indicator de sănătate normal.
+- Returnarea plății, partener canalul de plată, indicator de sănătate normal.
+- Returnarea documentului de transport, partener curierul, indicator de sănătate avertizare.
+- Declarația listei, partener canalul de declarare, indicator de sănătate normal.
+
+Termenii integrării se stabilesc mai întâi în jurul interfețelor standard: acolo unde există o interfață standard, ea se conectează direct, iar unde nu există, se mapează prin middleware. Reperele publice de piață plasează integrarea standard la 3 până la 7 zile și integrarea completă la 8 până la 12 săptămâni, iar pentru vârful promoțional se rezervă o marjă de 10 ori la vârf. Fiecare parte desemnează câte un contact tehnic și, pe durata testului comun, ține zilnic o ședință de coordonare. După lansare se rulează mai întâi un ciclu complet de decontare în paralel înainte de comutare, astfel încât, în perioada de funcționare în paralel, datele celor două sisteme să nu se despartă.
+
+## Cum se citesc indicatorii de sănătate și unde se notează eșecurile retransmise
+
+Jurnalul de sănătate al interfețelor dă câte un rând pentru fiecare tip de interfață, cu file pentru toate interfețele, normal și anormal, iar fiecare rând notează partenerul, volumul apelurilor, rata de succes, latența, numărul de eșecuri, retransmiterea și indicatorul de sănătate. Să parcurgem trimiterea comenzii: 1284 de apeluri azi, o rată de succes de 100%, o latență medie de 186 de milisecunde, 0 eșecuri și indicator de sănătate normal; returnarea plății a avut tot 1284 de apeluri, o rată de succes de 99,9%, 1 eșec deja retransmis cu succes, iar indicatorul de sănătate a rămas normal. Aceste două rânduri sunt dovada că fluxul celor trei documente se află în sistem.
+
+După ce cele nouă familii de interfețe sunt mapate, volumele de apeluri și datele de sănătate din timpul rulării ajung toate în acest jurnal, iar două rânduri, trimiterea comenzii și returnarea plății, consemnează cum a aterizat fluxul celor trei documente. În partea de jos a interfeței de demonstrație sunt notate 12 înregistrări în total și 20 pe pagină, iar la finalul fiecărui rând se află două intrări, detalii și jurnal; toate cele nouă rânduri urmează aceeași serie de coloane.
+
+![Demonstrația interfeței de sistem a jurnalului de sănătate afișează nouă rânduri de interfețe pe nouă coloane, tip de interfață, partener, apeluri azi, rata de succes, latența medie, eșecuri, retransmitere, indicator de sănătate și acțiuni, și notează 12 înregistrări și 20 pe pagină în partea de jos](/images/blog/china-bonded-platforms-nine-interfaces/interface-health-log-system-demo.webp)
+
+- Trimiterea comenzii, frontul magazinului, 1284 de apeluri azi, rată de succes 100%, latență medie 186 de milisecunde, 0 eșecuri, fără retransmitere, indicator de sănătate normal, detalii și jurnal;
+- Returnarea plății, canalul de plată, 1284, 99,9%, 210 milisecunde, 1 eșec, retransmis, normal, detalii și jurnal;
+- Returnarea documentului de transport, curierul, 1266, 99,2%, 340 milisecunde, 10 eșecuri, în curs de retransmitere, avertizare, detalii și jurnal;
+- Declarația listei, canalul de declarare, 1266, 99,8%, 520 milisecunde, 3 eșecuri, retransmis, normal, detalii și jurnal;
+- Interogarea plafonului, canalul de interogare, 1284, 100%, 150 milisecunde, 0 eșecuri, fără retransmitere, normal, detalii și jurnal;
+- Sincronizarea registrului, antrepozitul vamal, 96, 100%, 430 milisecunde, 0 eșecuri, fără retransmitere, normal, detalii și jurnal;
+- Rescrierea stării de liberare, canalul de declarare, 1240, 99,6%, 610 milisecunde, 5 eșecuri, retransmis, normal, detalii și jurnal;
+- Traseul logistic, curierul, 1240, 98,7%, 720 milisecunde, 16 eșecuri, în curs de retransmitere, avertizare, detalii și jurnal;
+- Fișierul de reconciliere, sistemul financiar, 12, 100%, 980 milisecunde, 0 eșecuri, fără retransmitere, normal, detalii și jurnal.
+
+## Cum se stabilește vârful promoțional și câtă capacitate se rezervă
+
+Verdictul de vârf se împarte în patru cazuri după volum și nevoile de răspuns: volum mic cu răspuns ridicat urmărește elasticitatea, volum mare cu răspuns ridicat urmărește timpul de pregătire, volum mic cu răspuns scăzut urmărește capacitatea de bază, iar volum mare cu răspuns scăzut urmărește capacitatea în regim stabil. Curba de capacitate raportată la capacitatea zilnică are trei niveluri: 1 dată pentru ziua obișnuită, de 4 până la 5 ori pentru vârful promoțional și de 10 ori la vârf, iar pe partea de vârf se rezervă o marjă de 10 ori. Cu cât ne dați mai devreme volumele pre-înregistrate, cu atât avem mai mult loc pentru extindere și pentru planul de personal; dacă volumele sosesc cu o săptămână înainte de vârful promoțional, singurul lucru care se mai poate ajusta este personalul suplimentar.
+
+- Volum mic și nevoi ridicate de răspuns merg la elasticitatea de vârf: cazurile publice rulează la de 4 până la 5 ori volumul zilnic mediu, vârfurile ajung de la zeci de mii la sute de mii de unități, iar personalul din vârful promoțional este de aproximativ 3 ori mai mare decât în mod obișnuit, toate acestea fiind repere din cazuri publice.
+- Volum mare și nevoi ridicate de răspuns sunt limitate de timpul de pregătire: vârfurile ultraînalte au nevoie de un timp de pregătire, creșterea SKU mărește deopotrivă antrepozitul și registrul, vârful promoțional se rezervă la de 10 ori vârful, iar volumele de intrare le furnizați dumneavoastră.
+- Volum mic și nevoi scăzute de răspuns reprezintă capacitatea de bază: un magazin de marcă cu plăți autorizate, documente integrate, peste 50 de puncte vamale și peste 70 de sisteme ERP conectate, certificare AEO avansată și vămuire proprie, iar partea noastră este pregătită.
+- Volum mare și nevoi scăzute de răspuns reprezintă capacitatea în regim stabil: dimensionată după comenzile zilnice medii, cu intrare timpurie în antrepozit și depozitare pe zone, personal permanent și temporar împreună, volumele pre-înregistrate stabilite dinainte și retururile reintrate în zona de supraveghere, iar partea noastră le urmează ca proces.
+
+Candidații pentru antrepozit sunt patru situri de zonă vamală integrată plus antrepozitul din Hong Kong, China. Cele patru situri în paralel înseamnă redundanță pe mai multe puncte vamale, punctul vamal final îl stabiliți dumneavoastră, iar lista candidaților vă este înmânată încă din etapa de început, fără să fie nevoie să așteptați ca marfa să ajungă în port. Antrepozitul din Hong Kong, China este trecut pe partea din afara țării și este înregistrat separat de cele patru situri din țară.
+
+![Demonstrația de capacitate a platformei și de execuție pentru verdictul de vârf promoțional arată patru cadrane după volum și nevoi de răspuns în stânga, o curbă de capacitate pe trei niveluri raportată la capacitatea zilnică în dreapta sus, un panou al volumelor pre-înregistrate în dreapta jos și patru situri de zonă vamală integrată cu un antrepozit în Hong Kong, China dedesubt](/images/blog/china-bonded-platforms-nine-interfaces/mega-sale-peak-capacity-verdict.webp)
+
+- Yiwu, Zhejiang, antrepozit vamal cu regimul vamal 1210.
+- Hangzhou, Zhejiang, antrepozit vamal cu regimul vamal 1210.
+- Guangzhou Huangpu, Guangdong, antrepozit vamal cu regimul vamal 1210.
+- Shenzhen Qianhai, Guangdong, antrepozit vamal cu regimul vamal 1210.
+- Hong Kong, China, în afara țării, antrepozit vamal în Hong Kong, China.
+
+Panoul volumelor pre-înregistrate pentru vârful promoțional listează patru rânduri pe șapte coloane, SKU, volum pre-înregistrat, înregistrat, progres, finalizare estimată, stare și acțiune, iar fiecare rând are două intrări, detalii și jurnal. Progresul și data estimată de finalizare stabilesc ordinea de aprovizionare pentru fiecare SKU, iar deficitele sunt urmărite rând cu rând în tabelul de urmărire a volumelor pre-înregistrate.
+
+- Coenzima Q10 capsule moi, volum pre-înregistrat 12000, înregistrat 8400, progres 70%, finalizare estimată 10-12, în curs, detalii și jurnal;
+- Capsule cu ulei de pește de adâncime, 8000, 6400, 80%, 10-08, în curs, detalii și jurnal;
+- Băutură solidă cu pudră proteică, 6000, 2400, 40%, 10-18, în curs, detalii și jurnal;
+- Pudră liofilizată probiotică, 5000, 5000, 100%, fără dată de finalizare marcată, finalizat, detalii și jurnal.
+
+## Cum se urmăresc rând cu rând deficitele volumelor pre-înregistrate
+
+Tabelul de urmărire a volumelor pre-înregistrate din modulul de stoc dă câte un rând pentru fiecare SKU și scrie volumul pre-înregistrat, înregistrat, progresul, deficitul, finalizarea estimată și starea. Să parcurgem coenzima Q10 capsule moi: volum pre-înregistrat 12000, înregistrat 8400, progres 70%, deficit 3600, de completat până la 10-12; capsulele cu ulei de pește de adâncime au progres 80%, deficit 1600, de completat până la 10-08. Curba de capacitate pe trei niveluri se transformă aici în acțiuni de aprovizionare, astfel încât cât de mare este deficitul și în ce zi se completează se văd din timp.
+
+În partea de jos a interfeței sunt notate 7 înregistrări în total și 20 pe pagină, iar la finalul fiecărui rând se află două intrări, detalii și jurnal; filele de urmărire a volumelor pre-înregistrate și de avertizare la sosire stau una lângă alta, iar linia întâi comută între file fără să refiltreze. Toate cele șapte rânduri urmează aceeași serie de coloane.
+
+![Demonstrația interfeței de sistem a urmăririi volumelor pre-înregistrate afișează șapte rânduri de produse pe opt coloane, SKU, volum pre-înregistrat, înregistrat, progres, deficit, finalizare estimată, stare și acțiuni, și notează 7 înregistrări și 20 pe pagină în partea de jos](/images/blog/china-bonded-platforms-nine-interfaces/pre-filed-volume-tracking-system-demo.webp)
+
+- Coenzima Q10 capsule moi, 12000, 8400, 70%, deficit 3600, 10-12, în curs, detalii și jurnal;
+- Capsule cu ulei de pește de adâncime, 8000, 6400, 80%, deficit 1600, 10-08, în curs, detalii și jurnal;
+- Băutură solidă cu pudră proteică, 6000, 2400, 40%, deficit 3600, 10-18, în curs, detalii și jurnal;
+- Pudră liofilizată probiotică, 5000, 5000, 100%, deficit 0, fără dată de finalizare marcată, finalizat, detalii și jurnal;
+- Pudră de peptide de colagen din pește, 6000, 3000, 50%, deficit 3000, 10-15, în curs, detalii și jurnal;
+- Tablete masticabile cu vitamina C, 9000, 8100, 90%, deficit 900, 10-06, în curs, detalii și jurnal;
+- Jeleuri cu melatonină, 4000, 4000, 100%, deficit 0, fără dată de finalizare marcată, finalizat, detalii și jurnal.
+
+## Ce se fixează înainte de lansare pe interfețe și comutare
+
+Înainte de lansare se fixează trei lucruri: interfețele standard și maparea prin middleware se scriu în tabelul interfețelor, pragurile indicatorilor de sănătate, retransmiterea eșecurilor și responsabilii se prind de rânduri, iar volumele pre-înregistrate și treptele de capacitate se aliniază la aceeași serie de SKU. Dacă vreunul dintre cele trei lipsește, testul comun se blochează mereu pe retransmiteri. Volumele apelurilor, ratele de succes, volumele pre-înregistrate și datele de finalizare din interfața de demonstrație sunt doar ilustrative, cifrele de vârf și de personal provin din cazuri publice și arată numai ordinul de mărime, iar volumele reale le furnizați dumneavoastră; practica reală de declarare urmează cerințele autorității competente, iar rutele transfrontaliere de date urmează concluzia evaluării de impact asupra protecției datelor personale. Înainte de comutare se rulează un ciclu complet de decontare în paralel, se confirmă că datele celor două sisteme nu s-au despărțit și abia apoi se mută traficul.
+
+Dacă doriți ca cele nouă familii de interfețe să fie conectate la execuția vamală după stiva dumneavoastră de sisteme și planul de puncte vamale, cu indicatorii de sănătate și volumele pre-înregistrate verificate rând cu rând, vă invităm să [Contactați-ne](/ro/packages/).

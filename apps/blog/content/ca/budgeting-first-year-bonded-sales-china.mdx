@@ -1,0 +1,91 @@
+---
+title: "Pressupost del primer any de vendes en dipòsit duaner en tres escenaris"
+date: "2027-08-10"
+category: "E-commerce"
+excerpt: "Primer any en dipòsit duaner, tres nivells. Una taula, només canvien els valors i el nivell segueix la validació. Quatre deduccions segons el volum. Tarifes només al pressupost."
+references:
+  - title: "Notificació del Ministeri d'Hisenda, l'Administració General de Duanes i l'Administració Tributària de l'Estat sobre la política fiscal per a les importacions al detall del comerç electrònic transfronterer (Cai Guan Shui [2016] núm. 18; tipus aranzelari fixat provisionalment en el 0%; IVA i impost sobre el consum a la importació recaptats al 70% de l'import legalment degut)"
+    url: "https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html"
+  - title: "Notificació del Ministeri d'Hisenda, l'Administració General de Duanes i l'Administració Tributària de l'Estat sobre la millora de la política fiscal per a les importacions al detall del comerç electrònic transfronterer (Cai Guan Shui [2018] núm. 49; límit per operació de 5000 yuan i límit anual de 26000 yuan)"
+    url: "https://czt.hlj.gov.cn/czt/c110905/202001/c00_30603063.shtml"
+  - title: "Notificació de sis organismes sobre la millora de la supervisió de les importacions al detall del comerç electrònic transfronterer (Shang Cai Fa [2018] núm. 486)"
+    url: "https://www.mofcom.gov.cn/article/b/fwzl/201811/20181102812004.shtml"
+  - title: "Anunci núm. 194 de 2018 de l'Administració General de Duanes sobre la supervisió de les mercaderies d'importació i exportació al detall del comerç electrònic transfronterer"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+---
+
+Un primer any en dipòsit duaner es resumeix en un sol compte: per cada 100 yuan de GMV, les despeses de gestió, el compliment de comandes i el primer tram, els impostos i la comissió resten en conjunt 37.1 yuan i deixen 62.9 yuan de marge de contribució; amb aquest marge es cobreix la inversió fixa i s'obté el termini de recuperació. Els tres escenaris canvien els valors d'entrada, no aquest mètode.
+
+## Tres escenaris, primer el límit dels SKU
+
+L'escenari conservador treballa amb 3 a 5 SKU i prioritza la validació i la reputació. Primer es porta un sol SKU de principi a fi i, quan tornen les dades, es passa a l'escenari base; s'observen quatre aspectes, amb la conversió i la recompra al davant.
+
+L'escenari base treballa amb 8 a 12 SKU i busca acostar-se al punt d'equilibri dins del primer any. La taula de paràmetres continua sent la mateixa, només canvien els valors d'entrada i el nivell segueix els resultats de la validació; el model de la taxa neta s'hi aplica directament.
+
+L'escenari optimista treballa amb tots els SKU i es recolza en el volum per diluir els costos fixos. Només s'augmenta el volum quan estan a punt l'aprovisionament de tots els SKU i el sistema de promoció; les setze preparacions prèvies al llançament són la condició prèvia. Cada escenari té les seves condicions d'entrada i el pas entre nivells no és automàtic: si no es compleixen, es roman en l'anterior.
+
+![Escenaris del primer any i paràmetres ajustables: a l'esquerra, tres targetes per a l'escenari conservador, base i optimista, marcades amb 3 a 5 SKU, 8 a 12 SKU i tots els SKU amb les seves condicions d'entrada; a sota, els cinc segments de deducció per cada 100 yuan de GMV i els 62.9 yuan de marge de contribució; al peu, la cadena de sis baules des de les hipòtesis d'entrada, GMV, deduccions, marge de contribució i inversió fixa fins al termini de recuperació](/images/blog/budgeting-first-year-bonded-sales-china/year-one-model-three-scenarios.webp)
+
+## Tres hipòtesis que ompliu vós
+
+El model només necessita tres hipòtesis de la vostra part: el valor mitjà de la comanda, la taxa de recompra i el sostre de la comissió de promoció. Nosaltres aportem l'estructura i les eines, els números surten dels vostres paràmetres, lliurats en un full de càlcul interactiu i sense valors objectiu predefinits.
+
+La cadena del model té sis baules. Les hipòtesis d'entrada converteixen el nombre de SKU, el valor mitjà de la comanda i les recompras en GMV; cada escenari calcula el seu propi volum de vendes. Després es resten quatre partides: l'impost consolidat, la comissió de plataforma, el compliment i la comissió de promoció. El GMV menys aquestes quatre dóna el marge de contribució. La inversió fixa cobreix la integració de sistemes, l'amortització del primer tram en lots i la tenença del registre. Quan el marge acumulat cobreix la inversió fixa, s'obté el termini de recuperació.
+
+La cadena la gestioneu vós. Canvieu una sola hipòtesi i totes les xifres posteriors es mouen; el mètode queda a la vista, de manera que el podeu portar a una aprovació interna sense fiar-vos del to de ningú.
+
+## Cada 100 yuan de GMV, 37.1 yuan en quatre deduccions
+
+La composició del marge per cada 100 yuan de GMV: despeses de gestió 6.0 yuan, compliment i primer tram 7.0 yuan, impostos 9.1 yuan, comissió 15.0 yuan, en total 37.1 yuan i 62.9 yuan de marge de contribució. Els cinc segments sumen exactament el 100%; l'estructura és la mateixa en els tres escenaris i la diferència és en l'escala i la dilució de les partides fixes.
+
+El 9.1% de la partida d'impostos és la càrrega fiscal combinada de les importacions al detall del comerç electrònic transfronterer: el tipus aranzelari es fixa provisionalment en el 0%, i l'IVA i l'impost sobre el consum a la importació es recapten al 70% de l'import legalment degut. És un nombre calculat sobre tot el règim fiscal, així que no hi sumiu directament el tipus d'un sol impost.
+
+Les deduccions creixen en proporció al volum de comandes. Si el volum es duplica, les quatre deduccions es dupliquen i el marge de contribució segueix la mateixa proporció; la inversió fixa no acompanya el volum, de manera que el que l'augment d'escala dilueix de veritat és aquest costat fix. Les proporcions mostrades són un criteri il·lustratiu: no són un pressupost ni una promesa de rendiment.
+
+## Recorrem l'escenari conservador
+
+Prenem l'escenari conservador per a un càlcul. 3 SKU, 25 comandes al mes per SKU, unes 900 comandes a l'any; amb un valor mitjà de la comanda de 300 yuan, el GMV anual és de 270,000 yuan. Al 37.1%, les quatre deduccions sumen 100,170 yuan: despeses de gestió 16,200 yuan, compliment i primer tram 18,900 yuan, impostos 24,570 yuan, comissió 40,500 yuan.
+
+El marge de contribució és de 169,830 yuan. Estimeu la inversió fixa en 150,000 yuan, que inclou la integració de sistemes, l'amortització del primer tram en lots i la tenença del registre; el marge de contribució mensual ronda els 14,153 yuan i el marge acumulat cobreix la inversió fixa cap al mes 11, amb la recuperació dins del primer any. Canvieu el valor mitjà de la comanda o les recompras i el resultat es mou; els paràmetres els ompliu vós, nosaltres no canviem el mètode.
+
+## Tres formes de facturació
+
+Per comanda: es liquida segons el nombre de comandes i convé en fases amb volum previsible i estructura de SKU estable.
+
+En percentatge del GMV: es liquida en proporció a les vendes i convé a la fase d'augment de volum, on una escala més gran reparteix millor el cost unitari.
+
+Quota mensual més import per comanda: una quota fixa cobreix el personal i els sistemes bàsics, i l'excés se suma per comanda, de manera que el pressupost es pot fixar per endavant.
+
+Les tres formes es cotitzen contra cinc factors: volum de comandes, nombre de SKU, requisits de termini, moneda de liquidació i serveis de valor afegit. Canvien els cinc i l'estructura del pressupost canvia amb ells.
+
+![Opcions de facturació i aportacions de la vostra banda: a dalt, per comanda, en percentatge del GMV i quota mensual més import per comanda, amb els cinc factors de tarifa i les vuit seccions del pressupost a la dreta; a baix, persones, fons, documentació i temps amb els seus moments, amb la nota que començar a temps parcial no crea llocs de plantilla permanents i que les quatre plantilles de llista es lliuren amb els lliuraments de la fase S0](/images/blog/budgeting-first-year-bonded-sales-china/billing-options-and-budget-inputs.webp)
+
+## Partides fora de l'abast i requisits previs
+
+Les partides fora de l'abast es delimiten primer, per exemple l'activació posterior del canal 9610, l'adaptació dels sistemes de la seu o la remuneració dels IBO a l'estranger; els nostres honoraris figuren a part en el pressupost formal i no es barregen amb les tres formes de facturació.
+
+El pressupost formal exigeix cinc requisits previs: la llista de SKU i els volums, la disponibilitat del CoA (informe d'assaig) del mateix lot, l'orientació de la via de l'entitat, la preferència pel port de destinació i l'orientació de l'estratègia d'al·legacions. Amb els cinc a punt, arriba el pressupost formal.
+
+Encara sense dades es pot emetre una primera versió: amb valors de referència del sector, indicant la base de cada valor, per substituir-los quan arribin les vostres dades mesurades.
+
+## Les vuit seccions del pressupost
+
+El pressupost formal es desenvolupa en vuit seccions: límits de l'abast, correspondència de tarifes, estructura de tarifes, desglossament de costos, ritme de pagaments, impostos i facturació, responsabilitat i indemnització, i condicions de contorn. El detall va com a annex comercial i tots els imports es regeixen pel pressupost formal; una xifra dita de paraula en una reunió no compta.
+
+## Quatre aportacions de la vostra banda
+
+Persones: 1 a 2 persones en finances i compliment, amb inici a temps parcial, més 1 interlocutor comercial; començar a temps parcial no crea llocs de plantilla permanents. Calen des de l'arrencada, en paral·lel amb la fase d'arrencada S0.
+
+Fons: el primer aprovisionament es dimensiona segons els SKU pilot i 2 a 3 mesos de rotació, la inversió publicitària es valida en etapes curtes i la garantia fiscal es constitueix segons el que exigeixi el port. Tot ha d'estar a punt abans de l'aprovisionament i la posada a la venda.
+
+Documentació: els documents de producte, assaig, qualificació i marca s'organitzen en quatre llistes, completades progressivament a cada node d'admissió; les quatre plantilles de llista es lliuren amb els lliuraments de la fase S0.
+
+Temps: tres decisions, via de l'entitat, port de destinació i estratègia d'al·legacions, incideixen directament en el calendari; tancar-les abans de S0 fixa el calendari i, amb les decisions preses, la feina entra a la fase d'execució M1.
+
+Personal i fons són intervals pràctics; el pressupost s'emet segons les condicions mesurades, el pressupost formal surt quan la documentació és completa i el detall de tarifes només hi figura.
+
+## Comenceu per la capçalera de la taula
+
+El pressupost del primer any cap en una taula: columnes per a tres escenaris, files per a tres hipòtesis, quatre deduccions, una fila d'inversió fixa i una fila de termini de recuperació. Primer s'omplen els valors, després es parla del pressupost; les tarifes només valen en el pressupost formal i les xifres de demostració expliquen el mètode.
+
+El pas següent és posar en aquesta taula la vostra llista de SKU, el valor mitjà de la comanda i les recompras. Si encara queda algun valor d'entrada per definir, [Contacteu-nos](/ca/packages/).

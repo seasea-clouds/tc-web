@@ -1,0 +1,113 @@
+---
+title: "Neuf interfaces au dépôt sous douane de Chine, voyants de santé et marge de pic"
+date: "2027-06-22"
+category: "E-commerce"
+excerpt: "Les interfaces standard passent d'abord et l'intergiciel couvre le reste; les voyants de santé notent appels, réussite et renvois. Les données restent et une marge de pic est réservée."
+references:
+  - title: "Avis n° 194 de 2018 de l'Administration générale des douanes de Chine relatif à la surveillance des marchandises d'importation et d'exportation au détail dans le commerce électronique transfrontalier"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Loi sur la protection des informations personnelles de la République populaire de Chine, adoptée le 20 août 2021, articles 38, 39 et 55"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+  - title: "Dispositions visant à promouvoir et à réglementer les flux transfrontaliers de données, Ordonnance n° 16 de l'Administration du cyberespace de Chine, en vigueur depuis le 22 mars 2024"
+    url: "https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm"
+---
+
+Les neuf familles d'interfaces peuvent relier vos systèmes actuels à la plateforme sous douane de Chine, à condition que les interfaces standard passent d'abord, que les données restent dans le pays et que la campagne promotionnelle réserve une marge pour un pic de 10 fois. Là où une interface standard existe, elle se connecte directement, et là où il n'y en a pas, l'intergiciel assure le mappage; les voyants de santé enregistrent par type le volume d'appels, le taux de réussite, la latence et les défaillances avec leurs renvois, et les deux lignes d'envoi des commandes et de retour des paiements consignent le flux des trois documents. Les références publiques du marché situent l'intégration standard à 3 à 7 jours et l'intégration complète à 8 à 12 semaines, et ne valent que comme ordre de grandeur; ce qui fixe réellement la date de mise en service, ce sont les tests conjoints et un cycle de règlement mené en parallèle.
+
+![La démonstration montre la table des neuf familles d'interfaces, avec les quatre colonnes que sont votre système, l'élément d'intégration, la direction et le point d'arrivée, neuf lignes de biens et stocks, commandes, données des membres, règlement des commissions, stocks, douanes, exécution, retours et finances, et en dessous les quatre principes de flux de données et les quatre voyants de santé du moniteur de tests conjoints.](/images/blog/china-bonded-platforms-nine-interfaces/nine-interface-families-mapping.webp)
+
+## Dans quelle table atterrit chacune des neuf familles d'interfaces
+
+La table des interfaces s'écrit en quatre colonnes, à savoir de quel côté se trouve votre système, quel est l'élément d'intégration, qui dirige le sens et où les données atterrissent finalement. Le sens ne prend que trois formes, bidirectionnel, entrant et piloté par vous, et les lignes sans sens indiqué sont prises en charge de notre côté. La colonne du point d'arrivée précise à quel registre comptable appartient chaque champ, de sorte que la personne qui reprend le dossier peut le vérifier en suivant la table.
+
+- Biens et stocks: stocks et prix par SKU, bidirectionnel, en cohérence avec le système de gestion d'entrepôt et le registre comptable douanier.
+- Commandes: données de commandes, entrant, atterrissent dans les champs des trois documents.
+- Données des membres: relations des promoteurs, piloté par vous, les données vous appartiennent et nous les traitons en qualité de sous-traitant.
+- Règlement des commissions: versement des commissions, bidirectionnel, le tronçon national est exécuté par l'entité établie dans le pays.
+- Stocks: système d'entreposage sous douane, sans sens indiqué, atterrit dans le système d'exploitation sous douane et partage sa source avec le registre comptable.
+- Douanes: déclaration des trois documents, sans sens indiqué, la déclaration est à notre charge et relève d'un point sous notre contrôle.
+- Exécution: retour des traces, sans sens indiqué, la trace logistique est réécrite dans la vue des commandes.
+- Retours: documents de retour, sans sens indiqué, les retours rentrent à nouveau dans la zone sous surveillance douanière par le centre de retours.
+- Finances: règlement, sortant, inclut la devise et le change.
+
+Là où vont les données décide de la façon dont les interfaces se construisent. Le registre comptable du côté national et le tableau de bord du côté extérieur doivent rester séparés, sinon, pendant les tests conjoints, les deux côtés écraseraient le même jeu de champs l'un l'autre.
+
+- Les données de promotion collectées et réglées dans le pays y restent.
+- Seules des données agrégées désidentifiées retournent à votre maison mère à l'étranger, sans relations de commissions nationales.
+- Le système de gestion à l'étranger ne touche jamais aux données brutes des consommateurs chinois; les chemins transfrontaliers ne s'ouvrent qu'après la réussite de l'évaluation d'impact sur la protection des informations personnelles.
+- Les données nationales de promotion et de commissions admettent une exportation complète et vous sont remises avec le registre comptable lors du transfert.
+
+Le moniteur de tests conjoints des interfaces répartit les voyants de santé en quatre lignes par type d'interface et contrepartie, et chaque contrôle de santé et chaque renvoi laisse une trace. La page de démonstration écrit trois éléments, à savoir type d'interface, contrepartie et voyant de santé, qui correspondent au même jeu que la démonstration de l'interface du système, et pendant les tests conjoints ils sont passés en revue ligne par ligne chaque jour.
+
+- Envoi des commandes, contrepartie la boutique en ligne, voyant de santé normal.
+- Retour des paiements, contrepartie le canal de paiement, voyant de santé normal.
+- Retour des bordereaux, contrepartie le coursier, voyant de santé en alerte.
+- Déclaration de la liste, contrepartie le canal de déclaration, voyant de santé normal.
+
+La façon d'intégrer commence par fixer les interfaces standard. Là où une interface standard existe, elle se connecte directement, et là où il n'y en a pas, l'intergiciel assure le mappage. Les références publiques du marché situent l'intégration standard à 3 à 7 jours et l'intégration complète à 8 à 12 semaines, et la campagne promotionnelle réserve une marge pour un pic de 10 fois. Chaque partie désigne un contact technique et tient une réunion quotidienne pendant les tests conjoints. Après la mise en service, un cycle de règlement complet est mené en parallèle avant la bascule, de sorte que les données des deux systèmes ne divergent pas pendant la période de double exécution.
+
+## Comment lire les voyants de santé et où sont consignés les renvois ayant échoué
+
+Le journal de santé des interfaces consacre une ligne à chaque type d'interface, avec des onglets pour toutes les interfaces, les normales et les anormales, et chaque ligne écrit contrepartie, volume d'appels, taux de réussite, latence, défaillances, renvoi et voyant de santé. Prenons l'envoi des commandes comme exemple. Il enregistre aujourd'hui 1284 appels, un taux de réussite de 100%, une latence moyenne de 186 millisecondes, 0 défaillance et un voyant de santé normal; le retour des paiements totalise également 1284 appels, avec un taux de réussite de 99,9%, 1 défaillance déjà renvoyée avec succès et un voyant de santé toujours normal. Ces deux lignes prouvent que le flux des trois documents demeure dans le système.
+
+Une fois les neuf familles d'interfaces mappées, les volumes d'appels et les données de santé à l'exécution atterrissent tous dans ce journal, et les deux lignes d'envoi des commandes et de retour des paiements notent comment le flux des trois documents a atterri. En bas de l'interface de démonstration figurent 12 enregistrements au total et 20 par page, et à la fin de chaque ligne se trouvent deux accès, détail et journal; les neuf lignes sont énumérées en entier avec le même jeu de colonnes.
+
+![La démonstration de l'interface du journal de santé des interfaces énumère neuf lignes dans neuf colonnes, à savoir type d'interface, contrepartie, appels du jour, taux de réussite, latence moyenne, défaillances, renvoi, voyant de santé et actions, et indique en bas 12 enregistrements au total et 20 par page.](/images/blog/china-bonded-platforms-nine-interfaces/interface-health-log-system-demo.webp)
+
+- Envoi des commandes, boutique en ligne, 1284 appels aujourd'hui, taux de réussite de 100%, latence moyenne de 186 millisecondes, 0 défaillance, sans renvoi, voyant de santé normal, détail et journal;
+- Retour des paiements, canal de paiement, 1284, 99,9%, 210 millisecondes, 1 défaillance, renvoyé, normal, détail et journal;
+- Retour des bordereaux, coursier, 1266, 99,2%, 340 millisecondes, 10 défaillances, renvoi en cours, en alerte, détail et journal;
+- Déclaration de la liste, canal de déclaration, 1266, 99,8%, 520 millisecondes, 3 défaillances, renvoyé, normal, détail et journal;
+- Consultation du quota, canal de consultation, 1284, 100%, 150 millisecondes, 0 défaillance, sans renvoi, normal, détail et journal;
+- Synchronisation du registre comptable, entrepôt sous douane, 96, 100%, 430 millisecondes, 0 défaillance, sans renvoi, normal, détail et journal;
+- Réécriture de l'état de mainlevée, canal de déclaration, 1240, 99,6%, 610 millisecondes, 5 défaillances, renvoyé, normal, détail et journal;
+- Trace logistique, coursier, 1240, 98,7%, 720 millisecondes, 16 défaillances, renvoi en cours, en alerte, détail et journal;
+- Fichier de rapprochement, système financier, 12, 100%, 980 millisecondes, 0 défaillance, sans renvoi, normal, détail et journal.
+
+## Comment se juge le pic promotionnel et quelle capacité réserver
+
+Le verdict de pic se divise en quatre cas selon le volume et les besoins de réponse. Le volume faible avec une réponse forte regarde l'élasticité, le volume élevé avec une réponse forte regarde le délai d'anticipation, le volume faible avec une réponse faible regarde la capacité de base et le volume élevé avec une réponse faible regarde la capacité en régime stable. La courbe de capacité relative à la capacité journalière compte trois niveaux, à savoir 1 fois pour l'exploitation courante, de 4 à 5 fois pour la campagne promotionnelle et 10 fois au pic, et le côté du pic réserve une marge pour 10 fois. Plus tôt vous nous remettez les volumes préinscrits, plus il y a de marge pour planifier l'extension et les effectifs; si les volumes n'arrivent qu'une semaine avant la campagne, la seule chose qu'il reste à ajuster est l'ajout de personnel.
+
+- Le volume faible avec des besoins de réponse forts va à l'élasticité de pic. Les cas publics atteignent de 4 à 5 fois le volume journalier, les pics vont de dizaines de milliers à des centaines de milliers d'unités et les effectifs de la campagne promotionnelle avoisinent 3 fois la normale, toutes valeurs de référence publiques.
+- Le volume élevé avec des besoins de réponse forts est limité par le délai d'anticipation. Les pics ultraélevés exigent un délai d'anticipation. La croissance des SKU agrandit à la fois l'entrepôt et le registre comptable, la campagne promotionnelle réserve un pic de 10 fois et vous fournissez les volumes d'entrée.
+- Le volume faible avec des besoins de réponse faibles est la capacité de base. Une boutique de marque avec paiements agréés et documents intégrés relie déjà plus de 50 ports et plus de 70 systèmes ERP, dispose d'une certification AEO avancée et d'un dédouanement propre, et notre côté est déjà prêt.
+- Le volume élevé avec des besoins de réponse faibles est la capacité en régime stable. La taille se fixe sur les commandes journalières, avec une entrée anticipée en entrepôt et un stockage par zones, des effectifs permanents et temporaires combinés, les volumes préinscrits en tête et les retours qui rentrent à nouveau dans la zone sous surveillance douanière, et notre côté suit le processus.
+
+Les candidats d'entrepôt sont quatre sites de zone franche intégrale plus l'entrepôt de Hong Kong, Chine. Quatre sites en parallèle apportent une redondance de plusieurs ports, vous décidez du port final et la liste des candidats vous est remise dès la phase de démarrage, sans avoir à attendre que la marchandise arrive au port pour trancher. L'entrepôt de Hong Kong, Chine figure du côté extérieur et s'enregistre séparément des quatre sites nationaux.
+
+![La démonstration de capacité de la plateforme et de l'exécution pour le verdict du pic promotionnel montre à gauche quatre quadrants par volume et besoins de réponse, en haut à droite une courbe de capacité à trois niveaux relative à la capacité journalière, en bas à droite un tableau de bord des volumes préinscrits et en bas quatre sites de zone franche intégrale avec l'entrepôt de Hong Kong, Chine.](/images/blog/china-bonded-platforms-nine-interfaces/mega-sale-peak-capacity-verdict.webp)
+
+- Yiwu, Zhejiang, entrepôt sous douane de régime de supervision 1210.
+- Hangzhou, Zhejiang, entrepôt sous douane de régime de supervision 1210.
+- Guangzhou Huangpu, Guangdong, entrepôt sous douane de régime de supervision 1210.
+- Shenzhen Qianhai, Guangdong, entrepôt sous douane de régime de supervision 1210.
+- Hong Kong, Chine, à l'étranger, entrepôt sous douane de Hong Kong, Chine.
+
+Le tableau de bord des volumes préinscrits de la campagne promotionnelle énumère quatre lignes dans sept colonnes, à savoir SKU, volume préinscrit, déjà inscrit, progression, achèvement prévu, état et action, et chaque ligne comporte deux accès, détail et journal. La progression et la date d'achèvement prévue fixent l'ordre d'approvisionnement de chaque SKU, et les déficits sont suivis ligne par ligne dans la table de suivi des volumes préinscrits.
+
+- Capsules molles de coenzyme Q10, volume préinscrit 12000, déjà inscrit 8400, progression 70%, achèvement prévu le 10-12, en cours, détail et journal;
+- Capsules d'huile de poisson des profondeurs, 8000, 6400, 80%, 10-08, en cours, détail et journal;
+- Boisson solide en poudre de protéines, 6000, 2400, 40%, 10-18, en cours, détail et journal;
+- Poudre lyophilisée de probiotiques, 5000, 5000, 100%, sans date d'achèvement indiquée, terminé, détail et journal.
+
+## Comment sont suivis ligne par ligne les déficits de volume préinscrit
+
+La table de suivi des volumes préinscrits du module de stocks consacre une ligne à chaque SKU et écrit volume préinscrit, déjà inscrit, progression, déficit, achèvement prévu et état. Prenons les capsules molles de coenzyme Q10 comme exemple. Le volume préinscrit est 12000, le déjà inscrit 8400, la progression 70%, le déficit 3600 et l'achèvement est prévu le 10-12; les capsules d'huile de poisson des profondeurs en sont à 80% de progression avec un déficit de 1600 et leur achèvement est prévu le 10-08. La courbe de capacité à trois niveaux devient ici des actions d'approvisionnement, de sorte que l'ampleur du déficit et le jour de l'achèvement se voient à l'avance.
+
+En bas de l'interface figurent 7 enregistrements au total et 20 par page, et à la fin de chaque ligne se trouvent deux accès, détail et journal; les deux onglets de suivi des volumes préinscrits et d'avis d'arrivée sont placés côte à côte, de sorte que les équipes de première ligne changent d'onglet sans avoir à filtrer de nouveau. Les sept lignes sont énumérées en entier avec le même jeu de colonnes.
+
+![La démonstration de l'interface de suivi des volumes préinscrits énumère sept lignes de produits dans huit colonnes, à savoir SKU, volume préinscrit, déjà inscrit, progression, déficit, achèvement prévu, état et actions, et indique en bas 7 enregistrements au total et 20 par page.](/images/blog/china-bonded-platforms-nine-interfaces/pre-filed-volume-tracking-system-demo.webp)
+
+- Capsules molles de coenzyme Q10, 12000, 8400, 70%, déficit 3600, 10-12, en cours, détail et journal;
+- Capsules d'huile de poisson des profondeurs, 8000, 6400, 80%, déficit 1600, 10-08, en cours, détail et journal;
+- Boisson solide en poudre de protéines, 6000, 2400, 40%, déficit 3600, 10-18, en cours, détail et journal;
+- Poudre lyophilisée de probiotiques, 5000, 5000, 100%, déficit 0, sans date d'achèvement indiquée, terminé, détail et journal;
+- Poudre de peptides de collagène de poisson, 6000, 3000, 50%, déficit 3000, 10-15, en cours, détail et journal;
+- Comprimés à croquer de vitamine C, 9000, 8100, 90%, déficit 900, 10-06, en cours, détail et journal;
+- Bonbons gélifiés à la mélatonine, 4000, 4000, 100%, déficit 0, sans date d'achèvement indiquée, terminé, détail et journal.
+
+## Ce qu'il faut fixer avant la mise en service pour les interfaces et la bascule
+
+Avant la mise en service, trois points sont à fixer. Les interfaces standard et le mappage par intergiciel s'écrivent dans la table des interfaces, les seuils des voyants de santé, les renvois ayant échoué et les responsables sont figés ligne par ligne, et les volumes préinscrits et les paliers de capacité s'alignent sur le même jeu de SKU. S'il manque l'un des trois, les tests conjoints restent bloqués encore et encore sur les renvois. Les volumes d'appels, les taux de réussite, les volumes préinscrits et les dates d'achèvement de l'interface de démonstration sont purement illustratifs, les chiffres de pic et d'effectifs proviennent de cas publics et ne reflètent que l'ordre de grandeur, et vous fournissez les volumes réels; la pratique réelle de déclaration suit les exigences de l'autorité compétente et les chemins transfrontaliers de données se règlent sur le résultat de l'évaluation d'impact sur la protection des informations personnelles. Avant la bascule, un cycle de règlement complet est mené en parallèle, l'absence de divergence des données des deux systèmes est confirmée et seulement alors le trafic est basculé.
+
+Si vous souhaitez que les neuf familles d'interfaces soient reliées à l'exécution sous douane selon votre architecture système actuelle et votre plan de ports, avec les voyants de santé et les volumes préinscrits vérifiés ligne par ligne, nous vous invitons à [Contactez-nous](/fr/packages/).

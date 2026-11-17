@@ -1,0 +1,78 @@
+---
+title: "Formidlingsprovision i Kina, stationer for indenlandsk afregning og gebyrjournal"
+date: "2027-04-20"
+category: "E-commerce"
+excerpt: "Formidlingsprovision aftales indenlands, beregnes af henført omsætning, udbetales månedligt i yuan efter indeholdelse og arkiveres med bilag. Aftale, faktura og system stemmer overens."
+references:
+  - title: "Lov om personlig indkomstskat i Folkerepublikken Kina (7. ændring fra 2018, artikel 9, 10, 11 og 14)"
+    url: "https://www.chinatax.gov.cn/chinatax/n810219/n810744/n3752930/n3752974/c3970366/content.html"
+  - title: "Administrative bestemmelser for indberetning og indeholdelse af personlig indkomstskat (forsøgsordning, bekendtgørelse nr. 61 udstedt af den statslige skatteforvaltning i 2018, i kraft fra 1.1.2019)"
+    url: "https://www.gov.cn/gongbao/content/2019/content_5386991.htm"
+  - title: "Lov om merværdiafgift i Folkerepublikken Kina (vedtaget 25,12.2024, i kraft fra 1.1.2026, artikel 10 og 34)"
+    url: "https://shanghai.chinatax.gov.cn/zcfw/zcfgk/zzs/202412/t474694.html"
+---
+
+Når formidlere i Kina får provision, bliver både penge og skat i landet: den indenlandske afregningsenhed indgår aftalen, beregner efter henført omsætning, udbetaler månedligt i yuan efter indeholdelse af personlig indkomstskat og arkiverer provisionsfaktura og indeholdelsesbilag løbende. Fra ordrehenføring til bilagsarkivering er der 5 stationer, der gennemløbes i rækkefølge uden spring; gebyrjournalen samler disse beløb på 1 linje pr. faktura, hvor gebyrpost, skattepligtigt beløb, skattesats, momsbeløb, betalt beløb, bilag og status står samlet.
+
+Denne fremgangsmåde forudsætter en klar klassificering: indkomsten er et servicegebyr, ikke en handelsavance og dermed ikke videresalg; aftale, faktura og system skal stemme overens på 3 steder. Aftalen fastlægger henføringsgrundlaget, fakturaen angiver beløb og skat, og systemet kobler de to sammen. Aftale, udbetaling og skatteafregning sker i landet på samme linje; en udenlandsk enhed indgår ikke denne aftale og udbetaler ikke beløbet i yuan.
+
+![5 indenlandske stationer for formidlingsprovision, fra henføring af omsætning over provisionsaftale, indeholdelse af personskat og udbetaling i yuan til bilagsarkivering, suppleret med siden for faktura og indeholdelsesbilag samt 3 grupper af krav om indkomsttype, niveauloft og indenlandsk indeholdelse](/images/blog/referral-commissions-china-compliant-settlement/promoter-commissions-five-onshore-nodes.webp)
+
+## 5 stationer, fra henføring til bilagsarkivering
+
+De 5 stationer gennemløbes i rækkefølgen henføring, aftale, indeholdelse, udbetaling og arkivering, hvor hvert trins resultat bliver input til det næste.
+
+- Omsætningshenføring: Ordren henføres til formidleren via formidlingslinket, henføringsgrundlaget skrives ind i aftale og system, og dokumentationen er henføringsoversigten.
+- Provisionsaftale: Aftalen indgås med den indenlandske afregningsenhed, ikke med en udenlandsk enhed; provisionen beregnes af henført omsætning, og dokumentationen er formidlingsaftalen.
+- Indeholdelse af personskat: Vejen er direkte indeholdelse i landet med lovlig indeholdelse og indbetaling, indberetning som indkomst fra tjenesteydelser, og dokumentationen er indeholdelsesbilaget.
+- Udbetaling i yuan: Når indeholdelse og indbetaling er afsluttet, udbetales der månedligt i yuan, modtager, beløb og periode stemmer overens, og dokumentationen er udbetalingsoversigten.
+- Bilagsarkivering: Provisionsfakturaer og indeholdelsesbilag opbevares samlet løbende, bilaget udstedes til hver faktura, og dokumentationen er periodens faktura.
+
+Rækkefølgen følges uden spring; den indenlandske enhed indeholder, og bilaget udstedes til hver faktura. De 3 statusetiketter er aftale indgået i landet, udbetaling i landet og skatteafregning i landet, de ligger på samme linje, og uden dem alle er provisionen ikke afsluttet.
+
+Siden for faktura og indeholdelsesbilag fører 2 linjer i 3 kolonner med fakturanummer, indeholdt skat (yuan) og gebyrpost: ZD202609-011, 768,00, toldklareringsgebyr; ZD202609-012, 324,00, lagerhåndteringsgebyr. Nederst på siden står, at det er en demonstration af systemgrænsefladen med faktura, moms og status.
+
+Gruppen for indkomsttype fastslår 3 punkter: typen er et servicegebyr, ikke en videresalgsavance, og alle poster forbliver ensartede. Gruppen for niveauer er et fast systemloft: teamniveauer er begrænset til højst 2, der aflønnes kun efter henført omsætning og ikke efter antal personer, og loftkonfigurationen er registreret. Gruppen for indeholdelse ligger på direkte indeholdelse i landet: den indenlandske enhed indeholder, indberetningen sker som indkomst fra tjenesteydelser, og den kompetente skattemyndigheds fortolkning er afgørende.
+
+Indkomsttypen fastlægges først, fordi servicegebyr og handelsavance står forskellige steder i aftale, faktura og beskatning; ændres klassificeringen, skal gebyrpost, skattebeløb og bilag ændres med på hver efterfølgende linje. At aftale, faktura og system skal stemme overens, handler netop om dette. Ved implementeringen indeholder den indenlandske enhed månedligt, og bilaget udstedes til hver faktura; skal en opdelingsmodel for fleksibel beskæftigelse træde i stedet, skal omstillingsplan og omkostningssammenligning lægges frem samlet, før der besluttes. Indeholdelsesvejen hører til leverancen, og skabelonen til formidlingsaftalen stilles til rådighed af vores team; først når disse 2 punkter er på plads, får de 5 stationer fodfæste.
+
+## Gebyrjournal, 1 linje pr. faktura
+
+Fakturadetaljesiden viser 1 linje pr. faktura med fanerne Alle fakturaer, Afventer betaling og Betalt, og hver linje angiver gebyrpost, skattepligtigt beløb, skattesats, momsbeløb, betalt beløb, bilag og status. For toldklareringsgebyret er det skattepligtige beløb 12800,00 yuan, skattesatsen 6%, momsbeløbet 768,00 yuan og det betalte beløb 13568,00 yuan; lagerhåndteringsgebyret følger samme grundlag med et skattepligtigt beløb på 5400,00 yuan og et momsbeløb på 324,00 yuan. Bilaget kan downloades.
+
+Formidlingsprovisionen har sin egen afregningsvej, mens gebyrsiden deler den samme journal: gebyrpost, skattesats, skattebeløb og bilag er parret punkt for punkt. Beløbet på provisionsfakturaen findes i gebyrjournalen på samme linje; omvendt kan hver linje i journalen føres tilbage til faktura og bilag. Momsbeløbene på de første 2 linjer, toldklareringsgebyr og lagerhåndteringsgebyr, svarer til de 2 beløb, der er noteret på siden for faktura og indeholdelsesbilag.
+
+Grænsefladens titel lyder Fakturadetaljer og indeholdt skat, i alt 6 poster med 20 pr. side, og for enden af hver linje står de 2 indgange Detaljer og Log. De 6 linjer angiver fakturanummer, momsbeløb (yuan), gebyrpost, skattepligtigt beløb (yuan), skattesats, betalt beløb (yuan), bilag og status.
+
+- ZD202609-011, 768,00, toldklareringsgebyr, 12800,00, 6%, 13568,00, kan downloades, betalt.
+- ZD202609-012, 324,00, lagerhåndteringsgebyr, 5400,00, 6%, 5724,00, kan downloades, betalt.
+- ZD202609-013, 576,00, formidlingsgebyr, 9600,00, 6%, 0,00, afventer oprettelse, afventer betaling.
+- ZD202609-014, 192,00, systemgebyr, 3200,00, 6%, 3392,00, kan downloades, betalt.
+- ZD202609-015, 288,00, toldangivelsesgebyr, 4800,00, 6%, 5088,00, kan downloades, betalt.
+- ZD202609-016, 372,00, indenlandsk leveringsgebyr, 6200,00, 6%, 0,00, afventer oprettelse, afventer betaling.
+
+Regner man de 4 betalte linjer igennem, ses formlen: det betalte beløb svarer til det skattepligtige beløb plus momsbeløbet, 12800,00 plus 768,00 giver 13568,00, 5400,00 plus 324,00 giver 5724,00, 3200,00 plus 192,00 giver 3392,00, 4800,00 plus 288,00 giver 5088,00. På de 2 linjer, der afventer betaling, er det betalte beløb 0,00, og bilaget er markeret som afventer oprettelse.
+
+![Demonstration af gebyrjournalen og momslinjerne, hvor 6 fakturalinjer hver viser momsbeløb, gebyrpost, skattepligtigt beløb, skattesats, betalt beløb, bilag og status](/images/blog/referral-commissions-china-compliant-settlement/fee-ledger-vat-lines-system-demo.webp)
+
+## 1 formidlingsgebyr fra afventer betaling til betalt
+
+Tag fakturaen ZD202609-013 for formidlingsgebyret og gennemgå forløbet. Den angiver et skattepligtigt beløb på 9600,00 yuan, en skattesats på 6%, et momsbeløb på 576,00 yuan og et betalt beløb på 0,00 yuan, bilaget afventer oprettelse, og status er afventer betaling. Efter formlen i samme journal skulle det betalte beløb være 10176,00 yuan; det står stadig på 0,00 yuan, hvilket viser, at fakturaen endnu ikke er betalt.
+
+For at ændre den til betalt oprettes og arkiveres bilaget først, hvorefter der betales efter formidlingsaftalen. Efter betalingen skal modtager, beløb og periode afstemmes punkt for punkt med provisionsfakturaen, og indeholdelsesbilaget opbevares sammen med denne faktura. Så længe bilaget afventer oprettelse, forbliver linjen på afventer betaling; ved batchafstemning er det netop sådanne beløb uden bilag, der giver problemer.
+
+Det er også grunden til, at de 5 stationer ikke tillader spring: henføring af omsætning, provisionsaftale, indeholdelse af personskat, udbetaling i yuan og bilagsarkivering, hvert led efterlader dokumentation. Mangler indeholdelsesbilaget, kan den tilsvarende linje i gebyrjournalen ikke lukkes; mangler fakturanummeret, kan ansvarskæden for denne batch ikke spores bagefter.
+
+## Afstem de 3 steder før idriftsættelsen
+
+Før idriftsættelsen afstemmes de 3 steder i rækkefølgen aftale først, derefter forløb og til sidst gebyrjournalen.
+
+- Skriv henføringsgrundlaget ind i formidlingsaftalen og henføringssystemet, og præciser, at aftalen indgås med den indenlandske afregningsenhed.
+- Fastlæg forløbet for indeholdelse og udbetaling: månedlig indeholdelse, indberetning som indkomst fra tjenesteydelser, indbetaling senest den 15. i den følgende måned, og udbetalingsoversigt og indeholdelsesbilag arkiveres i samme batch.
+- Byg gebyrjournalen op, og fastlæg felterne fakturanummer, gebyrpost, skattesats, skattebeløb, betalt beløb og bilagsstatus, før idriftsættelsen drøftes.
+
+Ved tilbudssammenligning overføres modpartens provisionsløsning også punkt for punkt til denne journal, og det afgørende er, om aftale, faktura og system på de 3 steder peger på det samme servicegebyr; tilbudsprisen er kun én kolonne blandt dem. Når de 3 steder ikke stemmer overens, er det hyppigste resultat, at indkomsttypen skrives som en avance, at fakturaposten ikke passer til aftalen, og at bilaget ikke kan tilføjes bagefter.
+
+Først fastlægges indkomsttype, indeholdelsesvej og journalfelter, derefter planlægges den første batch af provisionsudbetalinger. Hvordan provisionen beregnes, hvordan den udbetales, og hvilket bilag der hører til hvilken faktura, kan afklares før idriftsættelsen uden at skulle tilføjes ved batchafstemningen bagefter. Fakturanumre, beløb og datoer i demogrænsefladen tjener kun som illustration; den faktiske indeholdelse følger kravene fra den kompetente skattemyndighed, og skattesats og bilag følger de gældende regler for perioden.
+
+Hvis du vil gennemgå provisionsgrundlaget punkt for punkt ud fra din afregningsenhed og aftalens aktuelle status og koble indeholdelsesbilaget til gebyrjournalen, er du velkommen til at [kontakte os](/da/packages/).

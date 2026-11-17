@@ -1,0 +1,443 @@
+# -*- coding: utf-8 -*-
+"""core/pack.py — 打包与分发（内容包 + 工具包）。
+
+打包是文件系统作业：不建 PackageView、不判红，只把 `core.checker` 的结论
+当准入闸门。
+
+条目级预检、半成品跳过、kind/slug 唯一性、双包落 <投稿目录>/dist/、固定
+ZipInfo 可重现、拒绝静默覆盖。dist/ 产物区口径：工具包
+与全文档包各保留最近 KEEP_ZIPS(=5) 份，**其余任何 zip（单篇单包、历史命名）
+每轮打包清除**，按磁盘 mtime 判新旧；manifest.json 与非 zip 文件不动。
+工具包里的 DB 是 VACUUM INTO 出来的净化单文件快照（无 -wal/-shm），
+manifest.json 记录双包 sha256 与策略版本。
+
+零批量删除原则：逐条预检直接对每个条目的 work/ 根跑 `core.checker`（与 --all
+完全同口径），进包门禁同样逐条目复核（**不把整库拼成一个"包"读**，否则整库
+超过单包 60 MB 上限就永远打不出包）。逐条预检直接对 work/ 根跑 checker，
+不反复清空 staging——单轮删除量会越过平台批量删除阈值，导致半包。
+"""
+# 治理声明：本文件属机制层，不承载策略数据；改动须走 README「治理」节的 L3 流程
+#（先登记理由 → 行为级等价断言 → selftest --kit 全量），提交说明带 [arch]
+#（commit-msg 钩子强制）。策略变更请改 plugins/ 判据或经 submit.py glossary 改库。
+import datetime
+import hashlib
+import json
+import os
+import re
+import shutil
+import zipfile
+
+from core import tmp_root as _tmp_root
+from core import checker as _checker
+from core.model import Context
+from core.pkgio import pack_package
+
+SOURCES = [("blogs", "work", "blog"),
+           ("regulations", "work", "regulation")]
+ZIP_TS = (2020, 1, 1, 0, 0, 0)
+KIT_EXCLUDE_DIRS = {"__pycache__", ".staging", "tmp"}
+KIT_EXCLUDE_EXT = {".pyc", ".pyo", ".zip"}
+KEEP_ZIPS = 5          # dist/：工具包与全文档包各留 5 份，其余 zip 每轮清除
+
+# 分发包必须自带封签四件 + 配置白名单：接收方没有 .keys 也要能验真伪。
+# （旧口径 data/ 只收 glossary.db，导致分发包「无封签可验」——2026-11-16 修）
+KIT_DATA_KEEP = {
+    "data/glossary.db",
+    "data/integrity.json",
+    "data/integrity.sig",
+    "data/sealed.zip",
+    "data/trust_anchor.txt",
+    "data/whitelist.json",
+}
+# 私钥类材料硬闸：命中即拒绝打包（不静默跳过，避免「以为没打进去」）
+KIT_SECRET_DIRS = {".keys"}
+KIT_SECRET_SUFFIX = (".key", ".pem", ".p12", ".pfx")
+KIT_ZIP_PREFIX = "submission-kit-"
+PACK_ZIP_RE = r"^submission-\d{8}-r\d+\.zip$"
+
+
+def _zip_write(zf, fp, arc):
+    """固定时间/属性 → 相同输入必得相同字节。"""
+    zi = zipfile.ZipInfo(arc, date_time=ZIP_TS)
+    zi.compress_type = zipfile.ZIP_DEFLATED
+    zi.create_system = 0
+    zi.external_attr = 0o644 << 16
+    with open(fp, "rb") as fh:
+        zf.writestr(zi, fh.read())
+
+
+def _sha(fp):
+    h = hashlib.sha256()
+    with open(fp, "rb") as fh:
+        for b in iter(lambda: fh.read(1 << 20), b""):
+            h.update(b)
+    return h.hexdigest()
+
+
+def kit_version(kit_dir):
+    """版本号唯一来源：DB meta.policy_version（取消 VERSION 文件）。"""
+    from core import db
+    return str(db.current_policy(kit_dir=kit_dir).policy_version)
+
+
+def _disp_rel(p):
+    """展示用相对路径；Windows 跨盘符时退回绝对路径。"""
+    try:
+        return os.path.relpath(p).replace(os.sep, "/")
+    except ValueError:
+        return os.path.abspath(p).replace(os.sep, "/")
+
+
+def _reject_secret(arc):
+    """私钥/证书材料硬闸：命中直接拒绝打包，绝不静默跳过。"""
+    parts = arc.replace("\\", "/").split("/")
+    if any(p in KIT_SECRET_DIRS for p in parts):
+        raise RuntimeError(
+            "拒绝打包：%s 属密钥材料（私钥只留发布方本机；"
+            "接收方用包内公钥验签即可，不需要私钥）" % arc)
+    if arc.lower().endswith(KIT_SECRET_SUFFIX):
+        raise RuntimeError(
+            "拒绝打包：%s 属密钥/证书材料（见 README「私钥与分发」）" % arc)
+
+
+def kit_skip(fn, arc):
+    """→ 跳过原因（None = 入包）。纯函数：自检臂据此钉死打包口径。
+
+    规则：`data/` 只放行 KIT_DATA_KEEP（运行库 + 封签 + 配置）；其余目录
+    只按扩展名与 SQLite 伴生后缀过滤。`data/sealed.zip` 是唯一允许的 .zip。
+    """
+    _reject_secret(arc)
+    ext = os.path.splitext(fn)[1].lower()
+    if arc.startswith("data/"):
+        if arc not in KIT_DATA_KEEP:
+            return "data 目录只收白名单产物"
+        if ext in KIT_EXCLUDE_EXT and arc != "data/sealed.zip":
+            return "扩展名排除"
+        return None
+    if ext in KIT_EXCLUDE_EXT:
+        return "扩展名排除"
+    if fn.endswith(("-wal", "-shm", "-journal")):
+        return "SQLite 伴生文件"
+    return None
+
+
+def _seal_gate(kit_dir):
+    """出包前校验封签：带着过期封签分发，等于把「验不过」发给所有人。"""
+    from core import integrity
+    if not os.path.exists(os.path.join(kit_dir, integrity.MANIFEST)):
+        print("[警告] 未封签：本包不具备防篡改能力"
+              "（发布前请跑 python submit.py tools integrity_seal sign）")
+        return
+    res = integrity.verify(kit_dir)
+    if not res.get("ok"):
+        raise RuntimeError(
+            "%s；先跑 python submit.py tools integrity_seal sign 再打包"
+            % (res.get("reason") or "封签校验失败"))
+
+
+def pack_kit(kit_dir, out_dir, force=False):
+    """工具包 zip：净化后的单文件 DB 快照 + 封签四件 + 可重现 ZipInfo。
+
+    分发包口径（2026-11-16）：**带公钥与封签，绝不带私钥**——接收方解压即可
+    `submit.py integrity` 验真伪；私钥留在发布方 `.keys/`，不入包、不入库。
+    """
+    _seal_gate(kit_dir)
+    from core import db
+    ver = kit_version(kit_dir)
+    today = datetime.date.today().strftime("%Y%m%d")
+    name = "submission-kit-v%s-%s.zip" % (ver, today)
+    dest = os.path.join(out_dir, name)
+    if os.path.exists(dest) and not force:
+        raise RuntimeError("工具包 zip 已存在，拒绝静默覆盖：%s（如需重出请加 --force）"
+                           % dest)
+    # mkdtemp：建在 <tmp> 下；未指定 --tmp 抛 RuntimeError（必要参数）
+    tmp = _tmp_root.mkdtemp(prefix="chk-kitdb-")
+    snap = os.path.join(tmp, "glossary.db")
+    try:
+        build_id = db.vacuum_into(
+            os.path.join(kit_dir, "data", "glossary.db"), snap)
+        n = 0
+        with zipfile.ZipFile(dest, "w", zipfile.ZIP_DEFLATED) as zf:
+            for base, dirs, files in os.walk(kit_dir):
+                dirs[:] = sorted(d for d in dirs
+                                 if d not in KIT_EXCLUDE_DIRS
+                                 and d not in KIT_SECRET_DIRS
+                                 and not d.startswith("."))
+                for fn in sorted(files):
+                    fp = os.path.join(base, fn)
+                    arc = os.path.relpath(fp, kit_dir).replace(os.sep, "/")
+                    if kit_skip(fn, arc):
+                        continue
+                    if arc == "data/glossary.db":
+                        fp = snap                 # 用净化快照替换运行库
+                    _zip_write(zf, fp, arc)
+                    n += 1
+            # 包内自检：密钥材料混入即作废（私钥永不随包分发）
+            bad = [x for x in zf.namelist()
+                   if ".keys/" in x or x.lower().endswith(KIT_SECRET_SUFFIX)]
+        if bad:
+            os.remove(dest)
+            raise RuntimeError("打包自检失败：包含密钥材料 %s" % (bad[:3],))
+        return {"name": name, "path": dest, "files": n,
+                "bytes": os.path.getsize(dest), "version": ver,
+                "build_id": build_id, "sha256": _sha(dest)}
+    finally:
+        _tmp_root.archive_delete(tmp, label="kit-db-snap")
+
+
+def collect(repo_root, only=None, slugs=None):
+    """[(kind, slug, 源路径, 问题)]：条目级问题只记录不杀全包。"""
+    found, seen, problems = [], {}, {}
+    for line_dir, work, kind in SOURCES:
+        if only and kind != only:
+            continue
+        base = os.path.join(repo_root, line_dir)
+        if not os.path.isdir(base):
+            continue
+        for entry in sorted(os.listdir(base)):
+            work_kind = os.path.join(base, entry, work, kind)
+            if not os.path.isdir(work_kind):
+                continue
+            for slug in sorted(os.listdir(work_kind)):
+                art = os.path.join(work_kind, slug)
+                if not os.path.isdir(art) or (slugs and slug not in slugs):
+                    continue
+                problem = None
+                meta_fp = os.path.join(art, "submission.json")
+                if not os.path.isfile(meta_fp):
+                    problem = "缺 submission.json"
+                else:
+                    try:
+                        with open(meta_fp, encoding="utf-8") as fh:
+                            meta = json.load(fh)
+                        if meta.get("kind") != kind:
+                            problem = "kind=%r 与目录 %s/ 不一致" % (
+                                meta.get("kind"), kind)
+                        elif not meta.get("slug"):
+                            problem = "submission.json 缺 slug 字段"
+                    except (ValueError, OSError) as exc:
+                        problem = "submission.json 无法解析（%s）" % exc
+                if problem:
+                    problems[slug] = problem
+                elif slug in seen:
+                    problem = "slug 重复（%s 与 %s）" % (seen[slug], art)
+                    problems[slug] = problem
+                else:
+                    seen[slug] = art
+                found.append((kind, slug, art, problem))
+    return found, problems
+
+
+def precheck(kit_dir, art, staging, kind, slug, ctx):
+    """单条目预检：0 error 才进包。直接调内核，不再起子进程。"""
+    _tmp_root.archive_delete(staging, label="pack-staging")
+    dest = os.path.join(staging, kind, slug)
+    os.makedirs(os.path.dirname(dest), exist_ok=True)
+    shutil.copytree(art, dest)
+    fs = _checker.check(staging, ctx=ctx)
+    errs = [f for f in fs if f.severity == "error"]
+    _tmp_root.archive_delete(staging, label="pack-staging")
+    return len(errs), (errs[0].detail if errs else "")
+
+
+def next_zip_name(out_dir):
+    today = datetime.date.today().strftime("%Y%m%d")
+    n = 1
+    while os.path.exists(os.path.join(out_dir, "submission-%s-r%d.zip"
+                                      % (today, n))):
+        n += 1
+    return "submission-%s-r%d.zip" % (today, n)
+
+
+def rotate_zips(out_dir, keep_kit=KEEP_ZIPS, keep_pack=KEEP_ZIPS, say=None):
+    """dist/ 产物区清场：目录里**只允许**两类 zip 各 keep 份 + manifest.json。
+
+    2026-11-12 用户两次收紧后的最终口径：
+      * 工具包 `submission-kit-*.zip` —— 留 mtime 最新 keep_kit 份；
+      * 全文档包 `submission-YYYYMMDD-rN.zip` —— 留最新 keep_pack 份；
+      * **其余一切条目一律清除**：单篇单包、旧命名 `submission-<SLUG>-48langs.zip`、
+        `--out` 自定义名（哪怕是刚写出的）、非 zip 文件、以及 `.staging` 等目录。
+        `--out` 自定义名不在白名单：要留就自己另存到 dist/ 之外。
+      * 唯一豁免：`manifest.json`（当前交付记录）。
+
+    排序按磁盘 mtime（zip 内部时间戳是固定值，不能当新旧依据）。删除走
+    `archive_delete` 归档到 `<tmp>/待删除/`，可回溯。返回被移除的条目名列表。
+    """
+    kits, packs, stale = [], [], []
+    for fn in sorted(os.listdir(out_dir)):
+        if fn == "manifest.json":
+            continue
+        fp = os.path.join(out_dir, fn)
+        item = (os.path.getmtime(fp) if os.path.isfile(fp) else 0.0, fn, fp)
+        if os.path.isfile(fp) and fn.startswith(KIT_ZIP_PREFIX) and fn.endswith(".zip"):
+            kits.append(item)
+        elif os.path.isfile(fp) and re.match(PACK_ZIP_RE, fn):
+            packs.append(item)
+        else:
+            stale.append(item)
+    removed = []
+    for group, keep in ((packs, keep_pack), (kits, keep_kit)):
+        group.sort(reverse=True)          # mtime 新者在前
+        for _, fn, fp in group[keep:]:
+            _tmp_root.archive_delete(fp, label="dist-rotation")
+            removed.append(fn)
+    for _, fn, fp in sorted(stale, reverse=True):
+        _tmp_root.archive_delete(fp, label="dist-stale")
+        removed.append(fn)
+    if removed and say:
+        for fn in removed:
+            say("[pack] dist/ 清场：%s" % fn)
+        say("[pack] dist/ 口径：工具包 %d 份 + 全文档包 %d 份 + manifest.json，"
+            "其余条目不留" % (keep_kit, keep_pack))
+    return removed
+
+
+def pack_all(repo_root, kit_dir, only=None, slugs=None, strict=False,
+             out=None, kit_only=False, incremental=False, force=False,
+             quiet=False):
+    """返回 manifest dict；失败抛 RuntimeError。"""
+    from core import db
+    # 2026-11-07 投稿目录定稿：repo_root 即投稿目录（其下 blogs/、regulations/
+    # 是内容，dist/ 是本命令的产物区），不再写 <root>/submission/。
+    out_dir = os.path.join(repo_root, "dist")
+    # staging：中间过程产物，一律 <tmp>/pack-staging（2026-11-09 用户
+    # 指令：未指定 --tmp 报错，与其他必要参数一致）。
+    staging = _tmp_root.tmp_path("pack-staging")
+    os.makedirs(out_dir, exist_ok=True)
+    pol = db.current_policy(kit_dir=kit_dir)
+    ctx = Context(kit_dir=kit_dir, policy=pol, rules_filter=None)
+    say = (lambda *a: None) if quiet else (lambda *a: print(*a, flush=True))
+
+    kit = pack_kit(kit_dir, out_dir, force=force)
+    say("[pack] 工具包 %s（%d 文件，%.2f MB，策略版本 v%s）"
+        % (_disp_rel(kit["path"]), kit["files"],
+           kit["bytes"] / 1048576.0, kit["version"]))
+    man = {"generated": datetime.date.today().isoformat(),
+           "policy_version": pol.policy_version,
+           "schema_version": pol.schema_version,
+           "applied_cs": pol.applied_cs,
+           "kit": {k: kit[k] for k in ("name", "sha256", "files",
+                                       "bytes", "build_id", "version")},
+           "checker_sha256": _sha(os.path.join(kit_dir, "submit.py")),
+           "submission": None, "skipped": [], "entries": []}
+    if kit_only:
+        say("[pack] --kit-only：跳过投稿打包")
+        rotate_zips(out_dir, say=say)
+        # 2026-11-14：保留上一轮的全文档包记录。此前 --kit-only 一律把
+        # submission 置 None、entries 清空，dist/manifest.json 从「双包记录」
+        # 退化成「只有工具包」，逼得打包后手工 `git show` 上一版再把两个
+        # 字段贴回来（长期做法，容易漏）。这里只更新工具包字段，全文档包
+        # 记录原样续用；但那几个 zip 必须仍在 dist/ 里，否则如实置空。
+        prev = _read_manifest(out_dir)
+        if prev:
+            old = prev.get("submission")
+            if old and old.get("name"):
+                if os.path.isfile(os.path.join(out_dir, old["name"])):
+                    man["submission"] = old
+                    man["entries"] = prev.get("entries") or []
+                    man["skipped"] = prev.get("skipped") or []
+                    say("[pack] manifest 续用上一轮全文档包记录：%s（%d 条目）"
+                        % (old["name"], len(man["entries"])))
+                else:
+                    say("[pack] 上一轮全文档包 %s 已不在 dist/，manifest 置空"
+                        % old["name"])
+        _write_manifest(out_dir, man)
+        return man
+
+    plan, problems = collect(repo_root, only, set(slugs) if slugs else None)
+    if not plan:
+        raise RuntimeError("没有可打包的成品（当前过滤：%s）"
+                           % (slugs or only or "无"))
+    packed = []
+    for kind, slug, art, problem in plan:
+        rel = os.path.relpath(art, repo_root)
+        if problem:
+            if strict:
+                raise RuntimeError("%s：%s（--strict 遇错即停）" % (slug, problem))
+            say("[pack] 跳过 %-10s %-52s <- %s（%s）"
+                % (kind, slug, rel, problem))
+            man["skipped"].append({"slug": slug, "reason": problem})
+            continue
+        if not incremental:
+            n_err, first = precheck(kit_dir, art, staging, kind, slug, ctx)
+            if n_err:
+                if strict:
+                    raise RuntimeError("%s 预检失败：%s" % (slug, first))
+                say("[pack] 跳过 %-10s %-52s <- %s（预检 %d error：%s）"
+                    % (kind, slug, rel, n_err, first[:100]))
+                man["skipped"].append({"slug": slug,
+                                       "reason": "预检 %d error：%s" % (n_err, first[:100])})
+                continue
+        packed.append((kind, slug, art))
+        man["entries"].append({"kind": kind, "slug": slug, "source": rel})
+        say("[pack] 收入 %-10s %-52s <- %s" % (kind, slug, rel))
+    if not packed:
+        raise RuntimeError("所有候选条目均未通过预检，没有可打包的成品")
+
+    _tmp_root.archive_delete(staging, label="pack-staging")
+    for kind, slug, art in packed:
+        dest = os.path.join(staging, kind, slug)
+        os.makedirs(os.path.dirname(dest), exist_ok=True)
+        shutil.copytree(art, dest)
+
+    # 进包门禁：逐条目复核，**不把整库拼成一个"包"读**。
+    # 60MB / 5000 文件是 S06 给「单篇投稿包 vs 站点上传接口」定的上限，
+    # 套在整库合集上会让条目一多就永远打不出包——实测 3811 文件 / 82.6MB
+    # 被 load_package 判「解压后总大小 60.0 MB 超过 60 MB」，pack 直接中止。
+    # 非 --incremental 时每条已在 precheck 里以 copytree 后的形态单独 check
+    # 过 0 error，这里只需补上 --incremental 跳过的那部分复核。
+    if incremental:
+        bad = []
+        for kind, slug, _art in packed:
+            fs = _checker.check(os.path.join(staging, kind, slug), ctx=ctx)
+            bad.extend(f for f in fs if f.severity == "error")
+        if bad:
+            _tmp_root.archive_delete(staging, label="pack-staging")
+            raise RuntimeError("全量自检未通过（%d error，首条：%s），未出投稿包"
+                               % (len(bad), bad[0].detail[:120]))
+
+    zip_name = out or next_zip_name(out_dir)
+    if not zip_name.endswith(".zip"):
+        zip_name += ".zip"
+    # dist/ 只允许两类命名：自定义 --out 会让成品在下一行轮换里被清掉，
+    # 与其留一个 manifest 指向不存在的文件，不如在写盘前直接拒绝。
+    if not re.match(PACK_ZIP_RE, os.path.basename(zip_name)):
+        raise RuntimeError(
+            "dist/ 只接受全文档包命名 submission-YYYYMMDD-rN.zip；"
+            "--out=%s 不符合口径。请省略 --out 用自动命名，或自行把成品另存到 dist/ 之外"
+            % zip_name)
+    zip_path = os.path.join(out_dir, zip_name)
+    pack_package(staging, zip_path)
+    _tmp_root.archive_delete(staging, label="pack-staging")
+    man["submission"] = {"name": zip_name, "sha256": _sha(zip_path),
+                         "bytes": os.path.getsize(zip_path),
+                         "blog": sum(1 for k, _, _ in packed if k == "blog"),
+                         "regulation": sum(1 for k, _, _ in packed
+                                           if k == "regulation")}
+    say("[pack] 投稿包 %s（%.1f MB，blog %d / regulation %d）"
+        % (_disp_rel(zip_path), man["submission"]["bytes"] / 1048576.0,
+           man["submission"]["blog"], man["submission"]["regulation"]))
+    _write_manifest(out_dir, man)
+    rotate_zips(out_dir, say=say)
+    say("[pack] 双包齐备 + manifest.json（dist/ 工具包与全文档包各留最新 %d 份）"
+        % KEEP_ZIPS)
+    return man
+
+
+def _write_manifest(out_dir, man):
+    with open(os.path.join(out_dir, "manifest.json"), "w",
+              encoding="utf-8", newline="\n") as fh:
+        json.dump(man, fh, ensure_ascii=False, indent=2)
+
+
+def _read_manifest(out_dir):
+    """读上一轮 manifest；缺失/损坏一律返回 None（当作首轮，不阻断打包）。"""
+    try:
+        with open(os.path.join(out_dir, "manifest.json"),
+                  encoding="utf-8") as fh:
+            man = json.load(fh)
+        return man if isinstance(man, dict) else None
+    except (OSError, ValueError):
+        return None
+
+

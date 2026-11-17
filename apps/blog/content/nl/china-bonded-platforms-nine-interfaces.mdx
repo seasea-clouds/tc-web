@@ -1,0 +1,113 @@
+---
+title: "Negen interfaces op het Chinese douaneplatform, gezondheidslampjes en piekmarge"
+date: "2027-06-22"
+category: "E-commerce"
+excerpt: "Standaardinterfaces gaan voorop en middleware dekt de rest; gezondheidslampjes registreren aanroepen en herhalingen. Gegevens blijven binnenslands en de piekmarge is gereserveerd."
+references:
+  - title: "Aankondiging 194 van 2018 van de Algemene Douaneadministratie van China over toezicht op de invoer en uitvoer van detailhandelsgoederen in grensoverschrijdende e-commerce"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Wet op de bescherming van persoonsgegevens van de Volksrepubliek China, aangenomen op 20 augustus 2021, artikelen 38, 39 en 55"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+  - title: "Bepalingen ter bevordering en regulering van grensoverschrijdende gegevensstromen, Besluit 16 van de Chinese autoriteit voor cyberspace, van kracht sinds 22 maart 2024"
+    url: "https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm"
+---
+
+De negen interfacefamilies verbinden uw bestaande systemen met het Chinese douaneplatform, mits standaardinterfaces voorrang krijgen, gegevens binnenslands blijven en de capaciteit voor de promotiepiek met een marge van 10 keer wordt gedimensioneerd. Waar een standaardinterface bestaat, wordt direct gekoppeld; waar die ontbreekt, verzorgt middleware de mapping. De gezondheidslampjes leggen per interfacetype het aanroepvolume, het slagingspercentage, de latentie en de herhaling van fouten vast, en de twee rijen orderverzending en terugmelding van de betaalbon leggen de terugkoppeling van de drie documenten vast. Publieke marktbenchmarks voor integratie zijn 3 tot 7 dagen voor standaardinterfaces en 8 tot 12 weken voor volledige integratie, en gelden alleen als referentie voor de orde van grootte; wat de werkelijke ingangsdatum bepaalt, zijn de gezamenlijke tests en een parallelle afrekeningscyclus.
+
+![Demonstratie van de mappingtabel van de negen interfacefamilies, met als kolommen uw systeem, integratie-item, richting en bestemming, negen rijen van goederen en voorraad via orders, ledengegevens, commissieafrekening, inventaris, douane, afhandeling, retouren tot financiën, en daaronder vier principes voor datastromen en de vier gezondheidslampjes van de API-testmonitor](/images/blog/china-bonded-platforms-nine-interfaces/nine-interface-families-mapping.webp)
+
+## In welke tabel elk van de negen interfacefamilies terechtkomt
+
+De interfacetabel wordt in vier kolommen geschreven: aan welke kant van uw systeem het staat, wat het integratie-item is, wie de richting leidt en waar de gegevens uiteindelijk terechtkomen. De richting kent slechts drie vormen, bidirectioneel, inkomend en door u aangestuurd; rijen zonder aangegeven richting worden door onze kant gedragen. De kolom met de bestemming geeft aan tot welke administratie elk veld behoort, zodat wie het werk overneemt het aan de hand van de tabel kan nakijken.
+
+- Goederen en voorraad: voorraad en prijzen per SKU, bidirectioneel, afgestemd op het magazijnbeheersysteem en de douaneboekhouding.
+- Orders: ordergegevens, inkomend, terecht in de velden van de drie documenten.
+- Ledengegevens: relaties van promotors, door u aangestuurd, de gegevens zijn van u en wij verwerken ze als verwerker in opdracht.
+- Commissieafrekening: uitbetaling van commissies, bidirectioneel, het binnenlandse deel wordt uitgevoerd door de binnenlandse entiteit.
+- Inventaris: het douane-entrepotsysteem, zonder aangegeven richting, terecht in het douane-operatiesysteem en met dezelfde bron als de administratie.
+- Douane: de aangifte van de drie documenten, zonder aangegeven richting, de aangifte wordt door ons verzorgd en blijft een zaak onder onze controle.
+- Afhandeling: terugkoppeling van het traject, zonder aangegeven richting, de logistieke trajectgegevens worden teruggeschreven naar de orderweergave.
+- Retouren: retourdocumenten, zonder aangegeven richting, retouren gaan via het retourcentrum opnieuw het douanetoezichtgebied in.
+- Financiën: afrekening, uitgaand, inclusief valuta en wisselkoers.
+
+Waarheen de gegevens stromen, bepaalt hoe de interfaces worden opgebouwd. De administratie aan de binnenlandse kant en het dashboard aan de buitenlandse kant moeten gescheiden blijven; anders overschrijven beide kanten tijdens de gezamenlijke tests dezelfde velden.
+
+- Promotiegegevens die binnenslands worden verzameld en afgerekend, blijven binnenslands.
+- Naar uw buitenlandse moederbedrijf gaan alleen geanonimiseerde geaggregeerde gegevens terug, zonder binnenlandse commissierelaties.
+- Het systeem aan de buitenlandse kant raakt nooit ruwe gegevens van Chinese consumenten aan; grensoverschrijdende routes gaan pas open nadat de gegevensbeschermingseffectbeoordeling is doorlopen.
+- Binnenlandse promotie- en commissiegegevens ondersteunen volledige export en worden bij de overdracht samen met de administratie aan u overhandigd.
+
+De monitor voor gezamenlijke API-tests zet de gezondheidslampjes in vier rijen per interfacetype en per tegenpartij, en elke gezondheidscontrole en elke herhaling laat een record achter. De demopagina schrijft drie items uit, interfacetype, tegenpartij en gezondheidslampje, passend bij dezelfde set die in de demonstratie van de systeeminterface wordt gebruikt; de rijen worden tijdens de gezamenlijke tests dagelijks een voor een doorgenomen.
+
+- Orderverzending, gekoppeld aan de winkel, gezondheidslampje normaal.
+- Terugmelding van de betaalbon, gekoppeld aan het betaalkanaal, gezondheidslampje normaal.
+- Terugmelding van de vrachtbrief, gekoppeld aan de koerier, gezondheidslampje waarschuwing.
+- Aangifte van de lijst, gekoppeld aan het aangiftekanaal, gezondheidslampje normaal.
+
+De integratievoorwaarden worden eerst rond standaardinterfaces bepaald: waar een standaardinterface bestaat, wordt direct gekoppeld, en waar die ontbreekt, verzorgt middleware de mapping. Publieke marktbenchmarks voor integratie zijn 3 tot 7 dagen voor standaardinterfaces en 8 tot 12 weken voor volledige integratie, en de promotiepiek wordt met een marge van 10 keer gedimensioneerd. Elke kant wijst één technisch contactpersoon aan en houdt tijdens de gezamenlijke tests dagelijks overleg. Na de ingebruikname wordt eerst één volledige afrekeningscyclus parallel doorlopen vóór de omschakeling, zodat de gegevens van de twee systemen tijdens de dubbele run niet uiteenlopen.
+
+## Hoe de gezondheidslampjes te lezen en waar mislukte herhalingen worden vastgelegd
+
+Het gezondheidslogboek van interfaces geeft één rij per interfacetype, met tabbladen voor alle interfaces, normaal en afwijkend, en elke rij noteert tegenpartij, aanroepvolume, slagingspercentage, latentie, fouten, herhaling en gezondheidslampje. Neem orderverzending als uitgewerkt voorbeeld: 1284 aanroepen vandaag, een slagingspercentage van 100%, een gemiddelde latentie van 186 milliseconden, 0 fouten en een normaal gezondheidslampje; de terugmelding van de betaalbon zag eveneens 1284 aanroepen, met een slagingspercentage van 99,9%, 1 fout die met succes opnieuw is aangeboden, en het gezondheidslampje nog steeds normaal. Deze twee rijen zijn het bewijs dat de terugkoppeling van de drie documenten in het systeem staat.
+
+Nadat de negen interfacetypes zijn gemapt, staan de aanroepvolumes en gezondheidsgegevens tijdens de uitvoering allemaal in dit logboek, en de twee rijen orderverzending en terugmelding van de betaalbon noteren hoe de terugkoppeling van de drie documenten is geland. Onderaan de demo-interface staan 12 records in totaal en 20 per pagina, en elke rij eindigt met twee ingangen, details en logboek; alle negen rijen volgen dezelfde set kolommen.
+
+![Demonstratie van de systeeminterface van het gezondheidslogboek van interfaces, met negen rijen in negen kolommen: interfacetype, tegenpartij, aanroepen vandaag, slagingspercentage, gemiddelde latentie, fouten, herhaling, gezondheidslampje en acties, met 12 records in totaal en 20 per pagina onderaan](/images/blog/china-bonded-platforms-nine-interfaces/interface-health-log-system-demo.webp)
+
+- Orderverzending, winkel, 1284 aanroepen vandaag, slagingspercentage 100%, gemiddelde latentie 186 milliseconden, 0 fouten, geen herhaling, gezondheidslampje normaal, details en logboek;
+- Terugmelding van de betaalbon, betaalkanaal, 1284, 99,9%, 210 milliseconden, 1 fout, opnieuw aangeboden, normaal, details en logboek;
+- Terugmelding van de vrachtbrief, koerier, 1266, 99,2%, 340 milliseconden, 10 fouten, herhaling bezig, waarschuwing, details en logboek;
+- Aangifte van de lijst, aangiftekanaal, 1266, 99,8%, 520 milliseconden, 3 fouten, opnieuw aangeboden, normaal, details en logboek;
+- Quotumopvraag, opvraagkanaal, 1284, 100%, 150 milliseconden, 0 fouten, geen herhaling, normaal, details en logboek;
+- Synchronisatie van de administratie, douane-entrepot, 96, 100%, 430 milliseconden, 0 fouten, geen herhaling, normaal, details en logboek;
+- Terugschrijven van de vrijgavestatus, aangiftekanaal, 1240, 99,6%, 610 milliseconden, 5 fouten, opnieuw aangeboden, normaal, details en logboek;
+- Logistieke trajectgegevens, koerier, 1240, 98,7%, 720 milliseconden, 16 fouten, herhaling bezig, waarschuwing, details en logboek;
+- Afstemmingsbestand, financieel systeem, 12, 100%, 980 milliseconden, 0 fouten, geen herhaling, normaal, details en logboek.
+
+## Hoe de promotiepiek wordt beoordeeld en hoeveel capaciteit wordt gereserveerd
+
+De piekbeoordeling valt uiteen in vier gevallen naar volume en responsbehoefte: laag volume met hoge responsbehoefte kijkt naar elasticiteit, hoog volume met hoge responsbehoefte kijkt naar de aanlooptijd, laag volume met lage responsbehoefte kijkt naar de basiscapaciteit en hoog volume met lage responsbehoefte kijkt naar stabiele capaciteit. De capaciteitscurve ten opzichte van de dagelijkse capaciteit kent drie niveaus: 1 keer voor dagelijkse operaties, 4 tot 5 keer voor een promotie en 10 keer op de piek, waarbij de piekzijde met een marge van 10 keer wordt gereserveerd. Hoe eerder u ons de vooraf gemelde volumes geeft, hoe meer ruimte er is om uitbreiding en personeel te plannen; als de volumes een week voor de promotie komen, blijft er weinig meer over dan extra personeel.
+
+- Laag volume en hoge responsbehoefte gaan naar piekelasticiteit: openbare cases draaien op 4 tot 5 keer het dagelijkse volume, pieken lopen van tienduizenden tot honderdduizenden eenheden en het personeel tijdens een promotie is ongeveer 3 keer het normale; dit zijn referentiewaarden uit openbare cases.
+- Hoog volume en hoge responsbehoefte wordt begrensd door de aanlooptijd: ultrahoge pieken vragen aanlooptijd, groei van SKU schaalt het magazijn en de administratie tegelijk op, promoties reserveren een piek van 10 keer en de volume-invoer komt van u.
+- Laag volume en lage responsbehoefte is basiscapaciteit: een merkwinkel met gelicentieerde betalingen, ingebouwde documenten, meer dan 50 douaneposten en meer dan 70 ERP-systemen aangesloten, AEO-geavanceerde certificering en eigen douaneafhandeling; onze kant is klaar.
+- Hoog volume en lage responsbehoefte is stabiele capaciteit: gedimensioneerd op dagelijkse orders, met vroege inslag en opslag per zone, vast en tijdelijk personeel samen, vooraf gemelde volumes voorop en retouren opnieuw het douanetoezichtgebied in; onze kant volgt het proces.
+
+De magazijnkandidaten zijn vier locaties in integrale douanezones plus een magazijn in Hongkong, China. Vier locaties parallel geven redundantie over meerdere douaneposten; u bepaalt de uiteindelijke douanepost en de kandidatenlijst wordt al in de startfase aan u overhandigd, zonder te hoeven wachten tot de goederen de haven bereiken. Het magazijn in Hongkong, China staat aan de buitenlandse kant en wordt apart van de vier binnenlandse locaties genoteerd.
+
+![Demonstratie van platform en afhandelingscapaciteit voor de promotiepiek, links vier kwadranten naar volume en responsbehoefte, rechtsboven de capaciteitscurve met drie niveaus ten opzichte van de dagelijkse capaciteit, rechtsonder het dashboard met het vooraf gemelde volume voor de promotie en onderaan vier locaties in integrale douanezones en het magazijn in Hongkong, China](/images/blog/china-bonded-platforms-nine-interfaces/mega-sale-peak-capacity-verdict.webp)
+
+- Yiwu, Zhejiang, douane-entrepot met douaneregeling 1210.
+- Hangzhou, Zhejiang, douane-entrepot met douaneregeling 1210.
+- Guangzhou Huangpu, Guangdong, douane-entrepot met douaneregeling 1210.
+- Shenzhen Qianhai, Guangdong, douane-entrepot met douaneregeling 1210.
+- Hongkong, China, in het buitenland, een douane-entrepot in Hongkong, China.
+
+Het dashboard met het vooraf gemelde volume voor de promotie toont vier rijen in zeven kolommen: SKU, vooraf gemeld volume, reeds aangemeld, voortgang, verwachte afronding, status en actie, met twee ingangen, details en logboek, op elke rij. Voortgang en de verwachte afrondingsdatum bepalen de volgorde van bevoorrading per SKU, en de tekorten worden rij voor rij gevolgd in de tabel voor het volgen van het vooraf gemelde volume.
+
+- Zachte capsules met co-enzym Q10, vooraf gemeld volume 12000, reeds aangemeld 8400, voortgang 70%, verwachte afronding 10-12, in uitvoering, details en logboek;
+- Diepzeevisoliecapsules, 8000, 6400, 80%, 10-08, in uitvoering, details en logboek;
+- Vaste drank met eiwitpoeder, 6000, 2400, 40%, 10-18, in uitvoering, details en logboek;
+- Gevriesdroogd probioticapoeder, 5000, 5000, 100%, geen afrondingsdatum aangegeven, afgerond, details en logboek.
+
+## Hoe tekorten in het vooraf gemelde volume rij voor rij worden gevolgd
+
+De tabel voor het volgen van het vooraf gemelde volume in de voorraadmodule geeft één rij per SKU en noteert vooraf gemeld volume, reeds aangemeld, voortgang, tekort, verwachte afronding en status. Neem de zachte capsules met co-enzym Q10 als uitgewerkt voorbeeld: vooraf gemeld volume 12000, reeds aangemeld 8400, voortgang 70%, een tekort van 3600, met verwachte afronding op 10-12; de diepzeevisoliecapsules staan op 80% voortgang, met een tekort van 1600 en verwachte afronding op 10-08. De capaciteitscurve met drie niveaus wordt hier bevoorradingsacties, zodat de omvang van het tekort en de dag waarop het dichtloopt vooraf zichtbaar zijn.
+
+Onderaan de interface staan 7 records in totaal en 20 per pagina, en elke rij eindigt met twee ingangen, details en logboek; de tabbladen voor het volgen van het vooraf gemelde volume en voor aankomstmeldingen staan naast elkaar, zodat de frontlinie van tabblad wisselt zonder opnieuw te filteren. Alle zeven rijen volgen dezelfde set kolommen.
+
+![Demonstratie van de systeeminterface voor het volgen van het vooraf gemelde volume, zeven rijen producten in acht kolommen: SKU, vooraf gemeld volume, reeds aangemeld, voortgang, tekort, verwachte afronding, status en acties, met 7 records in totaal en 20 per pagina onderaan](/images/blog/china-bonded-platforms-nine-interfaces/pre-filed-volume-tracking-system-demo.webp)
+
+- Zachte capsules met co-enzym Q10, 12000, 8400, 70%, tekort 3600, 10-12, in uitvoering, details en logboek;
+- Diepzeevisoliecapsules, 8000, 6400, 80%, tekort 1600, 10-08, in uitvoering, details en logboek;
+- Vaste drank met eiwitpoeder, 6000, 2400, 40%, tekort 3600, 10-18, in uitvoering, details en logboek;
+- Gevriesdroogd probioticapoeder, 5000, 5000, 100%, tekort 0, geen afrondingsdatum aangegeven, afgerond, details en logboek;
+- Vis-collageenpeptidepoeder, 6000, 3000, 50%, tekort 3000, 10-15, in uitvoering, details en logboek;
+- Vitamine C-kauwtabletten, 9000, 8100, 90%, tekort 900, 10-06, in uitvoering, details en logboek;
+- Melatonine-snoepjes, 4000, 4000, 100%, tekort 0, geen afrondingsdatum aangegeven, afgerond, details en logboek.
+
+## Wat vóór de ingebruikname aan interfaces en omschakeling wordt vastgelegd
+
+Vóór de ingebruikname worden drie zaken vastgelegd: standaardinterfaces en middleware-mapping worden in de interfacetabel geschreven, drempels van gezondheidslampjes, herhaling van fouten en verantwoordelijken worden aan concrete rijen toegewezen, en vooraf gemelde volumes en capaciteitsniveaus worden op dezelfde set SKU afgestemd. Ontbreekt een van de drie, dan blijven de gezamenlijke tests op herhalingen steken. De aanroepvolumes, slagingspercentages, vooraf gemelde volumes en afrondingsdata in de demo-interface zijn louter ter illustratie; piek- en personeelscijfers komen uit openbare cases en tonen alleen de orde van grootte, terwijl de werkelijke volumes door u worden aangeleverd. De echte aangiftepraktijk volgt de eisen van de bevoegde autoriteit en grensoverschrijdende dataroutes volgen de uitkomst van de gegevensbeschermingseffectbeoordeling. Vóór de omschakeling wordt één volledige afrekeningscyclus parallel doorlopen, wordt bevestigd dat de gegevens van de twee systemen niet uiteen zijn gelopen en pas daarna wordt het verkeer omgezet.
+
+Wilt u de negen interfacefamilies aansluiten op douaneafhandeling volgens uw huidige systeemstack en douanepostenplan, met gezondheidslampjes en vooraf gemelde volumes rij voor rij nagelopen, [neem contact met ons op](/nl/packages/).

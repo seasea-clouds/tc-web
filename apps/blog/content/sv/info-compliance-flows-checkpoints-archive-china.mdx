@@ -1,0 +1,98 @@
+---
+title: "Hur två flöden lämnar spår, kontrollregister och femdokumentsarkiv per order"
+date: "2027-05-25"
+category: "E-commerce"
+excerpt: "Tre dokument i realtid till tullen, nio gränssnitt loggar daglig hälsa. Informationsflödet ger rätt data, efterlevnadsflödet lämnar spår; sex kontrollpunkter med varsitt arkivnummer."
+references:
+  - title: "Caishuiguan [2016] nr 18 från finansministeriet, generaltullförvaltningen och den statliga skatteförvaltningen, skattepolitik för detaljimport inom gränsöverskridande näthandel"
+    url: "https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html"
+  - title: "Meddelande 2018 nr 486 från sex myndigheter inklusive handelsministeriet, om förbättrad tillsyn av detaljimport inom gränsöverskridande näthandel"
+    url: "https://cws.mofcom.gov/gztz/art/2018/art_b7becbacb58a4d0d8bf17b91a168f044.html"
+  - title: "Generaltullförvaltningens meddelande 2018 nr 194 om tillsyn av detaljimport och detaljexport inom gränsöverskridande näthandel"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+---
+
+Om det går att svara på en tillsynsförfrågan avgörs inte av hur många menyer som ligger i administrationen, utan av om varje kontrollpunkt har ett arkivnummer med vilket dokumenten kan hämtas tillbaka. Att tre dokument går i realtid till tullen och att nio gränssnitt varje dag för en dagrapport över sin hälsa löser just frågan om att data skickas rätt; att sex kontrollpunkter var och en har ett femdokumentsarkiv knutet till sig och kan sökas fram via arkivnumret löser frågan om att processen lämnar spår. Båda flödena vilar på ett och samma ordernummer, och bara därför kan man vid en kontroll utgå från en enda order och gå bakåt ända till enhetsdokumentet från tiden före anmälan. Den praxis enligt vilken order, betalning och fraktsedel matchas en i taget och frisläppande tillåts först efter den matchningen är nedskriven i meddelande 2018 nr 486 från sex myndigheter inklusive handelsministeriet och i generaltullförvaltningens meddelande 2018 nr 194.
+
+## Var de tre riskinformationerna som kryssades i kassan sparas
+
+Riskinformationsregistret är administrationens allra första skärm, och de tre förklaringskorten på den går i tur och ordning igenom vilket steg det gäller, vad som registreras och vart det mappas. Det första kortet säger att det är fråga om riskinformationsregistret, att varje rad rymmer en information och att flikarna delar posterna i alla, kryssade och ej kryssade; varje rad bär dessutom posten, innehållet, krysskravet, krysstiden, ordernumret och arkivnumret. Det andra kortet säger att båda posterna pekar på order SO260922-0555, att den ena informationen handlar om att gränsöverskridande varor inte omfattas av sju dagars returrätt utan skäl och den andra om att den kinesiska elektroniska etiketten måste kontrolleras, och att arkivnumren är DA2609-0301 och 0302. Det tredje kortet säger att även det som kunden bekräftade i kassan registreras, så att man kan gå tillbaka till den ursprungliga ordern.
+
+Toppfältet sträcker sig i nätbutiken för gränsöverskridande kosttillskott från butik, marknadsplats, CRM, distribution, marknadsföring, kampanj, data, kundtjänst, innehåll och tilläggstjänster via posten mer ända fram till apparna. Vänsterfältet hör till orderhanteringen under marknadsplatsen och omfattar alla ordrar, leverans, packning, fraktsedlar, gruppköp och kanalmeddelanden; längre ned följer efterköpshanteringen med efterköpsordrar och byten, och till dem kommer driftverktygen. Huvudpanelens rubrik lyder tre riskinformationer och kryss, och den har sju kolumner, nämligen post, innehåll, krysskrav, krysstid, ordernummer, arkivnummer och åtgärd.
+
+- Riskinformation ett, gränsöverskridande varor omfattas ej av sju dagars returrätt utan skäl, kräver kryss, 2026-09-22 14:06, SO260922-0417, DA2609-0301, detaljer och logg;
+- Riskinformation två, kontroll krävs när produktetiketten är på främmande språk, kräver kryss, 2026-09-22 14:06, SO260922-0417, DA2609-0302, detaljer och logg;
+- Riskinformation tre, den årliga personliga kvoten återbetalas ej efter utnyttjande, kräver kryss, 2026-09-22 14:07, SO260922-0417, DA2609-0303, detaljer och logg;
+- Riskinformation ett, gränsöverskridande varor omfattas ej av sju dagars returrätt utan skäl, kräver kryss, 2026-09-21 09:31, SO260921-0088, DA2609-0304, detaljer och logg;
+- Riskinformation tre, den årliga personliga kvoten återbetalas ej efter utnyttjande, kräver kryss, 2026-09-19 20:12, SO260919-0305, DA2609-0305, detaljer och logg.
+
+Alla fem raderna kräver kryss, och båda ingångarna, detaljer och logg, finns på varje rad. Under listan står 5 poster totalt och 20 per sida, sidnavigeringen står kvar på 1 och båda pilarna är på plats. Krysstiden och arkivnumret sparas parvis, så när man i efterhand ska förklara vad kunden bekräftade och när räcker det att hämta posten direkt via DA-numret, och man behöver inte längre be butiken om en skärmdump.
+
+![Demo av riskinformation och bekräftelse med tre förklaringskort, fem rader i registret för tre riskkryss, kryssmarkeringar, krysstider, ordernummer, arkivnummer och en sidnavigering med fem poster av tjugo per sida](/images/blog/info-compliance-flows-checkpoints-archive-china/risk-notices-acknowledgements-demo.webp)
+
+Den årliga personliga transaktionskvoten följer Caishuiguan [2016] nr 18; hur en redan utnyttjad kvot justeras avgörs däremot av den post som görs när deklarationslistan frisläpps.
+
+## Hur de två flödena delar arbetet, vem som kontrolleras först vid en förfrågan
+
+Bland sju affärsflöden skrivs informationsflödet och efterlevnadsflödet åtskilda på den här skärmen. Informationsflödet ser till att data blir rätt, eftersom tre dokument går i realtid, nio gränssnitt för en daglig hälsologg och allt landar i leverantörskedjevyn S11. Efterlevnadsflödet ser till att processen lämnar en post, eftersom alla sex kontrollpunkter förs in i kontrollregistret och helheten hör till efterlevnadsrevisionen S25. På en och samma order möts båda flödena vid samma kontrollpunkt.
+
+Tidslinjen ställer upp de sex beslutspunkter som en order ska passera i en enda rad, nämligen tillträdesbeslut, matchning av tre dokument, identitetskontroll, kvotkontroll, påståendegranskning och regeln om återförsäljningsförbud. Varje punkt är på samma gång en datakontroll i informationsflödet och ett spår som efterlevnadsflödet lämnar. Konstanter och dokumentnummer hämtas från tabellen över tillsynskonstanter, kriterierna för hur punkterna bedöms avgörs av svaret på tillsynsförfrågan, och inget av dessa båda formuleras som en egen text på sidan.
+
+![Översikt över information och efterlevnad med fem fakta om informationsflödet, fyra om efterlevnadsflödet, sex kontrollpunktsstatusrader i centret för efterlevnad och fakturering, arbetsfördelningen och en tidslinje med sex punkter](/images/blog/info-compliance-flows-checkpoints-archive-china/info-compliance-flows-overview.webp)
+
+## Vad som räknas som korrekt återsändning av de tre dokumenten
+
+Informationsflödets kontrollpunkt kontrollerar att tre dokument går i realtid. De tre dokumentens data skickas i realtid till tullen, som har över 50 tullstationer och över 70 ERP anslutna. När tidsordningen granskas per sändning skickas order och betalning först, fraktsedeln skrivs tillbaka först vid frisläppandet, och om ordningen kastas om måste en omdeklaration göras. Data stannar kvar i landet, och en köpare på kontrollistan ska bekräftas inom 15 dagar. De nio gränssnitten omfattar orderöverföring och betalningsretur, de loggar sin hälsa varje dag, och om så mycket som ett enda gränssnitt är osunt visar det sig redan samma dag och man väntar inte till månadsavstämningen.
+
+Gränssnittsbevisen är två, nämligen matchningskonsolen, som visar om tre dokument matchar order för order, och hälsologgen, som visar vilken dag vilket av de nio gränssnitten var nere. Dessa båda ställen är inte en dekoration för driften utan de ursprungliga arbetsregister som vid en tillsynsförfrågan redogör för när data kom och om det blev något avbrott. Informationsflödet ansvarar bara för att data skickas rätt och kan inte i efterlevnadsflödets ställe svara på vem som signerade det här steget.
+
+## Vilka dokument de sex kontrollpunkterna var och en sparar
+
+Efterlevnadsflödets kontrollpunkt kontrollerar att spår lämnas vid sex punkter. Kontrollpunkterna är inbäddade i varje flöde, var och en lämnar en post och var och en kan hämtas tillbaka. Påståendegranskningen täcker tre slag, nämligen produktdetaljsidor, livemanus och kreatörsmaterial. Anmälningsgranskningen, den tredelade leveranskontrollen och svaret på tillsynsförfrågan har var och en sin egen skärm för att lämna spår. Beviset i gränssnittet är kontrollregistret och femdokumentsarkivet, och högerpanelen är inget annat än dess realtidsvy.
+
+I centret för efterlevnad och fakturering utgörs kolumnrubrikerna av tre kolumner, nämligen kontrollpunkt, femdokumentsarkiv och status, och under dem följer sex rader där allt är noterat rad för rad.
+
+- Granskning av enhetskvalifikationer, enhetsdokument och kvalifikationsdokument, slutförd;
+- Behörighetsgranskning av SKU, anmälningsdokument och etikettdokument, slutförd;
+- Konsistenskontroll av tre dokument, order, betalning och fraktsedel, slutförd;
+- Granskning av deklarationslistan, deklarationslista och tulldeklaration, pågår;
+- Frisläppande och kvittning av signerad leverans, frisläppningsdokument och mottagningskvitto, ej påbörjad;
+- Arkivering av årlig egenkontroll, egenkontrollsprotokoll och korrigeringsdokument, ej påbörjad.
+
+Under panelen står 12 poster totalt och 20 per sida, sidnavigeringen står kvar på 1, och bildtexten lyder systemgränssnittsdemo med kontrollpunkter och fem dokument. Slutförd, pågår och ej påbörjad har var och en sin egen färgmarkering, och en rad med tom status räknas aldrig som slutförd; först ska statusen anges tydligt och först därefter kan arkivnumret tas upp, eftersom ordningen inte får kastas om.
+
+## Hur man läser de nio raderna i kontrollpunktsregistret
+
+De tre förklaringskorten på skärmen för arkivering av kontrollpunkter låser fälten. Det första säger att kontrollregistret har en kontrollpunkt per rad, att flikarna delar posterna i alla, före deklaration, under tull och efter leverans, och att varje rad noterar dokument, utlösningspunkt, ansvarig, arkivnummer, slutförandetid och status. Det andra säger att granskningen av enhetskvalifikationer hör ihop med enhetsdokumentet och kvalifikationsdokumentet, att behörighetsgranskningen av SKU hör ihop med anmälningsdokumentet och etikettdokumentet, och att stegen före anmälan och före uppläggning utförs av efterlevnadsrollen. Det tredje säger att efterlevnadsflödet står mellan kapitalflödet, informationsflödet, efterlevnadsflödet och faktureringsflödet och att det vid varje kontrollpunkt lämnar ett arkivnummer med vilket dess dokument kan hämtas fram.
+
+Toppfältet och vänsterfältet är desamma som på skärmen för riskinformation, huvudpanelens rubrik byts till kontrollregister och femdokumentsarkiv, och kolumnerna är sju, nämligen kontrollpunkt, femdokumentsarkiv, utlösningspunkt, ansvarig, arkivnummer, slutförandetid och status. Under den rubriken följer nio rader där allt är noterat rad för rad.
+
+- Granskning av enhetskvalifikationer, enhetsdokument och kvalifikationsdokument, före anmälan, efterlevnadsrollen, GD2609-001, 2026-09-18, slutförd;
+- Behörighetsgranskning av SKU, anmälningsdokument och etikettdokument, före uppläggning, efterlevnadsrollen, GD2609-002, 2026-09-19, slutförd;
+- Konsistenskontroll av tre dokument, order, betalning och fraktsedel, före deklarationen, tullrollen, GD2609-003, 2026-09-20, slutförd;
+- Granskning av deklarationslistan, deklarationslista och tulldeklaration, vid deklarationen, tullrollen, GD2609-004, slutförandetid tom, pågår;
+- Frisläppande och kvittning av signerad leverans, frisläppningsdokument och mottagningskvitto, efter frisläppande, driftsrollen, arkivnummer och slutförandetid båda tomma, ej påbörjad;
+- Arkivering av årlig egenkontroll, egenkontrollsprotokoll och korrigeringsdokument, varje kvartal, efterlevnadsrollen, arkivnummer och slutförandetid båda tomma, ej påbörjad;
+- Stickprovskontroll av etikettefterlevnad, etikettdokument och anmälningsdokument, efter uppläggning, efterlevnadsrollen, GD2609-005, slutförandetid tom, pågår;
+- Avstämning av provisionsregistret, provisionsdokument och avräkningsdokument, efter avräkning, finansrollen, arkivnummer och slutförandetid båda tomma, ej påbörjad;
+- Behörighetsgranskning av SKU, anmälningsdokument och etikettdokument, före uppläggning, efterlevnadsrollen, GD2610-001, 2026-09-19, slutförd.
+
+Under listan står 12 poster totalt och 20 per sida, och sidnavigeringen står kvar på 1. Att arkivnumret lämnas tomt betyder inte att kontrollpunkten saknas, utan att steget ännu inte har nått den tidpunkt då dokumenten ska utfärdas. På rader vars status är ej påbörjad står den ansvarige redan i kontrollregistret, så en tillsynsförfrågan kan svara på vem som ansvarar och vilket dokument som saknas.
+
+![Demo av kontrollpunkter och dokumentarkiv med tre förklaringskort, nio rader i kontrollpunktsregistret och femdokumentsarkivet, utlösningspunkter, ansvariga, arkivnummer, slutförandetider, tre statusfärger och en sidnavigering med tolv poster av tjugo per sida](/images/blog/info-compliance-flows-checkpoints-archive-china/checkpoints-document-archive-demo.webp)
+
+## En genomgång av raden GD2609-003
+
+Ta kontrollen av tre dokument som slutfördes 2026-09-20 som ett ärende att granska. På den raden står att den utlöses före deklarationen, att tullrollen ansvarar, att arkivnumret är GD2609-003 och att dokumenten är order, betalning och fraktsedel. Via arkivnumret hämtas först tre dokument, sedan går man tillbaka till informationsflödet och ser tidsordningen för de tre dokumenten, nämligen att order och betalning skickades först, att fraktsedeln skrevs tillbaka vid frisläppandet och att hälsologgen den dagen saknar någon post om driftstopp; först då håller raden ihop.
+
+Följer man samma ordernummer bakåt ser man att granskningen av enhetskvalifikationer GD2609-001 slutfördes 2026-09-18 och behörighetsgranskningen av SKU GD2609-002 den 2026-09-19, så att båda slutförda stegen ligger före kontrollen av tre dokument före deklarationen. Går man ännu längre bakåt till kassan ser man att DA-numren för riskinformationerna står parvis med krysstiderna rad för rad. Fyra steg delar ett och samma ordernummer, och en enda sökning räcker för att hitta allt.
+
+I ett annat fall har granskningen av deklarationslistan GD2609-004 tom slutförandetid och statusen pågår; även om arkivnumret redan finns är dokumenten ännu inte fullständiga, och därför kan kundtjänst bara svara att ärendet pågår och kan inte säga att det är slutfört. Arkivnumret är den nyckel som hämtar dokumenten, inte ett bevis på slutförande; bara om dessa båda saker skrivs åtskilda i kontrollregistret hindras registret från att vid en tillsynsförfrågan ge ett svar fylligare än fakta.
+
+## Sätt arkivnumret först
+
+Informationsflödet skickar data rätt, efterlevnadsflödet lämnar spår efter processen, och båda möts vid en och samma kontrollpunkt. Före driften ska tre saker låsas fast, nämligen att ett ordernummer går igenom båda flödena, att var och en av de sex kontrollpunkterna har ett arkivnummer och att varje rad anger utlösningspunkt, ansvarig och status tydligt. Övriga gränssnitt kan anslutas i lugn och ro senare, de nio gränssnitten loggar ändå sin hälsa varje dag, och inte ens ytterligare en leverantör ändrar kontrollregistrets form.
+
+I förklaringskorten står att båda riskinformationsposterna pekar på SO260922-0555, men i tabellens tre första rader står i stället ordernumret SO260922-0417; inte heller arkivnumret GD2610-001 på kontrollregistrets sista rad stämmer med månaden för slutförandetiden 2026-09-19. Detta är uppgiftsskillnader i demoskärmens skärmdump, där datum, ordernummer och arkivnummer alla tjänar till att visa hur en rad byggs upp och hur den spåras bakåt. Avgörande är dock arkivnumret, slutförandetiden, fakturan och den behöriga myndighetens krav rad för rad i tabellen, och för statusen är dagens systempost avgörande.
+
+För att koppla kontrollpunktsregistret och femdokumentsarkivet till en spårbar kedja för din butik, ditt lager och din avräkningsenhet, välkommen att [kontakta oss](/sv/packages/).

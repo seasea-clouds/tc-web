@@ -1,0 +1,113 @@
+---
+title: "Deväť rodín rozhraní pre čínske colné platformy, kontrolky stavu a špičková rezerva"
+date: "2027-06-22"
+category: "E-commerce"
+excerpt: "Štandardné rozhrania majú prednosť, zvyšok mapuje middleware; kontrolky zapisujú volania, úspešnosť a opakovania. Dáta zostanú v tuzemsku, rezerva drží špičku, schodky idú po riadkoch."
+references:
+  - title: "Oznámenie Generálnej colnej správy Číny č. 194 z roku 2018 o dohľade nad maloobchodným dovozom a vývozom tovaru v cezhraničnom elektronickom obchode"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Zákon Čínskej ľudovej republiky o ochrane osobných informácií, prijatý Stálym výborom Všečínskeho zhromaždenia ľudových zástupcov dňa 20. augusta 2021, články 38, 39 a 55"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+  - title: "Ustanovenia o podpore a regulácii cezhraničných tokov údajov, vyhláška č. 16 Správy kybernetického priestoru Číny, účinné od 22. marca 2024"
+    url: "https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm"
+---
+
+Deväť rodín rozhraní dokáže napojiť vaše súčasné systémy na čínske colné platformy za predpokladu, že štandardné rozhrania majú prednosť, údaje zostávajú v tuzemsku a na výpredajovú špičku sa drží rezerva na 10násobok špičky. Kde štandardné rozhranie existuje, napojenie je priame, kde chýba, použije sa mapovanie cez middleware; stavové kontrolky zaznamenávajú po kategóriách objem volaní, úspešnosť, latenciu a opätovné odoslania po zlyhaní a dva riadky pre odosielanie objednávok a spätné odoslanie platobného dokladu zaznamenajú odovzdávanie troch dokladov. Referenčná doba integrácie na otvorenom trhu je pri štandardnom rozhraní 3 až 7 dní a pri úplnom napojení 8 až 12 týždňov a slúži len ako orientačná hodnota rádu; skutočný termín spustenia určuje spoločné ladenie a zúčtovací cyklus súbežného behu.
+
+![Ukážka mapovacej tabuľky deviatich rodín rozhraní so záhlavím váš systém, položka napojenia, smer a cieľ, v deviatich riadkoch tovar a sklad, objednávky, údaje o členoch, vyúčtovanie provízií, sklad, clo, plnenie, vrátenie a financie, dole štyri zásady toku údajov a štyri stavové kontrolky monitoringu spoločného ladenia rozhraní](/images/blog/china-bonded-platforms-nine-interfaces/nine-interface-families-mapping.webp)
+
+## Do ktorej tabuľky spadá každá z deviatich rodín rozhraní
+
+Tabuľka rozhraní sa zapisuje do štyroch stĺpcov, ktoré uvádzajú, na ktorej strane je váš systém, čo je položkou napojenia, kto určuje smer a kam údaje nakoniec dopadnú. Smer má iba tri podoby, obojsmerný, prichádzajúci a vami riadený, a riadky bez vyznačeného smeru preberá naša strana; stĺpec cieľa pri každom poli presne určuje, do ktorej evidencie patrí, takže ten, kto prácu prevezme, si to podľa tabuľky ľahko dohľadá.
+
+- Tovar a sklad: skladové zásoby a ceny SKU, obojsmerne, v súlade so systémom riadenia skladu a colnou evidenciou.
+- Objednávky: údaje objednávok, prichádzajúce, dopadajú do polí troch dokladov.
+- Údaje o členoch: vzťahy propagátorov, riadite vy, údaje sú vaše a my ich spracúvame ako poverený spracovateľ.
+- Vyúčtovanie provízií: výplata provízií, obojsmerne, tuzemský úsek vykonáva tuzemský subjekt.
+- Sklad: systém colného skladovania, bez vyznačeného smeru, dopadá do prevádzkového systému colného skladu a zdieľa zdroj s evidenciou.
+- Clo: colné vyhlásenie troch dokladov, bez vyznačeného smeru, vyhlásenie zabezpečujeme my a ide o záležitosť pod našou kontrolou.
+- Plnenie: spätné odosielanie trás, bez vyznačeného smeru, logistická trasa sa zapisuje späť do pohľadu objednávky.
+- Vrátenie: doklady o vrátení, bez vyznačeného smeru, vrátený tovar cez centrum vrátenia znovu vstupuje do oblasti colného dohľadu.
+- Financie: zúčtovanie, odchádzajúce, vrátane meny a zmeny.
+
+Kam údaje smerujú, rozhoduje o tom, ako sa rozhrania napoja. Evidencia na tuzemskej strane a prehľady na zahraničnej strane musia zostať oddelené, inak by si obe strany pri spoločnom ladení prepisovali rovnakú sadu polí.
+
+- Propagačné údaje sa zbierajú a zúčtovávajú v tuzemsku, a preto tam aj zostávajú.
+- K vašej zahraničnej materskej spoločnosti sa vracajú iba deidentifikované súhrnné údaje a neobsahujú tuzemské provizné vzťahy.
+- Zahraničný prevádzkový systém neprichádza do styku s pôvodnými údajmi čínskych spotrebiteľov; cezhraničná cesta sa otvára až po absolvovaní posúdenia vplyvu na ochranu osobných informácií.
+- Tuzemské propagačné a provizné údaje podporujú úplný export a pri odovzdaní ich dostanete aj s príslušnou evidenciou.
+
+Monitoring spoločného ladenia rozhraní radí stavové kontrolky podľa kategórie rozhrania a protistrany do štyroch riadkov a každá kontrola stavu i každé opätovné odoslanie zanechá jeden záznam. Ukážková stránka uvádza tri položky, kategóriu rozhrania, protistranu a stavovú kontrolku, ktoré zodpovedajú rovnakej sade údajov ako ukázka systémového rozhrania, a počas spoločného ladenia sa každý deň prechádzajú riadok po riadku.
+
+- Odosielanie objednávok, protistranou je čelné rozhranie obchodu, stavová kontrolka je normálna.
+- Spätné odoslanie platobného dokladu, protistranou je platobný kanál, stavová kontrolka je normálna.
+- Spätné odoslanie prepravného dokladu, protistranou je kuriérska služba, stavová kontrolka hlási varovanie.
+- Colné vyhlásenie zoznamu, protistranou je kanál pre vyhlásenie, stavová kontrolka je normálna.
+
+Najprv sa pri napojení stanoví štandardné rozhranie, kde existuje, napojí sa priamo, kde chýba, použije sa mapovanie cez middleware. Referenčná doba na otvorenom trhu je pri štandardnom rozhraní 3 až 7 dní a pri úplnom napojení 8 až 12 týždňov a na výpredajovú špičku sa drží rezerva na 10násobok špičky. Každá strana určí jedného technického kontaktného pracovníka a počas spoločného ladenia sa každý deň koná krátka porada. Po spustení sa najprv súbežne dokončí jeden úplný zúčtovací cyklus a až potom sa prepne, aby sa údaje oboch systémov počas súbežného behu nerozchádzali.
+
+## Ako čítať stavové kontrolky a kam sa zaznamenávajú opätovné odoslania po zlyhaní
+
+Protokol stavu rozhraní venuje každej kategórii rozhrania jeden riadok, záložky rozlišujú všetky rozhrania, normálne a abnormálne, a každý riadok uvádza protistranu, objem volaní, úspešnosť, latenciu, počet zlyhaní, opätovné odoslanie a stavovú kontrolku. Pri odosielaní objednávok to vyzerá takto: dnes 1284 volaní, úspešnosť 100%, priemerná latencia 186 milisekúnd, 0 zlyhaní a stavová kontrolka normálna; spätné odoslanie platobného dokladu malo rovnako 1284 volaní, úspešnosť 99,9%, 1 zlyhanie bolo úspešne odoslané znovu a stavová kontrolka zostala normálna. Tieto dva riadky sú dokladom toho, že odovzdávanie troch dokladov v systéme zostáva zaznamenané.
+
+Po zmapovaní deviatich rodín rozhraní sa objemy volaní i údaje o stave počas behu ukladajú do tohto protokolu a dva riadky pre odosielanie objednávok a spätné odoslanie platobného dokladu zaznamenávajú, ako sa odovzdávanie troch dokladov uplatnilo. Ukážkové rozhranie uvádza dole celkom 12 záznamov a 20 na stránku, každý riadok má na konci dva vstupy pre detail a protokol; všetkých deväť riadkov je vypísaných podľa rovnakej sady údajov.
+
+![Ukážka rozhrania protokolu stavu rozhraní, v deviatich stĺpcoch kategória rozhrania, protistrana, dnešné volania, úspešnosť, priemerná latencia, počet zlyhaní, opätovné odoslanie, stavová kontrolka a akcie uvádza deväť riadkov rozhraní, dole je uvedených celkom 12 záznamov a 20 na stránku](/images/blog/china-bonded-platforms-nine-interfaces/interface-health-log-system-demo.webp)
+
+- Odosielanie objednávok, čelné rozhranie obchodu, dnes 1284 volaní, úspešnosť 100%, priemerná latencia 186 milisekúnd, 0 zlyhaní, bez opätovného odoslania, stavová kontrolka normálna, detail a protokol;
+- Spätné odoslanie platobného dokladu, platobný kanál, 1284, 99,9%, 210 milisekúnd, 1 zlyhanie, znovu odoslané, normálna, detail a protokol;
+- Spätné odoslanie prepravného dokladu, kuriérska služba, 1266, 99,2%, 340 milisekúnd, 10 zlyhaní, opätovné odoslanie prebieha, varovanie, detail a protokol;
+- Colné vyhlásenie zoznamu, kanál pre vyhlásenie, 1266, 99,8%, 520 milisekúnd, 3 zlyhania, znovu odoslané, normálna, detail a protokol;
+- Dopyt na kvótu, dopytovací kanál, 1284, 100%, 150 milisekúnd, 0 zlyhaní, bez opätovného odoslania, normálna, detail a protokol;
+- Synchronizácia evidencie, colný sklad, 96, 100%, 430 milisekúnd, 0 zlyhaní, bez opätovného odoslania, normálna, detail a protokol;
+- Spätný zápis stavu uvoľnenia, kanál pre vyhlásenie, 1240, 99,6%, 610 milisekúnd, 5 zlyhaní, znovu odoslané, normálna, detail a protokol;
+- Logistická trasa, kuriérska služba, 1240, 98,7%, 720 milisekúnd, 16 zlyhaní, opätovné odoslanie prebieha, varovanie, detail a protokol;
+- Podklad na vyrovnanie, finančný systém, 12, 100%, 980 milisekúnd, 0 zlyhaní, bez opätovného odoslania, normálna, detail a protokol.
+
+## Ako sa posudzuje špička výpredajovej sezóny a koľko kapacity ponechať
+
+Posúdenie špičky sa podľa objemu objednávok a nárokov na odozvu delí do štyroch pásiem, nízky objem s vysokou odozvou sleduje elasticitu, vysoký objem s vysokou odozvou sleduje predstih, nízky objem s nízkou odozvou sleduje základné schopnosti a vysoký objem s nízkou odozvou sleduje ustálenú kapacitu. Krivka kapacity vo vzťahu k dennej kapacite má tri úrovne, bežná prevádzka 1násobok, výpredajová špička 4 až 5násobok a špička 10násobok, pričom na strane špičky sa drží rezerva na 10násobok. Čím skôr nám odovzdáte predbežne nahlásené množstvá, tým viac priestoru zostáva na rozšírenie kapacity a plánovanie personálu; ak množstvá dodáte až týždeň pred výpredajovou špičkou, zostáva už len pridať ľudí.
+
+- Nízky objem a vysoké nároky na odozvu spadajú do elasticity špičky, verejné prípady dosahujú 4 až 5násobok denného objemu objednávok, špička siaha od desiatok tisíc po státisíce kusov a personál na výpredajovú špičku je zhruba 3násobok bežného stavu, to všetko sú referenčné hodnoty z verejných prípadov.
+- Vysoký objem a vysoké nároky na odozvu obmedzuje predstih, mimoriadne vysoká špička predstih vyžaduje, rast SKU zároveň zväčšuje sklad i evidenciu, na výpredajovú špičku sa rezervuje 10násobok špičky a vstupy rádovej veľkosti dodávate vy.
+- Nízky objem a nízke nároky na odozvu sú základnou schopnosťou, značková predajňa s licencovanými platbami má doklady zabudované, je napojená na viac ako 50 prístavov a viac ako 70 systémov ERP, disponuje pokročilou certifikáciou AEO a vlastným colným odbavením a naša strana je pripravená.
+- Vysoký objem a nízke nároky na odozvu sú ustálenou kapacitou, veľkosť sa odvodzuje od denného objemu objednávok, tovar sa do skladu umiestňuje vopred a skladuje sa po zónach, stály a dočasný personál sa kombinuje, predbežne nahlásené množstvá idú napred a vrátený tovar znovu vstupuje do oblasti colného dohľadu, naša strana postupuje podľa procesu.
+
+Kandidátmi na sklad sú štyri lokality komplexných colných zón a sklad Hongkong, Čína. Štyri lokality vedľa seba znamenajú redundanciu viacerých prístavov, konečný prístav určujete vy a zoznam kandidátov dostanete hneď na začiatku, takže netreba čakať, kým tovar dorazí do prístavu. Sklad Hongkong, Čína je vedený na zahraničnej strane a zapisuje sa oddelene od štyroch tuzemských lokalít.
+
+![Ukážka rozhodovania o vrchole výpredajovej sezóny podľa kapacity platformy a plnenia, vľavo štyri kvadranty podľa objemu a nárokov na odozvu, vpravo hore trojúrovňová krivka kapacity vo vzťahu k dennej kapacite, vpravo dole panel predbežne nahlásených množstiev na výpredajovú špičku a dole štyri lokality komplexných colných zón a sklad Hongkong, Čína](/images/blog/china-bonded-platforms-nine-interfaces/mega-sale-peak-capacity-verdict.webp)
+
+- Yiwu, Zhejiang, colný sklad v režime 1210.
+- Hangzhou, Zhejiang, colný sklad v režime 1210.
+- Guangzhou Huangpu, Guangdong, colný sklad v režime 1210.
+- Shenzhen Qianhai, Guangdong, colný sklad v režime 1210.
+- Hongkong, Čína, zahraničie, colný sklad v Hongkongu, Čína.
+
+Panel predbežne nahlásených množstiev na výpredajovú špičku uvádza v siedmich stĺpcoch SKU, predbežne nahlásené množstvo, zaevidované, pokrok, predpokladané dokončenie, stav a akcie celkom štyri riadky, z ktorých každý má dva vstupy pre detail a protokol. Pokrok a predpokladaný dátum dokončenia určujú poradie zásobenia jednotlivých SKU a schodky sa v tabuľke sledovania predbežne nahlásených množstiev sledujú riadok po riadku.
+
+- Kapsuly s koenzýmom Q10, predbežne nahlásené množstvo 12000, zaevidované 8400, pokrok 70%, predpokladané dokončenie 10-12, prebieha, detail a protokol;
+- Kapsuly s rybím olejom z hlbokého mora, 8000, 6400, 80%, 10-08, prebieha, detail a protokol;
+- Proteínový prášok ako pevný nápoj, 6000, 2400, 40%, 10-18, prebieha, detail a protokol;
+- Lyofilizovaný probiotický prášok, 5000, 5000, 100%, dátum dokončenia neuvedený, dokončené, detail a protokol.
+
+## Ako sa schodky predbežne nahlásených množstiev sledujú riadok po riadku
+
+Tabuľka sledovania predbežne nahlásených množstiev v module skladu venuje každému SKU jeden riadok a zapisuje predbežne nahlásené množstvo, zaevidované, pokrok, schodok, predpokladané dokončenie a stav. Pri kapsuliach s koenzýmom Q10 to vyzerá takto: predbežne nahlásené množstvo 12000, zaevidované 8400, pokrok 70%, schodok 3600 a predpokladané doplnenie 10-12; kapsule s rybím olejom z hlbokého mora majú pokrok 80%, schodok 1600 a predpokladané doplnenie 10-08. Krivka kapacity o troch úrovniach sa tu premieta do zásobovacích krokov, takže aký veľký je schodok a ktorý deň sa doplní, je vidieť vopred.
+
+Rozhranie uvádza dole celkom 7 záznamov a 20 na stránku, každý riadok má na konci dva vstupy pre detail a protokol; záložka sledovania predbežne nahlásených množstiev a záložka upozornenia na príchod ležia vedľa seba, operátori prepínajú medzi záložkami a nemusia znova filtrovať. Všetkých sedem riadkov je vypísaných podľa rovnakej sady údajov.
+
+![Ukážka rozhrania sledovania predbežne nahlásených množstiev, v ôsmich stĺpcoch SKU, predbežne nahlásené množstvo, zaevidované, pokrok, schodok, predpokladané dokončenie, stav a akcie uvádza sedem riadkov tovaru, dole je uvedených celkom 7 záznamov a 20 na stránku](/images/blog/china-bonded-platforms-nine-interfaces/pre-filed-volume-tracking-system-demo.webp)
+
+- Kapsuly s koenzýmom Q10, 12000, 8400, 70%, schodok 3600, 10-12, prebieha, detail a protokol;
+- Kapsuly s rybím olejom z hlbokého mora, 8000, 6400, 80%, schodok 1600, 10-08, prebieha, detail a protokol;
+- Proteínový prášok ako pevný nápoj, 6000, 2400, 40%, schodok 3600, 10-18, prebieha, detail a protokol;
+- Lyofilizovaný probiotický prášok, 5000, 5000, 100%, schodok 0, dátum dokončenia neuvedený, dokončené, detail a protokol;
+- Prášok z rybieho kolagénového peptidu, 6000, 3000, 50%, schodok 3000, 10-15, prebieha, detail a protokol;
+- Žuvacie tablety s vitamínom C, 9000, 8100, 90%, schodok 900, 10-06, prebieha, detail a protokol;
+- Melatonínové želé bonbóny, 4000, 4000, 100%, schodok 0, dátum dokončenia neuvedený, dokončené, detail a protokol.
+
+## Čo je pred spustením treba pevne určiť pri rozhraniach a prepnutí
+
+Pred spustením sa pevne určia tri miesta, štandardné rozhrania a mapovanie cez middleware sa zapíšu do tabuľky rozhraní, prahy stavových kontroliek, opätovné odoslania po zlyhaní a zodpovedné osoby sa pripnú k jednotlivým riadkom a predbežne nahlásené množstvá sa zladia s kapacitnými pásmami na rovnakej sade SKU. Ak nie sú všetky tri miesta hotové, spoločné ladenie bude stále viaznuť na opätovných odoslaniach. Objemy volaní, úspešnosť, predbežne nahlásené množstvá a dátumy dokončenia v ukážkovom rozhraní slúžia iba na ilustráciu, čísla špičky a personálu pochádzajú z verejných prípadov a vypovedajú len o rádovej veľkosti, skutočnú veľkosť dodávate vy; skutočná prax colného vyhlásenia sa riadi požiadavkami príslušného orgánu a cezhraničná cesta údajov sa riadi záverom posúdenia vplyvu na ochranu osobných informácií. Pred prepnutím sa súbežne dokončí jeden úplný zúčtovací cyklus, overí sa, že sa údaje oboch systémov nerozchádzajú, a až potom sa presmeruje prevádzka.
+
+Ak chcete podľa svojho súčasného systémového zásobníka a usporiadania prístavov napojiť deväť rodín rozhraní na colné plnenie a riadok po riadku overovať stavové kontrolky i predbežne nahlásené množstvá, [Kontaktujte nás](/sk/packages/).

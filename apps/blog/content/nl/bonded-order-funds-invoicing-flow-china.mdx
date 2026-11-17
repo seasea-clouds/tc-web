@@ -1,0 +1,67 @@
+---
+title: "Geldstroom en factureringsstroom van douanelagerorders, alleen met vijf documenten"
+date: "2027-05-11"
+category: "E-commerce"
+excerpt: "2 checkpuntstromen: batches/binnenlandse entiteit, commissie/order maand. ingehouden, rekening ~6 weken, 5 doc.: overmaking, belastingaftrek, audit, batch-/archiefnr., 4 stromen M1–M6."
+references:
+  - title: "Mededeling nr. 486 van 2018 van zes ministeries onder leiding van het Ministerie van Handel, over de verbetering van het toezicht op detailimport via grensoverschrijdende e-commerce"
+    url: "https://www.gov.cn/zhengce/zhengceku/2018-12/31/content_5437823.htm"
+  - title: "Mededeling nr. 194 van 2018 van de Algemene Douaneadministratie, over aangelegenheden van toezicht op in- en uitvoer in de detailhandel via grensoverschrijdende e-commerce"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Caishuiguan [2016] nr. 18 van het Ministerie van Financiën, de Algemene Douaneadministratie en de Staatsbelastingdienst, belastingbeleid voor detailimport via grensoverschrijdende e-commerce"
+    url: "https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html"
+  - title: "Bekendmaking van de nationale belastingautoriteit en de nationale deviezenautoriteit van China over fiscale registratie van buitenlandse betalingen voor diensten en andere posten (nr. 40 van 2013, gewijzigd bij nr. 31 van 2018)"
+    url: "https://www.chinatax.gov.cn/chinatax/c102449/c5219874/content.html"
+---
+
+Bij de operationele uitvoering van een douanelagerorder volgen geld en documenten elk hun eigen route, met elk hun eigen controlepunten. De geldstroom kijkt naar afrekenbatches: het geld gaat per cyclus in hele batches naar de binnenlandse entiteit, niet als afzonderlijke overmakingen per order naar het buitenland. De factureringsstroom kijkt naar documenten: pas als de vijf documenten compleet zijn, hebben overmaking, aftrek vóór belasting en audit een gemeenschappelijke basis. Beide lijnen komen samen op dezelfde order; het ontmoetingspunt zijn de zes mijlpalen van M1 tot M6.
+
+![Twee kaarten voor de geldstroom en de factureringsstroom, elk met controlepunten; twee kaarten rechts verklaren waarom de factureringsstroom apart staat en hoe documenten worden opgevraagd; onderaan lopen de vier stromen informatie, compliance, geld en facturering samen in de M1 tot M6 van één order](/images/blog/bonded-order-funds-invoicing-flow-china/funds-invoicing-two-flow-checkpoints.webp)
+
+## Hoe het geld loopt, vijf knooppunten van de geldstroom
+
+De knooppunten van de geldstroom staan op één lijn: betaling, bundeling, afrekening, binnenlandse ontvangst en overmaking; het controlepunt zit aan het einde en toetst documenten en belastingaangifte. De afrekening loopt per cyclus in batches, de binnenlandse entiteit ontvangt centraal, er zijn geen afzonderlijke overmakingen per order naar het buitenland; de commissie wordt per order toegerekend en maandelijks ingehouden en doorbetaald, facturen en inhoudingsbewijzen worden per periode bewaard; de geldrekening wordt in ongeveer 6 weken geopend, parallel aan de inrichting van de webshop, zonder extra tijd voor de livegang op te eisen.
+
+Deze knooppunten zijn in de beheeromgeving stuk voor stuk aan concrete stukken te koppelen: voorbeelden van het afrekenoverzicht en de registraties van de geldstroom en de afrekenbatches staan in het systeem, bij toetsing hoeft geen extra materiaal te worden gezocht. De batch is de basiseenheid van deze stroom; reconciliatie, overmaking en vastlegging verlopen allemaal per batch.
+
+## Hoe documenten bewaard blijven, de vijf documenten als één stapel bewijs
+
+Ook de factureringsstroom heeft vijf knooppunten: betaalbewijs, vrachtbrief, aangifte, belastingnota en afrekenoverzicht; het controlepunt toetst of alle vijf documenten in het dossier zitten. Vijf documenten compleet is de gemeenschappelijke voorwaarde voor drie zaken: overmaking naar het buitenland, aftrek vóór belasting en audit; ontbreekt er één, dan kan geen van drieën doorgaan. Het afrekenoverzicht wordt automatisch per batch aangemaakt, deelt de bron met het geldstroomregister en de cijfers sluiten op elkaar aan.
+
+De registraties van de drie stromen geld, goederen en informatie krijgen geen apart register; ze komen allemaal samen op deze vijf documenten. Eén stapel documenten volgt een order van begin tot eind en brengt boekhouding en voorraad met elkaar in overeenstemming.
+
+## Waarom de factureringsstroom een aparte stroom is
+
+Deze stapel bewijsstukken heeft vier doelen: overmaking naar het buitenland, aftrek vóór belasting, audit en vragen van de toezichthouder. De vier doelen gebruiken dezelfde onderliggende documenten; ontbreekt er één, dan valt een schakel weg. Daarom staat de factureringsstroom apart, met een eigen controlepunt, en loopt zij parallel aan de geldstroom.
+
+Bij de importketen draait alles om matching: de vijf documenten moeten op dezelfde order sluiten, gebruik over orders heen wordt per regel uitgelicht. De discipline van de fasering van de geldstroom staat in de overeenkomst, batchvoorbeelden zijn per batch terug te vinden in schermafbeeldingen van de interface; discipline plus voorbeelden vormen de dagelijkse staat van deze stroom.
+
+## Hoe documenten worden opgevraagd, hoe reconciliatie verloopt
+
+Reconciliatie verloopt via het batchnummer en wordt batch voor batch in het geldstroomregister getoetst; documenten worden via het archiefnummer uit de controlepunttracker gehaald. Beide registers worden met de oplevering gearchiveerd en zijn direct opvraagbaar; bij een vraag hoeft materiaal niet ad hoc te worden samengesteld.
+
+## Vier stromen komen samen op één order
+
+Het plaatsen van een order zet vier stromen tegelijk in beweging: de informatiestroom geeft de terugkoppeling van de drie documenten, de compliancestroom rondt de identiteitsverificatie af, de geldstroom neemt deze betaling op in de batchafrekening en de factureringsstroom maakt vervolgens het afrekenoverzicht aan. De vier stromen boeken per controlepunt van M1 tot M6, zodat elke stap van een order, van productselectie tot de boeking van de commissie, aan een registratie te koppelen is.
+
+## Eén order van M1 tot M6
+
+Het orderpad telt 6 stappen, 4 kritieke interfaces en in de verantwoordelijkheidsmatrix maar 1 A-rol met de eindverantwoordelijkheid. M1 productselectie en toelating: de trigger is complete invoer, de poort ligt bij de documenten, opgeleverd worden een lijst en de HS-codes, wij voeren uit en u levert de invoer aan; M2 inslag in het douanelager: de poort ligt bij de douanelageradministratie, opgeleverd worden de administratie en het voorraadoverzicht; M3 publicatie: de poort ligt bij de toetsing van claims, opgeleverd worden het toetsingsbesluit en de tekst met verplichte vermeldingen.
+
+M4 order: de poort ligt bij identiteit en verplichte vermeldingen, opgeleverd worden de registraties daarvan; M5 douaneafhandeling: de trigger is een afgeronde betaling, de poort ligt bij de kruiscontrole van de drie documenten en het quotum, opgeleverd worden de toetsingsconclusie en de quotumaftrek; M6 afrekening en commissie: de trigger is vrijgave, de poort ligt bij de compliance van de commissie-uitbetaling, opgeleverd wordt de commissielijst, wij voeren uit en u bevestigt de regels. De regie over de stappen ligt bij ons; u levert alleen bij M1 invoer aan en bevestigt bij M6 de regels, tussendoor is geen afstemming per schakel nodig.
+
+![Bewijs van de naburige pagina: het end-to-end pad van zes stappen M1 tot M6 van één order en de verdeling van verantwoordelijkheid over vier kritieke interfaces, daaronder twee demotabellen voor de kruiscontrole van de betaalvolgorde en voor vrijgave en ontvangsttracking](/images/blog/bonded-order-funds-invoicing-flow-china/order-path-m1-m6-responsibility-splits.webp)
+
+De taakverdeling van de vier interfacepartijen staat op dezelfde pagina: uw onderneming beheert producten en besluiten, het platform beheert orders en afrekening, de fulfilmentpartij beheert opslag en douaneafhandeling, de toezichthouder beheert aangifte en inspectie. De zeven stromen hebben één coördinerende partij, met de A-rol die in de verantwoordelijkheidsmatrix de eindverantwoordelijkheid draagt; de grenzen van bevoegdheid en verantwoordelijkheid van de vier interfaces staan in het plan. De rekening en de data blijven bij u, de regie en de vastlegging blijven bij ons, de overdracht kent geen hiaten.
+
+## Eén order, het hele traject
+
+In de demotabel staat één order: ordernummer SO260922-0417, betaalbewijs PAY260922-0417, de tijdsvolgorde klopt. Bij de bestelling waren beide registraties, identiteit en verplichte vermeldingen, compleet; de afgeronde betaling zette de douaneafhandeling in gang, de kruisvergelijking van de drie documenten en de quotumtoets kwamen door, lijstnummer QD260922-0417 werd aangemaakt en trackingnummer EX7726001 toont de ontvangst bevestigd. Na de ontvangst volgt vrijgave, de order gaat de batchafrekening in, en de vijf documenten betaalbewijs, vrachtbrief, aangifte, belastingnota en afrekenoverzicht worden per batch gearchiveerd; het batchnummer klopt in het geldstroomregister en het archiefnummer is op te vragen in de controlepunttracker.
+
+De tweede regel van dezelfde tabel is het tegenvoorbeeld: bij SO260921-0088 liep de tijdsvolgorde van het betaalbewijs 2 uur vertraging op, en het kruiscontrolewerkblad somt zulke afwijkingen per order regel voor regel op; in de vrijgave- en volgtabel is QD260921-0088 nog onderweg, de ontvangststatus is nog niet bereikt en de vrijgave blijft staan voor de poort van M6. De twee demotabellen maken hetzelfde duidelijk: tijdsvolgorde, status en nummers zijn per order opvraagbaar, afwijkingen hoeven niet door handmatig bladeren door registraties te worden ontdekt.
+
+Kijk naar de controlepunten van beide stromen samen en de operationele discipline valt in twee woorden samen: compleet en kloppend, de vijf documenten compleet en de batches kloppend. Leg eerst de afrekenende entiteit, de afrekenperiode en de archiveringsregels vast en plan daarna de livegang; elke latere overmaking, aftrek en vraag kan dan naar dezelfde stapel documenten verwijzen. De nummers, tijdsvolgorden en ontvangststatussen in de demo-interface dienen alleen ter illustratie; de werkelijke uitgangspunten volgen de facturen van de lopende periode, de platformexport en de eisen van de bevoegde autoriteit.
+
+De geldstroom en de factureringsstroom worden na de livegang het makkelijkst als backofficezaak behandeld; pas wanneer een overmaking bij de documenttoets blijft steken of de aftrek door de belastingdienst wordt tegengehouden, worden documenten alsnog aangevuld. Het archiveringsmoment van de vijf documenten ligt al vast op het moment van vrijgave van de order, en batchvoorbeelden laten per batch sporen achter; controlepunten naar voren halen is veel goedkoper dan achteraf schakels aanvullen.
+
+[Neem contact op](/nl/packages/) als u de geldstroom en de factureringsstroom, afgestemd op uw huidige afrekenende entiteit en winkelinrichting, wilt samenbrengen tot één register waarin reconciliatie mogelijk is en waaruit documenten op te vragen zijn.

@@ -1,0 +1,113 @@
+---
+title: "Ni grænseflader for Kinas toldoplagsplatforme, statuslamper og kampagnespidsreserve"
+date: "2027-06-22"
+category: "E-commerce"
+excerpt: "Standardgrænseflader først, ellers middleware; statuslamper logger opkald og gensendelser. Data bliver i landet, kun anonymiserede sumdata går ud, og der reserveres til kampagnespidser."
+references:
+  - title: "Bekendtgørelse nr. 194 af 2018 fra Kinas generaladministration for told om overvågning af detailvarer ved import og eksport i grænseoverskridende e-handel"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Folkerepublikken Kinas lov om beskyttelse af personoplysninger, vedtaget den 20. august 2021, artikel 38, 39 og 55"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+  - title: "Bestemmelser om fremme og regulering af grænseoverskridende datastrømme, bekendtgørelse nr. 16 fra Kinas statslige kontor for internetinformation, i kraft fra den 22. marts 2024"
+    url: "https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm"
+---
+
+Ni grænsefladefamilier kobler jeres eksisterende systemer til Kinas toldoplagsplatforme, forudsat at standardgrænseflader har forrang, data bliver i landet og reserven til kampagnespidser dimensioneres til 10 gange spidsen. Hvor en standardgrænseflade findes, kobles der direkte, og hvor den ikke findes, afbilder middleware; statuslamper registrerer pr. klasse opkaldsvolumen, succesrate, svartid samt fejlede og gensendte opkald, og de to rækker ordreoverførsel og betalingsretur fastholder tilbagemeldingen af de tre dokumenter. Offentlige markedsbenchmarks sætter tidsrammen for standardintegration til 3 til 7 dage og for fuld integration til 8 til 12 uger, og disse værdier er kun størrelsesordener til sammenligning. Den faktiske startdato afgøres af de fælles test og en afregningscyklus i parallel drift.
+
+![Demo af koblingstabellen for de ni grænsefladefamilier med kolonnerne jeres system, integrationselement, retning og landingssted, ni rækker fra varer og lager til økonomi, fire principper for datastrømme og de fire statuslamper i overvågningen af de fælles test](/images/blog/china-bonded-platforms-nine-interfaces/nine-interface-families-mapping.webp)
+
+## Hvilken tabel hver af de ni grænsefladefamilier lander i
+
+Grænsefladetabellen er skrevet i fire kolonner: hvilken side af jeres system det er, hvad integrationselementet er, hvem der styrer retningen, og hvor data ender. Retningen kender kun tre former, tovejs, indgående og styret af jer; rækker uden angivet retning overtages af vores side. Kolonnen for landingsstedet angiver, hvilken bog hvert felt hører til, så den, der overtager, kan kontrollere det ud fra tabellen.
+
+- Varer og lager: SKU-lager og priser, tovejs, holdt i overensstemmelse med lagerstyringssystemet og toldbøgerne.
+- Ordrer: ordredata, indgående, lander i de tre dokumentfelter.
+- Medlemsdata: promoterrelationer, styret af jer, data tilhører jer, og vi behandler dem som databehandler.
+- Provisionsafregning: provisionsudbetaling, tovejs, den indenlandske del udføres af den indenlandske enhed.
+- Lager: toldoplagsstyringssystemet, ingen retning angivet, lander i toldoplagsdriftssystemet og har samme kilde som bøgerne.
+- Told: anmeldelsen af de tre dokumenter, ingen retning angivet, anmeldelsen står vi for, og den forbliver et punkt under vores kontrol.
+- Ekspedition: tilbagemelding af sporing, ingen retning angivet, logistiksporingen skrives tilbage til ordrevisningen.
+- Returneringer: returdokumenter, ingen retning angivet, returneringer går via returcentret igen ind i det toldkontrollerede område.
+- Økonomi: afregning, udgående, inklusive valuta og veksling.
+
+Hvor data bevæger sig hen, afgør hvordan grænsefladerne bygges. Bogen på den indenlandske side og dashboardet på den udenlandske side skal holdes adskilt, ellers vil begge sider under de fælles test overskrive de samme felter for hinanden.
+
+- Promotionsdata, der indsamles i landet og afregnes i landet, bliver i landet.
+- Kun pseudonymiserede aggregerede data går tilbage til jeres moderselskab i udlandet, uden indenlandske provisionsrelationer.
+- Backoffice i udlandet rører aldrig rådata om kinesiske forbrugere; grænseoverskridende datastier åbnes først, når konsekvensvurderingen af beskyttelsen af personoplysninger er bestået.
+- Indenlandske promotions- og provisionsdata kan eksporteres fuldt ud og overdrages sammen med bøgerne ved overdragelsen.
+
+Overvågningen af de fælles test stiller statuslamperne op i fire rækker efter grænsefladetype og modpart, og hvert sundhedstjek og hver gensendelse efterlader en post. Demosiden skriver tre punkter, grænsefladetype, modpart og statuslampe, og svarer dermed til samme grundlag som demoen af systemgrænsefladen; under de fælles test gennemgås rækkerne dagligt én for én.
+
+- Ordreoverførsel, modpart butiksfront, statuslampe normal.
+- Betalingsretur, modpart betalingskanal, statuslampe normal.
+- Fragtbrevsretur, modpart kurértjeneste, statuslampe advarsel.
+- Listeanmeldelse, modpart anmeldelseskanal, statuslampe normal.
+
+Grundlaget for integrationen begynder med standardgrænseflader: hvor en findes, kobles der direkte, og hvor den ikke findes, afbilder middleware. Offentlige markedsbenchmarks sætter tidsrammen for standardintegration til 3 til 7 dage og for fuld integration til 8 til 12 uger; til kampagnespidser reserveres der i højde med 10 gange spidsen. Begge sider udpeger hver en teknisk kontaktperson og holder under de fælles test en kort daglig afstemning. Efter starten gennemløbes først en fuld afregningscyklus i parallel drift, før der skiftes, og under den parallelle drift må data i de to systemer ikke løbe fra hinanden.
+
+## Hvordan statuslamperne læses, og hvor fejlede gensendelser registreres
+
+Grænsefladestatusloggen giver én række pr. grænsefladetype, med faner for alle grænseflader, normal og unormal, og hver række skriver modpart, opkaldsvolumen, succesrate, svartid, fejl, gensendelse og statuslampe. Tag ordreoverførslen som eksempel: i dag 1284 opkald, en succesrate på 100%, en gennemsnitlig svartid på 186 millisekunder, 0 fejl og en normal statuslampe. Betalingsreturen havde ligeledes 1284 opkald med en succesrate på 99,9%, hvor 1 fejl blev gensendt med succes, og statuslampen fortsat var normal. Disse to rækker er beviset på, at tilbagemeldingen af de tre dokumenter ligger i systemet.
+
+Når de ni grænsefladetyper er koblet, lander opkaldsvolumener og sundhedsdata i driftstiden alle i denne log, og de to rækker ordreoverførsel og betalingsretur fastholder, hvordan tilbagemeldingen af de tre dokumenter er ankommet. Nederst i demooverfladen står der i alt 12 poster og 20 pr. side, og for enden af hver række ligger de to indgange detaljer og log; alle ni rækker følger samme grundlag.
+
+![Demo af systemgrænsefladen for grænsefladestatusloggen, ni rækker i de ni kolonner grænsefladetype, modpart, opkald i dag, succesrate, gennemsnitlig svartid, fejl, gensendelse, statuslampe og handlinger, nederst med 12 poster og 20 pr. side](/images/blog/china-bonded-platforms-nine-interfaces/interface-health-log-system-demo.webp)
+
+- Ordreoverførsel, butiksfront, i dag 1284 opkald, succesrate 100%, gennemsnitlig svartid 186 millisekunder, 0 fejl, ikke gensendt, statuslampe normal, detaljer og log;
+- Betalingsretur, betalingskanal, 1284, 99,9%, 210 millisekunder, 1 fejl, gensendt, normal, detaljer og log;
+- Fragtbrevsretur, kurértjeneste, 1266, 99,2%, 340 millisekunder, 10 fejl, gensendelse i gang, advarsel, detaljer og log;
+- Listeanmeldelse, anmeldelseskanal, 1266, 99,8%, 520 millisekunder, 3 fejl, gensendt, normal, detaljer og log;
+- Kvoteopslag, opslagskanal, 1284, 100%, 150 millisekunder, 0 fejl, ikke gensendt, normal, detaljer og log;
+- Bogsynkronisering, toldoplag, 96, 100%, 430 millisekunder, 0 fejl, ikke gensendt, normal, detaljer og log;
+- Tilbageskrivning af frigivelsesstatus, anmeldelseskanal, 1240, 99,6%, 610 millisekunder, 5 fejl, gensendt, normal, detaljer og log;
+- Logistiksporing, kurértjeneste, 1240, 98,7%, 720 millisekunder, 16 fejl, gensendelse i gang, advarsel, detaljer og log;
+- Afstemmingsfil, økonomisystem, 12, 100%, 980 millisekunder, 0 fejl, ikke gensendt, normal, detaljer og log.
+
+## Hvordan kampagnespidsen vurderes, og hvor meget kapacitet der reserveres
+
+Spidsvurderingen deler sig efter ordrevolumen og responsbehov i fire tilfælde: lavt volumen med højt responsbehov retter sig efter elasticitet, højt volumen med højt responsbehov efter leveringstiden, lavt volumen med lavt responsbehov efter grundkapaciteten og højt volumen med lavt responsbehov efter den stabile kapacitet. Kapacitetskurven i forhold til dagskapaciteten har tre trin: 1 gang i hverdagen, 4 til 5 gange i en kampagne og 10 gange ved spidsen, hvor der på spidssiden reserveres i højde med 10 gange. Jo tidligere I giver os forhåndsmængderne, desto mere spillerum er der til udbygning og bemanding; kommer mængderne først en uge før kampagnen, er ekstra mandskab det eneste, der kan justeres.
+
+- Lavt ordrevolumen og højt responsbehov ender i spidselasticitet: Offentlige tilfælde ligger på 4 til 5 gange dagsvolumen, spidserne går fra titusinder til flere hundrede tusind enheder, og bemandingen i kampagner er omkring 3 gange det normale; det er benchmarks fra offentlige tilfælde.
+- Højt ordrevolumen og højt responsbehov er begrænset af leveringstiden: Meget høje spidser kræver en leveringstid, SKU-vækst forstørrer lager og bøger samtidig, kampagner reserveres til 10 gange spidsen, og størrelsesordenerne som input leverer I.
+- Lavt ordrevolumen og lavt responsbehov er grundkapacitet: en brandbutik med licenserede betalinger, indbyggede dokumenter, tilkoblet mere end 50 toldsteder og mere end 70 ERP-systemer, med AEO-certificering på højeste niveau og egen toldbehandling; vores side er klar.
+- Højt ordrevolumen og lavt responsbehov er stabil kapacitet: dimensioneret efter dagsordrer, med tidlig indlagring og opdelt opbevaring, faste og midlertidige medarbejdere i kombination, forhåndsmængder først og returneringer, der igen går ind i det toldkontrollerede område; vores side kører det som en proces.
+
+Som lagerkandidater er der fire lokaliteter i omfattende toldoplagszoner samt et lager i Hongkong, Kina. Fire lokaliteter i parallel giver redundans på tværs af flere toldsteder; det endelige toldsted bestemmer I, og kandidatlisten overdrages til jer allerede i opstarten, så der ikke skal ventes til varen ankommer i havnen. Lageret i Hongkong, Kina står på den udenlandske side og føres adskilt fra de fire indenlandske lokaliteter.
+
+![Demo af vurderingen af kampagnespidsen for platform- og ekspeditionskapacitet, til venstre fire kvadranter efter ordrevolumen og responsbehov, øverst til højre en kapacitetskurve med tre trin i forhold til dagskapaciteten, nederst til højre et dashboard for forhåndsmængder i kampagnespidser og nederst fire lokaliteter i omfattende toldoplagszoner samt et lager i Hongkong, Kina](/images/blog/china-bonded-platforms-nine-interfaces/mega-sale-peak-capacity-verdict.webp)
+
+- Yiwu, Zhejiang, toldoplag med toldordning 1210.
+- Hangzhou, Zhejiang, toldoplag med toldordning 1210.
+- Guangzhou Huangpu, Guangdong, toldoplag med toldordning 1210.
+- Shenzhen Qianhai, Guangdong, toldoplag med toldordning 1210.
+- Hongkong, Kina, udland, toldoplag i Hongkong, Kina.
+
+Dashboardet for forhåndsmængder i kampagnespidser viser fire rækker i de syv kolonner SKU, forhåndsmængde, anmeldt, fremskridt, forventet afslutning, status og handling, og hver række har de to indgange detaljer og log. Fremskridt og forventet afslutningsdato afgør rækkefølgen for lagertilførslen pr. SKU, og mankoerne følges række for række i sporingstabellen for forhåndsmængder.
+
+- Coenzym-Q10-blødkapsler, forhåndsmængde 12000, anmeldt 8400, fremskridt 70%, forventet afslutning 10-12, i gang, detaljer og log;
+- Dybhavsfiskeoliekapsler, 8000, 6400, 80%, 10-08, i gang, detaljer og log;
+- Proteinpulver som fast drik, 6000, 2400, 40%, 10-18, i gang, detaljer og log;
+- Frysetørret probiotikapulver, 5000, 5000, 100%, ingen afslutningsdato angivet, afsluttet, detaljer og log.
+
+## Hvordan mankoer i forhåndsmængder følges række for række
+
+Sporingstabellen for forhåndsmængder i lagermodulet giver én række pr. SKU og skriver forhåndsmængde, anmeldt, fremskridt, manko, forventet afslutning og status. Tag coenzym-Q10-blødkapslerne som eksempel: forhåndsmængde 12000, anmeldt 8400, fremskridt 70%, en manko på 3600, som forventes lukket den 10-12; dybhavsfiskeoliekapslerne ligger på 80% fremskridt med en manko på 1600, som forventes lukket den 10-08. Kapacitetskurven med tre trin bliver her til lagertilførselshandlinger, så mankoens størrelse og dagen for dens lukning kan ses på forhånd.
+
+Nederst i grænsefladen står der i alt 7 poster og 20 pr. side, og for enden af hver række ligger de to indgange detaljer og log; de to faner sporing af forhåndsmængder og ankomstpåmindelse står ved siden af hinanden, så frontlinjen skifter mellem fanerne uden at filtrere igen. Alle syv rækker følger samme grundlag.
+
+![Demo af systemgrænsefladen for sporing af forhåndsmængder, syv rækker med varer i de otte kolonner SKU, forhåndsmængde, anmeldt, fremskridt, manko, forventet afslutning, status og handlinger, nederst med 7 poster og 20 pr. side](/images/blog/china-bonded-platforms-nine-interfaces/pre-filed-volume-tracking-system-demo.webp)
+
+- Coenzym-Q10-blødkapsler, 12000, 8400, 70%, manko 3600, 10-12, i gang, detaljer og log;
+- Dybhavsfiskeoliekapsler, 8000, 6400, 80%, manko 1600, 10-08, i gang, detaljer og log;
+- Proteinpulver som fast drik, 6000, 2400, 40%, manko 3600, 10-18, i gang, detaljer og log;
+- Frysetørret probiotikapulver, 5000, 5000, 100%, manko 0, ingen afslutningsdato angivet, afsluttet, detaljer og log;
+- Fiskekollagenpeptidpulver, 6000, 3000, 50%, manko 3000, 10-15, i gang, detaljer og log;
+- C-vitamin-tyggetabletter, 9000, 8100, 90%, manko 900, 10-06, i gang, detaljer og log;
+- Melatonin-vingummier, 4000, 4000, 100%, manko 0, ingen afslutningsdato angivet, afsluttet, detaljer og log.
+
+## Hvad der fastlægges før start på grænseflader og skift
+
+Før start fastlægges tre punkter: standardgrænseflader og middleware-kobling skrives ind i grænsefladetabellen, tærskelværdier for statuslamper, gensendelser efter fejl og ansvarlige fastgøres til rækker, og forhåndsmængder afstemmes med kapacitetstrin på de samme SKUer. Mangler et af de tre punkter, går de fælles test hele tiden i stå ved gensendelserne. Opkaldsvolumener, succesrater, forhåndsmængder og afslutningsdatoer i demooverfladen er kun til illustration, tallene for spidser og bemanding kommer fra offentlige tilfælde og viser kun størrelsesordenen, mens de faktiske størrelsesordener leveres af jer; den faktiske anmeldelsespraksis følger kravene fra den kompetente myndighed, og grænseoverskridende datastier følger konklusionen af konsekvensvurderingen af beskyttelsen af personoplysninger. Før skiftet gennemløbes en fuld afregningscyklus i parallel drift, derefter bekræftes det, at data i de to systemer ikke er løbet fra hinanden, og først derefter flyttes trafikken.
+
+Hvis I ønsker at få de ni grænsefladefamilier tilpasset jeres eksisterende systemlandskab og toldstedsplan koblet til toldoplagsekspeditionen og få statuslamper samt forhåndsmængder kontrolleret række for række, så [kontakt os](/da/packages/).

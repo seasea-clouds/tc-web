@@ -1,0 +1,77 @@
+---
+title: "Nivells de soci i lliurament periòdic, quatre línies, incidències fila a fila"
+date: "2027-06-29"
+category: "E-commerce"
+excerpt: "Nivells i lliurament periòdic comparteixen identificador amb el registre d'atribució. Sis línies en un panell mostren alertes i estats. Completeu un cicle i concilieu fila a fila."
+references:
+  - title: "Llei de la República Popular de la Xina sobre la protecció de la informació personal (aprovada el 20 d'agost de 2021, articles 13 i 23)"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+  - title: "Anunci núm. 194 de 2018 de l'Administració General de Duanes de la Xina sobre la supervisió de les mercaderies d'importació i exportació al detall en el comerç electrònic transfronterer"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Disposicions sobre la promoció i la regulació dels fluxos transfronterers de dades (Ordre núm. 16 de l'Administració del Ciberespai de la Xina, en vigor des del 22 de març de 2024)"
+    url: "https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm"
+---
+
+Els nivells de soci i el lliurament periòdic poden mantenir les repeticions de compra sempre que els dos sistemes coincideixin fila a fila. Un és el panell d'operacions, que reuneix en sis línies d'una sola pantalla les comandes en trànsit, els lots en dipòsit duaner, les sortides de la zona d'avui, els paquets en trànsit, el temps mitjà de despatx duaner i els lots amb alerta de caducitat. L'altre és el sistema de gestió de nivells de soci i lliurament periòdic, que disposa en sis files l'identificador de soci, el nivell, el producte de lliurament periòdic, el cicle de lliurament, la data del proper lliurament i la despesa acumulada. Tots dos comparteixen el mateix identificador de soci i registren cada canvi d'estat, de manera que una repetició de compra es pot atribuir al mateix soci. Quan vostè pren el relleu, miri primer les files d'incidència: a la demostració dues files estan en curs i una està pendent de correcció, amb 2 declaracions pendents, 3 incidències i 2 lots propers a caducar.
+
+![Demostració de la interfície del panell d'operacions de quatre línies, amb una capçalera de línia, indicador clau, valor actual, objectiu, taxa de consecució, alerta, estat i acció, sis files per a la línia de comandes, la línia d'inventari, la línia de despatx de duanes, la línia de logística, la línia de temps de trànsit i la línia de caducitat, i un peu que indica 6 registres i 20 per pàgina](/images/blog/china-bonded-member-tiers-and-auto-ship/four-tracks-dashboard-system-demo.webp)
+
+## Sis files en una pantalla, quatre fluxos de servei amb responsable propi
+
+El panell d'operacions és la vista principal, amb una línia per fila i pestanyes per a avui, aquesta setmana i aquest mes. Cada fila indica l'indicador clau, el valor actual, l'objectiu, la taxa de consecució, l'alerta i l'estat, i acaba amb dues entrades, detall i registre. La casella sense cap alerta activada es marca amb un guionet curt i no s'hi escriu un zero, per tal que la manca d'alerta no es llegeixi com un indicador a zero. El panell es pagina a 20 registres per pàgina; la demostració conté 6 registres i es veu sencera en una pantalla.
+
+Els quatre fluxos de servei, de S10 a S13, tenen cadascun un responsable, i els seus indicadors i els passos actuals es concentren en aquest mateix panell. Qui assumeix cada línia i en quin punt es troba es llegeix aquí sense haver de repassar uns quants registres més. La responsabilitat recau sobre la fila, de manera que en el traspàs n'hi ha prou amb signar fila per fila.
+
+Les vuit columnes de la capçalera són, per ordre, línia, indicador clau, valor actual, objectiu, taxa de consecució, alerta, estat i acció. Les sis files s'escriuen completes en aquest ordre:
+
+- Línia de comandes, comandes en trànsit, valor actual 128, objectiu 150, taxa de consecució 85%, alerta buida, estat normal;
+- Línia d'inventari, lots en dipòsit duaner, valor actual 36, objectiu 40, taxa de consecució 90%, alerta buida, estat normal;
+- Línia de despatx de duanes, sortides de la zona avui, valor actual 86, objectiu 100, taxa de consecució 86%, alerta de 2 declaracions pendents, estat en curs;
+- Línia de logística, paquets en trànsit, valor actual 214, objectiu i taxa de consecució buits, alerta de 3 incidències, estat en curs;
+- Línia de temps de trànsit, temps mitjà de despatx duaner, valor actual 6,8 hores, objectiu 8 hores, taxa de consecució marcada com a assolida, alerta buida, estat normal;
+- Línia de caducitat, lots amb alerta de caducitat, valor actual 2, objectiu 0, taxa de consecució buida, alerta de 2 lots propers a caducar, estat pendent de correcció.
+
+Les targetes explicatives assenyalen dues xifres que es poden llegir malament amb facilitat: la línia de comandes té 128 comandes en trànsit enfront d'un objectiu de 150 i una taxa de consecució del 85%; la línia d'inventari té 36 lots en dipòsit duaner enfront d'un objectiu de 40 i una taxa de consecució del 90%. La targeta indica també que una casella sense cap alerta activada mostra un guionet curt. Per tant, el guionet no significa que faltin dades; recull la conclusió que aquest cop no hi ha hagut cap alerta.
+
+Cal tractar tres estats per separat. Les tres files normals són la línia de comandes, la línia d'inventari i la línia de temps de trànsit; aquesta darrera està a 6,8 hores per sota de l'objectiu de 8 hores, i la columna de la taxa de consecució hi escriu directament assolit. Les dues files en curs porten cadascuna una tasca pendent: la línia de despatx de duanes té 2 declaracions pendents i la línia de logística té 3 incidències. La que està pendent de correcció és la línia de caducitat, amb 2 lots amb alerta de caducitat enfront d'un objectiu de 0 i una alerta de 2 lots propers a caducar. L'ordre d'actuació segueix l'abast de l'impacte i comença per retirar els lots propers a caducar, continua amb la presentació de les declaracions pendents i acaba amb el seguiment de les incidències.
+
+## Nivells de soci i lliurament periòdic, consultables fila a fila
+
+![Demostració de la interfície del sistema de gestió de nivells de soci i lliurament periòdic, amb una capçalera d'identificador de soci, nivell, producte de lliurament periòdic, cicle de lliurament, data del proper lliurament, despesa acumulada, estat del lliurament periòdic i acció, sis files amb els nivells i la informació del lliurament periòdic de M-100238 a M-100419, i un peu que indica 6 registres i 20 per pàgina](/images/blog/china-bonded-member-tiers-and-auto-ship/member-tiers-subscriptions-system-demo.webp)
+
+El sistema del costat dels socis penja del mòdul de la botiga, amb pestanyes per nivell de targeta negra, targeta daurada i targeta platejada, i una altra pàgina dedicada només als lliuraments periòdics actius. Cada fila indica l'identificador de soci, el nivell, el producte de lliurament periòdic, el cicle de lliurament, la data del proper lliurament i la despesa acumulada, i acaba igualment amb detall i registre. La demostració conté 6 registres, a 20 per pàgina.
+
+Els nivells, el lliurament periòdic i la despesa acumulada es mantenen en un sol lloc, i l'identificador de soci comparteix una única font de dades amb el registre d'atribució. Així una repetició de compra no es compta un cop al costat dels socis i un altre cop al costat de l'atribució; per assignar les repeticions d'un nivell a una campanya, n'hi ha prou amb cercar l'identificador. L'identificador de soci i la despesa acumulada són dades personals, de manera que el tractament i la compartició requereixen una base legal clara, i entre el sistema intern i els informes a l'estranger només circulen les dades agregades necessàries.
+
+Les vuit columnes de la capçalera són, per ordre, identificador de soci, nivell, producte de lliurament periòdic, cicle de lliurament, data del proper lliurament, despesa acumulada, estat del lliurament periòdic i acció. Les sis files s'escriuen completes en aquest ordre, amb tots els imports en yuan:
+
+- M-100238, targeta negra, càpsules toves de coenzim Q10 x2, mensual, 2026-10-22, 15800,00 yuan, en curs;
+- M-101204, targeta daurada, càpsules toves d'oli de peix x1, mensual, 2026-10-05, 8640,00 yuan, en curs;
+- M-100571, targeta platejada, proteïna de sèrum en pols x1, cada 2 mesos, 2026-11-19, 4320,00 yuan, en curs;
+- M-100872, targeta negra, probiòtics en pols x2, mensual, 2026-10-08, 22100,00 yuan, en curs;
+- M-101466, targeta daurada, beguda de pèptids de col·lagen x1, mensual, 2026-10-15, 6980,00 yuan, en pausa;
+- M-100419, targeta platejada, comprimits de calci i vitamina D x1, trimestral, 2026-12-01, 1560,00 yuan, en curs.
+
+Les targetes explicatives citen dos identificadors. M-100238 és de targeta negra, rep automàticament cada mes dues ampolles de càpsules toves de coenzim Q10, té el proper lliurament el 2026-10-22 i una despesa acumulada de 15800,00 yuan; M-101204 és de targeta daurada. La targeta indica també que l'identificador de soci i el registre d'atribució comparteixen la mateixa font. En llegir aquestes dues frases al costat de les sis files de la taula, els llindars dels nivells es fan evidents: les dues files de targeta platejada registren 4320,00 yuan i 1560,00 yuan, les dues de targeta daurada 8640,00 yuan i 6980,00 yuan, i les dues de targeta negra 15800,00 yuan i 22100,00 yuan, sense cap solapament entre les tres categories. La despesa acumulada és, per tant, alhora un camp de visualització i la base de la classificació per nivells.
+
+Els cicles de lliurament es reparteixen en tres modalitats, mensual, cada 2 mesos i trimestral, i la taula conté cinc files en curs i una en pausa. La que està en pausa és M-101466, amb una despesa acumulada de 6980,00 yuan; el seu estat s'indica en un camp propi i la baixa no es representa suprimint la fila. La data del proper lliurament més primerenca és 2026-10-05 i la més tardana és 2026-12-01, i totes dues figuren ordenades a la mateixa taula.
+
+## Un soci de targeta negra al llarg d'un cicle complet de lliurament
+
+Prenem el soci de targeta negra M-100238 i seguim-lo un cop. El sistema registra que està actiu, amb una comanda al mes, càpsules toves de coenzim Q10 x2 com a producte, el proper lliurament el 2026-10-22 i una despesa acumulada de 15800,00 yuan. Aquesta mateixa fila figura alhora a la pestanya de nivells de soci i a la de lliurament periòdic, i no se'n genera cap identificador addicional.
+
+Quan arriba la data de lliurament, el sistema genera la comanda segons el cicle, treu la mercaderia dels lots en dipòsit duaner, passa el despatx de duanes i la sortida de la zona, i escriu el número de la carta de port a aquesta fila. El valor actual de la línia de comandes es mou en conseqüència, la línia de caducitat descompta per lots i la línia de temps de trànsit anota la durada d'aquest despatx. Un cop completada l'escriptura de retorn, la despesa acumulada augmenta segons l'import efectivament pagat i la data del proper lliurament avança un cicle; el detall mostra els camps i el registre mostra qui va fer cada canvi i en quin moment.
+
+Una pausa a mig camí també es manté a la mateixa fila. M-101466 té l'estat del lliurament periòdic en pausa, i el producte i la despesa acumulada continuen a la taula; simplement deixa de generar la comanda següent, i en reprendre's es continua a partir del registre sense crear cap identificador de soci nou. Si la pausa s'escrigués suprimint la fila, el registre d'atribució perdria un tram d'historial i els llindars dels nivells ja no es podrien calcular.
+
+Cal fixar el criteri dels imports des del principi. Les sis xifres de despesa acumulada s'expressen totes en yuan, amb dos decimals, sense cap símbol de moneda i sense afegir cap nota de conversió a les dades de demostració. El peu de la interfície indica que són dades de demostració, i les excepcions i les correccions queden registrades i es poden verificar; per això aquests valors serveixen per comprovar els càlculs i els camps i no com a xifres d'explotació divulgades públicament.
+
+## Alineeu els dos sistemes abans del canvi
+
+El títol de la pàgina de demostració diu quatre línies, però la taula en realitat n'enumera sis: la línia de comandes, la línia d'inventari, la línia de despatx de duanes, la línia de logística, la línia de temps de trànsit i la línia de caducitat. No hi ha cap contradicció, perquè els quatre fluxos de servei, de S10 a S13, són la divisió de responsabilitats, mentre que les sis files són les files d'indicadors d'aquesta pantalla; un responsable pot vigilar més d'una fila. En llegir la taula, identifiqueu els indicadors per fila i cerqueu les persones per flux, i no prengueu el títol de la pàgina com un recompte de files.
+
+Abans del canvi cal fer tres coses. Primer completeu un cicle de lliurament sencer i comproveu si la data del proper lliurament i la despesa acumulada avancen alhora; després concilieu fila a fila els identificadors de soci i els estats dels dos sistemes, i comproveu si coincideixen els llindars dels nivells, els registres de pausa i els registres de canvis; finalment escriviu al panell el resultat del tractament de les files d'incidència, de manera que les 2 declaracions pendents, les 3 incidències i els 2 lots propers a caducar tinguin cadascun un lloc d'arribada. Només després de repassar aquests tres passos es considera assumit el registre de retenció.
+
+Que les repeticions de compra es mantinguin depèn, dins del sistema, de dos punts: si les incidències són visibles al moment i si els canvis d'estat deixen rastre. A la pàgina de demostració, les sis línies es veuen en una sola pantalla, les sis files de socis es poden consultar camp per camp i cada fila té detall i registre, de manera que tots dos punts tenen un lloc d'arribada. Pel que fa al temps que cal per completar el canvi, depèn de l'alineació dels camps del vostre sistema actual i del cicle de funcionament en paral·lel; les integracions comparables al mercat obert es mesuren en setmanes, i aquesta dada serveix només com a ordre de magnitud i no s'ha de prendre com un compromís.
+
+Si voleu integrar els nivells de soci i el lliurament periòdic al vostre sistema d'operacions de dipòsit duaner actual, podeu [Contacteu-nos](/ca/packages/).

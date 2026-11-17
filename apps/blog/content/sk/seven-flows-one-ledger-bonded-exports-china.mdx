@@ -1,0 +1,111 @@
+---
+title: "Sedem tokov v jednej dennej správe, štrnásť modulov a jedno rozhranie"
+date: "2027-04-27"
+category: "E-commerce"
+excerpt: "Sedem tokov, jedno číslo objednávky; štrnásť modulov podľa právomoci podpisu; jedno zázemie tvorí dennú správu bez ručného spájania. Jeden subjekt zodpovedá za výsledok."
+references:
+  - title: "Caishuiguan [2016] č. 18 Ministerstva financií, Generálnej colnej správy a Štátnej daňovej správy, daňová politika pre maloobchodný dovoz v cezhraničnom elektronickom obchode"
+    url: "https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html"
+  - title: "Oznámenie č. 486 z roku 2018 šiestich ministerstiev vrátane Ministerstva obchodu, o zdokonalení dohľadu nad maloobchodným dovozom v cezhraničnom elektronickom obchode"
+    url: "https://cws.mofcom.gov/gztz/art/2018/art_b7becbacb58a4d0d8bf17b91a168f044.html"
+  - title: "Oznámenie Generálnej colnej správy č. 194 z roku 2018 o dohľade nad maloobchodným dovozom a vývozom v cezhraničnom elektronickom obchode"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+---
+
+Predaj do Číny v režime colného skladu funguje vtedy, keď sedem podnikateľských tokov visí na jednej knihe, nie keď je pripojených najviac rozhraní dodávateľov. Podmienky sú konkrétne: od platby po potvrdené doručenie zapisuje každá objednávka obchodný tok, tok tovaru, logistický tok, finančný tok, informačný tok, tok súladu a fakturačný tok pod jedno číslo objednávky; štrnásť schopností je rozdelených na výstupy, ktoré možno preberať jednotlivo, a jeden subjekt zodpovedá za výsledok od vstupu do zóny po potvrdené doručenie. Bez tej knihy sa denná správa musí spájať ručne z tabuliek: raz vyzerá dobre, po mesiaci sa určite zmýli.
+
+## Prečo denná správa začína pri čísle objednávky
+
+Pri projekte sme na rozdeľovacej strane piatej kapitoly nechali len tri preberacie otázky: ako sedem podnikateľských tokov tvorí jeden reťazec; ktorými krokmi prechádza objednávka od zadania po potvrdené doručenie; či bežná prevádzka a špičky veľkých predajných akcií vydržia súčasne. Všetky tri smerujú k tomu istému: či pri poruche jedno číslo objednávky vytiahne záznamy všetkých siedmich tokov. Ak áno, denná správa je vedľajší produkt; ak nie, treba požiadať štyroch dodávateľov o po jednej tabuľke a zrovnať ich ručne.
+
+![Rozdeľovacia strana piatej kapitoly s tromi preberacími otázkami o prepojení siedmich tokov, krokoch jednej objednávky a súčasnej únosnosti bežnej prevádzky a špičiek veľkých predajných akcií](/images/blog/seven-flows-one-ledger-bonded-exports-china/chapter-05-running-it-divider.webp)
+
+Na rozdeľovacej strane je aj veta o kostre: sedem tokov a jedna kniha sú chrbtica a skúšobný reťazec sa rozkladá bunka po bunke. Bunkou je tu riadok, ktorý každá zo štrnástich schopností zanechá v knihe.
+
+## Sedem tokov nie je sedem systémov
+
+Prehľadová strana radí sedem tokov do jedného riadku: obchodný tok, tok tovaru, logistický tok, finančný tok, informačný tok, tok súladu a fakturačný tok. Nie je to sedem systémov na obstaranie, ale sedem druhov záznamov, ktoré treba uchovať. Obchodný tok zapisuje objednávky a zmluvy, tok tovaru šarže a dobu použiteľnosti, logistický tok sledovanie a potvrdené doručenie, finančný tok príjmy, výdavky a zostatky, informačný tok rozhrania a stav objednávky, tok súladu colné deklarácie, podania a kontrolné body a fakturačný tok faktúry a dobropisy. Že sedem druhov záznamov zdieľa jedno číslo objednávky, je práve tá kniha.
+
+Kód colného dohľadu tohto kanála je 1210, plným názvom cezhraničný elektronický obchod v režime colného skladu; objednávka je prepustená až po jednotlivom porovnaní troch dokladov: objednávky, platby a logistiky, a pravidlá overovania a prepúšťania sú v oznámení č. 486 z roku 2018 šiestich ministerstiev vrátane Ministerstva obchodu. Práve tieto stopy pre každú objednávku musí tok súladu denne zaznamenávať.
+
+Túto štruktúru uvádza do chodu sedem tokov na jednej knihe, nie zošité kroky rôznych dodávateľov. Zošité riešenie vyzerá v normálny deň rovnako a prezradí sa pri prvom vrátení alebo zmene objednávky: obchod objednávku zrušil, platba je stále otvorená, balík už opustil sklad, tri záznamy si odporujú a nikto nemá úplnú odpoveď.
+
+![Prehľad sedem tokov jedna kniha so siedmimi podnikateľskými tokmi, štrnástimi modulmi, tromi vysvetľujúcimi kartami a výťahom správy za posledné tri dni](/images/blog/seven-flows-one-ledger-bonded-exports-china/seven-flows-14-modules-overview.webp)
+
+Štruktúra zlepená narýchlo má ešte tvrdší následok: nikto celkovo nezodpovedá za súlad, údaje a fakturáciu. Len čo jeden tok praskne, všetko za ním sa zastaví, najčastejšie sa zasekne zahraničný prevod alebo colné odbavenie. Preto je prvá karta na prehľadovej strane tmavomodrá a nesie nápis « jeden subjekt koordinuje », zvyšných sedem uvádza názvy tokov.
+
+## Ako sa štrnásť modulov delí podľa právomoci podpisu
+
+Štrnásť modulov beží od S0 do S13 a zodpovedá štrnástim položkám katalógu služieb, ktoré možno dodať a prevziať samostatne. Delia sa podľa právomoci podpisu, nie podľa systému: každý modul odovzdáva výstup, ktorý niekto podpíše. Prvých sedem siaha k prepusteniu a vyúčtovaniu, posledných sedem pokrýva prevádzku a uchované stopy.
+
+- S0 Diagnostika a prístup: rozhodnutie o prístupe a jeho podklad, s kategóriou, colným sadzobným kódom a cieľovým kanálom najprv rozloženými.
+- S1 Založenie subjektu: licencia a zápis do colnej evidencie; bez jedného z nich systém neotvorí účet.
+- S2 Obchod na platforme: spustenie a aktivácia platby, tu sa usadzujú kvalifikácie kategórií.
+- S3 hlásenie produktu: triedenie a doklady; chybný colný sadzobný kód znamená opravu každého neskoršieho hlásenia.
+- S4 Colný sklad: pohľad na knihu colného skladu, so zásobami viditeľnými pre značku.
+- S5 Colné odbavenie a prepustenie: objednávka je prepustená po jednotlivom porovnaní troch dokladov: objednávky, platby a logistiky.
+- S6 Vyúčtovanie prostriedkov: výpisy a doklady, s platbami za tovar a poplatkami za služby zapísanými oddelene.
+- S7 Distribúcia: priradenie akvizície a propagácie, prepočítané z čísla objednávky.
+- S8 Popredajná starostlivosť: vybavovanie vrátenia; od triedenia dôvodov vrátenia závisí, či sú členské údaje čisté.
+- S9 Riadenie rizík údajov: súlad údajov, tu sa stanovujú pravidlá cezhraničného prenosu a uchovávania.
+- S10 Audit súladu: vlastné kontroly a protokoly, ktoré pri incidente dokladajú, čo sa stalo.
+- S11 Dodávateľský reťazec: pohľady na objednávky a zásoby, aby predobjednávky nestáli na odhadoch.
+- S12 Kontrola obsahu: stránky a scenáre živého vysielania, s čínskymi etiketami a tvrdeniami preverovanými po šaržiach.
+- S13 Členstvo a predplatné: údaje úrovní pochádzajú z tej istej knihy.
+
+Tri karty stanovujú použitie. Prvá vysvetľuje, prečo sedem tokov musí byť jedna sada: v zlepenej štruktúre nikto nevlastní súlad, údaje ani fakturáciu, jeden prasknutý tok zdrží ostatné a zahraničný prevod alebo colné odbavenie sa zasekne najskôr. Druhá vysvetľuje štrnásť modulov: od S0 do S13 zodpovedajú výstupom katalógu služieb, zatiaľ čo kanál priameho nákupu 9610 a druhý zdroj zásobovania sú neskoršie položky s vyhradenými miestami, nie súčasť dnešného preberania. Tretia stanovuje zodpovednosť: od vstupu do zóny po potvrdené doručenie je jedna zodpovedná strana, to A v RACI; schopnosti možno vymieňať, zodpovednosť sa nepresúva.
+
+Pod prehľadovou stranou je ešte pokyn, ktorým sa riadiť: štrnásť schopností sa vypisuje jednu po druhej, bez porovnávania dodávateľa s dodávateľom a bez integrácie viacerých strán. Výstupy a postupy sa riadia katalógom služieb; do zmluvy patrí tých štrnásť podpísaných položiek, nie zoznam rozhraní.
+
+## Prečo tri riadky v rohu pokrývajú len tri dni
+
+Vpravo dole na prehľadovej strane sedí karta prehľadu údajov označená ako ukážka systémového rozhrania a denné údaje. Ukazuje len posledné tri dni, každý riadok nesie dátum, počet zaplatených objednávok, zaplatenú sumu a dva vstupy akcie.
+
+| Dátum | Počet zaplatených objednávok | Zaplatená suma (juanov) | Akcia |
+| --- | --- | --- | --- |
+| 09-24 | 128 | 62 400,00 | detail, protokol |
+| 09-23 | 141 | 68 120,00 | detail, protokol |
+| 09-22 | 132 | 64 152,00 | detail, protokol |
+
+Tri riadky sú výťah; úplná denná správa je na ďalšej strane tej istej ukážky, so šiestimi riadkami a siedmimi poľami v každom. Vstupy detail a protokol nie sú dekorácia: detail otvára skladbu objednávok toho dňa, protokol ukazuje, ktorá úloha tabuľku vytvorila. Výťah môže zostať pri troch dňoch len preto, že úplná tabuľka každý deň sama vytvorí nový riadok.
+
+## Šesť denných riadkov, ktoré vznikajú samy
+
+Strana správy prenáša túto štruktúru na jednu obrazovku. Tri karty hovoria, o ktorý krok ide, čo zaznamenávajú a kam sa mapujú.
+
+- O ktorý krok: denná správa o transakciách dátového modulu, jeden riadok na deň, zaznamenávajúca počet zaplatených objednávok, zaplatenú sumu, priemernú hodnotu objednávky, platiacich kupujúcich a mieru vrátení.
+- Čo zaznamenáva: vezmime 09-24, 128 zaplatených objednávok, 62 400,00 juanov a priemernú hodnotu objednávky 487,50 juanov; tabuľka vzniká každý deň sama, bez ručného spájania.
+- Kam sa mapuje: v bežnej prevádzke štrnástich modulov na jednom rozhraní vychádzajú údaje objednávok, produktov a členov všetky z jedného zázemia.
+
+Vľavo v rozhraní je dátový panel, kde verejné, obchod, návštevnosť, marketing, distribúcia, CRM a samoobslužná analýza zdieľajú jednu ponuku; horná lišta beží od obchodu a tržnice až k údajom, zákazníckemu servisu, obsahu a službám s pridanou hodnotou. Údaje objednávok, produktov a členov vychádzajú z jedného zázemia, nie z jedného systému pre každý typ, a presne to znamená štrnásť modulov na jednom rozhraní. Denná správa nemusí ťahať údaje z viacerých systémov, a preto nepotrebuje ručné spájanie.
+
+- 09-24, 128 zaplatených objednávok, 62 400,00 juanov, priemerná hodnota objednávky 487,50 juanov, 121 platiacich kupujúcich, miera vrátení 1,8%, detail a protokol;
+- 09-23, 141 zaplatených objednávok, 68 120,00 juanov, priemerná hodnota objednávky 483,12 juanov, 132 platiacich kupujúcich, miera vrátení 2,1%, detail a protokol;
+- 09-22, 132 zaplatených objednávok, 64 152,00 juanov, priemerná hodnota objednávky 486,00 juanov, 126 platiacich kupujúcich, miera vrátení 1,6%, detail a protokol;
+- 09-21, 147 zaplatených objednávok, 72 604,00 juanov, priemerná hodnota objednávky 493,90 juanov, 139 platiacich kupujúcich, miera vrátení 2,4%, detail a protokol;
+- 09-20, 139 zaplatených objednávok, 68 455,00 juanov, priemerná hodnota objednávky 492,48 juanov, 131 platiacich kupujúcich, miera vrátení 1,9%, detail a protokol;
+- 09-19, 124 zaplatených objednávok, 60 752,00 juanov, priemerná hodnota objednávky 489,94 juanov, 117 platiacich kupujúcich, miera vrátení 2,2%, detail a protokol.
+
+Pod zoznamom stojí 6 záznamov celkom a 20 na stránku, stránkovač zostáva na 1 a obe šípky posunu stránky sú prítomné. Je tam aj poznámka k demonštračným údajom: kľúčové obchodné ukazovatele zhrnuté po dňoch, s trendmi a detailmi na jednej obrazovke. Za šesť dní miera vrátení vrcholí 2,4% na 09-21 a klesá na 1,6% na 09-22; tento stĺpec je naviazaný na záznamy dôvodov vrátenia v module popredajnej starostlivosti, nie na dekoratívny výpočet.
+
+![Ukážka dennej správy s tromi vysvetľujúcimi kartami, šiestimi riadkami po siedmich poliach, stránkovačom šiestich záznamov po dvadsiatich na stránku a poznámkou k demonštračným údajom](/images/blog/seven-flows-one-ledger-bonded-exports-china/daily-operations-report-demo.webp)
+
+## Prejsť si riadok 09-24
+
+Vezmime riadok 09-24 ako záležitosť na preverenie. 128 zaplatených objednávok a 62 400,00 juanov sa delením rovná presne priemernej hodnote objednávky 487,50 juanov; 121 platiacich kupujúcich je o 7 menej než počet objednávok, takže niekto toho dňa zadal viac než jednu objednávku; miera vrátení 1,8% zodpovedá vráteniam dosud otvoreným v module popredajnej starostlivosti.
+
+Z tohto riadku možno sedem tokov dohľadať spätne: obchodný tok vytiahne zmluvy a priradenie pre tých 128 objednávok, tok tovaru dá šarže a dobu použiteľnosti, logistický tok dá časy výdaja a potvrdeného doručenia, finančný tok dá príjmy, výdavky a zostatky, informačný tok dá zmeny stavu objednávky a potvrdenia rozhraní, tok súladu dá colné deklarácie pre každú objednávku a výsledok porovnania troch dokladov a fakturačný tok dá faktúry a dobropisy. Všetkých sedem zdieľa číslo objednávky, preto jedno vyhľadávanie nájde všetko; ak príde spätné volanie rozhrania neskoro, riadok informačného toku zostane najprv prázdny, zaplatená suma a priemerná hodnota objednávky ďalej sedia, ale zákaznícky servis nevie povedať, kde tá objednávka je.
+
+Mapovanie z tretej karty tu obstojí: keď údaje objednávok, produktov a členov vychádzajú z jedného zázemia, dajú sa platiaci kupujúci zladiť s úrovňami členstva. Pri rozdelení na tri zázemia by číslo 121 vyžadovalo prepojenie medzi databázami, a len čo sa pravidlo prepojenia zmení, správa zo zajtrajška prestane byť porovnateľná s tou zo včerajška.
+
+## Ktorý tok praskne prvý v deň veľkej predajnej akcie
+
+Tretia otázka na rozdeľovacej strane znie, či bežná prevádzka a špičky veľkých predajných akcií vydržia súčasne. S touto štruktúrou vydržia, ak sa pred špičkou stanovia tri veci: jedno číslo objednávky naprieč všetkými siedmimi tokmi, jedna zodpovedná strana od vstupu do zóny po potvrdené doručenie a správa, ktorú generuje zázemie namiesto skladania z exportov. Špička zaťažuje spätné volania rozhraní a synchronizáciu zásob; číslo objednávky sa nemení, takže kniha zostáva tou istou knihou. Pri ručne spájanej správe nepridá deň špičky toľko práce, koľko príležitostí spojiť nesprávne riadky.
+
+Pred spustením sa stanovia polia: dátum, počet zaplatených objednávok, zaplatená suma, priemerná hodnota objednávky, platiaci kupujúci, miera vrátení a vstupy akcie, všetkých sedem stĺpcov číta z tých istých dátových tabuliek. Potom sa rozhodne, kto podpíše štrnásť výstupov. Zvyšok možno doplniť neskôr; miesta pre kanál priameho nákupu 9610 a druhý zdroj zásobovania už sú v mapovaní od S0 do S13 a zodpovedná strana sa nezmení, keď sa zaplnia.
+
+Dátumy, sumy a počty objednávok na obrazovke sú demonštračné údaje, vložené na to, aby ukázali, ako riadok vzniká a ako sa dohľadáva spätne. Skutočné hodnoty sa riadia aktuálnymi výpismi, exportmi platformy a požiadavkami príslušného orgánu; miera vrátení a priemerná hodnota objednávky sa riadia výpočtom systému pre ten deň.
+
+Sedem tokov na jednej knihe je na papieri štrnásť výstupov, ktoré niekto podpíše; na obrazovke je to denná správa, ktorá každý deň nechá vyrásť jeden riadok, s každým riadkom dohľadateľným. Najprv stanovte číslo objednávky a zodpovednú stranu, potom vyberajte dodávateľov. Obrátite poradie a každé neskoršie odsúhlasenie bude treba urobiť znova.
+
+Ak chcete prepojiť sedem tokov do jednej knihy pre svoj súčasný obchod, sklad a zúčtovací subjekt, [kontaktujte nás](/sk/packages/).

@@ -1,0 +1,159 @@
+---
+title: Çin'e ihracatın ilk 90 günü, antrepo kanalı nasıl yürütülür
+date: "2027-02-02"
+category: E-commerce
+excerpt: "Antrepo kanalıyla Çin'e ihracatta 90 gün üç pencere: 0–30 erişim tablosu, S0 tanısı, 31–60 kayıt sunumu, mağaza ile fon yolu, 61–90 tek SKU uçtan uca. Eşik kaçarsa 4–12 hafta geriler."
+references:
+  - title: Ticaret Bakanlığı ve beş kurumun Sınır Ötesi E-Ticaret Perakende İthalatının Denetiminin İyileştirilmesine İlişkin Tebliği (Shang Cai Fa [2018] 486 sayılı)
+    url: https://cws.mofcom.gov.cn/gztz/art/2018/art_b7becbacb58a4d0d8bf17b91a168f044.html
+  - title: Gümrük Genel İdaresinin 2018 tarihli 194 sayılı Duyurusu (sınır ötesi e-ticaret kapsamında perakende ithal ve ihraç malların denetimine ilişkin hususlar)
+    url: https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html
+  - title: Maliye Bakanlığı ve diğer yedi kurumun 2022 tarihli 7 sayılı Duyurusu (Sınır Ötesi E-Ticaret Perakende İthalat Malları Listesinin Uyarlanmasına İlişkin Duyuru)
+    url: https://www.gov.cn/zhengce/zhengceku/2022-02/21/content_5674854.htm
+---
+
+Sizin başlangıcı onaylamanızdan, ilk ürünün antrepo kanalında siparişten kapıya kadar tüm süreci tamamlamasına dek arada 90 gün vardır, bu süre üç pencereye ayrılır: gün 0–30 penceresinde erişim katmanlama tablosu, tanı raporu, gümrük kapısı uygulama listesi ve sistem entegrasyon planı elinize geçer; gün 31–60 penceresinde kayıt dosyası sunulur, mağaza mimarisi ile fon ve tahsilat yolu kilitlenir; gün 61–90 penceresinde bir SKU baştan sona deneme koşusundan geçirilir. İlk adım çok küçük tutulabilir: tek seferlik ücretli bir tanı, bedeli resmi teklife göredir, dört rapor üretilir; okuduktan sonra ilerleyip ilerlemeyeceğinize karar verirsiniz.
+
+Gerçekten sizin onayınıza kalan karar yalnız beş kalemdir, iki zaman noktasına dağılır: gün 30 öncesinde ikisi, S0'ın başlatılıp başlatılmayacağı ve yurt içi tüzel yapının hangi yolu izleyeceği; gün 60 öncesinde üçü, gıda niteliği konumlandırması, hedef gümrük kapısı tercihi, satış ile stok planı. Bu iki eşiğin ötesindeki ilerleme bizim tarafımızdadır: gümrük kapısı uygulamasını biz karara bağlar ve kayıt dayanağına yazarız, hükümetin kabul süreleri ile laboratuvar sertifikasyonlarını her gün biz izleriz, ilerleme her hafta paylaşılır.
+
+## Onaylanan başlangıçtan ilk partinin serbest bırakılmasına dek arada altı aşama var
+
+![Başlangıç bölümü ayraç sayfası: altı aşamalı yol haritası, yedi hazırlık ve 30/60/90 pencere ritmi](/images/blog/first-90-days-exporting-china-bonded-channel/launch-chapter-divider-six-phase-roadmap.webp)
+
+Altı aşama bağımlılığa göre dizilir, takvime göre değil. Önce yazı boyunca kullanılan bir gösterimi sabitleyelim: S0'dan S13'e kadar olan 14 iş paketi bu hizmetin paketleridir, başlangıç öncesi tanıdan üyelik operasyonuna dek uzanır; aşağıda her aşama adının ardından gelen, o adımda devreye giren iş paketidir.
+
+- Aşama 1, yönü belirleme: tüzük ile proje başlatma kararı kâğıda geçer, proje başlangıcı buradan sayılır.
+- Aşama 2, erişim ile tüzel yapı: S0 tanısı ve S1 tüzel yapı kuruluşu; erişim hükmü ile yurt içi tüzel yapı bu adımda kesinleşir.
+- Aşama 3, platform ile depolama: S2 mağaza ile S4 antrepo stoğu; malın konulacağı yer hazır olur.
+- Aşama 4, açılış günü: S5 ilk partinin serbest bırakılmasını yürütür, ilk antrepo siparişi bölgeden çıkıp alıcıya doğru yola konur.
+- Aşama 5, operasyon ile tahsilat: S6 tahsilat ile S7 müşteri kazanımı devreye girer, iş yuvarlanmaya başlar.
+- Aşama 6, gelişim ile büyüme: ikinci kaynak bağlanır, SKU yelpazesi genişler, istediğiniz tablo kurulur.
+
+![Altı aşamalı yol haritası ile Aşama 1 kapsamı: yapılacak, mimaride öngörülen, yapılmayacak üç sütun](/images/blog/first-90-days-exporting-china-bonded-channel/six-phase-roadmap-phase-1-scope.webp)
+
+Bu yol haritası işin ilerleyişini anlatır; işi yapan birimler S0–S13'tür ve hizmet kataloğunda satır bazında eşleşir. Başlangıçtan önce üç kapsam sınıfını kalem bazında hizalarız, "dahil sanılmıştı" türü tartışmalar böyle başlamaz; ikinci kaynak ile SKU genişletmenin bağlantı noktaları Aşama 1'de kurulur, koşullar oluşur oluşmaz devreye alınır, yeniden kurulum gerekmez. Okumayı da baştan koyalım: aşamalar sıra ile bağımlılığı yansıtır, takvim taahhüdü oluşturmaz; somut kapsam ile zaman noktaları sözleşmeye göredir.
+
+## Aşama 1 ne yapar, ne yapmaz
+
+Aşama 1'in kapsamı üç sütun hâlinde yazılır: yapılacak olan, mimaride öngörülen ve açıkça yapılmayacak olan. "Yapılmayacak" sütununu yazıya geçirmek, "varsayılan olarak dahildir" tartışmasını önlemek içindir. 1210 çevrimiçi alışveriş gümrük antreposu ile 9610 doğrudan alım ithalatının düzenleyici tanımları, Ticaret Bakanlığı ve beş kurumun sınır ötesi e-ticaret perakende ithalatının denetiminin iyileştirilmesine ilişkin Tebliğinden (Shang Cai Fa [2018] 486 sayılı) gelir; bütün plan kişisel kullanım amaçlı giriş eşyası okumasına göre tasarlanmıştır ve iki kanal Aşama 1 içinde biri ilerlerken öteki geride kalacak biçimde konumlanır, sınır şöyledir.
+
+**Yapılacak dört kalem:**
+
+- 1210 çevrimiçi alışveriş gümrük antreposu, Aşama 1'in ana kanalıdır.
+- Çekirdek SKU dizilimi Aşama 1'de açılır.
+- Dört başlangıç önkoşulunun tamamı kesinleşir: tüzel yapı, müşteri kazanımı, veri, yeterlilik belgeleri.
+- İki aşamalı bölünmüş ödeme düzeni: yurt içi komisyon ile yurt dışı ücret her biri kendi hattından yürür.
+
+**Mimaride öngörülen, sonra devreye alınan:**
+
+- İkinci kaynağın bağlantı noktası önceden kurulur.
+- SKU genişletme yuvası hazır tutulur.
+- Üyelik sisteminin ekleme noktası boş bırakılır.
+- Koşullar oluşur oluşmaz devreye alınır, yeniden kurulmaz.
+
+**Aşama 1'de yapılmayanlar:**
+
+- 9610 doğrudan alım ithalatı, Aşama 1'de devreye alınmaz.
+- İlgili anahtarların tamamı yerinde kalır, Aşama 2'de gerektiğinde açılır.
+- Yurt dışı tanıtıcıların ücreti yurt içinde doğrudan hesaba geçmez.
+- Küresel fon havuzunuz ile yurt dışı ücretlendirmeniz, kendi şirketinizce düzenlenir.
+
+## Başlangıçtan önce hazırlanması gereken yedi şey
+
+![Yedi hazırlık listesi: başlangıç günü, 30 gün içinde, paralel doğrulama olmak üzere üç grup](/images/blog/first-90-days-exporting-china-bonded-channel/seven-item-preparation-checklist-arranged-three.webp)
+
+Yedi hazırlık, önerilen zaman noktasına göre üç gruba ayrılır: ilk üçü projenin başlayıp başlayamayacağına karar verir, aynı gün hazırlanmaya başlanabilir; ortadaki üçü program ile stoğu belirler, başlangıçtan sonraki 30 gün içinde verilmesi yeterlidir; sonuncusu marka varlığının güvenliğini korur, ilk iki grupla paralel yürür. Bu bir çalışma önerisidir, geçerli olan onaylanmış uygulama planıdır; yedi kalem de sizin adınıza yazılır, malzemenin orijinal kaynağı da sizinle üretici tarafında durur.
+
+**Hemen başlanabilir, en yüksek öncelik:**
+
+- SKU listesi, bileşenler, özellikler, ambalaj: sınıflandırma ile kaydın başlangıç noktası; biz her kalemi düzenleyici sabitler ve belge numaralarıyla karşılaştırıp doğrularız.
+- Partiye karşılık gelen CoA ile test raporları: son 12 ayın aynı partisi; erişim hükmü ile yeniden test kapsamının dayanağı budur.
+- Yurt içi tüzel yapı yolunun netleştirilmesi: S1'in nasıl yürüyeceğini belirler, kritik yolun en uzun dilimidir.
+
+**30 gün içinde, yüksek öncelik:**
+
+- Kategori ile iddia stratejisinin netleştirilmesi: ürün sayfası ile içeriğin dili buradan belirlenir, iddia sınırına bağlı kalınarak yürütülür.
+- Hedef gümrük kapısı tercihi: S0 ile birlikte kısa listeyi biz veririz, siz listede işaretlemekle yetinirsiniz.
+- Satış ile stok planı: ilk ayak navlununu ve bölgeye giriş programını belirler, mal varır varmaz bölgeye girer.
+
+**Paralel doğrulama, yüksek öncelik:**
+
+- Marka ile yetki zinciri doğrulaması: markanın başkasınca önceden tescil ettirilmesi hâlinde izlenecek yol, risk kayıt defterinde hazır biçimde durur.
+
+Siz malzemeyi hazırlarken biz de eş zamanlı yürütür: S0 tanı çerçevesini kurar, gümrük kapısı uygulama hükmünü tamamlar, doğrulama listesini gönderir. Sizin hazırlığınız hangi adıma ulaşırsa bizim adımımız oraya bağlanır.
+
+## 90 gün üç pencereye ayrılır, her pencere ne verir
+
+![90 günlük pencere Gantt şeması: 0–30, 31–60 ve 61–90 pencerelerindeki çıktılar ile sorumluluğun üçe bölünmesi](/images/blog/first-90-days-exporting-china-bonded-channel/90-day-segment-gantt-what-0.webp)
+
+90 gün üç pencereye ayrılır: gün 0–30, gün 31–60 ve gün 61–90 (gün 30 kabaca S1'e, gün 60 kabaca S3'e denk gelir); her pencere dört çıktı verir, her kalem ayrıca doğrulanabilir:
+
+| Pencere | Çıktı | Açıklama |
+|---|---|---|
+| Gün 0–30 | Erişim katmanlama tablosu | SKU bazında katmanlama, gerekçe eklenir |
+| Gün 0–30 | S0 tanı raporu | Her soruya bir hüküm |
+| Gün 0–30 | Gümrük kapısı uygulama listesi | Hükümler dosyaya işlenir |
+| Gün 0–30 | Sistem entegrasyon planı | Arayüzler ile program |
+
+| Pencere | Çıktı | Açıklama |
+|---|---|---|
+| Gün 31–60 | Kayıt dosyası sunumu | Durum katmanlı izleme tablosuna işlenir |
+| Gün 31–60 | Mağaza mimarisinin kesinleşmesi | Mağaza ile kategori belli olur |
+| Gün 31–60 | Fon ve tahsilat yolu | Kilitlenir, ödeme dağıtımı ayrı kalemdir |
+| Gün 31–60 | Demo gezintisi doğrulaması | 14 arayüzün tamamı sırayla dolaşılır |
+
+| Pencere | Çıktı | Açıklama |
+|---|---|---|
+| Gün 61–90 | Ürün kaydının ilerletilmesi | Her biri kendi kayıt dayanağıyla ilerler, alındılar arşive girer |
+| Gün 61–90 | İlk ayak taşıma ile bölgeye giriş hazırlığı | Antrepo Defteri ile giriş yöntemi kilitli |
+| Gün 61–90 | Tek SKU'nun uçtan uca deneme koşusu | Siparişten kapıya kadar bir tur |
+| Gün 61–90 | Operasyon modeli hesaplayıcısı | Parametreler ayarlanabilir, getiri üç kademeyle modellenir |
+
+Bu 12 kalem, sahiplik bakımından üç sınıfa ayrılır; her işin bir sahibi ve soru sorulduğunda gösterilebilecek bir kişisi vardır, düzeni ayakta tutan budur:
+
+- Bizim kontrolümüzde olanlar: çıktıların zaman sınırları, yanıt süresi, tek muhatap, eksiksiz uyum arşivi; programı biz kurar ve yürütürüz, ilerleme her hafta paylaşılır.
+- Bizimle paralel yürüyenler: hükümetin kabul süreleri ile laboratuvar sertifikasyonları; başlatan, her gün izleyen ve tek pencereden yürüten biziz, bir düğüm kımıldadığında haber verilir.
+- Sizin sağlayacaklarınız: sizin girdilerinizin zaman noktaları; tempo sizin elinizdedir, her kalem geldiğinde bir üstteki adıma bağlanır.
+
+Bu okuma da metne işlenir: üç pencere iş ritmini belirler, takvim taahhüdü değildir; mutabakat, çıktıların düzenlendiği tarihe göre ayda bir yürütülür, Defter iki tarafın da görüşüne açıktır.
+
+## Gün 30'da ve gün 60'ta hangi kararlar verilecek
+
+90 günün içinde gerçek eşik yalnız ikidir. Gün 30 öncesinde iki karar verilir: S0'ın başlatılıp başlatılmayacağı ve yurt içi tüzel yapının hangi yolu izleyeceği. Bu ikisi gecikirse kritik yol bütün olarak 4–12 hafta geriye kayar. Gün 60 öncesinde üç karar verilir: gıda niteliği konumlandırması (normal gıda mı, blue hat taşıyan sağlık gıdası mı), hedef gümrük kapısı tercihi, satış ile stok planı. Bu üçü gecikirse S3 erişimi ile S4 depoya giriş programı da beraberinde ertelenir.
+
+Eşiği kaçırmak bir günlük kayma değildir. Gün 30'un iki kalemi zincirin en ucunda durur; tanı başlatılmadıkça arkadaki her şey bekler. Gün 60'ın üç kalemi kayıt ile stok arasına oturur; dosya sunumu, mağaza kategorisi, ilk ayak rezervasyonu bu üçünün çıktısını bekler. Bu yüzden bu iki zaman noktası mutabakata yazılır, ayda bir sizinle birlikte gözden geçirilir; hareket edip etmediği, nerede takıldığı Defterde görünür.
+
+## Bir whey proteini tozunun ilk 90 günü
+
+Ritmi somut bir ürünün üstünde gösterelim. Ürününüzün bir whey proteini tozu, ilk partinin de 2.000 kutu olduğunu varsayalım.
+
+Gün 0: SKU listesini, bileşen tablosunu, özellikleri ve ambalaj açıklamasını gönderin, aynı anda son 12 ayın aynı partisine ait CoA'yı çekin; yurt içi tüzel yapı yolu yerinde seçilir, örneğin önce platform tüzel yapısıyla geçiş yapılır.
+
+Gün 0–30 penceresinde: bu SKU'nun erişim katmanlamasını biz veririz, yürürlükteki sınır ötesi e-ticaret perakende ithalat malları listesinin hangi satırına düştüğünü (Maliye Bakanlığı ve diğer yedi kurumun 2022 tarihli 7 sayılı Duyurusu) ve 1210 çevrimiçi alışveriş gümrük antreposunun bu SKU'ya açık olup olmadığını kontrol ederiz; dört tanı raporu tamamlanır, gümrük kapısı uygulama hükmü dosyaya girer, sistem entegrasyon planı arayüzleri ile programı verir.
+
+Gün 31–60 penceresinde: kayıt dosyası normal gıda olarak sunulur, mağaza mimarisi ile kategori kesinleşir, fon ve tahsilat yolu kilitlenir, 14 arayüzün demo gezintisi sırayla tamamlanır. Bu pencerede gün 60 öncesine ait üç kararı da düşersiniz: gıda niteliği normal gıda olarak, sıfır işlev iddiasıyla belirlenir; gümrük kapısı kısa listeden işaretlenir; ilk stok miktarı 2.000 kutu olarak sabitlenir.
+
+Gün 61–90 penceresinde: 2.000 kutu ilk ayak taşımayla bölgeye girer ve Antrepo Defterine işlenir; tek SKU'nun uçtan uca deneme koşusu bütün hattıyla bir kez yürütülür: tüketici sipariş verir, sipariş, ödeme ve lojistik üç evrağı Gümrük Genel İdaresinin 2018 tarihli 194 sayılı Duyurusu okumasına göre karşılaştırılır, gümrükleme ile serbest bırakma yapılır, antrepodan çıkış ve kapıya ulaşma tamamlanır; operasyon modeli hesaplayıcısı elinize geçer, tek bir parametreyi değiştirmek farklı stok miktarlarındaki getiriyi gösterir.
+
+İki eşik de bu 90 gün içinde sürelerinden önce kapanır, bunu sağlayan hazırlık sıralamasıdır: gün 30'un iki kalemi gün 0'da karara bağlanır, gün 60'ın üç kalemi gün 31–60 penceresinde sırayla düşülür, kritik yol tek bir fazla gün harcamaz.
+
+## İlk adımın büyüklüğünü siz belirlersiniz
+
+![Kapanış sayfası: sorumluluklarımız, çalışma kapsamı ve üç temel saptama](/images/blog/first-90-days-exporting-china-bonded-channel/closing-responsibilities-deliverable-scope-three-basic.webp)
+
+Bütün plan sonunda alt çizgisini tek cümleyle yazar: riskler önceden haritaya geçirilir, sahiplik açıkça yazılır, ilk adımın büyüklüğüne siz karar verirsiniz. Açıldığında üç parçadır:
+
+- Sorumluluklarımız hizmet listesiyle satır bazında eşleşir: tek muhatap, her işin sorumlusu gösterilebilir, uyum malzemesi önceden arşive girer ve sorgulanabilir, program yukarıdaki 30/60/90 tablosudur.
+- Çalışma kapsamı, 1210'da bölgeye girişten kapıya ulaşmaya kadar uzanır, S0–S13 haritasının tamamı içindedir; 9610 ile ikinci kaynak zaten kuruludur, devreye alma temposunu siz belirlersiniz; hesapların, mağazanın, üyeliğin ve verinin sahipliği bütünüyle sizindir.
+- Üç temel saptama: bu bir lojistik sorunu değil, model ile mimarinin taşınmasıdır; riskler önceden haritaya geçer, sahiplik ile çıkış kâğıt üstündedir; ilk adım küçük tutulabilir, tek seferlik ücretli bir tanıdır, dilediğiniz an durdurulabilir.
+
+Başlangıç koşulu tek cümle: üç başlangıç kararını onaylayın, malzemeyi eksiksiz verin, biz 30/60/90 pencerelerinde S0'ı başlatırız, gerisinin tamamı masanızdan alınır. S0 ücretli bir tanıdır, bedeli resmi teklife göredir, dört rapor üretir:
+
+- Erişim raporu: giriş mümkün mü.
+- Uyum dayanağı raporu: darboğaz nerede.
+- Uygulama listesi: ne zaman girilir.
+- Gümrük kapısı uygulama doğrulama listesi: kapıda işlem nasıl yürütülür.
+
+Tanı bittiğinde devam edebilirsiniz, isterseniz bu adımda durabilirsiniz; üç adımlı yoldaki ilk çıkış noktası burasıdır. Harcanan insan, fon, malzeme ve zaman üç adıma bölünür, getiri üç kademeli hesaplayıcıyla modellenir, her parametre değişiminde yeni bir görünüm çıkar. Bundan sonrası üç adımdır: kararları onaylayın, biz S0'ı başlatırız, ardından program ile ticari şartlar netleşir. Plan çerçeve ile yolu verir; gümrük kapısı uygulamasını biz karara bağlar ve kayıt dayanağına yazarız; ticari şartlar resmi teklif ile sözleşmeye göredir.
+
+Ürününüzü başlatma adımına taşımaya zaten niyetliyseniz, önce ücretsiz bir başlangıç kontrolü için [Bize ulaşın](/tr/packages/). SKU listesini, bileşen tablosunu ve elinizdeki mevcut malzemeyi bize gönderin; yedi hazırlığın tamamlanma durumu, iki eşikteki karar listesi ve 90 günlük pencere programını tek pakette size veririz.

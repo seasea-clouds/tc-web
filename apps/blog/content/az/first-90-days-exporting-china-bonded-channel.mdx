@@ -1,0 +1,159 @@
+---
+title: Çinə ixracın ilk 90 günü, gömrük anbarı kanalından necə keçilir
+date: "2027-02-02"
+category: E-commerce
+excerpt: "Çinə gömrük anbarı ilə ixracın ilk 90 günü üç pəncərədir: 0–30 giriş qatları ilə S0, 31–60 qeydiyyat, mağaza, vəsait; 61–90 bir SKU-nun sınağı. Qapı qaçsa, yol 4–12 həftə geriyə düşür."
+references:
+  - title: "Ticarət Nazirliyi və digər beş qurumun Transsərhəd Elektron Ticarət Pərakəndə İdxal Nəzarətinin Təkmilləşdirilməsi ilə bağlı Bildirişi (Shang Cai Fa [2018] 486 nömrəli)"
+    url: https://cws.mofcom.gov.cn/gztz/art/2018/art_b7becbacb58a4d0d8bf17b91a168f044.html
+  - title: "Gömrük Baş İdarəsinin Transsərhəd Elektron Ticarət Pərakəndə İdxal-İxrac Malları ilə bağlı Nəzarət Məsələləri haqqında Bildirişi (Gömrük Baş İdarəsinin 2018-ci il tarixli 194 nömrəli Bildirişi)"
+    url: https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html
+  - title: "Maliyyə Nazirliyi və digər yeddi qurumun 2022-ci il tarixli 7 nömrəli Bildirişi (Transsərhəd Elektron Ticarət Pərakəndə İdxal Mallarının Müsbət Siyahısının Tənzimlənməsi haqqında)"
+    url: https://www.gov.cn/zhengce/zhengceku/2022-02/21/content_5674854.htm
+---
+
+Siz başlanğıcı təsdiq etdiyiniz andan tutmuş ilk məhsulun gömrük anbarı kanalında sifarişdən son istifadəçiyə qədərki bütün zənciri tam keçdiyi ana qədər arada 90 gün durur və bu yol üç hissəyə bölünür: 0–30 günlük pəncərədə giriş qatlandırma cədvəli, diaqnostika hesabatı, keçid məntəqəsi icra siyahısı və sistem inteqrasiya planı hazırlanır; 31–60 günlük pəncərədə qeydiyyat sənədləri toplusu təqdim olunur, mağaza arxitekturası ilə vəsait hesablaşması yolu sabitlənir; 61–90 günlük pəncərədə bir SKU başdan sona bir dəfə sınaqdan keçirilir. İlk addım çox kiçik tutula bilər: bir dəfəlik ödənişli diaqnostika, haqqı rəsmi qiymət təklifinə görə, nəticədə dörd hesabat; oxuduqdan sonra davam edib-etməməyə siz qərar verirsiniz.
+
+Həqiqətən sizin qərarınızı tələb edən məsələ yalnız beşdir və iki vaxt nöqtəsinə bölünür: 30-cu günə qədər iki məsələ, S0-ın işə salınıb-salınmayacağı ilə daxili subyektin hansı yolu tutacağı; 60-cı günə qədər üç məsələ, qida xüsusiyyətinin mövqeləndirilməsi, hədəf keçid məntəqəsi üstünlüyü, satış həcmi ilə ehtiyat planı. Bu iki qapıdan kənar irəliləyiş bizim tərəfdə olur: keçid məntəqəsi icrasına biz qərar veririk və o, qeydiyyat əsasına yazılır, dövlət qəbul vaxt hədləri ilə laboratoriya sertifikatlarını biz gündəlik izləyirik, gedişat hər həftə sinxronlaşdırılır.
+
+## Təsdiqlənmiş başlanğıcdan ilk partiyasının buraxılışına qədər arada altı mərhələ var
+
+![Başlanğıc bölməsinin ayırıcı səhifəsi: altı mərhələli yol xəritəsi, yeddi hazırlıq və 30/60/90 ritmi](/images/blog/first-90-days-exporting-china-bonded-channel/launch-chapter-divider-six-phase-roadmap.webp)
+
+Altı mərhələ asılılığa görə düzülür, təqvimə görə yox. Əvvəlcə bütün məqalə boyu keçən bir işarəni verək: S0-dan S13-ə qədər bu xidmətdəki 14 iş paketidir, işə başlamazdan əvvəlki diaqnostikadan uzvlük əməliyyatlarına qədər düzülür; aşağıda hər mərhələ adının ardınca gələn, məhz həmin mərhələdə verilən iş paketidir.
+
+- Mərhələ 1, istiqamətin müəyyənləşdirilməsi: nizamnamə ilə layihəyə başlama qərarı kağıza düşür, layihə buradan işə düşmüş sayılır.
+- Mərhələ 2, giriş ilə subyekt: S0 diaqnostikası ilə S1 subyektin yaradılması; giriş qərarı ilə daxili subyekt bu addımda rəsmiləşir.
+- Mərhələ 3, platforma ilə anbar: S2 mağaza ilə S4 gömrük anbarı ehtiyatı; malın düşəcəyi yer yaranır.
+- Mərhələ 4, işə salma günü: S5 ilk partiyasının buraxılışını keçirir, birinci gömrük anbarı sifarişi zonadan çıxaraq yola salınır.
+- Mərhələ 5, əməliyyat ilə hesablaşma: S6 hesablaşma ilə S7 müştəri qazanma qoşulur, iş fırlanmağa başlayır.
+- Mərhələ 6, inkişaf ilə genişlənmə: ikinci təchizat mənbəyi qoşulur, SKU genişlənir, istədiyiniz mənzərə qurulur.
+
+![Altı mərhələli yol xəritəsi ilə Mərhələ 1 həcmi: mütləq edilənlər, arxitekturada saxlananlar, edilməyənlər üç sütunu](/images/blog/first-90-days-exporting-china-bonded-channel/six-phase-roadmap-phase-1-scope.webp)
+
+Bu yol xəritəsi işin irəliləyişinin təsviridir, əsl iş vahidi S0–S13-dür və xidmət kataloqunda sətir-sətir uyğunlaşdırılır. Başlanğıcdan əvvəl üç növ həcmi bənd-bənd uzlaşdırırıq ki, «hesab edirdim ki, daxildir» tipli mübahisələr ümumiyyətlə yaranmasın; ikinci təchizat mənbəyi ilə SKU genişlənməsinin qoşulma nöqtələri Mərhələ 1-də qurulur, şərait gələn kimi işə düşür, yenidən qurmaya ehtiyac yoxdur. Qeydi də əvvəlcədən veririk: mərhələlər ardıcıllığı və asılılığı əks etdirir, qrafik vədi yaratmır, dəqiq həcm ilə vaxt nöqtələri müqaviləyə görədir.
+
+## Mərhələ 1 nə edir, nə etmir
+
+Mərhələ 1-in həcmi üç sütunla yazılır: mütləq edilənlər, arxitekturada saxlananlar ilə açıq şəkildə edilməyənlər. «Edilmir» sütununu yazıya almaq məqsədi «susmasa, demək olar ki, daxildir» mübahisəsinin qarşısını almaqdır. 1210 onlayn gömrük anbarı ilə 9610 birbaşa alış idxalının tənzimləmə tərifləri Ticarət Nazirliyi və digər beş qurumun «Transsərhəd Elektron Ticarət Pərakəndə İdxal Nəzarətinin Təkmilləşdirilməsi ilə bağlı Bildirişindən» (Shang Cai Fa [2018] 486 nömrəli) gəlir; bütün sxem şəxsi istifadə üçün sərhəddən keçirilən əşyalar yanaşmasına görə qurulub və bu iki kanal Mərhələ 1-də biri irəli, biri geri addımlayır, sərhəd aşağıdakı kimidir.
+
+**Mütləq ediləcək dörd bənd:**
+
+- 1210 onlayn gömrük anbarı Mərhələ 1-in əsas kanalıdır.
+- Əsas SKU-lar Mərhələ 1-də yerləşdirilir.
+- Başlanğıc üçün dörd şərtin hamısı rəsmiləşir: subyekt, müştəri qazanma, məlumat, sertifikatlar.
+- İki mərhələli ayrı hesablaşma ilə ödəniş: daxili komissiya ilə xaricdəki əmək haqqı hər biri öz kanalı ilə gedir.
+
+**Arxitekturada saxlanılır, sonra işə salınır:**
+
+- İkinci təchizat mənbəyinin qoşulma nöqtəsi qabaqcadan qurulur.
+- SKU genişlənməsi üçün yer ayrılır.
+- Uzvlük sistemi üçün qoşulma nöqtəsi hazır durur.
+- Şərait gələn kimi işə düşür, yenidən qurmaya ehtiyac yoxdur.
+
+**Mərhələ 1 bunları etmir:**
+
+- 9610 birbaşa alış idxalı Mərhələ 1-də işə salınmır.
+- Əlaqəli açarların hamısı yerində saxlanılır, Mərhələ 2-də ehtiyaca görə açılır.
+- Xaricdəki təbliğatçıların əmək haqqı birbaşa daxildə hesaba keçmir.
+- Qlobal vəsait hovuzunuz ilə xaricdəki əmək haqqı ödənişlərini öz şirkətiniz təşkil edir.
+
+## Başlanğıcdan əvvəl hazırlanacaq yeddi şey
+
+![Yeddi hazırlıq siyahısı: başlanğıc günü, 30 günün içində və paralel yoxlama olmaqla üç qrup üzrə düzülüş](/images/blog/first-90-days-exporting-china-bonded-channel/seven-item-preparation-checklist-arranged-three.webp)
+
+Yeddi hazırlıq təklif olunan vaxta görə üç qrupa bölünür: ilk üçü layihənin başlayıb-başlaymayacağını müəyyən edir və həmin gün hazırlığa başlamaq olar; ortadakı üçü qrafik ilə ehtiyatı müəyyən edir, başlanğıcdan sonra 30 günün içində verilməsi kifayətdir; sonuncu brend aktivlərinin təhlükəsizliyini qoruyur və ilk iki qrupla paralel gedir. Bu bir iş tövsiyəsidir, əsas etibarilə təsdiqlənmiş icra planıdır; yeddinin hamısı sizin adınıza yazılır, materialların ilkin mənbəyi də sizinlə istehsalçı tərəfində qalır.
+
+**Dərhal başlaya bilər, ən yüksək prioritet:**
+
+- SKU siyahısı, tərkib, spesifikasiya, qablaşdırma: təsnifat ilə qeydiyyatın başlanğıc nöqtəsi; hər bəndi tənzimləmə sabitləri ilə sənəd nömrələrinə görə yoxlayırıq.
+- Partiyalara uyğun CoA ilə sınaq hesabatları: son 12 ayın eyni partiyaları; giriş qiymətləndirməsi ilə təkrar sınaq dairəsi buna görə müəyyənləşir.
+- Daxili subyekt yolunun təsdiqi: S1-in necə gedəcəyini müəyyən edir, kritik yolda ən uzun məsafə buradır.
+
+**30 günün içində, yüksək prioritet:**
+
+- Kateqoriya ilə iddia strategiyasının təsdiqi: məhsul səhifələri ilə məzmunun ifadə üslubu bundan asılıdır, iddia sərhədi daxilində icra olunur.
+- Hədəf keçid məntəqəsi üstünlüyü: S0 ilə birlikdə qısa siyahı veririk, siz siyahı üzərindən işarələyirsiniz.
+- Satış həcmi ilə ehtiyat planı: ilk daşınma haqqı ilə zonaya daxil olma qrafikini müəyyən edir, mal gələn kimi zonaya girir.
+
+**Paralel yoxlama, yüksək prioritet:**
+
+- Ticarət nişanı ilə səlahiyyət zəncirinin yoxlanması: ticarət nişanının başqası tərəfindən qabaqca qeydə alınması halında həll yolu, risk reyestrlərində hazır yazılış mövcuddur.
+
+Siz materialları hazırlayarkən biz də paralel işləyirik: S0 diaqnostika çərçivəsini qururuq, keçid məntəqəsi icra qərarını tamamlayırıq, yoxlama siyahısını göndəririk. Siz hazırlığı hansı addıma çatdırsanız, bizim addımlarımız da ora qoşulur.
+
+## 90 gün üç hissəyə bölünür, hər hissə nə verir
+
+![90 günlük mərhələlərin Qant diaqramı: 0–30, 31–60, 61–90 üç hissənin nəticələri ilə məsuliyyətin üçə bölünməsi](/images/blog/first-90-days-exporting-china-bonded-channel/90-day-segment-gantt-what-0.webp)
+
+90 gün üç hissəyə bölünür: 0–30 gün, 31–60 gün, 61–90 gün (30-cu gün təxminən S1-ə, 60-cı gün təxminən S3-ə düşür); hər hissə dörd nəticə verir və hər biri ayrılıqda yoxlanıla bilir:
+
+| Dövr | Verilən nəticə | İzah |
+|---|---|---|
+| 0–30 gün | Giriş qatlandırma cədvəli | Hər SKU üzrə qatlandırma, qərar əsasları əlavədə |
+| 0–30 gün | S0 diaqnostika hesabatı | Hər suala bir qərar |
+| 0–30 gün | Keçid məntəqəsi icra siyahısı | Qərarlar arxivə yazılır |
+| 0–30 gün | Sistem inteqrasiya planı | İnterfeyslər və qrafik |
+
+| Dövr | Verilən nəticə | İzah |
+|---|---|---|
+| 31–60 gün | Qeydiyyat sənədlərinin təqdimi | Vəziyyət qatlı izləmə cədvəlinə keçir |
+| 31–60 gün | Mağaza arxitekturasının yekunlaşdırılması | Mağaza ilə kateqoriya rəsmiləşir |
+| 31–60 gün | Vəsait ilə hesablaşma yolu | Sabitlənir, ödənişlər ayrıca siyahıda |
+| 31–60 gün | Demo gəzinti yoxlaması | 14 interfeysin hamısı öz ekranı üzrə keçilir |
+
+| Dövr | Verilən nəticə | İzah |
+|---|---|---|
+| 61–90 gün | Məhsul qeydiyyatının irəlilədilməsi | Hər biri öz qeydiyyat əsası ilə, təsdiqlər arxivləşdirilir |
+| 61–90 gün | İlk daşınma ilə zonaya giriş hazırlığı | Gömrük anbarı Kitabı ilə zonaya giriş üsulu sabitlənir |
+| 61–90 gün | Tək SKU tam zəncir sınağı | Sifarişdən son istifadəçiyədək bir dəfə keçilir |
+| 61–90 gün | Əməliyyat modeli kalkulyatoru | Parametrlər dəyişkən, gəlir üç səviyyədə modelləşdirilir |
+
+Bu 12 nəticə mənsubiyyətə görə üç qrupa bölünür; hər işin bir sahibi olur, konkret adama adı ilə bağlanır, bütün bu düzülüş məhz bununla ayaq üstə durur:
+
+- Bizim nəzarətimizdə olanlar: nəticələrin vaxt hədləri, cavab vaxtı, tək əlaqə nöqtəsi, tam uyğunluq arxivi; qrafikləşdirib icra edirik, gedişat hər həftə sinxronlaşdırılır.
+- Bizimlə paralel gedənlər: dövlət qəbul vaxt hədləri ilə laboratoriya sertifikatları; biz başladırıq, gündəlik izləyirik, tək pəncərə üzərindən aparırıq, mərhələ tərpənan kimi xəbər veririk.
+- Sizin təqdim etdikləriniz: hər bir girişinizin vaxtı sizin təyin etdiyiniz templə görədir, girişlərin hər biri gələn kimi yuxarı axındakı öz addımına qoşulur.
+
+Qeyd bunu da əhatə edir: üç pəncərə iş ritmini müəyyən edir, təqvim vədi deyil; hesablaşma verilən nəticələrin imzalanma tarixinə görə hər ay bir dəfə aparılır və Kitab hər iki tərəf üçün açıqdır.
+
+## 30-cu gün ilə 60-cı gündə nələr qərara alınır
+
+90 günün içində həqiqi qapı yalnız ikidir. 30-cu günə qədər iki məsələ qərara alınır: S0-ın işə salınıb-salınmayacağı ilə daxili subyektin hansı yolu tutacağı. Bu ikisi gecikən kimi kritik yol bütövlükdə 4–12 həftə geriyə düşür. 60-cı günə qədər üç məsələ qərara alınır: qida xüsusiyyətinin mövqeyi (adi qida yoxsa blue hat sağlamlıq qidası), hədəf keçid məntəqəsi üstünlüyü, satış həcmi ilə ehtiyat planı. Bu üçü gecikən kimi S3 girişinin ilə S4 anbara girişinin qrafiki də ardınca geriyə sürüşür.
+
+Qapını qaçırmaq bir günlük gecikmə məsələsi deyil. 30-cu günün iki maddəsi bütün zəncirin ən başında durur; diaqnostika işə düşməyəndə arxadakı hər iş gözləyir; 60-cı günün üç maddəsi qeydiyyat ilə ehtiyat arasında durur, sənədlərin təqdimi, mağaza kateqoriyası, ilk daşınmanın bronu hər biri bu üçünün çıxışını gözləyir. Ona görə də bu iki vaxt nöqtəsi hesablaşmaya yazılır, hər ay sizinlə bir dəfə yoxlanılır; tərpənib-tərpənməməsi, harada dayandığı Kitabda görünür.
+
+## Bir zərdab protein tozunun ilk 90 günü
+
+Ritmi konkret bir mal üzərində göstərək. Fərz edək ki, məhsulunuz zərdab protein tozudur, ilk partiya 2000 qutudur.
+
+Gün 0: SKU siyahısı, tərkib cədvəli, spesifikasiya ilə qablaşdırma izahı bizə ötürülür, paralel olaraq son 12 ayın eyni partiyalarına aid CoA-lar da əldə edilir; daxili subyekt yolu yerindəcə seçilir, məsələn əvvəl platformanın subyekt kimi çıxış etdiyi müvəqqəti keçidlə başlanır.
+
+0–30 günlük pəncərədə: bu SKU-nun giriş qatlandırması hazırlanır, onun hazırkı transsərhəd elektron ticarət pərakəndə idxal malları siyahısının hansı sətrinə düşdüyü (Maliyyə Nazirliyi və digər yeddi qurumun 2022-ci il tarixli 7 nömrəli Bildirişi) ilə 1210 onlayn gömrük anbarı kanalının ona açıq olub-olmaması yoxlanılır; dörd diaqnostika hesabatı tam olur, keçid məntəqəsi icra qərarı arxivə yazılır, sistem inteqrasiya planı interfeysləri ilə qrafiki göstərir.
+
+31–60 günlük pəncərədə: qeydiyyat sənədləri toplusu adi qida statusu ilə təqdim olunur, mağaza arxitekturası ilə kateqoriya yekunlaşır, vəsait ilə hesablaşma yolu sabitlənir, 14 interfeysin demo gəzintisi son ekrandadək keçilib bitir. Siz bu hissədə 60-cı günə qədərki üç qərarı da yerinə yetirirsiniz: qidanın xüsusiyyəti adi qida kimi müəyyənləşir, funksional iddia sıfır; keçid məntəqəsi qısa siyahıdan seçilir; ilk ehtiyat miqdarı 2000 qutu kimi təsdiqlənir.
+
+61–90 günlük pəncərədə: 2000 qutu ilk daşınma ilə zonaya daxil olur və gömrük anbarı Kitabına yazılır; tək SKU-nun tam zəncir sınağı bir dəfə başdan sona keçir: istehlakçı sifariş verir, sifariş, ödəniş ilə logistika sənədlərinin üçlüyü Gömrük Baş İdarəsinin 2018-ci il tarixli 194 nömrəli Bildirişinin yanaşmasına görə qarşılıqlı yoxlanılır, gömrük rəsmiyyəti ilə mal buraxılır, gömrük anbarından çıxaraq son istifadəçiyə çatır; əməliyyat modeli kalkulyatoru sizin əlinizə keçir, bir parametri dəyişməklə müxtəlif ehtiyat həcmlərində gəliri görürsünüz.
+
+İki qapı da bu 90 günün içində vaxt həddindən əvvəl bağlanır, bunu hazırlıq ardıcıllığı mümkün edir: 30-cu günün iki maddəsi Gün 0-da qərara alınır, 60-cı günün üç maddəsi 31–60 günlük hissədə bənd-bənd yerinə yetirilir, kritik yol bir gün də artıq sərf etmir.
+
+## İlk addımın ölçüsünə siz qərar verirsiniz
+
+![Yekun səhifə: bizim vəzifələrimiz, həcm dairəmiz ilə üç əsas mülahizə](/images/blog/first-90-days-exporting-china-bonded-channel/closing-responsibilities-deliverable-scope-three-basic.webp)
+
+Bütün sxem yekunda alt xətti bir cümlə ilə yazır: risklər qabaqcadan xəritəyə salınır, mənsubiyyət aydın yazılır, ilk addımın ölçüsünə siz qərar verirsiniz. Açsaq üç hissəyə bölünür:
+
+- Bizim vəzifələrimiz xidmət siyahısında sətir-sətir uyğunlaşdırılır; tək əlaqə nöqtəsi var, hər işin adı ilə göstərilə bilən bir sahibi var, uyğunluq materialları qabaqcadan arxivləşdirilir və baxıla bilir, qrafik də yuxarıdakı 30/60/90 cədvəlidir.
+- Həcm dairəsi 1210-un zonaya girişindən son istifadəçiyə çatmasınadək olan yoldur, S0–S13 xəritəsinin hamısı içindədir; 9610 ilə ikinci təchizat mənbəyi artıq qurulub, işə salma temposunu siz seçirsiniz; hesab, mağaza, uzvlük, məlumatın mənsubiyyəti hamısı sizindir.
+- Üç əsas mülahizə: bu logistika məsələsi deyil, model ilə arxitekturanın köçürülməsidir; risklər qabaqcadan xəritəyə salınır, mənsubiyyət ilə çıxış ağ kağızda qara yazıdır; ilk addım kiçik tutula bilər, bir dəfəlik ödənişli diaqnostika, istənilən vaxt dayandırıla bilər.
+
+Başlanğıc şərti bir cümlə ilə: üç başlanğıc qərarını təsdiqləyin, materialları tam göndərin, biz S0-ı 30/60/90 pəncərələri üzərində işə salırıq, qalanların hamısını masanızdan öz üzərimizə götürürük. S0 ödənişli diaqnostikadır, haqqı rəsmi qiymət təklifinə görədir, nəticədə dörd hesabat verilir:
+
+- Giriş hesabatı: girib-girməmək.
+- Uyğunluq əsası hesabatı: harada dayana bilər.
+- İcra siyahısı: nə vaxt girmək.
+- Keçid məntəqəsi icra yoxlama siyahısı: keçid məntəqəsində əməliyyat necə aparılır.
+
+Diaqnostika bitdikdən sonra davam edə bilərsiniz, ya da məhz bu addımda dayana bilərsiniz; bu, üç addımlıq yoldakı ilk çıxış nöqtəsidir. Qoyulan insan, vəsait, material və vaxt üç addım üzrə bölünür, gəlir üç səviyyəli kalkulyatorla modelləşdirilir, parametrin hər dəyişməsi yeni bir görünüş verir. Bundan sonra yol üç addımdır: qərarları təsdiqləmək, biz S0-ı işə salırıq, sonra qrafik ilə kommersiya şərtlərini təsdiqləmək. Sxem çərçivə ilə yolu verir; keçid məntəqəsinin icrasına biz qərar veririk və o, qeydiyyat əsasına yazılır; kommersiya şərtləri rəsmi qiymət təklifi ilə müqaviləyə görədir.
+
+Məhsulunuzu artıq başlanğıc addımına daşımağı niyyət edirsinizsə, əvvəlcə pulsuz başlanğıc yoxlaması üçün [Bizimlə əlaqə saxlayın](/az/packages/). SKU siyahısını, tərkib cədvəlini ilə mövcud materialları bizə ötürün; yeddi hazırlığın hazır olma dərəcəsini, iki qapıdakı qərar siyahısını ilə 90 günü mərhələlərə bölən qrafiki bir paketə yığıb sizə veririk.

@@ -1,0 +1,77 @@
+---
+title: "Níveis de membros e entrega periódica no comércio transfronteiriço, linha a linha"
+date: "2027-06-29"
+category: "E-commerce"
+excerpt: "Níveis e entrega periódica compartilham o ID do membro com o livro de atribuição. Operações reúnem as linhas num painel com alertas visíveis. Conclua um ciclo e confira linha a linha."
+references:
+  - title: "Lei de Proteção de Informações Pessoais da República Popular da China (adotada em 20/8/2021, artigos 13 e 23)"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+  - title: "Anúncio nº 194 de 2018 da Administração Geral de Alfândegas da China sobre a supervisão de mercadorias de importação e exportação a varejo no comércio eletrônico transfronteiriço"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Disposições sobre a Promoção e Regulamentação dos Fluxos Transfronteiriços de Dados (Ordem nº 16 da Administração do Ciberespaço da China, em vigor desde 22/3/2024)"
+    url: "https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm"
+---
+
+A segmentação de membros e a entrega periódica conseguem manter as recompras, desde que os dois back offices confiram linha por linha. Um deles é o painel operacional, que reúne em uma única tela seis linhas de pedidos em trânsito, lotes em entreposto aduaneiro, saídas da zona hoje, remessas em trânsito, tempo médio de desembaraço e lotes com alerta de validade. O outro é o back office de níveis de membros e entrega periódica, que organiza em seis linhas o ID do membro, o nível, o item de entrega periódica, o ciclo de entrega, a próxima data de entrega e o gasto acumulado. Ambos compartilham o mesmo conjunto de IDs de membros, e toda mudança de situação fica registrada em log, para que uma recompra possa ser atribuída ao mesmo membro. Ao assumir a operação, você olha primeiro as linhas de exceção. Na interface de demonstração, duas linhas estão em andamento e uma aguarda correção, com 2 pedidos aguardando declaração, 3 exceções e 2 lotes próximos do vencimento.
+
+![Demonstração da interface do painel operacional de quatro trilhas, que traz um cabeçalho com trilha, indicador principal, valor atual, meta, taxa de atingimento, alerta, situação e ação, seis linhas para as trilhas de pedidos, estoque, desembaraço aduaneiro, logística, prazo e validade e um rodapé que indica 6 registros e 20 por página.](/images/blog/china-bonded-member-tiers-and-auto-ship/four-tracks-dashboard-system-demo.webp)
+
+## Seis linhas em uma tela, quatro fluxos de serviço com responsável
+
+O painel operacional é a vista principal, com uma trilha por linha, e as abas separam hoje, esta semana e este mês. Cada linha lista o indicador principal, o valor atual, a meta, a taxa de atingimento, o alerta e a situação, e termina com dois acessos, para detalhes e para o log. A célula sem alerta acionado recebe um traço curto como marcador, e não um zero, para que a ausência de alerta não seja lida como indicador zerado. O painel pagina a 20 registros por página, e os dados de demonstração somam 6 registros, cabendo em uma única tela.
+
+Os quatro fluxos de serviço, de S10 a S13, têm um responsável próprio, e seus indicadores e etapas atuais ficam concentrados neste mesmo painel. Para saber quem assumiu cada trilha e em que ponto ela está, você não precisa abrir vários outros livros de registro, pois a responsabilidade recai sobre a linha e a passagem de turno é assinada linha por linha.
+
+As oito colunas do cabeçalho são, nesta ordem, trilha, indicador principal, valor atual, meta, taxa de atingimento, alerta, situação e ação. As seis linhas seguem esta ordem por completo:
+
+- Trilha de pedidos, pedidos em trânsito, atual 128, meta 150, taxa de atingimento 85%, alerta em branco, situação normal;
+- Trilha de estoque, lotes em entreposto aduaneiro, atual 36, meta 40, taxa de atingimento 90%, alerta em branco, situação normal;
+- Trilha de desembaraço, saídas da zona hoje, atual 86, meta 100, taxa de atingimento 86%, alerta de 2 pedidos aguardando declaração, situação em andamento;
+- Trilha de logística, remessas em trânsito, atual 214, meta e taxa de atingimento em branco, alerta de 3 exceções, situação em andamento;
+- Trilha de prazo, tempo médio de desembaraço, atual 6,8 horas, meta 8 horas, coluna de taxa de atingimento marcada como atingida, alerta em branco, situação normal;
+- Trilha de validade, lotes com alerta de validade, atual 2, meta 0, taxa de atingimento em branco, alerta de 2 lotes próximos do vencimento, situação a corrigir.
+
+Os cartões de nota apontam os dois números mais fáceis de ler errado. Na trilha de pedidos, os pedidos em trânsito estão em 128, contra a meta de 150, com taxa de atingimento de 85%; na trilha de estoque, os lotes em entreposto aduaneiro estão em 36, contra a meta de 40, com taxa de atingimento de 90%. O cartão também registra que a célula sem alerta acionado mostra um traço curto. Ou seja, o traço não assinala um dado ausente; ele consigna a conclusão de que não houve alerta desta vez.
+
+As três situações pedem tratamentos distintos. As três linhas normais são as trilhas de pedidos, de estoque e de prazo; na trilha de prazo, o tempo médio de desembaraço é de 6,8 horas, abaixo da meta de 8 horas, e a coluna de taxa de atingimento simplesmente diz atingida. As duas linhas em andamento trazem, cada uma, uma pendência. A trilha de desembaraço tem 2 pedidos aguardando declaração, e a trilha de logística tem 3 exceções. A linha a corrigir é a trilha de validade, com 2 lotes com alerta de validade, meta 0 e um alerta de 2 lotes próximos do vencimento. A ordem de tratamento segue o alcance do impacto. Primeiro limpam-se os lotes próximos do vencimento, depois regularizam-se as declarações e, por fim, perseguem-se as exceções.
+
+## Níveis de membros e entrega periódica, verificáveis linha a linha
+
+![Demonstração da interface do back office de níveis de membros e entrega periódica, que traz um cabeçalho com ID do membro, nível, item de entrega periódica, ciclo de entrega, próxima data de entrega, gasto acumulado, situação da entrega periódica e ação, seis linhas com os níveis e dados de entrega periódica de M-100238 a M-100419 e um rodapé que indica 6 registros e 20 por página.](/images/blog/china-bonded-member-tiers-and-auto-ship/member-tiers-subscriptions-system-demo.webp)
+
+O back office do lado dos membros fica sob o módulo da loja, com abas que separam por nível o cartão preto, o cartão ouro e o cartão prata, além de uma página reservada às entregas periódicas ativas. Cada linha lista o ID do membro, o nível, o item de entrega periódica, o ciclo de entrega, a próxima data de entrega e o gasto acumulado, e termina, da mesma forma, com detalhes e log. Os dados de demonstração somam 6 registros, com 20 por página.
+
+Níveis, entrega periódica e gasto acumulado são mantidos no mesmo lugar, e os IDs de membros compartilham uma única fonte de dados com o livro de atribuição. Assim, uma recompra não é contada uma vez no lado dos membros e outra vez no lado da atribuição; para atribuir as recompras de determinado nível a uma campanha, basta consultar o ID. IDs de membros e gasto acumulado são informações pessoais, de modo que o tratamento e o compartilhamento exigem base legal clara, e entre o back office no território chinês e os relatórios no exterior circulam apenas os agregados necessários.
+
+As oito colunas do cabeçalho são, nesta ordem, ID do membro, nível, item de entrega periódica, ciclo de entrega, próxima data de entrega, gasto acumulado, situação da entrega periódica e ação. As seis linhas seguem esta ordem por completo, com todos os valores em yuan:
+
+- M-100238, cartão preto, cápsulas moles de coenzima Q10 x2, mensal, 2026-10-22, 15800,00 yuan, em andamento;
+- M-101204, cartão ouro, cápsulas moles de óleo de peixe x1, mensal, 2026-10-05, 8640,00 yuan, em andamento;
+- M-100571, cartão prata, proteína de soro de leite em pó x1, a cada 2 meses, 2026-11-19, 4320,00 yuan, em andamento;
+- M-100872, cartão preto, probiótico em pó x2, mensal, 2026-10-08, 22100,00 yuan, em andamento;
+- M-101466, cartão ouro, bebida de peptídeos de colágeno x1, mensal, 2026-10-15, 6980,00 yuan, pausado;
+- M-100419, cartão prata, comprimidos de cálcio com vitamina D x1, trimestral, 2026-12-01, 1560,00 yuan, em andamento.
+
+Os cartões de nota apresentam dois IDs. M-100238 é cartão preto, com entrega automática mensal de dois frascos de cápsulas moles de coenzima Q10, próxima data de entrega em 2026-10-22 e gasto acumulado de 15800,00 yuan; M-101204 é cartão ouro. O cartão registra ainda que os IDs de membros e o livro de atribuição compartilham a mesma origem. Lendo essas duas frases em confronto com as seis linhas da tabela, os limiares dos níveis ficam evidentes: as duas linhas de cartão prata somam 4320,00 yuan e 1560,00 yuan, as duas de cartão ouro, 8640,00 yuan e 6980,00 yuan, e as duas de cartão preto, 15800,00 yuan e 22100,00 yuan, sem qualquer sobreposição entre os três níveis. O gasto acumulado é, portanto, tanto um campo de exibição quanto a base da segmentação.
+
+Os ciclos de entrega se dividem em três faixas, mensal, a cada 2 meses e trimestral, com cinco linhas em andamento e uma pausada na tabela. A pausada é M-101466, com gasto acumulado de 6980,00 yuan, e sua situação é marcada em um campo próprio, sem excluir a linha para indicar a desativação. A próxima data de entrega mais antiga é 2026-10-05 e a mais tardia é 2026-12-01, ambas dispostas na mesma tabela.
+
+## Um membro de cartão preto ao longo de um ciclo de entrega completo
+
+Tome o membro de cartão preto M-100238 como exemplo. O back office registra que ele está ativo, com um pedido por mês, item de cápsulas moles de coenzima Q10 x2, próxima data de entrega em 2026-10-22 e gasto acumulado de 15800,00 yuan. Essa mesma linha aparece nas duas abas, a de níveis de membros e a de entrega periódica, sem que outro ID seja gerado.
+
+Quando chega a data de entrega, o sistema gera o pedido conforme o ciclo, expede a mercadoria a partir dos lotes em entreposto aduaneiro, passa pelo desembaraço aduaneiro e pela saída da zona e, em seguida, grava o número do conhecimento de transporte de volta nesta linha. O valor atual da trilha de pedidos se altera com isso, a trilha de validade deduz por lote e a trilha de prazo registra o tempo de desembaraço desta vez. Concluída a gravação, o gasto acumulado aumenta pelo valor efetivamente pago e a próxima data de entrega avança um ciclo; os detalhes mostram os campos, e o log mostra quem fez cada alteração e quando.
+
+Uma pausa no meio do caminho também permanece na mesma linha. A situação da entrega periódica de M-101466 é pausada, e o item e o gasto acumulado continuam na tabela; simplesmente não se gera o próximo pedido, e a retomada segue pelo log, sem criar um novo ID de membro. Se a pausa fosse registrada como exclusão da linha, o livro de atribuição perderia um trecho do histórico e os limiares dos níveis deixariam de ser calculáveis.
+
+O critério dos valores precisa ser fixado desde o início. Os gastos acumulados das seis linhas são todos expressos em yuan, com duas casas decimais, sem símbolo monetário e sem nota de conversão acrescentada aos dados de demonstração. O rodapé da interface indica que se trata de dados de demonstração, com exceções e correções registradas e verificáveis; por isso, esses números servem para conferir cálculos e campos, e não como números operacionais divulgados externamente.
+
+## Alinhe os dois back offices antes da troca
+
+O título da página de demonstração diz quatro trilhas, mas a tabela lista de fato seis linhas, que são as trilhas de pedidos, de estoque, de desembaraço, de logística, de prazo e de validade. Não há contradição entre os dois, pois os quatro fluxos de serviço, de S10 a S13, correspondem à divisão de responsabilidades, enquanto as seis linhas são as linhas de indicadores desta tela; um mesmo responsável pode acompanhar mais de uma linha. Ao ler a tabela, identifique os indicadores por linha e as pessoas por fluxo, e não tome o título da página como contagem de linhas.
+
+Antes da troca, faça três coisas. Primeiro, conclua um ciclo de entrega completo e verifique se a próxima data de entrega e o gasto acumulado avançam em conjunto. Em seguida, confira linha por linha os IDs de membros e as situações nos dois back offices, e se os limiares dos níveis, os registros de pausa e os logs são consistentes. Por fim, grave de volta no painel o resultado do tratamento das linhas de exceção, dando um destino a cada um dos 2 pedidos aguardando declaração, das 3 exceções e dos 2 lotes próximos do vencimento. Somente depois de percorrer essas três etapas é que o livro de retenção de recompras estará devidamente assumido.
+
+Manter ou não as recompras depende, no sistema, de apenas dois pontos: se as exceções ficam visíveis no momento e se as mudanças de situação deixam registro. Na página de demonstração, as seis linhas de trilhas cabem em uma tela, as seis linhas de membros podem ser conferidas campo por campo e cada linha tem detalhes e log, de modo que esses dois pontos encontram amparo. Quanto ao tempo necessário para concluir a troca, ele depende do alinhamento dos campos do seu sistema atual e do ciclo de execução paralela; integrações semelhantes no mercado aberto são medidas em semanas, o que serve apenas como referência de ordem de grandeza e não deve ser tomado como compromisso.
+
+Para integrar os níveis de membros e a entrega periódica ao seu back office de operações de entreposto aduaneiro, [Fale conosco](/pt/packages/).

@@ -1,0 +1,113 @@
+---
+title: "Nine Interface Families for China Bonded Platforms, Health Lights and Peak Margin"
+date: "2027-06-22"
+category: "E-commerce"
+excerpt: "Standard APIs come first and middleware covers the rest; health lights log calls, success and retries. Data stays onshore, peak margin is reserved, and gaps are tracked per SKU."
+references:
+  - title: "Announcement No. 194 of 2018 of the General Administration of Customs on Supervision of Retail Import and Export Goods in Cross-border E-commerce"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Personal Information Protection Law of the People's Republic of China, adopted on 20 August 2021, Articles 38, 39 and 55"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+  - title: "Provisions on Promoting and Regulating Cross-border Data Flows, Order No. 16 of the Cyberspace Administration of China, effective from 22 March 2024"
+    url: "https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm"
+---
+
+Nine interface families connect your existing systems to China bonded platforms, provided standard APIs come first, data stays onshore and mega-sale capacity is sized with a 10x peak margin. Standard APIs are wired directly and middleware maps the gaps; health lights log call volume, success rates, latency and failed re-pushes per interface type, and the order-push and payment-return rows record the three-document feed. Public-market benchmarks put standard integration at 3 to 7 days and full integration at 8 to 12 weeks; these are industry reference values. Joint testing and a parallel settlement cycle set the real go-live date.
+
+![System integration demo showing the nine interface families table with the columns your system, integration item, direction and where it lands, nine rows from goods and stock through finance, four data flow principles and the four health lights of the API joint-test monitor](/images/blog/china-bonded-platforms-nine-interfaces/nine-interface-families-mapping.webp)
+
+## Which Table Each of the Nine Interface Families Lands In
+
+The interface table has four columns: which side of your system it is, what the integration item is, who leads the direction, and where the data finally lands. Direction takes three forms, two-way, inbound and you lead; rows with no direction marked are carried on our side. The landing column says which ledger each field belongs to, so whoever takes over can check it against the table.
+
+- Goods and stock: SKU stock and prices, two-way, kept consistent with the warehouse management system and the customs ledger.
+- Orders: order data, inbound, lands in the three document fields.
+- Member data: promoter relations, you lead, the data is yours and we process it as an entrusted handler.
+- Payouts: commission payout, two-way, the China segment is executed by the onshore entity.
+- Inventory: the bonded warehouse system, no direction marked, lands in the bonded operations system and shares its source with the ledger.
+- Customs: the three-document declaration, no direction marked, we carry the declaration and it stays an item under our control.
+- Fulfillment: tracking feed-back, no direction marked, logistics tracking is written back to the order view.
+- Returns: return documents, no direction marked, returns re-enter the supervision area through the returns centre.
+- Finance: settlement, outbound, including currency and exchange.
+
+Where data flows decides how the interfaces are built. The onshore ledger and the offshore dashboard have to be kept apart, otherwise joint testing will have both sides overwriting the same fields.
+
+- Promotion data collected and settled onshore stays onshore.
+- Only de-identified aggregate data goes back to your parent company, and it carries no onshore compensation relations.
+- The overseas back office never touches raw China consumer data; cross-border paths open only after the personal information protection impact assessment is passed.
+- Onshore promotion and compensation data supports full export and is handed over with the accounts.
+
+The API joint-test monitor lists the health lights in four rows by interface type and counterparty, and every health check and re-push leaves a record. The demo page writes out three items, interface type, counterparty and health light, matching the same set used in the system interface demo; the rows are reviewed daily during joint testing.
+
+- Order push, counterparty storefront, health light normal.
+- Payment return, counterparty payment channel, health light normal.
+- Waybill return, counterparty courier, health light warning.
+- Declaration list, counterparty declaration channel, health light normal.
+
+Set the integration terms around standard APIs first: where a standard API exists it is wired directly, and where none exists middleware maps it. Public-market benchmarks put standard integration at 3 to 7 days and full integration at 8 to 12 weeks; mega-sales are sized with a 10x peak margin. Each side names one technical contact and holds a daily stand-up during joint testing. After launch, run one complete settlement cycle in parallel before switching, so the two systems never diverge on data during the dual-run period.
+
+## How to Read the Health Lights and Where Failed Calls Are Retried
+
+The interface health log gives one row per interface type, with tabs for all interfaces, normal and abnormal, and each row records counterparty, call volume, success rate, latency, failures, re-push and health light. Take order push as the worked example: 1284 calls today, a success rate of 100%, average latency of 186 milliseconds, 0 failures and a normal health light. Payment return also saw 1284 calls, with a success rate of 99.9%, 1 failure successfully re-pushed, and the health light still normal. These two rows are the evidence that the three-document feed is in the system.
+
+Once the nine interface types are mapped, run-time volumes and health data all live on this log, and the order-push and payment-return rows record how the three-document feed landed. The demo interface shows 12 records in total and 20 per page at the bottom, with detail and log links at the end of every row; all nine rows follow the same set of columns.
+
+![System interface demo of the interface health log, nine rows across the columns interface type, counterparty, calls today, success rate, average latency, failures, re-push, health light and actions, with 12 records and 20 per page at the bottom](/images/blog/china-bonded-platforms-nine-interfaces/interface-health-log-system-demo.webp)
+
+- Order push, storefront, 1284 calls today, success rate 100%, average latency 186 milliseconds, 0 failures, no re-push, health light normal, detail and log;
+- Payment return, payment channel, 1284, 99.9%, 210 milliseconds, 1 failure, re-pushed, normal, detail and log;
+- Waybill return, courier, 1266, 99.2%, 340 milliseconds, 10 failures, re-pushing, warning, detail and log;
+- Declaration list, declaration channel, 1266, 99.8%, 520 milliseconds, 3 failures, re-pushed, normal, detail and log;
+- Quota query, query channel, 1284, 100%, 150 milliseconds, 0 failures, no re-push, normal, detail and log;
+- Ledger sync, bonded warehouse, 96, 100%, 430 milliseconds, 0 failures, no re-push, normal, detail and log;
+- Release status write-back, declaration channel, 1240, 99.6%, 610 milliseconds, 5 failures, re-pushed, normal, detail and log;
+- Logistics tracking, courier, 1240, 98.7%, 720 milliseconds, 16 failures, re-pushing, warning, detail and log;
+- Reconciliation file, finance system, 12, 100%, 980 milliseconds, 0 failures, no re-push, normal, detail and log.
+
+## How the Mega-Sale Peak Is Judged and How Much Capacity to Reserve
+
+The peak verdict splits into four cases by volume and response needs: low volume with high response needs looks at elasticity, high volume with high response needs looks at lead time, low volume with low response needs looks at baseline capability, and high volume with low response needs looks at steady-state capacity. The capacity curve relative to daily capacity has three tiers: 1x for daily operations, 4 to 5 times for a mega-sale and 10x at peak, with the peak side reserved at a 10x margin. The earlier you give us the pre-filed volumes, the more room there is to plan expansion and staffing; if the volumes arrive a week before the sale, adding staff is about all that is left.
+
+- Low volume and high response needs go to peak elasticity: public cases run at 4 to 5 times daily volume, peaks reach tens of thousands to hundreds of thousands of units, and mega-sale staffing is about 3 times normal; these are public-case benchmarks.
+- High volume and high response needs are bounded by lead time: ultra-high peaks need a lead time, SKU growth scales the warehouse and the ledger together, mega-sales reserve at a 10x peak, and the volume inputs come from you.
+- Low volume and low response needs are baseline capability: a branded store with licensed payments, documents built in, more than 50 ports and more than 70 ERP systems connected, AEO advanced certification and our own clearance; our side is ready.
+- High volume and low response needs are steady-state capacity: sized to daily orders, with early warehouse entry and zoned storage, permanent and temporary staff working together, pre-filed volumes in place, and returns re-entering the supervision area; our side runs it as a process.
+
+The warehouse candidates are four comprehensive bonded zone sites plus a warehouse in Hong Kong, China. Four sites in parallel give multi-port redundancy; you decide the final port, and the candidate list is handed over at the start, so there is no need to wait until the goods reach the port. The Hong Kong, China warehouse sits on the offshore side and is recorded separately from the four onshore sites.
+
+![Platform and fulfillment capacity demo for the mega-sale peak verdict, four quadrants by volume and response needs, a three-tier capacity curve relative to daily capacity, a pre-filing dashboard and four comprehensive bonded zone sites with a warehouse in Hong Kong, China](/images/blog/china-bonded-platforms-nine-interfaces/mega-sale-peak-capacity-verdict.webp)
+
+- Yiwu, Zhejiang, Mode 1210 bonded warehouse.
+- Hangzhou, Zhejiang, Mode 1210 bonded warehouse.
+- Guangzhou Huangpu, Guangdong, Mode 1210 bonded warehouse.
+- Shenzhen Qianhai, Guangdong, Mode 1210 bonded warehouse.
+- Hong Kong, China, offshore, a bonded warehouse in Hong Kong, China.
+
+The mega-sale pre-filing dashboard lists four rows across the columns SKU, pre-filed volume, filed, progress, expected completion, status and action, with detail and log links on every row. Progress and expected completion dates set the stocking order for each SKU, and the gaps are tracked row by row in the pre-filed volume tracker.
+
+- CoQ10 softgels, pre-filed 12000, filed 8400, progress 70%, expected completion 10-12, in progress, detail and log;
+- Deep-sea fish oil capsules, 8000, 6400, 80%, 10-08, in progress, detail and log;
+- Protein powder solid drink, 6000, 2400, 40%, 10-18, in progress, detail and log;
+- Probiotic freeze-dried powder, 5000, 5000, 100%, no completion date marked, completed, detail and log.
+
+## How Pre-Filed Volume Gaps Are Tracked Row by Row
+
+The inventory module's pre-filed volume tracker gives one row per SKU and writes pre-filed volume, filed, progress, gap, expected completion and status. Take CoQ10 softgels as the worked example: pre-filed 12000, filed 8400, progress 70%, a gap of 3600 expected to close on 10-12; deep-sea fish oil capsules are at 80% progress with a gap of 1600 expected to close on 10-08. The three-tier capacity curve turns into stocking actions here, so how large the gap is and when it closes are visible in advance.
+
+The interface shows 7 records in total and 20 per page at the bottom, with detail and log links at the end of every row; the pre-filed volume tracking and arrival reminder tabs sit side by side, so the front line switches tabs without re-filtering. All seven rows follow the same set of columns.
+
+![System interface demo of pre-filed volume tracking, seven rows across the columns SKU, pre-filed volume, filed, progress, gap, expected completion, status and actions, with 7 records and 20 per page at the bottom](/images/blog/china-bonded-platforms-nine-interfaces/pre-filed-volume-tracking-system-demo.webp)
+
+- CoQ10 softgels, 12000, 8400, 70%, gap 3600, 10-12, in progress, detail and log;
+- Deep-sea fish oil capsules, 8000, 6400, 80%, gap 1600, 10-08, in progress, detail and log;
+- Protein powder solid drink, 6000, 2400, 40%, gap 3600, 10-18, in progress, detail and log;
+- Probiotic freeze-dried powder, 5000, 5000, 100%, gap 0, no completion date marked, completed, detail and log;
+- Fish collagen peptide powder, 6000, 3000, 50%, gap 3000, 10-15, in progress, detail and log;
+- Vitamin C chewable tablets, 9000, 8100, 90%, gap 900, 10-06, in progress, detail and log;
+- Melatonin gummies, 4000, 4000, 100%, gap 0, no completion date marked, completed, detail and log.
+
+## What to Fix Before Launch on Interfaces and Cutover
+
+Before launch, fix three things: write standard APIs and middleware mapping into the interface table, pin health-light thresholds, failed re-pushes and owners to individual rows, and align pre-filed volumes with capacity tiers on the same set of SKUs. If any of the three is missing, joint testing stalls on re-pushes. The call volumes, success rates, pre-filed volumes and completion dates in the demo interface are illustrative only; peak and staffing figures come from public cases and show magnitude only, with the actual volumes supplied by you. Real declaration practice follows the requirements of the competent authority, and cross-border data paths follow the outcome of the personal information protection impact assessment. Run one complete settlement cycle in parallel before switching, confirm that the two systems have not diverged on data, and only then move the traffic over.
+
+If you want the nine interface families connected to bonded fulfillment against your current system stack and port plan, with health lights and pre-filed volumes checked row by row, [Contact us](/en/packages/).

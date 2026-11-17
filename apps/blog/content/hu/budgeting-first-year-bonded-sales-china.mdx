@@ -1,0 +1,91 @@
+---
+title: "Vámraktári értékesítés első évre, a költségvetés három szinten"
+date: "2027-08-10"
+category: "E-commerce"
+excerpt: "A vámraktári év költségvetése közös paraméterlapon áll, a szinteket a validáció lépteti, a levonások a rendelési mennyiséggel mozognak, a díjszabás csak a hivatalos ajánlatban él."
+references:
+  - title: "A Pénzügyminisztérium, a Vámigazgatási Főhatóság és az Állami Adóhatóság közleménye a határon átnyúló e-kereskedelmi kiskereskedelmi import adópolitikájáról (Cai Guan Shui [2016] 18. sz., a vámtarifa ideiglenesen 0%, az importált áfa és a jövedéki adó a törvényesen esedékes összeg 70%-a)"
+    url: "https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html"
+  - title: "A Pénzügyminisztérium, a Vámigazgatási Főhatóság és az Adóhatóság közleménye a határon átnyúló e-kereskedelmi kiskereskedelmi import adópolitikájának javításáról (Cai Guan Shui [2018] 49. sz., tranzakciónkénti limit 5000 jüan, éves limit 26 000 jüan)"
+    url: "https://czt.hlj.gov.cn/czt/c110905/202001/c00_30603063.shtml"
+  - title: "A Kereskedelmi Minisztérium, a Fejlesztési és Reformbizottság, a Pénzügyminisztérium, a Vámigazgatási Főhatóság, az Adóhatóság és a Piacfelügyeleti Főhatóság közleménye a határon átnyúló e-kereskedelmi kiskereskedelmi import felügyeletének javításáról (Shang Cai Fa [2018] 486. sz.)"
+    url: "https://www.mofcom.gov.cn/article/b/fwzl/201811/20181102812004.shtml"
+  - title: "A Vámigazgatási Főhatóság 2018. évi 194. sz. közleménye (A határon átnyúló e-kereskedelmi kiskereskedelmi import és export áruforgalmának felügyeleti kérdései)"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+---
+
+A vámraktári első évben érdemes egyetlen mondatba sűríteni a számítást: minden 100 jüan forgalom után a kezelési díj, a teljesítés és az első szakaszos fuvar, az adók, valamint a jutalék együtt 37,1 jüant visz el, és 62,9 jüan hozzájárulási árrés marad; ebből fedezzük a fix befektetést, és kijön a megtérülési idő. A három forgatókönyv csak a bemenő értékeket cseréli, a számítási módot nem.
+
+## Három szint, előbb az SKU-határok
+
+A konzervatív szint 3 és 5 közötti SKU-t tart, a hangsúly a validáción és a hírnéven van. Először vigyen végig egy SKU-t az egész folyamaton, és amikor megjönnek az adatok, lépjen a bázisszintre; négy megfigyelési pontot nézzen, a konverzió és az ismételt vásárlás áll elöl.
+
+A bázisszint 8 és 12 közötti SKU-t tartalmaz, a cél az, hogy az első évben megközelítse a fedezeti pontot. A paramétertábla ugyanaz marad, csak a bemenő értékek változnak, a szintet a validáció eredménye lépteti; a nettóarány-modell közvetlenül behelyettesíthető.
+
+Az optimista szint a teljes SKU-választékot viszi, és a volumenre támaszkodva hígítja a fix költségeket. A teljes SKU-s készletezés és a promóciós rendszer kiépítése után növelhető a volumen; az indulás előtti tizenhat előkészület előfeltétel. A szintek között nem megérzés alapján váltunk, minden szintnek vannak belépési feltételei, és amíg azok nem teljesülnek, az előző szinten maradunk.
+
+![Első évi három forgatókönyv és állítható paraméterek: a bal oszlopban a konzervatív, a bázis- és az optimista szint kártyái, 3 és 5, valamint 8 és 12 közötti SKU-számmal, illetve teljes SKU-választékkal és a hozzájuk tartozó belépési feltételekkel; alatta minden 100 jüan forgalomra jutó öt levonási szakasz és 62,9 jüan hozzájárulási árrés; legalul a hat láncszemből álló modelllánc a bemenő feltevésektől a GMV-n és a levonásokon át a hozzájárulási árésig, a fix befektetésig és a megtérülési időig](/images/blog/budgeting-first-year-bonded-sales-china/year-one-model-three-scenarios.webp)
+
+## Három feltevést Ön tölt ki
+
+A modellhez összesen három feltevésre van szükség, és ezeket Ön adja meg: az átlagos rendelési érték, az ismételt vásárlási arány és a promóciós jutalék arányának felső korlátja. A szerkezetet és az eszközöket mi adjuk, a számok az Ön paramétereiből jönnek ki, a leszállítás egy interaktív számítási tábla, célértékek előzetes rögzítése nélkül.
+
+A modelllánc hat láncszemből áll. A bemenő feltevésekből az SKU-szám, az átlagos rendelési érték és az ismételt vásárlások száma alapján kijön a teljes forgalom (GMV), és minden szint a saját forgalmát számolja; ebből levonódik az összesített adó, a platformjutalék, a teljesítés és a promóciós jutalék; a GMV-ből ezt a négy tételt kivonva kapjuk a hozzájárulási árrést; a fix befektetés a rendszerintegrációt, az első szakaszos fuvar gyűjtött tételeinek amortizációját és a vámraktári nyilvántartás vezetését tartalmazza; amikor a felhalmozott árrés fedezi a fix befektetést, megvan a megtérülési idő.
+
+Ezt a láncot Ön futtatja. Ha bármelyik feltevés megváltozik, a mögötte lévő számok vele mozdulnak, a számítási mód nyitva áll, így belső jóváhagyásra is nyugodtan vihető.
+
+## Minden 100 jüan forgalomból, 37,1 jüan levonás
+
+Az árrés szerkezete minden 100 jüan GMV-re bontva: kezelési díj 6,0 jüan, teljesítés és első szakaszos fuvar 7,0 jüan, adók 9,1 jüan, jutalék 15,0 jüan, összesen 37,1 jüan, a hozzájárulási árrés pedig 62,9 jüan. Az öt szakasz összege pontosan 100%, a szerkezet a három szinten azonos, a különbség a nagyságrendben és a fix tételek hígításában van.
+
+Az adószakasz 9,1%-a a határon átnyúló e-kereskedelmi kiskereskedelmi import összesített adóterhe: a vámtarifa egyelőre 0%, az importált áfa és a jövedéki adó a törvényesen esedékes adó 70%-a szerint kerül kivetésre. Ez egy szám, amelyet a teljes adórendszerből számoltak ki, ezért egyetlen adónem kulcsát ne adja hozzá közvetlenül.
+
+A levonások a rendelési mennyiséggel arányosan mozognak. Ha a mennyiség megduplázódik, a négy levonás is megduplázódik, és a hozzájárulási árrés ugyanilyen arányban mozog; a fix befektetés nem követi a mennyiséget, ezért a volumen valóban a fix oldalt hígítja. A bemutatott arányok szemléltető értékek, nem ajánlat és nem hozamígérvény.
+
+## Vegyük végig a konzervatív szintet
+
+Számoljuk végig a konzervatív szintet. 3 SKU, SKU-nként havi 25 rendelés, évente körülbelül 900 rendelés; 300 jüan átlagos rendelési érték mellett az éves forgalom 270 000 jüan. 37,1%-os levonással a négy tétel összesen 100 170 jüan: kezelési díj 16 200 jüan, teljesítés és első szakaszos fuvar 18 900 jüan, adók 24 570 jüan, jutalék 40 500 jüan.
+
+A hozzájárulási árrés 169 830 jüan. A fix befektetést 150 000 jüanra becsüljük, ebben a rendszerintegráció, az első szakaszos fuvar gyűjtött tételeinek amortizációja és a vámraktári nyilvántartás vezetése is benne van; a havi hozzájárulási árrés körülbelül 14 153 jüan, a felhalmozott árrés a 11. hónap körül fedezi a fix befektetést, így a megtérülés az első éven belül megtörténik. Ha más átlagos rendelési értéket vagy ismételt vásárlási számot ad meg, az eredmény vele változik; a táblát Ön tölti ki, a számítási módot mi nem írjuk át.
+
+## A számlázásnak három módja van
+
+Rendelésenkénti díjazás: a rendelések száma szerinti elszámolás, olyan szakaszban alkalmas, ahol a rendelési mennyiség előre becsülhető és az SKU-szerkezet stabil.
+
+GMV-arányos díjazás: a forgalom arányában történő elszámolás, a volumen növelésének szakaszában alkalmas, ahol nagyobb méret mellett az egységköltség jobban hígítható.
+
+Havi szolgáltatási díj és rendelésenkénti díj kombinációja: a fix szolgáltatási díj fedezi az alap munkaerőt és a rendszert, az e feletti rész rendelésenként rakódik, így a költségvetés előre összeállítható.
+
+Mindhárom módot öt tényező szerint adjuk meg: rendelési volumen, SKU-szám, határidő-elvárás, elszámolási valuta és hozzáadott szolgáltatások. Ha az öt tényező eltér, a díjszerkezet is eltér.
+
+![Számlázási lehetőségek és az Ön oldalán jelentkező befektetés: felül a rendelésenkénti díjazás, a GMV-arányos díjazás, valamint a havi szolgáltatási díj és rendelésenkénti díj kombinációja az öt díjtényezővel, jobbra a nyolc részből álló ajánlat; alul a munkaerő, a tőke, a dokumentumok és az idő, a hozzájuk tartozó időpontokkal, valamint azzal a megjegyzéssel, hogy a részmunkaidős indulás nem hoz létre új állandó létszámot, és a négy ellenőrzőlista-sablon az S0 szállítási dokumentumaival érkezik](/images/blog/budgeting-first-year-bonded-sales-china/billing-options-and-budget-inputs.webp)
+
+## Az áron felüli tételek és az ajánlat előfeltételei
+
+Az áron felüli tételeket előre el kell határolni, például a 9610-es csatorna későbbi megnyitását, a központi rendszer átalakítását vagy a külföldi IBO díjazását; a mi szolgáltatási díjunk a hivatalos ajánlatban külön soron szerepel, és nem olvad bele a fenti három számlázási módba.
+
+A hivatalos ajánlathoz öt előfeltételnek kell teljesülnie: SKU-lista és mennyiségi dimenziók, azonos tételből származó CoA (vizsgálati jegyzőkönyv) készenléte, a jogalany-útvonal iránya, a célkikötő preferenciája és az állítási stratégia iránya. Ha mind az öt megvan, a hivatalos ajánlat következik.
+
+Adatok nélkül is kiadható egy első változat: iparági tapasztalati értékekkel számolunk, tételenként megjelölve az érték alapját, és amikor megérkeznek az Ön mért adatai, kicseréljük azokat.
+
+## Az ajánlat nyolc része
+
+A hivatalos ajánlat nyolc részre tagolódik: a hatókör határai, a díjazás megfeleltetése, a díjszerkezet, a költségbontás, a fizetési ütemezés, az adók és a számlázás, a felelősség és a kártérítés, valamint a határok és előfeltevések. A részletezés üzleti mellékletként szolgál, az összegek minden esetben a hivatalos ajánlat szerint érvényesek; egy szóban elhangzott szám a megbeszélésen nem számít.
+
+## Az Ön oldalán négy befektetés
+
+Ember: 1 és 2 közötti pénzügyi megfelelőségi munkatárs, részmunkaidőben is indítható, plusz 1 üzleti kapcsolattartó; a részmunkaidős indulás nem hoz létre új állandó létszámot. Az induláskor kell, az S0 indulási szakasszal párhuzamosan.
+
+Tőke: az első készletet a kísérleti SKU-k mennyisége és 2 és 3 hónap közötti forgási idő alapján kell meghatározni, a médiaköltés kis lépésekben halad, a vámbiztosítékot a kikötő előírásai szerint kell intézni. A készletezés és az áru feltöltése előtt készen kell állnia.
+
+Dokumentumok: a termék-, vizsgálati, engedélyezési és márkadokumentumokat listába rendezzük, és a belépési mérföldköveknél tételenként pótoljuk; a négy ellenőrzőlista-sablont az S0 szállítási dokumentumaival adjuk át.
+
+Idő: a jogalany-útvonal, a célkikötő és az állítási stratégia három döntése közvetlenül befolyásolja az ütemezést; ha az S0 előtt megszületnek, az ütemezés rögzíthető, és a döntések megszületésével a munka az M1 végrehajtási szakaszba lép.
+
+A munkaerőre és a tőkére gyakorlati sávot adunk, az ajánlat a mért feltételek alapján készül, a dokumentumok teljessé válásával kiadható a hivatalos ajánlat, és a díjtételek részletezése kizárólag ott szerepel.
+
+## Előbb a táblafej álljon össze
+
+Az első évi költségvetés egyetlen táblába kerül: három forgatókönyv-oszlop, három feltevés-sor, négy levonás, egy fix befektetés sor és egy megtérülési sor. Előbb a bemenő értékeket töltjük ki, aztán beszélünk ajánlatról; a díjszabást csak a hivatalos ajánlat igazolja, a bemutató számok csak a számítási módot magyarázzák.
+
+A következő lépés, hogy az SKU-listáját, az átlagos rendelési értékét és az ismételt vásárlások számát beírja ebbe a táblába. Ha valamelyik bemenő érték még nyitott, [lépjen kapcsolatba velünk](/hu/packages/).

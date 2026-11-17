@@ -1,0 +1,91 @@
+---
+title: "İlk yıl gümrüklü satışta bütçeyi üç senaryoyla kurun"
+date: "2027-08-10"
+category: "E-commerce"
+excerpt: "İlk yıl bütçesi üç senaryoyla kurulur; ortak tabloda yalnız girdiler değişir ve aşama doğrulamayı izler. Kesintiler hacme göre, oranlar yalnız resmi teklifte."
+references:
+  - title: "Maliye Bakanlığı, Gümrük İdaresi ve Vergi İdaresi'nin sınır ötesi e-ticaret perakende ithalatında vergi politikasına ilişkin bildirisi (Cai Guan Shui [2016] No. 18; gümrük vergisi geçici olarak sıfır, ithalat aşamasında KDV ve tüketim vergisi yasal tutarın 70%'i oranında)"
+    url: "https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html"
+  - title: "Maliye Bakanlığı, Gümrük İdaresi ve Vergi İdaresi'nin sınır ötesi e-ticaret perakende ithalatında vergi politikasının iyileştirilmesine ilişkin bildirisi (Cai Guan Shui [2018] No. 49; işlem başına üst sınır 5,000 yuan, yıllık üst sınır 26,000 yuan)"
+    url: "https://czt.hlj.gov.cn/czt/c110905/202001/c00_30603063.shtml"
+  - title: "Ticaret Bakanlığı, Kalkınma ve Reform Komisyonu, Maliye Bakanlığı, Gümrük İdaresi, Vergi İdaresi ve Piyasa Denetim İdaresi'nin sınır ötesi e-ticaret perakende ithalatının denetiminin iyileştirilmesine ilişkin ortak bildirisi (Shang Cai Fa [2018] No. 486)"
+    url: "https://www.mofcom.gov.cn/article/b/fwzl/201811/20181102812004.shtml"
+  - title: "Gümrük İdaresi 2018/194 sayılı tebliği (sınır ötesi e-ticaret perakende ithalat ve ihracat eşyasının denetimine ilişkin tebliğ)"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+---
+
+İlk yıl gümrüklü satış, tek bir hesap cümlesiyle başlar: her 100 yuan cirodan ücretler, sipariş karşılama ve ilk bacak navlunu, vergiler ve komisyon olmak üzere dört kalem toplam 37.1 yuan kesilir, geriye 62.9 yuan katkı marjı kalır; bu marj sabit yatırımı karşılar ve geri ödeme süresi buradan hesaplanır. Üç senaryo yalnızca girdileri değiştirir, bu hesap yöntemini değiştirmez.
+
+## Üç senaryo, önce SKU sınırlarını belirleyin
+
+Muhafazakâr senaryo 3 ila 5 SKU içerir ve doğrulama ile referans önceliklidir. Önce bir SKU baştan sona çalıştırılır, veriler geldiğinde baz senaryoya geçilir; dört izleme kalemine bakılır, dönüşüm ve tekrar alım öne alınır.
+
+Baz senaryo 8 ila 12 SKU içerir ve ilk yıl içinde başabaş noktasına yaklaşmayı hedefler. Parametre tablosu aynı kalır, yalnızca girdiler değişir ve aşama doğrulama sonuçlarına göre ilerler; net oran modeli doğrudan yerleştirilebilir.
+
+İyimser senaryo tüm SKU'ları kapsar ve sabit maliyetleri hacimle seyreltir. Tüm SKU stokları ve tanıtım sistemi hazır olduktan sonra hacim artırılır; lansman öncesi on altı hazırlık ön koşuldur. Senaryolar arasında geçiş tahminle yapılmaz, her senaryonun giriş koşulu vardır ve koşullar sağlanmazsa önceki senaryoda kalınır.
+
+![İlk yıl senaryoları ve ayarlanabilir parametreler: sol sütunda muhafazakâr, baz ve iyimser için üç kart, sırasıyla 3 ila 5 SKU, 8 ila 12 SKU, tüm SKU ve giriş koşulları; altında her 100 yuan ciro için beş kesinti dilimi ve 62.9 yuan katkı marjı; en altta girdi varsayımlarından GMV, kesintiler, katkı marjı ve sabit yatırım üzerinden geri ödeme süresine uzanan altı halkalı model zinciri](/images/blog/budgeting-first-year-bonded-sales-china/year-one-model-three-scenarios.webp)
+
+## Üç varsayımı siz dolduruyorsunuz
+
+Modelin sizden beklediği yalnızca üç varsayım var: ortalama sepet tutarı, tekrar alım oranı ve tanıtım komisyon oranı üst sınırı. Yapıyı ve araçları biz veriyoruz, sayılar sizin parametrelerinizden çıkıyor; etkileşimli bir hesap tablosu teslim ediyoruz ve önceden hedef değer koymuyoruz.
+
+Model zinciri altı halkadan oluşur. Girdi varsayımları SKU sayısı, ortalama sepet tutarı ve tekrar alım sayısını toplam ciroya (GMV) çevirir, her senaryo kendi ciro toplamını hesaplar; ardından konsolide vergi, platform komisyonu, sipariş karşılama ve tanıtım komisyonu olmak üzere dört kalem düşülür; GMV'den bu dört kalem çıktığında katkı marjı elde edilir; sabit yatırım sistem entegrasyonu, ilk bacak navlununun toplu itfası ve defter tutmayı kapsar; birikimli marj sabit yatırımı karşıladığında geri ödeme süresi tamamlanır.
+
+Bu zinciri kendiniz çalıştırırsınız. Varsayımlardan biri değiştiğinde sonraki sayılar da değişir; yöntem açıkta durur, iç onaya sunarken kimsenin sözüne güvenmeniz gerekmez.
+
+## Her 100 yuan ciroda, 37.1 yuan tutarında dört kesinti
+
+Marj yapısı her 100 yuan GMV için ayrıştırılır: ücretler 6.0 yuan, sipariş karşılama ve ilk bacak 7.0 yuan, vergiler 9.1 yuan, komisyon 15.0 yuan, toplam 37.1 yuan ve 62.9 yuan katkı marjı. Beş dilim toplandığında tam 100% eder; yapı üç senaryoda aynıdır, fark ölçekte ve sabit kalemlerin seyrelmesindedir.
+
+Vergi dilimindeki 9.1% oranı, sınır ötesi e-ticaret perakende ithalatının birleşik vergi yüküdür: gümrük vergisi oranı geçici olarak 0%, ithalat aşamasındaki KDV ve tüketim vergisi yasal tutarın 70%'i üzerinden alınır. Bu, vergi sisteminin bütününden hesaplanmış tek bir sayıdır; tek bir vergi türünün oranını doğrudan buna eklemeyin.
+
+Kesinti kalemleri sipariş hacmiyle orantılı hareket eder. Hacim iki katına çıktığında dört kesinti de iki katına çıkar ve katkı marjı aynı oranda hareket eder; sabit yatırım hacimle hareket etmez, bu nedenle hacim artışının gerçekten seyrelttiği taraf sabit yatırımdır. Burada gösterilen oranlar örnek niteliğindedir; teklif değildir ve getiri vaadi sayılmaz.
+
+## Muhafazakâr senaryoyu bir kez hesaplayın
+
+Muhafazakâr senaryoyu bir kez hesaplayalım. 3 SKU, her SKU için ayda ortalama 25 sipariş, yılda yaklaşık 900 sipariş; ortalama sepet tutarı 300 yuan ve yıllık ciro 270,000 yuan. 37.1% kesintiyle dört kalemin toplamı 100,170 yuan: ücretler 16,200 yuan, sipariş karşılama ve ilk bacak 18,900 yuan, vergiler 24,570 yuan, komisyon 40,500 yuan.
+
+Katkı marjı 169,830 yuan. Sabit yatırım 150,000 yuan olarak tahmin edilir; sistem entegrasyonu, ilk bacak navlununun toplu itfası ve defter tutma bu tutarın içindedir. Aylık katkı marjı yaklaşık 14,153 yuan olup birikimli marj 11. ay civarında sabit yatırımı karşılar ve yatırım ilk yıl içinde geri döner. Ortalama sepet tutarını ya da tekrar alım sayısını değiştirdiğinizde sonuç da değişir; bu tablonun parametrelerini siz doldurursunuz, biz yöntemi değiştirmeyiz.
+
+## Üç faturalama yöntemi
+
+Sipariş başına faturalama: sipariş adedine göre hesaplanır; sipariş hacminin öngörülebildiği ve SKU yapısının istikrarlı olduğu aşamalara uygundur.
+
+GMV payı üzerinden faturalama: ciro payı olarak hesaplanır; hacim artırma dönemine uygundur, ölçek büyüdükçe birim maliyet daha çok seyrelir.
+
+Aylık sabit hizmet bedeli ile sipariş başına bedelin birleşimi: sabit bedel temel personel ve sistemleri karşılar, aşan kısım sipariş başına eklenir ve bütçe önceden belirlenebilir.
+
+Üç yöntem de beş faktöre göre karşılaştırılır: sipariş hacmi, SKU sayısı, süre gereksinimleri, mutabakat para birimi ve katma değerli hizmetler. Bu beş faktör değiştiğinde teklif yapısı da değişir.
+
+![Faturalama seçenekleri ve sizin tarafınızdaki girdiler: üst bölümde sipariş başına, GMV payı ve aylık sabit bedel ile sipariş başına bedel olmak üzere üç yöntem ve beş faturalama faktörü, sağda sekiz bölümlük teklif; alt bölümde insan, kaynak, belge ve zaman olmak üzere dört girdi ve her birinin zamanı, ayrıca yarı zamanlı başlangıcın kadrolu personel eklemediği ve dört liste şablonunun S0 çıktılarıyla birlikte verildiği notu yer alır](/images/blog/budgeting-first-year-bonded-sales-china/billing-options-and-budget-inputs.webp)
+
+## Kapsam dışı kalemler ve teklif önkoşulları
+
+Kapsam dışı kalemler baştan ayrılır; örneğin 9610 kanalının sonradan devreye alınması, merkez sistemlerinin yenilenmesi veya yurt dışı IBO ücretlendirmesi. Hizmet bedelimiz resmi teklifte ayrı bir satırda gösterilir ve yukarıdaki üç faturalama yöntemine karıştırılmaz.
+
+Resmi teklif için beş önkoşulun tamamlanması gerekir: SKU listesi ve miktarları, aynı partiden CoA (test raporu) hazırlığı, tüzel kişilik yolu eğilimi, hedef gümrük kapısı tercihi ve iddia stratejisi eğilimi. Beşi tamamlandığında resmi teklif bunu izler.
+
+Veri olmasa da ilk sürüm çıkarılabilir: sektör deneyim değerleriyle hesaplanır, her kalemin dayanağı işaretlenir ve ölçülen verileriniz geldiğinde değiştirilir.
+
+## Teklif belgesinin sekiz bölümü
+
+Resmi teklif sekiz bölümde açılır: kapsam sınırları, faturalama karşılaştırması, ücret yapısı, maliyet dökümü, ödeme takvimi, vergi ve fatura, sorumluluk ve tazminat, sınır koşulları. Ayrıntılar ticari ek olarak verilir ve tüm tutarlar resmi teklifi esas alır; toplantıda söylenen sözlü bir rakam geçerli değildir.
+
+## Sizin tarafınızdaki dört girdi
+
+İnsan: bir ila iki finans ve uyum personeli, yarı zamanlı başlanabilir, buna bir iş bağlantısı kişisi eklenir; yarı zamanlı başlangıç kadrolu pozisyon eklemez. Başlangıçta gerekir ve S0 başlangıç aşamasıyla paralel yürür.
+
+Kaynak: ilk stok, pilot SKU adetleri ve 2 ila 3 aylık devir üzerinden belirlenir, reklam harcaması küçük adımlarla doğrulanır ve gümrük teminatı kapı gerekliliklerine göre düzenlenir. Stok ve listeleme öncesinde hazır olmalıdır.
+
+Belge: ürün, test, yetkinlik ve marka olmak üzere dört dosya türü listelenir ve kabul aşamalarında kademeli olarak tamamlanır; dört liste şablonu S0 çıktılarıyla birlikte verilir.
+
+Zaman: tüzel kişilik yolu, hedef gümrük kapısı ve iddia stratejisi kararları takvimi doğrudan etkiler; S0 öncesinde netleşirse takvim sabitlenir ve kararlar tamamlandığında M1 yürütme aşamasına geçilir.
+
+İnsan ve kaynak için verilenler uygulama aralıklarıdır; teklif ölçülen koşullara göre düzenlenir, belgeler tamamlandığında resmi teklif çıkar ve oran ayrıntıları yalnızca teklifte yer alır.
+
+## Önce tablo başlığını kurun
+
+İlk yıl bütçesi tek bir tabloya iner: üç senaryo sütunu, üç varsayım satırı, dört kesinti, bir sabit yatırım satırı ve bir geri ödeme süresi satırı. Önce girdiler doldurulur, sonra teklif konuşulur; oranlar yalnızca resmi teklifte geçerlidir, demo sayılar yalnızca yöntemi açıklar.
+
+Sıradaki adım, SKU listenizi, ortalama sepet tutarınızı ve tekrar alım sayınızı bu tabloya yerleştirmektir. Hangi girdi henüz netleşmediyse [bizimle iletişime geçin](/tr/packages/).

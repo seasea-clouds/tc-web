@@ -17,9 +17,9 @@
     "build:site": "turbo build --filter=@trade/site",
     "build:portal": "turbo build --filter=@trade/portal",
     "build:admin": "turbo build --filter=@trade/admin",
-    "submission:check": "python3 docs/submission-kit/submitter_check.py",
+    "submission:check": "python3 docs/submission-kit/submit.py check",
     "intake": "node packages/scripts/submission-intake.mjs",
-    "submission:build": "node packages/scripts/build-submission-kit.mjs"
+    "submission:build": "python3 docs/submission-kit/submit.py pack"
   },
   "devDependencies": {
     "turbo": "^2.10.5"

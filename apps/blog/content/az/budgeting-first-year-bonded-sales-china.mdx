@@ -1,0 +1,91 @@
+---
+title: "İlk ilin bondlu satışlarının üç ssenarili büdcəsi"
+date: "2027-08-10"
+category: "E-commerce"
+excerpt: "İlk bondlu il üç ssenari üzrə: bir parametr cədvəli, giriş dəyərləri dəyişir, ssenari yoxlamaya əsaslanır. Dörd çıxım həcmə görə gedir. Dərəcələr yalnız rəsmi təklifdədir."
+references:
+  - title: "Maliyyə Nazirliyi, Gömrük Baş İdarəsi və Dövlət Vergi Administrasiyasının sərhədboyu elektron ticarət pərakəndə idxalının vergi siyasəti haqqında Bildirişi (Cai Guan Shui [2016] 18 nömrəli; gömrük rüsumu dərəcəsi müvəqqəti olaraq 0%, idxal mərhələsi ƏDV və istehlak vergisi qanunla hesablanmış məbləğin 70%-i üzrə tutulur)"
+    url: "https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html"
+  - title: "Maliyyə Nazirliyi, Gömrük Baş İdarəsi və Vergi Administrasiyasının sərhədboyu elektron ticarət pərakəndə idxalının vergi siyasətinin təkmilləşdirilməsi haqqında Bildirişi (Cai Guan Shui [2018] 49 nömrəli; bir əməliyyat üzrə limit 5.000 yuan, illik limit 26.000 yuan)"
+    url: "https://czt.hlj.gov.cn/czt/c110905/202001/c00_30603063.shtml"
+  - title: "Altı qurumun sərhədboyu elektron ticarət pərakəndə idxalına nəzarətin təkmilləşdirilməsi haqqında Bildirişi (Shang Cai Fa [2018] 486 nömrəli)"
+    url: "https://www.mofcom.gov.cn/article/b/fwzl/201811/20181102812004.shtml"
+  - title: "Gömrük Baş İdarəsinin 2018-ci il 194 nömrəli Bildirişi (sərhədboyu elektron ticarət pərakəndə idxal və ixrac mallarına nəzarət məsələləri haqqında)"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+---
+
+İlk ili gömrük anbarında bir hesab sətrinə endirək: hər 100 yuan dövriyyədən haqq, sifarişin icrası və birinci mərhələ daşıma, vergilər və komissiya, dördü birlikdə 37,1 yuan götürür və 62,9 yuan xalis marja qalır; bu marja ilə sabit investisiyanı örtür və investisiyanın geri dönüş müddətini alırsınız. Üç ssenari yalnız giriş dəyərlərini dəyişir, hesablama qaydasını isə yox.
+
+## Üç ssenari, əvvəlcə SKU sərhədləri
+
+Konservativ ssenariyə 3–5 SKU daxildir və yoxlama ilə müştəri rəyləri birinci yerdədir. Əvvəlcə bir SKU üçün əvvəldən axıra qədər tam dövr edin, məlumatlar qayıtdıqdan sonra isə baza ssenarisinə keçin; əvvəlcə dörd müşahidə göstəricisinə baxın, konversiya və təkrar satınalma ön sıradadır.
+
+Baza ssenariyə 8–12 SKU daxildir, məqsəd isə ilk ildə zərərsizlik nöqtəsinə yaxınlaşmaqdır. Parametr cədvəli eyni qalır, yalnız giriş dəyərləri dəyişir, ssenari isə yoxlama nəticələrinə əsaslanır; xalis marja modeli birbaşa yerləşdirilir.
+
+Optimist ssenariyə bütün SKU daxildir və həcm artımı sabit xərcləri incəldir. Həcm yalnız bütün SKU ehtiyatı və təşviqat sistemi hazır olduqdan sonra artır; işəsalma öncəsi on altı hazırlıq bəndi ilkin şərtdir. Ssenarilər arasında keçid ixtiyari deyil: hər birinin daxilolma şərtləri var və onlar yerinə yetirilməyincə əvvəlki ssenaridə qalırsınız.
+
+![İlk ilin üç ssenarisi və tənzimlənən parametrlər: sol sütunda konservativ, baza və optimist üç kart, 3–5 SKU, 8–12 SKU və bütün SKU, hər birinin daxilolma şərtləri ilə; aşağıda hər 100 yuan dövriyyənin beş çıxım seqmenti və 62,9 yuan xalis marja; ən aşağıda altı halqalı model zənciri giriş fərziyyələrindən geri dönüş müddətinə, ortada GMV, çıxımlar, xalis marja və sabit investisiya](/images/blog/budgeting-first-year-bonded-sales-china/year-one-model-three-scenarios.webp)
+
+## Sizin dolduracağınız üç fərziyyə
+
+Bütün modelə sizdən yalnız üç fərziyyə lazımdır: orta sifariş dəyəri, təkrar satınalma nisbəti və təşviqat komissiyasının yuxarı həddi. Biz struktur və alətləri veririk, rəqəmlər sizin parametrlərinizdən hesablanır və əvvəlcədən təyin edilmiş hədəf dəyərləri olmayan interaktiv hesablama cədvəli təqdim olunur.
+
+Model zənciri altı halqadan ibarətdir. Giriş fərziyyələri SKU sayını, orta sifariş dəyərini və təkrar satınalma sayını ümumi dövriyyəyə (GMV) çevirir, hər ssenari öz dövriyyəsini ayrıca hesablayır; sonra dörd bənd çıxılır, yəni məcmu vergi, platforma komissiyası, sifarişin icrası və təşviqat komissiyası; GMV-dən bu dörd bənd çıxılanda xalis marja alınır; sabit investisiya sistem inteqrasiyasını, toplu birinci mərhələ daşımanın amortizasiyasını və bond reyestrinin saxlanmasını əhatə edir; yığılmış marja sabit investisiyanı örtdükdə investisiyanın geri dönüş müddəti alınır.
+
+Bu zənciri özünüz hesablayırsınız. Hər hansı fərziyyəni dəyişsəniz, sonrakı bütün rəqəmlər də dəyişir; metod açıq ortadadır və daxili təsdiqə aparmaq üçün heç kimin sözünə inanmağa ehtiyac yoxdur.
+
+## Hər 100 yuan dövriyyə, dörd çıxım 37,1 yuan
+
+Marjanın tərkibi hər 100 yuan GMV üzrə belə açılır: haqq 6,0 yuan, icra və birinci mərhələ 7,0 yuan, vergilər 9,1 yuan, komissiya 15,0 yuan, cəmi 37,1 yuan və xalis marja 62,9 yuan. Beş seqment dəqiq 100% edir, quruluş üç ssenaridə eynidir, fərq isə miqyasda və sabit bəndlərin incəlməsindədir.
+
+Vergilər seqmentindəki 9,1% sərhədboyu elektron ticarət pərakəndə idxalının birləşmiş vergi yüküdür: gömrük rüsumu dərəcəsi müvəqqəti olaraq 0%, idxal mərhələsi ƏDV və istehlak vergisi isə qanunla hesablanmış məbləğin 70%-i üzrə tutulur. Bu, bütün vergi sistemindən hesablanmış bir rəqəmdir, ona görə də bir ayrı vergi növünün dərəcəsini birbaşa üstünə əlavə etməyin.
+
+Çıxımlar sifariş həcminə nisbətdə gedir. Həcm ikiqat artsa, dörd çıxım da ikiqat artar və xalis marja da eyni nisbətdə gedər; sabit investisiya həcmə görə dəyişmir, ona görə də artım məhz sabit tərəfi incəldir. Göstərilən nisbətlər nümunə dəyərləridir, nə qiymət təklifidir, nə də gəlir vədi.
+
+## Konservativ ssenarini bir dəfə hesablayaq
+
+Konservativ ssenari üzrə bir hesablama aparaq. 3 SKU, hər birinə ayda orta hesabla 25 sifariş, ildə təxminən 900 sifariş; orta sifariş dəyəri 300 yuan, illik dövriyyə 270.000 yuan. 37,1% çıxımla dörd bənd cəmi 100.170 yuan edir: haqq 16.200 yuan, icra və birinci mərhələ 18.900 yuan, vergilər 24.570 yuan, komissiya 40.500 yuan.
+
+Xalis marja 169.830 yuandır. Sabit investisiyanı 150.000 yuan olaraq qiymətləndiririk, içinə sistem inteqrasiyası, toplu birinci mərhələ daşımanın amortizasiyası və bond reyestrinin saxlanması daxildir; aylıq xalis marja təxminən 14.153 yuandır, yığılmış marja sabit investisiyanı təxminən 11-ci ayda örtür və geri dönüş ilk ilin içində baş verir. Orta sifariş dəyərini və ya təkrar satınalma sayını dəyişsəniz, nəticə də dəyişir; cədvəli siz doldurursunuz, biz metodu dəyişmirik.
+
+## Üç hesablaşma üsulu
+
+Sifariş üzrə: hesablaşma sifariş sayına görə aparılır, sifariş həcminin proqnozlaşdırıla bildiyi və SKU quruluşunun sabit olduğu mərhələyə uyğun gəlir.
+
+GMV payı üzrə: hesablaşma dövriyyə payına görə aparılır, həcm artımı mərhələsinə uyğun gəlir, miqyas böyüdükcə vahid xərci daha çox incəlir.
+
+Aylıq xidmət haqqı üstəgəl sifariş üzrə: sabit haqq baza heyətini və sistemləri əhatə edir, artıq hissə sifariş üzrə əlavə olunur və büdcə əvvəlcədən tərtib edilə bilər.
+
+Üç üsulun hamısı beş amil üzrə dəyərlərlə müqayisə edilir: sifariş həcmi, SKU sayı, vaxt tələbləri, hesablaşma valyutası və əlavə xidmətlər. Bu beş dəyişsə, təklifin quruluşu da dəyişir.
+
+![Hesablaşma variantları və sizin tərəfin investisiyaları: yuxarı hissədə sifariş üzrə, GMV payı üzrə və aylıq xidmət haqqı üstəgəl sifariş üzrə üç üsul və beş hesablaşma amili, sağda təklifin səkkiz bölməsi; aşağı hissədə insanlar, vəsait, sənədlər və vaxt, dörd investisiya öz vaxtları ilə, qeydlə ki natamam iş rejimi ilə başlamaq daimi ştat sayını artırmır və dörd yoxlama siyahısının şablonu S0 təhvil dəsti ilə birlikdə verilir](/images/blog/budgeting-first-year-bonded-sales-china/billing-options-and-budget-inputs.webp)
+
+## Qiymətdən kənar bəndlər və təklifin ilkin şərtləri
+
+Qiymətdən kənar bəndlər əvvəlcə ayrılır, məsələn 9610 kanalının sonrakı işə salınması, baş ofis sistemlərinin yenidən qurulması və ya xarici IBO ödənişi; bizim xidmət haqqımız rəsmi təklifdə ayrıca göstərilir və yuxarıdakı üç hesablaşma üsuluna qarışdırılmır.
+
+Rəsmi təklif üçün beş ilkin şərt hazır olmalıdır: SKU siyahısı və həcmlər, eyni partiyadan CoA (sınaq protokolu) hazırlığı, subyekt yoluna meyil, hədəf liman seçimi və iddia strategiyasına meyil. Beşi də hazır olanda rəsmi təklif ardınca gəlir.
+
+Məlumat olmasa da ilk versiya çıxarıla bilər: hesablama sahə təcrübəsi dəyərləri ilə aparılır, hər bəndə dəyərin əsası qeyd olunur, ölçülmüş məlumatlarınız qayıtdıqda isə dəyərlər əvəz edilir.
+
+## Təklifin səkkiz bölməsi
+
+Rəsmi təklif səkkiz bölmədə açılır: əhatə sərhədləri, hesablaşma müqayisəsi, haqq quruluşu, xərc bölgüsü, ödəniş ritmi, vergilər və faktura, məsuliyyət və kompensasiya, sərhəd şərtləri. Təfərrüatlar kommersiya əlavəsi kimi gedir, məbləğlər yalnız rəsmi təkliflə müəyyən edilir; iclasda «şifahi deyilmiş» rəqəm sayılmır.
+
+## Sizin tərəfin dörd investisiyası
+
+İnsanlar: maliyyə uyğunluğu üzrə 1–2 əməkdaş, başlanğıcda natamam iş rejimi ola bilər, üstəgəl 1 biznes əlaqəçisi; natamam iş rejimi ilə başlamaq daimi ştat sayını artırmır. İşə salınan anda lazımdır, S0 başlanğıc mərhələsi ilə paralel.
+
+Vəsait: ilk ehtiyat pilot SKU həcminə və 2–3 aylıq dövriyyəyə görə müəyyən edilir, reklam kiçik addımlarla yoxlanılır, vergi təminatı isə limanın tələblərinə görə rəsmiləşdirilir. Ehtiyatın gətirilməsindən və rəfə çıxarılmasından əvvəl hazır olmalıdır.
+
+Sənədlər: məhsul, sınaq, kvalifikasiya və brend üzrə dörd kateqoriyanın faylları yoxlama siyahılarına çevrilir və qəbul məntəqələrində ardıcıl şəkildə doldurulur; dörd yoxlama siyahısının şablonu S0 təhvil dəsti ilə birlikdə verilir.
+
+Vaxt: subyekt yolu, hədəf liman və iddia strategiyası, bu üç qərar qrafikə birbaşa təsir edir; S0-dan əvvəl təsdiqlənsə qrafik bağlanır, qərarlar hazır olanda isə iş M1 icra mərhələsinə keçir.
+
+İnsanlar və vəsait üçün praktik diapazonlar verilir, təklif ölçülmüş şərtlərə görə hazırlanır, sənədlər tam olanda rəsmi təklif çıxır, dərəcələrin təfərrüatı isə yalnız orada göstərilir.
+
+## Əvvəlcə cədvəlin başlığını qurun
+
+İlk ilin büdcəsi bir cədvələ sığır: üç ssenari sütunu, üç fərziyyə sətri, dörd çıxım, sabit investisiya üçün bir sətir və geri dönüş müddəti üçün bir sətir. Əvvəlcə giriş dəyərlərini doldurun, sonra təklifdən danışın; dərəcələr yalnız rəsmi təklifdədir, nümayiş rəqəmləri isə yalnız metodu izah edir.
+
+Növbəti addım SKU siyahınızı, orta sifariş dəyərini və təkrar satınalma sayını bu cədvələ yerləşdirməkdir. Hansısa giriş dəyəri hələ təyin edilməyibsə, [bizimlə əlaqə saxlayın](/az/packages/).

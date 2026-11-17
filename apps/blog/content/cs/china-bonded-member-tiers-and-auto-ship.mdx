@@ -1,0 +1,77 @@
+---
+title: "Členské úrovně a pravidelné dodávky v administraci, panel čtyř tratí hlídá odchylky"
+date: "2027-06-29"
+category: "E-commerce"
+excerpt: "Úrovně a pravidelné dodávky sdílejí číslo člena s atribuční evidencí a panel drží řádky s viditelnými varováními. Napřed nechte doběhnout dodací cyklus a pak srovnejte řádek po řádku."
+references:
+  - title: "Zákon Čínské lidové republiky o ochraně osobních informací (přijat 20. 8. 2021, články 13 a 23)"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+  - title: "Oznámení Generální celní správy č. 194 z roku 2018 (o záležitostech dohledu nad zbožím při přeshraničním maloobchodním dovozu a vývozu v elektronickém obchodu)"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Ustanovení o podpoře a regulaci přeshraničních toků dat (vyhláška č. 16 Státního úřadu pro internetové informace, účinná od 22. 3. 2024)"
+    url: "https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm"
+---
+
+Členské úrovně a pravidelné dodávky udrží opakované nákupy jen tehdy, když si dvě administrace rozumějí řádek po řádku. Jedna je provozní panel, který na jedné obrazovce spojuje šest řádků, objednávky v přepravě, šarže v celním skladu, dnešní propuštění ze zóny, zásilky v přepravě, průměrnou dobu celního odbavení a šarže s varováním o konci trvanlivosti. Druhá je administrace členských úrovní a pravidelných dodávek, která do šesti řádků řadí číslo člena, úroveň, zboží pravidelných dodávek, dodací cyklus, datum příští dodávky a kumulativní útratu. Obě místa sdílejí jednu sadu čísel členů a každá změna stavu se zapisuje do protokolu, takže opakovaný nákup se dá připsat zpět témuž členovi. Když přebíráte, podívejte se nejdřív na řádky s odchylkami, v ukázkovém rozhraní jsou dva řádky v průběhu a jeden k opravě a nesou 2 nevyřízená celní prohlášení, 3 odchylky a 2 šarže před koncem trvanlivosti.
+
+![Ukázka rozhraní provozního panelu čtyř tratí se záhlavím trať, klíčový ukazatel, aktuální hodnota, cíl, míra plnění, varování, stav a akce, šest řádků postupně uvádí trať objednávek, trať zásob, trať celního odbavení, trať logistiky, trať lhůt a trať trvanlivosti, dole poznámka celkem 6 záznamů a 20 na stránku](/images/blog/china-bonded-member-tiers-and-auto-ship/four-tracks-dashboard-system-demo.webp)
+
+## Šest řádků na jedné obrazovce, čtyři servisní toky mají každý svého odpovědného
+
+Provozní panel je hlavní pohled, jedna trať na jeden řádek, záložky dělí na dnešek, tento týden a tento měsíc. Každý řádek uvádí klíčový ukazatel, aktuální hodnotu, cíl, míru plnění, varování a stav a na konci nese dva vstupy, detail a protokol. Buňka, v níž se nespustilo varování, dostane krátkou čárku místo nuly, aby se stav bez varování nečetl jako nulový ukazatel. Panel stránkuje po 20 záznamech na stránku, ukázková data jich mají celkem 6 a vejdou se na jednu obrazovku.
+
+Čtyři servisní toky S10 až S13 mají každý svého odpovědného a jejich ukazatele i aktuální kroky jsou soustředěny na tomto jediném panelu. Kdo přebírá kterou trať a jak daleko se právě došlo, zjistíte tady, aniž byste museli listovat v dalších evidencích. Odpovědnost sedí na řádku a při předání stačí podepsat řádek po řádku.
+
+Záhlaví má osm sloupců v tomto pořadí, trať, klíčový ukazatel, aktuální hodnota, cíl, míra plnění, varování, stav a akce. Šest řádků je ve stejném pořadí vypsáno úplně.
+
+- Trať objednávek, objednávky v přepravě, aktuálně 128, cíl 150, míra plnění 85%, varování prázdné, stav normální;
+- Trať zásob, šarže v celním skladu, aktuálně 36, cíl 40, míra plnění 90%, varování prázdné, stav normální;
+- Trať celního odbavení, dnešní propuštění ze zóny, aktuálně 86, cíl 100, míra plnění 86%, varování 2 nevyřízená celní prohlášení, stav v průběhu;
+- Trať logistiky, zásilky v přepravě, aktuálně 214, cíl a míra plnění ponechány prázdné, varování 3 odchylky, stav v průběhu;
+- Trať lhůt, průměrná doba celního odbavení, aktuálně 6,8 hodiny, cíl 8 hodin, v kolonce míry plnění stojí splněno, varování prázdné, stav normální;
+- Trať trvanlivosti, šarže s varováním o konci trvanlivosti, aktuálně 2, cíl 0, míra plnění ponechána prázdná, varování 2 šarže před koncem trvanlivosti, stav k opravě.
+
+Vysvětlující karty upozorňují na dva údaje, které se nejsnáze přečtou špatně, trať objednávek má u objednávek v přepravě aktuálně 128, cíl 150 a míru plnění 85% a trať zásob má u šarží v celním skladu aktuálně 36, cíl 40 a míru plnění 90%. Karta zároveň říká, že buňka bez spuštěného varování zobrazuje krátkou čárku. Jinými slovy, čárka nevypovídá o chybějících údajích a je zároveň samotným závěrem, že tentokrát žádné varování nebylo.
+
+Tři stavy je třeba řešit odděleně. Normální jsou tři řádky, trať objednávek, trať zásob a trať lhůt, a trať lhůt má aktuálně 6,8 hodiny pod cílem 8 hodin, proto v kolonce míry plnění stojí rovnou splněno. Dva řádky v průběhu nesou každý jeden úkol, trať celního odbavení má 2 nevyřízená celní prohlášení a trať logistiky má 3 odchylky. K opravě je trať trvanlivosti, která má aktuálně 2 šarže s varováním o konci trvanlivosti, cíl 0 a v poli varování 2 šarže před koncem trvanlivosti. Pořadí zásahu se řídí dopadem, napřed se vyčistí šarže před koncem trvanlivosti, pak se doplní celní prohlášení a nakonec se dořeší odchylky.
+
+## Administrace členských úrovní a pravidelných dodávek je prověřitelná řádek po řádku
+
+![Ukázka rozhraní administrace členských úrovní a pravidelných dodávek se záhlavím číslo člena, úroveň, zboží pravidelných dodávek, dodací cyklus, datum příští dodávky, kumulativní útrata, stav pravidelných dodávek a akce, šest řádků s údaji o úrovních a pravidelných dodávkách od M-100238 po M-100419, dole poznámka celkem 6 záznamů a 20 na stránku](/images/blog/china-bonded-member-tiers-and-auto-ship/member-tiers-subscriptions-system-demo.webp)
+
+Administrace na straně členů je zavěšena pod modulem obchodu, záložky dělí podle úrovně na černou kartu, zlatou kartu a stříbrnou kartu a jedna záložka ukazuje jen aktivní pravidelné dodávky. Každý řádek vypisuje číslo člena, úroveň, zboží pravidelných dodávek, dodací cyklus, datum příští dodávky a kumulativní útratu a na konci má opět detail a protokol. Ukázková data jich mají celkem 6 a na stránku jich připadá 20.
+
+Úrovně, pravidelné dodávky a kumulativní útrata se spravují na jednom místě a číslo člena sdílí s atribuční evidencí jeden zdroj dat. Jeden opakovaný nákup se tak nezapočítá jednou na straně členů a podruhé na straně atribuce, a pokud chcete přiřadit opakované nákupy určité úrovně ke konkrétní kampani, stačí se vrátit po čísle. Číslo člena i kumulativní útrata jsou osobními údaji, jejich zpracování a sdílení musí mít jasný podklad a mezi tuzemskou administrací a zahraničními sestavami proudí jen nezbytné souhrnné údaje.
+
+Záhlaví má osm sloupců v tomto pořadí, číslo člena, úroveň, zboží pravidelných dodávek, dodací cyklus, datum příští dodávky, kumulativní útrata, stav pravidelných dodávek a akce. Šest řádků je ve stejném pořadí vypsáno úplně a všechny částky jsou v jüanech.
+
+- M-100238, černá karta, měkké kapsle s koenzymem Q10 x2, měsíčně, 2026-10-22, 15800,00 jüanů, v průběhu;
+- M-101204, zlatá karta, měkké kapsle s rybím olejem x1, měsíčně, 2026-10-05, 8640,00 jüanů, v průběhu;
+- M-100571, stříbrná karta, srvátkový proteinový prášek x1, každé 2 měsíce, 2026-11-19, 4320,00 jüanů, v průběhu;
+- M-100872, černá karta, probiotický prášek x2, měsíčně, 2026-10-08, 22100,00 jüanů, v průběhu;
+- M-101466, zlatá karta, kolagenový peptidový nápoj x1, měsíčně, 2026-10-15, 6980,00 jüanů, pozastaveno;
+- M-100419, stříbrná karta, tablety s vápníkem a vitaminem D x1, čtvrtletně, 2026-12-01, 1560,00 jüanů, v průběhu.
+
+Vysvětlující karty uvádějí dvě čísla. M-100238 má černou kartu, každý měsíc se automaticky doručují dvě lahvičky měkkých kapslí s koenzymem Q10, datum příští dodávky je 2026-10-22 a kumulativní útrata činí 15800,00 jüanů, zatímco M-101204 má zlatou kartu. Karta také říká, že číslo člena a atribuční evidence mají stejný zdroj. Když tyto dvě věty srovnáte se šesti řádky tabulky, vyjdou najevo prahy úrovní, dvě stříbrné řádky mají 4320,00 jüanů a 1560,00 jüanů, dvě zlaté řádky 8640,00 jüanů a 6980,00 jüanů a dvě černé řádky 15800,00 jüanů a 22100,00 jüanů, takže se tři úrovně nepřekrývají. Kumulativní útrata je proto jak zobrazovaným polem, tak podkladem pro rozdělení do úrovní.
+
+Dodací cyklus má tři podoby, měsíčně, každé 2 měsíce a čtvrtletně, a v tabulce je pět řádků v průběhu a jeden pozastavený. Pozastavený je M-101466 s kumulativní útratou 6980,00 jüanů, jeho stav je vyznačen v samostatném poli a řádek se kvůli tomu nemaže. Nejranější datum příští dodávky je 2026-10-05 a nejpozdější 2026-12-01 a obě leží v téže tabulce.
+
+## Jeden člen s černou kartou projde celým dodacím cyklem
+
+Vezměte člena s černou kartou M-100238 a projděte to s ním. Administrace zaznamenává, že je aktivní, že má jednu objednávku měsíčně, že zbožím jsou měkké kapsle s koenzymem Q10 x2, že datum příští dodávky je 2026-10-22 a že kumulativní útrata činí 15800,00 jüanů. Tentýž řádek visí zároveň pod záložkou členských úrovní i pod záložkou pravidelných dodávek a žádné další číslo se nevytváří.
+
+Až nastane datum dodání, systém vytvoří objednávku podle cyklu, odešle zboží ze šarží v celním skladu, projde celním odbavením a propuštěním ze zóny a číslo zásilky zapíše zpět do tohoto řádku. Aktuální hodnota na trati objednávek se tím změní, trať trvanlivosti odečte příslušnou šarži a trať lhůt zaznamená dobu tohoto celního odbavení. Po dokončení zápisu se kumulativní útrata zvýší o skutečně zaplacenou částku a datum příští dodávky se posune o jeden cyklus, detail ukazuje pole a protokol ukazuje, kdo a kdy provedl každou změnu.
+
+Pozastavení uprostřed cyklu také běží na témže řádku. M-101466 má stav pravidelných dodávek pozastavený, zboží i kumulativní útrata v tabulce zůstávají, jen se už nevytváří další objednávka, a při obnovení se naváže na protokol bez založení nového čísla člena. Kdyby se pozastavení zapsalo jako smazání řádku, atribuční evidence by přišla o kus historie a prahy úrovní by nešlo spočítat.
+
+Úzus částek se musí určit hned na začátku. Všech šest částek kumulativní útraty je v jüanech, píší se na dvě desetinná místa, bez symbolu měny a bez poznámky o přepočtu vložené do ukázkových dat. Zápatí rozhraní označuje tato data za ukázková a výjimky i opravy zůstávají dohledatelné v záznamech, takže hodnoty slouží k ověření výpočtů a polí a nejsou určeny jako zveřejňované provozní údaje.
+
+## Před přechodem srovnejte obě administrace
+
+Název ukázkové stránky mluví o čtyřech tratích, tabulka však ve skutečnosti vypisuje šest řádků, trať objednávek, trať zásob, trať celního odbavení, trať logistiky, trať lhůt a trať trvanlivosti. Není v tom rozpor, čtyři servisní toky S10 až S13 jsou rozdělením odpovědnosti a šest řádků jsou ukazatelové řádky této obrazovky, takže jeden odpovědný může hlídat více než jeden řádek. Při čtení tabulky berte ukazatele po řádcích a lidi po tocích a název stránky si nepleťte s počtem řádků.
+
+Před přechodem udělejte tři věci, napřed nechte doběhnout jeden celý dodací cyklus a zkontrolujte, zda se datum příští dodávky a kumulativní útrata posouvají zároveň, pak řádek po řádku srovnejte čísla členů a stavy v obou administracích, zda souhlasí prahy úrovní, záznamy o pozastavení a protokoly, a nakonec zapište výsledky zásahů u řádků s odchylkami zpět do panelu, aby 2 nevyřízená celní prohlášení, 3 odchylky a 2 šarže před koncem trvanlivosti měly každá své místo. Teprve po všech třech krocích je evidence udržení opakovaných nákupů opravdu převzatá.
+
+Zda se opakované nákupy udrží, se v systému pozná na dvou místech, na tom, jestli jsou odchylky hned vidět, a na tom, jestli změny stavu zanechávají stopu. Na ukázkové stránce je šest tratí vidět na jedné obrazovce, šest řádků členů je prověřitelných pole po poli a každý řádek má detail i protokol, takže obě místa mají své ukotvení. Jak dlouho přechod potrvá, závisí na sladění polí ve vašem stávajícím systému a na délce souběžného běhu, srovnatelné integrace na otevřeném trhu se počítají v řádu týdnů, což je jen orientační údaj a nelze to brát jako závazek.
+
+Pokud chcete členské úrovně a pravidelné dodávky napojit na vaši stávající administraci celního skladování, [Kontaktujte nás](/cs/packages/).

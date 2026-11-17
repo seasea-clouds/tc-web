@@ -1,0 +1,89 @@
+---
+title: What the 26000 Yuan Annual Quota in China Means for Your Export Plan
+date: "2027-01-05"
+category: E-commerce
+excerpt: "Cai Guan Shui [2018] No. 49 sets 5000 yuan per order and 26000 yuan per year. Quota accrues per purchaser, checked at clearance, not at ID or delivery. 2026: 8640 used, 17360 left."
+references:
+  - title: "Cai Guan Shui [2016] No. 18 (Notice on the Tax Policy for Cross-Border E-Commerce Retail Imports)"
+    url: https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html
+  - title: "Cai Guan Shui [2018] No. 49 (Notice on Improving the Tax Policy for Cross-Border E-Commerce Retail Imports)"
+    url: https://www.mof.gov.cn/gkml/caizhengwengao/wg2018/wg201812/201903/t20190318_3194922.htm
+  - title: "GACC Announcement No. 194 of 2018 (Regulatory Matters for Cross-Border E-Commerce Retail Imports and Exports)"
+    url: https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html
+  - title: "GACC Announcement No. 45 of 2020 (Supervision of Returns of Cross-Border E-Commerce Retail Import Goods)"
+    url: https://www.customs.gov.cn/customs/2020-03/30/article_2025121220594047423.html
+---
+
+What one consumer may buy through cross-border retail in a year is fixed by Cai Guan Shui [2018] No. 49: 5,000 yuan per transaction and 26,000 yuan per year. Both figures are adjustable policy parameters. No. 18 wrote 2,000 yuan per transaction and 20,000 yuan per year in 2016; the 2018 raise has held ever since. The caps sit on the import side, and on an export plan they read as the edges of pricing and volume.
+
+The quota belongs to the consumer, accrues order by order against the purchaser, and is checked at clearance. Neither identity verification nor delivery looks at it. That timeline decides three things: how bundles and gift sets are priced, how an over-limit order is handled, and where the evidence is when something goes wrong. The ledger and the intercept log quoted below are sample data from our own system, verifiable line by line.
+
+![The two consumer quota caps, the three stages they are checked at, and two interface screens: the quota lookup in Palm Customs and the order intercept notice](/images/blog/what-26000-yuan-annual-quota-china-means-for-export-plan/two-consumer-quota-caps-three-stages.webp)
+
+## Two caps: 5,000 yuan per order, 26,000 yuan per year
+
+No. 49 puts both caps in one paragraph: a per-transaction limit of 5,000 yuan and an annual limit of 26,000 yuan. Converted at 7.2 yuan per dollar, that is about 700 US dollars and 3,600 US dollars. Both caps count the purchaser. The per-order cap covers the dutiable value of one order; the annual cap covers what the same consumer accumulates over one calendar year.
+
+What enters the quota is the dutiable value, not the shelf price. Dutiable value includes the goods, the freight and the insurance. A 50-dollar tin of protein powder converts to 360 yuan, and the figure that reaches the ledger is slightly higher once freight and insurance are added. A 680-dollar bundle is 4,896 yuan, which leaves 104 yuan of headroom under the 5,000 yuan single-order cap, and freight and insurance eat that. The margin you keep at pricing time is the freight and insurance leg.
+
+The 5,000 yuan line is therefore a hard constraint, not a suggestion. Bundles, promotional packs and gift boxes have to fit inside 5,000 yuan before anything else is decided. Pricing that sits on the edge turns one promotion into one clearance incident.
+
+## Whose quota is it: the ledger the consumer can see
+
+The quota attaches to the individual consumer, not to the shop, the platform or the brand. One consumer buying on five platforms draws down one ledger; five consumers buying once each draw down five. The brand never sees the whole ledger. The consumer can look it up in the Palm Customs application, which lists used amount, available amount, share used, latest declaration date and status, one row per quota type.
+
+Our system keeps the quota ledger under Order Management, with the system top bar and left-hand menu in view, split by year, with tabs for all years, 2026 and 2025. Annual quota, used, available and share are four readings of one ledger. The 2026 row reads: cross-border annual quota 26,000 yuan, used 8,640 yuan, available 17,360 yuan, 33% used, last declaration on 09-22, status normal.
+
+Three more rows sit on the same screen. The per-transaction quota reads 5,000 yuan with 0 used and 5,000 available. The 2025 annual row is 26,000 yuan fully used, 100%, with the last declaration on 2025-12-18. The 2024 row is 26,000 yuan with 24,100 used and 1,900 available, 93%, last declaration on 2024-11-30. Read together, the quota resets each year: an exhausted year does not move the next year's starting point.
+
+The ledger carries one further row, a category quota we set for ourselves: health food category 8,000 yuan, used 2,160 yuan, available 5,840 yuan, last declaration 09-20. That row is not a customs cap. The statutory caps govern how much one consumer may bring in during a year; a category quota governs how much of one category we let ship. Confuse the two and an internal allocation starts looking like a legal requirement.
+
+![Annual quota ledger detail: cap, used, available, share and latest declaration date, split by year](/images/blog/what-26000-yuan-annual-quota-china-means-for-export-plan/annual-quota-ledger-detail-cap-used.webp)
+
+## The check happens at clearance, not at ID or delivery
+
+The quota is checked at clearance, not when the order is placed, not at identity verification and not at delivery. The caps themselves carry a document number; which stage the check happens at is customs enforcement practice, and you will not find it in the published text. The difference shows up in the consequences: an over-limit order can pass the checkout page with no warning at all and only be stopped when the goods reach customs, after which refund and in-warehouse handling each need their own process.
+
+Identity is verified at the same moment as the quota. Under GACC Announcement No. 194 of 2018, order and payment data are pushed first and logistics data are written back at the release stage; where identity has not yet been verified, the purchaser and the payer must be the same person. That decides how the payment channel and the identity interface have to be wired: a relative paying on someone's behalf, or one account shared by a household, stops on the declaration list until verification is complete.
+
+So the line in our system that says quota checks sit between ordering and clearance describes two layers. The platform tests the quota at order time and warns; customs performs the statutory deduction at clearance. One is our own interception and record-keeping, the other is a legal stage, and the timing, responsibility and evidence differ.
+
+## After the cap: two routes, not one
+
+An order above 5,000 yuan splits into two cases. Where the order contains one indivisible item, it can still come in through the cross-border retail channel, but customs duty, import VAT and consumption tax are then levied in full at goods rates, the 70% collection ratio no longer applies, and the transaction value still counts against the annual total. Where the order holds more than one item, the retail framework stops applying and the shipment is handled as general trade.
+
+Going past the annual 26,000 yuan is a different problem. That consumer's retail allowance for the year is finished, so the goods cannot be released as retail imports: what can be returned is returned, and the workable route is to complete the paperwork for general trade. Where the return is run through GACC Announcement No. 45 of 2020, the corresponding tax is not levied and the used amount of the personal annual quota is adjusted accordingly.
+
+The two routes cost different amounts. Full goods rates move the tax base and the rate at once, so one order can end up costing several times the blended tax. General trade requires the shipment to meet the registration, labelling and documentation conditions for goods imports. If neither route was priced before launch, the only options left on the day are reactive ones.
+
+## The intercept ledger: one row per blocked order
+
+The other ledger records interceptions. The order-intercept log keeps one row per intercept, with tabs for all intercepts, intercepted and not triggered, and fields for order number, purchaser, order amount, amount over the cap, action taken, file number and result. Take SO260922-0555: order amount 5280.00 yuan, 280.00 yuan over, action "revision prompted", file LH2609-0555, result intercepted.
+
+Five further rows sit on the same screen. The 6120.00 yuan order was 1120.00 yuan over and moved to general trade, file LH2609-0088. The 5460.00 yuan order was 460.00 yuan over, revision prompted, file LH2609-0213. The 5080.00 yuan order was 80.00 yuan over, moved to general trade, file LH2609-0127. The 4980.00 yuan and 4999.00 yuan orders were 0 over, released normally, not triggered.
+
+The over-cap column is measured against the 5,000 yuan per-order cap: 5280.00 minus 5,000 equals 280.00. That row is not an annual breach; the purchaser still had 17,360 yuan of annual quota left. Keeping the two apart is what makes the action readable. Over the per-order cap means revise the order, or accept full goods rates. Over the annual cap means return the goods, move to general trade, or wait for the next calendar year.
+
+![Blocked-order trail: one row per intercept, with order number, amount, over-cap figure, action taken and file number](/images/blog/what-26000-yuan-annual-quota-china-means-for-export-plan/blocked-order-trail-row-per-intercept.webp)
+
+## Why splitting the order is not a route
+
+The intercept notice offers one line: adjust the quantity or split the order, then resubmit. From the system's side that is the cheapest sentence to print. From the quota's side it is not a route. The quota accrues per purchaser, order by order, so turning 5280.00 yuan into two orders of 2,640 yuan changes nothing about that consumer's annual total and turns one clearance risk into two. Batch splitting by the same person, to the same address, for the same product, draws risk control. It is a violation, and we do not do it.
+
+Three things do work: bring the order back inside 5,000 yuan by changing the pack size, reducing the count, or repricing a bundle as separate SKUs; confirm the order holds one indivisible item and accept full goods rates; or move that stock out of the retail channel into general trade. All three have a price, but the price is on the invoice rather than after the fact.
+
+## Flagged orders and the 15-day transaction confirmation
+
+An order pulled into risk control carries another deadline: the purchaser has 15 days to complete the personal transaction confirmation. This one is customs enforcement practice with no document number of its own, and past the deadline the order is usually returned and the process starts again. It lands on the same moment as the quota check, at clearance, which is why the first scene of an exception order is the port rather than the shop back office.
+
+Fifteen days is the consumer's deadline, not the brand's. What the brand can do is build the confirmability in advance: order, payment and logistics data all present, the purchaser's phone number and identity record traceable, and customer service able to reach that person inside 24 hours. Miss any one of the three and whether the confirmation lands inside 15 days becomes luck.
+
+## Writing the quota into pricing and volume plans
+
+Three figures decide whether an order can go through: the selling price, freight and insurance, and the item count. At 7.2 yuan per dollar, 694 US dollars is the 5,000 yuan ceiling, a 680-dollar set still has room, and a 750-dollar set is already over. A 50-dollar tin of whey protein converts to 360 yuan, so one consumer's annual allowance supports roughly 72 orders. Repurchase frequency and the annual quota are two faces of one number: plan promotions against 26,000 yuan as a customer's annual ceiling and most of the firefighting disappears.
+
+The ledger has to answer line by line. Who used how much, what is left, and when the last declaration was filed: all three have answers in Palm Customs and in our system. When the two sets of answers disagree, check the classification and the dutiable value first, then payment and identity data, and logistics last.
+
+Turn that order into two consumers buying once each and the 5280.00 yuan breach never exists. Bring a bundle from 5,083 yuan down to 4,800 yuan and the over-cap column returns to zero. One adjustment at pricing time removes the whole handling chain at the clearance end.
+
+If your product is heading for Mode 1210, [Contact us](/en/packages/) for a free quota and pricing check. Send us the SKU prices, the freight and insurance structure and your target repurchase frequency, and we will run each order against the two caps in No. 49 and current enforcement practice, then wire the fields of both ledgers, quota and intercept, into your monthly review.

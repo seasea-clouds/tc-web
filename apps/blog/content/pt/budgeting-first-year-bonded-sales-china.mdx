@@ -1,0 +1,91 @@
+---
+title: "Orçamento do primeiro ano de vendas em entreposto aduaneiro em três cenários"
+date: "2027-08-10"
+category: "E-commerce"
+excerpt: "Primeiro ano em entreposto aduaneiro, três níveis. Uma tabela, mudam só os valores e o nível segue a validação. Quatro deduções crescem com o volume. Tarifas apenas na cotação formal."
+references:
+  - title: "Aviso do Ministério das Finanças, da Administração Geral das Alfândegas e da Administração Tributária do Estado sobre a política fiscal para as importações a retalho do comércio eletrónico transfronteiriço (Cai Guan Shui [2016] n.º 18; taxa aduaneira fixada provisoriamente em 0%; IVA e imposto sobre o consumo na importação cobrados a 70% do montante legalmente devido)"
+    url: "https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html"
+  - title: "Aviso do Ministério das Finanças, da Administração Geral das Alfândegas e da Administração Tributária do Estado sobre a melhoria da política fiscal para as importações a retalho do comércio eletrónico transfronteiriço (Cai Guan Shui [2018] n.º 49; limite por transação de 5000 yuan e limite anual de 26000 yuan)"
+    url: "https://czt.hlj.gov.cn/czt/c110905/202001/c00_30603063.shtml"
+  - title: "Aviso de seis organismos sobre a melhoria da supervisão das importações a retalho do comércio eletrónico transfronteiriço (Shang Cai Fa [2018] n.º 486)"
+    url: "https://www.mofcom.gov.cn/article/b/fwzl/201811/20181102812004.shtml"
+  - title: "Aviso n.º 194 de 2018 da Administração Geral das Alfândegas sobre a supervisão das mercadorias de importação e exportação a retalho do comércio eletrónico transfronteiriço"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+---
+
+Um primeiro ano em entreposto aduaneiro resume-se a uma única conta: por cada 100 yuan de GMV, as taxas de gestão, a execução dos pedidos e o primeiro trecho, os impostos e a comissão retiram em conjunto 37.1 yuan e deixam 62.9 yuan de margem de contribuição; com essa margem cobre-se o investimento fixo e obtém-se o prazo de retorno. Os três cenários mudam os valores de entrada, não este método.
+
+## Três cenários, primeiro o limite dos SKU
+
+O cenário conservador trabalha com 3 a 5 SKU e prioriza a validação e a reputação. Primeiro leva-se um único SKU do início ao fim e, quando os dados voltam, passa-se ao cenário base; observam-se quatro aspetos, com a conversão e a recompra à frente.
+
+O cenário base trabalha com 8 a 12 SKU e procura aproximar-se do ponto de equilíbrio dentro do primeiro ano. A tabela de parâmetros continua a mesma, só mudam os valores de entrada e o nível segue os resultados da validação; o modelo da taxa líquida aplica-se diretamente.
+
+O cenário otimista trabalha com todos os SKU e apoia-se no volume para diluir os custos fixos. Só se aumenta o volume quando estão prontos o abastecimento de todos os SKU e o sistema de promoção; os dezasseis preparativos antes do lançamento são a condição prévia. Cada cenário tem as suas condições de entrada e a passagem entre níveis não é automática: se não se cumprirem, permanece-se no anterior.
+
+![Cenários do primeiro ano e parâmetros ajustáveis: à esquerda, três cartões para os cenários conservador, base e otimista, marcados com 3 a 5 SKU, 8 a 12 SKU e todos os SKU com as respetivas condições de entrada; abaixo, os cinco segmentos de dedução por cada 100 yuan de GMV e os 62.9 yuan de margem de contribuição; ao fundo, a cadeia de seis elos desde as hipóteses de entrada, GMV, deduções, margem de contribuição e investimento fixo até ao prazo de retorno](/images/blog/budgeting-first-year-bonded-sales-china/year-one-model-three-scenarios.webp)
+
+## Três hipóteses que você preenche
+
+O modelo só precisa de três hipóteses da sua parte: o valor médio da encomenda, a taxa de recompra e o teto da comissão de promoção. Nós fornecemos a estrutura e as ferramentas, os números vêm dos seus parâmetros, entregues numa folha de cálculo interativa e sem valores-alvo predefinidos.
+
+A cadeia do modelo tem seis elos. As hipóteses de entrada convertem o número de SKU, o valor médio da encomenda e as recompras em GMV; cada cenário calcula o seu próprio volume de vendas. Depois subtraem-se quatro rubricas: o imposto consolidado, a comissão da plataforma, a execução e a comissão de promoção. O GMV menos essas quatro dá a margem de contribuição. O investimento fixo cobre a integração de sistemas, a amortização do primeiro trecho em lotes e a manutenção do livro de registos. Quando a margem acumulada cobre o investimento fixo, obtém-se o prazo de retorno.
+
+A cadeia é gerida por si. Mude uma única hipótese e todos os números a jusante se movem; o método fica à vista, pelo que pode levá-lo a uma aprovação interna sem depender do tom de ninguém.
+
+## Cada 100 yuan de GMV, 37.1 yuan em quatro deduções
+
+A composição da margem por cada 100 yuan de GMV: taxas de gestão 6.0 yuan, execução e primeiro trecho 7.0 yuan, impostos 9.1 yuan, comissão 15.0 yuan, num total de 37.1 yuan e 62.9 yuan de margem de contribuição. Os cinco segmentos somam exatamente 100%; a estrutura é a mesma nos três cenários e a diferença está na escala e na diluição das rubricas fixas.
+
+Os 9.1% da rubrica de impostos são a carga fiscal combinada das importações a retalho do comércio eletrónico transfronteiriço: a taxa aduaneira é fixada provisoriamente em 0%, e o IVA e o imposto sobre o consumo na importação são cobrados a 70% do montante legalmente devido. É um número calculado sobre todo o regime fiscal, por isso não some diretamente a taxa de um único imposto.
+
+As deduções crescem na proporção do volume de encomendas. Se o volume duplicar, as quatro deduções duplicam e a margem de contribuição segue a mesma proporção; o investimento fixo não acompanha o volume, pelo que o aumento de escala dilui sobretudo esse lado fixo. As proporções apresentadas são um critério ilustrativo: não são uma cotação nem uma promessa de retorno.
+
+## Percorrer o cenário conservador
+
+Tomemos o cenário conservador para um cálculo. 3 SKU, 25 encomendas por mês e por SKU, cerca de 900 encomendas por ano; com um valor médio da encomenda de 300 yuan, o GMV anual é de 270,000 yuan. A 37.1%, as quatro deduções somam 100,170 yuan: taxas de gestão 16,200 yuan, execução e primeiro trecho 18,900 yuan, impostos 24,570 yuan, comissão 40,500 yuan.
+
+A margem de contribuição é de 169,830 yuan. Estime-se o investimento fixo em 150,000 yuan, que inclui integração de sistemas, amortização do primeiro trecho em lotes e manutenção do livro de registos; a margem de contribuição mensal ronda os 14,153 yuan e a margem acumulada cobre o investimento fixo por volta do mês 11, com o retorno dentro do primeiro ano. Mude o valor médio da encomenda ou as recompras e o resultado move-se; os parâmetros são preenchidos por si, nós mantemos o método inalterado.
+
+## Três formas de faturação
+
+Por encomenda: acerta-se pelo número de encomendas e convém a fases com volume previsível e estrutura de SKU estável.
+
+Em percentagem do GMV: acerta-se em proporção das vendas e convém à fase de aumento de volume, onde maior escala reparte melhor o custo unitário.
+
+Taxa mensal mais valor por encomenda: uma taxa fixa cobre o pessoal e os sistemas de base, e o excedente soma-se por encomenda, pelo que o orçamento pode ser fixado com antecedência.
+
+As três formas são cotadas contra cinco fatores: volume de encomendas, número de SKU, requisitos de prazo, moeda de liquidação e serviços de valor acrescentado. Mudam os cinco e a estrutura da cotação muda com eles.
+
+![Opções de faturação e contribuições do seu lado: em cima, por encomenda, em percentagem do GMV e taxa mensal mais valor por encomenda, com os cinco fatores de taxa e as oito secções da cotação à direita; em baixo, pessoas, fundos, documentos e tempo com os seus momentos, com a nota de que começar a tempo parcial não cria lugares permanentes novos e de que os quatro modelos de lista são entregues com os resultados da fase S0](/images/blog/budgeting-first-year-bonded-sales-china/billing-options-and-budget-inputs.webp)
+
+## Itens fora do âmbito e pré-requisitos da cotação
+
+Os itens fora do âmbito delimitam-se primeiro, por exemplo a ativação posterior do canal 9610, a adaptação dos sistemas da sede ou a remuneração dos IBO no estrangeiro; os nossos honorários figuram à parte na cotação formal e não se misturam com as três formas de faturação.
+
+A cotação formal exige cinco pré-requisitos: a lista de SKU e os volumes, a disponibilidade do CoA (relatório de ensaio) do mesmo lote, a orientação do percurso da entidade, a preferência pelo porto de destino e a orientação da estratégia de alegações. Com os cinco reunidos, chega a cotação formal.
+
+Mesmo sem dados é possível emitir uma primeira versão: com valores de referência do setor, indicando a base de cada valor, para depois os substituir quando chegarem os seus dados medidos.
+
+## As oito secções da cotação
+
+A cotação formal desenvolve-se em oito secções: limites do âmbito, correspondência de taxas, estrutura de taxas, repartição de custos, ritmo de pagamentos, impostos e faturação, responsabilidade e indemnização, e pressupostos de contorno. O detalhe segue como anexo comercial e todos os montantes se regem pela cotação formal; um valor dito de viva voz numa reunião não conta.
+
+## Quatro contribuições do seu lado
+
+Pessoas: 1 a 2 pessoas em finanças e conformidade, com início a tempo parcial, mais 1 interlocutor comercial; começar a tempo parcial não cria lugares permanentes novos. São necessárias desde o arranque, em paralelo com a fase de arranque S0.
+
+Fundos: o primeiro abastecimento é dimensionado pelos SKU piloto e por 2 a 3 meses de rotação, as campanhas são validadas em pequenas etapas e a garantia fiscal é constituída conforme as exigências do porto. Tudo deve estar pronto antes do abastecimento e da colocação à venda.
+
+Documentos: os documentos de produto, ensaio, qualificação e marca são organizados em quatro listas, concluídas progressivamente em cada marco de admissão; os quatro modelos de lista são entregues com os resultados da fase S0.
+
+Tempo: três decisões, percurso da entidade, porto de destino e estratégia de alegações, incidem diretamente no calendário; fechá-las antes de S0 fixa o calendário e, com as decisões tomadas, o trabalho entra na fase de execução M1.
+
+Pessoal e fundos são intervalos práticos; a cotação é emitida segundo as condições medidas, a cotação formal sai quando os documentos estão completos e o detalhe das taxas só figura nela.
+
+## Comece pelo cabeçalho da tabela
+
+O orçamento do primeiro ano cabe numa única tabela: colunas para três cenários, linhas para três hipóteses, quatro deduções, uma linha de investimento fixo e uma linha de prazo de retorno. Primeiro preenchem-se os valores de entrada, depois fala-se da cotação; as taxas só valem na cotação formal e os números de demonstração apenas explicam o método.
+
+O passo seguinte é colocar nessa tabela a sua lista de SKU, o valor médio da encomenda e as recompras. Se ainda falta definir algum valor de entrada, [Contacte-nos](/pt/packages/).

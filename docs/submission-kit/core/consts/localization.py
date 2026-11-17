@@ -1,0 +1,71 @@
+# -*- coding: utf-8 -*-
+"""core.consts.localization — 常量与词表分片。
+
+按依赖顺序切出的分片；跨片依赖在此显式导入。
+本包是全仓最低层：不得 import 其他 core 模块，也不得 import plugins（A9 守卫）。
+"""
+# 治理声明：本文件属机制层，不承载策略数据；改动须走 README「治理」节的 L3 流程
+#（先登记理由 → 行为级等价断言 → selftest --kit 全量），提交说明带 [arch]
+#（commit-msg 钩子强制）。策略变更请改 plugins/ 判据或经 submit.py glossary 改库。
+
+import re
+
+# 货币符号：分「允许货币的符号」与「其他国家货币的符号」两类。
+# 规范只允许「元」与「美元」，且必须用本土文字拼写（中文写「5000 元」
+# 「50 美元」），不得用符号，也不得用 ISO 三字母代码。
+#
+# ¥ 既是人民币符号也是日元符号，$ 是美元符号——它们不算外币，但仍然是
+# 符号写法，同样要求改成文字，因此分开提示，便于作者判断怎么改。
+ALLOWED_MONEY_SIGNS = ("$", "\u00a5")           # 美元 / 人民币
+
+
+FOREIGN_MONEY_SIGNS = (
+    "\u20ac", "\u00a3", "\u20bd", "\u20a9", "\u20b9", "\u0e3f", "\u20ba",
+    "\u20ab", "\u20b4", "\u20a6", "\u20aa", "\u20b1", "\u00a2",
+    "\u20a3", "\u20a4", "\u20a8", "\u20ae", "\u20af", "\u20b0", "\u20b2",
+    "\u20b8", "\u20b5",
+    "z\u0142", "K\u010d", "kr", "Fr.", "CHF", "R$", "Rp",
+    "\u043b\u0432", "Ft", "lei", "TL", "\u20ef", "z\u0142.", "K\u010d.",
+)
+
+
+CURRENCY_ISO_CODES = (
+    "USD", "EUR", "GBP", "JPY", "CNY", "RMB", "KRW", "RUB", "INR", "CHF",
+    "THB", "VND", "TRY", "UAH", "PLN", "CZK", "SEK", "NOK", "DKK", "AUD",
+    "CAD", "SGD", "MYR", "IDR", "BRL", "MXN", "ZAR", "AED", "ILS", "HKD",
+    "TWD", "NZD", "PHP", "NGN", "PKR", "BDT",
+)
+
+
+# 数字形态：以数字开头，后接数字 / 千分位 / 小数点，可含窄空格与不换行空格。
+_MONEY_NUM = r"\d[\d.,'\u00a0\u202f]*"
+
+
+
+
+_DIGIT_NEAR_RE = re.compile(r"\d")
+
+
+# 金额词/符号的边界：中日韩写金额时数字紧贴货币词（5000円 / 5000元 / 360유루），
+# 而 \w 含数字，用 (?<![\w]) 会把这类写法整块漏掉。因此：
+#   前界 = 前面不能是字母（数字、空格、标点都允许）
+#   后界 = 后面不能是 ASCII 字母或数字（汉字、空格、标点都允许）
+_MONEY_PRE = r"(?<![^\W\d_])"
+
+
+# 后界：后面不能是字母；但 CJK 接续要放行——日语写「5000\u5186\u63a7\u9664」、
+# 中文写「5000 \u5143\uff08\u7ea6 700 \u7f8e\u5143\uff09」，货币词后紧跟汉字是常态。
+# 只排除 ASCII 字母数字又太松：捷克语 kr\u00e1t\uff08\u500d\uff09含 kr，后接 \u00e1 就会被误判成克朗。
+_CJK_CONT = (
+    "[\u4e00-\u9fff\u3400-\u4dbf"      # 汉字
+    "\u3040-\u30ff"                          # 假名
+    "\uac00-\ud7af"                          # 谚文
+    "\u0e00-\u0e7f"                          # 泰文（无空格分词）
+    "]"
+)
+
+
+_MONEY_POST = r"(?!(?:[^\W\d_])(?<!" + _CJK_CONT + r"))"
+
+
+__all__ = ['ALLOWED_MONEY_SIGNS', 'CURRENCY_ISO_CODES', 'FOREIGN_MONEY_SIGNS', '_CJK_CONT', '_DIGIT_NEAR_RE', '_MONEY_NUM', '_MONEY_POST', '_MONEY_PRE']

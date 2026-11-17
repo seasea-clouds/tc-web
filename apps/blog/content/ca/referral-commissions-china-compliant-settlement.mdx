@@ -1,0 +1,78 @@
+---
+title: "Comissió de promoció a la Xina amb nodes de liquidació nacional i llibre de despeses"
+date: "2027-04-20"
+category: "E-commerce"
+excerpt: "La comissió es calcula a l'interior per facturació atribuïda, amb retenció d'IRPF es paga en renminbi i els justificants s'arxiven. Llibre de despeses, factura i sistema coincideixen."
+references:
+  - title: "Llei de l'impost sobre la renda de les persones físiques de la República Popular de la Xina (7a esmena del 2018, articles 9, 10, 11 i 14)"
+    url: "https://www.chinatax.gov.cn/chinatax/n810219/n810744/n3752930/n3752974/c3970366/content.html"
+  - title: "Mesures administratives per a la declaració i la retenció de l'IRPF (versió provisional, Anunci núm. 61 de l'Administració Estatal de Tributs del 2018, en vigor des de l'1.1.2019)"
+    url: "https://www.gov.cn/gongbao/content/2019/content_5386991.htm"
+  - title: "Llei de l'impost sobre el valor afegit de la República Popular de la Xina (aprovada el 25,12.2024, en vigor des de l'1.1.2026, articles 10 i 34)"
+    url: "https://shanghai.chinatax.gov.cn/zcfw/zcfgk/zzs/202412/t474694.html"
+---
+
+A la Xina, les comissions als promotors deixen diners i impostos a l'interior: l'entitat de liquidació nacional signa el contracte, calcula segons la facturació atribuïda, practica la retenció de l'IRPF i abona mensualment en renminbi, amb factures de comissió i justificants de retenció arxivats per períodes. De l'atribució de la comanda fins a l'arxiu de justificants hi ha 5 nodes, en ordre i sense salts; el llibre de despeses situa aquests imports en 1 fila per factura, amb el concepte de despesa, la base imposable, el tipus impositiu, la quota d'IVA, l'import pagat, el justificant i l'estat tots a la mateixa fila.
+
+La premissa d'aquest circuit és la qualificació dels ingressos. L'ingrés es qualifica com a tarifa de servei, no com a marge de compravenda i, per tant, no com a revenda; el contracte, la factura i el sistema han de coincidir. El contracte fixa el criteri d'atribució, la factura consigna l'import i l'impost, i el sistema els relaciona. Signar, abonar i tributar al país formen la mateixa línia; una entitat estrangera no signa aquest contracte ni abona aquest renminbi.
+
+![5 nodes nacionals de la comissió de promoció, des de l'atribució de la facturació, la signatura de la comissió, la retenció de l'IRPF i el pagament en renminbi fins a l'arxiu de justificants, amb la pàgina de factures i justificants de retenció i 3 grups de restriccions sobre la naturalesa de l'ingrés, el sostre de nivells i la retenció nacional](/images/blog/referral-commissions-china-compliant-settlement/promoter-commissions-five-onshore-nodes.webp)
+
+## 5 nodes, de l'atribució a l'arxiu de justificants
+
+Els 5 nodes segueixen l'ordre d'atribució, signatura, retenció, abonament i arxiu; el resultat d'un pas és l'entrada del següent.
+
+- Atribució de la facturació: la comanda s'assigna al promotor mitjançant l'enllaç de promoció, el criteri d'atribució queda registrat al contracte i al sistema, i el rastre és el detall d'atribució.
+- Signatura de la comissió: el contracte se signa amb l'entitat de liquidació nacional, no amb una entitat estrangera; la comissió es calcula segons la facturació atribuïda, i el rastre és el contracte de serveis de promoció.
+- Retenció de l'IRPF: segueix la via de retenció directa al país, amb retenció i ingrés conformes a la llei i declaració com a rendiments de remuneració per serveis, i el rastre és el justificant de retenció.
+- Abonament en renminbi: després de completar la retenció i l'ingrés, s'abona mensualment en renminbi, amb beneficiari, import i període concordants, i el rastre és el registre d'abonament.
+- Arxiu de justificants: les factures de comissió i els justificants de retenció de cada període es conserven plegats, el justificant s'emet amb cada factura, i el rastre és la factura del període.
+
+El flux avança en ordre sense salts; l'entitat nacional practica la retenció i el justificant s'emet amb cada factura. Les 3 etiquetes d'estat són signatura al país, abonament al país i tributació al país, totes a la mateixa línia, i si en falta una, aquesta comissió no es considera completada.
+
+La pàgina de factures i justificants de retenció anota 2 files en 3 columnes, número de factura, impost retingut (iuans) i concepte de despesa: ZD202609-011, 768,00, tarifa de despatx de duanes; ZD202609-012, 324,00, tarifa de manipulació d'emmagatzematge. Al peu de la pàgina s'indica que és una demostració de la interfície del sistema, amb factures, IVA i estat.
+
+El grup de naturalesa de l'ingrés estableix 3 punts: la naturalesa és una tarifa de servei, no un marge de revenda, i tots els registres es mantenen coherents. El grup de nivells és un sostre dur del sistema: els nivells d'equip es limiten a 2 com a màxim, la remuneració es calcula només per facturació atribuïda i no per nombre de persones, i la configuració del sostre queda arxivada. El grup de retenció recau en la retenció directa al país: l'entitat nacional practica la retenció, declara com a rendiments de remuneració per serveis i aplica el criteri de l'autoritat fiscal competent.
+
+La naturalesa de l'ingrés es fixa primer perquè la tarifa de servei i el marge de compravenda ocupen llocs diferents al contracte, a la factura i en la tributació; si canvia la qualificació, cal modificar també el concepte, la quota i el justificant de cada fila posterior. Que el contracte, la factura i el sistema hagin de coincidir vol dir exactament això. En la posada en marxa, l'entitat nacional practica la retenció mensual i el justificant s'emet amb cada factura; si s'opta per substituir-ho amb un esquema de desglossament de treball flexible, cal presentar plegats el pla de transició i la comparació de costos abans de decidir. La via de retenció forma part dels lliurables i la plantilla del contracte de promoció la facilita el nostre equip; només quan aquests 2 elements són al lloc, els 5 nodes tenen on recolzar.
+
+## Llibre de despeses, 1 fila per factura
+
+La pàgina de detall de factures mostra 1 fila per factura, amb pestanyes per a totes les factures, les pendents de pagament i les pagades, i cada fila enumera el concepte de despesa, la base imposable, el tipus impositiu, la quota d'IVA, l'import pagat, el justificant i l'estat. Per a la tarifa de despatx de duanes, la base imposable és de 12800,00 iuans, el tipus del 6%, la quota d'IVA de 768,00 iuans i l'import pagat de 13568,00 iuans; la tarifa de manipulació d'emmagatzematge segueix el mateix criteri, amb una base imposable de 5400,00 iuans i una quota d'IVA de 324,00 iuans. El justificant es pot descarregar.
+
+La comissió de promoció té la seva pròpia via de liquidació, i el costat de les despeses comparteix el mateix llibre: el concepte de despesa, el tipus impositiu, la quota i el justificant es corresponen punt per punt. L'import de la factura de comissió es troba a la mateixa fila del llibre de despeses; a l'inrevés, cada fila del llibre es pot rastrejar fins a la factura i el justificant corresponents. Les quotes d'IVA de les primeres 2 files, tarifa de despatx de duanes i tarifa de manipulació d'emmagatzematge, coincideixen amb els 2 imports anotats a la pàgina de factures i justificants de retenció.
+
+El títol de la interfície és detall de factures i impost retingut, amb 6 entrades en total i 20 per pàgina, i al final de cada fila hi ha 2 accessos, detalls i registre. Les 6 files enumeren número de factura, quota d'IVA (iuans), concepte de despesa, base imposable (iuans), tipus impositiu, import pagat (iuans), justificant i estat.
+
+- ZD202609-011, 768,00, tarifa de despatx de duanes, 12800,00, 6%, 13568,00, descarregable, pagat.
+- ZD202609-012, 324,00, tarifa de manipulació d'emmagatzematge, 5400,00, 6%, 5724,00, descarregable, pagat.
+- ZD202609-013, 576,00, tarifa de servei de promoció, 9600,00, 6%, 0,00, pendent de generar, pendent de pagament.
+- ZD202609-014, 192,00, tarifa d'ús del sistema, 3200,00, 6%, 3392,00, descarregable, pagat.
+- ZD202609-015, 288,00, tarifa de declaració duanera, 4800,00, 6%, 5088,00, descarregable, pagat.
+- ZD202609-016, 372,00, tarifa de lliurament nacional, 6200,00, 6%, 0,00, pendent de generar, pendent de pagament.
+
+Si es tornen a calcular les 4 files pagades, se'n veu la fórmula: l'import pagat equival a la base imposable més la quota d'IVA, 12800,00 més 768,00 dóna 13568,00, 5400,00 més 324,00 dóna 5724,00, 3200,00 més 192,00 dóna 3392,00, 4800,00 més 288,00 dóna 5088,00. A les 2 files pendents de pagament, l'import pagat és 0,00 i el justificant està marcat com a pendent de generar.
+
+![Demostració de la interfície del llibre de despeses i les línies d'IVA, amb 6 files de factura que detallen per fila la quota d'IVA, el concepte de despesa, la base imposable, el tipus impositiu, l'import pagat, el justificant i l'estat](/images/blog/referral-commissions-china-compliant-settlement/fee-ledger-vat-lines-system-demo.webp)
+
+## 1 tarifa de servei de promoció, de pendent de pagament a pagada
+
+Prenem la factura ZD202609-013 de la tarifa de servei de promoció per recórrer el procés. Consigna una base imposable de 9600,00 iuans, un tipus del 6%, una quota d'IVA de 576,00 iuans i un import pagat de 0,00 iuans, amb el justificant pendent de generar i l'estat pendent de pagament. Segons la fórmula del mateix llibre, l'import pagat hauria de ser de 10176,00 iuans; ara encara és de 0,00 iuans, la qual cosa indica que aquesta factura encara no s'ha pagat.
+
+Per passar-la a pagada, primer es genera i s'arxiva el justificant, i després es paga segons el contracte de serveis de promoció. Després del pagament, cal contrastar un per un el beneficiari, l'import i el període amb la factura de comissió, i el justificant de retenció es conserva juntament amb aquesta factura. Mentre el justificant resti pendent de generar, la fila es queda en pendent de pagament; en la conciliació per lots, justament aquests imports sense justificant són els que bloquegen.
+
+Aquesta és també la raó per la qual els 5 nodes no admeten salts: atribució de la facturació, signatura de la comissió, retenció de l'IRPF, abonament en renminbi i arxiu de justificants, i cada baula deixa un rastre. Sense el justificant de retenció, la fila corresponent del llibre de despeses no es pot tancar; sense el número de factura, tampoc no es pot recuperar després la cadena de responsabilitat d'aquest lot.
+
+## Alinear 3 punts abans de la posada en marxa
+
+Abans de la posada en marxa s'alineen 3 punts, en aquest ordre: primer el contracte, després el flux i finalment el llibre de despeses.
+
+- Incorporar el criteri d'atribució al contracte de serveis de promoció i al sistema d'atribució, i deixar clar que el contracte se signa amb l'entitat de liquidació nacional.
+- Fixar el flux de retenció i abonament: retenció mensual, declaració com a rendiments de remuneració per serveis, ingrés dins dels 15 dies del mes següent, i arxiu en el mateix lot del registre d'abonament i del justificant de retenció.
+- Construir el llibre de despeses i fixar primer els camps de número de factura, concepte de despesa, tipus impositiu, quota, import pagat i estat del justificant, abans de parlar de la posada en marxa.
+
+En la comparativa de propostes també es trasllada punt per punt al llibre la solució de comissions que presenta l'altra part, i es comprova si el contracte, la factura i el sistema apunten a la mateixa tarifa de servei; el preu ofert n'és només una columna. Si els 3 punts no coincideixen, el resultat més freqüent és que la naturalesa de l'ingrés s'escrigui com a marge, que el concepte de la factura no encaixi amb el contracte i que el justificant no es pugui recuperar.
+
+Primer es fixen la naturalesa de l'ingrés, la via de retenció i els camps del llibre, i després es planifica la primera remesa de comissions. Com es calcula la comissió, com s'abona i quin justificant correspon a quina factura es pot decidir abans de la posada en marxa, sense haver-ho de completar després en la conciliació per lots. Els números de factura, els imports i les dates de la interfície de demostració només serveixen d'il·lustració; la retenció real s'aplica segons els requeriments de l'autoritat fiscal competent, i el tipus impositiu i el justificant segueixen la normativa vigent.
+
+Si voleu revisar punt per punt els criteris de la comissió segons la vostra entitat de liquidació i l'estat actual del contracte, i integrar el justificant de retenció al llibre de despeses, [contacteu-nos](/ca/packages/).

@@ -1,0 +1,113 @@
+---
+title: "Nio gränssnitt för Kinas tullagerplattformar, statuslampor och kampanjtoppsreserv"
+date: "2027-06-22"
+category: "E-commerce"
+excerpt: "Standardgränssnitt först, annars mellanprogramvara; statuslampor loggar anrop och omsändningar. Data stannar inom landet, och reserv för kampanjtoppar och spårning rad för rad planeras."
+references:
+  - title: "Kungörelse nr 194 från 2018 från Kinas generaltullförvaltning om övervakning av detaljhandelsvaror vid import och export inom gränsöverskridande e-handel"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Folkrepubliken Kinas lag om skydd av personuppgifter, antagen den 20 augusti 2021, artiklarna 38, 39 och 55"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+  - title: "Bestämmelser om främjande och reglering av gränsöverskridande dataflöden, förordning nr 16 från Kinas statliga kontor för internetinformation, i kraft från den 22 mars 2024"
+    url: "https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm"
+---
+
+Nio gränssnittsfamiljer kopplar era befintliga system till Kinas tullagerplattformar, förutsatt att standardgränssnitt går först, data stannar inom landet och reserven för kampanjtoppar dimensioneras till 10 gånger toppen. Där ett standardgränssnitt finns kopplas det direkt, och där det saknas avbildar mellanprogramvaran; statuslampor registrerar per klass anropsvolym, framgångsgrad, svarstid samt misslyckade och omsända anrop, och de två raderna orderöverföring och betalningsretur håller fast återkopplingen av de tre dokumenten. Offentliga marknadsriktmärken sätter tidsramen för standardintegration till 3 till 7 dagar och för full integration till 8 till 12 veckor, och dessa värden är bara storleksordningar för jämförelse. Det faktiska startdatumet avgörs av de gemensamma testerna och en avräkningscykel i parallell drift.
+
+![Demo av kopplingstabellen för de nio gränssnittsfamiljerna med kolumnerna ert system, integrationsobjekt, riktning och landningsplats, nio rader från varor och lager till ekonomi, fyra principer för dataflöden och de fyra statuslamporna i övervakningen av de gemensamma testerna](/images/blog/china-bonded-platforms-nine-interfaces/nine-interface-families-mapping.webp)
+
+## Vilken tabell var och en av de nio gränssnittsfamiljerna landar i
+
+Gränssnittstabellen är skriven i fyra kolumner: vilken sida av ert system det är, vad integrationsobjektet är, vem som styr riktningen och var data till slut landar. Riktningen känner bara tre former, dubbelriktad, inkommande och styrd av er; rader utan angiven riktning tas om hand av vår sida. Kolumnen för landningsplatsen anger vilken bok varje fält hör till, så att den som tar över kan kontrollera det mot tabellen.
+
+- Varor och lager: SKU-lager och priser, dubbelriktad, hållna i överensstämmelse med lagersystemet och tullböckerna.
+- Ordrar: orderdata, inkommande, landar i de tre dokumentfälten.
+- Medlemsdata: promotorrelationer, styrd av er, data tillhör er och vi behandlar dem som personuppgiftsbiträde.
+- Provisionsavräkning: provisionsutbetalning, dubbelriktad, den inhemska delen utförs av den inhemska enheten.
+- Lager: tullagerhanteringssystemet, ingen riktning angiven, landar i tullagerdriftssystemet och har samma källa som böckerna.
+- Tull: deklarationen av de tre dokumenten, ingen riktning angiven, deklarationen sköter vi och den förblir en punkt under vår kontroll.
+- Leverans: återkoppling av spårning, ingen riktning angiven, logistikspårningen skrivs tillbaka till ordervyn.
+- Returer: returhandlingar, ingen riktning angiven, returer går via returcentret igen in i det tullövervakade området.
+- Ekonomi: avräkning, utgående, inklusive valuta och växling.
+
+Vart data tar vägen avgör hur gränssnitten byggs. Boken på den inhemska sidan och instrumentpanelen på den utländska sidan måste hållas åtskilda, annars skriver båda sidor under de gemensamma testerna över samma fält för varandra.
+
+- Promotionsdata som samlas in inom landet och avräknas inom landet stannar inom landet.
+- Endast avidentifierade aggregerade data går tillbaka till ert moderbolag utomlands, utan inhemska provisionsrelationer.
+- Backoffice utomlands rör aldrig rådata om kinesiska konsumenter; gränsöverskridande datavägar öppnas först när konsekvensbedömningen för skyddet av personuppgifter är godkänd.
+- Inhemska promotions- och provisionsdata kan exporteras i sin helhet och överlämnas tillsammans med böckerna vid överlämningen.
+
+Övervakningen av de gemensamma testerna ställer upp statuslamporna i fyra rader efter gränssnittstyp och motpart, och varje hälsokontroll och omsändning lämnar en post. Demosidan skriver tre punkter, gränssnittstyp, motpart och statuslampa, och motsvarar därmed samma mått som demon av systemgränssnittet; under de gemensamma testerna gås raderna igenom dagligen en i taget.
+
+- Orderöverföring, motpart butiksfront, statuslampa normal.
+- Betalningsretur, motpart betalningskanal, statuslampa normal.
+- Fraktsedelsretur, motpart kurirtjänst, statuslampa varning.
+- Listdeklaration, motpart deklarationskanal, statuslampa normal.
+
+Måttet för integrationen börjar med standardgränssnitt: där ett finns kopplas det direkt, och där det saknas avbildar mellanprogramvaran. Offentliga marknadsriktmärken sätter tidsramen för standardintegration till 3 till 7 dagar och för full integration till 8 till 12 veckor; för kampanjtoppar reserveras det i höjd med 10 gånger toppen. Båda sidor utser var sin tekniska kontaktperson och håller under de gemensamma testerna en kort daglig avstämning. Efter starten körs först en full avräkningscykel i parallell drift innan det växlas, och under den parallella driften får data i de två systemen inte glida isär.
+
+## Hur statuslamporna läses och var misslyckade omsändningar registreras
+
+Gränssnittsstatusloggen ger en rad per gränssnittstyp, med flikar för alla gränssnitt, normalt och onormalt, och varje rad skriver motpart, anropsvolym, framgångsgrad, svarstid, fel, omsändning och statuslampa. Ta orderöverföringen som exempel: i dag 1284 anrop, en framgångsgrad på 100%, en genomsnittlig svarstid på 186 millisekunder, 0 fel och en normal statuslampa. Betalningsreturen hade likaså 1284 anrop med en framgångsgrad på 99,9%, där 1 fel omsändes med framgång och statuslampan fortsatt var normal. Dessa två rader är beviset på att återkopplingen av de tre dokumenten ligger i systemet.
+
+När de nio gränssnittstyperna är kopplade landar anropsvolymer och hälsodata i drifttiden alla i denna logg, och de två raderna orderöverföring och betalningsretur håller fast hur återkopplingen av de tre dokumenten har anlänt. Längst ned i demogränssnittet står det totalt 12 poster och 20 per sida, och i slutet av varje rad finns de två ingångarna detaljer och logg; alla nio rader följer samma mått.
+
+![Demo av systemgränssnittet för gränssnittsstatusloggen, nio rader i de nio kolumnerna gränssnittstyp, motpart, anrop i dag, framgångsgrad, genomsnittlig svarstid, fel, omsändning, statuslampa och åtgärder, längst ned med 12 poster och 20 per sida](/images/blog/china-bonded-platforms-nine-interfaces/interface-health-log-system-demo.webp)
+
+- Orderöverföring, butiksfront, i dag 1284 anrop, framgångsgrad 100%, genomsnittlig svarstid 186 millisekunder, 0 fel, ej omsänt, statuslampa normal, detaljer och logg;
+- Betalningsretur, betalningskanal, 1284, 99,9%, 210 millisekunder, 1 fel, omsänt, normal, detaljer och logg;
+- Fraktsedelsretur, kurirtjänst, 1266, 99,2%, 340 millisekunder, 10 fel, omsändning pågår, varning, detaljer och logg;
+- Listdeklaration, deklarationskanal, 1266, 99,8%, 520 millisekunder, 3 fel, omsänt, normal, detaljer och logg;
+- Kvotuppslag, uppslagskanal, 1284, 100%, 150 millisekunder, 0 fel, ej omsänt, normal, detaljer och logg;
+- Boksynkronisering, tullager, 96, 100%, 430 millisekunder, 0 fel, ej omsänt, normal, detaljer och logg;
+- Återskrivning av frigivningsstatus, deklarationskanal, 1240, 99,6%, 610 millisekunder, 5 fel, omsänt, normal, detaljer och logg;
+- Logistikspårning, kurirtjänst, 1240, 98,7%, 720 millisekunder, 16 fel, omsändning pågår, varning, detaljer och logg;
+- Avstämningsfil, ekonomisystem, 12, 100%, 980 millisekunder, 0 fel, ej omsänt, normal, detaljer och logg.
+
+## Hur kampanjtoppen bedöms och hur mycket kapacitet som reserveras
+
+Toppbedömningen delar sig efter ordervolym och responsbehov i fyra fall: låg volym med högt responsbehov rättar sig efter elasticitet, hög volym med högt responsbehov efter ledtiden, låg volym med lågt responsbehov efter grundförmågan och hög volym med lågt responsbehov efter den stabila kapaciteten. Kapacitetskurvan i förhållande till dagskapaciteten har tre nivåer: 1 gång i vardagen, 4 till 5 gånger i en kampanj och 10 gånger vid toppen, där det på toppsidan reserveras i höjd med 10 gånger. Ju tidigare ni ger oss förhandsvolymerna, desto mer utrymme finns för utbyggnad och bemanning; kommer volymerna först en vecka före kampanjen, är extra personal det enda som kan justeras.
+
+- Låg ordervolym och högt responsbehov leder till toppelasticitet: Offentliga fall ligger på 4 till 5 gånger dagsvolymen, topparna går från tiotusentals till flera hundratusen artiklar, och bemanningen i kampanjer är ungefär 3 gånger det normala; det är riktmärken från offentliga fall.
+- Hög ordervolym och högt responsbehov begränsas av ledtiden: Mycket höga toppar kräver en ledtid, SKU-tillväxt förstorar lager och böcker samtidigt, kampanjer reserveras till 10 gånger toppen, och storleksordningarna som indata tillhandahåller ni.
+- Låg ordervolym och lågt responsbehov är grundförmåga: en varumärkesbutik med licensierade betalningar, inbyggda handlingar, ansluten till fler än 50 tullplatser och fler än 70 ERP-system, med AEO-certifiering på högsta nivån och egen tullklarering; vår sida är redo.
+- Hög ordervolym och lågt responsbehov är stabil kapacitet: dimensionerad efter dagsordrar, med tidig inlagring och zonindelad lagring, fast och tillfällig personal i kombination, förhandsvolymer först och returer som igen går in i det tullövervakade området; vår sida kör det som en process.
+
+Som lagerkandidater finns fyra anläggningar i omfattande tullagerzoner samt ett lager i Hongkong, Kina. Fyra anläggningar i parallell ger redundans över flera tullplatser; den slutliga tullplatsen bestämmer ni, och kandidatlistan överlämnas till er redan i starten, så att man inte behöver vänta tills varan anländer i hamnen. Lagret i Hongkong, Kina står på den utländska sidan och förs åtskilt från de fyra inhemska anläggningarna.
+
+![Demo av bedömningen av kampanjtoppen för plattforms- och leveranskapacitet, till vänster fyra kvadranter efter ordervolym och responsbehov, uppe till höger en kapacitetskurva med tre nivåer i förhållande till dagskapaciteten, nere till höger en instrumentpanel för förhandsvolymer i kampanjtoppar och längst ned fyra anläggningar i omfattande tullagerzoner samt ett lager i Hongkong, Kina](/images/blog/china-bonded-platforms-nine-interfaces/mega-sale-peak-capacity-verdict.webp)
+
+- Yiwu, Zhejiang, tullager med tullförfarande 1210.
+- Hangzhou, Zhejiang, tullager med tullförfarande 1210.
+- Guangzhou Huangpu, Guangdong, tullager med tullförfarande 1210.
+- Shenzhen Qianhai, Guangdong, tullager med tullförfarande 1210.
+- Hongkong, Kina, utland, tullager i Hongkong, Kina.
+
+Instrumentpanelen för förhandsvolymer i kampanjtoppar visar fyra rader i de sju kolumnerna SKU, förhandsvolym, anmält, framsteg, beräknad slutföring, status och åtgärd, och varje rad har de två ingångarna detaljer och logg. Framsteg och beräknat slutföringsdatum avgör i vilken ordning varje SKU lagertillförs, och underskotten följs rad för rad i spårningstabellen för förhandsvolymer.
+
+- Koenzym-Q10-mjukkapslar, förhandsvolym 12000, anmält 8400, framsteg 70%, beräknad slutföring 10-12, pågår, detaljer och logg;
+- Djuphavsfiskoljekapslar, 8000, 6400, 80%, 10-08, pågår, detaljer och logg;
+- Proteinpulver som fast dryck, 6000, 2400, 40%, 10-18, pågår, detaljer och logg;
+- Frystorkat probiotikapulver, 5000, 5000, 100%, inget klardatum angivet, klart, detaljer och logg.
+
+## Hur underskott i förhandsvolymer följs rad för rad
+
+Spårningstabellen för förhandsvolymer i lagermodulen ger en rad per SKU och skriver förhandsvolym, anmält, framsteg, underskott, beräknad slutföring och status. Ta koenzym-Q10-mjukkapslarna som exempel: förhandsvolym 12000, anmält 8400, framsteg 70%, ett underskott på 3600 som beräknas slutas den 10-12; djuphavsfiskoljekapslarna ligger på 80% framsteg med ett underskott på 1600 som beräknas slutas den 10-08. Kapacitetskurvan med tre nivåer blir här till lagertillförselåtgärder, så att underskottets storlek och dagen för dess slutning syns i förväg.
+
+Längst ned i gränssnittet står det totalt 7 poster och 20 per sida, och i slutet av varje rad finns de två ingångarna detaljer och logg; de två flikarna spårning av förhandsvolymer och ankomstpåminnelse står sida vid sida, så att frontlinjen växlar mellan flikarna utan att filtrera om. Alla sju rader följer samma mått.
+
+![Demo av systemgränssnittet för spårning av förhandsvolymer, sju rader med varor i de åtta kolumnerna SKU, förhandsvolym, anmält, framsteg, underskott, beräknad slutföring, status och åtgärder, längst ned med 7 poster och 20 per sida](/images/blog/china-bonded-platforms-nine-interfaces/pre-filed-volume-tracking-system-demo.webp)
+
+- Koenzym-Q10-mjukkapslar, 12000, 8400, 70%, underskott 3600, 10-12, pågår, detaljer och logg;
+- Djuphavsfiskoljekapslar, 8000, 6400, 80%, underskott 1600, 10-08, pågår, detaljer och logg;
+- Proteinpulver som fast dryck, 6000, 2400, 40%, underskott 3600, 10-18, pågår, detaljer och logg;
+- Frystorkat probiotikapulver, 5000, 5000, 100%, underskott 0, inget klardatum angivet, klart, detaljer och logg;
+- Fiskkollagenpeptidpulver, 6000, 3000, 50%, underskott 3000, 10-15, pågår, detaljer och logg;
+- C-vitamin-tuggtabletter, 9000, 8100, 90%, underskott 900, 10-06, pågår, detaljer och logg;
+- Melatoningodis, 4000, 4000, 100%, underskott 0, inget klardatum angivet, klart, detaljer och logg.
+
+## Vad som fastställs före start om gränssnitt och växling
+
+Före start fastställs tre punkter: standardgränssnitt och mellanprogramvarukoppling skrivs in i gränssnittstabellen, tröskelvärden för statuslampor, omsändningar efter fel och ansvariga fästs vid rader, och förhandsvolymer stäms av med kapacitetsnivåer på samma SKUer. Saknas någon av de tre punkterna fastnar de gemensamma testerna ständigt vid omsändningarna. Anropsvolymer, framgångsgrader, förhandsvolymer och slutföringsdatum i demogränssnittet är bara till illustration, siffrorna för toppar och bemanning kommer från offentliga fall och visar bara storleksordningen, medan de faktiska volymerna tillhandahålls av er; den faktiska deklarationspraxisen följer den behöriga myndighetens krav, och gränsöverskridande datavägar följer slutsatsen av konsekvensbedömningen för skyddet av personuppgifter. Före växlingen körs en full avräkningscykel i parallell drift, därefter bekräftas att data i de två systemen inte har glidit isär, och först därefter flyttas trafiken.
+
+Om ni vill att de nio gränssnittsfamiljerna, anpassade efter ert befintliga systemlandskap och er tullplatsplan, kopplas till tullagerverksamheten och att statuslampor samt förhandsvolymer kontrolleras rad för rad, så [kontakta oss](/sv/packages/).

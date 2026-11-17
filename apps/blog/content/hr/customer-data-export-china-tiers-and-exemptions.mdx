@@ -1,0 +1,105 @@
+---
+title: "Podaci klijenata izvan Kine, broj osoba određuje put, privola ostaje"
+date: "2027-03-30"
+category: "Compliance Guide"
+excerpt: "Broj osoba prenesenih tijekom godine određuje put podataka klijenata izvan Kine. Izuzeće od prijave ne ukida obavještavanje, zasebnu privolu i procjenu utjecaja."
+references:
+  - title: "Propisi o poticanju i reguliranju prekograničnog protoka podataka (Uredba br. 16 Državne uprave za kiberprostor, na snazi od 22. ožujka 2024., članci 4., 5., 6., 7., 8., 9. i 10.)"
+    url: "https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm"
+  - title: "Zakon Narodne Republike Kine o zaštiti osobnih podataka (donesen 20. kolovoza 2021., članci 21., 29., 30., 38., 39. i 55.)"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+  - title: "Mjere za standardni ugovor o prijenosu osobnih podataka u inozemstvo (Uredba br. 13 Državne uprave za kiberprostor, objavljena 22. veljače 2023., na snazi od 1. lipnja 2023., članci 4., 6., 7. i 8.)"
+    url: "https://www.gov.cn/gongbao/content/2023/content_5752224.htm"
+  - title: "Dvije godine primjene Propisa o poticanju i reguliranju prekograničnog protoka podataka: upravljanje sigurnošću izvoza podataka na novoj razini (Državna uprava za kiberprostor, 23. ožujka 2026.)"
+    url: "https://www.cac.gov.cn/2026-03/23/c_1775999628849905.htm"
+---
+
+Može li se podatke klijenata prenijeti izvan Kine, određuje to u koji razred pada kumulativni broj osoba prenesenih tijekom godine. Od 1. siječnja tekuće godine obrađivač podataka koji nije operator ključne informacijske infrastrukture izuzet je od prijave ako kumulativno u inozemstvo prenosi osobne podatke manje od 100 000 osoba (bez osjetljivih osobnih podataka); pri 100 000 i više, ali manje od 1 000 000 osoba, sklapa s inozemnim primateljem standardni ugovor o prijenosu osobnih podataka ili prolazi certifikaciju zaštite osobnih podataka; pri 1 000 000 i više osoba ili pri osjetljivim osobnim podacima 10 000 osoba podnosi sigurnosnu procjenu prijenosa podataka. Izuzeće od prijave ukida samo postupak prijave na tim trima putovima; obavještavanje, zasebna privola i procjena utjecaja na zaštitu osobnih podataka ne ukidaju se nijedno. To je odnos između članka 5. i članka 10. Uredbe br. 16 i ujedno mjesto koje se najlakše pročita naopako.
+
+Za prekograničnu trgovinu na malo elektroničkim putem postoji češće korišteno izuzeće: podaci koji su doista potrebni za sklapanje ili izvršenje ugovora u kojem je osoba stranka izuzeti su od prijave; prekogranična kupnja, prekogranična dostava, prekogranični prijenos novca, prekogranično plaćanje, prekogranično otvaranje računa, rezervacija zrakoplovnih karata i hotela, izdavanje viza i ispitne usluge izričito su navedeni u članku 5. stavku 1. točki „a“, a faze primanja, dostave i plaćanja potrebne za izvršenje su obuhvaćene. Riječ „doista“ ima granicu: profiliranje, oglašivački i bihevioralni podaci koji nisu povezani s izvršenjem te narudžbe ne potpadaju pod tu točku.
+
+## Kako se broji kumulativni broj osoba prenesenih tijekom godine
+
+Način brojanja određuje razred, pa ga odmah fiksirajte: broje se fizičke osobe, ista osoba kod nekoliko prijenosa tijekom godine računa se jednom; zbrajanje počinje 1. siječnja tekuće godine i obnavlja se na granici godina; osjetljivi osobni podaci ne ulaze u taj broj, njihova se linija gleda zasebno. Procjenjuje se stvarni tok podataka u inozemstvo, a ne koliko osoba sustav čuva.
+
+Osim tri razreda postoje dva druga ulaza. Operator ključne informacijske infrastrukture koji u inozemstvo prenosi osobne podatke ili važne podatke podnosi sigurnosnu procjenu izravno, tu odlučuje status subjekta, a ne broj (članak 7. stavak 1.). Osobni podaci prikupljeni i stvoreni u inozemstvu i vraćeni u zemlju na obradu izuzeti su od prijave ako se tijekom obrade ne uvode osobni podaci ili važni podaci zemlje (članak 4.).
+
+Rezultat procjene valjan je 3 godine od dana izdavanja; ako se nakon isteka prijenos mora nastaviti i nije nastupila okolnost koja zahtijeva novu prijavu, produljenje se može zatražiti 60 radnih dana prije isteka preko pokrajinskog tijela za kiberprostor do državnog tijela, i nakon odobrenja produljuje se za 3 godine (članak 9.).
+
+Pilot-područja slobodnih trgovinskih zona imaju i vlastiti negativni popis koji zona sastavlja sama, pokrajinski odbor za kibersigurnost i informatizaciju ga odobrava, a zatim se registrira u državnom tijelu za kiberprostor i državnom tijelu nadležnom za podatke; obrađivač podataka u zoni koji u inozemstvo prenosi podatke izvan popisa izuzet je od triju prijava (članak 6.). Do ožujka 2026. popisi 9 pilot-područja slobodnih trgovinskih zona (luka) registrirani su i objavljeni: Tianjin, Peking, Hainan, Šangaj, Zhejiang, Guangxi, Jiangsu, Chongqing i Fujian; obuhvaćaju 22 područja, među njima automobilsku industriju, trgovinu na malo, civilno zrakoplovstvo, reosiguranje, dubokomorsku industriju, sjemenarstvo, geoinformacije i meteorologiju, kreditne podatke poduzeća. Taj se okvir svake godine mijenja, pa prije unosa u popis provjerite važeću verziju na svojem području i ne primjenjujte tuđi popis na svoje podatke.
+
+![Određivanje razreda po broju prenesenih osoba: manje od 100 000 kumulativno tijekom godine izuzeto je od prijave, od 100 000 do manje od 1 000 000 standardni ugovor ili certifikacija, od 1 000 000 ili osjetljivi osobni podaci od 10 000 sigurnosna procjena, desno usporedno razred izuzeća, pravila procjene, način brojanja i točke početne dijagnostike](/images/blog/customer-data-export-china-tiers-and-exemptions/data-transfer-headcount-tiers-and-filing-waiver.webp)
+
+## Što točno ukida izuzeće od prijave
+
+Ukida postupak, a ne obveze. Članak 10. kaže izravno: pri prijenosu osobnih podataka u inozemstvo ipak treba izvršiti obavještavanje, pribaviti zasebnu privolu osobe i provesti procjenu utjecaja na zaštitu osobnih podataka u skladu sa zakonima i podzakonskim aktima. Nijedan od triju putova ne podnosi se na prijavu, ali te se tri stvari i dalje rade.
+
+Osnova za procjenu utjecaja nalazi se u članku 55. Zakona o zaštiti osobnih podataka: obrada osjetljivih osobnih podataka, obrada po nalogu ili pružanje osobnih podataka drugom subjektu koji obrađuje podatke, prijenos osobnih podataka u inozemstvo zahtijevaju prethodnu procjenu i zapis o obradi. Mogu li se izvješće o procjeni i zapisi izvaditi u svakom trenutku, obično je razvodna crta može li se odgovornost naknadno razjasniti.
+
+Za praktičnu provedbu obavještavanja i privole može poslužiti nacionalna norma. GB/T 42574-2023 „Informacijska sigurnost. Smjernice za provedbu obavještavanja i privole u obradi osobnih podataka“ na snazi je od 1. prosinca 2023. i određuje načine, sadržaj i korake obavještavanja, kao i metode provedbe zasebne privole, odbijanja, povlačenja privole i čuvanja dokaza. To je preporučna norma, a ne samostalna pravna obveza, ali kada regulator pita kako je privola pribavljena, te su smjernice ustaljeni oblik odgovora.
+
+## Što visi na svakom od tri stupa
+
+Prvi stup je privola. Članak 39. zakona zahtijeva da se osobu obavijesti o nazivu ili imenu inozemnog primatelja, kontaktnim podacima, svrsi i načinu obrade, vrstama osobnih podataka, kao i o tome kako i po kojem postupku osoba ostvaruje zakonom predviđena prava prema inozemnom primatelju, i da se pribavi njezina zasebna privola. Zasebna privola znači bez paketa: ne može stajati u istom retku s uvjetima članske usluge i opće dopuštenje ne može pokriti sve situacije prijenosa. Kod osjetljivih osobnih podataka dodatno se po članku 30. objašnjavaju nužnost obrade i utjecaj na prava osobe, a zasebna privola pribavlja se po članku 29.
+
+Drugi stup su tehničke mjere. Pohrana u zemlji koristi poslužitelje u zemlji plus sigurnosne kopije na drugoj lokaciji, prikupljanje uzima samo polja potrebna za izvršenje, telefon i adresa maskiraju se na razini polja prema klasifikaciji, prijenos ide kroz TLS, revizija pristupa čuva tri razine operativnih tragova, zapisnici se arhiviraju tromjesečno. Tih pet su dokazi koje sustavna razina može pokazati, a ne usmena obećanja.
+
+Treći stup je sustav pravila. Klasifikacija i raspodjela podataka po razinama dovode se do konkretnih polja, evidencija prijenosa za svaku stavku bilježi naziv, svrhu, obujam i primatelja, a godišnja samoprovjera stvara pisani zapis koji se arhivira zajedno s dokumentima faze početne dijagnostike. S0 ovdje označava prvi od četrnaest radnih paketa servisnog okvira (S0 do S13), on radi početnu dijagnostiku i osnivanje subjekta; procjena prijenosa, popis polja i provjera popisa zatvaraju se u toj fazi.
+
+Granica obrade po nalogu zapisana je u članku 21. zakona: Vi ste voditelj obrade osobnih podataka, mi smo izvršitelj obrade, svrha, rok, način obrade, vrste osobnih podataka, mjere zaštite te prava i obveze stranaka moraju se jasno ugovoriti; bez Vaše suglasnosti ne smije se dalje povjeravati obrada, podaci se ne smiju koristiti za druge projekte, a ako ugovor o obradi po nalogu ne stupi na snagu, ništetan je, bude opozvan ili prestane, osobni podaci se vraćaju ili brišu.
+
+![Tri stupa usklađenosti podataka: zasebna privola, tehničke mjere, sustav pravila, desno usporedno tri retka skočnog prozora zasebne privole i tri retka evidencije prijenosa, dolje zasebna bilješka o tri elementa teksta privole i granici obrade po nalogu](/images/blog/customer-data-export-china-tiers-and-exemptions/data-compliance-consent-controls-policy-pillars.webp)
+
+## Kako se postavljaju potvrdni okviri, pročitajte šest redaka
+
+Tablica postavki visi u modulu trgovine, naslov je Samostalni potvrdni okviri i tekstovi napomena, šest polja po redu su: potvrdni okvir, tekst napomene, situacija, označeno unaprijed, može se zasebno zatvoriti, arhivski broj, a kartice: sve situacije, stranica narudžbe, registracija člana.
+
+- Potvrda obavijesti o riziku, tekst „Potvrđujem da sam pročitao obavijest o rizicima za prekograničnu robu“, stranica narudžbe, nije označeno unaprijed, može se zasebno zatvoriti, DA2609-0101;
+- Dopuštenje za provjeru kvote, „Dopuštam provjeru svoje godišnje kvote za prekograničnu elektroničku trgovinu“, stranica narudžbe, nije označeno unaprijed, može se zasebno zatvoriti, DA2609-0102;
+- Prihvaćanje uvjeta članstva, „Pročitao sam i prihvaćam uvjete članske usluge“, registracija člana, nije označeno unaprijed, ne može se zasebno zatvoriti, DA2609-0103;
+- Obavijest o obradi osobnih podataka, „Slažem se da se moji osobni podaci obrađuju u opsegu obavijesti“, registracija člana, nije označeno unaprijed, može se zasebno zatvoriti, DA2609-0104, tekst se prikazuje odrezan po širini stupca sučelja;
+- Obavijest o rezultatu provjere kvote, „Prikaži iskorištenu i dostupnu kvotu“, stranica narudžbe, nije označeno unaprijed, može se zasebno zatvoriti, DA2609-0105;
+- Potvrda kineske elektroničke oznake, „Potvrđujem da sam provjerio kinesku elektroničku oznaku“, stranica narudžbe, označeno unaprijed, može se zasebno zatvoriti, DA2609-0106.
+
+Od šest redaka samo je potvrda kineske elektroničke oznake označena unaprijed, kod ostalih pet uobičajena vrijednost je ne; samo se prihvaćanje uvjeta članstva ne može zasebno zatvoriti. Označavanje unaprijed pretvara privolu u odluku koju sustav donosi umjesto korisnika, a čim se okvir ne može zatvoriti, pravo na povlačenje ne može se ostvariti. Arhivski brojevi DA2609-0101 do 0106 odgovaraju red po red, ponovno označavanje i povlačenje ostavljaju trag po retku, a podnožje prikazuje ukupno 6 zapisa, po 20 na stranici.
+
+Tekst privole kojemu nedostaje jedan od tri elementa ne zadovoljava članak 39.: naziv i kontaktni podaci inozemnog primatelja, svrha i način obrade, način i postupak ostvarivanja prava osobe. Ako nešto nedostaje, dodajte to prije puštanja u rad.
+
+![Sučelje za postavljanje samostalnih potvrdnih okvira i tekstova napomena: šest redaka usporedno u stupcima po situaciji, stanju označenosti unaprijed, mogućnosti zasebnog zatvaranja i arhivskom broju](/images/blog/customer-data-export-china-tiers-and-exemptions/separate-consent-checkbox-config-and-archive-numbers.webp)
+
+## Kojim putem ide svaka vrsta podataka u popisu prijenosa
+
+Druga tablica ima redak za svaku vrstu podataka, sedam polja: vrsta podataka, klasifikacijska oznaka, prenosi li se, regija primatelja, način prijenosa, godišnja samoprovjera, datum posljednje samoprovjere, a kartice: sve kategorije, osobni podaci, poslovni podaci. Šest redaka je sljedeće.
+
+- Podaci o narudžbama, uobičajeni poslovni podaci, ne prenose se, primatelj je u zemlji, godišnja samoprovjera je dovršena, datum posljednje samoprovjere 2026-09-15;
+- Bihevioralne oznake članova, uobičajeni osobni podaci, prenose se, primatelj je inozemna marka, način prijenosa deidentifikacija i agregacija prije izvoza, stupac se prikazuje odrezan u sučelju, godišnja samoprovjera je dovršena, 2026-09-15;
+- Zalihe i knjigovodstvo, uobičajeni poslovni podaci, ne prenose se, u zemlji, godišnja samoprovjera je dovršena, 2026-09-15;
+- Zapisi poslijeprodajne podrške, uobičajeni poslovni podaci, prenose se, inozemna marka, način prijenosa standardni ugovor i registracija, godišnja samoprovjera je u tijeku, datum posljednje samoprovjere 2026-09-20;
+- Podaci o obračunu provizija, uobičajeni poslovni podaci, ne prenose se, u zemlji, godišnja samoprovjera je dovršena, 2026-09-15;
+- Podaci o učinku kampanja, uobičajeni poslovni podaci, prenose se, inozemna marka, način prijenosa standardni ugovor i registracija, godišnja samoprovjera je dovršena, 2026-09-15.
+
+Ukupno 6 zapisa, po 20 na stranici, potpuna samoprovjera staje na 09-15, redak sa zapisima poslijeprodajne podrške još je u tijeku. Klasifikacijska oznaka određuje razred: uobičajeni poslovni podaci i uobičajeni osobni podaci broje se odvojeno, osjetljivi osobni podaci imaju zasebnu liniju; ako ista vrsta podataka promijeni način prijenosa, evidencija i stanje samoprovjere mijenjaju se zajedno i ne ostaju na zaključku prethodnog kruga.
+
+Put standardnog ugovora ima i korak registracije. Ugovor se sklapa strogo prema prilogu Uredbe br. 13, mogu se dodati uvjeti, ali ne u suprotnosti sa standardnim ugovorom, i prijenos može započeti samo nakon njegova stupanja na snagu; u roku od 10 radnih dana od stupanja na snagu registrira se u pokrajinskom tijelu za kiberprostor uz podnošenje standardnog ugovora i izvješća o procjeni utjecaja na zaštitu osobnih podataka (članak 6. i članak 7.). Ako se svrha, opseg, vrste, stupanj osjetljivosti ili način prijenosa, mjesto pohrane ili svrha ili način korištenja od strane inozemnog primatelja promijene, ako se rok pohrane u inozemstvu produljuje ili ako se promijeni politika zaštite države ili regije primatelja, procjena se radi iznova, ugovor se dopunjuje ili sklapa nanovo i registracija se ponavlja (članak 8.).
+
+![Sučelje klasifikacije podataka i popisa prijenosa: šest kategorija podataka označeno je red po red po prijenosu, regiji primatelja, načinu prijenosa, stanju godišnje samoprovjere i datumu posljednje samoprovjere](/images/blog/customer-data-export-china-tiers-and-exemptions/data-class-transfer-list-and-annual-self-check.webp)
+
+## Serija bihevioralnih oznaka od procjene do izvoza
+
+Uzmite kategoriju bihevioralnih oznaka članova i prijeđite je cijelu. Pretpostavimo da je Vaša trgovina tijekom godine kumulativno pružila inozemnoj marki bihevioralne oznake 260 000 članova, bez osjetljivih osobnih podataka, Vi niste operator ključne informacijske infrastrukture i ne potpadate pod negativni popis pilot-područja slobodne trgovinske zone.
+
+Prvo prebrojite osobe. 260 000 osoba pada u razred od 100 000 do manje od 1 000 000, to pokreće standardni ugovor ili certifikaciju, a ne sigurnosnu procjenu (članak 8. Uredbe br. 16). Ako se iste godine pojave još podaci članova s osjetljivim osobnim podacima, osjetljiva linija gleda se zasebno: ispod 10 000 ostaje standardni ugovor ili certifikacija, pri 10 000 i više prelazi se na sigurnosnu procjenu (članak 7.).
+
+Zatim provjerite može li se posuditi izuzeće. Te se oznake koriste za analizu i kampanje marke, nisu potrebne za sklapanje ili izvršenje ugovora u kojem je sam član stranka, pa ne potpadaju pod članak 5. stavak 1. točku „a“; kumulativni broj prelazi 100 000, pa je i četvrta osnova nedostižna. Put izuzeća u toj situaciji ne drži, a nasilno prilagođavanje samo kvari procjenu.
+
+Zatim provedba. Način prijenosa određuje se kao deidentifikacija i agregacija prije izvoza, odgovarajući potvrdni okvir u tablici postavki nije označen unaprijed i može se zasebno zatvoriti, tri elementa teksta su na mjestu; s inozemnom markom sklapa se standardni ugovor prema službenom prilogu i u roku od 10 radnih dana od stupanja na snagu registrira se u pokrajinskom tijelu za kiberprostor uz priloženo izvješće o procjeni utjecaja. U popisu se taj redak mijenja iz praznog u standardni ugovor i registracija, godišnja samoprovjera iz u tijeku u dovršena, datum posljednje samoprovjere ažurira se.
+
+Na kraju dokazi. Zapisi privole po arhivskom broju mogu se izvući do konkretne osobe i trenutka, evidencija za svaku stavku sadrži naziv, svrhu, obujam i primatelja, revizija pristupa čuva tri razine tragova, zapisnici se arhiviraju tromjesečno. Samo kada se odgovori s tih četiriju mjesta podudaraju, serija podataka prošla je čisto.
+
+## Pogrešan redoslijed procjene znači preradu
+
+Dvije najčešće pogreške su uzeti broj osoba jednog prijenosa kao godišnje zbrajanje i pročitati izuzeće od prijave kao izuzeće od svih obveza. Prva ostavlja bez ikakvog postupka situaciju u kojoj je trebalo sklopiti standardni ugovor ili podnijeti procjenu, druga propušta zasebnu privolu i procjenu utjecaja, i obje lako isplivaju pri naknadnoj provjeri.
+
+Redoslijed se također ne okreće. Popis polja, inozemni primatelj, mjesto pohrane, učestalost i svrha prijenosa fiksiraju se prvo, pa se tek onda govori o povezivanju sustava; ako integracija počne prije procjene, sučelje se gradi na pogrešnom toku podataka i jedna promjena dira obje strane.
+
+Kada su razred i put određeni, ostaje red po red u sustav unijeti potvrdne okvire, evidenciju i zapise samoprovjere. Ako za neku od Vaših kategorija podataka još nije određen način prijenosa, [kontaktirajte nas](/hr/packages/).

@@ -1,0 +1,78 @@
+---
+title: "Referral Commissions in China, Onshore Settlement and the Fee Ledger"
+date: "2027-04-20"
+category: "E-commerce"
+excerpt: "An onshore entity signs, withholds and pays commission monthly in renminbi on attributed sales. Each invoice gets one fee ledger row. Agreement, invoice and system must agree."
+references:
+  - title: "Individual Income Tax Law of the People's Republic of China, seventh amendment of 2018, Articles 9, 10, 11 and 14"
+    url: "https://www.chinatax.gov.cn/chinatax/n810219/n810744/n3752930/n3752974/c3970366/content.html"
+  - title: "Measures for the Administration of Withholding Declaration of Individual Income Tax, Trial, Announcement No. 61 of 2018 of the State Taxation Administration, effective 1 January 2019"
+    url: "https://www.gov.cn/gongbao/content/2019/content_5386991.htm"
+  - title: "Value-Added Tax Law of the People's Republic of China, adopted 25 December 2024, effective 1 January 2026, Articles 10 and 34"
+    url: "https://shanghai.chinatax.gov.cn/zcfw/zcfgk/zzs/202412/t474694.html"
+---
+
+Paying referral commissions in China keeps both the money and the tax onshore. An onshore settlement entity signs the agreement, commission is calculated on attributed sales, individual income tax is withheld, and payment goes out monthly in renminbi, with commission invoices and withholding vouchers filed period by period. Five steps run from order attribution to voucher filing, in sequence and without skipping. The fee ledger then puts these amounts on one row per invoice, recording the cost item, taxable amount, rate, VAT amount, paid amount, voucher and status on that same row.
+
+This path rests on how the income is classified. It is a service fee, not a buy-sell margin, and therefore not a resale; the agreement, the invoice and the system must agree. The agreement states the attribution rule, the invoice states the amount and tax, and the system reconciles the two. Signing, payment and tax settlement all happen onshore, so no offshore entity signs this agreement or pays out this renminbi.
+
+![Five onshore steps for referral commissions, from sales attribution and agreement to withholding, renminbi payment and voucher filing, with the invoice and withholding voucher page and three constraint groups](/images/blog/referral-commissions-china-compliant-settlement/promoter-commissions-five-onshore-nodes.webp)
+
+## Five Steps from Attribution to Voucher Filing
+
+The five steps run in order through attribution, agreement, withholding, payment and filing. Each step produces the input for the next.
+
+- Sales attribution: the order is credited to the promoter through the referral link, the attribution rule goes into the agreement and the system, and the trace is the attribution detail.
+- Commission agreement: the agreement is signed with the onshore settlement entity, not with an offshore entity; commission is calculated on attributed sales, and the trace is the referral service agreement.
+- Income tax withholding: the onshore direct withholding path applies, tax is withheld and remitted as required, the income is declared as remuneration for personal services, and the trace is the withholding voucher.
+- Renminbi payment: payment goes out monthly in renminbi after withholding and remittance, payee, amount and period match, and the trace is the payment record.
+- Voucher filing: commission invoices and withholding vouchers are kept for each period, a voucher is issued with every invoice, and the trace is the period invoice.
+
+The flow is sequential, with no skipped steps; the onshore entity withholds, and a voucher is issued with every invoice. The three status labels are onshore agreement, onshore payment and onshore tax settlement, all on the same line. Missing any one of them means the commission is not finished.
+
+The invoice and withholding voucher page has three columns, invoice number, withholding tax in yuan and cost item, and two rows: ZD202609-011, 768.00, customs clearance service fee; ZD202609-012, 324.00, warehousing operation fee. The page footer marks this as a system interface demo showing invoices, VAT and status.
+
+The income nature group has three points: the nature is a service fee, it is not a resale margin, and all records stay consistent. The tier group is a hard cap in the system: at most two team tiers, payment based only on attributed sales rather than headcount, with the cap configuration on file. The withholding group sits on onshore direct withholding: the onshore entity withholds, declares as remuneration for personal services, and follows the position of the competent tax authority.
+
+Income nature has to be settled first because a service fee and a buy-sell margin sit in different places in the agreement, the invoice and the tax return; change the classification and the cost item, tax amount and voucher in every later row have to change with it. Agreement, invoice and system must agree, and that is exactly what this means. In practice the onshore entity withholds monthly and a voucher is issued with every invoice. If a flexible staffing split is proposed instead, put the switching arrangement and the cost comparison on the table before deciding. The withholding path is part of the deliverables, and the referral agreement template is provided by our team; both need to be in place before the five steps have anything to land on.
+
+## The Fee Ledger, One Row per Invoice
+
+The invoice detail page shows one row per invoice, with tabs for all invoices, unpaid and paid. Each row lists cost item, taxable amount, rate, VAT amount, paid amount, voucher and status. The customs clearance service fee has a taxable amount of 12800.00 yuan, a rate of 6%, a VAT amount of 768.00 yuan and a paid amount of 13568.00 yuan; the warehousing operation fee follows the same basis, with a taxable amount of 5400.00 yuan and a VAT amount of 324.00 yuan. Vouchers can be downloaded.
+
+Referral commission has its own settlement path, while the cost side shares this same ledger: cost item, rate, tax amount and voucher correspond item by item. The amount on a commission invoice can be found in the same row of the fee ledger, and conversely every row in the ledger traces back to its invoice and voucher. The VAT amounts for the first two rows, customs clearance service fee and warehousing operation fee, are the same two amounts recorded on the invoice and withholding voucher page.
+
+The interface is titled invoice detail and withholding tax, with 6 records in total and 20 per page, and each row ends with two entries, detail and log. The six rows give invoice number, VAT amount in yuan, cost item, taxable amount in yuan, rate, paid amount in yuan, voucher and status:
+
+- ZD202609-011, 768.00, customs clearance service fee, 12800.00, 6%, 13568.00, downloadable, paid;
+- ZD202609-012, 324.00, warehousing operation fee, 5400.00, 6%, 5724.00, downloadable, paid;
+- ZD202609-013, 576.00, referral service fee, 9600.00, 6%, 0.00, pending, unpaid;
+- ZD202609-014, 192.00, system usage fee, 3200.00, 6%, 3392.00, downloadable, paid;
+- ZD202609-015, 288.00, customs declaration service fee, 4800.00, 6%, 5088.00, downloadable, paid;
+- ZD202609-016, 372.00, domestic delivery fee, 6200.00, 6%, 0.00, pending, unpaid.
+
+Multiply out the four paid rows and the arithmetic shows itself: paid amount equals taxable amount plus VAT amount, 12800.00 plus 768.00 is 13568.00, 5400.00 plus 324.00 is 5724.00, 3200.00 plus 192.00 is 3392.00, and 4800.00 plus 288.00 is 5088.00. The two unpaid rows both show 0.00 paid, with vouchers marked pending.
+
+![Fee ledger and VAT lines system demo, six invoice rows listing VAT amount, cost item, taxable amount, rate, paid amount, voucher and status](/images/blog/referral-commissions-china-compliant-settlement/fee-ledger-vat-lines-system-demo.webp)
+
+## One Referral Fee from Unpaid to Paid
+
+Take the ZD202609-013 referral service fee invoice. It records a taxable amount of 9600.00 yuan, a rate of 6%, a VAT amount of 576.00 yuan, 0.00 yuan paid, a voucher still pending and unpaid status. By the same ledger arithmetic the paid amount should be 10176.00 yuan; it is still 0.00 yuan, which means this invoice has not been paid yet.
+
+To turn it into paid, first generate and file the voucher, then pay under the referral service agreement. After payment, payee, amount and period have to match the commission invoice item by item, and the withholding voucher is filed together with this invoice. As long as the voucher is pending, this row stays unpaid; it is exactly this kind of amount without a voucher that blocks period-by-period reconciliation.
+
+That is also why the five steps cannot skip: sales attribution, commission agreement, income tax withholding, renminbi payment and voucher filing each leave a trace. Without a withholding voucher, the matching row in the fee ledger cannot close; without an invoice number, the responsibility chain for that batch cannot be traced afterwards.
+
+## Align Three Places Before Launch
+
+Align three places before launch, in this order: agreement, process, ledger.
+
+- Write the attribution rule into the referral service agreement and the attribution system, and state clearly that the agreement is signed with the onshore settlement entity.
+- Fix the withholding and payment process: withhold monthly, declare as remuneration for personal services, remit by the fifteenth day of the following month, and file payment records together with withholding vouchers.
+- Set up the fee ledger: fix the fields for invoice number, cost item, rate, tax amount, paid amount and voucher status before talking about launch.
+
+When comparing proposals, we also map each item of the other side's commission plan onto this ledger, checking whether agreement, invoice and system point to the same service fee; the quote is only one column. When the three disagree, the usual result is that income nature gets written as a margin, invoice cost items no longer match the agreement, and the vouchers cannot be recovered.
+
+Settle income nature, the withholding path and the ledger fields first, then schedule the first commission payment. How commission is calculated, how it is paid and which voucher belongs to which invoice can all be fixed before launch, rather than patched in when period-by-period reconciliation arrives. The invoice numbers, amounts and dates in the demo interface are illustrative only; actual withholding positions follow the requirements of the competent tax authority, and rates and vouchers follow the rules in force at the time.
+
+To check the commission terms against your settlement entity and agreement line by line, and to wire the withholding voucher into the fee ledger, [Contact us](/en/packages/).

@@ -1,0 +1,67 @@
+---
+title: "Arus dana dan alur faktur pesanan berikat, lima dokumen lengkap baru bisa berjalan"
+date: "2027-05-11"
+category: "E-commerce"
+excerpt: "2 alur ada titik periksa: penyelesaian batch/entitas domestik, komisi dipotong bulanan, sekitar 6 minggu, M1–M6; 5 dokumen: remitansi/potongan sebelum pajak/audit; no. batch/no. arsip."
+references:
+  - title: "Pemberitahuan Kementerian Perdagangan dan 5 kementerian, lembaga lain tentang penyempurnaan pengawasan impor eceran perdagangan lintas batas (Nomor 486/2018)"
+    url: "https://www.gov.cn/zhengce/zhengceku/2018-12/31/content_5437823.htm"
+  - title: "Pengumuman Nomor 194 Tahun 2018 Administrasi Umum Kepabeanan tentang pengawasan ekspor-impor eceran perdagangan lintas batas"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Kebijakan perpajakan impor eceran perdagangan lintas batas dari Kementerian Keuangan, Administrasi Umum Kepabeanan dan Administrasi Perpajakan Negara (Nomor 18/2016)"
+    url: "https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html"
+  - title: "Pengumuman Administrasi Perpajakan Negara dan Administrasi Devisa Negara tentang pencatatan pajak atas pembayaran ke luar negeri dalam perdagangan jasa dan pos lain (Nomor 40/2013, diubah oleh Nomor 31/2018)"
+    url: "https://www.chinatax.gov.cn/chinatax/c102449/c5219874/content.html"
+---
+
+Dalam operasional pesanan berikat, dana dan dokumen masing-masing memiliki alur dan titik pemeriksaan sendiri. Arus dana berpatokan pada batch penyelesaian: dana diselesaikan per periode dalam satu batch ke entitas dalam negeri, tanpa remitansi ke luar negeri per pesanan. Alur faktur berpatokan pada dokumen: hanya jika lima dokumen lengkap, remitansi, pengurangan sebelum pajak dan audit memiliki prasyarat yang sama. Kedua alur bertemu pada satu pesanan, dan titik temunya adalah enam tonggak dari M1 hingga M6.
+
+![Dua kartu arus dana dan alur faktur, masing-masing bertitik pemeriksaan; dua kartu sisi kanan menjelaskan mengapa alur faktur dipisah dan cara menarik dokumen; di bawah, empat arus informasi, kepatuhan, dana dan faktur bertemu pada M1 hingga M6 dari satu pesanan](/images/blog/bonded-order-funds-invoicing-flow-china/funds-invoicing-two-flow-checkpoints.webp)
+
+## Bagaimana dana mengalir, lima titik arus dana
+
+Titik-titik arus dana tersusun dalam satu rantai: pembayaran, pengumpulan, penyelesaian, penerimaan dana dalam negeri, remitansi; titik pemeriksaan ada di ujung, memverifikasi dokumen dan deklarasi pajak. Penyelesaian berjalan per periode dalam batch, entitas dalam negeri menerima dana terpusat, tanpa remitansi ke luar negeri per pesanan; komisi diakru per pesanan sesuai pihak berhak, dipotong dan dibayarkan tiap bulan, tagihan dan bukti pemotongan diarsipkan per periode; rekening dana dibuka sekitar 6 minggu, berjalan paralel dengan pembangunan toko, tanpa menambah waktu peluncuran.
+
+Titik-titik ini dapat dicocokkan satu per satu dengan bukti nyata di antarmuka backend: contoh dokumen penyelesaian, catatan arus dana dan batch penyelesaian semuanya ada di sistem, saat verifikasi tidak perlu mencari bahan lain. Batch adalah unit dasar arus ini; rekonsiliasi, remitansi dan jejak rekam semuanya mengikuti batch.
+
+## Dokumen disimpan bagaimana, lima dokumen sebagai setumpuk bukti apa
+
+Alur faktur juga memiliki lima titik: dokumen pembayaran, dokumen pengiriman, dokumen deklarasi, dokumen pajak, dokumen penyelesaian; titik pemeriksaan memverifikasi apakah kelima dokumen seluruhnya terarsip. Lima dokumen lengkap adalah prasyarat bersama untuk tiga hal: remitansi ke luar negeri, pengurangan sebelum pajak dan audit untuk pemeriksaan; bila satu saja hilang, ketiganya tidak dapat dijalankan. Dokumen penyelesaian dibuat otomatis per batch, bersumber sama dengan catatan arus dana, angkanya cocok.
+
+Catatan tiga arus dana, barang dan informasi tidak dibuat pembukuan terpisah, semuanya bertemu pada kelima dokumen ini. Satu berkas dokumen menelusuri tuntas satu pesanan, sekaligus mencocokkan pembukuan dengan persediaan.
+
+## Mengapa alur faktur dipisah menjadi satu alur tersendiri
+
+Setumpuk bukti ini memiliki empat kegunaan: remitansi ke luar negeri, pengurangan sebelum pajak, audit dan pertanyaan regulator. Keempat kegunaan memakai dokumen dasar yang sama, hilang satu dokumen berarti putus satu mata rantai, karena itu alur faktur dijadikan alur tersendiri dengan titik pemeriksaan sendiri, berjalan sejajar dengan arus dana.
+
+Rantai impor sangat mementingkan kecocokan: kelima dokumen harus tertaut pada pesanan yang sama, pemakaian campur antarpesanan akan terendeteksi satu per satu. Disiplin pemisahan dana dituangkan dalam perjanjian, contoh batch dapat ditelusur per batch pada tangkapan layar antarmuka; disiplin beserta contoh itulah keadaan sehari-hari alur ini.
+
+## Cara menarik dokumen, cara melakukan rekonsiliasi
+
+Rekonsiliasi mengikuti nomor batch, diverifikasi per batch dalam catatan arus dana; penarikan dokumen mengikuti nomor arsip, ditarik dari pelacak titik pemeriksaan. Kedua pembukuan diarsipkan bersama hasil serah terima, tersedia kapan saja, saat ada pertanyaan tidak perlu menyusun bahan mendadak.
+
+## Empat arus bertemu pada satu pesanan
+
+Tindakan memesan sekaligus menggerakkan empat arus: arus informasi memberi umpan balik tiga dokumen, arus kepatuhan menyelesaikan verifikasi identitas, arus dana memasukkan pembayaran ini ke penyelesaian batch, alur faktur lalu menghasilkan dokumen penyelesaian. Empat arus membukukan per titik pemeriksaan dari M1 hingga M6, setiap langkah satu pesanan dari pemilihan produk sampai pencatatan komisi dapat dicocokkan dengan catatan.
+
+## Satu pesanan dari M1 hingga M6
+
+Jalur pesanan terdiri dari 6 langkah, dengan 4 titik antarmuka utama dan hanya 1 peran A yang bertanggung jawab menyeluruh dalam matriks pembagian tanggung jawab. M1 pemilihan produk dan penetapan kelayakan, pemicunya adalah kelengkapan masukan, gerbang ada pada dokumen, keluarannya daftar dan kode HS, kami yang menjalankan, masukan disediakan Anda; M2 masuk kawasan, gerbang ada pada pembukuan gudang berikat, keluarannya pembukuan dan tampilan persediaan; M3 tayang, gerbang ada pada penelaahan klaim, keluarannya kesimpulan penelaahan dan naskah pengungkapan.
+
+M4 pesanan, gerbang ada pada identitas dan pengungkapan, keluarannya catatan identitas dan pengungkapan; M5 pengurusan kepabeanan, pemicunya adalah pembayaran selesai, gerbang ada pada verifikasi silang tiga dokumen dan kuota, keluarannya kesimpulan verifikasi dan pengurangan kuota; M6 penyelesaian dan komisi, pemicunya adalah pelepasan, gerbang ada pada kepatuhan pembayaran komisi, keluarannya daftar pembayaran komisi, kami yang menjalankan, aturan dikonfirmasi Anda. Kami yang mengorkestrasi antarlangkah, Anda hanya memberi masukan di M1 dan mengonfirmasi aturan di M6, tanpa perlu koordinasi per tahap di antaranya.
+
+![Bukti dari halaman sebelah, jalur enam langkah ujung ke ujung dari M1 hingga M6 untuk satu pesanan beserta pembagian tanggung jawab empat titik antarmuka utama, di bawahnya dua tabel demonstrasi verifikasi silang urutan pembayaran pesanan dan pelacakan pelepasan serta tanda terima](/images/blog/bonded-order-funds-invoicing-flow-china/order-path-m1-m6-responsibility-splits.webp)
+
+Pembagian tugas empat pihak antarmuka tertulis pada halaman yang sama: perusahaan Anda mengurus produk dan keputusan, platform mengurus pesanan dan penyelesaian, pihak fulfillment mengurus pergudangan dan kepabeanan, regulator mengurus deklarasi dan pemeriksaan. Tujuh arus hanya memiliki satu koordinator, memegang peran A yang bertanggung jawab menyeluruh dalam matriks pembagian tanggung jawab; batas wewenang empat titik antarmuka dituangkan dalam rencana. Rekening dan data tetap di tangan Anda, orkestrasi dan catatan tetap pada kami, serah terima tanpa celah kosong.
+
+## Satu pesanan untuk melihat seluruh proses
+
+Dalam tabel demonstrasi terdapat satu pesanan: nomor pesanan SO260922-0417, dokumen pembayaran PAY260922-0417, urutan waktunya normal. Saat pemesanan, dua catatan identitas dan pengungkapan sudah lengkap; pembayaran selesai memicu pengurusan kepabeanan, pencocokan tiga dokumen dan verifikasi kuota lolos, nomor daftar QD260922-0417 terbentuk, nomor resi EX7726001 menunjukkan sudah diterima. Setelah diterima dilakukan pelepasan, pesanan ini masuk penyelesaian batch; kelima dokumen yakni dokumen pembayaran, dokumen pengiriman, dokumen deklarasi, dokumen pajak, dokumen penyelesaian diarsipkan per batch, nomor batch dapat dicocokkan dalam catatan arus dana, nomor arsip dapat ditarik dari pelacak titik pemeriksaan.
+
+Baris kedua pada tabel yang sama adalah contoh sebaliknya: urutan dokumen pembayaran SO260921-0088 tertunda 2 jam, lembar verifikasi silang mencantumkan baris demi baris anomali semacam ini per pesanan; dalam tabel pelepasan dan pelacakan, QD260921-0088 masih dalam pengiriman, status tanda terima belum masuk, sehingga tindakan pelepasan berhenti sebelum gerbang M6. Kedua tabel demonstrasi menunjukkan hal yang sama: urutan, status dan nomor dapat ditelusur per pesanan, anomali tidak perlu ditemukan dengan membalik catatan secara manual.
+
+Menghubungkan titik pemeriksaan kedua alur, disiplin operasional teringkas pada dua kata: lengkap dan cocok, lima dokumen lengkap, batch pun cocok. Tetapkan lebih dulu entitas penyelesaian, periode penyelesaian dan aturan pengarsipan, baru jadwalkan peluncuran; setiap remitansi, pengurangan dan pertanyaan setelahnya selalu menunjuk pada setumpuk dokumen yang sama. Nomor, urutan dan status tanda terima pada antarmuka demonstrasi hanya untuk ilustrasi; penerapan nyata mengikuti tagihan periode berjalan, ekspor platform dan ketentuan otoritas berwenang.
+
+Arus dana dan alur faktur paling mudah dianggap urusan back office setelah peluncuran, baru melengkapi dokumen ketika remitansi tertahan pemeriksaan dokumen dan pengurangan dicermati otoritas pajak. Titik waktu pengarsipan kelima dokumen sudah ditetapkan sejak pesanan dilepaskan, contoh batch meninggalkan jejak per batch; menempatkan titik pemeriksaan di depan jauh lebih murah ketimbang menambal rantai belakangan.
+
+Jika Anda ingin menghubungkan arus dana dan alur faktur menjadi satu pembukuan yang dapat direkonsiliasi dan dapat ditarik dokumennya, sesuai entitas penyelesaian dan penataan toko yang ada, silakan [Hubungi kami](/id/packages/).

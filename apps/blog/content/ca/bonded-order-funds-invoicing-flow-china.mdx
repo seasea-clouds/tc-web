@@ -1,0 +1,67 @@
+---
+title: "Fons i facturació d'una comanda duanera, avança només amb cinc documents complets"
+date: "2027-05-11"
+category: "E-commerce"
+excerpt: "2 fluxos controlats: fons per lots al país, comissió retenguda al mes, compte en ~6 setmanes; 5 documents retenen remesa, deducció i auditoria. Números de lot i d'arxiu, de M1 a M6."
+references:
+  - title: "Notificació del Ministeri de Comerç i cinc departaments més sobre la millora de la supervisió de les importacions minoristes de comerç electrònic transfronterer (Shang Cai Fa [2018] núm. 486)"
+    url: "https://www.gov.cn/zhengce/zhengceku/2018-12/31/content_5437823.htm"
+  - title: "Anunci núm. 194 de 2018 de l'Administració General de Duanes de la Xina (qüestions de supervisió de les importacions i exportacions minoristes de comerç electrònic transfronterer)"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Cai Guan Shui [2016] núm. 18 (política fiscal per a les importacions minoristes de comerç electrònic transfronterer)"
+    url: "https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html"
+  - title: "Anunci de l'Administració Tributària Estatal i de l'Administració Estatal de Divises sobre l'arxiu fiscal dels pagaments a l'exterior per serveis i altres conceptes (núm. 40 de 2013, modificat per l'Anunci núm. 31 de 2018)"
+    url: "https://www.chinatax.gov.cn/chinatax/c102449/c5219874/content.html"
+---
+
+Amb una comanda en dipòsit duaner ja en explotació, els diners i els documents segueixen cadascun el seu camí, i cadascun porta els seus punts de control. La línia del flux de fons mira els lots de liquidació: els diners s'abonen per lots sencers, en cicle, a l'entitat nacional, sense remeses exteriors comanda per comanda. La línia del flux de facturació mira els documents: només amb els cinc documents complets tenen la remesa exterior, la deducció fiscal i l'auditoria una premissa comuna. Les dues línies convergeixen en la mateixa comanda, i el punt de trobada són els sis fites de M1 a M6.
+
+![Dos fitxes del flux de fons i del flux de facturació, cadascuna amb els seus punts de control; dues fitxes laterals a la dreta expliquen per què el flux de facturació es diferencia i com es consulten els documents; a sota, els quatre fluxos d'informació, compliment, fons i facturació convergeixen en els M1 a M6 d'una comanda](/images/blog/bonded-order-funds-invoicing-flow-china/funds-invoicing-two-flow-checkpoints.webp)
+
+## Com es mouen els diners, els cinc nodes del flux de fons
+
+Els nodes del flux de fons s'alineen en una línia: pagament, concentració, liquidació, cobrament nacional, remesa exterior, amb el punt de control al final, que verifica els documents i la declaració fiscal. La liquidació corre per lots en cicle, amb l'entitat nacional com a únic cobrador, sense remeses exteriors comanda per comanda; la comissió s'imputa comanda per comanda segons atribució i es reté i s'abona cada mes, amb factures i justificants de retenció arxivats període a període; el compte de fons s'obre en unes 6 setmanes, en paral·lel amb el muntatge de la botiga, sense ocupar temps addicional de llançament.
+
+Aquests nodes es poden aparellar un a un amb una peça concreta a la interfície del panell de gestió: la mostra de l'extracte de liquidació i els registres del flux de fons i dels lots de liquidació són al sistema, i la verificació no demana buscar material a part. El lot és la unitat bàsica d'aquest flux; la conciliació, la remesa exterior i el rastreig van tots pel lot.
+
+## Com es guarden els documents, què és la pila dels cinc documents
+
+Els nodes del flux de facturació són els mateixos cinc: comprovant de pagament, guia de transport, declaració duanera, rebut d'impostos i extracte de liquidació, i el punt de control verifica que els cinc siguin a l'arxiu. Tenir els cinc complets és la premissa comuna de tres coses: remesa exterior, deducció fiscal i auditoria a punt; si en falta una sola, cap de les tres no avança. L'extracte de liquidació es genera automàticament per lot, des de la mateixa font que el llibre de gestió del flux de fons, i les xifres quadren.
+
+Els registres dels tres fluxos de diners, mercaderia i informació no tenen un llibre de gestió a part; convergeixen tots en aquests cinc documents. Una pila de documents segueix una comanda de cap a cap, i alhora posa els comptes i l'inventari al mateix nivell.
+
+## Per què el flux de facturació és un flux propi
+
+Aquesta pila de justificants té quatre usos: remesa exterior, deducció fiscal, auditoria i requeriments dels reguladors. Els quatre usos comparteixen la mateixa base documental, i una pàgina que falta trenca la cadena; per això el flux de facturació corre com a flux propi, amb el seu propi punt de control, en paral·lel amb el flux de fons.
+
+La cadena d'importació és especialment estricta amb la coincidència: els cinc documents han de quadrar sobre la mateixa comanda, i l'ús creuat entre comandes es destaca element per element. La disciplina de segmentació dels fons queda escrita a l'acord, i les mostres de lots es poden consultar lot a lot a les captures de pantalla de la interfície; disciplina més mostres és l'estat habitual d'aquest flux.
+
+## Com es consulten els documents, com es quadren els comptes
+
+La conciliació va pel número de lot, verificada lot a lot al llibre de gestió del flux de fons; la consulta de documents va pel número d'arxiu, i els documents es treuen del rastrejador de punts de control. Els dos llibres de gestió s'arxiven amb els lliurables, disponibles a demanda, i cap requeriment no obliga a muntar material a correcorra.
+
+## Quatre fluxos convergeixen en una comanda
+
+Fer una comanda mou quatre fluxos alhora: el flux d'informació torna la resposta dels tres documents, el flux de compliment completa la verificació d'identitat, el flux de fons incorpora aquest pagament a la liquidació per lots, i el flux de facturació genera l'extracte de liquidació en pas. Els quatre fluxos inscriuen els registres punt per punt als punts de control de M1 a M6, i cada pas d'una comanda, des de la selecció de producte fins a la comptabilització de la comissió, es pot aparellar amb un registre.
+
+## Una comanda camina de M1 a M6
+
+El camí de la comanda té 6 passos i 4 interfícies clau, i el rol A que assumeix la responsabilitat total a la matriu de responsabilitats és exactament 1. M1 selecció de producte i accés al mercat: es dispara amb les entrades completes, la porta és la documentació, i produeix la llista i els codis HS; l'executem nosaltres, i les entrades les aporteu vós. M2 entrada a la zona: la porta és el llibre de gestió del dipòsit, i produeix el llibre de gestió i la vista d'inventari. M3 publicació dels productes: la porta és la revisió de les afirmacions, i produeix la conclusió de la revisió i el text de divulgació.
+
+M4 comanda: la porta és la identitat i la divulgació, i produeix els registres d'identitat i de divulgació. M5 duanatge: es dispara amb el pagament completat, la porta és la verificació creuada dels tres documents i del contingent, i produeix la conclusió de verificació i la deducció del contingent. M6 liquidació i comissió: es dispara amb l'alliberament, la porta és el compliment del pagament de comissions, i produeix la llista de pagament de comissions; executem nosaltres, i les regles les confirmeu vós. Els passos els orquestrem nosaltres; vós només aporteu entrades a M1 i confirmeu regles a M6, sense necessitat d'una interfície enllaç per enllaç al mig.
+
+![Corroboració des de la pàgina veïna, el camí de 6 passos d'una comanda d'extrem a extrem de M1 a M6 amb els repartiments de responsabilitat de les 4 interfícies clau; a sota, dues taules de demostració, la verificació creuada de la cronologia del pagament de la comanda i el seguiment d'alliberament i lliurament](/images/blog/bonded-order-funds-invoicing-flow-china/order-path-m1-m6-responsibility-splits.webp)
+
+La divisió de tasques entre les quatre interfícies queda escrita a la mateixa pàgina: la vostra empresa s'ocupa del producte i de les decisions, la plataforma de les comandes i de la liquidació, el soci d'execució de l'emmagatzematge i del duanatge, i els reguladors de la declaració i de la inspecció. Els set fluxos tenen un únic cos coordinador, que sosté el rol A de responsabilitat total de la matriu; les fronteres de competències de les quatre interfícies queden escrites al pla. Els comptes i les dades es queden a les vostres mans, l'orquestració i els registres queden als nostres, i el relleu no deixa zones en blanc.
+
+## Una comanda, tot el recorregut
+
+Les taules de demostració contenen una comanda: número de comanda SO260922-0417, comprovant de pagament PAY260922-0417, cronologia normal. En fer la comanda, els registres d'identitat i de divulgació van complets, el pagament completat dispara el duanatge, la verificació creuada dels tres documents i la del contingent passen, es genera el número de llista QD260922-0417, i el número d'enviament exprés EX7726001 apareix com a lliurat. Després del lliurament ve l'alliberament, la comanda entra a la liquidació per lots, i els cinc documents (comprovant de pagament, guia de transport, declaració duanera, rebut d'impostos i extracte de liquidació) s'arxiven per lot; el número de lot es quadra al llibre de gestió del flux de fons, i el número d'arxiu permet extreure els documents del rastrejador de punts de control.
+
+La segona fila de la mateixa taula és el contraexemple: la cronologia del comprovant de pagament de SO260921-0088 va endarrerida 2 hores, i el banc de treball de verificació creuada llista aquestes anomalies fila per fila, comanda per comanda; a la taula d'alliberament i seguiment, QD260921-0088 encara és en trànsit, l'estat de lliurament no ha arribat, i l'acció d'alliberament s'atura davant la porta de M6. Les dues taules de demostració diuen el mateix: cronologia, estat i números de document consultables comanda per comanda, i les anomalies apareixen sense que ningú hagi de remenar registres a mà.
+
+Si es llegeixen junts els punts de control dels dos fluxos, la disciplina operativa queda en dues paraules, complet i quadrat: els cinc documents complets, els lots quadrats. Fixeu primer l'entitat de liquidació, el cicle de liquidació i les regles d'arxivatge, i després feu el calendari de llançament; cada remesa, deducció i requeriment posterior tindrà la mateixa pila de justificants a què apuntar. Els números de document, les cronologies i els estats de lliurament de la interfície de demostració són il·lustratius; el criteri pràctic segueix les factures del període vigent, les exportacions de la plataforma i els requisits de les autoritats competents.
+
+El flux de fons i el flux de facturació són els que més fàcilment es prenen per tràmits de rerepanell després del llançament, i només quan una remesa s'encalla a la revisió documental o una deducció és impugnada per l'administració tributària es torna enrere a completar documents. El moment d'arxivatge dels cinc documents queda fixat en el mateix instant de l'alliberament de la comanda, i les mostres de lots deixen rastre lot a lot; posar els punts de control al davant costa molt menys que refer la cadena després.
+
+Si voleu que, d'acord amb la vostra entitat de liquidació i l'arranjament de botiga actuals, el flux de fons i el flux de facturació quedin connectats en un sol llibre de gestió capaç de conciliar per lot i d'extreure documents, aneu a [Contacteu-nos](/ca/packages/).

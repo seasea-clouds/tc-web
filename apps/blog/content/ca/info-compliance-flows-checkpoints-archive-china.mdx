@@ -1,0 +1,98 @@
+---
+title: "Com dos fluxos deixen evidència, el registre de punts de control i els cinc documents"
+date: "2027-05-25"
+category: "E-commerce"
+excerpt: "Tres documents a la duana en temps real, nou interfícies amb estat diari. El flux d'informació encerta les dades; el de compliment deixa traça, un arxiu per punt de control."
+references:
+  - title: "Caishuiguan [2016] núm. 18 del Ministeri de Finances, l'Administració General de Duanes i l'Administració Estatal de Tributació, política fiscal d'importació minorista per comerç electrònic transfronterer"
+    url: "https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html"
+  - title: "Anunci núm. 486 de 2018 de 6 ministeris encapçalats pel Ministeri de Comerç, sobre la millora de la supervisió de les importacions minoristes per comerç electrònic transfronterer"
+    url: "https://cws.mofcom.gov/gztz/art/2018/art_b7becbacb58a4d0d8bf17b91a168f044.html"
+  - title: "Anunci núm. 194 de 2018 de l'Administració General de Duanes sobre la supervisió de les importacions i exportacions minoristes per comerç electrònic transfronterer"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+---
+
+Que una consulta de l'autoritat reguladora es pugui respondre no depèn de quants menús hi hagi al back-office, sinó de si cada punt de control té un número d'arxiu amb què recuperar els documents. Que els tres documents s'enviïn al despatx de duanes en temps real i que les nou interfícies registrin el seu estat cada dia resol que les dades arribin correctament; que els sis punts de control tinguin cadascun un arxiu de cinc documents consultable per número resol que el procés deixi rastre. Tots dos fluxos convergeixen en el mateix número de comanda, i només així, durant una verificació, es pot recórrer des d'una comanda fins al document d'entitat previ a la presentació. El criteri pel qual la comanda, el document de pagament i el full de ruta s'alliberen després de comparar-los un per un figura a l'Anunci núm. 486 del 2018 del Ministeri de Comerç i altres cinc departaments i a l'Anunci núm. 194 del 2018 de l'Administració General de Duanes.
+
+## On queden les 3 notificacions de risc marcades al tancament de la comanda
+
+El registre de notificacions de risc és la primera pantalla del back-office. Tres targetes expliquen a quina etapa correspon, què s'hi registra i on es reflecteix. La primera diu que això és el registre de notificacions de risc, amb una notificació per fila i pestanyes per a totes, les marcades i les sense marcar; cada fila conserva l'element, el contingut, si és obligatòria, l'hora de marcatge, el número de comanda i el número d'arxiu. La segona diu que dos registres apunten a la comanda SO260922-0555: un explica que els béns transfronterers no admeten la devolució sense causa en set dies i l'altre que cal comprovar l'etiqueta electrònica en xinès, amb els números d'arxiu DA2609-0301 i 0302. La tercera diu que també es registra què va confirmar el consumidor a la pàgina de pagament, per poder tornar a la comanda original.
+
+La barra superior recorre botiga, galeria, CRM, distribució, màrqueting, promoció, dades, atenció al client, contingut, serveis de valor afegit, més i aplicacions de productes saludables transfronterers. La columna esquerra mostra, dins de la galeria, la gestió de comandes amb totes les comandes, la gestió d'expedicions, la gestió d'embalatge, els fulls de ruta locals, les comandes de compra col·lectiva de membres i els missatges de comandes de canal; més avall hi ha la gestió de postvenda amb comandes de postvenda i comandes de canvi, i les eines de gestió. El títol del panell principal indica tres notificacions de risc i el seu marcatge, i la capçalera enumera element, contingut, obligatòria, hora de marcatge, número de comanda, número d'arxiu i operacions.
+
+- Notificació de risc u, béns transfronterers fora de la devolució de 7 dies sense motiu, obligatòria, 2026-09-22 14:06, SO260922-0417, DA2609-0301, detall i registre;
+- Notificació de risc dos, etiqueta de producte en llengua estrangera a comprovar, obligatòria, 2026-09-22 14:06, SO260922-0417, DA2609-0302, detall i registre;
+- Notificació de risc tres, quota anual personal no reemborsada un cop usada, obligatòria, 2026-09-22 14:07, SO260922-0417, DA2609-0303, detall i registre;
+- Notificació de risc u, béns transfronterers fora de la devolució de 7 dies sense motiu, obligatòria, 2026-09-21 09:31, SO260921-0088, DA2609-0304, detall i registre;
+- Notificació de risc tres, quota anual personal no reemborsada un cop usada, obligatòria, 2026-09-19 20:12, SO260919-0305, DA2609-0305, detall i registre.
+
+Les cinc files són totes obligatòries, i les dues entrades de detall i registre hi són a cada fila. Sota la llista s'indica un total de 5 registres, 20 per pàgina, amb el paginador aturat a 1 i dues fletxes disponibles. L'hora de marcatge i el número d'arxiu es conserven aparellats, de manera que, per explicar en quin moment el consumidor va confirmar quin element, n'hi ha prou amb recuperar el registre pel número DA, sense haver de demanar captures de pantalla a la botiga.
+
+![Demostració de notificacions de risc i confirmació: tres targetes, cinc files del registre de tres notificacions amb marques, obligatòries, hores, números de comanda, números d'arxiu i paginació de cinc registres a vint per pàgina](/images/blog/info-compliance-flows-checkpoints-archive-china/risk-notices-acknowledgements-demo.webp)
+
+El criteri del límit anual personal de transaccions s'aplica segons el document Caishuiguan [2016] núm. 18; com s'ajusta el límit un cop consumit es determina pel registre del moment en què s'allibera la llista de declaració.
+
+## Com es reparteixen la feina 2 fluxos i qui es comprova primer en una consulta
+
+Dels set fluxos de negoci, el flux d'informació i el flux de compliment s'escriuen per separat en aquesta pantalla. El flux d'informació garanteix que les dades es transmetin correctament: els tres documents s'envien en temps real, les nou interfícies registren el seu estat cada dia i tot queda recollit a la vista de la cadena de subministrament de S11. El flux de compliment garanteix que el procés deixi registres: els sis punts de control s'incorporen al registre i queden recollits a l'auditoria de compliment de S25. En una mateixa comanda, tots dos fluxos es troben en el mateix punt de control.
+
+La línia de temps ordena en una fila els sis punts de decisió que ha de recórrer una comanda: la resolució d'accés, la comparació, la verificació d'identitat, la verificació del límit, la revisió de les afirmacions i la regla de no revenda. Cada punt és alhora una comprovació de dades del flux d'informació i un rastre del flux de compliment. Les constants i els números d'anunci segueixen la taula de constants regulatòries, i el criteri de decisió dels punts de control es regeix per la resposta a la consulta de l'autoritat; cap dels dos no escriu una versió diferent a la pàgina.
+
+![Resum d'informació i compliment: cinc fets del flux d'informació, quatre del de compliment, sis files d'estat al centre de compliment i facturació, repartiment de la feina i línia de temps de sis punts](/images/blog/info-compliance-flows-checkpoints-archive-china/info-compliance-flows-overview.webp)
+
+## Què compta com un retorn correcte dels 3 documents
+
+El punt de control del flux d'informació verifica l'enviament en temps real dels tres documents. Aquests tres documents arriben al sistema de despatx de duanes en temps real, connectat amb més de 50 ports i més de 70 ERP; en comprovar la seqüència de cada expedició, la comanda i el pagament s'envien primer i el full de ruta s'escriu en el moment de l'alliberament, i si l'ordre s'inverteix cal tornar a declarar. Les dades romanen al país, i el comprador inclòs a la llista de control s'ha de confirmar en un termini de 15 dies. Les nou interfícies inclouen l'empenta de comandes i el retorn de pagaments, registren el seu estat cada dia i una interfície que no estigui sana es detecta el mateix dia, sense esperar la conciliació mensual.
+
+Les proves a la interfície són dues: la consola de comparació mostra si els tres documents coincideixen un per un, i el registre d'estat de les interfícies mostra quina de les nou va caure i quin dia. Aquests dos llocs no són decoració per a l'equip d'operacions, sinó els registres originals amb què, durant una consulta, s'explica quan van arribar les dades i si hi va haver alguna interrupció. El flux d'informació només s'encarrega que les dades arribin correctament i no pot substituir el flux de compliment a l'hora de respondre qui va signar aquest pas.
+
+## Quins documents deixa cadascun dels 6 punts de control
+
+El punt de control del flux de compliment verifica que els sis punts deixin rastre. Els punts de control estan incrustats en cada flux, i cadascun deixa un registre que es pot recuperar; la revisió de les afirmacions cobreix tres tipus de materials: les pàgines de detall del producte, els guions de retransmissió en directe i els materials dels creadors. La revisió de la presentació, la comprovació triple dels lliurables i la resposta a la consulta tenen cadascuna la seva pròpia interfície de rastre. Les proves a la interfície són el registre de punts de control i l'arxiu de cinc documents, i el panell dret n'és la vista en temps real.
+
+La capçalera del centre de compliment i facturació és punt de control, arxiu de cinc documents i estat, amb sis files que s'hi registren una a una:
+
+- Revisió de qualificació de l'entitat, document d'entitat i document de qualificació, completat;
+- Revisió d'accés SKU, document de presentació i document d'etiqueta, completat;
+- Comprovació de coherència de 3 documents, comanda, pagament i full de ruta, completat;
+- Revisió de la llista de declaració, llista de declaració i declaració duanera, en curs;
+- Cancel·lació d'alliberament i lliurament signat, nota d'alliberament i nota de lliurament signat, no iniciat;
+- Arxiu d'autocontrol anual, registre d'autocontrol i nota de rectificació, no iniciat.
+
+Sota el panell s'indica un total de 12 registres, 20 per pàgina, amb el paginador aturat a 1; el peu de figura diu demostració de la interfície del sistema amb punts de control i cinc documents. Els tres estats, completat, en curs i no iniciat, tenen cadascun el seu color, i una fila amb l'estat buit no es pot prendre per completada; cal aclarir primer l'estat i parlar després del número d'arxiu, i aquest ordre no es pot invertir.
+
+## Com llegir les 9 files del registre de punts de control
+
+Les tres targetes d'aquesta pantalla de punts de control i arxiu fixen els camps. La primera diu que el registre té un punt de control per fila, amb pestanyes per a totes, abans de la declaració, durant el despatx i després del lliurament, i que cada fila conserva el document, el moment d'activació, el responsable, el número d'arxiu, l'hora de finalització i l'estat. La segona diu que la revisió de les qualificacions de l'entitat correspon al document d'entitat i al document de qualificació, que l'accés de l'SKU correspon al document de presentació i al document d'etiqueta, i que tant la fase prèvia a la presentació com la prèvia a la posada en venda les completa el lloc de compliment. La tercera situa el flux de compliment entre el flux de fons, el flux d'informació, el flux de compliment i el flux de facturació, i assigna a cada punt de control un número d'arxiu amb què recuperar-ne els documents.
+
+La barra superior i la columna esquerra són les mateixes que a la pantalla de notificacions de risc; el títol del panell principal passa a ser registre de punts de control i arxiu de cinc documents, i la capçalera enumera punt de control, arxiu de cinc documents, moment d'activació, responsable, número d'arxiu, hora de finalització i estat. Nou files s'hi registren una a una:
+
+- Revisió de qualificació de l'entitat, document d'entitat i document de qualificació, abans de la presentació, rol de compliment, GD2609-001, 2026-09-18, completat;
+- Revisió d'accés SKU, document de presentació i document d'etiqueta, abans de la posada en venda, rol de compliment, GD2609-002, 2026-09-19, completat;
+- Comprovació de coherència de 3 documents, comanda, pagament i full de ruta, abans de la declaració, rol duaner, GD2609-003, 2026-09-20, completat;
+- Revisió de la llista de declaració, llista de declaració i declaració duanera, en la declaració, rol duaner, GD2609-004, finalització buida, en curs;
+- Cancel·lació d'alliberament i lliurament signat, nota d'alliberament i nota de lliurament signat, després de l'alliberament, rol d'operacions, número d'arxiu i finalització buits, no iniciat;
+- Arxiu d'autocontrol anual, registre d'autocontrol i nota de rectificació, cada trimestre, rol de compliment, número d'arxiu i finalització buits, no iniciat;
+- Mostratge de compliment d'etiquetes, document d'etiqueta i document de presentació, després de la posada en venda, rol de compliment, GD2609-005, finalització buida, en curs;
+- Comprovació del registre de comissions, nota de comissió i nota de liquidació, després de la liquidació, rol financer, número d'arxiu i finalització buits, no iniciat;
+- Revisió d'accés SKU, document de presentació i document d'etiqueta, abans de la posada en venda, rol de compliment, GD2610-001, 2026-09-19, completat.
+
+Sota la llista s'indica un total de 12 registres, 20 per pàgina, amb el paginador aturat a 1. Que el número d'arxiu estigui buit no vol dir que el punt de control no existeixi, sinó que encara no ha arribat el moment d'emetre els documents; a les files amb estat no iniciat el responsable ja consta al registre, i durant una consulta es pot respondre qui n'és responsable i quin document falta.
+
+![Demostració de punts de control i arxiu de documents: tres targetes, nou files del registre de punts i cinc documents, moments d'activació, responsables, números d'arxiu, hores de finalització, tres colors d'estat i paginació de dotze registres a vint per pàgina](/images/blog/info-compliance-flows-checkpoints-archive-china/checkpoints-document-archive-demo.webp)
+
+## Recórrer la fila GD2609-003
+
+Prenem com a cas a investigar la comprovació de coherència dels tres documents completada el 2026-09-20. Aquesta fila indica que s'activa abans de la declaració, que n'és responsable el lloc de duanes, que el número d'arxiu és GD2609-003 i que els documents són la comanda, el document de pagament i el full de ruta. Només quan, a partir del número d'arxiu, es recuperen els tres documents i es torna al flux d'informació per comprovar la seqüència dels tres, amb la comanda i el pagament enviats primer, el full de ruta escrit en el moment de l'alliberament i cap caiguda registrada aquell dia al registre d'estat de les interfícies, aquesta fila es considera coherent.
+
+Recorrent enrere pel mateix número de comanda: la revisió de qualificacions de l'entitat GD2609-001 es va completar el 2026-09-18 i la revisió d'accés de l'SKU GD2609-002 el 2026-09-19, totes dues anteriors a la comprovació dels tres documents prèvia a la declaració; si es continua enrere fins a la pàgina de pagament, els números DA de les notificacions de risc i les hores de marcatge apareixen aparellats fila a fila. Quatre etapes comparteixen el número de comanda, i una sola cerca les recupera totes.
+
+Considerem un altre cas: a la revisió de la llista de declaració GD2609-004 l'hora de finalització està buida i l'estat és en curs; encara que el número d'arxiu hi sigui, els documents no són complets, i el servei d'atenció al client només pot respondre que s'hi està treballant, no que està completat. El número d'arxiu és la clau per recuperar documents, no una prova de finalització; només separant aquestes dues coses al registre s'evita donar, durant una consulta, una resposta més completa que els fets.
+
+## Fixar primer el número d'arxiu
+
+El flux d'informació fa arribar les dades correctament, el flux de compliment deixa rastre del procés, i tots dos es troben en el mateix punt de control. Abans de posar en marxa el sistema cal fixar tres coses: un únic número de comanda que travessi tots dos fluxos, un número d'arxiu per a cadascun dels sis punts de control i, a cada fila, el moment d'activació, el responsable i l'estat. La resta d'interfícies es poden connectar a poc a poc: les nou interfícies registren el seu estat cada dia, i connectar-n'hi una més no canvia la forma del registre.
+
+A les targetes, dos registres de notificacions de risc apunten a SO260922-0555, mentre que les tres primeres files de la taula porten SO260922-0417; a l'última fila, el número d'arxiu GD2610-001 i l'hora de finalització 2026-09-19 tampoc no coincideixen en el mes. Aquestes són diferències de criteri pròpies de les captures d'una interfície de demostració, on les dates, els números de comanda i els números d'arxiu serveixen per explicar com es genera una fila i com es recorre enrere; en la pràctica cal atenir-se, fila per fila, al número d'arxiu, a l'hora de finalització, a la factura del període i als requisits de l'autoritat competent, i l'estat es regeix pel registre del sistema d'aquell dia.
+
+Per connectar el registre de punts de control i l'arxiu de 5 documents en una cadena rastrejable per a la vostra botiga, magatzem i entitat de liquidació actuals, [contacteu-nos](/ca/packages/).

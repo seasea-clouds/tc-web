@@ -1,0 +1,67 @@
+---
+title: "Kundeanskaffelse i Kina, arkitektur for konvertering i faser og kanaler"
+date: "2027-07-06"
+category: "E-commerce"
+excerpt: "Budgetten følger konverteringen: undervisning i starten, hovedkanal i optrækningen, medlemmers genkøb. Overholdelse fra dag én, tre gennemgange, medlemskab efter lokale regler."
+references:
+  - title: "Kinas reklamelov (udgave 2015, ændringer 2018, art. 17, 18, 46)"
+    url: "https://www.gov.cn/guoqing/2021-10/29/content_5647620.htm"
+  - title: "Regler for forvaltning af internetreklame (bekendtgørelse nr. 72 SAMR, i kraft fra 1. maj 2023)"
+    url: "https://www.gov.cn/gongbao/2023/issue_10506/202306/content_6885261.html"
+  - title: "Kinas lov om beskyttelse af persondata (vedtaget 20. august 2021, art. 38, 39)"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+---
+
+Hvor man retter anskaffelsesbudgettet hen og hvor meget det giver tilbage, bestemmes af på hvilken kanal konverteringsbetingelserne opfyldes, ikke af at dække alle fire kanaler på én gang. Arkitekturen fra modul S7 i kildematerialet er tre vækstfaser mod fire kanaler: kold start fra nul til sjette måned, opskalering fra sjette til attende, fastholdelse efter den attende måned, hvor Xiaohongshu, Tmall Global og JD Worldwide, Douyin og WeChat private kreds bærer forskellig last i hver fase. Overholdelsen er klar fra første dag: reklamemateriale går gennem tre gennemgange, medlemsprogrammet genopbygges efter kontinentets regler, medlemsoplysningerne bliver i Kina. Ved siden af arkitekturen arbejder et månedsoverblik over betalt trafik pr. kanal: hvor pengene gik hen og hvad der kom tilbage, ses på samme række.
+
+![S7's anskaffelses- og vækstarkitektur: boblediagram med tre faser og fire kanaler, til højre overholdelsespanelet og omkostningsstrukturen, nedenfor vækstens tre ben og den private kreds' trin, i nederste højre hjørne en miniature af oversigten](/images/blog/customer-acquisition-china-converting-demand/s7-acquisition-growth-channel-matrix.webp)
+
+Denne side kommer fra kapitel seks i brandets materiale, kapitlet Ready to Grow, modul S7, titlen Acquisition and Growth: Architecture for Converting Demand. Til venstre kanalfordelingsmatricen, oppe til højre overholdelsespanelet og omkostningsstrukturen, nede til venstre vækstens tre ben og den private kreds' tre trin, i nederste højre hjørne en indlejret miniature af oversigtens demo. Denne artikel gennemgår S7 sammen med fuldskærmsdemonstrationen på næste side, man behøver ikke læse andre moduler af kapitlet først.
+
+## Matricen for fordeling af tre faser og fire kanaler
+
+Matricen stiller tre vækstfaser lodret og fire kanaler vandret, én celle, én boble, boblens størrelse viser fasens investeringstjensthed i kanalen: stor betyder hovedtryk, mellem støtte, lille langsom indgang. Læst celle for celle ses det, at budgettet ikke deles ligeligt, men skifter hovedslagmark pr. fase.
+
+Kold start, månederne nul til seks: Xiaohongshu holder den store boble til undervisning i sammensætning, Tmall Global og JD Worldwide den mellemste til tillidskonvertering, Douyin endnu uden udgifter, WeChat private kreds den store boble til første køb via prøvepakken. Beviser for salg findes ikke i denne fase, så indholdet forklarer først sammensætningen, butikkerne fanger tilliden hos de søgende, og den private kreds lukker den første ordre med prøven.
+
+Opskalering, månederne seks til atten: Xiaohongshu falder til melleboblen for opskalering af indhold, Tmall Global og JD Worldwide stiger til den største boble som hovedkonverteringskanal, Douyin stiger til den største boble for voluminsendelser, WeChat private kreds holder melleboblen til påmindelser om genkøb. Hovedslagmarken flytter fra Xiaohongshu til markedspladserne og Douyin, indholdets opgave skifter fra undervisning til volumen.
+
+Fastholdelse, efter den attende måned: mund til mund, lagerindkøb, fortsættelse af hitprodukter og medlemmers genkøb sidder i mellemstore og store bobler, hvor medlemmernes genkøb i den private kreds er størst. Væksten i denne fase kommer ikke fra ny trafik, men fra dem der allerede har købt og vender tilbage for at tale.
+
+## Compliantpanelet klar fra første dag
+
+Til højre for matricen ligger overholdelsespanelet med fire punkter, alle fastlægges på startdagen, de tilbygges ikke efter opskaleringen.
+
+Promotorniveau: intet lager, ingen videresalg, ikke dybere end to niveauer. Tildeling og afregning: GMV-tildeling på tydelig grund, kontrakter underskrives af det lokale selskab, skattefradrag varetages på kontinentet. Materiale: hvert reklame- og influenserscript går gennem tre gennemgange før udgivelse. Medlemsprogrammet: flyttes ikke helt fra den udenlandske ordning, men genopbygges efter kontinentets regler, i overensstemmelse med hele bogens "nul hændelser"-grundlag; medlemsoplysninger bliver på kontinentet, hver udførsel vurderes punkt for punkt efter grænseoverskridende artikler i persondataloven.
+
+## Omkostningsstrukturen i størrelsesordener fra offentlige kilder
+
+Omkostningsstrukturen bærer tre rækker. Platformprovisionen går i intervallet 0.5%–5% pr. kategori, tal af rettende størrelse fra offentlige kilder; øvrige poster dækker betalingsgebyrer, betalt trafik, indholdsproduktion og provisioner; verificering betyder små skridt og ugentlig kontrol af tilbagebetaling. Alle tre føder den senere følsomhedsanalyse i enhedsøkonomien: budgettet lempet eller strammet et trin, tallene skal følge med.
+
+## Vækstens tre ben og den private kreds' tre trin
+
+Arkitekturen opsummeres i tre ben: indholdssåning fører genkendelse, konvertering på platformen lukker handler, genkøb i den private kreds holder fastholdelsen. Den private kreds går i tre trin: brandets officielle miniprogram plus følgere fra indhold plus prøvepakke til første ordre; tre værktøjer, WeCom-grupper, medlemskortet i miniprogrammet og påmindelser om genkøb.
+
+Sammenkædningen af vækst og overholdelse ligger i samme blok: reklameindhold går gennem tre gennemgange før udgivelse, og en anden leveranceplads er reserveret, så opskalering tilføjer kanaler uden ombygning af leverancen. Om takten siges det direkte: åbn ikke alle kanaler på én gang, bevis først indhold og konvertering i én kanal, gentag derefter på den anden.
+
+## Oversigten over betalt trafik læser udgift og afkast pr. kanal side om side
+
+Matricen svarer, hvor man skal investere; oversigten svarer, hvordan man verificerer efter investeringen. I brugerfladedemonstrationen giver oversigten over betalt trafik hver kanal én række, med fanerne indeværende måned, forrige og kumulativ sum, kolonnerne går udgift, visninger, CTR, ordrer, GMV-omsætning, ROI og status, så investering og afkast stilles op i samme række.
+
+| Kanal | Udgift (yuan) | Visninger | CTR | Ordrer | GMV-omsætning (yuan) | ROI | Status |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Indholdssåning | 42000.00 | 486000 | 3.2% | 208 | 187200.00 | 4.5 | I gang |
+| Kort video | 58000.00 | 724000 | 2.6% | 186 | 167400.00 | 2.9 | I gang |
+| Den private kreds' fællesskab | 18000.00 | 96400 | 8.1% | 242 | 217800.00 | 12.1 | I gang |
+| Medlemspleje | 12000.00 | 52100 | 11.4% | 296 | 266400.00 | 22.2 | I gang |
+| I alt | 130000.00 | 1358500 | 3.9% | 932 | 838800.00 | 6.5 | I gang |
+
+Gennemgå demodataene med en hel læsning. Begynd med totalrækken for hovedtallet: fire kanaler brugte 130000.00 yuan i måneden og fik 1358500 visninger, 932 ordrer og 838800.00 yuan i GMV-omsætning, samlet ROI 6.5.
+
+Derefter læser vi rollefordelingen pr. række: indholdssåning for 42000.00 yuan og kort video for 58000.00 yuan tager omkring tres procent af udgiften, giver 486000 og 724000 visninger ved ROI 4.5 og 2.9 og trækker rækkevidden; den private kreds' fællesskab for 18000.00 yuan og medlemspleje for 12000.00 yuan bruger meget mindre, klikker på 8.1% og 11.4%, gengiver ROI 12.1 og 22.2 og trækker konvertering og fastholdelse, hvor medlemsplejen vender den mindste udgift til størst GMV-omsætning 266400.00 yuan. På samme række stemmer hvor pengene gik hen og hvad der kom tilbage ved ét blik, og beslutningen om at tilføje eller tilbageholde en celle træffer rækken selv.
+
+![Brugerfladedemonstration af oversigten over betalt trafik: backend for grænseoverskridende helsevarer, fire kanalrækker og totalrækken på én skærm, faner for indeværende måned, forrige og kumulativ sum](/images/blog/customer-acquisition-china-converting-demand/paid-media-dashboard-four-channel-ledger.webp)
+
+To detaljer på skærmen er værd at overtage: nederst er anført, at tallene er demo, registret over betalt trafik i fire kanaler med totalrække og rækkevis ROI på én skærm, og statuskolonnen hænger "i gang" på hver række med indgange til detaljer og log, så hver tals grundlag kan åbnes med et klik.
+
+Afslut med forbeholdene: kanalfordelingen og platformprovisionen 0.5%–5% kommer fra offentlige kilder og er rettende størrelsesordener, ikke tilbud; tallene på oversigten er demodata, der viser, hvordan tavlen læses, ikke nogen rigtig butiks resultater; medlemsprogrammet genopbygges efter kontinentets regler, flyttes ikke helt. For at bygge din egen anskaffelsesarkitektur, gå i samme orden: fastlæg kanalfordelingen efter tre faser, fastsæt de fire overholdelsespunkter første dag, kontrollér derefter udgift og afkast på oversigten ugentligt. I vores pakker til det kinesiske marked er arbejdsmateriale klart til denne matrice og oversigt, tag produktlisten og månedens spendmål med, [kontakt os](/da/packages/).

@@ -1,0 +1,67 @@
+---
+title: "Çində müştəri qazanma və böyümə, üç mərhələ dörd kanallı çevrilmə arxitekturası"
+date: "2027-07-06"
+category: "E-commerce"
+excerpt: "Qazanma çevrilmə şərtləri yerində olan kanalda miqyaslanır. Soyuq startda tərkib təlimi, miqyasda əsas kanal, sonra tövsiyə və üzv təkrar alışı aparıcıdır. Uyğunluq ilk gündəndir."
+references:
+  - title: "Çin Xalq Respublikasının Reklam Qanunu (2015-ci il redaksiyası, 2018-ci il düzəlişi, 17, 18 və 46-cı maddələr)"
+    url: "https://www.gov.cn/guoqing/2021-10/29/content_5647620.htm"
+  - title: "İnternet reklamı üzrə İdarəetmə Qaydaları (Dövlət Bazar İdarəetməsi Baş İdarəsinin 72 saylı əmri, 2023-cü il 1 maydan qüvvədədir)"
+    url: "https://www.gov.cn/gongbao/2023/issue_10506/202306/content_6885261.html"
+  - title: "Çin Xalq Respublikasının Şəxsi Məlumatların Qoruması Qanunu (2021-ci il 20 avqustda qəbul olunub, 38 və 39-cu maddələr)"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+---
+
+Gətirilmə büdcəsi ondan asılıdır ki, çevrilmə şərtləri hansı kanalda yerindədir; dörd kanalı birdən doldurmaq gərəksizdir. S7 arxitekturası üç mərhələ dörd kanaldır: soyuq start 0–6 ay, miqyas 6–18 ay, qoruma 18+ ay. Uyğunluq ilk gündən qurulur, üzv sistemi yerli qaydalarla yenidən qurulur. Pul və gəlir panoda eyni sətirdə yoxlanılır.
+
+![S7 müştəri qazanma və böyümə çevrilmə arxitekturası: üç mərhələ dörd kanallı qabarcıq matrisi, sağda uyğunluq sütunu və maya strukturu, altda üç böyümə istiqaməti və özəl kanalın üç addımı, sağ aşağıda kanal panosunun nümayişi](/images/blog/customer-acquisition-china-converting-demand/s7-acquisition-growth-channel-matrix.webp)
+
+Şəkil Ready to Grow fəslindəndir: modul S7, başlıq Acquisition and Growth: Architecture for Converting Demand. Solda matris, sağda uyğunluq sütunu və maya strukturu, altda üç böyümə istiqaməti və özəl kanalın üç addımı, sağ aşağıda panonun nümayişi var. S7-ni interfeys nümayişi ilə izah edirik; digər modulları oxumağa ehtiyac yoxdur.
+
+## Üç mərhələ dörd kanalın bölgü matrisi
+
+Matrisdə şaquli üç böyümə mərhələsi, üfüqi dörd kanal var; hər xanada bir qabarcıq, ölçüsü o mərhələdə kanala qoyulan gücü göstərir: böyük = əsas təkan, orta = köməkçi, kiçik = yavaş investisiya. Xanaları oxuyarkən büdcə mərhələyə görə baş meydanı dəyişir, hər mərhələ ən yetkin çevrilmə şərti olan kanala əsas yükü qoyur.
+
+Soğuq start 0–6 ay: Xiaohongshu böyük qabarcıqla tərkib təlimi aparır, Tmall Global və JD Worldwide orta qabarcıqla etimadla çevrilmə qurur, Douyin hələ xərcləmir, WeChat özəl kanalı sınaq paketi ilə götürür. Satış dəlili hələ yoxdur; məzmun tərkibi izah edir, mağaza axtarış etimadını qarşılayır, sınaq paketi ilk sifarişi gətirir.
+
+Miqyas dövrü 6–18 ay: Xiaohongshu orta qabarcıqla məzmunu miqyaslandırır, Tmall Global və JD Worldwide ən böyük qabarcıqla əsas çevrilmə kanalı olur, Douyin ən böyük qabarcıqla canlı yayımla həcm toplayır, WeChat özəl kanalı orta qabarcıqla təkrar alışı xatırladır. Baş meydan mağazaya və Douyina keçir; məzmun təlimdən miqyasa dönür.
+
+Qoruma 18+ ayda: şifahi tövsiyə, stok üçün təkrar alış, hit məhsulun davamı və üzv təkrar alışı dörd xanasında orta-böyük qabarcıqlardır, ən böyüyü WeChat özəl kanalının üzv təkrar alışıdır. Bu mərhələdə böyümə artıq alış edən istifadəçinin geri qayıtmasına söykənir.
+
+## Uyğunluq sütunu ilk gündən
+
+Matrisin sağındakı uyğunluq sütunu dörd bənd saxlayır; hamısı işə salınan ilk gün qərarlaşdırılır, miqyasdan sonra əlavə edilmir.
+
+Təqibçilər: mal yığılmır, satılmır, səviyyə iki qatı keçmir. Atribusiya: GMV meyarı aydın, müqavilə yerlidir, vergi daxildə ödənilir. Materiallar: reklam və influencer ssenarilərində üç təftiş. Üzv sistemi: xarici model köçürülmür, yerli qaydalarla qurulur, «qəzasız» meyarlı üzv məlumatları daxildədir, çıxış PIPL maddələri ilə yoxlanılır.
+
+## Maya strukturu açıq mənbələrə görə
+
+Maya üç ölçü mənbəyi verir. Platforma komissiyası 0.5%–5% aralığındadır, açıq mənbə rəqəmidir. Digər kalemlər: ödəniş rüsumu, ödənişli media, məzmun istehsalı, komissiya. Təsdiq: kiçik addım, həftəlik geri qazanc. Bu üçü vahid iqtisadiyyat modelinin həssaslıq təhlilinə girir; büdcə yumşalsa və ya sıxılsa, hesab izləməlidir.
+
+## Üç böyümə istiqaməti və özəl kanalın üç addımı
+
+Arxitektura üç istiqamətdən ibarətdir: məzmun marketinqi tanınlığı, platforma çevrilməsi satışı, özəl kanal təkrar alışı saxlayır. Özəl kanal üç addımda: rəsmi mini-proqram, məzmunla izləyici cəlbi, ilk sifariş üçün sınaq paketi; alət üçdür: WeCom icması, mini-proqram üzv kartı, təkrar alış xatırlatması.
+
+Böyümə ilə uyğunluğun əlaqəsi eyni hissədə yazılıb: təqib məzmunu nəşrdən əvvəl üç təftişdən keçir. Eyni zamanda ikinci təchizat yeri ayrılır; miqyas kanal artırdıqda təchizat yenidən qurulmur. Tempo açıqdır: əvvəlcə bir kanalda məzmun və çevrilmə sübut olunur, sonra ikinci kanala köçürülür.
+
+## Reklam panosunda kanallar yan yana
+
+Matris haraya yatıracağını cavablandırır, panosu yatırımdan sonra necə yoxlanacağını. Sistem interfeysi nümayişində panoda hər kanal bir sətirdir; bu ay, keçən ay və toplam üç vərəq keçid var. Sütunlar sırayla xərc, göstərmə, CTR, sifariş, GMV, ROI və vəziyyətdir; bir sətirdə xərc və gəlir yan yana durur.
+
+| Kanal | Xərc (yuan) | Göstərmə | CTR | Sifariş | GMV (yuan) | ROI | Vəziyyət |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Məzmun marketinqi | 42000.00 | 486000 | 3.2% | 208 | 187200.00 | 4.5 | Fəaliyyətdə |
+| Qısa video | 58000.00 | 724000 | 2.6% | 186 | 167400.00 | 2.9 | Fəaliyyətdə |
+| Özəl kanal icması | 18000.00 | 96400 | 8.1% | 242 | 217800.00 | 12.1 | Fəaliyyətdə |
+| Üzv idarəetməsi | 12000.00 | 52100 | 11.4% | 296 | 266400.00 | 22.2 | Fəaliyyətdə |
+| Cəmi | 130000.00 | 1358500 | 3.9% | 932 | 838800.00 | 6.5 | Fəaliyyətdə |
+
+Bu nümayiş məlumatlarını tam oxunuşla keçək. Cəmi sətirində əvvəlcə ümumi hesab: dörd kanalın bu ay xərci 130000.00 yuan, müqabilində 1358500 göstərmə, 932 sifariş, 838800.00 yuan GMV gəlir; ümumi ROI 6.5.
+
+Bölgü: məzmun marketinqi 42000.00 yuan, qısa video 58000.00 yuan, altmış faiz xərc; 486000, 724000 göstərmə, ROI 4.5, 2.9, cəlb. Özəl kanal icması 18000.00 yuan, üzv idarəetməsi 12000.00 yuan: CTR 8.1%, 11.4%, ROI 12.1, 22.2, çevrilmə, saxlama; ən az xərcilə 266400.00 yuan GMV. Xərc və gəlir eyni sətirdədir; artırma, yavaşlatma oradandır.
+
+![Sistem interfeysi nümayişində reklam panosu: qida əlavələri çarpaz sərhəd arxa paneli, dörd kanalın xərc dəftəri və cəmi sətri ekranda, bu ay keçən ay toplam üç vərəq](/images/blog/customer-acquisition-china-converting-demand/paid-media-dashboard-four-channel-ledger.webp)
+
+Panoda iki detal götürülməyə dəyər: altda nümayiş məlumatı qeydi var, dörd kanalın dəftəri, cəmi sətri və kanal üzrə ROI bir ekranda; vəziyyət sütunu hamıda Fəaliyyətdədir, detal və jurnal girişi ilə hər sətrin meyarı daxilə açılır.
+
+Yekunda: kanal bölgüsü və 0.5%–5% komissiya açıq mənbə rəqəmidir, təklif deyil; pano nümayiş məlumatıdır; üzv sistemi yerli qaydalarla qurulur. Sıra: kanal bölgüsü üç mərhələdə, dörd uyğunluq qaydası ilk gündə, həftəlik yoxlama. İcra materialları paketimizdədir; məhsul siyahısı və ayın hədəfi ilə [bizimlə əlaqə saxlayın](/az/packages/).

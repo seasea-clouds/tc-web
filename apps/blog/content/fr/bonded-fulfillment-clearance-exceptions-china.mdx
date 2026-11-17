@@ -1,0 +1,68 @@
+---
+title: "Exécution sous douane, écarts de dédouanement repérés en deux heures et lots isolés"
+date: "2027-05-04"
+category: "E-commerce"
+excerpt: "Le stock entre en zone, le dédouanement aligne les trois documents ; un écart ouvre un ticket, repéré en deux heures, corrigé et retransmis en vingt-quatre heures, sans bloquer le lot."
+references:
+  - title: "Avis n° 194 de 2018 de l'Administration générale des douanes sur la supervision des marchandises d'importation et d'exportation au détail du commerce électronique transfrontalier"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Avis des 6 ministères dont le ministère du Commerce sur l'amélioration de la supervision des importations au détail du commerce électronique transfrontalier, Shang Cai Fa [2018] n° 486"
+    url: "https://www.gov.cn/zhengce/zhengceku/2018-12/31/content_5437823.htm"
+  - title: "Ministère des Finances, Administration générale des douanes et Administration nationale des impôts, Cai Guan Shui [2016] n° 18 sur la politique fiscale des importations au détail du commerce électronique transfrontalier"
+    url: "https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html"
+---
+
+Un écart dans l'exécution sous douane ou le dédouanement ne retient pas tout le lot : une commande donne lieu à une ligne de ticket, le champ en défaut est repéré en 2 heures, la correction est retransmise en 24 heures et les autres commandes sont libérées comme à l'ordinaire. Ce chemin suit l'avis n° 194 de 2018 de l'Administration générale des douanes et n'emprunte que le canal du régime 1210, avec quatre sites de zone douanière intégrée et un entrepôt à Hong Kong (Chine) soumis aux mêmes règles. L'étape en défaut, l'auteur de la correction et le moment de la retransmission figurent tous sur le même ticket.
+
+Les trois documents sont alignés dans l'ordre de transmission : la commande et le paiement partent d'abord, le bordereau est ajouté au prélèvement, et chaque commande est vérifiée ; au dédouanement, les trois documents sont recoupés et le quota contrôlé, la mainlevée et le prélèvement ne commencent qu'après validation, et le suivi est renvoyé segment par segment. Tout écart devient un ticket d'exception, avec une trace pour le repérage, la correction et la retransmission, et un responsable nommément désigné. C'est ce qui rend la ségrégation des lots défendable : dans un lot, les commandes en écart sont traitées à part des autres au lieu d'arrêter tout le lot.
+
+![Démonstration de l'exécution sous douane et des écarts de dédouanement : à gauche, la chronologie des trois documents, de la création de la commande à la transmission des trois documents, à la vérification douanière, à la mainlevée, au prélèvement et au traitement des exceptions ; à droite, les sites sous douane, l'alignement des trois documents au dédouanement et les trois traitements des écarts ; en bas, trois tickets d'exception et le registre sous douane.](/images/blog/bonded-fulfillment-clearance-exceptions-china/fulfillment-clearance-exceptions-batch-segregation.webp)
+
+## À quelle étape survient l'écart entre la transmission des trois documents et la mainlevée
+
+Une commande parcourt cinq étapes de la transmission à la mainlevée, et la sortie de chaque étape devient l'entrée de la suivante. Les trois documents sont la commande, le relevé de paiement et le bordereau ; leurs moments diffèrent, et les traces qu'ils laissent aussi.
+
+- Création de la commande : elle naît quand le consommateur commande, la commande et le paiement sont enregistrés et l'identité est vérifiée ; la trace en est la commande et le relevé de paiement.
+- Transmission des trois documents : la commande et le paiement partent d'abord, le bordereau est ajouté au prélèvement et chaque commande est contrôlée ; la trace en est le relevé de transmission.
+- Vérification douanière : le dédouanement recoupe les trois documents et contrôle le quota ; la trace en est le résultat de la vérification et la déduction du quota.
+- Mainlevée et prélèvement : après vérification, la mainlevée est donnée, le prélèvement commence aussitôt et le suivi est renvoyé segment par segment ; la trace en est le relevé de mainlevée et le suivi par segment.
+- Traitement des exceptions : un ticket s'ouvre dès qu'un écart apparaît, repéré en 2 heures, corrigé et retransmis en 24 heures ; la trace en est le ticket et le statut de retransmission.
+
+Du côté de l'exécution sous douane, les marchandises entrent d'abord en zone et le stock est consultable. Les sites possibles sont Yiwu, Hangzhou, Guangzhou, Shenzhen et l'entrepôt de Hong Kong (Chine) ; le prestataire est certifié AEO, les voies maritime, aérienne et combinée mer-air sont toutes praticables, et le statut de la déclaration est visible dans notre propre système. Vous fixez le port définitif, et la liste des sites vous est remise dès le départ, sans attendre l'arrivée des marchandises au port.
+
+Du côté du dédouanement, trois colonnes sont alignées selon le moment. Pour les documents, la commande et le paiement partent d'abord et le bordereau est réinscrit à la mainlevée ; le contrôle du quota intervient au dédouanement, et le dépassement impose un réacheminement ou un retour ; la voie d'exception corrige puis retransmet, et un contrôle non concluant est traité comme ticket d'exception. Les trois colonnes figurent dans un seul tableau de flux, si bien que la personne qui reprend le dossier voit, au numéro de ticket, quelle colonne est bloquée.
+
+La page de démonstration présente d'abord trois tickets en cours, chacun avec les deux accès détails et journal : WO260922-01 accuse un défaut de concordance entre la déclaration et le bordereau, imputé à une réinscription tardive du numéro de bordereau ; WO260921-02 accuse un écart de montant sur le relevé de paiement, imputé à un moment différent de retenue du taux de change ; WO260919-03 accuse des données de destinataire manquantes, imputées à un champ obligatoire non contrôlé sur l'interface. Ces trois tickets suivent ensuite le même processus de retransmission.
+
+## Trois types d'écarts, trois traitements, sans bloquer tout le lot
+
+Quand les trois documents ne concordent pas, le champ en défaut est repéré, puis corrigé et retransmis : le repérage se fait en 2 heures et la correction en 24 heures. Un échec au contrôle est traité comme ticket d'exception et ne retarde pas la mainlevée de tout le lot. Le dépassement de quota bascule en commerce général ou en retour. Les trois traitements deviennent tous des tickets, dont le numéro et le statut de retransmission restent traçables, avec l'auteur et le moment de la correction sur la même ligne. Si l'on retient tout le lot pour une seule commande en écart afin de laisser un opérateur vérifier à la main, le temps perdu retombe sur les commandes qui auraient pu sortir normalement de la zone, ce qui ne vous arrange pas : un lot ne compte souvent qu'une ou deux commandes en écart, et les autres pouvaient sortir comme à l'ordinaire.
+
+Le registre sous douane est le livre de contrôle de l'entrepôt sous douane : l'entrée en zone, le stock en place et la sortie de zone y sont consignés ligne par ligne, les marchandises et le registre doivent concorder, et il sert de base de rapprochement commune au contrôle, à l'inventaire et à la passation. Il consigne par ligne le lot, la durée de conservation et le solde, si bien que la ligne modifiée par un ticket se retrouve dans le registre à travers la variation de solde du même lot et de la même durée de conservation. Ce n'est que lorsque le registre et les tickets concordent que le traitement d'exception du lot est achevé.
+
+![Démonstration de l'interface du flux de statut des tickets d'écart, où le tableau du flux présente six lignes de tickets en huit colonnes, soit le numéro de ticket, le type d'écart, le résultat du repérage, l'action correctrice, le responsable, l'heure de mise à jour, le statut de retransmission et les opérations, avec en bas la mention 6 enregistrements au total et 20 par page.](/images/blog/bonded-fulfillment-clearance-exceptions-china/discrepancy-ticket-flow-system-demo.webp)
+
+## Un ticket, de l'écart à la retransmission
+
+Prenons WO260922-01 comme exemple filé. C'est un défaut de concordance entre la déclaration et le bordereau, imputé à une réinscription tardive du numéro de bordereau ; la correction consiste à réinscrire ce numéro, le responsable est le poste douanier, l'heure de mise à jour est 2026-09-22 17:05 et le statut de retransmission est retransmis. Tant que le numéro de bordereau n'était pas réinscrit, ce ticket restait dans l'onglet À repérer ; une fois complété, la déclaration et le bordereau ont été retransmis sous le même numéro de bordereau, et seulement alors cette commande est passée de l'onglet À retransmettre au statut retransmis, tandis que les autres commandes déjà vérifiées du lot étaient libérées comme à l'ordinaire.
+
+WO260921-02 est d'une autre nature : un écart de montant sur le relevé de paiement, imputé à un moment différent de retenue du taux de change ; la correction unifie ce moment sur celui de la déclaration, le responsable est le poste financier, l'heure de mise à jour est 2026-09-21 15:40 et le statut reste À retransmettre. L'interface sépare trois onglets, À repérer, À corriger et À retransmettre, avec un ticket par ligne et, sur la même ligne, le numéro, le type d'écart, le résultat du repérage, l'action correctrice, le responsable, l'heure de mise à jour et le statut de retransmission. Le traitement des exceptions et l'isolement des lots deviennent ainsi traçables : repérage, correction et retransmission ont chacun un responsable.
+
+Le flux de statut des tickets se déploie en huit colonnes : numéro de ticket, type d'écart, résultat du repérage, action correctrice, responsable, heure de mise à jour, statut de retransmission et opérations. Le bas de l'interface indique 6 enregistrements au total et 20 par page, et chaque ligne se termine par les deux accès détails et journal. Les six lignes suivent toutes la même règle :
+
+- WO260922-01, défaut de concordance entre la déclaration et le bordereau, réinscription tardive du numéro de bordereau, réinscrire le numéro de bordereau, poste douanier, 2026-09-22 17:05, retransmis, détails et journal;
+- WO260921-02, écart de montant sur le relevé de paiement, moment différent de retenue du taux de change, unifier sur le moment de la déclaration, poste financier, 2026-09-21 15:40, À retransmettre, détails et journal;
+- WO260919-03, données de destinataire manquantes, champ obligatoire non contrôlé sur l'interface, ajouter le contrôle du champ obligatoire sur l'interface, poste d'exploitation, 2026-09-19 11:22, retransmis, détails et journal;
+- WO260918-04, dépassement de délai de la requête de quota, fluctuation du canal de requête, rétabli après une tentative automatique, poste douanier, 2026-09-18 09:12, retransmis, détails et journal;
+- WO260917-05, suivi du bordereau manquant, transporteur ayant omis la transmission, transmettre l'interface de suivi, poste d'exploitation, 2026-09-17 16:48, retransmis, détails et journal;
+- WO260916-06, champ de déclaration manquant, éléments de déclaration incomplets, redéclarer après saisie des champs, poste douanier, 2026-09-16 11:30, À retransmettre, détails et journal.
+
+Sur les six lignes, deux tickets restent À retransmettre et les autres sont retransmis ; les corrections de ces deux tickets sont déjà consignées, et seule manque l'étape de retransmission. En rapprochant le numéro de ticket du relevé de transmission des trois documents, puis du lot et de la durée de conservation du registre, un opérateur de première ligne peut voir quelles commandes du lot ont été isolées et lesquelles sont sorties de la zone comme à l'ordinaire, sans attendre un rapprochement par lot pour combler le manque.
+
+## Fixer avant le lancement comment les deux tableaux se relient
+
+Avant le lancement, trois points sont à fixer : la chronologie des trois documents est inscrite dans le tableau de flux selon l'ordre de transmission, le traitement des exceptions est rédigé en actions fixes pour les trois types d'écarts, et les champs du registre figent le lot, la durée de conservation et le solde à la ligne. Si l'un de ces trois points manque, les tickets ne font que s'accumuler et le statut de retransmission reste indéfiniment À retransmettre. L'avis n° 194 de 2018 de l'Administration générale des douanes intègre la mainlevée sur déclaration, la comparaison des trois documents et la vérification de l'identité à la procédure déclarative, tandis que Shang Cai Fa [2018] n° 486 fixe le cadre de supervision des importations au détail du commerce électronique transfrontalier ; les règles sont dans les textes, mais leur point d'atterrissage se trouve dans vos deux tableaux.
+
+Fixez d'abord la chronologie des trois documents, le traitement des exceptions et les champs du registre, puis planifiez la première fournée de commandes sous douane. La façon de repérer un écart, l'étape qui le retransmet et la ligne du registre à laquelle correspond chaque ticket peuvent être arrêtées avant le lancement, sans attendre un rapprochement par lot pour combler le manque. Les numéros de ticket, les heures et les statuts de l'interface de démonstration sont purement illustratifs ; la pratique déclarative réelle suit les exigences de l'autorité compétente, et les quotas ainsi que la liste des ports obéissent aux règles en vigueur pour la période.
+
+Si vous souhaitez, selon votre dispositif actuel d'entrepôt sous douane et de port, relier les tickets d'écart à la chronologie des trois documents et les rapprocher ligne par ligne du registre, [Contactez-nous](/fr/packages/).

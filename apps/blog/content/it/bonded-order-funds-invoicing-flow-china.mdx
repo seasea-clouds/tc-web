@@ -1,0 +1,67 @@
+---
+title: "Fondi e fatturazione di un ordine doganale, cinque documenti per procedere"
+date: "2027-05-11"
+category: "E-commerce"
+excerpt: "Due flussi con checkpoint: fondi a lotti in Cina, provvigioni trattenute al mese, conto ~6 settimane; 5 documenti per l'estero, deduzione, audit; numeri di lotto/archivio, fino a M1-M6."
+references:
+  - title: "Avviso del Ministero del Commercio e di altri 5 ministeri sul perfezionamento della vigilanza sulle importazioni al dettaglio dell'e-commerce transfrontaliero (Shang Cai Fa [2018] n. 486)"
+    url: "https://www.gov.cn/zhengce/zhengceku/2018-12/31/content_5437823.htm"
+  - title: "Avviso n. 194 del 2018 dell'Amministrazione Generale delle Dogane (questioni di vigilanza sulle importazioni ed esportazioni al dettaglio dell'e-commerce transfrontaliero)"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Ministero delle Finanze, Amministrazione Generale delle Dogane, Amministrazione Statale della Tassazione, Cai Guan Shui [2016] n. 18 (politica fiscale sulle importazioni al dettaglio dell'e-commerce transfrontaliero)"
+    url: "https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html"
+  - title: "Avviso dell'Amministrazione Statale della Tassazione e dell'Amministrazione Statale dei Cambi sulla registrazione fiscale dei pagamenti all'estero per il commercio di servizi e altre voci (n. 40 del 2013, modificato dall'Avviso n. 31 del 2018 dell'Amministrazione Statale della Tassazione)"
+    url: "https://www.chinatax.gov.cn/chinatax/c102449/c5219874/content.html"
+---
+
+Nella gestione operativa di un ordine doganale, denaro e documenti seguono ciascuno una propria rotta, con i propri punti di controllo. Il flusso finanziario si controlla sui lotti di regolamento: il denaro viene liquidato a lotti, per ciclo, al soggetto nazionale, senza pagamenti all'estero ordine per ordine. Il flusso di fatturazione si controlla sui documenti: solo con i cinque documenti completi il pagamento all'estero, la deduzione fiscale e l'audit hanno un presupposto comune. Le due linee si incontrano sullo stesso ordine, e il punto di incontro sono le sei tappe da M1 a M6.
+
+![Due schede per il flusso finanziario e il flusso di fatturazione, ciascuna con i punti di controllo; a destra due schede laterali spiegano perché il flusso di fatturazione è separato e come si prelevano i documenti; in basso i quattro flussi di informazione, conformità, fondi e fatturazione convergono nelle tappe da M1 a M6 di un ordine](/images/blog/bonded-order-funds-invoicing-flow-china/funds-invoicing-two-flow-checkpoints.webp)
+
+## Come si muove il denaro, i cinque nodi del flusso finanziario
+
+I nodi del flusso finanziario si allineano in fila: pagamento, raccolta, regolamento, incasso nazionale, pagamento all'estero, con il punto di controllo in coda a verificare documenti e dichiarazione fiscale. Il regolamento corre a lotti per ciclo, con l'incasso unificato al soggetto nazionale, senza pagamenti all'estero ordine per ordine; le provvigioni sono accantonate ordine per ordine in base all'attribuzione, trattenute e versate mensilmente, con fatture e documenti di trattenuta archiviati periodo per periodo; il conto dei fondi si apre in circa 6 settimane, in parallelo con la realizzazione del Negozio, senza occupare tempo extra per l'avvio.
+
+Ogni nodo si può ricondurre a un oggetto concreto nell'interfaccia di back-office: l'esempio di documento di regolamento e i record del flusso finanziario e dei lotti di regolamento sono nel sistema, e la verifica non richiede materiali raccolti a parte. Il lotto è l'unità di base di questo flusso: riconciliazione, pagamenti all'estero e tracciabilità seguono tutti il lotto.
+
+## Come si conservano i documenti, che pila di giustificativi formano i cinque documenti
+
+I nodi del flusso di fatturazione sono altrettanto cinque: documento di pagamento, lettera di vettura, dichiarazione doganale, documento fiscale, documento di regolamento, e il punto di controllo verifica che tutti e cinque siano in archivio. I cinque documenti completi sono il presupposto comune di tre cose: pagamenti all'estero, deduzione fiscale, audit; se manca un documento, nessuna delle tre procede. Il documento di regolamento si genera automaticamente per lotto, dalla stessa fonte del registro del flusso finanziario, e i numeri tornano.
+
+I record dei tre flussi di denaro, merce e informazione non hanno un registro separato: convergono tutti su questi cinque documenti. Una pila di documenti copre l'intero percorso di un ordine e allinea anche contabilità e magazzino.
+
+## Perché il flusso di fatturazione è una linea a sé
+
+Questa pila di giustificativi ha quattro usi: pagamenti all'estero, deduzione fiscale, audit, richieste degli enti di vigilanza. I quattro usi condividono la stessa base documentale, e una pagina mancante spezza la catena: per questo il flusso di fatturazione corre come flusso a sé, con un punto di controllo proprio, in parallelo al flusso finanziario.
+
+La catena di importazione è particolarmente esigente sulla corrispondenza: i cinque documenti devono allinearsi sullo stesso ordine, e gli usi incrociati tra ordini diversi vengono individuati voce per voce. La disciplina della segmentazione dei fondi è scritta nell'accordo, e gli esempi di lotto sono consultabili lotto per lotto nelle schermate; disciplina più esempi è lo stato quotidiano di questo flusso.
+
+## Come si prelevano i documenti, come si riconcilia
+
+La riconciliazione corre sul numero di lotto, verificata lotto per lotto nel registro del flusso finanziario; il prelievo dei documenti corre sul numero di archivio, estratti dal tracker dei punti di controllo. Entrambi i registri sono archiviati con i deliverable, pronti a richiesta, così una richiesta di chiarimento non costringe a montare materiali all'ultima ora.
+
+## Quattro flussi convergono su un ordine
+
+L'atto di ordinare muove quattro flussi insieme: il flusso di informazione restituisce il riscontro dei tre documenti, il flusso di conformità completa la verifica dell'identità, il flusso finanziario inserisce questo pagamento nel regolamento a lotti, e il flusso di fatturazione genera a seguire il documento di regolamento. I quattro flussi registrano punto per punto ai punti di controllo da M1 a M6, e ogni passo di un ordine, dalla selezione dei prodotti alla registrazione delle provvigioni, si riconduce a un record.
+
+## Un ordine va da M1 a M6
+
+Il percorso dell'ordine conta 6 passi, le interfacce chiave sono 4, e il ruolo A che risponde in via principale nella matrice di ripartizione delle responsabilità è 1 solo. M1 selezione dei prodotti e accesso al mercato: attivazione con input completi, gate sui documenti, con esito l'elenco e i codici HS; l'esecuzione è nostra, gli input sono forniti da parte sua. M2 ingresso nella zona doganale: gate sul registro doganale, con esito registro e vista magazzino. M3 pubblicazione in catalogo: gate sulla revisione dei claim, con esito conclusione della revisione e testo informativo.
+
+M4 ordine: gate su identità e informativa, con esito i record di identità e informativa. M5 sdoganamento: attivazione con il pagamento completato, gate sulla verifica incrociata dei tre documenti e sulla quota, con esito conclusione della verifica e deduzione della quota. M6 regolamento e provvigioni: attivazione con il rilascio, gate sulla conformità del pagamento delle provvigioni, con esito l'elenco dei pagamenti di provvigioni; l'esecuzione è nostra, le regole sono confermate da parte sua. I passi sono orchestrati da noi; l'input si fornisce solo a M1 e le regole si confermano a M6, senza bisogno di interfacce a ogni anello intermedio.
+
+![Conferma dalla pagina adiacente, il percorso a sei passi di un ordine end-to-end da M1 a M6 con la ripartizione delle responsabilità delle quattro interfacce chiave; in basso due tabelle dimostrative per la verifica incrociata della sequenza temporale dei pagamenti e il tracciamento di rilascio e consegna](/images/blog/bonded-order-funds-invoicing-flow-china/order-path-m1-m6-responsibility-splits.webp)
+
+La divisione dei compiti tra i quattro soggetti d'interfaccia è scritta nella stessa pagina: la sua azienda cura prodotto e decisioni, la piattaforma cura ordini e regolamento, l'operatore di evasione cura magazzino e sdoganamento, gli enti di vigilanza curano dichiarazione e ispezione. I sette flussi hanno un solo soggetto di coordinamento, titolare del ruolo A che risponde in via principale nella matrice di ripartizione delle responsabilità; i confini di competenza delle quattro interfacce sono scritti nel piano. Conti e dati restano nelle sue mani, orchestrazione e record restano da noi, e il passaggio di consegne non ha zone vuote.
+
+## Un ordine, tutto il percorso
+
+Le tabelle dimostrative contengono un ordine: numero d'ordine SO260922-0417, documento di pagamento PAY260922-0417, sequenza temporale regolare. All'ordine i record di identità e informativa erano entrambi completi, il pagamento completato ha attivato lo sdoganamento, la verifica incrociata dei tre documenti e la verifica della quota sono passate, il numero di lista QD260922-0417 è stato generato, e il numero di spedizione EX7726001 risulta consegnato. Dopo la consegna il rilascio, e l'ordine entra nel regolamento a lotti: documento di pagamento, lettera di vettura, dichiarazione doganale, documento fiscale e documento di regolamento, cinque documenti archiviati per lotto, il numero di lotto riconciliabile nel registro del flusso finanziario, il numero di archivio estraibile dal tracker dei punti di controllo.
+
+La seconda riga della stessa tabella è il controesempio: il documento di pagamento di SO260921-0088 mostra un ritardo di 2 ore nella sequenza temporale, e la postazione di verifica incrociata elenca queste anomalie riga per riga per ordine; nella tabella di rilascio e tracciamento QD260921-0088 è ancora in transito, lo stato di consegna non è arrivato, e l'azione di rilascio si ferma davanti al gate di M6. Le due tabelle dimostrative dicono la stessa cosa: sequenza temporale, stato e numeri di documento consultabili ordine per ordine, e le anomalie emergono senza che qualcuno sfogli i record a mano.
+
+Leggendo insieme i punti di controllo dei due flussi, la disciplina operativa si condensa in due parole, completo e corrispondente: i cinque documenti completi, i lotti corrispondenti. Prima si stabiliscono in modo vincolante soggetto di regolamento, ciclo di regolamento e regole di archiviazione, poi si programma l'avvio, e ogni successivo pagamento all'estero, detrazione e richiesta di chiarimento ha la stessa pila di giustificativi da indicare. Numeri d'ordine, sequenza temporale e stati di consegna nell'interfaccia dimostrativa valgono solo come illustrazione; il criterio operativo segue le fatture del periodo, le esportazioni della piattaforma e i requisiti delle autorità competenti.
+
+Il flusso finanziario e il flusso di fatturazione sono i più facili da trattare come pratiche di back-office dopo l'avvio, e solo quando un pagamento all'estero si blocca in revisione documentale o una detrazione viene contestata dal fisco si torna indietro a recuperare i documenti. Il momento di archiviazione dei cinque documenti è fissato nell'istante in cui l'ordine viene rilasciato, e gli esempi di lotto lasciano traccia lotto per lotto; mettere i punti di controllo in anticipo costa molto meno che ricostruire la catena dopo.
+
+Se desidera, in base all'attuale soggetto di regolamento e agli assetti del Negozio, collegare flusso finanziario e flusso di fatturazione in un unico registro capace di riconciliare e prelevare documenti, [Contattaci](/it/packages/).

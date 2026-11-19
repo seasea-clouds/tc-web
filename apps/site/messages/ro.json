@@ -205,7 +205,11 @@
     "coverItems5": "Verificarea conformității etichetelor (GB 7718-2025 / GB 28050-2025)",
     "coverItems6": "Reînnoirea înregistrării și monitorizarea valabilității de 5 ani",
     "metaTitle": "Înregistrare GACC alimente | ghid pentru exportatorii români",
-    "metaDescription": "Înregistrare GACC pentru exportatorii români: Regulamentul 280, sistemul CIFER, documente necesare, durată. Suport în limba română."
+    "metaDescription": "Înregistrare GACC pentru exportatorii români: Regulamentul 280, sistemul CIFER, documente necesare, durată. Suport în limba română.",
+    "faq7q": "Am nevoie de înregistrarea GACC pentru a exporta alimente în China?",
+    "faq7a": "Da. Fiecare unitate străină de producție alimentară trebuie să figureze în registrul GACC înainte de prima expediere în China; obligația revine unității de producție, nu societății comerciale. Autoritatea vamală chineză respinge din 2022 importurile de alimente fără înregistrare valabilă, iar Decretul GACC 280, în vigoare din 1 iunie 2026, menține această regulă.",
+    "faq8q": "Înregistrarea GACC se face pe companie, pe fabrică sau pe categorie de produs?",
+    "faq8a": "Pe fabrică și pe categorie de produs. O societate comercială sau un titular de marcă nu poate înregistra în numele producătorului: trebuie înregistrată unitatea de producție străină însăși, iar o singură fabrică poate avea nevoie de înregistrări separate pentru linii de produs diferite."
   },
   "ServiceLabel": {
     "heroTitle": "Etichetare chinezească pentru produsele românești",

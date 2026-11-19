@@ -205,7 +205,11 @@
     "coverItems5": "Shqyrtimi i përputhshmërisë së etiketës (GB 7718-2025 / GB 28050-2025)",
     "coverItems6": "Rinovimi i regjistrimit dhe gjurmimi i vlefshmërisë 5-vjeçare",
     "metaTitle": "Regjistrimi GACC i ushqimeve | Dekreti 280 për eksportues",
-    "metaDescription": "Regjistrimi GACC për eksportuesit shqiptarë: Rregullorja 280, sistemi CIFER, dokumentet e nevojshme, koha. Mbështetje në shqip."
+    "metaDescription": "Regjistrimi GACC për eksportuesit shqiptarë: Rregullorja 280, sistemi CIFER, dokumentet e nevojshme, koha. Mbështetje në shqip.",
+    "faq7q": "A më duhet regjistrimi GACC për të eksportuar ushqime në Kinë?",
+    "faq7a": "Po. Çdo impiant i huaj i prodhimit të ushqimit duhet të figuron në regjistrin GACC përpara dërgesës së parë në Kinë; detyrimi bie mbi impiantin e prodhimit, jo mbi shoqërinë tregtare. Dogana kineze refuzon që nga viti 2022 importet e ushqimit pa regjistrim të vlefshëm, dhe dekreti GACC 280, në fuqi nga 1 qershori 2026, e mban këtë rregull.",
+    "faq8q": "A bëhet regjistrimi GACC sipas shoqërisë, sipas fabrikës apo sipas kategorisë së produktit?",
+    "faq8a": "Sipas fabrikës dhe sipas kategorisë së produktit. Një shoqëri tregtare ose pronar marke nuk mund të regjistrojë në emër të prodhuesit: duhet të regjistrohet vetë impianti i huaj i prodhimit, dhe një fabrikë mund të ketë nevojë për regjistrime të veçanta për linja të ndryshme produktesh."
   },
   "ServiceLabel": {
     "heroTitle": "Etiketim kinez për produktet shqiptare",

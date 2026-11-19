@@ -205,7 +205,11 @@
     "coverItems5": "Etikettsamsvarsgjennomgang (GB 7718-2025 / GB 28050-2025)",
     "coverItems6": "Fornyelse av registrering og 5-års gyldighetssporing",
     "metaTitle": "GACC-matregistrering | Guide for norske eksportører",
-    "metaDescription": "GACC-registrering for norske mateksportører: forordning 280, CIFER-systemet, nødvendige dokumenter, tid. Støtte på norsk."
+    "metaDescription": "GACC-registrering for norske mateksportører: forordning 280, CIFER-systemet, nødvendige dokumenter, tid. Støtte på norsk.",
+    "faq7q": "Trenger jeg GACC-registrering for å eksportere matvarer til Kina?",
+    "faq7a": "Ja. Hvert utenlandsk næringsmiddelanlegg må stå i GACC-registeret før sin første sending til Kina; plikten ligger hos produksjonsanlegget, ikke hos handelsselskapet. Kinas toll avviser siden 2022 import av matvarer uten gyldig registrering, og dekret 280, som gjelder fra 1. juni 2026, opprettholder denne regelen.",
+    "faq8q": "Registreres GACC per selskap, per fabrikk eller per produktkategori?",
+    "faq8a": "Per fabrikk og per produktkategori. Et handelsselskap eller en merkevareeier kan ikke registrere på vegne av produsenten: det er det utenlandske produksjonsanlegget selv som må være registrert, og én fabrikk kan trenge separate registreringer for ulike produktlinjer."
   },
   "ServiceLabel": {
     "heroTitle": "Kinesisk merking for norske produkter",

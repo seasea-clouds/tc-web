@@ -205,7 +205,11 @@
     "coverItems5": "Címke-megfelelőségi felülvizsgálat (GB 7718-2025 / GB 28050-2025)",
     "coverItems6": "Regisztráció megújítása és az 5 éves érvényesség nyomon követése",
     "metaTitle": "GACC élelmiszer-regisztráció | útmutató magyar exportőröknek",
-    "metaDescription": "GACC-regisztráció magyar élelmiszer-exportőröknek: 280. rendelet, CIFER-rendszer, szükséges dokumentumok, idő. Magyar nyelvű támogatás."
+    "metaDescription": "GACC-regisztráció magyar élelmiszer-exportőröknek: 280. rendelet, CIFER-rendszer, szükséges dokumentumok, idő. Magyar nyelvű támogatás.",
+    "faq7q": "Kell GACC-regisztráció ahhoz, hogy élelmiszert exportáljak Kínába?",
+    "faq7a": "Igen. Minden külföldi élelmiszer-termelő üzemnek szerepelnie kell a GACC nyilvántartásában a Kínába irányuló első szállítás előtt; a kötelezettség a termelő létesítményt terheli, nem a kereskedő céget. A kínai vámhatóság 2022 óta visszautasítja az érvényes regisztráció nélküli élelmiszer-behozatalt, és a 2026. június 1-jétől hatályos 280. rendelet fenntartja ezt a szabályt.",
+    "faq8q": "A GACC-regisztráció cégre, üzemre vagy termékkategóriára szól?",
+    "faq8a": "Üzemre és termékkategóriára. Kereskedő cég vagy márkatulajdonos nem regisztrálhat a gyártó helyett: magának a külföldi termelő üzemnek kell bejegyzettnek lennie, és egy üzemnek különböző termékvonalakhoz külön regisztrációkra lehet szüksége."
   },
   "ServiceLabel": {
     "heroTitle": "Kínai címkézés magyar termékekhez",

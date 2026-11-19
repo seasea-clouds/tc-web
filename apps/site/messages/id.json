@@ -205,7 +205,11 @@
     "coverItems5": "Peninjauan kepatuhan label (GB 7718-2025 / GB 28050-2025)",
     "coverItems6": "Perpanjangan registrasi dan pelacakan masa berlaku 5 tahun",
     "metaTitle": "Registrasi GACC Pangan | Panduan Eksportir Indonesia",
-    "metaDescription": "Registrasi GACC pangan untuk eksportir Indonesia: Peraturan 280, sistem CIFER, dokumen yang dibutuhkan, durasi. Dukungan bahasa Indonesia."
+    "metaDescription": "Registrasi GACC pangan untuk eksportir Indonesia: Peraturan 280, sistem CIFER, dokumen yang dibutuhkan, durasi. Dukungan bahasa Indonesia.",
+    "faq7q": "Apakah saya perlu registrasi GACC untuk mengekspor pangan ke Tiongkok?",
+    "faq7a": "Ya. Setiap fasilitas produksi pangan luar negeri harus terdaftar di GACC sebelum pengiriman pertama ke Tiongkok; kewajibannya ada pada fasilitas produksi, bukan pada perusahaan dagang. Bea cukai Tiongkok menolak impor pangan tanpa registrasi yang sah sejak 2022, dan Keputusan 280 yang berlaku sejak 1 Juni 2026 mempertahankan aturan ini.",
+    "faq8q": "Registrasi GACC diajukan per perusahaan, per pabrik, atau per kategori produk?",
+    "faq8a": "Per pabrik dan per kategori produk. Perusahaan dagang atau pemilik merek tidak dapat mendaftar atas nama produsen: fasilitas produksi luar negeri itu sendiri yang harus terdaftar, dan satu pabrik dapat memerlukan registrasi terpisah untuk lini produk yang berbeda."
   },
   "ServiceLabel": {
     "heroTitle": "Kepatuhan Label China – untuk Produk Indonesia",

@@ -205,7 +205,11 @@
     "coverItems5": "Revisão de conformidade de rótulos (GB 7718-2025 / GB 28050-2025)",
     "coverItems6": "Renovação do registro e monitoramento da validade de 5 anos",
     "metaTitle": "Registro GACC para exportadores | Decreto 280",
-    "metaDescription": "Registro GACC de alimentos para exportadores brasileiros: Decreto 280, sistema CIFER e desembaraço aduaneiro — exporte para a China sem rejeição."
+    "metaDescription": "Registro GACC de alimentos para exportadores brasileiros: Decreto 280, sistema CIFER e desembaraço aduaneiro — exporte para a China sem rejeição.",
+    "faq7q": "Preciso do registro GACC para exportar alimentos para a China?",
+    "faq7a": "Sim. Toda fábrica estrangeira de alimentos precisa constar no registro GACC antes do primeiro embarque para a China; a obrigação é do estabelecimento produtor, não da trading. A alfândega chinesa recusa importações de alimentos sem registro válido desde 2022, e o Decreto 280, em vigor desde 1º de junho de 2026, mantém essa regra.",
+    "faq8q": "O registro GACC é feito por empresa, por fábrica ou por categoria de produto?",
+    "faq8a": "Por fábrica e por categoria de produto. Uma trading ou detentora da marca não pode registrar em nome do fabricante: é a própria planta estrangeira que deve estar registrada, e uma mesma planta pode precisar de registros distintos para linhas de produto diferentes."
   },
   "ServiceLabel": {
     "heroTitle": "Rotulagem chinesa para produtos do Brasil e de Portugal",

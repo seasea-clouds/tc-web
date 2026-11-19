@@ -205,7 +205,11 @@
     "coverItems5": "Pregled skladnosti etiket (GB 7718-2025 / GB 28050-2025)",
     "coverItems6": "Sodelovanje z UVHVVR ter podaljšanje registracije in sledenje 5-letni veljavnosti",
     "metaTitle": "Registracija GACC živil | vodnik za slovenske izvoznike",
-    "metaDescription": "Registracija GACC za slovenske izvoznike živil: Uredba 280, sistem CIFER, potrebni dokumenti, čas. Podpora v slovenščini."
+    "metaDescription": "Registracija GACC za slovenske izvoznike živil: Uredba 280, sistem CIFER, potrebni dokumenti, čas. Podpora v slovenščini.",
+    "faq7q": "Potrebujem registracijo GACC za izvoz hrane na Kitajsko?",
+    "faq7a": "Da. Vsak tuji obrat za proizvodnjo hrane mora biti v registru GACC pred prvo pošiljko na Kitajsko; obveznost je na proizvodnem obratu, ne na trgovskem podjetju. Kitajska carina od leta 2022 zavrača uvoz hrane brez veljavne registracije, uredba GACC 280, veljavna od 1. junija 2026, pa to pravilo ohranja.",
+    "faq8q": "Ali se registracija GACC izvaja po podjetju, po obratu ali po kategoriji izdelka?",
+    "faq8a": "Po obratu in po kategoriji izdelka. Trgovsko podjetje ali imetnik blagovne znamke ne more registrirati v imenu proizvajalca: registriran mora biti sam tuji proizvodni obrat, en obrat pa lahko potrebuje ločene registracije za različne proizvodne linije."
   },
   "ServiceLabel": {
     "heroTitle": "Kitajsko označevanje za slovenske izdelke",

@@ -205,7 +205,11 @@
     "coverItems5": "Etikettien tarkistus standardien GB 7718-2025 / GB 28050-2025 mukaan",
     "coverItems6": "Rekisteröinnin uusiminen ja 5 vuoden voimassaolon seuranta",
     "metaTitle": "GACC-elintarvikerekisteröinti viejille | Asetus 280",
-    "metaDescription": "GACC-rekisteröinti suomalaisille elintarvikeviejille: asetus 280, CIFER-järjestelmä, tarvittavat asiakirjat, aika. Suomeksi."
+    "metaDescription": "GACC-rekisteröinti suomalaisille elintarvikeviejille: asetus 280, CIFER-järjestelmä, tarvittavat asiakirjat, aika. Suomeksi.",
+    "faq7q": "Tarvitsenko GACC-rekisteröinnin viedäkseni elintarvikkeita Kiinaan?",
+    "faq7a": "Kyllä. Jokaisen ulkomaisen elintarviketuotantolaitoksen on oltava GACC-rekisterissä ennen ensimmäistä Kiinaan suuntautuvaa lähetystä; velvoite on tuotantolaitoksella, ei kauppayhtiöllä. Kiinan tulli on hylännyt ilman voimassa olevaa rekisteröintiä tulevat elintarvikkeet vuodesta 2022 lähtien, ja 1. kesäkuuta 2026 voimaan tullut asetus 280 pitää säännön ennallaan.",
+    "faq8q": "Rekisteröidäänkö GACC yrityksen, tehtaan vai tuoteryhmän mukaan?",
+    "faq8a": "Tehtaan ja tuoteryhmän mukaan. Kauppayhtiö tai tuotemerkin omistaja ei voi rekisteröidä valmistajan puolesta: rekisteriin on merkittävä ulkomainen tuotantolaitos itse, ja yksi tehdas voi tarvita erilliset rekisteröinnit eri tuotelinjoille."
   },
   "ServiceLabel": {
     "heroTitle": "Kiinankieliset merkinnät suomalaisille tuotteille",

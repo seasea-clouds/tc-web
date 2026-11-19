@@ -205,7 +205,11 @@
     "coverItems5": "Etiket uyumluluk incelemesi (GB 7718-2025 / GB 28050-2025)",
     "coverItems6": "Kayıt yenileme ve 5 yıllık geçerlilik takibi",
     "metaTitle": "GACC Gıda Kaydı | Türk gıda ihracatçıları rehberi",
-    "metaDescription": "Türk gıda ihracatçıları için GACC gıda kaydı: 280 sayılı kararname, CIFER başvurusu, gereken belgeler, süre. Türkçe destek."
+    "metaDescription": "Türk gıda ihracatçıları için GACC gıda kaydı: 280 sayılı kararname, CIFER başvurusu, gereken belgeler, süre. Türkçe destek.",
+    "faq7q": "Çin'e gıda ihraç etmek için GACC kaydı gerekiyor mu?",
+    "faq7a": "Evet. Her yabancı gıda üretim tesisi, Çin'e ilk sevkiyatından önce GACC siciline kayıtlı olmalıdır; yükümlülük üretim tesisindedir, ticaret şirketinde değil. Çin gümrükleri 2022'den bu yana geçerli kaydı olmayan gıda ithalatını reddediyor ve 1 Haziran 2026'da yürürlüğe giren 280 sayılı Kararname bu kuralı sürdürüyor.",
+    "faq8q": "GACC kaydı şirket bazında mı, tesis bazında mı, ürün kategorisi bazında mı yapılır?",
+    "faq8a": "Tesis bazında ve ürün kategorisi bazında. Bir ticaret şirketi veya marka sahibi, üretici adına kayıt yapamaz: kayıtlı olması gereken yabancı üretim tesisinin kendisidir ve tek bir tesis farklı ürün grupları için ayrı kayıtlar gerektirebilir."
   },
   "ServiceLabel": {
     "heroTitle": "Çin Etiket Uyumu – Türk gıda ve kozmetik ürünleri",

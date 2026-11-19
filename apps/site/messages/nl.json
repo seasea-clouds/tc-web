@@ -205,7 +205,11 @@
     "coverItems5": "Etiketconformiteitsbeoordeling (GB 7718-2025 / GB 28050-2025)",
     "coverItems6": "Registratieverlenging en 5-jaars geldigheidstoezicht",
     "metaTitle": "GACC-registratie voor exporteurs | Decreet 280",
-    "metaDescription": "GACC-registratie voor Nederlandse voedselexporteurs: zuivel, vlees, veevoer. Volledige CIFER-dossierbegeleiding, Decreet 280, documentvertaling."
+    "metaDescription": "GACC-registratie voor Nederlandse voedselexporteurs: zuivel, vlees, veevoer. Volledige CIFER-dossierbegeleiding, Decreet 280, documentvertaling.",
+    "faq7q": "Heb ik een GACC-registratie nodig om voedingsmiddelen naar China te exporteren?",
+    "faq7a": "Ja. Elke buitenlandse productielocatie voor levensmiddelen moet vóór de eerste zending naar China in het GACC-register staan; de verplichting ligt bij de productielocatie, niet bij de handelsonderneming. De Chinese douane weigert sinds 2022 invoer van levensmiddelen zonder geldige registratie, en decreet 280, van kracht sinds 1 juni 2026, handhaaft die regel.",
+    "faq8q": "Wordt de GACC-registratie per bedrijf, per fabriek of per productcategorie aangevraagd?",
+    "faq8a": "Per fabriek en per productcategorie. Een handelsonderneming of merkhouder kan niet namens de fabrikant registreren: de buitenlandse productielocatie zelf moet geregistreerd zijn, en één fabriek kan voor verschillende productlijnen afzonderlijke registraties nodig hebben."
   },
   "ServiceLabel": {
     "heroTitle": "Chinese etiketconformiteit voor Nederlandse producten",

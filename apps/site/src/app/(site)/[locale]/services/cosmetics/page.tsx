@@ -15,6 +15,8 @@ import DefinitionSchema from '@/components/DefinitionSchema';
 import QuickAnswer from '@/components/QuickAnswer';
 import RelatedResources from '@/components/RelatedResources';
 import { getBlogCategoryForService } from '@/lib/service-blog-map';
+import { serviceFaqItems } from '@/lib/service-faq-schema';
+import FaqPageSchema from '@/components/FaqPageSchema';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const locale = (await params).locale;
@@ -41,6 +43,7 @@ export default async function CosmeticsPage({ params }: { params: Promise<{ loca
   const url = `https://sinotradecompliance.com/${locale}/services/cosmetics/`;
   const commonT = await getTranslations({ locale, namespace: 'ServiceCommon' });
   const ctaT = await getTranslations({ locale, namespace: 'CTA' });
+  const faqItems = await serviceFaqItems(locale, 'ServiceCosmetics');
 
   // JSON-LD
   const jsonLd = {
@@ -74,6 +77,7 @@ export default async function CosmeticsPage({ params }: { params: Promise<{ loca
     <main>
       <DefinitionSchema locale={locale} terms={definitionTerms} />
       <HowToJsonLd locale={locale} namespace="ServiceCosmetics" url={url} />
+      <FaqPageSchema items={faqItems} />
       <Hero
         title={t('heroTitle')}
         subtitle={t('heroSubtitle')}

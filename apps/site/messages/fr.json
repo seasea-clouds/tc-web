@@ -205,7 +205,11 @@
     "coverItems5": "Vérification de conformité des étiquettes (GB 7718-2025 / GB 28050-2025)",
     "coverItems6": "Renouvellement de l'enregistrement et suivi de la validité sur 5 ans",
     "metaTitle": "Enregistrement GACC exportateurs français | Décret 280",
-    "metaDescription": "Enregistrement GACC pour exportateurs français de vin, fromages et produits laitiers : dossier CIFER, décret 280, traduction des documents."
+    "metaDescription": "Enregistrement GACC pour exportateurs français de vin, fromages et produits laitiers : dossier CIFER, décret 280, traduction des documents.",
+    "faq7q": "Faut-il l'enregistrement GACC pour exporter des denrées alimentaires vers la Chine ?",
+    "faq7a": "Oui. Chaque usine agroalimentaire étrangère doit figurer au registre GACC avant sa première expédition vers la Chine : l'obligation pèse sur l'établissement de production, pas sur la société de négoce. La douane chinoise refuse les importations de denrées sans enregistrement valide depuis 2022, et le décret 280, en vigueur depuis le 1er juin 2026, maintient cette règle.",
+    "faq8q": "L'enregistrement GACC se fait-il par entreprise, par usine ou par catégorie de produit ?",
+    "faq8a": "Par usine et par catégorie de produit. Une société de négoce ou un titulaire de marque ne peut pas enregistrer à la place du fabricant : c'est l'établissement étranger lui-même qui doit être enregistré, et une même usine peut avoir besoin d'enregistrements distincts pour des gammes différentes."
   },
   "ServiceLabel": {
     "heroTitle": "Conformité des étiquettes chinoises pour les produits français",

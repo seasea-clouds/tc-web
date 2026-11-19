@@ -205,7 +205,11 @@
     "coverItems5": "Revisió del compliment de les etiquetes (GB 7718-2025 / GB 28050-2025)",
     "coverItems6": "Renovació del registre i seguiment de la validesa de 5 anys",
     "metaTitle": "Registre GACC d'aliments | guia per a exportadors catalans",
-    "metaDescription": "Registre GACC per a exportadors catalans: Reglament 280, sistema CIFER, documents necessaris, temps. Suport en català."
+    "metaDescription": "Registre GACC per a exportadors catalans: Reglament 280, sistema CIFER, documents necessaris, temps. Suport en català.",
+    "faq7q": "Necessito el registre GACC per exportar aliments a la Xina?",
+    "faq7a": "Sí. Cada planta estrangera d'aliments ha de constar al registre GACC abans del primer enviament a la Xina; l'obligació recau en l'establiment productor, no en la societat comercial. La duana xinesa rebutja des del 2022 les importacions d'aliments sense registre vàlid, i el Decret 280, vigent des de l'1 de juny de 2026, manté aquesta regla.",
+    "faq8q": "El registre GACC es tramita per empresa, per planta o per categoria de producte?",
+    "faq8a": "Per planta i per categoria de producte. Ni la societat comercial ni el titular de la marca poden registrar en nom del fabricant: cal que hi consti la pròpia planta estrangera, i una mateixa planta pot necessitar registres diferents per a línies de producte diferents."
   },
   "ServiceLabel": {
     "heroTitle": "Etiquetatge xinès per a productes catalans",

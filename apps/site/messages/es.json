@@ -205,7 +205,11 @@
     "coverItems5": "Revisión de cumplimiento de etiquetas (GB 7718-2025 / GB 28050-2025)",
     "coverItems6": "Renovación del registro y seguimiento de la validez de 5 años",
     "metaTitle": "Registro GACC de alimentos | Decreto 280",
-    "metaDescription": "Registro GACC de alimentos para exportadores latinoamericanos. El Decreto 280 exige registro ante la GACC para exportar a China. Gestión completa del CIFER."
+    "metaDescription": "Registro GACC de alimentos para exportadores latinoamericanos. El Decreto 280 exige registro ante la GACC para exportar a China. Gestión completa del CIFER.",
+    "faq7q": "¿Necesito el registro GACC para exportar alimentos a China?",
+    "faq7a": "Sí. Toda fábrica extranjera de alimentos debe figurar en el registro GACC antes de su primer envío a China; la obligación recae en el establecimiento productor, no en su comercializadora. La aduana china rechaza las importaciones de alimentos sin registro válido desde 2022, y el Decreto 280, vigente desde el 1 de junio de 2026, mantiene esa regla.",
+    "faq8q": "¿El registro GACC se pide por empresa, por fábrica o por categoría de producto?",
+    "faq8a": "Por fábrica y por categoría de producto. Ni la comercializadora ni el titular de la marca pueden registrar en nombre del fabricante: es la propia planta extranjera la que debe estar registrada, y una misma planta puede necesitar registros distintos para líneas de producto diferentes."
   },
   "ServiceLabel": {
     "heroTitle": "Etiquetado chino para productos de España y América Latina",

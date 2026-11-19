@@ -205,7 +205,11 @@
     "coverItems5": "Kontrola shody etiket (GB 7718-2025 / GB 28050-2025)",
     "coverItems6": "Obnova registrace a sledování 5leté platnosti",
     "metaTitle": "Registrace GACC potravin | průvodce pro české vývozce",
-    "metaDescription": "Registrace GACC pro české vývozce potravin: nařízení 280, systém CIFER, potřebné dokumenty, doba. Podpora v češtině."
+    "metaDescription": "Registrace GACC pro české vývozce potravin: nařízení 280, systém CIFER, potřebné dokumenty, doba. Podpora v češtině.",
+    "faq7q": "Potřebuji registraci GACC k vývozu potravin do Číny?",
+    "faq7a": "Ano. Každý zahraniční závod na výrobu potravin musí být zapsán v registru GACC před prvním zásilem do Číny; povinnost leží na výrobním závodě, nikoli na obchodní společnosti. Čínská celní správa od roku 2022 odmítá dovoz potravin bez platné registrace a nařízení GACC 280, účinné od 1. června 2026, toto pravidlo zachovává.",
+    "faq8q": "Provádí se registrace GACC podle společnosti, podle závodu, nebo podle kategorie výrobku?",
+    "faq8a": "Podle závodu a podle kategorie výrobku. Obchodní společnost ani vlastník značky nemůže registrovat jménem výrobce: registrován musí být samotný zahraniční výrobní závod a jeden závod může potřebovat samostatné registrace pro různé výrobkové řady."
   },
   "ServiceLabel": {
     "heroTitle": "Čínské označování pro české výrobky",

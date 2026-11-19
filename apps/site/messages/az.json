@@ -205,7 +205,11 @@
     "coverItems5": "Etiket uyğunluğunun yoxlanması (GB 7718-2025 / GB 28050-2025)",
     "coverItems6": "Qeydiyyatın yenilənməsi və 5 illik etibarlılıq izlənməsi",
     "metaTitle": "GACC ərzaq qeydiyyatı | Azərbaycan ixracatçıları üçün",
-    "metaDescription": "Azərbaycan ərzaq ixracatçıları üçün GACC qeydiyyatı: 280 saylı Əsasnamə, CIFER sistemi, tələb olunan sənədlər, müddət. Azərbaycanca dəstək."
+    "metaDescription": "Azərbaycan ərzaq ixracatçıları üçün GACC qeydiyyatı: 280 saylı Əsasnamə, CIFER sistemi, tələb olunan sənədlər, müddət. Azərbaycanca dəstək.",
+    "faq7q": "Çinə qida ixrac etmək üçün GACC qeydiyyatı tələb olunurmu?",
+    "faq7a": "Bəli. Hər xarici qida istehsal müəssisəsi Çinə ilk göndərişdən əvvəl GACC reyestrində olmalıdır; öhdəlik istehsal müəssisəsinin üzərinə düşür, ticarət şirkətinin yox. Çin gömrüyü 2022-ci ildən etibarlı qeydiyyatı olmayan qida idxalını qəbul etmir və 2026-cı il iyunun 1-dən qüvvədə olan 280 nömrəli Fərman bu qaydanı saxlayır.",
+    "faq8q": "GACC qeydiyyatı şirkət, zavod yoxsa məhsul kateqoriyası üzrə aparılır?",
+    "faq8a": "Zavod və məhsul kateqoriyası üzrə. Ticarət şirkəti və ya brend sahibi istehsalçı adından qeydiyyat apara bilməz: qeydiyyatdan keçməli olan xarici istehsal müəssisəsinin özüdür və bir zavod fərqli məhsul xətləri üçün ayrı-ayrı qeydiyyatlar tələb edə bilər."
   },
   "ServiceLabel": {
     "heroTitle": "Çin etiketləmə tələbləri – Azərbaycan məhsulları üçün",

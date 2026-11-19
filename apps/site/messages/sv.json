@@ -205,7 +205,11 @@
     "coverItems5": "Etikettgranskning (GB 7718-2025 / GB 28050-2025)",
     "coverItems6": "Förnyelse av registrering och bevakning av 5 års giltighet",
     "metaTitle": "GACC-livsmedelsregistrering | Guide för svenska exportörer",
-    "metaDescription": "GACC-registrering för svenska livsmedelsexportörer: förordning 280, CIFER-systemet, nödvändiga handlingar, tidsåtgång. Support på svenska."
+    "metaDescription": "GACC-registrering för svenska livsmedelsexportörer: förordning 280, CIFER-systemet, nödvändiga handlingar, tidsåtgång. Support på svenska.",
+    "faq7q": "Behöver jag GACC-registrering för att exportera livsmedel till Kina?",
+    "faq7a": "Ja. Varje utländsk livsmedelsanläggning måste finnas i GACC-registret före sin första sändning till Kina; skyldigheten ligger på produktionsanläggningen, inte på handelsbolaget. Kinas tull avvisar sedan 2022 livsmedelsimport utan giltig registrering, och dekret 280, i kraft sedan 1 juni 2026, behåller den regeln.",
+    "faq8q": "Registreras GACC per företag, per fabrik eller per produktkategori?",
+    "faq8a": "Per fabrik och per produktkategori. Ett handelsbolag eller varumärkesägare kan inte registrera åt tillverkaren: det är den utländska produktionsanläggningen själv som måste vara registrerad, och en och samma fabrik kan behöva separata registreringar för olika produktlinjer."
   },
   "ServiceLabel": {
     "heroTitle": "Kinesisk märkning för svenska produkter",

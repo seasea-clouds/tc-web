@@ -205,7 +205,11 @@
     "coverItems5": "Weryfikacja zgodności etykiet (GB 7718-2025 / GB 28050-2025)",
     "coverItems6": "Odnowienie rejestracji i monitoring 5-letniego okresu ważności",
     "metaTitle": "Rejestracja GACC dla polskich eksporterów | Dekret 280",
-    "metaDescription": "Rejestracja GACC dla polskich eksporterów żywności: mleczarstwo, mięso, jabłka, słodycze. Dossier CIFER, dekret 280, tłumaczenia dokumentów."
+    "metaDescription": "Rejestracja GACC dla polskich eksporterów żywności: mleczarstwo, mięso, jabłka, słodycze. Dossier CIFER, dekret 280, tłumaczenia dokumentów.",
+    "faq7q": "Czy do eksportu żywności do Chin potrzebna jest rejestracja GACC?",
+    "faq7a": "Tak. Każdy zagraniczny zakład produkujący żywność musi figurować w rejestrze GACC przed pierwszą wysyłką do Chin; obowiązek ciąży na zakładzie produkcyjnym, nie na spółce handlowej. Chińska administracja celna od 2022 r. odrzuca import żywności bez ważnej rejestracji, a dekret GACC nr 280, obowiązujący od 1 czerwca 2026 r., utrzymuje tę zasadę.",
+    "faq8q": "Czy rejestracja GACC jest prowadzona na firmę, na zakład czy na kategorię produktu?",
+    "faq8a": "Na zakład i na kategorię produktu. Spółka handlowa ani właściciel marki nie może zarejestrować zakładu w imieniu producenta: w rejestrze musi być sam zagraniczny zakład produkcyjny, a jeden zakład może potrzebować odrębnych rejestracji dla różnych linii produktowych."
   },
   "ServiceLabel": {
     "heroTitle": "Chińskie etykiety dla polskich produktów",

@@ -205,7 +205,11 @@
     "coverItems5": "Semakan pematuhan label (GB 7718-2025 / GB 28050-2025)",
     "coverItems6": "Pembaharuan pendaftaran dan pengesanan kesahan 5 tahun",
     "metaTitle": "Pendaftaran GACC Makanan | Panduan Pengeksport Malaysia",
-    "metaDescription": "Pendaftaran GACC makanan untuk pengeksport Malaysia: Peraturan 280, sistem CIFER, dokumen diperlukan, tempoh. Sokongan bahasa Melayu."
+    "metaDescription": "Pendaftaran GACC makanan untuk pengeksport Malaysia: Peraturan 280, sistem CIFER, dokumen diperlukan, tempoh. Sokongan bahasa Melayu.",
+    "faq7q": "Perlukah saya pendaftaran GACC untuk mengeksport makanan ke China?",
+    "faq7a": "Ya. Setiap kemudahan pengeluaran makanan asing mesti tersenarai dalam daftar GACC sebelum penghantaran pertama ke China; kewajipan terletak pada kemudahan pengeluaran, bukan syarikat perdagangan. Kastam China menolak import makanan tanpa pendaftaran sah sejak 2022, dan Dekri GACC 280, berkuat kuasa 1 Jun 2026, mengekalkan peraturan ini.",
+    "faq8q": "Adakah pendaftaran GACC dibuat mengikut syarikat, kilang atau kategori produk?",
+    "faq8a": "Mengikut kilang dan mengikut kategori produk. Syarikat perdagangan atau pemilik jenama tidak boleh mendaftar bagi pihak pengeluar: kemudahan pengeluaran asing itu sendiri yang mesti berdaftar, dan satu kilang mungkin memerlukan pendaftaran berasingan untuk barisan produk yang berbeza."
   },
   "ServiceLabel": {
     "heroTitle": "Pematuhan Label China – untuk Produk Malaysia",

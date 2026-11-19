@@ -205,7 +205,11 @@
     "coverItems5": "Label compliance review (GB 7718-2025 / GB 28050-2025)",
     "coverItems6": "Registration renewal and 5-year validity tracking",
     "metaTitle": "GACC Food Registration for Global Exporters | Decree 280",
-    "metaDescription": "GACC food registration for global exporters. Decree 280, CIFER system, and customs clearance — export food to China without border rejection."
+    "metaDescription": "GACC food registration for global exporters. Decree 280, CIFER system, and customs clearance — export food to China without border rejection.",
+    "faq7q": "Do I need GACC registration to export food to China?",
+    "faq7a": "Yes. Every overseas food manufacturer must be in the GACC registry before its first shipment to China — the obligation sits with the production facility, not with your trading company. Chinese customs has refused food imports without a valid registration since 2022, and Decree 280, in force since 1 June 2026, keeps that rule.",
+    "faq8q": "Is GACC registration filed per company, per factory, or per product category?",
+    "faq8a": "Per factory and per product category. A trading company or brand owner cannot register on a manufacturer's behalf: the overseas production facility itself must hold the registration, and one plant may need separate registrations for different product lines."
   },
   "ServiceLabel": {
     "heroTitle": "Chinese Label Compliance for Global Brands",

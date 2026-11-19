@@ -205,7 +205,11 @@
     "coverItems5": "Pregled usklađenosti oznaka (GB 2716 / GB 7718-2025)",
     "coverItems6": "Obnova registracije i praćenje 5-godišnje valjanosti",
     "metaTitle": "GACC registracija hrane | vodič za hrvatske izvoznike",
-    "metaDescription": "GACC registracija za hrvatske izvoznike hrane: Uredba 280, sustav CIFER, potrebni dokumenti, vrijeme. Podrška na hrvatskom."
+    "metaDescription": "GACC registracija za hrvatske izvoznike hrane: Uredba 280, sustav CIFER, potrebni dokumenti, vrijeme. Podrška na hrvatskom.",
+    "faq7q": "Trebam li GACC registraciju za izvoz hrane u Kinu?",
+    "faq7a": "Da. Svaki strani pogon za proizvodnju hrane mora biti u registru GACC prije prve pošiljke u Kinu; obveza je na proizvodnom pogonu, ne na trgovačkom društvu. Kineska carina od 2022. odbija uvoz hrane bez valjane registracije, a uredba GACC 280, na snazi od 1. lipnja 2026., zadržava to pravilo.",
+    "faq8q": "Provodi li se GACC registracija po tvrtki, po pogonu ili po kategoriji proizvoda?",
+    "faq8a": "Po pogonu i po kategoriji proizvoda. Trgovačko društvo ili vlasnik marke ne može registrirati u ime proizvođača: registriran mora biti sam strani proizvodni pogon, a jedan pogon može trebati odvojene registracije za različite linije proizvoda."
   },
   "ServiceLabel": {
     "heroTitle": "Kineske oznake za hrvatske proizvode",

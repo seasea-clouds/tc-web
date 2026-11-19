@@ -205,7 +205,11 @@
     "coverItems5": "Etiketgennemgang efter GB 7718-2025 / GB 28050-2025",
     "coverItems6": "Registreringsfornyelse og 5-års gyldighedsovervågning",
     "metaTitle": "GACC-fødevareregistrering | Guide for danske eksportører",
-    "metaDescription": "GACC-registrering for danske fødevareeksportører: forordning 280, CIFER-systemet, nødvendige dokumenter, tid. Support på dansk."
+    "metaDescription": "GACC-registrering for danske fødevareeksportører: forordning 280, CIFER-systemet, nødvendige dokumenter, tid. Support på dansk.",
+    "faq7q": "Skal jeg have en GACC-registrering for at eksportere fødevarer til Kina?",
+    "faq7a": "Ja. Enhver udenlandsk fødevareproduktionsfacilitet skal stå i GACC-registret før sin første sending til Kina; forpligtelsen ligger hos produktionsfaciliteten, ikke hos handelsselskabet. Kinas told afviser siden 2022 import af fødevarer uden gyldig registrering, og dekret 280, der gælder fra 1. juni 2026, fastholder denne regel.",
+    "faq8q": "Registreres GACC pr. virksomhed, pr. fabrik eller pr. produktkategori?",
+    "faq8a": "Pr. fabrik og pr. produktkategori. Et handelsselskab eller en mærkevareejer kan ikke registrere på vegne af producenten: det er den udenlandske produktionsfacilitet selv, der skal være registreret, og én fabrik kan have brug for separate registreringer til forskellige produktlinjer."
   },
   "ServiceLabel": {
     "heroTitle": "Kinesisk mærkning for danske produkter",

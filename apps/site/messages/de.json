@@ -205,7 +205,11 @@
     "coverItems5": "Etikettenprüfung nach GB 7718-2025 / GB 28050-2025",
     "coverItems6": "Registrierungsverlängerung und 5-Jahres-Überwachung",
     "metaTitle": "GACC-Registrierung für globale Exporteure | Dekret 280",
-    "metaDescription": "GACC-Lebensmittelregistrierung für Exporteure: Fleisch, Milchprodukte, Bier, Süßwaren. Dekret 280, CIFER-System und Zollabfertigung."
+    "metaDescription": "GACC-Lebensmittelregistrierung für Exporteure: Fleisch, Milchprodukte, Bier, Süßwaren. Dekret 280, CIFER-System und Zollabfertigung.",
+    "faq7q": "Brauche ich eine GACC-Registrierung, um Lebensmittel nach China zu exportieren?",
+    "faq7a": "Ja. Jeder ausländische Lebensmittelhersteller muss vor der ersten Lieferung nach China im GACC-Register stehen; die Pflicht trifft die Produktionsstätte, nicht das Handelsunternehmen. Der chinesische Zoll weist Lebensmittelimporte ohne gültige Registrierung seit 2022 zurück, und das seit 1. Juni 2026 geltende Dekret 280 führt diese Regel fort.",
+    "faq8q": "Wird die GACC-Registrierung pro Unternehmen, pro Werk oder pro Produktkategorie beantragt?",
+    "faq8a": "Pro Werk und pro Produktkategorie. Ein Handelsunternehmen oder Markeninhaber kann nicht für den Hersteller registrieren: Die ausländische Produktionsstätte selbst muss eingetragen sein, und ein Werk kann für verschiedene Produktlinien getrennte Registrierungen benötigen."
   },
   "ServiceLabel": {
     "heroTitle": "Chinesische Etiketten-Konformität für deutsche Produkte",

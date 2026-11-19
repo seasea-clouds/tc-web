@@ -205,7 +205,11 @@
     "coverItems5": "Kontrola zhody etikiet (GB 7718-2025 / GB 28050-2025)",
     "coverItems6": "Obnovenie registrácie a sledovanie 5-ročnej platnosti",
     "metaTitle": "Registrácia GACC potravín | vyhláška 280",
-    "metaDescription": "Registrácia GACC pre slovenských vývozcov potravín: nariadenie 280, systém CIFER, potrebné dokumenty, čas. Podpora v slovenčine."
+    "metaDescription": "Registrácia GACC pre slovenských vývozcov potravín: nariadenie 280, systém CIFER, potrebné dokumenty, čas. Podpora v slovenčine.",
+    "faq7q": "Potrebujem registráciu GACC na vývoz potravín do Číny?",
+    "faq7a": "Áno. Každý zahraničný závod na výrobu potravín musí byť zapísaný v registri GACC pred prvou zásielkou do Číny; povinnosť má výrobný závod, nie obchodná spoločnosť. Čínska colná správa od roku 2022 odmieta dovoz potravín bez platnej registrácie a nariadenie GACC 280, účinné od 1. júna 2026, toto pravidlo zachováva.",
+    "faq8q": "Vykonáva sa registrácia GACC podľa spoločnosti, podľa závodu alebo podľa kategórie výrobku?",
+    "faq8a": "Podľa závodu a podľa kategórie výrobku. Obchodná spoločnosť ani vlastník značky nemôže registrovať v mene výrobcu: registrovaný musí byť samotný zahraničný výrobný závod a jeden závod môže potrebovať samostatné registrácie pre rôzne výrobkové rady."
   },
   "ServiceLabel": {
     "heroTitle": "Čínske označovanie pre slovenské výrobky",

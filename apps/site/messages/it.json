@@ -205,7 +205,11 @@
     "coverItems5": "Verifica di conformità delle etichette (GB 7718-2025 / GB 28050-2025)",
     "coverItems6": "Rinnovo della registrazione e monitoraggio della validità di 5 anni",
     "metaTitle": "Registrazione GACC per esportatori italiani | Decreto 280",
-    "metaDescription": "Registrazione alimentare GACC per esportatori italiani: prosciutto, formaggio, olio, pasta, vino. Decreto 280, sistema CIFER, dogana. Valutazione gratuita."
+    "metaDescription": "Registrazione alimentare GACC per esportatori italiani: prosciutto, formaggio, olio, pasta, vino. Decreto 280, sistema CIFER, dogana. Valutazione gratuita.",
+    "faq7q": "Serve la registrazione GACC per esportare alimenti in Cina?",
+    "faq7a": "Sì. Ogni stabilimento alimentare estero deve risultare nel registro GACC prima della prima spedizione verso la Cina; l'obbligo è in capo allo stabilimento di produzione, non alla società commerciale. La dogana cinese respinge le importazioni di alimenti prive di registrazione valida dal 2022, e il decreto GACC 280, in vigore dal 1° giugno 2026, mantiene questa regola.",
+    "faq8q": "La registrazione GACC si richiede per azienda, per stabilimento o per categoria di prodotto?",
+    "faq8a": "Per stabilimento e per categoria di prodotto. Una società commerciale o un titolare di marchio non può registrare al posto del fabbricante: deve essere registrato lo stabilimento estero stesso, e un singolo impianto può richiedere registrazioni distinte per linee di prodotto diverse."
   },
   "ServiceLabel": {
     "heroTitle": "Conformità etichetta cinese per prodotti italiani",

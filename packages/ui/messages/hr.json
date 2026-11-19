@@ -18,7 +18,6 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Svjedočanstva",
     "industries": "Industrije",
-    "blog": "Uvidi",
     "checkCb": "CBEC",
     "checkCcc": "Elektronika",
     "checkGacc": "Uvoz hrane",
@@ -27,7 +26,8 @@
     "checkTm": "Zaštitni znakovi",
     "email": "E-mail",
     "freeCheckHeader": "Besplatni alati",
-    "getQuote": "Zatražite ponudu"
+    "getQuote": "Zatražite ponudu",
+    "insights": "Uvidi"
   },
   "Search": {
     "title": "Pretraživanje",
@@ -37,9 +37,9 @@
     "hint": "Upišite za pretraživanje usluga, članaka i često postavljanih pitanja",
     "types": {
       "service": "Usluge",
-      "blog": "Uvidi",
       "faq": "FAQ",
-      "regulation": "Propisi"
+      "regulation": "Propisi",
+      "insights": "Uvidi"
     }
   },
   "Navbar": {
@@ -57,7 +57,6 @@
     },
     "packages": "Paketi",
     "faq": "Često postavljana pitanja",
-    "blog": "Uvidi",
     "contact": "Kontaktirajte nas",
     "whatsapp": "WhatsApp",
     "quote": "Zatražite ponudu",
@@ -94,7 +93,8 @@
     "report": "Izvješće",
     "reports": "izvješća",
     "email": "E-mail",
-    "regulations": "Propisi"
+    "regulations": "Propisi",
+    "insights": "Uvidi"
   },
   "MobileTab": {
     "home": "Početna",
@@ -121,7 +121,7 @@
   "breadcrumb": {
     "home": "Početna",
     "services": "Usluge",
-    "blog": "Insights",
+    "insights": "Insights",
     "industries": "Industrije",
     "packages": "Paketi",
     "faq": "FAQ"

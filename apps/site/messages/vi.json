@@ -1292,7 +1292,6 @@
     "metaDescription": "Khám phá tất cả dịch vụ, hướng dẫn ngành hàng, bài viết insights và các trang trên website SinoTrade Compliance.",
     "servicesTitle": "Dịch vụ",
     "industriesTitle": "Ngành hàng",
-    "blogTitle": "Insights",
     "pagesTitle": "Trang khác",
     "home": "Trang chủ",
     "about": "Về chúng tôi",
@@ -1300,7 +1299,8 @@
     "quote": "Nhận báo giá",
     "faq": "Câu hỏi thường gặp",
     "packages": "Gói dịch vụ",
-    "testimonials": "Khách hàng nói gì"
+    "testimonials": "Khách hàng nói gì",
+    "insightsTitle": "Insights"
   },
   "Cookie": {
     "message": "Trang web này chỉ sử dụng cookie xác thực cần thiết. Không sử dụng cookie theo dõi hoặc quảng cáo.",

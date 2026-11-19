@@ -18,7 +18,6 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Գնահատականներ",
     "industries": "Արդյունաբերություններ",
-    "blog": "Խորաթափանցություն",
     "checkCb": "CBEC",
     "checkCcc": "Էլեկտրոնիկա",
     "checkGacc": "Սննդի ներմուծում",
@@ -27,7 +26,8 @@
     "checkTm": "Ապրանքային նշաններ",
     "email": "Էլ",
     "freeCheckHeader": "Անվճար գործիքներ",
-    "getQuote": "Ստանալ գնանշում"
+    "getQuote": "Ստանալ գնանշում",
+    "insights": "Խորաթափանցություն"
   },
   "Search": {
     "title": "Որոնում",
@@ -37,9 +37,9 @@
     "hint": "Մուտքագրեք ծառայություններում, հոդվածներում և ՀՏՀ-ներում որոնելու համար",
     "types": {
       "service": "Ծառայություններ",
-      "blog": "Խորաթափանցություն",
       "faq": "FAQ",
-      "regulation": "Կանոնակարգեր"
+      "regulation": "Կանոնակարգեր",
+      "insights": "Խորաթափանցություն"
     }
   },
   "Navbar": {
@@ -57,7 +57,6 @@
     },
     "packages": "Փաթեթներ",
     "faq": "ՀՏՀ",
-    "blog": "Խորաթափանցություն",
     "contact": "Կապ մեզ հետ",
     "whatsapp": "WhatsApp",
     "quote": "Ստացեք մեջբերում",
@@ -94,7 +93,8 @@
     "report": "Հաշվետվություն",
     "reports": "Հաշվետվություններ",
     "email": "Էլ. փոստ",
-    "regulations": "Կանոնակարգեր"
+    "regulations": "Կանոնակարգեր",
+    "insights": "Խորաթափանցություն"
   },
   "MobileTab": {
     "home": "Գլխավոր",
@@ -121,7 +121,7 @@
   "breadcrumb": {
     "home": "Գլխավոր",
     "services": "Ծառայություններ",
-    "blog": "Insights",
+    "insights": "Insights",
     "industries": "Արդյունաբերություններ",
     "packages": "Փաթեթներ",
     "faq": "FAQ"

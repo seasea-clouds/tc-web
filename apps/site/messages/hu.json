@@ -1292,7 +1292,6 @@
     "metaDescription": "Böngésszen a SinoTrade Compliance weboldalának összes szolgáltatása, iparági útmutatója, szakértői cikke és oldala között.",
     "servicesTitle": "Szolgáltatások",
     "industriesTitle": "Iparágak",
-    "blogTitle": "Szakértői cikkek",
     "pagesTitle": "További oldalak",
     "home": "Kezdőlap",
     "about": "Rólunk",
@@ -1300,7 +1299,8 @@
     "quote": "Árajánlatkérés",
     "faq": "GYIK",
     "packages": "Csomagok",
-    "testimonials": "Beszámolók"
+    "testimonials": "Beszámolók",
+    "insightsTitle": "Szakértői cikkek"
   },
   "Cookie": {
     "message": "Ez az oldal csak alapvető hitelesítési cookie-kat használ. Nem használnak nyomkövető vagy hirdetési sütiket.",

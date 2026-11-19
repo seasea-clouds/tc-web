@@ -18,7 +18,6 @@
     "whatsapp": "WhatsApp",
     "testimonials": "குறிப்புகள்",
     "industries": "தொழில்கள்",
-    "blog": "நுண்ணறிவு",
     "checkCb": "CBEC",
     "checkCcc": "மின்னணுவியல்",
     "checkGacc": "உணவு இறக்குமதி",
@@ -27,7 +26,8 @@
     "checkTm": "வர்த்தக முத்திரைகள்",
     "email": "மின்னஞ்சல்",
     "freeCheckHeader": "இலவச கருவிகள்",
-    "getQuote": "மேற்கோளைப் பெறவும்"
+    "getQuote": "மேற்கோளைப் பெறவும்",
+    "insights": "நுண்ணறிவு"
   },
   "Search": {
     "title": "தேடு",
@@ -37,9 +37,9 @@
     "hint": "சேவைகள், கட்டுரைகள் மற்றும் அடிக்கடி கேட்கப்படும் கேள்விகள் முழுவதும் தேட தட்டச்சு செய்யவும்",
     "types": {
       "service": "சேவைகள்",
-      "blog": "நுண்ணறிவு",
       "faq": "FAQ",
-      "regulation": "விதிமுறைகள்"
+      "regulation": "விதிமுறைகள்",
+      "insights": "நுண்ணறிவு"
     }
   },
   "Navbar": {
@@ -57,7 +57,6 @@
     },
     "packages": "தொகுப்புகள்",
     "faq": "அடிக்கடி கேட்கப்படும் கேள்விகள்",
-    "blog": "நுண்ணறிவு",
     "contact": "எங்களை தொடர்பு கொள்ளவும்",
     "whatsapp": "WhatsApp",
     "quote": "ஒரு மேற்கோளைப் பெறுங்கள்",
@@ -94,7 +93,8 @@
     "report": "அறிக்கை",
     "reports": "அறிக்கைகள்",
     "email": "மின்னஞ்சல்",
-    "regulations": "விதிமுறைகள்"
+    "regulations": "விதிமுறைகள்",
+    "insights": "நுண்ணறிவு"
   },
   "MobileTab": {
     "home": "முகப்பு",
@@ -121,7 +121,7 @@
   "breadcrumb": {
     "home": "முகப்பு",
     "services": "சேவைகள்",
-    "blog": "Insights",
+    "insights": "Insights",
     "industries": "தொழில்கள்",
     "packages": "தொகுப்புகள்",
     "faq": "FAQ"

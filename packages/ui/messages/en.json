@@ -26,7 +26,7 @@
     "checkTm": "Trademarks",
     "testimonials": "Testimonials",
     "industries": "Industries",
-    "blog": "Insights",
+    "insights": "Insights",
     "getQuote": "Get a Quote"
   },
   "Search": {
@@ -37,7 +37,7 @@
     "hint": "Type to search across services, articles and FAQs",
     "types": {
       "service": "Services",
-      "blog": "Insights",
+      "insights": "Insights",
       "faq": "FAQ",
       "regulation": "Regulations"
     }
@@ -57,7 +57,7 @@
     },
     "packages": "Packages",
     "faq": "FAQ",
-    "blog": "Insights",
+    "insights": "Insights",
     "contact": "Contact Us",
     "whatsapp": "WhatsApp",
     "quote": "Get a Quote",
@@ -121,7 +121,7 @@
   "breadcrumb": {
     "home": "Home",
     "services": "Services",
-    "blog": "Insights",
+    "insights": "Insights",
     "industries": "Industries",
     "packages": "Packages",
     "faq": "FAQ"

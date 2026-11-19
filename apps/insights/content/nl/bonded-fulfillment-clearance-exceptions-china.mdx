@@ -1,0 +1,68 @@
+---
+title: "Douanefulfillment en inklaring in China, lokalisatie in twee uur en batchisolatie"
+date: "2027-05-04"
+category: "E-commerce"
+excerpt: "Bij douanefulfillment en inklaring worden drie documenten afgestemd; afwijkingen krijgen een ticket met correctie en herindiening. Een mislukte keuring geldt als uitzondering."
+references:
+  - title: "Bekendmaking nr. 194 uit 2018 van de algemene douaneadministratie over het toezicht op de invoer en de uitvoer van detailhandelsgoederen via grensoverschrijdende e-commerce"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Kennisgeving van 6 ministeries waaronder het ministerie van Handel over de verbetering van het toezicht op de detailhandelinvoer via grensoverschrijdende e-commerce (Shang Cai Fa [2018] nr. 486)"
+    url: "https://www.gov.cn/zhengce/zhengceku/2018-12/31/content_5437823.htm"
+  - title: "Ministerie van Financiën, algemene douaneadministratie en nationale belastingdienst, Cai Guan Shui [2016] nr. 18, over het belastingbeleid voor de detailhandelinvoer via grensoverschrijdende e-commerce"
+    url: "https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html"
+---
+
+Bij een afwijking in douanefulfillment of bij de inklaring hoeft de hele batch niet te worden vastgehouden: één order krijgt één ticketregel, de afwijkende velden worden binnen 2 uur gelokaliseerd en de correctie wordt binnen 24 uur opnieuw ingediend, terwijl de overige orders gewoon worden vrijgegeven. Deze route volgt Bekendmaking nr. 194 uit 2018 van de algemene douaneadministratie en gebruikt uitsluitend het enkele kanaal van regime 1210, met vier locaties in integrale douanezones plus een magazijn in Hongkong (China) binnen dezelfde set regels. Welke stap faalde, wie iets wijzigde en wanneer er opnieuw werd ingediend, staat allemaal op hetzelfde ticket.
+
+De tijdstippen van de drie documenten worden afgestemd in de volgorde van de push: de order en de betaling gaan eerst, de vrachtbrief wordt bij het picking toegevoegd en elke order wordt gecontroleerd; bij de inklaring vindt een kruisvergelijking van de drie documenten en een quotumcontrole plaats, pas na een geslaagde verificatie beginnen vrijgave en picking en wordt de tracking per traject teruggekoppeld. Zodra er een afwijking optreedt, ontstaat een uitzonderingsticket, met een regel voor lokalisatie, correctie en herindiening en een verantwoordelijke die bij naam wordt genoemd. Daarmee is batchisolatie verdedigbaar: de afwijkende orders in een batch worden apart van de rest afgehandeld in plaats van de hele batch stil te leggen.
+
+![Demonstratie van douanefulfillment en afwijkingen bij de inklaring, met links de tijdlijn van de drie documenten van het aanmaken van de order, de push van de drie documenten, douaneverificatie, vrijgave en picking tot de uitzonderingsafhandeling, rechts de entrepotlocaties, de afgestemde tijdstippen van de drie documenten bij inklaring en de drie afwijkingsdisposities, en onderaan drie uitzonderingstickets en de entrepotadministratie](/images/insights/bonded-fulfillment-clearance-exceptions-china/fulfillment-clearance-exceptions-batch-segregation.webp)
+
+## Waar een afwijking bij de drie documenten tussen push en vrijgave landt
+
+Eén order doorloopt vijf stappen van push tot vrijgave, en de uitvoer van elke stap is de invoer van de volgende. De drie documenten zijn de order, het betaalbewijs en de vrachtbrief; hun tijdstippen verschillen en ook het spoor dat elk achterlaat.
+
+- Order aangemaakt: gegenereerd zodra de consument bestelt, met order en betaling vastgelegd en de identiteitsgegevens geverifieerd; het spoor is de order en het betaalbewijs.
+- Drie documenten gepusht: de order en de betaling gaan eerst, de vrachtbrief wordt bij het picking toegevoegd en per order gecontroleerd; het spoor is het pushrecord.
+- Douaneverificatie: een kruisvergelijking van de drie documenten en een quotumcontrole bij de inklaring; het spoor is de uitkomst van de verificatie en de quotumafboeking.
+- Vrijgave en picking: na geslaagde verificatie wordt vrijgegeven, begint het picking meteen en wordt de tracking per traject teruggekoppeld; het spoor is het vrijgaverecord en de trajecttracking.
+- Uitzonderingsafhandeling: bij afwijkingen opent een ticket, met lokalisatie binnen 2 uur en correctie en herindiening binnen 24 uur; het spoor is het ticket en de herindieningsstatus.
+
+Aan de kant van douanefulfillment komen de goederen eerst de zone binnen en is de voorraad opvraagbaar. De mogelijke locaties zijn Yiwu, Hangzhou, Guangzhou, Shenzhen en een magazijn in Hongkong (China); de fulfillmentpartner is door de douane erkend als AEO, zeevracht, luchtvracht en een combinatie daarvan zijn allemaal mogelijk en de douanestatus is in het eigen systeem zichtbaar. U bepaalt de uiteindelijke haven en de kandidatenlijst wordt u al bij de start overhandigd, zonder dat u hoeft te wachten tot de goederen in de haven aankomen.
+
+Aan de kant van de inklaring worden drie kolommen op tijdstip afgestemd. Bij de documenttijdstippen gaan de order en de betaling eerst en wordt de vrachtbrief bij de vrijgave teruggezet; de quotumcontrole vindt bij de inklaring plaats en boven het quotum wordt omgeleid of geretourneerd; het uitzonderingspad is corrigeren en opnieuw indienen, en bij een mislukte controle geldt het als uitzonderingsticket. De drie kolommen staan in dezelfde procestabel, zodat wie het werk overneemt aan het ticketnummer kan zien in welke kolom het vastloopt.
+
+De demopagina toont eerst drie openstaande tickets, elke regel met twee ingangen voor details en logboek: WO260922-01 heeft een aangifte en een vrachtbrief die niet overeenkomen, gelokaliseerd als een vertraagde terugschrijving van het vrachtbriefnummer; WO260921-02 heeft een verschil in het betaalbedrag, gelokaliseerd als een ander tijdstip bij het bepalen van de wisselkoers; WO260919-03 mist ontvangergegevens, gelokaliseerd als een verplicht veld dat in de frontend niet is gecontroleerd. Alle drie volgen daarna dezelfde herindieningsflow.
+
+## Drie soorten afwijkingen, elk met een eigen aanpak, zonder de hele batch vast te houden
+
+Wanneer de drie documenten niet overeenkomen, worden de afwijkende velden gelokaliseerd en daarna gecorrigeerd en opnieuw ingediend, met lokalisatie binnen 2 uur en de correctie afgerond binnen 24 uur. Een mislukte keuring wordt als uitzonderingsticket afgehandeld en houdt de vrijgave van de hele batch niet op. Boven het quotum schakelt men over naar de algemene handel of naar retour. Alle drie de disposities komen als ticket terecht, met een traceerbaar ticketnummer en een herindieningsstatus, en wie wat wijzigde en wanneer staat op dezelfde regel. Als de hele batch voor één afwijkende order wordt vastgehouden voor handmatig onderzoek, komt de wachttijd terecht op orders die de zone normaal hadden kunnen verlaten, en dat is voor u niet voordelig: in een batch hebben doorgaans maar één of twee orders een afwijking en hadden de overige orders gewoon de zone kunnen verlaten.
+
+De entrepotadministratie is het toezichtregister van het entrepot: inslag in de zone, voorraad en uitslag uit de zone worden regel voor regel vastgelegd, goederen en administratie moeten overeenkomen en het register is de gedeelde afstemmingsbasis voor keuring, inventarisatie en overdracht. Het legt per regel batch, houdbaarheid en saldo vast, zodat een regel die door een ticket is gewijzigd, in de administratie is terug te voeren op de saldobeweging van dezelfde batch en dezelfde houdbaarheid. Pas wanneer de administratie en de tickets met elkaar overeenkomen, is de uitzonderingsafhandeling van die batch afgerond.
+
+![Demonstratie van de interface voor de statusstroom van afwijkingstickets, met een tabel die per rij het ticketnummer, het afwijkingstype, het lokalisatieresultaat, de correctie, de verantwoordelijke, de updatetijd, de herindieningsstatus en de acties in acht kolommen voor zes rijen toont, onderaan gemarkeerd als 6 records in totaal en 20 per pagina](/images/insights/bonded-fulfillment-clearance-exceptions-china/discrepancy-ticket-flow-system-demo.webp)
+
+## Eén ticket van afwijking tot heringediend
+
+Neem WO260922-01 als uitgewerkt voorbeeld. Het betreft een aangifte en een vrachtbrief die niet overeenkomen, met als lokalisatieresultaat een vertraagde terugschrijving van het vrachtbriefnummer, als correctie het alsnog terugschrijven van het vrachtbriefnummer, als verantwoordelijke de douanepost, als updatetijd 2026-09-22 17:05 en als herindieningsstatus heringediend. Zolang het vrachtbriefnummer niet was teruggeschreven, bleef dit ticket in het tabblad nog te lokaliseren staan; nadat het was aangevuld, werden de aangifte en de vrachtbrief onder hetzelfde vrachtbriefnummer opnieuw ingediend, en pas toen ging deze order van nog te herindienen over naar heringediend, terwijl de overige geverifieerde orders in de batch gewoon werden vrijgegeven.
+
+WO260921-02 is een ander type: een verschil in het betaalbedrag, gelokaliseerd als een ander tijdstip bij het bepalen van de wisselkoers, met als correctie het hanteren van het tijdstip van de aangifte als vast moment, als verantwoordelijke de financiële post, als updatetijd 2026-09-21 15:40 en als status nog te herindienen. De interface scheidt drie tabbladen, nog te lokaliseren, nog te corrigeren en nog te herindienen, met één ticket per regel en ticketnummer, afwijkingstype, lokalisatieresultaat, correctie, verantwoordelijke, updatetijd en herindieningsstatus op dezelfde regel. Daardoor zijn uitzonderingsafhandeling en batchisolatie traceerbaar: lokalisatie, correctie en herindiening hebben elk een verantwoordelijke.
+
+De statusstroom van de tickets wordt in acht kolommen getoond: ticketnummer, afwijkingstype, lokalisatieresultaat, correctie, verantwoordelijke, updatetijd, herindieningsstatus en acties. Onderaan de interface staat 6 records in totaal en 20 per pagina, en elke regel eindigt met twee ingangen voor details en logboek. Alle zes de rijen volgen dezelfde opzet:
+
+- WO260922-01, aangifte en vrachtbrief komen niet overeen, vertraagde terugschrijving van het vrachtbriefnummer, het vrachtbriefnummer alsnog terugschrijven, douanepost, 2026-09-22 17:05, heringediend, details en logboek;
+- WO260921-02, verschil in het betaalbedrag, een ander tijdstip bij het bepalen van de wisselkoers, het tijdstip van de aangifte als vast moment hanteren, financiële post, 2026-09-21 15:40, nog te herindienen, details en logboek;
+- WO260919-03, ontbrekende ontvangergegevens, een verplicht veld dat in de frontend niet is gecontroleerd, validatie van verplichte velden in de frontend toevoegen, operationele post, 2026-09-19 11:22, heringediend, details en logboek;
+- WO260918-04, het opvragen van het quotum overschreed de tijdslimiet, schommelingen in het opvraagkanaal, hersteld na een automatische herhaling, douanepost, 2026-09-18 09:12, heringediend, details en logboek;
+- WO260917-05, ontbrekende tracking van de vrachtbrief, de vervoerder heeft de melding niet doorgestuurd, de trackinginterface alsnog voeden, operationele post, 2026-09-17 16:48, heringediend, details en logboek;
+- WO260916-06, ontbrekende velden in de aangifte, onvolledige aangiftegegevens, opnieuw indienen na aanvulling, douanepost, 2026-09-16 11:30, nog te herindienen, details en logboek.
+
+Een medewerker op de werkvloer kan, door het ticketnummer terug te koppelen naar het pushrecord van de drie documenten en vervolgens naar batch en houdbaarheid in de entrepotadministratie, meteen zien welke orders in een batch zijn geïsoleerd en welke de zone gewoon hebben verlaten, zonder te hoeven wachten op een afstemming per batch om het gat te dichten. Van de zes rijen zijn er twee nog te herindienen en zijn de overige vier heringediend; de correcties op de twee wachtende rijen zijn al vastgelegd en alleen de stap van de herindiening ontbreekt.
+
+## Leg vóór de livegang vast hoe de twee tabellen op elkaar aansluiten
+
+Leg vóór de livegang drie zaken vast: de tijdstippen van de drie documenten in pushvolgorde in de procestabel, de uitzonderingsafhandeling voor de drie afwijkingstypes als vaste acties en de velden van de administratie met batch, houdbaarheid en saldo per regel. Ontbreekt een van de drie, dan stapelen de tickets zich alleen maar op en blijft de herindieningsstatus voor altijd op nog te herindienen staan. Bekendmaking nr. 194 uit 2018 van de algemene douaneadministratie neemt de vrijgave op basis van de aangiftelijst, de vergelijking van de gegevens van de drie documenten en de identiteitsverificatie op in het aangifteproces, terwijl Shang Cai Fa [2018] nr. 486 het toezichtkader voor de detailhandelinvoer via grensoverschrijdende e-commerce vastlegt; de regels staan in de documenten, maar ze komen terecht op uw twee tabellen.
+
+Leg eerst de tijdstippen van de drie documenten, de uitzonderingsafhandeling en de velden van de administratie vast en plan daarna de eerste batch douaneorders in. Hoe een afwijking wordt gelokaliseerd, welke stap opnieuw indient en welk ticket bij welke regel van de administratie hoort, kan allemaal vóór de livegang worden vastgelegd, zonder te hoeven wachten op een afstemming per batch om het gat te dichten. De ticketnummers, tijden en statussen in de interfacedemonstratie dienen alleen ter illustratie; de feitelijke aangiftepraktijk volgt de eisen van de bevoegde autoriteit en de quota en havenlijsten volgen de voor die periode geldende regels.
+
+Als u de afwijkingstickets binnen uw huidige inrichting van entrepot en haven wilt koppelen aan de tijdstippen van de drie documenten en regel voor regel wilt afstemmen op de entrepotadministratie, [Neem contact met ons op](/nl/packages/).

@@ -1292,7 +1292,6 @@
     "metaDescription": "עיינו בכל השירותים, מדריכי התעשייה, המאמרים והדפים באתר SinoTrade Compliance.",
     "servicesTitle": "שירותים",
     "industriesTitle": "תעשיות",
-    "blogTitle": "מאמרי תובנות",
     "pagesTitle": "דפים אחרים",
     "home": "דף הבית",
     "about": "אודותינו",
@@ -1300,7 +1299,8 @@
     "quote": "קבלו הצעת מחיר",
     "faq": "שאלות נפוצות",
     "packages": "חבילות",
-    "testimonials": "המלצות"
+    "testimonials": "המלצות",
+    "insightsTitle": "מאמרי תובנות"
   },
   "Cookie": {
     "message": "אתר זה משתמש רק בעוגיות אימות חיוניות. לא נעשה שימוש בעוגיות מעקב או פרסום.",

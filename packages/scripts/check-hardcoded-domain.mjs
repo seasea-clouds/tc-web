@@ -8,7 +8,7 @@
  * 用法:
  *   node packages/scripts/check-hardcoded-domain.mjs           # 检查全部
  *   node packages/scripts/check-hardcoded-domain.mjs --ci      # 失败时 exit 1
- *   node packages/scripts/check-hardcoded-domain.mjs apps/blog # 仅检查 blog
+ *   node packages/scripts/check-hardcoded-domain.mjs apps/insights # 仅检查 blog
  */
 
 import fs from 'fs';

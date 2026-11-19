@@ -1,0 +1,91 @@
+---
+title: "Budżet pierwszego roku sprzedaży ze składu celnego w trzech wariantach"
+date: "2027-08-10"
+category: "E-commerce"
+excerpt: "Pierwszy rok w trzech wariantach: jedna tabela, zmieniają się tylko wejścia, wariant idzie za weryfikacją. Cztery odliczenia rosną z wolumenem. Stawki tylko w oficjalnej ofercie."
+references:
+  - title: "Ministerstwo Finansów, Główny Urząd Celny i Państwowa Administracja Podatkowa: zawiadomienie o polityce podatkowej dla detalicznego importu w handlu transgranicznym (Cai Guan Shui [2016] nr 18; stawka cła tymczasowo 0%, importowy VAT i podatek konsumpcyjny pobierane w wysokości 70% ustawowej należności podatkowej)"
+    url: "https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html"
+  - title: "Ministerstwo Finansów, Główny Urząd Celny i Państwowa Administracja Podatkowa: zawiadomienie o usprawnieniu polityki podatkowej dla detalicznego importu w handlu transgranicznym (Cai Guan Shui [2018] nr 49; limit pojedynczej transakcji 5000 juanów, roczny limit 26000 juanów)"
+    url: "https://czt.hlj.gov.cn/czt/c110905/202001/c00_30603063.shtml"
+  - title: "Zawiadomienie sześciu resortów o usprawnieniu nadzoru nad detalicznym importem w handlu transgranicznym (Shang Cai Fa [2018] nr 486)"
+    url: "https://www.mofcom.gov.cn/article/b/fwzl/201811/20181102812004.shtml"
+  - title: "Obwieszczenie Głównego Urzędu Celnego nr 194 z 2018 r. o nadzorze nad detalicznym importem i eksportem towarów w handlu transgranicznym"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+---
+
+Pierwszy rok ze składu celnego sprowadza się do jednego równania: z każdych 100 juanów obrotu opłaty, realizacja zamówień i pierwszy odcinek dostawy, podatki oraz prowizja zabierają łącznie 37.1 juanów, zostaje 62.9 juanów marży pokrycia; z niej pokrywa się nakłady stałe i wylicza okres zwrotu. Trzy warianty zmieniają tylko dane wejściowe, sam algorytm zostaje bez zmian.
+
+## Trzy warianty, najpierw granice SKU
+
+Wariant ostrożny obejmuje od 3 do 5 SKU i stawia na weryfikację oraz opinie. Jeden SKU przeprowadza się od początku do końca, po powrocie danych przechodzi się do wariantu bazowego; najpierw obserwuje się cztery wskaźniki, konwersja i powtarzalność zakupów mają pierwszeństwo.
+
+Wariant bazowy obejmuje od 8 do 12 SKU, cel: zbliżyć się w pierwszym roku do progu rentowności. Tabela parametrów pozostaje ta sama, zmieniają się tylko dane wejściowe, wariant podąża za wynikami weryfikacji; model stopy netto wstawia się wprost.
+
+Wariant optymistyczny obejmuje wszystkie SKU i liczy na to, że wolumen rozcieńczy koszty stałe. Zwiększać wolumen można dopiero po gotowości zapasów dla wszystkich SKU i systemu promocji; warunkiem wstępnym jest szesnaście przygotowań przed startem. Między wariantami nie przełącza się z domysłu, każdy ma warunki wejścia, a dopóki nie są spełnione, zostaje się w poprzednim.
+
+![Scenariusze pierwszego roku i parametry do ustawienia: w lewej kolumnie trzy karty, ostrożna, bazowa i optymistyczna, oznaczone od 3 do 5 SKU, od 8 do 12 SKU oraz wszystkie SKU i ich warunki wejścia; niżej pięć segmentów odliczeń na każde 100 juanów obrotu i 62.9 juanów marży pokrycia; na dole sześć ogniw łańcucha modelu od założeń przez GMV, odliczenia i marżę pokrycia po nakłady stałe i okres zwrotu](/images/insights/budgeting-first-year-bonded-sales-china/year-one-model-three-scenarios.webp)
+
+## Trzy założenia wpisujecie sami
+
+Cały model potrzebuje tylko trzech założeń od Was: średniej wartości zamówienia, wskaźnika powtarzalności zakupów i pułapu prowizji za promocję. Dajemy strukturę i narzędzia, liczby wychodzą z Waszych parametrów, a wynikiem jest interaktywny arkusz kalkulacyjny bez z góry narzuconych wartości docelowych.
+
+Łańcuch modelu ma sześć ogniw. Założenia zamieniają liczbę SKU, średnią wartość zamówienia i liczbę powtórnych zakupów w łączny obrót (GMV), każdy wariant liczy własny obrót; potem odejmuje się cztery pozycje: podatek zbiorczy, prowizję platformy, realizację zamówień i prowizję za promocję; GMV minus te cztery to marża pokrycia; nakłady stałe obejmują integrację systemów, amortyzację całej partii pierwszej dostawy i prowadzenie ewidencji; skumulowana marża pokrywająca nakłady stałe wyznacza okres zwrotu.
+
+Ten łańcuch liczycie sami. Zmieńcie dowolne założenie, a wszystkie liczby poniżej przesuną się; metoda jest jawna, więc można ją wnieść do wewnętrznego zatwierdzenia bez zdawania się na czyjeś zapewnienia.
+
+## Na każde 100 juanów obrotu cztery odliczenia dają 37.1 juanów
+
+Struktura marży na każde 100 juanów GMV: opłaty 6.0 juanów, realizacja zamówień i pierwszy odcinek dostawy 7.0 juanów, podatki 9.1 juanów, prowizja 15.0 juanów, razem 37.1 juanów i marża pokrycia 62.9 juanów. Pięć segmentów daje dokładnie 100%, struktura jest taka sama we wszystkich wariantach, różnica leży w skali i rozcieńczeniu pozycji stałych.
+
+Podatkowe 9.1% to łączne obciążenie podatkowe detalicznego importu w handlu transgranicznym: stawka cła tymczasowo 0%, importowy VAT i podatek konsumpcyjny pobierane w wysokości 70% ustawowej należności podatkowej. To liczba wyliczona z całego systemu podatkowego, nie dodawaj do niej wprost stawki jednego podatku.
+
+Odliczenia rosną proporcjonalnie do liczby zamówień. Podwój wolumen, a wszystkie cztery odliczenia się podwoją, marża pokrycia pójdzie w tej samej proporcji; nakłady stałe nie zależą od wolumenu, dlatego wzrost wolumenu rozcieńcza właśnie część stałą. Pokazane udziały są poglądowe, nie są ofertą ani obietnicą zysku.
+
+## Przejdźmy wariant ostrożny
+
+Weźmy wariant ostrożny i policzmy. 3 SKU, po 25 zamówień miesięcznie na każdy, około 900 zamówień rocznie; średnia wartość zamówienia 300 juanów, roczny obrót 270,000 juanów. Przy odliczeniu 37.1% cztery pozycje dają łącznie 100,170 juanów: opłaty 16,200 juanów, realizacja zamówień i pierwszy odcinek dostawy 18,900 juanów, podatki 24,570 juanów, prowizja 40,500 juanów.
+
+Marża pokrycia 169,830 juanów. Nakłady stałe szacujemy na 150,000 juanów, w tym integracja systemów, amortyzacja całej partii pierwszej dostawy i prowadzenie ewidencji; średnia miesięczna marża pokrycia około 14,153 juanów, skumulowana marża pokrywa nakłady stałe około 11 miesiąca, zwrot w pierwszym roku. Zmień średnią wartość zamówienia lub liczbę powtórnych zakupów, a wynik się przesunie; arkusz wypełniacie parametrami sami, my nie zmieniamy metody.
+
+## Trzy sposoby rozliczania
+
+Za zamówienie: rozliczenie według liczby zamówień, pasuje do etapu z przewidywalnym wolumenem i stabilną strukturą SKU.
+
+Udział od GMV: rozliczenie jako udział od obrotu, pasuje do fazy zwiększania wolumenu, im większa skala, tym mocniej rozkłada się koszt jednostkowy.
+
+Miesięczna opłata stała wraz z rozliczeniem za zamówienie: stała opłata pokrywa podstawowy personel i systemy, nadwyżkę dopisuje się za zamówienie, budżet da się ustalić z wyprzedzeniem.
+
+Wszystkie trzy sposoby wycenia się według pięciu czynników: skala zamówień, liczba SKU, wymogi terminowe, waluta rozliczenia i usługi dodatkowe. Gdy te pięć się zmienia, zmienia się też struktura oferty.
+
+![Sposoby rozliczania i nakłady po Waszej stronie: u góry za zamówienie, udział od GMV oraz miesięczna opłata z rozliczeniem za zamówienie, trzy sposoby i pięć czynników wyceny, po prawej osiem sekcji oferty; u dołu ludzie, środki, dokumenty i czas z czterema nakładami i ich terminami, z adnotacją, że start na część etatu nie tworzy etatów stałych, a cztery wzory list przekazywane są wraz z wynikami etapu S0](/images/insights/budgeting-first-year-bonded-sales-china/billing-options-and-budget-inputs.webp)
+
+## Pozycje poza ceną i warunki wstępne oferty
+
+Pozycje poza ceną wytycza się z góry, na przykład późniejsze uruchomienie kanału 9610, przebudowę systemów centrali albo wynagradzanie zagranicznych IBO; nasze opłaty serwisowe widnieją osobno w oficjalnej ofercie i nie mieszają się z trzema opisanymi sposobami rozliczania.
+
+Oficjalna oferta wymaga pięciu warunków wstępnych: lista SKU i wolumeny, gotowość CoA (raport z badań) z tej samej partii, preferencja ścieżki podmiotu, preferencja docelowego portu i preferencja strategii oświadczeń. Gdy wszystkie pięć jest gotowych, oficjalna oferta pojawia się zaraz potem.
+
+Bez danych też można wydać pierwszą wersję: wyliczenie na branżowych wartościach orientacyjnych, każda pozycja z adnotacją podstawy przyjęcia, a po powrocie Waszych pomiarów wartości się podmienia.
+
+## Osiem sekcji oferty
+
+Oficjalna oferta dzieli się na osiem sekcji: granice zakresu, porównanie rozliczeń, struktura opłat, podział kosztów, rytm płatności, podatki i fakturowanie, odpowiedzialność i odszkodowania, założenia graniczne. Szczegóły idą jako załącznik handlowy, kwoty obowiązują według oficjalnej oferty; padająca ustnie liczba na spotkaniu nie jest wiążąca.
+
+## Cztery nakłady po Waszej stronie
+
+Ludzie: od 1 do 2 osób do finansów i zgodności, można zacząć na część etatu, plus 1 osoba kontaktowa od biznesu; start na część etatu nie tworzy nowych etatów stałych. Potrzebni od razu przy starcie, równolegle z etapem startowym S0.
+
+Środki: pierwsza partia zapasów według liczby pilotażowych SKU i od 2 do 3 miesięcy obrotu, nakłady reklamowe weryfikowane małymi porcjami, zabezpieczenie należności celnych według wymogów portu. Gotowe przed magazynowaniem i wystawieniem na półkę.
+
+Dokumenty: cztery listy plików, a mianowicie towar, badania, kwalifikacje i marka, prowadzone jako listy kontrolne i uzupełniane systematycznie w kolejnych węzłach dopuszczenia; cztery wzory list przekazywane są wraz z wynikami etapu S0.
+
+Czas: trzy decyzje, a mianowicie ścieżka podmiotu, docelowy port i strategia oświadczeń, wpływają wprost na harmonogram; ustalcie je przed S0, a harmonogram się zablokuje, po podjęciu decyzji prace przechodzą do etapu wykonania M1.
+
+Ludzie i środki podane są jako praktyczne przedziały, ofertę wystawia się według pomierzonych warunków, po komplecie dokumentów wychodzi oficjalna oferta, a szczegóły stawek widnieją tylko w niej.
+
+## Najpierw zbudujcie nagłówek tabeli
+
+Budżet pierwszego roku mieści się w jednej tabeli: trzy kolumny wariantów, trzy wiersze założeń, cztery odliczenia, jeden wiersz nakładów stałych i jeden wiersz okresu zwrotu. Najpierw wpiszcie dane wejściowe, potem rozmawiajcie o ofercie; stawki obowiązują tylko w oficjalnej ofercie, a liczby demonstracyjne służą wyłącznie do objaśnienia metody.
+
+Kolejny krok: wstawić do tej tabeli Waszą listę SKU, średnią wartość zamówienia i liczbę powtórnych zakupów. Jeśli któreś wejście nie jest jeszcze ustalone, [Skontaktuj się z nami](/pl/packages/).

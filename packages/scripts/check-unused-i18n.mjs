@@ -17,7 +17,7 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, '../..');
 
-const SRC_DIRS = ['apps/site/src', 'apps/blog/src', 'apps/portal/src', 'packages/ui/src'];
+const SRC_DIRS = ['apps/site/src', 'apps/insights/src', 'apps/portal/src', 'packages/ui/src'];
 const MESSAGES_FILE = path.join(repoRoot, 'apps/site/messages/en.json');
 
 // Files to skip (build tools, scripts, etc.)

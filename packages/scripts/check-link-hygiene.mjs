@@ -199,14 +199,14 @@ function checkImageSitemap(sitemaps) {
 
   // 语言覆盖：有图文章的语言页都应在 sitemap 里
   const localesFile = path.join(REPO_ROOT, 'packages/ui/locales.json');
-  const coverDir = path.join(REPO_ROOT, 'apps/blog/public/images/blog');
+  const coverDir = path.join(REPO_ROOT, 'apps/insights/public/images/insights');
   if (fs.existsSync(localesFile) && fs.existsSync(coverDir)) {
     const locales = JSON.parse(fs.readFileSync(localesFile, 'utf-8'));
     const slugs = fs.readdirSync(coverDir).filter(s => fs.statSync(path.join(coverDir, s)).isDirectory());
     const missing = [];
     for (const locale of locales) {
       for (const slug of slugs) {
-        const mdx = path.join(REPO_ROOT, 'apps/blog/content', locale, `${slug}.mdx`);
+        const mdx = path.join(REPO_ROOT, 'apps/insights/content', locale, `${slug}.mdx`);
         if (!fs.existsSync(mdx)) continue;
         const pageUrl = `https://${MAIN_HOST}/${locale}/insights/${slug}/`;
         if (!pageLocs.includes(pageUrl)) missing.push(`/${locale}/insights/${slug}/`);
@@ -220,8 +220,8 @@ function checkImageSitemap(sitemaps) {
 
 /** H：内容级图片检查（源码，不需编译）—— 文件名语义化 / 文件存在 / alt 非空 */
 function checkContentImages() {
-  const contentRoot = path.join(REPO_ROOT, 'apps/blog/content');
-  const publicRoot = path.join(REPO_ROOT, 'apps/blog/public');
+  const contentRoot = path.join(REPO_ROOT, 'apps/insights/content');
+  const publicRoot = path.join(REPO_ROOT, 'apps/insights/public');
   if (!fs.existsSync(contentRoot)) return 0;
 
   const BAD_NAME = /\/(?:fig-\d+|image\d*|img-?\d+)\.(?:webp|jpg|jpeg|png)$/i;

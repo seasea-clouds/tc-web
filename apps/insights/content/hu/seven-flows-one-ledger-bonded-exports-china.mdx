@@ -1,0 +1,111 @@
+---
+title: "Hét áramlás egy napi jelentésben, tizennégy modul és egy felület"
+date: "2027-04-27"
+category: "E-commerce"
+excerpt: "Hét áramlás, egy rendelésszám; tizennégy modul aláírási jog szerint; egy háttérrendszer készíti a napi jelentést kézi összeillesztés nélkül. Egy szereplő felel az eredményért."
+references:
+  - title: "Caishuiguan [2016] 18. sz. Pénzügyminisztérium, Általános Vámhivatal és Állami Adóhatóság, a határokon átnyúló elektronikus kereskedelem kiskereskedelmi behozatalának adópolitikája"
+    url: "https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html"
+  - title: "A Kereskedelmi Minisztériummal együtt hat minisztérium 2018. évi 486. számú közleménye, a határokon átnyúló elektronikus kereskedelem kiskereskedelmi behozatala felügyeletének javításáról"
+    url: "https://cws.mofcom.gov/gztz/art/2018/art_b7becbacb58a4d0d8bf17b91a168f044.html"
+  - title: "Az Általános Vámhivatal 2018. évi 194. számú közleménye a határokon átnyúló elektronikus kereskedelem kiskereskedelmi be- és kivitelének felügyeletéről"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+---
+
+Kínába vámraktári modellben eladni akkor működik, ha a hét üzleti áramlás ugyanarra a könyvre függeszkedik, nem akkor, ha a legtöbb beszállítói interfészt kötöttük be. A feltételek konkrétak: a fizetéstől az aláírt kézbesítésig minden rendelés a kereskedelmi, áru-, logisztikai, pénzügyi, információs, megfelelőségi és számlázási áramlást egy rendelésszám alá írja be; a tizennégy képességet egyenként átvehető eredményekre vágjuk szét, és egy szereplő felel az eredményért a zónába lépéstől az aláírt kézbesítésig. E könyv nélkül a napi jelentést kézzel kell táblákból összeilleszteni: egyszer jól néz ki, egy hónap után biztosan hibázik.
+
+## Miért a rendelésszámmal kezdődik a napi jelentés
+
+A projekt során az ötödik fejezet elválasztó oldalán csak három átvételi kérdést hagytunk: hogyan fűződik a hét üzleti áramlás egy lánccá; milyen lépéseken megy át egy rendelés a feladástól az aláírt kézbesítésig; a mindennapi működés és a nagy kampányok csúcsai egyszerre tarthatók-e. Mindhárom ugyanoda mutat: hiba esetén egy rendelésszám elő tudja-e hívni mind a hét áramlás bejegyzéseit. Ha igen, a napi jelentés melléktermék; ha nem, négy beszállítótól kell egy-egy táblát kérni és kézzel egymáshoz igazítani.
+
+![Az ötödik fejezet elválasztó oldala három átvételi kérdéssel a hét áramlás lánccá fűzéséről, egy rendelés lépéseiről, valamint a mindennapi működés és a nagy kampányok csúcsainak egyidejű tarthatóságáról](/images/insights/seven-flows-one-ledger-bonded-exports-china/chapter-05-running-it-divider.webp)
+
+Az elválasztó oldalon egy mondat van még a vázon: hét áramlás és egy könyv a gerinc, a próbaláncot pedig celláról cellára fektetjük le. A cella itt az a sor, amelyet a tizennégy képesség mindegyike a könyvben hagy.
+
+## A hét áramlás nem hét rendszer
+
+Az áttekintő oldal a hét áramlást egy sorba teszi: kereskedelmi, áru-, logisztikai, pénzügyi, információs, megfelelőségi és számlázási áramlás. Nem hét beszerzendő rendszer, hanem hétféle megőrzendő bejegyzés. A kereskedelmi áramlás rendeléseket és szerződéseket ír, az áruáramlás tételeket és lejárati időket, a logisztikai nyomon követést és aláírt kézbesítést, a pénzügyi bevételeket, kiadásokat és egyenlegeket, az információs interfészeket és rendelésállapotot, a megfelelőségi vámnyilatkozatokat, bejelentéseket és ellenőrzési pontokat, a számlázási pedig számlákat és sztornó számlákat. Hogy a hétféle bejegyzés egy rendelésszámot használ, az maga a könyv.
+
+A csatorna vámfelügyeleti kódja 1210, teljes nevén határokon átnyúló elektronikus kereskedelem vámraktári rendszerben; a rendelést csak a rendelés, a fizetés és a logisztika három bizonylatának egyenkénti egyeztetése után adják ki, az ellenőrzési és kiadási szabályokat pedig a Kereskedelmi Minisztériummal együtt hat minisztérium 2018. évi 486. számú közleménye rögzíti. Éppen ezeket a rendelésenkénti nyomokat kell a megfelelőségi áramlásnak naponta rögzítenie.
+
+Ezt a struktúrát a hét áramlás egy könyvön működteti, nem a különböző szállítók lépéseinek összevarrása. A varrott megoldás egy átlagos napon ugyanúgy néz ki, és az első visszatérítésnél vagy rendelésmódosításnál bukik meg: a bolt törölte a rendelést, a fizetés még nyitva áll, a csomag már elhagyta a raktárat, a három bejegyzés egymásnak ellentmond, és senkinél nincs meg a teljes válasz.
+
+![Áttekintés hét áramlás egy könyv a hét üzleti áramlással, tizennégy modullal, három magyarázó kártyával és az utolsó három nap jelentésének kivonatával](/images/insights/seven-flows-one-ledger-bonded-exports-china/seven-flows-14-modules-overview.webp)
+
+A gyorsan összetákolt struktúrának keményebb következménye is van: senki sem felel egészében a megfelelőségért, az adatokért és a számlázásért. Ha egy áramlás megszakad, minden utána leáll, leggyakrabban a külföldi átutalás vagy a vámkezelés akad el. Ezért az áttekintő oldal első kártyája sötétkék, és az áll rajta „egy szereplő hangolja össze“, a másik hét pedig az áramlások nevét viseli.
+
+## Hogyan vágjuk szét a tizennégy modult aláírási jog szerint
+
+A tizennégy modul S0-tól S13-ig fut, és a szolgáltatási katalógus tizennégy, külön leszállítható és külön átvehető tételének felel meg. A szétvágás aláírási jog szerint történik, nem rendszer szerint: minden modul egy olyan eredményt ad át, amelyet valaki aláír. Az első hét a kiadásig és az elszámolásig ér, az utolsó hét a működést és a megőrzött nyomokat fedi le.
+
+- S0 Diagnosztika és belépés: a belépési döntés és annak alapja, először a kategória, a vámtarifaszám és a célcsatorna kiterítve.
+- S1 Szervezet létrehozása: engedély és vámnyilvántartásba vétel; egyik hiányában a rendszer nem tud számlát nyitni.
+- S2 Platformbolt: indulás és a fizetés bekapcsolása, itt kerülnek helyükre a kategóriák jogosultságai.
+- S3 termék bejelentés: besorolás és iratok; a rossz vámtarifaszám minden későbbi bejelentés javítását kikényszeríti.
+- S4 Vámraktár: a vámraktári könyv nézete, a márka számára látható készlettel.
+- S5 Vámkezelés és kiadás: a rendelést a rendelés, a fizetés és a logisztika három bizonylatának egyenkénti egyeztetése után adják ki.
+- S6 Pénzeszközök elszámolása: kimutatások és bizonylatok, az áru ellenértékét és a szolgáltatási díjakat külön könyvelve.
+- S7 Disztribúció: az ügyfélszerzés és a promóció hozzárendelése, a rendelésszám alapján visszaszámolva.
+- S8 Utószolgálat: visszaküldések kezelése; a visszaküldési okok besorolása dönti el, hogy a tagadatok tiszták-e.
+- S9 Adatkockázat kezelése: adatmegfelelőség, itt rögzülnek a határokon átnyúló átadás és a megőrzés szabályai.
+- S10 Megfelelőségi audit: önellenőrzések és naplók, amelyekkel incidens esetén bizonyítható, mi történt.
+- S11 Ellátási lánc: rendelési és készletnézetek, hogy az előrendelések ne találgatásra épüljenek.
+- S12 Tartalomellenőrzés: oldalak és élő közvetítések forgatókönyvei, a kínai címkékkel és állításokkal, tételenként átvizsgálva.
+- S13 Tagság és előfizetések: a szintek adatai ugyanabból a könyvből jönnek.
+
+Három kártya rögzíti a használatot. Az első azt magyarázza, miért kell a hét áramlásnak egy készletnek lennie: az összetákolt struktúrában senkié a megfelelőség, az adatok vagy a számlázás, egy megszakadt áramlás visszatartja a többit, és a külföldi átutalás vagy a vámkezelés akad el először. A második a tizennégy modult magyarázza: S0-tól S13-ig a szolgáltatási katalógus eredményeinek felelnek meg, míg a 9610 közvetlen vásárlási csatorna és a második beszerzési forrás későbbi tételek fenntartott hellyel, nem részei a mai átvételnek. A harmadik a felelősséget rögzíti: a zónába lépéstől az aláírt kézbesítésig egy felelős fél van, a RACI-ban az A; a képességek cserélhetők, a felelősség nem mozdul.
+
+Az áttekintő oldal alatt még egy utasítás áll, amelyet követni kell: a tizennégy képességet egyesével soroljuk fel, beszállítónkénti összehasonlítás és többféle integráció nélkül. Az eredmények és a módszerek a szolgáltatási katalógust követik; a szerződésbe az a tizennégy aláírt tétel kerül, nem egy interfészlista.
+
+## Miért csak három napot fog át a sarokban lévő három sor
+
+Az áttekintő oldal jobb alsó sarkában egy adatáttekintő kártya ül, rajta a rendszerfelület bemutatója és napi adatok felirattal. Csak az utolsó három napot mutatja, minden sor egy dátumot, a kifizetett rendelések számát, a kifizetett összeget és két műveleti belépőt visel.
+
+| Dátum | Kifizetett rendelések száma | Kifizetett összeg (jüan) | Művelet |
+| --- | --- | --- | --- |
+| 09-24 | 128 | 62 400,00 | részletek, napló |
+| 09-23 | 141 | 68 120,00 | részletek, napló |
+| 09-22 | 132 | 64 152,00 | részletek, napló |
+
+A három sor kivonat; a teljes napi jelentés ugyanannak a bemutatónak a következő oldalán van, hat sorral és soronként hét mezővel. A részletek és a napló belépők nem díszek: a részletek az adott nap rendelésösszetételét nyitják meg, a napló megmutatja, melyik feladat hozta létre a táblát. A kivonat csak azért állhat meg három napnál, mert a teljes tábla minden nap magától létrehoz egy új sort.
+
+## Hat napi sor, amely magától nő ki
+
+A jelentés oldala ezt a struktúrát egy képernyőre viszi. Három kártya mondja el, melyik lépésről van szó, mit rögzít és hová képeződik le.
+
+- Melyik lépés: az adatmodul napi tranzakciós jelentése, naponta egy sor, amely a kifizetett rendelések számát, a kifizetett összeget, az átlagos rendelési értéket, a fizető vásárlókat és a visszatérítési arányt rögzíti.
+- Mit rögzít: vegyük a 09-24-et, 128 kifizetett rendelés, 62 400,00 jüan és 487,50 jüan átlagos rendelési érték; a tábla minden nap magától létrejön, kézi összeillesztés nélkül.
+- Hová képeződik le: a tizennégy modul egy felületen folyó mindennapi működésében a rendelések, termékek és tagok adatai mind ugyanabból a háttérrendszerből jönnek ki.
+
+A felület bal oldalán adatpanel van, ahol a nyilvános, a bolt, a forgalom, a marketing, a disztribúció, a CRM és az önkiszolgáló elemzés egy menüt használ; a felső sáv a bolttól és a piactértől az adatokon, az ügyfélszolgálaton, a tartalmon és a hozzáadott értékű szolgáltatásokon át fut. A rendelések, termékek és tagok adatai ugyanabból a háttérrendszerből jönnek, nem pedig típusonként külön rendszerből, és pontosan ezt jelenti a tizennégy modul egy felületen. A napi jelentésnek nem kell több rendszerből adatot húznia, ezért nincs szükség kézi összeillesztésre.
+
+- 09-24, 128 kifizetett rendelés, 62 400,00 jüan, átlagos rendelési érték 487,50 jüan, 121 fizető vásárló, visszatérítési arány 1,8%, részletek és napló;
+- 09-23, 141 kifizetett rendelés, 68 120,00 jüan, átlagos rendelési érték 483,12 jüan, 132 fizető vásárló, visszatérítési arány 2,1%, részletek és napló;
+- 09-22, 132 kifizetett rendelés, 64 152,00 jüan, átlagos rendelési érték 486,00 jüan, 126 fizető vásárló, visszatérítési arány 1,6%, részletek és napló;
+- 09-21, 147 kifizetett rendelés, 72 604,00 jüan, átlagos rendelési érték 493,90 jüan, 139 fizető vásárló, visszatérítési arány 2,4%, részletek és napló;
+- 09-20, 139 kifizetett rendelés, 68 455,00 jüan, átlagos rendelési érték 492,48 jüan, 131 fizető vásárló, visszatérítési arány 1,9%, részletek és napló;
+- 09-19, 124 kifizetett rendelés, 60 752,00 jüan, átlagos rendelési érték 489,94 jüan, 117 fizető vásárló, visszatérítési arány 2,2%, részletek és napló.
+
+A lista alatt az áll: összesen 6 tétel, oldalanként 20, a lapozó az 1-en áll, és mindkét lapozónyíl megvan. Ott van a demonstrációs adatok magyarázata is: a fő üzleti mutatók napi összesítésben, a trendek és a részletek egy képernyőn. A hat nap alatt a visszatérítési arány a 09-21-én 2,4%-kal tetőzik, a 09-22-én 1,6%-kal éri el a mélypontot; ez az oszlop az utószolgálati modul visszaküldési okainak bejegyzéseihez kapcsolódik, nem egy dísznek szánt számításhoz.
+
+![A napi jelentés bemutatója három magyarázó kártyával, hat sorral soronként hét mezővel, hat tételt oldalanként hússzal mutató lapozóval és a demonstrációs adatok magyarázatával](/images/insights/seven-flows-one-ledger-bonded-exports-china/daily-operations-report-demo.webp)
+
+## A 09-24 sor végigjárása
+
+Vegyük a 09-24 sort egy ellenőrizendő ügyként. 128 kifizetett rendelés és 62 400,00 jüan osztva pontosan 487,50 jüan átlagos rendelési értéket ad; a 121 fizető vásárló 7-tel kevesebb a rendelések számánál, tehát valaki aznap egynél több rendelést adott le; az 1,8%-os visszatérítési arány az utószolgálati modul még nyitott visszaküldéseinek felel meg.
+
+Erről a sorról visszafelé végigkövethető a hét áramlás: a kereskedelmi előhívja a 128 rendelés szerződéseit és hozzárendelését, az áruáramlás tételeket és lejárati időket ad, a logisztikai a kiadás és az aláírt kézbesítés időpontjait, a pénzügyi bevételeket, kiadásokat és egyenlegeket, az információs a rendelés állapotának változásait és az interfészek visszaigazolásait, a megfelelőségi a rendelésenkénti vámnyilatkozatokat és a három bizonylat egyeztetésének eredményét, a számlázási pedig a számlákat és a sztornó számlákat. Mind a hét a rendelésszámot használja, ezért egy keresés mindent megtalál; ha egy interfész visszahívása késve érkezik, az információs áramlás sora először üres marad, a kifizetett összeg és az átlagos rendelési érték továbbra is egyezik, az ügyfélszolgálat viszont nem tudja megmondani, hol tart az a rendelés.
+
+A harmadik kártya leképezése itt is megáll: mivel a rendelések, termékek és tagok adatai egy háttérrendszerből jönnek, a fizető vásárlók összeegyeztethetők a tagsági szintekkel. Három háttérrendszerre bontva a 121-es szám adatbázisok közötti összekapcsolást igényelne, és amint a kapcsolási szabály megváltozik, a holnapi jelentés nem lesz összehasonlítható a tegnapival.
+
+## Melyik áramlás szakad meg először egy nagy kampány napján
+
+Az elválasztó oldal harmadik kérdése az, hogy a mindennapi működés és a nagy kampányok csúcsai egyszerre tarthatók-e. Ezzel a struktúrával tarthatók, feltéve hogy a csúcs előtt három dolgot rögzítünk: egy rendelésszám mind a hét áramláson át, egy felelős fél a zónába lépéstől az aláírt kézbesítésig, és egy jelentés, amelyet a háttérrendszer hoz létre, nem exportokból állítunk össze. A csúcs az interfészek visszahívásait és a készlet szinkronizálását terheli; a rendelésszám nem változik, tehát a könyv ugyanaz a könyv marad. A kézzel összeillesztett jelentésnél a csúcs napja nem annyira plusz munkát, mint inkább téves sorok összeillesztésének alkalmait hozza.
+
+Indulás előtt rögzítjük a mezőket: dátum, kifizetett rendelések száma, kifizetett összeg, átlagos rendelési érték, fizető vásárlók, visszatérítési arány és műveleti belépők, mind a hét oszlop ugyanazokból az adattáblákból olvas. Aztán döntjük el, ki írja alá a tizennégy eredményt. A többit később is be lehet illeszteni; a 9610 közvetlen vásárlási csatorna és a második beszerzési forrás helyei már az S0-tól S13-ig tartó leképezésben vannak, és a felelős fél nem változik, amikor betöltik őket.
+
+A képernyőn látható dátumok, összegek és rendelésszámok demonstrációs adatok, azért kerültek oda, hogy megmutassák, hogyan keletkezik egy sor és hogyan követhető vissza. A tényleges értékeket az időszaki kimutatások, a platform exportjai és az illetékes hatóság előírásai adják; a visszatérítési arány és az átlagos rendelési érték a rendszer aznapi számítását követi.
+
+A hét áramlás egy könyvön papíron tizennégy aláírt eredmény; a képernyőn egy napi jelentés, amely minden nap növeszt egy sort, minden sorral visszakereshetően. Először a rendelésszámot és a felelős felet rögzítsd, aztán válassz beszállítót. Fordítva minden későbbi egyeztetést elölről kell elvégezni.
+
+Ha a hét áramlást a meglévő boltod, raktárad és elszámolási szervezeted számára egy könyvvé szeretnéd összekötni, [keress minket](/hu/packages/).

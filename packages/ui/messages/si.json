@@ -18,7 +18,6 @@
     "whatsapp": "WhatsApp",
     "testimonials": "ශ්‍රේෂ්ඨත්වය",
     "industries": "කර්මාන්ත",
-    "blog": "තීක්ෂ්ණ බුද්ධිය",
     "checkCb": "CBEC",
     "checkCcc": "ඉලෙක්ට්රොනික උපකරණ",
     "checkGacc": "ආහාර ආනයනය",
@@ -27,7 +26,8 @@
     "checkTm": "වෙළඳ ලකුණු",
     "email": "ඊමේල් කරන්න",
     "freeCheckHeader": "නිදහස් මෙවලම්",
-    "getQuote": "උපුටා දැක්වීමක් ලබා ගන්න"
+    "getQuote": "උපුටා දැක්වීමක් ලබා ගන්න",
+    "insights": "තීක්ෂ්ණ බුද්ධිය"
   },
   "Search": {
     "title": "සොයන්න",
@@ -37,9 +37,9 @@
     "hint": "සේවා, ලිපි සහ නිතර අසන පැන හරහා සෙවීමට ටයිප් කරන්න",
     "types": {
       "service": "සේවා",
-      "blog": "තීක්ෂ්ණ බුද්ධිය",
       "faq": "FAQ",
-      "regulation": "රෙගුලාසි"
+      "regulation": "රෙගුලාසි",
+      "insights": "තීක්ෂ්ණ බුද්ධිය"
     }
   },
   "Navbar": {
@@ -57,7 +57,6 @@
     },
     "packages": "පැකේජ",
     "faq": "නිතර අසන පැන",
-    "blog": "තීක්ෂ්ණ බුද්ධිය",
     "contact": "අපව අමතන්න",
     "whatsapp": "WhatsApp",
     "quote": "උපුටා ගැනීමක් ලබා ගන්න",
@@ -94,7 +93,8 @@
     "report": "වාර්තා කරන්න",
     "reports": "වාර්තා",
     "email": "ඊමේල්",
-    "regulations": "රෙගුලාසි"
+    "regulations": "රෙගුලාසි",
+    "insights": "තීක්ෂ්ණ බුද්ධිය"
   },
   "MobileTab": {
     "home": "මුල් පිටුව",
@@ -121,7 +121,7 @@
   "breadcrumb": {
     "home": "මුල් පිටුව",
     "services": "සේවා",
-    "blog": "Insights",
+    "insights": "Insights",
     "industries": "කර්මාන්ත",
     "packages": "පැකේජ",
     "faq": "FAQ"

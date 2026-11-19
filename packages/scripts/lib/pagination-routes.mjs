@@ -23,14 +23,14 @@ const ROOT = path.resolve(__dirname, '../../..');
 
 export const PAGE_CAPACITY = 20;
 
-/** 封面按约定路径探测（apps/blog/src/lib/posts.ts getCoverPath），不是 frontmatter 字段 */
+/** 封面按约定路径探测（apps/insights/src/lib/posts.ts getCoverPath），不是 frontmatter 字段 */
 function hasCover(slug) {
-  return fs.existsSync(path.join(ROOT, 'apps/blog/public/images/blog', slug, 'cover.webp'));
+  return fs.existsSync(path.join(ROOT, 'apps/insights/public/images/insights', slug, 'cover.webp'));
 }
 
 /** 博客的页数（按 en 目录的已发布文章算，48 语言篇目一致） */
 export function blogPageCount() {
-  const dir = path.join(ROOT, 'apps/blog/content/en');
+  const dir = path.join(ROOT, 'apps/insights/content/en');
   if (!fs.existsSync(dir)) return 1;
   const files = fs.readdirSync(dir).filter((f) => f.endsWith('.mdx'));
   let cost = 0;

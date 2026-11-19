@@ -9,7 +9,7 @@
  * 只读 WebP 文件头（VP8 / VP8L / VP8X 三种容器格式），不引入依赖。
  *
  * 用法: node build-image-manifest.mjs
- * 产物: apps/blog/src/lib/image-manifest.json
+ * 产物: apps/insights/src/lib/image-manifest.json
  */
 import fs from 'fs';
 import path from 'path';
@@ -17,8 +17,8 @@ import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '../..');
-const IMAGES_DIR = path.join(ROOT, 'apps/blog/public/images/blog');
-const OUT_FILE = path.join(ROOT, 'apps/blog/src/lib/image-manifest.json');
+const IMAGES_DIR = path.join(ROOT, 'apps/insights/public/images/insights');
+const OUT_FILE = path.join(ROOT, 'apps/insights/src/lib/image-manifest.json');
 
 /** 读 WebP 文件头拿宽高；无法识别返回 null。 */
 function webpSize(file) {
@@ -64,7 +64,7 @@ export function buildImageManifest() {
       skipped += 1;
       continue;
     }
-    const rel = '/images/blog/' + path.relative(IMAGES_DIR, file).split(path.sep).join('/');
+    const rel = '/images/insights/' + path.relative(IMAGES_DIR, file).split(path.sep).join('/');
     manifest[rel] = size;
   }
   fs.mkdirSync(path.dirname(OUT_FILE), { recursive: true });

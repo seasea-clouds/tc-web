@@ -73,7 +73,7 @@ const SKIP_KEYS = [
  * 硬编码清单只作为兜底：新增文章无需有人记得来这里补一行。
  */
 const BLOG_TITLE_CACHE = {};
-function loadBlogTitles(locale, app = 'blog') {
+function loadBlogTitles(locale, app = 'insights') {
   const cacheKey = `${app}:${locale}`;
   if (BLOG_TITLE_CACHE[cacheKey]) return BLOG_TITLE_CACHE[cacheKey];
   const map = {};
@@ -193,7 +193,7 @@ function getDisplayText(route, enMsgs, locale = 'en') {
       'quote': 'Quote.title',
       'privacy': 'Privacy.title',
       'services': 'Home.servicesTitle',
-      'blog': 'Blog.title',
+      'insights': 'Blog.title',
     };
     const key = keyMap[parts[0]];
     if (key && enMsgs) {
@@ -208,7 +208,7 @@ function getDisplayText(route, enMsgs, locale = 'en') {
 }
 
 function sortRoutes(routes) {
-  const order = ['about', 'services', 'industries', 'blog', 'regulations', 'faq', 'quote', 'c', 'packages', 'privacy'];
+  const order = ['about', 'services', 'industries', 'insights', 'regulations', 'faq', 'quote', 'c', 'packages', 'privacy'];
   return routes.sort((a, b) => {
     const relA = a.replace('/en/', '').replace(/\/$/, '');
     const relB = b.replace('/en/', '').replace(/\/$/, '');

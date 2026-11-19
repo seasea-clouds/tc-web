@@ -1,0 +1,67 @@
+---
+title: "Finansflowet og dokumentflowet for toldbundne ordrer, fem dokumenter åbner vejen"
+date: "2027-05-11"
+category: "E-commerce"
+excerpt: "To kontrollerede flows: beløbene batchreguleres i landet, provision indeholdes månedligt, konto ca 6 uger; fem dokumenter styr udbetaling, fradrag, revision. Batch-/arkivnummer, M1–M6."
+references:
+  - title: "Handelsministeriet og fem andre ministeriers meddelelse om forbedring af tilsynet med grænseoverskridende e-handelsdetailimport (Shang Cai Fa [2018] nr 486)"
+    url: "https://www.gov.cn/zhengce/zhengceku/2018-12/31/content_5437823.htm"
+  - title: "Toldvæsenets meddelelse nr 194 af 2018 (tilsynsspørgsmål vedrørende grænseoverskridende e-handelsdetailimport og -eksport)"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Finansministeriet, Toldvæsenet og skattemyndigheden, Cai Guan Shui [2016] nr 18 (skattepolitikken for grænseoverskridende e-handelsdetailimport)"
+    url: "https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html"
+  - title: "Skattemyndighedens og valutamyndighedens meddelelse om skattemæssig registrering ved udlandsbetaling for tjenesteydelser m.v. (nr 40 af 2013, ændret ved meddelelse nr 31 af 2018)"
+    url: "https://www.chinatax.gov.cn/chinatax/c102449/c5219874/content.html"
+---
+
+En toldbundnet ordre i drift giver pengene og dokumenterne hver sin vej, med hver sine kontrolpunkter. Finansflowet følges ved afregningsbatcherne: beløbene reguleres i hele batcher til det indenlandske selskab pr. cyklus, ikke som udlandsbetaling ordre for ordre. Dokumentflowet følges ved dokumenterne: først når de fem dokumenter er komplette, får udlandsbetaling, fradrag før skat og revision en fælles forudsætning. De to linjer mødes i samme ordre, og mødestedet er de seks milepæle M1 til M6.
+
+![To kort for finansflowet og dokumentflowet, hvert med sine kontrolpunkter; to sidekort til højre forklarer, hvorfor dokumentflowet føres separat, og hvordan dokumenter hentes; nederst samler informations-, compliance-, finans- og dokumentflowene sig i en ordres M1 til M6](/images/insights/bonded-order-funds-invoicing-flow-china/funds-invoicing-two-flow-checkpoints.webp)
+
+## Hvordan pengene bevæger sig, finansflowets fem knudepunkter
+
+Finansflowets knudepunkter ligger på række: betaling, opsamling, afregning, indenlandsk modtagelse, udlandsbetaling, og kontrolpunktet sidder bagerst og verificerer dokumenter og skatteangivelse. Afregningen køres i batcher pr. cyklus, det indenlandske selskab modtager betalingen samlet, og der foretages ingen udlandsbetaling ordre for ordre; provision beregnes pr. ordre efter tilhørsforhold og tilbageholdes og betales videre månedligt, regninger og tilbageholdsbeviser arkiveres periode for periode; finanskontoen åbnes på cirka 6 uger, kører parallelt med butiksopbygningen og optager ingen ekstra lanceringstid.
+
+Hvert knudepunkt kan kobles til noget konkret i backoffice-grænsefladen: et eksempel på afregningsnota samt posterne for finansflowet og afregningsbatcherne ligger i systemet, så verificeringen behøver ikke ekstra materiale. Batchen er flowets grundenhed; afstemning, udlandsbetaling og sporbarhed følger batchen.
+
+## Hvordan dokumenterne gemmes, hvilken stak de fem dokumenter udgør
+
+Dokumentflowets knudepunkter er ligeledes fem: betalingsunderlag, fragtseddel, tolddeklaration, skattekvittering og afregningsnota, og kontrolpunktet verificerer, at alle fem ligger i arkivet. Fem komplette dokumenter er den fælles forudsætning for tre ting: udlandsbetaling, fradrag før skat og revisionsberedskab; mangler ét enkelt, kommer ingen af dem videre. Afregningsnotaen genereres automatisk pr. batch, af samme kilde som finansflowets register, og tallene kan matches.
+
+Posterne for penge-, vare- og informationsflowene føres ikke i en separat bog; de samles alle på disse fem dokumenter. Én stak dokumenter sporer en ordre hele vejen og matcher også bøgerne med lageret.
+
+## Hvorfor dokumentflowet føres som et selvstændigt flow
+
+Denne stak bilag har fire formål: udlandsbetaling, fradrag før skat, revision og myndighedsspørgsmål. Alle fire bygger på de samme underlag, og ét manglende blad bryder kæden; derfor føres dokumentflowet som et eget flow med eget kontrolpunkt, parallelt med finansflowet.
+
+Importleden stiller særligt strenge krav til matchning: de fem dokumenter skal gælde én og samme ordre, og blanding på tværs af ordrer bliver plukket ud post for post. Disciplinen i opdelingen af midlerne står i aftalen, og batcheksemplerne kan kontrolleres batch for batch i grænsefladens skærmbilleder; disciplin plus eksempler er dette flows hverdag.
+
+## Hvordan dokumenter hentes, hvordan tallene afstemmes
+
+Afstemningen kører på batchnummeret og kontrolleres batch for batch i finansflowets register; dokumenter hentes på arkivnummeret fra kontrolpunktstrackeren. Begge registre arkiveres sammen med leverancerne og findes klar på opfordring, så en henvendelse aldrig behøver materiale samlet i sidste øjeblik.
+
+## Fire flows samles i én og samme ordre
+
+At lægge en ordre sætter fire flows i gang samtidig: informationsflowet giver feedback på de tre dokumenter, compliance-flowet fuldfører identitetsverifikationen, finansflowet fører betalingen ind i batchafregningen, og dokumentflowet genererer afregningsnotaen i samme træk. De fire flows bogføres punkt for punkt ved kontrolpunkterne M1 til M6, og hvert trin i en ordre fra produktval til bogført provision kan matches mod en post.
+
+## En ordre går fra M1 til M6
+
+Ordrestien har 6 trin, 4 nøglegrænseflader, og i ansvarsfordelingsmatricen er A-rollen med det overordnede ansvar kun 1. M1 produktval og adgang: udløses af komplette input, porten står ved dokumenterne, resultatet er varelisten og HS-koderne, vi udfører, og input kommer fra dig; M2 indtræden i toldlageret: porten står ved toldlagerregistret, resultatet er register og lageroversigt; M3 listning: porten står ved gennemgangen af påstande, resultatet er gennemgangskonklusionen og offentliggørelseteksten.
+
+M4 ordre: porten står ved identitet og offentliggørelse, resultatet er identitets- og offentliggørelsesposter; M5 toldklarering: udløses af gennemført betaling, porten står ved krydskontrollen af de tre dokumenter og kvoten, resultatet er verifikationskonklusionen og kvotenedskrivningen; M6 afregning og provision: udløses af frigivelse, porten står ved compliance i provisionsudbetalingen, resultatet er provisionslisten, vi udfører, og du bekræfter reglerne. Trinene orkestreres af os; du leverer input ved M1 og bekræfter regler ved M6, og ind imellem behøver du ikke kobles til hvert led.
+
+![Dokumentation fra nabosiden, en ordres trinvej i 6 trin fra M1 til M6 fra ende til anden med ansvarsfordelingen for de fire nøglegrænseflader; nederst to demotabeller for krydskontrol af ordre- og betalingstidssekvens og sporing af frigivelse og leverance](/images/insights/bonded-order-funds-invoicing-flow-china/order-path-m1-m6-responsibility-splits.webp)
+
+Arbejdsfordelingen mellem de fire grænsefladeparter står på samme side: dit firma varetager produkt og beslutninger, platformen ordrer og afregning, ekspeditionspartneren lager og toldklarering, myndighederne angivelse og inspektion. De syv flows har kun én koordinerende part, den, der holder A-rollen med det overordnede ansvar i ansvarsfordelingsmatricen; de fire grænsefladers ansvarsgrænser står i planen. Konti og data ligger hos dig, orkestrering og poster hos os, og overdragelsen har ingen blanke felter.
+
+## Én ordre viser hele vejen
+
+Demotabellen rummer én ordre: ordrenummer SO260922-0417, betalingsunderlag PAY260922-0417, tidssekvens normal. Ved bestilling var både identitets- og offentliggørelsesposterne på plads, gennemført betaling udløste toldklareringen, krydskontrollen af de tre dokumenter og kvotekontrollen blev gennemført, listenummeret QD260922-0417 blev genereret, og pakkenummeret EX7726001 viser modtaget. Efter modtagelsen blev ordren frigivet og gik ind i batchafregningen; betalingsunderlag, fragtseddel, tolddeklaration, skattekvittering og afregningsnota arkiveres pr. batch, batchnummeret kan afstemmes i finansflowets register, og arkivnummeret henter dokumenterne i kontrolpunktstrackeren.
+
+Anden række i samme tabel er modstykket: betalingsunderlaget for SO260921-0088 ligger 2 timer efter i tidssekvensen, og krydskontrolpanelet lister den slags afvigelser række for række pr. ordre; i tabellen for frigivelse og sporing er QD260921-0088 stadig under transport, modtagelsesstatus er ikke nået, og frigivelsen står stille foran M6-porten. De to demotabeller viser det samme: tidssekvens, status og dokumentnumre kan kontrolleres ordre for ordre, og afvigelser opdages uden, at nogen skal bladre i poster i hånden.
+
+Læs de to flows' kontrolpunkter sammen, og driftsdisciplinen står med to ord, komplet og matchet: fem dokumenter komplette, batcher matchede. Lås først afregningsparten, afregningscyklussen og arkiveringsreglerne, planlæg derefter lanceringen, og hver senere udlandsbetaling, fradrag og henvendelse har samme stak bilag at pege på. Dokumentnumre, tidssekvenser og modtagelsesstatus i demogrænsefladen er kun til illustration; den gældende tolkning følger løbende regninger, platformseksporter og kravene fra tilsynsmyndighederne.
+
+Finansflowet og dokumentflowet behandles lettest som backoffice-opgaver efter lanceringen, indtil en udlandsbetaling bliver stående i dokumentgennemgangen eller et fradrag bliver underkendt af skattemyndigheden, og dokumenterne skal suppleres bagefter. Arkiveringstidspunktet for de fem dokumenter står fast i det øjeblik, ordren frigives, og batcheksemplerne efterlader spor batch for batch; at flytte kontrolpunkterne frem er langt billigere end at lappe kæden bagefter.
+
+Hvis du vil have finansflowet og dokumentflowet koblet sammen til ét register, der kan afstemmes pr. batch og trække dokumenter frem på opfordring, tilpasset din eksisterende afregningspart og din butiksopsætning, så [Kontakt os](/da/packages/).

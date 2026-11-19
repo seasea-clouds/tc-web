@@ -85,7 +85,7 @@ function extractBlog(blogDir, locale, msg) {
     if (!title) continue;
 
     posts.push({
-      type: 'blog',
+      type: 'insights',
       title,
       desc: excerpt.slice(0, 200),
       href: `/insights/${slug}/`,
@@ -200,7 +200,7 @@ function generateIndex(messagesDir, blogDir, regDir, locale) {
   }
   return {
     services: extractServices(msg),
-    blog: extractBlog(blogDir, locale, msg),
+    insights: extractBlog(blogDir, locale, msg),
     faq: extractFAQ(msg),
     regulations: extractRegulations(regDir, locale),
     checks: extractCheckPages(msg),
@@ -227,8 +227,8 @@ export function buildSearchIndexes(messagesDir, blogDir, regDir, outDir) {
       const outFile = path.join(outDir, `search-index-${locale}.json`);
       fs.mkdirSync(outDir, { recursive: true });
       fs.writeFileSync(outFile, JSON.stringify(index), 'utf-8');
-      const total = index.services.length + index.blog.length + index.faq.length + index.regulations.length + index.checks.length;
-      console.log('  ' + locale + ': ' + total + ' items (' + index.services.length + 'S + ' + index.blog.length + 'B + ' + index.faq.length + 'F + ' + index.regulations.length + 'R + ' + index.checks.length + 'C)');
+      const total = index.services.length + index.insights.length + index.faq.length + index.regulations.length + index.checks.length;
+      console.log('  ' + locale + ': ' + total + ' items (' + index.services.length + 'S + ' + index.insights.length + 'I + ' + index.faq.length + 'F + ' + index.regulations.length + 'R + ' + index.checks.length + 'C)');
     } catch (err) {
       console.error('  ' + locale + ': FAILED - ' + err.message);
     }
@@ -242,7 +242,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
 
   // Read blog content from blog app, not site
   const messagesDir = path.join(ROOT, 'apps', 'site', 'messages');
-  const blogDir = path.join(ROOT, 'apps', 'blog', 'content');
+  const blogDir = path.join(ROOT, 'apps', 'insights', 'content');
   const regDir = path.join(ROOT, 'apps', 'regulations', 'content');
 
   // Default outDir: project's public/ directory (derived from cwd)

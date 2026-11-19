@@ -1292,7 +1292,6 @@
     "metaDescription": "Blaai deur al die dienste, nywerheidsgidse, insigte en bladsye op die SinoTrade-nakoming-webwerf.",
     "servicesTitle": "Dienste",
     "industriesTitle": "Nywerhede",
-    "blogTitle": "Insigte-artikels",
     "pagesTitle": "Ander bladsye",
     "home": "Tuis",
     "about": "Oor ons",
@@ -1300,7 +1299,8 @@
     "quote": "Kry 'n kwotasie",
     "faq": "Gereelde vrae",
     "packages": "Pakkette",
-    "testimonials": "Getuigskrifte"
+    "testimonials": "Getuigskrifte",
+    "insightsTitle": "Insigte-artikels"
   },
   "Cookie": {
     "message": "Hierdie webwerf gebruik slegs noodsaaklike verifikasiekoekies. Geen dop- of advertensiekoekies word gebruik nie.",

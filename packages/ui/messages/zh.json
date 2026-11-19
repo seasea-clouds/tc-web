@@ -18,7 +18,6 @@
     "whatsapp": "WhatsApp",
     "testimonials": "客户评价",
     "industries": "行业",
-    "blog": "见解",
     "checkCb": "跨境电商",
     "checkCcc": "电子产品",
     "checkGacc": "食品进口",
@@ -27,7 +26,8 @@
     "checkTm": "商标",
     "email": "电子邮件",
     "freeCheckHeader": "免费工具",
-    "getQuote": "获取报价"
+    "getQuote": "获取报价",
+    "insights": "见解"
   },
   "Search": {
     "title": "搜索",
@@ -37,9 +37,9 @@
     "hint": "输入内容以搜索服务、文章和常见问题解答",
     "types": {
       "service": "服务",
-      "blog": "洞察",
       "faq": "FAQ",
-      "regulation": "法规"
+      "regulation": "法规",
+      "insights": "洞察"
     }
   },
   "Navbar": {
@@ -57,7 +57,6 @@
     },
     "packages": "套餐",
     "faq": "常见问题解答",
-    "blog": "洞察",
     "contact": "联系我们",
     "whatsapp": "WhatsApp",
     "quote": "获取报价",
@@ -94,7 +93,8 @@
     "register": "注册",
     "report": "报告",
     "email": "邮箱",
-    "regulations": "法规库"
+    "regulations": "法规库",
+    "insights": "洞察"
   },
   "MobileTab": {
     "home": "首页",
@@ -121,10 +121,10 @@
   "breadcrumb": {
     "home": "首页",
     "services": "服务",
-    "blog": "洞察",
     "industries": "行业",
     "packages": "套餐",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "insights": "洞察"
   },
   "ActionDock": {
     "contactWhatsapp": "通过 WhatsApp 联系我们",

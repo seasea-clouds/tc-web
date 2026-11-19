@@ -1292,7 +1292,6 @@
     "metaDescription": "浏览中贸合规网站上的全部服务、行业指南、资讯文章与页面。",
     "servicesTitle": "服务",
     "industriesTitle": "行业",
-    "blogTitle": "资讯文章",
     "pagesTitle": "其他页面",
     "home": "首页",
     "about": "关于我们",
@@ -1300,7 +1299,8 @@
     "quote": "获取报价",
     "faq": "常见问题",
     "packages": "服务套餐",
-    "testimonials": "客户评价"
+    "testimonials": "客户评价",
+    "insightsTitle": "资讯文章"
   },
   "Cookie": {
     "message": "本网站仅使用必要的身份验证Cookie。不使用跟踪或广告Cookie。",

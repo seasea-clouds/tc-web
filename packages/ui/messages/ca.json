@@ -18,7 +18,6 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Testimonis",
     "industries": "Indústries",
-    "blog": "Perspectives",
     "checkCb": "CBEC",
     "checkCcc": "Electrònica",
     "checkGacc": "Importació d'aliments",
@@ -27,7 +26,8 @@
     "checkTm": "Marques comercials",
     "email": "Correu electrònic",
     "freeCheckHeader": "Eines gratuïtes",
-    "getQuote": "Obtén un pressupost"
+    "getQuote": "Obtén un pressupost",
+    "insights": "Perspectives"
   },
   "Search": {
     "title": "Cerca",
@@ -37,9 +37,9 @@
     "hint": "Escriviu per cercar entre serveis, articles i preguntes freqüents",
     "types": {
       "service": "Serveis",
-      "blog": "Perspectives",
       "faq": "FAQ",
-      "regulation": "Normativa"
+      "regulation": "Normativa",
+      "insights": "Perspectives"
     }
   },
   "Navbar": {
@@ -57,7 +57,6 @@
     },
     "packages": "Paquets",
     "faq": "PMF",
-    "blog": "Perspectives",
     "contact": "Contacta amb nosaltres",
     "whatsapp": "WhatsApp",
     "quote": "Obteniu un pressupost",
@@ -94,7 +93,8 @@
     "report": "Informeu",
     "reports": "Informes",
     "email": "Correu",
-    "regulations": "Normativa"
+    "regulations": "Normativa",
+    "insights": "Perspectives"
   },
   "MobileTab": {
     "home": "Inici",
@@ -121,7 +121,7 @@
   "breadcrumb": {
     "home": "Inici",
     "services": "Serveis",
-    "blog": "Insights",
+    "insights": "Insights",
     "industries": "Indústries",
     "packages": "Paquets",
     "faq": "FAQ"

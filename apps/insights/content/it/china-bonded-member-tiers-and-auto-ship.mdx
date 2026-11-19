@@ -1,0 +1,77 @@
+---
+title: "Livelli dei soci e consegne periodiche, quattro tracce sorvegliate riga per riga"
+date: "2027-06-29"
+category: "E-commerce"
+excerpt: "Soci e consegne periodiche condividono il codice con il registro di attribuzione; il pannello riunisce le tracce con allerte visibili e si verifica il registro riga per riga."
+references:
+  - title: "Legge della Repubblica Popolare Cinese sulla protezione delle informazioni personali (approvata il 20 agosto 2021, articoli 13 e 23)"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+  - title: "Avviso n. 194 del 2018 dell'Amministrazione Generale delle Dogane della Cina sulla vigilanza delle merci al dettaglio importate ed esportate nel commercio elettronico transfrontaliero"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Disposizioni per promuovere e disciplinare i flussi transfrontalieri di dati (Ordine n. 16 dell'Amministrazione del Cyberspazio della Cina, in vigore dal 22 marzo 2024)"
+    url: "https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm"
+---
+
+Livelli dei soci e consegne periodiche riescono a trattenere gli acquisti ripetuti a patto che i due gestionali combacino riga per riga. Uno è il pannello operativo, che raccoglie su un'unica schermata sei righe per ordini in transito, lotti in deposito doganale, uscite dalla zona doganale di oggi, spedizioni in transito, tempo medio di sdoganamento e lotti in allerta scadenza; l'altro è il gestionale dei livelli dei soci e delle consegne periodiche, che elenca su sei righe codice socio, livello, prodotto in consegna periodica, ciclo di consegna, data della prossima consegna e spesa cumulativa. Entrambi condividono lo stesso codice socio e ogni cambio di stato lascia una traccia nel registro, così un acquisto ripetuto torna allo stesso socio. Quando subentra, guardi prima le righe anomale: nella demo due righe sono in corso e una va corretta, con 2 ordini in attesa di dichiarazione, 3 anomalie e 2 lotti prossimi alla scadenza.
+
+![Demo dell'interfaccia del pannello operativo a quattro tracce, con intestazione traccia, indicatore chiave, valore attuale, obiettivo, tasso di raggiungimento, allerta, stato e azione, sei righe per traccia ordini, traccia magazzino, traccia sdoganamento, traccia logistica, traccia tempi e traccia scadenze, e una nota in fondo che indica 6 record in totale e 20 per pagina](/images/insights/china-bonded-member-tiers-and-auto-ship/four-tracks-dashboard-system-demo.webp)
+
+## Sei righe su una schermata, quattro flussi di servizio con un responsabile ciascuno
+
+Il pannello operativo è la vista principale, con una riga per traccia e schede per oggi, questa settimana e questo mese. Ogni riga elenca indicatore chiave, valore attuale, obiettivo, tasso di raggiungimento, allerta e stato, e termina con due voci, dettagli e registro. La cella senza allerta attivata usa un trattino breve come segnaposto, non uno zero, per non leggere l'assenza di avvisi come un indicatore pari a zero. Il pannello è impaginato a 20 record per pagina; la demo contiene 6 record e si vede tutta in una schermata.
+
+I quattro flussi di servizio, da S10 a S13, hanno ciascuno un responsabile, e i rispettivi indicatori e passaggi attuali sono raccolti in questo unico pannello. Chi gestisce quale traccia e a che punto è arrivato si legge qui senza sfogliare altri registri; la responsabilità resta sulla riga e al passaggio di consegne basta firmare riga per riga.
+
+Le otto colonne dell'intestazione sono, in ordine, traccia, indicatore chiave, valore attuale, obiettivo, tasso di raggiungimento, allerta, stato e azione. Le sei righe sono riportate per intero in quest'ordine:
+
+- Traccia ordini, ordini in transito, attuale 128, obiettivo 150, tasso di raggiungimento 85%, allerta vuota, stato normale;
+- Traccia magazzino, lotti in deposito doganale, attuale 36, obiettivo 40, tasso di raggiungimento 90%, allerta vuota, stato normale;
+- Traccia sdoganamento, uscite dalla zona doganale di oggi, attuale 86, obiettivo 100, tasso di raggiungimento 86%, allerta 2 ordini in attesa di dichiarazione, stato in corso;
+- Traccia logistica, spedizioni in transito, attuale 214, obiettivo e tasso di raggiungimento lasciati vuoti, allerta 3 anomalie, stato in corso;
+- Traccia tempi, tempo medio di sdoganamento, attuale 6,8 ore, obiettivo 8 ore, colonna del tasso di raggiungimento con conforme, allerta vuota, stato normale;
+- Traccia scadenze, lotti in allerta scadenza, attuale 2, obiettivo 0, tasso di raggiungimento lasciato vuoto, allerta 2 lotti prossimi alla scadenza, stato da correggere.
+
+Le schede informative segnalano due cifre facili da fraintendere: la traccia ordini ha 128 ordini in transito contro un obiettivo di 150 e un tasso di raggiungimento dell'85%; la traccia magazzino ha 36 lotti in deposito doganale contro un obiettivo di 40 e un tasso di raggiungimento del 90%. La scheda dice anche che, quando nessuna allerta scatta, la cella mostra un trattino breve. Il trattino, quindi, non indica dati mancanti; registra la conclusione che questa volta non c'è stato alcun avviso.
+
+Tre stati vanno trattati separatamente. Le tre righe normali sono la traccia ordini, la traccia magazzino e la traccia tempi; la traccia tempi è a 6,8 ore contro un obiettivo di 8 ore, quindi la colonna del tasso di raggiungimento dice semplicemente conforme. Le due righe in corso portano ciascuna un'attività: la traccia sdoganamento ha 2 ordini in attesa di dichiarazione e la traccia logistica ha 3 anomalie. Quella da correggere è la traccia scadenze, con 2 lotti in allerta scadenza contro un obiettivo di 0 e con l'allerta che indica 2 lotti prossimi alla scadenza. L'ordine di intervento segue l'impatto: prima si smaltiscono i lotti prossimi alla scadenza, poi si presentano le dichiarazioni, infine si inseguono le anomalie.
+
+## Livelli dei soci e consegne periodiche nel gestionale, verificabili riga per riga
+
+![Demo dell'interfaccia del gestionale per i livelli dei soci e le consegne periodiche, con intestazione codice socio, livello, prodotto in consegna periodica, ciclo di consegna, data della prossima consegna, spesa cumulativa, stato della consegna periodica e azione, sei righe con i livelli e i dati da M-100238 a M-100419, e una nota in fondo che indica 6 record in totale e 20 per pagina](/images/insights/china-bonded-member-tiers-and-auto-ship/member-tiers-subscriptions-system-demo.webp)
+
+Il gestionale lato soci è posto sotto il modulo del negozio, con schede per livello distinte in carta nera, carta oro e carta argento, più una scheda riservata alle consegne periodiche attive. Ogni riga elenca codice socio, livello, prodotto in consegna periodica, ciclo di consegna, data della prossima consegna e spesa cumulativa, e termina anch'essa con dettagli e registro. La demo contiene 6 record, con 20 per pagina.
+
+Livelli, consegne periodiche e spesa cumulativa sono mantenuti in un unico punto, e i codici socio condividono un'unica fonte dati con il registro di attribuzione. Così un acquisto ripetuto non viene conteggiato una volta sul lato soci e un'altra volta sul lato attribuzione; per assegnare gli acquisti ripetuti di un livello a una campagna, basta risalire al codice. Codici socio e spesa cumulativa sono informazioni personali, quindi trattamento e condivisione richiedono una base giuridica chiara, e tra il gestionale interno e i rendiconti esteri passano solo gli aggregati necessari.
+
+Le otto colonne dell'intestazione sono, in ordine, codice socio, livello, prodotto in consegna periodica, ciclo di consegna, data della prossima consegna, spesa cumulativa, stato della consegna periodica e azione. Le sei righe sono riportate per intero in quest'ordine, con tutti gli importi in yuan:
+
+- M-100238, carta nera, capsule molli di coenzima Q10 x2, mensile, 2026-10-22, 15800,00 yuan, in corso;
+- M-101204, carta oro, capsule molli di olio di pesce x1, mensile, 2026-10-05, 8640,00 yuan, in corso;
+- M-100571, carta argento, proteine del siero di latte in polvere x1, ogni 2 mesi, 2026-11-19, 4320,00 yuan, in corso;
+- M-100872, carta nera, probiotici in polvere x2, mensile, 2026-10-08, 22100,00 yuan, in corso;
+- M-101466, carta oro, bevanda di peptidi di collagene x1, mensile, 2026-10-15, 6980,00 yuan, sospeso;
+- M-100419, carta argento, compresse di calcio e vitamina D x1, trimestrale, 2026-12-01, 1560,00 yuan, in corso.
+
+Le schede informative citano due codici. M-100238 è carta nera, con due flaconi di capsule molli di coenzima Q10 consegnati automaticamente ogni mese, prossima consegna il 2026-10-22 e spesa cumulativa di 15800,00 yuan; M-101204 è carta oro. La scheda dice inoltre che i codici socio condividono la fonte con il registro di attribuzione. Leggendo queste due frasi insieme alle sei righe della tabella emergono le soglie dei livelli: le due righe carta argento valgono 4320,00 yuan e 1560,00 yuan, le due righe carta oro 8640,00 yuan e 6980,00 yuan, le due righe carta nera 15800,00 yuan e 22100,00 yuan, senza sovrapposizioni tra i tre livelli. La spesa cumulativa è quindi sia un campo visualizzato sia la base della suddivisione in livelli.
+
+I cicli di consegna si dividono in tre forme, mensile, ogni 2 mesi e trimestrale, e nella tabella cinque righe sono in corso e una è sospesa. Quella sospesa è M-101466, con spesa cumulativa di 6980,00 yuan; lo stato è indicato in un campo apposito, senza cancellare la riga per segnalare la disattivazione. La data della prossima consegna più vicina è il 2026-10-05 e la più lontana è il 2026-12-01, entrambe ordinate nella stessa tabella.
+
+## Un socio con carta nera attraverso un ciclo di consegna completo
+
+Prendiamo il socio con carta nera M-100238 e seguiamolo per un ciclo. Il gestionale lo registra come attivo, con un ordine al mese, prodotto capsule molli di coenzima Q10 x2, prossima consegna il 2026-10-22 e spesa cumulativa di 15800,00 yuan. La stessa riga compare sia nella scheda dei livelli dei soci sia in quella delle consegne periodiche, senza generare un secondo codice.
+
+Alla scadenza della data di consegna il sistema genera l'ordine secondo il ciclo, spedisce dai lotti in deposito doganale, passa per lo sdoganamento e l'uscita dalla zona, poi riporta il numero della spedizione su questa riga. Il valore attuale della traccia ordini cambia di conseguenza, la traccia scadenze scala per lotto e la traccia tempi registra la durata di questo sdoganamento. Completata la riscrittura, la spesa cumulativa cresce dell'importo effettivamente pagato e la data della prossima consegna slitta di un ciclo; i dettagli mostrano i campi e il registro mostra chi ha modificato cosa e quando.
+
+Anche una sospensione in corso d'opera resta sulla stessa riga. M-101466 ha stato della consegna periodica sospeso, con prodotto e spesa cumulativa ancora in tabella; semplicemente non genera più l'ordine successivo, e alla riattivazione si riprende dal registro senza creare un nuovo codice socio. Se la sospensione fosse scritta come riga cancellata, il registro di attribuzione perderebbe un tratto di storia e le soglie dei livelli non si potrebbero più calcolare.
+
+La convenzione sugli importi va fissata subito e per sempre. Le sei righe della spesa cumulativa sono tutte in yuan, scritte con due decimali, senza simboli di valuta e senza note di conversione aggiunte ai dati dimostrativi. Il piè di pagina dell'interfaccia indica che si tratta di dati dimostrativi, con eccezioni e rettifiche registrate e verificabili; questi valori servono quindi a controllare calcoli e campi, non come cifre operative divulgate all'esterno.
+
+## Allineare i due gestionali prima del passaggio
+
+Il titolo della pagina demo dice quattro tracce, mentre la tabella ne elenca effettivamente sei: traccia ordini, traccia magazzino, traccia sdoganamento, traccia logistica, traccia tempi e traccia scadenze. Non c'è contraddizione, perché i quattro flussi di servizio da S10 a S13 sono la ripartizione delle responsabilità, mentre le sei righe sono le righe di indicatori su questa schermata; un responsabile può seguirne più di una. Nel leggere la tabella si riconoscono gli indicatori per riga e si trovano le persone per flusso, senza prendere il titolo della pagina come numero di righe.
+
+Prima del passaggio si fanno tre operazioni: prima si completa un ciclo di consegna intero e si controlla se la data della prossima consegna e la spesa cumulativa slittano insieme; poi si riconciliano riga per riga codici socio e stati dei due gestionali, verificando che soglie dei livelli, registrazioni di sospensione e registro combacino; infine si riportano sul pannello gli esiti delle righe anomale, così 2 ordini in attesa di dichiarazione, 3 anomalie e 2 lotti prossimi alla scadenza trovano ciascuno una collocazione. Solo dopo aver percorso tutti e tre i passaggi il registro di fidelizzazione risulta davvero preso in carico.
+
+Che gli acquisti ripetuti restino o meno, nel sistema si guardano solo due punti: se le anomalie sono visibili sul momento e se i cambi di stato lasciano traccia. Nella demo le sei righe di traccia sono visibili su una schermata, le sei righe dei soci sono verificabili campo per campo e ogni riga ha dettagli e registro, così entrambi i punti trovano collocazione. Quanto al tempo necessario per il passaggio, dipende dall'allineamento dei campi nel Suo sistema attuale e dal ciclo di doppia gestione; integrazioni analoghe sul mercato aperto si misurano in settimane, utile solo come ordine di grandezza e non da intendere come un impegno.
+
+Per integrare i livelli dei soci e le consegne periodiche nel Suo gestionale operativo del deposito doganale esistente, [Contattaci](/it/packages/).

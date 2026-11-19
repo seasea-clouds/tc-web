@@ -1292,7 +1292,6 @@
     "metaDescription": "Bla gjennom alle tjenester, bransjeguider, innsiktsartikler og sider på SinoTrade Compliance-nettstedet.",
     "servicesTitle": "Tjenester",
     "industriesTitle": "Bransjer",
-    "blogTitle": "Innsiktsartikler",
     "pagesTitle": "Andre sider",
     "home": "Hjem",
     "about": "Om oss",
@@ -1300,7 +1299,8 @@
     "quote": "Få et tilbud",
     "faq": "FAQ",
     "packages": "Pakker",
-    "testimonials": "Kundeuttalelser"
+    "testimonials": "Kundeuttalelser",
+    "insightsTitle": "Innsiktsartikler"
   },
   "Cookie": {
     "message": "Dette nettstedet bruker kun viktige autentiseringsinformasjonskapsler. Ingen sporings- eller reklameinformasjonskapsler brukes.",

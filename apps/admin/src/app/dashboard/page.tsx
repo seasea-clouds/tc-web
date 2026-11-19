@@ -238,7 +238,7 @@ const STATIC_SEGMENT_LABELS: Record<string, string> = {
   'subscription': 'segment.subscription',
   'dashboard': 'segment.dashboard',
   // ── Blog ──
-  'blog': 'segment.blog',
+  'insights': 'segment.insights',
   // ── Admin ──
   'admin': 'segment.admin',
   'users': 'segment.users',

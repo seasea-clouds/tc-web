@@ -1292,7 +1292,6 @@
     "metaDescription": "Pregledajte sve usluge, industrijske vodiče, članke i stranice na web stranici SinoTrade Compliance.",
     "servicesTitle": "Usluge",
     "industriesTitle": "Industrije",
-    "blogTitle": "Članci i uvidi",
     "pagesTitle": "Ostale stranice",
     "home": "Početna",
     "about": "O nama",
@@ -1300,7 +1299,8 @@
     "quote": "Zatražite ponudu",
     "faq": "Česta pitanja",
     "packages": "Paketi",
-    "testimonials": "Iskustva klijenata"
+    "testimonials": "Iskustva klijenata",
+    "insightsTitle": "Članci i uvidi"
   },
   "Cookie": {
     "message": "Ova stranica koristi samo bitne kolačiće za provjeru autentičnosti. Ne koriste se kolačići za praćenje ili oglašavanje.",

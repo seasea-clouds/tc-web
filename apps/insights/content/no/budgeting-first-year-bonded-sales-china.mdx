@@ -1,0 +1,91 @@
+---
+title: "Budsjett for første år med tollagersalg i tre nivåer"
+date: "2027-08-10"
+category: "E-commerce"
+excerpt: "Første år i tollager, tre nivåer. Én parameteroppstilling, bare inndata endres og nivået følger valideringen. Fire fradrag følger volumet. Satser gjelder bare i formelt tilbud."
+references:
+  - title: "Finansdepartementets, Kinas tollvesens og den statlige skatteforvaltningens kunngjøring om skattepolitikken for grenseoverskridende e-handelsdetaljimport (Cai Guan Shui [2016] nr. 18; tollsatsen settes foreløpig til 0%, importmoms og forbruksavgift kreves inn med 70% av det lovbestemte beløpet)"
+    url: "https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html"
+  - title: "Finansdepartementets, Kinas tollvesens og den statlige skatteforvaltningens kunngjøring om forbedring av skattepolitikken for grenseoverskridende e-handelsdetaljimport (Cai Guan Shui [2018] nr. 49; grense per transaksjon 5000 yuan, årlig grense 26000 yuan)"
+    url: "https://czt.hlj.gov.cn/czt/c110905/202001/c00_30603063.shtml"
+  - title: "Seks etaters kunngjøring om forbedret tilsyn med grenseoverskridende e-handelsdetaljimport (Shang Cai Fa [2018] nr. 486)"
+    url: "https://www.mofcom.gov.cn/article/b/fwzl/201811/20181102812004.shtml"
+  - title: "Kinas tollvesens kunngjøring nr. 194 av 2018 om tilsyn med varer innen grenseoverskridende e-handelsdetaljimport og -eksport"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+---
+
+Et første år med tollagersalg kan kokes ned til én enkelt regnelinje: av hver 100 yuan i omsetning trekker gebyrer, fulfillment og førsteleddsfrakt, skatter og provisjon til sammen 37.1 yuan og etterlater 62.9 yuan i dekningsbidrag. Med det bidraget dekkes den faste investeringen, og tilbakebetalingstiden beregnes. De tre scenariene endrer inndata, ikke denne metoden.
+
+## Tre scenarier, start med SKU-grensen
+
+Det forsiktige scenariet holder 3 til 5 SKU og setter validering og anbefalinger først. Kjør ett enkelt SKU hele veien fra start til slutt, og gå videre til basisscenariet når dataene kommer tilbake; fire observasjonspunkter følges først, med konvertering og gjentatte kjøp fremst.
+
+Basisscenariet holder 8 til 12 SKU og sikter mot å nærme seg nullpunktet i løpet av første år. Parameteroppstillingen er den samme, bare inndata endres og nivået følger valideringsresultatene; nettokvotmodellen kan settes rett inn.
+
+Det optimistiske scenariet holder alle SKU og støtter seg på volum for å fortynne de faste kostnadene. Skaler først når lagerføring av alle SKU og kampanjesystemet er på plass; de seksten forberedelsene før lanseringen er en forutsetning. Å bytte mellom scenariene er ikke et spørsmål om magefølelse: hvert nivå har adgangsbetingelser, og inntil de er oppfylt, blir man værende i det foregående.
+
+![Første års tre scenarier og justerbare parametere: tre kort for forsiktig, basis og optimistisk, merket 3 til 5 SKU, 8 til 12 SKU og alle SKU med sine adgangsbetingelser; nedenfor fem fradragssegmenter per 100 yuan i omsetning og 62.9 yuan i dekningsbidrag; nederst en kjede med seks ledd fra inndata via GMV, fradrag og dekningsbidrag til fast investering og tilbakebetalingstid](/images/insights/budgeting-first-year-bonded-sales-china/year-one-model-three-scenarios.webp)
+
+## Tre antagelser fyller du inn
+
+Hele modellen trenger bare tre antagelser fra deg: ordreverdi, gjenkjøpsfrekvens og tak for kampanjeprovisjonen. Vi leverer struktur og verktøy, tallene kommer fra parametrene dine, og leveransen er en interaktiv beregningstabell uten forhåndsinnstilte målverdier.
+
+Modellkjeden har seks ledd. Inndata regner om antall SKU, ordreverdi og gjentatte kjøp til omsetning (GMV), og hvert nivå beregner sin egen omsetning. Deretter trekkes fire poster fra: samlet skatt, plattformprovisjon, fulfillment og kampanjeprovisjon. GMV minus disse fire er dekningsbidraget. Den faste investeringen omfatter systemintegrasjon, avskrivning av samlet førsteleddsfrakt og vedlikehold av tollagerregnskap. Når akkumulert bidrag dekker den faste investeringen, fremkommer tilbakebetalingstiden.
+
+Du kjører kjeden selv. Bytt ut én enkelt antagelse, og alle tallene etter flytter seg; metoden ligger åpent, så du kan ta den med til en intern godkjenning uten å måtte stole på noens tonefall.
+
+## Per 100 yuan i omsetning, 37.1 yuan i fire fradrag
+
+Dekningsbidraget deles opp per 100 yuan GMV: gebyrer 6.0 yuan, fulfillment og førsteleddsfrakt 7.0 yuan, skatter 9.1 yuan, provisjon 15.0 yuan, til sammen 37.1 yuan og 62.9 yuan i dekningsbidrag. De fem segmentene summerer til nøyaktig 100%, strukturen er den samme i alle tre scenarier, og forskellen ligger i størrelsesorden og fortynningen av de faste postene.
+
+De 9.1% i skatteposten er den samlede skattebyrden for grenseoverskridende e-handelsdetaljimport: tollsatsen settes foreløpig til 0%, og importmoms og forbruksavgift kreves inn med 70% av det lovbestemte beløpet. Det er et tall beregnet ut fra hele skattesystemet, så legg ikke en enkelt skattesats direkte til det.
+
+Fradragene følger ordrevolumet forholdsmessig. Dobles volumet, dobles alle fire fradragene, og dekningsbidraget følger samme forhold; den faste investeringen følger ikke volumet, så det er nettopp den faste siden volumet fortynner. De viste andelene er en illustrerende beregningsmålestokk, ikke et tilbud og ikke et løfte om avkastning.
+
+## Kjør det forsiktige scenariet én gang
+
+Ta det forsiktige scenariet gjennom én beregning. 3 SKU, 25 ordrer per SKU i måneden, omtrent 900 ordrer i året; med en ordreverdi på 300 yuan blir årsomsetningen 270,000 yuan. Med 37.1% i fradrag blir de fire postene til sammen 100,170 yuan: gebyrer 16,200 yuan, fulfillment og førsteleddsfrakt 18,900 yuan, skatter 24,570 yuan, provisjon 40,500 yuan.
+
+Dekningsbidraget er 169,830 yuan. Den faste investeringen anslås til 150,000 yuan, der systemintegrasjon, avskrivning av samlet førsteleddsfrakt og vedlikehold av tollagerregnskap inngår; månedlig dekningsbidrag er omtrent 14,153 yuan, og akkumulert bidrag dekker den faste investeringen omkring måned 11, noe som gir tilbakebetaling innen første år. Bytt ordreverdi eller antall gjentatte kjøp, og resultatet flytter seg; du fyller inn parameterne, vi endrer ikke beregningsgrunnlaget.
+
+## Tre faktureringsmåter
+
+Per ordre: avregnes etter antall ordrer og passer til faser med forutsigbart volum og stabil SKU-struktur.
+
+Andel av GMV: avregnes som en andel av omsetningen og passer til oppskalingsfasen, der større volum fortynner enhetskostnaden mer.
+
+Månedsgebyr pluss per ordre: et fast gebyr dekker grunnbemanning og systemer, og den overskytende delen legges til per ordre, slik at budsjettet kan fastsettes på forhånd.
+
+Alle tre måtene prises mot fem faktorer: ordrevolum, antall SKU, tidskrav, avregningsvaluta og merverditjenester. Endres de fem, endres tilbudsstrukturen med dem.
+
+![Faktureringsalternativer og innsats på din side: øverst per ordre, andel av GMV og månedsgebyr pluss per ordre, med fem gebyrfaktorer og tilbudets åtte avsnitt til høyre; nederst personale, midler, dokumenter og tid med tidspunktene sine, med merknaden om at en start på deltid ikke skaper nye faste stillinger og at de fire listemalene følger med S0-leveransene](/images/insights/budgeting-first-year-bonded-sales-china/billing-options-and-budget-inputs.webp)
+
+## Poster utenfor omfanget og tilbudsvilkår
+
+Postene utenfor omfanget avgrenses først, for eksempel senere aktivering av 9610-kanalen, ombygging av hovedkontorets systemer og godtgjøring til IBO i utlandet; våre servicegebyrer står særskilt i det formelle tilbudet og blandes ikke inn i de tre faktureringsmåtene ovenfor.
+
+Et formelt tilbud krever fem forutsetninger på plass: SKU-liste og mengder, beredskap for CoA (testrapport) fra samme parti, preferanse for selskapsformen, preferanse for målhavnen og retning for påstandsstrategien. Når alle fem er på plass, følger det formelle tilbudet.
+
+Også uten data kan det først lages en versjon: beregnet på bransjens erfaringsverdier, der hvert tall er merket med grunnlaget sitt, og verdiene byttes ut når de målte dataene dine kommer.
+
+## Tilbudets åtte avsnitt
+
+Det formelle tilbudet er delt inn i åtte avsnitt: omfangsgrenser, gebyrsammenligning, gebyrstruktur, kostnadsoppdeling, betalingsrytme, skatt og fakturering, ansvar og erstatning samt randbetingelser. Detaljene ligger som et kommersielt vedlegg, og alle beløp følger det formelle tilbudet; et muntlig nevnt tall i møtet gjelder ikke.
+
+## Fire innsatser på din side
+
+Personale: 1 til 2 personer innen økonomi og etterlevelse, med start på deltid, pluss 1 kontaktperson på forretningssiden; en start på deltid skaper ingen nye faste stillinger. Nødvendig fra start, parallelt med oppstartsfasen S0.
+
+Midler: første lager dimensjoneres etter pilot-SKU og 2 til 3 måneders omsetning, kampanjeinnsatser prøves i små steg, og skattesikkerhet stilles etter havnens krav. Alt skal være på plass før lagerpåfylling og listeføring.
+
+Dokumenter: dokumenter for produkt, testing, kvalifikasjon og merke samles i fire sjekklister, som fylles ut gradvis ved hvert adgangspunkt; malene for de fire listene følger med S0-leveransene.
+
+Tid: tre beslutninger, selskapsform, målhavn og påstandsstrategi, påvirker tidsplanen direkte; treffes de før S0, låses tidsplanen, og med beslutningene på plass går arbeidet inn i gjennomføringsfasen M1.
+
+Personale og midler er oppgitt som praktiske intervaller, tilbudet utstedes etter målte forhold, det formelle tilbudet kommer når dokumentene er fullstendige, og gebyrdetaljene står bare der.
+
+## Start med tabellhodet
+
+Første års budsjett passer i én enkelt tabell: kolonner for tre scenarier, rader for tre antagelser, fire fradrag, én rad for fast investering og én rad for tilbakebetalingstid. Fyll inn inndata først, snakk om tilbud etterpå; satser gjelder bare i det formelle tilbudet, og demonstrasjonstallene forklarer bare metoden.
+
+Neste steg er å føre SKU-listen din, ordreverdien og de gjentatte kjøpene inn i tabellen. Er en av inndataverdiene fortsatt åpen, [kontakt oss](/no/packages/).

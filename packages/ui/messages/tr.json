@@ -18,7 +18,6 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Müşteri Yorumları",
     "industries": "Endüstriler",
-    "blog": "Blog",
     "checkCb": "CBEC",
     "checkCcc": "Elektronik",
     "checkGacc": "Gıda İthalatı",
@@ -27,7 +26,8 @@
     "checkTm": "Ticari markalar",
     "email": "E-posta",
     "freeCheckHeader": "Ücretsiz Araçlar",
-    "getQuote": "Teklif Alın"
+    "getQuote": "Teklif Alın",
+    "insights": "Blog"
   },
   "Search": {
     "title": "Aramak",
@@ -37,9 +37,9 @@
     "hint": "Hizmetler, makaleler ve SSS'ler arasında arama yapmak için yazın",
     "types": {
       "service": "Hizmetler",
-      "blog": "İçgörüler",
       "faq": "FAQ",
-      "regulation": "Mevzuat"
+      "regulation": "Mevzuat",
+      "insights": "İçgörüler"
     }
   },
   "Navbar": {
@@ -57,7 +57,6 @@
     },
     "packages": "Paketler",
     "faq": "SSS",
-    "blog": "İçgörüler",
     "contact": "Bize Ulaşın",
     "whatsapp": "WhatsApp",
     "quote": "Teklif Al",
@@ -94,7 +93,8 @@
     "report": "Rapor",
     "reports": "Raporlar",
     "email": "E-posta",
-    "regulations": "Mevzuat"
+    "regulations": "Mevzuat",
+    "insights": "İçgörüler"
   },
   "MobileTab": {
     "home": "Ana Sayfa",
@@ -121,7 +121,7 @@
   "breadcrumb": {
     "home": "Ana Sayfa",
     "services": "Hizmetler",
-    "blog": "Insights",
+    "insights": "Insights",
     "industries": "Endüstriler",
     "packages": "Paketler",
     "faq": "FAQ"

@@ -1,0 +1,113 @@
+---
+title: "Yhdeksän rajapintaa Kiinan tullivarastoalustoille, terveysvalot ja huippumarginaali"
+date: "2027-06-22"
+category: "E-commerce"
+excerpt: "Standardirajapinnat ensin, väliohjelmisto kattaa muut, ja terveysvalot kirjaavat kutsut. Tiedot jäävät maahan, huippuvara varataan; vajeet seurataan riveittäin ennen täyttä tilitystä."
+references:
+  - title: "Kiinan yleisen tullihallinnon vuoden 2018 ilmoitus nro 194 rajat ylittävän verkkokaupan vähittäistuonnin ja viennin tavaroiden valvonnasta"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Kiinan kansantasavallan henkilötietojen suojalaki, hyväksytty 20. elokuuta 2021, artiklat kolmekymmentäkahdeksan, kolmekymmentäyhdeksän ja viisikymmentäviisi"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+  - title: "Määräykset rajat ylittävien tietovirtojen edistämisestä ja sääntelystä, Kiinan kyberavaruushallinnon asetus nro 16, voimassa 22. maaliskuuta 2024 alkaen"
+    url: "https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm"
+---
+
+Yhdeksän rajapintaryhmää voi liittää teidän nykyiset järjestelmänne Kiinan tullivarastoalustoihin, edellyttäen että standardirajapinnat asetetaan etusijalle, tiedot pysyvät maassa ja myyntikampanja mitoitetaan huipun mukaan 10 kertaa. Siellä missä standardirajapinta on olemassa, se kytketään suoraan, ja siellä missä se puuttuu, väliohjelmisto tekee muunnoksen; terveysvalot kirjaavat tyypittäin kutsujen määrän, onnistumisasteen, viiveen ja epäonnistuneet uudelleenlähetykset, ja tilauksen lähetyksen ja maksun palautuksen kaksi riviä tallentavat kolmen asiakirjan palautuksen. Avoimen markkinan vertailuarvot asettavat standardi-integraation 3 ja 7 päivän välille ja täyden integraation 8 ja 12 viikon välille, ja nämä ovat vain suuruusluokan vertailuarvoja; käyttöönoton ajankohdan ratkaisevat todellisuudessa yhteistestaus ja rinnakkainen tilitysjakso.
+
+![Esittely yhdeksän rajapintaryhmän kartoitustaulukosta, sarakkeina teidän järjestelmänne, integraatiokohde, suunta ja kohde, yhdeksän riviä tavaroista ja varastosta tilauksiin, jäsentietoihin, provision tilitykseen, varastoon, tulliin, toimitukseen, palautuksiin ja talouteen, sekä neljä tietovirran periaatetta ja yhteistestauksen valvonnan neljä terveysvaloa](/images/insights/china-bonded-platforms-nine-interfaces/nine-interface-families-mapping.webp)
+
+## Mihin taulukkoon kukin yhdeksästä rajapintaryhmästä päätyy
+
+Rajapintataulukko on kirjoitettu neljään sarakkeeseen, nimittäin miltä puolelta teidän järjestelmäänne on kyse, mikä integraatiokohde on, kuka ohjaa suuntaa ja minne tiedot lopulta päätyvät. Suunta on olemassa vain kolmessa muodossa, kaksisuuntainen, saapuva ja te ohjaatte, ja rivit joilla ei ole suuntaa merkitty, kantaa meidän puolemme. Kohdesarake kertoo selvästi, mihin kirjanpitoon kukin kenttä kuuluu, jotta se joka ottaa työn vastaan, voi tarkistaa asian taulukosta.
+
+- Tavarat ja varasto: SKU-varasto ja hinnat, kaksisuuntainen, pidetään yhdenmukaisena varastonhallintajärjestelmän ja tullikirjanpidon kanssa.
+- Tilaukset: tilausdata, saapuva, päätyy kolmen asiakirjan kenttiin.
+- Jäsentiedot: suosittelijasuhteet, te ohjaatte, tiedot kuuluvat teille, ja käsittelemme ne toimeksisaajana.
+- Provision tilitys: provision maksaminen, kaksisuuntainen, kotimaisen osuuden toteuttaa kotimainen toimija.
+- Varasto: tullivarastojärjestelmä, ei suuntaa merkitty, päätyy tullivarastojen käyttöjärjestelmään ja jakaa lähteen kirjanpidon kanssa.
+- Tulli: kolmen asiakirjan ilmoitus, ei suuntaa merkitty, ilmoituksen kantaa me ja se kuuluu valvonnassamme oleviin asioihin.
+- Toimitus: seurannan palautus, ei suuntaa merkitty, logistiikkaseuranta kirjoitetaan takaisin tilausnäkymään.
+- Palautukset: palautusasiakirjat, ei suuntaa merkitty, palautukset kulkevat palautuskeskuksen kautta takaisin valvonta-alueelle.
+- Talous: tilitys on lähtevä ja sisältää valuutan ja valuutanvaihdon.
+
+Minne tiedot virtaavat, ratkaisee miten rajapinnat rakennetaan. Kotimaisen puolen kirjanpito ja ulkomaisen puolen koontinäyttö on pidettävä erillään, muuten yhteistestauksessa molemmat puolet kirjoittavat samat kentät päällekkäin.
+
+- Kampanjatiedot jotka kerätään ja tilitetään kotimaassa, jäävät kotimaahan.
+- Teidän ulkomaiselle emoyhtiöllenne palaa vain tunnistetiedoista puhdistettuja koostetietoja, eikä niissä ole mukana kotimaisia provisiosuhteita.
+- Ulkomainen taustajärjestelmä ei koskaan koske kiinalaisten kuluttajien raakatietoihin, ja rajat ylittävät reitit avautuvat vasta sen jälkeen kun henkilötietojen suojan vaikutustenarviointi on läpäisty.
+- Kotimaiset kampanja- ja provisiotiedot voidaan viedä kokonaisuudessaan ja luovuttaa teille kirjanpidon mukana luovutuksen yhteydessä.
+
+Yhteistestauksen valvonta luettelee terveysvalot neljään riviin rajapintatyypin ja vastapuolen mukaan, ja jokainen terveystarkistus ja jokainen uudelleenlähetys jättää yhden tietueen. Demosivu kirjoittaa kolme kohtaa, rajapintatyypin, vastapuolen ja terveysvalon, jotka vastaavat samaa joukkoa kuin järjestelmän käyttöliittymäesittelyssä, ja rivit käydään läpi yksi kerrallaan joka päivä yhteistestauksen aikana.
+
+- Tilauksen lähetys vastapuolena kaupan käyttöliittymä, ja terveysvalo on normaali.
+- Maksun palautus vastapuolena maksukanava, ja terveysvalo on normaali.
+- Rahtikirjan palautus vastapuolena kuriiriyritys, ja terveysvalo näyttää varoituksen.
+- Ilmoitusluettelo vastapuolena ilmoituskanava, ja terveysvalo on normaali.
+
+Integraatioperiaate määrää standardirajapinnan ensin, ja siellä missä standardirajapinta on, se kytketään suoraan, kun taas väliohjelmisto tekee muunnoksen siellä missä se puuttuu. Avoimen markkinan vertailuarvot asettavat standardi-integraation 3 ja 7 päivän välille ja täyden integraation 8 ja 12 viikon välille, ja myyntikampanja mitoitetaan huipun mukaan 10 kertaa. Kumpikin puoli nimeää yhden teknisen yhteyshenkilön ja pitää päivittäisen palaverin yhteistestauksen aikana. Käyttöönoton jälkeen ajetaan yksi täysi tilitysjakso rinnakkain ennen vaihtoa, eivätkä kahden järjestelmän tiedot saa erota rinnakkaisajon aikana.
+
+## Miten terveysvaloja luetaan ja minne epäonnistuneet uudelleenlähetykset kirjataan
+
+Rajapintojen terveyslokissa on yksi rivi rajapintatyyppiä kohden, välilehtinä kaikki rajapinnat, normaalit ja poikkeavat, ja jokainen rivi kirjoittaa vastapuolen, kutsujen määrän, onnistumisasteen, viiveen, virheiden määrän, uudelleenlähetyksen ja terveysvalon. Kun otamme tilauksen lähetyksen tarkasteluun, loki näyttää 1284 kutsua tänä päivänä, onnistumisasteen 100%, keskimääräisen viiveen 186 millisekuntia, 0 virhettä ja normaalin terveysvalon. Maksun palautuksella oli myös 1284 kutsua, onnistumisaste 99,9%, 1 virhe joka lähetettiin uudelleen onnistuneesti, ja terveysvalo pysyi normaalina. Nämä kaksi riviä ovat todiste siitä, että kolmen asiakirjan palautus on järjestelmässä.
+
+Kun yhdeksän rajapintaryhmää on kartoitettu, ajonaikaiset kutsujen määrät ja terveystiedot päätyvät kaikki tähän lokiin, ja tilauksen lähetyksen ja maksun palautuksen kaksi riviä kirjaavat miten kolmen asiakirjan palautus laskeutui. Demokäyttöliittymän alareunassa lukee 12 tietuetta yhteensä ja 20 sivulla, ja jokaisen rivin lopussa on kaksi sisäänkäyntiä tietoihin ja lokiin; kaikki yhdeksän riviä on lueteltu saman joukon mukaan.
+
+![Järjestelmän käyttöliittymäesittely rajapintojen terveyslokista, yhdeksän riviä yhdeksässä sarakkeessa rajapintatyyppi, vastapuoli, tämän päivän kutsut, onnistumisaste, keskimääräinen viive, virheet, uudelleenlähetys, terveysvalo ja toimet, alareunassa 12 tietuetta ja 20 sivulla](/images/insights/china-bonded-platforms-nine-interfaces/interface-health-log-system-demo.webp)
+
+- Tilauksen lähetys, kaupan käyttöliittymä, 1284 kutsua tänä päivänä, onnistumisaste 100%, keskimääräinen viive 186 millisekuntia, 0 virhettä, ei uudelleenlähetystä, terveysvalo normaali, tiedot ja loki;
+- Maksun palautus, maksukanava, 1284, 99,9%, 210 millisekuntia, 1 virhe, lähetetty uudelleen, normaali, tiedot ja loki;
+- Rahtikirjan palautus, kuriiriyritys, 1266, 99,2%, 340 millisekuntia, 10 virhettä, uudelleenlähetys käynnissä, varoitus, tiedot ja loki;
+- Ilmoitusluettelo, ilmoituskanava, 1266, 99,8%, 520 millisekuntia, 3 virhettä, lähetetty uudelleen, normaali, tiedot ja loki;
+- Kiintiökysely, kyselykanava, 1284, 100%, 150 millisekuntia, 0 virhettä, ei uudelleenlähetystä, normaali, tiedot ja loki;
+- Kirjanpidon synkronointi, tullivarasto, 96, 100%, 430 millisekuntia, 0 virhettä, ei uudelleenlähetystä, normaali, tiedot ja loki;
+- Luovutustilan takaisinkirjoitus, ilmoituskanava, 1240, 99,6%, 610 millisekuntia, 5 virhettä, lähetetty uudelleen, normaali, tiedot ja loki;
+- Logistiikkaseuranta, kuriiriyritys, 1240, 98,7%, 720 millisekuntia, 16 virhettä, uudelleenlähetys käynnissä, varoitus, tiedot ja loki;
+- Täsmäytystiedosto, talousjärjestelmä, 12, 100%, 980 millisekuntia, 0 virhettä, ei uudelleenlähetystä, normaali, tiedot ja loki.
+
+## Miten myyntikampanjan huippu arvioidaan ja kuinka paljon kapasiteettia varataan
+
+Huipun arviointi jakautuu neljään tapaukseen volyymin ja vastetarpeen mukaan, pieni volyymi ja korkea vastetarve katsoo joustavuutta, suuri volyymi ja korkea vastetarve katsoo läpimenoaikaa, pieni volyymi ja matala vastetarve katsoo peruskapasiteettia, ja suuri volyymi ja matala vastetarve katsoo vakaata kapasiteettia. Päivittäiseen kapasiteettiin suhteutettu kapasiteettikäyrä on kolmessa tasossa, 1 kerta normaalipäivinä, 4 ja 5 kerran välillä myyntikampanjassa ja 10 kertaa huipulla, ja huippupuoli varataan 10 kerran marginaalilla. Mitä aikaisemmin annatte meille ennakkoilmoitetun volyymin, sitä enemmän tilaa jää kapasiteetin laajennukselle ja henkilöstön suunnittelulle, ja jos volyymit tulevat vasta viikkoa ennen kampanjaa, on jäljellä lähinnä vain henkilöstön lisääminen.
+
+- Pieni volyymi ja korkea vastetarve menee huippujoustavuuteen, ja julkiset tapaukset ovat 4 ja 5 kerran välillä päivittäisestä volyymista, huiput yltävät kymmenistä tuhansista satoihin tuhansiin kappaleisiin, kampanjan henkilöstö on noin 3 kertaa normaaliin verrattuna, ja nämä ovat julkisten tapausten vertailuarvoja.
+- Suuri volyymi ja korkea vastetarve on läpimenoajan rajoittama, erittäin korkeat huiput tarvitsevat läpimenoaikaa, SKU:n kasvu suurentaa samanaikaisesti sekä varastoa että kirjanpitoa, myyntikampanja varaa huipun mukaan 10 kertaa, ja suuruusluokan syötteet tulevat teiltä.
+- Pieni volyymi ja matala vastetarve on peruskapasiteettia, merkkikauppa jossa on lisensoidut maksut ja sisäänrakennetut asiakirjat on liitetty yli 50 tullipaikkaan ja yli 70 ERP-järjestelmään, sillä on edistynyt AEO-sertifiointi ja oma tullaus, ja meidän puolemme on valmis.
+- Suuri volyymi ja matala vastetarve on vakaa kapasiteetti, mitoitettu päivittäisten tilausten mukaan, varhaisella varastoinnilla ja vyöhykkeittäisellä varastoinnilla, vakituisen ja määräaikaisen henkilöstön yhdistelmällä, ennakkoilmoitettu volyymi edellä, palautukset palaavat valvonta-alueelle, ja meidän puolemme etenee prosessin mukaan.
+
+Varastokandidaatit ovat neljä kokonaisvaltaisen tullialueen kohdetta sekä tullivarasto kohteessa Hongkong, Kiina. Neljä kohdetta rinnakkain antaa redundanssia usean tullipaikan yli, te päätätte lopullisen tullipaikan, ja kandidaattilista luovutetaan teille jo aloitusvaiheessa, joten ei ole tarpeen odottaa siihen asti että tavarat saapuvat satamaan. Tullivarasto kohteessa Hongkong, Kiina on ulkomaisella puolella ja kirjataan erillään neljästä kotimaisesta kohteesta.
+
+![Esittely alustan ja toimituksen huippukapasiteetin arviosta myyntikampanjalle, vasemmalla neljä neljännestä volyymin ja vastetarpeen mukaan, oikeassa yläkulmassa päivittäiseen kapasiteettiin suhteutettu kapasiteettikäyrä kolmessa tasossa, oikeassa alakulmassa ennakkoilmoitetun kampanjavolyymin koontinäyttö, ja alareunassa neljä kokonaisvaltaisen tullialueen kohdetta sekä tullivarasto kohteessa Hongkong, Kiina](/images/insights/china-bonded-platforms-nine-interfaces/mega-sale-peak-capacity-verdict.webp)
+
+- Yiwu Zhejiangissa on tullivarasto, jonka tullimenettely on 1210.
+- Hangzhou Zhejiangissa on tullivarasto, jonka tullimenettely on 1210.
+- Guangzhou Huangpu Guangdongissa on tullivarasto, jonka tullimenettely on 1210.
+- Shenzhen Qianhai Guangdongissa on tullivarasto, jonka tullimenettely on 1210.
+- Hongkong, Kiina on ulkomaisella puolella tullivarastona kohteessa Hongkong, Kiina.
+
+Myyntikampanjan ennakkoilmoitetun volyymin koontinäyttö luettelee neljä riviä seitsemässä sarakkeessa SKU, ennakkoilmoitettu volyymi, ilmoitettu, edistyminen, arvioitu valmistuminen, tila ja toimet, ja jokaisessa rivissä on kaksi sisäänkäyntiä tietoihin ja lokiin. Edistyminen ja arvioitu valmistumispäivä ratkaisevat mihin järjestykseen kukin SKU varastoidaan, ja vajeita seurataan rivi riviltä ennakkoilmoitetun volyymin seurantataulukossa.
+
+- Pehmeät kapselit koentsyymillä Q10, ennakkoilmoitettu volyymi 12000, ilmoitettu 8400, edistyminen 70%, arvioitu valmistuminen 10-12, käynnissä, tiedot ja loki;
+- Syvänmeren kalaöljykapselit, 8000, 6400, 80%, 10-08, käynnissä, tiedot ja loki;
+- Proteiinijauhejuoma, 6000, 2400, 40%, 10-18, käynnissä, tiedot ja loki;
+- Pakastekuivattu probioottijauhe, 5000, 5000, 100%, ei valmistumispäivää merkitty, valmis, tiedot ja loki.
+
+## Miten ennakkoilmoitetun volyymin vajeita seurataan rivi riviltä
+
+Varastomoduulin ennakkoilmoitetun volyymin seurantataulukossa on yksi rivi SKU:ta kohden, ja siihen kirjoitetaan ennakkoilmoitettu volyymi, ilmoitettu, edistyminen, vaje, arvioitu valmistuminen ja tila. Kun otamme pehmeät kapselit koentsyymillä Q10 tarkasteluun, ennakkoilmoitettu volyymi on 12000, ilmoitettu 8400, edistyminen 70%, vaje 3600 ja arvioitu täydennys 10-12, kun taas syvänmeren kalaöljykapselit ovat 80% edistymisessä ja niiden vaje 1600 odotetaan täydennettävän 10-08. Kolmen tason kapasiteettikäyrä muuttuu tässä varastointitoimiksi, joten kuinka suuri vaje on ja minä päivänä se täydentyy, näkyy etukäteen.
+
+Käyttöliittymän alareunassa lukee 7 tietuetta yhteensä ja 20 sivulla, ja jokaisen rivin lopussa on kaksi sisäänkäyntiä tietoihin ja lokiin. Ennakkoilmoitetun volyymin seurannan ja saapumismuistutusten kaksi välilehteä ovat vierekkäin, joten etulinja vaihtaa välilehteä ilman uutta suodatusta, ja kaikki seitsemän riviä on lueteltu saman joukon mukaan.
+
+![Järjestelmän käyttöliittymäesittely ennakkoilmoitetun volyymin seurannasta, seitsemän riviä kahdeksassa sarakkeessa SKU, ennakkoilmoitettu volyymi, ilmoitettu, edistyminen, vaje, arvioitu valmistuminen, tila ja toimet, alareunassa 7 tietuetta ja 20 sivulla](/images/insights/china-bonded-platforms-nine-interfaces/pre-filed-volume-tracking-system-demo.webp)
+
+- Pehmeät kapselit koentsyymillä Q10, 12000, 8400, 70%, vaje 3600, 10-12, käynnissä, tiedot ja loki;
+- Syvänmeren kalaöljykapselit, 8000, 6400, 80%, vaje 1600, 10-08, käynnissä, tiedot ja loki;
+- Proteiinijauhejuoma, 6000, 2400, 40%, vaje 3600, 10-18, käynnissä, tiedot ja loki;
+- Pakastekuivattu probioottijauhe, 5000, 5000, 100%, vaje 0, ei valmistumispäivää merkitty, valmis, tiedot ja loki;
+- Kalan kollageenipeptidijauhe, 6000, 3000, 50%, vaje 3000, 10-15, käynnissä, tiedot ja loki;
+- C-vitamiinin pureskeltavat tabletit, 9000, 8100, 90%, vaje 900, 10-06, käynnissä, tiedot ja loki;
+- Melatoniinipastillit, 4000, 4000, 100%, vaje 0, ei valmistumispäivää merkitty, valmis, tiedot ja loki.
+
+## Mitä on määrättävä ennen käyttöönottoa rajapinnoista ja vaihdosta
+
+Ennen käyttöönottoa määrätään kolme kohtaa, standardirajapinnat ja väliohjelmiston muunnos kirjoitetaan rajapintataulukkoon, terveysvalojen kynnysarvot, epäonnistuneet uudelleenlähetykset ja vastuuhenkilöt kiinnitetään riveihin, ja ennakkoilmoitettu volyymi ja kapasiteettitasot kohdistetaan samaan SKU-joukkoon. Jos kaikki kolme eivät ole kunnossa, yhteistestaus jää jumiin uudelleenlähetyksiin. Demokäyttöliittymän kutsujen määrät, onnistumisasteet, ennakkoilmoitetut volyymit ja valmistumispäivät ovat vain havainnollistavia, huippu- ja henkilöstöluvut tulevat julkisista tapauksista ja näyttävät vain suuruusluokan, ja todelliset volyymit toimitatte te. Todellinen ilmoituskäytäntö noudattaa toimivaltaisen viranomaisen vaatimuksia, ja rajat ylittävät tietoreitit noudattavat henkilötietojen suojan vaikutustenarvioinnin johtopäätöstä. Aja yksi täysi tilitysjakso rinnakkain ennen vaihtoa, vahvista etteivät kahden järjestelmän tiedot ole eronneet, ja siirrä vasta sen jälkeen liikenne.
+
+Jos haluatte yhdeksän rajapintaryhmää liitetyksi tullivaraston toimitukseen teidän nykyisen järjestelmäpinonne ja tullipaikkasuunnitelmanne mukaan, terveysvalot ja ennakkoilmoitettu volyymi tarkistettuina rivi riviltä, teidät toivotetaan tervetulleeksi [ottamaan yhteyttä meihin](/fi/packages/).

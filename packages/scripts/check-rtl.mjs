@@ -36,7 +36,7 @@ const RTL_LOCALES = ['ar', 'he', 'fa', 'ur'];
 // 每个项目的 [locale] layout 路径（admin 无 locale 路由）
 const LAYOUT_FILE_BY_PROJECT = {
   site: 'apps/site/src/app/(site)/[locale]/layout.tsx',
-  blog: 'apps/blog/src/app/[locale]/layout.tsx',
+  blog: 'apps/insights/src/app/[locale]/layout.tsx',
   portal: 'apps/portal/src/app/[locale]/layout.tsx',
 };
 

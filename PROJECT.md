@@ -39,7 +39,7 @@ SinoTrade 品牌的所有网站代码统一放在此 monorepo 中。三个独立
 - **用途：** 官网主站，品牌展示、服务介绍、行业页面
 - **技术栈：** Next.js 16 (SSG 静态导出) + next-intl + TypeScript + Tailwind CSS
 - **多语言：** `[locale]` 服务端路由，48 语言 SSG（静态导出）
-- **结构：** `src/`（页面组件）| `messages/`（48 语言翻译）| `public/`（静态资源）（博客 MDX 已迁移至 `apps/blog/content/`）
+- **结构：** `src/`（页面组件）| `messages/`（48 语言翻译）| `public/`（静态资源）（博客 MDX 已迁移至 `apps/insights/content/`）
 - **SSG 输出目录：** `apps/site/out/`
 - **代理功能：** `functions/_middleware.ts` 负责将 `/c/` → portal、`/blog/` → blog、`/admin/` → admin 的请求转发，以及子站静态资源代理
 
@@ -72,7 +72,7 @@ SinoTrade 品牌的所有网站代码统一放在此 monorepo 中。三个独立
 - **翻译：** 48 语言全覆盖，CI 翻译质量检查 0 问题。翻译文件在 `apps/portal/messages/*.json`
 
 ### 博客站 — blog
-- **目录：** `apps/blog/`
+- **目录：** `apps/insights/`
 - **CF Pages 项目名：** `tc-web-blog`
 - **dev 域名：** `https://tc-web-blog.pages.dev`
 - **主站代理路径：** `sinotradecompliance.com/{locale}/blog/*`
@@ -132,14 +132,14 @@ SinoTrade 品牌的所有网站代码统一放在此 monorepo 中。三个独立
 |------|----------------|----------|-----------|-------------|
 | 主站 | `tc-web-site` | `apps/site` | `npx next build` | `out` |
 | Portal | `tc-web-portal` | `apps/portal` | `npx next build` | `out` |
-| Blog | `tc-web-blog` | `apps/blog` | `npx next build` | `out` |
+| Blog | `tc-web-blog` | `apps/insights` | `npx next build` | `out` |
 
 **当前状态：** 已切换至正式域名 `sinotradecompliance.com`。`tc-web-site` 绑定主域名，portal 和 blog 通过主站 Worker 代理访问，无需直接绑定域名。
 **Git 连接：** 四个项目都连接到 GitHub `seasea-clouds/tc-web` 仓库（2026-08-09 迁移，原 trade-web 前缀改为 tc-）。
 **自动部署：** push 到 `main` 分支触发所有项目构建。
 - 改 `apps/site/**` → 触发主站
 - 改 `apps/portal/**` → 触发 Portal
-- 改 `apps/blog/**` → 触发博客
+- 改 `apps/insights/**` → 触发博客
 - 改 `packages/ui/**` 或 `packages/scripts/**` → 触发所有站
 
 ### 主站代理转发

@@ -1292,7 +1292,6 @@
     "metaDescription": "Procházejte všechny služby, oborové průvodce, články a stránky na webu SinoTrade Compliance.",
     "servicesTitle": "Služby",
     "industriesTitle": "Odvětví",
-    "blogTitle": "Články a přehledy",
     "pagesTitle": "Ostatní stránky",
     "home": "Domů",
     "about": "O nás",
@@ -1300,7 +1299,8 @@
     "quote": "Získat nabídku",
     "faq": "Časté dotazy",
     "packages": "Balíčky",
-    "testimonials": "Reference"
+    "testimonials": "Reference",
+    "insightsTitle": "Články a přehledy"
   },
   "Cookie": {
     "message": "Tento web používá pouze nezbytné ověřovací soubory cookie. Nejsou používány žádné sledovací ani reklamní soubory cookie.",

@@ -18,7 +18,6 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Отзиви",
     "industries": "Индустрии",
-    "blog": "Прозрения",
     "checkCb": "CBEC",
     "checkCcc": "електроника",
     "checkGacc": "Внос на храни",
@@ -27,7 +26,8 @@
     "checkTm": "Търговски марки",
     "email": "Имейл",
     "freeCheckHeader": "Безплатни инструменти",
-    "getQuote": "Получете оферта"
+    "getQuote": "Получете оферта",
+    "insights": "Прозрения"
   },
   "Search": {
     "title": "Търсене",
@@ -37,9 +37,9 @@
     "hint": "Въведете, за да търсите в услуги, статии и често задавани въпроси",
     "types": {
       "service": "Услуги",
-      "blog": "Прозрения",
       "faq": "FAQ",
-      "regulation": "Нормативни актове"
+      "regulation": "Нормативни актове",
+      "insights": "Прозрения"
     }
   },
   "Navbar": {
@@ -57,7 +57,6 @@
     },
     "packages": "Пакети",
     "faq": "ЧЗВ",
-    "blog": "Прозрения",
     "contact": "Свържете се с нас",
     "whatsapp": "WhatsApp",
     "quote": "Получете оферта",
@@ -94,7 +93,8 @@
     "report": "Докладвай",
     "reports": "Доклади",
     "email": "Имейл",
-    "regulations": "Нормативни актове"
+    "regulations": "Нормативни актове",
+    "insights": "Прозрения"
   },
   "MobileTab": {
     "home": "Начало",
@@ -121,7 +121,7 @@
   "breadcrumb": {
     "home": "Начало",
     "services": "Услуги",
-    "blog": "Insights",
+    "insights": "Insights",
     "industries": "Индустрии",
     "packages": "Пакети",
     "faq": "FAQ"

@@ -27,7 +27,7 @@ const SEGMENT_LABELS: Record<string, string> = {
   'faq': 'faq',
   'industries': 'industries',
   'packages': 'packages',
-  'insights': 'blog',  // i18n 键仍是 Navbar.blog（值已改为 Insights）
+  'insights': 'insights',
   'regulations': 'regulations',
   'quote': 'quote',
   'testimonials': 'testimonials',

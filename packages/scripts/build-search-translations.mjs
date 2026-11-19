@@ -4,7 +4,7 @@
  * 从 packages/ui/messages/*.json 提取 Search 命名空间，
  * 生成 search-widget-translations.json 供 search-widget.js 使用。
  *
- * 输出格式: { "en": { "placeholder": "...", "types": { "blog": "Insights" } }, "zh": {...} }
+ * 输出格式: { "en": { "placeholder": "...", "types": { "insights": "Insights" } }, "zh": {...} }
  */
 import fs from 'fs';
 import path from 'path';

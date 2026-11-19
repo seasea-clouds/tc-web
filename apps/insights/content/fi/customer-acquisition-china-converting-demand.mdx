@@ -1,0 +1,67 @@
+---
+title: "Asiakashankinta Kiinassa, kolmen vaiheen ja neljän kanavan konversioarkkitehtuuri"
+date: "2027-07-06"
+category: "E-commerce"
+excerpt: "Budjetti menee kanavaan, jossa konversio täyttyy: koulutus alussa, pääkanava kasvuvaiheessa, jäsenostot lopuksi. Sääntely valmiina heti: kolme tarkistusta, jäsenyys Kiinan säännöin."
+references:
+  - title: "Kiinan mainontalaki (2015, muutettu 2018, pykälät 17, 18, 46)"
+    url: "https://www.gov.cn/guoqing/2021-10/29/content_5647620.htm"
+  - title: "Internetmainonnan hallintasäännöt (SAMR:n asetus nro 72, voimaantunut 1. toukokuuta 2023)"
+    url: "https://www.gov.cn/gongbao/2023/issue_10506/202306/content_6885261.html"
+  - title: "Kiinan henkilötietojen suojelelaki (hyväksytty 20. elokuuta 2021, pykälät 38, 39)"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+---
+
+Hankintabudjetin suunta ja suuruus määräytyvät sen mukaan, missä kanavassa konversioedellytykset täyttyvät, ei sen mukaan että kaikki neljä kanavaa täytetään yhtä aikaa. Lähdemateriaalin moduuli S7 esittää arkkitehtuurin kolme vaihetta kertaa neljä kanavaa: kylmäkäynnistys nollasta kuuteen kuukauteen, kasvu kuudesta kahdeksaantoista kuukauteen, vakiinnutus kahdeksantoista kuukauden jälkeen, ja Xiaohongshun, Tmall Globalin ja JD Worldwiden, Douynin sekä yksityisen WeChat-piirin panostus painottuu eri tavoin jokaisessa vaiheessa. Sääntely on paikallaan ensimmäisestä päivästä: mainossisältö käy läpi kolme tarkistusta, jäsenyys rakennetaan Kiinan sääntöjen mukaan, jäsentiedot pysyvät Kiinassa. Arkkitehtuurin rinnalle tulee kanavakohtainen mainontataulu: mihin raha meni ja mitä se toi takaisin, näkyy samalla rivillä rinnakkain.
+
+![S7 hankinta- ja kasvuarkkitehtuuri: kuplamatriisi kolmella vaiheella ja neljällä kanavalla, oikealla sääntelypalkki ja kustannusrakenne, alla kasvun kolme jalkaa ja yksityisen piirin kolme askelta, oikeassa alakulmassa mainontataulun pienoisesikatselu](/images/insights/customer-acquisition-china-converting-demand/s7-acquisition-growth-channel-matrix.webp)
+
+Tämä sivu tulee brändimateriaalin kuudennesta luvusta: luvun nimi on Ready to Grow, moduulin numero S7, otsikko Acquisition and Growth: Architecture for Converting Demand. Vasemmalla kanavajaon matriisi, oikealla ylhäällä sääntelypalkki ja kustannusrakenne, vasemmalla alhaalla kasvun kolme jalkaa ja yksityisen piirin kolme askelta, oikeassa alakulmassa mainontataulun pienoisdemo. Tämä artikkeli käsittelee S7:n yhdessä seuraavan sivun käyttöliittymädemon kanssa, sinun ei tarvitse lukea luvun muita moduuleja ensin.
+
+## Kolmen vaiheen ja neljän kanavan tehtävämatriisi
+
+Matriisi asettaa kolme kasvuvaihetta pystysuunnassa ja neljä kanavaa vaakasuunnassa, jokaisessa ruudussa yksi kupla, ja kuplan koko osoittaa vaiheen panostusvoimakkuuden kyseisessä kanavassa: suuri tarkoittaa päätyöntöä, keskikokoinen tukea, pieni hidasta aloitusta. Ruutu ruudulta luettuna budjetti vaihtaa päätaistelukenttää vaiheittain, ja jokaisessa vaiheessa suurin osa painottuu siihen kanavaan, jonka konversioedellytykset ovat kypsimmissä.
+
+Kylmäkäynnistys, kuukaudet nollasta kuuteen: Xiaohongshu kantaa suurta kuplaa yhdistekasvatuksessa, Tmall Global ja JD Worldwide keskikokoista luottamuskonversiossa, Douyin ilman mainospanostusta, yksityinen WeChat-piiri suurta kuplaa ensimmäisen tilauksen koekäytöllä. Vaiheessa ei vielä ole myyntitodisteita, joten sisältö selittää ensin koostumuksen, verkkokaupat ottavat vastaan haun tuoman luottamuksen, ja yksityinen piiri saa ensimmäisen tilauksen koepakkauksella.
+
+Kasvuvaihe, kuukaudet kuudesta kahdeksaantoista: Xiaohongshu siirtyy keskikuplaan sisällön laajentamiseksi, Tmall Global ja JD Worldwide nousevat suurimpaan kuplaan pääkonversiokanavana, Douyin nousee suurimpaan kuplaan livelähetysten volyymiin, yksityinen WeChat-piiri pitää keskikuplan uusintaostomuistutuksissa. Päätaistelukenttä vaihtuu Xiaohongshusta verkkokauppoihin ja Douyiniin, sisällön tehtävä muuttuu kasvatuksesta volyymiksi.
+
+Vakiinnutus kahdeksantoista kuukauden jälkeen: suosittelu, varastoon ostaminen, hittituotteen jatkuvuus ja jäsenten uusintaostot istuvat keskikokoisissa ja suurissa kuplissa, ja yksityisen WeChat-piirin jäsenostot ovat suurimmat. Vaiheen kasvu ei tule uudesta liikenteestä, vaan siitä, että jo ostaneet asiakkaat palaavat ostamaan uudelleen.
+
+## Sääntelypalkki valmiina ensimmäisestä päivästä
+
+Matriisin oikealla puolella sääntelypalkki listaa neljä kohtaa, kaikki päätetään ensimmäisenä päivänä, niitä ei lisätä kasvuvaiheen jälkeen.
+
+Promoottoritasot: ei varastopainetta, ei jatkomyyntiä, tasot enintään kaksi. Attribuutio ja tilitys: GMV-attribuution perusteet selkeät, sopimukset Kiinassa rekisteröidyn yrityksen alle, ennakonpidätys ja tilitys hoidetaan Kiinassa. Materiaalit: jokainen mainos ja vaikuttajakäsikirjoitus käy kolme tarkistusta ennen julkaisua. Jäsenyys: ei kopioida kokonaisuudessaan ulkomaista mallia, vaan rakennetaan uudelleen Kiinan sääntöjen mukaan; samaan linjaan koko kirjan nollaonnettomuus-perustan kanssa, jäsentiedot pysyvät Kiinassa, jokainen vientitilanne arvioidaan erikseen henkilötietolain vientiä koskevien pykälien mukaan.
+
+## Kustannusrakenne julkisten lähteiden suuruusluokkina
+
+Kustannusrakenne antaa kolme suuruusluokkaa. Alustapalkkio liikkuu välillä 0.5%–5% luokittain, suuntaa-antavat luvut julkisista lähteistä; muut erät kattavat maksuvälityksen kulut, maksetun median, sisällöntuotannon ja palkkiot; varmistustapa on pienet askeleet ja takaisinsaannon viikoittainen tarkistus. Kaikki kolme syöttävät myöhemmän yksikkötalouden herkkyystarkastelun: budjetti löystyy tai kiristyy askeleen, lukujen on seurattava mukana.
+
+## Kasvun kolme jalkaa ja yksityisen piirin kolme askelta
+
+Arkkitehtuuri tiivistyy kolmeen jalkaan: sisällön kylvö hoitaa tunnettuutta, alustakonversio hoitaa kaupat, yksityinen piiri hoitaa uusintaostot. Yksityinen piiri etenee kolmessa askeleessa: brändin virallinen miniohjelma, sisällöstä tulevat seuraajat ja koepakkaus ensimmäiseen tilaukseen; työkaluja on kolme: WeCom-ryhmät, miniohjelman jäsenkortti ja uusintaostomuistutukset.
+
+Kasvun ja sääntelyn kytkös on kirjoitettu samaan kappaleeseen: mainossisältö käy kolme tarkistusta ennen julkaisua, ja toinen toimituspaikka on varattu valmiiksi, jotta kanavien lisääminen kasvuvaiheessa ei vaadi toimituksen uudelleenrakentamista. Tahdista sanotaan suoraan: ei avata kaikkia kanavia yhtä aikaa, todistetaan ensin sisältö ja konversio yhdessä kanavassa, ja toistetaan sitten toisessa.
+
+## Mainontataulu näyttää panostuksen ja tuoton kanavaittain rinnakkain
+
+Matriisi vastaa siihen, missä panostetaan; taulu vastaa siihen, miten panostus todennetaan. Käyttöliittymädemossa mainontataulu antaa jokaiselle kanavalle yhden rivin, välilehdet vaihtuvat tämän kuukauden, edellisen ja kumulatiivisen summan välillä, ja sarakkeissa ovat panostussumma, näyttökerrat, klikkausaste, kaupat, kauppasumma, ROI ja tila, jotta panostus ja tuotto asettuvat rinnakkain samalle riville.
+
+| Kanava | Panostus (yuania) | Näyttökerrat | Klikkausaste | Kaupat | Kauppasumma (yuania) | ROI | Tila |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Sisällön kylvö | 42000.00 | 486000 | 3.2% | 208 | 187200.00 | 4.5 | Käynnissä |
+| Lyhyt video | 58000.00 | 724000 | 2.6% | 186 | 167400.00 | 2.9 | Käynnissä |
+| Yksityisen piirin ryhmät | 18000.00 | 96400 | 8.1% | 242 | 217800.00 | 12.1 | Käynnissä |
+| Jäsenhoito | 12000.00 | 52100 | 11.4% | 296 | 266400.00 | 22.2 | Käynnissä |
+| Yhteensä | 130000.00 | 1358500 | 3.9% | 932 | 838800.00 | 6.5 | Käynnissä |
+
+Käy demodata läpi yhdellä kokonaisluennalla. Aloitetaan yhteensä-rivistä päätilistä: neljä kanavaa panosti kuukaudessa yhteensä 130000.00 yuania ja sai takaisin 1358500 näyttökertaa, 932 kauppaa ja 838800.00 yuania kauppasummaa, kokonais-ROI 6.5.
+
+Sitten luetaan tehtävajako riveittäin: sisällön kylvö 42000.00 yuanilla ja lyhyt video 58000.00 yuanilla vievät yhdessä noin kuusi kymmenestä panostuksesta, tuottavat 486000 ja 724000 näyttökertaa ROI:lla 4.5 ja 2.9 ja hoitavat uusien asiakkaiden näkyvyyttä; yksityisen piirin ryhmät 18000.00 yuanilla ja jäsenhoito 12000.00 yuanilla panostavat paljon vähemmän, klikkausaste 8.1% ja 11.4%, ROI 12.1 ja 22.2, ja hoitavat konversiota ja pysyvyyttä, ja jäsenhoito vaihtaa pienimmän panostuksen suurimpaan kauppasummaan 266400.00 yuania. Samalla rivillä mihin raha meni ja mitä se toi täsmää yhdellä vilkaisulla, ja päätös siitä, mitä ruutua lisätä ja mitä hidastaa, tehdään rivin perusteella.
+
+![Käyttöliittymädemo mainontataulusta: terveysvalmisteiden rajat ylittävän toiminnan taustajärjestelmä, neljän kanavan rivit ja yhteensä-rivi samalla näytöllä, välilehdet tämä kuukausi, edellinen ja kumulatiivinen](/images/insights/customer-acquisition-china-converting-demand/paid-media-dashboard-four-channel-ledger.webp)
+
+Taulun käyttöliittymässä on kaksi yksityiskohtaa, jotka kannattaa omaksua: alareunassa todetaan, että luvut ovat demodataa, neljän kanavan panostuskirjanpito, yhteensä-rivi ja kanavakohtainen ROI samalla näytöllä; tilasarakessa lukee jokaisella rivillä käynnissä, ja yksityiskohta- ja lokilinkkien kanssa jokaisen rivin laskuperuste pääsee avaamaan klikkaamalla.
+
+Lopuksi tarkennetaan lähtökohdat: kanavajako ja alustapalkkio 0.5%–5% tulevat julkisista lähteistä ja ovat suuntaa-antavia suuruusluokkia, ei tarjouksia; taulun luvut ovat demodataa, jotka näyttävät miten taulu luetaan, eivät minkään kaupan todellisia tuloksia; jäsenyys rakennetaan uudelleen Kiinan sääntöjen mukaan, ei kopioida kokonaisuudessaan. Jos haluat rakentaa oman hankinta-arkkitehtuurisi, kulje samaan järjestykseen: määritä kanavajako kolmen vaiheen mukaan, päätä neljä sääntelykohtaa ensimmäisenä päivänä, ja tarkista panostus ja tuotto taulusta viikoittain. Paketeissamme Kiinan markkinoille on valmiina tämän matriisin ja taulun työmateriaali, tuo tuotelista ja kuukauden panostustavoitte mukanasi, [ota yhteyttä](/fi/packages/).

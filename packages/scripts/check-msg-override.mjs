@@ -19,7 +19,7 @@ const UI_MSG_DIR = join(REPO_ROOT, 'packages', 'ui', 'messages');
 const APPS = {
   portal: join(REPO_ROOT, 'apps', 'portal', 'messages'),
   site: join(REPO_ROOT, 'apps', 'site', 'messages'),
-  blog: join(REPO_ROOT, 'apps', 'blog', 'messages'),
+  blog: join(REPO_ROOT, 'apps', 'insights', 'messages'),
 };
 
 // Deep flatten: { ns: { key: val } } => { "ns.key": val }

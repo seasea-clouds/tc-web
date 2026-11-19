@@ -1292,7 +1292,6 @@
     "metaDescription": "SinoTrade Compliance web sitesindeki tüm hizmetlere, sektör rehberlerine, blog yazılarına ve sayfalara göz atın.",
     "servicesTitle": "Hizmetler",
     "industriesTitle": "Sektörler",
-    "blogTitle": "Blog Yazıları",
     "pagesTitle": "Diğer Sayfalar",
     "home": "Ana Sayfa",
     "about": "Hakkımızda",
@@ -1300,7 +1299,8 @@
     "quote": "Teklif Al",
     "faq": "SSS",
     "packages": "Paketler",
-    "testimonials": "Müşteri Yorumları"
+    "testimonials": "Müşteri Yorumları",
+    "insightsTitle": "Blog Yazıları"
   },
   "Cookie": {
     "message": "Bu site yalnızca gerekli kimlik doğrulama çerezlerini kullanır. Hiçbir izleme veya reklam çerezi kullanılmaz.",

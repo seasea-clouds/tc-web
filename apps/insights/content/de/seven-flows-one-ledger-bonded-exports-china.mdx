@@ -1,0 +1,111 @@
+---
+title: "Sieben Ströme in einem Tagesbericht, vierzehn Module und eine Oberfläche"
+date: "2027-04-27"
+category: "E-commerce"
+excerpt: "Sieben Ströme, eine Bestellnummer; vierzehn Module nach Zeichnungsbefugnis; ein Backoffice erstellt den Tagesbericht ohne Handarbeit. Ein Verantwortlicher für die ganze Kette."
+references:
+  - title: "Caishuiguan [2016] Nr. 18 des Finanzministeriums, der Allgemeinen Zollverwaltung und der Staatlichen Steuerverwaltung, Steuerpolitik für den Einzelimport im grenzüberschreitenden elektronischen Handel"
+    url: "https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html"
+  - title: "Bekanntmachung Nr. 486 von 2018 von sechs Ministerien einschließlich des Handelsministeriums, zur Verbesserung der Aufsicht über Einzelimporte im grenzüberschreitenden elektronischen Handel"
+    url: "https://cws.mofcom.gov/gztz/art/2018/art_b7becbacb58a4d0d8bf17b91a168f044.html"
+  - title: "Bekanntmachung Nr. 194 von 2018 der Allgemeinen Zollverwaltung über die Aufsicht über Ein- und Ausfuhren im grenzüberschreitenden elektronischen Einzelhandel"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+---
+
+Waren nach China im Zolllagermodell zu verkaufen funktioniert, wenn die sieben Ströme an demselben Buch hängen, nicht wenn man die meisten Schnittstellen von Lieferanten angebunden hat. Die Bedingungen sind konkret: vom Zahlungseingang bis zur quittierten Zustellung schreibt jede Bestellung den Handelsstrom, den Warenstrom, den Logistikstrom, den Finanzstrom, den Informationsstrom, den Compliancestrom und den Fakturierungsstrom unter dieselbe Bestellnummer; die vierzehn Fähigkeiten sind in einzeln abnahmefähige Liefergegenstände zerlegt, und ein einziger Verantwortlicher steht für das Ergebnis vom Eintritt in die Zone bis zur quittierten Zustellung ein. Ohne dieses Buch muss der Tagesbericht von Hand aus Tabellen zusammengefügt werden: einmal sieht er gut aus, nach einem Monat stimmt er sicher nicht mehr.
+
+## Warum ein Tagesbericht bei der Bestellnummer beginnt
+
+Bei dem Projekt haben wir auf der Trennseite des fünften Kapitels nur drei Abnahmefragen gelassen: wie die sieben Ströme zu einer Kette werden; welche Schritte eine Bestellung von der Aufgabe bis zur quittierten Zustellung durchläuft; ob der tägliche Betrieb und Spitzen großer Verkaufsaktionen gleichzeitig tragfähig sind. Alle drei laufen auf dasselbe hinaus: ob bei einem Vorfall eine Bestellnummer die Einträge aller sieben Ströme hervorholt. Wenn ja, ist der Tagesbericht ein Nebenprodukt; wenn nicht, muss man von vier Lieferanten je eine Tabelle anfordern und von Hand abgleichen.
+
+![Trennseite des fünften Kapitels mit drei Abnahmefragen zur Verkettung der sieben Ströme, zu den Schritten einer Bestellung und zur gleichzeitigen Tragfähigkeit von täglichem Betrieb und Spitzen großer Verkaufsaktionen](/images/insights/seven-flows-one-ledger-bonded-exports-china/chapter-05-running-it-divider.webp)
+
+Auf der Trennseite steht auch ein Satz zum Gerüst: sieben Ströme und ein Buch sind das Rückgrat, und die Testkette wird Zelle für Zelle ausgelegt. Eine Zelle hier ist die Zeile, die jede der vierzehn Fähigkeiten im Buch hinterlässt.
+
+## Sieben Ströme sind keine sieben Systeme
+
+Die Übersichtsseite reiht die sieben Ströme in einer Zeile auf: Handelsstrom, Warenstrom, Logistikstrom, Finanzstrom, Informationsstrom, Compliancestrom und Fakturierungsstrom. Es sind keine sieben zu beschaffende Systeme, sondern sieben Arten von Einträgen, die man behalten muss. Der Handelsstrom schreibt Bestellungen und Verträge, der Warenstrom Chargen und Haltbarkeit, der Logistikstrom Sendungsverfolgung und quittierte Zustellung, der Finanzstrom Eingänge, Ausgänge und Salden, der Informationsstrom Schnittstellen und Bestellstatus, der Compliancestrom Anmeldungen, Hinterlegungen und Prüfpunkte, der Fakturierungsstrom Rechnungen und Gutschriften. Dass die sieben Arten von Einträgen eine Bestellnummer teilen, ist dieses Buch.
+
+Der Code der Zollaufsichtsart dieses Kanals ist 1210, mit vollem Namen grenzüberschreitender elektronischer Handel unter Zollverschluss; eine Bestellung wird erst freigegeben, nachdem die drei Belege Bestellung, Zahlung und Logistik einzeln abgeglichen sind, und die Prüf- und Freigaberegeln stehen in der Bekanntmachung Nr. 486 von 2018 von sechs Ministerien einschließlich des Handelsministeriums. Genau diese Spuren je Bestellung sind es, die der Compliancestrom täglich festhalten muss.
+
+Was diese Struktur zum Laufen bringt, sind sieben Ströme auf einem Buch, nicht die zusammengenähten Schritte verschiedener Anbieter. Eine genähte Lösung sieht an einem normalen Tag gleich aus und fliegt bei der ersten Erstattung oder Bestelländerung auf: der Shop hat die Bestellung storniert, die Zahlung ist noch offen, das Paket hat das Lager schon verlassen, die drei Einträge widersprechen einander und niemand hat die vollständige Antwort.
+
+![Übersicht sieben Ströme ein Buch mit den sieben Strömen, vierzehn Modulen, drei Erläuterungskarten und einem Auszug des Berichts der letzten drei Tage](/images/insights/seven-flows-one-ledger-bonded-exports-china/seven-flows-14-modules-overview.webp)
+
+Die zusammengeflickte Struktur hat eine härtere Folge: niemand verantwortet Compliance, Daten und Fakturierung als Ganzes. Sobald ein Strom reißt, steht alles dahinter still, am häufigsten klemmt die Auslandsüberweisung oder die Zollabfertigung. Deshalb ist die erste Karte der Übersichtsseite dunkelblau und trägt die Aufschrift „ein Verantwortlicher steuert“, die übrigen sieben zeigen die Namen der Ströme.
+
+## Wie vierzehn Module nach Zeichnungsbefugnis zugeschnitten werden
+
+Die vierzehn Module laufen von S0 bis S13 und entsprechen vierzehn Posten des Leistungskatalogs, die einzeln geliefert und abgenommen werden können. Zugeschnitten wird nach Zeichnungsbefugnis, nicht nach System: jedes Modul übergibt einen Liefergegenstand, den jemand unterschreibt. Die ersten sieben reichen bis Freigabe und Abrechnung, die letzten sieben decken Betrieb und aufbewahrte Spuren ab.
+
+- S0 Diagnose und Zugang: die Zugangsentscheidung und ihre Grundlage, mit Kategorie, Zolltarifcode und Zielkanal zuerst ausgebreitet.
+- S1 Gründung der Einheit: Gewerbeerlaubnis und Zollregistrierung; fehlt eines, kann das System kein Konto eröffnen.
+- S2 Plattformshop: Inbetriebnahme und Freischaltung der Zahlung, hier werden die Kategoriequalifikationen verankert.
+- S3 Produktanmeldung: Einstufung und Dokumente; ein falscher Zolltarifcode erzwingt die Berichtigung jeder späteren Anmeldung.
+- S4 Zolllager: Sicht auf das Zolllagerbuch, mit für die Marke sichtbarem Bestand.
+- S5 Zollabfertigung und Freigabe: die Bestellung wird freigegeben, nachdem die drei Belege Bestellung, Zahlung und Logistik einzeln abgeglichen sind.
+- S6 Abrechnung der Gelder: Abrechnungen und Belege, mit Warenzahlungen und Dienstleistungsgebühren getrennt verbucht.
+- S7 Distribution: Zuordnung von Akquise und Promotion, aus der Bestellnummer zurückgerechnet.
+- S8 Kundendienst: Bearbeitung von Retouren; wie die Retourengründe klassifiziert werden entscheidet, ob die Mitgliederdaten sauber sind.
+- S9 Datenrisikokontrolle: Datenkonformität, hier werden die Regeln für grenzüberschreitende Übertragung und Aufbewahrung festgelegt.
+- S10 Complianceprüfung: Selbstprüfungen und Protokolle, um im Vorfall zu belegen, was geschehen ist.
+- S11 Lieferkette: Sichten auf Bestellungen und Bestand, damit Vorbestellungen nicht auf Vermutungen beruhen.
+- S12 Inhaltsprüfung: Seiten und Livestreamskripte, mit chinesischen Etiketten und Angaben, die Charge für Charge geprüft werden.
+- S13 Mitgliedschaften und Abonnements: die Stufendaten stammen aus demselben Buch.
+
+Drei Karten legen die Nutzung fest. Die erste erklärt, warum die sieben Ströme ein einziges Set sein müssen: in einem Flickwerk besitzt niemand Compliance, Daten oder Fakturierung, ein gerissener Strom hält die übrigen auf, und Auslandsüberweisung oder Zollabfertigung klemmen zuerst. Die zweite erklärt die vierzehn Module: S0 bis S13 entsprechen den Liefergegenständen des Leistungskatalogs, während der Direktkaufkanal 9610 und eine zweite Bezugsquelle spätere Posten mit reservierten Plätzen sind, nicht Teil der heutigen Abnahme. Die dritte legt die Verantwortung fest: vom Eintritt in die Zone bis zur quittierten Zustellung gibt es einen einzigen Verantwortlichen, das A in RACI; Fähigkeiten lassen sich austauschen, die Verantwortung wandert nicht.
+
+Unter der Übersichtsseite steht noch eine Anweisung, die zu befolgen ist: die vierzehn Fähigkeiten werden einzeln aufgelistet, ohne Vergleich Lieferant für Lieferant und ohne Integration mehrerer Parteien. Liefergegenstände und Vorgehen folgen dem Leistungskatalog; in den Vertrag kommen diese vierzehn unterschriebenen Posten, keine Liste von Schnittstellen.
+
+## Warum die drei Zeilen in der Ecke nur drei Tage abdecken
+
+Unten rechts auf der Übersichtsseite sitzt eine Datenübersichtskarte, beschriftet mit Demonstration der Systemoberfläche und Tagesdaten. Sie zeigt nur die drei letzten Tage, jede Zeile trägt ein Datum, die Anzahl bezahlter Bestellungen, den bezahlten Betrag und zwei Aktionszugänge.
+
+| Datum | Bezahlte Bestellungen | Bezahlter Betrag (Yuan) | Aktion |
+| --- | --- | --- | --- |
+| 09-24 | 128 | 62.400,00 | Detail, Protokoll |
+| 09-23 | 141 | 68.120,00 | Detail, Protokoll |
+| 09-22 | 132 | 64.152,00 | Detail, Protokoll |
+
+Drei Zeilen sind ein Auszug; der vollständige Tagesbericht liegt auf der nächsten Seite derselben Demonstration, mit sechs Zeilen und sieben Feldern in jeder. Die Zugänge Detail und Protokoll sind keine Dekoration: Detail öffnet die Bestellzusammensetzung dieses Tages, Protokoll zeigt, welcher Auftrag die Tabelle erzeugt hat. Der Auszug kann nur bei drei Tagen stehen bleiben, weil die vollständige Tabelle jeden Tag von selbst eine neue Zeile bildet.
+
+## Sechs Tageszeilen, die von selbst entstehen
+
+Die Berichtsseite bringt diese Struktur auf einen Bildschirm. Drei Karten sagen, um welchen Schritt es geht, was sie festhält und wohin sie abgebildet wird.
+
+- Um welchen Schritt: der tägliche Transaktionsbericht des Datenmoduls, eine Zeile pro Tag, der Anzahl bezahlter Bestellungen, bezahlten Betrag, durchschnittlichen Bestellwert, zahlende Käufer und Erstattungsquote festhält.
+- Was sie festhält: nehmen wir den 09-24, 128 bezahlte Bestellungen, 62.400,00 Yuan und einen durchschnittlichen Bestellwert von 487,50 Yuan; die Tabelle entsteht jeden Tag von selbst, ohne Tabellen von Hand zusammenzufügen.
+- Wohin sie abgebildet wird: im täglichen Betrieb von vierzehn Modulen auf einer Oberfläche stammen Bestell-, Produkt- und Mitgliederdaten alle aus demselben Backoffice.
+
+Links in der Oberfläche liegt ein Datendashboard, in dem Öffentlich, Shop, Traffic, Marketing, Distribution, CRM und Selbstbedienungsanalyse ein gemeinsames Menü teilen; die obere Leiste läuft von Shop und Marktplatz bis zu Daten, Kundenservice, Inhalten und Mehrwertdiensten. Bestell-, Produkt- und Mitgliederdaten stammen aus demselben Backoffice statt aus je einem System pro Typ, und genau das bedeutet vierzehn Module auf einer Oberfläche. Der Tagesbericht muss keine Daten aus mehreren Systemen holen und braucht daher kein Zusammensetzen von Hand.
+
+- 09-24, 128 bezahlte Bestellungen, 62.400,00 Yuan, durchschnittlicher Bestellwert 487,50 Yuan, 121 zahlende Käufer, Erstattungsquote 1,8%, Detail und Protokoll;
+- 09-23, 141 bezahlte Bestellungen, 68.120,00 Yuan, durchschnittlicher Bestellwert 483,12 Yuan, 132 zahlende Käufer, Erstattungsquote 2,1%, Detail und Protokoll;
+- 09-22, 132 bezahlte Bestellungen, 64.152,00 Yuan, durchschnittlicher Bestellwert 486,00 Yuan, 126 zahlende Käufer, Erstattungsquote 1,6%, Detail und Protokoll;
+- 09-21, 147 bezahlte Bestellungen, 72.604,00 Yuan, durchschnittlicher Bestellwert 493,90 Yuan, 139 zahlende Käufer, Erstattungsquote 2,4%, Detail und Protokoll;
+- 09-20, 139 bezahlte Bestellungen, 68.455,00 Yuan, durchschnittlicher Bestellwert 492,48 Yuan, 131 zahlende Käufer, Erstattungsquote 1,9%, Detail und Protokoll;
+- 09-19, 124 bezahlte Bestellungen, 60.752,00 Yuan, durchschnittlicher Bestellwert 489,94 Yuan, 117 zahlende Käufer, Erstattungsquote 2,2%, Detail und Protokoll.
+
+Unter der Liste steht 6 Einträge insgesamt und 20 pro Seite, die Paginierung bleibt bei 1 und beide Blätterpfeile sind vorhanden. Auch der Hinweis zu den Demodaten steht dort: Kernkennzahlen täglich zusammengefasst, mit Trends und Details auf einem Bildschirm. Über die sechs Tage erreicht die Erstattungsquote am 09-21 mit 2,4% den Höchstwert und am 09-22 mit 1,6% den Tiefstwert; diese Spalte hängt an den Einträgen zu Retourengründen des Kundendienstmoduls, nicht an einer dekorativen Berechnung.
+
+![Demonstration des Tagesberichts mit drei Erläuterungskarten, sechs Zeilen mit sieben Feldern, einer Paginierung von sechs Einträgen zu zwanzig pro Seite und dem Hinweis zu den Demodaten](/images/insights/seven-flows-one-ledger-bonded-exports-china/daily-operations-report-demo.webp)
+
+## Die Zeile des 09-24 einmal durchgehen
+
+Nehmen wir die Zeile des 09-24 als einen Vorgang, den es zu prüfen gilt. 128 bezahlte Bestellungen und 62.400,00 Yuan ergeben geteilt genau einen durchschnittlichen Bestellwert von 487,50 Yuan; die 121 zahlenden Käufer sind 7 weniger als die Anzahl der Bestellungen, also hat jemand an diesem Tag mehr als eine Bestellung aufgegeben; eine Erstattungsquote von 1,8% entspricht den noch offenen Retouren im Kundendienstmodul.
+
+Von dieser Zeile aus lassen sich die sieben Ströme zurückverfolgen: der Handelsstrom holt Verträge und Zuordnung für diese 128 Bestellungen, der Warenstrom liefert Chargen und Haltbarkeit, der Logistikstrom liefert Ausgangs- und Zustellzeiten der quittierten Zustellung, der Finanzstrom liefert Eingänge, Ausgänge und Salden, der Informationsstrom liefert Statusänderungen der Bestellung und Empfangsbestätigungen der Schnittstellen, der Compliancestrom liefert Anmeldungen je Bestellung und das Ergebnis des Abgleichs der drei Belege, der Fakturierungsstrom liefert Rechnungen und Gutschriften. Alle sieben teilen die Bestellnummer, daher findet eine einzige Suche alles; kommt der Rückruf einer Schnittstelle zu spät, bleibt die Zeile des Informationsstroms zunächst leer, bezahlter Betrag und durchschnittlicher Bestellwert stimmen weiterhin, aber der Kundenservice kann nicht sagen, wo diese Bestellung steckt.
+
+Die Abbildung der dritten Karte hält hier stand: weil Bestell-, Produkt- und Mitgliederdaten aus einem Backoffice stammen, lassen sich zahlende Käufer mit Mitgliedschaftsstufen abgleichen. Auf drei Backoffices verteilt braucht die Zahl 121 eine datenbankübergreifende Verknüpfung, und sobald sich die Verknüpfungsregel ändert, ist der Bericht vom nächsten Tag nicht mehr mit dem vom Vortag vergleichbar.
+
+## Welcher Strom an einem Tag großer Verkaufsaktionen zuerst reißt
+
+Die dritte Frage der Trennseite lautet, ob der tägliche Betrieb und Spitzen großer Verkaufsaktionen gleichzeitig tragfähig sind. Mit dieser Struktur sind sie es, sofern vor der Spitze drei Dinge festgelegt sind: eine Bestellnummer durch alle sieben Ströme, ein einziger Verantwortlicher vom Eintritt in die Zone bis zur quittierten Zustellung, und ein Bericht, den das Backoffice erzeugt statt aus Exporten zusammenzustellen. Die Spitze belastet Rückrufe der Schnittstellen und die Bestandssynchronisation; die Bestellnummer ändert sich nicht, also bleibt das Buch dasselbe Buch. Bei einem von Hand zusammengefügten Bericht bringt der Tag der Spitze nicht mehr Arbeit, sondern mehr Gelegenheiten, falsche Zeilen zusammenzufügen.
+
+Vor der Inbetriebnahme werden die Felder festgelegt: Datum, Anzahl bezahlter Bestellungen, bezahlter Betrag, durchschnittlicher Bestellwert, zahlende Käufer, Erstattungsquote und Aktionszugänge, alle sieben Spalten lesen aus denselben Datentabellen. Dann wird entschieden, wer die vierzehn Liefergegenstände unterschreibt. Der Rest kann später ergänzt werden; die Plätze für den Direktkaufkanal 9610 und eine zweite Bezugsquelle liegen bereits in der Abbildung von S0 bis S13, und der Verantwortliche ändert sich nicht, wenn sie besetzt werden.
+
+Die Daten, Beträge und Bestellzahlen auf dem Bildschirm sind Demodaten, gedacht um zu zeigen, wie eine Zeile entsteht und wie man sie zurückverfolgt. Die tatsächlichen Werte folgen den Abrechnungen des Zeitraums, den Exporten der Plattform und den Anforderungen der zuständigen Behörde; Erstattungsquote und durchschnittlicher Bestellwert folgen der Berechnung des Systems für diesen Tag.
+
+Sieben Ströme auf einem Buch sind auf dem Papier vierzehn Liefergegenstände, die jemand unterschreibt; auf dem Bildschirm sind sie ein Tagesbericht, der jeden Tag eine Zeile wachsen lässt, mit jeder Zeile rückverfolgbar. Legen Sie zuerst Bestellnummer und Verantwortlichen fest, dann wählen Sie Lieferanten. Kehren Sie die Reihenfolge um, muss jede spätere Abstimmung erneut gemacht werden.
+
+Um die sieben Ströme für Ihren bestehenden Shop, Ihr Lager und Ihre Abrechnungseinheit in einem Buch zu verbinden, [kontaktieren Sie uns](/de/packages/).

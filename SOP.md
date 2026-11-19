@@ -16,7 +16,7 @@ npm run dev
 # 或单独启动
 cd apps/site && npx next dev     # 主站 → localhost:3002
 cd apps/portal && npx next dev   # Portal → localhost:3003（用 /en/c/ 访问）
-cd apps/blog && npx next dev     # 博客 → localhost:3004
+cd apps/insights && npx next dev     # 博客 → localhost:3004
 ```
 
 ## 构建验证
@@ -25,7 +25,7 @@ cd apps/blog && npx next dev     # 博客 → localhost:3004
 # 所有站单独构建
 cd apps/site   && npx next build   # 主站（含统一索引生成）
 cd apps/portal && npx next build   # 用户站
-cd apps/blog   && npx next build   # 博客站
+cd apps/insights   && npx next build   # 博客站
 ```
 
 ## 部署
@@ -36,7 +36,7 @@ cd apps/blog   && npx next build   # 博客站
 |------|--------|----------|----------------|----------|
 | 主站 | `tc-web-site` | `apps/site` | sinotradecompliance.com | tc-web-site.pages.dev |
 | Portal | `tc-web-portal` | `apps/portal` | — | tc-web-portal.pages.dev |
-| Blog | `tc-web-blog` | `apps/blog` | — | tc-web-blog.pages.dev |
+| Blog | `tc-web-blog` | `apps/insights` | — | tc-web-blog.pages.dev |
 
 **当前阶段：** 已切换至正式域名 `sinotradecompliance.com`（2026-06-09）。生产部署由 GitHub push → CF Pages 自动构建部署。
 
@@ -53,7 +53,7 @@ cd apps/blog   && npx next build   # 博客站
 - 推送到 `main` 分支 → 所有项目自动触发构建
 - 改 `apps/site/**` → 触发主站
 - 改 `apps/portal/**` → 触发 Portal
-- 改 `apps/blog/**` → 触发博客
+- 改 `apps/insights/**` → 触发博客
 - 改 `packages/ui/**` → 触发所有站
 - 改 `packages/scripts/**` → 触发所有站
 
@@ -141,7 +141,7 @@ curl -s -o /dev/null -w "%{http_code}\n" -x "http://<CN代理>" https://sinotrad
 | `<repo>/.env` | 全部 tc-web 变量（16 项） | 600 权限、gitignored；`set -a && . ./.env && set +a` 后即可 `npx wrangler` / curl CF API |
 | `<repo>/apps/portal/.env` | 支付/邮件/JWT/Turnstile | 本地 `npm run dev:portal` 用 |
 | `<repo>/apps/admin/.env` | Turnstile + 生产变量副本 | 本地 dev 用 |
-| `<repo>/apps/site/.env`、`apps/blog/.env` | `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`（site 另含 `UPSTREAM_*`） | 本地 dev 用 |
+| `<repo>/apps/site/.env`、`apps/insights/.env` | `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`（site 另含 `UPSTREAM_*`） | 本地 dev 用 |
 
 - 生产/预览变量在 CF Pages Dashboard 独立配置，`secret_text` 类型**无法通过 API 导出**
 - 旧环境的集中密钥库 `~/.openclaw/.env` 已下线；值已于 2026-09-13 迁移到上表，备份文件已于 2026-10-23 清理（22 项逐条核对：重复/变更/废弃，剩余两把 opcode/mimo 确认无用一并删除）
@@ -271,7 +271,7 @@ npx wrangler tail tc-web-cron                                              # 看
   build-search-index → next build → ci-check.mjs --project=portal --out-dir=out --ci
   （hreflang 由 buildAlternates SSG 生成，构建时 check-hreflang.mjs --dir=out 检查，无需部署后验证）
 
-# Blog (apps/blog)
+# Blog (apps/insights)
   lint → build-search-index → next build → ci-check.mjs --project=blog --out-dir=out --ci
 ```
 
@@ -401,7 +401,7 @@ $TT results -n stc-<任务> -o ./out.json
 
 ## 官网 — 新增博客文章
 
-> **已迁移（2026-08-14）：** 博客文章统一在 `apps/blog/content/` 管理，完整流程见下方「[Blog — 添加新文章完整工作流](#blog--添加新文章完整工作流)」。
+> **已迁移（2026-08-14）：** 博客文章统一在 `apps/insights/content/` 管理，完整流程见下方「[Blog — 添加新文章完整工作流](#blog--添加新文章完整工作流)」。
 >
 > 流程变更：**不再用 t-translate 机器翻译 47 语言**，改为 **48 语言个性化本地化撰写（不用翻译工具）**，每个语言按目标读者习惯单独撰写，而非直译。
 >
@@ -458,7 +458,7 @@ Creem 提供 Test Mode：API 端点是 `https://test-api.creem.io`
 
 ### Step 1: 写英文原文
 
-在 `apps/blog/content/en/` 下创建 `{slug}.mdx`。gray-matter 前置元数据：
+在 `apps/insights/content/en/` 下创建 `{slug}.mdx`。gray-matter 前置元数据：
 
 ```yaml
 ---
@@ -491,15 +491,15 @@ references:                      # 可选
 | Brand Protection / 品牌保护 | /services/brand |
 | Compliance Guide / 合规指南 | /services/gacc |
 
-映射表在 `apps/blog/src/app/[locale]/blog/[slug]/page.tsx` 的 `CATEGORY_SERVICE_MAP`（含中英文双套 key）。不在表中的 category 必须先在映射表中添加条目。
+映射表在 `apps/insights/src/app/[locale]/blog/[slug]/page.tsx` 的 `CATEGORY_SERVICE_MAP`（含中英文双套 key）。不在表中的 category 必须先在映射表中添加条目。
 
 ### Step 3: （可选）添加 FAQPage JSON-LD
 
-在 `[slug]/page.tsx` 的 `FAQ_NS` 映射表中添加 slug 条目，并在 `apps/blog/messages/{locale}.json` 定义 `BlogFaqXxx` namespace。
+在 `[slug]/page.tsx` 的 `FAQ_NS` 映射表中添加 slug 条目，并在 `apps/insights/messages/{locale}.json` 定义 `BlogFaqXxx` namespace。
 
 ### Step 4: 48 语言个性化本地化撰写（核心步骤，不用翻译工具）
 
-为全部 48 个语言目录各创建 `apps/blog/content/{locale}/{slug}.mdx`，**每个语言个性化撰写，不是机器直译**：
+为全部 48 个语言目录各创建 `apps/insights/content/{locale}/{slug}.mdx`，**每个语言个性化撰写，不是机器直译**：
 
 - **按目标读者习惯撰写**：句式、用词、案例叙述贴合该语言读者的表达习惯，不逐句对应英文版
 - **标题本地化**：各语言本地化标题，**不加括号说明**（如不加「（中文版）」）
@@ -521,7 +521,7 @@ references:                      # 可选
 ### Step 5: MDX 内容质量检查（本地）
 
 ```bash
-cd apps/blog
+cd apps/insights
 node ../../packages/scripts/check-md-article.mjs --project=blog --ci
 ```
 
@@ -534,7 +534,7 @@ node ../../packages/scripts/check-md-article.mjs --project=blog --ci
 ### Step 6: 构建验证
 
 ```bash
-cd apps/blog
+cd apps/insights
 npm run build
 # = build-search-index → rm -rf .next/cache → next build → ci-check.mjs --out-dir=out --ci
 ```
@@ -542,7 +542,7 @@ npm run build
 ### Step 7: 推送到 main → 自动部署
 
 ```bash
-git add apps/blog/content/
+git add apps/insights/content/
 git commit -m "feat(blog): add {slug} article in 48 languages"
 git push origin main
 ```

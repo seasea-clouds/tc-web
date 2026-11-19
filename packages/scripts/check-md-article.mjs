@@ -57,7 +57,7 @@ const LOCALES = [
 
 // 项目内容目录映射
 const PROJECT_CONTENT_DIRS = {
-  blog: 'apps/blog/content',
+  blog: 'apps/insights/content',
 };
 
 function getContentDir(p) {
@@ -65,7 +65,7 @@ function getContentDir(p) {
 }
 
 function getBlogMessagesDir() {
-  return path.join(repoRoot, 'apps/blog/messages');
+  return path.join(repoRoot, 'apps/insights/messages');
 }
 
 // ============================================================
@@ -536,7 +536,7 @@ function checkR10(contentDir) {
         .filter(([, d]) => d !== first)
         .map(([loc, d]) => `${loc}:${d}`);
       addFinding({
-        file: `apps/blog/content/*/${slug}.mdx`,
+        file: `apps/insights/content/*/${slug}.mdx`,
         lang: "-",
         rule: "R10",
         severity: "error",

@@ -1,0 +1,113 @@
+---
+title: "Nove interfaces para o entreposto aduaneiro chinês, luzes de saúde e margem de pico"
+date: "2027-06-22"
+category: "E-commerce"
+excerpt: "As interfaces padrão vêm primeiro e o middleware cobre o resto; as luzes de saúde registam chamadas e reenvios. Os dados ficam no país, só saem agregados desidentificados."
+references:
+  - title: "Anúncio 194 de 2018 da Administração-Geral das Alfândegas da China sobre a supervisão das mercadorias de importação e exportação a retalho no comércio eletrónico transfronteiriço"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Lei de Proteção de Informações Pessoais da República Popular da China, aprovada em 20 de agosto de 2021, artigos 38, 39 e 55"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+  - title: "Disposições sobre a promoção e regulamentação dos fluxos transfronteiriços de dados, Ordem 16 da Administração do Ciberespaço da China, em vigor desde 22 de março de 2024"
+    url: "https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm"
+---
+
+As nove famílias de interfaces ligam os seus sistemas atuais à plataforma de entreposto aduaneiro da China, desde que as interfaces padrão tenham prioridade, os dados permaneçam no território nacional e a capacidade para o pico promocional seja dimensionada com uma margem de 10 vezes. Onde existe uma interface padrão, a ligação é direta; onde não existe, o middleware faz o mapeamento. As luzes de saúde registam, por tipo de interface, o volume de chamadas, a taxa de sucesso, a latência e o reenvio de falhas, e as duas linhas de envio de encomendas e de retorno do recibo de pagamento fixam o retorno dos três documentos. As referências de mercado público para a integração são de 3 a 7 dias para interfaces padrão e de 8 a 12 semanas para a integração completa, e valem apenas como referência de ordem de grandeza; o que realmente define a data de entrada em produção são os testes conjuntos e um ciclo de liquidação em paralelo.
+
+![Demonstração da tabela de mapeamento das nove famílias de interfaces, com as colunas o seu sistema, o item de integração, a direção e o destino, nove linhas de bens e stock, encomendas, dados de membros, liquidação de comissões, inventário, alfândegas, cumprimento, devoluções e finanças, e, abaixo, quatro princípios de fluxo de dados e as quatro luzes de saúde do monitor de testes conjuntos da API](/images/insights/china-bonded-platforms-nine-interfaces/nine-interface-families-mapping.webp)
+
+## Em que tabela fica cada uma das nove famílias de interfaces
+
+A tabela de interfaces escreve-se em quatro colunas: de que lado do seu sistema se trata, qual é o item de integração, quem lidera a direção e onde os dados acabam por chegar. A direção tem apenas três formas, bidirecional, de entrada e liderada por si; as linhas sem direção indicada ficam a cargo do nosso lado. A coluna do destino indica a que conjunto de registos pertence cada campo, para que quem assumir o trabalho possa conferir pela tabela.
+
+- Bens e stock: stock e preços por SKU, bidirecional, mantidos coerentes com o sistema de gestão de armazém e com o registo aduaneiro.
+- Encomendas: dados de encomendas, de entrada, que chegam aos campos dos três documentos.
+- Dados de membros: relações de promotores, lideradas por si, os dados são seus e nós tratamos como encarregado do tratamento por conta de outrem.
+- Liquidação de comissões: pagamento de comissões, bidirecional, com o segmento nacional executado pela entidade nacional.
+- Inventário: o sistema de entreposto aduaneiro, sem direção indicada, fica no sistema de operações de entreposto aduaneiro e partilha a origem com o registo.
+- Alfândegas: a declaração dos três documentos, sem direção indicada, a declaração fica a nosso cargo e é matéria sob o nosso controlo.
+- Cumprimento: retorno do trajeto, sem direção indicada, o rasto logístico é reescrito na vista de encomendas.
+- Devoluções: documentos de devolução, sem direção indicada, as devoluções voltam a entrar na área sob supervisão aduaneira através do centro de devoluções.
+- Finanças: liquidação, de saída, incluindo moeda e câmbio.
+
+Para onde os dados circulam decide como as interfaces são construídas. Os registos do lado nacional e o painel do lado estrangeiro têm de ficar separados; caso contrário, durante os testes conjuntos os dois lados acabam por sobrescrever os mesmos campos.
+
+- Os dados de promoção recolhidos e liquidados no território nacional permanecem no território nacional.
+- À sua empresa-mãe no estrangeiro só regressam dados agregados desidentificados, sem relações de comissões nacionais.
+- O sistema de retaguarda no estrangeiro nunca acede aos dados brutos dos consumidores da China; os percursos transfronteiriços só são abertos depois de aprovada a avaliação de impacto sobre a proteção de dados pessoais.
+- Os dados nacionais de promoção e de comissões permitem exportação integral e lhe são entregues com os registos no momento da passagem.
+
+O monitor de testes conjuntos da API organiza as luzes de saúde em quatro linhas por tipo de interface e por contraparte, e cada verificação de saúde e cada reenvio deixa um registo. A página de demonstração apresenta três itens, tipo de interface, contraparte e luz de saúde, correspondentes ao mesmo conjunto usado na demonstração da interface do sistema, e as linhas são revistas uma a uma todos os dias durante os testes conjuntos.
+
+- Envio de encomendas, ligado à loja, luz de saúde normal.
+- Retorno do recibo de pagamento, ligado ao canal de pagamento, luz de saúde normal.
+- Retorno da guia de remessa, ligado à transportadora, luz de saúde de alerta.
+- Declaração da lista, ligada ao canal de declaração, luz de saúde normal.
+
+Define-se primeiro o critério de integração pelas interfaces padrão: onde existe uma interface padrão, liga-se diretamente; onde não existe, o middleware faz o mapeamento. As referências de mercado público para a integração são de 3 a 7 dias para interfaces padrão e de 8 a 12 semanas para a integração completa, e o pico promocional é dimensionado com uma margem de 10 vezes. Cada lado designa um contacto técnico e realiza uma reunião de alinhamento diária durante os testes conjuntos. Depois da entrada em produção, executa-se primeiro um ciclo de liquidação completo em paralelo antes da transição, para que os dados dos dois sistemas não divirjam durante o período de dupla execução.
+
+## Como ler as luzes de saúde e onde ficam registados os reenvios de falhas
+
+O registo de saúde das interfaces dá uma linha por tipo de interface, com separadores para todas as interfaces, normais e anormais, e cada linha escreve contraparte, volume de chamadas, taxa de sucesso, latência, falhas, reenvio e luz de saúde. Tomemos o envio de encomendas como exemplo: 1284 chamadas hoje, uma taxa de sucesso de 100%, latência média de 186 milissegundos, 0 falhas e luz de saúde normal; o retorno do recibo de pagamento registou também 1284 chamadas, com uma taxa de sucesso de 99,9%, 1 falha já reenviada com sucesso e a luz de saúde ainda normal. Estas duas linhas são a prova de que o retorno dos três documentos ficou no sistema.
+
+Depois de mapeadas as nove famílias de interfaces, os volumes de chamadas e os dados de saúde em tempo de execução ficam todos neste registo, e as duas linhas de envio de encomendas e de retorno do recibo de pagamento registam como o retorno dos três documentos chegou ao destino. O rodapé da interface de demonstração indica 12 registos no total e 20 por página, e cada linha termina com duas entradas, detalhes e registo; as nove linhas seguem todas o mesmo conjunto de colunas.
+
+![Demonstração da interface do sistema do registo de saúde das interfaces, com nove linhas em nove colunas: tipo de interface, contraparte, chamadas de hoje, taxa de sucesso, latência média, falhas, reenvio, luz de saúde e operações, e 12 registos no total com 20 por página no rodapé](/images/insights/china-bonded-platforms-nine-interfaces/interface-health-log-system-demo.webp)
+
+- Envio de encomendas, loja, 1284 chamadas hoje, taxa de sucesso 100%, latência média 186 milissegundos, 0 falhas, sem reenvio, luz de saúde normal, detalhes e registo;
+- Retorno do recibo de pagamento, canal de pagamento, 1284, 99,9%, 210 milissegundos, 1 falha, reenviado, normal, detalhes e registo;
+- Retorno da guia de remessa, transportadora, 1266, 99,2%, 340 milissegundos, 10 falhas, reenvio em curso, alerta, detalhes e registo;
+- Declaração da lista, canal de declaração, 1266, 99,8%, 520 milissegundos, 3 falhas, reenviado, normal, detalhes e registo;
+- Consulta de quota, canal de consulta, 1284, 100%, 150 milissegundos, 0 falhas, sem reenvio, normal, detalhes e registo;
+- Sincronização do registo, entreposto aduaneiro, 96, 100%, 430 milissegundos, 0 falhas, sem reenvio, normal, detalhes e registo;
+- Reescrita do estado de liberação, canal de declaração, 1240, 99,6%, 610 milissegundos, 5 falhas, reenviado, normal, detalhes e registo;
+- Rasto logístico, transportadora, 1240, 98,7%, 720 milissegundos, 16 falhas, reenvio em curso, alerta, detalhes e registo;
+- Ficheiro de reconciliação, sistema financeiro, 12, 100%, 980 milissegundos, 0 falhas, sem reenvio, normal, detalhes e registo.
+
+## Como se julga o pico promocional e quanta capacidade reservar
+
+O julgamento do pico divide-se em quatro casos por volume e por necessidade de resposta: volume baixo com resposta alta olha à elasticidade, volume alto com resposta alta olha ao prazo de antecedência, volume baixo com resposta baixa olha à capacidade de base e volume alto com resposta baixa olha à capacidade em regime estacionário. A curva de capacidade relativa à capacidade diária tem três níveis: 1 vez nas operações diárias, 4 a 5 vezes numa campanha promocional e 10 vezes no pico, reservando-se o lado do pico com uma margem de 10 vezes. Quanto mais cedo nos entregar os volumes pré-registados, mais margem há para planear a expansão e o pessoal; se os volumes chegarem uma semana antes da campanha, pouco mais resta do que acrescentar pessoal.
+
+- Volume baixo e necessidade de resposta alta vão para a elasticidade de pico: os casos públicos correm a 4 a 5 vezes o volume diário, os picos vão de dezenas de milhares a centenas de milhares de unidades e o pessoal na campanha é cerca de 3 vezes o normal; são valores de referência de casos públicos.
+- Volume alto e necessidade de resposta alta fica condicionado pelo prazo de antecedência: picos ultra-altos exigem antecedência, o crescimento de SKU amplia em conjunto o armazém e o registo, a campanha reserva um pico de 10 vezes e os valores de volume são fornecidos por si.
+- Volume baixo e necessidade de resposta baixa é capacidade de base: loja de marca com pagamentos licenciados, documentos incorporados, mais de 50 pontos de entrada e mais de 70 sistemas ERP ligados, certificação AEO avançada e desalfandegamento próprio; o nosso lado está pronto.
+- Volume alto e necessidade de resposta baixa é capacidade em regime estacionário: dimensionada pelas encomendas diárias, com entrada antecipada em armazém e armazenamento por zonas, pessoal efetivo e temporário em conjunto, volumes pré-registados em primeiro lugar e devoluções de volta à área sob supervisão aduaneira; o nosso lado segue o processo.
+
+Os candidatos a armazém são quatro locais em zonas aduaneiras integrais mais o armazém de Hong Kong, China. Quatro locais em paralelo dão redundância de vários pontos de entrada; o ponto final é decidido por si e a lista de candidatos é entregue logo na fase inicial, sem necessidade de esperar que a mercadoria chegue ao porto. O armazém de Hong Kong, China fica do lado estrangeiro e é registado separadamente dos quatro locais nacionais.
+
+![Demonstração da plataforma e da capacidade de cumprimento para o pico promocional, quatro quadrantes à esquerda por volume e necessidade de resposta, a curva de capacidade de três níveis relativa à capacidade diária no canto superior direito, o painel de volume pré-registado da campanha no canto inferior direito e, abaixo, quatro locais em zonas aduaneiras integrais e o armazém de Hong Kong, China](/images/insights/china-bonded-platforms-nine-interfaces/mega-sale-peak-capacity-verdict.webp)
+
+- Yiwu, Zhejiang, entreposto aduaneiro com regime 1210.
+- Hangzhou, Zhejiang, entreposto aduaneiro com regime 1210.
+- Guangzhou Huangpu, Guangdong, entreposto aduaneiro com regime 1210.
+- Shenzhen Qianhai, Guangdong, entreposto aduaneiro com regime 1210.
+- Hong Kong, China, no estrangeiro, entreposto aduaneiro de Hong Kong, China.
+
+O painel de volume pré-registado da campanha promocional lista quatro linhas em sete colunas: SKU, volume pré-registado, já registado, progresso, conclusão prevista, estado e operação, com duas entradas, detalhes e registo, em cada linha. O progresso e a data de conclusão prevista definem a ordem de aprovisionamento de cada SKU, e os défices são acompanhados linha a linha na tabela de acompanhamento do volume pré-registado.
+
+- Cápsulas moles de coenzima Q10, volume pré-registado 12000, já registado 8400, progresso 70%, conclusão prevista 10-12, em curso, detalhes e registo;
+- Cápsulas de óleo de peixe de águas profundas, 8000, 6400, 80%, 10-08, em curso, detalhes e registo;
+- Bebida sólida em pó de proteína, 6000, 2400, 40%, 10-18, em curso, detalhes e registo;
+- Pó liofilizado de probióticos, 5000, 5000, 100%, sem data de conclusão indicada, concluído, detalhes e registo.
+
+## Como acompanhar linha a linha os défices do volume pré-registado
+
+A tabela de acompanhamento do volume pré-registado do módulo de inventário dá uma linha por SKU e escreve volume pré-registado, já registado, progresso, défice, conclusão prevista e estado. Tomemos as cápsulas moles de coenzima Q10 como exemplo: volume pré-registado 12000, já registado 8400, progresso 70%, défice de 3600, com conclusão prevista para 10-12; as cápsulas de óleo de peixe de águas profundas estão a 80% de progresso, com um défice de 1600 e conclusão prevista para 10-08. A curva de capacidade de três níveis traduz-se aqui em ações de aprovisionamento, pelo que se vê com antecedência a dimensão do défice e o dia em que se fecha.
+
+O rodapé da interface indica 7 registos no total e 20 por página, e cada linha termina com duas entradas, detalhes e registo; os separadores de acompanhamento do volume pré-registado e de aviso de chegada ficam lado a lado, para que a linha da frente mude de separador sem voltar a filtrar. As sete linhas seguem todas o mesmo conjunto de colunas.
+
+![Demonstração da interface do sistema de acompanhamento do volume pré-registado, sete linhas de produtos em oito colunas: SKU, volume pré-registado, já registado, progresso, défice, conclusão prevista, estado e operações, com 7 registos no total e 20 por página no rodapé](/images/insights/china-bonded-platforms-nine-interfaces/pre-filed-volume-tracking-system-demo.webp)
+
+- Cápsulas moles de coenzima Q10, 12000, 8400, 70%, défice 3600, 10-12, em curso, detalhes e registo;
+- Cápsulas de óleo de peixe de águas profundas, 8000, 6400, 80%, défice 1600, 10-08, em curso, detalhes e registo;
+- Bebida sólida em pó de proteína, 6000, 2400, 40%, défice 3600, 10-18, em curso, detalhes e registo;
+- Pó liofilizado de probióticos, 5000, 5000, 100%, défice 0, sem data de conclusão indicada, concluído, detalhes e registo;
+- Pó de péptidos de colagénio de peixe, 6000, 3000, 50%, défice 3000, 10-15, em curso, detalhes e registo;
+- Comprimidos mastigáveis de vitamina C, 9000, 8100, 90%, défice 900, 10-06, em curso, detalhes e registo;
+- Gomas de melatonina, 4000, 4000, 100%, défice 0, sem data de conclusão indicada, concluído, detalhes e registo.
+
+## O que fixar antes da entrada em produção nas interfaces e na transição
+
+Antes da entrada em produção fixam-se três pontos: as interfaces padrão e o mapeamento por middleware ficam escritos na tabela de interfaces, os limiares das luzes de saúde, os reenvios de falhas e os responsáveis ficam atribuídos a linhas concretas, e os volumes pré-registados e os escalões de capacidade são alinhados ao mesmo conjunto de SKU. Se faltar qualquer um dos três, os testes conjuntos ficam presos aos reenvios. Os volumes de chamadas, as taxas de sucesso, os volumes pré-registados e as datas de conclusão da interface de demonstração são apenas ilustrativos; os valores de pico e de pessoal vêm de casos públicos e mostram só a ordem de grandeza, sendo os volumes reais fornecidos por si. A prática real de declaração segue as exigências da autoridade competente e os percursos transfronteiriços de dados seguem o resultado da avaliação de impacto sobre a proteção de dados pessoais. Antes da transição executa-se um ciclo de liquidação completo em paralelo, confirma-se que os dados dos dois sistemas não divergiram e só então se desvia o tráfego.
+
+Se quiser ligar as nove famílias de interfaces ao cumprimento em entreposto aduaneiro segundo o seu sistema atual e o plano de pontos de entrada, conferindo linha a linha as luzes de saúde e os volumes pré-registados, [Contacte-nos](/pt/packages/).

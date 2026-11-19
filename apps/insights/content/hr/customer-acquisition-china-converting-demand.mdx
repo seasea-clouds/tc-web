@@ -1,0 +1,67 @@
+---
+title: "Kako izgraditi privlačenje kupaca u Kini, arhitektura konverzije fazama i kanalima"
+date: "2027-07-06"
+category: "E-commerce"
+excerpt: "Proračun ide gdje konverzija uspijeva: edukacija na startu, glavni kanal u ubrzanju, članski ponovni kupci. Usklađenost od prvog dana, tri revizije, članstvo po lokalnim pravilima."
+references:
+  - title: "Zakon o oglašavanju NRK (redakcija 2015, ispravci 2018, čl. 17, 18, 46)"
+    url: "https://www.gov.cn/guoqing/2021-10/29/content_5647620.htm"
+  - title: "Pravila upravljanja internetskim oglašavanjem (uredba br. 72 SAMR, na snazi od 1. svibnja 2023)"
+    url: "https://www.gov.cn/gongbao/2023/issue_10506/202306/content_6885261.html"
+  - title: "Zakon NRK o zaštiti osobnih podataka (donesen 20. kolovoza 2021, čl. 38, 39)"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+---
+
+Kamo usmjeriti proračun privlačenja i koliko će se vratiti, određuje to na kojem kanalu ispunjeni uvjeti konverzije, a ne zasjenjivanje svih četiriju kanala odjednom. Arhitektura iz modula S7 izvornih materijala su tri faze rasta protiv četiri kanala: hladni start od nule do šestog mjeseca, proširenje od šestog do osamnaestog, zadržavanje nakon osamnaestog mjeseca, pri čemu Xiaohongshu, Tmall Global i JD Worldwide, Douyin i privatni krug WeChat nose različito opterećenje u svakoj fazi. Usklađenost je spremna od prvog dana: oglašivački materijali prolaze tri revizije, članski program se preslaže po pravilima kopna, podaci članova ostaju u Kini. Uz arhitekturu djeluje mjesečna kontrolna ploča plaćenog prometa po kanalima: kamo su otišli novac i što se vratilo, vidno u jednom retku.
+
+![Arhitektura privlačenja i rasta S7: mjehurićasta matrica triju faza i četiriju kanala, desno ploča usklađenosti i struktura troškova, dolje tri noge rasta i koraci privatnog kruga, u desnom donjem kutu sličica kontrolne ploče](/images/insights/customer-acquisition-china-converting-demand/s7-acquisition-growth-channel-matrix.webp)
+
+Ova stranica dolazi iz šestog poglavlja materijala marke, poglavlje Ready to Grow, modul S7, naslov Acquisition and Growth: Architecture for Converting Demand. Lijevo je matrica raspodjele kanala, desno gore ploča usklađenosti i struktura troškova, lijevo dolje tri noge rasta i tri koraka privatnog kruga, u desnom donjem kutu ugrađena sličica prikaza ploče. Ovaj članak raščlanjuje S7 zajedno s prikazom preko cijelog zaslona na idućoj stranici, ne treba prije čitati druge module poglavlja.
+
+## Matrica raspodjele triju faza i četiriju kanala
+
+Matrica postavlja tri faze rasta okomito i četiri kanala vodoravno, jedna ćelija, jedan mjehurić, veličina mjehurića pokazuje intenzitet ulaganja faze u kanal: velik znači glavni potisak, srednji potporu, mali spor ulaz. Čitanjem ćeliju po ćeliji vidno je da se proračun ne dieli ravno, nego mijenja glavno bojište po fazama.
+
+Hladni start, mjeseci od nule do šestog: Xiaohongshu drži veliki mjehurić edukacije o sastavu, Tmall Global i JD Worldwide srednji mjehurić konverzije povjerenja, Douyin još bez troškova, privatni krug WeChat veliki mjehurić prve kupnje preko probnog paketa. Dokaza o prodaji u ovoj fazi nema, pa sadržaj najprije tumači sastav, trgovine hvataju povjerenje onih koji traže, a privatni krug zatvara prvu narudžbu uzorkom.
+
+Proširenje, mjeseci od šestog do osamnaestog: Xiaohongshu pada na srednji mjehurić razvijanja sadržaja, Tmall Global i JD Worldwide uspinju se do najvećeg mjehurića kao glavni kanal konverzije, Douyin uspinje do najvećeg mjehurića obimnih prijenosa, privatni krug WeChat drži srednji mjehurić podsjetnika ponovne kupnje. Glavno bojište seli se s Xiaohongshu na tržnice i Douyin, zadaća sadržaja mijenja se iz edukacije u obujam.
+
+Zadržavanje, nakon osamnaestog mjeseca: preporuke, ponovne kupnje na zalihu, nastavak hit proizvoda i ponovne kupnje članova sjede u srednjim i velikim mjehurićima, pri čemu je ponovna kupnja članova u privatnom krugu najveća. Rast u ovoj fazi ne dolazi iz novog prometa, nego od onih koji su kupili i vraćaju se govoriti.
+
+## Ploča usklađenosti spremna od prvog dana
+
+Desno od matrice je ploča usklađenosti s četiri točke, sve se utvrđuju na dan starta, ne dograđuju se nakon proširenja.
+
+Razina promotora: bez skladišta, bez preprodaje, ne dublje od dvije razine. Pripis i naplata: pripis GMV-a na jasnoj osnovi, ugovore potpisuje domaća pravna osoba, odbitak poreza vodi kopno. Materijali: svaki oglasni i influenserski scenarij prolazi tri revizije prije objave. Članski program: ne prenosi se cijeli iz inozemne postave, nego se preslaže po pravilima kopna, u skladu s osnovom „nula incidenata“ cijele knjige; podaci članova ostaju na kopnu, svaki izvoz ocjenjuje se točku po točku po prekograničnim člancima zakona o zaštiti osobnih podataka.
+
+## Struktura troškova u redovima iz otvorenih izvora
+
+Struktura troškova nosi tri retka. Provizija platforme ide u rasponu 0.5%–5% po kategoriji, brojke usmjeravajućeg reda iz otvorenih izvora; ostale točke pokrivaju platne takse, plaćeni promet, proizvodnju sadržaja i provizije; provjera znači male korake i tjedni pregled povratka. Sve tri hrane kasniju analizu osjetljivosti jedinične ekonomije: proračun opušten ili stegnut za stepenik, brojke moraju ići za njim.
+
+## Tri noge rasta i tri koraka privatnog kruga
+
+Arhitektura se svodi na tri noge: sijanje sadržaja vodi prepoznatljivost, konverzija na platformi zatvara poslove, ponovne kupnje u privatnom krugu drže zadržavanje. Privatni krug ide u tri koraka: službeni mini program marke plus pratitelji iz sadržaja plus probni paket za prvu narudžbu; alata tri, skupine WeCom, članska kartica u mini programu i podsjetnici ponovne kupnje.
+
+Spoj rasta i usklađenosti leži u istom bloku: oglasni sadržaj prolazi tri revizije prije objave, a druga pozicija opskrbe rezervirana je da proširenje dodaje kanale bez preslagivanja opskrbe. O ritmu rečeno izravno: ne otvarati sve kanale odjednom, najprije dokazati sadržaj i konverziju u jednom kanalu, zatim ponoviti na drugome.
+
+## Kontrolna ploča plaćenog prometa čita trošak i povrat po kanalima uz bok
+
+Matrica odgovara kamo ulagati; ploča odgovara kako provjeriti nakon ulaganja. U prikazu sučelja kontrolna ploča plaćenog prometa daje svakom kanalu jedan redak, s karticama tekućeg mjeseca, prošlog i kumulativnog zbroja, a stupci idu trošak, prikazi, CTR, narudžbe, promet GMV, ROI i status, tako da ulaganje i povrat slože se u jednom retku.
+
+| Kanal | Trošak (yuan) | Prikazi | CTR | Narudžbe | Promet GMV (yuan) | ROI | Status |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Sijanje sadržaja | 42000.00 | 486000 | 3.2% | 208 | 187200.00 | 4.5 | U tijeku |
+| Kratki video | 58000.00 | 724000 | 2.6% | 186 | 167400.00 | 2.9 | U tijeku |
+| Zajednica privatnog kruga | 18000.00 | 96400 | 8.1% | 242 | 217800.00 | 12.1 | U tijeku |
+| Rad s članovima | 12000.00 | 52100 | 11.4% | 296 | 266400.00 | 22.2 | U tijeku |
+| Ukupno | 130000.00 | 1358500 | 3.9% | 932 | 838800.00 | 6.5 | U tijeku |
+
+Prijeđimo prikazne podatke jednim cijelim čitanjem. Počnimo od retka zbroja za glavnu brojku: četiri kanala potrošila su 130000.00 yuan u mjesecu i dobila 1358500 prikaza, 932 narudžbe i 838800.00 yuan prometa GMV, ukupni ROI 6.5.
+
+Zatim čitamo raspodjelu uloga po recima: sijanje sadržaja za 42000.00 yuan i kratki video za 58000.00 yuan uzimaju oko šezdeset posto troška, daju 486000 i 724000 prikaza pri ROI 4.5 i 2.9 i vuku doseg; zajednica privatnog kruga za 18000.00 yuan i rad s članovima za 12000.00 yuan troše mnogo manje, klikću na 8.1% i 11.4%, vraćaju ROI 12.1 i 22.2 i vuku konverziju i zadržavanje, pri čemu rad s članovima pretvara najmanji trošak u najveći promet GMV 266400.00 yuan. U jednom retku kamo su otišli novac i što se vratilo poklapa se na prvi pogled, a odluku dodati ili zadržati ćeliju donosi sam redak.
+
+![Prikaz sučelja kontrolne ploče plaćenog prometa: pozadina prekogranične robe za zdravlje, četiri retka kanala i redak zbroja na jednom zaslonu, kartice tekućeg mjeseca, prošlog i kumulativnog zbroja](/images/insights/customer-acquisition-china-converting-demand/paid-media-dashboard-four-channel-ledger.webp)
+
+Dva detalja na zaslonu vrijede preuzeti: dolje je označeno da su brojke prikazne, evidencija plaćenog prometa četiriju kanala s retkom zbroja i poretčnim ROI na jednom zaslonu, a stupac statusa vjesa „u tijeku“ na svaki redak s ulazima u pojedinosti i dnevnik, tako da osnovu svake brojke može se otvoriti klikom.
+
+Zatvorimo prigovorima: raspodjela kanala i provizija platforme 0.5%–5% dolaze iz otvorenih izvora i jesu usmjeravajući redovi, ne ponudama; brojke na ploči jesu prikazni podaci koji pokazuju kako čitati ploču, ne rezultati bilo kojeg stvarnog dućana; članski program se preslaže po pravilima kopna, ne prenosi se cijeli. Da izgradite svoju arhitekturu privlačenja, idite istim redom: postavite raspodjelu kanala po trima fazama, utvrdite četiri točke usklađenosti prvoga dana, zatim kontrolirajte trošak i povrat na ploči tjedno. U našim paketima za kinesko tržište spremni su radni materijali uz ovu matricu i ploču, donesite popis proizvoda i cilj troška za mjesec, [obratite nam se](/hr/packages/).

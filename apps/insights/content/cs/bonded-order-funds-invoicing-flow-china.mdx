@@ -1,0 +1,67 @@
+---
+title: "Finance a doklady objednávky v celním režimu, projde až s kompletem pěti dokladů"
+date: "2027-05-11"
+category: "E-commerce"
+excerpt: "Dva toky s kontrolou: prostředky po šaržích na domácí subjekt, provize měsíčně srážená, účet ~6 týdnů; pět dokladů podmiňuje zahraniční převod, odpočet, audit. Šarže a archiv, M1–M6."
+references:
+  - title: "Oznámení ministerstva obchodu a pěti dalších resortů o zdokonalení dohledu nad maloobchodním dovozem v přeshraničním e-commerce (Shang Cai Fa [2018] č. 486)"
+    url: "https://www.gov.cn/zhengce/zhengceku/2018-12/31/content_5437823.htm"
+  - title: "Hlášení Všeobecné celní správy č. 194 z roku 2018 (věci dohledu nad maloobchodním dovozem a vývozem v přeshraničním e-commerce)"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Ministerstvo financí, Všeobecná celní správa a Státní daňová správa: Cai Guan Shui [2016] č. 18 (daňová politika pro maloobchodní dovoz v přeshraničním e-commerce)"
+    url: "https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html"
+  - title: "Oznámení Státní daňové správy a Státní správy devizového dohledu o daňovém ohlášení zahraničních plateb za obchod službami a další položky (č. 40 z roku 2013, změněno oznámením č. 31 z roku 2018)"
+    url: "https://www.chinatax.gov.cn/chinatax/c102449/c5219874/content.html"
+---
+
+Při provozním rozjezdu objednávky v celním režimu mají peníze i doklady každou svou cestu a každá linie má své vlastní kontrolní body. Na linii toku prostředků se sledují vyrovnávací šarže: peníze odcházejí po cyklu celými šaržemi na domácí subjekt, bez zahraničního převodu za každou objednávku. Na linii toku dokladů se sledují doklady: teprve kompletních pět dokladů dává zahraničnímu převodu, odpočtu před zdaněním a auditu společný předpoklad. Obě linie se potkávají na stejné objednávce a místem setkání je šest milníků od M1 do M6.
+
+![Dvě karty toku prostředků a toku dokladů, každá s kontrolními body; dvě boční karty vpravo vysvětlují, proč je tok dokladů vedený samostatně a jak se doklady vytahují; níže se čtyři toky, informací, souladu, prostředků a dokladů, sbíhají do M1 až M6 jedné objednávky](/images/insights/bonded-order-funds-invoicing-flow-china/funds-invoicing-two-flow-checkpoints.webp)
+
+## Jak peníze putují, pět uzlů toku prostředků
+
+Uzly toku prostředků stojí v řadě: platba, shromáždění, vyrovnání, domácí příjem, zahraniční převod, a kontrolní bod stojí na konci a ověřuje doklady a daňové hlášení. Vyrovnávání běží po cyklech po šaržích, inkasuje jediný domácí subjekt, bez převodu za každou objednávku; provize se účtuje po jednotlivých objednávkách podle příslušnosti, měsíčně se sráží a převádí, a účty a srážkové doklady se archivují za každé období; účet prostředků se zakládá asi 6 týdnů, souběžně se stavbou e-shopu, ani to nevezme navíc čas na start.
+
+Každý uzel se v rozhraní administrace dá přiřadit k něčemu konkrétnímu: vzor vyrovnávacího dokladu i záznamy toku prostředků a vyrovnávacích šarží jsou v systému, takže při ověřování není nutné shánět další materiály. Šarže je základní jednotkou této linie; odsouhlasení, zahraniční převod i zanechání stopy běží po šaržích.
+
+## Jak se doklady uchovávají, jaký shluk pět dokladů tvoří
+
+Uzly toku dokladů jsou tytéž pět: potvrzení o platbě, přepravní list, celní hlášení, daňový doklad, vyrovnávací doklad, a kontrolní bod ověřuje, zda všech pět leží v archivu. Komplet pěti dokladů je společným předpokladem tří věcí: zahraničního převodu, odpočtu před zdaněním a připravenosti k auditu; bez kteréhokoli z nich žádná z těch tří nepostoupí. Vyrovnávací doklad se generuje automaticky po šaržích, ze stejného zdroje jako evidence toku prostředků, takže čísla sedí.
+
+Záznamy tří toků, peněz, zboží a informací, nevedou žádnou zvláštní evidenci; všechno se sbíhá na těchto pěti dokladech. Jeden shluk dokladů dohledá objednávku od začátku do konce a zároveň dává účetnictví a zásoby do souladu.
+
+## Proč je tok dokladů samostatný tok
+
+Tento shluk dokladů slouží čtyřem účelům: zahraničnímu převodu, odpočtu před zdaněním, auditu a dotazům regulátorů. Všechny čtyři účely sahají po stejných podkladových dokladech a jedna chybějící strana láme řetěz, proto se tok dokladů vede jako samostatný tok s vlastním kontrolním bodem, rovnoběžně s tokem prostředků.
+
+Dovozní řetězec je na párování zvlášť přísný: pět dokladů musí padat na tutéž objednávku a míchání napříč objednávkami se vyzvedává položku po položce. Disciplína rozdělení prostředků je zapsaná ve smlouvě a vzory šarží jsou prohlížitelné šarži po šarži ve snímcích rozhraní; disciplína plus vzory jsou každodenním stavem tohoto toku.
+
+## Jak se doklady vytahují a jak se odsouhlasí účty
+
+Odsouhlasení běží po čísle šarže, kontrolované šarži po šarži v evidenci toku prostředků; vytahování dokladů běží po archivačním čísle, taháném z trackeru kontrolních bodů. Obě evidence se archivují s dodávkami, k dispozici na požádání, takže u dotazu se materiály neskládají narychko.
+
+## Čtyři toky se sbíhají na jedné objednávce
+
+Vložení objednávky rozpohybuje čtyři toky najednou: tok informací vrátí zpětnou vazbu tří dokladů, tok souladu dokončí ověření identity, tok prostředků zařadí tuto platbu do šaržového vyrovnání a tok dokladů hned generuje vyrovnávací doklad. Čtyři toky zapisují účty bod po bodu na kontrolních bodech od M1 do M6 a každý krok objednávky od výběru zboží po zaúčtování provize se dá spárovat se záznamem.
+
+## Jedna objednávka od M1 do M6
+
+Cesta objednávky má 6 kroků a 4 klíčová rozhraní a role A nesoucí plnou odpovědnost v matici odpovědností je přesně 1. M1 výběr zboží a přístup na trh: spouštěčem jsou kompletní vstupy, branou jsou doklady, výstupem seznam a kódy HS; provedeme my, vstupy dodáváte vy. M2 vstup do celní zóny: branou je celní evidence, výstupem evidence a pohled na zásoby. M3 vystavení v e-shopu: branou je revize tvrzení, výstupem závěr revize a text zveřejnění.
+
+M4 objednávka: branou jsou identita a zveřejnění, výstupem záznamy identity a zveřejnění. M5 celní odbavení: spouštěčem je dokončená platba, branou jsou křížová kontrola tří dokladů a limit, výstupem závěr ověření a čerpání limitu. M6 vyrovnání a provize: spouštěčem je uvolnění, branou je soulad výplaty provize, výstupem seznam výplat provizí; provedeme my a pravidla potvrzujete vy. Kroky stavíme my; vy dodáváte vstupy v M1 a potvrzujete pravidla v M6, na každý mezičlánek se nemusíte napojovat.
+
+![Potvrzení ze sousední stránky, šestikroková cesta jedné objednávky od M1 do M6 s rozdělením odpovědností čtyř klíčových rozhraní; níže dvě ukázkové tabulky, křížová kontrola časování platby objednávky a sledování uvolnění a potvrzení doručení](/images/insights/bonded-order-funds-invoicing-flow-china/order-path-m1-m6-responsibility-splits.webp)
+
+Dělení práce mezi čtyřmi rozhraními je zapsaná na téže stránce: vaše firma spravuje produkt a rozhodování, platforma spravuje objednávky a vyrovnání, logistický partner spravuje sklad a odbavení a regulátoři spravují hlášení a kontroly. Sedm toků má jen jeden koordinující subjekt, který drží roli A nesoucí plnou odpovědnost v matici odpovědností; hranice pravomocí čtyř rozhraní jsou zapsané v plánu. Účty a data zůstávají ve vašich rukou, stavba postupů a záznamy zůstávají u nás a předání nezanechává prázdná místa.
+
+## Jedna objednávka, celá cesta
+
+V ukázkových tabulkách je jedna objednávka: číslo objednávky SO260922-0417, potvrzení o platbě PAY260922-0417, časování v pořádku. Při vložení objednávky byly oba záznamy, identity i zveřejnění, kompletní, dokončená platba spustila odbavení, křížové porovnání tří dokladů a ověření limitu prošlo, vygenerovalo se číslo hlášení QD260922-0417 a číslo zásilky EX7726001 ukazuje potvrzené doručení. Po doručení následuje uvolnění a objednávka vchází do šaržového vyrovnání; potvrzení o platbě, přepravní list, celní hlášení, daňový doklad a vyrovnávací doklad se archivují po šaržích, číslo šarže se dá odsouhlasit v evidenci toku prostředků a archivační číslo vytáhne doklady v trackeru kontrolních bodů.
+
+Druhý řádek téže tabulky je protipříklad: potvrzení o platbě SO260921-0088 má časování zpožděné o 2 hodiny a pracovní stůl křížové kontroly vypisuje takové výjimky po řádcích po jednotlivých objednávkách; v tabulce uvolnění a sledování je QD260921-0088 stále v přepravě, stav doručení nedorazil a akce uvolnění stojí před branou M6. Obě ukázkové tabulky říkají totéž: časování, stav a čísla dokladů jsou zkontrolovatelné objednávku po objednávce a výjimky vycházejí najevo bez ručního listování v záznamech.
+
+Spojíme-li kontrolní body obou toků dohromady, provozní disciplína se skládá do dvou slov: kompletnost a párování. Pět dokladů kompletních, šarže spárované. Nejdřív se natvrdo stanoví vyrovnávací subjekt, cyklus vyrovnání a pravidla archivace, teprve pak se plánuje start, a každý pozdější převod, odpočet i dotaz má k ruce týž shluk dokladů. Čísla objednávek, časování a stavy doručení v ukázkovém rozhraní slouží jen jako ilustrace; závazné jsou aktuální faktury, exporty z platformy a požadavky příslušných orgánů.
+
+Tok prostředků a tok dokladů se po startu nejsnáze sklouznou do role administrace zázemí, až když převod uvízne na kontrole dokladů nebo odpočet napadne daňová správa a teprve potom se doklady dodělávají. Okamžik archivace pěti dokladů je stanovený už ve chvíli uvolnění objednávky a vzory šarží nechávají stopu šarži po šarži; posunout kontrolní body dopředu stojí mnohem míň než dodělávat řetěz zpětně.
+
+Chcete-li pro svůj stávající vyrovnávací subjekt a uspořádání e-shopu spojit tok prostředků a tok dokladů do jedné evidence, po níž lze odsouhlasit účty i vytahovat doklady, [Kontaktujte nás](/cs/packages/).

@@ -1,0 +1,78 @@
+---
+title: "Kod 1210 i trzy podstawy, na których opiera się dostęp"
+date: "2026-12-01"
+category: Compliance Guide
+excerpt: "1210: trzy podstawy po kolei — klasyfikacja (W2020-29→0404.9000), uwaga (tylko online, magazyn celny), podatek (9,1% łączny, limit przy odprawie); rozstrzyga decyzja klasyfikacyjna."
+references:
+  - title: "Decyzja klasyfikacyjna Głównej Administracji Ceł W2020-29 (wyszukiwarka decyzji klasyfikacyjnych i rozstrzygnięć administracyjnych)"
+    url: https://www.customs.gov.cn/customs/302427/302442/gljdhcd/index.html
+  - title: "Ogłoszenie nr 7 z 2022 r. ośmiu resortów pod przewodnictwem Ministerstwa Finansów (w sprawie dostosowania wykazu towarów importowanych w ramach detalicznego handlu elektronicznego)"
+    url: https://www.mof.gov.cn/jrttts/202202/t20220221_3788894.htm
+  - title: "Cai Guan Shui [2016] nr 18 (obwieszczenie w sprawie polityki podatkowej dla detalicznego importu w transgranicznym handlu elektronicznym)"
+    url: https://shanxi.chinatax.gov.cn/zcfg/detail/sx-11400-3815-1697003
+  - title: "Cai Guan Shui [2018] nr 49 (obwieszczenie w sprawie doskonalenia polityki podatkowej dla detalicznego importu w transgranicznym handlu elektronicznym)"
+    url: https://www.mof.gov.cn/gkml/caizhengwengao/wg2018/wg201812/201903/t20190318_3194922.htm
+---
+
+To, czy produkt może wejść do Chin kanałem 1210 przez magazyn celny, nie zależy od doświadczenia ani od ceny podanej przez usługodawcę, lecz od trzech podstaw, które da się zacytować w dokumentacji: klasyfikacji, wykazu i podatku. Kanał istnieje tylko wtedy, gdy wszystkie trzy podstawy się utrzymują; jeśli jedna z nich zawiedzie, o podatku i logistyce nie ma już czego rozstrzygać. Proszek z siary bydlęcej jest pełnym przykładem, na którym poniżej przechodzimy całą metodę oceny krok po kroku.
+
+Kolejność oceny jest stała: najpierw klasyfikacja, czyli przypisanie produktu do kodu HS, potem sprawdzenie wykazu pod kątem kwalifikowalności i uwagi w wierszu, na końcu obliczenie podatku i limitu według tego kodu. Kod jest korzeniem, a wiersz wykazu i stawka podatku zależą od niego; gdy kod jest błędny, dwie pozostałe podstawy tracą ważność razem z nim. Metoda dotyczy każdego towaru detalicznego w transgranicznym handlu elektronicznym przygotowywanego do kanału 1210, a żywność jest tylko jedną z kategorii.
+
+## Czym jest kod 1210 i dlaczego ocena opiera się na nim
+
+Kod 1210 to oznaczenie trybu nadzoru celnego dla detalicznego importu w transgranicznym handlu elektronicznym z magazynu celnego: towar wjeżdża do magazynu celnego w jednej partii, wychodzi z niego partiami według zamówień, a kupujący deklaruje go jako towar na własne potrzeby. Kod 9610 to import w trybie zakupu bezpośredniego, w którym towar jest wysyłany z zagranicy wprost do kupującego i nigdy nie wchodzi do magazynu celnego. Różnica polega na tym, gdzie leży towar, a nie na tym, który przewoźnik go wiezie.
+
+Ocena dostępu opiera się na kodzie 1210, ponieważ kod HS i wiersz wykazu mogą ograniczać tryb nadzoru. Jeśli uwaga przy wierszu wykazu brzmi „tylko towary handlu internetowego z magazynu celnego”, ten kod może iść wyłącznie w trybie 1210, a zakup bezpośredni 9610 nie wchodzi w rachubę. Ocena najpierw odpowiada na pytanie, który tryb nadzoru obowiązuje, a dopiero potem na pytania o podatek, dokumenty i limit; tryb wynika z kodu i wykazu, a nie z oferty przewozowej.
+
+![Trzy pytania oceny dostępu, każde z odpowiedzią opartą na cytowalnej podstawie](/images/insights/mode-1210-access-verdict-three-bases/three-questions-behind-access-verdict-each.webp)
+
+## Podstawa pierwsza, klasyfikacja: najpierw przypisać produkt do kodu HS
+
+Klasyfikacja jest punktem wyjścia każdej oceny. Organ celny ustala kod według pozycji, podpozycji, składu i sposobu przetworzenia; jeśli istnieje decyzja klasyfikacyjna lub rozstrzygnięcie administracyjne, identyczny towar klasyfikuje się zgodnie z tym dokumentem. Rozstrzygnięcia publikuje Główna Administracja Ceł i wiążą one klasyfikację, dlatego stanowią najmocniejszą z trzech podstaw.
+
+Przykład siary bydlęcej: decyzja klasyfikacyjna W2020-29 opisuje proszek wytworzony z siary pobranej w ciągu 24 godzin po ocieleniu i klasyfikuje go pod 0404.9000 jako produkt zawierający naturalne mleko, gdzie indziej niewymieniony. Nie klasyfikuje go w pozycji 0401, w której mieści się mleko bydlęce, a produkt w proszku nie przyjmuje kodu mleka płynnego. Pozycje 0401 i 0404 są odrębne i mają różne warunki nadzoru; zgłaszając proszek z siary w pozycji 0401, sami wprowadzają Państwo produkt do reżimu mleka.
+
+Decyzja odpowiada konkretnej postaci produktu. Po dodaniu witamin, składników mineralnych lub innych dodatków kod może przejść do innej pozycji; zmiana procesu albo formy opakowania również wymaga ponownego sprawdzenia. Każdy SKU ocenia się osobno i jednym rozstrzygnięciem nie można objąć całej linii produktów.
+
+## Podstawa druga, wykaz: czy kod jest na wykazie i co mówi uwaga
+
+Wykaz towarów importowanych w ramach detalicznego handlu elektronicznego jest prowadzony według kodów HS. Wersja obowiązująca od 1 marca 2022 r. obejmuje 1 476 kodów; jeśli kodu nie ma w wykazie, import detaliczny w ramach kodu 1210 nie jest dostępny, choćby rachunek podatku wyglądał bez zarzutu. Jeśli kod w wykazie jest, trzeba przeczytać uwagę przy jego wierszu, bo uwaga potrafi zamknąć kanał.
+
+Przykład siary: 0404.9000 znajduje się w wykazie, a uwaga przy tym wierszu brzmi „tylko towary handlu internetowego z magazynu celnego”. Handel internetowy z magazynu celnego to tryb 1210, zakup bezpośredni to tryb 9610, więc ta uwaga rozdziela oba tryby. Na rynku często słyszy się, że takie produkty mogą iść pocztą w trybie 9610; przy takiej opinii trzeba wrócić do dosłownego brzmienia uwagi w wykazie, a odpowiedź jest jednoznaczna.
+
+Wykaz jest zmieniany: wersja z 2022 r. powstała na bazie wersji z 2019 r., a kolejne wersje będą się pojawiać. Przed każdym uzupełnieniem zapasów proszę sprawdzić obowiązującą wersję i dosłowne brzmienie uwagi; planu długoterminowego nie należy opierać na starym wykazie.
+
+## Podstawa trzecia, podatek: skąd bierze się stawka i jak odejmuje się limit
+
+W granicach limitów detaliczny import w transgranicznym handlu elektronicznym płaci cło tymczasowo według stawki 0%, a podatek VAT na etapie importu jest pobierany w wysokości 70% ustawowej kwoty należnej. Dla produktu ze stawką VAT 13% iloczyn 13% i 70% daje 9,1% i stąd bierze się podatek łączny; kwota należna równa się wartości celnej pomnożonej przez 9,1%. Dla towarów z inną stawką VAT do tego samego wzoru podstawia się właściwą stawkę. Podatnikiem jest kupujący, a platforma handlowa lub firma logistyczna może pobierać i odprowadzać podatek; rozliczenie następuje razem z zamówieniem.
+
+Limit jednorazowej transakcji wynosi 5 000 juanów, a limit roczny 26 000 juanów, co przy kursie 7,2 juana za dolara daje około 700 i 3 600 dolarów, wyłącznie informacyjnie. Limit jest naliczany na kupującego, a organ celny odejmuje go na etapie odprawy. Zamówienia w granicach limitów rozlicza się według opisanego wyżej podatku łącznego. Zamówienie przekraczające limit jednorazowy, ale zawierające tylko jedną sztukę towaru, można przywieźć po zapłaceniu pełnego podatku towarowego, a kwotę wlicza się do sumy rocznej; jeśli limit jednorazowy zostanie przekroczony w zamówieniu z więcej niż jedną sztuką albo suma roczna przekroczy limit, reżim detalicznego importu transgranicznego przestaje obowiązywać i towar idzie w trybie handlu ogólnego.
+
+Przykład obliczenia dla siary: słoik za 50 dolarów to przy kursie 7,2 juana za dolara około 360 juanów, a podatek łączny wynosi około 32,8 juana, czyli około 4,5 dolara. Podatek nie jest wysoki, ale opiera się na poprawnym kodzie i poprawnym wierszu wykazu; przy błędnym kodzie nawet 9,1% tego nie uratuje.
+
+## Kiedy trzy podstawy są sprzeczne, która ma pierwszeństwo
+
+Skuteczność od najwyższej do najniższej: decyzja klasyfikacyjna, uwaga w wykazie, praktyka platform i rynku. Decyzję klasyfikacyjną publikuje Główna Administracja Ceł i wiąże ona klasyfikację; uwaga w wykazie pochodzi z ogłoszenia ośmiu resortów i rozstrzyga, czy towar może korzystać z tego kanału; strony platform, praktyka branży i zwyczaje celne są wyłącznie odniesieniem i nie mogą obalić dwóch pierwszych podstaw.
+
+Typowe scenariusze konfliktu są trzy. System platformy przyjął błędny kod: rozstrzyga decyzja klasyfikacyjna. Usługodawca twierdzi, że dana grupa produktów zawsze szła pocztą w trybie 9610: rozstrzyga uwaga w wykazie. Na rynku popularne jest dzielenie zamówień, aby obejść limity: rozstrzygają przepisy o limitach i stawkach. Informacje referencyjne mogą powiedzieć, jak działa dany urząd celny, ale nie mogą powiedzieć, co jest zgodne z prawem.
+
+![Przykład siary: trzy podstawy i ich kolejność skuteczności, od decyzji klasyfikacyjnej przez uwagę w wykazie po praktykę platform](/images/insights/mode-1210-access-verdict-three-bases/worked-example-three-bases-order-authority.webp)
+
+## Co powinno znaleźć się w notatce z oceny
+
+Ocena musi trafić na papier, a cztery elementy są niezbędne:
+
+- Kod HS i podstawa klasyfikacji: kod, numer przywołanej decyzji klasyfikacyjnej, postać produktu i data oceny. Dla proszku z siary: 0404.9000, decyzja W2020-29.
+- Podstawa z wykazu: obowiązująca wersja wykazu, wiersz, w którym znajduje się kod, oraz dosłowne brzmienie uwagi.
+- Podstawa podatkowa: właściwa stawka i wzór obliczenia, zasady limitów oraz sposób odejmowania limitu kupującego.
+- Wykonanie celne: sposób zgłoszenia, wymagane dokumenty i osoba kontaktowa do spraw wyjątków, ustalane przez nas w notatce i przekazywane przy pierwszym zgłoszeniu.
+
+Notatka nie służy wyłącznie do archiwum wewnętrznego. Weryfikacja platformy, zapytania celne i wewnętrzna zgoda na projekt korzystają z tego samego materiału, więc liczby i numery dokumentów muszą się zgadzać. Żywność zwykła czy blue hat to odrębna decyzja, która wpływa na oświadczenia i badania; jeśli wybiorą Państwo blue hat, tożsamość produktu i materiały do wprowadzenia na półkę trzeba zaktualizować, natomiast kod i wiersz wykazu nadal sprawdza się według samego produktu.
+
+## Ocena ma termin ważności, kiedy trzeba ją powtórzyć
+
+Nowa wersja wykazu, nowa decyzja klasyfikacyjna lub zmiana obowiązującej decyzji, a także zmiana receptury albo procesu: każda z tych sytuacji oznacza, że ocenę trzeba powtórzyć. W dwóch pierwszych przypadkach proszę śledzić ogłoszenia, w trzecim własną dokumentację produktu. Data w notatce istnieje po to, aby wiedzieć, kiedy ocenę należy zweryfikować.
+
+Jeden przypadek bywa pomijany: zmiana wielkości opakowania, na przykład z 300-gramowego słoika na saszetki. Klasyfikacja zwykle się nie zmienia, ale wartość celną i obliczenie limitu jednorazowego trzeba przeliczyć. Ocena ma termin przydatności, po jego upływie wymaga weryfikacji i nie wolno traktować jej jak wieczystego certyfikatu.
+
+Jeśli Państwa produkt ma iść kanałem 1210, zapraszamy do [Skontaktuj się z nami](/pl/packages/) po bezpłatną ocenę dostępu. Proszę przesłać nam dokumentację produktu, a my sprawdzimy kod, wiersz wykazu i stawkę podatku oraz ułożymy trzy podstawy w notatkę, którą można złożyć bez poprawek.

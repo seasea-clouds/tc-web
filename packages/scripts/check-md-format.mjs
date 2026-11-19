@@ -37,7 +37,7 @@ import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, '../..');
-const BLOG_CONTENT_DIR = path.join(repoRoot, 'apps/blog/content');
+const BLOG_CONTENT_DIR = path.join(repoRoot, 'apps/insights/content');
 
 const args = process.argv.slice(2);
 const isCi = args.includes('--ci');

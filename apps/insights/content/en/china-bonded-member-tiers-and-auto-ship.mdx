@@ -1,0 +1,77 @@
+---
+title: "Membership Tiers and Repeat Delivery for China Crossborder Stores, Row by Row"
+date: "2027-06-29"
+category: "E-commerce"
+excerpt: "Tiers and repeat delivery share a member ID with the attribution ledger. Operations keeps tracked rows on one panel with alerts visible. Run a full cycle, then reconcile row by row."
+references:
+  - title: "Personal Information Protection Law of the People's Republic of China (adopted on 20 August 2021, Articles 13 and 23)"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+  - title: "Announcement No. 194 of 2018 of the General Administration of Customs of China on supervision of retail import and export goods in crossborder e-commerce"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Provisions on Promoting and Regulating Crossborder Data Flows (Order No. 16 of the Cyberspace Administration of China, effective 22 March 2024)"
+    url: "https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm"
+---
+
+Membership tiers and repeat delivery can hold repeat purchases, provided the two back ends line up row by row. One is the operations panel, putting in-transit orders, bonded warehouse batches, releases today, parcels in transit, average clearance time and near-expiry batches on six rows of one screen. The other is the member tiers and repeat delivery back end, listing member ID, tier, repeat delivery item, delivery cycle, next delivery date and cumulative spend on six rows. Both share the same member ID and log every status change, so a repeat purchase can be traced back to the same member. Look first at the exception rows: in the demo, two rows are in progress and one needs correction, carrying 2 pending declarations, 3 exceptions and 2 near-expiry batches.
+
+![Operations dashboard system demo with a header of track, key metric, current value, target, attainment, alert, status and action, six rows for orders, bonded warehouse batches, clearance, logistics, transit time and shelf life, and a footer noting 6 records and 20 per page](/images/insights/china-bonded-member-tiers-and-auto-ship/four-tracks-dashboard-system-demo.webp)
+
+## Six Rows on One Screen, Four Service Streams With Owners
+
+The operations panel is the main view, one row per track, with tabs for today, this week and this month. Every row lists the key metric, current value, target, attainment, alert and status, and ends with detail and log entries. A cell with no alert triggered gets a short dash, not a zero, so that no alert is not misread as a zero metric. The panel pages at 20 records per page; the demo has 6 records and fits on one screen.
+
+Four service streams, S10 through S13, each have an owner, and their metrics and current steps are concentrated on this one panel. Who handles which track and how far it has got can be read here without opening several other ledgers. Responsibility sits on the row, so a handover is signed row by row.
+
+The eight columns in the header are track, key metric, current value, target, attainment, alert, status and action. The six rows, in order, are:
+
+- Orders track, in-transit orders, current 128, target 150, attainment 85%, alert blank, status normal;
+- Inventory track, bonded in-warehouse batches, current 36, target 40, attainment 90%, alert blank, status normal;
+- Clearance track, releases today, current 86, target 100, attainment 86%, alert 2 pending declarations, status in progress;
+- Logistics track, parcels in transit, current 214, target and attainment blank, alert 3 exceptions, status in progress;
+- Transit time track, average clearance time, current 6.8 hours, target 8 hours, attainment marked as met, alert blank, status normal;
+- Shelf life track, near-expiry batches, current 2, target 0, attainment blank, alert 2 batches nearing expiry, status needs correction.
+
+The note cards single out two figures that are easy to misread. The orders track has 128 in-transit orders against a target of 150, an attainment of 85%; the inventory track has 36 bonded in-warehouse batches against a target of 40, an attainment of 90%. The card also says that a cell with no alert triggered shows a short dash. The dash therefore does not mean missing data; it records the conclusion that there was no alert this time.
+
+Three statuses need separate handling. The normal rows are orders, inventory and transit time; the transit time track is at 6.8 hours against a target of 8 hours, so its attainment column simply says met. The two rows in progress each carry a task: the clearance track has 2 pending declarations and the logistics track has 3 exceptions. The one needing correction is the shelf life track, with 2 near-expiry batches against a target of 0 and an alert of 2 batches nearing expiry. Work in order of impact: clear the near-expiry batches first, then file the pending declarations, then chase the exceptions.
+
+## Member Tiers and Repeat Delivery, Checkable Row by Row
+
+![Member tiers and repeat delivery back end system demo with a header of member ID, tier, repeat delivery item, delivery cycle, next delivery date, cumulative spend, status and action, six rows from M-100238 to M-100419, and a footer noting 6 records and 20 per page](/images/insights/china-bonded-member-tiers-and-auto-ship/member-tiers-subscriptions-system-demo.webp)
+
+The member back end sits under the store module, with tabs by tier for black, gold and silver, plus a tab limited to active repeat delivery. Each row lists member ID, tier, repeat delivery item, delivery cycle, next delivery date and cumulative spend, again ending with detail and log. The demo has 6 records, 20 per page.
+
+Tiers, repeat delivery and cumulative spend are maintained in one place, and member IDs share a single source with the attribution ledger. A repeat purchase is therefore counted once on the member side, not once more on the attribution side; to assign a tier's repeat purchases to a promotion, look the ID up. Member IDs and cumulative spend are personal information, so handling and sharing need a clear legal basis, and only the necessary aggregates move between the onshore back end and offshore reports.
+
+The eight header columns are member ID, tier, repeat delivery item, delivery cycle, next delivery date, cumulative spend, repeat delivery status and action. The six rows, in order and with all amounts in yuan, are:
+
+- M-100238, black, CoQ10 softgels x2, monthly, 2026-10-22, 15800.00 yuan, in progress;
+- M-101204, gold, fish oil softgels x1, monthly, 2026-10-05, 8640.00 yuan, in progress;
+- M-100571, silver, whey protein powder x1, every 2 months, 2026-11-19, 4320.00 yuan, in progress;
+- M-100872, black, probiotic powder x2, monthly, 2026-10-08, 22100.00 yuan, in progress;
+- M-101466, gold, collagen peptide drink x1, monthly, 2026-10-15, 6980.00 yuan, paused;
+- M-100419, silver, calcium and vitamin D tablets x1, quarterly, 2026-12-01, 1560.00 yuan, in progress.
+
+The note cards give two IDs. M-100238 is black tier, with two bottles of CoQ10 softgels delivered automatically each month, next delivery 2026-10-22 and cumulative spend 15800.00 yuan; M-101204 is gold tier. The card also says member IDs share a source with the attribution ledger. Reading those two lines against the six rows brings out the tier thresholds: the two silver rows stand at 4320.00 yuan and 1560.00 yuan, the two gold rows at 8640.00 yuan and 6980.00 yuan, and the two black rows at 15800.00 yuan and 22100.00 yuan, with no overlap between tiers. Cumulative spend is therefore both a display field and the basis for the tier.
+
+Delivery cycles come in three forms, monthly, every 2 months and quarterly. Five rows are in progress and one is paused. The paused one is M-101466, with cumulative spend of 6980.00 yuan; its status is marked in its own field rather than by deleting the row. The earliest next delivery date is 2026-10-05 and the latest is 2026-12-01, all on the same table.
+
+## One Black Tier Member Through a Full Delivery Cycle
+
+Take black tier member M-100238. The back end records it as active, one order a month, item CoQ10 softgels x2, next delivery 2026-10-22 and cumulative spend 15800.00 yuan. The same row appears under both the member tiers tab and the repeat delivery tab, with no second ID generated.
+
+When the delivery date arrives, the system raises an order on the cycle, ships from bonded in-warehouse batches, passes clearance and release from the zone, and writes the waybill number back to this row. The current value on the orders track moves, the shelf life track draws down by batch, and the transit time track logs this clearance time. Once the write-back is done, cumulative spend rises by the amount actually paid and the next delivery date moves on by one cycle. Detail shows the fields; log shows who changed what and when.
+
+A pause stays on the same row too. M-101466 has repeat delivery status paused, with its item and cumulative spend still in the table; it simply stops generating the next order, and resuming picks up from the log without creating a new member ID. If a pause were written as a deleted row, the attribution ledger would lose a stretch of history and the tier thresholds could no longer be computed.
+
+Settle the money convention at the start. All six cumulative spend figures are in yuan, written with two decimal places, with no currency symbol and no conversion note added to demo data. The interface footer marks these as demo figures, with exceptions and amendments kept on record and checkable; they serve to verify arithmetic and fields, not as disclosed operating numbers.
+
+## Line Up the Two Back Ends Before Switching
+
+The demo page is titled four tracks, yet the table actually lists six rows: orders, inventory, clearance, logistics, transit time and shelf life. There is no conflict. The four service streams, S10 through S13, are the division of responsibility, while the six rows are the metric rows on this screen; one owner may watch more than one row. Read the table by row for metrics and by stream for people, and do not take the page title as a row count.
+
+Do three things before switching. First run a full delivery cycle and check that the next delivery date and cumulative spend move together. Then reconcile member IDs and statuses across the two back ends row by row, including tier thresholds, pause records and logs. Finally write the outcome of the exception rows back to the panel, so the 2 pending declarations, 3 exceptions and 2 near-expiry batches each have a landing place. Only after all three is the retention ledger properly taken over.
+
+Whether repeat purchases stay comes down to two checks in the system: whether exceptions are visible at the time and whether status changes leave a trace. On the demo, six track rows are visible on one screen, six member rows are checkable field by field, and every row has detail and log, so both checks have a landing place. As for how long switching takes, it depends on aligning the fields in your current system and on the parallel-run cycle; comparable integrations in the open market are measured in weeks, useful only as an order of magnitude and not as a commitment.
+
+To connect member tiers and repeat delivery to your existing bonded operations back end, [Contact us](/en/packages/).

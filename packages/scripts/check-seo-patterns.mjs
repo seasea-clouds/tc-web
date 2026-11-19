@@ -32,7 +32,7 @@ const detectedProject = getDetectedProject();
 
 const APP_DIR_MAP = {
   site: 'apps/site/src/app/(site)/[locale]',
-  blog: 'apps/blog/src/app/[locale]',
+  blog: 'apps/insights/src/app/[locale]',
   portal: 'apps/portal/src/app/[locale]',
 };
 

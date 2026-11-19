@@ -1292,7 +1292,6 @@
     "metaDescription": "Răsfoiți toate serviciile, ghidurile de industrie, articolele și paginile de pe site-ul SinoTrade Compliance.",
     "servicesTitle": "Servicii",
     "industriesTitle": "Industrii",
-    "blogTitle": "Articole",
     "pagesTitle": "Alte pagini",
     "home": "Acasă",
     "about": "Despre noi",
@@ -1300,7 +1299,8 @@
     "quote": "Solicitați o cotație",
     "faq": "Întrebări frecvente",
     "packages": "Pachete",
-    "testimonials": "Testimoniale"
+    "testimonials": "Testimoniale",
+    "insightsTitle": "Articole"
   },
   "Cookie": {
     "message": "Acest site folosește numai cookie-uri de autentificare esențiale. Nu sunt utilizate cookie-uri de urmărire sau de publicitate.",

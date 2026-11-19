@@ -1,0 +1,113 @@
+---
+title: "Kilenc interfészcsalád a kínai vámraktári platformokon, állapotjelzők, csúcstartalék"
+date: "2027-06-22"
+category: "E-commerce"
+excerpt: "A szabványos interfészek az elsők, a többit middleware képezi le, az állapotjelzők a hívásokat és a hibákat rögzítik. Az adatok belföldön maradnak, a hiányokat SKU-nként követjük."
+references:
+  - title: "A Kínai Vámügyi Főigazgatóság 2018. évi 194. számú közleménye a határon átnyúló elektronikus kereskedelem kiskereskedelmi behozatali és kiviteli áruinak felügyeletéről"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "A Kínai Népköztársaság személyes adatok védelméről szóló törvénye, elfogadva 2021. augusztus 20-án, 38., 39. és 55. cikk"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+  - title: "A határon átnyúló adatáramlás előmozdításáról és szabályozásáról szóló rendelkezések, a Kínai Kibertér-igazgatás 16. számú rendelete, hatályos 2024. március 22-től"
+    url: "https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm"
+---
+
+A kilenc interfészcsalád az Ön meglévő rendszereit a kínai vámraktári platformokhoz tudja kapcsolni, azzal a feltétellel, hogy a szabványos interfészek élveznek elsőbbséget, az adatok belföldön maradnak, és a promóciós csúcsra 10-szeres csúcstartalékot tartunk fenn. Ahol van szabványos interfész, azt közvetlenül kötjük be, ahol nincs, ott middleware-lel képezzük le; az állapotjelzők típusonként rögzítik a hívásszámot, a sikerarányt, a késleltetést és a hibás újraküldéseket, és két sor, a rendelésküldés és a fizetési bizonylat visszaküldése, jegyzi le a három dokumentum átadását. A nyilvános piaci referenciaértékek a szabványos integrációt 3-tól 7 napig, a teljes integrációt pedig 8-tól 12 hétig teszik, és ezek csupán nagyságrendi viszonyítások; az élesítés valódi időpontját a közös teszt és a párhuzamos elszámolási ciklus dönti el.
+
+![A rendszerintegrációs bemutató a kilenc interfészcsalád táblázatát mutatja, az Ön rendszere, az integrációs tétel, az irány és a cél oszlopaival, kilenc sorral az áruktól és készlettől a pénzügyig, négy adatáramlási elvvel és a közös interfészteszt monitor négy állapotjelzőjével](/images/insights/china-bonded-platforms-nine-interfaces/nine-interface-families-mapping.webp)
+
+## Melyik táblázatba kerül a kilenc interfészcsalád
+
+Az interfésztáblázatot négy oszlopban írjuk: az Ön rendszere melyik oldalon áll, mi az integrációs tétel, ki vezeti az irányt, és hová kerülnek végül az adatok. Az iránynak csak három formája van, kétirányú, bejövő és az Ön vezetésével, az irány nélkül jelölt sorokat pedig a mi oldalunk veszi át; a cél oszlopa megírja, hogy minden mező melyik nyilvántartásba tartozik, így aki átveszi a munkát, a táblázat alapján ellenőrizni tud.
+
+- Áruk és készlet: SKU-készlet és árak, kétirányú, összhangban tartva a raktárkezelő rendszerrel és a vámnyilvántartással.
+- Rendelések: rendelési adatok, bejövő, a három dokumentum mezőibe kerül.
+- Tagadatok: promóteri kapcsolatok, az Ön vezetésével, az adatok az Önéi, mi pedig megbízott adatfeldolgozóként kezeljük őket.
+- Jutalékelszámolás: jutalék kifizetése, kétirányú, a belföldi szakaszt a belföldi jogalany hajtja végre.
+- Készlet: a vámraktári rendszer, irány nélkül jelölve, a vámüzemeltetési rendszerbe kerül, és a nyilvántartással közös forrásból táplálkozik.
+- Vám: a három dokumentum vámnyilatkozata, irány nélkül jelölve, a vámnyilatkozatot mi vállaljuk, és a mi ellenőrzésünk alá tartozó tétel marad.
+- Teljesítés: nyomvonal visszaküldése, irány nélkül jelölve, a logisztikai nyomvonalat visszaírjuk a rendelésnézetbe.
+- Visszáru: visszáru-bizonylatok, irány nélkül jelölve, a visszáru a visszáru-központon át újra belép a vámfelügyeleti területre.
+- Pénzügy: elszámolás, kimenő, pénznemmel és átváltással.
+
+Az, hogy hová áramlanak az adatok, meghatározza, hogyan épülnek fel az interfészek. A belföldi oldal nyilvántartásait és a külföldi oldal irányítópultjait külön kell tartani, különben a közös teszt során mindkét fél ugyanazokat a mezőket írja felül.
+
+- A belföldön gyűjtött és belföldön elszámolt promóciós adatok belföldön is maradnak.
+- Az Ön külföldi anyavállalatához csak azonosítás nélküli összesített adatok jutnak vissza, belföldi jutalékviszonyok nélkül.
+- A külföldi háttériroda nem érintkezik a kínai fogyasztók nyers adataival, a határon átnyúló útvonalak pedig csak az adatvédelmi hatásvizsgálat elfogadása után nyílnak meg.
+- A belföldi promóciós és jutalékadatok teljes körű exportot támogatnak, és az átadáskor a nyilvántartásokkal együtt az Ön kezébe kerülnek.
+
+A közös interfészteszt monitora az állapotjelzőket az interfésztípus és a partner szerint négy sorba rendezi, és minden állapot-ellenőrzés, valamint minden újraküldés egy-egy bejegyzést hagy. A bemutató oldal három tételt ír ki, az interfésztípust, a partnert és az állapotjelzőt, amelyek a rendszerfelület-bemutató ugyanazon sorozatának felelnek meg, és a közös teszt idején a sorokat naponta, egyesével végignézzük.
+
+- Rendelésküldés, partner a bolti előtér, állapotjelző normál.
+- Fizetési bizonylat visszaküldése, partner a fizetési csatorna, állapotjelző normál.
+- Fuvarlevél visszaküldése, partner a futárszolgálat, állapotjelző figyelmeztetés.
+- Jegyzék-vámnyilatkozat, partner a vámnyilatkozati csatorna, állapotjelző normál.
+
+Az integráció feltételeit először a szabványos interfészek körül rögzítjük: ahol van szabványos interfész, azt közvetlenül kötjük be, ahol nincs, ott middleware-lel képezzük le. A nyilvános piaci referenciaértékek a szabványos integrációt 3-tól 7 napig, a teljes integrációt pedig 8-tól 12 hétig teszik, és a promóciós csúcsra 10-szeres csúcstartalékot tartunk fenn. Mindkét fél kijelöl egy-egy technikai kapcsolattartót, és a közös teszt idején naponta egyeztet. Az élesítés után előbb egy teljes elszámolási ciklust futtatunk párhuzamosan az átállás előtt, úgy, hogy a párhuzamos üzem alatt a két rendszer adatai ne térjenek el.
+
+## Hogyan olvashatók az állapotjelzők, és hová kerülnek a hibás újraküldések
+
+Az interfészek egészségnaplója interfésztípusonként egy sort ad, fülekkel az összes interfészre, a normál és a rendellenes állapotra, és minden sor rögzíti a partnert, a hívásszámot, a sikerarányt, a késleltetést, a hibák számát, az újraküldést és az állapotjelzőt. Vegyük végig a rendelésküldést: ma 1284 hívás, 100%-os sikerarány, 186 milliszekundumos átlagos késleltetés, 0 hiba és normál állapotjelző; a fizetési bizonylat visszaküldése szintén 1284 hívást mutatott, 99,9%-os sikeraránnyal, 1 már sikeresen újraküldött hibával, az állapotjelző pedig normál maradt. Ez a két sor annak a bizonyítéka, hogy a három dokumentum átadása a rendszerben van.
+
+Miután a kilenc interfészcsaládot leképeztük, a futásidejű hívásszámok és az egészségadatok mind erre a naplóra kerülnek, és két sor, a rendelésküldés és a fizetési bizonylat visszaküldése, jegyzi le, hogyan realizálódott a három dokumentum átadása. A bemutató felület alján összesen 12 rekord és oldalanként 20 tétel szerepel, minden sor végén két belépési pont, a részletek és a napló található, és mind a kilenc sor ugyanazt az oszlopsorozatot követi.
+
+![Az interfészek egészségnaplójának rendszerfelület-bemutatója kilenc interfészsorát kilenc oszlopban jeleníti meg, interfésztípus, partner, mai hívások, sikerarány, átlagos késleltetés, hibák, újraküldés, állapotjelző és műveletek, alul pedig 12 rekordot és oldalanként 20 tételt jegyez](/images/insights/china-bonded-platforms-nine-interfaces/interface-health-log-system-demo.webp)
+
+- Rendelésküldés, bolti előtér, ma 1284 hívás, sikerarány 100%, átlagos késleltetés 186 milliszekundum, 0 hiba, nincs újraküldés, állapotjelző normál, részletek és napló;
+- Fizetési bizonylat visszaküldése, fizetési csatorna, 1284, 99,9%, 210 milliszekundum, 1 hiba, újraküldve, normál, részletek és napló;
+- Fuvarlevél visszaküldése, futárszolgálat, 1266, 99,2%, 340 milliszekundum, 10 hiba, újraküldés alatt, figyelmeztetés, részletek és napló;
+- Jegyzék-vámnyilatkozat, vámnyilatkozati csatorna, 1266, 99,8%, 520 milliszekundum, 3 hiba, újraküldve, normál, részletek és napló;
+- Keret lekérdezése, lekérdezési csatorna, 1284, 100%, 150 milliszekundum, 0 hiba, nincs újraküldés, normál, részletek és napló;
+- Nyilvántartás szinkronizálása, vámraktár, 96, 100%, 430 milliszekundum, 0 hiba, nincs újraküldés, normál, részletek és napló;
+- Kiadási állapot visszaírása, vámnyilatkozati csatorna, 1240, 99,6%, 610 milliszekundum, 5 hiba, újraküldve, normál, részletek és napló;
+- Logisztikai nyomvonal, futárszolgálat, 1240, 98,7%, 720 milliszekundum, 16 hiba, újraküldés alatt, figyelmeztetés, részletek és napló;
+- Egyeztetési fájl, pénzügyi rendszer, 12, 100%, 980 milliszekundum, 0 hiba, nincs újraküldés, normál, részletek és napló.
+
+## Hogyan dől el a promóciós csúcs, és mennyi kapacitást tartalékolunk
+
+A csúcs megítélése a mennyiség és a válaszigény szerint négy esetre tagolódik: alacsony mennyiség magas válaszigénnyel a rugalmasságot nézi, magas mennyiség magas válaszigénnyel az előkészítési időt nézi, alacsony mennyiség alacsony válaszigénnyel az alapképességet nézi, magas mennyiség alacsony válaszigénnyel pedig a stabil kapacitást nézi. A napi kapacitáshoz viszonyított kapacitásgörbe három szintre oszlik: a mindennapokon 1-szeres, a promóciós csúcson 4-től 5-szörösig, a csúcson 10-szeres, és a csúcs oldalán 10-szeres tartalékot tartunk fenn. Minél korábban adja át nekünk az előre bejelentett mennyiségeket, annál több tér marad a bővítésre és a létszámtervezésre; ha a mennyiségek csak egy héttel a promóciós csúcs előtt érkeznek, az egyetlen még módosítható tényező a plusz létszám.
+
+- Alacsony mennyiség és magas válaszigény a csúcsrugalmassághoz tartozik: a nyilvános esetek az átlagos napi rendelésszám 4-től 5-szöröse között futnak, a csúcsok a tízezrektől a százezrekig terjedő darabszámot érik el, a promóciós csúcs létszáma pedig körülbelül 3-szorosa a megszokottnak, és mindez nyilvános esetekből származó referencia.
+- Magas mennyiség és magas válaszigény esetén az előkészítési idő szab határt: az ultramagas csúcsoknak előkészítési idő kell, a SKU-növekedés egyszerre növeli a raktárat és a nyilvántartást, a promóciós csúcsot 10-szeres csúcsra tartalékoljuk, a nagyságrendi bemenetet pedig Ön adja meg.
+- Alacsony mennyiség és alacsony válaszigény az alapképesség: márkás áruház engedélyezett fizetésekkel, beépített bizonylatokkal, több mint 50 vámponttal és több mint 70 ERP-rendszerrel csatlakoztatva, magas szintű AEO tanúsítvánnyal és saját vámkezeléssel, és a mi oldalunk készen áll.
+- Magas mennyiség és alacsony válaszigény a stabil kapacitás: az átlagos napi rendelésszámhoz méretezve, korai betárolással és zónánkénti tárolással, állandó és ideiglenes létszámmal együtt, az előre bejelentett mennyiségekkel elöl, a visszáruval újra a vámfelügyeleti területre belépve, és a mi oldalunk folyamatként követi.
+
+A raktárjelöltek négy átfogó vámzóna-telephely plusz a Hongkong, Kína területén lévő vámraktár. A négy telephely párhuzamosan több vámponton ad redundanciát, a végső vámpontot Ön dönti el, és a jelöltlistát már az indulási szakaszban átadjuk Önnek, nem kell megvárni, hogy az áru a kikötőbe érjen. A Hongkong, Kína területén lévő vámraktárat a külföldi oldalon soroljuk fel, és a négy belföldi telephelytől elkülönítve jegyezzük.
+
+![A platform és a teljesítés kapacitásának promóciós csúcsra vonatkozó bemutatója balra négy kvadránst mutat a mennyiség és a válaszigény szerint, jobbra fent a napi kapacitáshoz viszonyított háromszintű kapacitásgörbét, jobbra lent az előre bejelentett mennyiségek irányítópultját, alul pedig négy átfogó vámzóna-telephelyet és a Hongkong, Kína területén lévő vámraktárat](/images/insights/china-bonded-platforms-nine-interfaces/mega-sale-peak-capacity-verdict.webp)
+
+- Yiwu, Zhejiang, 1210 vámeljárású vámraktár.
+- Hangzhou, Zhejiang, 1210 vámeljárású vámraktár.
+- Guangzhou Huangpu, Guangdong, 1210 vámeljárású vámraktár.
+- Shenzhen Qianhai, Guangdong, 1210 vámeljárású vámraktár.
+- Hongkong, Kína, külföld, vámraktár Hongkong, Kína területén.
+
+A promóciós csúcs előre bejelentett mennyiségeinek irányítópultja négy sort hét oszlopban sorol fel, SKU, előre bejelentett mennyiség, bejelentett, haladás, várható befejezés, állapot és művelet, és minden sorban két belépési pont, a részletek és a napló van. A haladás és a várható befejezés dátuma határozza meg az egyes SKU-k betárolási sorrendjét, a hiányokat pedig sorról sorra az előre bejelentett mennyiségek követési táblázatában követjük.
+
+- Koenzim Q10 lágy kapszula, előre bejelentett mennyiség 12000, bejelentett 8400, haladás 70%, várható befejezés 10-12, folyamatban, részletek és napló;
+- Mélytengeri halolaj kapszula, 8000, 6400, 80%, 10-08, folyamatban, részletek és napló;
+- Fehérjepor szilárd ital, 6000, 2400, 40%, 10-18, folyamatban, részletek és napló;
+- Probiotikus liofilizált por, 5000, 5000, 100%, befejezési dátum nélkül, kész, részletek és napló.
+
+## Hogyan követjük sorról sorra az előre bejelentett mennyiségek hiányait
+
+A készletmodul előre bejelentett mennyiségeket követő táblázata minden SKU-nak egy sort ad, és az előre bejelentett mennyiséget, a bejelentettet, a haladást, a hiányt, a várható befejezést és az állapotot írja. Vegyük végig a koenzim Q10 lágy kapszulát: előre bejelentett mennyiség 12000, bejelentett 8400, haladás 70%, hiány 3600, várható pótlás 10-12-ig; a mélytengeri halolaj kapszula haladása 80%, hiánya 1600, várható pótlása 10-08-ig. A háromszintű kapacitásgörbe itt betárolási lépésekké válik, így az, hogy mekkora a hiány és melyik napon pótoljuk, előre látható.
+
+A felület alján összesen 7 rekord és oldalanként 20 tétel szerepel, minden sor végén két belépési pont, a részletek és a napló található; az előre bejelentett mennyiségek követése és az érkezési emlékeztető két füle egymás mellett áll, és az első vonal a fülek között vált, újraszűrés nélkül. Mind a hét sor ugyanazt az oszlopsorozatot követi.
+
+![Az előre bejelentett mennyiségek követésének rendszerfelület-bemutatója hét terméksort nyolc oszlopban jelenít meg, SKU, előre bejelentett mennyiség, bejelentett, haladás, hiány, várható befejezés, állapot és műveletek, alul pedig 7 rekordot és oldalanként 20 tételt jegyez](/images/insights/china-bonded-platforms-nine-interfaces/pre-filed-volume-tracking-system-demo.webp)
+
+- Koenzim Q10 lágy kapszula, 12000, 8400, 70%, hiány 3600, 10-12, folyamatban, részletek és napló;
+- Mélytengeri halolaj kapszula, 8000, 6400, 80%, hiány 1600, 10-08, folyamatban, részletek és napló;
+- Fehérjepor szilárd ital, 6000, 2400, 40%, hiány 3600, 10-18, folyamatban, részletek és napló;
+- Probiotikus liofilizált por, 5000, 5000, 100%, hiány 0, befejezési dátum nélkül, kész, részletek és napló;
+- Hal kollagénpeptid por, 6000, 3000, 50%, hiány 3000, 10-15, folyamatban, részletek és napló;
+- C-vitamin rágótabletta, 9000, 8100, 90%, hiány 900, 10-06, folyamatban, részletek és napló;
+- Melatonin gumicukor, 4000, 4000, 100%, hiány 0, befejezési dátum nélkül, kész, részletek és napló.
+
+## Mit rögzítünk az élesítés előtt az interfészeken és az átálláson
+
+Az élesítés előtt három dolgot rögzítünk: a szabványos interfészeket és a middleware-leképezést beírjuk az interfésztáblázatba, az állapotjelzők küszöbeit, a hibás újraküldéseket és a felelősöket sorokhoz rögzítjük, az előre bejelentett mennyiségeket és a kapacitásszinteket pedig ugyanarra a SKU-körre igazítjuk. Ha a három közül bármelyik hiányzik, a közös teszt folyton az újraküldéseken akad el. A bemutató felület hívásszámai, sikerarányai, előre bejelentett mennyiségei és befejezési dátumai csak szemléltetnek, a csúcs- és létszámadatok nyilvános esetekből származnak, és csupán a nagyságrendet mutatják, a valós nagyságrendet pedig Ön adja meg; a valós vámnyilatkozati gyakorlatot az illetékes hatóság előírásai szerint folytatjuk, a határon átnyúló adatútvonalakat pedig az adatvédelmi hatásvizsgálat megállapítása irányítja. Az átállás előtt egy teljes elszámolási ciklust futtatunk párhuzamosan, megerősítjük, hogy a két rendszer adatai nem tértek el, és csak ezután tereljük át a forgalmat.
+
+Ha a jelenlegi rendszerkörnyezete és a vámpontjai szerint szeretné a kilenc interfészcsaládot a vámraktári teljesítéshez kötni, és az állapotjelzőket és az előre bejelentett mennyiségeket sorról sorra visszaellenőrizni, akkor [Lépjen kapcsolatba velünk](/hu/packages/).

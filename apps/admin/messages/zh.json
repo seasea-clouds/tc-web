@@ -399,7 +399,6 @@
   "segment.preview": "预览",
   "segment.trademark": "品牌保护",
   "segment.nmpa": "化妆品备案",
-  "segment.blog": "博客",
   "segment.admin": "管理后台",
   "segment.pricing": "定价",
   "segment.register": "注册",
@@ -468,5 +467,6 @@
   "emails.toastRetried": "已重新排队",
   "emails.actionFailed": "操作失败，请重试",
   "emails.loadFailed": "加载失败",
-  "login.redirecting": "会话已失效，正在前往登录页…"
+  "login.redirecting": "会话已失效，正在前往登录页…",
+  "segment.insights": "博客"
 }

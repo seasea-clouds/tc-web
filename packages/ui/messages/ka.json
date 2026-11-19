@@ -18,7 +18,6 @@
     "whatsapp": "WhatsApp",
     "testimonials": "შეფასებები",
     "industries": "Ინდუსტრიები",
-    "blog": "ბლოგი",
     "checkCb": "CBEC",
     "checkCcc": "ელექტრონიკა",
     "checkGacc": "სურსათის იმპორტი",
@@ -27,7 +26,8 @@
     "checkTm": "სავაჭრო ნიშნები",
     "email": "ელფოსტა",
     "freeCheckHeader": "უფასო ინსტრუმენტები",
-    "getQuote": "მიიღეთ შეთავაზება"
+    "getQuote": "მიიღეთ შეთავაზება",
+    "insights": "ბლოგი"
   },
   "Search": {
     "title": "ძიება",
@@ -37,9 +37,9 @@
     "hint": "ჩაწერეთ სერვისების, სტატიებისა და ხშირად დასმული კითხვების მოსაძებნად",
     "types": {
       "service": "სერვისები",
-      "blog": "ბლოგი",
       "faq": "FAQ",
-      "regulation": "რეგულაციები"
+      "regulation": "რეგულაციები",
+      "insights": "ბლოგი"
     }
   },
   "Navbar": {
@@ -57,7 +57,6 @@
     },
     "packages": "პაკეტები",
     "faq": "ხშირი კითხვები",
-    "blog": "ბლოგი",
     "contact": "დაგვიკავშირდით",
     "whatsapp": "WhatsApp",
     "quote": "მიიღეთ ციტატა",
@@ -94,7 +93,8 @@
     "report": "მოხსენება",
     "reports": "მოხსენებები",
     "email": "ელფოსტა",
-    "regulations": "რეგულაციები"
+    "regulations": "რეგულაციები",
+    "insights": "ბლოგი"
   },
   "MobileTab": {
     "home": "მთავარი",
@@ -121,7 +121,7 @@
   "breadcrumb": {
     "home": "მთავარი",
     "services": "სერვისები",
-    "blog": "Insights",
+    "insights": "Insights",
     "industries": "ინდუსტრიები",
     "packages": "პაკეტები",
     "faq": "FAQ"

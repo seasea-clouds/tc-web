@@ -18,7 +18,6 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Rəylər",
     "industries": "Sənayelər",
-    "blog": "Anlayışlar",
     "checkCb": "CBEC",
     "checkCcc": "Elektronika",
     "checkGacc": "Qida idxalı",
@@ -27,7 +26,8 @@
     "checkTm": "Ticarət nişanları",
     "email": "E-poçt",
     "freeCheckHeader": "Pulsuz Alətlər",
-    "getQuote": "Qiymət təklifi al"
+    "getQuote": "Qiymət təklifi al",
+    "insights": "Anlayışlar"
   },
   "Search": {
     "title": "Axtar",
@@ -37,9 +37,9 @@
     "hint": "Xidmətlər, məqalələr və tez-tez verilən suallar arasında axtarış etmək üçün yazın",
     "types": {
       "service": "Xidmətlər",
-      "blog": "Anlayışlar",
       "faq": "FAQ",
-      "regulation": "Qaydalar"
+      "regulation": "Qaydalar",
+      "insights": "Anlayışlar"
     }
   },
   "Navbar": {
@@ -57,7 +57,6 @@
     },
     "packages": "Paketlər",
     "faq": "Tez-tez verilən suallar",
-    "blog": "Anlayışlar",
     "contact": "Bizimlə əlaqə saxlayın",
     "whatsapp": "WhatsApp",
     "quote": "Sitat əldə edin",
@@ -94,7 +93,8 @@
     "report": "Hesabat",
     "reports": "Hesabatlar",
     "email": "E-poçt",
-    "regulations": "Qaydalar"
+    "regulations": "Qaydalar",
+    "insights": "Anlayışlar"
   },
   "MobileTab": {
     "home": "Ana səhifə",
@@ -121,7 +121,7 @@
   "breadcrumb": {
     "home": "Ana Səhifə",
     "services": "Xidmətlər",
-    "blog": "Insights",
+    "insights": "Insights",
     "industries": "sənayelər",
     "packages": "Paketlər",
     "faq": "FAQ"

@@ -3,7 +3,7 @@
  * Loads search-index-{locale}.json and performs case-insensitive substring matching.
  */
 
-export type SearchItemType = 'service' | 'blog' | 'faq' | 'regulation' | 'check';
+export type SearchItemType = 'service' | 'insights' | 'faq' | 'regulation' | 'check';
 
 export interface SearchItem {
   type: SearchItemType;
@@ -16,7 +16,7 @@ export interface SearchItem {
 
 export interface SearchIndex {
   services: SearchItem[];
-  blog: SearchItem[];
+  insights: SearchItem[];
   faq: SearchItem[];
   regulations?: SearchItem[];
   checks?: SearchItem[];
@@ -83,7 +83,7 @@ export function search(
   const results: SearchResult[] = [];
   const allItems: SearchItem[] = [
     ...index.services,
-    ...index.blog,
+    ...index.insights,
     ...index.faq,
     ...(index.regulations ?? []),
     ...(index.checks ?? []),

@@ -1,0 +1,105 @@
+---
+title: "Customer data leaving China, the headcount tier sets the route and consent stays"
+date: "2027-03-30"
+category: "Compliance Guide"
+excerpt: "Headcount of individuals exported since January sets the route: low drops the filing, mid takes a standard contract, high a security assessment. Filing relief does not reach consent."
+references:
+  - title: "Provisions on Promoting and Regulating Cross-Border Data Flows (Cyberspace Administration of China Order No. 16, effective 22 March 2024, Articles 4, 5, 6, 7, 8, 9 and 10)"
+    url: "https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm"
+  - title: "Personal Information Protection Law of the People's Republic of China (adopted 20 August 2021, Articles 21, 29, 30, 38, 39 and 55)"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+  - title: "Measures on the Standard Contract for Outbound Transfers of Personal Information (Cyberspace Administration of China Order No. 13, published 22 February 2023, effective 1 June 2023, Articles 4, 6, 7 and 8)"
+    url: "https://www.gov.cn/gongbao/content/2023/content_5752224.htm"
+  - title: "Two Years of the Provisions on Promoting and Regulating Cross-Border Data Flows: New Steps in the Security Management of Outbound Data Transfers (Cyberspace Administration of China, 23 March 2026)"
+    url: "https://www.cac.gov.cn/2026-03/23/c_1775999628849905.htm"
+---
+
+Whether customer data may leave China turns on which tier the year-to-date headcount of exported individuals falls into. Counting from 1 January of the current year, a data processor other than a critical information infrastructure operator that has provided personal information of fewer than 100,000 individuals abroad is exempt from the filing (sensitive personal information excluded); at 100,000 or more but fewer than 1,000,000 individuals, conclude a standard contract for outbound personal information transfers with the overseas recipient or pass personal information protection certification; at 1,000,000 or more individuals, or once sensitive personal information reaches 10,000 individuals, file for a data export security assessment. The filing exemption removes the filing procedure of these three routes. It removes nothing from the duty to inform, from separate consent and from the personal information protection impact assessment. That is the relationship between Article 5 and Article 10 of Order No. 16, and the point most often read backwards.
+
+Cross-border e-commerce retail has an exemption that gets used even more often: data genuinely needed to conclude or perform a contract to which the individual is a party is exempt from the filing, and Article 5, item (1) lists by name cross-border shopping, cross-border delivery, cross-border remittance, cross-border payment, cross-border account opening, flight and hotel booking, visa handling and examination services, with the address, delivery and payment steps of fulfillment included. The words "genuinely needed" carry a boundary. Profiling, ad targeting and behavioural data unrelated to performing that order do not fall in this item.
+
+## How the year-to-date headcount is counted
+
+The counting caliber decides the tier, so nail it down first: count natural persons, and one person exported several times in the same year still counts once; accumulate from 1 January of the current year and restart when the calendar turns; sensitive personal information is excluded and its line is read separately. What is judged is the data flow that actually leaves the country, not how many people your systems store.
+
+Two doors sit outside the three tiers. A critical information infrastructure operator providing personal information or important data abroad files a security assessment directly, and what decides that is the status of the entity, not the headcount (Article 7, item (1)). Personal information collected and generated outside China and then transferred in for processing is exempt from the filing when the processing never brings in domestic personal information or important data (Article 4).
+
+An assessment result is valid for 3 years, counted from the date it is issued. If exports must continue after it lapses and none of the circumstances requiring a fresh filing has occurred, an extension may be applied for through the provincial cyberspace administration within 60 working days before expiry, and approval grants another 3 years (Article 9).
+
+Free trade zones hold a separate negative list, drafted inside the zone, approved by the provincial cybersecurity and informatization committee, then reported to the national cyberspace administration and the national data administration for record. A data processor inside the zone that sends data abroad outside that list is exempt from all three filings (Article 6). As of March 2026, lists from 9 free trade zones and ports (Tianjin, Beijing, Hainan, Shanghai, Zhejiang, Guangxi, Jiangsu, Chongqing and Fujian) have been recorded and published, covering 22 sectors including automobiles, retail, civil aviation, reinsurance, deep-sea industries, seed, geographic information and meteorology, and enterprise credit information. This caliber moves every year. Check the current version for the zone you sit in before relying on a list, and do not fit somebody else's list to your own data.
+
+![Headcount tiers for outbound data: fewer than 100,000 individuals year-to-date is exempt from the filing, 100,000 to under 1,000,000 goes to a standard contract or certification, 1,000,000 or more or sensitive personal information of 10,000 or more goes to a security assessment, with exemption items, decision rules, counting caliber and the start-up analysis points alongside](/images/insights/customer-data-export-china-tiers-and-exemptions/data-transfer-headcount-tiers-and-filing-waiver.webp)
+
+## What the filing exemption actually exempts
+
+What is exempt is the procedure, not the duty. Article 10 puts it plainly: whoever provides personal information abroad still performs, in line with the law and the administrative regulations, the duties of informing the individual, obtaining separate consent and carrying out a personal information protection impact assessment. Files on none of the three routes, and those three things still have to be done.
+
+The impact assessment rests on Article 55 of the Personal Information Protection Law: processing sensitive personal information, entrusting processing to another processor or providing personal information to another processor, and providing personal information abroad all require an assessment beforehand and a record of the processing. Whether the assessment report and the records can be produced at any moment is usually the dividing line between explaining your position afterwards and failing to.
+
+How notice and consent actually land has a national standard to work from. GB/T 42574-2023, the implementation guideline on notice and consent in personal information processing, has applied since 1 December 2023; it sets out the method, the content and the steps of giving notice, and it covers separate consent, refusal, withdrawal and evidence retention. It is a recommended standard rather than the statutory duty itself, but when a regulator asks how consent was obtained, this guideline is the accepted format for the answer.
+
+## What hangs on each of the three pillars
+
+The first pillar is consent. Article 39 requires telling the individual the name, the contact details, the processing purpose, the processing method and the categories of personal information of the overseas recipient, plus the way and the procedure for the individual to exercise rights under this law against that recipient, and it requires separate consent. Separate consent means no bundling: it cannot sit on the same line as the membership service terms, and one blanket authorization cannot cover every export scenario. Where sensitive personal information is involved, Article 30 additionally requires explaining the necessity of the processing and its effect on the individual's rights and interests, and Article 29 requires separate consent.
+
+The second pillar is technical measures. Domestic storage runs on domestic servers with off-site backup; collection takes only the fields fulfillment needs; phone numbers and addresses are masked field by field per the grading; transport runs on TLS end to end; access auditing keeps three levels of operation trail and logs are archived by quarter. Those five are evidence a system can produce, not promises spoken in a meeting.
+
+The third pillar is the regime. Data classification and grading reach concrete fields; the export ledger notes the name, purpose, volume and recipient for every entry; the annual self-check produces a written record archived together with the deliverables of the start-up analysis stage. The S0 referred to here is the first of the fourteen work packages (S0 to S13) of the service framework, which covers start-up analysis and setting up the entity; the export verdict, the field list and the list check all close in that stage.
+
+The boundary of the entrustment relationship is written in Article 21 of the Personal Information Protection Law: you are the personal information processor and we are the entrusted party, and the purpose, term, processing method, categories of personal information, protective measures and the rights and obligations of both sides have to be agreed clearly. No sub-entrustment without your consent, no use of the data for other projects, and where the entrustment contract does not take effect, is void, is revoked or terminates, the personal information has to be returned or deleted.
+
+![The three pillars of data compliance: separate consent, technical measures and the policy regime, with the three lines of a separate-consent pop-up and the three lines of an export ledger alongside, and the three elements of consent wording plus the entrustment boundary noted below](/images/insights/customer-data-export-china-tiers-and-exemptions/data-compliance-consent-controls-policy-pillars.webp)
+
+## How the checkboxes are configured, six rows read through
+
+The configuration table hangs under the store module under the heading Separate checkboxes and prompt text. Its six fields run in order: checkbox, prompt text, scenario, checked by default, can it be switched off on its own, archive number. The tabs split into all scenarios, checkout page and membership registration.
+
+- Risk notice confirmation, text "I confirm that I have read the risk notice for cross-border goods", checkout page, unchecked by default, can be switched off on its own, DA2609-0101;
+- Quota authorization check, "Authorize checking my annual cross-border e-commerce quota", checkout page, unchecked by default, can be switched off on its own, DA2609-0102;
+- Membership terms consent, "I have read and agree to the membership service terms", membership registration, unchecked by default, cannot be switched off on its own, DA2609-0103;
+- Personal information processing notice, "Agree that personal information is processed within the notified scope", membership registration, unchecked by default, can be switched off on its own, DA2609-0104, text shown truncated inside the column width;
+- Quota result display, "Show used quota and available quota", checkout page, unchecked by default, can be switched off on its own, DA2609-0105;
+- Chinese electronic label confirmation, "I confirm that the Chinese electronic label has been checked", checkout page, checked by default, can be switched off on its own, DA2609-0106.
+
+Of the six rows only the Chinese electronic label confirmation is checked by default; the other five default to no. Only the membership terms consent cannot be switched off on its own. A default tick turns consent into a decision the system makes for the user, and once a checkbox cannot be switched off, the right to withdraw has no way to land. Archive numbers DA2609-0101 to 0106 map row by row, re-consent and withdrawal leave a trace per row, and the footer reads 6 items in total, 20 items per page.
+
+Missing any one of the three elements in the consent text fails Article 39: the name and contact details of the overseas recipient, the processing purpose and processing method, and the way and procedure for the individual to exercise rights. Write the missing one in before going live.
+
+![Configuration screen of separate checkboxes and prompt text: six rows lined up by scenario, default checked state, whether it can be switched off on its own and archive number](/images/insights/customer-data-export-china-tiers-and-exemptions/separate-consent-checkbox-config-and-archive-numbers.webp)
+
+## Which route each data class takes on the export list
+
+The other table carries one row per data class, with seven fields: data class, classification tag, exported or not, recipient region, export method, annual self-check, last self-check date. The tabs split into all classes, personal information and business data. Six rows follow.
+
+- Order information, general business data, not exported, recipient inside China, annual self-check complete, last self-check date 2026-09-15;
+- Membership behaviour tags, general personal information, exported, recipient is the overseas brand, export method de-identified and aggregated before export, that column shown truncated on screen, annual self-check complete, 2026-09-15;
+- Inventory and account books, general business data, not exported, inside China, annual self-check complete, 2026-09-15;
+- After-sales records, general business data, exported, overseas brand, export method standard contract plus filing, annual self-check in progress, last self-check date 2026-09-20;
+- Commission settlement data, general business data, not exported, inside China, annual self-check complete, 2026-09-15;
+- Campaign performance data, general business data, exported, overseas brand, export method standard contract plus filing, annual self-check complete, 2026-09-15.
+
+Six items in total, 20 per page. The full self-check stops at 09-15 and the after-sales row still carries in progress. The classification tag decides which tier a class sits in: general business data and general personal information are counted apart, sensitive personal information has its own line. When the same class of data changes its export method, the ledger and the self-check status change with it and must not stay on the conclusion of the previous round.
+
+The standard contract route has one more step: the filing. The contract has to be concluded strictly on the annex to Order No. 13; extra clauses are allowed but may not conflict with the standard contract, and export activity may start only after the contract takes effect. Within 10 working days from the effective date it is filed with the provincial cyberspace administration where you are located, together with the standard contract itself and the personal information protection impact assessment report (Articles 6 and 7). Where the purpose, scope, categories, sensitivity, method or storage location of the export changes, or the overseas recipient's purpose or method changes, or the retention period abroad is extended, or the protection policies of the recipient's country or region change, the assessment is redone, the contract is supplemented or re-concluded, and the filing runs again (Article 8).
+
+![Data classification and export list screen: six data classes annotated row by row by exported or not, recipient region, export method, annual self-check status and last self-check date](/images/insights/customer-data-export-china-tiers-and-exemptions/data-class-transfer-list-and-annual-self-check.webp)
+
+## One batch of membership tags, from verdict to export
+
+Take the membership behaviour tag class and run it through once. Suppose your store has supplied an overseas brand with behaviour tags for 260,000 members year-to-date, with no sensitive personal information, that you are not a critical information infrastructure operator, and that you sit outside the scope of any free trade zone negative list.
+
+Count heads first. 260,000 falls in the tier of 100,000 or more but fewer than 1,000,000, which triggers a standard contract or certification rather than a security assessment (Article 8 of Order No. 16). If, in the same year, a further batch of member records containing sensitive personal information goes out, that line is read on its own: below 10,000 individuals it still runs on the standard contract or certification, at 10,000 individuals it has to switch to the security assessment (Article 7).
+
+Then test the exemption. These tags feed the brand's analysis and targeting, so they are not necessary to conclude or perform a contract to which the member is a party, and they do not fall under Article 5, item (1); the cumulative headcount has already passed 100,000, so item (4) is out of reach as well. In your scenario the exemption simply does not hold, and forcing it only produces a wrong verdict.
+
+Then implement. Set the export method to de-identified aggregation before export; in the configuration table the matching checkbox is unchecked by default and can be switched off on its own, and the text carries all three elements; conclude the standard contract with the overseas brand on the official annex and file it with the provincial cyberspace administration within 10 working days of the effective date, with the impact assessment report attached. On the export list, that row's export method moves from blank to standard contract plus filing, the annual self-check moves from in progress to complete, and the last self-check date updates in step.
+
+Finally keep the evidence. Consent records can be pulled back to a specific person and a specific time through the archive number; the ledger carries name, purpose, volume and recipient for every entry; access auditing keeps three levels of trail and logs are archived by quarter. When all four places give the same answer, that batch has left the country cleanly.
+
+## A wrong order of steps means rework
+
+The two commonest mistakes are taking the headcount of a single export as the year-to-date accumulation, and reading the filing exemption as an exemption from every duty. The first leaves a scenario that should have concluded a standard contract or filed an assessment sitting in a state with no procedure at all; the second drops separate consent and the impact assessment, and both are easy to pull out in a later inspection.
+
+Do not run the order backwards either. Settle the field list, the overseas recipient, the storage location, the export frequency and the purpose first, then discuss how the systems connect. Start connecting before the verdict is finished and the interface is built on the wrong data flow, and one change then has to be made on both sides.
+
+With the tier and the route settled, what is left is filling the checkboxes, the ledger and the self-check records into the system row by row. If any data class on your list still has no export method decided, [Contact us](/en/packages/).

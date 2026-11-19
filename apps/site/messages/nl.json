@@ -1292,7 +1292,6 @@
     "metaDescription": "Blader door alle diensten, branchegidsen, artikelen en pagina's op de website van SinoTrade Compliance.",
     "servicesTitle": "Diensten",
     "industriesTitle": "Industrieën",
-    "blogTitle": "Artikelen & inzichten",
     "pagesTitle": "Overige pagina's",
     "home": "Home",
     "about": "Over ons",
@@ -1300,7 +1299,8 @@
     "quote": "Vraag een offerte aan",
     "faq": "FAQ",
     "packages": "Pakketten",
-    "testimonials": "Klantbeoordelingen"
+    "testimonials": "Klantbeoordelingen",
+    "insightsTitle": "Artikelen & inzichten"
   },
   "Cookie": {
     "message": "Deze site gebruikt alleen essentiële authenticatiecookies. Er worden geen tracking- of advertentiecookies gebruikt.",

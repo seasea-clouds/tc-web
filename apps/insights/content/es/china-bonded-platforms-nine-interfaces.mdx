@@ -1,0 +1,113 @@
+---
+title: "Nueve interfaces al depósito aduanero de China, luces de salud y margen de pico"
+date: "2027-06-22"
+category: "E-commerce"
+excerpt: "Las interfaces estándar van primero y el middleware cubre el resto; las luces de salud registran llamadas, éxito y reenvíos. Los datos quedan dentro y se reserva margen de pico."
+references:
+  - title: "Anuncio núm. 194 de 2018 de la Administración General de Aduanas de China sobre la supervisión de las mercancías de importación y exportación al por menor en el comercio electrónico transfronterizo"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Ley de Protección de la Información Personal de la República Popular China, aprobada el 20 de agosto de 2021, artículos 38, 39 y 55"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+  - title: "Disposiciones para promover y regular los flujos transfronterizos de datos, Orden núm. 16 de la Administración del Ciberespacio de China, en vigor desde el 22 de marzo de 2024"
+    url: "https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm"
+---
+
+Las nueve familias de interfaces pueden conectar sus sistemas actuales con la plataforma de depósito aduanero de China, siempre que las interfaces estándar vayan primero, los datos permanezcan en el país y la campaña promocional deje margen para un pico de 10 veces. Donde hay una interfaz estándar se conecta directamente y donde no la hay se mapea con middleware; las luces de salud registran por tipo el volumen de llamadas, la tasa de éxito, la latencia y los fallos con sus reenvíos, y las dos filas de envío de pedidos y retorno de pagos dejan constancia del flujo de los tres documentos. Las referencias públicas del mercado sitúan la integración estándar en 3 a 7 días y la integración completa en 8 a 12 semanas, y solo sirven como orden de magnitud; lo que realmente fija la fecha de puesta en marcha son las pruebas conjuntas y un ciclo de liquidación con ejecución en paralelo.
+
+![La demostración muestra la tabla de las nueve familias de interfaces, con las cuatro columnas de su sistema, el elemento de integración, la dirección y el destino, nueve filas de bienes e inventario, pedidos, datos de miembros, liquidación de comisiones, inventario, aduanas, cumplimiento, devoluciones y finanzas, y debajo los cuatro principios de flujo de datos y las cuatro luces de salud del monitor de pruebas conjuntas.](/images/insights/china-bonded-platforms-nine-interfaces/nine-interface-families-mapping.webp)
+
+## En qué tabla aterriza cada una de las nueve familias de interfaces
+
+La tabla de interfaces se escribe en cuatro columnas, a saber, de qué lado está su sistema, cuál es el elemento de integración, quién lidera la dirección y dónde aterrizan finalmente los datos. La dirección adopta solo tres formas, bidireccional, entrante y dirigida por usted, y las filas sin dirección marcada las asume nuestro lado. La columna de destino indica a qué libro contable pertenece cada campo, de modo que quien tome el relevo pueda consultarlo siguiendo la tabla.
+
+- Bienes e inventario: existencias y precios por SKU, bidireccional, en coherencia con el sistema de gestión de almacenes y el libro contable aduanero.
+- Pedidos: datos de pedidos, entrante, aterrizan en los campos de los tres documentos.
+- Datos de miembros: relaciones de promotores, dirigida por usted, los datos son suyos y nosotros los tratamos como encargados del tratamiento.
+- Liquidación de comisiones: pago de comisiones, bidireccional, el tramo nacional lo ejecuta la entidad establecida en el país.
+- Inventario: sistema de almacenamiento en depósito aduanero, sin dirección marcada, aterriza en el sistema de operación de depósito aduanero y comparte origen con el libro contable.
+- Aduanas: declaración de los tres documentos, sin dirección marcada, la declaración corre a nuestro cargo y es un asunto bajo nuestro control.
+- Cumplimiento: retorno de trazas, sin dirección marcada, la traza logística se reescribe en la vista de pedidos.
+- Devoluciones: documentos de devolución, sin dirección marcada, las devoluciones vuelven a entrar en la zona bajo supervisión aduanera a través del centro de devoluciones.
+- Finanzas: liquidación, saliente, incluye moneda y cambio de divisas.
+
+Hacia dónde fluyen los datos decide cómo se construyen las interfaces. El libro contable del lado nacional y el panel del lado exterior deben mantenerse separados, porque de lo contrario, durante las pruebas conjuntas, ambos lados sobrescribirían el mismo conjunto de campos el uno al otro.
+
+- Los datos de promoción que se recogen y se liquidan en el país se quedan en el país.
+- A su matriz en el exterior vuelven solo datos agregados desidentificados, sin relaciones de comisiones nacionales.
+- El sistema de gestión del exterior nunca toca los datos brutos de los consumidores chinos; las rutas transfronterizas solo se abren después de superar la evaluación de impacto sobre la protección de la información personal.
+- Los datos nacionales de promoción y comisiones admiten exportación completa y se le entregan junto con el libro contable en el traspaso.
+
+El monitor de pruebas conjuntas de interfaces organiza las luces de salud en cuatro filas por tipo de interfaz y contraparte, y cada comprobación de salud y cada reenvío deja un registro. La página de demostración escribe tres ítems, a saber, tipo de interfaz, contraparte y luz de salud, que corresponden al mismo conjunto de la demostración de la interfaz del sistema, y durante las pruebas conjuntas se revisan fila por fila cada día.
+
+- Envío de pedidos, contraparte la tienda en línea, luz de salud normal.
+- Retorno de pagos, contraparte el canal de pago, luz de salud normal.
+- Retorno de guías, contraparte la empresa de mensajería, luz de salud en alerta.
+- Declaración de la lista, contraparte el canal de declaración, luz de salud normal.
+
+La forma de integración empieza por fijar las interfaces estándar. Donde hay una interfaz estándar se conecta directamente y donde no la hay se mapea con middleware. Las referencias públicas del mercado sitúan la integración estándar en 3 a 7 días y la integración completa en 8 a 12 semanas, y la campaña promocional deja margen para un pico de 10 veces. Cada parte designa un contacto técnico y celebra una reunión diaria de coordinación durante las pruebas conjuntas. Después de la puesta en marcha se ejecuta en paralelo un ciclo de liquidación completo antes del cambio, de modo que los datos de los dos sistemas no divergen durante el período de doble ejecución.
+
+## Cómo leer las luces de salud y dónde quedan registrados los reenvíos fallidos
+
+El registro de salud de interfaces dedica una fila a cada tipo de interfaz, con pestañas para todas las interfaces, las normales y las anómalas, y cada fila escribe contraparte, volumen de llamadas, tasa de éxito, latencia, fallos, reenvío y luz de salud. Tomemos el envío de pedidos como ejemplo. Hoy registra 1284 llamadas, una tasa de éxito del 100%, una latencia media de 186 milisegundos, 0 fallos y la luz de salud normal; el retorno de pagos suma también 1284 llamadas, con una tasa de éxito del 99,9%, 1 fallo ya reenviado con éxito y la luz de salud todavía normal. Estas dos filas son la prueba de que el flujo de los tres documentos permanece en el sistema.
+
+Una vez mapeadas las nueve familias de interfaces, los volúmenes de llamadas y los datos de salud en tiempo de ejecución aterrizan todos en este registro, y las dos filas de envío de pedidos y retorno de pagos anotan cómo aterrizó el flujo de los tres documentos. En la parte inferior de la interfaz de demostración se indican 12 registros en total y 20 por página, y al final de cada fila hay dos accesos, detalle y registro; las nueve filas se enumeran completas con el mismo conjunto de columnas.
+
+![La demostración de la interfaz del registro de salud de interfaces enumera nueve filas en nueve columnas, a saber, tipo de interfaz, contraparte, llamadas de hoy, tasa de éxito, latencia media, fallos, reenvío, luz de salud y acciones, y al pie indica 12 registros en total y 20 por página.](/images/insights/china-bonded-platforms-nine-interfaces/interface-health-log-system-demo.webp)
+
+- Envío de pedidos, tienda en línea, 1284 llamadas hoy, tasa de éxito del 100%, latencia media de 186 milisegundos, 0 fallos, sin reenvío, luz de salud normal, detalle y registro;
+- Retorno de pagos, canal de pago, 1284, 99,9%, 210 milisegundos, 1 fallo, reenviado, normal, detalle y registro;
+- Retorno de guías, empresa de mensajería, 1266, 99,2%, 340 milisegundos, 10 fallos, reenvío en curso, en alerta, detalle y registro;
+- Declaración de la lista, canal de declaración, 1266, 99,8%, 520 milisegundos, 3 fallos, reenviado, normal, detalle y registro;
+- Consulta de cuota, canal de consulta, 1284, 100%, 150 milisegundos, 0 fallos, sin reenvío, normal, detalle y registro;
+- Sincronización del libro contable, depósito aduanero, 96, 100%, 430 milisegundos, 0 fallos, sin reenvío, normal, detalle y registro;
+- Reescritura del estado de levante, canal de declaración, 1240, 99,6%, 610 milisegundos, 5 fallos, reenviado, normal, detalle y registro;
+- Traza logística, empresa de mensajería, 1240, 98,7%, 720 milisegundos, 16 fallos, reenvío en curso, en alerta, detalle y registro;
+- Archivo de conciliación, sistema financiero, 12, 100%, 980 milisegundos, 0 fallos, sin reenvío, normal, detalle y registro.
+
+## Cómo se determina el pico promocional y cuánta capacidad conviene reservar
+
+El veredicto de pico se divide en cuatro casos según el volumen y las necesidades de respuesta. El volumen bajo con respuesta alta mira la elasticidad, el volumen alto con respuesta alta mira el plazo de anticipación, el volumen bajo con respuesta baja mira la capacidad básica y el volumen alto con respuesta baja mira la capacidad en régimen estacionario. La curva de capacidad relativa a la capacidad diaria tiene tres niveles, a saber, 1 vez en la operación diaria, de 4 a 5 veces en la campaña promocional y 10 veces en el pico, y el lado del pico deja margen para 10 veces. Cuanto antes nos entregue los volúmenes preinscritos, más holgura habrá para planificar la ampliación y el personal; si los volúmenes llegan solo una semana antes de la campaña, lo único que queda por ajustar es añadir personal.
+
+- El volumen bajo con necesidades de respuesta altas va a la elasticidad de pico. Los casos públicos alcanzan de 4 a 5 veces el volumen diario, los picos van de decenas de miles a cientos de miles de unidades y el personal de la campaña promocional ronda 3 veces el habitual, todos ellos valores de referencia públicos.
+- El volumen alto con necesidades de respuesta altas está limitado por el plazo de anticipación. Los picos ultraaltos requieren anticipación. El crecimiento de SKU amplía a la vez el almacén y el libro contable, la campaña promocional reserva un pico de 10 veces y usted aporta los volúmenes de entrada.
+- El volumen bajo con necesidades de respuesta bajas es la capacidad básica. Una tienda de marca con pagos con licencia y documentos integrados ya conecta más de 50 puertos y más de 70 sistemas ERP, cuenta con certificación avanzada AEO y despacho aduanero propio, y nuestro lado ya está listo.
+- El volumen alto con necesidades de respuesta bajas es la capacidad en régimen estacionario. El tamaño se fija por los pedidos diarios, con entrada anticipada al almacén y almacenamiento por zonas, personal fijo y temporal combinados, los volúmenes preinscritos por delante y las devoluciones de vuelta a la zona bajo supervisión aduanera, y nuestro lado sigue el proceso.
+
+Los candidatos de almacén son cuatro sitios de zona franca integral más el almacén de Hong Kong, China. Cuatro sitios en paralelo suponen redundancia de varios puertos, usted decide el puerto final y la lista de candidatos se le entrega ya en la fase de arranque, sin tener que esperar a que la mercancía llegue al puerto para decidir. El almacén de Hong Kong, China figura en el lado exterior y se registra por separado de los cuatro sitios nacionales.
+
+![La demostración de capacidad de la plataforma y el cumplimiento para el veredicto del pico promocional muestra a la izquierda cuatro cuadrantes por volumen y necesidades de respuesta, arriba a la derecha una curva de capacidad de tres niveles relativa a la capacidad diaria, abajo a la derecha un panel de volúmenes preinscritos y al pie cuatro sitios de zona franca integral junto con el almacén de Hong Kong, China.](/images/insights/china-bonded-platforms-nine-interfaces/mega-sale-peak-capacity-verdict.webp)
+
+- Yiwu, Zhejiang, depósito aduanero de modalidad de supervisión 1210.
+- Hangzhou, Zhejiang, depósito aduanero de modalidad de supervisión 1210.
+- Guangzhou Huangpu, Guangdong, depósito aduanero de modalidad de supervisión 1210.
+- Shenzhen Qianhai, Guangdong, depósito aduanero de modalidad de supervisión 1210.
+- Hong Kong, China, en el exterior, depósito aduanero de Hong Kong, China.
+
+El panel de volúmenes preinscritos de la campaña promocional enumera cuatro filas en siete columnas, a saber, SKU, volumen preinscrito, ya inscrito, progreso, finalización prevista, estado y acción, y cada fila tiene dos accesos, detalle y registro. El progreso y la fecha de finalización prevista fijan el orden de aprovisionamiento de cada SKU, y los déficits se siguen fila por fila en la tabla de seguimiento de volúmenes preinscritos.
+
+- Cápsulas blandas de coenzima Q10, volumen preinscrito 12000, ya inscrito 8400, progreso 70%, finalización prevista el 10-12, en curso, detalle y registro;
+- Cápsulas de aceite de pescado de aguas profundas, 8000, 6400, 80%, 10-08, en curso, detalle y registro;
+- Bebida sólida en polvo de proteína, 6000, 2400, 40%, 10-18, en curso, detalle y registro;
+- Polvo liofilizado de probióticos, 5000, 5000, 100%, sin fecha de finalización marcada, completado, detalle y registro.
+
+## Cómo se siguen fila por fila los déficits de volumen preinscrito
+
+La tabla de seguimiento de volúmenes preinscritos del módulo de inventario dedica una fila a cada SKU y escribe volumen preinscrito, ya inscrito, progreso, déficit, finalización prevista y estado. Tomemos las cápsulas blandas de coenzima Q10 como ejemplo. El volumen preinscrito es 12000, el ya inscrito 8400, el progreso 70%, el déficit 3600 y se prevé completarlo el 10-12; las cápsulas de aceite de pescado de aguas profundas van al 80% de progreso con un déficit de 1600 y se prevé completarlas el 10-08. La curva de capacidad de tres niveles se convierte aquí en acciones de aprovisionamiento, de modo que cuánto mide el déficit y qué día se completa se ven con antelación.
+
+En la parte inferior de la interfaz se indican 7 registros en total y 20 por página, y al final de cada fila hay dos accesos, detalle y registro; las dos pestañas de seguimiento de volúmenes preinscritos y de aviso de llegada están una junto a la otra, de modo que el personal de primera línea cambia de pestaña sin tener que volver a filtrar. Las siete filas se enumeran completas con el mismo conjunto de columnas.
+
+![La demostración de la interfaz de seguimiento de volúmenes preinscritos enumera siete filas de productos en ocho columnas, a saber, SKU, volumen preinscrito, ya inscrito, progreso, déficit, finalización prevista, estado y acciones, y al pie indica 7 registros en total y 20 por página.](/images/insights/china-bonded-platforms-nine-interfaces/pre-filed-volume-tracking-system-demo.webp)
+
+- Cápsulas blandas de coenzima Q10, 12000, 8400, 70%, déficit 3600, 10-12, en curso, detalle y registro;
+- Cápsulas de aceite de pescado de aguas profundas, 8000, 6400, 80%, déficit 1600, 10-08, en curso, detalle y registro;
+- Bebida sólida en polvo de proteína, 6000, 2400, 40%, déficit 3600, 10-18, en curso, detalle y registro;
+- Polvo liofilizado de probióticos, 5000, 5000, 100%, déficit 0, sin fecha de finalización marcada, completado, detalle y registro;
+- Polvo de péptidos de colágeno de pescado, 6000, 3000, 50%, déficit 3000, 10-15, en curso, detalle y registro;
+- Comprimidos masticables de vitamina C, 9000, 8100, 90%, déficit 900, 10-06, en curso, detalle y registro;
+- Gomitas de melatonina, 4000, 4000, 100%, déficit 0, sin fecha de finalización marcada, completado, detalle y registro.
+
+## Qué conviene fijar antes de la puesta en marcha sobre interfaces y cambio
+
+Antes de la puesta en marcha hay que fijar tres puntos. Las interfaces estándar y el mapeo con middleware se escriben en la tabla de interfaces, los umbrales de las luces de salud, los reenvíos fallidos y los responsables se fijan fila por fila, y los volúmenes preinscritos y los niveles de capacidad se alinean sobre el mismo conjunto de SKU. Si falta alguno de los tres, las pruebas conjuntas se atascan una y otra vez en los reenvíos. Los volúmenes de llamadas, las tasas de éxito, los volúmenes preinscritos y las fechas de finalización de la interfaz de demostración son meramente ilustrativos, las cifras de pico y de personal proceden de casos públicos y solo reflejan el orden de magnitud, y usted aporta los volúmenes reales; la práctica real de declaración sigue los requisitos de la autoridad competente y las rutas transfronterizas de datos se rigen por el resultado de la evaluación de impacto sobre la protección de la información personal. Antes del cambio se ejecuta en paralelo un ciclo de liquidación completo, se confirma que los datos de los dos sistemas no han divergido y solo entonces se desvía el tráfico.
+
+Si quiere que las nueve familias de interfaces se conecten al cumplimiento en depósito aduanero según su arquitectura de sistemas actual y su plan de puertos, con las luces de salud y los volúmenes preinscritos verificados fila por fila, le invitamos a [Contáctenos](/es/packages/).

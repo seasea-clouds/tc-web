@@ -1292,7 +1292,6 @@
     "metaDescription": "Sfogliate tutti i servizi, le guide di settore, gli articoli di approfondimento e le pagine del sito SinoTrade Compliance.",
     "servicesTitle": "Servizi",
     "industriesTitle": "Settori",
-    "blogTitle": "Articoli di approfondimento",
     "pagesTitle": "Altre pagine",
     "home": "Home",
     "about": "Chi siamo",
@@ -1300,7 +1299,8 @@
     "quote": "Preventivo gratuito",
     "faq": "FAQ",
     "packages": "Pacchetti",
-    "testimonials": "Testimonianze"
+    "testimonials": "Testimonianze",
+    "insightsTitle": "Articoli di approfondimento"
   },
   "Cookie": {
     "message": "Questo sito utilizza solo cookie di autenticazione essenziali. Non vengono utilizzati cookie di tracciamento o pubblicitari.",

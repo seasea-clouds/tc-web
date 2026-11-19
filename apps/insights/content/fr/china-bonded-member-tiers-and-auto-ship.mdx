@@ -1,0 +1,77 @@
+---
+title: "Classification des membres et livraisons périodiques, anomalies ligne par ligne"
+date: "2027-06-29"
+category: "E-commerce"
+excerpt: "Niveaux et livraisons périodiques partagent leurs numéros avec le registre d'attribution. Le tableau de bord affiche les alertes. Menez un cycle complet, puis confrontez les lignes."
+references:
+  - title: "Loi de la République populaire de Chine sur la protection des informations personnelles (adoptée le 20 août 2021, articles 13 et 23)"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+  - title: "Annonce n° 194 de 2018 de l'Administration générale des douanes de Chine relative à la surveillance des marchandises d'importation et d'exportation au détail du commerce électronique transfrontalier"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Dispositions visant à promouvoir et à réglementer les flux transfrontaliers de données (décret n° 16 de l'Administration du cyberespace de Chine, en vigueur à compter du 22 mars 2024)"
+    url: "https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm"
+---
+
+La classification des membres et les livraisons périodiques fidélisent les achats répétés à condition que les deux interfaces concordent ligne par ligne : l'une est le tableau de bord opérationnel, qui réunit sur un seul écran six lignes pour les commandes en transit, les lots en stock sous douane, les sorties de zone du jour, les colis en transit, la durée moyenne de dédouanement et les lots en alerte de péremption ; l'autre est l'interface d'administration de la classification des membres et des livraisons périodiques, qui aligne sur six lignes le numéro de membre, le niveau, l'article en livraison périodique, le cycle de livraison, la prochaine date de livraison et les dépenses cumulées. Les deux interfaces partagent le même jeu de numéros de membre, chaque changement de statut est consigné dans un journal, et un achat répété peut ainsi être rattaché au même membre. Lorsque vous prenez le relais, regardez d'abord les lignes d'exception : sur l'interface de démonstration, deux lignes sont en cours et une ligne est à corriger, avec respectivement 2 déclarations en attente, 3 anomalies et 2 lots proches de la péremption.
+
+![Démonstration de l'interface du tableau de bord opérationnel à quatre pistes, avec un en-tête composé de piste, indicateur clé, valeur actuelle, valeur cible, taux de réalisation, alerte, statut et action, six lignes pour la piste des commandes, la piste des stocks, la piste du dédouanement, la piste de la logistique, la piste des délais et la piste de la péremption, et une mention en bas indiquant 6 enregistrements au total et 20 par page](/images/insights/china-bonded-member-tiers-and-auto-ship/four-tracks-dashboard-system-demo.webp)
+
+## Six lignes sur un seul écran, quatre flux de service avec un responsable chacun
+
+Le tableau de bord opérationnel est la vue principale, à raison d'une ligne par piste, avec des onglets pour aujourd'hui, cette semaine et ce mois. Chaque ligne indique l'indicateur clé, la valeur actuelle, la valeur cible, le taux de réalisation, l'alerte et le statut, et se termine par deux entrées, détails et journal. Une cellule sans alerte déclenchée est occupée par un tiret court et non par un zéro, afin que l'absence d'alerte ne soit pas lue comme un indicateur nul. Le tableau de bord est paginé à 20 enregistrements par page ; les données de démonstration comptent 6 enregistrements et tiennent sur un seul écran.
+
+Les quatre flux de service, de S10 à S13, ont chacun un responsable, et leurs indicateurs et étapes en cours sont tous regroupés sur ce seul tableau de bord. Pour savoir qui reprend quelle piste et où en est le travail, nul besoin de feuilleter plusieurs autres registres ; la responsabilité est attachée à la ligne, et la passation se signe ligne par ligne.
+
+Les huit colonnes de l'en-tête sont, dans l'ordre, piste, indicateur clé, valeur actuelle, valeur cible, taux de réalisation, alerte, statut et action. Les six lignes se détaillent dans cet ordre :
+
+- Piste des commandes, commandes en transit, valeur actuelle 128, cible 150, taux de réalisation 85%, alerte vide, statut normal ;
+- Piste des stocks, lots en stock sous douane, valeur actuelle 36, cible 40, taux de réalisation 90%, alerte vide, statut normal ;
+- Piste du dédouanement, sorties de zone du jour, valeur actuelle 86, cible 100, taux de réalisation 86%, alerte 2 déclarations en attente, statut en cours ;
+- Piste de la logistique, colis en transit, valeur actuelle 214, cible et taux de réalisation laissés vides, alerte 3 anomalies, statut en cours ;
+- Piste des délais, durée moyenne de dédouanement, valeur actuelle 6,8 heures, cible 8 heures, colonne du taux de réalisation marquée atteint, alerte vide, statut normal ;
+- Piste de la péremption, lots en alerte de péremption, valeur actuelle 2, cible 0, taux de réalisation laissé vide, alerte 2 lots proches de la péremption, statut à corriger.
+
+Les fiches explicatives relèvent les deux chiffres les plus faciles à mal lire : la piste des commandes affiche 128 commandes en transit pour une cible de 150 et un taux de réalisation de 85% ; la piste des stocks affiche 36 lots en stock sous douane pour une cible de 40 et un taux de réalisation de 90%. La fiche précise aussi qu'une cellule sans alerte déclenchée affiche un tiret court. Autrement dit, le tiret ne signale pas une donnée manquante ; il consigne la conclusion qu'il n'y a eu aucune alerte cette fois.
+
+Les trois statuts se traitent séparément. Les trois lignes normales sont la piste des commandes, la piste des stocks et la piste des délais ; la piste des délais, à 6,8 heures, reste en dessous de la cible de 8 heures, et la colonne du taux de réalisation indique directement atteint. Les deux lignes en cours portent chacune une tâche : la piste du dédouanement a 2 déclarations en attente et la piste de la logistique a 3 anomalies. La ligne à corriger est la piste de la péremption, avec 2 lots en alerte de péremption pour une cible de 0 et une alerte de 2 lots proches de la péremption. L'ordre de traitement suit l'ampleur de l'impact : on commence par résorber les lots proches de la péremption, puis on complète les déclarations, et on poursuit enfin les anomalies.
+
+## Classification des membres et livraisons périodiques, vérifiables ligne par ligne
+
+![Démonstration de l'interface d'administration de la classification des membres et des livraisons périodiques, avec un en-tête composé de numéro de membre, niveau, article en livraison périodique, cycle de livraison, prochaine date de livraison, dépenses cumulées, statut de la livraison périodique et action, six lignes de M-100238 à M-100419 avec les niveaux et les informations de livraison périodique, et une mention en bas indiquant 6 enregistrements au total et 20 par page](/images/insights/china-bonded-member-tiers-and-auto-ship/member-tiers-subscriptions-system-demo.webp)
+
+L'interface d'administration côté membres relève du module de la boutique, avec des onglets par niveau pour la carte noire, la carte or et la carte argent, plus une page réservée aux livraisons périodiques actives. Chaque ligne indique le numéro de membre, le niveau, l'article en livraison périodique, le cycle de livraison, la prochaine date de livraison et les dépenses cumulées, et se termine également par détails et journal. Les données de démonstration comptent 6 enregistrements, à 20 par page.
+
+Les niveaux, les livraisons périodiques et les dépenses cumulées sont tenus au même endroit, et les numéros de membre partagent une seule source de données avec le registre d'attribution. Ainsi, un achat répété n'est compté qu'une fois côté membre et n'est pas compté une seconde fois côté attribution ; pour rattacher les achats répétés d'un niveau à une campagne donnée, il suffit de remonter au numéro. Les numéros de membre et les dépenses cumulées sont des informations personnelles, leur traitement et leur partage exigent un fondement explicite, et seuls les agrégats nécessaires circulent entre l'interface d'administration nationale et les rapports destinés à l'étranger.
+
+Les huit colonnes de l'en-tête sont, dans l'ordre, numéro de membre, niveau, article en livraison périodique, cycle de livraison, prochaine date de livraison, dépenses cumulées, statut de la livraison périodique et action. Les six lignes se détaillent dans cet ordre, avec tous les montants en yuans :
+
+- M-100238, carte noire, gélules molles de coenzyme Q10 x2, chaque mois, 2026-10-22, 15800,00 yuans, en cours ;
+- M-101204, carte or, gélules molles d'huile de poisson x1, chaque mois, 2026-10-05, 8640,00 yuans, en cours ;
+- M-100571, carte argent, poudre de protéines de lactosérum x1, tous les 2 mois, 2026-11-19, 4320,00 yuans, en cours ;
+- M-100872, carte noire, poudre de probiotiques x2, chaque mois, 2026-10-08, 22100,00 yuans, en cours ;
+- M-101466, carte or, boisson aux peptides de collagène x1, chaque mois, 2026-10-15, 6980,00 yuans, en pause ;
+- M-100419, carte argent, comprimés de calcium et de vitamine D x1, chaque trimestre, 2026-12-01, 1560,00 yuans, en cours.
+
+Les fiches explicatives donnent deux numéros. M-100238 est de la carte noire, avec deux flacons de gélules molles de coenzyme Q10 livrés automatiquement chaque mois, une prochaine livraison le 2026-10-22 et des dépenses cumulées de 15800,00 yuans ; M-101204 est de la carte or. La fiche précise aussi que les numéros de membre et le registre d'attribution partagent la même source. En lisant ces deux phrases en regard des six lignes du tableau, les seuils des niveaux apparaissent : les deux lignes de la carte argent totalisent 4320,00 yuans et 1560,00 yuans, celles de la carte or totalisent 8640,00 yuans et 6980,00 yuans, et celles de la carte noire totalisent 15800,00 yuans et 22100,00 yuans, sans chevauchement entre les trois paliers. Les dépenses cumulées sont donc à la fois un champ affiché et le fondement de la répartition par niveaux.
+
+Les cycles de livraison se répartissent en trois formules, chaque mois, tous les 2 mois et chaque trimestre, avec cinq lignes en cours et une ligne en pause dans le tableau. La ligne en pause est M-101466, avec des dépenses cumulées de 6980,00 yuans ; son statut est indiqué dans un champ distinct, et la mise à l'arrêt n'est pas signalée en supprimant la ligne. La prochaine date de livraison la plus proche est le 2026-10-05 et la plus éloignée est le 2026-12-01, toutes deux rangées dans le même tableau.
+
+## Suivre un membre de la carte noire sur un cycle de livraison complet
+
+Prenons le membre de la carte noire M-100238 et suivons-le. L'interface d'administration le consigne comme actif, avec une commande par mois, un article de gélules molles de coenzyme Q10 x2, une prochaine livraison le 2026-10-22 et des dépenses cumulées de 15800,00 yuans. La même ligne figure sous les deux onglets de la classification des membres et des livraisons périodiques, et aucun second numéro n'est généré.
+
+À l'échéance de la date de livraison, le système génère une commande selon le cycle, expédie depuis les lots en stock sous douane, passe le dédouanement et la sortie de zone, puis réinscrit le numéro de bordereau d'expédition sur cette ligne. La valeur actuelle de la piste des commandes évolue en conséquence, la piste de la péremption déduit les lots, et la piste des délais enregistre la durée de dédouanement de cette fois. Une fois la réinscription terminée, les dépenses cumulées augmentent du montant effectivement payé et la prochaine date de livraison avance d'un cycle ; les détails montrent les champs, et le journal montre qui a modifié quoi et à quel moment.
+
+Une pause en cours de route passe aussi par la même ligne. Le statut de livraison périodique de M-101466 est en pause, son article et ses dépenses cumulées restent dans le tableau, et la ligne cesse simplement de générer la commande suivante ; à la reprise, on renoue avec le journal sans créer de nouveau numéro de membre. Si l'on consignait la pause en supprimant la ligne, le registre d'attribution perdrait une part d'historique et les seuils des niveaux ne pourraient plus être calculés.
+
+La convention monétaire doit être figée dès le départ. Les six lignes de dépenses cumulées sont toutes exprimées en yuans, écrites avec deux décimales, sans symbole monétaire et sans note de conversion ajoutée aux données de démonstration. Le bas de l'interface précise qu'il s'agit de données de démonstration, avec des exceptions et des corrections consignées et vérifiables ; ces valeurs servent donc à vérifier les calculs et les champs, et ne constituent pas des chiffres d'exploitation divulgués à l'extérieur.
+
+## Aligner les deux interfaces avant la bascule
+
+Le titre de la page de démonstration annonce quatre pistes, alors que le tableau liste en réalité six lignes : la piste des commandes, la piste des stocks, la piste du dédouanement, la piste de la logistique, la piste des délais et la piste de la péremption. Il n'y a pas de contradiction : les quatre flux de service, de S10 à S13, correspondent à la répartition des responsabilités, tandis que les six lignes portent les indicateurs de cet écran ; un même responsable peut suivre plus d'une ligne. Lisez le tableau par ligne pour les indicateurs et par flux pour les personnes, et ne prenez pas le titre de la page pour un nombre de lignes.
+
+Avant la bascule, faites trois choses : menez d'abord un cycle de livraison complet et vérifiez que la prochaine date de livraison et les dépenses cumulées avancent ensemble ; confrontez ensuite ligne par ligne les numéros de membre et les statuts des deux interfaces, y compris les seuils des niveaux, les enregistrements de pause et les journaux ; réinscrivez enfin sur le tableau de bord le résultat du traitement des lignes d'exception, afin que les 2 déclarations en attente, les 3 anomalies et les 2 lots proches de la péremption trouvent chacun leur place. Une fois ces trois étapes parcourues, le registre de fidélisation est véritablement repris.
+
+La capacité à conserver les achats répétés tient, dans le système, à deux points : les exceptions sont-elles visibles sur le moment, et les changements de statut laissent-ils une trace. Sur la page de démonstration, les six lignes de pistes sont visibles sur un seul écran, les six lignes de membres sont vérifiables champ par champ, et chaque ligne dispose de détails et d'un journal, de sorte que ces deux points trouvent leur place. Quant au temps nécessaire à la bascule, il dépend de l'alignement des champs de votre système actuel et du cycle de fonctionnement en parallèle ; les intégrations comparables sur le marché ouvert se mesurent en semaines, ce qui vaut seulement comme ordre de grandeur et ne doit pas être pris pour un engagement.
+
+Pour intégrer la classification des membres et les livraisons périodiques à votre interface d'administration des opérations sous douane existante, [contactez-nous](/fr/packages/).

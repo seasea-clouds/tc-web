@@ -18,7 +18,6 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Ushuhuda",
     "industries": "Viwanda",
-    "blog": "Maarifa",
     "checkCb": "CBEC",
     "checkCcc": "Elektroniki",
     "checkGacc": "Uagizaji wa Chakula",
@@ -27,7 +26,8 @@
     "checkTm": "Alama za biashara",
     "email": "Barua pepe",
     "freeCheckHeader": "Zana za Bure",
-    "getQuote": "Pata Nukuu"
+    "getQuote": "Pata Nukuu",
+    "insights": "Maarifa"
   },
   "Search": {
     "title": "Tafuta",
@@ -37,9 +37,9 @@
     "hint": "Andika ili kutafuta katika huduma, makala na Maswali Yanayoulizwa Mara kwa Mara",
     "types": {
       "service": "Huduma",
-      "blog": "Maarifa",
       "faq": "FAQ",
-      "regulation": "Kanuni"
+      "regulation": "Kanuni",
+      "insights": "Maarifa"
     }
   },
   "Navbar": {
@@ -57,7 +57,6 @@
     },
     "packages": "Vifurushi",
     "faq": "Maswali Yanayoulizwa Mara kwa Mara",
-    "blog": "Maarifa",
     "contact": "Wasiliana Nasi",
     "whatsapp": "WhatsApp",
     "quote": "Pata Nukuu",
@@ -94,7 +93,8 @@
     "report": "Ripoti",
     "reports": "Ripoti",
     "email": "Barua pepe",
-    "regulations": "Kanuni"
+    "regulations": "Kanuni",
+    "insights": "Maarifa"
   },
   "MobileTab": {
     "home": "Nyumbani",
@@ -121,7 +121,7 @@
   "breadcrumb": {
     "home": "Nyumbani",
     "services": "Huduma",
-    "blog": "Insights",
+    "insights": "Insights",
     "industries": "Viwanda",
     "packages": "Vifurushi",
     "faq": "FAQ"

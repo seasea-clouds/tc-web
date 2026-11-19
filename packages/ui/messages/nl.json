@@ -18,7 +18,6 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Getuigenissen",
     "industries": "Industrieën",
-    "blog": "Blog",
     "checkCb": "CBEC",
     "checkCcc": "Elektronica",
     "checkGacc": "Voedsel importeren",
@@ -27,7 +26,8 @@
     "checkTm": "Handelsmerken",
     "email": "E-mail",
     "freeCheckHeader": "Gratis hulpmiddelen",
-    "getQuote": "Vraag een offerte aan"
+    "getQuote": "Vraag een offerte aan",
+    "insights": "Blog"
   },
   "Search": {
     "title": "Zoekopdracht",
@@ -37,9 +37,9 @@
     "hint": "Typ om te zoeken in services, artikelen en veelgestelde vragen",
     "types": {
       "service": "Diensten",
-      "blog": "Inzichten",
       "faq": "FAQ",
-      "regulation": "Regelgeving"
+      "regulation": "Regelgeving",
+      "insights": "Inzichten"
     }
   },
   "Navbar": {
@@ -57,7 +57,6 @@
     },
     "packages": "Pakketten",
     "faq": "Veelgestelde vragen",
-    "blog": "Inzichten",
     "contact": "Neem contact met ons op",
     "whatsapp": "WhatsApp",
     "quote": "Ontvang een offerte",
@@ -94,7 +93,8 @@
     "report": "Rapport",
     "reports": "Rapporten",
     "email": "E-mail",
-    "regulations": "Regelgeving"
+    "regulations": "Regelgeving",
+    "insights": "Inzichten"
   },
   "MobileTab": {
     "home": "Home",
@@ -121,7 +121,7 @@
   "breadcrumb": {
     "home": "Home",
     "services": "Diensten",
-    "blog": "Insights",
+    "insights": "Insights",
     "industries": "Industrieën",
     "packages": "Pakketten",
     "faq": "FAQ"

@@ -12,7 +12,7 @@
  *       强制指定发布日期（定时发布排期用）
  *
  * 类型判定：读 submission.json 的 `kind` 字段（"blog" 默认 / "regulation"），
- * 决定落盘到 apps/blog 还是 apps/regulations。两类共用同一个检查脚本
+ * 决定落盘到 apps/insights 还是 apps/regulations。两类共用同一个检查脚本
  * （docs/submission-kit/submitter_check.py），站方不回改内容。
  */
 
@@ -29,8 +29,8 @@ const checker = path.join(repoRoot, 'docs/submission-kit/submitter_check.py');
 const TARGETS = {
   blog: {
     app: 'blog',
-    contentRoot: path.join(repoRoot, 'apps/blog/content'),
-    imagesRoot: path.join(repoRoot, 'apps/blog/public/images/blog'),
+    contentRoot: path.join(repoRoot, 'apps/insights/content'),
+    imagesRoot: path.join(repoRoot, 'apps/insights/public/images/insights'),
   },
   regulation: {
     app: 'regulations',
@@ -179,9 +179,9 @@ for (const { slug, artDir, expected } of entries) {
   if (kind === 'blog') {
     const key = 'cat_' + String(meta.category || '').replace(/-/g, '_').replace(/ & /g, '_').replace(/ /g, '_');
     for (const lang of locales) {
-      const msg = JSON.parse(fs.readFileSync(path.join(repoRoot, 'apps/blog/messages', `${lang}.json`), 'utf8'));
+      const msg = JSON.parse(fs.readFileSync(path.join(repoRoot, 'apps/insights/messages', `${lang}.json`), 'utf8'));
       if (!(key in (msg.Blog || {}))) {
-        repoProblems.push(`分类标签缺失：apps/blog/messages/${lang}.json 没有 Blog.${key}`);
+        repoProblems.push(`分类标签缺失：apps/insights/messages/${lang}.json 没有 Blog.${key}`);
         break;
       }
     }

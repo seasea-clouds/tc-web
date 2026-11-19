@@ -1292,7 +1292,6 @@
     "metaDescription": "SinoTrade Compliance veb saytında bütün xidmətlərə, sənaye bələdçilərinə, məqalələrə və səhifələrə baxın.",
     "servicesTitle": "Xidmətlər",
     "industriesTitle": "Sənayelər",
-    "blogTitle": "Məqalələr",
     "pagesTitle": "Digər Səhifələr",
     "home": "Ana Səhifə",
     "about": "Haqqımızda",
@@ -1300,7 +1299,8 @@
     "quote": "Qiymət Təklifi Alın",
     "faq": "Tez-tez Verilən Suallar",
     "packages": "Paketlər",
-    "testimonials": "Rəylər"
+    "testimonials": "Rəylər",
+    "insightsTitle": "Məqalələr"
   },
   "Cookie": {
     "message": "Bu sayt yalnız əsas autentifikasiya kukilərindən istifadə edir. Heç bir izləmə və ya reklam kukilərindən istifadə edilmir.",

@@ -18,7 +18,6 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Reference",
     "industries": "Průmyslová odvětví",
-    "blog": "Blog",
     "checkCb": "CBEC",
     "checkCcc": "Elektronika",
     "checkGacc": "Dovoz potravin",
@@ -27,7 +26,8 @@
     "checkTm": "ochranné známky",
     "email": "E-mail",
     "freeCheckHeader": "Nástroje zdarma",
-    "getQuote": "Získat cenovou nabídku"
+    "getQuote": "Získat cenovou nabídku",
+    "insights": "Blog"
   },
   "Search": {
     "title": "Vyhledávání",
@@ -37,9 +37,9 @@
     "hint": "Pište pro vyhledávání ve službách, článcích a často kladených dotazech",
     "types": {
       "service": "Služby",
-      "blog": "Postřehy",
       "faq": "FAQ",
-      "regulation": "Předpisy"
+      "regulation": "Předpisy",
+      "insights": "Postřehy"
     }
   },
   "Navbar": {
@@ -57,7 +57,6 @@
     },
     "packages": "Balíčky",
     "faq": "Často kladené otázky",
-    "blog": "Postřehy",
     "contact": "Kontaktujte nás",
     "whatsapp": "WhatsApp",
     "quote": "Získejte cenovou nabídku",
@@ -94,7 +93,8 @@
     "report": "Zpráva",
     "reports": "Zprávy",
     "email": "E-mail",
-    "regulations": "Předpisy"
+    "regulations": "Předpisy",
+    "insights": "Postřehy"
   },
   "MobileTab": {
     "home": "Domů",
@@ -121,7 +121,7 @@
   "breadcrumb": {
     "home": "Domovská stránka",
     "services": "Služby",
-    "blog": "Insights",
+    "insights": "Insights",
     "industries": "Průmyslová odvětví",
     "packages": "Balíčky",
     "faq": "FAQ"

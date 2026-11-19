@@ -1,0 +1,98 @@
+---
+title: "Hvordan to strømme sætter spor, kontrolregister og femdokumentarkiv pr. ordre"
+date: "2027-05-25"
+category: "E-commerce"
+excerpt: "Tre dokument i realtid til told, ni grænseflader med daglig sundhed. Informationsstrømmen sender data rigtigt, efterlevelsen sætter spor, seks kontrolpunkter med hvert sit arkivnummer."
+references:
+  - title: "Caishuiguan [2016] nr. 18 fra finansministeriet, generaltoldforvaltningen og den statlige skatteforvaltning, skattepolitik for detailimport inden for grænseoverskridende nethandel"
+    url: "https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html"
+  - title: "Meddelelse 2018 nr. 486 fra seks myndigheder med handelsministeriet, om forbedret tilsyn med detailimport inden for grænseoverskridende nethandel"
+    url: "https://cws.mofcom.gov/gztz/art/2018/art_b7becbacb58a4d0d8bf17b91a168f044.html"
+  - title: "Generaltoldforvaltningens meddelelse 2018 nr. 194 om tilsyn med detailimport og detaileksport inden for grænseoverskridende nethandel"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+---
+
+Om en tilsynsforespørgsel kan besvares, afhænger ikke af, hvor mange menuer der er stillet op i baggrunden, men af, om hvert kontrolpunkt har et arkivnummer, som kan hente dokumenterne tilbage. At de tre dokumenter sendes i realtid til tolden, og at de ni grænseflader hver dag logger deres sundhed, løser det problem, at data skal sendes rigtigt, mens det forhold, at hvert af de seks kontrolpunkter bærer sit eget femdokumentarkiv, som kan slås op efter nummer, løser det problem, at processen skal efterlade spor. Begge strømme ligger på det samme ordrenummer, og først derved kan man ved en kontrol gå baglæns fra en enkelt ordre tilbage til det enhedsdokument, der blev udstedt før anmeldelsen. Den fremgangsmåde, hvorefter ordren, betalingen og fragtbrevet først matches én ad gangen og derefter frigives, er skrevet ind i meddelelse 2018 nr. 486 fra de seks myndigheder med handelsministeriet og i generaltoldforvaltningens meddelelse 2018 nr. 194.
+
+## Hvor de tre afkrydsede risikoinformationer fra kassesiden gemmes
+
+Risikoinformationsregisteret er den første skærm i baggrunden, og de tre forklaringskort på siden gør hver for sig rede for, hvilket trin det drejer sig om, hvad der registreres, og hvor oplysningerne mappes hen. Det første kort fortæller, at dette er risikoinformationsregisteret, at der står én information på hver række, at fanerne deler visningen i alle, afkrydsede og ikke afkrydsede, og at hver række rummer seks felter, nemlig informationen, dens indhold, om krydset er påkrævet, krydstidspunktet, ordrenummeret og arkivnummeret. Det andet kort fortæller, at begge poster peger på ordren SO260922-0555, at den ene handler om, at grænseoverskridende varer ikke er omfattet af syv dages returret uden grund, at den anden handler om, at den kinesiske elektroniske etiket skal kontrolleres, og at arkivnumrene er DA2609-0301 og 0302. Det tredje kort fortæller, at også det, forbrugeren bekræftede på kassesiden, bliver skrevet ned, så man kan spore tilbage til den oprindelige ordre.
+
+Topfeltet rækker fra butikken, markedspladsen, CRM, distribution, markedsføring, promovering, data, kundeservice, indhold, værditillægte tjenester og flere helt til apps, i alt elleve menuer i baggrunden for sundhedsvarer på tværs af grænsen. Venstrefeltet viser ordrehåndteringen under markedspladsen med dens seks underpunkter, nemlig alle ordrer, leveringsstyring, pakningsstyring, lokale fragtbreve, medlemsgruppekøb og kanalordremeldinger, og længere nede følger eftersalgsstyringen med de to poster eftersalgsordrer og bytteordrer samt driftværktøjerne. Hovedpanelets overskrift lyder tre risikoinformationer og afkrydsning, og kolonneoverskrifterne er information, indhold, krydskrav, krydstidspunkt, ordrenummer, arkivnummer og handling, altså syv kolonner.
+
+- Risikoinformation et, grænseoverskridende varer er ikke omfattet af syv dages returret uden grund, kræver kryds, 2026-09-22 14:06, SO260922-0417, DA2609-0301, detaljer og log;
+- Risikoinformation to, kontrol kræves når produktetiketten er på fremmedsprog, kræver kryds, 2026-09-22 14:06, SO260922-0417, DA2609-0302, detaljer og log;
+- Risikoinformation tre, den årlige personlige kvote refunderes ikke efter brug, kræver kryds, 2026-09-22 14:07, SO260922-0417, DA2609-0303, detaljer og log;
+- Risikoinformation et, grænseoverskridende varer er ikke omfattet af syv dages returret uden grund, kræver kryds, 2026-09-21 09:31, SO260921-0088, DA2609-0304, detaljer og log;
+- Risikoinformation tre, den årlige personlige kvote refunderes ikke efter brug, kræver kryds, 2026-09-19 20:12, SO260919-0305, DA2609-0305, detaljer og log.
+
+Alle fem rækker kræver et kryds, og både detaljer og log findes som to indgange på hver eneste række. Under listen står der 5 poster i alt og 20 pr. side, sidenavigationen står på 1, og begge pile er til stede. Krydstidspunktet og arkivnummeret gemmes parvis, og når det senere skal forklares, hvilken information forbrugeren bekræftede og på hvilket tidspunkt, kan man blot hente posten direkte efter DA-nummeret uden at skulle bede butikken om et skærmdump igen.
+
+![Demo af risikoinformation og bekræftelse med tre forklaringskort, fem rækker i registret for tre risikokryds, krydsmarkeringer, krydstider, ordrenumre, arkivnumre og en sidenavigation med fem poster af tyve pr. side](/images/insights/info-compliance-flows-checkpoints-archive-china/risk-notices-acknowledgements-demo.webp)
+
+Den årlige personlige transaktionskvote følger Caishuiguan [2016] nr. 18, og hvordan den kvote, der allerede er brugt, skal justeres, afgøres af den post, der bliver skrevet, når deklarationslisten frigives.
+
+## Hvordan de to strømme deler arbejdet, hvem der kontrolleres først ved en forespørgsel
+
+Blandt syv forretningsstrømme bliver informationsstrømmen og efterlevelsesstrømmen på denne skærm skrevet hver for sig. Informationsstrømmen garanterer, at data bliver sendt rigtigt, idet de tre dokumenter sendes i realtid, de ni grænseflader hver dag logger deres sundhed, og det hele lander i forsyningskædevisen under S11. Efterlevelsesstrømmen garanterer, at processen efterlader en post, idet alle seks kontrolpunkter føres ind i kontrolregisteret og lander under efterlevelsesrevisionen i S25. På én og samme ordre mødes de to strømme ved det samme kontrolpunkt.
+
+Tidslinjen stiller de seks beslutningspunkter, som en ordre skal igennem, op på én række, nemlig adgangsafgørelsen, trematchningen, identitetskontrollen, kvotekontrollen, påstandskontrollen og reglen om forbud mod videresalg. Hvert punkt er både en datakontrol i informationsstrømmen og et spor i efterlevelsesstrømmen. Konstanterne og dokumentnumrene følger tabellen over tilsynskonstanter, og kriterierne for, hvordan kontrolpunkterne bedømmes, følger svaret på tilsynsforespørgslen, så der ikke bliver skrevet en særskilt version af dem på siden.
+
+![Overblik over information og efterlevelse med fem fakta om informationsstrømmen, fire om efterlevelsesstrømmen, seks kontrolpunktstatusrækker i centret for efterlevelse og fakturering, arbejdsdelingen og en tidslinje med seks punkter](/images/insights/info-compliance-flows-checkpoints-archive-china/info-compliance-flows-overview.webp)
+
+## Hvad der tæller som korrekt tilbagesending af de tre dokumenter
+
+Informationsstrømmens kontrolpunkt kontrollerer, at de tre dokumenter sendes i realtid til tolden, som er koblet til over 50 toldsteder og mere end 70 ERP-systemer, og når tidsfølgen kontrolleres for hver enkelt forsendelse, bliver ordren og betalingen skubbet først, mens fragtbrevet først bliver skrevet tilbage ved frigivelsen, så en omvendt rækkefølge kræver en ny anmeldelse. Data opbevares inde i landet, og købere, der er opført på kontrollisten, skal bekræftes inden for 15 dage. De ni grænseflader, som blandt andet omfatter ordreoverførsel og betalingsretur, logger deres sundhed hver dag, og en enkelt usund grænseflade bliver afsløret allerede samme dag i stedet for først at blive opdaget ved månedsafstemningen.
+
+Grænsefladebeviserne findes to steder, idet matchekonsollen viser, om de tre dokumenter matcher ordre for ordre, og sundhedsloggen viser, hvilken af de ni grænseflader der var nede på hvilken dag. Disse to steder er ikke en dekoration, som driften kan se på, men de oprindelige registreringer, som ved en forespørgsel forklarer, hvornår data ankom, og om de undervejs blev afbrudt. Informationsstrømmen har alene til opgave at få data sendt rigtigt og kan ikke træde i stedet for efterlevelsesstrømmen og svare på, hvem der skrev under på dette trin.
+
+## Hvilke dokument hvert af de seks kontrolpunkter gemmer
+
+Efterlevelsesstrømmens kontrolpunkt kontrollerer, at alle seks punkter efterlader spor. Kontrolpunkterne er bygget ind i hver enkelt strøm, og hvert punkt efterlader en post, som kan hentes tilbage. Påstandskontrollen dækker tre kategorier, nemlig produktdetaljesider, livemanuskripter og materiale fra kreatører, mens anmeldelseskontrollen, kontrollen af den tredelte leverance og forespørgselssvaret hver har deres egen skærm til at efterlade spor. Grænsefladebeviset er kontrolregisteret og femdokumentarkivet, og højrepanelet er dets realtidsvisning.
+
+Centret for efterlevelse og fakturering har kolonneoverskrifterne kontrolpunkt, femdokumentarkiv og status, og seks rækker ligger skrevet ind én efter én.
+
+- Kontrol af enhedskvalifikationer, enhedsdokument og kvalifikationsdokument, gennemført;
+- Adgangskontrol for SKU, anmeldelsesdokument og etiketdokument, gennemført;
+- Konsistenskontrol af tre dokument, ordre, betaling og fragtbrev, gennemført;
+- Kontrol af deklarationslisten, deklarationsliste og toldangivelse, i gang;
+- Frigivelse og kvittering for modtagelse, frigivelsesdokument og kvitteringsdokument, ikke påbegyndt;
+- Arkivering af årlig egenkontrol, egenkontrolsprotokol og korrigeringsdokument, ikke påbegyndt.
+
+Under panelet står der 12 poster i alt og 20 pr. side, sidenavigationen står på 1, og billedteksten lyder systemgrænsefladedemo med kontrolpunkter og fem dokument. De tre statusser gennemført, i gang og ikke påbegyndt har hver deres farvemarkering, og en række, hvor status står tom, bliver aldrig regnet for gennemført, så man først skal gøre status tydelig og derefter nævne arkivnummeret, og den rækkefølge må ikke vendes om.
+
+## Hvordan man læser de ni rækker i kontrolregisteret
+
+De tre forklaringskort på skærmen til kontrolpunktarkivering låser felterne fast. Det første kort siger, at kontrolregisteret har ét kontrolpunkt på hver række, at fanerne deler visningen i alle, før anmeldelse, under toldbehandling og efter levering, og at hver række registrerer dokumenterne, udløsningspunktet, den ansvarlige, arkivnummeret, sluttidspunktet og status. Det andet kort siger, at kontrollen af enhedskvalifikationer svarer til enhedsdokumentet og kvalifikationsdokumentet, at SKU-adgang svarer til anmeldelsesdokumentet og etiketdokumentet, og at begge udføres af efterlevelsesrollen før anmeldelsen og før lanceringen. Det tredje kort siger, at blandt kapitalstrømmen, informationsstrømmen, efterlevelsesstrømmen og faktureringsstrømmen er det netop efterlevelsesstrømmen, der på hvert kontrolpunkt efterlader ét arkivnummer, og at dette nummer bruges til at hente kontrolpunktets dokumenter frem.
+
+Topfeltet og venstrefeltet er de samme som på skærmen med risikoinformationer, mens hovedpanelets overskrift er skiftet ud med kontrolregister og femdokumentarkiv, og kolonneoverskrifterne er kontrolpunkt, femdokumentarkiv, udløsningspunkt, ansvarlig, arkivnummer, sluttidspunkt og status, altså syv kolonner, hvorefter ni rækker ligger skrevet ind én efter én.
+
+- Kontrol af enhedskvalifikationer, enhedsdokument og kvalifikationsdokument, før anmeldelse, efterlevelsesrollen, GD2609-001, 2026-09-18, gennemført;
+- Adgangskontrol for SKU, anmeldelsesdokument og etiketdokument, før lancering, efterlevelsesrollen, GD2609-002, 2026-09-19, gennemført;
+- Konsistenskontrol af tre dokument, ordre, betaling og fragtbrev, før deklaration, toldrollen, GD2609-003, 2026-09-20, gennemført;
+- Kontrol af deklarationslisten, deklarationsliste og toldangivelse, ved deklaration, toldrollen, GD2609-004, afslutningstid tom, i gang;
+- Frigivelse og kvittering for modtagelse, frigivelsesdokument og kvitteringsdokument, efter frigivelse, driftsrollen, arkivnummer og afslutningstid begge tomme, ikke påbegyndt;
+- Arkivering af årlig egenkontrol, egenkontrolsprotokol og korrigeringsdokument, hvert kvartal, efterlevelsesrollen, arkivnummer og afslutningstid begge tomme, ikke påbegyndt;
+- Stikprøvekontrol af etiketoverholdelse, etiketdokument og anmeldelsesdokument, efter lancering, efterlevelsesrollen, GD2609-005, afslutningstid tom, i gang;
+- Afstemning af provisionsregisteret, provisionsdokument og afregningsdokument, efter afregning, økonomirollen, arkivnummer og afslutningstid begge tomme, ikke påbegyndt;
+- Adgangskontrol for SKU, anmeldelsesdokument og etiketdokument, før lancering, efterlevelsesrollen, GD2610-001, 2026-09-19, gennemført.
+
+Under listen står der 12 poster i alt og 20 pr. side, og sidenavigationen står på 1. At arkivnummeret står tomt, betyder ikke, at kontrolpunktet slet ikke findes, men at dette trin endnu ikke har nået det tidspunkt, hvor dokumentet udstedes, og på de rækker, hvor status står som ikke påbegyndt, er den ansvarlige allerede skrevet ind i kontrolregisteret, så en forespørgsel kan svare på, hvem der har ansvaret, og hvilket dokument der mangler.
+
+![Demo af kontrolpunkter og dokumentarkiv med tre forklaringskort, ni rækker i kontrolregisteret og femdokumentarkivet, udløsningspunkter, ansvarlige, arkivnumre, afslutningstider, tre statusfarver og en sidenavigation med tolv poster af tyve pr. side](/images/insights/info-compliance-flows-checkpoints-archive-china/checkpoints-document-archive-demo.webp)
+
+## En gennemgang af rækken GD2609-003
+
+Tag den konsistenskontrol af tre dokumenter, der blev gennemført på datoen 2026-09-20, som en sag, der skal undersøges. Denne række angiver, at den udløses før deklarationen, at toldrollen er ansvarlig, at arkivnummeret er GD2609-003, og at dokumenterne er ordren, betalingen og fragtbrevet. Først når man ud fra arkivnummeret henter de tre dokumenter tilbage og derefter går tilbage til informationsstrømmen for at se tidsfølgen, hvor ordren og betalingen bliver skubbet først, fragtbrevet bliver skrevet tilbage ved frigivelsen, og sundhedsloggen ikke har nogen nedetidsregistrering den pågældende dag, hænger denne række sammen.
+
+Følger man det samme ordrenummer bagud, blev kontrollen af enhedskvalifikationer med GD2609-001 gennemført den 2026-09-18, og SKU-adgangskontrollen med GD2609-002 blev gennemført den 2026-09-19, og begge disse gennemførte kontroller ligger før konsistenskontrollen af tre dokumenter før deklarationen. Går man videre bagud til kassesiden, står DA-numrene for risikoinformationerne parvis sammen med krydstidspunkterne række for række. De fire trin deler ét og samme ordrenummer, og én enkelt søgning er nok til at finde dem alle.
+
+Et andet tilfælde er kontrollen af deklarationslisten med GD2609-004, hvor sluttidspunktet står tomt, og status er i gang. Selv om arkivnummeret findes, er dokumenterne endnu ikke komplette, og kundeservicen kan derfor kun svare, at sagen er i gang, og kan ikke svare, at den er gennemført. Arkivnummeret er den nøgle, der henter dokumenterne tilbage, og ikke et bevis på, at kontrollen er gennemført, og når man skriver disse to ting hver for sig i kontrolregisteret, undgår man, at registeret ved en forespørgsel giver et svar, der er fyldigere end fakta.
+
+## Sæt arkivnummeret først
+
+Informationsstrømmen sørger for, at data bliver sendt rigtigt, efterlevelsesstrømmen sørger for, at processen efterlader spor, og de to strømme mødes ved det samme kontrolpunkt. Før driftstart låser man tre ting fast, nemlig at ét ordrenummer går igennem begge strømme, at hvert af de seks kontrolpunkter bærer sit eget arkivnummer, og at hver række angiver udløsningspunktet, den ansvarlige og status. De øvrige grænseflader kan tilsluttes lidt efter lidt, de ni grænseflader logger stadig deres sundhed hver dag, og selv om der kommer én til, ændrer det ikke kontrolregisterets form.
+
+Forklaringskortene skriver, at begge risikoinformationsposter peger på SO260922-0555, mens de tre første rækker i tabellen bærer ordrenummeret SO260922-0417, og arkivnummeret GD2610-001 på den sidste række i kontrolregisteret peger på en anden måned end den, som sluttidspunktet 2026-09-19 ligger i. Dette er forskelle i den måde, som demoens skærmbilleder er udtrykt på, og datoerne, ordrenumrene og arkivnumrene på skærmen tjener alle til at vise, hvordan en række bliver dannet, og hvordan man søger bagud i den. I virkeligheden er det arkivnummeret, sluttidspunktet, den aktuelle faktura og kravene fra den kompetente myndighed på hver enkelt række, der er afgørende, og status følger den post, som systemet har skrevet den pågældende dag.
+
+For at koble kontrolregisteret og femdokumentarkivet til en sporbar kæde for din butik, dit lager og din afregningsenhed, velkommen til at [kontakte os](/da/packages/).

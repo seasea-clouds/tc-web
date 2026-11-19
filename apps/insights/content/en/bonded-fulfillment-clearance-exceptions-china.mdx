@@ -1,0 +1,68 @@
+---
+title: "Bonded Fulfillment and Clearance Exceptions, Two Hour Triage and Batch Segregation"
+date: "2027-05-04"
+category: "E-commerce"
+excerpt: "Bonded fulfillment stocks goods; clearance aligns three documents. Discrepancies get a ticket, amended and re-pushed. Failed inspection is an exception; over quota means general trade."
+references:
+  - title: "General Administration of Customs Announcement No. 194 of 2018 on the supervision of cross-border e-commerce retail import and export goods"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Notice of Six Ministries Including the Ministry of Commerce on Improving the Supervision of Cross-border E-commerce Retail Imports (Shang Cai Fa [2018] No. 486)"
+    url: "https://www.gov.cn/zhengce/zhengceku/2018-12/31/content_5437823.htm"
+  - title: "Ministry of Finance, General Administration of Customs and State Taxation Administration, Cai Guan Shui [2016] No. 18 on the tax policy for cross-border e-commerce retail imports"
+    url: "https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html"
+---
+
+A discrepancy in bonded fulfillment or clearance does not hold the whole batch: one order gets one ticket row, the discrepant fields are located within 2 hours, and the correction is re-pushed in 24 hours while the other orders are released as usual. This path follows General Administration of Customs Announcement No. 194 of 2018 and uses only the single Mode 1210 channel, with four comprehensive bonded zone sites plus a warehouse in Hong Kong, China under the same rules. Which step failed, who changed it and when it was re-pushed all sit on the same ticket.
+
+The three-document timing follows the push order: order and payment go first, the waybill is added at picking, and each order is checked; at clearance the three documents are cross-checked and the quota is verified, release and picking start only after verification passes, and tracking is fed back per leg. Any discrepancy becomes an exception ticket, with a record for triage, correction and re-push and an owner named for each. That is what makes batch segregation defensible: the discrepant orders in a batch are handled apart from the rest instead of stopping the whole batch.
+
+![A demonstration of bonded fulfillment and clearance exceptions, with the three-document timeline on the left running from order creation, document push, customs verification, release and picking to exception handling, and the bonded sites, aligned three-document clearance timing and three exception dispositions on the right, plus three exception tickets and the bonded ledger below](/images/insights/bonded-fulfillment-clearance-exceptions-china/fulfillment-clearance-exceptions-batch-segregation.webp)
+
+## Where a discrepancy lands between push and release
+
+One order walks five steps from push to release, and the output of each step is the input of the next. The three documents are the order, the payment record and the waybill; their timing differs, and so does the trail each leaves.
+
+- Order created: generated when the consumer orders, with order and payment logged and identity verified; the trail is the order and payment record.
+- Three documents pushed: order and payment go first, the waybill is added at picking, checked per order; the trail is the push record.
+- Customs verification: a three-document cross-check and quota check at clearance; the trail is the verification result and quota deduction.
+- Release and picking: released once verified, picking starts at once, tracking fed back per leg; the trail is the release record and per-leg tracking.
+- Exception handling: a ticket opens when discrepancies appear, triaged in 2 hours and amended and re-pushed in 24 hours; the trail is the ticket and re-push status.
+
+On the bonded fulfillment side, goods enter the zone first and stock is queryable. The candidate sites are Yiwu, Hangzhou, Guangzhou, Shenzhen and a warehouse in Hong Kong, China; the fulfillment provider is AEO certified, sea, air and sea-air legs are all available, and customs status is visible in our own system. You decide the final port, and the candidate list is handed over at the start, so there is no need to wait until the goods arrive at the port.
+
+On the clearance side, three columns are aligned by timing. For document timing, order and payment go first and the waybill is written back at release; the quota check runs at clearance, and over quota means reroute or return; the exception path is amend and re-push, with a failed check treated as an exception. All three columns sit in one flow table, so whoever takes over can see from the ticket number which column is stuck.
+
+The demonstration page first lists three open tickets, each with detail and log entries: WO260922-01 has a declaration and waybill mismatch, located as a delayed waybill write-back; WO260921-02 has a payment amount variance, located as a different FX rate timing; WO260919-03 is missing recipient information, located as a missing front-end required field. All three later follow the same re-push flow.
+
+## Three dispositions, without holding the whole batch
+
+When the three documents do not match, the discrepant fields are located, then amended and re-pushed: triage within 2 hours and the amendment done in 24 hours. A failed inspection is handled as an exception and does not hold up the release of the whole batch. Over quota switches to general trade or return. All three dispositions land as tickets, with ticket numbers and re-push status traceable, and who changed what and when on the same row. If one discrepant order holds the whole batch for manual checking, the waiting time lands on orders that could have left the zone normally, which is not worth it for you: a batch usually has only one or two discrepant orders.
+
+The bonded ledger is the supervision ledger of the bonded warehouse: zone entry, in-stock and zone exit are logged line by line, goods and ledger must match, and it is the shared reconciliation baseline for inspection, stocktaking and handover. It records batch, shelf life and balance line by line, so a row changed by a ticket can be traced to the balance movement of the same batch and shelf life. Only when the ledger and the tickets agree is the exception handling for that batch finished.
+
+![An interface demonstration of the discrepancy ticket status flow, with six rows listing ticket number, discrepancy type, triage result, correction, owner, update time, re-push status and actions, marked six records in total and twenty per page at the bottom](/images/insights/bonded-fulfillment-clearance-exceptions-china/discrepancy-ticket-flow-system-demo.webp)
+
+## One ticket from discrepancy to re-pushed
+
+Take WO260922-01 as the worked example. It has a declaration and waybill mismatch, located as a delayed waybill write-back; the correction is to write the waybill number back, the owner is the customs post, the update time is 2026-09-22 17:05 and the re-push status is re-pushed. Until the waybill number was written back, this ticket stayed in the To triage tab; once it was filled in, the declaration and waybill were re-pushed under the same waybill number, and only then did this order move from To re-push to re-pushed, while the other verified orders in the batch were released as usual.
+
+WO260921-02 is another kind: a payment amount variance, located as a different FX rate timing; the correction is to unify the timing to declaration time, the owner is the finance post, the update time is 2026-09-21 15:40 and the status is still To re-push. The interface separates To triage, To correct and To re-push tabs, one ticket per row, with number, type, triage result, action, owner, update time and re-push status on the same row. Exception handling and batch isolation become traceable this way: triage, correction and re-push each have an owner.
+
+The ticket status flow shows eight columns: ticket number, discrepancy type, triage result, correction, owner, update time, re-push status and actions. The bottom of the interface marks 6 records in total and 20 per page, and each row ends with detail and log entries. All six rows follow the same pattern:
+
+- WO260922-01, declaration and waybill mismatch, delayed waybill write-back, write the waybill number back, customs post, 2026-09-22 17:05, re-pushed, detail and log;
+- WO260921-02, payment amount variance, different FX rate timing, unify to declaration time, finance post, 2026-09-21 15:40, To re-push, detail and log;
+- WO260919-03, missing recipient information, missing front-end required field, add front-end required field validation, operations post, 2026-09-19 11:22, re-pushed, detail and log;
+- WO260918-04, quota query timeout, query channel fluctuation, recovered after automatic retry, customs post, 2026-09-18 09:12, re-pushed, detail and log;
+- WO260917-05, missing waybill tracking, carrier missed the push, push the tracking interface, operations post, 2026-09-17 16:48, re-pushed, detail and log;
+- WO260916-06, missing declaration field, incomplete declaration elements, re-declare after the fields are filled, customs post, 2026-09-16 11:30, To re-push, detail and log.
+
+Two of the six rows are still To re-push and the other four are re-pushed; the corrections on the two pending rows are already recorded, and only the re-push step is missing. Match the ticket number back to the three-document push record, then back to the batch and shelf life in the ledger, and a front-line operator can see which orders in a batch were isolated and which left the zone as usual, without waiting for a batch reconciliation to fill the gap.
+
+## Set up how the two tables connect before launch
+
+Fix three things before launch: write the three-document timing into the flow table in push order, write the exception handling for the three discrepancy types as fixed actions, and fix the ledger fields so batch, shelf life and balance are recorded per row. If any of the three is missing, tickets just pile up and the re-push status stays at To re-push. Announcement No. 194 of 2018 puts declaration list release, three-document data comparison and identity verification into the declaration process, while Shang Cai Fa [2018] No. 486 sets the supervisory framework for cross-border e-commerce retail imports; the rules sit in the documents, but the landing point is these two tables of yours.
+
+Fix the three-document timing, the exception dispositions and the ledger fields first, then schedule the first batch of bonded orders. How a discrepancy is located, which step re-pushes it, and which ticket maps to which ledger row can all be settled before launch, without waiting for a batch reconciliation to fill the gap. The ticket numbers, times and statuses in the interface demonstration are illustrative only; the actual declaration practice follows the requirements of the competent authority, and quota and port lists follow the rules in force for the period.
+
+If you want the discrepancy tickets connected to the three-document timing and checked back against the ledger line by line under your current bonded warehouse and port setup, [Contact us](/en/packages/).

@@ -1,0 +1,111 @@
+---
+title: "Sju flöden i en bokföring på en dagrapport, fjorton moduler och ett gränssnitt"
+date: "2027-04-27"
+category: "E-commerce"
+excerpt: "Sju flöden delar ett ordernummer, fjorton moduler styrs av signaturbehörighet. Ett enda system bygger varje dagrapport utan manuell hopfogning, en part ansvarar för hela kedjan."
+references:
+  - title: "Finansministeriet, Generaltullstyrelsen och Statens skatteförvaltning, Caishuiguan [2016] nr 18 (skattepolitik för detaljimport via gränsöverskridande e-handel)"
+    url: "https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html"
+  - title: "Meddelande nr 486 av år 2018 från sex ministerier inklusive handelsministeriet, om förbättrad tillsyn av detaljimport via gränsöverskridande e-handel"
+    url: "https://cws.mofcom.gov/gztz/art/2018/art_b7becbacb58a4d0d8bf17b91a168f044.html"
+  - title: "Generaltullstyrelsens meddelande nr 194 av år 2018 om tillsyn av detaljimport och detaljexport via gränsöverskridande e-handel"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+---
+
+Att sälja varor till Kina under tullbondsmodellen fungerar när sju affärsflöden hänger på en och samma bokföring, inte när man har kopplat in flest leverantörsgränssnitt. Villkoren är konkreta: varje order skriver från betalning till kvitterad leverans in handelsflödet, varuflödet, logistikflödet, kapitalflödet, informationsflödet, regelefterlevnadsflödet och fakturaflödet under ett och samma ordernummer; fjorton förmågor delas upp i leveranser som kan godkännas var för sig, och en part ansvarar för resultatet från införsel i zonen till kvitterad leverans. Utan den bokföringen måste dagrapporten fogas ihop för hand, vilket ser bra ut en gång men blir fel inom en månad.
+
+## Varför en dagrapport börjar med ett ordernummer
+
+När vi gjorde projektet lämnade skiljebladet i kapitel fem bara tre godkännandefrågor: hur de sju affärsflödena länkas till en kedja; vilka steg en order går igenom från beställning till kvitterad leverans; om den dagliga driften och en kampanjtopp kan bäras samtidigt. Alla tre pekar mot samma sak, nämligen om ett enda ordernummer kan hämta upp posterna från alla sju flödena när något går fel. Går det, blir dagrapporten en biprodukt; går det inte, får man be fyra leverantörer om varsin tabell och jämka ihop dem för hand.
+
+![Skiljeblad i kapitel fem med tre godkännandefrågor om hur de sju affärsflödena länkas till en kedja, vilka steg en order går igenom och om daglig drift och en kampanjtopp kan bäras samtidigt](/images/insights/seven-flows-one-ledger-bonded-exports-china/chapter-05-running-it-divider.webp)
+
+Skiljebladet bär också en rad om stommen: sju flöden och en bokföring är ryggraden, och pilotkedjan läggs ut cell för cell. En cell här är den rad som var och en av de fjorton förmågorna lämnar i bokföringen.
+
+## Sju flöden är inte sju system
+
+Översiktssidan ställer upp de sju flödena på en rad: handelsflödet, varuflödet, logistikflödet, kapitalflödet, informationsflödet, regelefterlevnadsflödet och fakturaflödet. De är inte sju system att upphandla utan sju slags poster som måste bevaras. Handelsflödet skriver order och avtal, varuflödet skriver batcher och hållbarhet, logistikflödet skriver spårning och kvitterad leverans, kapitalflödet skriver inbetalningar, utbetalningar och saldon, informationsflödet skriver gränssnitt och orderstatus, regelefterlevnadsflödet skriver deklarationer, anmälningar och kontrollpunkter, och fakturaflödet skriver fakturor och kreditnotor. Ett ordernummer delat av alla sju slagen är den bokföringen.
+
+Tullkontrollkoden för den här kanalen är 1210, med fullständigt namn bondad gränsöverskridande e-handel; en order frigörs först när uppgifterna om order, betalning och logistik har matchats order för order, och kontrollreglerna står i meddelande nr 486 av år 2018 från sex ministerier inklusive handelsministeriet. Just de där spåren per order är vad regelefterlevnadsflödet skriver varje dag.
+
+Det som får strukturen att fungera är sju flöden på en bokföring, inte steg ihopsydda från olika leverantörer. En ihopsydd lösning ser likadan ut en vanlig dag men avslöjas vid första återbetalning eller ändring: ordern är makulerad i butiken, betalningsposten står fortfarande öppen, logistikposten har redan lämnat lagret, de tre posterna säger olika saker och ingen kan lägga fram ett fullständigt svar.
+
+![Översikt över sju flöden och en bokföring med sju affärsflöden, fjorton moduler, tre förklaringskort och ett utdrag ur dagrapporten för de senaste tre dagarna](/images/insights/seven-flows-one-ledger-bonded-exports-china/seven-flows-14-modules-overview.webp)
+
+Ett lapptäcke har en ännu hårdare följd: ingen ansvarar för regelefterlevnad, data eller fakturering som helhet. Bryts ett enda flöde stannar allt efter, oftast fastnar remitteringen eller tullklareringen. Därför är det första kortet på översiktssidan mörkblått och lyder ”en part orkestrerar”, medan de sju övriga bär flödesnamnen.
+
+## Hur fjorton moduler delas upp efter signaturbehörighet
+
+De fjorton modulerna löper från S0 till S13 och motsvarar fjorton poster i tjänstekatalogen som kan levereras och godkännas var för sig. Uppdelningen följer signaturbehörighet, inte system: varje modul lämnar ifrån sig en leverans som någon skriver under. De första sju når fram till frigivning och avräkning, de sista sju sköter drift och bevarade spår.
+
+- S0 Diagnos och tillträde: bedömningen av tillträde och dess underlag, med kategori, tullkod och målkanal utlagda först.
+- S1 Etablering av juridisk enhet: näringslicens och tullregistrering, saknas något kan systemet inte öppna ett konto.
+- S2 Plattformsbutik: lansering och aktivering av betalning, här landar kategorikvalifikationerna.
+- S3 Produktanmälan: klassning och dokument, en felaktig tullkod i produktanmälan gör att varje senare deklaration måste ändras.
+- S4 Bondat lager: en vy över tullagerbokföringen, med lager synligt för varumärkesägaren.
+- S5 Tullklarering och frigivning: uppgifterna om order, betalning och logistik matchas order för order innan frigivning.
+- S6 Kapitalavräkning: avräkningsbesked och underlag, med varubetalningar och serviceavgifter bokförda var för sig.
+- S7 Distribution: kundanskaffning och kampanjattribuering, återräknat från ordernumret.
+- S8 Eftermarknad: returhantering, hur returorsaker klassas avgör om medlemsdata är rena.
+- S9 Datariskkontroll: dataregelefterlevnad, här fastställs reglerna för gränsöverskridande överföring och lagring.
+- S10 Regelefterlevnadsgranskning: egna kontroller och loggar, används för att styrka vad som hände när något går fel.
+- S11 Leveranskedja: vyer över order och lager, förhandsbokningar får inte vila på gissningar.
+- S12 Innehållsgranskning: sidor och livesändningsmanus, med kinesiska etiketter och påståenden granskade parti för parti.
+- S13 Medlemskap och prenumeration: nivådata hämtas från samma bokföring.
+
+Tre förklaringskort låser fast hur de används. Det första förklarar varför de sju flödena måste vara en uppsättning: i ett lapptäcke äger ingen regelefterlevnad, data eller fakturering, ett brutet flöde håller tillbaka resten och remittering eller tullklarering fastnar först. Det andra förklarar de fjorton modulerna: S0 till S13 motsvarar leveranserna i tjänstekatalogen, medan kanal 9610 för direktköp och en andra inköpskälla är framtida poster med platserna reserverade, inte en del av dagens godkännande. Det tredje låser fast ansvaret: från införsel i zonen till kvitterad leverans finns en enda ansvarig part, A i RACI; förmågor kan bytas ut, ansvaret flyttas inte.
+
+Under översiktssidan står ännu en instruktion att följa: alla fjorton förmågor räknas upp punkt för punkt, utan leverantörsjämförelser och utan integration mellan flera parter. Leveranser och arbetssätt följer tjänstekatalogen, och det som skrivs in i avtalet är de fjorton signerade handlingarna, inte en lista över gränssnitt.
+
+## Varför de tre raderna nere i högra hörnet bara täcker tre dagar
+
+Nere i högra hörnet av översiktssidan sitter ett dataöversiktskort märkt systemgränssnittsdemo och dagliga data. Det visar bara de tre senaste dagarna, och varje rad bär ett datum, antal betalda ordrar, betalt belopp och två åtgärdsingångar.
+
+| Datum | Antal betalda ordrar | Betalt belopp (yuan) | Åtgärd |
+| --- | --- | --- | --- |
+| 09-24 | 128 | 62 400,00 | Detaljer, logg |
+| 09-23 | 141 | 68 120,00 | Detaljer, logg |
+| 09-22 | 132 | 64 152,00 | Detaljer, logg |
+
+Tre rader är ett utdrag, den fullständiga dagrapporten ligger på nästa sida i samma demo, sex rader med sju fält i varje. De två ingångarna detaljer och logg är inte heller någon dekoration: detaljer öppnar ordersammansättningen för den dagen, loggen visar vilken körning som skapade tabellen. Utdraget kan nöja sig med tre dagar bara för att den fullständiga tabellen själv bygger en ny rad varje dag.
+
+## Sex rader i dagrapporten som växer fram av sig själva varje dag
+
+Dagrapporternas sida för in strukturen på ett enda gränssnitt. Tre kort på sidan klargör vilket steg det gäller, vad som registreras och var det mappas.
+
+- Vilket steg: datamodulens dagliga transaktionsrapport, en rad per dag, som registrerar antal betalda ordrar, betalt belopp, genomsnittligt ordervärde, betalande köpare och återbetalningsgrad.
+- Vad den registrerar: ta 09-24, med 128 betalda ordrar, 62 400,00 yuan och ett genomsnittligt ordervärde på 487,50 yuan; tabellen byggs själv varje dag, utan manuell hopfogning.
+- Var den mappar: i den dagliga driften med fjorton moduler på ett gränssnitt rapporterar orderdata, produktdata och medlemsdata alla från samma system.
+
+Till vänster i gränssnittet ligger en datapanel där Publikt, Butik, Trafik, Marknadsföring, Distribution, CRM och självbetjäningsanalys delar samma meny; toppraden löper från Butik och Galleria vidare till Data, Kundservice, Innehåll och Mervärdestjänster. Orderdata, produktdata och medlemsdata kommer från samma system i stället för ett system per typ, och det är det fjorton moduler på ett gränssnitt betyder. Dagrapporten behöver inte hämta data över flera system och därför ingen manuell hopfogning.
+
+- 09-24, 128 betalda ordrar, 62 400,00 yuan, genomsnittligt ordervärde 487,50 yuan, 121 betalande köpare, återbetalningsgrad 1,8%, detaljer och logg;
+- 09-23, 141 betalda ordrar, 68 120,00 yuan, genomsnittligt ordervärde 483,12 yuan, 132 betalande köpare, återbetalningsgrad 2,1%, detaljer och logg;
+- 09-22, 132 betalda ordrar, 64 152,00 yuan, genomsnittligt ordervärde 486,00 yuan, 126 betalande köpare, återbetalningsgrad 1,6%, detaljer och logg;
+- 09-21, 147 betalda ordrar, 72 604,00 yuan, genomsnittligt ordervärde 493,90 yuan, 139 betalande köpare, återbetalningsgrad 2,4%, detaljer och logg;
+- 09-20, 139 betalda ordrar, 68 455,00 yuan, genomsnittligt ordervärde 492,48 yuan, 131 betalande köpare, återbetalningsgrad 1,9%, detaljer och logg;
+- 09-19, 124 betalda ordrar, 60 752,00 yuan, genomsnittligt ordervärde 489,94 yuan, 117 betalande köpare, återbetalningsgrad 2,2%, detaljer och logg.
+
+Under listan står det 6 poster totalt och 20 per sida, sidväljaren står på 1 och båda blädderpilarna finns kvar. Där står också notisen om demodata: kärnnyckeltal sammanställs per dag, med trender och detaljer på samma skärm. Under de sex dagarna toppar återbetalningsgraden på 2,4% den 09-21 och bottnar på 1,6% den 09-22, och den kolumnen är kopplad till returorsaksposterna i eftermarknadsmodulen, inte en uträknad dekoration.
+
+![Demo av dagrapporternas sida med tre förklaringskort, en daglig transaktionsrapport med sex rader och sju kolumner, sidindelning med sex poster totalt och tjugo per sida samt notisen om demodata](/images/insights/seven-flows-one-ledger-bonded-exports-china/daily-operations-report-demo.webp)
+
+## En genomgång av raden för 09-24
+
+Ta raden för 09-24 som något att utreda. 128 betalda ordrar och 62 400,00 yuan dividerat ger exakt ett genomsnittligt ordervärde på 487,50 yuan; 121 betalande köpare är 7 färre än antalet ordrar, vilket betyder att någon lade mer än en order den dagen; återbetalningsgraden 1,8% motsvarar de returer som ännu ligger öppna i eftermarknadsmodulen.
+
+Spåra de sju flödena bakåt från den raden: handelsflödet hämtar avtal och attribuering för de 128 ordrarna, varuflödet ger batcher och hållbarhet, logistikflödet ger utleverans och tid för kvitterad leverans, kapitalflödet ger inbetalningar, utbetalningar och saldon, informationsflödet ger ändringar i orderstatus och kvitton från gränssnitten, regelefterlevnadsflödet ger deklarationer per order och resultatet av matchningen av de tre uppgifterna, och fakturaflödet ger fakturor och kreditnotor. Alla sju delar ordernumret, så en enda sökning hittar allt; kommer ett återanrop från ett gränssnitt lite sent står informationsraden tom först, betalt belopp och genomsnittligt ordervärde stämmer fortfarande, men kundservicen kan inte säga var den ordern befinner sig.
+
+Mappningen på det tredje kortet håller här: med orderdata, produktdata och medlemsdata från samma system kan antalet betalande köpare stämmas av mot medlemsnivåerna. Delat på tre system måste siffran 121 kopplas mellan databaser, och när kopplingsregeln ändras går morgondagens rapport inte längre att jämföra med dagens.
+
+## Vilket flöde brister först under en stor kampanj
+
+Den tredje frågan på skiljebladet gäller om daglig drift och en kampanjtopp kan bäras samtidigt. Med den här strukturen går det, förutsatt att tre saker låses fast före toppen: ett ordernummer genom alla sju flöden, en ansvarig part från införsel i zonen till kvitterad leverans, och en rapport som systemet skapar självt i stället för att fogas ihop av exporter. En topp belastar återanrop från gränssnitt och lagersynkronisering, ordernumret ändras inte, så bokföringen förblir densamma; med en manuellt ihopfogad rapport ger toppen inte mer arbete utan fler chanser att foga ihop fel rader.
+
+Före lanseringen låses fälten fast: datum, antal betalda ordrar, betalt belopp, genomsnittligt ordervärde, betalande köpare, återbetalningsgrad och åtgärdsingångar, alla sju kolumnerna läser från samma uppsättning datatabeller. Sedan avgörs vem som skriver under de fjorton leveranserna. Resten kan läggas till senare, platserna för kanal 9610 för direktköp och en andra inköpskälla finns redan i mappningen från S0 till S13, och den ansvariga parten ändras inte när de fylls.
+
+Datum, belopp och orderantal på skärmen är demodata, till för att visa hur en rad byggs och spåras bakåt; de faktiska siffrorna följer aktuella avräkningar, plattformsexporter och den behöriga myndighetens krav, medan återbetalningsgrad och genomsnittligt ordervärde följer systemets beräkning för den dagen.
+
+Sju flöden på en bokföring blir på papper fjorton leveranser som någon skriver under; på skärmen blir det en dagrapport som växer med en rad om dagen, där varje rad går att spåra bakåt. Lås först ordernumret och den ansvariga parten, välj sedan leverantörer. Vänds ordningen måste varje avstämning därefter göras om.
+
+Om du vill knyta de sju flödena till en bokföring för din befintliga butik, ditt lager och din avräkningsenhet är du välkommen att [kontakta oss](/sv/packages/).

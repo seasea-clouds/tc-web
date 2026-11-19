@@ -1,0 +1,67 @@
+---
+title: "Jak postavit získávání zákazníků v Číně, architektura konverze etapami a kanály"
+date: "2027-07-06"
+category: "E-commerce"
+excerpt: "Rozpočet míří, kde se daří konverzi: vzdělávání na startu, hlavní kanál v rozjezdu, členské nákupy nakonec. Soulad od prvního dne: tři revize, členství podle místních pravidel."
+references:
+  - title: "Zákon o reklamě ČLR (redakce 2015, novelizace 2018, čl. 17, 18, 46)"
+    url: "https://www.gov.cn/guoqing/2021-10/29/content_5647620.htm"
+  - title: "Pravidla správy internetové reklamy (nařízení č. 72 SAMR, v platnosti od 1. května 2023)"
+    url: "https://www.gov.cn/gongbao/2023/issue_10506/202306/content_6885261.html"
+  - title: "Zákon ČLR o ochraně osobních údajů (přijat 20. srpna 2021, čl. 38, 39)"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+---
+
+Kam nasměrovat rozpočet získávání a kolik se z něj vrátí, rozhoduje to, na kterém kanály se plní podmínky konverze, nikoli zastření všech čtyř kanálů najednou. Architektura z modulu S7 zdrojových materiálů je tři etapy růstu proti čtyřem kanálům: studený start od nuly do šestého měsíce, škálování od šestého do osmnáctého, udržení po osmnáctém měsíci, přičemž Xiaohongshu, Tmall Global a JD Worldwide, Douyin a soukromý okruh WeChat nesou různé zatížení na každém etapu. Compliance je hotový od prvního dne: reklamní materiály procházejí třemi revizemi, členský program se přebudovává podle pravidel kontinentu, údaje členů zůstávají v Číně. Vedle architektury pracuje měsíční dashboard placeného provozu po kanálech: kam peníze odešly a co se vrátilo, je vidět v jednom řádku.
+
+![Architektura získávání a růstu S7: bublinová matice tří etapů a čtyř kanálů, vpravo panel compliance a struktura nákladů, níže tři nohy růstu a kroky soukromého okruhu, v pravém dolním rohu miniatura dashboardu](/images/insights/customer-acquisition-china-converting-demand/s7-acquisition-growth-channel-matrix.webp)
+
+Tato stránka pochází ze šesté kapitoly materiálů značky, kapitola Ready to Grow, modul S7, titul Acquisition and Growth: Architecture for Converting Demand. Vlevo je matice rozdělení kanálů, vpravo nahoře panel compliance a struktura nákladů, vlevo dole tři nohy růstu a tři kroky soukromého okruhu, v pravém dolním rohu je vložená miniatura demonstrace dashboardu. Tento článek rozebírá S7 spolu s celoobrazovkovou demonstrací na další straně, není potřeba číst dříve jiné moduly kapitoly.
+
+## Matice rozdělení tří etapů a čtyř kanálů
+
+Matice staví tři etapy růstu svisle a čtyři kanály vodorovně, jedna buňka, jedna bublina, velikost bubliny ukazuje intenzitu investic etapu do kanálu: velká znamená hlavní šlápnutí, střední podporu, malá pomalý vstup. Čtením buňku po buňce je vidět, že rozpočet se nedělí rovným dílem, ale mění hlavní bitevní pole podle etapu.
+
+Studený start, měsíce od nuly do šestého: Xiaohongshu drží velkou bublinu vzdělávání o složení, Tmall Global a JD Worldwide střední bublinu konverze důvěry, Douyin zatím bez výdajů, soukromý okruh WeChat velkou bublinu prvního nákupu přes zkušební sadu. Důkazů prodeje v této etapě není, takže obsah nejdřív vysvětluje složení, obchody chytají důvěru těch, kdo hledají, a soukromý okruh zavírá první objednávku vzorkem.
+
+Škálování, měsíce od šestého do osmnáctého: Xiaohongshu klesá ke střední bublině rozjíždění obsahu, Tmall Global a JD Worldwide stoupají k největší bublině jako hlavní kanál konverze, Douyin stoupá k největší bublině objemových přenosů, soukromý okruh WeChat drží střední bublinu připomínek opakovaného nákupu. Hlavní bitevní pole se stěhuje z Xiaohongshu na marketplace a Douyin, úkol obsahu se mění ze vzdělávání na objem.
+
+Udržení, po osmnáctém měsíci: doporučení, opakované nákupy na zásobu, pokračování hitových produktů a opakované nákupy členů sedí ve středních a velkých bublinách, přičemž opakovaný nákup členů v soukromém okruhu je největší. Růst v této etapě nepřichází z nového provozu, ale od těch, kdo koupili a vracejí se mluvit.
+
+## Panel compliance hotový od prvního dne
+
+Vpravo od matice je panel compliance ze čtyř bodů, všechny se ustanoví v den startu, a nedostavují se po škálování.
+
+Úroveň propagátorů: bez skladu, bez dalšího prodeje, ne hlouběji než dvě úrovně. Atribuce a vypořádání: atribuce GMV na jasném základě, smlouvy podepisuje místní právnická osoba, srážku daně vede kontinent. Materiály: každý reklamní i influencerský scénář prochází třemi revizemi před publikací. Členský program: nepřenáší se celý ze zahraničního uspořádání, ale přebudovává se podle pravidel kontinentu, ve shodě se základem „nula incidentů“ celé knihy; údaje členů zůstávají na kontinentu, jakýkoliv vývoz se hodnotí po bodech podle přeshraničních článků zákona o ochraně osobních údajů.
+
+## Struktura nákladů v řádech z otevřených zdrojů
+
+Struktura nákladů nese tři řádky. Provize platformy jde v rozpětí 0.5%–5% podle kategorie, čísla směrového řádu z otevřených zdrojů; ostatní body pokrývají platební poplatky, placený provoz, výrobu obsahu a provize; ověření znamená malé kroky a týdenní kontrolu návratnosti. Všechny tři krmí pozdější analýzu citlivosti jednotkové ekonomie: rozpočet povolen nebo stažen o stupeň, čísla musí jít za ním.
+
+## Tři nohy růstu a tři kroky soukromého okruhu
+
+Architektura se scvrkává na tři nohy: setí obsahu vede známost, konverze na platformě zavírá obchody, opakované nákupy v soukromém okruhu drží udržení. Soukromý okruh jde třemi kroky: oficiální miniaplikace značky plus sledující z obsahu plus zkušební sada na první objednávku; nástrojů tři, skupiny WeCom, členská karta v miniaplikaci a připomínky opakovaného nákupu.
+
+Spojka růstu a compliance leží ve stejném bloku: reklamní obsah prochází třemi revizemi před publikací a druhá pozice dodávky je zarezervovaná, aby škálování přidávalo kanály bez přestavby dodávky. O rytmu řečeno přímo: neotevírat všechny kanály najednou, nejdřív dokázat obsah a konverzi v jednom kanále, pak zopakovat na druhém.
+
+## Dashboard placeného provozu čte výdaj a návratnost po kanálech vedle sebe
+
+Matice odpovídá, kam investovat; dashboard odpovídá, jak ověřit po investici. V demonstraci rozhraní dává dashboard placeného provozu každému kanálu jeden řádek, se záložkami aktuálního měsíce, minulého a kumulovaného součtu, a sloupce jdou výdaj, zobrazení, CTR, objednávky, obrat GMV, ROI a stav, takže investice a návrat se řadí v jednom řádku.
+
+| Kanál | Výdaj (yuan) | Zobrazení | CTR | Objednávky | Obrat GMV (yuan) | ROI | Stav |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Setí obsahu | 42000.00 | 486000 | 3.2% | 208 | 187200.00 | 4.5 | V chodu |
+| Krátké video | 58000.00 | 724000 | 2.6% | 186 | 167400.00 | 2.9 | V chodu |
+| Komunita soukromého okruhu | 18000.00 | 96400 | 8.1% | 242 | 217800.00 | 12.1 | V chodu |
+| Práce s členy | 12000.00 | 52100 | 11.4% | 296 | 266400.00 | 22.2 | V chodu |
+| Celkem | 130000.00 | 1358500 | 3.9% | 932 | 838800.00 | 6.5 | V chodu |
+
+Projďme demonstrační data jedním celým čtením. Začněme řádkem součtu pro hlavní číslo: čtyři kanály vydaly 130000.00 yuan za měsíc a dostaly 1358500 zobrazení, 932 objednávek a 838800.00 yuan obratu GMV, celkový ROI 6.5.
+
+Potom čteme rozdělení rolí po řádcích: setí obsahu za 42000.00 yuan a krátké video za 58000.00 yuan berou asi šedesát procent výdaje, dávají 486000 a 724000 zobrazení při ROI 4.5 a 2.9 a tahají dosah; komunita soukromého okruhu za 18000.00 yuan a práce s členy za 12000.00 yuan utratí mnohem méně, klikají na 8.1% a 11.4%, vracejí ROI 12.1 a 22.2 a tahají konverzi a udržení, přičemž práce s členy mění nejmenší výdaj na největší obrat GMV 266400.00 yuan. V jednom řádku kam peníze odešly a co se vrátilo sedí na první pohled, a rozhodnutí přidat či přidržet buňku přijímá sám řádek.
+
+![Demonstrace rozhraní dashboardu placeného provozu: backend přeshraničního zboží pro zdraví, čtyři řádky kanálů a řádek součtu na jedné obrazovce, záložky aktuálního měsíce, minulého a kumulovaného součtu](/images/insights/customer-acquisition-china-converting-demand/paid-media-dashboard-four-channel-ledger.webp)
+
+Dva detaily na obrazovce stojí za převzetí: dole je označeno, že čísla jsou demonstrační, registr placeného provozu čtyř kanálů s řádkem součtu a řádkovým ROI na jedné obrazovce, a sloupec stavu věší „v chodu“ na každý řádek se vstupy do detailů a deníku, takže základ každého čísla lze otevřít kliknutím.
+
+Zavřeme výhradami: rozdělení kanálů a provize platformy 0.5%–5% přicházejí z otevřených zdrojů a jsou směrovými řády, nikoli nabídkami; čísla na dashboardu jsou demonstrační data ukazující, jak číst tabuli, nikoli výsledky jakéhokoli reálného obchodu; členský program se přebudovává podle pravidel kontinentu, nepřenáší se celý. Aby jste postavili vlastní architekturu získávání, jděte ve stejném pořadí: nastavte rozdělení kanálů podle tří etapů, ustanovte čtyři body compliance v prvním dni, pak kontrolujte výdaj a návrat na dashboardu týdně. V našich balíčcích pro čínský trh jsou hotové pracovní materiály k této matici a dashboardu, přineste seznam produktů a cíl výdajů na měsíc, [kontaktujte nás](/cs/packages/).

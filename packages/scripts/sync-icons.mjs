@@ -9,7 +9,7 @@
  * 同步目标：各 Next.js 项目的 public/ 根目录
  *   - apps/site/public/icon.png + favicon.ico
  *   - apps/portal/public/icon.png + favicon.ico
- *   - apps/blog/public/icon.png + favicon.ico
+ *   - apps/insights/public/icon.png + favicon.ico
  *   - apps/admin/public/icon.png + favicon.ico
  *
  * 同时清理各项目 src/app/ 下的旧约定文件（favicon.ico / icon.png），

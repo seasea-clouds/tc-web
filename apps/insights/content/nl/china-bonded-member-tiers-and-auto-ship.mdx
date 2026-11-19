@@ -1,0 +1,77 @@
+---
+title: "Lidmaatschapsniveaus en periodieke levering, afwijkingen op vier sporen per rij"
+date: "2027-06-29"
+category: "E-commerce"
+excerpt: "Niveaus en periodieke levering delen het lidnummer met het attributiegrootboek. Het paneel toont rijen met waarschuwingen. Doorloop een volledige cyclus en controleer rij voor rij."
+references:
+  - title: "Wet van de Volksrepubliek China betreffende de bescherming van persoonsgegevens (aangenomen op 20 augustus 2021, artikelen 13 en 23)"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+  - title: "Bekendmaking nr. 194 uit 2018 van de Algemene Douaneadministratie van China over het toezicht op detailhandelsgoederen bij in- en uitvoer via grensoverschrijdende e-commerce"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Bepalingen ter bevordering en regulering van grensoverschrijdende gegevensstromen (besluit nr. 16 van het Bureau voor internetzaken van China, in werking sinds 22 maart 2024)"
+    url: "https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm"
+---
+
+Lidmaatschapsniveaus en periodieke levering houden herhaalaankopen vast, mits de twee back-ends rij voor rij overeenkomen. De ene is het operationeel paneel, dat orders onderweg, douane-entrepotbatches, vrijgaven vandaag, zendingen onderweg, de gemiddelde douaneafhandelingstijd en houdbaarheidswaarschuwingsbatches op zes rijen van één scherm samenbrengt. De andere is de back-end voor lidmaatschapsniveaus en periodieke levering, die lidnummer, niveau, artikel voor periodieke levering, leveringscyclus, volgende leveringsdatum en cumulatieve bestedingen in zes rijen opsomt. Beide gebruiken dezelfde lidnummers en leggen elke statuswijziging vast in het logboek, zodat een herhaalaankoop naar hetzelfde lid is terug te voeren. Wanneer u het overneemt, kijkt u eerst naar de afwijkingsrijen. In de demonstratie staan twee rijen in uitvoering en één rij met correctie nodig, met respectievelijk 2 aangiften in afwachting, 3 afwijkingen en 2 bijna verlopen batches.
+
+![Demonstratie van het operationeel paneel met vier sporen, met als kolomkoppen spoor, kernindicator, huidige waarde, doelwaarde, realisatiepercentage, waarschuwing, status en actie, en zes rijen voor het orderspoor, voorraadspoor, douaneafhandelingsspoor, logistiekspoor, doorlooptijdspoor en houdbaarheidsspoor, met onderaan de aantekening 6 records en 20 per pagina](/images/insights/china-bonded-member-tiers-and-auto-ship/four-tracks-dashboard-system-demo.webp)
+
+## Zes rijen op één scherm, vier dienstenstromen met elk een eigenaar
+
+Het operationeel paneel is de hoofdweergave, met één rij per spoor en tabbladen voor vandaag, deze week en deze maand. Elke rij vermeldt de kernindicator, de huidige waarde, de doelwaarde, het realisatiepercentage, de waarschuwing en de status, en eindigt met twee ingangen voor details en logboek. Een cel zonder geactiveerde waarschuwing krijgt een kort streepje en wordt niet met een nul gevuld, zodat het ontbreken van een waarschuwing niet als een nulwaarde wordt gelezen. Het paneel pagineert met 20 records per pagina; de demogegevens tellen 6 records en passen op één scherm.
+
+Vier dienstenstromen, S10 tot en met S13, hebben elk een eigenaar, en hun indicatoren en huidige stappen staan samen op dit ene paneel. Wie welk spoor overneemt en hoe ver het nu is, leest u hier af zonder meerdere andere grootboeken te hoeven openslaan. De verantwoordelijkheid ligt op de rij, zodat u bij de overdracht rij voor rij ondertekent.
+
+De acht kolommen in de kop zijn achtereenvolgens spoor, kernindicator, huidige waarde, doelwaarde, realisatiepercentage, waarschuwing, status en actie. De zes rijen staan in deze volgorde volledig uitgeschreven:
+
+- Orderspoor, orders onderweg, huidig 128, doel 150, realisatiepercentage 85%, waarschuwing leeg, status normaal;
+- Voorraadspoor, douane-entrepotbatches, huidig 36, doel 40, realisatiepercentage 90%, waarschuwing leeg, status normaal;
+- Douaneafhandelingsspoor, vrijgaven vandaag, huidig 86, doel 100, realisatiepercentage 86%, waarschuwing 2 aangiften in afwachting, status in uitvoering;
+- Logistiekspoor, zendingen onderweg, huidig 214, doel en realisatiepercentage leeg gelaten, waarschuwing 3 afwijkingen, status in uitvoering;
+- Doorlooptijdspoor, gemiddelde douaneafhandelingstijd, huidig 6,8 uur, doel 8 uur, realisatiepercentage als behaald gemarkeerd, waarschuwing leeg, status normaal;
+- Houdbaarheidsspoor, houdbaarheidswaarschuwingsbatches, huidig 2, doel 0, realisatiepercentage leeg gelaten, waarschuwing 2 batches bijna verlopen, status correctie nodig.
+
+De toelichtingskaarten wijzen op twee cijfers die gemakkelijk verkeerd worden gelezen. Het orderspoor telt 128 orders onderweg tegen een doel van 150 en een realisatiepercentage van 85%; het voorraadspoor telt 36 douane-entrepotbatches tegen een doel van 40 en een realisatiepercentage van 90%. Op de kaart staat ook dat een cel zonder geactiveerde waarschuwing een kort streepje toont. Het streepje betekent dus niet dat gegevens ontbreken; het legt de conclusie vast dat er deze keer geen waarschuwing is geweest.
+
+Drie statussen vragen om een afzonderlijke aanpak. De normale rijen zijn het orderspoor, het voorraadspoor en het doorlooptijdspoor; het doorlooptijdspoor staat op 6,8 uur tegen een doel van 8 uur, dus in de kolom realisatiepercentage staat eenvoudig behaald. De twee rijen in uitvoering dragen elk één taak: het douaneafhandelingsspoor heeft 2 aangiften in afwachting en het logistiekspoor heeft 3 afwijkingen. De rij met correctie nodig is het houdbaarheidsspoor, met 2 houdbaarheidswaarschuwingsbatches tegen een doel van 0 en een waarschuwing van 2 batches bijna verlopen. De volgorde van afhandeling volgt de impact, dus ruimt u eerst de bijna verlopen batches op, dient u daarna de aangiften in en spoort u tot slot de afwijkingen op.
+
+## Lidmaatschapsniveaus en periodieke levering rij voor rij controleerbaar
+
+![Demonstratie van de back-end voor lidmaatschapsniveaus en periodieke levering, met als kolomkoppen lidnummer, niveau, artikel voor periodieke levering, leveringscyclus, volgende leveringsdatum, cumulatieve bestedingen, status van de periodieke levering en actie, en zes rijen met de niveaus en gegevens van de periodieke levering van M-100238 tot M-100419, met onderaan de aantekening 6 records en 20 per pagina](/images/insights/china-bonded-member-tiers-and-auto-ship/member-tiers-subscriptions-system-demo.webp)
+
+De back-end aan de ledenzijde hangt onder de winkelmodule, met tabbladen per niveau voor zwarte kaart, gouden kaart en zilveren kaart, plus een tabblad dat alleen actieve periodieke levering toont. Elke rij vermeldt lidnummer, niveau, artikel voor periodieke levering, leveringscyclus, volgende leveringsdatum en cumulatieve bestedingen, en eindigt opnieuw met details en logboek. De demogegevens tellen 6 records, 20 per pagina.
+
+Niveaus, periodieke levering en cumulatieve bestedingen worden op één plek onderhouden, en lidnummers delen één gegevensbron met het attributiegrootboek. Zo wordt een herhaalaankoop eenmaal aan de ledenzijde geteld en niet nogmaals aan de attributiezijde; om de herhaalaankopen van een niveau aan een campagne toe te wijzen, zoekt u het lidnummer terug. Lidnummers en cumulatieve bestedingen zijn persoonsgegevens, dus verwerking en deling vragen een duidelijke rechtsgrondslag, en tussen de binnenlandse back-end en buitenlandse rapporten gaan alleen de noodzakelijke geaggregeerde gegevens over.
+
+De acht kolommen in de kop zijn achtereenvolgens lidnummer, niveau, artikel voor periodieke levering, leveringscyclus, volgende leveringsdatum, cumulatieve bestedingen, status van de periodieke levering en actie. De zes rijen staan in deze volgorde volledig uitgeschreven, met alle bedragen in yuan:
+
+- M-100238, zwarte kaart, co-enzym Q10 zachte capsules x2, maandelijks, 2026-10-22, 15800,00 yuan, in uitvoering;
+- M-101204, gouden kaart, visolie zachte capsules x1, maandelijks, 2026-10-05, 8640,00 yuan, in uitvoering;
+- M-100571, zilveren kaart, wei-eiwit x1, elke 2 maanden, 2026-11-19, 4320,00 yuan, in uitvoering;
+- M-100872, zwarte kaart, probioticapoeder x2, maandelijks, 2026-10-08, 22100,00 yuan, in uitvoering;
+- M-101466, gouden kaart, collageenpeptidedrank x1, maandelijks, 2026-10-15, 6980,00 yuan, gepauzeerd;
+- M-100419, zilveren kaart, calcium en vitamine D tabletten x1, per kwartaal, 2026-12-01, 1560,00 yuan, in uitvoering.
+
+De toelichtingskaarten noemen twee nummers. M-100238 is een zwarte kaart, met twee flessen co-enzym Q10 zachte capsules die elke maand automatisch worden bezorgd, volgende leveringsdatum 2026-10-22 en cumulatieve bestedingen van 15800,00 yuan; M-101204 is een gouden kaart. Op de kaart staat ook dat lidnummers dezelfde bron delen als het attributiegrootboek. Leest u deze twee zinnen naast de zes rijen in de tabel, dan komen de drempelwaarden van de niveaus naar voren. De twee rijen van de zilveren kaart staan op 4320,00 yuan en 1560,00 yuan, de twee rijen van de gouden kaart op 8640,00 yuan en 6980,00 yuan, en de twee rijen van de zwarte kaart op 15800,00 yuan en 22100,00 yuan, zonder overlapping tussen de drie niveaus. Cumulatieve bestedingen zijn daarom zowel een weergaveveld als de basis voor de niveaus.
+
+Leveringscycli kennen drie vormen, maandelijks, elke 2 maanden en per kwartaal, met vijf rijen in uitvoering en één rij gepauzeerd. De gepauzeerde rij is M-101466, met cumulatieve bestedingen van 6980,00 yuan; de status staat in een eigen veld gemarkeerd en de rij wordt niet verwijderd om de stopzetting aan te geven. De vroegste volgende leveringsdatum is 2026-10-05 en de laatste is 2026-12-01, allebei in dezelfde tabel gerangschikt.
+
+## Eén lid met een zwarte kaart door een volledige leveringscyclus
+
+Neem lid M-100238 met een zwarte kaart. De back-end noteert het als actief, met één order per maand, als artikel co-enzym Q10 zachte capsules x2, als volgende leveringsdatum 2026-10-22 en als cumulatieve bestedingen 15800,00 yuan. Dezelfde rij hangt onder zowel het tabblad lidmaatschapsniveaus als het tabblad periodieke levering, en er wordt geen tweede nummer aangemaakt.
+
+Wanneer de leveringsdatum aanbreekt, maakt het systeem volgens de cyclus een order aan, verzendt vanuit douane-entrepotbatches, doorloopt douaneafhandeling en vrijgave uit de zone en schrijft het vrachtbriefnummer terug naar deze rij. De huidige waarde op het orderspoor beweegt mee, het houdbaarheidsspoor boekt per batch af en het doorlooptijdspoor noteert deze douaneafhandelingstijd. Na de terugschrijving stijgen de cumulatieve bestedingen met het werkelijk betaalde bedrag en schuift de volgende leveringsdatum één cyclus op; details tonen de velden en het logboek toont wie welke wijziging wanneer heeft aangebracht.
+
+Een pauze onderweg blijft eveneens op dezelfde rij. M-101466 heeft de status van de periodieke levering gepauzeerd, met het artikel en de cumulatieve bestedingen nog in de tabel; er wordt alleen geen volgende order meer aangemaakt, en bij hervatting pakt men de draad op volgens het logboek zonder een nieuw lidnummer aan te maken. Als een pauze als een verwijderde rij zou worden geschreven, zou het attributiegrootboek een stuk geschiedenis missen en zouden de drempelwaarden van de niveaus niet meer kloppen.
+
+Leg de afspraak over bedragen meteen aan het begin vast. Alle zes cumulatieve bestedingen luiden in yuan, geschreven met twee decimalen, zonder valutasymbool en zonder omrekeningsnotitie in de demogegevens. Onderaan de interface staat dat dit demogegevens zijn, met uitzonderingen en correcties die worden vastgelegd en controleerbaar zijn; deze waarden dienen om de rekenregels en velden te controleren en gelden niet als naar buiten gepubliceerde bedrijfscijfers.
+
+## De twee back-ends vóór de overstap op elkaar afstemmen
+
+De titel van de demopagina luidt vier sporen, maar de tabel somt zes rijen op, namelijk het orderspoor, het voorraadspoor, het douaneafhandelingsspoor, het logistiekspoor, het doorlooptijdspoor en het houdbaarheidsspoor. Dat spreekt elkaar niet tegen, want de vier dienstenstromen S10 tot en met S13 vormen de taakverdeling en de zes rijen zijn de indicatorrijen op dit scherm; één eigenaar mag meer dan één rij in de gaten houden. Lees de tabel per rij voor de indicatoren en per stroom voor de mensen, en neem de paginatitel niet als rijaantal.
+
+Doe vóór de overstap drie dingen. Doorloop eerst één volledige leveringscyclus en controleer of de volgende leveringsdatum en de cumulatieve bestedingen gelijk opschuiven. Controleer daarna rij voor rij de lidnummers en statussen in de twee back-ends, of de drempelwaarden van de niveaus, de pauzeregistraties en de logboeken overeenkomen. Schrijf tot slot de uitkomst van de afwijkingsrijen terug naar het paneel, zodat de 2 aangiften in afwachting, de 3 afwijkingen en de 2 bijna verlopen batches elk een plek krijgen. Pas nadat deze drie stappen allemaal zijn doorlopen, is het grootboek voor klantbehoud goed overgenomen.
+
+Of herhaalaankopen blijven, komt in het systeem neer op twee controles, namelijk of afwijkingen ter plaatse zichtbaar zijn en of statuswijzigingen een spoor achterlaten. Op de demopagina zijn zes sporen op één scherm zichtbaar, zijn zes ledenrijen veld voor veld controleerbaar en heeft elke rij details en logboek, zodat beide controles een plek hebben. Hoe lang de overstap duurt, hangt af van het afstemmen van de velden in uw huidige systeem en van de parallelle draaicyclus; vergelijkbare koppelingen op de open markt worden in de orde van weken gemeten en dienen alleen als ordegrootte ter referentie, niet als toezegging.
+
+Wilt u lidmaatschapsniveaus en periodieke levering aansluiten op uw bestaande back-end voor douane-operaties, [Neem contact met ons op](/nl/packages/).

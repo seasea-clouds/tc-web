@@ -1292,7 +1292,6 @@
     "metaDescription": "Alle Leistungen, Branchenleitfäden, Blog-Artikel und Seiten der SinoTrade-Compliance-Website im Überblick.",
     "servicesTitle": "Leistungen",
     "industriesTitle": "Branchen",
-    "blogTitle": "Einblicke & Artikel",
     "pagesTitle": "Weitere Seiten",
     "home": "Startseite",
     "about": "Über uns",
@@ -1300,7 +1299,8 @@
     "quote": "Angebot anfordern",
     "faq": "FAQ",
     "packages": "Pakete",
-    "testimonials": "Kundenstimmen"
+    "testimonials": "Kundenstimmen",
+    "insightsTitle": "Einblicke & Artikel"
   },
   "Cookie": {
     "message": "Diese Website verwendet nur unbedingt erforderliche Authentifizierungscookies. Es werden keine Tracking- oder Werbecookies verwendet.",

@@ -10,7 +10,7 @@
  * 7. Canonical host redirect: www / pages.dev → main domain
  *
  * Upstream URLs (for server-side proxy) resolved via:
- *   - Environment variables: UPSTREAM_PORTAL, UPSTREAM_BLOG, UPSTREAM_REGULATIONS, UPSTREAM_ADMIN
+ *   - Environment variables: UPSTREAM_PORTAL, UPSTREAM_INSIGHTS, UPSTREAM_REGULATIONS, UPSTREAM_ADMIN
  *   - Auto-derivation on .pages.dev: tc-web-site → tc-web-portal / tc-web-blog / tc-web-regulations / tc-web-admin
  */
 
@@ -139,10 +139,15 @@ function resolveUpstream(hostname: string, subProject: string, env?: Record<stri
   const envKey = `UPSTREAM_${subProject.toUpperCase()}`;
   if (env && env[envKey]) return env[envKey];
 
+  // 兼容旧变量名：博客站已整体改名 insights，但 Dashboard 上的 UPSTREAM_INSIGHTS
+  // 还没删；先认旧的，等新变量配上再走上面那条。
+  const legacyKey = LEGACY_ENV_ALIAS[subProject];
+  if (legacyKey && env && env[legacyKey]) return env[legacyKey];
+
   // Auto-derive for .pages.dev using naming convention
   if (hostname.endsWith('.pages.dev')) {
     const projectName = hostname.replace('.pages.dev', '');
-    // tc-web-site → tc-web-blog / tc-web-portal
+    // tc-web-site → tc-web-insights / tc-web-portal
     const derived = projectName.replace(/-site$/, `-${subProject}`);
     if (derived !== projectName) return `https://${derived}.pages.dev`;
     return `https://${projectName}-${subProject}.pages.dev`;
@@ -151,6 +156,11 @@ function resolveUpstream(hostname: string, subProject: string, env?: Record<stri
   // Final fallback
   return `https://tc-web-${subProject}.pages.dev`;
 }
+
+/** 改名后的旧环境变量别名（站上还没换掉的先兼容一阵） */
+const LEGACY_ENV_ALIAS: Record<string, string> = {
+  insights: 'UPSTREAM_INSIGHTS',
+};
 
 // ─── Proxy request with header sanitation ────────────────────────
 
@@ -302,7 +312,7 @@ async function proxySubSiteAsset(url: URL, request: Request, env?: Record<string
   // Match /insights/_next/static/* → blog upstream
   const blogMatch = url.pathname.match(/^\/insights\/_next\/static\/(.+)/);
   if (blogMatch) {
-    const upstream = resolveUpstream(url.hostname, 'blog', env);
+    const upstream = resolveUpstream(url.hostname, 'insights', env);
     const assetUrl = `${upstream}/_next/static/${blogMatch[1]}`;
     const resp = await fetch(assetUrl);
     const h = sanitizeHeaders(resp.headers);
@@ -351,16 +361,16 @@ async function proxySubSiteAsset(url: URL, request: Request, env?: Record<string
     }
   }
 
-  // Match /images/blog/* → blog upstream
+  // Match /images/insights/* → blog upstream
   // Blog body images live in the blog project only (single copy). The site
   // project no longer keeps a duplicate tree, so these paths are proxied here.
   // Method + headers are forwarded so Range / conditional (If-None-Match)
   // requests keep working; upstream cache-control / etag are passed through
   // untouched (no extra edge caching, so replacing an image takes effect at once).
-  const blogImgMatch = url.pathname.match(/^\/images\/blog\/(.+)/);
+  const blogImgMatch = url.pathname.match(/^\/images\/insights\/(.+)/);
   if (blogImgMatch) {
-    const upstream = resolveUpstream(url.hostname, 'blog', env);
-    const imgUrl = `${upstream}/images/blog/${blogImgMatch[1]}`;
+    const upstream = resolveUpstream(url.hostname, 'insights', env);
+    const imgUrl = `${upstream}/images/insights/${blogImgMatch[1]}`;
     const headers = new Headers(request.headers);
     headers.delete('host');
     // redirect: 'manual' —— 上游 301（图片改名后的旧地址）必须原样透传，
@@ -534,7 +544,7 @@ export async function onRequest(context: { request: Request; next: () => Promise
   // This handler serves those chunks from the correct upstream.
   if (url.pathname.startsWith('/_next/static/chunks/')) {
     // Try portal first, then blog, then regulations
-    for (const sub of ['portal', 'blog', 'regulations']) {
+    for (const sub of ['portal', 'insights', 'regulations']) {
       const upstream = resolveUpstream(url.hostname, sub, env);
       const fwdUrl = `${upstream}/_next/static/chunks/${url.pathname.replace('/_next/static/chunks/', '')}`;
       const resp = await fetch(fwdUrl);
@@ -608,7 +618,7 @@ export async function onRequest(context: { request: Request; next: () => Promise
     if (!url.pathname.endsWith('/')) {
       return Response.redirect(url.origin + url.pathname + '/', 308);
     }
-    const upstream = resolveUpstream(url.hostname, 'blog', env);
+    const upstream = resolveUpstream(url.hostname, 'insights', env);
     const blogUrl = upstream + '/' + locale + '/insights' + rest;
 
     try {

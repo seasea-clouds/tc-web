@@ -18,7 +18,6 @@
     "whatsapp": "WhatsApp",
     "testimonials": "گواهی‌نامه‌ها",
     "industries": "صنایع",
-    "blog": "بینش ها",
     "checkCb": "CBEC",
     "checkCcc": "الکترونیک",
     "checkGacc": "واردات مواد غذایی",
@@ -27,7 +26,8 @@
     "checkTm": "علائم تجاری",
     "email": "ایمیل",
     "freeCheckHeader": "ابزار رایگان",
-    "getQuote": "دریافت قیمت"
+    "getQuote": "دریافت قیمت",
+    "insights": "بینش ها"
   },
   "Search": {
     "title": "جستجو کنید",
@@ -37,9 +37,9 @@
     "hint": "برای جستجو در سرویس‌ها، مقالات و پرسش‌های متداول تایپ کنید",
     "types": {
       "service": "خدمات",
-      "blog": "بینش ها",
       "faq": "FAQ",
-      "regulation": "مقررات"
+      "regulation": "مقررات",
+      "insights": "بینش ها"
     }
   },
   "Navbar": {
@@ -57,7 +57,6 @@
     },
     "packages": "بسته ها",
     "faq": "سوالات متداول",
-    "blog": "بینش ها",
     "contact": "تماس با ما",
     "whatsapp": "WhatsApp",
     "quote": "یک نقل قول دریافت کنید",
@@ -94,7 +93,8 @@
     "report": "گزارش دهید",
     "reports": "گزارش ها",
     "email": "ایمیل",
-    "regulations": "مقررات"
+    "regulations": "مقررات",
+    "insights": "بینش ها"
   },
   "MobileTab": {
     "home": "خانه",
@@ -121,7 +121,7 @@
   "breadcrumb": {
     "home": "صفحه اصلی",
     "services": "خدمات",
-    "blog": "Insights",
+    "insights": "Insights",
     "industries": "صنایع",
     "packages": "بسته ها",
     "faq": "FAQ"

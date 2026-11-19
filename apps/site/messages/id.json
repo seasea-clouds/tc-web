@@ -1292,7 +1292,6 @@
     "metaDescription": "Jelajahi semua layanan, panduan industri, artikel wawasan, dan halaman di situs web SinoTrade Compliance.",
     "servicesTitle": "Layanan",
     "industriesTitle": "Industri",
-    "blogTitle": "Artikel Wawasan",
     "pagesTitle": "Halaman Lainnya",
     "home": "Beranda",
     "about": "Tentang Kami",
@@ -1300,7 +1299,8 @@
     "quote": "Minta Penawaran",
     "faq": "FAQ",
     "packages": "Paket",
-    "testimonials": "Testimoni"
+    "testimonials": "Testimoni",
+    "insightsTitle": "Artikel Wawasan"
   },
   "Cookie": {
     "message": "Situs ini hanya menggunakan cookie otentikasi penting. Tidak ada cookie pelacakan atau iklan yang digunakan.",

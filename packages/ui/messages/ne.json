@@ -18,7 +18,6 @@
     "whatsapp": "WhatsApp",
     "testimonials": "प्रशंसापत्रहरू",
     "industries": "उद्योगहरू",
-    "blog": "अन्तर्दृष्टिहरू",
     "checkCb": "CBEC",
     "checkCcc": "इलेक्ट्रोनिक्स",
     "checkGacc": "खाद्यान्न आयात",
@@ -27,7 +26,8 @@
     "checkTm": "ट्रेडमार्कहरू",
     "email": "इमेल",
     "freeCheckHeader": "नि: शुल्क उपकरणहरू",
-    "getQuote": "उद्धरण प्राप्त गर्नुहोस्"
+    "getQuote": "उद्धरण प्राप्त गर्नुहोस्",
+    "insights": "अन्तर्दृष्टिहरू"
   },
   "Search": {
     "title": "खोज्नुहोस्",
@@ -37,9 +37,9 @@
     "hint": "सेवाहरू, लेखहरू र सोधिने प्रश्नहरू खोज्न टाइप गर्नुहोस्",
     "types": {
       "service": "सेवाहरू",
-      "blog": "अन्तर्दृष्टिहरू",
       "faq": "FAQ",
-      "regulation": "नियमहरू"
+      "regulation": "नियमहरू",
+      "insights": "अन्तर्दृष्टिहरू"
     }
   },
   "Navbar": {
@@ -57,7 +57,6 @@
     },
     "packages": "प्याकेजहरू",
     "faq": "बारम्बार सोधिने प्रश्नहरू",
-    "blog": "अन्तर्दृष्टिहरू",
     "contact": "हामीलाई सम्पर्क गर्नुहोस्",
     "whatsapp": "WhatsApp",
     "quote": "उद्धरण प्राप्त गर्नुहोस्",
@@ -94,7 +93,8 @@
     "report": "रिपोर्ट",
     "reports": "रिपोर्टहरू",
     "email": "इमेल",
-    "regulations": "नियमहरू"
+    "regulations": "नियमहरू",
+    "insights": "अन्तर्दृष्टिहरू"
   },
   "MobileTab": {
     "home": "होम",
@@ -121,7 +121,7 @@
   "breadcrumb": {
     "home": "गृह पृष्ठ",
     "services": "सेवाहरू",
-    "blog": "Insights",
+    "insights": "Insights",
     "industries": "उद्योगहरू",
     "packages": "प्याकेजहरू",
     "faq": "FAQ"

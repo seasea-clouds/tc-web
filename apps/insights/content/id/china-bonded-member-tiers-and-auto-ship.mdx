@@ -1,0 +1,77 @@
+---
+title: "Tingkatan Anggota dan Pembelian Berkala, Papan Operasi Memantau Anomali per Baris"
+date: "2027-06-29"
+category: "E-commerce"
+excerpt: "Tingkatan dan pembelian berkala berbagi nomor dengan catatan atribusi. Papan operasi merangkum baris dan peringatan di satu layar. Jalankan satu siklus penuh, lalu cocokkan per baris."
+references:
+  - title: "Undang-Undang Republik Rakyat Tiongkok tentang Perlindungan Informasi Pribadi (disahkan oleh Komite Tetap Kongres Rakyat Nasional pada 20/8/2021, Pasal 13 dan 23)"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+  - title: "Pengumuman No. 194 Tahun 2018 dari Administrasi Umum Bea Cukai Tiongkok tentang Pengawasan Barang Impor dan Ekspor Eceran Perdagangan Elektronik Lintas Batas"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Ketentuan tentang Mendorong dan Menata Arus Data Lintas Batas (Perintah No. 16 dari Administrasi Ruang Siber Tiongkok, berlaku sejak 22/3/2024)"
+    url: "https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm"
+---
+
+Tingkatan keanggotaan dan pembelian berkala dapat mempertahankan pembelian ulang, asalkan dua sistem belakang cocok baris demi baris. Satu sistem adalah papan operasi yang menyatukan enam baris dalam satu layar, yakni pesanan dalam perjalanan, batch stok gudang berikat, barang keluar kawasan hari ini, pengiriman dalam perjalanan, rata-rata waktu kepabeanan, dan batch peringatan masa simpan. Sistem lainnya adalah sistem belakang tingkatan keanggotaan dan pembelian berkala yang menyusun nomor anggota, tingkatan, barang pembelian berkala, siklus pengiriman, tanggal pengiriman berikutnya, dan akumulasi belanja menjadi enam baris. Kedua tempat memakai satu set nomor anggota yang sama, dan setiap perubahan status meninggalkan catatan, sehingga pembelian ulang dapat dikembalikan ke anggota yang sama. Saat Anda mulai menangani, awali dengan baris anomali, karena pada antarmuka demo ada dua baris berjalan dan satu baris yang perlu perbaikan, masing-masing membawa 2 pesanan yang menunggu deklarasi, 3 anomali, dan 2 batch yang mendekati masa simpan.
+
+![Demo antarmuka papan operasi empat jalur dengan tajuk jalur, indikator utama, nilai saat ini, nilai target, tingkat pencapaian, peringatan, status, dan tindakan; enam baris berturut-turut memuat jalur pesanan, jalur stok, jalur kepabeanan, jalur logistik, jalur ketepatan waktu, dan jalur masa simpan; catatan kaki menyebutkan total 6 catatan dan 20 per halaman](/images/insights/china-bonded-member-tiers-and-auto-ship/four-tracks-dashboard-system-demo.webp)
+
+## Enam Baris dalam Satu Layar, Empat Alur Layanan Masing-Masing Memiliki Penanggung Jawab
+
+Papan operasi adalah tampilan utama dengan satu jalur per baris, dan tab dibagi menjadi hari ini, minggu ini, dan bulan ini. Setiap baris memuat indikator utama, nilai saat ini, nilai target, tingkat pencapaian, peringatan, dan status, lalu di ujung baris tersedia dua pintu masuk berupa rincian dan catatan. Sel yang tidak memicu peringatan diisi garis pendek sebagai pengganti, bukan angka nol, agar ketiadaan peringatan tidak terbaca sebagai indikator bernilai nol. Papan menggunakan 20 catatan per halaman, data demo berjumlah 6 catatan, dan seluruhnya dapat dilihat dalam satu layar.
+
+Empat alur layanan dari S10 hingga S13 masing-masing memiliki penanggung jawab, dan indikator serta langkah terkini masing-masing terkumpul pada papan ini. Siapa menangani jalur mana dan sudah sampai langkah mana kini dapat dibaca tanpa perlu membuka beberapa buku besar lain. Tanggung jawab melekat pada baris, sehingga serah terima cukup ditandatangani per baris.
+
+Delapan kolom pada tajuk secara berurutan adalah jalur, indikator utama, nilai saat ini, nilai target, tingkat pencapaian, peringatan, status, dan tindakan. Enam baris ditulis lengkap menurut urutan ini:
+
+- Jalur pesanan, pesanan dalam perjalanan, saat ini 128, target 150, tingkat pencapaian 85%, peringatan kosong, status normal;
+- Jalur stok, batch stok gudang berikat, saat ini 36, target 40, tingkat pencapaian 90%, peringatan kosong, status normal;
+- Jalur kepabeanan, barang keluar kawasan hari ini, saat ini 86, target 100, tingkat pencapaian 86%, peringatan 2 pesanan menunggu deklarasi, status berjalan;
+- Jalur logistik, pengiriman dalam perjalanan, saat ini 214, target dan tingkat pencapaian dibiarkan kosong, peringatan 3 anomali, status berjalan;
+- Jalur ketepatan waktu, rata-rata waktu kepabeanan, saat ini 6,8 jam, target 8 jam, tingkat pencapaian ditandai tercapai, peringatan kosong, status normal;
+- Jalur masa simpan, batch peringatan masa simpan, saat ini 2, target 0, tingkat pencapaian dibiarkan kosong, peringatan 2 batch mendekati masa simpan, status perlu perbaikan.
+
+Kartu penjelasan menunjukkan dua angka yang paling mudah salah dibaca, yakni jalur pesanan dengan pesanan dalam perjalanan saat ini 128, target 150, dan tingkat pencapaian 85%, serta jalur stok dengan batch stok gudang berikat saat ini 36, target 40, dan tingkat pencapaian 90%. Kartu itu juga menyatakan bahwa sel tanpa peringatan yang terpicu menampilkan garis pendek. Dengan kata lain, garis pendek itu menyampaikan data yang utuh sekaligus kesimpulan bahwa kali ini memang tidak ada peringatan.
+
+Tiga status perlu ditangani secara terpisah. Tiga baris yang normal adalah jalur pesanan, jalur stok, dan jalur ketepatan waktu; jalur ketepatan waktu kini 6,8 jam, lebih rendah dari target 8 jam, sehingga kolom tingkat pencapaian langsung ditulis tercapai. Dua baris yang berjalan masing-masing membawa satu tugas, yakni jalur kepabeanan dengan 2 pesanan menunggu deklarasi dan jalur logistik dengan 3 anomali. Yang perlu perbaikan adalah jalur masa simpan, dengan 2 batch peringatan masa simpan saat ini, target 0, dan kolom peringatan bertuliskan 2 batch mendekati masa simpan. Urutan penanganan disusun menurut luas dampak, dimulai dengan membereskan batch yang mendekati masa simpan, lalu melengkapi deklarasi, dan terakhir menelusuri anomali.
+
+## Sistem Belakang Tingkatan Keanggotaan dan Pembelian Berkala Dapat Diperiksa per Baris
+
+![Demo antarmuka sistem belakang tingkatan keanggotaan dan pembelian berkala dengan tajuk nomor anggota, tingkatan, barang pembelian berkala, siklus pengiriman, tanggal pengiriman berikutnya, akumulasi belanja, status pembelian berkala, dan tindakan; enam baris memuat tingkatan dan informasi langganan dari M-100238 hingga M-100419; catatan kaki menyebutkan total 6 catatan dan 20 per halaman](/images/insights/china-bonded-member-tiers-and-auto-ship/member-tiers-subscriptions-system-demo.webp)
+
+Sistem belakang di sisi anggota berada di bawah modul toko, dengan tab yang dibagi menurut tingkatan menjadi Kartu Hitam, Kartu Emas, dan Kartu Perak, serta satu halaman lain yang hanya menampilkan pembelian berkala yang masih aktif. Setiap baris memuat nomor anggota, tingkatan, barang pembelian berkala, siklus pengiriman, tanggal pengiriman berikutnya, dan akumulasi belanja, dan ujung baris kembali memuat rincian serta catatan. Data demo berjumlah 6 catatan, dengan 20 catatan per halaman.
+
+Tingkatan, pembelian berkala, dan akumulasi belanja dipelihara di satu tempat yang sama, dan nomor anggota bersama buku besar atribusi berbagi satu sumber data. Dengan demikian, satu pembelian ulang tidak dihitung sekali di sisi anggota lalu sekali lagi di sisi atribusi; untuk menentukan pembelian ulang pada tingkatan tertentu berasal dari penempatan iklan yang mana, cukup telusur kembali berdasarkan nomornya. Nomor anggota dan akumulasi belanja termasuk informasi pribadi, sehingga pemrosesan dan pembagiannya memerlukan dasar yang jelas, dan antara sistem belakang di dalam negeri Tiongkok dengan laporan luar negeri hanya mengalir ringkasan agregat yang benar-benar diperlukan.
+
+Delapan kolom pada tajuk secara berurutan adalah nomor anggota, tingkatan, barang pembelian berkala, siklus pengiriman, tanggal pengiriman berikutnya, akumulasi belanja, status pembelian berkala, dan tindakan. Enam baris ditulis lengkap menurut urutan ini, dengan semua nominal dalam yuan:
+
+- M-100238, Kartu Hitam, kapsul lunak koenzim Q10 x2, setiap bulan, 2026-10-22, 15800,00 yuan, berjalan;
+- M-101204, Kartu Emas, kapsul lunak minyak ikan x1, setiap bulan, 2026-10-05, 8640,00 yuan, berjalan;
+- M-100571, Kartu Perak, bubuk protein whey x1, setiap 2 bulan, 2026-11-19, 4320,00 yuan, berjalan;
+- M-100872, Kartu Hitam, bubuk probiotik x2, setiap bulan, 2026-10-08, 22100,00 yuan, berjalan;
+- M-101466, Kartu Emas, minuman peptida kolagen x1, setiap bulan, 2026-10-15, 6980,00 yuan, dijeda;
+- M-100419, Kartu Perak, tablet kalsium vitamin D x1, setiap kuartal, 2026-12-01, 1560,00 yuan, berjalan.
+
+Kartu penjelasan memberikan dua nomor. M-100238 adalah Kartu Hitam dengan pengiriman otomatis dua botol kapsul lunak koenzim Q10 setiap bulan, tanggal pengiriman berikutnya 2026-10-22, dan akumulasi belanja 15800,00 yuan; M-101204 adalah Kartu Emas. Kartu itu juga menyatakan bahwa nomor anggota dan buku besar atribusi berasal dari sumber yang sama. Membaca kedua kalimat itu berdampingan dengan enam baris pada tabel memperlihatkan ambang batas tingkatannya: dua baris Kartu Perak berjumlah 4320,00 yuan dan 1560,00 yuan, dua baris Kartu Emas 8640,00 yuan dan 6980,00 yuan, dan dua baris Kartu Hitam 15800,00 yuan dan 22100,00 yuan, tanpa tumpang tindih di antara tiga tingkatan itu. Karena itu, akumulasi belanja berfungsi baik sebagai kolom tampilan maupun sebagai dasar pembagian tingkatan.
+
+Siklus pengiriman terbagi menjadi tiga, yakni setiap bulan, setiap 2 bulan, dan setiap kuartal; pada tabel ada lima yang berjalan dan satu yang dijeda. Yang dijeda adalah M-101466 dengan akumulasi belanja 6980,00 yuan, dan kolom statusnya ditandai tersendiri, bukan dengan menghapus baris itu untuk menyatakan penonaktifan. Tanggal pengiriman berikutnya yang paling awal adalah 2026-10-05 dan yang paling akhir 2026-12-01, keduanya tersusun dalam satu tabel yang sama.
+
+## Menjalani Satu Siklus Pengiriman Penuh dengan Seorang Anggota Kartu Hitam
+
+Ambil anggota Kartu Hitam M-100238 dan telusuri sekali. Sistem belakang mencatat bahwa langganannya masih aktif, satu pesanan setiap bulan, barangnya kapsul lunak koenzim Q10 x2, tanggal pengiriman berikutnya 2026-10-22, dan akumulasi belanja 15800,00 yuan. Baris ini sekaligus tercantum di bawah dua tab, yakni tingkatan keanggotaan dan pembelian berkala, dan nomornya tidak dibuat lagi.
+
+Saat tanggal pengiriman jatuh tempo, sistem membuat pesanan sesuai siklus, mengeluarkan barang dari batch stok gudang berikat, menjalani kepabeanan dan keluar kawasan, lalu menulis kembali nomor resi ke baris ini. Nilai saat ini pada jalur pesanan ikut berubah, jalur masa simpan dikurangi per batch, dan jalur ketepatan waktu mencatat waktu kepabeanan kali ini. Setelah penulisan kembali selesai, akumulasi belanja bertambah sesuai jumlah yang benar-benar dibayar dan tanggal pengiriman berikutnya bergeser satu siklus; rincian memperlihatkan kolomnya, sedangkan catatan memperlihatkan siapa mengubah apa dan kapan pada setiap perubahan.
+
+Penjedaan di tengah jalan juga berada pada baris yang sama. Status pembelian berkala M-101466 adalah dijeda, barang dan akumulasi belanjanya tetap ada di dalam tabel, hanya pesanan berikutnya tidak lagi dibuat; saat dipulihkan, semuanya disambung berdasarkan catatan tanpa membuat nomor anggota baru. Jika penjedaan ditulis sebagai penghapusan baris, buku besar atribusi akan kehilangan satu bagian riwayat dan ambang batas tingkatan tidak dapat dihitung dengan tepat.
+
+Kesepakatan nominal harus ditetapkan secara pasti sejak awal. Akumulasi belanja pada enam baris seluruhnya dinyatakan dalam yuan, ditulis dengan dua angka desimal, tanpa simbol mata uang, dan tanpa catatan konversi yang disisipkan ke data demo. Bagian bawah antarmuka menyatakan bahwa ini adalah data demo, dengan pengecualian dan koreksi yang meninggalkan jejak serta dapat diverifikasi; karena itu nilai-nilai ini dipakai untuk menguji algoritma dan kolom, bukan sebagai angka operasional yang diungkapkan ke publik.
+
+## Selaraskan Dua Sistem Belakang Sebelum Beralih
+
+Judul halaman demo menuliskan empat jalur, sedangkan tabel sebenarnya memuat enam baris, yakni jalur pesanan, jalur stok, jalur kepabeanan, jalur logistik, jalur ketepatan waktu, dan jalur masa simpan. Keduanya tidak bertentangan, karena empat alur layanan dari S10 hingga S13 adalah pembagian tanggung jawab, sedangkan enam baris adalah baris indikator pada layar ini; seorang penanggung jawab dapat mengawasi lebih dari satu baris. Saat membaca tabel, kenali indikator per baris dan cari orang per alur, jangan menjadikan judul halaman sebagai jumlah baris.
+
+Sebelum beralih, lakukan tiga hal. Pertama, jalankan satu siklus pengiriman penuh dan periksa apakah tanggal pengiriman berikutnya dan akumulasi belanja bergeser bersamaan. Kedua, cocokkan nomor anggota dan status pada dua sistem belakang per baris, termasuk apakah ambang batas tingkatan, catatan penjedaan, dan catatan perubahan sudah selaras. Ketiga, tuliskan kembali hasil penanganan baris anomali ke papan agar 2 pesanan yang menunggu deklarasi, 3 anomali, dan 2 batch yang mendekati masa simpan masing-masing memperoleh titik akhir. Setelah ketiga langkah ini dilewati sekali, buku besar retensi baru dapat diambil alih dengan baik.
+
+Apakah pembelian ulang dapat dipertahankan, di dalam sistem hanya bergantung pada dua tempat, yakni apakah anomali langsung terlihat dan apakah perubahan status meninggalkan jejak. Pada halaman demo, enam baris jalur terlihat dalam satu layar, enam baris anggota dapat diperiksa kolom demi kolom, dan setiap baris memiliki rincian serta catatan, sehingga kedua tempat itu memperoleh titik akhir. Adapun berapa lama proses alih selesai bergantung pada penyelarasan kolom pada sistem Anda saat ini dan pada siklus uji paralel; integrasi sejenis di pasar terbuka berada pada skala hitungan minggu, sehingga hanya layak dijadikan acuan besaran dan tidak patut dianggap sebagai janji.
+
+Untuk menghubungkan tingkatan keanggotaan dan pembelian berkala ke sistem belakang operasi gudang berikat yang sudah Anda miliki, silakan [Hubungi Kami](/id/packages/).

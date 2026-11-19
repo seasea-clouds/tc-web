@@ -1292,7 +1292,6 @@
     "metaDescription": "Exploreu tots els serveis, guies sectorials, articles i pàgines del lloc web de SinoTrade Compliance.",
     "servicesTitle": "Serveis",
     "industriesTitle": "Indústries",
-    "blogTitle": "Bloc",
     "pagesTitle": "Altres pàgines",
     "home": "Inici",
     "about": "Sobre nosaltres",
@@ -1300,7 +1299,8 @@
     "quote": "Obteniu un pressupost",
     "faq": "PMF",
     "packages": "Paquets",
-    "testimonials": "Testimonis"
+    "testimonials": "Testimonis",
+    "insightsTitle": "Bloc"
   },
   "Cookie": {
     "message": "Aquest lloc només utilitza cookies d'autenticació essencials. No s'utilitzen cookies de seguiment ni de publicitat.",

@@ -276,7 +276,7 @@ export default function Navbar(props: NavbarProps) {
               {t('faq')}
             </a>
             <a href={blogHref} className="inline-flex items-center text-white/80 hover:text-white transition-colors text-sm font-medium">
-              {t('blog')}
+              {t('insights')}
             </a>
             <a href={href('/regulations/')} className="inline-flex items-center text-white/80 hover:text-white transition-colors text-sm font-medium">
               {t('regulations')}
@@ -305,7 +305,7 @@ export default function Navbar(props: NavbarProps) {
               {t('faq')}
             </a>
             <a href={blogHref} className="inline-flex items-center mx-2.5 text-white/80 hover:text-white transition-colors">
-              {t('blog')}
+              {t('insights')}
             </a>
             <a href={href('/regulations/')} className="inline-flex items-center mx-2.5 text-white/80 hover:text-white transition-colors">
               {t('regulations')}

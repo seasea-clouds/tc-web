@@ -1,0 +1,79 @@
+---
+title: "Restructuring referral order flow so orders never pass through the promoter"
+date: "2027-03-09"
+category: "Compliance Guide"
+excerpt: "Referral compliance in China turns on whether orders pass through the promoter. The promoter portal shows levels, caps and withholding flags per row; three flows keep separate books."
+references:
+  - title: "Notice of the Ministry of Commerce and Five Other Departments on Improving the Supervision of Cross-Border E-Commerce Retail Imports (Shang Cai Fa [2018] No. 486)"
+    url: "https://www.gov.cn/zhengce/zhengceku/2018-12/31/content_5437823.htm"
+  - title: "Regulations on the Prohibition of Pyramid Schemes (State Council Decree No. 444)"
+    url: "https://www.gov.cn/zwgk/2005-09/03/content_28808.htm"
+  - title: "Opinion of the Supreme People's Court, the Supreme People's Procuratorate and the Ministry of Public Security on Several Questions of Law in Criminal Cases of Organizing or Leading Pyramid-Scheme Activities (Gong Tong Zi [2013] No. 37)"
+    url: "https://www.court.gov.cn/shenpan/xiangqing/5856.html"
+---
+
+In China, whether you can recruit promoters and how commission is paid come down to one point: whether orders pass through the promoter's hands. If they do not, the promoter receives a promotion service fee; if they do, the nature becomes resale, and a chain that makes its margin by stockpiling has no legal space in China. Customs supervision mode 1210 (bonded cross-border e-commerce retail imports, with goods supervised as personal-use inbound articles) gives this channel a compliance standard of its own, and the job of the restructuring is to separate the three flows of orders, goods and commission completely.
+
+## Where the old chain is blocked
+
+The old model has only three links: consumers place orders with the promoter, the promoter stockpiles and resells for a margin, and commission is counted per head. The blockage sits in the middle link: resale by promoters is explicitly prohibited. A consumer buying goods directly from a promoter means ownership of the goods lands with the promoter first and is then sold on, and that step turns promotion into a business operation; counting commission by the number of people recruited then crosses both lines at once, pay by head count and resale.
+
+The qualitative difference lies in this one place. In the old chain the promoter stockpiles, resells and earns a margin; in the new chain orders go direct and the promoter receives only a promotion service fee. To judge which kind your scheme is, ignore the promotional language and look at whose hands the goods and the orders pass through.
+
+No resale is a hard rule written into the agreement: goods bought may not be resold, and commission is separated from ownership of the goods. A promoter who stockpiles and resells personally commits an individual violation; the agreement bans it in plain terms and keeps a record, so if something happens it can be traced to a specific person and a specific clause.
+
+## Four steps in the new chain, three hard constraints
+
+The restructured chain runs in four steps: the consumer places an order in the store and the promoter does not touch the order; the platform fulfills it centrally; commission is calculated on attributed transaction value, with the management team capped at two levels; and commission is paid in yuan by the onshore entity, which withholds the tax. Attributed transaction value (GMV) means the real transaction amount attributed to the referral relationship.
+
+Three hard constraints follow the chain: no stockpiling, no resale, and commission only as a promotion service fee. Three numbers lock this model in place: two model chains set against each other, a management team capped at two levels, and three hard constraints.
+
+The basis is on the record. The Notice Shang Cai Fa [2018] No. 486 states that cross-border e-commerce retail import goods are supervised as personal-use inbound articles, and item 3 of its risk notice requires that the three flows of orders, goods and commission do not interweave; putting the three flows on separate books is that notice implemented at the system level.
+
+![The old model and the new model as two chains compared: orders never pass through the promoter, and the three hard constraints and the three flows each leave their own record](/images/insights/restructuring-order-flow-referral-sales-china/referral-order-flow-old-versus-restructured-chains.webp)
+
+## Three flows, each keeping its own books
+
+The order flow sits in the store backend, the goods flow in the bonded warehouse books, and the commission flow in the attribution detail; cross-check the three, and any order can be reconstructed.
+
+Order flow: attribution is recorded the moment the order is placed, and the promoter sees only the promotion service fee, never touching the order itself. Goods flow: entry into the zone, exit from the zone and returns are all written into the bonded books, the ledger in which customs registers every item in the bonded warehouse, visible to customs at the same time. Commission flow: paid by the onshore entity with tax withheld, and kept apart from payment for the goods.
+
+Keeping the three flows from interweaving is the first thing asked in a regulatory inspection. Wherever one set of books fails to match, it must be possible to go back to the other two and find the original record, instead of relying on the promoter's own explanation.
+
+## One row in the portal answers three questions
+
+The attribution and cap detail sits under the order management group of the mall module; the interface has a top bar and a left menu, and the left side is divided into three groups, order management, after-sales management and business tools; the tabs let you view all levels or a single level, L1, L2 or L3.
+
+What it records: the level means the referral relationship level; the attributed amount is the GMV attributed to that level and serves as the commission base; the commission rate decreases with each level; the cap notice marks rows that hit the ceiling, and the withholding flag answers whether the onshore entity has already withheld individual income tax. Which rule it answers: orders do not pass through the promoter, and commission is withheld onshore. Once those two sentences land in the system, they become the base, rate, net payment and cap status set side by side on every row, and no second ledger is needed to explain them.
+
+![Demo interface of the promoter portal: the attribution and cap detail table, with level, base, rate, cap and withholding flag side by side on every row](/images/insights/restructuring-order-flow-referral-sales-china/promoter-portal-attribution-and-cap-detail-table.webp)
+
+## Walking an order through
+
+Take the first attributed order in the demo books through the full flow: the attributed amount is 1280.00 yuan (about 178 US dollars at 7.2 yuan per dollar, for reference), and the L1 promoter with member number M-100238 earns commission at 8.0%, an accrual of 102.40 yuan, with the withholding flag showing withheld and the status accrued; the same order rolls to L2 (M-100571), where the rate drops to 4.0% and the accrual is 51.20 yuan, and the cap notice reads capped; at L3 (M-101204) the rate is 0.0% and the accrual is 0.00 yuan, the cap notice reads level cap, and the status is not accrued. Beyond two levels no commission arises at all, and this is what a two-level cap looks like in the books.
+
+The review method is fixed: multiply the base by the rate row by row, read the cap notice on rows that hit the ceiling, read the withholding flag to see whether tax is paid, and keep rows not accrued out of settlement. The window in the demo screenshot shows 9 rows, and the footer records 12 entries in total at 20 per page; the first order has been walked through above, and the remaining six rows are recorded row by row below, with amounts in yuan. The attributed order column is truncated in the interface, so the visible prefixes are kept here; open the details and log in the actions column for the full order numbers and the original record.
+
+The second order, attributed order prefix SO26091, attributed amount 860.00 yuan:
+
+- L1 (M-100982): commission at 8.0%, an accrual of 68.80 yuan, no cap notice, withheld and accrued;
+- L2 (M-100571): commission at 4.0%, an accrual of 34.40 yuan, no cap notice, withheld and accrued;
+- L3 (M-101204): commission at 0.0%, an accrual of 0.00 yuan, level cap, no withholding flag, not accrued.
+
+The remaining three rows differ in base and level, and are there to check the combinations of cap notice and withholding flag:
+
+- L2 (M-100239, SO26091): attributed 1664.00 yuan, commission at 6.6%, an accrual of 102.40 yuan, no cap notice, withheld and accrued;
+- L3 (M-100573, SO26092): attributed 1561.60 yuan, commission at 3.8%, an accrual of 66.56 yuan, level cap, withheld, not accrued;
+- L1 (M-101207, SO26092): attributed 1459.20 yuan, commission at 0.0%, an accrual of 0.00 yuan, capped, no withholding flag, accrued.
+
+Some rows in the demo data do not multiply out exactly: 1664.00 yuan at 6.6% should give 109.82 yuan, while the interface records 102.40 yuan. Before going live, review row by row against your own commission configuration, and do not treat demo readings as a basis for settlement.
+
+## What this restructuring does not cover
+
+It does not cover claim wording or advertising review: what detail pages and live streams may say has its own allowed-and-banned comparison table and review process, and order flow restructuring cannot rescue a claim that breaks the rules. Nor does it cover arrangements for members' personal information or for cross-border data transfer; those are a separate set of obligations.
+
+It does not replace the judgment of administrative liability either. Article 5 of the Gong Tong Zi [2013] No. 37 opinion gives a safe harbor at the criminal level: team-based pay based on sales performance is not treated as a crime. Administrative liability does not disappear along with it, and entry fees and pay by head count have no safe harbor at the administrative level either. The two-level cap is a safety margin the scheme sets for itself, not a figure written in the statute; do not promote it as a legal ceiling.
+
+A finished restructuring has two marks: any order can be reconstructed from the three sets of books, and the promoter never holds ownership of the goods. Signing the agreement is only the starting point; it lands when the books can be reconstructed.
+
+To check your referral plan row by row against the attribution and cap configuration, [Contact us](/en/packages/).

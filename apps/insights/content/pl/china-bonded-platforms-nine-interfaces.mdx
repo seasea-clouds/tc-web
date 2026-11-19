@@ -1,0 +1,113 @@
+---
+title: "Dziewięć interfejsów chińskich platform celnych, światła stanu i zapas na szczyt"
+date: "2027-06-22"
+category: "E-commerce"
+excerpt: "Standardowe interfejsy najpierw, resztę mapuje warstwa pośrednia, a światła stanu logują dane. Dane zostają w kraju, szczyt rezerwuje się, a luki śledzi się przed rozliczeniem."
+references:
+  - title: "Obwieszczenie nr 194 z 2018 roku Głównego Urzędu Celnego Chin w sprawie nadzoru nad towarami detalicznymi przywożonymi i wywożonymi w transgranicznym handlu elektronicznym"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Ustawa Chińskiej Republiki Ludowej o ochronie danych osobowych, uchwalona 20 sierpnia 2021 roku, artykuły trzydzieści osiem, trzydzieści dziewięć i pięćdziesiąt pięć"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+  - title: "Przepisy o wspieraniu i regulowaniu transgranicznych przepływów danych, zarządzenie nr 16 Administracji Cyberprzestrzeni Chin, obowiązujące od 22 marca 2024 roku"
+    url: "https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm"
+---
+
+Dziewięć rodzin interfejsów może podłączyć Państwa obecne systemy do chińskich platform celnych, pod warunkiem że standardowe interfejsy mają pierwszeństwo, dane zostają w kraju, a wyprzedaż wymiaruje się z marginesem szczytu 10 razy. Tam gdzie standardowy interfejs istnieje, podłącza się go bezpośrednio, a tam gdzie go brakuje, mapuje go warstwa pośrednia; światła stanu rejestrują dla każdego typu liczbę wywołań, wskaźnik sukcesu, czas odpowiedzi i nieudane ponowienia, a dwa wiersze wysyłki zamówienia i zwrotu płatności zapisują zwrot trzech dokumentów. Publiczne rynkowe wartości referencyjne wyznaczają standardową integrację od 3 do 7 dni i pełną integrację od 8 do 12 tygodni, i są one jedynie punktami odniesienia skali; o terminie uruchomienia faktycznie decydują wspólne testy i równoległy cykl rozliczeniowy.
+
+![Prezentacja tabeli mapowania dziewięciu rodzin interfejsów, z nagłówkami Państwa system, element integracji, kierunek i miejsce docelowe, dziewięć wierszy od towarów i zapasów przez zamówienia, dane członków, rozliczenie prowizji, zapasy, cło, realizację, zwroty po finanse, oraz cztery zasady przepływu danych i cztery światła stanu monitoringu wspólnych testów](/images/insights/china-bonded-platforms-nine-interfaces/nine-interface-families-mapping.webp)
+
+## Do której tabeli trafia każda z dziewięciu rodzin interfejsów
+
+Tabela interfejsów jest zapisana w czterech kolumnach, mianowicie po której stronie Państwa systemu leży rzecz, czym jest element integracji, kto nadaje kierunek i gdzie dane ostatecznie trafiają. Kierunek występuje tylko w trzech formach, dwukierunkowy, przychodzący i Państwo kierują, a wiersze bez oznaczonego kierunku przejmuje nasza strona. Kolumna miejsca docelowego wyraźnie mówi, do której ewidencji należy każde pole, dzięki czemu ten kto przejmuje pracę, może sprawdzić to w tabeli.
+
+- Towary i zapasy: zapasy i ceny SKU, dwukierunkowy, utrzymywane w zgodności z systemem zarządzania magazynem i ewidencją celną.
+- Zamówienia: dane zamówień, przychodzący, trafiają do pól trzech dokumentów.
+- Dane członków: relacje polecających, Państwo kierują, dane należą do Państwa, a przetwarzamy je jako podmiot przetwarzający.
+- Rozliczenie prowizji: wypłata prowizji, dwukierunkowy, część krajową wykonuje podmiot krajowy.
+- Zapasy: system magazynu celnego, bez oznaczonego kierunku, trafia do systemu operacji celnych i dzieli źródło z ewidencją.
+- Cło: zgłoszenie trzech dokumentów, bez oznaczonego kierunku, zgłoszenie spoczywa na nas i należy do spraw pod naszą kontrolą.
+- Realizacja: zwrot śledzenia, bez oznaczonego kierunku, śledzenie logistyki jest zapisywane z powrotem do widoku zamówienia.
+- Zwroty: dokumenty zwrotów, bez oznaczonego kierunku, zwroty wracają przez centrum zwrotów ponownie do obszaru nadzoru.
+- Finanse: rozliczenie jest wychodzące i obejmuje walutę oraz wymianę.
+
+Gdzie płyną dane, decyduje o tym jak budowane są interfejsy. Ewidencja po stronie krajowej i tablica po stronie zagranicznej muszą być trzymane osobno, w przeciwnym razie podczas wspólnych testów obie strony nadpiszą te same pola.
+
+- Dane promocyjne zbierane i rozliczane w kraju zostają w kraju.
+- Do Państwa zagranicznej spółki matki wracają wyłącznie zagregowane dane pozbawione identyfikatorów, i nie niosą one krajowych relacji prowizyjnych.
+- Zagraniczne zaplecze nigdy nie dotyka surowych danych chińskich konsumentów, a ścieżki transgraniczne otwierają się dopiero po przejściu oceny skutków dla ochrony danych osobowych.
+- Krajowe dane promocyjne i prowizyjne można wyeksportować w całości i przekazać Państwu wraz z ewidencją przy przekazaniu.
+
+Monitoring wspólnych testów układa światła stanu w cztery wiersze według typu interfejsu i kontrahenta, a każda kontrola stanu i każde ponowienie zostawia jeden rekord. Strona demonstracyjna wypisuje trzy pozycje, typ interfejsu, kontrahenta i światło stanu, które odpowiadają temu samemu zestawowi co w prezentacji interfejsu systemu, a wiersze przegląda się jeden po drugim każdego dnia w trakcie wspólnych testów.
+
+- Wysyłka zamówienia ma za kontrahenta interfejs sklepu, a światło stanu jest prawidłowe.
+- Zwrot płatności ma za kontrahenta kanał płatności, a światło stanu jest prawidłowe.
+- Zwrot listu przewozowego ma za kontrahenta firmę kurierską, a światło stanu pokazuje ostrzeżenie.
+- Zgłoszenie listy ma za kontrahenta kanał zgłoszeń, a światło stanu jest prawidłowe.
+
+Zasady integracji ustalają najpierw standardowy interfejs, i tam gdzie standardowy interfejs jest, podłącza się go wprost, natomiast tam gdzie go brakuje, mapuje go warstwa pośrednia. Publiczne rynkowe wartości referencyjne wyznaczają standardową integrację od 3 do 7 dni i pełną integrację od 8 do 12 tygodni, a wyprzedaż wymiaruje się z marginesem szczytu 10 razy. Każda strona wyznacza jedną osobę kontaktową do spraw technicznych i prowadzi codzienne spotkanie statusowe w trakcie wspólnych testów. Po uruchomieniu wykonuje się jeden pełny cykl rozliczeniowy równolegle przed przełączeniem, a dane dwóch systemów w okresie pracy równoległej nie mogą się rozjechać.
+
+## Jak czytać światła stanu i gdzie zapisywane są nieudane ponowienia
+
+Dziennik stanu interfejsów daje jeden wiersz na typ interfejsu, z zakładkami wszystkie interfejsy, prawidłowe i nieprawidłowe, a każdy wiersz zapisuje kontrahenta, liczbę wywołań, wskaźnik sukcesu, czas odpowiedzi, liczbę błędów, ponowienie i światło stanu. Biorąc za przykład wysyłkę zamówienia, dziennik pokazuje 1284 wywołania dzisiaj, wskaźnik sukcesu 100%, średni czas odpowiedzi 186 milisekund, 0 błędów i prawidłowe światło stanu. Zwrot płatności miał również 1284 wywołania, wskaźnik sukcesu 99,9%, 1 błąd wysłany ponownie pomyślnie, a światło stanu pozostało prawidłowe. Te dwa wiersze są dowodem na to, że zwrot trzech dokumentów znajduje się w systemie.
+
+Gdy dziewięć rodzin interfejsów jest odwzorowanych, wolumeny wywołań i dane o stanie z czasu pracy trafiają wszystkie do tego dziennika, a dwa wiersze wysyłki zamówienia i zwrotu płatności zapisują jak zwrot trzech dokumentów się ulokował. U dołu interfejsu demonstracyjnego widnieje 12 rekordów łącznie i 20 na stronie, a na końcu każdego wiersza są dwa wejścia do szczegółów i dziennika; wszystkie dziewięć wierszy jest wypisanych według tego samego zestawu.
+
+![Prezentacja interfejsu systemu dziennika stanu interfejsów, dziewięć wierszy w dziewięciu kolumnach dla typu interfejsu, kontrahenta, dzisiejszych wywołań, wskaźnika sukcesu, średniego czasu odpowiedzi, błędów, ponowienia, światła stanu i działań, z 12 rekordami i 20 na stronie u dołu](/images/insights/china-bonded-platforms-nine-interfaces/interface-health-log-system-demo.webp)
+
+- Wysyłka zamówienia, interfejs sklepu, 1284 wywołania dzisiaj, wskaźnik sukcesu 100%, średni czas odpowiedzi 186 milisekund, 0 błędów, bez ponowienia, światło stanu prawidłowe, szczegóły i dziennik;
+- Zwrot płatności, kanał płatności, 1284, 99,9%, 210 milisekund, 1 błąd, wysłano ponownie, prawidłowe, szczegóły i dziennik;
+- Zwrot listu przewozowego, firma kurierska, 1266, 99,2%, 340 milisekund, 10 błędów, w trakcie ponawiania, ostrzeżenie, szczegóły i dziennik;
+- Zgłoszenie listy, kanał zgłoszeń, 1266, 99,8%, 520 milisekund, 3 błędy, wysłano ponownie, prawidłowe, szczegóły i dziennik;
+- Zapytanie o limit, kanał zapytań, 1284, 100%, 150 milisekund, 0 błędów, bez ponowienia, prawidłowe, szczegóły i dziennik;
+- Synchronizacja ewidencji, magazyn celny, 96, 100%, 430 milisekund, 0 błędów, bez ponowienia, prawidłowe, szczegóły i dziennik;
+- Zapis statusu zwolnienia, kanał zgłoszeń, 1240, 99,6%, 610 milisekund, 5 błędów, wysłano ponownie, prawidłowe, szczegóły i dziennik;
+- Śledzenie logistyki, firma kurierska, 1240, 98,7%, 720 milisekund, 16 błędów, w trakcie ponawiania, ostrzeżenie, szczegóły i dziennik;
+- Plik uzgodnień, system finansowy, 12, 100%, 980 milisekund, 0 błędów, bez ponowienia, prawidłowe, szczegóły i dziennik.
+
+## Jak ocenia się szczyt wyprzedaży i ile przepustowości zarezerwować
+
+Ocena szczytu dzieli się na cztery przypadki według wolumenu i potrzeb odpowiedzi, niski wolumen z wysokimi potrzebami odpowiedzi patrzy na elastyczność, wysoki wolumen z wysokimi potrzebami odpowiedzi patrzy na czas realizacji, niski wolumen z niskimi potrzebami odpowiedzi patrzy na podstawową zdolność, a wysoki wolumen z niskimi potrzebami odpowiedzi patrzy na stabilną przepustowość. Krzywa przepustowości względem dziennej przepustowości ma trzy poziomy, 1 raz w codziennej pracy, od 4 do 5 razy podczas wyprzedaży i 10 razy na szczycie, a stronę szczytu rezerwuje się z marginesem 10 razy. Im wcześniej przekażecie Państwo nam wstępnie zgłoszony wolumen, tym więcej miejsca zostaje na rozbudowę przepustowości i obsadę personelu, a gdy wolumeny nadejdą dopiero tydzień przed wyprzedażą, zostaje już niemal wyłącznie zwiększenie obsady.
+
+- Niski wolumen i wysokie potrzeby odpowiedzi idą do elastyczności szczytowej, a publiczne przypadki są od 4 do 5 razy dziennego wolumenu, szczyty sięgają od dziesiątek tysięcy do setek tysięcy sztuk, personel wyprzedaży to około 3 razy normy, i są to wartości referencyjne z publicznych przypadków.
+- Wysoki wolumen i wysokie potrzeby odpowiedzi są ograniczone czasem realizacji, bardzo wysokie szczyty potrzebują wyprzedzenia, wzrost SKU powiększa jednocześnie magazyn i ewidencję, wyprzedaż rezerwuje szczyt 10 razy, a dane o skali przekazujecie Państwo.
+- Niski wolumen i niskie potrzeby odpowiedzi to podstawowa zdolność, sklep markowy z licencjonowanymi płatnościami i wbudowanymi dokumentami ma podłączonych ponad 50 przejść celnych i ponad 70 systemów ERP, posiada certyfikat AEO wyższego poziomu i własną odprawę celną, a nasza strona jest gotowa.
+- Wysoki wolumen i niskie potrzeby odpowiedzi to stabilna przepustowość, wymiarowana według dziennych zamówień, z wcześniejszym przyjęciem do magazynu i składowaniem strefowym, z pracownikami stałymi i tymczasowymi w połączeniu, z wstępnie zgłoszonym wolumenem na początku, ze zwrotami wracającymi do obszaru nadzoru, a nasza strona postępuje zgodnie z procesem.
+
+Kandydatami na magazyn są cztery lokalizacje kompleksowej strefy celnej oraz magazyn celny w Hongkong, Chiny. Cztery lokalizacje równolegle dają redundancję wielu przejść celnych, Państwo wybieracie ostateczne przejście celne, a lista kandydatów jest przekazywana Państwu już na etapie rozpoczęcia, więc nie trzeba czekać aż towary dotrą do portu. Magazyn celny w Hongkong, Chiny leży po stronie zagranicznej i jest zapisywany osobno od czterech lokalizacji krajowych.
+
+![Prezentacja oceny szczytowej przepustowości platformy i realizacji dla wyprzedaży, po lewej cztery ćwiartki według wolumenu i potrzeb odpowiedzi, w prawym górnym rogu krzywa przepustowości w trzech poziomach względem dziennej przepustowości, w prawym dolnym rogu tablica wstępnie zgłoszonego wolumenu wyprzedaży, a u dołu cztery lokalizacje kompleksowej strefy celnej oraz magazyn celny w Hongkong, Chiny](/images/insights/china-bonded-platforms-nine-interfaces/mega-sale-peak-capacity-verdict.webp)
+
+- Yiwu w Zhejiang to magazyn celny o trybie nadzoru 1210.
+- Hangzhou w Zhejiang to magazyn celny o trybie nadzoru 1210.
+- Guangzhou Huangpu w Guangdong to magazyn celny o trybie nadzoru 1210.
+- Shenzhen Qianhai w Guangdong to magazyn celny o trybie nadzoru 1210.
+- Hongkong, Chiny leży po stronie zagranicznej jako magazyn celny w Hongkong, Chiny.
+
+Tablica wstępnie zgłoszonego wolumenu wyprzedaży wypisuje cztery wiersze w siedmiu kolumnach dla SKU, wstępnie zgłoszonego wolumenu, wartości zgłoszonej, postępu, przewidywanego ukończenia, statusu i działań, a w każdym wierszu są dwa wejścia do szczegółów i dziennika. Postęp i przewidywana data ukończenia wyznaczają kolejność zaopatrzenia każdego SKU, a luki są śledzone wiersz po wierszu w tabeli śledzenia wstępnie zgłoszonego wolumenu.
+
+- Kapsułki z koenzymem Q10, wstępnie zgłoszony wolumen 12000, zgłoszone 8400, postęp 70%, przewidywane ukończenie 10-12, w toku, szczegóły i dziennik;
+- Kapsułki z olejem rybim z głębin, 8000, 6400, 80%, 10-08, w toku, szczegóły i dziennik;
+- Napój w proszku białkowym, 6000, 2400, 40%, 10-18, w toku, szczegóły i dziennik;
+- Liofilizowany proszek probiotyczny, 5000, 5000, 100%, bez oznaczonej daty ukończenia, ukończone, szczegóły i dziennik.
+
+## Jak śledzić luki wstępnie zgłoszonego wolumenu wiersz po wierszu
+
+Tabela śledzenia wstępnie zgłoszonego wolumenu w module zapasów daje jeden wiersz na SKU i zapisuje wstępnie zgłoszony wolumen, wartość zgłoszoną, postęp, lukę, przewidywane ukończenie i status. Biorąc za przykład kapsułki z koenzymem Q10, wstępnie zgłoszony wolumen to 12000, wartość zgłoszona 8400, postęp 70%, luka 3600 i przewidywane uzupełnienie 10-12, podczas gdy kapsułki z olejem rybim z głębin są na 80% postępu, a ich luka 1600 ma zostać uzupełniona 10-08. Krzywa przepustowości w trzech poziomach staje się tutaj działaniami zaopatrzeniowymi, więc jak duża jest luka i którego dnia się domknie, widać z wyprzedzeniem.
+
+U dołu interfejsu widnieje 7 rekordów łącznie i 20 na stronie, a na końcu każdego wiersza są dwa wejścia do szczegółów i dziennika. Dwie zakładki śledzenia wstępnie zgłoszonego wolumenu i przypomnienia o dostawie leżą obok siebie, więc pierwsza linia przełącza zakładki bez ponownego filtrowania, a wszystkie siedem wierszy jest wypisanych według tego samego zestawu.
+
+![Prezentacja interfejsu systemu śledzenia wstępnie zgłoszonego wolumenu, siedem wierszy w ośmiu kolumnach dla SKU, wstępnie zgłoszonego wolumenu, wartości zgłoszonej, postępu, luki, przewidywanego ukończenia, statusu i działań, z 7 rekordami i 20 na stronie u dołu](/images/insights/china-bonded-platforms-nine-interfaces/pre-filed-volume-tracking-system-demo.webp)
+
+- Kapsułki z koenzymem Q10, 12000, 8400, 70%, luka 3600, 10-12, w toku, szczegóły i dziennik;
+- Kapsułki z olejem rybim z głębin, 8000, 6400, 80%, luka 1600, 10-08, w toku, szczegóły i dziennik;
+- Napój w proszku białkowym, 6000, 2400, 40%, luka 3600, 10-18, w toku, szczegóły i dziennik;
+- Liofilizowany proszek probiotyczny, 5000, 5000, 100%, luka 0, bez oznaczonej daty ukończenia, ukończone, szczegóły i dziennik;
+- Proszek peptydów kolagenu rybnego, 6000, 3000, 50%, luka 3000, 10-15, w toku, szczegóły i dziennik;
+- Tabletki do żucia z witaminą C, 9000, 8100, 90%, luka 900, 10-06, w toku, szczegóły i dziennik;
+- Żelki z melatoniną, 4000, 4000, 100%, luka 0, bez oznaczonej daty ukończenia, ukończone, szczegóły i dziennik.
+
+## Co ustalić przed uruchomieniem w kwestii interfejsów i przełączenia
+
+Przed uruchomieniem ustala się trzy rzeczy, standardowe interfejsy i mapowanie warstwy pośredniej wpisuje się do tabeli interfejsów, progi świateł stanu, nieudane ponowienia i osoby odpowiedzialne przypina się do wierszy, a wstępnie zgłoszony wolumen i poziomy przepustowości wyrównuje się do tego samego zbioru SKU. Jeśli któreś z trzech nie jest kompletne, wspólne testy utkną na ponowieniach. Liczby wywołań, wskaźniki sukcesu, wstępnie zgłoszone wolumeny i daty ukończenia w interfejsie demonstracyjnym służą wyłącznie do ilustracji, dane o szczycie i personelu pochodzą z publicznych przypadków i pokazują tylko skalę, a rzeczywiste wolumeny przekazujecie Państwo. Rzeczywista praktyka zgłoszeń przebiega według wymogów właściwego organu, a transgraniczne ścieżki danych kierują się wnioskiem z oceny skutków dla ochrony danych osobowych. Wykonaj jeden pełny cykl rozliczeniowy równolegle przed przełączeniem, potwierdź że dane dwóch systemów się nie rozjechały, i dopiero wtedy przekieruj ruch.
+
+Jeśli chcecie Państwo podłączyć dziewięć rodzin interfejsów do celnej realizacji według obecnego stosu systemów i planu przejść celnych, ze światłami stanu i wstępnie zgłoszonym wolumenem sprawdzonymi wiersz po wierszu, [skontaktuj się z nami](/pl/packages/).

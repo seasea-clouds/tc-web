@@ -1292,7 +1292,6 @@
     "metaDescription": "Vinjari huduma zote, miongozo ya sekta, makala za maarifa na kurasa zote kwenye tovuti ya SinoTrade Compliance.",
     "servicesTitle": "Huduma",
     "industriesTitle": "Viwanda",
-    "blogTitle": "Makala za Maarifa",
     "pagesTitle": "Kurasa Nyingine",
     "home": "Nyumbani",
     "about": "Kuhusu Sisi",
@@ -1300,7 +1299,8 @@
     "quote": "Pata Nukuu",
     "faq": "Maswali Yanayoulizwa Mara kwa Mara",
     "packages": "Vifurushi",
-    "testimonials": "Ushuhuda"
+    "testimonials": "Ushuhuda",
+    "insightsTitle": "Makala za Maarifa"
   },
   "Cookie": {
     "message": "Tovuti hii hutumia vidakuzi muhimu vya uthibitishaji pekee. Hakuna vidakuzi vya ufuatiliaji au utangazaji vinatumika.",

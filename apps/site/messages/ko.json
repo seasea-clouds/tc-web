@@ -1292,7 +1292,6 @@
     "metaDescription": "SinoTrade 규정 준수 웹사이트의 모든 서비스, 산업 가이드, 인사이트 게시물과 페이지를 둘러보세요.",
     "servicesTitle": "서비스",
     "industriesTitle": "산업",
-    "blogTitle": "인사이트 기사",
     "pagesTitle": "기타 페이지",
     "home": "홈",
     "about": "회사 소개",
@@ -1300,7 +1299,8 @@
     "quote": "견적 받기",
     "faq": "자주 묻는 질문",
     "packages": "패키지",
-    "testimonials": "고객 평가"
+    "testimonials": "고객 평가",
+    "insightsTitle": "인사이트 기사"
   },
   "Cookie": {
     "message": "이 사이트는 필수 인증 쿠키만을 사용합니다. 추적 또는 광고 쿠키는 사용되지 않습니다.",

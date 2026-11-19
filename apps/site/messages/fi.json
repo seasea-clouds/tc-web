@@ -1292,7 +1292,6 @@
     "metaDescription": "Selaa kaikki palvelut, toimiala-oppaat, asiantuntija-artikkelit ja sivut SinoTrade Compliance -verkkosivustolla.",
     "servicesTitle": "Palvelut",
     "industriesTitle": "Toimialat",
-    "blogTitle": "Artikkelit",
     "pagesTitle": "Muut sivut",
     "home": "Etusivu",
     "about": "Tietoja meistä",
@@ -1300,7 +1299,8 @@
     "quote": "Pyydä tarjous",
     "faq": "UKK",
     "packages": "Paketit",
-    "testimonials": "Asiakaskokemukset"
+    "testimonials": "Asiakaskokemukset",
+    "insightsTitle": "Artikkelit"
   },
   "Cookie": {
     "message": "Tämä sivusto käyttää vain välttämättömiä todennusevästeitä. Mitään seuranta- tai mainosevästeitä ei käytetä.",

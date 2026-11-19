@@ -18,7 +18,6 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Testimoniale",
     "industries": "Industrii",
-    "blog": "Blog",
     "checkCb": "CBEC",
     "checkCcc": "Electronice",
     "checkGacc": "Import de alimente",
@@ -27,7 +26,8 @@
     "checkTm": "Mărci comerciale",
     "email": "E-mail",
     "freeCheckHeader": "Instrumente gratuite",
-    "getQuote": "Obțineți o ofertă"
+    "getQuote": "Obțineți o ofertă",
+    "insights": "Blog"
   },
   "Search": {
     "title": "Căutare",
@@ -37,9 +37,9 @@
     "hint": "Tastați pentru a căuta în servicii, articole și întrebări frecvente",
     "types": {
       "service": "Servicii",
-      "blog": "Perspective",
       "faq": "FAQ",
-      "regulation": "Reglementări"
+      "regulation": "Reglementări",
+      "insights": "Perspective"
     }
   },
   "Navbar": {
@@ -57,7 +57,6 @@
     },
     "packages": "Pachete",
     "faq": "Întrebări frecvente",
-    "blog": "Perspective",
     "contact": "Contactaţi-ne",
     "whatsapp": "WhatsApp",
     "quote": "Obțineți o cotație",
@@ -94,7 +93,8 @@
     "report": "Raport",
     "reports": "Rapoarte",
     "email": "E-mail",
-    "regulations": "Reglementări"
+    "regulations": "Reglementări",
+    "insights": "Perspective"
   },
   "MobileTab": {
     "home": "Acasă",
@@ -121,7 +121,7 @@
   "breadcrumb": {
     "home": "Acasă",
     "services": "Servicii",
-    "blog": "Insights",
+    "insights": "Insights",
     "industries": "Industrii",
     "packages": "Pachete",
     "faq": "FAQ"

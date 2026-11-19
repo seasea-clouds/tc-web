@@ -18,7 +18,6 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Відгуки",
     "industries": "Галузі промисловості",
-    "blog": "Інсайти",
     "checkCb": "CBEC",
     "checkCcc": "електроніка",
     "checkGacc": "Імпорт продуктів харчування",
@@ -27,7 +26,8 @@
     "checkTm": "Торгові марки",
     "email": "Електронна пошта",
     "freeCheckHeader": "Безкоштовні інструменти",
-    "getQuote": "Отримати пропозицію"
+    "getQuote": "Отримати пропозицію",
+    "insights": "Інсайти"
   },
   "Search": {
     "title": "Пошук",
@@ -37,9 +37,9 @@
     "hint": "Введіть текст для пошуку в службах, статтях і поширених запитаннях",
     "types": {
       "service": "Послуги",
-      "blog": "Інсайти",
       "faq": "FAQ",
-      "regulation": "Нормативні акти"
+      "regulation": "Нормативні акти",
+      "insights": "Інсайти"
     }
   },
   "Navbar": {
@@ -57,7 +57,6 @@
     },
     "packages": "пакети",
     "faq": "Часті запитання",
-    "blog": "Інсайти",
     "contact": "Зв'яжіться з нами",
     "whatsapp": "WhatsApp",
     "quote": "Отримати цінову пропозицію",
@@ -94,7 +93,8 @@
     "report": "звіт",
     "reports": "Звіти",
     "email": "Пошта",
-    "regulations": "Нормативні акти"
+    "regulations": "Нормативні акти",
+    "insights": "Інсайти"
   },
   "MobileTab": {
     "home": "Головна",
@@ -121,7 +121,7 @@
   "breadcrumb": {
     "home": "Головна",
     "services": "Послуги",
-    "blog": "Insights",
+    "insights": "Insights",
     "industries": "Галузі промисловості",
     "packages": "пакети",
     "faq": "FAQ"

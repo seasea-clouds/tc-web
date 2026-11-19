@@ -18,7 +18,6 @@
     "whatsapp": "WhatsApp",
     "testimonials": "প্রশংসাপত্র",
     "industries": "শিল্প",
-    "blog": "অন্তর্দৃষ্টি",
     "checkCb": "সিবিইসি",
     "checkCcc": "ইলেকট্রনিক্স",
     "checkGacc": "খাদ্য আমদানি",
@@ -27,7 +26,8 @@
     "checkTm": "ট্রেডমার্ক",
     "email": "ইমেইল",
     "freeCheckHeader": "বিনামূল্যের সরঞ্জাম",
-    "getQuote": "একটি উদ্ধৃতি পান"
+    "getQuote": "একটি উদ্ধৃতি পান",
+    "insights": "অন্তর্দৃষ্টি"
   },
   "Search": {
     "title": "অনুসন্ধান করুন",
@@ -37,9 +37,9 @@
     "hint": "পরিষেবা, নিবন্ধ এবং FAQ জুড়ে অনুসন্ধান করতে টাইপ করুন",
     "types": {
       "service": "সেবাসমূহ",
-      "blog": "অন্তর্দৃষ্টি",
       "faq": "FAQ",
-      "regulation": "বিধিমালা"
+      "regulation": "বিধিমালা",
+      "insights": "অন্তর্দৃষ্টি"
     }
   },
   "Navbar": {
@@ -57,7 +57,6 @@
     },
     "packages": "প্যাকেজ",
     "faq": "সচরাচর জিজ্ঞাসা",
-    "blog": "অন্তর্দৃষ্টি",
     "contact": "আমাদের সাথে যোগাযোগ করুন",
     "whatsapp": "WhatsApp",
     "quote": "একটি উদ্ধৃতি পান",
@@ -94,7 +93,8 @@
     "report": "রিপোর্ট",
     "reports": "রিপোর্ট",
     "email": "ইমেইল",
-    "regulations": "বিধিমালা"
+    "regulations": "বিধিমালা",
+    "insights": "অন্তর্দৃষ্টি"
   },
   "MobileTab": {
     "home": "হোম",
@@ -121,7 +121,7 @@
   "breadcrumb": {
     "home": "হোম",
     "services": "সেবাসমূহ",
-    "blog": "Insights",
+    "insights": "Insights",
     "industries": "শিল্প",
     "packages": "প্যাকেজ",
     "faq": "FAQ"

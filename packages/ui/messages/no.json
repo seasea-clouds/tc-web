@@ -18,7 +18,6 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Kundeomtaler",
     "industries": "Industrier",
-    "blog": "Innsikt",
     "checkCb": "CBEC",
     "checkCcc": "Elektronikk",
     "checkGacc": "Mat import",
@@ -27,7 +26,8 @@
     "checkTm": "Varemerker",
     "email": "E-post",
     "freeCheckHeader": "Gratis verktøy",
-    "getQuote": "Få et tilbud"
+    "getQuote": "Få et tilbud",
+    "insights": "Innsikt"
   },
   "Search": {
     "title": "Søk",
@@ -37,9 +37,9 @@
     "hint": "Skriv for å søke på tvers av tjenester, artikler og vanlige spørsmål",
     "types": {
       "service": "Tjenester",
-      "blog": "Blogg",
       "faq": "FAQ",
-      "regulation": "Forskrifter"
+      "regulation": "Forskrifter",
+      "insights": "Blogg"
     }
   },
   "Navbar": {
@@ -57,7 +57,6 @@
     },
     "packages": "Pakker",
     "faq": "Ofte stilte spørsmål",
-    "blog": "Blogg",
     "contact": "Kontakt oss",
     "whatsapp": "WhatsApp",
     "quote": "Få et tilbud",
@@ -94,7 +93,8 @@
     "report": "Rapportere",
     "reports": "Rapporter",
     "email": "E-post",
-    "regulations": "Forskrifter"
+    "regulations": "Forskrifter",
+    "insights": "Blogg"
   },
   "MobileTab": {
     "home": "Hjem",
@@ -121,7 +121,7 @@
   "breadcrumb": {
     "home": "Hjem",
     "services": "Tjenester",
-    "blog": "Insights",
+    "insights": "Insights",
     "industries": "Industrier",
     "packages": "Pakker",
     "faq": "FAQ"

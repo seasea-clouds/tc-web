@@ -6,7 +6,7 @@
  *   node scripts/sync-messages.mjs <messages-dir>
  *   node scripts/sync-messages.mjs apps/site/messages
  *   node scripts/sync-messages.mjs apps/portal/messages
- *   node scripts/sync-messages.mjs apps/blog/messages
+ *   node scripts/sync-messages.mjs apps/insights/messages
  *
  * Or sync all known projects:
  *   node scripts/sync-messages.mjs --all
@@ -21,7 +21,7 @@ import path from 'path';
 const ALL_PROJECTS = [
   'apps/site/messages',
   'apps/portal/messages',
-  'apps/blog/messages',
+  'apps/insights/messages',
   'apps/admin/messages',
   'packages/ui/messages',  // Shared UI messages (Footer, Search)
 ];

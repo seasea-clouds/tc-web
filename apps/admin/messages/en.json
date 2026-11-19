@@ -399,7 +399,6 @@
   "segment.preview": "Preview",
   "segment.trademark": "Trademark",
   "segment.nmpa": "NMPA",
-  "segment.blog": "Blog",
   "segment.admin": "Admin",
   "segment.pricing": "Pricing",
   "segment.register": "Register",
@@ -468,5 +467,6 @@
   "emails.toastRetried": "Re-queued",
   "emails.actionFailed": "Action failed, please retry",
   "emails.loadFailed": "Failed to load",
-  "login.redirecting": "Session expired. Redirecting to sign in…"
+  "login.redirecting": "Session expired. Redirecting to sign in…",
+  "segment.insights": "Blog"
 }

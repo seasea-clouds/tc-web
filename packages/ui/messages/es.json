@@ -18,7 +18,6 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Testimonios",
     "industries": "Industrias",
-    "blog": "Blog",
     "checkCb": "CBEC",
     "checkCcc": "Electrónica",
     "checkGacc": "Importación de alimentos",
@@ -27,7 +26,8 @@
     "checkTm": "Marcas registradas",
     "email": "Correo electrónico",
     "freeCheckHeader": "Herramientas gratuitas",
-    "getQuote": "Obtener presupuesto"
+    "getQuote": "Obtener presupuesto",
+    "insights": "Blog"
   },
   "Search": {
     "title": "Buscar",
@@ -37,9 +37,9 @@
     "hint": "Escriba para buscar entre servicios, artículos y preguntas frecuentes",
     "types": {
       "service": "Servicios",
-      "blog": "Perspectivas",
       "faq": "FAQ",
-      "regulation": "Normativa"
+      "regulation": "Normativa",
+      "insights": "Perspectivas"
     }
   },
   "Navbar": {
@@ -57,7 +57,6 @@
     },
     "packages": "Paquetes",
     "faq": "Preguntas frecuentes",
-    "blog": "Perspectivas",
     "contact": "Contáctenos",
     "whatsapp": "WhatsApp",
     "quote": "Obtenga una cotización",
@@ -94,7 +93,8 @@
     "report": "Informe",
     "reports": "Informes",
     "email": "Correo",
-    "regulations": "Normativa"
+    "regulations": "Normativa",
+    "insights": "Perspectivas"
   },
   "MobileTab": {
     "home": "Inicio",
@@ -121,7 +121,7 @@
   "breadcrumb": {
     "home": "Inicio",
     "services": "Servicios",
-    "blog": "Insights",
+    "insights": "Insights",
     "industries": "Industrias",
     "packages": "Paquetes",
     "faq": "FAQ"

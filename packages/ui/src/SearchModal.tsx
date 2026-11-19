@@ -11,14 +11,14 @@ export type SearchFn = (query: string, locale: string) => Promise<SearchResultIt
 
 const TYPE_ICONS: Record<string, React.ReactNode> = {
   service: <FileText className="w-4 h-4 text-accent-blue" />,
-  blog: <BookOpen className="w-4 h-4 text-accent-gold" />,
+  insights: <BookOpen className="w-4 h-4 text-accent-gold" />,
   faq: <HelpCircle className="w-4 h-4 text-text-muted" />,
   regulation: <ScrollText className="w-4 h-4 text-primary-navy" />,
   check: <ClipboardCheck className="w-4 h-4 text-accent-blue" />,
 };
 
 /** 分组展示顺序：自查工具 → 服务 → 法规 → 洞察 → FAQ（越靠前越"可操作"） */
-const TYPE_ORDER = ['check', 'service', 'regulation', 'blog', 'faq'];
+const TYPE_ORDER = ['check', 'service', 'regulation', 'insights', 'faq'];
 
 interface SearchModalProps {
   open: boolean;
@@ -179,7 +179,7 @@ export default function SearchModal({ open, onClose, searchFn }: SearchModalProp
                       globalIdx += i;
 
                       return (
-                        // 搜索结果跨 app（site / blog / portal 混合），
+                        // 搜索结果跨 app（site / insights / portal 混合），
                         // next/link 会去取 RSC payload（*.txt，静态导出已剥离）
                         // → 404 后 URL 落到 index.txt/。改普通 <a> 整页导航。
                         <a

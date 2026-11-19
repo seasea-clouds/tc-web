@@ -1,0 +1,113 @@
+---
+title: "Ni grensesnitt til kinesiske tollagerplattformer, helselys og kampanjetoppmargin"
+date: "2027-06-22"
+category: "E-commerce"
+excerpt: "Standardgrensesnitt går først, mellomvare dekker resten, og helselys loggfører kall og nyforsøk. Data blir i landet, toppmargins reserveres, og gap følges per rad før fullt oppgjør."
+references:
+  - title: "Kunngjøring nr. 194 av 2018 fra Kinas generelle tolladministrasjon om tilsyn med detaljhandelsvarer som importeres og eksporteres via grenseoverskridende e-handel"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Loven om vern av personopplysninger i Folkerepublikken Kina, vedtatt 20. august 2021, artikkel trettiåtte, trettini og femtifem"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+  - title: "Forskrifter om fremme og regulering av grenseoverskridende dataflyt, dekret nr. 16 fra Kinas statsadministrasjon for internettinformasjon, gjeldende fra 22. mars 2024"
+    url: "https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm"
+---
+
+Ni grensesnittfamilier kan koble deres eksisterende systemer til kinesiske tollagerplattformer, forutsatt at standardgrensesnitt prioriteres, data blir innenlands og salgskampanjen dimensjoneres med en toppmargins på 10 ganger. Der et standardgrensesnitt finnes, kobles det direkte til, og der det mangler, mapper mellomvaren; helselysene loggfører per type kallvolum, suksessrate, latens og feilede nyforsøk, og de to radene for ordreutsendelse og betalingsretur fanger opp tredokumentsreturen. Referanseverdiene fra det åpne markedet setter standardintegrasjon til 3 til 7 dager og full integrasjon til 8 til 12 uker, og disse er bare størrelsesreferanser; det er felles test og en parallell oppgjørssyklus som faktisk avgjør tidspunktet for igangsetting.
+
+![Demonstrasjon av kartleggingstabellen for ni grensesnittfamilier, med kolonnene deres system, integrasjonspunkt, retning og landingssted, ni rader for varer og lager, ordrer, medlemsdata, provisjonsoppgjør, lager, toll, leveranse, returer og økonomi, samt fire prinsipper for dataflyt og de fire helselysene i overvåkingen av felles integrasjonstest](/images/insights/china-bonded-platforms-nine-interfaces/nine-interface-families-mapping.webp)
+
+## Hvilken tabell hver av de ni grensesnittfamiliene lander i
+
+Grensesnittabellen er skrevet i fire kolonner, nemlig hvilken side av deres system det gjelder, hva integrasjonspunktet er, hvem som styrer retningen, og hvor dataene til slutt lander. Retningen finnes i bare tre former, toveis, innkommende og dere styrer, og rader uten angitt retning bæres av vår side. Landingskolonnen sier tydelig hvilket regnskap hvert felt hører til, slik at den som overtar, kan slå det opp mot tabellen.
+
+- Varer og lager: lagerbeholdning og priser per SKU, toveis, holdes i samsvar med lagerstyringssystemet og tollregnskapet.
+- Ordrer: ordredata, innkommende, lander i tredokumentsfeltene.
+- Medlemsdata: promotorrelasjoner, dere styrer, dataene tilhører dere, og vi behandler dem som databehandler etter oppdrag.
+- Provisjonsoppgjør: provisjonsutbetaling, toveis, den innenlandske delen utføres av den innenlandske enheten.
+- Lager: tollagersystemet, ingen retning angitt, lander i tollagerdriftssystemet og deler kilde med regnskapet.
+- Toll: tredokumentsdeklarasjonen, ingen retning angitt, deklarasjonen bæres av oss og hører til det vi kontrollerer.
+- Leveranse: sporing sendes tilbake, ingen retning angitt, logistikksporingen skrives tilbake til ordrevisningen.
+- Returer: returdokumenter, ingen retning angitt, returene går via retursenteret inn i tollområdet igjen.
+- Økonomi: oppgjør går utgående og omfatter valuta og veksling.
+
+Hvor dataene flyter, avgjør hvordan grensesnittene bygges. Regnskapet på innenlandssiden og dashbordet på utenlandssiden må holdes adskilt, ellers vil de to sidene under felles test overskrive de samme feltene hos hverandre.
+
+- Kampanjedata som samles inn og gjøres opp innenlands, blir værende innenlands.
+- Bare avidentifiserte samledata går tilbake til deres utenlandske morselskap, og de bærer ikke med seg innenlandske provisjonsrelasjoner.
+- Det utenlandske bakkekontoret rører aldri rådata om kinesiske forbrukere, og grenseoverskridende stier åpnes først etter at vurderingen av konsekvenser for personvernet er bestått.
+- Innenlandske kampanjedata og provisjonsdata kan eksporteres i sin helhet og overleveres til dere sammen med regnskapet ved overdragelsen.
+
+Overvåkingen av felles integrasjonstest lister helselysene opp i fire rader etter grensesnitttype og motpart, og hver helsesjekk og hvert nyforsøk etterlater en post. Demosiden skriver opp tre punkter, grensesnitttype, motpart og helselys, som svarer til det samme settet i systeminterfacedemonstrasjonen, og radene gås gjennom én og én hver dag under felles test.
+
+- Ordreutsendelse har butikkfronten som motpart, og helselyset er normalt.
+- Betalingsretur har betalingskanalen som motpart, og helselyset er normalt.
+- Fraktbrevretur har budfirmaet som motpart, og helselyset viser advarsel.
+- Deklarasjonslisten har deklarasjonskanalen som motpart, og helselyset er normalt.
+
+Integrasjonsprinsippet fastsetter standardgrensesnittet først, og der et standardgrensesnitt finnes, kobles det rett til, mens mellomvaren mapper der det mangler. Referanseverdiene fra det åpne markedet setter standardintegrasjon til 3 til 7 dager og full integrasjon til 8 til 12 uker, og salgskampanjen dimensjoneres med en toppmargins på 10 ganger. Hver side utpeker én teknisk kontaktperson og holder et daglig statusmøte under felles test. Etter igangsetting kjøres én full oppgjørssyklus parallelt før byttet, og i dobbeltkjøringsperioden skal dataene i de to systemene ikke divergere.
+
+## Hvordan helselysene leses og hvor feilede nyforsøk loggføres
+
+Grensesnittenes helselogg gir én rad per grensesnitttype, med faner for alle grensesnitt, normale og unormale, og hver rad skriver motpart, kallvolum, suksessrate, latens, antall feil, nyforsøk og helselys. Tar vi ordreutsendelse som gjennomgang, viser loggen 1284 kall i dag, en suksessrate på 100%, gjennomsnittlig latens på 186 millisekunder, 0 feil og et normalt helselys. Betalingsretur hadde også 1284 kall, en suksessrate på 99,9%, 1 feil som ble sendt på nytt med hell, og helselyset forble normalt. Disse to radene er beviset på at tredokumentsreturen ligger i systemet.
+
+Når de ni grensesnittfamiliene er kartlagt, havner kallvolumene og helsedataene fra driftstiden alle på denne loggen, og de to radene for ordreutsendelse og betalingsretur registrerer hvordan tredokumentsreturen landet. Nederst i demogrensesnittet står det 12 poster i alt og 20 per side, og hver rad har to innganger til detaljer og logg; alle ni radene er ført opp etter det samme settet.
+
+![Systeminterfacedemonstrasjon av grensesnittets helselogg, ni rader over ni kolonner for grensesnitttype, motpart, dagens kall, suksessrate, gjennomsnittlig latens, feil, nyforsøk, helselys og handlinger, med 12 poster og 20 per side nederst](/images/insights/china-bonded-platforms-nine-interfaces/interface-health-log-system-demo.webp)
+
+- Ordreutsendelse, butikkfront, 1284 kall i dag, suksessrate 100%, gjennomsnittlig latens 186 millisekunder, 0 feil, ikke sendt på nytt, helselys normalt, detaljer og logg;
+- Betalingsretur, betalingskanal, 1284, 99,9%, 210 millisekunder, 1 feil, sendt på nytt, normalt, detaljer og logg;
+- Fraktbrevretur, budfirma, 1266, 99,2%, 340 millisekunder, 10 feil, nyforsøk pågår, advarsel, detaljer og logg;
+- Deklarasjonsliste, deklarasjonskanal, 1266, 99,8%, 520 millisekunder, 3 feil, sendt på nytt, normalt, detaljer og logg;
+- Kvoteoppslag, oppslagskanal, 1284, 100%, 150 millisekunder, 0 feil, ikke sendt på nytt, normalt, detaljer og logg;
+- Regnskapssynk, tollager, 96, 100%, 430 millisekunder, 0 feil, ikke sendt på nytt, normalt, detaljer og logg;
+- Skriving av frigivingsstatus tilbake, deklarasjonskanal, 1240, 99,6%, 610 millisekunder, 5 feil, sendt på nytt, normalt, detaljer og logg;
+- Logistikksporing, budfirma, 1240, 98,7%, 720 millisekunder, 16 feil, nyforsøk pågår, advarsel, detaljer og logg;
+- Avstemmingsfil, økonomisystem, 12, 100%, 980 millisekunder, 0 feil, ikke sendt på nytt, normalt, detaljer og logg.
+
+## Hvordan toppen i salgskampanjen vurderes og hvor mye kapasitet som settes av
+
+Toppvurderingen deles i fire tilfeller etter volum og responsbehov, lavt volum med høyt responsbehov ser på elastisitet, høyt volum med høyt responsbehov ser på ledetiden, lavt volum med lavt responsbehov ser på grunnkapasiteten, og høyt volum med lavt responsbehov ser på stabil kapasitet. Kapasitetskurven relativt til daglig kapasitet har tre nivåer, 1 gang for daglig drift, 4 til 5 ganger for salgskampanjen og 10 ganger ved toppen, og toppsiden settes av med en margin på 10 ganger. Jo tidligere dere gir oss det forhåndsmeldte volumet, desto mer rom blir det til utvidelse og bemanning, og kommer volumene først én uke før kampanjen, er det omtrent bare å øke bemanningen som står igjen.
+
+- Lavt volum og høyt responsbehov går til toppelastisitet, og offentlige tilfeller ligger på 4 til 5 ganger daglig volum, toppene når fra titusener til hundretusenvis av enheter, bemanningen i salgskampanjen er omtrent 3 ganger normalen, og disse er referanseverdier fra offentlige tilfeller.
+- Høyt volum og høyt responsbehov er bundet av ledetiden, ultrahøye topper trenger ledetid, veksten i SKU forstørrer både lageret og regnskapet samtidig, salgskampanjen reserverer med en topp på 10 ganger, og størrelsesinngangene kommer fra dere.
+- Lavt volum og lavt responsbehov er grunnkapasitet, en merkebutikk med lisensierte betalinger og innebygde dokumenter er koblet til mer enn 50 tollsteder og mer enn 70 ERP-systemer, har avansert AEO-sertifisering og egen fortolling, og vår side er klar.
+- Høyt volum og lavt responsbehov er stabil kapasitet, dimensjonert etter daglige ordrer, med tidlig innlagring og soneinndelt lagring, fast og midlertidig bemanning i kombinasjon, forhåndsmeldt volum først, returer som går inn i tollområdet igjen, og vår side følger prosessen.
+
+Lagerkandidatene er fire steder i sammensatte tollsoner pluss et tollager i Hongkong, Kina. Fire steder i parallell gir redundans på tvers av tollsteder, dere bestemmer det endelige tollstedet, og kandidatlisten overleveres til dere allerede i oppstartsfasen, så det er ikke nødvendig å vente til varene når havnen. Tollageret i Hongkong, Kina står på utenlandssiden og føres adskilt fra de fire innenlandske stedene.
+
+![Demonstrasjon av plattformens og leveransens toppkapasitetsvurdering for salgskampanjen, med fire kvadranter etter volum og responsbehov til venstre, en kapasitetskurve i tre nivåer relativt til daglig kapasitet øverst til høyre, et dashbord for forhåndsmeldt kampanjevolum nederst til høyre, og fire sammensatte tollsonesteder samt et tollager i Hongkong, Kina nederst](/images/insights/china-bonded-platforms-nine-interfaces/mega-sale-peak-capacity-verdict.webp)
+
+- Yiwu i Zhejiang er et tollager med reguleringsmåte 1210.
+- Hangzhou i Zhejiang er et tollager med reguleringsmåte 1210.
+- Guangzhou Huangpu i Guangdong er et tollager med reguleringsmåte 1210.
+- Shenzhen Qianhai i Guangdong er et tollager med reguleringsmåte 1210.
+- Hongkong, Kina står på utenlandssiden som et tollager i Hongkong, Kina.
+
+Dashbordet for forhåndsmeldt kampanjevolum lister fire rader over sju kolonner for SKU, forhåndsmeldt volum, registrert volum, fremdrift, forventet fullføring, status og handlinger, og hver rad har to innganger til detaljer og logg. Fremdriften og datoen for forventet fullføring avgjør i hvilken rekkefølge hver SKU fylles opp, og gapene følges rad for rad i sporingstabellen for forhåndsmeldt volum.
+
+- Myke kapsler med koenzym Q10, forhåndsmeldt volum 12000, registrert 8400, fremdrift 70%, forventet fullføring 10-12, pågår, detaljer og logg;
+- Dyphavsfiskeoljekapsler, 8000, 6400, 80%, 10-08, pågår, detaljer og logg;
+- Proteinpulverdrikk, 6000, 2400, 40%, 10-18, pågår, detaljer og logg;
+- Frysetørket probiotikapulver, 5000, 5000, 100%, ingen fullføringsdato angitt, fullført, detaljer og logg.
+
+## Hvordan gapene i forhåndsmeldt volum følges rad for rad
+
+Sporingstabellen for forhåndsmeldt volum i lagermodulen gir én rad per SKU og skriver forhåndsmeldt volum, registrert volum, fremdrift, gap, forventet fullføring og status. Tar vi myke kapsler med koenzym Q10 som gjennomgang, er forhåndsmeldt volum 12000, registrert volum 8400, fremdrift 70%, gapet 3600 og forventet utfylling 10-12, mens dyphavsfiskeoljekapslene ligger på 80% fremdrift med et gap på 1600 som ventes utfylt 10-08. Kapasitetskurven i tre nivåer blir her til påfyllingshandlinger, så hvor stort gapet er og hvilken dag det fylles, er synlig på forhånd.
+
+Nederst i grensesnittet står det 7 poster i alt og 20 per side, og hver rad har to innganger til detaljer og logg. De to fanene for sporing av forhåndsmeldt volum og ankomstpåminnelser ligger side om side, så frontlinjen bytter fane uten å filtrere på nytt, og alle sju radene er ført opp etter det samme settet.
+
+![Systeminterfacedemonstrasjon av sporingen av forhåndsmeldt volum, sju rader over åtte kolonner for SKU, forhåndsmeldt volum, registrert volum, fremdrift, gap, forventet fullføring, status og handlinger, med 7 poster og 20 per side nederst](/images/insights/china-bonded-platforms-nine-interfaces/pre-filed-volume-tracking-system-demo.webp)
+
+- Myke kapsler med koenzym Q10, 12000, 8400, 70%, gap 3600, 10-12, pågår, detaljer og logg;
+- Dyphavsfiskeoljekapsler, 8000, 6400, 80%, gap 1600, 10-08, pågår, detaljer og logg;
+- Proteinpulverdrikk, 6000, 2400, 40%, gap 3600, 10-18, pågår, detaljer og logg;
+- Frysetørket probiotikapulver, 5000, 5000, 100%, gap 0, ingen fullføringsdato angitt, fullført, detaljer og logg;
+- Fiskekollagenpeptidpulver, 6000, 3000, 50%, gap 3000, 10-15, pågår, detaljer og logg;
+- Tyggetabletter med vitamin C, 9000, 8100, 90%, gap 900, 10-06, pågår, detaljer og logg;
+- Melatoningodteri, 4000, 4000, 100%, gap 0, ingen fullføringsdato angitt, fullført, detaljer og logg.
+
+## Hva som må fastsettes før igangsetting på grensesnitt og byttet
+
+Før igangsetting fastsettes tre forhold, standardgrensesnitt og mellomvarekartlegging skrives inn i grensesnittabellen, terskler for helselys, feilede nyforsøk og ansvarlige festes til radene, og forhåndsmeldt volum og kapasitetsnivåer justeres inn mot det samme settet med SKU. Er ikke alle tre på plass, blir felles test hengende fast i nyforsøkene. Kallvolumene, suksessratene, forhåndsmeldte volumer og fullføringsdatoene i demogrensesnittet er kun til illustrasjon, topp- og bemanningstallene kommer fra offentlige tilfeller og viser bare størrelsesorden, og de faktiske volumene leveres av dere. Den reelle deklarasjonspraksisen følger kravene fra vedkommende myndighet, og grenseoverskridende datastier følger konklusjonen fra vurderingen av konsekvenser for personvernet. Kjør én full oppgjørssyklus parallelt før byttet, bekreft at dataene i de to systemene ikke har divergert, og flytt først deretter trafikken over.
+
+Ønsker dere de ni grensesnittfamiliene koblet til tollagerleveransen etter deres nåværende systemstabel og tollstedsplan, med helselys og forhåndsmeldt volum sjekket rad for rad, er dere velkomne til å [kontakte oss](/no/packages/).

@@ -65,8 +65,8 @@ export default async function SitemapPage({ params }: { params: Promise<{ locale
       })),
     },
     {
-      id: 'blog',
-      titleKey: 'blogTitle',
+      id: 'insights',
+      titleKey: 'insightsTitle',
       defaultTitle: 'Blog',
       items: blogSlugs.map((slug) => ({
         titleKey: `post.${slug}.title`,

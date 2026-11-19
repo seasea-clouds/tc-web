@@ -1292,7 +1292,6 @@
     "metaDescription": "Przeglądaj wszystkie usługi, przewodniki branżowe, artykuły z bloga i podstrony witryny SinoTrade Compliance.",
     "servicesTitle": "Usługi",
     "industriesTitle": "Branże",
-    "blogTitle": "Artykuły z bloga",
     "pagesTitle": "Pozostałe strony",
     "home": "Strona główna",
     "about": "O nas",
@@ -1300,7 +1299,8 @@
     "quote": "Uzyskaj wycenę",
     "faq": "FAQ",
     "packages": "Pakiety",
-    "testimonials": "Opinie klientów"
+    "testimonials": "Opinie klientów",
+    "insightsTitle": "Artykuły z bloga"
   },
   "Cookie": {
     "message": "Ta witryna wykorzystuje wyłącznie niezbędne pliki cookie służące do uwierzytelniania. Nie są używane żadne śledzące ani reklamowe pliki cookie.",

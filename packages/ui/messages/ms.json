@@ -18,7 +18,6 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Testimoni",
     "industries": "Industri",
-    "blog": "Blog",
     "checkCb": "CBEC",
     "checkCcc": "elektronik",
     "checkGacc": "Import Makanan",
@@ -27,7 +26,8 @@
     "checkTm": "Tanda dagangan",
     "email": "E-mel",
     "freeCheckHeader": "Alat Percuma",
-    "getQuote": "Dapatkan Sebut Harga"
+    "getQuote": "Dapatkan Sebut Harga",
+    "insights": "Blog"
   },
   "Search": {
     "title": "Cari",
@@ -37,9 +37,9 @@
     "hint": "Taip untuk mencari merentas perkhidmatan, artikel dan Soalan Lazim",
     "types": {
       "service": "Perkhidmatan",
-      "blog": "Blog",
       "faq": "FAQ",
-      "regulation": "Peraturan"
+      "regulation": "Peraturan",
+      "insights": "Blog"
     }
   },
   "Navbar": {
@@ -57,7 +57,6 @@
     },
     "packages": "Pakej",
     "faq": "Soalan Lazim",
-    "blog": "Blog",
     "contact": "Hubungi Kami",
     "whatsapp": "WhatsApp",
     "quote": "Dapatkan Sebut Harga",
@@ -94,7 +93,8 @@
     "report": "Laporan",
     "reports": "Laporan",
     "email": "E-mel",
-    "regulations": "Peraturan"
+    "regulations": "Peraturan",
+    "insights": "Blog"
   },
   "MobileTab": {
     "home": "Laman Utama",
@@ -121,7 +121,7 @@
   "breadcrumb": {
     "home": "Laman Utama",
     "services": "Perkhidmatan",
-    "blog": "Insights",
+    "insights": "Insights",
     "industries": "industri",
     "packages": "Pakej",
     "faq": "FAQ"

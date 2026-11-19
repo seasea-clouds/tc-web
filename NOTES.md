@@ -222,7 +222,7 @@ CF Pages secret 必须先 delete 再 put 才能生效，之后需要触发新 de
 
 ### 构建命令
 ```bash
-cd apps/blog
+cd apps/insights
 node ../../packages/scripts/build-search-index.mjs \
   && rm -rf .next/cache \
   && next build \
@@ -474,14 +474,14 @@ GitHub 仓库从 `seasea-clouds/trade-web` 切换到 `seasea-clouds/tc-web`（�
 
 ## 踩坑 19：博客正文图片不渲染 + 生产域 404（2026-10-22）
 
-**现象**：首篇带图投稿（bonded-ecommerce-export-china-guide）上线后，正文 `![alt](/images/blog/x/fig-01.webp)`
-在 HTML 里变成 `!<a href="/images/...">`——感叹号当文本、图变成链接；且 `/images/blog/...` 在生产域 404。
+**现象**：首篇带图投稿（bonded-ecommerce-export-china-guide）上线后，正文 `![alt](/images/insights/x/fig-01.webp)`
+在 HTML 里变成 `!<a href="/images/...">`——感叹号当文本、图变成链接；且 `/images/insights/...` 在生产域 404。
 
 **两个独立原因**：
-1. `apps/blog/src/lib/posts.ts` 的 `applyInlineFormatting()` 只处理 `[text](url)`，`![alt](src)` 里的链接部分被当普通链接替换，`!` 残留。修法：在图/链接替换顺序上**先图后链接**，图片输出 `<img src alt loading="lazy" class="rounded-lg w-full my-6 …">`。
-2. 生产域是 site，`/blog/` 只是边缘代理；blog 项目 `public/images/blog/` 在 sinotradecompliance.com 下不可达。
+1. `apps/insights/src/lib/posts.ts` 的 `applyInlineFormatting()` 只处理 `[text](url)`，`![alt](src)` 里的链接部分被当普通链接替换，`!` 残留。修法：在图/链接替换顺序上**先图后链接**，图片输出 `<img src alt loading="lazy" class="rounded-lg w-full my-6 …">`。
+2. 生产域是 site，`/blog/` 只是边缘代理；blog 项目 `public/images/insights/` 在 sinotradecompliance.com 下不可达。
    **最终方案（用户选 B，2026-10-22）**：图片只存 blog 一份，site 的 `functions/_middleware.ts` 在 `proxySubSiteAsset()` 里加
-   `/images/blog/*` → blog 上游代理（透传 method/headers，支持 Range 与条件请求；上游 cache-control/etag 原样透传，
+   `/images/insights/*` → blog 上游代理（透传 method/headers，支持 Range 与条件请求；上游 cache-control/etag 原样透传，
    不加额外边缘缓存，换图立即生效）。`submission-intake.mjs` 按 kind 决定落 blog 或 regulations，site 不再留副本。
    注意 `.gitignore` 有 `apps/site/public/*/blog/`（本意忽略 site 构建合并的 blog 产物），它也会命中 `images/blog/`——
    将来若再往 site 放这类文件，必须 `git ls-files` 复查是否真入库，别信 `git add` 无报错。
@@ -600,8 +600,8 @@ frontmatter 无字段、`posts.ts` 不读、列表页纯文字卡片、详情页
 `og:image` 全站统一 `og-image.png`。**15 篇文章只有 2 篇有图片目录，封面一个都没显示。**
 
 **实现（约定路径，不动 48 语言 mdx）**：
-- `apps/blog/src/lib/posts.ts`：新增 `getCoverPath(slug)`，探测
-  `public/images/blog/<slug>/cover.webp` 是否存在，存在返回 `/images/blog/<slug>/cover.webp`，
+- `apps/insights/src/lib/posts.ts`：新增 `getCoverPath(slug)`，探测
+  `public/images/insights/<slug>/cover.webp` 是否存在，存在返回 `/images/insights/<slug>/cover.webp`，
   否则 undefined；`PostMeta.cover?: string` 由 `parsePost` 填充。
 - **详情页 = 封面做 hero 背景**（用户要求，第一版放正文前卡片的方案已废弃）：
   hero `<section>` 内绝对定位 `<img>`（`object-cover object-center scale-110`，
@@ -622,7 +622,7 @@ frontmatter 无字段、`posts.ts` 不读、列表页纯文字卡片、详情页
 
 **验证**：本地 `next build` 818 页通过 + chromium 本地截图核对（桌面/移动/RTL 三档）；线上 48 语言 × 2 篇 = **96/96** 页面 hero 都带封面/蒙版；
 无封面文章（ccc / green-coffee 等 8 语言抽查）不误显示；封面图 200 + `image/webp`
-（主域 `/images/blog/*` 走边缘代理）；og:image / JSON-LD 均指向对应封面；`__next_error__` 为 0。
+（主域 `/images/insights/*` 走边缘代理）；og:image / JSON-LD 均指向对应封面；`__next_error__` 为 0。
 提交 `3af7fe0` → `705afbe`（hero 背景）→ `f2d702b`（调亮可见度）。
 
 ## 列表页杂志式排版 2026-10-24（1 张有图卡 + 2 张无图卡成行）
@@ -733,7 +733,7 @@ DOM 顺序 = 阅读顺序 = 日期倒序，**永远不被布局需求改动**。
 - **未修待定**：① 404 页是 Next 默认英文（无导航、无内链）；② 移动端 390px 下 header 溢出 6px（`scrollWidth=396`，既有）；
   ③ `/blog/page/1/` 是 `output: export` 的技术副本，无内链指向它，canonical 已归并到 `/blog/`。
 
-**踩坑 1（构建，最坑）**：`apps/blog` 原来只 `rm -rf .next/cache`。保留 `.next` 时，Next 增量构建
+**踩坑 1（构建，最坑）**：`apps/insights` 原来只 `rm -rf .next/cache`。保留 `.next` 时，Next 增量构建
 **不输出新动态路由的 index.html**，`/blog/page/1/` 本地与 CF Pages 都 404，而 build 日志显示
 "866 页生成成功"。修法：build 脚本改成 `rm -rf .next out`。本地复现：保留 `.next` 连续 build 两次。
 
@@ -817,7 +817,7 @@ AUTOINCREMENT 的语义）。实现是「`SELECT MAX(rev)+1 WHERE channel=?` →
 ## 法规库应用（apps/regulations，2026-10-27）
 
 **来源**：用户要求「参照 blog 应用直接复制一份，以后按个体情况优化」。
-从 `apps/blog` 整体复制（排除 node_modules/.next/out/.turbo/content/public/images/search-index），
+从 `apps/insights` 整体复制（排除 node_modules/.next/out/.turbo/content/public/images/search-index），
 再按政策文档语义改名：`posts.ts→documents.ts`、`blog-list.ts→doc-list.ts`、
 `BlogRows→RegulationRows`、`BlogPager→RegulationPager`、`app/[locale]/blog→app/[locale]/regulations`。
 

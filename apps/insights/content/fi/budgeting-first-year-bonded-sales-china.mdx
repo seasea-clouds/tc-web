@@ -1,0 +1,91 @@
+---
+title: "Ensimmäisen vuoden tullivarastomyynnin budjetti kolmessa tasossa"
+date: "2027-08-10"
+category: "E-commerce"
+excerpt: "Tullivaraston ensimmäinen vuosi, kolme tasoa. Yksi parametritaulukko, vain syöttöarvot muuttuvat, taso seuraa validointia. Neljä vähennystä seuraa volyymia. Hinnat vain tarjouksessa."
+references:
+  - title: "Valtiovarainministeriön, Kiinan tullin pääosaston ja valtion verohallinnon tiedonanto rajat ylittävän verkkokaupan vähittäistuonnin veropolitiikasta (Cai Guan Shui [2016] nro 18; tulli on toistaiseksi 0%, ja maahantuonnin arvonlisävero sekä kulutusvero kannetaan 70%:n osuutena laissa säädetystä määrästä)"
+    url: "https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html"
+  - title: "Valtiovarainministeriön, Kiinan tullin pääosaston ja valtion verohallinnon tiedonanto rajat ylittävän verkkokaupan vähittäistuonnin veropolitiikan parantamisesta (Cai Guan Shui [2018] nro 49; yksittäisen tapahtuman raja 5000 yuania, vuosiraja 26000 yuania)"
+    url: "https://czt.hlj.gov.cn/czt/c110905/202001/c00_30603063.shtml"
+  - title: "Kuuden viranomaisen tiedonanto rajat ylittävän verkkokaupan vähittäistuonnin valvonnan parantamisesta (Shang Cai Fa [2018] nro 486)"
+    url: "https://www.mofcom.gov.cn/article/b/fwzl/201811/20181102812004.shtml"
+  - title: "Kiinan tullin pääosaston vuoden 2018 ilmoitus nro 194 (rajat ylittävän verkkokaupan vähittäistuonnin ja -viennin tavaroiden valvonnasta)"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+---
+
+Tullivarastomyynnin ensimmäinen vuosi voidaan tiivistää yhteen laskuriviin: jokaista 100 yuania kohden palvelumaksut, toteutus ja ensiosuuden rahti, verot sekä provisio vähentävät yhteensä 37.1 yuania, ja jäljelle jää 62.9 yuania katetta. Sillä katetaan kiinteä investointi, ja näin saadaan takaisinmaksuaika. Kolme skenaariota muuttaa syöttöarvoja, ei tätä menetelmää.
+
+## Kolme skenaariota, aloita SKU-rajasta
+
+Varovainen skenaario kattaa 3–5 SKU:ta ja asettaa validoinnin ja suosittelut etusijalle. Aja yksi SKU alusta loppuun ja siirry perusskenaarioon, kun data palaa; neljä havaintopistettä seurataan ensin, konversio ja uudelleenostot kärjessä.
+
+Perusskenaario kattaa 8–12 SKU:ta ja tähtää lähelle nollatulosta ensimmäisen vuoden aikana. Parametritaulukko pysyy samana, vain syöttöarvot muuttuvat ja taso seuraa validointituloksia; nettosuhdemalli voidaan sijoittaa suoraan.
+
+Optimistinen skenaario kattaa kaikki SKU:t ja nojaa volyymiin kiinteiden kustannusten laimentamiseksi. Skaalaa vasta, kun kaikkien SKU:iden varastointi ja kampanjajärjestelmä ovat valmiina; kuusitoista valmistelua ennen lanseerausta on edellytys. Tasojen välillä ei siirrytä arvauksella: jokaisella tasolla on pääsyehdot, ja kunnes ne täyttyvät, pysytään edellisessä tasossa.
+
+![Ensimmäisen vuoden kolme skenaariota ja säädettävät parametrit: kolme korttia varovaiselle, perus- ja optimistiselle tasolle, merkittyinä 3–5 SKU:ta, 8–12 SKU:ta ja kaikki SKU:t pääsyehtoineen; alla viisi vähennyssegmenttiä jokaista 100 yuania kohden ja 62.9 yuania katetta; alhaalla kuuden lenkin ketju syöttöarvoista GMV:n, vähennysten ja katteen kautta kiinteään investointiin ja takaisinmaksuaikaan](/images/insights/budgeting-first-year-bonded-sales-china/year-one-model-three-scenarios.webp)
+
+## Kolme oletusta täytät sinä
+
+Koko malli tarvitsee sinulta vain kolme oletusta: tilausarvon, uudelleenostotiheyden ja kampanjaprovisionsa ylärajan. Me annamme rakenteen ja työkalut, luvut tulevat parametreistasi, ja toimitus on interaktiivinen laskentataulukko ilman ennalta asetettuja tavoitearvoja.
+
+Malliketjussa on kuusi lenkkiä. Syöttöarvot muuntavat SKU-määrän, tilausarvon ja uudelleenostot liikevaihdoksi (GMV), ja jokainen taso laskee oman liikevaihtonsa. Sen jälkeen vähennetään neljä erää: kokonaisvero, alustaprovisio, toteutus ja kampanjaprovisio. GMV miinus nämä neljä on kate. Kiinteä investointi kattaa järjestelmäintegraation, kootun ensiosuuden rahdin poiston ja tullivarastokirjanpidon. Kun kumulatiivinen kate kattaa kiinteän investoinnin, saadaan takaisinmaksuaika.
+
+Ajat ketjun itse. Vaihda yksi ainoa oletus, ja kaikki sen jälkeiset luvut muuttuvat; menetelmä on avoimesti esillä, joten voit viedä sen sisäiseen hyväksyntään luottamatta kenenkään äänensävyyn.
+
+## Jokaista 100 yuania kohden 37.1 yuania neljässä vähennyksessä
+
+Kate jaotellaan jokaista 100 yuanin GMV:tä kohden: palvelumaksut 6.0 yuania, toteutus ja ensiosuuden rahti 7.0 yuania, verot 9.1 yuania, provisio 15.0 yuania, yhteensä 37.1 yuania ja katetta 62.9 yuania. Viisi segmenttiä summautuu tarkalleen 100%:iin, rakenne on sama kaikissa kolmessa skenaariossa, ja ero on suuruusluokassa sekä kiinteiden erien laimentumisessa.
+
+Veropostin 9.1% on rajat ylittävän verkkokaupan vähittäistuonnin yhdistetty verorasitus: tulli on toistaiseksi 0%, ja maahantuonnin arvonlisävero sekä kulutusvero kannetaan 70%:n osuutena laissa säädetystä määrästä. Se on koko verojärjestelmästä laskettu luku, äläkä lisää siihen suoraan yksittäisen verolajin verokantaa.
+
+Vähennykset seuraavat tilausmäärää suhteellisesti. Kun määrä kaksinkertaistuu, kaksinkertaistuvat kaikki neljä vähennystä, ja kate seuraa samaa suhdetta; kiinteä investointi ei seuraa määrää, joten volyymi laimentaa juuri kiinteän puolen. Esitetyt osuudet ovat esimerkinomainen laskentaperuste, eivät tarjous eivätkä lupaus tuotosta.
+
+## Käy varovainen skenaario läpi
+
+Otetaan varovainen skenaario yhteen laskelmaan. 3 SKU:ta, 25 tilausta SKU:ta kohden kuukaudessa, noin 900 tilausta vuodessa; tilausarvolla 300 yuania vuosiliikevaihto on 270,000 yuania. Kun vähennys on 37.1%, neljä erää on yhteensä 100,170 yuania: palvelumaksut 16,200 yuania, toteutus ja ensiosuuden rahti 18,900 yuania, verot 24,570 yuania, provisio 40,500 yuania.
+
+Kate on 169,830 yuania. Kiinteä investointi arvioidaan 150,000 yuaniksi, ja siihen kuuluvat järjestelmäintegraatio, kootun ensiosuuden rahdin poisto ja tullivarastokirjanpito; kuukausittainen kate on noin 14,153 yuania, ja kumulatiivinen kate kattaa kiinteän investoinnin noin 11. kuukauden kohdalla, joten takaisinmaksu osuu ensimmäiseen vuoteen. Vaihda tilausarvoa tai uudelleenostojen määrää, ja tulos muuttuu; sinä täytät parametrit, me emme muuta laskentaperustetta.
+
+## Kolme laskutustapaa
+
+Tilausta kohden: laskutetaan tilausten määrän mukaan ja sopii vaiheeseen, jossa tilausmäärä on ennakoitavissa ja SKU-rakenne vakaa.
+
+Osuus GMV:stä: laskutetaan osuutena liikevaihdosta ja sopii skaalausvaiheeseen, jossa suurempi volyymi laimentaa yksikkökustannusta enemmän.
+
+Kuukausimaksu ja tilauskohtainen laskutus: kiinteä maksu kattaa perushenkilöstön ja järjestelmät, ylimenevä osa lisätään tilausta kohden, ja budjetti voidaan laatia etukäteen.
+
+Kaikki kolme tapaa hinnoitellaan viiden tekijän mukaan: tilausmäärä, SKU-määrä, aikavaatimukset, tilitysvaluutta ja lisäpalvelut. Kun nämä viisi muuttuvat, tarjouksen rakenne muuttuu mukana.
+
+![Laskutusvaihtoehdot ja oman puolen panokset: ylhäällä tilauskohtainen laskutus, osuus GMV:stä sekä kuukausimaksu ja tilauskohtainen laskutus, viiden hinnoittelutekijän ja tarjouksen kahdeksan osion kanssa oikealla; alhaalla henkilöstö, varat, asiakirjat ja aika ajankohtineen, huomautuksena että osa-aikainen aloitus ei luo uusia vakinaisia toimia ja että neljän listan mallit toimitetaan S0-toimitusten mukana](/images/insights/budgeting-first-year-bonded-sales-china/billing-options-and-budget-inputs.webp)
+
+## Soveltamisalan ulkopuoliset erät ja tarjousehdot
+
+Soveltamisalan ulkopuoliset erät rajataan ensin, esimerkiksi 9610-kanavan myöhempi käyttöönotto, pääkonttorin järjestelmien muutos ja ulkomaisen IBO:n palkitseminen; omat palvelumaksumme esitetään erillisinä virallisessa tarjouksessa, eikä niitä sekoiteta yllä oleviin kolmeen laskutustapaan.
+
+Virallinen tarjous edellyttää viittä ehtoa: SKU-lista ja määrät, saman erän CoA:n (testausraportin) valmius, toimijapolun suuntaus, kohdesataman preferenssi ja väittämästrategian suuntaus. Kun kaikki viisi ovat valmiina, virallinen tarjous seuraa.
+
+Ilman tietoja voidaan laatia ensin yksi versio: laskettuna toimialan kokemusarvoilla, jossa jokainen arvo on merkitty perusteineen, ja arvot korvataan, kun mitatut tietosi saapuvat.
+
+## Tarjouksen kahdeksan osiota
+
+Virallinen tarjous jakautuu kahdeksaan osioon: soveltamisrajat, maksujen vertailu, maksurakenne, kustannusten erittely, maksurytmi, verot ja laskutus, vastuu ja korvaukset sekä reunaehdot. Yksityiskohdat ovat kaupallisena liitteenä, ja kaikki summat määräytyvät virallisen tarjouksen mukaan; kokouksessa suullisesti mainittu luku ei päde.
+
+## Neljä panosta omalla puolellasi
+
+Henkilöstö: 1–2 henkilöä talouden ja vaatimustenmukaisuuden tehtäviin, aloitus osa-aikaisena, sekä 1 yhteyshenkilö liiketoiminnan puolelta; osa-aikainen aloitus ei luo uutta vakinaista toimea. Tarvitaan heti alusta, rinnakkain S0-käynnistysvaiheen kanssa.
+
+Varat: ensimmäinen varasto mitoitetaan pilotti-SKU:iden ja 2–3 kuukauden kierron mukaan, kampanjat varmennetaan pienin askelin, ja verovakuus järjestetään sataman vaatimusten mukaan. Kaiken on oltava valmiina ennen varastointia ja listausta.
+
+Asiakirjat: tuotteen, testauksen, kelpoisuuden ja tuotemerkin asiakirjat kootaan neljäksi listaksi, joita täydennetään vaiheittain kussakin pääsyn solmukohdassa; neljän listan mallit toimitetaan S0-toimitusten mukana.
+
+Aika: kolme päätöstä, toimijapolku, kohdesatama ja väittämästrategia, vaikuttavat aikatauluun suoraan; kun ne lyödään lukkoon ennen S0:ta, aikataulu lukittuu, ja päätösten valmistuttua työ siirtyy toteutusvaiheeseen M1.
+
+Henkilöstö ja varat annetaan käytännön vaihteluväleinä, tarjous laaditaan mitattujen ehtojen mukaan, virallinen tarjous annetaan, kun asiakirjat ovat valmiit, ja maksujen yksityiskohdat esitetään vain siinä.
+
+## Aloita taulukon otsikosta
+
+Ensimmäisen vuoden budjetti mahtuu yhteen taulukkoon: kolme skenaariosaraketta, kolme oletusriviä, neljä vähennystä, yksi kiinteän investoinnin rivi ja yksi takaisinmaksuajan rivi. Täytä syöttöarvot ensin, puhu tarjouksesta vasta sitten; hinnat pätevät vain virallisessa tarjouksessa, ja esimerkkiluvut selittävät vain menetelmän.
+
+Seuraava askel on viedä SKU-listasi, tilausarvosi ja uudelleenostosi tähän taulukkoon. Jos jokin syöttöarvo on vielä avoin, [ota yhteyttä](/fi/packages/).

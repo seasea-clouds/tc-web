@@ -18,7 +18,6 @@
     "whatsapp": "WhatsApp",
     "testimonials": "사용후기",
     "industries": "산업",
-    "blog": "통찰력",
     "checkCb": "CBEC",
     "checkCcc": "전자제품",
     "checkGacc": "식품 수입",
@@ -27,7 +26,8 @@
     "checkTm": "상표",
     "email": "이메일",
     "freeCheckHeader": "무료 도구",
-    "getQuote": "견적 받기"
+    "getQuote": "견적 받기",
+    "insights": "통찰력"
   },
   "Search": {
     "title": "검색",
@@ -37,9 +37,9 @@
     "hint": "서비스, ​​기사, FAQ를 검색하려면 입력하세요.",
     "types": {
       "service": "서비스",
-      "blog": "통찰력",
       "faq": "FAQ",
-      "regulation": "법규"
+      "regulation": "법규",
+      "insights": "통찰력"
     }
   },
   "Navbar": {
@@ -57,7 +57,6 @@
     },
     "packages": "패키지",
     "faq": "자주 묻는 질문",
-    "blog": "통찰력",
     "contact": "문의하기",
     "whatsapp": "WhatsApp",
     "quote": "견적 받기",
@@ -94,7 +93,8 @@
     "report": "보고서",
     "reports": "보고서",
     "email": "이메일",
-    "regulations": "법규"
+    "regulations": "법규",
+    "insights": "통찰력"
   },
   "MobileTab": {
     "home": "홈",
@@ -121,7 +121,7 @@
   "breadcrumb": {
     "home": "홈",
     "services": "서비스",
-    "blog": "Insights",
+    "insights": "Insights",
     "industries": "산업",
     "packages": "패키지",
     "faq": "FAQ"

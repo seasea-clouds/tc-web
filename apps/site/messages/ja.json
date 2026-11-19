@@ -1292,7 +1292,6 @@
     "metaDescription": "SinoTrade コンプライアンスのウェブサイトにあるすべてのサービス、業界ガイド、インサイト記事、ページをご覧いただけます。",
     "servicesTitle": "サービス",
     "industriesTitle": "業界",
-    "blogTitle": "インサイト記事",
     "pagesTitle": "その他のページ",
     "home": "ホーム",
     "about": "会社概要",
@@ -1300,7 +1299,8 @@
     "quote": "見積もりを取得",
     "faq": "よくあるご質問",
     "packages": "パッケージ",
-    "testimonials": "お客様の声"
+    "testimonials": "お客様の声",
+    "insightsTitle": "インサイト記事"
   },
   "Cookie": {
     "message": "このサイトでは、必須の認証 Cookie のみを使用します。追跡クッキーや広告クッキーは使用されません。",

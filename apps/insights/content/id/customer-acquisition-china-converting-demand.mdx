@@ -1,0 +1,67 @@
+---
+title: "Akuisisi dan Pertumbuhan di Tiongkok, Arsitektur Konversi Tiga Tahap Empat Saluran"
+date: "2027-07-06"
+category: "E-commerce"
+excerpt: "Edukasi bahan aktif saat cold start, saluran konversi utama saat scale-up, mulut ke mulut dan pembelian ulang anggota setelahnya. Kepatuhan siap sejak hari pertama."
+references:
+  - title: "Undang-Undang Iklan Republik Rakyat Tiongkok (revisi 2015, amandemen 2018, Pasal 17, Pasal 18, Pasal 46)"
+    url: "https://www.gov.cn/guoqing/2021-10/29/content_5647620.htm"
+  - title: "Peraturan Administrasi Iklan Internet (diumumkan melalui Peraturan Administrasi Negara bagi Pengawasan dan Regulasi Pasar Nomor 72, berlaku sejak 1 Mei 2023)"
+    url: "https://www.gov.cn/gongbao/2023/issue_10506/202306/content_6885261.html"
+  - title: "Undang-Undang Pelindungan Data Pribadi Republik Rakyat Tiongkok (disahkan pada 20 Agustus 2021, Pasal 38, Pasal 39)"
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+---
+
+Ke mana dan seberapa besar anggaran akuisisi dialokasikan bergantung pada saluran mana syarat konversi terpenuhi, tanpa perlu mengisi keempat saluran sekaligus. Arsitektur dari materi sumber S7 adalah tiga tahap kali empat saluran: cold start 0–6 bulan, scale-up 6–18 bulan, retention 18+ bulan, dengan empat saluran Xiaohongshu, Tmall Global dan JD Worldwide, Douyin, WeChat private domain memiliki intensitas belanja berbeda di tiap tahap. Sisi kepatuhan siap sejak hari pertama: konten promosi melewati tiga tahap peninjauan, sistem keanggotaan dibangun ulang menurut aturan domestik, data anggota disimpan di dalam negeri. Arsitektur ini dipadukan dengan dashboard iklan per saluran, uang dihabiskan di mana dan menuai apa, dapat diperiksa berdampingan dalam satu baris.
+
+![Arsitektur konversi akuisisi dan pertumbuhan S7: matriks gelembung tiga tahap empat saluran, bilah sisi kepatuhan dan struktur biaya di kanan, tiga kaki pertumbuhan dan tiga langkah private domain di bawah, pratinjau dashboard iklan saluran di sudut kanan bawah](/images/insights/customer-acquisition-china-converting-demand/s7-acquisition-growth-channel-matrix.webp)
+
+Gambar ini berasal dari bab enam materi merek: nama bab Ready to Grow, nomor modul S7, judul Acquisition and Growth: Architecture for Converting Demand, arsitektur konversi permintaan untuk akuisisi dan pertumbuhan. Sisi kiri adalah matriks pembagian tugas saluran, dua bagian kanan atas adalah bilah sisi kepatuhan dan struktur biaya, kiri bawah adalah tiga kaki pertumbuhan dan tiga langkah private domain, sudut kanan bawah dilengkapi pratinjau singkat dashboard iklan saluran. Artikel ini membahas S7 beserta demo antarmuka sistem di halaman berikutnya secara tuntas, tanpa perlu membaca modul lain dalam bab ini terlebih dahulu.
+
+## Matriks pembagian tugas tiga tahap empat saluran
+
+Matriks menyusun tiga tahap pertumbuhan secara vertikal dan empat saluran secara horizontal, setiap sel berisi satu gelembung, ukuran gelembung menunjukkan intensitas belanja tahap tersebut pada saluran itu: besar = dorongan utama, sedang = pendukung, kecil = belanja ditahan. Dibaca sel demi sel, anggaran akuisisi memindahkan medan utama mengikuti tahap, dan setiap tahap menaruh porsi terbesar pada saluran dengan syarat konversi paling matang pada periode tersebut.
+
+Cold start 0–6 bulan: Xiaohongshu memakai gelembung besar untuk edukasi bahan aktif, Tmall Global dan JD Worldwide memakai gelembung sedang untuk konversi berbasis kepercayaan, Douyin belum beriklan, WeChat private domain memakai gelembung besar untuk menampung uji coba pesanan pertama. Pada tahap ini bukti transaksi belum ada, biarkan konten menjelaskan bahan aktif dengan jelas, toko platform menampung kepercayaan dari hasil pencarian, dan private domain mengambil pesanan pertama lewat kemasan uji coba.
+
+Scale-up 6–18 bulan: Xiaohongshu beralih ke gelembung sedang untuk skala konten, Tmall Global dan JD Worldwide naik ke gelembung terbesar sebagai saluran konversi utama, Douyin naik ke gelembung terbesar mengandalkan volume livestream, WeChat private domain memakai gelembung sedang untuk pengingat pembelian ulang. Medan utama bergeser dari Xiaohongshu ke toko platform dan Douyin, tugas sisi konten berubah dari edukasi menjadi penambahan skala.
+
+Retention 18+ bulan: penyebaran dari mulut ke mulut, pembelian ulang tipe menimbun, keberlanjutan produk unggulan, dan pembelian ulang anggota, keempat sel berupa gelembung sedang hingga besar, dengan pembelian ulang anggota di WeChat private domain sebagai yang terbesar. Pertumbuhan pada tahap ini bertumpu pada pengguna yang sudah bertransaksi dan kembali bercerita, sementara trafik baru sudah bukan penopang utama.
+
+## Bilah sisi kepatuhan siap sejak hari pertama
+
+Bilah sisi kepatuhan di sebelah kanan matriks memuat empat poin, semuanya harus ditetapkan pada hari pertama peluncuran, jauh sebelum fase scale-up dimulai.
+
+Hierarki promotor: tanpa stok paksa, tanpa penjualan ulang, hierarki maksimal dua lapis. Atribusi dan penyelesaian: basis atribusi GMV jelas, kontrak berada pada badan hukum domestik, dan pemotongan serta penyetoran bayaran ditangani pihak domestik. Materi: skrip iklan dan skrip kreator melewati tiga tahap peninjauan sebelum dipublikasikan. Sistem keanggotaan: paket sistem luar negeri tidak ditransplankan utuh, sistem dibangun ulang menurut aturan domestik. Sejalan dengan basis "tanpa insiden" di seluruh buku, data anggota disimpan di dalam negeri, dan skenario lintas batas dievaluasi satu per satu menurut ketentuan transfer luar negeri dalam Undang-Undang Pelindungan Data Pribadi (PIPL).
+
+## Struktur biaya menurut skala sumber publik
+
+Struktur biaya memberikan tiga sumber skala. Komisi platform berada pada rentang 0.5%–5% menurut kategori, diambil sebagai angka arah dari sumber publik. Item lain mencakup biaya pembayaran, media berbayar, produksi konten, dan komisi. Cara verifikasinya adalah investasi bertahap kecil dan pengecekan balik modal setiap minggu. Ketiganya masuk ke analisis sensitivitas unit economics berikutnya, begitu anggaran iklan dilonggarkan atau diperketat satu tingkat, pembukuan harus ikut bergerak.
+
+## Tiga kaki pertumbuhan dan tiga langkah private domain
+
+Arsitektur diringkas menjadi tiga kaki pertumbuhan: pertama, content seeding menangani kesadaran, kedua, konversi platform menangani transaksi, ketiga, pembelian ulang private domain menangani retensi. Tiga langkah private domain: mini program resmi merek ditambah konten penarik perhatian dan pengikut ditambah kemasan uji coba untuk pesanan pertama. Alatnya hanya tiga: komunitas WeCom, kartu anggota mini program, dan pengingat pembelian ulang.
+
+Keterkaitan pertumbuhan dan kepatuhan ditulis dalam paragraf yang sama: konten promosi melewati tiga tahap peninjauan sebelum dipublikasikan, sekaligus menyediakan slot pasokan kedua agar tidak perlu merombak pasokan saat menambah skala dan saluran. Dari sisi ritme, pendekatannya jelas, tidak langsung menyerang semua saluran sekaligus: buktikan konten dan konversi di satu saluran terlebih dahulu, lalu replikasi ke saluran kedua.
+
+## Dashboard iklan menyandingkan belanja dan imbal hasil per saluran
+
+Matriks menjawab di mana beriklan, dashboard menjawab cara memverifikasi setelah beriklan. Pada demo antarmuka sistem, dashboard iklan menyediakan satu baris per saluran, dengan tiga tab yang dapat dialihkan yaitu bulan ini, bulan lalu, dan kumulatif. Kolomnya berurutan adalah belanja iklan, impresi, CTR, pesanan, GMV, ROI, dan status, sehingga belanja dan imbal hasil tersanding rapi dalam satu baris.
+
+| Saluran | Belanja iklan (yuan) | Impresi | CTR | Pesanan | GMV (yuan) | ROI | Status |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Content seeding | 42000.00 | 486000 | 3.2% | 208 | 187200.00 | 4.5 | Sedang berjalan |
+| Video pendek | 58000.00 | 724000 | 2.6% | 186 | 167400.00 | 2.9 | Sedang berjalan |
+| Komunitas private domain | 18000.00 | 96400 | 8.1% | 242 | 217800.00 | 12.1 | Sedang berjalan |
+| Operasi anggota | 12000.00 | 52100 | 11.4% | 296 | 266400.00 | 22.2 | Sedang berjalan |
+| Total | 130000.00 | 1358500 | 3.9% | 932 | 838800.00 | 6.5 | Sedang berjalan |
+
+Baca set data demo ini dengan satu pembacaan lengkap. Baris total dilihat lebih dulu sebagai pembukuan besar: total belanja empat saluran pada bulan berjalan 130000.00 yuan, menuai 1358500 impresi, 932 pesanan, dan 838800.00 yuan GMV, dengan ROI keseluruhan 6.5.
+
+Lalu lihat pembagian tugas per saluran: content seeding 42000.00 yuan dan video pendek 58000.00 yuan bersama-sama menyerap enam puluh persen belanja, dengan impresi 486000 dan 724000 serta ROI 4.5 dan 2.9, tugasnya menarik eksposur pelanggan baru. Komunitas private domain 18000.00 yuan dan operasi anggota 12000.00 yuan berbelanja jauh lebih sedikit, dengan CTR 8.1% dan 11.4% serta ROI 12.1 dan 22.2, tugasnya konversi dan retensi, di mana operasi anggota menuai GMV 266400.00 yuan tertinggi dengan belanja paling hemat. Dalam satu baris, uang dihabiskan di mana dan menuai apa langsung terbaca sekilas, sel mana yang perlu ditambah dan sel mana yang perlu ditahan, kesimpulan diambil per baris.
+
+![Demo antarmuka sistem dashboard iklan: backend suplemen lintas batas, rincian belanja empat saluran dan baris total dalam satu layar, tiga tab bulan ini, bulan lalu, dan kumulatif](/images/insights/customer-acquisition-china-converting-demand/paid-media-dashboard-four-channel-ledger.webp)
+
+Ada dua detail pada antarmuka dashboard yang layak ditiru: bagian bawah mencantumkan keterangan bahwa ini adalah data demo, dengan buku besar belanja empat saluran, baris total, dan ROI per saluran dalam satu layar. Kolom status seluruh halaman seragam bertanda Sedang berjalan, dilengkapi pintu masuk detail dan log, sehingga basis setiap baris dapat ditelusuri lewat satu klik.
+
+Terakhir, luruskan basisnya: pembagian tugas saluran dan komisi platform 0.5%–5% berasal dari sumber publik sebagai skala arah, bukan penawaran harga. Deretan angka pada dashboard adalah data demo untuk melatih cara membaca dashboard dan tidak mewakili kinerja nyata toko mana pun. Sistem keanggotaan dibangun ulang menurut aturan domestik, tanpa transplantasi utuh. Jika Anda ingin membangun arsitektur akuisisi sendiri, ikuti urutan ini: tetapkan pembagian tugas saluran menurut tiga tahap, kunci empat poin kepatuhan pada hari pertama, lalu gunakan dashboard iklan untuk memverifikasi belanja dan imbal hasil setiap minggu. Kami menyiapkan materi eksekusi yang sesuai dengan matriks dan dashboard ini dalam paket bundel kami untuk pasar Tiongkok, bawa daftar produk dan target belanja bulan berjalan Anda, [hubungi kami](/id/packages/).

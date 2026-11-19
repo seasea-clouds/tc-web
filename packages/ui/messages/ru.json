@@ -18,7 +18,6 @@
     "whatsapp": "WhatsApp",
     "testimonials": "Отзывы",
     "industries": "Отрасли",
-    "blog": "Блог",
     "checkCb": "CBEC",
     "checkCcc": "Электроника",
     "checkGacc": "Импорт продуктов питания",
@@ -27,7 +26,8 @@
     "checkTm": "Товарные знаки",
     "email": "Электронная почта",
     "freeCheckHeader": "Бесплатные инструменты",
-    "getQuote": "Получить предложение"
+    "getQuote": "Получить предложение",
+    "insights": "Блог"
   },
   "Search": {
     "title": "Поиск",
@@ -37,9 +37,9 @@
     "hint": "Введите текст для поиска по услугам, статьям и часто задаваемым вопросам.",
     "types": {
       "service": "Услуги",
-      "blog": "Информация",
       "faq": "FAQ",
-      "regulation": "Нормативные акты"
+      "regulation": "Нормативные акты",
+      "insights": "Информация"
     }
   },
   "Navbar": {
@@ -57,7 +57,6 @@
     },
     "packages": "Пакеты",
     "faq": "Часто задаваемые вопросы",
-    "blog": "Информация",
     "contact": "Связаться с нами",
     "whatsapp": "WhatsApp",
     "quote": "Получить предложение",
@@ -94,7 +93,8 @@
     "report": "Отчет",
     "reports": "Отчеты",
     "email": "Почта",
-    "regulations": "Нормативные акты"
+    "regulations": "Нормативные акты",
+    "insights": "Информация"
   },
   "MobileTab": {
     "home": "Главная",
@@ -121,7 +121,7 @@
   "breadcrumb": {
     "home": "Главная",
     "services": "Услуги",
-    "blog": "Insights",
+    "insights": "Insights",
     "industries": "Отрасли",
     "packages": "Пакеты",
     "faq": "FAQ"

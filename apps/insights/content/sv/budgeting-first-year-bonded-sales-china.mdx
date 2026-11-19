@@ -1,0 +1,91 @@
+---
+title: "Budget för första året med tullagerförsäljning i tre nivåer"
+date: "2027-08-10"
+category: "E-commerce"
+excerpt: "Första året i tullager, tre nivåer. En parameteruppsättning, bara indata ändras och nivån följer valideringen. Fyra avdrag följer volymen. Satser gäller bara i formell offert."
+references:
+  - title: "Finansministeriets, Allmänna tullförvaltningens och den statliga skatteförvaltningens meddelande om skattepolitiken för gränsöverskridande detaljhandelsimport inom e-handel (Cai Guan Shui [2016] nr 18; tullsatsen sätts tillfälligt till 0%, importmoms och punktskatt tas ut med 70% av det lagstadgade beloppet)"
+    url: "https://shanghai.chinatax.gov.cn/tax/zcfw/zcfgk/jckss/201604/t422819.html"
+  - title: "Finansministeriets, Allmänna tullförvaltningens och den statliga skatteförvaltningens meddelande om förbättring av skattepolitiken för gränsöverskridande detaljhandelsimport inom e-handel (Cai Guan Shui [2018] nr 49; gräns per transaktion 5000 yuan, årlig gräns 26000 yuan)"
+    url: "https://czt.hlj.gov.cn/czt/c110905/202001/c00_30603063.shtml"
+  - title: "Sex myndigheters meddelande om förbättrad tillsyn över gränsöverskridande detaljhandelsimport inom e-handel (Shang Cai Fa [2018] nr 486)"
+    url: "https://www.mofcom.gov.cn/article/b/fwzl/201811/20181102812004.shtml"
+  - title: "Allmänna tullförvaltningens kungörelse nr 194 från 2018 om tillsyn över varor inom gränsöverskridande detaljhandelsimport och -export inom e-handel"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+---
+
+Ett första år med tullagerförsäljning kan kokas ner till en enda rad: på varje 100 yuan i omsättning drar avgifter, fulfillment och förstaledstransport, skatter och provision tillsammans 37.1 yuan, och lämnar 62.9 yuan i täckningsbidrag. Med det bidraget täcks den fasta investeringen, och återbetalningstiden räknas fram. De tre scenarierna ändrar indata, inte den här metoden.
+
+## Tre scenarier, börja med SKU-gränsen
+
+Det försiktiga scenariot håller 3 till 5 SKU och sätter validering och ryktesspridning främst. Kör ett enda SKU hela vägen från början till slut, gå sedan vidare till basscenariot när data kommer tillbaka; fyra observationspunkter bevakas först, med konvertering och återköp främst.
+
+Basscenariot håller 8 till 12 SKU och siktar på att närma sig nollpunkten under första året. Parameteruppsättningen är densamma, bara indata ändras och nivån följer valideringsresultaten; nettokvotmodellen kan sättas in direkt.
+
+Det optimistiska scenariot håller alla SKU och förlitar sig på volym för att späda ut de fasta kostnaderna. Skala först när lagerhållning av alla SKU och kampanjsystemet är på plats; de sexton förberedelserna före lanseringen är en förutsättning. Att byta mellan scenarierna är ingen magkänslefråga: varje nivå har inträdesvillkor, och tills de är uppfyllda stannar man kvar i den föregående.
+
+![Första årets tre scenarier och justerbara parametrar: tre kort för försiktigt, bas och optimistiskt, märkta 3 till 5 SKU, 8 till 12 SKU och alla SKU med sina inträdesvillkor; därunder fem avdragssegment per 100 yuan i omsättning och 62.9 yuan i täckningsbidrag; längst ner en kedja med sex länkar från indata via GMV, avdrag och täckningsbidrag till fast investering och återbetalningstid](/images/insights/budgeting-first-year-bonded-sales-china/year-one-model-three-scenarios.webp)
+
+## Tre antaganden fyller du i
+
+Hela modellen behöver bara tre antaganden från dig: ordervärde, återköpsfrekvens och tak för kampanjprovisionen. Vi tillhandahåller struktur och verktyg, siffrorna kommer från dina parametrar, och leveransen är en interaktiv beräkningstabell utan förinställda målvärden.
+
+Modellkedjan har sex länkar. Indata räknar om antal SKU, ordervärde och återköp till omsättning (GMV), och varje nivå beräknar sin egen omsättning. Därefter dras fyra poster av: samlad skatt, plattformsprovision, fulfillment och kampanjprovision. GMV minus dessa fyra är täckningsbidraget. Den fasta investeringen omfattar systemintegration, avskrivning av samlad förstaledstransport och underhåll av tullagerbok. När ackumulerat bidrag täcker den fasta investeringen fås återbetalningstiden.
+
+Du kör kedjan själv. Byt ut ett enda antagande och alla siffror efter det flyttar sig; metoden ligger öppet, så du kan ta den till en intern godkännandeprocess utan att behöva lita på någons tonfall.
+
+## Per 100 yuan i omsättning, 37.1 yuan i fyra avdrag
+
+Täckningsbidraget delas upp per 100 yuan GMV: avgifter 6.0 yuan, fulfillment och förstaledstransport 7.0 yuan, skatter 9.1 yuan, provision 15.0 yuan, sammanlagt 37.1 yuan och 62.9 yuan i täckningsbidrag. De fem segmenten summerar till exakt 100%, strukturen är densamma i alla tre scenarier, och skillnaden ligger i storleksordningen och utspädningen av de fasta posterna.
+
+De 9.1% i skatteposten är den samlade skattebördan för gränsöverskridande detaljhandelsimport inom e-handel: tullsatsen sätts tillfälligt till 0%, och importmoms och punktskatt tas ut med 70% av det lagstadgade beloppet. Det är ett tal beräknat ur hela skattesystemet, så lägg inte till en enskild skattesats direkt.
+
+Avdragen följer ordervolymen proportionellt. Fördubblas volymen fördubblas alla fyra avdragen, och täckningsbidraget följer samma proportion; den fasta investeringen följer inte volymen, så det är just den fasta sidan som volymen späder ut. Andelarna som visas här är en illustrativ beräkningsgrund, inte en offert och inte ett löfte om avkastning.
+
+## Kör det försiktiga scenariot en gång
+
+Ta det försiktiga scenariot genom en beräkning. 3 SKU, 25 ordrar per SKU och månad, cirka 900 ordrar per år; med ett ordervärde på 300 yuan blir årsomsättningen 270,000 yuan. Med 37.1% i avdrag blir de fyra posterna tillsammans 100,170 yuan: avgifter 16,200 yuan, fulfillment och förstaledstransport 18,900 yuan, skatter 24,570 yuan, provision 40,500 yuan.
+
+Täckningsbidraget är 169,830 yuan. Den fasta investeringen uppskattas till 150,000 yuan, där systemintegration, avskrivning av samlad förstaledstransport och underhåll av tullagerbok ingår; månatligt täckningsbidrag är cirka 14,153 yuan, och det ackumulerade bidraget täcker den fasta investeringen omkring månad 11, vilket ger återbetalning inom första året. Byt ordervärde eller antal återköp och resultatet flyttar sig; du fyller i parametrarna, vi ändrar inte beräkningsgrunden.
+
+## Tre sätt att fakturera
+
+Per order: avräknas efter antal ordrar och passar faser med förutsägbar ordervolym och stabil SKU-struktur.
+
+Andel av GMV: avräknas som en andel av omsättningen och passar uppskalningsfasen, där större volym späder ut styckkostnaden mer.
+
+Månadsarvode plus per order: ett fast arvode täcker grundbemanning och system, och överskjutande del läggs på per order, så budgeten kan sättas i förväg.
+
+Alla tre sätten prissätts mot fem faktorer: ordervolym, antal SKU, tidskrav, avräkningsvaluta och mervärdestjänster. Ändras de fem ändras anbudsstrukturen med dem.
+
+![Faktureringsalternativ och insatser på din sida: upptill per order, andel av GMV och månadsarvode plus per order, med fem avgiftsfaktorer och anbudets åtta avsnitt till höger; nedtill personal, medel, underlag och tid med sina tidpunkter, med notisen att en start på deltid inte tillför några fasta tjänster och att mallarna för de fyra listorna följer med S0-leveranserna](/images/insights/budgeting-first-year-bonded-sales-china/billing-options-and-budget-inputs.webp)
+
+## Poster utanför omfånget och offertvillkor
+
+Posterna utanför omfattningen avgränsas först, till exempel senare aktivering av 9610-kanalen, ombyggnad av huvudkontorets system och ersättning till IBO utomlands; våra serviceavgifter redovisas separat i det formella anbudet och blandas inte in i de tre faktureringssätten ovan.
+
+Ett formellt anbud kräver fem förutsättningar på plats: SKU-lista och volymer, beredskap för CoA (testrapport) från samma parti, inriktning för företagsformen, preferens för målhamnen och inriktning för påståendestrategin. När alla fem finns på plats följer det formella anbudet.
+
+Även utan data går det att ta fram en första version: beräknad på branschens erfarenhetsvärden, där varje post märks med grunden för sitt värde, och värdena byts ut när dina uppmätta data kommer.
+
+## Anbudets åtta avsnitt
+
+Det formella anbudet är uppdelat i åtta avsnitt: omfattningsgränser, avgiftsjämförelse, avgiftsstruktur, kostnadsuppdelning, betalningsrytm, skatt och fakturering, ansvar och ersättning samt randvillkor. Detaljerna ligger som en kommersiell bilaga, och alla belopp följer det formella anbudet; en muntligt nämnd siffra i mötet gäller inte.
+
+## Fyra insatser på din sida
+
+Personal: 1 till 2 personer inom finans och regelefterlevnad, med start på deltid, plus 1 kontaktperson på affärssidan; en start på deltid tillför inga fasta tjänster. Behövs från start, parallellt med uppstartsfasen S0.
+
+Medel: första lagret dimensioneras efter pilot-SKU och 2 till 3 månaders omsättning, kampanjinsatser prövas i små steg, och skattesäkerhet ordnas enligt hamnens krav. Allt ska vara på plats före lagerpåfyllning och listning.
+
+Underlag: dokument för produkt, testning, kvalifikation och varumärke samlas i fyra checklistor, som kompletteras successivt vid varje inträdespunkt; mallarna för de fyra listorna följer med S0-leveranserna.
+
+Tid: tre beslut, företagsform, målhamn och påståendestrategi, påverkar tidplanen direkt; slås de fast före S0 låses tidplanen, och med besluten på plats går arbetet in i genomförandefasen M1.
+
+Personal och medel anges som praktiska intervall, anbudet utfärdas efter uppmätta förhållanden, det formella anbudet kommer när underlagen är kompletta, och avgiftsdetaljerna redovisas bara där.
+
+## Börja med tabellhuvudet
+
+Första årets budget ryms i en enda tabell: kolumner för tre scenarier, rader för tre antaganden, fyra avdrag, en rad för fast investering och en rad för återbetalningstid. Fyll i indata först, tala om anbud sedan; satser gäller bara i det formella anbudet, och demonstrationssiffrorna förklarar bara metoden.
+
+Nästa steg är att föra in din SKU-lista, ditt ordervärde och dina återköp i tabellen. Om något indatavärde fortfarande är öppet, [kontakta oss](/sv/packages/).

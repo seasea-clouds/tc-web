@@ -1,0 +1,113 @@
+---
+title: "Devet sučelja kineskih carinskih platformi uz kontrolne lampice i pričuvu za vrhunac"
+date: "2027-06-22"
+category: "E-commerce"
+excerpt: "Standardna sučelja imaju prednost, ostala preslikava posrednik; kontrolne lampice bilježe pozive i ponovna slanja. Podaci ostaju u zemlji, pričuva za vrhunac je tu, manjkovi se prate."
+references:
+  - title: "Obavijest br. 194 iz 2018. Glavne carinske uprave Kine o nadzoru maloprodajnog uvoza i izvoza robe u prekograničnoj elektroničkoj trgovini"
+    url: "https://www.customs.gov.cn/customs/2018-12/13/article_2025121221010384362.html"
+  - title: "Zakon Narodne Republike Kine o zaštiti osobnih podataka, donesen 20. 8. 2021., članci 38., 39. i 55."
+    url: "https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm"
+  - title: "Odredbe o promicanju i uređivanju prekograničnog protoka podataka, Naredba br. 16 Ureda za kibernetički prostor Kine, na snazi od 22. 3. 2024."
+    url: "https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm"
+---
+
+Devet vrsta sučelja može povezati vaš postojeći sustav s kineskim carinskim platformama uz uvjet da standardna sučelja imaju prednost, podaci ostaju u zemlji i velika rasprodaja ostavlja pričuvu prema vrhuncu od 10 puta. Ondje gdje postoji standardno sučelje ono se povezuje izravno, a gdje ga nema preslikava ga posrednički softver; kontrolne lampice po vrsti bilježe broj poziva, stopu uspješnosti, kašnjenje i neuspjela ponovna slanja, a dva retka potiskivanja narudžbi i povrata platnog dokumenta zapisuju prijenos triju dokumenata. Javne tržišne referentne vrijednosti za integraciju iznose 3 do 7 dana za standardno sučelje i 8 do 12 tjedana za potpunu integraciju, no one služe samo kao orijentacija za red veličine; stvarni datum puštanja u rad određuju zajedničko testiranje i obračunski ciklus paralelnog rada.
+
+![Demonstracija tablice mapiranja devet vrsta sučelja sa zaglavljem vaš sustav, stavka integracije, smjer i odredište, u devet redaka nižu se roba i zalihe, narudžbe, podaci o članovima, namira provizije, zalihe, carina, ispunjenje, povrati i financije, a pri dnu su navedena četiri načela protoka podataka i četiri kontrolne lampice nadzora zajedničkog testiranja sučelja](/images/insights/china-bonded-platforms-nine-interfaces/nine-interface-families-mapping.webp)
+
+## U koju se tablicu smješta svaka od devet vrsta sučelja
+
+Tablica sučelja ispisana je u četiri stupca, a oni redom govore na kojoj je strani vaš sustav, što je stavka integracije, tko vodi smjer i gdje podaci na kraju završavaju. Smjer ima samo tri oblika, dvosmjerni, ulazni i onaj koji vodite vi, a retke bez označenog smjera preuzima naša strana; stupac odredišta jasno kaže kojoj knjizi pripada svako polje, pa onaj tko preuzme posao može provjeriti izravno iz tablice.
+
+- Roba i zalihe: SKU zalihe i cijene, dvosmjerno, usklađeno sa sustavom upravljanja skladištem i carinskom knjigom.
+- Narudžbe: podaci o narudžbama, ulazno, smještaju se u polja triju dokumenata.
+- Podaci o članovima: odnosi promotora, vodite vi, podaci su vaši i obrađujemo ih kao ovlašteni obrađivač.
+- Namira provizije: isplata provizije, dvosmjerno, domaći dio izvršava domaći subjekt.
+- Zalihe: sustav carinskog skladištenja, bez označenog smjera, smješta se u sustav carinskog poslovanja i dijeli izvor s knjigom.
+- Carina: prijava triju dokumenata, bez označenog smjera, prijavu preuzimamo mi i ona ostaje stavka pod našom kontrolom.
+- Ispunjenje: povrat putanje, bez označenog smjera, logistička putanja upisuje se natrag u prikaz narudžbe.
+- Povrati: dokumenti o povratu, bez označenog smjera, roba se preko centra za povrate ponovno vraća u područje pod carinskim nadzorom.
+- Financije: namira, izlazno, uključuje valutu i konverziju.
+
+Kamo podaci teku određuje kako se sučelja povezuju. Knjige na domaćoj strani i nadzorne ploče na inozemnoj strani moraju ostati odvojene, jer bi inače pri zajedničkom testiranju obje strane prebrisivale istu skupinu polja.
+
+- Podaci o promociji prikupljeni i namireni u zemlji ostaju upravo u zemlji.
+- Vašoj inozemnoj matičnoj tvrtki vraćaju se samo deidentificirani agregirani podaci, bez domaćih odnosa provizije.
+- Inozemni pozadinski ured ne dolazi u dodir sa sirovim podacima kineskih potrošača; prekogranične se staze otvaraju tek nakon što prođe procjena učinka na zaštitu osobnih podataka.
+- Domaći podaci o promociji i proviziji podržavaju potpuni izvoz i pri primopredaji se zajedno s knjigama predaju vama.
+
+Nadzor zajedničkog testiranja sučelja postavlja kontrolne lampice u četiri retka prema vrsti sučelja i protustranci, a svaka provjera ispravnosti i svako ponovno slanje ostavlja jedan zapis. Demonstracijska stranica ispisuje tri stavke, vrstu sučelja, protustranku i kontrolnu lampicu, što odgovara istom skupu korištenom u demonstraciji sučelja sustava; tijekom zajedničkog testiranja redci se svakoga dana prolaze jedan po jedan.
+
+- Potiskivanje narudžbi povezano je s izlogom trgovine i kontrolna lampica pokazuje normalno stanje.
+- Povrat platnog dokumenta povezan je s platnim kanalom i kontrolna lampica pokazuje normalno stanje.
+- Povrat voznog lista povezan je s kurirskom službom i kontrolna lampica javlja upozorenje.
+- Prijava popisa povezana je s kanalom za prijavu i kontrolna lampica pokazuje normalno stanje.
+
+Uvjete integracije najprije određuju standardna sučelja: gdje standardno sučelje postoji povezuje se izravno, a gdje ga nema preslikava ga posrednički softver. Javna tržišna referentna vrijednost za trajanje integracije iznosi 3 do 7 dana za standardno sučelje i 8 do 12 tjedana za potpunu integraciju, a velika rasprodaja ostavlja pričuvu prema vrhuncu od 10 puta. Svaka strana imenuje jednog tehničkog kontakta i tijekom zajedničkog testiranja svakoga se dana održava kratki sastanak. Nakon puštanja u rad najprije se u paralelnom radu dovrši jedan cijeli obračunski ciklus pa se tek onda prebacuje, a podaci dvaju sustava tijekom usporednog rada ne smiju se razići.
+
+## Kako se čitaju kontrolne lampice i gdje se bilježe neuspjela ponovna slanja
+
+Dnevnik ispravnosti sučelja daje jedan redak po jednoj vrsti sučelja, s karticama za sva sučelja, normalna i abnormalna, a svaki redak bilježi protustranku, broj poziva, stopu uspješnosti, kašnjenje, broj neuspjelih poziva, ponovno slanje i kontrolnu lampicu. Uzmimo za primjer potiskivanje narudžbi: danas je bilo 1284 poziva, stopa uspješnosti od 100%, prosječno kašnjenje od 186 milisekundi, 0 neuspjelih poziva i normalna kontrolna lampica; povrat platnog dokumenta također je imao 1284 poziva, stopu uspješnosti od 99,9%, 1 neuspjeli poziv uspješno ponovno poslan, a kontrolna lampica i dalje normalna. Ta su dva retka dokaz da je prijenos triju dokumenata ostao u sustavu.
+
+Nakon što je mapiranje devet vrsta sučelja dovršeno, i pozivi u radu i podaci o ispravnosti završavaju na ovom dnevniku, a dva retka potiskivanja narudžbi i povrata platnog dokumenta bilježe kako je prijenos triju dokumenata sjeo. Pri dnu demonstracijskog sučelja piše ukupno 12 zapisa i 20 po stranici, a na kraju svakog retka stoje dva ulaza, detalji i dnevnik; svih devet redaka ispisano je po istim stupcima.
+
+![Demonstracija sučelja sustava dnevnika ispravnosti sučelja, koja u devet stupaca vrsta sučelja, protustranka, današnji pozivi, stopa uspješnosti, prosječno kašnjenje, neuspjeli pozivi, ponovno slanje, kontrolna lampica i radnje prikazuje devet redaka sučelja, a pri dnu piše ukupno 12 zapisa i 20 po stranici](/images/insights/china-bonded-platforms-nine-interfaces/interface-health-log-system-demo.webp)
+
+- Potiskivanje narudžbi, izlog trgovine, danas 1284 poziva, stopa uspješnosti 100%, prosječno kašnjenje 186 milisekundi, 0 neuspjelih, bez ponovnog slanja, kontrolna lampica normalna, detalji i dnevnik;
+- Povrat platnog dokumenta, platni kanal, 1284, 99,9%, 210 milisekundi, 1 neuspjeli, ponovno poslano, normalna, detalji i dnevnik;
+- Povrat voznog lista, kurirska služba, 1266, 99,2%, 340 milisekundi, 10 neuspjelih, ponovno slanje u tijeku, upozorenje, detalji i dnevnik;
+- Prijava popisa, kanal za prijavu, 1266, 99,8%, 520 milisekundi, 3 neuspjela, ponovno poslano, normalna, detalji i dnevnik;
+- Upit o kvoti, kanal za upite, 1284, 100%, 150 milisekundi, 0 neuspjelih, bez ponovnog slanja, normalna, detalji i dnevnik;
+- Sinkronizacija knjige, carinsko skladište, 96, 100%, 430 milisekundi, 0 neuspjelih, bez ponovnog slanja, normalna, detalji i dnevnik;
+- Povrat statusa puštanja, kanal za prijavu, 1240, 99,6%, 610 milisekundi, 5 neuspjelih, ponovno poslano, normalna, detalji i dnevnik;
+- Logistička putanja, kurirska služba, 1240, 98,7%, 720 milisekundi, 16 neuspjelih, ponovno slanje u tijeku, upozorenje, detalji i dnevnik;
+- Datoteka usklađivanja, financijski sustav, 12, 100%, 980 milisekundi, 0 neuspjelih, bez ponovnog slanja, normalna, detalji i dnevnik.
+
+## Kako se procjenjuje vrhunac velike rasprodaje i koliko kapaciteta ostaviti
+
+Odluka o vrhuncu dijeli se u četiri slučaja prema količini i potrebi za odzivom: niska količina uz visok odziv gleda elastičnost, visoka količina uz visok odziv gleda vrijeme pripreme, niska količina uz nizak odziv gleda osnovnu sposobnost, a visoka količina uz nizak odziv gleda stabilni kapacitet. Krivulja kapaciteta u odnosu na dnevni kapacitet ima tri razine, 1 put za svakodnevni rad, 4 do 5 puta za veliku rasprodaju i 10 puta za vrhunac, a na strani vrhunca ostavlja se pričuva prema 10 puta. Što nam ranije date prethodno prijavljene količine, to više prostora ima za proširenje kapaciteta i raspored osoblja; ako količine stignu tek tjedan prije rasprodaje, preostaje uglavnom samo dodavanje ljudi.
+
+- Niska količina i visoka potreba za odzivom ide na elastičnost vrhunca: javni slučajevi kreću se na 4 do 5 puta dnevne količine narudžbi, vrhunci dosežu od desetaka tisuća do stotina tisuća komada, a osoblje u velikoj rasprodaji otprilike je 3 puta veće nego inače, i sve su to referentne vrijednosti iz javnih slučajeva.
+- Visoka količina i visoka potreba za odzivom ograničena je vremenom pripreme: iznimno visoki vrhunci traže vrijeme pripreme, rast SKU istodobno povećava i skladište i knjigu, velika rasprodaja rezervira vrhunac od 10 puta, a ulazne veličine dajete vi.
+- Niska količina i niska potreba za odzivom osnovna je sposobnost: brendirana trgovina s licenciranim plaćanjima, dokumenti su ugrađeni, povezano je više od 50 luka i više od 70 ERP sustava, tu su napredna AEO certifikacija i vlastito carinjenje, a naša je strana spremna.
+- Visoka količina i niska potreba za odzivom stabilni je kapacitet: veličina se određuje prema dnevnim narudžbama, roba ulazi u skladište ranije i smješta se po zonama, stalno i privremeno osoblje radi zajedno, prethodno prijavljene količine dolaze prve, povrati ponovno ulaze u područje pod carinskim nadzorom, a naša strana sve vodi po postupku.
+
+Kandidati za skladište četiri su lokacije sveobuhvatnih carinskih zona uz skladište Hong Kong, Kina. Četiri lokacije u usporednom radu znače redundantnost više luka, konačnu luku određujete vi, a popis kandidata predaje vam se već u početnoj fazi, pa ne treba čekati da roba stigne u luku. Skladište Hong Kong, Kina vodi se na inozemnoj strani i bilježi se odvojeno od četiri domaće lokacije.
+
+![Demonstracija odluke o vrhuncu velike rasprodaje za kapacitet platforme i ispunjenja, s lijeve strane četiri kvadranta prema količini i potrebi za odzivom, gore desno krivulja kapaciteta u tri razine u odnosu na dnevni kapacitet, dolje desno ploča prethodno prijavljenih količina za veliku rasprodaju, a pri dnu četiri lokacije sveobuhvatnih carinskih zona i skladište Hong Kong, Kina](/images/insights/china-bonded-platforms-nine-interfaces/mega-sale-peak-capacity-verdict.webp)
+
+- Yiwu u Zhejiangu carinsko je skladište pod carinskim režimom 1210.
+- Hangzhou u Zhejiangu carinsko je skladište pod carinskim režimom 1210.
+- Guangzhou Huangpu u Guangdongu carinsko je skladište pod carinskim režimom 1210.
+- Shenzhen Qianhai u Guangdongu carinsko je skladište pod carinskim režimom 1210.
+- Hong Kong, Kina vodi se kao inozemna strana, a ondje je carinsko skladište Hong Kong, Kina.
+
+Ploča prethodno prijavljenih količina za veliku rasprodaju ispisuje četiri retka u sedam stupaca, SKU, prethodno prijavljena količina, prijavljeno, napredak, očekivani završetak, status i radnje, a svaki redak ima dva ulaza, detalje i dnevnik. Napredak i očekivani datum završetka određuju redoslijed pripreme zaliha za svaki SKU, a manjkovi se prate redak po redak u tablici praćenja prethodno prijavljenih količina.
+
+- Meke kapsule koenzima Q10, prethodno prijavljena količina 12000, prijavljeno 8400, napredak 70%, očekivani završetak 10-12, u tijeku, detalji i dnevnik;
+- Kapsule ribljeg ulja iz dubokog mora, 8000, 6400, 80%, 10-08, u tijeku, detalji i dnevnik;
+- Čvrsti napitak od proteinskog praha, 6000, 2400, 40%, 10-18, u tijeku, detalji i dnevnik;
+- Liofilizirani prah probiotika, 5000, 5000, 100%, bez navedenog datuma završetka, završeno, detalji i dnevnik.
+
+## Kako se manjkovi prethodno prijavljenih količina prate redak po redak
+
+Tablica praćenja prethodno prijavljenih količina u modulu zaliha daje jedan redak po jednom SKU i upisuje prethodno prijavljenu količinu, prijavljeno, napredak, manjak, očekivani završetak i status. Prođimo kroz meke kapsule koenzima Q10: prethodno prijavljena količina 12000, prijavljeno 8400, napredak 70%, manjak 3600, a očekuje se da se nadoknadi 10-12; kapsule ribljeg ulja iz dubokog mora imaju napredak 80%, manjak 1600 i očekuje se da se nadoknade 10-08. Krivulja kapaciteta u tri razine ovdje se pretvara u radnje pripreme zaliha, pa se unaprijed vidi koliki je manjak i kojeg će se dana nadoknaditi.
+
+Pri dnu sučelja piše ukupno 7 zapisa i 20 po stranici, a na kraju svakog retka stoje dva ulaza, detalji i dnevnik; kartice praćenja prethodno prijavljenih količina i podsjetnika na dolazak robe stoje jedna uz drugu, pa operativci prelaze s kartice na karticu bez ponovnog filtriranja. Svih sedam redaka ispisano je po istim stupcima.
+
+![Demonstracija sučelja sustava praćenja prethodno prijavljenih količina, koja u osam stupaca SKU, prethodno prijavljena količina, prijavljeno, napredak, manjak, očekivani završetak, status i radnje prikazuje sedam redaka proizvoda, a pri dnu piše ukupno 7 zapisa i 20 po stranici](/images/insights/china-bonded-platforms-nine-interfaces/pre-filed-volume-tracking-system-demo.webp)
+
+- Meke kapsule koenzima Q10, 12000, 8400, 70%, manjak 3600, 10-12, u tijeku, detalji i dnevnik;
+- Kapsule ribljeg ulja iz dubokog mora, 8000, 6400, 80%, manjak 1600, 10-08, u tijeku, detalji i dnevnik;
+- Čvrsti napitak od proteinskog praha, 6000, 2400, 40%, manjak 3600, 10-18, u tijeku, detalji i dnevnik;
+- Liofilizirani prah probiotika, 5000, 5000, 100%, manjak 0, bez navedenog datuma završetka, završeno, detalji i dnevnik;
+- Prah ribljih kolagenskih peptida, 6000, 3000, 50%, manjak 3000, 10-15, u tijeku, detalji i dnevnik;
+- Tablete za žvakanje vitamina C, 9000, 8100, 90%, manjak 900, 10-06, u tijeku, detalji i dnevnik;
+- Gumeni bomboni s melatoninom, 4000, 4000, 100%, manjak 0, bez navedenog datuma završetka, završeno, detalji i dnevnik.
+
+## Što prije puštanja u rad utvrditi na sučeljima i prebacivanju
+
+Prije puštanja u rad utvrđuju se tri stvari: standardna sučelja i mapiranje posredničkim softverom upisuju se u tablicu sučelja, pragovi kontrolnih lampica, neuspjela ponovna slanja i odgovorne osobe pričvršćuju se uz pojedine retke, a prethodno prijavljene količine i razine kapaciteta usklađuju se na istu skupinu SKU. Ako neka od tri stvari izostane, zajedničko testiranje stalno zapinje na ponovnim slanjima. Broj poziva, stopa uspješnosti, prethodno prijavljene količine i datumi završetka u demonstracijskom sučelju služe samo kao objašnjenje, brojke vrhunca i osoblja potječu iz javnih slučajeva i pokazuju samo red veličine, a stvarne veličine dajete vi; stvarna praksa prijave ravna se prema zahtjevima nadležnog tijela, a prekogranični podatkovni putovi prema zaključku procjene učinka na zaštitu osobnih podataka. Prije prebacivanja u paralelnom se radu dovrši jedan cijeli obračunski ciklus, potvrdi se da se podaci dvaju sustava nisu razišli i tek se tada promet prebaci.
+
+Ako prema svom postojećem sustavskom stogu i rasporedu luka želite devet vrsta sučelja povezati s carinskim ispunjenjem i redak po redak provjeriti kontrolne lampice i prethodno prijavljene količine, slobodno [Kontaktirajte nas](/hr/packages/).

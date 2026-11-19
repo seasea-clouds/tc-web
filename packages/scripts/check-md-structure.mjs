@@ -27,11 +27,11 @@ const repoRoot = path.resolve(__dirname, '../..');
 const args = process.argv.slice(2);
 const isCi = args.includes('--ci');
 const filterLang = args.find(a => a.startsWith('--lang='))?.split('=')[1] || null;
-const project = args.find(a => a.startsWith('--project='))?.split('=')[1] || 'blog';
+const project = args.find(a => a.startsWith('--project='))?.split('=')[1] || 'insights';
 
 // 支持的子站及其 MDX 内容目录
 const PROJECT_CONTENT_DIRS = {
-  blog: 'apps/blog/content',
+  insights: 'apps/insights/content',
 };
 
 function getContentDir(p) {

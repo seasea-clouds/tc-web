@@ -256,7 +256,11 @@
     "coverItems5": "Pembuatan templat label untuk produksi",
     "coverItems6": "Dukungan pemeriksaan bea cukai untuk produk berlabel",
     "metaTitle": "Kepatuhan Label China | Panduan GB 7718-2025",
-    "metaDescription": "Kepatuhan label China untuk produk Indonesia: GB 7718-2025, GB 28050-2025 tabel nutrisi, peringatan alergen."
+    "metaDescription": "Kepatuhan label China untuk produk Indonesia: GB 7718-2025, GB 28050-2025 tabel nutrisi, peringatan alergen.",
+    "faq7q": "Apakah sampel dan barang pameran memerlukan label bahasa Mandarin?",
+    "faq7a": "Sampel yang dikirim untuk pengujian atau dipamerkan di pameran dagang tidak dijual kepada konsumen, sehingga secara prinsip berada di luar cakupan kewajiban label Mandarin secara penuh. Namun bea cukai tetap memeriksa kiriman, dan pengecualian ini lebih sempit daripada yang diperkirakan banyak eksportir. Yang berhasil dalam praktik: cantumkan «非卖品 / Tidak untuk dijual» pada setiap unit, tambahkan nama produk, berat bersih, dan kontak importir atau peserta pameran, lalu sertakan undangan pameran atau kontrak pengujian di dalam kiriman. Begitu sampel dijual, atau diserahkan kepada pengunjung untuk dibawa pulang, barang itu menjadi produk yang beredar dan wajib berlabel sesuai ketentuan. Stiker label sangat murah dan dapat dicetak dalam beberapa hari, jadi beri label pada apa pun yang mungkin dibawa pulang pengunjung.",
+    "faq8q": "Kapan GB 7718-2025 berlaku dan berapa lama masa transisinya?",
+    "faq8a": "GB 7718-2025 diterbitkan pada 16 Maret 2025 dan berlaku pada 16 Maret 2027, dengan masa transisi dua tahun. Standar pelabelan gizi GB 28050-2025 memiliki tanggal yang sama. Sampai 16 Maret 2027, label yang sesuai dengan versi 2011 masih sah, sehingga barang yang diproduksi dan dikeluarkan dari pabean sebelum tanggal itu tidak akan ditolak karena memakai format lama. Ada dua perubahan yang sebaiknya direncanakan sekarang: informasi alergen menjadi wajib dan harus ditonjolkan dalam daftar bahan, serta penulisan tanggal diseragamkan. Jika Anda merancang label untuk produk yang masih ada di rak pada 2027, rancanglah langsung menurut standar 2025 — mencetak ulang seluruh SKU nanti jauh lebih mahal daripada waktu peninjauan tambahan sekarang."
   },
   "ServiceCcc": {
     "heroTitle": "Sertifikasi CCC – Panduan Ekspor China untuk Produsen Indonesia",

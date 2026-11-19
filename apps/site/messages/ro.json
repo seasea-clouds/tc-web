@@ -256,7 +256,11 @@
     "coverItems5": "Crearea șabloanelor de etichete pentru producție",
     "coverItems6": "Asistență la vămuire pentru mărfurile etichetate",
     "metaTitle": "Etichetare chineză | ghid GB 7718-2025",
-    "metaDescription": "Cerințe de etichetare chineză pentru produse românești: GB 7718-2025, GB 28050-2025 tabel nutrițional, avertismente alergeni."
+    "metaDescription": "Cerințe de etichetare chineză pentru produse românești: GB 7718-2025, GB 28050-2025 tabel nutrițional, avertismente alergeni.",
+    "faq7q": "Mostrele și articolele de târg au nevoie de etichetare în chineză?",
+    "faq7a": "Mostrele expediate pentru teste sau pentru expunere la un târg nu se vând consumatorului, așa că, în principiu, rămân în afara cerințelor complete de etichetare în chineză. Vama inspectează totuși coletul, iar exceptarea este mai îngustă decât presupun mulți exportatori. Ce funcționează în practică: marcarea fiecărei unități cu «非卖品 / Nu se vinde», indicarea denumirii produsului, a greutății nete și a contactului importatorului sau expozantului, plus includerea invitației la târg sau a contractului de testare în colet. În momentul în care o mostră este vândută sau înmânată unui vizitator ca să o ia acasă, devine produs aflat în circulație și necesită o etichetă conformă. Etichetele autocolante costă foarte puțin și se tipăresc în câteva zile, așa că etichetați tot ce ar putea lua un vizitator cu el.",
+    "faq8q": "Când intră în vigoare GB 7718-2025 și cât durează perioada de tranziție?",
+    "faq8a": "GB 7718-2025 a fost publicat pe 16 martie 2025 și intră în vigoare pe 16 martie 2027, cu o perioadă de tranziție de doi ani. Standardul privind etichetarea nutrițională GB 28050-2025 are aceleași date. Până la 16 martie 2027, o etichetă conformă cu versiunile din 2011 rămâne legală, astfel încât marfa produsă și văruită înainte de această dată nu va fi respinsă pentru că folosește formatul vechi. Două modificări merită planificate de acum: informația despre alergeni devine obligatorie și trebuie evidențiată în lista ingredientelor, iar formularea datei este uniformizată. Dacă proiectați o etichetă pentru un produs care va fi încă pe raft în 2027, proiectați-o direct conform standardului din 2025 — retipărirea unui SKU întreg mai târziu costă mult mai mult decât timpul suplimentar de verificare de acum."
   },
   "ServiceCcc": {
     "heroTitle": "Certificare CCC pentru producătorii români",

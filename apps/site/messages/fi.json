@@ -256,7 +256,11 @@
     "coverItems5": "Etikettipohjien luominen tuotantoa varten",
     "coverItems6": "Tulliselvityksen etikettituki",
     "metaTitle": "Kiinalainen merkintä | Opas GB 7718-2025",
-    "metaDescription": "Kiinalainen merkintävaatimus suomalaisille tuotteille: GB 7718-2025, GB 28050-2025 ravintoarvotaulukko, allergeenivaroitukset."
+    "metaDescription": "Kiinalainen merkintävaatimus suomalaisille tuotteille: GB 7718-2025, GB 28050-2025 ravintoarvotaulukko, allergeenivaroitukset.",
+    "faq7q": "Tarvitsevatko näytteet ja messutuotteet kiinankielisen merkinnän?",
+    "faq7a": "Testaukseen tai messuesittelyyn lähetettäviä näytteitä ei myydä kuluttajalle, joten ne jäävät lähtökohtaisesti täydellisten kiinankielisten merkintävaatimusten ulkopuolelle. Tulli tarkastaa lähetyksen silti, ja poikkeus on kapeampi kuin useimmat viejät olettavat. Käytännössä toimii tämä: merkitse jokaiseen yksikköön «非卖品 / Ei myytäväksi», lisää tuotteen nimi, nettopaino sekä maahantuojan tai näytteilleasettajan yhteystiedot ja laita messukutsu tai testaussopimus lähetyksen mukaan. Heti kun näyte myydään tai annetaan kävijälle mukaan, siitä tulee liikkeessä oleva tuote ja se vaatii vaatimustenmukaisen etiketin. Tarraetiketit maksavat hyvin vähän ja ne saa painettua muutamassa päivässä, joten merkitse kaikki, mitä kävijä saattaa viedä mukanaan.",
+    "faq8q": "Milloin GB 7718-2025 tulee voimaan ja kuinka pitkä siirtymäaika on?",
+    "faq8a": "GB 7718-2025 julkaistiin 16. maaliskuuta 2025 ja se tulee voimaan 16. maaliskuuta 2027 eli kahden vuoden siirtymäajalla. Ravintosisältömerkintöjen standardilla GB 28050-2025 on samat päivämäärät. 16. maaliskuuta 2027 asti vuosien 2011 versioiden mukainen etiketti on edelleen laillinen, joten ennen sitä valmistettu ja tullattu tavara ei tule hylätyksi vanhan mallin vuoksi. Kaksi muutosta kannattaa ottaa suunnitelmiin jo nyt: allergeenitiedot tulevat pakollisiksi ja ne on korostettava ainesosaluettelossa, ja päivämäärän ilmaisutapa yhtenäistetään. Jos suunnittelet etikettiä tuotteelle, joka on hyllyssä vielä 2027, suunnittele se heti vuoden 2025 standardin mukaan – koko SKU:n uudelleenpainatus myöhemmin maksaa huomattavasti enemmän kuin ylimääräinen tarkistusaika nyt."
   },
   "ServiceCcc": {
     "heroTitle": "CCC-sertifiointi suomalaisille valmistajille",

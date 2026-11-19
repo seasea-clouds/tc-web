@@ -256,7 +256,11 @@
     "coverItems5": "Etikettmallar för produktion",
     "coverItems6": "Stöd vid tullklarering av etiketterade varor",
     "metaTitle": "Kinesisk märkning | Guide GB 7718-2025",
-    "metaDescription": "Kinesisk märkningskompatibilitet för svenska produkter: GB 7718-2025, GB 28050-2025 näringstabell, allergenvarningar."
+    "metaDescription": "Kinesisk märkningskompatibilitet för svenska produkter: GB 7718-2025, GB 28050-2025 näringstabell, allergenvarningar.",
+    "faq7q": "Behöver prover och mässartiklar kinesisk märkning?",
+    "faq7a": "Prover som skickas för testning eller för att ställas ut på en mässa säljs inte till konsument och faller därför i princip utanför de fullständiga kraven på kinesisk märkning. Tullen inspekterar ändå försändelsen, och undantaget är snävare än vad många exportörer tror. Det som fungerar i praktiken: märk varje enhet med «非卖品 / Ej till salu», ange produktnamn, nettovikt och kontaktuppgifter till importören eller utställaren, och lägg mässinbjudan eller testavtalet i försändelsen. I samma stund ett prov säljs, eller lämnas till en besökare att ta med hem, blir det en produkt i omlopp och kräver en korrekt etikett. Klisteretiketter kostar mycket lite och trycks på några dagar – märk allt som en besökare kan tänkas ta med sig.",
+    "faq8q": "När träder GB 7718-2025 i kraft och hur lång är övergångsperioden?",
+    "faq8a": "GB 7718-2025 publicerades den 16 mars 2025 och träder i kraft den 16 mars 2027, vilket ger två års övergång. Standarden för näringsdeklaration, GB 28050-2025, har samma datum. Fram till den 16 mars 2027 är en etikett som följer 2011 års versioner fortfarande tillåten, så varor som producerats och tullklarerats före det datumet avvisas inte för att de använder det gamla formatet. Två förändringar bör planeras redan nu: allergeninformation blir obligatorisk och måste framhävas i ingrediensförteckningen, och formuleringen av datum blir enhetlig. Om du tar fram en etikett för en produkt som fortfarande står i hyllan 2027, gör det direkt enligt 2025 års standard – att trycka om en hel SKU senare kostar betydligt mer än den extra granskningstiden nu."
   },
   "ServiceCcc": {
     "heroTitle": "CCC-certifiering för svenska tillverkare",

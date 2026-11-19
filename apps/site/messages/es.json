@@ -256,7 +256,11 @@
     "coverItems5": "Creación de plantillas de etiquetas para producción",
     "coverItems6": "Apoyo en el despacho aduanero de mercancías etiquetadas",
     "metaTitle": "Conformidad de etiquetas chinas | GB 7718-2025",
-    "metaDescription": "Conformidad de etiquetas para el mercado chino: GB 7718-2025, GB 28050-2025. Verificación, diseño y despacho aduanero para exportadores latinoamericanos."
+    "metaDescription": "Conformidad de etiquetas para el mercado chino: GB 7718-2025, GB 28050-2025. Verificación, diseño y despacho aduanero para exportadores latinoamericanos.",
+    "faq7q": "¿Las muestras y los artículos de feria necesitan etiquetado chino?",
+    "faq7a": "Las muestras enviadas para ensayos o para exponerse en una feria no se venden al consumidor, así que en principio quedan fuera del etiquetado chino completo. Aun así, la aduana inspecciona el envío y la exención es más estrecha de lo que muchos exportadores suponen. Lo que funciona: marcar cada unidad con «非卖品 / No apto para la venta», añadir el nombre del producto, el peso neto y el contacto del importador o expositor, y llevar la invitación a la feria o el contrato de ensayo dentro del paquete. En el momento en que una muestra se vende o se entrega a un visitante para que se la lleve, pasa a ser un producto en circulación y exige etiqueta conforme. Las etiquetas adhesivas cuestan muy poco y se imprimen en pocos días: etiquete todo aquello que un visitante pueda llevarse.",
+    "faq8q": "¿Cuándo entra en vigor la GB 7718-2025 y cuánto dura la transición?",
+    "faq8a": "La GB 7718-2025 se publicó el 16 de marzo de 2025 y entra en vigor el 16 de marzo de 2027, con dos años de transición. La GB 28050-2025, sobre etiquetado nutricional, comparte las mismas fechas. Hasta el 16 de marzo de 2027 sigue siendo legal una etiqueta conforme a las versiones de 2011, de modo que la mercancía producida y despachada antes de esa fecha no será rechazada por usar el formato antiguo. Hay dos cambios que conviene planificar ya: la información sobre alérgenos pasa a ser obligatoria y debe destacarse dentro de la lista de ingredientes, y la forma de expresar las fechas se unifica. Si diseña una etiqueta para un producto que seguirá en lineal en 2027, hágalo directamente según la norma de 2025: reimprimir todo un SKU después cuesta mucho más que el tiempo extra de revisión ahora."
   },
   "ServiceCcc": {
     "heroTitle": "Certificación CCC para fabricantes de España y América Latina",

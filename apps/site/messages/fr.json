@@ -256,7 +256,11 @@
     "coverItems5": "Création de modèles d'étiquettes pour la production",
     "coverItems6": "Accompagnement au dédouanement des marchandises étiquetées",
     "metaTitle": "Étiquettes chinoises GB 7718-2025 | Pour produits français",
-    "metaDescription": "Vérification d'étiquettes chinoises pour produits alimentaires français : GB 7718-2025, GB 28050-2025, tableau nutritionnel. Évitez les refus en douane."
+    "metaDescription": "Vérification d'étiquettes chinoises pour produits alimentaires français : GB 7718-2025, GB 28050-2025, tableau nutritionnel. Évitez les refus en douane.",
+    "faq7q": "Les échantillons et les articles de salon ont-ils besoin d'un étiquetage chinois ?",
+    "faq7a": "Les échantillons expédiés pour des essais ou pour être exposés sur un salon ne sont pas vendus au consommateur : ils échappent en principe à l'étiquetage chinois complet. La douane inspecte néanmoins le colis, et l'exemption est plus étroite que beaucoup d'exportateurs ne le pensent. Ce qui fonctionne : porter sur chaque unité la mention « 非卖品 / Ne pas vendre », indiquer le nom du produit, le poids net et le contact de l'importateur ou de l'exposant, et glisser dans le colis l'invitation au salon ou le contrat d'essai. Dès qu'un échantillon est vendu, ou remis à un visiteur pour qu'il l'emporte, il devient un produit en circulation et exige une étiquette conforme. Les étiquettes autocollantes coûtent très peu et s'impriment en quelques jours : étiquetez tout ce qu'un visiteur pourrait emporter.",
+    "faq8q": "Quand la GB 7718-2025 entre-t-elle en vigueur et quelle est la période de transition ?",
+    "faq8a": "La GB 7718-2025 a été publiée le 16 mars 2025 et entre en vigueur le 16 mars 2027, soit deux ans de transition. La GB 28050-2025, relative à l'étiquetage nutritionnel, partage ces mêmes dates. Jusqu'au 16 mars 2027, une étiquette conforme aux versions de 2011 reste licite : les marchandises produites et dédouanées avant cette date ne seront pas refusées pour avoir utilisé l'ancien format. Deux évolutions méritent d'être anticipées dès maintenant : l'information sur les allergènes devient obligatoire et doit être mise en évidence dans la liste des ingrédients, et la formulation de la date est uniformisée. Si vous concevez une étiquette pour un produit encore en rayon en 2027, faites-le directement selon la norme de 2025 : réimprimer tout un SKU plus tard coûte bien plus que le temps de vérification supplémentaire aujourd'hui."
   },
   "ServiceCcc": {
     "heroTitle": "Certification CCC pour exportateurs français",

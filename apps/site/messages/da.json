@@ -256,7 +256,11 @@
     "coverItems5": "Oprettelse af etiketskabeloner til produktion",
     "coverItems6": "Support til toldbehandling af etiketterede varer",
     "metaTitle": "Kinesisk mærkning | Guide GB 7718-2025",
-    "metaDescription": "Kinesisk mærkningskrav for danske produkter: GB 7718-2025, GB 28050-2025 næringstabel, allergenadvarsler."
+    "metaDescription": "Kinesisk mærkningskrav for danske produkter: GB 7718-2025, GB 28050-2025 næringstabel, allergenadvarsler.",
+    "faq7q": "Skal prøver og messevarer have kinesisk mærkning?",
+    "faq7a": "Prøver, der sendes til test eller til udstilling på en messe, sælges ikke til forbrugerne og falder derfor som udgangspunkt uden for de fulde krav om kinesisk mærkning. Tolden undersøger dog stadig forsendelsen, og undtagelsen er smallere, end de fleste eksportører tror. Det, der virker i praksis: mærk hver enhed med «非卖品 / Ikke til salg», angiv varenavn, nettovægt og kontaktoplysninger på importøren eller udstilleren, og læg messeinvitationen eller testaftalen i forsendelsen. I det øjeblik en prøve sælges eller gives til en besøgende, der tager den med hjem, bliver den et produkt i omløb og kræver en korrekt etiket. Klistermærker koster meget lidt og trykkes på få dage, så mærk alt, som en besøgende kan finde på at tage med.",
+    "faq8q": "Hvornår træder GB 7718-2025 i kraft, og hvor lang er overgangsperioden?",
+    "faq8a": "GB 7718-2025 blev offentliggjort den 16. marts 2025 og træder i kraft den 16. marts 2027, altså med to års overgang. Standarden for næringsdeklaration, GB 28050-2025, har samme datoer. Indtil 16. marts 2027 er en etiket, der opfylder 2011-versionerne, fortsat lovlig, så varer produceret og toldbehandlet før den dato afvises ikke, fordi de bruger det gamle format. To ændringer bør planlægges allerede nu: allergenoplysninger bliver obligatoriske og skal fremhæves i ingredienslisten, og datoangivelsen standardiseres. Hvis du designer en etiket til et produkt, der stadig står på hylden i 2027, så design den straks efter 2025-standarden – at genoptrykke en hel SKU senere koster langt mere end den ekstra gennemgangstid nu."
   },
   "ServiceCcc": {
     "heroTitle": "CCC-certificering for danske producenter",

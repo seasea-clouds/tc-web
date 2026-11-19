@@ -256,7 +256,11 @@
     "coverItems5": "Dizajni i personalizuar i etiketës kineze dhe shabllonet e prodhimit",
     "coverItems6": "Mbështetje për zhdoganimin me etiketa të përfshira",
     "metaTitle": "Etiketimi kinez | udhëzues GB 7718-2025",
-    "metaDescription": "Kërkesat kineze të etiketimit për produktet shqiptare: GB 7718-2025, GB 28050-2025 tabela ushqyese, paralajmërimet për alergjenët."
+    "metaDescription": "Kërkesat kineze të etiketimit për produktet shqiptare: GB 7718-2025, GB 28050-2025 tabela ushqyese, paralajmërimet për alergjenët.",
+    "faq7q": "A kanë nevojë mostrat dhe artikujt e panairit për etiketim kinez?",
+    "faq7a": "Mostrat që dërgohen për testime ose për ekspozim në një panair tregtar nuk u shiten konsumatorëve, prandaj në parim qëndrojnë jashtë kërkesave të plota të etiketimit kinez. Dogana gjithsesi inspekton paketën, dhe ky përjashtim është më i ngushtë sesa mendojnë shumica e eksportuesve. Ajo që funksionon në praktikë: të shënohet çdo njësi me \"非卖品 / Jo për shitje\", të shtohet emri i produktit, pesha neto dhe kontakti i importuesit ose ekspozuesit, dhe të vendoset ftesa e panairit ose kontrata e testimit brenda paketës. Në momentin që një mostër shitet, ose i jepet një vizitori për ta marrë me vete, ajo bëhet produkt në qarkullim dhe kërkon etiketë në përputhje. Etiketat ngjitëse kushtojnë shumë pak dhe shtypen brenda pak ditësh, prandaj etiketoni çdo gjë që një vizitor mund të marrë me vete.",
+    "faq8q": "Kur hyn në fuqi GB 7718-2025 dhe sa zgjat periudha e tranzicionit?",
+    "faq8a": "GB 7718-2025 u publikua më 16 mars 2025 dhe hyn në fuqi më 16 mars 2027, pra me dy vjet periudhë tranzicioni. Standardi i etiketimit ushqimor GB 28050-2025 ka të njëjtat data. Deri më 16 mars 2027, një etiketë në përputhje me versionet e 2011 mbetet e ligjshme, ndaj mallrat e prodhuara dhe të doganuara para kësaj date nuk do të refuzohen për shkak të formatit të vjetër. Dy ndryshime ia vlen të planifikohen që tani: informacioni për alergenët bëhet i detyrueshëm dhe duhet të theksohet në listën e përbërësve, dhe formulimi i datës unifikohet. Nëse po projektoni një etiketë për një produkt që do të jetë ende në raft në 2027, projektojeni menjëherë sipas standardit të 2025 — rishtypja e një SKU-je të tërë më vonë kushton shumë më tepër se koha shtesë e shqyrtimit tani."
   },
   "ServiceCcc": {
     "heroTitle": "Certifikim CCC për prodhuesit shqiptarë",

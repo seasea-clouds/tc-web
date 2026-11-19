@@ -256,7 +256,11 @@
     "coverItems5": "Címkesablonok készítése a gyártáshoz",
     "coverItems6": "Vámkezelési támogatás a címkézett árukhoz",
     "metaTitle": "Kínai címkézés | GB 7718-2025 útmutató",
-    "metaDescription": "Kínai címkézési követelmények magyar termékekhez: GB 7718-2025, GB 28050-2025 tápértéktáblázat, allergénfigyelmeztetés."
+    "metaDescription": "Kínai címkézési követelmények magyar termékekhez: GB 7718-2025, GB 28050-2025 tápértéktáblázat, allergénfigyelmeztetés.",
+    "faq7q": "Kell-e kínai címkézés a mintákra és a vásári termékekre?",
+    "faq7a": "A tesztelésre vagy vásári bemutatásra küldött mintákat nem értékesítik a fogyasztónak, ezért elvileg kívül esnek a teljes kínai címkézési követelményeken. A vám azonban így is ellenőrzi a csomagot, és a mentesség szűkebb, mint azt a legtöbb exportőr gondolja. Ami a gyakorlatban működik: minden egységen feltüntetni a „非卖品 / Nem eladó” feliratot, mellé a termék nevét, a nettó tömeget és az importőr vagy kiállító elérhetőségét, a csomagba pedig beletenni a vásári meghívót vagy a tesztelési szerződést. Abban a pillanatban, hogy egy mintát eladnak, vagy egy látogatónak odaadnak, hogy hazavigye, forgalomba került termékké válik, és megfelelő címkét igényel. Az öntapadós címkék nagyon olcsók és néhány nap alatt kinyomtatják őket, ezért címkézzen fel mindent, amit egy látogató magával vihet.",
+    "faq8q": "Mikor lép hatályba a GB 7718-2025, és mennyi az átmeneti időszak?",
+    "faq8a": "A GB 7718-2025-t 2025. március 16-án tették közzé, és 2027. március 16-án lép hatályba, két év átmeneti időszakkal. A tápértékjelölésről szóló GB 28050-2025 ugyanezekkel a dátumokkal rendelkezik. 2027. március 16-ig a 2011-es változatoknak megfelelő címke továbbra is jogszerű, így az ezen időpont előtt gyártott és vámkezelt áru nem kerül elutasításra a régi formátum miatt. Két változást érdemes már most betervezni: az allergéninformáció kötelezővé válik, és az összetevők felsorolásában ki kell emelni, valamint a dátum feltüntetésének módja egységesül. Ha olyan termék címkéjét tervezi, amely 2027-ben még a polcon lesz, egyenesen a 2025-ös szabvány szerint tervezze — egy teljes SKU utólagos újranyomtatása sokkal többe kerül, mint a mostani plusz ellenőrzési idő."
   },
   "ServiceCcc": {
     "heroTitle": "CCC-tanúsítás magyar gyártóknak",

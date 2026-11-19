@@ -256,7 +256,11 @@
     "coverItems5": "Vytvorenie šablón etikiet pre výrobu",
     "coverItems6": "Podpora pri colnom odbavení tovaru s etiketami",
     "metaTitle": "Čínske označovanie | sprievodca GB 7718-2025",
-    "metaDescription": "Čínske požiadavky na označovanie pre slovenské výrobky: GB 7718-2025, GB 28050-2025 nutričná tabuľka, upozornenia na alergény."
+    "metaDescription": "Čínske požiadavky na označovanie pre slovenské výrobky: GB 7718-2025, GB 28050-2025 nutričná tabuľka, upozornenia na alergény.",
+    "faq7q": "Potrebujú vzorky a veľtrhový tovar čínske označenie?",
+    "faq7a": "Vzorky zasielané na testovanie alebo na vystavenie na veľtrhu sa nepredávajú spotrebiteľovi, a preto spravidla nespadajú do plného rozsahu požiadaviek na čínske označovanie. Colný úrad však zásielku stále kontroluje a táto výnimka je užšia, než väčšina vývozcov predpokladá. Čo v praxi funguje: označiť každý kus nápisom „非卖品 / Nie je na predaj“, uviesť názov výrobku, čistú hmotnosť a kontakt dovozcu alebo vystavovateľa a do zásielky pribaliť pozvánku na veľtrh alebo zmluvu o skúške. V okamihu, keď sa vzorka predá alebo odovzdá návštevníkovi, aby si ju odniesol, stáva sa výrobkom v obehu a vyžaduje zodpovedajúcu etiketu. Samolepiace etikety stoja veľmi málo a vytlačia sa za pár dní – označte všetko, čo by si návštevník mohol odniesť.",
+    "faq8q": "Kedy nadobudne účinnosť GB 7718-2025 a aké dlhé je prechodné obdobie?",
+    "faq8a": "GB 7718-2025 bol zverejnený 16. marca 2025 a nadobúda účinnosť 16. marca 2027, teda s dvojročným prechodným obdobím. Norma o označovaní výživových údajov GB 28050-2025 má rovnaké dátumy. Do 16. marca 2027 zostáva etiketa zodpovedajúca verziám z roku 2011 zákonná, takže tovar vyrobený a preclený pred týmto dátumom nebude odmietnutý pre starý formát. Dve zmeny sa oplatí naplánovať už teraz: informácia o alergénoch sa stáva povinnou a musí byť zvýraznená v zozname zložiek a spôsob uvádzania dátumu sa zjednocuje. Ak navrhujete etiketu pre výrobok, ktorý bude na pulte aj v roku 2027, robte to rovno podľa normy z roku 2025 – neskoršia dotlač celej SKU stojí podstatne viac než dnešný čas navyše na kontrolu."
   },
   "ServiceCcc": {
     "heroTitle": "Certifikácia CCC pre slovenských výrobcov",

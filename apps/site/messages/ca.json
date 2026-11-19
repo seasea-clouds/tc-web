@@ -256,7 +256,11 @@
     "coverItems5": "Creació de plantilles d'etiquetes per a la producció",
     "coverItems6": "Assessorament per al despatx de duana amb etiquetes conformes",
     "metaTitle": "Etiquetatge xinès | guia GB 7718-2025",
-    "metaDescription": "Requisits d'etiquetatge xinès per a productes catalans: GB 7718-2025, GB 28050-2025 taula nutricional, avisos d'al·lèrgens."
+    "metaDescription": "Requisits d'etiquetatge xinès per a productes catalans: GB 7718-2025, GB 28050-2025 taula nutricional, avisos d'al·lèrgens.",
+    "faq7q": "Les mostres i els articles de fira necessiten etiquetatge en xinès?",
+    "faq7a": "Les mostres enviades per a assajos o per exposar-se en una fira no es venen al consumidor, així que en principi queden fora de l'etiquetatge xinès complet. Tot i això, la duana inspecciona el paquet i l'exempció és més estreta del que molts exportadors suposen. El que funciona: marcar cada unitat amb «非卖品 / No apte per a la venda», afegir el nom del producte, el pes net i el contacte de l'importador o expositor, i portar la invitació a la fira o el contracte d'assaig dins del paquet. En el moment que una mostra es ven o es lliura a un visitant perquè se l'emporti, passa a ser un producte en circulació i exigeix una etiqueta conforme. Les etiquetes adhesives costen molt poc i s'imprimeixen en pocs dies, així que etiqueteu tot allò que un visitant pugui endur-se.",
+    "faq8q": "Quan entra en vigor la GB 7718-2025 i quant dura la transició?",
+    "faq8a": "La GB 7718-2025 es va publicar el 16 de març de 2025 i entra en vigor el 16 de març de 2027, amb dos anys de transició. La GB 28050-2025, sobre etiquetatge nutricional, comparteix les mateixes dates. Fins al 16 de març de 2027 una etiqueta conforme a les versions del 2011 continua sent legal, de manera que la mercaderia produïda i despatxada abans d'aquesta data no serà rebutjada per fer servir el format antic. Hi ha dos canvis que convé planificar ja: la informació sobre al·lèrgens passa a ser obligatòria i s'ha de destacar dins la llista d'ingredients, i la manera d'expressar les dates s'unifica. Si dissenyeu una etiqueta per a un producte que encara serà a la prestatgeria el 2027, feu-ho directament segons la norma del 2025: reimprimir tot un SKU més endavant costa molt més que el temps extra de revisió ara."
   },
   "ServiceCcc": {
     "heroTitle": "Certificació CCC per a fabricants catalans",

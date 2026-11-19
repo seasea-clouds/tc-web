@@ -256,7 +256,11 @@
     "coverItems5": "Opprettelse av etikettmaler for produksjon",
     "coverItems6": "Støtte for fortolling av merkede varer",
     "metaTitle": "Kinesisk merking | Guide GB 7718-2025",
-    "metaDescription": "Kinesisk merking for norske produkter: GB 7718-2025, GB 28050-2025 næringstabell, allergenvarsler."
+    "metaDescription": "Kinesisk merking for norske produkter: GB 7718-2025, GB 28050-2025 næringstabell, allergenvarsler.",
+    "faq7q": "Trenger prøver og messevarer kinesisk merking?",
+    "faq7a": "Prøver som sendes for testing eller for utstilling på en messe, selges ikke til forbrukere og faller derfor i utgangspunktet utenfor de fullstendige kravene til kinesisk merking. Tollvesenet undersøker likevel forsendelsen, og unntaket er smalere enn de fleste eksportører tror. Det som fungerer i praksis: merk hver enhet med «非卖品 / Ikke for salg», oppgi varenavn, nettovekt og kontaktinformasjon til importøren eller utstilleren, og legg messeinvitasjonen eller testavtalen i forsendelsen. I det øyeblikket en prøve selges, eller gis til en besøkende som tar den med hjem, blir den et produkt i omløp og krever en korrekt etikett. Klistremerker koster svært lite og trykkes på noen dager, så merk alt en besøkende kan finne på å ta med seg.",
+    "faq8q": "Når trer GB 7718-2025 i kraft, og hvor lang er overgangsperioden?",
+    "faq8a": "GB 7718-2025 ble publisert 16. mars 2025 og trer i kraft 16. mars 2027, altså med to års overgang. Standarden for næringsdeklarasjon, GB 28050-2025, har samme datoer. Frem til 16. mars 2027 er en etikett som oppfyller 2011-versjonene fortsatt lovlig, så varer produsert og tollbehandlet før den datoen blir ikke avvist fordi de bruker det gamle formatet. To endringer bør planlegges allerede nå: allergeninformasjon blir obligatorisk og må fremheves i ingredienslisten, og måten dato angis på standardiseres. Hvis du designer en etikett for et produkt som fortsatt står i hyllen i 2027, bør du designe den direkte etter 2025-standarden – å trykke opp en hel SKU på nytt senere koster langt mer enn den ekstra gjennomgangen nå."
   },
   "ServiceCcc": {
     "heroTitle": "CCC-sertifisering for norske produsenter",

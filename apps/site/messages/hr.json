@@ -256,7 +256,11 @@
     "coverItems5": "Izrada predložaka oznaka za proizvodnju",
     "coverItems6": "Podrška za carinjenje robe s oznakama",
     "metaTitle": "Kinesko označavanje | vodič GB 7718-2025",
-    "metaDescription": "Kineski zahtjevi za označavanje za hrvatske proizvode: GB 7718-2025, GB 28050-2025 tablica hranjivosti, upozorenja o alergenima."
+    "metaDescription": "Kineski zahtjevi za označavanje za hrvatske proizvode: GB 7718-2025, GB 28050-2025 tablica hranjivosti, upozorenja o alergenima.",
+    "faq7q": "Trebaju li uzorci i izlošci sjemova kinesku oznaku?",
+    "faq7a": "Uzorci poslani na ispitivanje ili na izlaganje na sajmu ne prodaju se potrošaču, pa načelno ostaju izvan punih zahtjeva za kinesko označivanje. Carina ipak pregledava pošiljku, a to je izuzeće uže nego što većina izvoznika pretpostavlja. Što u praksi funkcionira: na svaku jedinicu staviti „非卖品 / Nije za prodaju“, dodati naziv proizvoda, neto masu i kontakt uvoznika ili izlagača te u pošiljku staviti pozivnicu za sajam ili ugovor o ispitivanju. U trenutku kada se uzorak proda ili preda posjetitelju da ga odnese, postaje proizvod u prometu i zahtijeva sukladnu oznaku. Samoljepljive oznake vrlo malo koštaju i tiskaju se u nekoliko dana, pa označite sve što posjetitelj može ponijeti sa sobom.",
+    "faq8q": "Kada stupa na snagu GB 7718-2025 i koliko traje prijelazno razdoblje?",
+    "faq8a": "GB 7718-2025 objavljen je 16. ožujka 2025. i stupa na snagu 16. ožujka 2027., uz dvogodišnje prijelazno razdoblje. Norma o označivanju hranjivih vrijednosti GB 28050-2025 ima iste datume. Do 16. ožujka 2027. oznaka sukladna verzijama iz 2011. ostaje zakonita, pa roba proizvedena i ocarinjena prije tog datuma neće biti odbijena zbog starog formata. Dvije promjene vrijedi planirati već sada: informacija o alergenima postaje obvezna i mora biti istaknuta u popisu sastojaka, a način ispisivanja datuma se ujednačuje. Ako dizajnirate oznaku za proizvod koji će i 2027. biti na polici, radite to odmah prema normi iz 2025. — naknadno pretiskanje cijele SKU košta znatno više od dodatnog vremena za provjeru sada."
   },
   "ServiceCcc": {
     "heroTitle": "CCC certifikacija za hrvatske proizvođače",

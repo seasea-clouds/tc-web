@@ -256,7 +256,11 @@
     "coverItems5": "İstehsal üçün etiket şablonlarının yaradılması",
     "coverItems6": "Etiketli malların gömrük rəsmiləşdirilməsinə dəstək",
     "metaTitle": "Çin etiketləməsi | GB 7718-2025 bələdçisi",
-    "metaDescription": "Azərbaycan məhsulları üçün Çin etiketləmə tələbləri: GB 7718-2025, GB 28050-2025 qida cədvəli, allergen xəbərdarlıqları."
+    "metaDescription": "Azərbaycan məhsulları üçün Çin etiketləmə tələbləri: GB 7718-2025, GB 28050-2025 qida cədvəli, allergen xəbərdarlıqları.",
+    "faq7q": "Nümunələr və sərgi məhsulları üçün Çin etiketi tələb olunurmu?",
+    "faq7a": "Test üçün və ya ticarət sərgisində nümayiş üçün göndərilən nümunələr istehlakçıya satılmır, buna görə də prinsipcə tam Çin etiketləmə tələblərindən kənarda qalır. Lakin gömrük yenə də bağlamanı yoxlayır və bu istisna əksər ixracatçıların düşündüyündən dardır. Praktikada işləyən yol: hər vahidə «非卖品 / Satış üçün deyil» yazmaq, məhsulun adını, xalis çəkisini və idxalçı və ya iştirakçının əlaqə məlumatını əlavə etmək, bağlamanın içinə sərgi dəvətnaməsini və ya test müqaviləsini qoymaqdır. Nümunə satıldığı və ya ziyarətçiyə verilib aparıldığı anda dövriyyədə olan məhsula çevrilir və uyğun etiket tələb edir. Yapışqan etiketlər çox ucuzdur və bir neçə günə çap olunur, ona görə də ziyarətçinin apara biləcəyi hər şeyi etiketləyin.",
+    "faq8q": "GB 7718-2025 nə vaxt qüvvəyə minir və keçid dövrü nə qədərdir?",
+    "faq8a": "GB 7718-2025 16 mart 2025-ci ildə dərc edilib və 16 mart 2027-ci ildə qüvvəyə minir, yəni iki illik keçid dövrü ilə. Qida dəyəri etiketləmə standartı GB 28050-2025 də eyni tarixlərə malikdir. 16 mart 2027-ci ilə qədər 2011 versiyalarına uyğun etiket qanuni qalır, buna görə də həmin tarixdən əvvəl istehsal və gömrük rəsmiləşdirməsi aparılmış mallar köhnə formatdan istifadə etdiyinə görə rədd edilməyəcək. İki dəyişikliyi indidən plana salmağa dəyər: allergen məlumatı məcburi olur və tərkib hissələri siyahısında vurğulanmalıdır, tarixin yazılış qaydası isə vahidləşdirilir. Əgər 2027-ci ildə də rəfdə qalacaq məhsul üçün etiket dizayn edirsinizsə, dərhal 2025 standartına uyğun dizayn edin — bütöv bir SKU-nu sonradan yenidən çap etmək indiki əlavə yoxlama vaxtından qat-qat bahadır."
   },
   "ServiceCcc": {
     "heroTitle": "CCC sertifikatı – Azərbaycan istehsalçıları üçün Çin ixrac bələdçisi",

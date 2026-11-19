@@ -256,7 +256,11 @@
     "coverItems5": "Label template creation for production",
     "coverItems6": "Customs clearance label support",
     "metaTitle": "China Label Compliance for Global Brands | GB 7718-2025",
-    "metaDescription": "China food label compliance for global brands. GB 7718-2025 and GB 28050-2025 standards to avoid customs rejection, with expert label review and design."
+    "metaDescription": "China food label compliance for global brands. GB 7718-2025 and GB 28050-2025 standards to avoid customs rejection, with expert label review and design.",
+    "faq7q": "Do samples and trade-show items need Chinese labels?",
+    "faq7a": "Samples shipped for testing or for display at a trade fair are not sold to consumers, so they normally fall outside full Chinese labelling. Customs still inspects the parcel, though, and the exemption is thinner than most exporters assume. What works in practice: mark every unit \"非卖品 / Not for sale\", add the product name, net weight and the importer or exhibitor contact, and keep the exhibition invitation or test agreement inside the shipment. The moment a sample is sold, or handed to a visitor to take home, it becomes a product in circulation and needs a compliant label. Sticker labels cost very little and can be printed in a few days, so label anything a visitor might walk away with.",
+    "faq8q": "When does GB 7718-2025 take effect, and how long is the transition period?",
+    "faq8a": "GB 7718-2025 was published on 16 March 2025 and takes effect on 16 March 2027, giving a two-year transition. GB 28050-2025, the nutrition labelling standard, shares the same dates. Until 16 March 2027 a label that conforms to the 2011 versions remains lawful, so stock produced and cleared before that date will not be rejected for using the old format. Two changes are worth planning for now: allergen information becomes mandatory and must be emphasised within the ingredient list, and date-marking wording is standardised. If you are designing a label for a product that will still be on shelf in 2027, design to the 2025 standard straight away — reprinting a whole SKU later costs far more than the extra review time now."
   },
   "ServiceCcc": {
     "heroTitle": "CCC Certification in China",

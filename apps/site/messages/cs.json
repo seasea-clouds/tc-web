@@ -256,7 +256,11 @@
     "coverItems5": "Tvorba etiketových šablon pro výrobu",
     "coverItems6": "Pomoc s celním odbavením zboží s etiketami",
     "metaTitle": "Čínské označování | průvodce GB 7718-2025",
-    "metaDescription": "Čínské požadavky na označování pro české výrobky: GB 7718-2025, GB 28050-2025 nutriční tabulka, upozornění na alergeny."
+    "metaDescription": "Čínské požadavky na označování pro české výrobky: GB 7718-2025, GB 28050-2025 nutriční tabulka, upozornění na alergeny.",
+    "faq7q": "Potřebují vzorky a zboží na veletrh čínské označení?",
+    "faq7a": "Vzorky zasílané na testování nebo na výstavu na veletrhu se neprodávají spotřebiteli, a proto zpravidla nespadají do plného rozsahu požadavků na čínské označování. Celní správa však zásilku stále kontroluje a tato výjimka je užší, než většina vývozců předpokládá. Co v praxi funguje: označit každý kus nápisem „非卖品 / Není na prodej“, uvést název výrobku, čistou hmotnost a kontakt dovozce nebo vystavovatele a do zásilky přiložit pozvánku na veletrh nebo smlouvu o zkoušce. Jakmile se vzorek prodá nebo předá návštěvníkovi, aby si ho odnesl, stává se výrobkem v oběhu a vyžaduje odpovídající etiketu. Samolepicí etikety stojí velmi málo a vytisknou se za pár dní – označte vše, co by si návštěvník mohl odnést.",
+    "faq8q": "Kdy vstoupí v platnost GB 7718-2025 a jak dlouhé je přechodné období?",
+    "faq8a": "GB 7718-2025 byl zveřejněn 16. března 2025 a vstupuje v platnost 16. března 2027, tedy po dvouletém přechodném období. Norma o označování výživových údajů GB 28050-2025 má stejná data. Do 16. března 2027 zůstává etiketa odpovídající verzím z roku 2011 zákonná, takže zboží vyrobené a proclené před tímto datem nebude odmítnuto kvůli starému formátu. Dvě změny je vhodné naplánovat už nyní: informace o alergenech se stává povinnou a musí být zdůrazněna v seznamu složek a způsob uvádění data se sjednocuje. Pokud navrhujete etiketu pro výrobek, který bude v regálu i v roce 2027, dělejte to rovnou podle normy z roku 2025 – pozdější přetisk celé SKU stojí podstatně víc než dnešní čas navíc na kontrolu."
   },
   "ServiceCcc": {
     "heroTitle": "Certifikace CCC pro české výrobce",

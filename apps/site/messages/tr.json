@@ -256,7 +256,11 @@
     "coverItems5": "Üretim için etiket şablonu oluşturma",
     "coverItems6": "Gümrükleme için etiket desteği",
     "metaTitle": "Çin Etiket Uyumu | GB 7718-2025 etiket rehberi",
-    "metaDescription": "Türk gıda ve kozmetik ürünleri için Çin etiket uyumu: GB 7718-2025, GB 28050-2025 besin değerleri, alerjen bildirimi."
+    "metaDescription": "Türk gıda ve kozmetik ürünleri için Çin etiket uyumu: GB 7718-2025, GB 28050-2025 besin değerleri, alerjen bildirimi.",
+    "faq7q": "Numuneler ve fuar ürünleri için Çince etiket gerekli mi?",
+    "faq7a": "Test amacıyla veya bir fuarda sergilenmek üzere gönderilen numuneler tüketiciye satılmadığı için kural olarak tam Çince etiketleme kapsamı dışında kalır. Ancak gümrük koliyi yine de denetler ve bu istisna çoğu ihracatçının sandığından dardır. Pratikte işe yarayan yöntem: her birime \"非卖品 / Satılık değildir\" yazmak, ürün adı, net miktar ve ithalatçı ya da katılımcı iletişim bilgisini eklemek ve kolinin içine fuar davetiyesini veya test sözleşmesini koymaktır. Numune satıldığı ya da bir ziyaretçiye verilip götürüldüğü anda dolaşımdaki ürün hâline gelir ve uygun etiket gerektirir. Etiket yapıştırma çok düşük maliyetlidir ve birkaç günde basılır; ziyaretçinin yanına alabileceği her şeyi etiketleyin.",
+    "faq8q": "GB 7718-2025 ne zaman yürürlüğe giriyor ve geçiş süresi ne kadar?",
+    "faq8a": "GB 7718-2025 16 Mart 2025'te yayımlandı ve 16 Mart 2027'de yürürlüğe giriyor; geçiş süresi iki yıl. Beslenme etiketlemesi standardı GB 28050-2025 de aynı tarihlere sahip. 16 Mart 2027'ye kadar 2011 sürümlerine uygun etiket yasal kalır; bu tarihten önce üretilip gümrüklenen stoklar eski biçimi kullandığı için reddedilmez. Şimdiden plana alınması gereken iki değişiklik var: alerjen bilgisi zorunlu hâle geliyor ve içindekiler listesinde vurgulanması gerekiyor, tarih ifadesinin yazımı da standartlaştırılıyor. 2027'de hâlâ rafta olacak bir ürünün etiketini tasarlıyorsanız doğrudan 2025 sürümüne göre tasarlayın; bir SKU'yu sonradan baştan bastırmak, bugün harcanacak ek inceleme süresinden çok daha pahalıya gelir."
   },
   "ServiceCcc": {
     "heroTitle": "CCC Sertifikası – Türk üreticiler için Çin ihracat rehberi",

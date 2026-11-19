@@ -256,7 +256,11 @@
     "coverItems5": "Tworzenie szablonów etykiet na potrzeby produkcji",
     "coverItems6": "Wsparcie etykiet przy odprawie celnej",
     "metaTitle": "Chińskie etykiety zgodne z GB 7718-2025 | Dla polskich produktów",
-    "metaDescription": "Projektowanie i weryfikacja chińskich etykiet dla polskich produktów spożywczych: GB 7718-2025, GB 28050-2025, tabela wartości odżywczych. Unikaj odmów na granicy."
+    "metaDescription": "Projektowanie i weryfikacja chińskich etykiet dla polskich produktów spożywczych: GB 7718-2025, GB 28050-2025, tabela wartości odżywczych. Unikaj odmów na granicy.",
+    "faq7q": "Czy próbki i artykuły targowe wymagają chińskiej etykiety?",
+    "faq7a": "Próbki wysyłane do badań lub na wystawę targową nie są sprzedawane konsumentowi, więc zasadniczo nie podlegają pełnym wymogom chińskiego oznakowania. Cło nadal jednak kontroluje przesyłkę, a to zwolnienie jest węższe, niż sądzi większość eksporterów. Co działa w praktyce: oznaczyć każdą sztukę napisem „非卖品 / Nie na sprzedaż”, podać nazwę produktu, masę netto i kontakt importera lub wystawcy, a do przesyłki włożyć zaproszenie na targi albo umowę na badania. W chwili gdy próbka zostanie sprzedana lub przekazana zwiedzającemu do zabrania, staje się produktem w obrocie i wymaga zgodnej etykiety. Etykiety samoprzylepne kosztują bardzo mało i drukuje się je w kilka dni, więc oznaczaj wszystko, co zwiedzający może zabrać ze sobą.",
+    "faq8q": "Kiedy wchodzi w życie GB 7718-2025 i jak długi jest okres przejściowy?",
+    "faq8a": "GB 7718-2025 opublikowano 16 marca 2025 r., a wchodzi w życie 16 marca 2027 r., czyli po dwóch latach okresu przejściowego. Norma dotycząca oznaczania wartości odżywczej GB 28050-2025 ma te same daty. Do 16 marca 2027 r. etykieta zgodna z wersjami z 2011 r. pozostaje legalna, więc towar wyprodukowany i odprawiony przed tą datą nie zostanie odrzucony z powodu starego formatu. Dwie zmiany warto zaplanować już teraz: informacja o alergenach staje się obowiązkowa i musi być wyróżniona w wykazie składników, a sposób podawania daty zostaje ujednolicony. Jeśli projektujesz etykietę dla produktu, który w 2027 r. wciąż będzie na półce, rób to od razu według normy z 2025 r. — późniejszy dodruk całej SKU kosztuje znacznie więcej niż dodatkowy czas na weryfikację teraz."
   },
   "ServiceCcc": {
     "heroTitle": "Certyfikacja CCC dla polskich producentów",

@@ -139,8 +139,8 @@ function resolveUpstream(hostname: string, subProject: string, env?: Record<stri
   const envKey = `UPSTREAM_${subProject.toUpperCase()}`;
   if (env && env[envKey]) return env[envKey];
 
-  // 兼容旧变量名：博客站已整体改名 insights，但 Dashboard 上的 UPSTREAM_INSIGHTS
-  // 还没删；先认旧的，等新变量配上再走上面那条。
+  // 兼容旧变量名：博客站已整体改名 insights，但 Dashboard 上的 UPSTREAM_BLOG
+  // 还没换；先认旧的，等新变量配上再走上面那条。
   const legacyKey = LEGACY_ENV_ALIAS[subProject];
   if (legacyKey && env && env[legacyKey]) return env[legacyKey];
 
@@ -159,7 +159,7 @@ function resolveUpstream(hostname: string, subProject: string, env?: Record<stri
 
 /** 改名后的旧环境变量别名（站上还没换掉的先兼容一阵） */
 const LEGACY_ENV_ALIAS: Record<string, string> = {
-  insights: 'UPSTREAM_INSIGHTS',
+  insights: 'UPSTREAM_BLOG',
 };
 
 // ─── Proxy request with header sanitation ────────────────────────

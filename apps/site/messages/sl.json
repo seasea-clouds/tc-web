@@ -256,7 +256,11 @@
     "coverItems5": "Izdelava predlog etiket za proizvodnjo",
     "coverItems6": "Podpora pri carinjenju blaga z etiketami",
     "metaTitle": "Kitajsko označevanje | vodnik GB 7718-2025",
-    "metaDescription": "Kitajske zahteve za označevanje za slovenske izdelke: GB 7718-2025, GB 28050-2025 prehranska tabela, opozorila o alergenih."
+    "metaDescription": "Kitajske zahteve za označevanje za slovenske izdelke: GB 7718-2025, GB 28050-2025 prehranska tabela, opozorila o alergenih.",
+    "faq7q": "Ali vzorci in sejemsko blago potrebuje kitajsko označevanje?",
+    "faq7a": "Vzorci, poslani v testiranje ali za razstavo na sejmu, se ne prodajajo potrošniku, zato načeloma ne spadajo pod popolne zahteve za kitajsko označevanje. Carina pošiljko vseeno pregleda, ta izjema pa je ožja, kot predpostavlja večina izvoznikov. Kar v praksi deluje: na vsako enoto natisniti »非卖品 / Ni za prodajo«, dodati ime izdelka, neto maso in kontakt uvoznika ali razstavljavca ter v pošiljko vložiti sejemsko povabilo ali pogodbo o testiranju. V trenutku, ko se vzorec proda ali izroči obiskovalcu, da ga odnese, postane izdelek v prometu in zahteva skladno etiketo. Nalepke so zelo poceni in natisnjene v nekaj dneh, zato označite vse, kar bi obiskovalec lahko odnesel.",
+    "faq8q": "Kdaj začne veljati GB 7718-2025 in kako dolgo traja prehodno obdobje?",
+    "faq8a": "GB 7718-2025 je bil objavljen 16. marca 2025 in začne veljati 16. marca 2027, torej z dveletnim prehodnim obdobjem. Standard o označevanju hranilne vrednosti GB 28050-2025 ima enake datume. Do 16. marca 2027 ostaja etiketa, skladna z različicama iz leta 2011, zakonita, zato blago, proizvedeno in ocarinjeno pred tem datumom, ne bo zavrnjeno zaradi starega formata. Dve spremembi se splača načrtovati že zdaj: informacija o alergenih postane obvezna in mora biti poudarjena na seznamu sestavin, način navajanja datuma pa se poenoti. Če oblikujete etiketo za izdelek, ki bo na polici tudi leta 2027, jo oblikujte takoj po standardu iz leta 2025 – poznejši ponatis celotne SKU stane precej več od dodatnega časa za pregled zdaj."
   },
   "ServiceCcc": {
     "heroTitle": "Certifikacija CCC za slovenske proizvajalce",

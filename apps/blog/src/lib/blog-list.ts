@@ -55,9 +55,9 @@ export function paginate(posts: PostMeta[]): PostMeta[][] {
   return pages.length > 0 ? pages : [[]];
 }
 
-/** Path of the nth list page: page 1 is /{locale}/blog/, deeper pages get their own URL. */
+/** Path of the nth list page: page 1 is /{locale}/insights/, deeper pages get their own URL. */
 export function blogPagePath(locale: string, page: number): string {
-  return page <= 1 ? `/${locale}/blog/` : `/${locale}/blog/page/${page}/`;
+  return page <= 1 ? `/${locale}/insights/` : `/${locale}/insights/page/${page}/`;
 }
 
 /** Distinct categories present in a post list, sorted. */

@@ -115,7 +115,7 @@ export default async function ThankYouPage({ params }: { params: Promise<{ local
               {posts.map((post) => (
                 <li key={post.slug}>
                   <Link
-                    href={`/${locale}/blog/${post.slug}/`}
+                    href={`/${locale}/insights/${post.slug}/`}
                     className="group flex items-start gap-4 p-4 rounded-xl bg-white hover:bg-[#F4F6F9] transition-colors"
                   >
                     <div className="flex-1 min-w-0">
@@ -139,7 +139,7 @@ export default async function ThankYouPage({ params }: { params: Promise<{ local
             </ul>
             <div className="text-center mt-8">
               <Link
-                href={`/${locale}/blog`}
+                href={`/${locale}/insights/`}
                 className="text-accent-gold hover:text-accent-gold/80 font-semibold transition-colors"
               >
                 {t('viewAllBlog')} →

@@ -71,7 +71,7 @@ export default async function SitemapPage({ params }: { params: Promise<{ locale
       items: blogSlugs.map((slug) => ({
         titleKey: `post.${slug}.title`,
         defaultTitle: slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
-        href: `/${locale}/blog/${slug}/`,
+        href: `/${locale}/insights/${slug}/`,
       })),
     },
     {

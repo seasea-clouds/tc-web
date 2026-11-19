@@ -88,7 +88,7 @@ function extractBlog(blogDir, locale, msg) {
       type: 'blog',
       title,
       desc: excerpt.slice(0, 200),
-      href: `/blog/${slug}/`,
+      href: `/insights/${slug}/`,
       category: categoryKey,
       searchable: `${title} ${excerpt} ${category}`.toLowerCase(),
     });

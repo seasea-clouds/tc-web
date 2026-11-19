@@ -69,7 +69,7 @@ function isPrivateRoute(route) {
 
 /**
  * 从动态路由模式提取内容子目录
- * /[locale]/blog/[slug]  → content/blog/
+ * /[locale]/insights/[slug]  → content/insights/
  */
 function extractContentSubdir(pattern) {
   const parts = pattern.split('/');
@@ -154,7 +154,7 @@ export function discoverAll(includePrivate = false) {
       if (isDynamicRoute(clean)) {
         const paramMatch = clean.match(/\[(\w+)\]/);
         if (!paramMatch) continue;
-        // 分页路由（/blog/page/[page]）不是内容路由：参数是页码而非内容 slug，
+        // 分页路由（/insights/page/[page]）不是内容路由：参数是页码而非内容 slug，
         // 实例化只能靠运行时页数 → 不进 sitemap（靠页面内链发现），
         // 但要作为「模式」记进 known-routes，否则 admin 热门页面会把分页页当无效路径丢弃。
         if (paramMatch[1] === 'page' && /\/page\/\[page\]$/.test(clean)) {
@@ -267,7 +267,7 @@ export function emitKnownRoutes() {
     }
   }
 
-  // 分页模式（/blog/page/[page]）→ 正则，页码必须是纯数字，其它一律不匹配
+  // 分页模式（/insights/page/[page]）→ 正则，页码必须是纯数字，其它一律不匹配
   const patterns = new Set();
   for (const app of apps) {
     for (const pat of app.pagePatterns ?? []) {
@@ -296,7 +296,7 @@ export function emitKnownRoutes() {
     ...sorted.map((r) => `  '${r}',`),
     '];',
     '',
-    '// 分页路由模式（/blog/page/{n}/）：参数是页码，实例数量随文章增长，',
+    '// 分页路由模式（/insights/page/{n}/）：参数是页码，实例数量随文章增长，',
     '// 无法在构建时枚举 → 用正则模式校验（页码必须是纯数字）。',
     'export const KNOWN_ROUTE_PATTERNS: RegExp[] = [',
     ...patternLines,

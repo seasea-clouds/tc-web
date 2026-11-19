@@ -128,8 +128,8 @@ function checkNextDir(nextDir) {
     const rel = path.relative(blogRoot, file);
     const { count, hasXdefault } = countHreflangInFile(file);
     
-    // 检查涉及 /blog/ 路径的页面
-    if (file.includes('/blog/') || rel.includes('/blog/')) {
+    // 检查涉及 /insights/ 路径的页面
+    if (file.includes('/insights/') || rel.includes('/insights/')) {
       if (count >= EXPECTED_MIN_LOCALES) {
         console.log(`  ✅ ${rel}: ${count} hreflang`);
       } else {

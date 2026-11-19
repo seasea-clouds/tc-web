@@ -133,14 +133,14 @@ export function getBlogMetadata(
     title,
     description,
     alternates: {
-      canonical: `${SITE_URL}/${locale}/blog/${slug}/`,
+      canonical: `${SITE_URL}/${locale}/insights/${slug}/`,
     },
     openGraph: {
       title,
       description,
       locale,
       siteName: BRAND_NAME,
-      url: `${SITE_URL}/${locale}/blog/${slug}/`,
+      url: `${SITE_URL}/${locale}/insights/${slug}/`,
       type: 'article',
       ...(publishDate ? { publishedTime: publishDate } : {}),
     },

@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
   const title = t('metaTitle') || 'Exporting to China Compliance';
   const description = t('metaDescription') || 'Guides for exporters to China: GACC registration, CCC certification, NMPA cosmetics filing, and cross-border e-commerce.';
-  const alternates = buildAlternates(validLocale, [...locales], '/blog/');
+  const alternates = buildAlternates(validLocale, [...locales], '/insights/');
   return {
     title,
     description,

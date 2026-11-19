@@ -12,7 +12,7 @@ interface AuthProviderProps {
 
 /**
  * Shared AuthProvider — checks auth session via httpOnly cookie cookie on mount.
- * Works across all three apps (site/blog/portal) since they share the same domain.
+ * Works across all three apps (site/insights/portal) since they share the same domain.
  */
 export function AuthProvider({ children, logoutRedirect = '/' }: AuthProviderProps) {
   const [user, setUser] = useState<AuthUser | null>(null);

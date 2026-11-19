@@ -11,17 +11,17 @@ interface Params {
 }
 
 /**
- * Deep list pages. Page 1 lives at /{locale}/blog/; every further page gets its
- * own indexable URL (/blog/page/2/, /blog/page/3/ …) with a self-referencing
+ * Deep list pages. Page 1 lives at /{locale}/insights/; every further page gets its
+ * own indexable URL (/insights/page/2/, /insights/page/3/ …) with a self-referencing
  * canonical and its own hreflang cluster. The set of posts on a given URL can
  * shift when new articles are published — that is normal for pagination and is
- * why every article keeps its own permanent URL at /blog/<slug>/.
+ * why every article keeps its own permanent URL at /insights/<slug>/.
  */
 export async function generateStaticParams() {
   const params: Params[] = [];
   for (const locale of LOCALES) {
     const pages = paginate(getPosts(locale));
-    // Page 1 is listed at /{locale}/blog/ too; its /page/1/ copy carries a
+    // Page 1 is listed at /{locale}/insights/ too; its /page/1/ copy carries a
     // canonical pointing back there. Generating it keeps the dynamic route
     // non-empty for `output: export` even when the blog has a single page.
     for (let n = 1; n <= pages.length; n += 1) {
@@ -36,11 +36,11 @@ export async function generateMetadata({ params }: { params: Promise<Params> }) 
   const msgs = getMessages(locale);
   const B = msgs?.Blog || {};
   const tb = (key: string, fallback?: string) => B[key] ?? fallback ?? key;
-  const path = `/blog/page/${page}/`;
+  const path = `/insights/page/${page}/`;
   const url = `https://sinotradecompliance.com/${locale}${path}`;
-  const canonical = page === '1' ? `https://sinotradecompliance.com/${locale}/blog/` : url;
-  // Page 1 duplicates /blog/, so its hreflang cluster points there too.
-  const langPath = page === '1' ? '/blog/' : path;
+  const canonical = page === '1' ? `https://sinotradecompliance.com/${locale}/insights/` : url;
+  // Page 1 duplicates /insights/, so its hreflang cluster points there too.
+  const langPath = page === '1' ? '/insights/' : path;
   const title = page === '1'
     ? tb('metaTitle', 'Exporting to China Blog')
     : `${tb('metaTitle', 'Exporting to China Blog')} — ${tb('pagination', 'Page')} ${page}`;
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }) 
   return {
     title,
     description,
-    // og:url 与 canonical 保持一致（page/1 归并到 /blog/），避免分享统计被拆成两个 URL
+    // og:url 与 canonical 保持一致（page/1 归并到 /insights/），避免分享统计被拆成两个 URL
     openGraph: sharedOpenGraph({ title, description, locale, url: canonical }),
     twitter: sharedTwitter({ title, description }),
     alternates: {
@@ -81,8 +81,8 @@ export default async function BlogPageN({ params }: { params: Promise<Params> })
 
   const pageLabel = `${tb('pagination', 'Page')} ${pageNumber}`;
   const canonical = pageNumber === 1
-    ? `https://sinotradecompliance.com/${locale}/blog/`
-    : `https://sinotradecompliance.com/${locale}/blog/page/${pageNumber}/`;
+    ? `https://sinotradecompliance.com/${locale}/insights/`
+    : `https://sinotradecompliance.com/${locale}/insights/page/${pageNumber}/`;
 
   return (
     <>
@@ -99,7 +99,7 @@ export default async function BlogPageN({ params }: { params: Promise<Params> })
             isPartOf: {
               '@type': 'Blog',
               name: tb('title', 'Insights & Compliance Guides'),
-              url: `https://sinotradecompliance.com/${locale}/blog/`,
+              url: `https://sinotradecompliance.com/${locale}/insights/`,
             },
             mainEntity: {
               '@type': 'ItemList',
@@ -109,7 +109,7 @@ export default async function BlogPageN({ params }: { params: Promise<Params> })
                 '@type': 'ListItem',
                 position: idx + 1,
                 // ListItem.item 用 URL 字符串即可（也吃检查器的必填字段规则）
-                item: `https://sinotradecompliance.com/${locale}/blog/${post.slug}/`,
+                item: `https://sinotradecompliance.com/${locale}/insights/${post.slug}/`,
                 name: post.title,
               })),
             },

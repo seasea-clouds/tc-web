@@ -47,7 +47,7 @@ function checkLLMsFile(filePath) {
   }
 
   // 4. 包含博客链接（至少 6 条）— 接受 URL 或描述性文本
-  const blogLinks = content.match(/\/(blog\/[a-z0-9-]+)\//g) || [];
+  const blogLinks = content.match(/\/(insights\/[a-z0-9-]+)\//g) || [];
   const blogTexts = content.match(/^- Blog post/mg) || [];
   const blogCount = blogLinks.length + blogTexts.length;
   if (blogCount < 6) {

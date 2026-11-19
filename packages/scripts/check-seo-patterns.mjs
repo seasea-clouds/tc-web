@@ -97,7 +97,7 @@ function isExemptRoute(appName, relativePath) {
   }
 
   // Blog pages have their own generateMetadata (list + article + root redirect wrapper)
-  if (appName === 'blog' && relativePath.startsWith('blog/')) {
+  if (appName === 'blog' && relativePath.startsWith('insights/')) {
     return true;  // Inherits from blog/[locale]/layout.tsx
   }
 

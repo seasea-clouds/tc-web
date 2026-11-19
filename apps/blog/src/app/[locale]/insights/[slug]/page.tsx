@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { data } = matter(raw);
   const title = data.title || slug.replace(/-/g, ' ');
   const description = data.excerpt || '';
-  const url = `https://sinotradecompliance.com/${locale}/blog/${slug}/`;
+  const url = `https://sinotradecompliance.com/${locale}/insights/${slug}/`;
   const cover = getCoverPath(slug);
   return {
     title,
@@ -65,7 +65,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     twitter: sharedTwitter({ title, description, image: cover }),
     alternates: {
       canonical: url,
-      languages: buildLanguages(locale, [...LOCALES], `/blog/${slug}/`),
+      languages: buildLanguages(locale, [...LOCALES], `/insights/${slug}/`),
     },
   };
 }
@@ -124,12 +124,15 @@ async function DefinitionSchema({ locale }: { locale: string }) {
   );
 }
 
-/** FaqPageSchema — FAQPage JSON-LD for posts with FAQ sections */
-async function FaqPageSchema({ locale, slug }: { locale: string; slug: string }) {
+/**
+ * 读一篇博客的 FAQ 条目（来自 site messages 的 BlogFaq* namespace）。
+ * 可见区块与 FAQPage schema 共用这一个来源 —— 两处各读一遍迟早会分叉。
+ */
+function loadFaqItems(locale: string, slug: string): { question: string; answer: string }[] {
   const faqNs = FAQ_NS[slug];
-  if (!faqNs) return null;
+  if (!faqNs) return [];
   const siteMsgPath = path.join(process.cwd(), '../../apps/site/messages', `${locale}.json`);
-  let items: { question: string; answer: string }[] = [];
+  const items: { question: string; answer: string }[] = [];
   try {
     if (fs.existsSync(siteMsgPath)) {
       const data = JSON.parse(fs.readFileSync(siteMsgPath, 'utf-8'));
@@ -145,6 +148,48 @@ async function FaqPageSchema({ locale, slug }: { locale: string; slug: string })
       }
     }
   } catch { /* ignore */ }
+  return items;
+}
+
+/**
+ * FaqSection — 可见的 FAQ 折叠块。
+ * 以前这里只有 schema 没有内容：Google 明确要求结构化数据必须对应页面可见内容，
+ * 否则判为 spammy structured markup。现在两者同源。
+ */
+function FaqSection({ items, title }: { items: { question: string; answer: string }[]; title: string }) {
+  if (items.length === 0) return null;
+  return (
+    <section className="py-14 bg-[#F5F7FA]">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-2xl md:text-3xl font-bold text-[#1B365D] mb-8 text-center">{title}</h2>
+        <div className="space-y-3">
+          {items.map((item, i) => (
+            <details
+              key={i}
+              className="group bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden"
+            >
+              <summary className="flex items-center justify-between gap-4 cursor-pointer list-none px-5 py-4 hover:bg-gray-50/70 transition-colors">
+                <span className="font-semibold text-[#1B365D] text-[15px] leading-snug">{item.question}</span>
+                <span className="shrink-0 text-[#B8960C] transition-transform duration-200 group-open:rotate-180" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </span>
+              </summary>
+              <div className="px-5 pb-5 pt-1 text-[#5F6F7F] text-[15px] leading-relaxed border-t border-gray-100 mt-1 pt-4">
+                {item.answer}
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/** FaqPageSchema — FAQPage JSON-LD for posts with FAQ sections */
+async function FaqPageSchema({ locale, slug }: { locale: string; slug: string }) {
+  const items = loadFaqItems(locale, slug);
   if (items.length === 0) return null;
   return (
     <script
@@ -177,7 +222,7 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
         <h1 className="text-3xl font-bold text-[#1B365D] mb-4">
           {B.postNotFound || 'Post Not Found'}
         </h1>
-        <a href={`/${locale}/blog/`} className="text-[#2563EB] hover:underline">
+        <a href={`/${locale}/insights/`} className="text-[#2563EB] hover:underline">
           ← {B.backToBlog || 'Back to Page'}
         </a>
       </div>
@@ -244,7 +289,7 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
     relatedPosts = allPosts.filter(p => p.slug !== slug).slice(0, 3);
   }
 
-  const articleUrl = `${SITE_URL}/${locale}/blog/${slug}/`;
+  const articleUrl = `${SITE_URL}/${locale}/insights/${slug}/`;
   const encodedUrl = encodeURIComponent(articleUrl);
   const encodedTitle = encodeURIComponent(title);
 
@@ -295,7 +340,7 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
       url: 'https://sinotradecompliance.com',
       logo: { '@type': 'ImageObject', url: 'https://sinotradecompliance.com/logo.png' },
     },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://sinotradecompliance.com/${locale}/blog/${slug}/` },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://sinotradecompliance.com/${locale}/insights/${slug}/` },
   };
 
   return (
@@ -346,7 +391,7 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
           </div>
           <div className="relative z-10 w-full">
             <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 sm:pt-20">
-              <a href={href('/blog/')}
+              <a href={href('/insights/')}
                 className="inline-flex items-center gap-2 text-sm text-white/70 hover:text-[#B8960C] transition-colors mb-4">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -535,7 +580,7 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
                   <ul className="space-y-4">
                     {relatedPosts.map((rp) => (
                       <li key={rp.slug}>
-                        <a href={`/${locale}/blog/${rp.slug}/`}
+                        <a href={`/${locale}/insights/${rp.slug}/`}
                           className="group flex items-start gap-4 p-4 rounded-xl hover:bg-[#F4F6F9] transition-colors">
                           <div className="flex-1 min-w-0">
                             <h3 className="text-base font-semibold text-[#1B365D] group-hover:text-[#B8960C] transition-colors line-clamp-2">{rp.title}</h3>
@@ -577,6 +622,9 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
             </div>
           </div>
         </section>
+
+        {/* 可见 FAQ 区块（与 FAQPage schema 同源） */}
+        <FaqSection items={loadFaqItems(locale, slug)} title={getMessages(locale)?.Blog?.faqTitle || 'Frequently Asked Questions'} />
 
         {/* Contact Form */}
         <ComplianceForm

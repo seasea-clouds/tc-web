@@ -61,7 +61,8 @@
     "cat_Cosmetics": "Kozmetika",
     "cat_E_commerce": "Elektronický obchod",
     "cat_Food_Beverage": "Potraviny a nápoje",
-    "service_brand": "Ochrana značky"
+    "service_brand": "Ochrana značky",
+    "faqTitle": "Časté otázky"
   },
   "Cookie": {
     "message": "Táto stránka používa iba nevyhnutné overovacie súbory cookie. Nepoužívajú sa žiadne sledovacie ani reklamné súbory cookie.",

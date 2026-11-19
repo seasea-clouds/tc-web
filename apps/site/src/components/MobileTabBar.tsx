@@ -8,7 +8,7 @@ import { useTranslations } from 'next-intl';
 const TAB_HREFS = {
   home: '/',
   services: '/services',
-  blog: '/blog',
+  blog: '/insights',
   check: '/c',
 } as const;
 

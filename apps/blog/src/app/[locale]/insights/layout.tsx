@@ -3,7 +3,7 @@ import { locales, defaultLocale } from '@/i18n/routing';
 import { buildAlternates, sharedOpenGraph, sharedTwitter } from '@trade/ui';
 
 /**
- * Blog segment layout — provides hreflang alternates for all /blog/ pages.
+ * Blog segment layout — provides hreflang alternates for all /insights/ pages.
  *
  * Only renders {children} — the actual HTML layout is handled by the parent [locale]/layout.tsx.
  * This layout exists solely to provide per-segment alternates metadata (hreflang + x-default).
@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
   const title = t('metaTitle') || 'Exporting to China Blog | SinoTrade Compliance';
   const description = t('metaDescription') || 'Expert guides on exporting to China. GACC registration, CCC certification, NMPA cosmetics filing, and cross-border e-commerce.';
-  const path = '/blog/';
+  const path = '/insights/';
   const alternates = buildAlternates(validLocale, [...locales], path);
 
   return {

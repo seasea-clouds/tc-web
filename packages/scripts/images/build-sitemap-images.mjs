@@ -70,7 +70,7 @@ function main() {
       if (!cover) continue;
       cover = cover.replace(/\.(jpg|jpeg|png)$/i, '.webp');
       if (fs.existsSync(path.join(PUBLIC_DIR, cover.slice(1)))) {
-        entries.push({ loc: `${BASE_URL}/${locale}/blog/${slug}/`, images: [`${BASE_URL}${cover}`] });
+        entries.push({ loc: `${BASE_URL}/${locale}/insights/${slug}/`, images: [`${BASE_URL}${cover}`] });
       }
     }
   }

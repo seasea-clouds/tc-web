@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { data } = matter(raw);
   const title = data.title || slug.replace(/-/g, ' ');
   const description = data.excerpt || '';
-  const url = `https://sinotradecompliance.com/${locale}/blog/${slug}/`;
+  const url = `https://sinotradecompliance.com/${locale}/insights/${slug}/`;
   return {
     title,
     description,
@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     twitter: sharedTwitter({ title, description }),
     alternates: {
       canonical: url,
-      languages: buildLanguages(locale, [...locales], `/blog/${slug}/`),
+      languages: buildLanguages(locale, [...locales], `/insights/${slug}/`),
     },
   };
 }

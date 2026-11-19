@@ -14,7 +14,7 @@ function BlogCard({ post, locale, readMoreText, readTimeText, categoryLabels, he
 } & BlogCardTexts) {
   return (
     <a
-      href={`/${locale}/blog/${post.slug}/`}
+      href={`/${locale}/insights/${post.slug}/`}
       className={`group relative flex flex-col bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden no-underline text-inherit ${heightClass}`}
     >
       {post.cover && (

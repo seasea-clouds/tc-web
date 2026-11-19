@@ -72,7 +72,7 @@ export function generateImageSitemap(baseUrl, outDir) {
       const present = files.filter(f => contentText.includes(`/images/blog/${slug}/${f}`));
       if (present.length === 0) continue;
 
-      xml += `  <url>\n    <loc>${base}/${locale}/blog/${slug}/</loc>\n    <lastmod>${now}</lastmod>\n`;
+      xml += `  <url>\n    <loc>${base}/${locale}/insights/${slug}/</loc>\n    <lastmod>${now}</lastmod>\n`;
       for (const file of present) {
         const alt = altFor(contentText, slug, file).slice(0, 120);
         xml += `    <image:image>\n      <image:loc>${base}/images/blog/${slug}/${file}</image:loc>\n`;

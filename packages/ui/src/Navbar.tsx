@@ -180,7 +180,7 @@ export default function Navbar(props: NavbarProps) {
   const resolveHref = (custom?: string, defaultPath?: string) =>
     custom ? custom.replace('{locale}', locale) : (defaultPath ? href(defaultPath) : href('/'));
   const fcHref = resolveHref(freeCheckHref, '/c/');
-  const blogHref = resolveHref(props.blogHref, '/blog/');
+  const blogHref = resolveHref(props.blogHref, '/insights/');
 
   return (
     <nav className="relative z-50 bg-primary-navy/95 backdrop-blur-sm shadow-md">

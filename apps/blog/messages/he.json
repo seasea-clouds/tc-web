@@ -61,7 +61,8 @@
     "cat_Cosmetics": "קוֹסמֵטִיקָה",
     "cat_E_commerce": "מסחר אלקטרוני",
     "cat_Food_Beverage": "מזון ומשקאות",
-    "service_brand": "הגנת מותג"
+    "service_brand": "הגנת מותג",
+    "faqTitle": "שאלות נפוצות"
   },
   "Cookie": {
     "message": "אתר זה משתמש רק בעוגיות אימות חיוניות. לא נעשה שימוש בעוגיות מעקב או פרסום.",

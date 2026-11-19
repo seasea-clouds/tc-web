@@ -2,7 +2,7 @@
  * publish-gate.mjs — 定时发布门禁（构建期唯一判定口径）
  *
  * 规则：mdx frontmatter 的 `date` 晚于站点"今天"（UTC+8）时，该文章视为**未发布**：
- *   - 不生成详情页（apps/blog/src/app/[locale]/blog/[slug]/page.tsx 的 generateStaticParams）
+ *   - 不生成详情页（apps/blog/src/app/[locale]/insights/[slug]/page.tsx 的 generateStaticParams）
  *   - 不进列表/首页/分类/分页/相关文章（apps/blog/src/lib/posts.ts 的 getPosts）
  *   - 不进 sitemap / llms.txt / known-routes（discover-routes.mjs）
  *   - 不进站点搜索索引（build-search-index.mjs）

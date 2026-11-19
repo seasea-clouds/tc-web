@@ -252,4 +252,4 @@ console.log('\n下一步（不可跳过）:');
 console.log('  1) node packages/scripts/check-md-article.mjs --ci');
 console.log('  2) npx turbo build --force');
 console.log('  3) git add -A && git commit && git push');
-console.log('  4) 部署完成后逐语言验证 /<lang>/blog/<slug>/');
+console.log('  4) 部署完成后逐语言验证 /<lang>/insights/<slug>/');

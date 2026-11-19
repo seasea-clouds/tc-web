@@ -27,7 +27,7 @@ const SEGMENT_LABELS: Record<string, string> = {
   'faq': 'faq',
   'industries': 'industries',
   'packages': 'packages',
-  'blog': 'blog',
+  'insights': 'blog',  // i18n 键仍是 Navbar.blog（值已改为 Insights）
   'regulations': 'regulations',
   'quote': 'quote',
   'testimonials': 'testimonials',
@@ -140,14 +140,14 @@ export default function AutoBreadcrumb({ locale, title }: AutoBreadcrumbProps) {
       continue;
     }
 
-    // Paginated lists: /blog/page/{n}/ → the numeric segment adds nothing,
+    // Paginated lists: /insights/page/{n}/ → the numeric segment adds nothing,
     // the previous "page" segment already carries the translated label.
     if (/^\d+$/.test(seg) && pathSegments[i - 1] === 'page') {
       continue;
     }
 
     // Blog posts / regulation documents: /<section>/{slug} → use title prop or override
-    if ((pathSegments[i - 1] === 'blog' || pathSegments[i - 1] === 'regulations') && i > 0) {
+    if ((pathSegments[i - 1] === 'insights' || pathSegments[i - 1] === 'regulations') && i > 0) {
       if (override) {
         items.push({ label: override.label });
         continue;
@@ -203,6 +203,7 @@ export default function AutoBreadcrumb({ locale, title }: AutoBreadcrumbProps) {
   }
 
   // Last item should not have href (current page)
+  const currentPath = `/${locale}${accumulated}/`;
   if (items.length > 1) {
     items[items.length - 1].href = undefined;
   }
@@ -211,14 +212,13 @@ export default function AutoBreadcrumb({ locale, title }: AutoBreadcrumbProps) {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: items
-      .filter((item) => item.href)
-      .map((item, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        name: item.label,
-        item: `https://sinotradecompliance.com${item.href}`,
-      })),
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.label,
+      // 末项是当前页：可见列表里去掉链接，但 schema 必须保留（Google 要求完整层级）
+      item: `https://sinotradecompliance.com${item.href ?? currentPath}`,
+    })),
   };
 
   return (
@@ -248,7 +248,7 @@ export default function AutoBreadcrumb({ locale, title }: AutoBreadcrumbProps) {
                   {item.label}
                 </span>
               ) : (
-                // 面包屑常跨 app（site /en/blog/ 由边缘代理到 blog 站），
+                // 面包屑常跨 app（site /en/insights/ 由边缘代理到 blog 站），
                 // next/link 的客户端路由会去取 RSC payload（*index.txt），
                 // 而静态导出产物里这些 .txt 已被 clean-rsc 剥离 → 404 后
                 // router 直接把 URL 落到 index.txt/ 报错。改普通 <a> 强制整页导航。

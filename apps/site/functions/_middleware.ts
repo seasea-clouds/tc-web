@@ -1,11 +1,11 @@
 /**
  * Cloudflare Pages Middleware:
  * 1. Route /{locale}/c/* → portal site (user compliance portal)
- * 2. Route /{locale}/blog/* → blog site
+ * 2. Route /{locale}/insights/* → blog site
  * 2b. Route /{locale}/regulations/* → regulations site
  * 3. Route /api/admin/* → admin API
  * 4. Route /admin/* → admin dashboard (HTML + static assets)
- * 5. Serve sub-site static assets at /blog/_next/static/*, /c/_next/static/*, /admin/_next/static/*
+ * 5. Serve sub-site static assets at /insights/_next/static/*, /c/_next/static/*, /admin/_next/static/*
  * 6. Accept-Language → redirect / to corresponding locale
  * 7. Canonical host redirect: www / pages.dev → main domain
  *
@@ -78,7 +78,7 @@ function rewriteNextStatic(html: string, prefix: string): string {
   //
   // Rewrite `href` for CSS, stylesheet preloads, etc. — these MUST go
   // through /{prefix}/_next/static/ so proxySubSiteAsset serves the
-  // correct upstream (/blog/_next/static/chunks/...css → blog).
+  // correct upstream (/insights/_next/static/chunks/...css → blog).
   html = html.replace(
     /<link\s[^>]*href="\/_next\/static\/[^"]*"[^>]*>/g,
     (m) => /\bas="script"/.test(m) ? m : m.replace(/(href=")\/_next\/static\//, `$1/${prefix}/_next/static/`)
@@ -244,7 +244,7 @@ function sanitizeHeaders(headers: Headers): Headers {
 // the bare URL stays in the address bar. The served HTML keeps its own
 // canonical/x-default pointing at the /en/ URL, so search engines consolidate
 // there (no duplicate content). Locale-prefixed paths and static assets are
-// untouched; sub-site proxy branches (c/blog/admin/api) already returned above.
+// untouched; sub-site proxy branches (c/insights/admin/api) already returned above.
 
 // Distinguish a "page-like" bare path from locale-prefixed paths and static
 // files that must be served as-is by Cloudflare's static asset pipeline.
@@ -299,8 +299,8 @@ async function serveEnglishBarePath(request: Request, url: URL, env?: Record<str
 // ─── Sub-site static assets ─────────────────────────────────────
 
 async function proxySubSiteAsset(url: URL, request: Request, env?: Record<string, string>): Promise<Response | null> {
-  // Match /blog/_next/static/* → blog upstream
-  const blogMatch = url.pathname.match(/^\/blog\/_next\/static\/(.+)/);
+  // Match /insights/_next/static/* → blog upstream
+  const blogMatch = url.pathname.match(/^\/insights\/_next\/static\/(.+)/);
   if (blogMatch) {
     const upstream = resolveUpstream(url.hostname, 'blog', env);
     const assetUrl = `${upstream}/_next/static/${blogMatch[1]}`;
@@ -451,7 +451,7 @@ export async function onRequest(context: { request: Request; next: () => Promise
 
   // ── Canonical host redirect ──
   // Must run before any sub-site proxy logic: otherwise www./pages.dev requests
-  // to /{locale}/blog/, /{locale}/c/ or /admin/ get proxied (200) instead of
+  // to /{locale}/insights/, /{locale}/c/ or /admin/ get proxied (200) instead of
   // 301-ing to the canonical domain, creating duplicate-content signals.
   const canonical = getCanonicalHost(url.toString());
   if (canonical && url.hostname !== canonical) {
@@ -459,12 +459,12 @@ export async function onRequest(context: { request: Request; next: () => Promise
   }
 
   // ── 博客分页副本归并 ──
-  // /{locale}/blog/page/1/ 与 /{locale}/blog/ 内容完全相同（page/1 只是
+  // /{locale}/insights/page/1/ 与 /{locale}/insights/ 内容完全相同（page/1 只是
   // `output: export` 对动态路由的技术副产品）。这里直接 301 到第 1 页，
   // 不必回源，也让「一个列表只有一份 URL」这件事在边缘层就成立。
-  const pageOne = url.pathname.match(/^\/([a-z]{2})\/blog\/page\/1\/$/);
+  const pageOne = url.pathname.match(/^\/([a-z]{2})\/insights\/page\/1\/$/);
   if (pageOne) {
-    url.pathname = `/${pageOne[1]}/blog/`;
+    url.pathname = `/${pageOne[1]}/insights/`;
     return Response.redirect(url.toString(), 301);
   }
 
@@ -510,9 +510,9 @@ export async function onRequest(context: { request: Request; next: () => Promise
 
   // ── zh locale gating: only authenticated admins may view Chinese ──
   // Runs after canonical-host redirect and before all sub-site proxying so
-  // /zh/, /zh/c/ (portal) and /zh/blog/ (blog) are all gated at the edge.
+  // /zh/, /zh/c/ (portal) and /zh/insights/ (blog) are all gated at the edge.
   // Static assets are not affected: site assets live at /_next/static and
-  // sub-site assets at /c/_next/static, /blog/_next/static (no locale prefix).
+  // sub-site assets at /c/_next/static, /insights/_next/static (no locale prefix).
   if (/^\/zh(?:\/|$)/.test(url.pathname)) {
     const isAdmin = await verifyAdminSession(request, env);
     if (!isAdmin) {
@@ -529,7 +529,7 @@ export async function onRequest(context: { request: Request; next: () => Promise
   // Next.js async chunks are loaded at runtime via requestAnimationFrame + <link prefetch>.
   // These are relative to the same origin, so they request `/_next/static/chunks/*`.
   // On the main site, `/_next/static/` belongs to the main site itself.
-  // For proxied sub-sites (portal/blog with /c/ and /blog/ base paths),
+  // For proxied sub-sites (portal/blog with /c/ and /insights/ base paths),
   // their modules use un-prefixed `/_next/static/chunks/*` URLs.
   // This handler serves those chunks from the correct upstream.
   if (url.pathname.startsWith('/_next/static/chunks/')) {
@@ -597,19 +597,19 @@ export async function onRequest(context: { request: Request; next: () => Promise
   }
 
   // ── Blog proxy ─────────────────────────────────────────────────
-  const blogPathMatch = url.pathname.match(/^\/([a-z]{2})\/blog(\/.*)?$/);
+  const blogPathMatch = url.pathname.match(/^\/([a-z]{2})\/insights(\/.*)?$/);
   if (blogPathMatch && SUPPORTED_LOCALES.includes(blogPathMatch[1])) {
     const locale = blogPathMatch[1];
     const rest = blogPathMatch[2] || '/';
 
     // ── Trailing-slash normalization (SEO) ──
-    // /ko/blog → 308 /ko/blog/ so Google doesn't treat the slash-less URL
+    // /ko/insights → 308 /ko/insights/ so Google doesn't treat the slash-less URL
     // as an alternate copy of the canonical (slash) version.
     if (!url.pathname.endsWith('/')) {
       return Response.redirect(url.origin + url.pathname + '/', 308);
     }
     const upstream = resolveUpstream(url.hostname, 'blog', env);
-    const blogUrl = upstream + '/' + locale + '/blog' + rest;
+    const blogUrl = upstream + '/' + locale + '/insights' + rest;
 
     try {
       const resp = await fetchUpstream(blogUrl, new Request(blogUrl, { method: 'GET', headers: request.headers }));
@@ -639,9 +639,9 @@ export async function onRequest(context: { request: Request; next: () => Promise
     }
   }
 
-  if (url.pathname === '/blog' || url.pathname === '/blog/') {
+  if (url.pathname === '/insights' || url.pathname === '/insights/') {
     const locale = resolveLocale(request);
-    return Response.redirect(url.origin + '/' + locale + '/blog/', 302);
+    return Response.redirect(url.origin + '/' + locale + '/insights/', 302);
   }
 
   // ── Regulations proxy ──────────────────────────────────────────

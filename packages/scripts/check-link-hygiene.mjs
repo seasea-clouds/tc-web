@@ -208,8 +208,8 @@ function checkImageSitemap(sitemaps) {
       for (const slug of slugs) {
         const mdx = path.join(REPO_ROOT, 'apps/blog/content', locale, `${slug}.mdx`);
         if (!fs.existsSync(mdx)) continue;
-        const pageUrl = `https://${MAIN_HOST}/${locale}/blog/${slug}/`;
-        if (!pageLocs.includes(pageUrl)) missing.push(`/${locale}/blog/${slug}/`);
+        const pageUrl = `https://${MAIN_HOST}/${locale}/insights/${slug}/`;
+        if (!pageLocs.includes(pageUrl)) missing.push(`/${locale}/insights/${slug}/`);
       }
     }
     if (missing.length) {

@@ -109,7 +109,19 @@ function checkFaqWiring(outDir) {
     }
   }
 
-  // C: 任何输出 FAQPage 的页面，条目数必须与折叠块数量一致
+  // C: 任何输出 FAQPage 的页面，schema 里的每条问答都必须真的出现在页面上
+  //    （防 schema 编造页面没有的内容；不按 <details> 计数，因为各站 FAQ 渲染方式不同）
+  const decode = (t) =>
+    t
+      .replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'")
+      .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&nbsp;/g, ' ')
+      .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)))
+      .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(parseInt(d, 10)));
+
+  const stripTags = (html) =>
+    decode(html.replace(/<script[\s\S]*?<\/script>/gi, ' ').replace(/<[^>]+>/g, ' '))
+      .replace(/\s+/g, ' ');
+
   for (const locale of LOCALES) {
     const locDir = path.join(outDir, locale);
     if (!fs.existsSync(locDir)) continue;
@@ -119,11 +131,14 @@ function checkFaqWiring(outDir) {
       if (!html.includes('"FAQPage"')) return;
       const faq = parseFaqPage(html);
       if (!faq) return;
-      const details = (html.match(/<details/g) || []).length;
-      if (details > 0 && faq.mainEntity.length !== details) {
-        const rel = '/' + path.relative(outDir, p).replace(/index\.html$/, '');
-        if (!issues.some((i) => i.includes(rel))) {
-          issues.push(`${rel} FAQPage ${faq.mainEntity.length} 条 vs 折叠块 ${details} 条 —— 不一致`);
+      const text = stripTags(html);
+      const rel = '/' + path.relative(outDir, p).replace(/index\.html$/, '');
+      for (const q of faq.mainEntity) {
+        const question = decode(String(q.name || '')).replace(/\s+/g, ' ').trim();
+        if (!question) continue;
+        if (!text.includes(question)) {
+          issues.push(`${rel} FAQPage 里的问答页面看不到：「${question.slice(0, 60)}」`);
+          break;
         }
       }
     });

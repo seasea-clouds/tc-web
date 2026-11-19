@@ -91,7 +91,7 @@ export default function Footer({ locale: propLocale }: { locale?: string } = {})
                 </a>
               </li>
               <li>
-                <a href={href('/blog/')} className="text-white/70 hover:text-white transition-colors text-sm">
+                <a href={href('/insights/')} className="text-white/70 hover:text-white transition-colors text-sm">
                   {t('blog')}
                 </a>
               </li>

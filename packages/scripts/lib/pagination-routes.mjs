@@ -2,7 +2,7 @@
 /**
  * pagination-routes.mjs — 列表分页 URL 的唯一来源（构建期）
  *
- * 第 1 页就是列表页本身（/{locale}/blog/、/{locale}/regulations/），
+ * 第 1 页就是列表页本身（/{locale}/insights/、/{locale}/regulations/），
  * 第 2 页起才有自己的 URL（/page/N/）。这些页面必须可索引（canonical 自指），
  * 所以 sitemap 里要逐个列出来 —— 否则 83 篇法规的 2–5 页、博客的 2 页
  * 就只剩详情页这一个入口。
@@ -53,7 +53,7 @@ export function regulationsPageCount() {
 export function paginatedRoutes(locale) {
   const out = [];
   const blogPages = blogPageCount();
-  for (let n = 2; n <= blogPages; n += 1) out.push(`/${locale}/blog/page/${n}/`);
+  for (let n = 2; n <= blogPages; n += 1) out.push(`/${locale}/insights/page/${n}/`);
   const regPages = regulationsPageCount();
   for (let n = 2; n <= regPages; n += 1) out.push(`/${locale}/regulations/page/${n}/`);
   return out;

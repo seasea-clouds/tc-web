@@ -150,7 +150,7 @@ function getDisplayText(route, enMsgs, locale = 'en') {
   if (parts[0] === 'services' && parts[1]) {
     return SERVICE_LABELS[parts[1]] || parts[1].replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
   }
-  if (parts[0] === 'blog' && parts.length > 1) {
+  if (parts[0] === 'insights' && parts.length > 1) {
     // 优先用该语言的 frontmatter 标题，其次硬编码清单，最后 slug 转标题
     const slug = parts[1];
     const localized = loadBlogTitles(locale)[slug];

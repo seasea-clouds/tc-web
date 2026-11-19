@@ -61,7 +61,8 @@
     "cat_Cosmetics": "Cosmetici",
     "cat_E_commerce": "E-commerce transfrontaliero",
     "cat_Food_Beverage": "Alimenti e bevande",
-    "service_brand": "Protezione del marchio"
+    "service_brand": "Protezione del marchio",
+    "faqTitle": "Domande frequenti"
   },
   "Cookie": {
     "message": "Questo sito utilizza solo cookie di autenticazione essenziali. Non vengono utilizzati cookie di tracciamento o pubblicitari.",

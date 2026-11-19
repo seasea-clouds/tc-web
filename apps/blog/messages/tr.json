@@ -61,7 +61,8 @@
     "cat_Cosmetics": "Kozmetik",
     "cat_E_commerce": "E-ticaret",
     "cat_Food_Beverage": "Gıda ve İçecek",
-    "service_brand": "Marka Koruması"
+    "service_brand": "Marka Koruması",
+    "faqTitle": "Sıkça sorulan sorular"
   },
   "Cookie": {
     "message": "Bu site yalnızca gerekli kimlik doğrulama çerezlerini kullanır. Hiçbir izleme veya reklam çerezi kullanılmaz.",

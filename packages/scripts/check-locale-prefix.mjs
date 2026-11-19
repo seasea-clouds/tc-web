@@ -46,7 +46,7 @@ const SKIP_PATH_PREFIXES = [
   'http://', 'https://', 'mailto:', 'tel:', '#', 'data:',
   '/_next/', '/api/', '/images/', '/fonts/', '/icons/',
   '/favicon', '/manifest', '/robots.txt', '/sitemap', '/llms',
-  '/search-index', '/blog/_next/', '/c/_next/',
+  '/search-index', '/insights/_next/', '/c/_next/',
 ];
 
 // 已知合法的 href 值（不翻译/不需要 locale）

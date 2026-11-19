@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const B = msgs?.Blog || {};
   const title = B.metaTitle || 'Exporting to China Blog';
   const description = B.metaDescription || 'Expert guides on exporting to China.';
-  const path = '/blog/';
+  const path = '/insights/';
   const url = `https://sinotradecompliance.com/${locale}${path}`;
   return {
     title,
@@ -66,7 +66,7 @@ export default async function BlogHome({ params }: { params: Promise<{ locale: s
             '@type': 'Blog',
             name: tb('title', 'Insights & Compliance Guides'),
             description: tb('subtitle', 'Expert articles on taking your product to China: market entry, registration, labeling and certification.'),
-            url: `${SITE_URL}/${locale}/blog/`,
+            url: `${SITE_URL}/${locale}/insights/`,
             publisher: { '@type': 'Organization', name: 'SinoTrade Compliance', url: 'https://sinotradecompliance.com' },
           }),
         }}

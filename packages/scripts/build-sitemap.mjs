@@ -41,7 +41,7 @@ export function generateSitemaps(baseUrl, outDir) {
 
   // 1. 生成各语言 sitemap（含 xhtml:link hreflang 交叉引用）
   for (const { locale, routes } of localeRoutes) {
-    // 列表分页（/blog/page/2/、/regulations/page/2/…）是动态路由实例，不在
+    // 列表分页（/insights/page/2/、/regulations/page/2/…）是动态路由实例，不在
     // page.tsx 扫描结果里 —— 按当前内容量现算补上（第 1 页已由列表页覆盖）。
     const allRoutes = [...routes, ...paginatedRoutes(locale)];
     let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
@@ -57,7 +57,7 @@ export function generateSitemaps(baseUrl, outDir) {
       const priority = pathPart === '/' ? '1.0' :
         pathPart.startsWith('/services/') || pathPart.startsWith('/industries/') ? '0.8' :
         pathPart.startsWith('/c/') ? '0.6' :
-        pathPart.startsWith('/blog/') ? '0.6' :
+        pathPart.startsWith('/insights/') ? '0.6' :
         pathPart.startsWith('/faq/') || pathPart.startsWith('/packages/') || pathPart.startsWith('/about/') ? '0.7' :
         '0.5';
 

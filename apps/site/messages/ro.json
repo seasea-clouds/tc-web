@@ -309,7 +309,11 @@
     "coverItems5": "Monitorizarea conformității anuale pentru acces neîntrerupt pe piață",
     "coverItems6": "Categorii noi din 2025, inclusiv bateriile litiu-ion",
     "metaTitle": "Certificare CCC | Export în China pentru producători",
-    "metaDescription": "Certificare CCC pentru producătorii români: diferența față de CE, procesul de certificare, teste, audit de fabrică, durată și cost. Suport în limba română."
+    "metaDescription": "Certificare CCC pentru producătorii români: diferența față de CE, procesul de certificare, teste, audit de fabrică, durată și cost. Suport în limba română.",
+    "faq7q": "Care este diferența dintre CCC și CQC?",
+    "faq7a": "CCC este certificarea obligatorie: un produs din catalogul CCC nu poate fi importat sau vândut în China fără ea, iar marca este emisă printr-un organism desemnat de CNCA. CQC este numele unuia dintre aceste organisme — Centrul Chinez de Certificare a Calității. Confuzia este de înțeles, pentru că CQC derulează și scheme voluntare și tipărește propria marcă CQC, cu aspect similar. Regula practică: dacă produsul este în catalogul CCC, certificatul cerut de vamă și de autoritatea de supraveghere a pieței este CCC; un certificat voluntar CQC este un semnal de calitate, nu un substitut. Verificăm poziția din catalog față de codul HS și descrierea concretă înainte de a cotiza, pentru că un transport poate fi de ambele părți ale liniei: un adaptor de rețea are nevoie de CCC, un articol pur decorativ din aceeași cutie nu.",
+    "faq8q": "Un certificat CCC acoperă toate modelele și toate fabricile?",
+    "faq8a": "Nu, și aici se duc bugetele greșit. Un certificat CCC acoperă o unitate de cerere definită: modele grupate după același design, construcție și componente critice pentru siguranță. Un încărcător de 5 W și unul de 65 W cu aceeași arhitectură pot împărți o unitate; unul cu transformator sau circuit de protecție diferit nu. Fiecare loc de producție trebuie, de asemenea, menționat pe certificat și trebuie să treacă propria inspecție inițială de fabrică, așa că o a doua fabrică înseamnă o extindere, nu o copie. Adăugarea unui model mai târziu este o cerere de modificare: mai ieftină decât un certificat nou, dar nu gratuită. Pornim de la lista de materiale și lista de fabrici și propunem cel mai mic număr justificabil de unități de cerere — de obicei mai mic decât se așteaptă clientul, uneori mai mare."
   },
   "ServiceCosmetics": {
     "heroTitle": "Înregistrare NMPA pentru cosmeticile brandurilor românești",

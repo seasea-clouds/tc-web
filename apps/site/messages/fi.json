@@ -309,7 +309,11 @@
     "coverItems5": "Vuotuinen valvonta vaatimustenmukaisuuden ylläpitämiseksi",
     "coverItems6": "Uudet 2025 luokat, mukaan lukien litiumioniakut",
     "metaTitle": "CCC-sertifiointi Kiinaan | Pakollinen tuotesertifiointi",
-    "metaDescription": "CCC-sertifiointi suomalaisille yrityksille: ero CE-merkintään, sertifiointiprosessi, testit, tehdasauditointi, aika ja kustannus. Suomeksi."
+    "metaDescription": "CCC-sertifiointi suomalaisille yrityksille: ero CE-merkintään, sertifiointiprosessi, testit, tehdasauditointi, aika ja kustannus. Suomeksi.",
+    "faq7q": "Mitä eroa on CCC:llä ja CQC:llä?",
+    "faq7a": "CCC on pakollinen sertifiointi: CCC-luettelossa olevaa tuotetta ei voi tuoda Kiinaan eikä myydä siellä ilman sitä, ja merkin myöntää CNCA:n nimeämä laitos. CQC on yhden tällaisen laitoksen nimi – Kiinan laatuvarmennuskeskuksen. Hämmennys on ymmärrettävää, sillä CQC ylläpitää myös vapaaehtoisia ohjelmia ja painaa omaa, samannäköistä CQC-merkkiään. Käytännön sääntö: jos tuote on CCC-luettelossa, tulli ja markkinavalvonta kysyvät CCC-sertifikaattia; vapaaehtoinen CQC-sertifikaatti on laatuvihje, ei korvike. Tarkistamme luettelomerkinnän tiettyä HS-koodia ja tuotekuvausta vasten ennen hinnoittelua, sillä yksi lähetys voi olla rajan molemmilla puolilla: verkkolaite tarvitsee CCC:n, samassa laatikossa oleva puhtaasti koristeellinen esine ei.",
+    "faq8q": "Kattaako yksi CCC-sertifikaatti kaikki mallit ja kaikki tehtaat?",
+    "faq8a": "Ei, ja tässä budjetit menevät pieleen. CCC-sertifikaatti kattaa määritellyn hakemusyksikön: mallit, jotka on ryhmitelty saman suunnittelun, rakenteen ja turvallisuuden kannalta kriittisten komponenttien mukaan. Saman arkkitehtuurin 5 W:n ja 65 W:n laturi voivat jakaa yksikön; eri muuntajalla tai eri suojapiirillä varustettu ei. Jokainen tuotantolaitos on myös nimettävä sertifikaattiin ja sen on läpäistävä oma ensimmäinen tehdastarkastuksensa, joten toinen tehdas tarkoittaa laajennusta, ei kopiota. Mallin lisääminen myöhemmin on muutoshakemus: halvempi kuin uusi sertifikaatti, mutta ei ilmainen. Aloitamme osaluettelosta ja tehdasluettelosta ja ehdotamme pienintä perusteltavissa olevaa hakemusyksikkömäärää – yleensä vähemmän kuin asiakas odottaa, joskus enemmän."
   },
   "ServiceCosmetics": {
     "heroTitle": "NMPA-kosmetiikkarekisteröinti suomalaisille brändeille",

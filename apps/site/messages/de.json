@@ -309,7 +309,11 @@
     "coverItems5": "Jährliche Überwachungs-Compliance für Ihren Marktzugang",
     "coverItems6": "Neue Kategorien ab 2025 inklusive Lithium-Ionen-Batterien",
     "metaTitle": "CCC-Zertifizierung für China | Leitfaden für Exporteure",
-    "metaDescription": "CCC-Zertifizierung für Elektronik, Haushaltsgeräte, Spielzeug und Autoteile: CCC-Anforderungen, Typprüfung, Werksaudit und schnelle Zulassung."
+    "metaDescription": "CCC-Zertifizierung für Elektronik, Haushaltsgeräte, Spielzeug und Autoteile: CCC-Anforderungen, Typprüfung, Werksaudit und schnelle Zulassung.",
+    "faq7q": "Worin unterscheiden sich CCC und CQC?",
+    "faq7a": "CCC ist die Pflichtzertifizierung: Ein Produkt im CCC-Katalog darf ohne sie weder eingeführt noch in China verkauft werden, und das Zeichen wird von einer von der CNCA benannten Stelle erteilt. CQC ist der Name einer dieser Stellen – des China Quality Certification Centre. Die Verwechslung ist verständlich, denn CQC betreibt zusätzlich freiwillige Zertifizierungsprogramme und druckt ein eigenes, ähnlich aussehendes CQC-Zeichen. Die praktische Regel: Steht Ihr Produkt im CCC-Katalog, verlangen Zoll und Marktaufsicht das CCC-Zertifikat; ein freiwilliges CQC-Zertifikat ist ein Qualitätssignal, kein Ersatz. Wir prüfen den Katalogeintrag gegen Ihre konkrete HS-Position und Produktbeschreibung, bevor wir kalkulieren, denn eine Sendung kann die Grenze überschreiten – ein Netzadapter braucht CCC, ein rein dekorativer Artikel im selben Karton nicht.",
+    "faq8q": "Deckt ein CCC-Zertifikat alle Modelle und alle Fabriken ab?",
+    "faq8a": "Nein, und hier gehen Budgets schief. Ein CCC-Zertifikat deckt eine definierte Antragseinheit ab: Modelle, die nach identischem Design, Aufbau und sicherheitsrelevanten Bauteilen gruppiert sind. Ein 5-W- und ein 65-W-Ladegerät derselben Architektur können eine Einheit teilen; ein Ladegerät mit anderem Transformator oder anderer Schutzschaltung nicht. Jeder Fertigungsstandort muss zudem im Zertifikat genannt sein und seine eigene Erstinspektion des Werks bestehen – ein zweites Werk bedeutet also eine Erweiterung, keine Kopie. Ein Modell später hinzuzufügen ist ein Änderungsantrag: günstiger als ein neues Zertifikat, aber nicht kostenlos. Wir beginnen mit der Stückliste und der Werksliste und schlagen dann die kleinste vertretbare Zahl von Antragseinheiten vor – meist weniger, als Kunden erwarten, gelegentlich mehr."
   },
   "ServiceCosmetics": {
     "heroTitle": "NMPA-Kosmetikregistrierung für deutsche Marken",

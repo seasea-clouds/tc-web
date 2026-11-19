@@ -309,7 +309,11 @@
     "coverItems5": "Letni nadzor skladnosti za nemoten dostop do trga",
     "coverItems6": "Nove kategorije 2025, vključno z litij-ionskimi baterijami",
     "metaTitle": "CCC certificiranje na Kitajskem | vodnik za proizvajalce",
-    "metaDescription": "CCC certificiranje za slovenske proizvajalce: razlika od CE, postopek certificiranja, testiranja, revizija tovarne, čas in stroški. Podpora v slovenščini."
+    "metaDescription": "CCC certificiranje za slovenske proizvajalce: razlika od CE, postopek certificiranja, testiranja, revizija tovarne, čas in stroški. Podpora v slovenščini.",
+    "faq7q": "Kakšna je razlika med CCC in CQC?",
+    "faq7a": "CCC je obvezno certificiranje: izdelka s seznama CCC ni mogoče uvoziti ali prodajati na Kitajskem brez njega, znak pa izda organ, ki ga imenuje CNCA. CQC je ime enega od teh organov — Kitajskega centra za certificiranje kakovosti. Zamenjava je razumljiva, saj CQC vodi tudi prostovoljne sheme in tiska lastno, podobno videti oznako CQC. Praktično pravilo: če je izdelek na seznamu CCC, carina in tržni nadzor zahtevata certifikat CCC; prostovoljni certifikat CQC je signal kakovosti, ne nadomestilo. Pred oblikovanjem ponudbe preverimo vnos na seznamu glede na vašo konkretno oznako HS in opis izdelka, ker je lahko ena pošiljka na obeh straneh meje: omrežni adapter potrebuje CCC, čisto dekorativni predmet v isti škatli ne.",
+    "faq8q": "Ali en certifikat CCC pokriva vse modele in vse tovarne?",
+    "faq8a": "Ne, in prav tu se proračuni zalomijo. Certifikat CCC pokriva določeno prijavno enoto: modele, združene po enaki zasnovi, konstrukciji in varnostno kritičnih komponentah. Polnilnik 5 W in 65 W z enako arhitekturo si lahko delita enoto; s predrugačenim transformatorjem ali zaščitnim vezjem ne. Vsaka proizvodna lokacija mora biti navedena v certifikatu in opraviti svoj prvi tovarniški pregled, zato druga tovarna pomeni razširitev, ne kopijo. Dodajanje modela pozneje je zahteva za spremembo: ceneje od novega certifikata, a ne brezplačno. Začnemo s kosovnico in seznamom tovarn, nato predlagamo najmanjše zagovorljivo število prijavnih enot — običajno manj, kot pričakuje stranka, včasih več."
   },
   "ServiceCosmetics": {
     "heroTitle": "Registracija kozmetike NMPA za slovenske blagovne znamke",

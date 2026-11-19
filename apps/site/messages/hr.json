@@ -309,7 +309,11 @@
     "coverItems5": "Godišnje praćenje usklađenosti za nesmetan pristup tržištu",
     "coverItems6": "Nove kategorije 2025., uključujući litij-ionske baterije",
     "metaTitle": "CCC certifikat za Kinu | vodič za hrvatske proizvođače",
-    "metaDescription": "CCC certifikat za hrvatske proizvođače: razlika od CE, proces certificiranja, ispitivanja, revizija tvornice, vrijeme i trošak. Podrška na hrvatskom."
+    "metaDescription": "CCC certifikat za hrvatske proizvođače: razlika od CE, proces certificiranja, ispitivanja, revizija tvornice, vrijeme i trošak. Podrška na hrvatskom.",
+    "faq7q": "Koja je razlika između CCC i CQC?",
+    "faq7a": "CCC je obvezna certifikacija: proizvod s CCC popisa ne može se uvoziti ni prodavati u Kini bez nje, a znak izdaje tijelo koje je imenovala CNCA. CQC je naziv jednog od tih tijela — Kineskog centra za certifikaciju kvalitete. Zabuna je razumljiva jer CQC vodi i dobrovoljne programe i tiska vlastitu, sličnu CQC oznaku. Praktično pravilo: ako je proizvod na CCC popisu, certifikat koji traže carina i nadzor tržišta je CCC; dobrovoljni CQC certifikat je signal kvalitete, ne zamjena. Prije izrade ponude provjeravamo unos u popisu prema vašoj konkretnoj HS oznaci i opisu proizvoda, jer jedna pošiljka može ležati s obje strane granice: mrežni adapter treba CCC, a čisto dekorativni predmet u istom kartonskom pakiranju ne.",
+    "faq8q": "Pokriva li jedan CCC certifikat sve modele i sve tvornice?",
+    "faq8a": "Ne, i upravo tu proračuni odlaze ukrivo. CCC certifikat pokriva definiranu prijavnu jedinicu: modele grupirane prema istom dizajnu, konstrukciji i komponentama kritičnima za sigurnost. Punjač od 5 W i onaj od 65 W iste arhitekture mogu dijeliti jedinicu; s drukčijim transformatorom ili drukčijim zaštitnim krugom ne mogu. Svako proizvodno mjesto također mora biti navedeno u certifikatu i proći vlastiti prvi tvornički pregled, pa druga tvornica znači proširenje, a ne kopiju. Dodavanje modela kasnije je zahtjev za izmjenu: jeftiniji od novog certifikata, ali ne besplatan. Krećemo od sastavnice i popisa tvornica, pa predlažemo najmanji obranjiv broj prijavnih jedinica — obično manji nego što klijent očekuje, ponekad veći."
   },
   "ServiceCosmetics": {
     "heroTitle": "NMPA registracija kozmetike za hrvatske brendove",

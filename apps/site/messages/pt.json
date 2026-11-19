@@ -309,7 +309,11 @@
     "coverItems5": "Suporte à conformidade de vigilância anual",
     "coverItems6": "Novas categorias a partir de 2025, incluindo baterias de íons de lítio",
     "metaTitle": "Certificação CCC para exportadores | INMETRO vs CCC",
-    "metaDescription": "Certificação CCC para fabricantes brasileiros: marca CCC, testes, auditoria de fábrica e aprovação rápida. Diferenças em relação ao INMETRO."
+    "metaDescription": "Certificação CCC para fabricantes brasileiros: marca CCC, testes, auditoria de fábrica e aprovação rápida. Diferenças em relação ao INMETRO.",
+    "faq7q": "Qual é a diferença entre CCC e CQC?",
+    "faq7a": "CCC é a certificação obrigatória: um produto do catálogo CCC não pode ser importado nem vendido na China sem ela, e a marca é emitida por um organismo designado pela CNCA. CQC é o nome de um desses organismos, o Centro de Certificação de Qualidade da China. A confusão é compreensível, porque a CQC também gere esquemas voluntários e imprime a sua própria marca CQC, de aspeto semelhante. A regra prática: se o produto está no catálogo CCC, o certificado que a alfândega e o regulador de mercado pedem é o CCC; um certificado voluntário CQC é um sinal de qualidade, não um substituto. Verificamos a entrada do catálogo face ao seu código HS e descrição concreta antes de orçamentar, porque um mesmo envio pode cair dos dois lados da linha: um adaptador de rede precisa de CCC, um artigo puramente decorativo na mesma caixa não.",
+    "faq8q": "Um certificado CCC cobre todos os modelos e todas as fábricas?",
+    "faq8a": "Não, e é aqui que os orçamentos falham. Um certificado CCC cobre uma unidade de pedido definida: modelos agrupados pelo mesmo design, construção e componentes críticos de segurança. Um carregador de 5 W e outro de 65 W com a mesma arquitetura podem partilhar unidade; um com transformador ou circuito de proteção diferente, não. Cada unidade fabril tem também de constar do certificado e passar a sua própria inspeção inicial de fábrica, pelo que uma segunda fábrica implica uma extensão, não uma cópia. Acrescentar um modelo mais tarde é um pedido de alteração: mais barato do que um certificado novo, mas não gratuito. Partimos da lista de materiais e da lista de fábricas e propomos o menor número defensável de unidades de pedido — habitualmente menos do que o cliente espera, por vezes mais."
   },
   "ServiceCosmetics": {
     "heroTitle": "Registo NMPA de cosméticos para marcas do Brasil e de Portugal",

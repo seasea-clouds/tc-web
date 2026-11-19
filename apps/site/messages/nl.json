@@ -309,7 +309,11 @@
     "coverItems5": "Jaarlijkse nalevingscontrole voor ononderbroken markttoegang",
     "coverItems6": "Nieuwe categorieën vanaf 2025, waaronder lithium-ionbatterijen",
     "metaTitle": "CCC-certificering voor Nederlandse exporteurs | CE vs CCC",
-    "metaDescription": "CCC-certificering voor Nederlandse fabrikanten en exporteurs: verschil met CE, certificaat verkrijgen, kosten en doorlooptijden. Begeleiding in het Nederlands."
+    "metaDescription": "CCC-certificering voor Nederlandse fabrikanten en exporteurs: verschil met CE, certificaat verkrijgen, kosten en doorlooptijden. Begeleiding in het Nederlands.",
+    "faq7q": "Wat is het verschil tussen CCC en CQC?",
+    "faq7a": "CCC is de verplichte certificering: een product op de CCC-lijst mag zonder certificaat niet worden ingevoerd of verkocht in China, en het merk wordt uitgegeven via een door CNCA aangewezen instelling. CQC is de naam van een van die instellingen, het China Quality Certification Centre. De verwarring is begrijpelijk, want CQC beheert ook vrijwillige schema's en drukt een eigen, vergelijkbaar uitziend CQC-merk. De praktische regel: staat uw product op de CCC-lijst, dan vragen douane en markttoezicht om het CCC-certificaat; een vrijwillig CQC-certificaat is een kwaliteitssignaal, geen vervanging. Wij controleren de lijstvermelding tegen uw specifieke HS-code en productomschrijving voordat we offreren, want één zending kan aan beide kanten van de grens liggen: een netadapter heeft CCC nodig, een puur decoratief artikel in dezelfde doos niet.",
+    "faq8q": "Dekt één CCC-certificaat alle modellen en alle fabrieken?",
+    "faq8a": "Nee, en hier gaan budgetten mis. Een CCC-certificaat dekt een afgebakende aanvraageenheid: modellen gegroepeerd op identiek ontwerp, constructie en veiligheidskritische componenten. Een lader van 5 W en een van 65 W met dezelfde architectuur kunnen één eenheid delen; een lader met een andere transformator of een ander beveiligingscircuit niet. Elke productielocatie moet bovendien op het certificaat staan en de eigen initiële fabrieksinspectie doorstaan, dus een tweede fabriek betekent een uitbreiding, geen kopie. Een model later toevoegen is een wijzigingsaanvraag: goedkoper dan een nieuw certificaat, maar niet gratis. Wij beginnen bij de stuklijst en de fabriekslijst en stellen dan het kleinst verdedigbare aantal aanvraageenheden voor — meestal minder dan de klant verwacht, soms meer."
   },
   "ServiceCosmetics": {
     "heroTitle": "NMPA-cosmetica-registratie voor Nederlandse merken",

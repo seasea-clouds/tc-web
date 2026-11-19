@@ -309,7 +309,11 @@
     "coverItems5": "Ročná podpora dohľadu pre neprerušený prístup na trh",
     "coverItems6": "Nové kategórie 2025 vrátane lítium-iónových batérií",
     "metaTitle": "Certifikácia CCC | povinná certifikácia výrobkov",
-    "metaDescription": "Certifikácia CCC pre slovenských výrobcov: rozdiel od CE, proces certifikácie, testy, audit závodu, čas a náklady. Podpora v slovenčine."
+    "metaDescription": "Certifikácia CCC pre slovenských výrobcov: rozdiel od CE, proces certifikácie, testy, audit závodu, čas a náklady. Podpora v slovenčine.",
+    "faq7q": "Aký je rozdiel medzi CCC a CQC?",
+    "faq7a": "CCC je povinná certifikácia: výrobok v katalógu CCC nemožno bez nej doviezť ani predávať v Číne a značku vydáva subjekt poverený CNCA. CQC je názov jedného z týchto subjektov — Čínskeho centra certifikácie kvality. Zámena je pochopiteľná, pretože CQC prevádzkuje aj dobrovoľné programy a tlačí vlastnú, podobne vyzerajúcu značku CQC. Praktické pravidlo: ak je výrobok v katalógu CCC, colný úrad aj dohľad nad trhom žiadajú certifikát CCC; dobrovoľný certifikát CQC je signál kvality, nie náhrada. Pred ocenením overujeme položku katalógu voči konkrétnemu kódu HS a popisu výrobku, pretože jedna zásielka môže ležať na oboch stranách hranice: napájací adaptér CCC potrebuje, čisto dekoračný predmet v tej istej krabici nie.",
+    "faq8q": "Pokrýva jeden certifikát CCC všetky modely a všetky továrne?",
+    "faq8a": "Nie, a práve tu sa rozchádzajú rozpočty. Certifikát CCC pokrýva definovanú žiadostnú jednotku: modely zoskupené podľa rovnakého dizajnu, konštrukcie a bezpečnostne kritických dielov. Nabíjačka 5 W a 65 W s rovnakou architektúrou môže jednotku zdieľať; s iným transformátorom alebo iným ochranným obvodom nie. Každé výrobné miesto musí byť navyše uvedené v certifikáte a prejsť vlastnou prvou inšpekciou továrne, takže druhá továreň znamená rozšírenie, nie kópiu. Dodatočné pridanie modelu je žiadosť o zmenu: lacnejšie ako nový certifikát, ale nie zadarmo. Začíname od kusovníka a zoznamu tovární a navrhujeme najmenší obhájiteľný počet žiadostných jednotiek — zvyčajne menej, než klient očakáva, niekedy viac."
   },
   "ServiceCosmetics": {
     "heroTitle": "Kozmetická registrácia NMPA pre slovenské značky",

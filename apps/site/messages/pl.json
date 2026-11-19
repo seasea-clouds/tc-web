@@ -309,7 +309,11 @@
     "coverItems5": "Coroczny nadzór zgodności dla Twojego dostępu do rynku",
     "coverItems6": "Nowe kategorie od 2025 r., w tym akumulatory litowo-jonowe",
     "metaTitle": "Certyfikacja CCC dla polskich eksporterów | CE vs CCC",
-    "metaDescription": "Certyfikacja CCC dla polskich producentów i eksporterów: różnica względem CE, jak uzyskać certyfikat, koszty i terminy. Obsługa w języku polskim."
+    "metaDescription": "Certyfikacja CCC dla polskich producentów i eksporterów: różnica względem CE, jak uzyskać certyfikat, koszty i terminy. Obsługa w języku polskim.",
+    "faq7q": "Czym różni się CCC od CQC?",
+    "faq7a": "CCC to certyfikacja obowiązkowa: produkt z wykazu CCC nie może być importowany ani sprzedawany w Chinach bez niej, a znak wydaje jednostka wyznaczona przez CNCA. CQC to nazwa jednej z takich jednostek — Chińskiego Centrum Certyfikacji Jakości. Zamieszanie jest zrozumiałe, bo CQC prowadzi też programy dobrowolne i drukuje własny, podobnie wyglądający znak CQC. Zasada praktyczna: jeśli produkt jest w wykazie CCC, to certyfikatu CCC żąda cło i nadzór rynkowy; dobrowolny certyfikat CQC jest sygnałem jakości, nie zamiennikiem. Przed wyceną sprawdzamy wpis w wykazie wobec konkretnego kodu HS i opisu produktu, bo jedna przesyłka może leżeć po obu stronach granicy: zasilacz wymaga CCC, a czysto dekoracyjny artykuł w tym samym kartonie nie.",
+    "faq8q": "Czy jeden certyfikat CCC obejmuje wszystkie modele i wszystkie fabryki?",
+    "faq8a": "Nie, i właśnie tutaj budżety się rozjeżdżają. Certyfikat CCC obejmuje określoną jednostkę zgłoszenia: modele zgrupowane według identycznej konstrukcji, budowy i komponentów krytycznych dla bezpieczeństwa. Ładowarka 5 W i 65 W o tej samej architekturze mogą dzielić jednostkę; z innym transformatorem lub innym układem zabezpieczeń już nie. Każde miejsce produkcji musi być także wymienione w certyfikacie i przejść własną pierwszą inspekcję fabryki, więc druga fabryka oznacza rozszerzenie, nie kopię. Dodanie modelu później to wniosek o zmianę: taniej niż nowy certyfikat, ale nie bezpłatnie. Zaczynamy od listy materiałowej i listy fabryk, a potem proponujemy najmniejszą obronioną liczbę jednostek zgłoszenia — zwykle mniejszą, niż oczekuje klient, czasem większą."
   },
   "ServiceCosmetics": {
     "heroTitle": "Rejestracja kosmetyków NMPA dla polskich marek",

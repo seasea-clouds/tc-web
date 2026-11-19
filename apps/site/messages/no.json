@@ -309,7 +309,11 @@
     "coverItems5": "Årlig samsvarsmonitorering for uavbrutt markedsadgang",
     "coverItems6": "Nye kategorier fra 2025 inkludert litium-ion-batterier",
     "metaTitle": "CCC-sertifisering | Guide for norske eksportører til Kina",
-    "metaDescription": "CCC-sertifisering for norske eksportører: forskjell fra CE, sertifiseringsprosess, tester, fabrikkrevisjon, tid og kostnad. Støtte på norsk."
+    "metaDescription": "CCC-sertifisering for norske eksportører: forskjell fra CE, sertifiseringsprosess, tester, fabrikkrevisjon, tid og kostnad. Støtte på norsk.",
+    "faq7q": "Hva er forskjellen mellom CCC og CQC?",
+    "faq7a": "CCC er den obligatoriske sertifiseringen: et produkt på CCC-listen kan verken importeres eller selges i Kina uten den, og merket utstedes via et organ som CNCA har utpekt. CQC er navnet på ett av disse organene — China Quality Certification Centre. Forvirringen er forståelig, siden CQC også driver frivillige ordninger og trykker sitt eget, lignende CQC-merke. Den praktiske regelen: står produktet på CCC-listen, er det CCC-sertifikatet tollen og markedstilsynet krever; et frivillig CQC-sertifikat er et kvalitetssignal, ikke en erstatning. Vi sjekker listeposten mot din konkrete HS-kode og produktbeskrivelse før vi priser, fordi én forsendelse kan ligge på begge sider av grensen: en nettadapter trenger CCC, en rent dekorativ artikkel i samme eske gjør det ikke.",
+    "faq8q": "Dekker ett CCC-sertifikat alle modeller og alle fabrikker?",
+    "faq8a": "Nei, og det er her budsjettene sprekker. Et CCC-sertifikat dekker en definert søknadsenhet: modeller gruppert etter samme design, konstruksjon og sikkerhetskritiske komponenter. En lader på 5 W og en på 65 W med samme arkitektur kan dele enhet; en med annen transformator eller annen beskyttelseskrets kan ikke. Hvert produksjonssted må også være navngitt i sertifikatet og bestå sin egen første fabrikkinspeksjon, så en andre fabrikk betyr en utvidelse, ikke en kopi. Å legge til en modell senere er en endringssøknad: billigere enn et nytt sertifikat, men ikke gratis. Vi starter med stykklisten og fabrikklisten og foreslår det minste forsvarlige antallet søknadsenheter — oftest færre enn kunden forventer, av og til flere."
   },
   "ServiceCosmetics": {
     "heroTitle": "NMPA-kosmetikkregistrering for norske merkevarer",

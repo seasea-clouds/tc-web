@@ -309,7 +309,11 @@
     "coverItems5": "Supporto alla conformità di sorveglianza annuale",
     "coverItems6": "Nuove categorie dal 2025, incluse le batterie agli ioni di litio",
     "metaTitle": "Certificazione CCC in Cina | Guida per produttori italiani",
-    "metaDescription": "Certificazione CCC per produttori italiani: componenti elettronici ed elettrodomestici. Test, audit di fabbrica e approvazione rapida."
+    "metaDescription": "Certificazione CCC per produttori italiani: componenti elettronici ed elettrodomestici. Test, audit di fabbrica e approvazione rapida.",
+    "faq7q": "Qual è la differenza tra CCC e CQC?",
+    "faq7a": "CCC è la certificazione obbligatoria: un prodotto presente nel catalogo CCC non può essere importato né venduto in Cina senza di essa, e il marchio viene rilasciato tramite un organismo designato dalla CNCA. CQC è il nome di uno di questi organismi, il China Quality Certification Centre. La confusione è comprensibile, perché CQC gestisce anche schemi volontari e appone un proprio marchio CQC dall'aspetto simile. La regola pratica: se il prodotto è nel catalogo CCC, il certificato che dogana e autorità di vigilanza chiedono è il CCC; un certificato volontario CQC è un segnale di qualità, non un sostituto. Verifichiamo la voce di catalogo rispetto al codice HS e alla descrizione concreta prima di preventivare, perché una stessa spedizione può stare su entrambi i lati della linea: un alimentatore necessita del CCC, un articolo puramente decorativo nella stessa cassa no.",
+    "faq8q": "Un certificato CCC copre tutti i modelli e tutti gli stabilimenti?",
+    "faq8a": "No, ed è qui che i budget sballano. Un certificato CCC copre una definita unità di richiesta: modelli raggruppati per design, costruzione e componenti critici per la sicurezza identici. Un caricatore da 5 W e uno da 65 W con la stessa architettura possono condividere l'unità; uno con trasformatore o circuito di protezione diversi no. Ogni sito produttivo deve inoltre essere indicato sul certificato e superare la propria ispezione iniziale di fabbrica, quindi un secondo stabilimento comporta un'estensione, non una copia. Aggiungere un modello in seguito è una richiesta di modifica: più economica di un nuovo certificato, ma non gratuita. Partiamo dalla distinta base e dall'elenco degli stabilimenti, poi proponiamo il minor numero difendibile di unità di richiesta, di solito inferiore a quanto il cliente si aspetta e talvolta superiore."
   },
   "ServiceCosmetics": {
     "heroTitle": "Registrazione NMPA cosmetici per marchi italiani",

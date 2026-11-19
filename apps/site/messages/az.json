@@ -309,7 +309,11 @@
     "coverItems5": "Kəsilməz bazar girişi üçün illik uyğunluq monitorinqi",
     "coverItems6": "2025-ci ilin yeni kateqoriyaları, o cümlədən litium-ion batareyalar",
     "metaTitle": "CCC sertifikatı | Azərbaycan istehsalçıları üçün bələdçi",
-    "metaDescription": "Azərbaycan istehsalçıları üçün CCC sertifikatı: CE-dən fərqi, sertifikatlaşdırma prosesi, testlər, zavod auditi, müddət və xərc. Azərbaycanca dəstək."
+    "metaDescription": "Azərbaycan istehsalçıları üçün CCC sertifikatı: CE-dən fərqi, sertifikatlaşdırma prosesi, testlər, zavod auditi, müddət və xərc. Azərbaycanca dəstək.",
+    "faq7q": "CCC ilə CQC arasındakı fərq nədir?",
+    "faq7a": "CCC məcburi sertifikatlaşdırmadır: CCC siyahısındakı məhsul bu olmadan Çinə idxal edilə və ya Çində satıla bilməz, nişan isə CNCA tərəfindən təyin edilmiş orqan vasitəsilə verilir. CQC həmin orqanlardan birinin — Çin Keyfiyyət Sertifikatlaşdırma Mərkəzinin adıdır. Qarışıqlıq başa düşüləndir, çünki CQC həm də könüllü sxemlər aparır və oxşar görünüşlü öz CQC nişanını çap edir. Praktik qayda: məhsulunuz CCC siyahısındadırsa, gömrük və bazar nəzarətinin tələb etdiyi CCC sertifikatıdır; könüllü CQC sertifikatı keyfiyyət siqnalıdır, əvəz deyil. Qiymət verməzdən əvvəl siyahı bəndini sizin konkret HS kodu və məhsul təsvirinizlə tutuşdururuq, çünki bir göndəriş xəttin hər iki tərəfində ola bilər: şəbəkə adapterinə CCC lazımdır, eyni qutudakı sırf dekorativ əşyaya yox.",
+    "faq8q": "Bir CCC sertifikatı bütün modelləri və bütün zavodları əhatə edirmi?",
+    "faq8a": "Xeyr, büdcələr də məhz burada çaşır. CCC sertifikatı müəyyən edilmiş müraciət vahidini əhatə edir: eyni dizayn, konstruksiya və təhlükəsizlik baxımından kritik komponentlər üzrə qruplaşdırılmış modellər. Eyni arxitekturaya malik 5 Vt və 65 Vt şarj cihazı bir vahidi paylaşa bilər; fərqli transformatoru və ya fərqli mühafizə dövrəsi olan paylaşa bilməz. Hər istehsal sahəsi də sertifikatda göstərilməli və öz ilkin zavod yoxlamasından keçməlidir, yəni ikinci zavod surət deyil, genişlənmə deməkdir. Sonradan model əlavə etmək dəyişiklik müraciətidir: yeni sertifikatdan ucuz, amma pulsuz deyil. Materiallar siyahısı və zavod siyahısından başlayır, sonra müdafiə oluna bilən ən az müraciət vahidi sayını təklif edirik — adətən müştərinin gözlədiyindən az, bəzən çox."
   },
   "ServiceCosmetics": {
     "heroTitle": "NMPA kosmetika qeydiyyatı – Azərbaycan brendləri üçün",

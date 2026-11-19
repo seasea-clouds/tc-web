@@ -309,7 +309,11 @@
     "coverItems5": "Annual surveillance compliance support",
     "coverItems6": "New 2025 categories including lithium-ion batteries",
     "metaTitle": "China CCC Certification | Compulsory Product Certification",
-    "metaDescription": "CCC consulting for electronics, appliances, toys, and automotive parts. CCC mark requirements, testing coordination, factory audit prep, and fast approval."
+    "metaDescription": "CCC consulting for electronics, appliances, toys, and automotive parts. CCC mark requirements, testing coordination, factory audit prep, and fast approval.",
+    "faq7q": "What is the difference between CCC and CQC?",
+    "faq7a": "CCC is the mandatory certification: a product on the CCC catalogue cannot be imported or sold in China without it, and the mark is issued through a CNCA-designated body. CQC is the name of one of those bodies — the China Quality Certification Centre. The confusion is understandable, because CQC also runs voluntary schemes and prints its own CQC mark, which looks similar. The practical rule: if your product is on the CCC catalogue, the CCC certificate is what customs and the market regulator ask for; a CQC voluntary certificate is a quality signal, not a substitute. We check the catalogue entry against your specific HS code and product description before quoting, because one shipment can straddle the line — a mains adapter needs CCC, a purely decorative item in the same carton does not.",
+    "faq8q": "Does one CCC certificate cover every model and every factory?",
+    "faq8a": "No, and this is where budgets go wrong. A CCC certificate covers a defined application unit: models grouped by the same design, construction and safety-critical components. A 5 W and a 65 W charger built on the same architecture can share a unit; a charger with a different transformer or a different protection circuit cannot. Each manufacturing site must also be named on the certificate and pass its own initial factory inspection, so a second plant means an extension rather than a copy. Adding a model later is a change application — cheaper than a new certificate, but not free. We start from the bill of materials and the factory list, then propose the smallest defensible number of application units, which is usually fewer than clients expect and occasionally more."
   },
   "ServiceCosmetics": {
     "heroTitle": "NMPA Cosmetics Filing for Global Beauty Brands",

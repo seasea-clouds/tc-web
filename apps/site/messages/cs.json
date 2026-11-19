@@ -309,7 +309,11 @@
     "coverItems5": "Každoroční sledování shody pro nepřerušený přístup na trh",
     "coverItems6": "Příprava na nové kategorie katalogu 2025 včetně lithium-iontových baterií",
     "metaTitle": "Certifikace CCC | průvodce vývozem do Číny pro české výrobce",
-    "metaDescription": "Certifikace CCC pro české výrobce: rozdíl od CE, proces certifikace, testy, audit továrny, doba a náklady. Podpora v češtině."
+    "metaDescription": "Certifikace CCC pro české výrobce: rozdíl od CE, proces certifikace, testy, audit továrny, doba a náklady. Podpora v češtině.",
+    "faq7q": "Jaký je rozdíl mezi CCC a CQC?",
+    "faq7a": "CCC je povinná certifikace: výrobek v katalogu CCC nelze bez ní dovézt ani prodávat v Číně a značku vydává subjekt pověřený CNCA. CQC je název jednoho z těchto subjektů — Čínského centra certifikace kvality. Záměna je pochopitelná, protože CQC provozuje i dobrovolné programy a tiskne vlastní, podobně vypadající značku CQC. Praktické pravidlo: je-li výrobek v katalogu CCC, celní správa i dohled nad trhem požadují certifikát CCC; dobrovolný certifikát CQC je signál kvality, nikoli náhrada. Před naceněním ověřujeme položku katalogu proti konkrétnímu kódu HS a popisu výrobku, protože jedna zásilka může ležet na obou stranách hranice: napájecí adaptér CCC potřebuje, čistě dekorační předmět ve stejné krabici ne.",
+    "faq8q": "Pokrývá jeden certifikát CCC všechny modely a všechny továrny?",
+    "faq8a": "Ne, a právě tady se rozcházejí rozpočty. Certifikát CCC pokrývá definovanou žádostí jednotku: modely seskupené podle shodného designu, konstrukce a bezpečnostně kritických dílů. Nabíječka 5 W a 65 W se stejnou architekturou může jednotku sdílet; s jiným transformátorem nebo jiným ochranným obvodem ne. Každé výrobní místo musí být navíc uvedeno v certifikátu a projít vlastní první inspekcí továrny, takže druhá továrna znamená rozšíření, ne kopii. Dodatečné přidání modelu je žádost o změnu: levnější než nový certifikát, ale ne zdarma. Začínáme od kusovníku a seznamu továren a navrhujeme nejmenší obhajitelný počet žádostních jednotek — obvykle méně, než klient čeká, někdy více."
   },
   "ServiceCosmetics": {
     "heroTitle": "Registrace kosmetiky NMPA pro české značky",

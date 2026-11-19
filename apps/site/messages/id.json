@@ -309,7 +309,11 @@
     "coverItems5": "Pemantauan kepatuhan tahunan untuk akses pasar yang tidak terputus",
     "coverItems6": "Kategori baru 2025 termasuk baterai lithium-ion",
     "metaTitle": "Sertifikasi CCC | Sertifikasi Produk Wajib Tiongkok",
-    "metaDescription": "Sertifikasi CCC untuk produsen Indonesia: perbedaan dengan SNI, proses sertifikasi, pengujian, audit pabrik, durasi dan biaya. Dukungan bahasa Indonesia."
+    "metaDescription": "Sertifikasi CCC untuk produsen Indonesia: perbedaan dengan SNI, proses sertifikasi, pengujian, audit pabrik, durasi dan biaya. Dukungan bahasa Indonesia.",
+    "faq7q": "Apa perbedaan CCC dan CQC?",
+    "faq7a": "CCC adalah sertifikasi wajib: produk dalam daftar CCC tidak dapat diimpor atau dijual di Tiongkok tanpanya, dan tanda diterbitkan melalui lembaga yang ditunjuk CNCA. CQC adalah nama salah satu lembaga tersebut, China Quality Certification Centre. Kebingungan wajar karena CQC juga menjalankan skema sukarela dan mencetak tanda CQC sendiri yang tampak mirip. Aturan praktisnya: jika produk Anda ada dalam daftar CCC, sertifikat yang diminta bea cukai dan pengawas pasar adalah CCC; sertifikat sukarela CQC adalah sinyal mutu, bukan pengganti. Kami memeriksa entri daftar terhadap kode HS dan deskripsi produk Anda sebelum memberi harga, karena satu kiriman bisa berada di kedua sisi garis: adaptor daya memerlukan CCC, sedangkan barang murni dekoratif dalam karton yang sama tidak.",
+    "faq8q": "Apakah satu sertifikat CCC mencakup semua model dan semua pabrik?",
+    "faq8a": "Tidak, dan di sinilah anggaran sering meleset. Sertifikat CCC mencakup unit permohonan tertentu: model yang dikelompokkan berdasarkan desain, konstruksi, dan komponen kritis keselamatan yang sama. Pengisi daya 5 W dan 65 W dengan arsitektur sama dapat berbagi satu unit; yang berbeda transformator atau rangkaian proteksi tidak. Setiap lokasi produksi juga harus tercantum dalam sertifikat dan lulus inspeksi pabrik awal masing-masing, sehingga pabrik kedua berarti perluasan, bukan salinan. Menambah model kemudian adalah permohonan perubahan: lebih murah daripada sertifikat baru, tetapi tidak gratis. Kami mulai dari daftar material dan daftar pabrik, lalu mengusulkan jumlah unit permohonan paling sedikit yang dapat dipertahankan — biasanya lebih sedikit dari perkiraan klien, kadang lebih banyak."
   },
   "ServiceCosmetics": {
     "heroTitle": "Registrasi Kosmetik NMPA – untuk Merek Indonesia",

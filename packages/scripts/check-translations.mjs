@@ -663,7 +663,7 @@ const ENGLISH_RESIDUAL_ALLOW = new Set([
   'FCC', 'DXF',
   'Color', 'Consumer', 'Electronics', 'Competing', 'Origins', 'Top',
   // 第八批残留豁免（缩写/标准名/借词 — 不需翻译）
-  'BSE', 'Brexit', 'Cainiao', 'ChAFTA', 'Kimchi', 'LED', 'MIIT', 'MOFCOM',
+  'BSE', 'Brexit', 'Cainiao', 'ChAFTA', 'Kimchi', 'LED', 'MIIT', 'MOFCOM', 'CQC', 'CNCA',
   'RCEP', 'RoHS', 'Paid', 'cGMP', 'FDA', 'vitro',
   // 第九批残留豁免（更多缩写/标准名/专用名词）
   'ACETA', 'ASEAN', 'BRICS', 'CHAFTA', 'NDRC', 'NMAP', 'NPC', 'Mercosur',

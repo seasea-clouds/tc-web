@@ -309,7 +309,11 @@
     "coverItems5": "Yıllık gözetim uyumluluk desteği",
     "coverItems6": "Lityum iyon piller dahil 2025’in yeni kategorileri",
     "metaTitle": "CCC Sertifikası Alımı | Türk üreticiler için Çin rehberi",
-    "metaDescription": "Türk üreticiler için CCC sertifikası: CE/TSE farkı, belgelendirme süreci, testler, fabrika denetimi, süre ve maliyet. Türkçe destek."
+    "metaDescription": "Türk üreticiler için CCC sertifikası: CE/TSE farkı, belgelendirme süreci, testler, fabrika denetimi, süre ve maliyet. Türkçe destek.",
+    "faq7q": "CCC ile CQC arasındaki fark nedir?",
+    "faq7a": "CCC zorunlu sertifikasyondur: CCC kataloğunda yer alan bir ürün, sertifika olmadan Çin'e ithal edilemez veya Çin'de satılamaz ve marka CNCA tarafından yetkilendirilmiş bir kuruluş aracılığıyla verilir. CQC bu kuruluşlardan birinin, yani Çin Kalite Sertifikasyon Merkezi'nin adıdır. Karışıklık anlaşılır, çünkü CQC aynı zamanda gönüllü programlar yürütür ve benzer görünen kendi CQC markasını basar. Pratik kural: ürününüz CCC kataloğundaysa gümrük ve piyasa denetiminin istediği CCC sertifikasıdır; gönüllü CQC sertifikası bir kalite göstergesidir, ikame değildir. Fiyat vermeden önce katalog kaydını sizin özel HS kodunuz ve ürün tanımınızla karşılaştırırız, çünkü aynı sevkiyat çizginin iki tarafına düşebilir: bir güç adaptörü CCC gerektirir, aynı kutudaki tamamen dekoratif bir ürün gerektirmez.",
+    "faq8q": "Bir CCC sertifikası tüm modelleri ve tüm fabrikaları kapsar mı?",
+    "faq8a": "Hayır ve bütçeler tam burada kayar. CCC sertifikası tanımlı bir başvuru birimini kapsar: aynı tasarım, yapı ve güvenlik açısından kritik bileşenlere göre gruplanan modeller. Aynı mimarideki 5 W ve 65 W şarj cihazı bir birimi paylaşabilir; farklı transformatörü veya farklı koruma devresi olan paylaşamaz. Ayrıca her üretim tesisi sertifikada belirtilmeli ve kendi ilk fabrika denetimini geçmelidir; ikinci fabrika kopya değil kapsam genişletmesi demektir. Sonradan model eklemek değişiklik başvurusudur: yeni sertifikadan ucuz ama ücretsiz değil. Malzeme listesi ve fabrika listesinden başlar, savunulabilir en az başvuru birimi sayısını öneririz; bu genellikle müşterinin beklediğinden azdır, bazen fazladır."
   },
   "ServiceCosmetics": {
     "heroTitle": "NMPA Kozmetik Kaydı – Türk kozmetik markaları",

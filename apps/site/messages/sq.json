@@ -309,7 +309,11 @@
     "coverItems5": "Monitorimi vjetor i përputhshmërisë për akses të pandërprerë në treg",
     "coverItems6": "Kategoritë e reja të vitit 2025, përfshirë bateritë litium-jon",
     "metaTitle": "Certifikimi CCC | Certifikim i detyrueshëm për produktin",
-    "metaDescription": "Certifikimi CCC për prodhuesit shqiptarë: ndryshimi nga CE, procesi i certifikimit, testet, auditimi i fabrikës, koha dhe kostoja. Mbështetje në shqip."
+    "metaDescription": "Certifikimi CCC për prodhuesit shqiptarë: ndryshimi nga CE, procesi i certifikimit, testet, auditimi i fabrikës, koha dhe kostoja. Mbështetje në shqip.",
+    "faq7q": "Cili është ndryshimi midis CCC dhe CQC?",
+    "faq7a": "CCC është certifikimi i detyrueshëm: një produkt në katalogun CCC nuk mund të importohet ose shitet në Kinë pa të, dhe shenja lëshohet përmes një organi të caktuar nga CNCA. CQC është emri i njërit prej këtyre organeve — Qendra Kineze e Certifikimit të Cilësisë. Konfuzioni është i kuptueshëm, sepse CQC drejton edhe skema vullnetare dhe shtyp shenjën e vet CQC, me pamje të ngjashme. Rregulli praktik: nëse produkti është në katalogun CCC, certifikata që kërkojnë dogana dhe autoriteti i mbikëqyrjes së tregut është ajo CCC; një certifikatë vullnetare CQC është sinjal cilësie, jo zëvendësues. Ne kontrollojmë zërin e katalogut kundrejt kodit tuaj konkret HS dhe përshkrimit të produktit përpara se të japim çmim, sepse një dërgesë mund të jetë në të dyja anët e vijës: një adaptor rrjeti kërkon CCC, një artikull thjesht dekorativ në të njëjtën kuti jo.",
+    "faq8q": "A mbulon një certifikatë CCC të gjitha modelet dhe të gjitha fabrikat?",
+    "faq8a": "Jo, dhe pikërisht këtu prishen buxhetet. Një certifikatë CCC mbulon një njësi kërkese të përcaktuar: modele të grupuara sipas të njëjtit dizajn, konstruksion dhe komponentëve kritikë për sigurinë. Një karikues 5 W dhe një 65 W me të njëjtën arkitekturë mund të ndajnë një njësi; një me transformator ose qark mbrojtjeje të ndryshëm jo. Çdo vend prodhimi duhet gjithashtu të përmendet në certifikatë dhe të kalojë inspektimin e vet të parë të fabrikës, prandaj fabrika e dytë do të thotë zgjerim, jo kopje. Shtimi i një modeli më vonë është kërkesë ndryshimi: më e lirë se një certifikatë e re, por jo falas. Nisim nga lista e materialeve dhe lista e fabrikave, pastaj propozojmë numrin më të vogël të mbrojtshëm të njësive të kërkesës — zakonisht më pak nga sa pret klienti, ndonjëherë më shumë."
   },
   "ServiceCosmetics": {
     "heroTitle": "Regjistrim NMPA i kozmetikës për markat shqiptare",

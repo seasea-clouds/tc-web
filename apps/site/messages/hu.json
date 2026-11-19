@@ -309,7 +309,11 @@
     "coverItems5": "Éves megfelelőségi nyomon követés a zavartalan piaci hozzáférésért",
     "coverItems6": "2025-ös új kategóriák, köztük a lítium-ion akkumulátorok",
     "metaTitle": "CCC-tanúsítás Kínában | kötelező terméktanúsítás",
-    "metaDescription": "CCC-tanúsítás magyar gyártóknak: különbség a CE-jelöléshez képest, tanúsítási folyamat, vizsgálatok, gyári audit, idő és költség. Magyar nyelvű támogatás."
+    "metaDescription": "CCC-tanúsítás magyar gyártóknak: különbség a CE-jelöléshez képest, tanúsítási folyamat, vizsgálatok, gyári audit, idő és költség. Magyar nyelvű támogatás.",
+    "faq7q": "Mi a különbség a CCC és a CQC között?",
+    "faq7a": "A CCC a kötelező tanúsítás: a CCC-jegyzékben szereplő terméket enélkül nem lehet Kínába behozni vagy ott értékesíteni, a jelet pedig a CNCA által kijelölt szervezet adja ki. A CQC ezen szervezetek egyikének a neve – a Kínai Minőségtanúsítási Központé. Az összetévesztés érthető, mert a CQC önkéntes programokat is működtet, és saját, hasonlóan kinéző CQC-jelet nyomtat. A gyakorlati szabály: ha a termék a CCC-jegyzékben van, a vámhatóság és a piacfelügyelet a CCC-tanúsítványt kéri; az önkéntes CQC-tanúsítvány minőségi jelzés, nem helyettesítő. Árajánlat előtt ellenőrizzük a jegyzékbeli tételt az adott HS-kóddal és termékleírással szemben, mert egy szállítmány a határ mindkét oldalán lehet: a hálózati adapterhez CCC kell, a dobozban lévő tisztán dekoratív tárgyhoz nem.",
+    "faq8q": "Lefed egy CCC-tanúsítvány minden modellt és minden gyárat?",
+    "faq8a": "Nem, és a költségvetések jellemzően itt csúsznak el. Egy CCC-tanúsítvány egy meghatározott kérelemegységet fed le: azonos kialakítás, szerkezet és biztonságkritikus alkatrészek szerint csoportosított modelleket. Egy 5 W-os és egy 65 W-os töltő azonos architektúrával osztozhat egy egységen; eltérő transzformátorral vagy védelmi áramkörrel nem. Minden gyártóhelyet fel kell tüntetni a tanúsítványon, és mindegyiknek át kell esnie a saját első gyárellenőrzésén, így a második gyár bővítést jelent, nem másolatot. Egy modell utólagos hozzáadása módosítási kérelem: olcsóbb az új tanúsítványnál, de nem ingyenes. Az anyagjegyzékből és a gyárlistából indulunk ki, majd a legkisebb védhető kérelemegység-számot javasoljuk – általában kevesebbet, mint amire az ügyfél számít, néha többet."
   },
   "ServiceCosmetics": {
     "heroTitle": "NMPA-kozmetikaregisztráció magyar márkáknak",

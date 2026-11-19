@@ -309,7 +309,11 @@
     "coverItems5": "Årlig tillsyn för fortsatt marknadstillträde",
     "coverItems6": "Nya kategorier från 2025, inklusive litiumjonbatterier",
     "metaTitle": "CCC-certifiering | Guide för svenska exportörer till Kina",
-    "metaDescription": "CCC-certifiering för svenska exportörer: skillnad mot CE, certifieringsprocess, tester, fabriksrevision, tid och kostnad. Support på svenska."
+    "metaDescription": "CCC-certifiering för svenska exportörer: skillnad mot CE, certifieringsprocess, tester, fabriksrevision, tid och kostnad. Support på svenska.",
+    "faq7q": "Vad är skillnaden mellan CCC och CQC?",
+    "faq7a": "CCC är den obligatoriska certifieringen: en produkt i CCC-katalogen får inte importeras eller säljas i Kina utan den, och märket utfärdas via ett organ som CNCA utsett. CQC är namnet på ett av dessa organ, China Quality Certification Centre. Förvirringen är begriplig, eftersom CQC också driver frivilliga program och trycker ett eget, snarlikt CQC-märke. Den praktiska regeln: står din produkt i CCC-katalogen är det CCC-certifikatet som tullen och marknadstillsynen efterfrågar; ett frivilligt CQC-certifikat är en kvalitetssignal, inte en ersättning. Vi kontrollerar katalogposten mot din specifika HS-kod och produktbeskrivning innan vi lämnar pris, eftersom en sändning kan ligga på båda sidor om gränsen: en nätadapter behöver CCC, en rent dekorativ artikel i samma kartong inte.",
+    "faq8q": "Täcker ett CCC-certifikat alla modeller och alla fabriker?",
+    "faq8a": "Nej, och det är här budgetarna spricker. Ett CCC-certifikat täcker en definierad ansökningsenhet: modeller grupperade efter identisk design, konstruktion och säkerhetskritiska komponenter. En laddare på 5 W och en på 65 W med samma arkitektur kan dela enhet; en med annan transformator eller annan skyddskrets kan inte. Varje produktionsställe måste också anges i certifikatet och klara sin egen första fabriksinspektion, så en andra fabrik innebär en utökning, inte en kopia. Att lägga till en modell senare är en ändringsansökan: billigare än ett nytt certifikat, men inte gratis. Vi utgår från stycklistan och fabrikslistan och föreslår sedan det minsta försvarbara antalet ansökningsenheter — oftast färre än kunden förväntar sig, ibland fler."
   },
   "ServiceCosmetics": {
     "heroTitle": "NMPA-kosmetikregistrering för svenska varumärken",

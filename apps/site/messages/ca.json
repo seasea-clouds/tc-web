@@ -309,7 +309,11 @@
     "coverItems5": "Seguiment anual del compliment per mantenir la validesa del certificat",
     "coverItems6": "Noves categories de 2025, incloses les bateries d'ions de liti",
     "metaTitle": "Certificació CCC per a exportar a la Xina",
-    "metaDescription": "Certificació CCC per a fabricants catalans: diferència amb CE, procés de certificació, proves, auditoria de fàbrica, temps i cost. Suport en català."
+    "metaDescription": "Certificació CCC per a fabricants catalans: diferència amb CE, procés de certificació, proves, auditoria de fàbrica, temps i cost. Suport en català.",
+    "faq7q": "Quina diferència hi ha entre CCC i CQC?",
+    "faq7a": "CCC és la certificació obligatòria: un producte del catàleg CCC no es pot importar ni vendre a la Xina sense ella, i la marca l'emet un organisme designat per la CNCA. CQC és el nom d'un d'aquests organismes, el Centre Xinès de Certificació de la Qualitat. La confusió és comprensible, perquè CQC també gestiona esquemes voluntaris i imprimeix la seva pròpia marca CQC, d'aspecte semblant. La regla pràctica: si el producte és al catàleg CCC, el certificat que demanen la duana i el regulador de mercat és el CCC; un certificat voluntari CQC és un senyal de qualitat, no un substitut. Comprovem l'entrada del catàleg amb el vostre codi HS i la descripció concreta abans de pressupostar, perquè un mateix enviament pot quedar a banda i banda de la línia: un adaptador de xarxa necessita CCC, un article purament decoratiu a la mateixa caixa no.",
+    "faq8q": "Un certificat CCC cobreix tots els models i totes les fàbriques?",
+    "faq8a": "No, i aquí és on fallen els pressupostos. Un certificat CCC cobreix una unitat de sol·licitud definida: models agrupats pel mateix disseny, construcció i components crítics per a la seguretat. Un carregador de 5 W i un de 65 W amb la mateixa arquitectura poden compartir unitat; un amb transformador o circuit de protecció diferent, no. Cada planta de fabricació també ha de constar al certificat i superar la seva pròpia inspecció inicial de fàbrica, de manera que una segona planta implica una extensió, no una còpia. Afegir un model més endavant és una sol·licitud de canvi: més barata que un certificat nou, però no gratuïta. Partim de la llista de materials i de la llista de fàbriques, i proposem el nombre més petit defensable d'unitats de sol·licitud — normalment menys del que espera el client, de vegades més."
   },
   "ServiceCosmetics": {
     "heroTitle": "Registre NMPA de cosmètics per a marques catalanes",

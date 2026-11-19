@@ -309,7 +309,11 @@
     "coverItems5": "Cumplimiento de vigilancia anual para su acceso al mercado",
     "coverItems6": "Nuevas categorías 2025, incluidas las baterías de iones de litio",
     "metaTitle": "Certificación CCC para exportar a China",
-    "metaDescription": "Certificación CCC para fabricantes latinoamericanos. Pruebas, auditoría de fábrica y certificado para electrónica y electrodomésticos."
+    "metaDescription": "Certificación CCC para fabricantes latinoamericanos. Pruebas, auditoría de fábrica y certificado para electrónica y electrodomésticos.",
+    "faq7q": "¿Cuál es la diferencia entre CCC y CQC?",
+    "faq7a": "CCC es la certificación obligatoria: un producto del catálogo CCC no puede importarse ni venderse en China sin ella, y la marca la emite un organismo designado por la CNCA. CQC es el nombre de uno de esos organismos, el Centro de Certificación de Calidad de China. La confusión es comprensible, porque CQC también gestiona esquemas voluntarios y estampa su propio sello CQC, de aspecto parecido. La regla práctica: si su producto está en el catálogo CCC, el certificado que piden la aduana y el regulador de mercado es el CCC; un certificado voluntario CQC es una señal de calidad, no un sustituto. Comprobamos la entrada del catálogo frente a su código HS y descripción concreta antes de cotizar, porque un mismo envío puede quedar a ambos lados de la línea: un adaptador de red necesita CCC, un artículo puramente decorativo en la misma caja no.",
+    "faq8q": "¿Un certificado CCC cubre todos los modelos y todas las fábricas?",
+    "faq8a": "No, y aquí es donde se desvían los presupuestos. Un certificado CCC cubre una unidad de solicitud definida: modelos agrupados por el mismo diseño, construcción y componentes críticos para la seguridad. Un cargador de 5 W y otro de 65 W con la misma arquitectura pueden compartir unidad; uno con transformador distinto o circuito de protección distinto, no. Cada planta de fabricación debe además figurar en el certificado y superar su propia inspección inicial de fábrica, de modo que una segunda planta implica una extensión, no una copia. Añadir un modelo después es una solicitud de cambio: más barata que un certificado nuevo, pero no gratuita. Partimos del listado de materiales y de la lista de fábricas, y proponemos el menor número defendible de unidades de solicitud, que suele ser inferior al que espera el cliente y a veces superior."
   },
   "ServiceCosmetics": {
     "heroTitle": "Registro NMPA de cosméticos para marcas de España y América Latina",

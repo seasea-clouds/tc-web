@@ -309,7 +309,11 @@
     "coverItems5": "Årlig overholdelsesovervågning for din markedsadgang",
     "coverItems6": "Nye kategorier fra 2025 inklusive lithium-ion-batterier",
     "metaTitle": "CCC-certificering | Guide for danske eksportører til Kina",
-    "metaDescription": "CCC-certificering for danske eksportører: forskel fra CE, certificeringsproces, tests, fabriksaudit, tid og omkostning. Support på dansk."
+    "metaDescription": "CCC-certificering for danske eksportører: forskel fra CE, certificeringsproces, tests, fabriksaudit, tid og omkostning. Support på dansk.",
+    "faq7q": "Hvad er forskellen på CCC og CQC?",
+    "faq7a": "CCC er den obligatoriske certificering: et produkt på CCC-listen kan hverken importeres eller sælges i Kina uden den, og mærket udstedes via et organ, som CNCA har udpeget. CQC er navnet på et af disse organer — China Quality Certification Centre. Forvirringen er forståelig, fordi CQC også driver frivillige ordninger og trykker sit eget, lignende CQC-mærke. Den praktiske regel: står dit produkt på CCC-listen, er det CCC-certifikatet, som tolden og markedstilsynet kræver; et frivilligt CQC-certifikat er et kvalitetssignal, ikke en erstatning. Vi kontrollerer listeposten mod din konkrete HS-kode og produktbeskrivelse, før vi giver pris, fordi én forsendelse kan ligge på begge sider af grænsen: en netadapter kræver CCC, en rent dekorativ artikel i samme kasse gør ikke.",
+    "faq8q": "Dækker ét CCC-certifikat alle modeller og alle fabrikker?",
+    "faq8a": "Nej, og det er her budgetterne skrider. Et CCC-certifikat dækker en defineret ansøgningsenhed: modeller grupperet efter samme design, konstruktion og sikkerhedskritiske komponenter. En lader på 5 W og en på 65 W med samme arkitektur kan dele en enhed; en med anden transformer eller andet beskyttelseskredsløb kan ikke. Hvert produktionssted skal desuden være nævnt i certifikatet og bestå sin egen første fabriksinspektion, så en anden fabrik betyder en udvidelse, ikke en kopi. At tilføje en model senere er en ændringsansøgning: billigere end et nyt certifikat, men ikke gratis. Vi starter med styklister og fabrikslisten og foreslår derefter det mindst forsvarlige antal ansøgningsenheder — oftest færre, end kunden forventer, indimellem flere."
   },
   "ServiceCosmetics": {
     "heroTitle": "NMPA-kosmetikregistrering for danske mærker",

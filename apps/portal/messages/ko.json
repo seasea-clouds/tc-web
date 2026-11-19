@@ -2321,7 +2321,8 @@
     "yourProduct": "귀하의 제품",
     "cccGlossary_factoryAuditTerm": "공장 감사",
     "cccMarket_recoHigh": "CCC 인증 필요 — 유형 테스트, 공장 검사 및 인증 검토를 위해 CNCA 공인 인증 기관에 참여하세요.",
-    "cccMarket_recoLow": "이 제품 카테고리에는 CCC 인증이 필요하지 않습니다."
+    "cccMarket_recoLow": "이 제품 카테고리에는 CCC 인증이 필요하지 않습니다.",
+    "gaccGlossary_decree280": "해외 식품 제조업체에 관한 GACC 규정으로 2026년 6월 1일 시행. 의무 등록을 유지하고 갱신은 유효기간 만료 3~12개월 전으로 정한다."
   },
   "Cookie": {
     "accept": "모두 수락",

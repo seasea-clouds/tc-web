@@ -2321,7 +2321,8 @@
     "yourProduct": "Váš produkt",
     "cccGlossary_factoryAuditTerm": "Audit továrne",
     "cccMarket_recoHigh": "Vyžaduje sa certifikácia CCC – zapojte certifikačný orgán akreditovaný CNCA na testovanie typu, inšpekciu vo výrobe a preskúmanie certifikácie. Odporúča sa profesionálna podpora zhody.",
-    "cccMarket_recoLow": "Pre túto kategóriu produktov sa nevyžaduje certifikácia CCC. Platia štandardné postupy vstupu na trh."
+    "cccMarket_recoLow": "Pre túto kategóriu produktov sa nevyžaduje certifikácia CCC. Platia štandardné postupy vstupu na trh.",
+    "gaccGlossary_decree280": "Nariadenie GACC o zahraničných výrobcoch potravín, účinné od 1. júna 2026. Zachováva povinnú registráciu a stanovuje obnovu 3 až 12 mesiacov pred vypršaním."
   },
   "Cookie": {
     "accept": "Prijať všetko",

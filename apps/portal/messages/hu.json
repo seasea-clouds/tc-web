@@ -2321,7 +2321,8 @@
     "yourProduct": "Az Ön terméke",
     "cccGlossary_factoryAuditTerm": "Gyári audit",
     "cccMarket_recoHigh": "CCC-tanúsítvány szükséges – vegyen fel egy CNCA által akkreditált tanúsító szervezetet a típusvizsgálathoz, a gyári ellenőrzéshez és a tanúsítás felülvizsgálatához. Professzionális megfelelőségi támogatás javasolt.",
-    "cccMarket_recoLow": "Ehhez a termékkategóriához nincs szükség CCC-tanúsítványra. Szabványos piacra lépési eljárások érvényesek."
+    "cccMarket_recoLow": "Ehhez a termékkategóriához nincs szükség CCC-tanúsítványra. Szabványos piacra lépési eljárások érvényesek.",
+    "gaccGlossary_decree280": "A GACC külföldi élelmiszer-termelőkre vonatkozó rendelete, 2026. június 1-jétől hatályos. Fenntartja a kötelező regisztrációt, és a megújítást a lejárat előtti 3–12 hónapra teszi."
   },
   "Cookie": {
     "accept": "Az összes elfogadása",

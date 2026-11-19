@@ -2321,7 +2321,8 @@
     "yourProduct": "Seu produto",
     "cccGlossary_factoryAuditTerm": "Auditoria de Fábrica",
     "cccMarket_recoHigh": "Certificação CCC necessária — contrate um organismo de certificação credenciado pela CNCA para testes de tipo, inspeção de fábrica e revisão de certificação.",
-    "cccMarket_recoLow": "Nenhuma certificação CCC é necessária para esta categoria de produto."
+    "cccMarket_recoLow": "Nenhuma certificação CCC é necessária para esta categoria de produto.",
+    "gaccGlossary_decree280": "Regulamento do GACC sobre fabricantes estrangeiros de alimentos, em vigor desde 1º de junho de 2026. Mantém o registro obrigatório e fixa a renovação entre 3 e 12 meses antes do vencimento."
   },
   "Cookie": {
     "accept": "Aceitar tudo",

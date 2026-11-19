@@ -2321,7 +2321,8 @@
     "yourProduct": "Ihr Produkt",
     "cccGlossary_factoryAuditTerm": "Fabrikaudit",
     "cccMarket_recoHigh": "CCC-Zertifizierung erforderlich – beauftragen Sie eine von der CNCA akkreditierte Zertifizierungsstelle mit der Typprüfung, Werksinspektion und Zertifizierungsüberprüfung.",
-    "cccMarket_recoLow": "Für diese Produktkategorie ist keine CCC-Zertifizierung erforderlich."
+    "cccMarket_recoLow": "Für diese Produktkategorie ist keine CCC-Zertifizierung erforderlich.",
+    "gaccGlossary_decree280": "GACC-Verordnung über ausländische Lebensmittelhersteller, in Kraft seit 1. Juni 2026. Sie behält die Pflichtregistrierung bei und legt die Verlängerung auf 3 bis 12 Monate vor Ablauf fest."
   },
   "Cookie": {
     "accept": "Alle akzeptieren",

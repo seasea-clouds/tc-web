@@ -111,7 +111,7 @@ export function getGlossary(module: string, locale?: string): { term: string; de
     "GACC Food Registration": [
       {term: "GACC", def: t('gaccGlossary_gacc')},
       {term: "CIFER", def: t('gaccGlossary_cifer')},
-      {term: "Decree 248", def: t('gaccGlossary_decree248')},
+      {term: "Decree 280", def: t('gaccGlossary_decree280')},
       {term: "CRA", def: t('gaccGlossary_cra')},
       {term: "CIQ", def: t('gaccGlossary_ciq')},
       {term: "GB 7718", def: t('gaccGlossary_gb7718')},

@@ -2321,7 +2321,8 @@
     "yourProduct": "El vostre producte",
     "cccGlossary_factoryAuditTerm": "Auditoria de fàbrica",
     "cccMarket_recoHigh": "Cal certificació CCC: contracteu un organisme de certificació acreditat per CNCA per a proves de tipus, inspecció de fàbrica i revisió de certificació.",
-    "cccMarket_recoLow": "No es requereix cap certificació CCC per a aquesta categoria de producte."
+    "cccMarket_recoLow": "No es requereix cap certificació CCC per a aquesta categoria de producte.",
+    "gaccGlossary_decree280": "Reglament del GACC sobre fabricants estrangers d'aliments, vigent des de l'1 de juny de 2026. Manté el registre obligatori i fixa la renovació entre 3 i 12 mesos abans del venciment."
   },
   "Cookie": {
     "accept": "Acceptar-ho tot",

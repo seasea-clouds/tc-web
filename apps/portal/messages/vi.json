@@ -2321,7 +2321,8 @@
     "yourProduct": "Sản phẩm của bạn",
     "cccGlossary_factoryAuditTerm": "Kiểm toán nhà máy",
     "cccMarket_recoHigh": "Yêu cầu phải có chứng nhận CCC — thuê tổ chức chứng nhận được CNCA công nhận để kiểm tra kiểu, kiểm tra nhà máy và đánh giá chứng nhận.",
-    "cccMarket_recoLow": "Không cần chứng nhận CCC cho danh mục sản phẩm này."
+    "cccMarket_recoLow": "Không cần chứng nhận CCC cho danh mục sản phẩm này.",
+    "gaccGlossary_decree280": "Quy định của GACC về nhà sản xuất thực phẩm nước ngoài, có hiệu lực từ 1 tháng 6 năm 2026. Duy trì đăng ký bắt buộc và quy định gia hạn từ 3 đến 12 tháng trước khi hết hạn."
   },
   "Cookie": {
     "accept": "Chấp nhận tất cả",

@@ -39,9 +39,9 @@ const TEMPLATE_PATH = path.join(repoRoot, 'apps/portal/src/core/report/template.
 
 /* 术语白名单：这些硬编码术语有理由保持英文（缩写/标准号/品牌名等） */
 const GLOSSARY_ALLOW_TERM_EXACT = [
-  // 缩写/标准号
+  // 缩写/标准号/法规号（法规号本身是标识符不翻译，释义走 t('...Glossary_...') 本地化）
   'CCC', 'CNCA', 'GB 4943', 'GB 9254', 'CB Report', 'SRRC', 'SDOC',
-  'GACC', 'CIFER', 'CRA', 'CIQ', 'GB 7718', 'GB 28050', 'Decree 248',
+  'GACC', 'CIFER', 'CRA', 'CIQ', 'GB 7718', 'GB 28050', 'Decree 280',
   'GB 2760', "NRV%", 'NMPA', 'CSAR', 'ICSC', 'Chinese RP', 'GMP',
   'CBEC', '1210', '9610', 'PIPL', 'Tmall Global',
   'CNIPA', 'Nice Classification', 'Madrid System',

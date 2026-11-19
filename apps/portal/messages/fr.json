@@ -2321,7 +2321,8 @@
     "yourProduct": "Votre produit",
     "cccGlossary_factoryAuditTerm": "Audit d'Usine",
     "cccMarket_recoHigh": "Certification CCC requise-engagez un organisme de certification accrédité par la CNCA pour les essais de type, l'inspection en usine et l'examen de la certification. Assistance professionnelle en matière de conformité recommandée.",
-    "cccMarket_recoLow": "Aucune certification CCC requise pour cette catégorie de produits. Des procédures standard d'entrée sur le marché s'appliquent."
+    "cccMarket_recoLow": "Aucune certification CCC requise pour cette catégorie de produits. Des procédures standard d'entrée sur le marché s'appliquent.",
+    "gaccGlossary_decree280": "Règlement du GACC sur les fabricants étrangers de denrées alimentaires, en vigueur depuis le 1er juin 2026. Il maintient l'enregistrement obligatoire et fixe le renouvellement entre 3 et 12 mois avant l'expiration."
   },
   "Cookie": {
     "accept": "Accepter tout",

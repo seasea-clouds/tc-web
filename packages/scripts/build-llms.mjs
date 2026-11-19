@@ -317,6 +317,8 @@ export function buildLLMs(baseUrl, outDir) {
   for (const l of LOCALES) {
     fullContent += `- [${l}](llms-${l}.txt)\n`;
   }
+  // 机器可读层：agent-skills 清单（构建期生成，见 build-agent-skills.mjs）
+  fullContent += `\n## Machine-readable\n\n- [Agent skills manifest](${baseUrl}/.well-known/agent-skills/index.json)\n`;
   fullContent += '\n---\n\n';
   fullContent += perLocale['en'];
   fs.writeFileSync(path.join(outDir, 'llms.txt'), fullContent, 'utf-8');

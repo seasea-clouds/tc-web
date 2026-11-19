@@ -2321,7 +2321,8 @@
     "yourProduct": "Tuotteesi",
     "cccGlossary_factoryAuditTerm": "Tehdastarkastus",
     "cccMarket_recoHigh": "CCC-sertifiointi vaaditaan – ota yhteyttä CNCA:n akkreditoituun sertifiointielimeen tyyppitestausta, tehdastarkastusta ja sertifiointitarkastusta varten.",
-    "cccMarket_recoLow": "Tälle tuotekategorialle ei vaadita CCC-sertifikaattia."
+    "cccMarket_recoLow": "Tälle tuotekategorialle ei vaadita CCC-sertifikaattia.",
+    "gaccGlossary_decree280": "GACC:n asetus ulkomaisista elintarvikkeiden valmistajista, voimassa 1. kesäkuuta 2026 alkaen. Säilyttää pakollisen rekisteröinnin ja asettaa uusimisen 3–12 kuukautta ennen voimassaolon päättymistä."
   },
   "Cookie": {
     "accept": "Hyväksy kaikki",

@@ -62,6 +62,11 @@ async function main() {
   const { buildLLMs } = await import(path.join(__dirname, 'build-llms.mjs'));
   buildLLMs(baseUrl, outDir);
 
+  // 3.5 Agent skills manifest — 构建期生成，杜绝手写漂移
+  console.log('[3.5] Generating agent-skills manifest...');
+  const { buildAgentSkills } = await import(path.join(__dirname, 'build-agent-skills.mjs'));
+  buildAgentSkills(baseUrl, outDir);
+
   // 4. Search indexes — skipped, generated pre-build by apps/site/scripts/build-search-index.mjs
   console.log('[4/7] Search indexes — skipped (pre-build)');
 
@@ -89,6 +94,8 @@ async function main() {
       fs.copyFileSync(path.join(outDir, f), path.join(publicDir, f));
     }
   }
+
+  // agent-skills 由构建期生成，不进 public/（避免源码目录与产物双份真相）
 
   console.log('\n✅ build-all.mjs complete');
 }

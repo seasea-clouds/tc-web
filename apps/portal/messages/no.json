@@ -2321,7 +2321,8 @@
     "yourProduct": "Ditt produkt",
     "cccGlossary_factoryAuditTerm": "Fabrikkrevisjon",
     "cccMarket_recoHigh": "CCC-sertifisering kreves – engasjere et CNCA-akkreditert sertifiseringsorgan for typetesting, fabrikkinspeksjon og sertifiseringsgjennomgang. Profesjonell etterlevelsesstøtte anbefales.",
-    "cccMarket_recoLow": "Ingen CCC-sertifisering kreves for denne produktkategorien. Standard prosedyrer for markedsadgang gjelder."
+    "cccMarket_recoLow": "Ingen CCC-sertifisering kreves for denne produktkategorien. Standard prosedyrer for markedsadgang gjelder.",
+    "gaccGlossary_decree280": "GACC-forskrift om utenlandske matvareprodusenter, i kraft siden 1. juni 2026. Beholder obligatorisk registrering og fastsetter fornyelse 3 til 12 måneder før utløp."
   },
   "Cookie": {
     "accept": "Godta alle",

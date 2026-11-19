@@ -2321,7 +2321,8 @@
     "yourProduct": "Produk Anda",
     "cccGlossary_factoryAuditTerm": "Audit Pabrik",
     "cccMarket_recoHigh": "Sertifikasi CCC diperlukan — libatkan badan sertifikasi terakreditasi CNCA untuk pengujian tipe, inspeksi pabrik, dan tinjauan sertifikasi.",
-    "cccMarket_recoLow": "Tidak diperlukan sertifikasi CCC untuk kategori produk ini."
+    "cccMarket_recoLow": "Tidak diperlukan sertifikasi CCC untuk kategori produk ini.",
+    "gaccGlossary_decree280": "Peraturan GACC tentang produsen pangan luar negeri, berlaku sejak 1 Juni 2026. Mempertahankan registrasi wajib dan menetapkan perpanjangan 3 sampai 12 bulan sebelum kedaluwarsa."
   },
   "Cookie": {
     "accept": "Terima Semua",

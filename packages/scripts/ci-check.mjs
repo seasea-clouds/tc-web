@@ -210,6 +210,7 @@ const CHECK_LIST = [
   { script: 'check-llms.mjs', output: true },
   { script: 'check-seo-output.mjs', output: true },
   { script: 'check-link-hygiene.mjs', output: true },
+  { script: 'check-wiring.mjs', output: true },
   { script: 'clean-rsc.mjs', output: true },
 
   // ── 类型检查 ────────────────────────────────────────

@@ -2321,7 +2321,8 @@
     "yourProduct": "Produsul dvs",
     "cccGlossary_factoryAuditTerm": "Auditul fabricii",
     "cccMarket_recoHigh": "Este necesară certificarea CCC — angajați un organism de certificare acreditat CNCA pentru testarea de tip, inspecția în fabrică și revizuirea certificării.",
-    "cccMarket_recoLow": "Nu este necesară certificarea CCC pentru această categorie de produse."
+    "cccMarket_recoLow": "Nu este necesară certificarea CCC pentru această categorie de produse.",
+    "gaccGlossary_decree280": "Regulamentul GACC privind producătorii străini de alimente, în vigoare din 1 iunie 2026. Menține înregistrarea obligatorie și stabilește reînnoirea cu 3 până la 12 luni înainte de expirare."
   },
   "Cookie": {
     "accept": "Acceptați toate",

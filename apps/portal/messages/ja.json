@@ -2321,7 +2321,8 @@
     "yourProduct": "あなたの製品",
     "cccGlossary_factoryAuditTerm": "工場監査",
     "cccMarket_recoHigh": "CCC 認証が必要 — CNCA 認定の認証機関に型式試験、工場検査、認証レビューを依頼してください。",
-    "cccMarket_recoLow": "この製品カテゴリには CCC 認証は必要ありません。"
+    "cccMarket_recoLow": "この製品カテゴリには CCC 認証は必要ありません。",
+    "gaccGlossary_decree280": "海外の食品製造者に関する GACC 規則。2026 年 6 月 1 日施行。登録義務を維持し、更新は有効期限の 3〜12 か月前と定めている。"
   },
   "Cookie": {
     "accept": "すべてを受け入れる",

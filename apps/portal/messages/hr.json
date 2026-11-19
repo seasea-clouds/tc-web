@@ -2321,7 +2321,8 @@
     "yourProduct": "Vaš proizvod",
     "cccGlossary_factoryAuditTerm": "Tvornička revizija",
     "cccMarket_recoHigh": "Potrebna je CCC certifikacija — angažirajte certifikacijsko tijelo s akreditacijom CNCA za ispitivanje tipa, tvorničku inspekciju i pregled certifikacije.",
-    "cccMarket_recoLow": "Za ovu kategoriju proizvoda nije potreban CCC certifikat."
+    "cccMarket_recoLow": "Za ovu kategoriju proizvoda nije potreban CCC certifikat.",
+    "gaccGlossary_decree280": "Uredba GACC o stranim proizvođačima hrane, na snazi od 1. lipnja 2026. Zadržava obveznu registraciju i utvrđuje obnovu 3 do 12 mjeseci prije isteka."
   },
   "Cookie": {
     "accept": "Prihvati sve",

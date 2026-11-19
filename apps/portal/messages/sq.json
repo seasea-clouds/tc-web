@@ -2321,7 +2321,8 @@
     "yourProduct": "Produkti juaj",
     "cccGlossary_factoryAuditTerm": "Auditimi i fabrikës",
     "cccMarket_recoHigh": "Kërkohet certifikimi CCC — angazhoni një organ certifikimi të akredituar nga CNCA për testimin e tipit, inspektimin e fabrikës dhe rishikimin e certifikimit.",
-    "cccMarket_recoLow": "Nuk kërkohet certifikim CCC për këtë kategori produkti."
+    "cccMarket_recoLow": "Nuk kërkohet certifikim CCC për këtë kategori produkti.",
+    "gaccGlossary_decree280": "Rregullorja GACC për prodhuesit e huaj të ushqimit, në fuqi nga 1 qershor 2026. Mban regjistrimin e detyrueshëm dhe cakton rinovimin 3 deri 12 muaj para skadimit."
   },
   "Cookie": {
     "accept": "Prano të gjitha",

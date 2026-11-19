@@ -362,7 +362,11 @@
     "coverItems5": "Asistență pentru testarea eficacității declarațiilor",
     "coverItems6": "Conformitate post-lansare (raportarea evenimentelor adverse, raport anual)",
     "metaTitle": "Înregistrare cosmetică NMPA pentru mărci globale | Export în China",
-    "metaDescription": "Înregistrare cosmetice NMPA pentru mărci românești: clasificare, scutire de testare pe animale, persoană responsabilă în China, durată."
+    "metaDescription": "Înregistrare cosmetice NMPA pentru mărci românești: clasificare, scutire de testare pe animale, persoană responsabilă în China, durată.",
+    "faq7q": "Cât durează notificarea NMPA și când pot începe vânzarea?",
+    "faq7a": "La cosmeticele obișnuite pasul de notificare este rapid: dosarul trece prin portalul NMPA și, dacă este complet, este acceptat în cinci zile lucrătoare — iar produsul poate fi vândut în timp ce evaluarea continuă. Timpul se duce în ce trebuie făcut înainte: trebuie numită o persoană responsabilă în China, produsul trebuie să treacă teste microbiologice, de metale grele și de stabilitate într-un laborator chinez, iar raportul de evaluare a siguranței trebuie semnat de un evaluator calificat. Realist, socotiți opt până la paisprezece săptămâni de la formula finală până la produsul vandabil, mai mult dacă formula trebuie ajustată după teste. Produsele de uz special, cum ar fi protecția solară, nu urmează această rută: necesită înregistrare, ceea ce adaugă șaizeci până la nouăzeci de zile lucrătoare de evaluare tehnică.",
+    "faq8q": "Produsul meu luminează pielea sau combate acneea. Este un cosmetic de uz special?",
+    "faq8a": "Deseori da, și este cea mai scumpă greșeală din categorie. Conform regulamentului din 2021, lista de uz special cuprinde: vopsirea părului, ondularea permanentă, îndepărtarea petelor și albirea, protecția solară, produsele împotriva căderii părului, plus orice produs care revendică o eficacitate nouă. Acneea singură nu este pe listă, dar un produs care o combină cu albirea, sau promite atenuarea pigmentării, intră în categoria albirii și necesită înregistrare, nu notificare. Decide revendicarea, nu ingredientul: același ser cu niacinamidă poate fi notificat ca obișnuit dacă promite doar hidratare și trebuie înregistrat dacă ambalajul promite estomparea petelor închise. Odată ce o revendicare de uz special este tipărită pe ambalaj, revenirea la notificare înseamnă machetă nouă și un nou test de eficacitate."
   },
   "ServiceEcommerce": {
     "heroTitle": "Comerț electronic transfrontalier pentru brandurile românești în China",
@@ -409,7 +413,11 @@
     "coverItems5": "Îndrumare privind scutirea de etichetare pentru produsele transfrontaliere",
     "coverItems6": "Conformitatea datelor pentru operațiunile transfrontaliere (PIPL)",
     "metaTitle": "Comerț electronic transfrontalier China | Ghid Tmall și JD",
-    "metaDescription": "Mărci românești în China prin e-commerce transfrontalier: Tmall Global, JD Worldwide, conformitate CBEC, logistică, plăți."
+    "metaDescription": "Mărci românești în China prin e-commerce transfrontalier: Tmall Global, JD Worldwide, conformitate CBEC, logistică, plăți.",
+    "faq7q": "Ce este lista pozitivă transfrontalieră și ce este exclus?",
+    "faq7a": "Lista pozitivă — oficial Lista mărfurilor de import cu amănuntul pentru comerțul electronic transfrontalier — stabilește ce poate intra prin canalul CBEC. A început în 2016 cu 1.142 poziții tarifare; versiunea în vigoare din martie 2022 cuprinde aproximativ 1.476. Dacă codul dvs. HS nu apare, canalul este închis indiferent de platformă. Excluderile cântăresc mai mult decât includerile, pentru că mai multe categorii sunt pe listă dar poartă o notă: medicamentele care necesită înregistrare, dispozitivele medicale din afara claselor permise și primele importuri de formule pentru sugari, alimente pentru scopuri medicale speciale și suplimente necesită înregistrare sau notificare înainte de vânzare, chiar și prin CBEC. Verificăm mai întâi poziția tarifară și apoi nota, pentru că un produs poate trece lista și totuși să fie blocat de nota atașată.",
+    "faq8q": "Poate un produs să treacă mai târziu de la transfrontalier la comerț general?",
+    "faq8a": "Da, și multe branduri planifică astfel: CBEC pentru a testa cererea, comerț general când volumul justifică costurile fixe. Nu este un întrerupător, ci o a doua intrare. Comerțul general cere o entitate chineză sau un importator înregistrat, etichetare chineză conform GB 7718-2025 sau regulilor cosmetice, și aprobarea prealabilă cerută de categoria dvs.: notificare NMPA pentru cosmetice, înregistrare GACC pentru alimente, CCC pentru electronicele din listă. Mărfurile vândute prin CBEC nu au trecut de obicei niciodată aceste porți, așa că bugetați trei până la șase luni și o nouă rundă de teste. Două lucruri se păstrează: datele de vânzări, pe care platformele le acceptă ca dovadă la revizuirea categoriei, și marca, dacă a fost depusă în China. Pregătiți eticheta chineză și dosarul de înregistrare cât timp canalul CBEC încă funcționează, nu după ce decideți trecerea."
   },
   "ServiceBrand": {
     "heroTitle": "Protecția mărcii în China pentru firmele românești",
@@ -456,7 +464,11 @@
     "coverItems5": "Verificarea conformității publicității conform Legii chineze a publicității",
     "coverItems6": "Strategia de brand și îndrumare pentru aplicare",
     "metaTitle": "Înregistrare marcă în China | Protecția mărcii",
-    "metaDescription": "Înregistrarea mărcii în China pentru mărci românești: CNIPA, sistemul Madrid, contrafacere, protecție pe platforme."
+    "metaDescription": "Înregistrarea mărcii în China pentru mărci românești: CNIPA, sistemul Madrid, contrafacere, protecție pe platforme.",
+    "faq7q": "Ar trebui să îmi înregistrez marca înainte sau după intrarea pe piața chineză?",
+    "faq7a": "Înainte — și înainte ca cineva din lanțul de aprovizionare să vadă marca. China aplică principiul primului deponent: înregistrarea aparține celui care depune primul, nu celui care a folosit primul. Fereastra periculoasă este aceea în care fabrica, distribuitorul sau un operator de platformă află numele înainte ca cererea să fie depusă; speculanții urmăresc exact asta. Depunerea costă puțin și durează o zi, așa că depuneți în ziua în care decideți intrarea, chiar dacă intrarea efectivă este peste un an. Înregistrați transliterarea chineză sau semnul în caractere latine, ori ambele — speculantul înregistrează adesea numele chinezesc pe care nu l-ați revendicat. Data de prioritate este cea pe care vă veți sprijini ulterior și există doar din ziua în care CNIPA primește o cerere completă.",
+    "faq8q": "O companie chineză mi-a înregistrat deja marca. Ce pot face?",
+    "faq8a": "Trei căi, iar cea corectă depinde de fapte. Dacă înregistrarea este încă în perioada de publicare de trei luni, puteți formula opoziție. Dacă este deja acordată, puteți cere nulitatea în cinci ani pe motiv de rea-credință a solicitantului — ceea ce decide sunt dovezile utilizării anterioare, volumele de export și orice relație cu distribuitori. Dacă marca este înregistrată de trei ani și neutilizată în China, anularea pentru neutilizare este adesea mai rapidă și mai ieftină, deși speculantul o poate reînvia printr-o utilizare simbolică. Toate trei sunt proceduri administrative la CNIPA, nu procese, iar o decizie durează de obicei șase până la douăsprezece luni. Între timp continuați vânzarea în condițiile actuale și documentați fiecare utilizare a mărcii în China — facturi, pagini de produs, ambalaje — pentru că acel dosar devine cazul."
   },
   "ServiceCommon": {
     "whoTitle": "Pentru cine este acest serviciu?",

@@ -362,7 +362,11 @@
     "coverItems5": "Støtte til effekttesting for dokumenterte egenskaper",
     "coverItems6": "Oppfølging etter markedsføring (rapportering av bivirkninger, årsrapporter)",
     "metaTitle": "NMPA kosmetikkregistrering for globale merkevarer | Eksport til Kina",
-    "metaDescription": "NMPA-registrering for norske kosmetikkmerker: klassifisering, unntak fra dyreforsøk, ansvarlig part i Kina, tid."
+    "metaDescription": "NMPA-registrering for norske kosmetikkmerker: klassifisering, unntak fra dyreforsøk, ansvarlig part i Kina, tid.",
+    "faq7q": "Hvor lang tid tar NMPA-meldingen, og når kan jeg begynne å selge?",
+    "faq7a": "For vanlig kosmetikk er selve meldingstrinnet raskt: dokumentasjonen går gjennom NMPA-portalen og godtas innen fem virkedager hvis den er fullstendig — og produktet kan selges mens vurderingen pågår. Tiden ligger i det som må skje først: en kinesisk ansvarlig person må utpekes, produktet må bestå mikrobiologiske tester, tungmetall- og stabilitetstester ved et kinesisk laboratorium, og sikkerhetsvurderingsrapporten må signeres av en kvalifisert vurderer. Regn realistisk åtte til fjorten uker fra ferdig formel til salgbart produkt, lenger hvis formelen må justeres etter testene. Produkter til særlig bruk, som solbeskyttelse, går ikke denne veien: de krever registrering, noe som legger til seksti til nitti virkedager med teknisk vurdering.",
+    "faq8q": "Produktet mitt lysner huden eller bekjemper kviser. Er det kosmetikk til særlig bruk?",
+    "faq8a": "Ofte ja, og det er den dyreste feilen i kategorien. Etter forskriften fra 2021 omfatter listen for særlig bruk: hårfarging, permanent, fjerning av fregner og bleking, solbeskyttelse, midler mot hårtap, samt ethvert produkt som hevder en ny effekt. Kviser alene står ikke på listen, men et produkt som kombinerer det med bleking, eller lover å lette pigmentering, faller i blekekategorien og krever registrering i stedet for melding. Det er påstanden som avgjør, ikke ingrediensen: samme niacinamid-serum kan meldes som vanlig hvis det bare lover fukt, og må registreres hvis emballasjen lover å dempe mørke flekker. Når først en påstand om særlig bruk er trykt på emballasjen, betyr en retur til melding nytt trykk og en ny effekttest."
   },
   "ServiceEcommerce": {
     "heroTitle": "Grensekryssende e-handel for norske merkevarer i Kina",
@@ -409,7 +413,11 @@
     "coverItems5": "Veiledning om etikettfritak for grenseoverskridende produkter",
     "coverItems6": "Datasamsvar (PIPL) for grenseoverskridende virksomhet",
     "metaTitle": "Grenseoverskridende netthandel | Tmall, JD og Douyin",
-    "metaDescription": "Norske merker inn i Kina via grenseoverskridende netthandel: Tmall Global, JD Worldwide, CBEC-samsvar, logistikk, betaling."
+    "metaDescription": "Norske merker inn i Kina via grenseoverskridende netthandel: Tmall Global, JD Worldwide, CBEC-samsvar, logistikk, betaling.",
+    "faq7q": "Hva er den grenseoverskridende positivlisten, og hva er utelukket?",
+    "faq7a": "Positivlisten — formelt listen over detaljhandelsimporterte varer for grenseoverskridende e-handel — avgjør hva som i det hele tatt kan komme inn via CBEC-kanalen. Den startet i 2016 med 1 142 tariffposisjoner; versjonen som gjelder fra mars 2022 omfatter rundt 1 476. Står ikke HS-koden din der, er kanalen stengt uansett plattform. Utelukkelsene veier tyngre enn inkluderingene, fordi flere kategorier står på listen men har et notat: legemidler som krever registrering, medisinsk utstyr utenfor de tillatte klassene samt første import av morsmelkerstatning, næringsmidler til spesielle medisinske formål og kosttilskudd krever registrering eller melding før salg, også via CBEC. Vi sjekker tariffposisjonen først og notatet etterpå, fordi et produkt kan klare listen og likevel stoppe på merknaden som følger med.",
+    "faq8q": "Kan et produkt senere flyttes fra grenseoverskridende til vanlig handel?",
+    "faq8a": "Ja, og mange merkevarer planlegger slik: CBEC for å teste etterspørselen, vanlig handel når volumet rettferdiggjør de faste kostnadene. Det er ikke en bryter, men en andre inngang. Vanlig handel krever en kinesisk enhet eller registrert importør, kinesisk merking etter GB 7718-2025 eller kosmetikkreglene, og den forhåndsgodkjenningen kategorien din krever: NMPA-melding for kosmetikk, GACC-registrering for næringsmidler, CCC for listet elektronikk. Varer solgt via CBEC har som regel aldri passert disse portene, så budsjetter tre til seks måneder og en ny testrunde. To ting følger med: salgsdata, som plattformene godtar som bevis ved kategorivurdering, og varemerket, hvis det er søkt om i Kina. Bygg kinesisk merking og registreringsdossier mens CBEC-kanalen fortsatt går, ikke etter at du har bestemt deg for å bytte."
   },
   "ServiceBrand": {
     "heroTitle": "Varemerkebeskyttelse i Kina for norske selskaper",
@@ -456,7 +464,11 @@
     "coverItems5": "Reklamesamsvarsgjennomgang etter kinesisk reklamelov",
     "coverItems6": "Merkevarestrategi og rådgivning om håndheving",
     "metaTitle": "Varemerkeregistrering i Kina | Guide for norske merkevarer",
-    "metaDescription": "Varemerkeregistrering i Kina for norske merkevarer: CNIPA, Madridsystemet, forfalskning, plattformbeskyttelse."
+    "metaDescription": "Varemerkeregistrering i Kina for norske merkevarer: CNIPA, Madridsystemet, forfalskning, plattformbeskyttelse.",
+    "faq7q": "Bør jeg registrere varemerket mitt før eller etter inntreden på det kinesiske markedet?",
+    "faq7a": "Før — og før noen i forsyningskjeden ser merket. Kina anvender først-til-søknad: registreringen tilhører den som søker først, ikke den som brukte det først. Det farlige vinduet er når fabrikken, distributøren eller en plattformoperatør får vite navnet før søknaden din er levert; varemerkepirater følger nøyaktig med på det. Søknad koster lite og tar en dag, så lever den dagen du bestemmer deg for å gå inn, selv om selve inntreden er et år unna. Registrer den kinesiske translitterasjonen eller det latinske merket, eller begge — en pirat registrerer ofte det kinesiske navnet du ikke har gjort krav på. Prioritetsdatoen er det du senere støtter deg på, og den finnes bare fra den dagen CNIPA mottar en fullstendig søknad.",
+    "faq8q": "Et kinesisk selskap har allerede registrert merket mitt. Hva kan jeg gjøre?",
+    "faq8a": "Tre veier, og den riktige avhenger av fakta. Er registreringen fortsatt innenfor publiseringsperioden på tre måneder, kan du gjøre innsigelse. Er den allerede gitt, kan du innen fem år kreve ugyldighet med henvisning til søkerens ond tro — avgjørende er bevis for din tidligere bruk, eksportvolumene dine og ethvert distributørforhold. Er merket registrert i tre år uten bruk i Kina, er sletting på grunn av manglende bruk ofte raskere og billigere, selv om piraten kan gjenopplive det med symbolsk bruk. Alle tre er administrative saker hos CNIPA, ikke rettssaker, og en avgjørelse tar vanligvis seks til tolv måneder. Fortsett salget på nåværende vilkår, og dokumenter all bruk av merket i Kina — fakturaer, produktsider, emballasje — for den mappen blir saken."
   },
   "ServiceCommon": {
     "whoTitle": "Hvem er denne tjenesten for?",

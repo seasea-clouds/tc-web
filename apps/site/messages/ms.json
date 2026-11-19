@@ -362,7 +362,11 @@
     "coverItems5": "Sokongan ujian keberkesanan bagi fungsi yang dituntut",
     "coverItems6": "Pematuhan pasca pasaran (pemantauan kejadian buruk, laporan tahunan)",
     "metaTitle": "Pendaftaran kosmetik NMPA untuk jenama global | Eksport ke China",
-    "metaDescription": "Pendaftaran kosmetik NMPA untuk jenama Malaysia: klasifikasi, pengecualian ujian haiwan, penanggung jawab di China, tempoh."
+    "metaDescription": "Pendaftaran kosmetik NMPA untuk jenama Malaysia: klasifikasi, pengecualian ujian haiwan, penanggung jawab di China, tempoh.",
+    "faq7q": "Berapa lama pendaftaran NMPA dan bila saya boleh mula menjual?",
+    "faq7a": "Bagi kosmetik biasa, langkah pendaftaran itu sendiri pantas: dokumen dihantar melalui portal NMPA dan jika lengkap diterima dalam lima hari bekerja, dan produk boleh dijual semasa semakan berjalan. Masa terletak pada apa yang perlu dilakukan lebih awal: penanggungjawab di China mesti dilantik, produk mesti lulus ujian mikrobiologi, logam berat dan kestabilan di makmal China, dan laporan penilaian keselamatan mesti ditandatangani oleh penilai bertauliah. Secara realistik, kira lapan hingga empat belas minggu daripada formula muktamad sehingga produk boleh dijual, lebih lama jika formula perlu dilaraskan selepas ujian. Produk kegunaan khas seperti pelindung matahari tidak melalui laluan ini: ia memerlukan pendaftaran, yang menambah enam puluh hingga sembilan puluh hari bekerja semakan teknikal.",
+    "faq8q": "Produk saya mencerahkan kulit atau merawat jerawat. Adakah ia kosmetik kegunaan khas?",
+    "faq8a": "Selalunya ya, dan inilah kesilapan paling mahal dalam kategori ini. Di bawah peraturan 2021, senarai kegunaan khas ialah: pewarna rambut, keriting kekal, penyingkir cela dan pemutihan, pelindung matahari, anti keguguran rambut, serta mana-mana produk yang mendakwa khasiat baharu. Jerawat sahaja tidak tersenarai, tetapi produk yang menggabungkannya dengan pemutihan, atau menjanjikan pencerahan pigmentasi, tergolong dalam kategori pemutihan dan memerlukan pendaftaran, bukan pemberitahuan. Yang menentukan ialah dakwaan, bukan bahan: serum niasinamida yang sama boleh didaftarkan sebagai biasa jika hanya mendakwa pelembap, dan mesti didaftarkan jika pembungkusan menjanjikan pencerahan tompok gelap. Sebaik dakwaan kegunaan khas dicetak pada pembungkusan, kembali kepada pemberitahuan bermakna reka bentuk baharu dan ujian khasiat semula."
   },
   "ServiceEcommerce": {
     "heroTitle": "E-dagang Rentas Sempadan – untuk Jenama Malaysia",
@@ -409,7 +413,11 @@
     "coverItems5": "Panduan pengecualian label bagi produk rentas sempadan",
     "coverItems6": "Pematuhan data (PIPL) bagi operasi rentas sempadan",
     "metaTitle": "Panduan E-dagang China | Tmall, JD untuk Jenama Malaysia",
-    "metaDescription": "Jenama Malaysia masuk China melalui e-dagang rentas sempadan: Tmall Global, JD Worldwide, pematuhan CBEC, logistik, pembayaran."
+    "metaDescription": "Jenama Malaysia masuk China melalui e-dagang rentas sempadan: Tmall Global, JD Worldwide, pematuhan CBEC, logistik, pembayaran.",
+    "faq7q": "Apakah senarai positif rentas sempadan dan apa yang dikecualikan?",
+    "faq7a": "Senarai positif — nama rasminya Senarai Barang Import Runcit untuk E-Dagang Rentas Sempadan — menentukan apa yang boleh masuk melalui saluran CBEC. Ia bermula pada 2016 dengan 1,142 baris tarif; versi berkuat kuasa sejak Mac 2022 meliputi kira-kira 1,476. Jika kod HS anda tiada di dalamnya, saluran ini tertutup walau apa pun platform. Pengecualian lebih penting daripada penyenaraian, kerana beberapa kategori ada dalam senarai tetapi membawa nota: ubat yang memerlukan pendaftaran, peranti perubatan di luar kelas yang dibenarkan, serta import pertama formula bayi, makanan tujuan perubatan khas dan makanan kesihatan semuanya memerlukan pendaftaran atau pemberitahuan sebelum dijual, termasuk melalui CBEC. Kami menyemak baris tarif dahulu, nota kemudian, kerana produk boleh lulus senarai tetapi masih terhalang oleh nota yang terlekat padanya.",
+    "faq8q": "Bolehkah produk beralih daripada rentas sempadan ke perdagangan am kemudian?",
+    "faq8a": "Boleh, dan banyak jenama merancang begitu: CBEC untuk menguji permintaan, perdagangan am apabila jumlah menampung kos tetap. Ia bukan suis tetapi pintu masuk kedua. Perdagangan am memerlukan entiti China atau pengimport berdaftar, pelabelan China menurut GB 7718-2025 atau peraturan kosmetik, dan kelulusan pra-pasaran yang dituntut kategori anda: pendaftaran NMPA untuk kosmetik, pendaftaran GACC untuk makanan, CCC untuk elektronik dalam senarai. Barang yang dijual melalui CBEC biasanya tidak pernah melalui pintu ini, jadi sediakan tiga hingga enam bulan dan satu pusingan ujian baharu. Dua perkara terbawa: data jualan yang diterima platform sebagai bukti semasa semakan kategori, dan tanda dagangan jika difailkan di China. Sediakan label China dan dokumen pendaftaran semasa saluran CBEC masih berjalan, bukan selepas anda memutuskan untuk beralih."
   },
   "ServiceBrand": {
     "heroTitle": "Pendaftaran Jenama di China – Perlindungan Jenama Malaysia",
@@ -456,7 +464,11 @@
     "coverItems5": "Semakan pematuhan pengiklanan mengikut Undang-undang Pengiklanan China",
     "coverItems6": "Strategi jenama dan panduan penguatkuasaan",
     "metaTitle": "Pendaftaran Jenama di China | Perlindungan Jenama Malaysia",
-    "metaDescription": "Pendaftaran jenama di China untuk jenama Malaysia: CNIPA, sistem Madrid, anti-pemalsuan, perlindungan platform."
+    "metaDescription": "Pendaftaran jenama di China untuk jenama Malaysia: CNIPA, sistem Madrid, anti-pemalsuan, perlindungan platform.",
+    "faq7q": "Perlukah saya mendaftar tanda dagangan sebelum atau selepas memasuki pasaran China?",
+    "faq7a": "Sebelum — dan sebelum sesiapa dalam rantaian bekalan melihat jenama itu. China mengamalkan prinsip pemohon pertama: pendaftaran milik sesiapa yang memfailkan dahulu, bukan yang menggunakan dahulu. Tetingkap berbahaya ialah apabila kilang, pengedar atau pengendali platform anda mengetahui nama itu sebelum permohonan difailkan; pemburu tanda dagangan memerhati tepat perkara itu. Memfailkan murah dan mengambil sehari, jadi failkan pada hari anda memutuskan untuk masuk, walaupun kemasukan sebenar setahun lagi. Daftarkan transliterasi China atau tanda huruf Latin, atau kedua-duanya — pemburu sering mendaftar nama China yang belum anda tuntut. Tarikh keutamaan ialah apa yang akan anda sandarkan kemudian, dan ia wujud hanya dari hari CNIPA menerima permohonan yang lengkap.",
+    "faq8q": "Sebuah syarikat China telah mendaftar jenama saya. Apa yang boleh saya lakukan?",
+    "faq8a": "Tiga laluan, dan yang betul bergantung pada fakta. Jika pendaftaran masih dalam tempoh penerbitan tiga bulan, anda boleh membantah. Jika sudah diberikan, anda boleh memohon pembatalan dalam tempoh lima tahun atas alasan pemohon beriktikad buruk — bukti penggunaan terdahulu, jumlah eksport dan sebarang hubungan dengan pengedar yang menentukan. Jika tanda itu telah didaftarkan tiga tahun dan tidak digunakan di China, pembatalan kerana tidak digunakan selalunya lebih pantas dan murah, walaupun pemburu boleh menghidupkannya semula dengan penggunaan simbolik. Ketiga-tiganya prosiding pentadbiran di CNIPA, bukan kes mahkamah, dan keputusan biasanya mengambil enam hingga dua belas bulan. Sementara itu teruskan penjualan dengan apa jua pengaturan yang ada dan dokumentasikan setiap penggunaan tanda di China — invois, halaman produk, pembungkusan — kerana fail itu menjadi kesnya."
   },
   "ServiceCommon": {
     "whoTitle": "Untuk Pengeksport Malaysia",

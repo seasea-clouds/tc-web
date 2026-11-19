@@ -362,7 +362,11 @@
     "coverItems5": "Podpora testovania účinnosti deklarovaných funkcií",
     "coverItems6": "Súlad po uvedení na trh (monitorovanie nežiaducich udalostí, výročné správy)",
     "metaTitle": "Registrácia kozmetiky NMPA pre globálne značky | Export do Číny",
-    "metaDescription": "Registrácia kozmetiky NMPA pre slovenské značky: klasifikácia, oslobodenie od testov na zvieratách, zodpovedná osoba v Číne, čas."
+    "metaDescription": "Registrácia kozmetiky NMPA pre slovenské značky: klasifikácia, oslobodenie od testov na zvieratách, zodpovedná osoba v Číne, čas.",
+    "faq7q": "Ako dlho trvá oznámenie NMPA a kedy môžem začať predávať?",
+    "faq7a": "Pri bežnej kozmetike je samotný krok oznámenia rýchly: dokumentácia ide portálom NMPA a pri úplnosti je prijatá do piatich pracovných dní — a produkt sa môže predávať už počas prebiehajúceho posudzovania. Čas spočíva v tom, čo musí predchádzať: treba určiť čínsku zodpovednú osobu, produkt musí prejsť mikrobiologickými testami, testami ťažkých kovov a stability v čínskej laboratóriu a správu o posúdení bezpečnosti musí podpísať kvalifikovaný hodnotiteľ. Reálne počítajte osem až štrnásť týždňov od hotovej receptúry po predajný produkt, dlhšie ak sa receptúra musí po testoch upraviť. Produkty osobitného určenia, ako opaľovacie prípravky, touto cestou nejdú: vyžadujú registráciu, čo pridáva šesťdesiat až deväťdesiat pracovných dní technického posúdenia.",
+    "faq8q": "Môj produkt rozjasňuje pleť alebo pôsobí proti akné. Je to kozmetika osobitného určenia?",
+    "faq8a": "Často áno, a to je najdrahšia chyba v tejto kategórii. Podľa nariadenia z roku 2021 zoznam osobitného určenia zahŕňa: farbenie vlasov, trvalú onduláciu, odstraňovanie pieh a bielenie, ochranu pred slnkom, prípravky proti padaniu vlasov a každý produkt, ktorý tvrdí nový účinok. Akné samo o sebe na zozname nie je, ale produkt, ktorý ho kombinuje s bielením alebo sľubuje zosvetlenie pigmentácie, spadá do kategórie bielenia a vyžaduje registráciu, nie oznámenie. Rozhoduje tvrdenie, nie zložka: to isté sérum s niacinamidom možno oznámiť ako bežné, ak sľubuje len hydratáciu, a musí sa registrovať, ak obal sľubuje zosvetlenie tmavých škvŕn. Keď je tvrdenie osobitného určenia raz vytlačené na obale, návrat k oznámeniu znamená nový obal a nový test účinnosti."
   },
   "ServiceEcommerce": {
     "heroTitle": "Cezhraničný e-commerce pre slovenské značky v Číne",
@@ -409,7 +413,11 @@
     "coverItems5": "Usmernenie k výnimkám z čínskych etikiet",
     "coverItems6": "Súlad s údajmi (PIPL) pre cezhraničné operácie",
     "metaTitle": "Cezhraničný e-commerce do Číny | Tmall, JD, Douyin",
-    "metaDescription": "Slovenské značky do Číny cez cezhraničný e-commerce: Tmall Global, JD Worldwide, súlad s CBEC, logistika, platby."
+    "metaDescription": "Slovenské značky do Číny cez cezhraničný e-commerce: Tmall Global, JD Worldwide, súlad s CBEC, logistika, platby.",
+    "faq7q": "Čo je cezhraničný pozitívny zoznam a čo je z neho vylúčené?",
+    "faq7a": "Pozitívny zoznam — formálne Zoznam tovaru dovážaného v maloobchode pre cezhraničný elektronický obchod — určuje, čo vôbec môže prejsť kanálom CBEC. Začal v roku 2016 s 1 142 tarifnými položkami; verzia platná od marca 2022 ich obsahuje približne 1 476. Ak váš kód HS na ňom nie je, kanál je uzavretý bez ohľadu na platformu. Výnimky vážia viac ako zápisy, pretože niekoľko kategórií na zozname je, ale nesie poznámku: lieky vyžadujúce registráciu, zdravotnícke pomôcky mimo povolených tried a prvý dovoz dojčenskej výživy, potravín na osobitné lekárske účely a výživových doplnkov vyžadujú registráciu alebo oznámenie pred predajom, aj cez CBEC. Najprv kontrolujeme tarifnú položku a potom poznámku, pretože produkt môže zoznamom prejsť a napriek tomu uviaznuť na poznámke, ktorá k nemu patrí.",
+    "faq8q": "Môže produkt neskôr prejsť z cezhraničného na bežný obchod?",
+    "faq8a": "Áno, a mnohé značky to tak plánujú: CBEC na otestovanie dopytu, bežný obchod, keď objem ospravedlní fixné náklady. Nie je to prepínač, ale druhý vstup. Bežný obchod vyžaduje čínsky subjekt alebo registrovaného dovozcu, čínske označenie podľa GB 7718-2025 alebo kozmetických pravidiel a predbežné schválenie, ktoré vaša kategória vyžaduje: oznámenie NMPA pri kozmetike, registráciu GACC pri potravinách, CCC pri uvedenej elektronike. Tovar predaný cez CBEC zvyčajne nikdy neprešiel týmito bránami, preto počítajte s tromi až šiestimi mesiacmi a novým kolom testov. Dve veci sa prenášajú: predajné dáta, ktoré platformy prijímajú ako dôkaz pri revízii kategórie, a ochranná známka, ak bola v Číne prihlásená. Čínske označenie a registračný spis pripravujte, kým kanál CBEC ešte beží, nie po rozhodnutí prejsť."
   },
   "ServiceBrand": {
     "heroTitle": "Ochrana značky v Číne pre slovenské firmy",
@@ -456,7 +464,11 @@
     "coverItems5": "Kontrola súladu reklamy (čínsky zákon o reklame)",
     "coverItems6": "Stratégia ochrany značky a vymáhanie práv",
     "metaTitle": "Registrácia ochrannej známky v Číne | pre slovenské značky",
-    "metaDescription": "Registrácia ochrannej známky v Číne pre slovenské značky: CNIPA, Madridský systém, falzifikáty, ochrana na platformách."
+    "metaDescription": "Registrácia ochrannej známky v Číne pre slovenské značky: CNIPA, Madridský systém, falzifikáty, ochrana na platformách.",
+    "faq7q": "Mám si ochrannú známku zapísať pred vstupom na čínsky trh alebo po ňom?",
+    "faq7a": "Predtým — a skôr, než známku uvidí ktokoľvek v dodávateľskom reťazci. Čína uplatňuje zásadu prvého prihlasovateľa: zápis patrí tomu, kto podá prihlášku prvý, nie tomu, kto známku použil prvý. Nebezpečné okno je obdobie, keď sa vaša továreň, distribútor alebo prevádzkovateľ platformy dozvedia meno skôr, než je prihláška podaná; špekulanti sledujú práve to. Prihláška stojí málo a trvá deň, takže ju podajte v deň, keď sa rozhodnete vstúpiť, aj keď samotný vstup je o rok. Zapíšte čínsky prepis alebo znak v latinke, prípadne oboje — špekulant často zapíše čínske meno, ktoré ste si nenárokovali. Dátum priority je to, o čo sa neskôr opriete, a existuje len odo dňa, keď CNIPA dostane úplnú prihlášku.",
+    "faq8q": "Čínska spoločnosť už moju známku zapísala. Čo môžem urobiť?",
+    "faq8a": "Tri cesty a tá správna závisí od faktov. Ak je zápis stále v trojmesačnej lehote na zverejnenie, môžete podať námietky. Ak je už udelený, môžete do piatich rokov žiadať neplatnosť z dôvodu nedobrej viery prihlasovateľa — rozhodujú dôkazy o vašom skoršom používaní, objemy vývozu a akýkoľvek vzťah s distribútormi. Ak je známka zapísaná tri roky a v Číne sa nepoužíva, výmaz pre nepoužívanie býva rýchlejší a lacnejší, hoci ho špekulant môže oživiť symbolickým používaním. Všetky tri sú správne konania pred CNIPA, nie súdne spory, a rozhodnutie zvyčajne trvá šesť až dvanásť mesiacov. Medzitým predávajte za súčasných podmienok a dokumentujte každé použitie známky v Číne — faktúry, produktové stránky, obaly — pretože ten spis sa stane prípadom."
   },
   "ServiceCommon": {
     "whoTitle": "Pre koho je táto služba určená",

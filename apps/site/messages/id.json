@@ -362,7 +362,11 @@
     "coverItems5": "Dukungan pengujian khasiat untuk klaim fungsi",
     "coverItems6": "Kepatuhan pasca-pasar (pelaporan efek samping, laporan tahunan)",
     "metaTitle": "Registrasi kosmetik NMPA untuk merek global | Ekspor ke Tiongkok",
-    "metaDescription": "Registrasi kosmetik NMPA untuk merek Indonesia: klasifikasi, pembebasan uji hewan, penanggung jawab di China, durasi."
+    "metaDescription": "Registrasi kosmetik NMPA untuk merek Indonesia: klasifikasi, pembebasan uji hewan, penanggung jawab di China, durasi.",
+    "faq7q": "Berapa lama pendaftaran NMPA dan kapan saya bisa mulai menjual?",
+    "faq7a": "Untuk kosmetik biasa, langkah pendaftaran itu sendiri cepat: berkas diajukan lewat portal NMPA dan jika lengkap diterima dalam lima hari kerja, dan produk sudah boleh dijual selama peninjauan berjalan. Waktunya ada di tahap sebelumnya: harus menunjuk penanggung jawab di Tiongkok, produk harus lulus uji mikrobiologi, logam berat, dan stabilitas di laboratorium Tiongkok, dan laporan penilaian keamanan harus ditandatangani penilai berkualifikasi. Secara realistis hitung delapan sampai empat belas minggu dari formula final sampai produk bisa dijual, lebih lama jika formula perlu disesuaikan setelah pengujian. Produk penggunaan khusus seperti tabir surya tidak lewat jalur ini: perlu registrasi, ditambah enam puluh sampai sembilan puluh hari kerja telaah teknis.",
+    "faq8q": "Produk saya mencerahkan kulit atau mengatasi jerawat. Apakah itu kosmetik penggunaan khusus?",
+    "faq8a": "Sering kali ya, dan inilah kesalahan termahal di kategori ini. Menurut peraturan 2021, daftar penggunaan khusus adalah: pewarna rambut, pengeriting rambut, penghilang noda dan pemutih, tabir surya, antipenipisan rambut, plus produk apa pun yang mengklaim khasiat baru. Antijerawat sendiri tidak ada di daftar, tetapi produk yang menggabungkannya dengan pemutih, atau menjanjikan memudarkan pigmentasi, masuk kategori pemutih dan perlu registrasi, bukan pendaftaran. Yang menentukan adalah klaim, bukan bahan: serum niacinamide yang sama bisa didaftarkan sebagai biasa jika hanya mengklaim pelembap, dan wajib registrasi jika kemasan menjanjikan memudarkan noda gelap. Begitu klaim penggunaan khusus tercetak di kemasan, kembali ke pendaftaran berarti desain baru dan uji khasiat ulang."
   },
   "ServiceEcommerce": {
     "heroTitle": "E-commerce Lintas Batas – untuk Merek Indonesia",
@@ -409,7 +413,11 @@
     "coverItems5": "Panduan pengecualian label Tiongkok untuk produk lintas batas",
     "coverItems6": "Kepatuhan data (PIPL) untuk operasi lintas batas",
     "metaTitle": "E-commerce Lintas Batas Tiongkok | Tmall, JD & Douyin",
-    "metaDescription": "Merek Indonesia masuk China via e-commerce lintas batas: Tmall Global, JD Worldwide, kepatuhan CBEC, logistik, pembayaran."
+    "metaDescription": "Merek Indonesia masuk China via e-commerce lintas batas: Tmall Global, JD Worldwide, kepatuhan CBEC, logistik, pembayaran.",
+    "faq7q": "Apa itu daftar positif lintas batas dan apa yang dikecualikan?",
+    "faq7a": "Daftar positif — nama resminya Daftar Barang Impor Eceran untuk Perdagangan Elektronik Lintas Batas — menentukan barang apa yang boleh masuk melalui jalur CBEC. Dimulai tahun 2016 dengan 1.142 pos tarif; versi berlaku sejak Maret 2022 mencakup sekitar 1.476. Jika kode HS Anda tidak ada di sana, jalur ini tertutup apa pun platformnya. Pengecualian lebih penting daripada pencantuman, karena beberapa kategori ada di daftar tetapi membawa catatan: obat yang perlu registrasi, alat kesehatan di luar kelas yang diizinkan, dan impor pertama susu formula bayi, pangan untuk tujuan medis khusus, serta suplemen kesehatan semuanya perlu registrasi atau pendaftaran sebelum dijual, termasuk lewat CBEC. Kami memeriksa pos tarif dulu, catatan kemudian, karena produk bisa lolos daftar tetapi tetap terhalang oleh catatan yang menempel padanya.",
+    "faq8q": "Bisakah produk pindah dari lintas batas ke perdagangan umum nanti?",
+    "faq8a": "Bisa, dan banyak merek merencanakannya begitu: CBEC untuk menguji permintaan, perdagangan umum setelah volume menutup biaya tetap. Ini bukan tombol ubah melainkan pintu masuk kedua. Perdagangan umum menuntut badan hukum Tiongkok atau importir terdaftar, label Tiongkok sesuai GB 7718-2025 atau aturan kosmetik, dan persetujuan pra-pasar yang diminta kategori Anda: pendaftaran NMPA untuk kosmetik, registrasi GACC untuk pangan, CCC untuk elektronik dalam daftar. Barang yang dijual lewat CBEC biasanya belum pernah melewati pintu itu, jadi siapkan tiga sampai enam bulan dan satu putaran pengujian baru. Dua hal ikut terbawa: data penjualan yang diterima platform sebagai bukti saat peninjauan kategori, dan merek dagang bila sudah didaftarkan di Tiongkok. Siapkan label Tiongkok dan berkas registrasi selagi jalur CBEC masih berjalan, bukan setelah memutuskan pindah."
   },
   "ServiceBrand": {
     "heroTitle": "Registrasi Merek di China – Perlindungan Merek Indonesia",
@@ -456,7 +464,11 @@
     "coverItems5": "Peninjauan kepatuhan iklan (Hukum Periklanan Tiongkok)",
     "coverItems6": "Strategi perlindungan merek dan panduan penegakan hukum",
     "metaTitle": "Registrasi Merek di China | Perlindungan Merek Indonesia",
-    "metaDescription": "Registrasi merek di China untuk merek Indonesia: CNIPA, sistem Madrid, anti-pemalsuan, perlindungan platform."
+    "metaDescription": "Registrasi merek di China untuk merek Indonesia: CNIPA, sistem Madrid, anti-pemalsuan, perlindungan platform.",
+    "faq7q": "Apakah saya harus mendaftarkan merek sebelum atau sesudah masuk pasar Tiongkok?",
+    "faq7a": "Sebelum — dan sebelum siapa pun di rantai pasok melihat merek itu. Tiongkok menganut asas pendaftar pertama: pendaftaran menjadi milik yang mengajukan lebih dulu, bukan yang memakai lebih dulu. Jendela berbahaya adalah saat pabrik, distributor, atau operator platform Anda mengetahui nama itu sebelum permohonan diajukan; pemburu merek mengawasi justru itu. Mengajukan murah dan selesai dalam sehari, jadi ajukan pada hari Anda memutuskan masuk, meski masuk sebenarnya masih setahun lagi. Daftarkan transliterasi Tionghoa atau tanda huruf Latin, atau keduanya — pemburu sering mendaftarkan nama Tionghoa yang belum Anda klaim. Tanggal prioritas adalah yang akan Anda andalkan nanti, dan hanya ada sejak CNIPA menerima permohonan yang lengkap.",
+    "faq8q": "Sebuah perusahaan Tiongkok sudah mendaftarkan merek saya. Apa yang bisa saya lakukan?",
+    "faq8a": "Tiga jalur, dan yang tepat bergantung pada faktanya. Jika pendaftaran masih dalam masa publikasi tiga bulan, Anda dapat mengajukan oposisi. Jika sudah diberikan, Anda dapat meminta pembatalan dalam lima tahun dengan alasan pemohon beritikad buruk — bukti pemakaian Anda sebelumnya, volume ekspor, dan hubungan dengan distributor yang menentukan. Jika merek sudah terdaftar tiga tahun dan tidak dipakai di Tiongkok, pembatalan karena tidak dipakai biasanya lebih cepat dan murah, walau pemburu bisa menghidupkannya lagi dengan pemakaian simbolis. Ketiganya adalah prosedur administratif di CNIPA, bukan perkara pengadilan, dan keputusan biasanya memakan enam sampai dua belas bulan. Sementara itu teruslah berjualan dengan pengaturan yang ada dan dokumentasikan setiap pemakaian merek di Tiongkok — faktur, halaman produk, kemasan — karena berkas itu akan menjadi perkaranya."
   },
   "ServiceCommon": {
     "whoTitle": "Untuk Siapa Layanan Ini",

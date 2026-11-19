@@ -362,7 +362,11 @@
     "coverItems5": "Podpora pri testiranju učinkovitosti za navedene funkcije",
     "coverItems6": "Skladnost po vstopu na trg (spremljanje neželenih dogodkov, letna poročila)",
     "metaTitle": "Registracija kozmetike NMPA za globalne blagovne znamke | Izvoz na Kitajsko",
-    "metaDescription": "Registracija kozmetike NMPA za slovenske znamke: klasifikacija, oprostitev testiranja na živalih, odgovorna oseba na Kitajskem, čas."
+    "metaDescription": "Registracija kozmetike NMPA za slovenske znamke: klasifikacija, oprostitev testiranja na živalih, odgovorna oseba na Kitajskem, čas.",
+    "faq7q": "Koliko traja priglasitev pri NMPA in kdaj lahko začnem prodajati?",
+    "faq7a": "Pri običajni kozmetiki je sam korak priglasitve hiter: dokumentacija gre skozi portal NMPA in se ob popolnosti sprejme v petih delovnih dneh — izdelek pa se lahko prodaja, medtem ko ocenjevanje še poteka. Čas je v tem, kar mora biti opravljeno prej: imenovati je treba kitajsko odgovorno osebo, izdelek mora prestati mikrobiološke preizkuse, preizkuse težkih kovin in stabilnosti v kitajskem laboratoriju, poročilo o oceni varnosti pa mora podpisati usposobljen ocenjevalec. Realno računajte od osem do štirinajst tednov od končne formule do izdelka, pripravljenega za prodajo, dlje če je treba formulo po preizkusih prilagoditi. Izdelki posebnega namena, kot so sredstva za sončenje, ne gredo po tej poti: zahtevajo registracijo, kar doda šestdeset do devetdeset delovnih dni tehničnega pregleda.",
+    "faq8q": "Moj izdelek posvetli kožo ali deluje proti aknam. Je to kozmetika posebnega namena?",
+    "faq8a": "Pogosto je, in to je najdražja napaka v tej kategoriji. Po uredbi iz leta 2021 seznam posebnega namena obsega: barvanje las, trajno kodranje, odstranjevanje peg in beljenje, zaščito pred soncem, sredstva proti izpadanju las ter vsak izdelek, ki zatrjuje nov učinek. Akne same po sebi niso na seznamu, a izdelek, ki jih poveže z beljenjem ali obljublja posvetlitev pigmentacije, sodi v kategorijo beljenja in zahteva registracijo, ne priglasitve. Odloča trditev, ne sestavina: isti serum z niacinamidom je mogoče priglasiti kot običajnega, če obljublja le vlaženje, in ga je treba registrirati, če embalaža obljublja posvetlitev temnih madežev. Ko je trditev posebnega namena enkrat natisnjena na embalaži, pomeni vrnitev k priglasitvi novo embalažo in ponoven preizkus učinkovitosti."
   },
   "ServiceEcommerce": {
     "heroTitle": "Čezmejna e-trgovina za slovenske blagovne znamke na Kitajskem",
@@ -409,7 +413,11 @@
     "coverItems5": "Smernice za izjeme pri kitajskih etiketah za čezmejne izdelke",
     "coverItems6": "Skladnost podatkov (PIPL) za čezmejno poslovanje",
     "metaTitle": "Čezmejna e-trgovina | vodnik Tmall·JD za slovenske znamke",
-    "metaDescription": "Slovenske znamke na Kitajskem prek čezmejne e-trgovine: Tmall Global, JD Worldwide, skladnost CBEC, logistika, plačila."
+    "metaDescription": "Slovenske znamke na Kitajskem prek čezmejne e-trgovine: Tmall Global, JD Worldwide, skladnost CBEC, logistika, plačila.",
+    "faq7q": "Kaj je čezmejni pozitivni seznam in kaj je iz njega izločeno?",
+    "faq7a": "Pozitivni seznam — uradno Seznam blaga za uvoz v trgovini na drobno za čezmejno elektronsko trgovino — določa, kaj sploh lahko vstopi po kanalu CBEC. Začel se je leta 2016 s 1142 tarifnimi postavkami; različica, veljavna od marca 2022, jih obsega približno 1476. Če vaše oznake HS ni na njem, je kanal zaprt ne glede na platformo. Izločitve tehtajo več kot vključitve, ker je več kategorij na seznamu, a nosi opombo: zdravila, ki zahtevajo registracijo, medicinski pripomočki zunaj dovoljenih razredov ter prvi uvoz začetnih formul, živil za posebne medicinske namene in prehranskih dopolnil zahtevajo registracijo ali prijavo pred prodajo, tudi prek CBEC. Najprej preverimo tarifno postavko, nato opombo, ker izdelek lahko prestane seznam in se vseeno ustavi na priloženi opombi.",
+    "faq8q": "Ali lahko izdelek pozneje preide s čezmejnega na običajno trgovino?",
+    "faq8a": "Lahko, in številne blagovne znamke tako načrtujejo: CBEC za preizkus povpraševanja, običajna trgovina, ko obseg upraviči stalne stroške. To ni stikalo, ampak drugi vhod. Običajna trgovina zahteva kitajski subjekt ali registriranega uvoznika, kitajsko označevanje po GB 7718-2025 ali pravilih za kozmetiko in predhodno odobritev, ki jo zahteva vaša kategorija: prijava NMPA za kozmetiko, registracija GACC za živila, CCC za navedeno elektroniko. Blago, prodano prek CBEC, običajno nikoli ni šlo skozi ta vrata, zato računajte s tremi do šestimi meseci in novim krogom preskusov. Dve stvari se preneseta: prodajni podatki, ki jih platforme sprejmejo kot dokaz pri pregledu kategorije, in blagovna znamka, če je bila prijavljena na Kitajskem. Kitajsko oznako in registracijsko dokumentacijo pripravljajte, dokler kanal CBEC še deluje, ne potem ko se odločite za prehod."
   },
   "ServiceBrand": {
     "heroTitle": "Zaščita blagovne znamke na Kitajskem za slovenska podjetja",
@@ -456,7 +464,11 @@
     "coverItems5": "Pregled skladnosti oglaševanja (kitajski zakon o oglaševanju)",
     "coverItems6": "Strategija zaščite blagovne znamke in izvrševanje pravic",
     "metaTitle": "Registracija znamke na Kitajskem | zaščita slovenskih znamk",
-    "metaDescription": "Registracija znamke na Kitajskem za slovenske blagovne znamke: CNIPA, madridski sistem, ponaredki, zaščita na platformah."
+    "metaDescription": "Registracija znamke na Kitajskem za slovenske blagovne znamke: CNIPA, madridski sistem, ponaredki, zaščita na platformah.",
+    "faq7q": "Ali naj blagovno znamko registriram pred vstopom na kitajski trg ali po njem?",
+    "faq7a": "Pred — in preden znamko vidi kdorkoli v dobavni verigi. Kitajska uporablja načelo prvega prijavitelja: registracija pripada tistemu, ki prvi prijavi, ne tistemu, ki je prvi uporabil. Nevarno obdobje je tisto, v katerem vaša tovarna, distributer ali upravljavec platforme izve ime, preden je prijava vložena; skvoterji gledajo točno to. Prijava malo stane in traja en dan, zato jo vložite na dan, ko se odločite za vstop, tudi če je sam vstop čez leto. Registrirajte kitajsko transliteracijo ali latinsko oznako, ali oboje — skvoter pogosto registrira prav kitajsko ime, ki ga niste zahtevali. Datum prednosti je tisto, na kar se boste pozneje opirali, in obstaja šele od dneva, ko CNIPA prejme popolno prijavo.",
+    "faq8q": "Kitajsko podjetje je mojo znamko že registriralo. Kaj lahko storim?",
+    "faq8a": "Tri poti, in prava je odvisna od dejstev. Če je registracija še v trimesečnem roku objave, lahko vložite ugovor. Če je že podeljena, lahko v petih letih zahtevate ničnost zaradi nepoštenosti prijavitelja — odločajo dokazi o vaši prejšnji uporabi, izvozni obseg in vsak odnos z distributerji. Če je znamka registrirana tri leta in se na Kitajskem ne uporablja, je izbris zaradi neuporabe pogosto hitrejši in cenejši, čeprav jo skvoter lahko oživi s simbolično uporabo. Vse tri so upravni postopki pred CNIPA, ne sodne pravde, in odločitev običajno traja šest do dvanajst mesecev. Medtem nadaljujte s prodajo po obstoječi ureditvi in dokumentirajte vsako uporabo znamke na Kitajskem — računi, strani izdelkov, embalaža — ker ta mapa postane zadeva."
   },
   "ServiceCommon": {
     "whoTitle": "Komu je ta storitev namenjena",

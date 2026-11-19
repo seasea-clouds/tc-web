@@ -362,7 +362,11 @@
     "coverItems5": "Tehokkuustestauksen tuki luvatuille toiminnoille",
     "coverItems6": "Markkinoille tulon jälkeinen vaatimustenmukaisuus (haittavaikutusseuranta, vuosiraportit)",
     "metaTitle": "NMPA kosmetiikkailmoitus globaaleille brändeille | Vienti Kiinaan",
-    "metaDescription": "NMPA-rekisteröinti suomalaisille kosmetiikkabrändeille: luokittelu, eläinkoevapautus, vastuuhenkilö Kiinassa, aika."
+    "metaDescription": "NMPA-rekisteröinti suomalaisille kosmetiikkabrändeille: luokittelu, eläinkoevapautus, vastuuhenkilö Kiinassa, aika.",
+    "faq7q": "Kuinka kauan NMPA-ilmoitus kestää ja milloin voin aloittaa myynnin?",
+    "faq7a": "Tavallisessa kosmetiikassa itse ilmoitusvaihe on nopea: asiakirjat jätetään NMPA-portaalin kautta ja täydellisinä ne hyväksytään viiden työpäivän kuluessa — ja tuotetta saa myydä arvioinnin jatkuessa. Aika menee siihen, mitä ennen sitä on tehtävä: on nimettävä kiinalainen vastuuhenkilö, tuotteen on läpäistävä mikrobiologiset, raskasmetalli- ja stabiilisuustestit kiinalaisessa laboratoriossa, ja turvallisuusarviointiraportin allekirjoittaa pätevöity arvioija. Realistisesti laske kahdeksasta neljääntoista viikkoon valmiista koostumuksesta myyntikelpoiseen tuotteeseen, pidempään jos koostumusta on testien jälkeen korjattava. Erityiskäyttöön tarkoitetut tuotteet, kuten aurinkosuoja, eivät kulje tätä reittiä: ne vaativat rekisteröinnin, mikä lisää kuusikymmentä–yhdeksänkymmentä työpäivää teknistä arviointia.",
+    "faq8q": "Tuotteeni kirkastaa ihoa tai hoitaa aknea. Onko se erityiskäyttöön tarkoitettu kosmetiikka?",
+    "faq8a": "Usein on, ja se on tämän luokan kallein virhe. Vuoden 2021 asetuksen mukaan erityiskäytön luettelo on: hiusten värjäys, pysyvä permanentti, pisamien poisto ja valkaisu, aurinkosuoja, hiustenlähtöä vastaan, sekä jokainen tuote, joka väittää uutta vaikutusta. Akne yksinään ei ole luettelossa, mutta tuote, joka yhdistää sen valkaisuun tai lupaa vaalentaa pigmentaatiota, kuuluu valkaisuluokkaan ja vaatii rekisteröinnin ilmoituksen sijaan. Ratkaisee väite, ei ainesosa: sama niakinamidiseerumi voidaan ilmoittaa tavallisena, jos se lupaa vain kosteutusta, ja se on rekisteröitävä, jos pakkaus lupaa haalentaa tummia läiskiä. Kun erityiskäytön väite on kerran painettu pakkaukseen, paluu ilmoitukseen tarkoittaa uutta pakkausmateriaalia ja uutta tehotestiä."
   },
   "ServiceEcommerce": {
     "heroTitle": "Rajanylittävä verkkokauppa suomalaisille brändeille Kiinassa",
@@ -409,7 +413,11 @@
     "coverItems5": "Etikettivapautuksen neuvonta rajat ylittävään myyntiin",
     "coverItems6": "Tietosuojavaatimusten noudattaminen (PIPL) rajat ylittävässä toiminnassa",
     "metaTitle": "Rajavälinen verkkokauppa Kiinaan | Tmall, JD, Douyin",
-    "metaDescription": "Suomalaiset brändit Kiinaan rajatylittävän verkkokaupan kautta: Tmall Global, JD Worldwide, CBEC-vaatimukset, logistiikka, maksut."
+    "metaDescription": "Suomalaiset brändit Kiinaan rajatylittävän verkkokaupan kautta: Tmall Global, JD Worldwide, CBEC-vaatimukset, logistiikka, maksut.",
+    "faq7q": "Mikä on rajat ylittävän kaupan positiivilista, ja mitä siitä on suljettu pois?",
+    "faq7a": "Positiivilista — virallisesti Luettelo rajatylittävän verkkokaupan vähittäistuontitavaroista — määrittää, mitä ylipäätään saa tuoda CBEC-kanavan kautta. Se alkoi vuonna 2016 1 142 tariffinimikkeellä; maaliskuusta 2022 voimassa oleva versio kattaa noin 1 476. Jos HS-koodisi ei ole listalla, kanava on kiinni alustasta riippumatta. Poissulut painavat enemmän kuin sisällytykset, sillä useat ryhmät ovat listalla mutta kantavat huomautuksen: rekisteröintiä vaativat lääkkeet, sallittujen luokkien ulkopuoliset lääkinnälliset laitteet sekä äidinmaidonkorvikkeen, kliinisen ravitsemuksen valmisteiden ja ravintolisien ensimmäinen tuonti vaativat rekisteröinnin tai ilmoituksen ennen myyntiä, myös CBEC:n kautta. Tarkistamme ensin tariffinimikkeen ja sitten huomautuksen, koska tuote voi päästä listan läpi ja silti pysähtyä siihen liittyvään huomautukseen.",
+    "faq8q": "Voiko tuote siirtyä myöhemmin rajatylittävästä tavallisesta kaupasta tavanomaiseen kauppaan?",
+    "faq8a": "Voi, ja monet brändit suunnittelevat niin: CBEC kysynnän testaamiseen, tavanomainen kauppa kun volyymi kattaa kiinteät kustannukset. Kyse ei ole kytkimestä vaan toisesta sisäänkäynnistä. Tavanomainen kauppa vaatii kiinalaisen yhteisön tai rekisteröidyn maahantuojan, GB 7718-2025:n tai kosmetiikkasääntöjen mukaisen kiinankielisen merkinnän ja kategoriasi vaatiman ennakkohyväksynnän: NMPA-ilmoitus kosmetiikalle, GACC-rekisteröinti elintarvikkeille, CCC listatuille elektroniikkatuotteille. CBEC:n kautta myydyt tavarat eivät yleensä ole koskaan kulkeneet näiden porttien läpi, joten varaa kolmesta kuuteen kuukautta ja uusi testikierros. Kaksi asiaa siirtyy: myyntitiedot, jotka alustat hyväksyvät todisteeksi kategoriaa arvioidessaan, ja tavaramerkki, jos se on haettu Kiinassa. Tee kiinankielinen merkintä ja rekisteröintiasiakirjat silloin kun CBEC-kanava vielä toimii, ei vasta siirtymispäätöksen jälkeen."
   },
   "ServiceBrand": {
     "heroTitle": "Tavaramerkkisuoja Kiinassa suomalaisille yrityksille",
@@ -456,7 +464,11 @@
     "coverItems5": "Mainonnan vaatimustenmukaisuuden tarkistus Kiinan mainontalain mukaan",
     "coverItems6": "Brändisuojausstrategia ja täytäntöönpanoneuvonta",
     "metaTitle": "Tavaramerkkirekisteröinti Kiinassa | CNIPA, Madrid",
-    "metaDescription": "Tavaramerkkirekisteröinti Kiinassa suomalaisille brändeille: CNIPA, Madrid-järjestelmä, väärennökset, alustasuojaus."
+    "metaDescription": "Tavaramerkkirekisteröinti Kiinassa suomalaisille brändeille: CNIPA, Madrid-järjestelmä, väärennökset, alustasuojaus.",
+    "faq7q": "Pitääkö tavaramerkki rekisteröidä ennen Kiinan markkinoille tuloa vai sen jälkeen?",
+    "faq7a": "Ennen — ja ennen kuin kukaan toimitusketjussa näkee merkin. Kiinassa sovelletaan ensimmäisen hakijan periaatetta: rekisteröinti kuuluu sille, joka hakee ensin, ei sille, joka käytti ensin. Vaarallinen ikkuna on se, jolloin tehtaasi, jakelijasi tai alustan ylläpitäjä saa nimen tietoonsa ennen hakemuksen jättämistä; merkkien kaappaajat seuraavat juuri sitä. Hakemus on halpa ja kestää päivän, joten jätä se sinä päivänä kun päätät tulla markkinoille, vaikka itse tulo olisi vuoden päästä. Rekisteröi kiinankielinen translitteraatio tai latinalainen merkki, tai molemmat — kaappaaja rekisteröi usein sen kiinankielisen nimen, jota et ole vaatinut. Etsikkyyspäivä on se, johon myöhemmin nojaat, ja se on olemassa vasta siitä päivästä, jona CNIPA vastaanottaa täydellisen hakemuksen.",
+    "faq8q": "Kiinalainen yritys on jo rekisteröinyt merkkini. Mitä voin tehdä?",
+    "faq8a": "Kolme reittiä, ja oikea riippuu tosiseikoista. Jos rekisteröinti on vielä kolmen kuukauden julkaisujaksolla, voit tehdä vastalauseen. Jos se on jo myönnetty, voit vaatia mitättömyyttä viiden vuoden kuluessa hakijan vilpillisen mielen perusteella — ratkaisevat todisteet aiemmasta käytöstäsi, vientimääräsi ja mahdollinen jakelijasuhde. Jos merkki on ollut rekisteröity kolme vuotta eikä sitä ole käytetty Kiinassa, mitätöinti käyttämättömyyden perusteella on usein nopeampi ja halvempi, joskin kaappaaja voi elvyttää sen muodollisella käytöllä. Kaikki kolme ovat hallinnollisia menettelyjä CNIPA:ssa, eivät oikeudenkäyntejä, ja päätös kestää yleensä kuudesta kahteentoista kuukautta. Sillä välin jatka myyntiä nykyisellä järjestelyllä ja dokumentoi jokainen merkin käyttö Kiinassa — laskut, tuotesivut, pakkaukset — sillä siitä asiakirjasta tulee itse juttu."
   },
   "ServiceCommon": {
     "whoTitle": "Kenelle tämä palvelu on tarkoitettu?",

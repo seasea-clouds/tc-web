@@ -362,7 +362,11 @@
     "coverItems5": "Apoyo en pruebas de eficacia para las funciones declaradas",
     "coverItems6": "Cumplimiento posterior a la venta (monitoreo de eventos adversos, informes anuales)",
     "metaTitle": "Registro NMPA de cosméticos para marcas globales | Exportar a China",
-    "metaDescription": "Notificación y registro NMPA para marcas de cosméticos latinoamericanas. CSAR, evaluación de seguridad y agente responsable en China."
+    "metaDescription": "Notificación y registro NMPA para marcas de cosméticos latinoamericanas. CSAR, evaluación de seguridad y agente responsable en China.",
+    "faq7q": "¿Cuánto tarda el registro NMPA y cuándo puedo empezar a vender?",
+    "faq7a": "En cosmética ordinaria el trámite en sí es rápido: el expediente se presenta por el portal de la NMPA y, si está completo, se acepta en cinco días hábiles, y el producto puede venderse mientras continúa la revisión. El tiempo está en lo previo: hay que designar un responsable chino, superar ensayos de microorganismos, metales pesados y estabilidad en un laboratorio chino, y el informe de evaluación de seguridad debe firmarlo un evaluador cualificado. Cuente de ocho a catorce semanas desde la fórmula cerrada hasta el producto vendible, y más si la fórmula necesita ajustes tras los ensayos. Los productos de uso especial, como el protector solar, no van por esta vía: requieren registro, con una revisión técnica adicional de sesenta a noventa días hábiles.",
+    "faq8q": "Mi producto ilumina la piel o combate el acné. ¿Es un cosmético de uso especial?",
+    "faq8a": "A menudo sí, y es el error más caro de la categoría. Según el reglamento de 2021, la lista de uso especial es: tintes, permanentes, despigmentación y blanqueamiento, protectores solares, anticaída y cualquier producto que declare una nueva eficacia. El antiacné por sí solo no está en la lista, pero un producto que lo combine con blanqueamiento, o que prometa aclarar la pigmentación, cae en la categoría de blanqueamiento y necesita registro, no notificación. Lo que decide es la declaración, no el ingrediente: el mismo sérum de niacinamida puede notificarse como ordinario si solo promete hidratación, y registrarse si el envase promete atenuar manchas. Una vez impresa una declaración de uso especial, volver a la notificación exige nuevo arte y repetir el ensayo de eficacia."
   },
   "ServiceEcommerce": {
     "heroTitle": "Comercio electrónico transfronterizo para marcas de España y América Latina",
@@ -409,7 +413,11 @@
     "coverItems5": "Asesoría sobre exención de etiquetas para ventas transfronterizas",
     "coverItems6": "Cumplimiento de datos (PIPL) para operaciones transfronterizas",
     "metaTitle": "Comercio electrónico transfronterizo en China | Tmall, JD",
-    "metaDescription": "Comercio electrónico transfronterizo para marcas latinoamericanas: Tmall, JD y Douyin, almacén aduanero y optimización fiscal sin empresa local."
+    "metaDescription": "Comercio electrónico transfronterizo para marcas latinoamericanas: Tmall, JD y Douyin, almacén aduanero y optimización fiscal sin empresa local.",
+    "faq7q": "¿Qué es la lista positiva transfronteriza y qué queda excluido?",
+    "faq7a": "La lista positiva —formalmente la Lista de Mercancías de Importación al por Menor para el Comercio Electrónico Transfronterizo— define qué puede entrar por el canal CBEC. Empezó en 2016 con 1.142 líneas arancelarias; la versión vigente, en vigor desde marzo de 2022, cubre unas 1.476. Si su código HS no está en ella, el canal está cerrado use la plataforma que use. Las exclusiones importan más que las inclusiones, porque varias categorías figuran en la lista pero llevan nota: medicamentos que requieren registro, dispositivos médicos fuera de las clases permitidas y primeras importaciones de fórmula infantil, alimentos para usos médicos especiales y alimentos saludables necesitan registro o notificación antes de venderse, incluso por CBEC. Comprobamos primero la línea arancelaria y después la anotación, porque un producto puede pasar la lista y quedar bloqueado por la nota que lleva adjunta.",
+    "faq8q": "¿Puede un producto pasar de transfronterizo a comercio general más adelante?",
+    "faq8a": "Sí, y muchas marcas lo planifican así: CBEC para probar la demanda, comercio general cuando el volumen justifica los costes fijos. No es un interruptor sino una segunda entrada. El comercio general exige una entidad china o importador de registro, etiquetado chino conforme a GB 7718-2025 o a las normas cosméticas, y la aprobación previa que pida su categoría: notificación NMPA para cosmética, registro GACC para alimentos, CCC para electrónica listada. Los productos vendidos por CBEC normalmente nunca han pasado esas puertas, así que presupueste de tres a seis meses y una nueva ronda de ensayos. Dos cosas sí se conservan: los datos de ventas, que las plataformas aceptan como evidencia al revisar una categoría, y la marca, si se registró en China. Prepare el etiquetado chino y el expediente de registro mientras el canal CBEC sigue activo, no después de decidir el cambio."
   },
   "ServiceBrand": {
     "heroTitle": "Protección de marca en China para empresas de España y América Latina",
@@ -456,7 +464,11 @@
     "coverItems5": "Revisión de cumplimiento publicitario según la Ley de Publicidad china",
     "coverItems6": "Estrategia de protección de marca y asesoría de cumplimiento",
     "metaTitle": "Protección de marca en China | Registro CNIPA",
-    "metaDescription": "Registro y protección de marca en China para empresas latinoamericanas: CNIPA, Sistema de Madrid, registro aduanero. Detenga la piratería de marcas."
+    "metaDescription": "Registro y protección de marca en China para empresas latinoamericanas: CNIPA, Sistema de Madrid, registro aduanero. Detenga la piratería de marcas.",
+    "faq7q": "¿Debo registrar mi marca antes o después de entrar en el mercado chino?",
+    "faq7a": "Antes, y antes de que nadie en la cadena de suministro vea la marca. China aplica el principio de primer solicitante: el registro pertenece a quien lo solicita primero, no a quien lo usó primero. La ventana peligrosa es aquella en la que su fábrica, distribuidor o un operador de plataforma conoce el nombre antes de que su solicitud esté presentada; los oportunistas vigilan exactamente eso. Solicitar cuesta poco y lleva un día, así que presente el mismo día que decide entrar, aunque la entrada real sea dentro de un año. Registre la transliteración china o la marca en caracteres latinos, o ambas: el oportunista suele registrar el nombre chino que usted no ha reclamado. La fecha de prioridad es lo que alegará después, y solo existe desde el día en que la CNIPA recibe una solicitud completa.",
+    "faq8q": "Una empresa china ya registró mi marca. ¿Qué puedo hacer?",
+    "faq8a": "Tres vías, y la correcta depende de los hechos. Si el registro sigue dentro de su período de publicación de tres meses, puede oponerse. Si ya está concedido, puede pedir la nulidad en cinco años alegando que el solicitante actuó de mala fe: lo que decide son las pruebas de su uso anterior, sus volúmenes de exportación y cualquier relación con distribuidores. Si la marca lleva tres años registrada sin uso en China, la cancelación por no uso suele ser más rápida y barata, aunque el oportunista puede revivirla produciendo un uso simbólico. Las tres son actuaciones administrativas ante la CNIPA, no juicios, y la resolución suele tardar de seis a doce meses. Mientras tanto siga vendiendo con el arreglo que tenga y documente cada uso de la marca en China —facturas, fichas de producto, embalajes—, porque ese expediente se convierte en el caso."
   },
   "ServiceCommon": {
     "whoTitle": "¿Su empresa exporta a China?",

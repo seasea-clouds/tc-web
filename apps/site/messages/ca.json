@@ -362,7 +362,11 @@
     "coverItems5": "Suport en les proves d'eficàcia de les funcions declarades",
     "coverItems6": "Compliment posterior a la comercialització (notificació d'esdeveniments adversos, informes anuals)",
     "metaTitle": "Registre NMPA de cosmètics per a marques globals | Exportar a la Xina",
-    "metaDescription": "Registre NMPA per a marques catalanes de cosmètics: classificació, exempció de proves amb animals, persona responsable a la Xina, temps."
+    "metaDescription": "Registre NMPA per a marques catalanes de cosmètics: classificació, exempció de proves amb animals, persona responsable a la Xina, temps.",
+    "faq7q": "Quant triga el registre NMPA i quan puc començar a vendre?",
+    "faq7a": "En cosmètica ordinària el tràmit en si és ràpid: l'expedient passa pel portal de la NMPA i, si és complet, s'accepta en cinc dies hàbils — i el producte es pot vendre mentre la revisió continua. El temps és en el que cal fer abans: cal nomenar un responsable xinès, el producte ha de superar assajos microbiològics, de metalls pesants i d'estabilitat en un laboratori xinès, i l'informe d'avaluació de la seguretat l'ha de signar un avaluador qualificat. Compteu vuit a catorze setmanes des de la fórmula tancada fins al producte venable, més si la fórmula s'ha d'ajustar després dels assajos. Els productes d'ús especial, com el protector solar, no segueixen aquesta via: necessiten registre, amb una revisió tècnica addicional de seixanta a noranta dies hàbils.",
+    "faq8q": "El meu producte il·lumina la pell o combat l'acne. És un cosmètic d'ús especial?",
+    "faq8a": "Sovint sí, i és l'error més car de la categoria. Segons el reglament del 2021, la llista d'ús especial és: tints, permanents, despigmentació i blanqueig, protecció solar, anticaiguda, més qualsevol producte que declari una nova eficàcia. L'antiacne per si sol no hi és, però un producte que el combini amb blanqueig, o que prometi aclarir la pigmentació, cau en la categoria de blanqueig i necessita registre, no notificació. El que decideix és la declaració, no l'ingredient: el mateix sèrum de niacinamida es pot notificar com a ordinari si només promet hidratació, i s'ha de registrar si l'envàs promet atenuar taques fosques. Un cop una declaració d'ús especial és impresa a l'envàs, tornar a la notificació implica un envàs nou i repetir l'assaig d'eficàcia."
   },
   "ServiceEcommerce": {
     "heroTitle": "Comerç electrònic transfronterer per a marques catalanes a la Xina",
@@ -409,7 +413,11 @@
     "coverItems5": "Assessorament sobre l'exempció d'etiquetes per a productes transfronterers",
     "coverItems6": "Compliment de la protecció de dades (PIPL) per a les operacions transfrontereres",
     "metaTitle": "Comerç electrònic transfronterer | Tmall, JD, Douyin",
-    "metaDescription": "Marques catalanes a la Xina via comerç electrònic transfronterer: Tmall Global, JD Worldwide, compliment CBEC, logística, pagaments."
+    "metaDescription": "Marques catalanes a la Xina via comerç electrònic transfronterer: Tmall Global, JD Worldwide, compliment CBEC, logística, pagaments.",
+    "faq7q": "Què és la llista positiva transfronterera i què en queda exclòs?",
+    "faq7a": "La llista positiva — formalment la Llista de mercaderies d'importació al detall per al comerç electrònic transfronterer — defineix què pot entrar pel canal CBEC. Va començar el 2016 amb 1.142 línies aranzelàries; la versió vigent des del març del 2022 en cobreix unes 1.476. Si el vostre codi HS no hi és, el canal està tancat sigui quina sigui la plataforma. Les exclusions pesen més que les inclusions, perquè diverses categories hi són però porten una nota: medicaments que requereixen registre, productes sanitaris fora de les classes permeses i les primeres importacions de fórmula infantil, aliments per a usos mèdics especials i complements requereixen registre o notificació abans de la venda, fins i tot per CBEC. Comprovem primer la línia aranzelària i després l'anotació, perquè un producte pot passar la llista i quedar bloquejat per la nota que hi va adjunta.",
+    "faq8q": "Un producte pot passar del transfronterer al comerç general més endavant?",
+    "faq8a": "Sí, i moltes marques ho planifiquen així: CBEC per provar la demanda, comerç general quan el volum justifica els costos fixos. No és un interruptor sinó una segona entrada. El comerç general exigeix una entitat xinesa o un importador registrat, etiquetatge xinès segons la GB 7718-2025 o les regles de cosmètica, i l'aprovació prèvia que demani la vostra categoria: notificació NMPA per a cosmètica, registre GACC per a aliments, CCC per a l'electrònica llistada. Les mercaderies venudes per CBEC normalment no han passat mai aquestes portes, així que preveieu de tres a sis mesos i una nova ronda d'assajos. Dues coses sí que es conserven: les dades de vendes, que les plataformes accepten com a prova en revisar una categoria, i la marca, si s'ha registrat a la Xina. Prepareu l'etiquetatge xinès i l'expedient de registre mentre el canal CBEC encara funciona, no després de decidir el canvi."
   },
   "ServiceBrand": {
     "heroTitle": "Protecció de marca a la Xina per a empreses catalanes",
@@ -456,7 +464,11 @@
     "coverItems5": "Revisió del compliment publicitari (Llei de Publicitat de la Xina)",
     "coverItems6": "Estratègia de marca i orientació per a l'aplicació dels drets",
     "metaTitle": "Registre de marca a la Xina | protecció de marques catalanes",
-    "metaDescription": "Registre de marca a la Xina per a marques catalanes: CNIPA, sistema de Madrid, falsificacions, protecció a plataformes."
+    "metaDescription": "Registre de marca a la Xina per a marques catalanes: CNIPA, sistema de Madrid, falsificacions, protecció a plataformes.",
+    "faq7q": "He de registrar la meva marca abans o després d'entrar al mercat xinès?",
+    "faq7a": "Abans — i abans que ningú de la cadena de subministrament vegi la marca. La Xina aplica el primer sol·licitant: el registre pertany a qui sol·licita primer, no a qui va usar primer. La finestra perillosa és aquella en què la vostra fàbrica, distribuïdor o un operador de plataforma coneixen el nom abans que la sol·licitud estigui presentada; els aprofitats vigilen exactament això. Presentar costa poc i es fa en un dia, així que presenteu el dia que decidiu entrar, encara que l'entrada real sigui d'aquí a un any. Registreu la transliteració xinesa o el signe en caràcters llatins, o tots dos — l'aprofitat sovint registra el nom xinès que no heu reclamat. La data de prioritat és el que fareu servir més endavant, i només existeix des del dia que la CNIPA rep una sol·licitud completa.",
+    "faq8q": "Una empresa xinesa ja ha registrat la meva marca. Què puc fer?",
+    "faq8a": "Tres vies, i la correcta depèn dels fets. Si el registre encara és dins del període de publicació de tres mesos, podeu presentar oposició. Si ja s'ha concedit, podeu demanar la nul·litat en cinc anys al·legant mala fe del sol·licitant — el que decideix són les proves del vostre ús anterior, els volums d'exportació i qualsevol relació amb distribuïdors. Si la marca fa tres anys que està registrada i no s'usa a la Xina, la cancel·lació per no ús sol ser més ràpida i barata, tot i que l'aprofitat la pot revifar amb un ús simbòlic. Les tres són actuacions administratives davant la CNIPA, no judicis, i la decisió sol trigar de sis a dotze mesos. Mentrestant continueu venent amb l'arranjament que tingueu i documenteu cada ús de la marca a la Xina — factures, fitxes de producte, embalatges — perquè aquest expedient es converteix en el cas."
   },
   "ServiceCommon": {
     "whoTitle": "Per a qui és aquest servei?",

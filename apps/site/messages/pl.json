@@ -362,7 +362,11 @@
     "coverItems5": "Wsparcie testów skuteczności dla deklarowanych funkcji",
     "coverItems6": "Zgodność po wprowadzeniu do obrotu (monitorowanie zdarzeń niepożądanych, raporty roczne)",
     "metaTitle": "Rejestracja kosmetyków NMPA dla marek globalnych | Eksport do Chin",
-    "metaDescription": "Zgłoszenie kosmetyków NMPA dla polskich marek: pielęgnacja, makijaż, perfumy. Kategoryzacja, badania, odpowiedzialna osoba w Chinach."
+    "metaDescription": "Zgłoszenie kosmetyków NMPA dla polskich marek: pielęgnacja, makijaż, perfumy. Kategoryzacja, badania, odpowiedzialna osoba w Chinach.",
+    "faq7q": "Ile trwa zgłoszenie NMPA i kiedy mogę zacząć sprzedawać?",
+    "faq7a": "W kosmetykach zwykłych sam etap zgłoszenia jest szybki: dokumentacja trafia przez portal NMPA i przy kompletności zostaje przyjęta w ciągu pięciu dni roboczych — a produkt można sprzedawać, gdy ocena wciąż trwa. Czas siedzi w tym, co trzeba zrobić wcześniej: trzeba wyznaczyć chińskiego odpowiedzialnego, produkt musi przejść badania mikrobiologiczne, na metale ciężkie i stabilność w chińskim laboratorium, a raport oceny bezpieczeństwa musi podpisać wykwalifikowany oceniający. Realnie liczcie od ośmiu do czternastu tygodni od gotowej receptury do produktu gotowego do sprzedaży, dłużej jeśli recepturę trzeba poprawić po badaniach. Produkty specjalnego przeznaczenia, jak filtry przeciwsłoneczne, nie idą tą drogą: wymagają rejestracji, co dokłada sześćdziesiąt do dziewięćdziesięciu dni roboczych oceny technicznej.",
+    "faq8q": "Mój produkt rozjaśnia skórę lub zwalcza trądzik. Czy to kosmetyk specjalnego przeznaczenia?",
+    "faq8a": "Często tak, i to najdroższy błąd w tej kategorii. Zgodnie z rozporządzeniem z 2021 roku lista specjalnego przeznaczenia obejmuje: farby do włosów, trwałą ondulację, usuwanie piegów i wybielanie, filtry przeciwsłoneczne, środki przeciw wypadaniu włosów oraz każdy produkt deklarujący nowe działanie. Sam trądzik nie jest na liście, ale produkt łączący go z wybielaniem albo obiecujący rozjaśnienie przebarwień wpada w kategorię wybielania i wymaga rejestracji, nie zgłoszenia. Decyduje deklaracja, nie składnik: ta sama serum z niacynamidem może być zgłoszona jako zwykła, jeśli obiecuje tylko nawilżenie, a wymaga rejestracji, jeśli opakowanie mówi o rozjaśnianiu ciemnych plam. Gdy deklaracja specjalnego przeznaczenia trafi na projekt opakowania, powrót do zgłoszenia oznacza nowy projekt i powtórny test skuteczności."
   },
   "ServiceEcommerce": {
     "heroTitle": "E-commerce transgraniczny dla polskich marek w Chinach",
@@ -409,7 +413,11 @@
     "coverItems5": "Doradztwo w zakresie zwolnień etykietowych dla sprzedaży transgranicznej",
     "coverItems6": "Zgodność danych (PIPL) dla operacji transgranicznych",
     "metaTitle": "E-commerce transgraniczny dla polskich marek | Tmall, JD",
-    "metaDescription": "Uruchomienie e-commerce w Chinach dla polskich marek: Tmall Global, JD Worldwide, Douyin, zgodność CBEC, logistyka, płatności. Obsługa w języku polskim."
+    "metaDescription": "Uruchomienie e-commerce w Chinach dla polskich marek: Tmall Global, JD Worldwide, Douyin, zgodność CBEC, logistyka, płatności. Obsługa w języku polskim.",
+    "faq7q": "Czym jest lista pozytywna dla handlu transgranicznego i co jest z niej wyłączone?",
+    "faq7a": "Lista pozytywna — formalnie Wykaz towarów importowanych w handlu detalicznym w ramach transgranicznego handlu elektronicznego — określa, co w ogóle może wejść kanałem CBEC. Zaczęła się w 2016 roku od 1142 pozycji taryfowych; wersja obowiązująca od marca 2022 obejmuje około 1476. Jeśli waszego kodu HS na niej nie ma, kanał jest zamknięty niezależnie od platformy. Wyłączenia ważą więcej niż wpisy, bo kilka kategorii jest na liście, ale z adnotacją: leki wymagające rejestracji, wyroby medyczne poza dozwolonymi klasami oraz pierwszy import preparatów dla niemowląt, żywności specjalnego przeznaczenia medycznego i suplementów wymagają rejestracji lub zgłoszenia przed sprzedażą, także przez CBEC. Najpierw sprawdzamy pozycję taryfową, potem adnotację, bo produkt może przejść listę i utknąć na przypisanej do niej uwadze.",
+    "faq8q": "Czy produkt może później przejść z transgranicznego na handel ogólny?",
+    "faq8a": "Tak, i wiele marek tak planuje: CBEC do sprawdzenia popytu, handel ogólny, gdy wolumen uzasadnia koszty stałe. To nie przełącznik, lecz drugie wejście. Handel ogólny wymaga chińskiego podmiotu lub zarejestrowanego importera, chińskiej etykiety zgodnej z GB 7718-2025 albo przepisami kosmetycznymi oraz zgody przedrynkowej wymaganej dla kategorii: zgłoszenie NMPA dla kosmetyków, rejestracja GACC dla żywności, CCC dla wymienionej elektroniki. Towary sprzedane przez CBEC zwykle nigdy nie przeszły tych bram, więc załóżcie trzy do sześciu miesięcy i nową rundę badań. Dwie rzeczy przechodzą dalej: dane sprzedaży, które platformy przyjmują jako dowód przy przeglądzie kategorii, oraz znak towarowy, jeśli został zgłoszony w Chinach. Chińską etykietę i dossier rejestracyjne przygotowujcie, gdy kanał CBEC jeszcze działa, a nie po decyzji o przejściu."
   },
   "ServiceBrand": {
     "heroTitle": "Ochrona znaku towarowego w Chinach dla polskich firm",
@@ -456,7 +464,11 @@
     "coverItems5": "Weryfikacja zgodności reklam (chińska ustawa o reklamie)",
     "coverItems6": "Strategia ochrony marki i doradztwo w egzekwowaniu praw",
     "metaTitle": "Rejestracja znaku towarowego w Chinach | CNIPA",
-    "metaDescription": "Rejestracja i ochrona znaku towarowego w Chinach dla polskich firm: CNIPA, System Madrycki, celna rejestracja IP, walka z podróbkami."
+    "metaDescription": "Rejestracja i ochrona znaku towarowego w Chinach dla polskich firm: CNIPA, System Madrycki, celna rejestracja IP, walka z podróbkami.",
+    "faq7q": "Czy powinienem zarejestrować znak towarowy przed wejściem na rynek chiński, czy po?",
+    "faq7a": "Przed — i zanim ktokolwiek w łańcuchu dostaw zobaczy markę. W Chinach obowiązuje zasada pierwszego zgłaszającego: rejestracja należy do tego, kto pierwszy zgłosi, nie do tego, kto pierwszy użył. Niebezpieczne okno to okres, w którym wasza fabryka, dystrybutor lub operator platformy poznają nazwę, zanim zgłoszenie zostanie złożone; oszuści patrzą dokładnie na to. Zgłoszenie kosztuje niewiele i zajmuje dzień, więc złóżcie je w dniu decyzji o wejściu, nawet jeśli samo wejście jest za rok. Zarejestrujcie chińską transliterację lub znak w znakach łacińskich, albo oba — oszust często rejestruje chińską nazwę, której nie zastrzegliście. Data pierwszeństwa jest tym, na czym będziecie się opierać później, i istnieje tylko od dnia, w którym CNIPA otrzyma kompletne zgłoszenie.",
+    "faq8q": "Chińska firma zarejestrowała już moją markę. Co mogę zrobić?",
+    "faq8a": "Trzy drogi, a właściwa zależy od faktów. Jeśli rejestracja jest jeszcze w trzymiesięcznym okresie publikacji, możecie wnieść sprzeciw. Jeśli została już udzielona, możecie w ciągu pięciu lat żądać unieważnienia z powodu złej wiary zgłaszającego — decydują dowody wcześniejszego używania, wielkość eksportu i wszelkie relacje z dystrybutorami. Jeśli znak jest zarejestrowany od trzech lat i nieużywany w Chinach, unieważnienie z powodu nieużywania bywa szybsze i tańsze, choć oszust może go ożywić symbolicznym używaniem. Wszystkie trzy to postępowania administracyjne przed CNIPA, nie sprawy sądowe, a decyzja trwa zwykle od sześciu do dwunastu miesięcy. W międzyczasie sprzedawajcie na dotychczasowych zasadach i dokumentujcie każde użycie znaku w Chinach — faktury, karty produktu, opakowania — bo ta teczka stanie się sprawą."
   },
   "ServiceCommon": {
     "whoTitle": "Dla kogo przeznaczona jest ta usługa",

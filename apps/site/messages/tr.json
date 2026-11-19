@@ -362,7 +362,11 @@
     "coverItems5": "Beyan edilen işlevler için etkinlik testi desteği",
     "coverItems6": "Pazar sonrası uyumluluk (advers olay izleme, yıllık raporlar)",
     "metaTitle": "Küresel markalar için NMPA kozmetik kaydı | Çin'e ihracat",
-    "metaDescription": "Türk kozmetik markaları için NMPA kaydı: sınıflandırma, hayvan testi muafiyeti, Çin’de sorumlu kişi, süre."
+    "metaDescription": "Türk kozmetik markaları için NMPA kaydı: sınıflandırma, hayvan testi muafiyeti, Çin’de sorumlu kişi, süre.",
+    "faq7q": "NMPA bildirimi ne kadar sürer, satışa ne zaman başlayabilirim?",
+    "faq7a": "Sıradan kozmetikte bildirim adımının kendisi hızlıdır: dosya NMPA portalından verilir ve eksiksizse beş iş günü içinde kabul edilir; ürün inceleme sürerken bile satılabilir. Zaman öncesinde yapılması gerekenlerde geçer: Çinli bir sorumlu atanmalı, ürün bir Çin laboratuvarında mikrobiyoloji, ağır metal ve stabilite testlerinden geçmeli, güvenlik değerlendirme raporu yetkin bir değerlendirici tarafından imzalanmalıdır. Formülün kesinleşmesinden satılabilir ürüne gerçekçi olarak sekiz ila on dört hafta hesaplayın; testlerden sonra formül ayarı gerekirse daha uzun. Güneş koruyucu gibi özel kullanımlı ürünler bu yolu izlemez: kayıt gerekir ve buna altmış ila doksan iş günü teknik inceleme eklenir.",
+    "faq8q": "Ürünüm cildi aydınlatıyor veya akneye karşı. Bu onu özel kullanımlı kozmetik yapar mı?",
+    "faq8a": "Çoğu zaman evet ve bu, kategorideki en pahalı hatadır. 2021 tüzüğüne göre özel kullanım listesi şudur: saç boyası, perma, leke giderici ve beyazlatıcı, güneş koruyucu, saç dökülmesine karşı ürünler ve yeni bir etkinlik iddia eden her ürün. Akne tek başına listede yoktur, ancak akneyi beyazlatmayla birleştiren veya pigmentasyonu açacağını vaat eden ürün beyazlatıcı sınıfa girer ve bildirim değil kayıt gerektirir. Belirleyici olan bileşen değil iddiadır: aynı niasinamid serumu yalnızca nemlendirme vaat ederse sıradan olarak bildirilebilir, ambalaj koyu lekeleri açacağını yazarsa kayda tabidir. Özel kullanım iddiası bir kez ambalaja basıldıysa, bildirime dönmek yeni ambalaj ve yeni etkinlik testi demektir."
   },
   "ServiceEcommerce": {
     "heroTitle": "Sınır Ötesi E-ticaret – Türk markaları için Çin rehberi",
@@ -409,7 +413,11 @@
     "coverItems5": "Sınır ötesi satışlar için etiket muafiyeti danışmanlığı",
     "coverItems6": "Sınır ötesi operasyonlar için veri uyumluluğu (PIPL)",
     "metaTitle": "Sınır Ötesi E-ticaret | Türk markaları için Tmall·JD rehberi",
-    "metaDescription": "Türk markaları için Çin’de sınır ötesi e-ticaret: Tmall Global, JD Worldwide, CBEC uyumu, lojistik, ödeme."
+    "metaDescription": "Türk markaları için Çin’de sınır ötesi e-ticaret: Tmall Global, JD Worldwide, CBEC uyumu, lojistik, ödeme.",
+    "faq7q": "Sınır ötesi pozitif liste nedir ve neler kapsam dışıdır?",
+    "faq7a": "Pozitif liste — resmî adıyla Sınır Ötesi E-Ticaret Perakende İthalat Mal Listesi — bir ürünün CBEC kanalından girip giremeyeceğini belirler. 2016'da 1.142 gümrük tarife satırıyla başladı; Mart 2022'de yürürlüğe giren sürüm yaklaşık 1.476 satır kapsıyor. HS kodunuz listede yoksa hangi platformu kullanırsanız kullanın kanal kapalı. İstisnalar dahil olanlardan daha önemli, çünkü birkaç kategori listede olmasına rağmen dipnot taşır: kayıt gerektiren ilaçlar, izin verilen sınıflar dışındaki tıbbi cihazlar ve bebek maması, özel tıbbi amaçlı gıda ve takviyelerin ilk ithalatı CBEC'te bile satıştan önce kayıt veya bildirim gerektirir. Önce tarife satırına, sonra dipnota bakıyoruz, çünkü bir ürün listeyi geçip ekli notta takılabilir.",
+    "faq8q": "Bir ürün sonradan sınır ötesinden genel ticarete geçebilir mi?",
+    "faq8a": "Geçebilir ve birçok marka bunu planlar: talep testi için CBEC, hacim sabit maliyetleri karşılayınca genel ticaret. Bu bir anahtar değil, ikinci giriştir. Genel ticaret Çinli bir tüzel kişi veya kayıtlı ithalatçı, GB 7718-2025 veya kozmetik kurallarına uygun Çince etiket ve kategorinizin gerektirdiği ön onayı ister: kozmetikte NMPA bildirimi, gıdada GACC kaydı, listedeki elektronikte CCC. CBEC'ten satılan mallar bu kapılardan genellikle hiç geçmemiştir, bu yüzden üç ila altı ay ve yeni bir test turu hesaplayın. İki şey devreder: platformların kategori incelemesinde kanıt olarak kabul ettiği satış verileri ve Çin'de başvurusu yapıldıysa marka. Çince etiketi ve kayıt dosyasını CBEC kanalı hâlâ çalışırken hazırlayın, geçişe karar verdikten sonra değil."
   },
   "ServiceBrand": {
     "heroTitle": "Çin’de marka tescili – Türk markalarının korunması",
@@ -456,7 +464,11 @@
     "coverItems5": "Reklam uyumluluk incelemesi (Çin Reklam Kanunu)",
     "coverItems6": "Marka koruma stratejisi ve icra danışmanlığı",
     "metaTitle": "Çin’de Marka Tescili | Türk markaları koruma rehberi",
-    "metaDescription": "Türk markaları için Çin’de marka tescili: CNIPA başvurusu, Madrid Sistemi, sahtecilikle mücadele, platform koruması."
+    "metaDescription": "Türk markaları için Çin’de marka tescili: CNIPA başvurusu, Madrid Sistemi, sahtecilikle mücadele, platform koruması.",
+    "faq7q": "Markamı Çin pazarına girmeden önce mi yoksa sonra mı tescil ettirmeliyim?",
+    "faq7a": "Önce — üstelik tedarik zincirindeki herhangi biri markayı görmeden önce. Çin'de ilk başvuru ilkesi geçerli: tescil, ilk kullananın değil ilk başvuranın hakkıdır. Tehlikeli pencere, başvurunuz dosyalanmadan önce fabrikanızın, distribütörünüzün veya bir platform işletmecisinin adı öğrendiği dönemdir; kötü niyetli başvurucular tam olarak buna bakar. Başvuru ucuz ve bir gün sürer; girişe karar verdiğiniz gün dosyalayın, gerçek giriş bir yıl sonra olsa bile. Çince transkripsiyonu veya Latin harfli işareti, ya da ikisini birden tescil ettirin — kötü niyetli başvurucu genellikle talep etmediğiniz Çince adı tescil eder. Öncelik tarihi sonra dayanacağınız şeydir ve yalnızca CNIPA'nın eksiksiz bir başvuruyu aldığı günden itibaren vardır.",
+    "faq8q": "Bir Çin şirketi markamı zaten tescil ettirmiş. Ne yapabilirim?",
+    "faq8a": "Üç yol var ve doğrusu olgulara bağlı. Tescil hâlâ üç aylık yayın dönemindeyse itiraz edebilirsiniz. Verilmişse, başvuru sahibinin kötü niyetine dayanarak beş yıl içinde hükümsüzlük talep edebilirsiniz — belirleyici olan önceki kullanım kanıtlarınız, ihracat hacimleriniz ve distribütör ilişkisidir. Marka üç yıldır tescilli ve Çin'de kullanılmamışsa, kullanmama nedeniyle iptal genellikle daha hızlı ve ucuzdur; ancak başvurucu sembolik kullanımla canlandırabilir. Üçü de CNIPA önünde idari prosedürdür, dava değil, ve karar genellikle altı ile on iki ay sürer. Bu arada mevcut düzenlemeyle satmaya devam edin ve markanın Çin'deki her kullanımını belgeleyin — faturalar, ürün sayfaları, ambalajlar — çünkü o dosya davanın kendisi olur."
   },
   "ServiceCommon": {
     "whoTitle": "Bu hizmet kimler için?",

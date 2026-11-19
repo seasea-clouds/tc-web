@@ -362,7 +362,11 @@
     "coverItems5": "Hatékonysági vizsgálatok támogatása a bejelentett funkciókhoz",
     "coverItems6": "Piaci megfelelőség a bejelentés után (nemkívánatos események jelentése, éves jelentés)",
     "metaTitle": "NMPA kozmetikai bejelentés globális márkáknak | Export Kínába",
-    "metaDescription": "NMPA-regisztráció magyar kozmetikai márkáknak: besorolás, állatkísérlet-mentesség, felelős személy Kínában, idő."
+    "metaDescription": "NMPA-regisztráció magyar kozmetikai márkáknak: besorolás, állatkísérlet-mentesség, felelős személy Kínában, idő.",
+    "faq7q": "Mennyi ideig tart az NMPA-bejelentés, és mikor kezdhetem el árulni?",
+    "faq7a": "Közönséges kozmetikumoknál maga a bejelentési lépés gyors: a dokumentáció az NMPA portálján megy át, és hiánytalanság esetén öt munkanapon belül elfogadásra kerül — a termék pedig már árulható, amíg az értékelés folyik. Az idő az előtte lévő lépésekben van: ki kell jelölni egy kínai felelős személyt, a terméknek kínai laboratóriumban mikrobiális, nehézfém- és stabilitási vizsgálatokon kell átmennie, a biztonsági értékelési jelentést pedig képesített értékelőnek kell aláírnia. Reálisan nyolc–tizennégy hét a kész formulától az árulható termékig, hosszabb, ha a formulát a vizsgálatok után módosítani kell. A különleges felhasználású termékek, például a fényvédő, nem ezen az úton mennek: regisztrációt igényelnek, ami további hatvan–kilencven munkanap műszaki vizsgálatot jelent.",
+    "faq8q": "A termékem világosítja a bőrt vagy pattanások ellen hat. Különleges felhasználású kozmetikum?",
+    "faq8a": "Gyakran igen, és ebben a kategóriában ez a legdrágább hiba. A 2021-es rendelet szerint a különleges felhasználás listája: hajfestés, tartós hullámosítás, szeplőeltávolítás és fehérítés, fényvédelem, hajhullás elleni szerek, valamint minden termék, amely új hatást állít. A pattanás önmagában nincs a listán, de az a termék, amely fehérítéssel kombinálja, vagy a pigmentáció halványítását ígéri, a fehérítés kategóriájába esik, és regisztrációt igényel bejelentés helyett. A döntő az állítás, nem az összetevő: ugyanaz a niacinamid szérum bejelenthető közönségesként, ha csak hidratálást ígér, és regisztrálandó, ha a csomagolás a sötét foltok halványítását ígéri. Ha egyszer a különleges felhasználású állítás felkerül a csomagolásra, a bejelentéshez való visszatérés új csomagolást és új hatásvizsgálatot jelent."
   },
   "ServiceEcommerce": {
     "heroTitle": "Határokon átnyúló e-kereskedelem magyar márkáknak Kínában",
@@ -409,7 +413,11 @@
     "coverItems5": "Címke-mentességi útmutató határon átnyúló termékekhez",
     "coverItems6": "Adatmegfelelőség a határon átnyúló működéshez (PIPL)",
     "metaTitle": "Határon átnyúló e-kereskedelem Kínában | Tmall, JD, Douyin",
-    "metaDescription": "Magyar márkák Kínában határon átnyúló e-kereskedelem révén: Tmall Global, JD Worldwide, CBEC-megfelelés, logisztika, fizetés."
+    "metaDescription": "Magyar márkák Kínában határon átnyúló e-kereskedelem révén: Tmall Global, JD Worldwide, CBEC-megfelelés, logisztika, fizetés.",
+    "faq7q": "Mi a határon átnyúló pozitív lista, és mi van kizárva róla?",
+    "faq7a": "A pozitív lista — hivatalosan a Határon Átnyúló E-kereskedelmi Kiskereskedelmi Importáru-listát — határozza meg, egyáltalán mi léphet be a CBEC-csatornán. 2016-ban 1 142 tarifasorral indult; a 2022 márciusa óta hatályos változat mintegy 1 476 sort tartalmaz. Ha az Ön HS-kódja nincs rajta, a csatorna zárva, bármelyik platformot használja is. A kizárások fontosabbak a besorolásoknál, mert több kategória rajta van a listán, de megjegyzést visel: a regisztrációhoz kötött gyógyszerek, az engedélyezett osztályokon kívüli orvostechnikai eszközök, valamint a csecsemőtápszer, a speciális gyógyászati célú élelmiszer és az étrend-kiegészítők első behozatala értékesítés előtt regisztrációt vagy bejelentést igényel, CBEC-en keresztül is. Először a tarifasort ellenőrizzük, aztán a megjegyzést, mert egy termék átmehet a listán, és mégis elakadhat a hozzá tartozó megjegyzésen.",
+    "faq8q": "Átkerülhet egy termék később a határon átnyúló forgalomból a hagyományos kereskedelembe?",
+    "faq8a": "Igen, és sok márka így tervez: CBEC a kereslet tesztelésére, hagyományos kereskedelem, amikor a volumen már fedezi a fix költségeket. Ez nem kapcsoló, hanem második belépés. A hagyományos kereskedelemhez kínai jogalany vagy regisztrált importőr, a GB 7718-2025 vagy a kozmetikai szabályok szerinti kínai címkézés, és a kategóriája által előírt piacra lépés előtti engedély kell: kozmetikánál NMPA-bejelentés, élelmiszernél GACC-regisztráció, a listán szereplő elektronikánál CCC. A CBEC-en eladott áru általában soha nem ment át ezeken a kapukon, ezért számoljon három-hat hónappal és egy új vizsgálati körrel. Két dolog átjön: az értékesítési adatok, amelyeket a platformok kategória-felülvizsgálatkor bizonyítékként elfogadnak, és a védjegy, ha Kínában bejelentették. A kínai címkét és a regisztrációs dossziét még a CBEC-csatorna futása alatt készítse el, ne a váltás eldöntése után."
   },
   "ServiceBrand": {
     "heroTitle": "Márkavédelem Kínában magyar vállalatoknak",
@@ -456,7 +464,11 @@
     "coverItems5": "Hirdetési megfelelőségi felülvizsgálat a kínai reklámtörvény szerint",
     "coverItems6": "Márkastratégia és jogérvényesítési útmutatás",
     "metaTitle": "Védjegybejegyzés Kínában | magyar márkák védelme",
-    "metaDescription": "Védjegybejegyzés Kínában magyar márkák számára: CNIPA, Madridi rendszer, hamisítás, platformvédelem."
+    "metaDescription": "Védjegybejegyzés Kínában magyar márkák számára: CNIPA, Madridi rendszer, hamisítás, platformvédelem.",
+    "faq7q": "A védjegyemet a kínai piacra lépés előtt vagy után kell bejelenteni?",
+    "faq7a": "Előtte — és mielőtt bárki az ellátási láncban meglátja a márkát. Kína az első bejelentő elvét alkalmazza: a lajstromozás azt illeti, aki előbb bejelent, nem azt, aki előbb használta. A veszélyes ablak az, amikor a gyár, a forgalmazó vagy egy platformüzemeltető még a bejelentés előtt megismeri a nevet; a bitorlók pontosan ezt figyelik. A bejelentés olcsó és egy nap, ezért azon a napon jelentsd be, amikor a belépésről döntesz, még ha a tényleges belépés egy év múlva lesz. Lajstromoztasd a kínai átírást vagy a latin betűs jelet, esetleg mindkettőt — a bitorló gyakran éppen azt a kínai nevet jegyzi be, amelyre nem tartottál igényt. Az elsőbbségi nap az, amire később támaszkodni fogsz, és csak attól a naptól létezik, amikor a CNIPA teljes bejelentést kap.",
+    "faq8q": "Egy kínai cég már bejegyezte a márkámat. Mit tehetek?",
+    "faq8a": "Három út, és a helyes a tényektől függ. Ha a lajstromozás még a három hónapos közzétételi időszakban van, felszólalhatsz. Ha már megadták, öt éven belül kérheted a törlést a bejelentő rosszhiszeműségére hivatkozva — a korábbi használat bizonyítékai, az exportvolumen és a forgalmazói kapcsolat döntenek. Ha a védjegy három éve lajstromozott és Kínában nem használt, a használat hiánya miatti törlés gyakran gyorsabb és olcsóbb, bár a bitorló formális használattal újraélesztheti. Mindhárom a CNIPA előtti közigazgatási eljárás, nem bírósági per, és a döntés általában hat-tizenkét hónap. Közben folytasd az értékesítést a jelenlegi konstrukcióban, és dokumentálj minden védjegyhasználatot Kínában — számlák, termékoldalak, csomagolás —, mert az az akta lesz az ügy."
   },
   "ServiceCommon": {
     "whoTitle": "Kinek szól ez a szolgáltatás?",

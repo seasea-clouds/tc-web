@@ -362,7 +362,11 @@
     "coverItems5": "Efficacy testing support for claimed functions",
     "coverItems6": "Post-market compliance (adverse event monitoring, annual reports)",
     "metaTitle": "NMPA Cosmetics Filing for Global Brands | Export to China",
-    "metaDescription": "NMPA cosmetics filing for global beauty brands. CSAR compliance, safety assessment, and responsible agent — sell your cosmetics in China legally."
+    "metaDescription": "NMPA cosmetics filing for global beauty brands. CSAR compliance, safety assessment, and responsible agent — sell your cosmetics in China legally.",
+    "faq7q": "How long does NMPA filing take, and when can I start selling?",
+    "faq7a": "For ordinary cosmetics the filing step itself is quick: the dossier goes through the NMPA portal and, if complete, is accepted within five working days — and the product may be sold while review continues. The time sits in what has to happen first. A Chinese responsible person must be appointed, the product must pass microbial, heavy-metal and stability testing at a Chinese laboratory, and the safety assessment report must be signed by a qualified assessor. Realistically count eight to fourteen weeks from a finished formula to a saleable product, longer if the formula needs adjusting after testing. Special-use products such as sunscreen do not follow this route; they need registration, which adds a technical review of sixty to ninety working days on top.",
+    "faq8q": "My product brightens skin or fights acne. Does that make it a special-use cosmetic?",
+    "faq8a": "Often yes, and this is the most expensive mistake in the category. Under the 2021 regulation the special-use list is hair dye, hair perm, freckle-removing and whitening, sunscreen, anti-hair-loss, plus any product claiming a new efficacy. Anti-acne is not on that list by itself, but a product that combines anti-acne with whitening, or promises to lighten pigmentation, lands in the whitening category and needs registration rather than filing. The trigger is the claim, not the ingredient: the same niacinamide serum can be filed as ordinary if it only claims moisturising, and registered if the packaging promises to fade dark spots. Once a special-use claim is printed on the artwork, going back to filing means new artwork and an efficacy re-test."
   },
   "ServiceEcommerce": {
     "heroTitle": "Cross-Border E-commerce for Global Brands in China",
@@ -409,7 +413,11 @@
     "coverItems5": "Chinese label exemption guidance for cross-border sales",
     "coverItems6": "Data compliance (PIPL) for cross-border operations",
     "metaTitle": "Cross-Border E-commerce China | Tmall, JD, Douyin Guide",
-    "metaDescription": "Cross-border e-commerce for global brands: Tmall, JD, and Douyin onboarding, bonded warehouse, and tax optimization — sell in China without a local entity."
+    "metaDescription": "Cross-border e-commerce for global brands: Tmall, JD, and Douyin onboarding, bonded warehouse, and tax optimization — sell in China without a local entity.",
+    "faq7q": "What is the cross-border positive list, and what is excluded?",
+    "faq7a": "The positive list — formally the List of Retail Import Goods for Cross-Border E-Commerce — defines what may enter through the CBEC channel at all. It started in 2016 with 1,142 tariff lines; the current version, effective March 2022, covers roughly 1,476. If your HS code is not on it, the channel is closed no matter which platform you use. The exclusions matter more than the inclusions, because several categories sit on the list but carry a note: medicines requiring registration, medical devices outside the permitted classes, and first-time imports of infant formula, food for special medical purposes and health foods all need registration or filing before they can be sold — even through CBEC. We check the tariff line first and the annotation second, because a product can pass the list and still be blocked by the note attached to it.",
+    "faq8q": "Can a product move from cross-border to general trade later?",
+    "faq8a": "Yes, and many brands plan it that way: CBEC to test demand, general trade once volume justifies the fixed costs. It is not a switch but a second entry. General trade needs a Chinese entity or importer of record, Chinese labelling under GB 7718-2025 or the cosmetics rules, and whatever pre-market approval your category requires — NMPA filing for cosmetics, GACC registration for food, CCC for listed electronics. Goods sold through CBEC have usually never passed those gates, so budget three to six months and a fresh testing round. Two things do carry over: the sales data, which platforms accept as evidence when reviewing a category, and the trademark, if it was filed in China. Build the Chinese label and the registration dossier while the CBEC channel is still running, not after you decide to move."
   },
   "ServiceBrand": {
     "heroTitle": "China Trademark Registration & Brand Protection for Global Brands",
@@ -456,7 +464,11 @@
     "coverItems5": "Advertising compliance review (Chinese Advertising Law)",
     "coverItems6": "Brand protection strategy and enforcement guidance",
     "metaTitle": "China Trademark Registration | Stop Brand Squatters",
-    "metaDescription": "China trademark registration and brand protection for global brands. CNIPA filing, Madrid system, and customs IP recordal — protect your brand from squatters."
+    "metaDescription": "China trademark registration and brand protection for global brands. CNIPA filing, Madrid system, and customs IP recordal — protect your brand from squatters.",
+    "faq7q": "Should I register my trademark before or after entering the Chinese market?",
+    "faq7a": "Before — and before anyone else in the supply chain sees the brand. China is first-to-file: the registration belongs to whoever files first, not whoever used it first. The dangerous window is the one where your factory, distributor or a platform operator learns the name before your application is on file; squatters watch for exactly that. Filing costs little and takes a day, so file on the day you decide to enter, even if market entry itself is a year away. Register the Chinese transliteration or the Latin mark, or both — a squatter will often register the Chinese name you have not claimed. The priority date is what you will rely on later, and it only exists from the day CNIPA receives a complete application.",
+    "faq8q": "A Chinese company already registered my brand. What can I do?",
+    "faq8a": "Three routes, and the right one depends on the facts. If the registration is still inside its three-month publication period, you can oppose it. If it is already granted, you can request invalidation within five years on the ground that the applicant filed in bad faith — evidence of your prior use, your export volumes and any distributor relationship is what decides it. If the mark has been registered for three years and not used in China, a non-use cancellation is often faster and cheaper, though the squatter may revive it by producing token use. All three are administrative proceedings before CNIPA, not court cases, and a decision typically takes six to twelve months. Meanwhile keep selling under whatever arrangement you have and document every use of the mark in China — invoices, listings, packaging — because that file becomes the case."
   },
   "ServiceCommon": {
     "whoTitle": "Who Is This Service For?",

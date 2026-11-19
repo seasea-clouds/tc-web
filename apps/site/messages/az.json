@@ -362,7 +362,11 @@
     "coverItems5": "İddia edilən funksiyalar üçün effektivlik testlərinə dəstək",
     "coverItems6": "Satışdan sonrakı uyğunluq (mənfi hadisələrin bildirilməsi, illik hesabat)",
     "metaTitle": "Qlobal brendlər üçün NMPA kosmetika qeydiyyatı | Çinə ixrac",
-    "metaDescription": "Azərbaycan kosmetika brendləri üçün NMPA qeydiyyatı: təsnifat, heyvan testlərindən azad olma, Çində məsul şəxs, müddət."
+    "metaDescription": "Azərbaycan kosmetika brendləri üçün NMPA qeydiyyatı: təsnifat, heyvan testlərindən azad olma, Çində məsul şəxs, müddət.",
+    "faq7q": "NMPA qeydiyyatı nə qədər çəkir və nə vaxt satışa başlaya bilərəm?",
+    "faq7a": "Adi kosmetikada qeydiyyat mərhələsinin özü sürətlidir: sənədlər NMPA portalından verilir və tam olduqda beş iş günü ərzində qəbul edilir, məhsul isə baxılma davam edərkən də satıla bilər. Vaxt bundan əvvəl görülməli olanlara gedir: Çində məsul şəxs təyin edilməli, məhsul Çin laboratoriyasında mikrobioloji, ağır metal və stabillik sınaqlarından keçməli, təhlükəsizlik qiymətləndirmə hesabatı isə ixtisaslı qiymətləndirici tərəfindən imzalanmalıdır. Real olaraq hazır formuladan satıla bilən məhsula qədər səkkiz-on dörd həftə hesablayın; sınaqlardan sonra formul düzəlişi lazım olsa daha çox. Günəşdən qoruyucu kimi xüsusi istifadəli məhsullar bu yolla getmir: qeydiyyat tələb olunur və buna əlavə altmış-doxsan iş günü texniki ekspertiza əlavə olunur.",
+    "faq8q": "Məhsulum dərini işıqlandırır və ya sızanaqla mübarizə aparır. Bu, xüsusi istifadəli kosmetikadır?",
+    "faq8a": "Çox vaxt bəli, və bu, kateqoriyadakı ən bahalı səhvdir. 2021-ci il qaydasına görə xüsusi istifadə siyahısı belədir: saç boyası, daimi kimyəvi buruq, ləkə təmizləmə və ağartma, günəşdən qorunma, saç tökülməsinə qarşı vasitələr, həmçinin yeni effektivlik iddia edən hər hansı məhsul. Sızanaq tək başına siyahıda yoxdur, amma onu ağartma ilə birləşdirən və ya piqmentasiyanı açacağını vəd edən məhsul ağartma kateqoriyasına düşür və bildiriş deyil, qeydiyyat tələb edir. Həlledici olan tərkib deyil, iddiadır: eyni niasinamid serumu yalnız nəmləndirmə iddia edərsə adi kimi qeydiyyata alına bilər, qablaşdırmada tünd ləkələri açacağı yazılıbsa qeydiyyat məcburidir. Xüsusi istifadə iddiası bir dəfə qablaşdırmaya çap olunduqdan sonra bildirişə qayıtmaq yeni qablaşdırma və effektivliyin təkrar sınağı deməkdir."
   },
   "ServiceEcommerce": {
     "heroTitle": "Transsərhəd e-ticarət – Azərbaycan brendləri üçün",
@@ -409,7 +413,11 @@
     "coverItems5": "Transsərhəd məhsullar üçün etiket azadolması üzrə rəhbərlik",
     "coverItems6": "Transsərhəd əməliyyatlar üçün məlumat uyğunluğu (PIPL)",
     "metaTitle": "Transsərhəd e-ticarət | Azərbaycan brendləri üçün bələdçi",
-    "metaDescription": "Azərbaycan brendləri transsərhəd e-ticarət vasitəsilə Çində: Tmall Global, JD Worldwide, CBEC uyğunluğu, logistika, ödəniş."
+    "metaDescription": "Azərbaycan brendləri transsərhəd e-ticarət vasitəsilə Çində: Tmall Global, JD Worldwide, CBEC uyğunluğu, logistika, ödəniş.",
+    "faq7q": "Transsərhəd müsbət siyahı nədir və nələr istisna edilib?",
+    "faq7a": "Müsbət siyahı — rəsmi adı Transsərhəd Elektron Ticarət Pərakəndə İdxal Malları Siyahısı — hansı məhsulun ümumiyyətlə CBEC kanalından girə biləcəyini müəyyən edir. 2016-cı ildə 1.142 tarif xətti ilə başladı; 2022-ci ilin martından qüvvədə olan versiya təxminən 1.476 xətti əhatə edir. HS kodunuz orada yoxsa, hansı platforma olursa olsun, kanal bağlıdır. İstisnalar daxiletmələrdən daha ağırdır, çünki bir neçə kateqoriya siyahıdadır, amma qeyd daşıyır: qeydiyyat tələb edən dərmanlar, icazə verilmiş siniflərdən kənar tibbi cihazlar, həmçinin körpə südü, xüsusi tibbi məqsədli qida və əlavələrin ilk idxalı satışdan əvvəl qeydiyyat və ya bildiriş tələb edir, CBEC ilə də. Əvvəlcə tarif xəttini, sonra qeydi yoxlayırıq, çünki məhsul siyahını keçib yenə ona əlavə olunmuş qeyddə ilişə bilər.",
+    "faq8q": "Məhsul sonradan transsərhəddən ümumi ticarətə keçə bilərmi?",
+    "faq8a": "Bilər, və bir çox brend belə planlayır: tələbi sınamaq üçün CBEC, həcm sabit xərcləri doğrultduqda ümumi ticarət. Bu keçid açarı deyil, ikinci girişdir. Ümumi ticarət Çin hüquqi şəxsi və ya qeydiyyatlı idxalçı, GB 7718-2025 və ya kosmetika qaydalarına uyğun Çin etiketi, və kateqoriyanızın tələb etdiyi ilkin bazar təsdiqi tələb edir: kosmetika üçün NMPA bildirişi, qida üçün GACC qeydiyyatı, siyahıdakı elektronika üçün CCC. CBEC ilə satılan mallar adətən bu qapılardan heç vaxt keçməyib, ona görə üç-altı ay və yeni sınaq raundu nəzərdə tutun. İki şey keçir: platformaların kateqoriya baxışında sübut kimi qəbul etdiyi satış məlumatları, və Çində ərizə verilibsə, ticarət nişanı. Çin etiketini və qeydiyyat sənədlərini CBEC kanalı hələ işləyərkən hazırlayın, keçid qərarından sonra deyil."
   },
   "ServiceBrand": {
     "heroTitle": "Çində ticarət nişanının qeydiyyatı – Azərbaycan brendlərinin qorunması",
@@ -456,7 +464,11 @@
     "coverItems5": "Çin reklam qanununa uyğun reklam uyğunluğunun yoxlanması",
     "coverItems6": "Brend strategiyası və icra üzrə rəhbərlik",
     "metaTitle": "Çində ticarət nişanı qeydiyyatı | Azərbaycan brendləri üçün",
-    "metaDescription": "Azərbaycan brendləri üçün Çində ticarət nişanı qeydiyyatı: CNIPA, Madrid sistemi, saxtakarlıq, platforma qoruması."
+    "metaDescription": "Azərbaycan brendləri üçün Çində ticarət nişanı qeydiyyatı: CNIPA, Madrid sistemi, saxtakarlıq, platforma qoruması.",
+    "faq7q": "Ticarət nişanımı Çin bazarına girməzdən əvvəl, yoxsa sonra qeydiyyata almalıyam?",
+    "faq7a": "Əvvəl — və təchizat zəncirində hər hansı biri brendi görməzdən əvvəl. Çində ilk ərizəçi prinsipi tətbiq olunur: qeydiyyat ilk istifadə edənə deyil, ilk ərizə verənə aiddir. Təhlükəli pəncərə ərizəniz təqdim edilməzdən əvvəl zavodunuzun, distribyutorunuzun və ya platforma operatorunun adı öyrəndiyi dövrdür; oğrular məhz buna baxır. Ərizə ucuzdur və bir gün çəkir, ona görə qərara gəldiyiniz gün təqdim edin, hətta real giriş bir il sonra olsa da. Çin transkripsiyasını və ya latın işarəsini, ya da hər ikisini qeydiyyata alın — oğru çox vaxt iddia etmədiyiniz Çin adını qeydiyyata alır. Prioritet tarixi sonra dayanacağınız şeydir və yalnız CNIPA tam ərizə aldığı gündən mövcuddur.",
+    "faq8q": "Bir Çin şirkəti brendimi artıq qeydiyyata alıb. Nə edə bilərəm?",
+    "faq8a": "Üç yol var və düzgün olan faktlardan asılıdır. Qeydiyyat hələ üç aylıq dərc dövründədirsə, etiraz verə bilərsiniz. Artıq verilibsə, beş il içində ərizəçinin bədniyyətinə əsaslanaraq etibarsız sayılmasını tələb edə bilərsiniz — həlledici olan əvvəlki istifadənizin sübutları, ixrac həcmləriniz və distribyutorla hər hansı münasibətdir. İşarə üç ildir qeydiyyatdadırsa və Çində istifadə olunmursa, istifadəsizliyə görə silinmə çox vaxt daha sürətli və ucuzdur, baxmayaraq ki, oğru simvolik istifadə ilə onu dirildə bilər. Üçü də CNIPA qarşısında inzibati prosedurdur, məhkəmə işi deyil, və qərar adətən altı-iyirmi iki ay çəkir. Bu arada mövcud şərtlərlə satışa davam edin və işarənin Çində hər istifadəsini sənədləşdirin — fakturalar, məhsul səhifələri, qablaşdırma — çünki o iş qovluğu işin özünə çevrilir."
   },
   "ServiceCommon": {
     "whoTitle": "Bu Xidmət Kimlər Üçündür?",

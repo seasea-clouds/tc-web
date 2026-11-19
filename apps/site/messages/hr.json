@@ -362,7 +362,11 @@
     "coverItems5": "Podrška za ispitivanje učinkovitosti deklariranih funkcija",
     "coverItems6": "Usklađenost nakon stavljanja na tržište (prijava štetnih događaja, godišnja izvješća)",
     "metaTitle": "Registracija kozmetike NMPA za globalne marke | Izvoz u Kinu",
-    "metaDescription": "NMPA registracija za hrvatske kozmetičke brendove: klasifikacija, oslobađanje od testiranja na životinjama, odgovorna osoba u Kini, vrijeme."
+    "metaDescription": "NMPA registracija za hrvatske kozmetičke brendove: klasifikacija, oslobađanje od testiranja na životinjama, odgovorna osoba u Kini, vrijeme.",
+    "faq7q": "Koliko traje prijava NMPA i kada mogu početi prodavati?",
+    "faq7a": "Kod obične kozmetike sam korak prijave je brz: dokumentacija ide kroz NMPA portal i, ako je potpuna, prihvaća se u roku od pet radnih dana — a proizvod se može prodavati dok ocjena još traje. Vrijeme odlazi na ono što mora prethoditi: treba imenovati kinesku odgovornu osobu, proizvod mora proći mikrobiološka ispitivanja, ispitivanja teških metala i stabilnosti u kineskom laboratoriju, a izvješće o procjeni sigurnosti mora potpisati kvalificirani procjenitelj. Realno računajte osam do četrnaest tjedana od gotove formulacije do proizvoda spremnog za prodaju, dulje ako se formulacija mora prilagoditi nakon ispitivanja. Proizvodi posebne namjene, poput zaštite od sunca, ne idu tim putem: traže registraciju, što dodaje šezdeset do devedeset radnih dana tehničke ocjene.",
+    "faq8q": "Moj proizvod posvjetljuje kožu ili djeluje protiv akni. Je li to kozmetika posebne namjene?",
+    "faq8a": "Često jest, i to je najskuplja pogreška u ovoj kategoriji. Prema Uredbi iz 2021. popis posebne namjene obuhvaća: bojanje kose, trajnu trajnu ondulaciju, uklanjanje pjegica i izbjeljivanje, zaštitu od sunca, sredstva protiv opadanja kose te svaki proizvod koji tvrdi novu djelotvornost. Akne same po sebi nisu na popisu, ali proizvod koji ih spaja s izbjeljivanjem ili obećava posvjetljivanje pigmentacije ulazi u kategoriju izbjeljivanja i traži registraciju, ne prijavu. Odlučuje tvrdnja, ne sastojak: isti serum s niacinamidom može se prijaviti kao običan ako obećava samo hidrataciju, a mora se registrirati ako ambalaža obećava posvjetljivanje tamnih mrlja. Kad jednom tvrdnja posebne namjene bude otisnuta na ambalaži, povratak na prijavu znači novi dizajn i novo ispitivanje djelotvornosti."
   },
   "ServiceEcommerce": {
     "heroTitle": "Prekogranična e-trgovina za hrvatske brendove u Kini",
@@ -409,7 +413,11 @@
     "coverItems5": "Smjernice za izuzeće oznaka za prekogranične proizvode",
     "coverItems6": "Usklađenost podataka (PIPL) za prekogranično poslovanje",
     "metaTitle": "Prekogranična e-trgovina u Kini | vodič Tmall i JD",
-    "metaDescription": "Hrvatski brendovi u Kini putem prekogranične e-trgovine: Tmall Global, JD Worldwide, usklađenost CBEC, logistika, plaćanja."
+    "metaDescription": "Hrvatski brendovi u Kini putem prekogranične e-trgovine: Tmall Global, JD Worldwide, usklađenost CBEC, logistika, plaćanja.",
+    "faq7q": "Što je prekogranična pozitivna lista i što je s nje isključeno?",
+    "faq7a": "Pozitivna lista — službeno Popis robe za uvoz u maloprodaji za prekograničnu e-trgovinu — određuje što uopće može ući kanalom CBEC. Počela je 2016. sa 1142 tarifne pozicije; verzija na snazi od ožujka 2022. obuhvaća oko 1476. Ako vaš HS kod nije na njoj, kanal je zatvoren bez obzira na platformu. Isključenja su teža od uključenja jer nekoliko kategorija jest na popisu, ali nosi napomenu: lijekovi koji traže registraciju, medicinski proizvodi izvan dopuštenih razreda te prvi uvoz početne formule, hrane za posebne medicinske namjene i dodataka prehrani traže registraciju ili prijavu prije prodaje, čak i preko CBEC-a. Prvo provjeravamo tarifnu poziciju, zatim napomenu, jer proizvod može proći popis i ipak zapeti na priloženoj napomeni.",
+    "faq8q": "Može li proizvod kasnije prijeći s prekograničnog na redovnu trgovinu?",
+    "faq8a": "Može, i mnogi brendovi tako planiraju: CBEC za provjeru potražnje, redovna trgovina kad obujam opravda fiksne troškove. To nije prekidač nego drugi ulaz. Redovna trgovina traži kineski subjekt ili registriranog uvoznika, kinesko označavanje prema GB 7718-2025 ili pravilima za kozmetiku i prethodno odobrenje koje traži vaša kategorija: prijava NMPA za kozmetiku, registracija GACC za hranu, CCC za navedenu elektroniku. Roba prodana preko CBEC-a obično nikad nije prošla ta vrata, pa računajte tri do šest mjeseci i novi krug ispitivanja. Dvije stvari se prenose: podaci o prodaji, koje platforme prihvaćaju kao dokaz pri reviziji kategorije, i žig ako je prijavljen u Kini. Kinesku etiketu i registracijski dosje pripremajte dok CBEC još radi, ne nakon što odlučite prijeći."
   },
   "ServiceBrand": {
     "heroTitle": "Zaštita žiga u Kini za hrvatske tvrtke",
@@ -456,7 +464,11 @@
     "coverItems5": "Pregled usklađenosti oglašavanja (kineski zakon o oglašavanju)",
     "coverItems6": "Strategija zaštite brenda i smjernice za provedbu",
     "metaTitle": "Registracija žiga u Kini | zaštita hrvatskih brendova",
-    "metaDescription": "Registracija žiga u Kini za hrvatske brendove: CNIPA, Madridski sustav, krivotvorine, zaštita na platformama."
+    "metaDescription": "Registracija žiga u Kini za hrvatske brendove: CNIPA, Madridski sustav, krivotvorine, zaštita na platformama.",
+    "faq7q": "Treba li registrirati žig prije ili poslije ulaska na kinesko tržište?",
+    "faq7a": "Prije — i prije nego što itko u lancu opskrbe vidi žig. Kina primjenjuje načelo prvog prijavitelja: registracija pripada onome koji prvi prijavi, a ne onome koji je prvi koristio. Opasno razdoblje je ono u kojem vaša tvornica, distributer ili operater platforme saznaju ime prije nego što je prijava podnesena; skvoteri gledaju upravo to. Prijava malo stoji i traje jedan dan, pa podnesite onoga dana kad odlučite ući, čak i ako je sam ulazak za godinu. Registrirajte kinesku transliteraciju ili latinsku oznaku, ili oboje — skvoter često registrira baš ono kinesko ime koje niste tražili. Datum prvenstva je ono na što ćete se kasnije oslanjati, i postoji samo od dana kad CNIPA zaprimi potpunu prijavu.",
+    "faq8q": "Kineska tvrtka već je registrirala moj žig. Što mogu učiniti?",
+    "faq8a": "Tri puta, a ispravan ovisi o činjenicama. Ako je registracija još u trogodišnjem roku objave, možete uložiti prigovor. Ako je već dodijeljena, možete u roku od pet godina tražiti ništavost zbog nepoštenja podnositelja — odlučuju dokazi vaše ranije uporabe, izvozni obujam i svaki odnos s distributerima. Ako je žig registriran tri godine i ne koristi se u Kini, brisanje zbog neuporabe često je brže i jeftinije, iako ga skvoter može oživjeti simboličnom uporabom. Sva tri su upravni postupci pred CNIPA, ne sudske parnice, i odluka obično traje šest do dvanaest mjeseci. U međuvremenu nastavite prodavati po postojećem aranžmanu i dokumentirajte svaku uporabu žiga u Kini — računi, stranice proizvoda, ambalaža — jer taj spis postaje predmet."
   },
   "ServiceCommon": {
     "whoTitle": "Kome je ova usluga namijenjena?",

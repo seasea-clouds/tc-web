@@ -13,8 +13,6 @@ import ServiceFAQ from '@/components/ServiceFAQ';
 import HowToJsonLd from '@/components/HowToJsonLd';
 import DefinitionSchema from '@/components/DefinitionSchema';
 import QuickAnswer from '@/components/QuickAnswer';
-import RelatedResources from '@/components/RelatedResources';
-import { getBlogCategoryForService } from '@/lib/service-blog-map';
 import { serviceFaqItems } from '@/lib/service-faq-schema';
 import FaqPageSchema from '@/components/FaqPageSchema';
 
@@ -87,7 +85,6 @@ export default async function EcommercePage({ params }: { params: Promise<{ loca
       <ProcessSteps t={homeT} />
       <WhyUsCards t={commonT} />
       <ServiceFAQ namespace="ServiceEcommerce" />
-      <RelatedResources locale={locale} category={getBlogCategoryForService('ecommerce', locale)} />
       <PortalCTASection t={commonT} href={`/${locale}/c/check/crossborder`} />
       <ContactForm source="services-ecommerce" />
       <CTASection t={ctaT} />

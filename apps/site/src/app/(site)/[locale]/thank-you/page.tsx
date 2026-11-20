@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { locales } from '@/i18n/routing';
 import { sharedOpenGraph, sharedTwitter, buildLanguages } from '@trade/ui/seo';
 import { MessageCircle, CheckCircle, Clock, Shield, Users, Globe } from 'lucide-react';
-import { getAllPostsMeta } from '@/lib/blog';
+import { getPublishedInsights } from '@/lib/insights-content';
 import Link from 'next/link';
 import { WHATSAPP_URL } from '@/lib/constants';
 
@@ -32,7 +32,7 @@ export default async function ThankYouPage({ params }: { params: Promise<{ local
   const title = t('title');
   const subtitle = t('subtitle');
 
-  const posts = getAllPostsMeta(locale).slice(0, 3);
+  const posts = getPublishedInsights(locale).slice(0, 3);
 
   const jsonLd = {
     "@context": "https://schema.org",

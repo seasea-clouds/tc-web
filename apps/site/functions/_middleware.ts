@@ -1,7 +1,7 @@
 /**
  * Cloudflare Pages Middleware:
  * 1. Route /{locale}/c/* → portal site (user compliance portal)
- * 2. Route /{locale}/insights/* → blog site
+ * 2. Route /{locale}/insights/* → insights site
  * 2b. Route /{locale}/regulations/* → regulations site
  * 3. Route /api/admin/* → admin API
  * 4. Route /admin/* → admin dashboard (HTML + static assets)
@@ -69,7 +69,7 @@ function rewriteNextStatic(html: string, prefix: string): string {
   // Rewriting script src to /{prefix}/_next/static/chunks/... causes
   // cache key mismatches in registerChunk (D(e.src).resolve()), breaking
   // the module loading chain and preventing React hydration.
-  // The Worker handles /_next/static/chunks/* directly → blog upstream.
+  // The Worker handles /_next/static/chunks/* directly → insights upstream.
   //
   // Similarly, do NOT rewrite `href` on <link rel="preload" as="script">
   // — the preloaded URL must match the actual `<script src="...">` which
@@ -78,7 +78,7 @@ function rewriteNextStatic(html: string, prefix: string): string {
   //
   // Rewrite `href` for CSS, stylesheet preloads, etc. — these MUST go
   // through /{prefix}/_next/static/ so proxySubSiteAsset serves the
-  // correct upstream (/insights/_next/static/chunks/...css → blog).
+  // correct upstream (/insights/_next/static/chunks/...css → insights).
   html = html.replace(
     /<link\s[^>]*href="\/_next\/static\/[^"]*"[^>]*>/g,
     (m) => /\bas="script"/.test(m) ? m : m.replace(/(href=")\/_next\/static\//, `$1/${prefix}/_next/static/`)
@@ -139,11 +139,6 @@ function resolveUpstream(hostname: string, subProject: string, env?: Record<stri
   const envKey = `UPSTREAM_${subProject.toUpperCase()}`;
   if (env && env[envKey]) return env[envKey];
 
-  // 兼容旧变量名：博客站已整体改名 insights，但 Dashboard 上的 UPSTREAM_BLOG
-  // 还没换；先认旧的，等新变量配上再走上面那条。
-  const legacyKey = LEGACY_ENV_ALIAS[subProject];
-  if (legacyKey && env && env[legacyKey]) return env[legacyKey];
-
   // Auto-derive for .pages.dev using naming convention
   if (hostname.endsWith('.pages.dev')) {
     const projectName = hostname.replace('.pages.dev', '');
@@ -156,11 +151,6 @@ function resolveUpstream(hostname: string, subProject: string, env?: Record<stri
   // Final fallback
   return `https://tc-web-${subProject}.pages.dev`;
 }
-
-/** 改名后的旧环境变量别名（站上还没换掉的先兼容一阵） */
-const LEGACY_ENV_ALIAS: Record<string, string> = {
-  insights: 'UPSTREAM_BLOG',
-};
 
 // ─── Proxy request with header sanitation ────────────────────────
 
@@ -309,11 +299,11 @@ async function serveEnglishBarePath(request: Request, url: URL, env?: Record<str
 // ─── Sub-site static assets ─────────────────────────────────────
 
 async function proxySubSiteAsset(url: URL, request: Request, env?: Record<string, string>): Promise<Response | null> {
-  // Match /insights/_next/static/* → blog upstream
-  const blogMatch = url.pathname.match(/^\/insights\/_next\/static\/(.+)/);
-  if (blogMatch) {
+  // Match /insights/_next/static/* → insights upstream
+  const insightsMatch = url.pathname.match(/^\/insights\/_next\/static\/(.+)/);
+  if (insightsMatch) {
     const upstream = resolveUpstream(url.hostname, 'insights', env);
-    const assetUrl = `${upstream}/_next/static/${blogMatch[1]}`;
+    const assetUrl = `${upstream}/_next/static/${insightsMatch[1]}`;
     const resp = await fetch(assetUrl);
     const h = sanitizeHeaders(resp.headers);
     // Ensure proper content-type for JS/CSS
@@ -361,16 +351,16 @@ async function proxySubSiteAsset(url: URL, request: Request, env?: Record<string
     }
   }
 
-  // Match /images/insights/* → blog upstream
-  // Blog body images live in the blog project only (single copy). The site
+  // Match /images/insights/* → insights upstream
+  // Insights body images live in the insights project only (single copy). The site
   // project no longer keeps a duplicate tree, so these paths are proxied here.
   // Method + headers are forwarded so Range / conditional (If-None-Match)
   // requests keep working; upstream cache-control / etag are passed through
   // untouched (no extra edge caching, so replacing an image takes effect at once).
-  const blogImgMatch = url.pathname.match(/^\/images\/insights\/(.+)/);
-  if (blogImgMatch) {
+  const insightsImgMatch = url.pathname.match(/^\/images\/insights\/(.+)/);
+  if (insightsImgMatch) {
     const upstream = resolveUpstream(url.hostname, 'insights', env);
-    const imgUrl = `${upstream}/images/insights/${blogImgMatch[1]}`;
+    const imgUrl = `${upstream}/images/insights/${insightsImgMatch[1]}`;
     const headers = new Headers(request.headers);
     headers.delete('host');
     // redirect: 'manual' —— 上游 301（图片改名后的旧地址）必须原样透传，
@@ -447,13 +437,13 @@ export async function onRequest(context: { request: Request; next: () => Promise
   }
 
   // ── Blog sub-site RSC payload files (*.txt) — same short-circuit ──
-  // Blog page-level flight payloads are named <route>/index.txt (the site app
+  // Insights page-level flight payloads are named <route>/index.txt (the site app
   // uses __next.*.txt above) and are stripped by clean-rsc.mjs as well. A
   // next/link click would request one, get 404, and next/router would land the
   // browser on .../index.txt/. Answer 204 so the client bails out and falls
   // back to a normal navigation. Real text assets are excluded.
   if (
-    /^\/[a-z]{2}\/(?:blog|regulations)\/(?:.*\/)?[^/]*\.txt$/.test(url.pathname) &&
+    /^\/[a-z]{2}\/(?:insights|regulations)\/(?:.*\/)?[^/]*\.txt$/.test(url.pathname) &&
     !/(?:^|\/)(?:robots|llms|sitemap[a-z-]*)\.txt$/.test(url.pathname)
   ) {
     return new Response(null, { status: 204 });
@@ -520,7 +510,7 @@ export async function onRequest(context: { request: Request; next: () => Promise
 
   // ── zh locale gating: only authenticated admins may view Chinese ──
   // Runs after canonical-host redirect and before all sub-site proxying so
-  // /zh/, /zh/c/ (portal) and /zh/insights/ (blog) are all gated at the edge.
+  // /zh/, /zh/c/ (portal) and /zh/insights/ (insights) are all gated at the edge.
   // Static assets are not affected: site assets live at /_next/static and
   // sub-site assets at /c/_next/static, /insights/_next/static (no locale prefix).
   if (/^\/zh(?:\/|$)/.test(url.pathname)) {
@@ -539,11 +529,11 @@ export async function onRequest(context: { request: Request; next: () => Promise
   // Next.js async chunks are loaded at runtime via requestAnimationFrame + <link prefetch>.
   // These are relative to the same origin, so they request `/_next/static/chunks/*`.
   // On the main site, `/_next/static/` belongs to the main site itself.
-  // For proxied sub-sites (portal/blog with /c/ and /insights/ base paths),
+  // For proxied sub-sites (portal/insights with /c/ and /insights/ base paths),
   // their modules use un-prefixed `/_next/static/chunks/*` URLs.
   // This handler serves those chunks from the correct upstream.
   if (url.pathname.startsWith('/_next/static/chunks/')) {
-    // Try portal first, then blog, then regulations
+    // Try portal first, then insights, then regulations
     for (const sub of ['portal', 'insights', 'regulations']) {
       const upstream = resolveUpstream(url.hostname, sub, env);
       const fwdUrl = `${upstream}/_next/static/chunks/${url.pathname.replace('/_next/static/chunks/', '')}`;
@@ -555,7 +545,7 @@ export async function onRequest(context: { request: Request; next: () => Promise
         return new Response(resp.body, { status: 200, headers: h });
       }
     }
-    // If neither portal nor blog has it, let it 404 as usual
+    // If neither portal nor insights has it, let it 404 as usual
   }
 
   // ── Portal proxy (/c/) ─────────────────────────────────────────

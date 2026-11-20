@@ -340,7 +340,7 @@ function processUnorderedListBlock(block: string): string {
 }
 
 /**
- * Convert simple markdown (as used in blog MDX files) to HTML.
+ * Convert simple markdown (as used in insights MDX files) to HTML.
  * Supports: headings (h2/h3), bold, italic, links, inline code, code blocks,
  * tables, ordered lists, unordered lists, checkboxes, blockquotes, horizontal rules.
  */

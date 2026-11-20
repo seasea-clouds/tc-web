@@ -1,7 +1,7 @@
 import type { PostMeta } from '@/lib/posts';
-import { buildRows } from '@/lib/blog-list';
+import { buildRows } from '@/lib/insights-list';
 
-export interface BlogCardTexts {
+export interface InsightCardTexts {
   locale: string;
   readMoreText: string;
   readTimeText: string;
@@ -11,7 +11,7 @@ export interface BlogCardTexts {
 function BlogCard({ post, locale, readMoreText, readTimeText, categoryLabels, heightClass = '' }: {
   post: PostMeta;
   heightClass?: string;
-} & BlogCardTexts) {
+} & InsightCardTexts) {
   return (
     <a
       href={`/${locale}/insights/${post.slug}/`}
@@ -57,7 +57,7 @@ function BlogCard({ post, locale, readMoreText, readTimeText, categoryLabels, he
 }
 
 /** Renders one page of posts as magazine rows. Pure component: usable on the server and in the client. */
-export default function BlogRows({ posts, texts }: { posts: PostMeta[]; texts: BlogCardTexts }) {
+export default function InsightRows({ posts, texts }: { posts: PostMeta[]; texts: InsightCardTexts }) {
   return (
     <div className="space-y-8">
       {buildRows(posts).map((row, ri) =>

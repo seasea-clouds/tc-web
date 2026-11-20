@@ -56,7 +56,7 @@ export function paginate(posts: PostMeta[]): PostMeta[][] {
 }
 
 /** Path of the nth list page: page 1 is /{locale}/insights/, deeper pages get their own URL. */
-export function blogPagePath(locale: string, page: number): string {
+export function insightsPagePath(locale: string, page: number): string {
   return page <= 1 ? `/${locale}/insights/` : `/${locale}/insights/page/${page}/`;
 }
 

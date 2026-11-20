@@ -13,8 +13,6 @@ import ServiceFAQ from '@/components/ServiceFAQ';
 import HowToJsonLd from '@/components/HowToJsonLd';
 import DefinitionSchema from '@/components/DefinitionSchema';
 import QuickAnswer from '@/components/QuickAnswer';
-import RelatedResources from '@/components/RelatedResources';
-import { getBlogCategoryForService } from '@/lib/service-blog-map';
 import { serviceFaqItems } from '@/lib/service-faq-schema';
 import FaqPageSchema from '@/components/FaqPageSchema';
 
@@ -88,7 +86,6 @@ export default async function CosmeticsPage({ params }: { params: Promise<{ loca
       <ProcessSteps t={homeT} />
       <WhyUsCards t={commonT} />
       <ServiceFAQ namespace="ServiceCosmetics" />
-      <RelatedResources locale={locale} category={getBlogCategoryForService('cosmetics', locale)} />
       <PortalCTASection t={commonT} href={`/${locale}/c/check/nmpa`} />
       <ContactForm source="services-cosmetics" />
       <CTASection t={ctaT} />

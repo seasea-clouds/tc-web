@@ -8,7 +8,7 @@
  * 就只剩详情页这一个入口。
  *
  * 页数算法与各 app 的 lib 保持一致：
- *   - blog：PAGE_CAPACITY=20，有封面的文章占 2 个权重（blog-list.ts paginate）
+ *   - blog：PAGE_CAPACITY=20，有封面的文章占 2 个权重（insights-list.ts paginate）
  *   - regulations：PAGE_CAPACITY=20，一篇占 1 个（doc-list.ts paginate）
  * 文章还要过 publish-gate（未到发布日的不算），否则会把未来页写进 sitemap。
  */
@@ -29,7 +29,7 @@ function hasCover(slug) {
 }
 
 /** 博客的页数（按 en 目录的已发布文章算，48 语言篇目一致） */
-export function blogPageCount() {
+export function insightsPageCount() {
   const dir = path.join(ROOT, 'apps/insights/content/en');
   if (!fs.existsSync(dir)) return 1;
   const files = fs.readdirSync(dir).filter((f) => f.endsWith('.mdx'));
@@ -52,8 +52,8 @@ export function regulationsPageCount() {
 /** 该 locale 下所有需要进 sitemap 的分页 URL（不含第 1 页） */
 export function paginatedRoutes(locale) {
   const out = [];
-  const blogPages = blogPageCount();
-  for (let n = 2; n <= blogPages; n += 1) out.push(`/${locale}/insights/page/${n}/`);
+  const insightsPages = insightsPageCount();
+  for (let n = 2; n <= insightsPages; n += 1) out.push(`/${locale}/insights/page/${n}/`);
   const regPages = regulationsPageCount();
   for (let n = 2; n <= regPages; n += 1) out.push(`/${locale}/regulations/page/${n}/`);
   return out;

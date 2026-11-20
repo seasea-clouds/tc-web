@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { locales } from '@/i18n/routing';
 import { sharedOpenGraph, sharedTwitter, buildLanguages } from '@trade/ui/seo';
-import { getAllPostSlugs } from '@/lib/blog';
+import { getPublishedInsights } from '@/lib/insights-content';
 import { industries } from '@/data/industries';
 import Link from 'next/link';
 
@@ -31,12 +31,11 @@ export default async function SitemapPage({ params }: { params: Promise<{ locale
   const locale = (await params).locale;
   const t = await getTranslations({ locale, namespace: 'Sitemap' });
   const bcT = await getTranslations({ locale, namespace: 'breadcrumb' });
-  const blogT = await getTranslations({ locale, namespace: 'Blog' });
   const svcT = await getTranslations({ locale, namespace: 'Services' });
   const indT = await getTranslations({ locale, namespace: 'IndustriesCommon' });
 
-  // Blog posts
-  const blogSlugs = getAllPostSlugs(locale);
+  // Insights articles (published only, same gate as the insights app)
+  const insightsPosts = getPublishedInsights(locale);
 
   // Sections definition
   const sections = [
@@ -67,11 +66,11 @@ export default async function SitemapPage({ params }: { params: Promise<{ locale
     {
       id: 'insights',
       titleKey: 'insightsTitle',
-      defaultTitle: 'Blog',
-      items: blogSlugs.map((slug) => ({
-        titleKey: `post.${slug}.title`,
-        defaultTitle: slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
-        href: `/${locale}/insights/${slug}/`,
+      defaultTitle: 'Insights',
+      items: insightsPosts.map((post) => ({
+        titleKey: '',
+        defaultTitle: post.title,
+        href: `/${locale}/insights/${post.slug}/`,
       })),
     },
     {

@@ -114,40 +114,6 @@ export function getHomeMetadata(t: (key: string) => string, locale: string) {
 
 
 /**
- * Generate metadata for a blog post page.
- */
-export function getBlogMetadata(
-  t: (key: string) => string,
-  locale: string,
-  articleTitle: string,
-  articleSummary: string,
-  slug: string,
-  publishDate?: string
-) {
-  const title = safeTitle(articleTitle, 'China Market Entry Compliance Guide');
-  const description = articleSummary.length > 160
-    ? articleSummary.slice(0, 157) + '...'
-    : articleSummary;
-
-  return {
-    title,
-    description,
-    alternates: {
-      canonical: `${SITE_URL}/${locale}/insights/${slug}/`,
-    },
-    openGraph: {
-      title,
-      description,
-      locale,
-      siteName: BRAND_NAME,
-      url: `${SITE_URL}/${locale}/insights/${slug}/`,
-      type: 'article',
-      ...(publishDate ? { publishedTime: publishDate } : {}),
-    },
-  };
-}
-
-/**
  * Generate metadata for generic pages (about, contact, etc.).
  */
 export function getGenericMetadata(

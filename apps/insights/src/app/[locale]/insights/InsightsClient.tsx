@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import type { PostMeta } from '@/lib/posts';
-import BlogRows, { type BlogCardTexts } from '@/components/BlogRows';
+import InsightRows, { type InsightCardTexts } from '@/components/InsightRows';
 
 interface Props {
   /** Posts of the page being viewed (server-rendered page 1, or the current page). */
@@ -18,12 +18,12 @@ interface Props {
   allText: string;
 }
 
-export default function BlogClient({
+export default function InsightsClient({
   pagePosts, allPosts, categories, categoryLabels, locale,
   readMoreText, readTimeText, noPostsText, allText,
 }: Props) {
   const [category, setCategory] = useState<string | null>(null);
-  const texts: BlogCardTexts = { locale, readMoreText, readTimeText, categoryLabels };
+  const texts: InsightCardTexts = { locale, readMoreText, readTimeText, categoryLabels };
 
   const visible = useMemo(
     () => (category ? allPosts.filter(p => p.category === category) : pagePosts),
@@ -57,7 +57,7 @@ export default function BlogClient({
       )}
 
       {visible.length > 0 ? (
-        <BlogRows posts={visible} texts={texts} />
+        <InsightRows posts={visible} texts={texts} />
       ) : (
         <p className="py-16 text-center text-[#5F6F7F]">{noPostsText}</p>
       )}

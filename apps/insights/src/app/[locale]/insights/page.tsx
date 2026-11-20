@@ -3,9 +3,9 @@ import fs from 'fs';
 import path from 'path';
 import { getPosts } from '@/lib/posts';
 import { getMessages } from '@/lib/messages';
-import BlogClient from './BlogClient';
-import BlogPager from '@/components/BlogPager';
-import { paginate, getCategories, categoryKey } from '@/lib/blog-list';
+import InsightsClient from './InsightsClient';
+import InsightsPager from '@/components/InsightsPager';
+import { paginate, getCategories, categoryKey } from '@/lib/insights-list';
 
 
 
@@ -87,7 +87,7 @@ export default async function BlogHome({ params }: { params: Promise<{ locale: s
       {/* Posts */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <BlogClient
+          <InsightsClient
             pagePosts={pages[0] ?? []}
             allPosts={posts}
             categories={categories}
@@ -98,7 +98,7 @@ export default async function BlogHome({ params }: { params: Promise<{ locale: s
             noPostsText={tb('noPosts', 'No posts found.')}
             allText={tb('all', 'All')}
           />
-          <BlogPager
+          <InsightsPager
             locale={locale}
             currentPage={1}
             totalPages={pages.length}
@@ -112,9 +112,9 @@ export default async function BlogHome({ params }: { params: Promise<{ locale: s
       {/* Contact Form */}
       <ComplianceForm
         locale={locale}
-        source="blog-list"
+        source="insights-list"
         fromName="SinoTrade Website"
-        idPrefix="blog-list"
+        idPrefix="insights-list"
         texts={{
           title: cf('title', "Free Compliance Assessment"),
           subtitle: cf('subtitle', "Tell us about your products and we'll provide a personalized compliance roadmap."),

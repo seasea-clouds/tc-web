@@ -6,7 +6,7 @@ const cache = new Map<string, Record<string, any>>();
 const SHARED_DIR = path.resolve(process.cwd(), '../../packages/ui/messages');
 
 /**
- * Read blog messages JSON for a locale, merged with shared UI messages.
+ * Read insights messages JSON for a locale, merged with shared UI messages.
  * Shared messages (Footer, Search) from packages/ui/messages/.
  */
 export function getMessages(locale: string): Record<string, any> {

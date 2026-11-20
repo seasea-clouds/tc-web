@@ -76,6 +76,7 @@ const LEGIT_ENGLISH = new Set([
   'SinoTrade Regulations',
   'About',
   'About Us',
+  'Insights',
   'AboutPage',
   'BreadcrumbList',
   'ListItem',

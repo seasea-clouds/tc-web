@@ -1,9 +1,9 @@
 import { LOCALES, buildLanguages, sharedOpenGraph, sharedTwitter, AutoBreadcrumb } from '@trade/ui';
 import { getPosts } from '@/lib/posts';
 import { getMessages } from '@/lib/messages';
-import { paginate, getCategories, categoryKey } from '@/lib/blog-list';
-import BlogRows, { type BlogCardTexts } from '@/components/BlogRows';
-import BlogPager from '@/components/BlogPager';
+import { paginate, getCategories, categoryKey } from '@/lib/insights-list';
+import InsightRows, { type InsightCardTexts } from '@/components/InsightRows';
+import InsightsPager from '@/components/InsightsPager';
 
 interface Params {
   locale: string;
@@ -23,7 +23,7 @@ export async function generateStaticParams() {
     const pages = paginate(getPosts(locale));
     // Page 1 is listed at /{locale}/insights/ too; its /page/1/ copy carries a
     // canonical pointing back there. Generating it keeps the dynamic route
-    // non-empty for `output: export` even when the blog has a single page.
+    // non-empty for `output: export` even when the insights list has a single page.
     for (let n = 1; n <= pages.length; n += 1) {
       params.push({ locale, page: String(n) });
     }
@@ -72,7 +72,7 @@ export default async function BlogPageN({ params }: { params: Promise<Params> })
   for (const cat of getCategories(posts)) {
     categoryLabels[cat] = tb(categoryKey(cat), cat);
   }
-  const texts: BlogCardTexts = {
+  const texts: InsightCardTexts = {
     locale,
     readMoreText: tb('readMore', 'Read More'),
     readTimeText: tb('readTime', 'min read'),
@@ -133,11 +133,11 @@ export default async function BlogPageN({ params }: { params: Promise<Params> })
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {pagePosts.length > 0 ? (
-            <BlogRows posts={pagePosts} texts={texts} />
+            <InsightRows posts={pagePosts} texts={texts} />
           ) : (
             <p className="py-16 text-center text-[#5F6F7F]">{tb('noPosts', 'No posts found.')}</p>
           )}
-          <BlogPager
+          <InsightsPager
             locale={locale}
             currentPage={pageNumber}
             totalPages={pages.length}

@@ -5,7 +5,7 @@ import { useParams } from 'next/navigation';
 
 /**
  * Root locale page — client-side redirect to /insights/
- * The blog app's content now lives at /[locale]/insights/ after route restructuring.
+ * The insights app's content now lives at /[locale]/insights/ after route restructuring.
  */
 export default function RootRedirect() {
   const params = useParams();

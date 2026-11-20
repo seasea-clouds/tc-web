@@ -4,7 +4,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { getPosts, parseHeadings, mdToHtml, getCoverPath, formatPostDate, isPublished, siteToday, type PostMeta } from '@/lib/posts';
 
-/** Map blog slug → FAQ translation namespace (from old site messages) */
+/** Map insights slug → FAQ translation namespace (from old site messages) */
 const FAQ_NS: Record<string, string> = {
   'gacc-registration-guide': 'BlogFaqGaccRegistrationGuide',
   'china-label-compliance': 'BlogFaqChinaLabelCompliance',
@@ -629,11 +629,11 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
         {/* Contact Form */}
         <ComplianceForm
           locale={locale}
-          source="blog-post"
+          source="insights-post"
           sourceRef={slug}
           pageTitle={zhTitle || title}
           fromName="SinoTrade Website"
-          idPrefix="blog-post"
+          idPrefix="insights-post"
           texts={{
             title: cf('title', "Free Compliance Assessment"),
             subtitle: cf('subtitle', "Tell us about your products and we'll provide a personalized compliance roadmap."),

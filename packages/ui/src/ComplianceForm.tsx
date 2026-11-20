@@ -50,7 +50,7 @@ export default function ComplianceForm({
    * 也决定主题里的模块部分。不传就落到「站内页面」。
    */
   source?: string;
-  /** 稳定标识的附加段，如文章/法规 slug → 来源标识 `blog-post:<slug>` */
+  /** 稳定标识的附加段，如文章/法规 slug → 来源标识 `insights-post:<slug>` */
   sourceRef?: string;
   /** 中文页面标题；不传则用 FORM_PAGE_TITLES[source]（文章/法规详情应传 zh 标题） */
   pageTitle?: string;

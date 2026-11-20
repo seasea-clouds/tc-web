@@ -7,7 +7,7 @@ import { buildAlternates, sharedOpenGraph, sharedTwitter } from '@trade/ui';
  *
  * Only renders {children} — the actual HTML layout is handled by the parent [locale]/layout.tsx.
  * This layout exists solely to provide per-segment alternates metadata (hreflang + x-default).
- * Each blog page overrides only `canonical` via its own generateMetadata.
+ * Each insights page overrides only `canonical` via its own generateMetadata.
  */
 export default function BlogLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;

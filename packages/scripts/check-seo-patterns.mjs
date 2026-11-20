@@ -55,7 +55,7 @@ const METADATA_EXEMPT = [
 const CLIENT_COMPONENT_EXEMPT = [
   'check-client.tsx',
   'pricing-client.tsx',
-  'BlogClient.tsx',
+  'InsightsClient.tsx',
   'login-client.tsx',
   'register-client.tsx',
   'me-client.tsx',

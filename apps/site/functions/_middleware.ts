@@ -11,7 +11,7 @@
  *
  * Upstream URLs (for server-side proxy) resolved via:
  *   - Environment variables: UPSTREAM_PORTAL, UPSTREAM_INSIGHTS, UPSTREAM_REGULATIONS, UPSTREAM_ADMIN
- *   - Auto-derivation on .pages.dev: tc-web-site → tc-web-portal / tc-web-blog / tc-web-regulations / tc-web-admin
+ *   - Auto-derivation on .pages.dev: tc-web-site → tc-web-portal / tc-web-insights / tc-web-regulations / tc-web-admin
  */
 
 // LanguageSwitcher + Navbar dropdowns: CSS group-hover, no React state

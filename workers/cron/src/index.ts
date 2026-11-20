@@ -98,7 +98,7 @@ async function triggerBlogRebuild(env: Env): Promise<void> {
   const base = `https://api.cloudflare.com/client/v4/accounts/${account}/pages/projects`;
   const headers = { Authorization: `Bearer ${token}`, "Content-Type": "application/json" };
   try {
-    for (const project of ["tc-web-blog", "tc-web-regulations"]) {
+    for (const project of ["tc-web-insights", "tc-web-regulations"]) {
       const listRes = await fetch(`${base}/${project}/deployments?per_page=1&env=production`, { headers });
       const list = (await listRes.json()) as any;
       const latest = list?.result?.[0];

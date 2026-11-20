@@ -36,7 +36,7 @@ cd apps/insights   && npx next build   # 博客站
 |------|--------|----------|----------------|----------|
 | 主站 | `tc-web-site` | `apps/site` | sinotradecompliance.com | tc-web-site.pages.dev |
 | Portal | `tc-web-portal` | `apps/portal` | — | tc-web-portal.pages.dev |
-| Blog | `tc-web-blog` | `apps/insights` | — | tc-web-blog.pages.dev |
+| Insights | `tc-web-insights` | `apps/insights` | — | tc-web-insights.pages.dev |
 
 **当前阶段：** 已切换至正式域名 `sinotradecompliance.com`（2026-06-09）。生产部署由 GitHub push → CF Pages 自动构建部署。
 
@@ -145,7 +145,7 @@ curl -s -o /dev/null -w "%{http_code}\n" -x "http://<CN代理>" https://sinotrad
 
 - 生产/预览变量在 CF Pages Dashboard 独立配置，`secret_text` 类型**无法通过 API 导出**
 - 旧环境的集中密钥库 `~/.openclaw/.env` 已下线；值已于 2026-09-13 迁移到上表，备份文件已于 2026-10-23 清理（22 项逐条核对：重复/变更/废弃，剩余两把 opcode/mimo 确认无用一并删除）
-- **`UPSTREAM_PORTAL` = `https://tc-web-portal.pages.dev`、`UPSTREAM_BLOG` = `https://tc-web-blog.pages.dev`**（旧环境里是已废弃的 `trade-web-*.pages.dev`，已纠正）
+- **`UPSTREAM_PORTAL` = `https://tc-web-portal.pages.dev`、`UPSTREAM_BLOG` = `https://tc-web-insights.pages.dev`**（旧环境里是已废弃的 `trade-web-*.pages.dev`，已纠正）
 
 ### Portal D1 配置
 1. CF Dashboard → Workers & Pages → tc-web-portal → Settings → Functions
@@ -551,7 +551,7 @@ git push origin main
 
 | 检查项 | URL |
 |---|---|
-| 开发环境 | `https://tc-web-blog.pages.dev/en/blog/{slug}/` |
+| 开发环境 | `https://tc-web-insights.pages.dev/en/insights/{slug}/` |
 | 生产环境 | `https://sinotradecompliance.com/en/blog/{slug}/` |
 | 非英语抽检 | `https://sinotradecompliance.com/zh/blog/{slug}/`（建议多抽几门语言） |
 

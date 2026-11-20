@@ -11,7 +11,7 @@ export const CONTACT_EMAIL_URL = `mailto:${CONTACT_EMAIL}`;
  * 任何人打开源码都能看到，作用只是把提交路由到我们的收件箱。
  *
  * 为什么需要兜底：CF Pages 的 `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` 变量在
- * tc-web-blog / tc-web-regulations 两个项目上**没有注入到构建环境**
+ * tc-web-insights / tc-web-regulations 两个项目上**没有注入到构建环境**
  * （构建日志 `Build environment variables: (none found)`，API 里看得到、构建时不生效，
  * 只能由 Dashboard 手动添加才生效）。缺变量 → access_key 输出空值 →
  * Web3Forms 报 `Form must include a 'form_id' (in path) or 'access_key' field`。

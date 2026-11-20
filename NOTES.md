@@ -298,7 +298,7 @@ node ../../packages/scripts/build-search-index.mjs \
 | tc-web-admin | ADMIN_JWT_SECRET, TURNSTILE_SECRET_KEY |
 | tc-web-portal | CREEM_API_KEY, CREEM_PRODUCT_ID_SINGLE, CREEM_PRODUCT_ID_SUBSCRIBE, CREEM_WEBHOOK_SECRET, EMAIL_FROM, JWT_SECRET, RESEND_API_KEY, TURNSTILE_SECRET_KEY |
 | tc-web-site | NODE_VERSION, UPSTREAM_BLOG, UPSTREAM_PORTAL, NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY |
-| tc-web-blog | NODE_VERSION, NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY |
+| tc-web-insights | NODE_VERSION, NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY |
 
 所有环境变量放在 `~/.openclaw/.env`。CF Dashboard 中各项目 Settings → Environment Variables 独立配置。
 > ⚠️ 2026-09-13 更新：旧环境下线，本地密钥库改为 `<repo>/.env`（600）+ 各 app `.env`；生产变量仍在 CF Dashboard。
@@ -381,7 +381,7 @@ GitHub 仓库从 `seasea-clouds/trade-web` 切换到 `seasea-clouds/tc-web`（�
 - **内容缺口**：gacc-registration-guide 有 15 语言漏译「2025 修订」条款（句子截断在 konform）；health-supplements-china-import-route 的 az/hr/sl 第 28 节把决策树整段复制去、丢了 CBEC 正面清单段落。
 - **表格坏损**：`fr`/`be` 各 3 个文件（health-supplements-china-import-route、medical-device-import-license、pet-food-brand-gacc-registration）的表格分隔符被写成 `/`（夹带 `|`），线上渲染为乱文本。排查手法：扫「以 `/` 开头且含 `|`」或「行尾 `|` 但行首非 `|`」的行；修完核对每张表**列数一致**、`grep -o '<tr' out/<locale>/blog/<slug>/index.html | wc -l` 与英文原表行数一致。
 - **线上 URL 形态（常记错）**：`https://sinotradecompliance.com/{locale}/blog/{slug}/`。`/blog/{locale}/...` → 404；`/blog/...` → 302 到 `/en/blog/...`（无 locale 前缀路径以英文内容 200 返回）。
-- **zh 是"仅管理员可见"的有意设计**：`apps/site/functions/_middleware.ts` 对 `/zh*` 校验 `admin_sid`（D1 `admin_sessions`），非管理员 302 到 `/en`；`resolveLocale()` 把 zh 映射成 en。所以**线上 `/zh/blog/...` 一定 302**，核验 zh 要用 `tc-web-blog.pages.dev/zh/blog/...`。
+- **zh 是"仅管理员可见"的有意设计**：`apps/site/functions/_middleware.ts` 对 `/zh*` 校验 `admin_sid`（D1 `admin_sessions`），非管理员 302 到 `/en`；`resolveLocale()` 把 zh 映射成 en。所以**线上 `/zh/insights/...` 一定 302**，核验 zh 要用 `tc-web-insights.pages.dev/zh/insights/...`。
 - 交接：`fr`/`be` 之外暂无其它语言出现同类表格坏损（全库扫过），但新增本地化内容时建议沿用同样的扫表脚本。
 
 ### 踩坑 14：新增博客文章（48 语言）与 check-md-article 两条硬规则（2026-10-14）
@@ -865,7 +865,7 @@ CF 就走「配置即代码」模式 —— **Dashboard 和 API 里设的环境�
 
 **现状**：
 - `tc-web-site` 没有 wrangler.toml → Dashboard 变量正常生效
-- `tc-web-blog` / `tc-web-regulations` / `tc-web-portal` / `tc-web-admin` 都有
+- `tc-web-insights` / `tc-web-regulations` / `tc-web-portal` / `tc-web-admin` 都有
   wrangler.toml → 构建期变量**必须写进 `[vars]`**（已补）
 
 **实证**：在 blog 的 build 脚本前加 `console.log(process.env.NEXT_PUBLIC_...)` 探针，

@@ -73,8 +73,8 @@ SinoTrade 品牌的所有网站代码统一放在此 monorepo 中。三个独立
 
 ### 博客站 — blog
 - **目录：** `apps/insights/`
-- **CF Pages 项目名：** `tc-web-blog`
-- **dev 域名：** `https://tc-web-blog.pages.dev`
+- **CF Pages 项目名：** `tc-web-insights`
+- **dev 域名：** `https://tc-web-insights.pages.dev`
 - **主站代理路径：** `sinotradecompliance.com/{locale}/blog/*`
 - **用途：** SinoTrade Compliance 品牌的多语言合规博客，通过高质量教育内容获客
 - **技术栈：** Next.js 16 (SSG) + next-intl + TypeScript + Tailwind CSS；内容：Markdown + gray-matter 前置元数据
@@ -121,7 +121,7 @@ SinoTrade 品牌的所有网站代码统一放在此 monorepo 中。三个独立
 |------|------|------|
 | 主站 | `/{locale}/...` | `/zh/services/gacc/` |
 | Portal | `/{locale}/c/...` | `/zh/c/check/gacc` |
-| Blog | `/{locale}/blog/...` | `/zh/blog/article-slug/` |
+| Insights | `/{locale}/insights/...` | `/zh/insights/article-slug/` |
 | Admin | `/{locale}/admin/...` | `/zh/admin/` |
 
 ## 部署方式
@@ -132,7 +132,7 @@ SinoTrade 品牌的所有网站代码统一放在此 monorepo 中。三个独立
 |------|----------------|----------|-----------|-------------|
 | 主站 | `tc-web-site` | `apps/site` | `npx next build` | `out` |
 | Portal | `tc-web-portal` | `apps/portal` | `npx next build` | `out` |
-| Blog | `tc-web-blog` | `apps/insights` | `npx next build` | `out` |
+| Insights | `tc-web-insights` | `apps/insights` | `npx next build` | `out` |
 
 **当前状态：** 已切换至正式域名 `sinotradecompliance.com`。`tc-web-site` 绑定主域名，portal 和 blog 通过主站 Worker 代理访问，无需直接绑定域名。
 **Git 连接：** 四个项目都连接到 GitHub `seasea-clouds/tc-web` 仓库（2026-08-09 迁移，原 trade-web 前缀改为 tc-）。
@@ -199,7 +199,7 @@ CF Dashboard → Workers & Pages → tc-web-portal → Settings → Functions �
 | 官网 (site) | ✅ CI 通过 | https://sinotradecompliance.com |
 | Portal | ✅ CI 通过 | https://tc-web-portal.pages.dev |
 | Admin | ✅ CI 通过 | https://tc-web-admin.pages.dev |
-| Blog | ✅ CI 通过 | https://tc-web-blog.pages.dev |
+| Insights | ✅ CI 通过 | https://tc-web-insights.pages.dev |
 
 ## 完整文档索引
 

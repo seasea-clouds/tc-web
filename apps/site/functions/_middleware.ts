@@ -596,11 +596,11 @@ export async function onRequest(context: { request: Request; next: () => Promise
     return Response.redirect(url.origin + '/' + locale + url.pathname + '/', 302);
   }
 
-  // ── Blog proxy ─────────────────────────────────────────────────
-  const blogPathMatch = url.pathname.match(/^\/([a-z]{2})\/insights(\/.*)?$/);
-  if (blogPathMatch && SUPPORTED_LOCALES.includes(blogPathMatch[1])) {
-    const locale = blogPathMatch[1];
-    const rest = blogPathMatch[2] || '/';
+  // ── Insights proxy ─────────────────────────────────────────────────
+  const insightsPathMatch = url.pathname.match(/^\/([a-z]{2})\/insights(\/.*)?$/);
+  if (insightsPathMatch && SUPPORTED_LOCALES.includes(insightsPathMatch[1])) {
+    const locale = insightsPathMatch[1];
+    const rest = insightsPathMatch[2] || '/';
 
     // ── Trailing-slash normalization (SEO) ──
     // /ko/insights → 308 /ko/insights/ so Google doesn't treat the slash-less URL
@@ -609,10 +609,10 @@ export async function onRequest(context: { request: Request; next: () => Promise
       return Response.redirect(url.origin + url.pathname + '/', 308);
     }
     const upstream = resolveUpstream(url.hostname, 'insights', env);
-    const blogUrl = upstream + '/' + locale + '/insights' + rest;
+    const insightsUrl = upstream + '/' + locale + '/insights' + rest;
 
     try {
-      const resp = await fetchUpstream(blogUrl, new Request(blogUrl, { method: 'GET', headers: request.headers }));
+      const resp = await fetchUpstream(insightsUrl, new Request(insightsUrl, { method: 'GET', headers: request.headers }));
       const contentType = resp.headers.get('content-type') || '';
 
       if (contentType.includes('text/html')) {
@@ -650,7 +650,7 @@ export async function onRequest(context: { request: Request; next: () => Promise
     const locale = regPathMatch[1];
     const rest = regPathMatch[2] || '/';
 
-    // Trailing-slash normalization (SEO), same rule as the blog.
+    // Trailing-slash normalization (SEO), same rule as the insights app.
     if (!url.pathname.endsWith('/')) {
       return Response.redirect(url.origin + url.pathname + '/', 308);
     }

@@ -724,10 +724,8 @@
     "jsonldName": "Faleminderit",
     "jsonldDescription": "Faleminderit që kontaktuat me SinoTrade Compliance. Do t’ju kthehemi së shpejti.",
     "trustTitle": "Të besuar nga eksportuesit në mbarë botën",
-    "blogTitle": "Ndërsa prisni: njohuri të fundit",
     "readMore": "Lexo më shumë",
     "readTime": "min",
-    "viewAllBlog": "Shiko të gjithë artikujt",
     "servicesTitle": "Eksploroni shërbimet tona",
     "serviceGacc": "Regjistrimi GACC",
     "serviceLabel": "Pajtueshmëria me etiketën kineze",
@@ -743,9 +741,11 @@
     "stat3Label": "Vite ekspertizë",
     "stat4Number": "~100%",
     "stat4Label": "Normë pajtueshmërie",
-    "blogDesc": "Eksploroni më shumë njohuri",
     "metaTitle": "Faleminderit | SinoTrade Compliance",
-    "metaDescription": "Faleminderit që kontaktuat me SinoTrade Compliance. Do t’i përgjigjemi kërkesës suaj brenda 24 orëve."
+    "metaDescription": "Faleminderit që kontaktuat me SinoTrade Compliance. Do t’i përgjigjemi kërkesës suaj brenda 24 orëve.",
+    "insightsTitle": "Ndërsa prisni: njohuri të fundit",
+    "insightsDesc": "Eksploroni më shumë njohuri",
+    "viewAllInsights": "Shiko të gjithë artikujt"
   },
   "Blog": {
     "title": "Eksport në Kinë: njohuri dhe udhëzues përputhshmërie",

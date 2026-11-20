@@ -7,7 +7,7 @@
  *   **key 缺失**时才会露出 fallback。check-translations 只对比"值是否等于英文"
  *   （同值 fallback），发现不了**缺键**——而缺键是最容易漏、也最难在页面上看出来的：
  *   页面照常渲染，只是某个字段悄悄变成英文，或者变成代码里传进来的另一个变量
- *   （例如 blog 详情页 `service_brand` 缺了 48 次，服务名就回退成英文分类名
+ *   （例如 insights 详情页 `service_brand` 缺了 48 次，服务名就回退成英文分类名
  *   "Brand Protection"，48 个语言全错，CI 一路绿灯）。
  *
  * 检查范围：apps/<app>/messages/<locale>.json（en 为基准）
@@ -16,7 +16,7 @@
  *   - 多余 key    → ⚠️ 只告警（不影响运行，但通常是改名残留）
  *   - 语言文件缺失 → ❌ 报错
  *
- * 用法: node packages/scripts/check-message-keys.mjs [--app=blog] [--quiet]
+ * 用法: node packages/scripts/check-message-keys.mjs [--app=insights] [--quiet]
  */
 
 import fs from 'fs';

@@ -724,10 +724,8 @@
     "jsonldName": "Köszönjük",
     "jsonldDescription": "Köszönjük, hogy megkereste a SinoTrade Compliance-t. Hamarosan jelentkezünk.",
     "trustTitle": "A világ exportőrei megbíznak bennünk",
-    "blogTitle": "Amíg vár: legfrissebb szakértői cikkeink",
     "readMore": "Tovább olvasom",
     "readTime": "min",
-    "viewAllBlog": "Összes cikk megtekintése",
     "servicesTitle": "Fedezze fel szolgáltatásainkat",
     "serviceGacc": "GACC-regisztráció",
     "serviceLabel": "Kínai címke-megfelelőség",
@@ -743,9 +741,11 @@
     "stat3Label": "Több éves szakértelem",
     "stat4Number": "~100%",
     "stat4Label": "Megfelelési arány",
-    "blogDesc": "Fedezzen fel további elemzéseket",
     "metaTitle": "Köszönjük | SinoTrade Compliance",
-    "metaDescription": "Köszönjük, hogy megkereste a SinoTrade Compliance-t. Megkeresésére 24 órán belül válaszolunk."
+    "metaDescription": "Köszönjük, hogy megkereste a SinoTrade Compliance-t. Megkeresésére 24 órán belül válaszolunk.",
+    "insightsTitle": "Amíg vár: legfrissebb szakértői cikkeink",
+    "insightsDesc": "Fedezzen fel további elemzéseket",
+    "viewAllInsights": "Összes cikk megtekintése"
   },
   "Blog": {
     "title": "Export Kínába: elemzések és megfelelőségi útmutatók",

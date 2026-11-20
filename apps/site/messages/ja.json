@@ -724,10 +724,8 @@
     "jsonldName": "ありがとうございます",
     "jsonldDescription": "SinoTrade コンプライアンスへのお問い合わせありがとうございます。すぐにご連絡いたします。",
     "trustTitle": "世界中のブランドから信頼されています",
-    "blogTitle": "お待ちの間に: 最新のインサイト",
     "readMore": "続きを読む",
     "readTime": "min",
-    "viewAllBlog": "すべての記事を見る",
     "servicesTitle": "当社のサービスをもっと詳しく",
     "serviceGacc": "GACC登録",
     "serviceLabel": "中国語ラベル適合",
@@ -743,9 +741,11 @@
     "stat3Label": "業界経験年数",
     "stat4Number": "~100%",
     "stat4Label": "コンプライアンス達成率",
-    "blogDesc": "さらに詳しいインサイトを探索",
     "metaTitle": "お問い合わせありがとうございます | SinoTrade コンプライアンス",
-    "metaDescription": "SinoTrade コンプライアンスへのお問い合わせありがとうございます。24時間以内にご返信いたします。"
+    "metaDescription": "SinoTrade コンプライアンスへのお問い合わせありがとうございます。24時間以内にご返信いたします。",
+    "insightsTitle": "お待ちの間に: 最新のインサイト",
+    "insightsDesc": "さらに詳しいインサイトを探索",
+    "viewAllInsights": "すべての記事を見る"
   },
   "Blog": {
     "title": "中国への輸出：インサイトとコンプライアンスガイド",

@@ -11,7 +11,7 @@ import { useAuth } from './AuthContext';
 interface NavbarProps {
   onSearchOpen?: () => void;
   freeCheckHref?: string;
-  blogHref?: string;
+  insightsHref?: string;
   locale?: string;
   industries?: { slug: string; emoji: string }[];
   /** Login link for unauthenticated users */
@@ -180,7 +180,7 @@ export default function Navbar(props: NavbarProps) {
   const resolveHref = (custom?: string, defaultPath?: string) =>
     custom ? custom.replace('{locale}', locale) : (defaultPath ? href(defaultPath) : href('/'));
   const fcHref = resolveHref(freeCheckHref, '/c/');
-  const blogHref = resolveHref(props.blogHref, '/insights/');
+  const insightsHref = resolveHref(props.insightsHref, '/insights/');
 
   return (
     <nav className="relative z-50 bg-primary-navy/95 backdrop-blur-sm shadow-md">
@@ -275,7 +275,7 @@ export default function Navbar(props: NavbarProps) {
             <a href={href('/faq/')} className="inline-flex items-center text-white/80 hover:text-white transition-colors text-sm font-medium">
               {t('faq')}
             </a>
-            <a href={blogHref} className="inline-flex items-center text-white/80 hover:text-white transition-colors text-sm font-medium">
+            <a href={insightsHref} className="inline-flex items-center text-white/80 hover:text-white transition-colors text-sm font-medium">
               {t('insights')}
             </a>
             <a href={href('/regulations/')} className="inline-flex items-center text-white/80 hover:text-white transition-colors text-sm font-medium">
@@ -304,7 +304,7 @@ export default function Navbar(props: NavbarProps) {
             <a href={href('/faq/')} className="inline-flex items-center mx-2.5 text-white/80 hover:text-white transition-colors">
               {t('faq')}
             </a>
-            <a href={blogHref} className="inline-flex items-center mx-2.5 text-white/80 hover:text-white transition-colors">
+            <a href={insightsHref} className="inline-flex items-center mx-2.5 text-white/80 hover:text-white transition-colors">
               {t('insights')}
             </a>
             <a href={href('/regulations/')} className="inline-flex items-center mx-2.5 text-white/80 hover:text-white transition-colors">

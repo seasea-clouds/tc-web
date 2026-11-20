@@ -724,10 +724,8 @@
     "jsonldName": "Děkujeme",
     "jsonldDescription": "Děkujeme, že jste kontaktovali SinoTrade Compliance. Brzy se vám ozveme.",
     "trustTitle": "Důvěřují nám exportéři po celém světě",
-    "blogTitle": "Než se ozveme: nejnovější články",
     "readMore": "Číst více",
     "readTime": "min",
-    "viewAllBlog": "Zobrazit všechny články",
     "servicesTitle": "Prozkoumejte naše služby",
     "serviceGacc": "Registrace GACC",
     "serviceLabel": "Shoda čínských etiket",
@@ -743,9 +741,11 @@
     "stat3Label": "Let zkušeností",
     "stat4Number": "~100 %",
     "stat4Label": "Míra shody",
-    "blogDesc": "Prozkoumejte další články",
     "metaTitle": "Děkujeme | SinoTrade Compliance",
-    "metaDescription": "Děkujeme, že jste kontaktovali SinoTrade Compliance. Na váš dotaz odpovíme do 24 hodin."
+    "metaDescription": "Děkujeme, že jste kontaktovali SinoTrade Compliance. Na váš dotaz odpovíme do 24 hodin.",
+    "insightsTitle": "Než se ozveme: nejnovější články",
+    "insightsDesc": "Prozkoumejte další články",
+    "viewAllInsights": "Zobrazit všechny články"
   },
   "Blog": {
     "title": "Export do Číny: poznatky a průvodci shodou",

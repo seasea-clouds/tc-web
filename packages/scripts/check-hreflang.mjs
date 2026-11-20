@@ -4,18 +4,18 @@
  *
  * ⚠️ 项目选择指南：
  *   site  (SSG, 直接托管)    → --dir=out
- *   blog  (SSG, 直接托管)    → --next-dir=.next
+ *   insights (SSG, 直接托管)  → --next-dir=.next
  *   portal(SSG, 直接托管)    → --dir=out（hreflang 由 buildAlternates SSG 生成，
  *                              静态输出含 hrefLang 标签，构建时即可检查）
  *
  * 支持 3 种模式：
  *   --dir=out         → 扫描 SSG 输出目录（site / portal）
- *   --next-dir=.next  → 扫描 Next.js build 输出（blog）
+ *   --next-dir=.next  → 扫描 Next.js build 输出（insights）
  *   --url=...         → curl 远程检查（特殊场景）
  *
  * 用法:
  *   node check-hreflang.mjs --dir=out --ci       # site / portal
- *   node check-hreflang.mjs --next-dir=.next --ci # blog
+ *   node check-hreflang.mjs --next-dir=.next --ci # insights
  *   node check-hreflang.mjs --url=https://sinotradecompliance.com/en/c/ --ci  # 远程
  *
  * 退出码: 0 通过, 1 失败
@@ -103,29 +103,29 @@ function checkSSGOutput(dir, skipPatterns = []) {
 
 function checkNextDir(nextDir) {
   // 扫描 .next/server/app/ 下的博客页面
-  const blogRoot = path.join(nextDir, 'server', 'app');
-  if (!fs.existsSync(blogRoot)) {
-    console.log(`  ⚠️ 目录不存在: ${blogRoot}`);
+  const insightsRoot = path.join(nextDir, 'server', 'app');
+  if (!fs.existsSync(insightsRoot)) {
+    console.log(`  ⚠️ 目录不存在: ${insightsRoot}`);
     return 1;
   }
 
-  const blogFiles = [];
+  const insightsFiles = [];
   function walk(dir, depth = 0) {
     if (depth > 4) return; // 限制深度
     for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
       const fp = path.join(dir, entry.name);
       if (entry.isDirectory()) walk(fp, depth + 1);
       else if (entry.name.endsWith('.html') && !entry.name.startsWith('_')) {
-        blogFiles.push(fp);
+        insightsFiles.push(fp);
       }
     }
   }
-  walk(blogRoot);
+  walk(insightsRoot);
 
-  console.log(`  📄 扫描 ${blogFiles.length} 个页面\n`);
+  console.log(`  📄 扫描 ${insightsFiles.length} 个页面\n`);
   let failures = 0;
-  for (const file of blogFiles) {
-    const rel = path.relative(blogRoot, file);
+  for (const file of insightsFiles) {
+    const rel = path.relative(insightsRoot, file);
     const { count, hasXdefault } = countHreflangInFile(file);
     
     // 检查涉及 /insights/ 路径的页面

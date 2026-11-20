@@ -724,10 +724,8 @@
     "jsonldName": "გმადლობთ",
     "jsonldDescription": "გმადლობთ, რომ დაუკავშირდით SinoTrade Compliance-ს. მალე დაგიკავშირდებით.",
     "trustTitle": "გვენდობიან ექსპორტიორები მთელ მსოფლიოში",
-    "blogTitle": "სანამ ელოდებით: უახლესი სტატიები",
     "readMore": "წაიკითხეთ მეტი",
     "readTime": "min",
-    "viewAllBlog": "ყველა სტატიის ნახვა",
     "servicesTitle": "გაეცანით ჩვენს სერვისებს",
     "serviceGacc": "GACC რეგისტრაცია",
     "serviceLabel": "ჩინური ეტიკეტის შესაბამისობა",
@@ -743,9 +741,11 @@
     "stat3Label": "წლიანი გამოცდილება",
     "stat4Number": "~100%",
     "stat4Label": "შესაბამისობის მაჩვენებელი",
-    "blogDesc": "გაეცანით მეტ სტატიას",
     "metaTitle": "გმადლობთ | SinoTrade Compliance",
-    "metaDescription": "გმადლობთ, რომ დაუკავშირდით SinoTrade Compliance-ს. თქვენს შეკითხვას გიპასუხებთ 24 საათში."
+    "metaDescription": "გმადლობთ, რომ დაუკავშირდით SinoTrade Compliance-ს. თქვენს შეკითხვას გიპასუხებთ 24 საათში.",
+    "insightsTitle": "სანამ ელოდებით: უახლესი სტატიები",
+    "insightsDesc": "გაეცანით მეტ სტატიას",
+    "viewAllInsights": "ყველა სტატიის ნახვა"
   },
   "Blog": {
     "title": "ექსპორტი ჩინეთში: ანალიტიკა და შესაბამისობის გიდები",

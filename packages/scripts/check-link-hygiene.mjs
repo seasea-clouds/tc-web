@@ -20,7 +20,7 @@
  *
  * 用法:
  *   node check-link-hygiene.mjs --out-dir=out --ci
- *   node check-link-hygiene.mjs --out-dir=out --project=blog
+ *   node check-link-hygiene.mjs --out-dir=out --project=insights
  */
 
 import fs from 'fs';
@@ -34,7 +34,7 @@ const MAIN_HOST = 'sinotradecompliance.com';
 /** 自家域名里不允许出现的变体（正则） */
 const BAD_SELF_HOSTS = [
   /\b[\w-]+\.pages\.dev\b/i,
-  /\b(?:blog|portal|admin|regulations|site)\.sinotradecompliance\.com\b/i,
+  /\b(?:insights|blog|portal|admin|regulations|site)\.sinotradecompliance\.com\b/i,
   /\bwww\.sinotradecompliance\.com\b/i,
   /\bhttp:\/\/sinotradecompliance\.com\b/i,
   /\blocalhost\b/i,

@@ -724,10 +724,8 @@
     "jsonldName": "Dankie",
     "jsonldDescription": "Dankie dat jy SinoTrade-nakoming gekontak het. Ons sal binnekort na jou terugkom.",
     "trustTitle": "Vertrou deur uitvoerders wêreldwyd",
-    "blogTitle": "Terwyl jy wag: nuutste insigte",
     "readMore": "Lees meer",
     "readTime": "min",
-    "viewAllBlog": "Bekyk alle artikels",
     "servicesTitle": "Verken ons dienste",
     "serviceGacc": "GACC-registrasie",
     "serviceLabel": "Chinese etiketnakoming",
@@ -743,9 +741,11 @@
     "stat3Label": "Jare se kundigheid",
     "stat4Number": "~100%",
     "stat4Label": "Voldoeningskoers",
-    "blogDesc": "Verken meer insigte",
     "metaTitle": "Dankie | SinoTrade-nakoming",
-    "metaDescription": "Dankie dat jy SinoTrade-nakoming gekontak het. Ons sal binne 24 uur op jou navraag reageer."
+    "metaDescription": "Dankie dat jy SinoTrade-nakoming gekontak het. Ons sal binne 24 uur op jou navraag reageer.",
+    "insightsTitle": "Terwyl jy wag: nuutste insigte",
+    "insightsDesc": "Verken meer insigte",
+    "viewAllInsights": "Bekyk alle artikels"
   },
   "Blog": {
     "title": "Uitvoer na China: insigte en voldoeningsgidse",

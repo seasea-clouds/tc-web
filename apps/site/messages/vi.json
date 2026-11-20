@@ -724,10 +724,8 @@
     "jsonldName": "Cảm ơn bạn",
     "jsonldDescription": "Cảm ơn bạn đã liên hệ SinoTrade Compliance. Chúng tôi sẽ phản hồi sớm.",
     "trustTitle": "Được các thương hiệu trên thế giới tin tưởng",
-    "blogTitle": "Trong lúc chờ: bài viết mới nhất",
     "readMore": "Đọc thêm",
     "readTime": "min",
-    "viewAllBlog": "Xem tất cả bài viết",
     "servicesTitle": "Khám phá dịch vụ của chúng tôi",
     "serviceGacc": "Đăng ký GACC",
     "serviceLabel": "Nhãn mác hợp quy",
@@ -743,9 +741,11 @@
     "stat3Label": "Năm kinh nghiệm",
     "stat4Number": "~100%",
     "stat4Label": "Tỷ lệ hồ sơ đạt chuẩn",
-    "blogDesc": "Khám phá thêm bài viết",
     "metaTitle": "Cảm ơn bạn | SinoTrade Compliance",
-    "metaDescription": "Cảm ơn bạn đã liên hệ SinoTrade Compliance. Chúng tôi sẽ phản hồi yêu cầu của bạn trong vòng 24 giờ."
+    "metaDescription": "Cảm ơn bạn đã liên hệ SinoTrade Compliance. Chúng tôi sẽ phản hồi yêu cầu của bạn trong vòng 24 giờ.",
+    "insightsTitle": "Trong lúc chờ: bài viết mới nhất",
+    "insightsDesc": "Khám phá thêm bài viết",
+    "viewAllInsights": "Xem tất cả bài viết"
   },
   "Blog": {
     "title": "Xuất khẩu sang Trung Quốc: góc nhìn và hướng dẫn tuân thủ",

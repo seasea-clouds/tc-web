@@ -14,7 +14,7 @@
  *   node check-md-structure.mjs                # 检查所有语言
  *   node check-md-structure.mjs --ci            # CI 模式，有 error 则 exit 1
  *   node check-md-structure.mjs --lang=zh       # 只检查指定语言
- *   node check-md-structure.mjs --project=blog  # 检查 blog 项目（默认）
+ *   node check-md-structure.mjs --project=insights  # 检查 insights 项目（默认）
  */
 
 import fs from 'fs';

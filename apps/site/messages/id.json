@@ -724,10 +724,8 @@
     "jsonldName": "Terima Kasih",
     "jsonldDescription": "Terima kasih telah menghubungi SinoTrade Compliance. Kami akan segera menghubungi Anda kembali.",
     "trustTitle": "Dipercaya merek di seluruh dunia",
-    "blogTitle": "Sambil Menunggu: Wawasan Terbaru",
     "readMore": "Baca Selengkapnya",
     "readTime": "min",
-    "viewAllBlog": "Lihat Semua Artikel",
     "servicesTitle": "Jelajahi Layanan Kami",
     "serviceGacc": "Registrasi GACC",
     "serviceLabel": "Kepatuhan Label Mandarin",
@@ -743,9 +741,11 @@
     "stat3Label": "Tahun Pengalaman",
     "stat4Number": "~100%",
     "stat4Label": "Tingkat Kepatuhan",
-    "blogDesc": "Jelajahi wawasan lainnya",
     "metaTitle": "Terima kasih | SinoTrade Compliance",
-    "metaDescription": "Terima kasih telah menghubungi SinoTrade Compliance. Kami akan menanggapi pertanyaan Anda dalam waktu 24 jam."
+    "metaDescription": "Terima kasih telah menghubungi SinoTrade Compliance. Kami akan menanggapi pertanyaan Anda dalam waktu 24 jam.",
+    "insightsTitle": "Sambil Menunggu: Wawasan Terbaru",
+    "insightsDesc": "Jelajahi wawasan lainnya",
+    "viewAllInsights": "Lihat Semua Artikel"
   },
   "Blog": {
     "title": "Ekspor ke Tiongkok: wawasan dan panduan kepatuhan",

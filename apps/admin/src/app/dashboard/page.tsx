@@ -7,7 +7,7 @@ import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
   PieChart, Pie, Cell, LineChart, Line, Legend,
 } from "recharts";
-import { BLOG_SEGMENT_LABELS } from "@/lib/segment-mapping";
+import { INSIGHTS_SEGMENT_LABELS } from "@/lib/segment-mapping";
 
 interface DashboardStats {
   today: { pv: number; uv: number; reports: number; newUsers: number };
@@ -283,9 +283,9 @@ function pathToBreadcrumb(path: string): string {
     // 1. Static segments (site/portal/admin routes) — use translation keys
     const key = STATIC_SEGMENT_LABELS[s];
     if (key) return t(key);
-    // 2. Blog article slugs — use auto-generated Chinese title
-    const blogLabel = BLOG_SEGMENT_LABELS[s];
-    if (blogLabel) return blogLabel;
+    // 2. Insights article slugs — use auto-generated Chinese title
+    const insightsLabel = INSIGHTS_SEGMENT_LABELS[s];
+    if (insightsLabel) return insightsLabel;
     // 3. Fallback: English segment name
     return s.charAt(0).toUpperCase() + s.slice(1).replace(/[-_]/g, ' ');
   }).join(' › ');

@@ -2,8 +2,8 @@
 /**
  * build-search-index.mjs — 生成统一搜索索引
  *
- * 读取 site + portal + blog + regulations 各 app 的 messages 和 content
- * 输出 {services, blog, faq, regulations, checks, generated} 格式的 search-index-{locale}.json
+ * 读取 site + portal + insights + regulations 各 app 的 messages 和 content
+ * 输出 {services, insights, faq, regulations, checks, generated} 格式的 search-index-{locale}.json
  *
  * 用法: node packages/scripts/build-search-index.mjs [--out-dir=<path>]
  *   默认输出到当前工作目录的 public/ (支持所有项目)
@@ -64,23 +64,23 @@ function extractServices(msg) {
   });
 }
 
-function extractBlog(blogDir, locale, msg) {
-  const localeBlogDir = path.join(blogDir, locale);
-  if (!fs.existsSync(localeBlogDir)) return [];
+function extractInsights(insightsDir, locale, msg) {
+  const localeInsightsDir = path.join(insightsDir, locale);
+  if (!fs.existsSync(localeInsightsDir)) return [];
 
-  const blogT = msg.Blog || {};
+  const insightsT = msg.Blog || {};
   const posts = [];
 
-  for (const file of fs.readdirSync(localeBlogDir).filter(f => f.endsWith('.mdx'))) {
+  for (const file of fs.readdirSync(localeInsightsDir).filter(f => f.endsWith('.mdx'))) {
     // 定时发布：未到日期的稿子不进搜索索引
-    if (!isFilePublished(path.join(localeBlogDir, file))) continue;
-    const content = fs.readFileSync(path.join(localeBlogDir, file), 'utf-8');
+    if (!isFilePublished(path.join(localeInsightsDir, file))) continue;
+    const content = fs.readFileSync(path.join(localeInsightsDir, file), 'utf-8');
     const { data } = matter(content);
     const slug = data.slug || file.replace('.mdx', '');
     const title = data.title || '';
     const excerpt = data.excerpt || '';
     const category = data.category || '';
-    const categoryKey = blogT[category] || category;
+    const categoryKey = insightsT[category] || category;
 
     if (!title) continue;
 
@@ -190,7 +190,7 @@ function extractFAQ(msg) {
   return items;
 }
 
-function generateIndex(messagesDir, blogDir, regDir, locale) {
+function generateIndex(messagesDir, insightsDir, regDir, locale) {
   const msg = loadMessages(messagesDir, locale);
   // Load portal messages to extract check page titles
   const portalMsgDir = path.join(APPS_DIR, 'portal', 'messages');
@@ -200,7 +200,7 @@ function generateIndex(messagesDir, blogDir, regDir, locale) {
   }
   return {
     services: extractServices(msg),
-    insights: extractBlog(blogDir, locale, msg),
+    insights: extractInsights(insightsDir, locale, msg),
     faq: extractFAQ(msg),
     regulations: extractRegulations(regDir, locale),
     checks: extractCheckPages(msg),
@@ -217,13 +217,13 @@ function parseArgs() {
   return args;
 }
 
-export function buildSearchIndexes(messagesDir, blogDir, regDir, outDir) {
+export function buildSearchIndexes(messagesDir, insightsDir, regDir, outDir) {
   const locales = getLocaleFiles(messagesDir).map(f => f.replace('.json', ''));
   console.log(`Generating search index for ${locales.length} locales...`);
 
   for (const locale of locales) {
     try {
-      const index = generateIndex(messagesDir, blogDir, regDir, locale);
+      const index = generateIndex(messagesDir, insightsDir, regDir, locale);
       const outFile = path.join(outDir, `search-index-${locale}.json`);
       fs.mkdirSync(outDir, { recursive: true });
       fs.writeFileSync(outFile, JSON.stringify(index), 'utf-8');
@@ -240,9 +240,9 @@ export function buildSearchIndexes(messagesDir, blogDir, regDir, outDir) {
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const { 'out-dir': outDirArg } = parseArgs();
 
-  // Read blog content from blog app, not site
+  // Read insights content from the insights app, not site
   const messagesDir = path.join(ROOT, 'apps', 'site', 'messages');
-  const blogDir = path.join(ROOT, 'apps', 'insights', 'content');
+  const insightsDir = path.join(ROOT, 'apps', 'insights', 'content');
   const regDir = path.join(ROOT, 'apps', 'regulations', 'content');
 
   // Default outDir: project's public/ directory (derived from cwd)
@@ -250,5 +250,5 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const outDir = outDirArg ? path.resolve(ROOT, outDirArg) : defaultOutDir;
 
   console.log('Apps discovered:', discoverApps().join(', '));
-  buildSearchIndexes(messagesDir, blogDir, regDir, outDir);
+  buildSearchIndexes(messagesDir, insightsDir, regDir, outDir);
 }

@@ -724,10 +724,8 @@
     "jsonldName": "Takk",
     "jsonldDescription": "Takk for at du kontaktet SinoTrade Compliance. Vi kommer snart tilbake til deg.",
     "trustTitle": "Betrodd av eksportører over hele verden",
-    "blogTitle": "Mens du venter: Siste innsikt",
     "readMore": "Les mer",
     "readTime": "min",
-    "viewAllBlog": "Se alle artikler",
     "servicesTitle": "Utforsk tjenestene våre",
     "serviceGacc": "GACC-registrering",
     "serviceLabel": "Kinesisk etikettsamsvar",
@@ -743,9 +741,11 @@
     "stat3Label": "År med erfaring",
     "stat4Number": "~100 %",
     "stat4Label": "Samsvarsrate",
-    "blogDesc": "Utforsk mer innsikt",
     "metaTitle": "Takk | SinoTrade Compliance",
-    "metaDescription": "Takk for at du kontaktet SinoTrade Compliance. Vi svarer på henvendelsen din innen 24 timer."
+    "metaDescription": "Takk for at du kontaktet SinoTrade Compliance. Vi svarer på henvendelsen din innen 24 timer.",
+    "insightsTitle": "Mens du venter: Siste innsikt",
+    "insightsDesc": "Utforsk mer innsikt",
+    "viewAllInsights": "Se alle artikler"
   },
   "Blog": {
     "title": "Eksport til Kina: innsikt og etterlevelsesguider",

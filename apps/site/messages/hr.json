@@ -724,10 +724,8 @@
     "jsonldName": "Hvala vam",
     "jsonldDescription": "Hvala što ste kontaktirali SinoTrade Compliance. Javit ćemo vam se uskoro.",
     "trustTitle": "Vjeruju nam izvoznici diljem svijeta",
-    "blogTitle": "Dok čekate: najnoviji uvidi",
     "readMore": "Pročitajte više",
     "readTime": "min",
-    "viewAllBlog": "Pogledajte sve članke",
     "servicesTitle": "Istražite naše usluge",
     "serviceGacc": "GACC registracija",
     "serviceLabel": "Usklađenost kineskih oznaka",
@@ -743,9 +741,11 @@
     "stat3Label": "Godina iskustva",
     "stat4Number": "~100%",
     "stat4Label": "Stopa usklađenosti",
-    "blogDesc": "Istražite više uvida",
     "metaTitle": "Hvala vam | SinoTrade Compliance",
-    "metaDescription": "Hvala što ste kontaktirali SinoTrade Compliance. Na vaš upit ćemo odgovoriti u roku od 24 sata."
+    "metaDescription": "Hvala što ste kontaktirali SinoTrade Compliance. Na vaš upit ćemo odgovoriti u roku od 24 sata.",
+    "insightsTitle": "Dok čekate: najnoviji uvidi",
+    "insightsDesc": "Istražite više uvida",
+    "viewAllInsights": "Pogledajte sve članke"
   },
   "Blog": {
     "title": "Izvoz u Kinu: uvidi i vodiči za usklađenost",

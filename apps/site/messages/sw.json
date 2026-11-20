@@ -724,10 +724,8 @@
     "jsonldName": "Asante",
     "jsonldDescription": "Asante kwa kuwasiliana na SinoTrade Compliance. Tutakujibu hivi karibuni.",
     "trustTitle": "Inaaminiwa na wauzaji nje ulimwenguni kote",
-    "blogTitle": "Unaposubiri: Maarifa ya Hivi Punde",
     "readMore": "Soma Zaidi",
     "readTime": "min",
-    "viewAllBlog": "Tazama Makala Zote",
     "servicesTitle": "Gundua Huduma Zetu",
     "serviceGacc": "Usajili wa GACC",
     "serviceLabel": "Uzingatiaji wa Lebo za Kichina",
@@ -743,9 +741,11 @@
     "stat3Label": "Miaka ya Utaalamu",
     "stat4Number": "~100%",
     "stat4Label": "Kiwango cha Utiifu",
-    "blogDesc": "Chunguza maarifa zaidi",
     "metaTitle": "Asante | SinoTrade Compliance",
-    "metaDescription": "Asante kwa kuwasiliana na SinoTrade Compliance. Tutajibu ombi lako ndani ya saa 24."
+    "metaDescription": "Asante kwa kuwasiliana na SinoTrade Compliance. Tutajibu ombi lako ndani ya saa 24.",
+    "insightsTitle": "Unaposubiri: Maarifa ya Hivi Punde",
+    "insightsDesc": "Chunguza maarifa zaidi",
+    "viewAllInsights": "Tazama Makala Zote"
   },
   "Blog": {
     "title": "Mauzo nje kwenda China: maarifa na miongozo ya uzingatiaji",

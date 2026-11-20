@@ -3,7 +3,7 @@
  *
  * 所有定时任务都在这一个 Worker 里，按 cron 表达式分流（见 SCHEDULES）：
  *   1. `0 * * * *`   每小时：CF Analytics → D1 同步（原 tc-web-admin-analytics-cron）
- *   2. `0 * * * *`   其中 UTC 01:00（北京 09:00）：重跑 blog + regulations 最新生产部署，
+ *   2. `0 * * * *`   其中 UTC 01:00（北京 09:00）：重跑 insights + regulations 最新生产部署，
  *                    把当天到日期的定时发布文章放出来
  *   3. 每 5 分钟（每小时的 0/5/10/…/55 分）：投递已审核通过的报告邮件（原 tc-web-portal-email-cron）
  *

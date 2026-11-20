@@ -25,7 +25,7 @@ import { KNOWN_ROUTES, KNOWN_ROUTE_PATTERNS } from "./known-routes";
 // 归一化后的路由集合（去尾斜杠），用于 O(1) 存在性查找
 const KNOWN_ROUTE_SET = new Set(KNOWN_ROUTES);
 
-/** 分页路由（/blog/page/{n}/）实例随文章增长，按正则校验而非枚举。 */
+/** 分页路由（/insights/page/{n}/）实例随文章增长，按正则校验而非枚举。 */
 function matchesKnownPattern(route: string): boolean {
   return KNOWN_ROUTE_PATTERNS.some((re) => re.test(route));
 }
@@ -105,7 +105,7 @@ function dateRange(start: string, end: string): string[] {
  * 面包屑语法路径判定（用于「热门路径」page_data 的写入过滤）。
  *
  * 要求：
- * - 属于已知子站架构（site/portal/blog/admin/api），排除 unknown 噪音
+ * - 属于已知子站架构（site/portal/insights/regulations/admin/api），排除 unknown 噪音
  * - 无文件扩展名（排除静态资源 / RSC tree 等非页面路径）
  * - 非 Next.js 内部路径（_next）
  *

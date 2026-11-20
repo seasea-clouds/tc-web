@@ -20,7 +20,7 @@ export function useBreadcrumbOverride() {
 }
 
 // Path segment → i18n key mapping
-// For segments that exist as flat keys in Navbar (home, about, services, blog, etc.)
+// For segments that exist as flat keys in Navbar (home, about, services, insights, etc.)
 const SEGMENT_LABELS: Record<string, string> = {
   'services': 'services',
   'about': 'about',
@@ -81,7 +81,7 @@ const INDUSTRY_LABELS: Record<string, string> = {
 
 export interface AutoBreadcrumbProps {
   locale: string;
-  /** Optional title from server-side (for blog posts) */
+  /** Optional title from server-side (for insights articles) */
   title?: string;
 }
 
@@ -248,7 +248,7 @@ export default function AutoBreadcrumb({ locale, title }: AutoBreadcrumbProps) {
                   {item.label}
                 </span>
               ) : (
-                // 面包屑常跨 app（site /en/insights/ 由边缘代理到 blog 站），
+                // 面包屑常跨 app（site /en/insights/ 由边缘代理到 insights 站），
                 // next/link 的客户端路由会去取 RSC payload（*index.txt），
                 // 而静态导出产物里这些 .txt 已被 clean-rsc 剥离 → 404 后
                 // router 直接把 URL 落到 index.txt/ 报错。改普通 <a> 强制整页导航。

@@ -724,10 +724,8 @@
     "jsonldName": "Vielen Dank",
     "jsonldDescription": "Vielen Dank für Ihre Kontaktaufnahme mit SinoTrade Compliance. Wir melden uns umgehend bei Ihnen.",
     "trustTitle": "Marken weltweit vertrauen auf uns",
-    "blogTitle": "Während Sie warten: Aktuelle Einblicke",
     "readMore": "Mehr lesen",
     "readTime": "min",
-    "viewAllBlog": "Alle Artikel ansehen",
     "servicesTitle": "Entdecken Sie unsere Leistungen",
     "serviceGacc": "GACC-Registrierung",
     "serviceLabel": "Chinesische Etikettenkonformität",
@@ -743,9 +741,11 @@
     "stat3Label": "Jahre Erfahrung",
     "stat4Number": "~100 %",
     "stat4Label": "Compliance-Erfolgsquote",
-    "blogDesc": "Weitere Einblicke entdecken",
     "metaTitle": "Vielen Dank | SinoTrade Compliance",
-    "metaDescription": "Vielen Dank für Ihre Kontaktaufnahme mit SinoTrade Compliance. Wir beantworten Ihre Anfrage innerhalb von 24 Stunden."
+    "metaDescription": "Vielen Dank für Ihre Kontaktaufnahme mit SinoTrade Compliance. Wir beantworten Ihre Anfrage innerhalb von 24 Stunden.",
+    "insightsTitle": "Während Sie warten: Aktuelle Einblicke",
+    "insightsDesc": "Weitere Einblicke entdecken",
+    "viewAllInsights": "Alle Artikel ansehen"
   },
   "Blog": {
     "title": "Export nach China: Einblicke und Compliance Leitfäden",

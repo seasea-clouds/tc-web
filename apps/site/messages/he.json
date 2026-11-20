@@ -724,10 +724,8 @@
     "jsonldName": "תודה רבה",
     "jsonldDescription": "תודה שפניתם ל-SinoTrade Compliance. נחזור אליכם בהקדם.",
     "trustTitle": "מהימנים על ידי יצואנים ברחבי העולם",
-    "blogTitle": "בזמן ההמתנה: התובנות האחרונות",
     "readMore": "קרא עוד",
     "readTime": "min",
-    "viewAllBlog": "צפו בכל המאמרים",
     "servicesTitle": "גלו את השירותים שלנו",
     "serviceGacc": "רישום GACC",
     "serviceLabel": "תאימות לתווית סינית",
@@ -743,9 +741,11 @@
     "stat3Label": "שנים של מומחיות",
     "stat4Number": "~100%",
     "stat4Label": "שיעור ציות",
-    "blogDesc": "גלו עוד תובנות",
     "metaTitle": "תודה רבה | SinoTrade Compliance",
-    "metaDescription": "תודה שפניתם ל-SinoTrade Compliance. נשיב לפנייתכם תוך 24 שעות."
+    "metaDescription": "תודה שפניתם ל-SinoTrade Compliance. נשיב לפנייתכם תוך 24 שעות.",
+    "insightsTitle": "בזמן ההמתנה: התובנות האחרונות",
+    "insightsDesc": "גלו עוד תובנות",
+    "viewAllInsights": "צפו בכל המאמרים"
   },
   "Blog": {
     "title": "ייצוא לסין: תובנות ומדריכי ציות",

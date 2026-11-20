@@ -724,10 +724,8 @@
     "jsonldName": "Terima Kasih",
     "jsonldDescription": "Terima kasih kerana menghubungi SinoTrade Compliance. Kami akan kembali kepada anda tidak lama lagi.",
     "trustTitle": "Dipercayai oleh jenama di seluruh dunia",
-    "blogTitle": "Semasa Anda Menunggu: Cerapan Terkini",
     "readMore": "Baca Lagi",
     "readTime": "min",
-    "viewAllBlog": "Lihat Semua Artikel",
     "servicesTitle": "Terokai Perkhidmatan Kami",
     "serviceGacc": "Pendaftaran GACC",
     "serviceLabel": "Pematuhan Label Cina",
@@ -743,9 +741,11 @@
     "stat3Label": "Tahun Kepakaran",
     "stat4Number": "~100%",
     "stat4Label": "Kadar Pematuhan",
-    "blogDesc": "Terokai lebih banyak cerapan",
     "metaTitle": "Terima Kasih | SinoTrade Compliance",
-    "metaDescription": "Terima kasih kerana menghubungi SinoTrade Compliance. Kami akan menjawab pertanyaan anda dalam masa 24 jam."
+    "metaDescription": "Terima kasih kerana menghubungi SinoTrade Compliance. Kami akan menjawab pertanyaan anda dalam masa 24 jam.",
+    "insightsTitle": "Semasa Anda Menunggu: Cerapan Terkini",
+    "insightsDesc": "Terokai lebih banyak cerapan",
+    "viewAllInsights": "Lihat Semua Artikel"
   },
   "Blog": {
     "title": "Eksport ke China: pandangan dan panduan pematuhan",

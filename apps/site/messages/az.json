@@ -724,10 +724,8 @@
     "jsonldName": "Təşəkkür edirik!",
     "jsonldDescription": "SinoTrade Compliance ilə əlaqə saxladığınız üçün təşəkkür edirik. Tezliklə sizinlə əlaqə saxlayacağıq.",
     "trustTitle": "Dünya üzrə ixracatçılar bizə etibar edir",
-    "blogTitle": "Siz Gözləyərkən: Ən Son Məqalələr",
     "readMore": "Ətraflı Oxu",
     "readTime": "min",
-    "viewAllBlog": "Bütün Məqalələrə Bax",
     "servicesTitle": "Xidmətlərimizi Kəşf Edin",
     "serviceGacc": "GACC Qeydiyyatı",
     "serviceLabel": "Çin Etiket Uyğunluğu",
@@ -743,9 +741,11 @@
     "stat3Label": "İllik Təcrübə",
     "stat4Number": "~100%",
     "stat4Label": "Uyğunluq Dərəcəsi",
-    "blogDesc": "Daha çox məqaləyə baxın",
     "metaTitle": "Təşəkkür edirik | SinoTrade Uyğunluğu",
-    "metaDescription": "SinoTrade Compliance ilə əlaqə saxladığınız üçün təşəkkür edirik. Sorğunuza 24 saat ərzində cavab verəcəyik."
+    "metaDescription": "SinoTrade Compliance ilə əlaqə saxladığınız üçün təşəkkür edirik. Sorğunuza 24 saat ərzində cavab verəcəyik.",
+    "insightsTitle": "Siz Gözləyərkən: Ən Son Məqalələr",
+    "insightsDesc": "Daha çox məqaləyə baxın",
+    "viewAllInsights": "Bütün Məqalələrə Bax"
   },
   "Blog": {
     "title": "Çinə ixrac: anlayışlar və uyğunluq təlimatları",

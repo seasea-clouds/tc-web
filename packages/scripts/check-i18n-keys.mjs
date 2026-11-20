@@ -203,7 +203,7 @@ const IGNORE_FALLBACK_KEYS = new Set([
   'AiAssistance.serviceNMPA', 'AiAssistance.serviceCBEC', 'AiAssistance.serviceBrand',
   'AiAssistance.servicesTitle',
   // Navbar: short words that are correct loanwords in Germanic/Romance languages
-  'Navbar.home', 'Navbar.about', 'Navbar.contact', 'Navbar.blog',
+  'Navbar.home', 'Navbar.about', 'Navbar.contact', 'Navbar.insights',
   // Sitemap: Home is correct loanword in Germanic/Romance
   'Sitemap.home', 'Sitemap.about', 'Sitemap.contact',
   // Auth: email placeholder is always English

@@ -5,8 +5,8 @@
  * 规则：
  *   - 图片 sitemap 的 <loc> 必须是**所在页面**的 URL，图片通过 <image:image> 挂上去。
  *     （旧版把图片 URL 直接当 <loc>，等于告诉 Google 这些是页面 → 全部无效条目）
- *   - 域名统一用主域：博客图片由 site 边缘 Worker 代理（/images/insights/* → blog 上游），
- *     子站域名 blog.sinotradecompliance.com 没有 DNS 记录，用它就是死链。
+ *   - 域名统一用主域：Insights 图片由 site 边缘 Worker 代理（/images/insights/* → insights 上游），
+ *     子站域名 insights.sinotradecompliance.com 没有 DNS 记录，用它就是死链。
  *   - 只为「有对应文章页」的图片生成条目；站点装饰图（og-image、logo）不进图片 sitemap。
  *   - **每个语言页各列一次**（v2）：同一张图片文件出现在 48 个语言页上，
  *     Google 的语义是「这张图在这个页面上」，德语图片搜索要关联德语页，

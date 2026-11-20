@@ -724,10 +724,8 @@
     "jsonldName": "Дзякуй",
     "jsonldDescription": "Дзякуй за зварот у SinoTrade Compliance. Мы хутка вернемся да вас.",
     "trustTitle": "Нам давяраюць экспарцёры па ўсім свеце",
-    "blogTitle": "Пакуль чакаеце: свежыя матэрыялы",
     "readMore": "Чытаць далей",
     "readTime": "min",
-    "viewAllBlog": "Усе артыкулы",
     "servicesTitle": "Азнаёмцеся з нашымі паслугамі",
     "serviceGacc": "Рэгістрацыя GACC",
     "serviceLabel": "Адпаведнасць кітайскай этыкеткі",
@@ -743,9 +741,11 @@
     "stat3Label": "Гадоў вопыту",
     "stat4Number": "~100%",
     "stat4Label": "Паказчык адпаведнасці",
-    "blogDesc": "Больш інсайтаў",
     "metaTitle": "Дзякуй | SinoTrade Compliance",
-    "metaDescription": "Дзякуй за зварот у SinoTrade Compliance. Мы адкажам на ваш запыт на працягу 24 гадзін."
+    "metaDescription": "Дзякуй за зварот у SinoTrade Compliance. Мы адкажам на ваш запыт на працягу 24 гадзін.",
+    "insightsTitle": "Пакуль чакаеце: свежыя матэрыялы",
+    "insightsDesc": "Больш інсайтаў",
+    "viewAllInsights": "Усе артыкулы"
   },
   "Blog": {
     "title": "Экспарт у Кітай: аналітыка і кіраўніцтвы па адпаведнасці",

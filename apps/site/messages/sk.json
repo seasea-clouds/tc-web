@@ -724,10 +724,8 @@
     "jsonldName": "Ďakujeme",
     "jsonldDescription": "Ďakujeme, že ste kontaktovali SinoTrade Compliance. Čoskoro sa vám ozveme.",
     "trustTitle": "Dôverujú nám vývozcovia z celého sveta",
-    "blogTitle": "Kým čakáte: najnovšie články",
     "readMore": "Prečítať viac",
     "readTime": "min",
-    "viewAllBlog": "Zobraziť všetky články",
     "servicesTitle": "Preskúmajte naše služby",
     "serviceGacc": "Registrácia GACC",
     "serviceLabel": "Súlad čínskych etikiet",
@@ -743,9 +741,11 @@
     "stat3Label": "Roky skúseností",
     "stat4Number": "~100%",
     "stat4Label": "Miera zhody",
-    "blogDesc": "Preskúmajte ďalšie články",
     "metaTitle": "Ďakujeme | SinoTrade Compliance",
-    "metaDescription": "Ďakujeme, že ste kontaktovali SinoTrade Compliance. Na váš dopyt odpovieme do 24 hodín."
+    "metaDescription": "Ďakujeme, že ste kontaktovali SinoTrade Compliance. Na váš dopyt odpovieme do 24 hodín.",
+    "insightsTitle": "Kým čakáte: najnovšie články",
+    "insightsDesc": "Preskúmajte ďalšie články",
+    "viewAllInsights": "Zobraziť všetky články"
   },
   "Blog": {
     "title": "Export do Číny: prehľady a príručky zhody",

@@ -24,11 +24,11 @@ export interface ComplianceFormTexts {
 /**
  * 全站共用的「免费合规评估」表单（web3forms）。
  *
- * site / blog / regulations 三个 app 都用这一份，改样式或加字段只改这里。
+ * site / insights / regulations 三个 app 都用这一份，改样式或加字段只改这里。
  *
  * 刻意做成纯 props 组件：
  * - 本包没有 third-party 依赖（只 peer react/next），不能引 next-intl 或 lucide；
- * - 因此文案一律由调用方取好传进来（site 走 next-intl，blog/regulations 走 getMessages）。
+ * - 因此文案一律由调用方取好传进来（site 走 next-intl，insights/regulations 走 getMessages）。
  *
  * `idPrefix` 用来区分同页多份表单的 input id，否则 label 的 htmlFor 会指到第一份。
  */

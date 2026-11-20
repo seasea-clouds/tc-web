@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const locale = (await params).locale;
   const t = await getTranslations({ locale, namespace: 'Sitemap' });
   const title = t('metaTitle') || `Site Map - SinoTrade Compliance`;
-  const description = t('metaDescription') || `Complete site map of SinoTrade Compliance - all services, industries, blog posts and pages.`;
+  const description = t('metaDescription') || `Complete site map of SinoTrade Compliance - all services, industries, insights and pages.`;
   const url = `https://sinotradecompliance.com/${locale}/sitemap/`;
   return {
     title,

@@ -724,10 +724,8 @@
     "jsonldName": "متشکریم",
     "jsonldDescription": "از تماس شما با SinoTrade Compliance سپاسگزاریم. به‌زودی با شما تماس خواهیم گرفت.",
     "trustTitle": "مورد اعتماد صادرکنندگان در سراسر جهان",
-    "blogTitle": "در حالی که منتظرید: آخرین بینش‌ها",
     "readMore": "ادامه مطلب",
     "readTime": "min",
-    "viewAllBlog": "مشاهده همه مقالات",
     "servicesTitle": "خدمات ما را کاوش کنید",
     "serviceGacc": "ثبت GACC",
     "serviceLabel": "انطباق برچسب چینی",
@@ -743,9 +741,11 @@
     "stat3Label": "سال‌ها تخصص",
     "stat4Number": "~100%",
     "stat4Label": "نرخ انطباق",
-    "blogDesc": "بینش‌های بیشتر را کاوش کنید",
     "metaTitle": "متشکریم | SinoTrade Compliance",
-    "metaDescription": "از تماس شما با SinoTrade Compliance سپاسگزاریم. ما ظرف 24 ساعت به درخواست شما پاسخ خواهیم داد."
+    "metaDescription": "از تماس شما با SinoTrade Compliance سپاسگزاریم. ما ظرف 24 ساعت به درخواست شما پاسخ خواهیم داد.",
+    "insightsTitle": "در حالی که منتظرید: آخرین بینش‌ها",
+    "insightsDesc": "بینش‌های بیشتر را کاوش کنید",
+    "viewAllInsights": "مشاهده همه مقالات"
   },
   "Blog": {
     "title": "صادرات به چین: تحليل‌ها و راهنماهای انطباق",

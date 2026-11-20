@@ -32,7 +32,7 @@ const detectedProject = getDetectedProject();
 
 const APP_DIR_MAP = {
   site: 'apps/site/src/app/(site)/[locale]',
-  blog: 'apps/insights/src/app/[locale]',
+  insights: 'apps/insights/src/app/[locale]',
   portal: 'apps/portal/src/app/[locale]',
 };
 
@@ -97,8 +97,8 @@ function isExemptRoute(appName, relativePath) {
   }
 
   // Blog pages have their own generateMetadata (list + article + root redirect wrapper)
-  if (appName === 'blog' && relativePath.startsWith('insights/')) {
-    return true;  // Inherits from blog/[locale]/layout.tsx
+  if (appName === 'insights' && relativePath.startsWith('insights/')) {
+    return true;  // Inherits from insights/[locale]/layout.tsx
   }
 
   return false;

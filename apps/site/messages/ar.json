@@ -724,10 +724,8 @@
     "jsonldName": "شكرًا لك",
     "jsonldDescription": "شكرًا لتواصلك مع SinoTrade Compliance. سنعود إليك قريبًا.",
     "trustTitle": "موثوق من العلامات التجارية حول العالم",
-    "blogTitle": "أثناء انتظارك: أحدث المقالات",
     "readMore": "اقرأ المزيد",
     "readTime": "min",
-    "viewAllBlog": "عرض جميع المقالات",
     "servicesTitle": "استكشف خدماتنا",
     "serviceGacc": "تسجيل GACC",
     "serviceLabel": "الامتثال للملصقات الصينية",
@@ -743,9 +741,11 @@
     "stat3Label": "سنة من الخبرة",
     "stat4Number": "~100%",
     "stat4Label": "نسبة الامتثال",
-    "blogDesc": "استكشف المزيد من المقالات",
     "metaTitle": "شكرًا لك | SinoTrade Compliance",
-    "metaDescription": "شكرًا لتواصلك مع SinoTrade Compliance. سنرد على استفسارك خلال 24 ساعة."
+    "metaDescription": "شكرًا لتواصلك مع SinoTrade Compliance. سنرد على استفسارك خلال 24 ساعة.",
+    "insightsTitle": "أثناء انتظارك: أحدث المقالات",
+    "insightsDesc": "استكشف المزيد من المقالات",
+    "viewAllInsights": "عرض جميع المقالات"
   },
   "Blog": {
     "title": "التصدير إلى الصين: رؤى وأدلة الامتثال",

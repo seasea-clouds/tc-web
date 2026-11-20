@@ -724,10 +724,8 @@
     "jsonldName": "Tack",
     "jsonldDescription": "Tack för att du kontaktade SinoTrade Compliance. Vi återkommer snart.",
     "trustTitle": "Betrodd av exportörer världen över",
-    "blogTitle": "Medan du väntar: Senaste insikterna",
     "readMore": "Läs mer",
     "readTime": "min",
-    "viewAllBlog": "Visa alla artiklar",
     "servicesTitle": "Utforska våra tjänster",
     "serviceGacc": "GACC-registrering",
     "serviceLabel": "Kinesisk etikettefterlevnad",
@@ -743,9 +741,11 @@
     "stat3Label": "År av expertis",
     "stat4Number": "~100 %",
     "stat4Label": "Efterlevnadsgrad",
-    "blogDesc": "Utforska fler insikter",
     "metaTitle": "Tack | SinoTrade Compliance",
-    "metaDescription": "Tack för att du kontaktade SinoTrade Compliance. Vi svarar på din förfrågan inom 24 timmar."
+    "metaDescription": "Tack för att du kontaktade SinoTrade Compliance. Vi svarar på din förfrågan inom 24 timmar.",
+    "insightsTitle": "Medan du väntar: Senaste insikterna",
+    "insightsDesc": "Utforska fler insikter",
+    "viewAllInsights": "Visa alla artiklar"
   },
   "Blog": {
     "title": "Exportera till Kina: insikter och vägledning för regelefterlevnad",

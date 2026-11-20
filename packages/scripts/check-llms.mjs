@@ -47,11 +47,11 @@ function checkLLMsFile(filePath) {
   }
 
   // 4. 包含博客链接（至少 6 条）— 接受 URL 或描述性文本
-  const blogLinks = content.match(/\/(insights\/[a-z0-9-]+)\//g) || [];
-  const blogTexts = content.match(/^- Blog post/mg) || [];
-  const blogCount = blogLinks.length + blogTexts.length;
-  if (blogCount < 6) {
-    issues.push(`❌ 博客链接不足 6 条（${blogLinks.length} 条 URL + ${blogTexts.length} 条描述）`);
+  const insightLinks = content.match(/\/(insights\/[a-z0-9-]+)\//g) || [];
+  const insightTexts = content.match(/^- Blog post/mg) || [];
+  const insightCount = insightLinks.length + insightTexts.length;
+  if (insightCount < 6) {
+    issues.push(`❌ 博客链接不足 6 条（${insightLinks.length} 条 URL + ${insightTexts.length} 条描述）`);
   }
 
   // 5. 不包含 i18n 翻译键（允许 "Key Content" 部分内的有意键值对）

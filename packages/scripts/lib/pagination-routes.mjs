@@ -8,7 +8,7 @@
  * 就只剩详情页这一个入口。
  *
  * 页数算法与各 app 的 lib 保持一致：
- *   - blog：PAGE_CAPACITY=20，有封面的文章占 2 个权重（insights-list.ts paginate）
+ *   - insights：PAGE_CAPACITY=20，有封面的文章占 2 个权重（insights-list.ts paginate）
  *   - regulations：PAGE_CAPACITY=20，一篇占 1 个（doc-list.ts paginate）
  * 文章还要过 publish-gate（未到发布日的不算），否则会把未来页写进 sitemap。
  */

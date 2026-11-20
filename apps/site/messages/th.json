@@ -724,10 +724,8 @@
     "jsonldName": "ขอบคุณ",
     "jsonldDescription": "ขอขอบคุณที่ติดต่อ SinoTrade Compliance เราจะติดต่อกลับโดยเร็วที่สุด",
     "trustTitle": "ได้รับความไว้วางใจจากแบรนด์ทั่วโลก",
-    "blogTitle": "ระหว่างรอ: บทความน่าอ่านล่าสุด",
     "readMore": "อ่านเพิ่มเติม",
     "readTime": "min",
-    "viewAllBlog": "ดูบทความทั้งหมด",
     "servicesTitle": "สำรวจบริการของเรา",
     "serviceGacc": "การขึ้นทะเบียน GACC",
     "serviceLabel": "การปฏิบัติตามฉลากภาษาจีน",
@@ -743,9 +741,11 @@
     "stat3Label": "ปีแห่งความเชี่ยวชาญ",
     "stat4Number": "~100%",
     "stat4Label": "อัตราการปฏิบัติตามข้อกำหนด",
-    "blogDesc": "สำรวจบทความเพิ่มเติม",
     "metaTitle": "ขอบคุณ | SinoTrade Compliance",
-    "metaDescription": "ขอบคุณที่ติดต่อ SinoTrade Compliance เราจะตอบกลับภายใน 24 ชั่วโมง"
+    "metaDescription": "ขอบคุณที่ติดต่อ SinoTrade Compliance เราจะตอบกลับภายใน 24 ชั่วโมง",
+    "insightsTitle": "ระหว่างรอ: บทความน่าอ่านล่าสุด",
+    "insightsDesc": "สำรวจบทความเพิ่มเติม",
+    "viewAllInsights": "ดูบทความทั้งหมด"
   },
   "Blog": {
     "title": "การส่งออกไปจีน: ข้อมูลเชิงลึกและคู่มือการปฏิบัติตามกฎ",

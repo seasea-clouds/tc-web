@@ -80,7 +80,7 @@ const MESSAGES_DIR = fs.existsSync(MESSAGES_DIR_CWD)
   ? MESSAGES_DIR_CWD
   : path.join(REPO_ROOT, 'apps', getDetectedProject(), 'messages');
 
-const BLOG_DIR = path.join(PROJECT_ROOT, 'content', 'blog');
+const INSIGHTS_DIR = path.join(PROJECT_ROOT, 'content', 'insights');
 const MONOREPO_ROOT = path.resolve(__dirname, '..');
 const SHARED_UI_MESSAGES_DIR = path.join(MONOREPO_ROOT, 'ui', 'messages');
 const AUTO_BREADCRUMB_PATH = path.join(MONOREPO_ROOT, 'ui', 'src', 'AutoBreadcrumb.tsx');
@@ -382,7 +382,7 @@ const SHORT_WORD_WHITELIST = new Set([
   'Navbar.services|服务', 'Navbar.services|サービス', 'Navbar.services|서비스',
   'Footer.services|服务', 'Footer.services|サービス', 'Footer.services|서비스',
   'Navbar.packages|套餐', 'Navbar.packages|パッケージ', 'Navbar.packages|패키지',
-  'Navbar.blog|洞察', 'Navbar.blog|インサイト', 'Navbar.blog|인사이트',
+  'Navbar.insights|洞察', 'Navbar.insights|インサイト', 'Navbar.insights|인사이트',
   'Search.title|搜索', 'Search.title|検索', 'Search.title|검색',
 ]);
 
@@ -422,7 +422,7 @@ const NON_LATIN_LOCALES = new Set([
 const SHORT_WORD_KEYS = new Set([
   'Navbar.home', 'Footer.contact', 'Navbar.services', 'Footer.services',
   'Navbar.whatsapp', 'Footer.whatsapp', 'Navbar.logo', 'Navbar.about',
-  'Navbar.packages', 'Navbar.blog', 'Navbar.faq', 'Navbar.contact',
+  'Navbar.packages', 'Navbar.insights', 'Navbar.faq', 'Navbar.contact',
   'Search.placeholder', 'Search.title', 'ThankYou.title', 'ThankYou.subtitle',
   'CTA.ctaTitle', 'CTA.ctaSubtitle', 'CTA.ctaUrgency',
   'Footer.contact', 'Footer.services', 'Footer.gaccRegistration',
@@ -695,7 +695,7 @@ const ENGLISH_RESIDUAL_ALLOW = new Set([
   // 第十三批残留豁免（拉丁语系常用英文借词）
   'Marketing', 'marketing', 'Software', 'software',
   'Startup', 'startup', 'Website', 'website',
-  'Blog', 'blog', 'Business', 'business',
+  'Insights', 'Blog', 'blog', 'Business', 'business',
   'Upload', 'upload', 'Download', 'download',
   'Chat', 'chat', 'Login', 'login', 'Logout', 'logout',
   'Hosting', 'hosting', 'Shopping', 'shopping',
@@ -844,12 +844,12 @@ function flattenKeys(obj, prefix = '') {
 // ============================================================
 // Blog MDX check
 // ============================================================
-function checkBlogMdx(targetLang = null, verbose = true) {
+function checkInsightsMdx(targetLang = null, verbose = true) {
   const slugList = [];
-  // Graceful: blog content may not exist in this project root (e.g. blog app)
-  const enDir = path.join(BLOG_DIR, 'en');
-  if (!fs.existsSync(BLOG_DIR) || !fs.existsSync(enDir)) {
-    if (verbose) console.log(`\n📝 博客 MDX 检查: ⏭️ 跳过 (${BLOG_DIR} 不存在)`);
+  // Graceful: insights content may not exist in this project root
+  const enDir = path.join(INSIGHTS_DIR, 'en');
+  if (!fs.existsSync(INSIGHTS_DIR) || !fs.existsSync(enDir)) {
+    if (verbose) console.log(`\n📝 博客 MDX 检查: ⏭️ 跳过 (${INSIGHTS_DIR} 不存在)`);
     return 0;
   }
     for (const f of fs.readdirSync(enDir).filter(f => f.endsWith('.mdx')).sort()) {
@@ -857,15 +857,15 @@ function checkBlogMdx(targetLang = null, verbose = true) {
     }
 
   const allLangs = targetLang
-    ? (fs.existsSync(path.join(BLOG_DIR, targetLang)) ? [targetLang] : [])
-    : fs.readdirSync(BLOG_DIR).filter(d => fs.statSync(path.join(BLOG_DIR, d)).isDirectory() && d !== 'en').sort();
+    ? (fs.existsSync(path.join(INSIGHTS_DIR, targetLang)) ? [targetLang] : [])
+    : fs.readdirSync(INSIGHTS_DIR).filter(d => fs.statSync(path.join(INSIGHTS_DIR, d)).isDirectory() && d !== 'en').sort();
 
   let issues = 0;
   const issueDetail = [];
 
   for (const slug of slugList) {
     for (const locale of allLangs) {
-      const mdxFile = path.join(BLOG_DIR, locale, `${slug}.mdx`);
+      const mdxFile = path.join(INSIGHTS_DIR, locale, `${slug}.mdx`);
       if (!fs.existsSync(mdxFile)) continue;
 
       const content = fs.readFileSync(mdxFile, 'utf-8');
@@ -2157,7 +2157,7 @@ const jsonOut = args.includes('--json');
 const skipConsistency = args.includes('--skip-locale-check');
 const isAdminProject = getDetectedProject() === 'admin';
 
-let localeCheck, result, blogIssues, industryMetaIssues, portalIssues;
+let localeCheck, result, insightsIssues, industryMetaIssues, portalIssues;
 let sharedUiIssues = 0, breadcrumbResult = { total: 0, missing: [] }, dashIssues = 0, semanticIssues = 0;
 let adminMsgResult = { total: 0, missingKeys: [], dashIssues: 0 };
 let secretIssues = 0;
@@ -2168,7 +2168,7 @@ if (isAdminProject) {
   if (!short) console.log('\n⚠️  Admin 检测: 跳过语种一致性和翻译质量检查（仅 en/zh）');
   localeCheck = null;
   result = null;
-  blogIssues = 0;
+  insightsIssues = 0;
   industryMetaIssues = 0;
   portalIssues = 0;
   sharedUiIssues = 0;
@@ -2179,7 +2179,7 @@ if (isAdminProject) {
 } else {
   localeCheck = skipConsistency ? null : checkLocaleConsistency(!short);
   result = checkTranslations(targetLang, !short);
-  blogIssues = checkBlogMdx(targetLang, !short);
+  insightsIssues = checkInsightsMdx(targetLang, !short);
   industryMetaIssues = (targetLang || args.includes('--skip-industry-meta')) ? 0 : checkIndustryMetaCompleteness(!short);
   portalIssues = (targetLang || args.includes('--skip-portal-check')) ? 0 : checkPortalTranslations(!short);
 
@@ -2195,7 +2195,7 @@ if (isAdminProject) {
   semanticIssues = checkSemanticQuality(!short);
 }
 
-const totalIssues = (result?.total_issues ?? 0) + blogIssues + (localeCheck?.total ?? 0) + industryMetaIssues + portalIssues + sharedUiIssues + breadcrumbResult.total + dashIssues + adminMsgResult.total + secretIssues + semanticIssues;
+const totalIssues = (result?.total_issues ?? 0) + insightsIssues + (localeCheck?.total ?? 0) + industryMetaIssues + portalIssues + sharedUiIssues + breadcrumbResult.total + dashIssues + adminMsgResult.total + secretIssues + semanticIssues;
 
 if (totalIssues === 0) {
   console.log('\n✅ 全量核验通过！48 种语言无质量问题。');
@@ -2207,8 +2207,8 @@ if (totalIssues === 0) {
   if (result && result.total_issues > 0) {
     console.log(`   - 网站翻译质量: ${result.total_issues} 个问题`);
   }
-  if (blogIssues > 0) {
-    console.log(`   - 博客 MDX: ${blogIssues} 个问题`);
+  if (insightsIssues > 0) {
+    console.log(`   - Insights MDX: ${insightsIssues} 个问题`);
   }
   if (industryMetaIssues > 0) {
     console.log(`   - 行业 meta 完整性: ${industryMetaIssues} 个问题`);

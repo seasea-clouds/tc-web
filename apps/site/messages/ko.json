@@ -724,10 +724,8 @@
     "jsonldName": "감사합니다",
     "jsonldDescription": "SinoTrade 규정 준수에 문의해 주셔서 감사합니다. 곧 연락드리겠습니다.",
     "trustTitle": "전 세계 브랜드가 신뢰합니다",
-    "blogTitle": "기다리는 동안: 최신 인사이트",
     "readMore": "더 읽기",
     "readTime": "min",
-    "viewAllBlog": "모든 기사 보기",
     "servicesTitle": "서비스 살펴보기",
     "serviceGacc": "GACC 등록",
     "serviceLabel": "중국어 라벨 규정 준수",
@@ -743,9 +741,11 @@
     "stat3Label": "년간 전문 경험",
     "stat4Number": "~100%",
     "stat4Label": "준수율",
-    "blogDesc": "더 많은 인사이트 살펴보기",
     "metaTitle": "감사합니다 | SinoTrade 규정 준수",
-    "metaDescription": "SinoTrade 규정 준수에 문의해 주셔서 감사합니다. 24시간 이내에 답변드리겠습니다."
+    "metaDescription": "SinoTrade 규정 준수에 문의해 주셔서 감사합니다. 24시간 이내에 답변드리겠습니다.",
+    "insightsTitle": "기다리는 동안: 최신 인사이트",
+    "insightsDesc": "더 많은 인사이트 살펴보기",
+    "viewAllInsights": "모든 기사 보기"
   },
   "Blog": {
     "title": "중국 수출: 인사이트와 컴플라이언스 가이드",

@@ -7,7 +7,7 @@
  * had a proper translation.
  *
  * This prevents regressions like P0-1 where Blog messages had
- * Navbar.blog = "Blog" overriding the UI package's translated values.
+ * Navbar.insights = "Insights" overriding the UI package's translated values.
  */
 import { readFileSync, readdirSync, existsSync } from 'fs';
 import { join, resolve, dirname } from 'path';
@@ -19,7 +19,7 @@ const UI_MSG_DIR = join(REPO_ROOT, 'packages', 'ui', 'messages');
 const APPS = {
   portal: join(REPO_ROOT, 'apps', 'portal', 'messages'),
   site: join(REPO_ROOT, 'apps', 'site', 'messages'),
-  blog: join(REPO_ROOT, 'apps', 'insights', 'messages'),
+  insights: join(REPO_ROOT, 'apps', 'insights', 'messages'),
 };
 
 // Deep flatten: { ns: { key: val } } => { "ns.key": val }

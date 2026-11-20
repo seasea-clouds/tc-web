@@ -27,8 +27,10 @@ const repoRoot = path.resolve(__dirname, '../..');
 const checker = path.join(repoRoot, 'docs/submission-kit/submitter_check.py');
 
 const TARGETS = {
+  // 包内目录名与 kind 取值仍是 "blog"（v461 投稿包契约，投稿者已按此提交），
+  // 这里只是内部目标表，指向 insights app 的实际路径。
   blog: {
-    app: 'blog',
+    app: 'insights',
     contentRoot: path.join(repoRoot, 'apps/insights/content'),
     imagesRoot: path.join(repoRoot, 'apps/insights/public/images/insights'),
   },

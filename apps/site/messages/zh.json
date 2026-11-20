@@ -724,10 +724,8 @@
     "jsonldName": "感谢页",
     "jsonldDescription": "感谢您联系中贸合规，我们会尽快回复。",
     "trustTitle": "深受全球品牌信赖",
-    "blogTitle": "等待期间：行业最新洞察",
     "readMore": "阅读全文",
     "readTime": "min",
-    "viewAllBlog": "查看全部文章",
     "servicesTitle": "探索我们的服务",
     "serviceGacc": "海关总署注册",
     "serviceLabel": "中文标签合规",
@@ -743,9 +741,11 @@
     "stat3Label": "年行业经验",
     "stat4Number": "~100%",
     "stat4Label": "合规通过率",
-    "blogDesc": "查看更多洞察文章",
     "metaTitle": "感谢您的咨询 | 中贸合规",
-    "metaDescription": "感谢您联系中贸合规。我们将在 24 小时内回复您的咨询。"
+    "metaDescription": "感谢您联系中贸合规。我们将在 24 小时内回复您的咨询。",
+    "insightsTitle": "等待期间：行业最新洞察",
+    "insightsDesc": "查看更多洞察文章",
+    "viewAllInsights": "查看全部文章"
   },
   "Blog": {
     "title": "出口中国：洞察与合规指南",

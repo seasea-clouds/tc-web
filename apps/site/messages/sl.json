@@ -724,10 +724,8 @@
     "jsonldName": "Hvala",
     "jsonldDescription": "Hvala, ker ste kontaktirali SinoTrade Compliance. Kmalu se vam bomo javili.",
     "trustTitle": "Zaupajo nam izvozniki po vsem svetu",
-    "blogTitle": "Medtem ko čakate: najnovejši vpogledi",
     "readMore": "Preberi več",
     "readTime": "min",
-    "viewAllBlog": "Poglej vse članke",
     "servicesTitle": "Raziščite naše storitve",
     "serviceGacc": "Registracija GACC",
     "serviceLabel": "Skladnost kitajskih etiket",
@@ -743,9 +741,11 @@
     "stat3Label": "Leta strokovnega znanja",
     "stat4Number": "~100 %",
     "stat4Label": "Stopnja skladnosti",
-    "blogDesc": "Raziščite več vpogledov",
     "metaTitle": "Hvala | SinoTrade Compliance",
-    "metaDescription": "Hvala, ker ste kontaktirali SinoTrade Compliance. Na vaše povpraševanje bomo odgovorili v 24 urah."
+    "metaDescription": "Hvala, ker ste kontaktirali SinoTrade Compliance. Na vaše povpraševanje bomo odgovorili v 24 urah.",
+    "insightsTitle": "Medtem ko čakate: najnovejši vpogledi",
+    "insightsDesc": "Raziščite več vpogledov",
+    "viewAllInsights": "Poglej vse članke"
   },
   "Blog": {
     "title": "Izvoz na Kitajsko: vpogledi in smernice za skladnost",

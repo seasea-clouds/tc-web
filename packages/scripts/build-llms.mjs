@@ -40,7 +40,7 @@ function flatten(obj, prefix = '') {
 // 导航分组名称映射（英文）
 const GROUP_LABELS = {
   about: 'About',
-  blog: 'Blog',
+  insights: 'Insights',
   c: 'Check & Report',
   faq: 'FAQ',
   industries: 'Industries',
@@ -73,7 +73,7 @@ const SKIP_KEYS = [
  * 硬编码清单只作为兜底：新增文章无需有人记得来这里补一行。
  */
 const BLOG_TITLE_CACHE = {};
-function loadBlogTitles(locale, app = 'insights') {
+function loadInsightTitles(locale, app = 'insights') {
   const cacheKey = `${app}:${locale}`;
   if (BLOG_TITLE_CACHE[cacheKey]) return BLOG_TITLE_CACHE[cacheKey];
   const map = {};
@@ -153,14 +153,14 @@ function getDisplayText(route, enMsgs, locale = 'en') {
   if (parts[0] === 'insights' && parts.length > 1) {
     // 优先用该语言的 frontmatter 标题，其次硬编码清单，最后 slug 转标题
     const slug = parts[1];
-    const localized = loadBlogTitles(locale)[slug];
+    const localized = loadInsightTitles(locale)[slug];
     if (localized) return localized;
     if (BLOG_TITLES[slug]) return BLOG_TITLES[slug];
     return slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
   }
   if (parts[0] === 'regulations' && parts.length > 1) {
     const slug = parts[1];
-    const localized = loadBlogTitles(locale, 'regulations')[slug];
+    const localized = loadInsightTitles(locale, 'regulations')[slug];
     if (localized) return localized;
     return slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
   }

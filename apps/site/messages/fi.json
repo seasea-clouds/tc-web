@@ -724,10 +724,8 @@
     "jsonldName": "Kiitos",
     "jsonldDescription": "Kiitos, että otit yhteyttä SinoTrade Complianceen. Palaamme sinulle pian.",
     "trustTitle": "Viejien luottama maailmanlaajuisesti",
-    "blogTitle": "Odotuksen ajaksi: uusimmat artikkelit",
     "readMore": "Lue lisää",
     "readTime": "min",
-    "viewAllBlog": "Näytä kaikki artikkelit",
     "servicesTitle": "Tutustu palveluihimme",
     "serviceGacc": "GACC-rekisteröinti",
     "serviceLabel": "Kiinankielisten etikettien vaatimustenmukaisuus",
@@ -743,9 +741,11 @@
     "stat3Label": "Vuotta asiantuntemusta",
     "stat4Number": "~100 %",
     "stat4Label": "Vaatimustenmukaisuusaste",
-    "blogDesc": "Tutustu useampiin artikkeleihin",
     "metaTitle": "Kiitos | SinoTrade Compliance",
-    "metaDescription": "Kiitos, että otit yhteyttä SinoTrade Complianceen. Vastaamme kyselyysi 24 tunnin kuluessa."
+    "metaDescription": "Kiitos, että otit yhteyttä SinoTrade Complianceen. Vastaamme kyselyysi 24 tunnin kuluessa.",
+    "insightsTitle": "Odotuksen ajaksi: uusimmat artikkelit",
+    "insightsDesc": "Tutustu useampiin artikkeleihin",
+    "viewAllInsights": "Näytä kaikki artikkelit"
   },
   "Blog": {
     "title": "Vienti Kiinaan: näkemyksiä ja vaatimustenmukaisuusoppaita",

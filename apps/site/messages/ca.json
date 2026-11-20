@@ -724,10 +724,8 @@
     "jsonldName": "Gràcies",
     "jsonldDescription": "Gràcies per contactar amb SinoTrade Compliance. Ens posarem en contacte amb vosaltres aviat.",
     "trustTitle": "La confiança d'exportadors de tot el món",
-    "blogTitle": "Mentre espereu: últimes perspectives",
     "readMore": "Llegeix-ne més",
     "readTime": "min",
-    "viewAllBlog": "Vegeu tots els articles",
     "servicesTitle": "Exploreu els nostres serveis",
     "serviceGacc": "Registre GACC",
     "serviceLabel": "Compliment de l'etiqueta xinesa",
@@ -743,9 +741,11 @@
     "stat3Label": "Anys d'experiència",
     "stat4Number": "~100%",
     "stat4Label": "Taxa de compliment",
-    "blogDesc": "Exploreu més articles",
     "metaTitle": "Gràcies | Compliment de SinoTrade",
-    "metaDescription": "Gràcies per contactar amb SinoTrade Compliance. Respondrem a la vostra consulta en un termini de 24 hores."
+    "metaDescription": "Gràcies per contactar amb SinoTrade Compliance. Respondrem a la vostra consulta en un termini de 24 hores.",
+    "insightsTitle": "Mentre espereu: últimes perspectives",
+    "insightsDesc": "Exploreu més articles",
+    "viewAllInsights": "Vegeu tots els articles"
   },
   "Blog": {
     "title": "Exportar a la Xina: anàlisi i guies de compliment",

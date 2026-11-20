@@ -2,7 +2,7 @@
 /**
  * ci-check.mjs — 统一 CI 检查入口
  *
- * 所有子站（site / portal / blog / admin）共享此脚本。
+ * 所有子站（site / portal / insights / regulations / admin）共享此脚本。
  * 所有检查脚本统一在 packages/scripts/ 中，此脚本负责依次调度。
  *
  * 所有子站跑完全相同的检查列表，不做按项目裁剪。

@@ -29,7 +29,7 @@
  *   node check-md-article.mjs --ci            # CI 模式，有 error 则 exit 1
  *   node check-md-article.mjs --lang=zh       # 只检查指定语言
  *   node check-md-article.mjs --rule=R01      # 只运行指定规则
- *   node check-md-article.mjs --project=blog  # 检查 blog 项目（默认）
+ *   node check-md-article.mjs --project=insights  # 检查 insights 项目（默认）
  */
 
 import fs from 'fs';
@@ -43,7 +43,7 @@ const args = process.argv.slice(2);
 const isCi = args.includes('--ci');
 const filterLang = args.find(a => a.startsWith('--lang='))?.split('=')[1] || null;
 const filterRule = args.find(a => a.startsWith('--rule='))?.split('=')[1]?.toUpperCase() || null;
-const project = args.find(a => a.startsWith('--project='))?.split('=')[1] || 'blog';
+const project = args.find(a => a.startsWith('--project='))?.split('=')[1] || 'insights';
 
 // 48 种支持的语言（与 locales.json 同步）
 const LOCALES = [
@@ -57,7 +57,7 @@ const LOCALES = [
 
 // 项目内容目录映射
 const PROJECT_CONTENT_DIRS = {
-  blog: 'apps/insights/content',
+  insights: 'apps/insights/content',
 };
 
 function getContentDir(p) {

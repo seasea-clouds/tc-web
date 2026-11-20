@@ -9,7 +9,7 @@
  *   2. 跳过外部链接 (http://, https://, mailto:, tel:, #, data:)
  *   3. 跳过已知合法的非 locale 路径（/api/, /_next/, 静态资源）
  *   4. 跳过已包含 locale 的动态路径（{locale}, `${locale}`）
- *   5. 只检查 portal 和 blog app（site 的链接不通过 href 使用）
+ *   5. 只检查 portal 和 insights app（site 的链接不通过 href 使用）
  *
  * 用法：
  *   node packages/scripts/check-locale-prefix.mjs

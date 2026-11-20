@@ -724,10 +724,8 @@
     "jsonldName": "Teşekkür Ederiz",
     "jsonldDescription": "SinoTrade Compliance ile iletişime geçtiğiniz için teşekkür ederiz. Size en kısa sürede geri döneceğiz.",
     "trustTitle": "Dünya çapındaki markaların güvendiği",
-    "blogTitle": "Siz Beklerken: En Son İçgörüler",
     "readMore": "Devamını Oku",
     "readTime": "min",
-    "viewAllBlog": "Tüm Makaleleri Görüntüle",
     "servicesTitle": "Hizmetlerimizi Keşfedin",
     "serviceGacc": "GACC Kaydı",
     "serviceLabel": "Çin Etiket Uyumluluğu",
@@ -743,9 +741,11 @@
     "stat3Label": "Yıllık Deneyim",
     "stat4Number": "~%100",
     "stat4Label": "Uyumluluk Oranı",
-    "blogDesc": "Daha fazla içgörü keşfedin",
     "metaTitle": "Teşekkür Ederiz | SinoTrade Compliance",
-    "metaDescription": "SinoTrade Compliance ile iletişime geçtiğiniz için teşekkür ederiz. Sorunuza 24 saat içinde cevap vereceğiz."
+    "metaDescription": "SinoTrade Compliance ile iletişime geçtiğiniz için teşekkür ederiz. Sorunuza 24 saat içinde cevap vereceğiz.",
+    "insightsTitle": "Siz Beklerken: En Son İçgörüler",
+    "insightsDesc": "Daha fazla içgörü keşfedin",
+    "viewAllInsights": "Tüm Makaleleri Görüntüle"
   },
   "Blog": {
     "title": "Çin'e ihracat: içgörüler ve uyum rehberleri",

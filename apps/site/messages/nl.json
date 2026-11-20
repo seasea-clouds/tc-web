@@ -724,10 +724,8 @@
     "jsonldName": "Bedankt",
     "jsonldDescription": "Bedankt voor uw bericht aan SinoTrade Compliance. We nemen spoedig contact met u op.",
     "trustTitle": "Vertrouwd door merken wereldwijd",
-    "blogTitle": "Terwijl u wacht: nieuwste inzichten",
     "readMore": "Lees meer",
     "readTime": "min",
-    "viewAllBlog": "Bekijk alle artikelen",
     "servicesTitle": "Ontdek onze diensten",
     "serviceGacc": "GACC-registratie",
     "serviceLabel": "Chinese etiketconformiteit",
@@ -743,9 +741,11 @@
     "stat3Label": "Jaren expertise",
     "stat4Number": "~100%",
     "stat4Label": "Nalevingspercentage",
-    "blogDesc": "Ontdek meer inzichten",
     "metaTitle": "Bedankt | SinoTrade Compliance",
-    "metaDescription": "Bedankt voor uw bericht aan SinoTrade Compliance. Wij reageren binnen 24 uur op uw aanvraag."
+    "metaDescription": "Bedankt voor uw bericht aan SinoTrade Compliance. Wij reageren binnen 24 uur op uw aanvraag.",
+    "insightsTitle": "Terwijl u wacht: nieuwste inzichten",
+    "insightsDesc": "Ontdek meer inzichten",
+    "viewAllInsights": "Bekijk alle artikelen"
   },
   "Blog": {
     "title": "Exporteren naar China: inzichten en compliance gidsen",

@@ -724,10 +724,8 @@
     "jsonldName": "Vă mulțumim",
     "jsonldDescription": "Vă mulțumim că ați contactat SinoTrade Compliance. Vă vom reveni în curând.",
     "trustTitle": "Exportatori din întreaga lume ne-au acordat încredere",
-    "blogTitle": "În timp ce așteptați: cele mai recente articole",
     "readMore": "Citiți mai mult",
     "readTime": "min",
-    "viewAllBlog": "Vezi toate articolele",
     "servicesTitle": "Explorați serviciile noastre",
     "serviceGacc": "Înregistrare GACC",
     "serviceLabel": "Conformitatea etichetei chinezești",
@@ -743,9 +741,11 @@
     "stat3Label": "Ani de experiență",
     "stat4Number": "~100%",
     "stat4Label": "Rată de conformitate",
-    "blogDesc": "Explorați mai multe articole",
     "metaTitle": "Vă mulțumim | SinoTrade Compliance",
-    "metaDescription": "Vă mulțumim că ați contactat SinoTrade Compliance. Vom răspunde la solicitarea dvs. în termen de 24 de ore."
+    "metaDescription": "Vă mulțumim că ați contactat SinoTrade Compliance. Vom răspunde la solicitarea dvs. în termen de 24 de ore.",
+    "insightsTitle": "În timp ce așteptați: cele mai recente articole",
+    "insightsDesc": "Explorați mai multe articole",
+    "viewAllInsights": "Vezi toate articolele"
   },
   "Blog": {
     "title": "Export în China: perspective și ghiduri de conformitate",

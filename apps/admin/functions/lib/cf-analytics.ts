@@ -111,7 +111,7 @@ function padStart(s: string, minLen: number): string {
  * 「热门页面」的 isPage 判定；不再用于路径合法性过滤）。
  *
  * 返回值：
- *   project  子站标识（admin / api / portal / blog / site / unknown）
+ *   project  子站标识（admin / api / portal / insights / site / unknown）
  *   isPage   该子站的页面路径是否应计入「热门页面」
  *     true  → 面向用户的页面（官网/Portal/博客），进入热门页面榜单
  *     false → 内部或非页面（管理后台/API），不计入热门页面
@@ -133,9 +133,9 @@ export function inferProject(path: string): { project: string; isPage: boolean }
   if (path.startsWith("/c/") || /^\/[a-z]{2}\/c\//.test(path)) {
     return { project: "portal", isPage: true };
   }
-  // 博客站 — 对外页面，计入热门页面
-  if (path.startsWith("/blog/") || /^\/[a-z]{2}\/blog\//.test(path)) {
-    return { project: "blog", isPage: true };
+  // Insights 站 — 对外页面，计入热门页面
+  if (path.startsWith("/insights/") || /^\/[a-z]{2}\/insights\//.test(path)) {
+    return { project: "insights", isPage: true };
   }
   // 官网主站（Site）— 对外页面，计入热门页面
   // 必须是 /{locale}/... 格式（语言前缀，含无尾斜杠的 locale-only 首页 /en），

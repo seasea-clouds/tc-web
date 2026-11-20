@@ -62,7 +62,7 @@ const LEGIT_SKIP = new Set([
   // API / HTTP related
   'Authorization', 'Cookie', 'T', 'id', 'limit', 'offset', 'script',
   // packages/ui locale keys (separate files)
-  'about', 'address', 'backToTop', 'blog', 'contact', 'contactWhatsapp',
+  'about', 'address', 'backToTop', 'insights', 'contact', 'contactWhatsapp',
   'freeCheckHeader',
   'disclaimer', 'faq', 'freeCheck', 'hint', 'home', 'industries',
   'noResults', 'packages', 'placeholder', 'quickLinks', 'rights',

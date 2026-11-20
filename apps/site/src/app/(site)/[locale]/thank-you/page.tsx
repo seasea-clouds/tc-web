@@ -109,8 +109,8 @@ export default async function ThankYouPage({ params }: { params: Promise<{ local
       {posts.length > 0 && (
         <section className="py-16 bg-[#F4F6F9] px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-xl font-bold text-primary-navy text-center mb-2">{t('blogTitle')}</h2>
-            <p className="text-[#5F6F7F] text-center mb-8">{t('blogDesc') || 'Explore more insights'}</p>
+            <h2 className="text-xl font-bold text-primary-navy text-center mb-2">{t('insightsTitle')}</h2>
+            <p className="text-[#5F6F7F] text-center mb-8">{t('insightsDesc') || 'Explore more insights'}</p>
             <ul className="space-y-4">
               {posts.map((post) => (
                 <li key={post.slug}>
@@ -142,7 +142,7 @@ export default async function ThankYouPage({ params }: { params: Promise<{ local
                 href={`/${locale}/insights/`}
                 className="text-accent-gold hover:text-accent-gold/80 font-semibold transition-colors"
               >
-                {t('viewAllBlog')} →
+                {t('viewAllInsights')} →
               </Link>
             </div>
           </div>

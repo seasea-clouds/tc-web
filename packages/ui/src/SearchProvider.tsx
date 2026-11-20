@@ -13,7 +13,7 @@ export { type SearchFn, type SearchResultItem };
 interface SearchProviderProps {
   searchFn?: SearchFn;
   freeCheckHref?: string;
-  blogHref?: string;
+  insightsHref?: string;
   locale?: string;
   industries?: { slug: string; emoji: string }[];
   loginHref?: string;

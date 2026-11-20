@@ -24,7 +24,7 @@ export const WEB3FORMS_ACCESS_KEY_FALLBACK = 'b1e6d34d-9fdc-4dc1-9bb2-6fc9090b36
 export const BRAND_NAME = 'SinoTrade Compliance';
 export const SITE_URL = 'https://sinotradecompliance.com';
 
-/** 48 supported locales — shared across site, portal, and blog */
+/** 48 supported locales — shared across site, portal, insights and regulations */
 import localeList from '../locales.json';
 export const LOCALES: readonly string[] = localeList;
 export const DEFAULT_LOCALE = 'en';

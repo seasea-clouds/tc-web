@@ -1,6 +1,6 @@
 /**
  * Shared favicon component — renders link tags in <head>.
- * Added to all three apps (site / portal / blog) for consistency.
+ * Added to all three apps (site / portal / insights) for consistency.
  */
 export default function Favicon() {
   return (

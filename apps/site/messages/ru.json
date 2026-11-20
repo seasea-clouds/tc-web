@@ -724,10 +724,8 @@
     "jsonldName": "Спасибо",
     "jsonldDescription": "Благодарим за обращение в SinoTrade Compliance. Мы скоро свяжемся с вами.",
     "trustTitle": "Нам доверяют бренды по всему миру",
-    "blogTitle": "Пока вы ждёте: свежие статьи",
     "readMore": "Читать далее",
     "readTime": "min",
-    "viewAllBlog": "Все статьи",
     "servicesTitle": "Наши услуги",
     "serviceGacc": "Регистрация GACC",
     "serviceLabel": "Соответствие китайской маркировке",
@@ -743,9 +741,11 @@
     "stat3Label": "Лет опыта",
     "stat4Number": "~100%",
     "stat4Label": "Уровень соответствия",
-    "blogDesc": "Свежие материалы и аналитика",
     "metaTitle": "Спасибо | SinoTrade Compliance",
-    "metaDescription": "Благодарим за обращение в SinoTrade Compliance. Мы ответим на ваш запрос в течение 24 часов."
+    "metaDescription": "Благодарим за обращение в SinoTrade Compliance. Мы ответим на ваш запрос в течение 24 часов.",
+    "insightsTitle": "Пока вы ждёте: свежие статьи",
+    "insightsDesc": "Свежие материалы и аналитика",
+    "viewAllInsights": "Все статьи"
   },
   "Blog": {
     "title": "Экспорт в Китай: аналитика и руководства по соответствию",

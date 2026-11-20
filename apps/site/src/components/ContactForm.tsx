@@ -6,7 +6,7 @@ import { ComplianceForm } from '@trade/ui';
 /**
  * site 的免费合规评估表单 —— 只是 @trade/ui ComplianceForm 的薄壳。
  *
- * 真正的表单结构/样式全在 packages/ui/src/ComplianceForm.tsx（blog、regulations 共用同一份）。
+ * 真正的表单结构/样式全在 packages/ui/src/ComplianceForm.tsx（insights、regulations 共用同一份）。
  * 这里只负责一件事：用 next-intl 取文案并透传。
  *
  * `source` 用来区分询盘来自哪个页面（Home / FAQ / Packages / Services: CCC …），

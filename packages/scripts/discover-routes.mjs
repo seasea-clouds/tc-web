@@ -87,7 +87,7 @@ function discoverDynamicInstances(appDir, subdir) {
   const contentBase = path.join(appDir, 'content');
   if (!fs.existsSync(contentBase)) return instances;
 
-  // 如果指定了子目录（如 blog），先扫描 content/{subdir}/{locale}/*.mdx
+  // 如果指定了子目录（如 insights），先扫描 content/{subdir}/{locale}/*.mdx
   if (subdir) {
     const subContentDir = path.join(contentBase, subdir);
     if (fs.existsSync(subContentDir)) {
@@ -166,7 +166,7 @@ export function discoverAll(includePrivate = false) {
         // 只保留有实例的动态路由
         if (instances.length > 0) {
           app.dynamicRoutes.push({
-            prefix: clean.replace(/\/\[\w+\]\/?$/, ''), // /blog
+            prefix: clean.replace(/\/\[\w+\]\/?$/, ''), // /insights
             param: paramMatch[1],
             instances,
           });

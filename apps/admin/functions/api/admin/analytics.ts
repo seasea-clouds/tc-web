@@ -20,6 +20,7 @@ import {
   readDailyRange,
   readTodayHourly,
   readAllTimeTotals,
+  readLiveDayStats,
   safeJSON,
 } from "../../lib/d1-cache";
 import { type HourlyStats } from "../../lib/cf-analytics";
@@ -123,11 +124,13 @@ export async function onRequest(context: { request: Request; env: Env }) {
           86400000,
       ) + 1;
   } else if (range === "7d") {
-    startDate = getDateString(Date.now() - 7 * 24 * 60 * 60 * 1000);
+    // 含今天在内共 7 天：daily_page_stats 只到昨天，今天由 live 补上，
+    // 所以往回取 6 天，否则"7 天"实际是 8 天。
+    startDate = getDateString(Date.now() - 6 * 24 * 60 * 60 * 1000);
     endDate = today;
     days = 7;
   } else if (range === "30d") {
-    startDate = getDateString(Date.now() - 30 * 24 * 60 * 60 * 1000);
+    startDate = getDateString(Date.now() - 29 * 24 * 60 * 60 * 1000);
     endDate = today;
     days = 30;
   } else {
@@ -147,16 +150,19 @@ export async function onRequest(context: { request: Request; env: Env }) {
     // 3. Read today's hourly data
     const hourlyRows = await readTodayHourly(context.env, today);
 
-    // Build hourly map
+    // Build hourly map — 仅用于折线图，**不参与** PV/UV 汇总。
+    // 每小时 pv/uv 都是该小时窗口内的真实值；UV 跨小时不可加总。
     const hourlyMap = new Map<number, { pv: number; uv: number }>();
-    let todayPV = 0;
-    let todayUV = 0;
     for (const h of hourlyRows) {
       hourlyMap.set(h.hour, { pv: h.pv || 0, uv: h.uv || 0 });
-      todayPV += h.pv || 0;
-      todayUV += h.uv || 0;
     }
     const hourlySum = fillHourly(hourlyMap);
+
+    // 今日 PV/UV：取 CF 当日真实值（1dGroups 的 pageViews / uniques 一次去重）。
+    // 旧实现是 Σ24 小时 UV，重复计访客，实测虚高 46% 并导致 UV > PV。
+    const live = await readLiveDayStats(context.env, today);
+    const todayPV = live.pv;
+    const todayUV = live.uv;
 
     // ─── RANGE: today ───
     if (range === "today") {
@@ -212,8 +218,9 @@ export async function onRequest(context: { request: Request; env: Env }) {
       const projectData = mergeByKey(projectArrays, "project", "count");
 
       return Response.json({
-        allTimeTotal: allTime.pv,
-        allTimeUV: allTime.uv,
+        // 累计：已固化天数的和 + 今天（今天尚未写入 daily_page_stats）
+        allTimeTotal: allTime.pv + todayPV,
+        allTimeUV: allTime.uv + todayUV,
         summary: {
           total: todayPV,
           uv: todayUV,
@@ -275,12 +282,15 @@ export async function onRequest(context: { request: Request; env: Env }) {
       if (row.device_data) deviceArrays.push(safeJSON(row.device_data, []));
     }
 
-    // Add today's hourly data (today is not in daily_page_stats until tomorrow)
-    if (hourlyRows.length > 0) {
+    // 补上"今天"：daily_page_stats 只到昨天（日终固化），今天用 CF 当日真实值。
+    // 周期 UV = 各天真实 UV 之和（用户确认口径），不做日均、不做跨天去重。
+    if (todayPV > 0 || todayUV > 0) {
+      if (!dailyData.some((d) => d.date === today)) {
+        periodPV += todayPV;
+        periodUV += todayUV;
+        dailyData.push({ date: today, pv: todayPV, uv: todayUV });
+      }
       hourlyMaps.push(hourlyMap);
-      periodPV += todayPV;
-      periodUV += todayUV;
-      dailyData.push({ date: today, pv: todayPV, uv: todayUV });
     }
 
     // Merge hourly maps from all dates
@@ -308,8 +318,9 @@ export async function onRequest(context: { request: Request; env: Env }) {
     const pagePaths = mergeByKey(pagePathsArrays, "path", "count");
 
     return Response.json({
-      allTimeTotal: allTime.pv,
-      allTimeUV: allTime.uv,
+      // 累计：daily_page_stats（每天日终固化的真实值）之和 + 今天
+      allTimeTotal: allTime.pv + todayPV,
+      allTimeUV: allTime.uv + todayUV,
       summary: {
         total: periodPV,
         uv: periodUV,

@@ -379,7 +379,9 @@ function pathToBreadcrumb(path: string): string {
             <div className="stat-card">
               <div className="stat-value">{timeRange === "today" ? _a.summary.todayUV : _a.summary.uv}</div>
               <div className="stat-label">{timeRange === "today" ? t("stat.todayUV") : timeRange === "7d" ? t("stat.7dUV") : timeRange === "30d" ? t("stat.30dUV") : t("stat.customUV")}</div>
-              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }}>{t("stat.cumulative").replace("{n}", String(_a.allTimeUV))}</div>
+              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }} title="UV = 全站独立访客（含抓取器、接口调用、静态资源）；PV = 页面浏览（仅 HTML）。口径不同，UV 可能大于 PV。">
+                {t("stat.cumulative").replace("{n}", String(_a.allTimeUV))}
+              </div>
             </div>
             <div className="stat-card">
               <div className="stat-value">{timeRange === "today" ? stats.today.reports : stats.period?.reports || 0}</div>

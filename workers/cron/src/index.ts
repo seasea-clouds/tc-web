@@ -20,7 +20,7 @@
  *   GET /email/health— 邮件投递配置检查
  */
 
-import { ensureDailyCFCache, ensureHourlyCFCache, isBreadcrumbPath, isPagePath, safeJSON } from "../../../apps/admin/functions/lib/d1-cache";
+import { ensureDailyCFCache, ensureHourlyCFCache, isBreadcrumbPath, isPagePath, readLiveDayStats, safeJSON } from "../../../apps/admin/functions/lib/d1-cache";
 import { hasConfig } from "../../../apps/admin/functions/lib/cf-analytics";
 import { graphql } from "../../../apps/admin/functions/lib/cf-analytics";
 
@@ -140,6 +140,18 @@ async function runAnalyticsSync(env: Env): Promise<{ ok: boolean; message: strin
     return { ok: false, message: msg };
   }
 
+  // 刷新当日真实 PV/UV（CF 1dGroups 一次去重，非小时相加）。
+  // 日终后 ensureDailyCFCache 会用同口径把这一天固化进 daily_page_stats。
+  try {
+    // 必须用 UTC 日期：CF Analytics 的 1dGroups 按 UTC 天切分，
+    // daily_page_stats 存的也是 UTC 日。用东八区日期会去查"还没开始的那一天"，恒为 0。
+    const today = new Date().toISOString().slice(0, 10);
+    const live = await readLiveDayStats(env, today, 0);
+    console.log(`[tc-web-cron] live today ${today}: pv=${live.pv} uv=${live.uv}`);
+  } catch (err: any) {
+    console.error("[tc-web-cron] live today failed:", err?.message || err);
+  }
+
   return { ok: true, message: "sync completed" };
 }
 
@@ -253,6 +265,17 @@ export default {
     }
 
     const url = new URL(request.url);
+
+    // 手动跑一轮 Analytics 同步（含当日真实 PV/UV 刷新）。
+    // 定时任务是每小时自动跑；这个端点只用于运维当场校验，同受 CRON_SECRET 保护。
+    if (url.pathname === "/sync") {
+      const result = await runAnalyticsSync(env);
+      const health = await healthCheck(env);
+      return new Response(JSON.stringify({ sync: result, health }, null, 2), {
+        status: result.ok ? 200 : 502,
+        headers: { "Content-Type": "application/json" },
+      });
+    }
 
     // Health check — no sync, just status
     if (url.pathname === "/health") {

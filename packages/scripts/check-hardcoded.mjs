@@ -54,6 +54,14 @@ if (fs.existsSync(path.join(repoRoot, projectModules))) {
 const ENGLISH_PROSE_RE = /[>\s](✅?\s*[A-Z][A-Za-z]*(?:[,.]?\s+[A-Za-z][a-zA-Z]*?){2,})[<,]/g;
 
 // Attribute values: placeholder, aria-label, alt, title containing English
+/** 含中日韩文字 → 不可能是"英文硬编码"，任何一条 Check 都应跳过。
+ *  典型误报：title="UV = 全站独立访客（含抓取器、接口调用）；PV = 页面浏览（仅 HTML）"
+ *  首字符是 U（ASCII 大写），正则当成英文 display label，实际是中文说明。 */
+const CJK_RE = /[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff\uac00-\ud7af]/;
+function hasCJK(text) {
+  return CJK_RE.test(text);
+}
+
 const ENGLISH_ATTR_RE = /(placeholder|label|alt|title)\s*=\s*["']([A-Z][^"']{4,})["']/g;
 
 // English prose inside JSX expressions like {loading ? 'Processing...' : 'Done'}
@@ -1005,6 +1013,7 @@ function scanFile(filePath) {
       const text = match[1].trim();
       if (text.length < 5) continue;
       if (text.includes('{') || text.includes('}')) continue;
+      if (hasCJK(text)) continue;
       if (LEGIT_ENGLISH.has(text)) continue;
       if (text.includes('.') || text.includes('_')) continue;
       if (/'\/\w+/.test(text)) continue;   // skip content-type patterns
@@ -1022,6 +1031,7 @@ function scanFile(filePath) {
       const val = match[2].trim();
       if (val.length < 5) continue;
       if (val.includes('{') || val.includes('}') || val.includes('$')) continue;
+      if (hasCJK(val)) continue;
       if (LEGIT_ENGLISH.has(val)) continue;
       issues.push({ file: path.relative(repoRoot, filePath), line: lineNum, type: `attr ${attr}`, text: val.substring(0, 100) });
     }
@@ -1031,6 +1041,7 @@ function scanFile(filePath) {
     while ((match = ENGLISH_STRING_LITERAL_RE.exec(line)) !== null) {
       const val = match[1].trim();
       if (val.length < 8) continue;
+      if (hasCJK(val)) continue;
       if (LEGIT_ENGLISH.has(val)) continue;
       if (/\w+\/\w+/.test(val)) continue;       // skip MIME types, content-type patterns
       if (val.includes('://')) continue;            // skip URLs

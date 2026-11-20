@@ -199,6 +199,16 @@ export async function runMigration(env: CacheEnv): Promise<void> {
       source TEXT DEFAULT 'cf_api',
       updated_at TEXT DEFAULT (datetime('now'))
     )`,
+    // 当日实时数据（每小时由 cron 刷新 + API 读穿透时按 5 分钟缓存刷新）。
+    // 用途：today 视图的 PV/UV 必须是 CF 当日的真实窗口值，
+    // 不能用「24 个小时的 UV 相加」—— UV 是唯一访客，跨时段不可加总。
+    `CREATE TABLE IF NOT EXISTS live_today_stats (
+      date TEXT PRIMARY KEY,
+      pv INTEGER DEFAULT 0,
+      uv INTEGER DEFAULT 0,
+      requests INTEGER DEFAULT 0,
+      fetched_at INTEGER DEFAULT 0
+    )`,
     `CREATE TABLE IF NOT EXISTS hourly_page_stats (
       date TEXT NOT NULL,
       hour INTEGER NOT NULL,
@@ -590,4 +600,70 @@ export async function readAllTimeTotals(env: CacheEnv): Promise<{ pv: number; uv
     "SELECT COALESCE(SUM(total_pv), 0) as pv, COALESCE(SUM(total_uv), 0) as uv FROM daily_page_stats",
   ).first();
   return { pv: row?.pv || 0, uv: row?.uv || 0 };
+}
+
+/**
+ * 当日（或指定日期）的**真实** PV/UV —— 直接取 CF `httpRequests1dGroups` 的
+ * `sum.pageViews` 与 `uniq.uniques`，即当天整个窗口内的一次去重结果。
+ *
+ * 为什么不能用小时表相加：UV 是「窗内唯一访客」，24 个小时各自去重后相加会把
+ * 同一个访客重复计 2~24 次。实测今日 Σ小时UV 比真实值高 46%。
+ *
+ * 缓存：`live_today_stats` 行，默认 5 分钟内复用，避免每次开面板都打 CF quota。
+ * 日终固化：cron 回填 daily_page_stats 时用的是同口径（1dGroups），两边一致。
+ */
+export async function readLiveDayStats(
+  env: CacheEnv,
+  date: string,
+  maxAgeSeconds = 300,
+): Promise<{ pv: number; uv: number; requests: number; cached: boolean }> {
+  const now = Math.floor(Date.now() / 1000);
+
+  // 0. 建表（幂等）。cron 直接调本函数时不会经过 runMigration，
+  //    少这一句就是「表不存在 → INSERT 静默失败 → 永远读不到真实值」。
+  try {
+    await env.DB.prepare(
+      `CREATE TABLE IF NOT EXISTS live_today_stats (
+        date TEXT PRIMARY KEY,
+        pv INTEGER DEFAULT 0,
+        uv INTEGER DEFAULT 0,
+        requests INTEGER DEFAULT 0,
+        fetched_at INTEGER DEFAULT 0
+      )`,
+    ).run();
+  } catch {
+    // 已存在 / 并发创建 —— 忽略
+  }
+
+  // 1. 命中缓存
+  const row: any = await env.DB.prepare(
+    "SELECT pv, uv, requests, fetched_at FROM live_today_stats WHERE date = ?",
+  )
+    .bind(date)
+    .first();
+  if (row && now - (row.fetched_at || 0) < maxAgeSeconds) {
+    return { pv: row.pv || 0, uv: row.uv || 0, requests: row.requests || 0, cached: true };
+  }
+
+  // 2. 向 CF 取该日真实值
+  if (!hasConfig(env)) {
+    return { pv: row?.pv || 0, uv: row?.uv || 0, requests: row?.requests || 0, cached: false };
+  }
+  try {
+    const stats = await fetchDailyStats(getZoneId(env), getApiToken(env), [date]);
+    const d = stats[0];
+    if (!d) {
+      return { pv: row?.pv || 0, uv: row?.uv || 0, requests: row?.requests || 0, cached: false };
+    }
+    await env.DB.prepare(
+      `INSERT OR REPLACE INTO live_today_stats (date, pv, uv, requests, fetched_at)
+       VALUES (?, ?, ?, ?, ?)`,
+    )
+      .bind(date, d.pv || 0, d.uv || 0, d.requests || 0, now)
+      .run();
+    return { pv: d.pv || 0, uv: d.uv || 0, requests: d.requests || 0, cached: false };
+  } catch (err) {
+    console.error("[d1-cache] readLiveDayStats failed:", err);
+    return { pv: row?.pv || 0, uv: row?.uv || 0, requests: row?.requests || 0, cached: false };
+  }
 }

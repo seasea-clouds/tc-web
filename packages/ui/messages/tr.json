@@ -99,8 +99,8 @@
   "MobileTab": {
     "home": "Ana Sayfa",
     "services": "Hizmetler",
-    "blog": "İçgörüler",
-    "check": "Kontrol"
+    "check": "Kontrol",
+    "insights": "İçgörüler"
   },
   "CTA": {
     "ctaTitle": "Bu Hizmete İhtiyacınız Var mı?",

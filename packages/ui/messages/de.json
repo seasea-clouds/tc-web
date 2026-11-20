@@ -99,8 +99,8 @@
   "MobileTab": {
     "home": "Startseite",
     "services": "Dienste",
-    "blog": "Blog",
-    "check": "Prüfen"
+    "check": "Prüfen",
+    "insights": "Einblicke"
   },
   "CTA": {
     "ctaTitle": "Benötigen Sie diesen Service?",

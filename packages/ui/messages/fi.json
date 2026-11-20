@@ -99,8 +99,8 @@
   "MobileTab": {
     "home": "Etusivu",
     "services": "Palvelut",
-    "blog": "Blogi",
-    "check": "Tarkista"
+    "check": "Tarkista",
+    "insights": "Näkemyksiä"
   },
   "CTA": {
     "ctaTitle": "Tarvitsetko tätä palvelua?",

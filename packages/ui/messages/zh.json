@@ -99,8 +99,8 @@
   "MobileTab": {
     "home": "首页",
     "services": "服务",
-    "blog": "资讯",
-    "check": "检查"
+    "check": "检查",
+    "insights": "洞察"
   },
   "CTA": {
     "ctaTitle": "需要这项服务吗？",

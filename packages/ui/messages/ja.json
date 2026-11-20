@@ -99,8 +99,8 @@
   "MobileTab": {
     "home": "ホーム",
     "services": "サービス",
-    "blog": "ブログ",
-    "check": "チェック"
+    "check": "チェック",
+    "insights": "洞察"
   },
   "CTA": {
     "ctaTitle": "このサービスが必要ですか?",

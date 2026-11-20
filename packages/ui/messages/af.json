@@ -99,8 +99,8 @@
   "MobileTab": {
     "home": "Tuis",
     "services": "Dienste",
-    "blog": "Blog",
-    "check": "Kontrole"
+    "check": "Kontrole",
+    "insights": "Insigte"
   },
   "CTA": {
     "ctaTitle": "Benodig hierdie diens?",

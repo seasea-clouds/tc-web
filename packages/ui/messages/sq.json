@@ -99,8 +99,8 @@
   "MobileTab": {
     "home": "Kryefaqja",
     "services": "Shërbime",
-    "blog": "Blog",
-    "check": "Kontrollo"
+    "check": "Kontrollo",
+    "insights": "Vështrime"
   },
   "CTA": {
     "ctaTitle": "Keni nevojë për këtë shërbim?",

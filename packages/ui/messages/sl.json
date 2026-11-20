@@ -99,8 +99,8 @@
   "MobileTab": {
     "home": "Domov",
     "services": "Storitve",
-    "blog": "Blog",
-    "check": "Preveri"
+    "check": "Preveri",
+    "insights": "Vpogledi"
   },
   "CTA": {
     "ctaTitle": "Potrebujete to storitev?",

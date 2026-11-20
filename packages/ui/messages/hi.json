@@ -99,8 +99,8 @@
   "MobileTab": {
     "home": "होम",
     "services": "सेवाएं",
-    "blog": "ब्लॉग",
-    "check": "जाँच"
+    "check": "जाँच",
+    "insights": "इनसाइट्स"
   },
   "CTA": {
     "ctaTitle": "इस सेवा की आवश्यकता है?",

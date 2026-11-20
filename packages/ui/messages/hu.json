@@ -99,8 +99,8 @@
   "MobileTab": {
     "home": "Kezdőlap",
     "services": "Szolgáltatások",
-    "blog": "Blog",
-    "check": "Ellenőrzés"
+    "check": "Ellenőrzés",
+    "insights": "Bepillantások"
   },
   "CTA": {
     "ctaTitle": "Szüksége van erre a szolgáltatásra?",

@@ -99,8 +99,8 @@
   "MobileTab": {
     "home": "Domov",
     "services": "Služby",
-    "blog": "Blog",
-    "check": "Skontrolovať"
+    "check": "Skontrolovať",
+    "insights": "Inšighty"
   },
   "CTA": {
     "ctaTitle": "Potrebujete túto službu?",

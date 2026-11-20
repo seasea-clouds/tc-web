@@ -627,7 +627,7 @@ export async function onRequest(context: { request: Request; next: () => Promise
 
       if (contentType.includes('text/html')) {
         let html = await resp.text();
-        html = rewriteNextStatic(html, 'blog');
+        html = rewriteNextStatic(html, 'insights');
         html = ensureNextF(html);
         html = injectSearchWidget(html);
 

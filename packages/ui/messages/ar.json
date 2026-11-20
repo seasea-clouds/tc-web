@@ -99,8 +99,8 @@
   "MobileTab": {
     "home": "الرئيسية",
     "services": "الخدمات",
-    "blog": "المدونة",
-    "check": "فحص"
+    "check": "فحص",
+    "insights": "رؤى"
   },
   "CTA": {
     "ctaTitle": "هل تحتاج إلى هذه الخدمة؟",

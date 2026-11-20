@@ -99,8 +99,8 @@
   "MobileTab": {
     "home": "Početna",
     "services": "Usluge",
-    "blog": "Blog",
-    "check": "Provjeri"
+    "check": "Provjeri",
+    "insights": "Uvidi"
   },
   "CTA": {
     "ctaTitle": "Trebate ovu uslugu?",

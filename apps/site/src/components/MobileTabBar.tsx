@@ -8,7 +8,7 @@ import { useTranslations } from 'next-intl';
 const TAB_HREFS = {
   home: '/',
   services: '/services',
-  blog: '/insights',
+  insights: '/insights',
   check: '/c',
 } as const;
 
@@ -26,7 +26,7 @@ export default function MobileTabBar() {
           const icons: Record<string, React.ElementType> = {
             home: Home,
             services: Grid3X3,
-            blog: BookOpen,
+            insights: BookOpen,
             check: ClipboardCheck,
           };
           const Icon = icons[key];

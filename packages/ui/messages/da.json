@@ -99,8 +99,8 @@
   "MobileTab": {
     "home": "Forside",
     "services": "Tjenester",
-    "blog": "Blog",
-    "check": "Tjek"
+    "check": "Tjek",
+    "insights": "Indsigt"
   },
   "CTA": {
     "ctaTitle": "Har du brug for denne service?",

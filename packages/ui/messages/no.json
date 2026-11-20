@@ -99,8 +99,8 @@
   "MobileTab": {
     "home": "Hjem",
     "services": "Tjenester",
-    "blog": "Blogg",
-    "check": "Sjekk"
+    "check": "Sjekk",
+    "insights": "Blogg"
   },
   "CTA": {
     "ctaTitle": "Trenger du denne tjenesten?",

@@ -99,8 +99,8 @@
   "MobileTab": {
     "home": "Inici",
     "services": "Serveis",
-    "blog": "Bloc",
-    "check": "Comprova"
+    "check": "Comprova",
+    "insights": "Perspectives"
   },
   "CTA": {
     "ctaTitle": "Necessites aquest servei?",

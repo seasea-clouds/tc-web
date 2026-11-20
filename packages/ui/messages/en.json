@@ -99,8 +99,8 @@
   "MobileTab": {
     "home": "Home",
     "services": "Services",
-    "blog": "Blog",
-    "check": "Check"
+    "check": "Check",
+    "insights": "Insights"
   },
   "CTA": {
     "ctaTitle": "Need This Service?",

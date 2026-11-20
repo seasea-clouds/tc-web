@@ -99,8 +99,8 @@
   "MobileTab": {
     "home": "Trang chủ",
     "services": "Dịch vụ",
-    "blog": "Bài viết",
-    "check": "Kiểm tra"
+    "check": "Kiểm tra",
+    "insights": "Bài viết"
   },
   "CTA": {
     "ctaTitle": "Cần dịch vụ này?",

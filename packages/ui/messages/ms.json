@@ -99,8 +99,8 @@
   "MobileTab": {
     "home": "Laman Utama",
     "services": "Perkhidmatan",
-    "blog": "Blog",
-    "check": "Periksa"
+    "check": "Periksa",
+    "insights": "Blog"
   },
   "CTA": {
     "ctaTitle": "Perlukan Perkhidmatan Ini?",

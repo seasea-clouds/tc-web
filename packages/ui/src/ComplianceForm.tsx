@@ -41,6 +41,7 @@ export default function ComplianceForm({
   pagePath,
   fromName = 'SinoTrade Website',
   idPrefix = 'cf',
+  maxWidth = 'max-w-md',
   children,
 }: {
   locale: string;
@@ -64,6 +65,11 @@ export default function ComplianceForm({
    * 保证全站只有这一份表单代码，来源标识/access_key 兜底对所有表单一致生效。
    */
   children?: React.ReactNode;
+  /**
+   * 表单容器宽度。默认 max-w-md；需要更多横向空间的自定义字段区
+   * （如 quote 页的 6 项服务多选）可传 max-w-2xl 等更宽的类。
+   */
+  maxWidth?: string;
 }) {
   const pathname = usePathname();
   // 环境变量优先；CF Pages 部分项目未注入该变量时用兜底值（见 constants.ts 说明）
@@ -99,7 +105,7 @@ export default function ComplianceForm({
         <form
           action="https://api.web3forms.com/submit"
           method="POST"
-          className="mx-auto w-full max-w-md rounded-xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8"
+          className={`mx-auto w-full ${maxWidth} rounded-xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8`}
         >
           <input type="hidden" name="access_key" value={accessKey} />
           <input type="hidden" name="subject" value={subject} />

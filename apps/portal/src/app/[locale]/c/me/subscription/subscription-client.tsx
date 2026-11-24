@@ -43,7 +43,7 @@ export default function SubscriptionPage() {
   return (
     <div className="bg-bg-ice py-12">
       <div className="max-w-3xl mx-auto px-4">
-        <Link href="./" className="text-sm text-gray-500 hover:text-primary-navy transition-colors">{t('backToAccount')}</Link>
+        <Link href={`/${locale}/c/me/`} className="text-sm text-gray-500 hover:text-primary-navy transition-colors">{t('backToAccount')}</Link>
         <h1 className="text-2xl font-bold text-primary-navy mt-4 mb-6">{t('subscription')}</h1>
 
         {loading ? (
@@ -90,6 +90,7 @@ function Loading() {
 }
 
 function NotLoggedIn() {
+  const locale = useTradeLocale();
   const t = useT('Report');
-  return <div className="bg-bg-ice py-16"><div className="max-w-md mx-auto px-4 text-center"><h1 className="text-xl font-bold text-primary-navy mb-4">{t('pleaseLogIn')}</h1><Link href="../login" className="inline-block bg-gold hover:bg-gold/90 text-primary-navy font-semibold px-6 py-2.5 rounded-md transition-all">{t('logIn')}</Link></div></div>;
+  return <div className="bg-bg-ice py-16"><div className="max-w-md mx-auto px-4 text-center"><h1 className="text-xl font-bold text-primary-navy mb-4">{t('pleaseLogIn')}</h1><Link href={`/${locale}/c/login/`} className="inline-block bg-gold hover:bg-gold/90 text-primary-navy font-semibold px-6 py-2.5 rounded-md transition-all">{t('logIn')}</Link></div></div>;
 }

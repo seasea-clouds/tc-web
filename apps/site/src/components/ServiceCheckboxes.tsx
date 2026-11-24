@@ -26,7 +26,7 @@ export default function ServiceCheckboxes({
   const preSelected = packageMap[pkg] || new Set();
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
       {serviceIds.map((id) => {
         const svc = labels.find((l) => l.id === id);
         if (!svc) return null;
@@ -43,7 +43,7 @@ export default function ServiceCheckboxes({
               className="w-4 h-4 text-[#1B365D] focus:ring-[#1B365D] rounded flex-shrink-0"
             />
             <span className="text-xl flex-shrink-0">{svc.icon}</span>
-            <span className="text-xs sm:text-sm font-medium text-[#333333] break-words leading-tight">
+            <span className="min-w-0 flex-1 text-xs sm:text-sm font-medium text-[#333333] leading-tight [overflow-wrap:anywhere]">
               {svc.label}
             </span>
           </label>

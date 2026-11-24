@@ -70,6 +70,7 @@ export default function RegisterPage() {
             <label className="block text-sm font-medium text-gray-700 mb-1">{t('email')}</label>
             <input
               type="email"
+              autoComplete="email"
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -82,6 +83,7 @@ export default function RegisterPage() {
             <label className="block text-sm font-medium text-gray-700 mb-1">{t('password')}</label>
             <input
               type="password"
+              autoComplete="new-password"
               required
               minLength={5}
               value={password}

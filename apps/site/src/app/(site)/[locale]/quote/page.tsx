@@ -52,6 +52,7 @@ export default async function QuotePage({ params }: { params: Promise<{ locale: 
         pageTitle="报价单"
         fromName="SinoTrade Quote Form"
         idPrefix="quote"
+        maxWidth="max-w-2xl"
         texts={{
           title: cf('title'),
           subtitle: cf('subtitle'),

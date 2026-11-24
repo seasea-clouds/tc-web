@@ -1,6 +1,6 @@
 'use client';
 
-import { useAuth, useT } from '@trade/ui';
+import { useAuth, useT, useTradeLocale } from '@trade/ui';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
@@ -9,6 +9,10 @@ export default function MePage() {
   const t = useTranslations('Dashboard');
   const tReport = useT('Report');
   const tAuth = useT('Auth');
+  // Absolute hrefs — relative ones (./me/reports) resolved against the current
+  // /c/me/ route and produced /c/me/me/reports, which 404s.
+  const locale = useTradeLocale();
+  const me = `/${locale}/c/me`;
 
   if (isLoading) {
     return (
@@ -25,7 +29,7 @@ export default function MePage() {
       <div className="bg-bg-ice py-16">
         <div className="max-w-md mx-auto px-4 text-center">
           <h1 className="text-xl font-bold text-primary-navy mb-4">{tReport('pleaseLogIn')}</h1>
-          <Link href="./login" className="inline-block bg-gold hover:bg-gold/90 text-primary-navy font-semibold px-6 py-2.5 rounded-md transition-all">
+          <Link href={`/${locale}/c/login/`} className="inline-block bg-gold hover:bg-gold/90 text-primary-navy font-semibold px-6 py-2.5 rounded-md transition-all">
             {tReport('logIn')}
           </Link>
         </div>
@@ -51,17 +55,17 @@ export default function MePage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <Link href="./me/reports" className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-all group">
+          <Link href={`${me}/reports/`} className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-all group">
             <div className="text-2xl mb-3">📄</div>
             <h3 className="font-semibold text-primary-navy group-hover:text-gold transition-colors">{t('myReports')}</h3>
             <p className="text-sm text-gray-500 mt-1">{t('viewReportsDesc')}</p>
           </Link>
-          <Link href="./me/subscription" className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-all group">
+          <Link href={`${me}/subscription/`} className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-all group">
             <div className="text-2xl mb-3">💳</div>
             <h3 className="font-semibold text-primary-navy group-hover:text-gold transition-colors">{t('subscription')}</h3>
             <p className="text-sm text-gray-500 mt-1">{t('manageSubscriptionDesc')}</p>
           </Link>
-          <Link href="./me/settings" className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-all group">
+          <Link href={`${me}/settings/`} className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-all group">
             <div className="text-2xl mb-3">⚙️</div>
             <h3 className="font-semibold text-primary-navy group-hover:text-gold transition-colors">{t('settings')}</h3>
             <p className="text-sm text-gray-500 mt-1">{t('accountPreferences')}</p>

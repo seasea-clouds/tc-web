@@ -218,6 +218,13 @@ export async function runMigration(env: CacheEnv): Promise<void> {
       updated_at TEXT DEFAULT (datetime('now')),
       PRIMARY KEY (date, hour)
     )`,
+    // 200 口径列（2026-11-24）：只统计响应码 200 的独立访客与请求数。
+    // CF 的 uniq.uniques 无法按状态码切分，值由 adaptiveGroups 按 clientIP 分组得到
+    // （见 cf-analytics.ts 的 fetchStatus200Window）。旧行为 NULL，读取时回退旧口径。
+    `ALTER TABLE daily_page_stats ADD COLUMN uv_200 INTEGER`,
+    `ALTER TABLE daily_page_stats ADD COLUMN requests_200 INTEGER`,
+    `ALTER TABLE hourly_page_stats ADD COLUMN uv_200 INTEGER`,
+    `ALTER TABLE hourly_page_stats ADD COLUMN requests_200 INTEGER`,
     // Safe ALTER TABLE for columns that might not exist
     `ALTER TABLE daily_page_stats ADD COLUMN page_data TEXT DEFAULT '[]'`,
     `ALTER TABLE daily_page_stats ADD COLUMN project_data TEXT DEFAULT '[]'`,
@@ -281,15 +288,20 @@ export async function ensureDailyCFCache(env: CacheEnv): Promise<string> {
   // ── Step 1: Fetch and cache daily PV/UV/geo/browser/status ──
   const fetchedDates = [...missingDates]; // dates we tried to fetch
   try {
-    const dailyStats = await fetchDailyStats(zoneId, token, missingDates);
+    // status200 走 adaptiveGroups 的 clientIP 分组（约 1.5s/天）。
+    // CF 的高基数维度只保留约 22 天，更早的窗口会被裁剪成假数据
+    // （fetchStatus200Window 内部还有 reliable 判断兜底）→ 窗口外干脆不查。
+    const dailyStats = await fetchDailyStats(zoneId, token, missingDates, {
+      status200: missingDates.length <= 21,
+    });
 
     for (const ds of dailyStats) {
       if (ds.pv === 0 && ds.requests === 0) {
         // No traffic — still insert a row so we don't re-query
         await env.DB.prepare(
           `INSERT OR REPLACE INTO daily_page_stats
-           (date, total_pv, total_uv, total_requests, source)
-           VALUES (?, 0, 0, 0, 'cf_api')`,
+           (date, total_pv, total_uv, total_requests, uv_200, requests_200, source)
+           VALUES (?, 0, 0, 0, 0, 0, 'cf_api')`,
         )
           .bind(ds.date)
           .run();
@@ -299,8 +311,8 @@ export async function ensureDailyCFCache(env: CacheEnv): Promise<string> {
       await env.DB.prepare(
         `INSERT OR REPLACE INTO daily_page_stats
          (date, total_pv, total_uv, total_requests, total_bytes, cached_requests,
-          countries_count, geo_data, browser_data, status_code_data, source)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'cf_api')`,
+          countries_count, geo_data, browser_data, status_code_data, uv_200, requests_200, source)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'cf_api')`,
       )
         .bind(
           ds.date,
@@ -328,6 +340,8 @@ export async function ensureDailyCFCache(env: CacheEnv): Promise<string> {
               count: s.requests,
             })),
           ),
+          ds.uv200 ?? null,
+          ds.requests200 ?? null,
         )
         .run();
     }
@@ -425,13 +439,13 @@ export async function ensureHourlyCFCache(env: CacheEnv): Promise<void> {
           : formatISO(nextDate(today), 0);
 
       try {
-        const hourlyStats = await fetchHourlyStats(zoneId, token, startISO, endISO);
+        const hourlyStats = await fetchHourlyStats(zoneId, token, startISO, endISO, { status200: true });
         for (const hs of hourlyStats) {
           if (missingHours.includes(hs.hour)) {
             // Store PV/UV + geo/browser from 1hGroups
             await env.DB.prepare(
-              `INSERT OR REPLACE INTO hourly_page_stats (date, hour, pv, uv, requests, geo_data, browser_data)
-               VALUES (?, ?, ?, ?, ?, ?, ?)`,
+              `INSERT OR REPLACE INTO hourly_page_stats (date, hour, pv, uv, requests, geo_data, browser_data, uv_200, requests_200)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
             )
               .bind(
                 today,
@@ -447,6 +461,8 @@ export async function ensureHourlyCFCache(env: CacheEnv): Promise<void> {
                   browser: b.uaBrowserFamily,
                   pageViews: b.pageViews,
                 })) || []),
+                hs.uv200 ?? null,
+                hs.requests200 ?? null,
               )
               .run();
           }
@@ -565,7 +581,7 @@ export async function readTodayHourly(
   today: string,
 ): Promise<HourlyStats[]> {
   const rows: any = await env.DB.prepare(
-    `SELECT hour, pv, uv, requests, geo_data, browser_data, os_data, device_data, page_data, page_paths, project_data
+    `SELECT hour, pv, uv, requests, uv_200, requests_200, geo_data, browser_data, os_data, device_data, page_data, page_paths, project_data
      FROM hourly_page_stats WHERE date = ? ORDER BY hour ASC`,
   )
     .bind(today)
@@ -576,6 +592,8 @@ export async function readTodayHourly(
     pv: r.pv || 0,
     uv: r.uv || 0,
     requests: r.requests || 0,
+    uv200: r.uv_200 ?? undefined,
+    requests200: r.requests_200 ?? undefined,
     countryMap: safeJSON(r.geo_data, []).map((c: any) => ({
       clientCountryName: c.country || c.clientCountryName || "",
       requests: c.count || c.requests || 0,
@@ -594,12 +612,30 @@ export async function readTodayHourly(
 
 /**
  * Get all-time PV/UV from D1 (sum of all cached daily rows).
+ *
+ * PV 口径未变：CF 的 `pageViews` 本来就只算 HTML 文档 + 200，历史值可直接累计。
+ * UV 口径变了（2026-11-24）：改为「仅 200 响应码的独立访客」，只有新写的行有
+ * `uv_200`（历史行为 NULL）。因此累计 UV 只能从 `first200` 那天算起 ——
+ * 调用方应当把这个起始日期一并展示，否则数字会显得「凭空缩水」。
  */
-export async function readAllTimeTotals(env: CacheEnv): Promise<{ pv: number; uv: number }> {
+export async function readAllTimeTotals(
+  env: CacheEnv,
+): Promise<{ pv: number; uv: number; uv200: number; first200: string | null; days200: number }> {
   const row: any = await env.DB.prepare(
-    "SELECT COALESCE(SUM(total_pv), 0) as pv, COALESCE(SUM(total_uv), 0) as uv FROM daily_page_stats",
+    `SELECT COALESCE(SUM(total_pv), 0) as pv,
+            COALESCE(SUM(total_uv), 0) as uv,
+            COALESCE(SUM(uv_200), 0) as uv200,
+            COUNT(uv_200) as days200,
+            MIN(CASE WHEN uv_200 IS NOT NULL THEN date END) as first200
+     FROM daily_page_stats`,
   ).first();
-  return { pv: row?.pv || 0, uv: row?.uv || 0 };
+  return {
+    pv: row?.pv || 0,
+    uv: row?.uv || 0,
+    uv200: row?.uv200 || 0,
+    first200: row?.first200 || null,
+    days200: row?.days200 || 0,
+  };
 }
 
 /**
@@ -628,6 +664,8 @@ export async function readLiveDayStats(
         pv INTEGER DEFAULT 0,
         uv INTEGER DEFAULT 0,
         requests INTEGER DEFAULT 0,
+        uv_200 INTEGER,
+        requests_200 INTEGER,
         fetched_at INTEGER DEFAULT 0
       )`,
     ).run();
@@ -636,34 +674,57 @@ export async function readLiveDayStats(
   }
 
   // 1. 命中缓存
+  // 旧表可能缺列 —— 幂等补齐（SQLite 的 ALTER 对已存在列抛错，忽略即可）
+  for (const ddl of [
+    "ALTER TABLE live_today_stats ADD COLUMN uv_200 INTEGER",
+    "ALTER TABLE live_today_stats ADD COLUMN requests_200 INTEGER",
+  ]) {
+    try {
+      await env.DB.prepare(ddl).run();
+    } catch {
+      // 列已存在
+    }
+  }
+
   const row: any = await env.DB.prepare(
-    "SELECT pv, uv, requests, fetched_at FROM live_today_stats WHERE date = ?",
+    "SELECT pv, uv, requests, uv_200, requests_200, fetched_at FROM live_today_stats WHERE date = ?",
   )
     .bind(date)
     .first();
   if (row && now - (row.fetched_at || 0) < maxAgeSeconds) {
-    return { pv: row.pv || 0, uv: row.uv || 0, requests: row.requests || 0, cached: true };
+    return {
+      pv: row.pv || 0,
+      uv: row.uv_200 ?? row.uv ?? 0,
+      requests: row.requests_200 ?? row.requests ?? 0,
+      cached: true,
+    };
   }
 
-  // 2. 向 CF 取该日真实值
+  // 2. 向 CF 取该日真实值（200 口径：uv/requests 走 adaptiveGroups 的 clientIP 分组）
+  const fallback = row
+    ? { pv: row.pv || 0, uv: row.uv_200 ?? row.uv ?? 0, requests: row.requests_200 ?? row.requests ?? 0 }
+    : { pv: 0, uv: 0, requests: 0 };
   if (!hasConfig(env)) {
-    return { pv: row?.pv || 0, uv: row?.uv || 0, requests: row?.requests || 0, cached: false };
+    return { ...fallback, cached: false };
   }
   try {
-    const stats = await fetchDailyStats(getZoneId(env), getApiToken(env), [date]);
+    const stats = await fetchDailyStats(getZoneId(env), getApiToken(env), [date], { status200: true });
     const d = stats[0];
     if (!d) {
-      return { pv: row?.pv || 0, uv: row?.uv || 0, requests: row?.requests || 0, cached: false };
+      return { ...fallback, cached: false };
     }
+    // UV / requests 一律取 200 口径；CF 未返回（查询失败）则回退旧值
+    const uv200 = d.uv200 ?? d.uv ?? 0;
+    const req200 = d.requests200 ?? d.requests ?? 0;
     await env.DB.prepare(
-      `INSERT OR REPLACE INTO live_today_stats (date, pv, uv, requests, fetched_at)
-       VALUES (?, ?, ?, ?, ?)`,
+      `INSERT OR REPLACE INTO live_today_stats (date, pv, uv, requests, uv_200, requests_200, fetched_at)
+       VALUES (?, ?, ?, ?, ?, ?, ?)`,
     )
-      .bind(date, d.pv || 0, d.uv || 0, d.requests || 0, now)
+      .bind(date, d.pv || 0, d.uv || 0, d.requests || 0, uv200, req200, now)
       .run();
-    return { pv: d.pv || 0, uv: d.uv || 0, requests: d.requests || 0, cached: false };
+    return { pv: d.pv || 0, uv: uv200, requests: req200, cached: false };
   } catch (err) {
     console.error("[d1-cache] readLiveDayStats failed:", err);
-    return { pv: row?.pv || 0, uv: row?.uv || 0, requests: row?.requests || 0, cached: false };
+    return { ...fallback, cached: false };
   }
 }

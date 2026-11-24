@@ -25,6 +25,10 @@ interface DashboardStats {
 interface AnalyticsData {
   allTimeTotal: number;
   allTimeUV: number;
+  /** 累计 UV 的统计起点（UV 口径切换为「仅 200」后的第一天），null = 尚无 200 数据 */
+  allTimeUVFrom?: string | null;
+  /** 区间内缺 200 口径回填的天数 */
+  uvPartialDays?: number;
   summary: { total: number; uv: number; today: number; todayUV: number; countries: number };
   hourlySum: { hour: number; pv: number; uv: number }[];
   hourlyAvg: { hour: number; pv: number; uv: number }[];
@@ -366,7 +370,7 @@ function pathToBreadcrumb(path: string): string {
           <div className="spinner" />
         </div>
       ) : stats ? (() => {
-        const _a = analytics ?? { allTimeTotal: 0, allTimeUV: 0, summary: { today: 0, total: 0, todayUV: 0, uv: 0, countries: 0 } as any, hourlySum: [] as any[], hourlyAvg: [] as any[], dailyData: [] as any[], geoData: [] as any[], browserData: [] as any[], osData: [] as any[], deviceData: [] as any[], projectData: [] as any[], pageData: [] as any[], pagePaths: [] as any[] };
+        const _a = analytics ?? { allTimeTotal: 0, allTimeUV: 0, allTimeUVFrom: null, uvPartialDays: 0, summary: { today: 0, total: 0, todayUV: 0, uv: 0, countries: 0 } as any, hourlySum: [] as any[], hourlyAvg: [] as any[], dailyData: [] as any[], geoData: [] as any[], browserData: [] as any[], osData: [] as any[], deviceData: [] as any[], projectData: [] as any[], pageData: [] as any[], pagePaths: [] as any[] };
         return (
         <>
           {/* ── Overview stats (range-aware) + cumulative ── */}
@@ -379,8 +383,9 @@ function pathToBreadcrumb(path: string): string {
             <div className="stat-card">
               <div className="stat-value">{timeRange === "today" ? _a.summary.todayUV : _a.summary.uv}</div>
               <div className="stat-label">{timeRange === "today" ? t("stat.todayUV") : timeRange === "7d" ? t("stat.7dUV") : timeRange === "30d" ? t("stat.30dUV") : t("stat.customUV")}</div>
-              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }} title="UV = 全站独立访客（含抓取器、接口调用、静态资源）；PV = 页面浏览（仅 HTML）。口径不同，UV 可能大于 PV。">
+              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }} title="PV 与 UV 均只统计 HTTP 200 响应：PV = 200 的 HTML 页面浏览；UV = 200 请求的独立访客（按客户端 IP 去重）。404/5xx 与 3xx 重定向、304 缓存协商一律不计。">
                 {t("stat.cumulative").replace("{n}", String(_a.allTimeUV))}
+                {_a.allTimeUVFrom ? ` · ${t("stat.since").replace("{date}", _a.allTimeUVFrom)}` : ""}
               </div>
             </div>
             <div className="stat-card">

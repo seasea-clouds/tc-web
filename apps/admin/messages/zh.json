@@ -340,6 +340,7 @@
   "stat.todayPV": "今日 PV",
   "stat.todayReports": "今日报告",
   "stat.todayUV": "今日 UV",
+  "stat.since": "自 {date} 起",
   "status.active": "正常",
   "status.activeShort": "活跃",
   "status.canceled": "已取消",

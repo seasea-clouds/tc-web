@@ -18,6 +18,13 @@ export interface DailyStats {
   pv: number;
   uv: number;
   requests: number;
+  /**
+   * 仅 200 响应码的独立访客与请求数。
+   * CF 的 `uniq.uniques` 是数据集级去重、无法按状态码切分，
+   * 只能用 adaptiveGroups 按 clientIP 分组数个数（见 fetchStatus200Window）。
+   */
+  uv200?: number;
+  requests200?: number;
   bytes: number;
   cachedRequests: number;
   /** [{clientCountryName, requests}] */
@@ -34,6 +41,9 @@ export interface HourlyStats {
   pv: number;
   uv: number;
   requests: number;
+  /** 仅 200：独立访客 / 请求数（口径同 DailyStats.uv200） */
+  uv200?: number;
+  requests200?: number;
   /** [{clientCountryName, requests}] — available from 1hGroups (same schema as 1dGroups) */
   countryMap?: { clientCountryName: string; requests: number }[];
   /** [{uaBrowserFamily, pageViews}] — available from 1hGroups */
@@ -150,6 +160,66 @@ export function inferProject(path: string): { project: string; isPage: boolean }
 // ── Fetch functions ──────────────────────────────────────────────
 
 /**
+ * 只统计 **200 响应码** 的真实访问。
+ *
+ * 为什么不用 1dGroups：`uniq.uniques` 是「数据集级去重」，没有状态码维度，
+ * 无法回答「其中 200 的独立访客有多少」；`sum.pageViews` 也只覆盖 HTML 文档。
+ * 唯一可行的口径是 adaptiveGroups 按 `clientIP` 分组：
+ *   独立访客 = 分组数，请求数 = 各组 count 之和。
+ *
+ * 实测（2026-11-23，一天）：4862 个独立 IP，count 求和 = 12337，
+ * 与同日「仅 200 的请求总数」完全一致 → 数据完整、无采样截断；
+ * limit 上限 10000，命中上限时返回 truncated=true（调用方应降级处理）。
+ *
+ * @param startISO 窗口起点，如 2026-11-23T00:00:00Z
+ * @param endISO   窗口终点，如 2026-11-23T23:59:59Z
+ */
+export interface Status200Stats {
+  uv: number;
+  requests: number;
+  truncated: boolean;
+  /**
+   * 数据是否可信。CF 的高基数维度（clientIP）只保留约 22 天，
+   * 更早的窗口会被裁剪成少量 IP + 超高单 IP 计数
+   * （实测 2026-10-30：277 个 IP 承担 8050 请求，均值 29/28）。
+   * 判据：请求/IP 均值 > 8 即认定被裁剪 → 调用方不要落库。
+   */
+  reliable: boolean;
+}
+
+export async function fetchStatus200Window(
+  zoneId: string,
+  token: string,
+  startISO: string,
+  endISO: string,
+): Promise<Status200Stats> {
+  const q = `{
+    viewer {
+      zones(filter: {zoneTag: "${zoneId}"}) {
+        httpRequestsAdaptiveGroups(
+          limit: 10000,
+          filter: {datetime_geq: "${startISO}", datetime_lt: "${endISO}", edgeResponseStatus: 200}
+        ) {
+          count
+          dimensions { clientIP }
+        }
+      }
+    }
+  }`;
+  const data = await graphql(q, token);
+  const groups = data?.viewer?.zones?.[0]?.httpRequestsAdaptiveGroups || [];
+  let requests = 0;
+  for (const g of groups) requests += g.count || 0;
+  const avg = groups.length > 0 ? requests / groups.length : 0;
+  return {
+    uv: groups.length,
+    requests,
+    truncated: groups.length >= 10000,
+    reliable: groups.length > 0 && avg <= 8,
+  };
+}
+
+/**
  * Fetch daily aggregated stats for one or more dates from CF.
  * For each date in the range [startDate, endDate], queries httpRequests1dGroups.
  *
@@ -160,6 +230,7 @@ export async function fetchDailyStats(
   zoneId: string,
   token: string,
   dates: string[],
+  opts: { status200?: boolean } = {},
 ): Promise<DailyStats[]> {
   if (!dates.length) return [];
 
@@ -243,6 +314,32 @@ export async function fetchDailyStats(
     });
   }
 
+  // 200 口径：逐日查询（跨天去重会破坏「各天相加」的既定口径，必须按天）
+  if (opts.status200 && results.length > 0) {
+    const CONCURRENCY = 4;
+    for (let i = 0; i < results.length; i += CONCURRENCY) {
+      const batch = results.slice(i, i + CONCURRENCY);
+      const settled = await Promise.allSettled(
+        batch.map((r) =>
+          fetchStatus200Window(zoneId, token, `${r.date}T00:00:00Z`, `${r.date}T23:59:59Z`),
+        ),
+      );
+      settled.forEach((res, idx) => {
+        if (res.status === "fulfilled") {
+          if (res.value.reliable) {
+            batch[idx].uv200 = res.value.uv;
+            batch[idx].requests200 = res.value.requests;
+          } else {
+            // 超出 clientIP 保留窗口 → 留空，读取端会回退/提示，绝不写假数
+            console.warn(`[cf-analytics] status200 ${batch[idx].date} unreliable (clipped), skipped`);
+          }
+        } else {
+          console.error(`[cf-analytics] status200 daily ${batch[idx].date} failed:`, res.reason);
+        }
+      });
+    }
+  }
+
   return results;
 }
 
@@ -255,6 +352,7 @@ export async function fetchHourlyStats(
   token: string,
   startISO: string,
   endISO: string,
+  opts: { status200?: boolean } = {},
 ): Promise<HourlyStats[]> {
   const query = `{
     viewer {
@@ -278,7 +376,7 @@ export async function fetchHourlyStats(
   const data = await graphql(query, token);
   const groups = data?.viewer?.zones?.[0]?.httpRequests1hGroups || [];
 
-  return groups.map((g: any) => {
+  const rows: HourlyStats[] = groups.map((g: any) => {
     const iso = g.dimensions?.datetime || "";
     // Parse "2026-07-06T14:00:00Z" → date=2026-07-06, hour=14
     const date = iso.slice(0, 10);
@@ -299,6 +397,26 @@ export async function fetchHourlyStats(
       })),
     };
   });
+
+  if (opts.status200 && rows.length > 0) {
+    // 每小时独立窗口查一次；补缺失小时通常只有 1 个，成本很低
+    const settled = await Promise.allSettled(
+      rows.map((r) => {
+        const hh = String(r.hour).padStart(2, "0");
+        return fetchStatus200Window(zoneId, token, `${r.date}T${hh}:00:00Z`, `${r.date}T${hh}:59:59Z`);
+      }),
+    );
+    settled.forEach((res, idx) => {
+      if (res.status === "fulfilled" && res.value.reliable) {
+        rows[idx].uv200 = res.value.uv;
+        rows[idx].requests200 = res.value.requests;
+      } else if (res.status === "rejected") {
+        console.error(`[cf-analytics] status200 hourly ${rows[idx].date}T${rows[idx].hour} failed:`, res.reason);
+      }
+    });
+  }
+
+  return rows;
 }
 
 /**
@@ -357,9 +475,9 @@ export async function fetchHourlyAggregateStats(
       const dims = g.dimensions || {};
       const cnt = g.count || 0;
 
-      // 动态合法性判定：仅统计 2xx/3xx 请求（同 fetchAggregateStatsRange）。
+      // 动态合法性判定：只统计 200（同 fetchAggregateStatsRange）。
       const status = dims.edgeResponseStatus || 0;
-      if (status < 200 || status >= 400) continue;
+      if (status !== 200) continue;
 
       const path = dims.clientRequestPath || "";
       if (path) {
@@ -482,11 +600,11 @@ export async function fetchAggregateStatsRange(
         const dims = g.dimensions || {};
         const cnt = g.count || 0;
 
-        // 动态合法性判定：仅统计 2xx/3xx 请求。
-        // 真实页面（含未来新增页面/子站）返回 200/3xx → 自动收录；
-        // 扫描器探测的不存在路径返回 404+ → 自动排除。无需任何静态名单。
+        // 动态合法性判定：只统计 **200**。
+        // 真实页面返回 200 → 自动收录；扫描器探测的不存在路径返回 404 → 自动排除；
+        // 304 是缓存协商（不是新的页面浏览）、3xx 是重定向，按口径一律不计。
         const status = dims.edgeResponseStatus || 0;
-        if (status < 200 || status >= 400) continue;
+        if (status !== 200) continue;
 
         const path = dims.clientRequestPath || "";
         if (path) {

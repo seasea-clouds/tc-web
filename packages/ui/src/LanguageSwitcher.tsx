@@ -21,8 +21,35 @@ const DEFAULT_LOCALES = [...LOCALES];
 let adminAuthed: boolean | null = null;
 let adminCheckStarted = false;
 
+// Local hint: "this browser has logged into the admin before".
+// Without it — the common case, every crawler and every ordinary visitor —
+// skip the network round-trip entirely. With it, the real check still runs.
+// Written by the admin app (apps/admin/src/lib/auth.ts), same key.
+const ADMIN_HINT_KEY = 'stc.admin';
+
+function hasAdminHint(): boolean {
+  try {
+    return window.localStorage.getItem(ADMIN_HINT_KEY) === '1';
+  } catch {
+    return false;
+  }
+}
+
+function setAdminHint(on: boolean): void {
+  try {
+    if (on) window.localStorage.setItem(ADMIN_HINT_KEY, '1');
+    else window.localStorage.removeItem(ADMIN_HINT_KEY);
+  } catch {
+    /* storage unavailable — degrade to always hiding zh, which is the safe side */
+  }
+}
+
 function checkAdminAuthed(): Promise<boolean> {
   if (adminAuthed !== null) return Promise.resolve(adminAuthed);
+  if (!hasAdminHint()) {
+    adminAuthed = false;
+    return Promise.resolve(false);
+  }
   if (adminCheckStarted) return new Promise((resolve) => {
     const timer = setInterval(() => {
       if (adminAuthed !== null) {
@@ -40,6 +67,8 @@ function checkAdminAuthed(): Promise<boolean> {
     .catch(() => false)
     .then((authed) => {
       adminAuthed = authed;
+      // Session expired or revoked → drop the hint so later pages skip the call
+      if (!authed) setAdminHint(false);
       return authed;
     });
 }

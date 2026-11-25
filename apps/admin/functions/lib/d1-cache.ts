@@ -657,7 +657,7 @@ export async function readAllTimeTotals(
             COALESCE(SUM(uv_human), 0) as uvHuman,
             COALESCE(SUM(pv_bot), 0) as pvBot,
             COUNT(uv_200) as days200,
-            MIN(CASE WHEN uv_200 IS NOT NULL THEN date END) as first200
+            MIN(CASE WHEN uv_human IS NOT NULL THEN date END) as first200
      FROM daily_page_stats`,
   ).first();
   return {

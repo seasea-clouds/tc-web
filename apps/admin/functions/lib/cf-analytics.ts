@@ -44,6 +44,10 @@ export interface HourlyStats {
   /** 仅 200：独立访客 / 请求数（口径同 DailyStats.uv200） */
   uv200?: number;
   requests200?: number;
+  /** 真人 PV / 真人 UV / 机器人 PV（口径同 DailyStats 的同名字段） */
+  pvHuman?: number;
+  uvHuman?: number;
+  pvBot?: number;
   /** [{clientCountryName, requests}] — available from 1hGroups (same schema as 1dGroups) */
   countryMap?: { clientCountryName: string; requests: number }[];
   /** [{uaBrowserFamily, pageViews}] — available from 1hGroups */
@@ -175,9 +179,16 @@ export function inferProject(path: string): { project: string; isPage: boolean }
  * @param endISO   窗口终点，如 2026-11-23T23:59:59Z
  */
 export interface Status200Stats {
+  /** 全部（含机器人）独立 IP */
   uv: number;
+  /** 全部（含机器人）请求数 */
   requests: number;
   truncated: boolean;
+  /**
+   * 第二个查询（UA × path）是否被截断。截断时 htmlHuman/htmlTotal 不可用，
+   * 调用方应改用 requestsHuman/requests 估比例（实测 2026-11-20 正好 10000 组）。
+   */
+  htmlTruncated: boolean;
   /**
    * 数据是否可信。CF 的高基数维度（clientIP）只保留约 22 天，
    * 更早的窗口会被裁剪成少量 IP + 超高单 IP 计数
@@ -185,37 +196,160 @@ export interface Status200Stats {
    * 判据：请求/IP 均值 > 8 即认定被裁剪 → 调用方不要落库。
    */
   reliable: boolean;
+  /** 排除机器人 UA 后的独立 IP（至少有 1 个真人请求） */
+  uvHuman: number;
+  /** 排除机器人 UA 后的请求数 */
+  requestsHuman: number;
+  /** HTML 页面请求数（按路径规则判定，含机器人） */
+  htmlTotal: number;
+  /** HTML 页面中真人请求数 */
+  htmlHuman: number;
 }
 
+/**
+ * 机器人 UA 特征。命中即视为爬虫/脚本/监控。
+ *
+ * 判据来源：实测 2026-11-23 的 UA 分布（219 个 UA，前 8 名里 6 个是爬虫）。
+ * 空 UA 一律算机器人 —— 畸形请求和自动化脚本常常不带 UA
+ * （参考 early hints 那批 `clientRequestHTTPProtocol = UNK` 的请求）。
+ */
+const BOT_UA_RE = new RegExp(
+  [
+    // 自报家门的爬虫
+    'bot', 'crawl', 'spider', 'slurp', 'scrap',
+    'bytespider', 'petalbot', 'ahrefs', 'semrush', 'mj12', 'dotbot',
+    'gptbot', 'claudebot', 'perplexity', 'oai-searchbot', 'ccbot', 'amazonbot', 'applebot',
+    'yandex', 'baidu', 'sogou', 'facebookexternalhit', 'embedly', 'quora link preview',
+    'reflectionbot', 'monitor', 'uptime', 'pingdom', 'gtmetrix', 'lighthouse',
+    // 无头/自动化
+    'headless', 'phantomjs', 'selenium', 'puppeteer', 'playwright',
+    // 脚本与命令行
+    'python-', 'curl', 'wget', 'go-http', 'axios', 'okhttp', 'java/', 'libwww',
+    'httpclient', 'node-fetch', 'undici', 'guzzle',
+    // 扫描器
+    'zgrab', 'masscan', 'nmap', 'expanse', 'paloalto', 'censys', 'shodan',
+    'leakix', 'nuclei', 'netsparker', 'acunetix', 'nikto',
+  ].join('|'),
+  'i',
+);
+
+export function isBotUA(ua: string | null | undefined): boolean {
+  if (!ua) return true;
+  const lower = ua.toLowerCase();
+  // 「bot」子串会误伤真实设备：Cubot 是国产手机品牌（海外有销量），UA 里带 CUBOT
+  if (lower.includes("cubot")) return false;
+  // 「robot」同理无害（Googlebot 已被上面的 bot 规则覆盖，这里放行 robotframework 之外的少见情况）
+  return BOT_UA_RE.test(ua);
+}
+
+/**
+ * 路径是否算作「HTML 页面浏览」。
+ *
+ * 用排除法（CF 的 `edgeResponseContentType` 维度我们没有权限，
+ * 实测报 `does not have access to the field`）。
+ * 校准确认：2026-11-23 该规则算出 7196，CF 官方 pageViews 6970，
+ * 高估 3.2%（差在 Next.js 的 RSC 请求 —— path 与页面相同、content-type 是
+ * text/x-component，无法从 path 区分）。因此调用方**不能用它当绝对 PV**，
+ * 只用它算真人/机器人的比例，再用官方 pageViews 校准总量。
+ */
+export function isHtmlPath(path: string | null | undefined): boolean {
+  if (!path) return false;
+  if (/^\/(?:_next|api|images|fonts|media|assets)\//.test(path)) return false;
+  if (/^\/(?:flags\.svg|favicon\.ico|icon\.png|robots\.txt|sitemap|llms|search-index|search-widget|cdn-cgi)/.test(path)) {
+    return false;
+  }
+  if (/\.(?:js|mjs|css|map|webp|png|jpe?g|gif|svg|ico|woff2?|ttf|otf|eot|json|xml|txt|pdf|zip|webmanifest)$/i.test(path)) {
+    return false;
+  }
+  return true;
+}
+
+/**
+ * 一个时间窗口的 200 口径 + 真人/机器人拆分。
+ *
+ * 两次查询：
+ *   ① clientIP × userAgent —— 独立访客（去重 IP）、请求数、真人 IP / 真人请求
+ *   ② userAgent × path    —— HTML 页面里真人占多少（用于按 pageViews 校准 PV）
+ */
 export async function fetchStatus200Window(
   zoneId: string,
   token: string,
   startISO: string,
   endISO: string,
 ): Promise<Status200Stats> {
-  const q = `{
+  const filter = `datetime_geq: "${startISO}", datetime_lt: "${endISO}", edgeResponseStatus: 200`;
+
+  const q1 = `{
     viewer {
       zones(filter: {zoneTag: "${zoneId}"}) {
         httpRequestsAdaptiveGroups(
           limit: 10000,
-          filter: {datetime_geq: "${startISO}", datetime_lt: "${endISO}", edgeResponseStatus: 200}
+          filter: {${filter}}
         ) {
           count
-          dimensions { clientIP }
+          dimensions { clientIP userAgent }
         }
       }
     }
   }`;
-  const data = await graphql(q, token);
-  const groups = data?.viewer?.zones?.[0]?.httpRequestsAdaptiveGroups || [];
+
+  const q2 = `{
+    viewer {
+      zones(filter: {zoneTag: "${zoneId}"}) {
+        httpRequestsAdaptiveGroups(
+          limit: 10000,
+          filter: {${filter}}
+        ) {
+          count
+          dimensions { userAgent clientRequestPath }
+        }
+      }
+    }
+  }`;
+
+  const [d1, d2] = await Promise.all([graphql(q1, token), graphql(q2, token)]);
+  const g1 = d1?.viewer?.zones?.[0]?.httpRequestsAdaptiveGroups || [];
+  const g2 = d2?.viewer?.zones?.[0]?.httpRequestsAdaptiveGroups || [];
+
+  const allIps = new Set<string>();
+  const humanIps = new Set<string>();
   let requests = 0;
-  for (const g of groups) requests += g.count || 0;
-  const avg = groups.length > 0 ? requests / groups.length : 0;
+  let requestsHuman = 0;
+  for (const g of g1) {
+    const ip = g.dimensions?.clientIP || "";
+    const ua = g.dimensions?.userAgent || "";
+    const cnt = g.count || 0;
+    const bot = isBotUA(ua);
+    if (ip) allIps.add(ip);
+    requests += cnt;
+    if (!bot) {
+      requestsHuman += cnt;
+      if (ip) humanIps.add(ip);
+    }
+  }
+
+  let htmlTotal = 0;
+  let htmlHuman = 0;
+  for (const g of g2) {
+    const path = g.dimensions?.clientRequestPath || "";
+    const ua = g.dimensions?.userAgent || "";
+    const cnt = g.count || 0;
+    if (!isHtmlPath(path)) continue;
+    htmlTotal += cnt;
+    if (!isBotUA(ua)) htmlHuman += cnt;
+  }
+
+  const avg = g1.length > 0 ? requests / g1.length : 0;
   return {
-    uv: groups.length,
+    uv: allIps.size,
     requests,
-    truncated: groups.length >= 10000,
-    reliable: groups.length > 0 && avg <= 8,
+    truncated: g1.length >= 10000,
+    htmlTruncated: g2.length >= 10000,
+    reliable: g1.length > 0 && avg <= 8,
+    uvHuman: humanIps.size,
+    requestsHuman,
+    htmlTotal,
+    htmlHuman,
   };
 }
 
@@ -327,8 +461,21 @@ export async function fetchDailyStats(
       settled.forEach((res, idx) => {
         if (res.status === "fulfilled") {
           if (res.value.reliable) {
-            batch[idx].uv200 = res.value.uv;
-            batch[idx].requests200 = res.value.requests;
+            const r = batch[idx];
+            r.uv200 = res.value.uv;
+            r.requests200 = res.value.requests;
+            // 真人 PV 用官方 pageViews 校准总量，比例来自 HTML 路径的 UA 拆分。
+            // HTML 维度被截断（组数触顶 10000）时改用请求比例 —— 会略高估
+            // （实测 11-23：请求口径 76.6% vs HTML 口径 62.8%），但远好过不拆。
+            const ratio =
+              !res.value.htmlTruncated && res.value.htmlTotal > 0
+                ? res.value.htmlHuman / res.value.htmlTotal
+                : res.value.requests > 0
+                  ? res.value.requestsHuman / res.value.requests
+                  : 1;
+            r.pvHuman = Math.round((r.pv || 0) * ratio);
+            r.pvBot = Math.max(0, (r.pv || 0) - r.pvHuman);
+            r.uvHuman = res.value.uvHuman;
           } else {
             // 超出 clientIP 保留窗口 → 留空，读取端会回退/提示，绝不写假数
             console.warn(`[cf-analytics] status200 ${batch[idx].date} unreliable (clipped), skipped`);
@@ -408,8 +555,18 @@ export async function fetchHourlyStats(
     );
     settled.forEach((res, idx) => {
       if (res.status === "fulfilled" && res.value.reliable) {
-        rows[idx].uv200 = res.value.uv;
-        rows[idx].requests200 = res.value.requests;
+        const r = rows[idx];
+        r.uv200 = res.value.uv;
+        r.requests200 = res.value.requests;
+        const ratio =
+          !res.value.htmlTruncated && res.value.htmlTotal > 0
+            ? res.value.htmlHuman / res.value.htmlTotal
+            : res.value.requests > 0
+              ? res.value.requestsHuman / res.value.requests
+              : 1;
+        r.pvHuman = Math.round((r.pv || 0) * ratio);
+        r.pvBot = Math.max(0, (r.pv || 0) - r.pvHuman);
+        r.uvHuman = res.value.uvHuman;
       } else if (res.status === "rejected") {
         console.error(`[cf-analytics] status200 hourly ${rows[idx].date}T${rows[idx].hour} failed:`, res.reason);
       }

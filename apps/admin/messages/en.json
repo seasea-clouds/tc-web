@@ -340,6 +340,7 @@
   "stat.todayPV": "Today PV",
   "stat.todayReports": "Today Reports",
   "stat.todayUV": "Today UV",
+  "stat.botNote": "{n} bot hits",
   "stat.since": "since {date}",
   "status.active": "Active",
   "status.activeShort": "Active",

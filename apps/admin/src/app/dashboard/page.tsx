@@ -27,9 +27,11 @@ interface AnalyticsData {
   allTimeUV: number;
   /** 累计 UV 的统计起点（UV 口径切换为「仅 200」后的第一天），null = 尚无 200 数据 */
   allTimeUVFrom?: string | null;
+  /** 累计的机器人抓取量（HTML 页面） */
+  allTimeBotTotal?: number;
   /** 区间内缺 200 口径回填的天数 */
   uvPartialDays?: number;
-  summary: { total: number; uv: number; today: number; todayUV: number; countries: number };
+  summary: { total: number; uv: number; botPv?: number; today: number; todayUV: number; countries: number };
   hourlySum: { hour: number; pv: number; uv: number }[];
   hourlyAvg: { hour: number; pv: number; uv: number }[];
   hoursCovered: number;
@@ -370,7 +372,7 @@ function pathToBreadcrumb(path: string): string {
           <div className="spinner" />
         </div>
       ) : stats ? (() => {
-        const _a = analytics ?? { allTimeTotal: 0, allTimeUV: 0, allTimeUVFrom: null, uvPartialDays: 0, summary: { today: 0, total: 0, todayUV: 0, uv: 0, countries: 0 } as any, hourlySum: [] as any[], hourlyAvg: [] as any[], dailyData: [] as any[], geoData: [] as any[], browserData: [] as any[], osData: [] as any[], deviceData: [] as any[], projectData: [] as any[], pageData: [] as any[], pagePaths: [] as any[] };
+        const _a = analytics ?? { allTimeTotal: 0, allTimeUV: 0, allTimeUVFrom: null, allTimeBotTotal: 0, uvPartialDays: 0, summary: { today: 0, total: 0, todayUV: 0, uv: 0, countries: 0 } as any, hourlySum: [] as any[], hourlyAvg: [] as any[], dailyData: [] as any[], geoData: [] as any[], browserData: [] as any[], osData: [] as any[], deviceData: [] as any[], projectData: [] as any[], pageData: [] as any[], pagePaths: [] as any[] };
         return (
         <>
           {/* ── Overview stats (range-aware) + cumulative ── */}
@@ -378,12 +380,14 @@ function pathToBreadcrumb(path: string): string {
             <div className="stat-card">
               <div className="stat-value">{timeRange === "today" ? _a.summary.today : _a.summary.total}</div>
               <div className="stat-label">{timeRange === "today" ? t("stat.todayPV") : timeRange === "7d" ? t("stat.7dPV") : timeRange === "30d" ? t("stat.30dPV") : t("stat.customPV")}</div>
-              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }}>{t("stat.cumulative").replace("{n}", String(_a.allTimeTotal))}</div>
+              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }} title="已剔除机器人与爬虫（按 UA 判定）。此处是搜索引擎等爬虫抓取的页面数，供 SEO/GEO 观察。">
+                {t("stat.botNote").replace("{n}", String(_a.summary.botPv ?? 0))}
+              </div>
             </div>
             <div className="stat-card">
               <div className="stat-value">{timeRange === "today" ? _a.summary.todayUV : _a.summary.uv}</div>
               <div className="stat-label">{timeRange === "today" ? t("stat.todayUV") : timeRange === "7d" ? t("stat.7dUV") : timeRange === "30d" ? t("stat.30dUV") : t("stat.customUV")}</div>
-              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }} title="PV 与 UV 均只统计 HTTP 200 响应：PV = 200 的 HTML 页面浏览；UV = 200 请求的独立访客（按客户端 IP 去重）。404/5xx 与 3xx 重定向、304 缓存协商一律不计。">
+              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }} title="只统计 HTTP 200，且已剔除机器人与爬虫（按 UA 判定：bot/spider/crawl/gptbot/bytespider/无头浏览器/脚本等）。PV = HTML 页面浏览；UV = 独立访客（按客户端 IP 去重）。">
                 {t("stat.cumulative").replace("{n}", String(_a.allTimeUV))}
                 {_a.allTimeUVFrom ? ` · ${t("stat.since").replace("{date}", _a.allTimeUVFrom)}` : ""}
               </div>

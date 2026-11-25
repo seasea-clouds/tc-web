@@ -79,6 +79,7 @@ function emptyResponse() {
     allTimeTotal: 0,
     allTimeUV: 0,
     allTimeUVFrom: null,
+    allTimeBotTotal: 0,
     uvPartialDays: 0,
     summary: { total: 0, uv: 0, today: 0, todayUV: 0, countries: 0 },
     hourlySum: [],
@@ -166,8 +167,10 @@ export async function onRequest(context: { request: Request; env: Env }) {
     //   UV = **仅 200** 的独立访客（adaptiveGroups 按 clientIP 分组，见 fetchStatus200Window）
     // 旧实现是 Σ24 小时 UV，重复计访客，实测虚高 46% 并导致 UV > PV。
     const live = await readLiveDayStats(context.env, today);
+    // 主数字一律真人口径（排除机器人 UA）；botPv 是机器人的 HTML 抓取量
     const todayPV = live.pv;
     const todayUV = live.uv;
+    const todayBotPV = live.botPv;
 
     // ─── RANGE: today ───
     if (range === "today") {
@@ -225,12 +228,14 @@ export async function onRequest(context: { request: Request; env: Env }) {
       return Response.json({
         // 累计：已固化天数的和 + 今天（今天尚未写入 daily_page_stats）
         // UV 走 200 口径（allTime.uv200），PV 口径未变可全量累计
-        allTimeTotal: allTime.pv + todayPV,
-        allTimeUV: allTime.uv200 + todayUV,
+        allTimeTotal: allTime.pvHuman + todayPV,
+        allTimeUV: allTime.uvHuman + todayUV,
         allTimeUVFrom: allTime.first200,
+        allTimeBotTotal: allTime.pvBot + todayBotPV,
         summary: {
           total: todayPV,
           uv: todayUV,
+          botPv: todayBotPV,
           today: todayPV,
           todayUV: todayUV,
           countries: geoData.length,
@@ -262,6 +267,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
     // 历史行没有 uv_200（口径切换于 2026-11-24）→ 该天 UV 记 0 并计入 partialDays，
     // 顶层会把它一并返回，前端据此提示「该区间含未完成 200 口径回填的日期」。
     let uvPartialDays = 0;
+    let periodBotPV = 0;
     const dailyData: { date: string; pv: number; uv: number }[] = [];
 
     // Collect per-dimension arrays for merging
@@ -275,15 +281,15 @@ export async function onRequest(context: { request: Request; env: Env }) {
     const hourlyMaps: Map<number, { pv: number; uv: number }>[] = [];
 
     for (const row of dailyRows) {
-      periodPV += row.total_pv || 0;
-      const rowUv200 = (row as any).uv_200;
-      if (rowUv200 === null || rowUv200 === undefined) uvPartialDays++;
-      periodUV += rowUv200 || 0;
-      dailyData.push({
-        date: row.date,
-        pv: row.total_pv || 0,
-        uv: rowUv200 || 0,
-      });
+      const r: any = row;
+      // 真人口径优先（pv_human / uv_human）；历史行没有则回退 200 口径
+      const pvHuman = r.pv_human ?? r.total_pv ?? 0;
+      const uvHuman = r.uv_human ?? r.uv_200 ?? 0;
+      periodPV += pvHuman;
+      if (r.uv_200 === null || r.uv_200 === undefined) uvPartialDays++;
+      periodUV += uvHuman;
+      periodBotPV += r.pv_bot ?? 0;
+      dailyData.push({ date: row.date, pv: pvHuman, uv: uvHuman });
 
       if (row.geo_data) geoArrays.push(safeJSON(row.geo_data, []));
       if (row.page_data) pageArrays.push(safeJSON(row.page_data, []));
@@ -300,6 +306,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
       if (!dailyData.some((d) => d.date === today)) {
         periodPV += todayPV;
         periodUV += todayUV;
+        periodBotPV += todayBotPV;
         dailyData.push({ date: today, pv: todayPV, uv: todayUV });
       }
       hourlyMaps.push(hourlyMap);
@@ -333,13 +340,15 @@ export async function onRequest(context: { request: Request; env: Env }) {
       // 累计：daily_page_stats（每天日终固化的真实值）之和 + 今天
       // PV 口径未变（pageViews 本就只含 200 的 HTML），可跨口径累计；
       // UV 已改为「仅 200」，只有自 allTimeUVFrom 起的数据可用。
-      allTimeTotal: allTime.pv + todayPV,
-      allTimeUV: allTime.uv200 + todayUV,
+      allTimeTotal: allTime.pvHuman + todayPV,
+      allTimeUV: allTime.uvHuman + todayUV,
       allTimeUVFrom: allTime.first200,
+      allTimeBotTotal: allTime.pvBot + todayBotPV,
       uvPartialDays,
       summary: {
         total: periodPV,
         uv: periodUV,
+        botPv: periodBotPV,
         today: todayPV,
         todayUV: todayUV,
         countries: geoData.length,

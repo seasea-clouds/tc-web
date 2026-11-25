@@ -225,6 +225,14 @@ export async function runMigration(env: CacheEnv): Promise<void> {
     `ALTER TABLE daily_page_stats ADD COLUMN requests_200 INTEGER`,
     `ALTER TABLE hourly_page_stats ADD COLUMN uv_200 INTEGER`,
     `ALTER TABLE hourly_page_stats ADD COLUMN requests_200 INTEGER`,
+    // 真人口径（2026-11-24）：排除机器人 UA 后的 PV / UV，以及机器人的 PV。
+    // pv_human + pv_bot = total_pv（用 CF 官方 pageViews 校准，见 cf-analytics）。
+    `ALTER TABLE daily_page_stats ADD COLUMN pv_human INTEGER`,
+    `ALTER TABLE daily_page_stats ADD COLUMN uv_human INTEGER`,
+    `ALTER TABLE daily_page_stats ADD COLUMN pv_bot INTEGER`,
+    `ALTER TABLE hourly_page_stats ADD COLUMN pv_human INTEGER`,
+    `ALTER TABLE hourly_page_stats ADD COLUMN uv_human INTEGER`,
+    `ALTER TABLE hourly_page_stats ADD COLUMN pv_bot INTEGER`,
     // Safe ALTER TABLE for columns that might not exist
     `ALTER TABLE daily_page_stats ADD COLUMN page_data TEXT DEFAULT '[]'`,
     `ALTER TABLE daily_page_stats ADD COLUMN project_data TEXT DEFAULT '[]'`,
@@ -300,8 +308,9 @@ export async function ensureDailyCFCache(env: CacheEnv): Promise<string> {
         // No traffic — still insert a row so we don't re-query
         await env.DB.prepare(
           `INSERT OR REPLACE INTO daily_page_stats
-           (date, total_pv, total_uv, total_requests, uv_200, requests_200, source)
-           VALUES (?, 0, 0, 0, 0, 0, 'cf_api')`,
+           (date, total_pv, total_uv, total_requests, uv_200, requests_200,
+            pv_human, uv_human, pv_bot, source)
+           VALUES (?, 0, 0, 0, 0, 0, 0, 0, 0, 'cf_api')`,
         )
           .bind(ds.date)
           .run();
@@ -311,8 +320,9 @@ export async function ensureDailyCFCache(env: CacheEnv): Promise<string> {
       await env.DB.prepare(
         `INSERT OR REPLACE INTO daily_page_stats
          (date, total_pv, total_uv, total_requests, total_bytes, cached_requests,
-          countries_count, geo_data, browser_data, status_code_data, uv_200, requests_200, source)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'cf_api')`,
+          countries_count, geo_data, browser_data, status_code_data, uv_200, requests_200,
+          pv_human, uv_human, pv_bot, source)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'cf_api')`,
       )
         .bind(
           ds.date,
@@ -342,6 +352,9 @@ export async function ensureDailyCFCache(env: CacheEnv): Promise<string> {
           ),
           ds.uv200 ?? null,
           ds.requests200 ?? null,
+          ds.pvHuman ?? null,
+          ds.uvHuman ?? null,
+          ds.pvBot ?? null,
         )
         .run();
     }
@@ -444,8 +457,8 @@ export async function ensureHourlyCFCache(env: CacheEnv): Promise<void> {
           if (missingHours.includes(hs.hour)) {
             // Store PV/UV + geo/browser from 1hGroups
             await env.DB.prepare(
-              `INSERT OR REPLACE INTO hourly_page_stats (date, hour, pv, uv, requests, geo_data, browser_data, uv_200, requests_200)
-               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+              `INSERT OR REPLACE INTO hourly_page_stats (date, hour, pv, uv, requests, geo_data, browser_data, uv_200, requests_200, pv_human, uv_human, pv_bot)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
             )
               .bind(
                 today,
@@ -463,6 +476,9 @@ export async function ensureHourlyCFCache(env: CacheEnv): Promise<void> {
                 })) || []),
                 hs.uv200 ?? null,
                 hs.requests200 ?? null,
+                hs.pvHuman ?? null,
+                hs.uvHuman ?? null,
+                hs.pvBot ?? null,
               )
               .run();
           }
@@ -581,7 +597,7 @@ export async function readTodayHourly(
   today: string,
 ): Promise<HourlyStats[]> {
   const rows: any = await env.DB.prepare(
-    `SELECT hour, pv, uv, requests, uv_200, requests_200, geo_data, browser_data, os_data, device_data, page_data, page_paths, project_data
+    `SELECT hour, pv, uv, requests, uv_200, requests_200, pv_human, uv_human, pv_bot, geo_data, browser_data, os_data, device_data, page_data, page_paths, project_data
      FROM hourly_page_stats WHERE date = ? ORDER BY hour ASC`,
   )
     .bind(today)
@@ -594,6 +610,9 @@ export async function readTodayHourly(
     requests: r.requests || 0,
     uv200: r.uv_200 ?? undefined,
     requests200: r.requests_200 ?? undefined,
+    pvHuman: r.pv_human ?? undefined,
+    uvHuman: r.uv_human ?? undefined,
+    pvBot: r.pv_bot ?? undefined,
     countryMap: safeJSON(r.geo_data, []).map((c: any) => ({
       clientCountryName: c.country || c.clientCountryName || "",
       requests: c.count || c.requests || 0,
@@ -620,11 +639,23 @@ export async function readTodayHourly(
  */
 export async function readAllTimeTotals(
   env: CacheEnv,
-): Promise<{ pv: number; uv: number; uv200: number; first200: string | null; days200: number }> {
+): Promise<{
+  pv: number;
+  uv: number;
+  uv200: number;
+  pvHuman: number;
+  uvHuman: number;
+  pvBot: number;
+  first200: string | null;
+  days200: number;
+}> {
   const row: any = await env.DB.prepare(
     `SELECT COALESCE(SUM(total_pv), 0) as pv,
             COALESCE(SUM(total_uv), 0) as uv,
             COALESCE(SUM(uv_200), 0) as uv200,
+            COALESCE(SUM(pv_human), 0) as pvHuman,
+            COALESCE(SUM(uv_human), 0) as uvHuman,
+            COALESCE(SUM(pv_bot), 0) as pvBot,
             COUNT(uv_200) as days200,
             MIN(CASE WHEN uv_200 IS NOT NULL THEN date END) as first200
      FROM daily_page_stats`,
@@ -633,6 +664,9 @@ export async function readAllTimeTotals(
     pv: row?.pv || 0,
     uv: row?.uv || 0,
     uv200: row?.uv200 || 0,
+    pvHuman: row?.pvHuman || 0,
+    uvHuman: row?.uvHuman || 0,
+    pvBot: row?.pvBot || 0,
     first200: row?.first200 || null,
     days200: row?.days200 || 0,
   };
@@ -652,7 +686,7 @@ export async function readLiveDayStats(
   env: CacheEnv,
   date: string,
   maxAgeSeconds = 300,
-): Promise<{ pv: number; uv: number; requests: number; cached: boolean }> {
+): Promise<{ pv: number; uv: number; requests: number; botPv: number; cached: boolean }> {
   const now = Math.floor(Date.now() / 1000);
 
   // 0. 建表（幂等）。cron 直接调本函数时不会经过 runMigration，
@@ -666,6 +700,9 @@ export async function readLiveDayStats(
         requests INTEGER DEFAULT 0,
         uv_200 INTEGER,
         requests_200 INTEGER,
+        pv_human INTEGER,
+        uv_human INTEGER,
+        pv_bot INTEGER,
         fetched_at INTEGER DEFAULT 0
       )`,
     ).run();
@@ -678,6 +715,9 @@ export async function readLiveDayStats(
   for (const ddl of [
     "ALTER TABLE live_today_stats ADD COLUMN uv_200 INTEGER",
     "ALTER TABLE live_today_stats ADD COLUMN requests_200 INTEGER",
+    "ALTER TABLE live_today_stats ADD COLUMN pv_human INTEGER",
+    "ALTER TABLE live_today_stats ADD COLUMN uv_human INTEGER",
+    "ALTER TABLE live_today_stats ADD COLUMN pv_bot INTEGER",
   ]) {
     try {
       await env.DB.prepare(ddl).run();
@@ -687,23 +727,30 @@ export async function readLiveDayStats(
   }
 
   const row: any = await env.DB.prepare(
-    "SELECT pv, uv, requests, uv_200, requests_200, fetched_at FROM live_today_stats WHERE date = ?",
+    "SELECT pv, uv, requests, uv_200, requests_200, pv_human, uv_human, pv_bot, fetched_at FROM live_today_stats WHERE date = ?",
   )
     .bind(date)
     .first();
   if (row && now - (row.fetched_at || 0) < maxAgeSeconds) {
+    // 主数字用真人口径；旧行没有 pv_human 时回退到全部值
     return {
-      pv: row.pv || 0,
-      uv: row.uv_200 ?? row.uv ?? 0,
+      pv: row.pv_human ?? row.pv ?? 0,
+      uv: row.uv_human ?? row.uv_200 ?? row.uv ?? 0,
       requests: row.requests_200 ?? row.requests ?? 0,
+      botPv: row.pv_bot ?? 0,
       cached: true,
     };
   }
 
   // 2. 向 CF 取该日真实值（200 口径：uv/requests 走 adaptiveGroups 的 clientIP 分组）
   const fallback = row
-    ? { pv: row.pv || 0, uv: row.uv_200 ?? row.uv ?? 0, requests: row.requests_200 ?? row.requests ?? 0 }
-    : { pv: 0, uv: 0, requests: 0 };
+    ? {
+        pv: row.pv_human ?? row.pv ?? 0,
+        uv: row.uv_human ?? row.uv_200 ?? row.uv ?? 0,
+        requests: row.requests_200 ?? row.requests ?? 0,
+        botPv: row.pv_bot ?? 0,
+      }
+    : { pv: 0, uv: 0, requests: 0, botPv: 0 };
   if (!hasConfig(env)) {
     return { ...fallback, cached: false };
   }
@@ -713,16 +760,20 @@ export async function readLiveDayStats(
     if (!d) {
       return { ...fallback, cached: false };
     }
-    // UV / requests 一律取 200 口径；CF 未返回（查询失败）则回退旧值
+    // UV / requests 取 200 口径；PV / UV 主数字取真人口径（排除机器人 UA）
     const uv200 = d.uv200 ?? d.uv ?? 0;
     const req200 = d.requests200 ?? d.requests ?? 0;
+    const pvHuman = d.pvHuman ?? d.pv ?? 0;
+    const uvHuman = d.uvHuman ?? uv200;
+    const pvBot = d.pvBot ?? 0;
     await env.DB.prepare(
-      `INSERT OR REPLACE INTO live_today_stats (date, pv, uv, requests, uv_200, requests_200, fetched_at)
-       VALUES (?, ?, ?, ?, ?, ?, ?)`,
+      `INSERT OR REPLACE INTO live_today_stats
+         (date, pv, uv, requests, uv_200, requests_200, pv_human, uv_human, pv_bot, fetched_at)
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
     )
-      .bind(date, d.pv || 0, d.uv || 0, d.requests || 0, uv200, req200, now)
+      .bind(date, d.pv || 0, d.uv || 0, d.requests || 0, uv200, req200, pvHuman, uvHuman, pvBot, now)
       .run();
-    return { pv: d.pv || 0, uv: uv200, requests: req200, cached: false };
+    return { pv: pvHuman, uv: uvHuman, requests: req200, botPv: pvBot, cached: false };
   } catch (err) {
     console.error("[d1-cache] readLiveDayStats failed:", err);
     return { ...fallback, cached: false };

@@ -221,6 +221,9 @@ const CHECK_LIST = [
   { script: 'check-checker-coverage.mjs', global: true },
   { script: 'check-segment-coverage.mjs', global: true },
   { script: 'check-company-facts.mjs', global: true },
+  // 法规库 3984 篇内容此前零检查：check-md-article 是给 insights 写的
+  // （要求文末 CTA、封面图、references），套上去 3984/3984 全量误报。
+  { script: 'check-regulations.mjs', global: true },
   { script: 'clean-rsc.mjs', output: true },
 
   // ── 类型检查 ────────────────────────────────────────

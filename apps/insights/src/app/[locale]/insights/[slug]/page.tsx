@@ -312,8 +312,11 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
     '化妆品': { href: '/services/cosmetics', serviceKey: 'cosmetics', icon: 'sparkles' },
     'E-commerce': { href: '/services/ecommerce', serviceKey: 'ecommerce', icon: 'cart' },
     '电子商务': { href: '/services/ecommerce', serviceKey: 'ecommerce', icon: 'cart' },
-    'Compliance Guide': { href: '/services/gacc', serviceKey: 'label', icon: 'tag' },
-    '合规指南': { href: '/services/gacc', serviceKey: 'label', icon: 'tag' },
+    // Compliance Guide 是跨领域总纲类（广告宣称 / 数据出境 / 转介销售 / 监管问询…），
+    // 没有单一对口服务。此前这里 href 指 gacc 而 serviceKey 是 label，
+    // 页面显示「标签合规」却跳到 GACC 页，名与链接不一致。
+    'Compliance Guide': { href: '/services/gacc', serviceKey: 'gacc', icon: 'truck' },
+    '合规指南': { href: '/services/gacc', serviceKey: 'gacc', icon: 'truck' },
     'Brand Protection': { href: '/services/brand', serviceKey: 'brand', icon: 'shield' },
     '品牌保护': { href: '/services/brand', serviceKey: 'brand', icon: 'shield' },
   };

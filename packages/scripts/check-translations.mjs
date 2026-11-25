@@ -848,6 +848,83 @@ function flattenKeys(obj, prefix = '') {
 // ============================================================
 // Blog MDX check
 // ============================================================
+/**
+ * 译文混排污染 —— CJK 引文串里混进了本语言的字母
+ *
+ * 背景（2026-11 实际踩到）：th 的正文里 "保健食品" 变成了
+ * "保健รับประทานอาหาร品"、"此日期前食用最佳" 变成了 "此日期前food用最佳"。
+ * 原因不是译者手滑，是翻译时把 CJK 引文里的单字（食 / 花）当成正文词翻掉了。
+ *
+ * 为什么必须查：这些 CJK 引文是 GB 7718 要求印在包装上的**确切中文字样**
+ * （保健食品 / 生产日期 / 保质期至 / 此日期前食用最佳），被翻译污染后
+ * 就是错的技术信息，读者照抄会上错标签。
+ *
+ * 判据：一段连续 CJK 中夹着**不含空格的字母**才算污染。
+ *   - "保健食品"            纯 CJK，不报（合法引文）
+ *   - "保健食品 (health food)" 中间有空格，不报（译文在括号外，合法）
+ *   - "保健食品/蓝帽"        中间是标点，不报
+ *   - "保健รับประทานอาหาร品" 中间是泰文字母，报
+ *   - "此日期前food用最佳"    中间是拉丁字母，报
+ */
+function checkScriptMixing(verbose = true) {
+  const RANGE_BY_LANG = {
+    ar: '\\u0600-\\u06ff', fa: '\\u0600-\\u06ff', ur: '\\u0600-\\u06ff',
+    he: '\\u0590-\\u05ff',
+    hi: '\\u0900-\\u097f', ne: '\\u0900-\\u097f',
+    bn: '\\u0980-\\u09ff',
+    ta: '\\u0b80-\\u0bff',
+    si: '\\u0d80-\\u0dff',
+    th: '\\u0e00-\\u0e7f',
+    ka: '\\u10a0-\\u10ff',
+    hy: '\\u0530-\\u058f',
+    el: '\\u0370-\\u03ff',
+    ru: '\\u0400-\\u04ff', uk: '\\u0400-\\u04ff',
+    be: '\\u0400-\\u04ff', bg: '\\u0400-\\u04ff',
+  };
+  // ja/ko 本来就混用汉字，zh 是母语 —— 都不查
+  const SKIP = new Set(['zh', 'ja', 'ko']);
+  const APPS = ['insights', 'regulations'];
+
+  let issues = 0;
+  const details = [];
+
+  for (const app of APPS) {
+    const contentDir = path.join(MONOREPO_ROOT, '..', 'apps', app, 'content');
+    if (!fs.existsSync(contentDir)) continue;
+    for (const lang of fs.readdirSync(contentDir)) {
+      if (SKIP.has(lang) || lang.startsWith('_')) continue;
+      const langDir = path.join(contentDir, lang);
+      if (!fs.statSync(langDir).isDirectory()) continue;
+      // 拉丁语言里只把拉丁字母视为污染源；非拉丁语言再加上本语言字母
+      const extra = RANGE_BY_LANG[lang] ? `A-Za-z${RANGE_BY_LANG[lang]}` : 'A-Za-z';
+      // 中间段上限放 30：泰文/天城文的组合符号每个占多个码位，
+      // 「รับประทานอาหาร」单个词就 13 个码位，卡 12 会漏。
+      const re = new RegExp(`[\\u4e00-\\u9fff]+[${extra}]{1,30}[\\u4e00-\\u9fff]+`, 'g');
+      for (const file of fs.readdirSync(langDir)) {
+        if (!file.endsWith('.mdx')) continue;
+        const raw = fs.readFileSync(path.join(langDir, file), 'utf-8');
+        const body = raw.replace(/^---[\s\S]*?\n---/, '');
+        for (const m of body.matchAll(re)) {
+          issues++;
+          if (details.length < 15) details.push(`${app}/${lang}/${file}: ${m[0]}`);
+        }
+      }
+    }
+  }
+
+  if (verbose) {
+    console.log('\n🔀 译文混排污染（CJK 引文里混进本语言字母）:');
+    if (issues === 0) {
+      console.log('  ✅ 未发现');
+    } else {
+      for (const d of details) console.log(`  ❌ ${d}`);
+      if (issues > details.length) console.log(`  … 另有 ${issues - details.length} 处`);
+      console.log('  💡 CJK 引文是 GB 7718 要求印在包装上的确切字样，必须原样保留');
+    }
+  }
+  return issues;
+}
+
 function checkInsightsMdx(targetLang = null, verbose = true) {
   const slugList = [];
   // Graceful: insights content may not exist in this project root
@@ -2161,7 +2238,7 @@ const jsonOut = args.includes('--json');
 const skipConsistency = args.includes('--skip-locale-check');
 const isAdminProject = getDetectedProject() === 'admin';
 
-let localeCheck, result, insightsIssues, industryMetaIssues, portalIssues;
+let localeCheck, result, insightsIssues, industryMetaIssues, portalIssues, scriptMixingIssues;
 let sharedUiIssues = 0, breadcrumbResult = { total: 0, missing: [] }, dashIssues = 0, semanticIssues = 0;
 let adminMsgResult = { total: 0, missingKeys: [], dashIssues: 0 };
 let secretIssues = 0;
@@ -2197,9 +2274,10 @@ if (isAdminProject) {
   adminMsgResult = (targetLang || args.includes('--skip-admin-check')) ? { total: 0, missingKeys: [], dashIssues: 0 } : checkAdminMessages(!short);
   secretIssues = (targetLang || args.includes('--skip-secret-check')) ? 0 : checkHardcodedSecrets(!short);
   semanticIssues = checkSemanticQuality(!short);
+  scriptMixingIssues = (targetLang || args.includes('--skip-mixing-check')) ? 0 : checkScriptMixing(!short);
 }
 
-const totalIssues = (result?.total_issues ?? 0) + insightsIssues + (localeCheck?.total ?? 0) + industryMetaIssues + portalIssues + sharedUiIssues + breadcrumbResult.total + dashIssues + adminMsgResult.total + secretIssues + semanticIssues;
+const totalIssues = (result?.total_issues ?? 0) + insightsIssues + (localeCheck?.total ?? 0) + industryMetaIssues + portalIssues + sharedUiIssues + breadcrumbResult.total + dashIssues + adminMsgResult.total + secretIssues + semanticIssues + scriptMixingIssues;
 
 if (totalIssues === 0) {
   console.log('\n✅ 全量核验通过！48 种语言无质量问题。');
@@ -2225,6 +2303,9 @@ if (totalIssues === 0) {
   }
   if (semanticIssues > 0) {
     console.log(`   - 语义翻译质量: ${semanticIssues} 个语义错误（误译/意译不当）`);
+  }
+  if (scriptMixingIssues > 0) {
+    console.log(`   - 译文混排污染: ${scriptMixingIssues} 处 CJK 引文被本语言字母污染`);
   }
   if (breadcrumbResult.total > 0) {
     console.log(`   - 面包屑 key: ${breadcrumbResult.total} 处缺失`);

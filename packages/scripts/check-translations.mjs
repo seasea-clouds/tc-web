@@ -2238,7 +2238,8 @@ const jsonOut = args.includes('--json');
 const skipConsistency = args.includes('--skip-locale-check');
 const isAdminProject = getDetectedProject() === 'admin';
 
-let localeCheck, result, insightsIssues, industryMetaIssues, portalIssues, scriptMixingIssues;
+let localeCheck, result, insightsIssues, industryMetaIssues, portalIssues;
+let scriptMixingIssues = 0;
 let sharedUiIssues = 0, breadcrumbResult = { total: 0, missing: [] }, dashIssues = 0, semanticIssues = 0;
 let adminMsgResult = { total: 0, missingKeys: [], dashIssues: 0 };
 let secretIssues = 0;
@@ -2255,6 +2256,8 @@ if (isAdminProject) {
   sharedUiIssues = 0;
   breadcrumbResult = { total: 0, missing: [] };
   dashIssues = 0;
+  semanticIssues = 0;
+  scriptMixingIssues = 0;
   adminMsgResult = checkAdminMessages(!short);
   secretIssues = (targetLang || args.includes('--skip-secret-check')) ? 0 : checkHardcodedSecrets(!short);
 } else {

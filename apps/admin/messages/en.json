@@ -470,5 +470,12 @@
   "emails.actionFailed": "Action failed, please retry",
   "emails.loadFailed": "Failed to load",
   "login.redirecting": "Session expired. Redirecting to sign in…",
-  "segment.insights": "Blog"
+    "segment.insights": "Insights",
+    "segment.regulations": "Regulations",
+    "segment.sitemap": "Sitemap",
+    "segment.blog": "Blog (legacy)",
+    "segment.settings": "Settings",
+    "segment.aiAssistance": "AI Assistant",
+    "segment.emails": "Emails",
+    "segment.pageN": "Page {n}"
 }

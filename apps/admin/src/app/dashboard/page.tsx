@@ -7,7 +7,7 @@ import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
   PieChart, Pie, Cell, LineChart, Line, Legend,
 } from "recharts";
-import { INSIGHTS_SEGMENT_LABELS } from "@/lib/segment-mapping";
+import { INSIGHTS_SEGMENT_LABELS, REGULATIONS_SEGMENT_LABELS } from "@/lib/segment-mapping";
 
 interface DashboardStats {
   today: { pv: number; uv: number; reports: number; newUsers: number };
@@ -243,8 +243,13 @@ const STATIC_SEGMENT_LABELS: Record<string, string> = {
   'account': 'segment.account',
   'subscription': 'segment.subscription',
   'dashboard': 'segment.dashboard',
-  // ── Blog ──
+  'settings': 'segment.settings',
+  'ai-assistance': 'segment.aiAssistance',
+  // ── Insights / Regulations ──
   'insights': 'segment.insights',
+  'regulations': 'segment.regulations',
+  'sitemap': 'segment.sitemap',
+  'blog': 'segment.blog',
   // ── Admin ──
   'admin': 'segment.admin',
   'users': 'segment.users',
@@ -259,6 +264,7 @@ const STATIC_SEGMENT_LABELS: Record<string, string> = {
   'contact': 'segment.contact',
   'faq': 'segment.faq',
   'payments': 'segment.payments',
+  'emails': 'segment.emails',
   // ── Root / Locale-only ──
   '__home__': 'segment.home',
   // ── Site pages ──
@@ -285,16 +291,27 @@ function pathToBreadcrumb(path: string): string {
   const skipLocale = segs.length > 0 && /^[a-z]{2}$/.test(segs[0]);
   const bc = skipLocale ? segs.slice(1) : segs;
   if (bc.length === 0) return t(STATIC_SEGMENT_LABELS['__home__']);
-  return bc.map(s => {
+  const parts: string[] = [];
+  for (let i = 0; i < bc.length; i++) {
+    const s = bc[i];
+    // 分页：insights/page/2 → 「第 2 页」，页码段吃掉，不再单独显示
+    if (s === 'page' && /^\d+$/.test(bc[i + 1] || '')) {
+      parts.push(t("segment.pageN").replace("{n}", bc[i + 1]));
+      i++;
+      continue;
+    }
     // 1. Static segments (site/portal/admin routes) — use translation keys
     const key = STATIC_SEGMENT_LABELS[s];
-    if (key) return t(key);
-    // 2. Insights article slugs — use auto-generated Chinese title
-    const insightsLabel = INSIGHTS_SEGMENT_LABELS[s];
-    if (insightsLabel) return insightsLabel;
-    // 3. Fallback: English segment name
-    return s.charAt(0).toUpperCase() + s.slice(1).replace(/[-_]/g, ' ');
-  }).join(' › ');
+    if (key) { parts.push(t(key)); continue; }
+    // 2. 文章 slug（洞察 / 法规库）— 用自动生成的标题
+    const artLabel = INSIGHTS_SEGMENT_LABELS[s] || REGULATIONS_SEGMENT_LABELS[s];
+    if (artLabel) { parts.push(artLabel); continue; }
+    // 3. 纯数字但前面不是 page（如 /insights/2/）—— 也该显示成页码
+    if (/^\d+$/.test(s)) { parts.push(t("segment.pageN").replace("{n}", s)); continue; }
+    // 4. Fallback: English segment name
+    parts.push(s.charAt(0).toUpperCase() + s.slice(1).replace(/[-_]/g, ' '));
+  }
+  return parts.join(' › ');
 }
 
   return (
@@ -380,14 +397,14 @@ function pathToBreadcrumb(path: string): string {
             <div className="stat-card">
               <div className="stat-value">{timeRange === "today" ? _a.summary.today : _a.summary.total}</div>
               <div className="stat-label">{timeRange === "today" ? t("stat.todayPV") : timeRange === "7d" ? t("stat.7dPV") : timeRange === "30d" ? t("stat.30dPV") : t("stat.customPV")}</div>
-              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }} title="已剔除机器人与爬虫（按 UA 判定）。此处是搜索引擎等爬虫抓取的页面数，供 SEO/GEO 观察。">
+              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }} title="已剔除机器人与爬虫（按 UA 判定），只算页面抓取。此处是搜索引擎等爬虫抓取的页面数，供 SEO/GEO 观察。">
                 {t("stat.botNote").replace("{n}", String(_a.summary.botPv ?? 0))}
               </div>
             </div>
             <div className="stat-card">
               <div className="stat-value">{timeRange === "today" ? _a.summary.todayUV : _a.summary.uv}</div>
               <div className="stat-label">{timeRange === "today" ? t("stat.todayUV") : timeRange === "7d" ? t("stat.7dUV") : timeRange === "30d" ? t("stat.30dUV") : t("stat.customUV")}</div>
-              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }} title="只统计 HTTP 200，且已剔除机器人与爬虫（按 UA 判定：bot/spider/crawl/gptbot/bytespider/无头浏览器/脚本等）。PV = HTML 页面浏览；UV = 独立访客（按客户端 IP 去重）。">
+              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }} title="只统计页面请求的 HTTP 200：接口调用（/api/）与静态资源抓取（/_next/、图片、JSON、sitemap 等）都不计入；同时按 UA 剔除机器人与爬虫（bot/spider/crawl/gptbot/bytespider/无头浏览器/脚本等）。PV = HTML 页面浏览（CF 官方口径，实测与页面请求数差 0.17%）；UV = 独立访客（按客户端 IP 去重）。">
                 {t("stat.cumulative").replace("{n}", String(_a.allTimeUV))}
                 {_a.allTimeUVFrom ? ` · ${t("stat.since").replace("{date}", _a.allTimeUVFrom)}` : ""}
               </div>

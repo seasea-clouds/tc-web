@@ -277,7 +277,12 @@ export async function fetchStatus200Window(
   startISO: string,
   endISO: string,
 ): Promise<Status200Stats> {
-  const filter = `datetime_geq: "${startISO}", datetime_lt: "${endISO}", edgeResponseStatus: 200`;
+  // 页面请求判据：本站是静态导出，所有页面 URL 都以 / 结尾；
+  // 静态资源（/_next/、.webp、.json、search-index、flags.svg、robots.txt）与
+  // /api/* 一律不以 / 结尾，因此这一条同时干掉了「接口调用」和「资源抓取」两类水分。
+  // 实测 2026-11-24：%/ 命中 12736 次，CF 官方 pageViews 为 12715，差 0.17%。
+  const PAGE_FILTER = 'clientRequestPath_like: "%/"';
+  const filter = `AND: [{datetime_geq: "${startISO}", datetime_lt: "${endISO}", edgeResponseStatus: 200}, {${PAGE_FILTER}}]`;
 
   const q1 = `{
     viewer {

@@ -97,15 +97,16 @@ export default async function BlogHome({ params }: { params: Promise<{ locale: s
             readTimeText={readTimeText}
             noPostsText={tb('noPosts', 'No posts found.')}
             allText={tb('all', 'All')}
-          />
-          <InsightsPager
-            locale={locale}
-            currentPage={1}
-            totalPages={pages.length}
-            paginationText={tb('pagination', 'Page')}
-            prevText={tb('prev', 'Previous')}
-            nextText={tb('next', 'Next')}
-          />
+          >
+            <InsightsPager
+              locale={locale}
+              currentPage={1}
+              totalPages={pages.length}
+              paginationText={tb('pagination', 'Page')}
+              prevText={tb('prev', 'Previous')}
+              nextText={tb('next', 'Next')}
+            />
+          </InsightsClient>
         </div>
       </section>
 

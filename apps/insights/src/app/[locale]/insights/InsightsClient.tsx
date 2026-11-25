@@ -16,11 +16,14 @@ interface Props {
   readTimeText: string;
   noPostsText: string;
   allText: string;
+  /** 服务端分页器；一旦选了分类，改为在全量文章上过滤，分页器要隐藏
+   *  （分页是服务端页面概念，与客户端筛选混用会误导用户） */
+  children?: React.ReactNode;
 }
 
 export default function InsightsClient({
   pagePosts, allPosts, categories, categoryLabels, locale,
-  readMoreText, readTimeText, noPostsText, allText,
+  readMoreText, readTimeText, noPostsText, allText, children,
 }: Props) {
   const [category, setCategory] = useState<string | null>(null);
   const texts: InsightCardTexts = { locale, readMoreText, readTimeText, categoryLabels };
@@ -61,6 +64,9 @@ export default function InsightsClient({
       ) : (
         <p className="py-16 text-center text-[#5F6F7F]">{noPostsText}</p>
       )}
+
+      {/* 有分类筛选时不展示服务端分页器 */}
+      {children && <div className={category ? 'hidden' : ''}>{children}</div>}
     </>
   );
 }

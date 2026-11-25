@@ -2,7 +2,7 @@ import { LOCALES, buildLanguages, sharedOpenGraph, sharedTwitter, AutoBreadcrumb
 import { getDocuments } from '@/lib/documents';
 import { getMessages } from '@/lib/messages';
 import { paginate } from '@/lib/doc-list';
-import RegulationRows from '@/components/RegulationRows';
+import RegulationFilter from '@/components/RegulationFilter';
 import RegulationPager from '@/components/RegulationPager';
 
 interface Params {
@@ -131,15 +131,42 @@ export default async function RegulationsPageN({ params }: { params: Promise<Par
 
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <RegulationRows docs={pageDocs} locale={locale} texts={texts} />
-          <RegulationPager
+          <RegulationFilter
+            docs={docs}
+            pageDocs={pageDocs}
             locale={locale}
-            currentPage={pageNumber}
-            totalPages={pages.length}
-            paginationText={tb('pagination', 'Page')}
-            prevText={tb('prev', 'Previous')}
-            nextText={tb('next', 'Next')}
-          />
+            texts={{
+              colDocNumber: tb('colDocNumber', 'Document No.'),
+              colTitle: tb('colTitle', 'Title'),
+              colPublished: tb('colPublished', 'Published'),
+              colEffective: tb('colEffective', 'In force'),
+              noDocs: tb('noDocs', 'No documents yet.'),
+              catLabels: {
+                'Product Certification': tb('cat_Product_Certification', 'Product Certification'),
+                'Compliance Guide': tb('cat_Compliance_Guide', 'Compliance Guide'),
+                'Label Compliance': tb('cat_Label_Compliance', 'Label Compliance'),
+                'Brand Protection': tb('cat_Brand_Protection', 'Brand Protection'),
+                Cosmetics: tb('cat_Cosmetics', 'Cosmetics'),
+                'E-commerce': tb('cat_E_commerce', 'E-commerce'),
+                'Food & Beverage': tb('cat_Food_Beverage', 'Food & Beverage'),
+              },
+              filterIssuer: tb('filterIssuer', 'Issuing authority'),
+              filterCategory: tb('filterCategory', 'Category'),
+              filterYear: tb('filterYear', 'Publication year'),
+              filterAll: tb('filterAll', 'All'),
+              filterReset: tb('filterReset', 'Reset'),
+              filterEmpty: tb('filterEmpty', 'No documents match these filters.'),
+            }}
+          >
+            <RegulationPager
+              locale={locale}
+              currentPage={pageNumber}
+              totalPages={pages.length}
+              paginationText={tb('pagination', 'Page')}
+              prevText={tb('prev', 'Previous')}
+              nextText={tb('next', 'Next')}
+            />
+          </RegulationFilter>
         </div>
       </section>
 

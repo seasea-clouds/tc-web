@@ -2,7 +2,7 @@ import { LOCALES, buildLanguages, sharedOpenGraph, sharedTwitter, AutoBreadcrumb
 import { getPosts } from '@/lib/posts';
 import { getMessages } from '@/lib/messages';
 import { paginate, getCategories, categoryKey } from '@/lib/insights-list';
-import InsightRows, { type InsightCardTexts } from '@/components/InsightRows';
+import InsightsClient from '../../InsightsClient';
 import InsightsPager from '@/components/InsightsPager';
 
 interface Params {
@@ -72,12 +72,6 @@ export default async function BlogPageN({ params }: { params: Promise<Params> })
   for (const cat of getCategories(posts)) {
     categoryLabels[cat] = tb(categoryKey(cat), cat);
   }
-  const texts: InsightCardTexts = {
-    locale,
-    readMoreText: tb('readMore', 'Read More'),
-    readTimeText: tb('readTime', 'min read'),
-    categoryLabels,
-  };
 
   const pageLabel = `${tb('pagination', 'Page')} ${pageNumber}`;
   const canonical = pageNumber === 1
@@ -132,19 +126,26 @@ export default async function BlogPageN({ params }: { params: Promise<Params> })
 
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          {pagePosts.length > 0 ? (
-            <InsightRows posts={pagePosts} texts={texts} />
-          ) : (
-            <p className="py-16 text-center text-[#5F6F7F]">{tb('noPosts', 'No posts found.')}</p>
-          )}
-          <InsightsPager
+          <InsightsClient
+            pagePosts={pagePosts}
+            allPosts={posts}
+            categories={getCategories(posts)}
+            categoryLabels={categoryLabels}
             locale={locale}
-            currentPage={pageNumber}
-            totalPages={pages.length}
-            paginationText={tb('pagination', 'Page')}
-            prevText={tb('prev', 'Previous')}
-            nextText={tb('next', 'Next')}
-          />
+            readMoreText={tb('readMore', 'Read More')}
+            readTimeText={tb('readTime', 'min read')}
+            noPostsText={tb('noPosts', 'No posts found.')}
+            allText={tb('all', 'All')}
+          >
+            <InsightsPager
+              locale={locale}
+              currentPage={pageNumber}
+              totalPages={pages.length}
+              paginationText={tb('pagination', 'Page')}
+              prevText={tb('prev', 'Previous')}
+              nextText={tb('next', 'Next')}
+            />
+          </InsightsClient>
         </div>
       </section>
     </>

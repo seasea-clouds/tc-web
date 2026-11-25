@@ -292,24 +292,28 @@ function pathToBreadcrumb(path: string): string {
   const bc = skipLocale ? segs.slice(1) : segs;
   if (bc.length === 0) return t(STATIC_SEGMENT_LABELS['__home__']);
   const parts: string[] = [];
+  // 相邻段译名相同就合并（如 /c/check/x/ 里 c 与 check 都叫「合规自查」）
+  const push = (label: string) => {
+    if (parts[parts.length - 1] !== label) parts.push(label);
+  };
   for (let i = 0; i < bc.length; i++) {
     const s = bc[i];
     // 分页：insights/page/2 → 「第 2 页」，页码段吃掉，不再单独显示
     if (s === 'page' && /^\d+$/.test(bc[i + 1] || '')) {
-      parts.push(t("segment.pageN").replace("{n}", bc[i + 1]));
+      push(t("segment.pageN").replace("{n}", bc[i + 1]));
       i++;
       continue;
     }
     // 1. Static segments (site/portal/admin routes) — use translation keys
     const key = STATIC_SEGMENT_LABELS[s];
-    if (key) { parts.push(t(key)); continue; }
+    if (key) { push(t(key)); continue; }
     // 2. 文章 slug（洞察 / 法规库）— 用自动生成的标题
     const artLabel = INSIGHTS_SEGMENT_LABELS[s] || REGULATIONS_SEGMENT_LABELS[s];
-    if (artLabel) { parts.push(artLabel); continue; }
+    if (artLabel) { push(artLabel); continue; }
     // 3. 纯数字但前面不是 page（如 /insights/2/）—— 也该显示成页码
-    if (/^\d+$/.test(s)) { parts.push(t("segment.pageN").replace("{n}", s)); continue; }
+    if (/^\d+$/.test(s)) { push(t("segment.pageN").replace("{n}", s)); continue; }
     // 4. Fallback: English segment name
-    parts.push(s.charAt(0).toUpperCase() + s.slice(1).replace(/[-_]/g, ' '));
+    push(s.charAt(0).toUpperCase() + s.slice(1).replace(/[-_]/g, ' '));
   }
   return parts.join(' › ');
 }

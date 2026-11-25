@@ -55,3 +55,11 @@ EOF
 
 echo "✅ postbuild.sh: All content moved under $TARGET/"
 echo "   Root redirect: / → /admin/"
+
+# ── CI 检查 ──────────────────────────────────────────────────────
+# admin 是唯一没有 ci-check 的子站，messages 键不一致、硬编码英文、
+# 类型错误都曾因此漏网。不带 --out-dir 时输出类检查（hreflang / seo-output /
+# llms）会自动跳过 —— admin 是登录后台，本来也不需要那些。
+echo ""
+echo "▶ CI 检查（admin）"
+node ../../packages/scripts/ci-check.mjs --project=admin --ci

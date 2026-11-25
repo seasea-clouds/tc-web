@@ -38,6 +38,7 @@ const LAYOUT_FILE_BY_PROJECT = {
   site: 'apps/site/src/app/(site)/[locale]/layout.tsx',
   insights: 'apps/insights/src/app/[locale]/layout.tsx',
   portal: 'apps/portal/src/app/[locale]/layout.tsx',
+  regulations: 'apps/regulations/src/app/[locale]/layout.tsx',
 };
 
 const layoutFile = LAYOUT_FILE_BY_PROJECT[detectedProject];

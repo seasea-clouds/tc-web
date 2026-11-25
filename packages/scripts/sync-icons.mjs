@@ -24,7 +24,7 @@ import path from 'node:path';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '../..');
 const BRAND_DIR = path.join(REPO_ROOT, 'packages', 'brand');
-const APPS = ['site', 'portal', 'insights', 'admin'];
+const APPS = ['site', 'portal', 'insights', 'regulations', 'admin'];
 const FILES = ['icon.png', 'favicon.ico'];
 const STALE_APP_FILES = ['favicon.ico', 'icon.png']; // src/app 下要清理的旧约定文件
 

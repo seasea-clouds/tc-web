@@ -96,6 +96,7 @@ const llmsDir = (() => {
 // 工具
 // ============================================================
 let totalFailures = 0;
+const _globalChecksRan = new Set();
 let _currentProject = '';
 const failureDetails = {}; // { project: [{ script, status }] }
 
@@ -211,6 +212,15 @@ const CHECK_LIST = [
   { script: 'check-seo-output.mjs', output: true },
   { script: 'check-link-hygiene.mjs', output: true },
   { script: 'check-wiring.mjs', output: true },
+
+  // ── 全仓结构检查（与具体子站无关，只跑一次） ──────────────
+  // 这三个检查器存在的理由都是「同一类缺陷曾静默通过 CI」：
+  //   check-checker-coverage  改名后检查器键对不上 → 静默 exit(0)，CI 全绿
+  //   check-segment-coverage  admin 热门页面路径缺映射 → 界面显示英文字串
+  //   check-company-facts     公司地址散落多处 → 改一处漏三处
+  { script: 'check-checker-coverage.mjs', global: true },
+  { script: 'check-segment-coverage.mjs', global: true },
+  { script: 'check-company-facts.mjs', global: true },
   { script: 'clean-rsc.mjs', output: true },
 
   // ── 类型检查 ────────────────────────────────────────
@@ -233,6 +243,8 @@ function runChecksForProject(p, skipSync) {
   if (doSync && !skipSync) runSync();
 
   for (const check of CHECK_LIST) {
+    // global: 全仓检查，多个子站只跑一次
+    if (check.global && _globalChecksRan.has(check.script)) continue;
     // Guard dir: 检查所需数据目录是否存在
     if (check.guardDir && !repoDirExists(check.guardDir)) {
       console.log(`  ∎ ${check.script} → ∅ 不适用（无 ${check.guardDir}）`);
@@ -300,6 +312,7 @@ function runChecksForProject(p, skipSync) {
 
     // 普通检查：直接调用
     const checkArgs = check.args || [];
+    if (check.global) _globalChecksRan.add(check.script); // 全仓检查只跑一次
     runScript(p, check.script, CWD, ...checkArgs);
   }
 }

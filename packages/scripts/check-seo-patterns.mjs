@@ -34,6 +34,7 @@ const APP_DIR_MAP = {
   site: 'apps/site/src/app/(site)/[locale]',
   insights: 'apps/insights/src/app/[locale]',
   portal: 'apps/portal/src/app/[locale]',
+  regulations: 'apps/regulations/src/app/[locale]',
 };
 
 const appDir = APP_DIR_MAP[detectedProject];

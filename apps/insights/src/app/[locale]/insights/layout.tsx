@@ -3,13 +3,13 @@ import { locales, defaultLocale } from '@/i18n/routing';
 import { buildAlternates, sharedOpenGraph, sharedTwitter } from '@trade/ui';
 
 /**
- * Blog segment layout — provides hreflang alternates for all /insights/ pages.
+ * Insights segment layout — provides hreflang alternates for all /insights/ pages.
  *
  * Only renders {children} — the actual HTML layout is handled by the parent [locale]/layout.tsx.
  * This layout exists solely to provide per-segment alternates metadata (hreflang + x-default).
  * Each insights page overrides only `canonical` via its own generateMetadata.
  */
-export default function BlogLayout({ children }: { children: React.ReactNode }) {
+export default function InsightsLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
 
@@ -17,9 +17,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const validLocale = locales.includes(locale as any) ? locale : defaultLocale;
 
-  const t = await getTranslations({ locale: validLocale, namespace: 'Blog' });
+  const t = await getTranslations({ locale: validLocale, namespace: 'Insights' });
 
-  const title = t('metaTitle') || 'Exporting to China Blog | SinoTrade Compliance';
+  const title = t('metaTitle') || 'Exporting to China Insights | SinoTrade Compliance';
   const description = t('metaDescription') || 'Expert guides on exporting to China. GACC registration, CCC certification, NMPA cosmetics filing, and cross-border e-commerce.';
   const path = '/insights/';
   const alternates = buildAlternates(validLocale, [...locales], path);

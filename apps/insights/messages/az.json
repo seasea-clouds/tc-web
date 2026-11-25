@@ -1,11 +1,11 @@
 {
-  "Blog": {
+  "Insights": {
     "title": "Çinə ixrac: anlayışlar və uyğunluq təlimatları",
     "subtitle": "Dünya üzrə ixracatçılar üçün məqalələr: Çin bazarına giriş tələbləri, GACC qeydiyyatı, etiketləmə və sertifikatlaşdırma.",
     "readMore": "Məqaləni oxu",
     "categories": "Kateqoriyalar",
     "all": "Hamısı",
-    "backToBlog": "Anlayışlara qayıt",
+    "backToInsights": "Anlayışlara qayıt",
     "backToHome": "Evə qayıt",
     "pagination": "Səhifə",
     "noPosts": "Heç bir məqalə tapılmadı.",

@@ -1,11 +1,11 @@
 {
-  "Blog": {
+  "Insights": {
     "title": "Izvoz u Kinu: uvidi i vodiči za usklađenost",
     "subtitle": "Članci za izvoznike iz cijeloga svijeta: uvjeti pristupa kineskom tržištu, registracija GACC, označavanje i certificiranje.",
     "readMore": "Pročitajte cijeli članak",
     "categories": "Kategorije",
     "all": "Sve",
-    "backToBlog": "Povratak na uvide",
+    "backToInsights": "Povratak na uvide",
     "backToHome": "Povratak na početnu",
     "pagination": "Stranica",
     "noPosts": "Nema pronađenih članaka.",

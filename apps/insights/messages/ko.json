@@ -1,11 +1,11 @@
 {
-  "Blog": {
+  "Insights": {
     "title": "중국 수출: 인사이트와 컴플라이언스 가이드",
     "subtitle": "전 세계 수출 기업을 위한 실무 글: 중국 시장 진입 요건, GACC 등록, 표시, 인증을 다룹니다.",
     "readMore": "자세히 알아보기",
     "categories": "카테고리",
     "all": "전체",
-    "backToBlog": "인사이트로 돌아가기",
+    "backToInsights": "인사이트로 돌아가기",
     "backToHome": "홈으로 돌아가기",
     "pagination": "페이지",
     "noPosts": "게시물이 없습니다.",

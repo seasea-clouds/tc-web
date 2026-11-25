@@ -747,45 +747,6 @@
     "insightsDesc": "Chunguza maarifa zaidi",
     "viewAllInsights": "Tazama Makala Zote"
   },
-  "Blog": {
-    "title": "Mauzo nje kwenda China: maarifa na miongozo ya uzingatiaji",
-    "subtitle": "Makala kwa wauzaji nje duniani kote: masharti ya kuingia soko la China, usajili wa GACC, lebo na uthibitisho.",
-    "readMore": "Soma Zaidi",
-    "categories": "Kategoria",
-    "all": "Wote",
-    "backToBlog": "Rudi kwa Maarifa",
-    "backToHome": "Rudi Nyumbani",
-    "pagination": "Ukurasa",
-    "noPosts": "Hakuna machapisho yaliyopatikana.",
-    "publishedOn": "Imechapishwa",
-    "author": "David Zhang",
-    "ctaTitle": "Je, unahitaji Usaidizi wa Kuzingatia Uchina?",
-    "ctaSubtitle": "Pata tathmini ya kufuata bila malipo kutoka kwa timu yetu ya wataalam.",
-    "ctaButton": "Pata Tathmini ya Bure",
-    "readTime": "dk kusoma",
-    "postNotFound": "Chapisho halijapatikana",
-    "toc": "Yaliyomo",
-    "viewPackages": "Tazama Vifurushi →",
-    "authorBio": "Mtaalamu wa kufuata udhibiti aliyebobea katika uingiaji wa soko la China. Kusaidia biashara kuvinjari GACC, NMPA, CCC, na mahitaji ya kuweka lebo ya Kichina.",
-    "relatedServiceLabel": "Je, unahitaji Msaada kwa Hili?",
-    "relatedServiceCta": "Pata Tathmini Bila Malipo →",
-    "service_gacc": "Usajili wa GACC",
-    "service_label": "Uzingatiaji wa Lebo ya Kichina",
-    "service_ccc": "Cheti cha CCC",
-    "service_cosmetics": "Ujazaji wa Vipodozi vya NMPA",
-    "service_ecommerce": "Biashara ya kielektroniki ya mpakani",
-    "shareThisArticle": "Shiriki makala hii",
-    "relatedArticles": "Makala Zinazohusiana",
-    "referencesHeading": "Marejeleo",
-    "references": "Marejeleo",
-    "relatedArticlesDesc": "Gundua maarifa zaidi juu ya mada hii",
-    "prev": "Iliyotangulia",
-    "next": "Inayofuata",
-    "pageInfo": "",
-    "of": " ya ",
-    "metaTitle": "Mauzo nje kwenda China: uzingatiaji | GACC, CCC, NMPA",
-    "metaDescription": "Miongozo kwa wauzaji nje kwenda China: usajili wa GACC, uthibitisho wa CCC, usajili wa vipodozi NMPA na lebo za Kichina."
-  },
   "OrganizationJsonLd": {
     "description": "Ushauri wa kina kwa wauzaji nje wanaopeleka bidhaa China: ",
     "contactType": "huduma kwa wateja",
@@ -1253,7 +1214,7 @@
     "emailLabel": "Tutumie barua pepe",
     "backToTopLabel": "Rudi juu"
   },
-  "BlogFaqGaccRegistrationGuide": {
+  "InsightsFaqGaccRegistrationGuide": {
     "faqQ1": "Usajili wa GACC ni nini na ni nani anayeuhitaji?",
     "faqA1": "Usajili wa GACC ni lazima kwa kila kituo cha kigeni cha uzalishaji, usindikaji na uhifadhi wa chakula kinachouza nje kwenda China. Sharti hili linatumika tangu 2022 na sasa linasimamiwa na Hati 280 iliyoanza kutumika 1 Juni 2026 — kila kituo kinachohusika lazima kiwe kwenye rejista ya CIFER kabla ya shehena ya kwanza.",
     "faqQ2": "Usajili wa GACC huchukua muda gani?",
@@ -1265,7 +1226,7 @@
     "faqQ5": "Ni nini kitatokea ikiwa sitajiandikisha?",
     "faqA5": "Ndiyo. Tangu 2022 forodha ya China inakataa bila msamaha shehena kutoka vituo visivyosajiliwa; bidhaa zinabaki bandarini hadi kituo kisajiliwe kwenye CIFER, na gharama za uhifadhi na kusubiri hubeba mauzaji nje."
   },
-  "BlogFaqChinaLabelCompliance": {
+  "InsightsFaqChinaLabelCompliance": {
     "faqQ1": "Utiifu wa lebo za Kichina ni nini?",
     "faqA1": "Kutii lebo za Kichina kunamaanisha kuwa lebo za bidhaa zako zinakidhi viwango vya Uchina vya GB 7718-2025 na kanuni zingine zinazotumika. Ni lazima kwa bidhaa zote za chakula na za watumiaji kutoka nje. Lebo zisizofuata sheria husababisha kukataliwa kwa desturi.",
     "faqQ2": "Ni nini kinachopaswa kuwa kwenye lebo ya chakula cha Kichina?",
@@ -1275,7 +1236,7 @@
     "faqQ4": "Uhakiki wa lebo huchukua muda gani?",
     "faqA4": "Ukaguzi wa lebo za kitaalamu kwa kawaida huchukua siku 3-5 za kazi, ikiwa ni pamoja na kuangalia vipengele vyote vinavyohitajika, kuthibitisha tafsiri na kuhakikisha kwamba unafuata viwango vya hivi punde vya GB."
   },
-  "BlogFaqCccCertificationExplained": {
+  "InsightsFaqCccCertificationExplained": {
     "faqQ1": "Uthibitisho wa CCC ni nini?",
     "faqA1": "CCC (Uidhinishaji wa Lazima wa China) ni lazima kwa bidhaa katika aina 17 zinazoingizwa au kutengenezwa nchini Uchina, ikiwa ni pamoja na vifaa vya elektroniki, sehemu za magari, glasi ya usalama na vifaa vya kuchezea vya watoto.",
     "faqQ2": "Ni bidhaa gani zinahitaji CCC?",
@@ -1285,7 +1246,7 @@
     "faqQ4": "CCC inagharimu kiasi gani?",
     "faqA4": "Gharama za kawaida huanzia $3,000 hadi $15,000+, ikijumuisha ada za majaribio, ada za ukaguzi wa kiwanda na ada za matengenezo za kila mwaka."
   },
-  "BlogFaqCosmeticsNmpaFiling": {
+  "InsightsFaqCosmeticsNmpaFiling": {
     "faqQ1": "Uwasilishaji wa vipodozi vya NMPA ni nini?",
     "faqA1": "Uwasilishaji wa NMPA (Utawala wa Kitaifa wa Bidhaa za Matibabu) ni lazima kwa vipodozi vyote vinavyoingizwa nchini Uchina. Vipodozi vya jumla na vipodozi vya matumizi maalum lazima viandikishwe au visajiliwe kabla ya kuuzwa.",
     "faqQ2": "Kuna tofauti gani kati ya vipodozi vya jumla na vya matumizi maalum?",
@@ -1295,7 +1256,7 @@
     "faqQ4": "Je, ninahitaji Mchina anayewajibika?",
     "faqA4": "Ndiyo, kampuni za vipodozi za ng'ambo lazima ziteue Mchina anayewajibika ambaye hushughulikia uwekaji faili wa NMPA, hutumika kama sehemu ya mawasiliano ya kisheria, na kuchukua dhima ya pamoja ya usalama wa bidhaa."
   },
-  "BlogFaqCrossBorderEcommerceChina": {
+  "InsightsFaqCrossBorderEcommerceChina": {
     "faqQ1": "Biashara ya kielektroniki ya kuvuka mpaka (CBEC) nchini Uchina ni nini?",
     "faqA1": "CBEC inaruhusu chapa za ng'ambo kuuza moja kwa moja kwa watumiaji wa China kupitia majukwaa ya mtandaoni bila njia za jadi za kuagiza. Bidhaa hufurahia mahitaji ya udhibiti yaliyorahisishwa na viwango vya chini vya kodi.",
     "faqQ2": "Ni bidhaa gani zinaweza kuuzwa kupitia CBEC?",
@@ -1399,7 +1360,7 @@
     "terminationTitle": "Kukomesha",
     "title": "Masharti ya Huduma"
   },
-  "BlogFaqKoreanCosmeticsGuide": {
+  "InsightsFaqKoreanCosmeticsGuide": {
     "faqQ1": "Je, chapa ya vipodozi ya Kikorea inahitaji faili ya NMPA kwa uagizaji wa jumla wa biashara?",
     "faqA1": "Ndiyo. Ukiagiza vipodozi kupitia biashara ya jumla (sio biashara ya kielektroniki ya kuvuka mipaka), kila bidhaa lazima iwe na faili (vipodozi vya kawaida) au kusajiliwa (vipodozi maalum) na NMPA kabla ya kuagiza. Hii inatumika kwa bidhaa zote bila kujali nchi ya asili.",
     "faqQ2": "Je, ninaweza kuuza vipodozi vya Kikorea kupitia biashara ya kielektroniki ya mipakani bila kujaza faili za NMPA?",
@@ -1421,7 +1382,7 @@
     "faqQ10": "Je, ninahitaji kampuni ya Kichina ili kuwasilisha vipodozi na NMPA?",
     "faqA10": "Ndiyo. Kila bidhaa ya vipodozi inayoingizwa nchini Uchina lazima iwe na Mchina anayewajibika nchini - huluki ya kisheria iliyosajiliwa nchini Uchina iliyo na wigo wa biashara unaohusiana na vipodozi. Hii inaweza kuwa kampuni yako tanzu ya Uchina, msambazaji, au mtoa huduma wa watu wengine. Mtu anayewajibika anawajibika kisheria kwa usalama wa bidhaa na anashughulikia mawasiliano yote ya NMPA."
   },
-  "BlogFaqGreenCoffeeBeansChina": {
+  "InsightsFaqGreenCoffeeBeansChina": {
     "faqQ1": "Kahawa mbichi inahitaji usajili wa chakula wa GACC?",
     "faqA1": "Hapana. Mbegu zisizokaangwa ziko nje ya mfumo wa usajili wa chakula na zinasimamiwa kama mazao ya kilimo chini ya Tangazo 219.",
     "faqQ2": "Kiwanda bado kinahitaji idhini ya mamlaka ya nchi inayouza?",

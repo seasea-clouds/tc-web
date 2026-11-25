@@ -1,9 +1,9 @@
-import { WHATSAPP_URL, LOCALES, SITE_URL, buildLanguages, sharedOpenGraph, sharedTwitter, AutoBreadcrumb, ComplianceForm } from '@trade/ui';
+import { WHATSAPP_URL, LOCALES, SITE_URL, buildLanguages, sharedOpenGraph, sharedTwitter, AutoBreadcrumb, Pager, ComplianceForm } from '@trade/ui';
 import { getDocuments } from '@/lib/documents';
 import { getMessages } from '@/lib/messages';
 import { paginate, pagePath } from '@/lib/doc-list';
 import RegulationFilter from '@/components/RegulationFilter';
-import RegulationPager from '@/components/RegulationPager';
+
 
 export async function generateStaticParams() {
   return LOCALES.map((l) => ({ locale: l }));
@@ -99,11 +99,12 @@ export default async function RegulationsHome({ params }: { params: Promise<{ lo
               filterEmpty: t('filterEmpty', 'No documents match these filters.'),
             }}
           >
-            <RegulationPager
+            <Pager
               locale={locale}
               currentPage={1}
               totalPages={pages.length}
               paginationText={t('pagination', 'Page')}
+              pagePath={pagePath}
               prevText={t('prev', 'Previous')}
               nextText={t('next', 'Next')}
             />

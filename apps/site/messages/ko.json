@@ -747,45 +747,6 @@
     "insightsDesc": "더 많은 인사이트 살펴보기",
     "viewAllInsights": "모든 기사 보기"
   },
-  "Blog": {
-    "title": "중국 수출: 인사이트와 컴플라이언스 가이드",
-    "subtitle": "전 세계 수출 기업을 위한 실무 글: 중국 시장 진입 요건, GACC 등록, 표시, 인증을 다룹니다.",
-    "readMore": "자세히 알아보기",
-    "categories": "카테고리",
-    "all": "전체",
-    "backToBlog": "인사이트로 돌아가기",
-    "backToHome": "홈으로 돌아가기",
-    "pagination": "페이지",
-    "noPosts": "게시물이 없습니다.",
-    "publishedOn": "게시일",
-    "author": "David Zhang",
-    "ctaTitle": "중국 규정 준수에 도움이 필요하신가요?",
-    "ctaSubtitle": "전문가 팀이 제품에 맞는 무료 규정 준수 평가를 진행해 드립니다.",
-    "ctaButton": "무료 평가 받기",
-    "readTime": "분",
-    "postNotFound": "게시물을 찾을 수 없습니다",
-    "toc": "목차",
-    "viewPackages": "패키지 보기 →",
-    "authorBio": "중국 시장 진출 전문 규제 준수 컨설턴트. GACC, NMPA, CCC, 중국 라벨 요건 등 중국 수입 규제 전반을 안내합니다.",
-    "relatedServiceLabel": "이 내용에 도움이 필요하신가요?",
-    "relatedServiceCta": "무료 평가 받기 →",
-    "service_gacc": "GACC 등록",
-    "service_label": "중국 라벨 규정 준수",
-    "service_ccc": "CCC 인증",
-    "service_cosmetics": "NMPA 화장품 신고",
-    "service_ecommerce": "국경 간 전자상거래",
-    "shareThisArticle": "이 기사 공유하기",
-    "relatedArticles": "관련 기사",
-    "referencesHeading": "참고 자료",
-    "references": "참고 자료",
-    "relatedArticlesDesc": "이 주제에 관한 더 많은 인사이트를 확인하세요",
-    "prev": "이전",
-    "next": "다음",
-    "pageInfo": "",
-    "of": " / ",
-    "metaTitle": "중국 수출: 컴플라이언스 인사이트 | GACC, CCC, NMPA",
-    "metaDescription": "중국 수출 기업을 위한 가이드: GACC 등록, CCC 인증, NMPA 화장품 등록, 중국어 표시 요건."
-  },
   "OrganizationJsonLd": {
     "description": "제품을 중국으로 보내는 수출 기업을 위한 원스톱 컨설팅: ",
     "contactType": "고객 서비스",
@@ -1253,7 +1214,7 @@
     "emailLabel": "이메일을 보내주세요",
     "backToTopLabel": "맨 위로 돌아가기"
   },
-  "BlogFaqGaccRegistrationGuide": {
+  "InsightsFaqGaccRegistrationGuide": {
     "faqQ1": "GACC 등록이란 무엇이며 어떤 기업이 필요한가요?",
     "faqA1": "GACC 등록은 중국으로 수출하는 모든 해외 식품 생산·가공·보관 시설에 의무입니다. 2022년부터 이어진 요건이며, 현재는 2026년 6월 1일 시행된 제280호령이 근거입니다. 해당 시설은 첫 선적 전에 CIFER 등록부에 올라 있어야 합니다.",
     "faqQ2": "GACC 등록은 얼마나 걸리나요?",
@@ -1265,7 +1226,7 @@
     "faqQ5": "등록하지 않으면 어떻게 되나요?",
     "faqA5": "네. 중국 세관은 2022년부터 미등록 시설의 화물을 예외 없이 거부합니다. 시설이 CIFER에 등록될 때까지 화물은 항구에 머물며, 보관료와 체선료는 수출자가 부담합니다."
   },
-  "BlogFaqChinaLabelCompliance": {
+  "InsightsFaqChinaLabelCompliance": {
     "faqQ1": "중국 라벨 규정 준수란 무엇인가요?",
     "faqA1": "중국 라벨 규정 준수는 제품 라벨이 중국의 GB 7718-2025 표준과 기타 관련 규정을 충족해야 한다는 의미입니다. 수입 식품과 소비재 전 품목에 의무 적용되며, 부적합 라벨은 통관 거부 사유가 됩니다.",
     "faqQ2": "중국 식품 라벨에는 무엇을 표기해야 하나요?",
@@ -1275,7 +1236,7 @@
     "faqQ4": "라벨 검토는 얼마나 걸리나요?",
     "faqA4": "전문 라벨 검토는 필수 표기 항목 점검, 번역 확인, 최신 GB 표준 적합성 검증을 포함해 보통 영업일 기준 3~5일이 소요됩니다."
   },
-  "BlogFaqCccCertificationExplained": {
+  "InsightsFaqCccCertificationExplained": {
     "faqQ1": "CCC 인증이란 무엇인가요?",
     "faqA1": "CCC(중국강제인증)는 중국으로 수입되거나 중국에서 제조되는 17개 품목에 의무 적용되는 인증 제도로, 전자제품, 자동차 부품, 안전유리, 어린이 장난감 등이 대상입니다.",
     "faqQ2": "어떤 제품에 CCC가 필요한가요?",
@@ -1285,7 +1246,7 @@
     "faqQ4": "CCC 비용은 얼마인가요?",
     "faqA4": "시험 비용, 공장 심사 비용, 연간 유지 비용을 포함해 일반적으로 3,000~15,000달러 이상입니다."
   },
-  "BlogFaqCosmeticsNmpaFiling": {
+  "InsightsFaqCosmeticsNmpaFiling": {
     "faqQ1": "NMPA 화장품 신고란 무엇인가요?",
     "faqA1": "NMPA(국가약품감독관리국) 신고는 중국으로 수입되는 모든 화장품에 의무 적용됩니다. 일반 화장품과 특수용도 화장품 모두 판매 전에 신고 또는 등록을 완료해야 합니다.",
     "faqQ2": "일반 화장품과 특수용도 화장품의 차이는 무엇인가요?",
@@ -1295,7 +1256,7 @@
     "faqQ4": "중국 현지 책임자가 필요한가요?",
     "faqA4": "네, 해외 화장품 기업은 NMPA 신고를 대행하고 법적 연락 창구 역할을 하며 제품 안전에 대해 연대 책임을 지는 중국 내 책임자를 지정해야 합니다."
   },
-  "BlogFaqCrossBorderEcommerceChina": {
+  "InsightsFaqCrossBorderEcommerceChina": {
     "faqQ1": "중국의 크로스보더 전자상거래(CBEC)란 무엇인가요?",
     "faqA1": "CBEC는 해외 브랜드가 기존 수입 유통 채널을 거치지 않고 온라인 플랫폼을 통해 중국 소비자에게 직접 판매하는 방식입니다. 규제 요건이 간소화되고 세율도 낮아집니다.",
     "faqQ2": "CBEC로 어떤 제품을 판매할 수 있나요?",
@@ -1399,7 +1360,7 @@
     "terminationTitle": "종료",
     "title": "서비스 약관"
   },
-  "BlogFaqKoreanCosmeticsGuide": {
+  "InsightsFaqKoreanCosmeticsGuide": {
     "faqQ1": "한국 화장품 브랜드도 일반 무역 수입 시 NMPA 신고가 필요한가요?",
     "faqA1": "네, 필요합니다. 일반 무역(크로스보더 전자상거래 제외)으로 화장품을 수입하는 경우 모든 제품이 수입 전에 NMPA에 신고(일반 화장품) 또는 등록(특수용도 화장품)을 마쳐야 합니다. 이는 원산지와 무관하게 모든 브랜드에 적용됩니다.",
     "faqQ2": "NMPA 신고 없이 크로스보더 전자상거래로 한국 화장품을 판매할 수 있나요?",
@@ -1421,7 +1382,7 @@
     "faqQ10": "NMPA 화장품 신고를 위해 중국 법인이 필요한가요?",
     "faqA10": "네, 필요합니다. 중국으로 수입되는 모든 화장품에는 중국 내 책임자, 즉 화장품 관련 사업 범위로 중국에 등록된 법인이 있어야 합니다. 자체 중국 법인, 유통업체 또는 제3자 서비스 제공업체가 될 수 있으며, 책임자는 제품 안전에 대한 법적 책임을 지고 모든 NMPA 업무를 처리합니다."
   },
-  "BlogFaqGreenCoffeeBeansChina": {
+  "InsightsFaqGreenCoffeeBeansChina": {
     "faqQ1": "생두에 GACC 식품 등록이 필요한가요?",
     "faqA1": "아닙니다. 볶지 않은 생두는 식품 등록 제도 밖에 있으며 공고 219에 따라 농산물로 관리됩니다.",
     "faqQ2": "수출국 당국의 승인이 여전히 필요한가요?",

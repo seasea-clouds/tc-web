@@ -747,45 +747,6 @@
     "insightsDesc": "Daha fazla içgörü keşfedin",
     "viewAllInsights": "Tüm Makaleleri Görüntüle"
   },
-  "Blog": {
-    "title": "Çin'e ihracat: içgörüler ve uyum rehberleri",
-    "subtitle": "Ürününüzü Çin'e taşımak için makaleler: pazara giriş koşulları, GACC kaydı, etiketleme ve sertifikasyon, dünya genelindeki ihracatçılar için.",
-    "readMore": "Devamını oku",
-    "categories": "Kategoriler",
-    "all": "Tümü",
-    "backToBlog": "Analizlere Geri Dön",
-    "backToHome": "Ana Sayfaya Dön",
-    "pagination": "Sayfa",
-    "noPosts": "Gönderi bulunamadı.",
-    "publishedOn": "Yayın Tarihi",
-    "author": "David Zhang",
-    "ctaTitle": "Çin Uyumluluğu Konusunda Yardıma mı İhtiyacınız Var?",
-    "ctaSubtitle": "Uzman ekibimizden ücretsiz uyumluluk değerlendirmesi alın.",
-    "ctaButton": "Ücretsiz Değerlendirme Alın",
-    "readTime": "dk okuma",
-    "postNotFound": "Gönderi Bulunamadı",
-    "toc": "İçindekiler",
-    "viewPackages": "Paketleri Görüntüle →",
-    "authorBio": "Çin pazarına giriş konusunda uzmanlaşmış mevzuat uzmanı. Şirketlere GACC kaydı, NMPA başvurusu, CCC sertifikasyonu ve Çin etiketleme gerekliliklerinde rehberlik ediyor.",
-    "relatedServiceLabel": "Bu Konuda Yardıma mı İhtiyacınız Var?",
-    "relatedServiceCta": "Ücretsiz Değerlendirme Alın →",
-    "service_gacc": "GACC Kaydı",
-    "service_label": "Çin Etiket Uyumluluğu",
-    "service_ccc": "CCC Sertifikasyonu",
-    "service_cosmetics": "NMPA Kozmetik Dosyalama",
-    "service_ecommerce": "Sınır Ötesi E-ticaret",
-    "shareThisArticle": "Bu makaleyi paylaş",
-    "relatedArticles": "İlgili Makaleler",
-    "referencesHeading": "Referanslar",
-    "references": "Referanslar",
-    "relatedArticlesDesc": "Bu konu hakkında daha fazla analiz keşfedin",
-    "prev": "Önceki",
-    "next": "Sonraki",
-    "pageInfo": "",
-    "of": " / ",
-    "metaTitle": "Çin'e ihracat: uyum içgörüleri | GACC, CCC, NMPA",
-    "metaDescription": "Çin'e ihracatçılar için rehberler: GACC kaydı, CCC sertifikası, NMPA kozmetik kaydı ve Çince etiketleme."
-  },
   "OrganizationJsonLd": {
     "description": "Ürünlerini Çin'e taşıyan ihracatçılar için uçtan uca danışmanlık: ",
     "contactType": "müşteri hizmetleri",
@@ -1253,7 +1214,7 @@
     "emailLabel": "Bize bir e-posta gönderin",
     "backToTopLabel": "Başa dön"
   },
-  "BlogFaqGaccRegistrationGuide": {
+  "InsightsFaqGaccRegistrationGuide": {
     "faqQ1": "GACC kaydı nedir ve kimler için zorunludur?",
     "faqA1": "GACC kaydı, Çin'e ihracat yapan her yabancı gıda üretim, işleme ve depolama tesisi için zorunludur. Şart 2022'den beri geçerli olup artık 1 Haziran 2026'da yürürlüğe giren 280 sayılı Kararname ile düzenleniyor — kapsamdaki her tesis ilk sevkiyattan önce CIFER sicilinde yer almalıdır.",
     "faqQ2": "GACC kaydı ne kadar sürer?",
@@ -1265,7 +1226,7 @@
     "faqQ5": "Kayıt olmazsam ne olur?",
     "faqA5": "Evet. Çin gümrüğü 2022'den bu yana kayıtsız tesislerin sevkiyatlarını istisnasız reddediyor; ürünler tesis CIFER'a kaydedilene kadar limanda bekletilir ve depolama ile demuraj masrafları ihracatçıya aittir."
   },
-  "BlogFaqChinaLabelCompliance": {
+  "InsightsFaqChinaLabelCompliance": {
     "faqQ1": "Çin etiket uyumluluğu nedir?",
     "faqA1": "Çin etiket uyumluluğu, ürün etiketlerinizin Çin'in GB 7718-2025 standardına ve diğer ilgili düzenlemelere uygun olması demektir. İthal edilen tüm gıda ve tüketici ürünleri için zorunludur; uyumsuz etiketler gümrük reddine yol açar.",
     "faqQ2": "Çin gıda etiketinde neler yer almalı?",
@@ -1275,7 +1236,7 @@
     "faqQ4": "Etiket incelemesi ne kadar sürer?",
     "faqA4": "Profesyonel etiket incelemesi, gerekli tüm unsurların kontrolü, çevirilerin doğrulanması ve güncel GB standartlarına uygunluğun sağlanması dahil genellikle 3-5 iş günü sürer."
   },
-  "BlogFaqCccCertificationExplained": {
+  "InsightsFaqCccCertificationExplained": {
     "faqQ1": "CCC sertifikası nedir?",
     "faqA1": "CCC (Çin Zorunlu Sertifikasyonu), Çin'e ithal edilen veya Çin'de üretilen elektronik, otomotiv parçaları, emniyet camı ve çocuk oyuncakları dahil 17 kategorideki ürünler için zorunludur. Türkiye'de alınan CE veya TSE belgeleri CCC'nin yerini tutmaz.",
     "faqQ2": "Hangi ürünler CCC kapsamına girer?",
@@ -1285,7 +1246,7 @@
     "faqQ4": "CCC'nin maliyeti nedir?",
     "faqA4": "Test ücretleri, fabrika denetim ücretleri ve yıllık bakım ücretleri dahil tipik maliyetler 3.000 ile 15.000 ABD Doları üzeri arasında değişir."
   },
-  "BlogFaqCosmeticsNmpaFiling": {
+  "InsightsFaqCosmeticsNmpaFiling": {
     "faqQ1": "NMPA kozmetik başvurusu nedir?",
     "faqA1": "NMPA (Ulusal Tıbbi Ürünler İdaresi) başvurusu, Çin'e ithal edilen tüm kozmetikler için zorunludur. Hem genel hem de özel kozmetikler satışa sunulmadan önce dosyalanmalı veya kaydedilmelidir.",
     "faqQ2": "Genel ve özel kozmetikler arasındaki fark nedir?",
@@ -1295,7 +1256,7 @@
     "faqQ4": "Çinli bir sorumlu kişi gerekiyor mu?",
     "faqA4": "Evet. Denizaşırı kozmetik şirketleri, NMPA başvurusunu yürütecek, yasal iletişim noktası olarak görev yapacak ve ürün güvenliğinde ortak sorumluluk üstlenecek bir Çinli sorumlu kişi atamak zorundadır."
   },
-  "BlogFaqCrossBorderEcommerceChina": {
+  "InsightsFaqCrossBorderEcommerceChina": {
     "faqQ1": "Çin'de sınır ötesi e-ticaret (CBEC) nedir?",
     "faqA1": "CBEC, denizaşırı markaların geleneksel ithalat kanalları olmadan çevrimiçi platformlar üzerinden doğrudan Çinli tüketicilere satış yapmasına olanak tanır. Ürünler basitleştirilmiş düzenleyici gerekliliklerden ve daha düşük vergi oranlarından yararlanır.",
     "faqQ2": "CBEC kapsamında hangi ürünler satılabilir?",
@@ -1399,7 +1360,7 @@
     "terminationTitle": "Fesih",
     "title": "Hizmet Şartları"
   },
-  "BlogFaqKoreanCosmeticsGuide": {
+  "InsightsFaqKoreanCosmeticsGuide": {
     "faqQ1": "Koreli bir kozmetik markası genel ticaretle ithalatta NMPA başvurusu yapmak zorunda mı?",
     "faqA1": "Evet. Kozmetikleri genel ticaret yoluyla (sınır ötesi e-ticaret değil) ithal ediyorsanız, ithalattan önce her ürünün NMPA'ya dosyalanması (sıradan kozmetik) veya kaydedilmesi (özel kozmetik) gerekir. Bu kural menşe ülkesi ne olursa olsun tüm markalar için geçerlidir.",
     "faqQ2": "Kore kozmetiklerini NMPA başvurusu yapmadan sınır ötesi e-ticaretle satabilir miyim?",
@@ -1421,7 +1382,7 @@
     "faqQ10": "Kozmetikleri NMPA'ya dosyalamak için Çinli bir şirkete ihtiyacım var mı?",
     "faqA10": "Evet. Çin'e ithal edilen her kozmetik ürünün, Çin'de kozmetik iş kapsamıyla kayıtlı bir tüzel kişilik olan bir Çinli yerel sorumlu kişisi olmalıdır. Bu, kendi Çin şubeniz, bir distribütör veya üçüncü taraf hizmet sağlayıcısı olabilir. Sorumlu kişi ürün güvenliğinden yasal olarak sorumludur ve tüm NMPA iletişimlerini yönetir."
   },
-  "BlogFaqGreenCoffeeBeansChina": {
+  "InsightsFaqGreenCoffeeBeansChina": {
     "faqQ1": "Yeşil kahve GACC gıda kaydı gerektirir mi?",
     "faqA1": "Hayır. Kavrulmamış çekirdekler gıda kayıt sistemi dışındadır ve duyuru 219 uyarınca tarım ürünü olarak yönetilir.",
     "faqQ2": "Tesisin ihracatçı ülke otoritesinden onayı hâlâ gerekli mi?",

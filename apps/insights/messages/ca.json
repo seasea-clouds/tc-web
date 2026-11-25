@@ -1,11 +1,11 @@
 {
-  "Blog": {
+  "Insights": {
     "title": "Exportar a la Xina: anàlisi i guies de compliment",
     "subtitle": "Articles per portar el producte a la Xina: requisits d'accés al mercat, registre GACC, etiquetatge i certificació.",
     "readMore": "Llegeix més",
     "categories": "Categories",
     "all": "Tots",
-    "backToBlog": "Torna a Insights",
+    "backToInsights": "Torna a Insights",
     "backToHome": "Torna a casa",
     "pagination": "Pàgina",
     "noPosts": "No s'han trobat publicacions.",

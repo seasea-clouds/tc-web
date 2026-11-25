@@ -1,11 +1,11 @@
 {
-  "Blog": {
+  "Insights": {
     "title": "Eksport til Kina: innsikt og etterlevelsesguider",
     "subtitle": "Artikler for eksportører over hele verden: krav for markedsadgang i Kina, GACC registrering, merking og sertifisering.",
     "readMore": "Les hele artikkelen",
     "categories": "Kategorier",
     "all": "Alle",
-    "backToBlog": "Tilbake til innsikt",
+    "backToInsights": "Tilbake til innsikt",
     "backToHome": "Tilbake til startsiden",
     "pagination": "Side",
     "noPosts": "Fant ingen artikler.",

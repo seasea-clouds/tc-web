@@ -1,11 +1,11 @@
 {
-  "Blog": {
+  "Insights": {
     "title": "Exportera till Kina: insikter och vägledning för regelefterlevnad",
     "subtitle": "Artiklar för exportörer världen över: krav för marknadstillträde i Kina, GACC registrering, märkning och certifiering.",
     "readMore": "Läs hela artikeln",
     "categories": "Kategorier",
     "all": "Alla",
-    "backToBlog": "Tillbaka till insikterna",
+    "backToInsights": "Tillbaka till insikterna",
     "backToHome": "Tillbaka till startsidan",
     "pagination": "Sida",
     "noPosts": "Inga artiklar hittades.",

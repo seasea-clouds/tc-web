@@ -1,11 +1,11 @@
 {
-  "Blog": {
+  "Insights": {
     "title": "Export do Číny: prehľady a príručky zhody",
     "subtitle": "Články pre vývozcov z celého sveta: požiadavky na vstup na čínsky trh, registrácia GACC, označovanie a certifikácia.",
     "readMore": "Prečítať celý článok",
     "categories": "Kategórie",
     "all": "Všetky",
-    "backToBlog": "Späť na prehľady",
+    "backToInsights": "Späť na prehľady",
     "backToHome": "Späť na úvodnú stránku",
     "pagination": "Stránka",
     "noPosts": "Nenašli sa žiadne články.",

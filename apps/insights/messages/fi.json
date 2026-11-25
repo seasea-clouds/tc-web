@@ -1,11 +1,11 @@
 {
-  "Blog": {
+  "Insights": {
     "title": "Vienti Kiinaan: näkemyksiä ja vaatimustenmukaisuusoppaita",
     "subtitle": "Artikkeleita vientiyrityksille maailmanlaajuisesti: Kiinan markkinoille pääsyn vaatimukset, GACC rekisteröinti, merkinnät ja sertifiointi.",
     "readMore": "Lue koko artikkeli",
     "categories": "Luokat",
     "all": "Kaikki",
-    "backToBlog": "Takaisin artikkeleihin",
+    "backToInsights": "Takaisin artikkeleihin",
     "backToHome": "Takaisin etusivulle",
     "pagination": "Sivu",
     "noPosts": "Artikkeleita ei löytynyt.",

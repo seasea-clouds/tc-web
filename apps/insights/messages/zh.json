@@ -1,11 +1,11 @@
 {
-  "Blog": {
+  "Insights": {
     "title": "出口中国：洞察与合规指南",
     "subtitle": "面向全球出口商：把产品带入中国市场的实操文章，涵盖市场准入要求、GACC 注册、标签与认证。",
     "readMore": "阅读更多",
     "categories": "分类",
     "all": "全部",
-    "backToBlog": "返回洞察",
+    "backToInsights": "返回洞察",
     "backToHome": "返回首页",
     "pagination": "页",
     "noPosts": "暂无文章，敬请期待。",

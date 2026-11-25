@@ -747,45 +747,6 @@
     "insightsDesc": "Explorați mai multe articole",
     "viewAllInsights": "Vezi toate articolele"
   },
-  "Blog": {
-    "title": "Export în China: perspective și ghiduri de conformitate",
-    "subtitle": "Articole pentru exportatorii din întreaga lume: cerințe de acces pe piața chineză, înregistrare GACC, etichetare și certificare.",
-    "readMore": "Citește articolul integral",
-    "categories": "Categorii",
-    "all": "Toate",
-    "backToBlog": "Înapoi la blog",
-    "backToHome": "Înapoi la pagina principală",
-    "pagination": "Pagină",
-    "noPosts": "Nu s-a găsit nicio postare.",
-    "publishedOn": "Publicat pe",
-    "author": "David Zhang",
-    "ctaTitle": "Aveți nevoie de ajutor pentru conformitatea cu China?",
-    "ctaSubtitle": "Obțineți o evaluare gratuită a conformității de la echipa noastră de experți.",
-    "ctaButton": "Obțineți o evaluare gratuită",
-    "readTime": "min citire",
-    "postNotFound": "Articolul nu a fost găsit",
-    "toc": "Cuprins",
-    "viewPackages": "Vezi pachetele de conformitate →",
-    "authorBio": "Expert în conformitate cu reglementările, specializat în intrarea pe piața din China. Ajută exportatorii români să navigheze cerințele GACC, NMPA, CCC și de etichetare chineză.",
-    "relatedServiceLabel": "Aveți nevoie de ajutor cu asta?",
-    "relatedServiceCta": "Obțineți o evaluare gratuită →",
-    "service_gacc": "Înregistrare GACC",
-    "service_label": "Conformitatea etichetei chinezești",
-    "service_ccc": "Certificare CCC",
-    "service_cosmetics": "Notificare NMPA pentru cosmetice",
-    "service_ecommerce": "Comerț electronic transfrontalier",
-    "shareThisArticle": "Distribuie acest articol",
-    "relatedArticles": "Articole înrudite",
-    "referencesHeading": "Referințe",
-    "references": "Referințe",
-    "relatedArticlesDesc": "Explorați mai multe articole pe această temă",
-    "prev": "Anterior",
-    "next": "Următorul",
-    "pageInfo": "",
-    "of": " din ",
-    "metaTitle": "Export în China: conformitate | GACC, CCC, NMPA",
-    "metaDescription": "Ghiduri pentru exportatorii în China: înregistrare GACC, certificare CCC, înregistrare cosmetică NMPA și etichetare chineză."
-  },
   "OrganizationJsonLd": {
     "description": "Consultanță completă pentru exportatorii care aduc produse în China: ",
     "contactType": "serviciu clienți",
@@ -1253,7 +1214,7 @@
     "emailLabel": "Trimite-ne un e-mail",
     "backToTopLabel": "Înapoi sus"
   },
-  "BlogFaqGaccRegistrationGuide": {
+  "InsightsFaqGaccRegistrationGuide": {
     "faqQ1": "Ce este înregistrarea GACC și cine are nevoie de ea?",
     "faqA1": "Înregistrarea GACC este obligatorie pentru orice unitate străină de producție, procesare și depozitare a alimentelor care exportă în China. Cerința se aplică din 2022 și este reglementată acum de Decretul 280, în vigoare din 1 iunie 2026 — fiecare unitate vizată trebuie să figureze în registrul CIFER înainte de prima expediere.",
     "faqQ2": "Cât durează înregistrarea GACC?",
@@ -1265,7 +1226,7 @@
     "faqQ5": "Ce se întâmplă dacă nu mă înregistrez?",
     "faqA5": "Da. Vama chineză respinge fără excepție, din 2022, expedierile din unități neînregistrate; mărfurile rămân în port până când unitatea este înregistrată în CIFER, iar costurile de depozitare și demurrage revin exportatorului."
   },
-  "BlogFaqChinaLabelCompliance": {
+  "InsightsFaqChinaLabelCompliance": {
     "faqQ1": "Ce înseamnă conformitatea cu eticheta chineză?",
     "faqA1": "Conformitatea cu eticheta chineză presupune ca etichetele produselor dumneavoastră să respecte standardul GB 7718-2025 din China și celelalte reglementări aplicabile. Este obligatorie pentru toate alimentele și produsele de consum importate, iar etichetele neconforme duc la respingerea la vamă.",
     "faqQ2": "Ce trebuie să conțină o etichetă alimentară chineză?",
@@ -1275,7 +1236,7 @@
     "faqQ4": "Cât durează verificarea etichetei?",
     "faqA4": "Verificarea profesională a etichetei durează de obicei 3–5 zile lucrătoare și acoperă fiecare element obligatoriu, verificarea traducerilor și confirmarea conformității cu cele mai recente standarde GB."
   },
-  "BlogFaqCccCertificationExplained": {
+  "InsightsFaqCccCertificationExplained": {
     "faqQ1": "Ce este certificarea CCC?",
     "faqA1": "CCC (Certificarea obligatorie din China) este obligatorie pentru produsele din 17 categorii, indiferent dacă sunt importate în China sau fabricate acolo, acoperind electronice, piese auto, sticlă de siguranță, jucării pentru copii și altele.",
     "faqQ2": "Ce produse necesită CCC?",
@@ -1285,7 +1246,7 @@
     "faqQ4": "Cât costă certificarea CCC?",
     "faqA4": "Costurile obișnuite variază între 3.000 și 15.000 USD sau mai mult, incluzând testele, inspecția fabricii și taxele anuale de întreținere."
   },
-  "BlogFaqCosmeticsNmpaFiling": {
+  "InsightsFaqCosmeticsNmpaFiling": {
     "faqQ1": "Ce este notificarea NMPA pentru cosmetice?",
     "faqA1": "Notificarea NMPA (Administrația Națională a Produselor Medicale din China) este obligatorie pentru toate cosmeticele importate în China. Atât cosmeticele obișnuite, cât și cele speciale trebuie notificate sau înregistrate înainte de a putea fi vândute. Aceasta se aplică și mărcilor românești de cosmetice naturale, pe bază de miere sau propolis.",
     "faqQ2": "Care este diferența dintre cosmeticele obișnuite și cele speciale?",
@@ -1295,7 +1256,7 @@
     "faqQ4": "Am nevoie de o persoană responsabilă în China?",
     "faqA4": "Da. Companiile străine de cosmetice trebuie să numească o persoană responsabilă în China, care gestionează notificarea NMPA, reprezintă punctul de contact legal și își asumă răspunderea comună pentru siguranța produsului."
   },
-  "BlogFaqCrossBorderEcommerceChina": {
+  "InsightsFaqCrossBorderEcommerceChina": {
     "faqQ1": "Ce este comerțul electronic transfrontalier (CBEC) în China?",
     "faqA1": "CBEC le permite mărcilor străine să vândă direct consumatorilor chinezi prin platforme online, ocolind canalele tradiționale de import. Produsele beneficiază de cerințe de reglementare simplificate și de cote de impozitare mai mici.",
     "faqQ2": "Ce produse pot fi vândute prin CBEC?",
@@ -1399,7 +1360,7 @@
     "terminationTitle": "Încetarea",
     "title": "Termeni și condiții"
   },
-  "BlogFaqKoreanCosmeticsGuide": {
+  "InsightsFaqKoreanCosmeticsGuide": {
     "faqQ1": "O marcă coreeană de cosmetice are nevoie de notificare NMPA pentru importurile prin comerț general?",
     "faqA1": "Da. Atunci când importați cosmetice prin comerț general (nu prin comerț electronic transfrontalier), fiecare produs trebuie fie notificat (cosmetice obișnuite), fie înregistrat (cosmetice speciale) la NMPA înainte de import, indiferent de țara de origine a mărcii.",
     "faqQ2": "Pot vinde cosmetice coreene prin comerț electronic transfrontalier fără notificare NMPA?",
@@ -1421,7 +1382,7 @@
     "faqQ10": "Am nevoie de o companie chineză pentru notificarea cosmeticelor la NMPA?",
     "faqA10": "Da. Fiecare cosmetic importat în China trebuie să aibă o persoană responsabilă națională chineză: o entitate juridică înregistrată în China, cu obiect de activitate legat de cosmetice. Poate fi propria filială din China, un distribuitor sau un furnizor terț de servicii. Persoana responsabilă răspunde legal pentru siguranța produsului și gestionează toate comunicările cu NMPA."
   },
-  "BlogFaqGreenCoffeeBeansChina": {
+  "InsightsFaqGreenCoffeeBeansChina": {
     "faqQ1": "Cafeaua verde are nevoie de înregistrare alimentară GACC?",
     "faqA1": "Nu. Boabele neprăjite sunt în afara sistemului de înregistrare alimentară și sunt gestionate ca produs agricol conform anunțului 219.",
     "faqQ2": "Unitatea mai are nevoie de aprobarea autorității din țara exportatoare?",

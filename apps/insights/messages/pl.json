@@ -1,11 +1,11 @@
 {
-  "Blog": {
+  "Insights": {
     "title": "Eksport do Chin: analizy i przewodniki zgodności",
     "subtitle": "Artykuły dla eksporterów z całego świata: wymogi wejścia na rynek chiński, rejestracja GACC, oznakowanie i certyfikacja.",
     "readMore": "Czytaj dalej",
     "categories": "Kategorie",
     "all": "Wszystkie",
-    "backToBlog": "Wróć do bloga",
+    "backToInsights": "Wróć do Insights",
     "backToHome": "Wróć do strony głównej",
     "pagination": "Strona",
     "noPosts": "Nie znaleziono żadnych artykułów.",

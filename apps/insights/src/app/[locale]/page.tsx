@@ -9,7 +9,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const alternates = buildAlternates(validLocale, [...locales], path);
 
   return {
-    title: 'Exporting to China Blog | SinoTrade Compliance',
+    title: 'Exporting to China Insights | SinoTrade Compliance',
     description: 'Expert guides on exporting your products to China',
     robots: { index: false, follow: true },
     alternates,

@@ -747,45 +747,6 @@
     "insightsDesc": "Terokai lebih banyak cerapan",
     "viewAllInsights": "Lihat Semua Artikel"
   },
-  "Blog": {
-    "title": "Eksport ke China: pandangan dan panduan pematuhan",
-    "subtitle": "Artikel untuk pengeksport di seluruh dunia: syarat masuk pasaran China, pendaftaran GACC, pelabelan dan pensijilan.",
-    "readMore": "Baca Lagi",
-    "categories": "Kategori",
-    "all": "Semua",
-    "backToBlog": "Kembali ke Wawasan",
-    "backToHome": "Kembali ke Laman Utama",
-    "pagination": "Halaman",
-    "noPosts": "Tiada siaran ditemui.",
-    "publishedOn": "Diterbitkan pada",
-    "author": "David Zhang",
-    "ctaTitle": "Perlukan Bantuan dengan Pematuhan China?",
-    "ctaSubtitle": "Dapatkan penilaian pematuhan percuma daripada pasukan pakar kami.",
-    "ctaButton": "Dapatkan Penilaian Percuma",
-    "readTime": "minit baca",
-    "postNotFound": "Catatan Tidak Ditemui",
-    "toc": "Kandungan",
-    "viewPackages": "Lihat Pakej →",
-    "authorBio": "Pakar pematuhan kawal selia yang pakar dalam kemasukan pasaran China, membantu pengeksport Malaysia menavigasi keperluan GACC, NMPA, CCC dan pelabelan Cina — daripada minyak sawit hingga kosmetik halal.",
-    "relatedServiceLabel": "Perlukan Bantuan Dengan Ini?",
-    "relatedServiceCta": "Dapatkan Penilaian Percuma →",
-    "service_gacc": "Pendaftaran GACC",
-    "service_label": "Pematuhan Label Cina",
-    "service_ccc": "Pensijilan CCC",
-    "service_cosmetics": "Pemfailan Kosmetik NMPA",
-    "service_ecommerce": "E-dagang Rentas Sempadan",
-    "shareThisArticle": "Kongsi artikel ini",
-    "relatedArticles": "Artikel Berkaitan",
-    "referencesHeading": "Rujukan",
-    "references": "Rujukan",
-    "relatedArticlesDesc": "Terokai lebih banyak wawasan tentang topik ini",
-    "prev": "Sebelumnya",
-    "next": "Seterusnya",
-    "pageInfo": "",
-    "of": " daripada ",
-    "metaTitle": "Eksport ke China: pematuhan | GACC, CCC, NMPA",
-    "metaDescription": "Panduan untuk pengeksport ke China: pendaftaran GACC, pensijilan CCC, pendaftaran kosmetik NMPA dan pelabelan China."
-  },
   "OrganizationJsonLd": {
     "description": "Perundingan menyeluruh untuk pengeksport yang membawa produk ke China: ",
     "contactType": "perkhidmatan pelanggan",
@@ -1253,7 +1214,7 @@
     "emailLabel": "Hantarkan e-mel kepada kami",
     "backToTopLabel": "Kembali ke atas"
   },
-  "BlogFaqGaccRegistrationGuide": {
+  "InsightsFaqGaccRegistrationGuide": {
     "faqQ1": "Apakah pendaftaran GACC dan siapa yang memerlukannya?",
     "faqA1": "Pendaftaran GACC adalah wajib bagi setiap kemudahan pengeluaran, pemprosesan dan penyimpanan makanan asing yang mengeksport ke China. Keperluan ini terpakai sejak 2022 dan kini dikawal oleh Dekri 280 yang berkuat kuasa 1 Jun 2026 — setiap kemudahan yang terlibat mesti berada dalam daftar CIFER sebelum penghantaran pertama.",
     "faqQ2": "Berapa lama masa pendaftaran GACC?",
@@ -1265,7 +1226,7 @@
     "faqQ5": "Apa yang berlaku jika saya tidak mendaftar?",
     "faqA5": "Ya. Sejak 2022 kastam China menolak tanpa pengecualian penghantaran daripada kemudahan yang belum berdaftar; barang kekal di pelabuhan sehingga kemudahan didaftarkan dalam CIFER, dan kos penyimpanan serta demurrage ditanggung oleh pengeksport."
   },
-  "BlogFaqChinaLabelCompliance": {
+  "InsightsFaqChinaLabelCompliance": {
     "faqQ1": "Apakah pematuhan label Cina?",
     "faqA1": "Pematuhan label Cina bermakna label produk anda memenuhi piawaian GB 7718-2025 China dan peraturan lain yang berkenaan. Ia wajib untuk semua makanan import dan produk pengguna. Tidak seperti pelabelan di Malaysia yang mengikut garis panduan KKM, semua elemen wajib mesti dipaparkan dalam Bahasa Cina Ringkas. Label yang tidak patuh mengakibatkan penolakan kastam.",
     "faqQ2": "Apa yang mesti ada pada label makanan Cina?",
@@ -1275,7 +1236,7 @@
     "faqQ4": "Berapa lama masa semakan label diambil?",
     "faqA4": "Semakan label profesional biasanya mengambil masa 3-5 hari perniagaan, termasuk menyemak semua elemen yang diperlukan, mengesahkan terjemahan dan memastikan pematuhan dengan piawaian GB terkini."
   },
-  "BlogFaqCccCertificationExplained": {
+  "InsightsFaqCccCertificationExplained": {
     "faqQ1": "Apakah pensijilan CCC?",
     "faqA1": "CCC (Pensijilan Wajib China) adalah wajib untuk produk dalam 17 kategori yang diimport ke atau dikeluarkan di China, termasuk elektronik, alat ganti automotif, kaca keselamatan dan mainan kanak-kanak. Sijil SIRIM QAS dari Malaysia tidak menggantikan CCC.",
     "faqQ2": "Produk mana yang memerlukan CCC?",
@@ -1285,7 +1246,7 @@
     "faqQ4": "Berapakah kos CCC?",
     "faqA4": "Kos biasa berkisar antara $3,000 hingga $15,000+, termasuk yuran ujian, yuran pemeriksaan kilang dan yuran penyelenggaraan tahunan."
   },
-  "BlogFaqCosmeticsNmpaFiling": {
+  "InsightsFaqCosmeticsNmpaFiling": {
     "faqQ1": "Apakah pemfailan kosmetik NMPA?",
     "faqA1": "Pemfailan NMPA (Pentadbiran Produk Perubatan Kebangsaan) adalah wajib untuk semua kosmetik yang diimport ke China. Kedua-dua kosmetik am dan kosmetik kegunaan khas mesti difailkan atau didaftarkan sebelum boleh dijual.",
     "faqQ2": "Apakah perbezaan antara kosmetik kegunaan umum dan khas?",
@@ -1295,7 +1256,7 @@
     "faqQ4": "Adakah saya memerlukan orang Cina yang bertanggungjawab?",
     "faqA4": "Ya, syarikat kosmetik luar negara mesti melantik orang Cina yang bertanggungjawab yang mengendalikan pemfailan NMPA, bertindak sebagai pusat hubungan undang-undang dan memikul liabiliti bersama untuk keselamatan produk."
   },
-  "BlogFaqCrossBorderEcommerceChina": {
+  "InsightsFaqCrossBorderEcommerceChina": {
     "faqQ1": "Apakah e-dagang rentas sempadan (CBEC) di China?",
     "faqA1": "CBEC membenarkan jenama luar negara menjual terus kepada pengguna China melalui platform dalam talian tanpa saluran import tradisional. Produk menikmati keperluan kawal selia yang dipermudahkan dan kadar cukai yang lebih rendah.",
     "faqQ2": "Apakah produk yang boleh dijual melalui CBEC?",
@@ -1399,7 +1360,7 @@
     "terminationTitle": "Penamatan",
     "title": "Syarat Perkhidmatan"
   },
-  "BlogFaqKoreanCosmeticsGuide": {
+  "InsightsFaqKoreanCosmeticsGuide": {
     "faqQ1": "Adakah jenama kosmetik Korea memerlukan pemfailan NMPA untuk import perdagangan am?",
     "faqA1": "Ya. Jika anda mengimport kosmetik melalui perdagangan am (bukan e-dagang rentas sempadan), setiap produk mesti difailkan (kosmetik biasa) atau didaftarkan (kosmetik khas) dengan NMPA sebelum diimport. Ini terpakai kepada semua jenama tanpa mengira negara asal.",
     "faqQ2": "Bolehkah saya menjual kosmetik Korea melalui e-dagang rentas sempadan tanpa pemfailan NMPA?",
@@ -1421,7 +1382,7 @@
     "faqQ10": "Adakah saya memerlukan syarikat China untuk memfailkan kosmetik dengan NMPA?",
     "faqA10": "Ya. Setiap produk kosmetik yang diimport ke China mesti mempunyai orang bertanggungjawab domestik China — entiti sah yang berdaftar di China dengan skop perniagaan berkaitan kosmetik. Ini boleh menjadi anak syarikat Cina anda sendiri, pengedar atau pembekal perkhidmatan pihak ketiga. Orang yang bertanggungjawab bertanggungjawab secara sah untuk keselamatan produk dan mengendalikan semua komunikasi NMPA."
   },
-  "BlogFaqGreenCoffeeBeansChina": {
+  "InsightsFaqGreenCoffeeBeansChina": {
     "faqQ1": "Adakah biji hijau memerlukan pendaftaran makanan GACC?",
     "faqA1": "Tidak. Biji yang belum dipanggang berada di luar sistem pendaftaran makanan dan diuruskan sebagai produk pertanian di bawah Pengumuman 219.",
     "faqQ2": "Adakah premis masih memerlukan kelulusan pihak berkuasa negara pengeksport?",

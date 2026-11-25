@@ -279,8 +279,11 @@ const IGNORE_FALLBACK_KEYS = new Set([
   // About — names are always English
   'About.expertName', 'About.teamMember1Name', 'About.teamMember2Name', 'About.teamMember3Name',
   'About.teamMember4Name', 'About.partners1', 'About.partners2', 'About.value1Title',
-  // Blog
-  'Blog.author', 'Blog.title', 'Blog.pagination',
+  // Insights
+  // author：人名，48 语言一律保留 David Zhang
+  'Insights.author',
+  // pagination：fr 的 "Page" 是法语正确拼写，与英文同形不是漏翻
+  'Insights.pagination',
   // Pricing — currency values are always English
   'Pricing.singlePrice', 'Pricing.professionalPrice', 'Pricing.monthlyPrice',
   // Quote
@@ -293,8 +296,8 @@ const IGNORE_FALLBACK_KEYS = new Set([
   'Check.complianceNo', 'Check.cccDoc_cb_format',
   'ReportSection.squattingRiskLabel', 'ReportSection.squattingRealWorldCase',
   'ReportSection.animalTesting', 'ThankYou.stat4Label',
-  // Blog categories label
-  'Blog.categories',
+  // Insights 分类标签：ca 的 "Categories" 是加泰罗尼亚语正确拼写，同形非漏翻
+  'Insights.categories',
   // Portal labels that need translation
   'Home.popular', 'ReportSection.client', 'Auth.email', 'Dashboard.email',
   // Portal CTA links — English placeholders pending translation assignment

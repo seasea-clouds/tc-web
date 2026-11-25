@@ -1,11 +1,11 @@
 {
-  "Blog": {
+  "Insights": {
     "title": "Eksport në Kinë: njohuri dhe udhëzues përputhshmërie",
     "subtitle": "Artikuj për eksportuesit në mbarë botën: kërkesat për hyrje në tregun kinez, regjistrimi GACC, etiketimi dhe certifikimi.",
     "readMore": "Lexo më shumë",
     "categories": "Kategoritë",
     "all": "Të gjitha",
-    "backToBlog": "Kthehu te \"Insights\".",
+    "backToInsights": "Kthehu te \"Insights\".",
     "backToHome": "Kthehu në shtëpi",
     "pagination": "Faqe",
     "noPosts": "Nuk u gjet asnjë postim.",

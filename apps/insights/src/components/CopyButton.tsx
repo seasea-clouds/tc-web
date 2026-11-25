@@ -9,7 +9,7 @@ interface Props {
 
 export default function CopyButton({ url }: Props) {
   const [copied, setCopied] = useState(false);
-  const t = useTranslations('Blog');
+  const t = useTranslations('Insights');
 
   const handleCopy = useCallback(async (e: React.MouseEvent) => {
     e.preventDefault();

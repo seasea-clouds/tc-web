@@ -747,45 +747,6 @@
     "insightsDesc": "Eksploroni më shumë njohuri",
     "viewAllInsights": "Shiko të gjithë artikujt"
   },
-  "Blog": {
-    "title": "Eksport në Kinë: njohuri dhe udhëzues përputhshmërie",
-    "subtitle": "Artikuj për eksportuesit në mbarë botën: kërkesat për hyrje në tregun kinez, regjistrimi GACC, etiketimi dhe certifikimi.",
-    "readMore": "Lexo më shumë",
-    "categories": "Kategoritë",
-    "all": "Të gjitha",
-    "backToBlog": "Kthehu te \"Insights\".",
-    "backToHome": "Kthehu në shtëpi",
-    "pagination": "Faqe",
-    "noPosts": "Nuk u gjet asnjë postim.",
-    "publishedOn": "Publikuar më",
-    "author": "David Zhang",
-    "ctaTitle": "Keni nevojë për ndihmë me pajtueshmërinë me Kinën?",
-    "ctaSubtitle": "Merrni një vlerësim të pajtueshmërisë falas nga ekipi ynë i ekspertëve.",
-    "ctaButton": "Merrni vlerësim falas",
-    "readTime": "min leximi",
-    "postNotFound": "Postimi nuk u gjet",
-    "toc": "Përmbajtja",
-    "viewPackages": "Shiko paketat →",
-    "authorBio": "Ekspert i pajtueshmërisë rregullatore i specializuar në hyrjen në tregun e Kinës. Ndihmoni bizneset të lundrojnë kërkesat e etiketimit GACC, NMPA, CCC dhe kineze.",
-    "relatedServiceLabel": "Keni nevojë për ndihmë me këtë?",
-    "relatedServiceCta": "Merrni vlerësim falas →",
-    "service_gacc": "Regjistrimi i GACC",
-    "service_label": "Pajtueshmëria me etiketën kineze",
-    "service_ccc": "Certifikimi CCC",
-    "service_cosmetics": "Regjistrimi i kozmetikës NMPA",
-    "service_ecommerce": "E-commerce ndërkufitare",
-    "shareThisArticle": "Ndani këtë artikull",
-    "relatedArticles": "Artikuj të ngjashëm",
-    "referencesHeading": "Referencat",
-    "references": "Referencat",
-    "relatedArticlesDesc": "Eksploroni më shumë njohuri mbi këtë temë",
-    "prev": "Mbrapa",
-    "next": "Tjetra",
-    "pageInfo": "",
-    "of": " nga ",
-    "metaTitle": "Eksport në Kinë: përputhshmëri | GACC, CCC, NMPA",
-    "metaDescription": "Udhëzues për eksportuesit në Kinë: regjistrimi GACC, certifikimi CCC, regjistrimi i kozmetikës NMPA dhe etiketimi kinez."
-  },
   "OrganizationJsonLd": {
     "description": "Konsulencë gjithëpërfshirëse për eksportuesit që dërgojnë produkte në Kinë: ",
     "contactType": "shërbimi ndaj klientit",
@@ -1253,7 +1214,7 @@
     "emailLabel": "Na dërgoni një email",
     "backToTopLabel": "Kthehu në krye"
   },
-  "BlogFaqGaccRegistrationGuide": {
+  "InsightsFaqGaccRegistrationGuide": {
     "faqQ1": "Çfarë është regjistrimi i GACC dhe kujt i nevojitet?",
     "faqA1": "Regjistrimi GACC është i detyrueshëm për çdo objekt të huaj prodhimi, përpunimi dhe magazinimi të ushqimit që eksporton drejt Kinës. Kërkesa zbatohet që nga viti 2022 dhe tani rregullohet nga dekreti 280, në fuqi nga 1 qershori 2026 — çdo objekt i përfshirë duhet të jetë në regjistrin CIFER para dërgesës së parë.",
     "faqQ2": "Sa kohë zgjat regjistrimi i GACC?",
@@ -1265,7 +1226,7 @@
     "faqQ5": "Çfarë ndodh nëse nuk regjistrohem?",
     "faqA5": "Po. Dogana kineze refuzon pa përjashtim që nga viti 2022 dërgesat nga objekte të paregjistruara; mallrat qëndrojnë në port derisa objekti të regjistrohet në CIFER, dhe kostot e magazinimit e të pritjes i mban eksportuesi."
   },
-  "BlogFaqChinaLabelCompliance": {
+  "InsightsFaqChinaLabelCompliance": {
     "faqQ1": "Çfarë është pajtueshmëria me etiketën kineze?",
     "faqA1": "Pajtueshmëria me etiketat kineze do të thotë që etiketat e produkteve tuaja plotësojnë standardin GB 7718-2025 të Kinës dhe rregullore të tjera të zbatueshme. Është e detyrueshme për të gjitha produktet ushqimore dhe konsumatore të importuara. Etiketat që nuk përputhen rezultojnë me refuzim doganor.",
     "faqQ2": "Çfarë duhet të jetë në një etiketë ushqimore kineze?",
@@ -1275,7 +1236,7 @@
     "faqQ4": "Sa kohë zgjat shqyrtimi i etiketës?",
     "faqA4": "Rishikimi profesional i etiketës zakonisht zgjat 3-5 ditë pune, duke përfshirë kontrollimin e të gjithë elementëve të kërkuar, verifikimin e përkthimeve dhe sigurimin e pajtueshmërisë me standardet më të fundit të GB."
   },
-  "BlogFaqCccCertificationExplained": {
+  "InsightsFaqCccCertificationExplained": {
     "faqQ1": "Çfarë është certifikimi CCC?",
     "faqA1": "CCC (Certifikimi i Detyrueshëm i Kinës) është i detyrueshëm për produktet në 17 kategori të importuara ose të prodhuara në Kinë, duke përfshirë pajisjet elektronike, pjesët e automobilave, xhamin e sigurisë dhe lodrat e fëmijëve.",
     "faqQ2": "Cilat produkte kanë nevojë për CCC?",
@@ -1285,7 +1246,7 @@
     "faqQ4": "Sa kushton CCC?",
     "faqA4": "Kostot tipike variojnë nga $3,000 deri në $15,000+, duke përfshirë tarifat e testimit, tarifat e inspektimit të fabrikës dhe tarifat vjetore të mirëmbajtjes."
   },
-  "BlogFaqCosmeticsNmpaFiling": {
+  "InsightsFaqCosmeticsNmpaFiling": {
     "faqQ1": "Çfarë është depozitimi i kozmetikës NMPA?",
     "faqA1": "Regjistrimi NMPA (Administrata Kombëtare e Produkteve Mjekësore) është e detyrueshme për të gjitha produktet kozmetike të importuara në Kinë. Si kozmetika e përgjithshme ashtu edhe ato kozmetike për përdorim të veçantë duhet të depozitohen ose regjistrohen përpara se të shiten.",
     "faqQ2": "Cili është ndryshimi midis kozmetikës me përdorim të përgjithshëm dhe të veçantë?",
@@ -1295,7 +1256,7 @@
     "faqQ4": "A kam nevojë për një person përgjegjës kinez?",
     "faqA4": "Po, kompanitë kozmetike jashtë shtetit duhet të caktojnë një person përgjegjës kinez, i cili merret me paraqitjen e NMPA, shërben si pika ligjore e kontaktit dhe merr përgjegjësi të përbashkët për sigurinë e produktit."
   },
-  "BlogFaqCrossBorderEcommerceChina": {
+  "InsightsFaqCrossBorderEcommerceChina": {
     "faqQ1": "Çfarë është tregtia elektronike ndërkufitare (CBEC) në Kinë?",
     "faqA1": "CBEC lejon që markat e huaja t'u shesin drejtpërdrejt konsumatorëve kinezë përmes platformave në internet pa kanale tradicionale të importit. Produktet gëzojnë kërkesa të thjeshtuara rregullatore dhe norma më të ulëta tatimore.",
     "faqQ2": "Cilat produkte mund të shiten përmes CBEC?",
@@ -1399,7 +1360,7 @@
     "terminationTitle": "Përfundimi",
     "title": "Kushtet e Shërbimit"
   },
-  "BlogFaqKoreanCosmeticsGuide": {
+  "InsightsFaqKoreanCosmeticsGuide": {
     "faqQ1": "A ka nevojë një markë koreane e kozmetikës për paraqitjen NMPA për importe të përgjithshme tregtare?",
     "faqA1": "po. Nëse importoni kozmetikë përmes tregtisë së përgjithshme (jo tregtisë elektronike ndërkufitare), çdo produkt duhet të depozitohet (kozmetikë e zakonshme) ose të regjistrohet (kozmetikë speciale) në NMPA përpara importit. Kjo vlen për të gjitha markat, pavarësisht nga vendi i origjinës.",
     "faqQ2": "A mund të shes kozmetikë koreane përmes tregtisë elektronike ndërkufitare pa paraqitjen e NMPA?",
@@ -1421,7 +1382,7 @@
     "faqQ10": "A kam nevojë për një kompani kineze për të paraqitur kozmetikë në NMPA?",
     "faqA10": "po. Çdo produkt kozmetik i importuar në Kinë duhet të ketë një person përgjegjës vendas kinez - një person juridik i regjistruar në Kinë me fushëveprimin e biznesit të lidhur me kozmetikën. Ky mund të jetë filiali juaj kinez, një shpërndarës ose një ofrues shërbimi i palës së tretë. Personi përgjegjës është ligjërisht përgjegjës për sigurinë e produktit dhe trajton të gjitha komunikimet NMPA."
   },
-  "BlogFaqGreenCoffeeBeansChina": {
+  "InsightsFaqGreenCoffeeBeansChina": {
     "faqQ1": "A ka nevojë kafeja e gjelbër për regjistrim ushqimor të GACC?",
     "faqA1": "Jo. Kokrrat e papjekura janë jashtë sistemit të regjistrimit ushqimor dhe administrohen si produkt bujqësor sipas njoftimit 219.",
     "faqQ2": "A ka ende nevojë objekti për miratimin e autoritetit të vendit eksportues?",

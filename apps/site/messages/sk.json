@@ -747,45 +747,6 @@
     "insightsDesc": "Preskúmajte ďalšie články",
     "viewAllInsights": "Zobraziť všetky články"
   },
-  "Blog": {
-    "title": "Export do Číny: prehľady a príručky zhody",
-    "subtitle": "Články pre vývozcov z celého sveta: požiadavky na vstup na čínsky trh, registrácia GACC, označovanie a certifikácia.",
-    "readMore": "Prečítať celý článok",
-    "categories": "Kategórie",
-    "all": "Všetky",
-    "backToBlog": "Späť na prehľady",
-    "backToHome": "Späť na úvodnú stránku",
-    "pagination": "Stránka",
-    "noPosts": "Nenašli sa žiadne články.",
-    "publishedOn": "Publikované",
-    "author": "David Zhang",
-    "ctaTitle": "Potrebujete pomoc so súladom v Číne?",
-    "ctaSubtitle": "Získajte bezplatné posúdenie súladu od nášho tímu odborníkov.",
-    "ctaButton": "Získajte bezplatné posúdenie",
-    "readTime": "min čítania",
-    "postNotFound": "Článok sa nenašiel",
-    "toc": "Obsah",
-    "viewPackages": "Zobraziť balíky →",
-    "authorBio": "Odborník na regulačnú zhodu so zameraním na vstup na čínsky trh. Pomáha vývozcom orientovať sa v registrácii GACC, oznámení kozmetiky NMPA, certifikácii CCC a požiadavkách na čínske etikety.",
-    "relatedServiceLabel": "Potrebujete s tým pomôcť?",
-    "relatedServiceCta": "Získajte bezplatné posúdenie →",
-    "service_gacc": "Registrácia GACC",
-    "service_label": "Súlad s čínskymi etiketami",
-    "service_ccc": "Certifikácia CCC",
-    "service_cosmetics": "Podanie kozmetiky NMPA",
-    "service_ecommerce": "Cezhraničný elektronický obchod",
-    "shareThisArticle": "Zdieľať tento článok",
-    "relatedArticles": "Súvisiace články",
-    "referencesHeading": "Zdroje",
-    "references": "Zdroje",
-    "relatedArticlesDesc": "Preskúmajte ďalšie články na túto tému",
-    "prev": "Predchádzajúci",
-    "next": "Ďalší",
-    "pageInfo": "",
-    "of": " z ",
-    "metaTitle": "Export do Číny: zhoda | GACC, CCC, NMPA",
-    "metaDescription": "Príručky pre vývozcov do Číny: registrácia GACC, certifikácia CCC, registrácia kozmetiky NMPA a čínske označovanie."
-  },
   "OrganizationJsonLd": {
     "description": "Komplexné poradenstvo pre vývozcov dodávajúcich produkty do Číny: ",
     "contactType": "zákaznícky servis",
@@ -1253,7 +1214,7 @@
     "emailLabel": "Pošlite nám e-mail",
     "backToTopLabel": "Späť na začiatok"
   },
-  "BlogFaqGaccRegistrationGuide": {
+  "InsightsFaqGaccRegistrationGuide": {
     "faqQ1": "Čo je registrácia GACC a kto ju potrebuje?",
     "faqA1": "Registrácia GACC je povinná pre každý zahraničný závod na výrobu, spracovanie a skladovanie potravín, ktorý vyváža do Číny. Požiadavka platí od roku 2022 a teraz ju upravuje nariadenie 280, účinné od 1. júna 2026 — každý dotknutý závod musí byť v registri CIFER pred prvou zásielkou.",
     "faqQ2": "Ako dlho trvá registrácia GACC?",
@@ -1265,7 +1226,7 @@
     "faqQ5": "Čo sa stane, ak sa nezaregistrujem?",
     "faqA5": "Áno. Čínska colná správa od roku 2022 bez výnimky odmieta zásielky z neregistrovaných závodov; tovar zostáva v prístave, kým závod nie je registrovaný v CIFER, a náklady na skladovanie a demurrage nesie vývozca."
   },
-  "BlogFaqChinaLabelCompliance": {
+  "InsightsFaqChinaLabelCompliance": {
     "faqQ1": "Čo je súlad s čínskymi etiketami?",
     "faqA1": "Súlad s čínskymi etiketami znamená, že etikety vašich výrobkov spĺňajú čínsku normu GB 7718-2025 a ďalšie platné predpisy. Je povinný pre všetky dovážané potraviny a spotrebný tovar. Nevyhovujúce etikety vedú k odmietnutiu zásielky na colnici.",
     "faqQ2": "Čo musí byť na čínskej etikete potraviny?",
@@ -1275,7 +1236,7 @@
     "faqQ4": "Ako dlho trvá kontrola etikety?",
     "faqA4": "Profesionálna kontrola etikety zvyčajne trvá 3 až 5 pracovných dní a zahŕňa preverenie všetkých povinných prvkov, overenie prekladov a potvrdenie súladu s najnovšími normami GB."
   },
-  "BlogFaqCccCertificationExplained": {
+  "InsightsFaqCccCertificationExplained": {
     "faqQ1": "Čo je certifikácia CCC?",
     "faqA1": "CCC (China Compulsory Certification, čínska povinná certifikácia) je povinná pre výrobky zo 17 kategórií dovážané alebo vyrábané v Číne, vrátane elektroniky, automobilových dielov, bezpečnostného skla a detských hračiek. Pre slovenských vývozcov platí, že európske označenie CE certifikát CCC nenahrádza.",
     "faqQ2": "Ktoré výrobky potrebujú CCC?",
@@ -1285,7 +1246,7 @@
     "faqQ4": "Koľko stojí certifikácia CCC?",
     "faqA4": "Typické náklady sa pohybujú od 3 000 do viac ako 15 000 USD a zahŕňajú poplatky za testovanie, kontrolu závodu a ročné poplatky za udržiavanie certifikátu."
   },
-  "BlogFaqCosmeticsNmpaFiling": {
+  "InsightsFaqCosmeticsNmpaFiling": {
     "faqQ1": "Čo je oznámenie kozmetiky NMPA?",
     "faqA1": "Oznámenie u NMPA (Národný úrad pre lieky a zdravotnícke pomôcky) je povinné pre všetku kozmetiku dovážanú do Číny. Bežná kozmetika musí byť pred predajom oznámená a kozmetika na špeciálne použitie registrovaná.",
     "faqQ2": "Aký je rozdiel medzi bežnou kozmetikou a kozmetikou na špeciálne použitie?",
@@ -1295,7 +1256,7 @@
     "faqQ4": "Potrebujem čínsku zodpovednú osobu?",
     "faqA4": "Áno. Zahraničné kozmetické spoločnosti musia vymenovať čínsku zodpovednú osobu, ktorá vedie oznámenie NMPA, slúži ako právny kontakt v Číne a nesie spoločnú zodpovednosť za bezpečnosť výrobkov."
   },
-  "BlogFaqCrossBorderEcommerceChina": {
+  "InsightsFaqCrossBorderEcommerceChina": {
     "faqQ1": "Čo je cezhraničný elektronický obchod (CBEC) v Číne?",
     "faqA1": "CBEC umožňuje zahraničným značkám predávať priamo čínskym spotrebiteľom cez online platformy bez tradičných dovozných kanálov. Výrobky majú zjednodušené regulačné požiadavky a nižšie daňové sadzby.",
     "faqQ2": "Aké výrobky možno predávať cez CBEC?",
@@ -1399,7 +1360,7 @@
     "terminationTitle": "Ukončenie",
     "title": "Zmluvné podmienky"
   },
-  "BlogFaqKoreanCosmeticsGuide": {
+  "InsightsFaqKoreanCosmeticsGuide": {
     "faqQ1": "Potrebuje kórejská kozmetická značka oznámenie NMPA pri bežnom obchodnom dovoze?",
     "faqA1": "Áno. Ak dovážate kozmetiku bežným obchodom (nie cezhraničným elektronickým obchodom), každý výrobok musí byť pred dovozom buď oznámený (bežná kozmetika), alebo registrovaný (kozmetika na špeciálne použitie) u NMPA. Platí to pre všetky značky bez ohľadu na krajinu pôvodu, teda aj pre slovenské kozmetické značky.",
     "faqQ2": "Môžem predávať kórejskú kozmetiku cez cezhraničný elektronický obchod bez oznámenia NMPA?",
@@ -1421,7 +1382,7 @@
     "faqQ10": "Potrebujem čínsku spoločnosť na oznámenie kozmetiky u NMPA?",
     "faqA10": "Áno. Každý kozmetický výrobok dovážaný do Číny musí mať čínsku domácu zodpovednú osobu, teda právnickú osobu registrovanú v Číne s obchodným zameraním súvisiacim s kozmetikou. Môže to byť vaša vlastná čínska dcérska spoločnosť, distribútor alebo poskytovateľ služieb tretej strany. Zodpovedná osoba právne zodpovedá za bezpečnosť výrobku a zabezpečuje všetku komunikáciu s NMPA."
   },
-  "BlogFaqGreenCoffeeBeansChina": {
+  "InsightsFaqGreenCoffeeBeansChina": {
     "faqQ1": "Potrebuje zelená káva registráciu potraviny GACC?",
     "faqA1": "Nie. Nepražené zrná stoja mimo systému registrácie potravín a vedú sa ako poľnohospodársky produkt podľa oznámenia 219.",
     "faqQ2": "Potrebuje prevádzka stále schválenie úradu vyvážajúcej krajiny?",

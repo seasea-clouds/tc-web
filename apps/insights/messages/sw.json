@@ -1,11 +1,11 @@
 {
-  "Blog": {
+  "Insights": {
     "title": "Mauzo nje kwenda China: maarifa na miongozo ya uzingatiaji",
     "subtitle": "Makala kwa wauzaji nje duniani kote: masharti ya kuingia soko la China, usajili wa GACC, lebo na uthibitisho.",
     "readMore": "Soma Zaidi",
     "categories": "Kategoria",
     "all": "Wote",
-    "backToBlog": "Rudi kwa Maarifa",
+    "backToInsights": "Rudi kwa Maarifa",
     "backToHome": "Rudi Nyumbani",
     "pagination": "Ukurasa",
     "noPosts": "Hakuna machapisho yaliyopatikana.",

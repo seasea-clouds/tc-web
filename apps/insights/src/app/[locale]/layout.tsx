@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const validLocale = locales.includes(locale as any) ? locale : defaultLocale;
 
-  const t = await getTranslations({ locale: validLocale, namespace: 'Blog' });
+  const t = await getTranslations({ locale: validLocale, namespace: 'Insights' });
 
   const title = t('metaTitle') || 'Exporting to China Compliance';
   const description = t('metaDescription') || 'Guides for exporters to China: GACC registration, CCC certification, NMPA cosmetics filing, and cross-border e-commerce.';

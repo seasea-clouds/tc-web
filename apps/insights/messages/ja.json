@@ -1,11 +1,11 @@
 {
-  "Blog": {
+  "Insights": {
     "title": "中国への輸出：インサイトとコンプライアンスガイド",
     "subtitle": "世界の輸出事業者に向け、中国市場への参入要件、GACC登録、表示、認証を解説する実務記事です。",
     "readMore": "続きを読む",
     "categories": "カテゴリー",
     "all": "すべて",
-    "backToBlog": "記事一覧に戻る",
+    "backToInsights": "記事一覧に戻る",
     "backToHome": "ホームに戻る",
     "pagination": "ページ",
     "noPosts": "投稿が見つかりませんでした。",

@@ -747,45 +747,6 @@
     "insightsDesc": "Exploreu més articles",
     "viewAllInsights": "Vegeu tots els articles"
   },
-  "Blog": {
-    "title": "Exportar a la Xina: anàlisi i guies de compliment",
-    "subtitle": "Articles per portar el producte a la Xina: requisits d'accés al mercat, registre GACC, etiquetatge i certificació.",
-    "readMore": "Llegeix més",
-    "categories": "Categories",
-    "all": "Tots",
-    "backToBlog": "Torna a Insights",
-    "backToHome": "Torna a casa",
-    "pagination": "Pàgina",
-    "noPosts": "No s'han trobat publicacions.",
-    "publishedOn": "Publicat el",
-    "author": "David Zhang",
-    "ctaTitle": "Necessites ajuda amb el compliment de la Xina?",
-    "ctaSubtitle": "Obteniu una avaluació de compliment gratuïta del nostre equip d'experts.",
-    "ctaButton": "Obteniu una avaluació gratuïta",
-    "readTime": "min de lectura",
-    "postNotFound": "Publicació no trobada",
-    "toc": "Continguts",
-    "viewPackages": "Veure paquets →",
-    "authorBio": "Expert en compliment normatiu especialitzat en l'entrada al mercat de la Xina. Ajuda a les empreses a navegar pels requisits d'etiquetatge GACC, NMPA, CCC i xinès.",
-    "relatedServiceLabel": "Necessites ajuda amb això?",
-    "relatedServiceCta": "Obteniu una avaluació gratuïta →",
-    "service_gacc": "Registre GACC",
-    "service_label": "Compliment de l'etiqueta xinesa",
-    "service_ccc": "Certificació CCC",
-    "service_cosmetics": "Presentació de cosmètics NMPA",
-    "service_ecommerce": "Comerç electrònic transfronterer",
-    "shareThisArticle": "Comparteix aquest article",
-    "relatedArticles": "Articles relacionats",
-    "referencesHeading": "Referències",
-    "references": "Referències",
-    "relatedArticlesDesc": "Exploreu més informació sobre aquest tema",
-    "prev": "Anterior",
-    "next": "Següent",
-    "pageInfo": "",
-    "of": " de ",
-    "metaTitle": "Exportar a la Xina: compliment | GACC, CCC, NMPA",
-    "metaDescription": "Guies per a exportadors a la Xina: registre GACC, certificació CCC, registre NMPA de cosmètics i etiquetatge xinès."
-  },
   "OrganizationJsonLd": {
     "description": "Consultoria integral per a exportadors que porten productes a la Xina: ",
     "contactType": "servei al client",
@@ -1253,7 +1214,7 @@
     "emailLabel": "Envieu-nos un correu electrònic",
     "backToTopLabel": "Tornar a dalt"
   },
-  "BlogFaqGaccRegistrationGuide": {
+  "InsightsFaqGaccRegistrationGuide": {
     "faqQ1": "Què és el registre GACC i qui ho necessita?",
     "faqA1": "El registre GACC és obligatori per a tota planta estrangera de producció, transformació i emmagatzematge d'aliments que exporti a la Xina. L'exigència s'aplica des del 2022 i ara es regeix pel Decret 280, vigent des de l'1 de juny de 2026: cada planta afectada ha de constar al registre CIFER abans del primer enviament.",
     "faqQ2": "Quant de temps triga el registre GACC?",
@@ -1265,7 +1226,7 @@
     "faqQ5": "Què passa si no em registre?",
     "faqA5": "Sí. La duana xinesa rebutja sense excepció els enviaments de plantes no registrades des del 2022; la mercaderia queda al port fins que la planta es registra al CIFER, i les despeses d'emmagatzematge i demora van a càrrec de l'exportador."
   },
-  "BlogFaqChinaLabelCompliance": {
+  "InsightsFaqChinaLabelCompliance": {
     "faqQ1": "Què és el compliment de l'etiqueta xinesa?",
     "faqA1": "El compliment de l'etiqueta xinesa significa que les etiquetes dels vostres productes compleixen l'estàndard GB 7718-2025 de la Xina i altres regulacions aplicables. És obligatori per a tots els aliments i productes de consum importats. Les etiquetes no conformes donen lloc al rebuig de la duana.",
     "faqQ2": "Què ha de constar a l'etiqueta d'un aliment xinès?",
@@ -1275,7 +1236,7 @@
     "faqQ4": "Quant de temps triga la revisió de l'etiqueta?",
     "faqA4": "La revisió de l'etiqueta professional sol trigar entre 3 i 5 dies laborables, inclosa la comprovació de tots els elements necessaris, la verificació de les traduccions i el compliment dels estàndards de GB més recents."
   },
-  "BlogFaqCccCertificationExplained": {
+  "InsightsFaqCccCertificationExplained": {
     "faqQ1": "Què és la certificació CCC?",
     "faqA1": "La CCC (China Compulsory Certification) és obligatòria per als productes de 17 categories importats o fabricats a la Xina, com ara l'electrònica, peces d'automòbils, vidres de seguretat i joguines per a nens.",
     "faqQ2": "Quins productes necessiten CCC?",
@@ -1285,7 +1246,7 @@
     "faqQ4": "Quant costa CCC?",
     "faqA4": "Els costos típics oscil·len entre els 3.000 i els 15.000 dòlars o més, incloses les taxes de prova, les taxes d'inspecció de fàbrica i les taxes de manteniment anuals."
   },
-  "BlogFaqCosmeticsNmpaFiling": {
+  "InsightsFaqCosmeticsNmpaFiling": {
     "faqQ1": "Què és la presentació de cosmètics NMPA?",
     "faqA1": "La presentació de la NMPA (Administració Nacional de Productes Mèdics) és obligatòria per a tots els cosmètics importats a la Xina. Tant la cosmètica general com la d'ús especial s'han de presentar o registrar abans de poder vendre's.",
     "faqQ2": "Quina diferència hi ha entre cosmètics generals i d'ús especial?",
@@ -1295,7 +1256,7 @@
     "faqQ4": "Necessito una persona responsable xinesa?",
     "faqA4": "Sí, les empreses de cosmètics a l'estranger han de designar una persona responsable xinesa que s'ocupi de la presentació de la NMPA, serveixi de punt de contacte legal i assumeixi la responsabilitat conjunta de la seguretat del producte."
   },
-  "BlogFaqCrossBorderEcommerceChina": {
+  "InsightsFaqCrossBorderEcommerceChina": {
     "faqQ1": "Què és el comerç electrònic transfronterer (CBEC) a la Xina?",
     "faqA1": "CBEC permet a les marques estrangeres vendre directament als consumidors xinesos a través de plataformes en línia sense canals d'importació tradicionals. Els productes gaudeixen de requisits normatius simplificats i taxes fiscals més baixes.",
     "faqQ2": "Quins productes es poden vendre a través del CBEC?",
@@ -1399,7 +1360,7 @@
     "terminationTitle": "Terminació",
     "title": "Condicions del servei"
   },
-  "BlogFaqKoreanCosmeticsGuide": {
+  "InsightsFaqKoreanCosmeticsGuide": {
     "faqQ1": "Una marca de cosmètics coreana necessita la presentació de la NMPA per a les importacions comercials generals?",
     "faqA1": "Sí. Si importeu cosmètics mitjançant el comerç general (no el comerç electrònic transfronterer), tots els productes s'han de presentar (cosmètics normals) o registrats (cosmètics especials) a l'NMPA abans d'importar-los. Això s'aplica a totes les marques independentment del país d'origen.",
     "faqQ2": "Puc vendre cosmètics coreans a través del comerç electrònic transfronterer sense presentar la NMPA?",
@@ -1421,7 +1382,7 @@
     "faqQ10": "Necessito una empresa xinesa per presentar cosmètics a NMPA?",
     "faqA10": "Sí. Tots els productes cosmètics importats a la Xina han de tenir una persona responsable nacional xinesa: una entitat legal registrada a la Xina amb un àmbit comercial relacionat amb els cosmètics. Pot ser la vostra pròpia filial xinesa, un distribuïdor o un proveïdor de serveis extern. La persona responsable és legalment responsable de la seguretat del producte i gestiona totes les comunicacions de l'NMPA."
   },
-  "BlogFaqGreenCoffeeBeansChina": {
+  "InsightsFaqGreenCoffeeBeansChina": {
     "faqQ1": "El cafè verd necessita registre alimentari del GACC?",
     "faqA1": "No. Els grans sense torrar són fora del sistema de registre alimentari i es gestionen com a producte agrícola segons l'avís 219.",
     "faqQ2": "La instal·lació encara necessita l'aprovació de l'autoritat del país exportador?",

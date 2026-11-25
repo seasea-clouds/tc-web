@@ -1,11 +1,11 @@
 {
-  "Blog": {
+  "Insights": {
     "title": "Xuất khẩu sang Trung Quốc: góc nhìn và hướng dẫn tuân thủ",
     "subtitle": "Bài viết dành cho nhà xuất khẩu toàn cầu: điều kiện gia nhập thị trường Trung Quốc, đăng ký GACC, nhãn mác và chứng nhận.",
     "readMore": "Đọc thêm",
     "categories": "Chuyên mục",
     "all": "Tất cả",
-    "backToBlog": "Quay lại bài viết",
+    "backToInsights": "Quay lại bài viết",
     "backToHome": "Quay về trang chủ",
     "pagination": "Trang",
     "noPosts": "Không tìm thấy bài viết nào.",

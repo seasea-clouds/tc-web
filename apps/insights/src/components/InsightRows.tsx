@@ -8,7 +8,7 @@ export interface InsightCardTexts {
   categoryLabels: Record<string, string>;
 }
 
-function BlogCard({ post, locale, readMoreText, readTimeText, categoryLabels, heightClass = '' }: {
+function InsightCard({ post, locale, readMoreText, readTimeText, categoryLabels, heightClass = '' }: {
   post: PostMeta;
   heightClass?: string;
 } & InsightCardTexts) {
@@ -63,15 +63,15 @@ export default function InsightRows({ posts, texts }: { posts: PostMeta[]; texts
       {buildRows(posts).map((row, ri) =>
         row.kind === 'feature' ? (
           <div key={`feature-${ri}`} className="grid gap-8 lg:grid-cols-2">
-            <BlogCard key={row.big.slug} post={row.big} heightClass="lg:h-[512px]" {...texts} />
+            <InsightCard key={row.big.slug} post={row.big} heightClass="lg:h-[512px]" {...texts} />
             <div className="grid gap-8 lg:grid-rows-2">
-              {row.smalls.map(p => <BlogCard key={p.slug} post={p} heightClass="h-full" {...texts} />)}
+              {row.smalls.map(p => <InsightCard key={p.slug} post={p} heightClass="h-full" {...texts} />)}
             </div>
           </div>
         ) : (
           <div key={`plain-${ri}`} className="grid gap-8 lg:grid-cols-2">
             {row.posts.map(p => (
-              <BlogCard
+              <InsightCard
                 key={p.slug}
                 post={p}
                 heightClass={p.cover ? 'lg:h-[512px]' : 'lg:h-[240px]'}

@@ -747,45 +747,6 @@
     "insightsDesc": "Istražite više uvida",
     "viewAllInsights": "Pogledajte sve članke"
   },
-  "Blog": {
-    "title": "Izvoz u Kinu: uvidi i vodiči za usklađenost",
-    "subtitle": "Članci za izvoznike iz cijeloga svijeta: uvjeti pristupa kineskom tržištu, registracija GACC, označavanje i certificiranje.",
-    "readMore": "Pročitajte cijeli članak",
-    "categories": "Kategorije",
-    "all": "Sve",
-    "backToBlog": "Povratak na uvide",
-    "backToHome": "Povratak na početnu",
-    "pagination": "Stranica",
-    "noPosts": "Nema pronađenih članaka.",
-    "publishedOn": "Objavljeno",
-    "author": "David Zhang",
-    "ctaTitle": "Trebate li pomoć oko usklađenosti s Kinom?",
-    "ctaSubtitle": "Dobijte besplatnu procjenu usklađenosti od našeg stručnog tima.",
-    "ctaButton": "Dobijte besplatnu procjenu",
-    "readTime": "min čitanja",
-    "postNotFound": "Članak nije pronađen",
-    "toc": "Sadržaj",
-    "viewPackages": "Pogledajte pakete →",
-    "authorBio": "Stručnjak za regulatornu usklađenost specijaliziran za ulazak na kinesko tržište. Pomaže hrvatskim izvoznicima, od maslinovog ulja, vina i morskih plodova do kozmetike i elektronike, da ispune zahtjeve GACC-a, NMPA-e, CCC-a i kineskih oznaka.",
-    "relatedServiceLabel": "Trebate li pomoć s ovim?",
-    "relatedServiceCta": "Dobijte besplatnu procjenu →",
-    "service_gacc": "GACC registracija",
-    "service_label": "Sukladnost kineskih oznaka",
-    "service_ccc": "CCC certifikat",
-    "service_cosmetics": "NMPA registracija kozmetike",
-    "service_ecommerce": "Prekogranična e-trgovina",
-    "shareThisArticle": "Podijelite ovaj članak",
-    "relatedArticles": "Povezani članci",
-    "referencesHeading": "Reference",
-    "references": "Reference",
-    "relatedArticlesDesc": "Istražite više članaka na ovu temu",
-    "prev": "Prethodni",
-    "next": "Sljedeći",
-    "pageInfo": "",
-    "of": " od ",
-    "metaTitle": "Izvoz u Kinu: usklađenost | GACC, CCC, NMPA",
-    "metaDescription": "Vodiči za izvoznike u Kinu: registracija GACC, certifikacija CCC, registracija kozmetike NMPA i kinesko označavanje."
-  },
   "OrganizationJsonLd": {
     "description": "Sveobuhvatno savjetovanje za izvoznike koji dostavljaju proizvode u Kinu: ",
     "contactType": "služba za korisnike",
@@ -1253,7 +1214,7 @@
     "emailLabel": "Pošaljite nam e-mail",
     "backToTopLabel": "Povratak na vrh"
   },
-  "BlogFaqGaccRegistrationGuide": {
+  "InsightsFaqGaccRegistrationGuide": {
     "faqQ1": "Što je GACC registracija i kome je potrebna?",
     "faqA1": "GACC registracija obvezna je za svaki strani pogon za proizvodnju, preradu i skladištenje hrane koji izvozi u Kinu. Zahtjev vrijedi od 2022., a sada ga uređuje uredba 280, na snazi od 1. lipnja 2026. — svaki obuhvaćeni pogon mora biti u CIFER registru prije prve pošiljke.",
     "faqQ2": "Koliko dugo traje GACC registracija?",
@@ -1265,7 +1226,7 @@
     "faqQ5": "Što se događa ako se ne registriram?",
     "faqA5": "Da. Kineska carina od 2022. bez iznimke odbija pošiljke iz neregistriranih pogona; roba ostaje u luci dok pogon ne bude registriran u CIFER-u, a troškove skladištenja i čekanja snosi izvoznik."
   },
-  "BlogFaqChinaLabelCompliance": {
+  "InsightsFaqChinaLabelCompliance": {
     "faqQ1": "Što je sukladnost kineskih oznaka?",
     "faqA1": "Sukladnost kineskih oznaka znači da oznake vaših proizvoda ispunjavaju kineski standard GB 7718-2025 i ostale primjenjive propise. Obavezna je za svu uvoznu hranu i robu široke potrošnje, a nesukladne oznake rezultiraju odbijanjem na carini.",
     "faqQ2": "Što mora stajati na kineskoj oznaci hrane?",
@@ -1275,7 +1236,7 @@
     "faqQ4": "Koliko traje pregled oznake?",
     "faqA4": "Profesionalni pregled oznaka obično traje 3 do 5 radnih dana i obuhvaća provjeru svih obveznih elemenata, provjeru prijevoda i potvrdu usklađenosti s najnovijim GB standardima."
   },
-  "BlogFaqCccCertificationExplained": {
+  "InsightsFaqCccCertificationExplained": {
     "faqQ1": "Što je CCC certifikacija?",
     "faqA1": "CCC (China Compulsory Certification) obavezan je za proizvode u 17 kategorija koji se uvoze ili proizvode u Kini, uključujući elektroniku, automobilske dijelove, sigurnosno staklo i dječje igračke.",
     "faqQ2": "Koji proizvodi zahtijevaju CCC?",
@@ -1285,7 +1246,7 @@
     "faqQ4": "Koliko košta CCC?",
     "faqA4": "Uobičajeni troškovi kreću se od 3000 USD do 15 000 USD+, uključujući troškove ispitivanja, inspekcije tvornice i godišnje naknade za održavanje."
   },
-  "BlogFaqCosmeticsNmpaFiling": {
+  "InsightsFaqCosmeticsNmpaFiling": {
     "faqQ1": "Što je NMPA prijava kozmetike?",
     "faqA1": "Prijava kod NMPA-e (Nacionalne uprave za medicinske proizvode) obavezna je za svu kozmetiku koja se uvozi u Kinu. I obična i posebna kozmetika moraju biti prijavljene ili registrirane prije početka prodaje.",
     "faqQ2": "Koja je razlika između obične i posebne kozmetike?",
@@ -1295,7 +1256,7 @@
     "faqQ4": "Trebam li kinesku odgovornu osobu?",
     "faqA4": "Da. Inozemne kozmetičke tvrtke moraju imenovati kinesku odgovornu osobu koja vodi NMPA prijavu, služi kao pravna kontakt točka u Kini i preuzima zajedničku odgovornost za sigurnost proizvoda."
   },
-  "BlogFaqCrossBorderEcommerceChina": {
+  "InsightsFaqCrossBorderEcommerceChina": {
     "faqQ1": "Što je prekogranična e-trgovina (CBEC) u Kini?",
     "faqA1": "CBEC omogućuje inozemnim brendovima izravnu prodaju kineskim potrošačima putem internetskih platformi, mimo tradicionalnih uvoznih kanala. Proizvodi imaju pojednostavljene regulatorne zahtjeve i niže porezne stope.",
     "faqQ2": "Koji se proizvodi mogu prodavati putem CBEC-a?",
@@ -1399,7 +1360,7 @@
     "terminationTitle": "Raskid",
     "title": "Uvjeti usluge"
   },
-  "BlogFaqKoreanCosmeticsGuide": {
+  "InsightsFaqKoreanCosmeticsGuide": {
     "faqQ1": "Trebaju li korejski kozmetički brendovi prijavu kod NMPA-e za uvoz kroz opću trgovinu?",
     "faqA1": "Da. Ako kozmetiku uvozite kroz opću trgovinu, a ne prekograničnu e-trgovinu, svaki proizvod mora biti prijavljen (obična kozmetika) ili registriran (posebna kozmetika) kod NMPA-e prije uvoza, bez obzira na zemlju podrijetla brenda.",
     "faqQ2": "Mogu li korejsku kozmetiku prodavati putem prekogranične e-trgovine bez NMPA prijave?",
@@ -1421,7 +1382,7 @@
     "faqQ10": "Trebam li kinesku tvrtku za prijavu kozmetike kod NMPA-e?",
     "faqA10": "Da. Svaki kozmetički proizvod koji se uvozi u Kinu mora imati kinesku domaću odgovornu osobu, odnosno pravni subjekt registriran u Kini s djelatnošću vezanom uz kozmetiku. To može biti vaša kineska podružnica, distributer ili pružatelj usluga treće strane. Odgovorna osoba zakonski odgovara za sigurnost proizvoda i vodi svu komunikaciju s NMPA-om."
   },
-  "BlogFaqGreenCoffeeBeansChina": {
+  "InsightsFaqGreenCoffeeBeansChina": {
     "faqQ1": "Treba li zelena kava registraciju hrane GACC?",
     "faqA1": "Ne. Nepržena zrna izvan su sustava registracije hrane i vode se kao poljoprivredni proizvod prema obavijesti 219.",
     "faqQ2": "Treba li pogon još odobrenje tijela države izvoznice?",

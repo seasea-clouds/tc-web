@@ -1,11 +1,11 @@
 {
-  "Blog": {
+  "Insights": {
     "title": "Export Kínába: elemzések és megfelelőségi útmutatók",
     "subtitle": "Cikkek a világ minden tájáról érkező exportőröknek: kínai piacra lépési követelmények, GACC regisztráció, címkézés és tanúsítás.",
     "readMore": "Teljes cikk elolvasása",
     "categories": "Kategóriák",
     "all": "Mind",
-    "backToBlog": "Vissza a cikkekhez",
+    "backToInsights": "Vissza a cikkekhez",
     "backToHome": "Vissza a kezdőlapra",
     "pagination": "oldal",
     "noPosts": "Nem található cikk.",

@@ -1,9 +1,9 @@
-import { LOCALES, buildLanguages, sharedOpenGraph, sharedTwitter, AutoBreadcrumb, ComplianceForm } from '@trade/ui';
+import { LOCALES, buildLanguages, sharedOpenGraph, sharedTwitter, AutoBreadcrumb, Pager, ComplianceForm } from '@trade/ui';
 import { getDocuments } from '@/lib/documents';
 import { getMessages } from '@/lib/messages';
-import { paginate } from '@/lib/doc-list';
+import { paginate, pagePath } from '@/lib/doc-list';
 import RegulationFilter from '@/components/RegulationFilter';
-import RegulationPager from '@/components/RegulationPager';
+
 
 interface Params {
   locale: string;
@@ -158,11 +158,12 @@ export default async function RegulationsPageN({ params }: { params: Promise<Par
               filterEmpty: tb('filterEmpty', 'No documents match these filters.'),
             }}
           >
-            <RegulationPager
+            <Pager
               locale={locale}
               currentPage={pageNumber}
               totalPages={pages.length}
               paginationText={tb('pagination', 'Page')}
+              pagePath={pagePath}
               prevText={tb('prev', 'Previous')}
               nextText={tb('next', 'Next')}
             />

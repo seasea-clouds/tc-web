@@ -1,11 +1,11 @@
 {
-  "Blog": {
+  "Insights": {
     "title": "Exporting to China: Insights & Compliance Guides",
     "subtitle": "Expert articles on taking your product to China: market entry requirements, GACC registration, labeling and certification, written for exporters worldwide.",
     "readMore": "Read Full Article",
     "categories": "Categories",
     "all": "All",
-    "backToBlog": "Back to Insights",
+    "backToInsights": "Back to Insights",
     "backToHome": "Back to Home",
     "pagination": "Page",
     "noPosts": "No articles found.",

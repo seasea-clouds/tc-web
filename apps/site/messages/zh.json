@@ -747,45 +747,6 @@
     "insightsDesc": "查看更多洞察文章",
     "viewAllInsights": "查看全部文章"
   },
-  "Blog": {
-    "title": "出口中国：洞察与合规指南",
-    "subtitle": "面向全球出口商：把产品带入中国市场的实操文章，涵盖市场准入要求、GACC 注册、标签与认证。",
-    "readMore": "阅读更多",
-    "categories": "分类",
-    "all": "全部",
-    "backToBlog": "返回洞察",
-    "backToHome": "返回首页",
-    "pagination": "页",
-    "noPosts": "暂无文章，敬请期待。",
-    "publishedOn": "发布于",
-    "author": "David Zhang",
-    "ctaTitle": "需要办理中国合规业务？",
-    "ctaSubtitle": "告诉我们您的产品和目标市场，免费获取定制化的合规评估与建议。",
-    "ctaButton": "获取免费评估",
-    "readTime": "分钟",
-    "postNotFound": "文章不存在或已被移除",
-    "toc": "目录",
-    "viewPackages": "查看服务套餐 →",
-    "authorBio": "中国市场准入法规合规专家，专注协助出口企业办理海关总署食品注册、国家药监局化妆品备案、CCC 认证及中文标签合规。",
-    "relatedServiceLabel": "需要相关服务帮助？",
-    "relatedServiceCta": "获取免费评估 →",
-    "service_gacc": "海关总署食品注册",
-    "service_label": "中文标签合规",
-    "service_ccc": "CCC 认证",
-    "service_cosmetics": "国家药监局化妆品备案",
-    "service_ecommerce": "跨境电商",
-    "shareThisArticle": "分享这篇文章",
-    "relatedArticles": "相关文章",
-    "referencesHeading": "参考文献",
-    "references": "参考文献",
-    "relatedArticlesDesc": "深入了解本主题的更多内容",
-    "prev": "上一篇",
-    "next": "下一篇",
-    "pageInfo": "",
-    "of": " / ",
-    "metaTitle": "出口中国：合规洞察 | GACC、CCC、NMPA",
-    "metaDescription": "面向出口商的中国指南：GACC 注册、CCC 认证、NMPA 化妆品备案与中文标签合规，从市场准入到上架销售。"
-  },
   "OrganizationJsonLd": {
     "description": "为把产品带入中国的出口商提供一站式合规咨询：",
     "contactType": "客户服务",
@@ -1253,7 +1214,7 @@
     "emailLabel": "给我们发电子邮件",
     "backToTopLabel": "返回顶部"
   },
-  "BlogFaqGaccRegistrationGuide": {
+  "InsightsFaqGaccRegistrationGuide": {
     "faqQ1": "什么是海关总署注册？哪些企业需要办理？",
     "faqA1": "GACC 注册是每一个向中国出口的境外食品生产、加工、贮存企业的法定义务。该要求自 2022 年起实行，现由 2026 年 6 月 1 日生效的第 280 号令规范——相关企业必须在首次发货前列入 CIFER 名录。",
     "faqQ2": "海关总署注册需要多长时间？",
@@ -1265,7 +1226,7 @@
     "faqQ5": "不办理注册会有什么后果？",
     "faqA5": "是的。自 2022 年起，中国海关对未注册企业的货物一律拒收；货物会滞留在港口，直到工厂完成 CIFER 注册，仓储费与滞港费均由出口商承担。"
   },
-  "BlogFaqChinaLabelCompliance": {
+  "InsightsFaqChinaLabelCompliance": {
     "faqQ1": "什么是中文标签合规？",
     "faqA1": "中文标签合规，是指产品标签须符合中国 GB 7718-2025 标准及其他适用法规的要求。所有进口食品和消费品都必须满足，标签不合规将被海关拒绝入境。",
     "faqQ2": "中国食品标签必须标注哪些内容？",
@@ -1275,7 +1236,7 @@
     "faqQ4": "标签审核需要多长时间？",
     "faqA4": "专业标签审核一般需要 3-5 个工作日，包括逐项核对必备要素、校验翻译准确性，并确认符合最新 GB 标准的要求。"
   },
-  "BlogFaqCccCertificationExplained": {
+  "InsightsFaqCccCertificationExplained": {
     "faqQ1": "什么是 CCC 认证？",
     "faqA1": "CCC 即中国强制性产品认证，对进口或在中国境内生产的 17 类产品实施强制认证，涵盖电子产品、汽车零部件、安全玻璃、儿童玩具等。",
     "faqQ2": "哪些产品需要办理 CCC 认证？",
@@ -1285,7 +1246,7 @@
     "faqQ4": "CCC 认证的费用是多少？",
     "faqA4": "一般总费用在 3,000 至 15,000 美元以上，包括检测费、工厂检查费和年度维护费。"
   },
-  "BlogFaqCosmeticsNmpaFiling": {
+  "InsightsFaqCosmeticsNmpaFiling": {
     "faqQ1": "什么是 NMPA 化妆品备案？",
     "faqA1": "所有进口到中国的化妆品都必须向国家药品监督管理局（NMPA）办理备案。普通化妆品与特殊化妆品须分别完成备案或注册后方可上市销售。",
     "faqQ2": "普通化妆品和特殊化妆品有什么区别？",
@@ -1295,7 +1256,7 @@
     "faqQ4": "需要指定中国境内责任人吗？",
     "faqA4": "需要。境外化妆品企业必须指定一名中国境内责任人，负责办理 NMPA 备案、作为境内法律联络人，并对产品安全承担连带责任。"
   },
-  "BlogFaqCrossBorderEcommerceChina": {
+  "InsightsFaqCrossBorderEcommerceChina": {
     "faqQ1": "什么是跨境电商零售进口（CBEC）？",
     "faqA1": "跨境电商允许海外品牌通过线上平台直接向中国消费者销售，无需走传统一般贸易进口通道，监管要求更简化、综合税负更低。",
     "faqQ2": "哪些产品可以通过跨境电商销售？",
@@ -1399,7 +1360,7 @@
     "terminationTitle": "终止",
     "title": "服务条款"
   },
-  "BlogFaqKoreanCosmeticsGuide": {
+  "InsightsFaqKoreanCosmeticsGuide": {
     "faqQ1": "韩国化妆品走一般贸易进口，需要办理 NMPA 备案吗？",
     "faqA1": "需要。凡以一般贸易（非跨境电商）方式进口化妆品，每一款产品都必须在进口前向国家药品监督管理局完成备案（普通化妆品）或注册（特殊化妆品），与品牌原产国无关。",
     "faqQ2": "不办 NMPA 备案，能通过跨境电商销售韩国化妆品吗？",
@@ -1421,7 +1382,7 @@
     "faqQ10": "办理 NMPA 备案是否必须设立中国公司？",
     "faqA10": "是的。每款进口化妆品都必须指定一名中国境内责任人，即在华注册、经营范围包含化妆品的法人主体，可以是自有子公司、经销商或第三方服务机构。责任人对产品安全承担法律责任，并负责与 NMPA 的全部沟通。"
   },
-  "BlogFaqGreenCoffeeBeansChina": {
+  "InsightsFaqGreenCoffeeBeansChina": {
     "faqQ1": "生豆需要办理 GACC 食品注册吗？",
     "faqA1": "不需要。未烘焙生豆在食品注册体系之外，按初级食用农产品管理，适用 219 号公告。",
     "faqQ2": "企业还需要出口国主管部门的批准吗？",

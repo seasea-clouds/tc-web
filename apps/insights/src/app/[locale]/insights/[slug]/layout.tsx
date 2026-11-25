@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default async function BlogSlugLayout({
+export default async function InsightsSlugLayout({
   children,
   params,
 }: {

@@ -1,11 +1,11 @@
 {
-  "Blog": {
+  "Insights": {
     "title": "Izvoz na Kitajsko: vpogledi in smernice za skladnost",
     "subtitle": "Članki za izvoznike po vsem svetu: pogoji za dostop do kitajskega trga, registracija GACC, označevanje in certificiranje.",
     "readMore": "Preberi več",
     "categories": "kategorije",
     "all": "Vse",
-    "backToBlog": "Nazaj na vpoglede",
+    "backToInsights": "Nazaj na vpoglede",
     "backToHome": "Nazaj na dom",
     "pagination": "Stran",
     "noPosts": "Ni objav.",

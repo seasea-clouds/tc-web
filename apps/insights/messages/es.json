@@ -1,11 +1,11 @@
 {
-  "Blog": {
+  "Insights": {
     "title": "Exportar a China: claves y guías de cumplimiento",
     "subtitle": "Artículos para llevar tu producto a China: requisitos de acceso al mercado, registro GACC, etiquetado y certificación, escritos para exportadores de todo el mundo.",
     "readMore": "Leer más",
     "categories": "Categorías",
     "all": "Todas",
-    "backToBlog": "Volver al blog",
+    "backToInsights": "Volver a Insights",
     "backToHome": "Volver al inicio",
     "pagination": "Página",
     "noPosts": "No se encontraron publicaciones.",

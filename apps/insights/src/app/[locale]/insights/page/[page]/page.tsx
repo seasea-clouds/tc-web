@@ -1,9 +1,9 @@
-import { LOCALES, buildLanguages, sharedOpenGraph, sharedTwitter, AutoBreadcrumb } from '@trade/ui';
+import { LOCALES, buildLanguages, sharedOpenGraph, sharedTwitter, AutoBreadcrumb, Pager } from '@trade/ui';
 import { getPosts } from '@/lib/posts';
 import { getMessages } from '@/lib/messages';
-import { paginate, getCategories, categoryKey } from '@/lib/insights-list';
+import { paginate, getCategories, categoryKey, insightsPagePath } from '@/lib/insights-list';
 import InsightsClient from '../../InsightsClient';
-import InsightsPager from '@/components/InsightsPager';
+
 
 interface Params {
   locale: string;
@@ -34,7 +34,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<Params> }) {
   const { locale, page } = await params;
   const msgs = getMessages(locale);
-  const B = msgs?.Blog || {};
+  const B = msgs?.Insights || {};
   const tb = (key: string, fallback?: string) => B[key] ?? fallback ?? key;
   const path = `/insights/page/${page}/`;
   const url = `https://sinotradecompliance.com/${locale}${path}`;
@@ -42,8 +42,8 @@ export async function generateMetadata({ params }: { params: Promise<Params> }) 
   // Page 1 duplicates /insights/, so its hreflang cluster points there too.
   const langPath = page === '1' ? '/insights/' : path;
   const title = page === '1'
-    ? tb('metaTitle', 'Exporting to China Blog')
-    : `${tb('metaTitle', 'Exporting to China Blog')} — ${tb('pagination', 'Page')} ${page}`;
+    ? tb('metaTitle', 'Exporting to China Insights')
+    : `${tb('metaTitle', 'Exporting to China Insights')} — ${tb('pagination', 'Page')} ${page}`;
   const description = tb('metaDescription', 'Expert guides on exporting to China.');
   return {
     title,
@@ -58,14 +58,14 @@ export async function generateMetadata({ params }: { params: Promise<Params> }) 
   };
 }
 
-export default async function BlogPageN({ params }: { params: Promise<Params> }) {
+export default async function InsightsPageN({ params }: { params: Promise<Params> }) {
   const { locale, page } = await params;
   const pageNumber = Number(page);
   const posts = getPosts(locale);
   const pages = paginate(posts);
   const pagePosts = pages[pageNumber - 1] ?? [];
   const msgs = getMessages(locale);
-  const B = msgs?.Blog || {};
+  const B = msgs?.Insights || {};
   const tb = (key: string, fallback?: string) => B[key] ?? fallback ?? key;
 
   const categoryLabels: Record<string, string> = {};
@@ -137,11 +137,12 @@ export default async function BlogPageN({ params }: { params: Promise<Params> })
             noPostsText={tb('noPosts', 'No posts found.')}
             allText={tb('all', 'All')}
           >
-            <InsightsPager
+            <Pager
               locale={locale}
               currentPage={pageNumber}
               totalPages={pages.length}
               paginationText={tb('pagination', 'Page')}
+              pagePath={insightsPagePath}
               prevText={tb('prev', 'Previous')}
               nextText={tb('next', 'Next')}
             />

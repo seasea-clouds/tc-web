@@ -480,7 +480,7 @@ function checkR09(contentDir, msgDir) {
         continue;
       }
       const msgs = JSON.parse(fs.readFileSync(mf, 'utf-8'));
-      if (!(msgs?.Blog?.[key])) {
+      if (!(msgs?.Insights?.[key])) {
         missingLangs.push(locale);
       }
     }

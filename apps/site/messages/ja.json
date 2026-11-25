@@ -747,45 +747,6 @@
     "insightsDesc": "さらに詳しいインサイトを探索",
     "viewAllInsights": "すべての記事を見る"
   },
-  "Blog": {
-    "title": "中国への輸出：インサイトとコンプライアンスガイド",
-    "subtitle": "世界の輸出事業者に向け、中国市場への参入要件、GACC登録、表示、認証を解説する実務記事です。",
-    "readMore": "続きを読む",
-    "categories": "カテゴリー",
-    "all": "すべて",
-    "backToBlog": "記事一覧に戻る",
-    "backToHome": "ホームに戻る",
-    "pagination": "ページ",
-    "noPosts": "投稿が見つかりませんでした。",
-    "publishedOn": "公開日",
-    "author": "David Zhang",
-    "ctaTitle": "中国のコンプライアンスでお困りですか？",
-    "ctaSubtitle": "専門家チームが貴社の製品に合わせた無料のコンプライアンス評価を実施します。",
-    "ctaButton": "無料のコンプライアンス評価を依頼する",
-    "readTime": "分",
-    "postNotFound": "投稿が見つかりません",
-    "toc": "目次",
-    "viewPackages": "パッケージを見る→",
-    "authorBio": "中国市場参入を専門とする規制コンプライアンスの専門家。GACC・NMPA・CCC・中国のラベル要件など、企業の中国進出を総合的に支援しています。",
-    "relatedServiceLabel": "このテーマについてご相談がありますか？",
-    "relatedServiceCta": "無料のコンプライアンス評価を依頼する→",
-    "service_gacc": "GACC食品登録",
-    "service_label": "中国ラベル適合",
-    "service_ccc": "CCC認証",
-    "service_cosmetics": "NMPA化粧品届出・登録",
-    "service_ecommerce": "越境EC",
-    "shareThisArticle": "この記事をシェアする",
-    "relatedArticles": "関連記事",
-    "referencesHeading": "参考文献",
-    "references": "参考文献",
-    "relatedArticlesDesc": "関連テーマの記事をもっと見る",
-    "prev": "前へ",
-    "next": "次へ",
-    "pageInfo": "",
-    "of": " / ",
-    "metaTitle": "中国への輸出：コンプライアンスの要点 | GACC、CCC、NMPA",
-    "metaDescription": "中国向け輸出事業者のためのガイド：GACC登録、CCC認証、NMPA化粧品届出、中国語表示の適合、市場参入から棚に並ぶまで。"
-  },
   "OrganizationJsonLd": {
     "description": "製品を中国へ届ける輸出事業者向けのワンストップ支援：",
     "contactType": "顧客サービス",
@@ -1253,7 +1214,7 @@
     "emailLabel": "メールを送信してください",
     "backToTopLabel": "トップに戻る"
   },
-  "BlogFaqGaccRegistrationGuide": {
+  "InsightsFaqGaccRegistrationGuide": {
     "faqQ1": "GACC登録とは何ですか？誰に必要ですか？",
     "faqA1": "GACC登録は、中国へ輸出するすべての海外の食品製造・加工・保管施設に義務づけられています。2022年から続く要件で、現在は2026年6月1日施行の令第280号が根拠です。対象となる施設は、最初の出荷前にCIFERの登録名簿に載っている必要があります。",
     "faqQ2": "GACC登録にはどのくらい時間がかかりますか？",
@@ -1265,7 +1226,7 @@
     "faqQ5": "登録しないとどうなりますか？",
     "faqA5": "はい。中国税関は2022年以降、未登録施設からの貨物を例外なく拒否しています。施設がCIFERに登録されるまで貨物は港に留め置かれ、保管料や滞船料は輸出者負担となります。"
   },
-  "BlogFaqChinaLabelCompliance": {
+  "InsightsFaqChinaLabelCompliance": {
     "faqQ1": "中国ラベル適合とは何ですか？",
     "faqA1": "中国ラベル適合とは、製品ラベルが中国のGB 7718-2025規格および関連規制を満たすことを意味します。輸入食品と消費者製品のすべてに義務付けられており、不適合なラベルは税関で拒否されます。",
     "faqQ2": "中国の食品ラベルには何を記載する必要がありますか？",
@@ -1275,7 +1236,7 @@
     "faqQ4": "ラベル審査にはどのくらい時間がかかりますか？",
     "faqA4": "専門機関によるラベル審査は、必須項目の確認、翻訳の検証、最新のGB規格への適合確認を含め、通常3〜5営業日かかります。"
   },
-  "BlogFaqCccCertificationExplained": {
+  "InsightsFaqCccCertificationExplained": {
     "faqQ1": "CCC認証とは何ですか？",
     "faqA1": "CCC（中国強制認証）は、中国に輸入または中国国内で製造される17カテゴリーの製品（電気電子機器、自動車部品、安全ガラス、子供用玩具など）に義務付けられています。",
     "faqQ2": "CCCが必要な製品はどれですか？",
@@ -1285,7 +1246,7 @@
     "faqQ4": "CCC認証の費用はいくらですか？",
     "faqA4": "試験費用、工場審査費用、年間維持費用を含め、通常3,000〜15,000ドル以上です。"
   },
-  "BlogFaqCosmeticsNmpaFiling": {
+  "InsightsFaqCosmeticsNmpaFiling": {
     "faqQ1": "NMPA化粧品届出とは何ですか？",
     "faqA1": "中国に輸入されるすべての化粧品にはNMPA（国家薬品監督管理局）への届出・登録が義務付けられています。一般化粧品と特殊用途化粧品のいずれも、販売前に届出または登録を完了する必要があります。",
     "faqQ2": "一般化粧品と特殊用途化粧品の違いは何ですか？",
@@ -1295,7 +1256,7 @@
     "faqQ4": "中国国内の責任者（代理人）は必要ですか？",
     "faqA4": "はい。海外の化粧品企業は、NMPA手続きを担当し、法的窓口となり、製品の安全性について連帯責任を負う中国国内の責任者を指名する必要があります。"
   },
-  "BlogFaqCrossBorderEcommerceChina": {
+  "InsightsFaqCrossBorderEcommerceChina": {
     "faqQ1": "中国の越境電子商取引（CBEC）とは何ですか？",
     "faqA1": "CBECでは、海外ブランドが従来の輸入ルートを経ずに、オンライン・プラットフォームを通じて中国の消費者に直接販売できます。規制要件が簡素化され、税率も低くなります。",
     "faqQ2": "CBECで販売できる製品は何ですか？",
@@ -1399,7 +1360,7 @@
     "terminationTitle": "終了",
     "title": "利用規約"
   },
-  "BlogFaqKoreanCosmeticsGuide": {
+  "InsightsFaqKoreanCosmeticsGuide": {
     "faqQ1": "韓国化粧品ブランドは一般貿易輸入の場合、NMPA届出が必要ですか？",
     "faqA1": "はい。一般貿易（越境EC以外）で化粧品を輸入する場合、すべての製品について輸入前にNMPAへの届出（一般化粧品）または登録（特殊用途化粧品）が必要です。これは原産国に関係なく、すべてのブランドに適用されます。",
     "faqQ2": "NMPA届出なしで越境ECで韓国化粧品を販売できますか？",
@@ -1421,7 +1382,7 @@
     "faqQ10": "NMPAに化粧品を届出するには中国の会社が必要ですか？",
     "faqA10": "はい。中国に輸入されるすべての化粧品には、化粧品関連の事業範囲を持つ中国国内の法人である責任者（代理人）が必要です。自社の中国子会社、販売代理店、または第三者サービスプロバイダーを指名できます。責任者は製品の安全性について法的責任を負い、NMPAとのすべてのやり取りを担当します。"
   },
-  "BlogFaqGreenCoffeeBeansChina": {
+  "InsightsFaqGreenCoffeeBeansChina": {
     "faqQ1": "生豆に GACC の食品登録は必要ですか。",
     "faqA1": "いいえ。未焙煎の生豆は食品登録制度の外にあり、公告 219 に基づき農産物として扱われます。",
     "faqQ2": "輸出監督当局の承認は引き続き必要ですか。",

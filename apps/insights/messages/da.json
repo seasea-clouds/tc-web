@@ -1,11 +1,11 @@
 {
-  "Blog": {
+  "Insights": {
     "title": "Eksport til Kina: indsigter og compliance guides",
     "subtitle": "Artikler for eksportører over hele verden: krav til markedsadgang i Kina, GACC registrering, mærkning og certificering.",
     "readMore": "Læs hele artiklen",
     "categories": "Kategorier",
     "all": "Alle",
-    "backToBlog": "Tilbage til indsigt",
+    "backToInsights": "Tilbage til indsigt",
     "backToHome": "Tilbage til forsiden",
     "pagination": "Side",
     "noPosts": "Ingen artikler fundet.",

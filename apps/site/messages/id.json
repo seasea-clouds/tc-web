@@ -747,45 +747,6 @@
     "insightsDesc": "Jelajahi wawasan lainnya",
     "viewAllInsights": "Lihat Semua Artikel"
   },
-  "Blog": {
-    "title": "Ekspor ke Tiongkok: wawasan dan panduan kepatuhan",
-    "subtitle": "Artikel untuk membawa produk Anda ke Tiongkok: persyaratan masuk pasar, registrasi GACC, pelabelan, dan sertifikasi, untuk eksportir di seluruh dunia.",
-    "readMore": "Baca selengkapnya",
-    "categories": "Kategori",
-    "all": "Semua",
-    "backToBlog": "Kembali ke Artikel",
-    "backToHome": "Kembali ke Beranda",
-    "pagination": "Halaman",
-    "noPosts": "Tidak ada artikel yang ditemukan.",
-    "publishedOn": "Diterbitkan pada",
-    "author": "David Zhang",
-    "ctaTitle": "Butuh Bantuan Kepatuhan Tiongkok?",
-    "ctaSubtitle": "Dapatkan penilaian kepatuhan gratis dari tim ahli kami.",
-    "ctaButton": "Dapatkan Penilaian Gratis",
-    "readTime": "menit baca",
-    "postNotFound": "Artikel Tidak Ditemukan",
-    "toc": "Daftar Isi",
-    "viewPackages": "Lihat Paket →",
-    "authorBio": "Pakar kepatuhan regulasi yang berfokus pada masuknya pasar Tiongkok. Membantu bisnis menavigasi persyaratan GACC, NMPA, CCC, dan pelabelan Tiongkok.",
-    "relatedServiceLabel": "Butuh Bantuan dengan Ini?",
-    "relatedServiceCta": "Dapatkan Penilaian Gratis →",
-    "service_gacc": "Pendaftaran GACC",
-    "service_label": "Kepatuhan Label Tiongkok",
-    "service_ccc": "Sertifikasi CCC",
-    "service_cosmetics": "Registrasi Kosmetik NMPA",
-    "service_ecommerce": "E-niaga lintas batas",
-    "shareThisArticle": "Bagikan artikel ini",
-    "relatedArticles": "Artikel Terkait",
-    "referencesHeading": "Referensi",
-    "references": "Referensi",
-    "relatedArticlesDesc": "Jelajahi wawasan lainnya tentang topik ini",
-    "prev": "Sebelumnya",
-    "next": "Selanjutnya",
-    "pageInfo": "",
-    "of": " dari ",
-    "metaTitle": "Ekspor ke Tiongkok: kepatuhan | GACC, CCC, NMPA",
-    "metaDescription": "Panduan bagi eksportir ke Tiongkok: registrasi GACC, sertifikasi CCC, registrasi kosmetik NMPA, dan pelabelan Tiongkok."
-  },
   "OrganizationJsonLd": {
     "description": "Konsultasi menyeluruh bagi eksportir yang membawa produk ke Tiongkok: ",
     "contactType": "pelayanan pelanggan",
@@ -1253,7 +1214,7 @@
     "emailLabel": "Kirimi kami email",
     "backToTopLabel": "Kembali ke atas"
   },
-  "BlogFaqGaccRegistrationGuide": {
+  "InsightsFaqGaccRegistrationGuide": {
     "faqQ1": "Apa itu pendaftaran GACC dan siapa yang wajib melakukannya?",
     "faqA1": "Pendaftaran GACC wajib bagi setiap fasilitas produksi, pengolahan, dan penyimpanan pangan asing yang mengekspor ke Tiongkok. Kewajiban ini berlaku sejak 2022 dan kini diatur oleh Keputusan 280 yang berlaku sejak 1 Juni 2026 — setiap fasilitas yang tercakup harus terdaftar di CIFER sebelum pengiriman pertama.",
     "faqQ2": "Berapa lama proses pendaftaran GACC?",
@@ -1265,7 +1226,7 @@
     "faqQ5": "Apa yang terjadi jika saya tidak mendaftar?",
     "faqA5": "Ya. Sejak 2022 bea cukai Tiongkok menolak tanpa kecuali pengiriman dari fasilitas yang belum terdaftar; barang tertahan di pelabuhan sampai fasilitas terdaftar di CIFER, dan biaya penyimpanan serta demurrage ditanggung eksportir."
   },
-  "BlogFaqChinaLabelCompliance": {
+  "InsightsFaqChinaLabelCompliance": {
     "faqQ1": "Apa yang dimaksud dengan kepatuhan label Tiongkok?",
     "faqA1": "Kepatuhan label Tiongkok berarti label produk Anda memenuhi standar GB 7718-2025 dan peraturan lain yang berlaku. Ini wajib untuk semua pangan impor dan produk konsumen. Label yang tidak sesuai mengakibatkan penolakan bea cukai — berbeda dengan ketentuan label di Indonesia, seluruh elemen wajib harus dicantumkan dalam bahasa Mandarin.",
     "faqQ2": "Apa saja yang wajib ada pada label pangan Tiongkok?",
@@ -1275,7 +1236,7 @@
     "faqQ4": "Berapa lama peninjauan label?",
     "faqA4": "Peninjauan label profesional biasanya memakan waktu 3–5 hari kerja, termasuk pemeriksaan semua elemen wajib, verifikasi terjemahan, dan memastikan kepatuhan terhadap standar GB terbaru."
   },
-  "BlogFaqCccCertificationExplained": {
+  "InsightsFaqCccCertificationExplained": {
     "faqQ1": "Apa itu sertifikasi CCC?",
     "faqA1": "CCC (Sertifikasi Wajib Tiongkok) diwajibkan untuk produk dalam 17 kategori yang diimpor atau diproduksi di Tiongkok, termasuk elektronik, suku cadang otomotif, kaca pengaman, dan mainan anak-anak. Berbeda dengan SNI di Indonesia yang sebagian bersifat sukarela, CCC adalah kewajiban mutlak bagi kategori yang tercakup.",
     "faqQ2": "Produk apa saja yang memerlukan CCC?",
@@ -1285,7 +1246,7 @@
     "faqQ4": "Berapa biaya sertifikasi CCC?",
     "faqA4": "Biaya umumnya berkisar USD 3.000 hingga USD 15.000+, termasuk biaya pengujian, biaya inspeksi pabrik, dan biaya pemeliharaan tahunan."
   },
-  "BlogFaqCosmeticsNmpaFiling": {
+  "InsightsFaqCosmeticsNmpaFiling": {
     "faqQ1": "Apa itu pengarsipan kosmetik NMPA?",
     "faqA1": "Pengarsipan NMPA (Administrasi Produk Medis Nasional) wajib untuk semua kosmetik yang diimpor ke Tiongkok. Baik kosmetik umum maupun kosmetik khusus harus diarsipkan atau didaftarkan sebelum dapat dijual — termasuk kosmetik berbahan alami khas Indonesia yang tengah diminati pasar Tiongkok.",
     "faqQ2": "Apa perbedaan kosmetik umum dan kosmetik khusus?",
@@ -1295,7 +1256,7 @@
     "faqQ4": "Apakah saya perlu penanggung jawab di Tiongkok?",
     "faqA4": "Ya, perusahaan kosmetik luar negeri wajib menunjuk penanggung jawab di Tiongkok yang menangani pengarsipan NMPA, menjadi kontak hukum, dan memikul tanggung jawab bersama atas keamanan produk."
   },
-  "BlogFaqCrossBorderEcommerceChina": {
+  "InsightsFaqCrossBorderEcommerceChina": {
     "faqQ1": "Apa itu e-niaga lintas batas (CBEC) di Tiongkok?",
     "faqA1": "CBEC memungkinkan merek luar negeri menjual langsung ke konsumen Tiongkok melalui platform daring tanpa saluran impor tradisional. Produk menikmati persyaratan regulasi yang disederhanakan dan tarif pajak yang lebih rendah — jalur yang populer bagi produk Indonesia seperti kopi, camilan, dan kosmetik.",
     "faqQ2": "Produk apa saja yang bisa dijual melalui CBEC?",
@@ -1399,7 +1360,7 @@
     "terminationTitle": "Penghentian",
     "title": "Ketentuan Layanan"
   },
-  "BlogFaqKoreanCosmeticsGuide": {
+  "InsightsFaqKoreanCosmeticsGuide": {
     "faqQ1": "Apakah merek kosmetik Korea perlu pengarsipan NMPA untuk impor perdagangan umum?",
     "faqA1": "Ya. Jika Anda mengimpor kosmetik melalui perdagangan umum (bukan e-niaga lintas batas), setiap produk wajib diarsipkan (kosmetik umum) atau didaftarkan (kosmetik khusus) ke NMPA sebelum impor. Ketentuan ini berlaku untuk semua merek, apa pun negara asalnya.",
     "faqQ2": "Bisakah saya menjual kosmetik Korea melalui e-niaga lintas batas tanpa pengarsipan NMPA?",
@@ -1421,7 +1382,7 @@
     "faqQ10": "Apakah saya perlu perusahaan Tiongkok untuk mengarsipkan kosmetik ke NMPA?",
     "faqA10": "Ya. Setiap produk kosmetik yang diimpor ke Tiongkok harus memiliki penanggung jawab domestik Tiongkok — badan hukum yang terdaftar di Tiongkok dengan lingkup usaha terkait kosmetik. Ini dapat berupa anak perusahaan Anda di Tiongkok, distributor, atau penyedia layanan pihak ketiga. Penanggung jawab bertanggung jawab secara hukum atas keamanan produk dan menangani semua komunikasi NMPA."
   },
-  "BlogFaqGreenCoffeeBeansChina": {
+  "InsightsFaqGreenCoffeeBeansChina": {
     "faqQ1": "Apakah green bean memerlukan registrasi pangan GACC?",
     "faqA1": "Tidak. Biji yang belum disangrai berada di luar sistem registrasi pangan dan dikelola sebagai produk pertanian berdasarkan Pengumuman 219.",
     "faqQ2": "Apakah fasilitas masih memerlukan persetujuan otoritas negara pengekspor?",

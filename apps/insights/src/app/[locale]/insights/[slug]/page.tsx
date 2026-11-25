@@ -6,13 +6,13 @@ import { getPosts, parseHeadings, mdToHtml, getCoverPath, formatPostDate, isPubl
 
 /** Map insights slug → FAQ translation namespace (from old site messages) */
 const FAQ_NS: Record<string, string> = {
-  'gacc-registration-guide': 'BlogFaqGaccRegistrationGuide',
-  'china-label-compliance': 'BlogFaqChinaLabelCompliance',
-  'ccc-certification-explained': 'BlogFaqCccCertificationExplained',
-  'cosmetics-nmpa-filing': 'BlogFaqCosmeticsNmpaFiling',
-  'cross-border-ecommerce-china': 'BlogFaqCrossBorderEcommerceChina',
-  'korean-cosmetics-china-guide': 'BlogFaqKoreanCosmeticsGuide',
-  'green-coffee-beans-china': 'BlogFaqGreenCoffeeBeansChina',
+  'gacc-registration-guide': 'InsightsFaqGaccRegistrationGuide',
+  'china-label-compliance': 'InsightsFaqChinaLabelCompliance',
+  'ccc-certification-explained': 'InsightsFaqCccCertificationExplained',
+  'cosmetics-nmpa-filing': 'InsightsFaqCosmeticsNmpaFiling',
+  'cross-border-ecommerce-china': 'InsightsFaqCrossBorderEcommerceChina',
+  'korean-cosmetics-china-guide': 'InsightsFaqKoreanCosmeticsGuide',
+  'green-coffee-beans-china': 'InsightsFaqGreenCoffeeBeansChina',
 };
 
 import { WHATSAPP_URL, LOCALES, buildLanguages, SITE_URL, sharedOpenGraph, sharedTwitter, ComplianceForm } from '@trade/ui';
@@ -125,7 +125,7 @@ async function DefinitionSchema({ locale }: { locale: string }) {
 }
 
 /**
- * 读一篇博客的 FAQ 条目（来自 site messages 的 BlogFaq* namespace）。
+ * 读一篇博客的 FAQ 条目（来自 site messages 的 InsightsFaq* namespace）。
  * 可见区块与 FAQPage schema 共用这一个来源 —— 两处各读一遍迟早会分叉。
  */
 function loadFaqItems(locale: string, slug: string): { question: string; answer: string }[] {
@@ -215,7 +215,7 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
 
   if (!fs.existsSync(filePath)) {
     const msgs = getMessages(locale);
-    const B = msgs?.Blog || {};
+    const B = msgs?.Insights || {};
     return (
       <div className="max-w-3xl mx-auto px-4 py-20 text-center">
         <div className="text-6xl mb-6">🔍</div>
@@ -223,7 +223,7 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
           {B.postNotFound || 'Post Not Found'}
         </h1>
         <a href={`/${locale}/insights/`} className="text-[#2563EB] hover:underline">
-          ← {B.backToBlog || 'Back to Page'}
+          ← {B.backToInsights || 'Back to Insights'}
         </a>
       </div>
     );
@@ -294,7 +294,7 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
   const encodedTitle = encodeURIComponent(title);
 
   const msgs = getMessages(locale);
-  const B = msgs?.Blog || {};
+  const B = msgs?.Insights || {};
   const tb = (key: string, fb?: string) => B[key] ?? fb ?? key;
   const cf = (key: string, fb?: string) => (msgs?.ContactForm?.[key] ?? fb ?? key);
   const ct = (key: string, fb?: string) => (msgs?.CTA?.[key] ?? fb ?? key);
@@ -322,7 +322,7 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
   };
   const serviceInfo = CATEGORY_SERVICE_MAP[category];
   // 服务名以 Navbar.servicesDropdown 为唯一来源（48 语言 × 6 个服务都齐，导航在用）；
-  // Blog.service_* 只是历史副本、曾有缺键（service_brand 漏过 → 回退英文分类名），仅作兜底
+  // Insights.service_* 只是历史副本、曾有缺键（service_brand 漏过 → 回退英文分类名），仅作兜底
   const serviceName = serviceInfo
     ? msgs?.Navbar?.servicesDropdown?.[serviceInfo.serviceKey] ||
       tb('service_' + serviceInfo.serviceKey, category)
@@ -399,7 +399,7 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
-                {tb('backToBlog', 'Back to Insights')}
+                {tb('backToInsights', 'Back to Insights')}
               </a>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">{title}</h1>
               {excerpt && (
@@ -627,7 +627,7 @@ export default async function Post({ params }: { params: Promise<{ locale: strin
         </section>
 
         {/* 可见 FAQ 区块（与 FAQPage schema 同源） */}
-        <FaqSection items={loadFaqItems(locale, slug)} title={getMessages(locale)?.Blog?.faqTitle || 'Frequently Asked Questions'} />
+        <FaqSection items={loadFaqItems(locale, slug)} title={getMessages(locale)?.Insights?.faqTitle || 'Frequently Asked Questions'} />
 
         {/* Contact Form */}
         <ComplianceForm

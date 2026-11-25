@@ -1,11 +1,11 @@
 {
-  "Blog": {
+  "Insights": {
     "title": "Exportar para a China: análises e guias de conformidade",
     "subtitle": "Artigos para levar o seu produto à China: requisitos de acesso ao mercado, registo GACC, rotulagem e certificação, escritos para exportadores de todo o mundo.",
     "readMore": "Leia mais",
     "categories": "Categorias",
     "all": "Todos",
-    "backToBlog": "Voltar para o blog",
+    "backToInsights": "Voltar para Insights",
     "backToHome": "Voltar ao início",
     "pagination": "Página",
     "noPosts": "Nenhum artigo encontrado.",

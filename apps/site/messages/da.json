@@ -747,45 +747,6 @@
     "insightsDesc": "Udforsk flere indsigter",
     "viewAllInsights": "Se alle artikler"
   },
-  "Blog": {
-    "title": "Eksport til Kina: indsigter og compliance guides",
-    "subtitle": "Artikler for eksportører over hele verden: krav til markedsadgang i Kina, GACC registrering, mærkning og certificering.",
-    "readMore": "Læs hele artiklen",
-    "categories": "Kategorier",
-    "all": "Alle",
-    "backToBlog": "Tilbage til indsigt",
-    "backToHome": "Tilbage til forsiden",
-    "pagination": "Side",
-    "noPosts": "Ingen artikler fundet.",
-    "publishedOn": "Udgivet den",
-    "author": "David Zhang",
-    "ctaTitle": "Har du brug for hjælp til Kina-overholdelse?",
-    "ctaSubtitle": "Få en gratis overensstemmelsesvurdering fra vores ekspertteam.",
-    "ctaButton": "Få gratis vurdering",
-    "readTime": "min læsning",
-    "postNotFound": "Artikel ikke fundet",
-    "toc": "Indhold",
-    "viewPackages": "Se pakker →",
-    "authorBio": "Ekspert i regulatorisk overholdelse med speciale i markedsadgang i Kina. Hjælper danske og nordiske eksportører med at navigere i GACC-, NMPA-, CCC- og kinesiske mærkningskrav.",
-    "relatedServiceLabel": "Har du brug for hjælp til dette?",
-    "relatedServiceCta": "Få gratis vurdering →",
-    "service_gacc": "GACC-registrering",
-    "service_label": "Overholdelse af kinesiske etiketter",
-    "service_ccc": "CCC-certificering",
-    "service_cosmetics": "NMPA-kosmetikanmeldelse",
-    "service_ecommerce": "Grænseoverskridende e-handel",
-    "shareThisArticle": "Del denne artikel",
-    "relatedArticles": "Relaterede artikler",
-    "referencesHeading": "Referencer",
-    "references": "Referencer",
-    "relatedArticlesDesc": "Udforsk flere artikler om dette emne",
-    "prev": "Forrige",
-    "next": "Næste",
-    "pageInfo": "",
-    "of": " af ",
-    "metaTitle": "Eksport til Kina: compliance | GACC, CCC, NMPA",
-    "metaDescription": "Guides til eksportører til Kina: GACC registrering, CCC certificering, NMPA kosmetikregistrering og kinesisk mærkning."
-  },
   "OrganizationJsonLd": {
     "description": "Omfattende rådgivning til eksportører, der bringer produkter til Kina: ",
     "contactType": "kundeservice",
@@ -1253,7 +1214,7 @@
     "emailLabel": "Send os en e-mail",
     "backToTopLabel": "Tilbage til toppen"
   },
-  "BlogFaqGaccRegistrationGuide": {
+  "InsightsFaqGaccRegistrationGuide": {
     "faqQ1": "Hvad er GACC-registrering, og hvem har brug for det?",
     "faqA1": "GACC-registrering er obligatorisk for enhver udenlandsk fødevareproduktions-, -forarbejdnings- og -lagerfacilitet, der eksporterer til Kina. Kravet gælder siden 2022 og reguleres nu af dekret 280, der trådte i kraft 1. juni 2026 — enhver omfattet facilitet skal stå i CIFER-registeret før første forsendelse.",
     "faqQ2": "Hvor lang tid tager GACC-registrering?",
@@ -1265,7 +1226,7 @@
     "faqQ5": "Hvad sker der, hvis jeg ikke registrerer mig?",
     "faqA5": "Ja. Den kinesiske told afviser uden undtagelse forsendelser fra uregistrerede faciliteter siden 2022; varerne bliver i havnen, indtil faciliteten er registreret i CIFER, og lager- og demurrageomkostninger påhviler eksportøren."
   },
-  "BlogFaqChinaLabelCompliance": {
+  "InsightsFaqChinaLabelCompliance": {
     "faqQ1": "Hvad er overholdelse af kinesiske etiketter?",
     "faqA1": "Overholdelse af kinesiske etiketter betyder, at dine produktetiketter lever op til Kinas GB 7718-2025-standard og øvrige gældende regler. Det er obligatorisk for alle importerede fødevarer og forbrugerprodukter – ikke-kompatible etiketter fører til toldafvisning.",
     "faqQ2": "Hvad skal der stå på en kinesisk fødevareetikette?",
@@ -1275,7 +1236,7 @@
     "faqQ4": "Hvor lang tid tager etiketgennemgang?",
     "faqA4": "En professionel etiketgennemgang tager typisk 3-5 hverdage og dækker kontrol af alle nødvendige elementer, verifikation af oversættelser og sikring af overholdelse af de nyeste GB-standarder."
   },
-  "BlogFaqCccCertificationExplained": {
+  "InsightsFaqCccCertificationExplained": {
     "faqQ1": "Hvad er CCC-certificering?",
     "faqA1": "CCC (China Compulsory Certification) er obligatorisk for produkter i 17 kategorier, uanset om de importeres til eller fremstilles i Kina – herunder elektronik, bildele, sikkerhedsglas og børnelegetøj.",
     "faqQ2": "Hvilke produkter har brug for CCC?",
@@ -1285,7 +1246,7 @@
     "faqQ4": "Hvor meget koster CCC?",
     "faqA4": "Typiske omkostninger ligger på 3.000-15.000 USD eller mere, inklusive testgebyrer, fabriksinspektionsgebyrer og årlige vedligeholdelsesgebyrer."
   },
-  "BlogFaqCosmeticsNmpaFiling": {
+  "InsightsFaqCosmeticsNmpaFiling": {
     "faqQ1": "Hvad er NMPA-kosmetikanmeldelse?",
     "faqA1": "NMPA-anmeldelse (National Medical Products Administration) er obligatorisk for al kosmetik, der importeres til Kina. Både almindelig kosmetik og kosmetik til særlige formål skal anmeldes eller registreres, før de må sælges.",
     "faqQ2": "Hvad er forskellen på almindelig kosmetik og kosmetik til særlige formål?",
@@ -1295,7 +1256,7 @@
     "faqQ4": "Har jeg brug for en kinesisk ansvarlig person?",
     "faqA4": "Ja. Oversøiske kosmetikvirksomheder skal udpege en kinesisk ansvarlig person, som håndterer NMPA-anmeldelsen, fungerer som juridisk kontaktpunkt i Kina og påtager sig fælles ansvar for produktsikkerheden."
   },
-  "BlogFaqCrossBorderEcommerceChina": {
+  "InsightsFaqCrossBorderEcommerceChina": {
     "faqQ1": "Hvad er grænseoverskridende e-handel (CBEC) i Kina?",
     "faqA1": "CBEC giver oversøiske mærker mulighed for at sælge direkte til kinesiske forbrugere via online-platforme uden om de traditionelle importkanaler. Produkterne nyder godt af forenklede lovkrav og lavere afgiftssatser.",
     "faqQ2": "Hvilke produkter kan sælges via CBEC?",
@@ -1399,7 +1360,7 @@
     "terminationTitle": "Afslutning",
     "title": "Servicevilkår"
   },
-  "BlogFaqKoreanCosmeticsGuide": {
+  "InsightsFaqKoreanCosmeticsGuide": {
     "faqQ1": "Skal et koreansk kosmetikmærke NMPA-anmeldes ved almindelig handelsimport?",
     "faqA1": "Ja. Hvis du importerer kosmetik gennem almindelig handel (ikke grænseoverskridende e-handel), skal hvert produkt enten anmeldes (almindelig kosmetik) eller registreres (kosmetik til særlige formål) hos NMPA før import. Det gælder alle mærker uanset oprindelsesland.",
     "faqQ2": "Kan jeg sælge koreansk kosmetik via grænseoverskridende e-handel uden NMPA-anmeldelse?",
@@ -1421,7 +1382,7 @@
     "faqQ10": "Skal jeg have et kinesisk selskab til at anmelde kosmetik hos NMPA?",
     "faqA10": "Ja. Ethvert kosmetikprodukt, der importeres til Kina, skal have en kinesisk indenlandsk ansvarlig person – en juridisk enhed registreret i Kina med kosmetikrelateret forretningsområde. Det kan være dit eget kinesiske datterselskab, en distributør eller en tredjepartsudbyder. Den ansvarlige person er juridisk ansvarlig for produktsikkerheden og håndterer al NMPA-kommunikation."
   },
-  "BlogFaqGreenCoffeeBeansChina": {
+  "InsightsFaqGreenCoffeeBeansChina": {
     "faqQ1": "Kræver grøn kaffe GACC-fødeværeregistrering?",
     "faqA1": "Nej. Ubrændte bønner ligger uden for fødeværeregistreringssystemet og administreres som landbrugsprodukt efter meddelelse 219.",
     "faqQ2": "Kræver anlægget stadig godkendelse fra eksportlandets myndighed?",

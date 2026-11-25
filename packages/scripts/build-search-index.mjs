@@ -68,7 +68,7 @@ function extractInsights(insightsDir, locale, msg) {
   const localeInsightsDir = path.join(insightsDir, locale);
   if (!fs.existsSync(localeInsightsDir)) return [];
 
-  const insightsT = msg.Blog || {};
+  const insightsT = msg.Insights || {};
   const posts = [];
 
   for (const file of fs.readdirSync(localeInsightsDir).filter(f => f.endsWith('.mdx'))) {

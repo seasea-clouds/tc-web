@@ -747,45 +747,6 @@
     "insightsDesc": "Raziščite več vpogledov",
     "viewAllInsights": "Poglej vse članke"
   },
-  "Blog": {
-    "title": "Izvoz na Kitajsko: vpogledi in smernice za skladnost",
-    "subtitle": "Članki za izvoznike po vsem svetu: pogoji za dostop do kitajskega trga, registracija GACC, označevanje in certificiranje.",
-    "readMore": "Preberi več",
-    "categories": "kategorije",
-    "all": "Vse",
-    "backToBlog": "Nazaj na vpoglede",
-    "backToHome": "Nazaj na dom",
-    "pagination": "Stran",
-    "noPosts": "Ni objav.",
-    "publishedOn": "Objavljeno dne",
-    "author": "David Zhang",
-    "ctaTitle": "Potrebujete pomoč pri skladnosti s predpisi na Kitajskem?",
-    "ctaSubtitle": "Zagotovite si brezplačno oceno skladnosti naše strokovne ekipe.",
-    "ctaButton": "Pridobite brezplačno oceno",
-    "readTime": "min branja",
-    "postNotFound": "Objave ni bilo mogoče najti",
-    "toc": "Vsebina",
-    "viewPackages": "Poglej pakete →",
-    "authorBio": "Strokovnjak za skladnost s predpisi, specializiran za vstop na kitajski trg. Pomoč podjetjem pri krmarjenju z zahtevami GACC, NMPA, CCC in kitajskih oznak.",
-    "relatedServiceLabel": "Potrebujete pomoč pri tem?",
-    "relatedServiceCta": "Pridobite brezplačno oceno →",
-    "service_gacc": "Registracija GACC",
-    "service_label": "Skladnost s kitajsko oznako",
-    "service_ccc": "Certificiranje CCC",
-    "service_cosmetics": "Dokumentacija NMPA za kozmetiko",
-    "service_ecommerce": "Čezmejno e-trgovanje",
-    "shareThisArticle": "Delite ta članek z drugimi",
-    "relatedArticles": "Sorodni članki",
-    "referencesHeading": "Reference",
-    "references": "Reference",
-    "relatedArticlesDesc": "Raziščite več vpogledov na to temo",
-    "prev": "Prejšnja",
-    "next": "Naslednja",
-    "pageInfo": "",
-    "of": " od ",
-    "metaTitle": "Izvoz na Kitajsko: skladnost | GACC, CCC, NMPA",
-    "metaDescription": "Smernice za izvoznike na Kitajsko: registracija GACC, certifikacija CCC, registracija kozmetike NMPA in kitajsko označevanje."
-  },
   "OrganizationJsonLd": {
     "description": "Celovito svetovanje za izvoznike, ki dostavljajo izdelke na Kitajsko: ",
     "contactType": "storitve za stranke",
@@ -1253,7 +1214,7 @@
     "emailLabel": "Pošljite nam e-pošto",
     "backToTopLabel": "Nazaj na vrh"
   },
-  "BlogFaqGaccRegistrationGuide": {
+  "InsightsFaqGaccRegistrationGuide": {
     "faqQ1": "Kaj je registracija GACC in kdo jo potrebuje?",
     "faqA1": "Registracija GACC je obvezna za vsak tuji obrat za proizvodnjo, predelavo in skladiščenje živil, ki izvaža na Kitajsko. Zahteva velja od leta 2022, zdaj pa jo ureja uredba 280, veljavna od 1. junija 2026 — vsak zajeti obrat mora biti v registru CIFER pred prvo pošiljko.",
     "faqQ2": "Kako dolgo traja registracija GACC?",
@@ -1265,7 +1226,7 @@
     "faqQ5": "Kaj se zgodi, če se ne registriram?",
     "faqA5": "Da. Kitajska carina od leta 2022 brez izjeme zavrača pošiljke iz neregistriranih obratov; blago ostane v pristanišču, dokler obrat ni registriran v CIFER, stroške skladiščenja in čakanja pa nosi izvoznik."
   },
-  "BlogFaqChinaLabelCompliance": {
+  "InsightsFaqChinaLabelCompliance": {
     "faqQ1": "Kaj je skladnost s kitajsko oznako?",
     "faqA1": "Skladnost s kitajskimi oznakami pomeni, da oznake vaših izdelkov izpolnjujejo kitajski standard GB 7718-2025 in druge veljavne predpise. Obvezen je za vso uvoženo hrano in potrošniške izdelke. Neskladne oznake povzročijo zavrnitev na carini.",
     "faqQ2": "Kaj mora biti na etiketi kitajskih živil?",
@@ -1275,7 +1236,7 @@
     "faqQ4": "Kako dolgo traja pregled etikete?",
     "faqA4": "Strokovni pregled etiket običajno traja 3-5 delovnih dni, vključno s preverjanjem vseh zahtevanih elementov, preverjanjem prevodov in zagotavljanjem skladnosti z najnovejšimi standardi GB."
   },
-  "BlogFaqCccCertificationExplained": {
+  "InsightsFaqCccCertificationExplained": {
     "faqQ1": "Kaj je CCC certifikat?",
     "faqA1": "CCC (obvezno certificiranje na Kitajskem) je obvezno za izdelke v 17 kategorijah, uvoženih na Kitajsko ali proizvedenih v njej, vključno z elektroniko, avtomobilskimi deli, varnostnim steklom in otroškimi igračami.",
     "faqQ2": "Kateri izdelki potrebujejo CCC?",
@@ -1285,7 +1246,7 @@
     "faqQ4": "Koliko stane CCC?",
     "faqA4": "Običajni stroški se gibljejo od 3.000 $ do 15.000 $+, vključno s pristojbinami za testiranje, pristojbinami za pregled tovarne in letnimi pristojbinami za vzdrževanje."
   },
-  "BlogFaqCosmeticsNmpaFiling": {
+  "InsightsFaqCosmeticsNmpaFiling": {
     "faqQ1": "Kaj je NMPA cosmetics filing?",
     "faqA1": "Vložitev NMPA (National Medical Products Administration) je obvezna za vso kozmetiko, uvoženo na Kitajsko. Tako splošno kozmetiko kot kozmetiko za posebno uporabo je treba prijaviti ali registrirati, preden ju je mogoče prodati.",
     "faqQ2": "Kakšna je razlika med splošno in specialno kozmetiko?",
@@ -1295,7 +1256,7 @@
     "faqQ4": "Ali potrebujem kitajsko odgovorno osebo?",
     "faqA4": "Da, čezmorska kozmetična podjetja morajo imenovati kitajsko odgovorno osebo, ki obravnava prijavo NMPA, služi kot pravna kontaktna točka in prevzema skupno odgovornost za varnost izdelkov."
   },
-  "BlogFaqCrossBorderEcommerceChina": {
+  "InsightsFaqCrossBorderEcommerceChina": {
     "faqQ1": "Kaj je čezmejno e-trgovanje (CBEC) na Kitajskem?",
     "faqA1": "CBEC čezmorskim blagovnim znamkam omogoča neposredno prodajo kitajskim potrošnikom prek spletnih platform brez tradicionalnih uvoznih kanalov. Za izdelke veljajo poenostavljene regulativne zahteve in nižje davčne stopnje.",
     "faqQ2": "Katere izdelke je mogoče prodajati prek CBEC?",
@@ -1399,7 +1360,7 @@
     "terminationTitle": "Odpoved",
     "title": "Pogoji storitve"
   },
-  "BlogFaqKoreanCosmeticsGuide": {
+  "InsightsFaqKoreanCosmeticsGuide": {
     "faqQ1": "Ali korejska kozmetična znamka potrebuje prijavo NMPA za splošni trgovinski uvoz?",
     "faqA1": "ja Če uvažate kozmetiko prek splošne trgovine (ne čezmejne e-trgovine), je treba vsak izdelek pred uvozom prijaviti (navadna kozmetika) ali registrirati (posebna kozmetika) pri NMPA. To velja za vse znamke, ne glede na državo izvora.",
     "faqQ2": "Ali lahko prodajam korejsko kozmetiko prek čezmejnega e-trgovine brez prijave NMPA?",
@@ -1421,7 +1382,7 @@
     "faqQ10": "Ali potrebujem kitajsko podjetje za prijavo kozmetike pri NMPA?",
     "faqA10": "ja Vsak kozmetični izdelek, uvožen na Kitajsko, mora imeti kitajsko domačo odgovorno osebo – pravno osebo, registrirano na Kitajskem s področjem poslovanja, povezanim s kozmetiko. To je lahko vaša kitajska podružnica, distributer ali tretji ponudnik storitev. Odgovorna oseba je pravno odgovorna za varnost izdelkov in obravnava vso komunikacijo NMPA."
   },
-  "BlogFaqGreenCoffeeBeansChina": {
+  "InsightsFaqGreenCoffeeBeansChina": {
     "faqQ1": "Ali zelena kava potrebuje registracijo živila GACC?",
     "faqA1": "Ne. Nepražena zrna so zunaj sistema registracije živil in se vodijo kot kmetijski proizvod po obvestilu 219.",
     "faqQ2": "Ali obrat še vedno potrebuje odobritev organa države izvoznice?",

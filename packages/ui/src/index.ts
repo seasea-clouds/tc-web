@@ -1,5 +1,7 @@
 export { default as Navbar } from './Navbar';
 export { default as AutoBreadcrumb } from './AutoBreadcrumb';
+export { default as Pager } from './Pager';
+export type { PagerProps } from './Pager';
 export { default as Footer } from './Footer';
 export { default as LanguageSwitcher } from './LanguageSwitcher';
 export { default as ActionDock } from './ActionDock';

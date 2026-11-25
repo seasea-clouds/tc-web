@@ -747,45 +747,6 @@
     "insightsDesc": "Daha çox məqaləyə baxın",
     "viewAllInsights": "Bütün Məqalələrə Bax"
   },
-  "Blog": {
-    "title": "Çinə ixrac: anlayışlar və uyğunluq təlimatları",
-    "subtitle": "Dünya üzrə ixracatçılar üçün məqalələr: Çin bazarına giriş tələbləri, GACC qeydiyyatı, etiketləmə və sertifikatlaşdırma.",
-    "readMore": "Məqaləni oxu",
-    "categories": "Kateqoriyalar",
-    "all": "Hamısı",
-    "backToBlog": "Anlayışlara qayıt",
-    "backToHome": "Evə qayıt",
-    "pagination": "Səhifə",
-    "noPosts": "Heç bir məqalə tapılmadı.",
-    "publishedOn": "Dərc olunub",
-    "author": "David Zhang",
-    "ctaTitle": "Çin uyğunluğu ilə bağlı kömək lazımdır?",
-    "ctaSubtitle": "Ekspert komandamızdan pulsuz uyğunluq qiymətləndirməsi alın.",
-    "ctaButton": "Pulsuz qiymətləndirmə alın",
-    "readTime": "min oxu",
-    "postNotFound": "Məqalə Tapılmadı",
-    "toc": "İçindəkilər",
-    "viewPackages": "Paketlərə baxın →",
-    "authorBio": "Çin bazarına giriş üzrə ixtisaslaşmış tənzimləmə uyğunluğu mütəxəssisi. Azərbaycan ixracatçılarına GACC, NMPA, CCC və Çin etiket tələblərini idarə etməyə kömək edir.",
-    "relatedServiceLabel": "Bununla bağlı kömək lazımdır?",
-    "relatedServiceCta": "Pulsuz qiymətləndirmə alın →",
-    "service_gacc": "GACC qeydiyyatı",
-    "service_label": "Çin etiketinə uyğunluq",
-    "service_ccc": "CCC sertifikatı",
-    "service_cosmetics": "NMPA kosmetika bildirişi",
-    "service_ecommerce": "Transsərhəd e-ticarət",
-    "shareThisArticle": "Bu məqaləni paylaşın",
-    "relatedArticles": "Əlaqədar məqalələr",
-    "referencesHeading": "İstinadlar",
-    "references": "İstinadlar",
-    "relatedArticlesDesc": "Bu mövzu ilə bağlı daha çox anlayışı araşdırın",
-    "prev": "Əvvəlki",
-    "next": "Növbəti",
-    "pageInfo": "",
-    "of": " / ",
-    "metaTitle": "Çinə ixrac: uyğunluq | GACC, CCC, NMPA",
-    "metaDescription": "Çinə ixracatçılar üçün təlimatlar: GACC qeydiyyatı, CCC sertifikatı, NMPA kosmetika qeydiyyatı və Çin etiketləməsi."
-  },
   "OrganizationJsonLd": {
     "description": "Məhsullarını Çinə aparan ixracatçılar üçün hərtərəfli məsləhət: ",
     "contactType": "müştəri xidməti",
@@ -1253,7 +1214,7 @@
     "emailLabel": "Bizə e-poçt göndərin",
     "backToTopLabel": "Yuxarıya qayıt"
   },
-  "BlogFaqGaccRegistrationGuide": {
+  "InsightsFaqGaccRegistrationGuide": {
     "faqQ1": "GACC qeydiyyatı nədir və kimə lazımdır?",
     "faqA1": "GACC qeydiyyatı Çinə ixrac edən hər xarici ərzaq istehsalı, emalı və anbar müəssisəsi üçün məcburidir. Tələb 2022-ci ildən qüvvədədir və indi 1 iyun 2026-cı ildə qüvvəyə minən 280 nömrəli Fərmanla tənzimlənir — əhatə olunan hər müəssisə ilk göndərişdən əvvəl CIFER reyestrində olmalıdır.",
     "faqQ2": "GACC qeydiyyatı nə qədər vaxt aparır?",
@@ -1265,7 +1226,7 @@
     "faqQ5": "Qeydiyyatdan keçməsəm nə baş verər?",
     "faqA5": "Bəli. Çin gömrüyü 2022-ci ildən qeydiyyatdan keçməmiş müəssisələrin göndərişlərini istisnasız qəbul etmir; mallar müəssisə CIFER-də qeydiyyata alınana qədər limanda qalır, saxlama və gözləmə xərclərini isə ixracatçı ödəyir."
   },
-  "BlogFaqChinaLabelCompliance": {
+  "InsightsFaqChinaLabelCompliance": {
     "faqQ1": "Çin etiketinə uyğunluq nədir?",
     "faqA1": "Çin etiketinə uyğunluq məhsul etiketlərinizin Çinin GB 7718-2025 standartına və digər müvafiq qaydalara uyğun olması deməkdir. Bütün idxal olunan qida və istehlak məhsulları üçün məcburidir; uyğun olmayan etiketlər gömrükdə rədd edilir.",
     "faqQ2": "Çin qida etiketində nə olmalıdır?",
@@ -1275,7 +1236,7 @@
     "faqQ4": "Etiketin yoxlanılması nə qədər çəkir?",
     "faqA4": "Peşəkar etiket yoxlaması adətən 3-5 iş günü çəkir və bütün tələb olunan elementlərin yoxlanılmasını, tərcümələrin təsdiqini və ən son GB standartlarına uyğunluğun təmin edilməsini əhatə edir."
   },
-  "BlogFaqCccCertificationExplained": {
+  "InsightsFaqCccCertificationExplained": {
     "faqQ1": "CCC sertifikatı nədir?",
     "faqA1": "CCC (Çin Məcburi Sertifikatlaşdırması) Çinə idxal edilən və ya Çində istehsal olunan 17 kateqoriyadan ibarət məhsullar üçün məcburidir — elektronika, avtomobil hissələri, qoruyucu şüşə, uşaq oyuncaqları və s.",
     "faqQ2": "Hansı məhsullara CCC lazımdır?",
@@ -1285,7 +1246,7 @@
     "faqQ4": "CCC-nin qiyməti nə qədərdir?",
     "faqA4": "Tipik xərclər sınaq, zavod yoxlaması və illik texniki xidmət haqları daxil olmaqla 3000-15000 ABŞ dolları arasında dəyişir."
   },
-  "BlogFaqCosmeticsNmpaFiling": {
+  "InsightsFaqCosmeticsNmpaFiling": {
     "faqQ1": "NMPA kosmetika bildirişi nədir?",
     "faqA1": "NMPA (Milli Tibbi Məhsullar Administrasiyası) bildirişi Çinə idxal edilən bütün kosmetika üçün məcburidir. Həm adi, həm də xüsusi təyinatlı kosmetika satışa çıxarılmazdan əvvəl bildirişdən və ya qeydiyyatdan keçməlidir.",
     "faqQ2": "Adi və xüsusi təyinatlı kosmetika arasında fərq nədir?",
@@ -1295,7 +1256,7 @@
     "faqQ4": "Mənə Çin məsul şəxsi lazımdırmı?",
     "faqA4": "Bəli. Xarici kosmetika şirkətləri NMPA bildirişini aparan, Çində hüquqi əlaqə nöqtəsi kimi xidmət edən və məhsul təhlükəsizliyinə görə birgə məsuliyyət daşıyan Çin məsul şəxsi təyin etməlidir."
   },
-  "BlogFaqCrossBorderEcommerceChina": {
+  "InsightsFaqCrossBorderEcommerceChina": {
     "faqQ1": "Çində transsərhəd e-ticarət (CBEC) nədir?",
     "faqA1": "CBEC xarici brendlərə ənənəvi idxal kanallarını keçərək onlayn platformalar vasitəsilə birbaşa Çin istehlakçılarına satış etməyə imkan verir. Məhsullar sadələşdirilmiş tənzimləmə tələblərindən və aşağı vergi dərəcələrindən faydalanır.",
     "faqQ2": "CBEC vasitəsilə hansı məhsulları satmaq olar?",
@@ -1399,7 +1360,7 @@
     "terminationTitle": "Xitam",
     "title": "Xidmət Şərtləri"
   },
-  "BlogFaqKoreanCosmeticsGuide": {
+  "InsightsFaqKoreanCosmeticsGuide": {
     "faqQ1": "Koreya kosmetika brendinə ümumi ticarət idxalı üçün NMPA bildirişi lazımdırmı?",
     "faqA1": "Bəli. Kosmetikanı transsərhəd e-ticarət deyil, ümumi ticarət yolu ilə idxal edirsinizsə, hər bir məhsul idxaldan əvvəl NMPA-da bildirişdən (adi kosmetika) və ya qeydiyyatdan (xüsusi kosmetika) keçməlidir. Bu, mənşə ölkəsindən asılı olmayaraq bütün brendlərə aiddir.",
     "faqQ2": "NMPA bildirişi olmadan transsərhəd e-ticarət vasitəsilə Koreya kosmetikasını sata bilərəmmi?",
@@ -1421,7 +1382,7 @@
     "faqQ10": "NMPA-da kosmetika bildirişi üçün Çin şirkətinə ehtiyacım varmı?",
     "faqA10": "Bəli. Çinə idxal edilən hər kosmetika məhsulunun Çin məsul şəxsi — Çində kosmetika ilə bağlı fəaliyyət sahəsi ilə qeydiyyatdan keçmiş hüquqi şəxs olmalıdır. Bu, öz Çin filialınız, distribyutorunuz və ya üçüncü tərəf xidmət təminatçınız ola bilər. Məsul şəxs məhsul təhlükəsizliyinə görə qanuni cavabdehdir və bütün NMPA kommunikasiyalarını idarə edir."
   },
-  "BlogFaqGreenCoffeeBeansChina": {
+  "InsightsFaqGreenCoffeeBeansChina": {
     "faqQ1": "Yaşıl qəhvə GACC ərzaq qeydiyyatı tələb edirmi?",
     "faqA1": "Xeyr. Qovrulmamış dənələr ərzaq qeydiyyatı sistemindən kənardır və 219 nömrəli bildirişə uyğun olaraq kənd təsərrüfatı məhsulu kimi idarə olunur.",
     "faqQ2": "Müəssisə hələ də ixrac edən ölkənin orqanının təsdiqinə ehtiyac duyurmu?",

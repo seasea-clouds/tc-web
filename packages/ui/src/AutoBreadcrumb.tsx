@@ -146,7 +146,7 @@ export default function AutoBreadcrumb({ locale, title }: AutoBreadcrumbProps) {
       continue;
     }
 
-    // Blog posts / regulation documents: /<section>/{slug} → use title prop or override
+    // Article / regulation detail pages: /<section>/{slug} → use title prop or override
     if ((pathSegments[i - 1] === 'insights' || pathSegments[i - 1] === 'regulations') && i > 0) {
       if (override) {
         items.push({ label: override.label });

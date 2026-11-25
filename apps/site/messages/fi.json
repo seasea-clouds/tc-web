@@ -747,45 +747,6 @@
     "insightsDesc": "Tutustu useampiin artikkeleihin",
     "viewAllInsights": "Näytä kaikki artikkelit"
   },
-  "Blog": {
-    "title": "Vienti Kiinaan: näkemyksiä ja vaatimustenmukaisuusoppaita",
-    "subtitle": "Artikkeleita vientiyrityksille maailmanlaajuisesti: Kiinan markkinoille pääsyn vaatimukset, GACC rekisteröinti, merkinnät ja sertifiointi.",
-    "readMore": "Lue koko artikkeli",
-    "categories": "Luokat",
-    "all": "Kaikki",
-    "backToBlog": "Takaisin artikkeleihin",
-    "backToHome": "Takaisin etusivulle",
-    "pagination": "Sivu",
-    "noPosts": "Artikkeleita ei löytynyt.",
-    "publishedOn": "Julkaistu",
-    "author": "David Zhang",
-    "ctaTitle": "Tarvitsetko apua Kiinan vaatimustenmukaisuuden kanssa?",
-    "ctaSubtitle": "Pyydä ilmainen vaatimustenmukaisuusarviointi asiantuntijatiimiltämme.",
-    "ctaButton": "Hanki ilmainen arviointi",
-    "readTime": "min lukuaika",
-    "postNotFound": "Artikkelia ei löytynyt",
-    "toc": "Sisällysluettelo",
-    "viewPackages": "Näytä paketit →",
-    "authorBio": "Kiinan markkinoille pääsyyn erikoistunut sääntelyn asiantuntija, joka auttaa vientiyrityksiä GACC-, NMPA-, CCC- ja kiinalaisten etikettivaatimusten parissa.",
-    "relatedServiceLabel": "Tarvitsetko apua tähän?",
-    "relatedServiceCta": "Hanki ilmainen arviointi →",
-    "service_gacc": "GACC-rekisteröinti",
-    "service_label": "Kiinan etikettien vaatimustenmukaisuus",
-    "service_ccc": "CCC-sertifiointi",
-    "service_cosmetics": "NMPA-kosmetiikkailmoitus",
-    "service_ecommerce": "Rajatylittävä verkkokauppa",
-    "shareThisArticle": "Jaa tämä artikkeli",
-    "relatedArticles": "Aiheeseen liittyvät artikkelit",
-    "referencesHeading": "Viitteet",
-    "references": "Viitteet",
-    "relatedArticlesDesc": "Lue lisää artikkeleita tästä aiheesta",
-    "prev": "Edellinen",
-    "next": "Seuraava",
-    "pageInfo": "",
-    "of": " / ",
-    "metaTitle": "Vienti Kiinaan: vaatimustenmukaisuus | GACC, CCC, NMPA",
-    "metaDescription": "Oppaita Kiinaan vieville: GACC rekisteröinti, CCC sertifiointi, NMPA kosmetiikkailmoitus ja kiinalaiset merkinnät."
-  },
   "OrganizationJsonLd": {
     "description": "Kattavaa neuvontaa vientiyrityksille, jotka tuovat tuotteita Kiinaan: ",
     "contactType": "asiakaspalvelu",
@@ -1253,7 +1214,7 @@
     "emailLabel": "Lähetä meille sähköpostia",
     "backToTopLabel": "Takaisin alkuun"
   },
-  "BlogFaqGaccRegistrationGuide": {
+  "InsightsFaqGaccRegistrationGuide": {
     "faqQ1": "Mitä on GACC-rekisteröinti ja ketkä tarvitsevat sen?",
     "faqA1": "GACC-rekisteröinti on pakollinen kaikille ulkomaisille elintarvikkeiden tuotanto-, jalostus- ja varastointilaitoksille, jotka vievät Kiinaan. Vaatimus on ollut voimassa vuodesta 2022, ja sitä säätelee nyt asetus 280, joka tuli voimaan 1.6.2026 — jokaisen piiriin kuuluvan laitoksen on oltava CIFER-rekisterissä ennen ensimmäistä toimitusta.",
     "faqQ2": "Kuinka kauan GACC-rekisteröinti kestää?",
@@ -1265,7 +1226,7 @@
     "faqQ5": "Mitä tapahtuu, jos en rekisteröidy?",
     "faqA5": "Kyllä. Kiinan tulli on vuodesta 2022 hylännyt poikkeuksetta rekisteröimättömien laitosten lähetykset; tavarat jäävät satamaan, kunnes laitos on rekisteröity CIFERiin, ja varastointi- ja viivästyskulut jäävät viejän maksettaviksi."
   },
-  "BlogFaqChinaLabelCompliance": {
+  "InsightsFaqChinaLabelCompliance": {
     "faqQ1": "Mitä on etikettien vaatimustenmukaisuus Kiinassa?",
     "faqA1": "Etikettien vaatimustenmukaisuus tarkoittaa, että tuote-etiketit täyttävät Kiinan GB 7718-2025 -standardin ja muut sovellettavat määräykset. Se on pakollista kaikille tuoduille elintarvikkeille ja kulutustavaroille, ja puutteelliset etiketit johtavat tullin hylkäykseen.",
     "faqQ2": "Mitä kiinalaisen elintarvike-etiketin tulee sisältää?",
@@ -1275,7 +1236,7 @@
     "faqQ4": "Kuinka kauan etikettien tarkistus kestää?",
     "faqA4": "Ammattimainen etikettitarkistus kestää yleensä 3–5 arkipäivää. Siinä käydään läpi kaikki pakolliset elementit, tarkistetaan käännökset ja varmistetaan uusimpien GB-standardien vaatimusten täyttyminen."
   },
-  "BlogFaqCccCertificationExplained": {
+  "InsightsFaqCccCertificationExplained": {
     "faqQ1": "Mitä on CCC-sertifiointi?",
     "faqA1": "CCC (China Compulsory Certification) on Kiinan pakollinen sertifiointi, joka koskee 17 tuoteryhmää – sekä maahan tuotavia että Kiinassa valmistettavia tuotteita. Siihen kuuluu muun muassa elektroniikka, autonosat, turvalasi ja lasten lelut.",
     "faqQ2": "Mitkä tuotteet tarvitsevat CCC-sertifioinnin?",
@@ -1285,7 +1246,7 @@
     "faqQ4": "Paljonko CCC-sertifiointi maksaa?",
     "faqA4": "Tyypilliset kustannukset vaihtelevat 3 000 dollarista 15 000 dollariin ja ylöspäin, mukaan lukien testaus-, tehdastarkastus- ja vuosittaiset ylläpitomaksut."
   },
-  "BlogFaqCosmeticsNmpaFiling": {
+  "InsightsFaqCosmeticsNmpaFiling": {
     "faqQ1": "Mitä on NMPA-kosmetiikkailmoitus?",
     "faqA1": "NMPA (National Medical Products Administration) edellyttää ilmoituksen tai rekisteröinnin kaikelle Kiinaan tuotavalle kosmetiikalle. Sekä tavallinen että erikoiskosmetiikka on ilmoitettava tai rekisteröitävä ennen myynnin aloittamista.",
     "faqQ2": "Mitä eroa on tavallisella ja erikoiskosmetiikalla?",
@@ -1295,7 +1256,7 @@
     "faqQ4": "Tarvitsenko kiinalaisen vastuuhenkilön?",
     "faqA4": "Kyllä. Ulkomaisen kosmetiikkayrityksen on nimettävä kiinalainen vastuuhenkilö, joka hoitaa NMPA-ilmoitukset, toimii laillisena yhteyspisteenä Kiinassa ja kantaa yhteisvastuun tuoteturvallisuudesta."
   },
-  "BlogFaqCrossBorderEcommerceChina": {
+  "InsightsFaqCrossBorderEcommerceChina": {
     "faqQ1": "Mitä on rajatylittävä verkkokauppa (CBEC) Kiinassa?",
     "faqA1": "CBEC mahdollistaa ulkomaisten brändien myynnin suoraan kiinalaisille kuluttajille verkkoalustojen kautta ilman perinteisiä tuontikanavia. Tuotteisiin sovelletaan kevennettyjä sääntelyvaatimuksia ja alhaisempia veroja.",
     "faqQ2": "Mitä tuotteita CBEC:n kautta voi myydä?",
@@ -1399,7 +1360,7 @@
     "terminationTitle": "Irtisanominen",
     "title": "Palveluehdot"
   },
-  "BlogFaqKoreanCosmeticsGuide": {
+  "InsightsFaqKoreanCosmeticsGuide": {
     "faqQ1": "Tarvitseeko korealainen kosmetiikkabrändi NMPA-ilmoituksen yleisen kaupan tuonnissa?",
     "faqA1": "Kyllä. Kun kosmetiikkaa tuodaan yleisen kaupan kautta rajatylittävän verkkokaupan sijaan, jokainen tuote on ilmoitettava (tavallinen kosmetiikka) tai rekisteröitävä (erikoiskosmetiikka) NMPA:lle ennen tuontia brändin alkuperämaasta riippumatta.",
     "faqQ2": "Voinko myydä korealaista kosmetiikkaa rajatylittävän verkkokaupan kautta ilman NMPA-ilmoitusta?",
@@ -1421,7 +1382,7 @@
     "faqQ10": "Tarvitsenko kiinalaisen yrityksen kosmetiikan ilmoittamiseen?",
     "faqA10": "Kyllä. Jokaisella Kiinaan tuotavalla kosmetiikkatuotteella on oltava kiinalainen kotimainen vastuuhenkilö: Kiinaan rekisteröity oikeushenkilö, jonka toimialaan kuuluu kosmetiikka. Se voi olla oma kiinalainen tytäryhtiö, jakelija tai kolmannen osapuolen palveluntarjoaja. Vastuuhenkilö on laillisesti vastuussa tuoteturvallisuudesta ja hoitaa kaiken NMPA-viestinnän."
   },
-  "BlogFaqGreenCoffeeBeansChina": {
+  "InsightsFaqGreenCoffeeBeansChina": {
     "faqQ1": "Tarvitseeko vihreä kahvi GACC-elintarvikerekisteröinnin?",
     "faqA1": "Ei. Paahtamattomat pavut ovat elintarvikerekisteröintijärjestelmän ulkopuolella ja niitä hallinnoidaan maataloustuotteena tiedonannon 219 mukaisesti.",
     "faqQ2": "Tarvitseeko laitos edelleen viejämaan viranomaisen hyväksynnän?",

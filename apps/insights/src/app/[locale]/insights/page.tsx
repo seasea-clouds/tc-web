@@ -1,11 +1,11 @@
-import { WHATSAPP_URL, LOCALES, SITE_URL, buildLanguages, sharedOpenGraph, sharedTwitter, AutoBreadcrumb, ComplianceForm } from '@trade/ui';
+import { WHATSAPP_URL, LOCALES, SITE_URL, buildLanguages, sharedOpenGraph, sharedTwitter, AutoBreadcrumb, Pager, ComplianceForm } from '@trade/ui';
 import fs from 'fs';
 import path from 'path';
 import { getPosts } from '@/lib/posts';
 import { getMessages } from '@/lib/messages';
 import InsightsClient from './InsightsClient';
-import InsightsPager from '@/components/InsightsPager';
-import { paginate, getCategories, categoryKey } from '@/lib/insights-list';
+
+import { paginate, getCategories, categoryKey, insightsPagePath } from '@/lib/insights-list';
 
 
 
@@ -16,8 +16,8 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const msgs = getMessages(locale);
-  const B = msgs?.Blog || {};
-  const title = B.metaTitle || 'Exporting to China Blog';
+  const B = msgs?.Insights || {};
+  const title = B.metaTitle || 'Exporting to China Insights';
   const description = B.metaDescription || 'Expert guides on exporting to China.';
   const path = '/insights/';
   const url = `https://sinotradecompliance.com/${locale}${path}`;
@@ -33,13 +33,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default async function BlogHome({ params }: { params: Promise<{ locale: string }> }) {
+export default async function InsightsHome({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const posts = getPosts(locale);
   const pages = paginate(posts);
   const categories = getCategories(posts);
   const msgs = getMessages(locale);
-  const B = msgs?.Blog || {};
+  const B = msgs?.Insights || {};
   const tb = (key: string, fb?: string) => B[key] ?? fb ?? key;
   const CF = msgs?.ContactForm || {};
   const cf = (key: string, fb?: string) => (msgs?.ContactForm?.[key] ?? fb ?? key);
@@ -57,7 +57,7 @@ export default async function BlogHome({ params }: { params: Promise<{ locale: s
   return (
     <>
       <AutoBreadcrumb locale={locale} />
-      {/* Blog schema */}
+      {/* Insights schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -98,11 +98,12 @@ export default async function BlogHome({ params }: { params: Promise<{ locale: s
             noPostsText={tb('noPosts', 'No posts found.')}
             allText={tb('all', 'All')}
           >
-            <InsightsPager
+            <Pager
               locale={locale}
               currentPage={1}
               totalPages={pages.length}
               paginationText={tb('pagination', 'Page')}
+              pagePath={insightsPagePath}
               prevText={tb('prev', 'Previous')}
               nextText={tb('next', 'Next')}
             />

@@ -747,45 +747,6 @@
     "insightsDesc": "Fedezzen fel további elemzéseket",
     "viewAllInsights": "Összes cikk megtekintése"
   },
-  "Blog": {
-    "title": "Export Kínába: elemzések és megfelelőségi útmutatók",
-    "subtitle": "Cikkek a világ minden tájáról érkező exportőröknek: kínai piacra lépési követelmények, GACC regisztráció, címkézés és tanúsítás.",
-    "readMore": "Teljes cikk elolvasása",
-    "categories": "Kategóriák",
-    "all": "Mind",
-    "backToBlog": "Vissza a cikkekhez",
-    "backToHome": "Vissza a kezdőlapra",
-    "pagination": "oldal",
-    "noPosts": "Nem található cikk.",
-    "publishedOn": "Közzétéve:",
-    "author": "David Zhang",
-    "ctaTitle": "Segítségre van szüksége a kínai megfeleléshez?",
-    "ctaSubtitle": "Kérjen ingyenes megfelelőségi értékelést szakértői csapatunktól.",
-    "ctaButton": "Kérjen ingyenes értékelést",
-    "readTime": "perc olvasás",
-    "postNotFound": "A cikk nem található",
-    "toc": "Tartalom",
-    "viewPackages": "Csomagok megtekintése →",
-    "authorBio": "Szabályozási megfelelőségi szakértő, aki a kínai piacra lépésre szakosodott. Segít a vállalkozásoknak eligazodni a GACC, NMPA, CCC és kínai címkézési követelményekben.",
-    "relatedServiceLabel": "Segítségre van szüksége?",
-    "relatedServiceCta": "Kérjen ingyenes értékelést →",
-    "service_gacc": "GACC-regisztráció",
-    "service_label": "Kínai címke-megfelelőség",
-    "service_ccc": "CCC-tanúsítás",
-    "service_cosmetics": "NMPA kozmetikai bejelentés",
-    "service_ecommerce": "Határokon átnyúló e-kereskedelem",
-    "shareThisArticle": "Cikk megosztása",
-    "relatedArticles": "Kapcsolódó cikkek",
-    "referencesHeading": "Hivatkozások",
-    "references": "Hivatkozások",
-    "relatedArticlesDesc": "További cikkek a témában",
-    "prev": "Előző",
-    "next": "Következő",
-    "pageInfo": "",
-    "of": " / ",
-    "metaTitle": "Export Kínába: megfelelőség | GACC, CCC, NMPA",
-    "metaDescription": "Útmutatók a Kínába exportálóknak: GACC regisztráció, CCC tanúsítás, NMPA kozmetikai bejelentés és kínai címkézés."
-  },
   "OrganizationJsonLd": {
     "description": "Átfogó tanácsadás a Kínába termékeket szállító exportőröknek: ",
     "contactType": "ügyfélszolgálat",
@@ -1253,7 +1214,7 @@
     "emailLabel": "Küldjön e-mailt",
     "backToTopLabel": "Vissza az elejére"
   },
-  "BlogFaqGaccRegistrationGuide": {
+  "InsightsFaqGaccRegistrationGuide": {
     "faqQ1": "Mi az a GACC-regisztráció, és kinek kötelező?",
     "faqA1": "A GACC-regisztráció kötelező minden olyan külföldi élelmiszer-termelő, -feldolgozó és -tároló létesítmény számára, amely Kínába exportál. A követelmény 2022 óta él, és most a 2026. június 1-jén hatályba lépett 280. rendelet szabályozza — minden érintett létesítménynek szerepelnie kell a CIFER-nyilvántartásban az első szállítmány előtt.",
     "faqQ2": "Mennyi ideig tart a GACC-regisztráció?",
@@ -1265,7 +1226,7 @@
     "faqQ5": "Mi történik, ha nem regisztrálok?",
     "faqA5": "Igen. A kínai vám 2022 óta kivétel nélkül visszautasítja a nem regisztrált létesítmények szállítmányait; az áru a kikötőben marad, amíg a létesítményt regisztrálják a CIFER-ben, a raktározási és várakozási költségeket pedig az exportőr viseli."
   },
-  "BlogFaqChinaLabelCompliance": {
+  "InsightsFaqChinaLabelCompliance": {
     "faqQ1": "Mit jelent a kínai címke-megfelelőség?",
     "faqA1": "A kínai címke-megfelelőség azt jelenti, hogy a termék címkéje megfelel Kína GB 7718-2025 szabványának és minden egyéb vonatkozó előírásnak. Ez minden importált élelmiszerre és fogyasztási cikkre kötelező, a nem megfelelő címke pedig vámvisszautasításhoz vezet.",
     "faqQ2": "Mi szerepeljen a kínai élelmiszercímkén?",
@@ -1275,7 +1236,7 @@
     "faqQ4": "Mennyi ideig tart a címke felülvizsgálata?",
     "faqA4": "A professzionális címke-felülvizsgálat jellemzően 3-5 munkanapot vesz igénybe, és kiterjed az összes kötelező elem ellenőrzésére, a fordítások hitelesítésére és a legújabb GB-szabványoknak való megfelelés igazolására."
   },
-  "BlogFaqCccCertificationExplained": {
+  "InsightsFaqCccCertificationExplained": {
     "faqQ1": "Mi az a CCC-tanúsítás?",
     "faqA1": "A CCC (China Compulsory Certification, azaz kínai kötelező tanúsítás) a Kínába importált vagy Kínában gyártott, 17 kategóriába tartozó termékekre kötelező, beleértve az elektronikát, az autóalkatrészeket, a biztonsági üvegeket és a gyermekjátékokat.",
     "faqQ2": "Mely termékekhez kell CCC-tanúsítás?",
@@ -1285,7 +1246,7 @@
     "faqQ4": "Mennyibe kerül a CCC-tanúsítás?",
     "faqA4": "A jellemző költség 3000 és 15000 USD között mozog, beleértve a vizsgálati díjat, a gyári ellenőrzést és az éves fenntartási díjakat."
   },
-  "BlogFaqCosmeticsNmpaFiling": {
+  "InsightsFaqCosmeticsNmpaFiling": {
     "faqQ1": "Mi az NMPA kozmetikai bejelentés?",
     "faqA1": "Az NMPA (National Medical Products Administration) bejelentése minden Kínába importált kozmetikumra kötelező. Mind a hagyományos, mind a speciális kozmetikumokat be kell jelenteni vagy regisztrálni, mielőtt értékesíthetők.",
     "faqQ2": "Mi a különbség a hagyományos és a speciális kozmetikumok között?",
@@ -1295,7 +1256,7 @@
     "faqQ4": "Szükségem van kínai felelős személyre?",
     "faqA4": "Igen. A külföldi kozmetikai cégeknek ki kell jelölniük egy kínai felelős személyt, aki intézi az NMPA-bejelentést, Kínában jogi kapcsolattartóként szolgál, és egyetemleges felelősséget visel a termékbiztonságért."
   },
-  "BlogFaqCrossBorderEcommerceChina": {
+  "InsightsFaqCrossBorderEcommerceChina": {
     "faqQ1": "Mi az a határokon átnyúló e-kereskedelem (CBEC) Kínában?",
     "faqA1": "A CBEC lehetővé teszi, hogy a külföldi márkák a hagyományos importcsatornákat megkerülve közvetlenül értékesítsenek a kínai fogyasztóknak online platformokon keresztül. A termékek egyszerűsített szabályozási követelményekre és alacsonyabb adókulcsokra jogosultak.",
     "faqQ2": "Milyen termékek értékesíthetők CBEC-csatornán?",
@@ -1399,7 +1360,7 @@
     "terminationTitle": "Felmondás",
     "title": "Szolgáltatási feltételek"
   },
-  "BlogFaqKoreanCosmeticsGuide": {
+  "InsightsFaqKoreanCosmeticsGuide": {
     "faqQ1": "Egy koreai kozmetikai márkának szüksége van NMPA-bejelentésre az általános kereskedelemben történő importhoz?",
     "faqA1": "Igen. Ha kozmetikumokat általános kereskedelemben, nem pedig határokon átnyúló e-kereskedelemben importál, minden terméket be kell jelenteni (hagyományos kozmetikum) vagy regisztrálni kell (speciális kozmetikum) az NMPA-nál az importálás előtt, függetlenül a márka származási országától.",
     "faqQ2": "Értékesíthetek koreai kozmetikumokat NMPA-bejelentés nélkül, határokon átnyúló e-kereskedelemben?",
@@ -1421,7 +1382,7 @@
     "faqQ10": "Szükségem van kínai cégre a kozmetikumok NMPA-ba történő bejelentéséhez?",
     "faqA10": "Igen. Minden Kínába importált kozmetikai termékhez kínai belföldi felelős személyre van szükség: egy Kínában bejegyzett, kozmetikumokhoz kapcsolódó tevékenységi körrel rendelkező jogi személyre. Ez lehet a saját kínai leányvállalata, egy forgalmazó vagy egy harmadik fél szolgáltató. A felelős személy jogilag felelős a termékbiztonságért, és minden NMPA-kommunikációt ő intéz."
   },
-  "BlogFaqGreenCoffeeBeansChina": {
+  "InsightsFaqGreenCoffeeBeansChina": {
     "faqQ1": "Kell a zöld kávénak GACC élelmiszer-nyilvántartás?",
     "faqA1": "Nem. A nem pörkölt bab az élelmiszer-nyilvántartási rendszeren kívül van, és a 219. közlemény szerint agrártermékként kezelik.",
     "faqQ2": "Kell a létesítménynek továbbra is az exportáló ország hatóságának jóváhagyása?",

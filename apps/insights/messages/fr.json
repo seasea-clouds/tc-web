@@ -1,11 +1,11 @@
 {
-  "Blog": {
+  "Insights": {
     "title": "Exporter vers la Chine : analyses et guides de conformité",
     "subtitle": "Des articles pour amener votre produit en Chine : conditions d'accès au marché, enregistrement GACC, étiquetage et certification, rédigés pour les exportateurs du monde entier.",
     "readMore": "En savoir plus",
     "categories": "Catégories",
     "all": "Tous",
-    "backToBlog": "Retour aux articles",
+    "backToInsights": "Retour aux articles",
     "backToHome": "Retour à l'accueil",
     "pagination": "Page",
     "noPosts": "Aucun article trouvé.",

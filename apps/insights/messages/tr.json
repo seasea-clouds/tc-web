@@ -1,11 +1,11 @@
 {
-  "Blog": {
+  "Insights": {
     "title": "Çin'e ihracat: içgörüler ve uyum rehberleri",
     "subtitle": "Ürününüzü Çin'e taşımak için makaleler: pazara giriş koşulları, GACC kaydı, etiketleme ve sertifikasyon, dünya genelindeki ihracatçılar için.",
     "readMore": "Devamını oku",
     "categories": "Kategoriler",
     "all": "Tümü",
-    "backToBlog": "Analizlere Geri Dön",
+    "backToInsights": "Analizlere Geri Dön",
     "backToHome": "Ana Sayfaya Dön",
     "pagination": "Sayfa",
     "noPosts": "Gönderi bulunamadı.",

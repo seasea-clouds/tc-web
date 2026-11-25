@@ -747,45 +747,6 @@
     "insightsDesc": "Explorez d'autres analyses",
     "viewAllInsights": "Voir tous les articles"
   },
-  "Blog": {
-    "title": "Exporter vers la Chine : analyses et guides de conformité",
-    "subtitle": "Des articles pour amener votre produit en Chine : conditions d'accès au marché, enregistrement GACC, étiquetage et certification, rédigés pour les exportateurs du monde entier.",
-    "readMore": "En savoir plus",
-    "categories": "Catégories",
-    "all": "Tous",
-    "backToBlog": "Retour aux articles",
-    "backToHome": "Retour à l'accueil",
-    "pagination": "Page",
-    "noPosts": "Aucun article trouvé.",
-    "publishedOn": "Publié le",
-    "author": "David Zhang",
-    "ctaTitle": "Un doute sur la conformité de vos produits en Chine ?",
-    "ctaSubtitle": "Obtenez une évaluation de conformité gratuite et personnalisée, réalisée par notre équipe d'experts.",
-    "ctaButton": "Obtenez une évaluation gratuite",
-    "readTime": "min de lecture",
-    "postNotFound": "Article introuvable",
-    "toc": "Sommaire",
-    "viewPackages": "Voir les forfaits →",
-    "authorBio": "Expert en conformité réglementaire pour l'entrée sur le marché chinois. Il accompagne les exportateurs français dans leurs démarches GACC, NMPA, CCC et d'étiquetage chinois.",
-    "relatedServiceLabel": "Besoin d'aide sur ce sujet ?",
-    "relatedServiceCta": "Obtenez une évaluation gratuite →",
-    "service_gacc": "Enregistrement GACC",
-    "service_label": "Conformité des étiquettes chinoises",
-    "service_ccc": "Certification CCC",
-    "service_cosmetics": "Dépôt de produits cosmétiques NMPA",
-    "service_ecommerce": "Commerce électronique transfrontalier",
-    "shareThisArticle": "Partagez cet article",
-    "relatedArticles": "Articles connexes",
-    "referencesHeading": "Références",
-    "references": "Références",
-    "relatedArticlesDesc": "Poursuivez votre lecture sur ce thème",
-    "prev": "Précédent",
-    "next": "Suivant",
-    "pageInfo": "",
-    "of": " sur ",
-    "metaTitle": "Exporter vers la Chine : conformité | GACC, CCC, NMPA",
-    "metaDescription": "Guides pour les exportateurs vers la Chine : enregistrement GACC, certification CCC, enregistrement NMPA des cosmétiques et étiquetage chinois, de l'accès au marché aux rayons."
-  },
   "OrganizationJsonLd": {
     "description": "Conseil global pour les exportateurs qui amènent leurs produits en Chine : ",
     "contactType": "service client",
@@ -1253,7 +1214,7 @@
     "emailLabel": "Envoyez-nous un email",
     "backToTopLabel": "Retour en haut"
   },
-  "BlogFaqGaccRegistrationGuide": {
+  "InsightsFaqGaccRegistrationGuide": {
     "faqQ1": "Qu'est-ce que l'enregistrement GACC et qui est concerné ?",
     "faqA1": "L'enregistrement GACC est obligatoire pour tout établissement étranger de production, de transformation et de stockage de denrées exportant vers la Chine. L'obligation s'applique depuis 2022 et relève désormais du décret 280, entré en vigueur le 1er juin 2026 — chaque établissement concerné doit figurer au registre CIFER avant sa première expédition.",
     "faqQ2": "Combien de temps prend l'enregistrement GACC ?",
@@ -1265,7 +1226,7 @@
     "faqQ5": "Que se passe-t-il si je ne m'enregistre pas ?",
     "faqA5": "Oui. Les douanes chinoises refusent sans exception les expéditions d'établissements non enregistrés depuis 2022 ; les produits restent au port jusqu'à l'enregistrement dans CIFER, et les frais de stockage et de surestaries sont à la charge de l'exportateur."
   },
-  "BlogFaqChinaLabelCompliance": {
+  "InsightsFaqChinaLabelCompliance": {
     "faqQ1": "Qu’est-ce que la conformité des étiquettes chinoises ?",
     "faqA1": "La conformité des étiquettes chinoises signifie que les étiquettes de vos produits respectent la norme GB 7718-2025 et les autres réglementations applicables. Elle est obligatoire pour tous les produits alimentaires et de consommation importés. Une étiquette non conforme entraîne un rejet en douane.",
     "faqQ2": "Que doit contenir une étiquette alimentaire chinoise ?",
@@ -1275,7 +1236,7 @@
     "faqQ4": "Combien de temps prend l'examen des étiquettes ?",
     "faqA4": "Un examen professionnel des étiquettes prend généralement 3 à 5 jours ouvrés : vérification de tous les éléments obligatoires, contrôle des traductions et conformité aux dernières normes GB en vigueur."
   },
-  "BlogFaqCccCertificationExplained": {
+  "InsightsFaqCccCertificationExplained": {
     "faqQ1": "Qu'est-ce que la certification CCC ?",
     "faqA1": "La CCC (China Compulsory Certification) est obligatoire pour les produits de 17 catégories importés ou fabriqués en Chine, notamment l'électronique, les pièces automobiles, le verre de sécurité et les jouets pour enfants.",
     "faqQ2": "Quels produits ont besoin de la CCC ?",
@@ -1285,7 +1246,7 @@
     "faqQ4": "Combien coûte la certification CCC ?",
     "faqA4": "Les coûts typiques vont de 3 000 à 15 000 dollars et plus, frais d'essais, d'inspection d'usine et de maintenance annuelle compris."
   },
-  "BlogFaqCosmeticsNmpaFiling": {
+  "InsightsFaqCosmeticsNmpaFiling": {
     "faqQ1": "Qu'est-ce que le dépôt de produits cosmétiques NMPA ?",
     "faqA1": "Le dépôt auprès de la NMPA (National Medical Products Administration) est obligatoire pour tous les cosmétiques importés en Chine. Les cosmétiques ordinaires comme les cosmétiques à usage spécial doivent être déposés ou enregistrés avant d'être vendus.",
     "faqQ2": "Quelle est la différence entre cosmétiques ordinaires et cosmétiques à usage spécial ?",
@@ -1295,7 +1256,7 @@
     "faqQ4": "Faut-il une personne responsable chinoise ?",
     "faqA4": "Oui. Les entreprises de cosmétiques étrangères doivent désigner une personne responsable en Chine, qui gère le dépôt NMPA, sert de point de contact légal et assume une responsabilité conjointe pour la sécurité des produits."
   },
-  "BlogFaqCrossBorderEcommerceChina": {
+  "InsightsFaqCrossBorderEcommerceChina": {
     "faqQ1": "Qu’est-ce que le commerce électronique transfrontalier (CBEC) en Chine ?",
     "faqA1": "Le CBEC permet aux marques étrangères de vendre directement aux consommateurs chinois via des plateformes en ligne, sans passer par les canaux d'importation traditionnels. Les produits bénéficient d'exigences réglementaires simplifiées et de droits réduits.",
     "faqQ2": "Quels produits peuvent être vendus via le CBEC ?",
@@ -1399,7 +1360,7 @@
     "terminationTitle": "Résiliation",
     "title": "Conditions d'Utilisation"
   },
-  "BlogFaqKoreanCosmeticsGuide": {
+  "InsightsFaqKoreanCosmeticsGuide": {
     "faqQ1": "Une marque de cosmétiques coréenne doit-elle déposer un dossier NMPA pour les importations en commerce général ?",
     "faqA1": "Oui. Si vous importez des cosmétiques par le commerce général (et non par le commerce électronique transfrontalier), chaque produit doit être déposé (cosmétiques ordinaires) ou enregistré (cosmétiques à usage spécial) auprès de la NMPA avant l'importation. Cela vaut pour toutes les marques, quel que soit le pays d'origine.",
     "faqQ2": "Puis-je vendre des cosmétiques coréens via le commerce électronique transfrontalier sans dépôt NMPA ?",
@@ -1421,7 +1382,7 @@
     "faqQ10": "Faut-il une entreprise chinoise pour déposer des cosmétiques auprès de la NMPA ?",
     "faqA10": "Oui. Chaque produit cosmétique importé en Chine doit avoir une personne responsable nationale chinoise — une entité juridique enregistrée en Chine dont l'objet social couvre les cosmétiques. Il peut s'agir de votre propre filiale chinoise, d'un distributeur ou d'un prestataire de services tiers. La personne responsable est légalement tenue de la sécurité des produits et gère toutes les communications avec la NMPA."
   },
-  "BlogFaqGreenCoffeeBeansChina": {
+  "InsightsFaqGreenCoffeeBeansChina": {
     "faqQ1": "Le café vert doit-il un enregistrement alimentaire GACC ?",
     "faqA1": "Non. Les grains non torréfiés sont hors du système d'enregistrement alimentaire et relèvent des produits agricoles au titre de l'avis 219.",
     "faqQ2": "L'établissement a-t-il encore besoin de l'accord de l'autorité du pays exportateur ?",

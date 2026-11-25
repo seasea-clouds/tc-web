@@ -747,45 +747,6 @@
     "insightsDesc": "Ontdek meer inzichten",
     "viewAllInsights": "Bekijk alle artikelen"
   },
-  "Blog": {
-    "title": "Exporteren naar China: inzichten en compliance gidsen",
-    "subtitle": "Artikelen om uw product naar China te brengen: markttoegangseisen, GACC registratie, etikettering en certificering, voor exporteurs wereldwijd.",
-    "readMore": "Lees meer",
-    "categories": "Categorieën",
-    "all": "Alle",
-    "backToBlog": "Terug naar het blog",
-    "backToHome": "Terug naar de homepage",
-    "pagination": "Pagina",
-    "noPosts": "Geen artikelen gevonden.",
-    "publishedOn": "Gepubliceerd op",
-    "author": "David Zhang",
-    "ctaTitle": "Hulp nodig bij naleving van de Chinese regelgeving?",
-    "ctaSubtitle": "Ontvang een gratis nalevingsbeoordeling van ons expertteam.",
-    "ctaButton": "Vraag een gratis beoordeling aan",
-    "readTime": "min leestijd",
-    "postNotFound": "Artikel niet gevonden",
-    "toc": "Inhoud",
-    "viewPackages": "Bekijk pakketten →",
-    "authorBio": "Regelgevingsexpert gespecialiseerd in toegang tot de Chinese markt. Wij begeleiden Nederlandse en internationale bedrijven bij GACC-registratie, NMPA-cosmetica-aanmelding, CCC-certificering en de Chinese etiketteringsvereisten.",
-    "relatedServiceLabel": "Hulp nodig hierbij?",
-    "relatedServiceCta": "Vraag een gratis beoordeling aan →",
-    "service_gacc": "GACC-registratie",
-    "service_label": "Chinese etiketconformiteit",
-    "service_ccc": "CCC-certificering",
-    "service_cosmetics": "NMPA-cosmetica-aanmelding",
-    "service_ecommerce": "Grensoverschrijdende e-commerce",
-    "shareThisArticle": "Deel dit artikel",
-    "relatedArticles": "Gerelateerde artikelen",
-    "referencesHeading": "Referenties",
-    "references": "Referenties",
-    "relatedArticlesDesc": "Ontdek meer inzichten over dit onderwerp",
-    "prev": "Vorige",
-    "next": "Volgende",
-    "pageInfo": "",
-    "of": " van ",
-    "metaTitle": "Exporteren naar China: compliance inzichten | GACC, CCC, NMPA",
-    "metaDescription": "Gidsen voor exporteurs naar China: GACC registratie, CCC certificering, NMPA cosmeticaregistratie en Chinese etikettering."
-  },
   "OrganizationJsonLd": {
     "description": "Integrale compliance advisering voor exporteurs die producten naar China brengen: ",
     "contactType": "klantenservice",
@@ -1253,7 +1214,7 @@
     "emailLabel": "Stuur ons een e-mail",
     "backToTopLabel": "Terug naar boven"
   },
-  "BlogFaqGaccRegistrationGuide": {
+  "InsightsFaqGaccRegistrationGuide": {
     "faqQ1": "Wat is GACC-registratie en wie heeft deze nodig?",
     "faqA1": "GACC-registratie is verplicht voor elke buitenlandse locatie voor productie, verwerking en opslag van levensmiddelen die naar China exporteert. De eis geldt sinds 2022 en valt nu onder decreet 280, van kracht sinds 1 juni 2026 — elke betrokken locatie moet vóór de eerste zending in het CIFER-register staan.",
     "faqQ2": "Hoe lang duurt de GACC-registratie?",
@@ -1265,7 +1226,7 @@
     "faqQ5": "Wat gebeurt er als ik me niet registreer?",
     "faqA5": "Ja. De Chinese douane weigert sinds 2022 zonder uitzondering zendingen van niet-geregistreerde locaties; de goederen blijven in de haven tot de locatie in CIFER is geregistreerd, en opslag- en demurragekosten zijn voor de exporteur."
   },
-  "BlogFaqChinaLabelCompliance": {
+  "InsightsFaqChinaLabelCompliance": {
     "faqQ1": "Wat betekent naleving van de Chinese etiketteringsregels?",
     "faqA1": "Naleving van de Chinese etiketteringsregels houdt in dat uw productetiketten voldoen aan de Chinese norm GB 7718-2025 en andere toepasselijke regelgeving. Het is verplicht voor alle geïmporteerde levensmiddelen en consumentenproducten. Niet-conforme etiketten leiden tot afwijzing door de douane.",
     "faqQ2": "Wat moet er op een Chinees levensmiddeletiket staan?",
@@ -1275,7 +1236,7 @@
     "faqQ4": "Hoe lang duurt een etiketbeoordeling?",
     "faqA4": "Een professionele etiketbeoordeling duurt doorgaans 3 tot 5 werkdagen, inclusief controle van alle verplichte onderdelen, verificatie van vertalingen en toetsing aan de nieuwste GB-normen."
   },
-  "BlogFaqCccCertificationExplained": {
+  "InsightsFaqCccCertificationExplained": {
     "faqQ1": "Wat is CCC-certificering?",
     "faqA1": "CCC (China Compulsory Certification) is verplicht voor producten in 17 categorieën die in China worden geïmporteerd of vervaardigd, waaronder elektronica, auto-onderdelen, veiligheidsglas en kinderspeelgoed. Voor Nederlandse fabrikanten die nu alleen de CE-markering voeren, is CCC de extra stap die nodig is voor de Chinese markt.",
     "faqQ2": "Welke producten hebben CCC nodig?",
@@ -1285,7 +1246,7 @@
     "faqQ4": "Wat kost CCC-certificering?",
     "faqA4": "De typische kosten variëren van $3.000 tot $15.000 of meer, inclusief testkosten, fabrieksinspectiekosten en jaarlijkse onderhoudskosten."
   },
-  "BlogFaqCosmeticsNmpaFiling": {
+  "InsightsFaqCosmeticsNmpaFiling": {
     "faqQ1": "Wat is een NMPA-cosmetica-aanmelding?",
     "faqA1": "De aanmelding bij de NMPA (National Medical Products Administration) is verplicht voor alle cosmetica die in China worden geïmporteerd. Zowel gewone cosmetica als cosmetica voor speciaal gebruik moeten vóór de verkoop worden aangemeld of geregistreerd.",
     "faqQ2": "Wat is het verschil tussen gewone cosmetica en cosmetica voor speciaal gebruik?",
@@ -1295,7 +1256,7 @@
     "faqQ4": "Heb ik een Chinese verantwoordelijke nodig?",
     "faqA4": "Ja. Buitenlandse cosmeticabedrijven moeten een verantwoordelijke in China aanwijzen die de NMPA-aanmelding afhandelt, als juridisch aanspreekpunt fungeert en medeverantwoordelijk is voor de productveiligheid."
   },
-  "BlogFaqCrossBorderEcommerceChina": {
+  "InsightsFaqCrossBorderEcommerceChina": {
     "faqQ1": "Wat is grensoverschrijdende e-commerce (CBEC) in China?",
     "faqA1": "CBEC stelt buitenlandse merken in staat rechtstreeks aan Chinese consumenten te verkopen via onlineplatforms, zonder de traditionele importkanalen. Producten profiteren van vereenvoudigde regelgeving en lagere belastingtarieven. Voor Nederlandse merken is dit vaak het snelste kanaal voor markttoegang.",
     "faqQ2": "Welke producten kunnen via CBEC worden verkocht?",
@@ -1399,7 +1360,7 @@
     "terminationTitle": "Beëindiging",
     "title": "Servicevoorwaarden"
   },
-  "BlogFaqKoreanCosmeticsGuide": {
+  "InsightsFaqKoreanCosmeticsGuide": {
     "faqQ1": "Moet een Koreaans cosmeticamerk bij import via de algemene handel een NMPA-aanmelding doen?",
     "faqA1": "Ja. Importeert u cosmetica via de algemene handel (dus niet via grensoverschrijdende e-commerce), dan moet elk product vóór de import bij de NMPA worden aangemeld (gewone cosmetica) of geregistreerd (cosmetica voor speciaal gebruik). Dit geldt voor alle merken, ongeacht het land van herkomst.",
     "faqQ2": "Kan ik Koreaanse cosmetica zonder NMPA-aanmelding verkopen via grensoverschrijdende e-commerce?",
@@ -1421,7 +1382,7 @@
     "faqQ10": "Heb ik een Chinees bedrijf nodig om cosmetica bij de NMPA aan te melden?",
     "faqA10": "Ja. Elk cosmeticaproduct dat in China wordt geïmporteerd, heeft een binnenlandse verantwoordelijke in China nodig: een in China geregistreerde rechtspersoon met een op cosmetica gerichte bedrijfsactiviteit. Dat kan uw eigen Chinese dochteronderneming zijn, een distributeur of een externe dienstverlener. De verantwoordelijke is wettelijk aansprakelijk voor de productveiligheid en voert alle communicatie met de NMPA."
   },
-  "BlogFaqGreenCoffeeBeansChina": {
+  "InsightsFaqGreenCoffeeBeansChina": {
     "faqQ1": "Heeft groene koffie een GACC-levensmiddelenregistratie nodig?",
     "faqA1": "Nee. Ongebrande bonen vallen buiten het levensmiddelenregistratiesysteem en worden onder bekendmaking 219 als landbouwproduct behandeld.",
     "faqQ2": "Heeft de vestiging nog steeds goedkeuring van de autoriteit van het exportland nodig?",

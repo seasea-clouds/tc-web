@@ -5,9 +5,9 @@
 export default function GeoMeta() {
   return (
     <>
-      <meta name="geo.region" content="CN-SH" />
-      <meta name="geo.placename" content="Shanghai" />
-      <meta name="ICBM" content="31.2304, 121.4737" />
+      <meta name="geo.region" content="CN-BJ" />
+      <meta name="geo.placename" content="Beijing" />
+      <meta name="ICBM" content="39.9042, 116.4074" />
     </>
   );
 }

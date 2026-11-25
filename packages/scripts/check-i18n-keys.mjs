@@ -180,6 +180,9 @@ const IGNORE_FALLBACK_VALUES = new Set([
   'Nutrition panel does not match GB 28050 format requirements',
   'Nutrition information format non-compliant',
   'Redesign nutrition panel per GB 28050 (kJ primary, NRV column required)',
+  // 公司地址：马来语 / 罗马尼亚语的北京标准拼写就是 Beijing，与英文同形，不是漏翻
+  // （阿非利卡语另有 Peking 写法，已单独使用；其余 45 语言均为本地拼写）
+  'Beijing, China',
   // Regulation names/authorities — proper nouns, acronyms retained in original
   'CIFER System',
   'China Import Food Enterprise Registration System',

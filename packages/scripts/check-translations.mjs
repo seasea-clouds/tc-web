@@ -492,6 +492,10 @@ for (const lang of ['af','az','ca','cs','el','fi','hr','hu','id','ka','ms','pl',
   SHARED_WORDS_BY_LANG[lang].add('Blog');
 }
 
+// 马来语 / 罗马尼亚语里北京的标准拼写就是 Beijing —— 公司地址与英文同形，不是漏翻
+SHARED_WORDS_BY_LANG['ms'].add('Beijing, China');
+SHARED_WORDS_BY_LANG['ro'].add('Beijing, China');
+
 // Japanese: 'PSE' is the standard abbreviation for the Denki Yōhinshi Anzen-hō
 // (Product Safety Electrical Appliances) mark — a real term in Japanese context.
 SHARED_WORDS_BY_LANG['ja'].add('PSE');
@@ -655,7 +659,7 @@ const ENGLISH_RESIDUAL_ALLOW = new Set([
   'exedance',
   'Notarization', 'Squatting', 'Classification', 'High',
   'Chloramphenicol', 'Leptospira',
-  'Ningbo', 'Shanghai',
+  'Ningbo', 'Shanghai', 'Beijing',
   'carbs', 'saturates',
   'cross', 'platform',
   // 第六批残留豁免（Portal 消息+邮箱片段）

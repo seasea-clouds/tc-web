@@ -66,8 +66,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           image: 'https://sinotradecompliance.com/og-image.png',
           address: {
             '@type': 'PostalAddress',
-            addressLocality: 'Shanghai',
-            addressRegion: 'Jing\'an District',
+            addressLocality: 'Beijing',
+            addressRegion: 'Beijing',
             addressCountry: 'CN',
           },
           contactPoint: {

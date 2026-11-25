@@ -217,7 +217,7 @@ export async function generateCfReportPdf(data: CfPdfReportData): Promise<Uint8A
     color: rgb(0.9, 0.9, 0.9),
     thickness: 1,
   });
-  page.drawText("SinoTrade Compliance — Jing'an District, Shanghai, China", {
+  page.drawText("SinoTrade Compliance — Beijing, China", {
     x: margin, y: 28, size: 7, font, color: gray,
   });
   page.drawText("info@sinotradecompliance.com | sinotradecompliance.com", {

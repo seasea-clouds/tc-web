@@ -37,8 +37,8 @@ export default function OrganizationJsonLd({ description }: Props) {
 
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Shanghai',
-      addressRegion: "Jing'an District",
+      addressLocality: 'Beijing',
+      addressRegion: 'Beijing',
       addressCountry: 'CN',
     },
   };

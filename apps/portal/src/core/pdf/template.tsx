@@ -205,7 +205,7 @@ export function ReportPdfDocument(data: PdfReportData) {
 
         {/* Footer */}
         <View style={styles.footer}>
-          <Text>SinoTrade Compliance — Jing'an District, Shanghai, China</Text>
+          <Text>SinoTrade Compliance — Beijing, China</Text>
           <Text>info@sinotradecompliance.com | sinotradecompliance.com</Text>
         </View>
       </Page>

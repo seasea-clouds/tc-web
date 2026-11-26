@@ -171,6 +171,8 @@ export async function onRequest(context: { request: Request; env: Env }) {
     const todayPV = live.pv;
     const todayUV = live.uv;
     const todayBotPV = live.botPv;
+    // 抓取者 UV = 未过滤的独立 IP − 真人 UV（同一次 clientIP 分组查询的两个口径）
+    const todayBotUV = Math.max(0, live.uvRaw - live.uv);
 
     // ─── RANGE: today ───
     if (range === "today") {
@@ -236,6 +238,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
           total: todayPV,
           uv: todayUV,
           botPv: todayBotPV,
+          botUV: todayBotUV,
           today: todayPV,
           todayUV: todayUV,
           countries: geoData.length,
@@ -268,6 +271,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
     // 顶层会把它一并返回，前端据此提示「该区间含未完成 200 口径回填的日期」。
     let uvPartialDays = 0;
     let periodBotPV = 0;
+    let periodBotUV = 0;
     const dailyData: { date: string; pv: number; uv: number }[] = [];
 
     // Collect per-dimension arrays for merging
@@ -289,6 +293,9 @@ export async function onRequest(context: { request: Request; env: Env }) {
       if (r.uv_200 === null || r.uv_200 === undefined) uvPartialDays++;
       periodUV += uvHuman;
       periodBotPV += r.pv_bot ?? 0;
+      // 抓取者 UV：uv_200 是未过滤口径，uv_human 是剔除机器人 UA 后的——
+      // 两者来自同一天的同一套日终固化数据，相减即「另有抓取的人」。
+      periodBotUV += Math.max(0, (r.uv_200 ?? 0) - uvHuman);
       dailyData.push({ date: row.date, pv: pvHuman, uv: uvHuman });
 
       if (row.geo_data) geoArrays.push(safeJSON(row.geo_data, []));
@@ -307,6 +314,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
         periodPV += todayPV;
         periodUV += todayUV;
         periodBotPV += todayBotPV;
+        periodBotUV += todayBotUV;
         dailyData.push({ date: today, pv: todayPV, uv: todayUV });
       }
       hourlyMaps.push(hourlyMap);
@@ -349,6 +357,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
         total: periodPV,
         uv: periodUV,
         botPv: periodBotPV,
+        botUV: periodBotUV,
         today: todayPV,
         todayUV: todayUV,
         countries: geoData.length,

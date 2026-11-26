@@ -341,6 +341,7 @@
   "stat.todayReports": "Today Reports",
   "stat.todayUV": "Today UV",
   "stat.botNote": "{n} bot hits",
+  "stat.botUV": "+{n} crawler visitors",
   "stat.since": "since {date}",
   "status.active": "Active",
   "status.activeShort": "Active",
@@ -470,12 +471,12 @@
   "emails.actionFailed": "Action failed, please retry",
   "emails.loadFailed": "Failed to load",
   "login.redirecting": "Session expired. Redirecting to sign in…",
-    "segment.insights": "Insights",
-    "segment.regulations": "Regulations",
-    "segment.sitemap": "Sitemap",
-    "segment.blog": "Blog (legacy)",
-    "segment.settings": "Settings",
-    "segment.aiAssistance": "AI Assistant",
-    "segment.emails": "Emails",
-    "segment.pageN": "Page {n}"
+  "segment.insights": "Insights",
+  "segment.regulations": "Regulations",
+  "segment.sitemap": "Sitemap",
+  "segment.blog": "Blog (legacy)",
+  "segment.settings": "Settings",
+  "segment.aiAssistance": "AI Assistant",
+  "segment.emails": "Emails",
+  "segment.pageN": "Page {n}"
 }

@@ -341,6 +341,7 @@
   "stat.todayReports": "今日报告",
   "stat.todayUV": "今日 UV",
   "stat.botNote": "另有抓取 {n} 次",
+  "stat.botUV": "另有抓取 {n} 人",
   "stat.since": "自 {date} 起",
   "status.active": "正常",
   "status.activeShort": "活跃",
@@ -470,12 +471,12 @@
   "emails.actionFailed": "操作失败，请重试",
   "emails.loadFailed": "加载失败",
   "login.redirecting": "会话已失效，正在前往登录页…",
-    "segment.insights": "洞察",
-    "segment.regulations": "法规库",
-    "segment.sitemap": "站点地图",
-    "segment.blog": "博客（旧路径）",
-    "segment.settings": "设置",
-    "segment.aiAssistance": "AI 助手",
-    "segment.emails": "邮件审核",
-    "segment.pageN": "第 {n} 页"
+  "segment.insights": "洞察",
+  "segment.regulations": "法规库",
+  "segment.sitemap": "站点地图",
+  "segment.blog": "博客（旧路径）",
+  "segment.settings": "设置",
+  "segment.aiAssistance": "AI 助手",
+  "segment.emails": "邮件审核",
+  "segment.pageN": "第 {n} 页"
 }

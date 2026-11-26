@@ -31,7 +31,7 @@ interface AnalyticsData {
   allTimeBotTotal?: number;
   /** 区间内缺 200 口径回填的天数 */
   uvPartialDays?: number;
-  summary: { total: number; uv: number; botPv?: number; today: number; todayUV: number; countries: number };
+  summary: { total: number; uv: number; botPv?: number; botUV?: number; today: number; todayUV: number; countries: number };
   hourlySum: { hour: number; pv: number; uv: number }[];
   hourlyAvg: { hour: number; pv: number; uv: number }[];
   hoursCovered: number;
@@ -408,9 +408,8 @@ function pathToBreadcrumb(path: string): string {
             <div className="stat-card">
               <div className="stat-value">{timeRange === "today" ? _a.summary.todayUV : _a.summary.uv}</div>
               <div className="stat-label">{timeRange === "today" ? t("stat.todayUV") : timeRange === "7d" ? t("stat.7dUV") : timeRange === "30d" ? t("stat.30dUV") : t("stat.customUV")}</div>
-              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }} title="只统计页面请求的 HTTP 200：接口调用（/api/）与静态资源抓取（/_next/、图片、JSON、sitemap 等）都不计入；同时按 UA 剔除机器人与爬虫（bot/spider/crawl/gptbot/bytespider/无头浏览器/脚本等）。PV = HTML 页面浏览（CF 官方口径，实测与页面请求数差 0.17%）；UV = 独立访客（按客户端 IP 去重）。">
-                {t("stat.cumulative").replace("{n}", String(_a.allTimeUV))}
-                {_a.allTimeUVFrom ? ` · ${t("stat.since").replace("{date}", _a.allTimeUVFrom)}` : ""}
+              <div style={{ fontSize: "0.65rem", color: "#9ca3af", marginTop: "0.15rem" }} title="只统计页面请求的 HTTP 200：接口调用（/api/）与静态资源抓取（/_next/、图片、JSON、sitemap 等）都不计入；主数字按 UA 剔除机器人与爬虫（bot/spider/crawl/gptbot/bytespider/无头浏览器/脚本等）。此处「另有抓取」是当前时间段内未按 UA 过滤的独立 IP 减去真人数，即同一次按客户端 IP 分组统计里的抓取者数量。">
+                {t("stat.botUV").replace("{n}", String(_a.summary.botUV ?? 0))}
               </div>
             </div>
             <div className="stat-card">

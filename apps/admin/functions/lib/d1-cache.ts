@@ -686,7 +686,7 @@ export async function readLiveDayStats(
   env: CacheEnv,
   date: string,
   maxAgeSeconds = 300,
-): Promise<{ pv: number; uv: number; requests: number; botPv: number; cached: boolean }> {
+): Promise<{ pv: number; uv: number; uvRaw: number; requests: number; botPv: number; cached: boolean }> {
   const now = Math.floor(Date.now() / 1000);
 
   // 0. 建表（幂等）。cron 直接调本函数时不会经过 runMigration，
@@ -736,6 +736,10 @@ export async function readLiveDayStats(
     return {
       pv: row.pv_human ?? row.pv ?? 0,
       uv: row.uv_human ?? row.uv_200 ?? row.uv ?? 0,
+      // uvRaw = 未按 UA 过滤的全部独立 IP（含爬虫）。uvRaw - uv = 抓取者 UV，
+      // 供后台「另有抓取 N 人」展示；两个数都来自同一次 clientIP 分组查询，
+      // 只是后者额外剔除了机器人 UA，所以相减是有意义的。
+      uvRaw: row.uv_200 ?? row.uv ?? 0,
       requests: row.requests_200 ?? row.requests ?? 0,
       botPv: row.pv_bot ?? 0,
       cached: true,
@@ -747,10 +751,11 @@ export async function readLiveDayStats(
     ? {
         pv: row.pv_human ?? row.pv ?? 0,
         uv: row.uv_human ?? row.uv_200 ?? row.uv ?? 0,
+        uvRaw: row.uv_200 ?? row.uv ?? 0,
         requests: row.requests_200 ?? row.requests ?? 0,
         botPv: row.pv_bot ?? 0,
       }
-    : { pv: 0, uv: 0, requests: 0, botPv: 0 };
+    : { pv: 0, uv: 0, uvRaw: 0, requests: 0, botPv: 0 };
   if (!hasConfig(env)) {
     return { ...fallback, cached: false };
   }
@@ -773,7 +778,7 @@ export async function readLiveDayStats(
     )
       .bind(date, d.pv || 0, d.uv || 0, d.requests || 0, uv200, req200, pvHuman, uvHuman, pvBot, now)
       .run();
-    return { pv: pvHuman, uv: uvHuman, requests: req200, botPv: pvBot, cached: false };
+    return { pv: pvHuman, uv: uvHuman, uvRaw: uv200, requests: req200, botPv: pvBot, cached: false };
   } catch (err) {
     console.error("[d1-cache] readLiveDayStats failed:", err);
     return { ...fallback, cached: false };

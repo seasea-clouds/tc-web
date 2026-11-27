@@ -2999,15 +2999,6 @@
   "tmTotalCostRange": "$600-2000/դաս",
   "tmWatchService_cost": "$200-500/ամսական՝ կախված դասերի քանակից",
   "varies_label": "Տատանվում է",
-  "Blog": {
-    "cat_Product_Certification": "Ապրանքի հավաստագրում",
-    "cat_Compliance_Guide": "Համապատասխանության ուղեցույց",
-    "cat_Label_Compliance": "Պիտակի համապատասխանություն",
-    "cat_Brand_Protection": "Ապրանքանիշի պաշտպանություն",
-    "cat_Cosmetics": "Կոսմետիկա",
-    "cat_E_commerce": "Էլեկտրոնային առևտուր",
-    "cat_Food_Beverage": "Սնունդ և ըմպելիք"
-  },
   "Footer": {
     "getQuote": "Ստանալ գնանշում"
   }

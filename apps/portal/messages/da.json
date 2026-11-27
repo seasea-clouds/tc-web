@@ -2999,15 +2999,6 @@
   "tmTotalCostRange": "$600-2.000/klasse",
   "tmWatchService_cost": "$200-500/måned afhængig af antal klasser",
   "varies_label": "Varierer",
-  "Blog": {
-    "cat_Product_Certification": "Produkt certificering",
-    "cat_Compliance_Guide": "Overholdelsesvejledning",
-    "cat_Label_Compliance": "Overholdelse af etiket",
-    "cat_Brand_Protection": "Brand beskyttelse",
-    "cat_Cosmetics": "Kosmetik",
-    "cat_E_commerce": "E-handel",
-    "cat_Food_Beverage": "Mad & drikke"
-  },
   "Footer": {
     "getQuote": "Få et tilbud"
   }

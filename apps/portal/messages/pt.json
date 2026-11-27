@@ -2999,15 +2999,6 @@
   "tmTotalCostRange": "US$ 600-2.000/aula",
   "tmWatchService_cost": "US$ 200-500/mês dependendo do número de aulas",
   "varies_label": "Varia",
-  "Blog": {
-    "cat_Product_Certification": "Certificação de Produto",
-    "cat_Compliance_Guide": "Guia de Conformidade",
-    "cat_Label_Compliance": "Conformidade de etiqueta",
-    "cat_Brand_Protection": "Proteção da marca",
-    "cat_Cosmetics": "Cosméticos",
-    "cat_E_commerce": "Comércio eletrônico",
-    "cat_Food_Beverage": "Alimentos e Bebidas"
-  },
   "Footer": {
     "getQuote": "Obter orçamento"
   }

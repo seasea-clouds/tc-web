@@ -2999,15 +2999,6 @@
   "tmTotalCostRange": "$600-2 000/klas",
   "tmWatchService_cost": "$200-500/maand afhangende van die aantal klasse",
   "varies_label": "Wissel",
-  "Blog": {
-    "cat_Product_Certification": "Produk Sertifisering",
-    "cat_Compliance_Guide": "Voldoeningsgids",
-    "cat_Label_Compliance": "Etiketvoldoening",
-    "cat_Brand_Protection": "Handelsmerkbeskerming",
-    "cat_Cosmetics": "Skoonheidsmiddels",
-    "cat_E_commerce": "E-handel",
-    "cat_Food_Beverage": "Kos en Drank"
-  },
   "Footer": {
     "getQuote": "Kry 'n Kwotasie"
   }

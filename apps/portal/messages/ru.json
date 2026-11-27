@@ -2999,15 +2999,6 @@
   "tmTotalCostRange": "$600-2000/класс",
   "tmWatchService_cost": "$200-500/мес в зависимости от количества занятий",
   "varies_label": "Варьируется",
-  "Blog": {
-    "cat_Product_Certification": "Сертификация продукции",
-    "cat_Compliance_Guide": "Руководство по обеспечению соответствия",
-    "cat_Label_Compliance": "Соответствие этикетке",
-    "cat_Brand_Protection": "Защита бренда",
-    "cat_Cosmetics": "Косметика",
-    "cat_E_commerce": "Электронная коммерция",
-    "cat_Food_Beverage": "Еда и напитки"
-  },
   "Footer": {
     "getQuote": "Получить предложение"
   }

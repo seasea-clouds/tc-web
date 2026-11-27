@@ -2999,15 +2999,6 @@
   "tmTotalCostRange": "600-2.000 $/κατηγορία",
   "tmWatchService_cost": "$200-500/μήνα ανάλογα με τον αριθμό των μαθημάτων",
   "varies_label": "ποικίλλει",
-  "Blog": {
-    "cat_Product_Certification": "Πιστοποίηση προϊόντος",
-    "cat_Compliance_Guide": "Οδηγός Συμμόρφωσης",
-    "cat_Label_Compliance": "Συμμόρφωση ετικετών",
-    "cat_Brand_Protection": "Προστασία της επωνυμίας",
-    "cat_Cosmetics": "Καλλυντικά",
-    "cat_E_commerce": "Ηλεκτρονικό εμπόριο",
-    "cat_Food_Beverage": "Τρόφιμα & Ποτά"
-  },
   "Footer": {
     "getQuote": "Λάβετε προσφορά"
   }

@@ -2999,15 +2999,6 @@
   "tmTotalCostRange": "600-2000 $/клас",
   "tmWatchService_cost": "$200-500/месяц у залежнасці ад колькасці заняткаў",
   "varies_label": "Вар'іруецца",
-  "Blog": {
-    "cat_Product_Certification": "Сертыфікацыя прадукцыі",
-    "cat_Compliance_Guide": "Кіраўніцтва па выкананні патрабаванняў",
-    "cat_Label_Compliance": "Адпаведнасць патрабаванням да этыкетак",
-    "cat_Brand_Protection": "Абарона брэнда",
-    "cat_Cosmetics": "Касметыка",
-    "cat_E_commerce": "Электронная камерцыя",
-    "cat_Food_Beverage": "Прадукты харчавання і Напоі"
-  },
   "Footer": {
     "getQuote": "Атрымаць каштарыс"
   }

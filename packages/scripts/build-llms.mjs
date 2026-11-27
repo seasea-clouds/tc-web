@@ -193,14 +193,19 @@ function getDisplayText(route, enMsgs, locale = 'en') {
       'quote': 'Quote.title',
       'privacy': 'Privacy.title',
       'services': 'Home.servicesTitle',
-      'insights': 'Blog.title',
+        // Insights 栏目名归 insights 站自己管（site 侧没有这个名字；早前读 site 的
+        // Blog.title，改名后该键已删，48 语言的 llms 标题会静默退化成英文）
+        'insights': '__insights_title__',
     };
-    const key = keyMap[parts[0]];
-    if (key && enMsgs) {
-      const flat = flatten(enMsgs);
-      const val = flat[key];
-      if (val && val !== key) return val;
-    }
+      const key = keyMap[parts[0]];
+      if (key === '__insights_title__') {
+        const t = loadMessages(path.join(ROOT, 'apps/insights'), locale)?.Insights?.title;
+        if (t) return t;
+      } else if (key && enMsgs) {
+        const flat = flatten(enMsgs);
+        const val = flat[key];
+        if (val && val !== key) return val;
+      }
   }
 
   // 回退：slug 转标题

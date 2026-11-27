@@ -2999,15 +2999,6 @@
   "tmTotalCostRange": "600-2000$/კლასში",
   "tmWatchService_cost": "200-500$/თვეში კლასების რაოდენობის მიხედვით",
   "varies_label": "ცვალებადია",
-  "Blog": {
-    "cat_Product_Certification": "პროდუქტის სერტიფიცირება",
-    "cat_Compliance_Guide": "შესაბამისობის სახელმძღვანელო",
-    "cat_Label_Compliance": "ეტიკეტების შესაბამისობა",
-    "cat_Brand_Protection": "ბრენდის დაცვა",
-    "cat_Cosmetics": "კოსმეტიკა",
-    "cat_E_commerce": "ელექტრონული კომერცია",
-    "cat_Food_Beverage": "საკვები და სასმელი"
-  },
   "Footer": {
     "getQuote": "მიიღეთ შეთავაზება"
   }

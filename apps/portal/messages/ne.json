@@ -2999,15 +2999,6 @@
   "tmTotalCostRange": "$600-2,000/वर्ग",
   "tmWatchService_cost": "कक्षाहरूको संख्यामा निर्भर गर्दै $200-500/महिना",
   "varies_label": "फरक हुन्छ",
-  "Blog": {
-    "cat_Product_Certification": "उत्पादन प्रमाणीकरण",
-    "cat_Compliance_Guide": "अनुपालन गाइड",
-    "cat_Label_Compliance": "लेबल अनुपालन",
-    "cat_Brand_Protection": "ब्रान्ड संरक्षण",
-    "cat_Cosmetics": "कस्मेटिक्स",
-    "cat_E_commerce": "ई-वाणिज्य",
-    "cat_Food_Beverage": "खाना र पेय पदार्थ"
-  },
   "Footer": {
     "getQuote": "उद्धरण प्राप्त गर्नुहोस्"
   }

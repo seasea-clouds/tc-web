@@ -2999,15 +2999,6 @@
   "tmTotalCostRange": "$600-2,000/kelas",
   "tmWatchService_cost": "$200-500/bulan bergantung kepada bilangan kelas",
   "varies_label": "Berbeza-beza",
-  "Blog": {
-    "cat_Product_Certification": "Pensijilan Produk",
-    "cat_Compliance_Guide": "Panduan Pematuhan",
-    "cat_Label_Compliance": "Pematuhan Label",
-    "cat_Brand_Protection": "Perlindungan Jenama",
-    "cat_Cosmetics": "Kosmetik",
-    "cat_E_commerce": "E-dagang",
-    "cat_Food_Beverage": "Makanan & Minuman"
-  },
   "Footer": {
     "getQuote": "Dapatkan Sebut Harga"
   }

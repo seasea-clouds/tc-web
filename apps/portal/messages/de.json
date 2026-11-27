@@ -2999,15 +2999,6 @@
   "tmTotalCostRange": "600–2.000 $/Klasse",
   "tmWatchService_cost": "200–500 $/Monat, abhängig von der Anzahl der Kurse",
   "varies_label": "Variiert",
-  "Blog": {
-    "cat_Product_Certification": "Produktzertifizierung",
-    "cat_Compliance_Guide": "Compliance-Leitfaden",
-    "cat_Label_Compliance": "Etikettenkonformität",
-    "cat_Brand_Protection": "Markenschutz",
-    "cat_Cosmetics": "Kosmetika",
-    "cat_E_commerce": "E-Commerce",
-    "cat_Food_Beverage": "Essen und Trinken"
-  },
   "Footer": {
     "getQuote": "Angebot einholen"
   }

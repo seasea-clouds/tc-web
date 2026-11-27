@@ -2999,15 +2999,6 @@
   "tmTotalCostRange": "$600-2,000 לכיתה",
   "tmWatchService_cost": "200-500 $ לחודש תלוי במספר השיעורים",
   "varies_label": "משתנה",
-  "Blog": {
-    "cat_Product_Certification": "אישור מוצר",
-    "cat_Compliance_Guide": "מדריך ציות",
-    "cat_Label_Compliance": "תאימות לתווית",
-    "cat_Brand_Protection": "הגנת מותג",
-    "cat_Cosmetics": "קוֹסמֵטִיקָה",
-    "cat_E_commerce": "מסחר אלקטרוני",
-    "cat_Food_Beverage": "מזון ומשקאות"
-  },
   "Footer": {
     "getQuote": "קבל הצעת מחיר"
   }

@@ -2999,15 +2999,6 @@
   "tmTotalCostRange": "$600-2000/клас",
   "tmWatchService_cost": "$200-500/месец в зависимост от броя класове",
   "varies_label": "Варира",
-  "Blog": {
-    "cat_Product_Certification": "Сертифициране на продукта",
-    "cat_Compliance_Guide": "Ръководство за съответствие",
-    "cat_Label_Compliance": "Съответствие на етикета",
-    "cat_Brand_Protection": "Защита на марката",
-    "cat_Cosmetics": "Козметика",
-    "cat_E_commerce": "Електронна търговия",
-    "cat_Food_Beverage": "Храна и напитки"
-  },
   "Footer": {
     "getQuote": "Получете оферта"
   }

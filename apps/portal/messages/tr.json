@@ -2999,15 +2999,6 @@
   "tmTotalCostRange": "$600-2,000/sınıf",
   "tmWatchService_cost": "Ders sayısına bağlı olarak ayda 200-500$",
   "varies_label": "Değişir",
-  "Blog": {
-    "cat_Product_Certification": "Ürün Sertifikasyonu",
-    "cat_Compliance_Guide": "Uyumluluk Kılavuzu",
-    "cat_Label_Compliance": "Etiket Uyumluluğu",
-    "cat_Brand_Protection": "Marka Koruması",
-    "cat_Cosmetics": "Kozmetik",
-    "cat_E_commerce": "E-ticaret",
-    "cat_Food_Beverage": "Yiyecek ve İçecek"
-  },
   "Footer": {
     "getQuote": "Teklif Alın"
   }

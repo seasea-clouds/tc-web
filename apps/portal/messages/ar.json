@@ -2999,15 +2999,6 @@
   "tmTotalCostRange": "600-2000 دولار للفئة",
   "tmWatchService_cost": "200-500 دولار شهرياً حسب عدد الفصول",
   "varies_label": "يختلف",
-  "Blog": {
-    "cat_Product_Certification": "شهادة المنتج",
-    "cat_Compliance_Guide": "دليل الامتثال",
-    "cat_Label_Compliance": "الامتثال التسمية",
-    "cat_Brand_Protection": "حماية العلامة التجارية",
-    "cat_Cosmetics": "مستحضرات التجميل",
-    "cat_E_commerce": "التجارة الإلكترونية",
-    "cat_Food_Beverage": "الأطعمة والمشروبات"
-  },
   "Footer": {
     "getQuote": "احصل على عرض سعر"
   }

@@ -2999,15 +2999,6 @@
   "tmTotalCostRange": "600-2.000 долара по разреду",
   "tmWatchService_cost": "200-500 долара месечно у зависности од броја часова",
   "varies_label": "Варира",
-  "Blog": {
-    "cat_Product_Certification": "Сертификација производа",
-    "cat_Compliance_Guide": "Водич за усклађеност",
-    "cat_Label_Compliance": "Усклађеност са етикетом",
-    "cat_Brand_Protection": "Заштита бренда",
-    "cat_Cosmetics": "Козметика",
-    "cat_E_commerce": "Е-трговина",
-    "cat_Food_Beverage": "Храна и пиће"
-  },
   "Footer": {
     "getQuote": "Добијте понуду"
   }

@@ -2999,15 +2999,6 @@
   "tmTotalCostRange": "600-2000 dollaria/luokka",
   "tmWatchService_cost": "200-500 dollaria/kk kurssien määrästä riippuen",
   "varies_label": "Vaihtelee",
-  "Blog": {
-    "cat_Product_Certification": "Tuotteen sertifiointi",
-    "cat_Compliance_Guide": "Vaatimustenmukaisuusopas",
-    "cat_Label_Compliance": "Label-yhteensopivuus",
-    "cat_Brand_Protection": "Brändin suojaus",
-    "cat_Cosmetics": "Kosmetiikka",
-    "cat_E_commerce": "Sähköinen kaupankäynti",
-    "cat_Food_Beverage": "Ruoka ja juoma"
-  },
   "Footer": {
     "getQuote": "Pyydä tarjous"
   }

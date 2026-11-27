@@ -2999,15 +2999,6 @@
   "tmTotalCostRange": "600-2.000 USD/clasă",
   "tmWatchService_cost": "200-500 USD/lună, în funcție de numărul de cursuri",
   "varies_label": "Variază",
-  "Blog": {
-    "cat_Product_Certification": "Certificarea produsului",
-    "cat_Compliance_Guide": "Ghid de conformitate",
-    "cat_Label_Compliance": "Conformitatea etichetei",
-    "cat_Brand_Protection": "Protecția mărcii",
-    "cat_Cosmetics": "Cosmetice",
-    "cat_E_commerce": "Comerț electronic",
-    "cat_Food_Beverage": "Mâncare și băuturi"
-  },
   "Footer": {
     "getQuote": "Obțineți o ofertă"
   }

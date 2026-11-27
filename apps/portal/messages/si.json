@@ -2999,15 +2999,6 @@
   "tmTotalCostRange": "$600-2,000/පන්තිය",
   "tmWatchService_cost": "පන්ති ගණන අනුව මසකට $200-500",
   "varies_label": "වෙනස් වේ",
-  "Blog": {
-    "cat_Product_Certification": "නිෂ්පාදන සහතිකය",
-    "cat_Compliance_Guide": "අනුකූලතා මාර්ගෝපදේශය",
-    "cat_Label_Compliance": "ලේබල් අනුකූලතාව",
-    "cat_Brand_Protection": "වෙළඳ නාම ආරක්ෂණය",
-    "cat_Cosmetics": "විලවුන්",
-    "cat_E_commerce": "ඊ-වාණිජ්යය",
-    "cat_Food_Beverage": "ආහාර සහ බීම"
-  },
   "Footer": {
     "getQuote": "උපුටා දැක්වීමක් ලබා ගන්න"
   }

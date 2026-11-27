@@ -2999,15 +2999,6 @@
   "tmTotalCostRange": "$600-2,000/lớp",
   "tmWatchService_cost": "$200-500/tháng tùy theo số lớp",
   "varies_label": "Khác nhau",
-  "Blog": {
-    "cat_Product_Certification": "Chứng nhận sản phẩm",
-    "cat_Compliance_Guide": "Hướng dẫn tuân thủ",
-    "cat_Label_Compliance": "Tuân thủ nhãn",
-    "cat_Brand_Protection": "Bảo vệ thương hiệu",
-    "cat_Cosmetics": "Mỹ phẩm",
-    "cat_E_commerce": "Thương mại điện tử",
-    "cat_Food_Beverage": "Thực phẩm & Đồ uống"
-  },
   "Footer": {
     "getQuote": "Nhận báo giá"
   }

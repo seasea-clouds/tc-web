@@ -2999,15 +2999,6 @@
   "tmTotalCostRange": "600-2000 dollar/klass",
   "tmWatchService_cost": "Dərslərin sayından asılı olaraq ayda 200-500$",
   "varies_label": "Fərqli olur",
-  "Blog": {
-    "cat_Product_Certification": "Məhsulun Sertifikatlaşdırılması",
-    "cat_Compliance_Guide": "Uyğunluq Bələdçisi",
-    "cat_Label_Compliance": "Etiket Uyğunluğu",
-    "cat_Brand_Protection": "Brend Mühafizəsi",
-    "cat_Cosmetics": "Kosmetika",
-    "cat_E_commerce": "Elektron ticarət",
-    "cat_Food_Beverage": "Qida və İçki"
-  },
   "Footer": {
     "getQuote": "Qiymət təklifi al"
   }

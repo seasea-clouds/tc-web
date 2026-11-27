@@ -2999,15 +2999,6 @@
   "tmTotalCostRange": "600-2000 دلار در کلاس",
   "tmWatchService_cost": "200-500 دلار در ماه بسته به تعداد کلاس ها",
   "varies_label": "متفاوت است",
-  "Blog": {
-    "cat_Product_Certification": "گواهی محصول",
-    "cat_Compliance_Guide": "راهنمای انطباق",
-    "cat_Label_Compliance": "مطابقت با برچسب",
-    "cat_Brand_Protection": "حفاظت از برند",
-    "cat_Cosmetics": "لوازم آرایشی",
-    "cat_E_commerce": "تجارت الکترونیک",
-    "cat_Food_Beverage": "غذا و نوشیدنی"
-  },
   "Footer": {
     "getQuote": "دریافت قیمت"
   }

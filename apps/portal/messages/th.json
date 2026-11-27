@@ -2999,15 +2999,6 @@
   "tmTotalCostRange": "$600-2,000/คลาส",
   "tmWatchService_cost": "$200-500/เดือน ขึ้นอยู่กับจำนวนชั้นเรียน",
   "varies_label": "แตกต่างกันไป",
-  "Blog": {
-    "cat_Product_Certification": "การรับรองผลิตภัณฑ์",
-    "cat_Compliance_Guide": "คู่มือการปฏิบัติตามข้อกำหนด",
-    "cat_Label_Compliance": "การปฏิบัติตามฉลาก",
-    "cat_Brand_Protection": "การคุ้มครองแบรนด์",
-    "cat_Cosmetics": "เครื่องสำอาง",
-    "cat_E_commerce": "อีคอมเมิร์ซ",
-    "cat_Food_Beverage": "อาหารและเครื่องดื่ม"
-  },
   "Footer": {
     "getQuote": "รับใบเสนอราคา"
   }

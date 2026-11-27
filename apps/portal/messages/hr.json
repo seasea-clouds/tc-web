@@ -2999,15 +2999,6 @@
   "tmTotalCostRange": "600-2000 dolara po klasi",
   "tmWatchService_cost": "$200-500/mjesečno ovisno o broju sati",
   "varies_label": "Varira",
-  "Blog": {
-    "cat_Product_Certification": "Certifikacija proizvoda",
-    "cat_Compliance_Guide": "Vodič za sukladnost",
-    "cat_Label_Compliance": "Sukladnost naljepnica",
-    "cat_Brand_Protection": "Zaštita marke",
-    "cat_Cosmetics": "Kozmetika",
-    "cat_E_commerce": "E-trgovina",
-    "cat_Food_Beverage": "Hrana i piće"
-  },
   "Footer": {
     "getQuote": "Zatražite ponudu"
   }

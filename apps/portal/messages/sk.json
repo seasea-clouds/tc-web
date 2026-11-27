@@ -2999,15 +2999,6 @@
   "tmTotalCostRange": "600 - 2 000 $/trieda",
   "tmWatchService_cost": "200-500 $/mesiac v závislosti od počtu tried",
   "varies_label": "Líši sa",
-  "Blog": {
-    "cat_Product_Certification": "Certifikácia produktu",
-    "cat_Compliance_Guide": "Sprievodca dodržiavaním pravidiel",
-    "cat_Label_Compliance": "Súlad štítkov",
-    "cat_Brand_Protection": "Ochrana značky",
-    "cat_Cosmetics": "Kozmetika",
-    "cat_E_commerce": "Elektronický obchod",
-    "cat_Food_Beverage": "Jedlo a nápoje"
-  },
   "Footer": {
     "getQuote": "Získať cenovú ponuku"
   }

@@ -2999,15 +2999,6 @@
   "tmTotalCostRange": "600-2000 dolarów za zajęcia",
   "tmWatchService_cost": "200-500 dolarów miesięcznie, w zależności od liczby zajęć",
   "varies_label": "Różnie",
-  "Blog": {
-    "cat_Product_Certification": "Certyfikacja produktu",
-    "cat_Compliance_Guide": "Przewodnik dotyczący zgodności",
-    "cat_Label_Compliance": "Zgodność z etykietą",
-    "cat_Brand_Protection": "Ochrona marki",
-    "cat_Cosmetics": "Kosmetyki",
-    "cat_E_commerce": "Handel elektroniczny",
-    "cat_Food_Beverage": "Żywność i napoje"
-  },
   "Footer": {
     "getQuote": "Uzyskaj wycenę"
   }

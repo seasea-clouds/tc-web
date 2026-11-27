@@ -2999,15 +2999,6 @@
   "tmTotalCostRange": "$600-2,000/darasa",
   "tmWatchService_cost": "$200-500/mwezi kulingana na idadi ya madarasa",
   "varies_label": "Inatofautiana",
-  "Blog": {
-    "cat_Product_Certification": "Uthibitisho wa Bidhaa",
-    "cat_Compliance_Guide": "Mwongozo wa Kuzingatia",
-    "cat_Label_Compliance": "Kuzingatia Lebo",
-    "cat_Brand_Protection": "Ulinzi wa Biashara",
-    "cat_Cosmetics": "Vipodozi",
-    "cat_E_commerce": "Biashara ya kielektroniki",
-    "cat_Food_Beverage": "Chakula na Vinywaji"
-  },
   "Footer": {
     "getQuote": "Pata Nukuu"
   }

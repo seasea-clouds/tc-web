@@ -2999,15 +2999,6 @@
   "tmTotalCostRange": "$600-2000/clase",
   "tmWatchService_cost": "$200-500/mes dependiendo del número de clases",
   "varies_label": "Varía",
-  "Blog": {
-    "cat_Product_Certification": "Certificación de producto",
-    "cat_Compliance_Guide": "Guía de cumplimiento",
-    "cat_Label_Compliance": "Cumplimiento de etiquetas",
-    "cat_Brand_Protection": "Protección de marca",
-    "cat_Cosmetics": "Productos cosméticos",
-    "cat_E_commerce": "Comercio electrónico",
-    "cat_Food_Beverage": "Alimentos y bebidas"
-  },
   "Footer": {
     "getQuote": "Obtener presupuesto"
   }

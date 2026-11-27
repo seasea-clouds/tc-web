@@ -24,7 +24,10 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, '../..');
-const checker = path.join(repoRoot, 'docs/submission-kit/submitter_check.py');
+// v863（policy 863 / schema 7）起入口统一为 submit.py check。
+// 包内结构要求 <root>/work/{blog,regulation}/<slug>/，故解压后先归一到 work/ 再跑。
+const kitDir = path.join(repoRoot, 'docs/submission-kit');
+const checker = path.join(kitDir, 'submit.py');
 
 const TARGETS = {
   // 包内目录名与 kind 取值仍是 "blog"（v461 投稿包契约，投稿者已按此提交），
@@ -81,10 +84,37 @@ execFileSync(python, ['-m', 'zipfile', '-e', absZip, workRoot], { stdio: 'inheri
 
 // ---------------------------------------------------------------- 2. 规则检查
 
-console.log('▶ 运行规则检查（与投稿者自检同一套脚本）');
+console.log('▶ 运行规则检查（与投稿者自检同一套脚本 v863）');
+// submit.py check 的内容根必须是 blog/ 或 regulation/ 顶层，且 --all 要求
+// <root>/<条目>/work 形态；把解压结果整体挪进 work/ 即可同时满足两者。
+// 每篇一个包：<checkRoot>/{blogs,regulations}/<slug>/work/<kind>/<slug>/
+// 不能把所有篇塞进同一个 work/ —— v863 的 S06 按「单包 ≤ 60MB」判，
+// 全包合并会被当成一个 60MB+ 的超大包直接判死。用硬链接建影子树，不复制 240MB。
+const checkRoot = path.join(workRoot, '__check__');
+for (const [packKind, lineDir] of [['blog', 'blogs'], ['regulation', 'regulations']]) {
+  const src = path.join(workRoot, packKind);
+  if (!fs.existsSync(src)) continue;
+  for (const name of fs.readdirSync(src)) {
+    const art = path.join(src, name);
+    if (!fs.statSync(art).isDirectory()) continue;
+    const workDir = path.join(checkRoot, lineDir, name, 'work');
+    fs.mkdirSync(path.join(workDir, packKind), { recursive: true });
+    try {
+      execFileSync('cp', ['-al', art, path.join(workDir, packKind, name)], { stdio: 'ignore' });
+    } catch {
+      execFileSync('cp', ['-a', art, path.join(workDir, packKind, name)], { stdio: 'ignore' });
+    }
+  }
+}
+// --tmp 必须在工具包之外，且删除/中间产物都落在其下
+const kitTmp = fs.mkdtempSync(path.join(os.tmpdir(), 'submission-kit-tmp-'));
 let report;
 try {
-  const out = execFileSync(python, [checker, absZip, '--json'], { encoding: 'utf8' });
+  const out = execFileSync(
+    python,
+    [checker, 'check', checkRoot, '--all', '--yes', '--jobs', '14', '--tmp', kitTmp, '--json'],
+    { encoding: 'utf8', cwd: kitDir, maxBuffer: 64 * 1024 * 1024 },
+  );
   report = JSON.parse(out);
 } catch (err) {
   const out = String(err.stdout || '');
@@ -92,13 +122,17 @@ try {
     report = JSON.parse(out);
   } catch {
     console.error('✗ 检查脚本执行失败');
-    console.error(String(err.stderr || err.message));
+    console.error(String(err.stderr || err.message).split('\n').slice(-15).join('\n'));
+    fs.rmSync(workRoot, { recursive: true, force: true });
+    fs.rmSync(kitTmp, { recursive: true, force: true });
     process.exit(1);
   }
 }
+fs.rmSync(kitTmp, { recursive: true, force: true });
 
-const errors = (report.findings || []).filter((f) => f.severity === 'error');
-const warnings = (report.findings || []).filter((f) => f.severity === 'warning');
+const findings = (report.packages || []).flatMap((p) => p.findings || []);
+const errors = findings.filter((f) => f.severity === 'error');
+const warnings = findings.filter((f) => f.severity === 'warning');
 for (const f of errors) console.log(`  ✗ [${f.rule}] ${f.article}  ${f.detail}`);
 for (const f of warnings) console.log(`  ! [${f.rule}] ${f.article}  ${f.detail}`);
 
@@ -173,7 +207,7 @@ for (const { slug, artDir, expected } of entries) {
       repoProblems.push(`${slug}: 法规日期取稿件 publishedAt，不接受 --date 覆盖`);
     } else date = forcedDate;
   }
-  if (keepDate && !exists) {
+  if (keepDate && !exists && kind !== 'regulation') {
     repoProblems.push(`${slug}: --keep-date 只能用于替换已存在的文章（新文章请给 --date）`);
   }
 
@@ -182,8 +216,8 @@ for (const { slug, artDir, expected } of entries) {
     const key = 'cat_' + String(meta.category || '').replace(/-/g, '_').replace(/ & /g, '_').replace(/ /g, '_');
     for (const lang of locales) {
       const msg = JSON.parse(fs.readFileSync(path.join(repoRoot, 'apps/insights/messages', `${lang}.json`), 'utf8'));
-      if (!(key in (msg.Blog || {}))) {
-        repoProblems.push(`分类标签缺失：apps/insights/messages/${lang}.json 没有 Blog.${key}`);
+      if (!(key in (msg.Insights || {}))) {
+        repoProblems.push(`分类标签缺失：apps/insights/messages/${lang}.json 没有 Insights.${key}`);
         break;
       }
     }
@@ -228,10 +262,24 @@ for (const it of items) {
     // 法规站内以文件名为 slug、以 published_at 为排序键，不需要 date/slug 字段：
     // 与既有法规文件 frontmatter 保持一致（避免同一个站里两种字段风格）
     if (kind === 'regulation') {
-      body = body.replace(/^slug:\s*"[^"]*"\s*\n/m, '').replace(/^date:\s*"[^"]*"\s*\n/m, '');
+      // 投稿者的 frontmatter 有带引号与不带引号两种写法（两种都合法），
+      // 正则必须都吃 —— 只认带引号会漏删，导致站上残留 slug 键被 CI 打回。
+      // 只在开头那段 frontmatter 里删，避免误伤正文。
+      body = body.replace(/^(\s*(?:slug|date):[^\n]*\n)/gm, (m, line) => {
+        // 仅当前面还没出现第二个 --- 时才算 frontmatter
+        const idx = body.indexOf(line);
+        const head = body.slice(0, idx);
+        return (head.match(/^---$/gm) || []).length <= 1 ? '' : line;
+      });
     }
     fs.mkdirSync(path.dirname(dst), { recursive: true });
-    fs.writeFileSync(dst, body);
+    // 正文图片路径规范化：投稿者常按旧规矩写 /images/blog/<slug>/，
+    // 但站上现行约定是 /images/insights/<slug>/（边缘代理、manifest、sitemap 全用它）。
+    // 只改路径前缀，不动任何文字。
+    const normalized = kind === 'blog'
+      ? body.split(`/images/blog/${slug}/`).join(`/images/insights/${slug}/`)
+      : body;
+    fs.writeFileSync(dst, normalized);
     written++;
   }
   // 法规的图片不使用；博客照常同步

@@ -8,7 +8,7 @@
   规则编号、不产生 finding。
 - **判据**：P30 / P38 / P66 / P68 / P71 调这里的函数取词表。
 
-七类词表（`lexicons.id`）：
+判据词表（`lexicons.id`）：
   country         语向 → 「我国」本国视角词形（正则，大小写不敏感）
   neighbor        语向 → (错形, 来源语, 本语正形, 实测依据)，整词边界
   latin-required  语向集合：本语正字法要求带变音/重音字母
@@ -16,6 +16,12 @@
   latin-taxon     拉丁学名成分（属名/种加词/命名人，全库一类）
   term-localization  英文术语 → 各语应有的本语词形（key=英文，value=语向，
                   target=本语词形）；P31 用它判「本语有词形却照抄英文」
+  official-en-literal  公告逐字保留的英文整句（value=整句）；P42/P30/P87 剥离
+  judge-forms     判据语向词形/正则（key=`RULE|role|lang`，target=正形）：
+                  P47 词干、P62 序数、P84 易混、P85 过熟、P88 保税、P91 港澳
+  currency-symbol 货币符号 / ISO 代码（key=foreign/allowed/iso）
+  issuer          发布机关缩写枚举（key=reg）
+  family-stop / family-deriv / family-suffix  词族工具的停用词与后缀（非判据）
   term-zh         母版中文概念 → 各语标准译法（key=中文概念，value=语向，
                   target=标准译法）。与 term-localization 方向相反：那张表
                   回答「英文该译成什么」，这张回答「这个中文名词在该语写作
@@ -379,6 +385,116 @@ def rows(view, name):
     ctx = getattr(view, "ctx", None)
     lx = getattr(ctx, "lexicons", None) if ctx is not None else None
     return (lx or {}).get(name) or ()
+
+
+# 官方英文逐字保留串（`official-en-literal`）：整句一条，构建成单条正则。
+# 空白统一为 `\s+`——译文里声明可能被 markdown 软换行拆开，字面单空格会漏配。
+# 正则按「串集合的哈希」缓存，跨包复用；`set_official_en(view)` 在每个判据
+# run() 开头绑定当前包的词表（内部函数不接 view，避免整条调用链改签名）。
+_OFFICIAL_RX = None
+
+
+def _build_official_en(view):
+    parts = []
+    for r in rows(view, "official-en-literal"):
+        s = str(r.get("value") or "").strip()
+        if s:
+            parts.append(r"\s+".join(re.escape(w) for w in s.split()))
+    if not parts:
+        return None
+    src = "|".join(sorted(set(parts), key=len, reverse=True))
+    key = ("official-en", src)
+    if key not in _RE_CACHE:
+        _RE_CACHE[key] = re.compile(src, re.IGNORECASE)
+    return _RE_CACHE[key]
+
+
+def set_official_en(view):
+    global _OFFICIAL_RX
+    _OFFICIAL_RX = _build_official_en(view)
+    return _OFFICIAL_RX
+
+
+def official_en():
+    return _OFFICIAL_RX
+
+
+def judge_rows(view, rule):
+    """判据词形表 → [{lang, role, value, target}]（`judge-forms` 类）。
+
+    key 形状 `RULE|role|lang`：role 区分同一判据里的多组词（如 P91 的
+    hk/cn、P88 的 wrong/correct）。value 可以是字面词形或正则串，
+    由判据自己决定怎么用；target 存正形（P84 这类「错形→正形」对）。
+    """
+    out = []
+    for r in rows(view, "judge-forms"):
+        parts = str(r.get("key") or "").split("|")
+        if len(parts) != 3 or parts[0] != rule:
+            continue
+        out.append({"lang": parts[2], "role": parts[1],
+                    "value": str(r.get("value") or ""),
+                    "target": str(r.get("target") or "")})
+    return out
+
+
+def judge_map(view, rule, role):
+    """判据词形表 → {lang: [value]}（只取指定 role）。"""
+    out = {}
+    for r in judge_rows(view, rule):
+        if r["role"] == role:
+            out.setdefault(r["lang"], []).append(r["value"])
+    return out
+
+
+# 模块级绑定：判据的 run() 开头 set_judge(view, RULE)，内部函数用 judge()
+# 取表（这些函数不接 view；与 official_en 同一模式，包内串行执行）。
+_JUDGE = (None, {}, [])
+
+
+def set_judge(view, rule):
+    data, pairs = {}, []
+    for r in judge_rows(view, rule):
+        data.setdefault(r["role"], {}).setdefault(r["lang"], []).append(
+            r["value"])
+        if r["role"] == "wrong" and r["target"]:
+            pairs.append((r["lang"], r["value"], r["target"]))
+    global _JUDGE
+    _JUDGE = (rule, data, pairs)
+
+
+def judge(rule, role):
+    cur, data, _pairs = _JUDGE
+    return data.get(role, {}) if cur == rule else {}
+
+
+def judge_pairs(rule):
+    cur, _data, pairs = _JUDGE
+    return pairs if cur == rule else []
+
+
+# 通用「纯值」词表（currency-symbol / issuer）：key 的第一段是 role。
+_VALUES = (None, {})
+
+
+def set_values(view, name):
+    data = {}
+    for r in rows(view, name):
+        k = str(r.get("key") or "")
+        role = k.split("|")[0] if k else ""
+        v = str(r.get("value") or "")
+        if v:
+            data.setdefault(role, []).append(v)
+    global _VALUES
+    _VALUES = (name, data)
+
+
+def values(name, role=None):
+    cur, data = _VALUES
+    if cur != name:
+        return []
+    if role is None:
+        return [v for vs in data.values() for v in vs]
+    return data.get(role, [])
 
 
 def shaped(view):

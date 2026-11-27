@@ -5,9 +5,8 @@
 """
 import re
 
-from core.consts import (ALLOWED_MONEY_SIGNS, CURRENCY_ISO_CODES,
-                         FOREIGN_MONEY_SIGNS, _MONEY_NUM, _MONEY_POST,
-                         _MONEY_PRE)
+from core.consts import _MONEY_NUM, _MONEY_POST, _MONEY_PRE
+from plugins import _lexicon
 RULE = "P33"
 RULES = [RULE]
 PHASE = 60
@@ -55,11 +54,11 @@ def currency_symbol_hits(body):
             for m in re.finditer(pat, t):
                 out.append((kind, m.group(0).strip()))
 
-    for sign in FOREIGN_MONEY_SIGNS:
+    for sign in _lexicon.values("currency-symbol", "foreign"):
         scan(sign, "\u5916\u5e01\u7b26\u53f7")           # 外币符号
-    for sign in ALLOWED_MONEY_SIGNS:
+    for sign in _lexicon.values("currency-symbol", "allowed"):
         scan(sign, "\u7b26\u53f7\u5199\u6cd5")           # 符号写法
-    for code in CURRENCY_ISO_CODES:
+    for code in _lexicon.values("currency-symbol", "iso"):
         pats = (_MONEY_PRE + code + seps + _MONEY_NUM,
                 _MONEY_NUM + seps + code + _MONEY_POST)
         for pat in pats:
@@ -76,6 +75,7 @@ def currency_symbol_hits(body):
     return uniq
 
 def run(view, emit):
+    _lexicon.set_values(view, "currency-symbol")
     for art in view.articles:
         for lg in art.langs:
             for kind, hit in currency_symbol_hits(art.body(lg)):

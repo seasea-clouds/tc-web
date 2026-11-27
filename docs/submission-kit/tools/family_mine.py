@@ -50,21 +50,17 @@ from core import db  # noqa: E402
 TOKEN = re.compile(r"[^\W\d_]{3,}", re.UNICODE)
 SPACELESS = {"ja", "zh", "th", "lo", "my", "km"}
 # 高频功能词不做候选（各语向只列最必要的几个，宁可漏也不添噪）
-STOP = {
-    "the", "and", "for", "with", "that", "this", "from", "have", "shall",
-    "der", "die", "das", "und", "für", "ist", "sich", "werden", "nicht",
-    "les", "des", "une", "pour", "dans", "est", "que", "qui", "sur",
-    "los", "las", "una", "para", "con", "por", "del", "como",
-    "o", "a", "os", "as", "de", "do", "da", "em", "um",
-    "och", "att", "som", "för", "med", "av", "det",
-    "og", "til", "av", "som", "for", "med", "det",
-    "en", "et", "til", "af", "som", "for", "med", "den",
-    "dan", "yang", "untuk", "dengan", "dari", "pada", "akan",
-    "dan", "untuk", "dengan", "dari", "pada", "akan",
-    # 模板/元数据残留（frontmatter 与图片名会被计入正文）
-    "title", "html", "excerpt", "slug", "image", "https", "www", "com",
-    "width", "height", "alt", "src", "jpg", "png", "webp",
-}
+def _load_lexicon(lid):
+    """词族数据在 `lexicons`（family-stop/deriv/suffix），不硬编码在工具里。"""
+    pol = db.current_policy(kit_dir=KIT)
+    out = {}
+    for r in (pol.lexicons or {}).get(lid) or ():
+        out.setdefault(str(r.get("key") or ""), []).append(
+            str(r.get("value") or ""))
+    return out
+
+
+STOP = set(_load_lexicon("family-stop").get("stop", []))
 
 
 def norm(s):

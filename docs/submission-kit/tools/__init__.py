@@ -141,7 +141,7 @@ CATALOG = {
     },
     "integrity_seal.py": {
         "group": "ops", "need": "entry",
-        "desc": "封签运维：keygen / sign / verify / status（发布方签，使用方验）",
+        "desc": "封签运维：keygen / sign / verify / status（维护者签，使用方验）",
     },
 }
 

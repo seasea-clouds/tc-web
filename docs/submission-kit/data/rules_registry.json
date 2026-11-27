@@ -1,0 +1,2968 @@
+{
+ "core": [
+  "C01",
+  "H01",
+  "H02"
+ ],
+ "format": 1,
+ "last_change": {
+  "action": "import",
+  "at": "2026-11-23T08:06:31+08:00",
+  "plugin": "text-legal-article-numbering.py",
+  "rule": "P102"
+ },
+ "note": "规则注册表：规则 ID、严重级、口径说明与插件指纹的唯一真源。由 submit.py rules import/delete 维护；属封签 SEALED，手工改动会让 integrity 失败。",
+ "plugins": {
+  "assets-cover-contract.py": {
+   "plugin": "assets-cover-contract",
+   "rules": [
+    "I02"
+   ],
+   "sha256": "e40d72c66be6c6f476946484ebbf828a21c1e2a2b9881b0d05ce280372939d14"
+  },
+  "assets-image-alt.py": {
+   "plugin": "assets-image-alt",
+   "rules": [
+    "I08"
+   ],
+   "sha256": "c5dd23251be6993122cdbb1c0b0b5982b3af07f37659e5ce431541d23403af94"
+  },
+  "assets-image-count.py": {
+   "plugin": "assets-image-count",
+   "rules": [
+    "W03"
+   ],
+   "sha256": "a49bcf43891743c9b0c65d885e80e8a85eccc0397b6c8b23c2646710808bfead"
+  },
+  "assets-image-external.py": {
+   "plugin": "assets-image-external",
+   "rules": [
+    "I07"
+   ],
+   "sha256": "e4f204d466a86cd5671dda1c95fafb89a0d58baf9bdaf2e8fdd2bb19c263cc50"
+  },
+  "assets-image-integrity.py": {
+   "plugin": "assets-image-integrity",
+   "rules": [
+    "I01"
+   ],
+   "sha256": "e341ad56d846dd03cbbe384cc8806a8325747937cbaf2bbc4ae6a97f92e1f3a2"
+  },
+  "assets-image-min-width.py": {
+   "plugin": "assets-image-min-width",
+   "rules": [
+    "I03"
+   ],
+   "sha256": "2efd7981ceefb73cf0e8f5b6d133aff718acb0426608e0bf2ffa1f7d836f6b4d"
+  },
+  "assets-image-name-seo.py": {
+   "plugin": "assets-image-name-seo",
+   "rules": [
+    "I09"
+   ],
+   "sha256": "97ff55d5b13768281c02310db7d1a14b222ecba17a7d7cad636b74dd66ad0730"
+  },
+  "assets-image-path.py": {
+   "plugin": "assets-image-path",
+   "rules": [
+    "I05"
+   ],
+   "sha256": "53422b6ae6ad9b54c07daf6955fa379b492d0d552202ca71591421c782d6ea7f"
+  },
+  "assets-image-referenced.py": {
+   "plugin": "assets-image-referenced",
+   "rules": [
+    "I06"
+   ],
+   "sha256": "1bdee3717468e15d011be7719be9a39fd03f6393cb37965f3d1ce6e2ca250a25"
+  },
+  "assets-image-weight.py": {
+   "plugin": "assets-image-weight",
+   "rules": [
+    "I04"
+   ],
+   "sha256": "7c7fb5e48f90c8f28bf277ed138e262205cf4a65cc6d6bcda44c8a3861f055bf"
+  },
+  "assets-reg-no-images.py": {
+   "plugin": "assets-reg-no-images",
+   "rules": [
+    "R12"
+   ],
+   "sha256": "b56dcb303d6c5ad6aa921ab84a568e11a45f0c15b025d3891154a3aac05f627b"
+  },
+  "frontmatter-author-fixed.py": {
+   "plugin": "frontmatter-author-fixed",
+   "rules": [
+    "M06"
+   ],
+   "sha256": "85dbf7f1f1ba6498b2bd8416c4400378201899fa73774714e52a53c58de9368c"
+  },
+  "frontmatter-category-enum.py": {
+   "plugin": "frontmatter-category-enum",
+   "rules": [
+    "M05"
+   ],
+   "sha256": "f9a97148685b1dcd41a15ff9c470974f329bef325693e8c02ace1f12dfeee9ae"
+  },
+  "frontmatter-category-match.py": {
+   "plugin": "frontmatter-category-match",
+   "rules": [
+    "F06"
+   ],
+   "sha256": "d03f889cc196eac8caa620fb1e1ad2d0dcd0a64924b87a897c87e34188ea1163"
+  },
+  "frontmatter-date-match.py": {
+   "plugin": "frontmatter-date-match",
+   "rules": [
+    "F05"
+   ],
+   "sha256": "3d79d16255074203f7afd1b197e2ac1bfadd029b0041c1d0315024acf8ffe7fd"
+  },
+  "frontmatter-date-valid.py": {
+   "plugin": "frontmatter-date-valid",
+   "rules": [
+    "M04"
+   ],
+   "sha256": "b24068e2260548ee15c0f499ce66d714be5a7daab794de098c88d9c46f3d80c5"
+  },
+  "frontmatter-doc-number-no-year.py": {
+   "plugin": "frontmatter-doc-number-no-year",
+   "rules": [
+    "F12"
+   ],
+   "sha256": "10067849d3dd2734e4a7cc546d1be5f38703490a8293e9bb322eeeeb6d97964c"
+  },
+  "frontmatter-en-metadata.py": {
+   "plugin": "frontmatter-en-metadata",
+   "rules": [
+    "M09"
+   ],
+   "sha256": "94903cb059b89ba919aec81b1249320b24a2989750c345e40532e1a0a2ae0608"
+  },
+  "frontmatter-excerpt-shape.py": {
+   "plugin": "frontmatter-excerpt-shape",
+   "rules": [
+    "F07"
+   ],
+   "sha256": "f4f14e2b7545bbc34e4dc7791e9fe2dd97ce69248bdc3ba303a6465cef3d7972"
+  },
+  "frontmatter-field-set.py": {
+   "plugin": "frontmatter-field-set",
+   "rules": [
+    "F02"
+   ],
+   "sha256": "4c397fae7142dc1f393f554e4c3020795ccae29d51e79d8c1ae95d7a34538cda"
+  },
+  "frontmatter-field-types.py": {
+   "plugin": "frontmatter-field-types",
+   "rules": [
+    "M12"
+   ],
+   "sha256": "1d8d382850fca58f95024208eeffa8e72abfc44179d3adf9171d6bb44db91ae5"
+  },
+  "frontmatter-images-manifest.py": {
+   "plugin": "frontmatter-images-manifest",
+   "rules": [
+    "M08"
+   ],
+   "sha256": "5b43cd17a65a002c0df2b3d9d0c39e12ce91e093ec5731a4b32f70a1a486d6f7"
+  },
+  "frontmatter-kind-required.py": {
+   "plugin": "frontmatter-kind-required",
+   "rules": [
+    "M10"
+   ],
+   "sha256": "39e6a650c98a465718d2993cd6bae805435060da4cddc03ba4dbf624525c997e"
+  },
+  "frontmatter-kind-vs-dir.py": {
+   "plugin": "frontmatter-kind-vs-dir",
+   "rules": [
+    "M11"
+   ],
+   "sha256": "a2fc8980437d0404ec2b7ef654c5a39154f2176607c929d7a80195c97ea42bd5"
+  },
+  "frontmatter-locales-complete.py": {
+   "plugin": "frontmatter-locales-complete",
+   "rules": [
+    "M07"
+   ],
+   "sha256": "83e9f2cf86c761a2f834bf8428d16f9a352a9c3859fbbb81f85ab68f129bb31a"
+  },
+  "frontmatter-meta-present.py": {
+   "plugin": "frontmatter-meta-present",
+   "rules": [
+    "M01"
+   ],
+   "sha256": "8224c9a87ecb1dbb37f7c973f37e382e50504e6d32c3bc6060e7e9c29fdfc100"
+  },
+  "frontmatter-meta-required.py": {
+   "plugin": "frontmatter-meta-required",
+   "rules": [
+    "M02"
+   ],
+   "sha256": "b7659ec0d5ad62563ac241ce0f9425e2053ff8d1bd77be10ec2ca4e18d0992ce"
+  },
+  "frontmatter-parse-error.py": {
+   "plugin": "frontmatter-parse-error",
+   "rules": [
+    "F01"
+   ],
+   "sha256": "ad3a4207a7f7c1b05446f3869989dbe3aa1c7129f30ae5ee2c5d42ee1d181420"
+  },
+  "frontmatter-references-shape.py": {
+   "plugin": "frontmatter-references-shape",
+   "rules": [
+    "F08"
+   ],
+   "sha256": "2edfb27e90d8d76dd97e97fadb3121eea3468f0c5b5fe32632492a440e1c0e68"
+  },
+  "frontmatter-reg-category.py": {
+   "plugin": "frontmatter-reg-category",
+   "rules": [
+    "R17"
+   ],
+   "sha256": "570b5ea08b75af86ed1c3bbb470c6c7432caa60069d738ff6bcf74d559996d2d"
+  },
+  "frontmatter-reg-issuer.py": {
+   "plugin": "frontmatter-reg-issuer",
+   "rules": [
+    "R18"
+   ],
+   "sha256": "d4264a3aae715a8c04324b910b8ac83c28e1ebb6516106dc6021f5137f0c4f1e"
+  },
+  "frontmatter-reg-meta-align.py": {
+   "plugin": "frontmatter-reg-meta-align",
+   "rules": [
+    "R23"
+   ],
+   "sha256": "cd102d39da8c25a03d35fc35c57fb45f37d783374764897509d8aed6a931b281"
+  },
+  "frontmatter-reg-no-date.py": {
+   "plugin": "frontmatter-reg-no-date",
+   "rules": [
+    "R16"
+   ],
+   "sha256": "33c0e352f83b29722cfbdc0cf8251bfbd30fd7c8123d01e87296004ec2b638f3"
+  },
+  "frontmatter-reg-required.py": {
+   "plugin": "frontmatter-reg-required",
+   "rules": [
+    "R13"
+   ],
+   "sha256": "903ad3ee1748e94068d7645109fd8c45895780486b848fab4655fb92180ee17c"
+  },
+  "frontmatter-reg-service.py": {
+   "plugin": "frontmatter-reg-service",
+   "rules": [
+    "R19"
+   ],
+   "sha256": "b12eef6aff5ca865464dfbf705e417d46f7a6d1db81fa37a32f998aa13b3ba5d"
+  },
+  "frontmatter-rewrite-guard.py": {
+   "plugin": "frontmatter-rewrite-guard",
+   "rules": [
+    "P97"
+   ],
+   "sha256": "715cc23adfdd0ee445f5db5c04df022c554f00308ebd15c6905043b8025e3e62"
+  },
+  "frontmatter-slug-consistent.py": {
+   "plugin": "frontmatter-slug-consistent",
+   "rules": [
+    "M03"
+   ],
+   "sha256": "fce9ceb0af9749ffe44c9088378808c42887a701796c884e5a12740dfedf5bd2"
+  },
+  "frontmatter-slug-field.py": {
+   "plugin": "frontmatter-slug-field",
+   "rules": [
+    "F04"
+   ],
+   "sha256": "bacc60a1479cf243e4561d9583b6fa7da458ac89f0097a5c87142a51e85e1178"
+  },
+  "frontmatter-source-url.py": {
+   "plugin": "frontmatter-source-url",
+   "rules": [
+    "M13"
+   ],
+   "sha256": "4e9015b76eee436929026977dad839e292f850514df51e767cf81e4d882995d6"
+  },
+  "frontmatter-status-enum.py": {
+   "plugin": "frontmatter-status-enum",
+   "rules": [
+    "R14"
+   ],
+   "sha256": "85c2447b8a67b602bcd01874492820c79a81751cf4e973cccbffd53ec877494f"
+  },
+  "frontmatter-template-placeholder.py": {
+   "plugin": "frontmatter-template-placeholder",
+   "rules": [
+    "F11"
+   ],
+   "sha256": "417cf94f1dc2c8f7616023c32ba151819fa2824cd1d221318d38e69ebb4df3bc"
+  },
+  "frontmatter-title-shape.py": {
+   "plugin": "frontmatter-title-shape",
+   "rules": [
+    "F03"
+   ],
+   "sha256": "01c7e8b386a2ec146db22858773c97fd1cd4c33166610d374a4fdc736bcc2667"
+  },
+  "frontmatter-yaml-valid.py": {
+   "plugin": "frontmatter-yaml-valid",
+   "rules": [
+    "F09"
+   ],
+   "sha256": "71cd2b8fb7ac1c69cf7e413d8974bdd50d2aa06fdaee28fe436c82795716c87f"
+  },
+  "glossary-banned-words.py": {
+   "plugin": "glossary-banned-words",
+   "rules": [
+    "P43"
+   ],
+   "sha256": "2c400b15f6a5deb92bcf23850dcca4c0c2445e18dbcda8a12b8d779212f59005"
+  },
+  "glossary-term-excerpt.py": {
+   "plugin": "glossary-term-excerpt",
+   "rules": [
+    "S09"
+   ],
+   "sha256": "322750434e983f6556f5ed8db3e847928d8df7850b573f5aff81f657e164226e"
+  },
+  "glossary-term-presence.py": {
+   "plugin": "glossary-term-presence",
+   "rules": [
+    "S08"
+   ],
+   "sha256": "e8156c9bb6c2959822899b317d4c2cf709b5c50a4b5ef47f10360f92cb5de856"
+  },
+  "glossary-term-refs.py": {
+   "plugin": "glossary-term-refs",
+   "rules": [
+    "S12"
+   ],
+   "sha256": "ac08ce2384b40915f0026c2c021a085c12a1b6d9a1baedea8206e0db31aae536"
+  },
+  "glossary-term-scope.py": {
+   "plugin": "glossary-term-scope",
+   "rules": [
+    "S14"
+   ],
+   "sha256": "f4197a3edca3cb7e6cc21afc319dfe4ed2e3278845dbc23fd64c75b41bb5a2b3"
+  },
+  "glossary-term-title.py": {
+   "plugin": "glossary-term-title",
+   "rules": [
+    "S11"
+   ],
+   "sha256": "39b1c291aa87a2b9e937664eecaf9f2de6852493ffca7eb8d9383247995fb898"
+  },
+  "hygiene-article-glossary.py": {
+   "plugin": "hygiene-article-glossary",
+   "rules": [
+    "P46"
+   ],
+   "sha256": "7957c8159a6e45abbe724b5cdd4054bce237dd5d9f63ed725c8c0d1acf6a3070"
+  },
+  "input-encoding.py": {
+   "plugin": "input-encoding",
+   "rules": [
+    "F10"
+   ],
+   "sha256": "e8e5e3e0d9ed3771b1017a0262c5ff1c406f73c01052d4ed9d2636e6daf1ff36"
+  },
+  "language-arabic-stop.py": {
+   "plugin": "language-arabic-stop",
+   "rules": [
+    "P70"
+   ],
+   "sha256": "ea750fbddad7a3be26b835ed0e1312b516e6718de76173b022ef578b27dc7658"
+  },
+  "language-body-similarity.py": {
+   "plugin": "language-body-similarity",
+   "rules": [
+    "L05"
+   ],
+   "sha256": "5836301f65531a3aa010b7710ede00b43520da1a6f45e4a17fe8b04143134ca5"
+  },
+  "language-bonded-not-free-port.py": {
+   "plugin": "language-bonded-not-free-port",
+   "rules": [
+    "P88"
+   ],
+   "sha256": "a4f6841f9469c1167cedf9cb74a71a6d05bebefebd37ad0c5b752cbc97964feb"
+  },
+  "language-cjk-leak.py": {
+   "plugin": "language-cjk-leak",
+   "rules": [
+    "L04"
+   ],
+   "sha256": "22655ac3a97e2422afee607a75e6b87864447c6915727efafaa6286b01df9081"
+  },
+  "language-el-semicolon.py": {
+   "plugin": "language-el-semicolon",
+   "rules": [
+    "P61"
+   ],
+   "sha256": "e18afb31b31a4f276c2422f8125c1c9033ce5fc2434009968f1eb2afdc69023c"
+  },
+  "language-en-shorthand.py": {
+   "plugin": "language-en-shorthand",
+   "rules": [
+    "P72"
+   ],
+   "sha256": "11e46fcd78d62e8b2f4f9cc0c65b60eb867aa18e88d56d82b854ea5536fb17fd"
+  },
+  "language-excerpt-end.py": {
+   "plugin": "language-excerpt-end",
+   "rules": [
+    "P40"
+   ],
+   "sha256": "48af30755e81af7dbb74d72accd0128561397629ed0681f52e52efaff275ee95"
+  },
+  "language-excerpt-untranslated.py": {
+   "plugin": "language-excerpt-untranslated",
+   "rules": [
+    "L02"
+   ],
+   "sha256": "223bb71d67a3b292638048055f250fc33719e921a7bdf6ee97f6737195fd659b"
+  },
+  "language-heading-untranslated.py": {
+   "plugin": "language-heading-untranslated",
+   "rules": [
+    "L07"
+   ],
+   "sha256": "7f7d442d8f8097cf07f0216d888815d9cd6d87db6665efe4dea84b5e154d6e7b"
+  },
+  "language-hk-macao-attribution.py": {
+   "plugin": "language-hk-macao-attribution",
+   "rules": [
+    "P91"
+   ],
+   "sha256": "10ef9ec8f02b5d6fae18c3736447caba807d5005bfa55e6f54814d280b9cfc9b"
+  },
+  "language-hy-period.py": {
+   "plugin": "language-hy-period",
+   "rules": [
+    "P42"
+   ],
+   "sha256": "0ef2e7a1782e3056facc69db2fb862cd54ad546a322207f8fd413dd4016a5bc4"
+  },
+  "language-ja-shinjitai.py": {
+   "plugin": "language-ja-shinjitai",
+   "rules": [
+    "L09"
+   ],
+   "sha256": "eb899e5bee16ab313c8199991b31770d38f3660dcface839f906e9c5e2532824"
+  },
+  "language-ko-counter.py": {
+   "plugin": "language-ko-counter",
+   "rules": [
+    "P44"
+   ],
+   "sha256": "e2315431544ee10524b4b9907e6fe8be57e3cf8347b22d81dc49854f93dd4635"
+  },
+  "language-latin-orthography.py": {
+   "plugin": "language-latin-orthography",
+   "rules": [
+    "P71"
+   ],
+   "sha256": "c4ff590d08f2d9784a171017c4a28fe6388111cfa614b043e5873560fe1f4b45"
+  },
+  "language-neighbor-contamination.py": {
+   "plugin": "language-neighbor-contamination",
+   "rules": [
+    "P68"
+   ],
+   "sha256": "a0668578f5963db739a9b47988e922432f65161b5e14da578ab0dd103f2dcb0a"
+  },
+  "language-quote-cross-family.py": {
+   "plugin": "language-quote-cross-family",
+   "rules": [
+    "P63"
+   ],
+   "sha256": "669e46d849e9f2f24073092126f476d208fcafa1a7d9158e583a971be7acfa51"
+  },
+  "language-quote-form.py": {
+   "plugin": "language-quote-form",
+   "rules": [
+    "P81"
+   ],
+   "sha256": "613ae1efd79f996f72b55d676fa86a3e26ea695404634ba594342e7c41cdb35c"
+  },
+  "language-quote-pairing.py": {
+   "plugin": "language-quote-pairing",
+   "rules": [
+    "P60"
+   ],
+   "sha256": "dc5493e35a95e77845c43eadf95c23a8ca52dc02acb95d42129f04fd1bffda26"
+  },
+  "language-references-untranslated.py": {
+   "plugin": "language-references-untranslated",
+   "rules": [
+    "L08"
+   ],
+   "sha256": "7457859c20325c055fa7ec73c405160f54318b33f4d9035299638f9046337f95"
+  },
+  "language-reg-date-block.py": {
+   "plugin": "language-reg-date-block",
+   "rules": [
+    "P62"
+   ],
+   "sha256": "4dc66dd7ac5f05a669d13fef89b0d983f41fcad81b280e51486590dc8283d72b"
+  },
+  "language-reg-disease-untranslated.py": {
+   "plugin": "language-reg-disease-untranslated",
+   "rules": [
+    "P94"
+   ],
+   "sha256": "e2b8aeeb2c4913865e08b4d981f0ee532f2a4c3bf0200c1dfb8c6815a295f35a"
+  },
+  "language-sci-name-abbrev.py": {
+   "plugin": "language-sci-name-abbrev",
+   "rules": [
+    "P82"
+   ],
+   "sha256": "530692d8922f0871315c8f94bcf29ef868cf8ea5941a7c43ed02652218166e01"
+  },
+  "language-sci-name-full.py": {
+   "plugin": "language-sci-name-full",
+   "rules": [
+    "P79"
+   ],
+   "sha256": "b82a0da26d21e7fe9089f0c91c4b7accdde07b58a050bf1b1267ab76c9ed0a21"
+  },
+  "language-sci-name.py": {
+   "plugin": "language-sci-name",
+   "rules": [
+    "P65"
+   ],
+   "sha256": "e367d2eb87a100cb41c4f324303b5c4240bf3c2f916a0f0a1cae4e7fc8fbb153"
+  },
+  "language-script-present.py": {
+   "plugin": "language-script-present",
+   "rules": [
+    "L03"
+   ],
+   "sha256": "8c54705c0d9555a7b05f104661d0c1fc72f76e1a8d5f73f8fb4b84ffb3b5afe7"
+  },
+  "language-self-country.py": {
+   "plugin": "language-self-country",
+   "rules": [
+    "P66"
+   ],
+   "sha256": "2f47d4d0d8f573136d4254d2277cb2ce56d07b823d1bbb62ddc60c2ca90e394f"
+  },
+  "language-semicolon-spacing.py": {
+   "plugin": "language-semicolon-spacing",
+   "rules": [
+    "P73"
+   ],
+   "sha256": "6748e0375674f7893318a49d84eb2860ec84cc20bc02712fc52852727fd3e0a1"
+  },
+  "language-summary-overripe.py": {
+   "plugin": "language-summary-overripe",
+   "rules": [
+    "P85"
+   ],
+   "sha256": "78366335d06c214a29c9c8876f7ab67833472f4f92160b09887d3c4fd130b410"
+  },
+  "language-term-confusables.py": {
+   "plugin": "language-term-confusables",
+   "rules": [
+    "P84"
+   ],
+   "sha256": "bb672e3608dc6b59a813b6ba13fc260246e62d1ecdd6f05f2ab72b80afaa6574"
+  },
+  "language-term-variant.py": {
+   "plugin": "language-term-variant",
+   "rules": [
+    "P64"
+   ],
+   "sha256": "3919ab939aad785df0d9e615ee7a7be76fa5c1e8524cfaa235d88f853c7cdb43"
+  },
+  "language-title-dup.py": {
+   "plugin": "language-title-dup",
+   "rules": [
+    "L06"
+   ],
+   "sha256": "7e9be7947b85594200a719733a2d631f85b7282a16c5823a75b579e09d14380b"
+  },
+  "language-title-untranslated.py": {
+   "plugin": "language-title-untranslated",
+   "rules": [
+    "L01"
+   ],
+   "sha256": "1acefb94391d4522adfa782047d102db7078849287e9425e30ac4c1a01af944f"
+  },
+  "numbers-body-facts.py": {
+   "plugin": "numbers-body-facts",
+   "rules": [
+    "P04"
+   ],
+   "sha256": "7ee956559fb4567e31a3c091717eb17b1167a9c07788606c0008d29debbe10e2"
+  },
+  "numbers-code-identity.py": {
+   "plugin": "numbers-code-identity",
+   "rules": [
+    "P36"
+   ],
+   "sha256": "e162d015b33e70be9a8de387e8d636dcac5b7266e1eafa4e6e5e54cc0c377400"
+  },
+  "numbers-currency-symbol.py": {
+   "plugin": "numbers-currency-symbol",
+   "rules": [
+    "P33"
+   ],
+   "sha256": "14a8a974e01d01456c667a1cf8628ffd918435848a3041525f45bfa9f4e967ce"
+  },
+  "numbers-date-paren.py": {
+   "plugin": "numbers-date-paren",
+   "rules": [
+    "P69"
+   ],
+   "sha256": "09f638b5a0a72a6d2d556b37bba33bac8eea3f6de1297709ab1126a9229cf15e"
+  },
+  "numbers-digit-desc.py": {
+   "plugin": "numbers-digit-desc",
+   "rules": [
+    "P47"
+   ],
+   "sha256": "33704542ee0f2af014d6ff31f3f34b7400657ce24b23eb31d4666d7dfda99d27"
+  },
+  "numbers-excerpt-facts.py": {
+   "plugin": "numbers-excerpt-facts",
+   "rules": [
+    "P55"
+   ],
+   "sha256": "4ed6b08c45eadc85218a6dc34186746a7576ee4484381d4092a25e180a48aff8"
+  },
+  "numbers-foreign-currency.py": {
+   "plugin": "numbers-foreign-currency",
+   "rules": [
+    "P32"
+   ],
+   "sha256": "0c57d011687e4f7d3ffa887b40061107f62af644ecf56477efbcaf7851ae3050"
+  },
+  "numbers-image-dup-ref.py": {
+   "plugin": "numbers-image-dup-ref",
+   "rules": [
+    "P01"
+   ],
+   "sha256": "fef1e20ebfb3c46710771b812ba037ed88f62304b4966e43890a5b943a3019b4"
+  },
+  "numbers-image-order.py": {
+   "plugin": "numbers-image-order",
+   "rules": [
+    "P18"
+   ],
+   "sha256": "3778cb1ed1d9bf247a31abb25f871649970d32a8f1484f940975affaf1793a81"
+  },
+  "numbers-image-set.py": {
+   "plugin": "numbers-image-set",
+   "rules": [
+    "P03"
+   ],
+   "sha256": "bccbb6e248177751f813b4a7e3f0d2e6055b161bfab08a759aa7dbce46edbd19"
+  },
+  "numbers-int-facts.py": {
+   "plugin": "numbers-int-facts",
+   "rules": [
+    "P19"
+   ],
+   "sha256": "bebab822a28c3de8abf77fcd26124f812fb03e5b5d4dd7596a4983cf82418e92"
+  },
+  "numbers-key-codes.py": {
+   "plugin": "numbers-key-codes",
+   "rules": [
+    "P20"
+   ],
+   "sha256": "f580f24d64482d2f232790eb0d37d8ffa3cc24e623a0af37744e293f78c911ea"
+  },
+  "numbers-list-shrink.py": {
+   "plugin": "numbers-list-shrink",
+   "rules": [
+    "P49"
+   ],
+   "sha256": "60ee667a20084b51729330543cfd556840996b51b649c15edab160736bbe9f59"
+  },
+  "numbers-long-scale.py": {
+   "plugin": "numbers-long-scale",
+   "rules": [
+    "P48"
+   ],
+   "sha256": "6c2618a86bf278fcddd9ecd3ba95c89f0e7eb61daa934c9ea261b4bb34f0744a"
+  },
+  "numbers-section-count.py": {
+   "plugin": "numbers-section-count",
+   "rules": [
+    "P02"
+   ],
+   "sha256": "889ded45778669822006f4b5bea9a6772f7c16681447a33205e28847d2befb74"
+  },
+  "numbers-separator.py": {
+   "plugin": "numbers-separator",
+   "rules": [
+    "P57"
+   ],
+   "sha256": "e301dd23c6c5c6b75e82fe43fa18aabbb92f5258efd78f4b5757fc24752e435e"
+  },
+  "numbers-slash-date.py": {
+   "plugin": "numbers-slash-date",
+   "rules": [
+    "P93"
+   ],
+   "sha256": "b9322f600995c7f55e148ceff71cdb81ca8de9fc07ef979c48665c49973cfc77"
+  },
+  "numbers-standard-code.py": {
+   "plugin": "numbers-standard-code",
+   "rules": [
+    "P76"
+   ],
+   "sha256": "4506fbf2f80feb9db94a86d50aedcdd32f1cabe98f4f24765a2d3cf12d32a981"
+  },
+  "numbers-threshold-polarity.py": {
+   "plugin": "numbers-threshold-polarity",
+   "rules": [
+    "P59"
+   ],
+   "sha256": "b791010ae965bcc822351ceea355d6df7a744f2ffcf4db4cbdedaec6e9aa8177"
+  },
+  "parity-block-compression.py": {
+   "plugin": "parity-block-compression",
+   "rules": [
+    "P83"
+   ],
+   "sha256": "5800999f83640b765a8341ab5061de7d9b66d3f4411bdfceef5a545e3e864e60"
+  },
+  "parity-block-order.py": {
+   "plugin": "parity-block-order",
+   "rules": [
+    "P22"
+   ],
+   "sha256": "1b4d2a328a272fcbf64b96a06d1be98cfd442cf36f6693aa24494ce7caa42a5a"
+  },
+  "parity-block-outline.py": {
+   "plugin": "parity-block-outline",
+   "rules": [
+    "P23"
+   ],
+   "sha256": "7332a661923b8423c0f4acaa72c580c327762a549f2b6989192f089645e6c44c"
+  },
+  "parity-field-compression.py": {
+   "plugin": "parity-field-compression",
+   "rules": [
+    "P67"
+   ],
+   "sha256": "d457554102584703c935988403728a9a0b2dd118152b7aff0420be50c5be0b3a"
+  },
+  "parity-frontmatter-structure.py": {
+   "plugin": "parity-frontmatter-structure",
+   "rules": [
+    "P28"
+   ],
+   "sha256": "6a09820cd7b9b05b71ee771722c69cbff307b1b83f430710e0012af5869c1219"
+  },
+  "parity-inline-emphasis.py": {
+   "plugin": "parity-inline-emphasis",
+   "rules": [
+    "P26"
+   ],
+   "sha256": "ca7db0bb9c4300a2ac451308c0c0ce6592f594d8700d22d1314f60c1a03dd3fa"
+  },
+  "parity-inline-list-separator.py": {
+   "plugin": "parity-inline-list-separator",
+   "rules": [
+    "P80"
+   ],
+   "sha256": "b5041cc62fab00bb583d360349e954a6c7e384de5ea66efcd3c81ff2c6841a19"
+  },
+  "parity-link-locale.py": {
+   "plugin": "parity-link-locale",
+   "rules": [
+    "P29"
+   ],
+   "sha256": "10f31ca03528fcf95d84713ca1295dc051ad990846b4bc4b15497f469a631651"
+  },
+  "parity-link-targets.py": {
+   "plugin": "parity-link-targets",
+   "rules": [
+    "P27"
+   ],
+   "sha256": "a53af84d774f83eb49febcd477940b9cd51d991da88bc7a6f3f263d7fd3895f5"
+  },
+  "parity-list-count.py": {
+   "plugin": "parity-list-count",
+   "rules": [
+    "P21"
+   ],
+   "sha256": "bca82ff5f195c06f72034156474c18ddb7fc863072a659c818aa939162e19f68"
+  },
+  "parity-list-markers.py": {
+   "plugin": "parity-list-markers",
+   "rules": [
+    "P25"
+   ],
+   "sha256": "4191dc5f0f3565fbb9f5e4ceb794d89a0af38e0b901173fb699a9a9a3e851cbb"
+  },
+  "parity-table-geometry.py": {
+   "plugin": "parity-table-geometry",
+   "rules": [
+    "P24"
+   ],
+   "sha256": "713518482744adb8a27efd0dfd3924871b8f32695fba616fbee74b3ca8963cde"
+  },
+  "structure-asset-path.py": {
+   "plugin": "structure-asset-path",
+   "rules": [
+    "S04"
+   ],
+   "sha256": "dc66df042a7353e10be17d70d13a6f96fb00e490d1a08eb76ddf3814f6a32edf"
+  },
+  "structure-dup-block-marker.py": {
+   "plugin": "structure-dup-block-marker",
+   "rules": [
+    "P86"
+   ],
+   "sha256": "7564a3d6b0dc2f0fd3500661380e62e39e0de0e74abeb8e39d2234a7b2970c78"
+  },
+  "structure-file-type.py": {
+   "plugin": "structure-file-type",
+   "rules": [
+    "S05"
+   ],
+   "sha256": "52d083e1132a9174f963a691e09e9eff473eadc2eb8313e6d377016be6440456"
+  },
+  "structure-line-ending.py": {
+   "plugin": "structure-line-ending",
+   "rules": [
+    "S07"
+   ],
+   "sha256": "95e70a626108fe58cd1a0b50f189dd41e0a9bbcd19fb982fc624d0c44dd359c9"
+  },
+  "structure-locale-known.py": {
+   "plugin": "structure-locale-known",
+   "rules": [
+    "S03"
+   ],
+   "sha256": "904f16769653a5ca0998c5f9317a734e2a4c84dad555ec58420f13b57d9e0e66"
+  },
+  "structure-locales-complete.py": {
+   "plugin": "structure-locales-complete",
+   "rules": [
+    "S02"
+   ],
+   "sha256": "90b565a4e0030f87c59fb3827d1a4432f1a675f58db4e532ac909d9a405b5cf9"
+  },
+  "structure-package-size.py": {
+   "plugin": "structure-package-size",
+   "rules": [
+    "S06"
+   ],
+   "sha256": "96e1303b2c0e05d2c7e451c34ec0ed752e5894a4e165530b7cff07305bfb06b3"
+  },
+  "structure-path-whitelist.py": {
+   "plugin": "structure-path-whitelist",
+   "rules": [
+    "S10"
+   ],
+   "sha256": "d9af9a1408992782cb2b9a67961705d081420f66b177677a2b66b252acde67b2"
+  },
+  "structure-slug-shape.py": {
+   "plugin": "structure-slug-shape",
+   "rules": [
+    "S13"
+   ],
+   "sha256": "c30a6d4fae933b33239e2c9b8b45ce4e6b892b20d19672aa5016f8fb16f6a0fa"
+  },
+  "structure-top-layout.py": {
+   "plugin": "structure-top-layout",
+   "rules": [
+    "S01"
+   ],
+   "sha256": "26d90c7d48a1c8e03fadcc79386f460802dde9802f666e4534b14775311f17d4"
+  },
+  "text-absolute-negation.py": {
+   "plugin": "text-absolute-negation",
+   "rules": [
+    "R05"
+   ],
+   "sha256": "8540f4951677afa37674c787a06026de0187e86391531130b8ecf97483604ef0"
+  },
+  "text-acronym-paren-space.py": {
+   "plugin": "text-acronym-paren-space",
+   "rules": [
+    "P100"
+   ],
+   "sha256": "e72e344be6fec32b8f1abe279d00d88ff57b18d77958f62c286e2371bed1f48f"
+  },
+  "text-ai-phrases-local.py": {
+   "plugin": "text-ai-phrases-local",
+   "rules": [
+    "ST08"
+   ],
+   "sha256": "81d39ea0da336d036227e7bbcb6a8d65836884ecbab1adaa95e80ecb4002b379"
+  },
+  "text-ai-words-en.py": {
+   "plugin": "text-ai-words-en",
+   "rules": [
+    "ST03"
+   ],
+   "sha256": "fdd88efd52a92e5d79cb85be33b84f50d586c0007f0fc3a196befb8683477919"
+  },
+  "text-ai-words-zh.py": {
+   "plugin": "text-ai-words-zh",
+   "rules": [
+    "ST04"
+   ],
+   "sha256": "2cdf9b83a14dc9a5018f500aaf474cf8b0811222cf47dc0fad271262e0281e52"
+  },
+  "text-alt-untranslated.py": {
+   "plugin": "text-alt-untranslated",
+   "rules": [
+    "P11"
+   ],
+   "sha256": "4331065bdc3901fc37d02441450050468ed49debe87639fea0e280097ddbe17b"
+  },
+  "text-ascii-double-quote.py": {
+   "plugin": "text-ascii-double-quote",
+   "rules": [
+    "P95"
+   ],
+   "sha256": "76f2174dd03f6cced6679cf09d640e03b6d2a939bb5a3191d8afbae6cc3f82c5"
+  },
+  "text-block-copied.py": {
+   "plugin": "text-block-copied",
+   "rules": [
+    "P35"
+   ],
+   "sha256": "22c9a84b5b799685336f9a2fa6a6bbebdf9ec2050efa6ee6d40cddef515be756"
+  },
+  "text-bn-candrabindu.py": {
+   "plugin": "text-bn-candrabindu",
+   "rules": [
+    "P38"
+   ],
+   "sha256": "4755f208f8cf9913207e8c50b77428a0ac92bdba4556d2d13ea2d8601d50ab52"
+  },
+  "text-body-references.py": {
+   "plugin": "text-body-references",
+   "rules": [
+    "B04"
+   ],
+   "sha256": "3ddfee8aeca340167b62146cf8c89240b47daca831752a484c8acfc665d4ab7a"
+  },
+  "text-box-drawing.py": {
+   "plugin": "text-box-drawing",
+   "rules": [
+    "B06"
+   ],
+   "sha256": "6060f75a6bb6d00538d438674cbc4a51598b471404f5e858142843d83fa6d4d5"
+  },
+  "text-boxmark-localized.py": {
+   "plugin": "text-boxmark-localized",
+   "rules": [
+    "P101"
+   ],
+   "sha256": "5ad1f3b6db014acdef7d7b55d11cc6d305462995540474ffd54b2a272ed32201"
+  },
+  "text-boxmark-verbatim.py": {
+   "plugin": "text-boxmark-verbatim",
+   "rules": [
+    "P90"
+   ],
+   "sha256": "fe4fd1d094f09542a071676894f9c4d56a7d462c280e6e861d2fd439b4a5ff8b"
+  },
+  "text-citation-preposition.py": {
+   "plugin": "text-citation-preposition",
+   "rules": [
+    "P54"
+   ],
+   "sha256": "08d30608c7378f5f778e1f6cde22464d01a36480e1caa3d88ec6550a4a3b1b57"
+  },
+  "text-concept-contrast.py": {
+   "plugin": "text-concept-contrast",
+   "rules": [
+    "P75"
+   ],
+   "sha256": "c417e45f52f502760dc09dc1af7701466b2e5c59b832a52905a73950d805e1af"
+  },
+  "text-context-phrase-guard.py": {
+   "plugin": "text-context-phrase-guard",
+   "rules": [
+    "P98"
+   ],
+   "sha256": "275a4e5e18e1e4a37a23b9461058b4c28bc884d3b23e530ad708898325497158"
+  },
+  "text-cta-colon.py": {
+   "plugin": "text-cta-colon",
+   "rules": [
+    "P12"
+   ],
+   "sha256": "1f73ba3cd5260d273a438f41f2ce2c6e44f6c364bc0ab03ab447db1d8f3e7931"
+  },
+  "text-cta-link.py": {
+   "plugin": "text-cta-link",
+   "rules": [
+    "B09"
+   ],
+   "sha256": "89bda756802dc1f9c986d728b953ca27722aa29cd4669b467c0e52e4ba8d7282"
+  },
+  "text-cta-terminal.py": {
+   "plugin": "text-cta-terminal",
+   "rules": [
+    "P50"
+   ],
+   "sha256": "e116cd2485dec976e1451f7342ebb1fa72765f770ad84a421738a20302ef3794"
+  },
+  "text-dash-mix.py": {
+   "plugin": "text-dash-mix",
+   "rules": [
+    "B10"
+   ],
+   "sha256": "68e6ea0238065a434b3043cf29ac4ca082aef5dec35ae2534cc2126fb024e107"
+  },
+  "text-delivery-claim.py": {
+   "plugin": "text-delivery-claim",
+   "rules": [
+    "R04"
+   ],
+   "sha256": "024b64f27978f74ce482d64cacb6ed9f9c6ab68ad026445f9ae504e2db8de66b"
+  },
+  "text-divider.py": {
+   "plugin": "text-divider",
+   "rules": [
+    "B03"
+   ],
+   "sha256": "5e66ad6ac241a917f1a233a42749d490e2d46fa00901344360d80224d664e606"
+  },
+  "text-double-punct.py": {
+   "plugin": "text-double-punct",
+   "rules": [
+    "P06"
+   ],
+   "sha256": "90dc98e1dde56629eb8a1975748a703787b3f1fac369b8b002c3272e9f906331"
+  },
+  "text-double-space.py": {
+   "plugin": "text-double-space",
+   "rules": [
+    "P07"
+   ],
+   "sha256": "6b9e5451e3555bdebe503b9caa331023f11d85a895d0f6f23e12c578d6ba9377"
+  },
+  "text-duplicate-sentence-mark.py": {
+   "plugin": "text-duplicate-sentence-mark",
+   "rules": [
+    "P99"
+   ],
+   "sha256": "6c109e5f9b4dd6f4c56f54be5077b9398753220ef96034949caab3297046b1a9"
+  },
+  "text-duplicate-sentence.py": {
+   "plugin": "text-duplicate-sentence",
+   "rules": [
+    "P17"
+   ],
+   "sha256": "82a8858eb4daa01d65e925459281cdeb2470a4a79bfac28cf4db5e035b43e698"
+  },
+  "text-ecommerce-spaced.py": {
+   "plugin": "text-ecommerce-spaced",
+   "rules": [
+    "P39"
+   ],
+   "sha256": "d0bc7ae893e91b0da429d6a76a7051bfa077a843e9b8b2df375c2d92c67a3a8f"
+  },
+  "text-ellipsis.py": {
+   "plugin": "text-ellipsis",
+   "rules": [
+    "P05"
+   ],
+   "sha256": "28217b52c1fb303478f557b309da6d7381f7654abb668b0f82beaa7f4051bfea"
+  },
+  "text-em-dash.py": {
+   "plugin": "text-em-dash",
+   "rules": [
+    "ST01"
+   ],
+   "sha256": "faf1d4860b084e2ba363d7648e5bd148cc330ce3bf6a532843fd326ed51a86c9"
+  },
+  "text-emoji-list.py": {
+   "plugin": "text-emoji-list",
+   "rules": [
+    "B11"
+   ],
+   "sha256": "73efde4ae214169b0e24e1656cbd90b2ea60b902e79819445c8dc87792540074"
+  },
+  "text-en-dash.py": {
+   "plugin": "text-en-dash",
+   "rules": [
+    "ST02"
+   ],
+   "sha256": "09bbb1fddadad9782487afcf562a9dc268208be7688973a2402e59429e28b45c"
+  },
+  "text-en-length.py": {
+   "plugin": "text-en-length",
+   "rules": [
+    "W01"
+   ],
+   "sha256": "1cc6318b043fd1d52f92121c404cb4144248b6ded02891febfc882cba9105eaf"
+  },
+  "text-english-residue.py": {
+   "plugin": "text-english-residue",
+   "rules": [
+    "P52"
+   ],
+   "sha256": "32293f6d2dcc0d56f965f35426bb1e479bf3ab5404bb65a6505901abe1433412"
+  },
+  "text-english-run-latin.py": {
+   "plugin": "text-english-run-latin",
+   "rules": [
+    "P87"
+   ],
+   "sha256": "7d650472009f1a1401f185b0cca1d46107c0619118f939b27539d338b2ded55d"
+  },
+  "text-fullwidth-punct.py": {
+   "plugin": "text-fullwidth-punct",
+   "rules": [
+    "P34"
+   ],
+   "sha256": "7b3de9c87858d569d263edef8268ede594a733397cced7e7188bce2a650f4e79"
+  },
+  "text-heading-level-one.py": {
+   "plugin": "text-heading-level-one",
+   "rules": [
+    "B01"
+   ],
+   "sha256": "e3f050470419995c234a99196bbb96f0e3cda085ae03609986a1b2c0e08f237e"
+  },
+  "text-heading-shape.py": {
+   "plugin": "text-heading-shape",
+   "rules": [
+    "B02"
+   ],
+   "sha256": "4f1f5996e819882da89e12d8f962fb4e5ef59d1e2290b9a5d155af013e640710"
+  },
+  "text-html-jsx.py": {
+   "plugin": "text-html-jsx",
+   "rules": [
+    "B05"
+   ],
+   "sha256": "3882109771f88b1044f8a12652a0f56fa5021a129721d483bcedd31723d354c4"
+  },
+  "text-inline-ordinals.py": {
+   "plugin": "text-inline-ordinals",
+   "rules": [
+    "ST07"
+   ],
+   "sha256": "2b774c04620deaddd254efe41a290148c2332c4c4bbb7c792ab1bd888859a7a7"
+  },
+  "text-invisible-chars.py": {
+   "plugin": "text-invisible-chars",
+   "rules": [
+    "P14"
+   ],
+   "sha256": "6207c856214b5fdcdca3e9fe2adfca53d2e86ecb82e8b20561c52bc8b543db2b"
+  },
+  "text-ko-hanja.py": {
+   "plugin": "text-ko-hanja",
+   "rules": [
+    "P09"
+   ],
+   "sha256": "d5475d2922b9327ad6d907875c6083429d9d158f0215895c60f83c3f4591db32"
+  },
+  "text-latin-residue.py": {
+   "plugin": "text-latin-residue",
+   "rules": [
+    "P30"
+   ],
+   "sha256": "904ac1989529f96974bfe235b16bd783d997fe97ba5ce19a3eb4179602fd2d99"
+  },
+  "text-legal-article-numbering.py": {
+   "plugin": "text-legal-article-numbering",
+   "rules": [
+    "P102"
+   ],
+   "sha256": "11e658ddf84032b885cff47d1f0bf4cf5dd6f2566cba020d20984ae19cec4d11"
+  },
+  "text-list-blank-lines.py": {
+   "plugin": "text-list-blank-lines",
+   "rules": [
+    "B07"
+   ],
+   "sha256": "b8c655f4d12c02f15fbf01b145cec964ae2655cd160b1d4c719685339fec06c5"
+  },
+  "text-list-inline.py": {
+   "plugin": "text-list-inline",
+   "rules": [
+    "B08"
+   ],
+   "sha256": "d71a09488341e856aad8aa2405ea46ab219b662641a605fd26f8d1988fd3692f"
+  },
+  "text-mixed-script.py": {
+   "plugin": "text-mixed-script",
+   "rules": [
+    "P08"
+   ],
+   "sha256": "03b1490ed1a15c898947dbddd2d711a9571695fe5e4090e358aef3d05d96196d"
+  },
+  "text-org-renamed.py": {
+   "plugin": "text-org-renamed",
+   "rules": [
+    "R02"
+   ],
+   "sha256": "f9ba17a4049bba622a6accac4cd88d1661e22bffdbf1f52cac15206a2b778653"
+  },
+  "text-original-marker.py": {
+   "plugin": "text-original-marker",
+   "rules": [
+    "R10"
+   ],
+   "sha256": "06e3c7c13187df077a7fe0df7512e150b10c1149b9dd155922ef37c66151e918"
+  },
+  "text-original-split.py": {
+   "plugin": "text-original-split",
+   "rules": [
+    "R11"
+   ],
+   "sha256": "8db1453414bb901c9e93bd7c0995af0223c067035d9c9be04e24a3765f0924e5"
+  },
+  "text-overpromise.py": {
+   "plugin": "text-overpromise",
+   "rules": [
+    "R06"
+   ],
+   "sha256": "302798c25d1b90774aca704d5fc5c3700466aa216ce2a9b0da4e2d3bd14361d7"
+  },
+  "text-para-opener.py": {
+   "plugin": "text-para-opener",
+   "rules": [
+    "ST06"
+   ],
+   "sha256": "d9fe8e540f48959c0d397e68969b201ba73afdcd19ae0fd7efb27b0f2bd4d8e1"
+  },
+  "text-paragraph-length.py": {
+   "plugin": "text-paragraph-length",
+   "rules": [
+    "W02"
+   ],
+   "sha256": "463d5b1d13950278976570cf358d406ad73768991ba31e3ea754f836db4929e3"
+  },
+  "text-percent-style.py": {
+   "plugin": "text-percent-style",
+   "rules": [
+    "P51"
+   ],
+   "sha256": "d02bbae65149a225567ca846a0fe54e1a15d160f05239bea9bb9f156e1145f18"
+  },
+  "text-pestline-stray-latin.py": {
+   "plugin": "text-pestline-stray-latin",
+   "rules": [
+    "P89"
+   ],
+   "sha256": "7b61832788db1828e635951df756c60857cb3a33677e5674cd35374603952cb2"
+  },
+  "text-price-claim.py": {
+   "plugin": "text-price-claim",
+   "rules": [
+    "R03"
+   ],
+   "sha256": "54f8acef927c520c9324252e3184f1b088b88599c9ac791108dbebcfdd0b7e06"
+  },
+  "text-pt-variant.py": {
+   "plugin": "text-pt-variant",
+   "rules": [
+    "P53"
+   ],
+   "sha256": "1062926b39460378033aa5c057fd9ce3ffb218d66d5ff6ee95b12ae06aa005e4"
+  },
+  "text-reg-cn-ord-halfwidth.py": {
+   "plugin": "text-reg-cn-ord-halfwidth",
+   "rules": [
+    "R24"
+   ],
+   "sha256": "bf99cf6cf73ad0ac7b5e804932a8c3e1321a4edb2845b225ea9e0279ee3ae4d1"
+  },
+  "text-reg-heat-contract-qualifier.py": {
+   "plugin": "text-reg-heat-contract-qualifier",
+   "rules": [
+    "R25"
+   ],
+   "sha256": "c310263c0aa4cf812c72aea6ef6ccfecdd1995cbe2d349b648920f9d941d92e1"
+  },
+  "text-reg-interpret-clause-survival.py": {
+   "plugin": "text-reg-interpret-clause-survival",
+   "rules": [
+    "P92"
+   ],
+   "sha256": "713d19214fe146a8c27351b87140534893fe5a32d3921fac763cd358c100b3c0"
+  },
+  "text-reg-interpret-layer.py": {
+   "plugin": "text-reg-interpret-layer",
+   "rules": [
+    "P77"
+   ],
+   "sha256": "db9b35e89e76a420c52c6269d5581e555e9ab1ba65ba4619d742b19e78f10275"
+  },
+  "text-reg-interpret-length.py": {
+   "plugin": "text-reg-interpret-length",
+   "rules": [
+    "R21"
+   ],
+   "sha256": "3cbf312b9820709a4e0acd823045fd4492c32d18f1f26a5a117ff5c9d446ecd3"
+  },
+  "text-reg-ol-block.py": {
+   "plugin": "text-reg-ol-block",
+   "rules": [
+    "R22"
+   ],
+   "sha256": "ff09dcbe7f2469ecd68e05a514ac8a176d253784828bab7a8bc5d0d6b483e0a8"
+  },
+  "text-reg-sign-date-dot.py": {
+   "plugin": "text-reg-sign-date-dot",
+   "rules": [
+    "P96"
+   ],
+   "sha256": "680be8cc0aa1b8fb2addb3ad519897e334a443fa1ea017441480859446139214"
+  },
+  "text-reg-title-docnumber.py": {
+   "plugin": "text-reg-title-docnumber",
+   "rules": [
+    "R15"
+   ],
+   "sha256": "6d7bcf0436da624dc692ff9302ef4aebc683fdb11b85dc4351caaee38acd9822"
+  },
+  "text-reg-title-punct.py": {
+   "plugin": "text-reg-title-punct",
+   "rules": [
+    "R20"
+   ],
+   "sha256": "e50e3510e0b40afb99bbc1092269f6a7107983a171dddb6fad4e5eb8ca1bf5f3"
+  },
+  "text-register-mix.py": {
+   "plugin": "text-register-mix",
+   "rules": [
+    "P45"
+   ],
+   "sha256": "a087556ab41126ca5887204364f43e138dad5118248544a6fb07798d119156ac"
+  },
+  "text-repeat-word.py": {
+   "plugin": "text-repeat-word",
+   "rules": [
+    "P10"
+   ],
+   "sha256": "74433ecdaf453d3ffed00eba78b0c2d9f5f6714cd37c635a6bf2c4c5f7f61bc4"
+  },
+  "text-reversal-hook.py": {
+   "plugin": "text-reversal-hook",
+   "rules": [
+    "ST05"
+   ],
+   "sha256": "afa5b57b4e0a660f687fa844610e418c1730a1ce63d01c7af86b39b3f835eed4"
+  },
+  "text-sentence-case.py": {
+   "plugin": "text-sentence-case",
+   "rules": [
+    "P58"
+   ],
+   "sha256": "b59cb6c4f81f257230509f422d128de2eeead847c646dea4e85466e0746c46be"
+  },
+  "text-signer-ownership.py": {
+   "plugin": "text-signer-ownership",
+   "rules": [
+    "R08"
+   ],
+   "sha256": "d4a06f5a67ac0140df18325a3c6aae236000a31f6042d4c364e015a82d7a998f"
+  },
+  "text-space-before-punct.py": {
+   "plugin": "text-space-before-punct",
+   "rules": [
+    "P15"
+   ],
+   "sha256": "a6f71070aa5ec9157a38c749461dc517bd2c12a572b010728361f7f273258a77"
+  },
+  "text-table-bullet-match.py": {
+   "plugin": "text-table-bullet-match",
+   "rules": [
+    "P41"
+   ],
+   "sha256": "b4dc10b6644312af77746d2f744e6105742adeed92545a1c49c04ba78af29be4"
+  },
+  "text-term-consistency.py": {
+   "plugin": "text-term-consistency",
+   "rules": [
+    "P74"
+   ],
+   "sha256": "833807d64f7d13a7969bc42b7a14278e7cfb29df9fda06f3f432ef9a249c3688"
+  },
+  "text-term-form-guard.py": {
+   "plugin": "text-term-form-guard",
+   "rules": [
+    "P78"
+   ],
+   "sha256": "fe569d558e505309307fba5c2553f99f295036af50e5738d952097b30d2dad1e"
+  },
+  "text-term-localized.py": {
+   "plugin": "text-term-localized",
+   "rules": [
+    "P31"
+   ],
+   "sha256": "5a36c49b6a8376be96d721a177ccc1d3be2359bee1fa168c1793045d11f1f4db"
+  },
+  "text-tool-trace.py": {
+   "plugin": "text-tool-trace",
+   "rules": [
+    "R07"
+   ],
+   "sha256": "80340ef36fabaaf09d9e9f09b4c0e71d5ae23d65fd6380e0713cb858911ed204"
+  },
+  "text-triple-blank.py": {
+   "plugin": "text-triple-blank",
+   "rules": [
+    "P13"
+   ],
+   "sha256": "5cf2eb128886ef545a363cdeab2d075224175cf722c61a3016ab40fd6cd5345a"
+  },
+  "text-unbalanced-markup.py": {
+   "plugin": "text-unbalanced-markup",
+   "rules": [
+    "P16"
+   ],
+   "sha256": "9a33d211213584a2cef6c5b9d091481015faa60644286c0603ad29ed7a7ccd91"
+  },
+  "text-wr-abstract-heading.py": {
+   "plugin": "text-wr-abstract-heading",
+   "rules": [
+    "WR04"
+   ],
+   "sha256": "abaa4965e74680b1a53cae88065eb950c76dc8d1b6d0ab2430f5fcfa82be381a"
+  },
+  "text-wr-discourse.py": {
+   "plugin": "text-wr-discourse",
+   "rules": [
+    "WR02"
+   ],
+   "sha256": "57a6b8efab87386beba8c84aecb85e4b76348001960c4387f89f6c11091127c2"
+  },
+  "text-wr-firsthand.py": {
+   "plugin": "text-wr-firsthand",
+   "rules": [
+    "WR03"
+   ],
+   "sha256": "8b6342a057d4b563c0fe4508bbf1c302df55329f4fbb7d52620ed5edbc6d9c07"
+  },
+  "text-wr-refs-count.py": {
+   "plugin": "text-wr-refs-count",
+   "rules": [
+    "WR05"
+   ],
+   "sha256": "2d7bbb2eb6aa17da35747acb7703e24d2d2062125bf7b9a500c6f34f97e10c94"
+  },
+  "text-wr-scope-heading.py": {
+   "plugin": "text-wr-scope-heading",
+   "rules": [
+    "WR01"
+   ],
+   "sha256": "660f6f3e6c3c1a64bb19bc06a2f61407eb19dc9a9532122dc942ea17543e323c"
+  },
+  "text-wrong-script.py": {
+   "plugin": "text-wrong-script",
+   "rules": [
+    "P56"
+   ],
+   "sha256": "514cc8f34ef738bfcec1682f24b1d5ff26fb093c853bfc0a35be3c330aa19ee7"
+  }
+ },
+ "rules": {
+  "B01": {
+   "desc": "正文使用一级标题 # （必须从 ## 起）",
+   "severity": "error"
+  },
+  "B02": {
+   "desc": "标题必须 `## 空格` 起、层级不超过 ###",
+   "severity": "error"
+  },
+  "B03": {
+   "desc": "正文禁止 --- 分隔线",
+   "severity": "error"
+  },
+  "B04": {
+   "desc": "References 章节必须放 frontmatter",
+   "severity": "error"
+  },
+  "B05": {
+   "desc": "正文禁止 HTML / JSX 标签与表达式",
+   "severity": "error"
+  },
+  "B06": {
+   "desc": "正文禁止框线字符流程图",
+   "severity": "error"
+  },
+  "B07": {
+   "desc": "列表项之间不得空行",
+   "severity": "error"
+  },
+  "B08": {
+   "desc": "一行只能写一个列表项",
+   "severity": "error"
+  },
+  "B09": {
+   "desc": "文末 CTA 链接与文字必须逐语正确",
+   "severity": "error"
+  },
+  "B10": {
+   "desc": "同一文件不得混用 — 与 –",
+   "severity": "error"
+  },
+  "B11": {
+   "desc": "一行不得出现多个 emoji（会被当成列表）",
+   "severity": "error"
+  },
+  "F01": {
+   "desc": "frontmatter 必须存在且闭合",
+   "severity": "error"
+  },
+  "F02": {
+   "desc": "frontmatter 字段集合恰好等于白名单",
+   "severity": "error"
+  },
+  "F03": {
+   "desc": "标题形态（空值 / 超长 / 分隔符形状）",
+   "severity": "error"
+  },
+  "F04": {
+   "desc": "frontmatter slug 必须等于条目 slug",
+   "severity": "error"
+  },
+  "F05": {
+   "desc": "frontmatter date 必须与 submission.date 一致",
+   "severity": "error"
+  },
+  "F06": {
+   "desc": "frontmatter category 与题录一致且在白名单内",
+   "severity": "error"
+  },
+  "F07": {
+   "desc": "excerpt 长度上限且不得等于 title",
+   "severity": "error"
+  },
+  "F08": {
+   "desc": "references 最多 6 条且每条有 title 与 https 链接",
+   "severity": "error"
+  },
+  "F09": {
+   "desc": "frontmatter 必须能被 YAML 解析",
+   "severity": "error"
+  },
+  "F10": {
+   "desc": "编码保真 —— 非法 UTF-8 一律报错，不得以替换字符继续检查。",
+   "severity": "error"
+  },
+  "F11": {
+   "desc": "法规 frontmatter 不得残留模板占位元数据",
+   "severity": "error"
+  },
+  "F12": {
+   "desc": "法规 frontmatter 的 doc_number 不得带年份",
+   "severity": "error"
+  },
+  "I01": {
+   "desc": "图片载荷必须完整可解析",
+   "severity": "error"
+  },
+  "I02": {
+   "desc": "必须有 cover.webp 且精确 1200×630",
+   "severity": "error"
+  },
+  "I03": {
+   "desc": "正文配图宽度不得小于 1200",
+   "severity": "error"
+  },
+  "I04": {
+   "desc": "单张图片不得超过 400KB",
+   "severity": "error"
+  },
+  "I05": {
+   "desc": "正文图片路径必须是 /images/blog/<slug>/<name>.webp",
+   "severity": "error"
+  },
+  "I06": {
+   "desc": "除封面外每张图都必须在正文被引用",
+   "severity": "error"
+  },
+  "I07": {
+   "desc": "正文图片不得使用外链",
+   "severity": "error"
+  },
+  "I08": {
+   "desc": "图片 alt 必须真写且不得笼统",
+   "severity": "error"
+  },
+  "I09": {
+   "desc": "配图文件名必须可检索（kebab-case 描述）",
+   "severity": "error"
+  },
+  "L01": {
+   "desc": "title 与英文完全相同（疑似未翻译）",
+   "severity": "error"
+  },
+  "L02": {
+   "desc": "excerpt 与英文完全相同（疑似未翻译）",
+   "severity": "error"
+  },
+  "L03": {
+   "desc": "正文未使用该语言的文字系统（疑似英文回退）",
+   "severity": "error"
+  },
+  "L04": {
+   "desc": "非中日韩语种出现中文字符（疑似中文回退）",
+   "severity": "error"
+  },
+  "L05": {
+   "desc": "正文与英文相似度过高（疑似未翻译）",
+   "severity": "error"
+  },
+  "L06": {
+   "desc": "title/excerpt 跨语言完全相同（L01/L02 只比英文，此处覆盖其余语言互抄）",
+   "severity": "error"
+  },
+  "L07": {
+   "desc": "小节标题与英文完全相同（疑似未翻译）",
+   "severity": "error"
+  },
+  "L08": {
+   "desc": "references 第 N 条标题与英文相同（须翻译）",
+   "severity": "error"
+  },
+  "L09": {
+   "desc": "日文出现中文简体字（应为日文新字体）",
+   "severity": "error"
+  },
+  "M01": {
+   "desc": "submission.json 必须存在且是合法 JSON",
+   "severity": "error"
+  },
+  "M02": {
+   "desc": "submission.json 必填字段齐全",
+   "severity": "error"
+  },
+  "M03": {
+   "desc": "submission.json 的 slug 与目录名一致",
+   "severity": "error"
+  },
+  "M04": {
+   "desc": "日期字段必须是真实日期且在绝对区间内",
+   "severity": "error"
+  },
+  "M05": {
+   "desc": "category 必须在站内分类枚举内",
+   "severity": "error"
+  },
+  "M06": {
+   "desc": "author 必须固定为站内署名",
+   "severity": "error"
+  },
+  "M07": {
+   "desc": "locales 必须正好是 48 个注册语言",
+   "severity": "error"
+  },
+  "M08": {
+   "desc": "images 清单与实际图片文件一致",
+   "severity": "error"
+  },
+  "M09": {
+   "desc": "题录 title/excerpt 必须与 en frontmatter 一致",
+   "severity": "error"
+  },
+  "M10": {
+   "desc": "kind 必填且只能是 blog / regulation",
+   "severity": "error"
+  },
+  "M11": {
+   "desc": "kind 必须与所在目录一致",
+   "severity": "error"
+  },
+  "M12": {
+   "desc": "submission.json 顶层与字段类型校验",
+   "severity": "error"
+  },
+  "M13": {
+   "desc": "sourceUrl 必须是无空白 http(s) URL",
+   "severity": "error"
+  },
+  "P01": {
+   "desc": "同一图片在同一语言内不得被引用两次",
+   "severity": "error"
+  },
+  "P02": {
+   "desc": "各语小节数与中文母版一致",
+   "severity": "error"
+  },
+  "P03": {
+   "desc": "各语配图集合与母版一致",
+   "severity": "error"
+  },
+  "P04": {
+   "desc": "正文关键数字跨语言齐全；条款区间枚举不得漏中间项",
+   "severity": "error"
+  },
+  "P05": {
+   "desc": "正文不出现省略号（… / ...）",
+   "severity": "warning"
+  },
+  "P06": {
+   "desc": "正文不出现重复标点（!! / ?? / ，，）",
+   "severity": "warning"
+  },
+  "P07": {
+   "desc": "行内不出现连续多空格",
+   "severity": "warning"
+  },
+  "P08": {
+   "desc": "正文不得出现混文字系统词（同一 token 里拉丁字母与本语字母并存）",
+   "severity": "warning"
+  },
+  "P09": {
+   "desc": "韩语正文不出现汉字",
+   "severity": "warning"
+  },
+  "P10": {
+   "desc": "正文不得出现相邻重复单词（the the / и и / los los）",
+   "severity": "error"
+  },
+  "P100": {
+   "desc": "括号内拉丁缩写不得留内侧空格",
+   "severity": "warning"
+  },
+  "P101": {
+   "desc": "非英语语向的包装标识不得只有英文逐字串",
+   "severity": "warning"
+  },
+  "P102": {
+   "desc": "zh 母版写「第六条」时，译文不得把它降格成「章/节」",
+   "severity": "warning"
+  },
+  "P11": {
+   "desc": "图片 alt 文本跨语言完全相同＝未翻译",
+   "severity": "warning"
+  },
+  "P12": {
+   "desc": "CTA 不得用冒号引出链接",
+   "severity": "warning"
+  },
+  "P13": {
+   "desc": "不出现三连及以上空行",
+   "severity": "warning"
+  },
+  "P14": {
+   "desc": "不出现隐形/零宽字符",
+   "severity": "warning"
+  },
+  "P15": {
+   "desc": "标点前不多余空格",
+   "severity": "warning"
+  },
+  "P16": {
+   "desc": "强调符与圆括号必须配对",
+   "severity": "warning"
+  },
+  "P17": {
+   "desc": "不出现连续重复句",
+   "severity": "warning"
+  },
+  "P18": {
+   "desc": "配图引用顺序与母版一致",
+   "severity": "error"
+  },
+  "P19": {
+   "desc": "关键编号（≥10 的非年份整数）跨语言齐全",
+   "severity": "warning"
+  },
+  "P20": {
+   "desc": "裁定号与 HS 编码各语齐全",
+   "severity": "error"
+  },
+  "P21": {
+   "desc": "分节列表项数必须与母版一致",
+   "severity": "error"
+  },
+  "P22": {
+   "desc": "正文块顺序与配图位置必须与母版一致",
+   "severity": "error"
+  },
+  "P23": {
+   "desc": "逐块大纲必须与母版一一对应",
+   "severity": "error"
+  },
+  "P24": {
+   "desc": "表格几何必须与母版逐表一致",
+   "severity": "error"
+  },
+  "P25": {
+   "desc": "列表标记与缩进层级必须与母版一致",
+   "severity": "error"
+  },
+  "P26": {
+   "desc": "行内强调必须落在母版的同一位置",
+   "severity": "error"
+  },
+  "P27": {
+   "desc": "行内链接目标必须与母版一致",
+   "severity": "error"
+  },
+  "P28": {
+   "desc": "frontmatter 结构必须与母版一致",
+   "severity": "error"
+  },
+  "P29": {
+   "desc": "正文链接的语言前缀必须是本文自己的语言",
+   "severity": "error"
+  },
+  "P30": {
+   "desc": "非拉丁文字语向的正文不得夹用普通英文原词",
+   "severity": "warning"
+  },
+  "P31": {
+   "desc": "本土概念必须用本语术语，不得照抄英文（拉丁语向补位）",
+   "severity": "warning"
+  },
+  "P32": {
+   "desc": "金额只用「元」与「美元」，不得出现外币词",
+   "severity": "error"
+  },
+  "P33": {
+   "desc": "金额不得用货币符号或 ISO 代码",
+   "severity": "error"
+  },
+  "P34": {
+   "desc": "非 CJK 语向不出现全角标点",
+   "severity": "warning"
+  },
+  "P35": {
+   "desc": "某一块与基准（或英文）同序号块逐字相同＝未本地化",
+   "severity": "error"
+  },
+  "P36": {
+   "desc": "标识型数字（监管代码 / 税号 / 文号 / 限值）逐块存活",
+   "severity": "error"
+  },
+  "P38": {
+   "desc": "孟加拉文不得出现「裸辅音 + CANDRABINDU」码位形状",
+   "severity": "warning"
+  },
+  "P39": {
+   "desc": "电商复合词的 e- 前缀不得被空格拆开",
+   "severity": "error"
+  },
+  "P40": {
+   "desc": "摘要末尾必须有句末标点",
+   "severity": "error"
+  },
+  "P41": {
+   "desc": "表格前的包名清单必须与表格 S1–S13 逐字一致",
+   "severity": "error"
+  },
+  "P42": {
+   "desc": "亚美尼亚语正文不得出现 ASCII 句点（句末应为 ։）",
+   "severity": "error"
+  },
+  "P43": {
+   "desc": "禁用译法（词形合法、语法通顺、其余判据全绿，只有「该用哪个词」能拦）",
+   "severity": "error"
+  },
+  "P44": {
+   "desc": "韩语阿拉伯数字与量词「개」之间不得空格（应写作 14개）",
+   "severity": "error"
+  },
+  "P45": {
+   "desc": "同一篇内称呼语域不得混用（非尊形 × 尊形并存）",
+   "severity": "warning"
+  },
+  "P46": {
+   "desc": "文章级术语表已废止",
+   "severity": "warning"
+  },
+  "P47": {
+   "desc": "母版「N 位」的描述位数字必须在译文同块存活",
+   "severity": "error"
+  },
+  "P48": {
+   "desc": "母版写「万亿」时，长级差语言不得用本语 10^18 的 tri- 词形",
+   "severity": "error"
+  },
+  "P49": {
+   "desc": "母版「清单扩至 N」时，译文不得把清单说成缩减（收紧≠缩减）",
+   "severity": "error"
+  },
+  "P50": {
+   "desc": "CTA 末行必须有终止标点（博客线；法规整类不判）",
+   "severity": "error"
+  },
+  "P51": {
+   "desc": "同篇百分号体例必须一致（前缀型 / 后缀型内部不得混写）",
+   "severity": "error"
+  },
+  "P52": {
+   "desc": "拉丁语向残留英文词（语法词形必须翻，行业借词交人工）",
+   "severity": "error"
+  },
+  "P53": {
+   "desc": "葡语变体同篇不得混用（欧葡 / 巴葡各自成篇合法，混写才是事故）",
+   "severity": "error"
+  },
+  "P54": {
+   "desc": "丹/挪文号引用的年份介词不得写成 fra",
+   "severity": "error"
+  },
+  "P55": {
+   "desc": "摘要关键数字跨语言齐全",
+   "severity": "error"
+  },
+  "P56": {
+   "desc": "正文不得出现非本语言文字系统的字母（串稿/复制残留）",
+   "severity": "error"
+  },
+  "P57": {
+   "desc": "同一语种内小数点与千分位必须统一按本语规范书写",
+   "severity": "warning"
+  },
+  "P58": {
+   "desc": "句末标记之后不得以小写开头",
+   "severity": "warning"
+  },
+  "P59": {
+   "desc": "本数式极性——母版「N% 以上」含本数，译文不得写成严格大于",
+   "severity": "error"
+  },
+  "P60": {
+   "desc": "引号配对与方向：德式 „ 闭引号、«…» 配对、RTL 括号配平",
+   "severity": "error"
+  },
+  "P61": {
+   "desc": "希腊语「;」是问号，分号应为 άνω τελεία「·」(U+0387)",
+   "severity": "error"
+  },
+  "P62": {
+   "desc": "法规解读块1 的日期必须与 published_at 对齐（仅法规线）",
+   "severity": "error"
+  },
+  "P63": {
+   "desc": "引号跨族配对——X 族开引号开的洞必须用 X 族闭引号关",
+   "severity": "error"
+  },
+  "P64": {
+   "desc": "同篇术语异形混用（正形与登记错形并见才提示）",
+   "severity": "warning"
+  },
+  "P65": {
+   "desc": "官方文本里的拉丁学名必须逐字保留",
+   "severity": "error"
+  },
+  "P66": {
+   "desc": "中文「我国」= 中国（发布方），不得译成目标语读者本国视角",
+   "severity": "error"
+  },
+  "P67": {
+   "desc": "富字段列表块的跨语向压缩离群＝整层字段漏译",
+   "severity": "error"
+  },
+  "P68": {
+   "desc": "近缘语言正字法污染（词表在 策略库 lexicons 表（neighbor））",
+   "severity": "error"
+  },
+  "P69": {
+   "desc": "官方文本日期不得追加冗余数字括注",
+   "severity": "error"
+  },
+  "P70": {
+   "desc": "阿拉伯句号 U+06D4 只在 ur 合法（语向纯度）",
+   "severity": "error"
+  },
+  "P71": {
+   "desc": "拉丁变音正字法完整性（词表在 策略库 lexicons 表（latin-ascii / latin-required））",
+   "severity": "error"
+  },
+  "P72": {
+   "desc": "非英语语向不得沿用英文紧凑形残词（wks / 15-day / dual-reg）",
+   "severity": "error"
+  },
+  "P73": {
+   "desc": "半角分号后不得紧贴非空白（句中分号后应有空格）",
+   "severity": "warning"
+  },
+  "P74": {
+   "desc": "术语库首选形的两种「有证据」偏差（禁用形 / 同篇混用）",
+   "severity": "warning"
+  },
+  "P75": {
+   "desc": "对立概念是否被译成了同一个词（概念合并）",
+   "severity": "warning"
+  },
+  "P76": {
+   "desc": "标准代号后的数字必须是西文阿拉伯数字",
+   "severity": "error"
+  },
+  "P77": {
+   "desc": "法规解读段同序块的压缩比与数字锚存活",
+   "severity": "warning"
+  },
+  "P78": {
+   "desc": "领域术语禁用形（错形 → 本语正形），词表驱动、跨篇通用",
+   "severity": "error"
+  },
+  "P79": {
+   "desc": "学名的种下加词与命名人缩写必须逐字保留",
+   "severity": "error"
+  },
+  "P80": {
+   "desc": "块内序号标记前必须有分隔（归并丢层的高发形状）",
+   "severity": "error"
+  },
+  "P81": {
+   "desc": "ASCII 直引号 / 词内撇号形制不合本语正字法",
+   "severity": "error"
+  },
+  "P82": {
+   "desc": "拉丁学名缩写形制（属名缩写 + ASCII 点 + 小写种加词）",
+   "severity": "error"
+  },
+  "P83": {
+   "desc": "单块篇幅相对本语中位数骤降（压缩丢层 / 丢句的通用筛）",
+   "severity": "warning"
+  },
+  "P84": {
+   "desc": "跨语词形/搭配禁用表（数据驱动，新增只改 JSON）",
+   "severity": "error"
+  },
+  "P85": {
+   "desc": "摘要把正文的「过熟」限定语弱化成「成熟」时必须红",
+   "severity": "error"
+  },
+  "P86": {
+   "desc": "块首重复编号前缀（II. II. / (iii) (иии)）",
+   "severity": "error"
+  },
+  "P87": {
+   "desc": "拉丁字母语种正文整段英文残留",
+   "severity": "error"
+  },
+  "P88": {
+   "desc": "母版说「保税」，译文却压成「自由港/自贸区/自由港区」",
+   "severity": "error"
+  },
+  "P89": {
+   "desc": "非拉丁文字语向的物种名录行，学名剥离后不得残留孤立拉丁词",
+   "severity": "warning"
+  },
+  "P90": {
+   "desc": "2026-11-19 全语料扫描实测：盒标英文串「Exported to the People's Republic of China」的撇号在 zh 母版两派并存（REG9/19/23/32/215 为 U+2019，REG10-18 等",
+   "severity": "error"
+  },
+  "P91": {
+   "desc": "REG218（2026-11-19，GACC 公告 87 供港澳蔬菜）阶段 4 回流：zh 母版「香港或澳门特别行政区」在 47 语里都须带中国归属；机检原全绿，但 id 第 75 行「pasokan ke Hong Kong dan Ma",
+   "severity": "warning"
+  },
+  "P92": {
+   "desc": "REG221（2026-11-19，GACC 公告 78）回流：zh 解读第 1 块「能出口但要先报准。2026年6月30日起…出口经营者须如实申报并担责。」按句切 3 句，13 语因 R21 压缩把结论层整句压没，b1 直接从日期开头，机",
+   "severity": "warning"
+  },
+  "P93": {
+   "desc": "裸斜杠数字日期（三段式，月日歧义）",
+   "severity": "warning"
+  },
+  "P94": {
+   "desc": "官方病名清单整串未本地化（裸英文病名 ≥3 个）",
+   "severity": "error"
+  },
+  "P95": {
+   "desc": "正文不得用 ASCII 直双引号当作引号",
+   "severity": "error"
+  },
+  "P96": {
+   "desc": "法规落款日期不得写成 `28. Dezember 2025` / `2026. szeptember 1.`",
+   "severity": "warning"
+  },
+  "P97": {
+   "desc": "frontmatter 闭合/字段键位置守卫（压缩改写事故）",
+   "severity": "error"
+  },
+  "P98": {
+   "desc": "上下文触发短语禁用形（产品清单 / 国名限定层）",
+   "severity": "error"
+  },
+  "P99": {
+   "desc": "句末标点不得重复（含乌尔都语 ۔ U+06D4）",
+   "severity": "warning"
+  },
+  "R02": {
+   "desc": "不得把已撤销机构（MOA / CFDA）当作现行机构",
+   "severity": "error"
+  },
+  "R03": {
+   "desc": "正文不得出现价格 / 金额报价",
+   "severity": "error"
+  },
+  "R04": {
+   "desc": "正文不得承诺交付周期",
+   "severity": "error"
+  },
+  "R05": {
+   "desc": "正文不得出现绝对否定表述",
+   "severity": "error"
+  },
+  "R06": {
+   "desc": "正文不得出现过度承诺（寄样安排 / 保证 / 时限）",
+   "severity": "error"
+  },
+  "R07": {
+   "desc": "正文不得暴露配图制作来源（页码引用 / 制作工具词）",
+   "severity": "error"
+  },
+  "R08": {
+   "desc": "不得把签字人写成包/交付物的所有者",
+   "severity": "error"
+  },
+  "R10": {
+   "desc": "法规正文必须用 <!-- original --> 分隔解读与全文译本",
+   "severity": "warning"
+  },
+  "R11": {
+   "desc": "<!-- original --> 只能出现一次，且前后两段都不能为空",
+   "severity": "error"
+  },
+  "R12": {
+   "desc": "法规不使用配图——submission.json images 与包内 images/ 都必须为空",
+   "severity": "error"
+  },
+  "R13": {
+   "desc": "法规 submission.json 必填字段齐备",
+   "severity": "error"
+  },
+  "R14": {
+   "desc": "法规 status 必须是固定枚举（题录 + 逐语 frontmatter）",
+   "severity": "error"
+  },
+  "R15": {
+   "desc": "法规标题不得重复写文号",
+   "severity": "error"
+  },
+  "R16": {
+   "desc": "法规题录不得写 date 字段（只保留 publishedAt 与 effectiveAt）",
+   "severity": "error"
+  },
+  "R17": {
+   "desc": "法规 category 必须是固定集合（题录 + 逐语 frontmatter）",
+   "severity": "error"
+  },
+  "R18": {
+   "desc": "法规 issuer 必须是固定集合（题录 + 逐语 frontmatter）",
+   "severity": "error"
+  },
+  "R19": {
+   "desc": "法规 relatedService 必须是站内真实服务页（题录 + 逐语 frontmatter）",
+   "severity": "error"
+  },
+  "R20": {
+   "desc": "法规译文标题的标点/空格式必须与中文母版一致",
+   "severity": "error"
+  },
+  "R21": {
+   "desc": "法规解读段篇幅硬上限",
+   "severity": "error"
+  },
+  "R22": {
+   "desc": "法规正文（母版与全部译文）禁用数字列表块",
+   "severity": "error"
+  },
+  "R23": {
+   "desc": "法规 frontmatter 与 submission.json 逐语对齐",
+   "severity": "error"
+  },
+  "R24": {
+   "desc": "法规中文母版的中文序号必须用全角括号",
+   "severity": "error"
+  },
+  "R25": {
+   "desc": "引号契约短语（加热温度/时长）限定词守卫",
+   "severity": "error"
+  },
+  "S01": {
+   "desc": "顶层只允许 blog/ 与 regulation/ 两个目录；articles/ 旧布局已停止支持。",
+   "severity": "error"
+  },
+  "S02": {
+   "desc": "48 语目录必须齐备",
+   "severity": "error"
+  },
+  "S03": {
+   "desc": "content/<lang>/ 下的语言码必须是策略库注册的 48 语之一。",
+   "severity": "error"
+  },
+  "S04": {
+   "desc": "路径形状 —— content/<lang>/<slug>.mdx 与 images/<slug>/<name>.webp。",
+   "severity": "error"
+  },
+  "S05": {
+   "desc": "文件类型白名单 + 包内垃圾/隐藏文件。",
+   "severity": "error"
+  },
+  "S06": {
+   "desc": "体积上限 —— 单包 ≤ 60 MB，单语 mdx ≤ 100 KB。",
+   "severity": "error"
+  },
+  "S07": {
+   "desc": "行尾与 BOM 卫生 —— 一律 LF、无 BOM。",
+   "severity": "error"
+  },
+  "S08": {
+   "desc": "块级术语契约（中文锚命中的块，译文必须出现该语 require 词形）",
+   "severity": "error"
+  },
+  "S09": {
+   "desc": "摘要术语契约（frontmatter.excerpt 必须出现 / 不得出现）",
+   "severity": "error"
+  },
+  "S10": {
+   "desc": "包内路径白名单 —— 只允许 submission.json、images/**.webp、content/<lang>/<slug>.mdx。",
+   "severity": "error"
+  },
+  "S11": {
+   "desc": "标题术语契约（frontmatter.title 必须出现 / 不得出现）",
+   "severity": "error"
+  },
+  "S12": {
+   "desc": "references 标题层术语契约（本国机构专名残留）",
+   "severity": "error"
+  },
+  "S13": {
+   "desc": "条目 slug 必须小写 kebab-case，且至少 3 字符。",
+   "severity": "error"
+  },
+  "S14": {
+   "desc": "术语契约的译文块数不足，契约无法执行",
+   "severity": "error"
+  },
+  "ST01": {
+   "desc": "正文禁用 em dash（——或—）",
+   "severity": "error"
+  },
+  "ST02": {
+   "desc": "en dash 只能用在数字/编号区间（2–4、S0–S13、p01–p06）",
+   "severity": "error"
+  },
+  "ST03": {
+   "desc": "正文不得出现英文 AI 高频词（delve / leverage / seamless…）",
+   "severity": "error"
+  },
+  "ST04": {
+   "desc": "正文不得出现中文 AI 高频词（赋能 / 抓手 / 闭环…）",
+   "severity": "error"
+  },
+  "ST05": {
+   "desc": "反转钩子 / 设问自答句式",
+   "severity": "error"
+  },
+  "ST06": {
+   "desc": "段首 AI 连接词（Moreover / Furthermore / 而且 / 此外）",
+   "severity": "warning"
+  },
+  "ST07": {
+   "desc": "段内序号连排（①②③ / 第一，第二，/ first, second,）",
+   "severity": "warning"
+  },
+  "ST08": {
+   "desc": "其余 46 语的 AI 套话（句首填充语）",
+   "severity": "warning"
+  },
+  "W01": {
+   "desc": "英文正文偏短（建议 ≥400 词）",
+   "severity": "warning"
+  },
+  "W02": {
+   "desc": "超长段落（膨胀感知）",
+   "severity": "warning"
+  },
+  "W03": {
+   "desc": "配图数量建议不超过 6 张",
+   "severity": "warning"
+  },
+  "WR01": {
+   "desc": "禁写范围声明小节（「不覆盖什么」「本篇不展开 X」）",
+   "severity": "error"
+  },
+  "WR02": {
+   "desc": "独立成文：无元话语、无系列导览、篇间零互链",
+   "severity": "error"
+  },
+  "WR03": {
+   "desc": "第一手口径（不写「据说」，具体压倒形容词）",
+   "severity": "error"
+  },
+  "WR04": {
+   "desc": "抽象小节标题（Overview / 清单预告句）",
+   "severity": "error"
+  },
+  "WR05": {
+   "desc": "frontmatter references 3–4 条",
+   "severity": "error"
+  }
+ },
+ "selftest": {
+  "assets-cover-contract.py": {
+   "sha256": "0dda2b1ab4000cf3a1ea8138cb9ed96b6f527d6f1de6034d15e50bfc9a22d89a"
+  },
+  "assets-image-alt.py": {
+   "sha256": "8040eaab3c2067eaad728e7741ac8cc561afbf69537f6f7b8f071a772ccdd9ce"
+  },
+  "assets-image-count.py": {
+   "sha256": "950b3bcbca2d4609b846320710c1340ff5e3830ba37e19d09e9072e6a194ae63"
+  },
+  "assets-image-external.py": {
+   "sha256": "c6c5c3479940963d8e8d010140d6afe15a5348a8a6f888e25d1da3f27a081cba"
+  },
+  "assets-image-integrity.py": {
+   "sha256": "4676bd561ba0cc47c8dfae73abf3ed7bffc77d763097685ffdabcd1c5ac4fd7d"
+  },
+  "assets-image-min-width.py": {
+   "sha256": "209368c868f4a0635965dde6bbb74fd083d74e835f316d6c93315eff940cf11e"
+  },
+  "assets-image-name-seo.py": {
+   "sha256": "51d18b0fdbcbb45020efbdde088fe10902d775a9d3c44283e179275a8da8e9f7"
+  },
+  "assets-image-path.py": {
+   "sha256": "4b8bf28afeb21bb579a6b3de7f9bc6c9347f3a08783cecf5b093fddac31c837b"
+  },
+  "assets-image-referenced.py": {
+   "sha256": "e3e5277621b589129f7faf0dca90a5657642677b825b9af15b1317cc9334907d"
+  },
+  "assets-image-weight.py": {
+   "sha256": "9f257df6731638041e06361da26e699e3e3e629a48a0e5c55f24c35d831fe6be"
+  },
+  "assets-reg-no-images.py": {
+   "sha256": "f9789bacc6d1caaf02506d840d119e04364394aeea9e769bba7a4581ae152124"
+  },
+  "frontmatter-author-fixed.py": {
+   "sha256": "32dd6697522096ff06283e883cf68310506c2293b3dffcc8364824b816d194c9"
+  },
+  "frontmatter-category-enum.py": {
+   "sha256": "0bab08c42ecbbb284ff9b87adbb24c759a534cd5f233efcfbe0d7753016c455d"
+  },
+  "frontmatter-category-match.py": {
+   "sha256": "9a87cada8ee93b29bcd4af51d6ee3d13d307600d948223ec879110db27a42df8"
+  },
+  "frontmatter-date-match.py": {
+   "sha256": "98245b599a680f288668afc4683d5414b23af9dc6c68d4497b14708f13b90587"
+  },
+  "frontmatter-date-valid.py": {
+   "sha256": "aa66cf99854165287ee860123116b3580cc3b3890a22c8fcf4f9662fd14997d4"
+  },
+  "frontmatter-doc-number-no-year.py": {
+   "sha256": "4eee43370dd73798c3b14ccd2fa2668839b5057c7d6e5a5ec11a103c430b97ce"
+  },
+  "frontmatter-en-metadata.py": {
+   "sha256": "b1f8631c87860a4f5ce6a9206eb14694f95eba8f3596cdd5e2e47d42788caede"
+  },
+  "frontmatter-excerpt-shape.py": {
+   "sha256": "09e15190abaaacfcda2a586968323654b19125e6ad36124e1eee05b90f8e2922"
+  },
+  "frontmatter-field-set.py": {
+   "sha256": "dd6f8abed1ad41da45a7717b4dd72ef55c009d796e446fad0751503972e0367e"
+  },
+  "frontmatter-field-types.py": {
+   "sha256": "11520043055cf2117efc64d9d2dc56a4e5ce6b2788aa8d138f67671e9539edc0"
+  },
+  "frontmatter-images-manifest.py": {
+   "sha256": "314f341f99e0b5254eef9c0481ea559f44e8b44a7dc01cef24da00771861af48"
+  },
+  "frontmatter-kind-required.py": {
+   "sha256": "19f2df1eedb9748c67c4dcbf8b9d631f348e50d42c716c5c175eef6df1d15e3f"
+  },
+  "frontmatter-kind-vs-dir.py": {
+   "sha256": "23aea3f52ca5f1febd4f9a416601e67158c3f6e5eafcf8d102887cc376788a87"
+  },
+  "frontmatter-locales-complete.py": {
+   "sha256": "0499b5a8fbebab03d5470feba659048ebdbdc9ef30256881a683e6404c16c5a4"
+  },
+  "frontmatter-meta-present.py": {
+   "sha256": "aaea7e13acaaf4dc91edcbf241bb50952d5bd3a4e30f63b755c25a692271a497"
+  },
+  "frontmatter-meta-required.py": {
+   "sha256": "259e9eed3bba54c78f37ee28078be54f19d87144d1d7daadc5084f178c006799"
+  },
+  "frontmatter-parse-error.py": {
+   "sha256": "04b35378a92595d49664ff313a1ae2df45eeed6ead9a5eb83f1a1f2ed358469c"
+  },
+  "frontmatter-references-shape.py": {
+   "sha256": "4c3217a3aabe7165c0792fee85ba649fa8d404da633dc2756c349cfba911d26b"
+  },
+  "frontmatter-reg-category.py": {
+   "sha256": "c38f8dc21843d7100a3dcbbcde08c17e88abc41b492766a43fa76bb735d91059"
+  },
+  "frontmatter-reg-issuer.py": {
+   "sha256": "b74d2a2f8de11a3778a868dd173b98c006ab00f844b5c44150ec952640701370"
+  },
+  "frontmatter-reg-meta-align.py": {
+   "sha256": "eb736cb09fa4ad50f58df59e3a3c321a649f3e896745aa1a8a10ee87682f40b5"
+  },
+  "frontmatter-reg-no-date.py": {
+   "sha256": "e3731109d1179a28ca661df23c0325434f0d4e6e85ac961b5cce2c1ac35fb9af"
+  },
+  "frontmatter-reg-required.py": {
+   "sha256": "b8b4b5b12cc347d5d919af04239b1e4b758ff937a987fc3cca05ad4434e83906"
+  },
+  "frontmatter-reg-service.py": {
+   "sha256": "1cf4d5473b2b1322e87b6a799aba5718aee1b3a17bd1cda8405b9946ffc47520"
+  },
+  "frontmatter-rewrite-guard.py": {
+   "sha256": "2ac427abc6ab48ec6d9bbe38058f9cb34d50df0641dc8a81b34ecacc6ef5fb79"
+  },
+  "frontmatter-slug-consistent.py": {
+   "sha256": "446ed9c64444a9ba2fb03c19035672f659f2a9b7f52c760f73172212ecdaf527"
+  },
+  "frontmatter-slug-field.py": {
+   "sha256": "1f6e1405cea4721942faad362658666eb631aaf92d5b5ae3f737aa81c55afd6d"
+  },
+  "frontmatter-source-url.py": {
+   "sha256": "08af4159a205710fea707cd74575a4f04344d0d7a1fd811bc636003a86d3537f"
+  },
+  "frontmatter-status-enum.py": {
+   "sha256": "3e16ae31a2f16ad7fd70561ca603453cc183eb27f1db77e007247eea19222f8e"
+  },
+  "frontmatter-template-placeholder.py": {
+   "sha256": "885587d85c64912756d9dd4a8f9468937bc61c433c96d644dc6a99954d3a50db"
+  },
+  "frontmatter-title-shape.py": {
+   "sha256": "931bdbb0f9b0d4e0a86547aaa23112627afd18eb7ac36cef15b6fe94b478775f"
+  },
+  "frontmatter-yaml-valid.py": {
+   "sha256": "379ba49304f6f9118348cb74ab3d608381582513a412b99282d550950982bf29"
+  },
+  "glossary-banned-words.py": {
+   "sha256": "af0b25dbec32e4d2fd6f6b166ecbe2b130c81cca7e952afaaac241f37845328b"
+  },
+  "glossary-term-excerpt.py": {
+   "sha256": "44cc254659914ac5e2dcefe9c19bfcf261f885bf4f7dbbb3820d1a2eed737429"
+  },
+  "glossary-term-presence.py": {
+   "sha256": "ee8f400d74c07f2de11682722006f58de791eb4cd344b2997c6ede864b3de0e1"
+  },
+  "glossary-term-refs.py": {
+   "sha256": "c99efafd9c1cd5beb4bcd93fad45541a5642aeafc4f0d784a239aeb72c051011"
+  },
+  "glossary-term-scope.py": {
+   "sha256": "55b2c14b10c863ef3de2e13e1c521c35b41e4bae932f4616d4e8662d2043a8af"
+  },
+  "glossary-term-title.py": {
+   "sha256": "d2377000718ab7123569111ee270a7b96a5f98a5a9feecb01693a199c4f7f511"
+  },
+  "hygiene-article-glossary.py": {
+   "sha256": "1c6c0d84be13eea27f995e82de947f0ef3d65319d0f1bfae3f836ac65a7aca7e"
+  },
+  "input-encoding.py": {
+   "sha256": "a22b2ecaaf3b38dc3614f655c8f032ab12b89887ada6608b073573f39d8c42e2"
+  },
+  "language-arabic-stop.py": {
+   "sha256": "b3c0d81bc8e61dc7a927cb472dc82e983f3c973317d81a7ddcd82652b2a746a0"
+  },
+  "language-body-similarity.py": {
+   "sha256": "a0cb037605c0f244cd4ed0edce1dbedfbfbd28d683fd3266ccf28b0b0b3e20fc"
+  },
+  "language-bonded-not-free-port.py": {
+   "sha256": "dbd0ad1a65268e9ece3ab2220301688ea6d3e3b426db2a0e1c587113fd71583c"
+  },
+  "language-cjk-leak.py": {
+   "sha256": "1f54fb08ad1a82b869982877f4fd64184cfb6706e296b05c069959acfe9de36f"
+  },
+  "language-el-semicolon.py": {
+   "sha256": "659704b056efce08169639ad96417c8aa6b9ef7ea4c860465e399a0850521bdd"
+  },
+  "language-en-shorthand.py": {
+   "sha256": "1e4a3463f9cd99b46bfe127c017d1b39bce7511d7f2a3077b941db6f04d9b911"
+  },
+  "language-excerpt-end.py": {
+   "sha256": "47bac8b837e83281d810e7f206639b22d7680bffb78b5faadd50ab4ae5b5e7e8"
+  },
+  "language-excerpt-untranslated.py": {
+   "sha256": "81267d03d0a41ccdc56d36051e733a05abb8db2123415ed364d6e43ef0cdf3f5"
+  },
+  "language-heading-untranslated.py": {
+   "sha256": "6e4bf7973b63e7e30fece5b3bdb27f81bc6288411cb42a8e942f9360dcf7b819"
+  },
+  "language-hk-macao-attribution.py": {
+   "sha256": "ca3c2b9d4a3f326bf4057bcbcc420b8a3ba5f3752c5f816c93bd8ba15167cb24"
+  },
+  "language-hy-period.py": {
+   "sha256": "bdd5918bc503827204f17092f8602b2898ef063e03092a4be9e86f6a46f82f4f"
+  },
+  "language-ja-shinjitai.py": {
+   "sha256": "2172cf55bd8c475d80923434f379b76cb40cef7ac5f7d280b2a43d78032b9ece"
+  },
+  "language-ko-counter.py": {
+   "sha256": "e0b8e1cb5f2e1b019af265444993659d4c55c0a212699939a2b5f85cfe9203e0"
+  },
+  "language-latin-orthography.py": {
+   "sha256": "06844d3efa50117ea6720f725a75feb2d58890642872c2af99ba1d6e00416069"
+  },
+  "language-neighbor-contamination.py": {
+   "sha256": "059f3d76135f49e7bc9a82391af748226f7ce9fa2b2dda0648ddbfde87727ea2"
+  },
+  "language-quote-cross-family.py": {
+   "sha256": "b7757164f747091565b1372505855331b49d0f8813ffef135a6ea07ed9588465"
+  },
+  "language-quote-form.py": {
+   "sha256": "972cafa0b33b5e6c1dcdabae839ca42c893a0563869a5c698e46fea320e5a6e4"
+  },
+  "language-quote-pairing.py": {
+   "sha256": "dd3dcb8b2b11964402ebf8975d627d34657073e9db54dde569a4fa2fe84920ba"
+  },
+  "language-references-untranslated.py": {
+   "sha256": "576c95a44a28a1a3fb8f86070f89434ee2a27eab5f15e9a5ff778d789299bce4"
+  },
+  "language-reg-date-block.py": {
+   "sha256": "afa81d6c236582f219b25ad7223428858b98dba39233c6bb395734eb89a00086"
+  },
+  "language-reg-disease-untranslated.py": {
+   "sha256": "6acb0a86f86158ca76722a9d355406b487e0174cddab4c26ddc688576cfbfceb"
+  },
+  "language-sci-name-abbrev.py": {
+   "sha256": "1f73733e019bc207f081df0272c52d315d99ab2fbeed0094f96ece89d968c920"
+  },
+  "language-sci-name-full.py": {
+   "sha256": "c14b298f0c1691cd9c3b91d593c1b7b1d099ac6d13d80b70da2c87b0652b04d1"
+  },
+  "language-sci-name.py": {
+   "sha256": "308e0bcf9bd8ee2753823bf9a129c24e4f7c312254487410f342f3a616e68688"
+  },
+  "language-script-present.py": {
+   "sha256": "659c53d3bf3658d14c0e6fb0e45145d23da348ab569d2e3f5670d2c67c072998"
+  },
+  "language-self-country.py": {
+   "sha256": "b0cf27dfe014d624c4ad693a431c756d47c5b969ae28f32fc81e5b8ff097027d"
+  },
+  "language-semicolon-spacing.py": {
+   "sha256": "b4bb9519ea34bc65657a5765820d0db0f0afc36a89ad74fbbdf6bd54cac02185"
+  },
+  "language-summary-overripe.py": {
+   "sha256": "33184a9dccd11d5a410cde1fed579e8819fdcd69e96ed3e96a32a4c3d94261d2"
+  },
+  "language-term-confusables.py": {
+   "sha256": "6519b1142a65dc6125681945d5bdc509652044dc4d9239fe285d03a1ac871450"
+  },
+  "language-term-variant.py": {
+   "sha256": "0726dbf22fbbf41373214b9e9d27e98bed8853137842cec9b837ed4a333c5ef4"
+  },
+  "language-title-dup.py": {
+   "sha256": "1762b2624f02c0245576c3487037ed0aa28a83a84e6cf990dba499dc33c228cf"
+  },
+  "language-title-untranslated.py": {
+   "sha256": "5089081bc7b202829c6967fcdabe7dd9700d1021a74fe568453aa311701d4ec6"
+  },
+  "numbers-body-facts.py": {
+   "sha256": "b344434019dbf1b07c003956e3efc05accf35bee0e83565233f3a2b5e24de893"
+  },
+  "numbers-code-identity.py": {
+   "sha256": "3a63062ba0c6c4bb03a186716b3d7ab395576ee460831f255580f6f7e44a80d7"
+  },
+  "numbers-currency-symbol.py": {
+   "sha256": "048b811857fcbb40312383d16b6e7d333de126ae32cf61e7695b38db070440db"
+  },
+  "numbers-date-paren.py": {
+   "sha256": "26e3b41e9034e502e0b17ef7719ecd04979fbef9c9928167772307cc4aae8c18"
+  },
+  "numbers-digit-desc.py": {
+   "sha256": "db11c790e863d774089601aa9da30126e0e8771652a3b42458ca372f14744d83"
+  },
+  "numbers-excerpt-facts.py": {
+   "sha256": "8afa6f610bfc13a256d5dccef3f09eb345cbaed801152a2ba6551f36ad3a59b7"
+  },
+  "numbers-foreign-currency.py": {
+   "sha256": "2346c5c81754e8f5bb834477397cbc553a2600372dc8bd02e6cf0ae890249653"
+  },
+  "numbers-image-dup-ref.py": {
+   "sha256": "5bac78db1d9c1607d9283e6512f66a98fcb31bbb46ccfc10496e8a5211f34771"
+  },
+  "numbers-image-order.py": {
+   "sha256": "3d227f09a0ffbc1fdfceda6e00d215a78c51d1667c172652be7a1c6b950ce027"
+  },
+  "numbers-image-set.py": {
+   "sha256": "98abfb9b89dd9a7f25683bced646dc3906454a43b4f2d8fa09d802d5948e70a4"
+  },
+  "numbers-int-facts.py": {
+   "sha256": "4abadebd1a7db248b47e16d2dd15a9b54d1b5fdd37ad54758f44b70a4c7ebee4"
+  },
+  "numbers-key-codes.py": {
+   "sha256": "a134d70a62f8142d96acbd0b6620e88d23f22672ac31a26e760965d2b31ca7bc"
+  },
+  "numbers-list-shrink.py": {
+   "sha256": "35447819160223d6ad3da91695981231067997a2c2c1bc9573a972767f2de7ba"
+  },
+  "numbers-long-scale.py": {
+   "sha256": "59be06e6b7868b5a388496966f25e3fe9c64c6086fc57b2c61d38fe823519fb4"
+  },
+  "numbers-section-count.py": {
+   "sha256": "8d174b8ac96aa2422698343b35203b542cfdb5bb312cefe9bb2854c52b5a413a"
+  },
+  "numbers-separator.py": {
+   "sha256": "137c347b1152fd1e506878d9e4400b8165028b59ad1d8b10f00606e5a9cc0b25"
+  },
+  "numbers-slash-date.py": {
+   "sha256": "aa04ce4d6b1e95453f0a8e05cd9b124f49f41a2fbf20de49701dfa420efa67fd"
+  },
+  "numbers-standard-code.py": {
+   "sha256": "3cdd24d6ee008cfab0df7c0c28087778410c2a9022b3606783d30c5f736410d0"
+  },
+  "numbers-threshold-polarity.py": {
+   "sha256": "35a55b960e71416c86abf63d2759ac1d0c7ad99c6956265b9758c161247ddd8c"
+  },
+  "parity-block-compression.py": {
+   "sha256": "2272e2459fbf88794834f0180daa70d9569449ec759da316276af9bb5f9cdc2a"
+  },
+  "parity-block-order.py": {
+   "sha256": "43f9be010c5689c2745df250e800f8094ff260b78368e5bbe0471b6cba8c236c"
+  },
+  "parity-block-outline.py": {
+   "sha256": "17b992d405646a0ce88d5c14dc17b6bc758ae6886ef439e97eec75f03e22a4ae"
+  },
+  "parity-field-compression.py": {
+   "sha256": "23abca6a9f086e1da636c9ccf03e0b01a548bda12cae532c227ada7fc01710a5"
+  },
+  "parity-frontmatter-structure.py": {
+   "sha256": "01e053e4a20f6ff49aa130d9ed51740e22e2cb6187e53e9ff1c7626962d6917a"
+  },
+  "parity-inline-emphasis.py": {
+   "sha256": "b740f81233dff79656cf6930877619794fee2a30011775cfeced544924e54afb"
+  },
+  "parity-inline-list-separator.py": {
+   "sha256": "9bf5cbc28b65b0c27963746f79d601a89b4bbceb7681f5eda0ffd6043c0bf6ff"
+  },
+  "parity-link-locale.py": {
+   "sha256": "984b131c1d9c7a136e7ad2e8e9bdd7c4e92ccc015a9c6a7435b054c2f88f58d6"
+  },
+  "parity-link-targets.py": {
+   "sha256": "279ca6485624a55c714cbad81d0a7d43337b1832bf059b0d2763f339ebf7244f"
+  },
+  "parity-list-count.py": {
+   "sha256": "85e543118c66a85f01693b9d9467937eb8dc7c59183bad7cda96e7235e5c61b8"
+  },
+  "parity-list-markers.py": {
+   "sha256": "3c917bee044c33f1abb9c0c8961361b056004fd44bafc6297e499fc62b8f05d8"
+  },
+  "parity-table-geometry.py": {
+   "sha256": "c60d6cb674169346ac79b3eb4781b8c228d61d3c5a570bf7f08edae50bbedd4e"
+  },
+  "structure-asset-path.py": {
+   "sha256": "2e2f3ac210dcf47a3f805a1aaa41820d6c377e681621c5fb5af986bd054bf802"
+  },
+  "structure-dup-block-marker.py": {
+   "sha256": "ff456907ae3b58f9d63213742c0fb5d656d442f37af674105dc8130f6ec4f60c"
+  },
+  "structure-file-type.py": {
+   "sha256": "c3c741abf361c049a57a4bb582ffe07bd28028579fd8c559a88777149fc5ddbf"
+  },
+  "structure-line-ending.py": {
+   "sha256": "53f9ab88a6c11bc2fc08c297e54fcd70d708a0005fdffe61c2daa00d62db3369"
+  },
+  "structure-locale-known.py": {
+   "sha256": "9cbfe09a6760fc40ebc83a76b5257cd3a6df68ead85239d13584ab307024bac1"
+  },
+  "structure-locales-complete.py": {
+   "sha256": "326942b4566864112e85ac643d916c9438a55a711a0b658863c92ceddd925c95"
+  },
+  "structure-package-size.py": {
+   "sha256": "149abcc2e17f0331a143707f3b625a17bce5c2b0db14239b3a84cfaadc3fe72a"
+  },
+  "structure-path-whitelist.py": {
+   "sha256": "2a2449428f6abed2c6d198457dd9a48437d1ae46f7f4e116d3fe09f80bb5f9bf"
+  },
+  "structure-slug-shape.py": {
+   "sha256": "0810676fb9e7100a48c5de1049434d96eba2a7fa44bc8bcdd063cba6047e598e"
+  },
+  "structure-top-layout.py": {
+   "sha256": "b5a9eb21a429137333bd7ee4f8420dcb253905c0cf75c29b9d9fe53cd6bf2054"
+  },
+  "text-absolute-negation.py": {
+   "sha256": "d63a8aaf64f4f6bd3a544fcd95ff2c41649c07081125996a9e1ed171a436662d"
+  },
+  "text-acronym-paren-space.py": {
+   "sha256": "7b07e0e785dedd41f0523e15aa92533301bb6097d82d9545c0e041c5cfb864f5"
+  },
+  "text-ai-phrases-local.py": {
+   "sha256": "bf6df10f71e51fcdb51f1e9e6c3652a4a87d60d5a4469e77f58d31fe81903b26"
+  },
+  "text-ai-words-en.py": {
+   "sha256": "28af3f353c7aeb9d93ebf259cd74a2ac958dafad4c4ebf83b18ea25d34e250ff"
+  },
+  "text-ai-words-zh.py": {
+   "sha256": "fbe90093a82d5511ac87289568e1ea81b9fc185859375f8c48576699b25b52a2"
+  },
+  "text-alt-untranslated.py": {
+   "sha256": "fa086950ccb067463174454ef75eeb7b38e1b5d7c2450e1edb58191a924d9306"
+  },
+  "text-ascii-double-quote.py": {
+   "sha256": "efb0f19a0f479cf37783d0a406d16f35137e394543cf62b64e756c4b49b77823"
+  },
+  "text-block-copied.py": {
+   "sha256": "978448d19bc6f6945caf631ddb1f1ccee8716e4defecd92354334df7827ffed4"
+  },
+  "text-bn-candrabindu.py": {
+   "sha256": "c3088df477e457107bc3ddbef8a415fd270416defe8e5a1e8a93f1252f403fd7"
+  },
+  "text-body-references.py": {
+   "sha256": "38d609a43b0cd30f3d0b04d17ed287e17a87f0e70f75903a448315fbcf64c795"
+  },
+  "text-box-drawing.py": {
+   "sha256": "b5ebb3decc0d68c4bcf2c158a176bb6d4d8b47d713596c4969169fbe1debae1e"
+  },
+  "text-boxmark-localized.py": {
+   "sha256": "e26b6c3284e77c3173f7e0188b22d9e438d594d4015c67c13d9b7d7aad928404"
+  },
+  "text-boxmark-verbatim.py": {
+   "sha256": "f991bb9fcbc5a7fa021ab03fb554f0f336e3c3c16b668ca9ea05c7b09bc74205"
+  },
+  "text-citation-preposition.py": {
+   "sha256": "b98afad4ceba3db7607e8bcb0bdead6e89704936f247dbb44a122933e54db99a"
+  },
+  "text-concept-contrast.py": {
+   "sha256": "01b5bd58f1fd3c054ba0d708e201b8c1ac8ec35bddb9efe4c8fc9c82f83bebcb"
+  },
+  "text-context-phrase-guard.py": {
+   "sha256": "5c6ceefb2093989864f957ed7c52584852d393df64408cdf5fef463630aab692"
+  },
+  "text-cta-colon.py": {
+   "sha256": "c8222fe4060730b104df67e75ed9d2e4f51c4309da4a4488b8f6d76a4ceed326"
+  },
+  "text-cta-link.py": {
+   "sha256": "d0acc77f480d582b6a18317b90ddd1d71fb25520c9cde6ca631052269c88549e"
+  },
+  "text-cta-terminal.py": {
+   "sha256": "8ec3ed91cb596e707d0ca9bf627f56989b76cccc3f2a0cef0fdd7f28ccc11e9d"
+  },
+  "text-dash-mix.py": {
+   "sha256": "b7af54457ad7701aea149579af5a56cb54aeaede9141567485de6ed144302352"
+  },
+  "text-delivery-claim.py": {
+   "sha256": "e0416f11aa14a743a1d4494f6b922db9e228b6f740fdc84308e19c87f0666982"
+  },
+  "text-divider.py": {
+   "sha256": "379cb23189398a960b49b458ea4a8e01df77c5894387e1aedb15ea1acc7b68f7"
+  },
+  "text-double-punct.py": {
+   "sha256": "8bd023c54f0f18a8392ca87c2d09cfcf3354890e8e9cfea488ad9539f1d4598e"
+  },
+  "text-double-space.py": {
+   "sha256": "1c1d0e06057c5f25ec6bb7e0cdcbc41d774faae010f43fb097c700d0fe74a63c"
+  },
+  "text-duplicate-sentence-mark.py": {
+   "sha256": "b55ae59ae1ea6bdb44953fac5ca8d5d49952f758769b080ae690566fb26516d9"
+  },
+  "text-duplicate-sentence.py": {
+   "sha256": "7c229f8c2664fd60951d3b9f03e98ae44695e129a66597dcfd1c11745903a854"
+  },
+  "text-ecommerce-spaced.py": {
+   "sha256": "e34ad37d458f33491f783ea604ae5899378ab961480909b3519f14e131129b35"
+  },
+  "text-ellipsis.py": {
+   "sha256": "16f6484c1b61b6101d021efed29c269396d45d773010fff562f7f23cd2fa3b52"
+  },
+  "text-em-dash.py": {
+   "sha256": "b5d5dcfd62a99b61d149b022ad8c5b87018e72b4a0fa4b3580e377fe8d9fc2df"
+  },
+  "text-emoji-list.py": {
+   "sha256": "9e327937700642112a4eaac975a30e882d2f96b8ba99608fc2a67b988eaefbc9"
+  },
+  "text-en-dash.py": {
+   "sha256": "970f0513a56e426dd3d44945565df254e753bcdaac0e6209f52364213222b46c"
+  },
+  "text-en-length.py": {
+   "sha256": "23b834f0681aa581e8862133b3c7a9cd94df70404fc20c534c2bcf81cedbafc4"
+  },
+  "text-english-residue.py": {
+   "sha256": "34f0789473dda693a43663723a0aa39d4260a75bd5aaaa0223ce83ee0fdd8b53"
+  },
+  "text-english-run-latin.py": {
+   "sha256": "366f43120ff4bdbbb496dfdda7fa2f256cade04ad533c17dd7cc4d1086051763"
+  },
+  "text-fullwidth-punct.py": {
+   "sha256": "b381788587b472148984224ce0b4f0540fed6790184e003d3d9bf58459137314"
+  },
+  "text-heading-level-one.py": {
+   "sha256": "eba284aba6f2c55ac134470c524698978c6ca97dd1f1418236c07dd5d892cd93"
+  },
+  "text-heading-shape.py": {
+   "sha256": "1de5c968e9c07a7d4b7e1b4ec9842922207b84778065ed67f8be1364d3675f6c"
+  },
+  "text-html-jsx.py": {
+   "sha256": "a261b5f6b54d3b7efea996f0fb14f2080e9b2b77127a5ed9646e93aae7cc92d2"
+  },
+  "text-inline-ordinals.py": {
+   "sha256": "e4abc7af3bbfcef3bf6bc4206061b8769d497ddb35336dc9c6ed478c964fe4e1"
+  },
+  "text-invisible-chars.py": {
+   "sha256": "12840400000b5a391cc4c56023dadca971a45fa433f5bca18d95f19a334d1cf1"
+  },
+  "text-ko-hanja.py": {
+   "sha256": "ca6b478135beddc57299db78ae42a9b8eda251f111c39c9700229c7e3754f482"
+  },
+  "text-latin-residue.py": {
+   "sha256": "d9054dbe0546289a5c7dbc38b37c114b7aa4bfc4eede1957fb9db3777acce8c4"
+  },
+  "text-legal-article-numbering.py": {
+   "sha256": "79ba818d3a11a33fa9d06534f30a76ceb31818de91de3189dd74996f33a5bd00"
+  },
+  "text-list-blank-lines.py": {
+   "sha256": "555d3a0427dc328567d03891ee878c7cadddd63896b6d9b8e2af2cc2596f87d9"
+  },
+  "text-list-inline.py": {
+   "sha256": "a9fdd41ac1588d8e45eada90be951101fcbd6b454dc6d319d55d95fa4876a98d"
+  },
+  "text-mixed-script.py": {
+   "sha256": "414871d88b77a5ed4c1da39a1661f66a7ad18232224b8e7bbdf1f2bf838c9cd8"
+  },
+  "text-org-renamed.py": {
+   "sha256": "c2bb15fe5f3bb146e1f1fdccbb503fed97fbeff9ef5485e896578fbaf4d24440"
+  },
+  "text-original-marker.py": {
+   "sha256": "d1f4ecf89db64e9383eafeda921fedb62b90fa831ee1f91c5bb710c1d4a6022b"
+  },
+  "text-original-split.py": {
+   "sha256": "6bd151750e2c37a64199767d7deac119e954c39e389b1531285db0ec02c30d05"
+  },
+  "text-overpromise.py": {
+   "sha256": "33259ffe07a046843d0e8e3840da635f9b84c31409aec2e267eb6206a55a3fe2"
+  },
+  "text-para-opener.py": {
+   "sha256": "2a483328c8894ba7996dd5c2d1feecdff72ac60324d32fcf1937af68d4881c65"
+  },
+  "text-paragraph-length.py": {
+   "sha256": "e82a6f1323c66f28c34c0f113170c4920f1eb0636b6c8fdf78257708254c2610"
+  },
+  "text-percent-style.py": {
+   "sha256": "32f52bba635f00af11b52b1eae05876b5e535ea3e30f4a5b03f60cee5234e3fc"
+  },
+  "text-pestline-stray-latin.py": {
+   "sha256": "f86f998657624a1b6211896303d7e1f8152ae2ed4c824fc50dba4fab3ad39ed4"
+  },
+  "text-price-claim.py": {
+   "sha256": "89e03a49ee3233625627a897a97b3122d7310f3eaa437f769837177cb00e0c82"
+  },
+  "text-pt-variant.py": {
+   "sha256": "1985592e1d4e244c9e309d09e66824ba6e74e59f5f8d4c5a29cd7e02466892da"
+  },
+  "text-reg-cn-ord-halfwidth.py": {
+   "sha256": "40c6e4239918b42eaf75d374c5d8b08ece62215cf4e222a08fcdbbdc6816e07c"
+  },
+  "text-reg-heat-contract-qualifier.py": {
+   "sha256": "17a568a192a280c348848d2b562e495972b664a3596cbac10f8d31c82d47082c"
+  },
+  "text-reg-interpret-clause-survival.py": {
+   "sha256": "4bdc40e7ece35f6c2a1fdbb75421ab406ec6a94a850fb152980954b50d7ea5b9"
+  },
+  "text-reg-interpret-layer.py": {
+   "sha256": "43ef693bb80192413c76f23a68176f5d23c7392e3c17e5cd0f78588c59580cf1"
+  },
+  "text-reg-interpret-length.py": {
+   "sha256": "4c268a15cf838859225abb7cec265b11ef14c353c3e5d2dfad8929225c8cc42d"
+  },
+  "text-reg-ol-block.py": {
+   "sha256": "386f62ecb99c9c588c70683ef09f3cfef3c3256791cf35c8fb99e003fe111a70"
+  },
+  "text-reg-sign-date-dot.py": {
+   "sha256": "c16a8d276d20a82266f88787c7ff42508fe99d02ad6fc716a7e119009cd85b3e"
+  },
+  "text-reg-title-docnumber.py": {
+   "sha256": "85e27dc2706e36fa2796168ed12c8a07265c0a574c9960863c4eef186bce06ed"
+  },
+  "text-reg-title-punct.py": {
+   "sha256": "dfc32b73fbeab86aa61c2f2b4f4d4adb74d090599fbdbf4c0ad08b23f9deb3a4"
+  },
+  "text-register-mix.py": {
+   "sha256": "304e84a5155169a5926085265935e06289eda7b12cc6a5782d7c7f4c7c075452"
+  },
+  "text-repeat-word.py": {
+   "sha256": "8d6af3b41653604efc6d03449c3b59a66b8be77a6410a75d2d0dc8188a8c02d8"
+  },
+  "text-reversal-hook.py": {
+   "sha256": "967ead2cb1cc158d4e06e20668403fbae77c549aeb56a4e44824ebe9c0d5bc9d"
+  },
+  "text-sentence-case.py": {
+   "sha256": "16b7fd7b212b7c5ba20f8f9c43e2b721328aa35d3bbf9105080198a1a7126ca6"
+  },
+  "text-signer-ownership.py": {
+   "sha256": "d6766d8d31f395d0b056e5cd8f22728e85c62d092cbb2bcf49a448cb7e9cc16d"
+  },
+  "text-space-before-punct.py": {
+   "sha256": "c510cbfa0ec923b84e9a938594232ebf650f9270ec011bf19971ab6a69d38a19"
+  },
+  "text-table-bullet-match.py": {
+   "sha256": "195c518d7ebd19dffcf3b69eb532dde9e2687387cad9c7e2aef92b290fb0e0b1"
+  },
+  "text-term-consistency.py": {
+   "sha256": "a261ab18556caf3680a2d662ecdcbf6b533842e1ae2074e840a8a1067545ef1d"
+  },
+  "text-term-form-guard.py": {
+   "sha256": "8458705b706d93720577f0bfa7009d1d253564266ce9198f8888514d4e9f5910"
+  },
+  "text-term-localized.py": {
+   "sha256": "c8cf1233d89231e2e9a683abdabccb2d4bd2febdc7c92acaeb096bc0cc047198"
+  },
+  "text-tool-trace.py": {
+   "sha256": "50731df748995c6db2ab3a2c592ef255b9ff06998b8ae062b0e880a5d2b94631"
+  },
+  "text-triple-blank.py": {
+   "sha256": "30c9e5877a3b875fa7f49a2687bcf78e3f73a843d11e430d1cae7bf29a4dbd92"
+  },
+  "text-unbalanced-markup.py": {
+   "sha256": "7adcafccf6b7093795441dc008d1e2ce4f76cbfda75766e589d31c1e46da3e9a"
+  },
+  "text-wr-abstract-heading.py": {
+   "sha256": "b04e86e36db09033b89fa9b08f56a12829d117d808ef53a80e1289cfbd334983"
+  },
+  "text-wr-discourse.py": {
+   "sha256": "b851c968ab53a3f8d3879560ef8e315518b8453a836700c14837336d887419e8"
+  },
+  "text-wr-firsthand.py": {
+   "sha256": "79d356215d8c12217be84b3094fbd3c719d90e6a2b4618fdb43c0e70b9e72347"
+  },
+  "text-wr-refs-count.py": {
+   "sha256": "d7a05a4a36bc89b7d517314d4c27863294ba4ad012bcb62ee06f849deb930755"
+  },
+  "text-wr-scope-heading.py": {
+   "sha256": "251e4b0bbdeba19abfe8d7cd5dc5b0b23f837b7c04e6d86b5ff21a860ea393fa"
+  },
+  "text-wrong-script.py": {
+   "sha256": "bce3b624e783523a5d8632a0d2ca24caa72f4eedeb7bb9806b9009ed28dbfeb0"
+  }
+ },
+ "shared": {
+  "__init__.py": {
+   "sha256": "2e716b6032b21f9d3716f7be1cb89c0db4d23c805ec38d57d19e04962e7950d0"
+  },
+  "_glossary.py": {
+   "sha256": "86a1d88f716a0a0247e0a8fb0005808924426939f1124a8c486d41a0ade39e6f"
+  },
+  "_glossary_audit.py": {
+   "sha256": "bf222bb9441f49260fb3b826f57f13f2129894d0d60c2776555150903aae0fd1"
+  },
+  "_health.py": {
+   "sha256": "be2607c4b60a4b989b4839e73b7f958e73f38c15127c5e56b9df5f2c761a49f1"
+  },
+  "_lang.py": {
+   "sha256": "c1b3b7ef81c891f593f5eea92b787ebef82293f88c63eef272d91c5667baab01"
+  },
+  "_language.py": {
+   "sha256": "f491e86b9fd7b18400ace9e7e40af9adf0686c101f2c8c2847980b504d99f94a"
+  },
+  "_lexicon.py": {
+   "sha256": "a3c2be05814d40e28cbfef4ad57646afb3e22bb59cf86b1aeb29d83b7089a940"
+  },
+  "_shared.py": {
+   "sha256": "279fdc25b6ac73c64400b461799e64e99d258a96f055a6058cfbb341e879c2b1"
+  },
+  "_style.py": {
+   "sha256": "eb2d90d61cfaa381cb689bc695b8de0be7043b8b2856ecd3a24c7e382a830113"
+  },
+  "_title.py": {
+   "sha256": "e0cbbc0fd6d86cc7ad83a9e4859feb9e0dd06196302f99870aa7263696c56d10"
+  },
+  "_writing.py": {
+   "sha256": "41371be2308da72fe9c52d8503efdf3d1d466a13b41634fa08afe5bb1370cacb"
+  }
+ }
+}

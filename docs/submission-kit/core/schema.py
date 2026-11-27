@@ -13,7 +13,7 @@
            `UNIQUE(term_id, assertion, lang, value, match_mode)` 让重复词形
            **入库即拦**。
 `lexicons` 受控词表（语向级闭类事实与放行集），与契约分开存。
-`locales` / `plugin_meta` / `meta` 为运行期投影与版本元数据。
+`locales`（语言清单）/ `meta`（版本元数据）为运行期配置。
 
 历史包袱（`payload_json` 原文投影、`orig_id`、`license_json`、
 `count_mode`、`case_sensitive`、`zh` 冗余列）已在 schema 4 删除；
@@ -26,7 +26,7 @@ from __future__ import annotations
 
 import json
 
-SCHEMA_VERSION = 6
+SCHEMA_VERSION = 7
 
 # 与 db.MATCH_MODES 同值；此处独立定义避免 db → schema 循环导入
 _MATCH_MODES = ("literal", "word", "substring", "regex")
@@ -41,7 +41,19 @@ LEXICON_IDS = ("country", "neighbor", "latin-required", "latin-ascii",
                # 2026-11-15：判据载荷（词形/正则/模板）从 core.consts 迁出。
                #   term-variant  语向 → 错形/正形/说明（P64 同篇异形并存）
                #   phrase-block  用途 → 语向 → 词形/正则/模板（R05/ST08/P49/P59/承诺）
-               "term-variant", "phrase-block")
+               #   official-en-literal  公告逐字保留的英文整句（证书附加声明、
+               #     包装标识串）。每篇公告新增，属内容数据而非语言常量；
+               #     编写者经 glossary 登记，不再改代码重签。
+               #   judge-forms  判据按语向的词形/正则表（key=`RULE|role|lang`，
+               #     target 存正形）。把原先硬编码在插件/consts 里的 48 语词表
+               #     迁出代码：新增语向只写数据，不改判据、不重签。
+               #   currency-symbol  货币符号/ISO 代码（key=foreign/allowed/iso）
+               #   issuer  发布机关缩写枚举（key=reg）
+               "term-variant", "phrase-block", "official-en-literal",
+               #   family-stop / family-deriv / family-suffix  词族工具的
+               #     停用词、派生后缀、语向后缀（维护者工具数据，不进判据）
+               "judge-forms", "currency-symbol", "issuer",
+               "family-stop", "family-deriv", "family-suffix")
 LEXICON_SCOPES = ("global",)
 
 DDL = """
@@ -53,11 +65,7 @@ CREATE TABLE meta(
   applied_cs       TEXT NOT NULL DEFAULT '[]'
 );
 CREATE TABLE locales(
-  lang    TEXT PRIMARY KEY,
-  dir     TEXT,
-  name    TEXT,
-  script  TEXT,
-  native  TEXT
+  lang    TEXT PRIMARY KEY
 );
 CREATE TABLE terms(
   id           TEXT PRIMARY KEY,
@@ -93,29 +101,6 @@ CREATE TABLE lexicons(
   ord       INTEGER NOT NULL,
   PRIMARY KEY (id, scope, key, value)
 );
-CREATE TABLE plugin_meta(
-  plugin_id     TEXT PRIMARY KEY,
-  version       TEXT NOT NULL,
-  phase         INTEGER NOT NULL,
-  applies_to    TEXT NOT NULL,
-  rules_json    TEXT NOT NULL,
-  rationale_sha TEXT NOT NULL,
-  source_sha    TEXT NOT NULL,
-  enabled       INTEGER NOT NULL DEFAULT 1
-);
--- 存量欠账台账（schema v5）。判据只由「语向 + 词类 + 结构」决定，任何
--- 判据源码里都不许出现篇目 slug；某篇因交付在前、判据在后而暂时不合规，
--- 记在这里：rule=哪条判据，slug=哪篇，detail=具体对象（空=整篇），
--- status=open 欠账 / closed 已清。改稿清账后置 closed，不再删行。
-CREATE TABLE baseline(
-  rule    TEXT NOT NULL,
-  slug    TEXT NOT NULL,
-  detail  TEXT NOT NULL DEFAULT '',
-  reason  TEXT NOT NULL DEFAULT '',
-  status  TEXT NOT NULL DEFAULT 'open',
-  ord     INTEGER NOT NULL DEFAULT 0,
-  PRIMARY KEY (rule, slug, detail)
-);
 CREATE INDEX ix_terms_section ON terms(section, ord);
 CREATE INDEX ix_anchors_zh    ON anchors(zh_anchor);
 -- 只按语向建索引：单语向约 250 行，词形过滤走该语向内的顺序扫（实测 ~1ms），
@@ -144,26 +129,30 @@ def _tables(conn):
         "SELECT name FROM sqlite_master WHERE type='table'")}
 
 
-BASELINE_DDL = """
-CREATE TABLE IF NOT EXISTS baseline(
-  rule    TEXT NOT NULL,
-  slug    TEXT NOT NULL,
-  detail  TEXT NOT NULL DEFAULT '',
-  reason  TEXT NOT NULL DEFAULT '',
-  status  TEXT NOT NULL DEFAULT 'open',
-  ord     INTEGER NOT NULL DEFAULT 0,
-  PRIMARY KEY (rule, slug, detail)
-);
-"""
-
-
 def is_current(conn):
     return (_columns(conn, "terms") == {"id", "section", "options_json", "note",
                                         "revision", "ord"}
             and _columns(conn, "anchors") == {"id", "term_id", "zh_anchor",
                                               "ord"}
+            and _columns(conn, "locales") == {"lang"}
             and "lexicons" in _tables(conn)
-            and "baseline" in _tables(conn))
+            and "plugin_meta" not in _tables(conn)
+            and "baseline" not in _tables(conn))
+
+
+def _drop_legacy_surfaces(conn, rep):
+    """v7：删插件投影缓存与按篇豁免台账，locales 只留 lang（幂等）。"""
+    tables = _tables(conn)
+    for name in ("plugin_meta", "baseline"):
+        if name in tables:
+            conn.execute("DROP TABLE %s" % name)
+            rep["dropped_" + name] = True
+    if _columns(conn, "locales") != {"lang"}:
+        conn.execute("ALTER TABLE locales RENAME TO _locales_old")
+        conn.execute("CREATE TABLE locales(lang TEXT PRIMARY KEY)")
+        conn.execute("INSERT INTO locales(lang) SELECT lang FROM _locales_old")
+        conn.execute("DROP TABLE _locales_old")
+        rep["locales_slimmed"] = True
 
 
 def _js(obj):
@@ -178,6 +167,7 @@ def migrate(conn, report=None):
     词形与锚点原样保留，不重写、不丢行。
     """
     rep = report if report is not None else {}
+    _drop_legacy_surfaces(conn, rep)
     cols = _columns(conn, "terms")
     acols = _columns(conn, "anchors")
     if "block_scope" in acols:
@@ -188,7 +178,6 @@ def migrate(conn, report=None):
             raise RuntimeError(
                 "库里是 v2 的 contracts 表：该格式已停止支持，请换用随包分发的 "
                 "data/glossary.db（schema %d）" % SCHEMA_VERSION)
-        conn.executescript(BASELINE_DDL)
         conn.execute("UPDATE meta SET schema_version=?", (SCHEMA_VERSION,))
         rep["state"] = "current"
         return rep
@@ -225,8 +214,7 @@ def verify(conn):
     返回 {"errors": [...], "warnings": [...], "stats": {}}；doctor 每次跑。
     """
     errors, warnings = [], []
-    stats = {"terms": 0, "anchors": 0, "forms": 0, "langs": 0, "lexicons": 0,
-             "baseline": 0}
+    stats = {"terms": 0, "anchors": 0, "forms": 0, "langs": 0, "lexicons": 0}
 
     if "contracts" in _tables(conn):
         errors.append("E5 库里仍有 v2 contracts 表：该格式已停止支持")
@@ -315,22 +303,6 @@ def verify(conn):
             errors.append("E5 受控词表空词形行：%d" % empty)
     except Exception as exc:                       # pragma: no cover
         errors.append("E5 词表校验失败：%s" % exc)
-
-    # 存量欠账台账：判据代码里不再出现 slug，欠账只在这里可见。
-    try:
-        bad = [r[0] for r in conn.execute(
-            "SELECT DISTINCT status FROM baseline")
-            if r[0] not in ("open", "closed")]
-        if bad:
-            errors.append("E5 存量台账 status 非法：%s" % ", ".join(bad))
-        n_empty = conn.execute(
-            "SELECT COUNT(*) FROM baseline WHERE rule='' OR slug=''").fetchone()[0]
-        if n_empty:
-            errors.append("E5 存量台账有空 rule/slug 行：%d" % n_empty)
-        stats["baseline"] = conn.execute(
-            "SELECT COUNT(*) FROM baseline").fetchone()[0]
-    except sqlite3.OperationalError:
-        errors.append("E5 缺 baseline 表：运行 submit.py glossary migrate")
 
     # term-zh（中文概念 → 各语标准译法）必须是完整矩阵：每个概念都要覆盖
     # 全部语向，否则译法统一到一半比不统一更糟（同一概念有的语有标准、

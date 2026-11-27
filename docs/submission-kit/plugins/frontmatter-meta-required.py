@@ -18,7 +18,7 @@ ENABLED = True
 COVERAGE = {"langs": "all", "zones": ['frontmatter', 'metadata', 'package']}
 
 RATIONALE = {
-    RULE: "v1.30 实测：旧版把必填校验放在 `if meta:` 内，空对象直接绕过；"
+    RULE: "v1.30 实测：必填校验若放在 `if meta:` 内，空对象会直接绕过；"
                     "另有一次 imageRights 传了空串（模板占位没改），站点法务退回。"
                     "逐个字段点名而不是报「字段缺失」，是因为 9 个字段里补哪一个完全不同，"
                     "笼统报错会让作者回来问一轮。",

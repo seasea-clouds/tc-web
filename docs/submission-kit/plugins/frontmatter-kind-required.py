@@ -17,7 +17,7 @@ ENABLED = True
 COVERAGE = {"langs": "all", "zones": ['frontmatter', 'metadata']}
 
 RATIONALE = {
-    RULE: "v1.60 实测：旧版 kind 缺省按 blog 处理，一部法规稿因此走了博客的 CTA"
+    RULE: "v1.60 实测：kind 缺省若按 blog 处理，法规稿会走博客的 CTA"
                     "与配图判据，报了一堆无关错误。改为必填后，错误定位从「37 条莫名报错」"
                     "收敛成「kind 没写」一条。",
 }

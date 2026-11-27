@@ -4,7 +4,7 @@
 铁律：glossary.db 的**合法写路径**只有两条——
   A. submit.py 的子命令（glossary / plugin sync 等入口，DML 一律经 core/db.py
      的写函数：lexicon_write / lexicon_replace_bulk / lexicon_patch_meta /
-     term_meta_update / glossary_write / import_changeset / sync_plugin_meta）；
+     term_meta_update / glossary_write / import_changeset）；
   B. core/schema.py 的 migrate（前向建表/迁移）。
 除这两处外，**任何文件出现裸 SQL 写即 FAIL**——历史上 tools/family_* 各自
 裸写 DELETE+INSERT+commit，绕过 BEGIN IMMEDIATE（并行会话互踩）、绕过统一

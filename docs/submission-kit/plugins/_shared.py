@@ -20,22 +20,3 @@ def fmt_hits(items, limit=4):
     if len(items) > limit:
         parts.append("等共 %d 处" % len(items))
     return "；".join(parts)
-
-
-def baseline_of(view, rule, slug):
-    """→ frozenset(detail) / None。None = 该篇无欠账登记。
-
-    空 frozenset = 整篇豁免（整篇性欠账，如「我国」误译、句号字符选错）；
-    非空 = 只豁免列出的对象（如某几个配图名）。
-
-    2026-11-15：此前是 core/consts 里的 SELF_COUNTRY_LEGACY 一类 slug 常量，
-    判据源码里直接写着篇名。现在判据只由「语向 + 词类 + 结构」决定，欠账
-    作为数据存在 baseline 表里：可见、可清、可审计，改判据不会漏改名单。
-    """
-    ctx = getattr(view, "ctx", None)
-    if ctx is None:
-        return None
-    per_rule = (getattr(ctx, "baseline", None) or {}).get(rule)
-    if not per_rule:
-        return None
-    return per_rule.get(slug)

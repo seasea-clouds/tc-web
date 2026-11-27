@@ -22,7 +22,7 @@ from core.consts import (
     P59_NEGWORDS, _BLOCK_MISALIGN_H2_HINT, _BLOCK_MISALIGN_H2_RE,
     _BLOCK_MISALIGN_NUM_HINT, _BLOCK_MISALIGN_ORPHAN_HINT, _BLOCK_MISALIGN_ORPHAN_RE, _CN_DIGITS,
     _CN_DIGIT_CHARS, _CN_NUM_RE, _CN_UNITS, _CN_UNIT_MULT,
-    _CN_UNIT_RE, _DETAIL_LABELS, _GROUP_SEP_RE, _OL_RE, _P47_FREE_STEM, _P47_STEMS, _P47_WORDS,
+    _CN_UNIT_RE, _DETAIL_LABELS, _GROUP_SEP_RE, _OL_RE, _P47_FREE_STEM,
     _SP_GROUP, _TH_GROUP, _TH_TENS_PREFIXES,
     _TH_UNIT_WORDS, _UL_RE, _UNIT_WORD_MULT, _UNIT_WORD_RE, _WAN_RE, _YI_RE,
 )
@@ -737,16 +737,21 @@ def separator_hits(lang, text, mirror=None, exempt=None):
     return out
 
 
-def digit_word_present(lang, n, folded, low):
-    """块内 N 是否以数字 / 词干 / 数词任一形态在场（「N 位」类描述位）。"""
+def digit_word_present(lang, n, folded, low, stems=None, words=None):
+    """块内 N 是否以数字 / 词干 / 数词任一形态在场（「N 位」类描述位）。
+
+    `stems` / `words` 是 P47 的语向词形表（来自 `lexicons(judge-forms)`，
+    结构 `{lang: [形]}`）。此前硬编码在 `core/consts/rules.py`——数据
+    不该在机制层，新增语向只改库。
+    """
     if re.search(r"(?<!\d)%d(?!\d)" % n, folded):
         return True
     if n == 8:                            # 词干表只覆盖「八」
-        for s in _P47_STEMS.get(lang, ()):
+        for s in (stems or {}).get(lang, ()):
             lb = "" if lang in _P47_FREE_STEM else r"(?<!\w)"
             if re.search(lb + re.escape(s), low):
                 return True
-        for w in _P47_WORDS.get(lang, ()):
+        for w in (words or {}).get(lang, ()):
             if re.search(r"(?<!\w)%s(?!\w)" % re.escape(w), low):
                 return True
     w = NUMBER_WORDS.get(lang, {}).get(n)

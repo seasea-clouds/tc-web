@@ -9,6 +9,7 @@ from core.consts import (
 )
 from plugins._lang import latin_residue
 from plugins._lexicon import latin_allow, latin_taxon
+from plugins import _lexicon
 
 RULE = "P30"
 RULES = [RULE]
@@ -72,6 +73,7 @@ def _verbatim_latin(art):
 
 
 def run(view, emit):
+    _lexicon.set_official_en(view)
     allow = latin_allow(view)
     taxa = latin_taxon(view)
     for art in view.articles:

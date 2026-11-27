@@ -7,6 +7,24 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import _harness as H                                     # noqa: E402
 
 
+def _check_whitelist_layer():
+    """白名单过滤层机制自检：登记成对词形放行、未登记仍判重复。
+
+    台架 red 模式只能表达「注入报红 / 还原归零」，表达不了「该形状放行」；
+    这里直接调插件内 `_whitelisted` 做对照断言，失败即 FAIL。
+    """
+    import importlib.util as _ilu
+    spec = _ilu.spec_from_file_location(
+        "repw", Path(H.KIT) / "plugins" / "text-repeat-word.py")
+    mod = _ilu.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    mod._PLUGIN_REPEAT_OK["sw"] = {"kutamkwa kwa"}
+    ok = (mod._whitelisted("sw", "kutamkwa kwa")
+          and not mod._whitelisted("sw", "mawe mawe")
+          and not mod._whitelisted("en", "the the"))
+    return ok
+
+
 def mutate(work):
     # 「the the」：批量产稿的常见痕迹（复制粘贴半句）
     p = H.lang_file(work, "en")
@@ -41,6 +59,9 @@ def mutate_sw_plain_repeat(work):
 
 
 if __name__ == "__main__":
+    if not _check_whitelist_layer():
+        print("FAIL P10 白名单过滤层断言失败")
+        raise SystemExit(1)
     raise SystemExit(H.main([
         ("P10", mutate, "en 出现 the the"),
         ("P10", mutate_ur_real_defect,

@@ -19,7 +19,7 @@ COVERAGE = {"langs": "all", "zones": ['frontmatter', 'metadata']}
 
 RATIONALE = {
     RULE: "v1.30 实测：顶层写成数组时后续排序抛 AttributeError，整轮检查崩在"
-                    "unhandled exception；空对象则绕过全部必填校验（旧版 `if meta:` 的漏洞）。"
+                    "unhandled exception；空对象则绕过全部必填校验（空对象不得绕过必填校验）。"
                     "类型错误单独成条而不是并入 M02，是因为修复动作是「改结构」而非「补字段」。",
 }
 

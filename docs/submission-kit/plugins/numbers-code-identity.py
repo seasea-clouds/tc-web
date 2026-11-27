@@ -4,13 +4,17 @@
 母版块里的编码与 ≥3 位数字必须原样出现在各语同一块。P 族只管结构、L 族只管
 全篇相似度，「结构全对、把 1210 写成 1021」此前无人拦。
 
-三档：缺号 error；与母版近形（等长差一位 / 差一个数量级）的「多出」error；
-其余多出按 warning（可能是译者补的年份/汇率）。
+四档：缺号 error；与母版近形（等长差一位 / 差一个数量级）的「多出」error；
+母版该块有数字时其余多出按 warning（可能是译者补的年份/汇率）；
+母版该块**无**数字时，官方全文块（marker 之后）多出「母版全篇存在的 3 位纯数字」
+按 warning（官方措辞不得增删，多为补锚时误做全文替换所致）。
+3 位纯数字 + 母版全篇存在 = 公告号/代码/条款号类标识，多插必是事故；
+年份（4 位）、中文「万/亿」展开值（≥5 位）、小数（含点）均不在射程，避免本地化误报。
 """
 import re
 
 from core.textutil import _block_kind, _near_num, cn_number_to_int, id_numbers, wan_face_groups
-from core.consts import _CN_ORD_RE
+from core.consts import _CN_ORD_RE, ORIGINAL_MARKER
 
 RULE = "P36"
 RULES = [RULE]
@@ -31,7 +35,16 @@ RATIONALE = {
                     "v1.48 补「N 万」同义面分组（整值/千位读法），否则 47 语全红；"
                     "v1.52 补近形分级（1476↔1477 升 error），把「同块两处同数改一"
                     "漏一」从 warning 噪声里拔出来。v2.15 把母版中文字数词（第二百"
-                    "二十四条之一）折叠进缺号面，译文写 224 不再被记成杜撰。",
+                    "二十四条之一）折叠进缺号面，译文写 224 不再被记成杜撰。"
+                    "v2.16（REG245 ja/ko 实证）：母版块无数字时原判据整块跳过，"
+                    "译语在官方全文块多插数字无人拦——ja/ko 首段与议定书条、"
+                    "附加声明括注共 4 处被误插「公告第 244 号」（补数字锚时误做全文"
+                    "替换，污染官方措辞），机检全绿、靠逐语直读才发现。现补"
+                    "「官方块（marker 后）母版该块无数字而译语多出标识型数字」"
+                    "warning 一支。射程收窄为「3 位纯数字 + 母版全篇存在」，"
+                    "排除年份/万·亿展开值/小数：全库 164 条法规探针零命中，"
+                    "不误伤存量；注入 244 必报。解读段不在射程（允许带文号），"
+                    "blog 无 marker 不适用。",
 }
 
 
@@ -44,7 +57,12 @@ def run(view, emit):
         if not art.parity_on:
             continue
         ml = art.master_lang
-        src = [_mask_links(x) for x in art.blocks(ml)]
+        mblocks = art.blocks(ml)
+        src = [_mask_links(x) for x in mblocks]
+        try:
+            mi = mblocks.index(ORIGINAL_MARKER)     # 官方全文起点；blog 无 marker
+        except ValueError:
+            mi = -1
         base = [id_numbers(x) for x in src]
         cn = []
         for x in src:
@@ -66,6 +84,18 @@ def run(view, emit):
                     continue
                 want = base[bi] | cn[bi]
                 if not want:
+                    # v2.16：母版该块无数字 → 原判据整块跳过。官方全文块多出
+                    # 「母版全篇存在的 3 位纯数字」＝把别处的公告号/代码误插本块
+                    # （补锚全文替换所致），按 warning 报。年份/万·亿展开值/
+                    # 小数不在射程，避免本地化误报。
+                    if mi >= 0 and bi > mi:
+                        extra3 = sorted(v for v in id_numbers(_mask_links(blk))
+                                        if len(v) == 3 and v.isdigit() and v in known)
+                        if extra3:
+                            emit(RULE, "warning", "%s/%s" % (lg, art.slug),
+                                 "第%d块（官方全文）多出母版该块没有的标识型数字 %s"
+                                 "（官方措辞不得增删，疑为补锚时误插）"
+                                 % (bi + 1, " / ".join(extra3[:5])))
                     continue
                 got = id_numbers(_mask_links(blk))
                 miss = sorted(v for v in want - got

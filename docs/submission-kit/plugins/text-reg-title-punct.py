@@ -27,7 +27,11 @@ RATIONALE = {
                     "口径——① 基准标题必须在解析循环之前单独取 zh（循环内读 parsed['zh'] "
                     "恒空，标点对照从未生效）；② 词内撇号与词内连字符属正字法（ca/fr 的 "
                     "d'importadors、hu 的 élelmiszer-előállítók），按标点计数会把正确译文"
-                    "判红，两侧都是字母数字的 ' ’ - 跳过。",
+                    "判红，两侧都是字母数字的 ' ’ - 跳过。REG229 阶段 3 回流："
+                    "母版标题含《中华人民共和国海关进出口化妆品检验检疫监督"
+          "管理办法》2 个 book 类标点，47 语译文按本语正字法用引号/不加书名号，"
+          "book 类 0≠2 致 46 条 error。书名号是本地化标点（zh《》、ja/ko「」、"
+          "拉丁语 \"\"/«»），强制逐语计数一致无意义；跳过 book 类比对，其余类照旧。",
 }
 
 _ORTHO = "'\u2019-"
@@ -64,6 +68,12 @@ def _title_errors(title, base_title):
         base = _punct_profile(base_title)
         cur = _punct_profile(title.strip())
         for name in sorted(set(base) | set(cur)):
+            # book 类（书名号《》〈〉「」『』）按语种本地化：zh 用《》、ja/ko 用「」、
+            # 拉丁语用引号 ""/«» 或不加书名号。强制逐语计数一致会逼出不自然译法
+            # （REG229 母版标题含《办法》，47 语无一种用 book 类标点，46 条假红）。
+            # 书名号本地化差异属正当异形，跳过该类比对；其余标点类照旧逐类校验。
+            if name == "book":
+                continue
             b, c = base.get(name, 0), cur.get(name, 0)
             if b != c:
                 errs.append(

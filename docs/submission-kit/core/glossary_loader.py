@@ -185,25 +185,19 @@ def _normalize_glossary(spec):
 
 
 def _auto_lexicons(ctx):
-    """把受控词表与存量台账装进 Context（与契约同一份 PolicyView，不二次读盘）。
+    """把受控词表装进 Context（与契约同一份 PolicyView，不二次读盘）。
 
     显式注入 glossary 自检夹具时 `_auto_glossaries` 不会跑，词表仍需可用；
     读不到就记 config_errors（C01 报红），不静默当空表放行。
     """
-    if ctx.lexicons is not None and ctx.baseline is not None:
+    if ctx.lexicons is not None:
         return
     try:
         from core import db as _db
         pv = ctx.policy or _db.current_policy(ctx.db_path, ctx.kit_dir)
-        if ctx.lexicons is None:
-            ctx.lexicons = pv.lexicons
-        if ctx.baseline is None:
-            ctx.baseline = getattr(pv, "baseline", {}) or {}
+        ctx.lexicons = pv.lexicons
     except Exception as exc:
-        if ctx.lexicons is None:
-            ctx.lexicons = {}
-        if ctx.baseline is None:
-            ctx.baseline = {}
+        ctx.lexicons = {}
         ctx.config_errors.append("受控词表读取失败: %s" % exc)
 
 

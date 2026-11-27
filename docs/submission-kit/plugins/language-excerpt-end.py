@@ -20,7 +20,7 @@ COVERAGE = {"langs": "all", "zones": ['frontmatter']}
 
 RATIONALE = {
     RULE: "v1.39 立规：某语摘要以「…register the importer」收尾（无句号），列表页"
-                    "摘要末尾看起来像被截断；v1.40 起 hy 也按 ։ 判——旧版放行 ASCII "
+                    "摘要末尾看起来像被截断；v1.40 起 hy 也按 ։ 判——放行 ASCII "
                     "冒号，hy 的「։」被当成合法收尾而实际是句号缺失。th 整语豁免（泰文"
                     "不以句末标点断句，判它等于要求改正字法）。空摘要交给 F02/F07/S09，"
                     "这里不重复出声。",

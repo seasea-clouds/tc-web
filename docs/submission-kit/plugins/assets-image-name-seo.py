@@ -2,9 +2,8 @@
 """I09：配图文件名必须可检索（kebab-case 描述）
 
 小写 kebab-case、至少两段、至少 8 字符；cover.webp 豁免。
-已交付存量按策略库 baseline 表（rule=I09）降 warning。
+一律 error。
 """
-from plugins._shared import baseline_of
 from core.pkgio import image_name_ok
 
 RULE = "I09"
@@ -29,13 +28,10 @@ RATIONALE = {
 
 def run(view, emit):
     for art in view.articles:
-        legacy = baseline_of(view, RULE, art.slug)
         for name in sorted(art.images):
             if name == "cover.webp" or image_name_ok(name):
                 continue
-            # 空 frozenset = 整篇欠账；非空 = 只豁免列出的文件名。
-            exempt = legacy is not None and (not legacy or name in legacy)
-            emit(RULE, "warning" if exempt else "error", art.slug,
+            emit(RULE, "error", art.slug,
                  "配图名 %s 不含可检索内容（SEO）：请改成描述画面的 kebab-case "
                  "名称（如 china-food-label-checklist.webp）；cover.webp 是站方"
                  "封面契约、不受此限" % name)

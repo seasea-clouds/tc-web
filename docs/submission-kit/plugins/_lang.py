@@ -9,7 +9,6 @@
 import re
 
 from core.textutil import _block_kind
-from plugins._lexicon import latin_allow
 
 from core.consts import (
     P41_LABEL_SEP_RE,
@@ -33,12 +32,12 @@ from core.consts import (
     P67_REL_RATIO,
     _DIGIT_NEAR_RE,
     _LATIN_WORD_RE,
-    _OFFICIAL_EN_RE,
     _P63_NATIVE_U201D,
     _P63_OPEN,
     _P63_STR_OPEN,
     re,
 )
+from plugins import _lexicon
 
 
 _TERM_RE_CACHE = {}
@@ -57,7 +56,7 @@ _CAPS_RUN_RE = re.compile(
 
 # 连续 ≥6 个拉丁词的整句：官方声明/引文（`Chia seed to be exported to China
 # shall be packed using clean and unused materials…`）。判定用**结构**而非
-# 逐条登记字面量——`OFFICIAL_EN_LITERALS` 每来一篇新公告就要加一条，且
+# 逐条登记字面量——`official-en-literal` 词表每来一篇新公告加一行（经 glossary），且
 # 「This consignment」与「The consignment」差一个词就整串失配。
 # 6 词是下限：正常译文不会连写 6 个英文词；而未本地化的短片段（G2 的
 # `paid media acquisitio module seeding` 5 词）仍会被报出来。
@@ -190,7 +189,7 @@ def latin_residue(body, min_count=2, allow=None, taxa=None):
     Returns a {word: count} dict for words seen at least min_count times.
     """
     t = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", body)
-    # 2026-11-14：普通链接与裸站内路径同样整段剥离。旧版只剥 `![alt](path)`，
+    # 2026-11-14：普通链接与裸站内路径同样整段剥离：只剥 `![alt](path)` 会漏掉
     # `[文字](/blog/…)` 和裸 `/blog/…` 会漏进词频——sr 语向实测 `tri`×10 全部
     # 来自 /blog/restructuring-… 路径切片，被当成「正文夹用英文原词」报了
     # 21 条 warning；同一批还有 well/protected/clear/accounts 等页名碎片。
@@ -199,8 +198,8 @@ def latin_residue(body, min_count=2, allow=None, taxa=None):
     t = re.sub(r"(?<![\w])/[\w./\-]*blog/[\w./\-]+", " ", t)
     t = re.sub(r"https?://\S+", "", t)
     t = re.sub(r"`[^`]*`", "", t)
-    # 2026-11-15：附件名（`…适载检验要求.docx`）整段剥离。旧版把后缀当普通
-    # 拉丁词，`docx` 在 zh 母版被计一次残留；文件名不是正文用词，判据不该管。
+    # 2026-11-15：附件名（`…适载检验要求.docx`）整段剥离：后缀不能当普通
+    # 拉丁词，`docx` 在 zh 母版会被计一次残留；文件名不是正文用词，判据不该管。
     t = _ATTACH_RE.sub(" ", t)
     # v2.00：法规线站方要求逐字保留的英文串（植物检疫证书附加声明整句 +
     # 包装标签串 Exported to the People's Republic of China）先剥离，
@@ -210,7 +209,9 @@ def latin_residue(body, min_count=2, allow=None, taxa=None):
     # v2.13/I16：旧掩码 `This consignment[\s\S]{0,400}?China.` 在声明以
     # 逗号接续时会吞掉后续 ≤400 字符正文，P30 对那段英文残留完全失明。
     # 改为整串剥离：每条字面量都是完整句，空白可跨行，但绝不跨句通配。
-    t = _OFFICIAL_EN_RE.sub(" ", t)
+    _official = _lexicon.official_en()
+    if _official is not None:
+        t = _official.sub(" ", t)
     # 2026-11-15：法定双语名标注与拉丁学名（详见文件头 2026-11-15 注释）。
     # 顺序有意义：先剥「含学名的整个括号」，剩下的裸学名段再由结构规则剥；
     # 反过来会把括号里的英文俗名（Apricot/Jackfruit）留给词频。
@@ -359,15 +360,18 @@ def _p42_mask(text):
     # v2.25（REG27 回流）：法规线官方英文逐字串（证书附加声明整句 /
     # 包装标识串）整串先剥离。这类串受 S08 verbatim 契约保护、不得逐字改动，
     # 串内部的 ASCII 句点（如 "…by Spain and China. The consignment…"）不是
-    # 亚美尼亚文正字法缺陷；P30 早已按 _OFFICIAL_EN_RE 整串剥离，P42 此前
+    # 亚美尼亚文正字法缺陷；P30 早已按 official-en-literal 整串剥离，P42 此前
     # 只豁免「引语收尾句点」（P42_LATIN_QUOTE_RE，引号前紧邻的那个点），
     # 对整串中间的分句点失明，hy 语向实证 2 处假阳。与 P30 同口径复用
     # 同一条正则，不新增按篇白名单：官方串之外的 ASCII 句点照旧报红。
-    for rx in (P42_MDLINK_DEST_RE, P42_URL_RE, P42_CODE_RE,
-               P42_DECIMAL_RE, P42_TH_RE, P42_LATIN_QUOTE_RE,
-               P42_TAXON_ABBR_RE, P42_TAXON_JOIN_RE,
-               P42_ROMAN_HEAD_RE, _OFFICIAL_EN_RE,
-               _P42_FILE_EXT_RE):
+    masks = [P42_MDLINK_DEST_RE, P42_URL_RE, P42_CODE_RE,
+             P42_DECIMAL_RE, P42_TH_RE, P42_LATIN_QUOTE_RE,
+             P42_TAXON_ABBR_RE, P42_TAXON_JOIN_RE, P42_ROMAN_HEAD_RE]
+    _official = _lexicon.official_en()
+    if _official is not None:
+        masks.append(_official)
+    masks.append(_P42_FILE_EXT_RE)
+    for rx in masks:
         for m in rx.finditer(text):
             for i in range(m.start(), m.end()):
                 if chars[i] != "\n":

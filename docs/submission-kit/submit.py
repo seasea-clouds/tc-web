@@ -6,7 +6,7 @@
     submit.py check <path> [--json] [--jobs=N] [--no-parity]
     submit.py check <投稿目录根> --all [--yes] [--jobs=N]   # 全库扫描，须确认
     submit.py glossary list|get|add|update|delete|audit|export|import|diff|resolve
-                     |baseline（存量欠账台账）
+                     
     submit.py plugin   list|sync|verify|enable|disable|report
     submit.py rules [--verbose] [--json]
     submit.py preview <path> [--out=<file>]
@@ -46,6 +46,7 @@ if KIT not in sys.path:
     sys.path.insert(0, KIT)
 
 from core import db, loader                             # noqa: E402
+from core import rule_registry                           # noqa: E402
 from core.model import Context, Finding                  # noqa: E402
 from core.consts import CORE_RULES, LOCALES, RULE_META, SLUG_RE     # noqa: E402
 from core import kit_hygiene                            # noqa: E402
@@ -63,7 +64,7 @@ from plugins._style import check_style                   # noqa: E402
 DB_PATH = os.path.join(KIT, "data", "glossary.db")
 SUBCMDS = {"start", "check", "preview", "glossary", "plugin", "rules",
            "doctor", "hygiene", "clean", "pack", "version", "selftest",
-           "integrity", "restore", "tools", "hooks"}
+           "integrity", "tools", "hooks"}
 
 
 def _plugins(tolerant=False):
@@ -734,58 +735,6 @@ def cmd_glossary(args):
                              ensure_ascii=False))
             return 0
         return _die("resolve 需 --ours 或 --theirs", 3)
-    if action == "baseline":
-        # 存量欠账台账（baseline 表）：判据源码里不出现 slug，欠账只在这里。
-        # 五列：rule 判据号 / slug 篇目 / detail 具体对象（空=整篇）/
-        #       reason 为什么豁免（交付在前、判据后上、修复代价）/
-        #       status open 欠账 · closed 已清。
-        # 清账只置 closed、不删行——保留「这篇曾经欠过什么」的痕迹；
-        # 新篇不在表里，一律按 severity 照实报。
-        conn = db.connect(conn_kw["db_path"])
-        try:
-            rule = getattr(args, "lex_id", None)
-            if args.remove:
-                if not (rule and args.key):
-                    return _die("关闭欠账需 --id=<规则号> --key=<slug>")
-                n = conn.execute(
-                    "UPDATE baseline SET status='closed' "
-                    "WHERE rule=? AND slug=? AND detail=?",
-                    (rule, args.key,
-                     getattr(args, "detail", "") or args.value or "")).rowcount
-                conn.commit()
-                if not n:
-                    return _die("未找到欠账行：%s / %s / %r"
-                                % (rule, args.key,
-                                   getattr(args, "detail", "") or args.value or ""))
-                print("已置 closed：%s / %s" % (rule, args.key))
-                return 0
-            sql = ("SELECT rule,slug,detail,status,reason FROM baseline")
-            params = []
-            if rule:
-                sql += " WHERE rule=?"
-                params.append(rule)
-            sql += " ORDER BY rule, slug, ord"
-            rows = [dict(r) for r in conn.execute(sql, params)]
-        finally:
-            conn.close()
-        if args.json:
-            print(json.dumps({"count": len(rows), "baseline": rows},
-                             ensure_ascii=False, indent=2))
-            return 0
-        if not rows:
-            print("存量欠账：无")
-            return 0
-        cur = None
-        for r in rows:
-            if r["rule"] != cur:
-                cur = r["rule"]
-                print("\n%s" % cur)
-            flag = "欠账" if r["status"] == "open" else "已清"
-            print("  [%s] %s%s" % (flag, r["slug"],
-                                   (" · " + r["detail"]) if r["detail"] else "（整篇）"))
-        open_n = sum(1 for r in rows if r["status"] == "open")
-        print("\n合计 %d 行，其中 open %d 行" % (len(rows), open_n))
-        return 0
     return _die("未知 glossary 动作：%s" % action, 3)
 
 
@@ -804,10 +753,6 @@ def cmd_plugin(args):
     if args.action == "report":
         print(json.dumps(loader.report(plugins, verbose=True),
                          ensure_ascii=False, indent=2))
-        return 0
-    if args.action == "sync":
-        n = db.sync_plugin_meta(args.db or DB_PATH, plugins)
-        print(json.dumps({"result": "ok", "plugins": n}, ensure_ascii=False))
         return 0
     if args.action == "verify":
         problems = db.doctor(args.db or DB_PATH, KIT, plugins=plugins)
@@ -829,7 +774,7 @@ def _rule_summary(plugin, rule):
     """规则短摘要：RULE_META 未收录时回退插件模块 docstring 首行。
 
     M3 插件化后 RULE_META 只剩 22 条（core 级与少数早期规则），`rules`
-    表对 156/175 条规则曾显示空摘要——而「旧实现」的兜底
+    表对 156/175 条规则曾显示空摘要——而兜底
     `rule_catalog().get(r, "")` 取的是状态字典（count/registered/meta），
     永远拿不到说明，等于没有兜底。每个插件 docstring 首行本就是
     「规则号：一句话口径」，直接取用即可 175/175 有摘要，不再维护第二份清单。
@@ -844,12 +789,48 @@ def _rule_summary(plugin, rule):
     return first
 
 
-def cmd_rules(args):
+def _atomic_write(path, text):
+    """同目录 tmp + replace：写一半的文件不会被下一个入口读到。"""
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    tmp = path + ".tmp"
+    with io.open(tmp, "w", encoding="utf-8", newline="\n") as fh:
+        fh.write(text)
+    os.replace(tmp, path)
+
+
+def _reload_registry_consts():
+    """注册表落盘后刷新 `core.consts`，让 loader 立刻看到新的 KNOWN_RULES。
+
+    不刷新的话，同一进程内 `loader.discover()` 会拿 import 时的旧集合，
+    把刚导入的规则判成「未注册」——入口就在这一步自我否决。
+    """
+    import importlib
+    import core.consts as _cc
+    import core.consts.rules as _cr
+    importlib.reload(_cr)
+    importlib.reload(_cc)
+
+
+def _policy_bump_and_sync():
+    """规则变更后：policy_version +1。插件真源是 rules_registry.json。"""
+    con = db.connect(DB_PATH)
+    try:
+        db._bump(con)
+        con.commit()
+    finally:
+        con.close()
+    plugins, _skipped = loader.discover(KIT)
+    return len(plugins)
+
+
+def _rules_list(args):
     plugins, _ = _plugins()
+    data, err = rule_registry.try_load(KIT)
+    meta = rule_registry.rules_of(data) if data else dict(RULE_META)
     rows = []
     for p in plugins:
         for r in p["rules"]:
-            sev, desc = RULE_META.get(r, ("error", ""))
+            sev, desc = meta.get(r, ("error", ""))
             if not desc:
                 desc = _rule_summary(p, r)
             rows.append({"rule": r, "plugin": p["id"], "phase": p["phase"],
@@ -857,11 +838,10 @@ def cmd_rules(args):
                          "summary": desc,
                          "rationale": p["rationale"].get(r) if args.verbose
                          else None})
-    # 2026-11-14：CORE_RULES（C01/H01/H02）由 core 发射、没有 plugins/ 文件，
-    # 此前完全不出现在规则表里——用户在输出里看到 `[ERROR] C01` 却查不到这
-    # 是什么（rules 是查规则的唯一入口），doctor 又报 179 条，两边对不上。
+    # CORE_RULES（C01/H01/H02）由 core 发射、没有 plugins/ 文件，但仍要在
+    # 规则表里出现——`rules` 是查规则的唯一入口。
     for r in sorted(CORE_RULES):
-        sev, desc = RULE_META.get(r, ("error", ""))
+        sev, desc = meta.get(r, ("error", ""))
         rows.append({"rule": r, "plugin": "(core)", "phase": 0,
                      "severity": sev, "enabled": True,
                      "summary": desc or "core 级规则",
@@ -871,15 +851,316 @@ def cmd_rules(args):
                                    if args.verbose else None)})
     rows.sort(key=lambda x: x["rule"])
     if args.json:
-        print(json.dumps({"count": len(rows), "rules": rows},
+        print(json.dumps({"count": len(rows), "rules": rows,
+                          "registry_error": err or None},
                          ensure_ascii=False, indent=2))
     else:
+        if err:
+            print("[警告] %s（当前视图不完整）" % err)
         for r in rows:
             print("%-6s %-22s %-8s %s" % (r["rule"], r["plugin"],
                                            r["severity"], r["summary"][:70]))
             if args.verbose and r["rationale"]:
                 print("       " + r["rationale"][:300].replace("\n", " "))
     return 0
+
+
+def _rules_diff(args):
+    """注册表 vs 磁盘：只报不改，用于「改完判据、还没走入口」的事后核对。"""
+    data, err = rule_registry.try_load(KIT)
+    if data is None:
+        return _die("规则注册表不可用：%s（先跑 rules adopt --yes）" % err, 2)
+    diff = rule_registry.audit(KIT, data)
+    bad = {k: v for k, v in diff.items() if isinstance(v, list) and v}
+    labels = (("unregistered", "未登记插件"),
+              ("missing", "登记了但磁盘缺"),
+              ("hash_mismatch", "插件指纹不一致"),
+              ("selftest_unregistered", "自检臂未登记"),
+              ("selftest_hash_mismatch", "自检臂指纹不一致"),
+              ("orphan_rule", "无插件指向的规则"))
+    if args.json:
+        print(json.dumps({"ok": not bad, "diff": diff}, ensure_ascii=False,
+                         indent=2))
+    elif not bad:
+        print("规则注册表与磁盘一致（%d 插件 / %d 规则）"
+              % (len(data["plugins"]), len(data["rules"])))
+    else:
+        for key, label in labels:
+            if diff.get(key):
+                print("%-16s %s" % (label, ", ".join(diff[key][:10])))
+        print("\n修复：合法变更走 `submit.py rules import|delete`；"
+              "首次登记或灾后重建走 `rules adopt --yes`。")
+    return 0 if not bad else 2
+
+
+def _rules_adopt(args):
+    """按磁盘现状重写注册表（**只允许注册表缺失/损坏时**：首次迁移 / 灾后重建）。
+
+    注册表正常时禁止 adopt：它会把 `plugins/` 下任意手写插件直接登记为合法，
+    绕过 `rules import` 的静态校验、自检臂实跑与 policy bump——白名单等于失效。
+    合法新增一律走 `rules import`；判据改动走 `import --force` 或 `delete`。
+    """
+    cur, err = rule_registry.try_load(KIT)
+    if cur is not None:
+        diff = rule_registry.audit(KIT, cur)
+        bad = diff.get("unregistered") or []
+        if bad:
+            return _die(
+                "注册表存在，但有 %d 个插件未登记：%s\n"
+                "  合法新增只能走 `rules import --plugin … --selftest … --yes`"
+                "（入口做静态校验 + 自检臂实跑）；"
+                "adopt 只用于注册表缺失/损坏后的重建。"
+                % (len(bad), ", ".join(bad[:5])), 3)
+        drift = ((diff.get("hash_mismatch") or [])
+                 + (diff.get("missing") or [])
+                 + (diff.get("selftest_hash_mismatch") or []))
+        # 共享层（plugins/_*.py）是 SEALED 框架代码：维护者改后由重签把关，
+        # 不因它阻止 adopt，但需要重建来同步 shared 指纹；判据插件的差异
+        # 仍然拒绝（防「手写插件 → adopt 洗白」）。
+        shared_drift = [x for x in drift
+                        if os.path.basename(str(x)).startswith("_")]
+        drift = [x for x in drift
+                 if not os.path.basename(str(x)).startswith("_")]
+        if drift:
+            return _die(
+                "注册表存在且有 %d 处指纹/缺失差异：%s\n"
+                "  这是「判据已改但没走入口」的状态：合法变更走"
+                " `rules import --force` 或 `rules delete`；"
+                "adopt 只用于注册表缺失/损坏后的重建。"
+                % (len(drift), ", ".join(sorted(drift)[:5])), 3)
+        if not shared_drift:
+            print("注册表与磁盘一致（%d 插件 / %d 规则），无需 adopt。"
+                  % (len(cur.get("plugins") or {}), len(cur.get("rules") or {})))
+            return 0
+        print("共享层指纹待同步：%s（框架层，重签后生效）"
+              % ", ".join(sorted(shared_drift)[:5]))
+    if not getattr(args, "yes", False):
+        print("将按磁盘现状重写 data/rules_registry.json："
+              "把现有 plugins/ 与 selftest/ 全部登记（不改任何判据代码）。")
+        return _die("需要 --yes 确认", 2)
+    try:
+        data = rule_registry.build_from_disk(KIT)
+    except rule_registry.RegistryError as exc:
+        return _die("无法按磁盘生成注册表：%s" % exc, 2)
+    data["last_change"] = {
+        "at": datetime.datetime.now().astimezone().isoformat(timespec="seconds"),
+        "action": "adopt",
+        "detail": "按磁盘现状登记 %d 个插件" % len(data["plugins"])}
+    p = rule_registry.save(KIT, data)
+    _reload_registry_consts()
+    print(json.dumps({"result": "ok", "registry": _rel(p),
+                      "plugins": len(data["plugins"]),
+                      "rules": len(data["rules"])}, ensure_ascii=False))
+    print("提示：注册表由入口受控维护——分发工具包前由维护者运行 "
+          "`submit.py tools integrity_seal sign` 重签。")
+    return 0
+
+
+def _rules_import(args):
+    """规则与自检臂成对导入：静态校验 → 落盘 → 装载 → 实跑臂 → bump → sync。"""
+    import subprocess as _sp
+    if not args.plugin or not args.selftest:
+        return _die("rules import 需要 --plugin 与 --selftest（规则与自检臂"
+                    "强制成对导入）", 2)
+    for p in (args.plugin, args.selftest):
+        if not os.path.isfile(p):
+            return _die("草稿不存在：%s" % p, 2)
+        try:
+            _tmp_root.assert_outside_kit(p)
+        except _tmp_root.TmpInsideKit:
+            return _die("草稿 %s 在工具包内：规则草稿必须写在包外临时目录"
+                        "（如 ../tmp/rule-draft/），再由入口导入"
+                        % os.path.basename(p), 2)
+    pname = os.path.basename(args.plugin)
+    sname = os.path.basename(args.selftest)
+    src_p = io.open(args.plugin, encoding="utf-8", newline="").read()
+    src_s = io.open(args.selftest, encoding="utf-8", newline="").read()
+    try:
+        rec = rule_registry.parse_plugin(src_p, pname)
+        rule_registry.validate_selftest(src_s, sname, pname)
+    except rule_registry.RegistryError as exc:
+        return _die("草稿不合规：%s" % exc, 2)
+
+    data, err = rule_registry.try_load(KIT)
+    if data is None:
+        return _die("规则注册表不可用：%s（先跑 rules adopt --yes）" % err, 2)
+    rule = rec["rule"]
+    if rule in (data.get("core") or []):
+        return _die("规则 %s 是 core 级内置规则，不允许插件声明" % rule, 3)
+    owner = rule_registry.owner_of(data, rule)
+    if owner and owner != pname and not args.force:
+        return _die("规则 %s 已被插件 %s 占用；确需迁移加 --force"
+                    % (rule, owner), 3)
+    if pname in (data.get("plugins") or {}) and not args.force:
+        return _die("插件 %s 已存在；确需替换加 --force" % pname, 3)
+    if not getattr(args, "yes", False):
+        print("将导入 %s → 规则 %s（%s）" % (pname, rule, rec["severity"]))
+        print("  自检臂 %s" % sname)
+        return _die("需要 --yes 确认（写盘后须由维护者重签）", 2)
+
+    # 临时根必须在**写盘之前**解析：缺 --tmp 或落在包内时立刻失败。放到写盘
+    # 之后曾造成「半导入」——插件与注册表已改、policy 未 bump、自检臂未实跑，
+    # 且不回滚，下一次重试还被「插件已存在」的提示误导。dry-run（无 --yes）
+    # 不写盘也不需要 --tmp，所以位置只能在 --yes 之后、落盘之前。
+    try:
+        tmp = _tmp_root.require_tmp(getattr(args, "tmp", None))
+    except _tmp_root.TmpInsideKit as exc:
+        return _die(str(exc), 2)
+    except RuntimeError as exc:
+        return _die("%s（rules import 需要 --tmp）" % exc, 2)
+
+    dst_p = os.path.join(KIT, "plugins", pname)
+    dst_s = os.path.join(KIT, "selftest", sname)
+    old_p = (io.open(dst_p, encoding="utf-8", newline="").read()
+             if os.path.exists(dst_p) else None)
+    old_s = (io.open(dst_s, encoding="utf-8", newline="").read()
+             if os.path.exists(dst_s) else None)
+    old_reg = json.dumps(data, ensure_ascii=False, sort_keys=True)
+
+    def _rollback(msg, code=2):
+        try:
+            if old_p is None:
+                if os.path.exists(dst_p):
+                    os.remove(dst_p)
+            else:
+                _atomic_write(dst_p, old_p)
+            if old_s is None:
+                if os.path.exists(dst_s):
+                    os.remove(dst_s)
+            else:
+                _atomic_write(dst_s, old_s)
+            rule_registry.save(KIT, json.loads(old_reg))
+            _reload_registry_consts()
+        except Exception as exc2:
+            return _die("%s；且回滚失败：%s（请人工核对 plugins/ 与注册表）"
+                        % (msg, exc2), 3)
+        return _die("%s（已回滚）" % msg, code)
+
+    try:
+        _atomic_write(dst_p, src_p)
+        _atomic_write(dst_s, src_s)
+        new = json.loads(old_reg)
+        if owner:
+            for r in ((new["plugins"].get(owner) or {}).get("rules") or []):
+                new["rules"].pop(r, None)
+        new["rules"][rule] = {"severity": rec["severity"], "desc": rec["desc"]}
+        new["plugins"][pname] = {
+            "plugin": rec["plugin"], "rules": [rule],
+            "sha256": rule_registry.sha256_bytes(src_p.encode("utf-8"))}
+        new["selftest"][sname] = {
+            "sha256": rule_registry.sha256_bytes(src_s.encode("utf-8"))}
+        new["last_change"] = {
+            "at": datetime.datetime.now().astimezone().isoformat(
+                timespec="seconds"),
+            "action": "import", "rule": rule, "plugin": pname}
+        rule_registry.save(KIT, new)
+        _reload_registry_consts()
+    except Exception as exc:
+        return _rollback("写入失败：%s" % exc)
+
+    try:
+        plugins, _skipped = loader.discover(KIT)
+    except loader.PluginError as exc:
+        return _rollback("导入后装载失败：%s" % exc)
+    if not [p for p in plugins if p["id"] == rec["plugin"]]:
+        return _rollback("导入后未发现插件 %s" % rec["plugin"])
+
+    r = _sp.run([sys.executable, "-u", "-X", "utf8", dst_s, "--tmp", tmp],
+                capture_output=True, text=True, encoding="utf-8",
+                errors="replace")
+    if r.returncode != 0:
+        sys.stderr.write(r.stdout or "")
+        sys.stderr.write(r.stderr or "")
+        return _rollback("自检臂未通过（注入转红 / 还原转绿不成立）")
+
+    n = _policy_bump_and_sync()
+    print(json.dumps({"result": "ok", "rule": rule, "plugin": pname,
+                      "selftest": sname, "plugins": n}, ensure_ascii=False))
+    print("提示：注册表与插件已变更，须由维护者运行 "
+          "`submit.py tools integrity_seal sign` 重签后，才对分发生效。")
+    return 0
+
+
+def _rules_delete(args):
+    """按规则号删除：插件与自检臂归档到 tmp/待删除，注册表同步移除。"""
+    rule = (getattr(args, "rule_id", None) or "").strip().upper()
+    if not rule:
+        return _die("rules delete 需要规则号，如：rules delete P75", 2)
+    data, err = rule_registry.try_load(KIT)
+    if data is None:
+        return _die("规则注册表不可用：%s" % err, 2)
+    if rule in (data.get("core") or []):
+        return _die("规则 %s 是 core 级内置规则，不能经插件删除" % rule, 3)
+    owner = rule_registry.owner_of(data, rule)
+    if not owner:
+        return _die("规则 %s 在注册表里没有插件归属" % rule, 3)
+    # 先在确认之前解析临时根：缺 --tmp / 落包内是参数错误，应立刻暴露，
+    # 不能让用户先看一遍「将删除…」再被告知参数不全。
+    try:
+        tmp = _tmp_root.require_tmp(getattr(args, "tmp", None))
+    except _tmp_root.TmpInsideKit as exc:
+        return _die(str(exc), 2)
+    except RuntimeError as exc:
+        return _die("%s（rules delete 需要 --tmp）" % exc, 2)
+    if not getattr(args, "yes", False):
+        print("将删除规则 %s（插件 plugins/%s 与同名自检臂）" % (rule, owner))
+        return _die("需要 --yes 确认", 2)
+
+    dst_p = os.path.join(KIT, "plugins", owner)
+    dst_s = os.path.join(KIT, "selftest", owner)
+    old_p = (io.open(dst_p, encoding="utf-8", newline="").read()
+             if os.path.exists(dst_p) else None)
+    old_s = (io.open(dst_s, encoding="utf-8", newline="").read()
+             if os.path.exists(dst_s) else None)
+    old_reg = json.dumps(data, ensure_ascii=False, sort_keys=True)
+    moved = []
+
+    def _restore_files():
+        if old_p is not None and not os.path.exists(dst_p):
+            _atomic_write(dst_p, old_p)
+        if old_s is not None and not os.path.exists(dst_s):
+            _atomic_write(dst_s, old_s)
+        rule_registry.save(KIT, json.loads(old_reg))
+        _reload_registry_consts()
+
+    try:
+        for path in (dst_p, dst_s):
+            if os.path.exists(path):
+                moved.append(_tmp_root.archive_delete(
+                    path, label="rule-del-%s" % rule, tmp=tmp))
+        new = json.loads(old_reg)
+        new["rules"].pop(rule, None)
+        new["plugins"].pop(owner, None)
+        new["selftest"].pop(owner, None)
+        new["last_change"] = {
+            "at": datetime.datetime.now().astimezone().isoformat(
+                timespec="seconds"),
+            "action": "delete", "rule": rule, "plugin": owner}
+        rule_registry.save(KIT, new)
+        _reload_registry_consts()
+        plugins, _skipped = loader.discover(KIT)
+    except (loader.PluginError, OSError, ValueError) as exc:
+        _restore_files()
+        return _die("删除失败：%s（已回滚）" % exc, 2)
+
+    n = _policy_bump_and_sync()
+    print(json.dumps({"result": "ok", "rule": rule, "plugin": owner,
+                      "archived": [x for x in moved if x],
+                      "plugins": n}, ensure_ascii=False))
+    print("提示：须由维护者 `submit.py tools integrity_seal sign` 重签。")
+    return 0
+
+
+def cmd_rules(args):
+    action = (getattr(args, "action", None) or "list").strip().lower()
+    handlers = {"list": _rules_list, "diff": _rules_diff,
+                "adopt": _rules_adopt, "import": _rules_import,
+                "delete": _rules_delete}
+    fn = handlers.get(action)
+    if not fn:
+        return _die("未知 rules 动作：%s（list/diff/adopt/import/delete）"
+                    % action, 3)
+    return fn(args)
 
 
 def _longpaths_enabled():
@@ -1005,13 +1286,34 @@ def cmd_doctor(args):
             return _die("[longpaths] %s" % err)
         sys.stderr.write("LongPathsEnabled=1 已开启"
                          "（已运行的程序需重开终端/重启才生效）\n")
-    plugins, _ = _plugins()
+    plugins, skipped = _plugins(tolerant=True)
     policy = _policy(args)
     root = os.path.abspath(args.root) if args.root else KIT
     problems = db.doctor(args.db or DB_PATH, KIT, plugins=plugins)
     declared, missing = loader.coverage(plugins)
+    if skipped:
+        problems.append("插件装载被跳过 %d 个：%s"
+                        % (len(skipped), ", ".join(
+                            s["file"] for s in skipped[:5])))
     if missing:
         problems.append("规则注册表未声明：%s" % sorted(missing))
+    # 规则注册表是插件白名单的依据：缺失/不可读/与磁盘不一致都必须在这里
+    # 判红，否则「手工往 plugins/ 塞一条规则」就只剩封签这一道防线。
+    from core.consts import REGISTRY_ERROR as _REG_ERR
+    if _REG_ERR:
+        problems.append("规则注册表：%s" % _REG_ERR)
+    _reg, _reg_err = rule_registry.try_load(KIT)
+    if _reg is not None:
+        _diff = rule_registry.audit(KIT, _reg)
+        for _key, _label in (("unregistered", "未登记插件"),
+                             ("missing", "登记了但磁盘缺"),
+                             ("hash_mismatch", "插件指纹不一致"),
+                             ("selftest_unregistered", "自检臂未登记"),
+                             ("selftest_hash_mismatch", "自检臂指纹不一致"),
+                             ("orphan_rule", "无插件指向的规则")):
+            if _diff.get(_key):
+                problems.append("规则注册表%s：%s"
+                                % (_label, ", ".join(_diff[_key][:8])))
     if set(LOCALES) != set(policy.locales):
         problems.append("内核 LOCALES 与策略库 locales 不一致")
     problems.extend(_template_contract_check())
@@ -1037,6 +1339,7 @@ def cmd_doctor(args):
            "policy_version": policy.policy_version,
            "schema_version": policy.schema_version,
            "plugins": len(plugins), "rules": len(declared),
+           "skipped_plugins": len(skipped),
            "contracts": len(policy.contracts), "forms": len(policy.forms),
            "locales": len(policy.locales), "problems": problems,
            "deps": {i["dist"]: i["version"] for i in dep["items"]},
@@ -1086,17 +1389,10 @@ def cmd_clean(args):
                              dry_run=(args.dry_run or not args.apply))
 
 
-def cmd_restore(args):
-    """从待删除归档恢复一个文件；`--allow` 同时登记到数据层白名单。
-
-    默认**不登记**：恢复后下次入口仍会归档——用户口径是「恢复必须是显式
-    动作」，不给隐式后门。确属合法新增（新增模板素材、外部资料）时加
-    `--allow`，登记会写进 data/whitelist.json（L1 数据变更，不动代码、不需重签）。
-    """
-    ok, msg = kit_hygiene.restore(KIT, args.path, allow=args.allow,
-                                  dest_root=args.from_dir)
-    print(msg)
-    return 0 if ok else 1
+# v629：`restore` 命令已移除。理由：编写者模式下取回的文件不在清单，
+# 下次入口自愈会再次归档；框架文件被改/删本就自动还原；维护者要找回
+# 误归档文件，直接从 `<tmp>/待删除/` 拷回即可（归档目录保留原相对结构）。
+# 封签框架文件损坏用 `submit.py integrity --restore`（从 sealed.zip 覆盖）。
 
 
 def _fm_value(path, key):
@@ -1423,11 +1719,16 @@ def _schema_check(db_path):
 
 def cmd_pack(args):
     if not args.root:
-        return _die("--root 必填：请显式传入项目根（产物写入 <root>/submission/）")
+        return _die("--root 必填：请显式传入投稿目录（其下含 blogs/ 或 "
+                    "regulations/，产物写入 <root>/dist/），如 --root=submission")
     root = os.path.abspath(args.root)
-    if not os.path.isdir(root):
-        return _die("--root 不存在或不是目录：%s" % _rel(root))
-    out_dir = os.path.join(root, "submission")
+    # 投稿目录校验（防产物落到错误位置）：执行层 pack_all 也会再校验一次；
+    # 入口先拦是为了给干净 rc=2 与可操作的修复指引，不走到 mkdtemp 才报错。
+    from core import pack as _pack_guard
+    ok, why = _pack_guard.validate_root(root)
+    if not ok:
+        return _die("[pack] %s" % why)
+    out_dir = os.path.join(root, "dist")
     try:
         inside_kit = os.path.commonpath([out_dir, os.path.abspath(KIT)]) \
             == os.path.abspath(KIT)
@@ -1522,9 +1823,10 @@ def cmd_integrity(args):
 
     五项检查（不依赖 git；git 存在时作为第四项辅助）：
       ⓿ 封签校验——Ed25519 分离签名：SEALED（core/、submit.py、tools/、
-        selftest/、plugins/_*.py）必须与清单逐字节一致；TRACKED（判据插件）
-        允许改但列出差异；库记逐表内容快照，表变而 policy_version 未变即
-        判「绕过工具写库」。`--restore` 可从 data/sealed.zip 就地还原。
+        selftest/、plugins/_*.py、data/rules_registry.json）与 TRACKED
+        （判据插件）都必须与清单逐字节一致（严格口径）；库记逐表内容快照，
+        表变而 policy_version 未变即判「绕过工具写库」。`--restore` 可从
+        data/sealed.zip 就地还原。
       ① 机制层工作区差异（仅 .git 存在时）；
       ② 库逻辑 vs HEAD（仅 .git 存在时）；
       ③ 守卫臂——_db_write_surface / _word_data / _rule_data 三臂重跑；
@@ -1551,10 +1853,12 @@ def cmd_integrity(args):
                             "    还原：从原始发布包重新解压 core/ 与 submit.py；"
                             "包内清单已不可信" % _res["reason"])
     else:
-        bad = (len(_res["sealed_changed"]) + len(_res["sealed_missing"])
-               + len(_res["sealed_extra"]))
-        print("⓿ 封签校验：%s（机制层差异 %d 个）"
-              % ("OK" if _res["ok"] else "**FAIL**", bad))
+        sealed_bad = (len(_res["sealed_changed"]) + len(_res["sealed_missing"])
+                      + len(_res["sealed_extra"]))
+        tracked_bad = (len(_res["tracked_changed"]) + len(_res["tracked_missing"])
+                       + len(_res["tracked_extra"]))
+        print("⓿ 封签校验：%s（机制层差异 %d 个，判据插件差异 %d 个）"
+              % ("OK" if _res["ok"] else "**FAIL**", sealed_bad, tracked_bad))
         for key, label in (("sealed_changed", "改动"),
                            ("sealed_missing", "缺失"),
                            ("sealed_extra", "多出")):
@@ -1563,10 +1867,17 @@ def cmd_integrity(args):
                 problems.append("机制层%s：%s\n"
                                 "    还原：submit.py integrity --restore"
                                 % (label, ", ".join(_res[key][:10])))
-        if _res["tracked_changed"] or _res["tracked_extra"]:
-            print("    判据插件变更（允许，需复核）：%s"
-                  % ", ".join((_res["tracked_changed"]
-                               + _res["tracked_extra"])[:10]))
+        for key, label in (("tracked_changed", "改动"),
+                           ("tracked_missing", "缺失"),
+                           ("tracked_extra", "新增")):
+            if _res[key]:
+                print("    判据插件%s：%s" % (label, ", ".join(_res[key][:10])))
+                problems.append(
+                    "判据插件%s：%s\n"
+                    "    合法变更走 submit.py rules import|delete（编写者可随时导入）；"
+                    "稿件打包不受影响，\n"
+                    "    分发工具包前由维护者 tools integrity_seal sign 重签"
+                    % (label, ", ".join(_res[key][:10])))
         _db = _res.get("db") or {}
         if _db.get("status") == "silent_write":
             problems.append("库表内容变了但 policy_version 未变：%s\n"
@@ -1583,7 +1894,7 @@ def cmd_integrity(args):
         print("① 机制层工作区差异：跳过（不是 git 仓库，以⓿封签为准）")
     out = _sp.run(["git", "status", "--porcelain", "--", "."],
                   capture_output=True, text=True, encoding="utf-8",
-                  errors="replace") if git_ok else None
+                  errors="replace", cwd=KIT) if git_ok else None
     protected = []
     for line in ((out.stdout if out else "") or "").splitlines():
         st, _, path = line.partition(" ")
@@ -1607,7 +1918,7 @@ def cmd_integrity(args):
         from tools import ENTRY_ENV as _ENTRY_ENV
         rc = _sp.run([sys.executable, "-u", "tools/db_diff.py"],
                      capture_output=True, text=True, encoding="utf-8",
-                     errors="replace",
+                     errors="replace", cwd=KIT,
                      env=dict(os.environ, **{_ENTRY_ENV: "submit.py"}))
     last = ((rc.stdout if rc else "") or "").strip().splitlines()
     tail = last[-1] if last else ""
@@ -1622,14 +1933,19 @@ def cmd_integrity(args):
                         " `glossary diff` 追溯变更来源。" % tail)
         print("② glossary.db vs HEAD：**DIFF**（见问题清单）")
 
-    # ③ 守卫臂
+    # ③ 守卫臂。子进程一律 cwd=KIT：integrity 允许从任意目录调用，而臂和
+    # 工具的相对路径都相对工具包，不钉死 cwd 会在仓库根误报「三个臂全 FAIL」。
+    # --tmp 先按调用者 cwd 解析成绝对路径再传，避免子进程在 KIT 下把相对
+    # 路径解析成包内目录（那会被 --tmp 守卫直接拒绝）。
+    arm_tmp = (os.path.abspath(args.tmp) if args.tmp
+               else os.path.join(os.path.dirname(KIT), "tmp"))
     for arm, label in (("_db_write_surface", "写入口收窄"),
                        ("_word_data", "词形归属/库基线"),
                        ("_rule_data", "判据数据源")):
         r = _sp.run([sys.executable, "-u", "selftest/%s.py" % arm,
-                     "--tmp", args.tmp or "../tmp"],
+                     "--tmp", arm_tmp],
                     capture_output=True, text=True, encoding="utf-8",
-                    errors="replace")
+                    errors="replace", cwd=KIT)
         okline = [ln for ln in (r.stdout or "").splitlines()
                   if "FAIL" in ln]
         bad = r.returncode != 0
@@ -1643,7 +1959,7 @@ def cmd_integrity(args):
     # ④ doctor
     r = _sp.run([sys.executable, "-u", "submit.py", "doctor"],
                 capture_output=True, text=True, encoding="utf-8",
-                errors="replace")
+                errors="replace", cwd=KIT)
     doc_ok = "doctor: OK" in (r.stdout or "")
     print("④ doctor：%s"
           % ("OK" if doc_ok else (r.stdout or r.stderr or "").strip()[:120]))
@@ -1678,12 +1994,13 @@ def build_parser():
            · doctor 库与插件一致性 · integrity 完整性自检（防篡改）
            · tools 维护者工具索引与运行入口（tools <名字> [参数]）
            · hooks git 钩子安装（commit-msg 强制 [arch]）
-  运维     hygiene 目录白名单报告 · clean 兜底清理 · restore 取回被归档文件
-           · selftest 自检臂 · version
+  运维     hygiene 目录白名单报告 · clean 兜底清理 · selftest 自检臂 · version
+           （归档文件在 <tmp>/待删除/，需要时直接拷回）
 
-改策略只有两条合法路径：改 plugins/ 一规则一文件（L2），或经 glossary 改库
-（L1）。机制层（core/、submit.py）改动须走 README「治理」节的 L3 流程并在提交说明
-带 [arch]（commit-msg 钩子强制）。细节：README.md 与 README.md。""",
+判据变更只有一条合法路径：包外 tmp 写插件草稿 + 同名自检臂 → rules import
+（plugins/ 逐文件绑定 sha256，手写文件会被入口归档）；术语/词形经 glossary 改库。
+机制层（core/、submit.py）改动须走 README「治理」节的 L3 流程并在提交说明带
+[arch]（commit-msg 钩子强制）。细节：根 README.md 与 submission-kit/README.md。""",
         formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = p.add_subparsers(dest="cmd", metavar="<子命令>")
 
@@ -1692,7 +2009,8 @@ def build_parser():
         sp.add_argument("--db", metavar="PATH", default=None)
         sp.add_argument("--tmp", metavar="DIR", default=None,
                         help="临时根目录（涉及删除/中间产物的操作必填，"
-                             "如 start/check/pack/clean；未指定报错）："
+                             "如 start/check/pack/clean/rules import/rules delete；"
+                             "未指定报错）："
                              "删除的文件移到其下 待删除/ 子树，中间过程"
                              "产物以它为根组织；相对路径相对当前工作"
                              "目录解析；**必须在工具包之外**（包内路径"
@@ -1743,7 +2061,6 @@ def build_parser():
                                       "delete", "audit", "export", "import",
                                       "diff", "resolve", "scan",
                                       "migrate", "lexicon", "term",
-                                      "baseline",
                                       "family-import", "family-recheck",
                                       "family-trim", "pair-open"])
     g.add_argument("cid", nargs="?")
@@ -1773,7 +2090,6 @@ def build_parser():
     g.add_argument("--id", dest="lex_id", default=None,
                    help="词表 id：%s" % ", ".join(db.LEXICON_IDS))
     g.add_argument("--scope", default="global", choices=db.LEXICON_SCOPES)
-    g.add_argument("--detail", default="", help="baseline：豁免对象（空=整篇）")
     g.add_argument("--key", default="", help="global=语向；article=篇目 key")
     g.add_argument("--value", default="", help="词形 / 语向码 / ASCII 形")
     g.add_argument("--target", default="", help="正形（neighbor / latin-ascii）")
@@ -1787,13 +2103,27 @@ def build_parser():
     g.add_argument("--drop-forbidden", action="append", default=[], metavar="词形")
 
     pl = sub.add_parser("plugin", help="【治理】插件启停、元数据同步（verify/sync）、加载体检（report）")
-    pl.add_argument("action", choices=["list", "sync", "verify", "enable",
+    pl.add_argument("action", choices=["list", "verify", "enable",
                                        "disable", "report"])
     pl.add_argument("pid", nargs="?")
     common(pl)
 
-    r = sub.add_parser("rules", help="【治理】全部规则一览（由插件元数据实时生成，只读）")
+    r = sub.add_parser(
+        "rules",
+        help="【治理】规则一览与受控变更：list / diff / adopt / import / delete")
     common(r)
+    r.add_argument("action", nargs="?", default="list",
+                   choices=["list", "diff", "adopt", "import", "delete"])
+    r.add_argument("rule_id", nargs="?",
+                   help="delete：规则号，如 P75")
+    r.add_argument("--plugin", metavar="PATH",
+                   help="import：插件草稿路径（必须在工具包之外的临时目录）")
+    r.add_argument("--selftest", metavar="PATH",
+                   help="import：自检臂草稿路径（必须与插件同名、成对导入）")
+    r.add_argument("--force", action="store_true",
+                   help="import：允许覆盖同名插件或迁移规则归属")
+    r.add_argument("--yes", action="store_true",
+                   help="import / delete / adopt：确认写盘")
     r.add_argument("--verbose", action="store_true")
 
     d = sub.add_parser("doctor", help="【治理】库/插件/契约三方一致性体检（改动后的必跑项）")
@@ -1812,14 +2142,6 @@ def build_parser():
     cl.add_argument("--apply", action="store_true")
     cl.add_argument("--confirm", action="store_true")
     cl.add_argument("--dry-run", action="store_true")
-
-    rs = sub.add_parser(
-        "restore", help="【运维】从 tmp/待删除 恢复非白名单文件（--allow 登记白名单）")
-    rs.add_argument("path", help="工具包内相对路径，如 template/blog/x.png")
-    rs.add_argument("--allow", action="store_true",
-                    help="同时写入 data/whitelist.json，否则下次入口会再次归档")
-    rs.add_argument("--from-dir", metavar="DIR", default=None,
-                    help="归档根目录（缺省 <repo>/tmp/待删除）")
 
     sf = sub.add_parser("selftest", help="【运维】自检臂：178 插件臂（1:1）+ 工具臂；--kit 连工具臂")
     sf.add_argument("--only", default="", help="只跑指定插件名，逗号分隔")
@@ -1857,7 +2179,8 @@ def build_parser():
     it = sub.add_parser(
         "integrity", help="【治理】完整性自检：机制层篡改发现 + 守卫臂 + 还原指引")
     it.add_argument("--tmp", metavar="DIR", default=None,
-                    help="守卫臂的临时根目录（缺省 ../tmp）")
+                    help="守卫臂的临时根目录；缺省为工具包同级的 tmp/ "
+                         "（即 <工具包>/../tmp，按工具包位置推出，不看 cwd）")
     it.add_argument("--restore", action="store_true",
                     help="先用 data/sealed.zip 覆盖机制层，再跑五项检查")
     common(v)
@@ -1969,14 +2292,21 @@ class _RunSink(object):
 
 
 def main(argv):
-    # 文件白名单执法（v464）：工具包内每个文件都必须命中白名单（不限类型；
-    # 唯一例外是 plugins/*.py —— 策略面随时改）。非白名单文件立即归档到
-    # <repo>/tmp/待删除/foreign-<ts>/ 并给警告，可用 `restore <路径>` 显式取回
-    # （`--allow` 登记到 data/whitelist.json）。放在最前——`--help`、透传工具、
-    # 报错路径都先过这一关，避免「策略在、没人跑」重演。
+    # 入口自愈：编写者模式下立刻复原——封签文件被改/被删从 sealed.zip 还原，
+    # 清单外新增归档到 <tmp>/待删除/；维护者（持私钥）跳过，改动留到他重签。
+    # 封签清单验签失败则拒绝运行。放在最前：--help、透传工具、报错路径都先过
+    # 这一关。
     try:
-        from core import kit_hygiene as _kh
-        _kh.purge_foreign(KIT)
+        from core import selfheal as _sh
+        _rep = _sh.heal(KIT)
+        if _rep.get("fatal"):
+            return _die("[自愈] %s\n"
+                        "  工具包封签清单不可信，请从原始分发包重新解压后使用。"
+                        % _rep["fatal"])
+        if _rep.get("restored") or _rep.get("archived"):
+            sys.stderr.write(
+                "[自愈] 还原 %d 个、归档 %d 个（编写者模式；只有维护者可改）\n"
+                % (len(_rep["restored"]), len(_rep["archived"])))
     except Exception:
         pass
     args_in = argv[1:]
@@ -2066,7 +2396,7 @@ def main(argv):
                 "selftest": cmd_selftest,
                 "version": cmd_version, "integrity": cmd_integrity,
                 "tools": cmd_tools, "hooks": cmd_hooks,
-        "restore": cmd_restore}
+        }
     # 传了 --tmp 就把本次的日志与 JSON 各存一份到 <tmp>/{logs,json}/；
     # stdout/stderr 的可见行为不变（--json 仍是纯 JSON + stderr 诊断）。
     try:

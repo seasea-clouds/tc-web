@@ -46,111 +46,33 @@ import unicodedata
 
 KIT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ROOT = os.path.dirname(KIT)
+sys.path.insert(0, KIT)
+
+from core import db  # noqa: E402
 
 # 无空格文字：不做 token 级展开
 SPACELESS = {"ja", "zh", "th", "lo", "my", "km"}
 
 # 屈折/派生后缀表（按最长匹配剥离；只剥**屈折与规则派生**，不剥改变词义的
 # 后缀——-ly/-ness/-less/-ism 这类会引入别的概念，故意不在表里）。
-SUFFIX = {
-    "en": ["ations", "ation", "ments", "ment", "ances", "ance", "ences",
-           "ence", "ings", "ing", "ions", "ion", "ers", "er", "ies", "ied",
-           "ed", "es", "s", "d", "e"],
-    "de": ["ungen", "ung", "keiten", "keit", "heiten", "heit",
-           "en", "em", "er", "es", "et", "te", "ten", "st", "t", "s", "e", "n"],
-    "nl": ["ingen", "ing", "heden", "heid", "en", "er", "es", "s", "e"],
-    "af": ["inge", "ing", "hede", "heid", "es", "e", "s"],
-    "da": ["inger", "ing", "heder", "hed", "erne", "er", "en", "et", "e", "s"],
-    "no": ["inger", "ing", "heter", "het", "ene", "er", "en", "et", "e", "s"],
-    "sv": ["ingar", "ing", "heter", "het", "erna", "ar", "er", "en", "et",
-           "e", "s"],
-    "fr": ["ations", "ation", "ements", "ement", "tions", "tion", "ées",
-           "ées", "ée", "és", "es", "s", "e"],
-    "es": ["aciones", "ación", "ciones", "ción", "mientos", "miento",
-           "mente", "ados", "adas", "ado", "ada", "os", "as", "o", "a",
-           "es", "s"],
-    "pt": ["ações", "ação", "ções", "ção", "mentos", "mento", "ados",
-           "adas", "ado", "ada", "os", "as", "o", "a", "es", "s"],
-    "it": ["azioni", "azione", "zioni", "zione", "menti", "mento", "ati",
-           "ate", "ato", "ata", "i", "o", "a", "e"],
-    "ca": ["acions", "ació", "cions", "ció", "ments", "ment", "ats", "ades",
-           "at", "ada", "s", "a", "e"],
-    "ro": ["ărilor", "area", "ări", "ării", "mente", "ment", "ate", "at",
-           "ul", "a", "e", "i", "s"],
-    "ru": ["ования", "ование", "ениями", "ения", "ению", "ением", "ении",
-           "ание", "ания", "анию", "анием", "ании", "ость", "ости",
-           "остью", "ами", "ах", "ов", "ев", "ий", "ия", "ию", "ии", "ием",
-           "ые", "ых", "ый", "ая", "ое", "ый", "ы", "и", "а", "я", "у", "ю",
-           "е", "о", "ь"],
-    "uk": ["еннями", "ення", "енню", "енням", "ання", "ання", "ість",
-           "ості", "ами", "ах", "ів", "ев", "ий", "ія", "ію", "ії", "ією",
-           "і", "а", "я", "у", "ю", "е", "о", "ь"],
-    "be": ["эннями", "эння", "энню", "ання", "ання", "асць", "асці", "амі",
-           "ах", "аў", "ы", "і", "а", "я", "у", "ю", "е", "ь"],
-    "bg": ["ирането", "иране", "енията", "ения", "ението", "ение", "ането",
-           "ане", "ост", "остта", "та", "ът", "я", "а", "о", "е", "и"],
-    "sr": ["ања", "ање", "ању", "ањем", "ости", "ост", "има", "а", "е", "и",
-           "у", "о"],
-    "hr": ["anja", "anje", "anju", "anjem", "osti", "ost", "ima", "a", "e",
-           "i", "u", "o"],
-    "sl": ["anja", "anje", "anju", "anjem", "nosti", "nost", "ami", "ah",
-           "a", "e", "i", "o"],
-    "cs": ["ování", "ováním", "ení", "ením", "ání", "áním", "osti", "ost",
-           "ami", "ách", "a", "e", "i", "o", "u", "y"],
-    "sk": ["ovanie", "ovania", "enie", "ením", "anie", "aním", "osti", "osť",
-           "ami", "ách", "a", "e", "i", "o", "u", "y"],
-    "pl": ["owania", "owanie", "enia", "enie", "enia", "ości", "ość",
-           "ami", "ach", "ów", "ie", "ia", "iu", "i", "a", "e", "y", "u"],
-    "el": ["μάτων", "ματος", "ματα", "σεων", "σεις", "σης", "ση", "εων",
-           "εις", "ει", "ων", "ους", "ου", "ος", "οι", "η", "α", "ο", "ι"],
-    "tr": ["ların", "lerin", "ları", "leri", "lar", "ler", "sı", "si",
-           "lık", "lik", "lu", "lü", "ın", "in", "un", "ün", "ı", "i", "u",
-           "ü", "a", "e"],
-    "az": ["ların", "lərin", "ları", "ləri", "lar", "lər", "lıq", "lik",
-           "lı", "li", "ın", "in", "un", "ün", "ı", "i", "u", "ü", "a", "ə"],
-    "hu": ["ásának", "ésének", "ások", "ések", "ás", "és", "ának", "ének",
-           "ok", "ek", "ök", "ak", "k", "a", "e", "i"],
-    "fi": ["minen", "misen", "ksen", "sta", "stä", "ssa", "ssä", "lla",
-           "llä", "lta", "ltä", "lle", "ksi", "tta", "ttä", "na", "nä", "in",
-           "en", "an", "än", "a", "ä", "n"],
-    "et": ["mine", "mise", "sse", "st", "le", "lt", "na", "ks", "d", "a",
-           "e", "i"],
-    "he": ["יות", "ים", "ות", "ה", "י"],
-    "ar": ["ات", "ون", "ين", "ان", "ة", "ه", "ها"],
-    "fa": ["های", "هاي", "ها", "ان", "ات", "ی", "ي"],
-    "ur": ["وں", "یں", "ات", "ہ", "ی"],
-    "vi": ["hóa", "hoá", "ng", "nh", "c"],
-    "id": ["nya", "kan", "an", "en", "i"],
-    "ms": ["nya", "kan", "an", "en", "i"],
-    "sw": ["kwa", "wa", "ni", "a", "e", "i", "o", "u"],
-    "hi": ["ियों", "ियां", "ियां", "ों", "ें", "ां", "ी", "ा", "े", "ो", "ि"],
-    "ne": ["हरू", "हरु", "लाई", "को", "मा", "बाट", "ी", "ा", "े", "ो"],
-    "bn": ["গুলো", "গুলি", "দের", "ের", "তে", "রা", "টি", "ে", "া", "ি"],
-    "ta": ["களின்", "களை", "கள்", "இல்", "ஐ", "ின்", "ும்"],
-    "si": ["යන්ගේ", "යන්", "යට", "යේ", "ය", "වල"],
-    "ka": ["ების", "ებით", "ებზე", "ები", "ის", "ით", "ად", "ი", "ა"],
-    "hy": ["ություն", "ության", "ություններ", "ից", "ին", "ով", "ում",
-           "ներ", "եր", "ի", "ը"],
-    "sq": ["imit", "ime", "imit", "shme", "ve", "t", "të", "a", "e", "i"],
-}
+def _load_lexicon(lid):
+    """词族数据在 `lexicons`（family-stop/deriv/suffix），不硬编码在工具里。"""
+    pol = db.current_policy(kit_dir=KIT)
+    out = {}
+    for r in (pol.lexicons or {}).get(lid) or ():
+        out.setdefault(str(r.get("key") or ""), []).append(
+            str(r.get("value") or ""))
+    return out
+
+
+SUFFIX = _load_lexicon("family-suffix")
+DERIV = set(_load_lexicon("family-deriv").get("deriv", []))
 
 # **派生后缀**（构成新词，不是屈折）：既不能剥，也不能往上加。
 # v426 实测：de `Rechnung` 剥掉 `-ung` 得词干 `rechn`，再加 `-en/-er/-et`
 # 产出 `rechnen`（计算）、`rechner`（计算器）、`rechnet`——同词干不同词的
 # 典型误吸，且这些词在语料里确有实频，一路进了已开判据的词族。
 # 规则：名词化/派生成分原样保留在词干里，只允许在其后接屈折后缀。
-DERIV = {
-    "ung", "ungen", "heit", "heiten", "keit", "keiten",
-    "ion", "ions", "tion", "tions", "ation", "ations", "sion",
-    "ment", "ments", "ement", "ements", "ness",
-    "ance", "ances", "ence", "ences", "anza", "enza",
-    "tät", "ität", "dad", "ité", "té",
-    "ción", "ciones", "ación", "aciones",
-    "mento", "menti", "zione", "zioni", "azione", "azioni",
-    "dade", "idade", "ção", "ções", "agem",
-    "ость", "ости", "ание", "ания", "ение", "ения", "ования", "ование",
-    "ція", "ції", "ција", "ције", "nie", "nia", "enie", "ениe",
-}
 
 
 def _is_deriv(suf):

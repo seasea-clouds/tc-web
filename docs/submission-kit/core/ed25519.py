@@ -9,7 +9,7 @@ Python 3.9+；`cryptography`/`pynacl` 不一定装得上。RSA/ECDSA 的纯 Pyth
 **用途边界**：
 - 只用于「机制层文件清单」的签名与验签（每次 `integrity` 跑一次），不用于
   传输加密、不用于口令派生；消息长度是清单 JSON（几十 KB），性能足够。
-- 私钥（32 字节 seed）由发布方保管，**不进包、不进 git**（`.keys/` 已忽略）；
+- 私钥（32 字节 seed）由维护者保管，**不进包、不进 git**（`.keys/` 已忽略）；
   公钥随包分发，指纹另记在 `data/trust_anchor.txt` 与 README——这是唯一
   需要包外核对的信任根（见 README「治理」节）。
 

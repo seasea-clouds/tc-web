@@ -5,14 +5,20 @@
 误操作），而「机制层被改」这件事必须能在**裸目录**里被发现。本模块只读文件
 系统与 SQLite，不调用 git。
 
-**两类文件，两种纪律**（口径见 README「治理」节）：
+**两类文件，同一把尺**（口径见 README「治理」节）：
 
-    SEALED   机制层：core/、submit.py、tools/、selftest/、plugins/_*.py
+    SEALED   机制层：core/、submit.py、tools/、selftest/、plugins/_*.py，
+             以及规则注册表 data/rules_registry.json
              必须与签名清单**逐字节一致**。改动需私钥重签；分发后无私钥，
              因此「改了就验不过」。
     TRACKED  判据插件 plugins/*.py（不含 `_`）
-             允许修改，但必须留痕：相对封签的差异会被列出，供复核 RATIONALE
-             与 check 结果；不是「篡改」，是「变更审计」。
+             同样是**必须一致**：v500 起 verify 默认严格，判据插件的改动、
+             缺失、新增都判失败，差异分类单独列出便于定位。维护者处于
+             「改判据、待重签」的过渡态时可显式 strict=False 只看差异。
+
+为什么 TRACKED 不再宽松：插件目录是判据面。宽松口径下，往包里丢一条规则、
+或原地改一条判据，`check` 立刻按新判据出结论，而验签仍是绿的——工具包
+分发给外部写作者之后，这等于「自带免检」。
 
 策略库（glossary.db）单独记**内容快照**：逐表有序行哈希 + `policy_version`。
 表哈希变了而版本号没变 → 说明有人绕过工具直接写库（异常）；版本号也变了 →
@@ -44,9 +50,33 @@ TRUST_ANCHOR = "data/trust_anchor.txt"
 # 机制层：改它等于改判据引擎，必须持私钥重签
 SEALED_GLOBS = ("core/*.py", "core/consts/*.py", "submit.py",
                 "tools/*.py", "tools/hooks/*.py", "selftest/*.py",
-                "plugins/_*.py")
-# 判据面：允许改，但相对封签的差异要列出来（变更审计）
+                "plugins/_*.py",
+                # 本文件是框架约定与治理口径的唯一文档：只许维护者改并重签。
+                # 编写者的建议写在 FEEDBACK.md（RUNTIME，可写、不入封签）。
+                "README.md",
+                # 规则注册表**不在此列**（v628）：编写者随时 `rules import`
+                # 会同步改写注册表与插件；注册表若属 SEALED，入口自愈会把刚
+                # 导入的规则还原掉，「随时导入」就无法成立。判据层的真源改为
+                # 「注册表 ↔ 插件 sha 自洽」（见 allowed_files / selfheal）。
+                )
+# 判据面：同样必须一致（verify 默认严格），差异单独分类便于定位
 TRACKED_GLOBS = ("plugins/*.py",)
+# 内容资产：逐文件登记摘要，但不打进 sealed.zip、不做自动还原
+# （模板 48 语体积大；被改只报差异，维护者重签即可）
+ASSET_PREFIX = "template/"
+# 运行时文件：允许存在、不参与封签、不被自愈归档
+RUNTIME_FILES = frozenset({
+    # 编写者可直接写：建议与反馈的汇入口，不参与封签、不被自愈还原
+    "FEEDBACK.md", ".gitignore",
+    "data/glossary.db", "data/glossary.db-wal", "data/glossary.db-shm",
+    "data/glossary.db-journal",
+    "data/integrity.json", "data/integrity.sig", "data/sealed.zip",
+    "data/trust_anchor.txt",
+    # 判据层真源：由 rules import|delete 维护（入口受控写）
+    "data/rules_registry.json",
+    # 版本化人工否决表（词族运营数据，非代码）
+    "tools/family_deny.json",
+})
 
 # 扫描时永远跳过的路径（运行时产物，不属于发布内容）
 SKIP_DIRS = {"__pycache__", ".state", ".clean", ".cache", ".keys", "tmp"}
@@ -98,16 +128,82 @@ def tracked_paths(root, sealed=None):
     return sorted(out)
 
 
+def asset_paths(root):
+    """内容资产（template/ 整树）的逐文件相对路径。"""
+    out = []
+    base = os.path.join(root, "template")
+    if not os.path.isdir(base):
+        return out
+    for dirpath, dirnames, filenames in os.walk(base):
+        dirnames[:] = sorted(d for d in dirnames if d not in SKIP_DIRS)
+        for name in sorted(filenames):
+            if name.endswith(SKIP_SUFFIX):
+                continue
+            out.append(_rel(root, os.path.join(dirpath, name)))
+    return out
+
+
 def scan(root):
-    """→ {"sealed": {rel: sha256}, "tracked": {rel: sha256}}"""
+    """→ {"sealed": {rel: sha}, "tracked": {rel: sha}, "assets": {rel: sha}}"""
     sealed = sealed_paths(root)
-    out = {"sealed": {}, "tracked": {}}
+    out = {"sealed": {}, "tracked": {}, "assets": {}}
     for rel in sealed:
         with open(os.path.join(root, rel), "rb") as fh:
             out["sealed"][rel] = _sha256_bytes(fh.read())
     for rel in tracked_paths(root, set(sealed)):
         with open(os.path.join(root, rel), "rb") as fh:
             out["tracked"][rel] = _sha256_bytes(fh.read())
+    for rel in asset_paths(root):
+        with open(os.path.join(root, rel), "rb") as fh:
+            out["assets"][rel] = _sha256_bytes(fh.read())
+    return out
+
+
+def load_manifest(root):
+    """验签并返回清单 → (manifest, error)。error 非空时 manifest 不可信。"""
+    mpath = os.path.join(root, MANIFEST)
+    spath = os.path.join(root, SIGNATURE)
+    if not os.path.exists(mpath) or not os.path.exists(spath):
+        return None, "未封签：缺 %s 或 %s" % (MANIFEST, SIGNATURE)
+    raw = open(mpath, "rb").read()
+    sig = open(spath, "rb").read()
+    try:
+        pub = bytes.fromhex(PUBLIC_KEY_HEX)
+    except ValueError:
+        return None, "PUBLIC_KEY_HEX 不是合法 hex"
+    if not ed25519.verify(pub, raw, sig):
+        return None, "签名不成立：清单被改过，或用另一把私钥重签过"
+    try:
+        return json.loads(raw.decode("utf-8")), ""
+    except ValueError:
+        return None, "清单不是合法 JSON"
+
+
+def allowed_files(root, manifest=None):
+    """工具包内允许存在的逐文件全集（入口自愈与目录白名单共用）。
+
+    = 运行时文件 + SEALED 清单 + template 资产 + **当前注册表登记的插件**。
+    判据层以注册表为准（而不是签名时的 tracked 快照）：`rules import|delete`
+    会同步更新两者，导入的规则因此不会被下一次入口当成「清单外文件」清掉。
+    """
+    man = manifest
+    if man is None:
+        man, _err = load_manifest(root)
+    out = set(RUNTIME_FILES)
+    if man:
+        out |= set(man.get("sealed") or {})
+        out |= set(man.get("assets") or {})
+    from core import rule_registry
+    data, _e = rule_registry.try_load(root)
+    if data:
+        for key in ("plugins", "shared"):
+            for name in (data.get(key) or {}):
+                if str(name).endswith(".py"):
+                    out.add("plugins/" + name)
+    elif man:
+        # 注册表缺失/损坏时回退到签名快照：否则 190+ 个插件会被判成
+        # 「清单外」而整批归档（拆包）。只报 REGISTRY_ERROR 由 doctor 判红。
+        out |= set(man.get("tracked") or {})
     return out
 
 
@@ -159,6 +255,8 @@ def build_manifest(root, db_path=None):
         "format": 1,
         "sealed": data["sealed"],
         "tracked": data["tracked"],
+        # 内容资产（template/）逐文件摘要：只登记、不打包、不自动还原
+        "assets": data["assets"],
     }
     if db_path:
         snap = db_snapshot(db_path)
@@ -181,14 +279,20 @@ def sign_manifest(seed, manifest):
     return ed25519.sign(seed, manifest_bytes(manifest))
 
 
-def verify(root, db_path=None):
-    """→ 结果字典。`ok=False` 表示 SEALED 被改/缺失/多出，或签名不成立。
+def verify(root, db_path=None, strict=True):
+    """→ 结果字典。
 
-    tracked 差异不算失败（判据允许改），`db` 异常单独标记。
+    `ok=False` 表示：SEALED 被改/缺失/多出，或签名不成立；`strict=True`
+    时 TRACKED（判据插件）的改动/缺失/新增同样判失败。
+
+    严格是默认值（v500）：插件目录是判据面，不重签就说明「这份包的判据
+    不是维护者签过的那份」。维护者在「改判据、待重签」的过渡态可以传
+    `strict=False`，此时 tracked 差异只列不判，用于核对改动面。
     """
     res = {"ok": False, "reason": "", "sealed_changed": [], "sealed_missing": [],
            "sealed_extra": [], "tracked_changed": [], "tracked_missing": [],
-           "tracked_extra": [], "db": {}, "root_digest": "", "signed_at": ""}
+           "tracked_extra": [], "db": {}, "root_digest": "", "signed_at": "",
+           "strict": bool(strict)}
     mpath = os.path.join(root, MANIFEST)
     spath = os.path.join(root, SIGNATURE)
     if not os.path.exists(mpath) or not os.path.exists(spath):
@@ -256,10 +360,14 @@ def verify(root, db_path=None):
                            "policy_version": [old.get("policy_version"),
                                               snap["policy_version"]]}
     res["db"] = db_diff
-    res["ok"] = not (res["sealed_changed"] or res["sealed_missing"]
-                     or res["sealed_extra"])
+    sealed_bad = (res["sealed_changed"] or res["sealed_missing"]
+                  or res["sealed_extra"])
+    tracked_bad = (res["tracked_changed"] or res["tracked_missing"]
+                   or res["tracked_extra"])
+    res["ok"] = not sealed_bad and not (strict and tracked_bad)
     if not res["ok"]:
-        res["reason"] = "机制层与封签不一致"
+        res["reason"] = ("机制层与封签不一致" if sealed_bad
+                         else "判据插件与封签不一致（改规则必须重签）")
     return res
 
 
@@ -281,7 +389,12 @@ def restore(root, zip_path=None):
     zip_path = zip_path or os.path.join(root, SEALED_ZIP)
     if not os.path.exists(zip_path):
         return 0, ["缺归档 %s：从原始发布包重新解压" % zip_path]
-    allowed = set(sealed_paths(root))
+    # 用**清单里的键集合**，不能用磁盘扫描：被删除的文件已不在磁盘上，
+    # 扫描式 allowed 会把它们判成「非封签路径」而拒绝还原（v628 修）。
+    man, merr = load_manifest(root)
+    if not man:
+        return 0, [merr or "封签清单不可信"]
+    allowed = set(man.get("sealed") or {})
     n, errors = 0, []
     with zipfile.ZipFile(zip_path) as zf:
         for name in zf.namelist():

@@ -6,6 +6,7 @@
 字符出现在句末。
 """
 from plugins._lang import _p42_hy_ascii_periods
+from plugins import _lexicon
 
 RULE = "P42"
 RULES = [RULE]
@@ -28,11 +29,18 @@ RATIONALE = {
                     "136 号公告 hy 实测：两份 .docx 附件名的点被误判成句末英文句点，"
                     "而该串受 S08 verbatim 保护不能改稿），按缺陷族覆盖 "
                     ".docx/.pdf/.xls/.html，不按篇登记词形；负向对照见 "
-                    "selftest/_p42_file_ext_mask.py。",
+                    "selftest/_p42_file_ext_mask.py。"
+                    "REG89 阶段 5-a 射程复核（48 语向实测）：bn/ne/hi 句末本用 `।`，"
+                    "ar/fa 句末本用 ASCII `.`，ur 句末本用 `۔`（U+06D4，ar/fa 误用由 "
+                    "P70 管），ka/sw/ta/si/be 句末本用 ASCII `.`——这些语向不纳入本条："
+                    "纳入即整片误报。实测 bn/hi/ne/ur 正文残留的 8 个 ASCII `.` 全部是"
+                    "罗马节序号头（I. II. … VIII.），不是句末英文句点，无需新掩码。"
+                    "本条射程维持 hy 单语；句点体系扩写会写宽成空校验，收窄才防误报。",
 }
 
 
 def run(view, emit):
+    _lexicon.set_official_en(view)
     for art in view.articles:
         if "hy" not in art.parsed:
             continue

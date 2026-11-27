@@ -7,7 +7,6 @@
 from core.consts import (
     SCI_AUTHOR_L_RE, SCI_BINOMIAL_RE, SCI_STOPWORDS,
 )
-from plugins._shared import baseline_of
 
 RULE = "P65"
 RULES = [RULE]
@@ -44,11 +43,10 @@ def run(view, emit):
                 if a in SCI_STOPWORDS or b in SCI_STOPWORDS:
                     continue
                 names.update(["%s %s" % (a, b)])
-            if baseline_of(view, RULE, art.slug) is None:
-                for a, b, _abbr in SCI_AUTHOR_L_RE.findall(blk):
-                    if a in SCI_STOPWORDS or b in SCI_STOPWORDS:
-                        continue
-                    names.update(["%s %s L." % (a, b)])
+            for a, b, _abbr in SCI_AUTHOR_L_RE.findall(blk):
+                if a in SCI_STOPWORDS or b in SCI_STOPWORDS:
+                    continue
+                names.update(["%s %s L." % (a, b)])
             by_block.append(sorted(names))
         if not any(by_block):
             continue

@@ -179,6 +179,10 @@ def discover(kit_dir, tolerant=False):
     pdir = os.path.join(kit_dir, "plugins")
     if not os.path.isdir(pdir):
         raise PluginError("插件目录不存在：%s" % pdir)
+    # 注册表缺失/损坏时不做号段校验：否则 190 多个插件会因「未注册」集体
+    # 失败，工具在「还没 adopt」的半坏状态下连 doctor 都跑不起来。缺注册表
+    # 由 doctor（C01）与 integrity（封签）判红，不由装载器连坐。
+    registry_ok = not getattr(_consts, "REGISTRY_ERROR", "")
     disabled = disabled_plugins(kit_dir)
     plugins, skipped = [], []
     seen_ids, seen_rules = set(), {}
@@ -202,7 +206,7 @@ def discover(kit_dir, tolerant=False):
             info = _load_new(fp, raw, sha, kit_dir, base[:-3],
                              m.group(1), m.group(2))
             for r in info["rules"]:
-                if r not in _consts.KNOWN_RULES:
+                if registry_ok and r not in _consts.KNOWN_RULES:
                     raise PluginError("插件 %s 声明了未注册规则 %s"
                                       % (base, r))
                 if r in seen_rules:
@@ -247,6 +251,10 @@ def coverage(plugins):
     from core import consts as _consts
     declared = frozenset(r for p in plugins for r in p["rules"])
     declared |= frozenset(getattr(_consts, "CORE_RULES", ()))
+    if getattr(_consts, "REGISTRY_ERROR", ""):
+        # 没有注册表就没有「应有清单」，此时报「全部规则未声明」只是刷屏；
+        # 真实故障由 doctor 单列一条 C01。
+        return declared, frozenset()
     return declared, frozenset(_consts.KNOWN_RULES) - declared
 
 

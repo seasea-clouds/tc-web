@@ -20,7 +20,7 @@ import json
 import os
 import subprocess
 import sys
-import tempfile
+
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
 _KIT = os.path.dirname(_HERE)

@@ -1,5 +1,6 @@
 ---
 title: "Sprostredkovateľské provízie v Číne, tuzemské zúčtovanie a denník poplatkov"
+slug: "referral-commissions-china-compliant-settlement"
 date: "2027-04-20"
 category: "E-commerce"
 excerpt: "Provízia sa uzatvára v tuzemsku, počíta z priradeného obratu, po zrážke dane sa mesačne vypláca v jüanoch a faktúry s dokladmi sa archivujú. Dohoda, faktúra a systém musia súhlasiť."
@@ -24,7 +25,7 @@ Poradie 5 uzlov je priradenie, dohoda, zrážka, vyplatenie a archivácia, prič
 
 - Priradenie obratu: objednávka sa cez sprostredkovateľský odkaz priradí sprostredkovateľovi, pravidlo priradenia sa zaznamená v dohode a systéme, ako podklad slúži prehľad priradení.
 - Provízna dohoda: uzatvára sa s tuzemským zúčtovacím subjektom, nie so zahraničným subjektom; provízia sa počíta z priradeného obratu, ako podklad slúži dohoda o sprostredkovaní.
-- Zrážka dane z príjmov: ide sa cestou priamej tuzemskej zrážky, zrážka a odvod prebiehajú podľa zákona, priznanie sa podáva ako príjem z odmeny za služby, ako podklad slúži doklad o zrážke.
+- Zrážka dane z príjmov: ide sa cestou priamej tuzemskej zrážky, zrážka a odvod prebiehajú podľa zákona, vyhlásenie sa podáva ako príjem z odmeny za služby, ako podklad slúži doklad o zrážke.
 - Vyplatenie v jüanoch: po dokončení zrážky a odvodu sa mesačne vypláca v jüanoch, príjemca, suma a obdobie sa zhodujú, ako podklad slúži záznam o vyplatení.
 - Archivácia dokladov: faktúry za províziu a doklady o zrážke sa uchovávajú spolu po obdobiach, doklad sa vystavuje ku každej faktúre, ako podklad slúži faktúra za obdobie.
 
@@ -32,7 +33,7 @@ Postup plynie v poradí bez preskakovania; zrážku vykonáva tuzemský subjekt 
 
 Na stránke faktúr a dokladov o zrážke sú v 3 stĺpcoch číslo faktúry, zrazená daň (jüan) a položka poplatkov zapísané 2 riadky: ZD202609-011, 768,00, poplatok za colné odbavenie; ZD202609-012, 324,00, poplatok za skladové operácie. V päte stránky je poznámka, že ide o ukážku rozhrania systému zobrazujúcu faktúru, DPH a stav.
 
-Skupina charakter príjmu uvádza 3 body: ide o poplatok za služby, nie o maržu z prepredaja, a všetky záznamy zostávajú konzistentné. Skupina úrovní je pevné systémové zastropovanie: úrovne tímu sú najviac 2, odmena sa počíta len z priradeného obratu a nie podľa počtu osôb, konfigurácia stropu je uložená. Skupina zrážky stojí na priamej tuzemskej zrážke: zrážku vykonáva tuzemský subjekt, priznanie sa podáva ako príjem z odmeny za služby a rozhoduje výklad príslušného daňového úradu.
+Skupina charakter príjmu uvádza 3 body: ide o poplatok za služby, nie o maržu z prepredaja, a všetky záznamy zostávajú konzistentné. Skupina úrovní je pevné systémové zastropovanie: úrovne tímu sú najviac 2, odmena sa počíta len z priradeného obratu a nie podľa počtu osôb, konfigurácia stropu je uložená. Skupina zrážky stojí na priamej tuzemskej zrážke: zrážku vykonáva tuzemský subjekt, vyhlásenie sa podáva ako príjem z odmeny za služby a rozhoduje výklad príslušného daňového úradu.
 
 Charakter príjmu sa určuje najprv preto, lebo poplatok za služby a obchodná marža stoja v dohode, faktúre a zdaňovaní na odlišných miestach; pri zmene zaradenia sa musí zmeniť aj položka, suma dane a doklad v každom ďalšom riadku. Práve to znamená, že dohoda, faktúra a systém musia súhlasiť. Pri realizácii vykonáva tuzemský subjekt mesačnú zrážku a doklad sa vystavuje ku každej faktúre; ak má namiesto toho nastúpiť model rozdelenia flexibilného zamestnávania, treba pred rozhodnutím spoločne predložiť plán prechodu a porovnanie nákladov. Cesta zrážky je súčasťou dodávky, vzor dohody o sprostredkovaní poskytuje náš tím; až keď sú tieto 2 veci na mieste, 5 uzlov získa oporu.
 
@@ -48,7 +49,7 @@ Názov rozhrania znie Podrobnosti faktúry a zrazená daň, spolu 6 záznamov, 2
 - ZD202609-012, 324,00, poplatok za skladové operácie, 5400,00, 6%, 5724,00, na stiahnutie, uhradené.
 - ZD202609-013, 576,00, poplatok za sprostredkovanie, 9600,00, 6%, 0,00, ešte nevytvorený, neuhradené.
 - ZD202609-014, 192,00, poplatok za používanie systému, 3200,00, 6%, 3392,00, na stiahnutie, uhradené.
-- ZD202609-015, 288,00, poplatok za colné priznanie, 4800,00, 6%, 5088,00, na stiahnutie, uhradené.
+- ZD202609-015, 288,00, poplatok za colné vyhlásenie, 4800,00, 6%, 5088,00, na stiahnutie, uhradené.
 - ZD202609-016, 372,00, poplatok za tuzemské doručenie, 6200,00, 6%, 0,00, ešte nevytvorený, neuhradené.
 
 Kto si prepočíta 4 uhradené riadky, uvidí vzorec: uhradená suma sa rovná zdaniteľnej sume plus sume DPH, 12800,00 plus 768,00 je 13568,00, 5400,00 plus 324,00 je 5724,00, 3200,00 plus 192,00 je 3392,00, 4800,00 plus 288,00 je 5088,00. Pri 2 neuhradených riadkoch je uhradená suma vždy 0,00 a doklad je označený ako ešte nevytvorený.
@@ -68,7 +69,7 @@ To je aj dôvod, prečo sa v 5 uzloch nesmie preskakovať: priradenie obratu, pr
 Pred spustením sa zosúlaďujú 3 miesta, v poradí najprv dohoda, potom postup a napokon denník poplatkov.
 
 - Zaznamenať pravidlo priradenia v dohode o sprostredkovaní a v systéme priradenia a jasne určiť, že dohoda sa uzatvára s tuzemským zúčtovacím subjektom.
-- Určiť postup zrážky a vyplatenia: mesačná zrážka, priznanie ako príjem z odmeny za služby, odvod do 15. dňa nasledujúceho mesiaca, záznam o vyplatení a doklad o zrážke sa archivujú v tej istej dávke.
+- Určiť postup zrážky a vyplatenia: mesačná zrážka, vyhlásenie ako príjem z odmeny za služby, odvod do 15. dňa nasledujúceho mesiaca, záznam o vyplatení a doklad o zrážke sa archivujú v tej istej dávke.
 - Vybudovať denník poplatkov a najprv ustáliť polia číslo faktúry, položka poplatkov, sadzba dane, suma dane, uhradená suma a stav dokladu, až potom hovoriť o spustení.
 
 Pri porovnávaní ponúk sa aj riešenie provízií od protistrany položku po položke prenesie do tohto denníka, sleduje sa, či dohoda, faktúra a systém odkazujú na ten istý poplatok za služby, cena ponuky je len jedným stĺpcom. Ak sa 3 miesta nezhodujú, najčastejším výsledkom je, že sa charakter príjmu zapíše ako marža, položka faktúry nesedí s dohodou a doklad už nejde doplniť.

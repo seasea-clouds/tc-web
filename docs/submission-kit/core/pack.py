@@ -1,20 +1,21 @@
 # -*- coding: utf-8 -*-
 """core/pack.py — 打包与分发（内容包 + 工具包）。
 
-打包是文件系统作业：不建 PackageView、不判红，只把 `core.checker` 的结论
-当准入闸门。
+打包是文件系统作业：不建 PackageView、不跑内容机检，只做打包器自身的
+结构/安全门禁（kind/slug 唯一性、48 语文件完整、私钥硬闸、路径安全、体积上限）。
+48 语完整性按**实际文件**核对（`content/<lang>/<slug>.mdx` 存在且非空），
+不采信 `submission.json.locales` 的声明；内容机检仍由编写人在打包前用
+`check <单篇路径>` 自行完成，不在 pack 环节重复执行。
 
-条目级预检、半成品跳过、kind/slug 唯一性、双包落 <投稿目录>/dist/、固定
-ZipInfo 可重现、拒绝静默覆盖。dist/ 产物区口径：工具包
-与全文档包各保留最近 KEEP_ZIPS(=5) 份，**其余任何 zip（单篇单包、历史命名）
-每轮打包清除**，按磁盘 mtime 判新旧；manifest.json 与非 zip 文件不动。
-工具包里的 DB 是 VACUUM INTO 出来的净化单文件快照（无 -wal/-shm），
-manifest.json 记录双包 sha256 与策略版本。
+半成品跳过、kind/slug 唯一性、48 语完整、双包落 <投稿目录>/dist/、固定 ZipInfo 可重现、
+拒绝静默覆盖。dist/ 产物区口径：工具包与全文档包各保留最近 KEEP_ZIPS(=5) 份，
+**其余任何 zip（单篇单包、历史命名）每轮打包清除**，按磁盘 mtime 判新旧；
+manifest.json 与非 zip 文件不动。工具包里的 DB 是 VACUUM INTO 出来的净化
+单文件快照（无 -wal/-shm），manifest.json 记录双包 sha256 与策略版本。
 
-零批量删除原则：逐条预检直接对每个条目的 work/ 根跑 `core.checker`（与 --all
-完全同口径），进包门禁同样逐条目复核（**不把整库拼成一个"包"读**，否则整库
-超过单包 60 MB 上限就永远打不出包）。逐条预检直接对 work/ 根跑 checker，
-不反复清空 staging——单轮删除量会越过平台批量删除阈值，导致半包。
+零批量删除原则：逐条 copytree 到 staging 时**不把整库拼成一个"包"读**（否则
+整库超过单包 60 MB 上限就永远打不出包），也不反复清空 staging——单轮删除量
+会越过平台批量删除阈值，导致半包。
 """
 # 治理声明：本文件属机制层，不承载策略数据；改动须走 README「治理」节的 L3 流程
 #（先登记理由 → 行为级等价断言 → selftest --kit 全量），提交说明带 [arch]
@@ -28,7 +29,7 @@ import shutil
 import zipfile
 
 from core import tmp_root as _tmp_root
-from core import checker as _checker
+from core.consts import LOCALES
 from core.model import Context
 from core.pkgio import pack_package
 
@@ -47,7 +48,8 @@ KIT_DATA_KEEP = {
     "data/integrity.sig",
     "data/sealed.zip",
     "data/trust_anchor.txt",
-    "data/whitelist.json",
+    # 规则注册表：接收方要靠它校验插件指纹，缺了等于「白名单无从比对」
+    "data/rules_registry.json",
 }
 # 私钥类材料硬闸：命中即拒绝打包（不静默跳过，避免「以为没打进去」）
 KIT_SECRET_DIRS = {".keys"}
@@ -93,7 +95,7 @@ def _reject_secret(arc):
     parts = arc.replace("\\", "/").split("/")
     if any(p in KIT_SECRET_DIRS for p in parts):
         raise RuntimeError(
-            "拒绝打包：%s 属密钥材料（私钥只留发布方本机；"
+            "拒绝打包：%s 属密钥材料（私钥只留维护者本机；"
             "接收方用包内公钥验签即可，不需要私钥）" % arc)
     if arc.lower().endswith(KIT_SECRET_SUFFIX):
         raise RuntimeError(
@@ -121,6 +123,14 @@ def kit_skip(fn, arc):
     return None
 
 
+class SealStale(RuntimeError):
+    """封签与当前判据不一致（编写者已 rules import、维护者尚未重签）。
+
+    工具包分发包不能带着过期封签出去；但**稿件包**不含判据代码，不应因此
+    被阻塞——编写者随时导入判据后仍要能打包交稿，见 pack_all 的分级处理。
+    """
+
+
 def _seal_gate(kit_dir):
     """出包前校验封签：带着过期封签分发，等于把「验不过」发给所有人。"""
     from core import integrity
@@ -130,8 +140,8 @@ def _seal_gate(kit_dir):
         return
     res = integrity.verify(kit_dir)
     if not res.get("ok"):
-        raise RuntimeError(
-            "%s；先跑 python submit.py tools integrity_seal sign 再打包"
+        raise SealStale(
+            "%s；先跑 python submit.py tools integrity_seal sign 再重出工具包"
             % (res.get("reason") or "封签校验失败"))
 
 
@@ -139,7 +149,7 @@ def pack_kit(kit_dir, out_dir, force=False):
     """工具包 zip：净化后的单文件 DB 快照 + 封签四件 + 可重现 ZipInfo。
 
     分发包口径（2026-11-16）：**带公钥与封签，绝不带私钥**——接收方解压即可
-    `submit.py integrity` 验真伪；私钥留在发布方 `.keys/`，不入包、不入库。
+    `submit.py integrity` 验真伪；私钥留在维护者 `.keys/`，不入包、不入库。
     """
     _seal_gate(kit_dir)
     from core import db
@@ -185,6 +195,24 @@ def pack_kit(kit_dir, out_dir, force=False):
         _tmp_root.archive_delete(tmp, label="kit-db-snap")
 
 
+def _lang_files_problem(art, slug):
+    """48 语文件完整性：缺任一语向的 `<slug>.mdx` 或文件为空 → 半成品。
+
+    只认磁盘上的实际文件，`submission.json.locales` 只是声明，不能作为放行
+    依据（补语漏落盘、空文件、删语后未改元数据都会让声明与实际脱节）。
+    """
+    content = os.path.join(art, "content")
+    missing = []
+    for lg in LOCALES:
+        fp = os.path.join(content, lg, slug + ".mdx")
+        if not os.path.isfile(fp) or os.path.getsize(fp) == 0:
+            missing.append(lg)
+    if missing:
+        return "48 语文件不完整（缺 %d 语：%s）" % (
+            len(missing), ", ".join(missing[:8]))
+    return None
+
+
 def collect(repo_root, only=None, slugs=None):
     """[(kind, slug, 源路径, 问题)]：条目级问题只记录不杀全包。"""
     found, seen, problems = [], {}, {}
@@ -217,6 +245,8 @@ def collect(repo_root, only=None, slugs=None):
                             problem = "submission.json 缺 slug 字段"
                     except (ValueError, OSError) as exc:
                         problem = "submission.json 无法解析（%s）" % exc
+                if not problem:
+                    problem = _lang_files_problem(art, slug)
                 if problem:
                     problems[slug] = problem
                 elif slug in seen:
@@ -228,16 +258,40 @@ def collect(repo_root, only=None, slugs=None):
     return found, problems
 
 
-def precheck(kit_dir, art, staging, kind, slug, ctx):
-    """单条目预检：0 error 才进包。直接调内核，不再起子进程。"""
-    _tmp_root.archive_delete(staging, label="pack-staging")
-    dest = os.path.join(staging, kind, slug)
-    os.makedirs(os.path.dirname(dest), exist_ok=True)
-    shutil.copytree(art, dest)
-    fs = _checker.check(staging, ctx=ctx)
-    errs = [f for f in fs if f.severity == "error"]
-    _tmp_root.archive_delete(staging, label="pack-staging")
-    return len(errs), (errs[0].detail if errs else "")
+def validate_root(root):
+    """校验 pack 的 --root 是不是投稿目录（防产物落到错误位置）。
+
+    投稿目录 = 其下直接有 `blogs/` 和/或 `regulations/`。产物写 `<root>/dist/`，
+    所以传错目录会在那个错误目录里凭空生成一个 dist/（2026-11-18 曾在仓库根
+    留下 v461–v509 的残留，只靠 .gitignore 兜底，入口没有任何提示）。
+
+    返回 `(ok, message)`：ok 为 True 时 message 为空；否则 message 是可直接
+    展示给调用者的修复指引。三种反例各有针对性提示：
+      * 传了项目根（其下 `submission/` 才是投稿目录）→ 指出应传 --root=<root>/submission；
+      * 空目录 / 别的目录（无 blogs 也无 regulations）→ 指出投稿目录的判据；
+      * 路径不存在 / 不是目录 → 原样说明。
+
+    只做路径判定，不写盘、不依赖 core 之外任何模块，便于自检臂直接单测。
+    """
+    if not root or not os.path.isdir(root):
+        return False, "--root 不存在或不是目录：%s" % _disp_rel(root or "<空>")
+    has_blogs = os.path.isdir(os.path.join(root, "blogs"))
+    has_regs = os.path.isdir(os.path.join(root, "regulations"))
+    if has_blogs or has_regs:
+        return True, ""
+    # 传了项目根：submission/ 下才是两线目录，精确指出应传的路径
+    inner = os.path.join(root, "submission")
+    if (os.path.isdir(os.path.join(inner, "blogs"))
+            or os.path.isdir(os.path.join(inner, "regulations"))):
+        return False, (
+            "--root 指向的是项目根（产物会写到 %s）。本工具的 --root 是投稿目录，"
+            "其下直接含 blogs/ 与 regulations/。请改传：--root=%s"
+            % (_disp_rel(os.path.join(root, "dist")), _disp_rel(inner)))
+    return False, (
+        "--root 不是投稿目录：%s 下既没有 blogs/ 也没有 regulations/。\n"
+        "  产物会写到 <root>/dist/，传错会在错误位置凭空生成 dist/。"
+        "请指向含 blogs/ 或 regulations/ 的投稿目录（通常是 <项目根>/submission）。"
+        % _disp_rel(root))
 
 
 def next_zip_name(out_dir):
@@ -299,6 +353,10 @@ def pack_all(repo_root, kit_dir, only=None, slugs=None, strict=False,
     from core import db
     # 2026-11-07 投稿目录定稿：repo_root 即投稿目录（其下 blogs/、regulations/
     # 是内容，dist/ 是本命令的产物区），不再写 <root>/submission/。
+    # 执行层再校验一次：即使有人绕过 cmd_pack 直接调用，也不会在错误位置建 dist/。
+    ok, why = validate_root(repo_root)
+    if not ok:
+        raise RuntimeError("[pack] %s" % why)
     out_dir = os.path.join(repo_root, "dist")
     # staging：中间过程产物，一律 <tmp>/pack-staging（2026-11-09 用户
     # 指令：未指定 --tmp 报错，与其他必要参数一致）。
@@ -308,16 +366,37 @@ def pack_all(repo_root, kit_dir, only=None, slugs=None, strict=False,
     ctx = Context(kit_dir=kit_dir, policy=pol, rules_filter=None)
     say = (lambda *a: None) if quiet else (lambda *a: print(*a, flush=True))
 
-    kit = pack_kit(kit_dir, out_dir, force=force)
-    say("[pack] 工具包 %s（%d 文件，%.2f MB，策略版本 v%s）"
-        % (_disp_rel(kit["path"]), kit["files"],
-           kit["bytes"] / 1048576.0, kit["version"]))
+    # 封签分级（2026-11-19 用户指令：编写者发现问题随时导入，不等维护者统一）：
+    #   · --kit-only = 出工具包分发包 → 封签必须一致，否则接收方验不过，直接拒绝；
+    #   · 出稿件包 → 判据代码不随稿件包分发，封签过期不该阻塞交稿。跳过工具包
+    #     重出（dist/ 里已有版本原样保留），只出全文档包；manifest 的 kit 字段
+    #     续用上一轮记录，并在 stderr 说清「维护者重签后再 --kit-only 重出」。
+    kit = None
+    try:
+        kit = pack_kit(kit_dir, out_dir, force=force)
+        say("[pack] 工具包 %s（%d 文件，%.2f MB，策略版本 v%s）"
+            % (_disp_rel(kit["path"]), kit["files"],
+               kit["bytes"] / 1048576.0, kit["version"]))
+    except SealStale as exc:
+        if kit_only:
+            raise
+        say("[pack] 封签与当前判据不一致：%s" % exc)
+        say("[pack] 稿件包不含判据代码，本次照常出稿；工具包保持 dist/ 现有版本，"
+            "维护者重签后再 `pack --kit-only` 重出。")
+    prev_man = _read_manifest(out_dir)
+    if kit is not None:
+        kit_rec = {k: kit[k] for k in ("name", "sha256", "files",
+                                       "bytes", "build_id", "version")}
+    else:
+        kit_rec = (prev_man or {}).get("kit")
+        if kit_rec:
+            say("[pack] manifest 续用上一轮工具包记录：%s"
+                % kit_rec.get("name"))
     man = {"generated": datetime.date.today().isoformat(),
            "policy_version": pol.policy_version,
            "schema_version": pol.schema_version,
            "applied_cs": pol.applied_cs,
-           "kit": {k: kit[k] for k in ("name", "sha256", "files",
-                                       "bytes", "build_id", "version")},
+           "kit": kit_rec,
            "checker_sha256": _sha(os.path.join(kit_dir, "submit.py")),
            "submission": None, "skipped": [], "entries": []}
     if kit_only:
@@ -358,16 +437,9 @@ def pack_all(repo_root, kit_dir, only=None, slugs=None, strict=False,
                 % (kind, slug, rel, problem))
             man["skipped"].append({"slug": slug, "reason": problem})
             continue
-        if not incremental:
-            n_err, first = precheck(kit_dir, art, staging, kind, slug, ctx)
-            if n_err:
-                if strict:
-                    raise RuntimeError("%s 预检失败：%s" % (slug, first))
-                say("[pack] 跳过 %-10s %-52s <- %s（预检 %d error：%s）"
-                    % (kind, slug, rel, n_err, first[:100]))
-                man["skipped"].append({"slug": slug,
-                                       "reason": "预检 %d error：%s" % (n_err, first[:100])})
-                continue
+        # 内容机检不在打包环节执行：由编写人在打包前用 check <单篇路径> 自行完成。
+        # pack 只做打包器自身的结构/安全门禁（problem 分支：kind/slug 唯一性、
+        # 私钥硬闸、路径安全），不再因内容 error 跳过条目。
         packed.append((kind, slug, art))
         man["entries"].append({"kind": kind, "slug": slug, "source": rel})
         say("[pack] 收入 %-10s %-52s <- %s" % (kind, slug, rel))
@@ -384,17 +456,8 @@ def pack_all(repo_root, kit_dir, only=None, slugs=None, strict=False,
     # 60MB / 5000 文件是 S06 给「单篇投稿包 vs 站点上传接口」定的上限，
     # 套在整库合集上会让条目一多就永远打不出包——实测 3811 文件 / 82.6MB
     # 被 load_package 判「解压后总大小 60.0 MB 超过 60 MB」，pack 直接中止。
-    # 非 --incremental 时每条已在 precheck 里以 copytree 后的形态单独 check
-    # 过 0 error，这里只需补上 --incremental 跳过的那部分复核。
-    if incremental:
-        bad = []
-        for kind, slug, _art in packed:
-            fs = _checker.check(os.path.join(staging, kind, slug), ctx=ctx)
-            bad.extend(f for f in fs if f.severity == "error")
-        if bad:
-            _tmp_root.archive_delete(staging, label="pack-staging")
-            raise RuntimeError("全量自检未通过（%d error，首条：%s），未出投稿包"
-                               % (len(bad), bad[0].detail[:120]))
+    # 内容机检（checker.check）已移出打包环节，由编写人打包前自行完成；
+    # pack 只负责文件系统作业与结构门禁。
 
     zip_name = out or next_zip_name(out_dir)
     if not zip_name.endswith(".zip"):

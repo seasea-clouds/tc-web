@@ -1,5 +1,6 @@
 ---
 title: "Dva kanály, 1210 a 9610, vaše colné číslo platí len pre jeden z nich"
+slug: mode-1210-vs-9610-compared-for-exporters
 date: "2027-01-19"
 category: E-commerce
 excerpt: "Poznámka pri 0404.9000: len online, colný sklad; priama zásielka 9610 nepatrí medzi otvorené trasy, ostáva 1210. Oboje z 2014; návrat: č. 45 z 2020, žiadosť do 30 dní, príchod do 45."
@@ -22,7 +23,7 @@ Otázka výberu kanála znie zvyčajne, kde je preprava lacnejšia a kde je rýc
 
 Tovar režimu 1210 vstupuje do zóny ako prvý. Celá zásielka v stave colného skladu vstupuje do zóny pod osobitným colným dohľadom alebo do logistického centra s colným skladom; predáva sa jedna objednávka, jedna vychádza, vnútorné doručovanie je stabilné na úrovni dní. Tovar 9610 je v zahraničí; po vzniku objednávky sa posiela priamou zásielkou, medzinárodná preprava plus colné vybavenie, a výkyv lehôt je veľký. Pri tom istom výrobku rozhoduje, či tovar leží v čínskom colnom sklade alebo v sklade v zahraničí, a toto je východiskový bod všetkých rozdielov dvoch kanálov.
 
-![Porovnanie kanálov 1210 a 9610: miesto zásoby, lehota, pozitívny zoznam a návrat; 0404.9000 otvára len 1210](/images/insights/mode-1210-vs-9610-compared-for-exporters/side-side-comparison-mode-1210-mode.webp)
+![Porovnanie kanálov 1210 a 9610: miesto zásoby, lehota, pozitívny zoznam a návrat; 0404.9000 otvára len 1210](/images/insights/mode-1210-vs-9610-compared-for-exporters/mode-1210-vs-9610-compared-for-exporters-fig-01.webp)
 
 Miesto zásoby určuje tvar niekoľkých vecí ďalej: výkyv lehôt, cestu návratu, rytmus dokumentov a to, ktorým reťazcom sa pôjde napojenie systémov.
 
@@ -42,7 +43,7 @@ Poznámka nehovorí o sadzbách, odpovedá iba na otázku kanála. Keď sa povie
 
 Návrat režimu 1210 má jasné číslo dokumentu a okno. Oznámenie Generálneho colného riaditeľstva ČĽR č. 45 z roku 2020 otvorilo pre návrat maloobchodného dovozu dve lehoty: do 30 dní od prepustenia deklaračného zoznamu požiadať colnicu o konanie návratu, a do 45 dní dopraviť tovar na pôvodné miesto výkonu colného dohľadu, do pôvodnej zóny pod osobitným colným dohľadom alebo do logistického centra s colným skladom (typ B). Pri návrate, ktorý prejde týmto postupom, sa príslušná daň neplatí a už použitá ročná kvóta sa primerane upraví. Tovar už v zóne je, a návrat je krátky reťazec.
 
-Tovar 9610 je v zahraničí, a návrat znamená ďalší cezhraničný úsek: vývozné priznanie, medzinárodná preprava a čas, všetko sa násobí. Okno je stále to z oznámenia č. 45, ale dopraviť tovar do 45 dní na pôvodné miesto dohľadu znamená pre tovar, ktorý ešte leží v zahraničnom sklade, ďalšiu medzinárodnú cestu. Je aj ďalšia vrstva: poznámka zamyká colné číslo pre 1210, priama zásielka 9610 od začiatku nepatrila medzi otvorené trasy, a o jej návrate sa nedá ani hovoriť.
+Tovar 9610 je v zahraničí, a návrat znamená ďalší cezhraničný úsek: vývozné vyhlásenie, medzinárodná preprava a čas, všetko sa násobí. Okno je stále to z oznámenia č. 45, ale dopraviť tovar do 45 dní na pôvodné miesto dohľadu znamená pre tovar, ktorý ešte leží v zahraničnom sklade, ďalšiu medzinárodnú cestu. Je aj ďalšia vrstva: poznámka zamyká colné číslo pre 1210, priama zásielka 9610 od začiatku nepatrila medzi otvorené trasy, a o jej návrate sa nedá ani hovoriť.
 
 ## Krok rozhodnutia: skontrolovať každý SKU, potom určiť kanál
 
@@ -52,15 +53,15 @@ Kontrola každého SKU je tvrdá požiadavka. Jedno klasifikačné rozhodnutie n
 
 ## V prvej fáze sa volí raz, a kam sa to zapisuje
 
-Voľba kanála nie je prepínač, ktorý sa na prevádzkovej úrovni mení kedykoľvek. V prvej fáze sa zvolený spôsob dohľadu zapisuje do evidencie a do štruktúry predajne: predajňa, SKU, reťazec plnenia a priznávania sa stavajú podľa tohto meradla, a párovanie troch dokumentov stavia sa na ňom. Voľba hneď klesá do štruktúry; to je význam „volí sa raz“.
+Voľba kanála nie je prepínač, ktorý sa na prevádzkovej úrovni mení kedykoľvek. V prvej fáze sa zvolený spôsob dohľadu zapisuje do evidencie a do štruktúry predajne: predajňa, SKU, reťazec plnenia a deklarovania sa stavajú podľa tohto meradla, a párovanie troch dokumentov stavia sa na ňom. Voľba hneď klesá do štruktúry; to je význam „volí sa raz“.
 
-Nie je to zamknutie. Ak sa neskôr naozaj otvorí druhý kanál, zmeny padnú na reťazec plnenia a priznávania, a fasáda predajne či stránky výrobku to nemusia pocítiť; ale náklad presunu uprostred cesty je mnohonásobne vyšší než správna voľba v prvej fáze. Najprv zvoliť správne, potom hovoriť o rozšírení.
+Nie je to zamknutie. Ak sa neskôr naozaj otvorí druhý kanál, zmeny padnú na reťazec plnenia a deklarovania, a fasáda predajne či stránky výrobku to nemusia pocítiť; ale náklad presunu uprostred cesty je mnohonásobne vyšší než správna voľba v prvej fáze. Najprv zvoliť správne, potom hovoriť o rozšírení.
 
 ## Ako dve cesty stoja spolu: A a B
 
 Dva návrhy si neodporujú. A: zvyšok zahraničných dodávok ide tiež cez 1210, cesta je jednotná, evidencia a párovanie troch dokumentov sa používajú ako jedna súprava. B: SKU pod číslami, ktoré nie sú 0404, napríklad starostlivosť o pleť, ktorým bol riadok skontrolovaný a nemajú väzbu poznámkou, idú cez 9610. Jedna predajňa a rôzne SKU môžu mať rôzne cesty, podmienkou je, že bol skontrolovaný každý riadok, a skúsenosť kategórie nenahradzuje kontrolu na úrovni riadku.
 
-Súbežné fungovanie má ešte jednu podmienku: dokumenty a spôsob priznávania každého kanála sa plnia podľa vlastného kódu; miešať cesty pri plnení je v poriadku, miešať priznania nie.
+Súbežné fungovanie má ešte jednu podmienku: dokumenty a spôsob deklarovania každého kanála sa plnia podľa vlastného kódu; miešať cesty pri plnení je v poriadku, miešať deklarácie nie.
 
 ## Čo napísať na stranu, ktorá ide priechodu a platforme
 

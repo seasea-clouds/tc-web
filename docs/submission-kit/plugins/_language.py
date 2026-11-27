@@ -8,7 +8,6 @@
 #（commit-msg 钩子强制）。策略变更请改 plugins/ 判据或经 submit.py glossary 改库。
 
 from plugins import _lexicon
-from plugins._shared import baseline_of
 from core.textutil import (
     ascii_letter_count as _ascii_letter_count,
     blocks as _blocks,
@@ -28,17 +27,14 @@ def check_self_country(view, m_body, parsed, slug, master_lang, add, legacy=None
 
     条件完全由 zh 母版内容驱动（任一块含「我国」），跨篇通用、不绑篇目锚点；
     `add` 为 (rule, severity, slug, detail) 回调，便于负向电池用内存串直测。
-    某篇是否已交付存量欠账查 baseline 表（`legacy` 可显式注入给自检臂）。
+    `legacy` 是显式注入的篇目名单（自检臂用），判据不再读库内欠账表。
     """
     self_blocks = [bi for bi, blk in enumerate(_blocks(m_body))
                    if "我国" in blk]
     if not self_blocks:
         return
     is_reg = "<!-- original -->" in m_body
-    if legacy is not None:
-        is_legacy = slug in legacy
-    else:
-        is_legacy = baseline_of(view, "P66", slug) is not None
+    is_legacy = legacy is not None and slug in legacy
     table = _lexicon.shaped(view)["country"]
     flagged = []
     for lg in sorted(parsed):
@@ -107,9 +103,8 @@ def check_arabic_stop(view, parsed, slug, add):
     射程＝title + excerpt + references[].title + 正文（含图注 alt）。
     按语向聚合报一处，红面给出字段与总处数；`parsed` 与 P68/P69 同构，
     `add` 为 (rule, severity, slug, detail) 回调，便于负向电池直测。
-    已交付存量欠账查 baseline 表，降级为一条聚合 warning（判据不写 slug）。
+    全语向一律 error：不再有按篇降级。
     """
-    is_legacy = baseline_of(view, "P70", slug) is not None
     flagged = []
     for lg in sorted(parsed):
         if lg in ARABIC_STOP_OK:
@@ -129,19 +124,11 @@ def check_arabic_stop(view, parsed, slug, add):
         hits = [(name, n) for name, n in hits if n]
         if not hits:
             continue
-        if is_legacy:
-            flagged.append(lg)
-            continue
         add("P70", "error", "%s/%s" % (lg, slug),
             "%s 处出现阿拉伯句号 U+06D4（۔）；该字符只属乌尔都语正字法，"
             "%s 语句末应写「.」（共 %d 处）"
             % ("、".join(name for name, _ in hits), lg,
                sum(n for _, n in hits)))
-    if is_legacy and flagged:
-        add("P70", "warning", "package/%s" % slug,
-            "已交付成品存留 %d 个语向的乌尔都语句号 U+06D4（۔）历史写法"
-            "（按不追溯铁律仅登记欠账，不改动成品）；新篇一律 error"
-            % len(flagged))
 
 
 def check_latin_orthography(view, parsed, slug, add):

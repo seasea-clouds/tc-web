@@ -16,25 +16,10 @@ import re
 #
 # ¥ 既是人民币符号也是日元符号，$ 是美元符号——它们不算外币，但仍然是
 # 符号写法，同样要求改成文字，因此分开提示，便于作者判断怎么改。
-ALLOWED_MONEY_SIGNS = ("$", "\u00a5")           # 美元 / 人民币
 
 
-FOREIGN_MONEY_SIGNS = (
-    "\u20ac", "\u00a3", "\u20bd", "\u20a9", "\u20b9", "\u0e3f", "\u20ba",
-    "\u20ab", "\u20b4", "\u20a6", "\u20aa", "\u20b1", "\u00a2",
-    "\u20a3", "\u20a4", "\u20a8", "\u20ae", "\u20af", "\u20b0", "\u20b2",
-    "\u20b8", "\u20b5",
-    "z\u0142", "K\u010d", "kr", "Fr.", "CHF", "R$", "Rp",
-    "\u043b\u0432", "Ft", "lei", "TL", "\u20ef", "z\u0142.", "K\u010d.",
-)
 
 
-CURRENCY_ISO_CODES = (
-    "USD", "EUR", "GBP", "JPY", "CNY", "RMB", "KRW", "RUB", "INR", "CHF",
-    "THB", "VND", "TRY", "UAH", "PLN", "CZK", "SEK", "NOK", "DKK", "AUD",
-    "CAD", "SGD", "MYR", "IDR", "BRL", "MXN", "ZAR", "AED", "ILS", "HKD",
-    "TWD", "NZD", "PHP", "NGN", "PKR", "BDT",
-)
 
 
 # 数字形态：以数字开头，后接数字 / 千分位 / 小数点，可含窄空格与不换行空格。
@@ -68,4 +53,4 @@ _CJK_CONT = (
 _MONEY_POST = r"(?!(?:[^\W\d_])(?<!" + _CJK_CONT + r"))"
 
 
-__all__ = ['ALLOWED_MONEY_SIGNS', 'CURRENCY_ISO_CODES', 'FOREIGN_MONEY_SIGNS', '_CJK_CONT', '_DIGIT_NEAR_RE', '_MONEY_NUM', '_MONEY_POST', '_MONEY_PRE']
+__all__ = ['_CJK_CONT', '_DIGIT_NEAR_RE', '_MONEY_NUM', '_MONEY_POST', '_MONEY_PRE']

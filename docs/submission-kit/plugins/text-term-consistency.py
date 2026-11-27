@@ -34,13 +34,11 @@ NEEDS = ["body"]
 SEVERITY = "warning"
 ENABLED = True
 
-# 已知「机制在、数据空」：本条只对 `term-zh` 的 meta.variants / meta.forbidden
-# 开火，而 2026-11-16 实测这两张清单全库 0 条（登记门槛要求错形在语料里真实
-# 出现过、正形同语向 ≥3 次，属挖词工作）。写入口已补：
-#   glossary term --term <概念> --lang <语向> --add-forbidden/--add-variant
-# 数据落地后**删掉这一行**——`selftest/_rule_data.py` 会要求「有标记必为空、
-# 空则必有标记」，两边都对不上就红。
-DATA_PENDING = "term-zh 的 variants/forbidden 全库 0 条，待按语向挖词"
+# 2026-11-18：`term-zh` 的 variants / forbidden 已按语向落地（首轮挖词完成），
+# 原先的 `DATA_PENDING` 标记据此移除——`selftest/_rule_data.py` 要求「有标记必为
+# 空、空则必有标记」，数据落地后继续挂着标记会反向报红（W4）。后续若再遇到
+# 「机制在、数据空」，仍按同一约定重新登记标记。
+# 写入口：glossary term --term <概念> --lang <语向> --add-forbidden/--add-variant
 
 COVERAGE = {"langs": "all", "zones": ["frontmatter", "metadata", "body"]}
 

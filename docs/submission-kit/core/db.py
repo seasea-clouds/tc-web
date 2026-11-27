@@ -202,7 +202,7 @@ def payload_of(term_id, section, options_json, note, anchors, forms):
 PolicyView = namedtuple(
     "PolicyView",
     "policy_version schema_version build_id applied_cs spec contracts forms "
-    "locales plugin_meta lexicons baseline db_path")
+    "locales lexicons db_path")
 # 说明：PolicyView 是 tuple 子类，字段在载入后不再修改；spec 由调用方 deepcopy
 # 后交给 engine 归一化，engine 不持有 DB 连接。
 
@@ -237,9 +237,7 @@ def load_policy(db_path, readonly=True):
                 (f["assertion"], f["lang"], f["value"], f["match_mode"],
                  f["scalar"]))
         locales = {r["lang"]: dict(r) for r in conn.execute(
-            "SELECT * FROM locales").fetchall()}
-        pmeta = {r["plugin_id"]: dict(r) for r in conn.execute(
-            "SELECT * FROM plugin_meta").fetchall()}
+            "SELECT lang FROM locales").fetchall()}
         try:
             lx_rows = [dict(r) for r in conn.execute(
                 "SELECT id,scope,key,value,target,meta_json,ord FROM lexicons "
@@ -250,22 +248,6 @@ def load_policy(db_path, readonly=True):
         lexicons = {}
         for r in lx_rows:
             lexicons.setdefault(r["id"], []).append(r)
-
-        # 存量欠账台账：{rule: {slug: frozenset(detail)}}；detail 为空串表示
-        # 整篇豁免（如「我国」误译、阿拉伯句号这类整篇性欠账）。closed 行不载入。
-        try:
-            bl_rows = conn.execute(
-                "SELECT rule, slug, detail FROM baseline "
-                "WHERE status='open' ORDER BY rule, slug, ord").fetchall()
-        except sqlite3.OperationalError:
-            raise PolicyError(
-                "策略库缺 baseline 表：运行 submit.py glossary migrate 后重试")
-        baseline = {}
-        for r in bl_rows:
-            baseline.setdefault(r["rule"], {}).setdefault(
-                r["slug"], set()).add(r["detail"])
-        baseline = {k: {s: frozenset(d) for s, d in v.items()}
-                    for k, v in baseline.items()}
 
         spec = {"version": str(m["policy_version"]),
                 "terms": [], "banned": [], "writing": [], "excerpt": [],
@@ -293,8 +275,7 @@ def load_policy(db_path, readonly=True):
             schema_version=m["schema_version"], build_id=m["build_id"],
             applied_cs=json.loads(m["applied_cs"] or "[]"),
             spec=spec, contracts=contracts, forms=forms, locales=locales,
-            plugin_meta=pmeta, lexicons=lexicons, baseline=baseline,
-            db_path=os.path.abspath(db_path))
+            lexicons=lexicons, db_path=os.path.abspath(db_path))
     finally:
         conn.close()
 
@@ -733,32 +714,6 @@ def import_changeset(db_path, cs, dry_run=False, force=False):
         conn.close()
 
 
-# ---------------------------------------------------------------- plugin_meta
-
-def sync_plugin_meta(db_path, plugins):
-    """把磁盘插件投影写进 plugin_meta；磁盘是权威，DB 不是手工清单。"""
-    conn = connect(db_path)
-    try:
-        conn.execute("BEGIN IMMEDIATE")
-        conn.execute("DELETE FROM plugin_meta")
-        for p in plugins:
-            conn.execute(
-                "INSERT INTO plugin_meta(plugin_id,version,phase,applies_to,"
-                "rules_json,rationale_sha,source_sha,enabled) "
-                "VALUES (?,?,?,?,?,?,?,?)",
-                (p["id"], str(p["version"]), int(p["phase"]),
-                 _js(p.get("applies_to") or ["both"]), _js(p["rules"]),
-                 p["rationale_sha"], p["source_sha"],
-                 1 if p.get("enabled", True) else 0))
-        conn.commit()
-        return len(plugins)
-    except Exception:
-        conn.rollback()
-        raise
-    finally:
-        conn.close()
-
-
 # ---------------------------------------------------------------- doctor
 
 def doctor(db_path, kit_dir, plugins=None):
@@ -851,20 +806,20 @@ def doctor(db_path, kit_dir, plugins=None):
                 problems.append("tests/ 出现非电池/非审计准备器脚本：%s"
                                % ", ".join(stray[:8]))
     if plugins is not None:
-        pv = load_policy(db_path)
-        disk = {p["id"]: p for p in plugins}
-        for pid, p in disk.items():
-            row = pv.plugin_meta.get(pid)
-            if not row:
-                problems.append("plugin_meta 缺磁盘插件：%s" % pid)
-                continue
-            if row["source_sha"] != p["source_sha"]:
-                problems.append("plugin_meta source_sha 不一致：%s（需 plugin sync）" % pid)
-            if row["rationale_sha"] != p["rationale_sha"]:
-                problems.append("plugin_meta rationale_sha 不一致：%s" % pid)
-        for pid in pv.plugin_meta:
-            if pid not in disk:
-                problems.append("plugin_meta 有磁盘不存在的插件：%s" % pid)
+        # 插件投影的真源是 `data/rules_registry.json`（a 判据文件逐文件 sha256），
+        # 不再维护库内缓存。
+        from core import rule_registry
+        reg, err = rule_registry.try_load(kit_dir)
+        if reg is None:
+            problems.append("规则注册表不可读：%s" % err)
+        else:
+            diff = rule_registry.audit(kit_dir, reg)
+            for key, label in (("unregistered", "未登记插件"),
+                               ("missing", "注册表有但磁盘缺"),
+                               ("hash_mismatch", "插件指纹不符"),
+                               ("selftest_hash_mismatch", "自检臂指纹不符")):
+                for x in diff.get(key) or []:
+                    problems.append("%s：%s" % (label, x))
     return problems
 
 

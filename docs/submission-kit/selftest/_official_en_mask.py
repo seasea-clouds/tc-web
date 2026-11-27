@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 """工具级自检：官方英文逐字串掩码词表的登记闭环（v331 回流）。
 
-`_` 前缀：`OFFICIAL_EN_LITERALS` 是 core/consts 的数据表，没有独立插件文件，
+`_` 前缀：官方英文串在 `lexicons(official-en-literal)`，没有独立插件文件，
 按 A6/A7 不能占用正名臂；由 `submit.py selftest --kit` 单独计数。
 
 覆盖 REG37（103 号老挝辣椒）实测缺陷：证书附加声明整句未登记进词表时，
-`_OFFICIAL_EN_RE` 掩码不覆盖该串，P42 在 hy 语向把串末 ASCII 句点判成
+官方串掩码不覆盖该串，P42 在 hy 语向把串末 ASCII 句点判成
 亚美尼亚文句末句点（error），P30 在 9 个非拉丁语向报假阳 warning。
 官方串受 S08 verbatim 保护，不能改稿了事，只能按缺陷族整串登记。
 
@@ -27,8 +27,23 @@ _HERE = os.path.dirname(os.path.abspath(__file__))
 _KIT = os.path.dirname(_HERE)
 sys.path.insert(0, _KIT)
 
-from core.consts.claims import OFFICIAL_EN_LITERALS, _OFFICIAL_EN_RE  # noqa: E402
+from core import db as _db                                             # noqa: E402
+from plugins import _lexicon as _LX                                    # noqa: E402
 from plugins._lang import _p42_hy_ascii_periods                        # noqa: E402
+
+# 官方英文串的真源是 `lexicons(id='official-en-literal')`（入口受控写）。
+_POL = _db.current_policy(kit_dir=_KIT)
+OFFICIAL_EN_LITERALS = tuple(
+    str(r.get("value") or "") for r in
+    ((_POL.lexicons or {}).get("official-en-literal") or ()))
+
+
+class _LXView:
+    class ctx:
+        lexicons = _POL.lexicons
+
+
+_OFFICIAL_EN_RE = _LX.set_official_en(_LXView())
 
 REG37_DECL = (
     "This consignment complies with the requirements specified in the "
@@ -99,6 +114,24 @@ REG78_DECL_SAN = (
 )
 
 REG78_LABEL = "Alfalfa from France export to the People's Republic of China"
+
+# REG123（73 号莫桑比克苜蓿草）：与 REG78 三条整串各仅国名 France→Mozambique
+# 一处之差。按 v2.13 教训必须分别整串登记——若靠「同族通配」放行，尚未登记
+# 的新国名会一并免检。两条证书声明的 hy 串末 ASCII 句点、包装标识的 export
+# 无 -ed 形，均与 REG78 同型；未登记时 P42/P30 的假阳形状也相同。
+REG123_DECL_PHYTO = (
+    "This consignment complies with the Protocol on the sanitary and "
+    "phytosanitary requirements for the export of alfalfa from Mozambique to "
+    "China, and is free of any pest of concern for China."
+)
+
+REG123_DECL_SAN = (
+    "Does not contain any hazardous substances that pose a risk to public "
+    "or animal health and complies with China's safety and hygiene "
+    "standards, does not contain GMOs that are not authorized by China."
+)
+
+REG123_LABEL = "Alfalfa from Mozambique export to the People's Republic of China"
 
 # REG80（80 号非洲腰果）：与 REG18 非洲**可可豆**串仅商品名 Cocoa Beans→Nuts
 # 一处之差，其余逐字相同。这是掩码表里最容易被误合并的一对——按 v2.13 教训
@@ -263,6 +296,46 @@ def main():
     fake78c = REG78_LABEL.replace("export", "exported")
     chk("REG78 标识 export→exported 形近串确实未登记",
         fake78c not in OFFICIAL_EN_LITERALS)
+
+    # ⑬ REG123（73 号莫桑比克苜蓿草）：与 REG78 三条串各仅国名一处之差，
+    # 必须分别立目；两条声明 hy 句点掩码生效，换国名/换 GMOs 的形近串仍报红。
+    chk("REG123 植物检疫证书声明整句在 OFFICIAL_EN_LITERALS",
+        REG123_DECL_PHYTO in OFFICIAL_EN_LITERALS)
+    chk("REG123 植物检疫证书声明整串可被 _OFFICIAL_EN_RE 完整匹配",
+        bool(_OFFICIAL_EN_RE.fullmatch(REG123_DECL_PHYTO)))
+    chk("REG123 卫生证书声明整句在 OFFICIAL_EN_LITERALS",
+        REG123_DECL_SAN in OFFICIAL_EN_LITERALS)
+    chk("REG123 卫生证书声明整串可被 _OFFICIAL_EN_RE 完整匹配",
+        bool(_OFFICIAL_EN_RE.fullmatch(REG123_DECL_SAN)))
+    chk("REG123 卫生证书声明串内是 ASCII 撇号（非 U+2019）",
+        "China's" in REG123_DECL_SAN
+        and "China\u2019s" not in REG123_DECL_SAN)
+    chk("REG123 包装标识整串在 OFFICIAL_EN_LITERALS",
+        REG123_LABEL in OFFICIAL_EN_LITERALS)
+    chk("REG123 包装标识整串可被 _OFFICIAL_EN_RE 完整匹配",
+        bool(_OFFICIAL_EN_RE.fullmatch(REG123_LABEL)))
+    chk("REG123 与 REG78 仅国名不同、三条分别立目（未合并）",
+        REG123_DECL_PHYTO.replace("Mozambique", "France") == REG78_DECL_PHYTO
+        and REG123_LABEL.replace("Mozambique", "France") == REG78_LABEL
+        and REG123_DECL_PHYTO != REG78_DECL_PHYTO
+        and REG123_LABEL != REG78_LABEL)
+    chk("REG123 植物检疫证书声明 hy 句点被掩码（0 命中）",
+        not _p42_hy_ascii_periods(_hy_with(REG123_DECL_PHYTO)))
+    chk("REG123 卫生证书声明 hy 句点被掩码（0 命中）",
+        not _p42_hy_ascii_periods(_hy_with(REG123_DECL_SAN)))
+    fake123a = REG123_DECL_PHYTO.replace("Mozambique", "Mozambik")
+    chk("REG123 植物检疫声明换国名负向串确实未登记",
+        fake123a not in OFFICIAL_EN_LITERALS)
+    chk("REG123 植物检疫声明未登记形近串的句点仍报红",
+        bool(_p42_hy_ascii_periods(_hy_with(fake123a))))
+    fake123b = REG123_DECL_SAN.replace("GMOs", "feed additives")
+    chk("REG123 卫生证书声明换 GMOs 负向串确实未登记",
+        fake123b not in OFFICIAL_EN_LITERALS)
+    chk("REG123 卫生证书声明未登记形近串的句点仍报红",
+        bool(_p42_hy_ascii_periods(_hy_with(fake123b))))
+    fake123c = REG123_LABEL.replace("export", "exported")
+    chk("REG123 标识 export→exported 形近串确实未登记",
+        fake123c not in OFFICIAL_EN_LITERALS)
 
     fails = 0
     for name, ok in cases:

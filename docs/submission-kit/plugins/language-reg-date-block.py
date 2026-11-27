@@ -6,6 +6,8 @@
 """
 import re
 
+from plugins import _lexicon
+
 RULE = "P62"
 RULES = [RULE]
 PHASE = 60
@@ -37,16 +39,6 @@ _DIGITS = {
     "si": "\u0de6\u0de7\u0de8\u0de9\u0dea\u0deb\u0dec\u0ded\u0dee\u0def",
 }
 
-_SR_ORD = {
-    "prvi", "prvog", "drugi", "drugog", "tre\u0107i", "tre\u0107eg",
-    "\u010detvrti", "\u010detvrtog", "peti", "petog", "\u0161esti", "\u0161estog",
-    "sedmi", "sedmog", "osmi", "osmog", "deveti", "devetog", "deseti", "desetog",
-    "jedanaesti", "jedanaestog", "dvanaesti", "dvanaestog", "trinaesti",
-    "trinaestog", "\u010detrnaesti", "\u010detrnaestog", "petnaesti",
-    "petnaestog", "\u0161esnaesti", "\u0161esnaestog", "sedamnaesti",
-    "sedamnaestog", "osamnaesti", "osamnaestog", "devetnaesti", "devetnaestog",
-    "dvadeseti", "dvadesetog", "trideseti", "tridesetog",
-}
 
 
 def _block1(body):
@@ -58,6 +50,7 @@ def _block1(body):
 
 
 def run(view, emit):
+    _lexicon.set_judge(view, RULE)
     for art in view.articles:
         if not art.is_reg:
             continue
@@ -83,7 +76,8 @@ def run(view, emit):
             yr_ok = yr in b or bool(tr and yr.translate(tr) in b)
             forms = {dy, dy.lstrip("0")} - {""}
             day_ok = (any(f in b or (tr and f.translate(tr) in b) for f in forms)
-                      or any(w in b.casefold() for w in _SR_ORD))
+                      or any(w in b.casefold() for w in
+                             _lexicon.judge(RULE, "ordinal").get("sr", ())))
             if not yr_ok:
                 emit(RULE, "error", "%s/%s" % (lg, art.slug),
                      u"解读块1 日期与 published_at(%s-%s) 不一致：缺年份 %s"

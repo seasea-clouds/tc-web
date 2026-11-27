@@ -14,9 +14,9 @@
   ④ 源码字符串常量里不得有盘符绝对路径（D:\\ / C:/）。
 """
 import ast
-import glob
+
 import os
-import sys
+
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
 _KIT = os.path.dirname(_HERE)

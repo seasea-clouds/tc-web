@@ -47,7 +47,8 @@ def main(argv=None):
     ap = __import__("argparse").ArgumentParser()
     ap.add_argument("--tmp", required=True)
     args = ap.parse_args(argv)
-    tmp_root = args.tmp
+    # 子进程 cwd=KIT：相对 --tmp 会在工具包内解析而被入口判为非法（rc=2）
+    tmp_root = os.path.abspath(args.tmp)
     if not os.path.isdir(tmp_root):
         os.makedirs(tmp_root)
 

@@ -11,8 +11,8 @@
    NFKC + 小写 + 空白归一，否则「ＰＤＶ」与「PDV」、「kodi ya  matumizi」
    与「kodi ya matumizi」这类同形会漏判。
 """
-import glob
-import io
+
+
 import json
 import os
 import re

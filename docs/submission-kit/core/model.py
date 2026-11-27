@@ -29,12 +29,12 @@ class Context:
     __slots__ = ("master_lang", "no_parity", "glossary", "glossary_disabled",
                  "config_errors", "kit_dir",
                  "db_path", "policy", "rules_filter", "lexicons",
-                 "baseline", "lexicon_cache")
+                 "lexicon_cache")
 
     def __init__(self, master_lang=None, no_parity=False, glossary=None,
                  glossary_disabled=False,
                  config_errors=None, kit_dir=None, db_path=None, policy=None,
-                 rules_filter=None, lexicons=None, baseline=None):
+                 rules_filter=None, lexicons=None):
         self.master_lang = master_lang
         self.no_parity = bool(no_parity)
         self.glossary = glossary
@@ -49,9 +49,6 @@ class Context:
         # 受控词表：{id: [row, ...]}，由 glossary_loader 从 lexicons 表装载；
         # lexicon_cache 供 plugins/_lexicon.py 整形缓存（同一包内多语向复用）。
         self.lexicons = lexicons
-        # 存量欠账台账：{rule: {slug: frozenset(detail)}}，来自 baseline 表。
-        # 判据代码里不出现任何 slug；某篇是否欠账是**数据**，不是判据分支。
-        self.baseline = baseline
         self.lexicon_cache = {}
 
     def to_kwargs(self):

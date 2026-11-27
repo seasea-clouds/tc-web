@@ -50,6 +50,8 @@ def main(argv=None):
     ap.add_argument("--tmp", metavar="DIR", required=True,
                     help="临时根目录（本臂不写文件，保持与其他臂一致）")
     args = ap.parse_args(argv)
+    # 子进程 cwd=KIT：相对 --tmp 会在工具包内解析而被入口判为非法（rc=2）
+    args.tmp = os.path.abspath(args.tmp)
 
     tools_dir = os.path.join(KIT, "tools")
     files = sorted(f for f in os.listdir(tools_dir)

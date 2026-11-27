@@ -62,9 +62,9 @@ IMAGE_NAME_BAD_RE = re.compile(
     r"|photo[-_]?\d+|\d+|untitled|dsc[-_]?\d+)$")
 
 
-# 存量欠账名单已移入策略库 baseline 表（schema v5）：判据只由「语向 +
+# 判据只由「语向 +
 # 词类 + 结构」决定，任何判据源码里不再出现篇目 slug。查欠账：
-#   python submit.py glossary baseline list
+#   （按篇豁免已取消：判据一律按当前规则判）
 # 清账：改完稿把该行 status 置 closed，不删除行（保留交付痕迹）。
 
 

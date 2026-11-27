@@ -9,7 +9,6 @@
 import re
 
 from core.textutil import _line_of
-from plugins._shared import baseline_of
 
 from core.consts import (
     KNOWN_RULES,
@@ -42,7 +41,7 @@ def check_writing_rules(tag, lang, body, fm, slug, add, writing,
       * WR02 的非 CTA 链接扫描排除 `![...](...)` 配图语法与 `/packages/` CTA，
         存量 48 语全部 0 命中；
       * 已交付存量按「不追溯」铁律由契约 legacy 名单降级 warning，
-        新篇一律 error（照 P66 / I09 的 baseline 表先例）。
+        一律 error。
     """
     if not writing or not isinstance(writing, list) or not lang:
         return
@@ -66,8 +65,7 @@ def check_writing_rules(tag, lang, body, fm, slug, add, writing,
         legacy = c.get("legacy") or []
         if isinstance(legacy, str):
             legacy = [legacy]
-        # 存量欠账查 baseline 表（契约里的 legacy 已于 v371 迁出）
-        if baseline_of(view, rid, slug) is not None or slug in legacy:
+        if slug in legacy:
             level = "warning"
         cid = str(c.get("id") or rid)
         if scope == "refs":
@@ -123,7 +121,7 @@ def check_writing_rules(tag, lang, body, fm, slug, add, writing,
 #
 # 口径与 check_body 逐字一致：tag = "lang/slug"；body 取法规 marker 之前的
 # 「解读」段（官方译本不受写作风格约束）；fm 取该语向 frontmatter。
-# 契约未加载 → 不产出（同旧实现 `if not writing: return`）。
+# 契约未加载 → 不产出。
 
 
 def writing_findings(view):

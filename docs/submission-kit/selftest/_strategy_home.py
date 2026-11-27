@@ -11,7 +11,6 @@
   4. tools/*.py：模块 docstring ≥ 200 字（运营工具必须自解释「量什么、怎么读」）；
   5. 数据规范在访问层：`_lexicon.py` 必须写明 term-zh 五类与收录判据；
   6. 判据纪律在插件：`text-term-consistency.py` 必须写明 variants/forbidden 门槛；
-  7. 欠账语义在入口：`submit.py` baseline 分支必须写明「只置 closed 不删行」；
   8. 射程原则在 README：必须写明「射程的合法维度只有三个」
      （v463 起架构文档并入 README，不再有第二个 .md）。
 
@@ -61,7 +60,7 @@ def main(argv=None):
     check("README 不引用 docs/STRATEGY_NOTES.md",
           "docs/STRATEGY_NOTES" not in readme)
     check("README 写明文件白名单与说明存放规则",
-          "文件白名单：目录必须干净" in readme and "新内容写哪里" in readme)
+          "## 文件白名单" in readme and "新内容写哪里" in readme)
 
     # 3. 插件 docstring + RATIONALE
     from core.loader import RATIONALE_MIN
@@ -123,14 +122,10 @@ def main(argv=None):
     check("P74 写有 variants/forbidden 登记门槛",
           "登记门槛" in p74 and "variants" in p74 and "forbidden" in p74)
 
-    # 7. baseline 语义在入口
-    sub = read("submit.py")
-    check("baseline 分支写明只置 closed 不删行",
-          "只置 closed" in sub or ("closed" in sub and "不删行" in sub))
-
     # 8. 射程原则在架构文档
     arch = read("README.md")
-    check("README 写明射程三维度", "射程的合法维度只有三个" in arch)
+    check("README 写明射程三维度",
+          "射程的合法维度只有语向、词类、结构" in arch)
 
     if thin:
         print("\n提示：%d 个插件的 RATIONALE 无实测/语料类证据词（结构判据可忽略）"

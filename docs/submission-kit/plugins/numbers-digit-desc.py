@@ -8,6 +8,7 @@ P36 只收「含小数点或 ≥3 位」、P19 只收 ≥10 的非年份整数�
 """
 from core.consts import _DIGIT_DESC
 from core.textutil import _ascii_digits, _block_kind, digit_word_present
+from plugins import _lexicon
 
 RULE = "P47"
 RULES = [RULE]
@@ -33,6 +34,8 @@ RATIONALE = {
 
 
 def run(view, emit):
+    stems = _lexicon.judge_map(view, RULE, "stem")
+    words = _lexicon.judge_map(view, RULE, "word")
     for art in view.articles:
         if not art.parity_on:
             continue
@@ -52,7 +55,8 @@ def run(view, emit):
                 folded = _ascii_digits(blk)
                 low = folded.casefold()
                 miss = [n for n in want[bi]
-                        if not digit_word_present(lg, n, folded, low)]
+                        if not digit_word_present(lg, n, folded, low,
+                                                  stems=stems, words=words)]
                 if miss:
                     emit(RULE, SEVERITY, "%s/%s" % (lg, art.slug),
                          "第%d块母版「%s 位」的位数 %s 在译文缺失"

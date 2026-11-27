@@ -46,7 +46,7 @@ const REG_CATEGORIES = new Set([
 ]);
 const REG_ISSUERS = new Set([
   'GACC', 'SAMR', 'NMPA', 'MARA', 'MOFCOM', 'STA', 'CNIPA',
-  'NPC', 'SC', 'MIIT', 'MEE', 'NHFPC',
+  'NPC', 'SC', 'MIIT', 'MEE', 'NHFPC', 'NHC',
 ]);
 const REG_SERVICES = new Set([
   '/services/gacc/', '/services/label/', '/services/ccc/',
@@ -145,7 +145,7 @@ for (const lang of langs) {
       ok = false; violations.fm++;
     }
     if (fm.issuer && !REG_ISSUERS.has(fm.issuer)) {
-      fail(`${rel}: issuer="${fm.issuer}" 不在 12 个机构内`);
+      fail(`${rel}: issuer="${fm.issuer}" 不在 13 个机构内`);
       ok = false; violations.fm++;
     }
     if (fm.related_service && !REG_SERVICES.has(fm.related_service)) {

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """完整性封签工具：生成密钥、签清单、验签、就地还原（机制层，写库无关）。
 
-用法（发布方）：
+用法（维护者）：
 
     python submit.py tools integrity_seal keygen --install
         # 生成 .keys/seal.key（不进包、不进 git），并把公钥写进 core/integrity.py
@@ -45,7 +45,7 @@ def fingerprint(pub):
 
 def _load_key(path):
     if not os.path.exists(path):
-        raise SystemExit("缺私钥 %s：先运行 keygen --install（发布方本机才需要）"
+        raise SystemExit("缺私钥 %s：先运行 keygen --install（维护者本机才需要）"
                          % path)
     raw = open(path, "r", encoding="ascii").read().strip()
     seed = bytes.fromhex(raw)
@@ -122,8 +122,9 @@ def cmd_sign(args):
                  integrity.root_digest(manifest), manifest["signed_at"]))
     io.open(os.path.join(KIT, integrity.TRUST_ANCHOR), "w",
             encoding="utf-8", newline="\n").write(anchor)
-    print("封签完成：sealed %d 个 / tracked %d 个 / 库表 %d 张"
+    print("封签完成：sealed %d 个 / tracked %d 个 / assets %d 个 / 库表 %d 张"
           % (len(manifest["sealed"]), len(manifest["tracked"]),
+             len(manifest.get("assets") or {}),
              len(manifest.get("db", {}).get("tables", {}))))
     print("清单摘要 %s" % integrity.root_digest(manifest))
     print("公钥指纹 %s" % fingerprint(pub))

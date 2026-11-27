@@ -133,6 +133,30 @@ def _country_table():
         _COUNTRY_TABLE.append(_lexicon.compile_country(rows))
     return _COUNTRY_TABLE[0]
 
+
+_OFFICIAL_TABLE = []
+
+
+def _official_en_table():
+    """策略库 `official-en-literal`（公告逐字保留的英文整句，懒加载一次）。"""
+    if not _OFFICIAL_TABLE:
+        rows = ()
+        if _pdb is not None:
+            try:
+                pv = _pdb.load_policy(str(KIT / "data" / "glossary.db"))
+                rows = (pv.lexicons or {}).get("official-en-literal") or ()
+            except Exception:
+                rows = ()
+        _OFFICIAL_TABLE.append(tuple(
+            str(r.get("value") or "").strip() for r in rows
+            if str(r.get("value") or "").strip()))
+    return _OFFICIAL_TABLE[0]
+
+
+def _norm_ws(text):
+    """空白归一：声明在译文里可能被软换行拆开，按字面单空格必漏。"""
+    return re.sub(r"\s+", " ", text or "").strip()
+
 FM = re.compile(r"\A---\n.*?\n---\n+", re.S)
 SPLIT = re.compile(r"\n[ \t]*\n")
 SCI = re.compile(r"\b[A-Z][a-z]+ [a-z][a-z\-]+\b")
@@ -388,7 +412,7 @@ def _contract_coverage(zh_f, zh_body, langs):
     out = []
     all_langs = [l for l in langs if l != "zh"]
     # 2026-11-10 负向电池 G3 臂实测：policy_spec 的块级段键名是 "terms"，
-    # 不是 "body"。旧版遍历 "body" 恒取空，351 条块级契约从未进入覆盖率
+    # 不是 "body"。遍历 "body" 恒取空，351 条块级契约从未进入覆盖率
     # 统计；显示名仍用 "body" 便于阅读。这是「发现的问题必须回流」的修法，
     # 不是改稿。
     for section, key in (("title", "title"), ("excerpt", "excerpt"),
@@ -522,6 +546,13 @@ def main():
     (out / "brief").mkdir(parents=True, exist_ok=True)
     langs = sorted(p.parent.name for p in content.glob("*/*.mdx"))
     suspects = []
+    off_all = _official_en_table()
+    # 白名单是全库累积；单篇只核对**本篇 zh 母版实际引用**的声明（官方原文
+    # 照抄在母版里），否则会把别的公告的声明全报成「本语缺失」。
+    _zhn = _norm_ws(zh_body)
+    off_applied = [(i, t) for i, t in enumerate(off_all, 1)
+                   if _norm_ws(t) in _zhn]
+    off_missing = []          # [(串序号, 语向)]
 
     for lang in langs:
         p = content / lang / (slug + ".mdx")
@@ -555,6 +586,12 @@ def main():
                 probe = _verbatim_en_probe(inner)
                 if probe and probe not in src:
                     suspects.append("%s 英文声明整句疑似缺失" % lang)
+            # 白名单驱动（official-en-literal）：不依赖母版引号提取，
+            # 逐条核对译文是否保留整句；只出缺失清单，不判分。
+            src_n = _norm_ws(src)
+            for oi, otext in off_applied:
+                if _norm_ws(otext) not in src_n:
+                    off_missing.append((oi, lang))
             if re.search(r"[\u4e00-\u9fff]", src[FM.match(src).end():]) and lang not in ("ja", "zh"):
                 suspects.append("%s 正文残留中文简体字" % lang)
             # 2026-11-09 REG18 三轮实抓：中文公告「我国」=中国（发布方），
@@ -583,6 +620,30 @@ def main():
     # v2.28：ar 公告发布机关属格歧义（R11；REG77/REG81 两次实证，出稿阶段复发）
     suspects.extend(_issuer_genitive_probe(content, langs, slug))
 
+    # 官方英文逐字串：白名单（official-en-literal）驱动的只读核对清单。
+    # 不依赖母版引号提取、不截断前缀；空白归一后整句比对，只报缺失语向。
+    off_lines = ["# 官方英文逐字串核对（official-en-literal，只读）", "",
+                 "只核对译文是否保留整句，不判标点形态；命中即视为保留。", ""]
+    if not off_all:
+        off_lines.append("（策略库未登记 official-en-literal 行）")
+    elif not off_applied:
+        off_lines.append("（本篇 zh 母版未引用官方英文串）")
+    else:
+        by_off = {}
+        for oi, lg in off_missing:
+            by_off.setdefault(oi, []).append(lg)
+        off_lines += ["| # | 声明（前 80 字） | 缺失语向 |", "|---|---|---|"]
+        for oi, textv in off_applied:
+            miss = sorted(by_off.get(oi, []))
+            off_lines.append("| %d | %s | %s |" % (
+                oi, textv[:80].replace("|", "\\|"),
+                ", ".join(miss) if miss else "—"))
+    (out / "official_en.md").write_text("\n".join(off_lines) + "\n",
+                                        encoding="utf-8", newline="\n")
+    if off_missing:
+        suspects.append("官方英文串缺失 %d 处（见 official_en.md）"
+                        % len(off_missing))
+
     # 横向锚视图
     anchor_lines = ["# 关键锚 47 语横向视图（人工复核用）", "",
                     "zh 块数 %d ｜译语 %d ｜自动锚 %d" % (n, len(langs), len(key)), ""]
@@ -608,7 +669,7 @@ def main():
 
     print("条目:", entry.name, "｜zh 块数:", n, "｜译语:", len(langs))
     print("关键锚:", len(key), "｜拉丁串:", len(sci_all), "｜自动疑点:", len(suspects))
-    print("新增产出: front_outliers.md / review_checklist.md")
+    print("新增产出: front_outliers.md / review_checklist.md / official_en.md")
     print("输出:", out)
     print("submission.json locales:", len(sub_meta.get("locales", [])))
     for s in suspects[:10]:

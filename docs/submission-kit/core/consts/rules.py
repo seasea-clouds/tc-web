@@ -24,12 +24,57 @@ FULLWIDTH_PUNCT_RE = re.compile(r"[\uFF0C\u3002\uFF1B\uFF1A\uFF1F\uFF01\u3001\uF
 
 
 
-KNOWN_RULES = frozenset({"B01", "B02", "B03", "B04", "B05", "B06", "B07", "B08", "B09", "B10", "B11", "C01", "F01", "F02", "F03", "F04", "F05", "F06", "F07", "F08", "F09", "F10", "F11", "I01", "I02", "I03", "I04", "I05", "I06", "I07", "I08", "I09", "L01", "L02", "L03", "L04", "L05", "L06", "L07", "L08", "L09", "M01", "M02", "M03", "M04", "M05", "M06", "M07", "M08", "M09", "M10", "M11", "M12", "M13", "P01", "P02", "P03", "P04", "P05", "P06", "P07", "P08", "P09", "P10", "P11", "P12", "P13", "P14", "P15", "P16", "P17", "P18", "P19", "P20", "P21", "P22", "P23", "P24", "P25", "P26", "P27", "P28", "P29", "P30", "P31", "P32", "P33", "P34", "P35", "P36", "P38", "P39", "P40", "P41", "P42", "P43", "P44", "P45", "P46", "P47", "P48", "P49", "P50", "P51", "P52", "P53", "P54", "P55", "P56", "P57", "P58", "P59", "P60", "P61", "P62", "P63", "P64", "P65", "P66", "P67", "P68", "P69", "P70", "P71", "P72", "R02", "R03", "R04", "R05", "R06", "R07", "R08", "R10", "R11", "R12", "R13", "R14", "R15", "R16", "R17", "R18", "R19", "R20", "R21", "R22", "R23", "R24", "S01", "S02", "S03", "S04", "S05", "S06", "S07", "S08", "S09", "S10", "S11", "S12", "S13", "S14", "ST01", "ST02", "ST03", "ST04", "ST05", "ST06", "ST07", "ST08", "W01", "W02", "W03", "H01", "H02", "P73", "P74", "P75", "WR01", "WR02", "WR03", "WR04", "WR05"})
+# 规则号与严重级/说明的唯一真源是 data/rules_registry.json（v500）。
+# 读不到时 KNOWN_RULES 为空集、REGISTRY_ERROR 非空：工具不至于自毁
+#（restore / rules adopt 仍可跑），但 doctor 与 integrity 会明确报故障，
+# 绝不在缺注册表时给出「通过」结论。这里刻意不放内置快照——内置快照会让
+# 「删掉注册表」变成一条静默降级通道。
+import io as _io
+import json as _json
+import os as _os
 
-# core 级规则：由 core/checker.py（包级守卫）与 core/kit_hygiene.py（工具包体检）
-# 发射，没有对应插件——它们必须在插件层之前/之外就能报，不能写成 plugins/。
-# loader.coverage 把这一组并进「已声明」，否则 doctor 会把它当漏声明。
-CORE_RULES = frozenset({"C01", "H01", "H02"})
+REGISTRY_PATH = _os.path.join(
+    _os.path.dirname(_os.path.dirname(_os.path.dirname(
+        _os.path.abspath(__file__)))),
+    "data", "rules_registry.json")
+
+
+def _load_rule_registry():
+    try:
+        with _io.open(REGISTRY_PATH, encoding="utf-8") as fh:
+            data = _json.load(fh)
+    except FileNotFoundError:
+        return None, "缺规则注册表 data/rules_registry.json（先跑 rules adopt）"
+    except (ValueError, OSError) as exc:
+        return None, "规则注册表不可读：%s" % exc
+    if not isinstance(data, dict) or not isinstance(data.get("rules"), dict) \
+            or not data["rules"]:
+        return None, "规则注册表格式不合法（rules 为空或不是字典）"
+    return data, ""
+
+
+_REGISTRY, REGISTRY_ERROR = _load_rule_registry()
+
+# core 级规则：由 core/checker.py（包级守卫）与 core/kit_hygiene.py（工具包
+# 体检）发射，没有对应插件——它们必须在插件层之前/之外就能报。注册表仍要
+# 登记这三条（否则 `rules` 表查不到），但其「存在性」由机制层保证。
+CORE_RULES = frozenset((_REGISTRY or {}).get("core")
+                       or {"C01", "H01", "H02"})
+
+KNOWN_RULES = frozenset(((_REGISTRY or {}).get("rules")) or ()) | CORE_RULES
+
+
+def _rule_meta_of(data):
+    out = {}
+    for rid, rec in ((data or {}).get("rules") or {}).items():
+        if not isinstance(rec, dict):
+            continue
+        out[rid] = (str(rec.get("severity") or "error"),
+                    str(rec.get("desc") or ""))
+    return out
+
+
+RULE_META = _rule_meta_of(_REGISTRY)
 
 # 插件分类词表（M6 补齐，方案 §2 的「13 类」落成可机检常量）。
 # loader 校验「CATEGORY == 文件名前缀」之外，还要校验前缀在本表内——
@@ -42,41 +87,14 @@ PLUGIN_CATEGORIES = (
 )
 
 
-# I09：新增规则的注册表元数据（全量 ID 见 KNOWN_RULES；--rules-report 输出清单）。
-RULE_META = {
-    "C01": ("error", "配置/工具故障：术语表未加载或契约不可用；结论不得当作通过"),
-    "F10": ("error", "输入文件非法 UTF-8 / U+FFFD / 不可安全读取"),
-    "F11": ("error", "法规 frontmatter 残留模板占位 doc_number / source_url"),
-    "M12": ("error", "submission.json 字段类型或取值不合法"),
-    "M13": ("error", "sourceUrl / URL 形态不合法"),
-    "R23": ("error", "法规 submission 与逐语 frontmatter 固定字段不一致"),
-    "R24": ("error", "法规中文母版的中文序号必须全角：半角「(一)」一律报错"),
-    "S13": ("error", "slug 不符合小写 kebab-case / 3-60 字符"),
-    "S14": ("error", "术语契约的译文块数不足，契约无法执行"),
-    "H01": ("warning", "工具包目录出现名单外文件（只警告，不删除、不阻断）"),
-    "H02": ("warning", "工具包目录出现符号链接 / 越界路径"),
-    "P65": ("error", "官方文本的拉丁学名未逐字保留（被音译、改名或抹掉）"),
-    "P66": ("error", "中文「我国」被误译成目标语读者本国视角（应为中国）"),
-    "P68": ("error", "近缘语言正字法污染：某语向出现另一近缘语言的独有词形"),
-    "P69": ("error", "数字日期括注：官方日期后追加 (2026-9-28) 类冗余数字括注（应用本语完整日期形）"),
-    "P70": ("error", "阿拉伯句号 U+06D4（۔）只属乌尔都语；ar/fa 等语向出现即错（本语句末用「.」）。已 done 成品的历史存量登记在 baseline 表（rule=P70）只报聚合 warning，新篇一律 error"),
-    "P71": ("error", "拉丁变音正字法完整性：整篇无变音 ASCII 转写（21 个拉丁语向）或命中 >=3 个零回归转写词形（es/fr/it/pt）；词表在策略库 lexicons 表（latin-ascii / latin-required）"),
-    "P72": ("error", "非英语语向英文紧凑形残词（wks/hrs/yrs、N-day/N-wk、dual-reg 等；en 豁免；扫描前剥离 markdown 链接目标与 references URL）"),
-    "P73": ("warning", "半角分号后紧贴非空白（句中分号后应有空格；title+excerpt+正文三层；闭类标点与链接目标/refs URL 放行；全角「；」不在射程）"),
-    "P74": ("error", "术语库首选形的两种有证据偏差：词表登记的禁用译法（error）与同篇混用两个被接受形态（warning）；缺失不判"),
-    "P75": ("warning", "对立概念被译成同一个词：按词族与「归因」判据比对——对立词形多出来的用量须约等于本概念次数；两族在该语本就合一的整体跳过"),
-    "WR01": ("error", "范围声明小节：README 硬规则禁「不覆盖什么 / 本篇不展开」整节"),
-    "WR02": ("error", "独立成文：元话语、系列导览与篇间互链（全文唯一链接是文末 CTA）"),
-    "WR03": ("error", "二手口径与空泛断言（据说 / strict regulations 一类）"),
-    "WR04": ("warning", "清单预告句与 Overview 一类抽象小节标题"),
-    "WR05": ("error", "frontmatter references 应为 3–4 条（官方文号与链接）"),
-}
+# RULE_META 由上方 _rule_meta_of() 从注册表派生，不再维护第二份清单。
+
 
 
 # P66 存量豁免：已交付成品按「不追溯」铁律只报 warning，且按条目聚合为
-# 存量欠账名单已移入策略库 baseline 表（schema v5）：判据只由「语向 +
+# 判据只由「语向 +
 # 词类 + 结构」决定，任何判据源码里不再出现篇目 slug。查欠账：
-#   python submit.py glossary baseline list
+#   （按篇豁免已取消：判据一律按当前规则判）
 # 清账：改完稿把该行 status 置 closed，不删除行（保留交付痕迹）。
 
 
@@ -190,23 +208,8 @@ _DIGIT_DESC = re.compile(r"(?<!\d)(\d{1,2})[ \u00a0\u202f]?位")
 # r79 对账从 144 个锚块实测收集：de achtstellige、ru восьмизначных、
 # cs osmimístných、no åttisifrede……裸数词边界匹配抓不到这些形。
 # ro 不进词干表——「opt」右开会误中 optimizarea，走双边界词表。
-_P47_STEMS = {
-    "af": ["agt"], "ar": ["ثمان"], "az": ["səkkiz"], "be": ["васьмі"],
-    "bg": ["осем"], "bn": ["আট"], "ca": ["vuit"], "cs": ["osm"],
-    "da": ["otte"], "de": ["acht"], "el": ["οκτ"], "en": ["eight"],
-    "es": ["ocho"], "fa": ["هشت"], "fi": ["kahdeksan"], "fr": ["huit"],
-    "he": ["שמונ"], "hi": ["आठ"], "hr": ["osm"], "hu": ["nyolc"],
-    "hy": ["ութ"], "id": ["delapan"], "it": ["otto"], "ja": ["八"],
-    "ka": ["რვა"], "ko": ["팔"], "ms": ["lapan"], "ne": ["आठ"],
-    "nl": ["acht"], "no": ["ått"], "pl": ["ośmi"], "pt": ["oito"],
-    "ru": ["восьми"], "si": ["අට"], "sk": ["osem"],
-    "sl": ["osm", "osem"], "sq": ["tetë"], "sr": ["осм", "осам"],
-    "sv": ["ått"], "sw": ["nane"], "ta": ["எட்டு"], "th": ["แปด"],
-    "tr": ["sekiz"], "uk": ["восьми"], "ur": ["آٹھ"], "vi": ["tám"],
-}
 
 
-_P47_WORDS = {"ro": ["opt"]}
 
 
 # 无空格文字（th/ja）词间不设界，左边界失灵，词干免边界匹配。
@@ -327,4 +330,4 @@ BN_CONSONANT_LO = (0x0995, 0x09B9)  # ক..হ 裸辅音字母（category Lo）
 BN_CB_ALLOW = ()
 
 
-__all__ = ['LBL_ALT', 'LBL_BOLD', 'LBL_CODE', 'LBL_CODE_LINES', 'LBL_COLS', 'LBL_FILENAME', 'LBL_INDENTS', 'LBL_ITEM_BOLD', 'LBL_ITEMS', 'LBL_ITALIC', 'LBL_LEVEL', 'LBL_LINK', 'LBL_MARKERS', 'LBL_PARA_LINES', 'LBL_QUOTE_LINES', 'LBL_ROW_COLS', 'LBL_ROWS', 'ARABIC_STOP', 'ARABIC_STOP_OK', 'BN_CANDRABINDU', 'BN_CB_ALLOW', 'BN_CONSONANT_LO', 'CORE_RULES', 'ENTRY_WHITELIST', 'FULLWIDTH_PUNCT_RE', 'KNOWN_RULES', 'MAX_MEMBER_BYTES', 'MAX_PACKAGE_FILES', 'P57_DECIMAL_COMMA', 'P57_DEC_RE', 'P57_THOUSANDS', 'P57_THOU_RE', 'PLUGIN_CATEGORIES', 'RULE_META', 'WR_MD_LINK_RE', '_BAN_SPACELESS', '_BLOCK_MISALIGN_H2_HINT', '_BLOCK_MISALIGN_H2_RE', '_BLOCK_MISALIGN_NUM_HINT', '_BLOCK_MISALIGN_ORPHAN_HINT', '_BLOCK_MISALIGN_ORPHAN_RE', '_CN_DIGITS', '_CN_DIGIT_CHARS', '_CN_NUM_RE', '_CN_ORD_RE', '_CN_UNITS', '_DETAIL_LABELS', '_DIGIT_DESC', '_GROUP_SEP_RE', '_OL_RE', '_P47_FREE_STEM', '_P47_STEMS', '_P47_WORDS', '_P57_CLAUSE_RE', '_SP_GROUP', '_TH_GROUP', '_TH_TENS_PREFIXES', '_TH_UNIT_WORDS', '_UL_RE', '_WAN_RE', '_YI_RE']
+__all__ = ['LBL_BOLD', 'LBL_CODE', 'LBL_ITEM_BOLD', 'LBL_ITALIC', 'LBL_LEVEL', 'ARABIC_STOP', 'ARABIC_STOP_OK', 'BN_CANDRABINDU', 'BN_CB_ALLOW', 'BN_CONSONANT_LO', 'CORE_RULES', 'ENTRY_WHITELIST', 'REGISTRY_ERROR', 'FULLWIDTH_PUNCT_RE', 'KNOWN_RULES', 'MAX_MEMBER_BYTES', 'MAX_PACKAGE_FILES', 'P57_DECIMAL_COMMA', 'P57_DEC_RE', 'P57_THOUSANDS', 'P57_THOU_RE', 'PLUGIN_CATEGORIES', 'RULE_META', 'WR_MD_LINK_RE', '_BAN_SPACELESS', '_BLOCK_MISALIGN_H2_HINT', '_BLOCK_MISALIGN_H2_RE', '_BLOCK_MISALIGN_NUM_HINT', '_BLOCK_MISALIGN_ORPHAN_HINT', '_BLOCK_MISALIGN_ORPHAN_RE', '_CN_DIGITS', '_CN_DIGIT_CHARS', '_CN_NUM_RE', '_CN_ORD_RE', '_CN_UNITS', '_DETAIL_LABELS', '_DIGIT_DESC', '_GROUP_SEP_RE', '_OL_RE', '_P47_FREE_STEM', '_P57_CLAUSE_RE', '_SP_GROUP', '_TH_GROUP', '_TH_TENS_PREFIXES', '_TH_UNIT_WORDS', '_UL_RE', '_WAN_RE', '_YI_RE']

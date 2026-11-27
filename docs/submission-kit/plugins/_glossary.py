@@ -116,7 +116,7 @@ def _glossary_check(spec, parsed, master_lang, slug, add):
             # 「母版共几块、缺哪几块」；聚合后报错即给修稿清单。判据不变
             #（缺失判定逐块同前），只改呈现；scope="block" 与 forbid/count
             # 的逐块行为不变。
-            # I17：块数不足时契约整体无法执行，旧版两条路径都静默跳过
+            # I17：块数不足时契约整体无法执行，必须显式报出，不得静默跳过
             if len(loc_blocks[lg]) < len(base_blocks):
                 add("S14", "error", "%s/%s" % (lg, slug),
                     "术语 %s 无法执行：译文 %d 块 < 母版 %d 块（缺 %d 块），"
@@ -452,7 +452,7 @@ def _glossary_refs_check(spec, parsed, master_lang, slug, add):
             banned = _gloss_pats(forb, lg)
             banned_re = _gloss_pats(forb_re, lg)
             fsub = _ban_fsub(it)
-            # A13：逐条判定；旧版把多个锚定题名 join 成一个 hay，
+            # A13：逐条判定；不得把多个锚定题名 join 成一个 hay，
             # 「A 条满足 B 条的要求」也能过。
             for i in idxs:
                 if i >= len(titles):
@@ -737,7 +737,7 @@ def _refs_slug_match(scope, slug, parsed=None):
 # 口径与 check_article 逐字一致（否则等价性门会红）：
 #   * spec 为空/未加载 → 不产出（C01 由包层报，见 checker）；
 #   * 锚语言 = zh 优先，缺 zh 退 master_lang（与 article.py 现值同式）；
-#   * 五条判据的调用顺序同旧实现，同一规则的输出顺序因此不变。
+#   * 五条判据按固定顺序调用，同一规则的输出顺序稳定。
 
 
 def glossary_findings(view):

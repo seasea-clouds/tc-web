@@ -57,6 +57,10 @@ def _mini(root):
     _write(root, "plugins/rule-x.py", "# policy\n")
     _write(root, "plugins/rule-y.py", "# policy\n")
     _write(root, "README.md", "readme\n")
+    # 规则注册表 v628 起**不在 SEALED**（编写者随时 rules import 要能改写它），
+    # 属运行时文件；判据层以「注册表 ↔ 插件 sha 自洽」为准。
+    _write(root, "data/rules_registry.json",
+           '{"rules":{"T01":{"severity":"error","desc":"probe"}}}\n')
 
 
 VECTORS = [
@@ -112,11 +116,17 @@ def main(argv=None):
     manifest = integrity.build_manifest(work)
     integ = integrity.manifest_bytes(manifest)
 
-    def verify_local():
+    def verify_local(**kw):
         """用本臂的临时公钥验（不动 core.integrity 的全局常量）。"""
         import unittest.mock as _mock
         with _mock.patch.object(integrity, "PUBLIC_KEY_HEX", pub.hex()):
-            return integrity.verify(work)
+            return integrity.verify(work, **kw)
+
+    def restore_local(**kw):
+        """restore 现在要先验签拿清单，同样要临时公钥。"""
+        import unittest.mock as _mock
+        with _mock.patch.object(integrity, "PUBLIC_KEY_HEX", pub.hex()):
+            return integrity.restore(work, **kw)
 
     with open(os.path.join(work, integrity.MANIFEST), "wb") as fh:
         fh.write(integ)
@@ -127,10 +137,11 @@ def main(argv=None):
 
     res = verify_local()
     check("隔离树：首签验签通过", res["ok"], res["reason"])
-    check("隔离树：SEALED 集合正确（4 个 + 2 个共享层）",
-          sorted(manifest["sealed"]) == ["core/a.py", "core/consts/b.py",
-                                         "plugins/_lex.py", "selftest/_s.py",
-                                         "submit.py", "tools/t.py"],
+    check("隔离树：SEALED 集合正确（7 个，注册表不在其中）",
+          sorted(manifest["sealed"]) == ["README.md", "core/a.py",
+                                         "core/consts/b.py", "plugins/_lex.py",
+                                         "selftest/_s.py", "submit.py",
+                                         "tools/t.py"],
           str(sorted(manifest["sealed"])))
     check("隔离树：TRACKED 只含判据插件",
           sorted(manifest["tracked"]) == ["plugins/rule-x.py",
@@ -144,21 +155,38 @@ def main(argv=None):
     check("改机制层 → 判失败", not res["ok"])
     check("改机制层 → 精确点名", res["sealed_changed"] == ["core/a.py"],
           str(res["sealed_changed"]))
-    n, errs = integrity.restore(work)
+    n, errs = restore_local()
     check("restore → 字节还原",
           open(os.path.join(work, "core/a.py"), encoding="utf-8").read() == "# core a\n",
           "%d 个 / %s" % (n, errs[:1]))
     check("restore → 复验通过", verify_local()["ok"])
 
-    # 改判据 → 通过但留痕
+    # 改判据 → 严格口径判失败；strict=False 只列差异（过渡态核对用）
     _write(work, "plugins/rule-x.py", "# policy changed\n")
     res = verify_local()
-    check("改判据 → 仍通过", res["ok"], res["reason"])
-    check("改判据 → 列入变更审计", res["tracked_changed"] == ["plugins/rule-x.py"],
+    check("改判据 → 严格模式判失败（默认 strict）", not res["ok"], res["reason"])
+    check("改判据 → 精确点名", res["tracked_changed"] == ["plugins/rule-x.py"],
           str(res["tracked_changed"]))
+    check("改判据 → 原因指向插件封签", "判据插件" in (res["reason"] or ""),
+          res["reason"])
+    res = verify_local(strict=False)
+    check("strict=False 只列差异不判失败", res["ok"], res["reason"])
     shutil.copyfile(os.path.join(work, integrity.SEALED_ZIP),
                     os.path.join(tmp_root, "arm-sealed.zip"))
-    integrity.restore(work)
+    restore_local()
+
+    # 改规则注册表 → v628 起**不**判封签失败（它已移出 SEALED，好让
+    # rules import 随时改写）；判据层靠「注册表 ↔ 插件 sha 自洽」约束。
+    # 先把判据恢复原样，避免 tracked 差异污染本用例。
+    _write(work, "plugins/rule-x.py", "# policy\n")
+    _write(work, "data/rules_registry.json",
+           '{"rules":{"T02":{"severity":"error","desc":"tamper"}}}\n')
+    res = verify_local()
+    check("注册表不在 SEALED（v628）：改它不判封签失败",
+          res["ok"] and "data/rules_registry.json" not in res["sealed_changed"],
+          str(res["sealed_changed"]))
+    check("注册表不在封签资产（sealed.zip 不含它）",
+          "data/rules_registry.json" not in manifest["sealed"])
 
     # 多出/缺失机制层文件
     _write(work, "core/new.py", "# extra\n")
@@ -171,7 +199,7 @@ def main(argv=None):
     check("机制层文件缺失 → 判失败", not res["ok"]
           and res["sealed_missing"] == ["core/consts/b.py"],
           str(res["sealed_missing"]))
-    integrity.restore(work)
+    restore_local()
 
     # 改清单不重签 → 签名不成立
     mpath = os.path.join(work, integrity.MANIFEST)
@@ -189,7 +217,7 @@ def main(argv=None):
     with zipfile.ZipFile(slip, "w") as zf:
         zf.writestr("../evil.py", "evil\n")
         zf.writestr("submit.py", "# entry\n")
-    n, errs = integrity.restore(work, slip)
+    n, errs = restore_local(zip_path=slip)
     check("zip slip 被拒", n == 1 and any("跳过" in e for e in errs),
           "恢复 %d / %s" % (n, errs))
     check("zip slip 未写出", not os.path.exists(
@@ -213,9 +241,13 @@ def main(argv=None):
     #    工具包要能整体拷走分发给所有写作者，接收方无 .keys 也能验真伪。
     from core import pack as _pack
     need = {"data/integrity.json", "data/integrity.sig",
-            "data/sealed.zip", "data/trust_anchor.txt"}
-    check("分发白名单含封签四件", need <= _pack.KIT_DATA_KEEP,
+            "data/sealed.zip", "data/trust_anchor.txt",
+            "data/rules_registry.json"}
+    check("分发白名单含封签四件与规则注册表", need <= _pack.KIT_DATA_KEEP,
           str(sorted(need - _pack.KIT_DATA_KEEP)))
+    check("规则注册表入包（接收方需据它校验插件指纹）",
+          _pack.kit_skip("rules_registry.json",
+                         "data/rules_registry.json") is None)
     check("sealed.zip 不被 .zip 扩展名挡掉",
           _pack.kit_skip("sealed.zip", "data/sealed.zip") is None)
     check("封签清单与签名入包",

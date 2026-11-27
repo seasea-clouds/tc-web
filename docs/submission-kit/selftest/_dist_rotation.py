@@ -5,9 +5,8 @@
 `submit.py selftest --kit` 会把这些 `_` 臂单独跑一遍。
 
 为什么必须有这条臂：2026-11-12 用户两次收紧口径后，dist/ 里**只允许**
-「工具包最新 5 份 + 全文档包最新 5 份 + manifest.json」。旧实现只认两种命名且
-给 `--out` 留了保护集，22 个 `submission-<SLUG>-48langs.zip` 历史单篇包与任意
-非 zip 文件因此永远清不掉；判据一旦回归成旧口径，产物区重新长满垃圾而打包
+「工具包最新 5 份 + 全文档包最新 5 份 + manifest.json」。只认两种命名且给 `--out` 留保护集，22 个 `submission-<SLUG>-48langs.zip` 历史单篇包与任意
+非 zip 文件因此永远清不掉；口径一旦放宽，产物区重新长满垃圾而打包
 本身仍「成功」，没有任何地方会红。本臂把口径钉死在注入式断言上。
 
 四个断言：
@@ -15,7 +14,11 @@
      → 只剩 5+5+manifest.json；
   ② 留的是最新 5 份（按 mtime）；
   ③ 幂等：同一目录再跑一次移除 0 项，且不会动 manifest.json；
-  ④ 白名单外一律清：连子目录、隐藏文件都不留。
+  ④ 白名单外一律清：连子目录、隐藏文件都不留；
+  ⑤ pack --root 校验：投稿目录通过；项目根 / 空目录 / 不存在路径被拒，
+    且提示指向正确路径（防产物落到错误位置凭空生成 dist/）；
+  ⑥ 封签分级（源码守卫）：稿件包不被「已导入未重签」阻塞，`--kit-only`
+     出工具包分发包仍强制封签一致（`except SealStale` 内 `if kit_only: raise`）。
 全程只在 `--tmp` 下造目录，不碰真实 `submission/dist/`。
 """
 import json
@@ -119,7 +122,46 @@ def main():
              len(outsiders), len(outsiders), len(before)))
     fails += 0 if ok4 else 1
 
-    print("dist 清场：4 个断言，FAIL %d" % fails)
+    # ⑤ pack --root 校验：正反例与修复指引
+    vbase = os.path.join(base, "root-guard")
+    good = os.path.join(vbase, "submission")
+    for line in ("blogs", "regulations"):
+        os.makedirs(os.path.join(good, line), exist_ok=True)
+    proj = os.path.join(vbase, "project-root")
+    os.makedirs(os.path.join(proj, ".git"), exist_ok=True)
+    for line in ("blogs", "regulations"):
+        os.makedirs(os.path.join(proj, "submission", line), exist_ok=True)
+    empty = os.path.join(vbase, "empty-dir")
+    os.makedirs(empty, exist_ok=True)
+    missing = os.path.join(vbase, "not-exist")
+
+    ok_good, msg_good = pack.validate_root(good)
+    ok_proj, msg_proj = pack.validate_root(proj)
+    ok_empty, msg_empty = pack.validate_root(empty)
+    ok_missing, msg_missing = pack.validate_root(missing)
+    ok5 = (ok_good is True and msg_good == ""
+           and ok_proj is False and "项目根" in msg_proj
+           and "--root=" in msg_proj and msg_proj.rstrip().endswith("submission")
+           and ok_empty is False and "既没有 blogs/" in msg_empty
+           and ok_missing is False and "不存在" in msg_missing)
+    print("  %-4s %-26s 合法通过=%s 项目根拒=%s 空目录拒=%s 不存在拒=%s"
+          % ("OK" if ok5 else "FAIL", "⑤ pack --root 校验",
+             ok_good, not ok_proj, not ok_empty, not ok_missing))
+    fails += 0 if ok5 else 1
+
+    # ⑥ 封签分级源码守卫：编写者随时 import 后，稿件包不能被封签拦住；
+    #    但工具包分发包必须一致（否则接收方验不过）。
+    src = open(os.path.join(_KIT, "core", "pack.py"), encoding="utf-8").read()
+    i = src.find("except SealStale as exc:")
+    j = src.find("if kit_only:", i) if i > 0 else -1
+    k = src.find("raise", j) if j > 0 else -1
+    ok6 = ("class SealStale" in src and "raise SealStale(" in src
+           and i > 0 and 0 < j - i < 400 and 0 < k - j < 120)
+    print("  %-4s %-26s 分级存在=%s kit-only仍在拒绝=%s"
+          % ("OK" if ok6 else "FAIL", "⑥ 封签分级源码守卫", i > 0, 0 < k - j < 120))
+    fails += 0 if ok6 else 1
+
+    print("dist 清场 + root 校验：6 个断言，FAIL %d" % fails)
     return 0 if not fails else 1
 
 
